@@ -16,13 +16,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa08a7f84cd413f1212cc73d4242b5da70fd33eb
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882286"
 ---
-# <a name="delete-a-publication"></a>Delete a Publication
+# <a name="delete-a-publication"></a>Excluir uma publicação
   Este tópico descreve como excluir uma publicação no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou RMO (Replication Management Objects).  
   
  **Neste tópico**  
@@ -46,7 +46,7 @@ ms.locfileid: "73882286"
   
 3.  Clique com o botão direito na publicação que você deseja excluir e clique em **Excluir**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As publicações podem ser excluídas programaticamente usando procedimentos armazenados de replicação. Os procedimentos armazenados que você usar dependerão do tipo de publicação a ser excluída.  
   
 > [!NOTE]  
@@ -54,11 +54,11 @@ ms.locfileid: "73882286"
   
 #### <a name="to-delete-a-snapshot-or-transactional-publication"></a>Para excluir uma publicação de instantâneo ou transacional  
   
-1.  Siga um destes procedimentos:  
+1.  Realize um dos seguintes procedimentos:  
   
     -   Para excluir uma única publicação, execute [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) no Publicador do banco de dados de publicação.  
   
-    -   Para excluir todas as publicações e remover todos os objetos de replicação de um banco de dados publicado, execute [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) no Publicador. Especifique um valor de `tran` para **\@tipo**. (Opcional) Se o Distribuidor não puder ser acessado ou se o status do banco de dados for suspeito ou estiver offline, especifique um valor igual a **1** em **\@force**. (Opcional) Especifique o nome do banco de dados em **\@dbname** se [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) não for executado no banco de dados de publicação.  
+    -   Para excluir todas as publicações e remover todos os objetos de replicação de um banco de dados publicado, execute [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) no Publicador. Especifique um valor de `tran` para ** \@o tipo**. (Opcional) Se o Distribuidor não puder ser acessado ou se o status do banco de dados for suspeito ou estiver offline, especifique um valor igual a **1** em **\@force**. (Opcional) Especifique o nome do banco de dados em **\@dbname** se [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) não for executado no banco de dados de publicação.  
   
         > [!NOTE]  
         >  A especificação de um valor igual a **1** em **\@force** pode manter objetos de publicação relacionados à replicação no banco de dados.  
@@ -69,11 +69,11 @@ ms.locfileid: "73882286"
   
 #### <a name="to-delete-a-merge-publication"></a>Para excluir uma publicação de mesclagem  
   
-1.  Siga um destes procedimentos:  
+1.  Realize um dos seguintes procedimentos:  
   
     -   Para excluir uma única publicação, execute [sp_dropmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql) no Publicador do banco de dados de publicação.  
   
-    -   Para excluir todas as publicações e remover todos os objetos de replicação de um banco de dados publicado, execute [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) no Publicador. Especifique um valor de `merge` para **\@tipo**. (Opcional) Se o Distribuidor não puder ser acessado ou se o status do banco de dados for suspeito ou estiver offline, especifique um valor igual a **1** em **\@force**. (Opcional) Especifique o nome do banco de dados em **\@dbname** se [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) não for executado no banco de dados de publicação.  
+    -   Para excluir todas as publicações e remover todos os objetos de replicação de um banco de dados publicado, execute [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) no Publicador. Especifique um valor de `merge` para ** \@o tipo**. (Opcional) Se o Distribuidor não puder ser acessado ou se o status do banco de dados for suspeito ou estiver offline, especifique um valor igual a **1** em **\@force**. (Opcional) Especifique o nome do banco de dados em **\@dbname** se [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) não for executado no banco de dados de publicação.  
   
         > [!NOTE]  
         >  A especificação de um valor igual a **1** em **\@force** pode manter objetos de publicação relacionados à replicação no banco de dados.  
@@ -98,7 +98,7 @@ ms.locfileid: "73882286"
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication>.  
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação, e a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "73882286"
   
 6.  (Opcional) Se nenhuma outra publicação transacional existir para esse banco de dados, ele pode ser desabilitado para a publicação transacional, como se segue:  
   
-    1.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> . Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a instância de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> na etapa 1.  
+    1.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase>. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a instância de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> na etapa 1.  
   
     2.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se esse método retorna `false`, confirme que o banco de dados existe.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "73882286"
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication>.  
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação, e a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "73882286"
   
 6.  (Opcional) Se nenhuma outra publicação de mesclagem existir para esse banco de dados, ele pode ser desabilitado para a publicação de mesclagem, como se segue:  
   
-    1.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> . Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a instância de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> na etapa 1.  
+    1.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase>. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a instância de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> na etapa 1.  
   
     2.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se esse método retornar `false`, verifique se o banco de dados existe.  
   
@@ -155,8 +155,8 @@ ms.locfileid: "73882286"
   
  [!code-vb[HowTo#rmo_vb_DropMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropmergepub)]  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos dos procedimentos armazenados no sistema de replicação](../concepts/replication-system-stored-procedures-concepts.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Publicar dados e objetos de banco de dados](publish-data-and-database-objects.md)  
   
   

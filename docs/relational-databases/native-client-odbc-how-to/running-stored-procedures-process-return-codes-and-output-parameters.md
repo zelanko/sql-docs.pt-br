@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 156fc0a443d7c5742f49e4d94de6be6a12154172
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780655"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Executar procedimentos armazenados – Processar códigos e parâmetros de saída de retorno
@@ -29,7 +29,7 @@ ms.locfileid: "73780655"
   Os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ter códigos de retorno e parâmetros de saída inteiros. Os códigos de retorno e os parâmetros de saída são enviados no último pacote do servidor, não estão disponíveis para o aplicativo até que [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) retorne SQL_NO_DATA. Se um erro for retornado de um procedimento armazenado, chame SQLMoreResults para avançar para o próximo resultado até que SQL_NO_DATA seja retornado.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você precisar manter as credenciais, deverá criptografá-las com a [API de criptografia do Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Para processar códigos de retorno e parâmetros de saída  
   
@@ -48,11 +48,11 @@ ms.locfileid: "73780655"
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- A primeira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) cria um procedimento armazenado usado por este exemplo.  
+ A primeira listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () cria um procedimento armazenado usado por este exemplo.  
   
  Compile a segunda listagem de código (C++) com odbc32.lib. Em seguida, execute o programa.  
   
- A terceira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) exclui o procedimento armazenado usado por este exemplo.  
+ A terceira listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () exclui o procedimento armazenado usado por este exemplo.  
   
 ```  
 use AdventureWorks  
@@ -193,7 +193,7 @@ DROP PROCEDURE TestParm
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-[Chamar procedimentos &#40;armazenados ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
+## <a name="see-also"></a>Consulte Também  
+[Chamar procedimentos armazenados &#40;&#41;ODBC](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   
   

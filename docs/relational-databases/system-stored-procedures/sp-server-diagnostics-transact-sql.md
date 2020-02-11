@@ -18,10 +18,10 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982112"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
@@ -31,7 +31,7 @@ Captura dados de diagnóstico e informações de integridade sobre o [!INCLUDE[s
   
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior).  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'` indica o intervalo de tempo no qual o procedimento armazenado será executado repetidamente para enviar informações de integridade.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'`Indica o intervalo de tempo no qual o procedimento armazenado será executado repetidamente para enviar informações de integridade.  
   
  *repeat_interval_in_seconds* é **int** com o padrão de 0. Os valores de parâmetros válidos são 0 ou qualquer valor igual ou superior a 5. O procedimento armazenado deve ser executado por pelo menos 5 segundos para retornar dados completos. O valor mínimo de execução do procedimento armazenado no modo de repetição é de 5 segundos.  
   
@@ -56,12 +56,12 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Conjuntos de resultados  
 **sp_server_diagnostics** retorna as informações a seguir  
   
-|Column|Tipo de dados|Descrição|  
+|Coluna|Tipo de dados|DESCRIÇÃO|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indica o carimbo de data/hora de criação de linha. Cada linha em um único conjunto de linhas tem o mesmo carimbo de data/hora.|  
-|**component_type**|**sysname**|Indica se a linha contém informações para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente de nível de instância ou para um grupo de disponibilidade Always On:<br /><br /> instância<br /><br /> Always On: Availabilitygroup|  
-|**component_name**|**sysname**|Indica o nome de componente ou o nome do grupo de disponibilidade:<br /><br /> sistema<br /><br /> recurso<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventos<br /><br /> *\<nome do grupo de disponibilidade >*|  
-|**state**|**int**|Indica o status de integridade do componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**component_type**|**sysname**|Indica se a linha contém informações para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente de nível de instância ou para um grupo de disponibilidade Always on:<br /><br /> instance<br /><br /> Always On: Availabilitygroup|  
+|**component_name**|**sysname**|Indica o nome de componente ou o nome do grupo de disponibilidade:<br /><br /> sistema<br /><br /> recurso<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<nome do grupo de disponibilidade>*|  
+|**status**|**int**|Indica o status de integridade do componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Descreve a coluna de estado. Descrições que correspondem aos valores na coluna de estado são:<br /><br /> 0: desconhecido<br /><br /> 1: limpar<br /><br /> 2: aviso<br /><br /> 3: erro|  
 |**data**|**varchar (max)**|Especifica dados que são específicos do componente.|  
   
@@ -77,20 +77,20 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **eventos**: coleta dados e superfícies por meio do procedimento armazenado sobre erros e eventos de interesse registrados pelo servidor, incluindo detalhes sobre exceções de buffer de anel, eventos de buffer de anel sobre o agente de memória, memória insuficiente, monitor do Agendador, pool de buffers, spinlocks, segurança e conectividade. Eventos sempre mostrarão 0 como o estado.  
   
--   **\<nome do grupo de disponibilidade >** : coleta dados para o grupo de disponibilidade especificado (se component_type = "Always on: availabilitygroup").  
+-   **nome do grupo de disponibilidade>: coleta dados para o grupo de disponibilidade especificado (se component_type = "Always on: availabilitygroup"). \< **  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 De uma perspectiva de falha, os componentes system, resource e query_processing serão aproveitados para detecção de falha, enquanto os componentes io_subsystem e eventos serão aproveitados apenas para fins de diagnóstico.  
   
 A tabela a seguir mapeia os componentes para seus estados de integridade associados.  
   
-|Components|Clean (1)|Warning (2)|Erro (3)|Unknowns (0)|  
+|Componentes|Clean (1)|Warning (2)|Erro (3)|Unknowns (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |sistema|x|x|x||  
 |recurso|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
-|eventos||||x|  
+|events||||x|  
   
 O (x) em cada linha representa estados de integridade válida para o componente. Por exemplo, io_subsystem mostrará como clean ou warning. Não mostrará os estados de erro.  
  
@@ -240,7 +240,7 @@ where component_name like 'events'
 go  
 ``` 
   
-## <a name="see-also"></a>Consulte também  
- [Failover Policy for Failover Cluster Instances](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Política de failover para instâncias de cluster de failover](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

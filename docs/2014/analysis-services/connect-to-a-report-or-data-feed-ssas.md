@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70151836"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Conectar a um relatório ou feed de dados (SSAS)
   Esta página do **Assistente de Importação de Tabela** permite que você se conecte a um feed de dados. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
   
 ## <a name="from-a-report"></a>De um relatório  
- **Nome de conexão amigável**  
+ **Nome de Conexão Amigável**  
  Digite um nome amigável para a conexão de feed de dados.  
   
  **Caminho do Relatório**  
@@ -35,16 +35,16 @@ ms.locfileid: "70151836"
  Navegue até um local onde um relatório está disponível.  
   
  **Avançado**  
- Defina as propriedades de conexão adicionais usando a caixa de diálogo **Definir Propriedades Avançadas** .  
+ Defina propriedades de conexão adicionais usando a caixa de diálogo **definir propriedades avançadas** .  
   
  **Testar Conexão**  
  Tente estabelecer uma conexão com a fonte de dados usando as configurações atuais. Uma mensagem que indica se a conexão foi bem-sucedida é exibida.  
   
 ## <a name="from-an-azure-datamarket-dataset"></a>De um conjunto de dados do Azure DataMarket  
- **Nome de conexão amigável**  
+ **Nome de Conexão Amigável**  
  Digite um nome amigável para a conexão de feed de dados.  
   
- **URL do feed de dados**  
+ **URL do Feed de Dados**  
  Digite o caminho completo para um documento do serviço Atom (.atomsvc, .atom) ou a URL de um único feed de dados, ou clique em **Procurar** para selecionar um documento do serviço Atom.  
   
  **Procurar**  
@@ -62,16 +62,16 @@ ms.locfileid: "70151836"
  Salva a chave de conta (criptografada) com a conexão de dados.  
   
  **Avançado**  
- Defina as propriedades de conexão adicionais usando a caixa de diálogo **Definir Propriedades Avançadas** .  
+ Defina propriedades de conexão adicionais usando a caixa de diálogo **definir propriedades avançadas** .  
   
  **Testar Conexão**  
  Tente estabelecer uma conexão com a fonte de dados usando as configurações atuais. Uma mensagem que indica se a conexão foi bem-sucedida é exibida.  
   
 ## <a name="from-other-feeds"></a>De outros feeds  
- **Nome de conexão amigável**  
+ **Nome de Conexão Amigável**  
  Digite um nome amigável para a conexão de feed de dados.  
   
- **URL do feed de dados**  
+ **URL do Feed de Dados**  
  Digite o caminho completo para um documento do serviço Atom (.atomsvc, .atom) ou a URL de um único feed de dados, ou clique em **Procurar** para selecionar um documento do serviço Atom.  
   
  Clique em **Incluir todas as colunas de feed** para especificar se todas as colunas de feeds de dados serão importadas.  

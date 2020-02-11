@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401421"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Monitoramento de dispositivo para o Analytics Platform System
@@ -63,7 +63,7 @@ Se sua solução de monitoramento não oferecer suporte a\-consultas diretas do 
    
 ## <a name="Tasks"></a>Tarefas de monitoramento relacionadas  
   
-|Tarefa de monitoramento|Descrição|  
+|Tarefa de monitoramento|DESCRIÇÃO|  
 |-------------------|---------------|  
 |Monitore o dispositivo usando o console do administrador.|[Monitore o dispositivo usando o console de administração &#40;o sistema de plataforma de análise&#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
 |Monitore o dispositivo usando exibições do sistema.|[Monitore o dispositivo usando as exibições do sistema &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)|  

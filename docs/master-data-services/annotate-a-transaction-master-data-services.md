@@ -13,10 +13,10 @@ ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 17474c603e437dd0cb2dcfbedf5e444ba50ba3ae
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728794"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Anotar uma transação (Master Data Services)
@@ -66,8 +66,8 @@ ms.locfileid: "73728794"
   
 5.  Clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
- [Anotações &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#40;de anotações Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   
  [Transações &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   

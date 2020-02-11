@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011474"
 ---
 # <a name="query-properties-visual-database-tools"></a>Propriedades de consulta (Visual Database Tools)
@@ -82,8 +82,8 @@ ms.locfileid: "63011474"
  **With Ties**  
  Especifique que a exibição incluirá uma cláusula WITH TIES. O WITH TIES é útil se uma exibição incluir uma cláusula ORDER BY e uma cláusula TOP com base em porcentagem. Se essa opção for determinada, e se a porcentagem de corte se encontrar no meio de um conjunto de linhas com valores idênticos na cláusula ORDER BY, a exibição será estendida para incluir todas as respectivas linhas. (Aplica-se apenas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0 ou posterior.)  
   
-## <a name="see-also"></a>Consulte também  
- [Consulta com parâmetros &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Consultar com parâmetros &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

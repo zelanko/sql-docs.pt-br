@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493772"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definindo e procurando perspectivas
@@ -33,13 +33,13 @@ ms.locfileid: "69493772"
   
      Todos os objetos e seus tipos de objeto são exibidos no painel **Perspectivas** , como mostra a imagem a seguir.  
   
-     ![Painel de perspectivas do designer de cubo](../../2014/tutorials/media/l9-perspectives-1.gif "Painel de perspectivas do designer de cubo")  
+     ![Painel Perspectivas do Designer de Cubo](../../2014/tutorials/media/l9-perspectives-1.gif "Painel Perspectivas do Designer de Cubo")  
   
 2.  Na barra de ferramentas da guia **Perspectivas** , clique no botão **Nova Perspectiva** .  
   
      Uma nova perspectiva é exibida na coluna **Nome da Perspectiva** com o nome padrão **Perspectiva**, como mostra a imagem a seguir. Observe que a caixa de seleção de cada objeto está selecionada. Até que você desmarque a caixa de seleção de um objeto, essa perspectiva é idêntica à perspectiva padrão deste cubo.  
   
-     ![Nova perspectiva na coluna nome da perspectiva](../../2014/tutorials/media/l9-perspectives-2.gif "Nova perspectiva na coluna nome da perspectiva")  
+     ![Nova perspectiva na coluna Nome da Perspectiva](../../2014/tutorials/media/l9-perspectives-2.gif "Nova perspectiva na coluna Nome da Perspectiva")  
   
 3.  Altere o nome da perspectiva `Internet Sales`para.  
   
@@ -54,35 +54,35 @@ ms.locfileid: "69493772"
   
     -   `Reseller Sales`grupo de medidas  
   
-    -   Grupo de medidas**Cotas de Vendas**  
+    -   Grupo de medidas **cotas de vendas**  
   
-    -   Grupo de medidas**Cotas de Vendas 1**  
+    -   Grupo de medidas **cotas de vendas 1**  
   
-    -   Dimensão de cubo**Revendedor**  
+    -   Dimensão do cubo do **revendedor**  
   
-    -   Dimensão de cubo**Geografia do Revendedor**  
+    -   Dimensão do cubo de **Geografia do revendedor**  
   
-    -   Dimensão de cubo**Região de Vendas**  
+    -   Dimensão do cubo de **região de vendas**  
   
-    -   Dimensão de cubo**Funcionário**  
+    -   Dimensão do cubo do **funcionário**  
   
-    -   Dimensão de cubo**Promoção**  
+    -   Dimensão do cubo de **promoção**  
   
-    -   **Receita do Revendedor**  
+    -   **Receita do revendedor** KPI  
   
-    -   Conjunto nomeado**Grandes Revendedores**  
+    -   Conjunto nomeado de **revendedores grandes**  
   
-    -   Membro calculado**Valor Total das Vendas**  
+    -   Membro calculado do **valor total de vendas**  
   
-    -   Membro calculado**Custo Total do Produto**  
+    -   Membro calculado **custo total do produto**  
   
-    -   Membro calculado**MLB do Revendedor**  
+    -   Membro calculado do **GPM do revendedor**  
   
-    -   Membro calculado**MLB Total**  
+    -   Membro calculado do **GPM total**  
   
-    -   Membro calculado**Índice de Vendas do Revendedor para Todos os Produtos**  
+    -   Membro calculado **taxa de vendas do revendedor para todos os produtos**  
   
-    -   Membro calculado**Índice Total de Vendas para Todos os Produtos**  
+    -   Membro calculado da **taxa de vendas total para todos os produtos**  
   
      Esses objetos não estão relacionados às vendas pela Internet.  
   
@@ -103,27 +103,27 @@ ms.locfileid: "69493772"
   
     -   `Internet Sales`grupo de medidas  
   
-    -   Grupo de medidas**Motivo de Vendas pela Internet**  
+    -   Grupo de medidas **motivo de vendas pela Internet**  
   
-    -   Dimensão de cubo**Cliente**  
+    -   Dimensão do cubo do **cliente**  
   
-    -   Dimensão de cubo**Detalhes do Pedido de Vendas pela Internet**  
+    -   Dimensão do cubo **detalhes do pedido de vendas pela Internet**  
   
-    -   Dimensão de cubo**Motivo de Vendas**  
+    -   Dimensão do cubo **motivo de vendas**  
   
-    -   Ação de detalhamento**Ação de Detalhamento Detalhes de Vendas pela Internet**  
+    -   Ação de detalhamento da ação de detalhamento de **vendas pela Internet**  
   
-    -   Membro calculado**Valor Total das Vendas**  
+    -   Membro calculado do **valor total de vendas**  
   
-    -   Membro calculado**Custo Total do Produto**  
+    -   Membro calculado **custo total do produto**  
   
-    -   Membro calculado**MLB pela Internet**  
+    -   Membro calculado do **GPM de Internet**  
   
-    -   Membro calculado**MLB Total**  
+    -   Membro calculado do **GPM total**  
   
-    -   Membro calculado**Índice de Vendas pela Internet para Todos os Produtos**  
+    -   Membro calculado **taxa de vendas pela Internet para todos os produtos**  
   
-    -   Membro calculado**Índice Total de Vendas para Todos os Produtos**  
+    -   Membro calculado da **taxa de vendas total para todos os produtos**  
   
      Esses objetos não estão relacionados às vendas do revendedor.  
   
@@ -142,23 +142,23 @@ ms.locfileid: "69493772"
   
     -   `Reseller Sales`grupo de medidas  
   
-    -   Grupo de medidas**Motivo de Vendas pela Internet**  
+    -   Grupo de medidas **motivo de vendas pela Internet**  
   
-    -   Grupo de medidas**Cotas de Vendas**  
+    -   Grupo de medidas **cotas de vendas**  
   
-    -   Grupo de medidas**Cotas de Vendas1**  
+    -   Grupo de medidas **Sales Quotas1**  
   
-    -   Dimensão de cubo**Detalhes do Pedido de Vendas pela Internet**  
+    -   Dimensão do cubo **detalhes do pedido de vendas pela Internet**  
   
-    -   Dimensão de cubo**Motivo de Vendas**  
+    -   Dimensão do cubo **motivo de vendas**  
   
-    -   Ação de detalhamento**Ação de Detalhamento Detalhes de Vendas pela Internet**  
+    -   Ação de detalhamento da ação de detalhamento de **vendas pela Internet**  
   
 4.  Selecione a caixa de seleção dos seguintes objetos:  
   
-    -   Medida**Contagem das Vendas pela Internet**  
+    -   Medida de **contagem de vendas pela Internet**  
   
-    -   Medida**Contagem das Vendas do Revendedor**  
+    -   Medida de **contagem de vendas do revendedor**  
   
 ## <a name="browsing-the-cube-through-each-perspective"></a>Navegando no cubo usando cada perspectiva  
   
@@ -170,11 +170,11 @@ ms.locfileid: "69493772"
   
 4.  A análise no Excel avisa para você escolher quais perspectivas devem ser usadas ao procurar o modelo no Excel, conforme mostrado na imagem a seguir.  
   
-     ![Objetos para a perspectiva vendas pela Internet](../../2014/tutorials/media/l9-perspectives-3.gif "Objetos para a perspectiva vendas pela Internet")  
+     ![Objetos para a perspectiva Vendas pela Internet](../../2014/tutorials/media/l9-perspectives-3.gif "Objetos para a perspectiva Vendas pela Internet")  
   
 5.  Como alternativa, você pode iniciar o Excel no menu Iniciar do Windows, definir uma conexão com o banco de dados de tutorial do Analysis Services no localhost, e pode escolher uma perspectiva no assistente de Conexão de Dados, como mostrado na imagem a seguir.  
   
-     ![Assistente de conexão de dados no Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Assistente de conexão de dados no Excel")  
+     ![Assistente de Conexão de Dados no Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Assistente de Conexão de Dados no Excel")  
   
 6.  Selecione `Internet Sales` na lista **perspectiva** e, em seguida, examine as medidas e dimensões no painel metadados.  
   
@@ -188,12 +188,12 @@ ms.locfileid: "69493772"
   
      Observe que em cada grupo de medidas, somente uma medida é exibida, como mostra a imagem a seguir:  
   
-     ![Vendas pela Internet e medidas de vendas](../../2014/tutorials/media/l9-perspectives-4.gif " do revendedor Vendas pela Internet e medidas de vendas") do revendedor  
+     ![Medidas Vendas pela Internet e Vendas do Revendedor](../../2014/tutorials/media/l9-perspectives-4.gif "Medidas Vendas pela Internet e Vendas do Revendedor")  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Definindo e procurando traduções](lesson-9-2-defining-and-browsing-translations.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Perspectivas](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
  [Perspectivas em modelos multidimensionais](multidimensional-models/perspectives-in-multidimensional-models.md)  
   

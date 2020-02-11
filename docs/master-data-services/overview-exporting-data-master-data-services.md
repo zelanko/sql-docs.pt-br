@@ -15,10 +15,10 @@ ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: c0376e28c1d75585795b53373a10f4798347746a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728986"
 ---
 # <a name="overview-exporting-data-master-data-services"></a>Visão geral: exportando dados [Master Data Services]
@@ -27,9 +27,9 @@ ms.locfileid: "73728986"
 
   Este artigo apresenta os tipos de formatos de exibição de assinatura e como determinar quando as exibições precisam ser editadas devido a alterações em objetos de modelo.  
   
- Você cria uma exibição de assinatura para exportar dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para um sistema de assinatura, como [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você usa o sistema de assinatura para exibir os dados no banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  Para obter informações sobre como criar a exibição de assinatura, consulte [Create a Subscription View to Export Data &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
+ Você cria uma exibição de assinatura para exportar dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para um sistema de assinatura, como [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você usa o sistema de assinatura para exibir os dados no banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  Para obter informações sobre como criar a exibição de assinatura, consulte [Criar uma exibição de assinatura para exportar dados &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
- Para obter mais informações sobre exibições, consulte [exibições](../relational-databases/views/views.md).  
+ Para obter mais informações sobre modos de exibição, consulte [Modos de exibição](../relational-databases/views/views.md).  
   
 ## <a name="subscription-view-formats"></a>Formatos de exibição da assinatura  
  Ao criar uma exibição do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], você faz escolhas em um conjunto de formatos de exibição padrão fornecido pelo [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Esses formatos podem ser usados para criar exibições que mostram:  
@@ -47,9 +47,9 @@ ms.locfileid: "73728986"
 -   Os membros de todas as hierarquias explícitas de uma entidade, em formato pai-filho ou de nível.  
   
 ## <a name="subscription-views-can-become-out-of-date"></a>Exibições de assinatura podem se tornar desatualizadas  
- Depois de criar uma exibição de assinatura para uma entidade ou hierarquia, as alterações nos objetos modelo associados não são refletidas automaticamente na exibição. Talvez seja necessário gerar novamente uma exibição de assinatura no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para refletir as alterações nos objetos modelo. A coluna **Alterado** na página **Exportação** é atualizada para **True** quando objetos do modelo forem alterados. **True** indica que você deve editar e salvar a exibição de assinatura, o que gera novamente a exibição.  
+ Depois de criar uma exibição de assinatura para uma entidade ou hierarquia, as alterações nos objetos modelo associados não são refletidas automaticamente na exibição. Talvez seja necessário gerar novamente uma exibição de assinatura no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para refletir as alterações nos objetos modelo. A coluna **Alterado** na página **Exportação** é atualizada para **True** quando objetos do modelo forem alterados. **Verdadeiro** indica que você deve editar a exibição de assinatura e salvá-la, o que gera novamente a exibição.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
@@ -60,6 +60,6 @@ ms.locfileid: "73728986"
   
 -   [Formatos de exibição de assinatura &#40;Master Data Services&#41;](../master-data-services/subscription-view-formats-master-data-services.md)  
   
--   [exibições](../relational-databases/views/views.md)  
+-   [Exibições](../relational-databases/views/views.md)  
   
   

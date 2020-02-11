@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 669e65a7d27b208d861a33618d889707134dfefa
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400508"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>Provisionamento de certificado no Analytics Platform System
@@ -21,7 +21,7 @@ A página de **provisionamento de certificados do PDW** do sistema de plataforma
 
 Usando o, um certificado para criptografar conexões pode ajudar a proteger a comunicação com o nó de controle por meio de clientes SQL Server, ferramentas que usam drivers de SQL Server PDW, o [console de administração](monitor-the-appliance-by-using-the-admin-console.md)e cargas de Integration Services. 
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Antes de instalar o certificado, faça o seguinte:  
   
 1.  Obtenha um certificado seguro. Se você precisar de mais informações sobre como obter um certificado seguro, entre em contato com Suporte da Microsoft.  

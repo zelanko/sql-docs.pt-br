@@ -11,10 +11,10 @@ ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 26ad0e3d481b5d09a3105645af5705a3bd99cdbf
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729073"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>Tornar um grupo de atributos visível para os usuários (Master Data Services)
@@ -28,17 +28,17 @@ ms.locfileid: "73729073"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   Pelo menos um grupo de atributos deve existir. Para obter mais informações, veja [Create an Attribute Group &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md).  
+-   Pelo menos um grupo de atributos deve existir. Para obter mais informações, veja [Criar um grupo de atributos &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md).  
   
 ### <a name="to-make-an-attribute-group-visible-to-users"></a>Para tornar um grupo de atributos visível para usuários  
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
-2.  Na página **Gerenciar Modelo** , escolha um modelo na grade e clique em **Entidades**.  
+2.  Na página **gerenciar modelo** , selecione um modelo na grade e clique em **entidades**.  
   
 3.  Na página **Gerenciar Entidade** , na grade, selecione a linha para a entidade que você deseja editar o grupo de atributos.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "73729073"
   
 7.  Clique em um usuário ou grupo na caixa **Disponível** e clique na seta **Adicionar** . Para adicionar tudo, clique na seta **Adicionar Tudo** .  
   
-8.  Clique em **Salvar**.  
+8.  Clique em **Save** (Salvar).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Grupos de atributos &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
  [Criar um grupo de atributos &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
   

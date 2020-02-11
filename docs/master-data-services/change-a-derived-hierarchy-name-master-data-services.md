@@ -13,10 +13,10 @@ ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ac272f3087d970c22d30fd3d4b9f105855d783f9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728657"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>Alterar o nome de uma hierarquia derivada (Master Data Services)
@@ -28,7 +28,7 @@ ms.locfileid: "73728657"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73728657"
   
 8.  Clique em **Salvar hierarquia derivada**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Hierarquias derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
  [Criar uma hierarquia derivada &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [Excluir uma hierarquia derivada &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)  

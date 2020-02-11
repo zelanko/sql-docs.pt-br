@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bab4c78cdb4aee364cc8f41aff70578b8a6df0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028819"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Propriedades do SQL Server (guia Avançado)
@@ -34,7 +34,7 @@ ms.locfileid: "63028819"
  Exibe o local em que os despejos de memória são colocadas no caso de um erro.  
   
  **Relatório de Erros**  
- Quando definido como **Sim**, o programa Dr. Watson encaminhará informações para a [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou para o servidor de erro, se ocorrer uma falha grave. Para obter mais informações sobre o Relatório de Erros, pesquise "Configurações de relatório de erro e uso" nos Manuais Online. Para alterar esse valor, no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse no seu servidor, clique em **Propriedades** e clique na página **Diversas Configurações de Servidor**. As opções são apresentadas na área **Relatório de Informações** .  
+ Quando definido como **Sim**, o programa Dr. Watson encaminhará informações para a [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou para o servidor de erro, se ocorrer uma falha grave. Para obter mais informações sobre o Relatório de Erros, pesquise "Configurações de relatório de erro e uso" nos Manuais Online. Para alterar esse valor, no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , clique com o botão direito do mouse no seu servidor, clique em **Propriedades**e clique na página **Diversas Configurações de Servidor** . As opções são apresentadas na área **Relatório de Informações** .  
   
  **Versão do Arquivo**  
  Exibe a versão do executável do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

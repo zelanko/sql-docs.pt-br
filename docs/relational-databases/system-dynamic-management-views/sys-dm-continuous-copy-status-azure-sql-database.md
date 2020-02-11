@@ -1,5 +1,5 @@
 ---
-title: sys. dm_continuous_copy_status
+title: sys.dm_continuous_copy_status
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -21,10 +21,10 @@ ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6d0bda2d1851d7ec7900a23ad6203d4f85beb73f
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844497"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (Banco de Dados SQL do Azure)
@@ -35,7 +35,7 @@ ms.locfileid: "73844497"
 Se você estiver usando o banco de dados SQL V12, deverá usar [Sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (porque *Sys. dm_continuous_copy_status* só se aplica a v11).
 
   
-|Column Name|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|ID exclusiva do banco de dados de réplica.|  
 |**partner_server**|**sysname**|Nome do servidor do Banco de Dados SQL vinculado.|  
@@ -51,15 +51,15 @@ Se você estiver usando o banco de dados SQL V12, deverá usar [Sys. dm_geo_repl
 ## <a name="permissions"></a>Permissões  
  Para recuperar dados, o requer a associação na função de banco **db_owner** dados. O usuário dbo, os membros da função de banco de dados **DBManager** e o logon SA também podem consultar essa exibição.  
   
-## <a name="remarks"></a>Remarks  
- A exibição **Sys. dm_continuous_copy_status** é criada no banco de dados de **recursos** e fica visível em todos os bancos, incluindo o mestre lógico. No entanto, a consulta dessa exibição no mestre lógico retorna um conjunto vazio.  
+## <a name="remarks"></a>Comentários  
+ A exibição **Sys. dm_continuous_copy_status** é criada no banco de dados de **recursos** e fica visível em todos os bancos, incluindo o mestre lógico. No entanto, consultar essa exibição no mestre lógico retorna um conjunto vazio.  
   
  Se a relação de cópia contínua for encerrada em um banco de dados, a linha desse banco de dados na exibição **Sys. dm_continuous_copy_status** desaparecerá.  
   
  Assim como a exibição **Sys. dm_database_copies** , **Sys. dm_continuous_copy_status** reflete o estado da relação de cópia contínua na qual o banco de dados é um banco de dados primário ou secundário ativo. Ao contrário de **Sys. dm_database_copies**, **Sys. dm_continuous_copy_status** contém várias colunas que fornecem detalhes sobre operações e desempenho. Essas colunas incluem **last_replication**e **replication_lag_sec**..  
   
-## <a name="see-also"></a>Consulte também  
- [Sys. dm_database_copies &#40;banco de dados&#41; SQL do Azure](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [Procedimentos &#40;armazenados de replicação geográfica ativa TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
+## <a name="see-also"></a>Consulte Também  
+ [sys. dm_database_copies &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
+ [Procedimentos armazenados de replicação geográfica ativa &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
   
   

@@ -17,10 +17,10 @@ ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a493ef87ad2f980f21a99c50da1cb39dfdcda8cf
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75319976"
 ---
 # <a name="sp_replmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75319976"
 
   Retorna informações sobre o número de comandos pendentes de uma assinatura de publicação transacional e uma estimativa aproximada de quanto tempo é necessário para processá-las. Esse procedimento armazenado retorna uma linha para cada assinatura retornada. Esse procedimento armazenado, usado para monitorar a replicação, é executado no Distribuidor, no banco de dados de distribuição.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,17 +55,17 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
   
 `[ @subscription_type = ] subscription_type`Se o tipo de assinatura. *publication_type* é **int**, sem padrão e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**0**|Assinatura push.|  
-|**uma**|Assinatura pull|  
+|**1**|Assinatura pull|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**pendingcmdcount**|**inteiro**|O número de comandos pendentes para a assinatura.|  
-|**estimatedprocesstime**|**inteiro**|Estimativa do número de segundos requerido para entregar todos os comandos pendentes ao Assinante.|  
+|**pendingcmdcount**|**int**|O número de comandos pendentes para a assinatura.|  
+|**estimatedprocesstime**|**int**|Estimativa do número de segundos requerido para entregar todos os comandos pendentes ao Assinante.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -77,6 +77,6 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
  Somente os membros da função de servidor fixa **sysadmin** no distribuidor ou membros da função de banco de dados fixa **db_owner** no banco de dados de distribuição podem executar **sp_replmonitorsubscriptionpendingcmds**. Os membros da lista de acesso à publicação para uma publicação que usa o banco de dados de distribuição podem executar **sp_replmonitorsubscriptionpendingcmds** para retornar comandos pendentes para essa publicação.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar a replicação de forma programática](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Monitorar programaticamente a replicação](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

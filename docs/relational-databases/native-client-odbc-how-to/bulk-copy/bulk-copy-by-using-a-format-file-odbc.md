@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0698d534a75d6fb1b66af733c3d1eb00f88c26cc
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782004"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Copiar em massa usando um arquivo de formato (ODBC)
@@ -55,7 +55,7 @@ ms.locfileid: "73782004"
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- Execute a primeira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para criar a tabela que será usada pelo exemplo.  
+ Execute a primeira listagem [!INCLUDE[tsql](../../../includes/tsql-md.md)]de código () para criar a tabela que será usada pelo exemplo.  
   
  Copie a segunda listagem de código e cole-a em um arquivo denominado Bcpfmt.fmt. Cada coluna na tabela é separada por um caractere de tabulação.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73782004"
   
  Compile a quarta listagem de código (C++) com odbc32.lib e odbcbcp.lib. Se você compilou com o MSBuild.exe, copie primeiro o Bcpfmt.fmt e o Bcpodbc.bcp do diretório do projeto no diretório com o .exe e, em seguida, invoque o .exe.  
   
- Execute a quinta listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para excluir a tabela usada pelo exemplo.  
+ Execute a quinta listagem [!INCLUDE[tsql](../../../includes/tsql-md.md)]de código () para excluir a tabela usada pelo exemplo.  
   
 ```  
 use AdventureWorks  
@@ -187,8 +187,8 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [ &#40;Tópicos&#41; de instruções de cópia em massa com o SQL Server ODBC Driver](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tópicos de instruções sobre cópia em massa com o SQL Server ODBC Driver &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Usando arquivos de dados e de formato](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

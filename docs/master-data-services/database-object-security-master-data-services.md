@@ -14,10 +14,10 @@ ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: cd3ce4034a1e64c7c8ca6b1e54d989b129f177f4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728431"
 ---
 # <a name="database-object-security-master-data-services"></a>Segurança de objeto de banco de dados (Master Data Services)
@@ -32,60 +32,60 @@ ms.locfileid: "73728431"
   
  As seguintes tarefas exigem o acesso ao banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  
   
--   [Preparação de dados](#Staging)  
+-   [Dados de preparo](#Staging)  
   
--   [Validando dados em relação a regras de negócio](#rules)  
+-   [Validando dados em relação às regras de negócio](#rules)  
   
--   [Exclusão de versões](#Versions)  
+-   [Excluindo versões](#Versions)  
   
 -   [Aplicação imediata de permissões de membro de hierarquia](#Hierarchy)  
   
--   [Definição de configurações do sistema](#SysSettings)  
+-   [Definindo configurações do sistema](#SysSettings)  
   
-##  <a name="Staging"></a> Preparação de dados  
+##  <a name="Staging"></a>Dados de preparo  
  Na tabela a seguir, cada protegível tem "name" como parte do nome. Isso indica o nome da tabela de preparo que é especificada quando uma entidade é criada. Para obter mais informações, consulte [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
 |Ação|Protegíveis|Permissões|  
 |------------|----------------|-----------------|  
 |Criar, atualizar e excluir membros folha e seus atributos.|stg.name_Leaf|Obrigatória: INSERT<br /><br /> Opcional: SELECT e UPDATE|  
-|Carregar os dados da tabela de preparo de Folha nas tabelas adequadas do banco de dados do MDS.|stg.udp_name_Leaf|EXECUTE|  
+|Carregar os dados da tabela de preparo de Folha nas tabelas adequadas do banco de dados do MDS.|stg.udp_name_Leaf|Execute|  
 |Criar, atualizar e excluir membros consolidados e seus atributos.|stg.name_Consolidated|Obrigatória: INSERT<br /><br /> Opcional: SELECT e UPDATE|  
-|Carregar os dados da tabela de preparo de Consolidados nas tabelas adequadas do banco de dados do MDS.|stg.udp_name_Consolidated|EXECUTE|  
+|Carregar os dados da tabela de preparo de Consolidados nas tabelas adequadas do banco de dados do MDS.|stg.udp_name_Consolidated|Execute|  
 |Mover membros em uma hierarquia explícita.|stg.name_Relationship|Obrigatória: INSERT<br /><br /> Opcional: SELECT e UPDATE|  
-|Carregar os dados da tabela de preparo Relação nas tabelas adequadas do banco de dados do MDS.|stg.udp_name_Relationship|EXECUTE|  
+|Carregar os dados da tabela de preparo Relação nas tabelas adequadas do banco de dados do MDS.|stg.udp_name_Relationship|Execute|  
 |Exibir erros ocorridos quando os dados das tabelas de preparo estavam sendo inseridos nas tabelas do banco de dados do MDS.|stg.udp_name_Relationship|SELECT|  
   
- Para obter mais informações, consulte [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+ Para obter mais informações, consulte [visão geral: importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
-##  <a name="rules"></a> Validando dados em relação a regras de negócio  
+##  <a name="rules"></a>Validando dados em relação às regras de negócio  
   
 |Ação|Protegível|Permissões|  
 |------------|---------------|-----------------|  
-|Validar uma versão de dados em relação às regras de negócio|mdm.udpValidateModel|EXECUTE|  
+|Validar uma versão de dados em relação às regras de negócio|mdm.udpValidateModel|Execute|  
   
  Para obter mais informações, consulte [Procedimento armazenado de validação &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
-##  <a name="Versions"></a> Exclusão de versões  
+##  <a name="Versions"></a>Excluindo versões  
   
 |Ação|Protegíveis|Permissões|  
 |------------|----------------|-----------------|  
 |Determinar a ID da versão que deseja excluir|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
-|Excluir uma versão de um modelo|mdm.udpVersionDelete|EXECUTE|  
+|Excluir uma versão de um modelo|mdm.udpVersionDelete|Execute|  
   
  Para obter mais informações, consulte [Excluir uma versão &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md).  
   
-##  <a name="Hierarchy"></a> Aplicação imediata de permissões de membro de hierarquia  
+##  <a name="Hierarchy"></a>Aplicação imediata de permissões de membro de hierarquia  
   
 |Ação|Protegíveis|Permissões|  
 |------------|----------------|-----------------|  
-|Aplicação imediata de permissões de membro|mdm.udpSecurityMemberProcessRebuildModel|EXECUTE|  
+|Aplicação imediata de permissões de membro|mdm.udpSecurityMemberProcessRebuildModel|Execute|  
   
  Para obter mais informações, consulte [Aplicar permissões de membros imediatamente &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
-##  <a name="SysSettings"></a> Definição de configurações do sistema  
+##  <a name="SysSettings"></a>Definindo configurações do sistema  
  Há configurações de sistema que você pode ajustar para controlar o comportamento no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Você poderá ajustar essas configurações no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou, se tiver acesso UPDATE, diretamente na tabela de banco de dados mdm.tblSystemSetting. Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Segurança &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Master Data Services de &#40;de segurança&#41;](../master-data-services/security-master-data-services.md)  
   
   

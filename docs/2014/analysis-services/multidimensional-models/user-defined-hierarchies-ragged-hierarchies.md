@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889329"
 ---
 # <a name="ragged-hierarchies"></a>Hierarquias desbalanceadas
@@ -28,15 +28,15 @@ ms.locfileid: "68889329"
   
  A primeira etapa é verificar como o aplicativo cliente trata o caminho de busca detalhada. Por exemplo, o Excel repete os nomes pai como espaços reservados para valores ausentes. Para ver esse comportamento, crie uma Tabela Dinâmica usando a dimensão Sales Territory no modelo multidimensional do Adventure Works. Em uma Tabela Dinâmica que tem os atributos Group, Country e Region de Sales Territory, você verá que os países sem um valor de região obterão um espaço reservado; nesse caso, uma repetição do pai acima dele (nome do país). Esse comportamento deriva da propriedade da cadeia de conexão MDX Compatibility=1, que é fixa no Excel. Se o cliente não fornece naturalmente os comportamentos de busca detalhada buscados, você pode definir propriedades no modelo para alterar pelo menos alguns desses comportamentos.  
   
- Esse tópico contém as seguintes seções:  
+ Este tópico contém as seguintes seções:  
   
--   [Abordagens para modificar a navegação da busca detalhada em uma hierarquia desbalanceada](#bkmk_approach)  
+-   [Abordagens para modificar a navegação de busca detalhada em uma hierarquia desbalanceada](#bkmk_approach)  
   
 -   [Definir HideMemberIf para ocultar membros em uma hierarquia regular](#bkmk_Hide)  
   
--   [Definir a compatibilidade MDX para determinar como espaços reservados são representados em aplicativos cliente](#bkmk_Mdx)  
+-   [Definir a compatibilidade MDX para determinar como os espaços reservados são representados em aplicativos cliente](#bkmk_Mdx)  
   
-##  <a name="bkmk_approach"></a> Abordagens para modificar a navegação da busca detalhada em uma hierarquia desbalanceada  
+##  <a name="bkmk_approach"></a>Abordagens para modificar a navegação de busca detalhada em uma hierarquia desbalanceada  
  A presença de uma hierarquia desbalanceada se torna um problema quando a navegação de busca detalhada não retorna valores esperados ou é percebida como inadequado para uso. Para corrigir problemas de navegação que resultam de hierarquias desbalanceadas, considere estas opções:  
   
 -   Use uma hierarquia regular, mas defina a propriedade `HideMemberIf` em cada nível para especificar se um nível ausente é visualizado pelo usuário. Ao definir `HideMemberIf`, você também deve definir `MDXCompatibility` na cadeia de conexão para substituir comportamentos da navegação padrão. As instruções para definir essas propriedades são fornecidas neste tópico.  
@@ -45,7 +45,7 @@ ms.locfileid: "68889329"
   
  Se a dimensão contém mais de uma hierarquia desbalanceada, você deve usar a primeira abordagem, definindo `HideMemberIf`. Os desenvolvedores de BI com experiência prática no trabalho com hierarquias desbalanceadas defendem ainda mais as alterações adicionais nas tabelas de dados físicos, criando tabelas separadas para cada nível. Veja [o cubo financeiro do SSAS da Martin Mason – parte 1a – Hierarquias desbalanceadas (blog)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) para obter detalhes sobre essa técnica.  
   
-##  <a name="bkmk_Hide"></a> Definir HideMemberIf para ocultar membros em uma hierarquia regular  
+##  <a name="bkmk_Hide"></a>Definir HideMemberIf para ocultar membros em uma hierarquia regular  
  Na tabela de uma dimensão imperfeita, os membros logicamente ausentes podem ser representados de formas diferentes. As células da tabela podem conter cadeias de caracteres nulas ou vazias ou podem conter o mesmo valor que o pai, servindo como espaço reservado. A representação de espaços reservados é determinada pelo status de espaço reservado dos membros filho, conforme determinado pela propriedade `HideMemberIf` e pela propriedade de cadeia de conexão `MDX Compatibility` do aplicativo cliente.  
   
  Para aplicativos cliente que oferecem suporte à exibição de hierarquias desbalanceadas, é possível usar essas propriedades para ocultar membros logicamente ausentes.  
@@ -54,26 +54,27 @@ ms.locfileid: "68889329"
   
 2.  Clique com o botão direito do mouse em um membro na hierarquia e selecione **Propriedades**. Defina `HideMemberIf` com um dos valores descritos a seguir.  
   
-    |Configuração de HideMemberIf|Descrição|  
+    |Configuração de HideMemberIf|DESCRIÇÃO|  
     |--------------------------|-----------------|  
-    |`Never`|Os membros do nível nunca são ocultos. Este é o valor padrão.|  
+    |`Never`|Os membros do nível nunca são ocultos. Esse é o valor padrão.|  
     |**OnlyChildWithNoName**|Um membro do nível ficará oculto quando for o único filho de seu pai e seu nome for uma cadeia de caracteres nula ou vazia.|  
     |**OnlyChildWithParentName**|Um membro do nível ficará oculto quando for o único filho de seu pai e seu for nome idêntico ao nome do pai.|  
     |**NoName**|Um membro do nível ficará oculto quando seu nome estiver vazio.|  
     |**ParentName**|Um membro do nível ficará oculto quando seu nome for idêntico ao de seu pai.|  
   
-##  <a name="bkmk_Mdx"></a> Definir a compatibilidade MDX para determinar como espaços reservados são representados em aplicativos cliente  
+##  <a name="bkmk_Mdx"></a>Definir a compatibilidade MDX para determinar como os espaços reservados são representados em aplicativos cliente  
  Após definir `HideMemberIf` em um nível de hierarquia, defina também a propriedade `MDX Compatibility` na cadeia de conexão enviada do aplicativo cliente. A definição `MDX Compatibility` determina se o `HideMemberIf` é usado.  
   
-|Definição de MDX Compatibility|Descrição|Uso|  
+|Definição de MDX Compatibility|DESCRIÇÃO|Uso|  
 |-------------------------------|-----------------|-----------|  
 |**1**|Mostrar um valor de espaço reservado.|Esse é o padrão usado pelo Excel, pelo SSDT e pelo SSMS. Ele orienta o servidor a retornar valores de espaço reservado ao detalhar níveis vazios em uma hierarquia desbalanceada. Se você clicar no valor de espaço reservado, poderá continuar até obter os nós filho (folha)<br /><br /> O Excel tem a cadeia de conexão usada para conectar-se ao Analysis Services, e ele sempre define `MDX Compatibility` como 1 em cada nova conexão. Esse comportamento preserva a compatibilidade com versões anteriores.|  
-|**2**|Oculte um valor de espaço reservado (um valor nulo ou uma duplicata do nível pai), mas mostre outros níveis e nós com valores relevantes.|`MDX Compatibility`=2 costuma ser visto como a configuração preferencial em termos de hierarquias desbalanceadas. Um relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e alguns aplicativos cliente de terceiros talvez persistam nessa configuração.|  
+|**2**|Oculte um valor de espaço reservado (um valor nulo ou uma duplicata do nível pai), mas mostre outros níveis e nós com valores relevantes.|
+  `MDX Compatibility`=2 costuma ser visto como a configuração preferencial em termos de hierarquias desbalanceadas. Um relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e alguns aplicativos cliente de terceiros talvez persistam nessa configuração.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar hierarquias definidas pelo usuário](user-defined-hierarchies-create.md)   
- [Hierarquias do usuário](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
+ [Hierarquias de usuário](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Hierarquia pai-filho](parent-child-dimension.md)   
- [Propriedades de cadeia de conexão &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
+ [Propriedades da cadeia de conexão &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
   
   

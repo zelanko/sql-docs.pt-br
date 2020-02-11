@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63016063"
 ---
 # <a name="execute-a-stored-procedure"></a>Executar um procedimento armazenado
@@ -65,7 +65,7 @@ ms.locfileid: "63016063"
   
 -   Executando procedimentos armazenados do sistema  
   
-     Procedimentos armazenados do sistema começam com o prefixo **sp_**. Como eles aparecem logicamente em todos os bancos de dados definidos pelo usuário e o sistema, podem ser executados de qualquer banco de dados sem ter que qualificar totalmente o nome de procedimento. No entanto, recomendamos que você qualifique por esquema todos os nomes dos procedimentos armazenados do sistema com o nome do esquema **sys** para evitar conflitos de nomes. O exemplo a seguir mostra o método recomendado para chamar um procedimento armazenado do sistema.  
+     Procedimentos armazenados do sistema começam com o prefixo **sp_** . Como eles aparecem logicamente em todos os bancos de dados definidos pelo usuário e o sistema, podem ser executados de qualquer banco de dados sem ter que qualificar totalmente o nome de procedimento. No entanto, recomendamos que você qualifique por esquema todos os nomes dos procedimentos armazenados do sistema com o nome do esquema **sys** para evitar conflitos de nomes. O exemplo a seguir mostra o método recomendado para chamar um procedimento armazenado do sistema.  
   
     ```sql  
     EXEC sys.sp_who;  
@@ -149,7 +149,7 @@ ms.locfileid: "63016063"
      **Passar Valor Nulo**  
      Passe um NULL como valor do parâmetro.  
   
-     **Value**  
+     **Valor**  
      Digite o valor do parâmetro ao chamar o procedimento.  
   
 5.  Para executar o procedimento armazenado, clique em **OK**.  
@@ -204,7 +204,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Especificar parâmetros](specify-parameters.md)   
  [Configurar a opção de configuração de servidor scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)   

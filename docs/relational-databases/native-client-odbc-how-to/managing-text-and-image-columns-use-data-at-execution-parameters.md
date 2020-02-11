@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9235d096be513e1480dab7e23672e14011c63f0a
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781211"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>Gerenciar colunas Text e Image – Usar parâmetros de dados em execução
@@ -28,7 +28,7 @@ ms.locfileid: "73781211"
   
 1.  Ao chamar [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) para associar um buffer de programa ao parâmetro de instrução:  
   
-    -   Para o último parâmetro, use SQL_LEN_DATA_AT_EXEC(*length*), em que *length* é o comprimento total em bytes dos dados de coluna de **text**, **ntext** ou **image**.  
+    -   Para o último parâmetro, use SQL_LEN_DATA_AT_EXEC(*length*) onde *length* é o comprimento total dos dados de parâmetro **text**, **ntext**ou **image** em bytes.  
   
     -   Use um **rgbValue** (oitavo parâmetro) de um identificador de parâmetro definido por programa.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73781211"
   
 3.  Para cada parâmetro de dados em execução:  
   
-    -   Chame [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) para obter a ID de parâmetro definido por programa. Isso retornará SQL_NEED_DATA se houver outro parâmetro de dados em execução.  
+    -   Chame [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) para obter o ID de parâmetro definido por programa. Isso retornará SQL_NEED_DATA se houver outro parâmetro de dados em execução.  
   
     -   Chame [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) uma ou mais vezes para enviar os dados de parâmetro, até que o comprimento seja enviado.  
   
@@ -49,11 +49,11 @@ ms.locfileid: "73781211"
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- Execute a primeira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para criar a tabela usada pelo exemplo.  
+ Execute a primeira listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () para criar a tabela usada pelo exemplo.  
   
  Compile a segunda listagem de código (C++) com odbc32.lib. Em seguida, execute o programa.  
   
- Execute a terceira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para excluir a tabela usada pelo exemplo.  
+ Execute a terceira listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () para excluir a tabela usada pelo exemplo.  
   
 ```  
 use AdventureWorks  
@@ -224,7 +224,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp4')
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Tópicos &#40;de instruções sobre como gerenciar colunas de texto e imagem ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+## <a name="see-also"></a>Consulte Também  
+ [Tópicos de instruções sobre como gerenciar colunas de texto e imagem &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

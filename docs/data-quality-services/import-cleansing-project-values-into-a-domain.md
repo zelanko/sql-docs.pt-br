@@ -12,10 +12,10 @@ ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 34060c3fc5416f7244b400b506faad9097d66880
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241798"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importar valores de projeto de limpeza para um domínio
@@ -24,17 +24,17 @@ ms.locfileid: "75241798"
 
   No [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), você pode importar conhecimento de qualidade de dados coletado durante o processo de limpeza em um projeto de limpeza de qualidade de dados ou um pacote do Integration Services que contém o componente de limpeza DQS em um domínio. Isto assegura que o conhecimento confiável não seja perdido, e que a base de dados de conhecimento seja aprimorada continuamente.  
   
-##  <a name="BeforeYouBegin"></a>Antes de começar  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a>Pré-requisitos  
+###  <a name="Prerequisites"></a> Pré-requisitos  
   
 -   Para importar valores de projeto de limpeza para dentro de um domínio, o domínio deverá ter sido usado no projeto de limpeza no Cliente Data Quality ou no pacote do Integration Services que contém o componente de limpeza DQS.  
   
 -   O projeto de limpeza no Cliente Data Quality ou o pacote do Integration Services contendo o componente de limpeza DQS deve ter sido concluído com sucesso.  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a>Permissões  
+####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para importar o conhecimento de qualidade de dados reunido durante o processo de limpeza para um domínio.  
   
 ##  <a name="Import"></a>Importar valores de projeto de limpeza  
@@ -114,6 +114,6 @@ ms.locfileid: "75241798"
   
 ## <a name="see-also"></a>Consulte Também  
  [Limpeza de dados](../data-quality-services/data-cleansing.md)   
- [Transformação de limpeza DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
+ [Transformação de Limpeza DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   
   

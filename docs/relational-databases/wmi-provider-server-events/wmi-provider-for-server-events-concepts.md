@@ -17,10 +17,10 @@ ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1acbe114258b0a7a5bee71656a0b6878f09fefc3
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73657331"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Provedor WMI para conceitos de eventos de servidor
@@ -28,7 +28,7 @@ ms.locfileid: "73657331"
   O Provedor WMI para eventos de servidor permite usar o Windows Management Instrumentation (WMI) para monitorar eventos em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Compreender o Provedor WMI para eventos do servidor](../../relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md)  
+ [Compreendendo o Provedor WMI para eventos do servidor](../../relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md)  
  Fornece uma visão geral da arquitetura do provedor e como o SQL Server Agent pode ser programado para trabalhar com ela.  
   
  [Trabalhando com o Provedor WMI para Eventos de Servidor](../../relational-databases/wmi-provider-server-events/working-with-the-wmi-provider-for-server-events.md)  
@@ -40,7 +40,7 @@ ms.locfileid: "73657331"
  [Exemplo: Criação de um alerta do SQL Server Agent usando o provedor WMI para eventos do servidor](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  Fornece um exemplo de como usar o Provedor WMI para retornar informações de eventos de rastreamento com os quais deve ser criado um alerta do SQL Server Agent.  
   
- [Exemplo: Use o provedor de eventos WMI com o .NET Framework](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  
+ [Exemplo: Usar o provedor de eventos WMI com o .NET Framework](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  
  Fornece um exemplo de como usar o Provedor WMI para retornar dados de eventos em um aplicativo C#.  
   
  [Provedor WMI para classes e propriedades de eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)  

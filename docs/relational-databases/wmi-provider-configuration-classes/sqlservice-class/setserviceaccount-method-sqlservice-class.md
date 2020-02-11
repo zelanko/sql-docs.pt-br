@@ -18,10 +18,10 @@ ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b500ca0f879430f0e5655348bdeebda0e0921292
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660893"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>Método SetServiceAccount (classe SqlService)
@@ -36,10 +36,10 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Um objeto da [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) que representa o serviço.  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *Instart*  
  Um valor da cadeia de caracteres que especifica o nome de conta com a qual o serviço é executado. Dependendo do tipo de serviço, o nome da conta pode estar no formulário de DomainName\Username. Quando for executado, o processo de serviço será registrado usando-se um dos dois formulários:  
   
@@ -57,7 +57,7 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciando e parando serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

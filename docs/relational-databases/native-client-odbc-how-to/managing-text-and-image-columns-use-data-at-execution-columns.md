@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bb282274f8c1246f3771f83cfca15872d6d30937
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782514"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Gerenciar colunas Text e Image – Usar colunas de dados em execução
@@ -49,11 +49,11 @@ ms.locfileid: "73782514"
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- Execute a primeira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para criar a tabela usada pelo exemplo.  
+ Execute a primeira listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () para criar a tabela usada pelo exemplo.  
   
  Compile a segunda listagem de código (C++) com odbc32.lib. Em seguida, execute o programa.  
   
- Execute a terceira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para excluir a tabela usada pelo exemplo.  
+ Execute a terceira listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () para excluir a tabela usada pelo exemplo.  
   
 ```  
 use AdventureWorks  
@@ -186,7 +186,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp3')
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Tópicos &#40;de instruções sobre como gerenciar colunas de texto e imagem ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+## <a name="see-also"></a>Consulte Também  
+ [Tópicos de instruções sobre como gerenciar colunas de texto e imagem &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900555"
 ---
 # <a name="fuzzy-grouping-transformation"></a>transformação Agrupamento Difuso
@@ -69,7 +69,7 @@ ms.locfileid: "62900555"
  Essa transformação tem uma entrada e uma saída. Não dá suporte a uma saída de erro.  
   
 ## <a name="row-comparison"></a>Comparação de linhas  
- Quando você configura a transformação Agrupamento Difuso, é possível especificar o algoritmo de comparação que a transformação usa para comparar linhas na entrada de transformação. Se você definir a propriedade Exhaustive como `true`, a transformação comparará todas as linhas na entrada para todas as outras linhas na entrada. Esse algoritmo de comparação pode produzir resultados mais precisos, mas é provável que faça com que a transformação seja executada com mais lentidão, a menos que o número de linhas na entrada seja pequeno. Para evitar problemas de desempenho, é aconselhável definir a propriedade Exhaustive como `true` somente durante o desenvolvimento de pacote.  
+ Quando você configura a transformação Agrupamento Difuso, é possível especificar o algoritmo de comparação que a transformação usa para comparar linhas na entrada de transformação. Se você definir a propriedade exaustiva como `true`, a transformação compara cada linha na entrada para todas as demais linhas na entrada. Esse algoritmo de comparação pode produzir resultados mais precisos, mas é provável que faça com que a transformação seja executada com mais lentidão, a menos que o número de linhas na entrada seja pequeno. Para evitar problemas de desempenho, é aconselhável definir a propriedade exaustiva como `true` somente durante o desenvolvimento do pacote.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tabelas e índices temporários  
  No tempo de execução, a transformação Agrupamento Difuso cria objetos temporários, como tabelas e índices, potencialmente de tamanho significante, no banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que a transformação seja conectada. O tamanho das tabelas e índices é proporcional ao número de linhas na entrada de transformação e o número de tokens criados pela transformação Agrupamento Difuso.  
@@ -83,17 +83,17 @@ ms.locfileid: "62900555"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Agrupamento Difuso** , clique em um dos seguintes tópicos:  
   
--   [Editor de Transformação Agrupamento Difuso &#40;Guia Gerenciador de Conexões&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [Editor de transformação Agrupamento Difuso &#40;guia Gerenciador de conexões&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [Editor de Transformação Agrupamento Difuso &#40;Guia Colunas&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [Editor de transformação Agrupamento Difuso &#40;guia colunas&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [Editor de Transformação Agrupamento Difuso &#40;Guia Avançado&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [Editor de transformação Agrupamento Difuso &#40;guia Avançado&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](../../common-properties.md)  
   
--   [Propriedades personalizadas da transformação](transformation-custom-properties.md)  
+-   [Propriedades personalizadas de Transformação](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter detalhes sobre como definir as propriedades dessa tarefa, clique em um dos tópicos a seguir:  
@@ -102,8 +102,8 @@ ms.locfileid: "62900555"
   
 -   [Definir as propriedades de um componente de fluxo de dados](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Transformação Pesquisa Difusa](lookup-transformation.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Transformação pesquisa difusa](lookup-transformation.md)   
  [Transformações do Integration Services](integration-services-transformations.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Filtrar dados em uma tabela (SSAS Tabular) | Microsoft Docs
+title: Filtrar dados em uma tabela (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067124"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrar dados em uma tabela (SSAS tabular)
@@ -43,7 +43,7 @@ ms.locfileid: "66067124"
   
 1.  Clique na seta no cabeçalho da coluna da qual você deseja limpar um filtro.  
   
-2.  Clique em **Limpar filtro de \<nome da coluna >** .  
+2.  Clique em **Limpar filtro \<do nome da coluna>**.  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>Para desmarcar todos os filtros de uma tabela  
   
@@ -51,9 +51,9 @@ ms.locfileid: "66067124"
   
 2.  Clique no menu **Coluna** e, em seguida, clique em **Limpar Todos os Filtros**.  
   
-## <a name="see-also"></a>Consulte também  
- [Filtrar e classificar dados &#40;SSAS de Tabela&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [Perspectivas &#40;SSAS de Tabela&#41;](perspectives-ssas-tabular.md)   
- [Funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Filtrar e classificar dados &#40;SSAS de tabela&#41;](../filter-and-sort-data-ssas-tabular.md)   
+ [Perspectivas &#40;SSAS de tabela&#41;](perspectives-ssas-tabular.md)   
+ [Funções &#40;SSAS de tabela&#41;](roles-ssas-tabular.md)  
   
   

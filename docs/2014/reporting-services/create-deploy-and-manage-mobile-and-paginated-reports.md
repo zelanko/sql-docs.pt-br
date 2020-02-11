@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a4d9983da355c244e5d26873f92b4c43159a0e1
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74685434"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "74685434"
  Para obter informações sobre outros componentes, ferramentas e recursos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , consulte os [Manuais Online do SQL Server.](../2014-toc/index.yml)  
   
  **Procurar conteúdo por área**  
- ![Ícone de pasta](media/hlp-16folder.gif "Fícone mais antigo ") [Reporting Services servidor de relatório](../../2014/reporting-services/reporting-services-report-server.md)  
+ ![Ícone de pasta](media/hlp-16folder.gif "Ícone de pasta") [Reporting Services servidor de relatório](../../2014/reporting-services/reporting-services-report-server.md)  
   
  ![Ícone de pasta](media/hlp-16folder.gif "Ícone de pasta") [Reporting Services relatórios &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
   

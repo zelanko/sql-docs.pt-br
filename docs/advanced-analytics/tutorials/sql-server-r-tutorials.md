@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7c71ebfbda37e66050f868fa7676d0247e84840e
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74119231"
 ---
 # <a name="sql-server-r-language-tutorials"></a>Tutoriais da linguagem R do SQL Server

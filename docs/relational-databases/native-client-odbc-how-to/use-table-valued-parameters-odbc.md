@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3ea30d6b1e0a90a4feec188698fd452903cf83ce
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780026"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Usar Parâmetros com valor de tabela (ODBC)
@@ -23,7 +23,7 @@ ms.locfileid: "73780026"
 
   Este exemplo mostra como usar parâmetros com valor de tabela para inserir várias linhas, com várias colunas, com uma chamada para o servidor.  
   
- Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros &#40;com valor&#41;de tabela ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Para obter mais exemplos que usem parâmetros com valor de tabela, consulte [ODBC Table-Valued Parameter Programming Examples](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726).  
+ Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Para obter mais exemplos que usem parâmetros com valor de tabela, consulte [ODBC Table-Valued Parameter Programming Examples](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726).  
   
 ## <a name="example"></a>Exemplo  
  Você precisará de uma fonte de dados ODBC chamada TVPDemo. O banco de dados padrão para TVPDemo pode ser qualquer banco de dados de teste em seu computador. Essa fonte de dados deve ter como base o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

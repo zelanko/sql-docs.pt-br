@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401370"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Aplicar hotfixes do Analytics Platform System
@@ -27,7 +27,7 @@ Este artigo discute como aplicar hotfixes ao software do sistema da plataforma d
 > [!WARNING]  
 > Não aplique um hotfix do sistema de plataforma de análise enquanto o dispositivo estiver em uso. A aplicação de um hotfix pode fazer com que os nós do dispositivo sejam reinicializados. O hotfix deve ser aplicado durante uma janela de manutenção quando o dispositivo não está sendo usado.  
   
-### <a name="prerequisites"></a>Pré-requisitos  
+### <a name="prerequisites"></a>Prerequisites  
 Para executar essas etapas, será necessário:  
   
 -   Um logon do sistema de plataforma de análise com permissões para acessar o console de administração para monitorar o estado do dispositivo. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  

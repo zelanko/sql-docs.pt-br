@@ -11,10 +11,10 @@ ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: abf900f8eea0e64ed8e541ee7cd94c63834fbb48
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729748"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Criação automática de código (Master Data Services)
@@ -33,7 +33,7 @@ ms.locfileid: "73729748"
   
  Quando você insere valores de atributo no MDS, em uma das ferramentas ou usando o processo de preparo, o valor de atributo pode ficar em branco. Quando forem aplicadas regras de negócio, os valores serão incrementados com base no valor existente mais alto. Por exemplo, se a regra for "Atributo padrão para um valor gerado que inicia em 1 e é incrementado de 4" e o valor atual mais alto para o atributo for 700, o valor do próximo membro adicionado será 704.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

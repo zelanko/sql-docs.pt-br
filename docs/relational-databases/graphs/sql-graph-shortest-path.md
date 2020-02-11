@@ -19,10 +19,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
 ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056397"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "74056397"
 
   Especifica um critério de pesquisa para um grafo, que é pesquisado recursiva ou repetidamente. SHORTEST_PATH pode ser usada dentro da correspondência com tabelas de borda e nó do grafo, na instrução SELECT. 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="shortest-path"></a>Caminho mais curto
 A função SHORTEST_PATH permite que você encontre:    
@@ -48,8 +48,8 @@ FOR PATH deve ser usado com qualquer nome de tabela de nó ou borda na cláusula
 ## <a name="arbitrary-length-pattern"></a>Padrão de comprimento arbitrário
 Esse padrão inclui os nós e as bordas que devem ser percorridas repetidamente até que o nó desejado seja atingido ou até que o número máximo de iterações, conforme especificado no padrão, seja atendido. Cada vez que a consulta é executada, o resultado da execução desse padrão será uma coleção ordenada de nós e bordas atravessados ao longo do caminho do nó inicial até o nó final. Este é um padrão de sintaxe de estilo de expressão regular e os dois quantificadores de padrão a seguir têm suporte:
 
-* **' + '** : Repetir o padrão 1 ou mais vezes. É encerrado assim que encontra um caminho mais curto.
-* **{1, n}** : repita o padrão 1 para ' n' vezes. Terminar assim que um mais curto for encontrado.
+* **' + '**: Repetir o padrão 1 ou mais vezes. É encerrado assim que encontra um caminho mais curto.
+* **{1, n}**: repita o padrão 1 para ' n' vezes. Terminar assim que um mais curto for encontrado.
 
 ## <a name="last_node"></a>LAST_NODE
 A função LAST_NODE () permite encadear dois padrões de passagem de comprimento arbitrário. Ele pode ser usado em cenários em que:    
@@ -87,13 +87,13 @@ Para atributos de projeto do último nó do caminho percorrido, LAST_VALUE funç
 
 **Último nó**: o último nó refere-se ao nó que aparece por último no caminho atravessado, independentemente da direção da seta no predicado Match. Por exemplo: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Aqui, o último nó no caminho será o último nó P visitado. 
 
-Enquanto que o último nó é o último nó enésimo no caminho do grafo de saída para esse padrão: `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+Enquanto que o último nó é o último nó enésimo no caminho do grafo de saída para esse padrão:`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
 ### <a name="sum"></a>SUM
 Essa função retorna a soma dos valores de atributo de nó/borda fornecidos ou expressão que apareceu no caminho atravessado.
 
 ### <a name="count"></a>COUNT
-Essa função retorna o número de valores não nulos do atributo de nó/borda desejado no caminho. A função COUNT dá suporte ao operador '\*' com um nó ou alias de tabela de borda. Sem o alias de tabela de nó ou borda, o uso de \* é ambíguo e resultará em um erro.
+Essa função retorna o número de valores não nulos do atributo de nó/borda desejado no caminho. A função COUNT dá suporte ao\*operador ' ' com um alias de tabela de nó ou borda. Sem o alias de tabela de nó ou borda, o \* uso de é ambíguo e resultará em um erro.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
@@ -101,13 +101,13 @@ Essa função retorna o número de valores não nulos do atributo de nó/borda d
 ### <a name="avg"></a>AVG
 Retorna a média de valores de atributo de nó/borda fornecidos ou expressão que apareceu no caminho atravessado.
 
-### <a name="min"></a>MIN
+### <a name="min"></a>MÍN.
 Retorna o valor mínimo dos valores de atributo de nó/borda fornecidos ou expressão que apareceu no caminho atravessado.
 
-### <a name="max"></a>MAX
+### <a name="max"></a>MÁX.
 Retorna o valor máximo dos valores de atributo de nó/borda fornecidos ou expressão que apareceu no caminho atravessado.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 shortest_path função só pode ser usada dentro de MATCH.     
 Só há suporte para LAST_NODE no shortest_path.     
 Encontrando um caminho mais curto ponderado, não há suporte para todos os caminhos ou todos os caminhos mais curtos.         
@@ -117,7 +117,7 @@ Em alguns casos, os planos inválidos podem ser gerados para consultas com um n�
 ## <a name="examples"></a>Exemplos 
 Para as consultas de exemplo mostradas aqui, vamos usar as tabelas node e Edge criadas no [SQL Graph Sample](./sql-graph-sample.md)
 
-### <a name="a--find-shortest-path-between-2-people"></a>A.  Localizar caminho mais curto entre 2 pessoas
+### <a name="a--find-shortest-path-between-2-people"></a>a.  Localizar caminho mais curto entre 2 pessoas
  No exemplo a seguir, encontramos um caminho mais curto entre Jacob e Alice. Precisaremos do nó Person e da borda FriendOf criada a partir do script de exemplo do Graph. 
 
  ```
@@ -208,8 +208,8 @@ FROM (
 WHERE Q.levels = 2
 ```
 
-## <a name="see-also"></a>Consulte também  
- [Match (SQL Graph)](../../t-sql/queries/match-sql-graph.md)    
+## <a name="see-also"></a>Consulte Também  
+ [MATCH (SQL Graph)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Processamento de grafo com o SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)     

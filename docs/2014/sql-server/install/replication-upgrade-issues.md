@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 619cd537b5ecb45afe2dce3467caa64fc1e9a499
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092747"
 ---
 # <a name="replication-upgrade-issues"></a>Problemas na atualização da replicação
@@ -29,8 +29,8 @@ ms.locfileid: "66092747"
   
 -   [Outros problemas de atualização da replicação](../../../2014/sql-server/install/other-replication-upgrade-issues.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Trabalhando com o Supervisor de atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Trabalhando com o supervisor de atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Solucionando problemas de atualização](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

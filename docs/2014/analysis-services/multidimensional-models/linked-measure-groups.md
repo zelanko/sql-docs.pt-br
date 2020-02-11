@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec38404a32751330d7fefd974fafe3d571d3b11b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074778"
 ---
 # <a name="linked-measure-groups"></a>Grupos de medidas vinculados
   Um grupo de medidas vinculado se baseia em outro grupo de medidas em um cubo diferente no mesmo banco de dados ou em um banco de dados diferente do Analysis Services. Você poderá usar um grupo de medidas vinculado se quiser reutilizar um conjunto de medidas, e os valores de dados correspondentes, em vários cubos.  
   
- A Microsoft recomenda que os grupos de medidas vinculados e originais residam em soluções executadas no mesmo servidor. Vincular a um grupo de medidas em um servidor remoto está agendada para substituição em uma versão futura (consulte [Deprecated Analysis Services Features in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
+ A Microsoft recomenda que os grupos de medidas vinculados e originais residam em soluções executadas no mesmo servidor. A vinculação a um grupo de medidas em um servidor remoto está agendada para substituição em uma versão futura (consulte [recursos de Analysis Services preteridos no SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
   
 > [!IMPORTANT]  
 >  Os grupos de medidas vinculados são somente leitura. Para obter as alterações mais recentes, você deve excluir e recriar todos os grupos de medidas vinculados com base no objeto de origem modificado. Por esse motivo, copiar e colar os grupos de medidas entre projetos é uma abordagem alternativa que você deve considerar no caso da necessidade de alterações futuras ao grupo de medidas.  
@@ -70,7 +70,7 @@ ms.locfileid: "66074778"
   
  Para definir ou usar um grupo de medidas vinculado, a conta de serviço do Windows para a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deve pertencer a uma função de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que tenha direitos de acesso de `ReadDefinition` e `Read` para a instância de origem do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para o cubo de origem e grupo de medidas ou deve pertencer à função [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da instância de origem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir dimensões vinculadas](define-linked-dimensions.md)  
   
   

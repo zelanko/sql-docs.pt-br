@@ -20,23 +20,23 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ba7e6b23ac2091e6ae772e48b91a70613ae8f455
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73778964"
 ---
 # <a name="calling-a-stored-procedure"></a>Chamando um procedimento armazenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client dá suporte à sequência de escape de chamada ODBC e à instrução [!INCLUDE[tsql](../../includes/tsql-md.md)][Execute](../../t-sql/language-elements/execute-transact-sql.md) para executar procedimentos armazenados; a sequência de escape de chamada ODBC é o método preferencial. Usar a sintaxe ODBC permite que um aplicativo recupere os códigos de retorno dos procedimentos armazenados e o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client também é otimizado para usar um protocolo originalmente desenvolvido para enviar RPCs (chamadas de procedimento remoto) entre computadores que estejam executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este protocolo de RPC aumenta o desempenho, eliminando grande parte do processamento de parâmetros e da análise da instrução feita no servidor.  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client dá suporte à sequência de escape de chamada [!INCLUDE[tsql](../../includes/tsql-md.md)]ODBC e à instrução [Execute](../../t-sql/language-elements/execute-transact-sql.md) para executar procedimentos armazenados; a sequência de escape de chamada ODBC é o método preferencial. Usar a sintaxe ODBC permite que um aplicativo recupere os códigos de retorno dos procedimentos armazenados e o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client também é otimizado para usar um protocolo originalmente desenvolvido para enviar RPCs (chamadas de procedimento remoto) entre computadores que estejam executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este protocolo de RPC aumenta o desempenho, eliminando grande parte do processamento de parâmetros e da análise da instrução feita no servidor.  
   
 > [!NOTE]  
->  Ao chamar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimentos armazenados usando parâmetros nomeados com ODBC (para obter mais informações, consulte [parâmetros de associação por nome (parâmetros nomeados)](https://go.microsoft.com/fwlink/?LinkID=209721)), os nomes de parâmetro devem começar com o caractere '\@'. Esta é uma restrição específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client impõe esta restrição de forma mais rigorosa que os MDAC (Microsoft Data Access Components).  
+>  Ao chamar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimentos armazenados usando parâmetros nomeados com ODBC (para obter mais informações, consulte [parâmetros de associação por nome (parâmetros nomeados)](https://go.microsoft.com/fwlink/?LinkID=209721)), os nomes de parâmetro\@devem começar com o caractere ' '. Esta é uma restrição específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client impõe esta restrição de forma mais rigorosa que os MDAC (Microsoft Data Access Components).  
   
  A sequência de escape CALL do ODBC para chamar um procedimento é:  
   
- {[ **? =** ]**chamar**_procedure_name_[([*parâmetro*] [ **,** [*Parameter*]]...)]}  
+ {[**? =**]**chamar**_procedure_name_[([*parâmetro*] [**,**[*Parameter*]]...)]}  
   
  em que *procedure_name* especifica o nome de um procedimento e o *parâmetro* especifica um parâmetro de procedimento. Há suporte para parâmetros nomeados somente em instruções que usam a sequência de escape ODBC CALL.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73778964"
   
  Parâmetros de entrada e entrada/saída podem ser omitidos das chamadas de procedimento. Se um procedimento for chamado usando parênteses, mas sem nenhum parâmetro, o driver instruirá a fonte de dados a usar o valor padrão para o primeiro parâmetro. Por exemplo:  
   
- {**chamar** _procedure_name_ **()** }  
+ {**chamar** _procedure_name_**()**}  
   
  Se o procedimento não tiver nenhum parâmetro, ele poderá falhar. Se um procedimento for chamado sem parênteses, o driver não enviará nenhum valor de parâmetro. Por exemplo:  
   
@@ -93,7 +93,7 @@ ms.locfileid: "73778964"
 { CALL [MyDB].[MyOwner].[My.Table] }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Executando procedimentos armazenados](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
   

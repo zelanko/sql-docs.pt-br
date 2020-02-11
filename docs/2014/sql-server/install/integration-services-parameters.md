@@ -1,5 +1,5 @@
 ---
-title: Parâmetros do Integration Services | Microsoft Docs
+title: Parâmetros de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,27 +13,27 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 100e796bb27d1e60db000a364a0432273dd5cafb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094241"
 ---
 # <a name="integration-services-parameters"></a>Parâmetros do Integration Services
-  Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode optar por analisar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacotes no computador, ou [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] arquivos de pacote no sistema de arquivos. Se você analisar arquivos no sistema de arquivos, forneça um caminho para a pasta que contém os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]o, você pode optar por [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] analisar os pacotes no computador ou [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] os arquivos de pacote no sistema de arquivos. Se você analisar arquivos no sistema de arquivos, forneça um caminho para a pasta que contém os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 ## <a name="options"></a>Opções  
  **Analisar pacotes SSIS no computador**  
  Selecione esta opção para analisar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no computador. Por padrão, essa opção é selecionada.  
   
- **Analisar arquivos de pacote do SSIS**  
+ **Analisar arquivos de pacote SSIS**  
  Selecione esta opção para analisar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no sistema de arquivos.  
   
- **Caminho para pacotes do SSIS**  
- Localize um UNC ou caminho local para seus pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Você não tem que incluir nomes de arquivos. Se o caminho inserido não pode ser acessado, você não poderá clicar em **próxima**. Por padrão, o caminho fica em branco. Esse campo é habilitado somente quando você seleciona **arquivos de pacote SSIS analisar**.  
+ **Caminho para pacotes SSIS**  
+ Localize um UNC ou caminho local para seus pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Você não tem que incluir nomes de arquivos. Se o caminho inserido não puder ser acessado, você não poderá clicar em **Avançar**. Por padrão, o caminho fica em branco. Esse campo é habilitado somente quando você seleciona **analisar arquivos de pacote SSIS**.  
   
-## <a name="see-also"></a>Consulte também  
- [Trabalhando com o Supervisor de atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
- [Referência de Interface de usuário do Supervisor de atualização](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Trabalhando com o supervisor de atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [Referência da interface de usuário do Supervisor de Atualização](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   
   

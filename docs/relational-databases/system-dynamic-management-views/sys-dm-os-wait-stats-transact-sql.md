@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f0abc089809e6b811f0ff64684bdaeed742ebcae
-ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74190345"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
@@ -35,14 +35,14 @@ Retorna informações sobre todas as esperas encontradas por threads executados.
 > [!NOTE] 
 > Para chamá-lo ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou **, use o nome **Sys. dm_pdw_nodes_os_wait_stats**.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |wait_type|**nvarchar (60)**|Nome do tipo de espera. Para obter mais informações, consulte [Tipos de espera](#WaitTypes) mais adiante neste tópico.|  
 |waiting_tasks_count|**bigint**|Número de esperas nesse tipo de espera. O contador é incrementado no início de cada espera.|  
 |wait_time_ms|**bigint**|Tempo de espera total para esse tipo de espera em milissegundos. Essa hora é inclusiva de signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Tempo de espera máximo neste tipo de espera.|  
 |signal_wait_time_ms|**bigint**|Diferença entre a hora em que o thread de espera foi sinalizado e quando ele começou a ser executado.|  
-|pdw_node_id|**inteiro**|O identificador do nó em que essa distribuição está. <br/> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|O identificador do nó em que essa distribuição está. <br/> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Permissões
 
@@ -89,7 +89,7 @@ Esse comando redefine todos os contadores como 0.
   
  A tabela a seguir lista os tipos de espera encontrados por tarefas.  
 
-|tipo |Descrição| 
+|type |DESCRIÇÃO| 
 |-------------------------- |--------------------------| 
 |ABR |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| | 
 |AM_INDBUILD_ALLOCATION |Somente para uso interno. <br />**Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
@@ -669,7 +669,7 @@ Esse comando redefine todos os contadores como 0.
 |PREEMPTIVE_OS_SETFILEVALIDDATA |Somente para uso interno.| 
 |PREEMPTIVE_OS_SETNAMEDSECURITYINFO |Somente para uso interno.| 
 |PREEMPTIVE_OS_SQLCLROPS |Somente para uso interno.| 
-|PREEMPTIVE_OS_SQMLAUNCH |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] a [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
+|PREEMPTIVE_OS_SQMLAUNCH |Somente para uso interno. <br /> **Aplica-se a**: do [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] ao [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
 |PREEMPTIVE_OS_VERIFYSIGNATURE |Somente para uso interno.| 
 |PREEMPTIVE_OS_VERIFYTRUST |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |PREEMPTIVE_OS_VSSOPS |Somente para uso interno.| 
@@ -1026,7 +1026,7 @@ Esse comando redefine todos os contadores como 0.
   
  Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
     
  [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys. dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   

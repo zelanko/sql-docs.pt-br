@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 0f880ea881b53c2600fb1fffdf7da5d16ab8d423
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056279"
 ---
 # <a name="wideworldimporters-data-generation"></a>Geração de dados WideWorldImporters
@@ -62,20 +62,20 @@ O WideWorldImportersDW pode aumentar arbitrariamente o tamanho dos dados para te
 
 Um dos desafios é manter o tamanho do download pequeno o suficiente para ser baixado facilmente, mas grande o suficiente para demonstrar SQL Server recursos de desempenho. Por exemplo, benefícios significativos para índices columnstore são obtidos somente quando você trabalha com números maiores de linhas. 
 
-Você pode usar o procedimento `Application.Configuration_PopulateLargeSaleTable` para aumentar o número de linhas na tabela `Fact.Sale`. As linhas são inseridas no ano civil de 2012 para evitar a colisão com dados existentes de importadores da World Wide que começam em 1º de janeiro de 2013.
+Você pode usar o `Application.Configuration_PopulateLargeSaleTable` procedimento para aumentar o número de linhas na `Fact.Sale` tabela. As linhas são inseridas no ano civil de 2012 para evitar a colisão com dados existentes de importadores da World Wide que começam em 1º de janeiro de 2013.
 
 ### <a name="procedure-details"></a>Detalhes do procedimento
 
-#### <a name="name"></a>NAME
+#### <a name="name"></a>Nome
 
     Application.Configuration_PopulateLargeSaleTable
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
-  `@EstimatedRowsFor2012` **bigint** (com um padrão de 12 milhões)
+  `@EstimatedRowsFor2012`**bigint** (com um padrão de 12 milhões)
 
-#### <a name="result"></a>Resultado
+#### <a name="result"></a>Result
 
-Aproximadamente o número necessário de linhas é inserido na tabela de `Fact.Sale` no ano de 2012. O procedimento limita artificialmente o número de linhas a 50.000 por dia. Você pode alterar essa limitação, mas a limitação ajuda a evitar a sobreinflaçãos acidentais da tabela.
+Aproximadamente o número necessário de linhas é inserido na `Fact.Sale` tabela no ano de 2012. O procedimento limita artificialmente o número de linhas a 50.000 por dia. Você pode alterar essa limitação, mas a limitação ajuda a evitar a sobreinflaçãos acidentais da tabela.
 
 O procedimento também aplicará a indexação columnstore clusterizado se ainda não tiver sido aplicada.

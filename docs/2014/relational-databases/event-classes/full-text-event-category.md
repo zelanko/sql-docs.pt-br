@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cd00b1966351b5205da737a8f04912b015ec81e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023114"
 ---
 # <a name="full-text-event-category"></a>Categoria de evento Full Text
@@ -28,7 +28,7 @@ ms.locfileid: "63023114"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Classe de evento FT:Crawl Aborted](ft-crawl-aborted-event-class.md)|Indica que um rastreamento de texto completo encontrou uma exceção.|  
 |[Classe de evento FT:Crawl Started](ft-crawl-started-event-class.md)|Indica que um rastreamento de texto completo foi iniciado.|  

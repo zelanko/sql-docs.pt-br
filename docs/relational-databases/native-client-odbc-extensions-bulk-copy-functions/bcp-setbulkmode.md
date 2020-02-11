@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46da93307d28b5be6aec3fbcbff31322e96ea634
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782401"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -58,7 +58,7 @@ RETCODE bcp_setbulkmode (
  *cbRow*  
  O comprimento (em bytes) do valor de terminador de linha.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  SUCCEED ou FAIL  
   
 ## <a name="remarks"></a>Comentários  
@@ -68,7 +68,7 @@ RETCODE bcp_setbulkmode (
   
  A tabela a seguir lista as constantes do parâmetro *property* .  
   
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Especifica o modo de saída de caractere.<br /><br /> Corresponde à opção-c no BCP. EXE, e para bcp_setcolfmt com a propriedade **BCP_FMT_TYPE** definida como **SQLCHARACTER**.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Especifica o modo de saída de Unicode.<br /><br /> Corresponde à opção-w no BCP. EXE e bcp_setcolfmt com a propriedade **BCP_FMT_TYPE** definida como **SQLNCHAR**.|  
@@ -284,7 +284,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de cópia em massa](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

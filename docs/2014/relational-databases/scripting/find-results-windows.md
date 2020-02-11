@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 88fb0cda002694d87cad94dd8032811f6451f1cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245134"
 ---
 # <a name="find-results-windows"></a>Janelas Localizar Resultados
-  As duas janelas localizar resultados exibem correspondências encontradas usando as guias **localizar nos arquivos** ou **substituir em arquivos** da caixa de diálogo **Localizar e substituir** . O comando **Opções de Resultados** para **Localizar em Arquivos** e **Substituir em Arquivos** permite que você escolha a janela Localizar Resultados onde serão listadas as correspondências encontradas.  
+  As duas janelas Localizar Resultados exibem correspondências encontradas usando a guia **Localizar em Arquivos** ou **Substituir em Arquivos** de caixa de diálogo **Localizar e Substituir** . O comando **Opções de Resultados** para **Localizar em Arquivos** e **Substituir em Arquivos** permite que você escolha a janela Localizar Resultados onde serão listadas as correspondências encontradas.  
   
  A janela Localizar Resultados selecionada abre automaticamente sempre que são encontradas correspondências. Para exibir uma janela Localizar Resultados manualmente, clique em **Outras Janelas** no menu **Exibir** e clique em **Localizar Resultados 1** ou **Localizar Resultados 2**.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75245134"
  **página + seta para a direita**  
  Vá para a linha da próxima correspondência.  
   
- **Apagar tudo**  
+ **Limpar tudo**  
  Remova todas as correspondências da lista de **Resultados** .  
   
 ## <a name="shortcut-keys"></a>Teclas de atalho  

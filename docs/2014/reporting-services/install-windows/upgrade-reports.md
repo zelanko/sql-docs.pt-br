@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8f97567188cc3c1f4e4082be1c4c1378ca97122f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108602"
 ---
 # <a name="upgrade-reports"></a>Upgrade Reports
@@ -37,13 +37,13 @@ ms.locfileid: "66108602"
   
  Após a atualização de um relatório localmente ou no servidor de relatório, talvez você encontre erros, avisos e mensagens adicionais. Esse é o resultado das alterações no modelo de objeto de relatório interno e nos componentes de processamento, que fazem com que mensagens sejam exibidas quando forem detectados problemas subjacentes no relatório. Para obter mais informações, consulte [Compatibilidade com versões anteriores do Reporting Services](../reporting-services-backward-compatibility.md).  
   
- Para obter mais informações sobre os novos recursos para [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], consulte [novidades &#40;Reporting Services&#41;](../what-s-new-reporting-services.md).  
+ Para obter mais informações sobre os novos [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]recursos do, consulte [o que há de novo &#40;Reporting Services&#41;](../what-s-new-reporting-services.md).  
   
  Neste tópico:  
   
--   [Versões com suporte da atualização](#bkmk_versionsupported)  
+-   [Versões com suporte pela atualização](#bkmk_versionsupported)  
   
--   [Arquivos de definição de relatório (.rdl) e Designer de Relatórios](#bkmk_rdlfiles)  
+-   [Arquivos de definição de relatório (. RDL) e Report Designer](#bkmk_rdlfiles)  
   
 -   [Relatórios publicados e instantâneos de relatório](#bkmk_publishedreports_and_snapshots)  
   
@@ -55,14 +55,16 @@ ms.locfileid: "66108602"
   
 -   [Caixa de diálogo Converter CRI](#bkmk_convertCRIdialog)  
   
-##  <a name="bkmk_versionsupported"></a> Versões com suporte da atualização  
+##  <a name="bkmk_versionsupported"></a>Versões com suporte pela atualização  
  Relatórios que foram criados em qualquer versão anterior do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser atualizados. Isso inclui as seguintes versões:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 com o Service Pack 1  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 com o Service Pack 1  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 com o Service Pack 2  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 com o Service Pack 2  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
@@ -70,7 +72,7 @@ ms.locfileid: "66108602"
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-##  <a name="bkmk_rdlfiles"></a> Arquivos de definição de relatório (.rdl) e Designer de Relatórios  
+##  <a name="bkmk_rdlfiles"></a>Arquivos de definição de relatório (. RDL) e Report Designer  
  Um arquivo de definição de relatório inclui uma referência ao namespace do RDL que especifica a versão do esquema de definição de relatório usado para validar o arquivo .rdl.  
   
  Ao abrir um arquivo .rdl no Designer de Relatórios do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], se o relatório tiver sido criado para um namespace anterior, o Designer de Relatórios criará automaticamente um arquivo de backup e atualizará o relatório para o namespace atual. Esse é o único modo que você pode atualizar um arquivo de definição de relatório.  
@@ -84,30 +86,30 @@ ms.locfileid: "66108602"
   
  Para identificar o esquema RDL atual de um relatório, de um servidor de relatório ou do Designer de Relatórios, consulte [Localizar a versão do esquema de definição de relatório &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md).  
   
-##  <a name="bkmk_publishedreports_and_snapshots"></a> Relatórios publicados e instantâneos de relatório  
+##  <a name="bkmk_publishedreports_and_snapshots"></a>Relatórios publicados e instantâneos de relatório  
  Na primeira vez que for usado, o servidor de relatório tentará atualizar os relatórios publicados e os instantâneos de relatório existentes para o novo esquema de definição de relatório, sem exigir uma ação específica de sua parte. Quando um usuário exibe um relatório ou um instantâneo de relatório, ou quando o servidor de relatório processa uma assinatura, ocorre uma tentativa de atualização. A definição de relatório não é substituída, mas continua sendo armazenada no servidor de relatório do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] em seu esquema original. Se um relatório não puder ser atualizado, ele será executado no modo da compatibilidade com versões anteriores.  
   
-##  <a name="bkmk_backcompat"></a> Modo de compatibilidade com versões anteriores  
- Um relatório atualizado com êxito é processado pelo processador de relatório [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . Um relatório que não pode ser atualizado é processado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] processador no modo de compatibilidade com versões anteriores de relatório. Um relatório não pode ser processado pelos dois processadores de relatório. Na primeira vez que for usado, um relatório será atualizado com êxito ou marcado para compatibilidade com versões anteriores.  
+##  <a name="bkmk_backcompat"></a>Modo de compatibilidade com versões anteriores  
+ Um relatório atualizado com êxito é processado pelo processador de relatório [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . Um relatório que não pode ser atualizado é processado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processador [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de relatório 2005 no modo de compatibilidade com versões anteriores. Um relatório não pode ser processado pelos dois processadores de relatório. Na primeira vez que for usado, um relatório será atualizado com êxito ou marcado para compatibilidade com versões anteriores.  
   
  Só o processador de relatório [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] dá suporte a novos recursos. Se não for possível atualizar um relatório, você ainda poderá exibir o relatório renderizado, mas os recursos novos não estarão disponíveis. Para se beneficiar dos recursos novos, um relatório deverá ser atualizado com êxito.  
   
-##  <a name="bkmk_subreports"></a> Atualizando um relatório com sub-relatórios  
+##  <a name="bkmk_subreports"></a>Atualizando um relatório com sub-relatórios  
  Quando um relatório contiver sub-relatórios, um de quatro possíveis estados poderá ocorrer durante a atualização:  
   
 -   O relatório principal e todos os sub-relatórios podem ser atualizados com êxito. Eles são processados pelo processador de relatório do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
   
 -   O relatório principal e todos os sub-relatórios não podem ser atualizados. Eles são processados pelo processador de relatórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   O relatório principal pode ser atualizado, entretanto um ou mais sub-relatórios não podem ser atualizados. O relatório principal é processado pelo [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] processador de relatório, mas o relatório renderizado mostra a mensagem "Erro: Subrelatório não pôde ser processada"no local onde o sub-relatório que não pôde ser atualizado seria exibido.  
+-   O relatório principal pode ser atualizado, entretanto um ou mais sub-relatórios não podem ser atualizados. O relatório principal é processado pelo processador de relatório do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , mas o relatório renderizado mostra a mensagem "Erro: não foi possível processar o sub-relatório" no local onde o sub-relatório que não foi atualizado seria exibido.  
   
--   Não é possível atualizar o relatório principal, entretanto é possível atualizar um ou mais sub-relatórios. O relatório principal é processado pelo [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] processador de relatório, mas o relatório renderizado mostra a mensagem "Erro: Subrelatório não pôde ser processada"no local onde o sub-relatório seria exibido.  
+-   Não é possível atualizar o relatório principal, entretanto é possível atualizar um ou mais sub-relatórios. O relatório principal é processado pelo processador de relatório do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , mas o relatório renderizado mostra a mensagem "Erro: não foi possível processar o sub-relatório" no local onde o sub-relatório seria exibido.  
   
- Se você vir o erro "Erro: Não foi possível processar o sub-relatório", você deve alterar a definição de relatório principal ou sub-relatório, para que os relatórios podem ser processados pela mesma versão do processador de relatório.  
+ Se você visualizar o erro "Erro: não foi possível processar o sub-relatório", deverá alterar a definição do relatório principal ou do sub-relatório de forma que os relatórios possam ser processados pela mesma versão do processador de relatórios.  
   
  Relatórios detalhados não têm esta limitação porque eles são processados como relatórios independentes.  
   
-##  <a name="bkmk_CRIs"></a> Atualizando um relatório com itens de relatório personalizados  
+##  <a name="bkmk_CRIs"></a>Atualizando um relatório com itens de relatório personalizados  
  Os relatórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem conter CRIs (itens de relatórios personalizados) fornecidos pelos fornecedores de software de terceiros e instalados pelo administrador do sistema no computador de criação de relatório e no servidor de relatório. Os relatórios que contêm CRIs podem ser atualizados dos seguintes modos:  
   
 -   Um servidor de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é atualizado para um servidor de relatório do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . Os relatórios publicados no servidor de relatório serão atualizados automaticamente na primeira vez que forem usados.  
@@ -122,7 +124,7 @@ ms.locfileid: "66108602"
   
      Para obter mais informações, consulte [Abrindo um relatório no Designer de Relatórios](#OpeningaReport) posteriormente neste tópico.  
   
- Para obter informações sobre como identificar o namespace de RDL atual de um servidor de relatório, do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou de um relatório, veja [Localizar a versão do esquema de definição de relatório &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md).  
+ Para obter informações sobre como identificar o namespace de RDL atual de um servidor de relatório, do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou de um relatório, consulte [Localizar a versão do esquema de definição de relatório &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>Atualizando relatórios em um servidor de relatório  
  Na primeira vez que um relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é executado em um servidor de relatório que foi atualizado para um servidor de relatório do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , ele é atualizado automaticamente para o namespace de definição de relatório atual com suporte do servidor de relatório. O relatório poderia ter existido no servidor de relatório antes da atualização ou ter sido carregado por meio do Gerenciador de Relatórios ou publicado para o servidor de relatório do Designer de Relatórios no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -137,8 +139,8 @@ ms.locfileid: "66108602"
 |CRI de Gráfico Dundas 2005 com recursos sem-suporte|Atualização não executada.<br /><br /> Processado pelo processador de relatório [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |CRI do medidor 2005 Dundas com recursos sem suporte|Atualização não executada.<br /><br /> Processado pelo processador de relatório [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
   
-###  <a name="OpeningaReport"></a> Abrindo um Relatório com CRIs no Designer de Relatórios  
- Quando você abrir um relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com CRIs no Designer de Relatórios no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o relatório será atualizado para o novo esquema de definição de relatório. Dependendo dos CRIs contidos no relatório, uma das seguintes ações ocorrerá:  
+###  <a name="OpeningaReport"></a>Abrindo um relatório com CRIs no Report Designer  
+ Quando você abre um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 2005 com Cris em Report Designer no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o relatório será atualizado para o novo esquema de definição de relatório. Dependendo dos CRIs contidos no relatório, uma das seguintes ações ocorrerá:  
   
 -   CRIs de terceiros detectados. Se a versão do CRI que está instalada no computador de criação de relatórios não for compatível com o novo esquema rdl, a superfície do design mostrará uma caixa de texto com um X vermelho. Você deverá contatar o administrador do sistema para instalar novas versões do CRI de fornecedores de terceiros que sejam compatíveis com o novo esquema rdl.  
   
@@ -185,7 +187,7 @@ ms.locfileid: "66108602"
   
 -   Imagens personalizadas.  
   
-###  <a name="bkmk_convertCRIdialog"></a> Caixa de diálogo Converter CRI  
+###  <a name="bkmk_convertCRIdialog"></a>Caixa de diálogo Converter CRI  
  Este relatório contém CRIs (itens de relatório personalizados) com recursos sem suporte. CRIs são extensões para a linguagem RDL (Report Definition Language) que oferecem suporte a objetos personalizados que exibem dados em um relatório. Os CRIs incluem componentes em tempo de design e em tempo de execução oferecidos por fornecedores de software de terceiros.  
   
 > [!NOTE]  
@@ -193,21 +195,21 @@ ms.locfileid: "66108602"
   
  Alguns CRIs podem ser convertidos em itens de relatório no novo formato de definição do relatório. Para obter a lista de CRIs que podem ser convertidos, consulte [Upgrading Reports](upgrade-reports.md). Use a seguinte lista para decidir se você deve converter os CRIs nesse relatório:  
   
--   **Sim** Escolha **Sim** para converter todos os CRIs do relatório, quando possível. Recursos para os quais não há suporte nos CRIs não podem ser atualizados, sendo removidos do arquivo de definição do relatório. Para obter a lista dos recursos para os quais não há suporte, consulte [Upgrading Reports](upgrade-reports.md). Ao exibir o relatório, você pode ver as diferenças na forma como o CRI é exibido no relatório.  
+-   **Sim** Escolha **Sim** para converter todos os Cris no relatório, sempre que possível. Recursos para os quais não há suporte nos CRIs não podem ser atualizados, sendo removidos do arquivo de definição do relatório. Para obter a lista dos recursos para os quais não há suporte, consulte [Upgrading Reports](upgrade-reports.md). Ao exibir o relatório, você pode ver as diferenças na forma como o CRI é exibido no relatório.  
   
--   **Não** Escolha **Não** quando não quiser converter os CRIs do relatório. Esses CRIs não podem ser exibidos pelo processador de relatório na versão atual. Caso o administrador do sistema pretenda instalar uma nova versão da CRI do fornecedor de software de terceiros compatível com o novo formato de definição do relatório, escolha **Não**. Até que as novas versões estejam disponíveis, os CRIs são exibidos no relatório como uma caixa de texto vazia com um X vermelho.  
+-   **Não** Escolha **não quando não** quiser converter o Cris no relatório. Esses CRIs não podem ser exibidos pelo processador de relatório na versão atual. Caso o administrador do sistema pretenda instalar uma nova versão da CRI do fornecedor de software de terceiros compatível com o novo formato de definição do relatório, escolha **Não**. Até que as novas versões estejam disponíveis, os CRIs são exibidos no relatório como uma caixa de texto vazia com um X vermelho.  
   
- Em ambos os casos, o relatório é atualizado para o novo formato de definição de relatório e uma cópia de backup do relatório original é salva como *\<Report Name>* `-` Backup.rdl. Caso salve o relatório na ferramenta de criação do relatório, você está salvando o relatório atualizado no novo formato de definição do relatório. Caso você publique o relatório, ele é salvo primeiro no computador e, em seguida, publicado no servidor de relatório. Você está publicando a versão atualizada do relatório no servidor de relatório.  
+ Em ambos os casos, o relatório é atualizado para o novo formato de definição de relatório e uma cópia de backup do relatório original é salva como `-` * \<o nome do relatório>* backup. RDL. Caso salve o relatório na ferramenta de criação do relatório, você está salvando o relatório atualizado no novo formato de definição do relatório. Caso você publique o relatório, ele é salvo primeiro no computador e, em seguida, publicado no servidor de relatório. Você está publicando a versão atualizada do relatório no servidor de relatório.  
   
- Caso você não salve o relatório, o relatório original permanece inalterado. No entanto, não é possível editá-lo na versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou em um ambiente de criação do relatório que use um formato mais novo de definição do relatório. Você pode continuar executando a versão original do relatório, carregando-o em um servidor de relatório do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] usando o Gerenciador de Relatórios. Para obter mais informações, veja [Carregar um arquivo ou relatório &#40;Gerenciador de Relatórios&#41;](../reports/upload-a-file-or-report-report-manager.md).  
+ Caso você não salve o relatório, o relatório original permanece inalterado. No entanto, não é possível editá-lo na versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou em um ambiente de criação do relatório que use um formato mais novo de definição do relatório. Você pode continuar executando a versão original do relatório, carregando-o em um servidor de relatório do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] usando o Gerenciador de Relatórios. Para obter mais informações, consulte [Carregar um arquivo ou relatório &#40;Gerenciador de Relatórios&#41;](../reports/upload-a-file-or-report-report-manager.md).  
   
  Para relatórios carregados, e não publicados em um servidor de relatório, o processador de relatórios determina se o relatório pode ser atualizado no primeiro uso. Os relatórios que não podem ser atualizados são processados no modo de compatibilidade com versões anteriores e continuam a ser exibidos como ocorria na versão anterior do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
- [Atualizar e migrar o Reporting Services](upgrade-and-migrate-reporting-services.md)   
- [Alterações recentes no SQL Server Reporting Services no SQL Server 2014](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)   
- [Alterações de comportamento do SQL Server Reporting Services no SQL Server 2014](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
- [Funcionalidade descontinuada do SQL Server Reporting Services no SQL Server 2014](../discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Atualizar e migrar Reporting Services](upgrade-and-migrate-reporting-services.md)   
+ [Alterações recentes em SQL Server Reporting Services no SQL Server 2014](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)   
+ [Alterações de comportamento para SQL Server Reporting Services no SQL Server 2014](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
+ [Funcionalidade descontinuada para SQL Server Reporting Services no SQL Server 2014](../discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
  [Itens de relatório personalizados](../custom-report-items/custom-report-items.md)   
  [Atualizar um banco de dados do servidor de relatório](upgrade-a-report-server-database.md)  
   

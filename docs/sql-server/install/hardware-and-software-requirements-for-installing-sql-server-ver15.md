@@ -44,12 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 88ed55a3c2890864e3e9623f3fa53ca3e747350c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: aca31d10c030c360dcd82d6c4851df700bc3c4fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536180"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74319047"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Requisitos de hardware e software para a instalação do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -86,7 +86,7 @@ Os seguintes requisitos se aplicam a todas as instalações:
 |.NET Framework|Os sistemas operacionais mínimos incluem o .NET Framework no mínimo.|  
 |Software de rede|Os sistemas operacionais com suporte para [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] têm software de rede interno. As instâncias nomeadas e padrão de uma instalação autônoma são compatíveis com os seguintes protocolos de rede: Memória compartilhada, Pipes nomeados e TCP/IP.<br/><br/> |  
 |Disco rígido|O[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requer no mínimo 6 GB de espaço disponível no disco rígido.<br/><br/> Os requisitos de espaço em disco variam de acordo com os componentes do [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] instalados. Para obter mais informações, consulte [Requisitos de espaço em disco rígido](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) posteriormente neste artigo. Para obter mais informações sobre tipos de armazenamento de arquivos de dados com suporte, consulte [Tipos de armazenamento para arquivos de dados](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
-|Monitor|O[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requer um monitor com resolução Super-VGA (800 x 600) ou superior.|  
+|Monitoramento|O[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requer um monitor com resolução Super-VGA (800 x 600) ou superior.|  
 |Internet|A funcionalidade de Internet requer acesso à Internet (a cobrança de taxas poderá ser aplicável).|  
 
 > [!NOTE]
@@ -127,13 +127,16 @@ A tabela a seguir mostra quais edições do SQL Server 2019 são compatíveis co
   
 
 | Edição do SQL Server:               | Enterprise | Desenvolvedor | Standard | Web | Express |  
-| :------------------------       | :--------- | :-------- | :------- | :-- | :------ | 
+| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    Sim     |    Sim    |    Sim   | Sim |   Sim   |
 | Windows Server 2019 Standard      |    Sim     |    Sim    |    Sim   | Sim |   Sim   |
 | Windows Server 2019 Essentials    |    Sim     |    Sim    |    Sim   | Sim |   Sim   |
 | Windows Server 2016 Datacenter    |    Sim     |    Sim    |    Sim   | Sim |   Sim   |
 | Windows Server 2016 Standard      |    Sim     |    Sim    |    Sim   | Sim |   Sim   |
 | Windows Server 2016 Essentials    |    Sim     |    Sim    |    Sim   | Sim |   Sim   |
+| Windows 10 Enterprise             |    Não      |    Sim    |    Sim   | Não  |   Sim   |
+| Windows 10 Professional           |    Não      |    Sim    |    Sim   | Não  |   Sim   |
+| Windows 10 Home                   |    Não      |    Sim    |    Sim   | Não  |   Sim   |
 | &nbsp; | &nbsp; |
 
 

@@ -15,10 +15,10 @@ ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d82b6cb9049bf5a41cfb987a55bb6d5a7147c9bd
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74119265"
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database procedimentos armazenados estendidos (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "74119265"
  
  [Sys. sp_rda_test_connection](../../relational-databases/system-stored-procedures/sys-sp-rda-test-connection-transact-sql.md) Testa a conexão de SQL Server para o servidor remoto do Azure e relata problemas que podem impedir a migração de dados.
  
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

@@ -21,23 +21,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 26d6ca64dfbca8bc63a81989d7c3c34a841e4f5a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095341"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Fazendo backup e restaurando bancos de dados e logs de transações
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  No SMO, as classes <xref:Microsoft.SqlServer.Management.Smo.Backup> e <xref:Microsoft.SqlServer.Management.Smo.Restore> são classes de utilitário que fornecem as ferramentas para a execução de tarefas específicas de backup e restauração. Um objeto <xref:Microsoft.SqlServer.Management.Smo.Backup> representa uma tarefa de backup específica que é necessária em vez de um objeto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] na instância do servidor.  
+  No SMO, as classes <xref:Microsoft.SqlServer.Management.Smo.Backup> e <xref:Microsoft.SqlServer.Management.Smo.Restore> são classes de utilitário que fornecem as ferramentas para a execução de tarefas específicas de backup e restauração. Um <xref:Microsoft.SqlServer.Management.Smo.Backup> objeto representa uma tarefa de backup específica que é necessária em vez [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de um objeto na instância do servidor.  
   
  Em caso de perda ou dano de dados, o backup deve ser restaurado, parcial ou totalmente. A restauração parcial usa a coleção <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> para segmentar os dados a serem restaurados. Se o backup for de um log de transações, os dados poderão ser restaurados até um momento determinado através da propriedade <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Restore>. Os dados também podem ser validados usando o método <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>. O procedimento de backup recomendado é verificar a integridade do backup executando uma operação de restauração e verificando os dados no banco de dados regularmente.  
   
- Assim como o objeto <xref:Microsoft.SqlServer.Management.Smo.Backup>, o objeto <xref:Microsoft.SqlServer.Management.Smo.Restore> não precisa ser criado usando um método **Create** porque ele não representa nenhum objeto na instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O objeto <xref:Microsoft.SqlServer.Management.Smo.Restore> é um conjunto de propriedades e métodos usados para restaurar um banco de dados.  
+ Assim como <xref:Microsoft.SqlServer.Management.Smo.Backup> o objeto, <xref:Microsoft.SqlServer.Management.Smo.Restore> o objeto não precisa ser criado usando um método **Create** porque ele não representa nenhum objeto na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O objeto <xref:Microsoft.SqlServer.Management.Smo.Restore> é um conjunto de propriedades e métodos usados para restaurar um banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto do Visual C&#35; Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Fazendo backup de bancos de dados e de logs de transações no Visual Basic  
  Este exemplo de código mostra como fazer backup de um banco de dados existente em um arquivo e como restaurá-lo.  

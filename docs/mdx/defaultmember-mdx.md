@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a0b5039ae62eac25d698442d4aeb92ad3c4ebc3a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892907"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember (MDX)
@@ -35,7 +35,7 @@ Hierarchy_Expression.DefaultMember
  O membro padrão em um atributo é usado para avaliar as expressões quando um atributo não for incluído em uma consulta.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa a função DefaultMember, em conjunto com a função **Name** , para retornar o membro padrão para a dimensão de moeda de destino no cubo Adventure Works. O exemplo retorna **dólar americano**. A função **Name** é usada para retornar o nome da medida, em vez da propriedade padrão da medida, que é **valor**.  
+ O exemplo a seguir usa a função **DefaultMember** , em conjunto com a função **Name** , para retornar o membro padrão para a dimensão de moeda de destino no cubo Adventure Works. O exemplo retorna **dólar americano**. A função **Name** é usada para retornar o nome da medida, em vez da propriedade padrão da medida, que é **valor**.  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -44,8 +44,8 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
  [Definir um membro padrão](https://docs.microsoft.com/analysis-services/multidimensional-models/attribute-properties-define-a-default-member)  
   
   

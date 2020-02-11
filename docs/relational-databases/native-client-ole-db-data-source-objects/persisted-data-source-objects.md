@@ -17,19 +17,19 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f1c553835cc0380082821dd49f53f69e767baacb
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73771474"
 ---
 # <a name="persisted-data-source-objects"></a>Objetos persistidos da fonte de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  O provedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client dá suporte a objetos de fonte de dados persistentes com a interface **IPersistFile** .  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte a objetos de fonte de dados persistentes com a interface **IPersistFile** .  
   
 ## <a name="examples"></a>Exemplos  
- **Inicialização da fonte de dados A. Persist:**  
+ **A. Inicialização de fonte de dados persistente:**  
   
  Este exemplo mostra uma função que persiste as propriedades de inicialização de uma fonte de dados definindo um servidor, um banco de dados e o uso do Modo de Autenticação do Windows para conexão. O nome do servidor e o nome do banco de dados são recebidos nos parâmetros *pLocation* e *pDatasource* da função.  
   
@@ -140,7 +140,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. usar a inicialização da fonte de dados persistente:**  
+ **B. Uso de inicialização de fonte de dados persistida:**  
   
  Este exemplo usa um objeto de fonte de dados persistido com propriedades de inicialização adicionais que fornecem um logon e uma senha do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -230,7 +230,7 @@ HRESULT InitFromPersistedDS
   
  O método **IPersistFile::Save** pode ser chamado antes ou depois de chamar **IDBInitialize::Initialize**. A chamada do método após um retorno bem-sucedido de **IDBInitialize::Initialize** garante que uma especificação de fonte de dados válida seja persistida.  
   
-## <a name="see-also"></a>Consulte também  
- [OLE DB de objetos &#40;de fonte de dados&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Objetos de fonte de dados &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

@@ -11,10 +11,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3845470668e4cffeda7a48ed01c144eb53f671b9
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399425"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>O que há de novo no Analytics Platform System, um data warehouse MPP de expansão
@@ -129,7 +129,7 @@ O uso de objetos de catálogo para chamadas de metadados em vez de usar o SMO mo
 ### <a name="bug-fixes"></a>Correções de bug
 Atualizamos para SQL Server 2016 SP2 CU2 com APS CU 7.1. A atualização corrige alguns problemas descritos abaixo.
 
-| Title | Descrição |
+| Title | DESCRIÇÃO |
 |:---|:---|
 | **Deadlock potencial de movimentação de tupla** |A atualização corrige uma grande possibilidade de deadlock em um thread em segundo plano de transação distribuída e de movimentação de tupla. Depois de instalar o CU 7.1, os clientes que usaram TF634 para interromper o motor de tupla como SQL Server parâmetro de inicialização ou sinalizador de rastreamento global podem removê-lo com segurança. | 
 | **Determinada consulta de retardo/Lead falha** |Algumas consultas em tabelas CCI com funções de retardo/Lead aninhadas que o erro agora são corrigidas com essa atualização. | 
@@ -220,7 +220,7 @@ Um novo dispositivo da HPE ou da DELL inclui todas as atualizações mais recent
 - Atualizar para DIMMs DDR4
 - Taxa de transferência de DIMM aprimorada
 
-**Integrar**
+**Integração**
 
 - O suporte ao FQDN (nome de domínio totalmente qualificado) possibilita a configuração de uma relação de confiança de domínio para o dispositivo. 
 - Para usar o FQDN, você precisa fazer uma atualização completa e aceitar durante a atualização. 

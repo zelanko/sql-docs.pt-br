@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0de2c67c1a2d60903054e5098a145f4057fe6e13
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73789693"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Usar Parâmetros com valor de tabela (OLE DB)
@@ -33,7 +33,7 @@ ms.locfileid: "73789693"
   
 -   Mostra o tratamento de erros SQLNCLI11.  
   
- Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros &#40;com valor&#41;de tabela SQL Server Native Client](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
+ Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
   
 ## <a name="example"></a>Exemplo  
  A primeira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) cria o banco de dados usado pela amostra.  

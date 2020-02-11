@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f435b0ba0d7474867af20aea1d59bd6118035623
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783235"
 ---
 # <a name="bcp_batch"></a>bcp_batch
@@ -42,7 +42,7 @@ DBINT bcp_batch (HDBC
  *hdbc*  
  É o identificador de conexão ODBC habilitado para cópia em massa.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  O número de linhas salvas depois da última chamada para **bcp_batch**, ou -1 em caso de erro.  
   
 ## <a name="remarks"></a>Comentários  
@@ -50,7 +50,7 @@ DBINT bcp_batch (HDBC
   
  Você poderá chamar **bcp_batch** uma vez a cada *n* linhas ou quando houver uma pausa nos dados de entrada (como em um aplicativo de telemetria). Se um aplicativo não chamar **bcp_batch** , as linhas copiadas em massa serão confirmadas apenas quando **bcp_done** for chamado.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de cópia em massa](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

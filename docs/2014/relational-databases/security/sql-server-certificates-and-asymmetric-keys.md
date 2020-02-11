@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244508"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificados e chaves assimétricas do SQL Server
@@ -45,10 +45,10 @@ ms.locfileid: "75244508"
 ### <a name="using-a-certificate-in-sql-server"></a>Usando um certificado no SQL Server  
  Os certificados podem ser usados para auxiliar nas conexões seguras, no espelhamento de banco de dados, para assinar pacotes e outros objetos ou para criptografar dados ou conexões. A tabela a seguir lista recursos adicionais para certificados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[CRIAR certificado &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|Explica o comando para a criação de certificados.|  
-|[Identificar a fonte de pacotes com assinaturas digitais](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|Mostra informações sobre como usar certificados para assinar pacotes de software.|  
+|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|Explica o comando para a criação de certificados.|  
+|[Identificar a origem dos pacotes com assinaturas digitais](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|Mostra informações sobre como usar certificados para assinar pacotes de software.|  
 |[Usar certificados para um ponto de extremidade de espelhamento de banco de dados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|Abrange informações sobre como usar certificados com espelhamento de banco de dados.|  
   
 ## <a name="asymmetric-keys"></a>Chaves assimétricas  
@@ -59,10 +59,10 @@ ms.locfileid: "75244508"
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>Usando uma chave assimétrica no SQL Server  
  As chaves assimétricas podem ser usadas para auxiliar na proteção de dados ou na assinatura de texto não criptografado. A tabela a seguir lista recursos adicionais para chaves assimétricas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[CRIAR chave assimétrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|Explica o comando para a criação de chaves assimétricas.|  
-|[&#41;SIGNBYASYMKEY &#40;Transact-SQL](/sql/t-sql/functions/signbyasymkey-transact-sql)|Exibe as opções de assinatura de objetos.|  
+|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|Explica o comando para a criação de chaves assimétricas.|  
+|[SIGNBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/signbyasymkey-transact-sql)|Exibe as opções de assinatura de objetos.|  
   
 ## <a name="tools"></a>Ferramentas  
  
@@ -77,11 +77,11 @@ ms.locfileid: "75244508"
 ## <a name="related-tasks"></a>Related Tasks  
  [Escolher um algoritmo de criptografia](encryption/choose-an-encryption-algorithm.md)  
   
- [CRIAR chave simétrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
- [CRIAR certificado &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+ [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
 ## <a name="see-also"></a>Consulte Também  
  [sys. Certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
- [Transparent Data Encryption &#40;TDE&#41;](encryption/transparent-data-encryption.md)  
+ [TDE &#40;Transparent Data Encryption&#41;](encryption/transparent-data-encryption.md)  
   

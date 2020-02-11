@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890365"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Editor da Tarefa Processamento do Analysis Services (página Analysis Services)
@@ -37,35 +37,35 @@ ms.locfileid: "68890365"
  Para obter informações sobre essa tarefa, consulte [Analysis Services Processing Task](control-flow/analysis-services-processing-task.md).  
   
 ## <a name="options"></a>Opções  
- **Gerenciador de conexões do Analysis Services**  
+ **Gerenciador de conexões Analysis Services**  
  Selecione na lista um gerenciador de conexões do Analysis Services existente ou clique em **Novo** para criar um novo gerenciador de conexões.  
   
- **Nova**  
+ **Novo**  
  Cria um novo gerenciador de conexões do Analysis Services  
   
- **Tópicos relacionados:** [Gerenciador de Conexão do Analysis Services](connection-manager/analysis-services-connection-manager.md), [Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Tópicos relacionados:** [Analysis Services Gerenciador de conexões](connection-manager/analysis-services-connection-manager.md), [Adicionar Analysis Services referência da interface do usuário da caixa de diálogo do Gerenciador de conexões](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Lista de objetos**  
- |Propriedade|Descrição|  
+ |Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
-|**Nome do Objeto**|Lista os nomes de objeto especificados.|  
+|**Object Name**|Lista os nomes de objeto especificados.|  
 |**Tipo**|Lista os tipos dos objetos especificados.|  
-|**Opções de Processo**|Selecione uma opção de processamento na lista.<br /><br /> **Tópicos relacionados**: [Processamento de objeto de modelo multidimensional](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
+|**Opções de processo**|Selecione uma opção de processamento na lista.<br /><br /> **Tópicos relacionados**: [processamento de objeto de modelo multidimensional](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Configurações**|Lista configurações de processamento para os objetos especificados.|  
   
  **Adicionar**  
  Adicione à lista um objeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- **Removerr**  
+ **Remover**  
  Selecione um objeto e clique em **Excluir**.  
   
- **Análise de Impacto**  
+ **Análise de impacto**  
  Execute uma análise de impacto no objeto selecionado.  
   
- **Tópicos relacionados:** [Caixa de diálogo Análise de Impacto &#40;Analysis Services - Dados Multidimensionais&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **Tópicos relacionados:** [caixa de diálogo análise de impacto &#40;Analysis Services-dados multidimensionais&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
- **Resumo de Configurações de Lote**  
- |Propriedade|Descrição|  
+ **Resumo das configurações de lote**  
+ |Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |**Ordem de processamento**|Especifica se os objetos são processados em sequência ou em um lote; se for usado o processamento paralelo, especifica o número de objetos a serem processados simultaneamente.|  
 |**Modo de transação**|Especifica o modo da transação para processamento sequencial.|  
@@ -73,14 +73,14 @@ ms.locfileid: "68890365"
 |**Caminho do log de erros da chave de dimensão**|Especifica o caminho do arquivo no qual são feitos logs de erros.|  
 |**Objetos afetados pelo processo**|Indica se também são processados objetos dependentes ou afetados.|  
   
- **Alterar Configurações**  
+ **Alterar configurações**  
  Altere as opções de processamento e a manipulação de erros em chaves de dimensão.  
   
- **Tópicos relacionados:** [Caixa de diálogo Alterar Configurações &#40;Analysis Services – Dados Multidimensionais&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **Tópicos relacionados:** [caixa de diálogo alterar configurações &#40;Analysis Services-dados multidimensionais&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da Tarefa Processamento do Analysis Services &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa de processamento de Analysis Services &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Tarefa Executar DDL do Analysis Services](control-flow/analysis-services-execute-ddl-task.md)  
   
   

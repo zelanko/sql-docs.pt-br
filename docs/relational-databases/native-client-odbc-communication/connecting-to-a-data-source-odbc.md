@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eb1f2133aa335f266da75e00638dbb484dae1431
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784707"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Conectando-se a uma fonte de dados (ODBC)
@@ -58,7 +58,7 @@ ms.locfileid: "73784707"
   
 -   Para se conectar sem usar uma fonte de dados ODBC.  
   
- A cadeia de conexão **SQLDriverConnect** contém uma série de pares de valor de palavra-chave que especificam todas as informações de conexão suportadas por um driver ODBC. Cada driver suporta as palavras-chave ODBC padrão (DSN, FILEDSN, DRIVER, UID, PWD e SAVEFILE), além das palavras-chave específicas de driver para todas as informações de conexão suportadas pelo driver. **SQLDriverConnect** pode ser usado para se conectar sem uma fonte de dados. Por exemplo, um aplicativo projetado para fazer uma conexão "sem DSN" com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode chamar **SQLDriverConnect** com uma cadeia de conexão que define a ID de logon, a senha, a biblioteca de rede, o nome do servidor ao qual se conectar e o padrão banco de dados a ser usado.  
+ A cadeia de conexão **SQLDriverConnect** contém uma série de pares de valor de palavra-chave que especificam todas as informações de conexão suportadas por um driver ODBC. Cada driver suporta as palavras-chave ODBC padrão (DSN, FILEDSN, DRIVER, UID, PWD e SAVEFILE), além das palavras-chave específicas de driver para todas as informações de conexão suportadas pelo driver. **SQLDriverConnect** pode ser usado para se conectar sem uma fonte de dados. Por exemplo, um aplicativo projetado para fazer uma conexão "sem DSN" com uma instância do pode chamar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLDriverConnect** com uma cadeia de conexão que define a ID de logon, a senha, a biblioteca de rede, o nome do servidor para se conectar e o banco de dados padrão a ser usado.  
   
  Ao usar o **SQLDriverConnect**, há duas opções para solicitar ao usuário qualquer informação de conexão necessária:  
   
@@ -81,7 +81,7 @@ ms.locfileid: "73784707"
   
  Quando o **SQLBrowseConnect** conclui uma conexão bem-sucedida, ele retorna uma cadeia de conexão que pode ser usada em chamadas subsequentes para **SQLDriverConnect**.  
   
- O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sempre retorna SQL_SUCCESS_WITH_INFO em um **SQLConnect**, **SQLDriverConnect**ou **SQLBrowseConnect**bem-sucedido. Quando um aplicativo ODBC chama **SQLGetDiagRec** depois de obter SQL_SUCCESS_WITH_INFO, ele pode receber as seguintes mensagens:  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client sempre retorna SQL_SUCCESS_WITH_INFO em um **SQLConnect**, **SQLDriverConnect**ou **SQLBrowseConnect**bem-sucedido. Quando um aplicativo ODBC chama **SQLGetDiagRec** depois de obter SQL_SUCCESS_WITH_INFO, ele pode receber as seguintes mensagens:  
   
  5701  
  Indica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colocou o contexto do usuário no banco de dados padrão definido na fonte de dados, ou no banco de dados padrão definido para o ID de logon usado na conexão se a fonte de dados não tinha um banco de dados padrão.  
@@ -100,7 +100,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
        Changed language setting to 'us_english'."  
 ```  
   
- Você pode ignorar as mensagens 5701 e 5703; elas são meramente informativas. Entretanto, você não deve ignorar um código de retorno de SQL_SUCCESS_WITH_INFO porque podem ser retornadas mensagens diferentes de 5701 ou 5703. Por exemplo, se um driver se conectar a um servidor que executa uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com procedimentos armazenados de catálogo desatualizados, um dos erros retornados por **SQLGetDiagRec** após um SQL_SUCCESS_WITH_INFO será:  
+ Você pode ignorar as mensagens 5701 e 5703; elas são meramente informativas. Entretanto, você não deve ignorar um código de retorno de SQL_SUCCESS_WITH_INFO porque podem ser retornadas mensagens diferentes de 5701 ou 5703. Por exemplo, se um driver se conectar a um servidor que executa uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância do com procedimentos armazenados de catálogo desatualizados, um dos erros retornados por meio de **SQLGetDiagRec** após um SQL_SUCCESS_WITH_INFO é:  
   
 ```  
 SqlState:   01000  
@@ -112,9 +112,9 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
             Please contact your system administrator."  
 ```  
   
- A função de tratamento de erros de um aplicativo para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexões deve chamar **SQLGetDiagRec** até que ela retorne SQL_NO_DATA. Em seguida, ele deve agir em qualquer mensagem além daquelas com um código *pfNative* de 5701 ou 5703.  
+ A função de tratamento de erros de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicativo para conexões deve chamar **SQLGetDiagRec** até que ela retorne SQL_NO_DATA. Em seguida, ele deve agir em qualquer mensagem além daquelas com um código *pfNative* de 5701 ou 5703.  
   
-## <a name="see-also"></a>Consulte também  
- [Comunicando- &#40;se com SQL Server ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Comunicando-se com SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

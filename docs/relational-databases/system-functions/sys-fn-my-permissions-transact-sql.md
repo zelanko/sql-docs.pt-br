@@ -21,18 +21,18 @@ ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122628"
 ---
-# <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
+# <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna uma lista das permissões efetivamente concedidas à entidade em um protegível. É uma função relacionada [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
+  Retorna uma lista das permissões efetivamente concedidas à entidade em um protegível. Uma função relacionada é [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,12 +46,12 @@ fn_my_permissions ( securable , 'securable_class' )
  É o nome do protegível. Se o protegível for o servidor ou um banco de dados, esse valor deverá ser definido como NULL. *securable* é uma expressão escalar do tipo **sysname**. *protegível* pode ser um nome com diversas partes.  
   
  '*securable_class*'  
- É o nome da classe de protegível para a qual são listadas as permissões. *securable_class* é um **sysname**. *securable_class* deve ser um dos seguintes: FUNÇÃO DE APLICATIVO, ASSEMBLY, CHAVE ASSIMÉTRICA, CERTIFICADO, CONTRATO, BANCO DE DADOS, PONTO DE EXTREMIDADE, FULLTEXT CATALOG, LOGIN, TIPO DE MENSAGEM, OBJETO, ASSOCIAÇÃO DE SERVIÇO REMOTO, FUNÇÃO, ROTA, ESQUEMA, SERVIDOR, SERVIÇO, CHAVE SIMÉTRICA, TIPO, USUÁRIO, COLEÇÃO DE ESQUEMAS XML.  
+ É o nome da classe de protegível para a qual são listadas as permissões. *securable_class* é um **sysname**. *securable_class* deve ser um dos seguintes: função de aplicativo, assembly, chave assimétrica, certificado, contrato, banco de dados, ponto de extremidade, catálogo de texto completo, logon, tipo de mensagem, objeto, associação de serviço remoto, função, rota, esquema, servidor, serviço, chave simétrica, tipo, usuário, coleção de esquemas XML.  
   
 ## <a name="columns-returned"></a>Colunas retornadas  
  A tabela a seguir lista as colunas que **fn_my_permissions** retorna. Cada linha retornada descreve uma permissão mantida pelo contexto de segurança atual no protegível. Retorna NULL se a consulta falhar.  
   
-|Nome da coluna|type|Descrição|  
+|Nome da coluna|Type|DESCRIÇÃO|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|Nome do protegível no qual as permissões listadas são efetivamente concedidas.|  
 |subentity_name|**sysname**|Nome da coluna se o protegível tiver colunas; caso contrário, será NULL.|  
@@ -70,7 +70,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
  A avaliação da permissão é sempre executada no contexto de segurança do chamador. Para determinar se alguma outra entidade tem uma permissão efetiva, o chamador deve ter a permissão IMPERSONATE nessa entidade.  
   
- Para entidades em nível de esquema, nomes não nulos de uma, duas ou três partes são aceitos. Para entidades de nível de banco de dados, um nome de uma parte é aceito, com uma valor nulo que significa "*banco de dados atual*". Para o servidor propriamente dito, um valor nulo (que significa “servidor atual”) é obrigatório. **fn_my_permissions** não pode verificar permissões em um servidor vinculado.  
+ Para entidades em nível de esquema, nomes não nulos de uma, duas ou três partes são aceitos. Para entidades no nível de banco de dados, um nome de uma parte é aceito, com um valor nulo que significa "*banco de dados atual*". Para o servidor propriamente dito, um valor nulo (que significa “servidor atual”) é obrigatório. **fn_my_permissions** não pode verificar as permissões em um servidor vinculado.  
   
  A consulta a seguir retornará uma lista de classes protegíveis internas:  
   
@@ -84,7 +84,7 @@ GO
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-listing-effective-permissions-on-the-server"></a>A. Listando permissões efetivas no servidor  
+### <a name="a-listing-effective-permissions-on-the-server"></a>a. Listando permissões efetivas no servidor  
  O exemplo a seguir retorna uma lista de permissões efetivas do chamador no servidor.  
   
 ```  
@@ -131,7 +131,7 @@ GO
 ```  
   
 ### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. Listando permissões efetivas em uma coleção de esquemas XML  
- O exemplo a seguir retorna uma lista das permissões efetivas do chamador em uma coleção de esquema XML denominado `ProductDescriptionSchemaCollection` no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados.  
+ O exemplo a seguir retorna uma lista das permissões efetivas do chamador em uma coleção de esquemas XML `ProductDescriptionSchemaCollection` denominada [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] no banco de dados.  
   
 ```  
 USE AdventureWorks2012;  
@@ -149,7 +149,7 @@ GO
 ```  
   
 ### <a name="h-listing-effective-permissions-of-another-login"></a>H. Listando permissões efetivas de outro logon  
- O exemplo a seguir retorna uma lista de permissões efetivas do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` na tabela `Employee` no esquema `HumanResources`do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. O chamador requer a permissão IMPERSONATE no logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof`.  
+ O exemplo a seguir retorna uma lista de permissões efetivas do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof` na tabela `Employee` no esquema `HumanResources`do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. O chamador requer a permissão IMPERSONATE no logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof`.  
   
 ```  
 EXECUTE AS LOGIN = 'WanidaBenshoof';  
@@ -159,7 +159,7 @@ REVERT;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   

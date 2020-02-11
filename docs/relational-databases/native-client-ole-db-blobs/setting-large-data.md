@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 317f6f25e717a49f3b26c4cc09d957f8c38557f0
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73758323"
 ---
 # <a name="setting-large-data"></a>Definindo dados grandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Com o provedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, você pode definir dados de BLOB passando um ponteiro para um objeto de armazenamento do consumidor.  
+  Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo, você pode definir dados de blob passando um ponteiro para um objeto de armazenamento do consumidor.  
   
  O consumidor cria um objeto de armazenamento que contém os dados e transmite um ponteiro a este objeto de armazenamento para o provedor. Em seguida, o provedor lê dados do objeto de armazenamento do consumidor e grava-os na coluna de BLOB.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73758323"
   
 2.  Defina as propriedades no grupo de propriedades DBPROPSET_ROWSET para que o conjunto de linhas seja atualizável.  
   
-3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Defina o elemento *wType* na estrutura DBBINDING como DBTYPE_IUNKNOWN e o elemento *pObject* para apontar para a estrutura DBOBJECT que você criou.  
+3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Defina o elemento *wType* na estrutura DBBINDING como DBTYPE_IUNKNOWN e o elemento *pObject* para que ele aponte para a estrutura DBOBJECT criada.  
   
 4.  Crie um acessador que usa as informações de associação na matriz de estruturas DBBINDINGS.  
   
@@ -720,7 +720,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BLOBs e objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Usando tipos de valor grande](../../relational-databases/native-client/features/using-large-value-types.md)  
   

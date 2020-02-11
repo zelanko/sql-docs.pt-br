@@ -1,5 +1,5 @@
 ---
-title: Criar o exemplo do método (VC + +) | Microsoft Docs
+title: Exemplo do método Create (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0cd79f758d173a2060c21465b35284023942a15a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8b694c8d8e7381a8237511f8bba3ffd444cd5d37
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966610"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76910539"
 ---
 # <a name="create-method-example-vc"></a>Exemplo do método Create (VC++)
-O código a seguir mostra como criar um novo banco de dados Microsoft Jet com o [criar](../../../ado/reference/adox-api/create-method-adox.md) método.  
+O código a seguir mostra como criar um novo banco de dados do Microsoft Jet com o método [Create](../../../ado/reference/adox-api/create-method-adox.md) .  
   
 ```  
 // BeginCreateDatabaseCpp.cpp  
@@ -70,10 +70,10 @@ void CreateDatabaseX() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CreateDatabaseX...." << endl;  
+      cout << "Error occurred in CreateDatabaseX...." << endl;  
    }  
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método Create (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)

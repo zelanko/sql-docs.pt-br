@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022519"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Considerações de design e limitações para Publicadores Oracle
-  A publicação de um banco de dados Oracle é projetada para funcionar de forma praticamente idêntica à publicação de um banco de dados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Porém, deve-se estar atento às seguintes limitações e problemas:  
+  A publicação de um banco de dados Oracle foi projetada para funcionar de maneira praticamente idêntica à publicação de um banco de dados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Porém, deve-se estar atento às seguintes limitações e problemas:  
   
 -   A opção Oracle Gateway fornece desempenho melhorado em relação à opção Oracle Complete; entretanto, essa opção não pode ser usada para publicar a mesma tabela em várias publicações transacionais. Uma tabela pode aparecer no máximo em uma publicação transacional e em qualquer número de publicações de instantâneo. Se você precisa publicar a mesma tabela em várias publicações transacionais, escolha a opção Oracle Complete.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "63022519"
   
  Considere também os seguintes problemas:  
   
--   Oracle e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tratam o NULL de modo diferente: a Oracle permite várias linhas com valores nulos para colunas que permitem o NULL e são incluídas em restrições ou índices exclusivos. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] impõe exclusividade permitindo somente uma única linha com um valor nulo para a mesma coluna. Não é possível publicar uma restrição ou índice exclusivo que permita NULL uma vez que haveria uma violação de restrição no Assinante se a tabela publicada tiver várias linhas com valores NULL para qualquer uma das colunas incluídas no índice ou restrição.  
+-   A Oracle e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tratam o NULL diferentemente: a Oracle permite várias linhas com valores nulos para colunas que permitem o NULL e são incluídas em restrições ou índices exclusivos. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] impõe exclusividade permitindo somente uma única linha com um valor nulo para a mesma coluna. Não é possível publicar uma restrição ou índice exclusivo que permita NULL uma vez que haveria uma violação de restrição no Assinante se a tabela publicada tiver várias linhas com valores NULL para qualquer uma das colunas incluídas no índice ou restrição.  
   
 -   Ao testar exclusividade, espaços em branco em um campo são ignorados por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mas não pelo Oracle.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "63022519"
   
 -   Publicações transacionais padrão oferecem suporte para tabelas de até 1000 colunas. Publicações transacionais Oracle oferecem suporte para 995 colunas (a replicação adiciona cinco colunas a cada tabela publicada).  
   
--   Cláusulas de agrupamento são adicionadas às instruções CREATE TABLE para habilitar comparações que diferenciam maiúscula de minúscula, o que é importante para chaves primárias e restrições exclusivas. Este comportamento é controlado com a opção de esquema 0x1000, especificada com o parâmetro **@schema_option** de [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
+-   Cláusulas de agrupamento são adicionadas às instruções CREATE TABLE para habilitar comparações que diferenciam maiúscula de minúscula, o que é importante para chaves primárias e restrições exclusivas. Esse comportamento é controlado com a opção de esquema 0x1000, que é especificada com **@schema_option** o parâmetro de [Sp_addarticle &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   
 -   Se você usar procedimentos armazenados para configurar ou manter um Editor Oracle, não coloque os procedimentos dentro de uma transação explícita. Isso não oferece suporte sobre o servidor vinculado usado para conexão com o Editor Oracle.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "63022519"
   
 -   A conta sob a qual o Snapshot Agent e o Log Reader Agent fazem conexões do Distribuidor para o Processador é especificada por um dos seguintes métodos:  
   
-    -   O parâmetro **@security_mode** do [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) (você também especifica valores para **@login** e **@password** se for usada a autenticação do Oracle)  
+    -   O **@security_mode** parâmetro de [Sp_adddistpublisher &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) (você também especifica valores para **@login** e **@password** se a autenticação do Oracle for usada)  
   
     -   Na caixa de diálogo **Conectar ao Servidor** no SQL Server Management Studio, que você usa ao configurar o Editor Oracle no Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -157,15 +157,15 @@ ms.locfileid: "63022519"
   
 -   A conta sob a qual o Snapshot Agent e o Agente de Leitor de Log fazem conexões não pode ser alterada com [sp_changedistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) ou por uma folha de propriedades, mas a senha pode ser alterada.  
   
--   Se você especificar um valor de 1 (Autenticação Integrada do Windows) para o parâmetro **@security_mode** de [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql):  
+-   Se você especificar um valor de 1 (autenticação integrada do Windows) para **@security_mode** o parâmetro de [Sp_adddistpublisher &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql):  
   
-    -   A conta e a senha de processo usadas para o Snapshot Agent e o Agente de Leitor de Log (os parâmetros **@job_login** e **@job_password** de [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) e [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)) devem ser as mesmas que a conta e a senha usadas para a conexão com o Publicador Oracle.  
+    -   A conta de processo e a senha usadas para os Agente de Instantâneo e Agente de Leitor de Log ( **@job_login** os **@job_password** parâmetros e de [sp_addpublication_snapshot &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) e [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)) devem ser iguais à conta e à senha usada para se conectar ao Publicador Oracle.  
   
-    -   Você não pode alterar o parâmetro **@job_login** por meio de [sp_changepublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) ou [sp_changelogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql), mas a senha pode ser alterada.  
+    -   Você não pode alterar **@job_login** o parâmetro por meio de [sp_changepublication_snapshot &#40;&#41;do Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) ou Sp_changelogreader_agent &#40;&#41;do [Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql), mas a senha pode ser alterada.  
   
- Para obter mais informações sobre a segurança de replicação, consulte [segurança de replicação do SQL Server](../security/view-and-modify-replication-security-settings.md).  
+ Para obter mais informações sobre segurança de replicação, consulte [replicação do SQL Server Security](../security/view-and-modify-replication-security-settings.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Considerações administrativas sobre Publicadores Oracle](administrative-considerations-for-oracle-publishers.md)   
  [Configurar um Publicador Oracle](configure-an-oracle-publisher.md)   
  [Visão geral da publicação do Oracle](oracle-publishing-overview.md)  

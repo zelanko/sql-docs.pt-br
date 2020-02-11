@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 18c4af67230726d831c2c192a782135f9afe3743
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188316"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Add Steps to a SQL Server Agent Master Job
@@ -56,7 +56,7 @@ ms.locfileid: "68188316"
   
 4.  Clique com o botão direito do mouse no trabalho ao qual você deseja adicionar etapas e selecione **Propriedades**.  
   
-5.  Na caixa de diálogo **Propriedades do Trabalho –** _job_name_, em **Selecionar uma página**, selecione **Etapas**. Para obter mais informações sobre as opções disponíveis nessa página, consulte [propriedades do trabalho: novo trabalho de &#40;página etapas&#41;](../agent/job-properties-new-job-steps-page.md).  
+5.  Na caixa de diálogo **Propriedades do Trabalho –** _job_name_, em **Selecionar uma página**, selecione **Etapas**. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho: página novas etapas de &#40;de trabalho&#41;](../agent/job-properties-new-job-steps-page.md).  
 
 6.  Quando terminar, clique em **OK**.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "68188316"
     GO  
     ```  
   
- Para obter mais informações, consulte [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Para obter mais informações, consulte [sp_add_jobstep &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
   

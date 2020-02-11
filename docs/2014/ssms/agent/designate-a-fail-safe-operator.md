@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54ec71df8efab1f60bfb7a5b9af448705e349d28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211421"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Designar um operador à prova de falhas
-  Um operador à prova de falhas é um usuário que recebe o alerta caso o operador designado não possa ser localizado. Este tópico descreve como configurar um operador à prova de falhas para receber notificações de alertas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Um operador à prova de falhas é um usuário que recebe o alerta caso o operador designado não possa ser localizado. Este tópico descreve como definir um operador à prova de falhas para receber [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] notificações de alerta do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Agent no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]usando o.  
   
  **Neste tópico**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68211421"
   
      [Segurança](#Security)  
   
--   **Para designar um operador à prova de falhas usando:**  
+-   **Para designar um operador à prova de falhas, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -41,11 +41,12 @@ ms.locfileid: "68211421"
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
--   As opções Pager e **net send** serão removidas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
+-   As opções pager e **net send** serão removidas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Agent em uma versão futura [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
   
 -   Observe que o SQL Server Agent deve ser configurado para usar o Database Mail a fim de enviar notificações por pager ou email a operadores. Para obter mais informações, consulte [Atribuir alertas a um operador](assign-alerts-to-an-operator.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gerencia trabalhos de forma fácil e com representação gráfica. Além disso, ele é recomendado para criar e gerenciar a infraestrutura de trabalhos.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gerencia trabalhos de forma fácil e com representação gráfica. Além disso, ele é recomendado para criar e gerenciar a infraestrutura de trabalhos.  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -60,13 +61,13 @@ ms.locfileid: "68211421"
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent** e selecione **Propriedades**.  
 
-3.  No **propriedades do SQL Server Agent -** _nome_do_servidor_ caixa de diálogo **selecionar uma página**, selecione **sistema de alerta**.  
+3.  Na caixa de diálogo **Propriedades do SQL Server Agent –**_server_name_ , em **selecionar uma página**, selecione **sistema de alerta**.  
  
 4.  Em **Operador à prova de falhas**, selecione **Habilitar operador à prova de falhas**.  
   
 5.  Na lista **Operador** , selecione o operador que você deseja tornar à prova de falhas.  
   
-6.  Marque uma ou todas as seguintes caixas de seleção para especificar como o operador será notificado: **Email**, **Pager** ou **Net send**.  
+6.  Marque qualquer uma ou todas as caixas de seleção a seguir para especificar como o operador será notificado: **Email**, **Pager**ou **Net send**.  
   
 7.  Quando terminar, clique em **OK**.  
   

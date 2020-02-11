@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9ee3228eea9970563540be9bc6a4c3b9a3677112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189323"
 ---
 # <a name="edit-an-operator"></a>Editar um operador
@@ -43,11 +43,12 @@ ms.locfileid: "68189323"
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
--   As opções Pager e **net send** serão removidas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
+-   As opções pager e **net send** serão removidas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Agent em uma versão futura [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
   
 -   Observe que o SQL Server Agent deve ser configurado para usar o Database Mail a fim de enviar notificações por pager ou email a operadores. Para obter mais informações, consulte [Atribuir alertas a um operador](assign-alerts-to-an-operator.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gerencia trabalhos de forma fácil e com representação gráfica. Além disso, ele é recomendado para criar e gerenciar a infraestrutura de trabalhos.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gerencia trabalhos de forma fácil e com representação gráfica. Além disso, ele é recomendado para criar e gerenciar a infraestrutura de trabalhos.  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -68,11 +69,11 @@ ms.locfileid: "68189323"
   
      Para obter mais informações sobre as opções disponíveis contidas na caixa de diálogo _operator_name_**Propriedades** , consulte:  
   
-    -   [Propriedades do operador e operador New &#40;página geral&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Propriedades do operador e novo operador &#40;página Geral&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Propriedades do operador: Novo operador &#40;página de notificações&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [Propriedades do operador: nova página de notificações de &#40;de operador&#41;](operator-properties-new-operator-notifications-page.md)  
   
-    -   [Propriedades do operador &#40;página Histórico&#41;](operator-properties-history-page.md)  
+    -   [Propriedades do operador &#40;página histórico&#41;](operator-properties-history-page.md)  
   
 5.  Quando terminar, clique em **OK**.  
   
@@ -103,6 +104,6 @@ ms.locfileid: "68189323"
     GO  
     ```  
   
- Para obter mais informações, consulte [sp_update_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql).  
+ Para obter mais informações, consulte [sp_update_operator &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql).  
   
   

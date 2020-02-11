@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 731dda855fe29a4aada9469a5d7744b9e1d5c3d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898924"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Trabalhando com tipos de dados no fluxo de dados
@@ -67,14 +67,16 @@ ms.locfileid: "62898924"
   
 |Método Set|Tipo de Dados|  
 |----------------|---------------|  
-|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A> ou <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_IMAGE>, <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_NTEXT> ou <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_TEXT>|  
+|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A> ou <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A>|
+  <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_IMAGE>, <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_NTEXT> ou <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_TEXT>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetBoolean%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_BOOL>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetByte%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI1>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetBytes%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_BYTES>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetDate%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DBDATE>|  
-|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetDateTime%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DATE>, <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DBTIMESTAMP>, <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DBTIMESTAMP2> ou <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_FILETIME>|  
+|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetDateTime%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DATE>, <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DBTIMESTAMP>, <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DBTIMESTAMP2>ou<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_FILETIME>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetDateTimeOffset%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DBTIMESTAMPOFFSET>|  
-|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetDecimal%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_CY>, <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DECIMAL> ou <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_NUMERIC>|  
+|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetDecimal%2A>|
+  <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_CY>, <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DECIMAL> ou <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_NUMERIC>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetDouble%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_R8>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetGuid%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_GUID>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetInt16%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_I2>|  
@@ -90,12 +92,12 @@ ms.locfileid: "62898924"
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetUInt64%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI8>|  
   
 ## <a name="mapping-data-types-in-the-data-flow"></a>Mapeando tipos de dados no fluxo de dados  
- Ao mover dados de origens por meio de transformações nos destinos, um componente de fluxo de dados deve algumas vezes converter tipos de dados entre os tipos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] definidos na enumeração <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType> e os tipos de dados gerenciados do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definidos no namespace **System**. Além disso, às vezes, um componente precisa converter um tipo de dados do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] em outro para que o tipo possa ser convertido em um tipo gerenciado.  
+ Ao mover dados de origens por meio de transformações nos destinos, um componente de fluxo de dados deve algumas vezes converter tipos de dados entre os tipos do  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] definidos na enumeração <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType> e os tipos de dados gerenciados do  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definidos no namespace **System**. Além disso, às vezes, um componente precisa converter um tipo de dados do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] em outro para que o tipo possa ser convertido em um tipo gerenciado.  
   
 > [!NOTE]  
 >  Os arquivos de mapeamento no formato XML que são instalados por padrão em C:\Arquivos de Programas\Microsoft SQL Server\120\DTS\MappingFiles não são relacionados ao mapeamento de tipos de dados descrito neste tópico. Esses arquivos mapeiam tipos de dados de uma versão do banco de dados ou sistema para outro (por exemplo, do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para o Oracle) e são usados apenas pelo Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações sobre esses arquivos de mapeamento, consulte [Assistente de Importação e Exportação do SQL Server](../../import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
   
-### <a name="mapping-between-integration-services-and-managed-data-types"></a>Mapeando entre os tipos de dados gerenciados e do Integration Services  
+### <a name="mapping-between-integration-services-and-managed-data-types"></a>Mapeando entre os tipos de dados gerenciados e do Integration Services   
  O <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> e os métodos <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> mapeiam tipos de dados [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] para tipos de dados gerenciados.  
   
 > [!CAUTION]  
@@ -155,9 +157,9 @@ ms.locfileid: "62898924"
 > [!NOTE]  
 >  O método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> não retorna um valor para o tipo de dado DT_DBTIMESTAMPOFFSET e ocorre uma <xref:Microsoft.SqlServer.Dts.Pipeline.UnsupportedBufferDataTypeException>. Você deve converter o tipo de dado DT_DBTIMESTAMPOFFSET em um dos tipos de dados de data/hora do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] que podem ser mapeados para um tipo de dado gerenciado. Para obter uma lista de tipos de dados de data/hora do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] que podem ser mapeados para tipos de dados gerenciados, consulte a tabela na seção anterior, "Mapeamento entre os tipos de dados gerenciados e do Integration Services". Para obter informações conversão de tipos de dados, consulte [Integration Services Data Types](../../data-flow/integration-services-data-types.md).  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>   
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>   
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>   

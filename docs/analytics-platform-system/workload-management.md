@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399440"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gerenciamento de carga de trabalho no Analytics Platform System
@@ -34,7 +34,7 @@ Por exemplo, com as técnicas de gerenciamento de carga de trabalho no SQL Serve
 Gerenciamento da Carga de Trabalho  
 O *Gerenciamento de carga de trabalho* é a capacidade de entender e ajustar a utilização de recursos do sistema a fim de obter o melhor desempenho para solicitações simultâneas.  
   
-Classe de recursos  
+Classe de recurso  
 No SQL Server PDW, uma *classe de recurso* é uma função de servidor interna que tem limites previamente atribuídos para memória e simultaneidade. SQL Server PDW aloca recursos para solicitações de acordo com a associação de função de servidor de classe de recurso do logon que envia as solicitações.  
   
 Nos nós de computação, a implementação das classes de recurso usa o recurso Resource Governor no SQL Server. Para obter mais informações sobre Resource Governor, consulte [resource governor](../relational-databases/resource-governor/resource-governor.md) no msdn.  
@@ -58,12 +58,12 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
 ## <a name="RC"></a>Descrições de classe de recurso  
 A tabela a seguir descreve as classes de recurso e suas alocações de recursos do sistema.  
   
-|Classe de recursos|Importância da solicitação|Uso máximo de memória *|Slots de simultaneidade (máximo = 32)|Descrição|  
+|Classe de recurso|Importância da solicitação|Uso máximo de memória *|Slots de simultaneidade (máximo = 32)|DESCRIÇÃO|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
 |padrão|Média|400 MB|1|Por padrão, cada logon é permitido uma pequena quantidade de memória e recursos de simultaneidade para suas solicitações.<br /><br />Quando um logon é adicionado a uma classe de recurso, a nova classe tem precedência. Quando um logon é Descartado de todas as classes de recurso, o logon reverte para a alocação de recursos padrão.|  
 |MediumRC|Média|1200 MB|3|Exemplos de solicitações que podem precisar da classe de recurso médio:<br /><br />Operações CTAS que têm grandes junções de hash.<br /><br />Selecione operações que precisam de mais memória para evitar o cache em disco.<br /><br />Carregando dados em índices columnstore clusterizados.<br /><br />Criação, recriação e reorganização de índices columnstore clusterizados para tabelas menores que têm 10-15 colunas.|  
-|Largerc|Alto|2,8 GB|7|Exemplos de solicitações que podem precisar da classe de recurso grande:<br /><br />Operações CTAS muito grandes que têm enormes junções de hash ou que contêm grandes agregações, como cláusulas grandes ORDER BY ou GROUP BY.<br /><br />Selecione operações que exigem quantidades muito grandes de memória para operações como junções de hash ou agregações, como cláusulas ORDENAr por ou GROUP BY<br /><br />Carregando dados em índices columnstore clusterizados.<br /><br />Criação, recriação e reorganização de índices columnstore clusterizados para tabelas menores que têm 10-15 colunas.|  
-|xlargerc|Alto|8,4 GB|22|A classe extra grande de recursos é para solicitações que podem exigir consumo extra de recursos grandes em tempo de execução.|  
+|Largerc|Alta|2,8 GB|7|Exemplos de solicitações que podem precisar da classe de recurso grande:<br /><br />Operações CTAS muito grandes que têm enormes junções de hash ou que contêm grandes agregações, como cláusulas grandes ORDER BY ou GROUP BY.<br /><br />Selecione operações que exigem quantidades muito grandes de memória para operações como junções de hash ou agregações, como cláusulas ORDENAr por ou GROUP BY<br /><br />Carregando dados em índices columnstore clusterizados.<br /><br />Criação, recriação e reorganização de índices columnstore clusterizados para tabelas menores que têm 10-15 colunas.|  
+|xlargerc|Alta|8,4 GB|22|A classe extra grande de recursos é para solicitações que podem exigir consumo extra de recursos grandes em tempo de execução.|  
   
 <sup>*</sup>O uso máximo de memória é uma aproximação.  
   
@@ -131,16 +131,16 @@ Instruções e operações SQL governadas por classes de recursos:
   
 -   UPDATE  
   
--   EXCLUIR  
+-   Delete (excluir)  
   
 -   Restaure o banco de dados ao restaurar em um dispositivo com mais nós de computação.  
   
 -   SELECIONAR, excluindo consultas somente DMV  
   
-## <a name="Limits"></a>Limitações e restrições  
+## <a name="Limits"></a>Limitações e Restrições  
 As classes de recurso regem a memória e as alocações de simultaneidade.  Eles não controlam as operações de entrada/saída.  
   
-## <a name="Metadata"></a>Los  
+## <a name="Metadata"></a>Metadados  
 DMVs que contêm informações sobre classes de recursos e membros de classe de recurso.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -149,9 +149,9 @@ DMVs que contêm informações sobre classes de recursos e membros de classe de 
   
 DMVs que contêm informações sobre o estado das solicitações e os recursos que eles precisam:  
   
--   [sys. dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
+-   [sys.dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
   
--   [sys. dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
+-   [sys.dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
   
 Exibições do sistema relacionadas expostas dos DMVs SQL Server nos nós de computação. Consulte [SQL Server exibições de gerenciamento dinâmico](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) para obter links para esses DMVS no msdn.  
   

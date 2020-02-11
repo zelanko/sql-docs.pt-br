@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caeda52d612f4df6672f686e06834de6fef0cc67
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243283"
 ---
 # <a name="search-text-with-wildcards"></a>Pesquisar texto com curingas
@@ -34,7 +34,7 @@ ms.locfileid: "75243283"
   
  A tabela a seguir descreve os curingas disponíveis na **Lista de Referências**.  
   
-|Expressão|Sintaxe|Descrição|  
+|Expression|Sintaxe|DESCRIÇÃO|  
 |----------------|------------|-----------------|  
 |Qualquer caractere único|?|Corresponde a qualquer caractere único.|  
 |Qualquer dígito único|#|Corresponde a qualquer dígito único. Por exemplo, 7# corresponde a números que incluem 7 seguidos por outro número, como 71, mas não 17.|  

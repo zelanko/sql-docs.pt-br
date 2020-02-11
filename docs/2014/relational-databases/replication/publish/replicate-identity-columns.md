@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c6410e6b21ec3ebbb3cfb01fa78ffe80b2196a3
-ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74479249"
 ---
 # <a name="replicate-identity-columns"></a>Replicar colunas de identidade
@@ -64,7 +64,7 @@ ms.locfileid: "74479249"
 |`smallint`|-2^15 (-32.768) a 2^15-1 (32.767)|  
 |`int`|-2^31 (-2.147.483.648) a 2^31-1 (2.147.483.647)|  
 |`bigint`|-2^63 (-9.223.372.036.854.775.808) a 2^63-1 (9.223.372.036.854.775.807)|  
-|`decimal`e`numeric`|-10^38+1 até 10^38-1|  
+|`decimal` e `numeric`|-10^38+1 até 10^38-1|  
   
 > [!NOTE]  
 >  Para criar um número incrementado automaticamente, que possa ser usado em várias tabelas ou ser chamado de aplicativos, sem referenciar tabelas, consulte [Números de Sequência](../../sequence-numbers/sequence-numbers.md).  
@@ -123,10 +123,10 @@ ms.locfileid: "74479249"
     >  Se o valor da coluna identidade estiver definido para redução em vez de incremento, registre o valor mais baixo encontrado, depois semeie novamente esse valor.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;de BACKUP &#40;Transact-SQL](/sql/t-sql/statements/backup-transact-sql)   
- [&#41;&#40;Transact-SQL de DBCC CHECKIDENT](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
- [&#41;&#40;Transact-SQL de IDENT_CURRENT](/sql/t-sql/functions/ident-current-transact-sql)   
- [Propriedade de &#40;de identidade&#41; &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
+ [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
+ [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
+ [IDENT_CURRENT &#40;Transact-SQL&#41;](/sql/t-sql/functions/ident-current-transact-sql)   
+ [IDENTITY &#40;Propriedade&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
  [&#41;&#40;Transact-SQL de sp_adjustpublisheridentityrange](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
   
   

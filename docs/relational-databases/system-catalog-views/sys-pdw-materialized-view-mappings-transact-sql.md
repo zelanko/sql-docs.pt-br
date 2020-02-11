@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_materialized_view_mappings (Transact-SQL) | Microsoft Docs
+title: sys. pdw_materialized_view_mappings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: d548291653b589d973c9c21813690a61a0fdb7ba
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729830"
 ---
 # <a name="syspdw_materialized_view_mappings-transact-sql"></a>sys. pdw_materialized_view_mappings (Transact-SQL)  
@@ -27,9 +27,9 @@ Vincula a exibição materializada a nomes de objetos internos por object_id.
 
 As colunas physical_name e object_id formam a chave para essa exibição de catálogo.
   
-|Column Name|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|physical_name |**nvarchar(36)**|O nome físico da exibição materializada.|  
+|physical_name |**nvarchar (36)**|O nome físico da exibição materializada.|  
 |object_id  |**int**|A ID de objeto para a exibição materializada. Consulte [Sys. Objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).| 
 
 ## <a name="permissions"></a>Permissões

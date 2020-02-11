@@ -1,5 +1,5 @@
 ---
-title: Novidades&#39;
+title: O que&#39;s New
 ms.custom: ''
 ms.date: 07/08/2016
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727784"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novidades no MDS (Master Data Services)
@@ -25,19 +25,19 @@ ms.locfileid: "73727784"
   
  Para obter uma visão geral de como organizar dados no [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], veja [Visão geral do Master Data Services](../master-data-services/master-data-services-overview-mds.md). 
   
- **Para instalar o Master Data Services, configure o Site e o banco de dados e implante os modelos de exemplo, veja** [Visão Geral do Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).  
+ **Para instalar o Master Data Services, configure o banco de dados e o site e implante os modelos de exemplo, consulte** [visão geral de Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).  
   
- **Download**  
+ **Baixar**  
   
--   Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
+-   Para baixar [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], vá para o **[centro de avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
--   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** para criar uma Máquina Virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.  
+-   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** para criar uma máquina [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] virtual com o já instalado.  
   
 ##  <a name="improved-performance"></a>Desempenho aprimorado  
   
  As melhorias de desempenho permitem a você criar modelos mais amplos, carregar dados com mais eficiência e obter melhor desempenho geral. Isso inclui melhoria de desempenho do suplemento para o Microsoft Excel com o intuito de diminuir os tempos de carregamento e habilitar o suplemento para lidar com entidades maiores.  
   
- Para saber mais sobre o suplemento do Microsoft Excel, confira [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Para saber mais sobre o suplemento do Microsoft Excel, confira [Suplemento do Master Data Services para Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Veja a seguir as melhorias de recurso incluídas.  
   
@@ -130,26 +130,26 @@ ms.locfileid: "73727784"
   
 -   [Transações &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
--   [Segurança &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+-   [Master Data Services de &#40;de segurança&#41;](../master-data-services/security-master-data-services.md)  
 
 ## <a name="business-rule-improvements"></a>Aperfeiçoamentos da Regra de Negócios
- **Gerenciar regras de negócio (suplemento do MDS para Excel)**  
+ **Gerenciar regras de negócio (Suplemento MDS para Excel)**  
   
  No suplemento Master Data Services para Excel, você pode gerenciar Regras de Negócio, como criar e editar regras de negócio. As regras de negócio são usadas para validar dados.  
  
- **Extensão das Regras de Negócios**  
+ **Business Rules Extension**  
   
  Você pode aplicar scripts SQL definidos pelo usuário como uma extensão das ações e condições da regra de negócio. As funções SQL podem ser usadas como uma condição. Os procedimentos armazenados do SQL podem ser usados como uma ação. Para saber mais, veja [Extensão das Regras de Negócios &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md). 
  
- **Experiência de gerenciamento da regra de negócio reformulada**  
+ **Experiência de gerenciamento de regra de negócio reprojetada**  
   
  A experiência de gerenciamento de regra de negócio no MDS foi completamente reformulada para melhorar a experiência. Para saber mais sobre esse recurso, veja [Regras de Negócios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md).  
   
- **Funcionalidade de gerenciamento da regra de negócio removida do suplemento MDS para Excel**  
+ **Funcionalidade de gerenciamento de regras de negócio removida do Suplemento MDS para Excel**  
   
  A funcionalidade de gerenciamento Regra de Negócio foi removida do suplemento MDS para Excel porque reformulamos a experiência.    
 
- **Novas condições da regra de negócio**  
+ **Novas condições de regra de negócio**  
   
  Sete novas condições da regra de negócio foram adicionadas para fornecer um conjunto completo de condições. Para saber mais, veja [Condições de regras de negócios &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md).  
 
@@ -161,13 +161,13 @@ ms.locfileid: "73727784"
   
  Por exemplo, a entidade M tem um atributo baseado em domínio que faz referência a A e um atributo baseado em domínio que faz referência a B. Você pode criar uma hierarquia de A para B usando a entidade de mapeamento.  
   
- Para mais informações, veja [Mostrar relações muitos para muitos em Hierarquias Derivadas &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
+ Para obter mais informações, consulte [mostrar relações muitos para muitos em hierarquias derivadas &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
  
  **Editar relações muitos para muitos em hierarquias derivadas**  
   
  Você pode editar a relação muitos para muitos modificando os membros da entidade de mapeamento. Para mais informações, veja [Mostrar relações muitos para muitos em Hierarquias Derivadas &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md).  
  
- **Experiência aprimorada do gerenciamento da hierarquia derivada**  
+ **Experiência de gerenciamento de hierarquia derivada aprimorada**  
   
  A experiência de gerenciamento da hierarquia derivada no MDS foi aprimorada. Para saber mais sobre esse recurso, veja [Criar uma Hierarquia Derivada &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md).  
   
@@ -179,7 +179,7 @@ ms.locfileid: "73727784"
   
  Você pode criar um índice não clusterizado em um atributo (índice único) ou em uma lista de atributos (índice composto), em uma entidade, para ajudar a melhorar o desempenho da consulta. Para obter mais informações, consulte [Índice personalizado #40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md).  
  
-  **Filtros de atributos**  
+  **Filtros de atributo**  
   
  Para um atributo baseado em domínio, para um membro folha, você pode usar um atributo pai de filtro a fim de restringir os valores permitidos para o atributo baseado em domínio. Para obter mais informações, consulte [Criar um atributo baseado em domínio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md).  
  
@@ -189,7 +189,7 @@ ms.locfileid: "73727784"
   
  Você pode compartilhar dados entre diferentes modelos criando uma relação de sincronização de entidade. Para saber mais, veja [Relação de sincronização de entidade &#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md).  
   
- **Limpar membros excluídos**  
+ **Limpar Membros com exclusão reversível**  
   
  Agora você pode limpar (excluir permanentemente) todos os membros excluídos temporariamente em uma versão de modelo. Excluir um membro apenas desativa, ou exclui temporariamente, o membro. Para saber mais, veja [Limpar membros da versão &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md).  
  
@@ -199,7 +199,7 @@ ms.locfileid: "73727784"
   
  Um histórico de revisão do membro é registrado quando um membro é alterado. Você pode reverter um histórico de revisão, bem como exibir e anotar as revisões. Usando a propriedade **Dias de Retenção de Log** , você pode especificar por quanto tempo os dados históricos são mantidos. Para saber mais, veja [Reverter histórico de revisões do membro &#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md).  
   
- **Conflitos de mesclagem**  
+ **Mesclar conflitos**  
   
  Se você tentar publicar dados que foram alterados por outro usuário, a publicação falhará com um erro de conflito. Para resolver esse erro, você pode executar conflitos de mesclagem e republicar as alterações. Para saber mais, veja [Conflitos de mesclagem (Master Data Services)](../master-data-services/merge-conflicts-master-data-services.md) e [Conflitos de mesclagem (suplemento MDS para Excel)](../master-data-services/microsoft-excel-add-in/merge-conflicts-mds-add-in-for-excel.md).  
   
@@ -207,23 +207,23 @@ ms.locfileid: "73727784"
   
  Você pode usar conjuntos de alterações para salvar alterações pendentes de uma entidade, bem como exibir e modificar as alterações pendentes. Se a entidade exigir aprovação para alterações, você deverá salvar as alterações pendentes em um conjunto de alterações e enviar para aprovação pelo administrador. Para saber mais, veja [Conjuntos de alterações &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md).  
   
- **Gerenciamento e email do conjunto de alterações**  
+ **Email e gerenciamento do conjunto de alterações**  
   
  Nesta versão, você pode exibir e gerenciar todas as alterações por modelo e versão. Também é possível receber notificações por email toda vez que o status do conjunto de alterações mudar para uma entidade que exige aprovação. Para saber mais, veja [Gerenciar conjuntos de alterações &#40;Master Data Services&#41;](../master-data-services/manage-changesets-master-data-services.md) e [Notificações &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md).  
   
- **Exibir e gerenciar o histórico da revisão**  
+ **Exibir e gerenciar o histórico de revisão**  
   
  Você pode exibir e gerenciar o histórico de revisão por entidade e por membro. Se você tiver permissões de atualização, será possível reverter um membro para uma versão anterior. Para saber mais, veja [Reverter histórico de revisões do membro &#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md).  
  
 ## <a name="tool-and-sample-improvements"></a>Aprimoramentos de ferramenta e exemplos 
   
- **Salvar ou abrir arquivos de consulta no suplemento MDS para Excel**  
+ **Salvar ou abrir arquivos de consulta no Suplemento MDS para Excel**  
   
  Na página Gerenciador de Entidades, você pode clicar em **Excel** para salvar os arquivo de consulta de atalho. Ou pode abrir o arquivo de consulta armazenado no computador no suplementos MDS para Excel. O arquivo salvo pode ser aberto usando o aplicativo QueryOpener. Para saber mais, veja [Arquivos de consulta de atalho &#40;Suplemento MDS para Excel&#41;](../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md).  
   
  O arquivo de consulta contém os filtros e as informações de hierarquia na página do gerenciador.  
    
- **Exemplo de pacotes de implantação de modelo atualizado**  
+ **Pacotes de implantação de modelo de exemplo atualizados**  
   
  Os pacotes de exemplo foram atualizados para compatibilidade com novos cenários. Para saber mais, veja [Exemplos de SQL Server: Pacotes de implantação de modelo (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
 
@@ -231,7 +231,7 @@ ms.locfileid: "73727784"
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
-## <a name="see-also"></a>Consulte também  
- [Recursos de Master Data Services e Data Quality Services suportados pelas edições do SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
- [Recursos preteridos do Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
- [Recursos do Master Data Services descontinuados](../master-data-services/discontinued-master-data-services-features.md)
+## <a name="see-also"></a>Consulte Também  
+ [Recursos do Master Data Services e do Data Quality Services com suporte nas edições do SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
+ [Recursos de Master Data Services preteridos](../master-data-services/deprecated-master-data-services-features.md)  
+ [Recursos de Master Data Services descontinuados](../master-data-services/discontinued-master-data-services-features.md)

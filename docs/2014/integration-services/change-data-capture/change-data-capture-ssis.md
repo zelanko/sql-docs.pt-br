@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 391bf9204beeb6222a6e736125e5630bd5b1565e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771673"
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
@@ -36,84 +36,85 @@ ms.locfileid: "62771673"
   
  Depois que um administrador habilitar a captura de dados de alteração no banco de dados, você poderá criar um pacote que execute uma carga incremental dos dados de alteração. O diagrama a seguir mostra as etapas para a criação desse pacote que executa uma carga incremental a partir de uma única tabela:  
   
- ![Etapas de criação de pacote do Change Data Capture](../media/cdc-package-creation.gif "Etapas de criação de pacote do Change Data Capture")  
+ ![Etapas de criação do pacote do Change Data Capture](../media/cdc-package-creation.gif "Etapas de criação do pacote do Change Data Capture")  
   
  Conforme mostrado no diagrama anterior, a criação de um pacote que executa uma carga inicial de dados alterados envolve as seguintes etapas:  
   
- **Etapa 1: Projetando o fluxo de controle**  
+ **Etapa 1: projetando o fluxo de controle**  
  No fluxo de controle do pacote, é necessário definir as seguintes tarefas:  
   
 -   Calcule os valores iniciais e finais de `datetime` referentes aos intervalos de alterações feitas nos dados de origem que você deseja recuperar.  
   
      Para calcular esses valores, use uma tarefa Executar SQL ou expressões [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] com funções `datetime`. Em seguida, armazene esses pontos de extremidade em variáveis de pacote para uso no pacote.  
   
-     **Para obter mais informações, consulte:**  [Especificar um intervalo de dados de alteração](specify-an-interval-of-change-data.md)  
+     **Para obter mais informações:**  [especifique um intervalo de dados de alteração](specify-an-interval-of-change-data.md)  
   
 -   Determine se os dados de alteração para o intervalo selecionado estão prontos. Esta etapa é necessária porque o processo de captura assíncrono pode ainda não ter alcançado o ponto de extremidade selecionado.  
   
      Para determinar se os dados estão prontos, comece com um contêiner Loop For para atrasar a execução, se necessário, até que os dados de alteração do intervalo selecionado estejam prontos. Dentro do contêiner de loop, use uma tarefa Executar SQL para consultar as tabelas de mapeamento de tempo mantidas pela captura de dados de alteração. Em seguida, use uma tarefa Script que chame o método `Thread.Sleep` ou outra tarefa Executar SQL com uma instrução `WAITFOR` para retardar a execução do pacote temporariamente, se necessário. Opcionalmente, use outra tarefa Script para registrar uma condição de erro ou um tempo limite.  
   
-     **Para obter mais informações, consulte:**  [Determinar se os dados de alterações estão protos](determine-whether-the-change-data-is-ready.md)  
+     **Para obter mais informações:**  [determine se os dados de alteração estão prontos](determine-whether-the-change-data-is-ready.md)  
   
 -   Prepare a cadeia de caracteres de consulta que será usada para consultar os dados de alteração.  
   
      Use uma tarefa Script ou Executar SQL para montar a instrução SQL que será usada para consultar a existência de alterações.  
   
-     **Para obter mais informações, consulte:**  [Preparar para consultar os dados de alterações](prepare-to-query-for-the-change-data.md)  
+     **Para obter mais informações:**  [preparar para consultar os dados de alteração](prepare-to-query-for-the-change-data.md)  
   
- **Etapa 2: Configurando a consulta de dados de alteração**  
+ **Etapa 2: Configurando a consulta para dados de alteração**  
  Crie a função com valor de tabela que consultará os dados.  
   
  Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para desenvolver e salvar a consulta.  
   
- **Para obter mais informações, consulte:**  [Recuperar e compreender os dados de alterações](retrieve-and-understand-the-change-data.md)  
+ **Para obter mais informações:**  [recuperar e entender os dados de alteração](retrieve-and-understand-the-change-data.md)  
   
- **Etapa 3: Projetando o fluxo de dados**  
+ **Etapa 3: projetando o fluxo de dados**  
  No fluxo de dados do pacote, é necessário definir as seguintes tarefas:  
   
 -   Recupere os dados de alteração das tabelas de alteração.  
   
      Para recuperar os dados, use um componente de origem para consultar as tabelas de alterações para as alterações que se enquadram nos intervalos selecionados. A origem chama uma função com valor de tabela do Transact-SQL criada anteriormente.  
   
-     **Para obter mais informações, consulte:**  [Recuperar e compreender os dados de alterações](retrieve-and-understand-the-change-data.md)  
+     **Para obter mais informações:**  [recuperar e entender os dados de alteração](retrieve-and-understand-the-change-data.md)  
   
 -   Divida as alterações em inserções, atualizações e exclusões para processamento.  
   
      Para dividir as alterações, use uma transformação de Divisão Condicional para direcionar as inserções, atualizações e exclusões para saídas diferentes para o processamento apropriado.  
   
-     **Para obter mais informações, consulte:**  [Processar inserções, atualizações e exclusões](process-inserts-updates-and-deletes.md)  
+     **Para obter mais informações:**  [processar inserções, atualizações e exclusões](process-inserts-updates-and-deletes.md)  
   
 -   Aplique as inserções, exclusões e atualizações ao destino.  
   
      Para aplicar as alterações ao destino, use um componente de destino. Além disso, use as transformações de Comando OLE DB com as instruções UPDATE e DELETE com parâmetros para aplicar atualizações e exclusões ao destino. Você também pode aplicar atualizações e exclusões usando componentes de destino para salvar as linhas em tabelas temporárias. Em seguida, use tarefas Executar SQL para realizar operações de atualização e exclusão em massa no destino a partir das tabelas temporárias.  
   
-     **Para obter mais informações, consulte:**  [Aplicar as alterações ao destino](apply-the-changes-to-the-destination.md)  
+     **Para obter mais informações:**  [aplicar as alterações ao destino](apply-the-changes-to-the-destination.md)  
   
 ### <a name="change-data-from-multiple-tables"></a>Alterar dados de várias tabelas  
  O processo descrito no diagrama e nas etapas anteriores envolve uma carga incremental a partir de uma única tabela. Quando é necessário executar uma carga incremental a partir de várias tabelas, o processo geral é o mesmo. Porém, o design do pacote precisa ser alterado para acomodar o processamento de várias tabelas. Para obter mais informações sobre como criar um pacote que execute uma carga incremental de várias tabelas, consulte [Executar uma carga incremental de várias tabelas](perform-an-incremental-load-of-multiple-tables.md).  
   
 ## <a name="samples-of-change-data-capture-packages"></a>Exemplos de pacotes do Change Data Capture  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece dois exemplos que demonstram como usar o Change Data Capture em pacotes. Para mais informações, consulte os seguintes tópicos:  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece dois exemplos que demonstram como usar o Change Data Capture em pacotes. Para obter mais informações, consulte estes tópicos:  
   
--   [Leiame_Exemplo do Change Data Capture para pacote de intervalo especificado](https://go.microsoft.com/fwlink/?LinkId=133507)  
+-   [Exemplo de captura de dados do Readme_Change para o pacote de intervalo especificado](https://go.microsoft.com/fwlink/?LinkId=133507)  
   
--   [Leiame_Exemplo do Change Data Capture desde o último pacote de solicitação](https://go.microsoft.com/fwlink/?LinkId=133508)  
+-   [Readme_Change a captura de dados desde a última amostra de pacote de solicitação](https://go.microsoft.com/fwlink/?LinkId=133508)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 -   [Especificar um intervalo de dados de alteração](specify-an-interval-of-change-data.md)  
   
--   [Determinar se os dados de alterações estão protos](determine-whether-the-change-data-is-ready.md)  
+-   [Determinar se os dados de alteração estão prontos](determine-whether-the-change-data-is-ready.md)  
   
 -   [Preparar para consultar os dados de alterações](prepare-to-query-for-the-change-data.md)  
   
 -   [Criar a função para recuperar os dados de alteração](create-the-function-to-retrieve-the-change-data.md)  
   
--   [Recuperar e compreender os dados de alterações](retrieve-and-understand-the-change-data.md)  
+-   [Recuperar e compreender os dados de alteração](retrieve-and-understand-the-change-data.md)  
   
 -   [Processar inserções, atualizações e exclusões](process-inserts-updates-and-deletes.md)  
   
--   [Aplicar as alterações ao destino](apply-the-changes-to-the-destination.md)  
+-   [Aplicar as alterações no destino](apply-the-changes-to-the-destination.md)  
   
 -   [Executar uma carga incremental de várias tabelas](perform-an-incremental-load-of-multiple-tables.md)  
   

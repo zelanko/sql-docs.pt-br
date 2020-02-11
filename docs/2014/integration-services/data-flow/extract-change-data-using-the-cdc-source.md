@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0290e656105ebb33a7f73fc043beed64f1c25bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520316"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Extrair dados de alteração por meio da origem CDC
@@ -44,7 +44,7 @@ ms.locfileid: "62520316"
   
 8.  Selecione o modo de processamento que melhor trata suas necessidades de processamento. As opções possíveis são:  
   
-    -   **Tudo**: retorna as alterações no intervalo CDC atual sem os valores **Antes da Atualização**.  
+    -   **Tudo**: retorna as alterações no intervalo CDC atual sem os valores **Antes da Atualização** .  
   
     -   **Todos com valores antigos**: retorna as alterações no intervalo de processamento CDC atual, incluindo os valores antigos (**Antes da Atualização**). Para cada operação de atualização, haverá duas linhas, uma com os valores antes da atualização e outra com o valor depois da atualização.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62520316"
   
 15. Clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Editor de Origem CDC &#40;Página Gerenciador de Conexões&#41;](../cdc-source-editor-connection-manager-page.md)   
  [Editor de Origem CDC &#40;página Colunas&#41;](../cdc-source-editor-columns-page.md)   
  [Editor de Origem CDC &#40;Página Saída de Erro&#41;](../cdc-source-editor-error-output-page.md)  

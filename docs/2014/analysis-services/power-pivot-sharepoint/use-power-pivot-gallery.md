@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 880baacd3cf629ee28f55a399fcb02019e836d44
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229234"
 ---
 # <a name="use-powerpivot-gallery"></a>Usar a Galeria PowerPivot
@@ -43,7 +43,7 @@ ms.locfileid: "75229234"
   
  [Pré-requisitos](#prereq)  
   
-##  <a name="prereq"></a>Pré-requisitos  
+##  <a name="prereq"></a> Pré-requisitos  
   
 > [!NOTE]  
 >  A Galeria do PowerPivot requer o Microsoft Silverlight.  O navegador Microsoft Edge não dá suporte ao Silverlight.   
@@ -56,7 +56,7 @@ ms.locfileid: "75229234"
 ##  <a name="icons"></a>Ícones na Galeria PowerPivot  
  Os ícones fornecem um indicativo visual quanto à disponibilidade do conteúdo e ao status.  
   
-|ícone|Descrição|  
+|ícone|DESCRIÇÃO|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|O ícone de ampulheta é exibido quando uma imagem em miniatura de cada página no documento está sendo gerada. Atualize a página para exibir a atualização da imagem.|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|O ícone de página é exibido quando uma pasta de trabalho ou um relatório tem mais páginas do que as que podem ser exibidas na Galeria PowerPivot. Para exibir todas as páginas, você deve usar um aplicativo cliente.|  
@@ -149,7 +149,7 @@ ms.locfileid: "75229234"
   
 3.  Clique na seta para baixo à direita e selecione **Editar Propriedades**.  
   
-4.  Clique em **Salvar**. Salvar o documento forçará o serviço de instantâneo a gerar novamente a imagem de visualização.  
+4.  Clique em **Save** (Salvar). Salvar o documento forçará o serviço de instantâneo a gerar novamente a imagem de visualização.  
   
 ##  <a name="bkmk_known_issues"></a>Problemas conhecidos  
   

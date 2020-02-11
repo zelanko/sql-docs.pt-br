@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7822cd56a52e47493fe175c293dbfe491a9524af
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727439"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Como gerar previsões usando modelos de machine learning no SQL Server
@@ -97,7 +97,7 @@ Serializar um modelo para um formato binário é útil, mas não é necessário 
 
 ## <a name="scoring-in-related-products"></a>Pontuação em produtos relacionados
 
-Se você estiver usando o [servidor autônomo](r-server-standalone.md) ou um [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), terá outras opções além dos procedimentos armazenados e das funções do T-SQL para gerar previsões rapidamente. Tanto o servidor autônomo quanto o Machine Learning Server dão suporte ao conceito de um *serviço Web* para implantação de código. Você pode empacotar um modelo do R ou do Python pré-treinado como um serviço Web, chamado no runtime para avaliar novas entradas de dados. Para obter mais informações, consulte estes tópicos:
+Se você estiver usando o [servidor autônomo](r-server-standalone.md) ou um [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), terá outras opções além dos procedimentos armazenados e das funções do T-SQL para gerar previsões rapidamente. Tanto o servidor autônomo quanto o Machine Learning Server dão suporte ao conceito de um *serviço Web* para implantação de código. Você pode empacotar um modelo do R ou do Python pré-treinado como um serviço Web, chamado no runtime para avaliar novas entradas de dados. Para obter mais informações, consulte estes artigos:
 
 + [O que são serviços Web no Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [O que é operacionalização?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)

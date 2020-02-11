@@ -14,15 +14,15 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8fc10bd6ebb44e0f8b45edb3c669e8216cc313b1
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095564"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>Criando, alterando e removendo funções definidas pelo usuário
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-  O objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> fornece funcionalidade que permite que os usuários gerenciem de forma programática funções definidas pelo usuário no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Funções definidas pelo usuário dão suporte a parâmetros de entrada e saída, e também a referências diretas a colunas de tabela.  
+  O <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objeto fornece funcionalidade que permite que os usuários gerenciem funções definidas pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]usuário programaticamente no. Funções definidas pelo usuário dão suporte a parâmetros de entrada e saída, e também a referências diretas a colunas de tabela.  
   
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige o registro de assemblies dentro de um banco de dados antes de sua utilização dentro de procedimentos armazenados, funções definidas pelo usuário, gatilhos e tipos de dados definidos pelo usuário. O SMO dá suporte a esse recurso com o objeto <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "74095564"
  Quando o objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> referenciar um assembly .NET, registre o assembly criando um objeto <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> e adicionando-o ao objeto <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection>, que pertence ao objeto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
 ## <a name="example"></a>Exemplo  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto do Visual C&#35; Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>Criando uma função escalar definida pelo usuário no Visual Basic  
  Este exemplo de código mostra como criar e remover uma função escalar definida pelo usuário que possui um parâmetro do objeto <xref:System.DateTime> de entrada e um tipo de retorno inteiro no [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. A função definida pelo usuário é criada no banco de dados [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . O exemplo cria uma função definida pelo usuário, ISOweek, que usa um argumento de data e calcula o número da semana ISO. Para que essa função calcule corretamente, defina a opção DATEFIRST do banco de dados como 1 antes da função ser chamada.  
@@ -137,7 +137,7 @@ $udf.Create()
 $udf.Drop()  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>  
   
   

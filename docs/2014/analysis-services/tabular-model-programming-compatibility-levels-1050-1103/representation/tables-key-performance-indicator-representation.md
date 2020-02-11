@@ -1,5 +1,5 @@
 ---
-title: Representação de indicador de desempenho (Tabular) da chave | Microsoft Docs
+title: Representação do indicador chave de desempenho (tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0981b473ef29ac709213c1e9eee1cea01f47e2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62795436"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>Representação de indicador chave de desempenho (de tabela)
   Um KPI é usado para medir o desempenho de um valor, definido por uma medida base, em relação a um valor de destino  
   
 ## <a name="key-performance-indicator-representation"></a>Representação de indicador chave de desempenho  
- No objeto de tabela modela um indicador chave de desempenho – kpi-é uma medida com informações adicionais para o aplicativo cliente exibi-lo graficamente. Um kpi normalmente tem informações sobre uma meta a ser obtida, o status da medida comparada à meta e informações para a ferramenta de cliente sobre como exibir o status graficamente.  
+ Em modelos de objeto de tabela, um indicador chave de desempenho-KPI-é uma medida com informações adicionais para o aplicativo cliente exibi-lo graficamente. Um kpi normalmente tem informações sobre uma meta a ser obtida, o status da medida comparada à meta e informações para a ferramenta de cliente sobre como exibir o status graficamente.  
   
 ### <a name="key-performance-indicator-in-amo"></a>Indicador chave de desempenho no AMO  
  Ao usar o AMO para gerenciar um kpi de modelo de tabela, não há nenhuma correspondência de objeto um para um para um kpi no AMO, o objeto de AMO <xref:Microsoft.AnalysisServices.Kpi>não é usado para este propósito; no AMO, para modelos de tabela, um kpi é representado por uma série de objetos criada em um dos elementos na coleção <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> e no <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A>.  
@@ -221,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>Exemplo de AMO2Tabular  
- Para ter um entendimento sobre como usar o AMO para criar e manipular o indicador chave de desempenho representações, consulte o código-fonte do AMO para tabela amostra; Verifique especificamente o seguinte arquivo de origem: AddKPIs.cs. O exemplo está disponível no Codeplex. Uma nota importante sobre o código: o código é fornecido apenas como um suporte aos conceitos lógicos explicados aqui; ele não deve ser usado em um ambiente de produção, nem para fins que não sejam pedagógicos.  
+ Para compreender como usar o AMO para criar e manipular representações de indicador chave de desempenho, consulte o código-fonte do exemplo AMO para Tabela; verifique especificamente o seguinte arquivo de origem: AddKPIs.cs. O exemplo está disponível no Codeplex. Uma nota importante sobre o código: o código é fornecido apenas como um suporte aos conceitos lógicos explicados aqui; ele não deve ser usado em um ambiente de produção, nem para fins que não sejam pedagógicos.  
   
   

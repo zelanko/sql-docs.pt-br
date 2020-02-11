@@ -24,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d6f9d80f8ea696bfbe85a7f5a7aefac32eba1211
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154795"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Conjuntos de mídias, famílias de mídia e conjuntos de backup (SQL Server)
-  Este tópico apresenta a terminologia básica de mídia de backup da restauração e do backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e destina-se a leitores que não têm experiência com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tópico descreve o formato que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa na mídia de backup, a correspondência entre mídia de backup e dispositivos de backup, a organização dos backups na mídia de backup, e as várias considerações sobre conjuntos de mídias e famílias de mídia. O tópico também descreve as etapas de inicialização ou formatação de mídia de backup antes que você use isso pela primeira vez ou substitua um conjunto de mídias antigo por um novo conjunto de mídias, como substituir conjuntos de backup antigos em um conjunto de mídias, e como acrescentar novos conjuntos de backup a um conjunto de mídias.  
+  Este tópico apresenta a terminologia básica de mídia de backup da restauração e do backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e destina-se a leitores que não têm experiência com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tópico descreve o formato que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa na mídia de backup, a correspondência entre mídia de backup e dispositivos de backup, a organização dos backups na mídia de backup, e as várias considerações sobre conjuntos de mídias e famílias de mídia. O tópico também descreve as etapas de inicialização ou formatação de mídia de backup antes que você use isso pela primeira vez ou substitua um conjunto de mídias antigo por um novo conjunto de mídias, como substituir conjuntos de backup antigos em um conjunto de mídias, e como acrescentar novos conjuntos de backup a um conjunto de mídias.  
   
 > [!NOTE]  
 >  Para obter mais informações sobre SQL Server Backup para o serviço de armazenamento de BLOBs do Azure, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
@@ -56,14 +56,14 @@ ms.locfileid: "70154795"
 > [!NOTE]  
 >  Os conjuntos de mídias podem ser espelhados para proteger contra um volume de mídia danificado (uma fita ou arquivo de disco). Para obter mais informações, veja [Conjuntos de mídias de backup espelhadas &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
   
- o [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] ou posterior pode ler backups compactados. Para obter mais informações, veja [Compactação de backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]ou posterior podem ler backups compactados. Para obter mais informações, veja [Compactação de backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
   
 ### <a name="media-families"></a>Famílias de mídia  
  Os backups criados em um único dispositivo não espelhado ou um conjunto de dispositivos espelhados em um conjunto de mídias constituem uma *família de mídia*. O número de dispositivos de backup usados no conjunto de mídias determina o número de famílias de mídia em um conjunto de mídias. Por exemplo, se um conjunto de mídias usa dois dispositivos de backup não espelhados, o conjunto de mídias conterá duas famílias de mídia.  
   
 > [!NOTE]  
->  Em um conjunto de mídias espelhado, cada família de mídia é espelhada. Por exemplo, se seis dispositivos de backup são usados para formatar um conjunto de mídias, no qual dois espelhos são usados, existirão três famílias de mídia, cada uma contendo duas cópias equivalentes de dados de backup. Para obter mais informações sobre conjuntos de mídia espelhadas, consulte [Mirrored Backup Media Sets &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
+>  Em um conjunto de mídias espelhado, cada família de mídia é espelhada. Por exemplo, se seis dispositivos de backup são usados para formatar um conjunto de mídias, no qual dois espelhos são usados, existirão três famílias de mídia, cada uma contendo duas cópias equivalentes de dados de backup. Para obter mais informações sobre conjuntos de mídia espelhadas, consulte [Conjuntos de mídias de backup espelhadas &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
   
  A cada fita ou disco em uma família de mídia é atribuído um *número de sequência de mídia*. O número de sequência de mídia de um disco é sempre 1. Em uma família de mídia de fita, o número de sequência da fita inicial é 1, da segunda fita é 2 e assim por diante. Para obter mais informações, consulte [Usando conjuntos de mídias e famílias de mídia](#ConsiderationsForMediaSetFamilies).  
   
@@ -89,7 +89,7 @@ ms.locfileid: "70154795"
 -   A descrição de mídia contém um rótulo de mídia MTF ou uma descrição de mídia.  
   
     > [!NOTE]  
-    >  Todas as mídias usadas para uma operação de backup ou restauração usam um formato de backup padrão chamado [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] preserva qualquer rótulo de mídia MTF gravado por outro aplicativo, mas não grava rótulos de mídia de MTF.  
+    >  Toda a mídia usada para uma operação de backup ou restauração usa um formato de backup padrão [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] chamado preserva qualquer rótulo de mídia MTF gravado por outro aplicativo, mas não grava rótulos de mídia de MTF.  
   
 -   O rótulo de mídia de formato de fita [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ou a descrição de mídia (em texto de formato livre).  
   
@@ -138,7 +138,7 @@ WITH
   
  Se a segunda operação de backup for bem-sucedida, ela gravará um segundo conjunto de backup no conjunto de mídias, com a distribuição de conteúdo de backup a seguir:  
   
- ![Segundo conjunto de backups distribuído em três fitas de conjunto de mídias](../../database-engine/media/bnr-mediaset-appendedto.gif "Segundo conjunto de backups distribuído em três fitas de conjunto de mídias")  
+ ![Segundo conjunto de backups espalhado em três fitas de conjunto de mídias](../../database-engine/media/bnr-mediaset-appendedto.gif "Segundo conjunto de backups espalhado em três fitas de conjunto de mídias")  
   
  Ao restaurar backups, você pode usar a opção FILE para especificar quais backups deseja usar. O exemplo a seguir mostra o uso de cláusulas FILE **=** _backup_set_file_number_ ao restaurar um backup de banco de dados completo do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] seguido de um backup de banco de dados diferencial no mesmo conjunto de mídias. O conjunto de mídias usa três fitas de backup, que estão nas unidades de fita `\\.\tape0`, `tape1`e `tape2`.  
   
@@ -156,7 +156,7 @@ RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1',
 GO  
 ```  
   
- Para obter informações sobre tabelas de histórico que armazenam informações sobre conjuntos de mídias e suas famílias de mídia e conjuntos de backup, consulte [Backup History and Header Information &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md).  
+ Para obter informações sobre tabelas de histórico que armazenam informações sobre conjuntos de mídias e suas famílias de mídia e conjuntos de backup, consulte [Informações de histórico e cabeçalho de backup &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md).  
   
  O número de mídia de backup em um conjunto de mídias depende de vários fatores:  
   
@@ -210,7 +210,7 @@ GO
  Os backups do Microsoft Windows e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem compartilhar a mesma mídia, mas não são interoperáveis. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode fazer backup dos dados do Windows.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] ou versões posteriores podem ler backups compactados. Para obter mais informações, veja [Compactação de backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+>  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]ou versões posteriores podem ler backups compactados. Para obter mais informações, veja [Compactação de backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
   
 ####  <a name="Overwriting"></a>Substituindo conjuntos de backup  
@@ -225,7 +225,7 @@ GO
   
 -   Os backups existentes na mídia não expiraram. (Se foi especificado SKIP, a expiração não será verificada.)  
   
-     A data de validade especifica a data em que o backup expira e pode ser substituído por outro backup. Você pode especificar a data de validade quando um backup é criado. Por padrão, a data de validade é determinada pela opção **media retention** definida com **sp_configure**. Para obter mais informações, consulte [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql).  
+     A data de validade especifica a data em que o backup expira e pode ser substituído por outro backup. Você pode especificar a data de validade quando um backup é criado. Por padrão, a data de validade é determinada pela opção **media retention** definida com o **sp_configure**. Para obter mais informações, consulte [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql).  
   
 -   O nome da mídia, caso fornecido, não corresponde ao nome na mídia de backup.  
   
@@ -273,7 +273,7 @@ GO
   
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (opção NOINIT)  
   
- **Para substituir os conjuntos de backup existentes**  
+ **Para substituir todos os conjuntos de backup existentes**  
   
 -   [Criar um backup completo de banco de dados &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) (opção **Substituir todos os conjuntos de backup existentes**)  
   
@@ -283,7 +283,7 @@ GO
   
 -   [Definir a data de validade em um backup &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
- **Para exibir a sequência de mídia e os números de sequência da família**  
+ **Para exibir a sequência de mídia e números de sequência de família**  
   
 -   [Exibir as propriedades e o conteúdo de um dispositivo de backup lógico &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -297,13 +297,13 @@ GO
   
 -   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
- **Para ler o cabeçalho de mídia da mídia em um dispositivo de backup**  
+ **Para ler o cabeçalho da mídia em um dispositivo de backup**  
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)  
   
   
-## <a name="see-also"></a>Consulte também  
- [Backup e Restauração de bancos de dados do SQL Server](back-up-and-restore-of-sql-server-databases.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Fazer backup e restaurar bancos de dados do SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Erros de mídia possíveis durante backup e restauração &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)   
  [Informações de histórico e cabeçalho de backup &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md)   
  [Conjuntos de mídias de backup espelhadas &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)   

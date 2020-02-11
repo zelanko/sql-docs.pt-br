@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22b8ed87ea78424049f1dc42513826ef032b3654
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74685340"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Configuração e administração de um servidor de relatórios (modo do SharePoint do Reporting Services)
@@ -25,13 +25,13 @@ ms.locfileid: "74685340"
   
 -   Opções de menu em uma biblioteca do SharePoint  
   
-    -   [Gerenciador de alertas de dados para usuários do SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)  
+    -   [Gerenciador de Alertas de Dados para Usuários do SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
-    -   [Criar e gerenciar assinaturas para servidores de relatório no modo do SharePoint](subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+    -   [Criar e gerenciar assinaturas de servidores de relatório no modo SharePoint](subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
     -   [Atualizar credenciais em fontes de dados de relatório de um site do SharePoint](report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
   
-    -   [Gerenciar conjuntos de itens compartilhados](report-data/manage-shared-datasets.md)  
+    -   [Gerenciar conjuntos de dados compartilhados](report-data/manage-shared-datasets.md)  
   
     -   [Definir parâmetros em um relatório publicado &#40;Reporting Services no modo integrado do SharePoint&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74685340"
   
     -   [Opções de atualização do cache &#40;Report Manager&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)  
   
--   [Reporting Services recursos do conjunto de sites](../../2014/reporting-services/reporting-services-site-collection-features.md)  
+-   [Recursos da coleção de sites do Reporting Services](../../2014/reporting-services/reporting-services-site-collection-features.md)  
   
 -   [Ativar o servidor de relatório e os recursos de integração do Power View no SharePoint](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)  
   

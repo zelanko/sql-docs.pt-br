@@ -1,5 +1,5 @@
 ---
-title: Convenções para combinar critérios de pesquisa no painel de critérios (Visual Database Tools) | Microsoft Docs
+title: Convenções para combinar critérios de pesquisa no painel critérios (ferramentas de banco de dados Visual) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140373"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Convenções para combinar critérios de pesquisa no painel de Critérios (Visual Database Tools)
@@ -151,7 +151,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
  O Designer de Consulta e Exibição representa essa cláusula WHERE no Painel de Critérios como segue:  
   
- ![Múltiplas cláusulas AND e OR no painel Critérios](../../database-engine/media//vs-criteriapane2.gif "Múltiplas cláusulas AND e OR no painel Critérios")  
+ ![Cláusulas múltiplas AND e OR no Painel de Critérios](../../database-engine/media//vs-criteriapane2.gif "Cláusulas múltiplas AND e OR no Painel de Critérios")  
   
  Se as cláusulas vinculadas OR envolverem só uma coluna de dados, o Designer de Consulta e Exibição pode colocar a toda a cláusula OR em uma única célula da grade, evitando a necessidade de repetir a cláusula AND. Por exemplo, no painel SQL você poderá criar uma cláusula WHERE como a seguinte:  
   
@@ -162,11 +162,11 @@ WHERE (hire_date < '01/01/95' ) AND
   
  O Designer de Consulta e Exibição representa essa cláusula WHERE no Painel de Critérios como segue:  
   
- ![Cláusulas OR vinculadas definidas no painel Critérios](../../database-engine/media//vs-criteriapane3.gif "Cláusulas OR vinculadas definidas no painel Critérios")  
+ ![Cláusulas vinculadas OR definidas no Painel de Critérios](../../database-engine/media//vs-criteriapane3.gif "Cláusulas vinculadas OR definidas no Painel de Critérios")  
   
  Se você fizer uma mudança na consulta (como alterar um dos valores no Painel de Critérios), o Designer de Consulta e Exibição recriará a instrução SQL no painel SQL. A instrução SQL recriada se assemelhará à exibição do Painel de Critérios em vez de sua instrução original. Por exemplo, se o Painel de Critérios contiver cláusulas AND distribuídas, a instrução resultante no painel SQL será recriada com cláusulas AND explicitamente distribuídas. Para detalhes, consulte "Como AND funciona com múltiplas cláusulas OR" anteriormente neste tópico.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

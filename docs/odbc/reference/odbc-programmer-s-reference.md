@@ -1,5 +1,5 @@
 ---
-title: O programador ODBC&#39;referência de s | Microsoft Docs
+title: Referência do programador de ODBC&#39;s | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,112 +13,112 @@ ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd729956ee7bb1fccf7a8fceb7a435042df4df7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68111190"
 ---
-# <a name="odbc-programmer39s-reference"></a>O programador ODBC&#39;referência de s
-O *referência do programador de ODBC* contém as seções a seguir.  
+# <a name="odbc-programmer39s-reference"></a>Referência do programador de ODBC&#39;s
+A *referência do programador de ODBC* contém as seções a seguir.  
   
--   [O que há de novo no ODBC 3.8](../../odbc/reference/what-s-new-in-odbc-3-8.md) lista os novos recursos ODBC que foram adicionados no SDK do Windows 8.  
+-   [O que há de novo no ODBC 3,8](../../odbc/reference/what-s-new-in-odbc-3-8.md) lista os novos recursos ODBC que foram adicionados ao SDK do Windows 8.  
   
--   [Programa ODBC de exemplo](../../odbc/reference/sample-odbc-program.md) apresenta um programa ODBC de exemplo.  
+-   O [programa ODBC de exemplo](../../odbc/reference/sample-odbc-program.md) apresenta um exemplo de programa ODBC.  
   
--   [Introdução ao ODBC](../../odbc/reference/introduction-to-odbc.md) fornece um breve histórico da linguagem de consulta estruturada e ODBC e informações conceituais sobre a interface do ODBC.  
+-   [A introdução ao ODBC](../../odbc/reference/introduction-to-odbc.md) fornece um breve histórico de linguagem SQL e ODBC e informações conceituais sobre a interface ODBC.  
   
--   [Desenvolvimento de aplicativos](../../odbc/reference/develop-app/developing-applications.md) contém informações sobre como desenvolver aplicativos que usam a interface ODBC e drivers de implementação-lo.  
+-   O [desenvolvimento de aplicativos](../../odbc/reference/develop-app/developing-applications.md) contém informações sobre o desenvolvimento de aplicativos que usam a interface ODBC e os drivers que o implementam.  
   
--   [Instalando e configurando Software ODBC](../../odbc/reference/install/installing-and-configuring-the-odbc-software.md) fornece informações sobre uma referência de função DLL de instalação e configuração.  
+-   [Instalar e configurar o software ODBC](../../odbc/reference/install/installing-and-configuring-the-odbc-software.md) fornece informações sobre a instalação e uma referência de função de DLL de instalação.  
   
--   [Desenvolvendo um Driver ODBC](../../odbc/reference/develop-driver/developing-an-odbc-driver.md) contém informações sobre como escrever um driver.  
+-   [O desenvolvimento de um driver ODBC](../../odbc/reference/develop-driver/developing-an-odbc-driver.md) contém informações sobre como gravar um driver.  
   
--   [Referência da API](../../odbc/reference/syntax/odbc-reference.md) contém sintaxe e semânticas informações para todas as funções ODBC.  
+-   A [referência de API](../../odbc/reference/syntax/odbc-reference.md) contém informações de sintaxe e semântica para todas as funções ODBC.  
   
--   [Apêndices do ODBC](../../odbc/reference/appendixes/odbc-appendixes.md) contêm detalhes técnicos e fazer referência a tabelas de gramática SQL, tipos de dados e códigos de erro ODBC.  
+-   Os [apêndices ODBC](../../odbc/reference/appendixes/odbc-appendixes.md) contêm detalhes técnicos e tabelas de referência para códigos de erro ODBC, tipos de dados e gramática SQL.  
   
-## <a name="working-with-the-odbc-documentation"></a>Trabalhando com a documentação do ODBC  
- A interface ODBC é projetada para uso com a linguagem de programação C. Uso da interface ODBC abrange três áreas: Instruções SQL, chamadas de função ODBC e programação em C. Esta documentação pressupõe o seguinte:  
+## <a name="working-with-the-odbc-documentation"></a>Trabalhando com a documentação ODBC  
+ A interface ODBC foi projetada para uso com a linguagem de programação C. O uso da interface ODBC abrange três áreas: instruções SQL, chamadas de função ODBC e programação C. Esta documentação pressupõe o seguinte:  
   
--   Conhecimento prático da linguagem de programação C.  
+-   Um conhecimento prático da linguagem de programação C.  
   
--   Dados de Conhecimento geral DBMS e uma familiaridade com o SQL.  
+-   Conhecimento geral do DBMS e familiaridade com o SQL.  
   
- As seguintes convenções tipográficas são usadas.  
+ As convenções tipográficas a seguir são usadas.  
   
 |Formatar|Usado para|  
 |------------|--------------|  
-|SELECIONE * DE|Letras maiusculas indicam as instruções SQL, nomes de macro e termos usados no nível de comando do sistema operacional.|  
-|`RETCODE SQLFetch(hdbc)`|A fonte com espaçamento uniforme é usada para linhas de comando de exemplo e código do programa.|  
-|*argument*|Palavras em itálico indicam argumentos programáticos, informações que o usuário ou o aplicativo deve fornecer ou ênfase do word.|  
-|**SQLEndTran**|Em negrito indica que a sintaxe deve ser digitado exatamente como mostrados, incluindo nomes de função.|  
+|SELECIONAR * DE|Letras maiúsculas indicam instruções SQL, nomes de macro e termos usados no nível de comando do sistema operacional.|  
+|`RETCODE SQLFetch(hdbc)`|A fonte monospace é usada para linhas de comando de exemplo e código de programa.|  
+|*argumento*|Palavras em itálico indicam argumentos programáticos, informações que o usuário ou o aplicativo deve fornecer ou ênfase de palavras.|  
+|**SQLEndTran**|O tipo Bold indica que a sintaxe deve ser digitada exatamente como mostrado, incluindo nomes de função.|  
 |&#124;|Uma barra vertical separa duas opções mutuamente exclusivas em uma linha de sintaxe.|  
 |...|Uma elipse indica que os argumentos podem ser repetidos várias vezes.|  
-|. . .|Uma coluna de três pontos indica a continuação do anteriores linhas de código.|  
+|. . .|Uma coluna de três pontos indica a continuação das linhas de código anteriores.|  
   
 ## <a name="about-the-code-examples"></a>Sobre os exemplos de código  
- Os exemplos de código neste guia destinam-se apenas para fins ilustrativos. Porque eles são escritos principalmente para demonstrar os princípios ODBC, eficiência, às vezes, foi definida com o intuito de clareza. Além disso, todas seções de código, às vezes, foram omitidas por motivos de clareza. Isso inclui as definições de funções de não-ODBC (funções cujos nomes não começam com "SQL") e a maioria da manipulação de erro.  
+ Os exemplos de código neste guia são projetados apenas para fins ilustrativos. Como eles são escritos principalmente para demonstrar os princípios de ODBC, às vezes, a eficiência foi reservada no interesse da clareza. Além disso, as seções inteiras de código, às vezes, foram omitidas para maior clareza. Isso inclui as definições de funções não-ODBC (as funções cujos nomes não começam com "SQL") e a maioria do tratamento de erros.  
   
- Todos os exemplos de código usam cadeias de caracteres ANSI e o mesmo esquema de banco de dados, que é mostrado no início da [funções de catálogo](../../odbc/reference/develop-app/catalog-functions.md).  
+ Todos os exemplos de código usam cadeias de caracteres ANSI e o mesmo esquema de banco de dados, que é mostrado no início das [funções de catálogo](../../odbc/reference/develop-app/catalog-functions.md).  
   
 ## <a name="recommended-reading"></a>Leitura recomendada  
- Para obter mais informações sobre o SQL, os padrões a seguir estão disponíveis:  
+ Para obter mais informações sobre o SQL, os seguintes padrões estão disponíveis:  
   
--   Banco de dados SQL com integridade de aprimoramento, ANSI, ANSI 1989 X3.135-1989 - linguagem.  
+-   Linguagem de banco de dados-SQL com aprimoramento de integridade, ANSI, 1989 ANSI X 3.135-1989.  
   
--   Linguagem de banco de dados – SQL: 9075:1992 X3H2 ANSI e ISO/IEC JTC1/SC21/WG3 (SQL-92).  
+-   Linguagem de banco de dados-SQL: ANSI X3H2 e ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
   
--   Open Group, gerenciamento de dados: Linguagem de consulta estruturada (SQL), versão 2 (The Open Group, 1996).  
+-   Abra grupo, Gerenciamento de Dados: linguagem SQL (SQL), versão 2 (o grupo aberto, 1996).  
   
- Além de padrões e guias do SQL específicas do fornecedor, muitos livros descrevem SQL, incluindo:  
+ Além dos padrões e dos guias SQL específicos do fornecedor, muitos livros descrevem o SQL, incluindo:  
   
--   Data, J. C., com Darwen, Hugh: *Um guia para o padrão SQL* (Addison-Wesley, 1993).  
+-   Data, C. J., com Darwen, Hugh: *um guia para o SQL Standard* (Addison-Wesley, 1993).  
   
--   Sandra l, Emerson, Darnovsky, Marcy e Arqueiro com arco, Judith s: *Manual do SQL prático* (Addison-Wesley, 1989).  
+-   Emerson, Sandra L., Darnovsky, Marcy e Bowman, Judith S.: *o manual do SQL prático* (Addison-Wesley, 1989).  
   
--   Groff, James r e Weinberg, N. de Paul: *Usando o SQL* (Osborne McGraw-Hill, 1990).  
+-   Groff, James R. e Weinberg, Paul N.: *usando SQL* (Osborne McGraw-Hill, 1990).  
   
--   Gruber, Martin: *Noções básicas sobre o SQL* (Sybex, 1990).  
+-   Gruber, Martin: *Understanding SQL* (Sybex, 1990).  
   
--   Hursch, Jack l e j Carolyn.: *SQL, a linguagem de consulta estruturada* (guia de livros, 1988).  
+-   Hursch, Jack L. e Carolyn J.: *SQL, a linguagem SQL* (livros de guias, 1988).  
   
--   Melton, Jim e Simon, Alan r: *Noções básicas sobre o novo SQL: Um guia completo* (Morgan Kaufmann Publishers, 1993).  
+-   Melton, Jim e Simon, Alan R.: *noções básicas sobre o novo SQL: um guia completo* (Morgan Kaufmann Publishers, 1993).  
   
--   Pascal, Fabian: *SQL e Noções básicas de relacionais* (M & T livros, 1990).  
+-   Pascal, Fabian: *SQL e noções básicas relacionais* (M & livros T, 1990).  
   
--   Trimble, J. Harvey, Jr. e Chappell, David: *Uma introdução Visual ao SQL* (Wiley, 1989).  
+-   Trimble, J. Harvey, Jr. e Chappell, David: *uma introdução visual ao SQL* (Wiley, 1989).  
   
--   Van der Lans, Rick F.: *Introdução ao SQL* (Addison-Wesley, 1988).  
+-   Van der LANs, Rick F.: *Introduction to SQL* (Addison-Wesley, 1988).  
   
--   Vang, Soren: *SQL e bancos de dados relacionais* (Microtrend manuais, 1990).  
+-   Vang, Soren: *SQL e bancos de dados relacionais* (livros de microtendência, 1990).  
   
--   Viescas, John: *Guia de referência rápida para o SQL* (Microsoft Corp., 1989).  
+-   Viescas, John: *Guia de referência rápida para SQL* (Microsoft Corp., 1989).  
   
  Para obter informações adicionais sobre o processamento de transações, consulte:  
   
--   Cinza, N. de J. e o sistema de dados, Andreas: *Processamento de transações: Conceitos e técnicas* (Morgan Kaufmann Publishers, 1993).  
+-   Cinza, J. N. e Reuter, Andreas: *processamento de transações: conceitos e técnicas* (Morgan Kaufmann Publishers, 1993).  
   
--   Hackathorn, Richard d: *Conectividade de banco de dados empresarial* (Wiley & Sons, 1993).  
+-   Hackathorn, Richard D.: *conectividade de banco de dados empresarial* (Wiley & filhos, 1993).  
   
- Para obter mais informações sobre Interfaces de nível de chamada, os padrões a seguir estão disponíveis:  
+ Para obter mais informações sobre interfaces de nível de chamada, os seguintes padrões estão disponíveis:  
   
--   Open Group *gerenciamento de dados: SQL chamada nível CLI (Interface), C451* (Open Group, 1995).  
+-   Abrir grupo, *Gerenciamento de dados: CLI (interface de nível de chamada) do SQL, C451* (grupo aberto, 1995).  
   
--   ISO/IEC 9075-3:1995, a Interface de nível de chamada (SQL/CLI).  
+-   ISO/IEC 9075-3:1995, interface de nível de chamada (SQL/CLI).  
   
- Para obter informações adicionais sobre ODBC, uma série de livros está disponível, incluindo:  
+ Para obter informações adicionais sobre ODBC, há vários livros disponíveis, incluindo:  
   
--   Geiger, Kyle: *Dentro do ODBC* (Microsoft Press®, 1995).  
+-   Geiger, Kyle: *Inside ODBC* (Microsoft Press®, 1995).  
   
--   Gryphon, Robert, Charpentier, Luc, Oelschlager, Jon, Shoemaker, Andrew, cruz, Jim e Lilley, w Albert.: *Usando o ODBC 2* (Que, 1994).  
+-   Gryphon, Robert, Charpentier, Luc, Oelschlager, Jon, Shoemaker, Andrew, Cross, Jim e Lilley, Albert W.: *usando ODBC 2* (que é 1994).  
   
--   Johnston, Tom e Osborne, marque: *Guia de desenvolvedores do ODBC* (Howard W. Sams & Company, 1994).  
+-   Johnston, Tom e Osborne, Mark: *Guia de desenvolvedores de ODBC* (Howard W. Sams & Company, 1994).  
   
--   Centro-Norte, Ken: *Programação de Multi-DBMS do Windows: Usando C++, Visual Basic, ODBC, OLE 2 e ferramentas para projetos DBMS* (John Wiley & Sons, Inc., 1995).  
+-   Norte, Ken: *programação de vários DBMS do Windows: usando C++, Visual Basic, ODBC, OLE 2 e ferramentas para projetos DBMS* (John Wiley & filhos, Inc., 1995).  
   
--   Stegman, ão Michael., Signore, Robert e Creamer, John: *A solução ODBC, conectividade aberta de banco de dados em ambientes de distribuídos* (McGraw-Hill, 1995).  
+-   Stegman, Michael O., Signore, Robert e sorvete, João: *a solução ODBC, Open Database Connectivity em ambientes distribuídos* (McGraw-Hill, 1995).  
   
--   Welch, Keith: *Usando o ODBC 2* (Que, 1994).  
+-   Welch, Keith: *usando ODBC 2* (que é 1994).  
   
--   Whiting, fatura: *Teach Yourself ODBC em 21 dias* (Howard W. Sams & Company, 1994).
+-   Whiting, Bill: *Ensine-se ao ODBC em vinte a um dias* (Howard W. Sams & Company, 1994).

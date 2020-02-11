@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b3d09d1f577c9af59ea085eefbf51e9a70558a36
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782878"
 ---
 # <a name="bcp_control"></a>bcp_control
@@ -56,7 +56,7 @@ RETCODE bcp_control (
  BCPDELAYREADFMT  
  Um booliano, se definido como true, fará com que [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) seja lido na execução. Se for false (o padrão), bcp_readfmt lerá imediatamente o arquivo de formato. Ocorrerá um erro de sequência se BCPDELAYREADFMT for true e você chamar bcp_columns ou bcp_setcolfmt.  
   
- Um erro de sequência também ocorrerá se você chamar `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` depois de chamar `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` e bcp_writefmt.  
+ Um erro de sequência também ocorrerá se você `bcp_control(hdbc,` chamar`, (void *)FALSE)` BCPDELAYREADFMT depois `bcp_control(hdbc,` de`, (void *)TRUE)` chamar BCPDELAYREADFMT e bcp_writefmt.  
   
  Para obter mais informações, veja [Descoberta de metadados](../../relational-databases/native-client/features/metadata-discovery.md).  
   
@@ -70,7 +70,7 @@ RETCODE bcp_control (
  BCPFILE_RAW: os dados do arquivo estão na página de código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  BCPFILEFMT  
- O número de versão do formato de arquivo de dados. Isso pode ser 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) ou 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 é o padrão. Isso é útil para exportar e importar dados em formatos que tinham suporte em versões anteriores do servidor. Por exemplo, para importar dados que foram obtidos de uma coluna de texto em um [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Server para uma coluna **varchar (max)** em um servidor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior, você deve especificar 80. Da mesma forma, se você especificar 80 ao exportar dados de uma coluna **varchar (max)** , ele será salvo da mesma forma que as colunas de texto são salvas no formato [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] e pode ser importado para uma coluna de texto de um servidor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
+ O número de versão do formato de arquivo de dados. Isso pode ser 80 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) ou 120 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 é o padrão. Isso é útil para exportar e importar dados em formatos que tinham suporte em versões anteriores do servidor. Por exemplo, para importar dados que foram obtidos de uma coluna de texto em [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] um servidor em uma coluna **varchar (max)** em [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] um servidor ou posterior, você deve especificar 80. Da mesma forma, se você especificar 80 ao exportar dados de uma coluna **varchar (max)** , ele será salvo da mesma forma que as [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] colunas de texto são salvas no formato e pode ser importado [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] para uma coluna de texto de um servidor.  
   
  BCPFIRST  
  É a primeira linha de dados a ser copiada em um arquivo ou tabela. O padrão é 1; um valor menor que 1 redefine essa opção para seu valor padrão.  
@@ -94,10 +94,10 @@ RETCODE bcp_control (
  *iValue* contém um ponteiro de cadeia de caracteres SQLTCHAR. A cadeia de caracteres endereçada especifica dicas de processamento da cópia em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou uma instrução Transact-SQL que retorna um conjunto de resultados. Se uma instrução Transact-SQL especificada retornar mais de um conjunto de resultados, todos os conjuntos de resultados depois do primeiro serão ignorados. Para obter mais informações sobre dicas de processamento de cópia em massa, consulte [utilitário bcp](../../tools/bcp-utility.md).  
   
  BCPKEEPIDENTITY  
- Quando *iValue* é true, especifica que as funções de cópia em massa inserem valores de dados fornecidos para colunas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas com uma restrição de identidade. O arquivo de entrada deve fornecer valores para as colunas de identidade. Se essa opção não for definida, novos valores de identidade serão gerados para as linhas inseridas. Quaisquer dados contidos no arquivo para as colunas de identidade serão ignorados.  
+ Quando *iValue* é true, especifica que as funções de cópia em massa inserem valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados fornecidos para colunas definidas com uma restrição de identidade. O arquivo de entrada deve fornecer valores para as colunas de identidade. Se essa opção não for definida, novos valores de identidade serão gerados para as linhas inseridas. Quaisquer dados contidos no arquivo para as colunas de identidade serão ignorados.  
   
  BCPKEEPNULLS  
- Especifica se valores de dados vazios no arquivo serão convertidos em valores NULL na tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando *iValue* for true, os valores vazios serão convertidos em NULL na tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O padrão será converter valores vazios em um valor padrão para a coluna na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se houver um padrão.  
+ Especifica se valores de dados vazios no arquivo serão convertidos em valores NULL na tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando *iValue* for true, os valores vazios serão convertidos em NULL na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela. O padrão será converter valores vazios em um valor padrão para a coluna na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se houver um padrão.  
   
  BCPLAST  
  É a última linha a ser copiada. O padrão é copiar todas as linhas; um valor menor que 1 redefine essa opção para seu padrão.  
@@ -129,7 +129,7 @@ RETCODE bcp_control (
  *iValue*  
  É o valor para o *eOption*especificado. *iValue* é uma conversão de valor inteiro (LONGLONG) em um ponteiro void para permitir a expansão futura para valores de 64 bits.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Comentários  
@@ -137,7 +137,7 @@ RETCODE bcp_control (
   
  Esta função é usada também para especificar a instrução SELECT durante uma operação de cópia em massa de saída do conjunto de resultados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma SELECT. Defina *eOption* como BCPHINTS e defina *iValue* para ter um ponteiro para uma cadeia de caracteres SQLTCHAR contendo a instrução SELECT.  
   
- Esses parâmetros de controle só são úteis ao fazer cópias entre um arquivo de usuário e uma tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As configurações de parâmetros de controle não têm nenhum efeito sobre as linhas copiadas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
+ Esses parâmetros de controle só são úteis ao fazer cópias entre um arquivo de usuário e uma tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As configurações de parâmetros de controle não têm nenhum efeito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobre as linhas copiadas para com [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -203,7 +203,7 @@ printf_s("%ld rows processed by bulk copy.", nRowsProcessed);
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de cópia em massa](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

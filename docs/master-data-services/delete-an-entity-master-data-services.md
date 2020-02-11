@@ -14,10 +14,10 @@ ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1fa2f891c4f5fc0d582b341ce1000d407fef743b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729477"
 ---
 # <a name="delete-an-entity-master-data-services"></a>Excluir uma entidade (Master Data Services)
@@ -32,7 +32,7 @@ ms.locfileid: "73729477"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73729477"
   
 6.  Na caixa de diálogo de confirmação, clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [Criar uma entidade &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   

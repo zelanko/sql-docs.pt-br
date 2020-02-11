@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811232"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicação para assinantes de tabela com otimização de memória
@@ -59,7 +59,7 @@ ms.locfileid: "68811232"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  Navegue para a pasta do instantâneo. O local padrão é "C:\Program Files\Microsoft SQL Server\MSSQL12. Instância > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\". \<  
+2.  Navegue para a pasta do instantâneo. O local padrão é "C:\Program Files\Microsoft SQL Server\MSSQL12. \<Instância> \mssql\repldata\unc\xxx\yyyymmddhhmmss\\".  
   
 3.  Localize o **. SCH** o arquivo para a tabela e abra-o no Management Studio. Altere o esquema da tabela e atualize o procedimento armazenado conforme descrito abaixo.  
   
@@ -226,7 +226,7 @@ ms.locfileid: "68811232"
     go  
     ```  
   
-5.  Crie um banco de dados do assinante usando a opção **elevar ao isolamento de instantâneo** e defina o agrupamento padrão como Latin1_General_CS_AS_KS_WS no caso do uso de tipos de dados de caracteres não Unicode.  
+5.  Crie um banco de dados do assinante usando a opção **elevar ao isolamento de instantâneo** e defina o agrupamento padrão como Latin1_General_CS_AS_KS_WS no caso de uso de tipos de dados de caracteres não Unicode.  
   
     ```  
     CREATE DATABASE [Sub]   
@@ -263,7 +263,7 @@ ms.locfileid: "68811232"
     GO  
     ```  
   
- **Adicionar nenhuma assinatura de sincronização**  
+ **Adicionar assinatura sem sincronização**  
   
  Adicione uma assinatura sem sincronização.  
   
@@ -282,7 +282,7 @@ GO
   
  As tabelas com otimização de memória agora devem começar a receber atualizações do publicador.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrições  
  Somente há suporte para a replicação transacional unidirecional. Não há suporte para a replicação transacional ponto a ponto.  
   
  Não é possível publicar as tabelas com otimização de memória.  
@@ -301,7 +301,7 @@ GO
   
 -   Há restrições na atualização da chave primária das tabelas que estão sendo replicadas para uma tabela com otimização de memória em um assinante. Para obter mais informações, consulte [Replicando alterações em uma chave primária](#PrimaryKey).  
   
--   A chave estrangeira, a restrição exclusiva, os disparadores, as modificações de esquema, ROWGUIDCOL, as colunas computadas, a compactação de dados, os tipos de dados de alias, o controle de versões e os bloqueios não têm suporte em tabelas com otimização de memória. Consulte [Constructos T-SQL não compatíveis com OLTP in-memory](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obter informações.  
+-   A chave estrangeira, a restrição exclusiva, os disparadores, as modificações de esquema, ROWGUIDCOL, as colunas computadas, a compactação de dados, os tipos de dados de alias, o controle de versões e os bloqueios não têm suporte em tabelas com otimização de memória. Consulte [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obter informações.  
   
 ##  <a name="Schema"></a> Modificando um arquivo de esquema  
   
@@ -316,7 +316,7 @@ GO
 ##  <a name="PrimaryKey"></a>Replicando alterações em uma chave primária  
  A chave primária de uma tabela com otimização de memória não pode ser atualizada. Para replicar uma atualização de chave primária em um assinante, modifique o procedimento armazenado de atualização para fornecer a atualização como um par de inserção e exclusão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Replicação do SQL Server](sql-server-replication.md)  
   
   

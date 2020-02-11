@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dbee99748718d88ce678d78cfa64849f8e5bbc5d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982161"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "73982161"
 > [!IMPORTANT]
 >  A sintaxe definida em `<drop_backward_compatible_index>` será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar essa sintaxe em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que usam atualmente o recurso. Em vez disso, use a sintaxe especificada em `<drop_relational_or_xml_index>`. Índices XML não podem ser descartados usando sintaxe compatível com versões anteriores.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -162,7 +162,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
  Especifica se as tabelas subjacentes e os índices associados estão disponíveis para consultas e modificação de dados durante a operação de índice. O padrão é OFF.  
   
- ON  
+ ATIVADO  
  Bloqueios de tabela não são mantidos a longo prazo. Isso permite que consultas ou atualizações na tabela subjacente continuem.  
   
  OFF  
@@ -217,7 +217,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 > [!NOTE]
 >  Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e deve ser delimitado, como em MOVE TO **"** default **"** ou MOVE TO **[** default **]** . Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando um índice não clusterizado é descartado, a definição do índice é removida dos metadados e as páginas de dados do índice (a árvore B) são removidas dos arquivos do banco de dados. Quando um índice clusterizado é descartado, a definição do índice é removida dos metadados e as linhas de dados armazenadas no nível folha do índice clusterizado são armazenadas na tabela não ordenada resultante, um heap. Todo o espaço ocupado anteriormente pelo índice é recuperado. Em seguida, esse espaço pode ser usado para qualquer objeto de banco de dados.  
   
  Um índice não poderá ser descartado se o grupo de arquivos no qual está localizado estiver offline ou definido como somente leitura.  
@@ -268,7 +268,7 @@ Quando um índice clusterizado é descartado OFFLINE, apenas os níveis superior
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-dropping-an-index"></a>A. Descartando um índice  
+### <a name="a-dropping-an-index"></a>a. Descartando um índice  
  O exemplo a seguir exclui o índice `IX_ProductVendor_VendorID` na tabela `ProductVendor` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

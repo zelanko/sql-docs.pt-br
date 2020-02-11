@@ -10,10 +10,10 @@ ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 06f4b140ef90eb3d1ed942e5374643e80fb1b24e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254807"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Importando e exportando conhecimento
@@ -30,10 +30,10 @@ ms.locfileid: "75254807"
   
 |||  
 |-|-|  
-|Exportar um domínio de uma base de dados de conhecimento para um arquivo de dados .dqs|[Exportar um domínio para um arquivo. DQS](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
-|Importar um domínio de um arquivo de dados .dqs para uma base de dados de conhecimento existente|[Importar um domínio de um arquivo. DQS](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
-|Exportar uma base de dados de conhecimento inteira para um arquivo de dados .dqs.|[Exportar uma base de dados de conhecimento para um arquivo. DQS](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
-|Importar uma base de dados de conhecimento inteira para um arquivo de dados .dqs.|[Importar uma base de dados de conhecimento de um arquivo. DQS](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
+|Exportar um domínio de uma base de dados de conhecimento para um arquivo de dados .dqs|[Exportar um domínio para um arquivo .dqs](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
+|Importar um domínio de um arquivo de dados .dqs para uma base de dados de conhecimento existente|[Importar um domínio de um arquivo .dqs](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
+|Exportar uma base de dados de conhecimento inteira para um arquivo de dados .dqs.|[Exportar uma base de dados de conhecimento para um arquivo .dqs](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
+|Importar uma base de dados de conhecimento inteira para um arquivo de dados .dqs.|[Importar uma base de dados de conhecimento de um arquivo .dqs](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
 |Importar valores de um arquivo do Excel para um domínio.|[Importar valores de um arquivo do Excel para um domínio](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
 |Importar domínios de um arquivo do Excel para uma base de dados de conhecimento|[Importar domínios de um arquivo do Excel na descoberta da base de dados de conhecimento](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
 |Importar o conhecimento coletado durante a limpeza para uma base de dados de conhecimento|[Importar valores de projeto de limpeza para um domínio](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  

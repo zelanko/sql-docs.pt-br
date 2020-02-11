@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48e5aeab043fcfd0e65150ea3a1008d726cb0ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869250"
 ---
-# <a name="mssqlserver2574"></a>MSSQLSERVER_2574
+# <a name="mssqlserver_2574"></a>MSSQLSERVER_2574
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|2574|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC_EMPTY_INDEX_TREE_LEVEL_PAGE|  
-|Texto da mensagem|Erro de tabela: Page P_ID está vazia na ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, unidade de alocação A_ID ID (tipo TYPE). Isso não é permitido no nível LEVEL da árvore B.|  
+|Texto da mensagem|Erro de tabela: a página P_ID está vazia na ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE). Isso não é permitido no nível LEVEL da árvore B.|  
   
 ## <a name="explanation"></a>Explicação  
  A página de árvore B acima do nível folha do índice especificado está vazia, isto é, não tem linhas. Esse comportamento é possível em páginas de nível folha do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], mas nunca foi possível em níveis de árvore.  

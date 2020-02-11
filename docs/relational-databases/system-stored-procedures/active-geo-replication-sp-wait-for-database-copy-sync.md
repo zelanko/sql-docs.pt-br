@@ -18,10 +18,10 @@ ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
 ms.openlocfilehash: eb274d4f022a182ac056c190a8626fa48e36511d
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844404"
 ---
 # <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>Replicação geográfica ativa-sp_wait_for_database_copy_sync
@@ -31,7 +31,7 @@ ms.locfileid: "73844404"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,7 +61,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ## <a name="permissions"></a>Permissões  
  Qualquer usuário no banco de dados primário pode chamar este procedimento armazenado do sistema. O logon deve ser um usuário nos bancos de dados primário e secundário ativo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Todas as transações confirmadas antes de uma chamada de **sp_wait_for_database_copy_sync** são enviadas para o banco de dados secundário ativo.  
   
 ## <a name="examples"></a>Exemplos  
@@ -74,8 +74,8 @@ EXEC sys.sp_wait_for_database_copy_sync @target_server = N'ubfyu5ssyt1', @target
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Sys. dm_continuous_copy_status &#40;banco de dados&#41; SQL do Azure](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
- [Funções &#40;e exibições de gerenciamento dinâmico de replicação geográfica do banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
+## <a name="see-also"></a>Consulte Também  
+ [sys. dm_continuous_copy_status &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+ [Funções e exibições de gerenciamento dinâmico de replicação geográfica &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   
   

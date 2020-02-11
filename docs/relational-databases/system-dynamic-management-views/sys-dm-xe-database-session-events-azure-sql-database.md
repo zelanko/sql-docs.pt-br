@@ -1,5 +1,5 @@
 ---
-title: sys. dm_xe_database_session_events
+title: sys.dm_xe_database_session_events
 titleSuffix: Azure SQL Database
 ms.date: 06/10/2016
 ms.service: sql-database
@@ -12,10 +12,10 @@ ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 82018dc0aec7083df712e73bfb0a58c13c144f89
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844483"
 ---
 # <a name="sysdm_xe_database_session_events-azure-sql-database"></a>sys.dm_xe_database_session_events (Banco de Dados SQL do Azure)
@@ -25,14 +25,14 @@ ms.locfileid: "73844483"
   
 ||  
 |-|  
-|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e qualquer versão posterior.|  
+|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e a todas as versões posteriores.|  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary(8)**|O endereço da memória da sessão de evento. Não permite valor nulo.|  
-|event_name|**nvarchar(60)**|O nome do evento ao qual uma ação está associada. Não permite valor nulo.|  
+|event_session_address|**varbinary (8)**|O endereço da memória da sessão de evento. Não permite valor nulo.|  
+|event_name|**nvarchar (60)**|O nome do evento ao qual uma ação está associada. Não permite valor nulo.|  
 |event_package_guid|**uniqueidentifier**|A GUID para o pacote que contém o evento. Não permite valor nulo.|  
-|event_predicate|**nvarchar(2048)**|Uma representação XML da árvore de predicado que é aplicada ao evento. Permite valor nulo.|  
+|event_predicate|**nvarchar (2048)**|Uma representação XML da árvore de predicado que é aplicada ao evento. Permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW DATABASE STATE.  

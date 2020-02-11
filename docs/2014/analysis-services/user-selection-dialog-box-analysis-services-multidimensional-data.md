@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de seleção do usuário (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo seleção de usuário (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cae7cb0c9219a49bb22537b632fa9f1686eb7e6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065485"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Seleção de Usuários (Analysis Services - Dados Multidimensionais)
@@ -28,8 +28,8 @@ ms.locfileid: "66065485"
  **Selecionar usuários**  
  Selecione os usuários nos quais filtrar consultas do log de consultas.  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Especificar critérios de consulta &#40;Assistente de otimização com base no uso&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Especificar critérios de consulta &#40;assistente de otimização com base no uso&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
   

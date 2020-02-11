@@ -14,10 +14,10 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728474"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Criar uma exibição de assinatura para exportar dados (Master Data Services)
@@ -60,36 +60,36 @@ ms.locfileid: "73728474"
   
 10. Se você escolheu **Níveis Explícitos** ou **Níveis Derivados** da lista **Formato** , digite o número de níveis na hierarquia para incluir na exibição.  
   
-11. Clique em **Salvar**.  
+11. Clique em **Save** (Salvar).  
   
 ## <a name="view-information"></a>Informações de Exibição  
  Para cada exibição criada, uma linha com dez colunas é adicionada à grade. A tabela a seguir descreve as colunas.  
   
-|Column|Descrição|  
+|Coluna|DESCRIÇÃO|  
 |------------|-----------------|  
-|Status|O status da exibição.<br /><br /> Quando você clica em **salvar**, o ![ícone para atualizar a imagem de status](../master-data-services/media/mds-statusicon-updating.png "Icon para atualizar o status ") é exibido, indicando que a exibição está sendo atualizada.<br /><br /> Se houver erros ao criar ou editar um modo de exibição, a imagem ![ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Icon para status de erro ") será exibida.<br /><br /> Caso contrário, o status é OK e o ![ícone para a imagem de status OK](../master-data-services/media/mds-statusicon-ok.png "Icon status OK ") é exibido.|  
-|NAME|O nome da exibição de assinatura.|  
+|Status|O status da exibição.<br /><br /> Quando você clica em **salvar**, o ![ícone para atualizar a imagem de status](../master-data-services/media/mds-statusicon-updating.png "Ícone para atualizar o status") é exibido, indicando que a exibição está sendo atualizada.<br /><br /> Se houver erros ao criar ou editar um modo de exibição, a imagem ![ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para status de erro") será exibida.<br /><br /> Caso contrário, o status é OK e o ![ícone para a imagem de status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para status OK") é exibido.|  
+|Nome|O nome da exibição de assinatura.|  
 |Modelo|O nome do modelo.|  
 |Versão|O nome da versão.|  
 |Sinalizador de Versão|O nome do sinalizador de versão.|  
 |Hierarquia derivada|O nome da hierarquia derivada.|  
 |Entidade|O nome da entidade.|  
-|Formato|Especifica o tipo dos dados na exibição.|  
+|Formatar|Especifica o tipo dos dados na exibição.|  
 |Nível|Especifica o número de níveis na exibição, que é usado apenas para os formatos de Nível explícito ou Nível derivado|  
 |Incluir membros excluídos|Indica se membros excluídos de forma reversível são incluídos na exibição.|  
   
  Quando você clica em uma exibição, as informações a seguir são exibidas.  
   
--   **Criada Por**: o nome do usuário que criou a exibição.  
+-   **Criado por**: o nome do usuário que criou a exibição.  
   
--   **Em**: obtém a data e a hora em que a exibição foi criada.  
+-   **Em**: a data e a hora em que a exibição foi criada.  
   
--   **Atualizada Por**: o nome do usuário que atualizou a exibição pela última vez.  
+-   **Atualizado por**: o nome do usuário que atualizou a exibição pela última vez.  
   
--   **Em**: obtém a data e a hora em que a exibição foi atualizada pela última vez.  
+-   **Em**: a data e a hora em que a exibição foi atualizada pela última vez.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral: Exportando dados &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral: exportando dados &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Excluir uma exibição de assinatura &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
  [Criar um sinalizador de versão &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   

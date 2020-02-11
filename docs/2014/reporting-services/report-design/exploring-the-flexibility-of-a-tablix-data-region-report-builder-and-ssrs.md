@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e2ed258caa8019b13ddd8600a5ada2956913977
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105946"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Explorando a flexibilidade de uma região de dados Tablix (Construtor de Relatórios e SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "66105946"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="changing-a-table-to-a-matrix"></a>Alterando uma tabela para uma matriz  
- Por padrão, uma tabela tem linhas de detalhes que exibem os valores do conjunto de dados do relatório. Normalmente, uma tabela inclui grupos de linhas que organizam os dados de detalhes por grupo e, em seguida, inclui valores agregados com base em cada grupo. Para alterar a tabela para uma matriz, adicione grupos de colunas. Normalmente, você deve remover os grupos de detalhes quando a região de dados tem os grupos de linhas e de colunas para que possa exibir apenas os valores de resumo dos grupos. Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+ Por padrão, uma tabela tem linhas de detalhes que exibem os valores do conjunto de dados do relatório. Normalmente, uma tabela inclui grupos de linhas que organizam os dados de detalhes por grupo e, em seguida, inclui valores agregados com base em cada grupo. Para alterar a tabela para uma matriz, adicione grupos de colunas. Normalmente, você deve remover os grupos de detalhes quando a região de dados tem os grupos de linhas e de colunas para que possa exibir apenas os valores de resumo dos grupos. Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de relatórios e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
  Por definição, ao criar uma matriz, você adiciona uma célula de canto tablix. É possível mesclar células nesta área e adicionar um rótulo. Para obter mais informações, consulte [Mesclar células em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66105946"
 ## <a name="adding-an-adjacent-details-group"></a>Adicionando um grupo de detalhes adjacente  
  Por padrão, o grupo de detalhes é o grupo filho interno em uma hierarquia de grupo. Você não pode aninhar um grupo sob o grupo de detalhes. Você pode criar grupos de detalhes adjacentes adicionais, para exibir os 5 maiores produtos e os 5 menores produtos por vendas, por exemplo. Com a possibilidade de adicionar expressões de filtro e de classificação a cada grupo, você pode mostrar duas exibições de dados detalhados do mesmo conjunto de dados em uma região de dados tablix. Para obter mais informações, consulte [Noções básicas sobre grupos &#40;Construtor de Relatórios e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md), [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) e [Adicionar um filtro a um conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](../report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Listas &#40;Construtor de Relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](tables-report-builder-and-ssrs.md)   

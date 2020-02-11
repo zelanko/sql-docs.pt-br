@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a982d232a16e2b7f3d3692d9293686829910aeec
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779817"
 ---
 # <a name="executing-queries-odbc"></a>Executando consultas (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Depois que um aplicativo ODBC inicializa um identificador de conexão e conecta-se a uma fonte de dados, ele aloca um ou mais identificadores de instrução no identificador de conexão. Em seguida, o aplicativo pode executar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruções no identificador da instrução. A sequência geral de eventos na execução de uma instrução SQL é:  
+  Depois que um aplicativo ODBC inicializa um identificador de conexão e conecta-se a uma fonte de dados, ele aloca um ou mais identificadores de instrução no identificador de conexão. O aplicativo pode então executar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruções no identificador da instrução. A sequência geral de eventos na execução de uma instrução SQL é:  
   
 1.  Definir quaisquer atributos de instrução necessários.  
   
@@ -49,23 +49,23 @@ INSERT INTO MyTable VALUES (?, ?, ?)
   
  Depois que todas as instruções SQL forem executadas e seus conjuntos de resultados forem processados, o aplicativo liberará a alça de instrução.  
   
- O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client dá suporte a vários identificadores de instrução por identificador de conexão. As transações são gerenciadas no nível da conexão. Dessa forma, todo o trabalho realizado em todos os identificadores de instrução em um único identificador de conexão é gerenciado como parte da mesma transação.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client dá suporte a vários identificadores de instrução por identificador de conexão. As transações são gerenciadas no nível da conexão. Dessa forma, todo o trabalho realizado em todos os identificadores de instrução em um único identificador de conexão é gerenciado como parte da mesma transação.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
 -   [Alocando um identificador de instrução](../../relational-databases/native-client-odbc-queries/allocating-a-statement-handle.md)  
   
--   [Construindo um ODBC de instrução &#40;SQL&#41;](../../relational-databases/native-client-odbc-queries/constructing-an-sql-statement-odbc.md)  
+-   [Construindo uma instrução SQL &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/constructing-an-sql-statement-odbc.md)  
   
 -   [Construindo instruções SQL para cursores](../../relational-databases/native-client-odbc-queries/constructing-sql-statements-for-cursors.md)  
   
 -   [Usando parâmetros de instrução](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
   
--   [Executando instruções &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+-   [Executando instruções &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
 -   [Liberando um identificador de instrução](../../relational-databases/native-client-odbc-queries/freeing-a-statement-handle.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

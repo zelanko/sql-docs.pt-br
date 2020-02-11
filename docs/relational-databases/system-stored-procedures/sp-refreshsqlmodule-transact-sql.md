@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982768"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73982768"
 
   Atualiza os metadados do procedimento armazenado não associado a esquema, da função definida pelo usuário, da exibição, do gatilho DML, do gatilho DDL de nível de banco de dados ou do gatilho DDL de nível de servidor especificado no banco de dados atual. Metadados persistentes desses objetos, como tipos de dados de parâmetros, podem ficar desatualizados devido a atualizações em seus objetos subjacentes.
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,9 +56,9 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'module\_name'` é o nome do procedimento armazenado, a função definida pelo usuário, a exibição, o gatilho DML, o gatilho DDL no nível do banco de dados ou o gatilho DDL no nível do servidor. *module_name* não pode ser um procedimento armazenado Common Language Runtime (CLR) ou uma função CLR. *module_name* não pode ser associado a esquema. *module_name* é **nvarchar**, sem padrão. *module_name* pode ser um identificador de várias partes, mas só pode fazer referência a objetos no banco de dados atual.  
+`[ @name = ] 'module\_name'`É o nome do procedimento armazenado, a função definida pelo usuário, a exibição, o gatilho DML, o gatilho DDL no nível do banco de dados ou o gatilho DDL no nível do servidor. *module_name* não pode ser um procedimento armazenado Common Language Runtime (CLR) ou uma função CLR. *module_name* não pode ser associado a esquema. *module_name* é **nvarchar**, sem padrão. *module_name* pode ser um identificador de várias partes, mas só pode fazer referência a objetos no banco de dados atual.  
   
-`[ , @namespace = ] ' \<class> '` é a classe do módulo especificado. Quando *module_name* é um gatilho DDL, a classe \<> é necessária. *\<classe >* é **nvarchar**(20). As entradas válidas são:  
+`[ , @namespace = ] ' \<class> '`É a classe do módulo especificado. Quando *module_name* é um gatilho DDL, \<a classe> é necessária. a classe>é **nvarchar**(20). * \<* As entradas válidas são:  
   
 |||  
 |-|-|  
@@ -68,7 +68,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_refreshsqlmodule** deve ser executado quando forem feitas alterações nos objetos subjacentes ao módulo que afetam sua definição. Caso contrário, o módulo pode produzir resultados inesperados quando consultado ou invocado. Para atualizar uma exibição, você pode usar **sp_refreshsqlmodule** ou **sp_refreshview** com os mesmos resultados.  
   
  **sp_refreshsqlmodule** não afeta nenhuma permissão, propriedades estendidas ou opções Set associadas ao objeto.  
@@ -85,7 +85,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-refreshing-a-user-defined-function"></a>A. Atualizando uma função definida pelo usuário  
+### <a name="a-refreshing-a-user-defined-function"></a>a. Atualizando uma função definida pelo usuário  
  O exemplo a seguir atualiza uma função definida pelo usuário. O exemplo cria um tipo de dados de alias, `mytype`, e uma função definida pelo usuário, `to_upper`, que usa `mytype`. Em seguida, `mytype` é renomeado para `myoldtype` e um novo `mytype` é criado, com uma definição diferente. A função `dbo.to_upper` é atualizada de modo a fazer referência à nova implementação de `mytype`, em lugar da antiga.  
   
 ```  
@@ -168,8 +168,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Mecanismo de Banco de Dados procedimentos &#40;armazenados TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

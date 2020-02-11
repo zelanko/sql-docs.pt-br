@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f0059533e9f0fb5d0722f940c9687f9404b0ef80
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73789424"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
@@ -28,7 +28,7 @@ ms.locfileid: "73789424"
 ## <a name="icommandexecute"></a>ICommand::Execute  
  Inserir dados maiores do que o tamanho de uma coluna normalmente resulta em um erro. No entanto, existem situações em que S_OK será retornado, mas *dwStatus* será definido como DBSTATUS_S_TRUNCATED. Isso geralmente ocorre quando os dados são inseridos com parâmetros, e a coluna não é grande o suficiente para manter os dados e **ICommandWithParameters::SetParameterInfo** não foi chamado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Interfaces &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
   
   

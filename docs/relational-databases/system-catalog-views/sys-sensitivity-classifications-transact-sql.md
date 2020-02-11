@@ -24,10 +24,10 @@ helpviewer_keywords:
 - rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 376438a45d6b104cbf4e66dbdf8e5542cf3fd2c2
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74542050"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
@@ -35,17 +35,17 @@ ms.locfileid: "74542050"
 
 Retorna uma linha para cada item classificado no banco de dados.
 
-|Nome da coluna|Tipo de dados|Descrição|
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|
 |-----------------|---------------|-----------------|  
-|**class**|**inteiro**|Identifica a classe do item no qual a classificação existe. Sempre terá o valor 1 (representando uma coluna)|  
+|**class**|**int**|Identifica a classe do item no qual a classificação existe. Sempre terá o valor 1 (representando uma coluna)|  
 |**class_desc**|**varchar (16)**|Uma descrição da classe do item no qual a classificação existe. sempre terá o valor *OBJECT_OR_COLUMN*|  
-|**major_id**|**inteiro**|Representa a ID da tabela que contém a coluna classificada, correspondente a sys. all_objects. object_id|  
-|**minor_id**|**inteiro**|Representa a ID da coluna na qual a classificação existe, correspondente a sys. all_columns. column_id|   
+|**major_id**|**int**|Representa a ID da tabela que contém a coluna classificada, correspondente a sys. all_objects. object_id|  
+|**minor_id**|**int**|Representa a ID da coluna na qual a classificação existe, correspondente a sys. all_columns. column_id|   
 |**chamada**|**sysname**|O rótulo (legível por humanos) atribuído para a classificação de sensibilidade|  
 |**label_id**|**sysname**|Uma ID associada ao rótulo, que pode ser usada por um sistema de proteção de informações, como a proteção de informações do Azure (AIP)|  
 |**information_type**|**sysname**|O tipo de informação (legível humana) atribuído para a classificação de sensibilidade|  
 |**information_type_id**|**sysname**|Uma ID associada ao tipo de informação, que pode ser usada por um sistema de proteção de informações, como a proteção de informações do Azure (AIP)|  
-|**rank**|**inteiro**|Um valor numérico da classificação: <br><br>0 para nenhum<br>10 para baixo<br>20 para média<br>30 para alta<br>40 para crítico| 
+|**Fique**|**int**|Um valor numérico da classificação: <br><br>0 para nenhum<br>10 para baixo<br>20 para média<br>30 para alta<br>40 para crítico| 
 |**rank_desc**|**sysname**|Representação textual da classificação:  <br><br>NENHUM, BAIXO, MÉDIO, ALTO, CRÍTICO|  
 | &nbsp; | &nbsp; | &nbsp; |
 
@@ -56,7 +56,7 @@ Retorna uma linha para cada item classificado no banco de dados.
  
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>R. Listando todas as colunas classificadas e sua classificação correspondente
+### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>a. Listando todas as colunas classificadas e sua classificação correspondente
 
 O exemplo a seguir retorna uma tabela que lista o nome da tabela, o nome da coluna, o rótulo, a ID do rótulo, o tipo de informação, a ID do tipo de informação para cada coluna classificada no banco de dados.
 
@@ -82,8 +82,8 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 
 ## <a name="see-also"></a>Consulte Também  
 
-[Adicionar classificação de sensibilidade (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+[ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
-[REMOVER classificação de sensibilidade (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[DESCARTAR CLASSIFICAÇÃO DE CONFIDENCIALIDADE (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
-[Introdução à proteção de informações do SQL](https://aka.ms/sqlip)
+[Introdução à Proteção de Informações do SQL](https://aka.ms/sqlip)

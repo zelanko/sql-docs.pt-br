@@ -22,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720131"
 ---
 # <a name="monitor-and-respond-to-events"></a>Monitorar e responder a eventos
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent pode monitorar e responder automaticamente a *eventos*, como mensagens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], condições de desempenho específicas e eventos WMI (Instrumentação de Gerenciamento do Windows).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O Agent pode monitorar e responder automaticamente a *eventos*, como mensagens de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], condições de desempenho específicas e eventos de instrumentação de gerenciamento do Windows (WMI).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Alertas](alerts.md)  
@@ -44,11 +44,13 @@ ms.locfileid: "62720131"
 ## <a name="about-monitoring-and-responding-to-events"></a>Sobre monitoramento e resposta a eventos  
  As respostas automatizadas a eventos são chamadas de *alertas*. Você pode definir um alerta em um ou mais eventos, para especificar como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve responder mediante sua ocorrência. Um alerta pode responder a um evento notificando um administrador ou executando um trabalho, ou ambos. Um alerta também pode encaminhar um evento para o log de aplicativos do Microsoft Windows em um computador diferente. Por exemplo, é possível especificar que um operador seja notificado imediatamente caso ocorra um evento de severidade 19. Definindo alertas, os administradores de banco de dados podem monitorar e gerenciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]com mais eficácia.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent só responde a eventos para os quais está definido um alerta. O método utilizado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para monitorar eventos depende do tipo de evento.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent só responde a eventos para os quais está definido um alerta. O método utilizado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para monitorar eventos depende do tipo de evento.  
   
  Quando um alerta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é definido para um contador de desempenho, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent monitora diretamente esse contador de desempenho. No caso de um evento WMI, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent registra uma consulta de evento para o evento WMI.  
   
- Para responder a mensagens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent monitora o log de aplicativos do Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent só pode responder a mensagens que aparecem nesse log. Por padrão, o SQL Server registra as seguintes mensagens no log de aplicativos do Windows:  
+ Para responder a mensagens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent monitora o log de aplicativos do Windows. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent só pode responder a mensagens que aparecem nesse log. Por padrão, o SQL Server registra as seguintes mensagens no log de aplicativos do Windows:  
   
 -   Erros de sysmessages com severidade 19 ou superior.  
   
@@ -67,7 +69,7 @@ ms.locfileid: "62720131"
   
  Independentemente da origem do evento, o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent responde ao evento executando as tarefas especificadas no alerta correspondente.  
   
-## <a name="see-also"></a>Consulte também  
- [sp_altermessage &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_altermessage](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032414"
 ---
 # <a name="object-dependencies"></a>Dependências de objeto
@@ -27,14 +27,14 @@ ms.locfileid: "63032414"
  Use esta caixa de diálogo para entender as dependências antes de alterar ou excluir o objeto selecionado.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- **Objetos que dependem** _\<objeto selecionado >_  
+ **Objetos que dependem do**  _\<objeto selecionado>_  
  Clicando neste botão, você exibe uma lista dos objetos que são rastreados por dependência e que dependem do objeto selecionado.  
   
- **Objetos dos quais** _\<objeto selecionado >_ **depende**  
+ **Objetos dos quais o**_\<objeto selecionado>_ **depende**      
  Clicando neste botão, você exibe uma lista dos objetos que são rastreados por dependência e dos quais depende o objeto selecionado.  
   
- **Dependências**  
- Se **objetos que dependem**  _\<objeto selecionado >_ é clicado, será exibida uma exibição hierárquica dos objetos que dependem do objeto selecionado. Se **objetos dos quais**  _\<objeto selecionado >_ **depende** é clicado, será exibida uma exibição hierárquica dos objetos do qual depende o objeto selecionado .  
+ **Depend**  
+ Se os **objetos que dependem do** _ \<objeto selecionado>_ for clicado, isso exibirá uma exibição hierárquica dos objetos que dependem do objeto selecionado. Se os **objetos dos quais** _ \<o objeto selecionado>_ **depende** for clicado, isso exibirá uma exibição hierárquica dos objetos dos quais o objeto selecionado depende.  
   
  **Nome**  
  Exibe o nome do objeto selecionado no modo de exibição de árvore **Dependências** acima.  
@@ -42,7 +42,7 @@ ms.locfileid: "63032414"
  **Tipo**  
  Exibe o tipo do objeto selecionado no modo de exibição de árvore **Dependências** acima.  
   
- **Horário da Última Sincronização**  
+ **Hora da última sincronização**  
  > [!NOTE]  
 >  Esta opção só está disponível na página **Avançado** .  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63032414"
  > [!NOTE]  
 >  Esta opção só está disponível na página **Geral** .  
   
- Exibe o tipo de dependência entre dois objetos. Pode ser uma destas opções:  
+ Exibe o tipo de dependência entre dois objetos. Um dos seguintes pode ser feito:  
   
 -   Dependência associada a esquema  
   

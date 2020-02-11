@@ -14,10 +14,10 @@ ms.author: genemi
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 36ba34985cde2f88606a13a4f07f6afb7af5dc7a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095363"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadados – conjuntos de linhas de esquema e data e hora
@@ -30,12 +30,12 @@ ms.locfileid: "74095363"
   
 |Tipo de coluna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|DATE|DBTYPE_DBDATE|Liberada|0|  
-|time|DBTYPE_DBTIME2|Defina|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Liberada|0|  
-|Datetime|DBTYPE_DBTIMESTAMP|Liberada|3|  
-|datetime2|DBTYPE_DBTIMESTAMP|Defina|0..7|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Defina|0..7|  
+|date|DBTYPE_DBDATE|Limpar|0|  
+|time|DBTYPE_DBTIME2|Definir|0..7|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Limpar|0|  
+|DATETIME|DBTYPE_DBTIMESTAMP|Limpar|3|  
+|datetime2|DBTYPE_DBTIMESTAMP|Definir|0..7|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Definir|0..7|  
   
  Em COLUMN_FLAGS, DBCOLUMNFLAGS_ISFIXEDLENGTH é sempre true para tipos de data/hora e os sinalizadores seguintes sempre é false:  
   
@@ -67,33 +67,33 @@ ms.locfileid: "74095363"
 ## <a name="provider_types-rowset"></a>Conjunto de linhas de PROVIDER_TYPES  
  As linhas a seguir são retornadas para tipos de data/hora:  
   
-|Tipo -><br /><br /> Column|DATE|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
+|Tipo -><br /><br /> Coluna|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|DATE|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
 |LITERAL_SUFFIX|'|'|'|'|'|'|  
-|CREATE_PARAMS|NULL|scale|NULL|NULL|scale|scale|  
+|CREATE_PARAMS|NULO|scale|NULO|NULO|scale|scale|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
-|UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
+|UNSIGNED_ATTRIBUTE|NULO|NULO|NULO|NULO|NULO|NULO|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|DATE|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
-|MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
-|MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
-|GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
-|TYPELIB|NULL|NULL|NULL|NULL|NULL|NULL|  
-|VERSION|NULL|NULL|NULL|NULL|NULL|NULL|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|MINIMUM_SCALE|NULO|0|NULO|NULO|0|0|  
+|MAXIMUM_SCALE|NULO|7|NULO|NULO|7|7|  
+|GUID|NULO|NULO|NULO|NULO|NULO|NULO|  
+|TYPELIB|NULO|NULO|NULO|NULO|NULO|NULO|  
+|VERSION|NULO|NULO|NULO|NULO|NULO|NULO|  
 |IS_LONG|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE a menos que uma das condições a seguir seja verdadeira:<br /><br /> É cliente conectado a um servidor de nível inferior.<br /><br /> A propriedade de conexão de compatibilidade de tipo de dados especifica um nível de compatibilidade igual a 80.|VARIANT_TRUE a menos que uma das condições a seguir seja verdadeira:<br /><br /> É cliente conectado a um servidor de nível inferior.<br /><br /> A propriedade de conexão de compatibilidade de tipo de dados especifica um nível de compatibilidade igual a 80.|VARIANT_TRUE|  
 |IS_FIXEDLENGTH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
   
  O OLE DB apenas define MINIMUM_SCALE e MAXIMUM_SCALE para tipos decimais e numéricos, portanto, o uso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client destas colunas para time, datetime2 e datetimeoffset é não padrão.  
   
-## <a name="see-also"></a>Consulte também  
- [OLE DB &#40;de metadados&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+## <a name="see-also"></a>Consulte Também  
+ [&#41;de metadados &#40;OLE DB](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

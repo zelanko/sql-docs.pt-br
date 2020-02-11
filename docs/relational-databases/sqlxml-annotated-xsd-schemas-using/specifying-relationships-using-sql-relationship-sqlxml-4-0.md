@@ -30,10 +30,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 02872a037e60fa3af58a70d3599b03c61d0cfb5e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257345"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificando relações usando sql:relationship (SQLXML 4.0)
@@ -52,10 +52,10 @@ ms.locfileid: "75257345"
   
  Para fornecer os nomes de tabela e as informações de junção necessárias, os seguintes atributos são especificados na anotação **SQL: relationship** . Esses atributos são válidos somente com o ** \<elemento SQL: relationship>** :  
   
- **Nomes**  
+ **Nome**  
  Especifica o nome exclusivo da relação.  
   
- **Primária**  
+ **Pai**  
  Especifica a relação pai (tabela). Este é um atributo opcional. Se o atributo não for especificado, o nome da tabela pai será obtido das informações na hierarquia filha no documento. Se o esquema especificar duas hierarquias pai-filho que usam o mesmo ** \<SQL: relationship>** mas elementos pai diferentes, você não especificará o atributo pai em ** \<SQL: relationship>**. Essas informações são obtidas da hierarquia no esquema.  
   
  **parent-key**  
@@ -77,7 +77,7 @@ ms.locfileid: "75257345"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>R. Especificando uma anotação sql:relationship em um elemento  
+### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>a. Especificando uma anotação sql:relationship em um elemento  
  O seguinte esquema XSD anotado inclui ** \<** os elementos de>do cliente e de ** \<ordem>** . O ** \<elemento Order>** é um elemento filho do elemento ** \<Customer>** .  
   
  No esquema, a anotação **SQL: relationship** é especificada no elemento ** \<Order>** filho. A relação em si é definida no elemento ** \<xsd: appinfo>** .  

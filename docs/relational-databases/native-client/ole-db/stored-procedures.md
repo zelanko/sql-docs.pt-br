@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 668d264d9be032c7886026e628921ead837d7879
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73758409"
 ---
 # <a name="stored-procedures"></a>Procedimentos armazenados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Um procedimento armazenado ([procedimentos &#40;armazenados mecanismo de banco de dados&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) é um objeto executável armazenado em um banco de dados. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a:  
+  Um procedimento armazenado ([procedimentos armazenados &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) é um objeto executável armazenado em um banco de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]suportar  
   
 -   Procedimentos armazenados  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73758409"
   
 -   [Chamando um procedimento armazenado &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-calling.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

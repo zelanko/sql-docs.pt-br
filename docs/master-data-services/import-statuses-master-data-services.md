@@ -11,10 +11,10 @@ ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6fc49b96bbf9b1388c162b87c76ba31b1696991a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728188"
 ---
 # <a name="import-statuses-master-data-services"></a>Importar status (Master Data Services)
@@ -23,7 +23,7 @@ ms.locfileid: "73728188"
 
   Na área funcional **Gerenciamento de Integração** da página **Lote de Preparação** , os status a seguir são possíveis.  
   
-|Status|Descrição|Status_ID|  
+|Status|DESCRIÇÃO|Status_ID|  
 |------------|-----------------|----------------|  
 |Enfileirados para execução|O lote não iniciou o processamento.|1|  
 |Executando|O lote está em processamento.|2|  
@@ -31,7 +31,7 @@ ms.locfileid: "73728188"
 |Enfileirados para limpeza|O processamento do lote foi concluído e o lote será limpo.|4|  
 |Desmarcada|O lote foi limpo.|5|  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral: importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   

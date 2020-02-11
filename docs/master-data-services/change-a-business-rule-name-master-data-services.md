@@ -13,10 +13,10 @@ ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2794b4c7dc7d8196845a83509accca085f23f396
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728667"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Alterar o nome de uma regra de negócio (Master Data Services)
@@ -25,10 +25,10 @@ ms.locfileid: "73728667"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], altere o nome de uma regra de negócio quando o nome atribuído não atender às suas necessidades comerciais.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -50,13 +50,13 @@ ms.locfileid: "73728667"
   
 7.  Digite o novo nome para a regra de negócios.  
   
-8.  Clique em **Salvar**.  
+8.  Clique em **Save** (Salvar).  
   
 9. Clique em **Publicar Tudo**.  
   
 10. Na caixa de diálogo de confirmação, clique em **OK**. O valor da coluna **Estado da Regra de Negócio**é **Ativo**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

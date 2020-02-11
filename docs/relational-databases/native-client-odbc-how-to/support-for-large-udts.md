@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7d8621aac563f9211f7d4ee0c9ebd8f557e33bea
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780478"
 ---
 # <a name="support-for-large-udts"></a>Suporte a UDTs grandes
@@ -25,12 +25,12 @@ ms.locfileid: "73780478"
   
  Este exemplo não funcionará com nenhuma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Para obter mais informações sobre o suporte a UDTs grandes, consulte [ &#40;&#41;ODBC grandes tipos de CLR definidos pelo usuário](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Para obter mais informações sobre o suporte a UDTs grandes, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="example"></a>Exemplo  
  A primeira listagem de código é o código de origem C#. Cole-a em um arquivo chamado LargeStringUDT.cs e compile-a para uma DLL. Copie LargeStringUDT.dll no diretório raiz da unidade C.  
   
- A segunda listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) cria o assembly no banco de dados mestre.  
+ A segunda listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () cria o assembly no banco de dados mestre.  
   
  Compile a segunda listagem de código (C++) com odbc32.lib e user32.lib. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73780478"
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- A quarta listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) exclui o assembly do banco de dados mestre.  
+ A quarta listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () exclui o assembly do banco de dados mestre.  
   
 ```  
 // LargeStringUDT.cs  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c2aa59b0806cc0ede01fa728636ab9d90479f14b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898844"
 ---
 # <a name="expression-builder"></a>Construtor de Expressões
@@ -41,14 +41,14 @@ ms.locfileid: "62898844"
 |Termo|Definição|  
 |----------|----------------|  
 |**Variáveis**|Expanda a pasta de **Variáveis** e arraste as mesmas para a caixa **Expressão** .|  
-|**Funções Matemáticas**<br /><br /> **Funções de cadeia de caracteres**<br /><br /> **Funções Data/Hora**<br /><br /> **Funções NULL**<br /><br /> **Conversões de Tipos**<br /><br /> **Operadores**|Expanda as pastas e arraste as funções, conversões de tipos e operadores para a caixa **Expressão** .|  
+|**Funções matemáticas**<br /><br /> **Funções de cadeia de caracteres**<br /><br /> **Funções Data/Hora**<br /><br /> **Funções NULL**<br /><br /> **Conversões de Tipos**<br /><br /> **Operadores**|Expanda as pastas e arraste as funções, conversões de tipos e operadores para a caixa **Expressão** .|  
 |**Expression**|Edite ou digite uma expressão.'|  
 |**Valor avaliado**|Lista o resultado da avaliação da expressão.|  
 |**Avaliar Expressão**|Clique em **Avaliar Expressão** para exibir o resultado de avaliação da expressão.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Página Expressões](expressions-page.md)   
- [Editor de Expressões de Propriedades](property-expressions-editor.md)   
+ [Editor de expressões de propriedades](property-expressions-editor.md)   
  [Variáveis do SSIS &#40;Integration Services&#41;](../integration-services-ssis-variables.md)   
  [Variáveis do sistema](../system-variables.md)  
   

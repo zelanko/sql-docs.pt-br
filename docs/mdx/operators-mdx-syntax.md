@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892111"
 ---
 # <a name="operators-mdx-syntax"></a>Operadores (sintaxe MDX)
@@ -30,7 +30,7 @@ ms.locfileid: "68892111"
   
  O MDX oferece suporte para os operadores listados na tabela a seguir:  
   
-|Para executar este tipo de operação|Use|  
+|Para executar este tipo de operação|Uso|  
 |---------------------------------------|---------|  
 |Atribuir um valor a uma variável ou associar uma coluna de conjunto de resultados a um alias.|[Operadores de atribuição](../mdx/assignment-operators.md)|  
 |Adicionar, subtrair, multiplicar, dividir.|[Operadores aritméticos](../mdx/arithmetic-operators.md)|  
@@ -55,7 +55,7 @@ ms.locfileid: "68892111"
   
 -   AS  
   
--   DISTINCT  
+-   DISTINTO  
   
 -   :  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68892111"
   
 -   EXISTING  
   
--   <>, >=, =, \<=, >, <  
+-   <>, >=, =, \<=, > <  
   
 -   NOT  
   
@@ -77,12 +77,12 @@ ms.locfileid: "68892111"
   
 -   OU  
   
- Para obter mais informações sobre operadores em MDX, consulte MDX de [ &#40;referência&#41;de operador MDX](../mdx/mdx-operator-reference-mdx.md).  
+ Para obter mais informações sobre operadores em MDX, consulte [referência de operador mdx &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md).  
   
 ### <a name="determining-results"></a>Determinando resultados  
  Ao combinar expressões simples para formar uma expressão complexa, as regras dos operadores combinadas com as regras de prioridade do tipo de dados determinam o tipo de dados do valor resultante.  
   
- Se o resultado for um caractere ou valor Unicode, as regras dos operadores combinadas com as regras de prioridade das ordenações determinam a ordenação do resultado. Para obter mais informações sobre agrupamentos, consulte [idiomas &#40;e agrupamentos&#41;Analysis Services](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services).  
+ Se o resultado for um caractere ou valor Unicode, as regras dos operadores combinadas com as regras de prioridade das ordenações determinam a ordenação do resultado. Para obter mais informações sobre agrupamentos, consulte [idiomas e agrupamentos &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services).  
   
  Há também regras que determinam a precisão, a escala e a extensão do resultado, com base na precisão, na escala e na extensão das expressões simples.  
   
@@ -91,14 +91,14 @@ ms.locfileid: "68892111"
   
 |Tipo original|Tipo necessário|Conversão|  
 |-------------------|-----------------|----------------|  
-|Nível|Defina|\<> de nível. Members|  
-|Hierarquia|Membro|\<hierarchy>.defaultmember|  
-|Membro|Tupla|(\<Membro >)|  
+|Nível|Definir|\<> de nível. Members|  
+|Hierarquia|Membro|\<hierarquia>. DefaultMember|  
+|Membro|Tupla|(\<Membro>)|  
 |Tupla|Membro|\<> de tupla. Item (0)|  
 |Tupla|Escalar|\<> de tupla. valor|  
   
-## <a name="see-also"></a>Consulte também  
- [MDX de referência &#40;de operador MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Elementos &#40;de sintaxe MDX MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)   
+ [Elementos de sintaxe MDX &#40;&#41;MDX](../mdx/mdx-syntax-elements-mdx.md)  
   
   

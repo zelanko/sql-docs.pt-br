@@ -1,5 +1,5 @@
 ---
-title: sys.column_master_keys (Transact-SQL) | Microsoft Docs
+title: sys. column_master_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
 ms.prod: sql
@@ -26,10 +26,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b7c219b2eb56fc299857a5a189ddd9db041f2f47
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73594529"
 ---
 # <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "73594529"
 
   Retorna uma linha para cada chave mestra de banco de dados adicionada usando a instrução [Create Master Key](../../t-sql/statements/create-column-master-key-transact-sql.md) . Cada linha representa uma única chave mestra de coluna (CMK).  
     
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O nome do CMK.|  
 |**column_master_key_id**|**int**|ID da chave mestra de coluna.|  
@@ -46,21 +46,21 @@ ms.locfileid: "73594529"
 |**key_store_provider_name**|**sysname**|Nome do provedor para o repositório de chave mestra de coluna que contém o CMK. Valores permitidos são:<br /><br /> MSSQL_CERTIFICATE_STORE – se o repositório de chaves mestras de coluna for um repositório de certificados.<br /><br /> Um valor definido pelo usuário, se o repositório de chave mestra de coluna for de um tipo personalizado.|  
 |**key_path**|**nvarchar(4000)**|Um caminho específico do repositório da chave mestra de coluna. O formato do caminho depende do tipo de repositório de chave mestra de coluna. Exemplo:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Para um repositório de chaves mestras de coluna personalizado, o desenvolvedor é responsável por definir o que é um caminho de chave para o repositório de chaves mestras de coluna personalizada.|  
 |**allow_enclave_computations**|**bit**|Indica se a chave mestra de coluna está habilitada para enclave (se as chaves de criptografia de coluna, criptografadas com essa chave mestra, podem ser usadas para cálculos dentro do enclaves seguro do lado do servidor). Para obter mais informações, consulte [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
-|**signature**|**varbinary(max)**|Uma assinatura digital de **key_path** e **allow_enclave_computations**, produzida usando a chave mestra de coluna, referenciada por **key_path**.|
+|**Signature**|**varbinary(max)**|Uma assinatura digital de **key_path** e **allow_enclave_computations**, produzida usando a chave mestra de coluna, referenciada por **key_path**.|
 
 
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão **exibir qualquer chave mestra de coluna** .  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Consulte também  
- [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [CRIAR chave mestra de coluna &#40;&#41;Transact-SQL](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Visão geral do gerenciamento de chaves do Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [Visão geral do gerenciamento de chaves para Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
  [Gerenciar chaves para Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
  
   

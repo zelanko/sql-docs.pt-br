@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e966406a20df723c453a5c8083f00f2e4989d9d0
-ms.sourcegitcommit: 385a907ed1de8fa7ada76260ea3f92583eb09238
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74064135"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Instalar Python e R para aprendizado de máquina do SQL Server em computadores sem acesso à Internet
@@ -44,7 +44,7 @@ Em um computador com conexão com a Internet, baixe os arquivos CAB fornecendo o
 Versão  |Link de download  |
 ---------|---------------|
 Microsoft R Open        | [SRO_3.5.2.125_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085686) |
-Microsoft R Server      | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085792) |
+Servidor R da Microsoft      | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085792) |
 Microsoft Python Open   | [SPO_4.5.12.120_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085793) |
 Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085685) |
 
@@ -76,7 +76,7 @@ Em um computador com conexão com a Internet, baixe os arquivos CAB fornecendo o
 Versão  |Link de download  |
 ---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
-Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
+Servidor R da Microsoft      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
 Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
@@ -100,7 +100,7 @@ Em um computador com conexão com a Internet, baixe os arquivos CAB usados pela 
 
 ### <a name="1---download-2016-cabs"></a>1 – Baixar CABs 2016
 
-Versão  | Microsoft R Open | Microsoft R Server |
+Versão  | Microsoft R Open | Servidor R da Microsoft |
 ---------|-----------------|---------------------|
 **SQL Server 2016 RTM**     | [SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266) |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051) |
 **SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) | 

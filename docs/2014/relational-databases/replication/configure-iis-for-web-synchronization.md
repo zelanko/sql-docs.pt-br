@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a5c3b456fa650cff94d0b5809c37f7ceca8b1b71
-ms.sourcegitcommit: 961c56bb78ff46ae6eb1a2cc5d2b1262ddf7a4fa
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74706662"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para sincronização da Web
@@ -155,7 +155,7 @@ ms.locfileid: "74706662"
   
     1.  Na caixa **Alias** , digite um alias para o diretório virtual.  
   
-    2.  Na caixa **Caminho** , digite um caminho para o diretório virtual. Por exemplo, `websync1` se você inseriu na caixa **alias** , digite `C:\Inetpub\wwwroot\websync1` na caixa **caminho** . Clique em **Avançar**.  
+    2.  Na caixa **Caminho** , digite um caminho para o diretório virtual. Por exemplo, `websync1` se você inseriu na caixa **alias** , digite `C:\Inetpub\wwwroot\websync1` na caixa **caminho** . Clique em **Próximo**.  
   
     3.  Nas duas caixas de diálogo, clique em **Sim**. Isso especifica que você deseja criar uma nova pasta e deseja copiar o Internet Server API (ISAPI) DLL do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . .  
   

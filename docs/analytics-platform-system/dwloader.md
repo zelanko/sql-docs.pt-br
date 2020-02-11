@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401172"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Carregador de linha de comando dwloader para data warehouse paralelos
@@ -527,7 +527,7 @@ Os dados carregados podem exigir mais ou menos espaço no dispositivo do que no 
   
 Embora **dwloader** seja um processo de transação e seja revertido normalmente em caso de falha, ele não poderá ser revertido depois que o carregamento em massa for concluído com êxito. Para cancelar um processo **dwloader** ativo, digite CTRL + C.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
 O tamanho total de todas as cargas que ocorrem simultaneamente deve ser menor que LOG_SIZE para o banco de dados e é recomendável que o tamanho total de todas as cargas simultâneas seja menor que 50% do LOG_SIZE. Para obter essa limitação de tamanho, você pode dividir grandes cargas em vários lotes. Para obter mais informações sobre LOG_SIZE, consulte [criar banco de dados](../t-sql/statements/create-database-parallel-data-warehouse.md)  
   
 Ao carregar vários arquivos com um comando de carregamento, todas as linhas rejeitadas são gravadas no mesmo arquivo de rejeição. O arquivo de rejeição não mostra qual arquivo de entrada contém cada linha rejeitada.  
@@ -567,7 +567,7 @@ A tabela acima mostra **dwloader** usando o modo de acréscimo carregando em um 
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-simple-dwloader-example"></a>R. Exemplo de dwloader simples  
+### <a name="a-simple-dwloader-example"></a>a. Exemplo de dwloader simples  
 O exemplo a seguir mostra a inicialização do **carregador** apenas com as opções necessárias selecionadas. Outras opções são obtidas do arquivo de configuração global, *loadparamfile. txt*.  
   
 Exemplo usando a autenticação SQL Server.  

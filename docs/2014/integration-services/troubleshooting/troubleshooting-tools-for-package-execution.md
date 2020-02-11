@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cd39b7315903335fe2370ae148579f3fe9d07abc
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637801"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Solucionando problemas de ferramentas para execução de pacotes
@@ -61,7 +61,7 @@ ms.locfileid: "73637801"
     2.  **Adicione o nome da coluna à saída**. Adicione uma transformação Pesquisa à saída de erro que pesquise pelo nome da coluna na tabela de pesquisa criada na etapa anterior. A pesquisa pode usar a ID da coluna na saída de erro, a ID do pacote (disponível na variável System::PackageID do sistema) e a ID da tarefa Fluxo de Dados (disponível na variável System::TaskID do sistema).  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>Solucionar problemas de execução de pacotes por meio relatórios de operações  
- Os relatórios de operações padrão estão disponíveis no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para ajudar você a monitorar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que foram implantados no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Esses relatórios de pacote ajudam a exibir o status e o histórico do pacote e, se necessário, a identificar a causa de falhas de execução.  
+ Os relatórios de operações padrão estão disponíveis no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para ajudar você a monitorar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que foram implantados no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Esses relatórios de pacote ajudam a exibir o status e o histórico do pacote e, se necessário, a identificar a causa de falhas de execução.  
   
  Para obter mais informações, consulte [Solucionando problemas de relatórios para execução de pacotes](troubleshooting-reports-for-package-execution.md).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73637801"
   
      A abordagem a seguir é uma sugestão para aprimorar a saída de log padrão e facilitar a geração de relatórios:  
   
-    1.  **Criar uma tabela pai que registra todas as execuções de um pacote**. Essa tabela pai tem apenas uma linha para cada execução do pacote e usa o ExecutionID para estabelecer um vínculo com os registros filho na tabela de log [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Você pode usar uma tarefa Executar SQL no início de cada pacote para criar essa nova linha e para registrar a hora de início. Em seguida, poderá usar outra tarefa Executar SQL no final do pacote para atualizar a linha com a hora de término, a duração e o status.  
+    1.  **Criar uma tabela pai que registra todas as execuções de um pacote**. Essa tabela pai tem apenas uma linha para cada execução do pacote e usa o ExecutionID para estabelecer um vínculo com os registros filho na tabela de log [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Você pode usar uma tarefa Executar SQL no início de cada pacote para criar essa nova linha e para registrar a hora de início. Em seguida, poderá usar outra tarefa Executar SQL no final do pacote para atualizar a linha com a hora de término, a duração e o status.  
   
     2.  **Adicionar informações de auditoria ao fluxo de dados**. Você pode usar a transformação Auditoria para adicionar informações às linhas no fluxo de dados sobre a execução do pacote que criou ou modificou cada linha. A transformação Auditoria disponibiliza nove partes de informações, incluindo PackageName e ExecutionInstanceGUID. Para obter mais informações, consulte [Audit Transformation](../data-flow/transformations/audit-transformation.md). Se você tiver informações personalizadas que gostaria de incluir nas linhas para fins de auditoria, poderá adicioná-las às linhas no fluxo de dados usando uma transformação Coluna Derivada. Para obter mais informações, consulte [Derived Column Transformation](../data-flow/transformations/derived-column-transformation.md).  
   
@@ -93,7 +93,8 @@ ms.locfileid: "73637801"
 ## <a name="troubleshoot-run-time-validation-issues"></a>Solucionar problemas de validação em tempo de execução  
  Às vezes, você não poderá se conectar às suas fontes de dados ou validar partes de seu pacote até que as tarefas anteriores no pacote tenham sido executadas. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui os seguintes recursos para ajudar a evitar os erros de validação que resultam dessas condições:  
   
--   **Configurar uma propriedade DelayValidation em elementos de pacote que não são válidos quando o pacote estiver carregado**. `DelayValidation` pode ser definida como `True` em elementos do pacote cujas configurações não são válidas para evitar erros de validação quando o pacote for carregado. Por exemplo, você pode ter uma tarefa Fluxo de Dados que usa uma tabela de destino que não existe até que uma tarefa Executar SQL crie a tabela no tempo de execução. A propriedade `DelayValidation` pode ativada no nível do pacote ou no nível das tarefas individuais e contêineres que o pacote inclui.  
+-   **Configurar uma propriedade DelayValidation em elementos de pacote que não são válidos quando o pacote estiver carregado**. 
+  `DelayValidation` pode ser definida como `True` em elementos do pacote cujas configurações não são válidas para evitar erros de validação quando o pacote for carregado. Por exemplo, você pode ter uma tarefa Fluxo de Dados que usa uma tabela de destino que não existe até que uma tarefa Executar SQL crie a tabela no tempo de execução. A propriedade `DelayValidation` pode ativada no nível do pacote ou no nível das tarefas individuais e contêineres que o pacote inclui.  
   
      A propriedade `DelayValidation` pode ser definida em uma tarefa de Fluxo de Dados, mas não em componentes de fluxo de dados individuais. Você pode conseguir um efeito semelhante definindo a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> dos componentes de fluxo de dados individuais como `false`. Entretanto, quando o valor dessa propriedade for `false`, o componente não reconhecerá as alterações para o metadados de fontes de dados externas. Ao definir como `true`, a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> poderá ajudar a evitar os problemas de bloqueio causados por bloqueios no banco de dados, especialmente quando o pacote estiver usando as transações.  
   
@@ -109,7 +110,7 @@ ms.locfileid: "73637801"
 ## <a name="troubleshoot-errors-without-a-description"></a>Solucionar problemas de erros sem uma descrição  
  Se você encontrar um erro do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que não seja acompanhado de uma descrição, localize a descrição no [Referência de mensagens e erros do Integration Services](../integration-services-error-and-message-reference.md) e procure o erro pelo número. No momento, a lista não inclui informações para solução de problemas.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Configurar uma saída de erro em um componente de fluxo de dados](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  

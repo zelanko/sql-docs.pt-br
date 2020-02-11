@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 264eb3c9b16c5eb12a578090d55e4f64884177c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62649685"
 ---
 # <a name="external-tools"></a>Ferramentas Externas
@@ -70,9 +70,9 @@ ms.locfileid: "62649685"
   
 2.  Na caixa **Título** , digite **Gerenciador de Configurações do SQL Server**.  
   
-3.  No **comando** , digite o caminho para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Console de gerenciamento do executável, como `C:\WINNT\system32\mmc.exe`  
+3.  Na caixa **comando** , digite o caminho para o executável [!INCLUDE[msCoName](../../includes/msconame-md.md)] do console de gerenciamento, como`C:\WINNT\system32\mmc.exe`  
   
-4.  No **argumentos** , digite o caminho para o arquivo. msc, como `"C:\WINNT\system32\SQLServerManager.msc"`  
+4.  Na caixa **argumentos** , digite o caminho para o arquivo. msc, como`"C:\WINNT\system32\SQLServerManager.msc"`  
   
 > [!NOTE]  
 >  Veja as propriedades do atalho do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no menu **Iniciar** para confirmar o local dos arquivos em seu computador.  

@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882351"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aprimorar o desempenho da replicação transacional
@@ -51,7 +51,7 @@ ms.locfileid: "73882351"
   
 -   Replique a execução de procedimento armazenado ao fazer atualizações em lote em tabelas publicadas.  
   
-     Se tiver atualizações em lote que afetem ocasionalmente um grande número de linhas no Assinante, você deve considerar a atualização da tabela publicada usando um procedimento armazenado, e publicar a execução desse procedimento. Ao invés de enviar uma atualização ou excluir cada linha afetada, o Distribution Agent executa o mesmo procedimento no Assinante, com os mesmos valores de parâmetros. Para saber mais, confira [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+     Se tiver atualizações em lote que afetem ocasionalmente um grande número de linhas no Assinante, você deve considerar a atualização da tabela publicada usando um procedimento armazenado, e publicar a execução desse procedimento. Ao invés de enviar uma atualização ou excluir cada linha afetada, o Distribution Agent executa o mesmo procedimento no Assinante, com os mesmos valores de parâmetros. Para obter mais informações, consulte [Publicando execução de procedimento armazenado em replicação transacional](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 -   Espalhe os artigos por várias publicações.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "73882351"
   
      O parâmetro **-SubscriptionStreams** pode melhorar significativamente a taxa de transferência da replicação de agregação. Ele permite várias conexões a um Assinante para aplicar lotes de alterações em paralelo, mantendo presentes, ao mesmo tempo, várias características transacionais, quando for usar um thread único. Se uma das conexões falhar na execução ou na confirmação, todas as conexões abortarão o lote atual, e o agente usará um fluxo único para repetir os lotes com falha. Antes de concluir a fase de repetição pode haver inconsistências transacionais temporárias no Assinante. Depois que os lotes com falha são confirmados com êxito, o Assinante é levado de volta a um estado de consistência transacional.  
   
-     Um valor para esse parâmetro de agente pode ser especificado usando o **\@SubscriptionStreams** de [SP_ADDSUBSCRIPTION &#40;Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
+     Um valor para esse parâmetro de agente pode ser especificado usando o ** \@SubscriptionStreams** de [sp_addsubscription &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
   
 -   Aumente o valor do parâmetro **-ReadBatchSize** para o Agente de Leitor de Log.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "73882351"
   
 -   [Trabalhar com perfis do Agente de Replicação](../agents/replication-agent-profiles.md)  
   
--   [Exibir e modificar parâmetros do prompt de comando do agente de replicação &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+-   [Exibir e modificar parâmetros do prompt de comando de agentes de replicação &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
 -   [Conceitos dos executáveis do Replication Agent](../concepts/replication-agent-executables-concepts.md)  
   

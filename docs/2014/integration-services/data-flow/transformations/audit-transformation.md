@@ -16,19 +16,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea923f72e0c9e505bc9e1f056d5ff4dbe36ad9a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901008"
 ---
 # <a name="audit-transformation"></a>Transformação Auditoria
-  A opção Auditar Transformação permite ao fluxo de dados de um pacote incluir dados sobre o ambiente em que o pacote é executado. Por exemplo, o nome do pacote, o computador e o operador podem ser adicionados ao fluxo de dados. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui variáveis do sistema que fornecem essas informações.  
+  A opção Auditar Transformação permite ao fluxo de dados de um pacote incluir dados sobre o ambiente em que o pacote é executado. Por exemplo, o nome do pacote, o computador e o operador podem ser adicionados ao fluxo de dados. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui variáveis de sistema que fornecem essas [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] informações.  
   
 ## <a name="system-variables"></a>Variáveis do sistema  
  A tabela a seguir descreve as variáveis do sistema que podem ser usadas por Auditar Transformação.  
   
-|Variável do sistema|Índice|Descrição|  
+|Variável do sistema|Índice|DESCRIÇÃO|  
 |---------------------|-----------|-----------------|  
 |`ExecutionInstanceGUID`|0|O GUID que identifica a instância de execução do pacote.|  
 |`PackageID`|1|O identificador exclusivo do pacote.|  

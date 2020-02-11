@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f5627a5e35039420725795f53a7fc63d5582ab9
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: da725efe691aae60bf9776bbe73f80227067d2e2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706853"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74200392"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Problemas conhecidos nos Serviços de Machine Learning do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -681,7 +681,7 @@ Total execution time: 00:01:00.387
 
 **Solução alternativa**
 
-Execute o seguinte comando:
+Execute o comando a seguir:
 
 ```bash
 sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
@@ -703,7 +703,7 @@ Se tiver uma licença existente do Revolution R Enterprise, coloque-a em um comp
 
 Algumas versões de pré-lançamento do [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] incluíram um ambiente de desenvolvimento do R para o Windows criado pela Revolution Analytics. Essa ferramenta não é mais fornecida e não é compatível.
 
-Para obter compatibilidade com o [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)], recomendamos que você instale o Microsoft R Client em seu lugar. As [Ferramentas do R para Visual Studio](https://www.visualstudio.com/vs/rtvs/) e o [Visual Studio Code](https://code.visualstudio.com/) também dão suporte a soluções do Microsoft R.
+Para obter compatibilidade com o [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)], recomendamos que você instale o Microsoft R Client em seu lugar. As [Ferramentas do R para Visual Studio](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019) e o [Visual Studio Code](https://code.visualstudio.com/) também dão suporte a soluções do Microsoft R.
 
 ### <a name="2-compatibility-issues-with-sqlite-odbc-driver-and-revoscaler"></a>2. Problemas de compatibilidade com o driver ODBC do SQLite e o RevoScaleR
 

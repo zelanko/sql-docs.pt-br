@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5f348a7f76f65c19801525967f3ded5c8b0d2d26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835827"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>Preparar SQL Server para CDC
@@ -32,7 +32,7 @@ ms.locfileid: "62835827"
  Digite o nome do servidor em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está localizado.  
   
 ### <a name="authentication"></a>Autenticação  
- Selecione uma destas opções:  
+ Selecione uma das seguintes:  
   
 -   **Autenticação do Windows**  
   
@@ -54,8 +54,8 @@ ms.locfileid: "62835827"
 ### <a name="view-script"></a>Exibir script  
  Clique em **Exibir Script** para exibir uma versão somente leitura do script de instalação. Um administrador do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode copiar este script no Console de Gerenciamento do SQL Server para editá-lo, se for necessário. Para obter mais informações sobre o Script Preparar SQL Server, consulte [Script de visualização Preparar SQL Server para Oracle CDC](prepare-sql-server-for-oracle-cdc-view-script.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Como trabalhar com os serviços CDC](work-with-cdc-services.md)   
- [Como Preparar o SQL Server para CDC](prepare-sql-server-for-cdc.md)  
+ [Como preparar o SQL Server para CDC](prepare-sql-server-for-cdc.md)  
   
   

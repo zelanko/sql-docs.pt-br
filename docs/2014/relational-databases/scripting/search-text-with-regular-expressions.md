@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243318"
 ---
 # <a name="search-text-with-regular-expressions"></a>Pesquisar texto com expressões regulares
@@ -37,7 +37,7 @@ ms.locfileid: "75243318"
   
  A tabela a seguir descreve as expressões regulares disponíveis na **Lista de Referências**.  
   
-|Expressão|Sintaxe|Descrição|  
+|Expression|Sintaxe|DESCRIÇÃO|  
 |----------------|------------|-----------------|  
 |Qualquer caractere|.|Faz a correspondência de qualquer caractere único menos uma quebra de linha.|  
 |Zero ou mais|*|Faz a correspondência de zero ou mais ocorrências da expressão precedente, com todas as correspondentes possíveis.|  
@@ -55,11 +55,11 @@ ms.locfileid: "75243318"
 |Identificador do C/C++|:i|Faz a correspondência da expressão ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Cadeia de caracteres entre aspas|:q|Faz a correspondência da expressão (("[^"]*")&#124;('[^']\*')).|  
 |Espaço ou tabulação|:b|Faz a correspondência de caracteres de espaço ou de tabulação.|  
-|Número inteiro|:z|Faz a correspondência da expressão ([0-9]+).|  
+|Integer|:z|Faz a correspondência da expressão ([0-9]+).|  
   
  A lista de todas as expressões regulares válidas em operações **Localizar e Substituir** é mais longa do que pode ser exibido na **Lista de Referências**. Você também pode inserir qualquer uma das seguintes expressões regulares em uma cadeia de caracteres **Localizar** :  
   
-|Expressão|Sintaxe|Descrição|  
+|Expression|Sintaxe|DESCRIÇÃO|  
 |----------------|------------|-----------------|  
 |Mínimo – zero ou mais|@|Faz a correspondência de zero ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
 |Mínimo – um ou mais|#|Faz a correspondência de uma ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
@@ -84,7 +84,7 @@ ms.locfileid: "75243318"
   
  A tabela a seguir relaciona a sintaxe para correspondência por propriedades de caracteres Unicode padrão. A abreviação de duas letras é igual à relacionada no banco de dados de propriedades de caractere Unicode. Elas podem ser especificadas como parte de um conjunto de caracteres. Por exemplo, a expressão [:Nd:Nl:No] faz a correspondência de qualquer tipo de dígito.  
   
-|Expressão|Sintaxe|Descrição|  
+|Expression|Sintaxe|DESCRIÇÃO|  
 |----------------|------------|-----------------|  
 |Letra maiúscula|:Lu|Faz a correspondência de qualquer letra maiúscula. Por exemplo, Luhe faz a correspondência de "The" mas não "the".|  
 |Letra minúscula|:Ll|Faz a correspondência de qualquer letra minúscula. Por exemplo, Llhe faz a correspondência de "the" mas não "The".|  
@@ -119,7 +119,7 @@ ms.locfileid: "75243318"
   
  Além das propriedades de caracteres Unicode padrão, as propriedades adicionais a seguir podem ser especificadas como parte de um conjunto de caracteres.  
   
-|Expressão|Sintaxe|Descrição|  
+|Expression|Sintaxe|DESCRIÇÃO|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Faz a correspondência de qualquer caractere. Por exemplo: Alhe faz a correspondência de palavras como "The", "then", e "reached".|  
 |Numérico|:Nu|Faz a correspondência de qualquer número ou dígito.|  

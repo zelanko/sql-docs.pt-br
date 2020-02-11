@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48fc5ccd2973a530010975171a90f35a2f18a7e7
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760252"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client (ODBC)
@@ -41,15 +41,15 @@ ms.locfileid: "73760252"
   
 -   [Criando um aplicativo de driver ODBC do SQL Server Native Client](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
   
--   [Comunicando- &#40;se com SQL Server ODBC&#41;](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+-   [Comunicando-se com SQL Server &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
 -   [Executando consultas &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
--   [Processando &#40;resultados ODBC&#41;](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+-   [Processando resultados &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
 -   [Usando cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
--   [Executando transações &#40;ODBC&#41;](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
+-   [Executando transações &#40;&#41;ODBC](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
 -   [Tratando de erros e mensagens](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
@@ -57,30 +57,30 @@ ms.locfileid: "73760252"
   
 -   [Usando funções de catálogo](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
   
--   [Executando operações &#40;de cópia em massa ODBC&#41;](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+-   [Executando operações de cópia em massa &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
--   [Gerenciando colunas Text e Image](../../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
+-   [Gerenciando colunas de texto e imagem](../../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
   
 -   [Criando perfil de desempenho do driver ODBC](../../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   
--   [Parâmetros &#40;com valor de tabela ODBC&#41;](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+-   [Parâmetros com valor de tabela &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
--   [Aprimoramentos &#40;de data e hora do ODBC&#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [Melhorias de data e hora &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
--   [ODBC grandes tipos &#40;de CLR definidos pelo usuário&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
+-   [Tipos de CLR grandes definidos pelo usuário &#40;&#41;ODBC](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
   
--   [Suporte &#40;a FileStream ODBC&#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
+-   [Suporte a FILESTREAM &#40;&#41;ODBC](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
   
--   [SPNs &#40;&#41; de nomes de entidade de serviço &#40;em conexões de cliente ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [SPNs &#40;Nomes da Entidade de Serviço&#41; em conexões de cliente &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [Colunas esparsas &#40;dão suporte ao ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
+-   [Colunas esparsas dão suporte a&#41;&#40;ODBC](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
   
--   [SQL Server Native Client &#40;referência&#41; ODBC](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)  
+-   [Referência de&#41; &#40;ODBC do SQL Server Native Client](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)  
   
 -   [Tópicos de instruções sobre ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
-## <a name="see-also"></a>Consulte também  
-   de [programação de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Programação de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [Instalando o SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   
   

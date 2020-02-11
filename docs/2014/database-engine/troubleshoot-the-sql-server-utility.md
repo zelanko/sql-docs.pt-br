@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797783"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Solucionar problemas do Utilitário do SQL Server
-  A solução de problemas do Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode incluir a resolução de uma operação malsucedida de inscrição de uma instância do SQL Server com um UCP, a solução de problemas de falha na coleta de dados que resultam em ícones cinzas na exibição da lista de instâncias gerenciadas em um UCP, a redução de gargalos de desempenho ou a resolução de problemas de integridade de recursos. Para obter mais informações sobre como atenuar problemas de integridade de recursos identificados por um UCP [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [solucionar problemas SQL Server &#40;Resource Health utilitário do SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
+  A solução de problemas do Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode incluir a resolução de uma operação malsucedida de inscrição de uma instância do SQL Server com um UCP, a solução de problemas de falha na coleta de dados que resultam em ícones cinzas na exibição da lista de instâncias gerenciadas em um UCP, a redução de gargalos de desempenho ou a resolução de problemas de integridade de recursos. Para obter mais informações sobre como atenuar os problemas de integridade [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de recursos identificados por um UCP, consulte [solucionar problemas SQL Server Resource Health &#40;utilitário do SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>Falha na operação de inscrição de uma instância do SQL Server em um Utilitário do SQL Server  
  Se você se conectar à instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para inscrição usando a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e especificar uma conta proxy pertencente a um domínio do Active Directory diferente do domínio onde o UCP está localizado, a validação de instância terá êxito, mas a operação de inscrição falhará apresentando a seguinte mensagem de erro:  
@@ -35,11 +35,11 @@ ms.locfileid: "72797783"
   
 3.  A instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para inscrição no Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] também é membro de "Domain_1".  
   
-4.  Durante a operação de registro, conecte-se à instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para se registrar usando "SA". Especifique uma conta proxy de "Domain_2".  
+4.  Durante a operação de registro, conecte-se à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instância do para se registrar usando "SA". Especifique uma conta proxy de "Domain_2".  
   
 5.  A validação é bem-sucedida, mas a inscrição falha.  
   
- A solução alternativa para esse problema, usando o exemplo acima, é conectar-se à instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para se registrar no utilitário de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando "SA" e fornecer uma conta proxy de "Domain_1".  
+ A solução alternativa para esse problema, usando o exemplo acima, é conectar-se à instância [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] do para se registrar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no utilitário usando "SA" e fornecer uma conta proxy de "Domain_1".  
   
 ## <a name="failed-wmi-validation"></a>Falha na validação de WMI  
  Se o WMI não for configurado corretamente em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], as operações Criar UCP e Inscrever Instância Gerenciada exibirão um aviso, mas a operação não será bloqueada. Além disso, se você alterar a configuração da conta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent de forma que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent não tenha permissão para as classes WMI necessárias, a coleta de dados na instância gerenciada afetada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não carregará os dados no UCP. Isso resulta em ícones cinzas no UCP.  
@@ -50,7 +50,7 @@ ms.locfileid: "72797783"
   
  A execução do comando parou porque a variável de shell "ErrorActionPreference" está definida para Parar: acesso negado.  
   
- ERRO: \<data-hora (MM/DD/AAAA HH: MM: SS) >: exceção detectada ao coletar as propriedades da CPU.  Uma consulta de WMI pode ter falhado.  AVISO.  
+ ERRO: \<data e hora (mm/dd/aaaa hh: mm: SS) >: exceção detectada ao coletar Propriedades de CPU.  Uma consulta de WMI pode ter falhado.  AVISO.  
   
  Para resolver esse problema, verifique os seguintes parâmetros de configuração:  
   
@@ -114,9 +114,9 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  No **Pesquisador de Objetos**do SSMS, expanda o nó **Segurança** e, em seguida, expanda o nó **Credenciais** .  
   
-    2.  Clique com o botão direito do mouse em **UtilityAgentProxyCredential_\<GUID >** e selecione **Propriedades**.  
+    2.  Clique com o botão direito do mouse em **UtilityAgentProxyCredential_\<GUID>** e selecione **Propriedades**.  
   
-    3.  Na caixa de diálogo Propriedades da credencial, atualize as credenciais conforme necessário para o **UtilityAgentProxyCredential_\<GUID >** credencial.  
+    3.  Na caixa de diálogo Propriedades da credencial, atualize as credenciais conforme necessário para o **GUID de UtilityAgentProxyCredential_\<>** credencial.  
   
     4.  Clique em **OK** para confirmar a alteração.  
   
@@ -124,13 +124,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   O serviço Navegador do SQL Server no UCP deve ser iniciado e configurado para iniciar automaticamente. Se sua organização impedir o uso do serviço Navegador do SQL Server, use as seguintes etapas para permitir que uma instância gerenciada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se conecte ao UCP:  
   
-    1.  Na barra de tarefas do Windows na instância gerenciada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], clique em **Iniciar**e em **executar...** .  
+    1.  Na barra de tarefas do Windows na instância gerenciada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], clique em **Iniciar**e em **executar...**.  
   
     2.  Digite "cliconfg.exe" no espaço fornecido e clique em **OK**.  
   
     3.  Se for solicitado a permitir que o utilitário de configuração do cliente SQL ("SQL Client Configuration Utility EXE") seja iniciado, clique em "**Continuar**".  
   
-    4.  Na caixa de diálogo **SQL Server utilitário de rede do cliente** , selecione a guia **alias** e clique em **Adicionar...** .  
+    4.  Na caixa de diálogo **SQL Server utilitário de rede do cliente** , selecione a guia **alias** e clique em **Adicionar...**.  
   
     5.  Na caixa de diálogo **Adicionar Configuração da Biblioteca de Rede** :  
   
@@ -144,7 +144,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     10. Especifique o número da porta em que o UCP está escutando na caixa de texto **Número da porta** .  
   
-    11. Clique em **OK** para salvar as alterações.  
+    11. Clique em **OK** para salvar suas alterações.  
   
     12. Repita essas etapas para cada instância gerenciada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se conectar a um UCP em que o serviço Navegador do SQL Server não está habilitado.  
   
@@ -164,6 +164,6 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     5.  Se a instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] já estiver inscrita no UCP antes de o usuário ser adicionado a esse grupo, reinicie o serviço [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.  
   
-## <a name="see-also"></a>Consulte também  
- [Recursos e tarefas do utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Recursos e tarefas do Utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Solucionar problemas de integridade de recursos do SQL Server &#40;Utilitário do SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957160"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover um banco de dados protegido por TDE para outro SQL Server
@@ -43,9 +43,9 @@ ms.locfileid: "74957160"
   
      [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a>Antes de começar  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a>Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Ao mover um banco de dados protegido por TDE, é necessário também mover o certificado ou a chave assimétrica que é usada para abrir a DEK. O certificado ou a chave assimétrica deve ser instalado `master` no banco de dados do servidor de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , para que o possa acessar os arquivos de banco de dados. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](transparent-data-encryption.md).  
   
@@ -53,9 +53,9 @@ ms.locfileid: "74957160"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]armazena os arquivos criados aqui em **c:\Arquivos de PROGRAMAS\MICROSOFT SQL Server\MSSQL12. MSSQLSERVER\MSSQL\DATA** por padrão. Os nomes e locais dos seus arquivos poderão ser diferentes.  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a>Permissões  
+####  <a name="Permissions"></a> Permissões  
   
 -   Requer `CONTROL DATABASE` permissão no `master` banco de dados para criar a chave mestra do banco de dados.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "74957160"
   
 -   Requer a permissão `CONTROL DATABASE` no banco de dados criptografado e a permissão `VIEW DEFINITION` na chave assimétrica ou no certificado usado para criptografar a chave de criptografia do banco de dados.  
   
-##  <a name="SSMSProcedure"></a>Para criar um banco de dados protegido pela Transparent Data Encryption  
+##  <a name="SSMSProcedure"></a> Para criar um banco de dados protegido por criptografia de dados transparente  
   
-###  <a name="SSMSCreate"></a>Usando SQL Server Management Studio  
+###  <a name="SSMSCreate"></a> Usando o SQL Server Management Studio  
   
 1.  Crie uma chave mestra de banco de dados e `master` um certificado no banco de dados. Para obter mais informações, veja **Usando o Transact-SQL** abaixo.  
   
@@ -87,24 +87,24 @@ ms.locfileid: "74957160"
      Exibe ou define o algoritmo para uso na criptografia de banco de dados. 
   `AES128` é o algoritmo padrão. Este campo não pode ficar em branco. Para obter mais informações sobre algoritmos de criptografia, consulte [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md).  
   
-     **Usar certificado do servidor**  
+     **Usar certificado de servidor**  
      Define a criptografia a ser protegida por um certificado. Selecione uma opção da lista. Se você não tiver a permissão `VIEW DEFINITION` em certificados de servidor, essa lista estará vazia. Se um método de certificado de criptografia for selecionado, esse valor não poderá ficar em branco. Para obter mais informações sobre certificados, consulte [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).  
   
      **Usar chave assimétrica do servidor**  
      Define a criptografia a ser protegida por uma chave assimétrica. Somente as chaves assimétricas disponíveis são exibidas. Somente uma chave assimétrica protegida por um módulo EKM pode criptografar um banco de dados que usa a TDE.  
   
-     **Definir criptografia de banco de dados em**  
+     **Definir criptografia de banco de dados como ativa**  
      Altera o banco de dados para ativar (marcado) ou desativar (desmarcado) a TDE.  
   
-8.  Ao concluir, clique em **OK**.  
+8.  Quando terminar, clique em **OK**.  
   
-###  <a name="TsqlCreate"></a>Usando o Transact-SQL  
+###  <a name="TsqlCreate"></a> Usando o Transact-SQL  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  Na barra Padrão , clique em **Nova Consulta**.  
+2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **executar**.  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
     ```  
     -- Create a database master key and a certificate in the master database.  
@@ -146,42 +146,42 @@ ms.locfileid: "74957160"
   
  Para obter mais informações, consulte:  
   
--   [CRIAR chave mestra &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-master-key-transact-sql)  
+-   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
--   [CRIAR certificado &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [&#41;de certificado de BACKUP &#40;Transact-SQL](/sql/t-sql/statements/backup-certificate-transact-sql)  
+-   [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)  
   
--   [CRIAR &#40;de banco de dados SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
+-   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
--   [CRIAR chave de criptografia de banco de dados &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+-   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
 ##  <a name="TsqlProcedure"></a>Para mover um banco de dados  
   
-###  <a name="SSMSMove"></a>Usando SQL Server Management Studio  
+###  <a name="SSMSMove"></a> Usando o SQL Server Management Studio  
   
-1.  No Pesquisador de Objetos, clique com o botão direito do mouse no banco de dados que você criptografou acima, aponte para **Tarefas** e selecione **Desanexar...**.  
+1.  No Pesquisador de Objetos, clique com o botão direito do mouse no banco de dados que você criptografou acima, aponte para **Tarefas** e selecione **Desanexar...** .  
   
      As opções a seguir estão disponíveis na caixa de diálogo **Desanexar Banco de Dados** .  
   
      **Bancos de dados a serem desanexados**  
      Lista os bancos de dados a serem desanexados  
   
-     **Nome do banco de dados**  
+     **Database Name**  
      Exibe o nome do banco de dados a ser desanexado.  
   
-     **Remover conexões**  
+     **Cancelar Conexões**  
      Cancelar conexões com o banco de dados especificado.  
   
     > [!NOTE]  
     >  Você não pode desanexar um banco de dados com conexões ativas.  
   
-     **Atualizar estatísticas**  
+     **Atualização de Estatísticas**  
      Por padrão, a operação desanexar retém qualquer estatística de otimização desatualizada ao desanexar o banco de dados; para atualizar as estatísticas de otimização existentes, clique nesta caixa de seleção.  
   
-     **Manter catálogos de texto completo**  
+     **Manter Catálogos de Texto Completo**  
      Por padrão, a operação desanexar mantém qualquer catálogo de texto completo que esteja associado ao banco de dados. Para removê-los, desmarque a caixa de seleção **Manter Catálogos de Texto Completo** . Essa opção é exibida apenas quando você está atualizando um banco de dados do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
      **Status**  
@@ -192,7 +192,7 @@ ms.locfileid: "74957160"
   
     -   Quando um banco de dados estiver envolvido com replicação, o **Status** será **Não pronto** e a coluna **Mensagem** exibirá **Banco de Dados replicado**.  
   
-    -   Quando um banco de dados tem uma ou mais conexões ativas, o **status** **não está pronto** e a coluna de **mensagem** exibe _<number_of_active_connections>_ **conexão ativa (s)** – por exemplo: **1 conexão ativa**. Antes de desanexar o banco de dados, você deverá cancelar qualquer conexão ativa selecionando **Cancelar Conexões**.  
+    -   Quando um banco de dados tiver uma ou mais conexões ativas, o **Status** será **Não está pronto** e a coluna **Mensagem** exibirá _<número_de_conexões_ativas>_ **Conexão(ões) ativa(s)** – por exemplo: **1 Conexão ativa**. Antes de desanexar o banco de dados, você deverá cancelar qualquer conexão ativa selecionando **Cancelar Conexões**.  
   
      Para obter mais informações sobre a mensagem, clique o texto com hiperlink para abrir o Monitor de atividades.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "74957160"
   
 6.  Recrie o certificado do servidor usando o arquivo de backup de certificado do servidor original. Para obter mais informações, veja **Usando o Transact-SQL** abaixo.  
   
-7.  No Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse na pasta **Bancos de Dados** e selecione **Anexar...**.  
+7.  No Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse na pasta **Bancos de Dados** e selecione **Anexar...** .  
   
 8.  Na caixa de diálogo **Anexar Bancos de Dados** , em **Bancos de dados a serem anexados**, clique em **Adicionar**.  
   
@@ -217,14 +217,13 @@ ms.locfileid: "74957160"
      **Bancos de dados a serem anexados**  
      Exibe informações sobre os bancos de dados selecionados.  
   
-     
      \<no column header>  
-  Exibe um ícone que indica o status da operação de anexação. Os possíveis ícones são descritos em **Status** , abaixo).  
+     Exibe um ícone que indica o status da operação de anexação. Os possíveis ícones são descritos em **Status** , abaixo).  
   
-     **Local do arquivo MDF**  
+     **Local do Arquivo MDF**  
      Exibe o caminho e o nome de arquivo do arquivo MDF selecionado.  
   
-     **Nome do banco de dados**  
+     **Database Name**  
      Exibe o nome do banco de dados.  
   
      **Anexar como**  
@@ -236,26 +235,26 @@ ms.locfileid: "74957160"
      **Status**  
      Exibe o status do banco de dados de acordo com a seguinte tabela.  
   
-    |ícone|Texto de status|Descrição|  
+    |ícone|Texto de status|DESCRIÇÃO|  
     |----------|-----------------|-----------------|  
     |(No icon)|(Nenhum texto)|A operação de anexação não foi iniciada ou pode estar pendente para esse objeto. Esse é o padrão quando a caixa de diálogo é aberta.|  
     |Triângulo verde apontando para a direita|Em andamento|A operação de anexação foi iniciada mas não está completa.|  
     |Sinal de verificação verde|Sucesso|O objeto foi anexado com êxito.|  
-    |Círculo vermelho contendo uma cruz branca|Erro do|A operação de anexação encontrou um erro e não foi concluída com êxito.|  
-    |Círculo que contém dois quadrantes pretos (à esquerda e à direita) e dois quadrantes brancos (em cima e em baixo)|Parado com|A operação de anexação não foi completada com êxito porque o usuário interrompeu a operação.|  
+    |Círculo vermelho contendo uma cruz branca|Erro|A operação de anexação encontrou um erro e não foi concluída com êxito.|  
+    |Círculo que contém dois quadrantes pretos (à esquerda e à direita) e dois quadrantes brancos (em cima e em baixo)|Parado|A operação de anexação não foi completada com êxito porque o usuário interrompeu a operação.|  
     |Círculo que contém uma seta curvada que aponta para o sentido anti-horário|Revertida|A operação de anexação teve êxito, mas foi revertida devido a um erro ao se anexar outro objeto.|  
   
      **Mensagem**  
      Exibe uma mensagem em branco ou um hiperlink "Arquivo não encontrado"  
   
-     **Agrega**  
+     **Adicionar**  
      Encontrar os arquivos de banco de dados principais necessários. Quando o usuário selecionar um arquivo .mdf , os respectivos campos são automaticamente preenchidos com informações aplicáveis da grade **Bancos de dados a serem anexados** .  
   
-     **Exclu**  
+     **Remover**  
      Remove o arquivo selecionado da grade **Bancos de dados a serem anexados** .  
   
-     Detalhes do banco de dados **"** _<database_name>_ **"**  
-     Exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **procurar** (**...**).  
+     **"** _<nome_do_banco_de_dados>_ **" detalhes do banco de dados**  
+     Exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **Procurar** ( **...** ).  
   
     > [!NOTE]  
     >  Se um arquivo não existir, a coluna **Mensagem** exibe "Não encontrado." Se um arquivo de log não for encontrado, ele existe em outro diretório ou foi excluído. Você precisa atualizar o caminho do arquivo na grade **detalhes do banco de dados** para indicar o local correto ou remover o arquivo de log da grade. Se um arquivo de dados .ndf não for encontrado, você precisará atualizar seu caminho na grade a fim de indicar o local correto.  
@@ -272,13 +271,13 @@ ms.locfileid: "74957160"
      **Mensagem**  
      Exibe uma mensagem em branco ou um hiperlink “**Arquivo não encontrado**”.  
   
-###  <a name="TsqlMove"></a>Usando o Transact-SQL  
+###  <a name="TsqlMove"></a> Usando o Transact-SQL  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  Na barra Padrão , clique em **Nova Consulta**.  
+2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **executar**.  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
     ```  
     -- Detach the TDE protected database from the source server.   
@@ -315,15 +314,15 @@ ms.locfileid: "74957160"
   
  Para obter mais informações, consulte:  
   
--   [&#41;&#40;Transact-SQL de sp_detach_db](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
+-   [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   
--   [CRIAR chave mestra &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-master-key-transact-sql)  
+-   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
--   [CRIAR certificado &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [CRIAR &#40;de banco de dados SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
+-   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
 ## <a name="see-also"></a>Consulte Também  
- [SQL Server desanexar e anexar &#40;de banco de dados&#41;](../../databases/database-detach-and-attach-sql-server.md)  
+ [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../databases/database-detach-and-attach-sql-server.md)  
   
   

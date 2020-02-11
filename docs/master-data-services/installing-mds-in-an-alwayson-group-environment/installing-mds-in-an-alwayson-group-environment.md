@@ -1,5 +1,5 @@
 ---
-title: Alta disponibilidade e recuperação de desastres
+title: Alta disponibilidade e recuperação de desastre
 ms.custom: seo-lt-2019
 ms.date: 07/28/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728097"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidade e recuperação de desastres para Master Data Services
@@ -29,11 +29,11 @@ Este artigo descreve uma solução para o MDS (Master Data Service) hospedado em
 
 Para implementar a solução, você precisa concluir as seguintes tarefas abordadas neste artigo.
 
-1. [Instalar e configurar o WSFC (Cluster de Failover do Windows Server)](#windows-server-failover-cluster-wsfc).
+1. [Instalar e configurar o WSFC (Windows Server failover webhdfs)](#windows-server-failover-cluster-wsfc).
 
 2. [Configure um grupo de disponibilidade Always on](#sql-server-always-on-availability-group).
 
-3. [Configurar o MDS para ser executado em um nó WSFC](#configure-mds-to-run-on-an-wsfc-node).
+3. [Configure o MDS para ser executado em um nó WSFC](#configure-mds-to-run-on-an-wsfc-node).
 
 As seções acima apresentarão brevemente as tecnologias, seguidas por instruções. Para obter informações detalhadas sobre as tecnologias, examine os documentos vinculados em cada seção.
 
@@ -82,15 +82,15 @@ Portanto, é importante considerar seus cenários e requisitos e escolher quanta
 
 Esta seção aborda as seguintes tarefas.
 
-1. [Instalar o recurso de Failover do Windows](#install-failover-cluster-feature).
+1. [Instale o recurso de cluster de failover do Windows](#install-failover-cluster-feature).
 
-2. [Criar um Cluster de Failover do Windows Server](#create-a-windows-server-failover-cluster).
+2. [Crie um cluster de failover do Windows Server](#create-a-windows-server-failover-cluster).
 
 Conforme mostrado na Figura 1 na seção anterior, a solução descrita neste artigo inclui o WSFC (Cluster de Failover do Windows Server). Precisamos configurar o WSFC porque AGs dependem do WFSC para detecção de falha e failover.
 
 O WSFC é um recurso para melhorar a alta disponibilidade de aplicativos e serviços. Ele consiste em um grupo de instâncias do Windows Server independentes com o 	Serviço de Cluster de Failover da Microsoft em execução nessas instâncias. As instâncias do Windows Server (ou nós como são chamadas às vezes) estão conectadas de forma que possam se comunicar entre si e a detecção de falha seja possível. O WSFC fornece as funcionalidades de detecção de falha e failover. Se um nó ou um serviço falhar no cluster, a falha será detectada e outro nó automaticamente ou manualmente começará a fornecer os serviços hospedados no nó com falha. Dessa forma, os usuários sofrem interrupções mínimas nos serviços e a disponibilidade do serviço é melhorada.  
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 O sistema operacional Windows Server é instalado em todas as instâncias e todas as atualizações são corrigidas.
 
@@ -115,13 +115,13 @@ Conclua as seguintes etapas para cada instância do Windows Server para instalar
 
    ![Assistente para Adicionar Funções e Recursos, necessário para o cluster de failover](media/Fig3_RequiredFeaturesFailover.png)
 
-   Figura 3
+   A figura 3
 
 4. Na página **Confirmação**, clique em **Instalar** para instalar o recurso de clustering de failover.
 
 5. Na página **Resultado**, certifique-se de que tudo foi instalado com êxito sem erros e avisos.
 
-### <a name="create-a-windows-server-failover-cluster"></a>Criar um novo cluster de failover do Windows Server
+### <a name="create-a-windows-server-failover-cluster"></a>Criar um cluster de failover do Windows Server
 
 Depois que o recurso de WSFC é instalado em todas as instâncias, você pode configurar o WSFC. Será necessário fazer isso em apenas um nó.
 
@@ -193,9 +193,9 @@ Esta seção aborda as seguintes tarefas.
 
 1. [Habilitar SQL Server Always on grupo de disponibilidade](#enable-sql-server-always-on-availability-groups-on-every-sql-server-instance).
 
-2. [Criar um Grupo de Disponibilidade](#create-an-availability-group).
+2. [Crie um grupo de disponibilidade](#create-an-availability-group).
 
-3. [Validar e Testar o Grupo de Disponibilidade](#validation-and-test-the-availability-group).
+3. [Valide e teste o grupo de disponibilidade](#validation-and-test-the-availability-group).
 
 Always On tem dois recursos para fornecer alta disponibilidade e recuperação de desastres para o MDS, ambos são criados com base no WSFC.
 
@@ -207,9 +207,9 @@ Um AG fornece disponibilidade no nível do banco de dados. O AG (um conjunto de 
 
 O FCIs fornece alta disponibilidade em nível de instância. O serviço de SQL Server e seus serviços relacionados são registrados como recursos no WSFC. Além disso, a solução FCI exige o armazenamento em disco compartilhado simétrico, como compartilhamentos de arquivo SMB ou SAN, que devem estar disponíveis para todos os nós no cluster WFC.
    
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
-- Instalar o SQL Server em todos os nós. Para obter mais informações, veja [Instalar o SQL Server 2016](../../database-engine/install-windows/install-sql-server.md).
+- Instalar o SQL Server em todos os nós. Para obter mais informações, consulte [instalar SQL Server 2016](../../database-engine/install-windows/install-sql-server.md).
 
 - (Recomendado) Instalar exatamente a mesma versão e conjunto de recursos do SQL Server em todos os nós. Em particular, o MDS deve ser instalado.
 
@@ -242,7 +242,7 @@ O FCIs fornece alta disponibilidade em nível de instância. O serviço de SQL S
 4. Clique em **Reiniciar** para reiniciar o serviço **SQL Server** e efetive essa alteração. Consulte a Figura 10.
 
 > [!NOTE]
-> Você pode alterar a conta de serviço que executa o serviço SQL Server usando o **SQL Server Configuration Manager**. Clique na guia **Logon** na caixa de diálogo **Propriedades do** **SQL Server (MSSQLSERVER)** . Consulte a Figura 11.
+> Você pode alterar a conta de serviço que executa o serviço SQL Server usando o **SQL Server Configuration Manager**. Clique na guia **Logon** na caixa de diálogo **Propriedades do** **SQL Server (MSSQLSERVER)**. Consulte a Figura 11.
 
 ### <a name="create-an-availability-group"></a>Criar um Grupo de Disponibilidade
 
@@ -278,7 +278,7 @@ O AG pode ser criado apenas em bancos de dados existentes. Portanto, você cria 
 
 5. Clique o banco de dados que você acabou de criar na página **Selecionar Banco de Dados** e clique em **Avançar**. Consulte a Figura 15.
 
-   ![Selecionar o banco de dados](media/Fig15_AvailabilityGroupSelectDatabase.png)
+   ![Selecione o banco de dados](media/Fig15_AvailabilityGroupSelectDatabase.png)
 
    Figura 15
 
@@ -298,13 +298,13 @@ O AG pode ser criado apenas em bancos de dados existentes. Portanto, você cria 
 
    Para cada réplica, defina as seguintes configurações **Confirmação Síncrona**, **Failover Automático** e **Secundária Legível**. Consulte a Figura 17.
 
-**Confirmação Síncrona**: isso garante que se uma transação for confirmada na réplica primária de um banco de dados, a transação também será confirmada em todas as outras réplicas síncronas. A confirmação assíncrona não garante isso e pode atrasar a réplica primária.
+**Confirmação síncrona**: isso garante que, se uma transação for confirmada na réplica primária de um banco de dados, a transação também será confirmada em todas as outras réplicas síncronas. A confirmação assíncrona não garante isso e pode atrasar a réplica primária.
 
 Normalmente, você deve habilitar confirmação síncrona apenas quando os dois nós estão no mesmo data center. Se eles estiverem em data centers diferentes, a confirmação síncrona poderá prejudicar o desempenho de banco de dados. Se essa caixa de seleção não estiver marcada, a confirmação assíncrona será usada.
 
-**Failover Automático:** quando a réplica primária estiver inativa, o AG realizará o failover automaticamente para sua réplica secundária quando o failover automático for selecionado. Isso só pode ser habilitado nas réplicas com confirmação síncrona.
+**Failover automático:** Quando a réplica primária estiver inativa, o AG realizará automaticamente o failover para sua réplica secundária quando o failover automático for selecionado. Isso só pode ser habilitado nas réplicas com confirmação síncrona.
 
-**Secundária Legível:** por padrão, os usuários não podem se conectar a nenhuma réplica secundária. Isso permitirá que os usuários se conectem à réplica secundária com acesso somente leitura.
+**Secundário legível:** Por padrão, os usuários não podem se conectar a nenhuma réplica secundária. Isso permitirá que os usuários se conectem à réplica secundária com acesso somente leitura.
 
 8. Na página **Especificar Réplicas**, clique na guia **Ouvinte** e faça o seguinte. Consulte a Figura 18.
 
@@ -391,7 +391,7 @@ Neste white paper, vimos como configurar e configurar o banco de dados de back-e
 
 ## <a name="feedback"></a>Comentários
 
-Este white paper foi útil? Envie seus comentários clicando **Comentários** na parte superior do artigo. 
+Este documento foi útil para você? Envie seus comentários clicando **Comentários** na parte superior do artigo. 
 
 Seus comentários nos ajudarão a melhorar a qualidade dos white papers que lançamos. 
 

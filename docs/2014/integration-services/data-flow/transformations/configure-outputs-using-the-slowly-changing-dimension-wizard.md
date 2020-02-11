@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0e64b60c027f7d6750a1afdb9988e1d6aac3ac1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770595"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurar saídas por meio do Assistente para Dimensões de Alteração Lenta
@@ -48,11 +48,11 @@ ms.locfileid: "62770595"
   
 4.  Escolha o tipo de alteração para cada coluna.  
   
-    -   O**Atributo de alteração** substitui valores existentes em registros.  
+    -   A **alteração do atributo** substitui os valores existentes nos registros.  
   
-    -   O**Atributo histórico** cria registros novos em vez de atualizar registros existentes.  
+    -   O **atributo histórico** cria novos registros em vez de atualizar os registros existentes.  
   
-    -   O**Atributo fixo** indica que o valor da coluna não deve ser alterado.  
+    -   O **atributo FIXED** indica que o valor da coluna não deve ser alterado.  
   
 5.  Defina opções de atributo fixo e de alteração.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62770595"
 ## <a name="updating-slowly-changing-dimension-outputs"></a>Atualizando saídas de Dimensão de Alteração Lenta  
  O modo mais simples de atualizar a configuração de saídas da transformação Dimensão de Alteração Lenta é executar novamente o Assistente para Dimensões de Alteração Lenta e modificar as propriedades das páginas do assistente. Você também pode atualizar a transformação Dimensão de Alteração Lenta usando a caixa de diálogo **Editor Avançado** ou programaticamente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)  
   
   

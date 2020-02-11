@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530944"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Ferramentas e abordagens para processamento (Analysis Services)
@@ -46,7 +46,7 @@ ms.locfileid: "69530944"
  O processamento é uma operação altamente configurável, controlada por um conjunto de opções de processamento que determinam se o processamento cheio ou incremental ocorre no nível do objeto. Para obter mais informações sobre como processar opções e objetos, consulte [Opções e configurações de processamento &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) e [Processando objetos do Analysis Services](processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  Este tópico descreve as ferramentas e as abordagens para processar modelos multidimensionais. Para obter mais informações sobre o processamento de modelos de tabela, consulte [processar banco de dados, tabela ou partição](../tabular-models/process-database-table-or-partition-analysis-services.md) e [processar data &#40;&#41;SSAS tabular](../process-data-ssas-tabular.md).  
+>  Este tópico descreve as ferramentas e as abordagens para processar modelos multidimensionais. Para obter mais informações sobre o processamento de modelos de tabela, consulte [processar dados, tabela, ou partição](../tabular-models/process-database-table-or-partition-analysis-services.md) e [processos &#40;SSAS tabular&#41;](../process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Processando objetos no SQL Server Management Studio  
   
@@ -84,7 +84,7 @@ ms.locfileid: "69530944"
   
 2.  Em Gerenciador de Soluções, no projeto implantado, expanda a pasta **Dimensões** .  
   
-3.  Clique com o botão direito do mouse em uma dimensão e clique em **Processar**. Você pode clicar com o botão direito em várias dimensões para processar vários objetos de uma vez. Para obter mais informações, consulte [Processamento em lote &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
+3.  Clique com o botão direito do mouse em uma dimensão e clique em **Processar**. Você pode clicar com o botão direito em várias dimensões para processar vários objetos de uma vez. Para obter mais informações, consulte [Processamento em lotes &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
   
 4.  Na caixa de diálogo **Processar Dimensão** , na coluna **Opções de Processo** na **Lista de objetos**, verifique se a opção dessa coluna é **Processar Completo**. Se essa opção não estiver selecionada, em **Opções de Processo**, clique na opção e selecione **Processar Completo** na lista suspensa.  
   
@@ -92,13 +92,14 @@ ms.locfileid: "69530944"
   
 6.  Quando o processamento terminar, clique em **Fechar**.  
   
-##  <a name="bkmk_impactanalysis"></a> Executar análise de impacto para identificar as dependências de objeto e o escopo de operações  
+##  <a name="bkmk_impactanalysis"></a>Executar análise de impacto para identificar dependências de objeto e escopo de operações  
   
 1.  Antes de processar um objeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], você pode analisar o efeito sobre objetos relacionados clicando em **Análise de Impacto** em uma das caixas de diálogo **Processar Objetos** .  
   
 2.  Clique com o botão direito do mouse em uma dimensão, cubo, grupo de medidas ou partição para abrir uma caixa de diálogo **Processar Objetos** .  
   
-3.  Clique em **Análise de Impacto**. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] examina o modelo e relata sobre o reprocessamento de requisitos para objetos que estão relacionados ao que você selecionou para processar.  
+3.  Clique em **Análise de Impacto**. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] examina o modelo e relata sobre o reprocessamento de requisitos para objetos que estão relacionados ao que você selecionou para processar.  
   
 ### <a name="processing-objects-using-xmla"></a>Processando objetos usando o XMLA  
   
@@ -138,13 +139,13 @@ ms.locfileid: "69530944"
   
 3.  Escolha os seguintes eventos:  
   
-    -   **Command Begin** e **Command End** para mostrar ao processar inícios e paradas  
+    -   **Comando BEGIN** e **Command end** para mostrar quando o processamento inicia e para.  
   
-    -   **Error** para capturar erros  
+    -   **Erro** ao capturar erros  
   
-    -   **Progress Report Begin**, **Progress Report Current**e **Progress Report End** para reportar sobre o status do processo e mostrar as consultas de SQL usadas para recuperar os dados  
+    -   **Início do relatório de progresso**, relatório de **progresso atual**e **relatório de andamento fim** de relatório sobre o status do processo e mostram as consultas SQL usadas para recuperar os dados  
   
-    -   **Execute MDX Script Begin** e **Execute MDX Script End** para mostrar os cálculos de cubo  
+    -   **Execute o script MDX Begin** e **Execute o script MDX end** para mostrar os cálculos do cubo  
   
     -   Opcionalmente, adicione eventos de bloqueio se você estiver diagnosticando problemas de desempenho relacionados ao processamento  
   
@@ -156,7 +157,7 @@ ms.locfileid: "69530944"
   
 3.  Edite a tarefa para especificar uma conexão com o banco de dados, quais objetos processar e opção de processamento. Para obter mais informações sobre como implementar essa tarefa, consulte [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Processamento de objeto de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Processamento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)  
   
   

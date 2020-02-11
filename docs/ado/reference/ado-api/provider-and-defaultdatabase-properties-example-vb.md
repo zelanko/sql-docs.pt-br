@@ -1,5 +1,5 @@
 ---
-title: Exemplo de propriedades de DefaultDatabase (VB) e provedor | Microsoft Docs
+title: Exemplo das propriedades Provider e DefaultDatabase (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,17 +16,17 @@ ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 46486167ab5e8bd1b063928d4ba3f6f73c893784
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931515"
 ---
-# <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provedor e o exemplo de propriedades de DefaultDatabase (VB)
-Este exemplo demonstra a [provedor](../../../ado/reference/ado-api/provider-property-ado.md) propriedade abrindo três [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objetos usando diferentes provedores. Ele também usa o [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) propriedade para definir o banco de dados padrão para o provedor do Microsoft ODBC.  
+# <a name="provider-and-defaultdatabase-properties-example-vb"></a>Exemplo das propriedades Provider e DefaultDatabase (VB)
+Este exemplo demonstra a propriedade do [provedor](../../../ado/reference/ado-api/provider-property-ado.md) abrindo três objetos de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) usando provedores diferentes. Ele também usa a propriedade [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) para definir o banco de dados padrão para o provedor ODBC da Microsoft.  
   
 > [!NOTE]
->  Se você estiver se conectando a um provedor de fonte de dados que dá suporte à autenticação do Windows, você deve especificar **Trusted_Connection = yes** ou **Integrated Security = SSPI** em vez de ID de usuário e senha informações na cadeia de conexão.  
+>  Se você estiver se conectando a um provedor de fonte de dados que dá suporte à autenticação do Windows, especifique **Trusted_Connection = Sim** ou **segurança integrada = SSPI** , em vez de ID de usuário e informações de senha na cadeia de conexão.  
   
 ```  
 'BeginProviderVB  
@@ -104,7 +104,7 @@ End Sub
 'EndProviderVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Objeto de conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Propriedade DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Propriedade Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

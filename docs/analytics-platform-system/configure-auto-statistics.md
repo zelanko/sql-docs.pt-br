@@ -11,10 +11,10 @@ ms.reviewer: martinle
 ms.custom: seo-dt-2019
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
 ms.openlocfilehash: 7071c9cb46bde6e2d353293cec9f01451c0b4f67
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401280"
 ---
 # <a name="configure-auto-statistics"></a>Configurar estatísticas automáticas
@@ -58,7 +58,7 @@ AUTO_UPDATE opção STATISTICS_ASYNC só funcionará se AUTO_UPDATE_STATISTICS e
 ### <a name="error-messages"></a>Mensagens de erro
 Você pode receber a mensagem de erro "esta opção não tem suporte no PDW".  Esse erro ocorre quando o administrador do sistema não habilitou estatísticas automáticas e você tenta definir qualquer uma das opções de estatísticas automáticas em ALTER DATABASE. 
 
-### <a name="limitations-and-restrictions"></a>Limitações e restrições
+### <a name="limitations-and-restrictions"></a>Limitações e Restrições
 As estatísticas automáticas não funcionam em tabelas externas. 
 
 ### <a name="check-the-current-values"></a>Verificar os valores atuais

@@ -14,23 +14,23 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: df90080d0c07b87d646c7c67cbe1fd672a2a582f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780666"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>Criar perfil de dados de desempenho do driver ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Este exemplo mostra as opções específicas do driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para registrar estatísticas de desempenho. O exemplo cria um arquivo: odbcperf. log. Este exemplo mostra a criação de um arquivo de log de dados de desempenho e a exibição de dados de desempenho diretamente da estrutura de dados SQLPERF (a estrutura SQLPERF é definida em odbcss. h.). Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
+  Este exemplo mostra as opções específicas do driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para registrar estatísticas de desempenho. O exemplo cria um arquivo: odbcperf.log. Esse exemplo mostra tanto a criação de um arquivo de log de dados de desempenho quanto a exibição dos dados de desempenho diretamente da estrutura de dados SQLPERF (a estrutura SQLPERF é definida em Odbcss.h.). Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você precisar manter as credenciais, deverá criptografá-las com a [API de criptografia do Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>Para registrar dados de desempenho de driver usando o Administrador ODBC  
   
-1.  No **painel de controle**, clique duas vezes em **Ferramentas administrativas** e, em seguida, clique duas vezes em **fontes de dados (ODBC)** . Como alternativa, você pode invocar odbcad32.exe.  
+1.  No **painel de controle**, clique duas vezes em **Ferramentas administrativas** e, em seguida, clique duas vezes em **fontes de dados (ODBC)**. Como alternativa, você pode invocar odbcad32.exe.  
   
 2.  Clique na guia **DSN do usuário**, DSN do **sistema**ou DSN de **arquivo** .  
   
@@ -240,8 +240,8 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Tópicos &#40;de instruções de desempenho do driver ODBC de criação&#41; de perfil ODBC](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tópicos de instruções de desempenho do driver ODBC de criação de perfil &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
  [Criando perfil de desempenho do driver ODBC](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   
   

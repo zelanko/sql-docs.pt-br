@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f88a966e2095f527f36c84498e026c1e23aaa2ab
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785218"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Cópia em massa de variáveis do programa
@@ -51,14 +51,14 @@ ms.locfileid: "73785218"
   
  O parâmetro de_tipo_ **bcp_bind**usa identificadores de tipo de dados de biblioteca DB, não identificadores de tipo de dados ODBC. Os identificadores de tipo de dados da biblioteca DB são definidos em sqlncli. h para uso com a função ODBC **bcp_bind** .  
   
- As funções de cópia em massa não têm suporte para todos os tipos de dados do ODBC C. Por exemplo, as funções de cópia em massa não dão suporte à estrutura de SQL_C_TYPE_TIMESTAMP ODBC, portanto, use [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) ou [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) para converter dados ODBC SQL_TYPE_TIMESTAMP em uma variável SQL_C_CHAR. Se você usar **bcp_bind** com um parâmetro de *tipo* de SQLCHARACTER para associar a variável a uma coluna de **data e hora** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as funções de cópia em massa converterão a cláusula de escape de carimbo de data/hora na variável de caractere para o formato de data e hora apropriado.  
+ As funções de cópia em massa não têm suporte para todos os tipos de dados do ODBC C. Por exemplo, as funções de cópia em massa não dão suporte à estrutura de SQL_C_TYPE_TIMESTAMP ODBC, portanto, use [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) ou [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) para converter dados ODBC SQL_TYPE_TIMESTAMP em uma variável SQL_C_CHAR. Se você usar **bcp_bind** com um parâmetro de *tipo* de SQLCHARACTER para associar a variável a uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coluna **DateTime** , as funções de cópia em massa converterão a cláusula de escape timestamp na variável Character para o formato DateTime adequado.  
   
  A tabela seguinte lista os tipos de dados indicados para usar mapeando de um tipo de dados do ODBC SQL para um tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Tipo de dados do ODBC SQLz|Tipos de dados do ODBC C|parâmetro de *tipo* de bcp_bind|Tipo de dados do SQL Server|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
 |SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**character**<br /><br /> **char**|  
-|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **variável de caractere**<br /><br /> **char varying**<br /><br /> **sysname**|  
+|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **variável de caractere**<br /><br /> **variação de caractere**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
 |SQL_WVARCHAR|SQL_C_WCHAR|SQLNVARCHAR|**nvarchar**|  
@@ -78,14 +78,14 @@ ms.locfileid: "73785218"
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **timestamp**|  
 |SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **variação binária**|  
-|SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**image**|  
+|SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**imagem**|  
 |SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIMESTAMP|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não assinou tipos **de dados** **tinyint**, **smallint**não assinados ou não assinados. Para impedir a perda de valores de dados ao migrar estes tipos de dados, crie a tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o próximo tipo de dados de inteiro maior. Para impedir que os usuários adicionem posteriormente valores fora da faixa permitida pelo tipo de dados original, aplique uma regra à coluna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a fim de restringir os valores permitidos para a faixa com suporte do tipo de dados na fonte original:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Não **tem os tipos** de dados **tinyint**, **smallint**não assinados ou sem assinatura. Para impedir a perda de valores de dados ao migrar estes tipos de dados, crie a tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o próximo tipo de dados de inteiro maior. Para impedir que os usuários adicionem posteriormente valores fora da faixa permitida pelo tipo de dados original, aplique uma regra à coluna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a fim de restringir os valores permitidos para a faixa com suporte do tipo de dados na fonte original:  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -107,13 +107,13 @@ GO
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não dá suporte a tipos de dados de intervalo diretamente. Porém, um aplicativo pode armazenar sequências de escape de intervalo como cadeias de caracteres em uma coluna de caractere do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O aplicativo pode lê-los para uso posterior, mas eles não podem ser usados em instruções do [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- As funções de cópia em massa podem ser usadas para carregar dados que tenham sido lidos de uma fonte de dados ODBC rapidamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) para associar as colunas de um conjunto de resultados às variáveis de programa e, em seguida, use **bcp_bind** para associar as mesmas variáveis de programa a uma operação de cópia em massa. Chamar [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) ou **SQLFetch** , em seguida, busca uma linha de dados da fonte de dados ODBC nas variáveis do programa e chamar [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) copia em massa os dados das variáveis do programa para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ As funções de cópia em massa podem ser usadas para carregar dados que tenham sido lidos de uma fonte de dados ODBC rapidamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) para associar as colunas de um conjunto de resultados às variáveis de programa e, em seguida, use **bcp_bind** para associar as mesmas variáveis de programa a uma operação de cópia em massa. Chamar [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) ou **SQLFetch** , em seguida, busca uma linha de dados da fonte de dados ODBC nas variáveis do programa e chamar [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) copia em massa os dados das variáveis do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programa para o.  
   
  Um aplicativo pode usar a função [bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) sempre que precisar alterar o endereço da variável de dados especificada originalmente no parâmetro **bcp_bind** _pData_ . Um aplicativo pode usar a função [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) sempre que precisar alterar o comprimento dos dados originalmente especificado no parâmetro **bcp_bind**_cbData_ .  
   
  Você não pode ler dados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em variáveis de programa que usam cópia em massa; não há nada como uma função "bcp_readrow". Você só pode enviar dados do aplicativo para o servidor.  
   
-## <a name="see-also"></a>Consulte também  
- [Executando operações &#40;de cópia em massa ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Executando operações de cópia em massa &#40;&#41;ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

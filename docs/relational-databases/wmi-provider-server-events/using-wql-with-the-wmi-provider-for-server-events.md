@@ -17,10 +17,10 @@ ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 57f7e07de49b2591e9ab0ef74603d674543282e9
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660485"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Usando o WQL com o Provedor WMI para eventos de servidor
@@ -66,7 +66,7 @@ WHERE where_condition
  *event_property*  
  É uma propriedade de um evento. Os exemplos incluem a **hora**, **SPID**e **LoginName**. Pesquise cada evento listado no [provedor WMI para classes de eventos de servidor e propriedades](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md) para determinar quais propriedades ele contém. Por exemplo, o evento DDL_DATABASE_LEVEL_EVENTS mantém as propriedades **DatabaseName** e **username** . Ele também herda as propriedades **SQLInstance**, **LoginName**, **TimeTime**, **SPID**e **ComputerName** de seus eventos pai.  
   
- **,** *...n*  
+ **,** *... n*  
  Indica que *event_property* pode ser consultada várias vezes, separadas por vírgulas.  
   
  \*  
@@ -81,9 +81,9 @@ WHERE where_condition
  *where_condition*  
  É um predicado de consulta de cláusula WHERE composto por nomes de *event_property* e operadores lógicos e de comparação. O *where_condition* determina o escopo no qual a notificação de evento correspondente é registrada no banco de dados de destino. Ele também pode atuar como um filtro para direcionar um esquema ou objeto específico do qual consultar *event_type.* Para obter mais informações, consulte a seção Comentários, mais adiante neste tópico.  
   
- Somente o operando `=` pode ser usado junto com **DatabaseName**, **SchemaName**e **objectname**. Não é possível usar outras expressões com essas propriedades de eventos.  
+ Somente o `=` operando pode ser usado junto com **DatabaseName**, **SchemaName**e **objectname**. Não é possível usar outras expressões com essas propriedades de eventos.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O *where_condition* da sintaxe do provedor WMI para eventos de servidor determina o seguinte:  
   
 -   O escopo pelo qual o provedor tenta recuperar o *event_type*especificado: nível de servidor, nível de banco de dados ou nível de objeto (o único objeto com suporte no momento é a fila). Por fim, esse escopo determina o tipo de notificação de eventos criado no banco de dados de destino. Esse processo chamou o registro de notificação de eventos.  
@@ -92,7 +92,7 @@ WHERE where_condition
   
  O Provedor WMI para eventos de servidor usa um algoritmo ascendente, o primeiro que for válido (first fit), a fim de gerar o escopo mais restrito possível para a EVENT NOTIFICATION subjacente. O algoritmo tenta minimizar a atividade interna no servidor e o tráfego de rede entre a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o processo do host WMI. O provedor examina a *event_type* especificada na cláusula From e as condições na cláusula WHERE e tenta registrar a notificação de evento subjacente com o escopo mais estreito possível. Se o provedor não puder registrar com o escopo mais restrito, ele tentará registrar com escopos sucessivamente superiores, até que um registro finalmente tenha êxito. Se o escopo mais alto (o nível de servidor) for atingido e falhar, um erro será retornado ao consumidor.  
   
- Por exemplo, se DatabaseName = **'** AdventureWorks **'** for especificado na cláusula WHERE, o provedor tentará registrar uma notificação de evento no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Se o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] existir e o cliente que fez a chamada tiver as permissões necessárias para criar uma notificação de eventos em [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], o registro terá êxito. Caso contrário, será feita uma tentativa de registrar a notificação de eventos no nível de servidor. O registro terá êxito se o cliente WMI tiver as permissões necessárias. Porém, neste cenário, os eventos não são retornados ao cliente até que o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tenha sido criado.  
+ Por exemplo, se DatabaseName =**'** AdventureWorks **'** for especificado na cláusula WHERE, o provedor tentará registrar uma notificação de evento no banco [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de dados. Se o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] existir e o cliente que fez a chamada tiver as permissões necessárias para criar uma notificação de eventos em [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], o registro terá êxito. Caso contrário, será feita uma tentativa de registrar a notificação de eventos no nível de servidor. O registro terá êxito se o cliente WMI tiver as permissões necessárias. Porém, neste cenário, os eventos não são retornados ao cliente até que o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tenha sido criado.  
   
  O *where_condition* também pode atuar como um filtro para limitar ainda mais a consulta a um banco de dados, esquema ou objeto específico. Por exemplo, considere a seguinte consulta WQL:  
   
@@ -106,7 +106,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  Se uma expressão composta, como `DatabaseName='AW1'` OR `DatabaseName='AW2'`, for especificada, será feita uma tentativa de registrar uma única notificação de eventos no escopo do servidor, em vez de duas notificações de eventos separadas. O registro terá êxito se o cliente que fez a chamada tiver as permissões.  
   
- Se `SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'` forem todos especificados na cláusula `WHERE`, será feita uma tentativa de registrar a notificação de eventos diretamente no objeto `Z` em `X`de esquema. O registro terá êxito se o cliente tiver as permissões. Observe que, no momento, os eventos de nível de objeto têm suporte apenas em filas e somente para o QUEUE_ACTIVATION *event_type*.  
+ Se `SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'` forem todos especificados na `WHERE` cláusula, será feita uma tentativa de registrar a notificação de eventos diretamente no objeto `Z` no esquema `X`. O registro terá êxito se o cliente tiver as permissões. Observe que, no momento, os eventos de nível de objeto têm suporte apenas em filas e somente para o QUEUE_ACTIVATION *event_type*.  
   
  Observe que nem todos os eventos podem ser consultados em qualquer escopo específico. Por exemplo, uma consulta WQL em um evento de rastreamento, como Lock_Deadlock, ou um grupo de eventos de rastreamento, como TRC_LOCKS, podem ser registrado apenas no nível de servidor. De forma semelhante, o evento CREATE_ENDPOINT e o grupo de eventos DDL_ENDPOINT_EVENTS também podem ser registrados apenas no nível de servidor. Para obter mais informações sobre o escopo apropriado para o registro de eventos, consulte [criando notificações de eventos](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx). Uma tentativa de registrar uma consulta WQL cujo *event_type* só pode ser registrado no nível do servidor sempre é feita no nível do servidor. O registro terá êxito se o cliente WMI tiver as permissões. Caso contrário, será retornado um erro ao cliente. Entretanto, em alguns casos, você ainda pode usar a cláusula WHERE como um filtro para eventos em nível de servidor com base nas propriedades que correspondem ao evento. Por exemplo, muitos eventos de rastreamento têm uma propriedade **DatabaseName** que pode ser usada na cláusula WHERE como um filtro.  
   
@@ -116,7 +116,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-querying-for-events-at-the-server-scope"></a>A. Consultando eventos no escopo de servidor  
+### <a name="a-querying-for-events-at-the-server-scope"></a>a. Consultando eventos no escopo de servidor  
  A consulta WQL a seguir recupera todas as propriedades de evento de qualquer evento de rastreamento `SERVER_MEMORY_CHANGE` que ocorre na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
@@ -140,7 +140,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
     AND ObjectType='Table' AND ObjectName = 'SalesOrderDetail'  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Provedor WMI para conceitos de eventos de servidor](https://technet.microsoft.com/library/ms180560.aspx)   
  [Notificações de eventos (Mecanismo de Banco de Dados)](https://technet.microsoft.com/library/ms182602.aspx)  
   

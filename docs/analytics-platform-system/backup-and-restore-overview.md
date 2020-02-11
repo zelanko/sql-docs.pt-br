@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 75399480879623a39da542c68f036389c645f6ab
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401355"
 ---
 # <a name="backup-and-restore"></a>Backup e restauração
@@ -130,11 +130,11 @@ Após a redistribuição, cada nó de computação conterá menos dados reais e 
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Tarefa de backup e restauração|Descrição|  
+|Tarefa de backup e restauração|DESCRIÇÃO|  
 |---------------------------|---------------|  
 |Prepare um servidor como um servidor de backup.|[Adquirir e configurar um servidor de backup](acquire-and-configure-backup-server.md)|  
 |Fazer backup de um banco de dados.|[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
-|Restaurar um banco de dados.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+|Restaurar um banco de dados.|[RESTAURAR BANCO DE DADOS](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 
 <!-- MISSING LINKS
 

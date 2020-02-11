@@ -11,10 +11,10 @@ ms.assetid: 332d3c86-4440-4f12-a6cb-ffbfbccde52c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5a9210db5a2594f03b7916d06ed975d69882b513
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727809"
 ---
 # <a name="validation-stored-procedure-master-data-services"></a>Procedimento armazenado de validação (Master Data Services)
@@ -51,17 +51,17 @@ EXECUTE mdm.udpValidateModel @User_ID, @Model_ID, @Version_ID, 1
   
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  Os parâmetros desse procedimento são os seguintes:  
   
-|Parâmetro|Descrição|  
+|Parâmetro|DESCRIÇÃO|  
 |---------------|-----------------|  
 |UserID|A ID do usuário.|  
 |Model_ID|A ID do modelo.|  
 |Version_ID|A ID da versão.|  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
- [Validar uma versão em relação a regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral: importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
+ [Validar uma versão em relação às regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
   

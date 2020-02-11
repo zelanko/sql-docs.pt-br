@@ -15,10 +15,10 @@ ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5f2d15e2a98f04d7481200dfea17cfe5ca852a84
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729203"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Permissões de área funcional (Master Data Services)
@@ -27,15 +27,15 @@ ms.locfileid: "73729203"
 
   É possível atribuir permissão a cada uma das áreas funcionais da interface do usuário do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Estas são as áreas funcionais:  
   
--   **Gerenciador**  
+-   **Explorer**  
   
--   **Gerenciamento de Versões**  
+-   **Gerenciamento de versões**  
   
--   **Gerenciamento de Integração**  
+-   **Gerenciamento de integração**  
   
--   **Administração do Sistema**  
+-   **Administração do sistema**  
   
--   **Permissões de Usuário e Grupo**  
+-   **Permissões de usuário e grupo**  
   
 -   **Superusuário**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73729203"
   
  Um usuário ou grupo deve ter permissão a, pelo menos, uma área funcional e um modelo na guia **Modelos** para acessar o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atribuir permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)   
  [Permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Permissões de membro de hierarquia &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   

@@ -14,10 +14,10 @@ ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7e41af6f7b5f1d2a770400ab66191f7957937659
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729398"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>Implantar um pacote de implantação de modelo usando o Assistente
@@ -29,7 +29,7 @@ ms.locfileid: "73729398"
 > [!IMPORTANT]  
 >  Os pacotes podem ser implantados somente na edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] na qual eles foram criados. Isso significa que os pacotes criados no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] não podem ser implantados no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deverá ter permissão para acessar a área funcional **Administração do Sistema** no ambiente [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] de destino.  
@@ -50,7 +50,7 @@ ms.locfileid: "73729398"
   
 5.  Localize seu pacote de implantação (arquivo .pkg) e clique em **Abrir**.  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
 7.  Depois que o pacote for carregado, clique em **Avançar**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73729398"
   
 9. Clique em **Concluir** para sair do assistente.  
   
- **Observações:**  
+ **Registra**  
   
 -   Se uma exibição de assinatura no pacote tiver o mesmo nome que uma exibição de assinatura em um modelo existente, este aviso será exibido: **Exibição da assinatura do implantador renomeada**. Além disso, a exibição é criada como *modelname.subscriptionviewname*. Se esse nome já estiver em uso, a exibição de assinatura não será criada.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73729398"
   
 -   [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implantando modelos &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

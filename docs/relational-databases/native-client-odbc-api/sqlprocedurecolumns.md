@@ -15,24 +15,24 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ece1e3a161b03598ebc40ce9022780387b47e5c3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785961"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLProcedureColumns** retorna uma linha que relata os atributos de valor de retorno de todos os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  **SQLProcedureColumns** retorna uma linha relatando os atributos de valor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de retorno de todos os procedimentos armazenados.  
   
- **SQLProcedureColumns** retorna SQL_SUCCESS independentemente da existência de valores para os parâmetros *CatalogName*, *SchemaName*, *ProcName*ou *ColumnName* . **SQLFetch** retorna SQL_NO_DATA quando são usados valores inválidos nesses parâmetros.  
+ **SQLProcedureColumns** retorna SQL_SUCCESS se os valores existem ou não para os parâmetros *CatalogName*, *schemas*, *ProcName*ou *ColumnName* . **SQLFetch** retorna SQL_NO_DATA quando valores inválidos são usados nesses parâmetros.  
   
  **SQLProcedureColumns** pode ser executado em um cursor de servidor estático. Uma tentativa de executar **SQLProcedureColumns** em um cursor atualizável (dinâmico ou conjunto de chaves) retornará SQL_SUCCESS_WITH_INFO, indicando que o tipo de cursor foi alterado.  
   
  A tabela a seguir lista as colunas retornadas pelo conjunto de resultados e como elas foram estendidas para tratar os tipos de dados **udt** e **xml** por meio do driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client:  
   
-|Nome da coluna|Descrição|  
+|Nome da coluna|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|Retorna o nome do catálogo que contém o UDT (tipo definido pelo usuário).|  
 |SS_UDT_SCHEMA_NAME|Retorna o nome do esquema que contém o UDT.|  
@@ -48,16 +48,16 @@ ms.locfileid: "73785961"
 |-----------------|------------------------|  
 |DATA_TYPE|SQL_SS_TABLE|  
 |TYPE_NAME|O nome do tipo de tabela para o parâmetro com valor de tabela.|  
-|COLUMN_SIZE|NULL|  
+|COLUMN_SIZE|NULO|  
 |BUFFER_LENGTH|0|  
 |DECIMAL_DIGITS|O número de colunas no parâmetro com valor de tabela.|  
-|NUM_PREC_RADIX|NULL|  
+|NUM_PREC_RADIX|NULO|  
 |NULLABLE|SQL_NULLABLE|  
-|REMARKS|NULL|  
-|COLUMN_DEF|NULL. Os tipos de tabela não podem ter valores padrão.|  
+|COMENTÁRIOS|NULO|  
+|COLUMN_DEF|NULO. Os tipos de tabela não podem ter valores padrão.|  
 |SQL_DATA_TYPE|SQL_SS_TABLE|  
-|SQL_DATETIME_SUB|NULL|  
-|CHAR_OCTET_LENGTH|NULL|  
+|SQL_DATETIME_SUB|NULO|  
+|CHAR_OCTET_LENGTH|NULO|  
 |IS_NULLABLE|"YES"|  
 |SS_TYPE_CATALOG_NAME|Retorna o nome do catálogo que contém a tabela ou o tipo CLR definido pelo usuário.|  
 |SS_TYPE_SCHEMA_NAME|Retorna o nome do esquema que contém a tabela ou o tipo CLR definido pelo usuário.|  
@@ -66,18 +66,18 @@ ms.locfileid: "73785961"
   
  De acordo com a especificação de ODBC, SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME aparecem antes de todas as colunas específicas do driver adicionadas em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e depois de todas as colunas autorizadas pelo próprio ODBC.  
   
- Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros &#40;com valor&#41;de tabela ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlprocedurecolumns-support-for-enhanced-date-and-time-features"></a>Suporte de SQLProcedureColumns a recursos aprimorados de data e hora  
  Para obter os valores retornados para tipos de data/hora, consulte [Catalog Metadata](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md).  
   
- Para obter mais informações gerais, consulte [melhorias &#40;de data e&#41;hora ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obter mais informações gerais, consulte [melhorias de data e hora &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>Suporte de SQLProcedureColumns a UDTs CLR grandes  
- **SQLProcedureColumns** dá suporte a tipos CLR definidos pelo usuário grandes. Para obter mais informações, consulte [ &#40;ODBC&#41;grandes tipos de CLR definidos pelo usuário](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ O **SQLProcedureColumns** dá suporte a UDTs (tipos definidos pelo usuário) CLR grandes. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Função SQLProcedureColumns](https://go.microsoft.com/fwlink/?LinkId=59363)   
- [Detalhes da implementação da API do ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

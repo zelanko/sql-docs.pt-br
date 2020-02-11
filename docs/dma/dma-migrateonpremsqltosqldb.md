@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: cc87b541b2b6ebf2f6a9068ba35ae0f62f8e9988
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056610"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrar SQL Server locais ou SQL Server em VMs do Azure para o banco de dados SQL do Azure usando o Assistente de Migração de Dados
@@ -120,6 +120,6 @@ A tela final mostra o status geral.
 
 ## <a name="see-also"></a>Confira também
 
-* [Assistente de Migração de Dados (DMA)](../dma/dma-overview.md)
+* [AMD (Assistente de Migração de Dados)](../dma/dma-overview.md)
 * [Assistente de Migração de Dados: definições de configuração](../dma/dma-configurationsettings.md)
 * [Assistente de Migração de Dados: práticas recomendadas](../dma/dma-bestpractices.md)

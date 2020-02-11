@@ -16,10 +16,10 @@ ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 932a54323ad8f6ffafbe8ff8f4a7f3c2dc58b0e2
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632985"
 ---
 # <a name="sp_validatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "73632985"
 
   Executa uma validação para a assinatura especificada. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,32 +40,32 @@ sp_validatemergesubscription [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` é o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @subscriber = ] 'subscriber'` é o nome do Assinante. o *assinante* é **sysname**, sem padrão.  
+`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o *assinante* é **sysname**, sem padrão.  
   
-`[ @subscriber_db = ] 'subscriber_db'` é o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, sem padrão.  
+`[ @subscriber_db = ] 'subscriber_db'`É o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, sem padrão.  
   
-`[ @level = ] 'level'` é o tipo de validação a ser executada. o *nível* é **tinyint**, sem padrão. O nível pode ser um destes valores:  
+`[ @level = ] 'level'`É o tipo de validação a ser executada. o *nível* é **tinyint**, sem padrão. O nível pode ser um destes valores:  
   
-|Valor de nível|Descrição|  
+|Valor de nível|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |**1**|Validação só de número de linhas.|  
 |**2**|Validação de número de linhas e soma de verificação.|  
-|**3**|Validação de número de linhas e soma de verificação binária.|  
+|**Beta**|Validação de número de linhas e soma de verificação binária.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_validatemergesubscription** é usado na replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_validatemergesubscription**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [Validar  de dados replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
- [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
+ [Validar dados replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
+ [&#41;&#40;Transact-SQL de sp_validatemergepublication](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
   
   

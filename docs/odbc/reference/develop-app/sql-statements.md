@@ -11,18 +11,18 @@ ms.assetid: 78133ee0-1e2f-4dc8-81f6-3bac8eb21332
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 712644352eeb7ac55af861dfef48292aad0d5adb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107489"
 ---
 # <a name="sql-statements"></a>Instruções SQL
-Aplicativos ODBC realizam quase todo o acesso de banco de dados executando instruções SQL. A forma dessas instruções - embutido em código ou construídas em tempo de execução, interoperável ou específico da fonte de dados e assim por diante – depende das necessidades do aplicativo.  
+Os aplicativos ODBC executam quase todo o acesso ao banco de dados executando instruções SQL. A forma dessas instruções – embutidas em código ou construída em tempo de execução, interoperável ou específica da fonte de dados, e assim por diante, depende das necessidades do aplicativo.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
--   [Construindo instruções SQL](../../../odbc/reference/develop-app/constructing-sql-statements.md)  
+-   [Construir instruções SQL](../../../odbc/reference/develop-app/constructing-sql-statements.md)  
   
 -   [Interoperabilidade de instruções SQL](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md)  
   

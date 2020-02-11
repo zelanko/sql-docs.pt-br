@@ -13,10 +13,10 @@ ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b70622ea038b61883ce7a5307a558a5667139fb1
-ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74491967"
 ---
 # <a name="odbcconfexe"></a>ODBCCONF. EXE
@@ -35,13 +35,13 @@ ODBCCONF [switches] action
  *comutadores*  
  Zero ou mais opções de comutação. Para obter a lista de opções disponíveis, consulte a seção comentários, mais adiante neste tópico.  
   
- *Action*  
+ *action*  
  Uma ação a ser executada. Para obter a lista de opções disponíveis, consulte a seção comentários.  
   
 ## <a name="remarks"></a>Comentários  
  As seguintes opções estão disponíveis:  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |/A {*ação*}|Especifique uma ação.<br /><br /> /A será opcional se apenas uma ação for especificada.|  
 |/?|Exibir o uso de ODBCCONF. EXE.|  
@@ -55,7 +55,7 @@ ODBCCONF [switches] action
   
  As seguintes ações estão disponíveis:  
   
-|Ação|Descrição|  
+|Ação|DESCRIÇÃO|  
 |------------|-----------------|  
 |*Parâmetros de configuração específicos do driver CONFIGDRIVER driver_name * **|Carrega a DLL de configuração de driver apropriada e chama a função **ConfigDriver** .<br /><br /> Equivalente à [função SQLConfigDriver](../odbc/reference/syntax/sqlconfigdriver-function.md).<br /><br /> Por exemplo:<br /><br /> /A {CONFIGDRIVER "nome do driver" "CPTimeout = 60"}<br /><br /> /A {CONFIGDRIVER "nome do driver" "DriverODBCVer = 03.80"}|  
 |CONFIGDSN *driver_name* DSN =*nome* &#124; *atributos*|Adiciona ou modifica uma fonte de dados do sistema.<br /><br /> Equivalente à [função SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Por exemplo:<br /><br /> /A {CONFIGDSN "SQL Server" "DSN = Name &#124; Server = SRV"}|  
@@ -66,4 +66,4 @@ ODBCCONF [switches] action
 |SETFILEDSNDIR|Quando HKEY_LOCAL_MACHINE \SOFTWARE\ODBC\ODBC. O arquivo INI\ODBC DSN\DefaultDSNDir não existe, a ação SETFILEDSNDIR o criará e atribuirá a ele o valor em HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir, acrescentado com as fontes \ODBC\Data.<br /><br /> O valor em HKEY_LOCAL_MACHINE \SOFTWARE\ODBC\ODBC. O arquivo INI\ODBC DSN\DefaultDSNDir especifica o local padrão usado pelo administrador de fonte de dados ODBC ao criar uma fonte de dados baseada em arquivo.<br /><br /> Por exemplo:<br /><br /> /A {SETFILEDSNDIR}|  
   
 ## <a name="see-also"></a>Consulte Também  
- [ODBC (Microsoft Open Database Connectivity)](../odbc/microsoft-open-database-connectivity-odbc.md)
+ [Microsoft ODBC (Open Database Connectivity)](../odbc/microsoft-open-database-connectivity-odbc.md)

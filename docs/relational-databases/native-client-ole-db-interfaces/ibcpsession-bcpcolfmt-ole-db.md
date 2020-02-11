@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0471fc5fe8d7fc8b3b55d6fec39780e60f591db9
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73765695"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -42,8 +42,8 @@ HRESULT BCPColFmt(
       DBORDINAL idxServerCol);  
 ```  
   
-## <a name="remarks"></a>Remarks  
- O método **BCPColFmt** é usado para criar uma associação entre campos de arquivo de dados BCP e colunas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ele usa o comprimento, o tipo, o terminador e o comprimento do prefixo de uma coluna como parâmetros e define cada uma dessas propriedades para arquivos individuais.  
+## <a name="remarks"></a>Comentários  
+ O método **BCPColFmt** é usado para criar uma associação entre campos de arquivo de dados BCP e colunas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele usa o comprimento, o tipo, o terminador e o comprimento do prefixo de uma coluna como parâmetros e define cada uma dessas propriedades para arquivos individuais.  
   
  Caso o usuário opte pelo modo interativo, esse método é chamado duas vezes: uma para definir o formato da coluna de acordo com os valores padrão (que dependem do tipo de coluna do servidor) e outra para definir o formato de acordo com o tipo de coluna da opção feita pelo cliente durante o modo interativo em cada coluna.  
   
@@ -66,11 +66,11 @@ HRESULT BCPColFmt(
  Cada chamada para **BCPColFmt** especifica o formato de um campo de arquivo do usuário. Por exemplo, para alterar as configurações padrão de três campos em um arquivo de dados do usuário com cinco campos, primeiro chame `BCPColumns(5)`e, em seguida, **BCPColFmt** cinco vezes, com três dessas chamadas definindo o formato personalizado. Para as duas chamadas restantes, defina *eUserDataType* como BCP_TYPE_DEFAULT, além de *cbIndicator*, *cbUserData*e *cbUserDataTerm* como 0, BCP_VARIABLE_LENGTH e 0, respectivamente. Esse procedimento copia todas as cinco colunas, três com seu formato personalizado e duas com o formato padrão.  
   
 > [!NOTE]  
->  O método [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) deve ser chamado antes de qualquer chamada para **BCPColFmt**. Você deve chamar **BCPColFmt** uma vez para cada coluna no arquivo do usuário. Chamar **BCPColFmt** mais de uma vez para qualquer coluna de arquivo do usuário causa um erro.  
+>  O método [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) precisa ser chamado antes de qualquer chamada a **BCPColFmt**. Você deve chamar **BCPColFmt** uma vez para cada coluna no arquivo de usuário. Chamar **BCPColFmt** mais de uma vez para qualquer coluna de arquivo de usuário causa um erro.  
   
  Você não precisa copiar todos os dados de um arquivo de usuário para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para ignorar uma coluna, especifique o formato dos dados da coluna definindo o parâmetro idxServerCol como 0. Para ignorar um campo, você continua precisando de todas as informações para que o método funcione corretamente.  
   
- **Observação** A função [IBCPSession::BCPWriteFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) pode ser usada para manter a especificação do formato fornecida por meio de **BCPColFmt**.  
+ **Observação** A função [IBCPSession:: BCPWriteFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) pode ser usada para manter a especificação de formato fornecida por meio de **BCPColFmt**.  
   
 ## <a name="arguments"></a>Argumentos  
  *idxUserDataCol*[in]  
@@ -91,13 +91,13 @@ HRESULT BCPColFmt(
   
  Definir **cbUserData** como BCP_LENGTH_NULL indica que todos os valores nos campos de arquivo de dados são, ou deveriam ser, definidos como NULL. Definir **cbUserData** como BCP_LENGTH_VARIABLE indica que o sistema deve determinar o comprimento dos de cada campo. Para alguns campos, isso poderia significar que um indicador de comprimento/nulidade é gerado para preceder dados de uma cópia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou que o indicador é esperado nos dados copiados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para tipos de dados binários e de caractere do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **cbUserData** pode ser BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 ou algum valor positivo. Caso **cbUserData** seja BCP_LENGTH_VARIABLE, o sistema usa o indicador de comprimento, se presente, ou uma sequência de terminador para determinar o comprimento dos dados. Se forem fornecidos um indicador de comprimento e uma sequência de terminador, a cópia em massa usará aquele que resultar na menor quantidade de dados sendo copiados. Caso **cbUserData** seja BCP_LENGTH_VARIABLE, o tipo de dados é um caractere ou tipo binário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e caso nem um indicador de comprimento nem uma sequência de terminador sejam especificados, o sistema retornar uma mensagem de erro.  
+ Para tipos de dados binários e de caractere do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **cbUserData** pode ser BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 ou um valor positivo. Caso **cbUserData** seja BCP_LENGTH_VARIABLE, o sistema usa o indicador de comprimento, se presente, ou uma sequência de terminador para determinar o comprimento dos dados. Se forem fornecidos um indicador de comprimento e uma sequência de terminador, a cópia em massa usará aquele que resultar na menor quantidade de dados sendo copiados. Se **cbUserData** for BCP_LENGTH_VARIABLE, o tipo de dados for um caractere ou um tipo binário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um indicador de tamanho nem uma sequência de terminador forem especificados, o sistema retornará uma mensagem de erro.  
   
  Se **cbUserData** for 0 ou um valor positivo, o sistema usará **cbUserData** como o comprimento de dados máximo. Entretanto, se, além de um **cbUserData**positivo, for fornecido um indicador de comprimento ou uma sequência de terminador, o sistema determinará o comprimento dos dados usando o método que resulta na menor quantidade de dados sendo copiados.  
   
  O valor **cbUserData** representa a contagem de bytes dos dados. Se dados de caracteres forem representados por caracteres que abrangem Unicode, um valor de parâmetro **cbUserData** positivo representará o número de caracteres multiplicado pelo tamanho, em bytes, de cada caractere.  
   
- *pbUserDataTerm*[size_is][in]  
+ *pbUserDataTerm*[size_is] [em]  
  A sequência de terminador a ser usada para o campo. Este parâmetro é útil principalmente para tipos de dados character porque todos os outros tipos têm comprimento fixo ou, no caso de dados binary, exigem um indicador de comprimento que permite registrar com precisão o número de bytes presentes.  
   
  Para evitar encerrar os dados extraídos ou indicar que os dados em um arquivo de usuário não foram encerrados, defina este parâmetro como NULL.  
@@ -117,10 +117,10 @@ HRESULT BCPColFmt(
  O método foi bem-sucedido.  
   
  E_FAIL  
- Ocorreu um erro específico do provedor. Para obter informações detalhadas, use a interface [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
+ Ocorreu um erro específico do provedor, para obter informações detalhadas, use a interface [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
   
  E_UNEXPECTED  
- A chamada para o método era inesperada. Por exemplo, o método [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) não foi chamado antes de esse método ser chamado.  
+ A chamada para o método era inesperada. Por exemplo, o método [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) não foi chamado antes desse método.  
   
  E_INVALIDARG  
  O argumento era inválido.  
@@ -128,8 +128,8 @@ HRESULT BCPColFmt(
  E_OUTOFMEMORY  
  Erro de memória insuficiente.  
   
-## <a name="see-also"></a>Consulte também  
- [IBCPSession &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+## <a name="see-also"></a>Consulte Também  
+ [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Executando operações de cópia em massa](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

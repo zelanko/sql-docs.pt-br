@@ -1,5 +1,5 @@
 ---
-title: Segurança da integração CLR | Microsoft Docs
+title: Segurança de integração CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7cfcc3f4d65901da34152a6fce21b436750c15fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118507"
 ---
 # <a name="clr-integration-security"></a>Segurança da integração CLR
@@ -40,7 +40,7 @@ ms.locfileid: "68118507"
   
  A tabela a seguir lista os tópicos desta seção.  
   
- [Segurança de acesso do código da integração CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
+ [Segurança de acesso a código da integração CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
  Discute o modelo CAS (segurança de acesso do código) para código gerenciado.  
   
  [Atributos de proteção de host e programação da Integração CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
@@ -58,7 +58,7 @@ ms.locfileid: "68118507"
  [Domínios do aplicativo e segurança da integração CLR](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
  Descreve como os assemblies são carregados em domínios de aplicativo.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciamento de assemblies de integração CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciando assemblies de integração CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
   
   

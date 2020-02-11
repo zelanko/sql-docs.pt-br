@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 907caaa37c429dd2f788d0123f7f8ee0bbf8a27a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059655"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Depurar um pacote por meio da definição de pontos de interrupção em uma tarefa ou contêiner
@@ -36,18 +36,18 @@ ms.locfileid: "66059655"
   
     -   Para definir pontos de interrupção em um fluxo de controle de pacote, clique na guia **Fluxo de Controle** , clique com o botão direito do mouse em uma tarefa, um contêiner Loop For, um contêiner Loop Foreach ou um contêiner Sequência, e clique em **Editar Pontos de Interrupção**.  
   
-    -   Para definir pontos de interrupção em um manipulador de eventos, clique na guia **Manipulador de Eventos** , clique com o botão direito do mouse em uma tarefa, um contêiner Loop For, um contêiner Loop Foreach ou um contêiner Sequência e clique em **Editar Pontos de Interrupção**.  
+    -   Para definir pontos de interrupção em um manipulador de eventos, clique na guia **Manipulador de Eventos**, clique com o botão direito do mouse em uma tarefa, um contêiner Loop For, um contêiner Loop Foreach ou um contêiner Sequência e clique em **Editar Pontos de Interrupção**.  
   
-4.  Na caixa de diálogo **Definir Pontos de Interrupção de \<container name>** , selecione os pontos de interrupção a serem habilitados.  
+4.  Na caixa de diálogo **Definir Pontos de Interrupção de \<container name>**, selecione os pontos de interrupção a serem habilitados.  
   
 5.  Opcionalmente, modifique o tipo de contagem de ocorrências e o número de contagem de ocorrências para cada ponto de interrupção.  
   
 6.  Para salvar o pacote, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Solucionando problemas de ferramentas para desenvolvimento de pacotes](troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Depurar um script definindo pontos de interrupção em uma tarefa Script e um componente Script](data-flow/transformations/script-component.md)   
- [Codificando e depurando a tarefa Script](control-flow/script-task.md)   
+ [Codificando e Depurando a tarefa Script](control-flow/script-task.md)   
  [Codificando e depurando o componente Script](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   

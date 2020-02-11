@@ -1,5 +1,5 @@
 ---
-title: 'Resumo: Configurando permissões em objetos de banco de dados | Microsoft Docs'
+title: 'Resumo: configurando permissões em objetos de banco de dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ca78065f168c96ce5a092050e49e1d4e9f8f3f41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62642717"
 ---
-# <a name="summary-configuring-permissions-on-database-objects"></a>Resumo: Como configurar permissões em objetos de banco de dados
+# <a name="summary-configuring-permissions-on-database-objects"></a>resumo: configurando permissões em objetos de banco de dados
   Logons permitem que os usuários se conectem ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Usuários são logons que podem acessar um banco de dados específico. Use uma instrução GRANT para fornecer permissão de leitura e acesso a usuários, e alterar os dados.  
   
  Uma exibição é uma única instrução SELECT e tem a aparência de uma tabela para o usuário. Um procedimento armazenado consiste em uma ou mais instruções [!INCLUDE[tsql](../includes/tsql-md.md)] executadas como um lote.  
   
 ## <a name="next-lesson-in-tutorial"></a>Próxima lição no tutorial  
- [Lição 3: Excluindo objetos de banco de dados](lesson-3-1-deleting-database-objects.md)  
+ [Lição 3: excluindo objetos de banco de dados](lesson-3-1-deleting-database-objects.md)  
   
   
