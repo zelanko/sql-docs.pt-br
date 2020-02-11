@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2e82ff5158f64c95b0e66f327c6d57ebf2def29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076755"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Procurar dados e metadados no Cubo
@@ -22,7 +22,7 @@ ms.locfileid: "66076755"
   
  Antes de você procurar um cubo, deverá processá-lo e se reconectar a ele. Depois de processá-lo, abra a guia **Navegador** do Designer de Cubo. Clique no botão Reconectar na barra de ferramentas para atualizar a conexão.  
   
- O **navegador** guia tem três painéis - painel de metadados, o painel de filtro e o painel de dados. Use o painel de Metadados para examinar a estrutura do cubo em formato de árvore. Use o painel de Filtro na parte superior da guia **Navegador** para definir o subcubo pelo qual você deseja navegar. Use o painel de Dados para exibir o conjunto de resultados e analisar as hierarquias da dimensão.  
+ A guia **navegador** tem três painéis: o painel de metadados, o painel de filtro e o painel de dados. Use o painel de Metadados para examinar a estrutura do cubo em formato de árvore. Use o painel de Filtro na parte superior da guia **Navegador** para definir o subcubo pelo qual você deseja navegar. Use o painel de Dados para exibir o conjunto de resultados e analisar as hierarquias da dimensão.  
   
 ## <a name="setting-up-the-browser"></a>Configurando o navegador  
  Para preparar para procurar um cubo, você pode especificar uma perspectiva ou tradução que você queira usar. Você adiciona medidas e dimensões ao painel de Dados e especifica os filtros no painel de Filtros.  
@@ -57,16 +57,16 @@ ms.locfileid: "66076755"
   
      \- ou –  
   
--   No **dimensão** coluna das **filtro** painel, clique em  **\<selecionar dimensão >** e selecione uma dimensão na lista e clique em  **\<Selecionar hierarquia >** na **hierarquia** coluna e selecione uma hierarquia na lista.  
+-   Na coluna **dimensão** do painel **filtro** , clique em ** \<selecionar dimensão>** e selecione uma dimensão na lista, em seguida, clique em ** \<selecionar hierarquia>** na coluna **hierarquia** e selecione uma hierarquia na lista.  
   
  Depois que você especificar a hierarquia, especifique o operador e a expressão de filtro. A tabela a seguir descreve os operadores e as expressões de filtro.  
   
-|Operador|Expressão de filtro|Descrição|  
+|Operador|Expressão de filtro|DESCRIÇÃO|  
 |--------------|-----------------------|-----------------|  
-|Equal|Um ou mais membros|Os valores devem ser iguais a um membro especificado.<br /><br /> (Fornece várias seleções de membro para hierarquias de atributo, além de hierarquias pai-filho e seleção única de membro para outras hierarquias.)|  
+|Igual a|Um ou mais membros|Os valores devem ser iguais a um membro especificado.<br /><br /> (Fornece várias seleções de membro para hierarquias de atributo, além de hierarquias pai-filho e seleção única de membro para outras hierarquias.)|  
 |Diferente de|Um ou mais membros|Os valores não devem ser iguais a um membro especificado.<br /><br /> (Fornece várias seleções de membro para hierarquias de atributo, além de hierarquias pai-filho e seleção única de membro para outras hierarquias.)|  
 |Entrada|Um ou mais conjuntos nomeados|Os valores devem estar em um conjunto nomeado especificado.<br /><br /> (Suporte somente a hierarquias de atributo.)|  
-|Não Está em|Um ou mais conjuntos nomeados|Os valores não devem estar em um conjunto nomeado especificado.<br /><br /> (Suporte somente a hierarquias de atributo.)|  
+|Não está em|Um ou mais conjuntos nomeados|Os valores não devem estar em um conjunto nomeado especificado.<br /><br /> (Suporte somente a hierarquias de atributo.)|  
 |Intervalo (Inclusivo)|Um ou dois membros delimitadores de um intervalo|Os valores devem estar entre ou ser iguais aos membros delimitadores. Se os membros delimitadores forem iguais ou somente um membro for especificado, nenhum intervalo será imposto e todos os valores serão permitidos.<br /><br /> (Suporte somente a hierarquias de atributo. O intervalo deve estar em um nível de uma hierarquia. Não há suporte para intervalos não associados no momento.)|  
 |Intervalo (Exclusivo)|Um ou dois membros delimitadores de um intervalo|Os valores devem estar entre os membros delimitadores. Se os membros delimitadores forem iguais ou somente um membro for especificado, os valores deve ser maiores que ou menores que o membro delimitador.<br /><br /> (Suporte somente a hierarquias de atributo. O intervalo deve estar em um nível de uma hierarquia. Não há suporte para intervalos não associados no momento.)|  
 |MDX|Uma expressão MDX que retorna um conjunto de membros|Os valores devem estar no conjunto de membro calculado. Selecionar esta opção exibe a caixa de diálogo **Construtor de Membro Calculado** para criar expressões MDX.|  

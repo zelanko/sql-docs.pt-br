@@ -1,5 +1,5 @@
 ---
-title: Função Aggregate (MDX) | Microsoft Docs
+title: Agregação (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017174"
 ---
 # <a name="aggregate-mdx"></a>Função Aggregate (MDX)
@@ -37,12 +37,12 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 ## <a name="remarks"></a>Comentários  
  Se um conjunto de tuplas vazias ou um conjunto vazio for especificado, essa função retornará um valor vazio.  
   
- A tabela a seguir descreve como o **agregação** função se comporta com funções de agregação diferentes.  
+ A tabela a seguir descreve como a função de **agregação** se comporta com funções de agregação diferentes.  
   
-|Operador de agregação|Resultado|  
+|Operador de agregação|Result|  
 |--------------------------|------------|  
-|Sum|Retorna a soma dos valores no conjunto.|  
-|Count|Retorna a contagem dos valores no conjunto.|  
+|SUM|Retorna a soma dos valores no conjunto.|  
+|Contagem|Retorna a contagem dos valores no conjunto.|  
 |Max|Retorna o valor máximo no conjunto.|  
 |Mín|Retorna o valor mínimo no conjunto.|  
 |Funções de agregação semiaditivas|Retorna o cálculo de comportamento semiaditivo no conjunto depois de projetar a forma no eixo de tempo.|  
@@ -55,7 +55,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Atribuições|As atribuições são agregadas de acordo com a função de agregação de medida. Se a função de agregação de medida for uma contagem distinta, a atribuição será somada.|  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna a soma do `Measures.[Order Quantity]` membro, agregado durante os primeiros oito meses do ano calendário 2003 contidos na `Date` dimensão, da **Adventure Works** cubo.  
+ O exemplo a seguir retorna a soma do `Measures.[Order Quantity]` membro, agregados nos primeiros oito meses do ano civil 2003 que estão contidos na `Date` dimensão, do cubo **Adventure Works** .  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -93,7 +93,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- O exemplo a seguir retorna a contagem dos revendedores cujas vendas caíram ao longo do período anterior, com base em valores de Estado do membro, selecionados pelo usuário, avaliados usando a função Aggregate. O **Hierarchize** e **DrillDownLevel** funções são usadas para retornar valores por queda de vendas para categorias de produto na dimensão produto.  
+ O exemplo a seguir retorna a contagem dos revendedores cujas vendas caíram ao longo do período anterior, com base em valores de Estado do membro, selecionados pelo usuário, avaliados usando a função Aggregate. As funções de **hierarquia** e **DrilldownLevel** são usadas para retornar valores para recusar vendas para categorias de produtos na dimensão produto.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   
@@ -121,16 +121,16 @@ WHERE ([Geography].[State-Province].x,
     [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
- [Children &#40;MDX&#41;](../mdx/children-mdx.md)   
- [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
- [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [PeriodsToDate&#41;MDX &#40;](../mdx/periodstodate-mdx.md)   
+ [&#41;de &#40;MDX de filhos](../mdx/children-mdx.md)   
+ [Hierarquiar &#40;&#41;MDX](../mdx/hierarchize-mdx.md)   
+ [Contagem &#40;definida&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Filtrar &#40;&#41;MDX](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers&#41;MDX &#40;](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel&#41;MDX &#40;](../mdx/drilldownlevel-mdx.md)   
+ [Propriedades &#40;MDX&#41;](../mdx/properties-mdx.md)   
+ [PrevMember&#41;MDX &#40;](../mdx/prevmember-mdx.md)   
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Processar caixa de diálogo (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo processar (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070752"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Processar (Analysis Services - Dados Multidimensionais)
@@ -42,8 +42,8 @@ ms.locfileid: "66070752"
  **Tipo**  
  Exibe o tipo do objeto a ser processado.  
   
- **Opções de Processo**  
- Selecione o tipo de processamento a ser executado no objeto selecionado. Para obter mais informações sobre as opções de processamento disponíveis, consulte [processamento de objeto de modelo Multidimensional](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ **Opções de processo**  
+ Selecione o tipo de processamento a ser executado no objeto selecionado. Para obter mais informações sobre as opções de processamento disponíveis, consulte [processamento de objeto de modelo multidimensional](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  **Configurações**  
  Exibe o hiperlink **Configurar** quando você escolhe **Processar Incremental** em **Opções de Processo** para cubos, grupos de medidas ou partições. Clique em **Configurar** para iniciar a caixa de diálogo **Atualização Incremental** . Para obter mais informações sobre a caixa de diálogo **Atualização Incremental**, consulte [Caixa de diálogo Atualização Incremental &#40;Analysis Services – Dados Multidimensionais&#41;](incremental-update-dialog-box-analysis-services-multidimensional-data.md).  
@@ -51,20 +51,20 @@ ms.locfileid: "66070752"
  **Remover**  
  Clique para remover os itens selecionados da **Lista de objetos**.  
   
- **Análise de Impacto**  
+ **Análise de impacto**  
  Clique para abrir a caixa de diálogo **Análise de Impacto** e exibir os objetos que serão afetados pela tarefa de processamento. Para obter mais informações sobre a caixa de diálogo **Análise de Impacto**, consulte [Caixa de diálogo Análise de Impacto &#40;Analysis Services – Dados Multidimensionais&#41;](impact-analysis-dialog-box-analysis-services-multidimensional-data.md).  
   
 > [!NOTE]  
 >  Esta opção é desabilitada quando a opção **Objetos afetados pelo processo** está selecionada na caixa de diálogo **Alterar Configurações** .  
   
- **Alterar Configurações**  
+ **Alterar configurações**  
  Clique para abrir a caixa de diálogo **Alterar Configurações** e alterar as configurações que controlam o processamento dos objetos selecionados, incluindo configurações de processamento em lote, configurações de write-back e configurações de erro de chave de dimensão. Para obter mais informações sobre a caixa de diálogo **Alterar Configurações**, consulte [Caixa de diálogo Alterar Configurações &#40;Analysis Services – Dados Multidimensionais&#41;](change-settings-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Executar**  
  Clique para processar os objetos.  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Processar caixa de diálogo de progresso &#40;Analysis Services - dados multidimensionais&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Caixa de diálogo progresso do processo &#40;Analysis Services de dados multidimensionais&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)  
   
   

@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232365"
 ---
 # <a name="xml-data-sql-server"></a>Dados XML (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma plataforma avançada para o desenvolvimento de aplicativos avançados para gerenciamento de dados semi-estruturados. O suporte para XML é integrado em todos os componentes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e inclui o seguinte:  
   
--   O tipo de dados `xml`. Os valores XML podem ser armazenados de modo nativo em uma coluna de tipo de dados `xml` que pode ser classificada por tipo de acordo com uma coleção de esquemas XML ou deixada sem-tipo. A coluna XML pode ser indexada.  
+-   O tipo de dados `xml`. Os valores XML podem ser armazenados de modo nativo em uma coluna de tipo de dados `xml` que pode ser classificada por tipo de acordo com uma coleção de esquemas XML ou deixada sem-tipo. É possível indexar a coluna XML.  
   
 -   A capacidade de especificar uma consulta XQuery em dados XML armazenados em colunas e variáveis do tipo `xml`.  
   

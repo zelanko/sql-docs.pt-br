@@ -19,18 +19,18 @@ ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 445d1c0e9d220e4dc9a2d8806bae8d7a7f8bfdc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010617"
 ---
-# <a name="spsyscollectorsetwarehousedatabasename-transact-sql"></a>sp_syscollector_set_warehouse_database_name (Transact-SQL)
+# <a name="sp_syscollector_set_warehouse_database_name-transact-sql"></a>sp_syscollector_set_warehouse_database_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Especifica o nome do banco de dados definido na cadeia de caracteres de conexão usada para conexão com o data warehouse de gerenciamento.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +41,7 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
   
 ## <a name="arguments"></a>Argumentos  
  [ @database_name = ] '*database_name*'  
- É o nome do data warehouse de gerenciamento. *Database_Name* está **sysname** com um valor padrão de NULL.  
+ É o nome do data warehouse de gerenciamento. *database_name* é **sysname** com um valor padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -49,7 +49,7 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
 ## <a name="remarks"></a>Comentários  
  Você deve desabilitar o coletor de dados antes de alterar sua configuração. Esse procedimento falha quando o coletor de dados está habilitado.  
   
- Para exibir o nome do banco de dados atual, consulte o [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) exibição do sistema.  
+ Para exibir o nome do banco de dados atual, consulte a exibição do sistema [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) .  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação na função de banco de dados fixa dc_admin (com a permissão EXECUTE) para executar esse procedimento.  
@@ -64,7 +64,7 @@ EXEC sp_syscollector_set_warehouse_database_name N'RemoteMDW';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
