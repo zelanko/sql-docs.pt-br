@@ -1,7 +1,7 @@
 ---
 title: sys. databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/18/2019
+ms.date: 02/11/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a307cf2fb9747e822cc48ca4b0723aed437d4af7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5b9b5147621fb459e419a29e0a31f9ad9381eb77
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74165952"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77147401"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -117,7 +117,8 @@ Se um banco de dados `ONLINE`não estiver `AUTO_CLOSE` , ou estiver `ON` definid
 |**is_temporal_retention_enabled**|**bit**|Indica se a tarefa de limpeza da política de retenção temporal está habilitada.<br /> **Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|A configuração de agrupamento do catálogo:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar (60)**|A configuração de agrupamento do catálogo:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on está on</br>0 = is_result_set_caching_on está desativado</br>**Aplica-se a**: Azure SQL data warehouse Gen2. Embora esses recursos estejam sendo distribuídos para todas as regiões, verifique a versão implantada em sua instância e as notas de versão mais recentes do [Azure SQL DW](/azure/sql-data-warehouse/release-notes-10-0-10106-0) para disponibilidade de recursos.|
+|**is_result_set_caching_on**|**bit**|1 = is_result_set_caching_on está on</br>0 = is_result_set_caching_on está desativado</br>**Aplica-se a**: Azure SQL data warehouse Gen2. Embora esses recursos estejam sendo distribuídos para todas as regiões, verifique a versão implantada em sua instância e as notas de versão mais recentes do [Azure SQL DW](/azure/sql-data-warehouse/release-notes-10-0-10106-0) para disponibilidade de recursos.|
+|**is_memory_optimized_enabled**|**bit**|Indica se determinados recursos na memória, como pool de [buffer híbrido](../../database-engine/configure-windows/hybrid-buffer-pool.md), estão habilitados para o banco de dados. Não reflete o estado de disponibilidade ou configuração do [OLTP na memória](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). <br />**Aplica-se a**: SQL Server 2019 (15. x)|
   
 ## <a name="permissions"></a>Permissões
 
