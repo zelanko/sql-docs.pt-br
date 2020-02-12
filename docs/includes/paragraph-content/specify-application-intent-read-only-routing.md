@@ -9,37 +9,37 @@ ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
 ms.openlocfilehash: 0e7d549c2f3b02349007815019cc47647f172f73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68213530"
 ---
 ## <a name="specifying-application-intent"></a>Especificando a intenção do aplicativo
 
-A palavra-chave **ApplicationIntent** pode ser especificado em sua cadeia de conexão. São valores atribuíveis **ReadWrite** ou **ReadOnly**. O padrão é **ReadWrite**.
+A palavra-chave **ApplicationIntent** pode ser especificada na cadeia de conexão. Os valores atribuíveis são **ReadWrite** ou **ReadOnly**. O padrão é **ReadWrite**.
 
-Quando **ApplicationIntent = ReadOnly**, o cliente solicita uma carga de trabalho de leitura ao se conectar. O servidor imporá a intenção em tempo de conexão e durante uma **uso** instrução de banco de dados.
+Quando **ApplicationIntent=ReadOnly**, o cliente solicita uma carga de trabalho de leitura ao se conectar. O servidor impõe a intenção no momento da conexão e durante uma instrução **USE** do banco de dados.
 
 A palavra-chave **ApplicationIntent** não funciona com bancos de dados herdados somente leitura.  
 
 
-#### <a name="targets-of-readonly"></a>Destinos de somente leitura
+#### <a name="targets-of-readonly"></a>Destinos de ReadOnly
 
-Quando uma conexão escolhe **ReadOnly**, a conexão é atribuída a qualquer uma das seguintes configurações especiais que podem existir para o banco de dados:
+Quando uma conexão escolhe **ReadOnly**, ela é atribuída a qualquer uma das configurações especiais que podem existir para o banco de dados:
 
 - [Always On](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
-    - Um banco de dados pode permitir ou não cargas de trabalho de leitura no banco de dados Always On de destino. Essa opção é controlada usando o **ALLOW_CONNECTIONS** cláusula da **PRIMARY_ROLE** e **SECONDARY_ROLE** instruções Transact-SQL.
+    - Um banco de dados pode permitir ou não cargas de trabalho de leitura no banco de dados Always On de destino. A escolha é controlada usando a cláusula **ALLOW_CONNECTIONS** das instruções Transact-SQL **PRIMARY_ROLE** e **SECONDARY_ROLE**.
 
 - [Replicação geográfica](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)
 
 - [Expansão de leitura](https://docs.microsoft.com/azure/sql-database/sql-database-read-scale-out)
 
-Se nenhum desses destinos especiais estão disponíveis, o banco de dados regular é lidos no.
+Se nenhum desses destinos especiais estiver disponível, o banco de dados regular será lido.
 
 &nbsp;
 
-O **ApplicationIntent** habilita a palavra-chave *roteamento somente leitura*.
+A palavra-chave **ApplicationIntent** habilita o *roteamento somente leitura*.
 
 
 ## <a name="read-only-routing"></a>Roteamento somente leitura
@@ -52,7 +52,7 @@ O roteamento somente leitura é um recurso que pode garantir a disponibilidade d
 
 - O grupo de disponibilidade deve ser configurado pelo administrador de banco de dados para permitir o roteamento somente leitura.
 
-Várias conexões usando o roteamento somente leitura pode não conectar-se à mesma réplica somente leitura. Alterações na sincronização de banco de dados ou alterações na configuração de roteamento de servidor podem resultar em conexões de cliente com réplicas somente leitura diferentes. Você pode garantir que todas as solicitações de somente leitura se conectem à mesma réplica somente leitura. Verifique se essa igualdade pela *não* passando um ouvinte de grupo de disponibilidade para o **Server** palavra-chave de cadeia de caracteres de conexão. Em vez disso, especifique o nome da instância somente leitura.
+Várias conexões que usam roteamento somente leitura podem se conectar à mesma réplica somente leitura. Alterações na sincronização de banco de dados ou alterações na configuração de roteamento de servidor podem resultar em conexões de cliente com réplicas somente leitura diferentes. Garanta que todas as solicitações somente leitura se conectem à mesma réplica somente leitura. Assegure a uniformidade *não* passando um ouvinte de grupo de disponibilidade para a palavra-chave da cadeia de conexão do **Servidor**. Em vez disso, especifique o nome da instância somente leitura.
 
-Roteamento somente leitura pode demorar mais do que a conexão ao primário. A espera mais longa é porque o roteamento somente leitura se conecta primeiro à instância primária e, em seguida, procura a melhor instância secundária legível disponível. Devido a essas staps vários, você deverá aumentar o tempo limite de logon para pelo menos 30 segundos.
+O roteamento somente leitura pode levar mais tempo do que se conectar ao principal. A espera mais longa é porque o roteamento somente leitura se conecta primeiro à instância primária e, em seguida, procura a melhor instância secundária legível disponível. Devido a essas várias etapas, é preciso aumentar o tempo limite de logon para, no mínimo, 30 segundos.
 
