@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960756"
 ---
 # <a name="replication-tutorials"></a>Tutoriais de Replicação
@@ -27,7 +27,7 @@ ms.locfileid: "62960756"
  Nos tutoriais de replicação, "Publicador" refere-se ao servidor que contém os dados de origem sendo replicados, e "Assinante" refere-se ao servidor de destino. O Publicador e o Assinante podem compartilhar a mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas isso não é um requisito. Para obter mais informações, consulte [Visão geral do modelo de publicação do Replication](publish/replication-publishing-model-overview.md).  
   
 > [!NOTE]  
->  A maioria das tarefas mostradas nos tutoriais podem ser executadas de forma programática. Para obter mais informações, consulte [guia do desenvolvedor do &#40;replicação&#41;](concepts/replication-developer-documentation.md).  
+>  A maioria das tarefas mostradas nos tutoriais podem ser executadas de forma programática. Para obter mais informações, consulte [Guia do desenvolvedor &#40;&#41;de replicação ](concepts/replication-developer-documentation.md).  
   
 ## <a name="replication-tutorials"></a>Tutoriais de Replicação  
  [Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md)  
@@ -39,7 +39,7 @@ ms.locfileid: "62960756"
  [Replicando dados com clientes móveis](tutorial-replicating-data-with-mobile-clients.md)  
  Aprenda a usar a replicação de mesclagem para permutar dados entre um servidor e um ou mais clientes conectados apenas ocasionalmente.  
   
-## <a name="see-also"></a>Consulte também  
- [Segurança de replicação do SQL Server](security/view-and-modify-replication-security-settings.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Segurança de Replicação do SQL Server](security/view-and-modify-replication-security-settings.md)  
   
   
