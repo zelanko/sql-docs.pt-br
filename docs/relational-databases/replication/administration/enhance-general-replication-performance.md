@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: dd7cfe863fde1b4909caadca12b496705f956483
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8ac6758c3856858f6b10b17184705022aa51a62e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768814"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288183"
 ---
 # <a name="enhance-general-replication-performance"></a>Aprimorar o desempenho geral da replicação
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "68768814"
   
      As alterações podem ser particionadas por meio da publicação de subconjuntos de dados em cada Assinante, ou fazendo com que o aplicativo faça alterações diretas para uma determinada linha em um nó específico:  
   
-    -   A replicação de mesclagem oferece suporte a subconjuntos de publicação de dados que usam filtros com parâmetros com uma única publicação. Para saber mais, confira [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+    -   A replicação de mesclagem oferece suporte a subconjuntos de publicação de dados que usam filtros com parâmetros com uma única publicação. Para obter mais informações, consulte [Filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
     -   A replicação transacional oferece suporte à publicação de subconjuntos de dados que usam filtros estáticos com publicações múltiplas. Para obter mais informações, consulte [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md) (Filtrar dados publicados).  
   

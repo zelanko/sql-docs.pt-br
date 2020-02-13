@@ -16,10 +16,10 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2fa693e4e5c8f21b9d8fc8ad02369bff7623b59e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295785"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Reutilizar o fluxo de controle entre pacotes usando partes do pacote do fluxo de controle
@@ -32,7 +32,7 @@ ms.locfileid: "71295785"
 ## <a name="create-a-new-control-flow-package-part"></a>Criar uma nova parte do pacote do fluxo de controle  
  Para criar uma nova parte do pacote do fluxo de controle, no Gerenciador de Soluções, expanda a pasta **Partes do Pacote** . Clique com o botão direito do mouse em **Fluxo de Controle** e selecione **Nova Parte do Pacote do Fluxo de Controle**.  
   
- ![Criar um novo modelo de fluxo de controle](../integration-services/media/control-flow-templates-create-new.png "Criar um novo modelo de fluxo de controle")  
+ ![Criar um modelo de fluxo de controle](../integration-services/media/control-flow-templates-create-new.png "Criar um modelo de fluxo de controle")  
   
  Um novo arquivo de parte com a extensão “.dtsxp” é criado na pasta **Partes do Pacote | Fluxo de Controle** . Ao mesmo tempo, um novo item com o mesmo nome também é adicionado à caixa de ferramentas do SSIS. (Esse item de caixa de ferramentas só fica visível enquanto você tiver um projeto com a parte aberta no Visual Studio.)  
   
@@ -41,9 +41,9 @@ ms.locfileid: "71295785"
 ## <a name="design-a-control-flow-package-part"></a>Projetar uma nova parte do pacote do fluxo de controle  
  Para abrir o editor de parte do pacote, clique duas vezes no arquivo de parte no Gerenciador de Soluções. Você pode projetar a parte da mesma maneira que projeta um pacote.  
   
- ![Etapa 1 do design do modelo de fluxo de controle](../integration-services/media/control-flow-template-design-step-1.png "Etapa 1 do design do modelo de fluxo de controle")  
+ ![Etapa 1 do design de modelo de fluxo de controle](../integration-services/media/control-flow-template-design-step-1.png "Etapa 1 do design de modelo de fluxo de controle")  
   
- ![Etapa 2 do design do modelo de fluxo de controle](../integration-services/media/control-flow-template-design-step-2.png "Etapa 2 do design do modelo de fluxo de controle")  
+ ![Etapa 2 do design de modelo de fluxo de controle](../integration-services/media/control-flow-template-design-step-2.png "Etapa 2 do design de modelo de fluxo de controle")  
   
  As partes do pacote do fluxo de controle têm as seguintes limitações.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "71295785"
 ### <a name="add-a-copy-of-an-existing-control-flow-package-part-or-a-reference-to-an-existing-part"></a>Adicionar uma cópia de uma parte do pacote do fluxo de controle existente, ou uma referência a uma parte existente  
  Para adicionar uma cópia de uma parte existente no sistema de arquivos a um pacote, no Gerenciador de Soluções, expanda a pasta **Partes do Pacote** . Clique com o botão direito do mouse em **Fluxo de Controle** e selecione **Adicionar Parte do Pacote do Fluxo de Controle Existente**.  
   
- ![Adicionar um novo modelo de fluxo de controle por meio do menu](../integration-services/media/control-flow-templates-add-from-menu.png "Adicionar um novo modelo de fluxo de controle por meio do menu")  
+ ![Adicionar um novo modelo de fluxo de controle no menu](../integration-services/media/control-flow-templates-add-from-menu.png "Adicionar um novo modelo de fluxo de controle no menu")  
   
  ![Caixa de diálogo Adicionar Cópia de Modelos Existentes](../integration-services/media/control-flow-templates-add-copy-dialog.png "Caixa de diálogo Adicionar Cópia de Modelos Existentes")  
   
@@ -102,7 +102,7 @@ ms.locfileid: "71295785"
 ### <a name="properties-tab"></a>Guia Propriedades  
  Use a guia **Propriedades** da caixa de diálogo **Configuração da Parte do Pacote**  para especificar as propriedades da parte.  
   
- ![Guia Propriedades da caixa de diálogo Configuração de Modelo](../integration-services/media/template-configuration-properties-tab.png "Guia Propriedades da caixa de diálogo Configuração de Modelo")  
+ ![Guia Propriedades da caixa de diálogo Configuração do Modelo](../integration-services/media/template-configuration-properties-tab.png "Guia Propriedades da caixa de diálogo Configuração do Modelo")  
   
  A hierarquia do modo de exibição de árvore no painel esquerdo lista todas as propriedades configuráveis da instância de parte.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "71295785"
 ### <a name="connection-managers-tab"></a>Guia Gerenciadores de Conexões  
  Use a guia **Gerenciadores de Conexões** da caixa de diálogo **Configuração da Parte do Pacote**  para especificar as propriedades dos gerenciadores de conexões para a instância da parte.  
   
- ![Guia Gerenciadores de Conexões da caixa de diálogo Configuração de Modelo](../integration-services/media/template-configuration-connection-managers-tab.png "Guia Gerenciadores de Conexões da caixa de diálogo Configuração de Modelo")  
+ ![Guia Gerenciadores de Conexões da caixa de diálogo Configuração do Modelo](../integration-services/media/template-configuration-connection-managers-tab.png "Guia Gerenciadores de Conexões da caixa de diálogo Configuração do Modelo")  
   
  A tabela no painel esquerdo lista todos os gerenciadores de conexão definidos na parte do fluxo de controle. Escolha o gerenciador de conexões que você deseja configurar.  
   
@@ -142,16 +142,16 @@ ms.locfileid: "71295785"
 >  Se você quiser remover um pacote de um projeto do Integration Services, mas quiser continuar a usá-lo em outros projetos, use a opção **Excluir do Projeto**  em vez da opção **Excluir** .  
   
 ## <a name="package-parts-are-a-design-time-feature-only"></a>As partes do pacote são um recurso usado apenas no momento do design.  
- As partes do pacote são um recurso puramente do momento do design. O designer do SSIS cria, abre, salva e atualiza as partes e adiciona, configura ou exclui instâncias da parte em um pacote. No entanto, o tempo de execução do SSIS não está ciente das partes. Veja como o designer consegue essa separação.  
+ As partes do pacote são um recurso puramente do momento do design. O designer do SSIS cria, abre, salva e atualiza as partes e adiciona, configura ou exclui instâncias da parte em um pacote. No entanto, o runtime do SSIS não está ciente das partes. Veja como o designer consegue essa separação.  
   
 -   O designer salva instâncias de parte do pacote com suas propriedades configuradas em um arquivo ".dtsx.designer".  
   
 -   Quando o designer salva o arquivo ".dtsx.designer", ele também extrai o conteúdo das partes referenciadas por esse arquivo e substitui as instâncias da parte no pacote pelo conteúdo das partes.  
   
--   Por fim, todo o conteúdo, que não inclui mais informações sobre a parte, é salvo no arquivo de pacote ".dtsx". Esse é o arquivo executado pelo tempo de execução do SSIS.  
+-   Por fim, todo o conteúdo, que não inclui mais informações sobre a parte, é salvo no arquivo de pacote ".dtsx". Esse é o arquivo executado pelo runtime do SSIS.  
   
- O diagrama a seguir demonstra a relação entre as partes (arquivos ".dtsxp"), o designer SSIS e o tempo de execução do SSIS.  
+ O diagrama a seguir demonstra a relação entre as partes (arquivos ".dtsxp"), o designer SSIS e o runtime do SSIS.  
   
- ![Arquivos de modelos de fluxo de controle e fluxo](../integration-services/media/control-flow-templates-intro.png "Arquivos de modelos de fluxo de controle e fluxo")  
+ ![Fluxo e arquivos de modelos de fluxo de controle](../integration-services/media/control-flow-templates-intro.png "Fluxo e arquivos de modelos de fluxo de controle")  
   
   

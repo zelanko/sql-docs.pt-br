@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73530922"
 ---
 # <a name="restore-statements-transact-sql"></a>Instruções RESTORE (Transact-SQL)
@@ -320,7 +320,7 @@ A reversão é controlada pela instrução RESTORE nas opções [ RECOVERY | NOR
 
 - RECOVERY (o padrão) indica que a reversão deve ser executada após a conclusão do roll forward no backup atual.
 
-  A recuperação do banco de dados exige que todo o conjunto de dados que está sendo restaurado (o *conjunto de roll forward*) seja consistente com o banco de dados. Se o conjunto de roll forward não tiver ido longe o suficiente para ficar consistente com o banco de dados e RECOVERY estiver especificado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] emitirá um erro. Para obter mais informações sobre a recuperação de banco de dados, confira [Visão geral da restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
+  A recuperação do banco de dados exige que todo o conjunto de dados que está sendo restaurado (o *conjunto de roll forward*) seja consistente com o banco de dados. Se o conjunto de roll forward não tiver ido longe o suficiente para ficar consistente com o banco de dados e RECOVERY estiver especificado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] emitirá um erro. Saiba mais sobre a recuperação de banco de dados em [Visão geral da restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ## <a name="compatibility-support"></a>Suporte de compatibilidade
 Backups do **master**, **model** e **msdb** que foram criados em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não podem ser restaurados pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
@@ -440,7 +440,7 @@ Todos os exemplos presumem que um backup de banco de dados completo foi executad
 
 Os exemplos de RESTORE incluem o seguinte:
 
-- A. [Restaurando um banco de dados completo](#restoring_full_db)
+- a. [Restaurando um banco de dados completo](#restoring_full_db)
 - B. [Restaurando backups de banco de dados diferenciais e completos](#restoring_full_n_differential_db_backups)
 - C. [Restaurando um banco de dados usando a sintaxe RESTART](#restoring_db_using_RESTART)
 - D. [Restaurando um banco de dados e movendo arquivos](#restoring_db_n_move_files)
@@ -619,7 +619,7 @@ O exemplo a seguir restaura um banco de dados nomeado `MyDatabase` que tem dois 
 O backup do banco de dados é o nono conjunto de backup no conjunto de mídias em um dispositivo de backup lógico nomeado `MyDatabaseBackups`. Depois, três backups de log, que estão nos próximos três conjuntos de backup (`10`, `11` e `12`) no dispositivo `MyDatabaseBackups`, são restaurados usando `WITH NORECOVERY`. Depois de restaurar o último backup de log, o banco de dados é recuperado.
 
 > [!NOTE]
-> A recuperação é executada como uma etapa separada para reduzir a possibilidade de recuperação antecipada, antes que todos os backups de log tenham sido restaurados. Para obter mais informações sobre a recuperação de banco de dados, confira [Visão geral da restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
+> A recuperação é executada como uma etapa separada para reduzir a possibilidade de recuperação antecipada, antes que todos os backups de log tenham sido restaurados. Saiba mais sobre a recuperação de banco de dados em [Visão geral da restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 No `RESTORE DATABASE`, observe que há dois tipos de opções de `FILE`. As opções `FILE` que precedem o nome do dispositivo de backup especificam os nomes de arquivos lógicos dos arquivos de banco de dados restaurados do conjunto de backup; por exemplo, `FILE = 'MyDatabase_data_1'`. Esse conjunto de backups não é o primeiro backup de banco de dados no conjunto de mídias; portanto, sua posição no conjunto de mídias é indicada com a opção `FILE` na cláusula `WITH`, `FILE=9`.
 
@@ -876,7 +876,7 @@ WHERE r.command = 'RESTORE DATABASE'
 
 ## <a name="analytics-platform-system"></a>Sistema de plataforma de análise
 
-Restaura um banco de dados de usuário do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] por meio de um backup de banco de dados em um dispositivo do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. O banco de dados é restaurado por meio de um backup que foi criado anteriormente pelo comando [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md). Use as operações de backup e restauração para criar um plano de recuperação de desastre ou mover bancos de dados de um dispositivo para outro.
+Restaura um banco de dados de usuário do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] por meio de um backup de banco de dados em um dispositivo do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. O banco de dados é restaurado por meio de um backup que foi criado anteriormente pelo comando [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md). Use as operações de backup e restauração para criar um plano de recuperação de desastre ou mover bancos de dados de um dispositivo para outro.
 
 > [!NOTE]
 > A restauração do mestre inclui a restauração das informações de logon do dispositivo. Para restaurar um mestre, use a página [Restaurar o banco de dados mestre](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) da ferramenta **Configuration Manager**. Um administrador com acesso ao nó de Controle pode executar essa operação. Para obter mais informações sobre backups de banco de dados do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], confira "Backup e restauração" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
@@ -980,7 +980,7 @@ Usa um bloqueio exclusivo no objeto DATABASE.
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-simple-restore-examples"></a>A. Exemplos simples de RESTORE
+### <a name="a-simple-restore-examples"></a>a. Exemplos simples de RESTORE
 
 O exemplo a seguir restaura um backup completo para o banco de dados do `SalesInvoices2013`. Os arquivos de backup são armazenados no diretório `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. O banco de dados SalesInvoices2013 ainda não pode existir no dispositivo de destino ou esse comando falhará com um erro.
 

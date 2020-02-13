@@ -18,10 +18,10 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 26d7442164d4d018feb6066e6cafdf12c9312429
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294148"
 ---
 # <a name="for-loop-container"></a>Contêiner Loop For
@@ -41,7 +41,7 @@ ms.locfileid: "71294148"
   
  O diagrama a seguir mostra um contêiner Loop For com uma tarefa Enviar Email. Se a expressão de inicialização é `@Counter = 0`, a expressão de avaliação é `@Counter < 4`e a expressão de iteração é `@Counter = @Counter + 1`, o loop é repetido quatro vezes e envia quatro mensagens de email.  
   
- ![Um contêiner do Loop For repete uma tarefa quatro vezes](../../integration-services/control-flow/media/ssis-forloop.gif "Um contêiner do Loop For repete uma tarefa quatro vezes")  
+ ![Um contêiner Loop For repete uma tarefa quatro vezes](../../integration-services/control-flow/media/ssis-forloop.gif "Um contêiner Loop For repete uma tarefa quatro vezes")  
   
  As expressões devem ser expressões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] válidas.  
   
@@ -130,6 +130,6 @@ Use a página **Loop For** da caixa de diálogo **Editor do Loop For** para conf
   
 ## <a name="see-also"></a>Consulte Também  
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)   
- [Expressões do Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Expressões do SSIS &#40;Integration Services&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   

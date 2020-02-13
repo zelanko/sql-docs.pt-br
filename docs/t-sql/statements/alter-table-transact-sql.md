@@ -60,10 +60,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74127501"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
@@ -635,7 +635,7 @@ PERIOD FOR SYSTEM_TIME
 Descarta a especificação para as colunas que o sistema usará para controle de versão do sistema.
 
 WITH \<drop_clustered_constraint_option>  
-Especifica que há uma ou mais opções de remoção de restrição clusterizada definidas.
+Especifica que há uma ou mais opções de descarte de restrição clusterizada definidas.
 
 MAXDOP = *max_degree_of_parallelism*  
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -663,7 +663,7 @@ Para obter mais informações, consulte [Configurar operações de índice paral
 ONLINE **=** { ON | **OFF** } \<conforme se aplica a drop_clustered_constraint_option>  
 Especifica se as tabelas subjacentes e os índices associados estão disponíveis para consultas e modificação de dados durante a operação de índice. O padrão é OFF. É possível executar REBUILD como uma operação ONLINE.
 
-ON  
+ATIVADO  
 Bloqueios de tabela de longa duração não são mantidos durante a operação do índice. Durante a fase principal da operação de índice, apenas um bloqueio IS (Tentativa Compartilhada) é mantido na tabela de origem. Esse comportamento permite a continuação de consultas ou atualizações feitas na tabela e nos índices subjacentes. No início da operação, um bloqueio compartilhado (S) é mantido no objeto de origem por um curto período. Ao término da operação, por um curto período, um bloqueio S (Compartilhado) será adquirido na origem se um índice não clusterizado estiver sendo criado. Ou um bloqueio SCH-M (Modificação de Esquema) será adquirido quando um índice clusterizado for criado ou descartado online e quando um índice clusterizado ou não clusterizado estiver sendo recriado. Não será possível definir ONLINE como ON quando um índice estiver sendo criado em uma tabela temporária local. Apenas a operação de reconstrução de heap de thread único é permitida.
 
 Para executar a DDL de **SWITCH** ou a recompilação de índice online, todas as transações de bloqueio ativas em execução em uma tabela específica devem ser concluídas. Durante a execução, **SWITCH** ou a operação de recompilação impede que a nova transação seja iniciada e pode afetar significativamente a taxa de transferência da carga de trabalho e atrasar temporariamente o acesso à tabela subjacente.
@@ -781,7 +781,7 @@ DISABLE
 Impede o escalonamento de bloqueios na maioria dos casos. Os bloqueios em nível de tabela não são totalmente desautorizados. Por exemplo, quando você está verificando uma tabela que não tem nenhum índice clusterizado no nível de isolamento serializável, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve usar um bloqueio de tabela para proteger a integridade dos dados.
 
 REBUILD  
-Use a sintaxe REBUILD WITH para recompilar uma tabela inteira que inclui todas as partições em uma tabela particionada. Se a tabela tiver um índice clusterizado, a opção REBUILD recriará o índice clusterizado. REBUILD pode ser executado como uma operação ONLINE.
+Use a sintaxe REBUILD WITH para recriar uma tabela inteira que inclui todas as partições em uma tabela particionada. Se a tabela tiver um índice clusterizado, a opção REBUILD recriará o índice clusterizado. REBUILD pode ser executado como uma operação ONLINE.
 
 Use a sintaxe REBUILD PARTITION para recriar uma única partição em uma tabela particionada.
 
@@ -791,7 +791,7 @@ PARTITION = ALL
 Recria todas as partições ao alterar as configurações de compactação da partição.
 
 REBUILD WITH ( \<rebuild_option> )  
-Todas as opções aplicam-se a uma tabela com um índice clusterizado. Se a tabela não tiver um índice clusterizado, a estrutura de heap será afetada somente por algumas opções.
+Todas as opções se aplicam a uma tabela com um índice clusterizado. Se a tabela não tiver um índice clusterizado, a estrutura de heap será afetada somente por algumas opções.
 
 Quando uma configuração de compactação específica não é especificada com a operação REBUILD, a configuração de compactação atual da partição é usada. Para retornar à configuração atual, consulte a coluna **data_compression** na exibição do catálogo **sys.partitions**.
 
@@ -800,7 +800,7 @@ Para obter descrições completas das opções de recompilação, veja [index_op
 DATA_COMPRESSION  
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Especifica a opção de compactação de dados para a tabela, o número de partição ou o intervalo de partições especificado. As opções são as seguintes:
+Especifica a opção de compactação de dados para a tabela, o número de partição ou o intervalo de partições especificado. As opções são as descritas a seguir:
 
 NONE A tabela ou as partições especificadas não são compactadas. Essa opção não se aplica a tabelas columnstore.
 
@@ -823,7 +823,7 @@ Para recompilar várias partições ao mesmo tempo, veja [index_option](../../t-
 ONLINE **=** { ON | **OFF** } \<conforme se aplica a single_partition_rebuild_option>  
 Especifica se uma única partição das tabelas subjacentes e os índices associados estão disponíveis para consultas e modificação de dados durante a operação de índice. O padrão é OFF. É possível executar REBUILD como uma operação ONLINE.
 
-ON  
+ATIVADO  
 Bloqueios de tabela de longa duração não são mantidos durante a operação do índice. Um bloqueio S na tabela é exigido no início da recompilação de índice e um bloqueio Sch-M na tabela no final da recompilação de índice online. Embora ambos os bloqueios sejam bloqueios de metadados curtos, o bloqueio Sch-M deve esperar que todas as transações de bloqueio sejam concluídas. Durante o tempo de espera, o bloqueio Sch-M bloqueia todas as transações restantes que esperam atrás desse bloqueio ao acessar a mesma tabela.
 
 > [!NOTE]
@@ -873,14 +873,14 @@ Quando você habilita Stretch para uma tabela especificando `ON`, também precis
 
 Quando você desabilitar o Stretch para uma tabela, tem duas opções para os dados remotos que já foram migrados para o Azure. Saiba mais em [Desabilitar Stretch Database e trazer de volta dados remotos](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
 
-- Para desabilitar o Stretch de uma tabela e copiar os dados remotos da tabela do Azure de volta para o SQL Server, execute o comando a seguir. Esse comando não pode ser cancelado.
+- Para desabilitar o Stretch para uma tabela e copiar os dados remotos para a tabela do Azure de volta para o SQL Server, execute o comando a seguir. Esse comando não pode ser cancelado.
 
     ```sql
     ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;
     ```
 
-Essa operação incorre em custos de transferência de dados, e não pode ser cancelada. Saiba mais em [Detalhes de preços de transferências de dados](https://azure.microsoft.com/pricing/details/data-transfers/).
+Essa operação incorre em custos de transferência de dados e não pode ser cancelada. Saiba mais em [Detalhes de preços de transferências de dados](https://azure.microsoft.com/pricing/details/data-transfers/).
 
 Depois que todos os dados remotos forem copiados do Azure de volta para o SQL Server, o Stretch será desabilitado para a tabela.
 
@@ -891,7 +891,7 @@ Depois que todos os dados remotos forem copiados do Azure de volta para o SQL Se
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;
     ```
 
-Depois de desabilitar o Stretch Database de uma tabela, a migração de dados é interrompida e os resultados da consulta não incluem mais resultados da tabela remota.
+Depois de desabilitar o Banco de Dados de Stretch de uma tabela, a migração de dados é interrompida e os resultados da consulta já não incluem os resultados da tabela remota.
 
 Desabilitar o Stretch não remove a tabela remota. Se você quiser excluir o banco de dados remoto, descarte-o usando o portal do Azure.
 
@@ -913,7 +913,7 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
 - Especifique `OUTBOUND` para migrar dados do SQL Server para o Azure.
 - Especifique `INBOUND` para copiar os dados remotos da tabela do Azure de volta para o SQL Server e para desabilitar o Stretch para a tabela. Saiba mais em [Desabilitar Stretch Database e trazer de volta dados remotos](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
 
-    Essa operação incorre em custos de transferência de dados, e não pode ser cancelada.
+    Essa operação incorre em custos de transferência de dados e não pode ser cancelada.
 
 - Especifique `PAUSED` para pausar ou adiar a migração de dados. Saiba mais em [Pausar e retomar a migração de dados – Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
 
@@ -946,7 +946,7 @@ IF EXISTS
 
 Descartará condicionalmente a coluna ou restrição somente se ela já existir.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Para adicionar novas linhas de dados, use [INSERT](../../t-sql/statements/insert-transact-sql.md). Para remover linhas de dados, use [DELETE](../../t-sql/statements/delete-transact-sql.md) ou [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md). Para modificar os valores nas linhas existentes, use [UPDATE](../../t-sql/queries/update-transact-sql.md).
 
@@ -1069,7 +1069,7 @@ Adicionar uma coluna que atualize as linhas da tabela requer a permissão **UPDA
 
 Os exemplos desta seção demonstram a adição de colunas e restrições em uma tabela.
 
-#### <a name="a-adding-a-new-column"></a>A. Adicionando uma nova coluna
+#### <a name="a-adding-a-new-column"></a>a. Adicionando uma nova coluna
 
 O exemplo a seguir adiciona uma coluna que permite valores nulos e que não tem nenhum valor fornecido por uma definição DEFAULT. Na nova coluna, cada linha terá `NULL`.
 
@@ -1299,7 +1299,7 @@ ALTER TABLE Customers ADD
 
 Os exemplos desta seção demonstram o descarte de colunas e restrições.
 
-#### <a name="a-dropping-a-column-or-columns"></a>A. Descartando uma coluna ou colunas
+#### <a name="a-dropping-a-column-or-columns"></a>a. Descartando uma coluna ou colunas
 
 O primeiro exemplo modifica uma tabela para remover uma coluna. O segundo exemplo remove várias colunas.
 
@@ -1382,7 +1382,7 @@ DROP TABLE Person.ContactBackup ;
 
 ### <a name="alter_column"></a> Alterando uma definição de coluna
 
-#### <a name="a-changing-the-data-type-of-a-column"></a>A. Alteração do tipo de dados de uma coluna
+#### <a name="a-changing-the-data-type-of-a-column"></a>a. Alteração do tipo de dados de uma coluna
 
 O exemplo a seguir altera uma coluna de uma tabela de `INT` para `DECIMAL`.
 
@@ -1478,7 +1478,7 @@ GO
 
 Os exemplos desta seção demonstram como alterar a definição de uma tabela.
 
-#### <a name="a-modifying-a-table-to-change-the-compression"></a>A. Modificando uma tabela para alterar a compactação
+#### <a name="a-modifying-a-table-to-change-the-compression"></a>a. Modificando uma tabela para alterar a compactação
 
 O exemplo a seguir altera a compactação de uma tabela não particionada. O heap ou índice clusterizado será recriado. Se a tabela for um heap, todos os índices não clusterizados serão recriados.
 
@@ -1594,7 +1594,7 @@ DISABLE CHANGE_TRACKING;
 
 ### <a name="disable_enable"></a>Desabilitando e habilitando restrições e gatilhos
 
-#### <a name="a-disabling-and-re-enabling-a-constraint"></a>A. Desabilitando e reabilitando uma restrição
+#### <a name="a-disabling-and-re-enabling-a-constraint"></a>a. Desabilitando e reabilitando uma restrição
 
 O exemplo a seguir desabilita uma restrição que limita os salários aceitos nos dados. `NOCHECK CONSTRAINT` é usada com `ALTER TABLE` para desabilitar a restrição e permitir uma inserção que normalmente violaria a restrição. `CHECK CONSTRAINT` reabilita a restrição.
 
@@ -1661,7 +1661,7 @@ GO
 
 ### <a name="online"></a>Operações online
 
-#### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>A. Recompilação de índice online usando opções de espera de baixa prioridade
+#### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>a. Recompilação de índice online usando opções de espera de baixa prioridade
 
 O exemplo a seguir mostra como executar uma recompilação de índice online que especifica as opções de espera de baixa prioridade.
 
@@ -1703,7 +1703,7 @@ Os quatro exemplos a seguir ajudarão você a se familiarizar com a sintaxe para
 
 **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-#### <a name="a-add-system-versioning-to-existing-tables"></a>A. Adicionar o controle de versão do sistema a tabelas existentes
+#### <a name="a-add-system-versioning-to-existing-tables"></a>a. Adicionar o controle de versão do sistema a tabelas existentes
 
 O exemplo a seguir mostra como adicionar o controle de versão do sistema a uma tabela existente e criar uma tabela de histórico futura. Este exemplo presume que há uma tabela existente chamada `InsurancePolicy` com uma chave primária definida. Este exemplo preenche as colunas de período recém-criadas para controle de versão do sistema usando valores padrão para os horários de início e término, porque esses valores não podem ser nulos. Este exemplo usa a cláusula HIDDEN para garantir que não haja nenhum impacto aplicativos existentes que interagem com a tabela atual. Ele também usa HISTORY_RETENTION_PERIOD, que está disponível somente em [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
@@ -1783,7 +1783,7 @@ DROP TABLE DepartmentHistory;
 
 Os exemplos a seguir de A a C usam a tabela `FactResellerSales` no banco de dados [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
 
-### <a name="a-determining-if-a-table-is-partitioned"></a>A. Determinando se uma tabela está particionada
+### <a name="a-determining-if-a-table-is-partitioned"></a>a. Determinando se uma tabela está particionada
 
 A consulta a seguir retornará uma ou mais linhas se a tabela `FactResellerSales` for particionada. Se a tabela não for particionada, nenhuma linha será retornada.
 

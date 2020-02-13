@@ -13,10 +13,10 @@ ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 62a8af2e4a82a0a0bdeec231db62c2166ed030de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030833"
 ---
 # <a name="server-properties---misc-server-settings-page"></a>Propriedades do servidor – página Configurações Diversas do Servidor
@@ -34,7 +34,7 @@ ms.locfileid: "68030833"
  Especifica um limite superior de tempo em que uma consulta pode ser executada. O custo da consulta refere-se ao tempo decorrido estimado, em segundos, necessário para executar uma consulta em uma configuração de hardware específica. Por padrão, o administrador de consultas é desativado e todas as consultas têm permissão para serem executadas. Se essa opção for selecionada, você deve digitar um limite de tempo na caixa de texto abaixo. Se você especificar um valor que não seja zero nem negativo, o administrador de consultas recusará a execução de qualquer consulta com um custo estimado que exceda aquele valor.  
   
  **Interpretar um ano de dois dígitos como incluído entre**  
- Especifica o intervalo de datas de 100 anos para interpretar valores de anos com dois dígitos. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretará valores de datas de dois dígitos como referências ao final do ano com esses dígitos e que se inclui no intervalo especificado.  
+ Especifica o intervalo de datas de 100 anos para interpretar valores de anos com dois dígitos. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretará valores de datas de dois dígitos como referências ao final do ano com esses dígitos e que se inclui no intervalo especificado.  
   
  Define a caixa à direita com o ano final. Quando o ano final for salvo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] populará automaticamente a caixa com o ano inicial.  
   

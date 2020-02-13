@@ -31,10 +31,10 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298297"
 ---
 # <a name="foreach-loop-container"></a>Contêiner Loop Foreach
@@ -50,7 +50,7 @@ ms.locfileid: "71298297"
   
      O destino do Conjunto de Registros salva dados na memória em um conjunto de registros armazenado em uma variável de pacote do tipo de dados **Object** . Geralmente você usa um contêiner Loop Foreach com o enumerador ADO Foreach para processar uma linha do conjunto de registros de cada vez. A variável especificada para o enumerador Foreach ADO deve ser de tipo de dados Object. Para obter mais informações sobre o destino do conjunto de registros, consulte [Usar um destino do conjunto de registros](../../integration-services/data-flow/use-a-recordset-destination.md).  
   
--   O Enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach enumera informações de esquema sobre uma fonte de dados. Por exemplo, você pode enumerar e obter uma lista das tabelas do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   O Enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach enumera informações de esquema sobre uma fonte de dados. Por exemplo, você pode enumerar e obter uma lista das tabelas do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Enumerador de Arquivo Foreach para enumerar arquivos em uma pasta. O enumerador pode desviar subpastas. Por exemplo, você pode ler todos os arquivos que têm extensão de nome de arquivo * .log na pasta e respectivas subpastas do Windows. Não é possível especificar a ordem em que os arquivos são recuperados.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "71298297"
   
  O diagrama a seguir mostra um contêiner Loop Foreach que tem uma tarefa Sistema de Arquivos. O loop Foreach usa o enumerador de Arquivo Foreach e a tarefa Sistema de Arquivos é configurada para copiar um arquivo. Se a pasta que o enumerador especifica contiver quatro arquivos, o loop repetirá quatro vezes e copiará quatro arquivos.  
   
- ![Um contêiner de Loop Foreach que enumera uma pasta](../../integration-services/control-flow/media/ssis-foreachloop.gif "Um contêiner de Loop Foreach que enumera uma pasta")  
+ ![Um contêiner Loop Foreach que enumera uma pasta](../../integration-services/control-flow/media/ssis-foreachloop.gif "Um contêiner Loop Foreach que enumera uma pasta")  
   
  Você pode usar uma combinação de variáveis e expressões de propriedade para atualizar a propriedade do objeto de pacote com o valor de coleção do enumerador. Primeiro você mapeia o valor de coleção para uma variável definida pelo usuário e, depois, implementa uma expressão na propriedade que usa a variável. Por exemplo, o valor de coleção do enumerador de Arquivo Foreach é mapeado para uma variável denominada **MyFile** e, depois, a variável é usada na expressão para a propriedade Subject de uma tarefa Enviar Email. Quando o pacote é executado, a propriedade Subject é atualizada com o nome de um arquivo cada vez que o loop é repetido. Para obter mais informações, consulte [Usar expressões de propriedade em pacotes](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
@@ -471,7 +471,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  Especifique o nome do contêiner de blob que contém os arquivos de blob a serem enumerados.
   
  **Diretório de blob**  
- Especifique o diretório de blob que contém os arquivos de blob a serem enumerados. O diretório de Blob é uma estrutura hierárquica virtual.  
+ Especifique o diretório de blob que contém os arquivos de blob a serem enumerados. O diretório de blob é uma estrutura hierárquica virtual.  
   
  **Pesquisar recursivamente**  
  Especifica se é necessário pesquisar recursivamente nos subdiretórios.
@@ -526,7 +526,7 @@ Consulte [este](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage
   
  Para saber mais sobre como usar o contêiner do Loop Foreach em um pacote do Integration Services, consulte [Contêiner do Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md). Para saber mais sobre como configurá-lo, consulte [Configurar um contêiner do Loop Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
- O tutorial do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , Criando um Pacote ETL Simples, inclui uma lição que ensina a adicionar e configurar um Loop Foreach.  
+ O tutorial do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], Criando um Pacote ETL Simples, inclui uma lição que ensina a adicionar e configurar um Loop Foreach.  
   
 ### <a name="options"></a>Opções  
  **Variável**  

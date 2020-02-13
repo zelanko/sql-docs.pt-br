@@ -11,10 +11,10 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4a3626878ba4be6d56bb56b545f3d0cdc24a407a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283198"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Lição 4-3: Adicionar redirecionamento de fluxo de erro
@@ -55,7 +55,7 @@ Por padrão as duas colunas extras em uma saída de erro do [!INCLUDE[ssISnovers
   
 10. Na página **Script**, verifique se a propriedade **LocaleID** está definida como **Inglês (Estados Unidos)** .
   
-11. Selecione **Editar Script** para abrir o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSTA (Tools for Applications). No método **Input0_ProcessInputRow**, insira ou cole o código a seguir:  
+11. Selecione **Editar Script** para abrir o [!INCLUDE[msCoName](../includes/msconame-md.md)] VSTA ([!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications). No método **Input0_ProcessInputRow**, insira ou cole o código a seguir:  
   
     [Visual Basic]  
   

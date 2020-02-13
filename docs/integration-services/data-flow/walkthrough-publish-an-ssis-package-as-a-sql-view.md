@@ -13,10 +13,10 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 263f398e0c14c1b056185722a0662e031c9d7472
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297734"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Passo a passo: Publicar um pacote do SSIS como uma exibição SQL
@@ -64,7 +64,7 @@ ms.locfileid: "71297734"
   
     3.  Insira dois registros com os dados a seguir.  
   
-        |ID|FirstName|LastName|  
+        |ID|NOME|SOBRENOME|  
         |--------|---------------|--------------|  
         |1|John|Doe|  
         |2|Jane|Doe|  
@@ -90,19 +90,19 @@ ms.locfileid: "71297734"
   
  O Assistente de publicação do feed de dados do SSIS cria um servidor vinculado usando o SSISOLEDB (provedor OLE DB para SSIS) e, em seguida, cria um modo SQL que consiste em uma consulta no servidor vinculado. Essa consulta inclui o nome da pasta, o nome do projeto e o nome do pacote no catálogo do SSIS.  
   
- Em tempo de execução, o modo de exibição envia a consulta para o Provedor OLE DB para SSIS por meio do servidor vinculado criado por você. O provedor OLE DB para SSIS executa o pacote especificado na consulta e retorna o conjunto de resultados de tabela à consulta.  
+ Em runtime, o modo de exibição envia a consulta para o Provedor OLE DB para SSIS por meio do servidor vinculado criado por você. O provedor OLE DB para SSIS executa o pacote especificado na consulta e retorna o conjunto de resultados de tabela à consulta.  
   
 1.  Inicie o **Assistente de publicação do feed de dados do SSIS** executando ISDataFeedPublishingWizard.exe de C:\Arquivos de Programas\Microsoft SQL Server\130\DTS\Binn ou clicando em Microsoft SQL Server 2016\Assistente de Publicação do Feed de Dados do SQL Server 2016 em Iniciar\Todos os Programas.  
   
 2.  Clique em **Avançar** na página **Introdução** .  
   
-     ![Assistente de Publicação de Feed de Dados – Página Introdução](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Assistente de Publicação de Feed de Dados – Página Introdução")  
+     ![Assistente de Publicação de Feed de Dados – Página de Introdução](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Assistente de Publicação de Feed de Dados – Página de Introdução")  
   
 3.  Na página **Configurações de Pacote** , execute as seguintes tarefas:  
   
     1.  Digite o **nome** da instância do SQL Server que contém o catálogo do SSIS ou clique em **Procurar** para selecionar o servidor.  
   
-         ![Assistente de Publicação de Feed de Dados – Página Configurações do Pacote](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Assistente de Publicação de Feed de Dados – Página Configurações do Pacote")  
+         ![Assistente de Publicação de Feed de Dados – Página de Configurações do Pacote](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Assistente de Publicação de Feed de Dados – Página de Configurações do Pacote")  
   
     2.  Clique em **Procurar** ao lado do campo Caminho, procure o catálogo do SSIS, selecione o pacote do SSIS que deseja publicar (por exemplo: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**) e clique em **OK**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "71297734"
   
     1.  Selecione o **banco de dados** para o modo de exibição a ser criado.  
   
-         ![Assistente de Publicação de Feed de Dados – Página Configurações de Publicação](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Assistente de Publicação de Feed de Dados – Página Configurações de Publicação")  
+         ![Assistente de Publicação de Feed de Dados – Página de Configurações de Publicação](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Assistente de Publicação de Feed de Dados – Página de Configurações de Publicação")  
   
     2.  Digite um **nome** para o **modo de exibição**. Você também pode selecionar um modo de exibição existente na lista suspensa.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "71297734"
 ## <a name="step-3-test-the-sql-view"></a>Etapa 3: testar o modo SQL  
  Aqui, você executará o modo SQL criado pelo Assistente de publicação do feed de dados do SSIS.  
   
-1.  Inicie o SQL Server Management Studio.  
+1.  Inicialização do SQL Server Management Studio.  
   
 2.  Expanda \<**nome do computador**>, **Bancos de dados**, \<**banco de dados selecionado por você no assistente**> e **Exibições**.  
   
@@ -211,7 +211,7 @@ GO
 ### <a name="create-a-view-using-linked-server-and-ssis-catalog-information"></a>Criar uma exibição usando o servidor vinculado e informações de catálogo do SSIS  
  Nesta etapa, você criará um modo SQL que executa uma consulta no servidor vinculado que você criou na seção anterior. Essa consulta incluirá o nome da pasta, o nome do projeto e o nome do pacote no catálogo do SSIS.  
   
- No tempo de execução, quando a exibição é executada, a consulta de servidor vinculado definida no modo de exibição inicia o pacote do SSIS especificado na consulta e recebe a saída do pacote como um conjunto de resultados de tabela.  
+ No runtime, quando a exibição é executada, a consulta de servidor vinculado definida no modo de exibição inicia o pacote do SSIS especificado na consulta e recebe a saída do pacote como um conjunto de resultados de tabela.  
   
 1.  Antes de criar o modo de exibição, digite e execute a consulta a seguir na nova janela de consulta. OPENQUERY é uma função de conjunto de linhas com suporte pelo SQL Server. Ela executa a consulta passagem especificada no servidor vinculado especificado usando o provedor OLE DB associado ao servidor vinculado. OPENQUERY pode ser referenciada na cláusula FROM de uma consulta como se fosse um nome de tabela. Consulte [Documentação OPENQUERY na biblioteca MSDN](../../t-sql/functions/openquery-transact-sql.md) para obter mais informações.  
   
@@ -251,7 +251,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
  Os parâmetros Folder, Project e Package são obrigatórios. Use32BitRuntime, Timeout e Parameters são opcionais.  
   
- O valor de Use32BitRuntime pode ser apenas 0, 1, true ou false. Ele indica se o pacote deverá ser executado com o tempo de execução de 32 bits (1 ou true) quando a plataforma do SQL Server for de 64 bits.  
+ O valor de Use32BitRuntime pode ser apenas 0, 1, true ou false. Ele indica se o pacote deverá ser executado com o runtime de 32 bits (1 ou true) quando a plataforma do SQL Server for de 64 bits.  
   
  Timeout indica o número de segundos que o provedor OLE DB para SSIS pode aguardar antes que novos dados cheguem do pacote do SSIS. Por padrão, o tempo limite é de 60 segundos. Você pode especificar um valor inteiro para o tempo limite entre 20 e 32000.  
   
@@ -271,6 +271,6 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
 ## <a name="see-also"></a>Consulte Também  
  [Destino do Streaming de Dados](../../integration-services/data-flow/data-streaming-destination.md)   
- [Configurar destino do fluxo de dados](../../integration-services/data-flow/configure-data-streaming-destination.md)  
+ [Configurar destino do streaming de dados](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   
   

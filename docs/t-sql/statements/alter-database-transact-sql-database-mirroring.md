@@ -18,10 +18,10 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065826"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Espelhamento de banco de dados de ALTER DATABASE (Transact-SQL)
@@ -38,7 +38,7 @@ Controla o espelhamento de um banco de dados. Valores especificados com as opç�
 
 Para conhecer as opções de ALTER DATABASE, consulte [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Para conhecer as opções de ALTER DATABASE SET, consulte [Opções de ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -85,7 +85,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]
 > Apenas uma \<partner_option> é permitida por cláusula SET PARTNER.
 
-**'** _partner_server_ **'** Especifica o endereço de rede do servidor para uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atuar como um parceiro de failover em uma nova sessão de espelhamento de banco de dados. Cada sessão requer dois parceiros: um começa como servidor principal e o outro, como servidor espelho. Recomendamos que estes parceiros residam em computadores diferentes.
+**'** _partner_server_ **'** Especifica o endereço de rede do servidor de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para funcionar como um parceiro de failover em uma nova sessão de espelhamento de banco de dados. Cada sessão requer dois parceiros: um começa como servidor principal e o outro, como servidor espelho. Recomendamos que estes parceiros residam em computadores diferentes.
 
 Esta opção é especificada uma vez por sessão em cada parceiro. A inicialização de uma sessão de espelhamento de banco de dados exige duas instruções ALTER DATABASE *database* SET PARTNER **='** _partner_server_ **'** . A ordem delas é significativa. Primeiro, conecte ao servidor espelho e especifique a instância de servidor principal como *partner_server* (SET PARTNER **='** _principal_server_ **'** ). Em segundo lugar, conecte-se ao servidor principal e especifique a instância de servidor espelho como *partner_server* (SET PARTNER **='** _mirror_server_ **'** ); isto inicia uma sessão de espelhamento de banco de dados entre esses dois parceiros. Para obter mais informações, consulte [Configurando o espelhamento de banco de dados](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
 
@@ -179,17 +179,17 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]
 > Apenas uma \<witness_option> é permitida por cláusula SET WITNESS.
 
- **'** _witness_server_ **'** Especifica uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para atuar como servidor testemunha de uma sessão de espelhamento de banco de dados. Você só pode especificar instruções SET WITNESS no servidor principal.
+ **'** _witness_server_ **'** Especifica uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para funcionar como servidor testemunha de uma sessão de espelhamento de banco de dados. Você só pode especificar instruções SET WITNESS no servidor principal.
 
 Em uma instrução SET WITNESS **='** _witness_server_ **'** , a sintaxe de *witness_server* é igual à sintaxe de *partner_server*.
 
 OFF Remove a testemunha de uma sessão de espelhamento de banco de dados. Definir a testemunha como OFF desabilita o failover automático. Se o banco de dados estiver definido como FULL SAFETY e a testemunha como OFF, uma falha no servidor espelho fará com que o servidor principal torne o banco de dados indisponível.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-creating-a-database-mirroring-session-with-a-witness"></a>A. Criando uma sessão de espelhamento de banco de dados com uma testemunha
+### <a name="a-creating-a-database-mirroring-session-with-a-witness"></a>a. Criando uma sessão de espelhamento de banco de dados com uma testemunha
 
 A definição do espelhamento de banco de dados com testemunha requer a configuração da segurança e a preparação do banco de dados espelho, além do uso de ALTER DATABASE para definir os parceiros. Para obter um exemplo do processo completo de instalação, consulte [Configurando o espelhamento de banco de dados](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
 

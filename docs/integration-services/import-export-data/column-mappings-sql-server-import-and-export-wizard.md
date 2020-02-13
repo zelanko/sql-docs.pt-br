@@ -12,10 +12,10 @@ ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a16e270acae2a2685bcaf53045883eaa078ab03d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285938"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Mapeamentos de coluna (Assistente de Importação e Exportação do SQL Server)
@@ -32,7 +32,7 @@ Se não desejar copiar todas as colunas na tabela selecionada, uma coisa que voc
  
  Neste exemplo, você verá que o assistente vai criar uma nova tabela de destino, porque a opção **Criar tabela de destino** está selecionada. Por padrão, o assistente dá a cada coluna na nova tabela de destino tem o mesmo nome, tipo de dados e propriedades que os da coluna de origem correspondente. 
   
- ![Página de mapeamentos de coluna do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/column-mappings.png "Página de mapeamentos de coluna do Assistente de Importação e Exportação")  
+ ![Página Mapeamentos de coluna do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/column-mappings.png "Página Mapeamentos de coluna do Assistente de Importação e Exportação")  
   
 ## <a name="review-the-source-and-destination"></a>Examinar as tabelas de origem e de destino 
 ![Página de mapeamentos de coluna, seção origem e destino](../../integration-services/import-export-data/media/column-mappings-page-source-and-destination-section.png)

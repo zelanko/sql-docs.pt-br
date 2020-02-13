@@ -24,10 +24,10 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 651311d70b17ce4be761e7ecc246e8839ef34eb0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295826"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilitário de Execução de Pacotes (dtexecui)
@@ -35,7 +35,7 @@ ms.locfileid: "71295826"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Use o **Utilitário do Pacote de Execução** para executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O utilitário executa pacotes que estão armazenados em um dos três locais: o banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o Repositório de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e o sistema de arquivos Essa interface do usuário, que pode ser aberta no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou digitando **dtexecui** em um prompt de comando, é uma alternativa à execução de pacotes por meio da ferramenta de prompt de comando **DTExec** .  
+  Use o **Utilitário do Pacote de Execução** para executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O utilitário executa pacotes que estão armazenados em um dos três locais: o banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o Repositório de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e o sistema de arquivos. Essa interface do usuário, que pode ser aberta no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou digitando **dtexecui** em um prompt de comando, é uma alternativa à execução de pacotes por meio da ferramenta de prompt de comando **DTExec** .  
   
  Os pacotes são executados no mesmo processo que o utilitário **dtexecui.exe** . Como esse utilitário é uma ferramenta de 32 bits, os pacotes são executados por meio do **dtexecui.exe** em um ambiente de 64 bits no Windows on Win32 (WOW). Ao desenvolver e testar comandos por meio do utilitário dtexecui.exe em um computador de 64 bits, será necessário testar os comandos no modo de 64 bits com a versão de 64 bits do **dtexec.exe** antes de implantar ou agendar os comandos em um servidor de produção.  
   
@@ -71,8 +71,8 @@ ms.locfileid: "71295826"
 |||  
 |-|-|  
 |Valor|Descrição|  
-|**SQL Server**|Selecione esta opção quando o pacote estiver no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifique uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e forneça um nome de usuário e senha para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada nome de usuário e senha adiciona as opções de **/USER** _nome de usuário_ e **/PASSWORD** _senha_ options to the comme prompt.|  
-|**Sistema de arquivos**|Selecione esta opção quando o pacote estiver no sistema de arquivos.|  
+|**SQL Server**|Selecione esta opção quando o pacote estiver no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifique uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e forneça um nome de usuário e senha para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada nome de usuário e senha adiciona as opções de **/USER** _nome de usuário_ e **/PASSWORD** _senha_ ao prompt de comando.|  
+|**Sistema de Arquivos**|Selecione esta opção quando o pacote estiver no sistema de arquivos.|  
 |**Armazenamento de Pacotes SSIS**|Selecione esta opção quando o pacote estiver no Armazenamento de Pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
   
  Cada uma dessas seleções apresenta o seguinte conjunto de opções.  
@@ -153,7 +153,7 @@ ms.locfileid: "71295826"
  Use a página **Arquivos de Comando** da caixa de diálogo **Utilitário de Execução de Pacotes** para selecionar os arquivos de comando a serem carregados no momento da execução.  
   
 ### <a name="options"></a>Opções  
- **Command files**  
+ **Arquivos de comando**  
  Lista os arquivos de comando que o pacote usa. Um pacote pode usar vários arquivos para definir as opções de linha de comando.  
   
  **Teclas de direção**  
@@ -218,7 +218,7 @@ ms.locfileid: "71295826"
  **Opção de reinicialização**  
  Selecione como os pontos de verificação serão usados ao substituir as opções de reinicialização.  
   
- **Execute (executar)**  
+ **Executar**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -249,7 +249,7 @@ ms.locfileid: "71295826"
  **Informações**  
  Selecione para informar mensagens de informações.  
   
- **Verbose**  
+ **Detalhado**  
  Selecione para usar relatório verboso.  
   
  **Log de console**  
@@ -258,7 +258,7 @@ ms.locfileid: "71295826"
  **Nome**  
  Selecione para informar o nome da pessoa que criou o pacote.  
   
- **Computer**  
+ **Computador**  
  Selecione para informar o nome do computador em que o pacote está sendo executado.  
   
  **Operador**  
@@ -311,7 +311,7 @@ ms.locfileid: "71295826"
  **Caminho da propriedade**  
  Digite o caminho da propriedade. A sintaxe do caminho usa uma barra invertida (\\) para indicar que o item a seguir é um contêiner, usa um ponto (.) para indicar que o item a seguir é uma propriedade e usa colchetes para indicar um membro da coleção. O membro pode ser identificado pelo índice ou pelo nome. Por exemplo, o caminho da propriedade de uma variável de pacote é \Package.Variables[MyVariable].Value.  
   
- **Value**  
+ **Valor**  
  Digite o valor da propriedade.  
   
  **Remover**  
@@ -333,7 +333,7 @@ ms.locfileid: "71295826"
  **Verificar construção de pacote**  
  Selecione para verificar a construção do pacote.  
   
- Compilação  
+ Build  
  Especifique o número de compilação (build) sequencial associado à criação.  
   
  **Verificar ID do pacote**  
@@ -345,7 +345,7 @@ ms.locfileid: "71295826"
  **Verificar ID da versão**  
  Selecione para verificar a ID da versão.  
   
- ID da Versão  
+ ID da versão  
  Especifique o número de identificação da versão.  
   
  **Executar**  
@@ -364,7 +364,7 @@ ms.locfileid: "71295826"
  **Editar a linha de comando manualmente**  
  Clique para editar a linha de comando na caixa de texto **Linha de comando** .  
   
- **Command line**  
+ **Linha de comando**  
  Exibe a linha de comando atual. Se você selecionou a opção para editar a linha de comando manualmente, ela será editável.  
   
  **Executar**  

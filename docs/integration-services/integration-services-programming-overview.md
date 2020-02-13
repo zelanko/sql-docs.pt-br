@@ -21,10 +21,10 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f540278d8f27eb091d4818f838d069c82a61159c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296219"
 ---
 # <a name="integration-services-programming-overview"></a>Visão geral da programação do Integration Services
@@ -49,14 +49,14 @@ ms.locfileid: "71296219"
  Para obter mais informações, consulte [Estender o fluxo de dados com o componente de Script](../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md), [Desenvolver um componente de fluxo de dados personalizado](../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) e [Compilar pacotes programaticamente](../integration-services/building-packages-programmatically/building-packages-programmatically.md).  
   
 ## <a name="supported-languages"></a>Idiomas com suporte  
- O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dá suporte total ao [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Isso permite que desenvolvedores programem o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ao escolherem idiomas compatíveis com .NET. Embora o mecanismo de tempo de execução e o mecanismo de fluxo de dados sejam escritos em código nativo, ambos estão disponíveis através de um modelo de objeto totalmente gerenciado.  
+ O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é totalmente compatível com o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Isso permite que desenvolvedores programem o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ao escolherem idiomas compatíveis com .NET. Embora o mecanismo de tempo de execução e o mecanismo de fluxo de dados sejam escritos em código nativo, ambos estão disponíveis através de um modelo de objeto totalmente gerenciado.  
   
  Você pode programar pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], tarefas personalizadas e componentes no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ou em outro editor de código ou de texto. O [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oferece ao desenvolvedor muitas ferramentas e recursos para simplificar e acelerar os ciclos iterativos de codificação, depuração e teste. O [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] também facilita a implantação. Porém, você não precisa do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] para compilar e criar projetos de código do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. O SDK do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] inclui os compiladores [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] e [!INCLUDE[csprcs](../includes/csprcs-md.md)] e as ferramentas relacionadas.  
   
 > [!IMPORTANT]  
 >  Por padrão, o [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] é instalado com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mas não com o SDK de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] . A menos que o SDK esteja instalado no computador e a documentação do SDK esteja incluída na coleção de manuais online, os links para o conteúdo do SDK desta seção não funcionarão. Depois de instalar o SDK do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], você pode adicionar a documentação do SDK à coleção de Manuais Online e ao sumário seguindo as instruções fornecidas em [Adicionar ou remover a documentação do produto do SQL Server](https://msdn.microsoft.com/library/ef798cc8-87cf-4d60-a7bf-9e061bdd0052).  
   
- A tarefa e o componente Script do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilizam o VSTA ([!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications) como um ambiente de script inserido. O VSTA dá suporte ao [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic e ao [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#.  
+ A tarefa e o componente Script do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usam o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSTA (Tools for Applications) como um ambiente de script inserido. O VSTA dá suporte ao [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic e ao [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#.  
   
 > [!NOTE]  
 >  As interfaces de programação de aplicativo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] são incompatíveis com as linguagens de scripts baseadas em COM, como VBScript.  

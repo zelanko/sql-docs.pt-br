@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68476295"
 ---
 # <a name="index-properties-f1-help"></a>Ajuda de F1 de Propriedades do Índice
@@ -96,7 +96,7 @@ ms.locfileid: "68476295"
  Exibe se a coluna que participa da chave de índice permite armazenar valores NULL na tabela ou coluna de exibição.  
   
  **Adicionar**  
- Adiciona uma coluna à chave de índice. Selecione colunas de tabela da caixa de diálogo **Selecionar colunas de** *\<nome da tabela>* que aparece quando você clica em **Adicionar**. No caso de um índice espacial, depois que você seleciona uma coluna, este botão fica esmaecido.  
+ Adiciona uma coluna à chave de índice. Selecione colunas de tabela na caixa de diálogo **Selecionar Colunas de** *\<nome da tabela>* exibida ao clicar em **Adicionar**. No caso de um índice espacial, depois que você seleciona uma coluna, este botão fica esmaecido.  
   
  **Remover**  
  Remove a coluna selecionada da participação na chave de índice.  
@@ -131,7 +131,7 @@ ms.locfileid: "68476295"
  **Identidade**  
  Exibe **Sim** para colunas de identidade e **Não** quando a coluna não é uma coluna de identidade.  
   
- **Allow Nulls**  
+ **Permitir Nulos**  
  Exibe **Sim** quando a definição da tabela permitir valores nulos para a coluna. Exibe **Não** quando a definição da tabela não permite nulos para a coluna.  
 
 ##  <a name="Options"></a> Opções da página Opções
@@ -242,16 +242,16 @@ As páginas de nível intermediário são preenchidas até próximo de sua capac
   
  O painel exibe as coordenadas **(** _X mín._ **,** _Y mín._ **)** e **(** _X máx._ **,** _Y máx._ **)** da caixa delimitadora. Não há valores de coordenada padrão. Portanto, ao criar um novo índice espacial em uma **geometry** coluna de tipo, será necessário especificar os valores de coordenada.  
   
- **X mín.**  
+ **X-min**  
  A coordenada X do canto inferior esquerdo da caixa delimitadora.  
   
- **Y mín.**  
+ **Y-min**  
  A coordenada Y do canto inferior esquerdo da caixa delimitadora.  
   
- **X máx.**  
+ **X-max**  
  Coordenada X do canto superior direito da caixa delimitadora.  
   
- **Y máx.**  
+ **Y-max**  
  Coordenada Y do canto superior direito da caixa delimitadora.  
   
 ### <a name="general"></a>Geral  

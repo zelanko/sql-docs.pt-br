@@ -26,10 +26,10 @@ ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064682"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "73064682"
 
   Define um nível de prioridade e o conjunto de critérios para determinar quais conversas do [!INCLUDE[ssSB](../../includes/sssb-md.md)] devem ser atribuídas ao nível de prioridade. O nível de prioridade é atribuído a qualquer ponto de extremidade de conversa que use a mesma combinação de contratos e serviços especificada na prioridade de conversa. As prioridades variam em valor, de 1 (baixa) a 10 (alta). O padrão é 5.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -110,7 +110,7 @@ FOR CONVERSATION
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
  Especifica a prioridade a ser atribuída a qualquer ponto de extremidade da conversa que use os contratos e os serviços especificados na prioridade da conversa. *PriorityValue* precisa ser um inteiro literal de 1 (prioridade mais baixa) a 10 (prioridade mais alta). O padrão é 5.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O [!INCLUDE[ssSB](../../includes/sssb-md.md)] atribui níveis de prioridade a pontos de extremidade de conversa. Os níveis de prioridade controlam a prioridade das operações associadas ao ponto de extremidade. Cada conversa tem dois pontos de extremidade de conversa:  
   
 -   O ponto de extremidade de conversa de iniciador associa um lado da conversa ao serviço iniciador e à fila do iniciador. O ponto de extremidade de conversa do iniciador é criado quando a instrução BEGIN DIALOG é executada. As operações associadas ao ponto de extremidade de conversa do iniciador incluem:  
@@ -163,7 +163,7 @@ FOR CONVERSATION
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-assigning-a-priority-level-to-both-directions-of-a-conversation"></a>A. Atribuindo um nível de prioridade às duas direções de uma conversa.  
+### <a name="a-assigning-a-priority-level-to-both-directions-of-a-conversation"></a>a. Atribuindo um nível de prioridade às duas direções de uma conversa.  
  Essas duas prioridades de conversa asseguram que a todas as operações que usam `SimpleContract` entre `TargetService` e `InitiatorAService` seja atribuído o nível de prioridade 3.  
   
 ```  

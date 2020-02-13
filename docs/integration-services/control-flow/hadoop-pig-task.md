@@ -13,10 +13,10 @@ ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a624228a0df45ee0ba2954d27e38be511db629fe
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294091"
 ---
 # <a name="hadoop-pig-task"></a>Tarefa de Pig do Hadoop
@@ -28,7 +28,7 @@ ms.locfileid: "71294091"
   
  Para adicionar uma Tarefa de Pig do Hadoop, arraste-a e solte-a para o designer. Em seguida, clique duas vezes na tarefa ou com o botão direito do mouse e clique em **Editar**para ver a caixa de diálogo **Editor de Tarefa de Pig do Hadoop** .  
   
- ![Editor de Tarefa de Pig do Hadoop](../../integration-services/control-flow/media/hadoop-pig-task.png "Editor de Tarefa de Pig do Hadoop")  
+ ![Editor de Tarefa do Pig do Hadoop](../../integration-services/control-flow/media/hadoop-pig-task.png "Editor de Tarefa do Pig do Hadoop")  
   
 ## <a name="options"></a>Opções  
  Configure as seguintes opções na caixa de diálogo **Editor de Tarefa do Pig do Hadoop** .  
@@ -42,6 +42,6 @@ ms.locfileid: "71294091"
 |**TimeoutInMinutes**|Especifique um valor de tempo limite em minutos. O trabalho do Hadoop para se não tiver sido concluído antes do tempo limite ser decorrido. Especifique 0 para agendar o trabalho do Hadoop para executar de forma assíncrona.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciador de conexões do Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)  
+ [Gerenciador de Conexões do Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)  
   
   

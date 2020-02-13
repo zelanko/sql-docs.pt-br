@@ -22,10 +22,10 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5d51385ff820155d805803773265f39cd8598df6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981889"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73981889"
 
   Cria um índice de texto completo em uma tabela ou em uma exibição indexada de um banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Somente um índice de texto completo é permitido por tabela ou exibição indexada, e cada índice de texto completo se aplica a uma única tabela ou exibição indexada. O índice de texto completo pode conter até 1024 colunas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -96,7 +96,7 @@ Se o valor estiver no formato DBCS (conjunto de caracteres de dois bytes), o [!I
   
 Os recursos, como separadores e lematizadores de palavras, devem estar habilitados para o idioma especificado como *language_term*. Se tais recursos não aceitarem o idioma especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro.  
   
-Use o procedimento armazenado sp_configure para acessar informações sobre o idioma de texto completo da instância [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+Use o procedimento armazenado sp_configure para acessar informações sobre o idioma de texto completo da instância [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 Para colunas não BLOB e não XML que contêm dados de texto em vários idiomas ou casos em que o idioma do texto armazenado na coluna é desconhecido, talvez seja necessário usar o recurso de idioma neutro (0x0). Porém, primeiro você deve compreender as possíveis consequências de usar o recurso de idioma neutro (0x0). Para obter informações sobre as possíveis soluções e consequências de usar o recurso neutro de idioma (0x0), veja [Escolher um idioma ao criar um índice de texto completo](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
   
@@ -153,7 +153,7 @@ Especifica que nenhuma lista de propriedades será associada ao índice de texto
 *property_list_name*       
 Especifica o nome da lista de propriedades de pesquisa para associar ao índice de texto completo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Para obter mais informações sobre índices de texto completo, veja [Criar e gerenciar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md).  
   
 Em colunas **xml**, você pode criar um índice de texto completo que indexa o conteúdo dos elementos XML, mas ignora a marcação XML. Os valores de atributos são indexados como texto completo, a menos que sejam valores numéricos. Marcas de elemento são usadas como limites do token. Há suporte a fragmentos e documentos XML ou HTML bem formados que contêm vários idiomas. Para obter mais informações, veja [Usar a pesquisa de texto completo com colunas XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
@@ -163,12 +163,12 @@ Recomendamos que a coluna de chave de índice seja de um tipo de dados inteiro. 
 ## <a name="interactions-of-change-tracking-and-no-population-parameter"></a>Interações do controle de alterações e do parâmetro NO POPULATION  
  O fato de o índice de texto completo ser populado depende de o controle de alterações estar habilitado e de WITH NO POPULATION ter sido especificado na instrução ALTER FULLTEXT INDEX. A tabela a seguir resume o resultado da interação.  
   
-|Controle de Alterações|WITH NO POPULATION|Resultado|  
+|Controle de Alterações|WITH NO POPULATION|Result|  
 |---------------------|------------------------|------------|  
 |Não habilitado|Não especificado|Uma população completa é executada no índice.|  
 |Não habilitado|Especificado|Não ocorre nenhuma população do índice até que uma instrução ALTER FULLTEXT INDEX...START POPULATION seja emitida.|  
-|Habilitado|Specified|É gerado um erro e o índice não é alterado.|  
-|Habilitado|Não especificado|Uma população completa é executada no índice.|  
+|habilitado|Especificado|É gerado um erro e o índice não é alterado.|  
+|habilitado|Não especificado|Uma população completa é executada no índice.|  
   
  Para obter mais informações sobre o preenchimento de índices de texto completo, veja [Preencher índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
   
@@ -182,7 +182,7 @@ Se a opção `SET STOPLIST` estiver especificada, o usuário deve ter permissão
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-unique-index-a-full-text-catalog-and-a-full-text-index"></a>A. Criando um índice exclusivo, um catálogo de texto completo e um índice de texto completo  
+### <a name="a-creating-a-unique-index-a-full-text-catalog-and-a-full-text-index"></a>a. Criando um índice exclusivo, um catálogo de texto completo e um índice de texto completo  
  O exemplo a seguir cria um índice exclusivo na coluna `JobCandidateID` da tabela `HumanResources.JobCandidate` do banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Em seguida, o exemplo cria um catálogo de texto completo padrão, `ft`. Finalmente, o exemplo cria um índice de texto completo na coluna `Resume`, usando o catálogo `ft` e a lista de palavras irrelevantes (stoplist) do sistema.  
   
 ```sql  

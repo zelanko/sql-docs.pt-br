@@ -13,10 +13,10 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 06f2d0cef2cafa90476b4e3f5b6e68efe208c21b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293109"
 ---
 # <a name="data-streaming-destination"></a>Destino do Fluxo de Dados
@@ -24,7 +24,7 @@ ms.locfileid: "71293109"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  O **Destino do Fluxo de Dados** é um componente de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS), que permite que o **Provedor OLE DB para SSIS** consuma a saída de um pacote SSIS como um conjunto de resultados de tabelas. Você pode criar um servidor vinculado que use o Provedor OLE DB para SSIS e então execute uma consulta SQL no servidor vinculado para exibir os dados retornados pelo pacote SSIS.  
+  O **Destino do Streaming de Dados** é um componente de destino do SSIS ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]) que permite que o **Provedor OLE DB para SSIS** consuma a saída de um pacote SSIS como um conjunto de resultados de tabelas. Você pode criar um servidor vinculado que use o Provedor OLE DB para SSIS e então execute uma consulta SQL no servidor vinculado para exibir os dados retornados pelo pacote SSIS.  
   
  No exemplo a seguir, a consulta a seguir retorna a saída do pacote Package.dtsx no projeto SSISPackagePublishing na pasta do Power BI do Catálogo do SSIS. Essa consulta usa o servidor vinculado chamado [Servidor Vinculado Padrão para o Integration Services] que, por sua vez, usa o novo Provedor OLE DB para SSIS. A consulta inclui o nome da pasta, o nome do projeto e o nome do pacote no catálogo do SSIS. O Provedor OLE DB para SSIS executa o pacote especificado na consulta e retorna o conjunto de resultados tabulares.  
   
@@ -63,7 +63,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 |Campo|Descrição|  
 |-----------|-----------------|  
 |Nome|Nome do componente de destino de streaming de dados no pacote.|  
-|ValidateExternalMetadata|Indica se o componente é validado usando fontes de dados externas no momento do design. Se definido como falso, a validação das fontes de dados externas é atrasada até o tempo de execução.|  
+|ValidateExternalMetadata|Indica se o componente é validado usando fontes de dados externas no momento do design. Se definido como falso, a validação das fontes de dados externas é atrasada até o runtime.|  
 |IDColumnName|A exibição gerada pelo Assistente de publicação de feed de dados tem esta coluna de ID adicional. A coluna ID serve como EntityKey para os dados de saída do fluxo de dados quando os dados são consumidos como um feed de OData por outros aplicativos.<br /><br /> O nome padrão para esta coluna é _ID. Você pode especificar um nome diferente para a coluna de ID.|  
   
 ## <a name="input-columns-tab"></a>Guia Colunas de Entrada  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999440"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Restrições de chave primária e chave estrangeira
@@ -43,7 +43,7 @@ ms.locfileid: "67999440"
   
  Conforme mostrado na ilustração a seguir, as colunas **ProductID** e **VendorID** da tabela **Purchasing.ProductVendor** formam uma restrição de chave primária composta para essa tabela. Isso garante que cada linha da tabela **ProductVendor** tem uma combinação exclusiva de **ProductID** e **VendorID**. Isso impede a inserção de linhas duplicadas.  
   
- ![Restrição PRIMARY KEY de composição](../../relational-databases/tables/media/fund04.gif "Restrição PRIMARY KEY de composição")  
+ ![Restrição de PRIMARY KEY composta](../../relational-databases/tables/media/fund04.gif "Restrição de PRIMARY KEY composta")  
   
 -   Uma tabela pode conter apenas uma restrição PRIMARY KEY.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "67999440"
 |Descreve como modificar relações de chave estrangeira.|[Modificar relações de chave estrangeira](../../relational-databases/tables/modify-foreign-key-relationships.md)|  
 |Descreve como excluir relações de chave estrangeira.|[Excluir relações de chaves estrangeiras](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
 |Descreve como exibir propriedades de chave estrangeira.|[Exibir propriedades de chave estrangeira](../../relational-databases/tables/view-foreign-key-properties.md)|  
-|Descreve como desabilitar restrições de chave estrangeira para replicação.|[Desabilitar restrições FOREIGN KEY para replicação](../../relational-databases/tables/disable-foreign-key-constraints-for-replication.md)|  
-|Descreve como desabilitar restrições de chave estrangeira durante uma instrução INSERT e UPDATE.|[Desabilitar restrições FOREIGN KEY com instruções INSERT e UPDATE](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
+|Descreve como desabilitar restrições de chave estrangeira para replicação.|[Desabilitar restrições de chave estrangeira para a replicação](../../relational-databases/tables/disable-foreign-key-constraints-for-replication.md)|  
+|Descreve como desabilitar restrições de chave estrangeira durante uma instrução INSERT e UPDATE.|[Desabilitar restrições de chave estrangeira com instruções INSERT e UPDATE](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
   
   

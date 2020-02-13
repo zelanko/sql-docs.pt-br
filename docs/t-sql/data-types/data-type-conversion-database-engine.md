@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68697500"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversão de tipo de dados (Mecanismo de Banco de Dados)
@@ -56,7 +56,7 @@ Use CAST em vez de CONVERT se quiser que o código do programa [!INCLUDE[tsql](.
   
 A ilustração a seguir mostra todas as conversões de tipos de dados explícitas e implícitas que são permitidas para tipos de dados fornecidos pelo sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso inclui **xml**, **bigint** e **sql_variant**. Não há nenhuma conversão implícita na atribuição do tipo de dados **sql_variant**, mas há uma conversão implícita em **sql_variant**.
   
-![Tabela de conversão de tipo de dados](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")
+![Tabela de conversão de tipo de dados](../../t-sql/data-types/media/lrdatahd.png "Tabela de conversão de tipo de dados")
 
 Embora o gráfico acima ilustre todas as conversões explícitas e implícitas permitidas no SQL Server, ele não indica o tipo de dados resultante da conversão. Quando o SQL Server executa uma conversão explícita, a instrução em si determina o tipo de dados resultante. Para conversões implícitas, instruções de atribuição como definir o valor de uma variável ou inserir um valor em uma coluna resultam no tipo de dados que foi definido pela declaração de variável ou definição de coluna. Para operadores de comparação ou outras expressões, o tipo de dados resultante depende das regras de precedência de tipo de dados.
 
@@ -122,12 +122,12 @@ A tabela a seguir descreve as conversões de tipo de dados do [!INCLUDE[ssNoVers
   
 |Tipo de dados do SQL Server|Tipo de dados do Visual Basic|  
 |--------------------------|----------------------------|  
-|**char**, **varchar**, **text**, **nvarchar**, **ntext**|**String**|  
-|**decimal**, **numeric**|**String**|  
+|**char**, **varchar**, **text**, **nvarchar**, **ntext**|**Cadeia de caracteres**|  
+|**decimal**, **numeric**|**Cadeia de caracteres**|  
 |**bit**|**Booliano**|  
 |**binary**, **varbinary**, **image**|Matriz **Byte()** unidimensional|  
 |**int**|**Long**|  
-|**smallint**|**Integer**|  
+|**smallint**|**Inteiro**|  
 |**tinyint**|**Byte**|  
 |**float**|**Double**|  
 |**real**|**Single**|  
@@ -135,7 +135,7 @@ A tabela a seguir descreve as conversões de tipo de dados do [!INCLUDE[ssNoVers
 |**datetime**, **smalldatetime**|**Data**|  
 |Tudo definido como NULL|**Variant** definida como Null|  
   
-Todos os valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] únicos são convertidos em um valor [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] único, com a exceção dos valores **binary**, **varbinary** e **image**. Esses valores são convertidos em uma matriz **Byte()** unidimensional em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Essa matriz tem um intervalo de **Byte(** 0 to _length_ 1 **)** em que *length* é o número de bytes nos valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** ou **image**.
+Todos os valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] únicos são convertidos em um valor [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] único, com a exceção dos valores **binary**, **varbinary** e **image**. Esses valores são convertidos em uma matriz **Byte()** unidimensional em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Essa matriz tem um intervalo de **Byte(** 0 a _length_ 1 **)** , em que *length* é o número de bytes nos valores **binary**, **varbinary** ou **image** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 Estas são as conversões de tipos de dados [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para tipos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   

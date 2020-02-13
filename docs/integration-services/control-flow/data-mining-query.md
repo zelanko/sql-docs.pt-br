@@ -13,10 +13,10 @@ ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ab9374312051ab22aa90c48bfed40713fe4e318
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298315"
 ---
 # <a name="data-mining-query"></a>Consulta de mineração de dados
@@ -30,9 +30,9 @@ ms.locfileid: "71298315"
  Botão para alternar a exibição  
  Clique em um ícone para alternar entre o painel de design e o painel de consulta. Por padrão, é aberto o painel de design.  
   
- Para mudar para o painel de design, clique no ícone ![ícone Design](../../integration-services/control-flow/media/ssis-designicon.gif "ícone Design").  
+ Para mudar para o painel de design, clique no ícone ![ícone Design](../../integration-services/control-flow/media/ssis-designicon.gif "Ícone de design").  
   
- Para mudar para o painel de consulta, clique no ícone ![ícone SQL](../../integration-services/control-flow/media/ssis-queryicon.gif "ícone SQL").  
+ Para mudar para o painel de consulta, clique no ícone ![ícone SQL](../../integration-services/control-flow/media/ssis-queryicon.gif "Ícone do SQL").  
   
  **Modelo de mineração**  
  Exibe o modelo de mineração selecionado no qual você deseja basear as previsões.  
@@ -60,14 +60,14 @@ ms.locfileid: "71298315"
  **Agrupar**  
  Use com a coluna **E/ou** para agrupar expressões. Por exemplo, (expr1 OU expr2) E expr3.  
   
- **E/ou**  
+ **E/Ou**  
  Use para criar uma consulta lógica. Por exemplo, (expr1 OU expr2) E expr3.  
   
  **Critérios/Argumento**  
  Especifique uma condição ou expressão de usuário que se aplica à coluna. As colunas podem ser arrastadas das tabelas que contêm o modelo de mineração e colunas de entrada para a célula.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Ferramentas de Consulta de Mineração de Dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
- [Referência de instruções de DMX &#40extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-statements.md)  
+ [Ferramentas de Consulta de Data Mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   

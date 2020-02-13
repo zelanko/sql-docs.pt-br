@@ -11,10 +11,10 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a16cd38eef12584f8d876e610bfda5d602c3076
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283021"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Lição 6-4: Implantar o pacote da Lição 6
@@ -60,7 +60,7 @@ Nesta tarefa, você:
   
 3.  Expanda a pasta **Tutorial do SSIS**, clique com o botão direito do mouse em **Projetos** e selecione **Importar Pacotes**.  
   
-4.  Na página de **Introdução** do **Assistente de Conversão de Projeto do Integration Services**, selecione **Avançar**.  
+4.  Na página **Introdução** do **Assistente de Conversão de Projeto do Integration Services**, selecione **Avançar**.  
   
 5.  Na página **Localizar Pacotes**, verifique se o **Sistema de arquivos** está selecionado na lista de **Origem**; então, selecione **Procurar**.  
   
@@ -80,7 +80,7 @@ Nesta tarefa, você:
   
 Quando você fecha o Assistente de conversão de projeto do Integration Services, o SSIS exibe o Assistente de implantação do Integration Services. Você agora usará esse assistente para implantar o pacote da Lição 6.  
   
-1.  Na página **Introdução** do **Assistente de Implantação do Integration Services**, examine as etapas para implantação do projeto e selecione **Avançar**.  
+1.  Na página **Introdução** do **Assistente de Implantação do Integration Services**, examine as etapas de implantação do projeto e, em seguida, selecione **Avançar**.  
   
 2.  Na página **Selecionar Destino**, verifique se o nome do servidor é a instância do SQL Server que contém o catálogo do SSISDB e o caminho mostra **Implantação do tutorial do SSIS**; então, selecione **Avançar**.  
   

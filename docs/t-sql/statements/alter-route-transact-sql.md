@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927186"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67927186"
   Modifica informações de rota para uma rota existente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +56,7 @@ WITH
  *route_name*  
  É o nome da rota a ser alterada. Os nomes de servidor, banco de dados e esquema não podem ser especificados.  
   
- com  
+ WITH  
  Introduz as cláusulas que definem a rota a ser alterada.  
   
  SERVICE_NAME **='** _service\_name_ **'**  
@@ -128,7 +128,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A tabela de roteamento que armazena as rotas é uma tabela de metadados que pode ser lida por meio da exibição de catálogo **sys.routes**. A tabela de roteamento pode ser atualizada somente pelas instruções CREATE ROUTE, ALTER ROUTE e DROP ROUTE.  
   
  As cláusulas que não são especificadas no comando ALTER ROUTE permanecem inalteradas. Portanto, não é possível alterar uma rota com ALTER para especificar que ela não expira, que corresponde a qualquer nome de serviço ou qualquer instância do agente. Para alterar essas características de uma rota, é necessário descartar a rota existente e criar uma nova com as novas informações.  
@@ -144,7 +144,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-changing-the-service-for-a-route"></a>A. Alterando o serviço para uma rota  
+### <a name="a-changing-the-service-for-a-route"></a>a. Alterando o serviço para uma rota  
  O exemplo a seguir modifica a rota `ExpenseRoute` para apontar para o serviço remoto `//Adventure-Works.com/Expenses`.  
   
 ```  

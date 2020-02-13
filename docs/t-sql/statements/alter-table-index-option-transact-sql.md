@@ -15,10 +15,10 @@ ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e70998bed1ed0f2681009622cfb086baa79dcf02
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982011"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "73982011"
 
   Especifica um conjunto de opções que podem ser aplicadas a um índice que faz parte de uma definição de restrição criada com [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -72,7 +72,7 @@ ms.locfileid: "73982011"
   
  Especifica o preenchimento do índice. O padrão é OFF.  
   
- ON  
+ ATIVADO  
  A porcentagem de espaço livre especificada por FILLFACTOR é aplicada às páginas de nível intermediário do índice.  
   
  OFF ou *fillfactor* não está especificado  
@@ -89,7 +89,7 @@ ms.locfileid: "73982011"
  IGNORE_DUP_KEY **=** { ON | **OFF** }  
  Especifica o tipo de resposta quando uma operação de inserção tenta inserir valores da chave duplicados em um índice exclusivo. A opção IGNORE_DUP_KEY aplica-se apenas a operações de inserção depois que o índice é criado ou recriado. A opção não tem nenhum efeito ao executar [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) ou [UPDATE](../../t-sql/queries/update-transact-sql.md). O padrão é OFF.  
   
- ON  
+ ATIVADO  
  Uma mensagem de aviso será exibida quando valores de chave duplicados são inseridos em um índice exclusivo. Somente as linhas que violarem a restrição de exclusividade falharão.  
   
  OFF  
@@ -104,7 +104,7 @@ ms.locfileid: "73982011"
  STATISTICS_NORECOMPUTE **=** { ON | **OFF** }  
  Especifica se as estatísticas são recalculadas. O padrão é OFF.  
   
- ON  
+ ATIVADO  
  As estatísticas desatualizadas não são recalculadas automaticamente.  
   
  OFF  
@@ -115,7 +115,7 @@ ms.locfileid: "73982011"
   
  Especifica se bloqueios de linha são permitidos. O padrão é ON.  
   
- ON  
+ ATIVADO  
  Bloqueios de linha são permitidos ao acessar o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando os bloqueios de linha são usados.  
   
  OFF  
@@ -126,7 +126,7 @@ ms.locfileid: "73982011"
   
  Especifica se bloqueios de página são permitidos. O padrão é ON.  
   
- ON  
+ ATIVADO  
  Bloqueios de página são permitidos ao acessar o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando os bloqueios de página são usados.  
   
  OFF  
@@ -143,7 +143,7 @@ Especifica se a contenção de inserção de última página será ou não otimi
   
  Especifica se os resultados de classificação devem ser armazenados em **tempdb**. O padrão é OFF.  
   
- ON  
+ ATIVADO  
  Os resultados de classificação intermediários usados para criar o índice são armazenados no **tempdb**. Isso poderá reduzir o tempo necessário para criar um índice se **tempdb** estiver em um conjunto de discos diferente do banco de dados de usuário. Entretanto, isso aumenta o espaço em disco usado durante a criação do índice.  
   
  OFF  
@@ -157,7 +157,7 @@ Especifica se a contenção de inserção de última página será ou não otimi
 > [!NOTE]  
 >  Não podem ser criados índices de não cluster exclusivos on-line. Isso inclui índices criados devido a uma restrição UNIQUE ou PRIMARY KEY.  
   
- ON  
+ ATIVADO  
  Bloqueios de tabela de longa duração não são mantidos durante a operação do índice. Durante a fase principal da operação de índice, apenas um bloqueio IS (Tentativa Compartilhada) é mantido na tabela de origem. Ele permite o prosseguimento de consultas ou atualizações feitas na tabela e nos índices subjacentes. No início da operação, um bloqueio Compartilhado (S) é mantido no objeto de origem por um período muito curto. Ao término da operação, por um curto período de tempo, um bloqueio S (Compartilhado) será adquirido na origem se um índice não clusterizado estiver sendo criado; ou um bloqueio de modificação de esquema (SCH-M) será adquirido quando um índice clusterizado for criado ou descartado online e quando um índice clusterizado ou não clusterizado estiver sendo recriado. Embora os bloqueios de índice online sejam bloqueios de metadados curtos, especialmente o bloqueio Sch-M deve esperar que todas as transações de bloqueio sejam concluídas nessa tabela. Durante o tempo de espera, o bloqueio Sch-M bloqueia todas as transações restantes que esperam atrás desse bloqueio ao acessar a mesma tabela. Não será possível definir ONLINE como ON quando um índice estiver sendo criado em uma tabela temporária local.  
   
 > [!NOTE]  
@@ -169,7 +169,7 @@ Especifica se a contenção de inserção de última página será ou não otimi
  Para obter mais informações, consulte [Como funcionam as operações de índice online](../../relational-databases/indexes/how-online-index-operations-work.md).  
   
 > [!NOTE]
->  As operações de índice online não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  As operações de índice online não estão disponíveis em todas as edições de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  MAXDOP **=** _max_degree_of_parallelism_  
  **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
@@ -190,7 +190,7 @@ Especifica se a contenção de inserção de última página será ou não otimi
  DATA_COMPRESSION  
  **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
- Especifica a opção de compactação de dados para a tabela, o número de partição ou o intervalo de partições especificado. As opções são as seguintes:  
+ Especifica a opção de compactação de dados para a tabela, o número de partição ou o intervalo de partições especificado. As opções são as descritas a seguir:  
   
  Nenhuma  
  A tabela ou as partições especificadas não são compactadas. Aplica-se somente a tabelas rowstore; não se aplica a tabelas columnstore.  
@@ -270,7 +270,7 @@ BLOCKERS
  Elimina todas as transações de usuário que atualmente bloqueiam a operação DDL de recompilação de índice online ou **SWITCH** de modo que a operação possa continuar.  
  BLOCKES requer a permissão **ALTER ANY CONNECTION**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para obter uma descrição completa dessas opções, veja [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte Também  

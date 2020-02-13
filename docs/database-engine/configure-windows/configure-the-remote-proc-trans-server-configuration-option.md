@@ -14,10 +14,10 @@ ms.assetid: cfbc6158-ab96-44b4-87eb-ea278c1b0c6b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9a372bf572373d0c3557ec4e40a32ba937d57d88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012307"
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>Configurar a opção remote proc trans de configuração de servidor
@@ -56,7 +56,7 @@ ms.locfileid: "68012307"
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Essa opção é fornecida para compatibilidade com versões anteriores do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para aplicativos que usam procedimentos armazenados remotos. Em vez de emitir chamadas a procedimentos armazenados remotos, use consultas distribuídas que fazem referência a servidores vinculados, definidos com [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+-   Essa opção é fornecida para compatibilidade com versões anteriores do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em aplicativos que usam procedimentos armazenados remotos. Em vez de emitir chamadas a procedimentos armazenados remotos, use consultas distribuídas que fazem referência a servidores vinculados, definidos com [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
 ###  <a name="Security"></a> Segurança  
   

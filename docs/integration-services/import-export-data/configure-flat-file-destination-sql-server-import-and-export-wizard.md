@@ -12,10 +12,10 @@ ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8c596f37cb0a83682c5c8dff370a92a5d3d73eb5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285793"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurar Destino Arquivo Simples (Assistente de Importação e Exportação do SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "71285793"
 |**{CR}{LF}**|Delimite as linhas por uma combinação de retorno de carro e alimentação de linha.|  
 |**{CR}**|Delimite linhas com um retorno de carro.|  
 |**{LF}**|Delimite linhas com uma alimentação de linha.|  
-|**Ponto e vírgula {;}**|Delimite linhas com um ponto-e-vírgula.|  
+|**Ponto-e-vírgula {;}**|Delimite linhas com um ponto-e-vírgula.|  
 |**Dois-pontos {:}**|Delimite linhas com dois-pontos.|  
 |**Vírgula {,}**|Delimite linhas com uma vírgula.|  
 |**Tabulação {t}**|Delimite linhas com uma tabulação.|  
@@ -62,7 +62,7 @@ ms.locfileid: "71285793"
 |**{CR}{LF}**|Delimite as colunas por uma combinação de retorno de carro e alimentação de linha.|  
 |**{CR}**|Delimite colunas com um retorno de carro.|  
 |**{LF}**|Delimite colunas com uma alimentação de linha.|  
-|**Ponto e vírgula {;}**|Delimite colunas com um ponto-e-vírgula.|  
+|**Ponto-e-vírgula {;}**|Delimite colunas com um ponto-e-vírgula.|  
 |**Dois-pontos {:}**|Delimite colunas com dois-pontos.|  
 |**Vírgula {,}**|Delimite colunas com uma vírgula.|  
 |**Tabulação {t}**|Delimite colunas com uma tabulação.|  
@@ -83,5 +83,5 @@ Opcionalmente, clique em **Visualização** para visualizar até 200 linhas de d
 Depois de visualizar os dados, é recomendável alterar as opções selecionadas nas páginas anteriores do assistente. Para executar essas alterações, retorne para a página **Configurar Destino do Arquivo Simples** e clique em **Voltar** para retornar às páginas anteriores, nas quais é possível alterar as seleções.  
 
 ## <a name="whats-next"></a>O que vem a seguir?  
- Depois de especificar as opções de formatação para o arquivo de destino simples, a próxima página é **Salvar e executar pacote**. Nesta página, especifique se deseja executar a operação imediatamente. Dependendo da sua configuração, você também poderá salvar suas configurações como um pacote do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para personalizá-lo e reutilizá-lo posteriormente. Para obter mais informações, consulte [Salvar e Executar o Pacote](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
+ Depois de especificar as opções de formatação para o arquivo de destino simples, a próxima página é **Salvar e executar pacote**. Nesta página, especifique se deseja executar a operação imediatamente. Dependendo da configuração, você também poderá salvar as configurações como um pacote do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para personalizá-lo e reutilizá-lo posteriormente. Para obter mais informações, consulte [Salvar e Executar o Pacote](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
 

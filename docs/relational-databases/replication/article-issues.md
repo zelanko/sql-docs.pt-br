@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 69d0337fe66af61e66290117d94043cc01547524
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: bd9ebe330a4ce1ed10b2e3946513d127b7719a8b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770707"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288107"
 ---
 # <a name="article-issues"></a>Problemas do Artigo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,11 +29,11 @@ ms.locfileid: "68770707"
 |Colunas uniqueidentifier serão adicionadas a tabelas.|A replicação requer uma coluna de tipo de dados **uniqueidentifier** para todos os artigos em uma publicação de mesclagem ou uma publicação transacional que permita assinaturas de atualização.|A replicação adiciona automaticamente uma coluna de tipo de dados **uniqueidentifier** às tabelas publicadas que não têm uma quando o primeiro instantâneo é gerado. Você deve assegurar que as instruções INSERT e UPDATE que referenciam essas tabelas usam listas de colunas. Assegure também que haja espaço suficiente em disco para a coluna adicional.|  
 |Colunas IDENTITY requerem a opção NOT FOR REPLICATION.|A replicação requer que todas as colunas IDENTITY usem a opção NOT FOR REPLICATION. Se uma coluna IDENTITY publicada não usar essa opção, comandos INSERT poderão não ser replicados corretamente.|Aplica-se a publicações criadas em Publicadores que executam o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] e versões anteriores. Você deve especificar a propriedade NOT FOR REPLICATION para todas as colunas IDENTITY.|  
 |Propriedade IDENTITY não transferida aos Assinantes.|Essa publicação não permite atualizações nos Assinantes. Quando as colunas IDENTITY são transferidas para o Assinante, a propriedade IDENTITY não é transferida. Por exemplo, uma coluna definida como INT IDENTITY no Publicador é definida como INT no Assinante.|Aplica-se a publicações criadas em Publicadores que executam o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] e versões anteriores. Nenhuma ação é necessária.|  
-|Tabelas referenciadas por exibições são requeridas.|O[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer que todas a tabelas referenciadas por exibições e exibições indexadas publicadas estejam disponíveis no Assinante. Se as tabelas referenciadas não forem publicadas como artigos nesta publicação, elas deverão ser criadas no Assinante manualmente.|Use o botão **Voltar** para navegar até página **Artigos** . Adicione qualquer objeto requerido.|  
+|Tabelas referenciadas por exibições são requeridas.|O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer que todas a tabelas referenciadas por exibições e exibições indexadas publicadas estejam disponíveis no Assinante. Se as tabelas referenciadas não forem publicadas como artigos nesta publicação, elas deverão ser criadas no Assinante manualmente.|Use o botão **Voltar** para navegar até página **Artigos** . Adicione qualquer objeto requerido.|  
 |Objetos referenciados por procedimentos armazenados são requeridos.|O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer que todos os objetos referenciados por procedimentos armazenados publicados, como tabelas e funções definidas pelo usuário, estejam disponíveis no Assinante. Se os objetos referenciados não forem publicados como artigos nesta publicação, eles deverão ser criados no Assinante manualmente.|Use o botão **Voltar** para navegar até página **Artigos** . Adicione qualquer objeto requerido.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
+ [Criar uma publicação](../../relational-databases/replication/publish/create-a-publication.md)  
   
   

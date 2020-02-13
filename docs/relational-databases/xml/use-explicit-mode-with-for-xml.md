@@ -15,10 +15,10 @@ ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001791"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Usar o modo EXPLICIT com FOR XML
@@ -42,7 +42,7 @@ ms.locfileid: "68001791"
   
  Para entender como a tabela universal gerada por uma consulta é processada na geração do resultado XML, assuma que você escreveu uma consulta que produz essa tabela universal:  
   
- ![Tabela universal de amostra](../../relational-databases/xml/media/xmlutable.gif "tabela universal de amostra")  
+ ![Tabela universal de exemplo](../../relational-databases/xml/media/xmlutable.gif "Tabela universal de exemplo")  
   
  Observe o seguinte sobre essa tabela universal:  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68001791"
   
 -   Para gerar o XML dessa tabela universal, os dados nessa tabela são particionados verticalmente em grupos de colunas. O agrupamento é determinado com base no valor da **Tag** e nos nomes de coluna. Para construir XML, a lógica de processamento seleciona um grupo de colunas para cada linha e constrói um elemento. O seguinte se aplica neste exemplo:  
   
-    -   Para o valor 1 da coluna **Tag** na primeira linha, as colunas cujos nomes incluem o mesmo número de marca, **Customer!1!cid** e **Customer!1!name** formam um grupo. Essas colunas são usadas para processar a linha e você pode ter observado que a forma do elemento gerado é <`Customer id=... name=...`>. O formato do nome da coluna é descrito neste tópico.  
+    -   Para o valor 1 da coluna **Tag** na primeira linha, as colunas cujos nomes incluem o mesmo número de marca, **Customer!1!cid** e **Customer!1!name**formam um grupo. Essas colunas são usadas para processar a linha e você pode ter observado que a forma do elemento gerado é <`Customer id=... name=...`>. O formato do nome da coluna é descrito neste tópico.  
   
     -   Para o valor 2 da coluna **Tag**, as colunas **Order!2!id** e **Order!2!date** formam um grupo que é usado para construir elementos, <`Order id=... date=... /`>.  
   
@@ -60,20 +60,20 @@ ms.locfileid: "68001791"
   
 -   Observe que para gerar a hierarquia de XML, as linhas são processadas em ordem. A hierarquia de XML é determinada conforme mostrado a seguir:  
   
-    -   A primeira linha especifica valor 1 de **Tag** e valor NULL de **Parent**. Portanto, o elemento <`Customer`> correspondente é adicionado como um elemento de nível superior no XML.  
+    -   A primeira linha especifica valor 1 de **Tag** e valor NULL de **Parent** . Portanto, o elemento <`Customer`> correspondente é adicionado como um elemento de nível superior no XML.  
   
         ```  
         <Customer cid="C1" name="Janine">  
         ```  
   
-    -   A segunda linha identifica valor 2 de **Tag** valor 1 de **Parent**. Portanto o elemento <`Order`> é adicionado como um filho do elemento <`Customer`>.  
+    -   A segunda linha identifica valor 2 de **Tag** valor 1 de **Parent** . Portanto o elemento <`Order`> é adicionado como um filho do elemento <`Customer`>.  
   
         ```  
         <Customer cid="C1" name="Janine">  
            <Order id="O1" date="1/20/1996">  
         ```  
   
-    -   As próximas duas linhas identificam o valor 3 de **Tag** e o valor 2 de **Parent**. Portanto os dois elementos <`OrderDetail`> são adicionados como filhos do elemento <`Order`>.  
+    -   As próximas duas linhas identificam o valor 3 de **Tag** e o valor 2 de **Parent** . Portanto os dois elementos <`OrderDetail`> são adicionados como filhos do elemento <`Order`>.  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -82,7 +82,7 @@ ms.locfileid: "68001791"
               <OrderDetail id="OD2" pid="P2"/>  
         ```  
   
-    -   A última linha identifica 2 como o número da **Tag** e 1 como o número da marca **Parent**. Portanto outro filho do elemento <`Order`> é adicionado ao elemento pai <`Customer`>.  
+    -   A última linha identifica 2 como o número da **Tag** e 1 como o número da marca **Parent** . Portanto outro filho do elemento <`Order`> é adicionado ao elemento pai <`Customer`>.  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -94,7 +94,7 @@ ms.locfileid: "68001791"
         </Customer>  
         ```  
   
- Para resumir, os valores nas colunas de meta **Tag** e **Parent**, as informações fornecidas na coluna names e a ordenação correta das linhas produzem o XML desejado quando o modo EXPLICIT é usado.  
+ Para resumir, os valores nas colunas de meta **Tag** e **Parent** , as informações fornecidas na coluna names e a ordenação correta das linhas produzem o XML desejado quando o modo EXPLICIT é usado.  
   
 ### <a name="universal-table-row-ordering"></a>Ordenação de linhas da tabela universal  
  Para construir o XML, as linhas na tabela universal são processadas na ordem. Portanto para recuperar as instâncias filho corretas associadas ao pai, as linhas no conjunto de linhas devem ser ordenadas de forma que cada nó pai seja imediatamente seguido por seus filhos.  

@@ -26,10 +26,10 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19f179ae869a175ea6238ba4ade9e5f87d663e08
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297796"
 ---
 # <a name="dtutil-utility"></a>utilitário dtutil
@@ -37,7 +37,7 @@ ms.locfileid: "71297796"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  O utilitário de prompt de comando **dtutil** é usado para gerenciar pacotes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O utilitário pode copiar, mover, excluir ou verificar a existência de um pacote. Essas ações podem ser desenvolvidas em qualquer pacote do [!INCLUDE[ssIS](../includes/ssis-md.md)] que esteja armazenado em um dos três locais: um banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o Armazenamento de Pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)] e o sistema de arquivos. Se o utilitário acessar um pacote armazenado em **msdb**, o prompt de comando poderá exigir um nome de usuário e uma senha. Se a instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar Autenticação de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o prompt de comando solicitará um nome de usuário e uma senha. Se o nome de usuário estiver ausente, o **dtutil** tentará fazer logon no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando a Autenticação do Windows. O tipo de armazenamento do pacote é identificado pelas opções **/SQL**, **/FILE**e **/DTS** .  
+  O utilitário de prompt de comando **dtutil** é usado para gerenciar pacotes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. O utilitário pode copiar, mover, excluir ou verificar a existência de um pacote. Essas ações podem ser desenvolvidas em qualquer pacote do [!INCLUDE[ssIS](../includes/ssis-md.md)] que esteja armazenado em um dos três locais: um banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o Armazenamento de Pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)] e o sistema de arquivos. Se o utilitário acessar um pacote armazenado em **msdb**, o prompt de comando poderá exigir um nome de usuário e uma senha. Se a instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar Autenticação de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o prompt de comando solicitará um nome de usuário e uma senha. Se o nome de usuário estiver ausente, o **dtutil** tentará fazer logon no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando a Autenticação do Windows. O tipo de armazenamento do pacote é identificado pelas opções **/SQL**, **/FILE**e **/DTS** .  
   
  O utilitário do prompt de comando **dtutil** não aceita o uso de arquivos de comando ou redirecionamento.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "71297796"
 dtutil /option [value] [/option [value]]...  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
   
 |Opção|Descrição|  
 |------------|-----------------|  
@@ -113,7 +113,7 @@ dtutil /option [value] [/option [value]]...
 |/R[emark] *text*|Adiciona um comentário à linha de comando. O argumento de comentário é opcional. Se o texto de comentário incluir espaços, ele deverá ser colocado entre aspas. Você pode incluir várias opções REM em uma linha de comando.|  
 |/Si[gn] {*SQL* &#124; *File* &#124; *DTS*}; *path*; *hash*|Assina um pacote [!INCLUDE[ssIS](../includes/ssis-md.md)] . Essa ação usa três argumentos necessários que são separados por ponto-e-vírgula; destination, path e hash:<br /><br /> O argumento de destino pode especificar *SQL*, *FILE*ou *DTS*. Um destino SQL pode incluir as opções *DESTUSER*, *DESTPASSWORD* e *DESTSERVER* .<br /><br /> O argumento de caminho especifica o local do pacote para aplicar a ação.<br /><br /> O argumento de hash especifica um identificador de certificado expresso como uma cadeia de caracteres hexadecimal de comprimento variado.<br /><br /> Para obter mais informações, consulte [Identificar a origem de pacotes com assinaturas digitais](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).<br /><br /> <br /><br /> **\*\* Importante \*\*** Quando configurado para verificar a assinatura do pacote, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] apenas verifica se a assinatura digital está presente, se é válida e se provém de uma origem confiável. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]*não* verifica se o pacote foi alterado.|  
 |/SourceP[assword] *password*|Especifica a senha usada com as opções *SQL* e *SOURCEUSER* para ativar a recuperação de um pacote [!INCLUDE[ssIS](../includes/ssis-md.md)] armazenado em um banco de dados em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que usa a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . É um erro especificar *SOURCEPASSWORD* em uma linha de comando que não inclui a opção **SOURCEUSER** .<br /><br /> Observação: [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
-|/SourceS[erver] *server_instance*|Especifica o nome do servidor usado com a opção **SQL** para ativar a recuperação de um pacote [!INCLUDE[ssIS](../includes/ssis-md.md)] armazenado no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. É um erro especificar *SOURCESERVER* em uma linha de comando que não inclui a opção *SIGN SQL*, *COPY* *SQL*ou *MOVE* *SQL* .<br /><br /> Um nome de instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode ser especificado adicionando uma barra invertida e o nome de instância ao nome do servidor.|  
+|/SourceS[erver] *server_instance*|Especifica o nome do servidor usado com a opção **SQL** para ativar a recuperação de um pacote [!INCLUDE[ssIS](../includes/ssis-md.md)] armazenado no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. É um erro especificar *SOURCEUSER* em uma linha de comando que não inclui a opção *SIGN SQL*, *COPY* *SQL* ou *MOVE* *SQL*.<br /><br /> Um nome de instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode ser especificado adicionando uma barra invertida e o nome de instância ao nome do servidor.|  
 |/SourceU[ser] *username*|Especifica o nome de usuário usado com as opções *SOURCESERVER* para ativar a recuperação de um pacote [!INCLUDE[ssIS](../includes/ssis-md.md)] armazenado no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . É um erro especificar *SOURCEUSER* em uma linha de comando que não inclui a opção *SIGN SQL*, *COPY SQL*ou *MOVE SQL* .<br /><br /> Observação: [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
 |/SQ[L] *package_path*|Especifica o local de um pacote [!INCLUDE[ssIS](../includes/ssis-md.md)] . Essa opção indica que o pacote está armazenado no banco de dados **msdb** . O argumento *package_path* especifica o caminho e nome do pacote [!INCLUDE[ssIS](../includes/ssis-md.md)] . Os nomes de pasta são finalizados com barras invertidas.<br /><br /> Se a opção *SQL* for especificada na mesma linha de comando como qualquer uma das opções a seguir, DTEXEC_DTEXECERROR será retornado:<br /><br /> *DTS*<br /><br /> *FILE*<br /><br /> A opção *SQL* pode ser acompanhada por zero ou uma instância das seguintes opções:<br /><br /> *SOURCEUSER*<br /><br /> *SOURCEPASSWORD*<br /><br /> *SOURCESERVER*<br /><br /> <br /><br /> Se *SOURCEUSERNAME* não for incluído, a Autenticação do Windows será usada para acessar o pacote. *SOURCEPASSWORD* é permitido somente se *SOURCEUSER* estiver presente. Se *SOURCEPASSWORD* não for incluído, será usada uma senha em branco.<br /><br /> **\*\* Importante \*\*** [!INCLUDE[ssNoteStrongPass](../includes/ssnotestrongpass-md.md)]|  
   
@@ -128,7 +128,7 @@ dtutil /option [value] [/option [value]]...
 |5|O utilitário não pode carregar o pacote solicitado.|  
 |6|O utilitário não pode resolver a linha de comando porque contém erros sintáticos ou semânticos.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Você não pode usar arquivos de comandos ou redirecionamento com **dtutil**.  
   
  A ordem das opções dentro da linha de comando não é significativa.  

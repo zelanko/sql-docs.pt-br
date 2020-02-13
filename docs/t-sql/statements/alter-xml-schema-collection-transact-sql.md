@@ -29,10 +29,10 @@ ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ae87d5c125ae3eac01013843c9fe2db183b9c1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68055961"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68055961"
 
   Adiciona novos componentes de esquema a uma coleção de esquema XML existente.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,7 +59,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
  **'** *Schema Component* **'**  
  É o componente de esquema a ser inserido.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use ALTER XML SCHEMA COLLECTION para adicionar novos esquemas XML cujos namespaces ainda não estejam na coleção de esquema XML ou para adicionar novos componentes a namespaces existentes na coleção.  
   
  O exemplo a seguir adiciona um novo \<element> ao namespace `https://MySchema/test_xml_schema` existente na coleção `MyColl`.  
@@ -93,7 +93,7 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-xml-schema-collection-in-the-database"></a>A. Criando uma coleção de esquema XML no banco de dados  
+### <a name="a-creating-xml-schema-collection-in-the-database"></a>a. Criando uma coleção de esquema XML no banco de dados  
  O exemplo a seguir cria uma coleção de esquema XML `ManuInstructionsSchemaCollection`. A coleção tem apenas um namespace de esquema.  
   
 ```  

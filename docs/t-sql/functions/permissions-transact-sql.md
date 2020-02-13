@@ -25,10 +25,10 @@ ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fc38de8bffc09461dc69a24acf15ce143276422b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843625"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "73843625"
 
   Retorna um valor contendo um bitmap que indica as permissões de instrução, objeto ou coluna do usuário atual.  
   
- **Important** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) e [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md). O uso contínuo da função PERMISSIONS pode resultar em desempenho mais lento.  
+ **Importante** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) e [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md) em vez disso. O uso contínuo da função PERMISSIONS pode resultar em desempenho mais lento.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  PERMISSIONS pode ser usado para determinar se o usuário atual possui as permissões necessárias para executar uma instrução ou para conceder uma permissão com GRANT para outro usuário.  
   
  As informações de permissões retornadas são um bitmap de 32 bits.  
@@ -112,7 +112,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-the-permissions-function-with-statement-permissions"></a>A. Usando a função PERMISSIONS com permissões de instrução  
+### <a name="a-using-the-permissions-function-with-statement-permissions"></a>a. Usando a função PERMISSIONS com permissões de instrução  
  O exemplo a seguir determina se o usuário atual pode executar a instrução `CREATE TABLE`.  
   
 ```  

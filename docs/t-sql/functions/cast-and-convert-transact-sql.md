@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5839bfa470bfc7a35c924f1710b1d78f86cb1245
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 943d0e840c0c407e66f0d47deec4c1e78fc57afa
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843428"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761620"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ CAST ( expression AS data_type [ ( length ) ] )
 CONVERT ( data_type [ ( length ) ] , expression [ , style ] )  
 ```  
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="arguments"></a>Argumentos  
 *expressão*  
@@ -87,7 +87,7 @@ Para uma *expression* de tipo de dados de data ou hora, *style* pode ter um dos 
 |**1**|**101**|EUA|  1 = mm/dd/aa<br /> 101 = mm/dd/aaaa|  
 |**2**|**102**|ANSI|  2 = aa.mm.dd<br /> 102 = aaaa.mm.dd|  
 |**3**|**103**|Britânico/francês|  3 = dd/mm/aa<br /> 103 = dd/mm/aaaa|  
-|**4**|**104**|German|  4 = dd.mm.aa<br /> 104 = dd.mm.aaaa|  
+|**4**|**104**|Alemão|  4 = dd.mm.aa<br /> 104 = dd.mm.aaaa|  
 |**5**|**105**|Italiano|  5 = dd-mm-aa<br /> 105 = dd-mm-aaaa|  
 |**6**|**106** <sup>(1)</sup>|-|  6 = dd mês aa<br /> 106 = dd mês aaaa|  
 |**7**|**107** <sup>(1)</sup>|-|  7 = Mês dd, aa<br /> 107 = Mês dd, aaaa|  
@@ -150,7 +150,7 @@ Para uma **expression** de **money** ou *smallmoney*, *style* pode ter um dos va
 |**126**|Equivalente ao estilo 2, ao converter em char(n) ou varchar(n)|  
   
 ## <a name="xml-styles"></a>Estilos xml
-Para uma **expression** *xml*, *style* pode ter um dos valores mostrados na tabela a seguir. Outros valores são processados como 0.
+Para uma *expression* **xml**, *style* pode ter um dos valores mostrados na tabela a seguir. Outros valores são processados como 0.
   
 |Valor|Saída|  
 |---|---|
@@ -160,12 +160,12 @@ Para uma **expression** *xml*, *style* pode ter um dos valores mostrados na tabe
 |**3**|Preserva o espaço em branco insignificante e habilita o processamento de subconjunto de DTD interno limitado.|  
   
 ## <a name="binary-styles"></a>Estilos binários
-Para uma **expression** de **binary(n)** , **char(n)** , **varchar(n)** ou *varbinary(n)* , *style* pode ter um dos valores mostrados na tabela a seguir. Os valores de estilo que não estão listados na tabela retornarão um erro.
+Para uma *expression* de **binary(n)** , **char(n)** , **varbinary(n)** ou **varchar(n)** , *style* pode ter um dos valores mostrados na tabela a seguir. Os valores de estilo que não estão listados na tabela retornarão um erro.
   
 |Valor|Saída|  
 |---|---|
 |**0** (padrão)|Converte caracteres ASCII em bytes binários ou bytes binários em caracteres ASCII. Cada caractere ou byte é convertido 1:1.<br /><br /> Para um *data_type* binário, os caracteres 0x são adicionados à esquerda do resultado.|  
-|**1**, **2**|Para um *data_type* binário, a expressão deve ser uma expressão de caracteres. A *expression* deve ter um número **par** de dígitos hexadecimais (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Se o *style* for definido como 1, ele deverá ter 0x como os dois primeiros caracteres. Se a expressão contiver um número ímpar de caracteres ou se um dos caracteres for inválido, um erro será gerado.<br /><br /> Se o tamanho da expressão convertida for maior que o tamanho do *data_type*, o resultado será truncado à direita.<br /><br /> *data_types* de comprimento fixo maiores que o resultado convertido têm zeros adicionados à direita do resultado.<br /><br /> Um *data_type* do tipo caractere exige uma expressão binária. Cada caractere binário é convertido em dois caracteres hexadecimais. Se o tamanho da expressão convertida exceder o tamanho do *data_type*, ela será truncada à direita.<br /><br /> Para um *data_type* de tipo de caractere de tamanho fixo, se o tamanho do resultado convertido for menor que o tamanho do *data_type*, serão adicionados espaços à direita da expressão convertida, para manter um número par de dígitos hexadecimais.<br /><br /> Os caracteres 0x serão adicionados à esquerda do resultado convertido para *style* 1.|  
+|**1**, **2**|Para um *data_type* binário, a expressão deve ser uma expressão de caracteres. A *expression* deve ter um número **par** de dígitos hexadecimais (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Se o *style* for definido como 1, a expressão deverá ter 0x como os dois primeiros caracteres. Se a expressão contiver um número ímpar de caracteres ou se um dos caracteres for inválido, um erro será gerado.<br /><br /> Se o tamanho da expressão convertida for maior que o tamanho do *data_type*, o resultado será truncado à direita.<br /><br /> *data_types* de comprimento fixo maiores que o resultado convertido têm zeros adicionados à direita do resultado.<br /><br /> Um *data_type* do tipo caractere exige uma expressão binária. Cada caractere binário é convertido em dois caracteres hexadecimais. Se o tamanho da expressão convertida exceder o tamanho do *data_type*, ela será truncada à direita.<br /><br /> Para um *data_type* de tipo de caractere de tamanho fixo, se o tamanho do resultado convertido for menor que o tamanho do *data_type*, serão adicionados espaços à direita da expressão convertida, para manter um número par de dígitos hexadecimais.<br /><br /> Os caracteres 0x serão adicionados à esquerda do resultado convertido para *style* 1.|  
   
 ## <a name="implicit-conversions"></a>Conversões implícitas
 Conversões implícitas não exigem a especificação da função CAST nem a função CONVERT. Conversões explícitas exigem a especificação da função CAST ou da função CONVERT. A ilustração a seguir mostra todas as conversões de tipo de dados explícitas e implícitas permitidas para tipos de dados fornecidos pelo sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso inclui **bigint**, **sql_variant** e **xml**. Não há nenhuma conversão implícita na atribuição do tipo de dados **sql_variant**, mas há uma conversão implícita em **sql_variant**.
@@ -206,7 +206,7 @@ Ao converter o tipo de dados **xml** explícita ou implicitamente em um tipo de 
 Os tipos de dados **text** e **image** não dão suporte a conversão automática de tipo de dados. Você pode converter explicitamente os dados **text** em dados de caractere, e os dados **image** em **binary** ou **varbinary**, mas o tamanho máximo é de 8.000 bytes. Se você tentar uma conversão incorreta, por exemplo, tentar a conversão de uma expressão de caractere que inclui letras em um **int**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro.
   
 ## <a name="output-collation"></a>Ordenação da saída  
-Quando as funções CAST ou CONVERT produzem uma cadeia de caracteres e elas recebem uma entrada de cadeia de caracteres, a saída tem a mesma ordenação e o mesmo rótulo de ordenação da entrada. Se a entrada não for uma cadeia de caracteres, a saída terá a ordenação padrão do banco de dados e um rótulo de ordenação de padrão coercível. Para obter mais informações, consulte [Precedência de ordenação &#40;Transact-SQL &#41;](../../t-sql/statements/collation-precedence-transact-sql.md).
+Quando as funções CAST ou CONVERT produzem uma cadeia de caracteres e elas recebem uma entrada de cadeia de caracteres, a saída tem a mesma ordenação e o mesmo rótulo de ordenação da entrada. Se a entrada não for uma cadeia de caracteres, a saída terá a ordenação padrão do banco de dados e um rótulo de ordenação de padrão coercível. Para obter mais informações, consulte [Precedência de ordenação &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).
   
 Para atribuir uma ordenação diferente à saída, aplique a cláusula COLLATE à expressão do resultado da função CAST ou CONVERT. Por exemplo:
   
@@ -215,7 +215,7 @@ Para atribuir uma ordenação diferente à saída, aplique a cláusula COLLATE �
 ## <a name="truncating-and-rounding-results"></a>Truncando e arredondando resultados
 Ao converter expressões de caractere ou binárias (**binary**, **char**, **nchar**, **nvarchar**, **varbinary** ou **varchar**) em uma expressão de um tipo de dados diferente, a operação de conversão pode truncar os dados de saída, apenas parcialmente exibir os dados de saída ou retornar um erro. Esses casos ocorrerão se o resultado for curto demais para ser exibido. As conversões em **binary**, **char**, **nchar**, **nvarchar**, **varbinary** ou **varchar** são truncadas, com exceção das conversões mostradas na tabela a seguir.
   
-|De tipo de dados|Em tipo de dados|Resultado|  
+|De tipo de dados|Em tipo de dados|Result|  
 |---|---|---|
 |**int**, **smallint** ou **tinyint**|**char**|*|  
 ||**varchar**|*|  
@@ -271,15 +271,15 @@ Quando você converter tipos de dados que têm casas decimais diferentes, às ve
   
 |De|Para|Comportamento|  
 |---|---|---|
-|**numeric**|**numeric**|Arredondamento|  
-|**numeric**|**int**|Truncar|  
-|**numeric**|**money**|Arredondamento|  
-|**money**|**int**|Arredondamento|  
-|**money**|**numeric**|Arredondamento|  
-|**float**|**int**|Truncar|  
-|**float**|**numeric**|Arredondamento<br /><br /> A conversão de valores **float** que usam notação científica para **decimal** ou **numeric** é restrita a valores de precisão de 17 dígitos apenas. Qualquer valor com precisão mais alto que 17 rodadas para zero.|  
-|**float**|**datetime**|Arredondamento|  
-|**datetime**|**int**|Arredondamento|  
+|**numeric**|**numeric**|Round|  
+|**numeric**|**int**|Truncate|  
+|**numeric**|**money**|Round|  
+|**money**|**int**|Round|  
+|**money**|**numeric**|Round|  
+|**float**|**int**|Truncate|  
+|**float**|**numeric**|Round<br /><br /> A conversão de valores **float** que usam notação científica para **decimal** ou **numeric** é restrita a valores de precisão de 17 dígitos apenas. Qualquer valor com precisão mais alto que 17 rodadas para zero.|  
+|**float**|**datetime**|Round|  
+|**datetime**|**int**|Round|  
   
 Por exemplo, os valores 10,6496 e -10,6496 podem ser truncados ou arredondados durante a conversão em tipos **int** ou **numeric**:
   
@@ -340,7 +340,7 @@ A atualização do banco de dados para o nível de compatibilidade 110 e superio
   
 ## <a name="BKMK_examples"></a> Exemplos  
   
-### <a name="a-using-both-cast-and-convert"></a>A. Usando CAST e CONVERT  
+### <a name="a-using-both-cast-and-convert"></a>a. Usando CAST e CONVERT  
 Cada exemplo recupera o nome dos produtos que têm um `3` no primeiro dígito de seu preço de lista e converte seus valores `ListPrice` em `int`.
   
 ```sql
@@ -803,7 +803,7 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 ```  
   
 ### <a name="n-using-cast-with-the-like-clause"></a>N. Usando CAST com a cláusula LIKE  
-Este exemplo converte a coluna `ListPrice` **money** em um tipo **int** e, em seguida, em um tipo **char(20)** , de modo que a cláusula LIKE possa usá-lo. Este exemplo usa o banco de dados `AdventureWorksDW2016`.  
+Este exemplo converte a coluna `ListPrice`**money** em um tipo **int** e, em seguida, em um tipo **char(20)** , de modo que a cláusula LIKE possa usá-lo. Este exemplo usa o banco de dados `AdventureWorksDW2016`.  
   
 ```sql
 SELECT EnglishProductName AS Name, ListPrice  

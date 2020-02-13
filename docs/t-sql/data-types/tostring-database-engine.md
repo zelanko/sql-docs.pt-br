@@ -18,10 +18,10 @@ ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: da6d7934951b683976a1a55f116def120bc515a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000438"
 ---
 # <a name="tostring-database-engine"></a>ToString (Mecanismo de Banco de Dados)
@@ -49,7 +49,7 @@ string ToString  ( )
   
 **Tipo de retorno do CLR: String**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Retorna o local lógico na hierarquia. Por exemplo, `/2/1/` representa a quarta linha ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) na seguinte estrutura hierárquica de um sistema de arquivos:
   
 ```sql
@@ -63,7 +63,7 @@ Retorna o local lógico na hierarquia. Por exemplo, `/2/1/` representa a quarta 
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-transact-sql-example-in-a-table"></a>A. Exemplo de Transact-SQL em uma tabela  
+### <a name="a-transact-sql-example-in-a-table"></a>a. Exemplo de Transact-SQL em uma tabela  
 O seguinte exemplo retorna a coluna `OrgNode` como o tipo de dados **hierarchyid** e no formato de cadeia de caracteres mais legível:
   
 ```sql

@@ -13,16 +13,16 @@ ms.assetid: 8876cdbe-c84a-43ae-a146-06974b4576e8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 979cfc6dc9c6d9c10a81fb006c95865cd03bf1ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026096"
 ---
 # <a name="set-working-set-size-server-configuration-option"></a>Opção set working set size de configuração de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Essa opção ainda está presente no procedimento armazenado **sp_configure** , mas sua funcionalidade não está disponível no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. (A configuração não tem nenhum efeito.)  
+  Essa opção ainda está presente no procedimento armazenado **sp_configure**, mas a funcionalidade não está disponível no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. (A configuração não tem nenhum efeito.)  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  

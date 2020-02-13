@@ -11,10 +11,10 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942804"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidade de tabelas com otimização de memória
@@ -54,7 +54,7 @@ ms.locfileid: "67942804"
 ## <a name="populating-data-and-delta-files"></a>Populando arquivos de dados e delta  
  Os arquivos delta e de dados são populados com base nos registros do log de transações gerados por transações confirmadas em tabelas com otimização de memória e anexa informações sobre as linhas inseridas e excluídas em arquivos delta e de dados apropriados. Diferentemente das tabelas baseadas em disco, nas quais páginas de dados/índice são liberadas com E/S aleatória quando o ponto de verificação é realizado, a persistência da tabela com otimização de memória é uma operação em segundo plano contínua. Vários arquivos delta são acessados, pois uma transação pode excluir ou atualizar qualquer linha que foi inserida por qualquer transação anterior. As informações de exclusão sempre são anexadas no final do arquivo delta. Por exemplo, uma transação com um carimbo de data/hora de confirmação de 600 insere uma linha nova e exclui linhas inseridas por transações com um carimbo de data/hora de confirmação de 150, 250 e 450, conforme mostrado na imagem a seguir. As quatro operações de E/S de arquivo (três para linhas excluídas e uma para as linhas recentemente inseridas) são operações somente de acréscimo nos arquivos delta e de dados correspondentes.  
   
- ![Registros de log de leitura para tabelas com otimização de memória.](../../relational-databases/in-memory-oltp/media/read-logs-hekaton.gif "Registros de log de leitura para tabelas com otimização de memória.")  
+ ![Registros de leitura de log para tabelas com otimização de memória.](../../relational-databases/in-memory-oltp/media/read-logs-hekaton.gif "Registros de leitura de log para tabelas com otimização de memória.")  
   
 ## <a name="accessing-data-and-delta-files"></a>Acessando arquivos delta e de dados  
  Os pares de arquivos de dados e delta são acessados quando as situações a seguir ocorrem.  

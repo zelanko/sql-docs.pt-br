@@ -13,15 +13,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 174cd2a4bc07d5de1cd664f715b9442846073502
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68092945"
 ---
 # <a name="cursorunprepare-event-class"></a>classe de evento CursorUnprepare
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  A classe de evento **CursorUnprepare** fornece informações sobre eventos do cursor despreparado que ocorrem em cursores de API (Interface de programação de aplicativo). Os eventos do cursor despreparado ocorrem quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] descarta um plano de execução.  
+  A classe de evento **CursorUnprepare** fornece informações sobre eventos do cursor despreparado que ocorrem em cursores de API (Interface de programação de aplicativo). Os eventos de despreparação do cursor ocorrem quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] descarta um plano de execução.  
   
  Inclua a classe de evento **CursorUnprepare** nos rastreamentos que registram o desempenho dos cursores. Quando a classe de evento **CursorUnprepare** é incluída no rastreamento, a quantidade de sobrecarga criada depende da frequência de uso dos cursores em relação ao banco de dados durante o rastreamento. Se os cursores forem usados extensivamente, o rastreamento pode diminuir significativamente o desempenho.  
   

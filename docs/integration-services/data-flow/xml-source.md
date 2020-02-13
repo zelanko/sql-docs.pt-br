@@ -20,10 +20,10 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d766d6a36dbe8f91f2c2fd42433093b298935b48
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290835"
 ---
 # <a name="xml-source"></a>Origem XML
@@ -76,7 +76,7 @@ ms.locfileid: "71290835"
   
  A origem XML dá suporte a várias saídas regulares e saídas de erro.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui a caixa de diálogo **Editor de Orige**m XML para configurar a origem XML. Esta caixa de diálogo está disponível no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui a caixa de diálogo **Editor de Origem XML** para configurar a origem XML. Esta caixa de diálogo está disponível no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   

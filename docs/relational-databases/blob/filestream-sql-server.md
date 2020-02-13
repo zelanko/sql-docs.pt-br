@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: c56f702b6946662657f35fd7e0c8e6b9bc791c36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903965"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
@@ -150,10 +150,10 @@ Não há suporte para a criação de exibições mapeadas de memória (E/S mapea
 
 ## <a name="related-tasks"></a>Related Tasks
 
-[Habilitar e configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
+[Habilitar e configurar o FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
 [Criar um banco de dados habilitado para FILESTREAM](../../relational-databases/blob/create-a-filestream-enabled-database.md)  
 [Criar uma tabela para armazenar dados FILESTREAM](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)  
-[Acessar dados FILESTREAM com Transact-SQL](../../relational-databases/blob/access-filestream-data-with-transact-sql.md) [Criar aplicativos clientes para dados FILESTREAM](../../relational-databases/blob/create-client-applications-for-filestream-data.md)  
+[Acessar dados FILESTREAM com o Transact-SQL](../../relational-databases/blob/access-filestream-data-with-transact-sql.md) [Criar aplicativos clientes para dados FILESTREAM](../../relational-databases/blob/create-client-applications-for-filestream-data.md)  
 [Acessar dados do FILESTREAM com OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
 [Fazer atualizações parciais em dados do FILESTREAM](../../relational-databases/blob/make-partial-updates-to-filestream-data.md)  
 [Evitar conflitos com operações de banco de dados em aplicativos de FILESTREAM](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  

@@ -28,10 +28,10 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296874"
 ---
 # <a name="package-management-ssis-service"></a>Gerenciamento de pacotes (serviço SSIS)
@@ -110,7 +110,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
   
  Você pode importar ou exportar um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de ou para os seguintes locais:  
   
--   É possível importar um pacote armazenado em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no sistema de arquivos ou no repositório de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] . O pacote importado é salvo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou em uma pasta do armazenamento de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+-   É possível importar um pacote armazenado em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no sistema de arquivos ou no repositório de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)]. O pacote importado é salvo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou em uma pasta do armazenamento de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
 -   É possível exportar um pacote armazenado em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no sistema de arquivos ou no Repositório de Pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] para outro formato e outro local de armazenamento.  
   
@@ -124,9 +124,9 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
   
 ### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>Para importar um pacote usando o SQL Server Management Studio  
   
-1.  Clique em **Iniciar**, aponte para **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e clique em **SQL Server Management Studio**.  
+1.  Clique em **Iniciar**, aponte para **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e clique em **SQL Server Management Studio**.  
   
-2.  Na caixa de diálogo **Conectar ao Servidor**, defina as seguintes opções:  
+2.  Na caixa de diálogo **Conectar ao Servidor** , defina as seguintes opções:  
   
     -   Na caixa **Tipo de servidor** , selecione **Integration Services**.  
   
@@ -160,7 +160,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
   
 ### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>Para exportar um pacote usando o SQL Server Management Studio  
   
-1.  Clique em **Iniciar**, aponte para **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e clique em **SQL Server Management Studio**.  
+1.  Clique em **Iniciar**, aponte para **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e clique em **SQL Server Management Studio**.  
   
 2.  Na caixa de diálogo **Conectar ao Servidor** , defina as seguintes opções:  
   
@@ -170,7 +170,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
   
 3.  Se o Pesquisador de Objetos não estiver aberto, clique em **Pesquisador de Objetos** no menu **Exibir**.  
   
-4.  No Pesquisador de Objetos, expanda a pasta **Pacotes Armazenados**.  
+4.  No Pesquisador de Objetos, expanda a pasta **Pacotes Armazenados** .  
   
 5.  Expanda as subpastas para localizar o pacote que deseja exportar.  
   
@@ -217,7 +217,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
  **Tipo de autenticação**  
  Selecione um tipo de autenticação.  
   
- **User name**  
+ **Nome de usuário**  
  Se estiver usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , forneça um nome de usuário.  
   
  **Senha**  
@@ -257,7 +257,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
  **Tipo de autenticação**  
  Selecione um tipo de autenticação.  
   
- **User name**  
+ **Nome de usuário**  
  Se estiver usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , forneça um nome de usuário.  
   
  **Senha**  
@@ -271,7 +271,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
 
 ## <a name="back-up-and-restore-packages"></a>Fazer backup e restaurar pacotes
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacotes podem ser salvos no sistema de arquivos ou no msdb, um banco de dados do sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os pacotes salvos no msdb podem ter backup e serem restaurados usando recursos de backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Pacotes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] podem ser salvos no sistema de arquivos ou no msdb, um banco de dados do sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os pacotes salvos no msdb podem ter backup e serem restaurados usando recursos de backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Para obter mais informações sobre como fazer backups e restauração do banco de dados msdb, clique em um dos seguintes tópicos:  
   

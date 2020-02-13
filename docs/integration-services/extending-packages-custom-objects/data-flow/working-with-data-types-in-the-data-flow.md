@@ -15,10 +15,10 @@ ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2100176fa0bb6f02deff6cdf2a210ea81e04f9a6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287447"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Trabalhando com tipos de dados no fluxo de dados
@@ -94,7 +94,7 @@ ms.locfileid: "71287447"
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetUInt64%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI8>|  
   
 ## <a name="mapping-data-types-in-the-data-flow"></a>Mapeando tipos de dados no fluxo de dados  
- Ao mover dados de origens por meio de transformações nos destinos, um componente de fluxo de dados deve algumas vezes converter tipos de dados entre os tipos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] definidos na enumeração <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType> e os tipos de dados gerenciados do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definidos no namespace **System**. Além disso, às vezes, um componente precisa converter um tipo de dados do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] em outro para que o tipo possa ser convertido em um tipo gerenciado.  
+ Ao mover dados de origens por meio de transformações para destinos, um componente de fluxo de dados precisa, às vezes, converter tipos de dados entre os tipos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] definidos na enumeração <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType> e os tipos de dados gerenciados do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definidos no namespace **System**. Além disso, às vezes, um componente precisa converter um tipo de dados do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] em outro para que o tipo possa ser convertido em um tipo gerenciado.  
   
 > [!NOTE]  
 >  Os arquivos de mapeamento no formato XML que são instalados por padrão em C:\Arquivos de Programas\Microsoft SQL Server\130\DTS\MappingFiles não são relacionados ao mapeamento de tipos de dados descrito neste tópico. Esses arquivos mapeiam tipos de dados de uma versão do banco de dados ou sistema para outro (por exemplo, do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para o Oracle) e são usados apenas pelo Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações sobre esses arquivos de mapeamento, consulte [Assistente de Importação e Exportação do SQL Server](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  

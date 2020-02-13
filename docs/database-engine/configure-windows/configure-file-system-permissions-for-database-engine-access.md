@@ -15,10 +15,10 @@ ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a42a4a17a1eee9222318e2b508b28d190361d85e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012783"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurar permissões do sistema de arquivos para acesso ao mecanismo de banco de dados
@@ -38,7 +38,7 @@ ms.locfileid: "68012783"
 4.  Na caixa **Inserir os nomes de objeto a serem selecionados** , digite o nome do SID por serviço listado no tópico [**Configurar contas de serviço e permissões do Windows**](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)dos Manuais Online. (Para o nome do SID por serviço do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , use **NT SERVICE\MSSQLSERVER** para uma instância padrão ou **NT SERVICE\MSSQL$NomeInstância** para uma instância nomeada.)  
   
 5.  Clique em **Verificar Nomes** para validar a entrada. (Em caso de falha na validação, você poderá receber um alerta informando que o nome não foi encontrado. Quando você clica em **OK**, uma caixa de diálogo **Vários nomes encontrados** é exibida. Agora selecione o nome do SID por serviço, **MSSQLSERVER** ou **NT SERVICE\MSSQL$NomeInstância**e clique em **OK**.  Clique em **OK** novamente para retornar à caixa de diálogo **Permissões** .)   
-6.  Na caixa Nomes de **grupo ou de usuário**, selecione o nome do SID por serviço e, depois, na caixa **Permissões de** \<name>, marque a caixa de seleção **Permitir** para **Controle total**.  
+6.  Na caixa de nomes de **Grupo ou usuário**, selecione o nome do SID por serviço e, na caixa **Permissões para** \<nome>, marque a caixa de seleção **Permitir** de **Controle total**.  
   
 7. Clique em **Aplicar**e em **OK** duas vezes para sair.  
   

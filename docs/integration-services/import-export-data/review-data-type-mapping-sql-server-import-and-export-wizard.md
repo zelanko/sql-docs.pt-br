@@ -12,10 +12,10 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f0bd7fe34b1945c3f0f2255e256ead38a6d15e3a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296262"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Revisar mapeamento de tipo de dados (Assistente de Importação e Exportação do SQL Server)
@@ -36,7 +36,7 @@ Se você especificou um mapeamento de tipo de dados que pode não ter êxito na 
  -   O ícone de aviso na linha da lista **Tabela** indica que há um problema convertendo pelo menos uma coluna de dados dos resultados da consulta em um tipo de dados compatíveis na tabela de destino.
  -   O ícone de aviso na primeira linha da lista **Mapeamento de tipo de dados** indica que o mapeamento do tipo de dados **int** da coluna de origem para o tipo de dados **smalldatetime** da coluna de destino pode causar perda de dados.
  
- ![Página Examinar Mapeamento de Tipo de Dados do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/review-mapping.png "Página Revisar Mapeamento de Tipo de Dados do Assistente de Importação e Exportação") 
+ ![Página Examinar Mapeamento de Tipo de Dados do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/review-mapping.png "Página Examinar Mapeamento de Tipo de Dados do Assistente de Importação e Exportação") 
  
 ## <a name="review-the-source-and-destination-tables"></a>Examinar as tabelas de origem e de destino  
  A seção superior da página **Revisar Mapeamento de Tipo de Dados** é uma lista **Tabela** que lista as tabelas a serem copiadas da fonte para o destino. Para ver informações de conversão sobre uma tabela individual, selecione uma tabela na lista **Tabela** . As informações de conversão das colunas individuais da tabela selecionada são exibidas na parte inferior da página na grade **Mapeamento de tipo de dados**.
@@ -47,7 +47,7 @@ Neste exemplo, os resultados da consulta que o usuário forneceu serão copiados
   
  A tabela a seguir descreve as colunas na lista **Tabela** .  
   
-|coluna|Descrição|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |(Ícone de origem)|Indica a probabilidade de sucesso para as conversões de tipo de dados:<br /> –   Um ícone de sinal de verificação **verde** indica que o assistente espera que todas as conversões de tipo de dados da tabela sejam bem sucedidas.<br />–   Um ícone de aviso **amarelo** indica que você deveria examinar as conversões individuais que o assistente executará. Para revisar essas conversões, selecione a tabela e revise as conversões das colunas individuais na lista **Mapeamento de tipo de dados** .<br />–   Um ícone de erro **vermelho** indica que o assistente não pode executar algumas das conversões da tabela de maneira segura.|  
 |**Origem**|O nome da tabela de origem.|  
@@ -63,7 +63,7 @@ Neste exemplo, cada coluna na origem será copiada para uma coluna com o mesmo n
 
 A tabela a seguir descreve as colunas da lista **Mapeamento de tipo de dados** . 
 
-|coluna|Descrição|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |(Ícone de conversão)|Indica a probabilidade de sucesso para as conversões de tipo de dados:<br /> –   Um ícone de sinal de verificação **verde** indica que o assistente espera que a conversão de tipo de dados da coluna sejam bem sucedida.<br />–   Um ícone de aviso **amarelo** indica que você deveria examinar a conversão que o assistente executará. Para examinar a conversão, clique duas vezes na coluna para exibir a caixa de diálogo **Detalhes da Conversão de Coluna** . Para obter mais informações, consulte [Caixa de diálogo Detalhes da Conversão de Coluna](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md).<br />–   Um ícone de erro **vermelho** indica que o assistente não pode executar a conversão de maneira segura.|  
 |**Coluna de Origem**|O nome da coluna de origem.|  
@@ -86,12 +86,12 @@ Este exemplo mostra os valores padrão para as duas opções de tratamento de er
 
  **Se Houver Erro (global)**  
  Especifique como o assistente lida com erros:  
- -   Falha com um erro, e interrompe o processo de importação ou exportação. Este é o valor padrão.
+ -   Falha com um erro, e interrompe o processo de importação ou exportação. Esse é o valor padrão.
  -   Ignore o erro e continue o processo de importação ou exportação.  
   
  **Se Houver Truncamento (global)**  
  Especifique como o assistente controla truncamentos de dados:  
- -   Falha com um erro, e interrompe o processo de importação ou exportação. Este é o valor padrão.
+ -   Falha com um erro, e interrompe o processo de importação ou exportação. Esse é o valor padrão.
  -   Ignore o truncamento e continue o processo de importação ou exportação.  
    
 ## <a name="whats-next"></a>O que vem a seguir?  

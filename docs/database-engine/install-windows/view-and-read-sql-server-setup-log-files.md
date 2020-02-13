@@ -18,12 +18,12 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7bf7d199239be10760df49d586cdf5048fbc4a80
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b3ddfa9ee8866086fa16a384efb63a5392394d3a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "67906777"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929131"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Exibir e ler arquivos de log da Instalação do SQL Server
 
@@ -72,7 +72,7 @@ As seções a seguir descrevem arquivos de log da Instalação do [!INCLUDE[ssNo
 -   As propriedades e a configuração do computador em que a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi executada  
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Recursos do produto instalados anteriormente no computador  
 -   Descrição da versão de instalação e propriedades do pacote de instalação
--   Configurações de entrada em tempo de execução que são fornecidas durante instalação  
+-   Configurações de entrada em runtime que são fornecidas durante instalação  
 -   Local do arquivo de configuração  
 -   Detalhes dos resultados de execução  
 -   Regras globais  
@@ -84,7 +84,7 @@ As seções a seguir descrevem arquivos de log da Instalação do [!INCLUDE[ssNo
   >[!NOTE]
   > Observe que ao aplicar patches, pode haver diversas subpastas (uma para cada instância que está sendo corrigida e uma para recursos compartilhados) que contêm um conjunto similar de arquivos (ou seja, %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM > \MSSQLSERVER). 
   
-### <a name="location"></a>Local  
+### <a name="location"></a>Location  
  O arquivo summary.txt está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.
   
  Para localizar erros no arquivo de texto resumido, pesquise o arquivo usando as palavras-chave "error" ou "failed".
@@ -94,7 +94,7 @@ As seções a seguir descrevem arquivos de log da Instalação do [!INCLUDE[ssNo
 ### <a name="overview"></a>Visão geral  
  O arquivo de base summary_engine é semelhante ao arquivo de resumo e é gerado durante o fluxo de trabalho principal.
   
-### <a name="location"></a>Local  
+### <a name="location"></a>Location  
  O arquivo Summary_\<MachineName>_YYYYMMDD_HHMMss.txt está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
   
   
@@ -103,7 +103,7 @@ As seções a seguir descrevem arquivos de log da Instalação do [!INCLUDE[ssNo
 ### <a name="overview"></a>Visão geral
  O arquivo Detail.txt é gerado para o fluxo de trabalho principal, como instalação ou atualização, e fornece os detalhes da execução. Os logs do arquivo são gerados com base na hora em que cada ação para a instalação foi invocada. O arquivo de texto mostra a ordem na qual as ações foram executadas, bem como suas dependências.  
   
-### <a name="location"></a>Local  
+### <a name="location"></a>Location  
  O arquivo detail.txt está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt.  
   
  Se ocorrer um erro durante o processo de Instalação, a exceção ou o erro será registrado no final desse arquivo. Para localizar os erros nesse arquivo, primeiro examine o final do arquivo e depois efetue uma pesquisa do arquivo pelas palavras-chave "error" ou "exception"
@@ -119,7 +119,7 @@ As seções a seguir descrevem arquivos de log da Instalação do [!INCLUDE[ssNo
 -   \<Recurso>_\<Arquitetura>\_\<Idioma>\_\<Interação>.log   
 -   \<Recurso>_\<Arquitetura>\_\<Interação>\_\<Fluxo de trabalho>.log  
   
-### <a name="location"></a>Local  
+### <a name="location"></a>Location  
  Os arquivos de log MSI estão localizados em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log.  
   
  No final do arquivo, há um resumo da execução, que inclui o status de êxito ou falha e propriedades. Para localizar o erro no arquivo MSI, pesquise "value 3" e revise o texto antes e depois.  
@@ -129,7 +129,7 @@ As seções a seguir descrevem arquivos de log da Instalação do [!INCLUDE[ssNo
 ### <a name="overview"></a>Visão geral  
  O arquivo de configuração contém as configurações de entrada que são fornecidas durante instalação. Pode ser usado para reiniciar a instalação sem ser necessário inserir as configurações manualmente. Entretanto, as senhas das contas, o PID e alguns parâmetros não são salvos no arquivo de configuração. As configurações podem ser adicionadas ao arquivo ou fornecidas por meio da linha de comando ou da interface do usuário de Instalação. Para obter mais informações, veja [Instalar o SQL Server 2016 usando um arquivo de configuração](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
   
-### <a name="location"></a>Local  
+### <a name="location"></a>Location  
  O arquivo ConfigurationFile.ini está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ## <a name="systemconfigurationcheck_reporthtm-file"></a>Arquivo SystemConfigurationCheck_Report.htm
@@ -137,7 +137,7 @@ As seções a seguir descrevem arquivos de log da Instalação do [!INCLUDE[ssNo
 ### <a name="overview"></a>Visão geral  
  O relatório de verificação da configuração do sistema contém uma breve descrição de cada regra executada, bem como o status de execução.
   
-### <a name="location"></a>Local  
+### <a name="location"></a>Location  
 O arquivo SystemConfigurationCheck_Report.htm está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]

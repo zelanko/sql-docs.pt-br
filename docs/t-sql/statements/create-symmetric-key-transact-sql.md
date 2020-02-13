@@ -23,10 +23,10 @@ ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 485ef972b86795a2127dba5fc3e86bdf98354c7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117067"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68117067"
   
  Este recurso é incompatível com a exportação de banco de dados usando a DACFx (estrutura de aplicativo da camada de dados). Você deve remover todas as chaves simétricas antes de exportar.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -116,7 +116,7 @@ Especifique o algoritmo de criptografia.
 > [!WARNING]  
 > A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], todos os algoritmos, exceto AES_128, AES_192 e AES_256, foram preteridos. Para usar algoritmos mais antigos (não recomendado), você deve definir o nível de compatibilidade do banco de dados para 120 ou menos.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando uma chave simétrica é criada, a chave simétrica deve ser criptografada usando pelo menos um dos seguintes: senha, certificado, chave simétrica, chave assimétrica ou provedor. A chave pode ter mais de uma criptografia de cada tipo. Em outras palavras, uma única chave simétrica pode ser criptografada com o uso de vários certificados, senhas, chaves simétricas e chaves assimétricas ao mesmo tempo.  
   
 > [!CAUTION]  
@@ -155,7 +155,7 @@ Especifique o algoritmo de criptografia.
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-symmetric-key"></a>A. Criando uma chave simétrica  
+### <a name="a-creating-a-symmetric-key"></a>a. Criando uma chave simétrica  
  O exemplo a seguir cria uma chave simétrica denominada `JanainaKey09` usando o algoritmo `AES 256` e criptografa a nova chave com o certificado `Shipping04`.  
   
 ```  
@@ -180,7 +180,7 @@ GO
 ```  
   
 ### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>C. Criando uma chave simétrica com um dispositivo EKM (Extensible Key Management, Gerenciamento extensível de chaves)  
- O exemplo seguinte cria uma chave simétrica denominada `MySymKey` usando um provedor chamado `MyEKMProvider` e um nome de chave `KeyForSensitiveData`. Ele atribui a autorização ao `User1` e pressupõe que o administrador de sistema já registrou o provedor denominado `MyEKMProvider` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ O exemplo a seguir cria uma chave simétrica chamada `MySymKey` usando um provedor chamado `MyEKMProvider` e um nome de chave `KeyForSensitiveData`. Ele atribui a autorização ao `User1` e pressupõe que o administrador de sistema já registrou o provedor denominado `MyEKMProvider` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 CREATE SYMMETRIC KEY MySymKey  

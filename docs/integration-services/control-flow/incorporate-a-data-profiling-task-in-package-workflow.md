@@ -13,10 +13,10 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9acb58bf89d23e58ac23f96141f2a5b4dd551019
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294116"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar uma tarefa Criação de Perfil de Dados no fluxo de trabalho do pacote
@@ -49,7 +49,7 @@ ms.locfileid: "71294116"
   
  Ao incorporar a tarefa Criação de Perfil de Dados no fluxo de trabalho de um pacote, tenha esses dois recursos da tarefa em mente:  
   
--   **Saída da tarefa**. A tarefa Criação de Perfil de Dados grava sua saída em um arquivo ou uma variável de pacote em formato XML, de acordo com o esquema DataProfile.xsd. Portanto, é necessário consultar a saída XML se você desejar usar os resultados de perfil no fluxo de trabalho condicional de um pacote. Você pode usar a linguagem de consulta Xpath facilmente para consultar essa saída XML. Para estudar a estrutura dessa saída XML, você pode abrir um arquivo de saída de amostra ou o próprio esquema. Para abrir o arquivo de saída ou o esquema, use o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], outro editor de XML, ou um editor de texto como o Bloco de Notas.  
+-   **Saída da tarefa**. A tarefa Criação de Perfil de Dados grava sua saída em um arquivo ou uma variável de pacote em formato XML, de acordo com o esquema DataProfile.xsd. Portanto, é necessário consultar a saída XML se você desejar usar os resultados de perfil no fluxo de trabalho condicional de um pacote. Você pode usar a linguagem de consulta Xpath facilmente para consultar essa saída XML. Para estudar a estrutura dessa saída XML, você pode abrir um arquivo de saída de amostra ou o próprio esquema. Para abrir o arquivo de saída ou o esquema, use o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], outro editor de XML ou um editor de texto, como o Bloco de Notas.  
   
     > [!NOTE]  
     >  Alguns resultados de perfil exibidos no Visualizador de Perfil de Dados são valores calculados que não são encontrados diretamente na saída. Por exemplo, a saída do Perfil de Razão Nula de Coluna contém o número total de linhas e o número de linhas que contêm valores nulos. É necessário consultar esses dois valores e, em seguida, calcular a porcentagem de linhas que contêm valores nulos para obter a razão nula de consulta.  

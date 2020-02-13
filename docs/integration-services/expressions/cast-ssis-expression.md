@@ -17,10 +17,10 @@ ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 618c30a29473e7ade84812abeba52d23ff52da9e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290351"
 ---
 # <a name="cast-ssis-expression"></a>Cast (Expressão SSIS)
@@ -48,10 +48,10 @@ ms.locfileid: "71290351"
 ## <a name="result-types"></a>Tipos de resultado  
  O tipo de dados de *type_spec*. Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O diagrama a seguir mostra operações de conversão legais.  
   
- ![Conversões legais e não legais entre tipos de dados](../../integration-services/expressions/media/data-conversion.gif "Conversões legais e não legais entre tipos de dados")  
+ ![Conversões válidas e não válidas entre tipos de dados](../../integration-services/expressions/media/data-conversion.gif "Conversões válidas e não válidas entre tipos de dados")  
   
  A conversão para alguns tipos de dados requer parâmetros. A tabela a seguir lista esses tipos de dados e seus parâmetros.  
   

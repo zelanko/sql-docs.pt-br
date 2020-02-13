@@ -17,10 +17,10 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38c5c4daa65542dd8da14fa5c51a1b964a271fff
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296510"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Solucionando problemas de ferramentas para desenvolvimento de pacotes
@@ -80,7 +80,7 @@ ms.locfileid: "71296510"
  Para obter mais informações sobre esses recursos, consulte [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 ## <a name="troubleshooting-scripts"></a>Solucionando problemas de scripts  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] O VSTA (Tools for Applications) é o ambiente de desenvolvimento no qual você grava os scripts usados pela tarefa Script e pelo componente Script. O VSTA inclui os seguintes recursos e ferramentas que você pode usar para solucionar problemas de scripts durante o desenvolvimento de pacotes:  
+ O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA (Tools for Applications) é o ambiente de desenvolvimento no qual você grava os scripts usados pela tarefa Script e pelo componente Script. O VSTA inclui os seguintes recursos e ferramentas que você pode usar para solucionar problemas de scripts durante o desenvolvimento de pacotes:  
   
 -   **Definir os pontos de interrupção em scripts nas tarefas Script.** O VSTA dá suporte à depuração somente para scripts na tarefa Script. Os pontos de interrupção definidos nas tarefas Script são integrados aos pontos de interrupção definidos nos pacotes e às tarefas e contêineres do pacote, habilitando a depuração contínua de todos os elementos do pacote.  
   
@@ -94,6 +94,6 @@ ms.locfileid: "71296510"
   
 ## <a name="see-also"></a>Consulte Também  
  [Solucionando problemas de ferramentas para execução de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)   
- [Data Flow Performance Features](../../integration-services/data-flow/data-flow-performance-features.md)  
+ [Recursos de desempenho de fluxo de dados](../../integration-services/data-flow/data-flow-performance-features.md)  
   
   

@@ -27,19 +27,19 @@ ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da408c690622f5ba1ef45fa2466ed396d0022599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7ec15aed162c096bc13062ed1ec98b02c0c9ca4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064612"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516247"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Encerra uma consulta quando ocorre estouro ou erro de divisão por zero durante a execução da consulta.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +55,7 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Sempre defina ARITHABORT como ON nas sessões de logon. A definição de ARITHABORT como OFF pode afetar negativamente a otimização de consulta, levando a problemas de desempenho.  
   
 > [!WARNING]  
@@ -70,7 +70,7 @@ Se as opções SET ARITHABORT e SET ANSI WARNINGS estão definidas como OFF e um
 > [!NOTE]  
 >  Se nem SET ARITHABORT e nem SET ARITHIGNORE estão definidas como ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna NULL e uma mensagem de aviso é exibida após a execução da consulta.  
   
-A definição de ANSI_WARNINGS como ON definirá ARITHABORT implicitamente como ON quando o nível de compatibilidade do banco de dados estiver definido como 90 ou mais. Se o nível de compatibilidade do banco de dados for definido como 80 ou menos, a opção ARITHABORT deverá ser definida explicitamente como ON.  
+Quando ANSI_WARNINGS tem um valor de ON e o nível de compatibilidade do banco de dados é definido como 90 ou superior, ARITHABORT está implicitamente ativo, independentemente da configuração do valor. Se o nível de compatibilidade do banco de dados for definido como 80 ou menos, a opção ARITHABORT deverá ser definida explicitamente como ON.  
   
 Na avaliação da expressão, se SET ARITHABORT é OFF e se uma instrução INSERT, UPDATE ou DELETE encontra um erro aritmético, de estouro, de divisão por zero ou de domínio, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] insere ou atualiza um valor NULL. Se a coluna de destino não for anulável, a ação de inserção ou atualização falhará e o usuário receberá uma mensagem de erro.  
   

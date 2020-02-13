@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f31e3894448e5d6a044af75c7e86b704b993aa6
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682018"
 ---
 # <a name="float-and-real-transact-sql"></a>flutuante e real (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "71682018"
 
 Tipos de dados numéricos aproximados para uso com dados numéricos de ponto flutuante. Os dados de ponto flutuante são aproximados; portanto, nem todos os valores no intervalo de tipo de dados podem ser representados de maneira exata. O sinônimo ISO de **real** é **float(24)** .
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
 **float** [ **(** _n_ **)** ] em que *n* é o número de bits usado para armazenar a mantissa do número **float** na notação científica e, portanto, exige a precisão e o tamanho do armazenamento. Se *n* for especificado, ele precisará ser um valor entre **1** e **53**. O valor padrão de *n* é **53**.
@@ -48,9 +48,9 @@ Tipos de dados numéricos aproximados para uso com dados numéricos de ponto flu
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trata *n* como um dos dois valores possíveis. Se **1**<=n<=**24**, *n* é tratado como **24**. Se **25**<=n<=**53**, *n* é tratado como **53**.  
   
-O tipo de dados **float**[ **(n)** ] do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em conformidade com o padrão ISO para todos os valores de *n* de **1** a **53**. O sinônimo de **double precision** é **float(53)** .
+O tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[ **(n)** ] está em conformidade com o padrão ISO para todos os valores de *n* de **1** a **53**. O sinônimo de **double precision** é **float(53)** .
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 |Tipo de dados|Intervalo|Armazenamento|  
 |---|---|---|

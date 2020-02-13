@@ -17,10 +17,10 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73926033"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
@@ -50,7 +50,7 @@ Uma instância do LocalDB do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md
 
 ## <a name="description"></a>Descrição
 
-O programa de instalação do LocalDB usa o programa `SqlLocalDB.msi` para instalar os arquivos necessários no computador. Uma vez instalado, o LocalDB torna-se uma instância do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] que pode criar e abrir bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os arquivos de banco de dados do sistema para o banco de dados são armazenados no caminho de AppData local, que normalmente é oculto. Por exemplo, `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`. Os arquivos de banco de dados do usuário são armazenados onde o usuário determina, normalmente em algum lugar da pasta `C:\Users\<user>\Documents\`.
+O programa de instalação do LocalDB usa o programa `SqlLocalDB.msi` para instalar os arquivos necessários no computador. Uma vez instalado, o LocalDB torna-se uma instância do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] que pode criar e abrir bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os arquivos de banco de dados do sistema para o banco de dados são armazenados no caminho de AppData local, que normalmente é oculto. Por exemplo, `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`. Arquivos de banco de dados do usuário são armazenados onde o usuário determinar, normalmente em algum lugar na pasta `C:\Users\<user>\Documents\`.
 
 Para saber mais sobre como incluir o LocalDB em um aplicativo, confira a [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [Visão geral de dados locais](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110)), [Criar um banco de dados e adicionar tabelas no Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer).
 
@@ -60,7 +60,7 @@ O utilitário `SqlLocalDb` pode criar novas instâncias do LocalDB, iniciar e in
 
 A ordenação de instâncias do LocalDB foi definida como `SQL_Latin1_General_CP1_CI_AS` e não pode ser alterada. Normalmente há suporte para ordenações nos níveis de banco de dados, de coluna e de expressão. Os bancos de dados independentes seguem os metadados e as regras de ordenações `tempdb` definidas por [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md).
 
-### <a name="restrictions"></a>Restrictions
+### <a name="restrictions"></a>Restrições
 
 - O LocalDB não pode ser um assinante de replicação de mesclagem.
 
@@ -90,7 +90,7 @@ Somente um administrador no computador pode criar uma instância compartilhada d
 
 ### <a name="connect-to-the-automatic-instance"></a>Conectar-se à instância automática
 
-A maneira mais fácil de usar o LocalDB é conectar-se à instância automática pertencente ao usuário atual usando a cadeia de conexão `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`. Para se conectar a um banco de dados específico usando o nome do arquivo, conecte-se usando uma cadeia de conexão semelhante a `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf`.
+A maneira mais fácil de usar o LocalDB é conectar-se à instância automática pertencente ao usuário atual usando a cadeia de conexão `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`. Para se conectar a um banco de dados específico usando o nome do arquivo, se conecte usando uma cadeia de conexão semelhante a `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf`.
 
 >[!NOTE]
 >A primeira vez que o usuário de um computador tenta conectar-se ao LocalDB, a instância automática deve ser criada e iniciada. O tempo adicional para a criação da instância pode causar falha durante a tentativa de conexão e exibir uma mensagem de tempo esgotado. Quando isso acontecer, espere alguns segundos para deixar o processo de criação terminar e conecte novamente.

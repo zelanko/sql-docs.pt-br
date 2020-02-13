@@ -22,10 +22,10 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028746"
 ---
 # <a name="server-memory-configuration-options"></a>Opções de configuração do Server Memory
@@ -55,7 +55,7 @@ As opções **min server memory** e **max server memory** do servidor podem ser 
 
 <a name="max_server_memory"></a> Utilize **max_server_memory** para garantir que o sistema operacional não experimente uma pressão de memória prejudicial. Para definir a configuração max server memory, monitore o consumo geral do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para determinar os requisitos de memória. Para ser mais preciso com esses cálculos para uma única instância:
 - Da memória total do SO, reserve de 1 GB a 4 GB para o sistema operacional em si.
-- Em seguida, subtraia o equivalente a possíveis alocações de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fora do controle **memória máxima do servidor**, que é composto pelo **tamanho da pilha<sup>1</sup> \*máx. de threads de trabalho calculado <sup>2</sup>** . O que sobrar deve ser a configuração max_server_memory para a instalação de uma instância única.
+- Em seguida, subtraia o equivalente a possíveis alocações de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fora do controle de **memória máxima do servidor**, que é composto pelo **tamanho da pilha <sup>1</sup> \* máx. de threads de trabalho calculado <sup>2</sup>** . O que sobrar deve ser a configuração max_server_memory para a instalação de uma instância única.
 
 <sup>1</sup> Consulte o [Guia de arquitetura de gerenciamento de memória](../../relational-databases/memory-management-architecture-guide.md#stacksizes) para obter informações sobre os tamanhos de pilha de thread por arquitetura.
 
@@ -80,7 +80,7 @@ Essa política do Windows determina quais contas podem usar um processo para man
   
 Para desabilitar a opção **Bloquear Páginas na Memória** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remova o direito de usuário *Bloquear Páginas na Memória* da conta com privilégios para executar a conta de inicialização do sqlservr.exe (a conta de inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
  
-A configuração dessa opção não afeta o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [gerenciamento de memória dinâmica](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management), permitindo que você expanda ou reduza mediante a solicitação de outros administradores de memória. Ao usar o direito de usuário *Bloquear Páginas na Memória*, é recomendável definir um limite superior para a opção **max server memory**, conforme [detalhado acima](#max_server_memory).
+A configuração dessa opção não afeta o [gerenciamento de memória dinâmica](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], permitindo que ele seja expandido ou reduzido mediante a solicitação de outros administradores de memória. Ao usar o direito de usuário *Bloquear Páginas na Memória*, é recomendável definir um limite superior para a opção **max server memory**, conforme [detalhado acima](#max_server_memory).
 
 > [!IMPORTANT]
 > Essa opção só deverá ser configurada quando necessário, ou seja, se houver sinais de que o processo sqlservr está sendo paginado. Neste caso, o erro 17890 será reportado no log de erros, que se assemelha ao exemplo abaixo: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`

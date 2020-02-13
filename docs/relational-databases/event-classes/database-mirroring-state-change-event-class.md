@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 730186265d6932fb74f0b6ab7221abaeb53ecf53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68009551"
 ---
 # <a name="database-mirroring-state-change-event-class"></a>classe de evento Database Mirroring State Change
@@ -43,7 +43,7 @@ ms.locfileid: "68009551"
 |**SessionLoginName**|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
-|**Estado**|**Int**|ID do novo estado de espelhamento:<br /><br /> 0 = Notificação nula<br /><br /> 1 = Principal sincronizado com testemunha<br /><br /> 2 = Principal sincronizado sem testemunha<br /><br /> 3 = Espelho sincronizado com testemunha<br /><br /> 4 = Espelho sincronizado sem testemunha<br /><br /> 5 = Conexão com principal perdida<br /><br /> 6 = Conexão com espelho perdida<br /><br /> 7 = Failover manual<br /><br /> 8 = Failover automático<br /><br /> 9 = Espelhamento suspenso<br /><br /> 10 = Sem quorum<br /><br /> 11 = Sincronizando espelho<br /><br /> 12 = Principal em execução exposto|30|Sim|  
+|**State**|**int**|ID do novo estado de espelhamento:<br /><br /> 0 = Notificação nula<br /><br /> 1 = Principal sincronizado com testemunha<br /><br /> 2 = Principal sincronizado sem testemunha<br /><br /> 3 = Espelho sincronizado com testemunha<br /><br /> 4 = Espelho sincronizado sem testemunha<br /><br /> 5 = Conexão com principal perdida<br /><br /> 6 = Conexão com espelho perdida<br /><br /> 7 = Failover manual<br /><br /> 8 = Failover automático<br /><br /> 9 = Espelhamento suspenso<br /><br /> 10 = Sem quorum<br /><br /> 11 = Sincronizando espelho<br /><br /> 12 = Principal em execução exposto|30|Sim|  
 |**TextData**|**ntext**|Descrição da alteração de estado.|1|Sim|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
   

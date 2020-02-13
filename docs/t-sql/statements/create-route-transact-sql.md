@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006508"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68006508"
 
   Adiciona uma nova rota à tabela de roteamento para o banco de dados atual. Por mensagens de saída, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] determina o roteamento verificando a tabela de roteamento no banco de dados local. Para mensagens sobre conversas que se originam em outra instância, incluindo mensagens a serem encaminhadas, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] verifica as rotas em **msdb**.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,7 +63,7 @@ WITH
  AUTHORIZATION *owner_name*  
  Define o proprietário da rota para o usuário ou função de banco de dados especificados. O *owner_name* pode ser o nome de qualquer usuário ou função válida quando o usuário atual é um membro da função de banco de dados fixa **db_owner** ou da função de servidor fixa **sysadmin**. Caso contrário, *owner_name* deve ser o nome do usuário atual, o nome de um usuário para o qual o usuário atual tenha a permissão IMPERSONATE ou o nome de uma função à qual o usuário atual pertença. Quando esta cláusula é omitida, a rota pertence ao usuário atual.  
   
- com  
+ WITH  
  Introduz as cláusulas que definem a rota que é criada.  
   
  SERVICE_NAME = **'** _service\_name_ **'**  
@@ -123,7 +123,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Quando MIRROR_ADDRESS é especificado, a rota deve especificar as cláusulas SERVICE_NAME e BROKER_INSTANCE. Uma rota que especifica **'LOCAL'** ou **'TRANSPORT'** para o *next_hop_address* pode não especificar um endereço espelho.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A tabela de roteamento que armazena as rotas é uma tabela de metadados que pode ser lida por meio da exibição do catálogo **sys.routes**. Essa exibição do catálogo pode ser atualizada somente pelas instruções CREATE ROUTE, ALTER ROUTE e DROP ROUTE.  
   
  Por padrão, a tabela de roteamento em cada banco de dados de usuário contém uma rota. Essa rota é chamada **AutoCreatedLocal**. A rota especifica **'LOCAL'** para o *next_hop_address* e faz a correspondência de qualquer nome de serviço e o identificador de instância do agente.  
@@ -141,7 +141,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>A. Criando uma rota TCP/IP com o uso de um nome DNS  
+### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>a. Criando uma rota TCP/IP com o uso de um nome DNS  
  O exemplo a seguir cria uma rota para o serviço `//Adventure-Works.com/Expenses`. A rota especifica que as mensagens para esse serviço passam pelo TCP na porta `1234` do host identificado com o nome DNS `www.Adventure-Works.com`. O servidor de destino entrega as mensagens na chegada para a instância de corretor identificada pelo identificador exclusivo `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
 ```  

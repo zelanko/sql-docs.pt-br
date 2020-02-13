@@ -24,18 +24,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 694017e60682d191bd1d02cdc231b7185c3b8c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094612"
 ---
-# <a name="errorstate-transact-sql"></a>ERROR_STATE (Transact-SQL)
+# <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Retorna o número de estado do erro que fez o bloco CATCH de um constructo TRY…CATCH ser executado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,8 +51,8 @@ ERROR_STATE ( )
   
  Retorna NULL se for chamado fora do escopo de um bloco CATCH.  
   
-## <a name="remarks"></a>Remarks  
- Algumas mensagens de erro podem ser geradas em vários pontos no código para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, um erro "1105" pode ser gerado para várias condições diferentes. Cada condição específica que gera o erro atribui um código de estado exclusivo.  
+## <a name="remarks"></a>Comentários  
+ Algumas mensagens de erro podem ser acionadas em vários pontos no código para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, um erro "1105" pode ser gerado para várias condições diferentes. Cada condição específica que gera o erro atribui um código de estado exclusivo.  
   
  Ao exibir bancos de dados de problemas conhecidos, como a Base de Dados de Conhecimento [!INCLUDE[msCoName](../../includes/msconame-md.md)], é possível usar o número de estado para determinar se o problema registrado é o mesmo do erro que você encontrou. Por exemplo, se um Artigo da Base de Dados de Conhecimento descreve uma mensagem de erro 1105 com um estado 2, e a mensagem de erro 1105 que você recebeu tinha um estado 3, o erro provavelmente tem uma causa diferente daquela informada no artigo.  
   
@@ -66,7 +66,7 @@ ERROR_STATE ( )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-errorstate-in-a-catch-block"></a>A. Usando ERROR_STATE em um bloco CATCH  
+### <a name="a-using-error_state-in-a-catch-block"></a>a. Usando ERROR_STATE em um bloco CATCH  
  O exemplo a seguir mostra uma instrução `SELECT` que gera um erro de divisão por zero. O estado do erro é retornado.  
   
 ```sql  
@@ -80,7 +80,7 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>B. Usando ERROR_STATE em um bloco CATCH com outras ferramentas de tratamento de erros  
+### <a name="b-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>B. Usando ERROR_STATE em um bloco CATCH com outras ferramentas de tratamento de erros  
  O exemplo a seguir mostra uma instrução `SELECT` que gera um erro de divisão por zero. Junto com o estado de erro, são retornadas as informações relacionadas ao erro.  
   
 ```sql  
@@ -102,7 +102,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>C. Usando ERROR_STATE em um bloco CATCH com outras ferramentas de tratamento de erros  
+### <a name="c-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>C. Usando ERROR_STATE em um bloco CATCH com outras ferramentas de tratamento de erros  
  O exemplo a seguir mostra uma instrução `SELECT` que gera um erro de divisão por zero. Junto com o estado de erro, são retornadas as informações relacionadas ao erro.  
   
 ```sql  

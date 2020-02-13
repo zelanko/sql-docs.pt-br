@@ -21,10 +21,10 @@ ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 66830b3000d749ab17a5800c3450c5880c5d1aba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68076440"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68076440"
 > [!IMPORTANT]  
 >  SETUSER é incluído somente para compatibilidade com versões anteriores. SETUSER pode não ter suporte em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Recomendamos o uso de [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
  WITH NORESET  
  Especifica que as instruções SETUSER seguintes (sem nenhum *username* especificado) não devem redefinir a identidade do usuário como administrador do sistema ou proprietário do banco de dados.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  SETUSER pode ser usado por um membro da função de servidor fixa **sysadmin** ou o proprietário de um banco de dados para adotar a identidade de outro usuário e testar suas permissões. A associação à função de banco de dados fixa db_owner não é suficiente.  
   
  Use SETUSER somente com usuários do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. SETUSER não tem suporte com usuários de Windows. Quando SETUSER é usado para assumir a identidade de outro usuário, todo objeto que o usuário da representação cria é de propriedade do usuário representado. Por exemplo, se o proprietário do banco de dados assumir a identidade do usuário **Marina** e criar uma tabela chamada **orders**, a tabela **orders** será de propriedade de **Marina**, e não do administrador do sistema.  

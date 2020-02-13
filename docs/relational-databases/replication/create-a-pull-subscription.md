@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5dde30d826d5b6662a4f488aed7c3a1f21dd00b2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ab4bb319460e3666c638b40a63b5676b81048dd1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908428"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284692"
 ---
 # <a name="create-a-pull-subscription"></a>Create a Pull Subscription
 
@@ -65,7 +65,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 #### <a name="to-create-a-pull-subscription-from-the-publisher"></a>Para criar uma assinatura pull do Publicador  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e, depois, expanda o nó do servidor.  
+1.  Conecte-se ao Publicador no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e, em seguida, expanda o nó de servidor.  
   
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
   
@@ -131,7 +131,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
     -   **\@subscription_priority** – especifique uma prioridade para a assinatura (**0.00** a **99.99**). Isso só é necessário para uma assinatura de servidor.  
   
-         Para obter mais informações, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+         Para obter mais informações, consulte [Replicação de mesclagem avançada – detecção e resolução de conflito](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  No Assinante, execute [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Especifique os seguintes parâmetros:  
   
@@ -151,7 +151,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
 4.  No Publicador, execute [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Especifique **\@publication**, **\@subscriber**, **\@subscriber_db** e o valor **pull** para **\@subscription_type**. Isso registra a assinatura pull.  
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
- O exemplo a seguir cria uma nova assinatura pull para uma publicação transacional. O primeiro lote é executado no Assinante, e o segundo lote é executado no Publicador. Os valores para o logon e senha são fornecidos no tempo de execução usando as variáveis sqlcmd scripting.  
+ O exemplo a seguir cria uma nova assinatura pull para uma publicação transacional. O primeiro lote é executado no Assinante, e o segundo lote é executado no Publicador. Os valores para o logon e senha são fornecidos no runtime usando as variáveis sqlcmd scripting.  
   
 ```  
 -- This script uses sqlcmd scripting variables. They are in the form  
@@ -213,7 +213,7 @@ GO
   
 ```  
   
- O exemplo a seguir cria uma nova assinatura pull para uma publicação de mesclagem. O primeiro lote é executado no Assinante, e o segundo lote é executado no Publicador. Os valores de logon e senha são fornecidos em tempo de execução através das variáveis de script **sqlcmd** .  
+ O exemplo a seguir cria uma nova assinatura pull para uma publicação de mesclagem. O primeiro lote é executado no Assinante, e o segundo lote é executado no Publicador. Os valores de logon e senha são fornecidos em runtime através das variáveis de script **sqlcmd** .  
   
 ```  
 -- This script uses sqlcmd scripting variables. They are in the form  
@@ -285,7 +285,7 @@ GO
   
 5.  Se não houver banco de dados de assinatura, crie-o usando a classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obter mais informações, consulte [Creating, Altering, and Removing Databases](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md) (Criando, alterando e removendo bancos de dados).  
   
-6.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription> .  
+6.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription>.  
   
 7.  Defina as seguintes propriedades de assinatura:  
   
@@ -307,7 +307,7 @@ GO
     -   (Opcional) Um valor de **true** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> para criar um trabalho de agente que seja usado para sincronizar a assinatura. Se você especificar **false** (o padrão), a assinatura pode ser sincronizada apenas de forma programada e é preciso especificar propriedades adicionais para <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> ao acessar esse objeto da propriedade <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> . Para obter mais informações, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
         > [!NOTE]  
-        >  O SQL Server Agent não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Quando você especifica um valor de **true** para Assinantes do Express, o trabalho de agente não é criado. Porém, importantes metadados relacionados a assinatura são armazenados no Assinante.  
+        >  O SQL Server Agent não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Quando você especifica um valor de **true** para Assinantes do Express, o trabalho de agente não é criado. Porém, importantes metadados relacionados a assinatura são armazenados no Assinante.  
   
     -   (Opcional) Defina os campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> ao usar a Autenticação do SQL Server para conexão com o Distribuidor.  
   
@@ -327,7 +327,7 @@ GO
   
 5.  Se não houver banco de dados de assinatura, crie-o usando a classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obter mais informações, consulte [Creating, Altering, and Removing Databases](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md) (Criando, alterando e removendo bancos de dados).  
   
-6.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription> .  
+6.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription>.  
   
 7.  Defina as seguintes propriedades de assinatura:  
   
@@ -357,7 +357,7 @@ GO
 9. Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> da etapa 2, chame o método <xref:Microsoft.SqlServer.Replication.MergePublication.MakePullSubscriptionWellKnown%2A> para registrar a assinatura pull com o Publicador. Se esse registro já existir, haverá uma exceção.  
   
 ###  <a name="PShellExample"></a> Exemplo (RMO)  
- Esse exemplo cria uma assinatura pull para uma publicação transacional. As credenciais da conta do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] usadas para criar o trabalho do Distribution Agent são passadas em tempo de execução.  
+ Esse exemplo cria uma assinatura pull para uma publicação transacional. As credenciais da conta do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] usadas para criar o trabalho do Distribution Agent são passadas em runtime.  
   
 ```csharp  
 // Define the Publisher, publication, and databases.  
@@ -551,7 +551,7 @@ End Try
   
 ```  
   
- Esse exemplo cria uma assinatura pull para uma publicação de mesclagem. As credenciais da conta do Windows usadas para criar o trabalho do Agente de Mesclagem são passadas em tempo de execução.  
+ Esse exemplo cria uma assinatura pull para uma publicação de mesclagem. As credenciais da conta do Windows usadas para criar o trabalho do Agente de Mesclagem são passadas em runtime.  
   
 ```cpp#  
 // Define the Publisher, publication, and databases.  
@@ -737,7 +737,7 @@ Finally
 End Try  
 ```  
   
- Esse exemplo cria uma assinatura pull para uma publicação de mesclagem, sem criar um trabalho de agente associado e metadados de assinatura em [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md). As credenciais da conta do Windows usadas para criar o trabalho do Agente de Mesclagem são passadas em tempo de execução.  
+ Esse exemplo cria uma assinatura pull para uma publicação de mesclagem, sem criar um trabalho de agente associado e metadados de assinatura em [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md). As credenciais da conta do Windows usadas para criar o trabalho do Agente de Mesclagem são passadas em runtime.  
   
 ```csharp  
 // Define the Publisher, publication, and databases.  
@@ -916,7 +916,7 @@ Finally
 End Try  
 ```  
   
- Esse exemplo cria uma assinatura pull para uma publicação de mesclagem que pode ser sincronizada pela Internet usando-se sincronização da Web. As credenciais da conta do Windows usadas para criar o trabalho do Agente de Mesclagem são passadas em tempo de execução. Para obter mais informações, consulte [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
+ Esse exemplo cria uma assinatura pull para uma publicação de mesclagem que pode ser sincronizada pela Internet usando-se sincronização da Web. As credenciais da conta do Windows usadas para criar o trabalho do Agente de Mesclagem são passadas em runtime. Para obter mais informações, consulte [Configurar sincronização da Web](../../relational-databases/replication/configure-web-synchronization.md).  
   
 ```csharp  
 // Define the Publisher, publication, and databases.  

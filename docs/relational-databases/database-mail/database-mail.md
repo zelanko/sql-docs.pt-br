@@ -15,10 +15,10 @@ ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d9a354b23a751a657ca10acc7e6cc19c6b586b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137424"
 ---
 # <a name="database-mail"></a>Database Mail
@@ -79,7 +79,7 @@ ms.locfileid: "68137424"
 ##  <a name="VisualElement"></a> Arquitetura do Database Mail  
  O Database Mail foi projetado em uma arquitetura de filas que usa tecnologias do Service Broker. Quando os usuários executam **sp_send_dbmail**, o procedimento armazenado insere um item na fila de emails e cria um registro que contém a mensagem do email. A inserção da nova entrada na fila de emails inicia o processo externo do Database Mail ((DatabaseMail.exe). O processo externo lê as informações de email e envia a mensagem ao servidor ou servidores de email adequados. O processo externo insere um item na fila Status quanto ao resultado da operação de envio. A inserção da nova entrada na fila de status faz com que seja iniciado um procedimento armazenado que atualiza o status da mensagem de email. Além de armazenar a mensagem de email enviada ou não, o Database Mail também registra eventuais anexos dos emails nas tabelas do sistema. As exibições do Database Mail fornecem o status das mensagens para a solução de problemas, e os procedimentos armazenados permitem a administração da fila do Database Mail.  
   
- O ![msdb envia mensagens para um servidor de email SMTP](../../relational-databases/database-mail/media/databasemail.gif "O msdb envia mensagens para um servidor de email SMTP")  
+ ![msdb envia mensagens a um servidor de email SMTP](../../relational-databases/database-mail/media/databasemail.gif "msdb envia mensagens a um servidor de email SMTP")  
   
   
 ##  <a name="ComponentsAndConcepts"></a> Introdução aos componentes do Database Mail  

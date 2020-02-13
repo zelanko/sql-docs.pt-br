@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a3d52368ac0eaeba118d0ba6e7abc88ef5e69db9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68063140"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamanho da tabela e da linha em tabelas com otimização de memória
@@ -73,13 +73,13 @@ O tamanho da linha é calculado adicionando-se o cabeçalho e o corpo:
   
 A figura a seguir ilustra a estrutura de linha de uma tabela que tem dois índices:  
   
-![Estrutura de linha para uma tabela que tem dois índices. ](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "Estrutura de linha para uma tabela que tem dois índices da linha.")  
+![Estrutura de linha para uma tabela que tem dois índices.](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "Estrutura de linha para uma tabela que tem dois índices.")  
   
 Os carimbos de data/hora de início e de término indicam o período em que uma determinada versão de linha é válida. As transações que começam nesse intervalo podem ver essa versão de linha. Para obter mais detalhes, veja [Transações com tabelas com otimização de memória](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md).  
   
 Os ponteiros de índice apontam para a próxima linha da cadeia de caracteres que pertence ao bucket de hash. A figura a seguir ilustra a estrutura de uma tabela com duas colunas (nome, cidade), e com dois índices, um na coluna nome e outro na coluna cidade.  
   
-![Estrutura de uma tabela com duas colunas e índices. ](../../relational-databases/in-memory-oltp/media/hekaton-tables-5.gif "Estrutura de uma tabela com duas colunas e índices.")  
+![Estrutura de uma tabela com duas colunas e índices.](../../relational-databases/in-memory-oltp/media/hekaton-tables-5.gif "Estrutura de uma tabela com duas colunas e índices.")  
   
 Nesta figura, os nomes John e Jane são transformados em hash no primeiro bucket. Susan é transformado em hash no segundo bucket. As cidades Beijing e Bogotá são transformadas em hash no primeiro bucket. Paris e Praga são transformadas em hash no segundo bucket.  
   
@@ -99,14 +99,14 @@ Um carimbo de data/hora de término ∞ (infinito) indica que essa é a versão 
   
 Para um tempo maior que 200, a tabela contém as seguintes linhas:  
   
-|Nome|Cidade|  
+|Nome|City|  
 |----------|----------|  
-|John|Beijing|  
+|John|Pequim|  
 |Jane|Praga|  
   
 Entretanto, qualquer transação ativa com tempo inicial igual a 100 resultará na seguinte versão da tabela:  
   
-|Nome|Cidade|  
+|Nome|City|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Praga|  
@@ -240,6 +240,6 @@ where object_id = object_id('dbo.Orders')
 A postagem no blog [Novidades para OLTP in-memory do SQL Server 2016 desde o CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) oferece mais detalhes sobre algumas dessas complexidades.   
  
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

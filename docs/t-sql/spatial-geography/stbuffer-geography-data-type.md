@@ -18,10 +18,10 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5651f61f33d598930aff2fb482b415e9749f6d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042533"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (tipo de dados geography)
@@ -49,7 +49,7 @@ ms.locfileid: "68042533"
   
  Tipo de retorno CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  STBuffer() calcula um buffer da mesma maneira que [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md), especificando *tolerance* = abs(distance) \* 0,001 e *relative* = **false**.  
   
  Um buffer negativo remove todos os pontos dentro da distância determinada do limite da instância de **geography**.  
@@ -58,7 +58,7 @@ ms.locfileid: "68042533"
   
  Esse método gerará uma **ArgumentException** em instâncias de **FullGlobe** nas quais a distância do buffer exceder a seguinte limitação:  
   
- 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 da circunferência da Terra)  
+ 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 circunferência da Terra)  
   
  O limite de distância máximo permite que a construção do buffer seja a mais flexível possível.  
   

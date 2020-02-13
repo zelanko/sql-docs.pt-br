@@ -16,10 +16,10 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710318"
 ---
 # <a name="create-a-full-database-backup"></a>Criar um backup de banco de dados completo
@@ -132,7 +132,7 @@ SELECT * FROM SQLTest
 GO
 ```
 
-#### <a name="a-full-back-up-to-disk-to-default-location"></a>A. Backup completo em disco em local padrão
+#### <a name="a-full-back-up-to-disk-to-default-location"></a>a. Backup completo em disco em local padrão
 
 Neste exemplo, será feito backup do banco de dados `SQLTestDB` em disco no local de backup padrão.
 
@@ -200,7 +200,7 @@ Neste exemplo, será feito backup do banco de dados `SQLTestDB` com criptografia
 
 1. Na lista suspensa **Certificado ou Chave Assimétrica** , selecione `MyCertificate`.
 
-1. Escolha **OK**.
+1. Selecione **OK**.
 
 ![Backup criptografado](media/create-a-full-database-backup-sql-server/encrypted-backup.png)
 
@@ -312,7 +312,7 @@ SELECT * FROM SQLTest
 GO
 ```
 
-#### <a name="a-back-up-to-a-disk-device"></a>A. Fazer backup em um dispositivo de disco
+#### <a name="a-back-up-to-a-disk-device"></a>a. Fazer backup em um dispositivo de disco
 
 O exemplo a seguir faz backup de banco de dados completo `SQLTestDB` em um disco, usando `FORMAT` para criar um novo conjunto de mídia.
 
@@ -375,7 +375,7 @@ Use o cmdlet **Backup-SqlDatabase** . Para indicar explicitamente que este é um
 
 ### <a name="examples"></a>Exemplos
 
-#### <a name="a-full-backup-local"></a>A. Backup completo (local)
+#### <a name="a-full-backup-local"></a>a. Backup completo (local)
 
 O exemplo a seguir cria um backup de banco de dados completo do banco de dados `<myDatabase>` para o local de backup padrão da instância de servidor `Computer\Instance`. Como opção, esse exemplo especifica **-BackupAction Database**.
 

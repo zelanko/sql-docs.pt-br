@@ -12,10 +12,10 @@ ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 531d7e5a0f945a8d0dd5570d95843164fbc98734
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296346"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Caixa de diálogo Detalhes da Conversão de Coluna (Assistente de Importação e Exportação do SQL Server)
@@ -37,7 +37,7 @@ Neste exemplo, você vê o que é descrito a seguir.
 -   O assistente é concluído, *essa coluna não precisa de conversão*.
  
   
- ![Página Conversão de coluna do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/column-conversion.png "Página Conversão de coluna do Assistente de Importação e Exportação") 
+ ![Página de conversão de coluna do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/column-conversion.png "Página de conversão de coluna do Assistente de Importação e Exportação") 
   
 ## <a name="whats-next"></a>O que vem a seguir?  
  Depois de revisar os detalhes da conversão de coluna e clicar em **OK**, a caixa de diálogo **Detalhes da conversão de coluna** retornará a página **Revisar mapeamento de tipo de dados** . Para obter mais informações, consulte [Revisar mapeamento de tipo de dados](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  

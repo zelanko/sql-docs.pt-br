@@ -22,16 +22,16 @@ ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3c0d1ed26fa58934a51ec051eb3aa4e1d5b9a2bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902100"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  É um predicado usado na [cláusula WHERE](../../t-sql/queries/where-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT para executar uma pesquisa de texto completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma coluna indexada para texto completo que contenha caracteres de tipos de dados baseados em caracteres. Esse predicado procura valores correspondentes ao significado e não apenas o teor exato das palavras nos critérios da pesquisa. Quando FREETEXT é usado, o mecanismo de consulta de texto completo executa internamente as ações a seguir na *freetext_string*, atribui um peso a cada termo e, em seguida, localiza as correspondências:  
+  É um predicado usado na [cláusula WHERE](../../t-sql/queries/where-transact-sql.md) do [!INCLUDE[tsql](../../includes/tsql-md.md)] de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT para executar uma pesquisa de texto completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma coluna indexada de texto completo que contém tipos de dados baseados em caracteres. Esse predicado procura valores correspondentes ao significado e não apenas o teor exato das palavras nos critérios da pesquisa. Quando FREETEXT é usado, o mecanismo de consulta de texto completo executa internamente as ações a seguir na *freetext_string*, atribui um peso a cada termo e, em seguida, localiza as correspondências:  
   
 -   Separa a cadeia de caracteres em palavras individuais com base em limites de palavra (quebra de palavras).  
   
@@ -42,9 +42,9 @@ ms.locfileid: "67902100"
 > [!NOTE]  
 >  Para obter informações sobre os formatos de pesquisas de texto completo compatíveis com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Consulta com a pesquisa de texto completo](../../relational-databases/search/query-with-full-text-search.md).  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -108,9 +108,9 @@ WHERE FREETEXT(Description, @SearchWord);
   
  Quando especificado como uma cadeia de caracteres, *language_term* corresponde ao valor da coluna **alias** na exibição de compatibilidade [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).  A cadeia de caracteres precisa ser colocada entre aspas, como em '*language_term*'. Quando especificado como um inteiro, *language_term* é a LCID real que identifica o idioma. Quando especificado como um valor hexadecimal, *language_term* é 0x seguido pelo valor hexadecimal da LCID. O valor hexadecimal não deve exceder oito dígitos, inclusive zeros à esquerda.  
   
- Se o valor estiver no formato DBCS (conjunto de caracteres de byte duplo), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o converterá em Unicode.  
+ Se o valor estiver no formato DBCS (conjunto de caracteres de dois bytes), o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o converterá em Unicode.  
   
- Se o idioma especificado não for válido ou se não houver nenhum recurso instalado que corresponda a esse idioma, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro. Para usar os recursos de idioma neutro, especifique 0x0 como *language_term*.  
+ Se o idioma especificado não for válido ou se não houver nenhum recurso instalado que corresponda ao idioma, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro. Para usar os recursos de idioma neutro, especifique 0x0 como *language_term*.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  As funções e os predicados de texto completo trabalham em uma única tabela, que está implícita no predicado FROM. Para pesquisar em várias tabelas, use uma tabela unida na cláusula FROM para pesquisar em um conjunto de resultados que é o produto de duas ou mais tabelas.  
@@ -130,7 +130,7 @@ Consultas de texto completo que usam FREETEXT são menos precisas que consultas 
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-freetext-to-search-for-words-containing-specified-character-values"></a>A. Usando FREETEXT para pesquisar palavras que contêm valores de caracteres especificados  
+### <a name="a-using-freetext-to-search-for-words-containing-specified-character-values"></a>a. Usando FREETEXT para pesquisar palavras que contêm valores de caracteres especificados  
  As pesquisas de exemplo a seguir para todos os documentos que contêm as palavras relacionadas a componentes vitais, de segurança.  
   
 ```sql  

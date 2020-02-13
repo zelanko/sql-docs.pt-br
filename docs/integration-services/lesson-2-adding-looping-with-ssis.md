@@ -11,10 +11,10 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ccd3be3203aae382cda239ed6d7bdc2fa224923b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296060"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>Lição 2: Adicionar looping com o SSIS
@@ -52,7 +52,7 @@ Nesta lição, você modifica o pacote ETL de exemplo da Lição 1 para usar um 
 Nesta lição, você não modificará o fluxo de dados, apenas o fluxo de controle.  
   
 > [!NOTE]  
-> Se você ainda não fez isso, confira a [Lição 1 Pré-requisitos](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
+> Se você ainda não fez isso, confira os [Pré-requisitos da Lição 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
 
 ## <a name="lesson-tasks"></a>Tarefas da lição  
 Esta lição contém as seguintes tarefas:  

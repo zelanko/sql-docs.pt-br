@@ -22,10 +22,10 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 75258eabcc1874ca8cda731cc473847b7316ff28
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296195"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Manipuladores de eventos do SSIS (Integration Services)
@@ -47,7 +47,7 @@ ms.locfileid: "71296195"
   
  O diagrama a seguir mostra um pacote simples que tem um contêiner Loop For que contém uma tarefa Executar SQL.  
   
- ![Pacote, Loop For, host da tarefa e tarefa Executar SQL](../integration-services/media/mw-dts-eventhandlerpkg.gif "Pacote, Loop For, host da tarefa e tarefa Executar SQL")  
+ ![Pacote, Loop For, host de tarefas e tarefa Executar SQL](../integration-services/media/mw-dts-eventhandlerpkg.gif "Pacote, Loop For, host de tarefas e tarefa Executar SQL")  
   
  Só o pacote tem um manipulador de eventos, para seu evento **OnError** . Se ocorrer um erro quando a tarefa Executar SQL for executada, o manipulador de eventos **OnError** do pacote entrará em execução. O diagrama a seguir mostra a sequência de chamadas que faz o manipulador de eventos **OnError** do pacote executar.  
   
@@ -109,7 +109,7 @@ No momento da execução, contêineres e tarefas elevam os eventos. Você pode c
   
 3.  Clique na guia **Manipuladores de Eventos** .  
   
-     ![Captura de tela da área de design com o manipulador de eventos](../integration-services/media/eventhandlers.gif "Captura de tela da área de design com o manipulador de eventos")  
+     ![Captura de tela da superfície de design com manipulador de Eventos](../integration-services/media/eventhandlers.gif "Captura de tela da superfície de design com manipulador de Eventos")  
   
      Criar o fluxo de controle e os fluxos de dados em um manipulador de eventos é semelhante a criar o fluxo de controle e os fluxos de dados em um pacote. Para obter mais informações, consulte [Fluxo de Controle](../integration-services/control-flow/control-flow.md) e [Fluxo de Dados](../integration-services/data-flow/data-flow.md).  
   

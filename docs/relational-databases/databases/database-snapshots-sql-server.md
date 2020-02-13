@@ -19,10 +19,10 @@ ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68300434"
 ---
 # <a name="database-snapshots-sql-server"></a>Instantâneos de banco de dados (SQL Server)
@@ -53,7 +53,7 @@ Um instantâneo de banco de dados é uma exibição estática somente leitura de
   
  Para armazenar as páginas originais copiadas, o instantâneo usa um ou mais *arquivos esparsos*. Inicialmente, um arquivo esparso é, essencialmente, um arquivo vazio que não contém dados de usuário e no qual ainda não foi alocado espaço em disco para os dados do usuário. À medida que mais páginas são atualizadas no banco de dados de origem, o tamanho do arquivo aumenta. A figura a seguir mostra os efeitos de dois padrões de atualização contrastantes no tamanho de um instantâneo. O padrão de atualização A reflete um ambiente em que apenas 30% das páginas originais são atualizadas durante a vida do instantâneo. O padrão de atualização B reflete um ambiente em que 80% das páginas originais são atualizadas durante a vida do instantâneo.  
   
- ![Padrões de atualização alternativos e tamanho do instantâneo](../../relational-databases/databases/media/dbview-04.gif "Padrões de atualização alternativos e tamanho do instantâneo")  
+ ![Padrões alternativos de atualização e tamanho do instantâneo](../../relational-databases/databases/media/dbview-04.gif "Padrões alternativos de atualização e tamanho do instantâneo")  
   
 ##  <a name="Benefits"></a> Benefícios dos instantâneos de banco de dados  
   
@@ -197,7 +197,7 @@ Um instantâneo de banco de dados é uma exibição estática somente leitura de
     > [!NOTE]  
     >  Uma instrução SELECT executada em um instantâneo de banco de dados não deve especificar uma coluna FILESTREAM. Caso contrário, a mensagem de erro a seguir será retornada: `Could not continue scan with NOLOCK due to data movement.`  
   
--   Quando estatísticas em um instantâneo somente leitura estão ausentes ou ficam obsoletas, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria e mantém estatísticas temporárias em tempdb. Para obter mais informações, consulte [Statistics](../../relational-databases/statistics/statistics.md).  
+-   Quando estatísticas em um instantâneo somente leitura estão ausentes ou ficam obsoletas, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria e mantém estatísticas temporárias em tempdb. Para obter mais informações, consulte [Estatísticas](../../relational-databases/statistics/statistics.md).  
   
 ###  <a name="DiskSpace"></a> Requisitos de espaço em disco  
  Os instantâneos do banco de dados consomem espaço em disco. Se um instantâneo do banco de dados for executado sem espaço em disco suficiente, ficará marcado como suspeito e precisará ser cancelado. (O banco de dados de origem, porém, não é afetado; as suas ações prosseguem normalmente.) Em comparação com uma cópia completa de banco de dados, no entanto, os instantâneos são altamente eficazes em termos de espaço. Um instantâneo requer apenas armazenamento suficiente para as páginas alteradas no decorrer de seu tempo de vida. Em geral, os instantâneos são mantidos por certo período, de modo que o tamanho deles não é a principal preocupação.  
@@ -234,7 +234,7 @@ Um instantâneo de banco de dados é uma exibição estática somente leitura de
   
 -   [Exibir o tamanho do arquivo esparso de um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
   
--   [Reverter um banco de dados a um instantâneo do banco de dados](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
+-   [Reverter um banco de dados para um instantâneo do banco de dados](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
   
 -   [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   

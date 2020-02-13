@@ -14,10 +14,10 @@ ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6033c2d21b10755601f9ef82cabd829db5ad820
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293216"
 ---
 # <a name="connect-components-in-a-data-flow"></a>Conectar componentes em um fluxo de dados
@@ -30,7 +30,7 @@ Você constrói o fluxo de dados em um pacote na superfície de design da guia *
   
  O diagrama a seguir mostra um simples fluxo de dados com um componente de fonte, duas transformações, um componente de destino e os caminhos que os conecta.  
   
- ![Data flow](../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
+ ![Fluxo de dados](../../integration-services/data-flow/media/mw-dts-08.gif "Fluxo de dados")  
   
  Depois de dois componentes terem sido conectados, você pode visualizar os metadados dos dados que se movimentam através do caminho e as propriedades do caminho em **Editor de Caminho de Fluxo de Dados**. Para obter mais informações, consulte [Integration Services Paths](../../integration-services/data-flow/integration-services-paths.md).  
   
@@ -55,6 +55,6 @@ Você constrói o fluxo de dados em um pacote na superfície de design da guia *
   
 ## <a name="see-also"></a>Consulte Também  
  [Adicionar ou excluir um componente em um fluxo de dados](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
- [Depurar o fluxo de dados](../../integration-services/troubleshooting/debugging-data-flow.md) [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
+ [Como depurar o fluxo de dados](../../integration-services/troubleshooting/debugging-data-flow.md) [Fluxo de dados](../../integration-services/data-flow/data-flow.md)  
   
   

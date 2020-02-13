@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 67db54183f186ce5a116aada3e5f6b058abb9dc5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f4f51850fe288f2bbbd6d0e70a123a03f84344ac
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907120"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284879"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurar a publicação e a distribuição
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,14 +29,14 @@ ms.locfileid: "72907120"
 ##  <a name="BeforeYouBegin"></a> Antes de começar 
 
 ###  <a name="Security"></a> Segurança 
-Para obter mais informações, confira [Exibir e modificar configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).
+Confira mais informações em [Exibir e modificar as configurações de replicação de segurança](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).
 
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio 
 Configure a distribuição, usando o Assistente para Novas Publicações ou o Assistente para Configurar a Distribuição. Depois que o Distribuidor estiver configurado, exiba e modifique as propriedades na caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>** . Use o Assistente para Configurar Distribuição se você desejar configurar um Distribuidor para que os membros de funções de banco de dados fixas `db_owner` possam criar publicações ou para configurar um Distribuidor remoto que não seja um Publicador.
 
 #### <a name="to-configure-distribution"></a>Para configurar a distribuição 
 
-1. No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se ao servidor que será o Distribuidor (em muitos casos, o Publicador e o Distribuidor são o mesmo servidor) e, então, expanda o nó do servidor.
+1. No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se ao servidor que será o Distribuidor (em muitos casos, o Publicador e o Distribuidor são o mesmo servidor) e, então, expanda o nó de servidor.
 
 2. Clique com o botão direito na pasta **Replicação** e clique em **Configurar Distribuição**.
 
@@ -96,15 +96,15 @@ O exemplo a seguir mostra como configurar publicação e distribuição programa
 
 1. Crie uma conexão ao servidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .
 
-2. Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passe o <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.
+2. Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passe o <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.
 
-3. Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase> .
+3. Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase>.
 
 4. Defina a propriedade <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> para o nome do banco de dados e defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para o <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.
 
 5. Instale o Distribuidor chamando o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Passe o objeto <xref:Microsoft.SqlServer.Replication.DistributionDatabase> da etapa 3.
 
-6. Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher> .
+6. Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher>.
 
 7. Defina as seguintes propriedades de <xref:Microsoft.SqlServer.Replication.DistributionPublisher>: 
 
@@ -124,17 +124,17 @@ O exemplo a seguir mostra como configurar publicação e distribuição programa
 
 1. Crie uma conexão ao servidor do Distribuidor remoto usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .
 
-2. Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passe o <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.
+2. Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passe o <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.
 
-3. Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase> .
+3. Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase>.
 
 4. Defina a propriedade <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> ao nome do banco de dados e defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> ao <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.
 
 5. Instale o Distribuidor chamando o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Especifique uma senha segura (usada pelo Publicador ao se conectar ao Distribuidor remoto) e o objeto <xref:Microsoft.SqlServer.Replication.DistributionDatabase> da etapa 3. Para obter mais informações, consulte [Proteger o Distribuidor](../../relational-databases/replication/security/secure-the-distributor.md).
 
-   > `IMPORTANT!!` Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework do Windows.
+   > `IMPORTANT!!` Quando possível, solicite que os usuários insiram as credenciais de segurança em runtime. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework do Windows.
 
-6. Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher> .
+6. Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher>.
 
 7. Defina as seguintes propriedades de <xref:Microsoft.SqlServer.Replication.DistributionPublisher>: 
 
@@ -152,7 +152,7 @@ O exemplo a seguir mostra como configurar publicação e distribuição programa
 
 9. Crie uma conexão com o servidor do Publicador local usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .
 
-10. Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passe a <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 9.
+10. Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passe a <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 9.
 
 11. Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Passe o nome do Distribuidor remoto e a senha para o Distribuidor remoto especificados na etapa 5.
 

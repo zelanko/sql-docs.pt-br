@@ -11,10 +11,10 @@ ms.assetid: 44213071-a98e-4bd4-acf5-c9872536269e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 490374eaf6c5e1eefc768235bd4f3571bfd6f7b4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294991"
 ---
 # <a name="certification-by-sap"></a>Certificação pela SAP
@@ -30,7 +30,7 @@ ms.locfileid: "71294991"
   
 |Interface SAP|Níveis de versão SAP|Data da certificação|Componente relacionado|  
 |-------------------|------------------------|------------------------|-----------------------|  
-|BW_OHS 7.0 - SAP NetWeaver Business Intelligence - Open Hub Service 7.0|Business Intelligence 7.0|Dezembro de 2012|Origem|  
+|BW_OHS 7.0 - SAP NetWeaver Business Intelligence - Open Hub Service 7.0|Business Intelligence 7.0|Dezembro de 2012|Fonte|  
 |BW-STA 3.5 - BAPIs de preparação para SAP BW 3.5|Business Intelligence 3.5, 7.0|Dezembro de 2012|Destino|  
   
   

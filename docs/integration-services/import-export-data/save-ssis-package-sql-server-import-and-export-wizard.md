@@ -12,10 +12,10 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63cc8413175555e37a29caf288a72815824c3778
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296255"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Salvar Pacote SSIS (Assistente de Importação e Exportação do SQL Server)
@@ -48,7 +48,7 @@ A captura de tela a seguir mostra a primeira parte da página **Salvar Pacote do
 
  A captura de tela a seguir mostra a página **Salvar Pacote SSIS** do assistente se você selecionou a opção **SQL Server** na página **Salvar e Executar Pacote**. 
   
-![Página Salvar Pacote do SSIS do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/save-package2.png "Página Salvar Pacote do SSIS do Assistente de Importação e Exportação")  
+![Página Salvar pacote SSIS do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/save-package2.png "Página Salvar pacote SSIS do Assistente de Importação e Exportação")  
 
 ## <a name="options-to-specify-target--sql-server"></a>Opções a serem especificadas (Destino = SQL Server) 
 
@@ -64,7 +64,7 @@ Conecte-se ao servidor usando a Autenticação Integrada do Windows. Esse é o m
  **Usar Autenticação do SQL Server**  
 Conecte-se ao servidor usando a Autenticação do SQL Server.  
   
- **User name**  
+ **Nome de usuário**  
 Se você tiver especificado a Autenticação do SQL Server, insira o nome de usuário.  
   
  **Senha**  
@@ -74,7 +74,7 @@ Se você tiver especificado a Autenticação do SQL Server, insira a senha.
  
 A captura de tela a seguir mostra a página **Salvar Pacote SSIS** do assistente após você ter selecionado a opção **Sistema de arquivos** na página **Salvar e Executar Pacote**. 
   
-![Página Salvar Pacote do SSIS do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/save-package1.png "Página Salvar Pacote do SSIS do Assistente de Importação e Exportação")  
+![Página Salvar pacote SSIS do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/save-package1.png "Página Salvar pacote SSIS do Assistente de Importação e Exportação")  
 
 ## <a name="options-to-specify-target--file-system"></a>Opções a serem especificadas (Destino = sistema de arquivos)
 

@@ -1,39 +1,47 @@
 ---
-title: Banco de Dados em Memória | Microsoft Docs
-ms.date: 05/22/2019
+title: Recursos e tecnologias de sistemas de banco de dados em memória
+ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
-- in-memory database
-- feature, in-memory database
+- in-memory systems
+- in-memory technologies
+- in-memory features
+- database, in-memory database
+- system, in-memory system
+- features, in-memory features
 - in-memory
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: d61ea85f5c1d7784faaf1d094e2fa858bffcd8c2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: df8bb9e603d5455a2e42393df4c40956000cb037
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255410"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831593"
 ---
-# <a name="in-memory-database"></a>Banco de dados em memória
+# <a name="in-memory-database-systems-and-technologies"></a>Tecnologias e sistemas de banco de dados em memória
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Banco de Dados em Memória é um termo abrangente para os recursos do SQL Server que aproveitam tecnologias baseadas em memória. Conforme novos recursos baseados em memória são desenvolvidos, esta página continuará sendo atualizada.
+Esta página destina-se a servir como uma página de referência para recursos e tecnologias em memória no SQL Server. O conceito de um sistema de banco de dados em memória refere-se a um sistema de banco de dados que foi projetado para aproveitar capacidades de memória maiores disponíveis em sistemas de banco de dados modernos. Um banco de dados em memória pode ser relacional ou não relacional por natureza.
 
-## <a name="hybrid-buffer-pool"></a>Pool de Buffers Híbrido
+Frequentemente assume-se que as vantagens de desempenho de um sistema de banco de dados em memória se devem principalmente ao fato de ele ser mais rápido para acessar os dados residentes na memória em vez de os dados localizados até mesmo nos subsistemas de discos mais rápido disponíveis (por várias ordens de magnitude). No entanto, muitas cargas de trabalho do SQL Server podem se ajustar a todo o conjunto de trabalho na memória disponível. Muitos sistemas de banco de dados em memória podem persistir dados em disco e nem sempre podem ser capazes de se ajustar a todo o conjunto de dados na memória disponível.
+
+Um cache volátil rápido que traz uma mídia consideravelmente mais lenta, mas durável, era predominante para cargas de trabalho de banco de dados relacional. Ele precisa de abordagens específicas para o gerenciamento de carga de trabalho. As oportunidades apresentadas por taxas de transferência de memória mais rápidas, maior capacidade ou até mesmo a memória persistente facilitam o desenvolvimento de novos recursos e tecnologias que podem estimular novas abordagens ao gerenciamento de carga de trabalho de banco de dados relacional.
+
+## <a name="hybrid-buffer-pool"></a>Pool de buffers híbrido
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-O [Pool de Buffers Híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md) permite que o mecanismo de banco de dados acesse diretamente as páginas de dados em arquivos de banco de dados armazenados em dispositivos PMEM (Memória Persistente).
+[O pool de buffers híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md) expande o pool de buffers para arquivos de banco de dados que residem em dispositivos de armazenamento de memória persistente endereçáveis por byte para plataformas Windows e Linux com [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-## <a name="memory-optimized-tempdb-metadata"></a>Metadados do TempDB com otimização de memória
+## <a name="memory-optimized-tempdb-metadata"></a>Metadados `tempdb` com otimização de memória
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -43,14 +51,16 @@ O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] apresenta um novo recu
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-O [OLTP in-memory](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) é a principal tecnologia disponível no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e no [!INCLUDE[ssSDS](../includes/sssds-md.md)] para otimizar o desempenho do processamento de transações, a ingestão de dados, o carregamento de dados e cenários de dados transitórios.
+O [OLTP in-memory](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) é uma tecnologia de banco de dados disponível no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e no [!INCLUDE[ssSDS](../includes/sssds-md.md)] para otimizar o desempenho do processamento de transações, a ingestão de dados, o carregamento de dados e cenários de dados transitórios.
 
-**Aplica-se a:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
-
-## <a name="persistent-memory-support-for-linux"></a>Suporte de memória persistente para Linux
+## <a name="configuring-persistent-memory-support-for-linux"></a>Configurando o suporte de memória persistente para Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-O [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] adiciona suporte para dispositivos PMEM (Memória Persistente) ao Linux, fornecendo capacitação completa de arquivos de log de transações e dados colocados na [memória persistente](../linux/sql-server-linux-configure-pmem.md).
+[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] descreve como configurar a memória persistente (PMEM) usando o utilitário `ndctl` de [memória persistente](../linux/sql-server-linux-configure-pmem.md).
 
-**Aplica-se a:** [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+## <a name="persisted-log-buffer"></a>Buffer de log persistente
+
+O Service Pack 1 de [!INCLUDE[ssSQL16](../includes/sssql16-md.md)] introduziu uma otimização de desempenho para cargas de trabalho com uso intensivo de gravação que foram associadas por esperas de WRITELOG. A memória persistente é usada para armazenar o buffer de log. Esse buffer, que é pequeno (20 MB por banco de dados de usuário), deve ser liberado para o disco para que as transações gravadas no log de transações sejam protegidas. Para cargas de trabalho OLTP com uso intensivo de gravação, esse mecanismo de liberação pode se tornar um gargalo. Com o buffer de log na memória persistente, o número de operações necessárias para proteger o log é reduzido, aprimorando os tempos de transação gerais e aumentando o desempenho da carga de trabalho. Esse processo foi introduzido como [Final do cache de log]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). No entanto, houve um conflito percebido com [Backups de log de transações final](./backup-restore/tail-log-backups-sql-server.md) e o entendimento tradicional de que a parte final do log foi a porção do log de transações protegida, mas ainda não foi feito backup. Como o nome do recurso oficial é um buffer de log persistente, esse é o nome usado aqui.
+
+Confira [Adicionar buffer de log persistente a um banco de dados](./databases/add-persisted-log-buffer.md).

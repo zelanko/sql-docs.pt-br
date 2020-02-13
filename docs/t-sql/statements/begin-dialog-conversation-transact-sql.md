@@ -31,10 +31,10 @@ ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c456b6e34dba77b7e35cc24e8af673662725a2bb
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211376"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "70211376"
 
   Inicia uma caixa de diálogo de um serviço para outro. Uma caixa de diálogo é uma conversa que fornece mensagens exatamente na mesma ordem entre dois serviços.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -101,12 +101,12 @@ WHERE database_id = DB_ID() ;
  Especifica o limite máximo de tempo que a caixa de diálogo permanecerá aberta. Para a caixa de diálogo ser concluída com êxito, os pontos de extremidade devem finalizar explicitamente a caixa de diálogo antes que seu tempo de vida expire. O valor de *dialog_lifetime* deve ser expresso em segundos. O tempo de vida é do tipo **int**. Quando nenhuma cláusula LIFETIME é especificada, o tempo de vida da caixa de diálogo é o valor máximo do tipo de dados **int**.  
   
  ENCRYPTION  
- Especifica se as mensagens enviadas e recebidas nessa caixa de diálogo deverão ou não ser criptografadas quando forem enviadas para fora de uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Uma caixa de diálogo que deve ser criptografada é uma *caixa de diálogo protegida*. Quando ENCRYPTION = ON e os certificados necessários para oferecer suporte à criptografia não estão configurados, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] retorna uma mensagem de erro na conversa. Se ENCRYPTION = OFF, a criptografia será usada quando uma associação de serviço remoto for configurada para o *target_service_name*; caso contrário, as mensagens serão enviadas descriptografadas. Se esta cláusula não estiver presente, o valor padrão será ON.  
+ Especifica se as mensagens enviadas e recebidas nessa caixa de diálogo precisam ou não ser criptografadas quando enviadas para fora de uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Uma caixa de diálogo que deve ser criptografada é uma *caixa de diálogo protegida*. Quando ENCRYPTION = ON e os certificados necessários para oferecer suporte à criptografia não estão configurados, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] retorna uma mensagem de erro na conversa. Se ENCRYPTION = OFF, a criptografia será usada quando uma associação de serviço remoto for configurada para o *target_service_name*; caso contrário, as mensagens serão enviadas descriptografadas. Se esta cláusula não estiver presente, o valor padrão será ON.  
   
 > [!NOTE]  
 >  As mensagens trocadas com serviços na mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nunca são criptografadas. Entretanto, uma chave de banco de dados mestre e os certificados para a criptografia ainda serão necessários para as conversas que usam criptografia se os serviços para a conversa estiverem em bancos de dados diferentes. Isso permite que as conversas continuem caso um dos bancos de dados seja movido para uma instância enquanto a conversa estiver em andamento.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Todas as mensagens fazem parte de uma conversa. Portanto, um serviço iniciador deve começar uma conversa com o serviço de destino antes de enviar-lhe uma mensagem. As informações especificadas na instrução BEGIN DIALOG CONVERSATION são semelhantes ao endereço em uma carta; o [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa as informações para entregar as mensagens ao serviço correto. O serviço especificado na cláusula TO SERVICE é o endereço para o qual as mensagens são enviadas. O serviço especificado na cláusula FROM SERVICE é o endereço de retorno usado para mensagens de resposta.  
   
  O destino de uma conversa não precisa chamar BEGIN DIALOG CONVERSATION. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] cria uma conversa no banco de dados de destino quando a primeira mensagem da conversa chega do iniciador.  
@@ -126,7 +126,7 @@ WHERE database_id = DB_ID() ;
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-beginning-a-dialog"></a>A. Iniciando uma caixa de diálogo  
+### <a name="a-beginning-a-dialog"></a>a. Iniciando uma caixa de diálogo  
  O exemplo a seguir inicia uma conversa de caixa de diálogo e armazena um identificador para a caixa de diálogo no `@dialog_handle.` O serviço `//Adventure-Works.com/ExpenseClient` é o iniciador e o serviço `//Adventure-Works.com/Expenses` é o destino da caixa de diálogo. A caixa de diálogo segue o contrato `//Adventure-Works.com/Expenses/ExpenseSubmission`.  
   
 ```  

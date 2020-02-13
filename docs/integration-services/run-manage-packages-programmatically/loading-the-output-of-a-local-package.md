@@ -17,10 +17,10 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc35bb8b31c88cea2d903981e709f4075929ea7a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295746"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Carregando a saída de um pacote local
@@ -112,7 +112,7 @@ ms.locfileid: "71295746"
   
 7.  Execute o aplicativo e clique no botão. Após uma pequena pausa, enquanto o pacote é executado, você deverá ver o valor de agregação calculado pelo pacote (a contagem de clientes no Canadá) exibido na caixa de texto do formulário.  
   
-### <a name="sample-code"></a>Código de exemplo  
+### <a name="sample-code"></a>Exemplo de código  
   
 ```vb  
 Imports System.Data  

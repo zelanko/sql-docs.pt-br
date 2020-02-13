@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981724"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT – Cláusula INTO (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "73981724"
 
 SELECT…INTO cria uma tabela no grupo de arquivos padrão e insere nela as linhas resultantes da consulta. Para exibir a sintaxe completa de SELECT, confira [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -82,7 +82,7 @@ SELECT…INTO cria uma tabela no grupo de arquivos padrão e insere nela as linh
   
 Se alguma dessas condições for verdadeira, a coluna será criada como NOT NULL em vez de herdar a propriedade IDENTITY. Se uma coluna de identidade for obrigatória na nova tabela, mas não estiver disponível, ou se você desejar um valor de semente ou de incremento diferente da coluna de identidade de origem, defina a coluna na lista de seleção que usa a função IDENTITY. Consulte "Criando uma coluna de identidade usando a função IDENTITY" na seção Exemplos abaixo.  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 A instrução `SELECT...INTO` opera em duas partes – a nova tabela é criada e, em seguida, as linhas são inseridas.  Isso significa que, se as inserções falharem, elas serão todas revertidas, mas a nova tabela (vazia) permanecerá.  Se você precisar que toda a operação tenha êxito ou falhe como um todo, use uma [transação explícita](../language-elements/begin-transaction-transact-sql.md).
   
 ## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
@@ -106,7 +106,7 @@ A instrução `SELECT...INTO` opera em duas partes – a nova tabela é criada e
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. Criando uma tabela especificando colunas de várias origens  
+### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>a. Criando uma tabela especificando colunas de várias origens  
  O exemplo a seguir cria a tabela `dbo.EmployeeAddresses` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] selecionando sete colunas de várias tabelas relacionadas a funcionários e endereços.  
   
 ```sql  
@@ -171,7 +171,7 @@ WHERE name = 'AddressID';
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. Criando uma tabela especificando colunas de uma fonte de dados remotos  
  O seguinte exemplo demonstra três métodos para criar uma nova tabela no servidor local de uma fonte de dados remota. O exemplo começa criando um link para a fonte de dados remota. O nome do servidor vinculado, `MyLinkServer,`, é especificado na cláusula FROM da primeira instrução SELECT...INTO e na função OPENQUERY da segunda instrução SELECT...INTO. A terceira instrução SELECT... INTO usa a função OPENDATASOURCE, que especifica a fonte de dados remota diretamente, em vez de usar o nome de servidor vinculado.  
   
- **Aplica-se a:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
+ **Aplica-se a:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posteriores.  
   
 ```sql
 USE master;  
@@ -214,7 +214,7 @@ GO
 ### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. Importar de uma tabela externa criada com PolyBase  
  Importe dados do Hadoop ou armazenamento do Azure para SQL Server, para armazenamento persistente. Use `SELECT INTO` para importar os dados referenciados por uma tabela externa para o armazenamento persistente no SQL Server. Crie uma tabela relacional rapidamente e, em seguida, crie um índice de repositório de coluna sobre a tabela em uma segunda etapa.  
   
- **Aplica-se ao:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Aplica-se a:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  

@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fad28919360caf2a37f410d1c3f3e122fd3dd803
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 282e75c071ce220c5b7301b5c4b27fff2cf4b053
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119449"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929109"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gerenciar metadados ao disponibilizar um banco de dados em outro servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,16 +57,16 @@ ms.locfileid: "74119449"
   
  Alguns aplicativos dependem de informações, entidades e/ou objetos que estão fora do escopo de um único banco de dados de usuário. Normalmente, um aplicativo tem dependências no banco de dados **mestre** e **msdb** e também no banco de dados de usuário. Qualquer coisa armazenada fora de um banco de dados de usuário que seja necessária para o funcionamento correto daquele banco de dados deve estar disponível na instância do servidor de destino. Por exemplo, os logons de um aplicativo são armazenados como metadados no banco de dados **mestre** e devem ser recriados no servidor de destino. Se um plano de manutenção de um banco de dados ou aplicativo depender de trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent cujos metadados estão armazenados no banco de dados **msdb** , será necessário recriar esses trabalhos na instância do servidor de destino. De maneira semelhante, os metadados de um gatilho em nível de servidor são armazenados no **mestre**.  
   
- Ao mover o banco de dados de um aplicativo para outra instância de servidor, é necessário recriar todos os metadados dos objetos e entidades dependentes do **mestre** e do **msdb** na instância do servidor de destino. Por exemplo, se um aplicativo de banco de dados usar gatilhos em nível de servidor, apenas a anexação ou a restauração do banco de dados no novo sistema não será suficiente. O banco de dados não funcionará conforme esperado a não ser que os metadados desses gatilhos sejam recriados manualmente no banco de dados **mestre** .  
+ Ao mover o banco de dados de um aplicativo para outra instância de servidor, é necessário recriar todos os metadados dos objetos e entidades dependentes no **mestre** e no **msdb** na instância do servidor de destino. Por exemplo, se um aplicativo de banco de dados usar gatilhos em nível de servidor, apenas a anexação ou a restauração do banco de dados no novo sistema não será suficiente. O banco de dados não funcionará conforme esperado a não ser que os metadados desses gatilhos sejam recriados manualmente no banco de dados **mestre** .  
   
 ##  <a name="information_entities_and_objects"></a> Informações, entidades e objetos que são armazenados fora de bancos de dados de usuário  
  O restante deste artigo resume os problemas potenciais que podem afetar um banco de dados que está sendo disponibilizado em outra instância de servidor. Talvez você precise recriar um ou mais dos tipos de informações, entidades ou objetos apresentados na lista a seguir. Para ver um resumo, clique no link do item.  
   
--   [Parâmetros de configuração de servidor](#server_configuration_settings)  
+-   [Definições de configuração do servidor](#server_configuration_settings)  
   
 -   [Credenciais](#credentials)  
   
--   [Consultas de bancos de dados](#cross_database_queries)  
+-   [Consultas entre bancos de dados](#cross_database_queries)  
   
 -   [Propriedade de banco de dados](#database_ownership)  
   
@@ -273,15 +273,15 @@ ms.locfileid: "74119449"
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>Permissões GRANT, REVOKE e DENY em objetos do sistema  
  Permissões para objetos do sistema, como procedimentos armazenados, procedimentos armazenados estendidos, funções e exibições, são armazenadas no banco de dados **mestre** e devem ser configuradas na instância do servidor de destino.  
   
- Para gerar um script para alguns ou todos os objetos na cópia original do banco de dados, é possível usar o Assistente para Gerar Scripts e, na caixa de diálogo **Escolher Opções de Script** , configurar a opção **Gerar Script de Permissões em Nível de Objeto** como **True**.  
+ Para gerar um script para alguns ou todos os objetos na cópia original do banco de dados, é possível usar o Assistente para Gerar Scripts e, na caixa de diálogo **Escolher Opções de Script**, configurar a opção **Gerar Script de Permissões em Nível de Objeto** como **True**.  
   
    > [!IMPORTANT]
    > Se você gerar script de logons, as senhas não serão geradas no script. Se você tiver logons que usam a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será necessário modificar o script no destino.  
   
- Os objetos do sistema são visíveis na exibição de catálogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . As permissões em objetos do sistema são visíveis na exibição de catálogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) do banco de dados **mestre**. Para obter informações sobre como consultar essas exibições de catálogo e conceder as permissões de objeto do sistema, veja [Permissões de objeto do sistema GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md). Para obter mais informações, veja [Permissões de objeto do sistema REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) e [Permissões de objeto do sistema DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md).  
+ Os objetos do sistema são visíveis na exibição de catálogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . As permissões em objetos do sistema são visíveis na exibição de catálogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) do banco de dados **mestre** . Para obter informações sobre como consultar essas exibições de catálogo e conceder as permissões de objeto do sistema, veja [Permissões de objeto do sistema GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md). Para obter mais informações, veja [Permissões de objeto do sistema REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) e [Permissões de objeto do sistema DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md).  
   
 ### <a name="grant-revoke-and-deny-permissions-on-a-server-instance"></a>Permissões GRANT, REVOKE e DENY em uma instância de servidor  
- Permissões no escopo de servidor são armazenados no banco de dados **mestre** e devem ser configuradas na instância do servidor de destino. Para obter informações sobre as permissões de servidor de uma instância de servidor, consulte a exibição de catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md), para obter informações sobre entidades de servidor, consulte a exibição de catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), e para obter informações sobre associação de funções de servidor, consulte a exibição de catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
+ Permissões no escopo de servidor são armazenados no banco de dados **mestre** e devem ser configuradas na instância do servidor de destino. Para obter informações sobre as permissões de servidor de uma instância de servidor, consulte a exibição de catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) , para obter informações sobre entidades de servidor, consulte a exibição de catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), e para obter informações sobre associação de funções de servidor, consulte a exibição de catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) .  
   
  Para obter mais informações, veja [Permissões de servidor GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md), [Permissões de servidor REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md) e [Permissões de servidor REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md).  
   

@@ -17,10 +17,10 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2b3c4937d87d166d87711389be7acd0c4ae0f8ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67938179"
 ---
 # <a name="remote-servers"></a>Servidores remotos
@@ -102,7 +102,7 @@ GO
 ## <a name="related-content"></a>Conteúdo relacionado  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
- [Configurar a opção remote access de configuração de servidor](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)  
+ [Configurar a opção de configuração do servidor remote access](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)  
   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)  
   

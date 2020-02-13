@@ -17,10 +17,10 @@ ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 92e12a2991d03c125e3247d1dd681b0a5754e2f9
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981996"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "73981996"
 
   Especifica as propriedades de uma restrição PRIMARY KEY, UNIQUE, FOREIGN KEY ou CHECK, ou uma definição DEFAULT adicionada a uma tabela usando [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -183,7 +183,7 @@ Se isso for usado quando a coluna relacionada também não estiver sendo adicion
  *logical_expression*  
  É uma expressão lógica usada em uma restrição CHECK e retorna TRUE ou FALSE. *logical_expression* usada com restrições CHECK não pode fazer referência a outra tabela, mas pode fazer referência a outras colunas na mesma tabela para a mesma linha. A expressão não pode referenciar um tipo de dados de alias.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando restrições FOREIGN KEY ou CHECK são adicionadas, todos os dados existentes são verificados quanto a violações de restrição, a menos que a opção WITH NOCHECK seja especificada. Se qualquer violação ocorrer, ALTER TABLE falhará e um erro será retornado. Quando uma nova restrição PRIMARY KEY ou UNIQUE for adicionada a uma coluna existente, os dados na coluna ou colunas deverão ser exclusivos. Se forem encontrados valores duplicados, ALTER TABLE falhará. A opção WITH NOCHECK não tem nenhum efeito quando as restrições PRIMARY KEY ou UNIQUE são adicionadas.  
   
  Cada restrição PRIMARY KEY e UNIQUE gera um índice. O número de restrições UNIQUE e PRIMARY KEY não pode fazer com que o número de índices na tabela exceda 999 índices não clusterizados e 1 índice clusterizado. Restrições de chave estrangeira não geram automaticamente um índice. Entretanto, as colunas de chave estrangeira são frequentemente usadas em critérios de junção de consultas, correspondendo as colunas na restrição de chave estrangeira de uma tabela com as colunas de chave exclusiva ou primária em outra tabela. Um índice nas colunas de chave estrangeira habilita o [!INCLUDE[ssDE](../../includes/ssde-md.md)] a localizar rapidamente dados relacionados na tabela de chave estrangeira.  

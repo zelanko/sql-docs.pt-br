@@ -34,13 +34,13 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116480"
 ---
-# <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
+# <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 DBCC SHOW_STATISTICS exibe as estatísticas de otimização de consulta atuais de uma tabela ou exibição indexada. O otimizador de consulta usa as estatísticas para calcular a cardinalidade ou o número de linhas no resultado da consulta, o que permite a esse otimizador criar um plano de consulta de alta qualidade. Por exemplo, o otimizador de consulta pode usar estimativas de cardinalidade para escolher o operador de busca do índice, em vez do operador de verificação do índice no plano de consulta, melhorando o desempenho da consulta ao evitar uma verificação de índice que consome muitos recursos.
@@ -49,9 +49,9 @@ O otimizador de consulta armazena estatísticas para uma tabela ou exibição in
   
 DBCC SHOW_STATISTICS exibe o cabeçalho, o histograma e o vetor de densidade com base nos dados armazenados no objeto de estatísticas. A sintaxe lhe permite especificar uma tabela ou exibição indexada junto com um nome de índice de destino, nome de estatísticas ou nome da coluna. Este tópico descreve como exibir as estatísticas e como entender os resultados apresentados.
   
-Para obter mais informações, consulte [Statistics](../../relational-databases/statistics/statistics.md).
+Para obter mais informações, consulte [Estatísticas](../../relational-databases/statistics/statistics.md).
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -79,7 +79,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  *table_name*  
  Nome da tabela que contém as estatísticas a serem exibidas. A tabela não pode ser uma tabela externa.  
   
- *Destino*  
+ *destino*  
  O nome do índice, das estatísticas ou da coluna para a qual exibir informações de estatísticas. *target* é colocado entre colchetes, aspas simples, aspas ou sem aspas. Se *target* for um nome de uma estatística ou um índice existente em uma tabela ou exibição indexada, as informações de estatísticas sobre esse destino serão retornadas. Se *target* for o nome de uma coluna existente e houver estatísticas criadas automaticamente nessa coluna, as informações sobre essa estatística criada de forma automática serão retornadas. Se uma estatística criada automaticamente não existir para um destino de coluna, a mensagem de erro 2767 será retornada.  
  No [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], *target* não pode ser um nome de coluna.  
   
@@ -155,7 +155,7 @@ O otimizador de consulta usa densidades para aprimorar as estimativas de cardina
 |(CustomerId, ItemId)|Linhas com valores correspondentes para CustomerId e ItemId|  
 |(CustomerId, ItemId, Price)|Linhas com valores correspondentes para CustomerId, ItemId e Price|  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrições  
  DBCC SHOW_STATISTICS não fornece estatísticas para índices espaciais ou de columnstore xVelocity de memória otimizada.  
   
 ## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Permissões para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
@@ -180,7 +180,7 @@ DBCC SHOW_STATISTICS mostra as estatísticas armazenadas no banco de dados Shell
 Não há suporte para DBCC SHOW_STATISTICS em tabelas externas.
   
 ## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Exemplos: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-### <a name="a-returning-all-statistics-information"></a>A. Retornando todas as informações de estatísticas  
+### <a name="a-returning-all-statistics-information"></a>a. Retornando todas as informações de estatísticas  
 O exemplo a seguir exibe todas as informações de estatísticas para o índice `AK_Address_rowguid` da tabela `Person.Address` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
@@ -212,7 +212,7 @@ GO
   
 Os resultados mostram o cabeçalho, o vetor de densidade e parte do histograma.
   
-![Resultados de DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "DBCC SHOW_STATISTICS results")
+![Resultados de DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "Resultados de DBCC SHOW_STATISTICS")
   
 ## <a name="see-also"></a>Consulte Também  
 [Estatísticas](../../relational-databases/statistics/statistics.md)  

@@ -28,10 +28,10 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67912611"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "67912611"
 
   Cria uma função no banco de dados atual que mapeia as linhas de uma tabela ou índice em partições com base nos valores de uma coluna especificada. Usar CREATE PARTITION FUNCTION é a primeira etapa na criação de uma tabela particionada ou índice. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], uma tabela ou índice pode ter no máximo 15.000 partições.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,7 +75,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  **LEFT** | RIGHT  
  Especifica a qual lado de cada intervalo de valor de limite, esquerdo ou direito, o *boundary_value* [ **,** _...n_ ] pertence quando valores de intervalo são classificados pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] em ordem crescente da esquerda para a direita. Se não for especificado, LEFT será o padrão.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O escopo de uma função de partição é limitado ao banco de dados em que é criado. No banco de dados, as funções das partições residem em um namespace separado das outras funções.  
   
  Quaisquer linhas cuja coluna de particionamento tenha valores nulos serão colocadas na partição mais à esquerda, a menos que NULL seja especificado como um valor de limite e RIGHT seja indicado. Nesse caso, a partição mais à esquerda será uma partição vazia e os valores NULL serão colocados na partição seguinte.  
@@ -91,7 +91,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
 ##  <a name="BKMK_examples"></a> Exemplos  
   
-### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>A. Criando uma função de partição RANGE LEFT em uma coluna int  
+### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>a. Criando uma função de partição RANGE LEFT em uma coluna int  
  A função de partição a seguir particionará uma tabela ou um índice em quatro partições.  
   
 ```sql  

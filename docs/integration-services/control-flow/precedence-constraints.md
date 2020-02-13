@@ -20,10 +20,10 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 10deeb5de3a74e765f99a76d59d2184a6b76b106
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294008"
 ---
 # <a name="precedence-constraints"></a>Restrições de precedência
@@ -116,7 +116,7 @@ Use a caixa de diálogo **Editor de Restrição de Precedência** para configura
  **Operação de avaliação**  
  Especifica a operação de avaliação usada pela restrição de precedência. As operações são: **Constraint**, **Expression**, **Expression and Constraint** e **Expression or Constraint**.  
   
- **Value**  
+ **Valor**  
  Especifique o valor de restrição: **Success**, **Failure** ou **Completion**.  
   
 > [!NOTE]  
@@ -125,7 +125,7 @@ Use a caixa de diálogo **Editor de Restrição de Precedência** para configura
  **Expression**  
  Se usar as operações **Expressão**, **Expressão e Restrição**ou **Expressão ou Restrição**, digite uma expressão ou inicie o Construtor de Expressões para criar a expressão. A expressão deve ser avaliada como um booliano.  
   
- **Testar**  
+ **Test**  
  Valide a expressão.  
   
  **AND lógico**  
@@ -216,22 +216,22 @@ Use a caixa de diálogo **Editor de Restrição de Precedência** para configura
   
 |Operação de avaliação|A restrição avalia como|A expressão avalia como|O executável restrito executa|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
-|Constraint|True|N/A|True|  
-|Constraint|Falso|N/A|Falso|  
-|Expression|N/A|True|True|  
-|Expression|N/A|Falso|Falso|  
+|Constraint|True|N/D|True|  
+|Constraint|Falso|N/D|Falso|  
+|Expression|N/D|True|True|  
+|Expression|N/D|Falso|Falso|  
 |Restrição e expressão|True|True|True|  
 |Restrição e expressão|True|Falso|Falso|  
-|Restrição e expressão|Falsa|True|Falso|  
+|Restrição e expressão|Falso|True|Falso|  
 |Restrição e expressão|Falso|Falso|Falso|  
-|Restrição ou expressão|True|True|Verdadeira|  
+|Restrição ou expressão|True|True|True|  
 |Restrição ou expressão|True|Falso|True|  
-|Restrição ou expressão|Falso|True|Verdadeira|  
+|Restrição ou expressão|Falso|True|True|  
 |Restrição ou expressão|Falso|Falso|Falso|  
 
 
 ## <a name="complex-constraint-scenarios-with-multiple-precedence-constraints"></a>Cenários de restrição complexos com várias restrições de precedência 
-Uma restrição de precedência conecta dois executáveis: duas tarefas, dois contêineres, ou um de cada. Eles são conhecidos como o executável de precedência e o executável restrito. Um executável restrito pode ter múltiplas restrições de precedência. Para obter mais informações, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+Uma restrição de precedência conecta dois executáveis: duas tarefas, dois contêineres, ou um de cada. Eles são conhecidos como o executável de precedência e o executável restrito. Um executável restrito pode ter múltiplas restrições de precedência. Para obter informações, consulte [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md).  
   
  Reunir cenários de restrição complexos por agrupamento de restrições permite que você implemente o fluxo de controle complexo em pacotes. Por exemplo, na ilustração a seguir, a Tarefa D está vinculada à Tarefa A por uma restrição **Êxito** , a Tarefa D está vinculada à Tarefa B por uma restrição **Falha** e a Tarefa D está vinculada à Tarefa C por uma restrição **Êxito** . As restrições de precedência entre as Tarefas D e A, entre as Tarefas D e B e entre as Tarefas D e C participam de uma relação lógica *and* . Portanto, para que a Tarefa D seja executada, a Tarefa A deve ser executada com êxito, a Tarefa B deve falhar e a Tarefa C deve ser executada com êxito.  
   

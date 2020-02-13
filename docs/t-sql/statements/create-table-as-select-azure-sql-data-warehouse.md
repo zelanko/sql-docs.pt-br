@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73660787"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (SQL Data Warehouse do Azure)
@@ -33,7 +33,7 @@ CTAS (CREATE TABLE AS SELECT) é um dos recursos mais importantes do T-SQL dispo
 > [!NOTE]  
 > Como CTAS complementa os recursos de criação de uma tabela, este tópico tenta não repetir o tópico CREATE TABLE. Ele descreve as diferenças entre as instruções CTAS e CREATE TABLE. Para obter os detalhes sobre CREATE TABLE, veja a instrução [CREATE TABLE (SQL Data Warehouse do Azure)](https://msdn.microsoft.com/library/mt203953/). 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 <a name="syntax-bk"></a>
 
@@ -84,7 +84,7 @@ Para obter detalhes, confira a [seção Argumentos](https://msdn.microsoft.com/l
 
 <a name="column-options-bk"></a>
 
-### <a name="column-options"></a>Opções de coluna
+### <a name="column-options"></a>Opções de Coluna
 `column_name` [ ,...`n` ]   
  Os nomes de coluna não permitem as [opções de coluna](https://msdn.microsoft.com/library/mt203953/#ColumnOptions) mencionadas em CREATE TABLE.  Nesse caso, você pode fornecer uma lista opcional de um ou mais nomes de coluna para a nova tabela. As colunas na nova tabela usarão os nomes que você especificar. Quando você especificar nomes de coluna, o número de colunas na lista de colunas deverá corresponder ao número de colunas nos resultados de select. Se você não especificar nenhum nome de coluna, a nova tabela de destino usará os nomes de coluna nos resultados da instrução select. 
   
@@ -166,7 +166,7 @@ Para evitar a movimentação de dados nas próximas consultas, especifique `REPL
 
 <a name="ctas-copy-table-bk"></a>
 
-### <a name="a-use-ctas-to-copy-a-table"></a>A. Usar CTAS para copiar uma tabela 
+### <a name="a-use-ctas-to-copy-a-table"></a>a. Usar CTAS para copiar uma tabela 
 Aplica-se a: SQL Data Warehouse do Azure e Parallel Data Warehouse
 
 Talvez um dos tipos de uso mais comuns do `CTAS` é criar uma cópia de uma tabela para que você possa alterar a DDL. Por exemplo, se você criou a tabela originalmente como `ROUND_ROBIN` e agora deseja alterá-la para uma tabela distribuída em uma coluna, `CTAS` será a forma de alterar a coluna de distribuição. `CTAS` também pode ser usado para alterar os tipos de particionamento, de indexação ou de coluna.
@@ -679,7 +679,7 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 
 <a name="ctas-data-type-and-nullability-bk"></a>
 
-### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. Declarar explicitamente o tipo de dados e a nulidade de saída  
+### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. Declarar explicitamente o tipo de dados e a nulidade da saída  
 Aplica-se a: SQL Data Warehouse do Azure e Parallel Data Warehouse  
 
 Ao migrar o código do SQL Server para o SQL Data Warehouse, você poderá encontrar este tipo de padrão de codificação:

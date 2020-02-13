@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d24ab7a119162c9ad0f084efa8f47961b270a11e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982762"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909816"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ Cria um procedimento armazenado CLR (Common Language Runtime) ou [!INCLUDE[tsql]
 
 Vá para [Exemplos simples](#Simple) para ignorar os detalhes da sintaxe e obter um exemplo rápido de um procedimento armazenado básico.
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -170,7 +170,7 @@ OR ALTER
   
  Procedimentos numerados não podem usar os tipos definidos pelo usuário CLR ou **xml** e não podem ser usados em um guia de plano.  
   
- **@** *parâmetro*  
+ **@** *parameter*  
  Um parâmetro declarado no procedimento. Especifique um nome de parâmetro usando o sinal ( **@** ) como o primeiro caractere. O nome do parâmetro precisa estar em conformidade com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md). Os parâmetros são locais para o procedimento; os mesmos nomes de parâmetro podem ser usados em outros procedimentos.  
   
  Podem ser declarados um ou mais parâmetros; o número máximo é 2.100. O valor de cada parâmetro declarado deve ser fornecido pelo usuário quando o procedimento é chamado, a menos que um valor padrão para o parâmetro seja especificado ou o valor seja definido como igual a outro parâmetro. Se um procedimento contiver [parâmetros com valor de tabela](../../relational-databases/tables/use-table-valued-parameters-database-engine.md) e faltar um parâmetro na chamada, um padrão de tabela vazia será transmitido. Os parâmetros podem assumir apenas o lugar de expressões constantes. Eles não podem ser usados no lugar de nomes de tabela, nomes de coluna ou nomes de outros objetos de banco de dados. Para obter mais informações, veja [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
@@ -294,7 +294,7 @@ LANGUAGE = [N] 'language'
 TRANSACTION ISOLATION LEVEL  
  **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Exigido para procedimentos armazenados compilados nativamente. Especifica o nível de isolamento da transação para o procedimento armazenado. As opções são as seguintes:  
+ Exigido para procedimentos armazenados compilados nativamente. Especifica o nível de isolamento da transação para o procedimento armazenado. As opções são as descritas a seguir:  
   
  Para obter mais informações sobre essas opções, veja [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
@@ -353,10 +353,10 @@ Forneça um número de ID do banco de dados quando chamar o procedimento. Por ex
 
 veja [Exemplos](#Examples) mais no final deste tópico para muitos outros exemplos.     
     
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
  Embora esta não seja uma lista completa de práticas recomendadas, estas sugestões podem melhorar o desempenho do procedimento.  
   
--   Use a instrução SET NOCOUNT ON como a primeira instrução no corpo do procedimento. Ou seja, coloque-a logo após a palavra-chave AS. Isso desativa as mensagens que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envia ao cliente após a execução de qualquer instrução SELECT, INSERT, UPDATE, MERGE e DELETE. Isso mantém a saída gerada a um mínimo para maior clareza. Não há nenhum benefício de desempenho mensurável no hardware de hoje. Para obter informações, veja [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
+-   Use a instrução SET NOCOUNT ON como a primeira instrução no corpo do procedimento. Ou seja, coloque-a logo após a palavra-chave AS. Isso desativa as mensagens que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envia ao cliente após a execução de qualquer instrução SELECT, INSERT, UPDATE, MERGE e DELETE. Isso mantém a saída gerada a um mínimo para maior clareza. No entanto, não há nenhum benefício de desempenho mensurável no hardware de hoje. Para obter informações, veja [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
   
 -   Use nomes de esquemas ao criar ou referenciar objetos de banco de dados no procedimento. Será necessário menos tempo de processamento para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] resolver nomes de objetos se ele não precisar pesquisar vários esquemas. Além disso, evita problemas de acesso e permissão causados pelo esquema padrão de um usuário ser atribuído quando são criados objetos sem especificar o esquema.  
   
@@ -440,7 +440,7 @@ GO
 ## <a name="metadata"></a>Metadados  
  A tabela a seguir lista as exibições do catálogo e as exibições de gerenciamento dinâmico que você pode usar para retornar informações sobre procedimentos armazenados.  
   
-|Exibição|Descrição|  
+|Visualizar|Descrição|  
 |----------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Retorna a definição de um procedimento [!INCLUDE[tsql](../../includes/tsql-md.md)]. O texto de um procedimento criado com a opção ENCRYPTION não pode ser exibido usando a exibição do catálogo **sys.sql_modules**.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Retorna informações sobre um procedimento CLR.|  
@@ -502,7 +502,7 @@ GO
 ###  <a name="BasicSyntax"></a> Sintaxe básica  
  Os exemplos desta seção demonstram a funcionalidade básica da instrução CREATE PROCEDURE por meio da sintaxe mínima necessária.  
   
-#### <a name="a-creating-a-simple-transact-sql-procedure"></a>A. Criando um procedimento Transact-SQL simples  
+#### <a name="a-creating-a-simple-transact-sql-procedure"></a>a. Criando um procedimento Transact-SQL simples  
  O exemplo a seguir cria um procedimento armazenado que retorna todos os funcionários (com os nomes e sobrenomes fornecidos), os cargos e os nomes de departamento em uma exibição no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Esse procedimento não usa nenhum parâmetro. O exemplo demonstra três métodos para executar o procedimento.  
   
 ```sql  
@@ -658,7 +658,7 @@ SET @ComparePrice = @MaxPrice;
 GO  
 ```  
   
- Execute `uspGetList` para retornar uma lista de produtos (bicicletas) da [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] que custam menos que `$700`. Os parâmetros de `OUTPUT` `@Cost` e `@ComparePrices` são usados com linguagem de controle de fluxo para retornar uma mensagem na janela **Mensagens**.  
+ Execute `uspGetList` para retornar uma lista de produtos (bicicletas) da [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] que custam menos que `$700`. Os parâmetros de `OUTPUT``@Cost` e `@ComparePrices` são usados com linguagem de controle de fluxo para retornar uma mensagem na janela **Mensagens**.  
   
 > [!NOTE]  
 >  A variável OUTPUT deve ser definida quando o procedimento é criado e também quando a variável é usada. O nome do parâmetro e da variável não precisam ser iguais, mas o tipo de dados e o posicionamento do parâmetro deve combinar, a menos que `@ListPrice` = *variable* seja usado.  

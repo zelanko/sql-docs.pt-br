@@ -37,10 +37,10 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981759"
 ---
 # <a name="hints-transact-sql---table"></a>Dicas (Transact-SQL) – tabela
@@ -63,7 +63,7 @@ ms.locfileid: "73981759"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -354,7 +354,7 @@ Quando UPDLOCK é especificado, as dicas em nível de isolamento READCOMMITTED e
 XLOCK  
 Especifica que bloqueios exclusivos serão usados e mantidos até que a transação seja concluída. Se especificados com ROWLOCK, PAGLOCK ou TABLOCK, os bloqueios exclusivos serão aplicados ao nível adequado de granularidade.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 As dicas de tabela serão ignoradas se a tabela não for acessada pelo plano de consulta. Isso pode ser provocado porque o otimizador opta por não acessar a tabela ou porque uma exibição indexada é acessada. No último caso, o acesso a uma exibição indexada pode ser evitado pela dica de consulta OPTION (EXPAND VIEWS).  
   
 Todas as dicas de bloqueio são propagadas para todas as tabelas e exibições que são acessadas pelo plano de consulta, incluindo tabelas e exibições referenciadas em uma exibição. Além disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa os testes de consistência de bloqueio correspondentes.  
@@ -416,7 +416,7 @@ No entanto, para que o otimizador considere exibições indexadas para correspon
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. Usando a dica TABLOCK para especificar um método de bloqueio  
+### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>a. Usando a dica TABLOCK para especificar um método de bloqueio  
  O seguinte exemplo especifica que um bloqueio compartilhado será usado na tabela `Production.Product` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e mantido até o término da instrução UPDATE.  
   
 ```sql  

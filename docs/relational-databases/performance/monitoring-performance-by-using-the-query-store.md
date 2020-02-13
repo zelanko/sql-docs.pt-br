@@ -15,16 +15,16 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909304"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitorar o desempenho usando o Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  O recurso Repositório de Consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece informações sobre escolha e desempenho do plano de consulta. Ele simplifica a solução de problemas, ajudando você a identificar rapidamente diferenças de desempenho causadas por alterações nos planos de consulta. O Repositório de Consultas captura automaticamente um histórico das consultas, dos planos e das estatísticas de tempo de execução e os mantém para sua análise. Ele separa os dados por janelas por hora, permitindo que você veja os padrões de uso do banco de dados e entenda quando as alterações aos planos de consulta ocorreram no servidor. O repositório de consultas pode ser configurado usando a opção [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
+  O recurso Repositório de Consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece informações sobre escolha e desempenho do plano de consulta. Ele simplifica a solução de problemas, ajudando você a identificar rapidamente diferenças de desempenho causadas por alterações nos planos de consulta. O Repositório de Consultas captura automaticamente um histórico das consultas, dos planos e das estatísticas de runtime e os mantém para sua análise. Ele separa os dados por janelas por hora, permitindo que você veja os padrões de uso do banco de dados e entenda quando as alterações aos planos de consulta ocorreram no servidor. O repositório de consultas pode ser configurado usando a opção [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
   
  Para obter informações sobre como operar o Repositório de Consultas no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] do Azure, consulte [Operando o Repositório de Consultas no Banco de dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/).  
  
@@ -92,10 +92,10 @@ Cenários comuns para o uso do recurso Repositório de Consultas são:
   
 O Repositório de Consultas contém três repositórios:
 - um **repositório de plano** para persistir as informações do plano de execução.     
-- um **repositório de estatísticas de tempo de execução** para manter as informações de estatísticas de execução.    
+- um **repositório de estatísticas de runtime** para manter as informações de estatísticas de execução.    
 - um **repositório de estatísticas de espera** para manter as informações de estatísticas de espera.     
  
-O número de planos exclusivos que pode ser armazenado para uma consulta no repositório de planos é limitado pela opção de configuração **max_plans_per_query** . Para melhorar o desempenho, as informações são gravadas nos repositórios de forma assíncrona. Para otimizar o uso do espaço, as estatísticas de tempo de execução no repositório de estatísticas de tempo de execução são agregadas em uma janela de tempo fixa. As informações nesses repositórios são visíveis pela consulta das exibições de catálogo do Repositório de Consultas.  
+O número de planos exclusivos que pode ser armazenado para uma consulta no repositório de planos é limitado pela opção de configuração **max_plans_per_query** . Para melhorar o desempenho, as informações são gravadas nos repositórios de forma assíncrona. Para otimizar o uso do espaço, as estatísticas de runtime no repositório de estatísticas de runtime são agregadas em uma janela de tempo fixa. As informações nesses repositórios são visíveis pela consulta das exibições de catálogo do Repositório de Consultas.  
   
 A consulta a seguir retorna informações sobre consultas e planos no Repositório de Consultas.  
   
@@ -111,7 +111,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 ##  <a name="Regressed"></a> Usar o recurso Consultas Regredidas  
 Depois de habilitar o Repositório de Consultas, atualize a parte do banco de dados do painel Pesquisador de Objetos para adicionar a seção **Repositório de Consultas**.  
   
-![Árvore de Repositório de Consultas do SQL Server 2016 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Árvore de Repositório de Consultas do SQL Server 2016 no Pesquisador de Objetos do SSMS")![Árvore de Repositório de Consultas do SQL Server 2017 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Árvore de Repositório de Consultas do SQL Server 2017 no Pesquisador de Objetos do SSMS") 
+![Árvore de Repositório de Consultas do SQL Server 2016 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Árvore de Repositório de Consultas do SQL Server 2016 no Pesquisador de Objetos do SSMS") ![Árvore de Repositório de Consultas do SQL Server 2017 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Árvore de Repositório de Consultas do SQL Server 2017 no Pesquisador de Objetos do SSMS") 
   
 Selecione **Consultas Regredidas** para abrir o painel **Consultas Regredidas** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. O painel Consultas Regredidas mostra consultas e planos no repositório de consultas. Use as caixas de listas suspensas na parte superior para filtrar consultas com base em vários critérios: **Duração (ms)** (Padrão), Tempo de CPU (ms), Leituras Lógicas, Gravações Lógicas (KB), Leituras Físicas (KB), Tempo CLR (ms), DOP, Consumo de Memória (KB), Contagem de Linhas, Memória de Log Usada (KB), Memória de BD Temporária Usada (KB) e Tempo de Espera (ms).  
 Selecione um plano para ver o plano de consulta gráfico. Há botões disponíveis para exibir a consulta de origem, para forçar e não forçar um plano de consulta, para alternar entre os formatos de grade e gráfico, para comparar os planos selecionados (se houver mais de um selecionado) e para atualizar a exibição.  
@@ -142,8 +142,8 @@ Aqui estão alguns exemplos de como você pode obter mais informações sobre su
 |||| 
 |-|-|-|  
 |Experiência anterior|Nova experiência|Ação|
-|RESOURCE_SEMAPHORE alto de esperas por banco de dados|Esperas de memória alta no Repositório de Consultas para consultas específicas|Localize as consultas com maior consumo de memória no Repositório de Consultas. Essas consultas estão provavelmente atrasando o andamento das consultas afetadas. Considere usar a dica de consulta MAX_GRANT_PERCENT para essas consultas ou para as consultas afetadas.|
-|Espera de LCK_M_X alta por banco de dados|Esperas de bloqueio altas no Repositório de Consultas para consultas específicas|Verifique os textos de consulta das consultas afetadas e identifique as entidades de destino. Pesquise outras consultas no Repositório de Consultas que modificam a mesma entidade, que são executadas com frequência e/ou têm alta duração. Depois de identificar essas consultas, considere alterar a lógica do aplicativo para melhorar a simultaneidade ou use um nível de isolamento menos restritivo.|
+|RESOURCE_SEMAPHORE alto de esperas por banco de dados|Esperas de memória alta no Repositório de Consultas para consultas específicas|Localize as consultas que consomem mais memória no Repositório de Consultas. Essas consultas estão provavelmente atrasando o andamento das consultas afetadas. Considere usar a dica de consulta MAX_GRANT_PERCENT para essas consultas ou para as consultas afetadas.|
+|Espera de LCK_M_X alta por banco de dados|Esperas de bloqueio altas no Repositório de Consultas para consultas específicas|Verifique os textos de consulta para as consultas afetadas e identifique as entidades de destino. Pesquise outras consultas no Repositório de Consultas que modificam a mesma entidade, que são executadas com frequência e/ou têm alta duração. Depois de identificar essas consultas, considere alterar a lógica do aplicativo para melhorar a simultaneidade ou use um nível de isolamento menos restritivo.|
 |Esperas de PAGEIOLATCH_SH altas por banco de dados|Esperas de buffer de E/S altas no Repositório de Consultas para consultas específicas|Localize as consultas com um grande número de leituras físicas no Repositório de Consultas. Se elas corresponderem às consultas com esperas de E/S, considere introduzir um índice na entidade subjacente, para fazer buscas em vez de verificações e, portanto, minimizar a sobrecarga de E/S das consultas.|
 |Esperas de SOS_SCHEDULER_YIELD altas por banco de dados|Esperas de CPU altas no Repositório de Consultas para consultas específicas|Localize as consultas com maior consumo de CPU no Repositório de Consultas. Entre elas, identifique as consultas para as quais a tendência de CPU alta se correlaciona às esperas de CPU altas para as consultas afetadas. Concentre-se em otimizar essas consultas – poderia haver uma regressão de plano ou talvez um índice ausente.|
 
@@ -163,7 +163,7 @@ Determina a frequência na qual os dados gravados no Repositório de Consultas �
 Configura o tamanho máximo do Repositório de Consultas. Se os dados no Repositório de Consultas atingirem o limite `MAX_STORAGE_SIZE_MB`, o Repositório de Consultas alterará automaticamente o estado de somente gravação para somente leitura e interromperá a coleta de novos dados. O valor padrão é **100 MB** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante, o valor padrão é **1 GB**. Para o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition, o padrão é **1 GB** e, para o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition, o padrão é **10 MB**.
   
 *INTERVAL_LENGTH_MINUTES*  
-Determina o intervalo de tempo em que os dados de estatísticas de execução do runtime são agregados no Repositório de Consultas. Para otimizar o uso de espaço, as estatísticas de execução de tempo de execução no repositório de estatísticas de tempo de execução são agregadas em uma janela de tempo fixa. Essa janela de tempo fixa é configurada usando `INTERVAL_LENGTH_MINUTES`. O valor padrão é **60**. 
+Determina o intervalo de tempo em que os dados de estatísticas de execução do runtime são agregados no Repositório de Consultas. Para otimizar o uso de espaço, as estatísticas de execução de runtime no repositório de estatísticas de runtime são agregadas em uma janela de tempo fixa. Essa janela de tempo fixa é configurada usando `INTERVAL_LENGTH_MINUTES`. O valor padrão é **60**. 
   
 *SIZE_BASED_CLEANUP_MODE*  
 Controla se o processo de limpeza será ativado automaticamente quando o volume total de dados se aproximar do tamanho máximo. Pode ser **AUTO** (padrão) ou OFF.  
@@ -220,7 +220,7 @@ Para obter mais informações sobre como definir opções usando instruções [!
   
  O Repositório de Consultas armazena seus dados dentro do banco de dados do usuário e é por isso que ele tem limite de tamanho (configurado com `MAX_STORAGE_SIZE_MB`). Se os dados no repositório de consultas atingirem esse limite, o repositório de consultas alterará automaticamente o status de somente gravação para somente leitura e interromperá a coleta de novos dados.  
   
- Consulte [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) para determinar se o Repositório de Consultas está ativo no momento e se está coletando estatísticas de tempo de execução ou não.  
+ Consulte [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) para determinar se o Repositório de Consultas está ativo no momento e se está coletando estatísticas de runtime ou não.  
   
 ```sql  
 SELECT actual_state, actual_state_desc, readonly_reason,   
@@ -241,7 +241,7 @@ SELECT * FROM sys.database_query_store_options;
   
  **Configurar o intervalo do Repositório de Consultas**  
   
- Você pode substituir o intervalo para agregar estatísticas de tempo de execução de consulta (o padrão é 60 minutos).  
+ Você pode substituir o intervalo para agregar estatísticas de runtime de consulta (o padrão é 60 minutos).  
   
 ```sql  
 ALTER DATABASE <database_name>   
@@ -335,13 +335,13 @@ DEALLOCATE adhoc_queries_cursor;
   
  Você pode definir seu próprio procedimento com uma lógica diferente para limpar os dados que não são mais necessários.  
   
- O exemplo acima usa o procedimento armazenado estendido **sp_query_store_remove_query** para remover dados desnecessários. Você também pode usar:  
+ O exemplo acima usa o procedimento armazenado estendido **sp_query_store_remove_query** para remover dados desnecessários. Também é possível usar:  
   
--   **sp_query_store_reset_exec_stats** para limpar as estatísticas de tempo de execução para um plano específico.  
+-   **sp_query_store_reset_exec_stats** para limpar as estatísticas de runtime para um plano específico.  
 -   **sp_query_store_remove_plan** para remover um único plano.  
  
 ###  <a name="Peformance"></a> Auditoria e solução de problemas de desempenho  
- O Repositório de Consultas mantém um histórico das métricas de compilação e de tempo de execução durante as execuções de consulta, permitindo que você faça perguntas sobre sua carga de trabalho.  
+ O Repositório de Consultas mantém um histórico das métricas de compilação e de runtime durante as execuções de consulta, permitindo que você faça perguntas sobre sua carga de trabalho.  
   
  **Últimas *n* consultas executadas no banco de dados?**  
   
@@ -439,7 +439,7 @@ JOIN sys.query_store_query_text qt
 ORDER BY query_id, plan_id;  
 ```  
   
- **Consultas com regressão recente de desempenho (comparando diferentes pontos no tempo)?** O exemplo de consulta a seguir retorna todas as consultas para as quais o tempo de execução dobrou nas últimas 48 horas em razão de alteração na escolha do plano. A consulta compara todos os intervalos de estatísticas de tempo de execução lado a lado.  
+ **Consultas com regressão recente de desempenho (comparando diferentes pontos no tempo)?** O exemplo de consulta a seguir retorna todas as consultas para as quais o tempo de execução dobrou nas últimas 48 horas em razão de alteração na escolha do plano. A consulta compara todos os intervalos de estatísticas de runtime lado a lado.  
   
 ```sql  
 SELECT   

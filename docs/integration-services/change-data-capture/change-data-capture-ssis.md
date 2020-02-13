@@ -14,10 +14,10 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8c2a89293e0cfa3428723a19e7ee2938fd7e8ca6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294839"
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
@@ -40,7 +40,7 @@ ms.locfileid: "71294839"
   
  Depois que um administrador habilitar a captura de dados de alteração no banco de dados, você poderá criar um pacote que execute uma carga incremental dos dados de alteração. O diagrama a seguir mostra as etapas para a criação desse pacote que executa uma carga incremental a partir de uma única tabela:  
   
- ![Etapas de criação de pacote do Change Data Capture](../../integration-services/change-data-capture/media/cdc-package-creation.gif "Etapas de criação de pacote do Change Data Capture")  
+ ![Etapas de criação do pacote de captura de dados de alterações](../../integration-services/change-data-capture/media/cdc-package-creation.gif "Etapas de criação do pacote de captura de dados de alterações")  
   
  Conforme mostrado no diagrama anterior, a criação de um pacote que executa uma carga inicial de dados alterados envolve as seguintes etapas:  
   
@@ -97,7 +97,7 @@ ms.locfileid: "71294839"
  O processo descrito no diagrama e nas etapas anteriores envolve uma carga incremental a partir de uma única tabela. Quando é necessário executar uma carga incremental a partir de várias tabelas, o processo geral é o mesmo. Porém, o design do pacote precisa ser alterado para acomodar o processamento de várias tabelas. Para obter mais informações sobre como criar um pacote que execute uma carga incremental de várias tabelas, consulte [Executar uma carga incremental de várias tabelas](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md).  
   
 ## <a name="samples-of-change-data-capture-packages"></a>Exemplos de pacotes do Change Data Capture  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece dois exemplos que demonstram como usar o Change Data Capture em pacotes. Para obter mais informações, consulte os tópicos a seguir:  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece dois exemplos que demonstram como usar o Change Data Capture em pacotes. Para obter mais informações, consulte estes tópicos:  
   
 -   [Leiame_Exemplo do Change Data Capture para pacote de intervalo especificado](https://go.microsoft.com/fwlink/?LinkId=133507)  
   

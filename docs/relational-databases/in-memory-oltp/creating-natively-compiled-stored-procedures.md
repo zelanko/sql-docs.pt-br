@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fb7b029527eec87c87b9b21b4da8aff5e289424e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032022"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Criando procedimentos armazenados compilados nativamente
@@ -33,7 +33,7 @@ No entanto, existem vários recursos do [!INCLUDE[tsql](../../includes/tsql-md.m
   
     -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"** ; -- *(Deve ser inicializado com um valor.)*  
   
-    -   SET @myVarchar **= null**; -- *(É compilado, mas falha durante o tempo de execução.)*  
+    -   SET @myVarchar **= null**; -- *(É compilado, mas falha durante o runtime.)*  
   
 -   Associação de esquema de procedimentos armazenados compilados nativamente.  
   

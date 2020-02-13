@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed302e9361e46b8403cea168201fc6cadaa17986
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026187"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
@@ -40,7 +40,7 @@ Essa função adiciona um valor *número* específico (como um inteiro com sinal
   
 Consulte [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) para obter uma visão geral de todos os tipos de dados e funções de data e hora do [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -134,7 +134,7 @@ A segunda parte de um valor [smalldatetime](../../t-sql/data-types/smalldatetime
 -   Para um *datepart* de **milissegundos** e um valor de *número* entre -30001 e +29998, `DATEADD` não faça nenhuma alteração.  
 -   Para um *datepart* de **milissegundo** e um valor de *número* menor que -30001 ou maior que +29998, `DATEADD` executa sua adição a partir do minuto um.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Use `DATEADD` nas seguintes cláusulas:
 
 + GROUP BY
@@ -144,7 +144,7 @@ Use `DATEADD` nas seguintes cláusulas:
 + WHERE
   
 ## <a name="fractional-seconds-precision"></a>Precisão de segundos fracionários
-`DATEADD` não permite a adição de um *datepart* de **microssegundo** ou **nanossegundo** para tipos de dados de *date* **smalldatetime**, **date**, e **datetime**.
+`DATEADD` não permite a adição de um *datepart* de **microssegundo** ou **nanossegundo** para tipos de dados de *date***smalldatetime**, **date**, e **datetime**.
   
 Os milissegundos têm uma escala de 3 (0,123). Os microssegundos têm uma escala de 6 (0,123456). Os nanossegundos têm uma escala de 9 (0,123456789). Os tipos de dados **time**, **datetime2** e **datetimeoffset** têm uma escala máxima de 7 (.1234567). Para um *datepart* de **nanossegundo**, o *número* deve ser 100 antes do aumento dos segundos fracionários de *date*. Um *número* entre 1 e 49 será arredondado para baixo para 0, e um número de 50 a 99 é arrendondado para cima até 100.
   
@@ -184,7 +184,7 @@ SELECT '150 nanoseconds', DATEADD(nanosecond,150,@datetime2);
   
 ## <a name="examples"></a>Exemplos  
 
-### <a name="a-incrementing-datepart-by-an-interval-of-1"></a>A. Incrementando datepart em um intervalo de 1  
+### <a name="a-incrementing-datepart-by-an-interval-of-1"></a>a. Incrementando datepart em um intervalo de 1  
 Cada uma destas instruções incrementa *datepart* em um intervalo de 1:
   
 ```sql

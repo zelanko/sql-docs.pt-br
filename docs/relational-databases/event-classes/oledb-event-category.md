@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2e254e09c52bee4adb1a2712857932488f7a0c63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68102540"
 ---
 # <a name="oledb-event-category"></a>categoria de evento OLEDB
@@ -29,7 +29,7 @@ ms.locfileid: "68102540"
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
-|[Classe de evento OLEDB Call](../../relational-databases/event-classes/oledb-call-event-class.md)|Indica que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fez uma chamada que não é de dados, nem de**QueryInterface** , a um provedor OLE DB de consultas distribuídas e procedimentos armazenados remotos.|  
+|[Classe de evento OLEDB Call](../../relational-databases/event-classes/oledb-call-event-class.md)|Indica que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fez uma chamada que não é de dados nem de **QueryInterface** a um provedor OLE DB de consultas distribuídas e procedimentos armazenados remotos.|  
 |[Classe de evento OLEDB DataRead](../../relational-databases/event-classes/oledb-dataread-event-class.md)|Indica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chamou um provedor de OLE DB de consultas distribuídas e procedimentos armazenados remotos.|  
 |[Classe de evento OLEDB Errors](../../relational-databases/event-classes/oledb-errors-event-class.md)|Indica que uma chamada a um provedor de OLE DB retornou um erro.|  
 |[Classe de evento OLEDB Provider Information](../../relational-databases/event-classes/oledb-provider-information-event-class.md)|Indica que uma consulta distribuída executou e coletou informações que correspondem à conexão do provedor.|  

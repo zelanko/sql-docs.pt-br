@@ -19,18 +19,18 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 770ef448094e764bcc1ca970354941c0d1d03d4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072282"
 ---
-# <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
+# <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Define a variável local especificada, criada anteriormente com a instrução DECLARE @*local_variable*, com o valor especificado.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
 Sintaxe do SQL Server e do Banco de Dados SQL do Azure:
@@ -168,7 +168,7 @@ Impede que esse cursor faça atualizações. O cursor não pode ser referenciado
 `UPDATE [OF column_name[ ,... n ] ]`  
 Define colunas atualizáveis em um cursor. Se OF *column_name* [ **,** ...*n*] for fornecido, somente as colunas listadas permitirão modificações. Quando nenhuma lista for fornecida, todas as colunas poderão ser atualizadas, a menos que o cursor tenha sido definido como READ_ONLY.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Depois de uma variável ser declarada, ela é inicializada como NULL. Use a instrução SET para atribuir um valor que não é NULL a uma variável declarada. A instrução SET que atribui um valor à variável retorna um único valor. Ao inicializar várias variáveis, use uma instrução SET separada para cada variável local.  
   
 As variáveis podem ser usadas somente em expressões, não em nomes de objeto ou palavras-chave. Para construir instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] dinâmicas, use EXECUTE.  
@@ -188,7 +188,7 @@ Requer associação à função public. Todos os usuários podem usar SET **@** 
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-printing-the-value-of-a-variable-initialized-by-using-set"></a>A. Imprimindo o valor de uma variável inicializada com a instrução SET  
+### <a name="a-printing-the-value-of-a-variable-initialized-by-using-set"></a>a. Imprimindo o valor de uma variável inicializada com a instrução SET  
 O exemplo a seguir cria a variável `@myvar`, coloca um valor de cadeia de caracteres na variável e imprime o valor da variável `@myvar`.  
   
 ```  

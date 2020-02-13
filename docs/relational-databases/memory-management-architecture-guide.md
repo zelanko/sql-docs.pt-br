@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115273"
 ---
 # <a name="memory-management-architecture-guide"></a>guia de arquitetura de gerenciamento de memória
@@ -63,7 +63,7 @@ Ao usar o AWE e o privilégio Páginas Bloqueadas na Memória, você pode fornec
 <sup>1</sup> Versões de 32 bits não estão disponíveis a partir do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
 <sup>2</sup> /3gb é um parâmetro de inicialização do sistema operacional. Para saber mais, visite a Biblioteca MSDN.  
 <sup>3</sup> WOW64 (Windows on Windows 64) é um modo em que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de 32 bits é executado em um sistema operacional de 64 bits.  
-<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition oferece suporte a até 128 GB. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition é compatível com o limite máximo do sistema operacional.  
+<sup>4</sup>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] A Edição Standard dá suporte a até 128 GB. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition é compatível com o limite máximo do sistema operacional.  
 <sup>5</sup> Observe que a opção sp_configure awe enabled estava presente no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]de 64 bits, mas é ignorada.    
 <sup>6</sup> Se as páginas bloqueadas no privilégio de memória (LPIM) forem concedidas (em 32 bits para suporte AWE ou em 64 bits por si só), também é recomendável a definição da memória máxima do servidor. Para obter mais informações sobre o LPIM, consulte [Opções Server Memory de configuração do servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)
 
@@ -199,7 +199,7 @@ A opção de configuração *min memory per query* estabelece a quantidade míni
 > [!IMPORTANT]
 > Não defina a opção de configuração de servidor min memory per query com um valor muito alto, especialmente em sistemas muito ocupados, porque isso poderia levar a:         
 > - Maior competição por recursos de memória.         
-> - Redução de simultaneidade, aumentando a quantidade de memória para cada consulta única mesmo se a memória necessária em tempo de execução é menor que essa configuração.    
+> - Redução de simultaneidade, aumentando a quantidade de memória para cada consulta única mesmo se a memória necessária em runtime é menor que essa configuração.    
 >    
 > Para obter recomendações sobre como usar essa configuração, consulte [Configurar a opção de configuração de servidor min memory per query](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations).
 
@@ -323,6 +323,6 @@ O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reconhece o NUMA (Non-u
 [Opções Server Memory de configuração do servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [Lendo Páginas](../relational-databases/reading-pages.md)   
 [Gravando Páginas](../relational-databases/writing-pages.md)   
-[Como configurar o SQL Server para usar o Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)   
+[Como: configurar o SQL Server para usar o Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)   
 [Requisitos para usar tabelas com otimização de memória](../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)   
 [Resolver problemas de memória insuficiente usando tabelas com otimização de memória](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)

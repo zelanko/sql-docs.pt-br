@@ -19,10 +19,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 973e5e1449205d5e72abfa03068db3c8c3e98f87
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296159"
 ---
 # <a name="integration-services-ssis-variables"></a>Variáveis do SSIS (Integration Services)
@@ -30,7 +30,7 @@ ms.locfileid: "71296159"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  As variáveis armazenam valores que um pacote do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e seus contêineres, tarefas e manipuladores de eventos podem usar em tempo de execução. Os scripts na tarefa Script e o componente de Script também podem usar variáveis. As restrições de precedência que colocam em sequência tarefas e contêineres em um fluxo de trabalho podem usar variáveis quando suas definições de restrições incluem expressões.  
+  As variáveis armazenam valores que um pacote [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e seus contêineres, tarefas e manipuladores de eventos podem usar em tempo de execução. Os scripts na tarefa Script e o componente de Script também podem usar variáveis. As restrições de precedência que colocam em sequência tarefas e contêineres em um fluxo de trabalho podem usar variáveis quando suas definições de restrições incluem expressões.  
   
  Você pode usar variáveis em pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para as seguintes finalidades:  
   
@@ -99,7 +99,7 @@ ms.locfileid: "71296159"
  Especifica o nome da variável.  
   
  **Namespace**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece dois namespaces, **Usuário** e **Sistema**. Por padrão, as variáveis personalizadas ficam no namespace **Usuário** e as variáveis de sistema no namespace **System** . Você pode criar namespaces adicionais para variáveis definidas pelo usuário e alterar o nome do namespace **Usuário** , mas não pode alterar o nome do namespace **Sistema** , adicionar variáveis no namespace **Sistema** ou atribuir variáveis de sistema para um namespace diferente.  
+ O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece dois namespaces, **User** e **System**. Por padrão, as variáveis personalizadas ficam no namespace **Usuário** e as variáveis de sistema no namespace **System** . Você pode criar namespaces adicionais para variáveis definidas pelo usuário e alterar o nome do namespace **Usuário** , mas não pode alterar o nome do namespace **Sistema** , adicionar variáveis no namespace **Sistema** ou atribuir variáveis de sistema para um namespace diferente.  
   
 **RaiseChangedEvent**  
  Quando a propriedade é definida como **True**, o evento **OnVariableValueChanged** é gerado quando o valor da variável é alterado.  
@@ -135,10 +135,10 @@ O valor de uma variável definida pelo usuário pode ser literal ou uma express�
 
 | Tipo de dados | Valor padrão |
 |---|---|
-| Booliano | Falso |
+| Boolean | Falso |
 | Tipos de dados numéricos e binários | 0 (zero) |
 | Tipos de dados char e cadeia de caracteres | (cadeia de caracteres vazia) |
-| Object | System.Object |
+| Objeto | System.Object |
 | | |
 
 Uma variável tem opções para definir o valor da variável e o tipo de dados do valor. As duas propriedades devem ser compatíveis: por exemplo, o uso de um valor de cadeia de caracteres com um tipo de dados inteiro não é válido.  
@@ -208,7 +208,7 @@ Use a caixa de diálogo **Adicionar Variável** para especificar as propriedades
  **Tipo de valor**  
  Selecione um tipo de dados.  
   
- **Value**  
+ **Valor**  
  Digite um valor. É necessário que o valor seja compatível com o tipo de dados especificado na opção **Tipo de valor** .  
   
  **Somente leitura**  

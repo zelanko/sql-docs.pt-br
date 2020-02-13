@@ -16,15 +16,15 @@ ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fade5e48340e8cc2b51b354f9717a561c632e4d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68028634"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Serviço SQL Server Browser (Mecanismo de Banco de Dados e SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser é executado como um serviço Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta as solicitações de entrada de recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece informações sobre as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser contribui para as seguintes ações:  
+  O programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser é executado como um serviço Windows. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser escuta as solicitações de entrada de recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece informações sobre as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser contribui para as seguintes ações:  
   
 -   Navegando em uma lista de servidores disponíveis  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68028634"
   
 -   Quando uma instância nomeada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]é instalada.  
   
-## <a name="background"></a>Plano de fundo  
+## <a name="background"></a>Segundo plano  
  Antes do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], somente uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderia ser instalada em um computador. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ouviu as solicitações de entrada na porta 1433, atribuídas ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pela IANA (Internet Assigned Numbers Authority) oficial. Apenas uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar uma porta; por isso, quando o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] introduziu suporte para várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o protocolo SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) foi desenvolvido para escutar na porta UDP 1434. Esse serviço de escuta respondia a solicitações de clientes com o nome das instâncias instaladas e as portas ou pipes nomeados utilizados pela instância. Para resolver as limitações de sistema do SSRP, o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um substituto para o SSRP.  
   
 ## <a name="how-sql-server-browser-works"></a>Como funciona o SQL Server Browser  

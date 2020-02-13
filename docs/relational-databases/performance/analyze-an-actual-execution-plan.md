@@ -16,10 +16,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72289327"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>Analisar um plano de execução real
@@ -29,7 +29,7 @@ ms.locfileid: "72289327"
 Este tópico descreve como você pode analisar planos de execução gráficos reais usando o recurso de Análise de Plano [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Este recurso está disponível a partir do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v17.4. Geralmente, recomendamos que você [instale a versão mais recente do SSMS](../../ssms/download-sql-server-management-studio-ssms.md).
 
 > [!NOTE]
-> Os planos de execução reais são gerados depois que as consultas ou lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] são executados. Por isso, um plano de execução real contém informações de tempo de execução, como número real de linhas, métricas de uso de recursos e avisos de tempo de execução (se houver). Para obter mais informações, confira [Exibir um plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md).
+> Os planos de execução reais são gerados depois que as consultas ou lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] são executados. Por isso, um plano de execução real contém informações de runtime, como número real de linhas, métricas de uso de recursos e avisos de runtime (se houver). Para obter mais informações, confira [Exibir um plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md).
   
 Solução de problemas de desempenho de consulta requer conhecimento significativo sobre as noções básicas de processamento e execução de planos de consulta para poder de fato encontrar e consertar as causas raiz.
 

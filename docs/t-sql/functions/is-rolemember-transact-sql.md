@@ -21,18 +21,18 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71a3d8f8ce28fcc8918f2058d08f99df2982be5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086710"
 ---
-# <a name="isrolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
+# <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Indica se um princípio de banco de dados especificado é um membro da função de banco de dados especificada.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,9 +55,9 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 |------------------|-----------------|  
 |0|*database_principal* não é um membro de *role*.|  
 |1|*database_principal* é um membro de *role*.|  
-|NULL|*database_principal* ou *role* não é válido ou você não tem permissão para exibir a associação de função.|  
+|NULO|*database_principal* ou *role* não é válido ou você não tem permissão para exibir a associação de função.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use IS_ROLEMEMBER para determinar se o usuário atual pode executar uma ação que requer as permissões da função do banco de dados.  
   
  Se *database_principal* se basear em um logon do Windows, como Contoso\Mary5, IS_ROLEMEMBER retornará NULL, a menos que o *database_principal* tenha tido o acesso direto ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concedido ou negado.  

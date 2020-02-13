@@ -20,10 +20,10 @@ ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 478641bed0931fc78db3c7df166b860374034f90
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983256"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73983256"
 
   Indica se um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é membro da função de servidor especificada.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,12 +64,12 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |------------------|-----------------|  
 |0|*logon* não é um membro de *role*.<br /><br /> No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa instrução sempre retorna 0.|  
 |1|*login* é um membro de *role*.|  
-|NULL|*role* ou *login* não é válido ou você não tem permissão para exibir a associação de função.|  
+|NULO|*role* ou *login* não é válido ou você não tem permissão para exibir a associação de função.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use IS_SRVROLEMEMBER para determinar se o usuário atual pode executar uma ação que exige as permissões da função de servidor.  
   
- Se um logon do Windows, como Contoso\Mary5, estiver especificado para *login* **IS_SRVROLEMEMBER** retornará **NULL**, a não ser que o logon tenha concedido ou negado acesso direto ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Se um logon do Windows, como Contoso\Mary5, estiver especificado para *login***IS_SRVROLEMEMBER** retornará **NULL**, a não ser que o logon tenha concedido ou negado acesso direto ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Se o parâmetro *login* opcional não for fornecido e o *login* for um logon do domínio do Windows, ele poderá ser um membro de função de servidor fixa por meio da associação em um grupo do Windows. Para resolver essas associações indiretas, IS_SRVROLEMEMBER solicita informações de associação do grupo do Windows no controlador de domínio. Se o controlador de domínio não estiver acessível ou não responder, **IS_SRVROLEMEMBER** retornará informações de associação de função por conta apenas para o usuário e seus grupos locais. Se o usuário especificado não for o usuário atual, o valor retornado por IS_SRVROLEMEMBER poderá ser diferente da última atualização de dados do autenticador (como o Active Directory) para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

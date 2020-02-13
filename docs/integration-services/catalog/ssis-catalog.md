@@ -15,10 +15,10 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294960"
 ---
 # <a name="ssis-catalog"></a>Catálogo do SSIS
@@ -26,7 +26,7 @@ ms.locfileid: "71294960"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  O catálogo do **SSISDB** é o ponto central para trabalhar com os projetos do SSIS ([!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]) que você implantou no servidor [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Por exemplo, você define parâmetros de projeto e pacote, configura ambientes para especificar valores de tempo de execução para pacotes, executa e soluciona problemas de pacotes, e gerencia as operações de servidor do [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
+  O catálogo do **SSISDB** é o ponto central para trabalhar com os projetos do SSIS ([!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]) que você implantou no servidor [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Por exemplo, você define parâmetros de projeto e pacote, configura ambientes para especificar valores de runtime para pacotes, executa e soluciona problemas de pacotes, e gerencia as operações de servidor do [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
  
 > [!NOTE]
 > Este artigo descreve o Catálogo do SSIS em geral e o Catálogo do SSIS em execução localmente. Também é possível criar o Catálogo do SSIS no Banco de Dados SQL do Azure e implantar e executar pacotes do SSIS no Azure. Para obter mais informações, consulte [Migrar cargas de trabalho do SQL Server Integration Services por lift-and-shift para a nuvem](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
@@ -76,7 +76,7 @@ ms.locfileid: "71294960"
   
 -   Pasta  
   
--   Projeto  
+-   Project  
   
 -   Ambiente  
   
@@ -135,7 +135,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
  **Período de Retenção (dias)**  
  Define a idade máxima dos dados de operações permitidos (em dias). Os dados mais antigos são removidos.  
   
- O valor mínimo é um dia. O valor máximo só é limitado pelo valor máximo dos dados **int** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter informações sobre esse tipo de dados, consulte [int, bigint, smallint e tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).  
+ O valor mínimo é um dia. O valor máximo só é limitado pelo valor máximo dos dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **int** data. Para obter informações sobre esse tipo de dados, consulte [int, bigint, smallint e tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).  
   
  **Remover Periodicamente Versões Antigas**  
  A etapa de trabalho para limpeza de versão de projeto é executada quando esta propriedade é definida como **True**.  
@@ -164,7 +164,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
  Alterar o algoritmo de criptografia é uma operação demorada. Primeiro, o servidor tem que usar o algoritmo previamente especificado para descriptografar todos os valores de configuração. Em seguida, o servidor tem que usar o novo algoritmo para criptografar novamente os valores. Durante este momento, não pode haver outras operações do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no servidor. Assim, para permitir que operações do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] continuem ininterruptas, o algoritmo de criptografia deverá ser um valor somente leitura na caixa de diálogo no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- Para alterar a configuração da propriedade **Algoritmo de Criptografia** , defina o banco de dados **SSISDB** como modo de usuário único e chame o procedimento armazenado catalog.configure_catalog. Use ENCRYPTION_ALGORITHM para o argumento *property_name*. Para os valores de propriedade com suporte, consulte [catalog.catalog_properties &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). Para obter mais informações sobre o procedimento armazenado, consulte [catalog.configure_catalog &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
+ Para alterar a configuração da propriedade **Algoritmo de Criptografia** , defina o banco de dados **SSISDB** como modo de usuário único e chame o procedimento armazenado catalog.configure_catalog. Use ENCRYPTION_ALGORITHM para o argumento *property_name* . Para os valores de propriedade com suporte, consulte [catalog.catalog_properties &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). Para obter mais informações sobre o procedimento armazenado, consulte [catalog.configure_catalog &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
  Para obter mais informações sobre o modo de usuário único, veja [Definir um banco de dados como modo de usuário único](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Para obter informações sobre criptografia e algoritmos de criptografia no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte os tópicos na seção [Criptografia do SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
@@ -306,7 +306,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
 -   [catalog.event_message_context](../../integration-services/system-views/catalog-event-message-context.md)  
   
- Você pode validar projetos e pacotes chamando os procedimentos armazenados [catalog.validate_project &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md) e [catalog.validate_package &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md). A exibição [catalog.validations &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md) fornece detalhes sobre validações, como as referências de ambiente de servidor consideradas na validação, se é uma validação de dependência ou uma validação completa e se o tempo de execução de 32 ou 64 bits é usado para executar o pacote.  
+ Você pode validar projetos e pacotes chamando os procedimentos armazenados [catalog.validate_project &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md) e [catalog.validate_package &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md). A exibição [catalog.validations &amp;#40;Banco de dados SSISDB&amp;#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md) fornece detalhes sobre validações, como as referências de ambiente de servidor consideradas na validação, se é uma validação de dependência ou uma validação completa e se o runtime de 32 ou 64 bits é usado para executar o pacote.  
 
 ## <a name="create-the-ssis-catalog"></a>Criar o catálogo do SSIS
   Depois de criar e testar pacotes no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], você pode implantar os projetos que contêm os pacotes em um servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para poder implantar os projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o servidor deve conter o catálogo do **SSISDB** . O programa de instalação do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] não cria o catálogo automaticamente; você precisará criar o catálogo manualmente por meio das instruções a seguir.  
@@ -407,7 +407,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
      Para obter mais informações sobre a instrução, consulte [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-master-key-transact-sql.md).  
   
-     No exemplo a seguir, a chave mestra é exportada para o arquivo `c:\temp directory\RCTestInstKey`. A senha `LS2Setup!` é usada para criptografar a chave mestra.  
+     No exemplo a seguir, a chave mestra é exportada para o arquivo `c:\temp directory\RCTestInstKey` . A senha `LS2Setup!` é usada para criptografar a chave mestra.  
   
     ```  
     backup master key to file = 'c:\temp\RCTestInstKey'  
@@ -419,7 +419,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
 4.  Gere o script de CREATE LOGIN para ##MS_SSISServerCleanupJobLogin## realizando o procedimento a seguir. Para obter mais informações, veja [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   
-    1.  No Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó **Segurança** e expanda o nó **Logons**.  
+    1.  No Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó **Segurança** e expanda o nó **Logons** .  
   
     2.  Clique com o botão direito do mouse em **##MS_SSISServerCleanupJobLogin##** e clique em **Script de Logon como** > **CREATE To** > **Nova Janela do Editor de Consultas**.  
   
@@ -466,7 +466,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
     ```  
   
-3.  Restaure o banco de dados SSISDB do backup usando a caixa de diálogo **Restaurar Banco de Dados** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte os tópicos a seguir:  
+3.  Restaure o banco de dados SSISDB do backup usando a caixa de diálogo **Restaurar Banco de Dados** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte estes tópicos:  
   
     -   [Restaurar banco de dados &#40;página Geral&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
@@ -555,13 +555,13 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
      Marque a caixa de seleção para indicar que você fez backup do banco de dados SSISDB antes de executar o assistente.  
   
-     ![Selecionar o servidor no Assistente de Atualização do SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-2.png "Selecionar o servidor no Assistente de Atualização do SSISDB")  
+     ![Selecione o servidor no Assistente de Atualização do SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-2.png "Selecione o servidor no Assistente de Atualização do SSISDB")  
   
 5.  Escolha **Atualizar** para atualizar o banco de dados do Catálogo SSIS.  
   
 6.  Na página **Resultado** , examine os resultados.  
   
-     ![Examinar os resultados no Assistente de Atualização do SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "os resultados no Assistente de Atualização do SSISDB")  
+     ![Examinar os resultados no Assistente de Atualização do SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "Examinar os resultados no Assistente de Atualização do SSISDB")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>Always On para o Catálogo do SSIS (SSISDB)
   O recurso Grupos de Disponibilidade AlwaysOn é uma solução de alta disponibilidade e recuperação de desastres que fornece uma alternativa de nível corporativo para espelhamento de banco de dados. Um grupo de disponibilidade permite um ambiente de failover para um conjunto discreto de bancos de dados de usuário, conhecidos como bancos de dados de disponibilidade, que fazem failover juntos. Para obter mais informações, confira [Grupos de Disponibilidade AlwaysOn](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  

@@ -26,18 +26,18 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 97bdfbe485c129e7040235db7fffe296bb16897a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67928903"
 ---
-# <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
+# <a name="set-lock_timeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Especifica o número de milissegundos que uma instrução espera para um bloqueio ser liberado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,11 +47,11 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="arguments"></a>Argumentos  
  *timeout_period*  
- É o número de milissegundos que se passarão antes que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorne um erro de bloqueio. Um valor de -1 (padrão) indica nenhum tempo limite (isto é, esperar indefinidamente).  
+ É o número de milissegundos que se passarão antes que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorne um erro de bloqueio. Um valor de -1 (padrão) indica nenhum tempo limite (isto é, esperar indefinidamente).  
   
  Quando uma espera por um bloqueio exceder o valor limite, um erro será retornado. Um valor de 0 significa não esperar e retornar uma mensagem assim que um bloqueio for encontrado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  No começo de uma conexão esta configuração tem um valor de -1. Após ser alterado, a nova configuração permanece durante toda a conexão.  
   
  A configuração de SET LOCK_TIMEOU é definida no momento da execução e não no momento da análise.  

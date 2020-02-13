@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048526"
 ---
 # <a name="spatial-data-types-overview"></a>Visão geral de tipos de dados espaciais
@@ -40,11 +40,11 @@ Como a figura indica, os dez tipos dos quais se pode criar uma instância dos ti
 Os subtipos dos tipos geometry e geography são divididos em tipos simples e de coleção.  Alguns métodos como `STNumCurves()` só funcionam com tipos simples.  
 
 Os tipos simples incluem:  
--   [Point](../../relational-databases/spatial/point.md)  
+-   [Ponto](../../relational-databases/spatial/point.md)  
 -   [LineString](../../relational-databases/spatial/linestring.md)  
 -   [CircularString](../../relational-databases/spatial/circularstring.md)  
 -   [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)  
--   [Polígono](../../relational-databases/spatial/polygon.md)  
+-   [Polygon](../../relational-databases/spatial/polygon.md)  
 -   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
 
 Os tipos de coleção incluem:  
@@ -80,7 +80,7 @@ Quando o nível de compatibilidade é 100 ou abaixo no [!INCLUDE[ssCurrent](../.
 No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **FullGlobe** é um tipo especial de polígono que abrange o globo inteiro. **FullGlobe** tem uma área, mas nenhuma borda ou vértices.  
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Anéis externos e internos não são importantes no tipo de dados `geography`  
-Os Recursos Simples do OGC para SQL Specification discutem anéis externos e internos, mas essa distinção faz pouco sentido para o tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geometry** : qualquer anel de um polígono pode ser usado como anel externo.  
+A Especificação Recursos Simples do OGC para SQL aborda anéis externos e internos, mas essa distinção faz pouco sentido para o tipo de dados **geography** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: qualquer anel de um polígono pode ser usado como o anel externo.  
 
 Para obter mais informações sobre especificações do OCG, consulte o seguinte:  
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
@@ -114,7 +114,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 
 Note que uma instância **CircularString** requer sete pontos para definir o triângulo, mas uma instância **LineString** requer somente quatro pontos para definir o triângulo. O motivo para isso é que uma instância **CircularString** armazena segmentos de arco circular e não segmentos de linha. Portanto, os lados do triângulo armazenados na instância **CircularString** são ABC, CDE e EFA, ao passo que os lados do triângulo armazenados na instância **LineString** são AC, CE e EA.  
 
-Considere o seguinte exemplo:  
+Considere o exemplo a seguir:  
 
 ```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);

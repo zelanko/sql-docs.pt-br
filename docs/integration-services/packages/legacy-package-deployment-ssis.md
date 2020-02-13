@@ -32,10 +32,10 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295813"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implantação de pacote herdado (SSIS)
@@ -110,13 +110,13 @@ ms.locfileid: "71295813"
 ### <a name="package-configuration-types"></a>Tipos de configuração de pacotes  
  A tabela a seguir descreve os tipos de configuração de pacotes.  
   
-|Tipo|Descrição|  
+|Type|Descrição|  
 |----------|-----------------|  
 |Arquivo de configuração XML|Um arquivo XML contém as configurações. O arquivo XML pode incluir várias configurações.|  
 |Variável de ambiente|Uma variável de ambiente contém a configuração.|  
 |Entrada de Registro|Uma entrada de Registro contém a configuração.|  
 |Variável de pacote pai|Uma variável no pacote contém a configuração. Normalmente, esse tipo de configuração é usado para atualizar as propriedades em pacotes filho.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table|Uma tabela em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contém a configuração. A tabela pode incluir várias configurações.|  
+|Tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Uma tabela em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contém a configuração. A tabela pode incluir várias configurações.|  
   
 #### <a name="xml-configuration-files"></a>Arquivos de configuração XML  
  Se você selecionar o tipo de configuração **arquivo de configuração XML** , poderá criar um novo arquivo de configuração, reutilizar um arquivo existente e adicionar configurações novas ou reutilizar um arquivo existente, mas substituir o conteúdo do arquivo.  
@@ -215,11 +215,11 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Depois que o assistente terminar, a nova configuração é adicionada à lista de configurações na caixa de diálogo **Organizador de Configurações do Pacote** .  
   
-> **OBSERVAÇÃO:** A última página do Assistente de Configuração de Pacote, Concluindo o Assistente, lista as propriedades de destino da configuração. Se quiser atualizar as propriedades enquanto estiver executando pacotes usando o utilitário prompt de comando **dtexec**, você poderá gerar as cadeias de caracteres que representam os caminhos de propriedade executando o Assistente de Configuração de Pacotes e, então, copiá-las e colá-las na janela do prompt de comando para usar com a opção definida de **dtexec.**  
+> **OBSERVAÇÃO:** A última página do Assistente de Configuração de Pacote, Concluindo o Assistente, lista as propriedades de destino da configuração. Se quiser atualizar as propriedades enquanto estiver executando pacotes usando o utilitário prompt de comando **dtexec** , você poderá gerar as cadeias de caracteres que representam os caminhos de propriedade executando o Assistente de Configuração de Pacotes e, então, copiá-las e colá-las na janela do prompt de comando para usar com a opção definida de **dtexec.**  
   
  A tabela a seguir descreve as colunas da lista de configurações na caixa de diálogo **Organizador de Configurações do Pacote** .  
   
-|coluna|Descrição|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |**Nome da Configuração**|O nome da configuração.|  
 |**Tipo de Configuração**|O tipo de configuração.|  
@@ -251,7 +251,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 10. Exiba a configuração na caixa de diálogo **Organizador de Configurações do Pacote** .  
   
-11. Clique em **Fechar**.  
+11. Clique em **fechar**  
 
 ## <a name="package-configurations-organizer"></a>Organizador de Configurações do Pacote
   Use a caixa de diálogo **Organizador de Configurações do Pacote** para habilitar configurações de pacote, visualizar uma lista de configurações para o pacote atual e para definir a ordem de preferência para carregar as configurações.  
@@ -598,7 +598,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Tipo**  
  Exiba o tipo de dados da propriedade.  
   
- **Value**  
+ **Valor**  
  Especifique o valor da configuração.  
   
  **Próximo**  
@@ -673,7 +673,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Usar Autenticação do SQL Server**  
  Especifique se o pacote deve usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para fazer login no servidor. Se você usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será preciso fornecer um nome de usuário e uma senha.  
   
- **User name**  
+ **Nome de usuário**  
  Especifique um nome de usuário.  
   
  **Senha**  

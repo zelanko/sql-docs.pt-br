@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816711"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Índices columnstore – desempenho de consultas
@@ -106,7 +106,7 @@ ms.locfileid: "71816711"
 |loops aninhados||não|não|não||    
 |consultas de thread único executando no MAXDOP 1||não|não|sim||    
 |consultas de thread único com um plano de consulta serial||não|não|sim||    
-|classificar|Classificar por cláusula em SCAN com índice columnstore.|não|não|sim||    
+|sort|Classificar por cláusula em SCAN com índice columnstore.|não|não|sim||    
 |classificação superior||não|não|sim||    
 |agregações de janela||NA|NA|sim|Novo operador do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
@@ -127,7 +127,7 @@ ms.locfileid: "71816711"
     
  A propagação de agregação é ainda mais acelerada pela agregação eficiente nos dados compactados/codificados em execução amigável a cache e aproveitando SIMD    
     
- ![aggregate pushdown](../../relational-databases/indexes/media/aggregate-pushdown.jpg "aggregate pushdown")    
+ ![aplicação de agregação](../../relational-databases/indexes/media/aggregate-pushdown.jpg "Aplicação de agregação")    
     
 Por exemplo, a aplicação de agregação é feita em ambas as consultas abaixo:    
     

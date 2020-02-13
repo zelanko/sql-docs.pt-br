@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 40f30fd646e166cc9b8db433934d22a378c907cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995631"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinando permissões eficientes do Mecanismo de Banco de Dados
@@ -90,9 +90,9 @@ Esse sistema é flexível, o que significa que ele poderá ser complicado se as 
 
 ### <a name="security-classes"></a>Classes de segurança
 
-As permissões podem ser concedidas no nível do servidor, no nível de banco de dados, no nível de esquema ou no nível de objeto, etc. Há 26 níveis (chamados de classes). A lista completa de classes em ordem alfabética é: `APPLICATION ROLE`, `ASSEMBLY`, `ASYMMETRIC KEY`, `AVAILABILITY GROUP`, `CERTIFICATE`, `CONTRACT`, `DATABASE`, `DATABASE` `SCOPED CREDENTIAL`, `ENDPOINT`, `FULLTEXT CATALOG`, `FULLTEXT STOPLIST`, `LOGIN`, `MESSAGE TYPE`, `OBJECT`, `REMOTE SERVICE BINDING`, `ROLE`, `ROUTE`, `SCHEMA`, `SEARCH PROPERTY LIST`, `SERVER`, `SERVER ROLE`, `SERVICE`, `SYMMETRIC KEY`, `TYPE`, `USER`, `XML SCHEMA COLLECTION`. (Algumas classes não estão disponíveis em alguns tipos de SQL Servers.) Para fornecer informações completas sobre cada classe é necessária uma consulta diferente.
+As permissões podem ser concedidas no nível do servidor, no nível de banco de dados, no nível de esquema ou no nível de objeto, etc. Há 26 níveis (chamados de classes). A lista completa de classes em ordem alfabética é: `APPLICATION ROLE`, `ASSEMBLY`, `ASYMMETRIC KEY`, `AVAILABILITY GROUP`, `CERTIFICATE`, `CONTRACT`, `DATABASE`, `DATABASE` `SCOPED CREDENTIAL`, `ENDPOINT`, `FULLTEXT CATALOG`, `FULLTEXT STOPLIST`, `LOGIN`, `MESSAGE TYPE`, `OBJECT`, `REMOTE SERVICE BINDING`, `ROLE`, `ROUTE`, `SCHEMA`, `SEARCH PROPERTY LIST`, `SERVER`, `SERVER ROLE`, `SERVICE`, `SYMMETRIC KEY`, `TYPE`, `USER` e `XML SCHEMA COLLECTION`. (Algumas classes não estão disponíveis em alguns tipos de SQL Servers.) Para fornecer informações completas sobre cada classe é necessária uma consulta diferente.
 
-### <a name="principals"></a>Entidades
+### <a name="principals"></a>Principals
 
 As permissões são concedidas a entidades de segurança. Entidades de segurança podem ser usuários, logons, funções de banco de dados ou funções de servidor. Os logons podem representar grupos do Windows que incluem muitos usuários do Windows. Como os grupos do Windows não são mantidos pelo SQL Server, o SQL Server nem sempre saberá que é membro de um grupo do Windows. Quando um usuário do Windows se conecta ao SQL Server, o pacote de logon contém os tokens de associação de grupo do Windows para o usuário.
 

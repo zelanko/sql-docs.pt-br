@@ -17,10 +17,10 @@ ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b3f33d0c37ba9c856d9cc0b66674c8ca4221e0d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294364"
 ---
 # <a name="wmi-connection-manager"></a>Gerenciador de conexões WMI
@@ -68,13 +68,13 @@ ms.locfileid: "71294364"
  **Usar a autenticação do Windows**  
  Selecione para usar Autenticação do Windows. Se usar Autenticação do Windows, não será preciso fornecer um nome de usuário nem senha para a conexão.  
   
- **User name**  
+ **Nome de usuário**  
  Se não usar Autenticação do Windows, será preciso fornecer um nome de usuário para a conexão.  
   
  **Senha**  
  Se não usar Autenticação do Windows, será preciso fornecer uma senha para a conexão.  
   
- **Testar**  
+ **Test**  
  Teste as configurações do gerenciador de conexões.  
   
 ## <a name="see-also"></a>Consulte Também  

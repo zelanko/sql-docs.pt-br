@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 62816ac084a565f75d50f5f1f8b2b23467158242
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8cda2b7729f205da7908fa481b2e1a5639a095a1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768428"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287309"
 ---
 # <a name="scripting-replication"></a>Replicação de script
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,9 +56,9 @@ ms.locfileid: "68768428"
   
 -   [Configurar a publicação e a distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   
--   [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
+-   [Criar uma publicação](../../relational-databases/replication/publish/create-a-publication.md)  
   
--   [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)  
+-   [Criar uma Assinatura Push](../../relational-databases/replication/create-a-push-subscription.md)  
   
 -   [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)  
   

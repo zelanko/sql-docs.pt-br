@@ -18,10 +18,10 @@ ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a6cd2bbabd1cae5fd23dd0522c9664d39b66084f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298523"
 ---
 # <a name="msmq-connection-manager"></a>Gerenciador de conexões MSMQ
@@ -44,7 +44,7 @@ ms.locfileid: "71298523"
 |Tipo de fila|Exemplo de caminho|  
 |----------------|-----------------|  
 |Público|\<nome do computador>\\<nome da fila\>|  
-|Private|\<nome do computador>\Private$\\<nome da fila\>|  
+|Privado|\<nome do computador>\Private$\\<nome da fila\>|  
   
  Você pode usar um ponto (.) para representar o computador local.  
   
@@ -76,11 +76,11 @@ ms.locfileid: "71298523"
 |Tipo de fila|Exemplo de caminho|  
 |----------------|-----------------|  
 |Público|\<nome do computador>\\<nome da fila\>|  
-|Private|\<nome do computador>\Private$\\<nome da fila\>|  
+|Privado|\<nome do computador>\Private$\\<nome da fila\>|  
   
  Você pode usar um "." para representar o computador local.  
   
- **Teste**  
+ **Test**  
  Depois de configurar o Gerenciador de Conexões MSMQ, confirme se a conexão é viável clicando em **Testar**.  
   
 ## <a name="see-also"></a>Consulte Também  

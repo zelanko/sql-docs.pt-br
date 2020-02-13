@@ -1,7 +1,7 @@
 ---
 title: Configurando o armazenamento para tabelas com otimização de memória | Microsoft Docs
 ms.custom: ''
-ms.date: 10/25/2017
+ms.date: 1/15/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af9f37bb0cc3508d1a421c75de4297b3f015f6a7
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: d1d0848a1399c533162799fd9a4404955bb542dd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634574"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76124994"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configuração do armazenamento para tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Você precisa configurar a capacidade de armazenamento e operações de entrada/saída por segundo (IOPS).  
   
-## <a name="storage-capacity"></a>Capacidade de armazenamento  
+## <a name="storage-capacity"></a>Capacidade de Armazenamento  
 
 Use as informações em [Estimar requisitos de memória para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) para estimar o tamanho na memória das tabelas com otimização de memória duráveis do banco de dados. Como os índices não são mantidos para tabelas com otimização de memória, não inclua o tamanho dos índices. 
  
@@ -43,7 +43,9 @@ Um bom ponto de partida para dimensionar o armazenamento para essa área é rese
 -   Arquivos de ponto de verificação normalmente são distribuídos uniformemente em todos os contêineres, se houver espaço. Com o SQL Server 2014, você precisa provisionar um número ímpar de contêineres para alcançar uma distribuição uniforme – a partir do 2016, números ímpar e par de contêineres levam a uma distribuição uniforme.
   
 ## <a name="encryption"></a>Criptografia  
- No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o armazenamento de tabelas com otimização de memória será criptografado como parte da habilitação de TDE do banco de dados. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md). No [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], os arquivos de ponto de verificação não são criptografados, mesmo se a TDE estiver habilitada no banco de dados.
+ No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versões posteriores, o armazenamento para tabelas com otimização de memória será criptografado em repouso como parte da habilitação de TDE (Transparent Data Encryption) no banco de dados. Para obter mais informações, confira [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md). No [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], os arquivos de ponto de verificação não são criptografados, mesmo se a TDE estiver habilitada no banco de dados.
+
+ Dados em tabelas com otimização de memória [não duráveis](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md) (SCHEMA_ONLY) não são gravadas no disco em nenhum momento. Portanto, o TDE não se aplica a essas tabelas.
   
 ## <a name="see-also"></a>Consulte Também  
  [Criando e gerenciando armazenamento para objetos com otimização de memória](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

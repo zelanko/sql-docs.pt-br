@@ -25,10 +25,10 @@ ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 26051de067dd496d25cfcc3c2cb0f71715ed3145
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211354"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "70211354"
 
   Encerra um lado de uma conversa existente.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +62,7 @@ END CONVERSATION conversation_handle
  WITH CLEANUP  
  Remove todas as mensagens e entradas da exibição do catálogo para um lado de uma conversa que não pode ser concluída normalmente. O outro lado da conversa não é notificado da limpeza. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remove o ponto de extremidade da conversa, todas as mensagens da conversa na fila de transmissão e todas as mensagens da conversa na fila de serviço. Os administradores podem usar essa opção para remover conversas que não podem ser concluídas normalmente. Por exemplo, se o serviço remoto tiver sido removido permanentemente, um administrador poderá usar WITH CLEANUP para remover conversas para esse serviço. Não use WITH CLEANUP no código de um aplicativo do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Se END CONVERSATION WITH CLEANUP for executado antes de o ponto de extremidade de recepção confirmar o recebimento de uma mensagem, o ponto de extremidade de envio enviará a mensagem novamente. Isto poderá executar novamente o diálogo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O encerramento de uma conversa bloqueia o grupo de conversa ao qual o *conversation_handle* fornecido pertence. Quando uma conversa é encerrada, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] remove todas as mensagens para ela da fila de serviço.  
   
  Após o término de uma conversa, um aplicativo não pode mais enviar ou receber mensagens para essa conversa. Ambos os participantes em uma conversa devem chamar END CONVERSATION para concluir a conversa. Se o [!INCLUDE[ssSB](../../includes/sssb-md.md)] não tiver recebido uma mensagem de término do diálogo ou uma mensagem de erro do outro participante, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] notificará o outro participante de que a conversa terminou. Neste caso, embora o identificador da conversa não seja mais válido, o ponto de extremidade de conversa permanece ativo até a instância que hospeda o serviço remoto confirmar a mensagem.  
@@ -90,7 +90,7 @@ END CONVERSATION conversation_handle
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-ending-a-conversation"></a>A. Terminando uma conversa  
+### <a name="a-ending-a-conversation"></a>a. Terminando uma conversa  
  O exemplo a seguir encerra o diálogo especificado por `@dialog_handle`.  
   
 ```  

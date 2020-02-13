@@ -14,10 +14,10 @@ ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 7841fef89ae4eb0600dcc62c1561bff769500a47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995655"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, objeto SQL Statistics
@@ -32,7 +32,7 @@ ms.locfileid: "67995655"
   
  Para obter mais informações sobre parametrização simples e forçada, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
- Esses são os contadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics**.  
+ Esses são os contadores de **Estatísticas do SQL** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contadores do SQL Server SQL Statistics|Descrição|  
 |----------------------------------------|-----------------|  

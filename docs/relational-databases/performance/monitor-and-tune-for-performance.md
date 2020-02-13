@@ -30,10 +30,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fd6fdf81a74e015995f5bf9bd5500f196ccf5cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68020253"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Monitorar e ajustar o desempenho
@@ -71,7 +71,7 @@ O tempo de resposta é o tempo necessário para que a primeira linha do conjunto
 |[Monitorar componentes do SQL Server](../../relational-databases/performance/monitor-sql-server-components.md)|Etapas necessárias para monitorar qualquer componente do SQL Server, como o Monitor de Atividade, Funções e Eventos Estendidos e Exibições de Gerenciamento Dinâmico, etc.|  
 |[Ferramentas para monitoramento e ajuste de desempenho](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|Lista as ferramentas de monitoramento e de ajuste disponíveis com o SQL Server, como Estatísticas de Consulta em Tempo Real e o Orientador de Otimização do Mecanismo de Banco de Dados.|  
 |[Atualizando bancos de dados usando o Assistente de Ajuste de Consulta](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)|Mantenha a estabilidade do desempenho da carga de trabalho durante a atualização para o nível de compatibilidade do banco de dados mais recente.|  
-|[Monitorando o desempenho com o Repositório de Consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|Usar o Repositório de Consultas para capturar automaticamente um histórico das consultas, planos e estatísticas de tempo de execução e os mantém para sua análise.|  
+|[Monitorando o desempenho com o Repositório de Consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|Usar o Repositório de Consultas para capturar automaticamente um histórico das consultas, planos e estatísticas de runtime e os mantém para sua análise.|  
 |[Estabelecer uma linha de base de desempenho](../../relational-databases/performance/establish-a-performance-baseline.md)|Como estabelecer uma linha de base de desempenho.|  
 |[Isolar problemas de desempenho](../../relational-databases/performance/isolate-performance-problems.md)|Isole problemas de desempenho do banco de dados.|  
 |[Identificar afunilamentos](../../relational-databases/performance/identify-bottlenecks.md)|Monitorar e acompanhar o desempenho de servidor para identificar gargalos.|  

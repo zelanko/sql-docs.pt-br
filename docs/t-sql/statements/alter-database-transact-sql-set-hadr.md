@@ -24,10 +24,10 @@ ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 43970780903aa0a4d5aef84f971ac230f2f26358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065732"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
@@ -35,7 +35,7 @@ ms.locfileid: "68065732"
 
   Este tópico contém a sintaxe de ALTER DATABASE para configurar as opções de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] em um banco de dados secundário. Somente uma opção SET HADR é permitida por instrução ALTER DATABASE. Há suporte para essas opções somente em réplicas secundárias.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -123,7 +123,7 @@ ALTER DATABASE database_name
 ## <a name="database-states"></a>Estados de banco de dados  
  Quando um banco de dados secundário é unido a um grupo de disponibilidade, a réplica secundária local altera o estado desse banco de dados secundário de RESTAURAR para ONLINE. Se um banco de dados secundário for removido do grupo de disponibilidade, ele retornará ao estado RESTORING pela réplica secundária local. Isso permite aplicar backups de log subsequentes do banco de dados primário a esse banco de dados secundário.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrições  
  Execute instruções ALTER DATABASE fora de transações e lotes.  
   
 ## <a name="security"></a>Segurança  

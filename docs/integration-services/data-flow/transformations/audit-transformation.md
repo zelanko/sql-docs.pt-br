@@ -17,10 +17,10 @@ ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 76ce8959e9b9cedb9a1e8a096913a3d6257cfd2d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298013"
 ---
 # <a name="audit-transformation"></a>Transformação Auditoria
@@ -78,7 +78,7 @@ ms.locfileid: "71298013"
 |**ID da Versão**|Insira o GUID que identifica com exclusividade a versão do pacote.|  
 |**Hora de início de execução**|Insira a hora de início de execução do pacote.|  
 |**Nome do computador**|Insira o nome do computador no qual o pacote foi inicializado.|  
-|**User name**|Insira o nome de logon do usuário que inicializou o pacote.|  
+|**Nome de usuário**|Insira o nome de logon do usuário que inicializou o pacote.|  
 |**Nome da tarefa**|Insira o nome da tarefa de Fluxo de Dados com a qual Auditar Transformação está associada.|  
 |**ID da Tarefa**|Insira o GUID que identifica com exclusividade a tarefa de Fluxo de Dados com a qual Auditar Transformação está associada.|  
   

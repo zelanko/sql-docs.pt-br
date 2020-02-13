@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9ee002f5c835f8a6a69aa6afe69e1838c56c24e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8083433f2b9e5af63abac4e4fba59d06e42dd86f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013060"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918349"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "68013060"
   
  Quando habilitada, a extensão do pool de buffers especifica o tamanho e o caminho do arquivo de cache do pool de buffers na SSD. Esse arquivo é uma extensão contígua de armazenamento na SSD e é configurado estaticamente durante a inicialização da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As alterações nos parâmetros da configuração do arquivo poderão ser realizadas somente quando o recurso de extensão do pool de buffers estiver desabilitado. Quando a extensão do pool de buffers é desabilitada, todas as definições da configuração relacionadas são removidas do Registro. O arquivo de extensão do pool de buffers é excluído durante o desligamento da instância do SQL Server.  
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
  É recomendável seguir estas práticas recomendadas.  
   
 -   Depois de habilitar a extensão do Pool de buffers pela primeira vez, é recomendável reiniciar a instância do SQL Server para obter todos os benefícios de desempenho.  
@@ -88,7 +88,7 @@ ms.locfileid: "68013060"
   
  Os Xevents a seguir estão disponíveis.  
   
-|XEvent|Descrição|Parâmetros|  
+|XEvent|Descrição|parâmetros|  
 |------------|-----------------|----------------|  
 |sqlserver.buffer_pool_extension_pages_written|É acionado quando uma página ou um grupo de páginas é removido do pool de buffers e gravado no arquivo de extensão do pool de buffers.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_extension_pages_read|É acionado quando uma página é lida do arquivo de extensão do pool de buffers para o pool de buffers.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  

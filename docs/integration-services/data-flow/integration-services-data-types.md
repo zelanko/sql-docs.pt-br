@@ -19,10 +19,10 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292412"
 ---
 # <a name="integration-services-data-types"></a>Tipos de dados do Integration Services
@@ -111,9 +111,9 @@ ms.locfileid: "71292412"
   
 #### <a name="converting-from-dt_filetime"></a>Convertendo a partir de DT_FILETIME  
   
-|Converter DT_FILETIME para|Resultado|  
+|Converter DT_FILETIME para|Result|  
 |-----------------------------|------------|  
-|DT_FILETIME|Nenhuma alteração.|  
+|DT_FILETIME|Sem alteração.|  
 |DT_DATE|Converte o tipo de dados.|  
 |DT_DBDATE|Remove o valor de hora.|  
 |DT_DBTIME|Remove o valor de data.<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos fracionários que o tipo de dados DT_DBTIME pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
@@ -124,10 +124,10 @@ ms.locfileid: "71292412"
   
 #### <a name="converting-from-dt_date"></a>Convertendo a partir de DT_DATE  
   
-|Converter DT_DATE em|Resultado|  
+|Converter DT_DATE em|Result|  
 |-------------------------|------------|  
 |DT_FILETIME|Converte o tipo de dados.|  
-|DT_DATE|Nenhuma alteração.|  
+|DT_DATE|Sem alteração.|  
 |DT_DBDATE|Remove o valor de hora representado pelo tipo de dados DT_DATA.|  
 |DT_DBTIME|Remove o valor de data representado pelo tipo de dados DT_DATE.|  
 |DT_DBTIME2|Remove o valor de data representado pelo tipo de dados DT_DATE.|  
@@ -137,11 +137,11 @@ ms.locfileid: "71292412"
   
 #### <a name="converting-from-dt_dbdate"></a>Convertendo a partir de DT_DBDATE  
   
-|Converter DT_DBDATE para|Resultado|  
+|Converter DT_DBDATE para|Result|  
 |---------------------------|------------|  
 |DT_FILETIME|Define os campos de hora no tipo de dados DT_FILETIME como zero.|  
 |DT_DATE|Define os campos de hora no tipo de dados DT_DATE como zero.|  
-|DT_DBDATE|Nenhuma alteração.|  
+|DT_DBDATE|Sem alteração.|  
 |DT_DBTIME|Define os campos de hora no tipo de dados DT_DBTIME como zero.|  
 |DT_DBTIME2|Define os campos de hora no tipo de dados DT_DBTIME2 como zero.|  
 |DT_DBTIMESTAMP|Define os campos de hora no tipo de dados DT_DBTIMESTAMP como zero.|  
@@ -150,12 +150,12 @@ ms.locfileid: "71292412"
   
 #### <a name="converting-from-dt_dbtime"></a>Convertendo a partir de DT_DBTIME  
   
-|Converter DT_DBTIME para|Resultado|  
+|Converter DT_DBTIME para|Result|  
 |---------------------------|------------|  
 |DT_FILETIME|Define o campo de data no tipo de dados DT_FILETIME como a data atual.|  
 |DT_DATE|Define o campo de data no tipo de dados DT_DATE como a data atual.|  
 |DT_DBDATE|Define o campo de data no tipo de dados DT_DBDATE como a data atual.|  
-|DT_DBTIME|Nenhuma alteração.|  
+|DT_DBTIME|Sem alteração.|  
 |DT_DBTIME2|Converte o tipo de dados.|  
 |DT_DBTIMESTAMP|Define o campo de data no tipo de dados DT_DBTIMESTAMP como a data atual.|  
 |DT_DBTIMESTAMP2|Define o campo de data no tipo de dados DT_DBTIMESTAMP2 como a data atual.|  
@@ -163,7 +163,7 @@ ms.locfileid: "71292412"
   
 #### <a name="converting-from-dt_dbtime2"></a>Convertendo a partir de DT_DBTIME2  
   
-|Converter DT_DBTIME2 para|Resultado|  
+|Converter DT_DBTIME2 para|Result|  
 |----------------------------|------------|  
 |DT_FILETIME|Define o campo de data no tipo de dados DT_FILETIME como a data atual.<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_FILETIME pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DATE|Define o campo de data do tipo de dados DT_DATE como a data atual.<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DATE pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
@@ -176,20 +176,20 @@ ms.locfileid: "71292412"
   
 #### <a name="converting-from-dt_dbtimestamp"></a>Convertendo a partir de DT_DBTIMESTAMP  
   
-|Converter DT_DBTIMESTAMP para|Resultado|  
+|Converter DT_DBTIMESTAMP para|Result|  
 |--------------------------------|------------|  
 |DT_FILETIME|Converte o tipo de dados.|  
 |DT_DATE|Se um valor representado pelo tipo de dados DT_DBTIMESTAMP ultrapassar o intervalo do tipo de dados DT_DATE, o erro DB_E_DATAOVERFLOW será retornado. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBDATE|Remove o valor de hora representado pelo tipo de dados DT_DBTIMESTAMP.|  
 |DT_DBTIME|Remove o valor de data representado pelo tipo de dados DT_DBTIMESTAMP.<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DBTIME pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIME2|Remove o valor de data representado pelo tipo de dados DT_DBTIMESTAMP.<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DBTIME2 pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
-|DT_DBTIMESTAMP|Nenhuma alteração.|  
+|DT_DBTIMESTAMP|Sem alteração.|  
 |DT_DBTIMESTAMP2|Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DBTIMESTAMP2 pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Define o campo de fuso horário no tipo de dados DT_DBTIMESTAMPOFFSET como zero.<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DBTIMESTAMPOFFSET pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
   
 #### <a name="converting-from-dt_dbtimestamp2"></a>Convertendo a partir de DT_DBTIMESTAMP2  
   
-|Converter DT_DBTIMESTAMP2 para|Resultado|  
+|Converter DT_DBTIMESTAMP2 para|Result|  
 |---------------------------------|------------|  
 |DT_FILETIME|Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_FILETIME pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DATE|Se um valor representado pelo tipo de dados DT_DBTIMESTAMP2 ultrapassar o intervalo do tipo de dados DT_DATE, o erro DB_E_DATAOVERFLOW será retornado. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DATE pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
@@ -202,7 +202,7 @@ ms.locfileid: "71292412"
   
 #### <a name="converting-from-dt_dbtimestampoffset"></a>Convertendo a partir de DT_DBTIMESTAMPOFFSET  
   
-|Converter DT_DBTIMESTAMPOFFSET para|Resultado|  
+|Converter DT_DBTIMESTAMPOFFSET para|Result|  
 |--------------------------------------|------------|  
 |DT_FILETIME|Altera o valor de hora representado pelo tipo de dados DT_DBTIMESTAMPOFFSET para o tempo universal coordenado (UTC).<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_FILETIME pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DATE|Altera o valor de hora representado pelo tipo de dados DT_DBTIMESTAMPOFFSET para UTC.<br /><br /> Se um valor representado pelo tipo de dados DT_DBTIMESTAMPOFFSET ultrapassar o intervalo do tipo de dados DT_DATE, o erro DB_E_DATAOVERFLOW será retornado.<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DATE pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados.<br /><br /> Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
@@ -226,25 +226,25 @@ ms.locfileid: "71292412"
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
-|DT_CY|smallmoney, money|smallmoney, money|CURRENCY||||  
+|DT_CY|smallmoney, money|smallmoney, money|Moeda||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||Data|Data|Data|  
+|DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||date|date|date|  
 |DT_DBTIME||||timestamp|time|time|  
 |DT_DBTIME2|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)(p)|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md) (p)|||||  
-|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|Datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
 |DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||timestamp|timestamp|timestamp|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)(p)|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
-|DT_I4|INT|INT|Longo||INTEGER|INTEGER|  
+|DT_I2|SMALLINT|SMALLINT|Short||SMALLINT|SMALLINT|  
+|DT_I4|INT|INT|long||INTEGER|INTEGER|  
 |DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|REAL|REAL|Single||real|real|  
+|DT_R4|real|real|Single||real|real|  
 |DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
-|DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
+|DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
 |DT_UI1|TINYINT|TINYINT|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  

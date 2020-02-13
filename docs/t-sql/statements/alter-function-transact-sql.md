@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7de5bc19cd49959663bf4ead3f8ebff62b3b982b
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982859"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982859"
 
   Altera uma função CLR ou [!INCLUDE[tsql](../../includes/tsql-md.md)] existente que foi criada anteriormente executando a instrução CREATE FUNCTION, sem alterar as permissões e sem afetar nenhuma função, procedimento armazenado ou gatilho dependente.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -422,7 +422,7 @@ Para obter uma lista de condições que devem ser atendidas antes de uma funçã
  ALLOW_PAGE_LOCKS = { ON | OFF }  
  Especifica se bloqueios de página são permitidos. O padrão é ON.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  ALTER FUNCTION não pode ser usado para alterar uma função com valor escalar a uma função com valor de tabela ou vice-versa. Além disso, ALTER FUNCTION não pode ser usado para alterar uma função embutida para uma função de várias instruções ou vice-versa. ALTER FUNCTION não pode ser usado para alterar uma função [!INCLUDE[tsql](../../includes/tsql-md.md)] para uma função CLR ou vice-versa.  
   
  As seguintes instruções do Service Broker não podem ser incluídas na definição de uma função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário:  

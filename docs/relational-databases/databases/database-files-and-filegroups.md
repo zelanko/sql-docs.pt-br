@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6ccf21bcc3e0657123aa4f0fdcfe9b2d3cb0861a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037587"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315596"
 ---
 # <a name="database-files-and-filegroups"></a>Arquivos e grupos de arquivos do banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Os arquivos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm do
 > Os arquivos de log e os dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser colocados em sistemas de arquivos FAT ou NTFS. Em sistemas Windows, recomendamos o uso do sistema de arquivos NTFS devido aos aspectos de segurança do NTFS. 
 
 > [!WARNING]
-> Os grupos de arquivos de dados de leitura/gravação e os arquivos de log não podem ser colocados em um sistema de arquivos compactados NTFS. Só podem ser colocados bancos de dados somente leitura e grupos de arquivos secundários somente leitura em um sistema de arquivos compactados NTFS.
+> Os grupos de arquivos de dados de leitura/gravação e os arquivos de log não são compatíveis com um sistema de arquivos compactados NTFS. Só podem ser colocados bancos de dados somente leitura e grupos de arquivos secundários somente leitura em um sistema de arquivos compactados NTFS.
 > Para economia de espaço, é altamente recomendável usar a [compactação de dados](../../relational-databases/data-compression/data-compression.md) em vez da compactação do sistema de arquivos.
 
 Quando várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são executadas em um único computador, cada instância recebe um diretório padrão diferente para manter os arquivos dos bancos de dados criados na instância. Para obter mais informações, consulte [Locais de Arquivos para Instâncias Padrão e Nomeadas do SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).

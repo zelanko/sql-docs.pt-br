@@ -30,10 +30,10 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282571"
 ---
 # <a name="integration-services-ssis-logging"></a>Log do SSIS (Integration Services)
@@ -41,7 +41,7 @@ ms.locfileid: "71282571"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui provedores de log que você pode usar para implementar log em pacotes, contêineres e tarefas. Com o log, você pode capturar informações de tempo de execução sobre um pacote, que o ajudem a auditar e solucionar problemas de um pacote sempre que ele for executado. Por exemplo, um log pode capturar o nome do operador que executou o pacote e a hora em que o pacote começou e foi concluído.  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui provedores de log que você pode usar para implementar o log em pacotes, contêineres e tarefas. Com o log, você pode capturar informações de tempo de execução sobre um pacote, que o ajudem a auditar e solucionar problemas de um pacote sempre que ele for executado. Por exemplo, um log pode capturar o nome do operador que executou o pacote e a hora em que o pacote começou e foi concluído.  
   
  Você pode configurar o escopo de log que ocorre durante a execução de um pacote no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para saber mais, veja [Habilitar o log para a execução do pacote no servidor SSIS](#server_logging).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71282571"
   
  A tabela a seguir lista o ProgID e o ClassID dos provedores de log incluídos pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , e o local dos logs nos quais os provedores de log gravam.  
   
-|Provedor de log|ProgID|ClassID|Local|  
+|Provedor de log|ProgID|ClassID|Location|  
 |------------------|------------|-------------|--------------|  
 |Arquivo de texto|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|O gerenciador de conexões de arquivos usado pelo provedor de log especifica o caminho do arquivo de texto.|  
 |SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|O gerenciador de conexões de arquivos que o provedor de registro usa especifica o caminho usado pelo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
@@ -101,7 +101,7 @@ ms.locfileid: "71282571"
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|Computer|O nome do computador no qual o evento de log ocorreu.|  
+|Computador|O nome do computador no qual o evento de log ocorreu.|  
 |Operador|A identidade do usuário que iniciou o pacote.|  
 |SourceName|O nome do contêiner ou tarefa no qual o evento de log ocorreu.|  
 |SourceID|O identificador exclusivo do pacote; o contêiner Loop For, Loop Foreach ou Sequência ou a tarefa na qual o evento de log ocorreu.|  
@@ -232,7 +232,7 @@ ms.locfileid: "71282571"
   
 4.  Na coluna **Configuração**, selecione um gerenciador de conexões ou clique em **\<New connection>** para criar um novo gerenciador de conexões do tipo apropriado para o provedor de logs. Dependendo do provedor selecionado, use um dos seguintes gerenciadores de conexões:  
   
-    -   Para arquivos de texto, use um gerenciador de conexões de Arquivo. Para obter mais informações, consulte [Gerenciador de Conexões de Arquivo](../../integration-services/connection-manager/file-connection-manager.md)  
+    -   Para arquivos de texto, use um gerenciador de conexões de Arquivo. Para saber mais, veja [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
     -   Para o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], use um Gerenciador de conexões de arquivo.  
   
@@ -311,7 +311,7 @@ ms.locfileid: "71282571"
  **Descrição**  
  O campo de descrição é editável. Clique e modifique a descrição padrão do log.  
   
- **Configuração**  
+ **Configuration**  
  Selecione um gerenciador de conexões existente na lista ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões. Dependendo do tipo de provedor de log, você poderá configurar um gerenciador de conexões OLE DB ou um gerenciador de conexões Arquivo. O provedor de log do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Log de Eventos do Windows não requer conexão.  
   
  Tópicos relacionados: [Gerenciador de conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md) , [Gerenciador de Conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager.md)  
@@ -334,7 +334,7 @@ ms.locfileid: "71282571"
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Computer**|O nome do computador no qual o evento de log ocorreu.|  
+|**Computador**|O nome do computador no qual o evento de log ocorreu.|  
 |**Operador**|O nome de usuário da pessoa que iniciou o pacote.|  
 |**SourceName**|O nome do pacote, contêiner ou tarefa no qual o evento de log ocorreu.|  
 |**SourceID**|O Identificador Global Exclusivo (GUID) do pacote, contêiner ou tarefa no qual o evento de log ocorreu.|  
@@ -342,7 +342,7 @@ ms.locfileid: "71282571"
 |**MessageText**|Uma mensagem associada à entrada de log.|  
 |**DataBytes**|Reservado para uso futuro.|  
   
- **Básico**  
+ **Basic**  
  Marque ou desmarque os eventos para log. Esta opção oculta os detalhes de log, exceto a lista de eventos. Se você selecionar um evento, por padrão, todos os detalhes de log serão selecionados para esse evento. Clique em **Avançado** para mostrar todos os detalhes de log.  
   
  **Carregar**  
@@ -412,8 +412,8 @@ ms.locfileid: "71282571"
   
 |Nível de log|Descrição|  
 |-------------------|-----------------|  
-|None|O log está desativado. Apenas o status da execução do pacote é registrado em log.|  
-|Basic|Todos os eventos são registrados em log, menos personalizados e de diagnóstico. Este é o valor padrão.|  
+|Nenhum|O log está desativado. Apenas o status da execução do pacote é registrado em log.|  
+|Basic|Todos os eventos são registrados em log, menos personalizados e de diagnóstico. Esse é o valor padrão.|  
 |RuntimeLineage|Coleta os dados necessários para rastrear as informações de linhagem no fluxo de dados. Você pode analisar essas informações de linhagem para mapear o relacionamento de linhagem entre tarefas. ISVs e desenvolvedores podem compilar ferramentas de mapeamento de linhagem personalizadas com essas informações.|  
 |Desempenho|Apenas estatísticas de desempenho e eventos OnError e OnWarning são registrados em log.<br /><br /> O relatório **Desempenho de Execução** mostra a hora ativa e o tempo total para os componentes de fluxo de dados do pacote. Estas informações estão disponíveis quando o nível de log da última execução do pacote foi definido como **desempenho** ou **detalhado**. Para saber mais, confira [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).<br /><br /> A exibição [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) mostra as horas de início e de término para os componentes de fluxo de dados, para cada fase de uma execução. Esta exibição mostra essas informações para esses componentes apenas quando o nível de log da execução do pacote é definido como **Desempenho** ou **Detalhado**.|  
 |Detalhado|Todos os eventos são registrados em log, inclusive eventos personalizados e de diagnóstico.<br /><br /> Eventos personalizados incluem os eventos registrados por tarefas do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para saber mais sobre eventos personalizados, confira [Custom Messages for Logging](#custom_messages).<br /><br /> Um exemplo de um evento de diagnóstico é o evento **DiagnosticEx** . Sempre que uma tarefa Executar Pacote executa um pacote filho, esse evento captura os valores de parâmetro passados para os pacotes filho.<br /><br /> O evento **DiagnosticEx** também ajuda você a obter os nomes das colunas nas quais ocorrem erros no nível da linha. Esse evento grava um mapa de linhagem de fluxo de dados no log. Em seguida, você pode procurar o nome da coluna nesse mapa de linhagem usando o identificador da coluna capturado por uma saída do erro.  Para obter mais informações, consulte [Tratamento de erro em dados](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> O valor da coluna de mensagem para **DiagnosticEx** é texto XML. Para exibir o texto da mensagem para uma execução de pacote, consulte a exibição [catalog.operation_messages &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Observe que o evento **DiagnosticEx** não preservar o espaço em branco em sua saída XML, a fim de reduzir o tamanho do log. Para melhorar a legibilidade, copie o log em um editor de XML, no Visual Studio, por exemplo, que ofereça suporte à formatação XML e ao realce de sintaxe.<br /><br /> A exibição [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) mostra uma linha cada vez que um componente de fluxo de dados envia dados a um componente downstream, para determinada execução do pacote. O nível de log deve ser definido como **Detalhado** para capturar essas informações na exibição.|  
@@ -509,7 +509,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 |**DTSBulkInsertTaskEnd**|Indica que a inserção em massa foi concluída.|  
 |**DTSBulkInsertTaskInfos**|Fornece informações descritivas sobre a tarefa.|  
   
-####  <a name="DataFlow"></a> Tarefa de Fluxo de Dados  
+####  <a name="DataFlow"></a> Data Flow Task  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa de Fluxo de Dados.  
   
 |Entrada de log|Descrição|  

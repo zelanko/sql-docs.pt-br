@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 78b372942de6ec62823dddecd08fdb7221cbe7a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68219688"
----
 
 
 ### <a name="index-stats-options"></a>Opções de estatísticas de índice
@@ -34,7 +26,7 @@ Além disso, em versões anteriores, a granularidade do controle era menos refin
 
 - Rápido
 - Amostra
-- Detalhada
+- Detalhado
 
 
  **Otimize o índice somente se:**  

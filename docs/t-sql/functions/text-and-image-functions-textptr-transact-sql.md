@@ -21,10 +21,10 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099029"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Funções Text e Image – TEXTPTR (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68099029"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] A funcionalidade alternativa não está disponível.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ TEXTPTR ( column )
 ## <a name="return-types"></a>Tipos de retorno  
  **varbinary**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para tabelas com texto em linha, TEXTPTR retorna um identificador para que o texto seja processado. É possível obter um ponteiro de texto válido mesmo que o valor de texto seja nulo.  
   
  Não é possível usar a função TEXTPTR em colunas de exibições. Ela só pode ser usada em colunas de tabelas. Para usar a função TEXTPTR em uma coluna de uma exibição, é necessário definir o nível de compatibilidade como 80 usando [Nível de compatibilidade ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Se a tabela não tiver um texto em linha, e se uma coluna **text**, **ntext** ou **image** não foi inicializada por uma instrução UPDATETEXT, TEXTPTR retornará um ponteiro nulo.  
@@ -72,8 +72,8 @@ TEXTPTR ( column )
 > [!NOTE]  
 >  Para executar os exemplos a seguir, é necessário instalar o banco de dados **pubs**.  
   
-### <a name="a-using-textptr"></a>A. Usando TEXTPTR  
- O exemplo a seguir usa a função `TEXTPTR` para localizar a coluna **image** `logo` associada a `New Moon Books` na tabela `pub_info` do banco de dados `pubs`. O ponteiro de texto é colocado em uma variável local `@ptrval.`  
+### <a name="a-using-textptr"></a>a. Usando TEXTPTR  
+ O exemplo a seguir usa a função `TEXTPTR` para localizar a coluna **image**`logo` associada a `New Moon Books` na tabela `pub_info` do banco de dados `pubs`. O ponteiro de texto é colocado em uma variável local `@ptrval.`  
   
 ```  
 USE pubs;  

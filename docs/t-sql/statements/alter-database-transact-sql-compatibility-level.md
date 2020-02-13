@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d65bcb7db0bc0628d1c7b40d21e9b2089ad285c
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 7ed32cf93d5bbf13580fc15d649ad403b98524cf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127692"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909646"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nível de compatibilidade de ALTER DATABASE (Transact-SQL)
 
@@ -54,7 +54,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } É a versão
 
 <a name="supported-dbcompats"></a>
 
-|Product|Versão do Mecanismo de Banco de Dados|Designação de nível de compatibilidade padrão|Valores do nível de compatibilidade com suporte|
+|Produto|Versão do Mecanismo de Banco de Dados|Designação de nível de compatibilidade padrão|Valores do nível de compatibilidade com suporte|
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
@@ -71,8 +71,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } É a versão
 > [!IMPORTANT]
 > Os números de versão do mecanismo de banco de dados para o SQL Server e o Banco de Dados SQL do Azure não são comparáveis entre si, mas números de build internos para esses produtos separados. O mecanismo de banco de dados para o Banco de Dados SQL do Azure se baseia na mesma base de código do mecanismo de banco de dados do SQL Server. O mais importante é que o mecanismo de banco de dados do Banco de Dados SQL do Azure sempre tem os bits mais recentes do mecanismo de banco de dados SQL. A versão 12 do Banco de Dados SQL do Azure é mais recente do que a versão 15 do SQL Server.
 
-## <a name="remarks"></a>Remarks
-
+## <a name="remarks"></a>Comentários
 Para todas as instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o nível de compatibilidade padrão está associado à versão do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Novos bancos de dados são definidos como esse nível, a não ser que o banco de dados do **modelo** tenha um nível de compatibilidade inferior. Para bancos de dados anexados ou restaurados de qualquer versão anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o banco de dados reterá seu nível de compatibilidade existente se tiver o mínimo de permissão para essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mover um banco de dados com um nível de compatibilidade mais baixo do que o nível permitido pelo [!INCLUDE[ssde_md](../../includes/ssde_md.md)] define automaticamente o banco de dados para o nível de compatibilidade mais baixo permitido. Isso se aplica aos bancos de dados do sistema e de usuário.
 
 Os comportamentos a seguir são esperadas para [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] quando um banco de dados for anexado ou restaurado e após uma atualização in-loco:
@@ -132,13 +131,13 @@ Da perspectiva do aplicativo, use o nível de compatibilidade mais baixo como um
 Para obter mais detalhes, incluindo o fluxo de trabalho recomendado para atualizar o nível de compatibilidade do banco de dados, confira [Melhores práticas para atualizar o Nível de Compatibilidade do Banco de Dados](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level).
 
 > [!IMPORTANT]
-> A funcionalidade **descontinuada** introduzida em uma determinada versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **não é** protegida pelo nível de compatibilidade. Refere-se à funcionalidade removida do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
+> A funcionalidade **descontinuada** introduzida em uma determinada versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**não é** protegida pelo nível de compatibilidade. Refere-se à funcionalidade removida do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
 > Por exemplo, a dica `FASTFIRSTROW` foi descontinuada no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e substituída pela dica `OPTION (FAST n )`. A definição do nível de compatibilidade do banco de dados como 110 não restaurará a dica descontinuada.  
 >  
 > Para saber mais sobre a funcionalidade descontinuada, confira [Funcionalidade descontinuada do Mecanismo de Banco de Dados no SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Funcionalidade descontinuada do Mecanismo de Banco de Dados no SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) e [Funcionalidade descontinuada do Mecanismo de Banco de Dados no SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali).    
 
 > [!IMPORTANT]
-> As **alterações da falha** introduzidas em uma determinada versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **podem não** estar protegidas pelo nível de compatibilidade. Refere-se às alterações de comportamento entre versões do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Geralmente, o comportamento do [!INCLUDE[tsql](../../includes/tsql-md.md)] é protegido pelo nível de compatibilidade. No entanto, os objetos do sistema alterados ou removidos **não** são protegidos pelo nível de compatibilidade.
+> As **alterações da falha** introduzidas em uma determinada versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**podem não** estar protegidas pelo nível de compatibilidade. Refere-se às alterações de comportamento entre versões do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Geralmente, o comportamento do [!INCLUDE[tsql](../../includes/tsql-md.md)] é protegido pelo nível de compatibilidade. No entanto, os objetos do sistema alterados ou removidos **não** são protegidos pelo nível de compatibilidade.
 >
 > Um exemplo de uma alteração recente **protegida** pelo nível de compatibilidade é uma conversão implícita dos tipos de dados datetime em datetime2. No nível de compatibilidade do banco de dados 130, eles mostram uma precisão aprimorada, levando em conta os milissegundos fracionários, resultando em diferentes valores convertidos. Para restaurar o comportamento de conversão anterior, defina o nível de compatibilidade do banco de dados como 120 ou inferior.
 >
@@ -152,7 +151,9 @@ Para obter mais detalhes, incluindo o fluxo de trabalho recomendado para atualiz
 ## <a name="differences-between-compatibility-levels"></a>Diferenças entre Níveis de Compatibilidade
 Para todas as instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o nível de compatibilidade padrão está associado à versão do [!INCLUDE[ssDE](../../includes/ssde-md.md)], conforme visto [nesta tabela](#supported-dbcompats). Para novos trabalhos de desenvolvimento, sempre planeje a certificação de aplicativos no Nível de Compatibilidade do Banco de Dados mais recente.
 
-No entanto, o Nível de Compatibilidade do Banco de Dados também fornece compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], porque os bancos de dados anexados ou restaurados de qualquer versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retêm o nível de compatibilidade existente (se ele for igual ou superior ao nível de compatibilidade mínimo permitido). Isso foi discutido na seção [Usando o nível de compatibilidade para compatibilidade com versões anteriores](#backwardCompat) deste artigo.
+A nova sintaxe de [!INCLUDE[tsql](../../includes/tsql-md.md)] não é restringida pelo nível de compatibilidade do banco de dados, exceto quando ela pode interromper aplicativos existentes criando um conflito com o código de [!INCLUDE[tsql](../../includes/tsql-md.md)] do usuário. Essas exceções estão documentadas nas próximas seções deste artigo que descrevem as diferenças entre níveis de compatibilidade específicos.
+
+O nível de compatibilidade do banco de dados também fornece compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], porque os bancos de dados anexados ou restaurados de qualquer versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retêm o nível de compatibilidade existente (se ele for igual ou superior ao nível de compatibilidade mínimo permitido). Isso foi discutido na seção [Usando o nível de compatibilidade para compatibilidade com versões anteriores](#backwardCompat) deste artigo.
 
 Começando no Nível de Compatibilidade do Banco de Dados 130, todas as novas correções e recursos que afetam os planos de consulta foram adicionados somente ao nível de compatibilidade mais recente disponível, também chamado de nível de compatibilidade padrão. Isso foi feito para minimizar o risco durante as atualizações que surge da degradação do desempenho devido a alterações no plano de consulta potencialmente introduzidas pelos novos comportamentos de otimização de consulta. 
 
@@ -175,9 +176,9 @@ As alterações fundamentais que afetam o plano adicionadas somente ao nível de
     
     |Versão do DE (Mecanismo de Banco de Dados)|Nível de compatibilidade do banco de dados|TF 4199|Alterações do QO em relação a todos os níveis de compatibilidade do banco de dados anteriores|Alterações do QO para a versão do DE atual pós-RTM|
     |----------|----------|---|------------|--------|
-    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|100 a 120<br /><br /><br />130|Desativado<br />Em<br /><br />Desativado<br />Em|**Desabilitado**<br />Habilitado<br /><br />**Enabled**<br />Habilitado|Desabilitado<br />Habilitado<br /><br />Desabilitado<br />Habilitado|
-    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|100 a 120<br /><br /><br />130<br /><br /><br />140|Desativado<br />Em<br /><br />Desativado<br />Em<br /><br />Desativado<br />Em|**Desabilitado**<br />Habilitado<br /><br />**Enabled**<br />Habilitado<br /><br />**Enabled**<br />Habilitado|Desabilitado<br />Habilitado<br /><br />Desabilitado<br />Habilitado<br /><br />Desabilitado<br />Habilitado|
-    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e 12 ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])|100 a 120<br /><br /><br />130 a 140<br /><br /><br />150|Desativado<br />Em<br /><br />Desativado<br />Em<br /><br />Desativado<br />Em|**Desabilitado**<br />Habilitado<br /><br />**Enabled**<br />Habilitado<br /><br />**Enabled**<br />Habilitado|Desabilitado<br />Habilitado<br /><br />Desabilitado<br />Habilitado<br /><br />Desabilitado<br />Habilitado|
+    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|100 a 120<br /><br /><br />130|Desativado<br />Por<br /><br />Desativado<br />Por|**Desabilitado**<br />habilitado<br /><br />**Enabled**<br />habilitado|Desabilitado<br />habilitado<br /><br />Desabilitado<br />habilitado|
+    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|100 a 120<br /><br /><br />130<br /><br /><br />140|Desativado<br />Por<br /><br />Desativado<br />Por<br /><br />Desativado<br />Por|**Desabilitado**<br />habilitado<br /><br />**Enabled**<br />habilitado<br /><br />**Enabled**<br />habilitado|Desabilitado<br />habilitado<br /><br />Desabilitado<br />habilitado<br /><br />Desabilitado<br />habilitado|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e 12 ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])|100 a 120<br /><br /><br />130 a 140<br /><br /><br />150|Desativado<br />Por<br /><br />Desativado<br />Por<br /><br />Desativado<br />Por|**Desabilitado**<br />habilitado<br /><br />**Enabled**<br />habilitado<br /><br />**Enabled**<br />habilitado|Desabilitado<br />habilitado<br /><br />Desabilitado<br />habilitado<br /><br />Desabilitado<br />habilitado|
     
     > [!IMPORTANT]
     > As correções do Otimizador de Consulta que tratam de resultados errados ou de erros de violação de acesso não são protegidas pelo sinalizador de rastreamento 4199. Essas correções não são consideradas opcionais.
@@ -192,9 +193,9 @@ As alterações fundamentais que afetam o plano adicionadas somente ao nível de
     
     |Versão do Mecanismo de Banco de Dados|Nível de compatibilidade do banco de dados|Novas alterações na versão do CE|
     |----------|--------|-------------|
-    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|< 130<br />130|Desabilitado<br />Habilitado|
-    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])<sup>1</sup>|< 140<br />140|Desabilitado<br />Habilitado|
-    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])<sup>1</sup>|< 150<br />150|Desabilitado<br />Habilitado|
+    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|< 130<br />130|Desabilitado<br />habilitado|
+    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])<sup>1</sup>|< 140<br />140|Desabilitado<br />habilitado|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])<sup>1</sup>|< 150<br />150|Desabilitado<br />habilitado|
     
     <sup>1</sup> Aplicável também a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
     
@@ -256,7 +257,7 @@ Esta seção descreve os novos comportamentos apresentados com o nível de compa
 
 |Configuração do nível de compatibilidade 110 ou inferior|Configuração do nível de compatibilidade 120|
 |--------------------------------------------------|-----------------------------------------|
-|O otimizador de consulta mais antigo é usado.|O [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] inclui melhorias significativas no componente que cria e otimiza planos de consulta. Esse novo recurso do otimizador de consulta depende do uso do Nível de Compatibilidade do Banco de Dados 120. Novos aplicativos de banco de dados devem ser desenvolvidos usando o Nível de Compatibilidade do Banco de Dados 120 para tirar proveito dessas melhorias. Os aplicativos migrados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem ser cuidadosamente testados para confirmar que o bom desempenho será mantido ou melhorado. Se o desempenho diminuir, você poderá definir o Nível de Compatibilidade do Banco de Dados como 110 ou menos, a fim de usar a metodologia de otimizador de consulta mais antiga.<br /><br /> O Nível de Compatibilidade do Banco de Dados 120 usa um novo avaliador de cardinalidade que é ajustado para moderno data warehouse e cargas de trabalho OLTP. Antes de definir o Nível de Compatibilidade do Banco de Dados como 110 devido a problemas de desempenho, confira as recomendações na seção *Planos de Consulta* do tópico [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [Novidades do Mecanismo de Banco de Dados](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).|
+|O otimizador de consulta mais antigo é usado.|O [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] inclui melhorias significativas no componente que cria e otimiza planos de consulta. Esse novo recurso do otimizador de consulta depende do uso do Nível de Compatibilidade do Banco de Dados 120. Novos aplicativos de banco de dados devem ser desenvolvidos usando o Nível de Compatibilidade do Banco de Dados 120 para tirar proveito dessas melhorias. Os aplicativos migrados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem ser cuidadosamente testados para confirmar que o bom desempenho será mantido ou melhorado. Se o desempenho diminuir, você poderá definir o Nível de Compatibilidade do Banco de Dados como 110 ou menos, a fim de usar a metodologia de otimizador de consulta mais antiga.<br /><br /> O Nível de Compatibilidade do Banco de Dados 120 usa um novo avaliador de cardinalidade que é ajustado para moderno data warehouse e cargas de trabalho OLTP. Antes de definir o nível de compatibilidade do banco de dados como 110 devido a problemas de desempenho, confira as recomendações na seção *Planos de consulta* do tópico [Novidades do Mecanismo de Banco de Dados](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md) do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].|
 |Em níveis de compatibilidade abaixo de 120, a configuração de idioma é ignorada durante a conversão de um valor de **date** em um valor de cadeia de caracteres. Observe que esse comportamento é específico apenas ao tipo **date**. Veja o exemplo B na seção Exemplos abaixo.|A configuração de idioma não é ignorada durante a conversão de um valor de **date** em um valor de cadeia de caracteres.|
 |As referências recursivas no lado direito de uma cláusula `EXCEPT` criam um loop infinito. O exemplo C na seção Exemplos abaixo demonstra esse comportamento.|As referências recursivas em uma cláusula `EXCEPT` geram um erro em conformidade com o padrão ANSI SQL.|
 |A CTE (expressão de tabela comum) recursiva permite nomes de coluna duplicados.|Uma CTE recursiva não permite nomes de coluna duplicados.|
@@ -289,7 +290,7 @@ Esta seção descreve os novos comportamentos apresentados com o nível de compa
 |Ao criar ou alterar uma função de partição, os literais **datetime** e **smalldatetime** na função são avaliados, considerando US_English como a configuração de idioma.|A configuração atual de idioma é usada para avaliar **datetime** e literais de **smalldatetime** na função de partição.|Médio|
 |A cláusula `FOR BROWSE` é permitida (e ignorada) em instruções `INSERT` e `SELECT INTO`.|A cláusula `FOR BROWSE` não é permitida em instruções `INSERT` e `SELECT INTO`.|Médio|
 |Predicados de texto completo são permitidos na cláusula `OUTPUT`.|Predicados de texto completo não são permitidos na cláusula `OUTPUT`.|Baixo|
-|`CREATE FULLTEXT STOPLIST`, `ALTER FULLTEXT STOPLIST` e `DROP FULLTEXT STOPLIST` não são compatíveis. A lista de palavras irrelevantes do sistema é associada automaticamente a novos índices de texto completo.|`CREATE FULLTEXT STOPLIST`, `ALTER FULLTEXT STOPLIST` e `DROP FULLTEXT STOPLIST` são compatíveis.|Baixo|
+|`CREATE FULLTEXT STOPLIST`, `ALTER FULLTEXT STOPLIST` e `DROP FULLTEXT STOPLIST` não têm suporte. A lista de palavras irrelevantes do sistema é associada automaticamente a novos índices de texto completo.|`CREATE FULLTEXT STOPLIST`, `ALTER FULLTEXT STOPLIST` e `DROP FULLTEXT STOPLIST` são compatíveis.|Baixo|
 |`MERGE` não é imposto como uma palavra-chave reservada.|MERGE é uma palavra-chave completamente reservada. A instrução `MERGE` é compatível com os níveis de compatibilidade 100 e 90.|Baixo|
 |O uso do argumento \<dml_table_source> da instrução INSERT gera um erro de sintaxe.|Além disso, você pode capturar os resultados de uma cláusula OUTPUT em uma instrução INSERT, UPDATE, DELETE ou MERGE aninhada e inserir esses resultados em uma tabela ou exibição de destino. Isto é feito com o argumento \<dml_table_source> da instrução INSERT.|Baixo|
 |A menos que `NOINDEX` seja especificado, `DBCC CHECKDB` ou `DBCC CHECKTABLE` executará verificações de consistência física e lógica em uma única tabela ou exibição indexada e em todos os seus índices não clusterizados e XML. Não há suporte para índices espaciais.|A menos que `NOINDEX` seja especificado, `DBCC CHECKDB` ou `DBCC CHECKTABLE` executará verificações de consistência física e lógica em uma única tabela e em todos os seus índices não clusterizados. Entretanto, em índices XML, índices espaciais e exibições indexadas, por padrão são executadas somente as verificações de consistência física.<br /><br /> Se `WITH EXTENDED_LOGICAL_CHECKS` for especificado, verificações lógicas serão executadas em exibições indexadas, índices XML e índices espaciais, quando presentes. Por padrão, as verificações de consistência física são executadas antes das verificações de consistência lógica. Se `NOINDEX` também estiver especificado, apenas as verificações lógicas serão executadas.|Baixo|
@@ -333,7 +334,7 @@ Requer a permissão `ALTER` no banco de dados.
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-changing-the-compatibility-level"></a>A. Alterando o nível de compatibilidade
+### <a name="a-changing-the-compatibility-level"></a>a. Alterando o nível de compatibilidade
 
 O exemplo a seguir altera o nível de compatibilidade do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] para 110, o padrão para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
 

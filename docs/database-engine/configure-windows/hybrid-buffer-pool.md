@@ -1,7 +1,7 @@
 ---
 title: Pool de buffers híbrido | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -10,28 +10,34 @@ ms.topic: conceptual
 ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: d03c66219330df3cca892bd005d1e9a456959c83
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+manager: amitban
+ms.openlocfilehash: c7919232bcd2c84ea58ac2e8b9d23b48cc58ee60
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823567"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831699"
 ---
 # <a name="hybrid-buffer-pool"></a>Pool de Buffers Híbrido
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-O Pool de Buffers Híbrido permite que o mecanismo de banco de dados acesse diretamente as páginas de dados em arquivos de banco de dados armazenados em dispositivos PMEM (memória persistente). Esse recurso foi introduzido no [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
+O pool de buffers híbrido permite que objetos do pool de buffers façam referência a páginas de dados em arquivos de banco de dados que residem em dispositivos de memória persistente (PMEM), em vez de cópias das páginas de dados armazenadas em cache na DRAM volátil. Esse recurso foi introduzido no [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
 
-Em um sistema tradicional sem PMEM, o SQL Server armazena as páginas de dados em cache no pool de buffers. Com o pool de buffers híbrido, o SQL Server ignora a execução de uma cópia da página para a parte do pool de buffers baseada em DRAM e, em vez disso, acessa a página diretamente no arquivo de banco de dados que reside em um dispositivo PMEM. O acesso de leitura a arquivos de dados em dispositivos PMEM para o pool de buffers híbridos é executado diretamente seguindo um ponteiro para as páginas de dados no dispositivo PMEM.  
+![Pool de Buffers Híbrido](./media/hybrid-buffer-pool.png)
 
-Somente páginas limpas podem ser acessadas diretamente em um dispositivo PMEM. Quando uma página é marcada como suja, ela é copiada para o pool de buffers DRAM antes de ser finalmente gravada mais uma vez no dispositivo PMEM e marcada como limpa de novo. Isso ocorrerá durante as operações de ponto de verificação regulares. O mecanismo para copiar o arquivo do dispositivo PMEM para DRAM é o MMIO (E/S mapeado para memória direta) e também é conhecido como o *esclarecimento* dos arquivos de dados dentro do SQL Server.
+Os dispositivos de memória persistente (PMEM) são endereçáveis por byte e se um sistema de arquivos com reconhecimento de memória persistente do DAX (acesso direto) (como XFS, EXT4 ou NTFS) for usado, os arquivos no sistema de arquivos poderão ser acessados usando as APIs de sistema de arquivos usuais no sistema de arquivos. Como alternativa, ele pode executar o que é conhecido como operações de carregamento e armazenamento em relação aos mapas de memória dos arquivos no dispositivo. Isso permite que aplicativos de reconhecimento de PMEM, como SQL Server, acessem arquivos no dispositivo sem atravessar a pilha de armazenamento tradicional.
 
+O pool de buffers híbrido usa essa capacidade de executar operações de carregamento e armazenamento em arquivos mapeados de memória, para aproveitar o dispositivo PMEM como cache para o pool de buffers, bem como armazenar arquivos de banco de dados. Isso cria a situação única em que uma leitura lógica e uma leitura física são essencialmente a mesma operação. Os dispositivos de memória persistentes podem ser acessados por meio do barramento de memória, assim como a DRAM volátil normal.
 
-O recurso de pool de buffers híbrido está disponível para o Windows e o Linux. O dispositivo PMEM precisa ser formatado com um sistema de arquivos que dá suporte ao DAX (DirectAccess). Os sistemas de arquivos XFS, EXT4 e NTFS têm suporte para o DAX. O SQL Server detectará automaticamente se os arquivos de dados residirem em um dispositivo PMEM adequadamente formatado e realizará o mapeamento de memória no espaço do usuário. Esse mapeamento acontece na inicialização, quando um novo banco de dados é anexado, restaurado ou criado ou quando o recurso de pool de buffers híbrido é habilitado para um banco de dados.
+Somente as páginas de dados limpas são armazenadas em cache no dispositivo para o pool de buffers híbrido. Quando uma página é marcada como suja, ela é copiada para o pool de buffers da DRAM antes de ser finalmente gravada mais uma vez no dispositivo PMEM e marcada como limpa de novo. Isso ocorrerá durante as operações de ponto de verificação regulares de maneira semelhante àquela executada em relação a um dispositivo de bloco padrão.
 
-Para obter mais informações sobre o suporte do Windows Server para PMEM, veja [Implantar memória persistente no Windows Server](/windows-server/storage/storage-spaces/deploy-pmem/).
+O recurso de pool de buffers híbrido está disponível para o Windows e o Linux. O dispositivo PMEM precisa ser formatado com um sistema de arquivos que dá suporte ao DAX (DirectAccess). Os sistemas de arquivos XFS, EXT4 e NTFS têm suporte para o DAX. O SQL Server detectará automaticamente se os arquivos de dados residirem em um dispositivo PMEM formatado corretamente e executará o mapeamento de memória de arquivos de banco de dados durante a inicialização, quando um novo banco de dados for anexado, restaurado ou criado.
 
-Para saber mais sobre como configurar o SQL Server em Linux para dispositivos PMEM, veja [Implantar a memória persistente](../../linux/sql-server-linux-configure-pmem.md).
+Para obter mais informações, consulte:
+
+* [Entender e implantar a memória persistente (Windows)](/windows-server/storage/storage-spaces/deploy-pmem/)
+* [Configurar a memória persistente (PMEM) para o SQL Server em Linux](../../linux/sql-server-linux-configure-pmem.md)
+
 
 ## <a name="enable-hybrid-buffer-pool"></a>Habilitar o pool de buffers híbrido
 
@@ -43,7 +49,7 @@ O seguinte exemplo habilita o pool de buffers híbrido em uma instância do SQL 
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;
 ```
 
-Por padrão, o pool de buffers híbrido é definido como desabilitado no escopo da instância. Observe que, para a alteração de configuração entrem em vigor, a instância do SQL Server deve ser reiniciada. Uma reinicialização é necessária para facilitar a alocação de páginas suficientes de hash para levar em conta a capacidade total de PMEM no servidor.
+Por padrão, o pool de buffers híbrido é desabilitado no escopo da instância. Observe que, para a alteração de configuração entrem em vigor, a instância do SQL Server deve ser reiniciada. Uma reinicialização é necessária para facilitar a alocação de páginas suficientes de hash para levar em conta a capacidade total de PMEM no servidor.
 
 O exemplo a seguir habilita o pool de buffers híbrido em um banco de dados específico.
 
@@ -51,17 +57,17 @@ O exemplo a seguir habilita o pool de buffers híbrido em um banco de dados espe
 ALTER DATABASE <databaseName> SET MEMORY_OPTIMIZED = ON;
 ```
 
-Por padrão, o pool de buffers híbrido é definido como habilitado no escopo do banco de dados.
+Por padrão, o pool de buffers híbrido está habilitado no escopo do banco de dados.
 
 ## <a name="disable-hybrid-buffer-pool"></a>Desabilitar o pool de buffers híbrido
 
-O seguinte exemplo desabilita o pool de buffers híbrido em uma instância do SQL Server:
+O exemplo seguinte desabilita o pool de buffers híbrido no nível da instância:
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = OFF;
 ```
 
-Por padrão, o pool de buffers híbrido é definido como desabilitado no escopo da instância. Observe que, para a alteração de configuração entrem em vigor, a instância do SQL Server deve ser reiniciada. A reinicialização é necessária para evitar a alocação de páginas de hash, uma vez que a capacidade PMEM no servidor não precisa ser considerada.
+Por padrão, o pool de buffers híbrido é desabilitado no nível da instância. Para que essa alteração entre em vigor, a instância deve ser reiniciada. Isso garante que páginas de hash suficientes sejam alocadas para o pool de buffers, já que a capacidade da PMEM no servidor agora precisa ser considerada.
 
 O exemplo a seguir desabilita o pool de buffers híbrido em um banco de dados específico.
 
@@ -69,11 +75,11 @@ O exemplo a seguir desabilita o pool de buffers híbrido em um banco de dados es
 ALTER DATABASE <databaseName> SET MEMORY_OPTIMIZED = OFF;
 ```
 
-Por padrão, o pool de buffers híbrido é definido como habilitado no escopo do banco de dados.
+Por padrão, o pool de buffers híbrido está habilitado no escopo do banco de dados.
 
 ## <a name="view-hybrid-buffer-pool-configuration"></a>Exibir a configuração do pool de buffers híbrido
 
-O exemplo a seguir retorna o status atual da configuração do sistema do pool de buffers híbrido para uma instância do SQL Server.
+O exemplo a seguir retorna o status atual da configuração pool de buffers híbrido da instância.
 
 ```sql
 SELECT * FROM
@@ -95,10 +101,12 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 Ao formatar seu dispositivo PMEM no Windows, use o maior tamanho de unidade de alocação disponível para NTFS (2 MB no Windows Server 2019) e verifique se o dispositivo foi formatado para o DAX (Direct Access).
 
-Para obter um desempenho ideal, habilite [Páginas Bloqueadas na Memória](./enable-the-lock-pages-in-memory-option-windows.md) no Windows.
+Use o modelo de alocação de memória de página grande, que pode ser habilitado com o [sinalizador de rastreamento 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). O sinalizador de rastreamento 834 é um sinalizador de rastreamento de inicialização.
+
+Usar o modelo de alocação de memória de página grande requer o uso de [páginas bloqueadas na memória](./enable-the-lock-pages-in-memory-option-windows.md) no Windows.
 
 Os tamanhos de arquivos devem ser um múltiplo de 2 MB (2 MB de módulo deve igual a zero).
 
-Se a configuração no escopo do servidor para o pool de buffers híbrido for definida como desabilitada, o pool de buffers híbrido não será usado por nenhum banco de dados de usuário.
+Se a configuração com escopo do servidor para o pool de buffers híbrido for desabilitada, o recurso não será usado por nenhum banco de dados de usuário.
 
-Se a configuração no escopo do servidor para o buffer híbrido estiver habilitada, você poderá desabilitar o uso do pool de buffers híbrido para bancos de dados de usuário individuais seguindo as etapas para desabilitar o pool de buffers híbrido no nível do escopo do banco de dados para esses bancos de dados de usuário.
+Se a configuração com escopo do servidor para o pool de buffers híbrido estiver habilitada, você poderá usar a configuração com escopo do banco de dados para desabilitar o recurso para bancos de dados de usuário individuais.

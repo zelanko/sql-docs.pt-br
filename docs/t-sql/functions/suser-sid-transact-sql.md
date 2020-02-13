@@ -25,10 +25,10 @@ ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981743"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "73981743"
 
   Retorna o SID (número de identificação de segurança) para o nome de logon especificado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,7 +59,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ## <a name="return-types"></a>Tipos de retorno  
  **varbinary(85)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  SUSER_SID pode ser usado como uma restrição DEFAULT em ALTER TABLE ou CREATE TABLE. SUSER_ID pode ser usado em uma lista de seleção, em uma cláusula WHERE ou em qualquer local em que uma expressão seja permitida. SUSER_SID deve sempre ser seguido de parênteses, mesmo que nenhum parâmetro seja especificado.  
   
  Quando chamado sem um argumento, SUSER_SID retorna o SID do contexto de segurança atual. Quando chamado sem um argumento em um lote que alternou o contexto usando EXECUTE AS, SUSER_SID retorna o SID do contexto representado. Quando chamado de um contexto representado, SUSER_SID(ORIGINAL_LOGIN()) retorna o SID contexto original.  
@@ -70,7 +70,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-suser_sid"></a>A. Usando SUSER_SID  
+### <a name="a-using-suser_sid"></a>a. Usando SUSER_SID  
  O exemplo a seguir retorna o SID (número de identificação de segurança) para o contexto de segurança atual.  
   
 ```  

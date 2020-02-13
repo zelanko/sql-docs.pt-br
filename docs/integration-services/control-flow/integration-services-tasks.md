@@ -27,10 +27,10 @@ ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 45e7828421f6a8d4bca6084c6b9e0d215b432cc9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294083"
 ---
 # <a name="integration-services-tasks"></a>Tarefas do Integration Services
@@ -38,11 +38,11 @@ ms.locfileid: "71294083"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  As tarefas são elementos de fluxo de controle que definem unidades de trabalho que são executadas em um fluxo de controle de pacote. Um pacote do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é composto de uma ou mais tarefas. Se o pacote contiver mais de uma tarefa, elas estarão conectadas e sequenciadas no fluxo de controle por restrições de precedência.  
+  As tarefas são elementos de fluxo de controle que definem unidades de trabalho que são executadas em um fluxo de controle de pacote. Um pacote do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é composto por uma ou mais tarefas. Se o pacote contiver mais de uma tarefa, elas estarão conectadas e sequenciadas no fluxo de controle por restrições de precedência.  
   
  Você também poderá escrever tarefas personalizadas que usam uma linguagem de programação que oferece suporte a COM, como Visual Basic, ou uma linguagem de programação .NET, como C#.  
   
- O Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)], a ferramenta gráfica no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para trabalhar com pacotes, fornece a superfície de design para criar fluxo de controle de pacote e oferece editores personalizados para configurar tarefas. Você também pode programar o modelo de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para criar pacotes programaticamente.  
+ O Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)], a ferramenta gráfica no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para trabalhar com pacotes, fornece a superfície de design para criar fluxo de controle de pacote e oferece editores personalizados para configurar tarefas. Você também pode programar o modelo de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para criar pacotes programaticamente.  
   
 ## <a name="types-of-tasks"></a>Tipos de tarefas  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui os tipos de tarefas a seguir.  

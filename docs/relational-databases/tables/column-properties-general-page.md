@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 732c1c759eec875af0bd65b763b21d912ffe2de7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085757"
 ---
 # <a name="column-properties-general-page"></a>Propriedades da coluna (página Geral)
@@ -52,11 +52,11 @@ ms.locfileid: "68085757"
  **Identidade**  
  Indica se a coluna é a coluna de identidade da tabela. Os valores possíveis são **True** e **False**.  
   
- **Propagação de Identidade**  
+ **Semente de Identidade**  
  Indica o valor de linha inicial para uma coluna de identidade.  
   
  **Incremento de Identidade**  
- A propriedade **Incremento de Identidade** especifica o valor que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adiciona ao maior valor existente de linha de identidade ao gerar um valor de identidade para uma linha que esteja sendo inserida.  
+ A propriedade **Incremento de Identidade** especifica o valor que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adiciona ao maior valor existente de linha de identidade ao gerar um valor de identidade para uma linha que está sendo inserida.  
   
  **Associação Padrão**  
  O padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associado à coluna. Essa opção estará em branco se nenhum padrão estiver associado.  

@@ -13,10 +13,10 @@ ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2f31288df7d03bf527f1ee0a0bcd3b8ed84bba19
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908696"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Trabalhar com diretórios e caminhos em FileTables
@@ -95,9 +95,9 @@ GO
 ||||  
 |-|-|-|  
 |*is_directory* **value**|*file_stream* **value**|**Comportamento**|  
-|FALSE|NULL|Esta é uma combinação inválida que será capturada por uma restrição definida por sistema.|  
+|FALSE|NULO|Esta é uma combinação inválida que será capturada por uma restrição definida por sistema.|  
 |FALSE|\<valor>|O item representa um arquivo.|  
-|TRUE|NULL|O item representa um diretório.|  
+|TRUE|NULO|O item representa um diretório.|  
 |TRUE|\<valor>|Esta é uma combinação inválida que será capturada por uma restrição definida por sistema.|  
   
 ##  <a name="alwayson"></a> Usando VNNs (nomes de rede virtual) com grupos de disponibilidade AlwaysOn  

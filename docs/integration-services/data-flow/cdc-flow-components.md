@@ -11,10 +11,10 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d1b067ae6f35f9f96f7f0f7207cb6d09456a177f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293408"
 ---
 # <a name="cdc-flow-components"></a>Componentes de fluxo CDC
@@ -81,7 +81,7 @@ Uma mensagem é exibida depois de instalar os componentes. Clique em **Sim** qua
 ## <a name="getting-started-with-the-change-data-capture-components"></a>Guia de Introdução com os componentes do Change Data Capture  
  Um pacote de CDC típico processa as alterações em um grupo de tabelas. A parte básica do fluxo de controle deste tipo de pacote de CDC é mostrada na figura a seguir. Este pacote é chamado de pacote de processamento de trickle feed.  
   
- ![Fluxo de controle de pacote de processamento de trickle feed](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Fluxo de controle de pacote de processamento de trickle feed")  
+ ![Fluxo de controle de pacote de processamento de feed de fluxo](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Fluxo de controle de pacote de processamento de feed de fluxo")  
   
  Este Fluxo de Controle do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contém duas tarefas de controle CDC e a tarefa de Fluxo de Dados. A primeira tarefa chamada **Obter Intervalo de Processamento CDC** estabelece o intervalo de LSN para as alterações que são processadas na tarefa de fluxo de dados chamada **Processar Alterações**. Este intervalo é estabelecido com base no que foi processado durante a última execução de pacote e foi salvo em um repositório persistente.  
   
@@ -89,7 +89,7 @@ Uma mensagem é exibida depois de instalar os componentes. Clique em **Sim** qua
   
  A figura a seguir mostra o fluxo de dados de **Processar Alterações** que conceitualmente mostra como as alterações são processadas.  
   
- ![Fluxo de dados de processamento de alterações](../../integration-services/data-flow/media/processchangesdataflow.gif "Fluxo de dados de processamento de alterações")  
+ ![Fluxo de dados de alterações no processo](../../integration-services/data-flow/media/processchangesdataflow.gif "Fluxo de dados de alterações no processo")  
   
  As etapas ilustradas nesta figura são:  
   
@@ -125,11 +125,11 @@ Uma mensagem é exibida depois de instalar os componentes. Clique em **Sim** qua
   
  A figura a seguir mostra um pacote SSIS que poderia tratar os primeiros dois cenários:  
   
- ![Pacote SSIS tratando os dois primeiros cenários](../../integration-services/data-flow/media/scenarioonetwo.gif "Pacote SSIS tratando os dois primeiros cenários")  
+ ![Pacote SSIS que trata os dois primeiros cenários](../../integration-services/data-flow/media/scenarioonetwo.gif "Pacote SSIS que trata os dois primeiros cenários")  
   
  A figura a seguir mostra um pacote SSIS que poderia tratar o terceiro cenário:  
   
- ![Pacote SSIS tratando os três primeiros cenários](../../integration-services/data-flow/media/scenario3.gif "Pacote SSIS tratando os três primeiros cenários")  
+ ![Pacote SSIS que trata o terceiro cenário](../../integration-services/data-flow/media/scenario3.gif "Pacote SSIS que trata o terceiro cenário")  
   
  Após um pacote de carga inicial, um pacote de atualização do trickle-feed é executado repetidamente de acordo com uma agenda para processar as alterações à medida que elas ficam disponíveis para consumo.  
   
@@ -137,7 +137,7 @@ Uma mensagem é exibida depois de instalar os componentes. Clique em **Sim** qua
   
  O valor da variável de estado de CDC precisa ser mantido no armazenamento persistente. Ele deve ser lido antes de iniciar o processamento de CDC e deve ser salvo com o estado atual após a conclusão do processamento. A tarefa de carregar e armazenar o estado de CDC pode ser tratada pelo desenvolvedor de SSIS, mas o componente de Controle de CDC pode automatizar esta tarefa mantendo o valor do Estado de CDC em uma tabela de banco de dados.  
   
-## <a name="security-considerations"></a>Considerações sobre segurança  
+## <a name="security-considerations"></a>Considerações de segurança  
  Esta seção lista algumas considerações de segurança relacionadas ao uso dos componentes de CDC no SSIS.  
   
 ### <a name="access-authorization-to-change-data"></a>Autorização de acesso a dados de alteração  

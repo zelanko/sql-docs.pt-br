@@ -23,10 +23,10 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 21bc28f99768c7b31d6ba5b18170140a23400853
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287774"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Desenvolvendo uma interface do usuário para um componente de fluxo de dados
@@ -39,7 +39,7 @@ ms.locfileid: "71287774"
  Se você não fornecer uma interface de usuário personalizada para seu componente, os usuários ainda poderão configurar o componente e suas propriedades personalizadas utilizando o Editor Avançado. Para certificar-se de que o Editor Avançado permita aos usuários editar valores de propriedade personalizados adequadamente, utilize as propriedades <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> do <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> quando apropriado. Para obter mais informações, consulte "Criando propriedades personalizadas" em [Métodos de tempo de design de um componente de fluxo de dados](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
   
 ## <a name="setting-the-uitypename-property"></a>Definindo a propriedade UITypeName  
- Para fornecer uma interface de usuário personalizada, o desenvolvedor deve definir a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> do <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> como o nome de uma classe que implementa a interface <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>. Quando essa propriedade é definida pelo componente, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] carrega e chama a interface do usuário personalizada quando o componente é editado no Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+ Para fornecer uma interface de usuário personalizada, o desenvolvedor deve definir a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> do <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> como o nome de uma classe que implementa a interface <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>. Quando essa propriedade é definida pelo componente, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] carrega e chama a interface do usuário personalizada quando o componente é editado no Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
  A propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> é uma cadeia de caracteres delimitada por vírgulas que identifica o nome totalmente qualificado do tipo. A lista a seguir mostra, em ordem, os elementos que identificam o tipo:  
   

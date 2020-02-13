@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 01/10/2020
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: bf888d42215f3a4ee7c44b782b82c55f85afa041
-ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
+ms.openlocfilehash: be817f1fffd734dcf86f3b35d3215decbc9eb28d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75884034"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76706279"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurar o cluster do RHEL para o Grupo de Disponibilidade do SQL Server
 
@@ -50,7 +50,7 @@ As etapas para criar um grupo de disponibilidade em servidores Linux para alta d
    
    >Um cluster do Linux usa o isolamento para retornar o cluster a um estado conhecido. A maneira de configurar o isolamento depende da distribuição e do ambiente. Atualmente, o isolamento não está disponível em alguns ambientes de nuvem. Para saber mais, confira [Políticas de suporte para clusters de alta disponibilidade do RHEL – plataformas de virtualização](https://access.redhat.com/articles/29440).
 
-5. [Adicione o grupo de disponibilidade como um recurso no cluster](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).  
+4. [Adicione o grupo de disponibilidade como um recurso no cluster](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).  
 
 ## <a name="configure-high-availability-for-rhel"></a>Configurar a alta disponibilidade do RHEL
 
@@ -84,8 +84,16 @@ Cada nó no cluster deve ter uma assinatura apropriada para RHEL e o complemento
 
 1. Habilite o repositório.
 
+   **RHEL 7**
+
    ```bash
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
+   ```
+
+   **RHEL 8**
+
+   ```bash
+   sudo subscription-manager repos --enable=rhel-8-for-x86_64-highavailability-rpms
    ```
 
 Para saber mais, confira [Pacemaker – O cluster de alta disponibilidade e software livre](https://clusterlabs.org/pacemaker/). 
@@ -161,12 +169,19 @@ Para saber mais sobre as propriedades de cluster do Pacemaker, confira [Propried
 
 Para criar o recurso do grupo de disponibilidade, use o comando `pcs resource create` e defina as propriedades do recurso. O comando a seguir cria um recurso do tipo mestre/subordinado `ocf:mssql:ag` para o grupo de disponibilidade com o nome `ag1`.
 
+**RHEL 7**
+
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
 ```
 
-> [!NOTE]
-> Com a disponibilidade do **RHEL 8**, a sintaxe create foi alterada. Se você está usando o **RHEL 8**, a terminologia `master` foi alterada para `promotable`. Use o seguinte comando create em vez do comando acima: `sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true`
+**RHEL 8**
+
+Com a disponibilidade do **RHEL 8**, a sintaxe create foi alterada. Se você está usando o **RHEL 8**, a terminologia `master` foi alterada para `promotable`. Use o seguinte comando create em vez do comando acima: 
+
+```bash
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true
+```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

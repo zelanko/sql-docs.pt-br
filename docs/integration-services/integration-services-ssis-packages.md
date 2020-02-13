@@ -21,10 +21,10 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 78aa101ac0f7c86bc2563f7cf0151e7f976a5b80
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296183"
 ---
 # <a name="integration-services-ssis-packages"></a>Pacotes do SSIS (Integration Services)
@@ -65,12 +65,12 @@ ms.locfileid: "71296183"
 ### <a name="logging-and-log-providers"></a>Log e provedores de log  
  Um log é uma coleção de informações sobre o pacote coletada quando este é executado. Por exemplo, um log pode fornecer a hora inicial e final da execução de um pacote. Um provedor de log define o tipo de destino e o formato que o pacote e seus contêineres e tarefas podem usar para registrar informações em tempo de execução. Os logs são associados a um pacote, mas as tarefas e os contêineres do pacote podem registrar informações em qualquer log de pacote. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui vários provedores de log internos para registro em log. Por exemplo, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui provedores de log para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e arquivos de texto. Você também pode criar provedores de log personalizados e usá-los para registrar informações. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
   
-### <a name="variables"></a>Variáveis  
+### <a name="variables"></a>variáveis  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dá suporte a variáveis de sistema e a variáveis definidas pelo usuário. As variáveis de sistema oferecem informações úteis sobre objetos de pacote em tempo de execução e as variáveis definidas pelo usuário suportam cenários personalizados em pacotes. Os dois tipos de variáveis podem ser usados em expressões, scripts e configurações.  
   
  As variáveis no nível do pacote incluem variáveis de sistema predefinidas disponíveis para um pacote e variáveis definidas pelo usuário com o escopo do pacote. Para obter mais informações, consulte [Variáveis do SSIS (Integration Services)](../integration-services/integration-services-ssis-variables.md).  
  
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>parâmetros  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permitem atribuir valores às propriedades nos pacotes em tempo de execução do pacote. Você pode criar *parâmetros de projeto* em nível de projeto e *parâmetros de pacote* em nível de pacote. Os parâmetros do projeto são usados para fornecer uma entrada externa que o projeto recebe para um ou mais pacotes no projeto. Os parâmetros do pacote permitem modificar a execução do pacote sem a necessidade de editar e reimplantar o pacote. Para obter mais informações, consulte [Parâmetros do SSIS (Integration Services)](../integration-services/integration-services-ssis-package-and-project-parameters.md).  
  
 ## <a name="package-properties-that-support-extended-features"></a>Propriedades de pacote que dão suporte a recursos estendidos  

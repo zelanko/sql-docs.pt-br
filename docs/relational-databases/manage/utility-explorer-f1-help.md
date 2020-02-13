@@ -20,10 +20,10 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024489"
 ---
 # <a name="utility-explorer-f1-help"></a>Ajuda de F1 do Gerenciador do Utilitário
@@ -120,14 +120,14 @@ ms.locfileid: "68024489"
   As informações da exibição Aplicativos da Camada de Dados Implantados do Gerenciador do Utilitário fornecem dados de utilização para aplicativos da camada de dados individuais, o histórico de utilização da CPU, detalhes de utilização do armazenamento em nível de arquivo e a capacidade de exibir e atualizar limites de políticas. Os limites de políticas podem ser controlados no nível de aplicativo da camada de dados para utilização da CPU e para arquivos de log e arquivos de dados do banco de dados. Você também pode exibir detalhes de propriedades de aplicativos da camada de dados individuais.  
   
 ### <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- Exibição de lista  
+ Exibição Lista  
  A exibição de lista no painel superior exibe dados sobre aplicativos da camada de dados individuais. Os ícones do estado de integridade fornecem o status resumido de cada aplicativo da camada de dados por categoria de utilização:  
   
--   Marca de verificação verde – ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") – Número de aplicativos da camada de dados que não estão violando políticas de utilização de recursos. Os recursos estão bem-utilizados.  
+-   Marca de seleção verde – ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized"): número de aplicativos da camada de dados que não estão violando as políticas de utilização de recursos. Os recursos estão bem-utilizados.  
   
--   Seta para baixo verde – ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") – Os recursos estão subutilizados.  
+-   Seta para baixo verde – ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): os recursos estão subutilizados.  
   
--   Seta para cima vermelha – ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") – Os recursos estão superutilizados.  
+-   Seta para cima vermelha – ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): os recursos estão superutilizados.  
   
  A sequência de colunas da exibição de lista pode ser alterada arrastando-se as colunas para a esquerda ou para a direita. Para adicionar ou excluir colunas da exibição de lista, clique com o botão direito do mouse nos títulos das colunas e selecione ou desmarque colunas. O menu de atalho também fornece opções de classificação. A classificação também pode ser ativada clicando-se na parte superior do nome de uma coluna.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "68024489"
   
 -   Confiável: (True ou False)  
   
--   Ordenação  
+-   Collation  
   
 -   Nível de Compatibilidade: (por exemplo, Version100)  
   
@@ -246,7 +246,7 @@ ms.locfileid: "68024489"
   
 -   Confiável: (True ou False)  
   
--   Ordenação  
+-   Collation  
   
 -   Nível de Compatibilidade: (por exemplo, Version100)  
   
@@ -260,16 +260,16 @@ ms.locfileid: "68024489"
  As informações da exibição Instâncias Gerenciadas do Gerenciador do Utilitário fornecem dados de utilização para instâncias individuais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], histórico de utilização da CPU, detalhes de utilização do armazenamento em nível de arquivo e a capacidade de exibir e atualizar limites de políticas. Os limites de políticas podem ser controlados no nível de instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , para um computador, para arquivos de banco de dados e arquivos de log e no nível de volumes de armazenamento. Você também pode exibir detalhes de propriedades de instâncias gerenciadas individuais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- Exibição de lista  
+ Exibição Lista  
  A exibição de lista no painel superior exibe dados sobre instâncias individuais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listadas em linhas por ComputerName\InstanceName.  
   
  Os ícones do estado de integridade fornecem o status resumido de cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por categoria de utilização:  
   
--   Marca de verificação verde – ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") – Número de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não estão violando políticas de utilização de recursos. Os recursos estão bem-utilizados.  
+-   Marca de seleção verde – ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized"): número de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não estão violando as políticas de utilização de recursos. Os recursos estão bem-utilizados.  
   
--   Seta para baixo verde – ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") – Os recursos estão subutilizados.  
+-   Seta para baixo verde – ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): os recursos estão subutilizados.  
   
--   Seta para cima vermelha – ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") – Os recursos estão superutilizados.  
+-   Seta para cima vermelha – ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): os recursos estão superutilizados.  
   
  A sequência de colunas da exibição de lista pode ser alterada arrastando-se as colunas para a esquerda ou para a direita. Para adicionar ou excluir colunas da exibição de lista, clique com o botão direito do mouse nos títulos das colunas e selecione ou desmarque colunas. O menu de atalho também fornece opções de classificação. A classificação também pode ser ativada clicando-se na parte superior do nome de uma coluna.  
   
@@ -315,7 +315,7 @@ ms.locfileid: "68024489"
   
 -   Diferenciar maiúsculas de minúsculas: (True ou False)  
   
--   Idioma:  
+-   Linguagem:  
   
 -   Hora do último relato: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
@@ -412,7 +412,7 @@ ms.locfileid: "68024489"
   
 -   Diferenciar maiúsculas de minúsculas: (True ou False)  
   
--   Idioma:  
+-   Linguagem:  
 
 ## <a name="utility-administration-sql-server-utility"></a>Administração do Utilitário (Utilitário do SQL Server)
 Use as guias de Administração do Utilitário para gerenciar configurações de políticas, segurança e data warehouse para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Para obter mais informações sobre os conceitos do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , veja [Recursos e tarefas do Utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
@@ -480,7 +480,7 @@ Use as guias de Administração do Utilitário para gerenciar configurações de
  
 **Guia Data Warehouse** – Exibe os detalhes da configuração do data warehouse de gerenciamento do utilitário.  
   
- Retenção de Dados  
+ Retenção de dados  
  Especifique o período de retenção de dados de informações de utilização coletadas para instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O período padrão é de 1 ano. O valor mínimo é 1 mês. O valor com suporte mais longo é 2 anos.  
   
  Informações de Configuração do Data Warehouse do Utilitário  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 08a4a90580a00e3ab4f2c38c7dfa3cf81b331d08
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 32474836bfbf61f74370724f0750732e11542e9e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768616"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284677"
 ---
 # <a name="distribution-agent-security"></a>Segurança do Distribution Agent
 ::: moniker range=">=sql-server-2014||=sqlallproducts-allversions" 
@@ -51,7 +51,7 @@ A caixa de diálogo **Segurança do Distribution Agent** permite especificar a c
   
  Serão requeridas permissões adicionais se a conta do processo for representada quando as conexões forem feitas. Consulte as seções **Conectar ao Distribuidor** e **Conectar ao Assinante** abaixo.  
   
- **Process Account** não pode ser especificada para assinaturas pull para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], porque o Distribution Agent não é executado em instâncias do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
+ A **Conta de Processo** não pode ser especificada para assinaturas pull para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], porque o Agente de Distribuição não é executado em instâncias do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
  **Senha** e **Confirmar Senha**  
  Insira a senha para a conta do Windows.  

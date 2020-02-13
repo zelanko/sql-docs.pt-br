@@ -13,10 +13,10 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6d39c2d0975f7be8a7e5481b9c91266528ae9ee2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006352"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modos de operação de espelhamento de banco de dados
@@ -54,7 +54,7 @@ ms.locfileid: "68006352"
   
  A figura a seguir mostra a configuração de uma sessão que usa modo de alto desempenho.  
   
- ![Configuração apenas para parceiro de uma sessão](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "Partner-only configuration of a session")  
+ ![Configuração apenas para parceiro de uma sessão](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "Configuração apenas para parceiro de uma sessão")  
   
  No modo de alto desempenho, assim que o servidor principal envia o log para uma transação para o servidor espelho, o servidor principal envia uma confirmação para o cliente, sem esperar uma confirmação do servidor espelho. As transações são confirmadas sem esperar que o servidor espelho grave o log no disco. A operação assíncrona permite a execução do servidor principal com latência de transação mínima.  
   
@@ -145,14 +145,14 @@ ms.locfileid: "68006352"
 ###  <a name="HighSafetyWithOutAutoFailover"></a> Modo de segurança alta sem failover automático  
  A figura a seguir mostra a configuração do modo de segurança alta sem failover automático. A configuração consiste apenas nos dois parceiros.  
   
- ![Comunicação de parceiros sem uma testemunha](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "Partners communicating without a witness")  
+ ![Comunicação de parceiros sem uma testemunha](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "Comunicação de parceiros sem uma testemunha")  
   
  Quando os parceiros estão conectados e o banco de dados já está sincronizado, há suporte ao failover manual. Se a instância de servidor espelho diminuir, a instância de servidor principal não será afetada e as execuções serão expostas (ou seja, sem espelhamento dos dados). Se o servidor principal estiver perdido, o espelho será suspenso, mas o serviço poderá ser forçado para o servidor espelho (com possível perda de dados). Para obter mais informações, consulte [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
 ###  <a name="HighSafetyWithAutoFailover"></a> Modo de segurança alta com failover automático  
  O failover automático fornece alta disponibilidade, assegurando que o banco de dados ainda funcione depois da perda de um servidor. O failover automático exige que a sessão tenha uma terceira instância de servidor, a *testemunha*que, idealmente, reside em um terceiro computador. A figura a seguir mostra a configuração da sessão do modo de segurança alta que oferece suporte a failover automático.  
   
- ![A testemunha e dois parceiros de uma sessão](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "The witness and two partners of a session")  
+ ![A testemunha e dois parceiros de uma sessão](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "A testemunha e dois parceiros de uma sessão")  
   
  Ao contrário dos dois parceiros, a testemunha não atende ao banco de dados. A testemunha simplesmente oferece suporte a failover automático verificando se o servidor principal está funcionando. O servidor espelho apenas iniciará o failover automático se o espelho e a testemunha permanecerem conectados um ao outro depois de serem desconectados do servidor principal.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "68006352"
   
 -   Se o servidor principal ficar indisponível nas condições anteriores, acontecerá o failover automático. O servidor espelho é alternado para a função principal e oferece seu banco de dados como banco de dados principal.  
   
--   Se o servidor principal ficar indisponível quando essas condições não forem atendidas, será possível forçar o serviço (com possível perda de dados). Para obter mais informações, veja [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
+-   Se o servidor principal ficar indisponível quando essas condições não forem atendidas, será possível forçar o serviço (com possível perda de dados). Para obter mais informações, consulte [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
 -   Se apenas o servidor espelho ficar indisponível, o principal e a testemunha continuarão funcionando.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "68006352"
  Esta seção descreve uma sessão de espelhamento de banco de dados em termos das configurações de ALTER DATABASE e dos estados do banco de dados espelho e da testemunha, se houver. A seção destina-se a usuários que administram o espelhamento de banco de dados usando sobretudo ou exclusivamente o [!INCLUDE[tsql](../../includes/tsql-md.md)], em vez de usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 > [!TIP]  
->  Como alternativa ao uso do [!INCLUDE[tsql](../../includes/tsql-md.md)], é possível controlar o modo de operação de uma sessão no Pesquisador de Objetos usando a página **Espelhamento** da caixa de diálogo **Propriedades do Banco de Dados** . Para obter mais informações, consulte [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
+>  Como alternativa ao uso do [!INCLUDE[tsql](../../includes/tsql-md.md)], é possível controlar o modo de operação de uma sessão no Pesquisador de Objetos usando a página **Espelhamento** da caixa de diálogo **Propriedades do Banco de Dados** . Para obter mais informações, veja [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
  **Nesta seção:**  
   
@@ -249,9 +249,9 @@ ms.locfileid: "68006352"
   
 |Fator|Colunas|Descrição|  
 |------------|-------------|-----------------|  
-|Segurança de transação|**mirroring_safety_level** ou **mirroring_safety_level_desc**|Configuração de segurança de transação para atualizações no banco de dados espelho, um dos seguintes:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL = banco de dados não está online.|  
+|Segurança de transação|**mirroring_safety_level** ou **mirroring_safety_level_desc**|Configuração de segurança de transação para atualizações no banco de dados espelho, um dos seguintes:<br /><br /> DESCONHECIDO<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL = banco de dados não está online.|  
 |Existe uma testemunha?|**mirroring_witness_name**|Nome do servidor de testemunha de espelhamento de banco de dados ou NULL, indicando que não existe testemunha.|  
-|Estado de testemunha|**mirroring_witness_state** ou **mirroring_witness_state_desc**|Estado da testemunha no banco de dados em um determinado parceiro:<br /><br /> UNKNOWN<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL = não existe testemunha ou o banco de dados não está online.|  
+|Estado de testemunha|**mirroring_witness_state** ou **mirroring_witness_state_desc**|Estado da testemunha no banco de dados em um determinado parceiro:<br /><br /> DESCONHECIDO<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL = não existe testemunha ou o banco de dados não está online.|  
   
  Por exemplo, no servidor principal ou espelho, digite:  
   

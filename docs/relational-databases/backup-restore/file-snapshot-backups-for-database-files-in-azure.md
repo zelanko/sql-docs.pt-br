@@ -11,17 +11,17 @@ ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: aed634232901aa116fddf361d3c3347d1e462eb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086279"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Backups de instantâneo de arquivo para arquivos de banco de dados no Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O backup de instantâneo de arquivo usa os instantâneos do Azure para fornecer backups quase imediatos e restaurações mais rápidas para os arquivos de banco de dados armazenados usando o serviço de Armazenamento de Blobs do Azure. Esse recurso permite que você simplifique as políticas de backup e restauração. Para uma demonstração ao vivo, confira [Demonstração da recuperação pontual](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo). Para obter mais informações sobre como armazenar arquivos de banco de dados usando o serviço de Armazenamento de Blobs do Azure, confira [Arquivos de dados do SQL Server no Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O backup de instantâneo de arquivo usa os instantâneos do Azure para fornecer backups quase imediatos e restaurações mais rápidas para os arquivos de banco de dados armazenados usando o serviço de Armazenamento de Blobs do Azure. Essa funcionalidade permite simplificar suas políticas de backup e restauração. Para uma demonstração ao vivo, confira [Demonstração da recuperação pontual](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo). Para obter mais informações sobre como armazenar arquivos de banco de dados usando o serviço de Armazenamento de Blobs do Azure, confira [Arquivos de dados do SQL Server no Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
   
- ![diagrama de arquitetura de backup de instantâneo](../../relational-databases/backup-restore/media/snapshotbackups.PNG "diagrama de arquitetura de backup de instantâneo")  
+ ![diagrama da arquitetura do backup de instantâneo](../../relational-databases/backup-restore/media/snapshotbackups.PNG "diagrama da arquitetura do backup de instantâneo")  
   
  **Download**  
   
@@ -148,7 +148,7 @@ GO
 ```  
   
 ## <a name="viewing-database-backup-file-snapshots"></a>Exibição dos instantâneos de arquivo de backup do banco de dados  
- Para exibir instantâneos de arquivo do blob de base para cada arquivo de banco de dados, use a função do sistema **sys.fn_db_backup_file_snapshots** . Essa função do sistema permite que você exiba todos os instantâneos de arquivo de backup de cada blob de base para um banco de dados armazenado usando o serviço de Armazenamento de Blobs do Azure. Um caso de uso principal para essa função é identificar os instantâneos de arquivo de backup de um banco de dados que permanece quando o arquivo de backup de um conjunto de backup de instantâneo de arquivo for excluído usando um mecanismo diferente do procedimento armazenado do sistema **sys.sp_delete_backup** . Para determinar os instantâneos de arquivo de backup que fazem parte dos conjuntos de backup intactos e aqueles que não fazem parte dos conjuntos de backup intactos, use o procedimento armazenado do sistema **RESTORE FILELISTONLY** para listar os instantâneos de arquivos que pertencem a cada arquivo de backup. Para obter mais informações, consulte [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) e [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
+ Para exibir instantâneos de arquivo do blob de base para cada arquivo de banco de dados, use a função do sistema **sys.fn_db_backup_file_snapshots** . Essa função do sistema permite que você exiba todos os instantâneos de arquivo de backup de cada blob de base para um banco de dados armazenado usando o serviço de Armazenamento de Blobs do Azure. Um caso de uso principal para essa função é identificar os instantâneos de arquivo de backup de um banco de dados que permanece quando o arquivo de backup de um conjunto de backup de instantâneo de arquivo for excluído usando um mecanismo diferente do procedimento armazenado do sistema **sys.sp_delete_backup** . Para determinar os instantâneos de arquivo de backup que fazem parte dos conjuntos de backup intactos e aqueles que não fazem parte dos conjuntos de backup intactos, use o procedimento armazenado do sistema **RESTORE FILELISTONLY**  para listar os instantâneos de arquivos que pertencem a cada arquivo de backup. Para obter mais informações, consulte [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) e [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
  O exemplo a seguir retorna a lista de todos os instantâneos de arquivo de backup do banco de dados especificado.  
   
@@ -163,7 +163,7 @@ GO
 ```  
   
 ## <a name="deleting-an-individual-database-backup-file-snapshot"></a>Excluir um instantâneo de arquivo de backup de banco de dados individual  
- Para excluir um instantâneo de arquivo de backup individual de um blob de base de banco de dados, use o procedimento armazenado do sistema **sys.sp_delete_backup_file_snapshot** . Um caso de uso principal para este procedimento armazenado do sistema é a exclusão dos arquivos de instantâneo de arquivos órfãos que permanecem após a exclusão de um arquivo de backup usando um método diferente do procedimento armazenado do sistema **sys.sp_delete_backup**. Para obter mais informações, consulte [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md).  
+ Para excluir um instantâneo de arquivo de backup individual de um blob de base de banco de dados, use o procedimento armazenado do sistema **sys.sp_delete_backup_file_snapshot** . Um caso de uso principal para este procedimento armazenado do sistema é a exclusão dos arquivos de instantâneo de arquivos órfãos que permanecem após a exclusão de um arquivo de backup usando um método diferente do procedimento armazenado do sistema **sys.sp_delete_backup** . Para obter mais informações, consulte [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md).  
   
 > [!WARNING]  
 >  A exclusão de um instantâneo de arquivo individual que faz parte de um conjunto de backup de instantâneo de arquivo invalidará o conjunto de backup.  

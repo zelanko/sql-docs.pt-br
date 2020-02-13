@@ -19,10 +19,10 @@ ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0c89af926fdb8476ec53b27fde17503c4a34f124
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290995"
 ---
 # <a name="unpivot-transformation"></a>Transformação Não Dinâmica
@@ -34,11 +34,11 @@ ms.locfileid: "71290995"
   
  O diagrama a seguir mostra um conjunto de dados antes da transformação não dinâmica na coluna Produto.  
   
- ![Conjunto de dados após sua dinamização ser revertida](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "Conjunto de dados após sua dinamização ser revertida")  
+ ![Conjunto de dados após a transformação de colunas em linhas](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "Conjunto de dados após a transformação de colunas em linhas")  
   
  O diagrama a seguir mostra um conjunto de dados depois da transformação não dinâmica na coluna Produto.  
   
- ![Conjunto de dados antes da sua dinamização ser revertida](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "Conjunto de dados antes da sua dinamização ser revertida")  
+ ![Conjunto de dados antes da transformação de colunas em linhas](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "Conjunto de dados antes da transformação de colunas em linhas")  
   
  Em algumas circunstâncias, os resultados da transformação não dinâmica podem conter linhas com valores inesperados. Por exemplo, se os dados de exemplo a serem transformados mostrados no diagrama tivessem valores nulos em todas as colunas Qtd para Fred, a saída incluiria somente uma linha para Fred, e não cinco. A coluna Qtd conteria valor nulo ou zero, dependendo do tipo de dados da coluna.  
   

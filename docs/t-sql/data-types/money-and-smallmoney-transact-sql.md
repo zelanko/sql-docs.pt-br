@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ad26acc2f1e23b61e9692dcf2720d7ee6dd8639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077816"
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>money e smallmoney (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68077816"
 
 Tipos de dados que representam valores monetários ou de moeda.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 |Tipo de dados|Intervalo|Armazenamento|  
 |---|---|---|
@@ -49,7 +49,7 @@ Use um ponto para separar unidades monetárias parciais, como centavos, de unida
   
 Esses tipos de dados podem usar qualquer um dos seguintes símbolos de moeda.
   
-![Tabela de símbolos de moeda, valores hexadecimais](../../t-sql/data-types/media/money01.gif "Table of currency symbols, hexadecimal values")
+![Tabela de símbolos de moeda, valores hexadecimais](../../t-sql/data-types/media/money01.gif "Tabela de símbolos de moeda, valores hexadecimais")
   
 Os dados de moeda ou monetários não precisam ser incluídos entre aspas simples ( ' ). É importante lembrar que apesar de você poder especificar valores monetários precedidos por um símbolo de moeda, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não armazena quaisquer informações de moeda associada com o símbolo, só armazena o valor numérico.
   

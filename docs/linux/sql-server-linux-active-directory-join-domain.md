@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9bc52bc1708d4ca6e06e5cc78399e12615860d27
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75224511"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761870"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Ingressar o SQL Server em um host Linux em um domínio do Active Directory
 
@@ -27,7 +27,7 @@ Este artigo oferece diretrizes gerais sobre como ingressar um computador host Li
 Antes de configurar a autenticação do Active Directory, é necessário configurar um controlador de domínio do Active Directory, Windows, em sua rede. Em seguida, ingresse o host SQL Server em Linux em um domínio do Active Directory.
 
 > [!IMPORTANT]
-> As etapas de exemplo descritas neste artigo são apenas para fins de diretrizes. As etapas reais podem ser ligeiramente diferentes em seu ambiente, dependendo de como o ambiente geral está configurado. Envolva os administradores do sistema e do domínio para seu ambiente para configuração específica, personalização e qualquer solução de problemas necessária.
+> As etapas de exemplo descritas neste artigo são apenas para orientação e referem-se aos sistemas operacionais Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x e SUSE Enterprise Linux (SLES) 12. As etapas reais podem ser ligeiramente diferentes em seu ambiente, dependendo de como o ambiente geral está configurado e da versão do sistema operacional. Por exemplo, o Ubuntu 18.04 usa o netplan enquanto o Red Hat Enterprise Linux (RHEL) 8.x usa o nmcli entre outras ferramentas para gerenciar e configurar a rede. É recomendável envolver os administradores do sistema e do domínio do seu ambiente para ferramentas específicas, configuração, personalização e qualquer solução de problemas necessária.
 
 ## <a name="check-the-connection-to-a-domain-controller"></a>Verificar a conexão com um controlador de domínio
 
@@ -43,7 +43,7 @@ ping contoso.com
 
 Se uma dessas verificações de nome falhar, atualize sua lista de pesquisa de domínio. As seções a seguir fornecem instruções para Ubuntu, RHEL (Red Hat Enterprise Linux) e SLES (SUSE Linux Enterprise Server), respectivamente.
 
-### <a name="ubuntu"></a>Ubuntu
+### <a name="ubuntu-1604"></a>Ubuntu 16.04
 
 1. Edite o arquivo **/etc/network/interfaces** para que seu domínio do Active Directory esteja na lista de pesquisa de domínio:
 
@@ -71,7 +71,7 @@ Se uma dessas verificações de nome falhar, atualize sua lista de pesquisa de d
    nameserver **<AD domain controller IP address>**
    ```
 
-### <a name="rhel"></a>RHEL
+### <a name="rhel-7x"></a>RHEL 7.x
 
 1. Edite o arquivo **/etc/sysconfig/network-scripts/ifcfg-eth0** para que o domínio do Active Directory esteja na lista de pesquisa de domínio. Ou edite outro arquivo de configuração de interface, conforme apropriado:
 
@@ -100,7 +100,7 @@ Se uma dessas verificações de nome falhar, atualize sua lista de pesquisa de d
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
    ```
 
-### <a name="sles"></a>SLES
+### <a name="sles-12"></a>SLES 12
 
 1. Edite o arquivo **/etc/sysconfig/network/config** para que o IP do controlador de domínio do Active Directory seja usado para consultas DNS e para que o domínio do Active Directory esteja na lista de pesquisa de domínio:
 
@@ -178,7 +178,7 @@ Use as etapas a seguir para ingressar um host SQL Server em um domínio do Activ
 
    O SQL Server usa SSSD e NSS para mapear contas de usuário e grupos para SIDs (identificadores de segurança). O SSSD deve ser configurado e estar em execução para o SQL Server criar logons do AD com êxito. **realmd** geralmente faz isso automaticamente como parte de ingressar o domínio, mas, em alguns casos, você deve fazer isso separadamente.
 
-   Para saber mais, confira como [configurar SSSD manualmente](https://access.redhat.com/articles/3023951) e [configurar NSS para funcionar com SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   Para saber mais, confira como [configurar SSSD manualmente](https://access.redhat.com/articles/3023951) e [configurar NSS para funcionar com SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
 1. Verifique se você pode coletar informações sobre um usuário do domínio e se pode adquirir um tíquete do Kerberos como esse usuário. O exemplo a seguir usa os comandos **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) e [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) para isso.
 

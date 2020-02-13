@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf9b8222453cea1bdaecad25256819aa7bcb1366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909557"
 ---
 # <a name="set-index-options"></a>Opções Set Index
@@ -75,7 +75,7 @@ Requer a permissão ALTER na tabela ou exibição.
 4. No menu **Designer de Tabela** , clique em **Índices/Chaves**.
 5. Selecione o índice a ser modificado. Suas propriedades aparecerão na grade principal.
 6. Altere as configurações de alguma ou de todas as propriedades para personalizar o índice.
-7. Clique em **Fechar**.
+7. Clique em **fechar**
 8. No menu **Arquivo** , selecione **Salvar**_table_name_.
 
 ### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>Para modificar as propriedades de um índice no Pesquisador de Objetos
@@ -87,7 +87,7 @@ Requer a permissão ALTER na tabela ou exibição.
 5. Clique com o botão direito do mouse no índice cujas propriedades serão modificadas e selecione **Propriedades**.
 6. Em **Selecione uma página**, selecione **Opções**.
 7. Altere as configurações de alguma ou de todas as propriedades para personalizar o índice.
-8. Para adicionar, remover ou alterar a posição de uma coluna de índice, selecione a página **Geral** na caixa de diálogo **Propriedades do Índice –** _index_name_ . Para obter mais informações, consulte [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).
+8. Para adicionar, remover ou alterar a posição de uma coluna de índice, selecione a página **Geral** na caixa de diálogo **Propriedades do Índice –** _nome_do_índice_. Para obter mais informações, consulte [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).
 
 ## <a name="TsqlProcedure"></a> Usando o Transact-SQL
 

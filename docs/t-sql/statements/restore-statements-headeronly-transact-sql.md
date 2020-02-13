@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983028"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instruções RESTORE – HEADERONLY (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73983028"
 > [!NOTE]  
 >  Para obter as descrições dos argumentos, consulte [Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -139,7 +139,7 @@ FROM <backup_device>
 |**IsCopyOnly**|**bit**|**1** = Um backup somente cópia.<br /><br /> Um backup somente cópia não causa impactos ao backup global e restaura procedimentos do banco de dados. Para obter mais informações, veja [Backups somente cópia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).|  
 |**FirstRecoveryForkID**|**uniqueidentifier**|ID da bifurcação da recuperação inicial. Essa coluna corresponde a **first_recovery_fork_guid** na tabela [backupset](../../relational-databases/system-tables/backupset-transact-sql.md).<br /><br /> Para backups de dados, **FirstRecoveryForkID** é igual a **RecoveryForkID**.|  
 |**ForkPointLSN**|**numeric(25,0)** NULL|Se **FirstRecoveryForkID** não for igual a **RecoveryForkID**, este será o número de sequência de log do ponto de bifurcação. Caso contrário, esse valor será NULL.|  
-|**RecoveryModel**|**nvarchar(60)**|Modelo de recuperação do banco de dados, sendo:<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> SIMPLE|  
+|**RecoveryModel**|**nvarchar(60)**|Modelo de recuperação do banco de dados, sendo:<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> SIMPLES|  
 |**DifferentialBaseLSN**|**numeric(25,0)** NULL|Para um backup diferencial de base única, o valor é igual a **FirstLSN** da base diferencial; alterações com LSNs maiores ou iguais a **DifferentialBaseLSN** estão incluídas no diferencial.<br /><br /> Para um diferencial com várias bases, o valor é NULL e o LSN base deve ser determinado no nível de arquivo. Para obter mais informações, veja [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).<br /><br /> Para tipos de backup não diferenciais, o valor é sempre NULL.<br /><br /> Para obter mais informações, veja [Backups diferenciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).|  
 |**DifferentialBaseGUID**|**uniqueidentifier**|Para um backup diferencial de base única, o valor é o identificador exclusivo da base diferencial.<br /><br /> Para diferenciais com várias bases, o valor é NULL, e a base do diferencial deve ser determinada por arquivo.<br /><br /> Para tipos de backup não diferenciais, o valor é NULL.|  
 |**BackupTypeDescription**|**nvarchar(60)**|Tipo de backup como cadeia de caracteres, sendo:<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
@@ -157,7 +157,7 @@ FROM <backup_device>
  Um cliente pode usar RESTORE HEADERONLY para recuperar todas as informações do cabeçalho de todos os backups em um dispositivo de backup particular. Para cada backup no dispositivo de backup, o servidor envia as informações de cabeçalho como uma linha.  
   
 ## <a name="security"></a>Segurança  
- Uma operação de backup pode, opcionalmente, especificar senhas para um conjunto de mídias, um conjunto de backup ou ambos. Quando uma senha tiver sido definida em um conjunto de backup ou de mídias, será preciso especificar a senha ou as senhas corretas na instrução RESTORE. Essas senhas impedem operações de restauração e anexações não autorizadas de conjuntos de backup em uma mídia usando ferramentas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Porém, uma senha não impede a substituição da mídia usando a opção FORMAT da instrução BACKUP.  
+ Uma operação de backup pode, opcionalmente, especificar senhas para um conjunto de mídias, um conjunto de backup ou ambos. Quando uma senha tiver sido definida em um conjunto de backup ou de mídias, será preciso especificar a senha ou as senhas corretas na instrução RESTORE. Essas senhas impedem operações de restauração não autorizadas e acréscimos não autorizados de conjuntos de backup à mídia usando ferramentas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Porém, uma senha não impede a substituição da mídia usando a opção FORMAT da instrução BACKUP.  
   
 > [!IMPORTANT]  
 >  A proteção fornecida por esta senha é fraca. Destina-se a evitar uma restauração incorreta com o uso de ferramentas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por usuários autorizados ou não autorizados. Não impede a leitura dos dados de backup por outros meios ou a substituição da senha. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]A melhor prática para proteger backups é armazenar as fitas de backup em um local seguro ou fazer backup em arquivos de disco protegidos por ACLs (listas de controle de acesso) adequadas. As ACLs devem ser definidas no diretório raiz em que os backups são criados.  

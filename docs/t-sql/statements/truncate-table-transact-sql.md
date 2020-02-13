@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 115aba36783857d5a0915822cb6f8ff810562f16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100071"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68100071"
 
 Remove todas as linhas de uma tabela ou partições especificadas de uma tabela sem registrar as exclusões de linha individual. TRUNCATE TABLE é semelhante à instrução DELETE sem nenhuma cláusula WHERE; entretanto, TRUNCATE TABLE é mais rápida e utiliza menos recursos de sistema e log de transações.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -88,7 +88,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
  Para truncar uma tabela particionada, a tabela e os índices deverão estar alinhados (particionados na mesma função de partição).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Em comparação com a instrução DELETE, TRUNCATE TABLE possui as seguintes vantagens:  
   
 -   O espaço utilizado para log de transações é menor.  
@@ -107,7 +107,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
  Se a tabela contiver uma coluna de identidade, o contador daquela coluna será redefinido no valor da semente definido para a coluna. Se não for definida nenhuma semente, o valor padrão utilizado será 1. Para manter o contador de identidade, use DELETE.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrições  
  Você não pode usar TRUNCATE TABLE em tabelas que:  
   
 -   São referenciadas por uma restrição FOREIGN KEY. (É possível truncar uma tabela que tenha uma chave estrangeira que referencie a ela mesma.)  
@@ -134,7 +134,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-truncate-a-table"></a>A. Truncar uma tabela  
+### <a name="a-truncate-a-table"></a>a. Truncar uma tabela  
  O exemplo a seguir remove todos os dados da tabela `JobCandidate`. São incluídas instruções `SELECT` antes e depois da instrução `TRUNCATE TABLE` para comparar resultados.  
   
 ```sql  

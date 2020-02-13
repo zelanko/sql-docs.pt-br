@@ -17,7 +17,7 @@ Para ilustração, a tabela a seguir lista e compara dois subconjuntos de exibi�
 | server_event_notifications<br />server_event_session_actions<br />server_event_session_events<br />server_event_session_fields<br />server_event_session_targets<br />server_event_sessions<br />server_events<br />server_trigger_events | database_event_session_actions<br />database_event_session_events<br />database_event_session_fields<br />database_event_session_targets<br />database_event_sessions |
 | &nbsp; | &nbsp; |
 
-As duas listas na tabela anterior são precisas em junho de 2019. Mas o conteúdo da tabela aqui pode ficar desatualizado, pois seu conteúdo não será mantido aqui. Para obter listas precisas, execute a seguinte instrução T-SQL SELECT. Execute SELECT duas vezes, uma vez em cada sistema de banco de dados.
+As duas listas na tabela anterior são precisas em junho de 2019. Mas o conteúdo da tabela aqui pode ficar desatualizado, pois ele não será mantido aqui. Para obter listas precisas, execute a seguinte instrução T-SQL SELECT. Execute SELECT duas vezes, uma vez em cada sistema de banco de dados.
 
 ```sql
 SELECT name

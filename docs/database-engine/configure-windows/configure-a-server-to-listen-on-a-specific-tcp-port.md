@@ -18,10 +18,10 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012921"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurar um servidor para escutar em uma porta TCP específica
@@ -55,13 +55,13 @@ Como a porta 1433 é o padrão conhecido para o [!INCLUDE[ssNoVersion](../../inc
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  Na área da caixa **Propriedades de**_IP_ **n** , na caixa **Porta TCP** box, type the port number you want this Propriedades de address to listen on, and then click **OK**. Várias portas podem ser especificadas ao separá-las por vírgulas.
+4.  Na área da caixa **Propriedades** de **IP**_n_, na caixa **Porta TCP**, digite o número da porta em que esse endereço IP deverá escutar e, em seguida, clique em **OK**. Várias portas podem ser especificadas ao separá-las por vírgulas.
 
     > [!NOTE] 
     > Se a configuração **Escutar tudo** na guia **Protocolo** for definida como "Sim", então apenas os valores **Porta TCP** e **Porta TCP dinâmica** na seção **IPAll** serão usados e as seções **IP**_n_ individuais serão ignoradas em sua totalidade. Se a configuração **Escutar tudo** for definida como "Não", então as configurações **Porta TCP** e **Porta TCP dinâmica** sob a seção **IPAll** serão ignoradas e as configurações **Porta TCP**, **Porta TCP dinâmica** e **Habilitado** nas seções **IP**_n_ individuais serão usadas.
     > Cada seção **IP**_n_ tem uma configuração **Habilitado** com um valor padrão de "Não", o que faz com que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignore esse endereço IP mesmo se ele tem uma porta definida.  
   
-5.  No painel de console, clique em **Serviços do SQL Server**.  
+5.  No painel do console, clique em **Serviços do SQL Server**.  
   
 6.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server (** \<instance name> **)** e, depois, clique em **Reiniciar** para parar e reiniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71127371"
 ---
 # <a name="tables"></a>Tabelas
@@ -30,7 +30,7 @@ Tabelas são objetos de banco de dados que contêm todos os dados em um banco de
 
 - Você pode atribuir propriedades à tabela e a cada coluna na tabela para controlar os dados que são permitidos e outras propriedades. Por exemplo, você poderá criar restrições em uma coluna para desaprovar valores nulos ou fornecer um valor padrão se um valor não for especificado, ou você poderá atribuir uma restrição chave na tabela que impõe exclusividade ou define uma relação entre tabelas. 
 
-- Os dados da tabela podem ser compactados por linha ou por página. A compactação de dados pode permitir armazenar mais linhas em uma página. Para obter mais informações, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md). 
+- Os dados da tabela podem ser compactados por linha ou por página. A compactação de dados pode permitir armazenar mais linhas em uma página. Para saber mais, veja [Data Compression](../../relational-databases/data-compression/data-compression.md). 
 
 ## <a name="types-of-tables"></a>Tipos de tabelas
  Além da função padrão de tabelas básicas definidas pelo usuário, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece os tipos de tabelas a seguir que servem para propósitos especiais em um banco de dados. 
@@ -101,6 +101,6 @@ Tabelas largas têm as implicações de desempenho a seguir.
 |Descreve como especificar um valor padrão para uma coluna. Este valor é usado quando outro valor não é fornecido.|[Especificar valores padrão para colunas](../../relational-databases/tables/specify-default-values-for-columns.md)|
 
 ## <a name="see-also"></a>Consulte Também
- [Restrições de Chave Primária e Estrangeira](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [Restrições Exclusivas e Restrições de Verificação](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
+ [Restrições de chave primária e estrangeira](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [Restrições exclusivas e restrições de verificação](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
 
 

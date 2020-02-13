@@ -14,17 +14,17 @@ ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: be0ff34acb9d7743ae096f8ecd2b0ad3ed8a4e28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089841"
 ---
 # <a name="differential-backups-sql-server"></a>Backups diferenciais (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico de backup e restauração é relevante para todos os bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Um backup diferencial baseia-se no backup de dados completo anterior mais recente. Um backup diferencial captura apenas os dados que foram alterados desde o backup completo. O backup completo no qual um backup diferencial se baseia é conhecido como a *base* do diferencial. Os backups completos, com exceção dos backups somente cópia, podem servir como base para uma série de backups diferenciais, inclusive backups de banco de dados, backups parciais e backups de arquivo. O backup de base para um backup diferencial de arquivo pode ser contido dentro de um backup completo, um backup de arquivo ou um backup parcial.  
+ Um backup diferencial é baseado no backup de dados completo anterior mais recente. Um backup diferencial captura apenas os dados que foram alterados desde o backup completo. O backup completo no qual um backup diferencial se baseia é conhecido como a *base* do diferencial. Os backups completos, com exceção dos backups somente cópia, podem servir como base para uma série de backups diferenciais, inclusive backups de banco de dados, backups parciais e backups de arquivo. O backup de base para um backup diferencial de arquivo pode ser contido dentro de um backup completo, um backup de arquivo ou um backup parcial.  
   
   
 ##  <a name="Benefits"></a> Benefícios  
@@ -40,7 +40,7 @@ ms.locfileid: "68089841"
   
  A ilustração a seguir mostra como funciona um backup diferencial. A figura exibe 24 extensões de dados, dentre as quais 6 que foram alteradas. O backup diferencial contém somente estas 6 extensões de dados. A operação de backup diferencial baseia-se em uma página de bitmap que contém um bit para cada extensão. Para cada extensão atualizada desde a base, o bit é definido para 1 no bitmap.  
   
- ![O bitmap diferencial identifica extensões alteradas](../../relational-databases/backup-restore/media/bnr-how-diff-backups-work.gif "O bitmap diferencial identifica extensões alteradas")  
+ ![O bitmap diferencial identifica as extensões alteradas](../../relational-databases/backup-restore/media/bnr-how-diff-backups-work.gif "O bitmap diferencial identifica as extensões alteradas")  
   
 > [!NOTE]  
 >  O bitmap diferencial não é atualizado por um backup do tipo somente cópia. Assim, um backup do tipo somente cópia não afeta os backups diferenciais subsequentes.  

@@ -11,12 +11,12 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42b42356331d91683811472b420e656560a77d79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a86f94a141b1f15e2bfb7e9ff3c4428f5b33707
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086265"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909766"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Estatísticas para tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Para habilitar a atualização automática de estatísticas em tabelas com otimi
 
 3. Recompile manualmente os procedimentos armazenados compilados de modo nativo para se beneficiar das estatísticas atualizadas.
 
-*Script avulso para estatísticas:* para tabelas com otimização de memória que foram criadas em um nível de compatibilidade inferior, é possível executar o script Transact-SQL a seguir uma vez para atualizar as estatísticas de todas as tabelas com otimização de memória e habilitar a atualização automática de estatísticas daí (supondo que AUTO_UPDATE_STATISTICS esteja habilitado para o banco de dados):
+*Script avulso para estatísticas:* Para tabelas com otimização de memória criadas em um nível de compatibilidade inferior, é possível executar o seguinte script Transact-SQL uma vez para atualizar as estatísticas de todas as tabelas com otimização de memória e habilitar a atualização automática de estatísticas desse ponto em diante (supondo que AUTO_UPDATE_STATISTICS esteja habilitado para o banco de dados):
 
 ```
 -- Assuming AUTO_UPDATE_STATISTICS is already ON for your database:
@@ -99,6 +99,6 @@ WHERE o.is_memory_optimized=1
  A criação de procedimentos armazenados compilados de modo nativo após o carregamento dos dados e a atualização das estatísticas garante que o otimizador tem estatísticas disponíveis para as tabelas com otimização de memória. Isso garantirá planos de consulta eficientes quando o procedimento for compilado.  
 
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

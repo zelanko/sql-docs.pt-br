@@ -15,10 +15,10 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095699"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Usar o serviço de Armazenamento de Blobs do Azure com o SQL Server 2016
@@ -38,7 +38,7 @@ Para concluir este tutorial, você deve estar familiarizado com os conceitos de 
 - Crie uma [conta de armazenamento do Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Provisionar uma [VM do Azure que executa o SQL Server](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/)
-- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Baixar [Bancos de dados de exemplo do AdventureWorks2016](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 - Atribua a conta de usuário à função [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) e conceda permissões para [Alterar qualquer credencial](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
 
@@ -53,7 +53,7 @@ Uma assinatura de acesso compartilhado é um URI que concede direitos de acesso 
   
 Você pode criar uma política de acesso armazenado e uma assinatura de acesso compartilhado usando o Azure PowerShell, o SDK do Armazenamento do Azure, a API REST do Azure ou um utilitário de terceiros. Este tutorial demonstra como usar um script do Azure PowerShell para concluir esta tarefa. O script usa o modelo de implantação do Resource Manager e cria os seguintes novos recursos  
   
--   Grupo de recursos   
+-   Resource group   
 -   Conta de armazenamento  
 -   Contêiner de blobs do Azure   
 -   Política do SAS    
@@ -481,7 +481,7 @@ Para excluir o grupo de recursos, execute o seguinte código do powershell:
 ## <a name="see-also"></a>Consulte Também
 
 [Arquivos de dados do SQL Server no Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
-[Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[Backups de Instantâneo de Arquivo para Arquivos de Banco de Dados no Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [Backup do SQL Server para URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
 [Assinaturas de Acesso Compartilhado, Parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Criar contêiner](https://msdn.microsoft.com/library/azure/dd179468.aspx)  

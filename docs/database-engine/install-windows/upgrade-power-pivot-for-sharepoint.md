@@ -12,10 +12,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892581"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Atualizar Power Pivot para SharePoint
@@ -48,7 +48,7 @@ ms.locfileid: "68892581"
   
  [Tarefas de verificação após a atualização](#verify)  
   
-## <a name="background"></a>Plano de fundo  
+## <a name="background"></a>Segundo plano  
   
 -   Se estiver atualizando um farm com vários servidores do SharePoint 2010 que tenha duas ou mais instâncias do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , será necessário atualizar totalmente cada servidor **antes** de seguir para o próximo servidor. Uma atualização total inclui a execução da Instalação do SQL Server para atualizar arquivos de programas do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , seguida pelas ações de atualização do SharePoint que configuram os serviços atualizados. A disponibilidade do servidor será limitada até você executar as ações de atualização na Ferramenta de Configuração apropriada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou do Windows PowerShell.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "68892581"
   
  **SQL Server:**  
   
--   Se a instalação existente do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], o Service Pack 2 (SP2) do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] será necessário para uma atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Se a instalação existente do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], o SP2 (Service Pack 2) do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] será necessário para uma atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
--   Se a instalação existente do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o Service Pack 1 (SP1) do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] será necessário para uma atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Se a instalação existente do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o SP1 (Service Pack 1) do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] será necessário para uma atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
  **SharePoint 2010:**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68892581"
 ##  <a name="bkmk_uprgade_sharepoint2013"></a> Atualizar um farm existente do SharePoint 2013  
  Para atualizar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] implantado no SharePoint 2013, faça o seguinte:  
   
- ![upgrade do Power Pivot para SharePoint 2013](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "powerpivot for sharepoint 2013 upgrade")  
+ ![atualização do PowerPivot para SharePoint 2013](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "atualização do PowerPivot para SharePoint 2013")  
   
 1.  Execute a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] em servidores de back-end que executam o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no modo do SharePoint. Se o servidor hospedar várias instâncias do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], atualize pelo menos a instância do **POWERPIVOT** . A lista a seguir é um resumo das etapas do assistente de instalação relacionadas à atualização do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] :  
   
@@ -94,11 +94,11 @@ ms.locfileid: "68892581"
   
 3.  Execute o suplemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint (**spPowerPivot.msi**) em cada servidor no farm do SharePoint 2013 para instalar os provedores de dados. A exceção são os servidores em que você executou o assistente de instalação do SQL Server, que também atualiza os provedores de dados. Para obter mais informações, consulte [Baixar o Microsoft SQL Server 2014 Power Pivot para Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) e [Instalar ou desinstalar o suplemento Power Pivot para SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
-4.  **Execute o suplemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013** em um dos servidores de aplicativos do SharePoint para configurar o farm do SharePoint com os arquivos atualizados da solução que o suplemento instalou. Você não pode usar a Administração Central do SharePoint para essa etapa. Para obter mais informações, consulte o seguinte:  
+4.  **Execute o suplemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013** em um dos servidores de aplicativos do SharePoint para configurar o farm do SharePoint com os arquivos atualizados da solução que o suplemento instalou. Você não pode usar a Administração Central do SharePoint para essa etapa. Para saber mais, consulte o seguinte:  
   
     1.  Na página inicial do Windows, digite **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** e, nos resultados da pesquisa, clique em **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013**. Observe que a pesquisa pode retornar ambas as versões da ferramenta de configuração.  
   
-         ![duas ferramentas de configuração do Power Pivot](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")  
+         ![duas ferramentas de configuração do PowerPivot](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "duas ferramentas de configuração do PowerPivot")  
   
          Ou  
   
@@ -125,9 +125,9 @@ ms.locfileid: "68892581"
   
     8.  Clique em **Sim** para continuar.  
   
-    9. A atualização de soluções e recursos no farm pode levar vários minutos para ser concluída. Durante esse tempo, as solicitações de conexão de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] **falharão** com erros semelhantes a “**Não é possível atualizar os dados**” ou “**Erro ao tentar executar a ação solicitada. Tente novamente**.” Depois que a atualização for concluída, o servidor ficará disponível e esses erros não ocorrerão mais.  
+    9. A atualização de soluções e recursos no farm pode levar vários minutos para ser concluída. Durante esse tempo, as solicitações de conexão de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**falharão** com erros semelhantes a “**Não é possível atualizar os dados**” ou “**Erro ao tentar executar a ação solicitada. Tente novamente**.” Depois que a atualização for concluída, o servidor ficará disponível e esses erros não ocorrerão mais.  
   
-     Para obter mais informações, consulte o seguinte:  
+     Para saber mais, consulte o seguinte:  
   
     -   [Ferramentas de Configuração do Power Pivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
   
@@ -142,7 +142,7 @@ ms.locfileid: "68892581"
 ##  <a name="bkmk_uprgade_sharepoint2010"></a> Atualizar um farm existente do SharePoint 2010  
  Para atualizar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] implantado no SharePoint 2010, faça o seguinte:  
   
- ![upgrade do Power Pivot para SharePoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "powerpivot for sharepoint 2010 upgrade")  
+ ![atualização do PowerPivot para SharePoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "atualização do PowerPivot para SharePoint 2010")  
   
 1.  Baixe o [Service Pack 2 para Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672) e aplique-o em todos os servidores no farm. Verifique se a instalação do SharePoint SP2 foi bem-sucedida. Na Administração Central, na página Atualização e Migração, abra a página Verificar o status de instalação do produto e dos patches para exibir mensagens de status relacionadas ao SP2.  
   
@@ -299,7 +299,7 @@ Get-PowerPivotSystemService
   
 3.  Clique em **Provedores de Dados Confiáveis**. Você deverá ver o MSOLAP.5 (Provedor Microsoft OLE DB para OLAP Services 11.0). Se você tiver atualizado sua instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , também verá o MSOLAP.4 da versão anterior.  
   
-4.  Para obter mais informações, consulte [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
+4.  Para obter mais informações, consulte [Adicionar MSOLAP.5 como um provedor de dados confiável em Serviços do Excel](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
   
  O MSOLAP.4 é descrito como o Microsoft OLE DB Provider para OLAP Services 10.0. Essa versão pode ser a versão padrão do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] que é instalada com os Serviços do Excel ou pode ser a versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] . A versão padrão que o SharePoint instala não permite o acesso a dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Você deve ter a versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou posterior para se conectar a pastas de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no SharePoint. Para verificar se você tem a versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , siga as instruções na seção anterior que explicam como verificar a versão exibindo as propriedades do arquivo.  
   

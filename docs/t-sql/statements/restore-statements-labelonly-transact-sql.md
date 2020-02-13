@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4d763ccf2799ea72a1882a576e4b17ef839e3f1e
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68742955"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>Instruções RESTORE – LABELONLY (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68742955"
 > [!NOTE]  
 >  Para obter as descrições dos argumentos, consulte [Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -86,7 +86,7 @@ FROM <backup_device>
 |**FamilySequenceNumber**|**int**|Número de sequência desta família.|  
 |**MediaFamilyId**|**uniqueidentifier**|Número de identificação exclusivo da família de mídia.|  
 |**MediaSequenceNumber**|**int**|Número de sequência dessa mídia na família de mídias.|  
-|**MediaLabelPresent**|**tinyint**|Se a descrição de mídia contiver:<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Rótulo da mídia de formato de fita<br /><br /> **0** = descrição da mídia|  
+|**MediaLabelPresent**|**tinyint**|Se a descrição de mídia contiver:<br /><br /> **1** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Rótulo da mídia de formato de fita<br /><br /> **0** = descrição da mídia|  
 |**MediaDescription**|**nvarchar(255)**|Descrição da mídia, em texto de formato livre, ou rótulo de mídia de formato de fita.|  
 |**SoftwareName**|**nvarchar(128)**|Nome do software de backup que gravou o rótulo.|  
 |**SoftwareVendorId**|**int**|Número exclusivo de identificação do fornecedor do software que gravou o backup.|  
@@ -101,7 +101,7 @@ FROM <backup_device>
  A execução de RESTORE LABELONLY é um modo rápido de descobrir o que a mídia de backup contém. Como RESTORE LABELONLY lê só o cabeçalho da mídia, essa instrução terminará rapidamente mesmo quando estiverem sendo usados dispositivos de fita de alta capacidade.  
   
 ## <a name="security"></a>Segurança  
- Uma operação de backup pode opcionalmente especificar senhas para um conjunto de mídias. Quando uma senha tiver sido definida em um conjunto de mídias, será preciso especificar a senha correta na instrução RESTORE. A senha impede operações de restauração não autorizadas e acréscimos não autorizados de conjuntos de backup na mídia usando as ferramentas do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Porém, uma senha não impede a substituição da mídia usando a opção FORMAT da instrução BACKUP.  
+ Uma operação de backup pode opcionalmente especificar senhas para um conjunto de mídias. Quando uma senha tiver sido definida em um conjunto de mídias, será preciso especificar a senha correta na instrução RESTORE. A senha impede operações de restauração não autorizadas e acréscimos não autorizados de conjuntos de backup à mídia usando ferramentas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Porém, uma senha não impede a substituição da mídia usando a opção FORMAT da instrução BACKUP.  
   
 > [!IMPORTANT]  
 >  A proteção fornecida por esta senha é fraca. Destina-se a evitar uma restauração incorreta com o uso de ferramentas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por usuários autorizados ou não autorizados. Não impede a leitura dos dados de backup por outros meios ou a substituição da senha. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]A melhor prática para proteger backups é armazenar as fitas de backup em um local seguro ou fazer backup em arquivos de disco protegidos por ACLs (listas de controle de acesso) adequadas. As ACLs devem ser definidas no diretório raiz em que os backups são criados.  

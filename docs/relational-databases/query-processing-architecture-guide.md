@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
-ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
+ms.openlocfilehash: e5b890ff4a9d58f531f3a72e41e8280faf2511a3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74866069"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909746"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -637,16 +637,16 @@ Além disso, as cláusulas de consulta a seguir não são parametrizadas. Observ
 
 * A <select_list> de qualquer instrução `SELECT`. Isso inclui as listas `SELECT` de subconsultas e listas `SELECT` dentro de instruções `INSERT`.
 * Instruções `SELECT` de subconsulta exibidas dentro de uma instrução `IF` .
-* As cláusulas L `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO`ou `FOR XM`de uma consulta.
+* As cláusulas `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO` ou `FOR XML` de uma consulta.
 * Argumentos, diretos ou como subexpressões, para `OPENROWSET`, `OPENQUERY`, `OPENDATASOURCE`, `OPENXML`ou qualquer operador `FULLTEXT` .
 * Os argumentos pattern e escape_character de uma cláusula `LIKE` .
 * O argumento style de uma cláusula `CONVERT` .
 * As constantes de número inteiro dentro de uma cláusula `IDENTITY` .
 * Constantes especificadas usando a sintaxe da extensão ODBC.
-* Expressões de constantes desdobráveis que são argumentos dos operadores +, -, \*, / e %. Ao considerar a elegibilidade da parametrização forçada, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera que uma expressão é de constante dobrável quando qualquer uma das seguintes condições é verdadeira:  
+* Expressões de constantes desdobráveis que são argumentos dos operadores `+`, `-`, `*`, `/` e `%`. Ao considerar a elegibilidade da parametrização forçada, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera que uma expressão é de constante dobrável quando qualquer uma das seguintes condições é verdadeira:  
   * Nenhuma coluna, variável ou subconsulta é exibida na expressão.  
   * A expressão contém uma cláusula `CASE` .  
-* Argumentos para cláusulas de dica de consulta. Incluem o argumento `number_of_rows` da dica de consulta `FAST` , o argumento `number_of_processors` da dica de consulta `MAXDOP` e o argumento number da dica de consulta `MAXRECURSION` .
+* Argumentos para cláusulas de dica de consulta. Incluem o argumento *number_of_rows* da dica de consulta `FAST`, o argumento *number_of_processors* da dica de consulta `MAXDOP` e o argumento *number* da dica de consulta `MAXRECURSION`.
 
 A parametrização ocorre no nível das instruções [!INCLUDE[tsql](../includes/tsql-md.md)] individuais. Em outras palavras, são parametrizadas instruções individuais em lote. Após a compilação, uma consulta parametrizada é executada no contexto do lote em que foi enviado originalmente. Se um plano de execução de uma consulta for armazenado em cache, você poderá determinar se a consulta foi parametrizada referenciando a coluna sql da exibição de gerenciamento dinâmico sys.syscacheobjects. Se uma consulta for parametrizada, os nomes e tipos de dados de parâmetros serão exibidos antes do texto do lote enviado nessa coluna, como (\@1 tinyint).
 

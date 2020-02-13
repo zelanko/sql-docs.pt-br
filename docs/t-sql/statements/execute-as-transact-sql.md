@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9d6abc08f6ba46792d92887ca22f1a37b48e05cc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73980999"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287831"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "73980999"
   
 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73980999"
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Logon  
+ LOGIN  
  **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
  Especifica que o contexto de execução a ser representado é um logon. O escopo de representação é em nível de servidor.  
@@ -63,7 +63,7 @@ ms.locfileid: "73980999"
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente nem no Banco de Dados SQL nem no SQL Data Warehouse.  
   
- Usuário  
+ USER  
  Especifica que o contexto a ser representado é um usuário no banco de dados atual. O escopo de representação é restrito ao banco de dados atual. Uma opção de contexto para um usuário de banco de dados não herda as permissões em nível de servidor desse usuário.  
   
 > [!IMPORTANT]  
@@ -96,7 +96,7 @@ Quando usado fora de um módulo, a instrução não tem nenhuma ação.
  > [!NOTE]  
 >  Essa opção não está disponível no SQL Data Warehouse.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A alteração no contexto de execução permanece em vigor até que uma das seguintes situações ocorra:  
   
 -   Outra instrução EXECUTE AS é executada.  
@@ -120,7 +120,7 @@ Você pode criar uma pilha de contexto de execução chamando a instrução EXEC
   
 Se o usuário ficou órfão (o logon associado não existe mais) e ele não foi criado com **WITHOUT LOGIN**, **EXECUTE AS** falhará para o usuário.  
   
-## <a name="best-practice"></a>Prática recomendada  
+## <a name="best-practice"></a>Melhor prática  
  Especifique um logon ou usuário que tenha pelo menos os privilégios necessários para executar as operações da sessão. Por exemplo, não especifique um nome de logon com permissões em nível de servidor se apenas as permissões em nível de banco de dados forem necessárias; ou não especifique uma conta de proprietário de banco de dados, a menos que essas permissões sejam necessárias.  
   
 > [!CAUTION]  
@@ -129,9 +129,9 @@ Se o usuário ficou órfão (o logon associado não existe mais) e ele não foi 
 ## <a name="using-with-no-revert"></a>Usando WITH NO REVERT  
  Quando a instrução EXECUTE AS inclui a cláusula opcional WITH NO REVERT, o contexto de execução de uma sessão não pode ser redefinido usando REVERT ou executando outra instrução EXECUTE AS. O contexto definido pela instrução permanece até que a sessão seja descartada.  
   
- Quando a cláusula WITH NO REVERT COOKIE = @*varbinary_variabl*e for especificada, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passa o valor do cookie para @*varbinary_variabl*e. O contexto de execução definido por essa instrução poderá ser revertido somente para o contexto anterior se a instrução de chamada REVERT WITH COOKIE = @*varbinary_variable* tiver o mesmo valor *@varbinary_variable* .  
+ Quando a cláusula WITH NO REVERT COOKIE = @*varbinary_variabl*e for especificada, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passa o valor do cookie para @*varbinary_variabl*e. O contexto de execução definido por essa instrução poderá ser revertido para o contexto anterior somente se a instrução de chamada REVERT WITH COOKIE = @*varbinary_variable* tiver o mesmo valor *\@varbinary_variable*.  
   
- Essa opção é útil em um ambiente no qual um pool de conexão é usado. O pool de conexão é a manutenção de um grupo de conexões de banco de dados para reutilização por aplicativos em um servidor de aplicativos. Como o valor passado para *@varbinary_variable* é conhecido apenas pelo chamador da instrução EXECUTE AS (no caso, o aplicativo), o chamador pode garantir que o contexto de execução estabelecido não possa ser alterado por mais ninguém.  
+ Essa opção é útil em um ambiente no qual um pool de conexão é usado. O pool de conexão é a manutenção de um grupo de conexões de banco de dados para reutilização por aplicativos em um servidor de aplicativos. Como o valor passado para *\@varbinary_variable* é conhecido apenas pelo chamador da instrução EXECUTE AS (no caso, o aplicativo), o chamador pode garantir que o contexto de execução estabelecido não possa ser alterado por mais ninguém.  
   
 ## <a name="determining-the-original-login"></a>Determinando o logon original  
  Use a função [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) para retornar o nome do logon que conectou à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode usar essa função para retornar a identidade do logon original em sessões nas quais há muitas alternâncias de contexto explícitas ou implícitas.  

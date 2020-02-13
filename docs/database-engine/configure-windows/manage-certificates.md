@@ -21,10 +21,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68212745"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>Gerenciamento de certificado (SQL Server Configuration Manager)
@@ -45,7 +45,7 @@ Certificados SSL/TLS são amplamente usados para proteger o acesso ao SQL Server
   
 1. No SQL Server Configuration Manager, no painel de console, expanda **Configuração de Rede do SQL Server**.  
   
-2. Clique com o botão direito do mouse em **Protocolos para** *&lt;nome da Instância&gt;* e selecione **Propriedades**.  
+2. Clique com o botão direito do mouse em **Protocolos de** *&lt;Nome da instância&gt;* e, em seguida, selecione **Propriedades**.  
   
 3. Escolha a guia **Certificado** e, em seguida, selecione **Importar**.  
   
@@ -58,7 +58,7 @@ Certificados SSL/TLS são amplamente usados para proteger o acesso ao SQL Server
   
 1. No SQL Server Configuration Manager, no painel de console, expanda **Configuração de Rede do SQL Server**.
   
-2. Clique com o botão direito do mouse em **Protocolos para** *&lt;nome da Instância&gt;* e escolha **Propriedades**. 
+2. Clique com o botão direito do mouse em **Protocolos de** *&lt;Nome da Instância&gt;* e, em seguida, escolha **Propriedades**. 
 
 3. Escolha a guia **Certificado** e, em seguida, selecione **Importar**.
 
@@ -81,7 +81,7 @@ Certificados SSL/TLS são amplamente usados para proteger o acesso ao SQL Server
   
 1. No SQL Server Configuration Manager, no painel de console, expanda **Configuração de Rede do SQL Server**.
   
-2. Clique com o botão direito do mouse em **Protocolos para** *&lt;nome da Instância&gt;* e selecione **Propriedades**.  
+2. Clique com o botão direito do mouse em **Protocolos de** *&lt;Nome da instância&gt;* e, em seguida, selecione **Propriedades**.  
   
 3. Escolha a guia **Certificado** e, em seguida, selecione **Importar**.  
   

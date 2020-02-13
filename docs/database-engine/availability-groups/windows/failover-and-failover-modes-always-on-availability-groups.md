@@ -16,10 +16,10 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 269ec542c7de83afa9c174ea0bc9221f125f7e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67949100"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover e modos de failover (Grupos de Disponibilidade AlwaysOn)
@@ -183,7 +183,7 @@ ms.locfileid: "67949100"
   
 3.  O destino de failover (em `Node02`) se torna a nova réplica primária. Como esse é um failover planejado, a réplica primária anterior alterna para a função secundária durante o failover e coloca seus bancos de dados online como bancos de dados secundários imediatamente.  
   
- ![Ilustração de um failover manual planejado](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "Illustation of a planned manual failover")  
+ ![Ilustração de um failover manual planejado](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "Ilustração de um failover manual planejado")  
   
  **Nesta seção:**  
   
@@ -342,7 +342,7 @@ ms.locfileid: "67949100"
   
 -   [Definir configurações de NodeWeight de quorum do cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
--   [Exibir configurações de NodeWeight de quorum de cluster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+-   [Exibir configurações de NodeWeight de quorum do cluster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
 -   [Forçar um cluster WSFC para iniciar sem um quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   

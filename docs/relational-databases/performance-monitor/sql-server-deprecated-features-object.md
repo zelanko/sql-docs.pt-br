@@ -16,10 +16,10 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093587"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
@@ -38,14 +38,14 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 
 |**Contador Recursos Preteridos do SQL Server**|Descrição|  
 |-------------|-----------------|  
-|**Uso**|Uso de recursos desde a última inicialização do SQL Server.|
+|**Usage**|Uso de recursos desde a última inicialização do SQL Server.|
   
  A tabela a seguir descreve as instâncias de contadores dos Recursos Preteridos do SQL Server.  
   
 |Instâncias do contador de Recursos Preteridos do SQL Server|Descrição|  
 |------------------------------------------------------|-----------------|  
 |'#' e '##' como o nome de tabelas temporárias e procedimentos armazenados|Um identificador que não contém nenhum caractere diferente de # foi encontrado. Use pelo menos um caractere adicional. Ocorre uma vez por compilação.|  
-|sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substitua por `SELECT column_list FROM` *< function_name>* `()`. Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)` por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  
+|sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substitua-a por `SELECT column_list FROM` *<nome_da_função>* `()`. Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)`por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  
 |'\@' e nomes que começam com '\@\@' como identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]|Foi encontrado um identificador que começava com \@ ou \@\@. Não use \@ nem \@v@ nem nomes que comecem com \@\@ como identificadores. Ocorre uma vez por compilação.|  
 |ADDING TAPE DEVICE|O recurso preterido sp_addumpdevice'**tape**' foi encontrado. Em seu lugar, use sp_addumpdevice'**disk**'. Ocorre uma vez por uso.|  
 |Permissão ALL|Número total de vezes que a sintaxe GRANT ALL, DENY ALL ou REVOKE ALL foi encontrada. Modifique a sintaxe para negar permissões específicas. Ocorre uma vez por consulta.|  
@@ -110,7 +110,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |Híndi|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de ordenação. Planeje a modificação de aplicativos que usam esta ordenação. Use Indic_General_90.|  
 |Dica da tabela HOLDLOCK sem parênteses||  
 |IDENTITYCOL|A sintaxe de INDENTITYCOL foi encontrada. Reescreva instruções para usar a sintaxe de identidade $. Ocorre uma vez por compilação.|  
-|Lista de seleção de exibição indexada sem COUNT_BIG (\*)|A lista de seleção de uma exibição indexada de agregação deve conter COUNT_BIG (\*).|  
+|Lista de seleção de exibição indexada sem COUNT_BIG (*)|A lista de seleção de uma exibição indexada de agregação deve conter COUNT_BIG (\*).|  
 |INDEX_OPTION|As sintaxes CREATE TABLE, ALTER TABLE ou CREATE INDEX sem parênteses delimitando as opções foram encontradas. Reescreva a instrução para usar a sintaxe atual. Ocorre uma vez por consulta.|  
 |INDEXKEY_PROPERTY|A sintaxe INDEXKEY_PROPERTY foi encontrada. Reescreva instruções para consultar sys.index_columns. Ocorre uma vez por compilação.|  
 |Dicas TVF indiretas|A aplicação indireta de dicas de tabela à invocação de uma TVF (função com valor de tabela) com várias instruções através de uma exibição será removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -275,7 +275,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |XMLDATA|A sintaxe FOR XML foi encontrada. Use a geração de XSD para os modos RAW e AUTO. Não há nenhuma substituição para o modo explícito. Ocorre uma vez por compilação.|  
 |XP_API|Uma instrução de procedimento armazenado estendido foi encontrada. Não use.|  
 |xp_grantlogin|O procedimento xp_grantlogin foi encontrado. Em vez disso, use CREATE LOGIN. Ocorre uma vez por compilação.|  
-|xp_loginconfig|O procedimento xp_loginconfig foi encontrado. Em vez disso, use o argumento IsIntegratedSecurityOnly de SERVERPROPERTY. Ocorre uma vez por consulta.|  
+|xp_loginConfig|O procedimento xp_loginconfig foi encontrado. Em vez disso, use o argumento IsIntegratedSecurityOnly de SERVERPROPERTY. Ocorre uma vez por consulta.|  
 |xp_revokelogin|O procedimento xp_revokelogin foi encontrado. Em vez disso, use ALTER LOGIN DISABLE ou DROP LOGIN. Ocorre uma vez por compilação.|  
   
 ## <a name="see-also"></a>Consulte Também  

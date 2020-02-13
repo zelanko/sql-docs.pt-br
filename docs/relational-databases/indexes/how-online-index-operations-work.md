@@ -19,10 +19,10 @@ ms.author: mikeray
 ms.prod_service: database-engine, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2dd4970cc25e382706f63ed94b7bcc3700549d9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909751"
 ---
 # <a name="how-online-index-operations-work"></a>Como funcionam as operações de índice online
@@ -62,7 +62,7 @@ ms.locfileid: "67909751"
 |Fase|Atividade de origem|Bloqueios de origem|  
 |-----------|---------------------|------------------|  
 |Preparação<br /><br /> Fase curta|Preparação dos metadados do sistema para criar uma nova estrutura de índice vazia.<br /><br /> Um instantâneo da tabela é definido. Ou seja, o controle de versão de linha é usado para fornecer uma consistência de leitura em nível de transação.<br /><br /> As operações de gravação de usuário simultâneas na origem são bloqueadas por um período curto.<br /><br /> Operações DLL não simultâneas são permitidas, exceto na criação de múltiplos índices não clusterizados.|S (Shared) na tabela *<br /><br /> IS (Intent Shared)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
-|Compilação<br /><br /> Fase principal|Os dados são digitalizados, classificados, mesclados e inseridos na origem em operações de carregamento em massa.<br /><br /> As operações de usuário simultâneas de exclusão, atualização, inserção e seleção são aplicadas aos índices preexistentes e a quaisquer outros novos índices compilados.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
+|Build<br /><br /> Fase principal|Os dados são digitalizados, classificados, mesclados e inseridos na origem em operações de carregamento em massa.<br /><br /> As operações de usuário simultâneas de exclusão, atualização, inserção e seleção são aplicadas aos índices preexistentes e a quaisquer outros novos índices compilados.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |Final<br /><br /> Fase curta|Todas as transações atualizadas não confirmadas devem ser concluídas antes do início desta fase. Dependendo do bloqueio adquirido, todas as novas transações de usuário de leitura ou gravação devem ser bloqueadas por um período curto até que essa fase seja concluída.<br /><br /> Os metadados do sistema estão atualizados para substituir a origem pelo destino.<br /><br /> Se necessário, a origem será removida. Por exemplo, depois de recompilar e remover um índice clusterizado.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S na tabela se estiver criando um índice não clusterizado.\*<br /><br /> SCH-M (Schema Modification) se qualquer estrutura de origem (índice ou tabela) for removida.\*|  
   
  \* A operação de índice aguarda a conclusão de transações de atualização não confirmadas antes de adquirir o bloqueio S ou SCH-M na tabela.  
@@ -77,8 +77,8 @@ ms.locfileid: "67909751"
 |Fase|Atividade de destino|Bloqueios de destino|  
 |-----------|---------------------|------------------|  
 |Preparação|Um novo índice é criado e definido como somente gravação.|IS|  
-|Compilação|Os dados são inseridos a partir da origem.<br /><br /> São aplicadas as modificações de usuário (inserções, atualizações, exclusões) aplicadas à origem.<br /><br /> Esta atividade é transparente ao usuário.|IS|  
-|Final|Os metadados do índice são atualizados.<br /><br /> O índice é definido para o status de leitura/gravação.|P<br /><br /> ou em<br /><br /> SCH-M|  
+|Build|Os dados são inseridos a partir da origem.<br /><br /> São aplicadas as modificações de usuário (inserções, atualizações, exclusões) aplicadas à origem.<br /><br /> Esta atividade é transparente ao usuário.|IS|  
+|Final|Os metadados do índice são atualizados.<br /><br /> O índice é definido para o status de leitura/gravação.|S<br /><br /> ou<br /><br /> SCH-M|  
   
  O destino não é acessado por instruções SELECT emitidas pelo usuário até que a operação de índice seja concluída.  
   

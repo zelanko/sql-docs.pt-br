@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2fbf040bd24ce3da81497001213e953f7436d863
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296870"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
@@ -33,7 +33,7 @@ ms.locfileid: "71296870"
 
 
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é uma plataforma para criar integração de dados em nível corporativo e soluções de transformações de dados. Use [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para solucionar problemas empresariais complexos copiando ou baixando arquivos, carregando data warehouses, limpando e minerando dados e gerenciando objetos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e dados.
+[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é uma plataforma para criar integração de dados em nível empresarial e soluções de transformações de dados. Use [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para solucionar problemas empresariais complexos copiando ou baixando arquivos, carregando data warehouses, limpando e minerando dados e gerenciando objetos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e dados.
 
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pode extrair e transformar dados uma ampla variedade de fontes, como arquivos de dados XML, arquivos simples e fontes de dados relacionais e transferir dados para um ou mais destinos.
 

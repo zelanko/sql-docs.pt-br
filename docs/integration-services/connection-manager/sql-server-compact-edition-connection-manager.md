@@ -18,10 +18,10 @@ ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62c5a0400918ffe86cca4ec9ff98dd9254d29621
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294347"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>Gerenciador de Conexões do SQL Server Compact Edition
@@ -107,13 +107,13 @@ ms.locfileid: "71294347"
 |**Exclusive**|Especifica o acesso exclusivo ao banco de dados.|  
 |**Shared Read**|Especifica que outros usuários podem ler de banco de dados ao mesmo tempo.|  
   
- **Informações de Persistência de Segurança**  
+ **Persist Security Info**  
  Especifique se as informações de segurança são retornadas como parte da cadeia de conexão. O valor padrão dessa opção é **False**.  
   
  **Diretório de Arquivo Temporário**  
  Especifique o local do arquivo de banco de dados temporário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
- **Fonte de dados**  
+ **Fonte de Dados**  
  Especifique o nome do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
  **Senha**  

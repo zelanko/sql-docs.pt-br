@@ -23,10 +23,10 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296945"
 ---
 # <a name="integration-services-service-ssis-service"></a>Serviço do Integration Services (Serviço SSIS)
@@ -91,7 +91,7 @@ ms.locfileid: "71296945"
   
 ## <a name="set-the-properties-of-the-service"></a>Definir as propriedades do serviço
   
- O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] gerencia e monitora pacotes no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Quando você instala o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]pela primeira vez, o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é iniciado e o tipo de inicialização do serviço é definido como automático.  
+ O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] gerencia e monitora pacotes no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Quando você instala o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pela primeira vez, o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é iniciado e o tipo de inicialização do serviço é definido como automático.  
   
  Após a instalação do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , você pode definir as propriedades do serviço usando o SQL Server Configuration Manager ou o snap-in MMC dos Serviços.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "71296945"
   
 4.  Na caixa de diálogo **Propriedades do SQL Server Integration Services** , você pode fazer o seguinte:  
   
-    -   Clique na guia **Geral** . Para habilitar o serviço, selecione o tipo de inicialização automática ou manual. Para desabilitar o serviço, selecione Desabilitar na caixa **Tipo de inicialização** . A seleção de Desabilitar não interromperá o serviço se ele estiver em execução.  
+    -   Clique na guia **Geral**. Para habilitar o serviço, selecione o tipo de inicialização automática ou manual. Para desabilitar o serviço, selecione Desabilitar na caixa **Tipo de inicialização** . A seleção de Desabilitar não interromperá o serviço se ele estiver em execução.  
   
          Se o serviço já estiver habilitado, você poderá clicar em **Parar** para interromper o serviço ou clicar em **Iniciar** para iniciar o serviço.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "71296945"
   
 2.  Na caixa de diálogo **Serviços de Componentes**, expanda o nó Serviços de Componentes > Computadores > Meu Computador > Configuração de DCOM.  
   
-3.  Clique com o botão direito do mouse em **Microsoft SQL Server Integration Services 13.0** e clique em **Propriedades**.  
+3.  Clique com o botão direito do mouse em **Microsoft SQL Server Integration Services 13.0**e clique em **Propriedades**.  
   
 4.  Na guia **Segurança** , clique em **Editar** na área **Permissões de Inicialização e Ativação** .  
   
@@ -231,7 +231,7 @@ Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o p
  Você pode modificar o arquivo de configuração para permitir que pacotes continuem sendo executados se o serviço for interrompido, para exibir pastas raiz adicionais no Pesquisador de Objetos ou para especificar uma pasta diferente ou pastas adicionais no sistema de arquivos gerenciado pelo serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Por exemplo, você pode criar pastas raiz adicionais do tipo **SqlServerFolder**para gerenciar pacotes nos bancos de dados msdb de instâncias adicionais do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 > [!NOTE]  
->  Alguns caracteres não são válidos em nomes de pasta. Caracteres válidos para nomes de pastas são determinados pela classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **System.IO.Path** e pelo campo **GetInvalidFilenameChars** . O campo **GetInvalidFilenameChars** fornece uma matriz de caracteres específica da plataforma que não pode ser especificada em argumentos de cadeia de caracteres de caminho passados para membros da classe **Path** . O conjunto de caracteres inválidos pode variar por sistema de arquivos. Normalmente, os caracteres inválidos são aspas ("), caractere menos que (<) e caractere pipe (|).  
+>  Alguns caracteres não são válidos em nomes de pasta. Caracteres válidos para nomes de pastas são determinados pela classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]**System.IO.Path** e pelo campo **GetInvalidFilenameChars** . O campo **GetInvalidFilenameChars** fornece uma matriz de caracteres específica da plataforma que não pode ser especificada em argumentos de cadeia de caracteres de caminho passados para membros da classe **Path** . O conjunto de caracteres inválidos pode variar por sistema de arquivos. Normalmente, os caracteres inválidos são aspas ("), caractere menos que (<) e caractere pipe (|).  
   
  No entanto você precisa modificar o arquivo de configuração para gerenciar pacotes que são armazenados em uma instância nomeada ou remota do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Se você não atualizar o arquivo de configuração, não será possível usar o **Pesquisador de Objetos** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para exibir pacotes armazenados no banco de dados msdb na instância nomeada ou remota. Se você tentar usar o **Pesquisador de Objetos** para exibir esses pacotes, receberá a seguinte mensagem de erro:  
   
@@ -314,7 +314,7 @@ Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o p
   
 3.  Selecione **Integration Services** na lista **Tipo de servidor** .  
   
-4.  Digite o nome de um servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] na caixa de texto **Nome do servidor** .  
+4.  Digite o nome de um servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] na caixa de texto **Nome do servidor**.  
   
     > [!NOTE]  
     >  O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não é específico da instância. Você se conecta ao serviço usando o nome do computador no qual o serviço Integration Services está sendo executado.  
@@ -359,7 +359,7 @@ Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o p
   
 2.  Na página **Aplicativos** da caixa de diálogo **Propriedades de Configuração de COM Distribuída** , selecione SQL Server Integration Services 11.0 e clique em **Propriedades**.  
   
-3.  Selecione a página **Segurança** .  
+3.  Escolha a página **Segurança** .  
   
 4.  Use as duas caixas de diálogo separadas para configurar as **Permissões de acesso** e as **Permissões de Inicialização**. Você não pode distinguir entre acesso remoto e local – as permissões de Acesso incluem acesso local e remoto e as permissões de Inicialização incluem inicialização local e remota.  
   
@@ -401,13 +401,13 @@ Para obter mais informações, consulte [Getting Cross Domain Kerberos and Deleg
   
 #### <a name="to-configure-a-windows-firewall-using-the-command-prompt-window"></a>Para configurar um Firewall do Windows usando a janela do prompt de comando  
   
-1.  Execute o seguinte comando:
+1.  Execute o comando a seguir:
 
     ```dos
     netsh firewall add portopening protocol=TCP port=135 name="RPC (TCP/135)" mode=ENABLE scope=SUBNET
     ```
   
-2.  Execute o seguinte comando:
+2.  Execute o comando a seguir:
 
     ```dos
     netsh firewall add allowedprogram program="%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn\MsDtsSrvr.exe" name="SSIS Service" scope=SUBNET

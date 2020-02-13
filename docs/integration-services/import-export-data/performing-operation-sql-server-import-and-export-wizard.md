@@ -12,10 +12,10 @@ ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 22f9918800930be9534441d2bb3706ad7844e9f7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285362"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Executando Operação (Assistente de Importação e Exportação do SQL Server)
@@ -28,12 +28,12 @@ Depois de examinar as escolhas que você fez no assistente e clicar em **Conclui
 ## <a name="screen-shot---operation-in-progress"></a>Captura de tela – Operação em andamento 
  A captura de tela a seguir mostra a página **Realizando Operação** do assistente enquanto a operação está em andamento.  
   
- ![Página Realizando operação do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/performing-operation1.png "Página Realizando operação do Assistente de Importação e Exportação")  
+ ![Página Executando operação do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/performing-operation1.png "Página Executando operação do Assistente de Importação e Exportação")  
 
 ## <a name="screen-shot---operation-completed"></a>Captura de tela – Operação concluída 
  A captura de tela a seguir mostra a página **Realizando Operação** do assistente depois da conclusão da operação. Clique em um item na coluna **Mensagem** para obter mais informações sobre a etapa correspondente.  
   
- ![Página Realizando operação do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/performing-operation2.png "Página Realizando operação do Assistente de Importação e Exportação")  
+ ![Página Executando operação do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/performing-operation2.png "Página Executando operação do Assistente de Importação e Exportação")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>Observar o progresso da operação
  **Ação**  
@@ -49,7 +49,7 @@ Depois de examinar as escolhas que você fez no assistente e clicar em **Conclui
  **Parar**  
  Interrompa a operação, se necessário, clicando no botão **Parar** .  
   
- **Relatório**  
+ **Report**  
  Exibe o relatório, salve o relatório em um arquivo, copie-o para a área de transferência ou envie-o por email.  
   
 ## <a name="whats-next"></a>O que vem a seguir?  

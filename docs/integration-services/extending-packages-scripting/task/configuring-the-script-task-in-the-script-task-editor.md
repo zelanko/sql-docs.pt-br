@@ -17,10 +17,10 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9ac35433b8e197da585f18a6cf87328d493c9bda
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286041"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Configurando a tarefa Script no Editor da Tarefa Script
@@ -40,12 +40,12 @@ ms.locfileid: "71286041"
  A página **Script** do **Editor da Tarefa Script** exibe as propriedades personalizadas da tarefa Script.  
   
 ### <a name="scriptlanguage-property"></a>Propriedade ScriptLanguage  
- O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) dá suporte às linguagens de programação [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Depois de criar um script na tarefa Script, você não poderá alterar o valor da propriedade **ScriptLanguage**.  
+ O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] VSTA ([!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications) dá suporte às linguagens de programação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Depois de criar um script na tarefa Script, você não poderá alterar o valor da propriedade **ScriptLanguage**.  
   
  Para definir a linguagem de script padrão para componentes e tarefas de Script, use a propriedade **ScriptLanguage** na página **Geral** da caixa de diálogo **Opções**. Para obter mais informações, consulte [General Page](../../general-page-of-integration-services-designers-options.md).  
   
 ### <a name="entrypoint-property"></a>Propriedade EntryPoint  
- A propriedade **EntryPoint** especifica o método da classe **ScriptMain** no projeto do VSTA que chamado pelo tempo de execução do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] como ponto de entrada no código da tarefa Script. A **ScriptMain** é a classe padrão gerada pelos modelos de script.  
+ A propriedade **EntryPoint** especifica o método da classe **ScriptMain** no projeto do VSTA que chamado pelo runtime do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] como ponto de entrada no código da tarefa Script. A **ScriptMain** é a classe padrão gerada pelos modelos de script.  
   
  Caso altere o nome do método no projeto do VSTA, será preciso alterar o valor da propriedade **EntryPoint** .  
   

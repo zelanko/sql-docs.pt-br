@@ -24,10 +24,10 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cbb736b77cef9bcb87dfa7cac2cd5a33943ca66
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281980"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controle de acesso de dados confidenciais em pacotes
@@ -76,7 +76,7 @@ ms.locfileid: "71281980"
  Se você exportar o projeto (arquivo .ispac) do servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para o sistema de arquivos, o sistema automaticamente alterará o nível de proteção para **EncryptSensitiveWithUserKey**. Se você importar o projeto usando o **Assistente de Importação de Projeto do Integration Services** no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a propriedade **ProtectionLevel** na janela **Propriedades** mostrará um valor **EncryptSensitiveWithUserKey**.  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>Configuração do nível de proteção com base no ciclo de vida do pacote  
- Você define o nível de proteção de um pacote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quando o desenvolve primeiro no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Posteriormente, quando o pacote for implantado, importado ou exportado do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ou copiado do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o Armazenamento de Pacotes do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou o sistema de arquivos, você poderá atualizar o nível de proteção do pacote. Por exemplo, se você criar e salvar pacotes no computador com uma das opções de nível de proteção de chave de usuário, provavelmente precisará alterar o nível de proteção ao fornecer o pacote a outros usuários; caso contrário eles não poderão abrir o pacote.  
+ Você define o nível de proteção de um pacote do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quando o desenvolve pela primeira vez no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Posteriormente, quando o pacote for implantado, importado ou exportado do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ou copiado do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o Armazenamento de Pacotes do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou o sistema de arquivos, você poderá atualizar o nível de proteção do pacote. Por exemplo, se você criar e salvar pacotes no computador com uma das opções de nível de proteção de chave de usuário, provavelmente precisará alterar o nível de proteção ao fornecer o pacote a outros usuários; caso contrário eles não poderão abrir o pacote.  
   
  Em geral, você altera o nível de proteção conforme listado nas seguintes etapas:  
   
@@ -91,7 +91,7 @@ ms.locfileid: "71281980"
   
  Para obter uma visão geral dos recursos de segurança no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Visão geral de segurança &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
   
- Os procedimentos deste tópico descrevem como usar o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou o utilitário de prompt de comando dtutil para alterar a propriedade **ProtectionLevel**.  
+ Os procedimentos deste tópico descrevem como usar o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou o utilitário de prompt de comando dtutil para alterar a propriedade **ProtectionLevel** .  
   
 > [!NOTE]  
 >  Além dos procedimentos deste tópico, normalmente você pode definir ou alterar a propriedade **ProtectionLevel** de um pacote ao importar ou exportar o pacote. Você também pode alterar a propriedade de **ProtectionLevel** de um pacote ao usar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para salvar um pacote.  
@@ -118,7 +118,7 @@ ms.locfileid: "71281980"
   
 2.  Examine os mapeamentos para a opção **Encrypt** no tópico [dtutil Utility](../../integration-services/dtutil-utility.md)e determine o inteiro apropriado a ser usado como o valor da propriedade **ProtectionLevel** selecionada.  
   
-3.  Abra uma janela do prompt de comando.  
+3.  Abra uma janela de Prompt de Comando.  
   
 4.  No prompt de comando, navegue para a pasta que contém o pacote ou pacotes para os quais você deseja definir a propriedade **ProtectionLevel** .  
   
@@ -142,7 +142,7 @@ ms.locfileid: "71281980"
  Para entender os requisitos e as opções de segurança de pacote, pode ser útil consultar [Visão geral de segurança &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
   
 ### <a name="options"></a>Opções  
- **Package protection level**  
+ **Nível de Proteção do Pacote**  
  Selecione um nível de proteção na lista.  
   
  **Senha**  

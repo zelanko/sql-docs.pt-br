@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: af2e1ff51864215d3f5709463ab8d49e6737747e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8359c9844cf9ebbc91da556f212429c96909d857
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768757"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285610"
 ---
 # <a name="replication-programming-concepts"></a>Conceitos de programação de replicação
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "68768757"
   
 -   As topologias de replicação e como elas se alinham aos tipos de replicação.  
   
- Se você não está familiarizado com replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Tipos de replicação](../../../relational-databases/replication/types-of-replication.md).  
+ Se você não estiver familiarizado com a replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], confira [Tipos de replicação](../../../relational-databases/replication/types-of-replication.md).  
   
 ## <a name="defining-application-functionality"></a>Definindo a funcionalidade do aplicativo  
  Após a definição da topologia de replicação, decida quais serão as funcionalidades oferecidas pelo seu aplicativo. Essas funcionalidades poderão variar de um script que sincroniza uma assinatura até um aplicativo com uma interface do usuário para a configuração da replicação. A replicação oferece suporte às seguintes tarefas de programação gerais:  
@@ -111,8 +111,8 @@ ms.locfileid: "68768757"
 |[Conceitos de objetos de gerenciamento de replicação](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)|Código gerenciado|Administração, monitoramento e sincronização.|  
 |<xref:Microsoft.SqlServer.Replication>|Código gerenciado|Sincronização.|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|Código gerenciado|Criação de manipuladores de lógica de negócios para integrar lógica personalizada ao processo de sincronização de mesclagem.|  
-|[Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Script|Administração e monitoramento.|  
-|[Conceitos dos executáveis do Replication Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Script|Sincronização.|  
+|[Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Scripting|Administração e monitoramento.|  
+|[Conceitos dos executáveis do Replication Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Scripting|Sincronização.|  
   
 ## <a name="example"></a>Exemplo  
  No [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)], os dados precisam ser publicados para 200 representantes de vendas de todo o mundo. Os representantes de venda viajam com muita frequência e precisam usar laptops ou PDAs (personal digital assistants) para alterar dados de clientes e para adicionar novos pedidos. As alterações terão de ser sincronizadas com o Publicador quando o representante de vendas conectar o laptop à rede.  

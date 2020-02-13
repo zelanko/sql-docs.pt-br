@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 57abfdd5679e4ab68f83959f44fce143056c2c7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048658"
 ---
 # <a name="linestring"></a>LineString
@@ -27,7 +27,7 @@ ms.locfileid: "68048658"
 ## <a name="linestring-instances"></a>Instâncias LineString  
  A ilustração abaixo mostra exemplos de instâncias **LineString** .  
   
- ![Exemplos de instâncias geométricas LineString](../../relational-databases/spatial/media/linestring.gif "Exemplos de instâncias geométricas LineString")  
+ ![Exemplos de instâncias LineString de geometria](../../relational-databases/spatial/media/linestring.gif "Exemplos de instâncias LineString de geometria")  
   
 Conforme mostrado na ilustração:  
   

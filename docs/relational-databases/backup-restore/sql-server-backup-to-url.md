@@ -11,10 +11,10 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9eb3f9c071194941d76878a016fbcefa4f5fbe5c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908817"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
@@ -79,7 +79,7 @@ O backup de um banco de dados grande para o armazenamento de blobs está sujeito
   
  **Blob:** Um arquivo de qualquer tipo e tamanho. Há dois tipos de blobs que podem ser armazenados no serviço de Armazenamento de Blobs do Microsoft Azure: blobs de blocos e de páginas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o backup pode usar qualquer tipo de blob, dependendo da sintaxe Transact-SQL usada. Blobs são endereçáveis por meio do seguinte formato de URL: https://\<conta de armazenamento>.blob.core.windows.net/\<contêiner>/\<blob>. Para saber mais sobre o serviço de Armazenamento de Blobs do Microsoft Azure, confira [Como usar o Armazenamento de Blobs no .NET](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/) Para saber mais sobre blobs de páginas e de blocos, confira [Noções básicas sobre blobs de blocos e blobs de páginas](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)  
   
- ![Armazenamento de Blobs do Azure](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Armazenamento de blobs do Azure")  
+ ![Armazenamento de Blobs do Azure](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Armazenamento do Blobs do Azure")  
   
  **Instantâneo do Azure:** um instantâneo de um blob do Azure capturado em algum momento. Para saber mais, consulte [Criando um instantâneo de um blob](https://msdn.microsoft.com/library/azure/hh488361.aspx). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a backups de instantâneos do Azure dos arquivos de banco de dados armazenados no serviço de Armazenamento de Blobs do Microsoft Azure. Para obter mais informações, consulte [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
@@ -120,7 +120,7 @@ O backup de um banco de dados grande para o armazenamento de blobs está sujeito
   
 ###  <a name="Support"></a> Suporte a instruções de backup/restauração  
   
-|Instrução de backup/restauração|Tem suporte|Exceções|Comentários|
+|Instrução de backup/restauração|Com suporte|Exceções|Comentários|
 |-|-|-|-|
 |BACKUP|S|Há suporte para BLOCKSIZE e MAXTRANSFERSIZE para blobs de bloco. Eles não têm suporte em blobs de página. | BACKUP para um blob de blocos requer uma assinatura de acesso compartilhado salva em uma credencial do SQL Server. BACKUP para um blob de páginas requer que a chave de conta de armazenamento seja salva em uma credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e requer que o argumento WITH CREDENTIAL seja especificado.|  
 |RESTORE|S||Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
@@ -136,7 +136,7 @@ O backup de um banco de dados grande para o armazenamento de blobs está sujeito
   
 ### <a name="support-for-backup-arguments"></a>Suporte para argumentos de backup  
 
-|Argumento|Tem suporte|Exceção|Comentários|  
+|Argumento|Com suporte|Exceção|Comentários|  
 |-|-|-|-|  
 |DATABASE|S|||  
 |LOG|S|||  
@@ -163,7 +163,7 @@ O backup de um banco de dados grande para o armazenamento de blobs está sujeito
 |MAXTRANSFERSIZE|S|Sem suporte para blobs de páginas. Com suporte para blobs de blocos.| O padrão é 1048576. O valor pode variar a até 4 MB em incrementos de 65536 bytes.</br> Recomendamos MAXTRANSFERSIZE=4194304 para otimizar o uso dos 50.000 blocos permitidos em um blob de blocos. |  
 |NO_CHECKSUM &#124; CHECKSUM|S|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|S|||  
-|STATS|S|||  
+|ESTATÍSTICAS|S|||  
 |REWIND &#124; NOREWIND|-|||  
 |UNLOAD &#124; NOUNLOAD|-|||  
 |NORECOVERY &#124; STANDBY|S|||  
@@ -173,7 +173,7 @@ O backup de um banco de dados grande para o armazenamento de blobs está sujeito
   
 ### <a name="support-for-restore-arguments"></a>Suporte para argumentos de restauração  
   
-|Argumento|Tem suporte|Exceções|Comentários|  
+|Argumento|Com suporte|Exceções|Comentários|  
 |-|-|-|-|  
 |DATABASE|S|||  
 |LOG|S|||  
@@ -197,7 +197,7 @@ O backup de um banco de dados grande para o armazenamento de blobs está sujeito
 |CHECKSUM &#124; NO_CHECKSUM|S|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|S|||  
 |FILESTREAM|S|Não há suporte para backup de instantâneos||  
-|STATS|S|||  
+|ESTATÍSTICAS|S|||  
 |REWIND &#124; NOREWIND|-|||  
 |UNLOAD &#124; NOUNLOAD|-|||  
 |KEEP_REPLICATION|S|||  
@@ -239,7 +239,7 @@ Quando você selecionar **URL** como destino, determinadas opções na página *
   
  [Fazer backup do banco de dados &#40;página Opções de Backup&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)  
   
- [Criar credencial - autenticar no Armazenamento do Azure](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
+ [Criar credencial – autenticar no Armazenamento do Azure](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> Backup do SQL Server para a URL usando o Assistente de Plano de Manutenção  
  Assim como a tarefa de backup descrita anteriormente, o Assistente de Plano de Manutenção no SQL Server Management Studio inclui a **URL** como uma das opções de destino e outros objetos de suporte necessários ao backup no armazenamento do Azure, como a Credencial SQL. Para saber mais, confira a seção **Definir tarefas de Backup** em [Using Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
@@ -285,7 +285,7 @@ A tarefa Restaurar Banco de Dados inclui **URL** como um dispositivo do qual res
 >  Para obter um tutorial sobre como usar o SQL Server 2016 com o serviço de armazenamento de BLOBs do Microsoft Azure, confira [Tutorial: Como usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ###  <a name="SAS"></a> Criar uma Assinatura de Acesso Compartilhado  
- O exemplo a seguir cria Assinaturas de Acesso Compartilhado que podem ser usadas para criar uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credencial em um contêiner recém-criado. O script cria uma Assinatura de Acesso Compartilhado que está associada a uma Política de Acesso Armazenado. Para obter mais informações, confira [Assinaturas de Acesso Compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). O script também grava o comando T-SQL necessário para criar a credencial no SQL Server. 
+ O exemplo a seguir cria Assinaturas de Acesso Compartilhado que podem ser usadas para criar uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credencial em um contêiner recém-criado. O script cria uma Assinatura de Acesso Compartilhado que está associada a uma Política de Acesso Armazenado. Para obter mais informações, confira [Assinaturas de Acesso Compartilhado, parte 1: Understanding the SAS Model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/) (Assinaturas de Acesso Compartilhado, Parte 1: noções básicas sobre o modelo de SAS) O script também grava o comando T-SQL necessário para criar a credencial no SQL Server. 
 
 > [!NOTE] 
 > O exemplo exige o Microsoft Azure PowerShell. Para obter informações sobre como instalar e usar o Azure PowerShell, consulte [Como instalar e configurar o Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
@@ -372,7 +372,7 @@ Depois de executar o script com êxito, copie o comando `CREATE CREDENTIAL` para
    ```  
   
 ###  <a name="complete"></a> Executar um backup completo do banco de dados.  
- Os exemplos a seguir executam um backup completo do banco de dados AdventureWorks2016 no serviço de Armazenamento de Blobs do Microsoft Azure. Siga um destes procedimentos:   
+ Os exemplos a seguir executam um backup completo do banco de dados AdventureWorks2016 no serviço de Armazenamento de Blobs do Microsoft Azure. Realize um dos seguintes procedimentos:   
   
   
 2.  **Para URL usando uma Assinatura de Acesso Compartilhado**  

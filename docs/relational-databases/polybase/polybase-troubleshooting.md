@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 520637f8bcbe8ae1fcd4fee0ebf3fa33fe3b3650
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: edd716b36e8dc7339ab9661a2213afae5ac35379
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710498"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909626"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Monitorar e solucionar problemas do PolyBase
 
@@ -33,12 +33,12 @@ Use as exibições do catálogo listadas aqui para gerenciar as operações de P
 
 |||  
 |-|-|  
-|Exibição|Descrição|  
+|Visualizar|Descrição|  
 |[sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|Identifica tabelas externas.|  
 |[sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|Identifica fontes de dados externas.|  
 |[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|Identifica formatos de arquivo externos.|  
 
-## <a name="dynamic-management-views"></a>Exibições de gerenciamento dinâmico  
+## <a name="dynamic-management-views"></a>Exibições de Gerenciamento Dinâmico  
 
 |||  
 |-|-|  
@@ -142,7 +142,7 @@ Monitorar e solucionar problemas de consultas do PolyBase usando as DMVs a segui
 
 3. Clique com o botão direito do mouse no **Operador de Consulta Remota** e selecione **Propriedades**.
 
-4. Copie e cole o valor da consulta remota em um editor de texto para exibir o plano de consulta remota de XML. Um exemplo é mostrado a seguir.
+4. Copie e cole o valor da consulta remota em um editor de texto para exibir o plano de consulta remota de XML. Um exemplo é mostrado abaixo.
 
    ```xml  
 
@@ -217,7 +217,7 @@ Depois de configurar um conjunto de computadores como parte de um grupo de escal
 
 O PolyBase não estabelece uma interface com os serviços de HA do nó de nome como o Zookeeper ou o Knox atualmente. No entanto, há uma solução comprovada que pode ser usada para fornecer a funcionalidade.
 
-Solução alternativa: use o nome DNS para redirecionar conexões para o Nó de Nome ativo. Para fazer isso, você precisará garantir que a fonte de dados externa esteja usando um nome DNS para se comunicar com o nó de nome. Quando ocorrer o failover do nó de nome, você precisará alterar o endereço IP associado ao nome DNS usado na definição de fonte de dados externa. Isso redirecionará todas as novas conexões para o nó de nome correto. As conexões existentes falharão quando ocorrer failover. Para automatizar esse processo, uma "pulsação" pode executar o ping no nó de nome ativo. Se a pulsação falhar, é possível assumir que um failover ocorreu e alternar automaticamente para o endereço IP secundário.
+Solução alternativa: use o nome DNS para redirecionar conexões para o Nó de Nome ativo. Para fazer isso, você precisará garantir que a fonte de dados externa esteja usando um nome DNS para se comunicar com o nó de nome. Quando ocorrer o failover do nó de nome, você precisará alterar o endereço IP associado ao nome DNS usado na definição de fonte de dados externa. Isso redirecionará todas as novas conexões para o nó de nome correto. As conexões existentes falharão quando ocorrer failover. Para automatizar esse processo, uma "pulsação" pode executar o ping no nó de nome ativo. Se a pulsação falha, é possível assumir que um failover ocorreu e alternar automaticamente para o endereço IP secundário.
 
 ## <a name="error-messages-and-possible-solutions"></a>Mensagens de erro e possíveis soluções
 

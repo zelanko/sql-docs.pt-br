@@ -21,10 +21,10 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f70ce04ebe25c752f3cc12d4888f1ff5c967b805
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292407"
 ---
 # <a name="integration-services-paths"></a>Caminhos do Integration Services
@@ -70,7 +70,7 @@ Use a caixa de diálogo **Editor de Caminho de Fluxo de Dados** para definir pro
  Forneça um nome exclusivo para o caminho.  
   
  **ID**  
- O identificador de linhagem exclusivo do caminho. Esta propriedade é somente leitura.  
+ O identificador de linhagem exclusivo do caminho. Essa propriedade é somente leitura.  
   
  **IdentificationString**  
  A cadeia de caracteres que identifica o caminho. Gerada automaticamente a partir do nome digitado acima.  
@@ -147,7 +147,7 @@ Use a página **Visualizadores de Dados** da caixa de diálogo **Editor de Camin
  Clique para configurar um visualizador de dados selecionado, usando a caixa de diálogo **Configurar Visualizador de Dados** .  
  
 ## <a name="path-properties"></a>Path Properties
-Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] têm propriedades comuns e personalizadas ao nível de componente, entradas e saídas e colunas de entrada e saída. Muitas propriedades têm valores somente leitura, atribuídos em tempo de execução pelo mecanismo de fluxo de dados.  
+Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] têm propriedades comuns e personalizadas ao nível do componente, de entradas e saídas e de colunas de entrada e saída. Muitas propriedades têm valores somente leitura, atribuídos em tempo de execução pelo mecanismo de fluxo de dados.  
   
  Esse tópico lista e descreve as propriedades personalizadas dos caminhos que conectam objetos do fluxo de dados.  
   

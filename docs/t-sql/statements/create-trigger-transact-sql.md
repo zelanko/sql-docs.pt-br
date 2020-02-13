@@ -29,10 +29,10 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982695"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
@@ -51,7 +51,7 @@ Os gatilhos de logon são disparados em resposta ao evento LOGON gerado quando a
 > [!NOTE]  
 >  A integração do CLR do .NET Framework ao SQL Server é discutida neste artigo. A integração CLR não se aplica ao Banco de Dados SQL do Azure.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -162,7 +162,7 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
   
 ## <a name="arguments"></a>Argumentos
 OR ALTER  
-**Aplica-se ao**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1). 
+**Aplica-se ao**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 em diante). 
   
 Altera condicionalmente o gatilho somente se ele já existir. 
   
@@ -413,7 +413,7 @@ A criação de um gatilho DDL com escopo no servidor (ON ALL SERVER) ou um gatil
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>A. Usando um gatilho DML com uma mensagem de lembrete  
+### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>a. Usando um gatilho DML com uma mensagem de lembrete  
 O gatilho DML a seguir imprime uma mensagem para o cliente quando alguém tenta adicionar ou alterar dados na tabela `Customer` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  

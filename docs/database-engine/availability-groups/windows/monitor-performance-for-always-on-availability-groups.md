@@ -11,10 +11,10 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014684"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorar o desempenho de Grupos de Disponibilidade AlwaysOn
@@ -31,7 +31,7 @@ ms.locfileid: "68014684"
 |**Sequência**|**Descrição da etapa**|**Comentários**|**Métricas úteis**|  
 |1|Geração de log|Os dados de log são liberados para o disco. Esse log deve ser replicado para as réplicas secundárias. Os registros de log entram na fila de envio.|[SQL Server:Database > bytes de log liberados\s](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Capturar|Os logs de cada banco de dados são capturados e enviados para a fila de parceiro correspondente (um por par de réplica de banco de dados). Esse processo de captura é executado continuamente enquanto a réplica de disponibilidade está conectada e a movimentação de dados não é suspensa por qualquer razão e o par de réplica de banco de dados está aparecendo como Sincronizando ou Sincronizado. Se o processo de captura não puder verificar e enfileirar as mensagens com a rapidez necessária, a fila de envio de log se acumulará.|[SQL Server:Availability Replica > Bytes enviados à replica\s](~/relational-databases/performance-monitor/sql-server-availability-replica.md), que é uma agregação de soma de todas as mensagens de banco de dados enfileiradas para essa réplica de disponibilidade.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) e [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/s) na réplica primária.|  
-|3|Send|As mensagens na fila de cada réplica de banco de dados são removidas da fila e enviadas pela rede para a respectiva réplica secundária.|[SQL Server: Réplica de Disponibilidade > Bytes enviados para transporte\s](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
+|3|Enviar|As mensagens na fila de cada réplica de banco de dados são removidas da fila e enviadas pela rede para a respectiva réplica secundária.|[SQL Server: Réplica de Disponibilidade > Bytes enviados para transporte\s](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|Receber e armazenar em cache|Cada réplica secundária recebe e armazena em cache a mensagem.|Contador de desempenho [SQL Server:Availability Replica > Bytes de log recebidos/s](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |5|Proteção|O log é liberado na réplica secundária para proteção. Após a liberação do log, uma confirmação é enviada de volta para a réplica primária.<br /><br /> Depois que o log é protegido, a perda de dados é evitada.|Contador de desempenho [SQL Server:Database > Bytes de log liberados/s](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Tipo de espera [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|Refaz|Refaz as páginas liberadas na réplica secundária. As páginas são mantidas na fila para refazer enquanto aguardam para serem refeitas.|[SQL Server:Database Replica: > Bytes refeitos/s](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) e [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Tipo de espera [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
@@ -45,7 +45,7 @@ ms.locfileid: "68014684"
 |-|-|-|-|  
 |**Level**|**Número de portões**|**Número de mensagens**|**Métricas úteis**|  
 |Transporte|1 por réplica de disponibilidade|8192|Eventos estendidos **database_transport_flow_control_action**|  
-|banco de dados|1 por banco de dados de disponibilidade|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Eventos estendidos **hadron_database_flow_control_action**|  
+|Banco de dados|1 por banco de dados de disponibilidade|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Eventos estendidos **hadron_database_flow_control_action**|  
   
  Quando é alcançado o limite de mensagem de qualquer portão, as mensagens de log não são mais enviadas para uma réplica específica ou para um banco de dados específico. As mensagens poderão ser enviadas depois que as mensagens de confirmação das mensagens enviadas forem recebidas, a fim de reduzir o número de mensagens enviadas abaixo do limite.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68014684"
 ##  <a name="estimating-failover-time-rto"></a>Estimando o tempo de failover (RTO)  
  O RTO no seu SLA depende do tempo de failover da sua implementação Always On em um determinado momento, podendo ser expresso na seguinte fórmula:  
   
- ![Cálculo de RTO dos grupos de disponibilidade](media/always-on-rto.gif "Cálculo de RTO dos grupos de disponibilidade")  
+ ![Cálculo do RTO dos grupos de disponibilidade](media/always-on-rto.gif "Cálculo do RTO dos grupos de disponibilidade")  
   
 > [!IMPORTANT]  
 >  Se um grupo de disponibilidade contém mais de um banco de dados de disponibilidade, o banco de dados de disponibilidade com o Tfailover mais alto torna-se o valor de limitação de conformidade do RTO.  
@@ -65,7 +65,7 @@ ms.locfileid: "68014684"
   
  A única coisa que a réplica secundária precisa para estar pronta para um failover é que a fase refazer alcance o final do log. O tempo para refazer, Tredo, é calculado com a seguinte fórmula:  
   
- ![Cálculo de tempo para refazer de grupos de disponibilidade](media/always-on-redo.gif "Cálculo de tempo para refazer de grupos de disponibilidade")  
+ ![Cálculo do tempo da operação de refazer dos grupos de disponibilidade](media/always-on-redo.gif "Cálculo do tempo da operação de refazer dos grupos de disponibilidade")  
   
  em que *redo_queue* é o valor de [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) e *redo_rate* é o valor de [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68014684"
 ## <a name="estimating-potential-data-loss-rpo"></a>Estimando o potencial de perda de dados (RPO)  
  O RPO do seu SLA depende da possível perda de dados da implementação Always On em um determinado momento. Essa possível perda de dados pode ser expressa na seguinte fórmula:  
   
- ![Cálculo de RPO dos grupos de disponibilidade](media/always-on-rpo.gif "Cálculo de RPO dos grupos de disponibilidade")  
+ ![Cálculo do RPO dos grupos de disponibilidade](media/always-on-rpo.gif "Cálculo do RPO dos grupos de disponibilidade")  
   
  em que *log_send_queue* é o valor de [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) e *taxa de geração de log* é o valor de [SQL Server:Database > Bytes de log liberados/s](~/relational-databases/performance-monitor/sql-server-databases-object.md).  
   
@@ -441,19 +441,19 @@ Para criar as políticas, siga as instruções abaixo em todas as instâncias de
   
 |Cenário|Descrição|  
 |--------------|-----------------|  
-|[Solução de problemas: o grupo de disponibilidade excedeu o RTO](troubleshoot-availability-group-exceeded-rto.md)|Após um failover automático ou um failover manual planejado sem perda de dados, o tempo de failover excede o RTO. Ou, quando você calcula o tempo de failover de uma réplica secundária de confirmação síncrona (como um parceiro de failover automático), você descobre que ele excede o RTO.|  
-|[Solução de problemas: o grupo de disponibilidade excedeu o RPO](troubleshoot-availability-group-exceeded-rpo.md)|Depois de executar um failover manual forçado, a perda de dados é maior que o RPO. Ou, ao calcular a possível perda de dados de uma réplica secundária de confirmação assíncrona, você descobre que ela excede o RPO.|  
-|[Solução de problemas: as alterações na réplica primária não são refletidas na réplica secundária](troubleshoot-primary-changes-not-reflected-on-secondary.md)|O aplicativo cliente conclui uma atualização na réplica primária com êxito, mas uma consulta à réplica secundária mostra que a alteração não foi refletida.|  
+|[Solucionar problemas: o grupo de disponibilidade excedeu o RTO](troubleshoot-availability-group-exceeded-rto.md)|Após um failover automático ou um failover manual planejado sem perda de dados, o tempo de failover excede o RTO. Ou, quando você calcula o tempo de failover de uma réplica secundária de confirmação síncrona (como um parceiro de failover automático), você descobre que ele excede o RTO.|  
+|[Solucionar problemas: o grupo de disponibilidade excedeu o RPO](troubleshoot-availability-group-exceeded-rpo.md)|Depois de executar um failover manual forçado, a perda de dados é maior que o RPO. Ou, ao calcular a possível perda de dados de uma réplica secundária de confirmação assíncrona, você descobre que ela excede o RPO.|  
+|[Solucionar problemas: as alterações na réplica primária não são refletidas na réplica secundária](troubleshoot-primary-changes-not-reflected-on-secondary.md)|O aplicativo cliente conclui uma atualização na réplica primária com êxito, mas uma consulta à réplica secundária mostra que a alteração não foi refletida.|  
   
 ##  <a name="BKMK_XEVENTS"></a> Eventos estendidos úteis  
  Os seguintes eventos estendidos são úteis ao solucionar problemas de réplicas no estado **Sincronizando**.  
   
 |Nome do evento|Categoria|Canal|Réplica de disponibilidade|  
 |----------------|--------------|-------------|--------------------------|  
-|redo_caught_up|transações|Depurador|Secundário|  
-|redo_worker_entry|transações|Depurador|Secundário|  
-|hadr_transport_dump_message|`alwayson`|Depurador|Primária|  
-|hadr_worker_pool_task|`alwayson`|Depurador|Primária|  
-|hadr_dump_primary_progress|`alwayson`|Depurador|Primária|  
-|hadr_dump_log_progress|`alwayson`|Depurador|Primária|  
+|redo_caught_up|transações|Depurar|Secundário|  
+|redo_worker_entry|transações|Depurar|Secundário|  
+|hadr_transport_dump_message|`alwayson`|Depurar|Primária|  
+|hadr_worker_pool_task|`alwayson`|Depurar|Primária|  
+|hadr_dump_primary_progress|`alwayson`|Depurar|Primária|  
+|hadr_dump_log_progress|`alwayson`|Depurar|Primária|  
 |hadr_undo_of_redo_log_scan|`alwayson`|Analítico|Secundário|  

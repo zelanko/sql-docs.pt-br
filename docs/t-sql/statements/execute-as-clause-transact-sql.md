@@ -26,10 +26,10 @@ ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dfba9eef86ab77ec114bc74712d9573fb5e4c48
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155055"
 ---
 # <a name="execute-as-clause-transact-sql"></a>Cláusula EXECUTE AS (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "70155055"
   
  Especificando o contexto no qual o módulo é executado, você pode controlar qual conta de usuário o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa para validar permissões em objetos referenciados pelo módulo. Isso dá mais flexibilidade e controle no gerenciamento de permissões na cadeia de objetos existente entre os módulos definidos pelo usuário e os objetos referenciados por esses módulos. A permissões devem ser concedidas a usuários somente no próprio módulo, sem necessitar conceder permissões explícitas nos objetos referenciados. Somente o usuário que o módulo está representando tem permissões nos objetos acessados pelo módulo.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -105,7 +105,7 @@ DDL Triggers with Database Scope
   
  *login_name* não pode ser um grupo, uma função, um certificado, uma chave ou conta interna, como NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService ou NT AUTHORITY\LocalSystem.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A forma como o [!INCLUDE[ssDE](../../includes/ssde-md.md)] avalia as permissões nos objetos que são referenciados no módulo depende da cadeia de propriedade que existente entre os objetos de chamada e os objetos referenciados. Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a cadeia de propriedade era o único método disponível para não ter de conceder ao usuário chamador acesso a todos os objetos referenciados.  
   
  A cadeia de propriedade tem as seguintes limitações:  
@@ -184,7 +184,7 @@ GO
   
  Para exibir a definição do módulo com o contexto de execução especificado, use a exibição do catálogo [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
-## <a name="best-practice"></a>Prática recomendada  
+## <a name="best-practice"></a>Melhor prática  
  Especifica um logon ou usuário com os privilégios mínimos exigidos para executar as operações definidos no módulo. Por exemplo, não especifique uma conta de proprietário de banco de dados a menos que essas permissões sejam necessárias.  
   
 ## <a name="permissions"></a>Permissões  

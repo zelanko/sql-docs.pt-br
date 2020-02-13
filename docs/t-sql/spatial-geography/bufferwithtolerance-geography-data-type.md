@@ -18,10 +18,10 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ac8532f2cc5d8e2f50c0408ce983a61626748fb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066545"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (tipo de dados geography)
@@ -42,7 +42,7 @@ Esse método de tipo de dados de geography é compatível com instâncias **Full
 _distance_  
 É uma expressão **float** que especifica a distância da instância de **geography** ao redor da qual calcular o buffer.  
   
-A distância máxima do buffer não pode exceder 0,999 \* _π_  * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 circunferência da Terra) ou o globo inteiro.  
+A distância máxima do buffer não pode exceder 0,999 \* _π_ * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 circunferência da Terra) ou o globo inteiro.  
   
 _tolerance_  
 É uma expressão **float** que especifica a tolerância da distância do buffer.  
@@ -61,14 +61,14 @@ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **
   
 Tipo de retorno CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Esse método gerará uma **ArgumentException** se a _distance_ for NaN (não é um número) ou se _distance_ for um infinito positivo ou negativo.  Este método também gerará uma **ArgumentException** se _tolerance_ for zero (0), NaN (não é um número), negativo ou infinito positivo ou negativo.  
   
 `STBuffer()` retornará uma instância de **FullGlobe** em alguns casos; por exemplo, `STBuffer()` retorna uma instância de **FullGlobe** em dois pólos quando a distância do buffer é maior que a distância do Equador para os pólos.  
   
 Esse método gerará uma **ArgumentException** em instâncias de **FullGlobe** nas quais a distância do buffer exceder a seguinte limitação:  
   
-0,999 \* _π_ * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 da circunferência da Terra)  
+0,999 \* _π_ * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 circunferência da Terra)  
   
 O erro entre o buffer teórico e o calculado é max(tolerance, extents \* 1.E-7), em que a tolerância é o valor do parâmetro _tolerance_. Para obter mais informações sobre extensões, consulte [Referência de método do tipo de dados geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
   

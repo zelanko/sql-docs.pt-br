@@ -22,18 +22,18 @@ ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f666a327db29468c5bbd91bf7106d7c6e4f61f64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929042"
 ---
-# <a name="set-fipsflagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
+# <a name="set-fips_flagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Especifica a verificação de conformidade com o padrão FIPS 127-2. Baseia-se no padrão ISO. Para obter informações sobre a conformidade com FIPS do SQL Server, veja [Como usar o SQL Server 2016 no modo compatível com FIPS 140-2](https://support.microsoft.com/help/4014354/how-to-use-sql-server-2016-in-fips-140-2-compliant-mode). 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
   
 ## <a name="arguments"></a>Argumentos  
  **'** *level* **'**  
- É o nível de conformidade em relação ao padrão FIPS 127-2, segundo o qual todas as operações de banco de dados são verificadas. Se uma operação de banco de dados estiver em conflito com o nível de padrões ISO escolhido, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará um aviso.  
+ É o nível de conformidade em relação ao padrão FIPS 127-2, segundo o qual todas as operações de banco de dados são verificadas. Se uma operação de banco de dados entrar em conflito com o nível de padrões ISO escolhido, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará um aviso.  
   
  *level* deve ser um dos valores a seguir.  
   
@@ -54,7 +54,7 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
 |INTERMEDIATE|Verificação dos padrões com relação à conformidade do nível intermediário do ISO.|  
 |OFF|Nenhum padrão é verificado.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A configuração de `SET FIPS_FLAGGER` é definida no tempo da análise, e não no tempo de execução ou operação. A configuração no momento da análise significa que se a instrução SET estiver presente no lote ou no procedimento armazenado, ela terá efeito, independentemente de se a execução do código realmente atinge esse ponto; e a instrução `SET` terá efeito antes de qualquer instrução ser executada. Por exemplo, mesmo que a instrução `SET` esteja em um bloco de instruções `IF...ELSE` que nunca é atingido durante a execução, a instrução `SET` ainda entrará em vigor porque o bloco de instruções `IF...ELSE` é analisado.  
   
  Se `SET FIPS_FLAGGER` for definido em um procedimento armazenado, um valor de `SET FIPS_FLAGGER` será restaurado depois que o controle for retornado do procedimento armazenado. Portanto, uma instrução `SET FIPS_FLAGGER` especificada em SQL dinâmico não causa nenhum efeito em nenhuma instrução depois da instrução SQL dinâmica.  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4c4338893ea7cd38743967df8b3523def58df9fd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: fe3d184b1a64dded731c0746a8264b4dc5809dd7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710964"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286618"
 ---
 # <a name="change-publication-and-article-properties"></a>Alterar propriedades da publicação e do artigo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "71710964"
 |Adicionar um filtro de linha.|**sp_articlefilter**|Todos os parâmetros.|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Descartar um filtro de linha.|**sp_articlefilter**|`@article`|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Alterar um filtro de linha.|**sp_articlefilter**|`@filter_clause`|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
-|Alterar um filtro de linha.|**sp_changearticle**|**filtro**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
+|Alterar um filtro de linha.|**sp_changearticle**|**filter**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Alterar opções de esquema.|**sp_changearticle**|**schema_option**|Novo instantâneo.|  
 |Alterar como as tabelas são controladas no Assinante antes de aplicar o instantâneo.|**sp_changearticle**|**pre_creation_cmd**|Novo instantâneo.|  
 |Alterar o status de artigo|**sp_changearticle**|**status**|Novo instantâneo.|  

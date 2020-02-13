@@ -12,17 +12,17 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 26caf279506d3f5120a97f3801ba6c69bc46ad94
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 832e7eaa4490df5b7946d1187de74fc494d36e21
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637963"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76364114"
 ---
 # <a name="upgrade-sql-server"></a>Atualizar o SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
- Você pode fazer upgrade de instâncias do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ss2016](../../includes/sssql15-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Antes de executar a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], examine os artigos a seguir sobre o processo de atualização e as notas da versão.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Você pode atualizar instâncias do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ss2016](../../includes/sssql15-md.md)] ou [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] diretamente para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], você precisará fazer uma atualização lado a lado ou uma migração para mudar para o SQL Server 2019, já que não há nenhuma sobreposição comum entre um sistema operacional popular compatível. Antes de executar a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], examine os artigos a seguir sobre o processo de atualização e as notas da versão.  
   
    - Para saber mais sobre a atualização do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], veja [Você está atualizando do SQL Server 2005?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md).  
    - [Notas de Versão do SQL Server 2016.](../../sql-server/sql-server-2016-release-notes.md) 

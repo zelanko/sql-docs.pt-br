@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: f5861ece9a27e0d38274e9cac97ae046a9f6bdde
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142778"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910099"
 ---
 # <a name="best-practices-with-query-store"></a>Melhores prática com o Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -73,7 +73,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **Intervalo de Limpeza de Dados (Minutos)** : define a frequência de manutenção das estatísticas de runtime coletadas no disco. É expresso em minutos na GUI (interface gráfica do usuário), mas em [!INCLUDE[tsql](../../includes/tsql-md.md)] é expresso em segundos. O padrão é 900 segundos, que são 15 minutos na interface gráfica do usuário. Considere usar um valor mais alto se a carga de trabalho não gerar um grande número de planos e consultas diferentes ou se você puder aguardar mais tempo para manter os dados antes do desligamento de um banco de dados.
  
 > [!NOTE]
-> O uso do sinalizador de rastreamento 7745 impede que os dados do Repositório de Consultas sejam gravados em disco em caso de um failover ou comando de desligamento. Para obter mais informações, confira a seção [Usar sinalizadores de rastreamento em servidores críticos para melhorar a recuperação de desastre](#Recovery).
+> O uso do sinalizador de rastreamento 7745 impede que os dados do Repositório de Consultas sejam gravados em disco em caso de um failover ou comando de desligamento. Para obter mais informações, confira a seção [Usar sinalizadores de rastreamento em servidores críticos](#Recovery).
 
 Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] para definir um valor diferente para o **Intervalo de Liberação de Dados**:  
   
@@ -109,9 +109,12 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
 -   **Tudo**: Captura todas as consultas. Essa é a opção padrão em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 -   **Auto**: consultas infrequentes e consultas com duração de compilação e execução insignificantes são ignoradas. Os limites para a duração da execução de contagem, da compilação e do runtime são determinados internamente. No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versões posteriores, essa é a opção padrão.
--   **None**: o Repositório de Consultas para de capturar novas consultas.  
+-   **Nenhum**: o Repositório de Consultas para de capturar novas consultas.  
 -   **Personalizado**: permite controle adicional e o ajuste fino da política de coleta de dados. As novas configurações personalizadas definem o que acontece durante o limite de tempo da política de captura interna. Esse é um limite de tempo durante o qual as condições configuráveis são avaliadas e, se alguma for verdadeira, a consulta será qualificada para captura pelo Repositório de Consultas.
-  
+
+> [!IMPORTANT]
+> Cursores, consultas dentro de procedimentos armazenados e consultas compiladas nativamente sempre são capturados quando o Modo de Captura do Repositório de Consultas está definido como **Tudo**, **Automático** ou **Personalizado**. Para capturar consultas compiladas nativamente, habilite a coleta de estatísticas por consulta usando [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 
+
  O script a seguir define QUERY_CAPTURE_MODE como AUTO:
   
 ```sql  
@@ -336,7 +339,7 @@ FROM sys.database_query_store_options;
 Configure o Repositório de Consultas para conter somente os dados relevantes para que ele seja executado continuamente e proporcione uma ótima experiência de solução de problemas com impacto mínimo sobre sua carga de trabalho normal.  
 A tabela a seguir fornece as práticas recomendadas:  
   
-|Prática recomendada|Configuração|  
+|Melhor prática|Configuração|  
 |-------------------|-------------|  
 |Limite dados históricos retidos.|Configure a política com base em tempo para ativar a limpeza automática.|  
 |Por filtragem, desconsidere consultas não relevantes.|Configure o **Modo de Captura do Repositório de Consultas** como **Auto**.|  

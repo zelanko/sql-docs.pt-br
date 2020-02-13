@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68057915"
 ---
 # <a name="about-log-shipping-sql-server"></a>Sobre o envio de logs (SQL Server)
@@ -126,7 +126,7 @@ ms.locfileid: "68057915"
   
  As instâncias de servidor primário e secundário enviam seus próprios históricos e status para a instância do servidor monitor.  
   
- ![Configuração mostrando trabalhos de backup, cópia e restauração](../../database-engine/log-shipping/media/ls-typical-configuration.gif "Configuration showing backup, copy, & restore jobs")  
+ ![Configuração mostrando trabalhos de backup, cópia e restauração](../../database-engine/log-shipping/media/ls-typical-configuration.gif "Configuração mostrando trabalhos de backup, cópia e restauração")  
   
 ##  <a name="Interoperability"></a> Interoperabilidade  
  O envio de logs pode ser usado com os seguintes recursos ou componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  

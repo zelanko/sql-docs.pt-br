@@ -25,10 +25,10 @@ ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f0c5a07b7ff618b3857d9e67b11d50a5a29e8248
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894781"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67894781"
 
   Define os atributos de um cursor de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)], como seu comportamento de rolagem e a consulta usada para construir o conjunto de resultados no qual o cursor funciona. `DECLARE CURSOR` aceita uma sintaxe fundada no padrão ISO e uma sintaxe que usa um conjunto de extensões [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -91,7 +91,7 @@ Especifica que o escopo do cursor é global para a conexão. O nome do cursor po
 >  Se nem `GLOBAL` nem `LOCAL` forem especificados, o padrão será controlado pela definição da opção **padronizar para cursor local** do banco de dados.  
   
 FORWARD_ONLY  
-Especifica se o cursor só pode se mover para frente e ser rolado da primeira à última linha. `FETCH NEXT` é a única opção de busca compatível. Todas as instruções insert, update e delete feitas pelo usuário atual ou confirmadas por outros usuários que afetam as linhas no conjunto de resultados são visíveis como as linhas buscadas. Porém, como o cursor não podem ser revertido, as alterações feitas nas linhas no banco de dados depois que a linha foi buscada não são visíveis pelo cursor. Cursores somente de avanço são dinâmicos por padrão, o que significa que todas as alterações são detectadas conforme a linha atual é processada. Isso permite uma abertura do cursor mais rápida e que o conjunto de resultados exiba as atualizações feitas nas tabelas subjacentes. Embora os cursores somente de avanço não sejam compatíveis com rolagem para trás, os aplicativos podem retornar ao início do conjunto de resultados fechando e reabrindo o cursor. Se `FORWARD_ONLY` for especificado sem as palavras-chave `STATIC`, `KEYSET` ou `DYNAMIC`, o cursor operará como um cursor dinâmico. Quando nem `FORWARD_ONLY` nem `SCROLL` é especificado, `FORWARD_ONLY` é o padrão, a menos que as palavras-chave `STATIC`, `KEYSET` ou `DYNAMIC` sejam especificadas. Os cursores `STATIC`, `KEYSET` e `DYNAMIC` utilizam `SCROLL` como padrão. Ao contrário de APIs de banco de dados, como ODBC e ADO, `FORWARD_ONLY` dá suporte aos cursores `STATIC`, `KEYSET` e `DYNAMIC` [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+Especifica se o cursor só pode se mover para frente e ser rolado da primeira à última linha. `FETCH NEXT` é a única opção de busca compatível. Todas as instruções insert, update e delete feitas pelo usuário atual ou confirmadas por outros usuários que afetam as linhas no conjunto de resultados são visíveis como as linhas buscadas. Porém, como o cursor não podem ser revertido, as alterações feitas nas linhas no banco de dados depois que a linha foi buscada não são visíveis pelo cursor. Cursores somente de avanço são dinâmicos por padrão, o que significa que todas as alterações são detectadas conforme a linha atual é processada. Isso permite uma abertura do cursor mais rápida e que o conjunto de resultados exiba as atualizações feitas nas tabelas subjacentes. Embora os cursores somente de avanço não sejam compatíveis com rolagem para trás, os aplicativos podem retornar ao início do conjunto de resultados fechando e reabrindo o cursor. Se `FORWARD_ONLY` for especificado sem as palavras-chave `STATIC`, `KEYSET` ou `DYNAMIC`, o cursor operará como um cursor dinâmico. Quando nem `FORWARD_ONLY` nem `SCROLL` é especificado, `FORWARD_ONLY` é o padrão, a menos que as palavras-chave `STATIC`, `KEYSET` ou `DYNAMIC` sejam especificadas. Os cursores `STATIC`, `KEYSET` e `DYNAMIC` utilizam `SCROLL` como padrão. Ao contrário de APIs de banco de dados, como ODBC e ADO, `FORWARD_ONLY` é compatível com os cursores `STATIC`, `KEYSET` e `DYNAMIC` [!INCLUDE[tsql](../../includes/tsql-md.md)].  
    
  STATIC  
 Especifica que o cursor sempre exibe o conjunto de resultados como ele era quando o cursor foi aberto pela primeira vez e faz uma cópia temporária dos dados a serem usados pelo cursor. Todas as solicitações para o cursor são respondidas dessa tabela temporária em **tempdb**. Portanto, inserções, atualizações e exclusões feitas na tabelas base não são refletidas nos dados retornados pelas buscas feitas nesse cursor e esse cursor não detecta as alterações feitas à associação, à ordem ou aos valores do conjunto de resultados depois que o cursor é aberto. Cursores estáticos podem detectar as próprias atualizações, exclusões e inserções, embora não precisem fazer isso. Por exemplo, suponha que um cursor estático busque uma linha e outro aplicativo então atualize a linha. Se o aplicativo buscar novamente a linha do cursor estático, os valores que ele verá estarão inalterados, apesar das alterações feitas por outro aplicativo. Há suporte para todos os tipos de rolagem. 
@@ -137,7 +137,7 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte o cursor im
 FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
 Define colunas atualizáveis em um cursor. Se `OF <column_name> [, <... n>]` for fornecido, somente as colunas listadas permitirão modificações. Se `UPDATE` for especificado sem uma lista de colunas, todas as colunas poderão ser atualizadas, a não ser que a opção de simultaneidade `READ_ONLY` seja especificada.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `DECLARE CURSOR` define os atributos de um cursor de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)], como seu comportamento de rolagem e a consulta usada para criar o conjunto de resultados no qual o cursor funciona. A instrução `OPEN` popula o conjunto de resultados e `FETCH` retorna uma linha do conjunto de resultados. A instrução `CLOSE` libera o conjunto de resultados atual associado ao cursor. A instrução `DEALLOCATE` libera os recursos usados pelo cursor.  
   
 O primeiro formulário da instrução `DECLARE CURSOR` usa a sintaxe ISO para declarar comportamentos do cursor. O segundo formulário do `DECLARE CURSOR` usa extensões [!INCLUDE[tsql](../../includes/tsql-md.md)] que lhe permitem definir cursores com os mesmos tipos de cursor usados nas funções do cursor de API do banco de dados de ODBC ou ADO.  
@@ -174,7 +174,7 @@ Não é possível usar cursores nem gatilhos em uma tabela com um índice column
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-simple-cursor-and-syntax"></a>A. Usando a sintaxe e o cursor simples  
+### <a name="a-using-simple-cursor-and-syntax"></a>a. Usando a sintaxe e o cursor simples  
 
 O conjunto de resultados gerado na abertura deste cursor inclui todas as linhas e todas as colunas na tabela. Este cursor pode ser atualizado e todas as atualizações e exclusões são representadas em buscas feitas no cursor. `FETCH NEXT` é a única busca disponível porque a opção `SCROLL` não foi especificada.  
  

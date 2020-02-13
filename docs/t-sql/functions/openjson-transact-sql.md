@@ -19,10 +19,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 48cd04467283683cf1dc54f300b2c4ff21fb8248
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68632133"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
@@ -56,13 +56,13 @@ A função com valor de tabela **OPENJSON** analisa a *jsonExpression* fornecida
 
 ### <a name="openjson"></a>openjson
 
-![Sintaxe do OPENJSON TVF](../../relational-databases/json/media/openjson-syntax.png "Sintaxe do OPENJSON")  
+![Sintaxe do TVF OPENJSON](../../relational-databases/json/media/openjson-syntax.png "Sintaxe de OPENJSON")  
 
 Por padrão, a função com valor de tabela **OPENJSON** retorna três colunas que contém o nome da chave, o valor e o tipo de cada par {key:value} encontrado na *jsonExpression*. Como alternativa, você pode especificar explicitamente o esquema do conjunto de resultados que o **OPENJSON** retorna fornecendo *with_clause*.
   
-### <a name="withclause"></a>with_clause
+### <a name="with_clause"></a>with_clause
   
-![Sintaxe da cláusula WITH em OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "Sintaxe de OPENJSON WITH")
+![Sintaxe da cláusula WITH no TVF OPENJSON](../../relational-databases/json/media/openjson-shema-syntax.png "Sintaxe de OPENJSON WITH")
 
 *with_clause* contém uma lista de colunas com seus tipos para **OPENJSON** retornar. Por padrão, **OPENJSON** faz a correspondência de chaves na *jsonExpression* com os nomes de coluna na *with_clause* (nesse caso, a correspondência de chave implica a diferenciação entre maiúsculas e minúsculas). Se um nome de coluna não corresponder a um nome de chave, você poderá fornecer um *column_path* opcional, que é uma [Expressão de demarcador JSON](../../relational-databases/json/json-path-expressions-sql-server.md) que referencia uma chave dentro da *jsonExpression*. 
 
@@ -91,14 +91,14 @@ SELECT * FROM OpenJson(@json);
 
 **Resultados:**
 
-| chave                                | value                 | Tipo |
+| chave                                | value                 | type |
 | :--                                | :----                 | :--- |
 | String_value                       | John                  | 1 |
 | DoublePrecisionFloatingPoint_value | 45                    | 2 |
 | DoublePrecisionFloatingPoint_value | 2.3456                | 2 |
 | BooleanTrue_value                  | true                  | 3 |
 | BooleanFalse_value                 | false                 | 3 |
-| Null_value                         | NULL                  | 0 |
+| Null_value                         | NULO                  | 0 |
 | Array_value                        | ["a","r","r","a","y"] | 4 |
 | Object_value                       | {"obj":"ect"}         | 5 |
 | &nbsp; | &nbsp; | &nbsp; |
@@ -140,7 +140,7 @@ Quando **OPENJSON** analisa uma matriz JSON, a função retorna os índices dos 
 
 A comparação usada para corresponder as etapas do demarcador com as propriedades da expressão JSON diferencia maiúsculas de minúsculas e não reconhece ordenação (ou seja, é uma comparação BIN2). 
 
-### <a name="withclause"></a>*with_clause*
+### <a name="with_clause"></a>*with_clause*
 
 Define explicitamente o esquema de saída para a função **OPENJSON** retornar. A *with_clause* opcional pode conter os seguintes elementos:
 
@@ -148,7 +148,7 @@ Define explicitamente o esquema de saída para a função **OPENJSON** retornar.
   
 Por padrão, **OPENJSON** usa o nome da coluna para corresponder a uma propriedade no texto JSON. Por exemplo, se você especificar a coluna *name* no esquema, OPENJSON tentará popular essa coluna com a propriedade "name" no texto JSON. Você pode substituir esse mapeamento padrão usando o argumento *column_path*.  
   
-*type*  
+*tipo*  
 É o tipo de dados da coluna de saída.  
 
 > [!NOTE]
@@ -214,7 +214,7 @@ WITH (
   
 **Resultados**
   
-|Número|data|Cliente|Quantidade|Order|  
+|Número|Data|Cliente|Quantidade|Order|  
 |------------|----------|--------------|--------------|-----------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
@@ -230,7 +230,7 @@ As colunas que a função OPENJSON retorna dependem da opção WITH.
         |Valor da coluna Type|Tipo de dados JSON|  
         |------------------------------|--------------------|  
         |0|nulo|  
-        |1|cadeia de caracteres|  
+        |1|string|  
         |2|INT|  
         |3|true/false|  
         |4|matriz|  
@@ -243,7 +243,7 @@ As colunas que a função OPENJSON retorna dependem da opção WITH.
 > [!NOTE]  
 > As colunas **Key**, **Value** e **Type** só serão retornadas quando você usar OPENJSON com o esquema padrão e não estão disponíveis com um esquema explícito.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 
 *json_path* usado no segundo argumento de **OPENJSON** ou em *with_clause* pode iniciar com a palavra-chave **lax** ou **strict**.
 
@@ -346,7 +346,7 @@ CROSS APPLY OPENJSON(store.jsonCol, 'lax $.location')
   
 **Resultados**
   
-|title|street|postcode|lon|lat|  
+|título|street|postcode|lon|lat|  
 |-----------|------------|--------------|---------|---------|  
 |Whole Food Markets|17991 Redmond Way|WA 98052|47.666124|-122.10155|  
 |Sears|148th Ave NE|WA 98052|47.63024|-122.141246,17|  

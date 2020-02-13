@@ -22,10 +22,10 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c4b3337be486123545a187337949da1c160343ad
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286541"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codificando e depurando o componente Script
@@ -38,7 +38,7 @@ ms.locfileid: "71286541"
 ## <a name="writing-the-script-in-code-design-mode"></a>Escrevendo o Script em modo de design de código  
   
 ### <a name="script-component-development-environment"></a>Ambiente de desenvolvimento do componente Script  
- Para escrever seu script, clique em **Editar Script** na página **Script** do **Editor de Transformação Scripts** para abrir o IDE do VSTA ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications). O VSTA IDE inclui todos os recursos padrão do ambiente [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].NET, como o editor [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] codificado por cores, o IntelliSense e o Pesquisador de Objetos.  
+ Para gravar o script, clique em **Editar Script** na página **Script** do **Editor de Transformação Scripts** para abrir o IDE do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] VSTA ([!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications). O VSTA IDE inclui todos os recursos padrão do ambiente [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].NET, como o editor [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] codificado por cores, o IntelliSense e o Pesquisador de Objetos.  
   
  O código de Script é escrito em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Você especifica a linguagem de script configurando a propriedade **ScriptLanguage** no **Editor de Transformação Scripts**. Caso prefira usar outra linguagem de programação, você pode desenvolver um assembly personalizado na linguagem de sua escolha e chamar sua funcionalidade do código no componente Script.  
   
@@ -172,10 +172,10 @@ public class ScriptMain : UserComponent
   
 |Recurso do Pacote|Método de Acesso|  
 |---------------------|-------------------|  
-|Variáveis|Use as propriedades nomeadas e digitadas do acessador na classe de coleção **Variables** no item de projeto **ComponentWrapper**, expostas através da propriedade **Variables** da classe **ScriptMain**.<br /><br /> O método **PreExecute** só pode acessar variáveis somente leitura. O método **PostExecute** pode acessar variáveis somente leitura e de leitura/gravação.|  
-|Conexões|Use as propriedades nomeadas e digitadas do acessador na classe de coleção **Connections** no item de projeto **ComponentWrapper**, expostas através da propriedade **Connections** da classe **ScriptMain**.|  
+|variáveis|Use as propriedades nomeadas e digitadas do acessador na classe de coleção **Variables** no item de projeto **ComponentWrapper**, expostas através da propriedade **Variables** da classe **ScriptMain**.<br /><br /> O método **PreExecute** só pode acessar variáveis somente leitura. O método **PostExecute** pode acessar variáveis somente leitura e de leitura/gravação.|  
+|conexões|Use as propriedades nomeadas e digitadas do acessador na classe de coleção **Connections** no item de projeto **ComponentWrapper**, expostas através da propriedade **Connections** da classe **ScriptMain**.|  
 |Eventos|Gere eventos usando a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> da classe **ScriptMain** e os métodos **Fire\<X>** da interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.|  
-|Log|Execute o registro em log usando o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> da classe **ScriptMain**.|  
+|Registro em log|Execute o registro em log usando o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> da classe **ScriptMain**.|  
   
 ## <a name="debugging-the-script-component"></a>Depurando o componente Script  
  Para depurar o código no seu componente Script, defina pelo menos um ponto de interrupção no código e, depois, feche o VSTA IDE para executar o pacote no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Quando a execução do pacote insere o componente Script, o VSTA IDE é reaberto e exibe seu código em modo somente leitura. Depois que a execução atingir seu ponto de interrupção, você poderá examinar valores de variáveis e passar pelo código restante.  

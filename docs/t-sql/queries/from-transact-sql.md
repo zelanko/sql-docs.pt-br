@@ -35,10 +35,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981977"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Cláusula FROM mais JOIN, APPLY, PIVOT (Transact-SQL)
@@ -59,7 +59,7 @@ Este artigo também descreve as seguintes palavras-chave que podem ser usadas na
 - APPLY
 - PIVOT
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -409,7 +409,7 @@ ON (p.ProductID = v.ProductID);
  ALL  
  Retorna uma tabela com os valores de todas as linhas da tabela atual e da tabela de histórico.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A cláusula FROM aceita a sintaxe SQL-92 para tabelas unidas e derivadas. Sintaxe SQL-92 fornece os operadores de junção INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER e CROSS.  
   
  Há suporte para UNION e JOIN em uma cláusula FROM dentro de exibições e em tabelas derivadas e subconsultas.  
@@ -458,7 +458,7 @@ O operador APPLY funciona da seguinte maneira para criar a origem de tabela para
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-a-simple-from-clause"></a>A. Usando uma cláusula FROM simples  
+### <a name="a-using-a-simple-from-clause"></a>a. Usando uma cláusula FROM simples  
  O exemplo a seguir recupera as colunas `TerritoryID` e `Name` da tabela `SalesTerritory` no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql    
@@ -593,9 +593,9 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ### <a name="k-using-apply"></a>K. Usando APPLY  
 O seguinte exemplo presume que as seguintes tabelas e função com valor de tabela estejam presentes no banco de dados:  
 
-|Object Name|Nomes de coluna|      
+|Nome do Objeto|Nomes de coluna|      
 |---|---|   
-|Departamentos|DeptID, DivisionID, DeptName, DeptMgrID|      
+|Departments|DeptID, DivisionID, DeptName, DeptMgrID|      
 |EmpMgr|MgrID, EmpID|     
 |funcionários|EmpID, EmpLastName, EmpFirstName, EmpSalary|  
 |GetReports(MgrID)|EmpID, EmpLastName, EmpSalary|     

@@ -15,10 +15,10 @@ ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4dcb3d5669e62836f859252749469703bf26d29e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043893"
 ---
 # <a name="database-mirroring-witness"></a>Testemunha de espelhamento de banco de dados
@@ -30,7 +30,7 @@ ms.locfileid: "68043893"
   
  A ilustração a seguir mostra uma sessão de modo de alta segurança com uma testemunha.  
   
- ![Sessão de espelhamento com uma testemunha](../../database-engine/database-mirroring/media/dbm-3-way-session-intro.gif "Mirroring session with a witness")  
+ ![Sessão de espelhamento com uma testemunha](../../database-engine/database-mirroring/media/dbm-3-way-session-intro.gif "Sessão de espelhamento com uma testemunha")  
   
  **Neste tópico:**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68043893"
 ##  <a name="InMultipleSessions"></a> Usando uma testemunha em várias sessões  
  Uma instância de servidor específica pode agir como uma testemunha em sessões de espelhamento de banco de dados, cada uma para um banco de dados diferente. As sessões diferentes podem ser com parceiros diferentes. A ilustração a seguir mostra uma instância de servidor que é uma testemunha em duas sessões de espelhamento de banco de dados com parceiros diferentes.  
   
- ![Instância de servidor que é uma testemunha de dois bancos de dados](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "Instância de servidor que é uma testemunha de dois bancos de dados")  
+ ![Instância do servidor que é uma testemunha para dois bancos de dados](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "Instância do servidor que é uma testemunha para dois bancos de dados")  
   
  Uma instância de servidor único também pode funcionar ao mesmo tempo como uma testemunha em algumas sessões e um parceiro em outras sessões. Porém, na prática, uma instância de servidor normalmente funciona como uma testemunha ou um parceiro. Isso porque os parceiros exigem computadores sofisticados com hardware suficiente para oferecer suporte a um banco de dados de produção, ao passo que a testemunha pode ser executada em qualquer sistema Windows disponível que ofereça suporte ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

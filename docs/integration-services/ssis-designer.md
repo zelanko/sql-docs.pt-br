@@ -25,10 +25,10 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295662"
 ---
 # <a name="ssis-designer"></a>Designer SSIS
@@ -52,7 +52,7 @@ ms.locfileid: "71295662"
   
  O diagrama a seguir exibe o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer e a janela **Caixa de Ferramentas** .  
   
- ![Captura de tela do Designer SSIS e da Caixa de Ferramentas](../integration-services/media/denali-designerandtoolbox.gif "Captura de tela do Designer SSIS e da Caixa de Ferramentas")  
+ ![Instantâneo do designer de SSIS e da caixa de ferramentas](../integration-services/media/denali-designerandtoolbox.gif "Instantâneo do designer de SSIS e da caixa de ferramentas")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui caixas de diálogo e janelas adicionais para proporcionar maior funcionalidade aos pacotes e o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fornece janelas e caixas de diálogo para configurar o ambiente de desenvolvimento e trabalhar com pacotes. Para obter mais informações, consulte [Interface do usuário do Integration Services](../integration-services/integration-services-user-interface.md).  
   
@@ -186,7 +186,7 @@ Os pacotes usam gerenciadores de conexões para se conectarem a fontes de dados,
  
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Copiar pacotes nas Ferramentas de Dados do SQL Server](../integration-services/create-packages-in-sql-server-data-tools.md)  
+-   [Criar pacotes nas Ferramentas de Dados do SQL Server](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Interface do usuário do Integration Services](../integration-services/integration-services-user-interface.md)  

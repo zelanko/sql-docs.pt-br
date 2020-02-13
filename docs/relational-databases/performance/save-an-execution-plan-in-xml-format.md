@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8feec11884ae31e34cbc5497bf818991e59b39dd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909792"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Salvar um plano de execução em formato XML
@@ -49,7 +49,7 @@ ms.locfileid: "72909792"
     ```  
   
      > [!NOTE] 
-     > O SHOWPLAN_XML gera informações de plano de execução de consulta de tempo de compilação para uma consulta, mas não executa a consulta. Ele também é conhecido como o plano de execução **estimado**. O STATISTICS XML gera informações do plano de execução de consulta em tempo de execução para uma consulta e a executa. Ele também é conhecido como o plano de execução **real**.  
+     > O SHOWPLAN_XML gera informações de plano de execução de consulta de tempo de compilação para uma consulta, mas não executa a consulta. Ele também é conhecido como o plano de execução **estimado**. O STATISTICS XML gera informações do plano de execução de consulta em runtime para uma consulta e a executa. Ele também é conhecido como o plano de execução **real**.  
   
 3.  Execute uma consulta. Exemplo:  
   

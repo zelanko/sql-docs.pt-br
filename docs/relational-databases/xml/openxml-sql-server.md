@@ -24,10 +24,10 @@ ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6282a242807532095d13fed4b853731937bdd176
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995359"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "67995359"
   
  A ilustração a seguir mostra o processo.  
   
- ![Analisando XML com OPENXML](../../relational-databases/xml/media/xmlsp.gif "Analisando XML com OPENXML")  
+ ![Como analisar XML com OPENXML](../../relational-databases/xml/media/xmlsp.gif "Como analisar XML com OPENXML")  
   
  Observe que para entender o OPENXML, é necessário estar familiarizado com consultas XPath e ter um entendimento de XML. Para obter mais informações sobre suporte ao XPath no SQL Server, consulte [Usando consultas XPath no SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md).  
   

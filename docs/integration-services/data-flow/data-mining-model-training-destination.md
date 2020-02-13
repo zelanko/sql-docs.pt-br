@@ -20,10 +20,10 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f064ad734e90d2748b959e7fdc9d5868b22c25cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293114"
 ---
 # <a name="data-mining-model-training-destination"></a>Destino de treinamento do modelo de mineração de dados
@@ -41,7 +41,7 @@ ms.locfileid: "71293114"
   
  Este destino tem uma entrada e nenhuma saída.  
   
- O destino Treinamento de Modelo de Mineração de Dados utiliza um gerenciador de conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se conecta ao projeto ou à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contém a estrutura de mineração e os modelos de mineração treinados pelo destino. Para obter mais informações, consulte [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
+ O destino Treinamento do Modelo de Mineração de Dados usa um gerenciador de conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se conecta ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contém a estrutura de mineração e os modelos de mineração treinados pelo destino. Para obter mais informações, consulte [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71293114"
   
 -   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
--   [Propriedades personalizadas do destino Treinamento do Modelo de Mineração de Dados](../../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md)  
+-   [Propriedades personalizadas do destino treinamento do modelo de mineração de dados](../../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md)  
   
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
@@ -57,16 +57,16 @@ ms.locfileid: "71293114"
   Use a página **Conexão** da caixa de diálogo **Editor de Treinamento do Modelo de Mineração de Dados** para selecionar um modelo de mineração para treinar.  
   
 ### <a name="options"></a>Opções  
- **Gerenciador de conexões**  
+ **Connection manager**  
  Selecione na lista de conexões existentes do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou crie uma nova conexão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando o botão **Novo** como descrito abaixo.  
   
- **Nova**  
+ **Novo**  
  Crie uma nova conexão usando a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** .  
   
  **Estrutura de mineração**  
  Selecione na lista de estruturas de mineração disponíveis ou crie uma estrutura nova clicando em **Novo**.  
   
- **Nova**  
+ **Novo**  
  Crie uma estrutura e modelo de mineração novos usando o **Assistente de Mineração de Dados**.  
   
  **Modelos de mineração**  

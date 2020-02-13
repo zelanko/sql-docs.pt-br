@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18aad5811c34eadfda4a2a7fabfdd7a9997311b5
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 4654771be070cc02f2c56b1f08950d120706216d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127392"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761635"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "74127392"
 
 Retorna informações de propriedade sobre a instância de servidor.  
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,7 +60,7 @@ SERVERPROPERTY ( 'propertyname' )
 |ComparisonStyle|Estilo de comparação da ordenação do Windows.<br /><br /> Tipo de dados base: **int**|  
 |ComputerNamePhysicalNetBIOS|O nome NetBIOS do computador local no qual a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução no momento.<br /><br /> Para uma instância clusterizada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um cluster de failover, este valor muda à medida que a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efetua failover para os outros nós no cluster de failover.<br /><br /> Em uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse valor permanece constante e retorna o mesmo valor da propriedade MachineName.<br /><br /> **Observação:** Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver em um cluster de failover e você desejar obter o nome da instância clusterizada de failover, use a propriedade MachineName.<br /><br /> NULL = Entrada inválida, um erro ou não aplicável.<br /><br /> Tipo de dados base: **nvarchar(128)**|  
 |Edition|Edição instalada do produto da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use o valor dessa propriedade para determinar os recursos e os limites, como [Calcular limites de capacidade por edição do SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). Versões de 64 bits do [!INCLUDE[ssDE](../../includes/ssde-md.md)] anexam (64 bits) à versão.<br /><br /> Retorna:<br /><br /> 'Enterprise Edition'<br /><br /> 'Enterprise Edition: licenciamento baseado em núcleo'<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> 'Business Intelligence Edition'<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition com Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> 'SQL Azure' indica [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> Tipo de dados base: **nvarchar(128)**|  
-|EditionID|EditionID representa a edição instalada do produto da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use o valor dessa propriedade para determinar recursos e limites, como [Calcular limites de capacidade por edição do SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: Licenciamento baseado em núcleo<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905= Express com Advanced Services<br /><br /> -1534726760 = Padrão<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = Banco de Dados SQL ou SQL Data Warehouse<br /><br /> Tipo de dados base: **bigint**|  
+|EditionID|EditionID representa a edição instalada do produto da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use o valor dessa propriedade para determinar recursos e limites, como [Calcular limites de capacidade por edição do SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: Licenciamento baseado em núcleo<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905= Express com Advanced Services<br /><br /> -1534726760 = Padrão<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = Banco de Dados SQL ou Azure Synapse Analytics (antigo SQL Data Warehouse)<br /><br /> Tipo de dados base: **bigint**|  
 |EngineEdition|Edição do [!INCLUDE[ssDE](../../includes/ssde-md.md)] da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalada no servidor.<br /><br /> 1 = Personal ou Desktop Engine (Não disponível no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores.)<br /><br /> 2 = Standard (Retornada para Standard, Web e Business Intelligence.)<br /><br /> 3 = Enterprise (retornado para as edições Evaluation, Enterprise e Developer.)<br /><br /> 4 = Express (retornado para Express, Express with Tools e Express com Advanced Services)<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 = [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = instância gerenciada<br /><br /> Tipo de dados base: **int**|  
 |HadrManagerStatus|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> Indica se o gerenciador do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] foi iniciado.<br /><br /> 0 = não iniciado, comunicação pendente.<br /><br /> 1 = iniciado e em execução.<br /><br /> 2 = não iniciado e com falha.<br /><br /> NULL = Entrada inválida, um erro ou não aplicável.|  
 |InstanceDefaultDataPath|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a versão atual em atualizações a partir do final de 2015.<br /><br /> Nome do caminho padrão para os arquivos de dados da instância.|  
@@ -81,11 +81,11 @@ SERVERPROPERTY ( 'propertyname' )
 |NumLicenses|Não utilizado. As informações de licença não são preservadas ou mantidas pelo produto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sempre retorna NULL.<br /><br /> Tipo de dados base: **int**|  
 |ProcessID|ID do processo do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. ProcessID é útil para identificar qual Sqlservr.exe pertence a esta instância.<br /><br /> NULL = Entrada inválida, um erro ou não aplicável.<br /><br /> Tipo de dados base: **int**|  
 |ProductBuild|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a partir de outubro de 2015.<br /><br /> O número de build.|  
-|ProductBuildType|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a versão atual em atualizações a partir do final de 2015.<br /><br /> Tipo de build do build atual.<br /><br /> Retorna uma destas opções:<br /><br /> OD = versão Sob Demanda por meio de um cliente específico.<br /><br /> GDR = versão de Distribuição Geral lançada pelo Windows Update.<br /><br /> NULL<br />= não aplicável.|  
+|ProductBuildType|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a versão atual em atualizações a partir do final de 2015.<br /><br /> Tipo de build do build atual.<br /><br /> Retorna uma destas opções:<br /><br /> OD = versão Sob Demanda por meio de um cliente específico.<br /><br /> GDR = versão de Distribuição Geral lançada pelo Windows Update.<br /><br /> NULO<br />= não aplicável.|  
 |ProductLevel|Nível da versão da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Retorna uma destas opções:<br /><br /> 'RTM' = Versão original<br /><br /> 'SP*n*' = versão Service pack<br /><br /> 'CTP*n*', = versão Community Technology Preview<br /><br /> Tipo de dados base: **nvarchar(128)**|  
 |ProductMajorVersion|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a versão atual em atualizações a partir do final de 2015.<br /><br /> A versão principal.|  
 |ProductMinorVersion|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a versão atual em atualizações a partir do final de 2015.<br /><br /> A versão secundária.|  
-|ProductUpdateLevel|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a versão atual em atualizações a partir do final de 2015.<br /><br /> Atualize o nível do build atual. CU indica uma atualização cumulativa.<br /><br /> Retorna uma destas opções:<br /><br /> CU*n* = Atualização Cumulativa<br /><br /> NULL<br />= não aplicável.|  
+|ProductUpdateLevel|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a versão atual em atualizações a partir do final de 2015.<br /><br /> Atualize o nível do build atual. CU indica uma atualização cumulativa.<br /><br /> Retorna uma destas opções:<br /><br /> CU*n* = Atualização Cumulativa<br /><br /> NULO<br />= não aplicável.|  
 |ProductUpdateReference|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a versão atual em atualizações a partir do final de 2015.<br /><br /> Artigo da Base de Dados de Conhecimento desta versão.|  
 |ProductVersion|Versão da instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no formato '*major.minor.build.revision*'.<br /><br /> Tipo de dados base: **nvarchar(128)**|  
 |ResourceLastUpdateDateTime|Retorna a data e a hora da última atualização do banco de dados do Recurso.<br /><br /> Tipo de dados base: **datetime**|  
@@ -103,7 +103,7 @@ SERVERPROPERTY ( 'propertyname' )
 
 **sql_variant**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ### <a name="servername-property"></a>Propriedade ServerName
 

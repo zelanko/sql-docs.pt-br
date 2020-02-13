@@ -14,10 +14,10 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b621ebd5750d918c22f61ac005b02e1b8bea187
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297212"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Desenvolvendo objetos personalizados para o Integration Services
@@ -42,7 +42,7 @@ ms.locfileid: "71297212"
  Se você não tiver que reutilizar a funcionalidade personalizada em múltiplos pacotes, a tarefa Script e o componente Script proporcionam o total poder de uma linguagem de programação gerenciada, com significativamente menos códigos de infraestrutura para gravar. Para obter mais informações, consulte [Comparar soluções de script e objetos personalizados](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md).  
   
 ## <a name="steps-in-developing-a-custom-object-for-integration-services"></a>Etapas para desenvolver um objeto personalizado para o Integration Services  
- Quando você desenvolve um objeto personalizado para usar no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você desenvolve uma Biblioteca de Classes (DLL) que será carregada em tempo de design e em tempo de execução pelo SSIS Designer e pelo tempo de execução do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Os métodos mais importantes que você deve implementar não são métodos que você chama do seu próprio código, mas métodos que o tempo de execução chama em momentos apropriados para inicializar e validar seu componente e invocar sua funcionalidade.  
+ Quando você desenvolve um objeto personalizado para usar no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você desenvolve uma Biblioteca de Classes (DLL) que será carregada em tempo de design e em runtime pelo SSIS Designer e pelo runtime do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Os métodos mais importantes que você deve implementar não são métodos que você chama do seu próprio código, mas métodos que o runtime chama em momentos apropriados para inicializar e validar seu componente e invocar sua funcionalidade.  
   
  Eis as etapas que você deve seguir para desenvolver um objeto personalizado:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "71297212"
 ## <a name="base-classes-attributes-and-important-methods"></a>Classes base, atributos e métodos importantes  
  Esta tabela fornece uma referência fácil aos elementos mais importantes no modelo de objeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para cada tipo de objeto personalizado que você pode desenvolver.  
   
-|Objeto personalizado|Classe base|attribute|Métodos importantes|  
+|Objeto personalizado|Classe base|Atributo|Métodos importantes|  
 |-------------------|----------------|---------------|-----------------------|  
 |Tarefa|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
 |Gerenciador de conexões|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  

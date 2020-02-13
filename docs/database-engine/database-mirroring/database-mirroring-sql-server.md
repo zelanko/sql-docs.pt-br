@@ -24,10 +24,10 @@ ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006348"
 ---
 # <a name="database-mirroring-sql-server"></a>Espelhamento de banco de dados (SQL Server)
@@ -151,13 +151,13 @@ ms.locfileid: "68006348"
   
  Todas as sessões de espelhamento de banco de dados oferecem suporte somente a um servidor principal e a um servidor espelho. Essa configuração é mostrada na ilustração a seguir.  
   
- ![Parceiros em uma sessão de espelhamento de banco de dados](../../database-engine/database-mirroring/media/dbm-2-way-session-intro.gif "Partners in a database mirroring session")  
+ ![Parceiros em uma sessão de espelhamento de banco de dados](../../database-engine/database-mirroring/media/dbm-2-way-session-intro.gif "Parceiros em uma sessão de espelhamento de banco de dados")  
   
  O modo de segurança alta com failover automático exige a instância de um terceiro servidor, conhecido como *testemunha*. Ao contrário dos dois parceiros, a testemunha não atende ao banco de dados. A testemunha oferece suporte a failover automático, verificando se o servidor principal está instalado e funcionando. O servidor espelho apenas iniciará o failover automático se o espelho e a testemunha permanecerem conectados um ao outro depois de serem desconectados do servidor principal.  
   
  A ilustração a seguir mostra uma configuração com testemunha.  
   
- ![Uma sessão de espelhamento que inclui uma testemunha](../../database-engine/database-mirroring/media/dbm-3-way-session-intro-ov.gif "A mirroring session that includes a witness")  
+ ![Uma sessão de espelhamento que inclui uma testemunha](../../database-engine/database-mirroring/media/dbm-3-way-session-intro-ov.gif "Uma sessão de espelhamento que inclui uma testemunha")  
   
  Para obter mais informações, consulte [Troca de função](#RoleSwitching), posteriormente neste tópico.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "68006348"
   
      A função da testemunha é verificar se um determinado servidor parceiro está instalado e funcionando. Se o servidor espelho perder a conexão com o servidor principal, mas a testemunha ainda estiver conectada, o servidor espelho não iniciará o failover. Para obter mais informações, veja [Testemunha de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-witness.md).  
   
--   *Manual failover*  
+-   *Failover manual*  
   
      Requer modo de segurança alta. Os parceiros devem estar conectados entre si e o banco de dados já deve estar sincronizado.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "68006348"
   
 -   [Catálogos de texto completo](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
   
--   [Instantâneos do banco de dados](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
+-   [Instantâneos de banco de dados](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
 -   [Replicação](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
@@ -251,7 +251,7 @@ ms.locfileid: "68006348"
  [Pré-requisitos, restrições e recomendações para espelhamento de banco de dados](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  Descreve os pré-requisitos e as recomendações para configuração do espelhamento de banco de dados.  
   
- [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
  Contém informações sobre os modos de operação síncronos e assíncronos de sessões de espelhamento de banco de dados, e sobre como alternar funções de parceiros durante uma sessão de espelhamento de banco de dados.  
   
  [Testemunha de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-witness.md)  

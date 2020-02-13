@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3ebe7da68b057e9f84d2b83572a337ede278401
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 232ecd6278070d928db7485e93e8498adfc70a9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258576"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941134"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Atualização do envio de logs para SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "75258576"
  Enquanto o servidor monitor está sendo atualizado, a configuração de envio de logs continua funcionando, mas seu status não será registrado nas tabelas do monitor. Qualquer alerta que tenha sido configurado não será disparado, enquanto o servidor monitor estiver sendo atualizado. Após a atualização, você poderá atualizar as informações nas tabelas do monitor executando o procedimento armazenado do sistema [sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md).   Para obter mais informações sobre um servidor de monitor, veja [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
 ##  <a name="UpgradeSecondaries"></a> Atualização das instâncias do servidor secundário  
- O processo de atualização envolve a atualização das instâncias do servidor secundário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] antes de atualizar a instância de servidor primário. Sempre atualize primeiro a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] secundário. O envio de logs continua ao longo do processo de atualização, pois as instâncias dos servidores secundários atualizados continuam restaurando os backups de log da instância do servidor primário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se o servidor primário for atualizado antes da instância do servidor secundário, o envio de logs falhará, pois um backup criado em uma versão mais recente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode ser restaurado em uma versão mais antiga do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode atualizar as instâncias secundárias de forma simultânea ou em série, mas todas as instâncias secundárias devem ser atualizadas antes de atualizar a instância primária, a fim de evitar uma falha de envio de logs.  
+ O processo de atualização envolve a atualização das instâncias do servidor secundário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] antes de atualizar a instância de servidor primário. Sempre atualize primeiro a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] secundário. O envio de logs continua ao longo do processo de atualização, pois as instâncias dos servidores secundários atualizados continuam restaurando os backups de log da instância do servidor primário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se o servidor primário for atualizado antes da instância do servidor secundário, o envio de logs falhará, pois um backup criado em uma versão mais recente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode ser restaurado em uma versão mais antiga do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode atualizar as instâncias secundárias de maneira simultânea ou em série, mas todas as instâncias secundárias devem ser atualizadas antes de atualizar a instância primária, a fim de evitar uma falha de envio de logs.  
   
  Enquanto uma instância do servidor secundário estiver sendo atualizada, os trabalhos de cópia e restauração de envio de logs não serão executados. Isso significa que os backups de log de transações não restaurados serão acumulados no primário, e você precisará ter espaço suficiente para manter esses backups não restaurados. A quantidade de acumulação dependerá da frequência de backups agendados na instância do servidor primário e da sequência na qual você atualiza as instâncias secundárias. Além disso, se um servidor monitor separado tiver sido configurado, alertas poderão ser gerados indicando que restaurações não foram realizadas por um período mais longo do que o intervalo configurado.  
   

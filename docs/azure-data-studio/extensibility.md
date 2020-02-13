@@ -1,5 +1,5 @@
 ---
-title: Como adicionar funcionalidade por meio de extensibilidade
+title: Adicionando funcionalidade adicional por meio de extensibilidade
 titleSuffix: Azure Data Studio
 description: Saiba mais sobre o modelo de extensibilidade e as principais áreas de extensibilidade para estender a funcionalidade do Azure Data Studio
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 20158894567c1452a8d605f5cec84354654c5e96
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b263c3890ab9a03295212c723adad4a431fbf04f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959593"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76928005"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Introdução à extensibilidade do [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -273,8 +273,8 @@ No painel, fornecemos as seguintes variáveis de contexto:
 
 |variável de contexto| descrição|
 |:---|:---|
-|`connectionProvider` | Uma cadeia de caracteres do identificador para o provedor da conexão atual. Ex. `connectionProvider == 'MSSQL'`.|
-|`serverName`|Uma cadeia de caracteres do nome do servidor da conexão atual. Ex. `serverName == 'localhost'`.|
-|`databaseName` | Uma cadeia de caracteres do nome do banco de dados da conexão atual. Ex. `databaseName == 'master'`.|
+|`connectionProvider` | Uma cadeia de caracteres do identificador para o provedor da conexão atual. Ex.: `connectionProvider == 'MSSQL'`.|
+|`serverName`|Uma cadeia de caracteres do nome do servidor da conexão atual. Ex.: `serverName == 'localhost'`.|
+|`databaseName` | Uma cadeia de caracteres do nome do banco de dados da conexão atual. Ex.: `databaseName == 'master'`.|
 |`connection` | O objeto de perfil de conexão completo para a conexão atual (IConnectionProfile)|
-|`dashboardContext` | Uma cadeia de caracteres do contexto da página do painel está atualmente ativada. Ou 'database' ou 'server'. Ex. `dashboardContext == 'database'`|
+|`dashboardContext` | Uma cadeia de caracteres do contexto da página do painel está atualmente ativada. Ou 'database' ou 'server'. Ex.: `dashboardContext == 'database'`|

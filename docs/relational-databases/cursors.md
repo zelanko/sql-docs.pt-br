@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140808"
 ---
 # <a name="cursors"></a>Cursores
@@ -88,8 +88,8 @@ O cursor não reflete qualquer mudança feita no banco de dados que afeta a asso
 ### <a name="keyset"></a>Keyset  
 A associação e a ordem de linhas em um cursor controlado por conjunto de chaves são fixadas quando o cursor é aberto. Os cursores controlados por conjuntos de chaves são controlados por um conjunto exclusivo de identificadores, as chaves, conhecido como conjunto de chaves. As chaves são criadas a partir de um conjunto de colunas, que identificam exclusivamente as linhas no conjunto de resultados. O conjunto de chaves é o conjunto dos valores de chaves de todas as linhas qualificadas para a instrução `SELECT` no momento em que o cursor foi aberto. O conjunto de chaves para um cursor controlado por conjunto de chaves é criado no **tempdb** quando o cursor é aberto.  
   
-### <a name="dynamic"></a>Dinâmicos  
-Os cursores dinâmicos são o oposto dos cursores estáticos. Cursores dinâmicos refletem todas as alterações feitas nas linhas de seu conjunto de resultados ao rolar pelo cursor. Os valores de dados, a ordem e a associação das linhas do conjunto de resultados podem ser alterados em cada busca. Todas as instruções `UPDATE`, `INSERT` e `DELETE` feitas por todos os usuários são visíveis pelo cursor. As atualizações são visíveis imediatamente se forem feitas por meio do cursor usando uma função de API como **SQLSetPos** ou a cláusula [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE CURRENT OF`. As atualizações feitas fora do cursor não são visíveis até serem confirmadas, a menos que o nível de isolamento da transação do cursor esteja definido para ler não confirmadas. Para obter mais informações sobre os níveis de isolamento, confira [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md). 
+### <a name="dynamic"></a>Dinâmico  
+Os cursores dinâmicos são o oposto dos cursores estáticos. Cursores dinâmicos refletem todas as alterações feitas nas linhas de seu conjunto de resultados ao rolar pelo cursor. Os valores de dados, a ordem e a associação das linhas do conjunto de resultados podem ser alterados em cada busca. Todas as instruções `UPDATE`, `INSERT` e `DELETE` feitas por todos os usuários são visíveis pelo cursor. As atualizações serão visíveis imediatamente se forem feitas por meio do cursor usando uma função de API como **SQLSetPos** ou a cláusula [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE CURRENT OF`. As atualizações feitas fora do cursor não são visíveis até serem confirmadas, a menos que o nível de isolamento da transação do cursor esteja definido para ler não confirmadas. Para obter mais informações sobre os níveis de isolamento, confira [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md). 
  
 > [!NOTE]
 > Planos de cursor dinâmicos nunca usam índices espaciais.  

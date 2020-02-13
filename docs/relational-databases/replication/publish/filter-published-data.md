@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 55eb271c7eb5dff661b37cfb18b029e57bbeb0ba
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 38e0164de9dda9f86183a89a29b58753b2a7f118
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769885"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287631"
 ---
 # <a name="filter-published-data"></a>Filtrar dados publicados
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "68769885"
 ## <a name="static-row-filters"></a>filtros de linha estáticos  
  A ilustração a seguir mostra uma tabela publicada que é filtrada de forma que apenas as linhas 2, 3 e 6 são incluídas na publicação.  
   
- ![Filtragem de linha](../../../relational-databases/replication/publish/media/repl-16.gif "Filtragem de linha")  
+ ![Filtragem de linhas](../../../relational-databases/replication/publish/media/repl-16.gif "Filtragem de linhas")  
   
  Um filtro de linha estático usa a cláusula WHERE para selecionar os dados apropriados a serem publicados; você especifica a parte final da cláusula WHERE. Considere a tabela **Product** no banco de dados de exemplo Adventure Works, que contém a coluna **ProductLine**. Para publicar somente as linhas com dados em produtos relacionados a mountain bikes, especifique `ProductLine = 'M'`.  
   
@@ -74,18 +74,18 @@ ms.locfileid: "68769885"
     > [!NOTE]  
     >  Filtros de linha em publicações transacionais podem adicionar uma sobrecarga significativa por que a cláusula de filtragem de artigo é avaliada para cada linha de log gravada para uma tabela publicada a fim de determinar se a linha deve ser replicada. Filtros de linha em publicações transacionais devem ser evitados se cada nó de replicação puder dar suporte a toda a carga de dados, e o conjunto completo de dados for relativamente pequeno.  
   
--   Com replicação de mesclagem, use filtros de linha com parâmetro em vez de criar várias publicações com filtros de linha estáticos. Para obter mais informações, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+-   Com replicação de mesclagem, use filtros de linha com parâmetro em vez de criar várias publicações com filtros de linha estáticos. Para obter mais informações, consulte [Filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  Para definir ou modificar um filtro de linha estático, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
 ## <a name="column-filters"></a>Filtros de coluna  
  A ilustração a seguir mostra uma publicação que filtra a coluna C.  
   
- ![Filtragem de coluna](../../../relational-databases/replication/publish/media/repl-17.gif "Filtragem de coluna")  
+ ![Filtragem de colunas](../../../relational-databases/replication/publish/media/repl-17.gif "Filtragem de coluna")  
   
  É possível também usar filtragem de linha e coluna juntas, conforme aqui ilustrado.  
   
- ![Filtragem de linha e coluna](../../../relational-databases/replication/publish/media/repl-18.gif "Filtragem de linha e coluna")  
+ ![Filtragem de linha e de coluna](../../../relational-databases/replication/publish/media/repl-18.gif "Filtragem de linha e de coluna")  
   
  Após a criação de uma publicação é possível usar a filtragem de coluna para cancelar uma coluna de uma publicação existente, mas retendo a coluna na tabela no Publicador, e também incluir uma coluna existente na publicação. Para outras alterações, como a adição de uma nova coluna a uma tabela e, então, a adição dela ao artigo publicado, use replicação de alteração de esquema. Para mais informações, consulte as seções "Adicionando colunas" e "Removendo colunas" no tópico [Fazer alterações em esquemas nos bancos de dados de publicação](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   

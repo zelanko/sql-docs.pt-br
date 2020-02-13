@@ -33,10 +33,10 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134426"
 ---
 # <a name="database-mail-configuration-objects"></a>Objetos de configuração do Database Mail
@@ -79,7 +79,7 @@ ms.locfileid: "68134426"
   
 -   O nome do servidor de email.  
   
--   O tipo de servidor de email. Para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é sempre o protocolo SMTP.  
+-   O tipo de servidor de email. Para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse é sempre o protocolo SMTP.  
   
 -   O número da porta do servidor de email.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "68134426"
 |[sysmail_help_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md)|Lista informações de perfil do Database Mail referentes a um determinado usuário de banco de dados.|  
 |[sysmail_update_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-principalprofile-sp-transact-sql.md)|Atualiza as informações de permissões de um determinado usuário de banco de dados.|  
   
-### <a name="system-state"></a>Estado do sistema  
+### <a name="system-state"></a>Estado do Sistema  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -167,7 +167,7 @@ ms.locfileid: "68134426"
   
 ##  <a name="RelatedContent"></a> Referências adicionais  
   
--   [Registro em log e auditoria do Database Mail](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
+-   [Log e auditoria do Database Mail](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   
   
   

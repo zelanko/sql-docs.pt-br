@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9547eaae31787dc01946b8dfd2d2d43781b5a8af
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: db98f5aa3cdec76b59e51f743200b24725231f95
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258129"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831634"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -92,6 +92,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
     | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
+    | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
 }
 ```
 
@@ -366,6 +367,12 @@ A opção `PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` determina por quanto t
 - Quando definido como 0, uma operação em pausa nunca será anulada automaticamente
 
 O valor atual da opção é exibido em [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
+
+ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
+
+**APLICA-SE A**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+Permite que você controle se um predicado da [RLS](../../relational-databases/security/row-level-security.md) (Segurança em Nível de Linha) é afetado pela cardinalidade do plano de execução da consulta geral do usuário. Quando ISOLATE_SECURITY_POLICY_CARDINALITY está ON, um predicado RLS não afeta a cardinalidade de um plano de execução. Por exemplo, considere uma tabela que contém 1 milhão linhas e um predicado RLS que restringe o resultado a 10 linhas para um usuário específico que emite a consulta. Com essa configuração com escopo de banco de dados definida como OFF, a estimativa de cardinalidade desse predicado será 10. Quando essa configuração com escopo do banco de dados estiver definida como ON, a otimização de consulta estimará 1 milhão linhas. É recomendável usar o valor padrão para a maioria das cargas de trabalho.
 
 ## <a name="Permissions"></a> Permissões
 

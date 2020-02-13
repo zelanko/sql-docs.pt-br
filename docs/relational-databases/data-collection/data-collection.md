@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: supportability
 ms.topic: conceptual
 keywords:
-- Coleta de Dados
+- Coleta de dados
 helpviewer_keywords:
 - data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2e50a46d53e1bf8fbee2b711ddce80e21a65beca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140752"
 ---
-# <a name="data-collection"></a>Coleta de Dados
+# <a name="data-collection"></a>Coleta de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   O Coletor de Dados é um componente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que coleta diferentes conjuntos de dados. A coleta de dados é executada constantemente ou em uma agenda definida pelo usuário. O coletor de dados armazena os dados coletados em um banco de dados relacional conhecido como data warehouse de gerenciamento.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68140752"
   
  A ilustração a seguir mostra como o coletor de dados se adapta à estratégia geral de coleta e gerenciamento de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ![A função do Coletor de Dados no gerenciamento de dados](../../relational-databases/data-collection/media/datacollectorroleindatastrategy.gif "A função do Coletor de Dados no gerenciamento de dados")  
+ ![A função do coletor de dados no gerenciamento de dados](../../relational-databases/data-collection/media/datacollectorroleindatastrategy.gif "A função do coletor de dados no gerenciamento de dados")  
   
 ## <a name="concepts"></a>Conceitos  
  O coletor de dados é integrado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e ao [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], e os utiliza extensivamente. Antes de trabalhar com o coletor de dados, você precisa entender determinados conceitos relacionados a cada um desses componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -42,7 +42,7 @@ ms.locfileid: "68140752"
   
 -   Trabalho  
   
--   Etapa do trabalho  
+-   Etapa de trabalho  
   
 -   Agenda do trabalho  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68140752"
  Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Pacotes](../../integration-services/integration-services-ssis-packages.md).  
   
 ## <a name="terminology"></a>Terminologia  
- **Destino**  
+ **destino**  
  Uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que oferece suporte à Coleta de dados. Para obter mais informações sobre edições com suporte, consulte a seção de "Gerenciamento" de [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Uma *raiz de destino* define uma subárvore na hierarquia de destino. Um *conjunto de destinos* é o grupo de destinos resultante da aplicação de um filtro a uma subárvore definida por uma raiz de destino. Uma raiz de destino pode ser um banco de dados, uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou uma instância do computador.  

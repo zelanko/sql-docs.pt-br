@@ -25,10 +25,10 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680830"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
@@ -46,7 +46,7 @@ FROM tbl_B
 WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);  
 ```  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -207,7 +207,7 @@ Um nome alternativo para fazer referência a uma tabela.
 USING \<table_source>  
 Especifica a fonte de dados que é compatível com as linhas de dados em *target_table* com base em \<merge_search condition>. O resultado dessa correspondência dita as ações a serem tomadas pelas cláusulas WHEN da instrução MERGE. \<table_source> pode ser uma tabela remota ou uma tabela derivada que acessa tabelas remotas.
   
-\<table_source> pode ser uma tabela derivada que usa o [!INCLUDE[tsql](../../includes/tsql-md.md)] [construtor de valor de tabela](../../t-sql/queries/table-value-constructor-transact-sql.md) para construir uma tabela especificando várias linhas.  
+\<table_source> pode ser uma tabela derivada que usa o [construtor de valor de tabela](../../t-sql/queries/table-value-constructor-transact-sql.md) do [!INCLUDE[tsql](../../includes/tsql-md.md)] para construir uma tabela especificando várias linhas.  
   
 Para obter mais informações sobre a sintaxe e os argumentos dessa cláusula, veja [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
@@ -285,7 +285,7 @@ Especifica os critérios de pesquisa para especificar \<merge_search_condition> 
 \<graph search pattern>  
 Especifica o padrão de correspondência do grafo. Para obter mais informações sobre os argumentos dessa cláusula, consulte [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Pelo menos uma das três cláusulas MATCHED devem ser especificadas, mas elas podem ser especificadas em qualquer ordem. Uma variável não pode ser atualizada mais de uma vez na mesma cláusula MATCHED.  
   
@@ -313,11 +313,11 @@ Se algum gatilho INSTEAD OF INSERT for definido em *target_table*, a operação 
 
 Requer a permissão SELECT na tabela de origem e as permissões INSERT, UPDATE ou DELETE na tabela de destino. Para saber mais, confira a seção Permissões nos artigos [SELECT](../../t-sql/queries/select-transact-sql.md), [INSERT](../../t-sql/statements/insert-transact-sql.md), [UPDATE](../../t-sql/queries/update-transact-sql.md) e [DELETE](../../t-sql/statements/delete-transact-sql.md).  
   
-## <a name="optimizing-merge-statement-performance"></a>Otimizar o desempenho da instrução MERGE
+## <a name="optimizing-merge-statement-performance"></a>Otimizando o desempenho da instrução MERGE
 
-Ao usar a instrução MERGE, você pode substituir as instruções DML individuais por uma única instrução. Isso melhora o desempenho das consultas porque as operações são executadas em uma única instrução, diminuindo o número de vezes que os dados das tabelas de origem e de destino são processados. No entanto, os ganhos de desempenho dependem do uso de índices e junções corretos e de outras considerações.
+Utilizando a instrução MERGE, você pode substituir as instruções DML individuais por uma única instrução. Isso melhora o desempenho de consultas porque as operações são executadas em uma única instrução, diminuindo assim o número de vezes em que os dados das tabelas de origem e de destino são processados. Todavia, os ganhos de desempenho dependem de você ter os índices e junções corretos e de outras considerações.
 
-### <a name="index-best-practices"></a>Melhores práticas de índice
+### <a name="index-best-practices"></a>Práticas recomendadas de índice
 
 Para melhorar o desempenho da instrução MERGE, é recomendável seguir estas diretrizes de índice:
 
@@ -326,34 +326,34 @@ Para melhorar o desempenho da instrução MERGE, é recomendável seguir estas d
 
 Esses índices asseguram que as chaves de junção sejam exclusivas e que os dados das tabelas sejam classificados. O desempenho das consultas é aprimorado porque o otimizador de consulta não precisa executar processamento de validação extra para localizar e atualizar linhas duplicadas, e não há necessidade de operações de suporte adicionais.
 
-### <a name="join-best-practices"></a>Melhores práticas de JOIN
+### <a name="join-best-practices"></a>Práticas recomendadas de JOIN
 
 Para melhorar o desempenho da instrução MERGE e assegurar a obtenção dos resultados corretos, é recomendável seguir estas diretrizes de junção:
 
-- Especifique apenas condições de pesquisa na cláusula ON <merge_search_condition> que determinem os critérios para corresponder dados nas tabelas de origem e de destino. Ou seja, especifique apenas as colunas da tabela de destino que são comparadas com as colunas correspondentes da tabela de origem. 
+- Especifique apenas condições de pesquisa na cláusula ON <merge_search_condition> que determinem os critérios para corresponder dados nas tabelas de origem e de destino. Isto é, especifique apenas as colunas da tabela de destino que são comparadas com as colunas correspondentes da tabela de origem. 
 - Não inclua comparações com outros valores, como uma constante.
 
 Para filtrar linhas das tabelas de origem ou de destino, use um dos métodos a seguir.
 
 - Especifique o critério de pesquisa para filtragem de linhas na cláusula WHEN apropriada. Por exemplo, WHEN NOT MATCHED AND S.EmployeeName LIKE 'S%' THEN INSERT....
-- Defina uma exibição na origem ou no destino que retorne as linhas filtradas e faça referência à exibição como a tabela de origem ou de destino. Se a exibição for definida na tabela de destino, quaisquer ações sobre ela terão que atender às condições para atualização das exibições. Para obter mais informações sobre como atualizar dados usando uma exibição, consulte Modificar dados por meio de uma exibição.
+- Defina uma exibição na origem ou no destino que retorne as linhas filtradas e faça referência à exibição como a tabela de origem ou de destino. Se a exibição for definida na tabela de destino, quaisquer ações sobre ela deverão atender às condições para atualização das exibições. Para obter mais informações sobre como atualizar dados usando uma exibição, consulte Modificar dados por meio de uma exibição.
 - Use a cláusula `WITH <common table expression>` para filtrar linhas das tabelas de origem e de destino. Esse método é semelhante a especificar critérios adicionais de pesquisa na cláusula ON e pode produzir resultados incorretos. É recomendável evitar o uso desse método ou testá-lo criteriosamente antes de implementá-lo.
 
 A operação de junção na instrução MERGE é otimizada da mesma forma que uma junção na instrução SELECT. Ou seja, quando o SQL Server processa junções, o otimizador de consulta escolhe o método mais eficaz (entre várias possibilidades) de processamento da junção. Quando a origem e o destino têm tamanho semelhante e as diretrizes de índice descritas anteriormente são aplicadas às tabelas de origem e de destino, um operador merge join é o plano de consulta mais eficiente. Isso porque ambas as tabelas são examinadas uma vez e não há necessidade de classificar os dados. Quando a tabela de origem é menor do que a de destino, é preferível usar um operador nested loops.
 
-Você pode forçar o uso de determinada junção especificando a cláusula `OPTION (<query_hint>)` na instrução MERGE. É recomendável não usar a junção hash como dica de consulta para instruções MERGE, pois esse tipo de junção não usa índices.
+Você pode forçar o uso de uma determinada junção especificando a cláusula `OPTION (<query_hint>)` na instrução MERGE. É recomendável não usar a junção hash como dica de consulta para instruções MERGE, pois esse tipo de junção não usa índices.
 
-### <a name="parameterization-best-practices"></a>Melhores práticas de parametrização
+### <a name="parameterization-best-practices"></a>Práticas recomendadas de parametrização
 
-Se uma instrução SELECT, INSERT, UPDATE ou DELETE for executada sem parâmetros, o otimizador de consulta do SQL Server poderá parametrizar a instrução internamente. Isso significa que qualquer valor literal contido na consulta é substituído por parâmetros. Por exemplo, a instrução INSERT dbo.MyTable (Col1, Col2) VALUES (1, 10), pode ser implementada internamente como INSERT dbo.MyTable (Col1, Col2) VALUES (@p1, @p2). Esse processo, chamado de parametrização simples, aumenta a capacidade do mecanismo relacional de comparar as novas instruções SQL com planos de execução existentes anteriormente compilados. O desempenho da consulta pode ser melhorado porque a frequência das compilações e recompilações de consulta é reduzida. O otimizador de consulta não aplica o processo de parametrização simples a instruções MERGE. Por isso, as instruções MERGE que contêm valores literais podem não ter um desempenho tão bom quanto as instruções INSERT, UPDATE ou DELETE individuais, pois um novo plano é compilado sempre que a instrução MERGE é executada.
+Se uma instrução SELECT, INSERT, UPDATE ou DELETE for executada sem parâmetros, o otimizador de consulta do SQL Server poderá parametrizar a instrução internamente. Isso significa que qualquer valor literal contido na consulta é substituído por parâmetros. Por exemplo, a instrução INSERT dbo.MyTable (Col1, Col2) VALUES (1, 10), pode ser implementada internamente como INSERT dbo.MyTable (Col1, Col2) VALUES (@p1, @p2). Esse processo, chamado de parametrização simples, aumenta a capacidade do mecanismo relacional de comparar as novas instruções SQL com planos de execução existentes anteriormente compilados. O desempenho da consulta pode ser melhorado porque a frequência das compilações e recompilações de consulta é reduzida. O otimizador de consulta não aplica o processo de parametrização simples a instruções MERGE. Por isso, as instruções MERGE que contêm valores literais podem não executar tão bem quanto as instruções INSERT, UPDATE ou DELETE individuais, pois um novo plano é compilado sempre que a instrução MERGE é executada.
 
 Para melhorar o desempenho da consulta, é recomendável seguir estas diretrizes de parametrização:
 
 - Parametrize todos os valores literais na cláusula `ON <merge_search_condition>` e nas cláusulas `WHEN` da instrução MERGE. Por exemplo, você pode inserir a instrução MERGE a um procedimento armazenado que substitua os valores literais por parâmetros de entrada apropriados.
 - Se você não conseguir parametrizar a instrução, crie um guia de plano do tipo `TEMPLATE` e especifique a dica de consulta `PARAMETERIZATION FORCED` no guia de plano.
-- Se instruções MERGE forem executadas com frequência no banco de dados, considere definir a opção PARAMETERIZATION no banco de dados como FORCED. Tome cuidado quando for definir essa opção. A opção `PARAMETERIZATION` é uma configuração de banco de dados e afeta a maneira como são processadas todas as consultas feitas nele.
+- Se instruções MERGE forem executadas com frequência no banco de dados, considere definir a opção PARAMETERIZATION no banco de dados como FORCED. Tome cuidado quando for definir esta opção. A opção `PARAMETERIZATION` é uma configuração de banco de dados e afeta a maneira como são processadas todas as consultas feitas nele.
 
-### <a name="top-clause-best-practices"></a>Melhores práticas da cláusula TOP
+### <a name="top-clause-best-practices"></a>Práticas recomendadas da cláusula TOP
 
 Na instrução MERGE, a cláusula TOP especifica o número ou a porcentagem de linhas que são afetadas depois que as tabelas de origem e de destino são unidas e que as linhas que não se qualificam para uma ação de inserção, atualização ou exclusão são removidas. A cláusula TOP ainda reduz o número de linhas unidas para o valor especificado e as ações de inserção, atualização ou exclusão são aplicadas às linhas unidas restantes de uma forma não ordenada. Ou seja, não há nenhuma ordem na qual as linhas são distribuídas entre as ações definidas nas cláusulas WHEN. Por exemplo, especificar TOP (10) afeta dez linhas. Dessas linhas, sete podem ser atualizadas e três inseridas, ou uma pode ser excluída, cinco atualizadas e quatro inseridas etc.
 
@@ -374,7 +374,7 @@ Na instrução MERGE, a cláusula TOP especifica o número ou a porcentagem de l
 
 Como a cláusula TOP só é aplicada depois que essas cláusulas são aplicadas, cada execução insere uma linha genuinamente não correspondente ou atualiza uma linha existente.
 
-### <a name="bulk-load-best-practices"></a>Melhores práticas de carregamento em massa
+### <a name="bulk-load-best-practices"></a>Práticas recomendadas de carregamento em massa
 
 A instrução MERGE pode ser usada para carregar com eficiência dados de carregamento em massa de um arquivo de dados de origem em uma tabela de destino especificando-se a cláusula `OPENROWSET(BULK…)` como tabela de origem. Dessa forma, o arquivo inteiro é processado em um único lote.
 
@@ -383,7 +383,7 @@ Para melhorar o desempenho do processo de mesclagem em lote, é recomendável se
 - Crie um índice clusterizado com base nas colunas de junção da tabela de destino.
 - Use as dicas ORDER e UNIQUE na cláusula `OPENROWSET(BULK…)` para especificar como o arquivo de dados de origem deverá ser classificado.
 
-  Por padrão, a operação em massa presume que o arquivo de dados não está ordenado. Por isso, é importante que os dados de origem sejam classificados de acordo com o índice clusterizado na tabela de destino e que a dica ORDER seja usada para indicar a ordem, de modo que o otimizador de consulta possa gerar um plano de consulta mais eficaz. As dicas são validadas em tempo de execução; se o fluxo de dados não estiver de acordo com as dicas especificadas, ocorrerá um erro.
+  Por padrão, a operação em massa presume que o arquivo de dados não está ordenado. Por isso, é importante que os dados de origem sejam classificados de acordo com o índice clusterizado na tabela de destino e que a dica ORDER seja usada para indicar a ordem, de modo que o otimizador de consulta possa gerar um plano de consulta mais eficaz. As dicas são validadas em runtime; se o fluxo de dados não estiver de acordo com as dicas especificadas, ocorrerá um erro.
 
 Essas diretrizes asseguram que as chaves de junção sejam exclusivas e que a ordem de classificação dos dados do arquivo de origem corresponda à da tabela de destino. O desempenho das consultas é aprimorado porque não há necessidade de executar operações de classificação adicionais e não são exigidas cópias de dados desnecessárias.
 
@@ -397,7 +397,7 @@ Os recursos a seguir estão disponíveis para ajudar você a avaliar e diagnosti
 
 ## <a name="examples"></a>Exemplos  
 
-### <a name="a-using-merge-to-do-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. Usar MERGE para executar operações INSERT e UPDATE em uma tabela em uma única instrução
+### <a name="a-using-merge-to-do-insert-and-update-operations-on-a-table-in-a-single-statement"></a>a. Usar MERGE para executar operações INSERT e UPDATE em uma tabela em uma única instrução
 
 Um cenário comum é atualizar uma ou mais colunas em uma tabela se existir uma linha correspondente. Ou inserir os dados como uma nova linha se uma linha correspondente não existir. Normalmente, seja qual for o cenário, você transmite parâmetros para um procedimento armazenado que contém as instruções UPDATE e INSERT apropriadas. Com a instrução MERGE, você pode executar as duas tarefas em uma única instrução. O exemplo a seguir mostra um procedimento armazenado no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que contém as instruções INSERT e UPDATE. O procedimento é então modificado para executar as operações equivalentes usando uma única instrução MERGE.  
   

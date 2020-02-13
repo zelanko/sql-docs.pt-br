@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 8aa3f690b79167df6de5b27f6dd78276c61e0b26
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71342062"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "71342062"
 
   Fornece informações de conexão ad hoc como parte de um nome de objeto de quatro partes sem usar um nome de servidor vinculado.  
 
- ![Ícone de link](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link](../../database-engine/configure-windows/media/topic-link.gif "ícone de link") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,15 +58,15 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 |Palavra-chave|Propriedade OLE DB|Valores válidos e descrição|  
 |-------------|---------------------|----------------------------------|  
 |fonte de dados|DBPROP_INIT_DATASOURCE|Nome da fonte de dados à qual se conectar. Provedores diferentes interpretam isso de várias formas. Para o provedor OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, isso indica o nome do servidor. Para o provedor OLE DB Jet, indica o caminho completo do arquivo .mdb ou .xls.|  
-|Local|DBPROP_INIT_LOCATION|Local do banco de dados ao qual se conectar.|  
+|Location|DBPROP_INIT_LOCATION|Local do banco de dados ao qual se conectar.|  
 |Propriedades estendidas|DBPROP_INIT_PROVIDERSTRING|A cadeia de conexão específica do provedor.|  
 |Tempo limite de conexão|DBPROP_INIT_TIMEOUT|Valor de tempo limite após o qual a tentativa de conexão falha.|  
-|ID de usuário|DBPROP_AUTH_USERID|ID de usuário a ser usada para a conexão.|  
+|Id de Usuário|DBPROP_AUTH_USERID|ID de usuário a ser usada para a conexão.|  
 |Senha|DBPROP_AUTH_PASSWORD|Senha a ser usada para a conexão.|  
 |Catálogo|DBPROP_INIT_CATALOG|O nome do catálogo inicial ou padrão durante a conexão à fonte de dados.|  
 |Segurança Integrada|DBPROP_AUTH_INTEGRATED|SSPI, para especificar a Autenticação do Windows|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `OPENROWSET` sempre herda o agrupamento da instância, independentemente do conjunto de agrupamentos para colunas.
 
 `OPENDATASOURCE` pode ser usado para acessar dados remotos de fontes de dados OLE DB somente quando a opção do Registro DisallowAdhocAccess está definida explicitamente como 0 para o provedor especificado, e a opção de configuração avançada Consultas Distribuídas Ad Hoc está habilitada. Quando essas opções não estão definidas, o comportamento padrão não permite acesso ad hoc.  
@@ -87,7 +87,7 @@ Qualquer chamada a `OPENDATASOURCE`, `OPENQUERY` ou `OPENROWSET` na cláusula `F
   
 ## <a name="examples"></a>Exemplos  
 
-### <a name="a-using-opendatasource-with-select-and-the-sql-server-ole-db-driver"></a>A. Usar OPENDATASOURCE com SELECT e o Driver do OLE DB para SQL Server  
+### <a name="a-using-opendatasource-with-select-and-the-sql-server-ole-db-driver"></a>a. Usar OPENDATASOURCE com SELECT e o Driver do OLE DB para SQL Server  
  O exemplo a seguir usa o [Driver do Microsoft OLE DB para SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) Native Client para acessar a tabela `HumanResources.Department` do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] no servidor remoto `Seattle1`. Uma instrução `SELECT` é usada para definir o conjunto de linhas retornado. A cadeia de caracteres de provedor contém as palavras-chave `Server` e `Trusted_Connection`. Essas palavras-chave são reconhecidas pelo Driver do OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```sql  

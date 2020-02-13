@@ -1,10 +1,10 @@
 ---
 title: Criar servidores vinculados
-ms.date: 11/20/2015
+ms.date: 01/24/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: carlrab
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.linkedserver.properties.general.f1
@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 15d7b07b409d8a281b0ea47222ce608a712cfa3f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095882"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761886"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "74095882"
      **Cadeia de caracteres do provedor**  
      Digite o identificador programático exclusivo (PROGID) do provedor OLE DB que corresponde à fonte de dados. Para obter exemplos de cadeias de caracteres de provedor válidas, consulte [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
-     **Local**  
+     **Localidade**  
      Digite o nome do local do banco de dados conforme interpretado pelo provedor OLE DB.  
   
      **Catálogo**  
@@ -97,7 +97,10 @@ ms.locfileid: "74095882"
   
      **Usuário Remoto**  
      Use o usuário remoto para mapear usuários não definidos em **Logon local**. O **Usuário Remoto** deve ser um logon de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no servidor remoto.  
-  
+
+    > [!WARNING]
+    > Somente um usuário do SQL Server pode ser usado como um "Usuário remoto" em uma implantação de instância gerenciada do Banco de Dados SQL do Azure.  
+
      **Senha Remota**  
      Especifique a senha do Usuário Remoto.  
   
@@ -126,7 +129,7 @@ ms.locfileid: "74095882"
   
      Essa opção deve ser definida somente se você tiver certeza de que a fonte de dados correspondente ao servidor vinculado tem o mesmo conjunto de caracteres e ordem de classificação do servidor local.  
   
-     **Acesso aos Dados**  
+     **Acesso a dados**  
      Habilita e desabilita um servidor vinculado para o acesso às consultas distribuídas.  
   
      **RPC**  
@@ -140,7 +143,7 @@ ms.locfileid: "74095882"
   
      Se true, a ordenação de colunas remotas será usada para as fontes de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a ordenação especificada no nome da ordenação será usada para fontes de dados não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Se false, as consultas distribuídas sempre usarão a ordenação padrão do servidor local, enquanto que o nome da ordenação e a ordenação de colunas remotas serão ignorados. O padrão é falso.  
+     Se false, as consultas distribuídas sempre usarão a ordenação padrão do servidor local, enquanto que o nome da ordenação e a ordenação de colunas remotas serão ignorados. O padrão é false.  
   
      **Nome da Ordenação**  
      Especifica o nome da ordenação usado pela fonte de dados remota se o uso da ordenação remota for true e a fonte de dados não for uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O nome deve ser uma das ordenações que têm suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -26,19 +26,19 @@ ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 188248ea2a09875e71905878a9d9f85c3ebfcd78
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 86c10915b811578f82e50bd4322439863e610766
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843567"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315616"
 ---
 # <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Permite que um valor fornecido pelo sistema para o logon atual seja inserido em uma tabela quando nenhum valor padrão é especificado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ SYSTEM_USER
 ## <a name="return-types"></a>Tipos de retorno  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  É possível usar a função SYSTEM_USER com restrições DEFAULT nas instruções CREATE TABLE e ALTER TABLE. Ela também pode ser usada como qualquer função padrão.  
   
  Se o nome de usuário e o nome de logon forem diferentes, SYSTEM_USER retornará o nome de logon.  
@@ -57,10 +57,12 @@ SYSTEM_USER
  Se o usuário atual estiver conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a Autenticação do Windows, SYSTEM_USER retornará o nome de identificação de logon do Windows no formato: *DOMAIN*\\*user_login_name*. Entretanto, se o usuário atual tiver feito logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a Autenticação do SQL Server, SYSTEM_USER retornará o nome de identificação de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como `WillisJo` para um usuário conectado como `WillisJo`.  
   
  SYSTEM_USER retorna o nome do contexto em execução no momento. Se a instrução EXECUTE AS tiver sido usada para alternar o contexto, SYSTEM_USER retornará o nome do contexto representado.  
-  
+
+ Você não pode EXECUTAR como um SYSTEM_USER.
+
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-system_user-to-return-the-current-system-user-name"></a>A. Usando SYSTEM_USER para retornar o nome de usuário do sistema atual  
+### <a name="a-using-system_user-to-return-the-current-system-user-name"></a>a. Usando SYSTEM_USER para retornar o nome de usuário do sistema atual  
  O exemplo a seguir declara uma variável `char`, armazena o valor atual `SYSTEM_USER` na variável e imprime o valor armazenado na variável.  
   
 ```  

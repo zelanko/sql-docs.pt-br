@@ -41,10 +41,10 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 281d392bcb6c9bd6e46dbb6b41a85d080bb811f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68038832"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server
@@ -187,7 +187,7 @@ ms.locfileid: "68038832"
 3.  Quando solicitado a indicar se você deseja executar a ação, clique em **Sim**.  
   
 ##  <a name="CommandPrompt"></a> Na janela Prompt de Comando usando comandos net  
- Os serviços do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser iniciados, parados ou pausados com o uso de comandos [!INCLUDE[msCoName](../../includes/msconame-md.md)]  **net** do Windows.  
+ Os serviços do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser iniciados, interrompidos ou colocados em pausa com os comandos **net** do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
 ###  <a name="dbDefault"></a> Para iniciar a instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -358,7 +358,7 @@ ms.locfileid: "68038832"
  [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
  [Iniciar o SQL Server com a configuração mínima](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)   
- [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
+ [Recursos com suporte das edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
   
   
 

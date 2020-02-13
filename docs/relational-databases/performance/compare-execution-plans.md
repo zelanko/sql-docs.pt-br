@@ -17,19 +17,19 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: b0590a46fe9e5037f5bec1895aa6602bcd8c568a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: cc42584c6b3f07961e83e53b8b5165243060256f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907653"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910239"
 ---
 # <a name="compare-execution-plans"></a>Comparar planos de execução
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Este tópico descreve como comparar as semelhanças e as diferenças entre os planos de execução gráficos reais usando o recurso de Comparação de Plano [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Este recurso está disponível a partir do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v16.
   
 > [!NOTE]
-> Os planos de execução reais são gerados depois que as consultas ou lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] são executados. Por isso, um plano de execução real contém informações de tempo de execução, como número real de linhas, métricas de uso de recursos e avisos de tempo de execução (se houver). Para obter mais informações, confira [Exibir um plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md).
+> Os planos de execução reais são gerados depois que as consultas ou lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] são executados. Por isso, um plano de execução real contém informações de runtime, como número real de linhas, métricas de uso de recursos e avisos de runtime (se houver). Para obter mais informações, confira [Exibir um plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md).
   
 A capacidade de comparar os planos é algo que os profissionais de banco de dados podem precisar fazer para solucionar problemas:
 -   Saiba por que uma consulta ou lote de repente fica lento.
@@ -69,7 +69,7 @@ Quando dois planos de execução são comparados, regiões do plano que **fazem 
      > [!TIP]
      > Todas as opções de zoom e navegação disponíveis para planos de execução funcionam no modo de comparação do plano. Para obter mais detalhes, confira [Exibir um plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md).
 
-5.  Também é aberta uma janela Propriedades dupla à direita no escopo da seleção padrão. As propriedades que existem em ambos os operadores comparados, mas que apresentem diferenças, serão precedidas pelo sinal *não igual* (&ne;) para facilitar a identificação.
+5.  Também é aberta uma janela Propriedades dupla à direita no escopo da seleção padrão. As propriedades que existem em ambos os operadores comparados, mas que apresentem diferenças, serão precedidas pelo sinal *diferente de* (&ne;) para facilitar a identificação.
 
     ![Janela de propriedades duplas](../../relational-databases/performance/media/plancomparison-properties.png "Janela de propriedades duplas")  
 

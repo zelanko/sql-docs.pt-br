@@ -17,10 +17,10 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 309fb584db245ee3da6b67e475a4881347f39bd5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294205"
 ---
 # <a name="data-profiling-task"></a>Tarefa Criação de Perfil de Dados
@@ -96,7 +96,7 @@ ms.locfileid: "71294205"
   
  Tipos numéricos incluem tipos **integer** (exceto **bit**), **money**, **smallmoney**, **decimal**, **float**, **real**e **numeric**.  
   
- \*\* **image**, **text**, **XML**, **udt**e **variant** em perfis que não sejam o Perfil Razão Nula de Coluna.  
+ \*\* Não há suporte para os tipos **image**, **text**, **XML**, **udt** e **variant** em perfis que não sejam o Perfil Razão Nula de Coluna.  
   
 ### <a name="valid-tables-and-columns"></a>Tabelas e colunas válidas  
  Se a tabela ou coluna estiver vazia, a Criação de perfis de dados executará as seguintes ações:  
@@ -117,7 +117,7 @@ ms.locfileid: "71294205"
   
 |Entrada de log|Descrição|  
 |---------------|-----------------|  
-|**DataProfilingTaskTrace**|Fornece informações descritivas sobre o status da tarefa. As mensagens incluem as seguintes informações:<br /><br /> Solicitações de processamento inicial<br /><br /> Início da consulta<br /><br /> Query End<br /><br /> Concluir solicitação de computação|  
+|**DataProfilingTaskTrace**|Fornece informações descritivas sobre o status da tarefa. As mensagens incluem as seguintes informações:<br /><br /> Solicitações de processamento inicial<br /><br /> Início da consulta<br /><br /> Término de consulta<br /><br /> Concluir solicitação de computação|  
   
 ## <a name="output-and-its-schema"></a>Saída e seu esquema  
  A tarefa Criação de Perfil de Dados produz os perfis selecionados em XML que é estruturado de acordo com o esquema DataProfile.xsd. É possível especificar se a saída deste XML será salva em um arquivo ou em uma variável de pacote. Você pode exibir esse esquema online em [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Na página da Web, você pode salvar uma cópia local do esquema. Em seguida, será possível exibir a cópia local do esquema no Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou em outro editor de esquemas, em um editor XML ou em um editor de texto como o Bloco de Notas.  

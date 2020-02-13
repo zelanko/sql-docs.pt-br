@@ -11,10 +11,10 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095999"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Consultas distribuídas do Microsoft SQL Server: Conectividade do OLE DB
@@ -90,7 +90,7 @@ Haverá suporte para cada uma das classes de instruções Transact-SQL a seguir 
 
 - As instruções `UPDATE` e DELETE serão permitidas em tabelas remotas se o provedor atender aos requisitos da interface OLE DB na tabela especificada. Para os requisitos da interface OLE DB e as condições sob as quais uma tabela remota pode ser atualizada ou excluída, confira \"Instruções UPDATE e DELETE\" mais adiante neste artigo.
 
-### <a name="cursor-support"></a>Suporte para cursor
+### <a name="cursor-support"></a>Suporte de cursor
 
 Haverá suporte para cursores de instantâneo e conjunto de chaves em consultas distribuídas se o provedor der suporte à funcionalidade OLE DB necessária. Não há suporte para cursores dinâmicos em consultas distribuídas. É feito o downgrade para um cursor de conjunto de chaves de uma solicitação de usuário de um cursor dinâmico em uma consulta distribuída.
 
@@ -112,7 +112,7 @@ Não há suporte para cursores de conjunto de chaves em consultas distribuídas 
 
 #### <a name="updatable-keyset-cursor-requirements"></a>Requisitos de cursor de conjunto de chaves atualizável
 
-Uma tabela remota pode ser atualizada ou excluída por meio de um cursor de conjunto de chaves definido em uma consulta distribuída, por exemplo, `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`. Estas são as condições sob as quais são permitidos cursores atualizáveis em consultas distribuídas:
+Uma tabela remota pode ser atualizada ou excluída por meio de um cursor de conjunto de chaves definido em uma consulta distribuída, por exemplo, `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`. As seguintes são as condições sob as quais cursores atualizáveis em relação a consultas distribuídas são permitidos:
 
 - Os cursores atualizáveis são permitidos se o provedor também atende às condições de atualizações e exclusões na tabela remota. Para obter mais informações, confira \"Instruções UPDATE e DELETE\" mais adiante neste artigo.
 
@@ -192,16 +192,16 @@ Estas são as etapas de alto nível executadas pelo SQL Server ao se conectar a 
 
 Propriedade| Valor padrão| Use |
 |:----|:----|:----|
-|`DBPROP_DBMSNAME`|None|Usado para mensagens de erro.|
-|`DBPROP_DBMSVER` |None|Usado para mensagens de erro.|
-|`DBPROP_PROVIDERNAME`|None|Usado para mensagens de erro.|
+|`DBPROP_DBMSNAME`|Nenhum|Usado para mensagens de erro.|
+|`DBPROP_DBMSVER` |Nenhum|Usado para mensagens de erro.|
+|`DBPROP_PROVIDERNAME`|Nenhum|Usado para mensagens de erro.|
 |`DBPROP_PROVIDEROLEDBVER1`|1.5|Usado para determinar a disponibilidade dos recursos do 2.0.
-|`DBPROP_CONCATNULLBEHAVIOR`|None|Usado para determinar se o comportamento da concatenação de `NULL` do provedor é o mesmo que o do SQL Server.|
-|`DBPROP_NULLCOLLATION`|None|Permite a classificação/o uso do índice somente se `NULLCOLLATION` corresponde ao comportamento de ordenação de nulo da Instância do SQL Server.|
-|`DBPROP_OLEOBJECTS`|None|Determina se o provedor dá suporte a interfaces de armazenamento estruturado para colunas de objeto de dados grandes.|
-|`DBPROP_STRUCTUREDSTORAGE`|None|Determina quais interfaces de armazenamento estruturado são compatíveis com tipos de objeto grande (entre `ILockBytes`, `Istream` e `ISequentialStream`).|
+|`DBPROP_CONCATNULLBEHAVIOR`|Nenhum|Usado para determinar se o comportamento da concatenação de `NULL` do provedor é o mesmo que o do SQL Server.|
+|`DBPROP_NULLCOLLATION`|Nenhum|Permite a classificação/o uso do índice somente se `NULLCOLLATION` corresponde ao comportamento de ordenação de nulo da Instância do SQL Server.|
+|`DBPROP_OLEOBJECTS`|Nenhum|Determina se o provedor dá suporte a interfaces de armazenamento estruturado para colunas de objeto de dados grandes.|
+|`DBPROP_STRUCTUREDSTORAGE`|Nenhum|Determina quais interfaces de armazenamento estruturado são compatíveis com tipos de objeto grande (entre `ILockBytes`, `Istream` e `ISequentialStream`).|
 |`DBPROP_MULTIPLESTORAGEOBJECTS`|Falso|Determina se mais de uma coluna de objeto grande pode ser aberta ao mesmo tempo.|
-|`DBPROP_SQLSUPPORT`|None|Determina se as consultas SQL podem ser enviadas ao provedor.|
+|`DBPROP_SQLSUPPORT`|Nenhum|Determina se as consultas SQL podem ser enviadas ao provedor.|
 |`DBPROP_CATALOGLOCATION`|`DBPROPVAL_CL_START`|Usado para construir nomes de tabela com várias partes.
 |`SQLPROP_DYNAMICSQL`|Falso|Propriedade específica do SQL Server: se ela retornar `VARIANT_TRUE`, indicará que os marcadores de parâmetro `?` são compatíveis com a execução de consulta parametrizada.
 |`SQLPROP_NESTEDQUERIES`|Falso|Propriedade específica do SQL Server: se ela retornar `VARIANT_TRUE`, indicará que o provedor dá suporte a instruções `SELECT` aninhadas na cláusula `FROM`.
@@ -323,7 +323,7 @@ Tabela de mapeamento de tipo de dados do SQL Server e OLE DB.
 |`DBTYPE_NUMERIC`| |`numeric`|
 |`DBTYPE_DECIMAL`| |`decimal`|
 |`DBTYPE_CY`| |`money`|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>ou em<br> Tamanho máx. > 4.000 caracteres|ntext|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>ou<br> Tamanho máx. > 4.000 caracteres|ntext|
 |`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`|NCHAR|
 |`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|NVARCHAR|
 |`DBTYPE_IDISPATCH`| |Erro|
@@ -332,16 +332,16 @@ Tabela de mapeamento de tipo de dados do SQL Server e OLE DB.
 |`DBTYPE_VARIANT`*| |NVARCHAR|
 |`DBTYPE_IUNKNOWN`| |Erro|
 |`DBTYPE_GUID`| |`uniqueidentifier`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>ou em<br> Tamanho máx. > 8.000|`image`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`, `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`, tamanho da coluna = 8 <br>ou em<br> Tamanho máx. não relatado. | `timestamp` |
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>ou<br> Tamanho máx. > 8.000|`image`|
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`, `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`, tamanho da coluna = 8 <br>ou<br> Tamanho máx. não relatado. | `timestamp` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `binary` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varbinary`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `char`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varchar` |
-|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>ou em<br> Tamanho máx. > 8.000 caracteres <br>ou em<br>   Tamanho máx. não relatado. | `text`|
+|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>ou<br> Tamanho máx. > 8.000 caracteres <br>ou<br>   Tamanho máx. não relatado. | `text`|
 |`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` |`nchar`|
 |`DBTYPE_WSTR` | `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|`nvarchar`|
-|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>ou em<br> Tamanho máx. > 4.000 caracteres <br>ou em<br>   Tamanho máx. não relatado. | `ntext`|
+|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>ou<br> Tamanho máx. > 4.000 caracteres <br>ou<br>   Tamanho máx. não relatado. | `ntext`|
 |`DBTYPE_UDT`| |Erro|
 |`DBTYPE_DATE`* | | `datetime` |
 |`DBTYPE_DBDATE` | | `datetime` (conversão explícita necessária)|
@@ -383,7 +383,7 @@ Para usar o mapeamento do lado de exportação no caso de instruções `UPDATE` 
 
 - Há uma conversão implícita permitida de `S1` para outro tipo `S2` do SQL Server, de forma que `S2` seja mapeado para o tipo `T` na tabela de mapeamento.
 
-#### <a name="large-object-lob-handling"></a>Tratamento de LOB (Objeto Grande)
+#### <a name="large-object-lob-handling"></a>Manipulação de LOB (Objeto Grande)
 
 Conforme indicado na tabela de mapeamento, se as colunas do tipo `DBTYPE_STR`, `DBTYPE_WSTR` ou `DBTYPE_BSTR` também relatarem `DBCOLUMNFLAGS_ISLONG`, ou se o tamanho máximo exceder 4.000 caracteres (ou se nenhum tamanho máximo for relatado), o SQL Server os tratará como uma coluna `text` ou `ntext`, conforme apropriado. Da mesma forma, para colunas `DBTYPE_BYTES`, se `DBCOLUMNFLAGS_ISLONG` for definido ou se o tamanho máximo for superior a 8.000 bytes (ou se o tamanho máximo não for relatado), as colunas `image` serão tratadas como colunas. As colunas `Text`, `ntext` e `image` são chamadas de colunas LOB.
 
@@ -616,7 +616,7 @@ A tabela a seguir lista todas as interfaces OLE DB usadas pelo SQL Server. A col
 
 No caso das interfaces opcionais, a coluna Cenários indica um ou mais dos seis cenários que usam a interface especificada. Por exemplo, a interface `IRowsetChange` em conjuntos de linhas da tabela base é uma interface opcional; essa interface é usada nas instruções `UPDATE` e DELETE e nos cenários da instrução `INSERT`. Se não houver suporte para essa interface, as instruções UPDATE, DELETE e `INSERT` não poderão ter suporte nesse provedor. Algumas das outras interfaces opcionais são marcadas como \"desempenho\" na coluna Cenários, indicando que a interface resulta em um melhor desempenho geral. Por exemplo, se não houver suporte para a interface `IDBSchemaRowset`, o SQL Server precisará abrir o conjunto de linhas duas vezes: uma vez para seus metadados e uma vez para a execução da consulta. Ao dar suporte a `IDBSchemaRowset`, o desempenho do SQL Server é aprimorado.
 
-|Object|Interface|Obrigatório|Comentários|Cenários|
+|Objeto|Interface|Obrigatório|Comentários|Cenários|
 |:-----|:-----|:-----|:-----|:-----|
 |Objeto de fonte de dados|`IDBInitialize`|Sim|Inicialize e configure o contexto de dados e segurança.| |
 | |`IDBCreateSession`|Sim|Crie o objeto de sessão de BD.| |

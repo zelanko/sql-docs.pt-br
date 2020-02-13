@@ -1,7 +1,7 @@
 ---
 title: Classificador CREATE WORKLOAD (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 01/27/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: adf8b1e04e7dcd75bcad0c4b184ae60f2b59d248
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 54c9145e40d9ad326faf0c897281fedb9a9fe9dc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056490"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831618"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -36,7 +36,7 @@ Cria um objeto de classificador para uso no gerenciamento de carga de trabalho. 
 > [!NOTE]
 > O classificador de carga de trabalho assume o lugar da atribuição de classe do recurso sp_addrolemember.  Depois que os classificadores de carga de trabalho são criados, execute sp_droprolemember para remover os mapeamentos de classe de recurso redundantes.
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -129,14 +129,17 @@ Especifica a importância relativa de uma solicitação.  A importância é uma 
 
 Se a importância não for especificada, a configuração de importância do grupo de carga de trabalho será usada.  A importância do grupo de carga de trabalho padrão é normal.  A importância influencia a ordem na qual as solicitações são agendadas, oferecendo primeiro acesso a recursos e bloqueios.
 
-## <a name="classification-parameter-precedence"></a>Precedência do parâmetro de classificação
+## <a name="classification-parameter-weighting"></a>Peso do parâmetro de classificação
 
-Uma solicitação pode corresponder a vários classificadores.  Há uma precedência nos parâmetros do classificador.  A precedência mais alta que corresponde ao classificador é usada primeiro para atribuir um grupo de carga de trabalho e uma importância.  A precedência é a seguinte:
-1. Usuário
-2. ROLE
-3. WLM_LABEL
-4. WLM_SESSION
-5. START_TIME/END_TIME
+Uma solicitação pode corresponder a vários classificadores.  Há um peso para os parâmetros do classificador.  O classificador de correspondência com maior peso é usado para atribuir um grupo de carga de trabalho e uma importância.  O peso é o seguinte:
+
+|Parâmetro do classificador |Peso   |
+|---------------------|---------|
+|USER                 |64       |
+|ROLE                 |32       |
+|WLM_LABEL            |16       |
+|WLM_CONTEXT          |8        |
+|START_TIME/END_TIME  |4        |
 
 Considere as seguintes configurações de classificador.
 
@@ -151,13 +154,13 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
 ( WORKLOAD_GROUP = 'wgUserQueries'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = LOW
- ,START_TIME     = '18:00')
+ ,START_TIME     = '18:00'
  ,END_TIME       = '07:00' )
 ```
 
-O usuário `userloginA` está configurado para os dois classificadores.  Se userloginA executar uma consulta com um rótulo igual a `salesreport` entre 18h e 7h UTC, a solicitação será classificada para o grupo de carga de trabalho wgDashboards com importância HIGH.  A expectativa pode ser classificar a solicitação para wgUserQueries com importância LOW para relatórios fora do horário de trabalho, mas a precedência de WLM_LABEL é maior que a de START_TIME/END_TIME.  Nesse caso, você pode adicionar START_TIME/END_TIME a classiferA.
+O usuário `userloginA` está configurado para os dois classificadores.  Se userloginA executar uma consulta com um rótulo igual a `salesreport` entre 18h e 7h UTC, a solicitação será classificada para o grupo de carga de trabalho wgDashboards com importância HIGH.  A expectativa pode ser classificar a solicitação para wgUserQueries com importância LOW para relatórios fora do horário de trabalho, mas o peso de WLM_LABEL é maior que o de START_TIME/END_TIME.  O peso de classifierA é 80 (64 para o usuário, mais 16 para WLM_LABEL).  O peso de classifierB é 68 (64 para o usuário, 4 para START_TIME/END_TIME).  Nesse caso, você pode adicionar o WLM_LABEL ao classifierB.
 
- Para obter mais informações, confira [classificação da carga de trabalho](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence).
+ Para obter mais informações, confira [peso da carga de trabalho](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting).
 
 ## <a name="permissions"></a>Permissões
 

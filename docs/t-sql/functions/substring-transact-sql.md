@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117675"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68117675"
 
 Retorna parte de uma expressão de caractere, binária, de texto ou de imagem no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- É **character**, **binary**, **text**, **ntext**ou **image**[expression](../../t-sql/language-elements/expressions-transact-sql.md).  
+ É um **character**, **binary**, **text**, **ntext** ou **image** [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  *start*  
  É um inteiro ou uma expressão **bigint** que especifica o ponto em que os caracteres retornados devem iniciar. (A numeração é baseada em 1, ou seja, o primeiro caractere da expressão é 1). Se *start* for menos que 1, a expressão retornada começará no primeiro caractere especificado em *expression*. Nesse caso, o número de caracteres retornados é o valor maior da soma de *start* + *length*- 1 ou 0. Se *start* for maior que o número de caracteres na expressão de valor, uma expressão de comprimento zero será retornada.  
@@ -63,7 +63,7 @@ SUBSTRING ( expression ,start , length )
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os valores para *start* e *length* devem ser especificados em número de caracteres para tipos de dados **ntext**, **char** ou **varchar** e bytes para tipos de dados **text**, **image**, **binary** ou **varbinary**.  
   
  A *expression* devem ser **varchar(max)** ou **varbinary(max)** quando o *start* ou *length* contém um valor maior que 2147483647.  
@@ -73,7 +73,7 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-substring-with-a-character-string"></a>A. Usando SUBSTRING com uma cadeia de caracteres  
+### <a name="a-using-substring-with-a-character-string"></a>a. Usando SUBSTRING com uma cadeia de caracteres  
  O exemplo a seguir mostra como retornar somente uma parte de uma cadeia de caracteres. Na tabela `sys.databases`, esta consulta retorna os nomes do banco de dados do sistema na primeira coluna, a primeira letra do banco de dados na segunda coluna e os terceiros e quarto caracteres na coluna final.  
   
 ```  
@@ -85,7 +85,7 @@ WHERE database_id < 5;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|NAME |Inicial |ThirdAndFourthCharacters|
+|name |Inicial |ThirdAndFourthCharacters|
 |---|--|--|
 |master  |m  |st |
 |tempdb  |t  |mp |

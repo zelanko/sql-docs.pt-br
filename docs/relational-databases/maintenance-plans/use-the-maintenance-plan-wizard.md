@@ -35,10 +35,10 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155564"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar o Assistente de Plano de Manutenção
@@ -132,7 +132,7 @@ Você deve habilitar a [Opção Agent XPs de configuração do servidor](../../d
   
         7.  Clique em **OK**.  
   
-    6.  Clique em **Avançar**.  
+    6.  Clique em **Próximo**.  
   
 6.  Na página **Selecionar Servidores de Destino** , selecione os servidores nos quais você deseja executar o plano de manutenção. Essa página só é visível em instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão configuradas como servidores mestre.  
   
@@ -157,7 +157,7 @@ As opções a seguir estão disponíveis nesta página.
   
  -  **Todos os bancos de dados**  
   
-Gere um plano de manutenção que execute essa tarefa com todos os bancos de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exceto **tempdb**.  
+Gere um plano de manutenção que executa essa tarefa em todos os bancos de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exceto **tempdb**.  
   
 **Bancos de dados do sistema**  
   
@@ -182,7 +182,7 @@ Caixa de seleção**Incluir índices**
   
 ## <a name="define-database-shrink-tasks"></a>Definir tarefas de redução de bancos de dados  
   
-1.  Na página **Definir Tarefa Reduzir Banco de Dados** , crie uma tarefa que tente reduzir o tamanho dos bancos de dados selecionados usando a instrução `DBCC SHRINKDATABASE` com a opção `NOTRUNCATE` ou `TRUNCATEONLY` . Para obter mais informações, consulte [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md). Ao concluir, clique em **Avançar**.  
+1.  Na página **Definir Tarefa Reduzir Banco de Dados** , crie uma tarefa que tente reduzir o tamanho dos bancos de dados selecionados usando a instrução `DBCC SHRINKDATABASE` com a opção `NOTRUNCATE` ou `TRUNCATEONLY` . Para obter mais informações, consulte [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md). Quando concluir, clique em **Avançar**.  
   
     > **AVISO!** Os dados movidos para reduzir um arquivo podem ser dispersos para qualquer local disponível no arquivo. Isso provoca uma fragmentação do índice e pode reduzir a velocidade do desempenho de consultas que pesquisam um intervalo do índice. Para eliminar a fragmentação, considere a recompilação dos índices no arquivo após a redução.  
   
@@ -205,7 +205,7 @@ Caixa de seleção**Incluir índices**
   
 ## <a name="define-the-index-tasks"></a>Definir as tarefas de índice  
   
-1.  Na página **Definir Tarefa Reorganizar Índice** , selecione os servidores nos quais você moverá páginas de índice para uma ordem de pesquisa mais eficiente. Esta tarefa usa a instrução `ALTER INDEX ... REORGANIZE`. Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). Ao concluir, clique em **Avançar**.  
+1.  Na página **Definir Tarefa Reorganizar Índice** , selecione os servidores nos quais você moverá páginas de índice para uma ordem de pesquisa mais eficiente. Esta tarefa usa a instrução `ALTER INDEX ... REORGANIZE`. Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). Quando concluir, clique em **Avançar**.  
   
      As opções a seguir estão disponíveis nesta página.  
   
@@ -397,7 +397,7 @@ Caixa de seleção**Incluir índices**
   
     -   AES 256  
   
-    -   Triple DES  
+    -   DES triplo  
   
      A opção de criptografia estará desabilitada se você optou por anexar ao conjunto de backup existente.  
   
@@ -428,7 +428,7 @@ Caixa de seleção**Incluir índices**
   
 #### <a name="define-maintenance-cleanup-tasks"></a>Definir tarefas de limpeza de manutenção  
   
-1.  Na página **Definir Tarefa Limpeza de Manutenção** , especifique os tipos de arquivos que devem ser excluídos como parte do plano de manutenção, inclusive relatórios de texto criados por planos de manutenção e arquivos de backup de banco de dados. Esta tarefa usa a instrução `EXEC xp_delete_file` . Ao concluir, clique em **Avançar**.  
+1.  Na página **Definir Tarefa Limpeza de Manutenção** , especifique os tipos de arquivos que devem ser excluídos como parte do plano de manutenção, inclusive relatórios de texto criados por planos de manutenção e arquivos de backup de banco de dados. Esta tarefa usa a instrução `EXEC xp_delete_file`. Ao concluir, clique em **Avançar**.  
   
     > **IMPORTANTE:** Essa tarefa não exclui automaticamente os arquivos nas subpastas do diretório especificado. Essa precaução reduz a possibilidade de um ataque mal-intencionado que use a tarefa de Limpeza de Manutenção para excluir arquivos. Se quiser excluir arquivos em subpastas de primeiro nível, você deverá selecionar **Incluir subpastas de primeiro nível**.  
   
@@ -508,7 +508,7 @@ Caixa de seleção**Incluir índices**
      **Mensagem**  
      Fornece qualquer mensagem de aviso ou erro retornada pelo processo.  
   
-     **Relatório**  
+     **Report**  
      Cria um relatório contendo os resultados do Assistente para Criar Partição. As opções são **Exibir Relatório**, **Salvar Relatório no Arquivo**, **Copiar Relatório na Área de Transferência**e **Enviar Relatório como Email**.  
   
      **Exibir Relatório**  

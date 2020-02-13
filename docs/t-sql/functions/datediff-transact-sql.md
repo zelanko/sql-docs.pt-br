@@ -32,10 +32,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68731127"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
@@ -46,7 +46,7 @@ Essa função retorna a contagem (como um valor inteiro com sinal) dos limites d
   
 Consulte [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md) para obter uma função que manipula diferenças maiores entre os valores *startdate* e *enddate*. Consulte [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) para obter uma visão geral de todos os tipos de dados e funções de data e hora do [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -136,9 +136,9 @@ SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
 
-Se *startdate* e *enddate* tiverem diferentes valores de ano, mas os mesmos valores semanais de calendário, `DATEDIFF` retornará 0 para *datepart* **week**.
+Se *startdate* e *enddate* tiverem diferentes valores de ano, mas os mesmos valores de semana do calendário, `DATEDIFF` retornará 0 para *datepart***week**.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Use `DATEDIFF` nas cláusulas `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` e `ORDER BY`.
   
 `DATEDIFF` converte implicitamente literais de cadeias de caracteres como um tipo **datetime2**. Isso significa que `DATEDIFF` não é compatível com o formato YDM quando a data é transmitida como cadeia de caracteres. É necessário converter explicitamente a cadeia de caracteres em um tipo de **datetime** ou **smalldatetime** para usar o formato YDM.
@@ -150,7 +150,7 @@ Especificar `SET DATEFIRST` não tem efeito sobre `DATEDIFF`. `DATEDIFF` sempre 
 ## <a name="examples"></a>Exemplos  
 Esses exemplos usam diferentes tipos de expressões como argumentos para os parâmetros *startdate* e *enddate*.
   
-### <a name="a-specifying-columns-for-startdate-and-enddate"></a>A. Especificando colunas para startdate e enddate  
+### <a name="a-specifying-columns-for-startdate-and-enddate"></a>a. Especificando colunas para startdate e enddate  
 Este exemplo calcula o número de limites de dia cruzados entre datas em duas colunas de uma tabela.
   
 ```sql

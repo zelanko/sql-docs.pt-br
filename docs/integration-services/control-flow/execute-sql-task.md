@@ -21,10 +21,10 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298311"
 ---
 # <a name="execute-sql-task"></a>Tarefa Executar SQL
@@ -52,8 +52,8 @@ ms.locfileid: "71298311"
 |Tipo de conexão|Gerenciador de conexões|  
 |---------------------|------------------------|  
 |EXCEL|[Gerenciador de Conexões do Excel](../../integration-services/connection-manager/excel-connection-manager.md)|  
-|OLE DB|[Gerenciador de conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
-|ODBC|[Gerenciador de Conexões ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|  
+|OLE DB|[Gerenciador de Conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
+|ODBCODBC|[Gerenciador de Conexões ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|  
 |ADO|[Gerenciador de conexões ADO](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|[Gerenciador de conexões ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
 |SQLMOBILE|[Gerenciador de Conexões do SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|  
@@ -253,7 +253,7 @@ Use a página **Conjunto de Resultados** da caixa de diálogo **Editor da Tarefa
  Selecione um mapeamento de conjunto de resultados na lista e clique em **Remover**.  
  
 ## <a name="parameters-in-the-execute-sql-task"></a>Parâmetros na Tarefa Executar SQL
-As instruções SQL e os procedimentos armazenados frequentemente usam parâmetros **input** , parâmetros **output** e códigos de retorno. No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a tarefa Execute SQL dá suporte aos tipos de parâmetro **Input**, **Output** e **ReturnValue**. Use o tipo **Input** para parâmetros de entrada, **Output** para parâmetros de saída e **ReturnValue** para códigos de retorno.  
+As instruções SQL e os procedimentos armazenados frequentemente usam parâmetros **input** , parâmetros **output** e códigos de retorno. No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a tarefa Execute SQL dá suporte aos tipos de parâmetro **Input**, **Output**e **ReturnValue** . Use o tipo **Input** para parâmetros de entrada, **Output** para parâmetros de saída e **ReturnValue** para códigos de retorno.  
   
 > [!NOTE]  
 >  Você só poderá usar parâmetros em uma tarefa Executar SQL se o provedor de dados der suporte a eles.  
@@ -283,7 +283,7 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<nome do parâmetro>|\@\<nome do parâmetro>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
-|ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ODBCODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL e OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 #### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>Usar parâmetros com os gerenciadores de conexões ADO.NET e ADO  
@@ -312,15 +312,15 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Usar parâmetros de data e hora com os gerenciadores de conexões ADO.NET e ADO  
  Ao ler dados de tipos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **time** e **datetimeoffset**, uma tarefa Executar SQL que usa um [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ou o gerenciador de conexão ADO tem os seguintes requisitos adicionais:  
   
--   Em dados de **time**, um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] requer que esses dados sejam armazenados em um parâmetro cujo tipo é **Input** ou **Output** e cujo tipo de dados é **string**.  
+-   Em dados de **time** , um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] requer que esses dados sejam armazenados em um parâmetro cujo tipo é **Input** ou **Output**e cujo tipo de dados é **string**.  
   
--   Para dados de **datetimeoffset**, um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] requer que esses dados sejam armazenados em um dos seguintes parâmetros:  
+-   Para dados de **datetimeoffset** , um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] requer que esses dados sejam armazenados em um dos seguintes parâmetros:  
   
     -   Um parâmetro cujo tipo é **Input** e cujo tipo de dados é **string**.  
   
     -   Um parâmetro cujo tipo é **Output** ou **ReturnValue**e cujo tipo de dados é **datetimeoffset**, **string**ou **datetime2**. Se você selecionar um parâmetro cujo tipo de dados é **string** ou **datetime2**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] converterá os dados em string ou datetime2.  
   
--   Um gerenciador de conexões ADO requer que os dados **time** ou **datetimeoffset** sejam armazenados em um parâmetro cujo tipo é **Input** ou **Output** e cujo tipo de dados é **adVarWchar**.  
+-   Um gerenciador de conexões ADO requer que os dados **time** ou **datetimeoffset** sejam armazenados em um parâmetro cujo tipo é **Input** ou **Output**e cujo tipo de dados é **adVarWchar**.  
   
  Para obter mais informações sobre tipos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e como eles são associados a tipos de dados [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) e [Tipos de dados do Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
@@ -331,7 +331,7 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
   
 -   Um parâmetro de saída com o tipo de dados apropriado, como listado na tabela a seguir.  
   
-    |Tipo de parâmetro **Output**|Tipo de dados de data|  
+    |Tipo de parâmetro**Output**|Tipo de dados de data|  
     |-------------------------------|--------------------|  
     |DBDATE|**date**|  
     |DBTIME2|**time**|  
@@ -380,12 +380,12 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
 ###  <a name="Stored_procedures"></a> Usar parâmetros com procedimentos armazenados  
  Os comandos SQL que executam procedimentos armazenados também podem usar mapeamento de parâmetro. As regras de como usar marcadores e nomes de parâmetros dependem do tipo de gerenciador de conexões utilizado por Executar SQL, assim como as regras para consultas parametrizadas.  
   
- A tabela a seguir lista exemplos do comando EXEC por tipo de gerenciador de conexões. Os exemplos executam o procedimento armazenado **uspGetBillOfMaterials** em [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. O procedimento armazenado usa os parâmetros `@StartProductID` e `@CheckDate` **e** .  
+ A tabela a seguir lista exemplos do comando EXEC por tipo de gerenciador de conexões. Os exemplos executam o procedimento armazenado **uspGetBillOfMaterials** em [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. O procedimento armazenado usa os parâmetros `@StartProductID` e `@CheckDate` **entrada**.  
   
 |Tipo de conexão|Sintaxe de EXEC|  
 |---------------------|-----------------|  
 |EXCEL e OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Para obter mais informações sobre a sintaxe de chamada ODBC, consulte o tópico [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462) (Parâmetros de procedimento) na Referência do programador de ODBC na Biblioteca MSDN.|  
+|ODBCODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Para obter mais informações sobre a sintaxe de chamada ODBC, consulte o tópico [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)(Parâmetros de procedimento) na Referência do programador de ODBC na Biblioteca MSDN.|  
 |ADO|Se IsQueryStoredProcedure estiver definido como **False**, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Se IsQueryStoredProcedure for definido como **True**, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Se IsQueryStoredProcedure estiver definido como **False**, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Se IsQueryStoredProcedure for definido como **True**, `uspGetBillOfMaterials`|  
   
@@ -422,7 +422,7 @@ Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Exec
     |---------------------|----------------------|  
     |ADO|?|  
     |ADO.NET e SQLMOBILE|\@\<nome do parâmetro>|  
-    |ODBC|?|  
+    |ODBCODBC|?|  
     |EXCEL e OLE DB|?|  
   
      A tabela a seguir lista exemplos do comando SELECT por tipo de gerenciador de conexões. Os parâmetros fornecem os valores de filtro nas cláusulas WHERE. Os exemplos usam SELECT para retornar produtos da tabela **Produto** em [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] que tenham uma **ProductID** maior e menor que os valores especificados pelos dois parâmetros.  
@@ -441,11 +441,11 @@ Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Exec
   
      Os nomes de parâmetros que você usa dependem do tipo de conexão que a tarefa Executar SQL usa.  
   
-    |Tipo de conexão|Nome do Parâmetro|  
+    |Tipo de conexão|Nome do parâmetro|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, ...|  
     |ADO.NET e SQLMOBILE|\@\<nome do parâmetro>|  
-    |ODBC|1, 2, 3, ...|  
+    |ODBCODBC|1, 2, 3, ...|  
     |EXCEL e OLE DB|0, 1, 2, 3, ...|  
   
 10. Na lista **Nome da Variável** , selecione uma variável. Para obter mais informações, consulte [Adicionar, excluir, alterar o escopo de uma variável definida pelo usuário em um pacote](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
@@ -474,7 +474,7 @@ Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Exec
 |Tipo de conexão|Sintaxe de EXEC|  
 |---------------------|-----------------|  
 |EXCEL e OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Para obter mais informações sobre a sintaxe de chamada ODBC, consulte o tópico [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462) (Parâmetros de procedimento) na Referência do programador de ODBC na Biblioteca MSDN.|  
+|ODBCODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Para obter mais informações sobre a sintaxe de chamada ODBC, consulte o tópico [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)(Parâmetros de procedimento) na Referência do programador de ODBC na Biblioteca MSDN.|  
 |ADO|Se IsQueryStoreProcedure estiver definido como **False**, `EXEC ? = myStoredProcedure 1`<br /><br /> Se IsQueryStoreProcedure estiver definido como **True**, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Se IsQueryStoreProcedure for definido como **True**.<br /><br /> `myStoredProcedure`|  
   
@@ -526,9 +526,9 @@ Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Exec
 |Tipo de conjunto de resultados|Tipo de dados da variável|Tipo de objeto|  
 |---------------------|---------------------------|--------------------|  
 |Linha simples|Qualquer tipo compatível com a coluna de tipo no conjunto de resultados.|Não aplicável|  
-|Conjunto de resultados completo|**Objeto**|Se a tarefa usar um gerenciador de conexões nativo, incluindo os gerenciadores de conexões ADO, OLE DB, Excel e ODBC, o objeto retornado será **Recordset**ADO.<br /><br /> Se a tarefa usar um gerenciador de conexões gerenciado, como o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)], o objeto retornado será um **System.Data.DataSet**.<br /><br /> Você pode usar uma tarefa Script para acessar o objeto **System.Data.DataSet** , conforme mostrado no exemplo a seguir.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
-|XML|**String**|**String**|  
-|XML|**Objeto**|Se a tarefa usar um gerenciador de conexões nativo, inclusive os gerenciadores de conexões ADO, OLE DB, Excel e ODBC, o objeto retornado será **MSXML6.IXMLDOMDocument**.<br /><br /> Se a tarefa usar um gerenciador de conexões gerenciado, como o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)], o objeto retornado será um **System.Xml.XmlDocument**.|  
+|Conjunto de resultados completo|**Objeto**|Se a tarefa usar um gerenciador de conexões nativo, incluindo os gerenciadores de conexões ADO, OLE DB, Excel e ODBC, o objeto retornado será **Recordset**ADO.<br /><br /> Se a tarefa usar um gerenciador de conexões gerenciado, como o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , o objeto retornado será um **System.Data.DataSet**.<br /><br /> Você pode usar uma tarefa Script para acessar o objeto **System.Data.DataSet** , conforme mostrado no exemplo a seguir.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
+|XML|**Cadeia de caracteres**|**Cadeia de caracteres**|  
+|XML|**Objeto**|Se a tarefa usar um gerenciador de conexões nativo, inclusive os gerenciadores de conexões ADO, OLE DB, Excel e ODBC, o objeto retornado será **MSXML6.IXMLDOMDocument**.<br /><br /> Se a tarefa usar um gerenciador de conexões gerenciado, como o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , o objeto retornado será um **System.Xml.XmlDocument**.|  
   
  A variável pode ser definida no escopo da tarefa Executar SQL ou do pacote. Se a variável tiver escopo de pacote, o conjunto de resultados estará disponível para outras tarefas e contêineres no pacote e para qualquer pacote executado pelas tarefas Executar pacote ou Executar Pacotes do DTS 2000.  
   

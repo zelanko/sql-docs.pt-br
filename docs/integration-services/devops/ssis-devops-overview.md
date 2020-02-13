@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4cf79aade8e74277ef7b5cbaa6e1bd3ae612e94b
-ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
+ms.openlocfilehash: 88b8e54867aba5439af9ed87e4a42b2083a479b3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75924917"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76281864"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>Ferramentas de DevOps do SSIS (SQL Server Integration Services) (versão prévia)
 
@@ -132,6 +132,12 @@ Atualmente, a tarefa Implantação do SSIS não dá suporte aos seguintes cenár
 - Implantar pacotes no Repositório de Pacotes SSIS ou no MSDB.
 
 ## <a name="release-notes"></a>Notas de versão
+
+### <a name="version-013-preview"></a>Versão 0.1.3 Versão prévia
+
+Data de lançamento: 19 de janeiro de 2020
+
+- Corrigido um problema que impedia a implantação do ispac quando seu nome de arquivo original era alterado.
 
 ### <a name="version-012-preview"></a>Versão 0.1.2 Versão prévia
 

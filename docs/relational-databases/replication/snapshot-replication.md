@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 50a53d5c4c8a805a16b4ddc186531f1bf89509dc
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c7199f12ac00d58f629096aa435c05eb862c4c51
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769516"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287147"
 ---
 # <a name="snapshot-replication"></a>Replicação de instantâneo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "68769516"
   
  A ilustração a seguir mostra os principais componentes de replicação de instantâneo.  
   
- ![Componentes e fluxo de dados da replicação de instantâneo](../../relational-databases/replication/media/snapshot.gif "Componentes e fluxo de dados da replicação de instantâneo")  
+ ![Componentes e fluxo de dados de replicação de instantâneo](../../relational-databases/replication/media/snapshot.gif "Componentes e fluxo de dados de replicação de instantâneo")  
   
 ##  <a name="SnapshotAgent"></a> Snapshot Agent  
  Para replicação de mesclagem, é gerado um instantâneo toda vez que o Agente de Instantâneo é executado. Para replicação transacional, a geração de instantâneo depende da configuração da propriedade de publicação de **immediate_sync**. Se a propriedade estiver definida como TRUE (padrão ao usar o Assistente para Nova Publicação), um instantâneo é gerado toda vez que o Agente de Instantâneo for executado e pode ser aplicado ao Assinante a qualquer momento. Se a propriedade estiver definida como FALSE (padrão ao usar **sp_addpublication**), o instantâneo só é gerado se uma assinatura nova for adicionada desde a última execução do Agente de Instantâneo; Assinantes devem esperar que o Agente de Instantâneo termine antes de poder sincronizar-se.  

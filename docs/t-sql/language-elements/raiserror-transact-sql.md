@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252039"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "72252039"
 
   Gera uma mensagem de erro e inicia o processamento de erros da sessão. RAISERROR pode referenciar uma mensagem de erro definida pelo usuário na exibição do catálogo sys.messages ou criar uma mensagem dinamicamente. A mensagem é retornada como uma mensagem de erro de servidor ao aplicativo de chamada ou a um bloco CATCH de um constructo TRY...CATCH. Em vez disso, os novos aplicativos devem usar [THROW](../../t-sql/language-elements/throw-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -112,7 +112,7 @@ RAISERROR ( { msg_str | @local_variable }
 |------------------------|----------------|  
 |d ou i|Inteiro assinado|  
 |o|Octal não assinado|  
-|s|Cadeia de caracteres|  
+|s|String|  
 |u|Inteiro não assinado|  
 |x ou X|Hexadecimal não assinado|  
   
@@ -120,7 +120,7 @@ RAISERROR ( { msg_str | @local_variable }
 >  Essas especificações de tipo são baseadas naquelas originalmente definidas para a função **printf** na biblioteca padrão C. As especificações de tipo usadas na cadeia de caracteres de mensagem RAISERROR são mapeadas para tipos de dados [!INCLUDE[tsql](../../includes/tsql-md.md)], enquanto as especificações usadas em **printf** são mapeadas para tipos de dados de linguagem C. As especificações de tipo usadas em **printf** não são compatíveis com RAISERROR quando o [!INCLUDE[tsql](../../includes/tsql-md.md)] não tem um tipo de dados semelhante ao tipo de dados C associado. Por exemplo, não há suporte para a especificação de *%p* de ponteiros em RAISERROR porque o [!INCLUDE[tsql](../../includes/tsql-md.md)] não tem um tipo de dados de ponteiro.  
   
 > [!NOTE]  
->  Para converter um valor no tipo de dados **bigint** do [!INCLUDE[tsql](../../includes/tsql-md.md)], especifique **%I64d**.  
+>  Para converter um valor no tipo de dados [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint**, especifique **%I64d**.  
   
  *\@local_variable*  
  É uma variável de qualquer tipo de dados de caractere válido que contém uma cadeia de caracteres formatada da mesma maneira que *msg_str*. *\@local_variable* deve ser **char** ou **varchar** ou pode ser convertido implicitamente nesses tipos de dados.  
@@ -163,7 +163,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
 |NOWAIT|Envia mensagens imediatamente ao cliente.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |SETERROR|Define os valores de @@ERROR e ERROR_NUMBER como *msg_id* ou 50.000, independentemente do nível de severidade.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os erros gerados por RAISERROR funcionam da mesma maneira que os erros gerados pelo código do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os valores especificados por RAISERROR são relatados pelas funções do sistema ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, ERROR_STATE e @@ERROR. Quando RAISERROR é executado com uma severidade de 11 ou mais em um bloco TRY, ele transfere o controle para o bloco CATCH associado. O erro será retornado ao chamador se RAISERROR for executado:  
   
 -   Fora do escopo de qualquer bloco TRY.  
@@ -213,7 +213,7 @@ GO
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-returning-error-information-from-a-catch-block"></a>A. Retornando informações de erro de um bloco CATCH  
+### <a name="a-returning-error-information-from-a-catch-block"></a>a. Retornando informações de erro de um bloco CATCH  
  O exemplo de código a seguir mostra como usar o bloco `RAISERROR` dentro de um bloco `TRY` para fazer a execução saltar para o bloco `CATCH` associado. Também mostra como usar `RAISERROR` para retornar informações sobre o erro que invocou o bloco `CATCH`.  
   
 > [!NOTE]  

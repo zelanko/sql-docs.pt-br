@@ -30,10 +30,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2e917d4dcd2f722bb9d683ebe0a6a8777487c61d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729922"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
@@ -59,7 +59,7 @@ Saiba mais:
 -   [Guia de índices columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)  
 -   [Resumo de recursos dos índices columnstore](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -120,7 +120,7 @@ Algumas das opções não estão disponíveis em todas as versões de mecanismo 
 | COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
 | DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | 
 | ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] |
-| cláusula WHERE | N/A | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
+| cláusula WHERE | N/D | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
 
 Todas as opções estão disponíveis no Banco de Dados SQL do Azure.
 
@@ -175,7 +175,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
    Para obter recomendações de quando usar COMPRESSION_DELAY, confira [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
 ##### <a name="data_compression--columnstore--columnstore_archive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
-   Especifica a opção de compactação de dados para a tabela, o número de partição ou o intervalo de partições especificado. As opções são as seguintes:   
+   Especifica a opção de compactação de dados para a tabela, o número de partição ou o intervalo de partições especificado. As opções são as descritas a seguir:   
 - `COLUMNSTORE` é o padrão e especifica compactar com a compactação de columnstore de mais alto desempenho. Essa é a opção típica.  
 - `COLUMNSTORE_ARCHIVE` compacta ainda mais a tabela ou a partição para um tamanho menor. Use esta opção para situações como arquivamento, que exigem um tamanho menor de armazenamento e podem dedicar mais tempo para armazenamento e recuperação.  
   
@@ -254,7 +254,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
    Especifica um limite inferior para o tempo em que uma linha deve permanecer no rowgroup delta antes que ela seja qualificada para migrar para o rowgroup compactado. Por exemplo, um cliente pode dizer que se uma linha for alterada para 120 minutos, ele será elegível para a compactação em formato de armazenamento colunar. Para um índice columnstore em tabelas baseadas em disco, não acompanhamos o tempo em que uma linha é inserida ou atualizada, usamos o tempo de fechamento do rowgroup delta como um proxy para a linha. A duração padrão é 0 minutos. Uma linha é migrada para o armazenamento colunar depois que 1 milhão de linhas são acumuladas no rowgroup delta e ele é marcado como fechado.  
   
 ###### <a name="data_compression"></a>DATA_COMPRESSION  
-   Especifica a opção de compactação de dados para a tabela, o número de partição ou o intervalo de partições especificado. Aplica-se somente a índices columnstore, incluindo índices columnstore não clusterizados e clusterizados. As opções são as seguintes:
+   Especifica a opção de compactação de dados para a tabela, o número de partição ou o intervalo de partições especificado. Aplica-se somente a índices columnstore, incluindo índices columnstore não clusterizados e clusterizados. As opções são as descritas a seguir:
    
 - `COLUMNSTORE` – o padrão e especifica compactar com a compactação de columnstore de mais alto desempenho. Essa é a opção típica.  
 - `COLUMNSTORE_ARCHIVE` – COLUMNSTORE_ARCHIVE compacta ainda mais a tabela ou a partição para um tamanho menor. Isso pode ser usado para fins de arquivamento, ou em outras situações que exijam menos armazenamento e possam dispensar mais tempo para armazenamento e recuperação.  
@@ -309,15 +309,15 @@ As opções SET na coluna Valor necessário são necessárias sempre que ocorrer
 - A operação INSERT, UPDATE, DELETE ou MERGE modificar os dados de um índice filtrado.  
 - O índice filtrado é usado pelo otimizador de consulta para produzir o plano de consulta.  
   
-    |Opções Set|Valor Obrigatório|Valor do servidor padrão|Padrão<br /><br /> Valor OLE DB e ODBC|Padrão<br /><br /> Valor da DB-Library|  
+    |Opções Set|Valor obrigatório|Valor do servidor padrão|Padrão<br /><br /> Valor OLE DB e ODBC|Padrão<br /><br /> Valor da DB-Library|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+    |ANSI_NULLS|ATIVADO|ATIVADO|ATIVADO|OFF|  
+    |ANSI_PADDING|ATIVADO|ATIVADO|ATIVADO|OFF|  
+    |ANSI_WARNINGS*|ATIVADO|ATIVADO|ATIVADO|OFF|  
+    |ARITHABORT|ATIVADO|ATIVADO|OFF|OFF|  
+    |CONCAT_NULL_YIELDS_NULL|ATIVADO|ATIVADO|ATIVADO|OFF|  
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|   
+    |QUOTED_IDENTIFIER|ATIVADO|ATIVADO|ATIVADO|OFF|   
   
      *A definição de ANSI_WARNINGS como ON definirá ARITHABORT implicitamente como ON quando o nível de compatibilidade do banco de dados for definido como 90 ou mais. Se o nível de compatibilidade do banco de dados estiver definido como 80 ou menos, a opção ARITHABORT deverá ser definida explicitamente como ON.  
   
@@ -338,7 +338,7 @@ As opções SET na coluna Valor necessário são necessárias sempre que ocorrer
 -   datetime2 [ ( *n* ) ]  
 -   DATETIME  
 -   smalldatetime  
--   Data  
+-   date  
 -   time [ ( *n* ) ]  
 -   float [ ( *n* ) ]  
 -   real [ ( *n* ) ]  
@@ -348,7 +348,7 @@ As opções SET na coluna Valor necessário são necessárias sempre que ocorrer
 -   SMALLMONEY  
 -   BIGINT  
 -   INT  
--   smallint  
+-   SMALLINT  
 -   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
@@ -370,7 +370,7 @@ Se a tabela subjacente tiver uma coluna de um tipo de dados não compatível com
 -   rowversion (e carimbo de data/hora)  
 -   sql_variant  
 -   Tipos CLR (hierarchyid e tipos espaciais)  
--   xml  
+-   Xml  
 -   uniqueidentifier (aplica-se ao [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
 
 **Índices columnstore não clusterizados:**
@@ -418,7 +418,7 @@ Estas limitações se aplicam apenas ao [!INCLUDE[ssSQL14](../../includes/sssql1
 
 ##  <a name="convert"></a> Exemplos para converter uma tabela rowstore em columnstore  
   
-### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. Converter um índice columnstore clusterizado  
+### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>a. Converter um índice columnstore clusterizado  
  Este exemplo cria uma tabela como um heap e, depois, converte-o em um índice columnstore clusterizado chamado o cci_Simple. Isso altera o armazenamento da tabela inteira, de rowstore a columnstore.  
   
 ```sql  
@@ -603,7 +603,7 @@ WITH ( DROP_EXISTING = ON );
   
 ##  <a name="nonclustered"></a> Exemplos de índices columnstore não clusterizados  
   
-### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. Criar um índice columnstore como um índice secundário em uma tabela rowstore  
+### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>a. Criar um índice columnstore como um índice secundário em uma tabela rowstore  
  Este exemplo cria um índice columnstore não clusterizado em uma tabela rowstore. Somente um índice columnstore pode ser criado nesta situação. O índice columnstore exige armazenamento extra, pois contém uma cópia dos dados na tabela rowstore. Este exemplo cria uma tabela simples e um índice clusterizado e, em seguida, demonstra a sintaxe de criação de um índice columnstore não clusterizado.  
   
 ```sql  
@@ -670,7 +670,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>A. Alterar um índice clusterizado para um índice columnstore clusterizado  
+### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>a. Alterar um índice clusterizado para um índice columnstore clusterizado  
  Usando a instrução CREATE CLUSTERED COLUMNSTORE INDEX com DROP_EXISTING = ON, você pode:  
   
 -   Alterar um índice clusterizado para um índice columnstore clusterizado.  

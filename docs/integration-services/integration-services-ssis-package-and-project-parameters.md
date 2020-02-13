@@ -14,10 +14,10 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b595c8e2c09260e6874fc3cbaab8cc06d2a0c9df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296166"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Parâmetros de pacote e projeto do SSIS (Integration Services)
@@ -32,7 +32,7 @@ ms.locfileid: "71296166"
 ## <a name="parameters-and-package-deployment-model"></a>Parâmetros e modelo de implantação de pacote  
  Em geral, se você estiver implantando um pacote usando o modelo de implantação de pacote, deverá usar configurações em vez de parâmetros.  
   
- Quando você implantar um pacote que contém parâmetros usando o modelo de implantação de pacote e, em seguida, executar o pacote, os parâmetros não serão chamados durante a execução. Se o pacote contiver parâmetros de pacote e as expressões dentro do pacote usarem os parâmetros, os valores resultantes serão aplicados em tempo de execução. Se o pacote contiver parâmetros de projeto, a execução de pacote poderá falhar.  
+ Quando você implantar um pacote que contém parâmetros usando o modelo de implantação de pacote e, em seguida, executar o pacote, os parâmetros não serão chamados durante a execução. Se o pacote contiver parâmetros de pacote e as expressões dentro do pacote usarem os parâmetros, os valores resultantes serão aplicados em runtime. Se o pacote contiver parâmetros de projeto, a execução de pacote poderá falhar.  
   
 ## <a name="parameters-and-project-deployment-model"></a>Parâmetros e modelo de implantação de projeto  
  Quando você implantar um projeto no servidor Integration Services (SSIS), use exibições, procedimentos armazenados e a interface do usuário do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para gerenciar o projeto e os parâmetros de pacote. Para obter mais informações, consulte os tópicos a seguir.  
@@ -89,7 +89,7 @@ ms.locfileid: "71296166"
   
  Você também pode usar a caixa de diálogo **Executar Pacote** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para modificar o valor do parâmetro. Para obter mais informações, consulte [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog).  
   
- Você também pode usar a opção **/Parameter** do dtexec para modificar um valor de parâmetro. Para obter mais informações, consulte [dtexec Utility](../integration-services/packages/dtexec-utility.md).  
+ Você também pode usar a opção **/Parameter** do dtexec para modificar um valor de parâmetro. Para saber mais, veja [dtexec Utility](../integration-services/packages/dtexec-utility.md).  
   
 ### <a name="parameter-validation"></a>Validação de parâmetro  
  Se não for possível resolver os valores dos parâmetros, haverá falha na execução do pacote correspondente. Para ajudar a evitar falhas, você pode validar projetos e pacotes usando a caixa de diálogo **Validar** em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. A validação permite confirmar se todos os parâmetros têm os valores necessários ou se os valores necessários podem ser resolvidos com referências de ambiente específicas. A validação também verifica outros problemas comuns de pacotes.  
@@ -103,7 +103,7 @@ ms.locfileid: "71296166"
   
  Na preparação de uma instância específica de execução do pacote, um valor 5 é atribuído ao parâmetro **pkgOptions** . Esse valor é referenciado como o valor de execução porque ele se aplica ao parâmetro apenas para aquela instância de execução específica. Quando a execução é iniciada, a propriedade do pacote correspondente ao parâmetro **pkgOptions** recebe o valor de 5.  
   
-## <a name="create-parameters"></a>Create Parameters
+## <a name="create-parameters"></a>Criar parâmetros
 Use o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar parâmetros de projeto e parâmetros de pacote. Os procedimentos a seguir fornecem instruções passo a passo para criar parâmetros de pacote/projeto.  
   
 > **OBSERVAÇÃO:** Se você estiver convertendo um projeto criado com o uso de uma versão anterior do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no modelo de implantação de projeto, use o **Assistente de Conversão de Projeto do Integration Services** para criar parâmetros com base em configurações. Para obter mais informações, consulte [Implantar projetos e pacotes do SSIS (Integration Services)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -112,20 +112,20 @@ Use o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para cr
   
 1.  Abra o pacote no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]e clique na guia **Parâmetros** no SSIS Designer.  
   
-     ![Guia Parâmetros de Pacote](../integration-services/media/denali-package-parameters.gif "Guia Parâmetros de Pacote")  
+     ![Guia Parâmetro de Pacote](../integration-services/media/denali-package-parameters.gif "Guia Parâmetro de Pacote")  
   
 2.  Clique no botão **Adicionar Parâmetro** na barra de ferramentas.  
   
-     ![Adicionar botão de barra de ferramentas](../integration-services/media/denali-parameter-add.gif "Adicionar botão de barra de ferramentas")  
+     ![Botão de barra de ferramentas Adicionar](../integration-services/media/denali-parameter-add.gif "Botão de barra de ferramentas Adicionar")  
   
 3.  Insira valores para as propriedades **Nome**, **Tipo de Dados**, **Valor**, **Diferencia**e **Obrigatório** na própria lista ou na janela **Propriedades** . A tabela a seguir descreve essas propriedades.  
   
     |Propriedade|Descrição|  
     |--------------|-----------------|  
     |Nome|O nome do parâmetro.|  
-    |Tipo de Dados|O tipo de dados do parâmetro.|  
+    |Tipo de dados|O tipo de dados do parâmetro.|  
     |Valor padrão|O valor padrão do parâmetro atribuído em tempo de design. Também conhecido como o padrão de design.|  
-    |Diferencia|Valores de parâmetros confidenciais são criptografados no catálogo e aparecem como um valor NULL quando exibidos com o Transact-SQL ou o SQL Server Management Studio.|  
+    |Sigiloso|Valores de parâmetros confidenciais são criptografados no catálogo e aparecem como um valor NULL quando exibidos com o Transact-SQL ou o SQL Server Management Studio.|  
     |Obrigatório|Exige que um valor diferente do padrão de design seja especificado para que o pacote possa ser executado.|  
     |Descrição|Para fins de manutenção, a descrição do parâmetro. No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], defina a descrição do parâmetro na janela Propriedades do Visual Studio quando o parâmetro for selecionado na janela de parâmetros aplicável.|  
   
@@ -147,16 +147,16 @@ Use o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para cr
   
 3.  Clique no botão **Adicionar Parâmetro** na barra de ferramentas.  
   
-     ![Adicionar botão de barra de ferramentas](../integration-services/media/denali-parameter-add.gif "Adicionar botão de barra de ferramentas")  
+     ![Botão de barra de ferramentas Adicionar](../integration-services/media/denali-parameter-add.gif "Botão de barra de ferramentas Adicionar")  
   
 4.  Insira valores para as propriedades **Nome**, **Tipo de Dados**, **Valor**, **Diferencia**e **Obrigatório** .  
   
     |Propriedade|Descrição|  
     |--------------|-----------------|  
     |Nome|O nome do parâmetro.|  
-    |Tipo de Dados|O tipo de dados do parâmetro.|  
+    |Tipo de dados|O tipo de dados do parâmetro.|  
     |Valor padrão|O valor padrão do parâmetro atribuído em tempo de design. Também conhecido como o padrão de design.|  
-    |Diferencia|Valores de parâmetros confidenciais são criptografados no catálogo e aparecem como um valor NULL quando exibidos com o Transact-SQL ou o SQL Server Management Studio.|  
+    |Sigiloso|Valores de parâmetros confidenciais são criptografados no catálogo e aparecem como um valor NULL quando exibidos com o Transact-SQL ou o SQL Server Management Studio.|  
     |Obrigatório|Exige que um valor diferente do padrão de design seja especificado para que o pacote possa ser executado.|  
     |Descrição|Para fins de manutenção, a descrição do parâmetro. No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], defina a descrição do parâmetro na janela Propriedades do Visual Studio quando o parâmetro for selecionado na janela de parâmetros aplicável.|  
   
@@ -186,7 +186,7 @@ A caixa de diálogo **Parametrizar** permite associar um parâmetro novo ou exis
  **Descrição**  
  Especifique a descrição para o parâmetro.  
   
- **Value**  
+ **Valor**  
  Especifique o valor padrão para o parâmetro. Isto também é conhecido como o padrão de design que pode ser substituído posteriormente no momento da implantação.  
   
  **Escopo**  

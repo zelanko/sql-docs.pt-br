@@ -13,10 +13,10 @@ ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 13b4922d1fba2d41878217cadc8d47d45928b4ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025209"
 ---
 # <a name="set-warning-thresholds"></a>Configurar limites de aviso
@@ -35,14 +35,14 @@ ms.locfileid: "68025209"
   
  Esse campo indica também se o monitor está conectado atualmente à instância de servidor. Os status de conexão possíveis são:  
   
--   **Não conectado a**  *server_instance_name*  
+-   **Não conectado a** *nome_da_instância_do_servidor*  
   
--   **Tentando se conectar a**  *server_instance_name*  
+-   **Tentando se conectar a** *nome_da_instância_do_servidor*  
   
--   **Conectado a**  *server_instance_name*  
+-   **Conectado a** *nome_da_instância_do_servidor*  
   
     > [!NOTE]  
-    >  Se você não for um membro da função de servidor fixa **sysadmin** , esse status será **Conectado a** *server_instance_name* **(Permissões limitadas)** .  
+    >  Se você não for um membro da função de servidor fixa **sysadmin**, esse status será **Conectado a** *nome_da_instância_do_servidor* **(Permissões limitadas)** .  
   
  O nome de cada uma das instâncias de servidor de parceiro é exibido em um campo separado de *Instância de servidor e status de conexão* . O campo superior relacionará o servidor principal quando o monitor começar a ser executado.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "68025209"
 |**Avisar se a idade da transação não enviada mais antiga exceder o limite**|O limite indica o número de minutos de transações que ainda não foram enviadas da fila de envio para a instância de servidor de espelho. Esse valor ajuda a medir o potencial de perda de dados em termos de tempo.|  
 |**Avisar se a sobrecarga espelhada confirmada exceder o limite**|O limite indica o número de milissegundos de retardo por transação (pertinente só em modo de alta segurança). Esse atraso consiste na quantidade de sobrecarga incidente enquanto a instância do servidor principal aguarda que a instância do servidor espelho grave o registro do log da transação na fila de restauração.|  
   
- **Habilitado em “** *\<server instance>* **”**  
+ **Habilitado em '** *\<instância do servidor>* **'**  
  Uma caixa de seleção em branco indica que o aviso está desabilitado presentemente na instância de servidor. Para habilitar um aviso, clique em sua caixa de seleção.  
   
- **Limite em “** *\<server instance>* **”**  
+ **Limite em '** *\<instância do servidor>* **'**  
  Quando um aviso for habilitado, defina o limite no lado esquerdo dessa coluna. Um evento ocorrerá se o limite especificado tiver sido atingido quando a tabela de status for atualizada. Se você desabilitar um limite depois de configurar um valor, o valor permanecerá no campo e será usado quando você reabilitar o aviso.  
   
  Quando um aviso não for habilitado, o campo permanecerá inativo.  
@@ -84,7 +84,7 @@ ms.locfileid: "68025209"
  **OK**  
  Clicar em **OK** fecha essa caixa de diálogo e exibe os valores dos limites de aviso especificados atualmente na grade **Limites** na página com guias **Avisos**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Um limite só se aplica a um parceiro por vez, mas é recomendado definir um limite para um determinado evento em ambos os parceiros, para assegurar que o aviso persista caso o banco de dados apresente failover. O limite adequado para cada parceiro depende das capacidades de desempenho o sistema daquele parceiro.  
   
  Um evento de desempenho é gravado no log de eventos somente se o seu valor estiver no seu limite ou acima dele quando a tabela de status for atualizada. Se um valor máximo alcançar temporariamente o limite entre as atualizações de status, este valor máximo é ignorado  

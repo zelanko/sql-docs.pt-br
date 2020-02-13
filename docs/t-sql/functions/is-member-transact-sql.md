@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d3a0a9b09696959ba14c97c237e9e8ef9927db6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982921"
 ---
 # <a name="is_member-transact-sql"></a>IS_MEMBER (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "73982921"
 
   Indica se o usuário atual é membro do grupo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows especificado ou da função de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não há suporte para a função IS_MEMBER em grupos do Azure Active Directory.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,14 +60,14 @@ IS_MEMBER ( { 'group' | 'role' } )
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  IS_MEMBER retorna os seguintes valores.  
   
 |Valor retornado|Descrição|  
 |------------------|-----------------|  
 |0|O usuário atual não é membro do *group* ou *role*.|  
 |1|O usuário atual é membro do *group* ou *role*.|  
-|NULL|O *group* ou a *role* não é válido. Quando consultado por um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um logon que usa uma função de aplicativo, retorna NULL para um grupo do Windows.|  
+|NULO|O *group* ou a *role* não é válido. Quando consultado por um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um logon que usa uma função de aplicativo, retorna NULL para um grupo do Windows.|  
   
  IS_MEMBER determina a associação do grupo Windows examinando um token de acesso que é criado pelo Windows. O token de acesso não reflete alterações na associação do grupo feitas após a conexão de um usuário em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A associação ao grupo do Windows não pode ser consultada por um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou por uma função de aplicativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

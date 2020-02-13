@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: d3b6ea9f53a54b7f02042b85781bc8fe24028a69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896131"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Passo a passo: Configurar o Integration Services (SSIS) Scale Out
@@ -64,13 +64,13 @@ Para instalar o recurso Mestre do Scale Out, use o assistente de instalação do
 
 3.  Na página **Configuração do Mestre de Expansão do Integration Services** especifique o número da porta usada pelo Mestre de Expansão para se comunicar com o Mestre de Trabalho. O número da porta padrão é 8391.  
 
-    ![Configuração do Mestre](media/master-config.PNG "Master Config")
+    ![Configuração do mestre](media/master-config.PNG "Configuração do Mestre")
 
 4.  Especifique o certificado SSL usado para proteger a comunicação entre o Mestre e o Trabalho do Scale Out realizando um dos procedimentos a seguir.
     * Permita que o processo de instalação crie um certificado SSL padrão autoassinado clicando em **Criar um novo certificado SSL**.  O certificado padrão é instalado em Autoridades de Certificação Confiáveis, Computador Local. Você pode especificar os CNs nesse certificado. O nome do host do ponto de extremidade mestre deve ser incluído nos CNs. Por padrão, o nome do computador e o IP do Nó Mestre estão incluídos.
     * Selecione um Certificado SSL existente no computador local clicando em **Usar um certificado SSL existente** e, em seguida, clicando em **Procurar** para selecionar um certificado. A impressão digital do certificado é exibida na caixa de texto. Clicar em **Procurar** exibe os certificados que estão armazenados em Autoridades de Certificação Confiáveis, Computador Local. O certificado selecionado deve estar armazenado aqui.       
 
-    ![Configuração do Mestre 2](media/master-config-2.PNG "Master Config 2")
+    ![Configuração do mestre 2](media/master-config-2.PNG "Configuração do mestre 2")
   
 5.  Conclua o assistente de instalação [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] .
 
@@ -105,7 +105,7 @@ Para instalar o recurso Trabalho do Scale Out, use o assistente de instalação 
 
 2.  Na página **Configuração do Servidor** , selecione a conta para executar o **serviço Trabalho de Expansão do SQL Server Integration Services** e selecione o **Tipo de Inicialização**.
 
-    ![Configuração de servidor 2](media/server-config-2.PNG "Server Config 2")
+    ![Configuração do servidor 2](media/server-config-2.PNG "Configuração do servidor 2")
 
 3.  Na página de **Configuração de Trabalho de Expansão do Integration Services** especifique o ponto de extremidade para se conectar ao Mestre de Expansão. 
 
@@ -113,7 +113,7 @@ Para instalar o recurso Trabalho do Scale Out, use o assistente de instalação 
 
     - Para um ambiente de **vários computadores**, o ponto de extremidade consiste no nome ou IP do computador com o Mestre do Scale Out instalado e o número da porta especificado durante a instalação do Mestre do Scale Out.
    
-    ![Configuração do Trabalho 1](media/worker-config.PNG "Worker Config 1")    
+    ![Configuração de trabalho 1](media/worker-config.PNG "Configuração de trabalho 1")    
 
     > [!NOTE]
     > Também é possível ignorar a configuração do Trabalho neste momento e associar o Trabalho do Scale Out ao Mestre do Scale Out usando o [Gerenciador do Scale Out](integration-services-ssis-scale-out-manager.md) após a instalação.
@@ -122,7 +122,7 @@ Para instalar o recurso Trabalho do Scale Out, use o assistente de instalação 
   
     Clique em **Procurar** para localizar o arquivo de certificado (*.cer). Para usar o certificado SSL padrão, selecione o arquivo `SSISScaleOutMaster.cer` localizado em `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` no computador em que o Mestre do Scale Out está instalado.   
 
-    ![Configuração do Trabalho 2](media/worker-config-2.PNG "Worker Config 2")
+    ![Configuração de trabalho 2](media/worker-config-2.PNG "Configuração de trabalho 2")
 
     > [!NOTE]
     > Quando o certificado SSL usado pelo Mestre do Scale Out for autoassinado, um certificado SSL do cliente correspondente precisará ser instalado no computador com o Trabalho do Scale Out. Se você fornecer o caminho do arquivo para o Certificado SSL do cliente na página **Configuração de Trabalho do Integration Services Scale Out**, o certificado será instalado automaticamente; caso contrário, você precisará instalá-lo manualmente mais tarde. 

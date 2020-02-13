@@ -19,10 +19,10 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298342"
 ---
 # <a name="data-flow-task"></a>Tarefa de Fluxo de Dados
@@ -70,7 +70,7 @@ ms.locfileid: "71298342"
   
 -   [Contadores de desempenho](../../integration-services/performance/performance-counters.md)  
   
--   [Data Flow Performance Features](../../integration-services/data-flow/data-flow-performance-features.md)  
+-   [Recursos de desempenho de fluxo de dados](../../integration-services/data-flow/data-flow-performance-features.md)  
   
 ### <a name="sample-messages-from-a-data-flow-task"></a>Mensagens de amostra de uma tarefa de Fluxo de Dados  
  A tabela a seguir relaciona as mensagens de amostra de entradas de log para um pacote simples. O pacote usa uma origem OLE DB para extrair dados de uma tabela, uma transformação Classificar para classificar os dados e um destino OLE DB para gravar os dados em uma tabela diferente.  
@@ -92,12 +92,12 @@ ms.locfileid: "71298342"
   
  Por exemplo, a tabela a seguir contém a mensagem "Foram fornecidas linhas para um componente de fluxo de dados como entrada. :  : 1185 : Saída da origem OLE DB : 1180 : Classificar : 1181 : Classificar entrada : 76", analisado em colunas. A mensagem foi gravada pelo evento **OnPipelineRowsSent** quando foram enviadas linhas da origem OLE DB para a transformação Classificação.  
   
-|coluna|Descrição|Valor|  
+|Coluna|Descrição|Valor|  
 |------------|-----------------|-----------|  
 |**PathID**|O valor da propriedade **ID** do caminho entre a origem OLE DB e a transformação Classificação.|1185|  
 |**PathName**|O valor da propriedade **Nome** do caminho.|Saída da origem OLE DB|  
 |**ComponentID**|O valor da propriedade **ID** da transformação Classificação.|1180|  
-|**ComponentName**|O valor da propriedade **Nome** da transformação Classificação.|Sort|  
+|**ComponentName**|O valor da propriedade **Nome** da transformação Classificação.|Classificar|  
 |**InputID**|O valor da propriedade **ID** da entrada para a transformação Classificação.|1181|  
 |**InputName**|O valor da propriedade **Nome** da entrada para a transformação Classificação.|Classificar entrada|  
 |**RowsSent**|O número de linhas enviadas para a entrada da transformação Classificação.|76|  
@@ -112,7 +112,7 @@ ms.locfileid: "71298342"
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>Configuração programática da tarefa Fluxo de Dados  
  Para obter mais informações sobre como adicionar uma tarefa de fluxo de dados programaticamente em um pacote e definir propriedades de fluxo de dados, clique no tópico a seguir:  
   
--   [Adicionando a tarefa Fluxo de Dados programaticamente](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
+-   [Adicionar a tarefa de Fluxo de Dados programaticamente](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  

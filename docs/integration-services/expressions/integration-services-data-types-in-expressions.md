@@ -14,10 +14,10 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e2c8c8f77fd0643c503f5b817b050ff64529751
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297546"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de dados do Integration Services em expressões
@@ -27,7 +27,7 @@ ms.locfileid: "71297546"
 
   O avaliador de expressão usa tipos de dados [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Quando dados são inseridos pela primeira vez em um fluxo de dados em um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o mecanismo de fluxo de dados converte todos os dados de coluna para um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , e os dados da coluna que uma expressão usa já têm um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . As expressões usadas nas transformações Divisão Condicional e Coluna Derivada podem fazer referência a colunas porque elas fazem parte de um fluxo de dados que inclui dados de coluna.  
   
-## <a name="variables"></a>Variáveis  
+## <a name="variables"></a>variáveis  
  Expressões também podem usar variáveis. As variáveis têm um tipo de dados Variant e o avaliador de expressão converte o tipo de dados de uma variável a partir do subtipo Variant para um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] antes de avaliar a expressão. As variáveis podem usar só um subconjunto dos tipos de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Por exemplo, uma variável não pode usar um tipo de dados BLOB (Bloco do objeto binário grande).  
   
  Para obter mais informações sobre tipos de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e o mapeamento de tipos de dados Variant para tipos de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consulte [Tipos de dados dos Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "71297546"
   
  Considere as expressões na captura de tela a seguir.  
   
- ![Tipos de dados String em expressões SSIS](../../integration-services/expressions/media/stringsinssisexpressions.png "Tipos de dados String em expressões SSIS")  
+ ![Tipos de dados de cadeia de caracteres em expressões SSIS](../../integration-services/expressions/media/stringsinssisexpressions.png "Tipos de dados de cadeia de caracteres em expressões SSIS")  
   
 1.  A primeira expressão é executada sem erro, porque a função NULL(DT_STR, ...) está no nível raiz da expressão.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "71297546"
   
  Os exemplos a seguir demonstram os efeitos da conversão.  
   
- ![Cadeias de caracteres de conversão em expressões SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "Cadeias de caracteres de conversão em expressões SSIS")  
+ ![Como converter cadeias de caracteres em expressões SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "Como converter cadeias de caracteres em expressões SSIS")  
   
 1.  Na primeira expressão, a conversão não é no nível raiz da expressão. O avaliador de expressão trata dessa conversão de modo inteligente e converte em DT_WSTR, não em DT_STR. A expressão retorna DT_WSTR.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71297546"
   
  O diagrama a seguir mostra o tipo de resultado de conversões implícitas de operações BINARY. A intersecção da coluna e da linha nesta tabela é o tipo de resultado de uma operação binário com operandos dos tipos à esquerda (De) e à direita (Para).  
   
- ![Conversão de tipos de dados implícitos entre tipos de dados](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "Conversão de tipos de dados implícitos entre tipos de dados")  
+ ![Conversão de tipo de dados implícitos entre tipos de dados](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "Conversão de tipo de dados implícitos entre tipos de dados")  
   
  A intersecção de um inteiro assinado e não assinado é um inteiro assinado potencialmente maior do que o argumento.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "71297546"
 >   
 >  Para evitar erros ou resultados inesperados, você não deve gravar códigos que contem com valores numéricos específicos para **True** e **False**. Onde for possível, você deve restringir o uso de variáveis boolianas aos valores lógicos para os quais elas são projetados.  
   
- Para obter mais informações, consulte os tópicos a seguir:  
+ Para obter mais informações, consulte estes tópicos:  
   
 -   [== &#40;Igual&#41; &#40;Expressão do SSIS&#41;](../../integration-services/expressions/equal-ssis-expression.md)  
   

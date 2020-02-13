@@ -26,10 +26,10 @@ ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 998504b936681c5e20d185ab17b787630a6ae2f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039155"
 ---
 # <a name="use-xml-data-in-applications"></a>Usar dados XML em aplicativos
@@ -97,7 +97,7 @@ Set objConn = Nothing
   
 1.  Verifique se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client está instalado e se o MDAC 2.6.0 ou posterior está disponível no computador cliente.  
   
-     Para obter mais informações, veja [Programação do SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client-programming.md).  
+     Para obter mais informações, consulte [Programação do SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client-programming.md).  
   
 2.  Verifique se o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de exemplo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado.  
   
@@ -146,14 +146,14 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>Tratando XML de uma coluna de tipo xml usando o ADO.NET  
- Para tratar XML de uma coluna de tipo de dados **xml** usando o ADO.NET e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , você pode usar o comportamento padrão da classe **SqlCommand** . Por exemplo, uma coluna de tipo de dados **xml** e seus valores podem ser recuperados da mesma maneira como qualquer coluna SQL é recuperada usando um **SqlDataReader**. No entanto, se você desejar trabalhar com o conteúdo de uma coluna de tipo de dados **xml** como XML, primeiro precisará atribuir o conteúdo a um tipo **XmlReader** .  
+ Para tratar o XML em uma coluna de tipo de dados **xml** usando o ADO.NET e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], use o comportamento padrão da classe **SqlCommand**. Por exemplo, uma coluna de tipo de dados **xml** e seus valores podem ser recuperados da mesma maneira como qualquer coluna SQL é recuperada usando um **SqlDataReader**. No entanto, se você desejar trabalhar com o conteúdo de uma coluna de tipo de dados **xml** como XML, primeiro precisará atribuir o conteúdo a um tipo **XmlReader** .  
   
- Para obter mais informações e um código de exemplo, confira “Valores de coluna XML em um Leitor de Dados” na documentação do SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] .  
+ Para obter mais informações e um código de exemplo, confira "Valores de coluna XML em um leitor de dados" na documentação do SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)].  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>Tratando uma coluna de tipo xml em parâmetros usando o ADO.NET  
  Para tratar um tipo de dados xml passado como um parâmetro no ADO.NET e no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], é possível fornecer o valor como uma instância do tipo de dados **SqlXml** . Nenhum tratamento especial está envolvido porque as colunas de tipo de dados **xml** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem aceitar valores de parâmetros da mesma maneira que outras colunas e tipos de dados, como **string** ou **integer**.  
   
- Para obter mais informações e um código de exemplo, confira “Valores XML como parâmetros de comando” na documentação do SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] .  
+ Para obter mais informações e um código de exemplo, confira "Valores XML como parâmetros de comando" na documentação do SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  
  [Dados XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  

@@ -12,10 +12,10 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296249"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Especificar cópia ou consulta de tabela (Assistente de Importação e Exportação do SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "71296249"
 ## <a name="screen-shot-of-the-specify-table-copy-or-query-page"></a>Captura de tela da página Especificar Cópia ou Consulta de Tabela    
  A captura de tela a seguir mostra a página **Especificar Cópia ou Consulta de Tabela** do assistente.    
     
- ![Página Copiar ou consultar tabelas do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/table-copy-or-query.png "Página Copiar ou consultar tabelas do Assistente de Importação e Exportação")    
+ ![Página de cópia ou consulta da tabela do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/table-copy-or-query.png "Página de cópia ou consulta da tabela do Assistente de Importação e Exportação")    
     
 ## <a name="specify-whether-to-copy-an-entire-table-or-write-a-query"></a>Especificar se deseja copiar uma tabela inteira ou gravar uma consulta 
  **Copiar dados de uma ou mais tabelas ou exibições**    

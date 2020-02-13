@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a5ca209108c9f462368ef6fe5bbc38d9557b3599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948213"
 ---
 # <a name="where-transact-sql"></a>WHERE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67948213"
 
   Especifica o critério de pesquisa para as linhas retornadas pela consulta.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,12 +43,12 @@ ms.locfileid: "67948213"
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-\< *search_condition* > define a condição a ser atendida para que as linhas sejam retornadas. Não há nenhum limite para o número de predicados que podem ser incluídos em um critério de pesquisa. Para obter mais informações sobre critérios de pesquisa e predicados, consulte [Critério de pesquisa &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
+\< *search_condition* > Define a condição a ser atendida para que as linhas sejam retornadas. Não há nenhum limite para o número de predicados que podem ser incluídos em um critério de pesquisa. Para obter mais informações sobre critérios de pesquisa e predicados, consulte [Critério de pesquisa &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir mostram como usar algumas condições de pesquisa comuns na cláusula `WHERE`.  
   
-### <a name="a-finding-a-row-by-using-a-simple-equality"></a>A. Localizando uma linha com o uso de uma igualdade simples  
+### <a name="a-finding-a-row-by-using-a-simple-equality"></a>a. Localizando uma linha com o uso de uma igualdade simples  
   
 ```  
 -- Uses AdventureWorksDW  

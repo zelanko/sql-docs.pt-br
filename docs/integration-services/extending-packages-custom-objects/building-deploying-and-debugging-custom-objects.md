@@ -13,10 +13,10 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 112a925c051b5345933ee4c8fc1fb3b1147c2e48
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297313"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Compilando, implantando e depurando objetos personalizados
@@ -48,7 +48,7 @@ ms.locfileid: "71297313"
  Agora você pode usar o Designer SSIS no SSDT (SQL Server Data Tools) para criar, manter e executar pacotes destinados a diferentes versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre o impacto desta melhoria em suas extensões personalizadas, consulte [Tornando as extensões personalizadas do SSIS compatíveis com o suporte a várias versões do SSDT 2015 para SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)  
   
 ##  <a name="signing"></a> Assinando o assembly  
- Quando um assembly for compartilhado, ele deverá ser instalado no cache de assembly global. Depois de acrescentado ao cache de assembly global, ele poderá ser usado por aplicativos como [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Um requisito do cache de assembly global é que o assembly seja assinado com um nome forte, que garante que ele seja globalmente único. Um assembly com nome forte tem um nome totalmente qualificado que inclui nome, cultura, chave pública e número da versão do assembly. O tempo de execução usa essas informações para localizar o assembly e diferenciá-lo de outros assemblies com o mesmo nome.  
+ Quando um assembly for compartilhado, ele deverá ser instalado no cache de assembly global. Depois de acrescentado ao cache de assembly global, ele poderá ser usado por aplicativos como [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Um requisito do cache de assembly global é que o assembly seja assinado com um nome forte, que garante que ele seja globalmente único. Um assembly com nome forte tem um nome totalmente qualificado que inclui nome, cultura, chave pública e número da versão do assembly. O runtime usa essas informações para localizar o assembly e diferenciá-lo de outros assemblies com o mesmo nome.  
   
  Para assinar um assembly com um nome forte, você deve primeiro ter ou criar um par de chaves pública/privada. Esse par de chaves criptográficas pública e privada é usado na hora da compilação para criar um assembly com nome forte.  
   
@@ -76,7 +76,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
 ```  
   
 ##  <a name="deploying"></a> Implantando o assembly  
- O Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] localiza os objetos personalizados disponíveis para serem usados em pacotes, enumerando os arquivos encontrados em uma série de pastas que são criadas quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é instalado. Quando as configurações de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] padrão são usadas, esse conjunto de pastas é localizado sob **C:\Arquivos de Programas\Microsoft SQL Server\130\DTS**. Entretanto, se você criar um programa de instalação para seu objeto personalizado, você deverá checar o valor da chave do Registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\Setup\DtsPath** para verificar o local dessa pasta.  
+ O Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] localiza os objetos personalizados disponíveis para serem usados em pacotes, enumerando os arquivos encontrados em uma série de pastas que são criadas quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é instalado. Quando as configurações de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] padrão são usadas, esse conjunto de pastas é localizado sob **C:\Arquivos de Programas\Microsoft SQL Server\130\DTS**. Entretanto, se você criar um programa de instalação para seu objeto personalizado, você deverá checar o valor da chave do Registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\Setup\DtsPath** para verificar o local dessa pasta.  
   
 > [!NOTE]  
 >  Para obter informações sobre como implantar componentes personalizados para funcionarem bem com o suporte a várias versões do SQL Server Data Tools, consulte [Tornando as extensões personalizadas do SSIS compatíveis com o suporte a várias versões do SSDT 2015 para SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/).  
@@ -92,7 +92,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
 |Objeto personalizado|Pasta de implantação|  
 |-------------------|-----------------------|  
 |Tarefa|Tarefas|  
-|Gerenciador de conexões|Conexões|  
+|Gerenciador de conexões|conexões|  
 |Provedor de log|LogProviders|  
 |Componente de fluxo de dados|PipelineComponents|  
   
