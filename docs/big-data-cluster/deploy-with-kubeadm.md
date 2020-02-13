@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 96479cfd42c8a08295a600ef3de4137b66aa106d
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 6b5f2c8dac062f147326a0b9fcfb7120f0648729
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119372"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74165431"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configurar o Kubernetes em vários computadores para implantações de cluster de Big Data do SQL Server
 
@@ -104,12 +104,14 @@ Depois de executar os comandos anteriores em cada computador, escolha um dos com
    EOF
    ```
 
-1. Inicialize o Kubernetes mestre nesse computador. Você deve ver a saída que o Kubernetes mestre foi inicializado com êxito.
+1. Inicialize o Kubernetes mestre nesse computador. O script de exemplo abaixo especifica a versão `1.15.0` do Kubernetes. A versão usada depende do cluster do Kubernetes.
 
    ```bash
-   KUBE_VERSION=1.11.3
+   KUBE_VERSION=1.15.0
    sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --kubernetes-version=$KUBE_VERSION
    ```
+
+   Você deve ver a saída que o Kubernetes mestre foi inicializado com êxito.
 
 1. Observe o comando `kubeadm join` que você precisa usar nos outros servidores para unir o cluster do Kubernetes. Copie isso para uso posterior.
 
