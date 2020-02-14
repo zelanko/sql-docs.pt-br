@@ -30,11 +30,11 @@ ms.locfileid: "75245814"
 > [!IMPORTANT]  
 > No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
 
-This topic describes how to set up the [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job history log.  
+Este tópico descreve como configurar o [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log de histórico de trabalhos do Agent.  
   
--   **Before you begin:**  [Security](#Security)  
+-   **Antes de começar:**  [Segurança](#Security)  
   
--   **To setup the job history log, using:** [SQL Server Management Studio](#SSMS)  
+-   **Para configurar o log do histórico de trabalhos usando:** [SQL Server Management Studio](#SSMS)  
   
 ## <a name="BeforeYouBegin"></a>Antes de começar  
   
