@@ -9,12 +9,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 29f9245fcb3f827c51060834a37fbc3c01aa5e9b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 941dbe32355ef158f0a0a07c16e5181653738cb1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75247316"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918186"
 ---
 # <a name="database-engine-errors"></a>Erros do mecanismo de banco de dados
 
@@ -22,7 +22,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors--2-to-999"></a>Erros de -2 a 999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   [-2](mssqlserver-neg2-database-engine-error.md) |       |       |   Tempo limite esgotado. O período de tempo limite acabou antes de conclusão da operação ou o servidor não está respondendo. (Microsoft SQL Server, Erro: -2).    |
 |   [-1](mssqlserver-1-database-engine-error.md)    |       |       |   Ocorreu um erro ao estabelecer uma conexão com o servidor. Ao conectar-se ao SQL Server 2005, esta falha pode ser causada pelo fato de que, nas configurações padrão, o SQL Server não permite conexões remotas. (provedor: adaptadores de rede do SQL, erro: 28 – o servidor não dá suporte ao protocolo solicitado) (Microsoft SQL Server, Erro: -1).  |
@@ -578,7 +578,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-1000-to-1999"></a>Erros 1000 a 1999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   1001    |   16  |   Não  |   Linha %d: especificação de comprimento ou precisão %d inválida.   |
 |   1002    |   16  |   Não  |   Linha %d: escala especificada %d inválida. |
@@ -1010,7 +1010,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-2000-to-2999"></a>Erros de 2000 a 2999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   2002    |   16  |   Não  |   Não é possível criar um procedimento para replicação com um número de grupo maior que um.   |
 |   2003    |   16  |   Não  |   Os procedimentos com um número de grupo não podem ter parâmetros de tipos XML ou CLR. O parâmetro '%.*ls' do procedimento '%.* ls' tem o tipo '%ls'.   |
@@ -1383,7 +1383,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-3000---3999"></a>Erros 3000 a 3999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   3002    |   16  |   Não  |   Não é possível executar BACKUP ou RESTORE em um instantâneo do banco de dados.   |
 |   3003    |   10  |   Não  |   Este BACKUP WITH DIFFERENTIAL será baseado em mais de um backup de arquivo. Todos esses backups de arquivo devem ser restaurados antes da tentativa de restaurar este backup diferencial.    |
@@ -1824,7 +1824,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-4000-to-4999"></a>Erros de 4000 a 4999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   4001    |   10  |   Não  |   O cliente envia uma sp_reset_connection com solicitações ainda pendentes; o servidor está desconectando.  |
 |   4002    |   16  |   Não  |   O fluxo do protocolo TDS de entrada está incorreto. O fluxo foi encerrado inesperadamente. |
@@ -2287,7 +2287,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-5000-to-5999"></a>Erros de 5000 a 5999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   5001    |   16  |   Não  |   O usuário deve estar no banco de dados mestre.    |
 |   5002    |   16  |   Não  |   O banco de dados '%.*ls' não existe. Verifique o nome em sys.databases e tente a operação novamente.  |
@@ -2663,7 +2663,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-6000-to-6999"></a>Erros de 6000 a 6999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   6001    |   10  |   Não  |   SHUTDOWN está aguardando que %d processos sejam concluídos. |
 |   6004    |   10  |   Não  |   O usuário não tem permissão para executar esta ação.   |
@@ -3159,7 +3159,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-7000-to-7999"></a>Erros de 7000 a 7999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   7000    |   16  |   Não  |   O parâmetro identificador de documento OPENXML deve ser do tipo de dados int. |
 |   7001    |   16  |   Não  |   O parâmetro de sinalizadores OPENXML deve ter o tipo de dados int.   |
@@ -3603,7 +3603,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-8000-to-8999"></a>Erros de 8000 a 8999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   8001    |   16  |   Não  |   O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Metainformações inválidas para o parâmetro Sql Variant. |
 |   8002    |   16  |   Não  |   O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro %d ("%.*ls"): o tipo de dados 0x%02X (XML) tem um esquema ou banco de dados inválido especificado.    |
@@ -4110,7 +4110,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-9000-to-9999"></a>Erros de 9000 a 9999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   [9001](mssqlserver-9001-database-engine-error.md)   |   10  |   Sim |   O log para o banco de dados '%.*ls' não está disponível. Verifique o log de eventos para obter as mensagens de erro relacionadas. Resolva todos os erros e reinicie o banco de dados. |
 |   [9002](mssqlserver-9002-database-engine-error.md)   |   17  |   Sim |   O log de transações do banco de dados '%.*ls' está cheio. Para saber o motivo pelo qual o espaço no log não pode ser reutilizado, consulte a coluna log_reuse_wait_desc em sys.databases    |
@@ -4598,7 +4598,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-10000-to-10999"></a>Erros de 10.000 a 10.999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   10000   |   16  |   Não  |   Erro de provedor desconhecido. |
 |   [10001](mssqlserver-10001-database-engine-error.md) |   16  |   Não  |   O provedor reportou uma falha catastrófica inesperada.   |
@@ -4857,7 +4857,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-11000-to-12999"></a>Erros de 11.000 a 12.999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   11000   |   16  |   Não  |   Código de status dessa coluna desconhecido.    |
 |   11001   |   16  |   Não  |   Valor não NULL retornado com êxito.   |
@@ -5064,7 +5064,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-13000-to-13999"></a>Erros de 13.000 a 13.999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   13001   |   16  |   Não  |   nome do arquivo   |
 |   13002   |   16  |   Não  |   auditoria   |
@@ -5365,7 +5365,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-14000-to-14999"></a>Erros de 14.000 a 14.999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   14002   |   16  |   Não  |   Não foi possível localizar o subsistema 'Sync' com a ID de tarefa %ld.   |
 |   14003   |   16  |   Não  |   Você deve fornecer um nome de publicação. |
@@ -5897,7 +5897,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-15000-to-15999"></a>Erros de 15.000 a 15.999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   15001   |   16  |   Não  |   O objeto '%ls' não existe ou não é um objeto válido para essa operação.    |
 |   15002   |   16  |   Não  |   O procedimento '%s' não pode ser executado em uma transação. |
@@ -6410,7 +6410,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-16000-to-17999"></a>Erros de 16.000 a 17.999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   16901   |   16  |   Não  |   %hs: este recurso ainda não foi implementado. |
 |   16902   |   16  |   Não  |   %ls: o valor do parâmetro %ls é inválido. |
@@ -6665,7 +6665,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-18000-to-18999"></a>Erros de 18.000 a 18.999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   18002   |   20  |   Sim |   Ocorreu uma exceção ao executar o procedimento armazenado estendido '%.*ls' na biblioteca '%.* ls'. O SQL Server está encerrando o processo %d. Tipo de exceção: %ls; Código de exceção: 0x%lx. |
 |   18052   |   16  |   Não  |   Erro: %d, Gravidade: %d, Estado: %d. |
@@ -6886,7 +6886,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-19000-to-20999"></a>Erros de 19.000 a 20.999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   19030   |   10  |   Sim |   A ID de Rastreamento SQL %d foi iniciada pelo logon "%s".  |
 |   19031   |   10  |   Sim |   Rastreamento SQL interrompido. ID do rastreamento = '%d'. Nome de logon = '%s'.  |
@@ -7314,7 +7314,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-21000-to-21999"></a>Erros de 21.000 a 21.999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   21000   |   16  |   Não  |   Não é possível assinar uma publicação inativa.    |
 |   21001   |   16  |   Não  |   Não é possível adicionar um Distribution Agent no assinante para uma assinatura push.  |
@@ -7997,7 +7997,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21796   |   16  |   Não  |   Deve ser atribuído um valor maior ou igual a 0 à propriedade "xactsetjobinterval".  |
 |   21797   |   16  |   Não  |   Não é possível criar o trabalho do agente. '%s' deve ser um logon válido do Windows no formato: 'MACHINE\Login' ou 'DOMAIN\Login'. Consulte a documentação do '%s'.    |
 |   21798   |   16  |   Não  |   Não é possível executar o procedimento administrativo de replicação. O trabalho do agente '%s' deve ser adicionado por meio de '%s' antes de continuar. Consulte a documentação do '%s'.   |
-|   21799   |   16  |   Não  |   Não é possível localizar o agente %s do Publicador (%s), banco de dados (%s), publicação (%s). Crie o agente com o procedimento adequado: sp_addpublication_snapshot, sp_addlogreader_agent ou sp_addqreader_agent.  |
+|   21799   |   16  |   Não  |   Não é possível localizar o agente %s do Publicador (%s), banco de dados (%s), publicação (%s). Crie o agente com o procedimento adequado: sp_addpublication_snapshot, sp_addlogreader_agent ou sp_addqreader_agent.   |
 |   21800   |   16  |   Não  |   A marca d’água de geração comum é inválida nessa réplica porque não existe, ou os metadados para alterações ainda não propagados podem ter sido limpos. |
 |   21801   |   16  |   Não  |   Falha do procedimento armazenado sp_createagentparameter ao adicionar um ou mais parâmetros à tabela do sistema msdb.dbo.MSagentparameterlist. Verifique os erros retornados por sp_createagentparameter e os erros retornados pelo SQL Server durante a execução do sp_createagentparameter.    |
 |   21802   |   16  |   Não  |   O processo de criação de perfil do agente não pode validar o valor de parâmetro do agente especificado. '%s' não é um valor válido para o parâmetro '%s'. O valor deve ser um inteiro menor ou igual a '%d'. Verifique se a replicação foi instalada corretamente.   |
@@ -8077,7 +8077,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-22000-to-22999"></a>Erros de 22.000 a 22.999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   22101   |   16  |   Não  |   O valor fornecido para o argumento change_columns da função CHANGE_TRACKING_IS_COLUMN_IN_MASK não é válido. O valor deve ser uma bitmask retornada pela função CHANGETABLE(CHANGES ...).   |
 |   22102   |   16  |   Não  |   Os argumentos fornecidos não são válidos para a opção CHANGES da função CHANGETABLE.    |
@@ -8332,7 +8332,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-23000-to-25999"></a>Erros de 23.000 a 25.999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   23003   |   17  |   Não  |   As permissões de compartilhamento WinFS ficaram corrompidas {Erro: %ld}. Tente configurar as permissões de compartilhamento novamente. |
 |   23100   |   16  |   Não  |   Parâmetros de entrada inválidos. |
@@ -8521,7 +8521,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-26000-to-27999"></a>Erros de 26.000 a 27.999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   26010   |   10  |   Sim |   O servidor não pôde carregar o certificado necessário para iniciar uma conexão SSL. Ele retornou o seguinte erro: %#x. Verifique se os certificados são válidos. |
 |   26011   |   16  |   Sim |   O servidor não pôde inicializar a criptografia devido a um problema em uma biblioteca de segurança. Talvez a biblioteca de segurança não exista. Verifique se security.dll existe no sistema.    |
@@ -8636,7 +8636,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-28000-to-30999"></a>Erros de 28.000 a 30.999
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   28000   |   16  |   Não  |   Tamanho inesperado da chave de sessão descriptografada.   |
 |   28001   |   16  |   Não  |   Mensagem corrompida recebida. Contém sinalizadores inválidos. Isso ocorreu na mensagem com ID de conversa '%.*ls', Iniciador: %d e Número de sequência de mensagem: %I64d. |
@@ -8814,7 +8814,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-31000-to-41400"></a>Erros de 31.000 a 41.400
 
-| Erro| Severity | Evento registrado | DESCRIÇÃO|
+| Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |   31001   |   16  |   Não  |   A sessão '%s' já existe. Use outro nome de sessão.  |
 |   31002   |   16  |   Não  |   Esta operação só pode ser executada pelo proprietário da sessão.   |
