@@ -19,10 +19,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
 ms.openlocfilehash: 7e9e09cece42b84e5fa9691aa0d353d2ed22431b
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710579"
 ---
 # <a name="what-is-polybase"></a>O que é o PolyBase?
@@ -59,7 +59,7 @@ O PolyBase fornece essas mesmas funcionalidades para os seguintes produtos SQL d
 
 - SQL Server 2016 e verões posteriores (somente Windows)
 - O Analytics Platform System (anteriormente conhecido como Parallel Data Warehouse)
-- Azure SQL Data Warehouse
+- SQL Data Warehouse do Azure
 
 ### <a name="azure-integration"></a>Integração do Azure
 

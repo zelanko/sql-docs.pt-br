@@ -13,29 +13,29 @@ ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b0bc02a31bcfd4cd4baef19a89b6f658195a24f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940311"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objetos criados no Editor Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] A replicação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala objetos de banco de dados no Publicador do Oracle para habilitar o controle de alterações e o encaminhamento (o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não instala nenhum arquivo binário no Publicador do Oracle). A tabela seguinte lista os objetos que são criados no Editor Oracle quando este é identificado como um Publicador no Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . As descrições de objeto são fornecidas apenas para fins informativos. Esses objetos não devem ser modificados.  
+  A replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala objetos de banco de dados no Publicador Oracle para habilitar o controle de alterações e o encaminhamento (o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não instala nenhum arquivo binário no Publicador Oracle). A tabela seguinte lista os objetos que são criados no Editor Oracle quando este é identificado como um Publicador no Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . As descrições de objeto são fornecidas apenas para fins informativos. Esses objetos não devem ser modificados.  
   
-|Object Name|Tipo de objeto|Descrição|  
+|Nome do Objeto|Tipo de objeto|Descrição|  
 |-----------------|-----------------|-----------------|  
-|HREPL_ArticleNlog_V|Table|Tabela de controle de alterações usada para armazenar informações à medida que são feitas alterações à tabela publicada. É criada uma tabela de controle de alterações para cada tabela publicada.|  
-|HREPL_Changes|Table|Tabela usada internamente pelo trabalho Xactset para determinar o número de alterações que aguardam ser atribuídas a um conjunto de transações. Para obter mais informações sobre esse trabalho, consulte [Ajuste de desempenho para Publicadores Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  
-|HREPL_Distributor|Table|Tabela de status de Distribuidor usada para manter informações sobre o Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] associado ao Editor Oracle.|  
-|HREPL_Event|Table|Tabela de eventos usada para sincronizar instantâneos e solicitações de número de linhas.|  
-|HREPL_Mutex|Table|Tabela usada para assegurar que o procedimento PopulatePollTable de pacote Oracle não seja executado ao mesmo tempo pelo Log Reader Agent e pelo trabalho do banco de dados.|  
-|HREPL_Poll|Table|Tabela usada para identificar entradas de tabela de log associadas com conjuntos de alterações a tabelas publicadas.|  
-|HREPL_PublishedTables|Table|Tabela que contém uma entrada para cada artigo em uma publicação transacional.|  
-|HREPL_Publisher|Table|Tabela de status do Publicador usada para manter informações específicas do Publicador.|  
-|HREPL_SchemaFilter|Table|Tabela que contém esquemas que não são exibidos ao publicar por meio do Assistente de Nova Publicação.|  
-|HREPL_XactsetCreateTimes|Table|Tabela que identifica o momento de criação associado a cada conjunto de transações.|  
-|HREPL_XactsetJob|Table|Tabela com configurações de parâmetro atuais para o trabalho Xactset.|  
+|HREPL_ArticleNlog_V|Tabela|Tabela de controle de alterações usada para armazenar informações à medida que são feitas alterações à tabela publicada. É criada uma tabela de controle de alterações para cada tabela publicada.|  
+|HREPL_Changes|Tabela|Tabela usada internamente pelo trabalho Xactset para determinar o número de alterações que aguardam ser atribuídas a um conjunto de transações. Para obter mais informações sobre esse trabalho, consulte [Ajuste de desempenho para Publicadores Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  
+|HREPL_Distributor|Tabela|Tabela de status de Distribuidor usada para manter informações sobre o Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] associado ao Editor Oracle.|  
+|HREPL_Event|Tabela|Tabela de eventos usada para sincronizar instantâneos e solicitações de número de linhas.|  
+|HREPL_Mutex|Tabela|Tabela usada para assegurar que o procedimento PopulatePollTable de pacote Oracle não seja executado ao mesmo tempo pelo Log Reader Agent e pelo trabalho do banco de dados.|  
+|HREPL_Poll|Tabela|Tabela usada para identificar entradas de tabela de log associadas com conjuntos de alterações a tabelas publicadas.|  
+|HREPL_PublishedTables|Tabela|Tabela que contém uma entrada para cada artigo em uma publicação transacional.|  
+|HREPL_Publisher|Tabela|Tabela de status do Publicador usada para manter informações específicas do Publicador.|  
+|HREPL_SchemaFilter|Tabela|Tabela que contém esquemas que não são exibidos ao publicar por meio do Assistente de Nova Publicação.|  
+|HREPL_XactsetCreateTimes|Tabela|Tabela que identifica o momento de criação associado a cada conjunto de transações.|  
+|HREPL_XactsetJob|Tabela|Tabela com configurações de parâmetro atuais para o trabalho Xactset.|  
 |HREPL_Pollid|Sequência|Sequência usada para gerar identificações de sondagem.|  
 |HREPL_Seq|Sequência|Sequência usada para ordenar comandos de alteração.|  
 |HREPL_Stmt|Sequência|Sequência usada para gerar identificações de instrução.|  
@@ -46,8 +46,8 @@ ms.locfileid: "67940311"
 |HREPL_ExecuteCommand|Procedimento|Procedimento definido fora do código de pacote de publicação Oracle, usado para executar um comando no Publicador.|  
 |HREPL_ArticleN_Trigger_Row|Gatilho|Gatilho gerado para cada tabela publicada, usado para controlar alterações de linha.|  
 |HREPL_ArticleN_Trigger_Stmt|Gatilho|Gatilho gerado para cada tabela publicado, usado para controlar alterações de nível de instrução.|  
-|HREPL_Article_I_J|Exibição|Exibição criada para cada tabela publicada, usada para consultar a tabela publicada.|  
-|HREPL_Log_I_J_K|Exibição|Exibição criada para cada tabela publicada, usada para consultar a tabela de controle de alterações.|  
+|HREPL_Article_I_J|Visualizar|Exibição criada para cada tabela publicada, usada para consultar a tabela publicada.|  
+|HREPL_Log_I_J_K|Visualizar|Exibição criada para cada tabela publicada, usada para consultar a tabela de controle de alterações.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurar um Publicador Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

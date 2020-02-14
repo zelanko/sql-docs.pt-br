@@ -13,10 +13,10 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907184"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar um publicador Oracle
@@ -27,7 +27,7 @@ ms.locfileid: "72907184"
   
 2.  Para as tabelas que você publicar, conceda a permissão SELECT diretamente em cada uma delas (não por meio de uma função) ao usuário administrativo Oracle que você criou na etapa um.  
   
-3.  Instale o software do cliente Oracle e o provedor OLE DV no Distribuidor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, pare e reinicie a instância [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se o Distribuidor estiver executando em uma plataforma de 64 bits, você deverá usar a versão de 64 bits do provedor OLE DB do Oracle.  
+3.  Instale o software cliente Oracle e o provedor OLE DV no Distribuidor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, pare e reinicie a instância [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se o Distribuidor estiver executando em uma plataforma de 64 bits, você deverá usar a versão de 64 bits do provedor OLE DB do Oracle.  
   
 4.  Configure o banco de dados Oracle como um Publicador no Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 
@@ -145,7 +145,7 @@ ms.locfileid: "72907184"
   
 ## <a name="see-also"></a>Consulte Também  
  [Considerações administrativas sobre Publicadores Oracle](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
- [Mapeamento de tipo de dados para Publicadores Oracle](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
+ [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Glossário de termos para publicações Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
  [Visão geral da publicação do Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   

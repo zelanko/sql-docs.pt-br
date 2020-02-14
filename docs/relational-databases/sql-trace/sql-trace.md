@@ -11,10 +11,10 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1a6856b2bf297293fcf26c73885cbd46e68b3b1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133238"
 ---
 # <a name="sql-trace"></a>Rastreamento do SQL
@@ -38,7 +38,7 @@ As Origens do Evento podem ser quaisquer origens que produzam o evento de rastre
 Os termos a seguir descrevem os conceitos fundamentais do Rastreamento do SQL.  
   
  **Evento**  
- A ocorrência de uma ação dentro de uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ A ocorrência de uma ação em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
  **Coluna de dados**  
  Um atributo de um evento.  
@@ -46,7 +46,7 @@ Os termos a seguir descrevem os conceitos fundamentais do Rastreamento do SQL.
  **Classe de evento**  
  Um tipo de evento que pode ser rastreado. A classe de evento contém todas as colunas de dados que podem ser informadas por um evento.  
   
- **Categoria de evento**  
+ **Categoria de eventos**  
  Um grupo de classes de evento relacionadas.  
   
  **Rastreamento** (substantivo)  
@@ -129,7 +129,7 @@ O Rastreamento do SQL usa colunas de dados na saída de rastreamento para descre
 |**SPID**|12|ID de processo de servidor (SPID) atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|  
 |**SqlHandle**|63|Hash de 64 bits com base no texto de uma consulta ad hoc ou na ID de objeto e banco de dados de um objeto SQL. Esse valor pode ser passado a **sys.dm_exec_sql_text()** para recuperar o texto SQL associado.|  
 |**StartTime**|14|O horário no qual o evento foi iniciado, quando disponível.|  
-|**Estado**|30|Código do estado de erro.|  
+|**State**|30|Código do estado de erro.|  
 |**Êxito**|23|Indica se o evento teve êxito ou não. Os valores são:<br /><br /> **1** = Êxito.<br /><br /> **0** = Falha<br /><br /> Por exemplo, **1** significa êxito em uma verificação de permissões e **0** , falha.|  
 |**TargetLoginName**|42|Em ações que visam um logon, é o nome do logon de destino; por exemplo, para adicionar um novo logon.|  
 |**TargetLoginSid**|43|Em ações que visam um logon, é a SID do logon de destino; por exemplo, para adicionar um novo logon.|  
@@ -160,7 +160,7 @@ O Rastreamento do SQL usa colunas de dados na saída de rastreamento para descre
 |Descreve como usar procedimentos armazenados para excluir um rastreamento.|[Excluir um rastreamento &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/delete-a-trace-transact-sql.md)|  
 |Descreve como minimizar os custos de desempenho devidos a um rastreamento.|[Otimizar o rastreamento do SQL](../../relational-databases/sql-trace/optimize-sql-trace.md)|  
 |Descreve como filtrar um rastreamento para minimizar a sobrecarga incorrida durante um rastreamento.|[Filtrar um rastreamento](../../relational-databases/sql-trace/filter-a-trace.md)|  
-|Descreve como minimizar a quantidade de dados que o rastreamento coleta.|[Limitar o tamanho de arquivos e tabelas de rastreamento](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|  
+|Descreve como minimizar a quantidade de dados que o rastreamento coleta.|[Limitar o tamanho de arquivos e tabelas do rastreamento](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|  
 |Descreve os dois modos de agendar rastreamento no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Agendar rastreamentos](../../relational-databases/sql-trace/schedule-traces.md)|  
   
 ## <a name="see-also"></a>Consulte Também  

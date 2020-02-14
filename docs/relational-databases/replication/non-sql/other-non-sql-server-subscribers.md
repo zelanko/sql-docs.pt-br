@@ -13,10 +13,10 @@ ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dce8d383ca01fd205645a18f7aa181d12cff4675
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68110961"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Outros assinantes não SQL Server
@@ -60,7 +60,7 @@ ms.locfileid: "68110961"
   
 -   **IDBProperties**  
   
- Se o provedor oferece suporte para a interface **IDBInfo** , [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa a interface para recuperar informações tais como o caractere identificador entre aspas, comprimento máximo da instrução SQL e número máximo de caracteres em nomes de tabelas e colunas.  
+ Se o provedor der suporte à interface **IDBInfo**, o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usará a interface para recuperar informações, como o caractere identificador entre aspas, tamanho máximo da instrução SQL e número máximo de caracteres em nomes de tabelas e colunas.  
   
 ### <a name="session-object-interfaces"></a>Interfaces de objeto de sessão  
  As seguintes interfaces são exigidas:  
@@ -115,6 +115,6 @@ ms.locfileid: "68110961"
  Para obter mais informações sobre o provedor OLE DB, consulte a documentação fornecida com seu provedor OLE DB.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
+ [Assinantes Não SQL Server](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
   
   

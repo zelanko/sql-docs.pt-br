@@ -19,10 +19,10 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983265"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados
@@ -50,7 +50,7 @@ ms.locfileid: "73983265"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>Para iniciar o Orientador de Otimização do Mecanismo de Banco de Dados no SQL Server Management Studio  
   
-1.  No menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Ferramentas** , clique em **Orientador de Otimização do Mecanismo de Banco de Dados**.  
+1.  No menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Ferramentas**, clique em **Orientador de Otimização do Mecanismo de Banco de Dados**.  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>Para iniciar o Orientador de Otimização do Mecanismo de Banco de Dados do Editor de Consultas do SQL Server Management Studio  
   
@@ -101,7 +101,7 @@ ms.locfileid: "73983265"
   
     -   No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], clique no menu **Ferramentas** e em **SQL Server Profiler**.  
   
-2.  Crie um arquivo ou tabela de rastreamento, seguindo os procedimentos abaixo, que use o modelo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **do** :  
+2.  Crie um arquivo ou tabela de rastreamento, seguindo os procedimentos abaixo, que use o modelo de **Ajuste** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
   
     -   [Criar um rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
@@ -308,7 +308,7 @@ Consulte [Ajustar o Banco de Dados Usando Cargas de Trabalho do Repositório de 
 ##  <a name="XMLInput"></a> Criar um arquivo de entrada XML  
  Se você for um desenvolvedor de XML experiente, poderá criar arquivos formatados em XML que podem ser usados pelo Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para ajustar cargas de trabalho. Para criar estes arquivos XML, use suas ferramentas de XML favoritas para editar um arquivo de exemplo ou gerar uma instância do esquema XML do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- O esquema XML do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] está disponível na instalação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em:  
+ O esquema XML do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] está disponível na instalação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na seguinte localização:  
   
  C:\Arquivos de Programas\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -360,10 +360,10 @@ Consulte [Ajustar o Banco de Dados Usando Cargas de Trabalho do Repositório de 
  **Nome da sessão**  
  Especifique um nome para a sessão. O nome de sessão associa um nome a uma sessão de otimização. Você pode consultar esse nome para revisar a sessão de otimização posteriormente.  
   
- **File**  
+ **Arquivo**  
  Especifique um script .sql ou arquivo de rastreamento para uma carga de trabalho. Especifique o caminho e o nome de arquivo na caixa de texto associada. O Orientador de Otimização do Mecanismo de Banco de Dados pressupõe que o arquivo de rastreamento de carga de trabalho seja um arquivo de substituição. Para obter mais informações sobre arquivos de substituição, consulte [Limit Trace File and Table Sizes](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md).  
   
- **Tabela**  
+ **Table**  
  Especifique uma tabela de rastreamento para uma carga de trabalho. Especifique o nome totalmente qualificado da tabela de rastreamento na caixa de texto associada, como a seguir:  
   
 ```  
@@ -517,6 +517,6 @@ database_name.owner_name.table_name
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [dta Utility](../../tools/dta/dta-utility.md)  
+ [Utilitário dta](../../tools/dta/dta-utility.md)  
   
   

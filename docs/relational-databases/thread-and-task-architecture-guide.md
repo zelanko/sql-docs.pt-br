@@ -15,10 +15,10 @@ author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305192"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guia de arquitetura de threads e tarefas
@@ -36,7 +36,7 @@ No escopo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], uma **solic
 
 Uma **tarefa** representa a unidade de trabalho que precisa ser concluída para atender à solicitação. Uma ou mais tarefas podem ser atribuídas a uma única solicitação. As solicitações paralelas terão várias tarefas ativas que são executadas simultaneamente em vez de em série. Uma solicitação que é executada em série terá apenas uma tarefa ativa em um determinado momento. Existem tarefas em vários estados durante seu tempo de vida. Para saber mais sobre os estados de tarefas, confira [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Tarefas em um estado SUSPENSO estão aguardando os recursos necessários para executar a tarefa a ser disponibilizada. Para saber mais sobre a tarefa de espera, confira [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
 
-Um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **thread de trabalho**, também conhecido como trabalho ou thread, é uma representação lógica de um thread do sistema operacional. Ao executar solicitações em série, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] gera um trabalho para executar a tarefa ativa. Ao executar solicitações paralelas no [modo linha](../relational-databases/query-processing-architecture-guide.md#execution-modes), [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] atribui um trabalho para coordenar os trabalhos secundários responsáveis por concluir tarefas atribuídas a eles. O número de threads de trabalho gerados para cada tarefa depende:
+Um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **thread de trabalho**, também conhecido como trabalho ou thread, é uma declaração lógica de um thread do sistema operacional. Ao executar solicitações em série, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] gera um trabalho para executar a tarefa ativa. Ao executar solicitações paralelas no [modo linha](../relational-databases/query-processing-architecture-guide.md#execution-modes), [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] atribui um trabalho para coordenar os trabalhos secundários responsáveis por concluir tarefas atribuídas a eles. O número de threads de trabalho gerados para cada tarefa depende:
 -   Se a solicitação foi qualificada para paralelismo, conforme determinado pelo Otimizador de Consulta.
 -   Qual é o [DOP (grau de paralelismo)](../relational-databases/query-processing-architecture-guide.md#DOP) real disponível no sistema com base na carga atual. Isso pode ser diferente do DOP estimado, que é baseado na configuração do servidor para MAXDOP (grau máximo de paralelismo). Por exemplo, a configuração do servidor para MAXDOP pode ser 8, mas o DOP disponível no tempo de execução pode ser apenas 2, o que afeta o desempenho da consulta. 
 
@@ -132,9 +132,9 @@ A tabela a seguir lista os componentes do [!INCLUDE[ssNoVersion](../includes/ssn
 |----------|----------|----------|  
 |Mecanismo de Banco de Dados do SQL Server |Sqlserver.exe  |Sim |  
 |Reporting Services |Rs.exe |Não |  
-|Analysis Services  |As.exe |Não |  
+|Serviços de análise  |As.exe |Não |  
 |Integration Services   |Is.exe |Não |  
-|Service Broker |Sb.exe |Não |  
+|Agente de Serviço |Sb.exe |Não |  
 |Pesquisa de Texto Completo   |Fts.exe    |Não |  
 |SQL Server Agent   |Sqlagent.exe   |Não |  
 |SQL Server Management Studio   |Ssms.exe   |Não |  

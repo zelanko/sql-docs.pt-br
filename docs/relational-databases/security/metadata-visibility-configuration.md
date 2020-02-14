@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba613c3736024de71a67e7cdb749960e91e89ff
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68661212"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuração de visibilidade de metadados
@@ -45,7 +45,7 @@ GO
   
 |||  
 |-|-|  
-|Exibições do catálogo|[!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** stored procedures|  
+|Exibições do catálogo|Procedimentos armazenados do [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help**|  
 |Metadados com exposição de funções internas|Exibições do esquema de informações|  
 |Exibições de compatibilidade|Propriedades estendidas|  
   
@@ -65,7 +65,7 @@ GO
   
 -   Funções internas, que emitem metadados como em OBJECTPROPERTYEX podem retornar NULO.  
   
--   Os procedimentos armazenados de [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** podem retornar apenas um subconjunto de linhas ou NULL.  
+-   Os procedimentos armazenados do [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** podem retornar apenas um subconjunto de linhas ou NULL.  
   
  Os módulos SQL, como os procedimentos armazenados e os gatilhos, são executados no contexto de segurança do chamador e, em consequência, têm acessibilidade limitada aos metadados. Por exemplo, no código a seguir, quando o procedimento armazenado tentar acessar os metadados para a tabela `myTable` na qual o visitante não tem nenhum direito, há retorno de um conjunto de resultados vazio. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é retornada uma linha.  
   

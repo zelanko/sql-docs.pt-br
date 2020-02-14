@@ -15,10 +15,10 @@ ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4c1267e08bfdb1361223f3a93ec465b3da83d8ce
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846574"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Especificar um resolvedor de artigo de mesclagem
@@ -34,7 +34,7 @@ ms.locfileid: "70846574"
   
     -   Você gravou um resolvedor personalizado, que pode ser um manipulador de lógica comercial (gravado em código gerenciado) ou um resolvedor personalizado baseado em COM. Para obter mais informações, consulte [Replicação de mesclagem avançada – detecção e resolução de conflito](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Se precisar implementar uma lógica personalizada que é executada para cada linha replicada, não apenas para as linhas conflitantes, consulte [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
-    -   Um resolvedor padrão baseado em COM que é incluído com [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+    -   Um resolvedor padrão baseado em COM, que é incluído no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Para usar um resolvedor diferente do resolvedor padrão, você deve copiar o resolvedor ao computador em que é executado o Agente de Mesclagem e registrá-lo (se você estiver utilizando um manipulador de lógica comercial, ele deverá ser registrado também no Publicador). O Merge Agent é executado em:  
   

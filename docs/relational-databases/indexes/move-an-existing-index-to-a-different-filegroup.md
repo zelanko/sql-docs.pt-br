@@ -17,10 +17,10 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a2eaffb39868737c955224b3ccd3ba39366d6f92
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906378"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Mover um índice existente para um grupo de arquivos diferente
@@ -73,7 +73,7 @@ ms.locfileid: "72906378"
   
 7.  Selecione **Nome do Esquema de Partição ou Grupo de Arquivos** e selecione da lista o grupo de arquivos ou esquema de partição para onde você deseja mover o índice.  
   
-8.  Clique em **Fechar**.  
+8.  Clique em **fechar**  
   
 9. No menu **Arquivo** , selecione **Salvar**_table_name_.  
 
@@ -101,7 +101,7 @@ ms.locfileid: "72906378"
   
 8.  Clique em **OK**.  
   
- As informações a seguir estão disponíveis na página **Armazenamento** da caixa de diálogo **Propriedades do Índice –** _index_name_:  
+ As seguintes informações estão disponíveis na página **Armazenamento** da caixa de diálogo **Propriedades do Índice –**  _index_name_:  
   
  **Grupo de arquivos**  
  Armazena o índice no grupo de arquivos especificado. A lista exibe apenas grupos de arquivos padrão (linha). A seleção de lista padrão é o grupo de arquivos PRIMARY do banco de dados.  

@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f60ded18e88d57c5a2975b567fa246923ece7ebe
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71974357"
 ---
 # <a name="how-query-store-collects-data"></a>Como o Repositório de Consultas coleta dados
@@ -31,7 +31,7 @@ O Repositório de Consultas do SQL Server funciona como um gravador de dados de 
  ![Exibições do processo do Repositório de Consultas](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
 **Descrições da exibição**  
   
-|Exibição|Descrição|  
+|Visualizar|Descrição|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|Apresenta os textos de consulta exclusivos executados no banco de dados. Comentários e espaços antes e depois o texto da consulta são ignorados. Comentários e espaços dentro do texto não são ignorados. Cada instrução no lote gera uma entrada de texto de consulta separada.|  
 |**sys.query_context_settings**|Apresenta as combinações exclusivas do plano que afetam as configurações em que as consultas são executadas. O mesmo texto de consulta, executado com configurações diferentes que afetam um plano, produz uma entrada de consulta separada no Repositório de Consultas porque `context_settings_id` faz parte da chave de consulta.|  
@@ -57,7 +57,7 @@ O Repositório de Consultas do SQL Server funciona como um gravador de dados de 
   
  ![Processo do Repositório de Consultas](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor") 
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
  Para minimizar a sobrecarga de E/S, novos dados são capturados na memória. As operações de gravação são enfileiradas e liberadas para o disco posteriormente. As informações de plano e de consulta, mostradas como Repositório de Planos no diagrama a seguir, são liberadas com latência mínima. As estatísticas de runtime, mostradas como Estatísticas de Runtime, são mantidas na memória por um período definido com a opção `DATA_FLUSH_INTERVAL_SECONDS` da instrução `SET QUERY_STORE`. Você pode usar a caixa de diálogo [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] do Repositório de Consultas para inserir um valor para o **Intervalo de Liberação de Dados (Minutos)** , que é convertido internamente em segundos. 
   
  ![Plano do processo do Repositório de Consultas](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan") 

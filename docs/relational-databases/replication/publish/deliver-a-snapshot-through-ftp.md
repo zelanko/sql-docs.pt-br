@@ -15,10 +15,10 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c6ec9ac5c4e868a9022a11cc153c9638cab737dc
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710997"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Entregar um instantâneo pelo FTP
@@ -44,7 +44,7 @@ Por padrão, os instantâneos são armazenados em pastas definidas como comparti
   
  Como uma prática recomendada de segurança, não permita logons anônimos ao servidor FTP. O Snapshot Agent deve ter permissões de gravação para o diretório que você especificar, e o Distribution Agent ou Merge Agent devem ter permissões de leitura. Se forem usadas assinaturas pull, será necessário especificar um diretório compartilhado como um caminho UNC, como \\\ftpserver\home\snapshots. Para obter mais informações, consulte [Proteger a pasta de instantâneos](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
- Quando possível, solicite que os usuários insiram suas credenciais em tempo de execução. Se você armazenar credenciais em um arquivo de script, será necessário proteger o arquivo.  
+ Quando possível, solicite que os usuários insiram suas credenciais em runtime. Se você armazenar credenciais em um arquivo de script, será necessário proteger o arquivo.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Depois que o servidor FTP for configurado, especifique informações de diretório e de segurança para esse servidor na caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  

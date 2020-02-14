@@ -17,10 +17,10 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710728"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Ponto a ponto – Replicação transacional
@@ -70,7 +70,7 @@ ms.locfileid: "71710728"
 ### <a name="topologies-that-have-three-or-more-participating-databases"></a>Topologias com três ou mais bancos de dados participantes  
  ![Replicação ponto a ponto para locais dispersos](../../../relational-databases/replication/transactional/media/repl-multinode-02.gif "Replicação ponto a ponto para locais dispersos")  
   
- A ilustração anterior mostra três bancos de dados participantes que fornecem dados para uma organização de suporte a software mundial, e com escritórios em Los Angeles, Londres e Taipé. Os engenheiros de suporte de cada escritório recebem chamadas telefônicas e atualizam informações sobre cada uma das chamadas de cliente. Os fusos horários dos três escritórios têm oito horas de diferença entre si, de modo a não haver sobreposições no dia de trabalho. O escritório de Taipei fecha, quando o escritório de Londres está apenas começando o expediente. Se uma chamada ainda está em andamento quando um escritório estiver fechando, a chamada será transferida para um representante no primeiro escritório que abrir.  
+ A ilustração anterior mostra três bancos de dados participantes que fornecem dados para uma organização de suporte a software mundial, e com escritórios em Los Angeles, Londres e Taipei. Os engenheiros de suporte de cada escritório recebem chamadas telefônicas e atualizam informações sobre cada uma das chamadas de cliente. Os fusos horários dos três escritórios têm oito horas de diferença entre si, de modo a não haver sobreposições no dia de trabalho. O escritório de Taipei fecha, quando o escritório de Londres está apenas começando o expediente. Se uma chamada ainda está em andamento quando um escritório estiver fechando, a chamada será transferida para um representante no primeiro escritório que abrir.  
   
  Cada local tem um banco de dados e um servidor de aplicativo, que são usados por engenheiros de suporte à medida que eles digitam e atualizam informações sobre as chamadas de cliente. A topologia é particionada por tempo. Por isso, as atualizações ocorrem apenas no nó que está atualmente aberto para negócios e, em seguida, elas fluem para outros bancos de dados participantes. Essa topologia oferece as seguintes vantagens:  
   

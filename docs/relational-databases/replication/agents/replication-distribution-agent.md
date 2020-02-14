@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 7524d1c984d1e12b744c57b97cfeb586dff3f7ce
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68770754"
 ---
 # <a name="replication-distribution-agent"></a>Agente de Distribuição de Replicação
@@ -93,7 +93,7 @@ distrib [-?]
  Imprime todos os parâmetros disponíveis.  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- É o nome do Publicador. Especifica *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_ **\\** _instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ É o nome do Publicador. Especifica *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nesse servidor. Especifique _server_name_ **\\** _instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
  **-PublisherDB** _publisher_database_  
  É o nome do banco de dados Publicador.  
@@ -108,12 +108,12 @@ distrib [-?]
  É o caminho para a pasta que contém o instantâneo inicial para uma assinatura.  
   
  **-BcpBatchSize** _bcp_batch_size_  
- É o número de linhas a ser enviado em uma operação de cópia em massa. Ao executar uma operação **bcp in** , o tamanho do lote é o número de linhas a ser enviado ao servidor como uma transação, e também o número de linhas que deve ser enviado antes que o Agente de Distribuição registre uma mensagem de progresso **bcp** . Ao executar uma operação **bcp out** , um tamanho fixo de lote **1000** é usado.  
+ É o número de linhas a ser enviado em uma operação de cópia em massa. Ao executar uma operação **bcp in** , o tamanho do lote é o número de linhas a ser enviado ao servidor como uma transação e também o número de linhas que deve ser enviado antes que o Agente de Distribuição registre uma mensagem de progresso **bcp** . Ao executar uma operação **bcp out** , um tamanho fixo de lote **1000** é usado.  
   
  **-CommitBatchSize** _commit_batch_size_  
  É o número de transações a ser emitido para o Assinante antes de uma instrução COMMIT ser emitida. O padrão é 100 e o máximo é 10000.
   
- **-CommitBatchThreshold**  _commit_batch_threshold_  
+ **-CommitBatchThreshold** _commit_batch_threshold_  
  É o número de comandos de replicação a ser emitido para o Assinante antes de uma instrução COMMIT ser emitida. O padrão é 1000 e o máximo é 10000. 
   
  **-Continuous**  
@@ -166,7 +166,7 @@ distrib [-?]
  **-FtpPort** _ftp_port_  
  É o número da porta do serviço FTP para o Distribuidor. Quando não especificado, o número da porta padrão para serviço de FTP (21) é usado.  
   
- **-FtpUserName** _ftp_user_name_  
+ **-FtpUserName**  _ftp_user_name_  
  É o nome de usuário usado para se conectar ao serviço FTP. Quando não especificado, **anonymous** é usado.  
   
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
@@ -287,7 +287,7 @@ distrib [-?]
  **-UseOledbStreaming**  
  Quando especificado, habilita a associação de dados de objeto binário grande como um fluxo. Use **-OledbStreamThreshold** para especificar o tamanho, em bytes, acima do qual um fluxo será usado. **UseOledbStreaming** está habilitado por padrão. **UseOledbStreaming** grava na pasta **C:\Program Files\Microsoft SQL Server\\<version\>\COM**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]  
 >  Se você instalou o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent para ser executado com uma conta Sistema Local em vez de uma conta de usuário de domínio (o padrão), o serviço só poderá acessar o computador local. Se o Agente de Distribuição executado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent for configurado para usar o Modo de Autenticação do Windows ao fazer logon em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o Agente de Distribuição falhará. A configuração padrão é Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter informações em como alterar contas de segurança, consulte [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  

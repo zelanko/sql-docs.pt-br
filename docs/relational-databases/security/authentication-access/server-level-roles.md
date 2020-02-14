@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239e2d3f2475738044e4c3644f734fdbb6a0eafb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116789"
 ---
 # <a name="server-level-roles"></a>Funções de nível de servidor
@@ -56,14 +56,14 @@ ms.locfileid: "68116789"
 |**bulkadmin**|Os membros da função de servidor fixa **bulkadmin** podem executar a instrução `BULK INSERT`.|  
 |**diskadmin**|A função de servidor fixa **diskadmin** é usada para gerenciar arquivos em disco.|  
 |**dbcreator**|Os membros da função de servidor fixa **dbcreator** podem criar, alterar, remover e restaurar qualquer banco de dados.|  
-|**público**|Todo logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pertence à função de servidor **pública**. Quando permissões específicas não são concedidas ou são negadas a uma entidade de servidor em um objeto seguro, o usuário herda as permissões concedidas como públicas naquele objeto. Somente atribua permissões públicas em qualquer objeto quando você quiser que ele esteja disponível para todos os usuários. Não é possível alterar associação em public.<br /><br /> **Observação:** **pública** é implementada de maneira diferente de outras funções e permissões podem ser concedidas, negadas ou revogadas das funções de servidor fixas públicas.|  
+|**público**|Todo logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pertence à função de servidor **pública**. Quando permissões específicas não são concedidas ou são negadas a uma entidade de servidor em um objeto seguro, o usuário herda as permissões concedidas como públicas naquele objeto. Somente atribua permissões públicas em qualquer objeto quando você quiser que ele esteja disponível para todos os usuários. Não é possível alterar associação em public.<br /><br /> **Observação:** **public** é implementado de maneira diferente de outras funções. Além disso, é possível conceder, negar ou revogar permissões das funções de servidor fixas públicas.|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>Permissões de funções de servidor fixas  
  Cada função de servidor fixa tem certas permissões atribuídas a ela. A imagem a seguir mostra as permissões atribuídas às funções de servidor.   
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  A permissão **CONTROL SERVER** é semelhante, mas não idêntica à função de servidor fixa do **sysadmin** . As permissões não implicam associações de função e as associações de função não concedem permissões. (Por ex.: **CONTROL SERVER** não implica a associação à função de servidor fixa **sysadmin**.) No entanto, às vezes é possível representar entre funções e permissões equivalentes. A maioria dos comandos **DBCC** e muitos procedimentos do sistema requerem associação na função de servidor fixa **sysadmin** . Para obter uma lista dos 171 procedimentos armazenados do sistema que exigem associação ao **sysadmin** , veja a seguinte postagem de blog de Andreas Wolter [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation – caveats](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/).  
+>  A permissão **CONTROL SERVER** é semelhante, mas não idêntica à função de servidor fixa do **sysadmin** . As permissões não implicam associações de função e as associações de função não concedem permissões. Por exemplo, **CONTROL SERVER** não implica a associação à função de servidor fixa **sysadmin**.) No entanto, às vezes é possível representar entre funções e permissões equivalentes. A maioria dos comandos **DBCC** e muitos procedimentos do sistema requerem associação na função de servidor fixa **sysadmin** . Para obter uma lista dos 171 procedimentos armazenados do sistema que exigem associação ao **sysadmin** , veja a seguinte postagem de blog de Andreas Wolter [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation – caveats](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/).  
   
 ## <a name="server-level-permissions"></a>Permissão em nível de servidor  
  Somente podem ser acrescentadas permissões do nível de servidor a funções de servidor definidas pelo usuário. Para listar as permissões em nível de servidor, execute a instrução a seguir. As permissões em nível de servidor são:  
@@ -77,7 +77,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>Trabalhando com funções de nível de servidor  
  A tabela a seguir explica os comandos, exibições e funções que você pode usar para trabalhar com funções de nível de servidor.  
   
-|Recurso|Tipo|Descrição|  
+|Recurso|Type|Descrição|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)|Metadados|Retorna uma lista de funções de nível de servidor.|  
 |[sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)|Metadados|Retorna informações sobre os membros de uma função de nível de servidor.|  

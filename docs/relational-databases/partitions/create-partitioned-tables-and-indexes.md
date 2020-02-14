@@ -30,10 +30,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 046ce79c989fdfb24c6615968e6bad951aeb7280
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024906"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Criar tabelas e índices particionados
@@ -90,7 +90,7 @@ ms.locfileid: "68024906"
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse no banco de dados no qual você deseja criar uma tabela particionada e selecione **Propriedades**.  
   
-2.  Na caixa de diálogo **Propriedades do Banco de dados –** *database_name*, em **Selecionar uma página**, selecione **Grupos de Arquivos**.  
+2.  Na caixa de diálogo **Propriedades do Banco de Dados –** *nome_do_banco_de_dados*, em **Selecionar uma página**, selecione **Grupos de arquivos**.  
   
 3.  Em **Linhas**, clique em **Adicionar**. Na nova linha, digite o nome do grupo de arquivos.  
   
@@ -241,7 +241,7 @@ ms.locfileid: "68024906"
      **Mensagem**  
      Fornece qualquer mensagem de aviso ou erro retornada pelo processo.  
   
-     **Relatório**  
+     **Report**  
      Cria um relatório contendo os resultados do Assistente para Criar Partição. As opções são **Exibir Relatório**, **Salvar Relatório no Arquivo**, **Copiar Relatório na Área de Transferência**e **Enviar Relatório como Email**.  
   
      **Exibir Relatório**  

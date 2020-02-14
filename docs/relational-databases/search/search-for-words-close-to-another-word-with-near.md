@@ -21,15 +21,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68702828"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Procurar palavras perto de outra palavra com NEAR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Você pode usar um *termo de proximidade* **NEAR** em um predicado [CONTAINS](../../t-sql/queries/contains-transact-sql.md) ou uma função [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) para pesquisar palavras ou frases próximas umas das outras. 
+  Você pode usar o *termo de proximidade* **NEAR** em um predicado [CONTAINS](../../t-sql/queries/contains-transact-sql.md) ou uma função [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) para pesquisar palavras ou frases próximas umas das outras. 
   
 ##  <a name="Custom_NEAR"></a> Visão geral de NEAR  
 **NEAR** inclui os seguintes recursos:  
@@ -102,11 +102,11 @@ GO
 ## <a name="how-maximum-distance-is-measured"></a>Como a distância máxima é medida  
  Uma distância máxima específica, como 10 ou 25, determina quantas condições não relacionadas à pesquisa, inclusive palavras irrelevantes, podem ocorrer entre a primeira e a última condição de pesquisa em uma determinada cadeia de caracteres. Por exemplo, `NEAR((dogs, cats, "hunting mice"), 3)` retorna a linha a seguir na qual o número total de condições não relacionadas à pesquisa é três ("`enjoy`", "`but`" e "`avoid`"):  
   
- “`Cats` `enjoy` `hunting mice``, but avoid` `dogs``.`”  
+ "`Cats` `enjoy` `hunting mice``, but avoid` `dogs``.`"  
   
  A mesma condição de proximidade não retorna a linha a seguir, porque a distância máxima é excedida pelas quatro condições não relacionadas à pesquisa ("`enjoy`", "`but`", "`usually`" e "`avoid`"):  
   
- “`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`”  
+ "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ## <a name="combine-near-with-other-terms"></a>Combinar NEAR com outros termos  
  Você pode combinar NEAR com outros termos. Você pode usar AND (&), OR (|) ou AND NOT (&!) para combinar uma condição de proximidade personalizada com outra, uma condição simples ou uma condição de prefixo. Por exemplo:  

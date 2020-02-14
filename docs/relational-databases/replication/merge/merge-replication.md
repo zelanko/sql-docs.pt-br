@@ -14,10 +14,10 @@ ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0392ff8153a5125dadc20eefa96a6a9dfc521f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033214"
 ---
 # <a name="merge-replication"></a>Replicação de mesclagem
@@ -44,6 +44,6 @@ ms.locfileid: "68033214"
   
  O diagrama a seguir mostra os componentes usados em replicação de mesclagem.  
   
- ![Componentes e fluxo de dados da replicação de mesclagem](../../../relational-databases/replication/merge/media/merge.gif "Componentes e fluxo de dados da replicação de mesclagem")  
+ ![Fluxo de dados e componentes da replicação de mesclagem](../../../relational-databases/replication/merge/media/merge.gif "Fluxo de dados e componentes da replicação de mesclagem")  
   
   

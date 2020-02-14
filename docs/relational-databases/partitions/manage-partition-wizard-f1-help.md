@@ -24,10 +24,10 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: dc76237530ba47a513aba164260061ec6b20e7c3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892417"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Ajuda de F1 do Assistente para Gerenciar Partição
@@ -89,7 +89,7 @@ ms.locfileid: "68892417"
  **Gerenciar dados particionados em um cenário de janela deslizante**  
  Acrescenta uma partição vazia à tabela existente que pode ser usada para alternar dados. O assistente oferece suporte à alternância para a última partição e da primeira partição.  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início") [Nesta seção](#Top)  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
 ##  <a name="SwitchIn"></a> Página Selecione as Opções de Inserção de Partição  
  Use a página **Selecione as opções de Inserção de Partição** para selecionar a tabela de preparo que você está ativando na tabela particionada.  
@@ -104,7 +104,7 @@ ms.locfileid: "68892417"
  **Tabela de inserção**  
  Selecione a partição de preparação que contém a partição à qual você deseja adicionar a tabela particionada. É necessário criar essa tabela de preparo antes de ativar as partições com o **Assistente para Gerenciar Partições**.  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início") [Nesta seção](#Top)  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
 ##  <a name="SwitchOut"></a> Página Selecione as Opções de Extração de Partição  
  Use a página **Selecione as opções de Extração de Partição** para selecionar a partição e a tabela de preparo para reter os dados particionados que você está desativando na tabela particionada.  
@@ -116,13 +116,13 @@ ms.locfileid: "68892417"
  **Tabela de extração**  
  Escolha uma nova tabela ou uma tabela existente no qual os dados serão desativados.  
   
- **Nova**  
+ **Novo**  
  Digite um novo nome para a tabela de preparação que você deseja usar para a partição a ser desativada da tabela de origem atual.  
   
  **Existente**  
  Selecione uma tabela de preparação existente que você deseja usar para a partição a ser desativada da tabela de origem atual. Se a tabela existente contiver dados, eles serão substituídos pelos dados que você está desativando.  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início") [Nesta seção](#Top)  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
 ##  <a name="StagingTableOptions"></a> Página Selecionar Opções da Tabela de Preparação  
  Use a página **Selecionar Opções da Tabela de Preparação** para criar a tabela de preparo que você deseja usar para alternar os dados particionados.  
@@ -144,7 +144,7 @@ ms.locfileid: "68892417"
  **Grupo de arquivos**  
  Selecione um grupo de arquivos para a nova tabela.  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início") [Nesta seção](#Top)  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
 ##  <a name="OutputOption"></a> Página Selecionar Opção de Saída  
  Use a página **Selecionar Opção de Saída** para especificar como deseja concluir as modificações em suas partições.  
@@ -171,7 +171,7 @@ ms.locfileid: "68892417"
  **Alterar agenda**  
  Abre a caixa de diálogo **Novo Agendamento de Trabalho** , em que é possível selecionar, alterar ou exibir as propriedades do trabalho agendado.  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início") [Nesta seção](#Top)  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
 ##  <a name="NewJob"></a> Página Nova Agenda de Trabalho  
  Use a página **Novo Agendamento de Trabalho** para exibir e alterar as propriedades do agendamento.  
@@ -254,7 +254,7 @@ ms.locfileid: "68892417"
  **Hora**  
  Selecione a hora para que o trabalho seja executado.  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início") [Nesta seção](#Top)  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
 ##  <a name="Summary"></a> Página de Resumo  
  Use a página **Resumo** para examinar as opções selecionadas nas páginas anteriores.  
@@ -263,7 +263,7 @@ ms.locfileid: "68892417"
  **Examinar as seleções**  
  Exibe as seleções feitas em cada página do assistente. Clique em um nó para expandir e exibir as opções selecionadas anteriormente.  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início") [Nesta seção](#Top)  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
 ##  <a name="Progress"></a> Página Progresso  
  Use a página **Progresso** para monitorar informações de status das ações do **Assistente para Gerenciar Partição**. Dependendo das opções selecionadas no assistente, a página **Progresso** pode conter uma ou várias ações. A caixa superior exibe o status geral do assistente e o número de mensagens de status, erro e aviso que ele recebeu.  
@@ -284,7 +284,7 @@ ms.locfileid: "68892417"
  **Parar**  
  Interrompe a ação do assistente.  
   
- **Relatório**  
+ **Report**  
  Crie um relatório contendo os resultados do **Assistente para Gerenciar Partição**. As opções são:  
   
 -   **Exibir Relatório**  
@@ -301,7 +301,7 @@ ms.locfileid: "68892417"
  **Fechar**  
  Feche o assistente.  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início") [Nesta seção](#Top)  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tabelas e índices particionados](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  

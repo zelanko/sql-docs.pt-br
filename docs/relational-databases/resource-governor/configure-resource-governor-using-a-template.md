@@ -12,10 +12,10 @@ ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2b26aba44ff43de115268dcafa5ecc51e3f13c02
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903944"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>Configurar o administrador de recursos usando um modelo
@@ -24,7 +24,7 @@ ms.locfileid: "72903944"
   
 -   **Antes de começar:**  [Permissões](#Permissions)  
   
--   **Para criar um grupo de carga de trabalho usando:**  [um modelo](#ConfRGTemplate)  
+-   **Para criar um grupo de carga de trabalho usando:** [um modelo](#ConfRGTemplate)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  Use as etapas a seguir para abrir e modificar um modelo que cria um pool de recursos e um grupo de cargas de trabalho para o pool. Além disso, esse modelo permite que você crie uma função de classificador definida pelo usuário que roteia novas conexões para o grupo padrão ou o grupo de cargas de trabalho que você criar.  

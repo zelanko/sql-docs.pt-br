@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 95e9d1139619f64aa9ff1be53711019fdbdf6637
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909298"
 ---
 # <a name="spatial-indexes-overview"></a>Visão geral de índices espaciais
@@ -126,7 +126,7 @@ ms.locfileid: "72909298"
  O mosaico GEOMETRY_AUTO_GRID é o esquema de mosaico padrão para o tipo de dados **geometry** no [!INCLUDE[ssNoVersion](../../includes/sssql11-md.md)] e versões posteriores.  O mosaico GEOMETRY_GRID é o único esquema de mosaico disponível para tipos de dados geometry no [!INCLUDE[ssNoVersion](../../includes/sskatmai-md.md)]. Esta seção discute aspectos do mosaico de grade geométrica que são relevantes para trabalhar com índices espaciais: métodos com suporte e caixas delimitadoras.  
   
 > [!NOTE]  
->  É possível especificar explicitamente esse esquema de mosaico usando a cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) da instrução [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  É possível especificar explicitamente esse esquema de mosaico usando a cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) da instrução [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##### <a name="the-bounding-box"></a>A caixa delimitadora  
  Dados geométricos ocupam um plano que pode ser infinito. Porém, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um índice espacial requer um espaço finito. Para estabelecer um espaço finito para decomposição, o esquema de mosaico de grade geométrica requer uma *caixa delimitadora*retangular. A caixa delimitadora é definida por quatro coordenadas, **(** _x-min_ **,** _y-min_ **)** e **(** _x-max_ **,** _y-max_ **)** que são armazenadas como propriedades do índice espacial. Essas coordenadas representam o seguinte:  

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70009402"
 ---
 # <a name="columnstore-indexes-overview"></a>Índices columnstore: Visão geral
@@ -61,12 +61,12 @@ Um segmento de coluna é uma coluna de dados do grupo de linhas.
 -   Cada rowgroup contém um segmento de coluna para cada coluna na tabela.  
 -   Cada segmento de coluna é compactado junto e armazenado em meio físico.  
   
-![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![Segmento de coluna](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "segmento de coluna")  
   
 #### <a name="clustered-columnstore-index"></a>Índice columnstore clusterizado
 Um índice columnstore clusterizado é o armazenamento físico da tabela inteira.    
   
-![Índice Columnstore Clusterizado](../../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Índice Columnstore Clusterizado")  
+![Índice columnstore clusterizado](../../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Índice columnstore clusterizado")  
   
 Para reduzir a fragmentação dos segmentos de coluna e melhorar o desempenho, o índice columnstore pode armazenar alguns dados temporariamente em um índice clusterizado, chamado *deltastore*, e em uma lista árvore B de IDs para linhas excluídas. As operações de deltastore são tratadas em segundo plano. Para retornar os resultados corretos da consulta, o índice columnstore clusterizado combina os resultados da consulta de columnstore e deltastore.  
   

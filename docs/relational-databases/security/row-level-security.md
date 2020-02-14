@@ -18,23 +18,23 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68809954"
 ---
 # <a name="row-level-security"></a>Segurança em nível de linha
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  ![Gráfico de segurança em nível de linha](../../relational-databases/security/media/row-level-security-graphic.png "Gráfico de segurança em nível de linha")  
+  ![Gráfico de Segurança em Nível de Linha](../../relational-databases/security/media/row-level-security-graphic.png "Gráfico de Segurança em Nível de Linha")  
   
 A Segurança em nível de linha permite que você use o contexto de execução ou a associação de grupo para controlar o acesso às linhas em uma tabela de banco de dados.
   
 O RLS (nível de linha de segurança) simplifica o design e a codificação de segurança em seu aplicativo. O RLS ajuda a implementar restrições de acesso a linhas de dados. Por exemplo, você pode garantir que os funcionários acessem somente as linhas de dados que são relevantes aos seus departamentos. Outro exemplo é restringir o acesso a dados dos clientes apenas aos dados relevantes para sua empresa.  
   
-A lógica de restrição de acesso é localizado na camada de banco de dados, em vez de longe dos dados em outra camada de aplicativo. O sistema de banco de dados aplica as restrições de acesso toda vez que há tentativa de acesso a dados a partir de qualquer camada. Isso torna o sistema de segurança mais robusto e confiável, reduzindo a área de superfície do seu sistema de segurança.  
+A lógica de restrição de acesso é localizado na camada de banco de dados, em vez de longe dos dados em outra camada de aplicativo. O sistema de banco de dados aplica as restrições de acesso toda vez que há tentativa de acesso a dados a partir de qualquer camada. Isso torna o sistema de segurança mais robusto e confiável, reduzindo a área de superfície do sistema de segurança.  
   
 Implemente a RLS usando a instrução [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] e predicados criados como [funções com valor de tabela embutida](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
 
@@ -85,7 +85,7 @@ A RLS permite dois tipos de predicado de segurança.
   
 - Os predicados de bloqueio para UPDATE são divididos em operações distintas para BEFORE e AFTER. Consequentemente, não é possível, por exemplo, impedir os usuários de atualizar uma linha para ter um valor maior que o atual. Se esse tipo de lógica for necessário, você deverá usar gatilhos com as tabelas intermediárias [DELETED e INSERTED](../triggers/use-the-inserted-and-deleted-tables.md) para fazer referência a valores novos e antigos juntos.  
   
-- O otimizador não verificará um predicado de bloqueio AFTER UPDATE se as colunas usadas pela função de predicado não forem alteradas. Por exemplo: Alice não deve conseguir alterar um salário para ser maior que 100.000. Alice pode alterar o endereço de um funcionário cujo salário já seja superior a 100.000, desde que as colunas referenciadas no predicado não tenham sido alteradas.  
+- O otimizador não verificará um predicado de bloqueio AFTER UPDATE se as colunas usadas pela função de predicado não forem alteradas. Por exemplo:  Alice não deve conseguir alterar um salário para ser maior que 100.000. Alice pode alterar o endereço de um funcionário cujo salário já seja superior a 100.000, desde que as colunas referenciadas no predicado não tenham sido alteradas.  
   
 - Nenhuma mudança foi feita nas APIs em massa, incluindo BULK INSERT. Isso significa que os predicados de bloqueio AFTER INSERT serão aplicados às operações de inserção em massa, assim como seriam em operações de inserção regular.  
   
@@ -101,7 +101,7 @@ A RLS permite dois tipos de predicado de segurança.
   
  Os predicados de filtro RLS são funcionalmente equivalentes a acrescentar uma cláusula **WHERE** . O predicado pode ser tão sofisticado como ditam as práticas comerciais, ou a cláusula pode ser tão simples quanto `WHERE TenantId = 42`.  
   
- Em termos mais formais, o RLS introduz o controle de acesso baseado em predicado. Ele apresenta uma avaliação centralizada, flexível e baseada em predicado. O predicado pode ser baseado em metadados ou em qualquer outro critério que o administrador determine, como apropriado. O predicado é usado como critério para determinar se o usuário tem acesso apropriado aos dados com base nos atributos de usuário. Controle de acesso baseado em rótulos pode ser implementado usando o controle de acesso baseado em predicado.  
+ Em termos mais formais, o RLS introduz o controle de acesso baseado em predicado. Ele apresenta uma avaliação centralizada, flexível e baseada em predicado. O predicado pode ser baseado em metadados ou em qualquer outro critério que o administrador determine, como apropriado. O predicado é usado como critério para determinar se o usuário tem acesso apropriado aos dados com base nos atributos de usuário. O controle de acesso baseado em rótulo pode ser implementado usando o controle de acesso baseado em predicado.  
   
 ## <a name="Permissions"></a> Permissões
 
@@ -125,7 +125,7 @@ A RLS permite dois tipos de predicado de segurança.
   
 - A permissão **ALTER ANY SECURITY POLICY** é destinada a usuários altamente privilegiados (como um gerente de políticas de segurança). O gerenciador de políticas de segurança não exige a permissão **SELECT** nas tabelas que protege.  
   
-- Evite conversões de tipo em funções de predicado para evitar possíveis erros de tempo de execução.  
+- Evite conversões de tipo em funções de predicado para evitar possíveis erros de runtime.  
   
 - Evite a recursão no predicado funções sempre que possível para evitar a degradação do desempenho. O otimizador de consulta tentará detectar as recursões diretas, mas não é garantido que encontrará as recursões indiretas. A recursão indireta é onde uma segunda função chama a função de predicado.  
   
@@ -149,7 +149,7 @@ A RLS permite dois tipos de predicado de segurança.
   
 ### <a name="carefully-crafted-queries"></a>Consultas cuidadosamente elaboradas
 
-É possível causar vazamento de informações pelo uso de consultas cuidadosamente elaboradas. Por exemplo, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permitiria que um usuário mal-intencionado soubesse que o salário de John Doe é US$ 100.000. Mesmo que haja um predicado de segurança em vigor para impedir que um usuário mal-intencionado consulte diretamente o salário de outras pessoas, o usuário pode determinar quando a consulta retorna uma exceção de divisão por zero.  
+É possível causar vazamento de informações pelo uso de consultas concebidas cuidadosamente. Por exemplo, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permitiria que um usuário mal-intencionado soubesse que o salário de John Doe é US$ 100.000. Mesmo que haja um predicado de segurança em vigor para impedir que um usuário mal-intencionado consulte diretamente o salário de outras pessoas, o usuário pode determinar quando a consulta retorna uma exceção de divisão por zero.  
 
 ## <a name="Limitations"></a> Compatibilidade entre recursos
 

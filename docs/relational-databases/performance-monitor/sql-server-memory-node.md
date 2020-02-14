@@ -11,10 +11,10 @@ ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 40014049e46f10778ede60e9f1597d740bde882f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68102500"
 ---
 # <a name="sql-server-memory-node"></a>SQL Server, Nó de Memória
@@ -22,7 +22,7 @@ ms.locfileid: "68102500"
   O objeto **Memory Node** do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar o uso de memória de servidor em nós NUMA.  
   
 ## <a name="memory-node-counters"></a>Contadores de nós de memória  
- Essa tabela descreve os contadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Node** .  
+ Essa tabela descreve os contadores **Memória de Nó** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contadores do Gerenciador de Memória do SQL Server|Descrição|  
 |----------------------------------------|-----------------|  

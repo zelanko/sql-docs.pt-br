@@ -20,10 +20,10 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67939209"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aprimorar o desempenho de replicação de mesclagem
@@ -34,7 +34,7 @@ ms.locfileid: "67939209"
   
 -   Colunas de índice usadas em filtros de linha e filtros de junção.  
   
-     Quando usar um filtro de linha em um artigo publicado, crie um índice em cada uma das colunas usadas na cláusula WHERE do filtro. Sem um índice, o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem de ler cada linha da tabela para determinar se a linha deverá ser incluída na partição. Com um índice, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consegue localizar rapidamente quais as linhas que deverão ser incluídas. O processamento mais rápido ocorre se a replicação conseguir resolver inteiramente a cláusula WHERE do filtro do índice de modo autônomo.  
+     Quando usar um filtro de linha em um artigo publicado, crie um índice em cada uma das colunas usadas na cláusula WHERE do filtro. Sem um índice, o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precisa ler cada linha da tabela para determinar se a linha deve ser incluída na partição. Com um índice, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consegue localizar rapidamente quais as linhas que deverão ser incluídas. O processamento mais rápido ocorre se a replicação conseguir resolver inteiramente a cláusula WHERE do filtro do índice de modo autônomo.  
   
      Indexar todas as colunas usadas em filtros de junção também é importante. Cada vez que o Merge Agent é executado, ele pesquisa a tabela base para determinar quais as linhas da tabela pai e quais as linhas nas tabelas relacionadas estão incluídas na partição. Criar um índice em colunas unidas evita que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precise ler cada linha da tabela todas as vezes que o Merge Agent for executado.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "67939209"
   
     -   [Trabalhar com perfis do Agente de Replicação](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
-    -   [Exibir e modificar parâmetros do prompt de comando do agente de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [Exibir e modificar parâmetros do prompt de comando de agentes de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Conceitos dos executáveis do Replication Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "67939209"
   
 -   Quando sincronizar linhas de dados com um grande volume de dados, como linhas com colunas LOB, a sincronização da Web poderá necessitar de alocação de memória adicional e prejudicar o desempenho. Isso ocorre quando o Merge Agent gera uma mensagem XML contendo muitas linhas, com um grande volume de dados. Se o Merge Agent estiver consumindo muitos recursos durante a sincronização da Web, reduza o número de linhas enviadas em uma única mensagem, usando uma das seguintes opções:  
   
-    -   Use o perfil do agente de vínculo lento para o Merge Agent. Para obter mais informações, consulte [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
+    -   Use o perfil do agente de vínculo lento para o Merge Agent. Para saber mais, confira [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
     -   Diminua os parâmetros **- DownloadGenerationsPerBatch** e **- UploadGenerationsPerBatch** do Agente de Mesclagem para um valor menor ou igual a 10. O valor padrão desses parâmetros é 50.  
   

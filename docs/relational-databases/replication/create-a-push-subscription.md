@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 6eca1e80614772a1aa65faa60351fb73f83ba433
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70059298"
 ---
 # <a name="create-a-push-subscription"></a>Criar uma assinatura push
@@ -58,7 +58,7 @@ Crie uma assinatura push no Publicador ou Assinante, usando o Assistente para No
   
 #### <a name="to-create-a-push-subscription-from-the-publisher"></a>Para criar uma assinatura push do Publicador  
   
-1. Conecte-se ao Publicador no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e, depois, expanda o nó do servidor.  
+1. Conecte-se ao Publicador no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e, em seguida, expanda o nó de servidor.  
   
 2. Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
   
@@ -107,7 +107,7 @@ Crie uma assinatura push no Publicador ou Assinante, usando o Assistente para No
      > [!NOTE]
      > As conexões realizadas por meio da Autenticação Integrada do Windows sempre usam as credenciais do Windows especificadas por **\@job_login** e **\@job_password**. O Agente de Distribuição sempre faz a conexão local com o Distribuidor usando a Autenticação Integrada do Windows. Por padrão, o agente se conectará ao Assinante usando a Autenticação Integrada do Windows.  
   
-   - (Opcional) Valor de **0** para **\@subscriber_security_mode** e informações de logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **\@subscriber_login** e **\@subscriber_password**. Especifique esses parâmetros se for necessário usar a Autenticação do SQL Server para conexão com o Assinante.  
+   - (Opcional) Um valor igual a **0** para **\@subscriber_security_mode** e as informações de logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **\@subscriber_login** e **\@subscriber_password**. Especifique esses parâmetros se for necessário usar a Autenticação do SQL Server para conexão com o Assinante.  
   
    - Agenda para o trabalho do Distribution Agent para essa assinatura. Para saber mais, confira [Especificar agendamentos de sincronização](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -177,7 +177,7 @@ Crie uma assinatura push no Publicador ou Assinante, usando o Assistente para No
   
 5. Se não houver banco de dados de assinatura, crie-o usando a classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Para saber mais, confira [Criar, alterar e remover bancos de dados](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6. Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransSubscription> .  
+6. Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.TransSubscription>.  
   
 7. Defina as seguintes propriedades de assinatura:  
   
@@ -217,7 +217,7 @@ Crie uma assinatura push no Publicador ou Assinante, usando o Assistente para No
   
 5. Se não houver banco de dados de assinatura, crie-o usando a classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Para saber mais, confira [Criar, alterar e remover bancos de dados](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6. Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergeSubscription> .  
+6. Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.MergeSubscription>.  
   
 7. Defina as seguintes propriedades de assinatura:  
   

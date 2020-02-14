@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68344602"
 ---
 # <a name="principals-database-engine"></a>Entidades (Mecanismo de Banco de Dados)
@@ -67,7 +67,7 @@ O usuário `dbo` tem o esquema `dbo`. O esquema `dbo` é o esquema padrão para 
 ## <a name="public-server-role-and-database-role"></a>Função de servidor e a função de banco de dados pública  
 Cada logon pertence à função de servidor fixa `public` e cada usuário de banco de dados pertence à função de banco de dados `public`. Quando um usuário ou logon não foi concedido ou teve permissões específicas negadas em um protegível, o logon ou o usuário herda as permissões concedidas como públicas naquele protegível. A função fixa de servidor `public` e a função fixa de banco de dados `public` não podem ser descartadas. No entanto, você pode revogar as permissões das funções `public`. Há várias permissões que são atribuídas às funções `public` por padrão. A maioria dessas permissões é necessária para operações de rotina no banco de dados, ou seja, o tipo de coisas que todos devem ser capazes de fazer. Tenha cuidado ao revogar permissões de logon ou usuário público, pois isso afetará todos os logons e usuários. Geralmente você não deve negar permissões para o público, porque a instrução deny substitui todas as instruções grant que possam ser feitas para indivíduos. 
   
-## <a name="informationschema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA e usuários e esquemas sys 
+## <a name="information_schema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA e usuários e esquemas sys 
  Todo banco de dados inclui duas entidades que são exibidas como usuários em exibições do catálogo: `INFORMATION_SCHEMA` e `sys`. Essas entidades são necessárias para uso interno do mecanismo de banco de dados. Elas não podem ser modificadas ou descartadas.  
   
 ## <a name="certificate-based-sql-server-logins"></a>Logons do SQL Server com base em certificado  

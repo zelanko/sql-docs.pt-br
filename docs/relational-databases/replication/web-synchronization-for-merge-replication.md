@@ -18,10 +18,10 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db49332ec2710586e9cae23c3e41ee4aff42b486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136973"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Sincronização da Web para replicação de mesclagem.
@@ -30,7 +30,7 @@ ms.locfileid: "68136973"
   
 -   Sincronizando dados de usuários móveis pela Internet.  
   
--   Sincronizando dados entre bancos de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por um firewall de empresa.  
+-   Sincronização de dados entre bancos de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por um firewall corporativo.  
   
  Por exemplo, um representante de vendas ambulante pode usar a sincronização da Web. A empresa, [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], tem representantes de vendas que viajam a várias lojas e fornecedores ao longo das suas regiões. Em viagens longas os representantes ficam em hotéis e precisam de uma forma conveniente para carregar os dados de vendas e baixar as atualizações de produtos no final de cada dia.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68136973"
   
  O[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou uma versão posterior é requerida para todos os computadores que participam de sincronização da Web.  
   
-### <a name="synchronization-process"></a>Processo de sincronização  
+### <a name="synchronization-process"></a>Processo de Sincronização  
  As etapas seguintes acontecem durante a sincronização:  
   
 1.  O Merge Agent é iniciado no Assinante. O agente faz o seguinte:  
@@ -83,6 +83,6 @@ ms.locfileid: "68136973"
   
 ## <a name="see-also"></a>Consulte Também  
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
- [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
+ [Topologias para sincronização da Web](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   
   

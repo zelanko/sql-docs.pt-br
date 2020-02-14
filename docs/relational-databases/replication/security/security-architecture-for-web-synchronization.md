@@ -13,15 +13,15 @@ ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0933927b3c2fe9f6231831e29c329afb5c4e63c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710823"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Arquitetura de segurança para sincronização da Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] habilita o controle refinado na configuração de segurança para sincronização da Web. Esse tópico fornece uma lista abrangente de todos os componentes que podem ser incluídos na configuração da sincronização da Web e as informações sobre as conexões que são efetuadas entre os componentes. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
+  O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] habilita o controle refinado da configuração de segurança para sincronização da Web. Esse tópico fornece uma lista abrangente de todos os componentes que podem ser incluídos na configuração da sincronização da Web e as informações sobre as conexões que são efetuadas entre os componentes. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
  A ilustração a seguir mostra todas as possíveis conexões, embora algumas possam ser desnecessárias em uma topologia específica. Por exemplo, uma conexão para um servidor de FTP só será necessária se o instantâneo for entregue através de FTP.  
   
@@ -29,13 +29,13 @@ ms.locfileid: "71710823"
   
  As tabelas a seguir descrevem os componentes e as conexões ilustrados.  
   
-## <a name="a-windows-user-under-which-the-merge-agent-runs"></a>A. Usuário do Windows sob o qual o Merge Agent é executado  
+## <a name="a-windows-user-under-which-the-merge-agent-runs"></a>a. Usuário do Windows sob o qual o Merge Agent é executado  
  Durante a sincronização, o Merge Agent (A) é iniciado no Assinante. O Merge Agent pode ser iniciado a partir de uma etapa de trabalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent ou de um aplicativo autônomo personalizado. Se o Merge Agent for iniciado de uma etapa de trabalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, o Merge Agent executará sob o contexto de um usuário do Windows a ser especificado por você. Se não especificar um usuário do Windows, o Merge Agent executa sob o contexto da conta de serviços do Windows para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.  
   
 |Tipo de conta|Onde a conta é especificada|  
 |---------------------|------------------------------------|  
 |Usuário do Windows|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: os parâmetros `@job_login` e `@job_password` do [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO (Replication Management Objects): as propriedades <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> para <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
-|Conta de serviço do Windows para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent|Gerenciador de Configurações do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
+|Conta de serviço do Windows para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager|  
 |Aplicativo autônomo|O Merge Agent executa sob o contexto do usuário do Windows que estiver executando o aplicativo.|  
   
 ## <a name="b-connection-to-the-subscriber"></a>B. Conexão com o Assinante  

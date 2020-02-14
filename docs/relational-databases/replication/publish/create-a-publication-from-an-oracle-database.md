@@ -14,10 +14,10 @@ ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8b43b3b2f67554a59388ccd6a50485e4c71d9e1a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908595"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Criar uma publicação de um banco de dados Oracle
@@ -40,7 +40,7 @@ ms.locfileid: "72908595"
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
   
--   Antes de criar uma publicação, você deve instalar o software Oracle no Distribuidor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , além de configurar o banco de dados Oracle. Para obter mais informações, consulte [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md) (Configurar um publicador do Oracle).  
+-   Antes de criar uma publicação, você deve instalar o software Oracle no Distribuidor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], além de configurar o Oracle Database. Para obter mais informações, consulte [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md) (Configurar um publicador do Oracle).  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Crie uma publicação de instantâneo ou transacional a partir de um banco de dados Oracle com o Assistente de Nova Publicação.  
@@ -69,7 +69,7 @@ ms.locfileid: "72908595"
   
 6.  Na guia **Propriedades de Conexão** , selecione um tipo de Publicador de **Gateway** ou **Completo**.  
   
-     A opção **Complete** é projetada para fornecer publicações transacionais e de instantâneo com o conjunto completo de recursos com suporte para publicações Oracle. A opção **Gateway** fornece otimizações de projeto específicas para aprimorar o desempenho de casos em que a replicação serve como um gateway entre sistemas. A opção **Gateway** não poderá ser usada se você planejar publicar a mesma tabela em várias publicações transacionais. Uma tabela pode aparecer no máximo em uma publicação transacional e em qualquer número de publicações de instantâneo se você selecionar **Gateway**.  
+     A opção **Completa** é projetada para fornecer publicações transacionais e de instantâneo com o conjunto completo de recursos com suporte para publicações Oracle. A opção **Gateway** fornece otimizações de projeto específicas para aprimorar o desempenho de casos em que a replicação serve como um gateway entre sistemas. A opção **Gateway** não poderá ser usada se você planejar publicar a mesma tabela em várias publicações transacionais. Uma tabela pode aparecer no máximo em uma publicação transacional e em qualquer número de publicações de instantâneo se você selecionar **Gateway**.  
   
 7.  Clique em **Conectar**, que cria uma conexão com o Editor Oracle e o configura para replicação. A caixa de diálogo **Conectar ao Servidor** é fechada e você retorna para a caixa de diálogo **Propriedades do Distribuidor – \<Distributor>** .  
   
@@ -107,7 +107,7 @@ ms.locfileid: "72908595"
 11. Na página **Concluir o Assistente** , especifique um nome para a publicação.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
- Após a configuração do banco de dados Oracle como um Publicador, é possível criar uma publicação transacional ou instantânea da mesma maneira como você faria de um Editor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , usando os procedimentos armazenados do sistema.  
+ Após a configuração do Oracle Database como um Publicador, é possível criar uma publicação transacional ou instantânea da mesma maneira como você faria de um Publicador do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], usando os procedimentos armazenados do sistema.  
   
 #### <a name="to-create-an-oracle-publication"></a>Para criar uma publicação Oracle  
   
@@ -138,7 +138,7 @@ ms.locfileid: "72908595"
         > [!NOTE]  
         >  O parâmetro **\@job_login** precisa corresponder ao logon fornecido na etapa 3. Não forneça informações de segurança do publicador. O Log Reader Agent se conecta ao Publicador usando as informações de segurança fornecidas na etapa 3.  
   
-5.  No Distribuidor no banco de dados de distribuição, execute [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) para criar a publicação. Para obter mais informações, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+5.  No Distribuidor no banco de dados de distribuição, execute [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) para criar a publicação. Para obter mais informações, consulte [Criar uma assinatura](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 6.  No Distribuidor no banco de dados de distribuição, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Especifique o nome da publicação usada na etapa 4 em **\@publication** e as credenciais do Windows com as quais o Agente de Instantâneo é executado em **\@job_name** e **\@password**. Para usar a Autenticação Padrão da Oracle ao se conectar ao Publicador, especifique também um valor igual a **0** em **\@publisher_security_mode** e as informações de logon do Oracle em **\@publisher_login** e **\@publisher_password**. Isso cria um trabalho do Agente de Instantâneo para a publicação.  
   
@@ -147,6 +147,6 @@ ms.locfileid: "72908595"
  [Publicar dados e objetos de banco de dados](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Configurar o trabalho do conjunto de transações para um Publicador Oracle &#40;programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [Visão geral da publicação do Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)   
- [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)  
+ [Script para conceder permissões da Oracle](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)  
   
   

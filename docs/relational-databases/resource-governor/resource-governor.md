@@ -13,15 +13,15 @@ ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: bbc94f7586c05746a70c2f9fd9172230771837a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67912052"
 ---
 # <a name="resource-governor"></a>Administrador de Recursos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor é um recurso que você pode usar para gerenciar a carga de trabalho e o consumo de recursos do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O Administrador de Recursos permite que você especifique os limites de quantidade de CPU, E/S física e memória que as solicitações recebidas de aplicativos podem usar.  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor é um recurso que você pode usar para gerenciar a carga de trabalho e o consumo de recursos do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O Administrador de Recursos permite que você especifique os limites na quantidade de CPU, E/S física e memória que solicitações recebidas de aplicativos podem usar.  
   
 ## <a name="benefits-of-resource-governor"></a>Benefícios do Administrador de Recursos  
  O Administrador de Recursos permite gerenciar cargas de trabalho e recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificando limites de consumo de recursos por solicitações de entrada. No contexto do Administrador de Recursos, carga de trabalho é um conjunto de consultas ou solicitações de tamanho similar que podem e devem, ser tratadas como uma única entidade. Não se trata de um requisito, mas quanto mais uniforme for o padrão de uso dos recursos de uma carga de trabalho, maior a probabilidade de obter benefícios derivados do Administrador de Recursos. Limites de recurso podem ser reconfigurados em tempo real, com impacto mínimo sobre as cargas de trabalho que se encontram em execução.  
@@ -81,13 +81,13 @@ ms.locfileid: "67912052"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Descreve como habilitar o Administrador de Recursos.|[Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md)|  
+|Descreve como habilitar o Administrador de Recursos.|[Habilitar o Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)|  
 |Descreve como desabilitar o Administrador de Recursos.|[Desabilitar o Resource Governor](../../relational-databases/resource-governor/disable-resource-governor.md)|  
 |Descreve como criar, alterar e descartar um pool de recursos.|[Pool de recursos do Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)|  
 |Descreve como criar, alterar, mover e descarregar um grupo de cargas de trabalho.|[Grupos de carga de trabalho do Resource Governor](../../relational-databases/resource-governor/resource-governor-workload-group.md)|  
-|Descreve como criar e testar uma função de classificação definida pelo usuário.|[Função do classificador do Resource Governor](../../relational-databases/resource-governor/resource-governor-classifier-function.md)|  
-|Descreve como configurar o Administrador de Recursos usando um modelo.|[Configurar o administrador de recursos usando um modelo](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)|  
-|Descreve como exibir as propriedades do Administrador de Recursos.|[Exibir Propriedades do Resource Governor](../../relational-databases/resource-governor/view-resource-governor-properties.md)|  
+|Descreve como criar e testar uma função de classificação definida pelo usuário.|[Função de classificação do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-classifier-function.md)|  
+|Descreve como configurar o Administrador de Recursos usando um modelo.|[Configurar o Resource Governor usando um modelo](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)|  
+|Descreve como exibir as propriedades do Administrador de Recursos.|[Exibir Propriedades do Administrador de Recursos](../../relational-databases/resource-governor/view-resource-governor-properties.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Instâncias do mecanismo de banco de dados &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  

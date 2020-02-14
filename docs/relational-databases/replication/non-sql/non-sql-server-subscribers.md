@@ -21,10 +21,10 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 26bda5e190f18469948f935302ee2cbf9ddd121c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940402"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
@@ -37,7 +37,7 @@ Os Assinantes não [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
-|banco de dados|Sistema operacional|Provedor|  
+|Banco de dados|Sistema operacional|Provedor|  
 |--------------|----------------------|--------------|  
 |Oracle|Todas as plataformas que o Oracle dá suporte|Provedor Oracle OLE DB (fornecido pelo Oracle)|  
 |IBM DB2|MVS, AS400, Unix, Linux, Windows menos 9.x|Microsoft Host Integration Server (HIS) provedor de OLE DB|  
@@ -67,11 +67,11 @@ Para obter mais informações sobre como criar assinaturas ao Oracle e IBM DB2, 
   
 -   A replicação dá suporte a tabelas de publicação e exibições indexadas como tabelas para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (exibições indexadas não podem ser replicadas como exibições indexadas).  
   
--   Ao criar uma publicação no Assistente para Novas Publicações e depois habilitá-la para Assinantes não SQL Server usando a caixa de diálogo Propriedades de Publicação, o proprietário de todos os objetos no banco de dados da assinatura não é especificado para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , enquanto para Assinantes [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , é definido para o proprietário do objeto correspondente no banco de dados de publicação.  
+-   Ao criar uma publicação no Assistente para Novas Publicações e, em seguida, habilitá-la para Assinantes não SQL Server usando a caixa de diálogo Propriedades da Publicação, o proprietário de todos os objetos no banco de dados de assinatura não é especificado para Assinantes não [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], enquanto para Assinantes do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ele é definido como o proprietário do objeto correspondente no banco de dados de publicação.  
   
 -   Se a publicação tiver Assinantes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Assinantes não [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a publicação deverá ser habilitada para Assinantes não [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes de qualquer Assinante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ser criado.  
   
--   Por padrão, scripts gerados pelo Agente de Instantâneo para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usam identificadores sem aspas na sintaxe de `CREATE TABLE`. Portanto, uma tabela publicada nomeada 'teste' é reproduzida como 'TESTE'. Para usar o mesmo tipo de caixa (maiúscula/minúscula) como a tabela no banco de dados de publicação, use o parâmetro **-QuotedIdentifier** para o Agente de Distribuição. O parâmetro **-QuotedIdentifier** deve também ser usado se os nomes de objetos publicados (assim como tabelas, colunas e restrições) incluírem espaços ou palavras que são palavras reservadas na versão do banco de dados no Assinante não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações sobre esse parâmetro, consulte [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
+-   Por padrão, scripts gerados pelo Agente de Instantâneo para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usam identificadores sem aspas na sintaxe de `CREATE TABLE`. Portanto, uma tabela publicada nomeada 'teste' é reproduzida como 'TESTE'. Para usar o mesmo tipo de caixa (maiúscula/minúscula) como a tabela no banco de dados de publicação, use o parâmetro **-QuotedIdentifier** para o Agente de Distribuição. O parâmetro **-QuotedIdentifier** deve também ser usado se os nomes de objetos publicados (assim como tabelas, colunas e restrições) incluírem espaços ou palavras que são palavras reservadas na versão do banco de dados no Assinante não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações sobre esse parâmetro, consulte [Agente de Distribuição de Replicação](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
 -   A conta na qual o Agente de Distribuição é executado deve ter acesso de leitura ao diretório de instalação do provedor OLE DB.  
   
@@ -91,7 +91,7 @@ Para obter mais informações sobre como criar assinaturas ao Oracle e IBM DB2, 
   
 -   O valor NULL é tratado de forma diferente por bancos de dados diferentes, o que afeta como um valor em branco, uma cadeia de caracteres vazia e um NULL são representados. Isto, por sua vez, afeta o comportamento de valores inseridos em colunas com restrições exclusivas definidas. Por exemplo, o Oracle permite valores múltiplos de NULL em uma coluna que é considerada exclusiva, enquanto o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite apenas um único valor NULL em uma coluna exclusiva.  
   
-     Um fator adicional é como os valores de NULL, cadeias vazias, valores em branco são tratados quando a coluna é definida como NOT NULL. Para obter informações sobre como tratar deste assunto para Assinantes do Oracle, consulte [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md).  
+     Um fator adicional é como os valores de NULL, cadeias vazias, valores em branco são tratados quando a coluna é definida como NOT NULL. Para obter informações sobre como tratar deste assunto para Assinantes do Oracle, consulte [Assinantes Oracle](../../../relational-databases/replication/non-sql/oracle-subscribers.md).  
   
 -   Os metadados relacionados à replicação (tabela de sequência de transação) não são excluídos de não assinantes do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando a assinatura é removida.  
   

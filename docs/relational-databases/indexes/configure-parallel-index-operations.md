@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 627fa6a19c88507034bfbd8a7236b94e17242851
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908124"
 ---
 # <a name="configure-parallel-index-operations"></a>Configurar operações de índice paralelo
@@ -78,7 +78,7 @@ Em sistemas multiprocessadores em execução no [!INCLUDE[ssNoVersion](../../inc
   
 -   Requisitos de memória para operações de índice de partição que necessitam de classificação poderão ser maiores se o Otimizador de Consulta aplicar graus de paralelismo à operação de criação. Quanto maior os graus de paralelismo, o maior será o requisito de memória. Para saber mais, confira [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
-###  Permissões <a name="Security"></a> <a name="Permissions"></a>  
+###  <a name="Security"></a> <a name="Permissions"></a> Permissões  
  Requer a permissão `ALTER` na tabela ou exibição.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  

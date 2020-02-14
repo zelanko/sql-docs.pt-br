@@ -14,10 +14,10 @@ ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987367"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, Objeto Métodos de Acesso
@@ -42,7 +42,7 @@ ms.locfileid: "67987367"
   
 -   [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
   
- Esta tabela descreve os contadores dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** .  
+ Esta tabela descreve os contadores dos **Métodos de Acesso** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contadores dos Métodos de Acesso do SQL Server|Descrição|  
 |----------------------------------------|-----------------|  
@@ -88,7 +88,7 @@ ms.locfileid: "67987367"
 |**Cookie usado na página de árvore**|Número de vezes que um cookie na página de árvore foi usado com êxito durante uma pesquisa de índice, pois nenhuma alteração ocorreu na página pai dessa página de árvore. O cookie é usado para acelerar a pesquisa de índice.|  
 |**Arquivos de Trabalho Criados/s**|Número de arquivos de trabalho criados por segundo. Por exemplo, os arquivos de trabalho podem ser usados para armazenar os resultados temporários de junções de hash e de agregações de hash.|  
 |**Tabelas de Trabalho Criadas/s**|Número de tabelas de trabalho criadas por segundo. Por exemplo, tabelas de trabalho podem ser usadas para armazenar os resultados temporários de spool de consultas, variáveis LOB, variáveis XML e cursores.|  
-|**Tabelas de Trabalho do Cache Base**|Somente para uso interno.|  
+|**Tabelas de Trabalho do Cache Base**|Apenas para uso interno.|  
 |**Taxas de Tabela de Trabalho do Cache**|Porcentagem de tabelas de trabalho criadas em que as duas páginas iniciais de uma determinada tabela não estavam alocadas, mas estavam imediatamente disponíveis no cache de tabelas de trabalho. (Quando uma tabela de trabalho é descartada, duas páginas podem permanecer alocadas e são retornadas ao cache de tabelas de trabalho. Isto aumenta o desempenho.)|  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -21,10 +21,10 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b342e77c542cd9f3357bccd4b97f3a876d1f5f1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115693"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Criar um ponto de controle do Utilitário do SQL Server (Utilitário do SQL Server)
@@ -102,7 +102,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ## <a name="wizard-steps"></a>Etapas do Assistente  
  ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
   
- As seções a seguir fornecem informações sobre cada página no fluxo de trabalho do assistente para criar um novo UCP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para iniciar o assistente para criar um novo UCP, abra o painel Gerenciador do Utilitário no menu Exibir do SSMS e, em seguida, clique no botão ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **Criar UCP** na parte superior do painel Gerenciador do Utilitário.  
+ As seções a seguir fornecem informações sobre cada página no fluxo de trabalho do assistente para criar um novo UCP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para iniciar o assistente para criar um UCP, abra o painel do Gerenciador do Utilitário no menu Exibir do SSMS e, em seguida, clique no botão ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **Criar UCP** na parte superior do painel do Gerenciador do Utilitário.  
   
  Clique em um link na lista abaixo para navegar para os detalhes de uma página do assistente:  
   
@@ -125,9 +125,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Welcome"></a> Introdução ao Assistente para Criar UCP  
  Se você abrir o Gerenciador do Utilitário e não houver nenhum ponto de controle de utilitário conectado, deverá se conectar a um ou criar um novo.  
   
- **Conectar ao UCP existente** – se já houver um ponto de controle do utilitário na implantação, você poderá se conectar a ele clicando no botão  ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Conectar ao Utilitário** do na parte superior do painel Gerenciador do Utilitário. Para se conectar a um UCP existente, você deve ter credenciais de administrador ou ser membro da função Leitor do Utilitário. Observe que pode haver somente um UCP por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility e você pode ser conectado a um UCP somente de uma instância de SSMS.  
+ **Conectar ao UCP existente**: se já houver um ponto de controle do utilitário na implantação, você poderá se conectar a ele clicando no botão ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Conectar ao Utilitário** na parte superior do painel do Gerenciador do Utilitário. Para se conectar a um UCP existente, você deve ter credenciais de administrador ou ser membro da função Leitor do Utilitário. Observe que pode haver somente um UCP por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility e você pode ser conectado a um UCP somente de uma instância de SSMS.  
   
- **Criar um novo UCP** – Para criar um novo ponto de controle do utilitário, clique no botão ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**Criar UCP** na parte superior do painel Gerenciador do Utilitário. Para criar um novo UCP, especifique o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e forneça credenciais de administrador na caixa de diálogo de conexão. Observe que pode haver somente um UCP por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
+ **Criar um UCP**: para criar um ponto de controle do utilitário, clique no botão ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**Criar UCP** na parte superior do painel do Gerenciador do Utilitário. Para criar um novo UCP, especifique o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e forneça credenciais de administrador na caixa de diálogo de conexão. Observe que pode haver somente um UCP por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
   
 ##  <a name="Instance_name"></a> Especificar Instância  
  Especifique as seguintes informações sobre o UCP que você está criando:  
@@ -138,7 +138,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  Para continuar, clique em **Avançar**.  
   
-##  <a name="Connection_dialog"></a> Caixa de diálogo de conexão  
+##  <a name="Connection_dialog"></a> Caixa de diálogo Conexão  
  Na caixa de diálogo Conectar ao Servidor, verifique as informações de tipo de servidor, nome do computador e nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
 > [!NOTE]  
@@ -158,7 +158,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Validation_rules"></a> Regras de validação  
  Nesta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as seguintes condições devem ser verdadeiras na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em que o UCP será criado:  
   
-|Regra de validação|Ação corretiva|  
+|Regra de validação|Ação Corretiva|  
 |---------------------|-----------------------|  
 |Você deve ter privilégios de administrador na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em que o ponto de controle de utilitário será criado.|Faça logon com uma conta que tenha privilégios de administrador na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |A versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser 10.50 ou superior.|Especifique uma instância diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para hospedar o UCP.|  

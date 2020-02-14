@@ -13,10 +13,10 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909156"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Validação pós-migração e guia de otimização
@@ -96,7 +96,7 @@ Um possível problema surge quando essa primeira compilação pode não ter usad
 O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode considerar apenas informações que são conhecidas no tempo de compilação. Se uma carga de trabalho se baseia em predicados que podem ser conhecidos apenas no tempo de execução, a possibilidade de escolher um plano ineficaz aumenta. Para um plano de melhor qualidade, os predicados devem ser **SARGable** ou **S**earch **Arg**ument**able** (argumentos pesquisáveis).
 
 Alguns exemplos de predicados não SARGable:
--   Conversões implícitas de dados, como VARCHAR para NVARCHAR ou INT para VARCHAR. Procure os avisos de CONVERT_IMPLICIT de tempo de execução nos Planos de Execução Reais. Converter de um tipo para outro também pode causar perda de precisão.
+-   Conversões implícitas de dados, como VARCHAR para NVARCHAR ou INT para VARCHAR. Procure os avisos de CONVERT_IMPLICIT de runtime nos Planos de Execução Reais. Converter de um tipo para outro também pode causar perda de precisão.
 -   Expressões complexas indeterminadas como `WHERE UnitPrice + 1 < 3.975`, mas não `WHERE UnitPrice < 320 * 200 * 32`.
 -   Expressões que usam funções, como `WHERE ABS(ProductID) = 771` ou `WHERE UPPER(LastName) = 'Smith'`
 -   Cadeias de caracteres com um caractere curinga à esquerda como `WHERE LastName LIKE '%Smith'`, mas não `WHERE LastName LIKE 'Smith%'`.

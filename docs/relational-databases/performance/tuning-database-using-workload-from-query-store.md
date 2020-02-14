@@ -12,19 +12,19 @@ ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 4abca73a7d1ac259034987a494f5d7395b507a3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113170"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Ajustando o banco de dados usando a carga de trabalho do repositório de consulta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
-O recurso [Repositório de Consultas](../../relational-databases/performance/how-query-store-collects-data.md) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] captura automaticamente um histórico das consultas, planos e estatísticas de tempo de execução e persiste essas informações no banco de dados. O [DTA (Orientador de Otimização do Mecanismo de Banco de Dados)](../../relational-databases/performance/database-engine-tuning-advisor.md) dá suporte a uma nova opção para usar o armazenamento de consulta para selecionar automaticamente uma carga de trabalho adequada para ajuste. Para muitos usuários, isso pode eliminar a necessidade de coletar explicitamente uma carga de trabalho para ajuste. Esse recurso só estará disponível se o banco de dados tiver o recurso Repositório de Consultas ativado. 
+O recurso [Repositório de Consultas](../../relational-databases/performance/how-query-store-collects-data.md) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] captura automaticamente um histórico das consultas, planos e estatísticas de runtime e persiste essas informações no banco de dados. O [DTA (Orientador de Otimização do Mecanismo de Banco de Dados)](../../relational-databases/performance/database-engine-tuning-advisor.md) dá suporte a uma nova opção para usar o armazenamento de consulta para selecionar automaticamente uma carga de trabalho adequada para ajuste. Para muitos usuários, isso pode eliminar a necessidade de coletar explicitamente uma carga de trabalho para ajuste. Esse recurso só estará disponível se o banco de dados tiver o recurso Repositório de Consultas ativado. 
   
-Esse recurso está disponível com [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **v16.4** ou superior. 
+Esse recurso está disponível no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **v16.4** ou superior. 
   
 ## <a name="how-to-tune-a-workload-from-query-store-in-database-engine-tuning-advisor-gui"></a>Como ajustar uma carga de trabalho do repositório de consulta na GUI do Orientador de otimização do mecanismo de banco de dados
 No GUI do DTA, selecione o botão de opção **Repositório de Consultas** no painel **Geral** para habilitar esse recurso (veja a figura abaixo).

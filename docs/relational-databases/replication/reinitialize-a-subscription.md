@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846507"
 ---
 # <a name="reinitialize-a-subscription"></a>Reinicializar uma assinatura
@@ -33,7 +33,7 @@ ms.locfileid: "70846507"
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Reinicializar uma assinatura é um processo em duas partes:  
   
-1.  Uma única assinatura ou todas as assinaturas de uma publicação são *marcadas* para reinicialização. Marque as assinaturas para reinicialização na caixa de diálogo **Reinicializar Assinatura(s)** , que está disponível nas pastas **Publicações Locais** e **Assinaturas Locais** no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você também pode marcar assinaturas da guia **Todas as Assinaturas** e o nó de publicações no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor). Ao marcar uma assinatura para reinicialização, você tem as seguintes opções:  
+1.  Uma única assinatura ou todas as assinaturas de uma publicação são *marcadas* para reinicialização. Marque as assinaturas para reinicialização na caixa de diálogo **Reinicializar Assinaturas**, disponível nas pastas **Publicações Locais** e **Assinaturas Locais** do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você também pode marcar assinaturas da guia **Todas as Assinaturas** e o nó de publicações no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor). Ao marcar uma assinatura para reinicialização, você tem as seguintes opções:  
   
      **Usar o instantâneo atual**  
      Selecione para aplicar o instantâneo atual ao Assinante da próxima vez que o Distribution Agent ou Merge Agent forem executados. Se não houver nenhum instantâneo válido disponível, essa opção não poderá ser selecionada.  

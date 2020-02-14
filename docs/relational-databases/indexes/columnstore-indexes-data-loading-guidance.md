@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68307633"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Índices columnstore – diretrizes de carregamento de dados
@@ -31,7 +31,7 @@ Opções e recomendações para carregar dados em um índice columnstore usando 
 
 Para executar uma carga em massa, você pode usar o [Utilitário bcp](../../tools/bcp-utility.md), o [Integration Services](../../integration-services/sql-server-integration-services.md) ou selecionar linhas de uma tabela de preparo.
 
-![Carregando em um índice columnstore clusterizado](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Carregando em um índice columnstore clusterizado")  
+![Carregamento em um índice columnstore clusterizado](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Carregamento em um índice columnstore clusterizado")  
   
 Como sugere o diagrama, um carregamento em massa:
   
@@ -74,7 +74,7 @@ SELECT object_id, index_id, partition_number, row_group_id, delta_store_hobt_id,
 FROM sys.dm_db_column_store_row_group_physical_stats  
 ```  
   
- ![Rowgroup e deltastore para uma carga em lote](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup e deltastore para uma carga em lote")  
+ ![Rowgroup e deltastore para um carregamento em lote](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup e deltastore para um carregamento em lote")  
   
 ## <a name="use-a-staging-table-to-improve-performance"></a>Usar uma tabela de preparo para melhorar o desempenho
 Se você estiver carregando dados apenas para prepará-los antes de executar mais transformações, carregar a tabela na tabela de heap será muito mais rápido do que carregar os dados em uma tabela columnstore clusterizada. Além disso, carregar dados em uma [tabela temporária] [Temporária] também será muito mais rápido do que carregar uma tabela em um armazenamento permanente.  
