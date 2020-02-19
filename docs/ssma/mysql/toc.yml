@@ -1,4 +1,4 @@
-- name: mySQL
+- name: MySQL
   href: sql-server-migration-assistant-for-mysql-mysqltosql.md
 - name: Instalar o SSMA
   href: installing-ssma-for-mysql-mysqltosql.md
@@ -38,7 +38,7 @@
   href: save-metadata-mysqltosql.md
 - name: Comandos de menu e outras teclas de atalho
   href: menu-commands-and-other-shortcut-keys-mysqltosql.md
-- name: solução de problemas
+- name: Solução de problemas
   href: troubleshooting-mysqltosql.md
 - name: Conectar-se ao MySQL
   href: connect-to-mysql-mysqltosql.md
