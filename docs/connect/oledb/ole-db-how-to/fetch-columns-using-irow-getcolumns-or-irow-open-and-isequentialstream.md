@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0ff29e4ed9a5986173020530bd691d0c95a89749
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994798"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Buscar colunas usando IRow::GetColumns (ou IRow::Open) e ISequentialStream
@@ -37,13 +37,13 @@ ms.locfileid: "67994798"
   
 2.  Execute o comando (neste exemplo, **ICommandExecute::Execute()** é chamado com IID_IRow).  
   
-3.  Busque os dados da coluna usando **IRow:: Open ()** ou **IRow:: GetColumns ()** .  
+3.  Busque os dados da coluna usando **IRow::Open()** ou **IRow::GetColumns()** .  
   
-    -   **IRow:: Open ()** pode ser usado para abrir um **ISequentialStream** na linha. Especifique DBGUID_STREAM para indicar que uma coluna contém um fluxo de dados binários (**IStream** ou **ISequentialStream** que pode então ser usada para ler os dados da coluna).  
+    -   **IRow::Open()** pode ser usado para abrir um **ISequentialStream** na linha. Especifique DBGUID_STREAM para indicar que uma coluna contém um fluxo de dados binários (**IStream** ou **ISequentialStream** que pode então ser usada para ler os dados da coluna).  
   
     -   Se **IRow::GetColumns()** for usado, o elemento **pData** da estrutura DBCOLUMNACCESS será definido de forma a apontar para um objeto de fluxo.  
   
-4.  Use **ISequentialStream:: Read ()** repetidamente para ler o número especificado de bytes no buffer do consumidor.  
+4.  Use **ISequentialStream::Read()** repetidamente para ler o número especificado de bytes no buffer de consumidor.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como buscar uma única linha por meio de IRow. Neste exemplo, uma coluna de cada vez é recuperada da linha. Este exemplo ilustra o uso de IRow::Open() e de IRow::GetColumns(). Para ler os dados da coluna, o exemplo usa ISequentialStream::Read.  

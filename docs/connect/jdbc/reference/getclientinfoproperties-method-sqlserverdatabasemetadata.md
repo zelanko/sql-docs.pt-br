@@ -11,10 +11,10 @@ ms.assetid: 1568aef4-f4c4-40a0-a1ab-9c106905bd92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08b919ec6b626cd61b757b380d24efffcada0d55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953101"
 ---
 # <a name="getclientinfoproperties-method-sqlserverdatabasemetadata"></a>Método getClientInfoProperties (SQLServerDatabaseMetaData)
@@ -35,11 +35,11 @@ public java.sql.ResultSet getClientInfoProperties()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getClientInfoProperties é especificado pelo método getClientInfoProperties na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método getClientInfoProperties é especificado pelo método getClientInfoProperties na interface java.sql.DatabaseMetaData.  
   
 > [!NOTE]  
->  Esse método retorna um conjunto de resultados vazio. O driver dá suporte à configuração somente do **ApplicationName** e define o **ApplicationName** somente no momento da conexão. O SQL Server não dá suporte à atualização das informações de aplicativo cliente depois que a conexão é estabelecida.  
+>  Esse método retorna um conjunto de resultados vazio. O driver dá suporte apenas à configuração **applicationName** e define o **applicationName** somente em tempo de conexão. O SQL Server não dá suporte à atualização das informações de aplicativo cliente depois que a conexão é estabelecida.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   

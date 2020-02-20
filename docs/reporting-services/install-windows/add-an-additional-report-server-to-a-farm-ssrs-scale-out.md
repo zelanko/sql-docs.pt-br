@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63225687"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Adicionar um servidor de relatório a um farm (expansão SSRS)
@@ -53,7 +53,7 @@ ms.locfileid: "63225687"
   
 -   (4) Representa uma solução de software ou hardware de NLB (balanceamento de carga de rede)  
   
- ![Adicionando um servidor de aplicativos do Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Adicionando um servidor de aplicativos do Reporting Services")  
+ ![Adicionar um servidor de aplicativos do Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Adicionar um servidor de aplicativos do Reporting Services")  
   
  As etapas a seguir pressupõem que um administrador esteja instalando e configurando o servidor. O servidor será instalado como um novo servidor de aplicativos no farm e não usado como um WFE (front-end da Web).  
   
@@ -81,4 +81,4 @@ ms.locfileid: "63225687"
 [Adicionar o SharePoint Server a um farm no SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
 [Adicionar o SharePoint Server a um farm no SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

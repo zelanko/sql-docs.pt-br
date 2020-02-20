@@ -1,5 +1,5 @@
 ---
-title: Oferecendo suporte a transações distribuídas | Microsoft Docs
+title: Dando suporte a transações distribuídas | Microsoft Docs
 description: Transações distribuídas no OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 22527cdfa08907dfdf120ef32c918ecb9eaf86bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993982"
 ---
 # <a name="supporting-distributed-transactions"></a>Dando suporte a transações distribuídas
@@ -32,7 +32,7 @@ ms.locfileid: "67993982"
 
   Os consumidores do OLE DB Driver for SQL Server podem usar o método **ITransactionJoin::JoinTransaction** para participar de uma transação distribuída coordenada pelo MS DTC (Coordenador de Transações Distribuídas da Microsoft).  
   
- O MS DTC expõe objetos COM que permitem que os clientes iniciem e participem de transações coordenadas através de várias conexões com vários repositórios de dados. Para iniciar uma transação, o driver de OLE DB para SQL Server consumidor usa a interface **ITransactionDispenser** do MS DTC. O membro **BeginTransaction** de **ITransactionDispenser** retorna uma referência a um objeto de transação distribuída. Essa referência é passada para o driver de OLE DB para SQL Server usando o **JoinTransaction**.  
+ O MS DTC expõe objetos COM que permitem que os clientes iniciem e participem de transações coordenadas através de várias conexões com vários repositórios de dados. Para iniciar uma transação, o consumidor do Driver do OLE DB para SQL Server usa a **interface ITransactionDispenser** do MS DTC. O membro **BeginTransaction** de **ITransactionDispenser** retorna uma referência a um objeto de transação distribuída. Essa referência é passada ao Driver do OLE DB para SQL Server usando **JoinTransaction**.  
   
  O MS DTC dá suporte à confirmação e à anulação assíncronas de transações distribuídas. Para obter a notificação do status da transação assíncrona, o consumidor implementa a interface **ITransactionOutcomeEvents** e a conecta a um objeto de transação do MS DTC.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "67993982"
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Um ponteiro para um objeto de transação do MS DTC.|  
-|*IsoLevel*|Ignorado pelo driver de OLE DB para SQL Server. O nível de isolamento para transações coordenadas pelo MS DTC é determinado quando o consumidor faz a aquisição de um objeto de transação do MS DTC.|  
-|*IsoFlags*|Deve ser 0. O driver OLE DB para SQL Server retornará XACT_E_NOISORETAIN se qualquer outro valor for especificado pelo consumidor.|  
-|*POtherOptions*|Se não for NULL, o driver de OLE DB para SQL Server solicitará o objeto de opções da interface. O driver de OLE DB para SQL Server retornará XACT_E_NOTIMEOUT se o membro *ulTimeout* do objeto de opções não for zero. O driver OLE DB para SQL Server ignora o valor do membro *szDescription* .|  
+|*IsoLevel*|Ignorado pelo Driver do OLE DB para SQL Server. O nível de isolamento para transações coordenadas pelo MS DTC é determinado quando o consumidor faz a aquisição de um objeto de transação do MS DTC.|  
+|*IsoFlags*|Deve ser 0. O Driver do OLE DB para SQL Server retornará XACT_E_NOISORETAIN se qualquer outro valor for especificado pelo consumidor.|  
+|*POtherOptions*|Se for diferente de NULL, o Driver do OLE DB para SQL Server solicitará o objeto de opções da interface. O Driver do OLE DB para SQL Server retornará XACT_E_NOTIMEOUT se o membro *ulTimeout* do objeto de opções for diferente de zero. O Driver do OLE DB para SQL Server ignora o valor do membro *szDescription*.|  
   
  Este exemplo coordena a transação usando o MS DTC.  
   
@@ -143,6 +143,6 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Transactions](../../oledb/ole-db-transactions/transactions.md)  
+ [Transações](../../oledb/ole-db-transactions/transactions.md)  
   
   

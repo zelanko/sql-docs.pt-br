@@ -11,10 +11,10 @@ ms.assetid: fbc5bf3c-120c-4aec-a4f2-f5391bd415f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0032f92c79916cbd12962e792b51a05e9f353388
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581029"
 ---
 # <a name="configurationsetting-method---getadminsiteurl"></a>Método de ConfigurationSetting – GetAdminSiteUrl
@@ -31,7 +31,7 @@ ByRef HRESULT as Int32)
 public void GetAdminSiteUrl(out string AdminSiteUrl, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *AdminSiteUrl*  
  [out] Uma cadeia de caracteres que contém a URL absoluta para o site da Administração Central do farm do SharePoint ao qual o servidor de relatório está integrado.  
   
@@ -45,6 +45,6 @@ public void GetAdminSiteUrl(out string AdminSiteUrl, out Int32 HRESULT);
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Métodos MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md)  
+ [Métodos de MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md)  
   
   

@@ -15,10 +15,10 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 574fcc9c8e180b75d5d3def6d97798708c40996c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140258"
 ---
 # <a name="process-large-reports"></a>Processar relatórios grandes
@@ -36,7 +36,7 @@ ms.locfileid: "67140258"
 ## <a name="configuration-recommendations"></a>Recomendações de configuração  
  As recomendações para execução e renderização de relatório e o acesso a ele incluem os seguintes itens:  
   
--   Projete o relatório para oferecer suporte à paginação. O servidor de relatório envia uma página do relatório por vez. Se o relatório incluir paginação, será possível controlar a quantidade de dados que será transmitida ao navegador. Para obter mais informações, consulte [pré-carregar o Cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md).  
+-   Projete o relatório para oferecer suporte à paginação. O servidor de relatório envia uma página do relatório por vez. Se o relatório incluir paginação, será possível controlar a quantidade de dados que será transmitida ao navegador. Para obter mais informações, confira [Pré-carregar o cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md).  
   
 -   Configure o relatório para ser executado como um instantâneo de relatório agendado para evitar que seja executado sob demanda. Não defina um valor de tempo limite para a execução de relatório. Execute o relatório em horários de pouca atividade.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "67140258"
   
 ## <a name="see-also"></a>Confira também  
  [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Definir propriedades de processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Definir as propriedades do processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Pré-carregar o cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)  

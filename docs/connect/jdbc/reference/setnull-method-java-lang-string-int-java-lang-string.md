@@ -16,10 +16,10 @@ ms.assetid: 16ff77f9-7928-415c-abf6-97ed59e3e396
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5137c4df92860822e715d70a1355b490026af40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973561"
 ---
 # <a name="setnull-method-javalangstring-int-javalangstring"></a>Método setNull (java.lang.String, int, java.lang.String)
@@ -36,10 +36,10 @@ public void setNull(java.lang.String sCol,
                     java.lang.String sTypeName)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *sCol*  
   
- Uma **cadeia de caracteres** contthat contém aining nome do parâmetro.  
+ Uma **String** que contém o nome do parâmetro.  
   
  *nType*  
   
@@ -52,7 +52,7 @@ public void setNull(java.lang.String sCol,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método setNull é especificado pelo método setNull na interface java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte Também  

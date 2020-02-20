@@ -16,10 +16,10 @@ ms.assetid: ea0f95d0-0238-4dc8-9f26-7ff9b65f30c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b65281fbe6ba1f758bdd4e12ae834cee3347842
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980055"
 ---
 # <a name="getsearchstringescape-method-sqlserverdatabasemetadata"></a>Método getSearchStringEscape (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public java.lang.String getSearchStringEscape()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getSearchStringEscape é especificado pelo método getSearchStringEscape na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método getSearchStringEscape é especificado pelo método getSearchStringEscape na interface java.sql.DatabaseMetaData.  
   
  Esse método é usado apenas para pesquisas de padrão de metadados. Ele retorna “\\”. Um padrão de pesquisa de **cadeia de caracteres** pode usar curingas como escape (“%” e “_”) e fornecê-los como literais precedidos por uma barra invertida. Isso converte “\\%” em “[%]” e “\\\_” em “[\_]”.  
   

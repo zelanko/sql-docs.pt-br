@@ -9,10 +9,10 @@ ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3898e4202d958c1d20d5436a143e80bb45c7490f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577791"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
@@ -41,11 +41,11 @@ ms.locfileid: "65577791"
   
 4.  Exclua a coluna de grupo clicando com o botão direito do mouse no cabeçalho de coluna, clicando em **Excluir Colunas**, selecionando **Excluir colunas apenas**e clicando em **OK**.  
   
-     ![Excluir uma coluna de grupo](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "Excluir uma coluna de grupo")  
+     ![Excluir uma coluna do grupo](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "Excluir uma coluna do grupo")  
   
 5.  Clique com o botão direito do mouse em **Grupo 1** na seção **Grupos de Linhas** e clique em **Propriedades do Grupo**.  
   
-     ![Exibir as propriedades do grupo](../../reporting-services/report-builder/media/groupproperties-updated.png "Exibir as propriedades do grupo")  
+     ![Exibir propriedades do grupo](../../reporting-services/report-builder/media/groupproperties-updated.png "Exibir propriedades do grupo")  
   
 6.  Na página **Classificação** da caixa de diálogo **Propriedades do Grupo** , selecione a opção de classificação padrão e clique em **Excluir**.  
   

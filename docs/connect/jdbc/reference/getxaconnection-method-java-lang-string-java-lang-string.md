@@ -16,10 +16,10 @@ ms.assetid: 276e0093-3d42-4f73-acc4-2b5b98245b40
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23ba6bc636e5bc714a606c29a46f7b52ce1bbea4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977989"
 ---
 # <a name="getxaconnection-method-javalangstring-javalangstring"></a>Método getXAConnection (java.lang.String, java.lang.String)
@@ -35,7 +35,7 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
                                               java.lang.String password)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *user*  
   
  Uma **String** que contém o nome do usuário.  
@@ -50,8 +50,8 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
 ## <a name="exceptions"></a>Exceções  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- Esse método getXAConnection é especificado pelo método getXAConnection na interface javax. Sql. XADataSource.  
+## <a name="remarks"></a>Comentários  
+ Esse método getXAConnection é especificado pelo método getXAConnection na interface javax.sql.XADataSource.  
   
 > [!NOTE]  
 >  Esse método é chamado geralmente pelas implementações de pool de conexões XA, mas não regularmente pelo código de aplicativo JDBC.  

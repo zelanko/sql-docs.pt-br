@@ -1,5 +1,5 @@
 ---
-title: Programando com SQLXML | Microsoft Docs
+title: Como programar com SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027767"
 ---
 # <a name="programming-with-sqlxml"></a>Programando com SQLXML
@@ -27,11 +27,11 @@ ms.locfileid: "69027767"
 ## <a name="reading-and-writing-xml-data-with-sqlxml-objects"></a>Lendo e escrevendo dados XML com objetos SQLXML  
  A lista a seguir descreve como usar os métodos da API [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] para ler e gravar dados XML com objetos SQLXML:  
   
--   Para criar um objeto SQLXML, use o método [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) da classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Observe que esse método cria um objeto SQLXML sem quaisquer dados. Para adicionar dados **XML** ao objeto SQLXML, chame um dos seguintes métodos especificados na interface do SQLXML: setResult, SetCharacterStream, setBinaryStream ou SetString.  
+-   Para criar um objeto SQLXML, use o método [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) da classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Observe que esse método cria um objeto SQLXML sem quaisquer dados. Para adicionar dados **xml** ao objeto SQLXML, chame um dos seguintes métodos especificados na interface do SQLXML: setResult, setCharacterStream, setBinaryStream ou setString.  
   
 -   Para recuperar o objeto SQLXML propriamente dito, use os métodos getSQLXML da classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) ou da classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
--   Para recuperar os dados **XML** de um objeto SQLXML, use um dos seguintes métodos especificados na interface do SQLXML: GetSource, GetCharacterStream, getBinaryStream ou GetString.  
+-   Para recuperar dados **xml** de um objeto SQLXML, use um dos seguintes métodos especificados na interface do SQLXML: getSource, getCharacterStream, getBinaryStream ou getString.  
   
 -   Para atualizar os dados **xml** em um objeto SQLXML, use o método [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) da classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
@@ -50,14 +50,14 @@ ms.locfileid: "69027767"
   
 |Nome do método|Objeto SQLXML de getter<br /><br /> (pode ser lido)|Objeto SQLXML de setter<br /><br /> (gravável)|  
 |-----------------|-------------------------------------------|-------------------------------------------|  
-|CallableStatement.setSQLXML()|Sem suporte|Tem suporte|  
-|CallableStatement.setObject()|Sem suporte|Tem suporte|  
-|PreparedStatement.setSQLXML()|Sem suporte|Tem suporte|  
-|PreparedStatement.setObject()|Sem suporte|Tem suporte|  
-|ResultSet.updateSQLXML()|Sem suporte|Tem suporte|  
-|ResultSet.updateObject()|Sem suporte|Tem suporte|  
-|ResultSet.getSQLXML()|Tem suporte|Sem suporte|  
-|CallableStatement.getSQLXML()|Tem suporte|Sem suporte|  
+|CallableStatement.setSQLXML()|Sem suporte|Com suporte|  
+|CallableStatement.setObject()|Sem suporte|Com suporte|  
+|PreparedStatement.setSQLXML()|Sem suporte|Com suporte|  
+|PreparedStatement.setObject()|Sem suporte|Com suporte|  
+|ResultSet.updateSQLXML()|Sem suporte|Com suporte|  
+|ResultSet.updateObject()|Sem suporte|Com suporte|  
+|ResultSet.getSQLXML()|Com suporte|Sem suporte|  
+|CallableStatement.getSQLXML()|Com suporte|Sem suporte|  
   
  Como mostrado na tabela acima, os métodos SQLXML de setter não funcionarão com os objetos SQLXML que podem ser lidos; da mesma forma, os métodos de getter não funcionarão com os objetos SQLXML que podem ser escritos.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "69027767"
  Os analisadores de XML não podem tratar valores vazios. Porém, o SQL Server permite que os aplicativos recuperem e armazenem valores vazios de e para colunas de banco de dados do tipo de dados XML. Isso significa que, ao analisar os dados XML, se o valor subjacente for vazio, uma exceção será lançada pelo analisador. Para saídas de DOM, o driver JDBC captura essa exceção e lança um erro. Para saídas de SAX e StAX, o erro vem diretamente do analisador.  
   
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>Suporte a buffer adaptável e SQLXML  
- Os fluxos binário e de caracteres retornados pelo objeto SQLXML obedecem aos modos de buffer adaptável ou completo. Por outro lado, se os analisadores de XML não forem fluxos, eles não obedecerão às configurações de adaptável ou completo. Para obter mais informações sobre o buffer adaptável, consulte [usando o buffer adaptável](../../connect/jdbc/using-adaptive-buffering.md).  
+ Os fluxos binário e de caracteres retornados pelo objeto SQLXML obedecem aos modos de buffer adaptável ou completo. Por outro lado, se os analisadores de XML não forem fluxos, eles não obedecerão às configurações de adaptável ou completo. Para obter mais informações sobre como usar o buffer adaptável, veja [Como usar o buffer adaptável](../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Confira também  
  [Suporte a dados XML](../../connect/jdbc/supporting-xml-data.md)  

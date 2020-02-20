@@ -16,10 +16,10 @@ ms.assetid: 6c37b518-147e-4cd9-9eff-b48a3f5888c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd4059c3562d679e4f5f8bfdd133ca69a62c1fd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972214"
 ---
 # <a name="settrustservercertificate-method-sqlserverdatasource"></a>Método setTrustServerCertificate (SQLServerDataSource)
@@ -34,12 +34,12 @@ ms.locfileid: "67972214"
 public void setTrustServerCertificate(boolean trustServerCertificate)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *trustServerCertificate*  
   
- **true** se o certificado de protocolo SSL do servidor (SSL) deve ser confiável automaticamente quando a camada de comunicação é criptografada usando SSL. Caso contrário, **false**.  
+ **true** caso o certificado de protocolo SSL do servidor deva ser automaticamente confiável quando a camada de comunicação for criptografada com SSL. Caso contrário, **false**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se a propriedade trustServerCertificate estiver definida como **true**, o certificado SSL do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será automaticamente confiável quando a camada de comunicação for criptografada com SSL. Em outras palavras, o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] não validará o certificado SSL do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O valor padrão é **false**.  
   
  Se a propriedade trustServerCertificate estiver definida como **false**, o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] validará o certificado SSL do servidor.  

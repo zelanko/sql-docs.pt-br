@@ -16,10 +16,10 @@ ms.assetid: 836f1f45-59ed-4a34-9809-2000d3062576
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a59e2c8bc82a54080b7413e13928b0e85a49270
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969449"
 ---
 # <a name="supportsfullouterjoins-method-sqlserverdatabasemetadata"></a>Método supportsFullOuterJoins (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean supportsFullOuterJoins()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método supportsFullOuterJoins é especificado pelo método supportsFullOuterJoins na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método supportsFullOuterJoins é especificado pelo método supportsFullOuterJoins na interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

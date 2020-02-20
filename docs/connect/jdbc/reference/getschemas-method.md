@@ -16,10 +16,10 @@ ms.assetid: adba0ee6-ff6d-4215-b646-62c735be3fe9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0a5f453e6300258cacffa6606259f85cdd25977
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980083"
 ---
 # <a name="getschemas-method-"></a>Método getSchemas ()
@@ -40,15 +40,15 @@ public java.sql.ResultSet getSchemas()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getSchemas é especificado pelo método getSchemas na interface java.sql.DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getSchemas contém as seguintes informações:  
   
-|Nome|Tipo|Descrição|  
+|Nome|Type|Descrição|  
 |----------|----------|-----------------|  
-|TABLE_SCHEM|**String**|O nome do esquema.|  
-|TABLE_CATALOG|**String**|O nome de catálogo para o esquema.|  
+|TABLE_SCHEM|**Cadeia de caracteres**|O nome do esquema.|  
+|TABLE_CATALOG|**Cadeia de caracteres**|O nome de catálogo para o esquema.|  
   
  Os resultados são ordenados por TABLE_CATALOG e, em seguida, por TABLE_SCHEM. Cada linha tem TABLE_SCHEM como a primeira coluna e TABLE_CATALOG como a segunda coluna.  
   

@@ -11,10 +11,10 @@ ms.assetid: c426b0e3-2f9d-425a-b7da-1d0325e292d1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98e01a552717febaaa5a35612ee3d5cd44baa2c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996810"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader-long"></a>Método updateCharacterStream (int, java.io.Reader, long)
@@ -31,14 +31,14 @@ public void updateCharacterStream(int columnIndex,
                                   long length)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnIndex*  
   
  Um **int** que indica o índice de coluna.  
   
  *x*  
   
- Um objeto leitor.  
+ Um objeto Reader.  
   
  *length*  
   
@@ -47,8 +47,8 @@ public void updateCharacterStream(int columnIndex,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método updateCharacterStream é especificado pelo método updateCharacterStream na interface java. Sql. ResultSet.  
+## <a name="remarks"></a>Comentários  
+ Esse método updateCharacterStream é especificado pelo método updateCharacterStream na interface java.sql.ResultSet.  
   
  Este método passa caracteres Unicode de um objeto Reader para colunas de texto e binárias selecionadas. Isto inclui todas as colunas de texto e colunas binary, varbinary, varbinary(max), image e XML, mas não colunas UDT.  
   

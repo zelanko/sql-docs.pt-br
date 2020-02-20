@@ -11,19 +11,19 @@ ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0def25f7fc19344c3548353bbd15ffa27e65caa
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027515"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Etapa 3: Prova de conceito da conexão com o SQL usando o Java
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Etapa 3: Prova de conceito da conexão ao SQL usando Java
   
-Este exemplo deve ser considerado apenas uma prova de conceito. O código de exemplo é simplificado para fins de clareza e não necessariamente representa as práticas recomendadas recomendadas pela Microsoft.  
+Este exemplo deve ser considerado apenas uma prova de conceito. O código de exemplo está simplificado para fins de clareza e não necessariamente representa as melhores práticas recomendadas pela Microsoft.  
   
-## <a name="step-1-connect"></a>Etapa 1: conectar-se  
+## <a name="step-1-connect"></a>Etapa 1: Conectar  
   
-Use a classe Connection para se conectar ao banco de dados SQL.   
+Use a classe de conexão para se conectar ao Banco de Dados SQL.   
   
 ```java  
 import java.sql.Connection;
@@ -55,7 +55,7 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="step-2-execute-a-query"></a>Etapa 2: Executar uma consulta  
-Neste exemplo, conecte-se ao banco de dados SQL do Azure, execute uma instrução SELECT e retorne as linhas selecionadas.   
+Neste exemplo, conecte-se ao Banco de Dados SQL do Azure, execute uma instrução SELECT e retorne linhas selecionadas.   
   
 ```java  
 import java.sql.Connection;
@@ -99,7 +99,7 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-3-insert-a-row"></a>Etapa 3: inserir uma linha  
+## <a name="step-3-insert-a-row"></a>Etapa 3: Inserir uma linha  
 Neste exemplo, execute uma instrução INSERT, passe parâmetros e recupere o valor de chave primária gerado automaticamente.   
   
 ```java  
@@ -148,5 +148,5 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="additional-samples"></a>Exemplos adicionais  
+## <a name="additional-samples"></a>Outros exemplos  
 [Aplicativos de exemplo do JDBC Driver](../../connect/jdbc/sample-jdbc-driver-applications.md)

@@ -16,10 +16,10 @@ ms.assetid: 028b8d61-9557-4c9f-b732-29e87a962de8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27238772e437bc6bd5f8b33bed7e89dd0c294a3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977827"
 ---
 # <a name="isautoincrement-method-sqlserverresultsetmetadata"></a>Método isAutoIncrement (SQLServerResultSetMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67977827"
 public boolean isAutoIncrement(int column)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *column*  
   
  Um **int** que indica o índice de coluna.  
@@ -45,8 +45,8 @@ public boolean isAutoIncrement(int column)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método isAutoIncrement é especificado pelo método isAutoIncrement na interface java. Sql. ResultSetMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método isAutoIncrement é especificado pelo método isAutoIncrement na interface java.sql.ResultSetMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [SQLServerResultSetMetaData Methods](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

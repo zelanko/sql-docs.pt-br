@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f0734203a5b5e49ad344b2c0440208c6b652c080
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 9669b2c38d2e8b571ef7e519100b13cf5a63a10d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725471"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479408"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutorial: Análise de dados do R para desenvolvedores de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Neste tutorial para programadores de SQL, saiba mais sobre a integração do R ao criar e implantar uma solução de aprendizado de máquina baseada em R usando um banco de dados [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) no SQL Server. Você usará o T-SQL, o SQL Server Management Studio e uma instância do mecanismo de banco de dados com os [Serviços de Machine Learning] ([Serviços de Machine Learning](../install/sql-machine-learning-services-windows-install.md) e o suporte à linguagem R
+Neste tutorial para programadores de SQL, saiba mais sobre a integração do R ao criar e implantar uma solução de aprendizado de máquina baseada em R usando um banco de dados [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) no SQL Server. Você usará o T-SQL, o SQL Server Management Studio e uma instância do mecanismo de banco de dados com os [Serviços de Machine Learning](../install/sql-machine-learning-services-windows-install.md) e o suporte à linguagem R
 
 Este tutorial apresenta as funções do R usadas em um fluxo de trabalho de modelagem de dados. As etapas incluem exploração de dados, criação e treinamento de um modelo de classificação binária e implantação de modelo. O modelo que você criará prevê se uma corrida provavelmente resultará em uma gorjeta com base na hora do dia, na distância percorrida e na localização de embarque. 
 

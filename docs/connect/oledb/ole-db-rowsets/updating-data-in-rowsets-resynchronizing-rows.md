@@ -1,6 +1,6 @@
 ---
-title: Ressincronizando linhas | Microsoft Docs
-description: Ressincronizando linhas usando OLE DB driver para SQL Server
+title: Ressincronizar linhas | Microsoft Docs
+description: Ressincronizar linhas usando o Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2f1ea1a563e986914c5fe820740776da129c3b28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994167"
 ---
 # <a name="updating-data-in-rowsets---resynchronizing-rows"></a>Atualizar dados em conjuntos de linhas – ressincronizar linhas
@@ -27,7 +27,7 @@ ms.locfileid: "67994167"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O driver OLE DB para SQL Server dá  suporte a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **IRowsetResynch** somente em conjuntos de linhas com suporte para o cursor. **IRowsetResynch** não está disponível sob demanda. O consumidor deve solicitar a interface antes de abrir o conjunto de linhas.  
+  O Driver do OLE DB para SQL Server dá suporte a **IRowsetResynch** somente em conjuntos de linhas com suporte em cursores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **IRowsetResynch** não está disponível sob demanda. O consumidor deve solicitar a interface antes de abrir o conjunto de linhas.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Atualizando dados em conjuntos de linhas](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  

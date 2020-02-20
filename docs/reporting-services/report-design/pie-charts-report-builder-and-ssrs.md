@@ -9,10 +9,10 @@ ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a623762a7424036ffe8b9b5b669be426480bbb4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582224"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Gráficos de pizza (Construtor de Relatórios e SSRS)
@@ -56,14 +56,14 @@ ms.locfileid: "65582224"
 ## <a name="applying-drawing-styles-to-a-pie-chart"></a>Aplicando estilos de desenho a um gráfico de pizza  
  Você pode acrescentar estilos de desenho especiais ao gráfico de pizza para aumentar seu impacto visual. Estilos de desenho incluem efeitos oblíquos e côncavos. Esses efeitos estão disponíveis apenas em um gráfico de pizza 2D. A ilustração a seguir mostra um exemplo dos estilos de desenho oblíquos e côncavos em um gráfico de pizza.  
   
- ![Estilos de desenho de pizza](../../reporting-services/report-design/media/rs-piedrawingeffects-concave2.gif "Estilos de desenho de pizza")  
+ ![Estilos de Desenho de Pizza](../../reporting-services/report-design/media/rs-piedrawingeffects-concave2.gif "Estilos de Desenho de Pizza")  
   
  Para obter mais informações, consulte [Como adicionar bisel, alto-relevo e estilos de textura a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
 ## <a name="displaying-percentage-values-on-a-pie-chart"></a>Exibindo valores de porcentagem em um gráfico de pizza  
  De modo similar aos demais gráficos de Forma, os gráficos de pizza representam proporções do total. Como resultado, está comum formatar os rótulos de gráfico de pizza como porcentagens. Para ser consistente com os demais tipos de gráfico, o gráfico não exibe os rótulos de porcentagem por padrão. Para obter mais informações sobre como exibir valores como porcentagens no gráfico, consulte [Exibir valores percentuais em um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md). Para obter mais informações sobre como formatar números como porcentagens em seu relatório, consulte [Formatação de números e datas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
- ![Gráfico de pizza com rótulos de ponto de dados como percentuais](../../reporting-services/report-design/media/rs-piechartpercentages.gif "Gráfico de pizza com rótulos de ponto de dados como percentuais")  
+ ![Gráfico de pizza com rótulos de ponto de dados como porcentagens](../../reporting-services/report-design/media/rs-piechartpercentages.gif "Gráfico de pizza com rótulos de ponto de dados como porcentagens")  
   
 ## <a name="preventing-overlapped-labels-on-a-pie-chart"></a>Impedindo a sobreposição de rótulos em um gráfico de pizza  
  Se houver muitos pontos de dados em um gráfico de pizza, os rótulos dos dados serão sobrepostos. Há vários modos para impedir a sobreposição de rótulos:  

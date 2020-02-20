@@ -9,14 +9,14 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 673b3eed760af4b36c494e2dd45cdfc8ed8e8dc8
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706049"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190398"
 ---
-# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Configurar as camadas do HDFS no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>Configurar as camadas do HDFS no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -25,6 +25,11 @@ A camada do HDFS fornece a capacidade de montar um sistema de arquivos externo e
 ## <a name="hdfs-tiering-overview"></a>Visão geral da camada do HDFS
 
 Com a camada, os aplicativos podem acessar diretamente os dados em uma variedade de armazenamentos externos, como se os dados residissem no HDFS local. A montagem é uma operação de metadados, em que os metadados que descrevem o namespace no sistema de arquivos externo são copiados para o HDFS local. Esses metadados incluem informações sobre os diretórios e os arquivos externos junto com as permissões e as ACLs deles. Os dados correspondentes só são copiados sob demanda, quando os próprios dados são acessados por meio de uma consulta, por exemplo. Os dados do sistema de arquivos externos agora podem ser acessados por meio do cluster de Big Data do SQL Server. Você pode executar trabalhos do Spark e consultas SQL nesses dados da mesma forma que os executaria em dados locais armazenados no HDFS no cluster.
+
+Este vídeo de sete minutos mostra uma visão geral das camadas do HDFS:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Unify-your-data-lakes-with-HDFS-tiering/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ### <a name="caching"></a>Cache
 Hoje, por padrão, 1% do armazenamento total do HDFS será reservado para o cache de dados montados. O cache é uma configuração global em montagens.

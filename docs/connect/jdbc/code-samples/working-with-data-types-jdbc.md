@@ -1,5 +1,5 @@
 ---
-title: Trabalhando com tipos de dados (JDBC) | Microsoft Docs
+title: Como trabalhar com tipos de dados (JDBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee1e64794480346b1742b441437db95b8ae41456
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028292"
 ---
 # <a name="working-with-data-types-jdbc"></a>Trabalhando com tipos de dados (JDBC)
@@ -36,7 +36,7 @@ Os tópicos nesta seção descrevem como usar os tipos de dados do driver JDBC p
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Exemplo de tipos de dados básicos](../../../connect/jdbc/code-samples/basic-data-types-sample.md)   | Descreve como usar métodos getter de conjunto de resultados para recuperar valores de tipo de dados básicos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], além de como usar métodos de atualização de conjunto de resultados para atualizar esses valores.                                             |
 | [Exemplo de tipo de dados SQLXML](../../../connect/jdbc/code-samples/sqlxml-data-type-sample.md)   | Descreve como armazenar dados XML em um banco de dados relacional, como recuperar dados XML de um banco de dados, e como analisar dados XML com um tipo de dados **SQLXML** Java.                                                                                   |
-| [Exemplo de tipos de dados espaciais](../../../connect/jdbc/code-samples/spatial-data-types-sample.md) | Descreve como armazenar tipos de dataespaciais em SQL Server e como recuperá-los de volta do SQL Server. Também discute como usar a **geometria** e **geografia** de classes recentemente definidas do driver, para gerenciar a referência Java desses tipos de datatipos. |
+| [Exemplo de tipos de dados espaciais](../../../connect/jdbc/code-samples/spatial-data-types-sample.md) | Descreve como armazenar tipos de dados espaciais no SQL Server e como recuperá-los de volta do SQL Server. Também discute como usar classes **Geometry** e **Geography** recém-definidas do driver para gerenciamento da referência de Java desses tipos de dados. |
   
 ## <a name="see-also"></a>Confira também
 

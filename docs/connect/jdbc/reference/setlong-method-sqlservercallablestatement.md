@@ -16,10 +16,10 @@ ms.assetid: 137416fe-a580-424e-be79-fe946eba9e6e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f7110594eb808a50fa88e22b1e38d2a4052066f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974038"
 ---
 # <a name="setlong-method-sqlservercallablestatement"></a>Método setLong (SQLServerCallableStatement)
@@ -35,19 +35,19 @@ public void setLong(java.lang.String sCol,
                     long l)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *sCol*  
   
  Uma **String** que contém o nome do parâmetro.  
   
  *l*  
   
- Um valor **longo** .  
+ Um valor **long**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método setLong é especificado pelo método setLong na interface java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte Também  

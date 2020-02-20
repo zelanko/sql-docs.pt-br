@@ -16,10 +16,10 @@ ms.assetid: bd2809e5-7848-45b3-a502-b04fc698b646
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59c7b026884244d37aaa59722abf2e07b3e4cc6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580047"
 ---
 # <a name="configurationsetting-method---setdatabasequerytimeout"></a>Método de ConfigurationSetting – SetDatabaseQueryTimeout
@@ -37,7 +37,7 @@ public void SetDatabaseQueryTimeout (Int32 LogonTimeout,
     out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *LogonTimeout*  
  O valor de tempo limite padrão, em segundos, para as consultas do banco de dados do servidor de relatório.  
   
@@ -51,6 +51,6 @@ public void SetDatabaseQueryTimeout (Int32 LogonTimeout,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+ [Membros de MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

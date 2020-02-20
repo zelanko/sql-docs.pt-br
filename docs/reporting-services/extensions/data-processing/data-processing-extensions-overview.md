@@ -11,14 +11,14 @@ ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67e20d8d0bdcfbb03d0188ac62b4d89bc12b704f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194211"
 ---
 # <a name="data-processing-extensions-overview"></a>Visão geral das extensões de processamento de dados
-  As extensões de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permitem que você se conecte a uma fonte de dados e recupere dados. Eles também servem como uma ponte entre uma fonte de dados e um conjunto de dados. As extensões de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] são modeladas de acordo com um subconjunto das interfaces do provedor de dados do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+  As extensões de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permitem que você se conecte a uma fonte de dados e recupere dados. Eles também servem como uma ponte entre uma fonte de dados e um conjunto de dados. As extensões de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] são modeladas de acordo com um subconjunto das interfaces do provedor de dados do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  A tabela a seguir lista as extensões de processamento de dados incluídas no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63194211"
   
  Você pode desenvolver extensões de processamento de dados para as suas próprias fontes de dados, ou pode usar as interfaces para adicionar um processamento de uma camada de dados adicional a infraestruturas comuns de banco de dados. Você pode implantar suas extensões de processamento de dados personalizadas para habilitar a integração direta de dados nos servidores de relatórios existentes em sua organização. Você também poderá usá-las como parte de um pacote de relatórios personalizado fornecido a seus consumidores.  
   
- ![Arquitetura da extensão de processamento de dados](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "Arquitetura da extensão de processamento de dados")  
+ ![Arquitetura de extensão de processamento de dados](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "Arquitetura de extensão de processamento de dados")  
 Arquitetura de extensão de processamento de dados do Reporting Services  
   
  As vantagens para a implementação de uma extensão de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluem:  
@@ -52,7 +52,7 @@ Arquitetura de extensão de processamento de dados do Reporting Services
 ## <a name="data-extension-process-flow"></a>Fluxo de processo de extensão de dados  
  Antes de desenvolver a sua extensão de dados personalizada, você precisa entender como o servidor de relatório usa extensões de dados para processar dados. Você também deve compreender os construtores e os métodos chamados pelo pelo servidor de relatório.  
   
- ![Fluxo do processo da extensão de processamento de dados](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Fluxo do processo da extensão de processamento de dados")  
+ ![Fluxo de processo para a extensão de processamento de dados](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Fluxo de processo para a extensão de processamento de dados")  
 O fluxo de processo passo a passo de uma extensão de dados chamada pelo servidor de relatório  
   
  A ilustração mostra a sequência de eventos a seguir:  
@@ -72,7 +72,7 @@ O fluxo de processo passo a passo de uma extensão de dados chamada pelo servido
   
 -   Uma compreensão detalhada dos recursos e das capacidades do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
--   Uma compreensão detalhada de arquitetura do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], dos provedores de dados [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], dos objetos DataSet ADO.NET e das interfaces comuns do [!INCLUDE[vstecado](../../../includes/vstecado-md.md)].  
+-   Uma compreensão aprofundada da arquitetura do [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vstecado](../../../includes/vstecado-md.md)], dos provedores de dados [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], dos objetos DataSet ADO.NET e das interfaces comuns do [!INCLUDE[vstecado](../../../includes/vstecado-md.md)].  
   
 -   Experiência de desenvolvimento em uma linguagem do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   

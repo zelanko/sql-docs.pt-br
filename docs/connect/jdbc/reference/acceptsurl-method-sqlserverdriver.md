@@ -16,10 +16,10 @@ ms.assetid: fc744566-7191-4b15-9f76-b4b8087fb14a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c51da69e7218f91630543fe7bee5ec0d7fd6b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67956023"
 ---
 # <a name="acceptsurl-method-sqlserverdriver"></a>Método acceptsURL (SQLServerDriver)
@@ -34,7 +34,7 @@ ms.locfileid: "67956023"
 public boolean acceptsURL(java.lang.String url)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *url*  
   
  Um valor **String** que contém a URL usada para se conectar ao banco de dados.  
@@ -45,8 +45,8 @@ public boolean acceptsURL(java.lang.String url)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método acceptsURL é especificado pelo método acceptsURL na interface java. Sql. driver.  
+## <a name="remarks"></a>Comentários  
+ Esse método acceptsURL é especificado pelo método acceptsURL na interface java.sql.Driver.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

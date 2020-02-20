@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 749a406a071c549f47ea41ead9fdf21574e0b523
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994729"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Executar o procedimento armazenado com RPC e a saída do processo
@@ -38,13 +38,13 @@ ms.locfileid: "67994729"
   
 3.  Crie um conjunto de associações (um para cada criador de parâmetro) usando uma matriz de estruturas DBBINDING.  
   
-4.  Crie um acessador para os parâmetros definidos usando o método **IAccessor::** createaccesser. **CreateAccessor** cria um acessador com base em um conjunto de associações.  
+4.  Crie um acessador para os parâmetros definidos usando o método **IAccessor::CreateAccessor**. **CreateAccessor** cria um acessador com base em um conjunto de associações.  
   
 5.  Preencha a estrutura DBPARAMS.  
   
 6.  Chame o comando **Execute** (neste caso, uma chamada a um procedimento armazenado).  
   
-7.  Processe o conjunto de linhas e libere-o usando o método **IRowset:: Release** .  
+7.  Processe o conjunto de linhas e libere-o usando o método **IRowset::Release**.  
   
 8.  Processe os valores de código de retorno e de parâmetro de saída recebidos do procedimento armazenado.  
   

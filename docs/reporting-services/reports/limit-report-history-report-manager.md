@@ -1,5 +1,5 @@
 ---
-title: Limitar o histórico de relatórios – Reporting Services | Microsoft Docs
+title: Limitar Histórico de Relatórios – Reporting Services | Microsoft Docs
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,10 +15,10 @@ ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2dd66078363e281c2a73bfcc70ba685493bc3b88
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492599"
 ---
 # <a name="limit-report-history---reporting-services"></a>Histórico de relatórios – Reporting Services
@@ -40,7 +40,7 @@ ms.locfileid: "67492599"
   
 1.  No Gerenciador de Relatórios, navegue até o relatório para o qual deseja configurar o histórico e, em seguida, clique no relatório para abri-lo.  
   
-2.  Clique na guia **Propriedades** .  
+2.  Clique no guia **Propriedades**.  
   
 3.  Clique na guia **Histórico** .  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67492599"
   
 1.  No portal da Web, navegue até o relatório para o qual deseja configurar o histórico e, em seguida, clique no relatório para abri-lo.  
   
-2.  Clique na guia **Propriedades** .  
+2.  Clique no guia **Propriedades**.  
   
 3.  Clique na guia **Histórico** .  
   

@@ -16,10 +16,10 @@ ms.assetid: f296cc42-9d26-48c3-a360-bcf51c31f7fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d2889af814e7c7122c9784f5ac9a70421731c09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977869"
 ---
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>Método insertsAreDetected (SQLServerDatabaseMetaData)
@@ -34,8 +34,8 @@ ms.locfileid: "67977869"
 public boolean insertsAreDetected(int type)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- *type*  
+#### <a name="parameters"></a>parâmetros  
+ *tipo*  
   
  Um inteiro que indica o tipo do conjunto de resultados, que pode ser um dos valores a seguir, conforme definido em java.sql.ResultSet ou SQLServerResultSet:  
   
@@ -58,13 +58,13 @@ public boolean insertsAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Valor retornado  
- **true** se a linha inserida puder ser detectada. Caso contrário, **false**.  
+ **true** se for possível detectar a inserção de linha. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método insertsAreDetected é especificado pelo método insertsAreDetected na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método insertsAreDetected é especificado pelo método insertsAreDetected na interface java.sql.DatabaseMetaData.  
   
 > [!NOTE]  
 >  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não detecta linhas inseridas para qualquer tipo de cursor.  

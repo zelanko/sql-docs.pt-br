@@ -11,10 +11,10 @@ ms.assetid: 5b42f036-4cb0-449b-8036-b48e0a14609f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 327a22c8e661b35c00d6086d09f2f2a3a83ab8b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976335"
 ---
 # <a name="position-method-sqlservernclob"></a>Método position (SQLServerNClob)
@@ -26,8 +26,8 @@ ms.locfileid: "67976335"
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método position &#40;java.sql.NClob, long&#41;](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|Recupera a posição do caractere na qual o objeto **NClob** especificado *searchstr* aparece nesse objeto **NClob** .|  
-|[método &#40;de posição Java. lang. String,&#41; &#40;Long SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-java-lang-string-long-sqlservernclob.md)|Recupera a posição do caractere na qual a subcadeia de caracteres especificada *searchstr* aparece no valor **NClob** representado por esse objeto **NClob** .|  
+|[Método position &#40;java.sql.NClob, long&#41;](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|Recupera a posição do caractere no qual o objeto **NClob** especificado *searchstr* aparece neste objeto **NClob**.|  
+|[Método position &#40;java.lang.String, long&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-java-lang-string-long-sqlservernclob.md)|Recupera a posição de caractere na qual a substring *searchstr* especificada aparece no valor **NCLOB** representado pelo objeto **NClob**.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

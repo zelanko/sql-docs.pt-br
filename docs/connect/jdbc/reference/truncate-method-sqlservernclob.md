@@ -11,10 +11,10 @@ ms.assetid: b7e8210d-a724-4bae-832a-ae4c63031c9c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9ed19679cb1a173d015152a006f55660fe9f826
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968466"
 ---
 # <a name="truncate-method-sqlservernclob"></a>Método truncate (SQLServerNClob)
@@ -29,7 +29,7 @@ ms.locfileid: "67968466"
 public void truncate(long len)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *len*  
   
  O comprimento, em caracteres, para os quais o valor de **NCLOB** deve ser truncado.  
@@ -37,8 +37,8 @@ public void truncate(long len)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método truncate é especificado pelo método truncate na interface java. Sql. NClob.  
+## <a name="remarks"></a>Comentários  
+ Esse método truncate é especificado pelo método truncate na interface java.sqlServer.NClob.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

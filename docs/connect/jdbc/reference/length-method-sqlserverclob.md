@@ -16,10 +16,10 @@ ms.assetid: 18bea01e-7d3d-40aa-961f-2318513fab1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 634e38cf6dabea5ffb65ebb3d8c442fc0b844f6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976871"
 ---
 # <a name="length-method-sqlserverclob"></a>Método length (SQLServerClob)
@@ -40,8 +40,8 @@ public long length()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método de comprimento é especificado pelo método length na interface java. Sql. Clob.  
+## <a name="remarks"></a>Comentários  
+ Esse método length é especificado pelo método length na interface java.sql.Clob.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-methods.md)   

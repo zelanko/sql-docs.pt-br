@@ -1,5 +1,5 @@
 ---
-title: Método esqueça (SQLServerXAResource) | Microsoft Docs
+title: Método forget (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6d83138d-aa45-4d94-9da6-fdfe7ed28edc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5eaaa98b2d79dc29558d32a254d338c9891372f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954544"
 ---
 # <a name="forget-method-sqlserverxaresource"></a>Método forget (SQLServerXAResource)
@@ -34,7 +34,7 @@ ms.locfileid: "67954544"
 public void forget(javax.transaction.xa.Xid xid)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *xid*  
   
  Um objeto Xid.  
@@ -42,7 +42,7 @@ public void forget(javax.transaction.xa.Xid xid)
 ## <a name="exceptions"></a>Exceções  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método forget é especificado pelo método forget na interface javax.transaction.xa.XAResource.  
   
 ## <a name="see-also"></a>Consulte Também  

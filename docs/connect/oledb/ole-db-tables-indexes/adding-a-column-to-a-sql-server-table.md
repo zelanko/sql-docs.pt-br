@@ -1,6 +1,6 @@
 ---
-title: Adicionando uma coluna a uma tabela de SQL Server | Microsoft Docs
-description: Adicionando uma coluna a uma tabela SQL Server usando o driver OLE DB para SQL Server
+title: Adicionar uma coluna a uma tabela do SQL Server | Microsoft Docs
+description: Adicionar uma coluna para uma tabela do SQL Server usando o Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2c6cd539e499f80342a30371d047c9870c4fda08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994096"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Adicionando uma coluna a uma tabela do SQL Server
@@ -27,9 +27,9 @@ ms.locfileid: "67994096"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O driver OLE DB para SQL Server expõe a função **ITableDefinition:: AddColumn** . Isso permite que os consumidores adicionem uma coluna a uma tabela do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  O Driver do OLE DB para SQL Server expõe a função **ITableDefinition::AddColumn**. Isso permite que os consumidores adicionem uma coluna a uma tabela do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Quando você adiciona uma coluna a uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabela, o driver de OLE DB para SQL Server consumidor é restrito da seguinte maneira:  
+ Quando você adiciona uma coluna a uma tabela do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o consumidor do Driver do OLE DB para SQL Server é restringido da seguinte forma:  
   
 -   Caso DBPROP_COL_AUTOINCREMENT seja VARIANT_TRUE, DBPROP_COL_NULLABLE deve ser VARIANT_FALSE.  
   

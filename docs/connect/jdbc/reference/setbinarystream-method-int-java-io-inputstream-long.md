@@ -11,10 +11,10 @@ ms.assetid: 4ab2e2f3-eaf0-471a-8422-2cf98ce979cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 34b61ba6338967945f92add5b212bfeae2458e4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975289"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream-long"></a>Método setBinaryStream (int, java.io.InputStream, long)
@@ -31,14 +31,14 @@ public final void setBinaryStream(int parameterIndex,
                                           long length)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *parameterIndex*  
   
  Um **int** que indica o número do parâmetro.  
   
  *x*  
   
- Um objeto java. IO. InputStream.  
+ Um objeto java.io.InputStream.  
   
  *length*  
   
@@ -47,8 +47,8 @@ public final void setBinaryStream(int parameterIndex,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método setBinaryStream é especificado pelo método setBinaryStream na interface java. Sql. PreparedStatement.  
+## <a name="remarks"></a>Comentários  
+ Esse método setBinaryStream é especificado pelo método setBinaryStream na interface java.sql.PreparedStatement.  
   
  Se o comprimento do fluxo for diferente do especificado no parâmetro *length*, o driver JDBC lançará uma exceção quando a linha for atualizada ou inserida.  
   

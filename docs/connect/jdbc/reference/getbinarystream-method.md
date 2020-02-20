@@ -16,10 +16,10 @@ ms.assetid: 0c8f7741-daba-4c04-adc0-8d76345a899a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 486958cb6df51accc3446d1545b734efe9a6fc66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953627"
 ---
 # <a name="getbinarystream-method-"></a>Método getBinaryStream ()
@@ -40,8 +40,8 @@ public java.io.InputStream getBinaryStream()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getBinaryStream é especificado pelo método getBinaryStream na interface java. Sql. blob.  
+## <a name="remarks"></a>Comentários  
+ Esse método getBinaryStream é especificado pelo método the getBinaryStream na interface java.sql.Blob.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: d8515ef92ce1284379327e63a4bd1730577bd8df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994479"
 ---
 # <a name="idbproperties-ole-db"></a>IDBProperties (OLE DB)
@@ -25,6 +25,6 @@ ms.locfileid: "67994479"
   A especificação OLE DB padrão permite que os provedores especifiquem VT_EMPTY para **DBPROPINFO::vValues**. Entretanto, o Driver do OLE DB for SQL Server sempre retorna VT_EMPTY quando você chama **IDBProperties::GetPropertyInfo** com **DBPROPSET_ROWSETALL** para recuperar propriedades de conjuntos de linhas.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md) 
+ [Interfaces do &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md) 
   
   

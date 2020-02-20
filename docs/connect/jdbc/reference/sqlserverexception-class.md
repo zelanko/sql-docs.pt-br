@@ -11,10 +11,10 @@ ms.assetid: af5ef257-7cf6-4db3-b1ee-07d22d82bef1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 40474f747022c34994dba9f34dbed15f1791c2af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971151"
 ---
 # <a name="sqlserverexception-class"></a>Classe SQLServerException
@@ -35,8 +35,8 @@ ms.locfileid: "67971151"
 public final class SQLServerException  
 ```  
   
-## <a name="remarks"></a>Remarks  
- A classe SQLServerException manipula os códigos de estado do SQL 92 e do XOPEN. Eles podem ser trocados usando uma propriedade de conexão especificada pelo usuário. As exceções são gravadas em qualquer arquivo de log aberto que foi especificado.  
+## <a name="remarks"></a>Comentários  
+ A classe SQLServerException manipula códigos de estado SQL 92 e XOPEN. Eles podem ser trocados usando uma propriedade de conexão especificada pelo usuário. As exceções são gravadas em qualquer arquivo de log aberto que foi especificado.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerException](../../../connect/jdbc/reference/sqlserverexception-members.md)   

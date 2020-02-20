@@ -1,5 +1,5 @@
 ---
-title: Tópicos de instruções sobre processamento de resultados (OLE DB) | Microsoft Docs
+title: Tópicos de instrução sobre processamento de resultados (OLE DB) | Microsoft Docs
 description: Tópicos de instruções sobre o processamento de resultados (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 3cda281e8ce5bc276ff8baab6887754ba56e43a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015563"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Tópicos de instrução sobre processamento de resultados (OLE DB)

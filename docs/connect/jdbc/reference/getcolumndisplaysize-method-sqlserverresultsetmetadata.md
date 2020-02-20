@@ -16,10 +16,10 @@ ms.assetid: 21c25443-bd2b-4b60-9798-4efe2c158952
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3de927351c2474c60af8ba1e168b0d7e76f98260
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952964"
 ---
 # <a name="getcolumndisplaysize-method-sqlserverresultsetmetadata"></a>Método getColumnDisplaySize (SQLServerResultSetMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67952964"
 public int getColumnDisplaySize(int column)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *column*  
   
  Um **int** que indica o índice de coluna.  
@@ -45,8 +45,8 @@ public int getColumnDisplaySize(int column)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getColumnDisplaySize é especificado pelo método getColumnDisplaySize na interface java. Sql. ResultSetMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método getColumnDisplaySize é especificado pelo método getColumnDisplaySize na interface java.sql.ResultSetMetaData.  
   
  O [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 tem alterações de comportamento na coluna COLUMN_SIZE. Consulte [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) para saber mais.  
   

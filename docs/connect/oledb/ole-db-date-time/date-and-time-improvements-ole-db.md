@@ -1,5 +1,5 @@
 ---
-title: Melhorias de data e hora (OLE DB) | Microsoft Docs
+title: Aprimoramentos de data e hora (OLE DB) | Microsoft Docs
 description: Melhorias de data e hora (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c4a93078b84cf5146f94043496bea0fdaed9fc80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015698"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Melhorias de data e hora (OLE DB)
@@ -25,16 +25,16 @@ ms.locfileid: "68015698"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] apresenta novos tipos de dados de data e hora. Esta seção descreve como esses novos tipos são expostos como extensões no driver OLE DB para SQL Server. Para obter uma visão geral do driver de OLE DB para SQL Server suporte para os novos tipos de dados de data e hora, consulte [melhorias de data e hora](../../oledb/features/date-and-time-improvements.md). Para obter um exemplo, consulte [usar recursos &#40;aprimorados de data&#41;e hora OLE DB](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
+  O [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] apresenta novos tipos de dados de data e hora. Esta seção descreve como esses novos tipos são expostos como extensões no Driver do OLE DB para SQL Server. Para obter uma visão geral da compatibilidade do Driver do OLE DB para SQL Server com os novos tipos de dados de data e hora, confira [Aprimoramentos de data e hora](../../oledb/features/date-and-time-improvements.md). Para ver um exemplo, confira [Usar os recursos aprimorados de data e hora do &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
   
- Para obter mais informações gerais sobre tipos de dados de data e hora, consulte [ &#40;DateTime&#41;Transact-SQL](../../../t-sql/data-types/datetime-transact-sql.md).  
+ Para obter informações mais genéricas sobre os tipos de dados de data e hora, confira [datetime &#40;Transact-SQL&#41;](../../../t-sql/data-types/datetime-transact-sql.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Suporte a tipos de dados para melhorias de data e hora do OLE DB](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
- Fornece informações sobre os tipos de OLE DB (OLE DB driver para SQL Server) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que dão suporte aos tipos de dados de data e hora.  
+ Fornece informações sobre os tipos OLE DB (Driver do OLE DB para SQL Server) que são compatíveis com os tipos de dados de data e hora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [OLE DB &#40;de metadados&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
- Contém informações sobre a estrutura DBBINDING, **ICommandWithParameters:: GetParameterInfo**, **ICommandWithParameters:: SetParameterInfo**, **IColumnsRowset:: GetColumnsRowset**e I**ColumnsInfo:: GetColumnInfo** . Também fornece informações sobre atualizações de conjuntos de linhas de esquemas OLE DB.  
+ [Metadados &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
+ Contém informações sobre a estrutura DBBINDING, **ICommandWithParameters::GetParameterInfo**, **ICommandWithParameters::SetParameterInfo**, **IColumnsRowset::GetColumnsRowset** e I**ColumnsInfo::GetColumnInfo**. Também fornece informações sobre atualizações de conjuntos de linhas de esquemas OLE DB.  
   
  [Associações e conversões &#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  
  Descreve as regras para conversão entre servidor e cliente de tipos de data novos e existentes.  

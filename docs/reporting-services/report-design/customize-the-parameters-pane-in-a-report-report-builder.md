@@ -9,10 +9,10 @@ ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dc6445b64e323c3e5f8e5b0257d8573ec10d3af8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63218929"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Personalizar o painel de parâmetros em um relatório (Construtor de Relatórios)
@@ -24,7 +24,7 @@ ms.locfileid: "63218929"
   
 1.  Na guia **Exibição** , marque a caixa de seleção **Parâmetros** para exibir o painel de parâmetros.  
   
-     ![Acessar o painel de parâmetros na guia Exibir](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Acessar o painel de parâmetros na guia Exibir")  
+     ![Acessar painel de parâmetros na guia Exibir](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Acessar painel de parâmetros na guia Exibir")  
   
      O painel aparece na parte superior da superfície de design.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63218929"
   
     -   Clique com o botão direito do mouse em uma célula vazia no painel de parâmetros e clique em **Adicionar Parâmetro**.  
   
-         ![Adicionar um novo parâmetro por meio do painel de parâmetros](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "Adicionar um novo parâmetro por meio do painel de parâmetros")  
+         ![Adicionar novo parâmetro no painel de parâmetros](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "Adicionar novo parâmetro no painel de parâmetros")  
   
     -   Clique com o botão direito do mouse em **Parâmetros** no painel de **Dados do Relatório** e, depois, clique em **Adicionar Parâmetro**.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63218929"
   
     -   No painel de parâmetros, clique com o botão direito do mouse no parâmetro e depois clique em **Propriedades do Parâmetro**.  
   
-         ![Acessar as propriedades de parâmetro no painel de parâmetros](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "Acessar as propriedades de parâmetro no painel de parâmetros")  
+         ![Acessar propriedades de parâmetro no painel de parâmetros](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "Acessar propriedades de parâmetro no painel de parâmetros")  
   
     -   No painel de **Dados do Relatório** , clique com o botão direito do mouse no parâmetro e depois clique em **Propriedades do Parâmetro**.  
   

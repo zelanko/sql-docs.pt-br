@@ -11,10 +11,10 @@ ms.assetid: 5e37529a-30db-48c8-b90a-ae9657d0f6b0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ed0b1eedcafa1fab59d17f756523fc0fc189200
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026120"
 ---
 # <a name="using-result-set-metadata"></a>Como usar metadados do conjunto de resultados
@@ -23,9 +23,9 @@ ms.locfileid: "69026120"
 
 Para consultar um conjunto de resultados para obter informações sobre as colunas que ele contém, o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] implementa a classe [SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md). Esta classe contém diversos métodos que retornam informações como um único valor.
 
-Para criar um objeto SQLServerResultSetMetaData, você pode usar o método [GetMetadata](../../connect/jdbc/reference/getmetadata-method-sqlserverresultset.md) da classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) .
+Para criar um objeto SQLServerResultSetMetaData, você pode usar o método [getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverresultset.md) da classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md).
 
-No exemplo a seguir, uma conexão aberta com o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] banco de dados de exemplo é passada para a função, o método getMetaData da classe SQLServerResultSet é usado para retornar um objeto SQLServerResultSetMetaData e, em seguida, vários métodos do O objeto SQLServerResultSetMetaData é usado para exibir informações sobre o nome e o tipo de dados das colunas contidas no conjunto de resultados.
+No exemplo a seguir, uma conexão aberta com o banco de dados de amostra [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] é passado para a função, o método getMetaData da classe SQLServerResultSet é usado para retornar um SQLServerResultSetMetaData e, em seguida, vários métodos do objeto SQLServerResultSetMetaData são usados para exibir informações sobre o nome e o tipo de dados das colunas contidas no conjunto de resultados.
 
 [!code[JDBC#UsingResultSetMetaData1](../../connect/jdbc/codesnippet/Java/using-result-set-metadata_1.java)]
 

@@ -1,5 +1,5 @@
 ---
-title: método (SQLServerSavepoint) | Microsoft Docs
+title: Método getSavepointId (SQLServerSavepoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 48037dab-165d-4310-93ad-86f9d7963b41
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01d5861b25c1a6633f85f62b96a5895bfebdd537
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980245"
 ---
 # <a name="getsavepointid-method-sqlserversavepoint"></a>Método getSavepointId (SQLServerSavepoint)
@@ -35,13 +35,13 @@ public int getSavepointId()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Um valor **int** .  
+ Um valor **int**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método compontos de salvamentoid é especificado pelo método compontos de salvamentoid na interface java. Sql. compontos de salvamento.  
+## <a name="remarks"></a>Comentários  
+ Esse método getSavepointId é especificado pelo método getSavepointId na interface java.sql.Savepoint.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-methods.md)   

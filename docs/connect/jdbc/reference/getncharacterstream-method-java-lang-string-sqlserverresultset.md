@@ -11,10 +11,10 @@ ms.assetid: a117f3a3-9c25-41e1-9adb-a40e90620dd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c2cd07b0420d8ca961c61c205c94cd19fe6666e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981642"
 ---
 # <a name="getncharacterstream-method-javalangstring-sqlserverresultset"></a>Método getNCharacterStream (java.lang.String) (SQLServerResultSet)
@@ -29,19 +29,19 @@ ms.locfileid: "67981642"
 public java.io.Reader getNCharacterStream(java.lang.String columnLabel)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnLabel*  
   
  Uma Cadeia de Caracteres que contém o rótulo da coluna.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um objeto leitor.  
+ Um objeto Reader.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getNCharacterStream é especificado pelo método getNCharacterStream na interface java. Sql. ResultSet.  
+## <a name="remarks"></a>Comentários  
+ Esse método getNCharacterStream é especificado pelo método getNCharacterStream na interface java.sql.ResultSet.  
   
  Esse método pode ser usado para recuperar o valor de uma coluna **nvarchar**, **nchar**, **nvarchar (max)** , **ntext** ou **xml** na linha atual deste objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md). Se você tentar usar esse método para recuperar valores de outros tipos de dados, uma exceção será lançada.  
   

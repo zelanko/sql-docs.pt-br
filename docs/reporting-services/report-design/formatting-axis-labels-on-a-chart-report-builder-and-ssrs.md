@@ -26,10 +26,10 @@ ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 36eb4aff0571be5eb25115df06df5079a59da75b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575618"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formatando rótulos dos eixos de um gráfico (Construtor de Relatórios e SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "65575618"
 ## <a name="types-of-axes"></a>Tipos de eixos  
  O gráfico possui dois tipos de eixo primário: o eixo de valor e o eixo de categoria.  
   
- ![Eixos de valor e categóricos de gráfico](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "Eixos de valor e categóricos de gráfico")  
+ ![Eixos de categorias e valores do gráfico](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "Eixos de categorias e valores do gráfico")  
   
  Ao arrastar um campo do conjunto de dados sobre a superfície do gráfico, o gráfico determina se esse campo pertence ao eixo de valor ou à categoria.  
   

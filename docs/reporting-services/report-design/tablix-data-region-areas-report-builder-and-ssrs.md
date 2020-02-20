@@ -9,10 +9,10 @@ ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 944b6c7053b024a0a62cc24c53095464844d4387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573944"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Áreas da região de dados Tablix (Construtor de Relatórios e SSRS)
@@ -26,7 +26,7 @@ As células de cada área têm uma função distinta. Você adiciona células à
   
 Na superfície de design, linhas pontilhadas denotam as quatro áreas de uma região de dados Tablix selecionada. A figura a seguir mostra as áreas de uma região de Tablix com grupos de linhas aninhados com base na categoria e na subcategoria, grupos de colunas aninhados com base na geografia e em país/região e um grupo de colunas adjacente com base no ano.  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Áreas da região de dados Tablix](../../reporting-services/report-design/media/rs-tablixareas.gif "Áreas da região de dados Tablix")  
   
  A lista seguinte descreve cada área:  
   
@@ -42,7 +42,7 @@ Na superfície de design, linhas pontilhadas denotam as quatro áreas de uma reg
   
  A figura seguinte mostra a região de dados Tablix em Visualização.  
   
- ![Visualização, canto Tablix, grupos de linhas e colunas, corpo](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "Visualização, canto Tablix, grupos de linhas e colunas, corpo")  
+ ![Visualização, canto de Tablix, linha e grupos de colunas, corpo](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "Visualização, canto de Tablix, linha e grupos de colunas, corpo")  
   
  A área de grupo de linhas exibe duas instâncias de grupo de categoria para Clothing e Components. O grupo de colunas exibe uma instância de grupo de geografia para North America, com duas instâncias de grupo país/região aninhadas para Canada (CA) e United States (US). Além disso, a coluna adjacente exibe duas instâncias de grupo de ano para 2003 e 2004. A linha da coluna Total exibe os totais da linha; a linha de totais que se repete com o grupo da categoria mostra os totais das subcategorias, e a linha de total geral exibe os totais das categorias uma vez para essa região de dados.  
   

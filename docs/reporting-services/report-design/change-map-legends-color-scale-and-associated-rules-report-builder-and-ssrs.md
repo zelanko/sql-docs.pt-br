@@ -32,10 +32,10 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d8df41eb7c0a0463648898c08091dd8f8c01f29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581736"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Alterar legendas de mapa, escala de cores e regras associadas (Construtor de Relatórios e SSRS)
@@ -201,7 +201,7 @@ ms.locfileid: "65581736"
   
     -   **Ideal**. Especifica os intervalos que ajustam automaticamente a distribuição para criar subintervalos equilibrados.  
   
-    -   **Personalizar**. Especifique seu próprio número de intervalos para controlar a distribuição de valores.  
+    -   **Personalizado**. Especifique seu próprio número de intervalos para controlar a distribuição de valores.  
   
      Para obter mais informações sobre as opções de distribuição, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
@@ -221,7 +221,7 @@ ms.locfileid: "65581736"
   
 2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra**.  
   
-3.  Verifique se a opção **Visualizar dados usando** \<*tipo de regra*> está selecionada.  
+3.  Verifique se **Visualizar dados usando** \<*tipo de regra*> está selecionado.  
   
 4.  Em **Campo de dados**, verifique se os dados analíticos visualizados na camada estão selecionados.  
   
@@ -242,7 +242,7 @@ ms.locfileid: "65581736"
   
 2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra de Cores**.  
   
-3.  Selecione a opção de regra de cor a ser usada. Para exibir itens em uma legenda do mapa ou escala de cores, você deve selecionar uma das opções de **Visualizar dados usando** \<tipo de regra>.  
+3.  Selecione a opção de regra de cor a ser usada. Para exibir itens em uma legenda do mapa ou escala de cores, você deve selecionar uma das opções **Visualizar dados usando** \<tipo de regra>.  
   
 4.  Em **Campo de dados**, verifique se os dados analíticos visualizados na camada estão selecionados.  
   
@@ -286,7 +286,7 @@ ms.locfileid: "65581736"
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Solução de problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Solucionar problemas de relatórios: Mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

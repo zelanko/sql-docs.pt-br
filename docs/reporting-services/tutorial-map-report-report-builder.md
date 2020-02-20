@@ -9,13 +9,13 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041428"
 ---
-# <a name="tutorial-map-report-report-builder"></a>Tutorial: Relatório de mapa (construtor de relatórios)
+# <a name="tutorial-map-report-report-builder"></a>Tutorial: Relatório de Mapa (Construtor de Relatórios)
 Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , você aprenderá sobre os recursos de mapa que podem ser usados para exibir dados em uma tela de fundo geográfica de um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
   
 Os mapas se baseiam em dados espaciais que geralmente consistem em pontos, linhas e polígonos. Por exemplo, um polígono pode representar a estrutura de tópicos de um município, uma linha pode representar uma estrada e um ponto pode representar o local de uma cidade. Cada tipo de dados espaciais é exibido em uma camada do mapa separada como um conjunto de elementos de mapa.  
@@ -27,7 +27,7 @@ Para variar a aparência de elementos de mapas, especifique um campo com valores
 Neste tutorial, você cria um relatório de mapa que exibe a localização de lojas em condados estatais de Nova York.  
    
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, confira o primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 30 minutos.  
   
@@ -59,7 +59,7 @@ Nesta seção, você adiciona um mapa ao relatório na galeria de mapas. O mapa 
     
     ![report-builder-map-ny-counties](../reporting-services/media/report-builder-map-ny-counties.png)
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Na página **Escolher as opções de dados espaciais e de exibição de mapa** , aceite os padrões e clique em **Avançar**. 
  
@@ -131,7 +131,7 @@ Nesta seção, você usa o assistente de camadas do mapa para adicionar uma cama
     > [!NOTE]  
     > A fonte de dados escolhida não tem importância, contanto que você tenha permissões suficientes. Você não obterá dados da fonte de dados. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
 7.  Na página **Crie uma Consulta** , clique em **Editar como Texto**.  
   
@@ -171,15 +171,15 @@ Nesta seção, você usa o assistente de camadas do mapa para adicionar uma cama
     O conjunto de resultados contém sete colunas que representam um conjunto de lojas no estado de Nova York que vendem bens de consumo. Aqui está uma lista, com explicações para aquelas que podem não ser óbvias: 
     *   **StoreKey**: um identificador de repositório.  
     *   **StoreName**.
-    *   **SellingArea**: a área disponível para exibição do produto, que varia de 455 pés quadrados a 1.125 pés quadrados.
+    *   **SellingArea**: a área disponível para exibição do produto, que varia de 455 pés quadrados a 1125 pés quadrados.
     *   **City**.
     *   **County**.
-    *   **Sales**: Total de vendas. 
+    *   **Vendas**: total de vendas. 
     *   **SpatialLocation**: local em longitude e latitude. 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
   
-10. Clique em **Avançar**.  
+10. Clique em **Próximo**.  
   
     O conjunto de dados de relatório chamado DataSet1 é criado para você. Após a conclusão do assistente, você poderá ver sua coleção de campos no painel Dados do Relatório.  
   
@@ -187,9 +187,9 @@ Nesta seção, você usa o assistente de camadas do mapa para adicionar uma cama
   
     A exibição de mapa mostra círculos para marcar a localização de cada loja.  
   
-12. Clique em **Avançar**.  
+12. Clique em **Próximo**.  
   
-13. Na página Escolher visualização de mapa, clique em **Mapa de bolha** para obter um tipo de mapa que exibe marcadores que variam em tamanho, de acordo com os dados. Clique em **Avançar**.  
+13. Na página Escolher visualização de mapa, clique em **Mapa de bolha** para obter um tipo de mapa que exibe marcadores que variam em tamanho, de acordo com os dados. Clique em **Próximo**.  
   
 14. Na página **Escolher o conjunto de dados analíticos** , clique em DataSet1 e em **Avançar**. Esse conjunto de dados contém dados analíticos e dados espaciais que serão exibidos na nova camada de ponto.   
   
@@ -242,7 +242,7 @@ Use o assistente de camada do mapa para adicionar uma camada do mapa que exibe u
   
 5.  Em **Escolher uma conexão com uma fonte de dados espaciais do SQL Server**, selecione a fonte de dados que você usou no primeiro procedimento.  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
 7.  Na página **Crie uma Consulta** , clique em **Editar como Texto**. O designer de consulta alterna para o modo baseado no texto.  
   
@@ -255,7 +255,7 @@ Use o assistente de camada do mapa para adicionar uma camada do mapa que exibe u
        -73.4728622833178 44.7028831413324)' AS geography) as Route  
     ```  
   
-9. Clique em **Avançar**.  
+9. Clique em **Próximo**.  
   
     Um caminho é exibido no mapa que conecta três lojas.  
   
@@ -263,7 +263,7 @@ Use o assistente de camada do mapa para adicionar uma camada do mapa que exibe u
   
     A exibição de mapa exibe um caminho de uma loja na parte norte do estado de Nova York até uma loja na parte sul do estado de Nova York.  
   
-11. Clique em **Avançar**.  
+11. Clique em **Próximo**.  
   
 12. Na página **Escolher visualização do mapa** , clique em **Mapa da Linha Básica**e clique em **Avançar**.  
   
@@ -453,7 +453,7 @@ Para representar uma nova loja que ainda não foi construída, nesta seção, vo
   
 1.  Alterne para o modo Design.  
   
-2.  Clique duas vezes no mapa para exibir o painel **Camada do Mapa** . Na barra de ferramentas, clique em **Adicionar Camada**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer") e clique em **Camada de Pontos**.  
+2.  Clique duas vezes no mapa para exibir o painel **Camada do Mapa** . Na barra de ferramentas, clique em **Adicionar Camada** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer") e clique em **Camada de Pontos**.  
   
     Uma nova camada de ponto é adicionada ao mapa. Por padrão, a camada de ponto tem o tipo de dados espacial **Inserido**.  
   
@@ -530,13 +530,13 @@ Esse título aparecerá na parte superior do relatório. Os itens na parte super
 
 3. Salve-o no computador local ou em um servidor do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .
   
-4. Clique em **Salvar**. 
+4. Clique em **Save** (Salvar). 
 
 Se você salvá-lo em um servidor de relatório, poderá exibi-lo nele.
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
 Isso conclui o passo a passo da adição de um mapa ao seu relatório.  
   
 Para obter mais informações, consulte [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  

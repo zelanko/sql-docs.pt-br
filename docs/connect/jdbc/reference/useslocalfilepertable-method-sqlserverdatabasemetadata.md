@@ -16,10 +16,10 @@ ms.assetid: 1fafb076-2bb7-4845-9c02-788479f00ca2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de5afaab5a6d5d0cce1f895330a3409e4f96709a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998099"
 ---
 # <a name="useslocalfilepertable-method-sqlserverdatabasemetadata"></a>Método usesLocalFilePerTable (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean usesLocalFilePerTable()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **verdadeiro** usa um arquivo para cada tabela. Caso contrário, **false**.  
+ **true** usa um arquivo para cada tabela. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método usesLocalFilePerTable é especificado pelo método usesLocalFilePerTable na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método usesLocalFilePerTable é especificado pelo método usesLocalFilePerTable na interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

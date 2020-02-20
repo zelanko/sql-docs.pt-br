@@ -15,10 +15,10 @@ ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 38c2cd6242e9515872ef086ec4851bf6cec103ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571525"
 ---
 # <a name="rsconfig-utility-ssrs"></a>Utilitário rsconfig (SSRS)
@@ -48,13 +48,13 @@ rsconfig {-?}
 |**-?**|Opcional.|Exibe a sintaxe de argumentos Rsconfig.exe.|  
 |**-c**|Obrigatório se **-e** não for usado.|Especifica a cadeia de conexão, credenciais e valores de fonte de dados usados para conectar um servidor de relatório ao banco de dados do servidor de relatório.<br /><br /> Esse argumento não exige um valor. Porém, devem ser especificados argumentos adicionais com ele para fornecer todos os valores de conexão exigidos.<br /><br /> Os argumentos que você pode especificar com **-c** incluem **-m**, **-s**, **-i**, **-d**, **-a**, **-u**, **-p**e **-t**.|  
 |**-e**|Obrigatório se o argumento **-c** não for usado.|Especifica a conta de execução autônoma do relatório.<br /><br /> Esse argumento não exige um valor. Porém, você deve incluir argumentos adicionais na linha de comando para especificar os valores criptografados no arquivo de configuração.<br /><br /> Os argumentos que você pode especificar com **-e** incluem **-u** e **-p**. Você também pode definir **-t**.|  
-|**-m**  *computername*|Obrigatório se você estiver configurando uma instância de servidor de relatório remota.|Especifica o nome do computador que está hospedando o servidor de relatório. Se esse argumento for omitido, o padrão será **localhost**.|  
-|**-s**  *servername*|Obrigatórios.|Especifica a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório.|  
-|**-i**  *instancename*|Obrigatório se você estiver usando instâncias nomeadas.|Se você usou uma instância nomeada do Reporting Services, esse valor especifica o nome da instância do Reporting Services.|  
-|**-d**  *databasename*|Obrigatórios.|Especifica o nome do banco de dados do servidor de relatório.|  
-|**-a**  *authmethod*|Obrigatórios.|Especifica o método de autenticação usado pelo servidor de relatório para se conectar ao banco de dados do servidor de relatório. Os valores válidos são **Windows** ou **SQL** (este argumento não diferencia maiúsculas de minúsculas).<br /><br /> O**Windows** especifica que o servidor de relatório usa a Autenticação do Windows.<br /><br /> O**SQL** especifica que o servidor de relatório usa a Autenticação do SQL Server.|  
-|**-u**  *[domain\\]username*|Obrigatório com **-e** , opcional com **-c**.|Especifica uma conta de usuário para a conexão de banco de dados do servidor de relatório ou para a conta autônoma.<br /><br /> Para **rsconfig -e**, esse argumento é obrigatório. Deve ser uma conta de usuário do domínio.<br /><br /> Para **rsconfig -c** e **-a SQL**, esse argumento deve especificar um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Para **rsconfig -c** e **-a Windows**, este argumento pode especificar um usuário do domínio, uma conta interna ou as credenciais da conta de serviço. Se você estiver especificando uma conta de domínio, defina *domínio* e *nome de usuário* no formato *domínio\nomedeusuário*. Se você estiver usando uma conta interna, esse argumento será opcional. Se você quiser usar credenciais de conta de serviço, omita esse argumento.|  
-|**-p**  *password*|Obrigatório se **-u** for especificado.|Especifica a senha a ser usada com o argumento *username* . Você poderá definir esse argumento como um valor em branco se a conta não exigir uma senha. Esse valor diferencia maiúsculas de minúsculas em contas de domínio.|  
+|**-m** *computername*|Obrigatório se você estiver configurando uma instância de servidor de relatório remota.|Especifica o nome do computador que está hospedando o servidor de relatório. Se esse argumento for omitido, o padrão será **localhost**.|  
+|**-s** *servername*|Obrigatórios.|Especifica a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório.|  
+|**-i** *instancename*|Obrigatório se você estiver usando instâncias nomeadas.|Se você usou uma instância nomeada do Reporting Services, esse valor especifica o nome da instância do Reporting Services.|  
+|**-d** *databasename*|Obrigatórios.|Especifica o nome do banco de dados do servidor de relatório.|  
+|**-a** *authmethod*|Obrigatórios.|Especifica o método de autenticação usado pelo servidor de relatório para se conectar ao banco de dados do servidor de relatório. Os valores válidos são **Windows** ou **SQL** (este argumento não diferencia maiúsculas de minúsculas).<br /><br /> O**Windows** especifica que o servidor de relatório usa a Autenticação do Windows.<br /><br /> O**SQL** especifica que o servidor de relatório usa a Autenticação do SQL Server.|  
+|**-u** *[domain\\]username*|Obrigatório com **-e** , opcional com **-c**.|Especifica uma conta de usuário para a conexão de banco de dados do servidor de relatório ou para a conta autônoma.<br /><br /> Para **rsconfig -e**, esse argumento é obrigatório. Deve ser uma conta de usuário do domínio.<br /><br /> Para **rsconfig -c** e **-a SQL**, esse argumento deve especificar um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Para **rsconfig -c** e **-a Windows**, este argumento pode especificar um usuário do domínio, uma conta interna ou as credenciais da conta de serviço. Se você estiver especificando uma conta de domínio, defina *domínio* e *nome de usuário* no formato *domínio\nomedeusuário*. Se você estiver usando uma conta interna, esse argumento será opcional. Se você quiser usar credenciais de conta de serviço, omita esse argumento.|  
+|**-p** *password*|Obrigatório se **-u** for especificado.|Especifica a senha a ser usada com o argumento *username* . Você poderá definir esse argumento como um valor em branco se a conta não exigir uma senha. Esse valor diferencia maiúsculas de minúsculas em contas de domínio.|  
 |**-t**|Opcional.|Produz mensagens de erro para o log de rastreamento. Esse argumento não exige um valor. Para obter mais informações, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
   
 ## <a name="permissions"></a>Permissões  
@@ -63,7 +63,7 @@ rsconfig {-?}
 ## <a name="file-location"></a>Local do arquivo  
  O Rsconfig.exe está localizado em **\Arquivos de Programas\Microsoft SQL Server\110\Tools\Binn**. Você pode executar o utilitário de qualquer pasta em seu sistema de arquivos.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Rsconfig.exe é usado para dois propósitos:  
   
 -   Para modificar a informações de conexão que um servidor de relatório usa para conectar-se a um banco de dados do servidor de relatório.  

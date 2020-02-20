@@ -12,10 +12,10 @@ ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2791293f805f1e2c0d9bd39822bc3f452777c007
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66175605"
 ---
 # <a name="data-driven-subscriptions"></a>assinaturas controladas por dados
@@ -45,7 +45,7 @@ ms.locfileid: "66175605"
 
 - Para saber mais sobre as edições do SQL Server que dão suporte à funcionalidade de assinatura controlada por dados, confira [Recursos do SQL Server Reporting Services com suporte de suas edições](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
-- Para obter dados de assinatura, escolha uma fonte de dados que possa fornecer informações de esquema para o servidor de relatório. Alguns exemplos de tipos de fonte de dados com suporte incluem dados relacionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Oracle, bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pacotes de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , fontes de dados ODBC e fontes de dados OLE DB. Para obter mais informações sobre requisitos de fonte de dados do assinante, consulte [Usar uma fonte de dados externa para obter dados de assinante &#40;Assinatura controlada por dados&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
+- Para obter dados de assinatura, escolha uma fonte de dados que possa fornecer informações de esquema para o servidor de relatório. Alguns exemplos de tipos de fonte de dados com suporte incluem dados relacionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], dados do pacote do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], fontes de dados ODBC e fontes de dados OLE DB. Para obter mais informações sobre requisitos de fonte de dados do assinante, consulte [Usar uma fonte de dados externa para obter dados de assinante &#40;Assinatura controlada por dados&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
 ## <a name="working-with-data-driven-subscriptions"></a>Trabalhando com assinaturas controladas por dados  
  Os tópicos a seguir fornecem mais informações sobre assinaturas controladas por dados.  

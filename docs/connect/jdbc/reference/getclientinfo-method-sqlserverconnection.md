@@ -11,10 +11,10 @@ ms.assetid: 241536e1-fae6-4980-85a5-d8cfcd50b8bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e35e2a640d65e72ab7c956999e7e0b7795ce643
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953129"
 ---
 # <a name="getclientinfo-method-sqlserverconnection"></a>Método getClientInfo (SQLServerConnection)

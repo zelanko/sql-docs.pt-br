@@ -16,10 +16,10 @@ ms.assetid: 1d90407f-16df-4ba2-b4a5-47d5751e1d7c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f80cceb8807fc643e197d06ae737ee7347e1be1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954769"
 ---
 # <a name="executequery-method-"></a>Método executeQuery ()
@@ -40,7 +40,7 @@ public java.sql.ResultSet executeQuery()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método executeQuery é especificado pelo método executeQuery na interface java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte Também  

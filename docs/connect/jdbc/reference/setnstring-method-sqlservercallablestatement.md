@@ -11,10 +11,10 @@ ms.assetid: 6494300b-7fc0-4076-8311-22d35a96cdc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5891b971bcf6129ec3b5fcec4e9ae8f0301283b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973591"
 ---
 # <a name="setnstring-method-sqlservercallablestatement"></a>Método setNString (SQLServerCallableStatement)
@@ -29,20 +29,20 @@ ms.locfileid: "67973591"
 public final void setNString(java.lang.String parameterName, java.lang.String value)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *parameterName*  
   
  Uma **String** que indica o nome do parâmetro.  
   
  *value*  
   
- Um objeto de cadeia de caracteres.  
+ Um objeto String.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método deve ser usado para tipos de dados **nchar**, **nvarchar**, **ntext**e **XML** .  
+## <a name="remarks"></a>Comentários  
+ Esse método deve ser usado para tipos de dados **NCHAR**, **NVARCHAR**, **NTEXT** e **XML**.  
   
  Esse método setNString é especificado pelo método setNString na interface java.sql.CallableStatement.  
   

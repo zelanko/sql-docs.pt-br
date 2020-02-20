@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed100221dd827b84dba935db730d02e8268aac41
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.openlocfilehash: 8d6c9273abda883b175a46d9695d4d231cc5bc73
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638002"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190759"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo de conexão Power Pivot (SSRS)
   É possível usar a extensão de processamento de dados do SQL Server Analysis Services para recuperar dados de uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicada em uma Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] do SharePoint.  
@@ -28,11 +28,11 @@ ms.locfileid: "73638002"
 ## <a name="data-source-type"></a>Tipo de fonte de dados  
  Use o tipo de fonte de dados de relatório **Microsoft SQL Server Analysis Services**.  
   
-## <a name="connection-string"></a>Cadeia de Conexão  
+## <a name="connection-string"></a>Cadeia de conexão  
  A cadeia de conexão é a URL para a pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicada no SharePoint na Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou em outra biblioteca, por exemplo, `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## <a name="credentials"></a>Credenciais  
- Especifique as credenciais que você precisa para acessar a pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e o site do SharePoint, por exemplo, Autenticação do Windows (Segurança Integrada). Para obter mais informações, consulte [conexões de dados, fontes de dados e &#40;cadeias de&#41; conexão Construtor de relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [especificar credenciais e informações de conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Especifique as credenciais que você precisa para acessar a pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e o site do SharePoint, por exemplo, Autenticação do Windows (Segurança Integrada). Para obter mais informações, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar informações de credenciais e conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="queries"></a>Consultas  
  Depois de se conectar à fonte de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , use a consulta gráfica MDX para criar uma consulta por meio de procura e seleção nas estruturas de dados subjacentes. Depois de criar uma consulta, execute-a para ver os dados de exemplo no painel de resultados.  
@@ -42,10 +42,10 @@ ms.locfileid: "73638002"
 ## <a name="filters"></a>Filtros  
  No painel Filtros, especifique dimensões e membros a serem filtrados ou incluídos nos resultados da consulta.  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  No painel Filtros, selecione a opção **Parâmetros** de um filtro para criar automaticamente um parâmetro de relatório com os valores disponíveis correspondentes às seleções do filtro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se você abrir o Construtor de Relatórios na pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em uma Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , as Tabelas Dinâmicas, os Gráficos Dinâmicos, as segmentações de dados e outros recursos de layout e analíticos da pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] não serão recriados no relatório. Em vez disso, o relatório em branco inclui uma fonte de dados pré-configurada que aponta para os dados na pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . A criação de relatórios com base em uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pode ser trabalhosa e demorada dependendo do número de segmentações de dados, filtros e tabelas ou gráficos que você deseja recriar no relatório. Uma abordagem melhor é prever a apresentação dos dados desejada em um relatório, independentemente do design do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Os dados em uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são altamente compactados. Os dados recuperados da pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para um relatório não são compactados. Use o designer de consulta para especificar filtros e parâmetros para limitar os dados para apenas o que é necessário no relatório.  

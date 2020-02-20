@@ -16,10 +16,10 @@ ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76faa3bcaccac4f75d95dc49276c669a5631b5a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979736"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>Método getSQLStateType (SQLServerDatabaseMetaData)
@@ -37,15 +37,15 @@ public int getSQLStateType()
 ## <a name="return-value"></a>Valor retornado  
  Um **int** que indica o tipo de SQLSTATE que pode ter um dos seguintes valores:  
   
--   Para Java Runtime Environment versão 5,0: se a propriedade de conexão **xopenStates** for definida como **true**, esse método retornará DatabaseMetaData. sqlStateXOpen. Caso contrário, DatabaseMetaData.sqlStateSQL99.  
+-   Para o Java Runtime Environment versão 5.0: Se a propriedade de conexão **xopenStates** for definida como **true**, esse método retornará DatabaseMetaData.sqlStateXOpen. Caso contrário, DatabaseMetaData.sqlStateSQL99.  
   
--   Para Java Runtime Environment versão 6,0: se a propriedade de conexão **xopenStates** for definida como **true**, esse método retornará DatabaseMetaData. sqlStateXOpen. Caso contrário, DatabaseMetaData.sqlStateSQL.  
+-   Para o Java Runtime Environment versão 6.0: Se a propriedade de conexão **xopenStates** for definida como **true**, esse método retornará DatabaseMetaData.sqlStateXOpen. Caso contrário, DatabaseMetaData.sqlStateSQL.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getSQLStateType é especificado pelo método getSQLStateType na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método getSQLStateType é especificado pelo método getSQLStateType na interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

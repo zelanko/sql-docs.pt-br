@@ -16,10 +16,10 @@ ms.assetid: 35445fe4-3b8e-4ec5-a138-067524236dc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6231368cd83ffdbff9732c8b7886a7dc4af571e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985410"
 ---
 # <a name="updatebigdecimal-method-sqlserverresultset"></a>Método updateBigDecimal (SQLServerResultSet)

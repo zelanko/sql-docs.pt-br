@@ -1,5 +1,5 @@
 ---
-title: Método setNull (int, int, Java. lang. String) | Microsoft Docs
+title: Método setNull (int, int, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 43c74e06-2858-49ba-bae7-b88808e5fff4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e59b32581d25370fa86da417fd71c1eb7b67b33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973581"
 ---
 # <a name="setnull-method-int-int-javalangstring"></a>Método setNull (int, int, java.lang.String)
@@ -36,7 +36,7 @@ public final void setNull(int paramIndex,
                           java.lang.String typeName)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *paramIndex*  
   
  Um **int** que indica o número do parâmetro.  
@@ -52,7 +52,7 @@ public final void setNull(int paramIndex,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método setNull é especificado pelo método setNull na interface java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte Também  

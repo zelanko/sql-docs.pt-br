@@ -1,6 +1,6 @@
 ---
-title: Removendo uma coluna de uma tabela de SQL Server | Microsoft Docs
-description: Removendo uma coluna de uma tabela de SQL Server usando OLE DB driver para SQL Server
+title: Removendo uma coluna de uma tabela do SQL Server | Microsoft Docs
+description: Remover uma coluna de uma tabela do SQL Server usando o Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7e367c1b0664b0b43007db3a465dcbec0ffa90d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993992"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Removendo uma coluna de uma tabela do SQL Server
@@ -27,11 +27,11 @@ ms.locfileid: "67993992"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O driver OLE DB para SQL Server expõe a função **ITableDefinition::D ropcolumn** . Isso permite que os consumidores removam uma coluna de uma tabela do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  O Driver do OLE DB para SQL Server expõe a função **ITableDefinition::DropColumn**. Isso permite que os consumidores removam uma coluna de uma tabela do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Os consumidores especificam o nome da tabela como uma cadeia de caracteres Unicode no membro *pwszName* da união *uName* no parâmetro *pTableID*. O membro *eKind* de *pTableID* precisa ser DBKIND_NAME.  
   
- O consumidor indica um nome de coluna no membro *pwszName*da União *uname* no parâmetro *pColumnID* . O nome da coluna é uma cadeia de caracteres Unicode. O membro *eKind* de *pColumnID* precisa ser DBKIND_NAME.  
+ O consumidor indica um nome de coluna no membro *pwszName* da união *uName* no parâmetro *pColumnID*. O nome da coluna é uma cadeia de caracteres Unicode. O membro *eKind* de *pColumnID* precisa ser DBKIND_NAME.  
   
 ## <a name="example"></a>Exemplo  
   

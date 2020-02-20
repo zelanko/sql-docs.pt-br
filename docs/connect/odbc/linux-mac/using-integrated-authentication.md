@@ -13,10 +13,10 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 034df879dc79f920219a43e2faaaf0e3ac4fc17b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008706"
 ---
 # <a name="using-integrated-authentication"></a>Como usar a autenticação integrada
@@ -24,7 +24,7 @@ ms.locfileid: "68008706"
 
 O [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Linux e macOS é compatível com conexões que usam a autenticação integrada Kerberos. Ele é compatível com o KDC (centro de distribuição de chaves) do MIT Kerberos e funciona com as bibliotecas do Kerberos v5 e GSSAPI (Interface de Programação de Aplicativo de Serviços Genéricos de Segurança).
   
-## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversion-mdmd-from-an-odbc-application"></a>Uso de autenticação integrada para se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de um aplicativo ODBC  
+## <a name="using-integrated-authentication-to-connect-to-ssnoversion-from-an-odbc-application"></a>Uso de autenticação integrada para se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de um aplicativo ODBC  
 
 Você pode habilitar a autenticação integrada do Kerberos especificando **Trusted_Connection=yes** na cadeia de conexão do **SQLDriverConnect** ou do **SQLConnect**. Por exemplo:  
 
@@ -34,7 +34,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 Ao se conectar com um DSN, você também pode adicionar **Trusted_Connection=yes** à entrada DSN em `odbc.ini`.
   
-A opção `-E` de `sqlcmd` e a opção `-T` de `bcp` também podem ser usadas para especificar a autenticação integrada; veja [Conectando-se com **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) e [Conectando-se com **bcp** ](../../../connect/odbc/linux-mac/connecting-with-bcp.md) para obter mais informações.
+A opção `-E` de `sqlcmd` e a opção `-T` de `bcp` também podem ser usadas para especificar a autenticação integrada; veja [Conectando-se com **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) e [Conectando-se com **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md) para obter mais informações.
 
 Verifique se a entidade de segurança do cliente que vai se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] já está autenticada com o KDC do Kerberos.
   
@@ -64,7 +64,7 @@ Um administrador de banco de dados pode criar uma trilha de auditoria de acesso 
   
 O logon no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa a conta do sistema e não há nenhuma funcionalidade no Linux para representar o contexto de segurança. Portanto, é necessário mais que isso para determinar o usuário.
   
-Para auditar atividades no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em nome dos usuários além da conta do sistema, o aplicativo deve usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
+Para auditar atividades no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em nome dos usuários além da conta do sistema, o aplicativo precisa usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
   
 Para melhorar o desempenho do aplicativo, um aplicativo pode usar o pool de conexões com Autenticação Integrada e auditoria. No entanto, a combinação do pool de conexões, da Autenticação Integrada e da auditoria gera um risco de segurança, pois o gerenciador do driver unixODBC permite que diferentes usuários reutilizem conexões em pool. Para obter mais informações, consulte [ODBC Connection Pooling](http://www.unixodbc.org/doc/conn_pool.html).  
 
@@ -72,7 +72,7 @@ Antes da reutilização, um aplicativo deve redefinir conexões em pool executan
 
 ## <a name="using-active-directory-to-manage-user-identities"></a>Usando o Active Directory para gerenciar identidades de usuário
 
-Um administrador de sistema do aplicativo não precisa gerenciar conjuntos separados de credenciais de logon para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. É possível configurar o Active Directory como um centro de distribuição de chaves (KDC) para Autenticação Integrada. Veja [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos) para obter mais informações.
+Um administrador de sistema de aplicativos não precisa gerenciar conjuntos separados de credenciais de logon para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. É possível configurar o Active Directory como um centro de distribuição de chaves (KDC) para Autenticação Integrada. Veja [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos) para obter mais informações.
 
 ## <a name="using-linked-server-and-distributed-queries"></a>Usando servidor vinculado e consultas distribuídas
 
@@ -94,7 +94,7 @@ Para acessar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usan
   
 É um erro usar `-T` com a opção `-U` ou `-P`.
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversion-mdmd"></a>Sintaxe com suporte para um SPN registrado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+## <a name="supported-syntax-for-an-spn-registered-by-ssnoversion"></a>Sintaxe com suporte para um SPN registrado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
 A sintaxe que os SPNs usam em cadeia de conexão ou atributos de conexão é a seguinte:  
 
@@ -130,6 +130,6 @@ Para obter mais informações sobre a autenticação de computadores Linux ou ma
 ## <a name="see-also"></a>Consulte Também  
 [Diretrizes de programação](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[Notas de versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Notas de Versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
 
 [Como usar o Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)

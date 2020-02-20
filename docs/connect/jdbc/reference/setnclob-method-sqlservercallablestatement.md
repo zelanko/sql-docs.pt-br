@@ -11,10 +11,10 @@ ms.assetid: fd972acc-57e5-4971-9744-0e8fca5f05a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d238ca9d3e9410d520051a5c0dfeb820a8197c9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973681"
 ---
 # <a name="setnclob-method-sqlservercallablestatement"></a>Método setNClob (SQLServerCallableStatement)

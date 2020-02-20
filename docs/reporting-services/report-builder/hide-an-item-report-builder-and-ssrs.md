@@ -12,10 +12,10 @@ ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2a6e57c1e4326f2c8a0f04a515aab7c699778f39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580698"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ocultar um item (Construtor de Relatórios e SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "65580698"
   
         > [!NOTE]  
         >  Quando você especifica uma expressão para visibilidade, você está configurando a propriedade Hidden do item de relatório, conforme mostrado na imagem a seguir. A expressão avaliada mostra o item de relatório quando o valor é False e oculta o item de relatório quando o valor é True.   
-        > ![Caixa de diálogo Properties_Visibility e propriedade Hidden](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Caixa de diálogo Properties_Visibility e propriedade Hidden")  
+        > ![Caixa de diálogo Properties_Visibility e propriedade oculta](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Caixa de diálogo Properties_Visibility e propriedade oculta")  
   
 4.  Clique duas vezes em **OK** .  
   

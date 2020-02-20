@@ -16,10 +16,10 @@ ms.assetid: 7bc96930-b0c9-42f6-8df9-1d8d824408b3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 874d4032fc3306b180d0fafefc7a4ac085b5af29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983207"
 ---
 # <a name="getfetchsize-method-sqlserverresultset"></a>Método getFetchSize (SQLServerResultSet)
@@ -40,8 +40,8 @@ public int getFetchSize()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getFetchSize é especificado pelo método getFetchSize na interface java. Sql. ResultSet.  
+## <a name="remarks"></a>Comentários  
+ Esse método getFetchSize é especificado pelo método getFetchSize na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

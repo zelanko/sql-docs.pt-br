@@ -16,10 +16,10 @@ ms.assetid: a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf5a9ee4d4aa001103840ba8768ba338baa42db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980407"
 ---
 # <a name="getresponsebuffering-method-sqlserverstatement"></a>Método getResponseBuffering (SQLServerStatement)
@@ -35,16 +35,16 @@ public final java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Uma **cadeia de caracteres** que contém um **total** de minúsculas ou **adaptável**.  
+ Uma **String** que contém um valor **full** ou **adaptive** em minúsculas.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **adaptive** especifica o armazenamento do mínimo possível de dados em buffer, quando necessário.  
   
  **full** especifica a leitura do resultado inteiro no servidor em tempo de execução.  
   
- **Adaptive** é o valor padrão no JDBC Driver versão 2,0 e 3,0. **Full** era o padrão antes do JDBC Driver versão 2,0.  
+ **adaptive** é o valor padrão no JDBC Driver versão 2.0 e 3.0. **full** era o padrão antes do JDBC Driver versão 2.0.  
   
- Para obter mais informações sobre como usar o modo de buffer de resposta, consulte [usando o buffer adaptável](../../../connect/jdbc/using-adaptive-buffering.md).  
+ Para obter mais informações sobre como usar o modo de buffer de resposta, confira [Como usar o buffer adaptável](../../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método setResponseBuffering &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)   

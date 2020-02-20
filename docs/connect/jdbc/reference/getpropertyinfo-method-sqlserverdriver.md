@@ -1,5 +1,5 @@
 ---
-title: Método GetPropertyInfo (SQLServerDriver) | Microsoft Docs
+title: Método getPropertyInfo (SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b5eaad8a-31ef-44ac-af11-d5caa13ac3e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d89a29af5aa3d2518f94101854371cea757e135c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980674"
 ---
 # <a name="getpropertyinfo-method-sqlserverdriver"></a>Método getPropertyInfo (SQLServerDriver)
@@ -35,7 +35,7 @@ public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String Url,
                                                      java.util.Properties Info)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *URL*  
   
  Um valor **String** que contém a URL que é usada para conexão com o banco de dados.  
@@ -50,8 +50,8 @@ public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String Url,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método GetPropertyInfo é especificado pelo método GetPropertyInfo na interface java. Sql. driver.  
+## <a name="remarks"></a>Comentários  
+ Esse método getPropertyInfo é especificado pelo método getPropertyInfo na interface java.sql.Driver.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

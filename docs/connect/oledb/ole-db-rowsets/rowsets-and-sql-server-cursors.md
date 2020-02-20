@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de linhas e SQL Server cursores | Microsoft Docs
+title: Conjuntos de linha e cursores do SQL Server | Microsoft Docs
 description: Conjuntos de linha e cursores do SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994182"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Conjuntos de linha e cursores do SQL Server
@@ -62,7 +62,7 @@ ms.locfileid: "67994182"
   
  Os consumidores podem solicitar diversos comportamentos de cursor em um conjunto de linhas definindo determinadas propriedades de conjunto de linhas. Caso o consumidor não defina nenhuma dessas propriedades de conjunto de linhas ou defina todas com os valores padrão, o OLE DB Driver for SQL Server implementará o conjunto de linhas usando um conjunto de resultados padrão. Se uma dessas propriedades estiver definida com um valor diferente do padrão, o OLE DB Driver for SQL Server implementará o conjunto de linhas usando um cursor de servidor.  
   
- As propriedades do conjunto de linhas a seguir direcionam o driver [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de OLE DB para SQL Server usar cursores. Algumas propriedades podem ser tranquilamente combinadas com outras. Por exemplo, um conjunto de linhas que exibe as propriedades DBPROP_IRowsetScroll e DBPROP_IRowsetChange será um conjunto de linhas indicador que exibe um comportamento de atualização imediato. Outras propriedades são mutuamente excludentes. Por exemplo, um conjunto de linhas que exibe DBPROP_OTHERINSERT não pode conter indicadores.  
+ As propriedades de conjunto de linhas a seguir levam o Driver do OLE DB para SQL Server a usar cursores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Algumas propriedades podem ser tranquilamente combinadas com outras. Por exemplo, um conjunto de linhas que exibe as propriedades DBPROP_IRowsetScroll e DBPROP_IRowsetChange será um conjunto de linhas indicador que exibe um comportamento de atualização imediato. Outras propriedades são mutuamente excludentes. Por exemplo, um conjunto de linhas que exibe DBPROP_OTHERINSERT não pode conter indicadores.  
   
 |ID da propriedade|Valor|Comportamento do conjunto de linhas|  
 |-----------------|-----------|---------------------|  

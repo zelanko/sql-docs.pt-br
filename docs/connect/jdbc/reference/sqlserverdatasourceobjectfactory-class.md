@@ -11,10 +11,10 @@ ms.assetid: b616632b-5987-470d-b36c-b22fa9213145
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf4c90644282ff420e064e7a7b5b99a93c257194
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971383"
 ---
 # <a name="sqlserverdatasourceobjectfactory-class"></a>Classe SQLServerDataSourceObjectFactory
@@ -35,10 +35,10 @@ ms.locfileid: "67971383"
 public class SQLServerDataSourceObjectFactory  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método é herdado por todas as classes de fonte de dados. Como parte de seu suporte para a interface Referenceable, o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] expõe essa classe que implementa um ObjectFactory. Servidores de aplicativos Java chamarão getReference em uma classe de fonte de dados e isso criará um objeto Reference que internamente usa o nome de classe como sua fábrica de classes.  
   
- Quando o servidor de aplicativos Java precisa desreferenciar o objeto de referência, ele cria uma instância do objeto SQLServerDataSourceObjectFactory e chama o método [getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md) , passando o objeto de referência para recuperar a fonte de dados cópia.  
+ Quando o servidor de aplicativos Java precisar desreferenciar o objeto Reference, ele criará uma instância do objeto SQLServerDataSourceObjectFactory e chamará o método [getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md), passando o objeto Reference, a fim de recuperar a instância de fonte de dados.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-members.md)   

@@ -9,10 +9,10 @@ ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b39bf6a3a7c04d5d8ca457bb199229fdaebae76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581844"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Referências de globais internas e referências de usuários (Construtor de Relatórios)
@@ -27,14 +27,14 @@ ms.locfileid: "65581844"
 |**Membro**|**Tipo**|**Descrição**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|**DateTime**|A data e a hora em que o relatório começou a ser executado.|  
-|PageNumber|**Integer**|O número da página atual em relação às quebras de página que redefinem o número da página. No início do processamento do relatório, o valor inicial é definido como 1. O número da página é incrementado para cada página renderizada.<br /><br /> Para numerar páginas dentro de quebras de página para um retângulo, uma região de dados, um grupo de regiões de dados ou um mapa, na propriedade PageBreak, defina a propriedade ResetPageNumber como **True**. Sem suporte em grupos de hierarquias de colunas tablix.<br /><br /> PageNumber somente pode ser usada em uma expressão em um cabeçalho ou rodapé de página.|  
-|ReportFolder|**String**|O caminho completo para a pasta que contém o relatório. Isso não inclui a URL do servidor de relatório.|  
-|ReportName|**String**|O nome do relatório conforme armazenado no banco de dados do servidor de relatório.|  
-|ReportServerUrl|**String**|A URL do servidor de relatório na qual o relatório está sendo executado.|  
-|TotalPages|**Integer**|O número total de páginas em relação às quebras de página que redefinem PageNumber. Se nenhuma quebra de página for definida, esse valor será o mesmo de OverallTotalPages.<br /><br /> TotalPages somente pode ser usada em uma expressão em um cabeçalho ou rodapé de página.|  
-|PageName|**String**|O nome da página. No início do processamento do relatório, o valor inicial é definido por meio de InitialPageName, uma propriedade de relatório. À medida que cada item do relatório é processado, esse valor é substituído pelo valor correspondente de PageName de um retângulo, uma região de dados, um grupo de regiões de dados ou um mapa. Sem suporte em grupos de hierarquias de colunas tablix.<br /><br /> PageName somente pode ser usada em uma expressão em um cabeçalho ou rodapé de página.|  
-|OverallPageNumber|**Integer**|O número da página atual para todo o relatório. Esse valor não é afetado por ResetPageNumber.<br /><br /> OverallPageNumber somente pode ser usada em uma expressão em um cabeçalho ou rodapé de página.|  
-|OverallTotalPages|**Integer**|O número total de páginas para todo o relatório. Esse valor não é afetado por ResetPageNumber.<br /><br /> OverallTotalPages somente pode ser usada em uma expressão em um cabeçalho ou rodapé de página.|  
+|PageNumber|**Inteiro**|O número da página atual em relação às quebras de página que redefinem o número da página. No início do processamento do relatório, o valor inicial é definido como 1. O número da página é incrementado para cada página renderizada.<br /><br /> Para numerar páginas dentro de quebras de página para um retângulo, uma região de dados, um grupo de regiões de dados ou um mapa, na propriedade PageBreak, defina a propriedade ResetPageNumber como **True**. Sem suporte em grupos de hierarquias de colunas tablix.<br /><br /> PageNumber somente pode ser usada em uma expressão em um cabeçalho ou rodapé de página.|  
+|ReportFolder|**Cadeia de caracteres**|O caminho completo para a pasta que contém o relatório. Isso não inclui a URL do servidor de relatório.|  
+|ReportName|**Cadeia de caracteres**|O nome do relatório conforme armazenado no banco de dados do servidor de relatório.|  
+|ReportServerUrl|**Cadeia de caracteres**|A URL do servidor de relatório na qual o relatório está sendo executado.|  
+|TotalPages|**Inteiro**|O número total de páginas em relação às quebras de página que redefinem PageNumber. Se nenhuma quebra de página for definida, esse valor será o mesmo de OverallTotalPages.<br /><br /> TotalPages somente pode ser usada em uma expressão em um cabeçalho ou rodapé de página.|  
+|PageName|**Cadeia de caracteres**|O nome da página. No início do processamento do relatório, o valor inicial é definido por meio de InitialPageName, uma propriedade de relatório. À medida que cada item do relatório é processado, esse valor é substituído pelo valor correspondente de PageName de um retângulo, uma região de dados, um grupo de regiões de dados ou um mapa. Sem suporte em grupos de hierarquias de colunas tablix.<br /><br /> PageName somente pode ser usada em uma expressão em um cabeçalho ou rodapé de página.|  
+|OverallPageNumber|**Inteiro**|O número da página atual para todo o relatório. Esse valor não é afetado por ResetPageNumber.<br /><br /> OverallPageNumber somente pode ser usada em uma expressão em um cabeçalho ou rodapé de página.|  
+|OverallTotalPages|**Inteiro**|O número total de páginas para todo o relatório. Esse valor não é afetado por ResetPageNumber.<br /><br /> OverallTotalPages somente pode ser usada em uma expressão em um cabeçalho ou rodapé de página.|  
 |RenderFormat|**RenderFormat**|Informações sobre a solicitação de renderização atual.<br /><br /> Para obter mais informações, consulte "RenderFormat" na próxima seção.|  
   
  Membros da coleção de **Globals** retornam uma variante. Se você desejar usar um membro dessa coleção em uma expressão que exige um tipo de dados específico, deverá primeiro converter a variável. Por exemplo, para converter a variante de tempo de execução em um formato de Data, use `=CDate(Globals!ExecutionTime)`. Para obter mais informações, consulte [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
@@ -42,9 +42,9 @@ ms.locfileid: "65581844"
 ### <a name="renderformat"></a>RenderFormat  
  A tabela a seguir descreve os membros de **RenderFormat**.  
   
-|Membro|Tipo|Descrição|  
+|Membro|Type|Descrição|  
 |------------|----------|-----------------|  
-|Nome|**String**|O nome do renderizador conforme registrado no arquivo de configuração RSReportServer.<br /><br /> Disponível durante partes específicas do ciclo de processamento/renderização do relatório.|  
+|Nome|**Cadeia de caracteres**|O nome do renderizador conforme registrado no arquivo de configuração RSReportServer.<br /><br /> Disponível durante partes específicas do ciclo de processamento/renderização do relatório.|  
 |IsInteractive|**Booliano**|Se a solicitação de renderização atual usa um formato de renderização interativo.|  
 |DeviceInfo|Coleção de nomes/valores somente leitura|Pares de chave/valor para parâmetros deviceinfo da solicitação de renderização atual.<br /><br /> É possível especificar valores de cadeia de caracteres usando a chave ou um índice na coleção.|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "65581844"
 |**Membro**|**Tipo**|**Descrição**|  
 |----------------|--------------|---------------------|  
 |**Idioma**|**Cadeia de caracteres**|O idioma do usuário que está executando o relatório. Por exemplo, `en-US`.|  
-|**UserID**|**String**|A ID do usuário que está executando o relatório. Se a Autenticação do Windows estiver sendo usada, esse valor será a conta de domínio do usuário atual. O valor é determinado pela extensão de segurança do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que pode usar a Autenticação do Windows ou a autenticação personalizada.|  
+|**UserID**|**Cadeia de caracteres**|A ID do usuário que está executando o relatório. Se a Autenticação do Windows estiver sendo usada, esse valor será a conta de domínio do usuário atual. O valor é determinado pela extensão de segurança do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que pode usar a Autenticação do Windows ou a autenticação personalizada.|  
  
 ### <a name="using-locale-settings"></a>Usando configurações de localidade  
  É possível usar expressões para se fazer referência a configurações de localidade em um computador cliente por meio do valor de **User.Language** para determinar como um relatório é exibido para o usuário. Por exemplo, você pode criar um relatório que usa uma expressão de consulta diferente baseada no valor da localidade. A consulta pode se alterada para recuperar informações localizadas de uma coluna diferente dependendo do idioma retornado. Também é possível usar uma expressão nas configurações do idioma do relatório ou de itens de relatório baseados nessa variável.  

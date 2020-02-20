@@ -11,10 +11,10 @@ ms.assetid: f49ea499-df3c-4e85-9fc7-450fb99622a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de8e357328c151e3762f324dcbeba2525df53530
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026559"
 ---
 # <a name="using-an-sql-statement-to-modify-database-objects"></a>Como usar uma instrução SQL para modificar objetos de banco de dados
@@ -26,7 +26,7 @@ Para modificar os objetos de banco de dados [!INCLUDE[ssNoVersion](../../include
 Para isso, você deve primeiro criar um objeto SQLServerStatement usando o método [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) da classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).
 
 > [!NOTE]  
-> As instruções SQL que modificam objetos dentro de um banco de dados são chamadas de instruções DDL (linguagem de definição de dados). `CREATE TABLE`Isso inclui instruções como `DROP TABLE` `CREATE INDEX`,, e. `DROP INDEX` Para obter mais informações sobre os tipos de instruções DDL compatíveis com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja "Tipos de dados (Transact-SQL)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> As instruções SQL que modificam objetos dentro de um banco de dados são chamadas de instruções DDL (linguagem de definição de dados). Elas incluem instruções como `CREATE TABLE`, `DROP TABLE`, `CREATE INDEX` e `DROP INDEX`. Para obter mais informações sobre os tipos de instruções DDL compatíveis com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja "Tipos de dados (Transact-SQL)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 No exemplo a seguir, uma conexão aberta com o banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] é passada para a função; é construída uma instrução SQL que criará TestTable simples no banco de dados; em seguida, a instrução é executada e o valor retornado da coluna de IDENTITY é exibido.
 

@@ -12,10 +12,10 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140377"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Ativar e desativar recursos do Reporting Services
@@ -96,7 +96,7 @@ ms.locfileid: "67140377"
   
 ##  <a name="WebPortal"></a> Portal da Web
   
-A partir do SQL Server 2016 Reporting Services atualização cumulativa 2, o portal da web sempre será habilitado.
+Do SQL Server 2016 Reporting Services Atualização Cumulativa 2 em diante, o portal da Web sempre será habilitado.
   
 ##  <a name="WinIntSec"></a> Segurança integrada do Windows  
   
@@ -112,10 +112,10 @@ A partir do SQL Server 2016 Reporting Services atualização cumulativa 2, o por
   
     -   Para desativar a segurança integrada do Windows, desmarque a opção **Habilitar a segurança integrada do Windows para as fontes de dados do relatório**.  
   
-4.  Escolha **OK**.  
+4.  Selecione **OK**.  
   
 ## <a name="see-also"></a>Confira também  
 [Gerenciador de Configurações do Reporting Services (Modo Nativo)](../install-windows/reporting-services-configuration-manager-native-mode.md)
 
- Ainda tem dúvidas? [Experimente o fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+ Mais perguntas? [Experimente o fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
   

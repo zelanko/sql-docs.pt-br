@@ -16,10 +16,10 @@ ms.assetid: 29303550-294e-4d43-b892-312b42e21271
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9eb0f1bf73f719550ce0a00b3b7f96fab9c2af38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975667"
 ---
 # <a name="rowupdated-method-sqlserverresultset"></a>Método rowUpdated (SQLServerResultSet)
@@ -35,13 +35,13 @@ public boolean rowUpdated()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **true** se a linha tiver sido visivelmente atualizada pelo proprietário ou por outro usuário, e as atualizações forem detectadas. Caso contrário, **false**.  
+ **true** se as duas condições a seguir forem satisfeitas: a linha tiver sido visivelmente atualizada pelo proprietário ou outro usuário e atualizações forem detectadas. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método de teleupdated é especificado pelo método de isUpdated na interface java. Sql. ResultSet.  
+## <a name="remarks"></a>Comentários  
+ Esse método rowUpdated é especificado pelo método rowUpdated na interface java.sql.ResultSet.  
   
  O valor que é retornado dependerá da capacidade do conjunto de resultados de detectar atualizações.  
   

@@ -1,10 +1,7 @@
 ---
-title: Propriedades da etapa de trabalho – Nova etapa de trabalho (página Geral) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Novas propriedades da etapa de trabalho (Página geral)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,21 +9,26 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 173f317ba66a9b05bfa6d99bf28f60ecf518ae19
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7c8c707e8a1916041b32a2509e54d6150ea8df9a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267571"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242218"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Propriedades da etapa de trabalho – Nova etapa de trabalho (página Geral)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
 
-Use esta página para exibir e alterar as propriedades de uma etapa de trabalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou para definir uma nova etapa de trabalho.  
+Use esta página para ver e alterar as propriedades ou para definir uma nova etapa de trabalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 Para navegar até essa página, no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, clique com o botão direito do mouse em **Trabalhos**, clique em **Novos Trabalhos**, selecione a página **Etapas** e clique em **Novo**. Você também pode navegar até essa página. Para isso, clique com o botão direito do mouse em um trabalho no Pesquisador de Objetos, clique em **Propriedades**, selecione a página **Etapas** e clique em **Novo**, **Inserir**ou **Editar**.  
   
@@ -50,10 +52,10 @@ Defina o comando executado pela etapa de trabalho.
 **Abrir**  
 Carregue o comando de um arquivo.  
   
-**Selecionar Tudo**  
+**Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copiar**  
+**Copy**  
 Copie o texto selecionado para a Área de Transferência.  
   
 **Colar**  
@@ -73,16 +75,16 @@ Especifique o [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Basic S
 **JScript**  
 Especifique JScript como a linguagem para a etapa de trabalho.  
   
-**Outro**  
+**Outros**  
 Digite o nome da linguagem para etapas de trabalho escritas em outra linguagem de criação de scripts.  
   
 **Abrir**  
 Carregue o comando de um arquivo.  
   
-**Selecionar Tudo**  
+**Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copiar**  
+**Copy**  
 Copie o texto selecionado.  
   
 **Colar**  
@@ -95,10 +97,10 @@ Digite o código de saída que o comando retorna para indicar sucesso.
 **Abrir**  
 Carregue o comando de um arquivo.  
   
-**Selecionar Tudo**  
+**Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copiar**  
+**Copy**  
 Copie o texto selecionado.  
   
 **Colar**  
@@ -108,30 +110,30 @@ Cole o conteúdo da área de transferência.
 **Abrir**  
 Carregue o script de um arquivo.  
   
-**Selecionar Tudo**  
+**Selecionar tudo**  
 Selecione o texto do script.  
   
-**Copiar**  
+**Copy**  
 Copie o texto selecionado.  
   
 **Colar**  
 Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-replication-distributor-job-steps"></a>Opções para etapas de trabalho do Distribuidor de Replicação  
-**Selecionar Tudo**  
+**Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copiar**  
+**Copy**  
 Copie o texto selecionado.  
   
 **Colar**  
 Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-replication-merge-job-steps"></a>Opções para etapas de trabalho de Mesclagem de Replicação  
-**Selecionar Tudo**  
+**Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copiar**  
+**Copy**  
 Copie o texto selecionado.  
   
 **Colar**  
@@ -141,30 +143,30 @@ Cole o conteúdo da área de transferência.
 **Backup de banco de dados**  
 O banco de dados a ser usado para a etapa de trabalho.  
   
-**Selecionar Tudo**  
+**Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copiar**  
+**Copy**  
 Copie o texto selecionado.  
   
 **Colar**  
 Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-replication-snapshot-job-steps"></a>Opções para etapas de trabalho do instantâneo de replicação  
-**Selecionar Tudo**  
+**Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copiar**  
+**Copy**  
 Copie o texto selecionado.  
   
 **Colar**  
 Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-replication-transaction-log-reader-job-steps"></a>Opções para etapas de trabalho do Leitor do Log de Transações da Replicação  
-**Selecionar Tudo**  
+**Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copiar**  
+**Copy**  
 Copie o texto selecionado.  
   
 **Colar**  
@@ -177,10 +179,10 @@ Selecione o servidor onde a etapa de trabalho é executada.
 **Abrir**  
 Carregue o comando de um arquivo.  
   
-**Selecionar Tudo**  
+**Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copiar**  
+**Copy**  
 Copie o texto selecionado.  
   
 **Colar**  
@@ -190,16 +192,16 @@ Cole o conteúdo da área de transferência.
 **Servidor**  
 Selecione o servidor onde a etapa de trabalho é executada.  
   
-**Banco de dados**  
+**Backup de banco de dados**  
 O banco de dados a ser usado para a etapa de trabalho.  
   
 **Abrir**  
 Carregue o comando de um arquivo.  
   
-**Selecionar Tudo**  
+**Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copiar**  
+**Copy**  
 Copie o texto selecionado.  
   
 **Colar**  
@@ -215,7 +217,7 @@ Especifique onde o pacote [!INCLUDE[ssIS](../../includes/ssis_md.md)] está arma
   
 -   **SQL Server**  
   
--   **Sistema de arquivos**  
+-   **Sistema de Arquivos**  
   
 -   **Armazenamento de Pacotes SSIS**  
   
@@ -330,7 +332,7 @@ Exiba ou altere os valores de propriedade para o pacote nesta guia.
 **Caminho da propriedade**  
 Exiba ou altere o caminho para a propriedade.  
   
-**Value**  
+**Valor**  
 Exiba ou altere o valor para a propriedade.  
   
 **Remover**  
@@ -345,7 +347,7 @@ Execute apenas pacotes que tenham sido assinados. Quando esta opção está sele
 **Verificar construção de pacote**  
 Execute apenas pacotes com um número de construção específico. Quando esta opção está selecionada, a etapa de trabalho apresentará falha se o pacote não tiver o número de construção especificado.  
   
-**Compilação**  
+**Compilar**  
 Digite o número de construção do pacote.  
   
 **Verificar ID do pacote**  

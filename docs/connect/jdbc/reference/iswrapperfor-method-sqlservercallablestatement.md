@@ -11,10 +11,10 @@ ms.assetid: 71156863-3588-453e-b5a5-0573b2c1bebf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b1a572d3ab2dfba9d0aa0b8284fc770f3422782
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977103"
 ---
 # <a name="iswrapperfor-method-sqlservercallablestatement"></a>Método isWrapperFor (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67977103"
 public boolean isWrapperFor(Class iface)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *iface*  
   
  Uma **classe** que define uma interface.  
@@ -40,12 +40,12 @@ public boolean isWrapperFor(Class iface)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O método [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md) e o método [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) são definidos pela interface java.sql.Wrapper, introduzida no JDBC 4.0.  
   
  Se esse método retornar **true**, a chamada de [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) com o mesmo argumento será bem-sucedida.  
   
- Para obter mais informações, consulte [wrappers e interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Para obter mais informações, confira [Wrappers e Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método unwrap &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)   

@@ -11,10 +11,10 @@ ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ec3ad142e3dc5e2945afebeb2c9a6c97350672c
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71713305"
 ---
 # <a name="understanding-encryption-support"></a>Noções básicas sobre suporte à criptografia
@@ -28,19 +28,19 @@ Se o aplicativo não solicitar criptografia, o [!INCLUDE[jdbcNoVersion](../../in
 > [!NOTE]  
 > Verifique se o valor passado para **serverName** corresponde exatamente ao CN (Nome Comum) ou ao nome DNS na rede SAN (Nome Alternativo da Entidade) no certificado do servidor para que uma conexão TLS tenha êxito.  
 >
-> Para obter mais informações sobre como configurar o TLS para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [habilitar conexões criptografadas para o mecanismo de banco de dados](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+> Para obter mais informações sobre como configurar o TLS para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [Habilitar conexões criptografadas no Mecanismo de Banco de Dados](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Para permitir que os aplicativos usem a criptografia TLS, o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] introduziu as seguintes propriedades de conexão da versão 1.2 em diante: **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword** e **hostNameInCertificate**. Para obter mais informações, veja [Configuração das propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md).  
   
  A tabela a seguir resume o comportamento da versão do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] em possíveis cenários de conexão TLS. Cada cenário usa um conjunto diferente de propriedades de conexão TLS. A tabela inclui:  
   
-- **Blank**: "a propriedade não existe na cadeia de conexão"  
+- **blank**: "A propriedade não existe na cadeia de conexão"  
   
-- **valor**: "a propriedade existe na cadeia de conexão e seu valor é válido"  
+- **value**: "A propriedade existe na cadeia de conexão e o valor dela é válido"  
   
-- **any**: "não importa se a propriedade existe na cadeia de conexão ou seu valor é válido"  
+- **any**: "Não importa se a propriedade existe na cadeia de conexão nem se o valor dela é válido"  
   
 > [!NOTE]  
 > O mesmo comportamento se aplica à autenticação de usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e à autenticação integrada do Windows.  
@@ -66,7 +66,7 @@ Se a propriedade de criptografia for definida como **true**, o [!INCLUDE[jdbcNoV
   
 - Use uma JVM diferente  
   
-## <a name="validating-server-tls-certificate"></a>Validando o certificado TLS do servidor  
+## <a name="validating-server-tls-certificate"></a>Como validar o certificado TLS do servidor  
 
 Durante o handshake TLS, o servidor envia seu certificado de chave pública ao cliente. O driver JDBC ou o cliente precisa validar que o certificado do servidor é emitido por uma autoridade de certificação de confiança do cliente. O driver requer que o certificado do servidor atenda às seguintes condições:  
   

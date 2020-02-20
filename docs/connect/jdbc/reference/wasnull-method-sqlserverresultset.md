@@ -16,10 +16,10 @@ ms.assetid: d37f80ef-d72c-4429-ada3-1d685bdab6d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 31d3ead452f9f24509382c53e778205f0994769c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68002431"
 ---
 # <a name="wasnull-method-sqlserverresultset"></a>Método wasNull (SQLServerResultSet)
@@ -35,12 +35,12 @@ public boolean wasNull()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **true** se a leitura do último valor for nula. Caso contrário, **false**.  
+ **true** se a leitura do último valor era nula. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método wasNull é especificado pelo método wasNull na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  

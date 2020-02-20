@@ -16,10 +16,10 @@ ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b2e644feff3cd2787cc6bd80bce54562ad20794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975786"
 ---
 # <a name="relative-method-sqlserverresultset"></a>Método relative (SQLServerResultSet)
@@ -34,7 +34,7 @@ ms.locfileid: "67975786"
 public boolean relative(int nRows)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *nRows*  
   
  Um **int** que indica o número de linhas a serem movidas.  
@@ -45,8 +45,8 @@ public boolean relative(int nRows)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método relativo é especificado pelo método relativo na interface java. Sql. ResultSet.  
+## <a name="remarks"></a>Comentários  
+ Esse método relative é especificado pelo método relative na interface java.sql.ResultSet.  
   
  Ao tentar se mover além da primeira ou última linha no conjunto de resultados, o cursor será posicionado antes ou depois da primeira ou última coluna. Chamar `relative(0)` é válido, mas não altera a posição do cursor.  
   

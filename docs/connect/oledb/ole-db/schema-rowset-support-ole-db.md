@@ -1,5 +1,5 @@
 ---
-title: Suporte a conjunto de linhas de esquema (OLE DB) | Microsoft Docs
+title: Suporte ao conjunto de linhas de esquema (OLE DB) | Microsoft Docs
 description: Suporte ao conjunto de linhas de esquema (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4734255bc71b7f658b15db5c615910fbf3c6f5a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993916"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Suporte a conjunto de linhas de esquema (OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "67993916"
   O OLE DB Driver for SQL Server também dá suporte ao retorno de informações de esquema de um servidor vinculado ao processar consultas distribuídas do [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  Embora [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o ofereça suporte a sinônimos, os metadados de sinônimos não são retornados pelo driver OLE DB para SQL Server.  
+>  Apesar de o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dar suporte a sinônimos, metadados para sinônimos não são retornados pelo Driver do OLE DB para SQL Server.  
   
  As tabelas a seguir listam conjuntos de linhas de esquema e as colunas de restrição compatíveis com o OLE DB Driver for SQL Server.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67993916"
 ## <a name="in-this-section"></a>Nesta seção  
  [Suporte à consulta distribuída no conjunto de linhas do esquema](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)  
   
- [Conjunto de &#40;linhas LINKEDSERVERS OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [Conjunto de linhas LINKEDSERVERS &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Programação no OLE DB Driver for SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   

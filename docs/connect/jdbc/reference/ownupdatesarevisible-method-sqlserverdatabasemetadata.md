@@ -16,10 +16,10 @@ ms.assetid: eacbb1a8-ac9a-4f44-832e-ae0af476522e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b2754366a8272785ddfc9e11053d3b805ce6938
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976525"
 ---
 # <a name="ownupdatesarevisible-method-sqlserverdatabasemetadata"></a>Método ownUpdatesAreVisible (SQLServerDatabaseMetaData)
@@ -34,8 +34,8 @@ ms.locfileid: "67976525"
 public boolean othersUpdatesAreVisible(int type)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- *type*  
+#### <a name="parameters"></a>parâmetros  
+ *tipo*  
   
  Um inteiro que indica o tipo do conjunto de resultados, que pode ser um dos valores a seguir, conforme definido em java.sql.ResultSet ou SQLServerResultSet:  
   
@@ -63,8 +63,8 @@ public boolean othersUpdatesAreVisible(int type)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método ownUpdatesAreVisible é especificado pelo método ownUpdatesAreVisible na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método ownUpdatesAreVisible é especificado pelo método ownUpdatesAreVisible na interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

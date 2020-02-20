@@ -9,18 +9,18 @@ ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66826861"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lição 3: Definindo uma assinatura controlada por dados
 Nesta lição do tutorial do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)], você usa as páginas da assinatura controlada por dados dos portais da Web do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para se conectar a uma fonte de dados de assinatura, criar uma consulta que recupera dados de assinatura e mapear o conjunto de resultados para opções de relatório e entrega.  
   
 > [!NOTE]  
 > Antes de começar, verifique se o serviço **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent** está em execução. Se não estiver, não será possível salvar a assinatura.  Um método de verificação é abrir o [Gerenciador de Configuração do SQL Server](../relational-databases/sql-server-configuration-manager.md).
-Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a fonte de dados de relatório usa credenciais armazenadas.  Para obter mais informações, consulte [Lição 2: modificando as propriedades da fonte de dados do relatório](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a fonte de dados de relatório usa credenciais armazenadas.  Para obter mais informações, veja [Lição 2: Modificar as propriedades de fonte de dados de relatório](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
 ## <a name="bkmk_startwizard"></a>Iniciar o Assistente de Assinatura Controlada por Dados  
   
@@ -33,7 +33,7 @@ Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a font
 ## <a name="define-a-description"></a>Definir uma descrição  
 1.  Digite **Entrega de ordem de venda** na descrição.
 
-## <a name="type"></a>Digite
+## <a name="type"></a>Type
 1.  Clique em **Assinatura controlada por dados**.  
 
 ## <a name="schedule"></a>Agenda
@@ -41,7 +41,7 @@ Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a font
 2. Clique em **Editar agendamento**.
 3. Em **Detalhes do Agendamento**, clique em **Uma vez**.  
 4. Especifique uma hora de início que esteja alguns minutos adiantados da hora atual.  
-5. Especifique o **datas de início e término**.
+5. Especifique as **Datas de início e término**.
 6. Escolha **Aplicar**.
 
 ## <a name="destination"></a>Destino  
@@ -83,10 +83,10 @@ Parâmetro  |Origem do valor  | Valor/campo
 ---------|---------|---------
 **Nome do arquivo**     |Obter valor do conjunto de dados | Order     
 **Caminho**     | Inserir valor  | Em Valor, digite o nome de um compartilhamento de arquivos públicos para os quais você tem permissões de gravação (por exemplo, `\\mycomputer\public\myreports`). 
-**Formato de renderização** | Obter valor do conjunto de dados | Formato
+**Formato de renderização** | Obter valor do conjunto de dados | Formatar
 **Modo de gravação**| Inserir valor| Incremento automático    
 **Extensão do arquivo** |Inserir valor |True
-**Nome do Usuário** | Inserir valor | Digite sua conta de usuário de domínio. Insira-o neste formato: \<domain>\\\<account>. A conta de usuário precisa ter permissões para o caminho configurado. 
+**Nome de usuário** | Inserir valor | Digite sua conta de usuário de domínio. Insira-o neste formato: \<domain>\\\<account>. A conta de usuário precisa ter permissões para o caminho configurado. 
 **Senha** | Inserir valor | Digite sua senha
 **Usar conta de compartilhamento de arquivo** | Inserir valor | Falso
 
@@ -103,7 +103,7 @@ A página de assinatura no portal da Web conterá a data da **Última Execução
 > [!NOTE]
 > Atualize a página depois que a assinatura for executada para consultar as informações atualizadas.  
     
-![Resultados da assinatura no portal da web](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "resultados da assinatura no portal da web")  
+![Resultados da assinatura no portal da Web](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Resultados da assinatura no portal da Web")  
   
 Esta etapa conclui o tutorial “Definir uma assinatura controlada por dados”.   
   

@@ -11,22 +11,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68136478"
 ---
 # <a name="sql-server-2017-release-notes"></a>Notas de Versão do SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
-Este tópico descreve as limitações e os problemas com o SQL Server 2017. Para obter informações relacionadas, consulte:
+Este tópico descreve as limitações e os problemas com o SQL Server 2017. Para obter informações relacionadas. consulte:
 - [Novidades no SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Notas de versão do SQL Server no Linux](../linux/sql-server-linux-release-notes.md)
 - [Atualizações cumulativas do SQL Server 2017](https://aka.ms/sql2017cu) para obter informações sobre a última versão de atualização cumulativa
 
 **Experimente o SQL Server!**
-- [![Baixar no Centro de Avaliação](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Baixar o SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Criar a máquina virtual](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Criar uma máquina virtual com o SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![Baixar da Central de Avaliação](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Baixar o SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Criar máquina virtual](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Configurar uma máquina virtual com o SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 > [!NOTE]
 > Agora a versão prévia do SQL Server 2019 está disponível. Para obter mais informações, consulte [Novidades no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
@@ -48,7 +48,7 @@ Este tópico descreve as limitações e os problemas com o SQL Server 2017. Para
 - **Solução alternativa:** 
   - Conceder permissão aos sub-nós no modo de exibição de árvore, em vez do nível raiz.
 
-### <a name="analysis-services"></a>Analysis Services
+### <a name="analysis-services"></a>Serviços de análise
 - **Problema e impacto ao cliente:** os conectores de dados das fontes a seguir ainda não estão disponíveis para modelos de tabela no nível de compatibilidade 1400.
   - Amazon Redshift
   - IBM Netezza
@@ -99,7 +99,7 @@ Não há nenhuma nota de versão do SQL Server no Windows relacionada a essa ver
 
     3. Em seguida, vá para a próxima pasta, que pode ser *SSRS* ou *PBIRS*, dependendo de qual restou.
     4. Vá para a pasta WMI.
-    5. Execute o seguinte comando:
+    5. Execute o comando a seguir:
 
         ```console
         regsvr32 /i ReportingServicesWMIProvider.dll

@@ -14,10 +14,10 @@ ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b16398915b774454895ee39ad80fa008d22a8a75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571460"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Compatibilidade com versões anteriores do Reporting Services
@@ -31,7 +31,7 @@ Também descreve as principais alterações no produto que sabidamente interromp
 |-----------|-----------------|  
 |[Funcionalidade descontinuada do SQL Server Reporting Services no SQL Server 2016](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)|Descreve recursos que existiam em versões anteriores do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , mas que foram removidos em versões posteriores.|  
 |[Recursos preteridos do SQL Server Reporting Services no SQL Server 2016](deprecated-features-in-sql-server-reporting-services-ssrs.md)|Descreve recursos que existem nesta versão do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para fins de compatibilidade com versões anteriores, mas que serão removidos em uma versão futura do SQL Server.|  
-|[Alterações recentes no SQL Server Reporting Services do SQL Server 2016](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|Descreve problemas que podem ocorrer durante a atualização do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
+|[Alterações recentes no SQL Server Reporting Services no SQL Server 2016](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|Descreve problemas que podem ocorrer durante a atualização do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
 |[Alterações de comportamento do SQL Server Reporting Services no SQL Server 2016](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|Descreve recursos que foram alterados no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
   
 ## <a name="see-also"></a>Consulte Também  

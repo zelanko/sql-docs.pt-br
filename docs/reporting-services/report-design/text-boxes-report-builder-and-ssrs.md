@@ -14,10 +14,10 @@ ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c2c4ad1faa149a384e42c52e7bbd8437dfc03d6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573724"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Caixas de texto (Construtor de Relatórios e SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "65573724"
  Por padrão, as caixas de texto apresentam um tamanho fixo. Você pode permitir a redução ou a expansão vertical de uma caixa de texto com base no seu conteúdo. Para obter mais informações, consulte [Permitir que uma caixa de texto seja ampliada ou reduzida &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
 ## <a name="rotating-a-text-box"></a>Girando uma caixa de texto  
- Girar caixas de texto pode ajudar a criar relatórios mais legíveis, dar suporte à orientação de texto específica à localidade, ajustar mais colunas em um relatório impresso com tamanho de página fixo e criar relatórios com mais apelo gráfico. Uma caixa de texto pode ser girada em direções diferentes: horizontal, vertical (90 graus) ou girada em 270 graus. A opção vertical geralmente é usada para idiomas do Leste Asiático que são escritos de cima para baixo. Na maioria dos renderizadores, a opção vertical trata a rotação de glifo corretamente, de forma que o texto seja escrito de cima para baixo, mas os caracteres não fiquem de lado. Para outros idiomas, nas opções vertical e 270 graus, o texto é escrito lateralmente.  
+ Girar caixas de texto pode ajudar a criar relatórios mais legíveis, dar suporte à orientação de texto específica à localidade, ajustar mais colunas em um relatório impresso com tamanho de página fixo e criar relatórios com mais apelo gráfico. Uma caixa de texto pode ser girada em direções diferentes: horizontal, vertical (90 graus) ou girada em 270 graus. A opção vertical geralmente é usada para idiomas do Leste da Ásia que são escritos de cima para baixo. Na maioria dos renderizadores, a opção vertical trata a rotação de glifo corretamente, de forma que o texto seja escrito de cima para baixo, mas os caracteres não fiquem de lado. Para outros idiomas, nas opções vertical e 270 graus, o texto é escrito lateralmente.  
   
  Você pode girar caixas de texto que contêm texto literal, campos de um conjunto de dados de relatório ou dados calculados. A caixa de texto pode ser independente no corpo do relatório, em uma tabela ou matriz, ou em um cabeçalho e rodapé do relatório.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65573724"
   
  A orientação é definida na caixa de texto e se aplica a todo o texto da caixa. Você não pode especificar uma orientação diferente para partes da caixa de texto.  
   
- Para começar, consulte a seção sobre como girar texto em [Tutorial: formatar texto &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md) e veja [Definir orientação da caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
+ Para começar, confira a seção sobre como girar texto no [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md) e veja [Definir orientação da caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
   
 ##  <a name="HowTo"></a> Tópicos de instruções  
  [Adicionar, mover ou excluir uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  

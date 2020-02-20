@@ -1,6 +1,6 @@
 ---
-title: Criação de conjunto de linhas de parâmetro com valor de tabela | Microsoft Docs
-description: Criação de conjunto de linhas de parâmetro com valor de tabela estático e dinâmico
+title: Criação do conjunto de linhas do parâmetro com valor de tabela | Microsoft Docs
+description: Criação do conjunto de linhas do parâmetro com valor de tabela estático e dinâmico
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c771d8bde657b464b29a109dadd7a4d6fa33fbdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994110"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Criação do conjunto de linhas do parâmetro com valor de tabela
@@ -29,11 +29,11 @@ ms.locfileid: "67994110"
  Os objetos do conjunto de linhas do parâmetro com valor de tabela são criados explicitamente pelo consumidor para parâmetros de entrada por meio de várias interfaces no nível da sessão. Há uma instância de um objeto do conjunto de linhas de parâmetro com valor de tabela por parâmetro com valor de tabela. O consumidor pode criar os objetos do conjunto de linhas do parâmetro com valor de tabela fornecendo informações de metadados já conhecidas (cenário estático) ou descobrindo-as por meio das interfaces do provedor (cenário dinâmico). As seções a seguir descrevem estes dois cenários.  
   
 ## <a name="static-scenario"></a>Cenário estático  
- Quando as informações de tipo são conhecidas, o consumidor usa ITableDefinitionWithConstraints:: CreateTableWithConstraints para criar uma instância de um objeto de conjunto de linhas de parâmetro com valor de tabela que corresponde a um parâmetro com valor de tabela.  
+ Quando as informações de tipo são conhecidas, o consumidor usa ITableDefinitionWithConstraints::CreateTableWithConstraints para criar uma instância de um conjunto de linhas do parâmetro com valor de tabela que corresponda a um parâmetro com valor de tabela.  
   
- O campo *GUID* (parâmetro*pTableID* ) contém o GUID especial (CLSID_ROWSET_TVP). O membro *pwszName* contém o nome do tipo de parâmetro com valor de tabela para o qual o consumidor deseja criar uma instância. O campo *eKind* será definido como DBKIND_GUID_NAME. Esse nome é obrigatório quando a instrução é SQL ad hoc; o nome é opcional se é uma chamada de procedimento.  
+ O campo *guid* (parâmetro *pTableID*) contém a GUID especial (CLSID_ROWSET_TVP). O membro *pwszName* contém o nome do tipo de parâmetro com valor de tabela para o qual o consumidor deseja criar uma instância. O campo *eKind* será definido como DBKIND_GUID_NAME. Esse nome é obrigatório quando a instrução é SQL ad hoc; o nome é opcional se é uma chamada de procedimento.  
   
- Para agregação, o consumidor passa o parâmetro *pUnkOuter* com o IUnknown de controle.  
+ Para agregação, o consumidor transmite o parâmetro *pUnkOuter* com o controlador IUnknown.  
   
  As propriedades do objeto de conjunto de linhas de parâmetro com valor de tabela são somente leitura e, portanto, não é esperado que o consumidor defina propriedades em *rgPropertySets*.  
   
@@ -41,12 +41,12 @@ ms.locfileid: "67994110"
   
  Para recuperar informações correspondentes de um objeto do conjunto de linhas do parâmetro com valor de tabela, o consumidor usa IRowsetInfo::GetProperties.  
   
- Para recuperar informações sobre o status nulo, exclusivo, computado e de atualização de cada coluna, o consumidor pode usar IColumnsRowset:: GetColumnsRowset ou IColumnsInfo:: GetColumnInfo. Esses métodos fornecem informações detalhadas sobre cada coluna do conjunto de linhas do parâmetro com valor de tabela.  
+ Para recuperar informações sobre o status nulo, exclusivo, computado e de atualização de cada coluna, o consumidor pode usar IColumnsRowset::GetColumnsRowset ou IColumnsInfo::GetColumnInfo. Esses métodos fornecem informações detalhadas sobre cada coluna do conjunto de linhas do parâmetro com valor de tabela.  
   
- O consumidor especifica o tipo de cada coluna do parâmetro com valor de tabela. Isso é semelhante à forma como as colunas são especificadas quando uma tabela é criada no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O consumidor obtém um objeto de conjunto de linhas de parâmetro com valor de tabela do driver OLE DB para SQL Server por meio do parâmetro de saída *ppRowset* .  
+ O consumidor especifica o tipo de cada coluna do parâmetro com valor de tabela. Isso é semelhante à forma como as colunas são especificadas quando uma tabela é criada no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O consumidor obtém um objeto do conjunto de linhas do parâmetro com valor de tabela do Driver do OLE DB para SQL Server por meio do parâmetro de saída *ppRowset*.  
   
 ## <a name="dynamic-scenario"></a>Cenário dinâmico  
- Quando o consumidor não tem informações de tipo, ele deve usar IOpenRowset:: OpenRowset para instanciar objetos de conjunto de linhas de parâmetro com valor de tabela. O consumidor deve fornecer ao provedor somente o nome do tipo.  
+ Quando o consumidor não tiver informações de tipo, deve usar IOpenRowset::OpenRowset para criar uma instância dos objetos do conjunto de linhas do parâmetro com valor de tabela. O consumidor deve fornecer ao provedor somente o nome do tipo.  
   
  Nesse cenário, o provedor obtém as informações de tipo sobre um objeto do conjunto de linhas do parâmetro com valor de tabela do servidor em nome do consumidor.  
   

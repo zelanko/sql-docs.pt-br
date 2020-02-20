@@ -1,5 +1,5 @@
 ---
-title: Método GetString (int) | Microsoft Docs
+title: Método getString (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f3fce8bf-8d6e-476f-aa6d-992daa79b899
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2160e7214b3ad60d2c8629d55bd79de8a5b15905
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979496"
 ---
 # <a name="getstring-method-int"></a>Método getString (int)
@@ -34,7 +34,7 @@ ms.locfileid: "67979496"
 public java.lang.String getString(int index)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *index*  
   
  Um **int** que indica o índice do parâmetro.  
@@ -45,7 +45,7 @@ public java.lang.String getString(int index)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getString é especificado pelo método getString na interface java.sql.CallableStatement.  
   
  Todas as colunas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem ser retornadas como uma cadeia de caracteres. Isso significa que uma representação da cadeia de caracteres de todos os tipos baseados em número e em caractere, e uma representação da cadeia de caracteres hexadecimais de colunas binárias, como binary, varbinary, varbinary(max), image, timestamp e uniqueidentifier, podem ser retornadas.  

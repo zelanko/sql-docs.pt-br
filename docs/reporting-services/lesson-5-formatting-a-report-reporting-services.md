@@ -1,5 +1,5 @@
 ---
-title: 'Lição 5: Formatando um relatório (Reporting Services) | Microsoft Docs'
+title: 'Lição 5: como formatar um relatório (Reporting Services) | Microsoft Docs'
 ms.date: 04/29/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65105934"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lição 5: Formatando um relatório (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lição 5: formatar um relatório (Reporting Services)
 
 Agora que já adicionou uma região de dados e alguns campos ao relatório de ordens de venda, você pode formatar os campos de data e moeda, além dos cabeçalhos da coluna.
 
@@ -59,13 +59,13 @@ Você pode adicionar outra formatação ao relatório, realce a linha de cabeça
 
 4. Visualize o relatório. Deve estar como mostrado a seguir:
 
-    ![Visualização de tabela com cabeçalhos de coluna em negrito](media/rs-basictabledetailsformattedpreview.png "Visualização de tabela com cabeçalhos de coluna em negrito")  
+    ![Visualização da tabela com cabeçalhos de colunas em negrito](media/rs-basictabledetailsformattedpreview.png "Visualização da tabela com cabeçalhos de colunas em negrito")  
 
 5. No menu **Arquivo**, selecione **Salvar Tudo** para salvar o relatório.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Nesta lição, você formatou com êxito os cabeçalhos de coluna e as expressões de campo. Agora você adicionará os agrupamentos e totais ao relatório. Continue na [Lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
+Nesta lição, você formatou com êxito os cabeçalhos de coluna e as expressões de campo. Agora você adicionará os agrupamentos e totais ao relatório. Continue com a [Lição 6: como adicionar agrupamentos e totais &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
 
 ## <a name="see-also"></a>Confira também
 

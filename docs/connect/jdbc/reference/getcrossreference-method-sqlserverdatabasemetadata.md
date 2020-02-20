@@ -16,10 +16,10 @@ ms.assetid: 099dd0bf-b017-479d-9696-f5b06f4c6bf9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f23da4d83217fbed39e6dddacfe92541eae0db23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984222"
 ---
 # <a name="getcrossreference-method-sqlserverdatabasemetadata"></a>Método getCrossReference (SQLServerDatabaseMetaData)
@@ -39,7 +39,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
                                             java.lang.String tab2)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *cat1*  
   
  Uma **String** que contém o nome de catálogo da tabela que contém a chave primária.  
@@ -70,26 +70,26 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getCrossReference é especificado pelo método getCrossReference na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método getCrossReference é especificado pelo método getCrossReference na interface java.sql.DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getCrossReference conterá as seguintes informações:  
   
-|Nome|Tipo|Descrição|  
+|Nome|Type|Descrição|  
 |----------|----------|-----------------|  
-|PKTABLE_CAT|**String**|O nome do catálogo que contém a tabela de chaves primárias.|  
-|PKTABLE_SCHEM|**String**|O nome do esquema da tabela de chaves primárias.|  
-|PKTABLE_NAME|**String**|O nome da tabela de chaves primárias.|  
-|PKCOLUMN_NAME|**String**|O nome da coluna da chave primária.|  
-|FKTABLE_CAT|**String**|O nome do catálogo que contém a tabela de chaves estrangeiras.|  
-|FKTABLE_SCHEM|**String**|O nome do esquema da tabela de chaves estrangeiras.|  
-|FKTABLE_NAME|**String**|O nome da tabela de chaves estrangeiras.|  
-|FKCOLUMN_NAME|**String**|O nome da coluna da chave estrangeira.|  
+|PKTABLE_CAT|**Cadeia de caracteres**|O nome do catálogo que contém a tabela de chaves primárias.|  
+|PKTABLE_SCHEM|**Cadeia de caracteres**|O nome do esquema da tabela de chaves primárias.|  
+|PKTABLE_NAME|**Cadeia de caracteres**|O nome da tabela de chaves primárias.|  
+|PKCOLUMN_NAME|**Cadeia de caracteres**|O nome da coluna da chave primária.|  
+|FKTABLE_CAT|**Cadeia de caracteres**|O nome do catálogo que contém a tabela de chaves estrangeiras.|  
+|FKTABLE_SCHEM|**Cadeia de caracteres**|O nome do esquema da tabela de chaves estrangeiras.|  
+|FKTABLE_NAME|**Cadeia de caracteres**|O nome da tabela de chaves estrangeiras.|  
+|FKCOLUMN_NAME|**Cadeia de caracteres**|O nome da coluna da chave estrangeira.|  
 |KEY_SEQ|**short**|O número de sequência da coluna em uma chave primária de várias colunas.|  
 |UPDATE_RULE|**short**|A ação aplicada à chave estrangeira quando a operação SQL for uma atualização. Pode ser um dos seguintes valores:<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
 |DELETE_RULE|**short**|A ação aplicada à chave estrangeira quando a operação SQL for uma exclusão. Pode ser um dos seguintes valores:<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
-|FK_NAME|**String**|O nome da chave estrangeira.|  
-|PK_NAME|**String**|O nome da chave primária.|  
+|FK_NAME|**Cadeia de caracteres**|O nome da chave estrangeira.|  
+|PK_NAME|**Cadeia de caracteres**|O nome da chave primária.|  
 |DEFERRABILITY|**short**|Indica se a avaliação da restrição de chave estrangeira poderá ser adiada até uma confirmação. Pode ser um dos seguintes valores:<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
   
 > [!NOTE]  

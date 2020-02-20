@@ -1,6 +1,6 @@
 ---
 title: Usando tipos de valor grande | Microsoft Docs
-description: Usando tipos de valor grande com OLE DB driver para SQL Server
+description: Usar tipos de valor grande com o Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2847838b37a9f5c233f649b6a712d4c0b2d150f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988862"
 ---
 # <a name="using-large-value-types"></a>Usando tipos de valor grande
@@ -33,7 +33,7 @@ ms.locfileid: "67988862"
 > [!NOTE]  
 >  Os tipos de dados de valor grande podem ter entre 1 e 8 KB ou podem ser especificados como ilimitados.  
   
- Anteriormente, apenas os tipos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como **text**, **ntext** e **image** podiam ter esses tamanhos. O especificador **max** para **varchar**, **nvarchar** e **varbinary** tornou esses tipos de dados redundantes. No entanto, pelo fato de esses tipos de dados longos ainda estarem disponíveis, a maioria das interfaces para os componentes de acesso a dados OLE DB permanecerá a mesma. Para compatibilidade com versões anteriores, o sinalizador DBCOLUMNFLAGS_ISLONG no driver OLE DB para SQL Server permanece em uso. Os provedores e drivers criados no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e posterior continuam a usar essas condições para os novos tipos quando definidos como comprimento máximo ilimitado.  
+ Anteriormente, apenas os tipos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como **text**, **ntext** e **image** podiam ter esses tamanhos. O especificador **max** para **varchar**, **nvarchar** e **varbinary** tornou esses tipos de dados redundantes. No entanto, pelo fato de esses tipos de dados longos ainda estarem disponíveis, a maioria das interfaces para os componentes de acesso a dados OLE DB permanecerá a mesma. Para compatibilidade com versões anteriores, o sinalizador DBCOLUMNFLAGS_ISLONG no Driver do OLE DB para SQL Server permanece em uso. Os provedores e drivers criados no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e posterior continuam a usar essas condições para os novos tipos quando definidos como comprimento máximo ilimitado.  
   
 > [!NOTE]  
 >  Você também pode especificar os tipos de dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** como tipos de parâmetro de entrada e saída de procedimentos armazenados, tipos de retorno de função ou nas funções [CAST e CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "67988862"
   
 -   Associar como DBTYPE_IUNKNOWN e usar streaming.  
   
- Ao relatar o tamanho máximo de uma coluna, o driver OLE DB para SQL Server irá relatar:  
+ Ao informar o tamanho máximo de uma coluna, o Driver do OLE DB para SQL Server relatará:  
   
 -   O tamanho máximo definido, que é, por exemplo, 2.000, para uma coluna **varchar(** 2000 **)** ou  
   
@@ -690,7 +690,7 @@ _ExitProcessResultSet:
 }  
 ```  
   
- Para obter mais informações sobre como o driver de OLE DB para SQL Server expõe tipos de dados de valor grande, consulte [BLOBs e objetos OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
+ Para obter mais informações sobre como o Driver do OLE DB para SQL Server expõe tipos de dados de valor grande, confira [BLOBs e objetos OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
 
   
 ## <a name="see-also"></a>Consulte Também  

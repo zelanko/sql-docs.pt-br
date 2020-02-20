@@ -11,10 +11,10 @@ ms.assetid: 002496f7-8ec0-4267-b4e6-ba095e2ef306
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: edbf5a7feb65d39cb5158c42a218f077a3332236
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977414"
 ---
 # <a name="isqlserverresultset-interface"></a>Interface ISQLServerResultSet
@@ -33,8 +33,8 @@ ms.locfileid: "67977414"
 public interface ISQLServerResultSet  
 ```  
   
-## <a name="remarks"></a>Remarks  
- Essa interface é implementada pela [classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
+## <a name="remarks"></a>Comentários  
+ Essa interface é implementada pela [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
  Essa interface expõe os métodos específicos do [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]:  
   

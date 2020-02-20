@@ -12,10 +12,10 @@ ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 962f07f5e5f6ce00bc21c362ce905bec2773c28c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893801"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Adicionar classificação interativa a uma tabela ou matriz (Construtor de Relatórios e SSRS)
@@ -60,7 +60,7 @@ ms.locfileid: "68893801"
   
  Para verificar a ação de classificação, clique em **Executar** para visualizar o relatório e clique nos botões de classificação interativa.  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ##  <a name="SortingTopLevelParent"></a> Classificando um grupo de linhas pai de nível superior para um tabela ou matriz  
  Adicione um botão de classificação interativa a um cabeçalho de coluna para permitir que um usuário clique no cabeçalho da coluna e classifique as linhas do grupo pai em uma tabela ou matriz pelo valor exibido naquela coluna. A ordem dos grupos filho permanece inalterada.  
@@ -84,7 +84,7 @@ ms.locfileid: "68893801"
   
  Para verificar a ação de classificação, clique em **Executar** para visualizar o relatório e clique nos botões de classificação interativa.  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ##  <a name="SortingChildGroups"></a> Classificando grupos filho ou linhas de detalhes de um grupo  
  Adicione um botão de classificação interativa a uma linha de cabeçalho de grupo para permitir que os usuários classifiquem os valores de um grupo filho de um grupo pai ou classifiquem as linhas de detalhes do grupo filho interno.  
@@ -107,7 +107,7 @@ ms.locfileid: "68893801"
   
  Para verificar a ação de classificação, clique em **Executar** para visualizar o relatório e clique nos botões de classificação interativa.  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ##  <a name="SortingMultipleRowGroups"></a> Classificando linhas com base em uma expressão de grupo complexa  
  Adicione um botão de classificação interativa a um cabeçalho de coluna para permitir que um usuário clique no cabeçalho da coluna e classifique os grupos pai e filho combinados. Para obter esse efeito, é necessário alterar a expressão de grupo para que seja uma composição dos dois grupos. Por exemplo, suponha que uma matriz exibe totais de inventário de uma loja de itens agrupados por cor e tamanho. Para classificar as linhas com base na combinação de cor e tamanho, em vez de ter um grupo separado para cor e outro para tamanho, é possível definir um grupo com base na combinação de cor e tamanho. Para obter mais informações sobre como definir expressões de grupo, consulte [Exemplos de expressões de grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
@@ -164,7 +164,7 @@ ms.locfileid: "68893801"
   
  Para verificar a ação de classificação, clique em **Executar** para visualizar o relatório e clique no botão de classificação interativa. A matriz é classificada pelos valores combinados da expressão de grupo, embora cada valor individual seja exibido em sua própria coluna.  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ##  <a name="SynchronizingSortOrder"></a> Sincronizando a ordem de classificação para várias regiões de dados  
  Adicione um botão de classificação interativa que permita que um usuário clique em um botão de classificação e classifique várias regiões de dados. Ao criar um botão de classificação interativa, é possível especificar se a classificação deve ser sincronizada para várias regiões de dados com base no mesmo conjunto de dados do relatório. Por exemplo, um relatório poder incluir uma matriz e um gráfico que exibem os dados graficamente. Quando um usuário altera a ordem de classificação das linhas na matriz, o gráfico exibe a mesma ordem de classificação automaticamente.  
@@ -213,7 +213,7 @@ ms.locfileid: "68893801"
   
  Para verificar a ação de classificação, clique em **Executar** para visualizar o relatório e clique no botão de classificação interativa. A matriz é classificada pelos valores combinados da expressão de grupo, embora cada valor individual seja exibido em sua própria coluna.  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   

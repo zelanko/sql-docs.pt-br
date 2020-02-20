@@ -1,5 +1,5 @@
 ---
-title: Método Rollback () | Microsoft Docs
+title: Método rollback () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7adb6772-4047-4d8e-931d-b3d20eec44b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e3b4575251cb4eb55f9af37bb81ed2c4bedbf564
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975706"
 ---
 # <a name="rollback-method-"></a>Método rollback ()
@@ -37,13 +37,13 @@ public void rollback()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método rollBack é especificado pelo método rollBack na interface java. Sql. Connection.  
+## <a name="remarks"></a>Comentários  
+ Esse método rollBack é especificado pelo método rollBack na interface java.sql.Connection.  
   
  Esse método deverá ser usado apenas quando o modo de confirmação automática tiver sido desabilitado.  
   
 ## <a name="see-also"></a>Consulte Também  
- [reverter método &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)   
+ [Método rollback &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)   
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

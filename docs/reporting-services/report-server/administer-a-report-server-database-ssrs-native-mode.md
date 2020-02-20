@@ -16,10 +16,10 @@ ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7822cadea8dbe051c0e7dbc11417987dd5e5c543
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593760"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Administrar um banco de dados de servidor de relatório (modo nativo do SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "73593760"
   
  Para administrar os bancos de dados do servidor de relatório, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma variedade de ferramentas.  
   
--   Para fazer backup e restaurar, mover ou recuperar um banco de dados do servidor de relatório, use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], os comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] ou os utilitários de prompt de comando de banco de dados. Para obter instruções, consulte [Movendo os bancos de dados do servidor de relatório para outro computador &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+-   Para fazer backup e restaurar, mover ou recuperar um banco de dados do servidor de relatório, é possível usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], os comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] ou os utilitários de prompt de comando de banco de dados. Para obter instruções, consulte [Movendo os bancos de dados do servidor de relatório para outro computador &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 -   Para copiar o conteúdo do banco de dados existente em outro banco de dados do servidor de relatórios, anexe uma cópia de um banco de dados do servidor de relatórios e use-a com uma instância diferente do servidor de relatórios. Se preferir, crie e execute um script que usa chamadas SOAP para recriar o conteúdo do servidor de relatórios em um novo banco de dados. Você pode usar o utilitário **rs** para executar o script.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73593760"
  Este erro ocorre porque o nome ReportServerTempdb é armazenado internamente e usado pelos procedimentos armazenados para executar operações internas. A renomeação do banco de dados temporário impede o funcionamento correto dos procedimentos armazenados.  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>Habilitando o isolamento de instantâneo no banco de dados do servidor de relatórios  
- Você não pode habilitar o isolamento de instantâneo no banco de dados do servidor de relatórios. Se o isolamento de instantâneo for ativado, o seguinte erro aparecerá: “O relatório selecionado não está pronto para exibição. O relatório ainda está sendo renderizado ou um instantâneo de relatório não está disponível.”  
+ Você não pode habilitar o isolamento de instantâneo no banco de dados do servidor de relatórios. Se o isolamento de instantâneo estiver ativado, você encontrará o seguinte erro: "O relatório selecionado não está pronto para exibição. O relatório ainda está sendo renderizado ou um instantâneo de relatório não está disponível.”  
   
  Caso não tenha habilitado o isolamento de instantâneo intencionalmente, o atributo pode ter sido definido por outro aplicativo ou o **modelo** de banco de dados pode ter habilitado o isolamento de instantâneo, fazendo com que todos os novos bancos de dados herdem a configuração.  
   
@@ -82,10 +82,10 @@ SET READ_COMMITTED_SNAPSHOT OFF
  [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
- [Operações de backup e restauração para o Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
+ [Operações de backup e restauração do Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
  [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Armazenar dados criptografados do servidor de relatório &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Armazenar dados criptografados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

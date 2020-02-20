@@ -16,10 +16,10 @@ ms.assetid: c1824b89-fc2e-4741-b849-7d06108fda97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cd533ef2dce654ee1a414499094781f1d5a22c51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953015"
 ---
 # <a name="getclob-method-sqlservercallablestatement"></a>Método getClob (SQLServerCallableStatement)

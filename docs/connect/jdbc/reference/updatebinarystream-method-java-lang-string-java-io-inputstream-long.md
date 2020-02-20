@@ -11,10 +11,10 @@ ms.assetid: d3c0fb5d-ca05-43f7-9f38-fba6cf3705c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4dd548fcd6342e4c69ea9acc1614d0bc899f7d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985328"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream-long"></a>Método updateBinaryStream (java.lang.String, java.io.InputStream, long)
@@ -31,7 +31,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
                                long length)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnLabel*  
   
  Uma cadeia de caracteres que contém o rótulo da coluna.  
@@ -47,8 +47,8 @@ public void updateBinaryStream(java.lang.String columnLabel,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método updateBinaryStream é especificado pelo Método updateBinaryStream na interface java. Sql. ResultSet.  
+## <a name="remarks"></a>Comentários  
+ Esse método updateBinaryStream é especificado pelo método updateBinaryStream na interface java.sql.ResultSet.  
   
  Esse método passa bytes de um objeto InputStream para colunas binárias [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] selecionadas do como binary, varbinary, varbinary(max), image, xml e udt. Não há suporte para a atualização de colunas de caracteres nesse método. Para atualizar colunas de caracteres com um InputStream, use o método [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md).  
   

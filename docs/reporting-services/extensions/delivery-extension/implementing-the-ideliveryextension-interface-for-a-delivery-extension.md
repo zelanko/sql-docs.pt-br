@@ -13,16 +13,16 @@ ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 229d08da8be91a462b243fbb5580395fd03867ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193637"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>Implementando a interface IDeliveryExtension para uma extensão de entrega
   A sua classe de extensão de entrega é usada para entregar notificações de relatório a usuários com base no conteúdo das notificações. A classe de extensão de entrega também oferece infraestrutura para validar configurações de usuário passadas à extensão de entrega. Além disso, a sua classe de extensão de entrega deve conter propriedades específicas que os clientes poderão usar para obter informações sobre o nome da extensão, as configurações suportadas pela extensão e os formatos disponíveis para a extensão de entrega.  
   
- ![Processo da interface IDeliveryExtension](../../../reporting-services/extensions/delivery-extension/media/bk-ext-02.gif "Processo da interface IDeliveryExtension")  
+ ![Processo de interface IDeliveryExtension](../../../reporting-services/extensions/delivery-extension/media/bk-ext-02.gif "Processo de interface IDeliveryExtension")  
 A interface IDeliveryExtension permite a validação de dados de usuário como também de clientes para aprender sobre as configurações de entrega exigidas  
   
  Para criar uma classe de extensão de entrega, implemente <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> e <xref:Microsoft.ReportingServices.Interfaces.IExtension>. A interface **IDeliveryExtension** permite que a extensão de entrega forneça notificações de relatório usando o método <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> e valide as configurações de extensão de entrada usando o método <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ValidateUserData%2A>. A interface **IExtension** permite que você habilite a extensão de entrega para implementar um nome de extensão localizado e processe informações de configuração específicas à extensão armazenadas no arquivo de configuração [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ao implementar **IExtension**, a extensão de entrega conterá a propriedade <xref:Microsoft.ReportingServices.Interfaces.Extension.LocalizedName%2A>. É altamente recomendável que as extensões de entrega do [!INCLUDE[ssRS](../../../includes/ssrs.md)] deem suporte à propriedade **LocalizedName**, para que os usuários encontrem um nome conhecido para a extensão em uma interface do usuário, como Gerenciador de Relatórios.  

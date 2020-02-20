@@ -11,10 +11,10 @@ ms.assetid: d0263018-d326-4a7b-bf6f-5f508db899d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 12714456d9bfe4c432db73dd3327a47d877d1767
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67997127"
 ---
 # <a name="updateblob-method-int-javaioinputstream"></a>Método updateBlob (int, java.io.InputStream)
@@ -30,7 +30,7 @@ public void updateBlob(int columnIndex,
                        java.io.InputStream inputStream)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnIndex*  
   
  Um **int** que indica o índice de coluna.  
@@ -42,7 +42,7 @@ public void updateBlob(int columnIndex,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método updateBlob é especificado pelo método updateBlob na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  

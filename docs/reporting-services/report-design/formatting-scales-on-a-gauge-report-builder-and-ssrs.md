@@ -9,16 +9,16 @@ ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7044e079ddf6aa9ce322a742a78aa83059efca6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580290"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formatando escalas de um medidor (Construtor de Relatórios e SSRS)
   Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , a escala do medidor é o intervalo de números, limitados por um mínimo e um máximo, mostrado em um medidor. Normalmente, a escala de um medidor contém rótulos de marcas de escala do medidor que fornecem uma leitura precisa do que o ponteiro do medidor mostra. Geralmente, a escala de um medidor está associada a um ou mais ponteiros do medidor. Você pode ter mais de uma escala no mesmo medidor.  
   
- ![Visão geral dos elementos em uma escala de medidor](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "Visão geral dos elementos em uma escala de medidor")  
+ ![Visão geral de elementos em uma escala de medidor](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "Visão geral de elementos em uma escala de medidor")  
   
  Diferente de gráficos, nos quais vários grupos são definidos, o medidor mostra apenas um valor. Você deve definir os valores mínimo e máximo da escala. Os números do intervalo são calculados automaticamente com base nos valores especificados para o mínimo e máximo.  
   

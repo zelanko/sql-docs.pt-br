@@ -16,16 +16,16 @@ ms.assetid: 7a77d8ef-2211-4bf8-af35-020fc896c073
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1adddf442f9d2b6ff84f955cf4e448a31e6741da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974075"
 ---
 # <a name="setlogwriter-method-sqlserverdatasource"></a>Método setLogWriter (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Este método destina-se apenas ao uso interno. Para obter mais informações sobre registro em log, consulte [operação do driver de rastreamento](../../../connect/jdbc/tracing-driver-operation.md).  
+  Este método destina-se apenas ao uso interno. Para obter mais informações sobre registro em log, confira [Rastreamento de operação do Driver](../../../connect/jdbc/tracing-driver-operation.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,13 +34,13 @@ ms.locfileid: "67974075"
 public void setLogWriter(java.io.PrintWriter out)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *out*  
   
  Um objeto PrintWriter.  
   
-## <a name="remarks"></a>Remarks  
- Esse método setLogWriter é especificado pelo método setLogWriter na interface javax. Sql. DataSource.  
+## <a name="remarks"></a>Comentários  
+ Esse método setLogWriter é especificado pelo método setLogWriter na interface java.sql.DataSource.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

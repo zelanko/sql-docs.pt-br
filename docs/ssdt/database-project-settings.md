@@ -1,11 +1,7 @@
 ---
-title: Configurações de projeto de banco de dados | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Configurações de projeto de banco de dados
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DebugProperties
@@ -40,17 +36,22 @@ f1_keywords:
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4921df6e1602d4cfc98aa6da3733452d6b5d33d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 3a57f52df4dced4f110135cce1ff30346cc1ebb0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912851"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241679"
 ---
 # <a name="database-project-settings"></a>Configurações de projeto de banco de dados
+
 Você usa as configurações de projeto de banco de dados para controlar aspectos do seu banco de dados, depuração e configurações de compilação. Essas configurações caem nas seguintes categorias.  
   
--   [Configurações do Projeto](#bkmk_proj_settings)  
+-   [Configurações do projeto](#bkmk_proj_settings)  
   
 -   [Verificação Estendida Transact-SQL](#bkmk_evf)  
   
@@ -58,13 +59,13 @@ Você usa as configurações de projeto de banco de dados para controlar aspecto
   
 -   [Build SQLCLR e SQLCLR](#bkmk_sqlclr_sqlclrbuild)  
   
--   [Compilação](#bkmk_build)  
+-   [Compilar](#bkmk_build)  
   
 -   [Variáveis SQLCMD](#bkmk_sqlcmd_variables)  
   
 -   [Eventos de Compilação](#bkmk_build_events)  
   
--   [Depurador](#bkmk_debug)  
+-   [Depurar](#bkmk_debug)  
   
 -   [Caminhos de Referência](#bkmk_ref_paths)  
   
@@ -94,7 +95,7 @@ As configurações da tabela a seguir aplicam-se a todas as configurações dest
 |Esquema padrão|dbo|Especifica o esquema padrão no qual os objetos SQLCLR e Transact\-SQL são criados. É possível substituir essa configuração especificando o esquema diretamente em objetos.|  
 |Incluir nome de esquema no nome de arquivo.|não|Especifica se os nomes de arquivos incluem o esquema como um prefixo (por exemplo, dbo.Products.table.sql). Se essa caixa de seleção for limpa, os nomes de arquivos de objetos terão o formato ObjectName.ObjectType.sql (por exemplo, Products.table.sql).|  
 |Validar Uso de Maiúsculas em Identificadores|sim|Especifica se maiúsculas e minúsculas em identificadores de objetos SQL do projeto são validadas quando o projeto é compilado. Essa opção se aplica a projetos de banco de dados que especificam ordenação com diferenciação de maiúsculas e minúsculas para o banco de dados.|  
-|Configurações de Banco de Dados|Configurações padrão baseadas nos parâmetros padrão para um banco de dados|Exemplos de configurações que podem ser especificadas incluem o método de ordenação e o nível do banco de dados para um banco de dados do SQL Server.|  
+|Configurações do banco de dados|Configurações padrão baseadas nos parâmetros padrão para um banco de dados|Exemplos de configurações que podem ser especificadas incluem o método de ordenação e o nível do banco de dados para um banco de dados do SQL Server.|  
   
 ## <a name="bkmk_evf"></a>Verificação Estendida Transact-SQL  
   
@@ -116,7 +117,7 @@ Recursos que dependem da configuração do banco de dados ou da instância inclu
   
 -   Tabelas de arquivos  
   
--   Controle de alterações  
+-   Controle de Alterações  
   
 -   Funções dos conjuntos de linhas - OPENROWSET, OPENQUERY, OPENDATASOURCE  
   
@@ -124,7 +125,7 @@ Recursos que dependem da configuração do banco de dados ou da instância inclu
   
 Recursos que não têm suporte para validação no momento incluindo:  
   
--   Service Broker  
+-   Agente de Serviço  
   
 -   Esquemas particionados com grupos de arquivos definidos pelo usuário  
   
@@ -150,7 +151,7 @@ O recurso de Verificação Estendida também pode ser usado durante o desenvolvi
   
 2.  Em **Propriedades**, altere a propriedade **Verificação Estendida T-SQL** para **False**.  
   
-![Propriedades do arquivo](../ssdt/media/ssdt-evf.gif "Propriedades do arquivo")  
+![Propriedades do Arquivo](../ssdt/media/ssdt-evf.gif "Propriedades do Arquivo")  
   
 ### <a name="special-considerations-for-collations"></a>Considerações especiais para ordenações  
 Para obter mais informações sobre ordenações em bancos de dados parcialmente independentes, consulte [Ordenações de bancos de dados independentes](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  
@@ -177,7 +178,7 @@ A página de propriedades **Compilação SQLCLR** contém configurações avanç
   
 1.  No **Gerenciador de Soluções**, clique no nó da solução para a qual você deseja especificar uma configuração da compilação.  
   
-2.  No menu **Compilar** , clique em **Gerenciador de Configurações**. A caixa de diálogo **Gerenciador de Configurações** é exibida.  
+2.  No menu **Compilar**, clique em **Gerenciador de Configurações**. A caixa de diálogo **Gerenciador de Configurações** é exibida.  
   
     Especifique os parâmetros de configuração que você deseja usar para cada projeto de sua solução.  
   
@@ -208,8 +209,8 @@ Além disso, a publicação de linha de comando permite que você substitua esse
   
 |Campo|Valor padrão|Descrição|  
 |---------|-----------------|---------------|  
-|Linha de comando de evento de pré-compilação|None|Especifica que a linha de comando deve ser executada antes do projeto ser compilado. Clique em **Editar Pré-compilação** para modificar a linha de comando.|  
-|Linha de comando de eventos pós-compilação|None|Especifica que a linha de comando deve ser executada depois do projeto ser compilado. Clique em **Editar Pós-compilação** para modificar a linha de comando.|  
+|Linha de comando de evento de pré-compilação|Nenhum|Especifica que a linha de comando deve ser executada antes do projeto ser compilado. Clique em **Editar Pré-compilação** para modificar a linha de comando.|  
+|Linha de comando de eventos pós-compilação|Nenhum|Especifica que a linha de comando deve ser executada depois do projeto ser compilado. Clique em **Editar Pós-compilação** para modificar a linha de comando.|  
 |Executar o evento pós-compilação|Na compilação bem-sucedida|Especifica se a linha de comando pós-compilação deve ser executada sempre, apenas se a compilação for bem-sucedida ou apenas quando a compilação atualizar a saída do projeto (o script de compilação).|  
   
 ## <a name="bkmk_debug"></a>Depurador  
@@ -217,12 +218,12 @@ Além disso, a publicação de linha de comando permite que você substitua esse
   
 |Campo|Valor padrão|Descrição|  
 |---------|-----------------|---------------|  
-|Iniciar Ação|None|Especifica um script ou um programa externo para execução quando você depura seu projeto.|  
+|Iniciar Ação|Nenhum|Especifica um script ou um programa externo para execução quando você depura seu projeto.|  
 |Cadeia de Conexão de Destino|Fonte de Dados=(localdb)\\*SolutionName*;Catálogo Inicial=*DatabaseProjectName*;Segurança Integrada=True;Pooling=False;Tempo Limite de Conexão=30|Especifica as informações de conexão do servidor de banco de dados de destino para a configuração da compilação especificada. A cadeia de conexão padrão é em relação a uma instância e banco de dados LocalDB do SQL Server criados localmente.|  
 |Implantar propriedades do banco de dados|Sim|Especifica se as configurações de DatabaseProperties.DatabaseProperties são implantadas ou atualizadas quando você compila ou implanta o projeto de banco de dados.|  
 |Sempre recriar banco de dados|Não|Especifica se o banco de dados será cancelado e recriado em vez da execução de uma atualização incremental. Você pode selecionar essa caixa de seleção se desejar executar testes de unidade de banco de dados em uma implantação limpa do banco de dados, por exemplo. Se a caixa de seleção for limpa, o banco de dados existente será atualizado, em vez de ser removido e recriado.|  
-|Bloquear implantação incremental se puder ocorrer perda de dados|sim|Especifica se a implantação será interrompida se uma atualização provocar perda de dados. Se essa caixa de seleção for selecionada, as alterações que criariam a perda de dados farão com que a implantação seja interrompida com um erro, o que impede que os dados sejam perdidos. Por exemplo, a implantação seria interrompida se uma coluna `varchar(50)` fosse alterada para `varchar(30)`.<br /><br />**OBSERVAÇÃO:** A implantação será bloqueada apenas se as tabelas em que a perda de dados pode ocorrer contiverem dados. A implantação continuará se nenhum dado for perdido.|  
-|REMOVER objetos no destino, mas não no projeto|não|Especifica se os objetos que estão no banco de dados de destino, mas não no projeto do banco de dados devem ser removidos como parte do script de implantação. É possível excluir alguns arquivos de seu projeto para removê-los temporariamente de seu script de compilação. No entanto, você pode deixar as versões existentes desses objetos no banco de dados de destino. Essa caixa de seleção não terá nenhum efeito se a caixa de seleção **Sempre recriar banco de dados** estiver selecionada, pois o banco de dados será removido.|  
+|Bloquear implantação incremental se puder ocorrer perda de dados|Sim|Especifica se a implantação será interrompida se uma atualização provocar perda de dados. Se essa caixa de seleção for selecionada, as alterações que criariam a perda de dados farão com que a implantação seja interrompida com um erro, o que impede que os dados sejam perdidos. Por exemplo, a implantação seria interrompida se uma coluna `varchar(50)` fosse alterada para `varchar(30)`.<br /><br />**OBSERVAÇÃO:** A implantação será bloqueada apenas se as tabelas em que a perda de dados pode ocorrer contiverem dados. A implantação continuará se nenhum dado for perdido.|  
+|REMOVER objetos no destino, mas não no projeto|Não|Especifica se os objetos que estão no banco de dados de destino, mas não no projeto do banco de dados devem ser removidos como parte do script de implantação. É possível excluir alguns arquivos de seu projeto para removê-los temporariamente de seu script de compilação. No entanto, você pode deixar as versões existentes desses objetos no banco de dados de destino. Essa caixa de seleção não terá nenhum efeito se a caixa de seleção **Sempre recriar banco de dados** estiver selecionada, pois o banco de dados será removido.|  
 |No usar instruções ALTER ASSEMBLY para atualizar tipos CLR|Não|Especifica se as instruções ALTER ASSEMBLY são usadas para atualizar tipos CLR (Common Language Runtime) ou se o objeto que instancia o tipo CLR será removido e recriado quando você implantar alterações.|  
 |Avançado...|Não|Botão de comando que permite especificar opções que controlam os eventos e o comportamento da implantação.|  
   

@@ -11,16 +11,16 @@ ms.assetid: 2048bb9f-7d9b-4aaa-b135-c716910cc800
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbe3bc040ba79ad7699a571b13b48f2c41965c60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981425"
 ---
 # <a name="getnstring-method-int"></a>Método getNString (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o valor do parâmetro **nchar**, **nvarchar**ou **LONGNVARCHAR** designado como uma cadeia de caracteres na linguagem de programação Java.  
+  Recupera o valor do parâmetro **NCHAR**, **NVARCHAR** ou **LONGNVARCHAR** designado como um objeto String na linguagem de programação Java.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,18 +29,18 @@ ms.locfileid: "67981425"
 public final java.lang.String getNString(int parameterIndex)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *parameterIndex*  
   
  Um **int** que indica o índice do parâmetro.  
   
 ## <a name="return-value"></a>Valor retornado  
- Asastringobject.  
+ AStringobject.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getNString é especificado pelo método getNString na interface java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte Também  

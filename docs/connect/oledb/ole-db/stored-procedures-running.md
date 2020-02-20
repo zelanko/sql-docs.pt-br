@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4297feae08376871c68ffab2aa9b977e034c6364
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993799"
 ---
 # <a name="stored-procedures---running"></a>Procedimentos armazenados – em execução
@@ -38,7 +38,7 @@ ms.locfileid: "67993799"
   
 -   Maior funcionalidade.  
   
- O driver OLE DB para SQL Server dá suporte a três dos mecanismos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que os procedimentos armazenados usam para retornar dados:  
+ O Driver do OLE DB para SQL Server dá suporte a três dos mecanismos que os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usam para retornar dados:  
   
 -   Toda instrução SELECT no procedimento gera um conjunto de resultados.  
   

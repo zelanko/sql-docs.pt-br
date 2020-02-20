@@ -12,10 +12,10 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6b2be1e020354f47aa21dc83f17ff6169bcf2d72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66174997"
 ---
 # <a name="preload-the-cache"></a>Pré-carregar o cache  
@@ -37,7 +37,7 @@ ms.locfileid: "66174997"
   
 ## <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>Para pré-carregar o cache criando um plano de atualização do cache  
   
-1. Inicie o [portal da web de um servidor de relatório](../../reporting-services/web-portal-ssrs-native-mode.md "O portal da web de um servidor de relatório").  
+1. Inicie o [portal da Web de um servidor de relatório](../../reporting-services/web-portal-ssrs-native-mode.md "O portal da Web de um servidor de relatório").  
   
 2. Selecione **Procurar** na Página Inicial e navegue pela hierarquia de pastas até localizar o item que você deseja armazenar em cache.  
   
@@ -48,17 +48,17 @@ ms.locfileid: "66174997"
 5. Para ativar o cache de um conjunto de dados, selecione o botão de opção **Armazenar cópias deste conjunto de dados em cache e usá-las quando disponíveis**. A seção **Expiração do cache** aparece abaixo dele. Selecione um destes botões de opção:
 
     - **O cache expira após x minutos** (insira o número desejado de minutos para x).
-    - **O cache expira segundo uma agenda**.  O Reporting Services fornece agendas compartilhadas e outras específicas ao relatório, para ajudar você a controlar o processamento, a consistência do conteúdo e o desempenho da distribuição dos relatórios. Para saber mais, confira [Criar, Modificar e Excluir Agendas](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Criar, Modificar e Excluir Agendas"). Há várias opções de criar uma agenda, neste caso, para expiração do cache: selecione uma das duas opções de agenda abaixo:  
-      - botão de opção **Agenda compartilhada** e selecione uma agenda na caixa de texto suspensa **Selecione uma agenda compartilhada**. Para saber mais, confira [Agenda](../../reporting-services/subscriptions/schedules.md "Agenda").  
+    - **O cache expira segundo uma agenda**.  O Reporting Services fornece agendas compartilhadas e outras específicas ao relatório, para ajudar você a controlar o processamento, a consistência do conteúdo e o desempenho da distribuição dos relatórios. Para obter mais informações, consulte [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules"). Há várias opções para criar uma agenda, neste caso, para expiração do cache: selecione uma das duas opções de agenda abaixo:  
+      - botão de opção **Agenda compartilhada** e selecione uma agenda na caixa de texto suspensa **Selecione uma agenda compartilhada**. Para obter mais informações, consulte [Schedules](../../reporting-services/subscriptions/schedules.md "Agendas").  
       - botão de opção **Agenda específica do relatório** e selecione o link **Editar agenda**, para exibir a página *Detalhes da agenda*.  
 
-         ![A página de detalhes da agenda de expiração do portal da Web para conjuntos de dados](../../reporting-services/report-server/media/preload-the-cache/web-portal-dataset-cache-schedule-details.png "A página de detalhes da agenda de expiração do portal da Web")
+         ![A página de detalhes da agenda de expiração do cache do portal da Web para conjuntos de dados](../../reporting-services/report-server/media/preload-the-cache/web-portal-dataset-cache-schedule-details.png "Página detalhes da agenda do cache de conjunto de dados")
 
           Nesta página, você pode selecionar:
          - O tipo de agenda:
            - **Hora** - execute a agenda a cada: especifique as horas e os minutos, e a hora de início.
            - **Dia** - selecione uma das três opções abaixo:  
-              - **Nos seguintes dias**: (Dom, Seg, Ter, Qua, Qui, Sex, Sáb).
+              - **Nos seguintes dias**: (domingo, segunda-feira, terça-feira, quarta-feira, quinta-feira, sexta-feira, sábado).
               - **Todos os dias úteis**
               - **Repetir após esse número de dias** - especifique um número.  
            - **Semana** - especifique os dois itens a seguir:
@@ -94,7 +94,7 @@ ms.locfileid: "66174997"
   
 ## <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>Para pré-carregar o cache com um relatório específico ao usuário usando uma assinatura controlada por dados
 
-1. Inicie o [portal da web de um servidor de relatório](../../reporting-services/web-portal-ssrs-native-mode.md "O portal da web de um servidor de relatório").  
+1. Inicie o [portal da Web de um servidor de relatório](../../reporting-services/web-portal-ssrs-native-mode.md "O portal da Web de um servidor de relatório").  
 2. Selecione **Procurar** na Página Inicial e navegue pela hierarquia de pastas até localizar o relatório que você quer assinar.  
 3. Clique com o botão direito do mouse no relatório, selecione **Assinar** no menu suspenso. A página **Novas Assinaturas** é exibida.  
 4. Insira uma descrição para a assinatura na caixa de texto **Descrição**.  
@@ -132,14 +132,14 @@ ms.locfileid: "66174997"
 
 13. Selecione **Criar assinatura**.  
   
-14. A página **Assinaturas** é exibida, mostrando sua nova Assinatura controlada por dados. Nessa página, você poderá habilitar a assinatura, quando estiver pronto, marcando a caixa de seleção à esquerda dela e selecionando o botão **Habilitar**. ![botão habilitar na página Assinaturas](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "O botão Habilitar na página Assinaturas")
+14. A página **Assinaturas** é exibida, mostrando sua nova Assinatura controlada por dados. Nessa página, você poderá habilitar a assinatura, quando estiver pronto, marcando a caixa de seleção à esquerda dela e selecionando o botão **Habilitar**. ![botão habilitar página de assinaturas](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "O botão habilitar na página de assinaturas")
 
 15. Especifique quando a assinatura é processada. Não escolha **Quando os dados do relatório forem atualizados no servidor de relatório**. Essa definição se aplica somente a instantâneos. Se quiser usar um agendamento preexistente, selecione **Em um agendamento compartilhado**.  
   
      Ou, para criar uma agenda personalizada, selecione **Em um agendamento criado para esta assinatura** e selecione **Avançar**. Configure a agenda e selecione **Concluir**.  
   
     > [!NOTE]  
-    > Para que os assinantes recebam o relatório mais recente, a gente que você configura deve ser consistente com a agenda de entrega do relatório definida para os assinantes. Para saber mais, confira o [portal da Web de um servidor de relatório](../../reporting-services/web-portal-ssrs-native-mode.md  "Portal da web de um servidor de relatório").  
+    > Para que os assinantes recebam o relatório mais recente, a gente que você configura deve ser consistente com a agenda de entrega do relatório definida para os assinantes. Para saber mais, confira o [portal da Web de um servidor de relatório](../../reporting-services/web-portal-ssrs-native-mode.md  "O portal da Web de um servidor de relatório").  
   
 16. Configure as opções de Execução para o relatório como pode ser visto a seguir. Na página do relatório, clique na guia **Propriedades**.  
   

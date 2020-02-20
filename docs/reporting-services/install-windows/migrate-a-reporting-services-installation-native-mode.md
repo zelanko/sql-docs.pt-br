@@ -7,10 +7,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/06/2018
 ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68262898"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar uma instalação do Reporting Services (Modo Nativo)
@@ -105,13 +105,13 @@ Para obter informações sobre como migrar uma implantação do modo do SharePoi
   
 * O [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] e o SQL Server Management Studio foram reformulados para remover recursos sobrepostos. Cada ferramenta dá suporte a um conjunto distinto de tarefas.
   
-* Os filtros ISAPI não têm suporte no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e em versões posteriores. Se você usa filtros ISAPI, deve remodelar sua solução de relatório antes de migração.  
+* Os filtros ISAPI não são compatíveis com o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versões posteriores. Se você usa filtros ISAPI, deve remodelar sua solução de relatório antes de migração.  
   
-* As restrições de endereço IP não têm suporte no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e em versões posteriores. Se você usa restrições de endereço IP, deve remodelar sua solução de relatório antes da migração ou usar uma tecnologia, como um firewall, um roteador ou a conversão de endereço de rede (NAT), para configurar endereços que tem restrições de acesso ao servidor de relatório.  
+* As restrições de endereço IP não são compatíveis com o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versões posteriores. Se você usa restrições de endereço IP, deve remodelar sua solução de relatório antes da migração ou usar uma tecnologia, como um firewall, um roteador ou a conversão de endereço de rede (NAT), para configurar endereços que tem restrições de acesso ao servidor de relatório.  
   
-* Não há suporte para certificados SSL (protocolo SSL) de cliente no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e em versões posteriores. Se você usa certificados SSL de cliente, deve remodelar sua solução de relatório antes de migração.  
+* Os certificados SSL (protocolo SSL) de cliente não são compatíveis com o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versões posteriores. Se você usa certificados SSL de cliente, deve remodelar sua solução de relatório antes de migração.  
   
-* Se você usar um tipo de autenticação diferente da autenticação integrada do Windows, deverá atualizar o elemento `<AuthenticationTypes>` no arquivo **RSReportServer.config** com um tipo de autenticação com suporte. Os tipos de autenticação que têm suporte são NTLM, Kerberos, Negotiate e Básica. Os tipos de autenticação Anônima, .NET Passport e Digest não têm suporte no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e em versões posteriores.  
+* Se você usar um tipo de autenticação diferente da autenticação integrada do Windows, deverá atualizar o elemento `<AuthenticationTypes>` no arquivo **RSReportServer.config** com um tipo de autenticação com suporte. Os tipos de autenticação que têm suporte são NTLM, Kerberos, Negotiate e Básica. Os tipos de autenticação Anônima, .NET Passport e Digest não são compatíveis com o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versões posteriores.  
   
 * Se você usar folhas de estilos em cascata personalizadas em seu ambiente de relatório, elas não poderão ser migradas. Mova-as manualmente após a migração.
   
@@ -203,7 +203,7 @@ Para obter mais informações sobre as alterações no SQL Server Reporting Serv
   
     * As extensões de renderização personalizadas para o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devem ser reescritas usando o ROM (Modelo de Objeto de Renderização).  
   
-    * Os renderizadores HTML 3.2 e HTML OWC não têm suporte no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e em versões posteriores.  
+    * Os renderizadores HTML 3.2 e HTML OWC não são compatíveis com o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versões posteriores.  
   
     * Outros assemblies personalizados não devem exigir recompilação.  
   
@@ -215,7 +215,7 @@ Para obter mais informações sobre as alterações no SQL Server Reporting Serv
   
     1. [Implantando um assembly personalizado](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2. [Como implantar um item de relatório personalizado](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2. [Como: implantar um Item de relatório personalizado](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3. [Implantando uma extensão de processamento de dados](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)  
   
@@ -299,4 +299,4 @@ Depois de migrar o servidor de relatório com êxito para uma nova instância, �
 * [Compatibilidade com versões anteriores do Reporting Services](../../reporting-services/reporting-services-backward-compatibility.md)   
 * [Gerenciador de Configurações do Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

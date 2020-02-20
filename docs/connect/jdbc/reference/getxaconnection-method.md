@@ -16,10 +16,10 @@ ms.assetid: b2710613-78b1-438f-b996-c7ae6f34381a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c53cbcc5abcb9fb08999b1d171645b45097eb34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977973"
 ---
 # <a name="getxaconnection-method-"></a>Método getXAConnection ()
@@ -40,8 +40,8 @@ public javax.sql.XAConnection getXAConnection()
 ## <a name="exceptions"></a>Exceções  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- Esse método getXAConnection é especificado pelo método getXAConnection na interface javax. Sql. XADataSource.  
+## <a name="remarks"></a>Comentários  
+ Esse método getXAConnection é especificado pelo método getXAConnection na interface javax.sql.XADataSource.  
   
 > [!NOTE]  
 >  Esse método é chamado geralmente pelas implementações de pool de conexões XA, mas não regularmente pelo código de aplicativo JDBC.  

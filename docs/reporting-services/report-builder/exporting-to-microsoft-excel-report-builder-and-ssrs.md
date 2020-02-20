@@ -9,10 +9,10 @@ ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9973ce2f9c5eac344307258e1c212979146c1695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580772"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
@@ -117,7 +117,7 @@ ms.locfileid: "65580772"
   
  Isso significa que relatórios com grupos de linhas ou grupos de colunas exigem modificação depois da exportação para o Excel e antes que você possa exibir os dados exportados em tabela dinâmica. Você deve adicionar o valor de grupo às células nas quais eles estão ausentes para transformar a planilha em uma tabela plana com valores em todas as células. A imagem a seguir mostra a planilha atualizada.  
   
- ![Relatório exportado para o Excel, combinado](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Relatório exportado para o Excel, combinado")  
+ ![Relatório exportado para o Excel, achatado](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Relatório exportado para o Excel, achatado")  
   
  Sendo assim, se você criar um relatório com o objetivo específico de exportá-lo para o Excel para análise adicional dos dados do relatório, considere não agrupar em linhas ou colunas no relatório.  
   
@@ -168,10 +168,10 @@ ms.locfileid: "65580772"
   
 |Propriedade|Excel 2003|Excel atual|  
 |--------------|----------------|-------------------|  
-|Máximo de colunas por planilha|256|16\.384|  
-|Máximo de linhas por planilha|65\.536|1\.048.576|  
+|Máximo de colunas por planilha|256|16.384|  
+|Máximo de linhas por planilha|65.536|1\.048.576|  
 |Número de cores permitido em uma planilha|56 (paleta)<br /><br /> Se mais de 56 cores forem utilizadas no relatório, a extensão de renderização corresponderá à cor necessária de uma das 56 cores já disponíveis na paleta personalizada.|Aproximadamente 16 milhões (cor de 24 bits)|  
-|Arquivos compactados em ZIP|None|compactação em ZIP|  
+|Arquivos compactados em ZIP|Nenhum|compactação em ZIP|  
 |Família de fontes padrão|Arial|Calibri|  
 |Tamanho da fonte padrão|10pt|11pt|  
 |Altura de linha padrão|12,75 pt|15 pt|  
@@ -204,7 +204,7 @@ ms.locfileid: "65580772"
 ##  <a name="DocumentProperties"></a> Propriedades do documento  
  O processador do Excel grava os metadados a seguir no arquivo Excel.  
   
-|Propriedades do Elemento de Relatório|Description|  
+|Propriedades do Elemento de Relatório|Descrição|  
 |-------------------------------|-----------------|  
 |Criado|Data e hora da execução do relatório como um valor ISO de data/hora.|  
 |Autor|Autor do Relatório|  

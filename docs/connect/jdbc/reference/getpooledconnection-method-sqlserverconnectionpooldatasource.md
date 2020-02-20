@@ -16,10 +16,10 @@ ms.assetid: 030ad599-0431-4242-9428-e9ead7b75b1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 481869ac11516bba597b3dc4de63698cace40811
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980862"
 ---
 # <a name="getpooledconnection-method-sqlserverconnectionpooldatasource"></a>Método getPooledConnection (SQLServerConnectionPoolDataSource)

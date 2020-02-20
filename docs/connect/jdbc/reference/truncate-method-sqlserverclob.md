@@ -16,10 +16,10 @@ ms.assetid: ea3b2a03-387e-49d7-a4d6-ca6a6a354c90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 842e16a3e2544bf9d85187d039d3050bf16afa23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968478"
 ---
 # <a name="truncate-method-sqlserverclob"></a>Método truncate (SQLServerClob)
@@ -34,7 +34,7 @@ ms.locfileid: "67968478"
 public void truncate(long len)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *len*  
   
  O comprimento, em caracteres, no qual o CLOB deve ser truncado.  
@@ -42,8 +42,8 @@ public void truncate(long len)
 ## <a name="exceptions"></a>Exceções  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- Esse método truncate é especificado pelo método truncate na interface java. Sql. Clob.  
+## <a name="remarks"></a>Comentários  
+ Esse método truncate é especificado pelo método truncate na interface java.sql.Clob.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-methods.md)   

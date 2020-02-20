@@ -11,10 +11,10 @@ ms.assetid: 338a2bf2-b110-469d-ad08-a0f2bbefcb88
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e4a50738cb7bca9feecaa647008713ee0899d66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999249"
 ---
 # <a name="updateclob-method-javalangstring-javaioreader"></a>Método updateClob (java.lang.String, java.io.Reader)
@@ -30,19 +30,19 @@ public void updateClob(java.lang.String columnLabel,
                         java.io.Reader reader)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnLabel*  
   
  Uma **Cadeia de Caracteres** que contém o rótulo da coluna.  
   
  *reader*  
   
- Um objeto leitor.  
+ Um objeto Reader.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método updateClob é especificado pelo método updateClob na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  

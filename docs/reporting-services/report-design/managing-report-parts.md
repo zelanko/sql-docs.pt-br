@@ -9,10 +9,10 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 241d74d615f9aac2cbe48d084fd2d8e91ea9abbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580097"
 ---
 # <a name="managing-report-parts"></a>Gerenciando partes de relatório
@@ -71,13 +71,13 @@ ms.locfileid: "65580097"
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>Servidor em modo integrado do SharePoint  
   
-|Ações|Role|  
+|Ações|Função|  
 |-------------|----------|  
-|Adicionar, excluir, editar propriedades de item, gerenciar a segurança e baixar partes de relatório|Controle total|  
+|Adicionar, excluir, editar propriedades de item, gerenciar a segurança e baixar partes de relatório|Controle Total|  
 |Adicionar, excluir, editar propriedades de item e baixar partes de relatório|Design<br /><br /> Contribuir|  
-|Pesquisar e reutilizar|leitura<br /><br /> Exibir Apenas|  
+|Pesquisar e reutilizar|Ler<br /><br /> Exibir Apenas|  
   
-### <a name="security-considerations"></a>Considerações sobre segurança  
+### <a name="security-considerations"></a>Considerações de segurança  
   
 -   Quando as definições de partes de relatório são reutilizadas em um relatório, elas são copiadas na definição do relatório em sua totalidade, junto com o ComponentID que as identifica. Se uma parte de relatório for atualizada no servidor, os usuários poderão escolher baixar as partes de relatório atualizadas aos seus relatórios. As atualizações também são cópias completas da parte de relatório, substituindo a versão existente da parte de relatório que estava no relatório.  
   

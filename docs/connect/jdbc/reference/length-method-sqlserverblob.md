@@ -16,10 +16,10 @@ ms.assetid: aa233ccb-72d3-4ea3-979d-07ef9aa47359
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5848943e2b8540f1c2f7733af404520159dfb5ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976904"
 ---
 # <a name="length-method-sqlserverblob"></a>Método length (SQLServerBlob)
@@ -40,8 +40,8 @@ public long length()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método de comprimento é especificado pelo método length na interface java. Sql. blob.  
+## <a name="remarks"></a>Comentários  
+ Esse método length é especificado pelo método length na interface java.sql.Blob.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

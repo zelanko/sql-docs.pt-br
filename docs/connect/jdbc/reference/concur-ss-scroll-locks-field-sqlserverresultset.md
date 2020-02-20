@@ -16,13 +16,13 @@ ms.assetid: 0fd5d34a-c323-4e9c-a1ef-6288c4a0b4ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 820982dbb2a984a3aaa92fba0e32d86c1315ca0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955381"
 ---
-# <a name="concurssscrolllocks-field-sqlserverresultset"></a>Campo CONCUR_SS_SCROLL_LOCKS (SQLServerResultSet)
+# <a name="concur_ss_scroll_locks-field-sqlserverresultset"></a>Campo CONCUR_SS_SCROLL_LOCKS (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Usado para especificar um tipo de simultaneidade otimista de leitura/gravação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com bloqueios de linha.  

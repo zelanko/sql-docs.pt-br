@@ -16,10 +16,10 @@ ms.assetid: 545634d8-f06b-429a-9293-0087d758f359
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0c5018dc2058af72028a4114dcc896d06d212d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981014"
 ---
 # <a name="getparameterclassname-method-sqlserverparametermetadata"></a>Método getParameterClassName (SQLServerParameterMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67981014"
 public java.lang.String getParameterClassName(int param)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *param*  
   
  Um **int** que indica o índice do parâmetro.  
@@ -45,8 +45,8 @@ public java.lang.String getParameterClassName(int param)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getParameterClassName é especificado pelo método getParameterClassName na interface java. Sql. ParameterMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método getParameterClassName é especificado pelo método getParameterClassName na interface java.sql.ParameterMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

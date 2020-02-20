@@ -16,10 +16,10 @@ ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5b12b21fe8e51f8c03bf01efd7df63053c528781
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570918"
 ---
 # <a name="configurationsetting-method---setwindowsserviceidentity"></a>Método de ConfigurationSetting – SetWindowsServiceIdentity
@@ -37,7 +37,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
     string Account, string Password, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *UseBuiltInAccount*  
  Indica se a conta especificada é uma conta interna do Windows.  
   
@@ -53,7 +53,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## <a name="return-value"></a>Valor retornado  
  Retorna um *HRESULT* indicando êxito ou falha da chamada do método. Um valor 0 indica que a chamada do método teve êxito. Um valor diferente de zero indica que ocorreu um erro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando o parâmetro *UseBuiltInAccount* estiver definido como **true** e o servidor de relatório estiver em execução no Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] ou no Windows XP, os valores dos parâmetros *Name*, *Domain*e *Password* serão ignorados e a conta sistema Local será usada.  
   
  Quando o parâmetro *UseBuiltInAccount* estiver definido como **true** e o servidor de relatório estiver em execução no Windows Server 2003, as propriedades *Domain* e *Password* serão ignoradas e o campo de nome deverá conter "Builtin\NetworkService" ou "Builtin\System" ou "Builtin\LocalService".  
@@ -66,6 +66,6 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+ [Membros de MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

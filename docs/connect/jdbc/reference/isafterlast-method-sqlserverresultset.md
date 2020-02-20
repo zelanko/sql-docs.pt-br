@@ -16,10 +16,10 @@ ms.assetid: 19f9d124-3184-4985-8b97-503a8ab8b4f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 233599694c4fb4f7764bbb48d5c77e0fcd273340
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977843"
 ---
 # <a name="isafterlast-method-sqlserverresultset"></a>Método isAfterLast (SQLServerResultSet)
@@ -35,12 +35,12 @@ public boolean isAfterLast()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **true** se o cursor for após a última linha. **false** se o cursor estiver em qualquer outra posição ou se o conjunto de resultados não contiver nenhuma linha.  
+ **true** se o cursor estiver após a última linha. **false** se o cursor estiver em qualquer outra posição ou se o conjunto de resultados não contiver nenhuma linha.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método isAfterLast é especificado pelo método isAfterLast na interface java.sql.ResultSet.  
   
  Se esse método for usado com cursores dinâmicos, incluindo cursores somente encaminhamento e somente leitura, e se a propriedade de conexão selectMethod estiver definida como "cursor", ocorrerá uma exceção.  

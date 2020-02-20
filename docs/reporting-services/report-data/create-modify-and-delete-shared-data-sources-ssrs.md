@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1045f9a0c271ee4c3befe434a3eef50f0edee6df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9f5ed3f000f13d965d9f45c853d831e18d5dd4e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573204"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190863"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Criar, modificar e excluir fontes de dados compartilhadas (SSRS)
   Uma fonte de dados compartilhada é um conjunto de propriedades de conexão de fonte de dados que pode ser referenciada por vários relatórios, modelos e assinaturas controladas por dados que são executados em um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  As fontes de dados compartilhadas fornecem um modo fácil de gerenciar as propriedades da fonte de dados que geralmente são alteradas com o passar do tempo. Se a conta de usuário ou senha for alterada ou se você mover o banco de dados para outro servidor, as informações de conexão poderão ser atualizadas em um único lugar.  
@@ -35,7 +35,7 @@ ms.locfileid: "65573204"
 |Nome|Um nome que identifica o item dentro da hierarquia de pastas do servidor de relatórios.|  
 |Descrição|Uma descrição exibida com o item no portal da Web quando você exibe o conteúdo da pasta.|  
 |Tipo de conexão|A extensão de processamento de dados usada com a fonte de dados. Você só poderá usar extensões de processamento de dados que estiverem implantadas no servidor de relatórios. Para obter mais informações sobre as extensões de processamento de dados incluídas no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
-|Cadeia de conexão|A cadeia de conexão para o banco de dados. Para obter mais informações e exibir exemplos de cadeias de conexão para fontes de dados usadas com frequência, consulte [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
+|Cadeia de conexão|A cadeia de conexão para o banco de dados. Para saber mais e ver exemplos de cadeias de conexão para fontes de dados usadas com frequência, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
 |Tipo de credencial|Especifica como as credenciais são obtidas para a conexão e se elas serão usadas depois que a conexão for estabelecida. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
   
  Uma fonte de dados compartilhada não contém informações de consulta usadas para a recuperação de dados. A consulta sempre é mantida dentro de uma definição do relatório.  
@@ -103,7 +103,7 @@ ms.locfileid: "65573204"
     > [!NOTE]  
     >  O botão Testar Conexão não tem suporte para o tipo de fonte de dados XML.  
   
-10. Clique em **OK**.  
+10. Clique em **OK**  
   
  **Para modificar uma fonte de dados compartilhada no portal da Web**  
   
@@ -167,7 +167,7 @@ A exclusão de uma fonte de dados compartilhada desativará todos os relatórios
   
 4.  Em **Tipo de Fonte de Dados**, selecione o tipo de fonte de dados na lista. Para obter mais informações, consulte [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-5.  Em **Cadeia de Conexão**, especifique um ponteiro para a fonte de dados e outras configurações necessárias para estabelecer uma conexão com a fonte de dados externa. O tipo de fonte de dados usado determina a sintaxe da cadeia de caracteres de conexão. Para obter mais informações e exemplos, consulte [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+5.  Em **Cadeia de Conexão**, especifique um ponteiro para a fonte de dados e outras configurações necessárias para estabelecer uma conexão com a fonte de dados externa. O tipo de fonte de dados usado determina a sintaxe da cadeia de caracteres de conexão. Para saber mais e ver exemplos, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 6.  Em **Credenciais**, especifique como o servidor de relatório obtém credenciais para acessar a fonte de dados externa. Credenciais podem ser armazenadas, solicitadas, integradas ou configuradas para processamento autônomo do relatório.  
   
@@ -214,7 +214,7 @@ A exclusão de uma fonte de dados compartilhada desativará todos os relatórios
      No caso de modelos de relatórios, a lista de itens dependentes mostra os relatórios criados no Construtor de Relatórios. No caso de fontes de dados compartilhadas, a lista de itens dependentes pode incluir relatórios e modelos de relatório.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Gerenciar fontes de dados de relatório](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Configurar propriedades de fonte de dados para um relatório paginado](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   

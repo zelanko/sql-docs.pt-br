@@ -12,14 +12,14 @@ ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65503070"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visualizador de HTML e a barra de ferramentas de relatório
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece um Visualizador de HTML que é usado para exibir relatórios sob demanda à medida que são solicitados no servidor de relatório. O Visualizador de HTML fornece uma estrutura para exibir relatórios em HTML. Ele inclui uma barra de ferramentas de relatório, uma seção de parâmetros, uma seção de credenciais e um mapa do documento. A barra de ferramentas de relatório no Visualizador de HTML inclui recursos que você pode usar para trabalhar com seu relatório, incluindo opções de exportação para que seja possível exibir seu relatório em formatos diferentes de HTML. A seção de parâmetros e o mapa do documento aparecem somente quando você abre relatórios configurados para usar parâmetros e um controle do mapa do documento.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece um Visualizador de HTML usado para exibir relatórios sob demanda à medida que são solicitados no servidor de relatório. O Visualizador de HTML fornece uma estrutura para exibir relatórios em HTML. Ele inclui uma barra de ferramentas de relatório, uma seção de parâmetros, uma seção de credenciais e um mapa do documento. A barra de ferramentas de relatório no Visualizador de HTML inclui recursos que você pode usar para trabalhar com seu relatório, incluindo opções de exportação para que seja possível exibir seu relatório em formatos diferentes de HTML. A seção de parâmetros e o mapa do documento aparecem somente quando você abre relatórios configurados para usar parâmetros e um controle do mapa do documento.  
   
  Embora não seja possível modificar a barra de ferramentas de relatório, você pode configurar os parâmetros em uma URL de relatório para ocultá-la em um relatório. Para obter mais informações sobre como ocultar barra de ferramentas de relatório, consulte [Referência de parâmetro de acesso à URL](../reporting-services/url-access-parameter-reference.md).  
   
@@ -30,7 +30,7 @@ ms.locfileid: "65503070"
   
  A barra de ferramentas de relatório é semelhante à ilustração a seguir. A barra de ferramentas de relatório exibida pode ser diferente da ilustração com base nos recursos do relatório ou nas opções de renderização disponíveis.  
   
- ![Report toolbar](../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
+ ![Barra de ferramentas do relatório](../reporting-services/media/ssrs-htmlviewer-toolbar.png "Barra de ferramentas do relatório")  
   
  A tabela a seguir descreve recursos geralmente usados da barra de ferramentas de relatório. Cada recurso é identificado pelo controle que você usa para acessá-lo.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "65503070"
 |Arquivo TIFF|Exiba o relatório no visualizador TIFF padrão. Para alguns clientes do [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows, esse é o Visualizador de Imagens e Fax do Windows. Selecione esse formato para exibir um relatório em layout orientado a página.|  
 |Word|Exiba o relatório no [!INCLUDE[msCoName](../includes/msconame-md.md)] Word, um arquivo .docx.|  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  Parâmetros são valores usados para selecionar determinados dados (especificamente, eles são usados para concluir uma consulta que seleciona os dados para o seu relatório ou para filtrar o conjunto de resultados). Parâmetros geralmente usados em relatórios incluem datas, nomes e IDs. Quando você especifica um valor para um parâmetro, o relatório contém somente os dados que correspondem ao valor; por exemplo, dados de funcionário com base em um parâmetro de ID de Funcionário. Parâmetros correspondem a campos no relatório. Depois de especificar um parâmetro, clique em **Exibir Relatório** para obter os dados.  
   
  O autor do relatório define os valores de parâmetro que são válidos para cada relatório. Um administrador de relatório também pode definir valores de parâmetro. Para descobrir quais valores de parâmetro são válidos para seu relatório, pergunte ao designer de relatórios ou ao administrador.  

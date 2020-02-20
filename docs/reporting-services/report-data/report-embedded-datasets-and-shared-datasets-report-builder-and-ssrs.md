@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51c21800dcddec471d6760c31c3cea12e6123b6e
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 7a4deeec624f349f7fd40bb89dc9b14b6baf309b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592308"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190683"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de dados inseridos e compartilhados de relatório (Construtor de Relatórios e SSRS)
   Um conjunto de dados especifica os dados que você pode usar a partir de uma conexão de dados. Um conjunto de dados é baseado em uma conexão de dados que foi salva no relatório como uma fonte de dados inserida ou uma referência a uma fonte de dados compartilhada em um servidor de relatório. O conjunto de dados inclui uma consulta que especifica um conjunto de campos. Ao arrastar esses campos para a superfície de design, você cria expressões que avaliam os dados reais quando o relatório é executado.  
@@ -42,7 +42,7 @@ ms.locfileid: "73592308"
   
 6.  **Resultados da consulta** Você pode executar a consulta e ver um exemplo do conjunto de resultados. Você deve ter credenciais de tempo de design para executar uma consulta.  
   
-7.  **Metadados do esquema** O provedor de dados executa um comando de consulta de esquema separado da consulta para recuperar metadados para a coleção de campos do conjunto de dados. Por exemplo, uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] **SELECT** retorna os nomes de colunas para uma tabela do banco de dados. Use o painel de Dados do Relatório para expandir o conjunto de dados para exibir a coleção de campos do conjunto de dados.  
+7.  **Metadados do esquema** O provedor de dados executa um comando de consulta de esquema separado da consulta para recuperar metadados para a coleção de campos do conjunto de dados. Por exemplo, uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]**SELECT** retorna os nomes de colunas de uma tabela do banco de dados. Use o painel de Dados do Relatório para expandir o conjunto de dados para exibir a coleção de campos do conjunto de dados.  
   
  Também é possível incluir dados em um relatório usando conjuntos de dados compartilhados e partes de relatório predefinidos. Esses itens já têm as informações de conexão de dados necessárias. Para obter mais informações, consulte [Conjuntos de dados de relatórios &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) e [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "73592308"
   
 -   Um conjunto de resultados de qualquer provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] registrado e configurado.  
   
--   Dados de um modelo de relatório criado para uma fonte de dados específica, com entidades predefinidas, relações entre entidades e campos. Para obter mais informações, consulte "conjuntos de dados de relatório" na[de documentação do Reporting Services de ](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
+-   Dados de um modelo de relatório criado para uma fonte de dados específica, com entidades predefinidas, relações entre entidades e campos. Para saber mais, confira "Conjuntos de dados de relatório" na [Documentação do Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
  Quando o relatório é processado em tempo de execução, o conjunto de resultados real retornado para uma consulta pode ter zero ou mais linhas. Também é possível que as colunas definidas na consulta não sejam encontradas na fonte de dados. Valores nulos da fonte de dados são mapeados para o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] valor **System.DBNull.Value**.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "73592308"
   
 ## <a name="see-also"></a>Consulte Também  
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

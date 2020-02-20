@@ -16,10 +16,10 @@ ms.assetid: 3a9236bb-a307-45a8-b7d2-c4cbd9b3cb35
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 19a54fbfe280a4a5a16b57befee87a8f46de6a6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998237"
 ---
 # <a name="updatestring-method-javalangstring-javalangstring"></a>Método updateString (java.lang.String, java.lang.String)
@@ -35,19 +35,19 @@ public void updateString(java.lang.String columnName,
                          java.lang.String x)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
   
  *x*  
   
- Um objeto de **cadeia de caracteres** .  
+ Um objeto **String**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método updateString é especificado pelo método updateString na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  

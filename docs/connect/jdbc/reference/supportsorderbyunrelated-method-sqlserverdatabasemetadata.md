@@ -16,10 +16,10 @@ ms.assetid: 9ea6c534-8132-49f3-aac3-a12ec4c46df2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ddbb8fa811a4370db06b4992eb43e26845e1298
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969076"
 ---
 # <a name="supportsorderbyunrelated-method-sqlserverdatabasemetadata"></a>Método supportsOrderByUnrelated (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean supportsOrderByUnrelated()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método supportsOrderByUnrelated é especificado pelo método supportsOrderByUnrelated na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método supportsOrderByUnrelated é especificado pelo método supportsOrderByUnrelated na interface java.Sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

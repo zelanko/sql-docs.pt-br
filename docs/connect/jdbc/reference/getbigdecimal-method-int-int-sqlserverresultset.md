@@ -16,10 +16,10 @@ ms.assetid: c99d0772-b26c-492c-a643-2813b5429993
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15991cb98860ccc471229ae3abb8e3b24e35c799
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954017"
 ---
 # <a name="getbigdecimal-method-int-int-sqlserverresultset"></a>Método getBigDecimal (int, int) (SQLServerResultSet)
@@ -38,7 +38,7 @@ public java.math.BigDecimal getBigDecimal(int columnIndex,
                                           int scale)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnIndex*  
   
  Um **int** que indica o índice de coluna.  
@@ -53,8 +53,8 @@ public java.math.BigDecimal getBigDecimal(int columnIndex,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getBigDecimal é especificado pelo método getBigDecimal na interface java. Sql. ResultSet.  
+## <a name="remarks"></a>Comentários  
+ O método getBigDecimal é especificado pelo método getBigDecimal na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getBigDecimal &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   

@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580066"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertas de dados do Reporting Services
@@ -49,7 +49,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
   
  O diagrama a seguir mostra o fluxo de trabalho de criação e salvamento de uma definição de alerta de dados, da criação de um trabalho do SQL Agent para começar o processamento de uma instância do alerta de dados e do envio de mensagens de alertas de dados que contêm os dados de relatório que dispararam o alerta para um ou mais destinatários por email.  
   
- ![Fluxo de trabalho dos alertas do Reporting Services](../reporting-services/media/rs-alertingworkflow.gif "Fluxo de trabalho dos alertas do Reporting Services")  
+ ![Fluxo de trabalho nos alertas do Reporting Services](../reporting-services/media/rs-alertingworkflow.gif "Fluxo de trabalho nos alertas do Reporting Services")  
   
 ### <a name="reports-supported-by-data-alerts"></a>Relatórios com suporte de alertas de dados  
  Você pode criar alertas de dados em todos os tipos de relatórios profissionais que são escritos no idioma de definição de relatório (RDL) e criados no Designer de Relatórios ou no Construtor de Relatórios. Relatórios que incluem regiões de dados, como tabelas e gráficos, relatórios com sub-relatórios e relatórios complexos com vários grupos de colunas paralelos e regiões de dados aninhadas. Os únicos requisitos são o relatório incluir pelo menos uma região de dados de qualquer tipo e a fonte de dados de relatório ser configurada para usar credenciais armazenadas ou nenhuma credencial. Você não pode criar um alerta em um relatório que não tenha nenhuma região de dados.  
@@ -58,7 +58,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
   
  Ao instalar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo nativo ou no modo do SharePoint ou ao usar a versão autônoma do Construtor de Relatórios, você pode salvar relatórios em um servidor de relatório, em seu computador ou em uma biblioteca do SharePoint. Para criar alertas de dados em relatórios, os relatórios devem ser salvos ou carregados em uma biblioteca do SharePoint. Isso significa que você não pode criar alertas em relatórios salvos em um servidor de relatório no modo nativo ou em seu computador. Além disso, você não pode criar alertas inseridos em aplicativos personalizados.  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte a uma variedade de tipos de credencial em relatórios. É possível criar alertas de dados em relatórios com fontes de dados configuradas para usar credenciais armazenadas ou nenhuma credencial. Você não pode criar alertas em relatórios configurados para usar credenciais de segurança integrada ou para solicitar credenciais. O relatório é executado como parte do processamento da definição de alerta e o processamento falha sem credenciais. Para obter mais informações, consulte o seguinte:  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte a uma variedade de tipos de credencial em relatórios. É possível criar alertas de dados em relatórios com fontes de dados configuradas para usar credenciais armazenadas ou nenhuma credencial. Você não pode criar alertas em relatórios configurados para usar credenciais de segurança integrada ou para solicitar credenciais. O relatório é executado como parte do processamento da definição de alerta e o processamento falha sem credenciais. Para saber mais, consulte o seguinte:  
   
 -   [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
@@ -116,9 +116,9 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
 ##  <a name="InstallAlerting"></a> Instalar os alertas de dados  
  O recurso de alertas de dados está disponível apenas quando o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] está instalado no modo integrado do SharePoint. Quando você instala o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint, a instalação cria automaticamente o banco de dados de alertas que armazena definições de alertas de dados e metadados de alertas, e duas páginas do SharePoint para gerenciamento de alertas, e adiciona o Designer de Alertas no site do SharePoint. Não há nenhuma etapa especial para execução, ou opções para definição de alertas durante a instalação.  
   
- Se você quiser saber mais sobre como instalar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint, inclusive o serviço compartilhado do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , que é novo no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e no aplicativo do serviço [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que você deve criar e configurar antes de poder usar recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , consulte [Instalar o Reporting Services no Modo do SharePoint para SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) na biblioteca MSDN.  
+ Se você quiser saber mais sobre como instalar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint, inclusive o serviço compartilhado do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], que é novo no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e no aplicativo do serviço [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que você deve criar e configurar antes de poder usar recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Instalar o Reporting Services no Modo do SharePoint para SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) na biblioteca MSDN.  
   
- Como mostra o diagrama anterior deste tópico, os alertas de dados usam trabalhos do SQL Server Agent. Para criar os trabalhos, o SQL Server Agent deve estar em execução. Talvez você tenha configurado o SQL Server Agent para iniciar automaticamente quando instalou o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Se não, você pode iniciar o SQL Server Agent manualmente. Para obter mais informações, consulte [Configurar o SQL Server Agent](../ssms/agent/configure-sql-server-agent.md) e [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+ Como mostra o diagrama anterior deste tópico, os alertas de dados usam trabalhos do SQL Server Agent. Para criar os trabalhos, o SQL Server Agent deve estar em execução. Talvez você tenha configurado o SQL Server Agent para iniciar automaticamente quando instalou o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Se não, você pode iniciar o SQL Server Agent manualmente. Para obter mais informações, confira [Configurar o SQL Server Agent](../ssms/agent/configure-sql-server-agent.md) e [Iniciar, parar, pausar, retomar e reiniciar os serviços Mecanismo de Banco de Dados, SQL Server Agent ou SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
  Você pode usar a página **Provisionar Assinaturas e Alertas** na Administração Central do SharePoint para descobrir se o SQL Server Agent está sendo executado e criar e baixar scripts [!INCLUDE[tsql](../includes/tsql-md.md)] personalizados que executa para conceder permissões ao SQL Server Agent. Se possível, gere também os scripts [!INCLUDE[tsql](../includes/tsql-md.md)] usando o PowerShell. Para obter mais informações, consulte [Provisionar assinaturas e alertas para aplicativos de serviço do SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
@@ -131,7 +131,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
   
  A tabela a seguir lista os elementos da configuração para alertas de dados e seus valores padrão, descrições e locais.  
   
-|Configuração|Valor Padrão|Descrição|Local|  
+|Configuração|Valor Padrão|Descrição|Location|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|Número de minutos entre inícios do ciclo de limpeza.|Arquivo de configuração do servidor de relatório|  
 |AlertingExecutionLogCleanupMinutes|10080|Número de minutos para manter entradas do log de execução.|Arquivo de configuração do servidor de relatório|  
@@ -152,8 +152,8 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
 |CreateSchedule|Você cria uma definição de alerta de dados e um agendamento de trabalho do SQL Server Agent é criado com base no intervalo de frequência especificado na definição de alerta.|  
 |UpdateSchedule|Você atualiza o intervalo de frequência da definição de alerta de dados e o agendamento de trabalho do SQL Server Agent é atualizado.|  
 |DeleteSchedule|Você exclui a definição de alerta de dados e seu trabalho do SQL Server Agent é excluído.|  
-|GenerateAlert|O tempo de execução de alerta processa o feed de dados de relatório, aplica as regras especificadas na definição de alerta de dados, determina se deve ser criada uma instância de alerta de dados e, se necessário, cria uma instância do alerta de dados.|  
-|DeliverAlert|O tempo de execução cria a mensagem de alerta de dados e a envia para todos os destinatários por email.|  
+|GenerateAlert|O runtime de alerta processa o feed de dados de relatório, aplica as regras especificadas na definição de alerta de dados, determina se deve ser criada uma instância de alerta de dados e, se necessário, cria uma instância do alerta de dados.|  
+|DeliverAlert|O runtime cria a mensagem de alerta de dados e a envia para todos os destinatários por email.|  
   
  A tabela a seguir resume os manipuladores de eventos e quando a repetição será acionada:  
   
@@ -205,9 +205,9 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oferecem suporte a dois níveis de permissão: operador de informações e administrador de alerta. A tabela a seguir lista as permissões e as tarefas do SharePoint relacionadas.  
   
-|Tipo de usuário|Permissão do SharePoint|Descrição da tarefa|  
+|Tipo de Usuário|Permissão do SharePoint|Descrição da tarefa|  
 |---------------|---------------------------|----------------------|  
-|Operador de informações|Exibir Itens<br /><br /> Criar Alertas|Exibir os itens como relatórios e criar alertas de dados nos relatórios. Editar e excluir alertas.|  
+|Operador de informações|Exibir Itens<br /><br /> Criar alertas|Exibir os itens como relatórios e criar alertas de dados nos relatórios. Editar e excluir alertas.|  
 |Administrador de alerta|Gerenciar Alertas|Exiba uma lista de todos os alertas de dados salvos no site do SharePoint e exclua alertas.|  
   
 ##  <a name="DiagnosticsLogging"></a> Diagnóstico e log  
@@ -228,7 +228,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
  Para obter informações sobre outros logs do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , consulte [Fontes e arquivos de log do Reporting Services](../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
 #### <a name="alerting-execution-log"></a>Log de execução de alerta  
- O serviço de tempo de execução de alerta grava entradas na tabela ExecutionLogView do banco de dados de alertas. Você pode consultar a tabela ou executar os procedimentos armazenados a seguir para obter informações de diagnóstico mais sofisticadas sobre os alertas de dados salvos no banco de dados de alertas.  
+ O serviço de runtime de alerta grava entradas na tabela ExecutionLogView do banco de dados de alertas. Você pode consultar a tabela ou executar os procedimentos armazenados a seguir para obter informações de diagnóstico mais sofisticadas sobre os alertas de dados salvos no banco de dados de alertas.  
   
 -   ReadAlertData  
   
@@ -255,7 +255,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
  O log de rastreamento do servidor de relatório contém informações detalhadas sobre as operações do serviço Servidor de Relatório, incluindo as operações executadas pelo serviço Web Servidor de Relatório, pelo Gerenciador de Relatórios e pelo processamento em segundo plano. As informações do log de rastreamento podem ser úteis se você estiver depurando um aplicativo que inclui um servidor de relatório ou investigando um problema específico que foi gravado no log de evento ou de execução. Para obter mais informações, consulte [Report Server Service Trace Log](../reporting-services/report-server/report-server-service-trace-log.md).  
   
 ##  <a name="PerformanceCounters"></a> Contadores de desempenho  
- Os alertas de dados fornecem seus próprios contadores de desempenho. Todos menos um contador de desempenho estão relacionados a um evento que faz parte do serviço de tempo de execução de alerta. O contador de desempenho relacionado à fila de evento informa o comprimento da fila de todos os eventos ativos.  
+ Os alertas de dados fornecem seus próprios contadores de desempenho. Todos menos um contador de desempenho estão relacionados a um evento que faz parte do serviço de runtime de alerta. O contador de desempenho relacionado à fila de evento informa o comprimento da fila de todos os eventos ativos.  
   
 |Evento ou fila de eventos|Contador de desempenho|  
 |--------------------------|-------------------------|  
@@ -273,7 +273,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
 ##  <a name="SupportForSSL"></a> Suporte para SSL  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pode usar o serviço HTTP SSL (protocolo SSL) para estabelecer conexões criptografadas com um servidor de relatório ou site do SharePoint.  
   
- O serviço de tempo de execução de alerta e a interface do usuário de alertas de dados oferecem suporte para SSL e funcionam de modo semelhante quer você use SSL ou HTTP; no entanto, há algumas diferenças sutis. Quando a definição de alerta de dados é criada usando uma conexão SSL, a URL associada à biblioteca do SharePoint da mensagem de alerta de dados também usa SSL. Você pode identificar a conexão SSL porque ela usa HTTPS, em vez de HTTP em sua URL. De modo semelhante, se a definição de alerta de dados foi criada usando uma conexão HTTP, o link para o site do SharePoint usa HTTP. Se a definição de alerta foi criada usando SSL ou HTTP, a experiência para usuários e administradores de alertas será idêntica ao uso do Designer de Alerta de Dados ou do Gerenciador de Alertas de Dados. Se o protocolo (HTTP ou SSL) for alterado entre a hora em que a definição de alerta foi criada e atualizada e salva novamente, o protocolo original será mantido e usado em URLs de link.  
+ O serviço de runtime de alerta e a interface do usuário de alertas de dados oferecem suporte para SSL e funcionam de modo semelhante quer você use SSL ou HTTP; no entanto, há algumas diferenças sutis. Quando a definição de alerta de dados é criada usando uma conexão SSL, a URL associada à biblioteca do SharePoint da mensagem de alerta de dados também usa SSL. Você pode identificar a conexão SSL porque ela usa HTTPS, em vez de HTTP em sua URL. De modo semelhante, se a definição de alerta de dados foi criada usando uma conexão HTTP, o link para o site do SharePoint usa HTTP. Se a definição de alerta foi criada usando SSL ou HTTP, a experiência para usuários e administradores de alertas será idêntica ao uso do Designer de Alerta de Dados ou do Gerenciador de Alertas de Dados. Se o protocolo (HTTP ou SSL) for alterado entre a hora em que a definição de alerta foi criada e atualizada e salva novamente, o protocolo original será mantido e usado em URLs de link.  
   
  Se você criar um alerta de dados em um site do SharePoint que está configurado para usar o SSL e, em seguida, remover o requisito de SSL, o alerta continuará funcionando no site. Se o site for excluído, o site de zona padrão será usado.  
   
@@ -305,9 +305,9 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
   
 -   [Salvar um relatório em uma biblioteca do SharePoint &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
   
--   [Criar um Alerta de Dados no Designer de Alertas de Dados](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
+-   [Criar um alerta de dados no Designer de alertas de dados](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
--   [Editar um alerta de dados no Designer de Alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Editar um alerta de dados no Designer de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
 -   [Gerenciar Meus alertas de dados no Gerenciador de alertas de dados](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
   
@@ -321,4 +321,4 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
 [Gerenciador de Alertas de dados para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Gerenciador de Alertas de Dados para Usuários do SharePoint](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

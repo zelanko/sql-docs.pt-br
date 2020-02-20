@@ -12,10 +12,10 @@ ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9c65d1db987f5d317b0719ff101012b4db0a5873
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67038022"
 ---
 # <a name="planning-a-report-report-builder"></a>Planejando um relatório (Construtor de Relatórios)
@@ -27,7 +27,7 @@ ms.locfileid: "67038022"
   
 -   **Que estrutura você deseja usar para apresentar os dados no relatório?**  
   
-     Para apresentar dados, você pode optar entre tabular, matriz (semelhante a uma tabela de referência cruzada ou relatório de Tabela Dinâmica), gráfico, estruturas de formato livre ou qualquer combinação desses itens. Para obter mais informações, consulte [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md) [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
+     Para apresentar dados, você pode optar entre tabular, matriz (semelhante a uma tabela de referência cruzada ou relatório de Tabela Dinâmica), gráfico, estruturas de formato livre ou qualquer combinação desses itens. Para obter mais informações, consulte [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)[Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
 -   **Que aparência você deseja para seu relatório?**  
   
@@ -51,6 +51,6 @@ ms.locfileid: "67038022"
   
 ## <a name="see-also"></a>Consulte Também  
  [Construtor de Relatórios no SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Conceitos (SSRS) do Reporting Services](../reporting-services-concepts-ssrs.md) [tutoriais do construtor de relatórios](../../reporting-services/report-builder-tutorials.md)  
+ [Conceitos do SSRS (Reporting Services)](../reporting-services-concepts-ssrs.md) [Tutoriais do Construtor de Relatórios](../../reporting-services/report-builder-tutorials.md)  
   
   

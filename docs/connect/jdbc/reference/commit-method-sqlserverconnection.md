@@ -1,5 +1,5 @@
 ---
-title: Método Commit (SQLServerConnection) | Microsoft Docs
+title: Método commit (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c7346165-51bf-4844-b64c-29833c147236
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7561a77d91ca7de4aafd9a5d7aab2c9a4b312124
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955562"
 ---
 # <a name="commit-method-sqlserverconnection"></a>Método commit (SQLServerConnection)
@@ -37,7 +37,7 @@ public void commit()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método commit é especificado pelo método commit na interface java.sql.Connection.  
   
  Esse método deverá ser usado apenas quando o modo de confirmação automática tiver sido desabilitado.  

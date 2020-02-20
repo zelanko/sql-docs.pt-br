@@ -12,10 +12,10 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67564031"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurar memória disponível para aplicativos do Servidor de Relatórios
@@ -36,10 +36,10 @@ ms.locfileid: "67564031"
   
  Se não houver pressão de memória no sistema, cada aplicativo do servidor solicita memória na inicialização, antecipadamente ao recebimento de solicitações, para obter desempenho ideal quando as solicitações forem finalmente recebidas. À medida que a pressão de memória aumenta, o servidor de relatório ajusta esse processo conforme descrito na tabela a seguir.  
   
-|Pressão de memória|Resposta do servidor|  
+|Demanda de memória|Resposta do servidor|  
 |---------------------|---------------------|  
-|Baixa|As solicitações atuais continuam sendo processadas. As novas solicitações são quase sempre aceitas. As solicitações direcionadas ao aplicativo de processamento em segundo plano recebem uma prioridade menor que as solicitações direcionadas ao serviço Web Servidor de Relatórios.|  
-|Média|As solicitações atuais continuam sendo processadas. Novas solicitações podem ser aceitas. As solicitações direcionadas ao aplicativo de processamento em segundo plano recebem uma prioridade menor que as solicitações direcionadas ao serviço Web Servidor de Relatórios. As alocações de memória de todos os três aplicativos de servidor são reduzidas, com reduções relativamente maiores no processamento em segundo plano para tornar mais memória disponível para as solicitações de serviço Web.|  
+|Baixo|As solicitações atuais continuam sendo processadas. As novas solicitações são quase sempre aceitas. As solicitações direcionadas ao aplicativo de processamento em segundo plano recebem uma prioridade menor que as solicitações direcionadas ao serviço Web Servidor de Relatórios.|  
+|Médio|As solicitações atuais continuam sendo processadas. Novas solicitações podem ser aceitas. As solicitações direcionadas ao aplicativo de processamento em segundo plano recebem uma prioridade menor que as solicitações direcionadas ao serviço Web Servidor de Relatórios. As alocações de memória de todos os três aplicativos de servidor são reduzidas, com reduções relativamente maiores no processamento em segundo plano para tornar mais memória disponível para as solicitações de serviço Web.|  
 |Alta|A alocação de memória é reduzida ainda mais. Os aplicativos de servidor que solicitam mais memória são negados. As solicitações atuais são retardadas e demoram mais tempo para serem concluídas. Novas solicitações não são aceitas. O servidor de relatório troca arquivos de dados na memória com o disco.<br /><br /> Se as restrições de memória se tornarem severas e não houver memória disponível para trabalhar com novas solicitações, o servidor de relatório retornará um erro de servidor indisponível HTTP 503 enquanto as solicitações estiverem sendo concluídas. Em alguns casos, os domínios de aplicativo podem ser imediatamente reciclados para reduzir a pressão de memória.|  
   
  Apesar de não ser possível personalizar as respostas de servidor de relatório em diferentes cenários de pressão de memória, você pode especificar as definições de configuração que definem os limites que separam as respostas de pressão de memória alta, média e baixa.  
@@ -60,7 +60,7 @@ ms.locfileid: "67564031"
   
  A ilustração a seguir mostra como as configurações são usadas em conjunto para distinguir entre níveis de pressão de memória baixa, média e alta.  
   
- ![Definições de configuração do estado de memória](../../reporting-services/report-server/media/rs-memoryconfigurationzones.png "Definições de configuração do estado de memória")  
+ ![Definições de configuração para estado de memória](../../reporting-services/report-server/media/rs-memoryconfigurationzones.png "Definições de configuração para estado de memória")  
   
  A tabela a seguir descreve as configurações do **WorkingSetMaximum**, **WorkingSetMinimum**, **MemorySafetyMargin**e **MemoryThreshold** . As definições de configuração são especificadas no arquivo [RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "67564031"
 |**MemorySafetyMargin**|Especifica uma porcentagem de **WorkingSetMaximum** que define o limite entre cenários de pressão média e baixa. Esse valor é a porcentagem de memória disponível reservada para o sistema e não pode ser usado para operações de servidor de relatório. O valor padrão é 80.|  
   
 > [!NOTE]  
->  As definições**MemoryLimit** e **MaximumMemoryLimit** estão obsoletas no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e later versions. Se você atualizou uma instalação existente ou estiver usando um arquivo RSReportServer.config que contenha essas configurações, o servidor de relatório não mais lerá esses valores.  
+>  As configurações **MemoryLimit** e **MaximumMemoryLimit** estão obsoletas no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões posteriores. Se você atualizou uma instalação existente ou estiver usando um arquivo RSReportServer.config que contenha essas configurações, o servidor de relatório não mais lerá esses valores.  
   
 #### <a name="example-of-memory-configuration-settings"></a>Exemplo de definições de configuração de memória  
  O exemplo a seguir mostra as definições de configuração de um computador de servidor de relatório que usa valores de configuração de memória personalizados. Para adicionar **WorkingSetMaximum** ou **WorkingSetMinimum**, digite os elementos e os valores no arquivo RSReportServer.config. Ambos os valores são inteiros que expressam quilobytes de RAM que você está alocando aos aplicativos de servidor. O exemplo a seguir especifica que a alocação de memória total dos aplicativos de servidor de relatório não pode exceder 4 gigabytes. Se o valor padrão para **WorkingSetMinimum** (60% dos **WorkingSetMaximum**) for aceitável, você poderá omiti-lo e especificar apenas **WorkingSetMaximum** no arquivo RSReportServer.config. Este exemplo inclui **WorkingSetMinimum** para mostrar como seria se você quisesse adicioná-lo:  
@@ -86,7 +86,7 @@ ms.locfileid: "67564031"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>Sobre definições de configuração de memória do ASP.NET  
- Embora o 2016 e posterior Web Report Server web e serviço portal são aplicativos HTML5, as versões anteriores são [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] aplicativos, nenhum aplicativo responde às definições de configuração de memória que você especificar na **processModel**  seção Machine. config para [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] aplicativos que são executados no IIS 5.0 e o modo de compatibilidade mais alto. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] lê as definições de configuração de memória somente no arquivo RSReportServer.config.  
+ Embora o serviço Web Servidor de Relatório 2016 e posterior e o portal da Web sejam aplicativos do HTML5 e as versões anteriores sejam aplicativos [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)], nenhum aplicativo responde às definições de configuração de memória especificadas na seção **processModel** de machine.config para aplicativos do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] executados no modo de compatibilidade do IIS 5.0 e posterior. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] lê as definições de configuração de memória somente no arquivo RSReportServer.config.  
   
 ## <a name="see-also"></a>Confira também  
  [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

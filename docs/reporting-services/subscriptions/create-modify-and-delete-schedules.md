@@ -21,10 +21,10 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140222"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -32,9 +32,9 @@ ms.locfileid: "67140222"
 
  Use um dos seguintes métodos para determinar se uma agenda compartilhada é ativamente usada:
 
--   **Portal da Web:** na guia **Agendas** das **Configurações do Site**, examine os valores nos campos Data da Última Execução, Data da Próxima Execução e Status. Se uma agenda não for mais executada devido à expiração, a data de validade será exibida no campo Status. Para obter mais informações, veja [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
+-   **Portal da Web:** na guia **Agendas** das **Configurações do Site**, examine os valores nos campos data da Última Execução, data da Próxima Execução e Status. Se uma agenda não for mais executada devido à expiração, a data de validade será exibida no campo Status. Para obter mais informações, veja [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
 
--   **SQL Server Management Studio:** exibindo as **relatórios** página de uma determinada agenda compartilhada. Esta página lista todos os relatórios e todos os conjuntos de dados compartilhados que usam a agenda compartilhada. Para saber mais, confira [Reporting Services no SQL Server Management Studio](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
+-   **SQL Server Management Studio:** exibir a página **Relatórios** de uma determinada agenda compartilhada. Esta página lista todos os relatórios e todos os conjuntos de dados compartilhados que usam a agenda compartilhada. Para saber mais, confira [Reporting Services no SQL Server Management Studio](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
 
 -  **Logs:** Exibindo os arquivos de log de execução do relatório ou logs de rastreamento para determinar se os relatórios foram executados nos horários especificados pela agenda. Para obter mais informações, consulte [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).
 
@@ -43,7 +43,7 @@ As agendas compartilhadas devem ser excluídas manualmente usando a página Agen
 
 Se uma agenda compartilhada usada por vários relatórios e assinaturas for excluída, o servidor de relatório criará agendas individuais para cada relatório e assinatura que usou anteriormente a agenda compartilhada. Cada nova agenda individual conterá a data, a hora e o padrão de recorrência que foram especificados na agenda compartilhada. Observe que o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não fornece o gerenciamento central de agendas individuais. Se você excluir uma agenda compartilhada, deverá manter as informações de agenda para cada item individual.
 
-**Observação:**  se você não tiver certeza de que uma agenda compartilhada será usada, considere a exclusão dela no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] em vez de no portal da Web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fornece os mesmos recursos de gerenciamento de agenda compartilhada que o Gerenciador de Relatórios, mas fornece uma página Relatórios adicional que mostra o nome de cada relatório que usa a agenda.
+**Observação:**  se você não tiver certeza de que uma agenda compartilhada será usada, considere a exclusão dele no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] em vez de no portal da Web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fornece os mesmos recursos de gerenciamento de agenda compartilhada que o Gerenciador de Relatórios, mas fornece uma página Relatórios adicional que mostra o nome de cada relatório que usa a agenda.
 
  Excluir um agendamento e deixá-lo expirar são ações diferentes. Uma data de expiração é usada para parar um agendamento, mas não o exclui. Como as agendas são usadas para automatizar muitos recursos, elas nunca são excluídas automaticamente. Agendamentos expirados fornecem evidência para os administradores do servidor de relatórios quanto aos motivos pelos quais um processo automatizado parou subitamente. Sem a presença da agenda expirada, um administrador do servidor de relatório pode diagnosticar incorretamente o problema ou gastar tempo desnecessário tentando solucionar um processo totalmente funcional.
 
@@ -64,20 +64,20 @@ Uma agenda específica do relatório que expirou permanece anexada ao relatório
    >[!NOTE]  
    >Se **Configurações** não estiver disponível, você não terá permissão para acessar configurações do site.  
 
-1. Selecione **configurações do Site** no menu suspenso.
+1. Selecione **Configurações do site** no menu suspenso.
 1. Selecione a guia **Agendas** .
-1. Selecione **+ novo agendamento**. (Para modificar uma agenda existente, escolha o nome da agenda).
+1. Selecione **+ Nova agenda**. (Para modificar uma agenda existente, escolha o nome da agenda).
 1. Digite um nome descritivo para a agenda.
 1. Selecione **Hora**, **Dia**, **Semana**ou **Mês**. Clique em **Uma vez** para criar uma agenda que é executada somente uma vez por dia. Opções adicionais aparecem quando você especifica a base da agenda.
 1. Opcionalmente, selecione uma data para iniciar a agenda. O padrão é o dia atual. Você pode adiar a hora de início de agenda escolhendo uma data posterior.
 1. Opcionalmente, selecione uma data para terminar a agenda. A agenda deixa de ser executada nesta data, mas não é excluída.
-1. Selecione uma hora para a agenda seja executada.
-1. Escolha **OK**.
+1. Selecione uma hora para a execução da agenda.
+1. Selecione **OK**.
 
 ### <a name="to-delete-a-shared-schedule-web-portal"></a>Para excluir uma agenda compartilhada (portal da Web)
 
 1. No portal da Web, escolha **Configurações** ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png) na barra de ferramentas.
-2. Selecione **configurações do Site** no menu suspenso.
+2. Selecione **Configurações do site** no menu suspenso.
 3. Selecione a guia **Agendas** .
 4. Marque a caixa de seleção próxima à agenda compartilhada que deseja excluir e escolha **Excluir**.
 
@@ -101,7 +101,7 @@ Uma agenda específica do relatório que expirou permanece anexada ao relatório
 
      Se preferir, especifique uma agenda única (não recorrente) selecionando **Uma Vez**e especificando uma **Hora de Início**.
 
-8.  Escolha **OK**.
+8.  Selecione **OK**.
 
 ##### <a name="to-delete-a-shared-schedule-management-studio"></a>Para excluir uma agenda compartilhada (Management Studio)
 
@@ -110,7 +110,7 @@ Uma agenda específica do relatório que expirou permanece anexada ao relatório
 3. clique na guia **Relatórios** para exibir a lista de relatórios que usam atualmente o agendamento.
 clique em **Cancelar**
 4.  Expanda a pasta Agendas Compartilhadas, clique com o botão direito do mouse na agenda que deseja excluir e, em seguida, clique em **Excluir**. A caixa de diálogo **Excluir Itens do Catálogo** é exibida.
-5.  Escolha **OK**.
+5.  Selecione **OK**.
 
  Se uma agenda compartilhada usada por vários relatórios e assinaturas for excluída, o servidor de relatório criará agendas individuais para cada relatório e assinatura que usou anteriormente a agenda compartilhada. Cada nova agenda individual conterá a data, a hora e o padrão de recorrência que foram especificados na agenda compartilhada.
 

@@ -9,10 +9,10 @@ ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e87bea9a9bd4807b1d91735cc5a620ac3242de73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581523"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Controlando a exibição da região de dados Tablix em uma página do relatório
@@ -50,7 +50,7 @@ Regiões de dados de tabela, matriz e lista são exemplos de regiões de dados *
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>Controlando como os grupos de linhas e de colunas Tablix são processados  
  A renderização dos grupos de regiões de dados Tablix depende da estrutura de grupo. Uma região de dados Tablix pode ter quatro áreas, como mostra a figura a seguir:  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Áreas da região de dados Tablix](../../reporting-services/report-design/media/rs-tablixareas.gif "Áreas da região de dados Tablix")  
   
  A área do grupo de linhas e a área do grupo de colunas contêm cabeçalhos de grupo. Quando uma região de dados Tablix tem cabeçalhos de grupo, você pode controlar a repetição de linhas e colunas definindo as propriedades na página **Geral** da caixa de diálogo **Propriedades do Tablix** .  
   

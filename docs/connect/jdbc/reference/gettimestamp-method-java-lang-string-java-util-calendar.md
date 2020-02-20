@@ -16,10 +16,10 @@ ms.assetid: 770668d9-2e52-4ff0-be2f-ebf78fd41644
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2f77ce20c948623322b328c52d3f40db812551d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978762"
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar"></a>Método getTimestamp (java.lang.String, java.util.Calendar)
@@ -35,22 +35,22 @@ public java.sql.Timestamp getTimestamp(java.lang.String name,
                                        java.util.Calendar cal)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *name*  
   
  Uma **String** que contém o nome do parâmetro.  
   
  *cal*  
   
- Um objeto de calendário.  
+ Um objeto Calendar.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um objeto timestamp.  
+ Um objeto Timestamp.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getTimestamp é especificado pelo método getTimestamp na interface java.sql.CallableStatement.  
   
  Esse método só retorna valores das colunas **datetime** e **smalldatetime** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

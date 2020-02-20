@@ -1,6 +1,7 @@
 ---
-title: Alterar o endereço IP de uma instância do cluster de failover | Microsoft Docs
-ms.custom: ''
+title: Alterar o endereço IP de uma instância de cluster de failover
+description: Saiba como alterar o endereço IP de uma instância de cluster de failover do SQL Server usando o Gerenciador de Cluster de Failover.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93738cb12b13b5f7c6434acd7d7d86b5496d4fc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4960a10a44e3a84b42c0bf43872a38be05be292
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063796"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230140"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>Alterar o endereço IP de uma instância do cluster de failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

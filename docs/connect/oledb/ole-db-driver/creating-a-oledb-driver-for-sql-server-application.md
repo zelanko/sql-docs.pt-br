@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4f7861e02b1ed203911f4e3f86575a9688c861fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015658"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>Criar um aplicativo do OLE DB Driver for SQL Server
@@ -26,7 +26,7 @@ ms.locfileid: "68015658"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  A criação de um driver de OLE DB para SQL Server aplicativo envolve estas etapas:  
+  A criação de um aplicativo do Driver do OLE DB para SQL Server envolve as seguintes etapas:  
   
 1.  Estabelecimento de uma conexão a uma fonte de dados.  
   

@@ -9,10 +9,10 @@ ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9285b9b89930fe540f9b5493f1730184cf4e9526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62499935"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Preparar dados do Excel para relatórios móveis do Reporting Services
@@ -44,7 +44,7 @@ Ao preparar um arquivo do Excel como um conjunto de dados para um relatório mó
   
 ![SS_MRP_ExcelDataSheet](../../reporting-services/mobile-reports/media/ss-mrp-exceldatasheet.png)  
           
-## <a name="column-headers"></a>Cabeçalhos de coluna  
+## <a name="column-headers"></a>Cabeçalhos da coluna  
   
 Como você pode ver no exemplo acima, a primeira linha contém o nome da métrica na coluna em questão. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] preserva esses cabeçalhos de coluna para facilitar a referência nas configurações de elemento da galeria. No entanto, os cabeçalhos de coluna não são necessários. Se ausentes, o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] vai gerar cabeçalhos usando a convenção A,B,C,...,AA,BB,... do Excel.  
   
@@ -63,7 +63,7 @@ Se uma planilha contiver fórmulas ou células calculadas, somente o valor de ex
   
 Não existem restrições quanto ao local de armazenamento de arquivos do Excel que você importa no [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]. No entanto, se você mover ou renomear o arquivo após a importação, não será possível atualizar os dados por meio do comando **atualizar todos os dados** encontrado na Exibição de Dados.   
   
->**Observação**: o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] não atualiza automaticamente os dados do Excel. Você poderá atualizar os dados por meio do comando [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **refresh** command, but only if the file hasn't moved.  
+>**Observação**: o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] não atualiza automaticamente os dados do Excel. Você poderá atualizar os dados por meio do comando [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **refresh**, mas só se o arquivo não tiver sido movido.  
   
 ## <a name="dates"></a>Datas  
   

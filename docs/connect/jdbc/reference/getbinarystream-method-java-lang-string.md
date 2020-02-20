@@ -16,10 +16,10 @@ ms.assetid: 149609b5-a6de-4e23-a440-7061775d0899
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0ee14b90dd8aaffb178c81ea46e5ec914752e28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953691"
 ---
 # <a name="getbinarystream-method-javalangstring"></a>Método getBinaryStream (java.lang.String)
@@ -34,7 +34,7 @@ ms.locfileid: "67953691"
 public java.io.InputStream getBinaryStream(java.lang.String columnName)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
@@ -45,8 +45,8 @@ public java.io.InputStream getBinaryStream(java.lang.String columnName)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getBinaryStream é especificado pelo método getBinaryStream na interface java. Sql. ResultSet.  
+## <a name="remarks"></a>Comentários  
+ O método getBinaryStream é especificado pelo método getBinaryStream na interface java.sql.ResultSet.  
   
  Esse método pode ser usado somente com tipos de dados binary, varbinary, varbinary(max) e image do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A tentativa de usá-lo com outros tipos de dados fará com que uma exceção seja lançada.  
   

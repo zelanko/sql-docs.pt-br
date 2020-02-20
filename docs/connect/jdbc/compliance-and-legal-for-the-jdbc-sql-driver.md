@@ -1,5 +1,5 @@
 ---
-title: Conformidade e legal para o driver SQL JDBC | Microsoft Docs
+title: Conformidade e aspecto legal para o Driver SQL JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: 0ac8dc45-373c-4ac6-92fc-34b8455e5654
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 153f9c83699713c60eaa8d9020a86ca7fa415958
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028210"
 ---
-# <a name="jdbc-specification-compliance"></a>Conformidade de especificação JDBC
+# <a name="jdbc-specification-compliance"></a>Conformidade da especificação do JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
- Esta página contém a lista de informações de conformidade JDBC para o driver JDBC.
+ Essa página contém a lista de informações de conformidade do JDBC para o driver JDBC.
 
 * [Conformidade do JDBC 4.1 com o JDBC Driver](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md)
 * [Conformidade do JDBC 4.2 com o JDBC Driver](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md)

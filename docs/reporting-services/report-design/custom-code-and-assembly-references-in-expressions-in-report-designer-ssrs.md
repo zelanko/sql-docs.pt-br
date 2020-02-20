@@ -18,10 +18,10 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1a440ba648fd7ca0c377cc09b8bf67ac799e2e9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581495"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Referências a código personalizado e assemblies em expressões no Designer de Relatórios (SSRS)
@@ -48,16 +48,16 @@ ms.locfileid: "65581495"
 2.  Visualizar um relatório com referências a assemblies personalizados no modo local.  
   
 ##  <a name="Common"></a> Incluindo referências em funções usadas frequentemente  
- Use a caixa de diálogo **Expressão** para exibir uma lista categorizada de funções comuns internas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Quando você expande **Funções Comuns** e clica em uma categoria, o painel **Item** exibe a lista de funções incluídas em uma expressão. As funções comuns incluem classes dos namespaces [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> e <xref:System.Convert> e funções de biblioteca em tempo de execução [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Por conveniência, é possível exibir as funções usadas mais frequentemente na caixa de diálogo **Expressão** , onde elas são listadas por categoria: Texto, Data e Hora, Matemática, Inspeção, Fluxo do Programa, Agregação, Financeira, Conversão e Diversas. As funções usadas com menor frequência não são exibidas na lista, mas ainda podem ser usadas em uma expressão.  
+ Use a caixa de diálogo **Expressão** para exibir uma lista categorizada de funções comuns internas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Quando você expande **Funções Comuns** e clica em uma categoria, o painel **Item** exibe a lista de funções incluídas em uma expressão. As funções comuns incluem classes dos namespaces [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> e <xref:System.Convert> e funções de biblioteca em tempo de execução [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Para sua conveniência, você pode ver as funções mais usadas na caixa de diálogo **Expressão**, na qual elas são listadas por categoria: Texto, Data e Hora, Matemática, Inspeção, Fluxo do Programa, Agregação, Financeira, Conversão e Diversas. As funções usadas com menor frequência não são exibidas na lista, mas ainda podem ser usadas em uma expressão.  
   
  Para usar uma função interna, clique duas vezes no nome da função no painel Item. Uma descrição da função é exibida no painel Descrição e um exemplo de chamada da função é exibido no painel Exemplo. No painel de código, quando você digita o nome da função seguido por um parêntese esquerdo **(** , a ajuda do IntelliSense exibe cada sintaxe válida para a chamada de função. Por exemplo, para calcular o valor máximo de um campo denominado `Quantity` em uma tabela, adicione a expressão simples `=Max(` ao painel Código e use as marcas inteligentes para exibir todas as sintaxes válidas possíveis para a chamada da função. Para concluir este exemplo, digite `=Max(Fields!Quantity.Value)`.  
   
- Para obter mais informações sobre cada função, consulte <xref:System.Math>, <xref:System.Convert>e [Membros da Biblioteca de Tempo de Execução do Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) no MSDN.  
+ Para obter mais informações sobre cada função, consulte <xref:System.Math>, <xref:System.Convert>e [Membros da Biblioteca de Runtime do Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) no MSDN.  
   
 ##  <a name="NotCommon"></a> Incluindo referências em funções usadas com menor frequência  
  Para incluir uma referência em outros namespaces de CLR usados com menor frequência, você deve usar uma referência totalmente qualificada, por exemplo, <xref:System.Text.StringBuilder>. O IntelliSense não tem suporte no painel de código da caixa de diálogo **Expressão** para essas funções usadas com menor frequência.  
   
- Para obter mais informações, consulte [Membros da biblioteca em tempo de execução do Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) no MSDN.  
+ Para obter mais informações, confira [Membros da Biblioteca de Runtime do Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) no MSDN.  
   
 ##  <a name="External"></a> Incluindo referências em assemblies externos  
  Para incluir uma referência em uma classe em um assembly externo, você deve identificar o assembly para o processador de relatório. Use a página **Referências** da caixa de diálogo **Propriedades do Relatório** para especificar o nome totalmente qualificado do assembly a ser adicionado ao relatório. Na expressão, você deve usar o nome totalmente qualificado para a classe no assembly. As classes em um assembly externo não são exibidas na caixa de diálogo **Expressão** . Você deve fornecer o nome correto para a classe. Um nome totalmente qualificado inclui o namespace, o nome da classe e o nome do membro.  
@@ -115,7 +115,7 @@ End Function
  Para obter mais informações sobre coleções de objetos internos e inicialização, consulte [Referências globais internas e referências de usuários &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md) e [Inicializando objetos Assembly personalizados](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md).  
   
 ##  <a name="Parameters"></a> Incluindo referências a parâmetros no código  
- É possível fazer referência à coleção de parâmetros globais por meio de código personalizado em um bloco de código da definição do relatório ou em um assembly personalizado fornecido. A coleção de parâmetros é somente leitura e não possui iteradores públicos. Não é possível usar uma construção [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **do** para percorrer a coleção. É preciso saber o nome do parâmetro definido na definição de relatório antes de referenciá-lo no código. No entanto, é possível iterar através de todos os valores de um parâmetro de vários valores.  
+ É possível fazer referência à coleção de parâmetros globais por meio de código personalizado em um bloco de código da definição do relatório ou em um assembly personalizado fornecido. A coleção de parâmetros é somente leitura e não possui iteradores públicos. Não é possível usar um constructo [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **For Each** para percorrer a coleção. É preciso saber o nome do parâmetro definido na definição de relatório antes de referenciá-lo no código. No entanto, é possível iterar através de todos os valores de um parâmetro de vários valores.  
   
  A tabela a seguir inclui exemplos de como fazer referência à coleção interna de `Parameters` no código personalizado:  
   
@@ -178,7 +178,7 @@ End Function
  Para obter mais informações sobre como acessar o código, consulte [Accessing Custom Assemblies Through Expressions](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md).  
   
 ##  <a name="collections"></a> Passando coleções internas para assemblies personalizados  
- Se você deseja passar coleções internas, como *Globals* ou *Parameters* , em um assembly personalizado para processamento, você deve adicionar uma referência de assembly no projeto de código ao assembly que define as coleções internas e acessar o namespace correto. O assembly que você precisará referenciar será diferente dependendo da finalidade para a qual você está desenvolvendo o assembly personalizado: para um relatório executado em um servidor de relatórios (relatório do servidor) ou um relatório executado localmente em um aplicativo .NET (relatório local). Obtenha detalhes a seguir.  
+ Se você deseja passar coleções internas, como *Globals* ou *Parameters* , em um assembly personalizado para processamento, você deve adicionar uma referência de assembly no projeto de código ao assembly que define as coleções internas e acessar o namespace correto. O assembly que você precisará referenciar será diferente dependendo da finalidade para a qual você está desenvolvendo o assembly personalizado: para um relatório executado em um servidor de relatórios (relatório do servidor) ou um relatório executado localmente em um aplicativo .NET (relatório local). Confira os detalhes abaixo.  
   
 -   **Namespace:** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   
@@ -186,7 +186,7 @@ End Function
   
 -   **Assembly (relatório do servidor):** Microsoft.ReportViewer.ProcessingObjectModel.dll  
   
- Como o conteúdo das coleções *Fields* e *ReportItems* pode ser alterado dinamicamente em tempo de execução, você não deverá retê-las durante as chamadas no assembly personalizado (por exemplo, em uma variável de membro). A mesma recomendação geralmente se aplica a todas as coleções internas.  
+ Como o conteúdo das coleções *Fields* e *ReportItems* pode ser alterado dinamicamente em runtime, você não deverá retê-las durante as chamadas no assembly personalizado (por exemplo, em uma variável de membro). A mesma recomendação geralmente se aplica a todas as coleções internas.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Adicionar código a um relatório &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   

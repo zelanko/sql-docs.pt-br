@@ -1,5 +1,5 @@
 ---
-title: Como usar o buffer adaptável | Microsoft Docs
+title: Usar o buffer adaptável | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28b2750d96e1fbe5b5a1cfc3021a22415128b7df
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026805"
 ---
 # <a name="using-adaptive-buffering"></a>Como usar o buffer adaptável
@@ -27,9 +27,9 @@ Normalmente, quando o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.m
 
 Para permitir que aplicativos administrem resultados muito grandes, o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece um buffer adaptável. Com buffer adaptável, o driver recupera os resultados da execução da instrução do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à medida que o aplicativo precisa deles, em vez de todos de uma vez. O driver também descarta os resultados assim que o aplicativo já não os pode acessar. Veja a seguir alguns exemplos em que o buffer adaptável pode ser útil:
 
-- **A consulta produz um conjunto de resultados muito grande:** O aplicativo pode executar uma instrução SELECT que produz mais linhas do que o aplicativo pode armazenar na memória. Em versões anteriores, o aplicativo precisava usar um cursor de servidor para evitar um OutOfMemoryError. O buffer adaptável permite fazer uma passagem somente avanço somente leitura de um conjunto de resultados arbitrariamente grande sem exigir um cursor de servidor.
+- **A consulta produz um conjunto de resultados muito grande:** o aplicativo pode executar uma instrução SELECT que produz mais linhas do que o aplicativo pode armazenar na memória. Em versões anteriores, o aplicativo precisava usar um cursor de servidor para evitar um OutOfMemoryError. O buffer adaptável permite fazer uma passagem somente avanço somente leitura de um conjunto de resultados arbitrariamente grande sem exigir um cursor de servidor.
 
-- **A consulta produz muito grande** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **colunas ou** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **Valores de parâmetro de saída:** O aplicativo pode recuperar um único valor (parâmetro de coluna ou saída) que é muito grande para se ajustar inteiramente na memória do aplicativo. O buffer adaptável permite que o aplicativo cliente recupere esse valor como um fluxo, usando os métodos getAsciiStream, getBinaryStream ou getCharacterStream. O aplicativo recupera o valor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à medida que o lê o fluxo.
+- **A consulta produz colunas** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **muito grandes ou** [valores](../../connect/jdbc/reference/sqlservercallablestatement-class.md) de **parâmetro SQLServerCallableStatement OUT:** O aplicativo pode recuperar um valor único (coluna ou parâmetro OUT) que é muito grande para se encaixar totalmente na memória do aplicativo. O buffer adaptável permite que o aplicativo cliente recupere esse valor como um fluxo, usando os métodos getAsciiStream, getBinaryStream ou o getCharacterStream. O aplicativo recupera o valor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à medida que o lê o fluxo.
 
 > [!NOTE]  
 > Com buffer adaptável, o driver JDBC armazena em buffer somente a quantidade de dados necessária. O driver não fornece nenhum método público para controlar ou limitar o tamanho do buffer.
@@ -40,15 +40,15 @@ Do driver JDBC versão 2.0 em diante, o comportamento padrão do driver é "**ad
 
 Há três maneiras de um aplicativo solicitar que a execução de instrução use buffer adaptável:
 
-- O aplicativo pode definir a propriedade de conexão **responseBuffering** como "adaptável". Para obter mais informações sobre como definir as propriedades de conexão, consulte [definindo as propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md).
+- O aplicativo pode definir a propriedade de conexão **responseBuffering** como "adaptável". Para obter mais informações sobre como configurar as propriedades de conexão, confira [Configuração das propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md).
 
 - O aplicativo pode usar o método [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md) do objeto [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) para definir o modo de buffer de resposta para todas as conexões criadas por aquele objeto [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md).
 
 - O aplicativo pode usar o método [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) da classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) para definir o modo de buffer de resposta para um objeto de instrução específico.
 
-Ao usar o JDBC Driver versão 1.2, os aplicativos precisaram converter o objeto de instrução para uma classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) para usar o método [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md). Os exemplos de código no exemplo [lendo dados grandes](../../connect/jdbc/reading-large-data-sample.md) e [Lendo dados grandes com procedimentos armazenados](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) demonstram esse uso antigo.
+Ao usar o JDBC Driver versão 1.2, os aplicativos precisaram converter o objeto de instrução para uma classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) para usar o método [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md). Os exemplos de código no [Lendo exemplo de dados grandes](../../connect/jdbc/reading-large-data-sample.md) e [Lendo exemplo de dados grandes com procedimentos armazenados](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) demonstram esse uso antigo.
 
-Porém, com o driver JDBC versão 2.0, os aplicativos podem usar o método [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) e o método [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) para acessar a funcionalidade específica do fornecedor sem qualquer pressuposição sobre a hierarquia de classe de implementação. Para obter um exemplo de código, consulte o tópico [atualizando dados grandes exemplo](../../connect/jdbc/updating-large-data-sample.md) .
+Porém, com o driver JDBC versão 2.0, os aplicativos podem usar o método [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) e o método [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) para acessar a funcionalidade específica do fornecedor sem qualquer pressuposição sobre a hierarquia de classe de implementação. Para ver um exemplo de código, confira o tópico [Atualizar um exemplo de dados grandes](../../connect/jdbc/updating-large-data-sample.md).
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>Recuperando dados grandes com o buffer adaptável
 
@@ -61,7 +61,7 @@ Quando valores grandes são lidos uma vez usando os métodos get\<Type>Stream e 
 Quando o aplicativo usar buffer adaptável, os valores recuperados pelos métodos get\<Type>Stream somente poderão ser recuperados uma vez. Se você tentar chamar qualquer método get\<Type> na mesma coluna ou parâmetro depois de chamar o método get\<Type>Stream do mesmo objeto, uma exceção será lançada com a mensagem "Os dados foram acessados e não estão disponíveis para esta coluna ou parâmetro".
 
 > [!NOTE]
-> Uma chamada para ResultSet. Close () no meio do processamento de um ResultSet exigiria que o Microsoft JDBC Driver para SQL Server ler e descartar todos os pacotes restantes. Isso pode levar um tempo considerável se a consulta retornar um conjunto de dados grande e especialmente se a conexão de rede estiver lenta.
+> Uma chamada para ResultSet.close() no meio do processamento de um ResultSet exigiria que o Microsoft JDBC Driver para SQL Server lesse e descartasse todos os pacotes restantes. Isso poderá levar um tempo considerável se a consulta retornar um conjunto de dados grande e especialmente se a conexão de rede estiver lenta.
 
 ## <a name="guidelines-for-using-adaptive-buffering"></a>Diretrizes para usar o buffer adaptável
 
@@ -77,9 +77,9 @@ Os desenvolvedores devem seguir estas diretrizes importantes para minimizar o us
 
 - Evite executar mais de uma instrução na mesma conexão simultaneamente. Executar outra instrução antes de processar os resultados da instrução anterior pode fazer os resultados não processados serem armazenados em buffer na memória do aplicativo.
 
-- Há alguns casos em que usar **selectMethod = cursor** em vez de **responseBuffering = adaptive** seria mais benéfico, como:
+- Há alguns casos em que o uso de **selectMethod=cursor** em vez de **responseBuffering=adaptive** seria mais benéfico, como:
 
-  - Se seu aplicativo processa um conjunto de resultados somente de avanço, somente leitura lentamente, como ler cada linha após a entrada do usuário, usar **selectMethod = cursor** em vez de **responseBuffering = adaptive** pode ajudar a reduzir o uso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de recursos por .
+  - Se o aplicativo processar um conjunto de resultados somente avanço e somente leitura lentamente, como ler cada linha depois de alguma entrada do usuário, usar **selectMethod=cursor** em vez de **responseBuffering=adaptive** poderá ajudar a reduzir o uso de recurso pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
   - Se o aplicativo processar dois ou mais conjuntos de resultados somente avanço e somente leitura ao mesmo tempo na mesma conexão, usar **selectMethod=cursor** em vez de **responseBuffering=adaptive** poderá ajudar a reduzir a memória exigida pelo driver para processar esses conjuntos de resultados.
 

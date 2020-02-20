@@ -17,10 +17,10 @@ ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67412652"
 ---
 # <a name="monitoring-report-server-performance"></a>Monitorando o desempenho do servidor de relatório
@@ -57,7 +57,7 @@ ms.locfileid: "67412652"
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
 ## <a name="reporting-services-performance-objects"></a>Objetos de desempenho do Reporting Services  
-SQL Server 2016 Reporting Services ou posterior (SSRS) inclui os seguintes objetos de desempenho:  
+SSRS (SQL Server 2016 Reporting Services) ou posterior inclui os seguintes objetos de desempenho:  
   
 -   **MSRS 2011 Web Service** e **MSRS 2011 SharePoint Mode Web Service** para monitorar o desempenho do servidor de relatório. Esses objetos de desempenho incluem uma coleção de contadores usados para controlar o processamento do servidor de relatório iniciado normalmente por meio de operações interativas de exibição de relatórios. Esses contadores são redefinidos sempre que o [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] interrompe o serviço Web Servidor de Relatórios.  
   
@@ -72,8 +72,8 @@ SQL Server 2016 Reporting Services ou posterior (SSRS) inclui os seguintes objet
   
 |Objeto de desempenho|Observações|  
 |------------------------|-----------|  
-|**.NET CLR Data** e **.NET CLR Memory**|O portal da web usa [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] contadores de desempenho. Para obter mais informações, consulte “Melhorando o desempenho e a escalabilidade do aplicativo .NET” no MSDN.|  
-|**Processar**|Adicione os contadores de desempenho **Elapsed Time** e **ID Process** para uma instância de ReportingServicesService a fim de controlar o tempo de atividade de processo por ID de processo.|  
+|**.NET CLR Data** e **.NET CLR Memory**|O portal da Web usa contadores de desempenho [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Para obter mais informações, consulte “Melhorando o desempenho e a escalabilidade do aplicativo .NET” no MSDN.|  
+|**Processo**|Adicione os contadores de desempenho **Elapsed Time** e **ID Process** para uma instância de ReportingServicesService a fim de controlar o tempo de atividade de processo por ID de processo.|  
   
 ## <a name="sharepoint-events"></a>Eventos do SharePoint  
  Além dos objetos de desempenho do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , você também poderá configurar eventos do SharePoint se estiver executando um servidor de relatório no modo integrado do SharePoint e tiver configurado o ambiente de relatórios para usar um produto do SharePoint. Nesta seção, use os Eventos de um servidor de relatório no modo integrado do SharePoint para revisar eventos de diagnóstico que podem fornecer informações úteis, se seu ambiente de relatórios estiver integrado com o SharePoint.  

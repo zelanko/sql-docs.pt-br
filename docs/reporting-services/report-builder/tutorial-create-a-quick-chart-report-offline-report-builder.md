@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Criar um relatório de gráfico rápido offline (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Criar um relatório de gráficos rápido offline (Construtor de Relatórios) | Microsoft Docs'
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,13 +13,13 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037962"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Criar um relatório de gráfico rápido offline (Construtor de Relatórios)
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Criar um relatório de gráficos rápido offline (Construtor de Relatórios)
 
   Neste tutorial, você usa um Assistente para criar um gráfico de pizza em um relatório paginado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Em seguida, adicione porcentagens e modifique um pouco o gráfico de pizza. 
   
@@ -41,7 +41,7 @@ ms.locfileid: "67037962"
   
  [Criar o gráfico de pizza com dados XML](#CreatePieChartXML)  
   
-### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>Usando uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] contendo dados para este tutorial  
+### <a name="using-a-tsql-query-that-contains-data-for-this-tutorial"></a>Usando uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] contendo dados para este tutorial  
  Você pode copiar uma consulta com dados incluídos neste tópico e colá-la no assistente. Você precisará do nome de uma instância do SQL Server e de credenciais suficientes para ter acesso somente leitura a qualquer banco de dados. A consulta de conjunto de dados no tutorial usa dados literais, mas a consulta deve ser processada por uma instância do SQL Server para retornar os metadados necessários para um conjunto de dados de relatório.  
   
  A vantagem de usar a consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] é que todos os outros tutoriais do [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] usam o mesmo método; portanto, quando você executar os outros tutoriais, já saberá o que fazer.  
@@ -56,7 +56,7 @@ ms.locfileid: "67037962"
   
      A caixa de diálogo **Guia de Introdução** é exibida.  
   
-     ![Introdução ao Construtor de Relatórios](../../reporting-services/media/rb-getstarted.png "Introdução ao Construtor de Relatórios")  
+     ![Introdução do Construtor de Relatórios](../../reporting-services/media/rb-getstarted.png "Introdução do Construtor de Relatórios")  
   
      Se a caixa de diálogo **Guia de Introdução** não aparece, clique em **Arquivo** >**Novo**. A maior parte do conteúdo na caixa de diálogo **Novo Relatório ou Conjunto de Dados** é igual àquele encontrado na caixa de diálogo **Introdução** .  
   
@@ -107,9 +107,9 @@ ms.locfileid: "67037962"
   
 11. (Opcional) Clique no botão **Executar** ( **!** ) para ver os dados em que o gráfico se baseará.  
   
-     ![Consulta de design do Construtor de Relatórios](../../reporting-services/report-builder/media/rb-designquery.png "Consulta de design do Construtor de Relatórios")  
+     ![Consulta de Design do Construtor de Relatórios](../../reporting-services/report-builder/media/rb-designquery.png "Consulta de Design do Construtor de Relatórios")  
   
-12. Clique em **Avançar**.  
+12. Clique em **Próximo**.  
   
 13. Na página **Escolha um tipo de gráfico** , clique em **Pizza**e em **Avançar**.  
   
@@ -123,17 +123,17 @@ ms.locfileid: "67037962"
   
      A página Visualização mostra o novo gráfico de pizza com dados representacionais. A legenda diz Nome Completo 1, Nome Completo 2 etc., em vez dos nomes dos vendedores, e o tamanho das fatias da pizza não é exato. Isso é apenas para lhe dar uma ideia da aparência que o relatório terá.  
   
-     ![Visualização de Novo Gráfico do Construtor de Relatórios](../../reporting-services/report-builder/media/rb-newchartpreview.png "Visualização de Novo Gráfico do Construtor de Relatórios")  
+     ![Nova visualização de gráfico do Construtor de Relatórios](../../reporting-services/report-builder/media/rb-newchartpreview.png "Nova visualização de gráfico do Construtor de Relatórios")  
   
 16. Clique em **Concluir**.  
   
      Agora, você vê seu novo relatório de gráfico de pizza no Modo de Exibição de Design, ainda com dados representacionais.  
   
-     ![Nova pizza no modo de exibição de Design do Construtor de Relatórios](../../reporting-services/report-builder/media/rb-newpiedesign.png "Nova pizza no modo de exibição de Design do Construtor de Relatórios")  
+     ![Novo gráfico de pizza no Modo de exibição de Design do Construtor de Relatórios](../../reporting-services/report-builder/media/rb-newpiedesign.png "Novo gráfico de pizza no Modo de exibição de Design do Construtor de Relatórios")  
   
 17. Para ver seu gráfico de pizza real, clique em **Executar** na guia **Início** da Faixa de Opções.  
   
-     ![Execução de novo gráfico do Construtor de Relatórios](../../reporting-services/report-builder/media/rb-newchartrun.png "Execução de novo gráfico do Construtor de Relatórios")  
+     ![Nova execução de gráfico do Construtor de Relatórios](../../reporting-services/report-builder/media/rb-newchartrun.png "Nova execução de gráfico do Construtor de Relatórios")  
   
 18. Para continuar a modificar o gráfico de pizza, vá para [Depois que você executar o assistente](#AfterWizard) neste artigo.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "67037962"
   
 8.  (Opcional) Clique no botão Executar ( **!** ) para ver os dados em que o gráfico se baseará.  
   
-9. Clique em **Avançar**.  
+9. Clique em **Próximo**.  
   
 10. Na página **Escolha um tipo de gráfico** , clique em **Pizza**e em **Avançar**.  
   
@@ -220,7 +220,7 @@ Observe que a superfície de design fica maior à medida que você arrasta.
  Para saber mais sobre como personalizar legendas e rótulos de gráfico, veja [Exibir valores de porcentagem em um gráfico de pizza e &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) e [Alterar o texto de um item de legenda &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
 ##  <a name="WhatsNext"></a> O que vem a seguir?  
- Agora que você criou seu primeiro relatório no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], está pronto tentar os outros tutoriais e começar a criar relatórios com seus próprios dados. Para executar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], você deve ter permissão para acessar suas fontes de dados, como bancos de dados, com uma *cadeia de conexão*que o conecte à fonte de dados. O administrador do sistema terá essas informações e poderá configurá-las.  
+ Agora que você criou seu primeiro relatório no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], está pronto tentar os outros tutoriais e começar a criar relatórios com seus próprios dados. Para executar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], você deve ter permissão para acessar suas fontes de dados, como bancos de dados, com uma *cadeia de conexão* que realmente conecte você à fonte de dados. O administrador do sistema terá essas informações e poderá configurá-las.  
   
  Para trabalhar nos outros tutoriais, você precisa do nome de uma instância do SQL Server e de credenciais suficientes para ter acesso somente leitura a qualquer banco de dados. O administrador do sistema também pode definir isso para você.  
   
@@ -233,4 +233,4 @@ Observe que a superfície de design fica maior à medida que você arrasta.
 [Tutoriais do Construtor de Relatórios](../../reporting-services/report-builder-tutorials.md)   
 [Construtor de Relatórios no SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

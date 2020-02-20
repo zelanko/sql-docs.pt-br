@@ -1,22 +1,24 @@
 ---
-title: Configurações de assinatura e uma conta de compartilhamento de arquivos (Gerenciador de Configurações) | Microsoft Docs
-ms.date: 05/31/2016
+title: Configurações de assinatura e uma conta de compartilhamento de arquivo (Gerenciador de Configurações) | Microsoft Docs
+description: Use a página Configurações de Assinatura do Gerenciador de Configurações do Reporting Services para configurar uma conta de compartilhamento de arquivo para servidores de relatório no modo nativo e assinaturas de compartilhamento de arquivo.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e8dfea342f4545313035869f8c2e12367e62aed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9dd29c96f80ed24889356c72961f47de707037e6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62651960"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866269"
 ---
-# <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Configurações de Assinatura e uma Conta de Compartilhamento de Arquivos (Gerenciador de Configurações)
+# <a name="subscription-settings-and-a-file-share-account-ssrs-configuration-manager"></a>Configurações de assinatura e uma conta de compartilhamento de arquivo (Gerenciador de Configurações do SSRS)
   Use a página **Configurações de Assinatura** do Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar uma conta de compartilhamento de arquivos para servidores de relatório no modo nativo e assinaturas de compartilhamento de arquivos. A conta de compartilhamento de arquivos permite que você use um único conjunto de credenciais em várias assinaturas que enviam relatórios para um compartilhamento de arquivos. Quando for o momento de alterar as credenciais, você configura a alteração da conta de compartilhamento de arquivos e não precisa atualizar cada assinatura individual.  
   
  Existem dois fluxos de trabalho com as assinaturas de compartilhamento de arquivos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -27,7 +29,7 @@ ms.locfileid: "62651960"
   
 -   Você também pode combinar as duas abordagens e fazer com que algumas assinaturas de compartilhamento de arquivos usem a conta de compartilhamento de arquivos central, enquanto outras assinaturas usam credenciais específicas.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Modo nativo de [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="specify-a-file-share-account"></a>Especificar uma conta de compartilhamento de arquivos  
  Se essa opção for marcada, você poderá fornecer uma conta a ser usada para acessar compartilhamentos de arquivos por meio do servidor de relatório. Se você configurar a conta de compartilhamento de arquivos, todos os usuários poderão selecionar a conta para qualquer assinatura configurada para enviar relatórios para um compartilhamento de arquivos. Se essa opção não for selecionada, a conta de compartilhamento de arquivos **não** estará disponível nas assinaturas.  
@@ -36,7 +38,7 @@ ms.locfileid: "62651960"
   
  A imagem a seguir é o que os usuários veem em assinaturas configuradas para o envio de compartilhamento de arquivos. A opção **Usar conta de compartilhamento de arquivos** fica desabilitada se uma conta de compartilhamento de arquivos não for configurada.  
   
- ![Conta de compartilhamento de arquivos do Gerenciador do Configurações](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "Conta de compartilhamento de arquivos do Gerenciador do Configurações")  
+ ![conta de compartilhamento de arquivo do gerenciador de configurações](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "conta de compartilhamento de arquivo do gerenciador de configurações")  
   
 ## <a name="prevent-privilege-escalation-or-elevated-privileges"></a>Impedir o escalonamento de privilégios ou privilégios elevados  
   
@@ -96,6 +98,6 @@ $subscriptions | extensionSettingFilter | select report, owner, status, lastexec
   
 ## <a name="see-also"></a>Consulte Também  
  [Entrega de compartilhamento de arquivos no Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
+ [Criar e gerenciar assinaturas de servidores de relatório no modo Nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
   
   

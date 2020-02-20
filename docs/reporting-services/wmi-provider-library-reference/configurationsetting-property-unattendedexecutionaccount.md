@@ -16,10 +16,10 @@ ms.assetid: ab5203ba-c01e-4020-8619-ee290cf9da07
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7df8794f3205feebc49495d27b4bd78a254a4638
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570202"
 ---
 # <a name="configurationsetting-property---unattendedexecutionaccount"></a>Propriedade de ConfigurationSetting – UnattendedExecutionAccount
@@ -45,6 +45,6 @@ public string UnattendedExecutionAccount;
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+ [Membros de MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

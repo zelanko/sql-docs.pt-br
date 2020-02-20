@@ -16,10 +16,10 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 26fa81278afd686d25192fdd49bbc3f2119a5762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571562"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>O que é o SQL Server Reporting Services (SSRS)?
@@ -30,7 +30,7 @@ Procurando o Servidor de Relatórios do Power BI? Consulte [O que é o Servidor 
 
 O SSRS (SQL Server Reporting Services) fornece um conjunto de ferramentas e serviços locais para criar, implantar e gerenciar relatórios paginados e móveis.
 
-![SQL Server Reporting Services reunidos](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services reunidos")
+![SQL Server Reporting Services reunido](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services reunido")
 
 ## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>Criar, implantar e gerenciar relatórios móveis e paginados
 
@@ -63,7 +63,7 @@ Essa carga de trabalho principal de BI ainda existe hoje, por isso, nós a moder
 * Atualizamos todos os estilos padrão e paletas de cores, portanto, por padrão você cria relatórios com um novo estilo moderno minimalista.
 * Atualizamos o painel Parâmetro, portanto você pode organizar os parâmetros da maneira que desejar.
 * Você pode exportar para novos formatos, como o PowerPoint. As visualizações do Reporting Services no PowerPoint são dinâmicas e editáveis e não apenas capturas de tela.
-* Você pode criar uma experiência híbrida do Power BI/Reporting Services: em vez de recriar seus relatórios do Reporting Services localmente no Power BI, você pode fixar visuais desses relatórios nos painéis do Power BI. E então, você pode monitorar tudo em um único lugar no seu painel do Power BI.
+* Você pode criar uma experiência híbrida do Power BI/Reporting Services:  em vez de recriar seus relatórios do Reporting Services localmente no Power BI, você pode fixar elementos visuais desses relatórios nos painéis do Power BI. E então, você pode monitorar tudo em um único lugar no seu painel do Power BI.
 
 ## <a name="mobile-reports"></a>Relatórios móveis
 
@@ -83,7 +83,7 @@ Conforme você cria visualizações, o Publicador de Relatórios Móveis gera au
 
 Para os usuários finais do Reporting Services de modo nativo, a porta da frente é um portal da Web moderno que pode ser exibido na maioria dos navegadores. Acesse todos os KPIs e relatórios móveis e paginados do Reporting Services no novo portal. Os KPIs podem expor as principais métricas de negócios em um relance no navegador, sem precisar abrir um relatório.
 
-O novo portal da Web é uma reformulação completa do Gerenciador de Relatórios. Agora é um aplicativo de página única com base em padrões HTML5, para os quais os navegadores modernos estão otimizados: Microsoft Edge, Internet Explorer 10 e 11, Chrome, Firefox, Safari e todos os principais navegadores.
+O novo portal da Web é uma reformulação completa do Gerenciador de Relatórios. Agora, é um aplicativo de página única, com base em padrões HTML5, para os quais os navegadores modernos são otimizados: Microsoft Edge, Internet Explorer 10 e 11, Chrome, Firefox, Safari e todos os principais navegadores.
 
 O conteúdo no portal da Web é organizado por tipo:
 
@@ -110,7 +110,7 @@ Mais sobre o [Servidor de Relatórios do Reporting Services no modo integrado do
 
 ::: moniker-end
 
-## <a name="includessrsnoversionincludesssrsnoversion-mdmd-programming-features"></a>Recursos de programação do[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]
+## <a name="ssrsnoversion-programming-features"></a>Recursos de programação do[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]
 
 Aproveite os recursos de programação do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que permitem estender e personalizar a funcionalidade de execução de relatórios. Use as APIs do SSRS para integrar ou estender dados e para o processamento de relatórios em aplicativos personalizados.
 
@@ -122,4 +122,4 @@ Mais sobre a [Documentação do Desenvolvedor do Reporting Services](../reportin
 * [Baixar o SQL Server Data Tools (SSDT)](https://go.microsoft.com/fwlink/?LinkID=616714)
 * [Instalar o Construtor de Relatórios](../reporting-services/install-windows/install-report-builder.md)
 
-* Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+* Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

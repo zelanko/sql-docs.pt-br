@@ -8,14 +8,14 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2019
 ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68255168"
 ---
 # <a name="configure-report-builder-access"></a>Configurar o acesso ao Construtor de Relatórios
-O Construtor de Relatórios é uma ferramenta de criação de relatórios ad hoc instalada com um servidor de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurado para o modo nativo ou o modo de integração no SharePoint.  
+O Construtor de Relatórios é uma ferramenta de criação de relatórios ad hoc que é instalada com um servidor de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], configurado para o modo nativo ou o modo de integração do SharePoint.  
 
 O acesso ao Construtor de Relatórios depende dos seguintes fatores:  
 
@@ -29,15 +29,15 @@ O acesso ao Construtor de Relatórios depende dos seguintes fatores:
 
 O Construtor de Relatórios não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [Recursos com suporte nas edições do SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
-O computador cliente deve ter o [!INCLUDE[msCoName](../../includes/msconame-md.md)] 4,6 ou o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 instalado para SSRS 2016 e 2017, respectivamente. O [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornece a infraestrutura para executar aplicativos [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
+O computador cliente deve ter o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 ou 4.6.1 instalado para SSRS 2016 e 2017, respectivamente. O [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornece a infraestrutura para executar aplicativos [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
 
-Você deve usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] o Internet Explorer 11 ou posterior, ou outro navegador moderno.  
+Você deve usar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 (ou posterior) ou outro navegador moderno.  
 
 O Construtor de Relatórios sempre é executado no modo de confiança total; você não pode configurá-lo para ser executado em confiança parcial. Nas versões anteriores, era possível executar o Construtor de Relatórios em confiança parcial, mas essa opção não é suportada no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões posteriores.  
 
 ## <a name="enabling-and-disabling-report-builder"></a>Habilitando e desabilitando o Construtor de Relatórios  
 
-O Construtor de Relatórios é habilitado por padrão. Os administradores de servidor de relatório têm a opção de desabilitar o recurso Construtor de Relatórios, definindo a propriedade de sistema do servidor de relatório **ShowDownloadMenu** como **false**. Definir essa propriedade desabilitará os downloads Construtor de Relatórios, Publicador de Relatórios Móveis e Power BI Mobile para esse servidor de relatório.  
+O Construtor de Relatórios é habilitado por padrão. Os administradores de servidor de relatório têm a opção de desabilitar o recurso Construtor de Relatórios, definindo a propriedade de sistema do servidor de relatório **ShowDownloadMenu** como **false**. A definição dessa propriedade desabilitará os downloads do Construtor de Relatórios, do Publicador de Relatórios Móveis e do Power BI Móvel para esse servidor de relatório.  
 
  Para definir propriedades de sistema do servidor de relatório, você pode usar o Management Studio ou script:   
 
@@ -101,7 +101,7 @@ Depois que você criar as atribuições de função, os usuários terão permiss
 
     4. Em Descrição, insira uma descrição para a função de modo que os usuários do portal da Web saibam de que se trata a função.  
 
-    5. Adicione as seguintes tarefas: **Relatórios de consumo**, **Exibir relatórios**, **Exibir modelos**, **Exibir recursos**, **Exibir pastas**e **Gerenciar assinaturas individuais**.  
+    5. Adicione as seguintes tarefas: **Relatórios de consumo**, **Exibir relatórios**, **Exibir modelos**, **Exibir recursos**, **Exibir pastas** e **Gerenciar assinaturas individuais**.  
 
     6. Clique em **OK** para salvar a função.  
 
@@ -109,7 +109,7 @@ Depois que você criar as atribuições de função, os usuários terão permiss
 
 1. Inicie o portal da Web.  
 
-2. Clique no ícone de engrenagem no canto superior direito do portal da Web home page e selecione **configurações do site** no menu suspenso.  
+2. Clique no ícone de engrenagem no canto superior direito da página inicial do portal da Web e selecione **Configurações de site** no menu suspenso.  
 ![o menu e o ícone de engrenagem do portal da Web](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. Clique em **Segurança**.  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3dff76f6293b5f02373234fb2546076f7584f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7ecc2115b106fe61492be388c90cfa2bd27eae9f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577984"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190038"
 ---
 # <a name="report-design-view-report-builder"></a>Exibição do design de relatório (Construtor de Relatórios)
   A janela do Construtor de Relatórios foi criada para ajudá-lo a organizar facilmente seus recursos de relatório e criar rapidamente os relatórios paginados de que você precisa. A superfície de design está no centro da janela, com a faixa de opções e os painéis em torno dela. A superfície de design é o local em que você adiciona e organiza seus itens de relatório. Este artigo explica os painéis usados para adicionar, selecionar e organizar os recursos de relatório e alterar as propriedades de item de relatório.  
@@ -98,7 +98,7 @@ ms.locfileid: "65577984"
   
 -   [Imagens &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)  
   
--   [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+-   [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
 -   [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
@@ -137,13 +137,13 @@ ms.locfileid: "65577984"
  Dependendo da propriedade, você pode definir um valor de propriedade usando uma lista suspensa, digitando o valor ou clicando em `<Expression>` para criar uma expressão.  
   
 ### <a name="changing-the-properties-pane-view"></a>Alterando a exibição do painel Propriedades  
- Por padrão, as propriedades exibidas no painel Propriedades são organizadas em grandes categorias, como Ação, Borda, Preenchimento, Fonte e Geral. Cada categoria tem um conjunto de propriedades padrão associado a ela. Por exemplo, as seguintes propriedades são listadas na categoria Font: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight e TextDecoration. Se preferir, você poderá ordenar todas as propriedades por nome no painel. Isso removerá as categorias e listará todas as propriedades em ordem alfabética, independentemente da categoria.  
+ Por padrão, as propriedades exibidas no painel Propriedades são organizadas em grandes categorias, como Ação, Borda, Preenchimento, Fonte e Geral. Cada categoria tem um conjunto de propriedades padrão associado a ela. Por exemplo, as propriedades a seguir são listadas na categoria Fonte: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight e TextDecoration. Se preferir, você poderá ordenar todas as propriedades por nome no painel. Isso removerá as categorias e listará todas as propriedades em ordem alfabética, independentemente da categoria.  
   
- Existem três botões na parte superior do painel Propriedades: Categoria, Ordem Alfabética e Páginas de Propriedades. Clique nos botões Categoria e Ordem Alfabética para alternar entre as exibições do painel Propriedades. Clique no botão **Páginas de Propriedades** para abrir a caixa de diálogo de propriedades do item de relatório selecionado.  
+ O painel Propriedades tem três botões na parte superior: Categoria, Classificar em ordem alfabética e Páginas de propriedades. Clique nos botões Categoria e Ordem Alfabética para alternar entre as exibições do painel Propriedades. Clique no botão **Páginas de Propriedades** para abrir a caixa de diálogo de propriedades do item de relatório selecionado.  
   
   
 ##  <a name="GroupPane"></a> O painel Agrupamento (Construtor de Relatórios)  
- Os grupos são usados para organizar seus dados de relatório em uma hierarquia visual e para calcular totais. Você pode exibir grupos de linhas e colunas de uma região de dados na superfície de design e no painel Agrupamento. O painel Agrupamento possui dois painéis: Grupos de Linhas e Grupos de Colunas. Quando você selecionar uma região de dados, o painel Agrupamento exibirá todos os grupos dessa região de dados no formato de uma lista hierárquica: grupos filho aparecem recuados abaixo dos grupos pai.  
+ Os grupos são usados para organizar seus dados de relatório em uma hierarquia visual e para calcular totais. Você pode exibir grupos de linhas e colunas de uma região de dados na superfície de design e no painel Agrupamento. O painel de Agrupamento tem dois painéis: Grupos de linhas e grupos de colunas. Quando você seleciona uma região de dados, o painel Agrupamento exibe todos os grupos dentro dessa região como uma lista hierárquica: os grupos filho aparecem recuados abaixo dos grupos pai.  
   
  ![Grupos de linhas do Construtor de Relatórios](../../reporting-services/report-builder/media/ssrb-rowgroups.png "Grupos de linhas do Construtor de Relatórios")  
   
@@ -162,7 +162,7 @@ ms.locfileid: "65577984"
  Leia mais sobre [como visualizar um relatório no construtor de relatórios](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ### <a name="running-a-report-with-parameters"></a>Executando um relatório com parâmetros  
- Quando é processado, o relatório é processado automaticamente. Se o relatório contiver parâmetros, todos os parâmetros devem ter valores padrão para que o relatório possa ser executado automaticamente. Se um parâmetro não tiver um valor padrão ao ser executado, você precisará escolher um valor para o parâmetro e clicar em **Exibir Relatório** na guia Executar. Para obter mais informações, consulte [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Quando é processado, o relatório é processado automaticamente. Se o relatório contiver parâmetros, todos os parâmetros devem ter valores padrão para que o relatório possa ser executado automaticamente. Se um parâmetro não tiver um valor padrão ao ser executado, você precisará escolher um valor para o parâmetro e clicar em **Exibir Relatório** na guia Executar. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="print-preview"></a>Visualizar Impressão  
  Quando um relatório é visualizado no modo de execução, ele é semelhante a um relatório gerado em HTML. A visualização não é HTML, mas o layout e a paginação do relatório são semelhantes a uma saída em HTML. Você pode alterar a exibição para representar um relatório impresso alternando para o modo Visualizar Impressão. Clique no botão **Visualizar Impressão** na guia **Execução** . O relatório será exibido como se tivesse sido impresso. Essa exibição é semelhante à saída produzida pelas extensões de renderização de Imagem e PDF. Visualizar Impressão não é um arquivo de imagem ou PDF, embora o layout e a paginação do relatório sejam semelhantes à saída desses formatos.  

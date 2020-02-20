@@ -1,5 +1,5 @@
 ---
-title: Método registerOutParameter para digitar e dimensionar | Microsoft Docs
+title: Método registerOutParameter para tipo e escala | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8bddc557-4526-4843-9804-05dc83c8832d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 134fcc223486971bb8249f1313c84ce969308626
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975935"
 ---
 # <a name="registeroutparameter-method-javalangstring-int-int"></a>Método registerOutParameter (java.lang.String, int, int)
@@ -36,7 +36,7 @@ public void registerOutParameter(java.lang.String s,
                                  int n1)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *s*  
   
  Uma **String** que contém o nome do parâmetro.  
@@ -52,8 +52,8 @@ public void registerOutParameter(java.lang.String s,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método registerOutParameter é especificado pelo método registerOutParameter na interface java. Sql. CallableStatement.  
+## <a name="remarks"></a>Comentários  
+ Esse método registerOutParameter é especificado pelo método registerOutParameter na interface java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método registerOutParameter &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   

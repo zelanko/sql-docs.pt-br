@@ -16,10 +16,10 @@ ms.assetid: 553c0603-c07d-436a-86eb-3ba6b51bd696
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 78b4d49029c6a0f2696cc93348bff7b32767bc13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974835"
 ---
 # <a name="setcatalog-method-sqlserverconnection"></a>Método setCatalog (SQLServerConnection)
@@ -34,7 +34,7 @@ ms.locfileid: "67974835"
 public void setCatalog(java.lang.String catalog)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *catalog*  
   
  Uma **String** que contém o nome do catálogo.  
@@ -42,10 +42,10 @@ public void setCatalog(java.lang.String catalog)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método setCatalog é especificado pelo método setCatalog na interface java. Sql. Connection.  
+## <a name="remarks"></a>Comentários  
+ Esse método setCatalog é especificado pelo método setCatalog na interface java.sql.Connection.  
   
- O argumento *Catalog* é ignorado pelo [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] automaticamente. Usar este método define a propriedade catalog para o objeto Connection. Ela não é definida implicitamente de nenhuma outra maneira.  
+ O argumento *catalog* é escapado automaticamente pelo [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Usar este método define a propriedade catalog para o objeto Connection. Ela não é definida implicitamente de nenhuma outra maneira.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

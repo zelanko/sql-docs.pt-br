@@ -1,5 +1,5 @@
 ---
-title: Como usar a API de cópia em massa para a operação de inserção em lote para o driver MSSQL JDBC | Microsoft Docs
+title: Usar a API de cópia em massa para a operação de inserção em lote para o driver MSSQL JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,66 +11,66 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027101"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Como usar a API de cópia em massa para a operação de inserção em lote
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-O Microsoft JDBC Driver 7,0 para SQL Server dá suporte ao uso da API de cópia em massa para operações de inserção em lote para o Azure data warehouse. Esse recurso permite que os usuários habilitem o driver para executar a operação de cópia em massa abaixo da execução de operações de inserção em lote. O driver visa obter uma melhoria no desempenho ao inserir os mesmos dados que o driver teria com a operação de inserção em lote normal. O driver analisa a consulta SQL do usuário, aproveitando a API de cópia em massa no lugar da operação de inserção de lote usual. Abaixo estão várias maneiras de habilitar a API de cópia em massa para o recurso de inserção em lote, bem como a lista de suas limitações. Essa página também contém um pequeno código de exemplo que demonstra um uso e o aumento de desempenho também.
+O Microsoft JDBC Driver 7.0 para SQL Server dá suporte ao uso da API de Cópia em Massa para operações de inserção em lote para o Data Warehouse do Azure. Esse recurso permite que os usuários habilitem o driver para executar a operação de Cópia em Massa abaixo ao executar operações de inserção em lote. O driver visa obter um aprimoramento no desempenho ao inserir os mesmos dados que o driver teria com a operação de inserção em lote normal. O driver analisa a Consulta SQL do usuário, utilizando a API de Cópia em Massa no lugar da operação de inserção em lote usual. Abaixo há várias maneiras de habilitar a API de Cópia em Massa para o recurso de inserção em lote, bem como a lista de limitações. Essa página também contém um pequeno código de exemplo que demonstra um uso e o aumento de desempenho também.
 
-Esse recurso é aplicável somente às APIs do PreparedStatement e `executeBatch()` do  &  `executeLargeBatch()` CallableStatement.
+Esse recurso só é aplicável a APIs `executeBatch()` & `executeLargeBatch()` de PreparedStatement e CallableStatement.
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Há dois pré-requisitos para habilitar a API de cópia em massa para inserção em lote.
+Há dois pré-requisito para habilitar a API de Cópia em Massa para inserção em lote.
 
-* O servidor deve ser o data warehouse do Azure.
-* A consulta deve ser uma consulta de inserção (a consulta pode conter comentários, mas a consulta deve começar com a palavra-chave INSERT para que esse recurso entre em vigor).
+* O servidor deve ser o Data Warehouse do Azure.
+* A consulta deve ser de inserção (ela pode conter comentários, mas deve começar com a palavra-chave INSERT para que esse recurso entre em vigor).
 
-## <a name="enabling-bulk-copy-api-for-batch-insert"></a>Habilitando a API de cópia em massa para inserção em lote
+## <a name="enabling-bulk-copy-api-for-batch-insert"></a>Como habilitar a API de cópia em massa para inserção em lote
 
-Há três maneiras de habilitar a API de cópia em massa para inserção em lote.
+Há três maneiras de habilitar a API de Cópia em Massa para inserção em lote.
 
-### <a name="1-enabling-with-connection-property"></a>1. Habilitando com a propriedade Connection
+### <a name="1-enabling-with-connection-property"></a>1. Como habilitar com a propriedade de conexão
 
-Adicionar **useBulkCopyForBatchInsert = true;** à cadeia de conexão habilita esse recurso.
+Adicionar **useBulkCopyForBatchInsert=true;** à cadeia de conexão habilita esse recurso.
 
 ```java
 Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<port>;userName=<user>;password=<password>;database=<database>;useBulkCopyForBatchInsert=true;");
 ```
 
-### <a name="2-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverconnection-object"></a>2. Habilitando com o método setUseBulkCopyForBatchInsert () do objeto SQLServerConnection
+### <a name="2-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverconnection-object"></a>2. Como habilitar com o método setUseBulkCopyForBatchInsert() do objeto SQLServerConnection
 
-Chamar **SQLServerConnection. setUseBulkCopyForBatchInsert (true)** habilita esse recurso.
+Chamar **SQLServerConnection.setUseBulkCopyForBatchInsert(true)** habilita esse recurso.
 
-**SQLServerConnection. getUseBulkCopyForBatchInsert ()** recupera o valor atual para a propriedade de conexão **useBulkCopyForBatchInsert** .
+**SQLServerConnection.getUseBulkCopyForBatchInsert()** recupera o valor atual da propriedade de conexão **useBulkCopyForBatchInsert**.
 
-O valor de **useBulkCopyForBatchInsert** permanece constante para cada PreparedStatement no momento da inicialização. Todas as chamadas subsequentes para **SQLServerConnection. setUseBulkCopyForBatchInsert ()** não afetarão o PreparedStatement já criado em relação ao seu valor.
+O valor de **useBulkCopyForBatchInsert** permanece constante para cada PreparedStatement no momento da inicialização. As chamadas subsequentes a **SQLServerConnection.setUseBulkCopyForBatchInsert()** não afetarão o PreparedStatement já criado com relação ao valor dele.
 
-### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3. Habilitando com o método setUseBulkCopyForBatchInsert () do objeto SQLServerDataSource
+### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3. Como habilitar com o método setUseBulkCopyForBatchInsert() do objeto SQLServerDataSource
 
-Semelhante a acima, mas usando SQLServerDataSource para criar um objeto SQLServerConnection. Ambos os métodos geram o mesmo resultado.
+Semelhante ao exposto acima, mas usando SQLServerDataSource para criar um objeto SQLServerConnection. Ambos os métodos geram o mesmo resultado.
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-Atualmente, há essas limitações que se aplicam a esse recurso.
+No momento, há essas limitações aplicáveis a esse recurso.
 
-* Não há suporte para inserir consultas que contêm valores não parametrizados ( `INSERT INTO TABLE VALUES (?, 2`por exemplo,)). Curingas (?) são os únicos parâmetros com suporte para essa função.
-* Não há suporte para inserir consultas que contêm expressões de inserção/ `INSERT INTO TABLE SELECT * FROM TABLE2`seleção (por exemplo,).
-* Não há suporte para consultas Insert que contêm várias expressões de `INSERT INTO TABLE VALUES (1, 2) (3, 4)`valor (por exemplo,).
-* Não há suporte para consultas Insert seguidas pela cláusula OPTION, Unidas com várias tabelas ou seguidas por outra consulta.
-* Devido às limitações da API de cópia em massa `MONEY`, `SMALLMONEY` `DATETIMEOFFSET` `DATETIME` `DATE` `SMALLDATETIME`,,,,,,, e `GEOGRAPHY` tipos de dados, atualmente não são compatíveis com este `TIME` `GEOMETRY` recurso.
+* Não há suporte para consultas de inserção que contenham valores não parametrizados (por exemplo, `INSERT INTO TABLE VALUES (?, 2`)). Curingas (?) são os únicos parâmetros com suporte para essa função.
+* Não há suporte para consultas de inserção que contenham expressões INSERT-SELECT (por exemplo, `INSERT INTO TABLE SELECT * FROM TABLE2`).
+* Não há suporte para consultas de inserção que contenham expressões VALUE múltiplas (por exemplo, `INSERT INTO TABLE VALUES (1, 2) (3, 4)`).
+* Não há suporte para consultas de inserção que sejam seguidas pela cláusula OPTION, unidas com várias tabelas ou seguidas por outra consulta.
+* Devido às limitações da API de Cópia em Massa, no momento, não há suporte para os tipos de dados `MONEY`, `SMALLMONEY`, `DATE`, `DATETIME`, `DATETIMEOFFSET`, `SMALLDATETIME`, `TIME`, `GEOMETRY` e `GEOGRAPHY` para esse recurso.
 
-Se a consulta falhar devido a erros não "SQL Server" relacionados, o driver registrará em log a mensagem de erro e fará fallback para a lógica original para inserção em lote.
+Se a consulta falhar devido a erros não relacionados ao "SQL Server”, o driver registrará em log a mensagem de erro e fará fallback para a lógica original para inserção em lote.
 
 ## <a name="example"></a>Exemplo
 
-Abaixo está um exemplo de código que demonstra o caso de uso para uma operação de inserção em lote em relação ao DW do Azure de mil linhas, para cenários (normal versus a API de cópia em massa).
+Abaixo há um código de exemplo que demonstra o caso de uso para uma operação de inserção em lote no DW do Azure de mil linhas, para ambos os cenários (regular versus API de Cópia em Massa).
 
 ```java
     public static void main(String[] args) throws Exception

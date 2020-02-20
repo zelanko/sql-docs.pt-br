@@ -1,5 +1,5 @@
 ---
-title: 'Lição 6: Adicionando agrupamentos e totais (Reporting Services) | Microsoft Docs'
+title: 'Lição 6: Adicionar agrupamentos e totais (Reporting Services) | Microsoft Docs'
 ms.date: 04/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b5b9846a20615cf613dd50752ac63f2669b1e399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65089674"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lição 6: Adicionar agrupamentos e totais (Reporting Services)
 
 Nesta lição final do tutorial, você adicionará agrupamentos e totais ao relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para organizar e resumir os dados.  
 
@@ -38,7 +38,7 @@ Nesta lição final do tutorial, você adicionará agrupamentos e totais ao rela
 
 5. Exclua as colunas originais da expressão `[Date]` e `[Order]` à direita da linha dupla. Selecione as alças de coluna das duas colunas, clique com o botão direito do mouse e selecione **Excluir Colunas**. O Designer de Relatórios remove as expressões de linhas individuais, assim somente as expressões de grupos são exibidas.
 
-    ![Selecionar colunas a serem excluídas](media/rs-basictablegroupsdeletecols.gif "Selecionar colunas a serem excluídas")
+    ![Selecionar colunas para exclusão](media/rs-basictablegroupsdeletecols.gif "Selecionar colunas para exclusão")
 
 6. Para formatar a nova coluna `[Date]`, clique com botão direito do mouse na célula da região de dados que contém a expressão `[Date]` e selecione **Propriedades da Caixa de Texto**.
 7. Selecione **Número**, na caixa de listagem de coluna à extrema esquerda, e **Data** na caixa de listagem **Categoria**.
@@ -58,7 +58,7 @@ Nesta lição final do tutorial, você adicionará agrupamentos e totais ao rela
 6. No menu **Formato**, selecione o quadrado **Cor da Tela de Fundo** > **Cinza Claro**.
 7. Selecione **OK** para aplicar o formato.
 
-   ![Modo de exibição de Design: tabela básica com total do pedido](media/rs-basictablesumlinetotaldesign.gif "Modo de exibição de Design: tabela básica com total do pedido")
+   ![Modo de exibição de Design: Tabela básica com total do pedido](media/rs-basictablesumlinetotaldesign.gif "Modo de exibição de Design: tabela básica com o total do pedido")
 
 ## <a name="add-the-daily-total-to-the-report"></a>Adicionar o total diário ao relatório
 
@@ -68,7 +68,7 @@ Nesta lição final do tutorial, você adicionará agrupamentos e totais ao rela
 4. No menu **Formato**, selecione o quadrado **Cor da Tela de Fundo** > **Laranja**.
 5. Selecione **OK** para aplicar o formato.
 
-   ![Definir a cor da tela de fundo para laranja](media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")
+   ![Definir cor da tela de fundo como laranja](media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")
 
 ## <a name="add-the-grand-total-to-the-report"></a>Adicionar o total geral ao relatório
 
@@ -78,13 +78,13 @@ Nesta lição final do tutorial, você adicionará agrupamentos e totais ao rela
 4. No menu **Formato**, selecione o quadrado **Cor da Tela de Fundo** > **Azul Claro**.
 5. Selecione **OK** para aplicar o formato.
 
-    ![Modo de exibição de Design: total geral em tabela básica](media/rs-basictablesumgrandtotaldesign.gif "Modo de exibição de Design: total geral em tabela básica")
+    ![Modo de exibição de Design: Total geral em tabela básica](media/rs-basictablesumgrandtotaldesign.gif "Modo de exibição de Design: Total geral em tabela básica")
 
 ## <a name="preview-the-report"></a>Visualizar o relatório
 
 Para visualizar as alterações de formato, selecione a guia **Visualização**. Na barra de ferramentas **Visualização**, selecione o botão **Última Página**, que se parece com ![ssrs_ssdt_viewertoolbar_lastpage](media/ssrs-ssdt-viewertoolbar-lastpage.png). Os resultados devem ser exibidos como mostrado a seguir:
 
-   ![Visualização: tabela básica com total geral](media/rs-basictablesumgrandtotalpreview.gif "Visualização: tabela básica com total geral")
+   ![Visualização: Tabela básica com total geral](media/rs-basictablesumgrandtotalpreview.gif "Visualização: tabela básica com total geral")
 
 ## <a name="publishing-the-report-to-the-report-server-optional"></a>Publicar o relatório no *Servidor de Relatório* (opcional)
 
@@ -96,20 +96,20 @@ Uma etapa opcional é publicar o relatório concluído no Servidor de Relatório
     - `https://localhost/reportserver` funcionará se você estiver criando o relatório no servidor de relatório.
 
 3. **TargetReportFolder** é denominado Tutorial devido ao nome do projeto. O Designer de Relatórios implanta o relatório nesta pasta.
-4. Escolha **OK**.
+4. Selecione **OK**.
 5. Selecione o menu **Compilar** > **Implantar Tutorial**.
 
     Ver uma mensagem semelhante à seguinte na janela **Saída** indica uma implantação com êxito.
 
-    > ------ Compilação iniciada: Projeto: tutorial, Configuração: Debug ------  
+    > ------ Build iniciado: Projeto: tutorial, Configuração: Depuração ------  
     > Ignorando 'Sales Orders.rdl'. O item está atualizado.  
     > Compilação concluída – 0 erros, 0 avisos  
-    > ------ Implantação iniciada: Projeto: tutorial, Configuração: Debug ------  
+    > ------ Implantação iniciada: Projeto: tutorial, Configuração: Depuração ------  
     > Implantando em `https://[server name]/reportserver`  
     > Implantando relatório '/tutorial/Sales Orders'.  
     > Implantação concluída -- 0 erros, 0 avisos  
     > ========== Compilação: 1 com êxito ou atualizados, 0 com falha, 0 ignorados ==========  
-    > ========== Implantação: 1 com êxito, 0 com falha, 0 ignorados ==========  
+    > ========== Implantação: 1 bem-sucedida, 0 com falha, 0 ignoradas ==========  
 
     Se você vir uma mensagem de erro semelhante à seguinte, verifique se você tem permissões no servidor de relatório e se iniciou o [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] com privilégios de administrador.
     >

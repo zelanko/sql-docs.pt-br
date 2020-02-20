@@ -13,10 +13,10 @@ ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6dfb24b6314529b19fb7bb5edb81534f30dc018a
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492743"
 ---
 # <a name="configure-execution-properties-for-a-report"></a>Configurar propriedades de execução de um relatório
@@ -62,20 +62,20 @@ Do [portal da Web de um servidor de relatório (Modo Nativo do SSRS)](../../repo
   
 1. Navegue até o relatório para o qual você deseja configurar as propriedades de execução.  
   
-2. Clique com botão direito do mouse e selecione **gerenciar** no menu suspenso.
+2. Clique com o botão direito do mouse no relatório e selecione **Gerenciar** no menu suspenso.
 
-3. Selecione o **instantâneos de histórico** guia para exibir o **instantâneos de histórico** página.  
+3. Selecione a guia **Instantâneos de histórico** para exibir a página **Instantâneos de histórico**.  
   
-4. Selecione **agendamentos e configurações** botão e, em seguida, verifique **criar instantâneos de histórico segundo uma agenda** se já não estiver marcada.
+4. Selecione **Agendas e configurações** e marque **Criar instantâneos de histórico em uma agenda** se ainda não estiver marcado.
   
-5. Selecione uma **agenda compartilhada** ou um **agenda específica do relatório** conforme desejado.  
+5. Selecione uma **Agenda compartilhada** ou uma **Agenda específica do relatório** conforme desejado.  
   
-6. No **Advanced** , selecione o desejado **retenção** política para os instantâneos de histórico.  
+6. Na seção **Avançado**, selecione a política de **Retenção** desejada dos instantâneos de histórico.  
   
 7. Escolha **Aplicar**.  
   
    >[!NOTE]
-   >Se você quiser criar um instantâneo imediatamente, selecione o **novo instantâneo de histórico** botão em vez da **agendamentos e configurações** botão e um instantâneo de relatório serão criado imediatamente.  
+   >Se desejar criar um instantâneo imediatamente, selecione o botão **Novo instantâneo de histórico**, em vez do botão **Agendas e configurações**, e um instantâneo de relatório será criado imediatamente.  
   
 ## <a name="see-also"></a>Confira também  
  [Definir as propriedades do processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md)   

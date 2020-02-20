@@ -17,13 +17,13 @@ ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5c095b74f8f299a1d5f2b15daaf95e3d5086ebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992670"
 ---
-# <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
+# <a name="sqlsrv_num_fields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Recupera o número de campos em um conjunto de resultados ativo. Essa função pode ser chamada em qualquer instrução preparada, antes ou após a execução.  
@@ -35,8 +35,8 @@ Recupera o número de campos em um conjunto de resultados ativo. Essa função p
 sqlsrv_num_fields( resource $stmt)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
-*$stmt*: a instrução na qual o conjunto de resultados de destino está ativo.  
+#### <a name="parameters"></a>parâmetros  
+*$stmt*: A instrução na qual o conjunto de resultados de destino está ativo.  
   
 ## <a name="return-value"></a>Valor retornado  
 Um valor inteiro que representa o número de campos no conjunto de resultados ativo. Se ocorrer um erro, será retornado o valor booliano **false** .  

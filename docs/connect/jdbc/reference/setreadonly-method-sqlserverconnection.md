@@ -1,5 +1,5 @@
 ---
-title: Método SetReadOnly (SQLServerConnection) | Microsoft Docs
+title: Método setReadOnly (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bd11fd50-f092-43a0-a6bc-c63e70cff8da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bda879ceba5c6f1193ecdfa09995e851c2bcd6e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973147"
 ---
 # <a name="setreadonly-method-sqlserverconnection"></a>Método setReadOnly (SQLServerConnection)
@@ -37,16 +37,16 @@ ms.locfileid: "67973147"
 public void setReadOnly(boolean readOnly)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *readOnly*  
   
- **true** se a conexão for ser somente leitura. Caso contrário, **false**.  
+ **true** caso a conexão deva ser somente leitura. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método SetReadOnly é especificado pelo método SetReadOnly na interface java. Sql. Connection.  
+## <a name="remarks"></a>Comentários  
+ Esse método ReadOnly é especificado pelo método setReadOnly na interface java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

@@ -16,10 +16,10 @@ ms.assetid: 47ef6547-5ec7-4cf5-a4d4-e34cbeec72eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4dee62a135b45b0181094aeec8b5edc063f6ffea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980385"
 ---
 # <a name="getresultsetconcurrency-method-sqlserverstatement"></a>Método getResultSetConcurrency (SQLServerStatement)
@@ -40,8 +40,8 @@ public final int getResultSetConcurrency()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getResultSetConcurrency é especificado pelo método getResultSetConcurrency na interface java. Sql. Statement.  
+## <a name="remarks"></a>Comentários  
+ Esse método getResultSetConcurrency é especificado pelo método getResultSetConcurrency na interface java.sql.Statement.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

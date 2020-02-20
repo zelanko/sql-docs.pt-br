@@ -16,10 +16,10 @@ ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a19bd01a8ebf54eb3e819bd4a82400b8107e382
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954022"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>Método getBestRowIdentifier (SQLServerDatabaseMetaData)
@@ -38,7 +38,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
                                                boolean nullable)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *catalog*  
   
  Uma **String** que contém o nome do catálogo.  
@@ -71,17 +71,17 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getBestRowIdentifier é especificado pelo método getBestRowIdentifier na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ O método getBestRowIdentifier é especificado pelo método getBestRowIdentifier na interface java.sql.DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getBestRowIdentifier conterá as seguintes informações:  
   
-|Nome|Tipo|Descrição|  
+|Nome|Type|Descrição|  
 |----------|----------|-----------------|  
 |SCOPE|short|O escopo dos resultados retornados. Pode ser um dos seguintes valores:<br /><br /> bestRowTemporary (0)<br /><br /> bestRowTransaction (1)<br /><br /> bestRowSession (2)|  
-|COLUMN_NAME|Cadeia de caracteres|O nome da coluna.|  
+|COLUMN_NAME|String|O nome da coluna.|  
 |DATA_TYPE|short|O tipo de dados SQL de java.sql.Types.|  
-|TYPE_NAME|Cadeia de caracteres|O nome do tipo de dados.|  
+|TYPE_NAME|String|O nome do tipo de dados.|  
 |COLUMN_SIZE|INT|A precisão da coluna.|  
 |BUFFER_LENGTH|INT|O comprimento do buffer.|  
 |DECIMAL_DIGITS|short|A escala da coluna.|  

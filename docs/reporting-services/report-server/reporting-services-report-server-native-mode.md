@@ -13,16 +13,16 @@ ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66826895"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   Um servidor de relatório configurado para o modo nativo como um servidor de aplicativo que fornece todos os recursos de processamento e gerenciamento exclusivamente através de componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Você pode usar tanto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou o portal da web para gerenciar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] relatórios. Use o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para gerenciar um servidor de relatório em Modo Nativo.  
+ Você pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou o portal da Web para gerenciar relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Use o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para gerenciar um servidor de relatório em Modo Nativo.  
   
  Se o servidor de relatório estiver configurado no modo do SharePoint, será necessário usar as páginas de gerenciamento de conteúdo no site do SharePoint para gerenciar relatórios, fontes de dados compartilhadas e outros itens do servidor de relatório.  
   
@@ -86,10 +86,10 @@ ms.locfileid: "66826895"
   
 |Operação|Tipo de arquivo|  
 |---------------|---------------|  
-|Carregar|Todos os arquivos são carregados como recursos, exceto arquivos de definição de relatório (.rdl) e modelo de relatório (.smdl).<br /><br /> Para carregar um recurso, é necessário usar o portal da Web se o servidor de relatório estiver sendo executado no modo nativo ou por uma página de aplicativo em um site do SharePoint, se servidor for executado no modo integrado do SharePoint. Para saber mais, confira [Carregar um arquivo ou relatório no Gerenciador de Relatórios](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) ou [Carregar documentos em uma biblioteca do SharePoint &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|Carregar|Todos os arquivos são carregados como recursos, exceto arquivos de definição de relatório (.rdl) e modelo de relatório (.smdl).<br /><br /> Para carregar um recurso, será necessário usar o portal da Web se o servidor de relatório estiver sendo executado no modo nativo ou por uma página de aplicativo em um site do SharePoint, se o servidor for executado no modo integrado do SharePoint. Para saber mais, confira [Carregar um arquivo ou relatório no servidor de relatório](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) ou [Carregar documentos em uma biblioteca do SharePoint &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
 |Publicar|Todos os arquivos em um projeto são carregados como recursos, exceto pelos arquivos .rdl, .smdl e .rds da fonte de dados. Para publicar um recurso, adicione um item existente a um projeto no Designer de Relatórios e publique o projeto em um servidor de relatório.|  
   
- Todos os recursos são gerados como arquivos em um sistema de arquivos, que são carregados subsequentemente em um servidor de relatório. Não existem restrições quanto aos tipos de arquivos que você pode carregar, tamanhos de arquivo de até 1 GB. Entretanto, quando publicados em um servidor de relatório como recursos, tipos de arquivo com tipos MIME equivalentes são melhores que outros. Por exemplo, recursos com base em arquivos HTML e JPG serão abertos em uma janela de navegador quando o usuário clicar no recurso, renderizando o HTML como uma página da Web e o JPG como uma imagem que pode ser visualizada pelo usuário. De outro modo, recursos que não possuem tipos MIME equivalentes, como arquivos de aplicativos de desktop, por exemplo, talvez não sejam renderizados em uma janela do navegador.  
+ Todos os recursos são gerados como arquivos em um sistema de arquivos, que são carregados subsequentemente em um servidor de relatório. Não há restrições sobre os tipos de arquivos que você pode carregar, tamanhos do arquivo até 1 GB. Entretanto, quando publicados em um servidor de relatório como recursos, tipos de arquivo com tipos MIME equivalentes são melhores que outros. Por exemplo, recursos com base em arquivos HTML e JPG serão abertos em uma janela de navegador quando o usuário clicar no recurso, renderizando o HTML como uma página da Web e o JPG como uma imagem que pode ser visualizada pelo usuário. De outro modo, recursos que não possuem tipos MIME equivalentes, como arquivos de aplicativos de desktop, por exemplo, talvez não sejam renderizados em uma janela do navegador.  
   
  Um recurso poder ser visualizado por usuários de relatórios dependendo dos recursos de exibição do navegador. Como recursos não são processados pelo servidor de relatório, é necessário que o navegador forneça o recurso de exibição para renderizar o tipo MIME específico. Se o navegador não for capaz de renderizar o conteúdo, os usuários que visualizam o recurso conseguirão visualizar somente as propriedades gerais do recurso.  
   

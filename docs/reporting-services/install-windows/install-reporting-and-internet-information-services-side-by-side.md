@@ -10,10 +10,10 @@ ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b854add44b256078cd19963f2ef22d55a7b3d300
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "64330623"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Instalar o Reporting Services e os Serviços de Informações da Internet lado a lado
@@ -47,7 +47,7 @@ Você pode instalar e executar o SSRS (SQL Server Reporting Services) e o IIS (S
 |`https://+:80`|Recebe solicitações que ainda não foram recebidas por outros aplicativos, para todos os pontos de extremidade do aplicativo mapeado como **Todos Atribuídos**.|  
 |`https://*:80`|Recebe solicitações que ainda não foram recebidas por outros aplicativos, para todos os pontos de extremidade do aplicativo mapeado como **Todos Não Atribuídos**.|  
   
- Uma indicação de um conflito de porta é que você verá a seguinte mensagem de erro: 'System.IO.FileLoadException: O processo não pode acessar o arquivo porque está sendo usado por outro processo. (Exceção de HRESULT: 0x80070020).'  
+ Uma indicação de um conflito de porta é que você verá a seguinte mensagem de erro: 'System.IO.FileLoadException: O processo não pode acessar o arquivo porque ele está sendo usado por outro processo. (Exceção de HRESULT: 0x80070020).'  
   
 ## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>Reservas de URL para o IIS 8.0, 8.5 com o SQL Server Reporting Services  
  Dadas as regras de precedência na seção anterior, você pode começar a compreender como as reservas de URL definidas para o Reporting Services e o ISS promovem a interoperabilidade. O Reporting Services recebe solicitações que especificam explicitamente os nomes de diretório virtuais para seus aplicativos; o IIS recebe todas as solicitações restantes, que podem ser direcionadas a aplicativos executados no modelo de processo do IIS.  
@@ -72,7 +72,7 @@ Você pode instalar e executar o SSRS (SQL Server Reporting Services) e o IIS (S
   
  Para garantir que todos os aplicativos recebam solicitações, siga estas diretrizes:  
   
--   Para instalações do Reporting Services, use nomes de diretório virtual ainda não utilizados por um site do IIS na mesma porta que o Reporting Services. Se houver conflito, instale o Reporting Services no modo “somente arquivos” (usando a instalação, mas não configurando a opção do servidor no Assistente de Instalação), para que você possa configurar os diretórios virtuais depois que a instalação for concluída. Uma indicação de que a sua configuração possui um conflito de porta é que você verá a seguinte mensagem de erro: System.IO.FileLoadException: O processo não pode acessar o arquivo porque está sendo usado por outro processo. (Exceção de HRESULT: 0x80070020).  
+-   Para instalações do Reporting Services, use nomes de diretório virtual ainda não utilizados por um site do IIS na mesma porta que o Reporting Services. Se houver conflito, instale o Reporting Services no modo “somente arquivos” (usando a instalação, mas não configurando a opção do servidor no Assistente de Instalação), para que você possa configurar os diretórios virtuais depois que a instalação for concluída. Uma indicação de que sua configuração tem um conflito é que você verá a mensagem de erro: System.IO.FileLoadException: O processo não pode acessar o arquivo porque ele está sendo usado por outro processo. (Exceção de HRESULT: 0x80070020).  
   
 -   Para instalações configuradas manualmente, adote as convenções de nomenclatura padrão nas URLs configuradas. Se você instalar o [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] como uma instância nomeada, inclua o nome da instância ao criar um diretório virtual.  
 
@@ -82,4 +82,4 @@ Você pode instalar e executar o SSRS (SQL Server Reporting Services) e o IIS (S
 [Configurar uma URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Instalar o servidor de relatórios de modo nativo do Reporting Services](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

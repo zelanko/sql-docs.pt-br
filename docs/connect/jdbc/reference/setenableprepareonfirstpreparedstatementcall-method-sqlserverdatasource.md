@@ -11,32 +11,32 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26ac2cac075d08b8029ac0e85dacffd1674fb0da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974305"
 ---
 # <a name="setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource"></a>Método setEnablePrepareOnFirstPreparedStatementCall (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Especifica o comportamento de uma instância de conexão específica. Se essa configuração for falsa, a primeira execução de uma instrução preparada chamará sp_executesql e não preparará uma instrução, depois que a segunda execução ocorrer, chamará sp_prepexec e, na verdade, configurará um identificador de instrução preparado. As execuções a seguir chamarão sp_execute. Isso alivia a necessidade de sp_unprepare na instrução preparada fechar se a instrução for executada apenas uma vez.  
+  Especifica o comportamento de uma instância de conexão específica. Se essa configuração for false, a primeira execução de uma instrução preparada chamará sp_executesql e não preparará uma instrução. Assim que a segunda execução ocorrer, ela chamará sp_prepexec e configurará efetivamente um identificador de instrução preparada. As execuções subsequentes chamarão sp_execute. Isso elimina a necessidade de sp_unprepare no fechamento da instrução preparada se a instrução é executada apenas uma vez.  
 ## <a name="syntax"></a>Sintaxe  
   
 ```
 public void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *enablePrepareOnFirstPreparedStatementCall*  
   
- O novo valor da propriedade de conexão **enablePrepareOnFirstPreparedStatementCall** .  
+ O novo valor da propriedade de conexão **enablePrepareOnFirstPreparedStatementCall**.  
 
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Remarks  
- Esse método está disponível no JDBC Driver versão 6,4 e em diante.
+## <a name="remarks"></a>Comentários  
+ Esse método está disponível no JDBC Driver versão 6.4 e em diante.
  
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

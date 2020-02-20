@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7ec89b3fdafaba7fe81849ab2ae5b2baf926ef83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994594"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Usar Parâmetros com valor de tabela (OLE DB)
@@ -32,9 +32,9 @@ ms.locfileid: "67994594"
   
 -   Usa propriedades de parâmetro personalizadas por meio de ISSCommandWithParameters.  
   
--   Mostra o tratamento de erros para erros de MSOLEDBSQL.  
+-   Mostra o tratamento de erro MSOLEDBSQL.  
   
- Para obter mais informações sobre parâmetros com valor de tabela, consulte [ &#40;parâmetros com valor de tabela OLE DB&#41;driver para SQL Server](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
+ Para obter mais informações sobre parâmetros com valor de tabela, confira [Parâmetros com valor de tabela &#40;Driver do OLE DB para SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>Exemplo  
  A primeira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) cria o banco de dados usado pela amostra.  

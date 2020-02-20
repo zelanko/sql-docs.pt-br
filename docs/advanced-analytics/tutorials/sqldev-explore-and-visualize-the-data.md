@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 213db5ee9b88f7af34e3d000fc0f3b241d8e5791
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73725230"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lição 1: Explorar e visualizar os dados
@@ -115,7 +115,7 @@ O procedimento armazenado retorna a imagem como um fluxo de dados varbinary, que
   
     **Resultados**
     
-    *plot* *0xFFD8FFE000104A4649...*
+    *gráfico* *0xFFD8FFE000104A4649...*
   
 2. Abra um prompt de comando do PowerShell e execute o comando a seguir, fornecendo o nome da instância apropriada, o nome do banco de dados, o nome de usuário e as credenciais como argumentos. Para aqueles que usam identidades do Windows, você pode substituir **-U** e **-P** com **-T**.
   
@@ -261,7 +261,7 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 Os números nos nomes de arquivo são gerados aleatoriamente para garantir que você não encontre um erro ao tentar gravar em um arquivo existente.
 
-### <a name="view-output"></a>Exibir a saída 
+### <a name="view-output"></a>Exibir saída 
 
 Para exibir o gráfico, abra a pasta de destino e examine os arquivos que foram criados pelo código do R no procedimento armazenado.
 

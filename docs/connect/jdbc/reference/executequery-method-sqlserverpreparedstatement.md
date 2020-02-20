@@ -16,10 +16,10 @@ ms.assetid: dfff3358-f391-4af6-84c1-b94c029f506d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9dcf711e3d95577d41a53329f7ebab4b65389a07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954780"
 ---
 # <a name="executequery-method-sqlserverpreparedstatement"></a>Método executeQuery (SQLServerPreparedStatement)

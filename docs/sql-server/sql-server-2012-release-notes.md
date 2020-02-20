@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 3a6592781464bb148bf31fdaa135d17a159b5e13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68136526"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notas de Versão do SQL Server 2012
@@ -64,7 +64,7 @@ Antes de instalar o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consider
 <pre>The following error has occurred:  
 Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
   
-ou em  
+ou  
   
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
@@ -232,12 +232,12 @@ Para saber mais sobre como reparar uma instância do SQL Server, veja [Reparar u
 **Solução alternativa**: repare sua instalação do .NET Framework 4 depois de atualizar seu sistema operacional. Para saber mais, veja [Como reparar uma instalação existente do .NET Framework](https://support.microsoft.com/kb/306160).  
   
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 A atualização da edição do SQL Server exige reiniciar o computador  
-**Problema:** quando você faz a atualização de edição de uma instância do SQL Server 2012, algumas das funcionalidades associadas à nova edição podem não ser ativadas imediatamente.  
+**Problema**: quando você faz a atualização de edição de uma instância do SQL Server 2012, algumas das funcionalidades associadas à nova edição podem não ser ativadas imediatamente.  
   
 **Solução alternativa**: reinicie o computador depois da atualização de edição de uma instância do SQL Server 2012. Para saber mais sobre as atualizações com suporte no SQL Server 2012, veja [Versão com suporte e atualizações de edição](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
   
 ### <a name="113-database-with-read-only-filegroup-or-files-cannot-be-upgraded"></a>1.13 O banco de dados com grupo de arquivos ou arquivos somente leitura não pode ser atualizado  
-**Problema:**  Você não poderá atualizar um banco de dados anexando ou restaurando um banco de dados do backup se o banco de dados ou seus arquivos/grupos de arquivos estiverem definidos como somente leitura.  O erro 3415 retorna.  Esse problema também se aplica ao realizar uma atualização no local de uma instância do SQL Server. Ou seja, você tenta substituir uma instância existente do SQL Server instalando o SQL Server 2012 e um ou mais bancos de dados existentes é definido como somente leitura.  
+**Problema**:  Você não poderá atualizar um banco de dados anexando ou restaurando um banco de dados do backup se o banco de dados ou seus arquivos/grupos de arquivos estiverem definidos como somente leitura.  O erro 3415 retorna.  Esse problema também se aplica ao realizar uma atualização no local de uma instância do SQL Server. Ou seja, você tenta substituir uma instância existente do SQL Server instalando o SQL Server 2012 e um ou mais bancos de dados existentes é definido como somente leitura.  
   
 **Solução alternativa:** antes de atualizar, verifique se o banco de dados e seus arquivos/grupos de arquivos estão definidos como leitura-gravação.  
   
@@ -291,14 +291,14 @@ Há problemas com a Tarefa de Processamento do AS quando você trabalha com mode
   
 **Problema:** algumas opções de configuração na ferramenta não são aplicáveis. Por exemplo, "Objetos relacionados ao processo" não devem ser usados durante o processamento de partições e a opção de configuração "Processamento Paralelo" contém uma mensagem de erro inválido dizendo que não há suporte para o processamento paralelo no SKU padrão.  
   
-**Solução alternativa:** None  
+**Solução alternativa:** Nenhum  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="BOL"></a>3.0 Manuais Online  
   
 ### <a name="31-help-viewer-for-sql-server-crashes-in-environments-configured-to-run-only-ipv6"></a>3.1 O Visualizador da Ajuda do SQL Server falha nos ambientes configurados para executar apenas IPv6  
-**Problema:** se o seu ambiente estiver configurado para executar apenas IPv6, o Visualizador da Ajuda do SQL Server 2012 falhará e você verá a seguinte mensagem de erro:  
+**Problema**: se o seu ambiente estiver configurado para executar apenas IPv6, o Visualizador da Ajuda do SQL Server 2012 falhará e você verá a seguinte mensagem de erro:  
   
 `HelpLibAgent.exe has stopped working.`  
   
@@ -332,7 +332,7 @@ Há problemas com a Tarefa de Processamento do AS quando você trabalha com mode
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 A indicação de uma descoberta de conhecimento terminada ou atividade de limpeza interativa está atrasada  
 **Problema:** se um administrador terminar uma atividade na tela Monitoramento de Atividades, um usuário interativo que estiver executando a atividade de descoberta de conhecimento, gerenciamento de domínio ou limpeza interativa não receberá nenhuma indicação de que sua atividade terminou, até executar a operação seguinte.  
   
-**Solução alternativa:** None  
+**Solução alternativa:** Nenhum  
   
 ### <a name="44-a-cancel-operation-discards-work-from-multiple-activities"></a>4.4 Uma operação de cancelamento descarta o trabalho de várias atividades  
 **Problema:** Se você clicar em **Cancelar** para uma atividade de descoberta de conhecimento ou gerenciamento de domínio em execução, e outras atividades tiverem sido concluídas antes sem que uma operação de publicação fosse realizada durante a execução da atividade, o trabalho de todas as atividades executadas desde a última publicação será descartado, não apenas o atual.  
@@ -375,7 +375,7 @@ Em um projeto de qualidade de dados de limpeza, se você tiver mapeado um campo 
 **Solução alternativa:** remova o ; (ponto e vírgula) do nome da planilha no arquivo Excel que contém os dados de origem a serem mapeados e tente novamente.  
   
 ### <a name="414-issue-with-date-or-datetime-values-in-unmapped-source-fields-in-excel-during-cleansing-and-matching"></a>4.14 Problema com valores Date ou DateTime em campos de origem não mapeados no Excel durante a limpeza e a correspondência  
-**Problema:** Se seus dados de origem forem o Excel e você não tiver mapeado os campos de origem que contêm valores de tipo de dados **Date** ou **DateTime**, o seguinte ocorrerá durante as atividades de limpeza e correspondência:  
+**Problema**: Se seus dados de origem forem o Excel e você não tiver mapeado os campos de origem que contêm valores de tipo de dados **Date** ou **DateTime**, o seguinte ocorrerá durante as atividades de limpeza e correspondência:  
   
 -   Os valores **Date** não mapeados são exibidos e exportados no formato aaaammdd.  
   
@@ -392,7 +392,7 @@ Em um projeto de qualidade de dados de limpeza, se você tiver mapeado um campo 
   
 -   Remova os dados em todas as colunas além da coluna 255 no arquivo .xls, salve o arquivo e, em seguida, importe os valores do arquivo para um domínio.  
   
-### <a name="416-activity-monitoring-feature-is-unavailable-for-roles-other-than-dqsadministrator"></a>4.16 O recurso Monitoramento de Atividades está indisponível para funções diferentes de dqs_administrator  
+### <a name="416-activity-monitoring-feature-is-unavailable-for-roles-other-than-dqs_administrator"></a>4.16 O recurso Monitoramento de Atividades está indisponível para funções diferentes de dqs_administrator  
 O recurso de monitoramento de atividade está disponível somente para os usuários que têm a função de dqs_administrator Se sua conta de usuário tiver a função dqs_kb_editor ou dqs_kb_operator, o recurso Monitoramento de Atividades estará indisponível no aplicativo cliente Data Quality.  
   
 ### <a name="417-error-on-opening-a-knowledge-base-in-the-recent-knowledge-base-list-for-domain-management"></a>4.17 Erro ao abrir a base de dados de conhecimento na lista da base de dados de conhecimento recente para o gerenciamento de domínio  
@@ -439,7 +439,7 @@ Vamos ilustrar isso com um exemplo. Considere um usuário, Domínio\usuário1. O
 **Solução alternativa:** não instale nem use esses dois recursos no SKU do Server Core do Windows Server 2008, do Windows Server 2008 R2 e do Windows Server 7.  
   
 ### <a name="52-sql-server-management-studio-depends-on-visual-studio-2010-sp1"></a>5.2 O SQL Server Management Studio depende do Visual Studio 2010 SP1  
-**Problema:**  o SQL Server 2012 Management Studio depende do Visual Studio 2010 SP1 para funcionar corretamente. Desinstalar o Visual Studio 2010 SP1 pode causar perda de funcionalidade no SQL Server Management Studio e deixará o Management Studio em um estado sem suporte. Os seguintes problemas podem ser vistos nesse caso:  
+**Problema**:  o SQL Server 2012 Management Studio depende do Visual Studio 2010 SP1 para funcionar corretamente. Desinstalar o Visual Studio 2010 SP1 pode causar perda de funcionalidade no SQL Server Management Studio e deixará o Management Studio em um estado sem suporte. Os seguintes problemas podem ser vistos nesse caso:  
   
 -   Parâmetros de linha de comando para ssms.exe não funcionarão corretamente.  
   
@@ -475,7 +475,7 @@ Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
 ### <a name="55-new-maintenance-plan-layout-not-compatible-with-earlier-sql-server-tools"></a>5.5 O novo layout do plano de manutenção não é compatível com as ferramentas do SQL Server anteriores  
 **Problema:** quando as ferramentas de gerenciamento do SQL Server 2012 são usadas para modificar um plano de manutenção existente criado em uma versão anterior das ferramentas de gerenciamento do SQL Server (SQL Server 2008 R2, SQL Server 2008 ou SQL Server 2005), o plano de manutenção é salvo em um novo formato. As versões anteriores das ferramentas de gerenciamento do SQL Server não dão suporte a esse formato novo.  
   
-**Solução alternativa**: None  
+**Solução alternativa**: Nenhum  
   
 ### <a name="56-intellisense-has-limitations-when-logged-in-to-a-contained-database"></a>5.6 O Intellisense tem limitações quando conectado a um banco de dados independente  
 Problema: o Intellisense no SQL Server Management Studio (SSMS) e no SQL Server Data Tools (SSDT) não funciona conforme o esperado quando usuários independentes estão conectados a bancos de dados independentes. O comportamento a seguir é visto nesses casos:  
@@ -486,7 +486,7 @@ Problema: o Intellisense no SQL Server Management Studio (SSMS) e no SQL Server 
   
 3.  A ajuda para dica de ferramenta para funções internas não funciona.  
   
-**Solução alternativa**:  None  
+**Solução alternativa**:  Nenhum  
   
 ### <a name="57-alwayson-availability-groups"></a>5.7 Grupos de disponibilidade AlwaysOn  
 Antes de tentar criar um grupo de disponibilidade, veja [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn (SQL Server)](https://go.microsoft.com/?linkid=9753168) nos Manuais Online. Para obter uma introdução aos Grupos de Disponibilidade AlwaysOn, veja [Grupos de Disponibilidade AlwaysOn (SQL Server)](https://go.microsoft.com/?linkid=9753166)nos Manuais Online.  

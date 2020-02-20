@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 722536a086abf280cacded3ecd2cd0d450a417ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994484"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
@@ -24,12 +24,12 @@ ms.locfileid: "67994484"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Este artigo discute OLE DB comportamento específico do OLE DB driver para SQL Server.  
+  Este artigo discute o comportamento do OLE DB específico do Driver do OLE DB para SQL Server.  
   
 ## <a name="icommandexecute"></a>ICommand::Execute  
  Inserir dados maiores do que o tamanho de uma coluna normalmente resulta em um erro. No entanto, existem situações em que S_OK será retornado, mas *dwStatus* será definido como DBSTATUS_S_TRUNCATED. Isso geralmente ocorre quando os dados são inseridos com parâmetros e a coluna não é grande o suficiente para armazenar os dados e **ICommandWithParameters::SetParameterInfo** não foi chamado.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
+ [Interfaces do &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
   
   

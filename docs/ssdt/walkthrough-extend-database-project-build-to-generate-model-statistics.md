@@ -1,23 +1,24 @@
 ---
-title: 'Passo a passo: Estender o build do projeto de banco de dados para gerar as estatísticas do modelo | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Estender a compilação do projeto de banco de dados para gerar estatísticas de modelo
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e1844ae19de96b13b36fad59f5032fe68caaf19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069016"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242687"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Passo a passo: extensão da Compilação do Projeto de Banco de Dados para geração de estatísticas do modelo
+
 Você pode criar um colaborador de compilação para executar ações personalizadas ao compilar um projeto de banco de dados. Neste passo a passo, você cria um colaborador de compilação chamado ModelStatistics que gera estatísticas do modelo de banco de dados SQL quando você cria um projeto de banco de dados. Como esse colaborador de compilação usa parâmetros quando você compila, algumas etapas adicionais serão necessárias.  
   
 Neste passo a passo, você realizará as tarefas principais a seguir:  
@@ -447,7 +448,7 @@ Para criar um colaborador de compilação, você deverá realizar as seguintes t
   
 8.  No menu **Arquivo** , clique em **Salvar Tudo**.  
   
-9. No menu **Criar** , clique em **Criar Solução**.  
+9. No menu **Compilar**, clique em **Compilar Solução**.  
   
     Em seguida, você deve instalar o assembly de modo que ele seja carregado quando você compilar projetos do SQL.  
   
@@ -528,7 +529,7 @@ Depois que você tiver seguido uma destas abordagens, poderá usar MSBuild para 
   
 3.  No prompt de comando, navegue até a pasta que contém seu projeto SQL.  
   
-4.  No prompt de comando, digite o seguinte comando:  
+4.  No prompt de comando, digite o comando a seguir:  
   
     ```  
     MSBuild /t:Rebuild MyDatabaseProject.sqlproj /p:BuildContributors=$(BuildContributors);ExampleContributors.ModelStatistics /p:ContributorArguments=$(ContributorArguments);GenerateModelStatistics=true;SortModelStatisticsBy=name;OutDir=.\;  
@@ -587,7 +588,7 @@ Relationships
   
     Os resultados que foram reportados também são persistidos no arquivo XML.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
 Você pode criar ferramentas adicionais para executar o processamento do arquivo XML de saída. Isso é apenas um exemplo de um colaborador de compilação. Você pode, por exemplo, para criar um colaborador de compilação para gerar um arquivo de dicionário de dados como parte de sua compilação.  
   
 ## <a name="see-also"></a>Consulte Também  

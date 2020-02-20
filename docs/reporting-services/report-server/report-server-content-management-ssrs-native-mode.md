@@ -14,14 +14,14 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fa8579f24cbad2bdbebe3ad5198732ac7786bde9
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67228754"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gerenciamento do Conteúdo do Servidor de Relatório (Modo Nativo SSRS)
-No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o gerenciamento de conteúdo se refere ao gerenciamento de itens de servidor de relatório. Todos os itens podem ser gerenciados independentemente um do outro por propriedades e configurações de segurança. Qualquer item pode ser movido para um local diferente no namespace de pasta de servidor de relatório. Para gerenciar os itens com eficiência, você precisa saber quais tarefas são executadas por um gerenciador de conteúdo. A partir do SQL Server 2016 Reporting Services ou posterior (SSRS) CTP 3.2, a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] portal da web está disponível. Este artigo analisa o portal da Web e a experiência do novo portal da Web.  
+No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o gerenciamento de conteúdo se refere ao gerenciamento de itens de servidor de relatório. Todos os itens podem ser gerenciados independentemente um do outro por propriedades e configurações de segurança. Qualquer item pode ser movido para um local diferente no namespace de pasta de servidor de relatório. Para gerenciar os itens com eficiência, você precisa saber quais tarefas são executadas por um gerenciador de conteúdo. Do SQL Server 2016 Reporting Services ou posterior (SSRS) CTP 3.2 em diante, o portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está disponível. Este artigo analisa o portal da Web e a experiência do novo portal da Web.  
   
 > [!NOTE]  
 > O gerenciamento de conteúdo é diferente da administração de servidor de relatório. Para obter mais informações sobre como gerenciar o ambiente em que um servidor de relatório é executado, consulte [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
@@ -56,9 +56,9 @@ Ferramentas para gerenciar o conteúdo do servidor de relatório incluem [!INCLU
   
  No portal da Web, os itens que podem ser movidos estão indicados na hierarquia de pastas. A imagem a seguir mostra o ícone para cada item móvel.  
   
-  ![Ícones de servidor de relatório para itens moveable](media/report-server-content-management-ssrs-native-mode/report-server-content-icons.png)
+  ![Ícones do servidor de relatório para itens que podem ser movidos](media/report-server-content-management-ssrs-native-mode/report-server-content-icons.png)
 
- Nem todos os itens com os quais você trabalha podem ser movidos. Não é possível mover itens associados a um relatório, como assinaturas ou histórico de relatório. Esses itens são movidos com os seus relatórios associados. De maneira semelhante, não é possível mover itens, como agendas compartilhadas, que existem fora da hierarquia de pasta. Não é possível mover itens sem a devida permissão. A permissão para mover um item é concedida quando as seguintes tarefas são selecionadas na atribuição de função para o item em questão: "Gerenciar relatórios", "Gerenciar pastas" e "Gerenciar fontes de dados".  
+ Nem todos os itens com os quais você trabalha podem ser movidos. Não é possível mover itens associados a um relatório, como assinaturas ou histórico de relatório. Esses itens são movidos com os seus relatórios associados. De maneira semelhante, não é possível mover itens, como agendas compartilhadas, que existem fora da hierarquia de pasta. Não é possível mover itens sem a devida permissão. A permissão para mover um item é concedida quando as seguintes tarefas são selecionadas na atribuição de função para o item em questão: “Gerenciar relatórios”, “Gerenciar pastas” e “Gerenciar fontes de dados”.  
   
 ##  <a name="bkmk_Folders"></a> Pastas  
  Uma hierarquia de pastas é usada para tratar itens que são armazenados e gerenciados por um servidor de relatório.  Por padrão, a estrutura de pastas consiste em um nó raiz denominado Página Inicial e em pastas reservadas que dão suporte ao recurso opcional Meus Relatórios. Pastas adicionais são definidas pelo usuário. As pastas do servidor de relatórios serão úteis se você quiser conceder o mesmo nível de acesso a vários itens. As permissões que você define na pasta podem ser herdadas por itens na pasta e por pastas adicionais ramificadas dessa pasta. Por exemplo, você pode criar um conjunto de pastas na pasta Base, atribuir permissões de equipe a cada pasta e permitir que os membros da equipe personalizem pastas sob a pasta de equipe quando necessário.  
@@ -94,7 +94,7 @@ Ferramentas para gerenciar o conteúdo do servidor de relatório incluem [!INCLU
   
 |Pasta|Finalidade|  
 |------------|-------------|  
-|Base|O nó raiz da hierarquia de pastas.|  
+|Home|O nó raiz da hierarquia de pastas.|  
 |Usuários|Esta pasta aparece quando você habilita o recurso Meus Relatórios. Ela contém subpastas para todos os usuários que usam o recurso Meus Relatórios e está acessível somente para administradores do servidor de relatórios. Cada nome de subpasta corresponde ao nome do usuário.|  
 |Meus Relatórios|Fornece um workspace pessoal para cada usuário.|  
   
@@ -142,7 +142,7 @@ Ferramentas para gerenciar o conteúdo do servidor de relatório incluem [!INCLU
   
  Para usar um recurso de imagem em um relatório, adicione o arquivo de imagem ao projeto e publique-o juntamente com o relatório. Quando a imagem for publicada, será possível atualizar a referência da imagem no relatório de modo que aponte para o recurso no servidor de relatório. Sendo assim, somente publique novamente o relatório para salvar as alterações. Você poderá atualizar subsequentemente a imagem, independentemente do relatório, republicando o recurso. O relatório usa a versão mais atual da imagem disponível no servidor de relatórios.  
   
- Para obter mais informações, consulte [atualizar um recurso (portal da web)](../../reporting-services/report-server/update-a-resource-report-manager.md).  
+ Para obter mais informações, confira [Atualizar um Recurso (portal da Web)](../../reporting-services/report-server/update-a-resource-report-manager.md).  
   
 ##  <a name="bkmk_MyReports"></a> Meus Relatórios  
  A pasta Meus Relatórios é um workspace pessoal para cada usuário que efetua logon em um servidor de relatório com uma conta de domínio válida. Essa pasta de finalidade especial armazena relatórios de trabalhos em andamento, relatórios que não serão distribuídos amplamente ou relatórios que foram modificados para atender a uma necessidade. Não é possível restringir o número ou o tamanho dos itens armazenados em uma pasta Meus Relatórios, nem configurá-la para ser compartilhada entre usuários.  
@@ -170,7 +170,7 @@ Ferramentas para gerenciar o conteúdo do servidor de relatório incluem [!INCLU
 ## <a name="tasks"></a>Tarefas  
  [Carregar arquivos em uma pasta](../../reporting-services/report-server/upload-files-to-a-folder.md)  
  [Criar, excluir ou modificar uma pasta (portal da Web)](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)  
- [Atualizar um recurso (portal da web)](../../reporting-services/report-server/update-a-resource-report-manager.md)  
+ [Atualizar um recurso (portal da Web)](../../reporting-services/report-server/update-a-resource-report-manager.md)  
  [Carregar arquivos em uma pasta](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
 ## <a name="see-also"></a>Confira também  

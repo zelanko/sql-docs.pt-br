@@ -16,10 +16,10 @@ ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8dfd7f14d6006f5a41a7cd2a9b0cae4933804fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979217"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>Método getTables (SQLServerDatabaseMetaData)
@@ -37,7 +37,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
                                     java.lang.String[] types)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *catalog*  
   
  Uma **String** que contém o nome do catálogo. Fornecer um nulo a esse parâmetro indica que o nome do catálogo não precisa ser usado.  
@@ -60,23 +60,23 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getTables é especificado pelo método getTables na interface java.sql.DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getTables conterá as seguintes informações:  
   
-|Nome|Tipo|Descrição|  
+|Nome|Type|Descrição|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|O nome do banco de dados no qual a tabela especificada reside.|  
-|TABLE_SCHEM|**String**|O nome do esquema da tabela.|  
-|TABLE_NAME|**String**|O nome da tabela.|  
-|TABLE_TYPE|**String**|O tipo de tabela.|  
-|REMARKS|**String**|A descrição da tabela.<br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
-|TYPE_CAT|**String**|Não há suporte do JDBC Driver.|  
-|TYPE_SCHEM|**String**|Não há suporte do JDBC Driver.|  
-|TYPE_NAME|**String**|Não há suporte do JDBC Driver.|  
-|SELF_REFERENCING_COL_NAME|**String**|Não há suporte do JDBC Driver.|  
-|REF_GENERATION|**String**|Não há suporte do JDBC Driver.|  
+|TABLE_CAT|**Cadeia de caracteres**|O nome do banco de dados no qual a tabela especificada reside.|  
+|TABLE_SCHEM|**Cadeia de caracteres**|O nome do esquema da tabela.|  
+|TABLE_NAME|**Cadeia de caracteres**|O nome da tabela.|  
+|TABLE_TYPE|**Cadeia de caracteres**|O tipo de tabela.|  
+|COMENTÁRIOS|**Cadeia de caracteres**|A descrição da tabela.<br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
+|TYPE_CAT|**Cadeia de caracteres**|Não há suporte do JDBC Driver.|  
+|TYPE_SCHEM|**Cadeia de caracteres**|Não há suporte do JDBC Driver.|  
+|TYPE_NAME|**Cadeia de caracteres**|Não há suporte do JDBC Driver.|  
+|SELF_REFERENCING_COL_NAME|**Cadeia de caracteres**|Não há suporte do JDBC Driver.|  
+|REF_GENERATION|**Cadeia de caracteres**|Não há suporte do JDBC Driver.|  
   
 > [!NOTE]  
 >  Para saber mais sobre os dados retornados pelo método getTables, consulte "sp_tables (Transact-SQL)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

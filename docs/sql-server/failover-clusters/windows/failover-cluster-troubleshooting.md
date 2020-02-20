@@ -14,10 +14,10 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e1cf8ea99cac00670bd96437e0a5484d2888cbe9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68044793"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Diagnóstico e solução de problemas do cluster de failover
@@ -67,7 +67,7 @@ O Clustering de Failover vem com uma proteção interna para evitar o tempo de i
   
 -   Falha de hardware em um nó de um cluster que tem dois nós. Essa falha de hardware pode ter sido causada por uma falha na placa SCSI ou no sistema operacional.  
   
-     Para se recuperar dela, remova o nó com falha do cluster de failover usando o programa de Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], corrija a falha de hardware com o computador offline, coloque-o online novamente e adicione o nó reparado de volta à instância de cluster de failover.  
+     Para se recuperar dela, remova o nó com falha do cluster de failover usando o programa de Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , corrija a falha de hardware com o computador offline, coloque-o online novamente e adicione o nó reparado de volta à instância de cluster de failover.  
   
      Para obter mais informações, consulte [Criar um novo cluster de failover do SQL Server &#40;Instalação&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) e [Recuperar-se de uma falha na Instância de Cluster de Failover](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md).  
   
@@ -88,11 +88,11 @@ O Clustering de Failover vem com uma proteção interna para evitar o tempo de i
  **Resolução 1**: use a opção **/qb** em vez da opção **/qn**. Se você usar a opção **/qb** , a interface do usuário básica de cada etapa será exibida, incluindo as mensagens de erro.  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problema: o SQL Server não pode fazer logon na rede após migrar para outro nó  
- **Problema 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não conseguem fazer contato com um controlador de domínio.  
+ **Problema 1:** as contas de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não conseguem fazer contato com um controlador de domínio.  
   
  **Resolução 1**: verifique nos logs de eventos se existem sinais de problemas de rede, como falhas de adaptador ou problemas de DNS. Verifique se você consegue executar ping no controlador de domínio.  
   
- **Problema 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não são idênticas em todos os nós do cluster, ou o nó não reinicia um serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] migrado de um nó com falha.  
+ **Problema 2:** as senhas da conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não são idênticas em todos os nós do cluster ou o nó não reinicia um serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] migrado de um nó com falha.  
   
  **Resolução 2:** altere as senhas das contas de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager. Se você não fizer isso e alterar as senhas de contas de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um nó, também deverá alterar as senhas em todos os outros nós. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager faz isso automaticamente.  
   

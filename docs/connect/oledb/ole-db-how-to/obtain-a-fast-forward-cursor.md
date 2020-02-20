@@ -1,6 +1,6 @@
 ---
 title: Obter um cursor FAST_FORWARD | Microsoft Docs
-description: Obter um cursor FAST_FORWARD usando o driver OLE DB para SQL Server
+description: Obter um cursor FAST_FORWARD usando o Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,13 +13,13 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2b49071908be3d8093d66358148e305b79476324
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994734"
 ---
-# <a name="obtain-a-fastforward-cursor"></a>Obter um cursor FAST_FORWARD
+# <a name="obtain-a-fast_forward-cursor"></a>Obter um cursor FAST_FORWARD
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "67994734"
 > [!IMPORTANT]  
 >  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
   
-### <a name="to-obtain-fastforward-cursor"></a>Para obter o cursor FAST_FORWARD  
+### <a name="to-obtain-fast_forward-cursor"></a>Para obter o cursor FAST_FORWARD  
   
 1.  Estabeleça uma conexão com a fonte de dados.  
   
