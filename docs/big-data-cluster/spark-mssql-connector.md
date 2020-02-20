@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7720db661d90c3ff2ebec593b22a5aa638038132
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 105fa47ecaa560eace9d798a39950639ecbcb5c0
+ms.sourcegitcommit: 043c0be0ceab09434c394bf0d72aea5b7ae88cb5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844222"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76831182"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Como ler e gravar no SQL Server do Spark usando o Conector do Spark MSSQL
 
@@ -45,7 +45,7 @@ A tabela a seguir descreve os parâmetros de interface que foram alterados ou s�
 
 O conector usa APIs de gravação em massa do SQL Server. Os parâmetros de gravação em massa podem ser passados como parâmetros opcionais pelo usuário e passados no estado em que se encontram pelo conector para a API subjacente. Para obter mais informações sobre operações de gravação em massa, confira [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Um [cluster de Big Data do SQL Server](deploy-get-started.md).
 
@@ -78,10 +78,10 @@ O conector usa APIs de gravação em massa do SQL Server. Os parâmetros de grav
 
 Para demonstrar o uso do conector do Spark MSSQL com esses dados, você pode baixar um notebook de exemplo, abri-lo no Azure Data Studio e executar cada bloco de código. Para obter mais informações sobre como trabalhar com notebooks, confira [Como usar notebooks no SQL Server](notebooks-guidance.md).
 
-1. Em uma linha de comando do PowerShell ou Bash, execute o seguinte comando para baixar o notebook de exemplo **mssql_spark_connector.ipynb**:
+1. Em uma linha de comando do PowerShell ou Bash, execute o seguinte comando para baixar o notebook de exemplo **mssql_spark_connector_non_ad_pyspark.ipynb**:
 
    ```PowerShell
-   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector.ipynb"
+   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector_non_ad_pyspark.ipynb"
    ```
 
 1. No Azure Data Studio, abra o arquivo de notebook de exemplo. Verifique se ele está conectado ao seu gateway HDFS/Spark para o cluster de Big Data.
