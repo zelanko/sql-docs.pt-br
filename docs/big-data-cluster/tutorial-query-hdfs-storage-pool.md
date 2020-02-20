@@ -1,20 +1,21 @@
 ---
-title: Consultar dados do HDFS no pool de armazenamento
-titleSuffix: SQL Server big data clusters
+title: 'Consultar dados do HDFS: pool de armazenamento'
+titleSuffix: SQL Server Big Data Clusters
 description: Este tutorial demonstra como consultar dados do HDFS em um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Você cria uma tabela externa sobre os dados no pool de armazenamento e, em seguida, executa uma consulta.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: cf20e6b02e67655b7347a2a53d1e62501d357f30
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652440"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226478"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Consultar o HDFS em um cluster de Big Data do SQL Server
 
@@ -30,6 +31,10 @@ Neste tutorial, você aprenderá como:
 
 > [!TIP]
 > Se preferir, você poderá baixar e executar um script para os comandos neste tutorial. Para obter instruções, confira os [Exemplos de virtualização de dados](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) no GitHub.
+
+Este vídeo de 7 minutos orienta você pela consulta de dados do HDFS em um cluster de Big Data:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Query-HDFS-data-inside-SQL-Server-big-data-cluster/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a id="prereqs"></a> Pré-requisitos
 

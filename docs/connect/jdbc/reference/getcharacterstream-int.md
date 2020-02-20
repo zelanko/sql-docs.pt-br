@@ -16,10 +16,10 @@ ms.assetid: eb20714b-52bc-4b6c-b23f-c9c3c9d73783
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 55fab0482e38afc175718a1b729d68124781dac9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953304"
 ---
 # <a name="getcharacterstream-int"></a>getCharacterStream (int)
@@ -34,13 +34,13 @@ ms.locfileid: "67953304"
 public final java.io.Reader getCharacterStream(int paramIndex)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *paramIndex*  
   
  Um **int** que indica o índice do parâmetro.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um objeto leitor.  
+ Um objeto Reader.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

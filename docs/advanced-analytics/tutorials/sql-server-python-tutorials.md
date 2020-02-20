@@ -1,6 +1,6 @@
 ---
 title: Tutoriais do Python
-description: Este artigo descreve os tutoriais de Python para os Serviços de Machine Learning do SQL Server. Saiba como executar scripts de Python. Crie, treine e implante modelos de Python para o SQL Server. Saiba mais sobre os contextos de computação local e remoto. Explore os pacotes de Python da Microsoft para ciência de dados e aprendizado de máquina.
+description: Este artigo descreve os tutoriais de Python para os Serviços de Machine Learning do SQL Server. Saiba como executar scripts e criar modelos de machine learning no SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/04/2019
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 80f714810acd8c04c80fe0b8abe5214a456f6dd6
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: b8caa58c178f68ebcf773fcef8f18509b85ad24a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199402"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908755"
 ---
 # <a name="python-tutorials-for-sql-server-machine-learning-services"></a>Tutoriais de Python para os Serviços de Machine Learning do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -11,19 +11,19 @@ ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc273bccf054408f48e7bb2bd0409a31bb18bd18
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71682001"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Baixe o Microsoft JDBC Driver para SQL Server
 
-Este artigo fornece links de download para o Microsoft JDBC Driver para SQL Server. Este driver permite que você desenvolva aplicativos Java que se conectam ao SQL Server.  
+Este artigo fornece links para baixar o Microsoft JDBC Driver para SQL Server. Esse driver permite que você desenvolva aplicativos Java que se conectam ao SQL Server.  
 
 ## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>Downloads disponíveis do JDBC Driver para SQL Server
 
-Use os links na tabela a seguir para baixar o Microsoft JDBC Driver mais recente para SQL Server que corresponda ao seu Java Runtime Environment (JRE):
+Use os links na seguinte tabela para baixar o Microsoft JDBC Driver mais recente para SQL Server que corresponda ao seu JRE (Java Runtime Environment):
 
 | Versão | Data de liberação | Versões do Java |
 |---|---|---|
@@ -33,10 +33,10 @@ Use os links na tabela a seguir para baixar o Microsoft JDBC Driver mais recente
 | [Microsoft JDBC Driver 6.4](https://go.microsoft.com/fwlink/?linkid=868290)  | 26/03/2018 | JRE 7, 8, 9 |
 | [Microsoft JDBC Driver 6.2](https://go.microsoft.com/fwlink/?linkid=852460) | 12/02/2018 | JRE 7, 8 |
 | [Microsoft JDBC Driver 6.0](https://go.microsoft.com/fwlink/?LinkId=245496) | 27/02/2018 | JRE 7, 8 |
-| [Microsoft JDBC Driver 4,2](https://go.microsoft.com/fwlink/?linkid=841534) | 26/02/2018 | JRE 7, 8 |
-| [Microsoft JDBC Driver 4,1](https://go.microsoft.com/fwlink/?linkid=841533) | 27/02/2018 | JRE 7 |
+| [Microsoft JDBC Driver 4.2](https://go.microsoft.com/fwlink/?linkid=841534) | 26/02/2018 | JRE 7, 8 |
+| [Microsoft JDBC Driver 4.1](https://go.microsoft.com/fwlink/?linkid=841533) | 27/02/2018 | JRE 7 |
 
-Quando você baixa o driver, há vários arquivos JAR. O nome do arquivo JAR indica a versão do Java que ele suporta. Para obter mais informações sobre cada versão, consulte as [notas de versão](release-notes-for-the-jdbc-driver.md) e [os requisitos do sistema](system-requirements-for-the-jdbc-driver.md).
+Quando você baixa o driver, há vários arquivos JAR. O nome do arquivo JAR indica a versão do Java que é compatível com ele. Para obter mais informações sobre cada versão, confira as [Notas sobre a versão](release-notes-for-the-jdbc-driver.md) e os [Requisitos do sistema](system-requirements-for-the-jdbc-driver.md).
 
 ## <a name="using-the-jdbc-driver-with-maven-central"></a>Como usar o JDBC Driver com o Maven Central
 
@@ -56,4 +56,4 @@ As versões de driver sem suporte não estão disponíveis para download aqui. E
   
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre o Microsoft JDBC Driver para SQL Server, consulte [visão geral do driver JDBC](overview-of-the-jdbc-driver.md) e o [repositório GitHub do driver JDBC](https://github.com/microsoft/mssql-jdbc/blob/dev/README.md).
+Para obter mais informações sobre o Microsoft JDBC Driver para SQL Server, confira [Visão geral do JDBC Driver](overview-of-the-jdbc-driver.md) e [repositório GitHub do JDBC Driver](https://github.com/microsoft/mssql-jdbc/blob/dev/README.md).

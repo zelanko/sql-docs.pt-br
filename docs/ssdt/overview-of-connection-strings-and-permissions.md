@@ -1,23 +1,24 @@
 ---
-title: Visão geral das cadeias de conexão e permissões | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Cadeias de conexão e permissões
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ae4fe656cbd299d46960ec9b711de4c51d30a51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 37e1b0c050da78722422d9bf20e4eae310565ec1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064788"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243757"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>Visão geral das cadeias de conexão e permissões
+
 Para executar testes de unidade do SQL Server, você deve se conectar a um servidor de banco de dados usando uma ou duas cadeias de conexão específicas. Cada cadeia de conexão representa uma conta com as permissões específicas que você deve ter para executar a tarefa ou o conjunto de tarefas em um script específico como parte do teste. Você pode especificar essas cadeias de caracteres na caixa de diálogo **Configuração de Teste do SQL Server** ou editando manualmente o arquivo app.config do projeto de teste.  
   
 ## <a name="connection-strings"></a>Cadeias de Conexão  

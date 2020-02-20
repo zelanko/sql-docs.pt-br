@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016060"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandos que geram resultados de vários conjuntos de linhas
@@ -29,14 +29,14 @@ ms.locfileid: "68016060"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O driver OLE DB para SQL Server pode retornar vários conjuntos de linhas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de instruções. As instruções do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retornam resultados de vários conjuntos de linhas nas seguintes condições:  
+  O Driver do OLE DB para SQL Server pode retornar vários conjuntos de linhas de instruções [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. As instruções do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retornam resultados de vários conjuntos de linhas nas seguintes condições:  
   
 -   Instruções SQL processadas em lotes são enviadas como um único comando.  
   
 -   Os procedimentos armazenados implementam um lote de instruções SQL.  
   
 ## <a name="batches"></a>Lotes  
- O driver OLE DB para SQL Server reconhece o caractere ponto e vírgula como um delimitador de lote para instruções SQL:  
+ O Driver do OLE DB para SQL Server reconhece o caractere de ponto e vírgula como um delimitador de lote para instruções SQL:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

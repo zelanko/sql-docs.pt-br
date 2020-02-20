@@ -1,6 +1,6 @@
 ---
 title: Executar uma função definida pelo usuário e processar o código de retorno (OLE DB) | Microsoft Docs
-description: Executar uma função definida pelo usuário e processar o código de retorno usando OLE DB driver para SQL Server
+description: Executar uma função definida pelo usuário e processar o código de retorno usando o Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 8964bb97acef2a26f65740522f5f5a05aa7a9810
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994748"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>Executar uma função definida pelo usuário e processar o código de retorno (OLE DB)

@@ -9,10 +9,10 @@ ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 243f895c22621c3f83fab38a5bab47d1f7b7b490
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893767"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funções do Construtor de Relatórios – Referência de funções de agregação
@@ -64,12 +64,12 @@ ms.locfileid: "68893767"
 |[Var](../../reporting-services/report-design/report-builder-functions-var-function.md)|Retorna a variação de todos os valores numéricos não nulos especificados pela expressão, avaliados no escopo fornecido.|  
 |[VarP](../../reporting-services/report-design/report-builder-functions-varp-function.md)|Retorna a variação da população de todos os valores numéricos não nulos especificados pela expressão, avaliados no contexto do escopo fornecido.|  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
 ##  <a name="Restrictions"></a> Restrições em campos internos, coleções e funções de agregação  
  A tabela a seguir resume as restrições em locais no relatório em que é possível adicionar expressões que contêm referências a coleções internas globais.  
   
-|Local no relatório|Campos|Parâmetros|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|Variáveis|RenderFormat|  
+|Local no relatório|Campos|parâmetros|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|variáveis|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |Cabeçalho de página<br /><br /> Rodapé de página|Sim|Sim|No máximo um<br /><br /> Observação 1|Sim|Sim|Sim|Sim|  
 |Corpo|Sim<br /><br /> Observação 2|Sim|Apenas itens no escopo atual ou em um escopo contentor<br /><br /> Observação 3|Não|Sim|Sim|Sim|  
@@ -81,7 +81,7 @@ ms.locfileid: "68893767"
 |Expressão de filtro|Sim|Sim|Não|Não|Sim|Sim<br /><br /> Observação 6|Não|  
 |Código|Não|Sim<br /><br /> Observação 7|Não|Não|Não|Não|Não|  
 |Report.Language|Não|Sim|Não|Não|Não|Não|Não|  
-|Variáveis|Sim|Sim|Não|Não|Sim|Escopo atual ou contentor|Não|  
+|variáveis|Sim|Sim|Não|Não|Sim|Escopo atual ou contentor|Não|  
 |Agregações|Sim|Sim|Apenas cabeçalho da página/rodapé da página|Apenas em agregações de item de relatório|Sim|Não|Não|  
 |Funções de Lookup|Sim|Sim|Sim|Não|Sim|Não|Não|  
   
@@ -101,15 +101,15 @@ ms.locfileid: "68893767"
   
 -   **Observação 8.** O tipo de dados de todas as agregações - exceto Count e CountDistinct - deve ser o mesmo, ou nulo, para todos os valores.  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
 ##  <a name="NestedRestrictions"></a> Restrições em agregações aninhadas  
  A tabela a seguir resume as restrições nas quais as funções de agregação podem especificar outras funções de agregação como agregações aninhadas.  
   
-|Contexto|RunningValue|RowNumber|First<br /><br /> Last|Previous|Sum e outras funções de classificação prévia|Agregações de ReportItem|Funções de Lookup|Função de agregação|  
+|Contexto|RunningValue|RowNumber|Primeiro<br /><br /> Último|Previous|Sum e outras funções de classificação prévia|Agregações de ReportItem|Funções de Lookup|Função de agregação|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
 |Valor em uso|Não|Não|Não|Não|Sim|Não|Sim|Não|  
-|First<br /><br /> Last|Não|Não|Não|Não|Sim|Não|Não|Não|  
+|Primeiro<br /><br /> Último|Não|Não|Não|Não|Sim|Não|Não|Não|  
 |Previous|Sim|Sim|Sim|Não|Sim|Não|Sim|Não|  
 |Sum e outras funções de classificação prévia|Não|Não|Não|Não|Sim|Não|Sim|Não|  
 |Agregações de ReportItem|Não|Não|Não|Não|Não|Não|Não|Não|  
@@ -118,7 +118,7 @@ ms.locfileid: "68893767"
   
 -   **Observação 1.** As funções de agregação só serão permitidas na expressão *Source* de uma função Lookup se a função Lookup não estiver contida em uma agregação. As funções de agregação não são permitidas nas expressões *Destination* ou *Result* de uma função Lookup.  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
 ##  <a name="CalculatingRunningValues"></a> Calculando valores em uso  
  As funções internas a seguir calculam os valores em uso de um conjunto de dados. **RowNumber** é semelhante a **RunningValue** pois retorna o valor em uso de uma contagem que é incrementada para cada linha no escopo contentor. O parâmetro do escopo dessas funções deve especificar um escopo de contenção que controle quando a contagem é reiniciada.  
@@ -128,7 +128,7 @@ ms.locfileid: "68893767"
 |[RowNumber](../../reporting-services/report-design/report-builder-functions-rownumber-function.md)|Retorna uma contagem contínua do número de linhas para o escopo especificado. A função **RowNumber** reinicia a contagem em 1, não em 0.|  
 |[RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md)|Retorna uma agregação contínua de todos os valores numéricos não nulos especificados pela expressão, avaliados para o escopo fornecido.|  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
 ##  <a name="RetrievingRowCounts"></a> Recuperando contagens de linhas  
  A função interna a seguir calcula o número de linhas no escopo fornecido. Use esta função para contar todas as linhas, inclusive as linhas com valores nulos.  
@@ -137,7 +137,7 @@ ms.locfileid: "68893767"
 |------------------|---------------------|  
 |[CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)|Retorna o número de linhas no escopo especificado, inclusive as linhas com valores nulos.|  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
 ##  <a name="LookupFunctions"></a> Procurando valores de outro conjunto de dados  
  As funções de pesquisa a seguir recuperam valores de um conjunto de dados especificado.  
@@ -148,7 +148,7 @@ ms.locfileid: "68893767"
 |[Função LookupSet](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)|Retorna um conjunto de valores de um conjunto de dados para uma expressão especificada.|  
 |[Função Multilookup](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)|Retorna o conjunto de primeiros valores correspondentes para um conjunto de nomes de um conjunto de dados que contém pares de nome/valor.|  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
 ##  <a name="RetrievingPostsortValues"></a> Recuperando valores dependentes de classificação  
  As funções internas a seguir retornam o primeiro, o último ou o valor anterior de um escopo fornecido. Estas funções dependem da ordem de classificação dos valores dos dados. Use estas funções, por exemplo, para localizar o primeiro e o último valor em uma página para criar um cabeçalho de página em estilo de dicionário. Use **Previous** para comparar um valor em uma linha com o valor da linha anterior dentro de um escopo específico, por exemplo, para localizar valores de porcentagem ano a ano em uma tabela.  
@@ -157,18 +157,18 @@ ms.locfileid: "68893767"
 |------------------|---------------------|  
 |[First](../../reporting-services/report-design/report-builder-functions-first-function.md)|Retorna o primeiro valor no escopo fornecido da expressão especificada.|  
 |[Last](../../reporting-services/report-design/report-builder-functions-last-function.md)|Retorna o último valor no escopo fornecido da expressão especificada.|  
-|[Previous](../../reporting-services/report-design/report-builder-functions-previous-function.md)|Retorna o valor ou o valor de agregação especificado para a instância anterior de um item do escopo especificado.|  
+|[Anterior](../../reporting-services/report-design/report-builder-functions-previous-function.md)|Retorna o valor ou o valor de agregação especificado para a instância anterior de um item do escopo especificado.|  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
 ##  <a name="RetrievingServerAggregates"></a> Recuperando agregações do servidor  
  A função interna a seguir recupera agregações personalizadas do provedor de dados. Por exemplo, usando um tipo de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , é possível recuperar agregações calculadas no servidor de fonte de dados para uso em um cabeçalho de grupo.  
   
 |**Função**|**Descrição**|  
 |------------------|---------------------|  
-|[Agregado](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|Retorna uma agregação personalizada da expressão especificada, conforme definido pelo provedor de dados.|  
+|[Aggregate](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|Retorna uma agregação personalizada da expressão especificada, conforme definido pelo provedor de dados.|  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
 ##  <a name="TestingforScope"></a> Testando para escopo  
  A função interna a seguir testa o contexto atual de um item de relatório para verificar se ele é membro de um escopo específico.  
@@ -177,16 +177,16 @@ ms.locfileid: "68893767"
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|Indica se a instância atual de um item está dentro do escopo especificado.|  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
 ##  <a name="RetrievingRecursiveLevel"></a> Recuperando nível recursivo  
  A função interna a seguir recupera o nível atual quando uma hierarquia recursiva é processada. Use o resultado dessa função com a propriedade **Padding** em uma caixa de texto para controlar o nível de recuo de uma hierarquia visual para um grupo recursivo. Para obter mais informações, consulte [Criar grupos de hierarquias recursivas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 |Função|Descrição|  
 |--------------|-----------------|  
-|[Nível](../../reporting-services/report-design/report-builder-functions-level-function.md)|Retorna o nível atual de profundidade em uma hierarquia recursiva.|  
+|[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|Retorna o nível atual de profundidade em uma hierarquia recursiva.|  
   
- ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
 ## <a name="see-also"></a>Consulte Também  
  [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   

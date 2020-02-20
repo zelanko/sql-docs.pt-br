@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69609293"
 ---
 # <a name="installation-wizard-help"></a>Ajuda do Assistente de Instalação
@@ -196,7 +196,7 @@ Os diretórios padrão na tabela a seguir podem ser configurados pelo usuário d
 
 Use esta página para definir o modo de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e adicionar grupos ou usuários do Windows como administradores do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-### <a name="considerations-for-running-includesscurrentincludessscurrent-mdmd"></a>Considerações sobre execução do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+### <a name="considerations-for-running-sscurrent"></a>Considerações sobre execução do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o grupo BUILTIN\Administradores era provisionado como um logon no [!INCLUDE[ssDE](../../includes/ssde-md.md)] e os membros do grupo local Administradores podiam fazer logon usando as credenciais de Administrador. No entanto, o uso de permissões elevadas não é uma prática recomendada.
 
@@ -206,7 +206,7 @@ No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o grupo BUILTIN\Admini
 
 **Modo de segurança**: Selecione **Autenticação do Windows** ou **Autenticação de Modo Misto** para sua instalação.  
   
-**Provisionamento de entidade de segurança do Windows**: Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o grupo local Windows BUILTIN\Administradores era colocado na função de servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**, concedendo efetivamente aos administradores do Windows o acesso à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o grupo BUILTIN\Administradores não é provisionado na função de servidor **sysadmin**. Em vez disso, você deve provisionar explicitamente administradores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para as novas instalações durante a Instalação.  
+**Provisionamento de entidade de segurança do Windows**: Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o grupo local Windows BUILTIN\Administradores era colocado na função de servidor **sysadmin** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], concedendo efetivamente aos administradores do Windows o acesso à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o grupo BUILTIN\Administradores não é provisionado na função de servidor **sysadmin**. Em vez disso, você deve provisionar explicitamente administradores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para as novas instalações durante a Instalação.  
   
 > [!IMPORTANT]  
 > Você deve provisionar explicitamente administradores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para as novas instalações durante a Instalação. A Instalação não permitirá que você continue até que conclua esta etapa.
@@ -245,7 +245,7 @@ Se você deve escolher autenticação de modo misto e precisa usar logons do SQL
 As senhas fortes não são prontamente adivinhadas por uma pessoa e não são facilmente violadas usando-se um programa de computador. As senhas fortes não podem usar condições ou termos proibidos, incluindo:  
   
 * Um espaço em branco ou condição NULL
-* "Senha"
+* "Password"
 * "Admin"
 * "Administrador"
 * "sa"
@@ -273,13 +273,13 @@ Para saber mais sobre como escolher uma conta para executar o [!INCLUDE[ssDEnove
 
 ## <a name ="datadir"></a> Configuração do Mecanismo de Banco de Dados – página Diretórios de Dados
 
-Use esta página para especificar o local de instalação para programas e arquivos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]. Com base no tipo de instalação, o armazenamento com suporte pode incluir disco local, armazenamento compartilhado ou um servidor de arquivos SMB.  
+Use esta página para especificar a localização de instalação para programas e arquivos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Com base no tipo de instalação, o armazenamento com suporte pode incluir disco local, armazenamento compartilhado ou um servidor de arquivos SMB.  
   
 Para especificar um compartilhamento de arquivos SMB como um diretório, você deve digitar o caminho UNC com suporte manualmente. Não há suporte para a navegação até um compartilhamento de arquivos SMB. O exemplo mostra o caminho UNC de um compartilhamento de arquivos SMB com suporte:
 
 `\\<ServerName>\<ShareName>\...`
 
-### <a name="standalone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="standalone-instance-of-ssnoversion"></a>Instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 Em uma instância autônoma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a tabela a seguir lista os tipos de armazenamento compatíveis e os diretórios padrão que você pode configurar durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -288,24 +288,24 @@ Em uma instância autônoma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 |Descrição|Tipos de armazenamento com suporte|Diretório padrão|Recomendações|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**Diretório raiz de dados**|Disco local, servidor de arquivos SMB, armazenamento compartilhado* |\<Unidade:>\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configura ACLs (lista de controle de acesso) para diretórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e interrompe a herança como parte da configuração.|  
-|**Diretório do banco de dados de usuário**|Disco local, servidor de arquivos SMB, armazenamento compartilhado*|\<Unidade:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |As práticas recomendadas para diretórios de dados de usuário dependem dos requisitos de carga de trabalho e desempenho.|  
-|**Diretório de log do banco de dados de usuário**|Disco local, servidor de arquivos SMB, armazenamento compartilhado*|\<Unidade:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Verifique se o diretório de log tem espaço suficiente.|  
-|**Diretório de backup**|Disco local, servidor de arquivos SMB, armazenamento compartilhado*|\<Unidade:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup|Defina as permissões adequadas para evitar perda de dados e verifique se a conta de usuário para o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem permissões suficientes para realizar gravações no diretório de backup. O uso de uma unidade mapeada para diretórios de backup não tem suporte.|  
+|**Diretório do banco de dados de usuário**|Disco local, servidor de arquivos SMB, armazenamento compartilhado*|\<Unidade:>\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |As práticas recomendadas para diretórios de dados de usuário dependem dos requisitos de carga de trabalho e desempenho.|  
+|**Diretório de log do banco de dados de usuário**|Disco local, servidor de arquivos SMB, armazenamento compartilhado*|\<Unidade:>\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Verifique se o diretório de log tem espaço suficiente.|  
+|**Diretório de backup**|Disco local, servidor de arquivos SMB, armazenamento compartilhado*|\<Unidade:>\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup|Defina as permissões adequadas para evitar perda de dados e verifique se a conta de usuário para o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem permissões suficientes para realizar gravações no diretório de backup. O uso de uma unidade mapeada para diretórios de backup não tem suporte.|  
   
 \* Embora haja suporte para discos compartilhados, não recomendamos seu uso para uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="failover-cluster-instance-of-ssnoversion"></a>Instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Em uma instância de cluster de failover de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a tabela a seguir lista os tipos de armazenamento compatíveis e os diretórios padrão que você pode configurar durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Descrição|Tipos de armazenamento com suporte|Diretório padrão|Recomendações|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**Diretório raiz de dados**|Armazenamento compartilhado, servidor de arquivos SMB|\<Unidade:>\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> **Dica**: Se você selecionar **disco compartilhado** na página **Seleção de Disco de Cluster**, o padrão será o primeiro disco compartilhado. O padrão do campo será um espaço em branco se nenhuma seleção for feita na página **Seleção de Disco de Cluster**.|A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configura ACLs para diretórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e interrompe a herança como parte da configuração.|  
-|**Diretório do banco de dados de usuário**|Armazenamento compartilhado, servidor de arquivos SMB|\<Unidade:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Dica**: Se você selecionar **disco compartilhado** na página **Seleção de Disco de Cluster**, o padrão será o primeiro disco compartilhado. O padrão do campo será um espaço em branco se nenhuma seleção for feita na página **Seleção de Disco de Cluster**.|As práticas recomendadas para diretórios de dados de usuário dependem dos requisitos de carga de trabalho e desempenho.|  
-|**Diretório de log do banco de dados de usuário**|Armazenamento compartilhado, servidor de arquivos SMB|\<Unidade:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Dica**: Se você selecionar **disco compartilhado** na página **Seleção de Disco de Cluster**, o padrão será o primeiro disco compartilhado. O padrão do campo será um espaço em branco se nenhuma seleção for feita na página **Seleção de Disco de Cluster**.|Verifique se o diretório de log tem espaço suficiente.|  
-|**Diretório de backup**|Disco local, armazenamento compartilhado, servidor de arquivos SMB|\<Unidade:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup<br /><br /> **Dica**: Se você selecionar **disco compartilhado** na página **Seleção de Disco de Cluster**, o padrão será o primeiro disco compartilhado. O padrão do campo será um espaço em branco se nenhuma seleção for feita na página **Seleção de Disco de Cluster**.|Defina as permissões adequadas para evitar perda de dados e verifique se a conta de usuário do serviço do SQL Server tem permissões suficientes para gravar no diretório de backup. O uso de uma unidade mapeada para diretórios de backup não tem suporte.|  
+|**Diretório do banco de dados de usuário**|Armazenamento compartilhado, servidor de arquivos SMB|\<Unidade:>\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Dica**: Se você selecionar **disco compartilhado** na página **Seleção de Disco de Cluster**, o padrão será o primeiro disco compartilhado. O padrão do campo será um espaço em branco se nenhuma seleção for feita na página **Seleção de Disco de Cluster**.|As práticas recomendadas para diretórios de dados de usuário dependem dos requisitos de carga de trabalho e desempenho.|  
+|**Diretório de log do banco de dados de usuário**|Armazenamento compartilhado, servidor de arquivos SMB|\<Unidade:>\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Dica**: Se você selecionar **disco compartilhado** na página **Seleção de Disco de Cluster**, o padrão será o primeiro disco compartilhado. O padrão do campo será um espaço em branco se nenhuma seleção for feita na página **Seleção de Disco de Cluster**.|Verifique se o diretório de log tem espaço suficiente.|  
+|**Diretório de backup**|Disco local, armazenamento compartilhado, servidor de arquivos SMB|\<Unidade:>\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup<br /><br /> **Dica**: Se você selecionar **disco compartilhado** na página **Seleção de Disco de Cluster**, o padrão será o primeiro disco compartilhado. O padrão do campo será um espaço em branco se nenhuma seleção for feita na página **Seleção de Disco de Cluster**.|Defina as permissões adequadas para evitar perda de dados e verifique se a conta de usuário do serviço do SQL Server tem permissões suficientes para gravar no diretório de backup. O uso de uma unidade mapeada para diretórios de backup não tem suporte.|  
   
-### <a name="security-considerations"></a>Considerações sobre segurança
+### <a name="security-considerations"></a>Considerações de segurança
   
 A instalação configurará ACLs para diretórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e interromperá a herança como parte da configuração.  
   
@@ -332,31 +332,31 @@ As seguintes recomendações se aplicam aos servidores de arquivos SMB:
   
 ## <a name="a-nametempdba-database-engine-configuration---tempdb-page"></a><a name="tempdb"><a/> Configuração do Mecanismo de Banco de Dados – página TempDB
 
-Use esta página para especificar o local, tamanho, configurações de crescimento e número de arquivos dos dados de **tempdb** e do arquivo de log para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Com base no tipo de instalação, o armazenamento com suporte pode incluir disco local, armazenamento compartilhado ou um servidor de arquivos SMB.  
+Use esta página para especificar a localização, tamanho, configurações de crescimento e número de arquivos dos dados de **tempdb** e do arquivo de log para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Com base no tipo de instalação, o armazenamento com suporte pode incluir disco local, armazenamento compartilhado ou um servidor de arquivos SMB.  
   
 Para especificar um compartilhamento de arquivos SMB como um diretório, você deve digitar o caminho UNC com suporte manualmente. Não há suporte para a navegação até um compartilhamento de arquivos SMB. O exemplo mostra o caminho UNC de um compartilhamento de arquivos SMB com suporte:
 
 `\\<ServerName>\<ShareName>\....`
   
-### <a name="data-and-log-directories-for-a-standalone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Diretórios de dados e de log para uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="data-and-log-directories-for-a-standalone-instance-of-ssnoversion"></a>Diretórios de dados e de log para uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Nas instâncias autônomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a tabela a seguir lista os tipos de armazenamento com suporte e os diretórios padrão que você pode definir durante a instalação.  
   
 |Descrição|Tipo de armazenamento com suporte|Diretório padrão|Recomendações|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**Diretórios de dados**|Disco local, servidor de arquivos SMB, armazenamento compartilhado* |\<Unidade:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configura ACLs para diretórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e interrompe a herança como parte da configuração.<br /><br /> As práticas recomendadas para diretórios **tempdb** dependem dos requisitos de carga de trabalho e desempenho. Para distribuir os arquivos de dados entre vários volumes, especifique várias pastas/unidades.|  
-|**Diretório de log**|Disco local, servidor de arquivos SMB, armazenamento compartilhado*|\<Unidade:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Verifique se o diretório de log tem espaço suficiente.|  
+|**Diretórios de dados**|Disco local, servidor de arquivos SMB, armazenamento compartilhado* |\<Unidade:>\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configura ACLs para diretórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e interrompe a herança como parte da configuração.<br /><br /> As práticas recomendadas para diretórios **tempdb** dependem dos requisitos de carga de trabalho e desempenho. Para distribuir os arquivos de dados entre vários volumes, especifique várias pastas/unidades.|  
+|**Diretório de log**|Disco local, servidor de arquivos SMB, armazenamento compartilhado*|\<Unidade:>\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Verifique se o diretório de log tem espaço suficiente.|  
   
 \* Embora haja suporte para discos compartilhados, não recomendamos seu uso para uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Diretórios de dados e de log para uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-ssnoversion"></a>Diretórios de dados e de log para uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Em uma instância de cluster de failover de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a tabela a seguir lista os tipos de armazenamento compatíveis e os diretórios padrão que você pode configurar durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Descrição|Tipo de armazenamento com suporte|Diretório padrão|Recomendações|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**Diretório de dados tempdb**|Disco local, armazenamento compartilhado, servidor de arquivos SMB|\<Unidade:>\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> **Dica**: Se você selecionar **disco compartilhado** na página **Seleção de Disco de Cluster**, o padrão será o primeiro disco compartilhado. O padrão do campo será um espaço em branco se nenhuma seleção for feita na página **Seleção de Disco de Cluster**.|A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configura ACLs para diretórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e interrompe a herança como parte da configuração.<br /><br /> Verifique se o diretório, ou diretórios, especificado (se vários arquivos forem especificados) é válido para todos os nós do cluster. Durante o failover, se os diretórios de **tempdb** não estiverem disponíveis no nó de destino de failover, o recurso do SQL Server não é exibido online.|  
-|**Diretório de logs de tempdb**|Disco local, armazenamento compartilhado, servidor de arquivos SMB|\<Unidade:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Dica**: Se você selecionar **disco compartilhado** na página **Seleção de Disco de Cluster**, o padrão será o primeiro disco compartilhado. O padrão do campo será um espaço em branco se nenhuma seleção for feita na página **Seleção de Disco de Cluster**.|As práticas recomendadas para diretórios de dados de usuário dependem dos requisitos de carga de trabalho e desempenho.<br /><br /> Verifique se o diretório especificado é válido para todos os nós de cluster. Durante o failover, se os diretórios de **tempdb** não estiverem disponíveis no nó de destino de failover, o recurso do SQL Server não é exibido online.<br /><br /> Verifique se o diretório de log tem espaço suficiente.|  
+|**Diretório de logs de tempdb**|Disco local, armazenamento compartilhado, servidor de arquivos SMB|\<Unidade:>\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Dica**: Se você selecionar **disco compartilhado** na página **Seleção de Disco de Cluster**, o padrão será o primeiro disco compartilhado. O padrão do campo será um espaço em branco se nenhuma seleção for feita na página **Seleção de Disco de Cluster**.|As práticas recomendadas para diretórios de dados de usuário dependem dos requisitos de carga de trabalho e desempenho.<br /><br /> Verifique se o diretório especificado é válido para todos os nós de cluster. Durante o failover, se os diretórios de **tempdb** não estiverem disponíveis no nó de destino de failover, o recurso do SQL Server não é exibido online.<br /><br /> Verifique se o diretório de log tem espaço suficiente.|  
   
 ### <a name="uielement-list"></a>Lista de elementos de interface do usuário
 
@@ -391,7 +391,7 @@ Defina as configurações para **tempdb** de acordo com suas necessidades e carg
   
 * **Diretório de log** é o diretório no qual os arquivos de log **tempdb** são criados. Há apenas um diretório de log **tempdb**.  
   
-### <a name="security-considerations"></a>Considerações sobre segurança
+### <a name="security-considerations"></a>Considerações de segurança
   
 A instalação configura ACLs para diretórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e interrompe a herança como parte da configuração.  
 
@@ -437,7 +437,7 @@ Se essa página for ignorada durante a instalação, o valor padrão de **memór
 
 ### <a name="uielement-list"></a>Lista de elementos de interface do usuário
   
-**Default**: esse botão de opção é selecionado por padrão e define as configurações **memória mínima do servidor** e **memória máxima do servidor** para os valores padrão de [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. 
+**Padrão**: esse botão de opção é selecionado por padrão e define as configurações **memória mínima do servidor** e **memória máxima do servidor** para os valores padrão de [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. 
 
 **Recomendado**: esse botão de opção precisa ser selecionado para aceitar os valores recomendados calculados ou a fim de alterar os valores calculados para valores configurados pelo usuário.  
   

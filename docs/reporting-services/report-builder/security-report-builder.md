@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb1a8021ca269cc5fde423ba9eb6903876f949fc
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: e8b89f31330fa09d5dbe1f70fd10b2c473d26c0d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593849"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190104"
 ---
 # <a name="security-report-builder"></a>Segurança (Construtor de Relatórios)
-  O Construtor de Relatórios é um aplicativo cliente de criação de relatórios projetado para funcionar com um servidor de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . O servidor de relatório pode ser configurado para funcionar em modo nativo como um servidor autônomo ou em modo integrado do SharePoint para oferecer suporte a relatórios em um site do SharePoint.  
+  O Construtor de Relatórios é um aplicativo cliente de criação de relatórios projetado para funcionar com um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de relatório. O servidor de relatório pode ser configurado para funcionar em modo nativo como um servidor autônomo ou em modo integrado do SharePoint para oferecer suporte a relatórios em um site do SharePoint.  
   
  No Construtor de Relatórios, você pode criar relatórios, conjuntos de dados compartilhados e partes de relatório reutilizáveis. A partir de um servidor de relatório ou um site do SharePoint, você pode editar relatórios e adicionar fontes de dados compartilhadas, conjunto de dados compartilhados e partes de relatório compartilhadas.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73593849"
   
  Para permitir que outras pessoas naveguem e publiquem itens que você publicou para ser compartilhado, trabalhe com o administrador de servidor de relatório para configurar uma organização de pastas que forneça acesso a seus usuários. O acesso deve estar disponível para criar relatórios e executar relatórios publicados.  
   
- Para obter mais informações, consulte os tópicos a seguir:  
+ Para obter mais informações, consulte estes tópicos:  
   
 -   [Funções e permissões &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
@@ -90,10 +90,10 @@ ms.locfileid: "73593849"
   
  No momento do design do relatório, as credenciais são usadas para executar consultas de conjunto de dados e visualizar o relatório. No momento do design, as credenciais são usadas para executar consultas de relatório e consultas de cache. Você também pode armazenar em cache os resultados de consulta de conjunto de dados compartilhados independentemente. O tempo de design e o tempo de execução de credenciais podem ser diferentes. Para obter mais informações, consulte [Especificar as credenciais no Construtor de Relatórios](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
- Para obter mais informações sobre como proteger dados, consulte [central de segurança para SQL Server mecanismo de banco de dados e banco de dados SQL do Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md). 
+ Para saber mais sobre como proteger os dados, confira [Central de Segurança para o Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md). 
   
   
- Para obter mais informações sobre fontes de dados, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Para saber mais sobre as fontes de dados, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Models"></a> Compreensão de modelos e filtros de segurança  
@@ -107,7 +107,7 @@ ms.locfileid: "73593849"
   
 -   Não use parâmetros com base em parâmetros de consulta que são do tipo **Texto** , a menos que você forneça valores válidos. Uma lista de valores disponível ajuda um usuário a escolher apenas valores válidos. Sem uma lista de valores disponível, não é possível restringir quais valores um usuário pode inserir.  
   
--   Não use o [&UserID] global para proteger dados privados. Como um parâmetro de relatório, esse valor pode ser especificado em uma URL de relatório, usando a sintaxe de acesso da URL. O uso deste valor em uma expressão em um conjunto de dados compartilhado impede que o conjunto de dados seja armazenado em cache. Para obter mais informações, consulte [referência de parâmetro de acesso à URL](../../reporting-services/url-access-parameter-reference.md).  
+-   Não use o [&UserID] global para proteger dados privados. Como um parâmetro de relatório, esse valor pode ser especificado em uma URL de relatório, usando a sintaxe de acesso da URL. O uso deste valor em uma expressão em um conjunto de dados compartilhado impede que o conjunto de dados seja armazenado em cache. Para saber mais, confira [Referência de parâmetro de acesso à URL](../../reporting-services/url-access-parameter-reference.md).  
   
  Depois que os itens são publicados em um servidor de relatório, o administrador de servidor de relatório pode ajudar a protegê-los, atribuindo segurança com base em função ou segurança no nível do item ou da pasta. Para obter mais informações, consulte [Proteger relatórios e recursos](../../reporting-services/security/secure-reports-and-resources.md).  
   

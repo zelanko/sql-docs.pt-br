@@ -11,10 +11,10 @@ ms.assetid: 157882dd-1a96-4501-a895-46e88a49266e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 589a2c7a12523658fc5fd58afb46dc8bb959a276
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974592"
 ---
 # <a name="setclob-method-int-javaioreader-long"></a>Método setClob (int, java.io.Reader, long)
@@ -31,20 +31,20 @@ public final void setClob(int parameterIndex,
                           long length)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *parameterIndex*  
   
  Um **int** que indica o índice do parâmetro.  
   
  *reader*  
   
- Um objeto leitor.  
+ Um objeto Reader.  
   
  *length*  
   
  Um **long** que indica o número de caracteres no valor do parâmetro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método setClob é especificado pelo método setClob na interface java.sql.PreparedStatement.  
   
 ## <a name="exceptions"></a>Exceções  

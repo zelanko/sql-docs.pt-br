@@ -1,5 +1,7 @@
 ---
-title: Integrando o Reporting Services em aplicativos | Microsoft Docs
+title: Integrando a aplicativos
+description: O Reporting Services é uma plataforma de relatório aberta e extensível criada para fornecer aos desenvolvedores um conjunto abrangente de APIs para soluções de desenvolvimento.
+ms.custom: seo-lt-2019
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +10,12 @@ ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 64f4e77a943f1d71fc7655a4a1d36dffafe7afcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 889967d4a7731b25b2704b8695c6b8797d367430
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175139"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796956"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Integrando o Reporting Services em aplicativos
 
@@ -54,4 +56,4 @@ Para decidir sobre como usar o acesso à URL ou as APIs SOAP, consulte [Escolhen
 
 Para obter informações sobre a API REST do SQL Server 2017 Reporting Services, consulte [Desenvolver com as APIs REST para o Reporting Services](../developer/rest-api.md).
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

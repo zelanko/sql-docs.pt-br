@@ -16,10 +16,10 @@ ms.assetid: 233bf4f8-4758-42d0-a80b-33e34fa78027
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b253ad989593fa88b2281d933387dfe38fee1732
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974248"
 ---
 # <a name="setfetchsize-method-sqlserverresultset"></a>Método setFetchSize (SQLServerResultSet)
@@ -34,7 +34,7 @@ ms.locfileid: "67974248"
 public void setFetchSize(int rows)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *rows*  
   
  Um **int** que indica o número de linhas a serem buscadas.  
@@ -42,8 +42,8 @@ public void setFetchSize(int rows)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método setFetchSize é especificado pelo método setFetchSize na interface java. Sql. ResultSet.  
+## <a name="remarks"></a>Comentários  
+ Esse método setFetchSize é especificado pelo método setFetchSize na interface java.sql.ResultSet.  
   
  Se o tamanho de busca especificado for zero, o driver JDBC ignorará o valor e estimará qual deve ser o tamanho da busca. O valor padrão é definido pelo objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) que criou o conjunto de resultados. O tamanho de busca pode ser alterado a qualquer momento.  
   

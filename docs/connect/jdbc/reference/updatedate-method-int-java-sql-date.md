@@ -1,5 +1,5 @@
 ---
-title: Método updateD (int, Java. Sql. Date) | Microsoft Docs
+title: Método updateDate (int, java.sql.Date) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c5fb1292-a5cf-4cdd-8c4a-d1679944a6d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3318bc5ebd8eb6496262cc9992a4e516aeebf9fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999159"
 ---
 # <a name="updatedate-method-int-javasqldate"></a>Método updateDate (int, java.sql.Date)
@@ -35,7 +35,7 @@ public void updateDate(int index,
                        java.sql.Date x)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *index*  
   
  Um **int** que indica o índice de coluna.  
@@ -47,7 +47,7 @@ public void updateDate(int index,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método updateDate é especificado pelo método updateDate na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  

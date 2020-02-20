@@ -9,10 +9,10 @@ ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2f98607ce8544a913ace04bbc70aa578d1090557
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71923794"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Localizando e exibindo relatórios no Portal da Web (Construtor de Relatórios e SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "71923794"
 ## <a name="navigating-the-folder-hierarchy-in-report-manager"></a>Navegando na hierarquia de pasta no Gerenciador de Relatórios  
  Para procurar os relatórios que deseja executar, você poderá usar a página inicial, que é exibida automaticamente quando você inicia o Gerenciador de Relatórios e quando abre qualquer pasta na hierarquia de pastas. A página inicial só mostra os itens que você tem permissão de exibir. O caminho da pasta é exibido como uma linha de links na parte superior da página inicial. Os nomes de pasta são listados em sequência, começando com a pasta raiz (Base). A medida que você abre cada pasta adicional, o nome da pasta é adicionado ao caminho da pasta na parte superior da página. **(1)** na imagem abaixo. Quando você abre um relatório, o nome dele também é adicionado ao caminho da pasta.  
   
- ![Faixa de opções e navegação do Gerenciador de Relatórios](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "Faixa de opções e navegação do Gerenciador de Relatórios")  
+ ![Faixa de opções e navegação no Gerenciador de Relatórios](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "Faixa de opções e navegação no Gerenciador de Relatórios")  
 Faixa de Opções do Gerenciador de Relatórios  
   
  Use as seguintes técnicas para navegar por uma hierarquia de pasta:  

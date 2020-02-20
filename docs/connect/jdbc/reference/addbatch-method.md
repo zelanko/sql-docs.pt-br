@@ -16,10 +16,10 @@ ms.assetid: 737c3785-e2d4-4b5c-8718-c0e435b50599
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3b4762059620cd4608c7fc817af716bbd7630391
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955980"
 ---
 # <a name="addbatch-method-"></a>Método addBatch ()
@@ -37,8 +37,8 @@ public final void addBatch()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método addBatch é especificado pelo método addBatch na interface java. Sql. PreparedStatement.  
+## <a name="remarks"></a>Comentários  
+ Esse método addBatch é especificado pelo método addBatch na interface java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método addBatch &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)   

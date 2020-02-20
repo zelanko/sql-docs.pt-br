@@ -1,5 +1,5 @@
 ---
-title: 'Como: enviar dados como um fluxo | Microsoft Docs'
+title: 'Como fazer: Enviar dados como um fluxo | Microsoft Docs'
 ms.custom: ''
 ms.date: 02/28/2019
 ms.prod: sql
@@ -14,20 +14,20 @@ ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d524e7c7f00b08ce636f8a3b7b945f3e8b349af0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936403"
 ---
-# <a name="how-to-send-data-as-a-stream"></a>Como enviar dados como um fluxo
+# <a name="how-to-send-data-as-a-stream"></a>Como fazer: Enviar dados como um fluxo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 O [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] aproveita os fluxos PHP para enviar objetos grandes para o servidor. Os exemplos neste tópico demonstram como enviar dados como fluxo. O primeiro exemplo usa o driver SQLSRV para demonstrar o comportamento padrão, que é enviar todos os dados do fluxo no momento da execução da consulta. O segundo exemplo usa o driver SQLSRV para demonstrar como enviar até oito quilobytes (8 KB) de fluxo de dados por vez para o servidor.  
   
 O terceiro exemplo mostra como enviar dados de fluxo para o servidor usando o driver PDO_SQLSRV.  
   
-## <a name="example-sending-stream-data-at-execution"></a>Exemplo: enviando dados de fluxo na execução
+## <a name="example-sending-stream-data-at-execution"></a>Exemplo: Enviar dados de fluxo na execução
 O exemplo a seguir insere uma linha na tabela *Production.ProductReview* do banco de dados do AdventureWorks. Os comentários do cliente ( *$comments*) são abertos como um fluxo com a função PHP [fopen](https://php.net/manual/en/function.fopen.php) e então transmitidos para o servidor após a execução da consulta.  
   
 O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída é gravada no console.  
@@ -79,7 +79,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>Exemplo: enviando dados de fluxo usando sqlsrv_send_stream_data
+## <a name="example-sending-stream-data-using-sqlsrv_send_stream_data"></a>Exemplo: Enviar dados de fluxo usando sqlsrv_send_stream_data
 O próximo exemplo é o mesmo que o exemplo anterior, mas o comportamento padrão de enviar todos os dados de fluxo em execução está desativado. O exemplo usa [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) para enviar dados de fluxo para o servidor. Até oito quilobytes (8 KB) de dados são enviados com cada chamada para **sqlsrv_send_stream_data**. O script conta o número de chamadas feitas por **sqlsrv_send_stream_data** e exibe a contagem no console.  
   
 O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída é gravada no console.  
@@ -143,7 +143,7 @@ sqlsrv_close( $conn);
   
 Embora os exemplos neste tópico enviem dados de caractere para o servidor, é possível enviar dados em qualquer formato como fluxo. Por exemplo, você também pode usar as técnicas demonstradas neste tópico para enviar imagens em formato binário como fluxos.  
   
-## <a name="example-sending-an-image-as-a-stream"></a>Exemplo: enviando uma imagem como um fluxo 
+## <a name="example-sending-an-image-as-a-stream"></a>Exemplo: Enviar uma imagem como um fluxo 
   
 ```  
 <?php  

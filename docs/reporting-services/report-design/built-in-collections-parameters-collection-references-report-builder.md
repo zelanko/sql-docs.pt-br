@@ -9,16 +9,16 @@ ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 137eb9b9cf7a5a64843e163ece3b4767dd8e1852
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581801"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Coleções internas – referências de coleções de parâmetros (Construtor de Relatórios)
   Os parâmetros de relatório são umas das coleções internas que você pode fazer referência a partir de uma expressão. Incluindo parâmetros em uma expressão, é possível personalizar os dados e a aparência do relatório com base nas opções feitas por um usuário. As expressões podem ser usadas para qualquer propriedade de item de relatório ou propriedade de caixa de texto que fornece a opção (*Fx*) ou \<**Expression**>. As expressões também são usadas para controlar o conteúdo e a aparência do relatório de outras maneiras. Para obter mais informações, consulte [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
- Quando você compara os valores do parâmetro com os valores do campo do conjunto de dados em tempo de execução, os tipos de dados para os dois itens que você está comparando devem ser os mesmos. Os parâmetros de relatório podem ser de um dos seguintes tipos: Boolean, DateTime, Integer, Float, ou Text, que representa a String de tipo de dados subjacentes. Se necessário, você pode precisar converter o tipo de dados do valor do parâmetro para corresponder ao valor do conjunto de dados. Para obter mais informações, consulte [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
+ Quando você compara os valores do parâmetro com os valores do campo do conjunto de dados em tempo de execução, os tipos de dados para os dois itens que você está comparando devem ser os mesmos. Os parâmetros de relatório podem ser de um dos seguintes tipos: Boolean, DateTime, Integer, Float, ou Text, que representa o tipo de dados String subjacente. Se necessário, você pode precisar converter o tipo de dados do valor do parâmetro para corresponder ao valor do conjunto de dados. Para obter mais informações, consulte [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
  Para incluir uma referência de parâmetro em uma expressão, você deve entender como especificar a sintaxe correta para a referência de parâmetro que varia, dependendo de se o parâmetro tem diversos valores ou um valor único.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "65581801"
 |`=Parameters!` *\<ParameterName>* `.Count`|Retorna um valor inteiro 1. Para um parâmetro de valor único, a contagem é sempre 1.|  
 |`=Parameters!` *\<ParameterName>* `.Label`|Retorna o rótulo do parâmetro, geralmente usado como o nome para exibição em uma lista suspensa de valores disponíveis.|  
 |`=Parameters!` *\<ParameterName>* `.Value`|Retorna o valor de parâmetro. Se a propriedade Label não tiver sido definida, este valor será exibido na lista suspensa de valores disponíveis.|  
-|`=CStr(Parameters!`  *\<ParameterName>* `.Value)`|Retorna o valor de parâmetro como uma cadeia de caracteres.|  
+|`=CStr(Parameters!` *\<ParameterName>* `.Value)`|Retorna o valor de parâmetro como uma cadeia de caracteres.|  
 |`=Fields(Parameters!` *\<ParameterName>* `.Value).Value`|Retorna o valor para o campo que tem o mesmo nome do parâmetro.|  
   
  Para obter mais informações sobre como usar parâmetros em um filtro, consulte [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  

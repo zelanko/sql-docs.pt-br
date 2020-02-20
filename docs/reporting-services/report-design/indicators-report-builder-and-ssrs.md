@@ -16,10 +16,10 @@ ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 75cda38839aa4ee8a32eb65595b0f8df204983b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580219"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicadores (Construtor de Relatórios e SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "65580219"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece conjuntos de indicadores internos e ícones de indicador a serem usados no estado em que se encontram, mas você também pode personalizar ícones de indicador e conjuntos de indicadores individuais para atender às suas necessidades.  
   
- Para obter mais informações sobre como usar indicadores como KPIs, consulte [Tutorial: Adicionar um KPI ao seu relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Saiba mais sobre como usar indicadores como KPIs no [Tutorial: Adicionar um KPI ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  É possível publicar indicadores separadamente de um relatório como partes do relatório. Leia mais sobre as [Partes do relatório](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -141,32 +141,32 @@ ms.locfileid: "65580219"
 |Sequência de estado|Valor de início|Valor final|  
 |--------------------|-----------------|---------------|  
 |Vermelho|0|3500|  
-|Amarelo|3500|5000|  
-|Verde|5000|10000|  
+|Amarelo|3500|5\.000|  
+|Verde|5\.000|10000|  
   
  A seta vermelha para baixo descreve o valor 3500 e a seta horizontal amarela, 5000.  
   
 |Sequência de estado|Valor de início|Valor final|  
 |--------------------|-----------------|---------------|  
-|Verde|5000|10000|  
-|Amarelo|3500|5000|  
+|Verde|5\.000|10000|  
+|Amarelo|3500|5\.000|  
 |Vermelho|0|3500|  
   
  A seta horizontal amarela descreve o valor 3500 e a seta verde para cima, 5000.  
   
 |Sequência de estado|Valor de início|Valor final|  
 |--------------------|-----------------|---------------|  
-|Verde|5000|10000|  
+|Verde|5\.000|10000|  
 |Vermelho|0|3500|  
-|Amarelo|3500|5000|  
+|Amarelo|3500|5\.000|  
   
  A seta vermelha para baixo descreve o valor 3500 e a seta verde para cima, 5000.  
   
 |Sequência de estado|Valor de início|Valor final|  
 |--------------------|-----------------|---------------|  
-|Amarelo|3500|5000|  
+|Amarelo|3500|5\.000|  
 |Vermelho|0|3500|  
-|Verde|5000|10000|  
+|Verde|5\.000|10000|  
   
  A seta amarela para baixo agora descreve os valores 3500 e 5000.  
   

@@ -11,10 +11,10 @@ ms.assetid: 9dfa7781-d72f-407a-a8d4-1c78c9446d09
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fc093dbd271a03f2efe4641986ced16ae1471f31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975523"
 ---
 # <a name="setasciistream-method-int-javaioinputstream-long"></a>Método setAsciiStream (int, java.io.InputStream, long)
@@ -31,14 +31,14 @@ public final void setAsciiStream(int parameterIndex,
                                     long length)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *parameterIndex*  
   
  Um **int** que indica o número do parâmetro.  
   
  *x*  
   
- Um objeto java. IO. InputStream.  
+ Um objeto java.io.InputStream.  
   
  *length*  
   
@@ -47,8 +47,8 @@ public final void setAsciiStream(int parameterIndex,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método setAsciiStream é especificado pelo método setAsciiStream na interface java. Sql. PreparedStatement.  
+## <a name="remarks"></a>Comentários  
+ Esse método setAsciiStream é especificado pelo método setAsciiStream na interface java.sql.PreparedStatement.  
   
  Se o comprimento do fluxo for diferente do especificado no parâmetro *length*, o driver JDBC lançará uma exceção quando a linha for atualizada ou inserida.  
   

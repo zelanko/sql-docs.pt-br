@@ -1,10 +1,9 @@
 ---
-title: Propriedades de Coluna (Ferramentas de Banco de Dados Visual) | Microsoft Docs
-ms.custom: ''
+title: Propriedades de coluna
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -16,16 +15,18 @@ f1_keywords:
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3ee1e24b0f9b55d299f56aa02c99405e001c33c1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7646eb379b3fe81603e78843808c90914889ed5d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262563"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241267"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriedades de Coluna (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Existem dois conjuntos de propriedades para colunas: um conjunto completo que pode ser visualizado na guia **Propriedades da Coluna** no Designer de Tabela (disponível somente para bancos de dados do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e um subconjunto que pode ser visualizado na janela Propriedades usando o Gerenciador de Servidores.  
+Existem dois conjuntos de propriedades para colunas: um conjunto completo que pode ser visto na guia **Propriedades da Coluna** dentro do Designer de Tabela (disponível somente para bancos de dados do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e um subconjunto que pode ser visto na janela Propriedades usando o Gerenciador de Servidores.  
   
 > [!NOTE]  
 > As propriedades desse tópico são classificadas por categoria e não em ordem alfabética.  
@@ -66,7 +67,7 @@ Mostra se a coluna selecionada é a coluna de identidade para a tabela. (Aplica-
 **Comprimento**  
 Mostra o número de caracteres permitido para tipos de dados com base em caractere.  
   
-**Anulável**  
+**Permite valor nulo**  
 Mostra se a coluna permite ou não valores nulos.  
   
 **Precisão**  

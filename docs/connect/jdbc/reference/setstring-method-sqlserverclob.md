@@ -1,5 +1,5 @@
 ---
-title: Método SetString (SQLServerClob) | Microsoft Docs
+title: Método setString (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e329de08-7624-4cf6-9da7-350584e87011
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 47a1bccc2e47d0ef8265554374c8ea492e704373
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972654"
 ---
 # <a name="setstring-method-sqlserverclob"></a>Método setString (SQLServerClob)

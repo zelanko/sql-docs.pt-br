@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 904a3bbc5b7a3d4987cd6c06b257ff680e4e8343
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 61cfc9c83e5d9c2976f5fcb00eab29e91c1f726d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593832"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190833"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo de conexão Hyperion Essbase (SSRS)
   Para incluir dados de uma fonte de dados externa do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] no relatório, você deve ter um conjunto de dados baseado em uma fonte de dados do relatório do tipo [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Esse tipo de fonte de dados interna se baseia na extensão de dados do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], que permite recuperar dados multidimensionais de uma fonte de dados externa do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -27,7 +27,7 @@ ms.locfileid: "73593832"
 Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
- Para obter mais informações sobre exemplos de cadeias de conexão, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Para saber mais sobre exemplos de cadeias de conexão, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Credentials"></a> Credenciais  
@@ -35,7 +35,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  Após a publicação do relatório, talvez seja necessário alterar as credenciais da fonte de dados para que, quando o relatório for executado no servidor de relatório, as permissões recuperadas sejam válidas.  
   
- Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar as credenciais no Construtor de Relatórios](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Consultas  
@@ -81,12 +81,12 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 |**Propriedade**|**Tipo**|**Descrição ou valor esperado**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**Objeto**|Especifica o valor de dados do campo.<br /><br /> Em uma propriedade de dimensão, é mapeada para MEMBER_CAPTION. Em uma medida, é mapeada para um valor de dados.|  
+|**Valor**|**Objeto**|Especifica o valor de dados do campo.<br /><br /> Em uma propriedade de dimensão, é mapeada para MEMBER_CAPTION. Em uma medida, é mapeada para um valor de dados.|  
 |**IsMissing**|**Booliano**|Indica se o campo foi encontrado no conjunto de dados resultante.|  
-|**FormattedValue**|**String**|Retorna um valor formatado para o número chave.<br /><br /> Mapeada a partir de FORMATTED_VALUE na expressão MDX.|  
-|**BackgroundColor**|**String**|Retorna a cor do segundo plano definida no banco de dados para o campo.<br /><br /> Mapeada a partir de BACK_COLOR na expressão MDX.|  
-|**Color**|**String**|Retorna a cor do primeiro plano definida no banco de dados para o item.<br /><br /> Mapeada a partir de FORE_COLOR na expressão MDX.|  
-|**UniqueName**|**String**|Retorna o nome totalmente qualificado de um nível.<br /><br /> Mapeada a partir de MEMBER_UNIQUE_NAME na expressão MDX.|  
+|**FormattedValue**|**Cadeia de caracteres**|Retorna um valor formatado para o número chave.<br /><br /> Mapeada a partir de FORMATTED_VALUE na expressão MDX.|  
+|**BackgroundColor**|**Cadeia de caracteres**|Retorna a cor do segundo plano definida no banco de dados para o campo.<br /><br /> Mapeada a partir de BACK_COLOR na expressão MDX.|  
+|**Color**|**Cadeia de caracteres**|Retorna a cor do primeiro plano definida no banco de dados para o item.<br /><br /> Mapeada a partir de FORE_COLOR na expressão MDX.|  
+|**UniqueName**|**Cadeia de caracteres**|Retorna o nome totalmente qualificado de um nível.<br /><br /> Mapeada a partir de MEMBER_UNIQUE_NAME na expressão MDX.|  
   
  Para obter mais informações sobre como usar campos e propriedades de campo em uma expressão, consulte [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -102,7 +102,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 |**Propriedade**|**Tipo**|**Descrição ou valor esperado**|  
 |------------------|--------------|---------------------------------------|  
-|**FORMAT_STRING**|**String**|Definida em uma medida, este é o **FormattedValue** disponível como um tipo String.|  
+|**FORMAT_STRING**|**Cadeia de caracteres**|Definida em uma medida, este é o **FormattedValue** disponível como um tipo String.|  
   
   
 ##  <a name="Remarks"></a> Comentários  
@@ -127,7 +127,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Fornece uma visão geral de como acessar dados de seu relatório.  
   
- [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Fornece informações sobre conexões de dados e fontes de dados.  
   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -136,7 +136,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Fornece informações sobre a coleção de campos gerada pela consulta do conjunto de dados.  
   
- [As fontes de dados com &#40;suporte&#41; pelo Reporting Services SSRS](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) fornecem informações detalhadas sobre a plataforma e o suporte de versão para cada extensão de dados.  
+ [Fontes de dados compatíveis com o Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) Mostra informações detalhadas sobre a plataforma e a compatibilidade da versão com cada extensão de dados.  
   
  [Usando o SQL Server 2005 Reporting Services com Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)  
  Fornece informações detalhadas sobre como trabalhar com esta extensão de dados.  

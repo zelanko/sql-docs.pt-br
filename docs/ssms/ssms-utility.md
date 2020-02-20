@@ -14,14 +14,14 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/07/2019
-ms.openlocfilehash: 4fa84860e2d101b43b1ea4ebfe09d9580c0088ee
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 5a31fb94fad2e063fe9846bd820957abb4ce9b32
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893220"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243904"
 ---
 # <a name="ssms-utility"></a>Utilitário SSMS
 
@@ -59,7 +59,7 @@ Você pode especificar arquivos que contenham consultas, projetos ou soluções.
 > [!Note]
 > O **Active Directory – Universal com suporte do MFA** não tem suporte atualmente.
  
-[ **-U** _username_] Nome de usuário ao se conectar com a “Autenticação do SQL”
+[ **-U** _username_] Nome de usuário ao se conectar com a "Autenticação do SQL"
  
 [ **-E**] Conectar-se usando a Autenticação do Windows
  
@@ -69,7 +69,7 @@ Você pode especificar arquivos que contenham consultas, projetos ou soluções.
  
 [ **-?** ] Exibe a ajuda da linha de comando
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Todas as alternâncias são opcionais e separadas por um espaço, exceto os arquivos que são separados por vírgulas. Se você não especificar nenhuma alternância, o **Ssms** abrirá o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] como especificado nas configurações de **Opções** no menu **Ferramentas** . Por exemplo, se a página **Ambiente/Geral** na opção **Na inicialização** especificar **Abrir nova janela de consulta**, o **SSMS** será aberto com um Editor de Consultas em branco.
  

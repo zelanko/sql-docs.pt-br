@@ -9,10 +9,10 @@ ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72252133"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Adicionar um parâmetro ao relatório (Construtor de Relatórios)
@@ -23,7 +23,7 @@ Neste tutorial, você adiciona um parâmetro a um relatório paginado do [!INCLU
 Os parâmetros de relatório são criados automaticamente para cada parâmetro de consulta incluído em uma consulta de conjunto de dados. O tipo de dados do parâmetro determina como ele aparece na barra de ferramentas de exibição de relatório. 
    
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Confira instruções passo a passo sobre como navegar até um servidor de relatório, como escolher uma fonte de dados e como criar um conjunto de dados no primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 25 minutos.  
   
@@ -52,7 +52,7 @@ Criar um relatório de matriz, uma fonte de dados e um conjunto de dados.
   
 7.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados na lista ou procure o servidor de relatório para selecionar uma. Selecione uma fonte de dados do tipo **SQL Server**.  
       
-8.  Clique em **Avançar**.  
+8.  Clique em **Próximo**.  
 
     Talvez seja necessário inserir suas credenciais.    
      
@@ -82,11 +82,11 @@ Criar um relatório de matriz, uma fonte de dados e um conjunto de dados.
   
 11. Na barra de ferramentas do designer de consultas, clique em **Executar** ( **!** ) para ver os dados.   
   
-    O conjunto de resultados consiste em onze linhas de dados que mostram a quantidade de itens vendidos em cada subcategoria das quatro lojas, nas seguintes colunas: StoreID, Subcategory e Quantity. O nome da loja não faz parte do conjunto de resultados. Posteriormente neste tutorial, você irá pesquisar o nome do repositório que corresponde ao identificador de repositório de um conjunto de dados separado.  
+    O conjunto de resultados consiste em 11 linhas de dados que mostram a quantidade de itens vendidos para cada subcategoria de quatro repositórios nas seguintes colunas: StoreID, Subcategory, Quantity. O nome do repositório não faz parte do conjunto de resultados. Posteriormente neste tutorial, você irá pesquisar o nome do repositório que corresponde ao identificador de repositório de um conjunto de dados separado.  
   
     Esta consulta não contém parâmetros de consulta. Você adicionará parâmetros de consulta posteriormente neste tutorial.   
   
-12. Clique em **Avançar**.  
+12. Clique em **Próximo**.  
   
 ## <a name="CompleteWizard"></a>2. Organizar dados e escolher o layout no Assistente  
 O assistente fornece um design inicial para a exibição de dados. O painel de visualização no assistente ajuda a visualizar o resultado do agrupamento de dados antes de concluir o design da tabela ou da matriz.  
@@ -101,13 +101,13 @@ O assistente fornece um design inicial para a exibição de dados. O painel de v
   
     Você organizou os valores das quantidades vendidas em linhas agrupadas por subcategoria, com uma coluna para cada loja.  
   
-4.  Clique em **Avançar**.  
+4.  Clique em **Próximo**.  
   
 5.  Na página **Escolher o Layout** , em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
   
     Quando você executar o relatório, a última coluna mostrará a quantidade total de cada subcategoria para todos os repositórios, e a última linha mostrará a quantidade total para todas as subcategorias de cada repositório.  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
 8.  Clique em **Concluir**.  
   
@@ -308,7 +308,7 @@ Um conjunto de dados pode conter o identificador e o campo de nome correspondent
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    O cabeçalho de coluna da loja contém o texto de exibição de uma expressão complexa: **Expr**.  
+    O cabeçalho da coluna de repositórios contém o texto de exibição de uma expressão complexa: **Expr**.  
   
 8.  Visualize o relatório.  
   
@@ -379,7 +379,7 @@ Para alterar um parâmetro de valor único para vários valores, você deve alte
   
 5.  No painel Dados do Relatório, expanda a pasta **Conjuntos de Dados** , clique com o botão direito do mouse em **DataSet1**e clique em **Consulta**.  
   
-6.  Altere o **sinal de igualdade** (=) para **IN** na cláusula [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** clause na cláusula last line na cláusula query:  
+6.  Altere o **sinal de igualdade** (=) para **IN** na cláusula [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** na última linha da consulta:  
   
     ```  
     WHERE StoreID IN (@StoreID)  
@@ -492,11 +492,11 @@ Para alterar um parâmetro de valor único para vários valores, você deve alte
   
 4.  Em **Nome**, substitua o nome padrão por Relatório de Vendas com Parâmetros.  
   
-5.  Clique em **Salvar**.  
+5.  Clique em **Save** (Salvar).  
   
 O relatório será salvo no servidor de relatório. O servidor de relatório ao qual você está conectado aparece na barra de status na parte inferior da janela.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
 Isso conclui o passo a passo da adição de um parâmetro ao seu relatório. Para saber mais sobre parâmetros, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="see-also"></a>Consulte Também  

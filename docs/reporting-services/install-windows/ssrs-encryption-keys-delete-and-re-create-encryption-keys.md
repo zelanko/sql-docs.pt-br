@@ -1,11 +1,13 @@
 ---
-title: Excluir e recriar chaves de criptografia (Gerenciador de Configurações do SSRS) | Microsoft Docs
-ms.date: 05/31/2016
+title: Excluir e recriar chaves de criptografia (Gerenciador de Configurações) | Microsoft Docs
+description: A exclusão e a recriação de chaves de criptografia são atividades que estão fora da manutenção rotineira da chave de criptografia.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
-- re-creating encryption keys
+- recreating encryption keys
 - encryption keys [Reporting Services]
 - deleting encryption keys
 - symmetric keys [Reporting Services]
@@ -14,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bf83ea3eb7ed7f4ef28872b964449d2924aab48
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 13f0237a987a87087f04da88f4a21173611c4437
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593530"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866299"
 ---
-# <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>Chaves de criptografia do SSRS – Excluir e recriar chaves de criptografia
+# <a name="delete-and-recreate-encryption-keys-ssrs-configuration-manager"></a>Excluir e recriar chaves de criptografia (Configuration Manager do SSRS)
   A exclusão e a recriação de chaves de criptografia são atividades que estão fora da manutenção rotineira da chave de criptografia. Você executa essas tarefas em resposta a uma ameaça específica ao seu servidor de relatórios ou como um último recurso quando não mais puder acessar um banco de dados de servidor de relatórios.  
   
--   Recrie a chave simétrica quando você acreditar que a chave simétrica existente está comprometida. Você também pode recriar a chave regularmente como uma prática recomendada de segurança.  
+-   Recrie a chave simétrica quando você acreditar que a chave simétrica existente está comprometida. Você também pode recriar a chave regularmente como uma melhor prática de segurança.  
   
 -   Exclua as chaves de criptografia existentes e conteúdo criptografado inutilizável quando você não puder restaurar a chave simétrica.  
   
-## <a name="re-creating-encryption-keys"></a>recriando chaves de criptografia  
+## <a name="recreating-encryption-keys"></a>Recriando chaves de criptografia  
  Se você tiver evidências de que a chave simétrica é conhecida por usuários não autorizados ou se o servidor de relatórios esteve sob ataque e você deseja redefinir a chave simétrica como uma precaução, poderá recriar a chave simétrica. Quando você recria a chave simétrica, todos os valores criptografados serão criptografados novamente usando o novo valor. Se estiver executando vários servidores de relatório em uma implantação de expansão, todas as cópias da chave simétrica serão atualizadas para o novo valor. O servidor de relatórios usa as chaves públicas disponíveis para ele a fim de atualizar a chave simétrica para cada servidor na implantação.  
   
- Você poderá recriar a chave simétrica somente quando o servidor de relatórios se encontrar em um estado de funcionamento. Recriar as chaves de criptografia e criptografar novamente o conteúdo interrompe as operações do servidor. Você deve colocar o servidor offline enquanto a nova criptografia estiver em andamento. Não deve haver nenhuma solicitação feita ao servidor de relatórios durante a nova criptografia.  
+ Você poderá recriar a chave simétrica somente quando o servidor de relatórios estiver em um estado de funcionamento. A recriação das chaves de criptografia e criptografar novamente o conteúdo interrompem as operações do servidor. Você deve colocar o servidor offline enquanto a nova criptografia estiver em andamento. Não deve haver nenhuma solicitação feita ao servidor de relatórios durante a nova criptografia.  
   
- Você pode usar a ferramenta Configuração do Reporting Services ou o utilitário **rskeymgmt** para redefinir a chave simétrica e os dados criptografados. Para obter mais informações sobre como a chave simétrica é criada, consulte [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Você pode usar a ferramenta Configuração do Reporting Services ou o utilitário **rskeymgmt** para redefinir a chave simétrica e os dados criptografados. Para obter mais informações sobre como a chave simétrica é criada, consulte [Inicializar um servidor de relatório &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>Como recriar chaves de criptografia (ferramenta Configuração do Reporting Services)  
+### <a name="how-to-recreate-encryption-keys-reporting-services-configuration-tool"></a>Como recriar chaves de criptografia (Ferramenta Configuração do Reporting Services)  
   
 1.  Desabilite o serviço Web Servidor de Relatórios e o acesso ao HTTP modificando a propriedade **IsWebServiceEnabled** no arquivo rsreportserver.config. Esta etapa interrompe temporariamente o envio das solicitações de autenticação ao servidor de relatórios sem desligar o servidor completamente. Você deve ter o mínimo de serviço de forma que possa recriar as chaves.  
   
@@ -55,7 +57,7 @@ ms.locfileid: "73593530"
   
 5.  Habilite novamente o serviço Web e o acesso ao HTTP modificando a propriedade **IsWebServiceEnabled** no arquivo rsreportserver.config. Faça isso para todas as instâncias se você estiver trabalhando com uma implantação de expansão.  
   
-### <a name="how-to-re-create-encryption-keys-rskeymgmt"></a>Como recriar chaves de criptografia (rskeymgmt)  
+### <a name="how-to-recreate-encryption-keys-rskeymgmt"></a>Como recriar chaves de criptografia (rskeymgmt)  
   
 1.  Desabilite o serviço Web Servidor de Relatórios e o acesso HTTP. Use as instruções do procedimento anterior para interromper as operações do serviço Web.  
   

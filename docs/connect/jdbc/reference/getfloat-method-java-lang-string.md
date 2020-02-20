@@ -16,10 +16,10 @@ ms.assetid: b6492341-fdc2-449c-9d03-95a5dadf1bb0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab60742b06054f5583cc438a68ddb5ed634740f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983029"
 ---
 # <a name="getfloat-method-javalangstring"></a>Método getFloat (java.lang.String)
@@ -34,18 +34,18 @@ ms.locfileid: "67983029"
 public float getFloat(java.lang.String sCol)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *sCol*  
   
  Uma **String** que contém o nome do parâmetro.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um valor **float** .  
+ Um valor **float**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getFloat é especificado pelo método getFloat na interface java.sql.CallableStatement.  
   
  Esse método retorna todos os tipos baseados em número com a fidelidade do Java **float**.  

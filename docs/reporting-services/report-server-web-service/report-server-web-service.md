@@ -17,10 +17,10 @@ ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 455fc4c5ea881f370257769d6794628a45017b3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63070341"
 ---
 # <a name="report-server-web-service"></a>serviço Web Servidor de Relatórios
@@ -35,7 +35,7 @@ ms.locfileid: "63070341"
 -   Desenvolver aplicativos usando qualquer conjunto de ferramentas de desenvolvimento habilitado para SOAP. Para obter mais informações, consulte [Função do SOAP no Reporting Services](../../reporting-services/report-server-web-service/the-role-of-soap-in-reporting-services.md).  
   
 ## <a name="programming-diagram"></a>Diagrama de programação  
- ![Opções de desenvolvimento de serviço Web Servidor de Relatórios](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "Opções de desenvolvimento de serviço Web Servidor de Relatórios")  
+ ![Opções de implantação do serviço Web Servidor de Relatórios](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "Opções de implantação do serviço Web Servidor de Relatórios")  
 Opções de desenvolvimento disponíveis para serviço Web do Reporting Services  
   
 ## <a name="in-this-section"></a>Nesta seção  
@@ -62,9 +62,9 @@ Opções de desenvolvimento disponíveis para serviço Web do Reporting Services
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 5.5 ou posterior instalado em um computador com uma conexão com a Internet e acesso ao servidor de relatório.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou o SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instalado em um computador, caso deseje desenvolver e implantar aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou o SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instalado em um computador caso deseje desenvolver e implantar aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
--   Uma compreensão detalhada dos recursos e das funcionalidades do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   Uma compreensão detalhada dos recursos e das capacidades do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 -   Uma sólida compreensão de SOAP e de [!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)].  
   

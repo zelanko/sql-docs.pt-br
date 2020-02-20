@@ -11,10 +11,10 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3fbef30f8a5bf5658376a37144c8f770317d6981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576719"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Partes de relatório (Construtor de Relatórios e SSRS)
@@ -55,7 +55,7 @@ ms.locfileid: "65576719"
   
 -   Mapas  
   
--   Parâmetros  
+-   parâmetros  
   
 -   Retângulos  
   
@@ -107,7 +107,7 @@ ms.locfileid: "65576719"
  Sempre que você abre um relatório, o Construtor de Relatórios verifica se as instâncias de servidor de partes de relatório nesse relatório foram atualizadas no servidor. Também procura alterações nos itens dependentes das partes de relatório, como o conjunto de dados e os parâmetros. Se as partes de relatório publicadas ou suas dependências foram atualizados no servidor, uma barra de informações no relatório exibe o número que foi atualizado. Você pode optar por exibir e aceitar ou rejeitar as atualizações ou descartar a barra de informações. Se você escolher exibir as atualizações, verá uma miniatura da parte de relatório que foi modificada por último e quando. Você poderá então aceitar um ou todos os itens atualizados.  
   
 > [!NOTE]  
->  Você pode desabilitar a barra de informações e não ser informado se a parte de relatório tiver sido alterada. Você define esta opção quando adiciona a parte de relatório ao seu relatório. Mesmo que você tenha desabilitado a barra de informações, ainda poderá procurar atualizações. Para mais informações, confira [Verificar ou desativar atualizações (Construtor de Relatórios e SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606).  
+>  Você pode desabilitar a barra de informações e não ser informado se a parte de relatório tiver sido alterada. Você define esta opção quando adiciona a parte de relatório ao seu relatório. Mesmo que você tenha desabilitado a barra de informações, ainda poderá procurar atualizações. Para saber mais, confira [Verificar ou desativar atualizações (Construtor de Relatórios e SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606).  
   
  O Construtor de Relatórios verifica se há diferenças entre a data da última atualização da parte de relatório no servidor e a data da última sincronização da parte de relatório com o servidor. Ele não verifica a data que você modificou a parte de relatório em seu relatório. Portanto, a parte de relatório em seu relatório e a parte de relatório no servidor podem ser bastante diferentes, mas quando o Construtor de Relatórios verificar se há atualizações, ele não localizará nenhuma.  
   
@@ -141,6 +141,6 @@ ms.locfileid: "65576719"
 ## <a name="see-also"></a>Consulte Também  
  [Partes de relatório e conjuntos de dados no Construtor de Relatórios](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Solução de problemas de partes de relatório (Construtor de Relatórios e SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Gerenciando partes de relatório](../../reporting-services/report-design/managing-report-parts.md)  
+ [Gerenciar partes de relatório](../../reporting-services/report-design/managing-report-parts.md)  
   
   

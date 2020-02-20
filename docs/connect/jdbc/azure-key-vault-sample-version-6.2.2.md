@@ -1,5 +1,5 @@
 ---
-title: Azure Key Vault exemplo de versão 6.2.2 | Microsoft Docs
+title: Versão de amostra do Azure Key Vault 6.2.2 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 315d6cad8ee643cc64a3b331ee321372a70c7824
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028435"
 ---
 # <a name="azure-key-vault-sample-version-622"></a>Versão de amostra do Azure Key Vault 6.2.2
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## <a name="sample-application-using-azure-key-vault-feature"></a>Aplicativo de exemplo usando Azure Key Vault recurso
+## <a name="sample-application-using-azure-key-vault-feature"></a>Aplicativo de exemplo usando o recurso do Azure Key Vault
 
-Esse aplicativo é executável usando o driver JDBC 6.2.2 e 6.4.0 e Azure-keyvault (versão 1.0.0), Adal4j (versão 1.4.0) e suas dependências.  As dependências subjacentes podem ser resolvidas adicionando essas bibliotecas ao arquivo POM do projeto, conforme descrito [aqui](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
+Este aplicativo pode ser executado usando o JDBC Driver versões 6.2.2 e 6.4.0 e o Azure Key Vault (versão 1.0.0), o Adal4j (versão 1.4.0) e as respectivas dependências.  As dependências subjacentes podem ser resolvidas adicionando essas bibliotecas ao arquivo POM do projeto, conforme descrito [aqui](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
 
 ```java
 import java.net.URISyntaxException;

@@ -17,10 +17,10 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893029"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novidades no SQL Server 2016
@@ -32,7 +32,7 @@ Esta página fornece informações de resumo e links para informações mais det
 ![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **Experimente o SQL Server hoje mesmo!** 
-- Baixe **gratuitamente** a [**edição do desenvolvedor do SQL Server 2016!** ](https://www.microsoft.com/cloud-platform/sql-server-editions-developers).
+- Baixe **gratuitamente** o [**SQL Server 2016 Developer Edition**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers).
 - Baixe a versão mais recente do [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md). 
 - Tem uma conta do Azure? Ative uma [Máquina Virtual com o SQL Server 2016 já instalado](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016).
 

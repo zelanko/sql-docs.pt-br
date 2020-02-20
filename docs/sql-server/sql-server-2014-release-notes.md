@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70155685"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
@@ -291,7 +291,7 @@ Se você já tiver o problema com valores de instance_id incompatíveis, a únic
 ### <a name="SSRS"></a>Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>O servidor de relatório do Modo Nativo do SQL Server 2012 Reporting Services não pode ser executado lado a lado com componentes do SQL Server 2014 Reporting Services SharePoint  
-**Problema:** O "SQL Server Reporting Services" do serviço Windows no modo Nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (ReportingServicesService.exe) falha ao iniciar quando há componentes do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint instalados no mesmo servidor.  
+**Problema:** O "SQL Server Reporting Services" do serviço Windows no modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (ReportingServicesService.exe) falha ao iniciar quando há componentes do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint instalados no mesmo servidor.  
   
 **Solução alternativa:** Desinstale os componentes do SharePoint [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e reinicie o serviço do Microsoft SQL Server 2012 Reporting Services Windows.  
   
@@ -300,9 +300,9 @@ Se você já tiver o problema com valores de instance_id incompatíveis, a únic
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] O modo nativo não pode ser executado lado a lado em uma das seguintes condições:  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Suplemento para produtos do SharePoint    
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Serviço Compartilhado do SharePoint  
+-   Serviço compartilhado do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint  
   
-A instalação lado a lado impede que o Serviço do Windows no modo nativo do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inicie. Mensagens de erro semelhantes às mostradas aqui aparecerão no Log de Eventos do Windows:  
+A instalação lado a lado impede que o Serviço do Windows no modo nativo do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inicie. Mensagens de erro semelhantes às mostradas aqui aparecerão no Log de Eventos do Windows:  
   
 ```  
 Log Name:   Application  

@@ -13,10 +13,10 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578234"
 ---
 # <a name="project-property-pages-dialog-box"></a>caixa de diálogo Páginas de Propriedades do Projeto
@@ -28,15 +28,15 @@ ms.locfileid: "65578234"
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
 ## <a name="options"></a>Opções  
- **Configuração**  
- Selecione a configuração a ser editada. Inicialmente, estão disponíveis as seguintes configurações: **Debug**, **DebugLocal**e **Release**. A configuração ativa aparece primeiro; por exemplo, **Active(Debug)** .  
+ **Configuration**  
+ Selecione a configuração a ser editada. Inicialmente, estão disponíveis as seguintes configurações: **Debug**, **DebugLocal** e **Release**. A configuração ativa aparece primeiro; por exemplo, **Active(Debug)** .  
   
  Para ver as propriedades de mais de uma configuração ao mesmo tempo, selecione **Todas as Configurações** ou **Várias Configurações**.  
   
  Para criar configurações adicionais, clique em **Configuration Manager** na barra de ferramentas.  
   
  **Configuration Manager**  
- Gerencie configurações da solução inteira ou adicione outras configurações. Para obter mais informações, consulte a documentação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
+ Gerencie configurações da solução inteira ou adicione outras configurações. Para obter mais informações, confira a documentação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
  **OutputPath**  
  Digite ou cole o caminho para armazenar a definição de relatório usada na verificação da compilação, na implantação e na visualização de relatórios. O caminho deve ser diferente do caminho que você usa para o projeto e um caminho relativo que é uma pasta filho sob o caminho do projeto.  
@@ -87,4 +87,4 @@ ms.locfileid: "65578234"
 [Definir propriedades de implantação &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [Ajuda F1 do Designer de Relatórios](../../reporting-services/tools/report-designer-f1-help.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

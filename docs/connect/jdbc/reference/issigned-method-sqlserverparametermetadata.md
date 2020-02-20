@@ -16,10 +16,10 @@ ms.assetid: 1a4af386-e379-4a60-a107-a99e63a490ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 46b93b2b5c45491ad91be8b1e40fc909f0c4510d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977233"
 ---
 # <a name="issigned-method-sqlserverparametermetadata"></a>Método isSigned (SQLServerParameterMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67977233"
 public boolean isSigned(int param)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *param*  
   
  Um **int** que indica o índice do parâmetro.  
@@ -45,8 +45,8 @@ public boolean isSigned(int param)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método IsSigned é especificado pelo método IsSigned na interface java. Sql. ParameterMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método isSigned é especificado pelo método isSigned na interface java.sql.ParameterMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

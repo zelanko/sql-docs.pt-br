@@ -1,10 +1,9 @@
 ---
-title: Navegar no Designer de Consulta e Exibição (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Navegar no designer de exibição e de consultas
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f9581eca3d6abbefcd897ccc4ce627ca180649b3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 5e78aa041929e5b804547db0ef773d40aea7d7c8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262297"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224587"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navegar no Designer de Consulta e Exibição (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +53,7 @@ Para obter mais informações, consulte [Painel Diagrama &#40;Visual Database To
   
 ## <a name="criteria-pane"></a>Painel de Critérios  
   
-|Para|Pressione|Clique|  
+|Para|Pressione|Clique em|  
 |------|---------|---------|  
 |Mover entre células|Teclas de direção, TAB ou SHIFT+TAB|Na célula de destino|  
 |Mover para a última linha em uma coluna selecionada|CTRL+SETA PARA BAIXO||  
@@ -60,11 +61,11 @@ Para obter mais informações, consulte [Painel Diagrama &#40;Visual Database To
 |Mover para a célula superior esquerda na parte visível da grade|CTRL+HOME||  
 |Mover para a célula inferior direita|CTRL+END||  
 |Mover em uma lista suspensa|SETA PARA CIMA ou SETA PARA BAIXO|No botão da célula|  
-|Selecionar uma coluna inteira de grade|CTRL+BARA DE ESPAÇOS|No cabeçalho da coluna|  
+|Selecionar uma coluna inteira de grade|CTRL+BARA DE ESPAÇOS|O cabeçalho da coluna|  
 |Alternar entre o modo de edição e o modo de seleção de célula|F2||  
 |Copiar o texto selecionado em uma célula para a Área de Transferência (no modo de edição)|CTRL+C||  
 |Cortar o texto selecionado em uma célula e colocá-lo na Área de Transferência (no modo de edição)|CTRL+X||  
-|Colar o texto da Área de Transferência (no modo de edição)|CTRL+V||  
+|Colar o texto da Área de Transferência (no modo de edição)|Ctrl+V||  
 |Alternar entre os modos de inserção e sobreposição ao editar uma célula|INS||  
 |Alternar a caixa de seleção na coluna Saída|BARRA DE ESPAÇOS|Na caixa de seleção|  
 |Desmarcar o conteúdo selecionado de uma célula|Delete (excluir)||  
@@ -105,7 +106,7 @@ Para obter mais informações, consulte [Painel SQL &#40;Visual Database Tools&#
 |Copiar colunas ou linhas selecionadas para a Área de Transferência|CTRL+C||  
 |Copiar o texto selecionado em uma célula para a Área de Transferência (no modo de edição)|CTRL+C||  
 |Cortar o texto selecionado em uma célula para a Área de Transferência (no modo de edição)|CTRL+X||  
-|Colar o texto da Área de Transferência (no modo de edição)|CTRL+V||  
+|Colar o texto da Área de Transferência (no modo de edição)|Ctrl+V||  
   
 > [!NOTE]  
 > Se forem selecionados vários itens, pressionar esta tecla afetará todos os itens selecionados.  

@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 8aa971142e1154f50ebc0cf17107682b47529c68
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70874626"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Exibir metadados de colunas e catálogos para colunas esparsas (OLE DB)
@@ -24,7 +24,7 @@ ms.locfileid: "70874626"
 
   Este exemplo compila uma tabela com três colunas: uma coluna esparsa, uma coluna que não é esparsa e uma coluna de conjunto de colunas. Em seguida, o exemplo exibe o sinalizador OLE DB mostrando os metadados da coluna e do catálogo paras as colunas que não são esparsas e para a coluna do conjunto de colunas.  
   
- Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou posterior. Para obter mais informações sobre colunas esparsas, consulte [suporte a colunas esparsas no Driver OLE DB para SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
+ Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou posterior. Para obter mais informações sobre colunas esparsas, confira [Suporte a colunas esparsas no Driver do OLE DB para SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>Exemplo  
  Verifique se a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  

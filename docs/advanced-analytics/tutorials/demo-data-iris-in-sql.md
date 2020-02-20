@@ -1,6 +1,6 @@
 ---
 title: Conjunto de dados de demonstração do Iris para tutoriais
-Description: Crie um banco de dados que contenha o conjunto de dados do Iris e uma tabela para armazenar modelos. Esse conjunto de dados é usado em exercícios que mostram como encapsular a linguagem R ou o código Python em um procedimento armazenado do SQL Server.
+Description: Crie um banco de dados que contenha o conjunto de dados do Iris e modelos de previsão. Esse conjunto de dados é usado em tutoriais de R e Python para os Serviços de Machine Learning do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e580a4d3b8d0e294573cf19c0194cc9b8a103518
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c87b5c9fede3a8a9ab72add650447d1b02ac89c7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727100"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908761"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Dados de demonstração do Iris para tutoriais de Python e R no SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

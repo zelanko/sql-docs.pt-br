@@ -1,19 +1,20 @@
 ---
-title: Configurar uma conexão de banco de dados do servidor de relatório (Gerenciador de Configurações do SSRS) | Microsoft Docs
+title: Configurar uma conexão de banco de dados do servidor de relatório (Gerenciador de Configurações) | Microsoft Docs
+description: Cada instância do servidor de relatório requer uma conexão com o banco de dados do servidor de relatório que armazena relatórios, fontes de dados compartilhadas, recursos e metadados gerenciados pelo servidor.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
-ms.custom: seodec18
-ms.date: 10/09/2019
-ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019, seo-mmd-2019
+ms.date: 12/04/2019
+ms.openlocfilehash: d65c0e8bebf9f4019055e2fbabb30785235dacea
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72239375"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866032"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>Configurar uma conexão de banco de dados do servidor de relatório (Gerenciador de configurações do SSRS)
 
@@ -21,7 +22,7 @@ ms.locfileid: "72239375"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Cada instância do servidor de relatório requer uma conexão com o banco de dados do servidor de relatório que armazena relatórios, fontes de dados compartilhadas, recursos e metadados gerenciados pelo servidor. A conexão inicial poderá ser criada durante uma instalação do servidor de relatório se você estiver instalando a configuração padrão. Na maioria dos casos, você usará a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar a conexão depois que Instalação for concluída. É possível modificar a conexão a qualquer momento para alterar o tipo de conta ou redefinir as credenciais. Para obter instruções passo a passo sobre como criar o banco de dados e configurar a conexão, veja [Criar um banco de dados de servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).
+Cada instância do servidor de relatório requer uma conexão com o banco de dados do servidor de relatório que armazena relatórios, fontes de dados compartilhadas, recursos e metadados gerenciados pelo servidor. A conexão inicial poderá ser criada durante uma instalação do servidor de relatório se você estiver instalando a configuração padrão. Na maioria dos casos, você usará a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar a conexão depois que Instalação for concluída. É possível modificar a conexão a qualquer momento para alterar o tipo de conta ou redefinir as credenciais. Para obter instruções passo a passo sobre como criar o banco de dados e configurar a conexão, consulte [Criar um banco de dados do servidor de relatório no modo nativo &#40;SSRS Gerenciador de Configurações&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).
 
 Você deve configurar uma conexão do banco de dados do servidor de relatório nas seguintes circunstâncias:  
 
@@ -31,11 +32,11 @@ Você deve configurar uma conexão do banco de dados do servidor de relatório n
 
 - Alterar a conta ou a senha do usuário usadas para a conexão do banco de dados. Você só precisa atualizar a conexão do banco de dados quando as informações da conta estiverem armazenadas no arquivo RSReportServer.config. Se estiver usando a conta de serviço para a conexão (que usa a segurança integrada do Windows como o tipo de credencial) a senha não será armazenada, eliminando a necessidade de atualizar as informações da conexão. Para obter mais informações sobre como alterar contas, veja [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
 
-- Configurar uma implantação em expansão do servidor de relatório. A configuração de uma implantação em expansão requer que você crie várias conexões com um banco de dados do servidor de relatório. Para obter mais informações sobre como executar esta operação de várias etapas, veja [Configurar uma implantação em expansão do servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+- Configurar uma implantação em expansão do servidor de relatório. A configuração de uma implantação em expansão requer que você crie várias conexões com um banco de dados do servidor de relatório. Para obter mais informações sobre como executar esta operação de várias etapas, consulte [Configurar uma implantação escalável do servidor de relatório no modo nativo &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
 
 ## <a name="how-reporting-services-connects-to-the-database-engine"></a>Como o Reporting Services se conecta ao Mecanismo de Banco de Dados
 
-O acesso do servidor de relatório a um banco de dados do servidor de relatório depende de credenciais e informações de conexão, além de chaves de criptografia que sejam válidas para a instância do servidor de relatório que usa esse banco de dados. É necessário ter chaves de criptografia válidas para armazenar e recuperar dados confidenciais. As chaves de criptografia são criadas automaticamente quando você configura o banco de dados pela primeira vez. Depois que as chaves forem criadas, você deverá atualizá-las se alterar a identidade do serviço Servidor de Relatório. Para obter mais informações sobre como trabalhar com chaves de criptografia, veja [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+O acesso do servidor de relatório a um banco de dados do servidor de relatório depende de credenciais e informações de conexão, além de chaves de criptografia que sejam válidas para a instância do servidor de relatório que usa esse banco de dados. É necessário ter chaves de criptografia válidas para armazenar e recuperar dados confidenciais. As chaves de criptografia são criadas automaticamente quando você configura o banco de dados pela primeira vez. Depois que as chaves forem criadas, você deverá atualizá-las se alterar a identidade do serviço Servidor de Relatório. Para obter mais informações sobre como trabalhar com chaves de criptografia, consulte [Configurar e gerenciar chaves de criptografia &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
 
 O banco de dados do servidor de relatório é um componente interno, acessado somente pelo servidor de relatório. As credenciais e as informações de conexão especificadas para o banco de dados do servidor de relatório são usadas exclusivamente pelo servidor de relatório. Os usuários que solicitam relatórios não precisam de permissões de bancos de dados ou de um logon de banco de dados para o banco de dados do servidor de relatório.  
 
@@ -109,7 +110,7 @@ Você pode especificar um único logon do [!INCLUDE[ssNoVersion](../../includes/
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> Ao usar um Instância Gerenciada do Azure SQL para hospedar bancos de dados do Reporting Services 2019, o suporte é limitado ao uso de credenciais de logon SQL Server para a conexão.
+> Ao usar um Instância Gerenciada do SQL do Azure para hospedar bancos de dados do Reporting Services 2019, a compatibilidade é limitada ao uso de credenciais de logon do SQL Server para a conexão.
 
 ::: moniker-end
 
@@ -141,4 +142,4 @@ Você pode configurar vários servidores de relatório para usar o mesmo banco d
 - [Gerenciar um servidor de relatórios de Modo Nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 - [Configurar a conta de serviço do Servidor de Relatório](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

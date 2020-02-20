@@ -1,9 +1,11 @@
 ---
-title: Usando a API SOAP em um aplicativo do Windows | Microsoft Docs
+title: Usar a API SOAP em aplicativos do Windows
+description: Você pode acessar a funcionalidade completa do servidor de relatório por meio da API SOAP do Reporting Services. Acesse o serviço Web em um aplicativo do Windows escrevendo o código que faz chamadas para o serviço.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - rendered reports [Reporting Services]
@@ -13,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d9802e3b2c60a345d789a63ec5f2bc2cc9198ba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a2cd3fce2844fc815981f7e5ad4850236445f281
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741760"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796983"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>Integrando o Reporting Services usando o SOAP – Aplicativo do Windows
   Você pode acessar a funcionalidade completa do servidor de relatório por meio da API SOAP do Reporting Services. A API SOAP é um serviço Web e, sendo assim, pode ser acessada facilmente para fornecer os recursos de relatórios corporativos para seus aplicativos comerciais personalizados. Você pode acessar o serviço Web em um aplicativo do Windows simplesmente gravando o código que faz chamadas para o serviço. Usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], é possível gerar uma classe proxy que expõe as propriedades e os métodos do serviço Web e permite que você use uma infraestrutura e ferramentas conhecidas para criar aplicativos de negócios baseados na tecnologia do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -87,7 +89,7 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
   
  Porém, o método <xref:ReportExecution2005.ReportExecutionService.Render%2A> da API SOAP pode ser usado para renderizar relatórios e salvá-los em vários formatos de saída programaticamente. Essa é uma vantagem em relação ao acesso de URL que requer interação de usuário. Quando você renderizar um relatório que usa o método <xref:ReportExecution2005.ReportExecutionService.Render%2A> de SOAP API, será possível renderizar em qualquer um dos formatos de saída suportados.  
   
- Também use os controles do Visualizador de Relatórios que estão distribuídos gratuitamente e incluídos no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]. Os controles do Visualizador de Relatórios facilitam a inserção da funcionalidade [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em aplicativos personalizados. Os controles d Visualizador de Relatórios são destinados a desenvolvedores que desejam fornecer relatórios com design prévio, totalmente criados como parte de um conjunto de recursos do aplicativo (por exemplo, um aplicativo de gerenciamento de site da Web pode incluir relatórios que mostrem a análise de fluxo de acesso a sites da Web da empresa). A inserção de controles em um aplicativo fornece uma alternativa otimizada para incluir os componentes de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em sua implantação de aplicativo. Os controles fornecem a funcionalidade de relatório, mas sem a criação de relatório adicional, publicação ou distribuição e suporte de entrega que você localiza no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ Você também pode usar os controles do Visualizador de Relatórios que são distribuídos gratuitamente e estão incluídos no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]. Os controles do Visualizador de Relatórios facilitam a inserção da funcionalidade [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em aplicativos personalizados. Os controles d Visualizador de Relatórios são destinados a desenvolvedores que desejam fornecer relatórios com design prévio, totalmente criados como parte de um conjunto de recursos do aplicativo (por exemplo, um aplicativo de gerenciamento de site da Web pode incluir relatórios que mostrem a análise de fluxo de acesso a sites da Web da empresa). A inserção de controles em um aplicativo fornece uma alternativa otimizada para incluir os componentes de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em sua implantação de aplicativo. Os controles fornecem a funcionalidade de relatório, mas sem a criação de relatório adicional, publicação ou distribuição e suporte de entrega que você localiza no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Há duas versões de controles do Visualizador de Relatórios, uma para aplicativos cliente sofisticados do Windows e uma para aplicativos [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Os controles dão suporte ao processamento local e aos modos de processamento remotos. No modo de processamento local, o aplicativo fornece a definição de relatório e conjuntos de dados, e dispara o processamento do relatório. No modo de processamento remoto, a recuperação de dados e o processando de relatório ocorre no servidor de relatório e o controle é usado para exibição e navegação no relatório. Esse modelo permite que você crie aplicativos sofisticados que podem ser escalados da área de trabalho à empresa.  
   

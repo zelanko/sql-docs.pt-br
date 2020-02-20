@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9829c7857ec86c7a1f623691c04b0dd0ac62bafe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994769"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Autenticação integrada do Kerberos (BD OLE)
@@ -22,7 +22,7 @@ ms.locfileid: "67994769"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Este exemplo mostra como obter a autenticação Kerberos mútua usando OLE DB no driver OLE DB para SQL Server. Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou posterior.  
+  Este exemplo mostra como obter autenticação mútua do Kerberos usando o OLE DB no Driver do OLE DB para SQL Server. Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou posterior.  
   
  Para obter mais informações sobre SPNs e a autenticação Kerberos, confira [Suporte a SPN &#40;Nome da Entidade de Serviço&#41; em conexões de cliente](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
   

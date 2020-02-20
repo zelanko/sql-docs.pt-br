@@ -1,6 +1,7 @@
 ---
-title: Instâncias do cluster de failover do AlwaysOn (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Instâncias do cluster de failover do AlwaysOn
+description: Uma descrição da instância de cluster de failover Always On para SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 01/18/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: feceb314570449173b5ffc03869e5e3ad06906d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6d9f3675a2bbd2af5d33452c0dccbb46d0596d85
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063798"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230188"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Instâncias do cluster de failover do AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +156,7 @@ ms.locfileid: "68063798"
 |**Descrições do tópico**|**Tópico**|  
 |----------------------------|---------------|  
 |Descreve como instalar uma nova FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Criar um novo cluster de failover do SQL Server &#40;Instalação&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|Descreve como atualizar para um cluster de failover do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .|[Atualizar uma instância de cluster de failover do SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
+|Descreve como atualizar para um cluster de failover do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .|[Atualizar uma Instância de Cluster de Failover do SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
 |Descreve conceitos de clustering de failover do Windows e fornece links para tarefas relativas ao clustering de failover do Windows.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Visão geral de clusters de failover](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Visão geral de clusters de failover](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |Descreve as distinções em conceitos entre nós em uma FCI e réplicas dentro de um grupo de disponibilidade e considerações para usar uma FCI para hospedar uma réplica para um grupo de disponibilidade.|[Clustering de failover e Grupos de Disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   

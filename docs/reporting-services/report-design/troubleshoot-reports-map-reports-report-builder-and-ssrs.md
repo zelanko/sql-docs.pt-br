@@ -1,5 +1,5 @@
 ---
-title: 'Solução de problemas de relatórios: relatórios de mapa (Construtor de Relatórios e SSRS) | Microsoft Docs'
+title: 'Solucionar problemas de relatórios: Mapear relatórios (Construtor de Relatórios e SSRS) | Microsoft Docs'
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 88005509becb45f48702970153f9a891a8a01978
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594491"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solução de problemas de relatórios: relatórios de mapa (Construtor de Relatórios e SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de relatórios: Relatórios de mapa (Construtor de Relatórios e SSRS)
   Os problemas com mapas em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] podem ocorrer quando você adiciona um mapa ou camada do mapa ao relatório, quando você personaliza um mapa existente ou camada do mapa em seu relatório, quando visualiza um mapa em um relatório ou quando publica um relatório com um mapa. Use este tópico para ajudar a solucionar esses problemas.  
     
    ## <a name="need-more-help"></a>Precisa de mais ajuda?  
@@ -187,7 +187,7 @@ ms.locfileid: "73594491"
   
 -   A projeção do mapa deve ser **Mercator**.  
   
--   Para a visualização local, você deve ter acesso à Internet. Para um relatório executado a partir do servidor de relatório, o servidor de relatório deve ser configurado para dar suporte ao plano de fundo da peça. Para obter mais informações, consulte [planejar um relatório de mapa](plan-a-map-report-report-builder-and-ssrs.md).  
+-   Para a visualização local, você deve ter acesso à Internet. Para um relatório executado a partir do servidor de relatório, o servidor de relatório deve ser configurado para dar suporte ao plano de fundo da peça. Para obter mais informações, confira [Planejar um relatório de mapa](plan-a-map-report-report-builder-and-ssrs.md).  
   
  Para obter mais informações sobre como adicionar uma camada de bloco, consulte [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

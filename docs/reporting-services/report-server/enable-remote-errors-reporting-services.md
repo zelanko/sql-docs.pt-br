@@ -12,10 +12,10 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593879"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Habilitar erros remotos (Reporting Services)
@@ -58,7 +58,7 @@ ms.locfileid: "73593879"
   
 4.  Clique em **Habilitar erros remotos em modo local**.  
   
-5.  Clique em **OK**.  
+5.  Clique em **OK**  
   
 ##  <a name="bkmk_mgtStudio"></a> Habilitar erros remotos com o SQL Server Management Studio (modo nativo)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "73593879"
   
 3.  Clique em **Avançado** para abrir a página de propriedades. Para obter mais informações, consulte as [Propriedades do Servidor &#40;página Avançado&#41; – Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md).  
   
-4.  Na seção **segurança**, em **EnableRemoteErrors**, selecione **true**.  
+4.  Na seção **Segurança**, em **EnableRemoteErrors**, selecione **True**.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

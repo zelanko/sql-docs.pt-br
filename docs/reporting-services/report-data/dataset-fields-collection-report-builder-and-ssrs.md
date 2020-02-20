@@ -9,10 +9,10 @@ ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a893a9a25f4ad19dcc71f538b62110b5838fa3ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573153"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Coleção de campos de conjuntos de dados (Construtor de Relatórios e SSRS)
@@ -76,7 +76,7 @@ ms.locfileid: "65573153"
   
 -   **Fonte de dados** Os tipos de dados para os quais a versão do tipo da fonte de dados oferece suporte e ao qual você está se conectando.  
   
-     Por exemplo, entre os tipos de dados típicos de uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão **int**, **datetime**e **varchar**. Os tipos de dados introduzidos pelo [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] acrescentaram suporte para **data**, **time**, **datetimetz**e **datetime2**. Para obter mais informações, consulte [Tipos de Dados (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98362).  
+     Por exemplo, entre os tipos de dados típicos de uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão **int**, **datetime**e **varchar**. Os tipos de dados introduzidos pelo [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] acrescentaram suporte para **data**, **time**, **datetimetz**e **datetime2**. Para obter mais informações, consulte [Tipos de dados (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98362).  
   
 -   **Provedor de dados ou extensão de processamento de dados** Os tipos de dados para os quais há suporte na versão do provedor de dados da extensão de processamento de dados que você seleciona ao se conectar com a fonte de dados. Os provedores de dados baseados no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usam tipos de dados para os quais o CLR oferece suporte. Para obter mais informações sobre tipos de dados do provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , consulte [Mapeamentos de tipos de dados (ADO.NET)](https://go.microsoft.com/fwlink/?LinkId=112178) e [Trabalhando com tipos base](https://go.microsoft.com/fwlink/?LinkId=112177) no MSDN.  
   
@@ -91,8 +91,8 @@ ms.locfileid: "65573153"
   
     |Tipo de dados SQL|Tipo de dados CLR|Descrição|  
     |-------------------|-------------------|-----------------|  
-    |**Date**|**DateTime**|Somente data|  
-    |**Time**|**TimeSpan**|Somente hora|  
+    |**Data**|**DateTime**|Somente data|  
+    |**Hora**|**TimeSpan**|Somente hora|  
     |**DateTimeTZ**|**DateTimeOffset**|Data e hora com deslocamento de fuso horário|  
     |**DateTime2**|**DateTime**|Data e hora com milissegundos fracionários|  
   

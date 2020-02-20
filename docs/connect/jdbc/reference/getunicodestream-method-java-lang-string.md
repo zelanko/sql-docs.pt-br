@@ -1,5 +1,5 @@
 ---
-title: Método getUnicodeStream (Java. lang. String) | Microsoft Docs
+title: Método getUnicodeStream (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e8ea50a3-804a-4752-96e5-eb3d521f93c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be721dad48fae3f83aa720516d0979d9f8ff26df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978412"
 ---
 # <a name="getunicodestream-method-javalangstring"></a>Método getUnicodeStream (java.lang.String)
@@ -37,7 +37,7 @@ ms.locfileid: "67978412"
 public java.io.InputStream getUnicodeStream(java.lang.String columnName)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
@@ -48,7 +48,7 @@ public java.io.InputStream getUnicodeStream(java.lang.String columnName)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getUnicodeString é especificado pelo método getUnicodeString na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  

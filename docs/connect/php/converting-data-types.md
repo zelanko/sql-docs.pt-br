@@ -1,5 +1,5 @@
 ---
-title: Convertendo tipos de dados | Microsoft Docs
+title: Converter tipos de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ca79a13146df59b0c7159de112feee3ec478249d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015100"
 ---
 # <a name="converting-data-types"></a>Convertendo tipos de dados
@@ -28,13 +28,13 @@ O [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] permite que você es
 |---------|---------------|  
 |[Tipos de dados do SQL Server padrão](../../connect/php/default-sql-server-data-types.md)|Fornece informações sobre os tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] padrão ao enviar dados para o servidor.|  
 |[Tipos de dados padrão do PHP](../../connect/php/default-php-data-types.md)|Fornece informações sobre os tipos de dados padrão do PHP ao recuperar dados do servidor.|  
-|[Como especificar tipos de dados do SQL Server](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|Demonstra como especificar tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao enviar dados para o servidor.|  
-|[Como especificar tipos de dados do PHP](../../connect/php/how-to-specify-php-data-types.md)|Demonstra como especificar tipos de dados do PHP ao recuperar dados do servidor.|  
-|[Como enviar e recuperar dados UTF-8 usando o suporte interno a UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|Demonstra como usar o suporte interno do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] para dados UTF-8.<br /><br />O suporte para caracteres UTF-8 foi adicionado à versão 1.1 do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|  
-|[Como enviar e recuperar dados ASCII em Linux e macOS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Demonstra como usar [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]o suporte do para dados ASCII no Linux ou MacOS.<br /><br />O [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]suporte para caracteres ASCII em ambientes não Windows foi adicionado na versão 5,2 do.|
+|[Como: especificar tipos de dados do SQL Server](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|Demonstra como especificar tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao enviar dados para o servidor.|  
+|[Como: especificar tipos de dados do PHP](../../connect/php/how-to-specify-php-data-types.md)|Demonstra como especificar tipos de dados do PHP ao recuperar dados do servidor.|  
+|[Como: enviar e recuperar dados UTF-8 usando o suporte interno a UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|Demonstra como usar o suporte interno do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] para dados UTF-8.<br /><br />O suporte para caracteres UTF-8 foi adicionado à versão 1.1 do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|  
+|[Como: enviar e recuperar dados ASCII em Linux e macOS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Demonstra como usar o suporte do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] para dados ASCII no Linux ou macOS.<br /><br />O suporte para caracteres ASCII em ambientes não Windows foi adicionado na versão 5.2 do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|
   
 ## <a name="see-also"></a>Consulte Também  
-[Guia de programação para o Microsoft Drivers para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guia de programação do Microsoft Drivers para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 

@@ -9,13 +9,13 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66499558"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: criando um relatório de formato livre (Construtor de Relatórios)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Criando um Relatório de Formato Livre (Construtor de Relatórios)
 Neste tutorial, você cria um relatório paginado que atua como um boletim informativo. Cada página exibe um texto estático, visuais de resumo e dados de vendas de exemplo detalhados.
 
 ![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
@@ -48,11 +48,11 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
   
 1.  No painel Dados do Relatório, clique em **Nova** > **Fonte de Dados**.  
   
-2.  Na caixa **Nome** , digite: **ListDataSource**  
+2.  Na caixa **Nome**, digite: **ListDataSource**  
   
 3.  Clique em **Usar uma conexão inserida no meu relatório**.  
   
-4.  Verifique se o tipo de conexão é Microsoft SQL Server e, em seguida, na caixa **Cadeia de conexão**, digite: **Fonte de Dados = \<servername>**  
+4.  Verifique se o tipo de conexão é Microsoft SQL Server e, na caixa **Cadeia de conexão** , digite: **Fonte de Dados = \<nomedoservidor>**  
   
     **\<servername>** , por exemplo, Report001, especifica um computador no qual há uma instância do Mecanismo de Banco de Dados do SQL Server instalada. Como os dados deste relatório não são extraídos de um banco de dados SQL Server, você não precisa incluir o nome de um banco de dados. O banco de dados padrão no servidor especificado é usado apenas para analisar a consulta.  
   
@@ -64,7 +64,7 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
   
 1.  No painel Dados do Relatório, clique em **Novo** > **Conjunto de Dados**.  
   
-2.  Na caixa **Nome** , digite: **ListDataset**.  
+2.  Na caixa **Nome**, digite: **ListDataset**.  
   
 3.  Clique em **Usar um conjunto de dados inserido em meu relatório**e verifique se a fonte de dados é **ListDataSource**.  
   
@@ -199,9 +199,9 @@ Você pode adicionar caixas de texto para exibir um texto estático que é repet
   
 2.  Na guia **Inserir** > **Caixa de Texto**. Clique no canto superior esquerdo da lista, dentro do retângulo que você adicionou anteriormente, e arraste para criar a caixa de texto com 9,76 centímetros de largura e 12,70 centímetros de altura.  
   
-3.  Com o cursor na caixa de texto, digite: **Boletim informativo para** . Inclua um espaço após a palavra “para”, para separar o texto do campo que será adicionado na próxima etapa.   
+3.  Com o cursor na caixa de texto e digite: **Boletim informativo para** . Inclua um espaço após a palavra “para”, para separar o texto do campo que será adicionado na próxima etapa.   
   
-    ![Adicionar texto do cabeçalho do boletim informativo](../reporting-services/media/tutorial-newsletterfor.png "Adicionar texto do cabeçalho do boletim informativo")  
+    ![Adicionar texto do título do boletim informativo](../reporting-services/media/tutorial-newsletterfor.png "Adicionar texto do título do boletim informativo")  
   
 4.  Arraste o campo `[Territory]` de ListDataSet no painel Dados do Relatório até a caixa de texto e coloque-o após “Boletim informativo para”.  
   
@@ -215,7 +215,7 @@ Você pode adicionar caixas de texto para exibir um texto estático que é repet
     *  **20 pt**.
     *  **Tomate**.  
   
-9. Coloque o cursor abaixo do texto que você digitou na etapa 3 e digite: **Hello** com um espaço após a palavra para separar o texto e o campo que será adicionado na próxima etapa.  
+9. Posicione o cursor abaixo do texto que você digitou na etapa 3 e digite: **Olá** com um espaço após a palavra para separar o texto e o campo que você adicionará na próxima etapa.  
  
 10. Arraste o campo `[FullName]` de ListDataSet no painel Dados do Relatório até a caixa de texto, coloque-o após “Hello”, e digite uma vírgula (,).  
    
@@ -244,7 +244,7 @@ Você pode adicionar caixas de texto para exibir um texto estático que é repet
       *  **10 pt**.
       *  **Black**.  
  
-20. Coloque o cursor dentro da caixa de texto, abaixo do texto sem sentido e digite: **Parabéns pelo seu total de vendas de**, com um espaço após a palavra para separar o texto e o campo que será adicionado na próxima etapa. 
+20. Coloque o cursor dentro da caixa de texto, abaixo do texto sem sentido, e digite: **Parabéns pelo seu total de vendas de**, com um espaço após a palavra para separar o texto e o campo que será adicionado na próxima etapa. 
   
 21. Arraste o campo Sales até a caixa de texto, coloque-o depois do texto que você digitou na etapa anterior e digite um ponto de exclamação (!).  
 
@@ -295,13 +295,13 @@ Use o Assistente de Nova Tabela e Matriz para adicionar uma tabela ao relatório
   
 5.  Repita a etapa 3 para SalesDate, Quantity e Sales. Posicione SalesDate abaixo de Product, Quantity abaixo de SalesDate e Sales abaixo de SalesDate.  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
 7.  Na página **Escolha o layout** , exiba o layout da tabela.  
   
     A tabela é simples: cinco colunas sem nenhum grupo de linhas nem de colunas. Por não haver nenhum grupo, as opções de layout relacionadas aos grupos não estão disponíveis. Você atualizará manualmente a tabela para incluir um total no tutorial posteriormente.  
   
-8.  Clique em **Avançar**.  
+8.  Clique em **Próximo**.  
   
 9. Clique em **Concluir**.  
   
@@ -345,7 +345,7 @@ Neste tutorial, salve o relatório em um servidor de relatório. Se você não t
   
 4.  Em **Nome**, substitua o nome padrão por **SalesInformationByTerritory**.  
   
-5.  Clique em **Salvar**.  
+5.  Clique em **Save** (Salvar).  
   
 O relatório será salvo no servidor de relatório. O nome do servidor de relatório ao qual você está conectado é exibido na barra de status da parte inferior da janela.  
   
@@ -357,7 +357,7 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
   
 3.  Em **Nome**, substitua o nome padrão por **SalesInformationByTerritory**.  
   
-4.  Clique em **Salvar**.  
+4.  Clique em **Save** (Salvar).  
   
 ## <a name="Line"></a>7. (Opcional) Adicionar uma linha para separar áreas do relatório  
 Adicione uma linha para separar as áreas editoriais e detalhadas do relatório.  
@@ -405,12 +405,12 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
   
 9. Arraste o gráfico para dentro do retângulo.  
    
-10. Selecione o título do gráfico e digite: **Quantidades Vendidas do Produto**.  
+10. Selecione o título e o tipo do gráfico: **Quantidades Vendidas do Produto**.  
   
 12. Na guia **Início** > **Fonte**, crie o título:
-    * **Fonte** **Interface do usuário do Sego Seminegrito**.
+    * **Conte** **Segoe UI Semibold**.
     * **Tamanho** **12 pt**.
-    * **Cor** **Black**.  
+    * **Cor** **Preta**.  
 
 13. Clique com o botão direito do mouse na legenda > **Propriedades da Legenda**.
 
@@ -444,12 +444,12 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
   
 9. Arraste o gráfico para dentro do retângulo, abaixo do gráfico de pizza.  
    
-10. Selecione o título do gráfico e digite: **Vendas de Produtos**.  
+10. Selecione o título e o tipo do gráfico: **Vendas do Produto**.  
   
 12. Na guia **Início** > **Fonte**, crie o título:
-    * **Fonte** **Interface do usuário do Sego Seminegrito**.
+    * **Conte** **Segoe UI Semibold**.
     * **Tamanho** **12 pt**.
-    * **Cor** **Black**.  
+    * **Cor** **Preta**.  
   
 15. Clique com o botão direito do mouse na legenda e, em seguida, clique em **Excluir Legenda**.  
   
@@ -497,7 +497,7 @@ O relatório agora exibe dados de vendas resumidos em gráficos de pizza e de co
   
 
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
 Isso conclui o tutorial sobre como criar um relatório de forma livre.  
   
 Para obter mais informações sobre listas, consulte: 

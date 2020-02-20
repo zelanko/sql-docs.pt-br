@@ -16,10 +16,10 @@ ms.assetid: e6b6cfe2-b7c4-4d41-8e09-c68b5086a503
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 12da04a9aa4c3f818960c8683d66e0ca1f1fc31c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984051"
 ---
 # <a name="getdate-method-int-sqlserverresultset"></a>Método getDate (int) (SQLServerResultSet)
@@ -34,7 +34,7 @@ ms.locfileid: "67984051"
 public java.sql.Date getDate(int columnIndex)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnIndex*  
   
  Um **int** que indica o índice de coluna.  
@@ -45,7 +45,7 @@ public java.sql.Date getDate(int columnIndex)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getDate é especificado pelo método getDate na interface java.sql.ResultSet.  
   
  Esse método retorna uma parte de data válida de um tipo de dados datetime ou smalldatetime do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], com a parte de hora definida como a linha de base de hora do Java de 00:00 (meia-noite).  

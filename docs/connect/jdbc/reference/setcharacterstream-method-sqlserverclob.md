@@ -16,10 +16,10 @@ ms.assetid: c02778f2-6681-4a84-a58b-2bcfac4233e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da842fbc6240b072c7fe907aaa344d8d2ff1c6e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974656"
 ---
 # <a name="setcharacterstream-method-sqlserverclob"></a>Método setCharacterStream (SQLServerClob)
@@ -34,7 +34,7 @@ ms.locfileid: "67974656"
 public java.io.Writer setCharacterStream(long pos)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *pos*  
   
  A posição em que a gravação deve ser iniciada no objeto CLOB.  
@@ -45,8 +45,8 @@ public java.io.Writer setCharacterStream(long pos)
 ## <a name="exceptions"></a>Exceções  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- Esse método setCharacterStream é especificado pelo método setCharacterStream na interface java. Sql. Clob.  
+## <a name="remarks"></a>Comentários  
+ Esse método setCharacterStream é especificado pelo método setCharacterStream na interface java.sql.Clob.  
   
  Os dados de caractere no CLOB são substituídos pelo gravador, iniciando na posição especificada, e podem ultrapassar o comprimento inicial do CLOB. A especificação de um valor posição +1 acrescentará caracteres. A especificação de um valor posição +2 ou maior (ou zero ou menos) lançará um erro de posição.  
   

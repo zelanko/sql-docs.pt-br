@@ -1,7 +1,5 @@
 ---
-title: Construir projetos de banco de dados usando o SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Criar projetos de banco de dados
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -15,16 +13,20 @@ helpviewer_keywords:
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 07dfe77992cb5e0e8011424d9cea878063a18943
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 503bf99e9300a155a3521f52f8fecd18d3d65005
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267610"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243958"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>Construir projetos de banco de dados usando o SQL Server Management Studio
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Um projeto de script de banco de dados é um conjunto organizado de scripts, informações de conexão e modelos que são todos associados a um banco de dados ou a uma parte de um banco de dados. [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oferece o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para administrar e criar bancos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no contexto de um projeto de script. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] inclui os designers, editores, guias e assistentes para ajudar os usuários a desenvolver, implantar e manter bancos de dados.  
+
+Um projeto de script de banco de dados é um conjunto organizado de scripts, informações de conexão e modelos que são todos associados a um banco de dados ou a uma parte de um banco de dados. O [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para administrar e criar bancos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no contexto de um projeto de script. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] inclui os designers, editores, guias e assistentes para ajudar os usuários a desenvolver, implantar e manter bancos de dados.  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] é um pacote de ferramentas administrativas para gerenciar os componentes que pertencem ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Esse ambiente integrado permite aos usuários executar uma variedade de tarefas, como backup de dados, edição de consultas e automação de funções comuns dentro de uma única interface.  
@@ -60,7 +62,7 @@ O Gerenciador de Soluções é um utilitário para armazenar e reabrir soluçõe
   
 -   Salvar informações de conexão com scripts.  
   
-O Gerenciador de Soluções é uma ferramenta para desenvolvedores que criam e reutilizam scripts relacionados ao mesmo projeto. Se uma tarefa semelhante for necessária posteriormente, você poderá usar um grupo de scripts que foram armazenados em um projeto. Se você já tiver criado aplicativos usando o [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], verá que o Gerenciador de Soluções é bastante familiar.  
+O Gerenciador de Soluções é uma ferramenta para desenvolvedores que criam e reutilizam scripts relacionados ao mesmo projeto. Se uma tarefa semelhante for necessária posteriormente, você poderá usar um grupo de scripts que foram armazenados em um projeto. Caso já tenha criado aplicativos usando o [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], verá que o Gerenciador de Soluções é bem familiar.  
   
 Uma solução consiste em um ou mais projetos de script. Um projeto consiste em um ou mais scripts ou conexões. Um projeto também pode incluir arquivos não script.  
   

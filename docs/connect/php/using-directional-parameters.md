@@ -1,5 +1,5 @@
 ---
-title: Usando parâmetros direcionais | Microsoft Docs
+title: Usar parâmetros direcionais | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: cfe35e14-49cb-45df-b444-addbb94a773f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43de9c84bcb1356961d2e5fa0b0c48d05a72de3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935793"
 ---
 # <a name="using-directional-parameters"></a>Usando parâmetros direcionais
@@ -28,9 +28,9 @@ Os tópicos nesta seção descrevem como usar parâmetros direcionais ao chamar 
   
 |Tópico|Descrição|  
 |---------|---------------|  
-|[Como especificar a direção do parâmetro com o driver SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)|Demonstra como especificar a direção dos parâmetros ao chamar um procedimento armazenado.|  
-|[Como recuperar parâmetros de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|Demonstra como chamar um procedimento armazenado com um parâmetro de saída e como recuperar seu valor.|  
-|[Como recuperar parâmetros de entrada e de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)|Demonstra como chamar um procedimento armazenado com um parâmetro de entrada/saída e como recuperar seu valor.|  
+|[Como: Especificar a direção do parâmetro usando o driver SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)|Demonstra como especificar a direção dos parâmetros ao chamar um procedimento armazenado.|  
+|[Como: Recuperar parâmetros de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|Demonstra como chamar um procedimento armazenado com um parâmetro de saída e como recuperar seu valor.|  
+|[Como: Recuperar parâmetros de entrada e de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)|Demonstra como chamar um procedimento armazenado com um parâmetro de entrada/saída e como recuperar seu valor.|  
   
 ## <a name="see-also"></a>Consulte Também  
 [Recuperando dados](../../connect/php/retrieving-data.md)  

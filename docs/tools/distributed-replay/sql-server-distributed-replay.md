@@ -1,26 +1,26 @@
 ---
-title: SQL Server Distributed Replay | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: SQL Server Distributed Replay
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual
-helpviewer_keywords:
-- Distributed Replay
-- SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f71b19977746ecc52817fa0128d6f0a8e681ff5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: c52325045cd21d0eb11edef8b0664d14c292e729
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949915"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74993422"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay ajuda a avaliar o impacto de atualizações futuras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Também é possível usar esse recurso para ajudar a avaliar o impacto das atualizações de hardware e sistemas operacionais e ajuste do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+
+O recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay ajuda a avaliar o impacto de atualizações futuras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Também é possível usar esse recurso para ajudar a avaliar o impacto das atualizações de hardware e sistemas operacionais e ajuste do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="benefits-of-distributed-replay"></a>Benefícios do Distributed Replay  
  De modo semelhante ao [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], você pode usar o Distributed Replay para reproduzir um rastreamento capturado em um ambiente de teste atualizado. Diferentemente do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], o Distributed Replay não está limitado à reprodução da carga de trabalho de um único computador.  
@@ -46,9 +46,9 @@ ms.locfileid: "67949915"
 ## <a name="distributed-replay-concepts"></a>Conceitos do Distributed Replay  
  Os seguintes componentes fazem parte do ambiente do Distributed Replay:  
   
--   **ferramenta de administração Distributed Replay**: um aplicativo de console, **DReplay.exe**, usado para se comunicar com o controlador de reprodução distribuída. Use a ferramenta de administração para controlar a reprodução distribuída.  
+-   **Ferramenta de administração do Distributed Replay**: um aplicativo de console, **DReplay.exe**, usado para se comunicar com o controlador de reprodução distribuída. Use a ferramenta de administração para controlar a reprodução distribuída.  
   
--   **controlador Distributed Replay**: um computador que executa o serviço Windows denominado controlador Distributed Replay do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O controlador Distributed Replay orquestra as ações dos clientes de reprodução distribuída. Cada ambiente de Distributed Replay pode conter apenas uma instância de controlador.  
+-   **Controlador do Distributed Replay**: um computador que executa o serviço Windows denominado controlador Distributed Replay do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O controlador Distributed Replay orquestra as ações dos clientes de reprodução distribuída. Cada ambiente de Distributed Replay pode conter apenas uma instância de controlador.  
   
 -   **Clientes do Distributed Replay**: um ou mais computadores (físicos ou virtuais) que executam o serviço Windows denominado Cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay. Os clientes do Distributed Replay trabalham juntos para simular cargas de trabalho em uma instância do SQL Server do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pode haver um ou mais clientes em cada ambiente do Distributed Replay.  
   
@@ -64,10 +64,10 @@ ms.locfileid: "67949915"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Descreve como configurar o Distributed Replay.|[Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)|  
+|Descreve como configurar o Distributed Replay.|[Configurar o Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)|  
 |Descreve como preparar os dados de rastreamento de entrada.|[Preparar os dados de rastreamento de entrada](../../tools/distributed-replay/prepare-the-input-trace-data.md)|  
 |Descreve como reproduzir dados de rastreamento.|[Reproduzir dados de rastreamento](../../tools/distributed-replay/replay-trace-data.md)|  
-|Descreve como revisar os resultados de dados de rastreamento de Distributed Replay.|[Revisar os resultados da reprodução](../../tools/distributed-replay/review-the-replay-results.md)|  
+|Descreve como revisar os resultados de dados de rastreamento de Distributed Replay.|[Examinar os resultados da reprodução](../../tools/distributed-replay/review-the-replay-results.md)|  
 |Descreve como usar a ferramenta de administração para iniciar, monitorar e cancelar operações no controlador.|[Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)|  
   
 ## <a name="see-also"></a>Consulte Também  

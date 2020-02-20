@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ba5f48b7788b6ebec63149175568777e6659017f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 2aef2ed82803af2a6ca1966cde5f5bf6675ca016
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725064"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901841"
 ---
 # <a name="explore-and-visualize-the-data"></a>Explorar e visualizar os dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -172,7 +172,7 @@ O procedimento armazenado retorna um objeto `figure` do Python serializado como 
     print("The plots are saved in directory: ",os.getcwd())
     ```
 
-    **Como usar a autenticação do Windows:**
+    **Usando a autenticação do Windows:**
 
     ```python
     %matplotlib notebook

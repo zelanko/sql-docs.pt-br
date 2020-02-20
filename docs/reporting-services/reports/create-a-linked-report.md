@@ -11,10 +11,10 @@ ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6dad85f35be1d7fb26f4c9eef6241e01baadb692
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492793"
 ---
 # <a name="create-a-linked-report"></a>Criar um relatório vinculado
@@ -28,21 +28,21 @@ ms.locfileid: "67492793"
   
 ## <a name="to-create-a-linked-report"></a>Para criar um relatório vinculado  
   
-1. No portal da web, navegue até o relatório desejado, clique com botão direito nele e selecione **gerenciar** no menu suspenso.
+1. No portal da Web, navegue até o relatório desejado, clique com o botão direito do mouse nele e selecione **Gerenciar** no menu suspenso.
 
-2. Sobre o **Manage <reportname>**  página, selecione **criar relatório vinculado**.  
+2. Na página **Gerenciar <reportname>** , selecione **Criar relatório vinculado**.  
   
-3. Insira um nome para o novo relatório vinculado. Opcionalmente, insira uma descrição.  
+3. Insira um nome para o novo relatório vinculado. Insira uma descrição opcionalmente.  
   
-4. Para selecionar uma pasta diferente para o relatório, selecione o botão de reticências (...) à direita da vírgula ***local***.  Navegue até a nova pasta para o relatório e selecione **selecionar**. Se você não selecionar uma pasta diferente, o relatório vinculado é criado na pasta atual.  
+4. Para selecionar uma pasta diferente do relatório, selecione o botão de reticências (...) à direita de ***Localização***.  Navegue até a nova pasta do relatório e selecione **Selecionar**. Se você não selecionar uma pasta diferente, o relatório vinculado será criado na pasta atual.  
   
 5. Selecione **Criar**. O relatório vinculado é criado.  
 
-6. Sob **Advanced**, selecione uma opção diferente **tempo limite do relatório** valor se desejado e, em seguida, selecione **aplicar** para salvar as alterações.
+6. Em **Avançado**, selecione um valor **Tempo limite de relatório** diferente se desejado e selecione **Aplicar** para salvar as alterações.
   
      O ícone de um relatório vinculado difere de outros itens gerenciados por um servidor de relatório. O ícone a seguir indica um relatório vinculado:  
   
-     ![Ícone Relatório vinculado](../../reporting-services/report-server/media/hlp-16linked.gif "Ícone Relatório vinculado")  
+     ![Ícone do relatório vinculado](../../reporting-services/report-server/media/hlp-16linked.gif "Ícone do relatório vinculado")  
   
 ## <a name="see-also"></a>Confira também  
 

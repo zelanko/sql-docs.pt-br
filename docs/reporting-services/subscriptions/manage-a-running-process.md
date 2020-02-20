@@ -26,10 +26,10 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579011"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
@@ -65,9 +65,9 @@ ms.locfileid: "65579011"
 -   [Gerenciando trabalhos programaticamente](#bkmk_programmatically)  
   
 ##  <a name="bkmk_native"></a> Exibir e cancelar trabalhos (modo nativo)  
- Você pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para exibir ou cancelar um trabalho que está em execução no servidor de relatório. Atualize a página para recuperar uma lista dos trabalhos que estão em execução no momento ou para obter o status atualizado do trabalho do banco de dados do servidor de relatório. Ao se conectar a um servidor de relatório no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], você pode abrir uma pasta Trabalhos para exibir uma lista dos relatórios que estão sendo processados atualmente no computador do servidor de relatório. As informações de status de cada trabalho são exibidas na página Propriedades do Trabalho. Você pode exibir as informações de status de todos os trabalhos abrindo a caixa de diálogo Cancelar Trabalhos do Servidor de Relatório.  
+ Você pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para ver ou cancelar um trabalho que está em execução no servidor de relatório. Atualize a página para recuperar uma lista dos trabalhos que estão em execução no momento ou para obter o status atualizado do trabalho do banco de dados do servidor de relatório. Ao se conectar a um servidor de relatório no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], você pode abrir uma pasta Trabalhos para exibir uma lista dos relatórios que estão sendo processados atualmente no computador do servidor de relatório. As informações de status de cada trabalho são exibidas na página Propriedades do Trabalho. Você pode exibir as informações de status de todos os trabalhos abrindo a caixa de diálogo Cancelar Trabalhos do Servidor de Relatório.  
   
- Você pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para exibir ou cancelar um trabalho que está em execução no servidor de relatório. Atualize a página para recuperar uma lista dos trabalhos que estão em execução no momento ou para obter o status atualizado do trabalho do banco de dados do servidor de relatório. Ao se conectar a um servidor de relatório no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], você pode abrir uma pasta Trabalhos para exibir uma lista dos relatórios que estão sendo processados atualmente no computador do servidor de relatório. As informações de status de cada trabalho são exibidas na página Propriedades do Trabalho. Você pode exibir as informações de status de todos os trabalhos abrindo a caixa de diálogo Cancelar Trabalhos do Servidor de Relatório.  
+ Você pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para ver ou cancelar um trabalho que está em execução no servidor de relatório. Atualize a página para recuperar uma lista dos trabalhos que estão em execução no momento ou para obter o status atualizado do trabalho do banco de dados do servidor de relatório. Ao se conectar a um servidor de relatório no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], você pode abrir uma pasta Trabalhos para exibir uma lista dos relatórios que estão sendo processados atualmente no computador do servidor de relatório. As informações de status de cada trabalho são exibidas na página Propriedades do Trabalho. Você pode exibir as informações de status de todos os trabalhos abrindo a caixa de diálogo Cancelar Trabalhos do Servidor de Relatório.  
   
  Não é possível usar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para listar ou cancelar a geração de modelos, o processamento de modelos ou assinaturas controladas por dados. O Reporting Services não permite cancelar a geração ou o processamento de modelos. Porém, você pode cancelar assinaturas controladas por dados usando as instruções fornecidas neste tópico.  
   
@@ -118,10 +118,10 @@ ms.locfileid: "65579011"
   
 ## <a name="see-also"></a>Consulte Também  
  [Cancelar Trabalhos do Servidor de Relatório &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
- [Propriedades do Trabalho &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
+ [Propriedades do trabalho &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
  [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Monitorando o desempenho do servidor de relatório](../../reporting-services/report-server/monitoring-report-server-performance.md)  
+ [Monitorar o desempenho do servidor de relatório](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

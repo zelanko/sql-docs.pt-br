@@ -1,0 +1,1 @@
+<Token>**APLICA-SE A:** ![sim](media/yes.png).NET Framework ![sim](media/yes.png).NET Core ![não](media/no.png).NET Standard </Token>

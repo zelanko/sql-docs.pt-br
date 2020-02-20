@@ -14,16 +14,16 @@ ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 40e4fb9280d7ff9d05412966487997f507fb3dc7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65503093"
 ---
 # <a name="feature-reference-reporting-services"></a>Referência de recurso (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclui várias ferramentas e aplicativos que podem ser usados para criar, gerenciar e exibir relatórios. Esta seção fornece tópicos específicos que descrevem as caixas de diálogo, as páginas da Web e os assistentes dessas ferramentas e desses aplicativos.  
   
- Para acessar um tópico da interface do usuário enquanto a ferramenta ou o aplicativo estiver em execução, pressione F1 ou clique em **Ajuda** enquanto a caixa de diálogo, a página da Web ou o assistente estiver aberto. Para obter mais informações sobre como iniciar as ferramentas do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Tutorial: Como localizar e iniciar as ferramentas do Reporting Services &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
+ Para acessar um tópico da interface do usuário enquanto a ferramenta ou o aplicativo estiver em execução, pressione F1 ou clique em **Ajuda** enquanto a caixa de diálogo, a página da Web ou o assistente estiver aberto. Para obter mais informações sobre como iniciar as ferramentas do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], confira [Tutorial: Como localizar e iniciar as Ferramentas do SSRS &#40;Reporting Services &#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Ajuda F1 do Designer de Relatórios](../reporting-services/tools/report-designer-f1-help.md)  
@@ -42,7 +42,7 @@ ms.locfileid: "65503093"
  [Conceitos do Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-concepts-ssrs.md)   
  [Relatórios do Reporting Services &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
- [Guia de Introdução do Construtor de Relatórios](https://www.microsoft.com/download/en/details.aspx?id=29072)   
+ [Introdução do Construtor de Relatórios](https://www.microsoft.com/download/en/details.aspx?id=29072)   
  [Criando e implementando relatórios usando o Construtor de Relatórios 1.0](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

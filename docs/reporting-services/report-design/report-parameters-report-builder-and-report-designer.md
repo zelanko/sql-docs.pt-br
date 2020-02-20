@@ -11,10 +11,10 @@ ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
 ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68941146"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parâmetros de relatório (Construtor de Relatórios e Designer de Relatórios)
@@ -33,7 +33,7 @@ ms.locfileid: "68941146"
 
 Este tópico descreve os usos comuns dos parâmetros de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , as propriedades que você pode definir e muito mais. Parâmetros de relatório o habilitam a controlar dados de relatório, conectar relatórios relacionados e variar a apresentação do relatório. Você pode usar parâmetros de relatório em relatórios paginados criados no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e no Designer de Relatórios e, também, em relatórios móveis criados no [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Leia mais sobre os [Conceitos de parâmetros de relatório](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
 
-Para tentar adicionar um parâmetro a um relatório, consulte [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
+Para tentar adicionar um parâmetro a um relatório por conta própria, confira [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
 
 ## <a name="bkmk_Common_Uses_for_Parameters"></a> Usos comuns para parâmetros
 
@@ -96,7 +96,7 @@ Você pode criar parâmetros de relatório de algumas maneiras diferentes.
   
  Adicionar uma consulta de conjunto de dados que contenha variáveis ou um procedimento armazenado de banco de dados que contenha parâmetros de entrada. Um parâmetro de conjunto de dados é criado para cada variável ou parâmetro de entrada e um parâmetro de relatório é criado para cada parâmetro de conjunto de dados.  
   
- ![Propriedades do conjunto de dados de parâmetro do Construtor de Relatórios](../../reporting-services/report-design/media/ssrb-paramdatasetprops.png "Propriedades do conjunto de dados de parâmetro do Construtor de Relatórios")  
+ ![Propriedades do conjunto de dados do parâmetro do Construtor de Relatórios](../../reporting-services/report-design/media/ssrb-paramdatasetprops.png "Propriedades do conjunto de dados do parâmetro do Construtor de Relatórios")  
   
  Esta imagem do Construtor de Relatórios mostra:  
   
@@ -149,14 +149,14 @@ Crie um parâmetro manualmente a partir do painel de Dados do Relatório. É pos
 |Propriedade|Descrição|  
 |--------------|-----------------|  
 |Nome|Digite um nome com diferenciação de maiúsculas e minúsculas para o parâmetro. O nome deve começar com uma letra e pode conter letras, números e sublinhado (_). O nome não pode conter espaços. Para parâmetros gerados automaticamente, o nome corresponde ao parâmetro na consulta de conjunto de dados. Por padrão, parâmetros criados manualmente são semelhantes a ReportParameter1.|  
-|Aviso|O texto que aparece ao lado do parâmetro na barra de ferramentas do visualizador de relatórios.|  
+|Prompt|O texto que aparece ao lado do parâmetro na barra de ferramentas do visualizador de relatórios.|  
 |Tipo de dados|Um parâmetro de relatório deve ser de um destes tipos de dados:<br /><br /> **Boolean**. O usuário seleciona Verdadeiro ou Falso usando um botão de opção.<br /><br /> **DateTime**. O usuário seleciona uma data usando um controle de calendário.<br /><br /> **Integer**. O usuário digita valores em uma caixa de texto.<br /><br /> **Float**. O usuário digita valores em uma caixa de texto.<br /><br /> **Text**. O usuário digita valores em uma caixa de texto.<br /><br /> Quando os valores disponíveis são definidos para um parâmetro, o usuário escolhe valores em uma lista suspensa, mesmo que o tipo de dados seja **DateTime**.<br /><br /> Para obter mais informações sobre os tipos de dados de relatório, consulte [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
 |Permitir valor em branco|Selecione esta opção se o valor do parâmetro puder ser uma cadeia de caracteres vazia ou ficar em branco.<br /><br /> Se você especificar valores válidos para um parâmetro e desejar que um valor em branco seja um dos valores válidos, deverá incluí-lo como um dos valores que especificar. A seleção desta opção não inclui automaticamente um espaço em branco para valores disponíveis.|  
 |Permitir valor nulo|Selecione esta opção se o valor do parâmetro puder ser nulo.<br /><br /> Se você especificar valores válidos para um parâmetro e desejar que um valor nulo seja um dos valores válidos, deverá incluir nulo como um dos valores que especificar. A seleção desta opção não inclui um valor nulo automaticamente nos valores disponíveis.|  
 |Permitir diversos valores|Forneça valores disponíveis para criar uma lista suspensa na qual seus usuários possam fazer seleções. Essa é uma boa maneira de assegurar que somente valores válidos sejam enviados na consulta de conjunto de dados.<br /><br /> Selecione esta opção se o valor do parâmetro puder ter diversos valores exibidos em uma lista suspensa. Valores nulos são permitidos. Quando essa opção é selecionada, as caixas marcadas são adicionadas à lista de valores disponíveis em uma lista suspensa de parâmetros. A parte superior da lista inclui uma caixa de seleção para **Selecionar Tudo**. Os usuários podem marcar os valores desejados.<br /><br /> Se os dados que fornecem valores forem alterados rapidamente, a lista que o usuário verá talvez não seja a mais atual.|  
-|Visível|Selecione esta opção para exibir o parâmetro de relatório na parte superior do relatório quando ele for executado. Esta opção permite que os usuários selecionem valores de parâmetro em tempo de execução.|  
+|Visible|Selecione esta opção para exibir o parâmetro de relatório na parte superior do relatório quando ele for executado. Esta opção permite que os usuários selecionem valores de parâmetro em tempo de execução.|  
 |Hidden|Selecione essa opção para ocultar o parâmetro no relatório publicado. Os valores de parâmetro de relatório ainda podem ser definidos em uma URL de relatório, em uma definição de assinatura ou no servidor de relatório.|  
-|Internal|Selecione essa opção para ocultar o parâmetro de relatório. No relatório publicado, o parâmetro de relatório só pode ser exibido na definição do relatório.|  
+|Interna|Selecione essa opção para ocultar o parâmetro de relatório. No relatório publicado, o parâmetro de relatório só pode ser exibido na definição do relatório.|  
 |Valores disponíveis|Se você especificou valores disponíveis para um parâmetro, os valores válidos sempre aparecerão como uma lista suspensa. Por exemplo, se você fornecer valores disponíveis para um parâmetro **DateTime** , uma lista suspensa para datas aparecerá no painel de parâmetro em vez de um controle de calendário.<br /><br /> Para assegurar que uma lista de valores seja consistente em um relatório e sub-relatórios, você poderá definir uma opção na fonte de dados para usar uma única transação para todas as consultas nos conjuntos de dados que forem associados a uma fonte de dados.<br /><br /> **Observação de segurança** Em qualquer relatório que inclui um parâmetro do tipo de dados **Text**, use uma lista de valores disponíveis (também conhecida como uma lista de valores válidos) e verifique se todos os usuários que executam o relatório têm somente as permissões necessárias para exibir os dados do relatório. Para obter mais informações, consulte [Segurança &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/security-report-builder.md).|  
 |Valores padrão|Defina os valores padrão usando uma consulta ou uma lista estática.<br /><br /> Quando cada parâmetro tem um valor padrão válido, o relatório é executado automaticamente na primeira exibição.|  
 |Avançado|Defina o atributo de definição de relatório **UsedInQuery**, um valor que indica se o parâmetro em questão afeta direta ou indiretamente os dados de um relatório.<br /><br /> **Determinar automaticamente quando atualizar**<br /> Escolha esta opção para que o processador de relatório determine uma configuração para este valor. O valor será **True** se o processador de relatório detectar uma consulta de conjunto de dados com uma referência direta ou indireta a este parâmetro, ou se o relatório tiver sub-relatórios.<br /><br /> **Atualizar sempre**<br /> Escolha esta opção quando o parâmetro de relatório for usado direta ou indiretamente em uma consulta de conjunto de dados ou em uma expressão de parâmetro. Esta opção define **UsedInQuery** como True.<br /><br /> **Nunca atualizar**<br /> Escolha esta opção quando o parâmetro de relatório não for usado direta ou indiretamente em uma consulta de conjunto de dados ou em uma expressão de parâmetro. Esta opção define **UsedInQuery** como False.<br /><br /> **Cuidado** Use **Nunca Atualizar** com cuidado. No servidor de relatório, **UsedInQuery** é usado para ajudar a controlar as opções de cache para os dados de relatórios e para relatórios renderizados, além de opções de parâmetro para relatórios de instantâneo. Se você definir incorretamente a opção **Nunca Atualizar** , é possível que os dados de relatórios ou os relatórios incorretos sejam armazenados em cache, ou que um relatório de instantâneo apresente dados inconsistentes. Para obter mais informações, consulte [Linguagem RDL &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md).|  

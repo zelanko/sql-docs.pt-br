@@ -1,5 +1,5 @@
 ---
-title: Como usar a autenticação NTLM para se conectar ao SQL Server | Microsoft Docs
+title: Usando a autenticação NTLM para se conectar ao SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -13,34 +13,34 @@ author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
 ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026099"
 ---
-# <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Como usar a autenticação NTLM para se conectar ao SQL Server
+# <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Usando a autenticação NTLM para se conectar ao SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] permite que um aplicativo use a propriedade de conexão **AuthenticationScheme** para indicar que deseja se conectar a um banco de dados usando a autenticação NTLM v2. 
+O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] permite que um aplicativo use a propriedade de conexão **authenticationScheme** para indicar que ele deseja se conectar a um banco de dados usando a Autenticação NTLM v2. 
 
-As propriedades a seguir também são usadas para autenticação NTLM:
+As seguintes propriedades também são usadas para autenticação NTLM:
 
-- **domínio = nome_do_domínio** adicional
-- **user = nome de usuário**
+- **domínio = domainName** (opcional)
+- **usuário = userName**
 - **senha = password**
 - **integratedSecurity = true**
 
-Além do **domínio**, as outras propriedades são obrigatórias, o driver gerará um erro se algum estiver ausente quando a propriedade **NTLM** AuthenticationScheme for usada. 
+Além do **domínio**, as outras propriedades são obrigatórias, o driver gerará um erro se alguma delas estiver ausente quando a propriedade authenticationScheme do **NTLM** for usada. 
 
-Para obter mais informações sobre propriedades de conexão, consulte [definindo as propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md). Para obter mais informações sobre o protocolo de autenticação NTLM da Microsoft, consulte [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm).
+Para obter mais informações sobre as propriedades de conexão, confira [Configuração das propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md). Para obter mais informações sobre o protocolo de autenticação NTLM da Microsoft, confira [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
-Consulte [segurança de rede: nível de autenticação do LAN Manager](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) para obter a descrição das configurações do SQL Server, que controlam o comportamento da autenticação NTLM. 
+Confira [Segurança de rede: Nível de autenticação do LAN Manager](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) para encontrar a descrição das configurações do SQL Server, que controlam o comportamento da autenticação NTLM. 
 
-## <a name="logging"></a>Log
+## <a name="logging"></a>Registro em log
 
 Um novo agente foi adicionado para dar suporte à autenticação NTLM: com.microsoft.sqlserver.jdbc.internals.NTLMAuthentication. Para obter mais informações, veja [Rastreamento de operação do driver](../../connect/jdbc/tracing-driver-operation.md).
 
@@ -72,9 +72,9 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 Um SPN (nome da entidade de serviço) é o nome pelo qual um cliente identifica exclusivamente uma instância de um serviço.
 
-Você pode especificar o SPN usando a propriedade de conexão **serverSpn** ou deixar que o driver o crie para você (o padrão). Essa propriedade está no formato: "MSSQLSvc/fqdn:port\@REALM", em que fqdn é o nome de domínio totalmente qualificado, port é o número da porta e REALM é o realm do SQL Server em letras maiúsculas. A parte do Realm dessa propriedade é opcional, pois o realm padrão é o mesmo que o realm do servidor.
+Você pode especificar o SPN usando a propriedade de conexão **serverSpn** ou deixar que o driver o crie para você (o padrão). Esta propriedade está no formato de: "MSSQLSvc/fqdn:port\@REALM" em que fqdn é o nome de domínio totalmente qualificado, porta é o número da porta e REALM é o realm do SQL Server em letras maiúsculas. A parte do realm dessa propriedade é opcional, pois o realm padrão é o mesmo que o do servidor.
 
-Por exemplo, seu SPN pode ser semelhante a: "MSSQLSvc/some-Server. zzz. Corp. contoso. com: 1433"
+Por exemplo, o SPN pode ser: "MSSQLSvc/some-server.zzz.corp.contoso.com:1433"
 
 Para obter mais informações sobre SPNs (nomes de entidade de serviço), consulte:
 
@@ -83,19 +83,19 @@ Para obter mais informações sobre SPNs (nomes de entidade de serviço), consul
 > [!NOTE]  
 > O atributo de conexão serverSpn é compatível somente com os Microsoft JDBC Drivers 4.2 e superiores.
 
-> Antes da versão 6,2 do driver JDBC, você precisaria definir explicitamente o **serverSpn**. A partir da versão 6,2, o driver poderá criar o **serverSpn** por padrão, embora também seja possível usar o **serverSpn** explicitamente.
+> Antes da versão 6.2 do driver JDBC, você precisa definir explicitamente o **serverSpn**. Começando com a versão 6.2, o driver poderia criar o **serverSpn** por padrão, embora seja possível usar o **serverSpn** explicitamente também.
 
 ## <a name="security-risks"></a>Riscos à segurança
 
-O protocolo NTLM é um protocolo de autenticação antigo com várias vulnerabilidades, que representam um risco de segurança. Ele é baseado em um esquema criptográfico relativamente fraco e é vulnerável a vários ataques. Ele é substituído pelo Kerberos, que é muito mais seguro e recomendado. A autenticação NTLM só deve ser usada em um ambiente confiável seguro ou quando o Kerberos não pode ser usado.
+O protocolo NTLM é um protocolo de autenticação antigo com várias vulnerabilidades, que representam um risco de segurança. Ele é baseado em um esquema criptográfico relativamente fraco e é vulnerável a vários ataques. Ele é substituído pelo Kerberos, que é muito mais seguro e recomendado. A autenticação NTLM deve ser usada apenas em um ambiente confiável seguro ou quando o Kerberos não pode ser usado.
 
-O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] só dá suporte a NTLM v2, que tem algumas melhorias de segurança em relação ao protocolo v1 original. O It'ss também é recomendado para habilitar a proteção estendida ou usar a criptografia SSL para aumentar a segurança. 
+O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] é compatível apenas com NTLM v2, que tem alguns aprimoramentos de segurança em relação ao protocolo v1 original. Também é recomendado habilitar a Proteção Estendida ou usar a Criptografia SSL para aumentar a segurança. 
 
-Para obter mais informações sobre como habilitar a proteção estendida e o, consulte:
+Para obter mais informações sobre como habilitar a Proteção Estendida, confira:
 
 - [Conectar-se ao mecanismo de banco de dados usando proteção estendida](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)
 
-Para obter mais informações sobre como se conectar com a criptografia SSL, consulte:
+Para obter mais informações sobre a conexão com a Criptografia SSL, confira:
 
 - [Conectando-se com criptografia SSL](../../connect/jdbc/connecting-with-ssl-encryption.md)
 

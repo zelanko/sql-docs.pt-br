@@ -9,10 +9,10 @@ ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 61263520f5d519c2b908c753b72c1d5ec7f67e13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580135"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Manter os cabeçalhos visíveis ao rolar por um relatório (Construtor de Relatórios e SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "65580135"
   
  A imagem a seguir mostra uma tabela.  
   
- ![Tabela](../../reporting-services/report-design/media/table.png "Tabela")  
+ ![Table](../../reporting-services/report-design/media/table.png "Tabela")  
   
  A imagem a seguir mostra uma matriz.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "65580135"
   
 1.  Na superfície de design, clique em qualquer lugar na tabela para exibir membros estáticos, bem como grupos, no painel de agrupamento.  
   
-     ![Painel Agrupamento](../../reporting-services/report-design/media/grouppane-updated.png "Painel Agrupamento")  
+     ![Painel de agrupamento](../../reporting-services/report-design/media/grouppane-updated.png "Painel de agrupamento")  
   
      O painel Grupos de Linhas exibe os membros hierárquicos estáticos e dinâmicos para a hierarquia de grupos de linhas, e o painel Grupos de colunas mostra uma exibição semelhante para a hierarquia de grupos de coluna.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "65580135"
   
 3.  Clique no membro estático (linha ou coluna) que deverá permanecer visível durante a rolagem. O painel Propriedades exibe as propriedades de **Membro de Tablix** .  
   
-     ![Propriedades de membro Tablix](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Propriedades de membro Tablix")  
+     ![Propriedades do membro Tablix](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Propriedades do membro Tablix")  
   
 4.  No painel Propriedades, defina **FixedData** como **True**.  
   

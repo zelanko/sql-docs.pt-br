@@ -1,10 +1,9 @@
 ---
-title: Propriedades da tabela (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Propriedades da tabela
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d40b20c75b6ce9c86767ee655e6e7992ed32cff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b53bed28d05d490b9b6d603260917f7ffbb4d047
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261571"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242177"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propriedades da tabela (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +42,7 @@ Exibe o nome da tabela. Para editar o nome, digite-o na caixa de texto.
 > [!CAUTION]  
 > Se as consultas, exibições, funções definidas pelo usuário, procedimentos armazenados ou programas existentes se referirem à tabela, a modificação do nome tornará esses objetivos inválidos.  
   
-**Nome do Banco de Dados**  
+**Database Name**  
 Mostra o nome da fonte dos dados para a tabela selecionada.  
   
 **Descrição**  
@@ -59,10 +60,10 @@ Expande para mostrar propriedades para **Coluna de identidade**, **Indexável**e
 **Coluna de identidade**  
 Mostra a coluna usada como a coluna de identidade da tabela. Para alterar a coluna de identidade, escolha a partir da lista suspensa. Apenas colunas de um tipo de dados numérico serão exibidas na lista.  
   
-**Indexável**  
+**É Indexável**  
 Mostra se a tabela pode ser indexada. Se a tabela não for indexável pode ser porque você não é o proprietário da tabela ou porque a tabela contém colunas com tipos de dados de texto, ntext ou imagem.  
   
-**É Replicado**  
+**É Replicável**  
 Mostra se a tabela é replicada em outro local.  
   
 **Categoria de especificação espaço de dados regular**  
@@ -71,10 +72,10 @@ Expande para mostrar propriedades para **(Tipo de Espaço de Dados)** , **Grupo 
 **(Tipo de Espaço de Dados)**  
 Mostra se essa tabela é armazenada usando um grupo de arquivos ou esquema de partição.  
   
-**Grupo de Arquivos ou Nome do Esquema de Partição**  
+**Grupo de arquivos ou Nome de esquema de partição**  
 Mostra o nome do grupo de arquivos ou esquema de partição.  
   
-**Lista de Colunas de Partição**  
+**Lista de Colunas da Partição**  
 Fornece acesso à caixa de diálogo **Lista de Colunas de Partição** .  
   
 **Coluna GUID de Linha**  
@@ -84,5 +85,5 @@ Mostra a coluna usada pelo Microsoft SQL Server como a coluna ROWGUID da tabela.
 Fornece uma lista suspensa da qual você pode escolher o grupo de arquivos para colunas que têm tipos de dados de texto ou de imagem. Se a tabela é armazenada usando-se um esquema de partição, deixe esse espaço em branco.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Projetar tabelas (Ferramentas de Banco de Dados Visual)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Criar tabelas](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

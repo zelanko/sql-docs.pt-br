@@ -16,10 +16,10 @@ ms.assetid: eb709f6b-64e1-4d0c-a704-290891627dd7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ec61791897011781cbe93776bb58bfdd144bd6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978294"
 ---
 # <a name="geturl-method-javalangstring"></a>Método getURL (java.lang.String)
@@ -34,18 +34,18 @@ ms.locfileid: "67978294"
 public java.net.URL getURL(java.lang.String s)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *s*  
   
  Uma **String** que contém o nome do parâmetro.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um objeto de URL.  
+ Um objeto URL.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getURL é especificado pelo método getURL na interface java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte Também  

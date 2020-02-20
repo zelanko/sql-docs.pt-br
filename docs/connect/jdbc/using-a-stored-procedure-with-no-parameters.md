@@ -11,10 +11,10 @@ ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01f59f44d42af1d0880df48b043080525d9821ee
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027018"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>Como usar um procedimento armazenado sem parâmetros
@@ -28,7 +28,7 @@ Ao usar o driver JDBC para chamar um procedimento armazenado sem parâmetros, vo
 `{call procedure-name}`
 
 > [!NOTE]  
-> Para obter mais informações sobre as sequências de escape do SQL, consulte [usando sequências de escape do SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Para obter mais informações sobre as sequências de escape do SQL, confira [Como usar sequências de escape do SQL](../../connect/jdbc/using-sql-escape-sequences.md).
 
 Como exemplo, crie o seguinte procedimento armazenado no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:
 

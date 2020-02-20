@@ -1,95 +1,27 @@
 ---
-title: Conexões de dados, fontes de dados, cadeias de conexão (Construtor de Relatórios e SSRS) | Microsoft Docs
-ms.date: 10/10/2019
+title: Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS | Microsoft Docs
+ms.date: 11/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0f4ff968ae8d6090756cc5751fda2aadbec3f98a
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
-ms.translationtype: MTE75
+ms.openlocfilehash: 73bf9e24ffb42ef93547097c53b5838a22292fda
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313773"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190919"
 ---
-# <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Conexões de dados, fontes de dados e cadeias de conexão (Construtor de Relatórios e SSRS)
+# <a name="create-data-connection-strings---report-builder--ssrs"></a>Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
-
-  Para incluir dados em relatórios paginados [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , primeiro você deve criar *fontes de dados* e *conjuntos de dados*. Este tópico explica o tipo de fontes de dados, como criar fontes de dados e informações importantes relacionadas às credenciais de fontes de dados. Uma fonte de dados inclui o tipo da fonte de dados, informações da conexão e o tipo de credenciais a serem usadas. Há dois tipos de fontes de dados: inserida ou compartilhada. Um fonte de dados inserida é definida no relatório e usada apenas por esse relatório. Uma fonte de dados compartilhada é definida independentemente de um relatório e pode ser usada por vários relatórios. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
-
-## <a name="data-in-includessrbnoversionincludesssrbnoversionmd"></a>Dados em [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
- ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
-  
-1.  **Fontes de dados no painel de Dados do Relatório** Uma fonte de dados é exibida no painel de Dados do Relatório depois que você cria uma fonte de dados inserida ou adiciona uma fonte de dados compartilhada.  
-  
-2.  **Caixa de diálogo Conexão** Use a caixa de diálogo Conexão para criar ou colar uma cadeia de conexão.  
-  
-3.  **Informações de conexão de dados** A cadeia de conexão é transmitida à extensão de dados.  
-  
-4.  **Credenciais** As credenciais são gerenciadas separadamente da cadeia de conexão.  
-  
-5.  **Extensão de dados/Provedor de Dados** A conexão com os dados pode ser feita por meio de várias camadas de acesso a dados.  
-  
-6.  **Fontes de dados internas** Recupera dados de bancos de dados relacionais, bancos de dados multidimensionais, listas do SharePoint, serviços Web ou modelos de relatório.  
-
-##  <a name="bkmk_data_sources"></a> Fontes de dados inseridas e compartilhadas  
- As fontes de dados compartilhadas são úteis quando você usa fontes de dados frequentemente. É recomendado usar fontes de dados compartilhadas o máximo possível. Elas facilitam o acesso e o gerenciamento dos relatórios, além de ajudar a proteger os relatórios e as fontes de dados acessados. Se precisar de uma fonte de dados compartilhada, peça ao administrador do sistema para criar uma para você.  
-  
- Uma fonte de dados inserida é uma conexão de dados salva na definição de relatório. As informações de conexão de fonte de dados inserida só podem ser usadas pelo relatório no qual a fonte de dados está inserida. Para definir e gerenciar fontes de dados inseridas, use a caixa de diálogo **Propriedades da Fonte de Dados** .  
-  
- A diferença entre as fontes de dados inseridas e compartilhadas está em como elas são criadas, armazenadas e gerenciadas.  
-  
--   No Designer de Relatórios, crie fontes de dados inseridas e compartilhadas como parte de um projeto do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Você pode controlar se elas devem ser usadas localmente para visualização ou implantadas como parte do projeto para um servidor de relatório ou site do SharePoint. Você pode usar extensões de dados personalizadas que foram instaladas em seu computador e no servidor de relatório ou site do SharePoint onde você implanta seus relatórios.  
-  
-     Os administradores do sistema podem instalar e configurar extensões de processamento de dados adicionais e provedores de dados do .NET Framework. Para obter mais informações, consulte [Extensões de processamento de dados e provedores de dados do .NET Framework &#40;SSRS&#41;](../../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md).  
-  
-     Os desenvolvedores podem usar a API <xref:Microsoft.ReportingServices.DataProcessing> para criar extensões de processamento de dados para dar suporte a tipos de fonte de dados adicionais.  
-  
--   No [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], navegue para um servidor de relatório ou site do SharePoint e selecione fontes de dados compartilhadas ou crie fontes de dados inseridas no relatório. Não é possível criar uma fonte de dados compartilhada no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Você não pode usar extensões de dados personalizadas no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
-  
- A tabela seguinte resume as diferenças entre fontes de dados inseridas e compartilhadas.  
-  
-|Descrição|Inserida<br /><br /> fonte de dados|Compartilhado<br /><br /> fonte de dados|  
-|-----------------|------------------------------|----------------------------|  
-|A conexão de dados é inserida na definição do relatório.|![Disponível](../../reporting-services/report-data/media/greencheck.gif "Disponível")||  
-|O ponteiro para a conexão de dados no servidor de relatório é inserido na definição do relatório.||![Disponível](../../reporting-services/report-data/media/greencheck.gif "Disponível")|  
-|Gerenciada no servidor de relatório|![Disponível](../../reporting-services/report-data/media/greencheck.gif "Disponível")|![Disponível](../../reporting-services/report-data/media/greencheck.gif "Disponível")|  
-|Obrigatória para conjuntos de dados compartilhados||![Disponível](../../reporting-services/report-data/media/greencheck.gif "Disponível")|  
-|Obrigatória para componentes||![Disponível](../../reporting-services/report-data/media/greencheck.gif "Disponível")|  
+  Para incluir dados em relatórios paginados [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], primeiro você deve criar uma *cadeia de conexão* para a *fonte de dados*. Este artigo explica como criar cadeias de conexão de dados e tem informações importantes sobre as credenciais de fonte de dados. Uma fonte de dados inclui o tipo da fonte de dados, informações da conexão e o tipo de credenciais a serem usadas. Para saber mais detalhes, confira [Introdução aos dados de relatório no SSRS (SQL Server Reporting Services)](report-data-ssrs.md).
   
 ##  <a name="bkmk_DataConnections"></a> Extensões de dados internas  
- As extensões de dados padrão no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluem os tipos de conexão de dados a seguir:  
-  
--   Microsoft SQL Server e Banco de Dados SQL do Microsoft Azure
-  
--   Microsoft SQL Server Analysis Services  
-  
--   Lista do Microsoft SharePoint  
-  
--   [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
-  
--   Microsoft SQL Server Parallel Data Warehouse  
-  
--   OLE DB  
-  
--   Oracle  
-  
--   SAP NetWeaver BI  
-  
--   Hyperion Essbase  
-  
--   Teradata  
-  
--   XML  
-  
--   ODBC  
-
- Para obter uma lista completa de fontes de dados e versões aos quais o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte, consulte [Fontes de dados com suporte no Reporting Services e &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ As extensões de dados padrão no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluem Microsoft SQL Server, Banco de Dados SQL do Microsoft Azure e Microsoft SQL Server Analysis Services. Para obter uma lista completa de fontes de dados e versões aos quais o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte, consulte [Fontes de dados com suporte no Reporting Services e &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="bkmk_connection_examples"></a> Exemplos comuns de cadeia de conexão  
  Cadeias de conexão são a representação de texto de propriedades de conexão para um provedor de dados. A tabela a seguir lista exemplos de cadeias de conexão para vários tipos de conexão de dados.  
@@ -97,11 +29,11 @@ ms.locfileid: "72313773"
  > [!NOTE]  
 >  [Connectionstrings.com](https://www.connectionstrings.com/) é outro recurso para obter exemplos de cadeias de conexão. 
   
-|**Data source**|**Exemplo**|**Descrição**|  
+|**Fonte de dados**|**Exemplo**|**Descrição**|  
 |---------------------|-----------------|---------------------|  
 |Banco de dados do SQL Server no servidor local|`data source="(local)";initial catalog=AdventureWorks`|Defina o tipo de fonte de dados como **Microsoft SQL Server**. Para obter mais informações, consulte [Tipo de conexão do SQL Server &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).|  
 |Instância do SQL Server<br /><br /> Banco de Dados|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|Defina o tipo de fonte de dados como **Microsoft SQL Server**.|  
-|Banco de dados SQL do Azure|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Defina o tipo de fonte de dados como **Banco de Dados SQL do Microsoft Azure**. Para obter mais informações, consulte [Tipo de conexão do SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
+|Banco de Dados SQL do Azure|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Defina o tipo de fonte de dados como **Banco de Dados SQL do Microsoft Azure**. Para obter mais informações, consulte [Tipo de conexão do SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Defina o tipo de fonte de dados como **Microsoft SQL Server Parallel Data Warehouse**. Para obter mais informações, consulte [Tipo de conexão do SQL Server Parallel Data Warehouse &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Banco de dados do Analysis Services no servidor local|`data source=localhost;initial catalog=Adventure Works DW`|Defina o tipo de fonte de dados como **Microsoft SQL Server Analysis Services**. Para obter mais informações, consulte [Tipo de conexão do Analysis Services para MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) ou [Tipo de conexão do Analysis Services para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
 |Banco de dados modelo de tabela do Analysis Services com perspectiva de vendas|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Defina o tipo de fonte de dados como **Microsoft SQL Server Analysis Services**. Especifique o nome da perspectiva na configuração de cube=. Para obter mais informações, consulte [Perspectivas &#40;SSAS de Tabela&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|  
@@ -109,20 +41,20 @@ ms.locfileid: "72313773"
 |Fonte de dados do SAP NetWeaver BI|`DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Defina o tipo de fonte de dados como **SAP NetWeaver Bl**. Para obter mais informações, consulte [Tipo de conexão SAP NetWeaver BI &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md).|  
 |Fonte de dados do Hyperion Essbase|`Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Defina o tipo de fonte de dados como **Hyperion Essbase**. Para obter mais informações, consulte [Tipo de conexão Hyperion Essbase &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md).|  
 |Fonte de dados do Teradata|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Defina o tipo de fonte de dados como **Teradata**. A cadeia de conexão é um endereço IP no formulário de quatro campos, em que cada campo pode ter de um a três dígitos. Para obter mais informações, consulte [Tipo de conexão Teradata &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
-|Fonte de dados do Teradata|`Database=` *\<database name>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN *>* `;Use X Views=False;Restrict to Default Database=True`|Defina o tipo de fonte de dados como **Teradata**, semelhante ao exemplo anterior. Use apenas o banco de dados padrão especificado na marca Database e não descubra automaticamente relações de dados.|  
+|Fonte de dados do Teradata|`Database=` *\<nome do banco de dados>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN *>* `;Use X Views=False;Restrict to Default Database=True`|Defina o tipo de fonte de dados como **Teradata**, semelhante ao exemplo anterior. Use apenas o banco de dados padrão especificado na marca Database e não descubra automaticamente relações de dados.|  
 |Fonte de dados XML, serviço Web|`data source=https://adventure-works.com/results.aspx`|Defina o tipo de fonte de dados como **XML**. A cadeia de conexão é uma URL para um serviço Web com suporte para WSDL. Para obter mais informações, consulte [Tipo de conexão XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md).|  
 |Fonte de dados XML, documento XML|`https://localhost/XML/Customers.xml`|Defina o tipo de fonte de dados como **XML**. A cadeia de conexão é uma URL para o documento XML. 
 |Fonte de dados XML, documento XML inserido|*Empty (vazio)*|Defina o tipo de fonte de dados como **XML**. Os dados XML são inseridos na definição do relatório.|  
 |Lista do SharePoint|`data source=https://MySharePointWeb/MySharePointSite/`|Definir o tipo de fonte de dados como **lista do SharePoint**.|  
-| Conjunto de Power BI Premium (começando com Reporting Services 2019) | Server = powerbi://API.powerbi.com/v1.0/MyOrg/<workspacename>; catálogo inicial = <YourDatasetName> | Defina o tipo de fonte de dados como **Microsoft SQL Server Analysis Services**. |
+| Conjunto de dados do Power BI Premium (do Reporting Services 2019 em diante) | Server=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;catálogo inicial = <YourDatasetName> | Defina o tipo de fonte de dados como **Microsoft SQL Server Analysis Services**. |
 
   
  Se não for possível conectar a um servidor de relatório que use **localhost**, verifique se o protocolo de rede TCP/IP está habilitado. Para obter mais informações, consulte [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md).  
   
- Para obter mais informações sobre as configurações necessárias para se conectar a esses tipos de fonte de dados, consulte o tópico de conexão de dados específicos em [Adicionar dados de fontes de dados externas e &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) ou [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ Para saber mais sobre as configurações necessárias para se conectar a esses tipos de fonte de dados, confira o artigo de conexão de dados específicos em [Adicionar dados de fontes de dados externas &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) ou [Fontes de dados compatíveis com o Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="bkmk_special_password_characters"></a> Caracteres especiais em uma senha  
- Se você configurar a fonte de dados ODBC ou SQL para solicitar uma senha ou para incluir uma senha na cadeia de conexão e o usuário inserir a senha com caracteres especiais, como sinais de pontuação, alguns drivers de fonte de dados subjacentes não conseguirão validar os caracteres especiais. Quando você processar o relatório, a mensagem "Senha inválida" poderá indicar esse problema. Se não for possível alterar a senha, você poderá trabalhar com o administrador do banco de dados para armazenar as credenciais apropriadas no servidor como parte de um DSN (nome da fonte de dados) do sistema ODBC. Para obter mais informações, consulte "OdbcConnection.ConnectionString" na documentação do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
+ Se você configurar a fonte de dados ODBC ou SQL para solicitar uma senha ou para incluir uma senha na cadeia de conexão e o usuário inserir a senha com caracteres especiais, como sinais de pontuação, alguns drivers de fonte de dados subjacentes não conseguirão validar os caracteres especiais. Quando você processar o relatório, a mensagem "Senha inválida" poderá indicar esse problema. Se não for possível alterar a senha, você poderá trabalhar com o administrador do banco de dados para armazenar as credenciais apropriadas no servidor como parte de um DSN (nome da fonte de dados) do sistema ODBC. Para saber mais, confira [OdbcConnection.ConnectionString](https://docs.microsoft.com/dotnet/api/system.data.odbc.odbcconnection.connectionstring) na documentação do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 ##  <a name="bkmk_Expressions_in_connection_strings"></a> Cadeias de conexão baseadas em expressão  
  Cadeias de conexão baseadas em expressão são avaliadas em tempo de execução. Por exemplo, você pode especificar a fonte de dados como um parâmetro, incluir a referência ao parâmetro na cadeia de conexão e permitir que o usuário escolha a fonte de dados para o relatório. Por exemplo, suponha que uma empresa multinacional tem servidores de dados em vários países. Com uma cadeia de conexão baseada em expressão, um usuário que está executando um relatório de vendas pode selecionar uma fonte de dados para um país específico antes de executar o relatório.  
@@ -149,9 +81,10 @@ ms.locfileid: "72313773"
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Criar, modificar e excluir fontes de dados compartilhadas](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+[Introdução aos dados de relatório no SSRS (SQL Server Reporting Services)](report-data-ssrs.md)
+[Criar e modificar fontes de dados compartilhadas](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
 [Criar e modificar fontes de dados inseridas](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)   
 [Definir propriedades de implantação](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

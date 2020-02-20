@@ -1,5 +1,5 @@
 ---
-title: Exemplo de tipo de dados SQLXML | Microsoft Docs
+title: Exemplo de tipos de dados SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df376535f8f6c6a7d98e1744a2d2b70e813d400a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028280"
 ---
-# <a name="sqlxml-data-type-sample"></a>Exemplo de tipo de dados SQLXML
+# <a name="sqlxml-data-type-sample"></a>exemplo de tipo de dados SQLXML
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -38,7 +38,7 @@ O arquivo de código desta amostra chama-se SqlXmlDataType.java e pode ser encon
 
 ## <a name="requirements"></a>Requisitos
 
-Para executar este aplicativo de exemplo, é necessário definir o classpath para incluir o arquivo sqljdbc4.jar. Se uma entrada para sqljdbc4.jar estiver ausente no classpath, o aplicativo de exemplo gerará a exceção "Classe não encontrada". Para obter mais informações sobre como definir o classpath, consulte [usando o driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).
+Para executar este aplicativo de exemplo, é necessário definir o classpath para incluir o arquivo sqljdbc4.jar. Se uma entrada para sqljdbc4.jar estiver ausente no classpath, o aplicativo de exemplo gerará a exceção "Classe não encontrada". Para obter mais informações sobre como definir o caminho de classe, confira [Como usar o JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 Além disso, você precisa ter acesso ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] para executar este aplicativo de exemplo.
 

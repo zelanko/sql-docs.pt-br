@@ -1,6 +1,7 @@
 ---
-title: Adicionar uma ação de expandir ou recolher a um item (Construtor de Relatórios e SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+title: Adicionar uma ação de expandir ou recolher (Construtor de Relatórios e SSRS) | Microsoft Docs
+description: É possível habilitar um usuário para expandir ou recolher itens de maneira interativa em um relatório paginado. Ou para expandir ou recolher linhas e colunas associadas a um grupo para uma tabela ou matriz.
+ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23a4cddc93108a3e45828e79822eaf5f76f0fba7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 776326093518aa33f8f031e4c4d6675791acf82d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65582131"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242546"
 ---
-# <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Adicionar uma ação de expandir ou recolher a um item (Construtor de Relatórios e SSRS)
-  Você pode permitir que um usuário expanda ou recolha interativamente itens de relatório ou expanda ou recolha linhas e colunas associadas a um grupo para uma tabela ou matriz. Para permitir que os usuários expandam ou recolham um item, defina as propriedades de visibilidade do item. A definição de trabalhos de visibilidade em um visualizador de relatórios HTML às vezes é chamada de uma ação de *detalhamento* .  
+# <a name="add-an-expand-or-collapse-action-to-an-item-report-builder--ssrs"></a>Adicionar uma ação de expandir ou recolher a um item (Construtor de Relatórios e SSRS)
+  É possível habilitar um usuário para expandir ou recolher itens de maneira interativa em um relatório paginado. Ou para expandir ou recolher linhas e colunas associadas a um grupo para uma tabela ou matriz. Para permitir que os usuários expandam ou recolham um item, defina as propriedades de visibilidade do item. A definição de trabalhos de visibilidade em um visualizador de relatórios HTML às vezes é chamada de uma ação de *detalhamento* .  
   
  Na exibição de design de relatório, você especifica o nome da caixa de texto no relatório onde deseja exibir os ícones de alternância para expandir e recolher. No relatório renderizado, a caixa de texto exibe um sinal de mais (+) ou de menos (-) além de seu conteúdo. Quando o usuário clica na alternância, a exibição do relatório é atualizada para mostrar ou ocultar o item de relatório nas configurações de visibilidade atuais dos itens do relatório.  
   
@@ -54,18 +55,18 @@ ms.locfileid: "65582131"
   
      Na imagem a seguir, o grupo de linhas Cor está configurado para permitir que os usuários expandam e recolham linhas associadas.  
   
-     ![Configurando um grupo de linhas para ser expandido](../../reporting-services/report-design/media/expandcollapse-confighiddentoggleitemwithnumbers.png "Configurando um grupo de linhas para ser expandido")  
+     ![Como configurar um grupo de linhas a ser expandido](../../reporting-services/report-design/media/expandcollapse-confighiddentoggleitemwithnumbers.png "Como configurar um grupo de linhas a ser expandido")  
   
     > [!NOTE]  
     >  A caixa de texto com a imagem de alternância não pode ser o grupo de linhas ou de colunas do qual você deseja ocultar as linhas ou colunas associadas. Ela deve estar no mesmo grupo que o item que está sendo ocultado ou em um grupo ancestral. Por exemplo, para alternar a visibilidade de linhas associadas a um grupo filho, selecione uma caixa de texto em uma linha associada ao grupo pai.  
   
 6.  Para testar a alternância, execute o relatório e clique na caixa de texto com a imagem de alternância. A exibição do relatório é atualizada para mostrar grupos de linhas e de colunas com a visibilidade alternada.  
   
-     ![Executando um relatório com um grupo de linhas expansível](../../reporting-services/report-design/media/expandcollapse-runreport-rowgroup.png "Executando um relatório com um grupo de linhas expansível")  
+     ![Executar relatório com um grupo de linhas expansível](../../reporting-services/report-design/media/expandcollapse-runreport-rowgroup.png "Executar relatório com um grupo de linhas expansível")  
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Para adicionar uma ação de expansão e recolhimento a um item de relatório  
   
-1.  No modo de exibição de Design de relatório, clique com o botão direito do mouse no item de relatório a ser mostrado ou ocultado e, em seguida, clique em **Propriedades** de *report item>\<* . A caixa de diálogo **Propriedades** de *report item>\<* do item de relatório é aberta.  
+1.  No modo de exibição de Design de relatório, clique com o botão direito do mouse no item de relatório para mostrar ou ocultar. Em seguida, clique em *\<item de relatório >* **Propriedades**. A caixa de diálogo *\<item de relatório>* **Propriedades** para o item de relatório abrirá.  
   
 2.  Clique em **Visibilidade**.  
   
@@ -84,14 +85,14 @@ ms.locfileid: "65582131"
   
      Na imagem a seguir, a tabela está configurada para permitir que os usuários expandam e recolham-na. A exibição da tabela é alternada pela caixa de texto Tabela de Produtos.  
   
-     ![Configurar uma tabela de relatório para ser expandida](../../reporting-services/report-design/media/expandcollapse-reporttable.png "Configurar uma tabela de relatório para ser expandida")  
+     ![Configure uma tabela de relatório a ser expandida](../../reporting-services/report-design/media/expandcollapse-reporttable.png "Configure uma tabela de relatório a ser expandida")  
   
     > [!NOTE]  
     >  A caixa de texto que você escolher deve estar no escopo atual ou de contenção para esse item de relatório (até e incluindo o corpo do relatório). Por exemplo, para alternar a visibilidade de um gráfico, selecione uma caixa de texto que esteja no mesmo escopo de contenção que o gráfico. Por exemplo, o corpo do relatório ou um retângulo. A caixa de texto deve estar na mesma ou em uma hierarquia de contêiner superior.  
   
 5.  Para testar a alternância, execute o relatório e clique na caixa de texto com a imagem de alternância. A exibição do relatório é atualizada para mostrar itens de relatório com a visibilidade alternada.  
   
-     ![Executando um relatório com uma tabela de expansão](../../reporting-services/report-design/media/expandcollapse-runreport-reporttable.png "Executando um relatório com uma tabela de expansão")  
+     ![Executar relatório com uma tabela de expansão](../../reporting-services/report-design/media/expandcollapse-runreport-reporttable.png "Executar relatório com uma tabela de expansão")  
   
 ## <a name="see-also"></a>Consulte Também  
  [Ação de análise detalhada &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   

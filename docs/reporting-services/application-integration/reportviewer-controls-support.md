@@ -1,20 +1,21 @@
 ---
-title: Suporte para versões do branch atual do Visualizador de Relatórios
+title: Compatibilidade com versões de controle do Visualizador de Relatórios
+description: O controle do Microsoft Report Viewer é compatível com o SQL Server Reporting Services e o Servidor de Relatórios do Power BI que seguem a política de ciclo de vida de suporte moderna da Microsoft.
 author: maggiesMSFT
+ms.custom: ''
 ms.author: maggies
 ms.reviewer: jonhp
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.custom: ''
 ms.date: 01/09/2019
-ms.openlocfilehash: b67b62ae0155355d4bd13ce67880c6fa3c5ed002
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 66691267ecdd2814cc84b2bfe544acce1d17ae82
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266944"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796876"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>Suporte para versões do branch atual do Visualizador de Relatórios
 

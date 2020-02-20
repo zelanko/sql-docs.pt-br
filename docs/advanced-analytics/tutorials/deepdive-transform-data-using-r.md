@@ -1,6 +1,6 @@
 ---
 title: Transformar dados usando o RevoScaleR
-description: Tutorial passo a passo sobre como transformar dados usando a linguagem R no SQL Server.
+description: 'Tutorial 9 do RevoScaleR: Como transformar dados usando a linguagem R no SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 773607c7800ed1d507aa721ca7cf86a03857ab8b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 3e8c28548ba4fa5f5ad661e3b7b0872ad166b812
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727164"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947179"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>Transformar dados usando o R (tutorial do SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lição faz parte do [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Este é o tutorial 9 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
-Nesta lição, aprenda sobre as funções do **RevoScaleR** para transformar os dados em vários estágios da análise.
+Neste tutorial, você aprenderá sobre as funções do **RevoScaleR** para transformar os dados em vários estágios da análise.
 
 > [!div class="checklist"]
 > * Use **rxDataStep** para criar e transformar um subconjunto de dados

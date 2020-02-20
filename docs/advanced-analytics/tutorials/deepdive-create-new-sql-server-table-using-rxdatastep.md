@@ -1,6 +1,6 @@
 ---
 title: Criar tabela usando rxDataStep
-description: Tutorial passo a passo sobre como criar uma tabela do SQL Server usando a linguagem R no SQL Server.
+description: 'Tutorial 11 do RevoScaleR: Como criar uma tabela do SQL Server usando a linguagem R no SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,28 +9,28 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f4ac51fc1affb4128abab017eb00cba4b56960fa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 99f693210b567523b74f851d1db68470cae2891d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727251"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947236"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Criar tabela do SQL Server usando rxDataStep (tutorial do SQL Server e do RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lição faz parte do [tutorial do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Este é o tutorial 11 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
-Nesta lição, você aprenderá a mover dados entre os quadros de dados na memória, o contexto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os arquivos locais.
+Neste tutorial, você aprenderá a mover dados entre os quadros de dados na memória, o contexto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os arquivos locais.
 
 > [!NOTE]
-> Esta lição usa um conjunto de dados diferente. O conjunto de dados de Atrasos em Companhias Aéreas é um conjunto de dados público que é amplamente usado para experiências de aprendizado de máquina. Os arquivos de dados usados neste exemplo estão disponíveis no mesmo diretório que outros exemplos de produto.
+> Este tutorial usa um conjunto de dados diferente. O conjunto de dados de Atrasos em Companhias Aéreas é um conjunto de dados público que é amplamente usado para experiências de aprendizado de máquina. Os arquivos de dados usados neste exemplo estão disponíveis no mesmo diretório que outros exemplos de produto.
 
 ## <a name="load-data-from-a-local-xdf-file"></a>Carregar dados de um arquivo XDF local
 
-Na primeira metade deste tutorial, você usou a função **RxTextData** para importar dados no R de um arquivo de texto e usou a função **RxDataStep** para mover os dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Na primeira metade desta série de tutoriais, você usou a função **RxTextData** para importar dados no R de um arquivo de texto e usou a função **RxDataStep** para mover os dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-Esta lição usa uma abordagem diferente e os dados de um arquivo salvo no [formato XDF](https://en.wikipedia.org/wiki/Extensible_Data_Format). Depois de fazer algumas transformações simples nos dados usando o arquivo XDF, salve os dados transformados em uma nova tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Este tutorial usa uma abordagem diferente e os dados de um arquivo salvo no [formato XDF](https://en.wikipedia.org/wiki/Extensible_Data_Format). Depois de fazer algumas transformações simples nos dados usando o arquivo XDF, salve os dados transformados em uma nova tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 **O que é XDF?**
 

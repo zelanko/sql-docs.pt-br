@@ -16,10 +16,10 @@ ms.assetid: 6967ba55-9c9a-4f6f-a4d2-8ee9c9a82c14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd2d46569386637b5082288b83268a80dac013e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953890"
 ---
 # <a name="getbigdecimal-method-javalangstring-int"></a>Método getBigDecimal (java.lang.String, int)
@@ -38,7 +38,7 @@ public java.math.BigDecimal getBigDecimal(java.lang.String sCol,
                                           int scale)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *sCol*  
   
  Uma **String** que contém o nome do parâmetro.  
@@ -53,8 +53,8 @@ public java.math.BigDecimal getBigDecimal(java.lang.String sCol,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getBigDecimal é especificado pelo método getBigDecimal na interface java. Sql. CallableStatement.  
+## <a name="remarks"></a>Comentários  
+ O método getBigDecimal é especificado pelo método getBigDecimal na interface java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getBigDecimal &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   

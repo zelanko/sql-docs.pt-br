@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de76ab165f201500399ff6c0585a49122d6b9cc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f30568da0ea6f8b937fd87a4891058b9d68949fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580660"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74957440"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Renderizando para HTML (Construtor de Relatórios e SSRS)
   A extensão de renderização HTML renderiza um relatório paginado no formato HTML. A extensão de renderização também pode produzir páginas HTML totalmente formadas ou fragmentos de HTML a serem inseridos em outras páginas HTML. Todo o HTML é gerado com a codificação UTF-8.  
@@ -79,11 +79,13 @@ ms.locfileid: "65580660"
 ### <a name="hyperlinks-and-drillthrough"></a>Hyperlinks e detalhamento  
  Os hiperlinks e links de detalhamento são renderizados como hiperlinks em itens de relatório usando as marcações de âncora HTML (\<a>) ao redor do item no qual elas estão definidas.  
   
-### <a name="search"></a>Pesquisa  
+### <a name="search"></a>Search  
  O recurso Pesquisar permite que os usuários procurem uma cadeia de caracteres de texto no relatório.  
   
  Uma funcionalidade adicional de pesquisa e localização é fornecida pelo controle Web Forms do ReportViewer.  
   
+##  <a name="FontsOnClient"></a> Fontes no computador cliente
+ Quando uma fonte personalizada é usada no relatório, o computador usado para exibir o relatório (o computador cliente) precisa ter a fonte personalizada instalada para o relatório ser exibido corretamente. Se a fonte não estiver instalada no computador cliente, o relatório exibirá uma fonte padrão do sistema em vez de a fonte personalizada.
   
 ##  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  
  Você pode alterar algumas configurações padrão para este processador, incluindo qual modo deve ser renderizado, alterando as configurações de informações de dispositivo: Para obter mais informações, consulte [Configurações de informações do dispositivo HTML](../../reporting-services/html-device-information-settings.md).  

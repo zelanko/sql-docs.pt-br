@@ -9,10 +9,10 @@ ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: aec3e79fbfbaf96475cf10457c9f21c8c3d78b6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581551"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Criar uma matriz (Construtor de Relatórios e SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "65581551"
   
  Após o design inicial, é possível continuar a desenvolver uma matriz para melhorar a experiência de exibição para o usuário. Para obter mais informações, consulte [Controlando a exibição da região de dados Tablix em uma página do relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
- Para começar rapidamente com matrizes, consulte [Tutorial: criação de um relatório de matriz &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md).  
+ Confira uma introdução rápida a matrizes no [Tutorial: Criar um relatório de matriz &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md).  
   
 > [!NOTE]  
 >  É possível publicar listas separadamente de um relatório como partes do relatório. Leia mais sobre [Partes de relatório (Construtor de Relatórios e SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -33,11 +33,11 @@ ms.locfileid: "65581551"
   
  Para descrever como configurar uma tabela do início ao fim, este tópico usa o modelo de matriz.  Inicialmente, a matriz tem um grupo de linhas, um grupo de colunas, uma célula de canto e uma célula de dados, conforme mostrado na figura a seguir.  
   
- ![Matriz em branco com 1 grupo de linhas e 1 grupo de colunas](../../reporting-services/report-design/media/rs-matrixtemplatenew.gif "Matriz em branco com 1 grupo de linhas e 1 grupo de colunas")  
+ ![Matriz em branco com 1 linha e 1 grupo de colunas](../../reporting-services/report-design/media/rs-matrixtemplatenew.gif "Matriz em branco com 1 linha e 1 grupo de colunas")  
   
  Quando você seleciona uma matriz na superfície de design, alças de linha e de coluna são exibidas, conforme mostrado na figura a seguir.  
   
- ![Nova Matriz adicionada por meio da Caixa de Ferramentas, selecionada](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nova Matriz adicionada por meio da Caixa de Ferramentas, selecionada")  
+ ![Nova Matriz adicionada da Caixa de Ferramentas, selecionada](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nova Matriz adicionada da Caixa de Ferramentas, selecionada")  
   
  Adicione grupos arrastando campos de conjuntos de dados para as áreas do Grupos de Linhas e Grupos de Colunas do painel Agrupamento. O primeiro campo arrastado para o painel de grupos de linhas ou de colunas substitui o grupo de padrão vazio inicial. Você pode aplicar formatação a cada célula, dependendo dos dados.  
   
@@ -65,11 +65,11 @@ ms.locfileid: "65581551"
   
  Quando o relatório é executado, os cabeçalhos das colunas dinâmicas são expandidos à direita (ou à esquerda, se a propriedade Direção da matriz estiver definida como RTL) resultando em uma coluna para cada valor de grupo exclusivo. As linhas dinâmicas são expandidas para baixo na página. Os dados exibidos nas células do corpo tablix são agregações baseadas nas interseções de grupos de linhas e de colunas, conforme mostrado na figura a seguir.  
   
- ![Matriz, grupos de linhas e colunas aninhadas com totais](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalsdesign.gif "Matriz, grupos de linhas e colunas aninhadas com totais")  
+ ![Matriz, linha aninhada e grupos de colunas com totais](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalsdesign.gif "Matriz, linha aninhada e grupos de colunas com totais")  
   
  Na visualização, o relatório é exibido como na figura a seguir.  
   
- ![Grupos aninhados na visualização](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalspreview.gif "Grupos aninhados na visualização")  
+ ![Grupos Aninhados na Visualização](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalspreview.gif "Grupos Aninhados na Visualização")  
   
  Para escrever expressões que especifiquem um escopo diferente do escopo padrão, você deve especificar o nome de um conjunto de dados, uma região de dados ou um grupo na função de agregação tudo. Para calcular a porcentagem de contribuição de cada categoria para os valores do grupo da categoria Vestuário, adicione uma coluna dentro do grupo Categoria ao lado da coluna Total, formate a caixa de texto para mostrar a porcentagem e adicione uma expressão que use o escopo padrão no numerador e o escopo do grupo Categoria no denominador, conforme mostrado no exemplo a seguir.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "65581551"
 ##  <a name="AddingAdjacentGroup"></a> Adicionando um grupo adjacente a uma matriz  
  Para adicionar um grupo adjacente com base em um único campo de conjunto de dados, use o menu de atalho no painel Agrupamento. Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). A figura a seguir mostra um grupo baseado em geografia e um grupo adjacente baseado em ano.  
   
- ![Grupos de colunas adjacentes para geografia e ano](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "Grupos de colunas adjacentes para geografia e ano")  
+ ![Grupos de colunas adjacentes para Geografia e Ano](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "Grupos de colunas adjacentes para Geografia e Ano")  
   
  Neste exemplo, a consulta filtrou valores de dados para incluir apenas os valores relativos à Europa e aos anos de 2003 e 2004. No entanto é possível definir filtros independentemente em cada grupo. Na visualização, o relatório é exibido como na figura a seguir.  
   

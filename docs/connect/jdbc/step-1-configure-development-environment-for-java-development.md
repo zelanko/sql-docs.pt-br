@@ -11,16 +11,16 @@ ms.assetid: a59cac14-32f5-4fa3-ad38-81a3e1e9d29c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0e9e7a1d440a724ed7c6415a3499bbc6db5688e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68004357"
 ---
-# <a name="step-1-configure-development-environment-for-java-development"></a>Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento Java
+# <a name="step-1-configure-development-environment-for-java-development"></a>Etapa 1: Configurar o ambiente de desenvolvimento para desenvolvimento Java
   
 ## <a name="windows"></a>Windows  
   
-* Identifique qual versão do JDBC Driver você usará, com base em seu ambiente, conforme observado aqui: [requisitos do sistema para o driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)  
-* Baixe e instale o driver JDBC aplicável aqui: [baixar o Microsoft JDBC Driver para SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)  
-* Definir o caminho da classe com base na versão do driver, conforme observado aqui: [usando o driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md)
+* Com base em seu ambiente, identifique qual versão do Driver JDBC você usará, conforme observado aqui:  [Requisitos de sistema para o JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)  
+* Baixe e instale o JDBC Driver aplicável aqui:  [Baixar o Microsoft JDBC Driver para SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)  
+* Defina o caminho da classe com base na versão do driver, conforme observado aqui:  [Usando o JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md)

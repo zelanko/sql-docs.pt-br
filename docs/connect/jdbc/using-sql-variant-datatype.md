@@ -11,17 +11,17 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cdede5d41d5ad7fc22cfed3f1efa9f95612032ca
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025838"
 ---
 # <a name="using-sql_variant-data-type"></a>Como usar o tipo de dados sql_variant
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-A partir da versão 6.3.0, o driver JDBC dá suporte ao tipo de dados sql_variant. O sql_variant também tem suporte ao usar recursos como parâmetros com valor de tabela e BulkCopy com algumas limitações mencionadas posteriormente nesta página. Nem todos os tipos de dados podem ser armazenados no tipo de dados sql_variant. Para obter uma lista de tipos de dados com suporte com sql_variant, verifique o SQL Server [docs](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql).
+Começando com a versão 6.3.0, o driver JDBC é compatível com o tipo de dados sql_variant. O sql_variant também é compatível ao usar recursos como parâmetros com valor de tabela e BulkCopy com algumas limitações mencionadas posteriormente nesta página. Nem todos os tipos de dados podem ser armazenados no tipo de dados sql_variant. Para obter uma lista de tipos de dados compatíveis com o sql_variant, verifique a [documentação](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) do SQL Server.
 
 ##  <a name="populating-and-retrieving-a-table"></a>Populando e recuperando uma tabela:
 Supondo que haja uma tabela com uma coluna sql_variant como:
@@ -38,7 +38,7 @@ try (Statement stmt = connection.createStatement()){
 }
 ```
 
-Inserindo valor usando a instrução preparada:
+Inserindo um valor usando a instrução preparada:
 
 ```java
 try (PreparedStatement preparedStatement = con.prepareStatement("insert into sampleTable values (?)")) {
@@ -56,7 +56,7 @@ try (PreparedStatement preparedStatement = con.prepareStatement("insert into tab
 }
 ```
 
-Para ler valores da tabela, os respectivos getters podem ser usados. Por exemplo, `getInt()` ou `getString()` métodos podem ser usados se os valores provenientes do servidor forem conhecidos:    
+Para ler valores da tabela, os respectivos getters podem ser usados. Por exemplo, os métodos `getInt()` ou `getString()` poderão ser usados se os valores provenientes do servidor forem conhecidos:    
 
 ```java
 try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("select * from sampleTable ")) {
@@ -65,7 +65,7 @@ try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("sele
 }
 ```
 
-## <a name="using-stored-procedures-with-sql_variant"></a>Como usar procedimentos armazenados com sql_variant:   
+## <a name="using-stored-procedures-with-sql_variant"></a>Usando procedimentos armazenados com sql_variant:   
 Tendo um procedimento armazenado, como:     
 
 ```java
@@ -82,13 +82,13 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 ```
 
 ## <a name="limitations-of-sql_variant"></a>Limitações do sql_variant:
-- Ao usar TVP para popular uma tabela com um `datetime` `date` `smalldatetime` / / valor armazenado em uma sql_variant, `getSmallDateTime()` chamando `getDateTime()` / / em um`getDate()` ResultSet não funciona e gera a seguinte exceção:
+- Ao usar o TVP para popular uma tabela com um valor `datetime`/`smalldatetime`/`date` armazenado em um sql_variant, chamar `getDateTime()`/`getSmallDateTime()`/`getDate()` em um ResultSet não funciona e gera a seguinte exceção:
     
     `Java.lang.String cannot be cast to java.sql.Timestamp`
    
-    Solução alternativa: `getString()` use `getObject()` ou em vez disso. 
+    Solução alternativa: use `getString()` ou `getObject()`. 
     
-- O uso de TVP para popular uma tabela e o envio de um valor nulo em um sql_variant não tem suporte e gera uma exceção:
+- O uso do TVP para popular uma tabela e o envio de um valor nulo em um sql_variant não são compatíveis e geram uma exceção:
     
     `Inserting null value with column type sql_variant in TVP is not supported.`
 

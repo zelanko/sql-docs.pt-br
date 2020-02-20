@@ -11,10 +11,10 @@ ms.assetid: 1d91c930-1bac-4da9-b9a5-ac2cfd31541b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf2caa03e047bb53ca946153205492c417448e85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979321"
 ---
 # <a name="getsubstring-method-sqlservernclob"></a>Método getSubString (SQLServerNClob)
@@ -30,7 +30,7 @@ public java.lang.String getSubString(long pos,
                                   int length)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *pos*  
   
  O primeiro caractere da subcadeia a ser extraído. O primeiro caractere está na posição 1.  
@@ -45,7 +45,7 @@ public java.lang.String getSubString(long pos,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getSubString é especificado pelo método getSubString na interface java.sql.NClob.  
   
  A tentativa de obter zero caracteres de um NCLOB nulo ou de comprimento zero retorna uma cadeia de caracteres vazia. Tentar obter qualquer comprimento de caracteres em qualquer posição que não seja a posição 1 em um NCLOB de comprimento zero fará com que uma exceção de posição seja lançada.  

@@ -1,10 +1,9 @@
 ---
-title: Caixa de diálogo Índices/Chaves (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Índices – caixa de diálogo Chaves
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dc4ca010e03090b1ba695247023858b2d1541c40
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7043ec4173bf1a14ca80b915e1ea6ac10fd0d72d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254336"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224917"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices – Chaves (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +54,7 @@ Especifique se o item selecionado na lista **Índice ou Chave Exclusiva/Primári
 Quando expandida, mostra os campos de propriedade de **Nome** e **Descrição**.  
   
 **Nome**  
-Mostra o nome da chave ou índice. Quando um novo índice é criado ele recebe um nome padrão com base na tabela da janela ativa no Designer de tabelas. O nome pode ser alterado a qualquer momento.  
+Mostra o nome da chave ou índice. Quando um novo índice é criado ele recebe um nome padrão com base na tabela da janela ativa no Designer de tabelas. É possível alterar o nome a qualquer momento.  
   
 **Descrição**  
 Fornece um local para a descrição da chave ou do índice. Para escrever uma descrição mais detalhada, clique em **Descrição** e, em seguida, clique no botão de reticências ( **…** ) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
@@ -94,7 +95,7 @@ Especifica o que acontece quando uma linha é inserida durante uma operação de
   
 -   **Sim** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emitirá um aviso, ignorará a norma de linha de entrada e tentará inserir as linhas restantes.  
   
--   **Não** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emitirá uma mensagem de erro e reverterá toda a operação de inserção em massa.  
+-   **Não** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emitirá uma mensagem de erro e reverterá toda a operação BULK INSERT.  
   
 **Colunas Incluídas**  
 Exibe uma lista com os nomes de todas as colunas, separada por vírgulas, que compõem a chave de índice. As colunas de subchaves só podem ser especificadas para índices não clusterizados. Essa propriedade é oculta aos índices XML.  
@@ -115,6 +116,6 @@ Especifique se o [!INCLUDE[ssDE](../../includes/ssde_md.md)] subjacente deve cal
 Especifica se o bloqueio de linha é permitido no índice. A permissão ou não dos bloqueios de linha afeta o desempenho do banco de dados. A configuração recomendada é **Sim**.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Trabalhando com restrições (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
-[Trabalhando com chaves (Visual Database Tools)](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
+[Trabalhando com restrições (https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[Trabalhando com chaves (https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   

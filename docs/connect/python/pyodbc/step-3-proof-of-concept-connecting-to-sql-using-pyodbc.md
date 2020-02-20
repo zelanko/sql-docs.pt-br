@@ -11,23 +11,23 @@ ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0e241d84ebc60acceafe09b1a9240711a72d2067
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72798321"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Etapa 3: Prova de conceito da conexão ao SQL usando pyodbc
 
-Este exemplo deve ser considerado apenas uma prova de conceito.  O código de exemplo é simplificado para fins de clareza e não necessariamente representa as práticas recomendadas recomendadas pela Microsoft.  
+Este exemplo deve ser considerado apenas uma prova de conceito.  O código de exemplo está simplificado para fins de clareza e não necessariamente representa as melhores práticas recomendadas pela Microsoft.  
 
-**Executar script de exemplo abaixo**  Crie um arquivo chamado test.py e adicione cada trecho de código conforme o uso. 
+**Execute o script de exemplo abaixo** Crie um arquivo chamado test.py e adicione cada snippet de código conforme prosseguir. 
 
 ```
 > python test.py
 ```
   
-## <a name="step-1--connect"></a>Etapa 1: conectar-se  
+## <a name="step-1--connect"></a>Etapa 1:  Conectar  
   
 ```python
 
@@ -45,9 +45,9 @@ cursor = cnxn.cursor()
 ```  
   
   
-## <a name="step-2--execute-query"></a>Etapa 2: executar a consulta  
+## <a name="step-2--execute-query"></a>Etapa 2:  Executar consulta  
   
-O cursor. ExecuteFunction pode ser usado para recuperar um conjunto de resultados de uma consulta no banco de dados SQL. Essa função aceita, essencialmente, qualquer consulta e retorna um conjunto de resultados que pode ser iterado com o uso de cursor. fetchone ()
+A função cursor.execute pode ser usada para recuperar um conjunto de resultados de uma consulta no Banco de Dados SQL. Essencialmente, essa função aceita qualquer consulta e retorna um conjunto de resultados que pode ser iterado com o uso de cursor.fetchone()
   
   
 ```python
@@ -60,9 +60,9 @@ while row:
 
 ```  
   
-## <a name="step-3--insert-a-row"></a>Etapa 3: inserir uma linha  
+## <a name="step-3--insert-a-row"></a>Etapa 3:  Inserir uma linha  
   
-Neste exemplo, você verá como executar uma instrução [Insert](../../../t-sql/statements/insert-transact-sql.md) com segurança, passar parâmetros que protegem seu aplicativo do valor de [injeção de SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
+Neste exemplo, você verá como executar uma instrução [INSERT](../../../t-sql/statements/insert-transact-sql.md) com segurança e passar parâmetros que protegem seu aplicativo contra o valor [injeção de SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
   
 ```python
@@ -77,12 +77,12 @@ while row:
     row = cursor.fetchone()
 ```  
 
-## <a name="azure-active-directory-aad-and-the-connection-string"></a>Azure Active Directory (AAD) e a cadeia de conexão
+## <a name="azure-active-directory-aad-and-the-connection-string"></a>AAD (Azure Active Directory) e a cadeia de conexão
 
 O pyODBC usa o driver ODBC da Microsoft para SQL Server.
-Se sua versão do driver ODBC for 17,1 ou posterior, você poderá usar o modo interativo do AAD do driver ODBC por meio do pyODBC.
-Essa opção interativa do AAD funcionará se Python e pyODBC permitirem que o driver ODBC desapareça a caixa de diálogo.
-Essa opção só está disponível no sistema operacional Windows.
+Se a versão do driver ODBC for 17.1 ou posterior, você poderá usar o modo interativo do AAD do driver ODBC por meio de pyODBC.
+Essa opção interativa do AAD funcionará se o Python e o pyODBC permitirem que o driver ODBC faça com que a caixa de diálogo apareça.
+Esta opção só está disponível no sistema operacional Windows.
 
 ### <a name="example-connection-string-for-aad-interactive-authentication"></a>Exemplo de cadeia de conexão para a autenticação interativa do AAD
 
@@ -90,10 +90,10 @@ Aqui está um exemplo de cadeia de conexão ODBC que especifica a autenticação
 
 - `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
 
-Para obter detalhes sobre as opções de autenticação do AAD do driver ODBC, consulte o seguinte artigo:
+Para obter detalhes sobre as opções de autenticação do AAD do driver ODBC, confira o seguinte artigo:
 
 - [Usando o Azure Active Directory com o Driver ODBC](../../odbc/using-azure-active-directory.md#new-andor-modified-dsn-and-connection-string-keywords)
 
 ## <a name="next-steps"></a>Próximas etapas
   
-Para obter mais informações, consulte o [centro de desenvolvedores do Python](https://azure.microsoft.com/develop/python/).
+Para saber mais, confira o [Centro de Desenvolvedores do Python](https://azure.microsoft.com/develop/python/).

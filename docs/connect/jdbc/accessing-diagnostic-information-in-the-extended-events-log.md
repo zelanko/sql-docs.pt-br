@@ -11,10 +11,10 @@ ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f4dfb22027ca448848d7027232e41359ff1664d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028488"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Acessando informações de diagnóstico no log de eventos estendidos
@@ -25,7 +25,7 @@ ms.locfileid: "69028488"
 ## <a name="details"></a>Detalhes  
  Para operações de conexão, o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] enviará uma ID de conexão do cliente. Se a conexão falhar, você poderá acessar o buffer de anéis de conectividade ([Solução de problemas de conectividade no SQL Server 2008 com o Buffer de Anéis de Conectividade](https://go.microsoft.com/fwlink/?LinkId=207752)) e localizar o campo **ClientConnectionID** e poderá obter informações de diagnóstico sobre a falha de conexão. As IDs de conexão de cliente estarão registradas no buffer de anéis se um erro ocorrer. (Se uma conexão falhar antes de enviar o pacote pré-logon, uma ID conexão do cliente não será gerada.) A ID de conexão de cliente é um GUID de 16 bytes. Você também poderá localizar a ID de conexão do cliente na saída do destino de eventos estendidos se a ação de **client_connection_id** for adicionada a eventos em uma sessão de eventos estendidos. Caso precise de assistência adicional com o diagnóstico do driver do cliente, habilite o rastreamento e reexecute o comando de execução para observar o campo **ClientConnectionID** no rastreamento.  
   
- Você pode obter a ID de conexão do cliente programaticamente usando a [interface ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md). A ID de conexão também estará presente em todas as exceções relacionadas à conexão.  
+ Você pode obter a ID de conexão do cliente programaticamente, usando a [Interface ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md). A ID de conexão também estará presente em todas as exceções relacionadas à conexão.  
   
  Quando há um erro de conexão, a ID de conexão do cliente nas informações de rastreamento BID (Diagnóstico Interno) do servidor e no buffer de anéis de conectividade pode ajudar a correlacionar as conexões do cliente às conexões no servidor. Para obter mais informações sobre rastreamentos BID no servidor, confira [Rastreamento de acesso a dados](https://go.microsoft.com/fwlink/?LinkId=125805). Observe que o artigo sobre rastreamento de acesso a dados também traz informações sobre o rastreamento de acesso a dados que não se aplica ao [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]; confira [Rastreamento de operação do driver](../../connect/jdbc/tracing-driver-operation.md) para obter informações sobre como fazer um rastreamento de acesso a dados usando o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   

@@ -1,6 +1,7 @@
 ---
-title: Solução de problemas de usuários órfãos (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Solucionar problemas de usuários órfãos
+description: Os usuários órfãos ocorrem quando um logon de usuário de banco de dados não existe mais no banco de dados mestre. Este tópico discute como identificar e resolver usuários órfãos.
+ms.custom: seo-lt-2019
 ms.date: 07/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -19,14 +20,14 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d42da661015f1184945d4e4ae45cb3f70016e987
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91d3d04efa0300683a5ee727cfa0a1fcd31e3c10
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063809"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822054"
 ---
-# <a name="troubleshoot-orphaned-users-sql-server"></a>Solução de problemas de usuários órfãos (SQL Server)
+# <a name="troubleshoot-orphaned-users-sql-server"></a>Solucionar problemas de usuários órfãos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Os usuários órfãos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ocorrem quando um usuário de banco de dados tem base em um logon no banco de dados **mestre** , mas o logon não existe mais no **mestre**. Isso pode ocorrer quando o logon é excluído, ou quando o banco de dados é movido para outro servidor onde o logon não existe. Este tópico descreve como localizar usuários órfãos e remapeá-los para logons.  
@@ -34,7 +35,7 @@ ms.locfileid: "68063809"
 > [!NOTE]  
 >  Reduza a possibilidade de usuários órfãos usando usuários de banco de dados independente para os bancos de dados que podem ser movidos. Para obter mais informações, consulte [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-## <a name="background"></a>Plano de fundo  
+## <a name="background"></a>Segundo plano  
  Para se conectar a um banco de dados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando uma entidade de segurança (identidade do usuário do banco de dados) com base em um logon, a entidade deve ter um logon válido no banco de dados **mestre** . Esse logon é usado no processo de autenticação que verifica a identidade da entidade e determina se ela tem permissão para conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do servidor são visíveis na exibição do catálogo **sys.server_principals** e na exibição de compatibilidade **sys.sql_logins** .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acessam bancos de dados individuais como um "usuário do banco de dados" mapeado para o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Há três exceções a essa regra:  
@@ -55,7 +56,7 @@ ms.locfileid: "68063809"
   
  Um usuário de banco de dados (com base em um logon) para o qual o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondente não esteja definido, ou que esteja definido incorretamente em uma instância do servidor, não pode fazer logon na instância. Esse usuário é um *usuário órfão* do banco de dados nessa instância do servidor. A condição de órfão pode ocorrer se o usuário do banco de dados for mapeado para um SID de logon que não esteja presente na instância do `master` . Um usuário de banco de dados pode se tornar órfão após um banco de dados ser restaurado ou anexado a uma instância diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , na qual o logon nunca foi criado. Um usuário do banco de dados também se tornará órfão se o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondente for descartado. Mesmo se o logon for recriado, ele terá um SID diferente, então o usuário do banco de dados ainda será órfão.  
   
-## <a name="to-detect-orphaned-users"></a>Para detectar usuários órfãos  
+## <a name="detect-orphaned-users"></a>Detectar usuários órfãos  
 
 **Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e PDW**
 
@@ -95,7 +96,7 @@ A tabela `sys.server_principals` não está disponível no Banco de Dados SQL ou
 
 3. Compare as duas listas para determinar se há SIDs de usuário na tabela `sys.database_principals` do banco de dados do usuário que não correspondem às SIDs de logon na tabela `sql_logins` do banco de dados mestre. 
   
-## <a name="to-resolve-an-orphaned-user"></a>Para resolver um usuário órfão  
+## <a name="resolve-an-orphaned-user"></a>Resolver um usuário órfão  
 No banco de dados mestre, use a instrução [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) com a opção de SID para recriar um logon ausente, fornecendo a `SID` do usuário do banco de dados obtida na seção anterior:  
   
 ```  

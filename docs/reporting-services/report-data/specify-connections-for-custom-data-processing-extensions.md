@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f346427ee41f8049caa050aa49eda393dd304566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 2f6bea94776853f23a02f44ff91748c510fd6f03
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575488"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190616"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>Especificar conexões para extensões de processamento de dados personalizadas
   Você pode criar ou usar extensões de processamento de dados personalizados de terceiros em um servidor de relatório para aprimorar o recurso de processamento das fontes de dados compatíveis ou para oferecer suporte a tipos adicionais de fontes de dados que não estão disponíveis em uma instalação padrão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As conexões são tratadas de modo diferente dependendo da implementação. As implementações a seguir estão disponíveis para extensões de processamento de dados:  
@@ -46,11 +46,11 @@ ms.locfileid: "65575488"
 ## <a name="connections-for-custom-net-framework-data-providers"></a>Conexões para provedores de dados personalizados do .NET Framework  
  Ao configurar um relatório para usar uma fonte de dados específica, defina propriedades que determinam o tipo da fonte de dados, a cadeia de conexão e as credenciais, usados para acessar a fonte de dados. A tabela a seguir descreve os tipos de credencial com suporte nos provedores de dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para obter mais informações sobre como definir propriedades de fontes de dados de relatórios, confira [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
-|Credenciais|Conexões|  
+|Credenciais|conexões|  
 |-----------------|-----------------|  
 |Segurança integrada|Se o provedor de dados oferecer suporte para esse recurso, use a segurança integrada do Windows. A solicitação é enviada com as credenciais do usuário atual.<br /><br /> Ao definir a cadeia de conexão, não se esqueça de incluir argumentos que especificam a segurança integrada (por exemplo, uma conexão com uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode incluir **Integrated Security=SSPI** na cadeia de conexão).|  
 |Autenticação do Windows|Se o provedor de dados oferecer suporte para esse recurso, use uma conta de usuário de domínio do Windows. O servidor de relatório representa a conta de usuário antes que a extensão de processamento de dados seja chamada.<br /><br /> Ao definir a cadeia de conexão, não se esqueça de incluir argumentos que especificam a segurança integrada (por exemplo, uma conexão com uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode incluir **Integrated Security=SSPI** na cadeia de conexão).|  
-|Credenciais de banco de dados|As conexões feitas por um provedor de dados .NET personalizados não oferecem suporte para a autenticação de banco de dados. Em todos os casos, o servidor de relatório interromperá a conexão.|  
+|Credenciais do banco de dados|As conexões feitas por um provedor de dados .NET personalizados não oferecem suporte para a autenticação de banco de dados. Em todos os casos, o servidor de relatório interromperá a conexão.|  
 |Nenhuma credencial|Você pode usar a opção Nenhuma credencial com provedores de dados .NET personalizados. Se a conta de execução autônoma for especificada, a cadeia de conexão determinará as credenciais que são usadas. O servidor de relatório representa a conta de execução autônoma para fazer a conexão.<br /><br /> Se a conta de execução autônoma não for definida, o servidor de relatório interromperá a conexão. Para obter mais informações sobre como definir a conta, consulte [Configurar a conta de execução autônoma &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
   
 ## <a name="connections-for-idbconnection"></a>Conexões para IDbConnection  
@@ -67,17 +67,17 @@ ms.locfileid: "65575488"
 ## <a name="connections-for-idbconnectionextension"></a>Conexões para IDbConnectionExtension  
  Se você estiver usando uma extensão de processamento de dados personalizados que dá suporte para <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>, especifique a conexão da seguinte maneira:  
   
-|Credenciais|Conexões|  
+|Credenciais|conexões|  
 |-----------------|-----------------|  
 |Segurança integrada|Se o provedor de dados der suporte para esse recurso, use a segurança integrada do Windows com extensões de processamento de dados personalizados que usam **IDbConnectionExtension**.<br /><br /> Ao definir a cadeia de conexão, não se esqueça de incluir argumentos que especificam a segurança integrada (por exemplo, uma conexão com uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode incluir **Integrated Security=SSPI** na cadeia de conexão).|  
 |Autenticação do Windows|Se o provedor de dados der suporte para esse recurso, use uma conta de usuário do domínio do Windows para extensões de processamento de dados personalizados que usam **IDbConnectionExtension**.<br /><br /> O servidor de relatório representa a conta de usuário antes que a extensão de processamento de dados seja chamada. Ao definir a cadeia de conexão, não se esqueça de incluir argumentos que especificam a segurança integrada (por exemplo, uma conexão com uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode incluir **Integrated Security=SSPI** na cadeia de conexão).|  
-|Credenciais de banco de dados|Você pode usar a autenticação de banco de dados para configurar conexões para extensões de processamento de dados personalizados que usam **IDbConnectionExtension**.|  
+|Credenciais do banco de dados|Você pode usar a autenticação de banco de dados para configurar conexões para extensões de processamento de dados personalizados que usam **IDbConnectionExtension**.|  
 |Nenhuma credencial|Se a conta de execução autônoma for especificada, a cadeia de conexão determinará as credenciais que são usadas.<br /><br /> Se a conta de execução autônoma não for definida, o servidor de relatório interromperá a conexão.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurar a conta de execução autônoma &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Implementando uma extensão de processamento de dados](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Configurar propriedades de fonte de dados para um relatório](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   

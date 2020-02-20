@@ -1,5 +1,5 @@
 ---
-title: Como usar uma instrução SQL com parâmetros | Microsoft Docs
+title: Usar uma instrução SQL com parâmetros | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 3202b88f-ce13-44dd-982c-c6a3b0260378
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7b8b3f8b387345d91451c726b7f74a5685913f6
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026656"
 ---
 # <a name="using-an-sql-statement-with-parameters"></a>Como usar uma instrução SQL com parâmetros

@@ -1,5 +1,5 @@
 ---
-title: Suporte de consulta distribuída em conjuntos de linhas de esquema | Microsoft Docs
+title: Suporte à consulta distribuída no conjunto de linhas do esquema | Microsoft Docs
 description: Suporte à consulta distribuída no conjunto de linhas do esquema
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 139186d64d2b7df6aca883a253e1f9fe3f062214
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993890"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Conjuntos de linhas do esquema – suporte à consulta distribuída
@@ -51,6 +51,6 @@ ms.locfileid: "67993890"
   
 ## <a name="see-also"></a>Consulte Também  
  [Suporte ao conjunto de linhas de esquema &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)   
- [Conjunto de &#40;linhas LINKEDSERVERS OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [Conjunto de linhas LINKEDSERVERS &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
   

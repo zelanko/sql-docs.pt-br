@@ -14,10 +14,10 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72517936"
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar o cluster de failover
@@ -30,7 +30,7 @@ ms.locfileid: "72517936"
   
 |Descrição do Tópico|Tópico|  
 |-----------------------|-----------|  
-|Descreve conceitos de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e fornece links para conteúdo e tarefas associadas.|[Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
+|Descreve conceitos de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e fornece links para conteúdo e tarefas associadas.|[Instâncias do cluster de failover AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
 |Descreve conceitos de política de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e fornece links para configurar a política de failover para se adequar aos seus requisitos organizacionais.|[Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
 |Descreve como manter seu cluster de failover [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente.|[Administração e manutenção da instância de cluster de failover](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
 |Explica como instalar o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] em um Windows Server Failover Cluster (WSFC).|[Como criar clusters do SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548)|  
@@ -39,7 +39,7 @@ ms.locfileid: "72517936"
   
 ##  <a name="BestPractices"></a> Práticas recomendadas  
   
--   Examine [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [Notas de versão](https://go.microsoft.com/fwlink/?LinkId=296445)  
+-   Examinar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [Notas sobre a versão](https://go.microsoft.com/fwlink/?LinkId=296445)  
   
 -   Instale o software de pré-requisito. Antes de executar a Instalação para instalar ou atualizar para o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], instale os pré-requisitos a seguir para reduzir o tempo de instalação. É possível instalar software de pré-requisito em cada nó de cluster de failover e, em seguida, reiniciar os nós uma vez antes de executar a Instalação.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "72517936"
   
     -   Formatar uma unidade depois de montar unidades adicionais não tem suporte.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] só dá suporte a Disco Local para a instalação de arquivos tempdb. Verifique se o caminho especificado para os dados tempdb e os arquivos de log são válidos em todos os nós de cluster. Durante o failover, se os diretórios tempdb não estiverem disponíveis no nó do destino de failover, o recurso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não ficará online. Para obter mais informações, veja [Tipos de armazenamento de arquivos de dados](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) e [Configuração do Mecanismo de Banco de Dados – Diretórios de dados](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487).  
+-   A instalação de cluster de failover do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] só dá suporte a Disco Local para a instalação de arquivos tempdb. Verifique se o caminho especificado para os dados tempdb e os arquivos de log são válidos em todos os nós de cluster. Durante o failover, se os diretórios tempdb não estiverem disponíveis no nó do destino de failover, o recurso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não ficará online. Para obter mais informações, veja [Tipos de armazenamento de arquivos de dados](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) e [Configuração do Mecanismo de Banco de Dados – Diretórios de dados](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487).  
   
 -   Se você implantar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em componentes de tecnologia iSCSI, é recomendável tomar o cuidado necessário. Para obter mais informações, veja [Suporte do SQL Server em componentes de tecnologia iSCSI](https://go.microsoft.com/fwlink/?LinkId=116960).  
   
@@ -202,7 +202,7 @@ ms.locfileid: "72517936"
 ##  <a name="MultiSubnet"></a> Considerações adicionais para configurações de várias sub-redes  
  As seções a seguir descrevem os requisitos a serem considerados ao instalar um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Uma configuração de várias sub-redes envolve o clustering em várias sub-redes, envolvendo, assim, o uso de vários endereços IP e alterações em dependências de recurso do endereço IP.  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Considerações sobre a edição e o sistema operacional  
+### <a name="ssnoversion-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Considerações sobre a edição e o sistema operacional  
   
 -   Para obter informações sobre as edições do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que dão suporte a cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , veja [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -253,7 +253,7 @@ ms.locfileid: "72517936"
 > [!IMPORTANT]  
 >  Se a instância do MSDTC instalada no grupo de clusters local do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] falhar, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não tentará usar a instância de cluster padrão nem a instância do computador local do MSDTC automaticamente. Você precisaria remover completamente a instância do MSDTC com falha do grupo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para usar outra instância do MSDTC. Da mesma forma, se você criar um mapeamento para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e a instância mapeada do MSDTC falhar, suas transações distribuídas também falharão. Se você desejar que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] use outra instância do MSDTC, deverá adicionar uma instância do MSDTC ao grupo de cluster local do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou excluir o mapeamento.  
   
-### <a name="configure-includemsconameincludesmsconame-mdmd-distributed-transaction-coordinator"></a>Configurar o Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
+### <a name="configure-msconame-distributed-transaction-coordinator"></a>Configurar o Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
  Após instalar o sistema operacional e configurar o cluster, você deve configurar o MSDTC para funcionar em um cluster usando o Administrador de Cluster. A falha no MSDTC de cluster não bloqueará a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mas a funcionalidade do aplicativo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] poderá ser afetada se o MSDTC não for configurado corretamente.  
   
 ## <a name="see-also"></a>Consulte Também  

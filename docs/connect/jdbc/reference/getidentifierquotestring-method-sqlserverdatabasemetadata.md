@@ -16,10 +16,10 @@ ms.assetid: 6dea35a0-56a8-412c-8cd3-6539527ff597
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe27259efbc3448fd0d8d4350d0c2e93e906c34a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982854"
 ---
 # <a name="getidentifierquotestring-method-sqlserverdatabasemetadata"></a>Método getIdentifierQuoteString (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public java.lang.String getIdentifierQuoteString()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getIdentifierQuoteString é especificado pelo método getIdentifierQuoteString na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método getIdentifierQuoteString é especificado pelo método getIdentifierQuoteString na interface java.sql.DatabaseMetaData.  
   
  Ao usar o [!INCLUDE[msCoName](../../../includes/msconame_md.md)] JDBC Driver com um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], esse método retornará aspas **duplas** ("").  
   

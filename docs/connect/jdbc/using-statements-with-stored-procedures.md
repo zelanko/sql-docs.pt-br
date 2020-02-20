@@ -11,10 +11,10 @@ ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7fe07352ff1bcda9dd3ff3e77a6b879e592235a6
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025860"
 ---
 # <a name="using-statements-with-stored-procedures"></a>Como usar instruções com procedimentos armazenados
@@ -32,17 +32,17 @@ Um procedimento armazenado é um procedimento de banco de dados, semelhante a um
 > [!NOTE]  
 > Para obter mais informações sobre os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja "Compreendendo os procedimentos armazenados" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-Para trabalhar com os dados em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um procedimento armazenado, o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece as classes [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). A classe que você vai usar depende da necessidade do parâmetro IN (entrada) ou OUT (saída) para o procedimento armazenado. Se o procedimento armazenado não exigir o parâmetro IN ou OUT, você poderá usar a classe SQLServerStatement; se o procedimento armazenado será chamado várias vezes, ou se ele exigir apenas parâmetros IN, você poderá usar a classe SQLServerPreparedStatement. Se o procedimento armazenado exigir parâmetros de entrada e saída, você deverá usar a classe SQLServerCallableStatement. Somente quando o procedimento armazenado requer parâmetros OUT você precisará da sobrecarga de usar a classe SQLServerCallableStatement.  
+Para trabalhar com os dados em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um procedimento armazenado, o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece as classes [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). A classe que você vai usar depende da necessidade do parâmetro IN (entrada) ou OUT (saída) para o procedimento armazenado. Se o procedimento armazenado não exigir o parâmetro IN ou OUT, você poderá usar a classe SQLServerStatement; se o procedimento armazenado será chamado várias vezes, ou se ele exigir apenas parâmetros IN, você poderá usar a classe SQLServerPreparedStatement. Se o procedimento armazenado exigir os parâmetros IN e OUT, você deverá usar a classe SQLServerCallableStatement. Somente quando o procedimento armazenado requer parâmetros OUT você precisará da sobrecarga de usar a classe SQLServerCallableStatement.  
   
 > [!NOTE]  
-> Os procedimentos armazenados também podem retornar contagens de atualização e vários conjuntos de resultados. Para obter mais informações, consulte [usando um procedimento armazenado com uma contagem de atualizações](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) e [usando vários conjuntos de resultados](../../connect/jdbc/using-multiple-result-sets.md).  
+> Os procedimentos armazenados também podem retornar contagens de atualização e vários conjuntos de resultados. Para obter mais informações, confira [Como usar um procedimento armazenado com uma contagem de atualização](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) e [Como usar vários conjuntos de resultados](../../connect/jdbc/using-multiple-result-sets.md).  
   
 Ao usar o driver JDBC para chamar um procedimento armazenado com parâmetros, você deve usar a sequência de escape do SQL `call` junto com o método [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) da classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). A sintaxe completa da sequência de escape `call` é a seguinte:  
   
  `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`  
   
 > [!NOTE]  
-> Para obter mais informações sobre `call` o e outras sequências de escape do SQL, consulte [usando sequências de escape do SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
+> Para obter mais informações sobre a `call` e outras sequência de escape do SQL, confira [Como usar sequências de escape do SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
   
 Os tópicos desta seção descrevem as maneiras de chamar procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o driver JDBC e a sequência de escape `call` do SQL.  
   

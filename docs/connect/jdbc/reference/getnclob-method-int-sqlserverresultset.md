@@ -11,10 +11,10 @@ ms.assetid: 103082e3-de98-4dff-8dc7-eaa5c64b1597
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dfe7b70d4a176832873bb9f5dcd7db3c8d8c553b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981531"
 ---
 # <a name="getnclob-method-int-sqlserverresultset"></a>Método getNClob (int) (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67981531"
 public java.sql.NClob getNClob(int columnIndex)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnIndex*  
   
  Um **int** que indica o índice de coluna.  
@@ -40,10 +40,10 @@ public java.sql.NClob getNClob(int columnIndex)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getNClob é especificado pelo método getNClob na interface java.sql.ResultSet.  
   
- Esse método só tem suporte em colunas **nvarchar (max)** , **ntext**e **XML** . Seu uso em quaisquer outros tipos de dados fará com que uma exceção seja lançada.  
+ Esse método é compatível apenas com as colunas **nvarchar (max)** , **ntext**e **xml**. Seu uso em quaisquer outros tipos de dados fará com que uma exceção seja lançada.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getNClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)   

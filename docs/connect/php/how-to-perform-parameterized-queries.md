@@ -1,5 +1,5 @@
 ---
-title: Como executar consultas parametrizadas | Microsoft Docs
+title: 'Como fazer: Executar consultas parametrizadas | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e406d64bd8c56b467c9b331eb4aef132dc0cc67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993496"
 ---
-# <a name="how-to-perform-parameterized-queries"></a>Como executar consultas parametrizadas
+# <a name="how-to-perform-parameterized-queries"></a>Como fazer: Executar consultas parametrizadas
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Este tópico resume e demonstra como usar os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] para executar uma consulta parametrizada.  
@@ -31,7 +31,7 @@ As etapas para executar uma consulta parametrizada podem ser resumidas em quatro
   
 2.  Inicialize ou atualize as variáveis do PHP correspondentes aos espaços reservados na consulta Transact-SQL.  
   
-3.  Use as variáveis do PHP da etapa 2 para criar ou atualizar uma matriz de valores de parâmetros que correspondem aos espaços reservados do parâmetro na cadeia de caracteres Transact-SQL. Os valores de parâmetro na matriz devem estar na mesma ordem em que os espaços reservados destinam-se a representá-los.
+3.  Use as variáveis do PHP da etapa 2 para criar ou atualizar uma matriz de valores de parâmetros que correspondem aos espaços reservados do parâmetro na cadeia de caracteres Transact-SQL. Os valores de parâmetro na matriz precisam estar na mesma ordem em que os espaços reservados destinados a representá-los.
   
 4.  Execute a consulta:  
   

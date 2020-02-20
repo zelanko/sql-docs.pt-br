@@ -1,6 +1,7 @@
 ---
-title: Adicionar dependências a um recurso do SQL Server | Microsoft Docs
-ms.custom: ''
+title: Adicionar dependências a um recurso FCI do SQL Server
+descriptoin: Describes how to add dependencies to an Always On failover cluster instance (FCI) resource using the Failover Cluster Manager.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dfaad71ac357ed261643267c7eab019b91548fa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e78380d509d2b291c0794cb408909a10622c3f53
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063824"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822067"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Adicionar dependências a um recurso do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tópico descreve como adicionar dependências a um recurso de FCI (Instância de Cluster de Failover) do AlwaysOn usando o snap-in Gerenciador de Cluster de Failover. O snap-in Gerenciador de Cluster de Failover é o aplicativo de gerenciamento de cluster do serviço WSFC (Windows Server Failover Clustering).  
+  Este tópico descreve como adicionar dependências a um recurso de FCI (instância de cluster de failover) Always On usando o snap-in Gerenciador de Cluster de Failover. O snap-in Gerenciador de Cluster de Failover é o aplicativo de gerenciamento de cluster do serviço WSFC (Windows Server Failover Clustering).  
   
 -   **Antes de começar:**  [Limitações e restrições](#Restrictions), [Pré-requisitos](#Prerequisites)  
   
@@ -31,7 +32,7 @@ ms.locfileid: "68063824"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
  É importante observar que se você adicionar qualquer outro recurso ao grupo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , esses recursos deverão sempre ter seus próprios recursos de nomes de rede do SQL exclusivos e seus próprios recursos de endereço IP do SQL.  
   
  Use os recursos de nome de rede do SQL existentes e os recursos de endereço IP do SQL somente para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se os recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] forem compartilhados com outros recursos, os seguintes problemas poderão ocorrer:  

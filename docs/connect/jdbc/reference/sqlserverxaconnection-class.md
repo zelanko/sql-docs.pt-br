@@ -11,10 +11,10 @@ ms.assetid: 5ecb4bf1-b8d1-47cf-9cb1-7a18acc11ce2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32d538e31ca3f4a0d9b23411ebcb7b282df46b33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970315"
 ---
 # <a name="sqlserverxaconnection-class"></a>Classe SQLServerXAConnection
@@ -35,8 +35,8 @@ ms.locfileid: "67970315"
 public class SQLServerXAConnection  
 ```  
   
-## <a name="remarks"></a>Remarks  
- Um objeto SQLServerXAConnection pode ser inscrito em uma transação distribuída por meio de um objeto [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md). Um Gerenciador de transações, geralmente parte de um servidor de camada intermediária, gerencia um objeto SQLServerXAConnection por meio do objeto SQLServerXAResource.  
+## <a name="remarks"></a>Comentários  
+ Um objeto SQLServerXAConnection pode ser inscrito em uma transação distribuída por meio de um objeto [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md). Um gerenciador de transação, normalmente parte de um servidor de nível intermediário, gerencia um objeto SQLServerXAConnection usando o objeto SQLServerXAResource.  
   
 > [!NOTE]  
 >  Os programadores de aplicativo normalmente não usam essa interface diretamente. Ela é usada principalmente por um gerenciador de transações que funciona no servidor de camada intermediária.  

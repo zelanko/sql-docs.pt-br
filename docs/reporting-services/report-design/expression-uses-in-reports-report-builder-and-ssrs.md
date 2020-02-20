@@ -11,10 +11,10 @@ ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd0b847ba4ebaa2d669927abe0665b18a2d517bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579166"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Uso de expressões em relatórios (Construtor de Relatórios e SSRS)
@@ -57,7 +57,7 @@ Em relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnover
 |Formate os dados de uma caixa de texto de acordo com o valor.|Cor de um espaço reservado dentro de uma caixa de texto na linha de detalhes de um tablix. Use **Caixa de Diálogo Propriedades de Caixa de Texto, Fonte**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Calcule um valor uma única vez para fazer referência a ele em todo o relatório.|Valor de uma variável de relatório. Use **Caixa de Diálogo Propriedades de Relatório, Variáveis**.|`=Variables!MyCalculation.Value`|  
 |Inclua valores específicos de mais de um campo de um conjunto de dados.|Equação de filtro para um grupo em um tablix. Use **Caixa de Diálogo de Propriedades de Grupo Tablix, Filtros**.|Para o tipo de dados, selecione **Booliano**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|Oculte uma caixa de texto na superfície de design que pode ser alternada pelo usuário através de um parâmetro booliano denominado *Show*.|Propriedade oculta em uma caixa de texto. Use **Caixa de Diálogo de Propriedades de Caixa de Texto, Visibilidade**.|`=Not Parameters!` *Mostrar \<parâmetro booleano>* `.Value`|  
+|Oculte uma caixa de texto na superfície de design que pode ser alternada pelo usuário através de um parâmetro booliano denominado *Show*.|Propriedade oculta em uma caixa de texto. Use **Caixa de Diálogo de Propriedades de Caixa de Texto, Visibilidade**.|`=Not Parameters!` *Mostrar\<parâmetro booliano>* `.Value`|  
 |Especifique um cabeçalho de página dinâmico ou o conteúdo de um rodapé.|Valor de um espaço reservado dentro de uma caixa de texto que é colocada no cabeçalho ou rodapé de uma página.|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |Especifique uma fonte de dados dinamicamente usando um parâmetro.|Cadeia de conexão na Fonte de dados. Use **Caixa de Diálogo de Propriedades de Fonte de Dados, Geral**.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |Identifique todos os valores para um parâmetro multivalor escolhido pelo usuário.|Valor de um espaço reservado dentro de uma caixa de texto. Use **Caixa de Diálogo de Propriedades de Grupo Tablix, Filtros**.|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  

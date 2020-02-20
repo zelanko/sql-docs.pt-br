@@ -1,6 +1,6 @@
 ---
 title: Transações e operações de cópia em massa
-description: Descreve como executar uma operação de cópia em massa em uma transação, incluindo como confirmar ou reverter a transação.
+description: Descreve como executar uma operação de cópia em massa em uma transação, incluindo como fazer commit ou reverter a transação.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: c2e855407edd6b2af51ae5710cd6601e9aa25654
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 465870aa05b97b841a23c0ca1843e3de395a0b8b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451912"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75233795"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Transações e operações de cópia em massa
 
@@ -40,14 +40,14 @@ A operação de cópia em massa é executada com a propriedade <xref:Microsoft.D
 [!code-csharp[DataWorks SqlBulkCopyOpeions_Default#1](~/../sqlclient/doc/samples/SqlBulkCopyOptions_Default.cs#1)]
   
 ## <a name="performing-a-dedicated-bulk-copy-operation-in-a-transaction"></a>Como executar uma operação de cópia em massa dedicada em uma transação  
-Por padrão, uma operação de cópia em massa é sua própria transação. Quando você quiser executar uma operação de cópia em massa dedicada, crie uma nova instância do <xref:Microsoft.Data.SqlClient.SqlBulkCopy> com uma cadeia de conexão ou use um objeto <xref:Microsoft.Data.SqlClient.SqlConnection> existente sem uma transação ativa. Em cada cenário, a operação de cópia em massa cria e, em seguida, confirma ou reverte a transação.  
+Por padrão, uma operação de cópia em massa é sua própria transação. Quando quiser executar uma operação de cópia em massa dedicada, crie uma instância do <xref:Microsoft.Data.SqlClient.SqlBulkCopy> com uma cadeia de conexão ou use um objeto <xref:Microsoft.Data.SqlClient.SqlConnection> existente sem uma transação ativa. Em cada cenário, a operação de cópia em massa cria e, em seguida, confirma ou reverte a transação.  
   
 Você pode especificar explicitamente a opção <xref:Microsoft.Data.SqlClient.SqlBulkCopyOptions.UseInternalTransaction> no construtor de classe <xref:Microsoft.Data.SqlClient.SqlBulkCopy> para explicitamente fazer com que uma operação de cópia em massa seja executada em sua própria transação, fazendo com que cada lote da operação de cópia em massa seja executado dentro de uma transação separada.  
   
 > [!NOTE]
 >  Como lotes diferentes são executados em diferentes transações, se ocorrer um erro durante a operação de cópia em massa, todas as linhas no lote atual serão revertidas, mas as linhas de lotes anteriores permanecerão no banco de dados.  
   
-O aplicativo de console a seguir é semelhante ao exemplo anterior, com uma exceção: neste exemplo, a operação de cópia em massa gerencia suas próprias transações. Todos os lotes copiados até o ponto do erro são confirmados; o lote que contém a chave duplicada é revertido e a operação de cópia em massa é interrompida antes de processar todos os outros lotes.  
+O seguinte aplicativo de console é semelhante ao exemplo anterior, com uma exceção: neste exemplo, a operação de cópia em massa gerencia as próprias transações. Todos os lotes copiados até o ponto do erro são confirmados; o lote que contém a chave duplicada é revertido e a operação de cópia em massa é interrompida antes de processar todos os outros lotes.  
   
 > [!IMPORTANT]
 >  Essa amostra não será executada, a menos que você tenha criado as tabelas de trabalho conforme descrito em [Configuração de exemplo de cópia em massa](bulk-copy-example-setup.md). Esse código é fornecido para demonstrar a sintaxe para usar somente **SqlBulkCopy**. Se as tabelas de origem e destino estiverem localizadas na mesma instância do SQL Server, será mais fácil e mais rápido usar uma instrução `INSERT … SELECT` do Transact-SQL para copiar os dados.  
@@ -55,9 +55,9 @@ O aplicativo de console a seguir é semelhante ao exemplo anterior, com uma exce
 [!code-csharp[DataWorks SqlBulkCopyOptions_UseInternalTransaction#1](~/../sqlclient/doc/samples/SqlBulkCopyOptions_UseInternalTransaction.cs#1)]
   
 ## <a name="using-existing-transactions"></a>Usando transações existentes  
-Você pode especificar um objeto de <xref:Microsoft.Data.SqlClient.SqlTransaction> existente como um parâmetro em um construtor de <xref:Microsoft.Data.SqlClient.SqlBulkCopy>. Nessa situação, a operação de cópia em massa é executada em uma transação existente e nenhuma alteração é feita ao estado da transação (isto é, ela não é confirmada nem anulada). Isso permite que um aplicativo inclua a operação de cópia em massa em uma transação com outras operações de banco de dados. No entanto, se você não especificar um objeto <xref:Microsoft.Data.SqlClient.SqlTransaction> e passar uma referência nula, e a conexão tiver uma transação ativa, uma exceção será lançada.  
+É possível especificar um objeto <xref:Microsoft.Data.SqlClient.SqlTransaction> existente como um parâmetro em um construtor <xref:Microsoft.Data.SqlClient.SqlBulkCopy>. Nessa situação, a operação de cópia em massa é executada em uma transação existente e nenhuma alteração é feita ao estado da transação (isto é, ela não é confirmada nem anulada). Isso permite que um aplicativo inclua a operação de cópia em massa em uma transação com outras operações de banco de dados. No entanto, uma exceção será lançada caso você não especifique um objeto <xref:Microsoft.Data.SqlClient.SqlTransaction>, passe uma referência nula e caso a conexão tenha uma transação ativa.  
   
-Se você precisar reverter toda a operação de cópia em massa porque ocorre um erro ou se a cópia em massa deve ser executada como parte de um processo maior que pode ser revertido, você pode fornecer um objeto <xref:Microsoft.Data.SqlClient.SqlTransaction> para o Construtor <xref:Microsoft.Data.SqlClient.SqlBulkCopy>.  
+Caso precise reverter toda a operação de cópia em massa porque ocorreu um erro. Ou caso a cópia em massa deva ser executada como parte de um processo maior que pode ser revertido, será possível fornecer um objeto <xref:Microsoft.Data.SqlClient.SqlTransaction> para o construtor <xref:Microsoft.Data.SqlClient.SqlBulkCopy>.  
   
 O aplicativo de console a seguir é semelhante para o primeiro exemplo (não transacionado), com uma exceção: neste exemplo, a operação de cópia em massa está incluída em uma transação maior, externa. Quando ocorre o erro de violação de chave primária, a transação inteira é revertida e nenhuma linha é adicionada à tabela de destino.  
   

@@ -1,9 +1,11 @@
 ---
-title: Integrando o Reporting Services usando o acesso à URL | Microsoft Docs
+title: Integrar usando o acesso à URL
+description: Uma solicitação de URL permite que você acesse um servidor de relatório específico bem como relatórios, recursos e outros itens no banco de dados do servidor de relatório.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - URL access [Reporting Services], about URL access
@@ -11,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9609802daff2f5040974deaa5793e7bceb8fcbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 56ef7e673e9002e2144cef37c6d01284888ed483
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660511"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796819"
 ---
-# <a name="integrating-reporting-services-using-url-access"></a>Integrando o Reporting Services por meio do acesso à URL
+# <a name="integrate-reporting-services-using-url-access"></a>Integrar o Reporting Services usando o acesso à URL
   Com o acesso de URL, você acessa relatórios por uma URL do servidor de relatório. Uma solicitação de URL permite que você acesse um servidor de relatório específico bem como relatórios, recursos e outros itens no banco de dados do servidor de relatório. Você também pode personalizar a exibição de relatório e a experiência de navegação por seus usuários. A cadeia de caracteres da consulta do URL contém configurações de informações de dispositivo, como também parâmetros de relatório destinados a seu relatório e à saída de renderização escolhida. A forma que o servidor de relatório trata das solicitações de URL dependerá dos parâmetros, prefixos de parâmetro e tipo de item que você está acessando por meio da URL.  
   
  Você pode usar o acesso de URL para inserir hiperlinks em relatórios e outros itens do servidor de relatório nos aplicativos que você desenvolve, se estiver em um ambiente Windows ou Web.  

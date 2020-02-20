@@ -16,10 +16,10 @@ ms.assetid: 6ff97d37-befc-47b1-8092-505917216a41
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 46f8df147dda25a7b3d8dac33121a25622962950
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976629"
 ---
 # <a name="nullsaresortedhigh-method-sqlserverdatabasemetadata"></a>Método nullsAreSortedHigh (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean nullsAreSortedHigh()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **true** se os valores forem classificados como alto. Caso contrário, **false**.  
+ **true** se os valores forem classificados como altos. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método nullsAreSortedHigh é especificado pelo método nullsAreSortedHigh na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método nullsAreSortedHigh é especificado pelo método nullsAreSortedHigh na interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

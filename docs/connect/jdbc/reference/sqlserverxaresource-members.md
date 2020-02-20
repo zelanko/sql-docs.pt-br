@@ -1,5 +1,5 @@
 ---
-title: Membros SQLServerXAResource | Microsoft Docs
+title: Membros de SQLServerXAResource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b420dd7c4bc714e26c8078112c5af54ae5aa7b0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970062"
 ---
 # <a name="sqlserverxaresource-members"></a>Membros SQLServerXAResource
@@ -47,7 +47,7 @@ ms.locfileid: "67970062"
 |[getTransactionTimeout](../../../connect/jdbc/reference/gettransactiontimeout-method-sqlserverxaresource.md)|Obtém o valor de tempo limite da transação atual para o objeto [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md).|  
 |[isSameRM](../../../connect/jdbc/reference/issamerm-method-sqlserverxaresource.md)|Determina se a instância do gerenciador de recursos representada pelo objeto de destino é igual à instância do gerenciador de recursos representada pelo objeto XAResource fornecido.|  
 |[prepare](../../../connect/jdbc/reference/prepare-method-sqlserverxaresource.md)|Solicita que o gerenciador de recursos prepare-se para uma confirmação da transação especificada pelo objeto Xid fornecido.|  
-|[recuperação](../../../connect/jdbc/reference/recover-method-sqlserverxaresource.md)|Obtém uma lista de ramificações de transação preparadas de um gerenciador de recursos.|  
+|[recover](../../../connect/jdbc/reference/recover-method-sqlserverxaresource.md)|Obtém uma lista de ramificações de transação preparadas de um gerenciador de recursos.|  
 |[rollback](../../../connect/jdbc/reference/rollback-method-sqlserverxaresource.md)|Solicita que o gerenciador de recursos reverta o trabalho feito em nome de uma ramificação de transação.|  
 |[setTransactionTimeout](../../../connect/jdbc/reference/settransactiontimeout-method-sqlserverxaresource.md)|Define o valor de tempo limite da transação atual para este objeto [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md).|  
 |[start](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|Inicia o trabalho em nome de um branch de transação especificado no objeto Xid.|  

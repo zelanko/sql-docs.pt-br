@@ -1,6 +1,6 @@
 ---
-title: Usando o espelhamento de banco de dados | Microsoft Docs
-description: Usando o espelhamento de banco de dados com o driver OLE DB para SQL Server
+title: Usar espelhamento de banco de dados | Microsoft Docs
+description: Usando o espelhamento de banco de dados com o Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9d61dfe1441029cfa1b742e3b56021e55764d4eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988872"
 ---
 # <a name="using-database-mirroring"></a>Usando o espelhamento de banco de dados
@@ -46,7 +46,7 @@ ms.locfileid: "67988872"
  É possível usar um alias ao especificar o nome de banco de dados espelho.  
   
 > [!NOTE]  
->  Para obter informações sobre tentativas de conexão iniciais e tentativas de reconexão a um banco de dados espelho, consulte [conectar clientes a uma &#40;sessão&#41;de espelhamento de banco de dados SQL Server](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+>  Para obter informações sobre tentativas de conexão inicial e tentativas de reconexão com um banco de dados espelho, confira [Conectar clientes a uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ## <a name="programming-considerations"></a>Considerações sobre programação  
  Quando o servidor do banco de dados principal falhar, o aplicativo cliente receberá erros em resposta a chamadas API, o que indica que a conexão com o banco de dados foi interrompida. Quando isto acontece, todas as alterações não confirmadas do banco de dados são perdidas e a transação atual é revertida. Se isso ocorrer, o aplicativo deve fechar a conexão (ou liberar o objeto da fonte de dados) e abri-la novamente. A conexão é redirecionada de forma transparente para o banco de dados espelho, que agora atua como servidor principal.  
@@ -54,18 +54,18 @@ ms.locfileid: "67988872"
  Quando uma conexão é estabelecida, o servidor principal envia a identidade de seu parceiro de failover ao cliente a ser usado quando ocorrer failover. No caso de um aplicativo tentar estabelecer uma conexão depois que o servidor principal falhou, o cliente não sabe a identidade do parceiro de failover. Para que os clientes possam lidar com este cenário, uma propriedade de inicialização e uma palavra-chave de cadeia de conexão associada permitem que o próprio cliente especifique a identidade do parceiro de failover. O atributo do cliente é usado apenas nesse cenário; se o servidor principal estiver disponível, ele não será usado. Se o servidor do parceiro de failover fornecido pelo cliente não se referir a um servidor que está atuando como um parceiro de failover, a conexão será recusada pelo servidor. Para que os aplicativos possam se adaptar a alterações de configuração, a identidade do parceiro de failover real pode ser determinada inspecionando o atributo depois que a conexão for estabelecida. Considere o armazenamento em cache das informações do parceiro para atualizar a cadeia de conexão ou criar uma estratégia de repetição no caso de falha da primeira tentativa de estabelecer uma conexão.  
   
 > [!NOTE]  
->  Especifique explicitamente o banco de dados a ser usado por uma conexão, se desejar usar esse recurso em um DSN, uma cadeia de conexão ou uma propriedade/atributo da conexão. OLE DB driver para SQL Server não tentará realizar o failover para o banco de dados do parceiro se isso não for feito.  
+>  Especifique explicitamente o banco de dados a ser usado por uma conexão, se desejar usar esse recurso em um DSN, uma cadeia de conexão ou uma propriedade/atributo da conexão. O Driver do OLE DB para SQL Server não tentará fazer failover para o banco de dados parceiro se isso não for feito.  
 >   
 >  O espelhamento é um recurso do banco de dados. Talvez os aplicativos que usam vários bancos de dados não consigam explorar esse recurso.  
 >   
 >  Além disso, os nomes de servidor não diferenciam maiúsculas de minúsculas, mas os nomes de banco de dados o fazem. Portanto, certifique-se de usar as mesmas maiúsculas e minúsculas em DSNs e cadeias de conexões.  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server  
- O OLE DB Driver for SQL Server dá suporte ao espelhamento de banco de dados por meio de atributos de cadeia de conexão e conexão. A propriedade SSPROP_INIT_FAILOVERPARTNER foi adicionada ao conjunto de propriedades DBPROPSET_SQLSERVERDBINIT e a palavra-chave **FailoverPartner** é um novo atributo de cadeia de conexão para DBPROP_INIT_PROVIDERSTRING. Para obter mais informações, consulte [usando palavras-chave da cadeia de conexão com o Driver OLE DB para SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ O OLE DB Driver for SQL Server dá suporte ao espelhamento de banco de dados por meio de atributos de cadeia de conexão e conexão. A propriedade SSPROP_INIT_FAILOVERPARTNER foi adicionada ao conjunto de propriedades DBPROPSET_SQLSERVERDBINIT e a palavra-chave **FailoverPartner** é um novo atributo de cadeia de conexão para DBPROP_INIT_PROVIDERSTRING. Para obter mais informações, confira [Como usar palavras-chave de cadeia de conexão com o Driver do OLE DB para SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
   
  O cache de failover é mantido enquanto o provedor estiver carregado, ou seja, até **CoUninitialize** ser chamado ou enquanto o aplicativo tiver uma referência a algum objeto gerenciado pelo OLE DB Driver for SQL Server, como um objeto da fonte de dados.  
   
- Para obter detalhes sobre o driver de OLE DB para SQL Server suporte para espelhamento de banco de dados, consulte [Propriedades de inicialização e autorização](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Para obter detalhes sobre o suporte do Driver do OLE DB para SQL Server para espelhamento de banco de dados, confira [Propriedades de inicialização e de autorização](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
  
   
 ## <a name="see-also"></a>Consulte Também  

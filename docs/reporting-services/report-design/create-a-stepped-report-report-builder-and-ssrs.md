@@ -9,16 +9,16 @@ ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: adfde8e92d249c40749dba76f42c6d1d5ba20d71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581535"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Criar um novo relatório de nível (Construtor de Relatórios e SSRS)
 Um relatório de nível é um tipo de relatório paginado do  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que mostra as linhas ou grupos filho de detalhes recuados sob um grupo pai na mesma coluna, conforme ilustrado no seguinte exemplo:  
   
- ![Relatório de nível renderizado](../../reporting-services/report-design/media/steppedreportrendered.gif "Relatório de nível renderizado")  
+ ![Relatório escalonado renderizado](../../reporting-services/report-design/media/steppedreportrendered.gif "Relatório escalonado renderizado")  
   
  Os relatórios de tabela tradicionais colocam o grupo pai em uma coluna adjacente no relatório. A nova região de dados tablix permite adicionar um grupo e linhas ou grupos filho de detalhe à mesma coluna. Para diferenciar as linhas de grupo de linhas de detalhes ou de grupos filho, você pode aplicar uma formatação, como cor da fonte, ou recuar as linhas de detalhes.  
   
@@ -76,7 +76,7 @@ Um relatório de nível é um tipo de relatório paginado do  [!INCLUDE[ssRSnove
   
      Sua região de dados será semelhante ao exemplo a seguir.  
   
-     ![Região de dados para o relatório de nível](../../reporting-services/report-design/media/steppedreportdataregion.gif "Região de dados para o relatório de nível")  
+     ![Região de dados para relatório escalonado](../../reporting-services/report-design/media/steppedreportdataregion.gif "Região de dados para relatório escalonado")  
   
      **Região de dados para layout de relatório de nível**  
   

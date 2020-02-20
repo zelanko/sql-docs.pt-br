@@ -16,10 +16,10 @@ ms.assetid: 9fe76aa3-a539-4335-822f-69cc35a9e7e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a78b6d90c58f7d04f5a3d9f6c8225cf592153d2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976532"
 ---
 # <a name="owninsertsarevisible-method-sqlserverdatabasemetadata"></a>Método ownInsertsAreVisible (SQLServerDatabaseMetaData)
@@ -34,8 +34,8 @@ ms.locfileid: "67976532"
 public boolean ownInsertsAreVisible(int type)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- *type*  
+#### <a name="parameters"></a>parâmetros  
+ *tipo*  
   
  Um **int** que indica o tipo do conjunto de resultados, que pode ser um dos valores a seguir, conforme definido em java.sql.ResultSet ou SQLServerResultSet:  
   
@@ -63,8 +63,8 @@ public boolean ownInsertsAreVisible(int type)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método ownInsertsAreVisible é especificado pelo método ownInsertsAreVisible na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método ownInsertsAreVisible é especificado pelo método ownInsertsAreVisible na interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

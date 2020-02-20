@@ -1,6 +1,6 @@
 ---
 title: Pontuação de dados usando RevoScaleR
-description: Tutorial passo a passo sobre como pontuar dados usando a linguagem R no SQL Server.
+description: 'Tutorial 8 do RevoScaleR: Como pontuar dados usando a linguagem R no SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf4198e4f8baa0c572f5da3d2b4cf457e695a4b7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 26f5c7b56298e6a3bd5f1fa9d8bc1d4db79d60af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727178"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947182"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Pontuar dados novos (tutorial do SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lição faz parte do [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Este é o tutorial 8 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
-Nesta etapa, você usa o modelo de regressão logística que criou na lição anterior para pontuar outro conjunto de dados que usa as mesmas variáveis independentes como entradas.
+Nesse tutorial, você usará o modelo de regressão logística que criou no tutorial anterior para pontuar outro conjunto de dados que usa as mesmas variáveis independentes como entradas.
 
 > [!div class="checklist"]
 > * Pontuar novos dados
@@ -32,7 +32,7 @@ Nesta etapa, você usa o modelo de regressão logística que criou na lição an
 
 ## <a name="generate-and-save-scores"></a>Gerar e salvar pontuações
   
-1. Atualize a fonte de dados sqlScoreDS (criada na [lição dois](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)) para usar as informações de coluna criadas na lição anterior.
+1. Atualize a fonte de dados sqlScoreDS (criada no [tutorial dois](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)) para usar as informações de coluna criadas no tutorial anterior.
   
     ```R
     sqlScoreDS <- RxSqlServerData(

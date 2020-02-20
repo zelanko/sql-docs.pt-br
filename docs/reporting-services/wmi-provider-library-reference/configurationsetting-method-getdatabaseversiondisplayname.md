@@ -11,10 +11,10 @@ ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4d29ed7bc6e627f7ed670feca9b98b0b4fac3eb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570956"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>Método de ConfigurationSetting – GetDatabaseVersionDisplayName
@@ -30,7 +30,7 @@ Public Sub GetDatabaseVersionDisplayName(Version As String, DisplayName As Strin
 public void GetDatabaseVersionDisplayName(string Version, string DisplayName, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *Versão*  
  Uma cadeia de caracteres que contém a cadeia de caracteres de versão para um banco de dados do servidor de relatório.  
   
@@ -40,7 +40,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  *HRESULT*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A tabela a seguir mostra o mapeamento da versão do banco de dados para exibir a cadeia de caracteres.  
   
 |**Versão**|**Versão**|**Nome de Exibição**|  
@@ -62,6 +62,6 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+ [Membros de MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

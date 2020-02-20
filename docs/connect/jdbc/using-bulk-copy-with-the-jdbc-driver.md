@@ -11,10 +11,10 @@ ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75ee40e0b7ca753efd32e0ab057340f61824acef
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026409"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Como usar cópia em massa com o JDBC Driver
@@ -25,7 +25,7 @@ O Microsoft SQL Server inclui um utilitário de linha de comando popular chamado
   
 A classe SQLServerBulkCopy pode ser usada para gravar dados somente em tabelas do SQL Server. Mas a fonte de dados não está limitada ao SQL Server; qualquer fonte de dados pode ser usada, desde que os dados possam ser lidos com uma implementação ResultSet, RowSet ou ISQLServerBulkRecord.  
   
-Como usar a classe SQLServerBulkCopy, você pode executar:  
+Usando a classe SQLServerBulkCopy, você pode executar:  
   
 - Uma única operação de cópia em massa  
   
@@ -468,7 +468,7 @@ copyOptions.setBatchSize(10);
 copyOptions.setUseInternalTransaction(true);
 ```
 
-### <a name="using-existing-transactions"></a>Como usar transações existentes
+### <a name="using-existing-transactions"></a>Usando transações existentes
 
 Você pode passar um objeto de conexão que tem transações habilitadas como um parâmetro em um construtor SQLServerBulkCopy. Nessa situação, a operação de cópia em massa é executada em uma transação existente e nenhuma alteração é feita ao estado da transação (isto é, ela não é confirmada nem anulada). Isso permite que um aplicativo inclua a operação de cópia em massa em uma transação com outras operações de banco de dados. Se você precisar reverter a operação de cópia em massa inteira por causa de um erro ou se a cópia em massa deve ser executada como parte de um processo maior que pode ser revertido, você pode executar a reversão no objeto de conexão a qualquer momento após a operação de cópia em massa.  
   
@@ -582,7 +582,7 @@ public class BulkCopyExistingTransactions {
   
 5. Selecione **Gravar uma consulta para especificar os dados a serem transferidos** e **Avançar**.  Insira sua **Instrução SQL** selecione ProductID, Name, ProductNumber de Production.Product e **Avançar**  
   
-6. Verifique a configuração: você pode deixar o Delimitador de Linha como {CR}{LF} e o Delimitador de Coluna como Vírgula {,}.  Selecione **Editar Mapeamentos**… e verifique se o **Tipo** de dados está correto para cada coluna (por exemplo, inteiro para ProductID e cadeia de caracteres Unicode para os outros).  
+6. Verifique a configuração: Você pode deixar o delimitador de linha como {CR}{LF} e o delimitador de coluna como vírgula {,}.  Selecione **Editar Mapeamentos**… e verifique se o **Tipo** de dados está correto para cada coluna (por exemplo, inteiro para ProductID e cadeia de caracteres Unicode para os outros).  
   
 7. Vá para **Concluir** e execute a exportação.  
 
@@ -658,7 +658,7 @@ A partir do Microsoft JDBC Driver 6.0 para SQL Server, há suporte para cópia e
   
 Dependendo das opções de cópia em massa e do tipo de criptografia de tabelas de origem e destino, o driver JDBC pode descriptografar de forma transparente e, em seguida, criptografar os dados, ou pode enviar os dados criptografados como estão. Por exemplo, ao copiar em massa dados de uma coluna criptografada para uma coluna não criptografada, o driver descriptografa de modo transparente os dados antes de enviá-los para o SQL Server. Da mesma forma, ao copiar dados em massa de uma coluna não criptografada (ou de um arquivo CSV) para uma coluna criptografada, o driver criptografa de modo transparente os dados antes de enviá-los para o SQL Server. Se tanto a origem quanto o destino estiverem criptografados, então, dependendo da opção de cópia em massa **allowEncryptedValueModifications**, o driver enviará dados como estão ou descriptografará os dados e os criptografará novamente antes de enviá-los para o SQL Server.  
   
-Para obter mais informações, veja a opção de cópia em massa **allowEncryptedValueModifications** abaixo e [Como usar Always Encrypted com o Driver JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
+Para obter mais informações, veja a opção de cópia em massa **allowEncryptedValueModifications** abaixo e [Usando Always Encrypted com o Driver JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
   
 > [!IMPORTANT]  
 > Limitação do Microsoft JDBC Driver 6.0 para SQL Server ao copiar dados em massa de um arquivo CSV para colunas criptografadas:  

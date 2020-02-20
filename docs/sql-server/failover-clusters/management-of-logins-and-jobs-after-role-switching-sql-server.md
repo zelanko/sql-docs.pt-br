@@ -1,6 +1,7 @@
 ---
-title: Administração de logons e trabalhos depois de troca de funções (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Gerenciar logons e trabalhos após o failover de espelho
+description: Saiba como gerenciar logons e trabalhos após o failover de seu banco de dados espelhado do banco de dados primário para o secundário.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2887cfe969afd8739b15646efb8ee4700c8affff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf355678b3219fb0bf32ecd1620c00b0e58f346f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063848"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230218"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Administração de logons e trabalhos depois de troca de funções (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "68063848"
   
  Para obter mais informações, consulte [Usuários órfãos com espelhamento de banco de dados e envio de logs](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (um blog do mecanismo de banco de dados).  
   
-## <a name="jobs"></a>trabalhos  
+## <a name="jobs"></a>Trabalhos  
  Trabalhos, tais como trabalhos de backup, requerem consideração especial. Em geral, após uma troca de funções, o proprietário do banco de dados ou administrador do sistema deve recriar os trabalhos para o novo banco de dados primário/principal.  
   
  Quando a instância de servidor primária/principal anterior estiver disponível, será preciso excluir os trabalhos originais nessa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os trabalhos no banco de dados espelho atual apresentam falhas porque o banco de dados está no estado RESTORING, tornando-o indisponível.  

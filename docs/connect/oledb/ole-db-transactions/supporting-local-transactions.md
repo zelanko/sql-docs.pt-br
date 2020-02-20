@@ -1,5 +1,5 @@
 ---
-title: Oferecendo suporte a transações locais | Microsoft Docs
+title: Dando suporte a transações locais | Microsoft Docs
 description: Transações locais no OLE DB Driver para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c0cfc1ad6ff3439efe458f97394909c919b77075
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993965"
 ---
 # <a name="supporting-local-transactions"></a>Dando suporte a transações locais
@@ -29,40 +29,40 @@ ms.locfileid: "67993965"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Uma sessão delimita o escopo da transação para um driver de OLE DB para SQL Server transação local. Quando, na direção de um consumidor, o driver de OLE DB para SQL Server envia uma solicitação para uma instância conectada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a solicitação constitui uma unidade de trabalho para o driver de OLE DB para SQL Server. As transações locais sempre encapsulam uma ou mais unidades de trabalho em um único driver de OLE DB para SQL Server sessão.  
+  Uma sessão delimita o escopo da transação para uma transação local do Driver do OLE DB para SQL Server. Quando, na direção de um consumidor, o Driver do OLE DB para SQL Server envia uma solicitação para uma instância conectada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a solicitação constitui uma unidade de trabalho para o Driver do OLE DB para SQL Server. As transações locais sempre encapsulam uma ou mais unidades de trabalho em uma sessão do Driver do OLE DB para SQL Server.  
   
- Usando o modo de confirmação automática do OLE DB Driver for SQL Server padrão, uma única unidade de trabalho é tratada como o escopo de uma transação local. Apenas uma unidade participa da transação local. Quando uma sessão é criada, o driver OLE DB para SQL Server inicia uma transação para a sessão. Na conclusão bem-sucedida de uma unidade de trabalho, o trabalho é confirmado. Em caso de falha, qualquer trabalho começado é revertido e o erro é relatado ao consumidor. De qualquer maneira, o OLE DB Driver for SQL Server inicia uma nova transação local para a sessão, de forma que todo o trabalho seja realizado em uma transação.  
+ Usando o modo de confirmação automática do OLE DB Driver for SQL Server padrão, uma única unidade de trabalho é tratada como o escopo de uma transação local. Apenas uma unidade participa da transação local. Quando uma sessão é criada, o Driver do OLE DB para SQL Server inicia uma transação para a sessão. Na conclusão bem-sucedida de uma unidade de trabalho, o trabalho é confirmado. Em caso de falha, qualquer trabalho começado é revertido e o erro é relatado ao consumidor. De qualquer maneira, o OLE DB Driver for SQL Server inicia uma nova transação local para a sessão, de forma que todo o trabalho seja realizado em uma transação.  
   
- O consumidor do OLE DB Driver for SQL Server pode direcionar um controle mais preciso sobre o escopo da transação local usando a interface **ITransactionLocal**. Quando uma sessão do consumidor inicia uma transação, todas as unidades de trabalho da sessão entre o ponto inicial da transação e as eventuais chamadas do método **Commit** ou **Abort** são tratadas como uma unidade atômica. O driver de OLE DB para SQL Server inicia implicitamente uma transação quando instruído a fazer isso pelo consumidor. Se o consumidor não solicitar retenção, a sessão reverterá para o comportamento pai em nível de transação, geralmente o modo de confirmação automática.  
+ O consumidor do OLE DB Driver for SQL Server pode direcionar um controle mais preciso sobre o escopo da transação local usando a interface **ITransactionLocal**. Quando uma sessão do consumidor inicia uma transação, todas as unidades de trabalho da sessão entre o ponto inicial da transação e as eventuais chamadas do método **Commit** ou **Abort** são tratadas como uma unidade atômica. O Driver do OLE DB para SQL Server inicia uma transação implicitamente quando direcionado a fazê-lo pelo consumidor. Se o consumidor não solicitar retenção, a sessão reverterá para o comportamento pai em nível de transação, geralmente o modo de confirmação automática.  
   
- O driver OLE DB para SQL Server dá suporte aos parâmetros **ITransactionLocal:: StartTransaction** da seguinte maneira.  
+ O Driver do OLE DB para SQL Server dá suporte aos parâmetros **ITransactionLocal::StartTransaction**, conforme mostrado a seguir.  
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|*isoLevel*[in]|O nível de isolamento a ser usado com esta transação. Em transações locais, o driver OLE DB para SQL Server dá suporte ao seguinte:<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> Observação: do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] em diante, ISOLATIONLEVEL_SNAPSHOT é válido para o argumento *isoLevel*, independentemente de o controle de versão estar habilitado ou não para o banco de dados. Porém, ocorrerá um erro se o usuário tentar executar uma instrução e o controle de versão não estiver habilitado e/ou o banco de dados não for somente leitura. Além disso, o erro XACT_E_ISOLATIONLEVEL ocorrerá se ISOLATIONLEVEL_SNAPSHOT for especificado como o *isoLevel* quando conectado a uma versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].|  
-|*isoFlags*[in]|O driver OLE DB para SQL Server retorna um erro para qualquer valor diferente de zero.|  
-|*pOtherOptions*[in]|Se não for NULL, o driver de OLE DB para SQL Server solicitará o objeto de opções da interface. O driver de OLE DB para SQL Server retornará XACT_E_NOTIMEOUT se o membro *ulTimeout* do objeto de opções não for zero. O driver OLE DB para SQL Server ignora o valor do membro *szDescription* .|  
-|*pulTransactionLevel*[out]|Se não for NULL, o driver OLE DB para SQL Server retornará o nível aninhado da transação.|  
+|*isoLevel*[in]|O nível de isolamento a ser usado com esta transação. Em transações locais, o Driver do OLE DB para SQL Server dá suporte ao seguinte:<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> Observação: Do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] em diante, ISOLATIONLEVEL_SNAPSHOT é válido para o argumento *isoLevel*, independentemente de o controle de versão estar habilitado ou não para o banco de dados. Porém, ocorrerá um erro se o usuário tentar executar uma instrução e o controle de versão não estiver habilitado e/ou o banco de dados não for somente leitura. Além disso, o erro XACT_E_ISOLATIONLEVEL ocorrerá se ISOLATIONLEVEL_SNAPSHOT for especificado como o *isoLevel* quando conectado a uma versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].|  
+|*isoFlags*[in]|O Driver do OLE DB para SQL Server retorna um erro para qualquer valor diferente de zero.|  
+|*pOtherOptions*[in]|Se for diferente de NULL, o Driver do OLE DB para SQL Server solicitará o objeto de opções da interface. O Driver do OLE DB para SQL Server retornará XACT_E_NOTIMEOUT se o membro *ulTimeout* do objeto de opções for diferente de zero. O Driver do OLE DB para SQL Server ignora o valor do membro *szDescription*.|  
+|*pulTransactionLevel*[out]|Se for diferente de NULL, o Driver do OLE DB para SQL Server retornará o nível aninhado da transação.|  
   
- Para transações locais, o driver OLE DB para SQL Server implementa os parâmetros **ITransaction:: Abort** da seguinte maneira.  
+ Para transações locais, o Driver do OLE DB para SQL Server implementa parâmetros **ITransaction::Abort**, conforme mostrado a seguir.  
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*pboidReason*[in]|Ignorado se definido. Pode ser NULL com segurança.|  
-|*fRetaining*[in]|Quando TRUE, uma nova transação é iniciada implicitamente para a sessão. A transação deve ser confirmada ou encerrada pelo consumidor. Quando for falso, o driver de OLE DB para SQL Server será revertido para o modo de confirmação automática para a sessão.|  
-|*fAsync*[in]|O driver OLE DB para SQL Server não dá suporte para anulação assíncrona. O driver OLE DB para SQL Server retornará XACT_E_NOTSUPPORTED se o valor não for FALSE.|  
+|*fRetaining*[in]|Quando TRUE, uma nova transação é iniciada implicitamente para a sessão. A transação deve ser confirmada ou encerrada pelo consumidor. Quando FALSE, o Driver do OLE DB para SQL Server reverte ao modo de confirmação automática para a sessão.|  
+|*fAsync*[in]|A anulação assíncrona não é compatível com o Driver do OLE DB para SQL Server. O Driver do OLE DB para SQL Server retornará XACT_E_NOTSUPPORTED se o valor não for FALSE.|  
   
- Para transações locais, o driver OLE DB para SQL Server implementa os parâmetros **ITransaction:: Commit** da seguinte maneira.  
+ Para transações locais, o Driver do OLE DB para SQL Server implementa parâmetros **ITransaction::Commit**, conforme mostrado a seguir.  
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|*fRetaining*[in]|Quando TRUE, uma nova transação é iniciada implicitamente para a sessão. A transação deve ser confirmada ou encerrada pelo consumidor. Quando for falso, o driver de OLE DB para SQL Server será revertido para o modo de confirmação automática para a sessão.|  
-|*grfTC*[in]|Não há suporte para os retornos assíncronos e da fase um pelo driver OLE DB para SQL Server. O driver de OLE DB para SQL Server retorna XACT_E_NOTSUPPORTED para qualquer valor diferente de XACTTC_SYNC.|  
+|*fRetaining*[in]|Quando TRUE, uma nova transação é iniciada implicitamente para a sessão. A transação deve ser confirmada ou encerrada pelo consumidor. Quando FALSE, o Driver do OLE DB para SQL Server reverte ao modo de confirmação automática para a sessão.|  
+|*grfTC*[in]|Retornos assíncronos e de fase um não são compatíveis com o Driver do OLE DB para SQL Server. O Driver do OLE DB para SQL Server retorna XACT_E_NOTSUPPORTED para qualquer valor diferente de XACTTC_SYNC.|  
 |*grfRM*[in]|Deve ser 0.|  
   
  Os conjuntos de linhas do OLE DB Driver for SQL Server na sessão são preservados em uma operação de confirmação ou anulação local com base nos valores das propriedades do conjunto de linhas DBPROP_ABORTPRESERVE e DBPROP_COMMITPRESERVE. Por padrão, essas propriedades são VARIANT_FALSE e todos os conjuntos de linhas do OLE DB Driver for SQL Server na sessão são perdidas após uma operação de anulação ou de confirmação.  
   
- O driver OLE DB para SQL Server não implementa a interface **ITransactionObject** . Uma tentativa do consumidor de recuperar uma referência na interface retorna E_NOINTERFACE.  
+ O Driver do OLE DB para SQL Server não implementa a interface **ITransactionObject**. Uma tentativa do consumidor de recuperar uma referência na interface retorna E_NOINTERFACE.  
   
  Este exemplo usa **ITransactionLocal**.  
   

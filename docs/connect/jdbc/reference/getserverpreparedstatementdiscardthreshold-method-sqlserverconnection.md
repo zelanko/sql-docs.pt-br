@@ -16,16 +16,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87d7f85799524e3ac7c0e4d99608ce1d82b8f2fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979933"
 ---
 # <a name="getserverpreparedstatementdiscardthreshold-method-sqlserverconnection"></a>Método getServerPreparedStatementDiscardThreshold (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Retorna o valor da propriedade de conexão **serverPreparedStatementDiscardThreshold** . Essa configuração controla quantas ações de descarte de instrução preparadas pendentes (sp_unprepare) podem estar pendentes por conexão antes que uma chamada para limpar os identificadores pendentes no servidor seja executada. Se a configuração for < = 1, as ações despreparar serão executadas imediatamente no fechamento da instrução preparada. Se estiver definido como > 1, essas chamadas serão agrupadas em lote para evitar a sobrecarga de chamar sp_unprepare com muita frequência. O padrão para essa opção pode ser alterado chamando getDefaultServerPreparedStatementDiscardThreshold ().
+ Retorna o valor da propriedade de conexão **serverPreparedStatementDiscardThreshold**. Essa configuração controla quantas ações de descarte de instruções preparadas pendentes (sp_unprepare) podem estar pendentes por conexão antes que uma chamada para limpar os identificadores pendentes no servidor seja executada. Se a configuração for < = 1, ações de cancelamento de preparação serão executadas imediatamente no fechamento da instrução preparada. Se o valor for definido como > 1, essas chamadas serão agrupadas em lote para evitar a sobrecarga de chamar sp_unprepare com muita frequência. O padrão para essa opção pode ser alterado chamando getDefaultServerPreparedStatementDiscardThreshold().
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,13 +35,13 @@ public int getServerPreparedStatementDiscardThreshold()
 ```  
 
 ## <a name="return-value"></a>Valor retornado
- Um **int** que contém o valor da propriedade de conexão **serverPreparedStatementDiscardThreshold** .
+ Um **int** que contém o valor da propriedade de conexão **serverPreparedStatementDiscardThreshold**.
 
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Remarks  
- Esse método está disponível no JDBC Driver versão 6,4 e em diante.
+## <a name="remarks"></a>Comentários  
+ Esse método está disponível no JDBC Driver versão 6.4 e em diante.
  
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

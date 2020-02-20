@@ -14,10 +14,10 @@ ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67688513"
 ---
 # <a name="report-builder-in-sql-server"></a>Construtor de Relatórios no SQL Server
@@ -36,7 +36,7 @@ Você também pode publicar um relatório paginado no serviço do Power BI. Leia
   
 -   **Inicie com o assistente de Tabela, Matriz ou Gráfico**. Escolha uma conexão de fonte de dados, arraste e solte campos para criar uma consulta de conjunto de dados, selecione um layout e um estilo e personalize seu relatório.  
   
--   **Inicie com o assistente de Mapa** para criar relatórios que exibam dados agregados em um plano de fundo geográfico ou geométrico. Os dados de mapa podem ser dados espaciais de uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] ou um arquivo de forma ESRI (Environmental Systems Research Institute, Inc.). Também é possível adicionar um plano de fundo de peça de mapa do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing.  
+-   **Inicie com o assistente de Mapa** para criar relatórios que exibam dados agregados em um plano de fundo geográfico ou geométrico. Os dados de mapa podem ser dados espaciais de uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] ou um shapefile ESRI (Environmental Systems Research Institute, Inc.). Também é possível adicionar um plano de fundo de peça de mapa do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing.  
   
 -   **Iniciar o relatório com partes de relatório**. As partes de relatório são itens de relatório que foram publicados separadamente em um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em modo nativo ou em modo integrado do SharePoint. Partes de relatório podem ser reutilizadas em outros relatórios. Itens de relatório como tabelas, matrizes, gráficos e imagens podem ser publicados como partes de relatório.  
   
@@ -44,7 +44,7 @@ Você também pode publicar um relatório paginado no serviço do Power BI. Leia
   
 -   **Crie relatórios paginados com tabela, matriz, gráfico e layouts de relatório de forma livre.** Crie relatórios de tabelas para dados baseados em colunas, relatórios de matriz (como relatórios de tabela de referência cruzada ou de Tabela Dinâmica) para dados resumidos, relatórios de gráficos para dados geográficos e relatórios de formato livre para qualquer outra finalidade. Os relatórios podem ser inseridos em outros relatórios e gráficos, junto com listas, gráficos e controles para aplicativos dinâmicos baseados na Web.  
   
--   **Use várias fontes de dados para gerar relatórios.** Crie relatórios usando dados de qualquer tipo de fonte de dados que tenham um provedor de dados gerenciado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], um provedor OLE DB ou uma fonte de dados ODBC. Você pode criar relatórios que usam dados relacionais e multidimensionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion e outros bancos de dados. Você pode usar uma extensão de processamento de dados XML para recuperar dados de qualquer fonte de dados XML. Também é possível usar funções com valor de tabela para projetar fontes de dados personalizadas.  
+-   **Use várias fontes de dados para gerar relatórios.** Crie relatórios usando dados de qualquer tipo de fonte de dados que tenha um provedor de dados gerenciado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], um provedor OLE DB ou uma fonte de dados ODBC. Você pode criar relatórios que usam dados relacionais e multidimensionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion e outros bancos de dados. Você pode usar uma extensão de processamento de dados XML para recuperar dados de qualquer fonte de dados XML. Também é possível usar funções com valor de tabela para projetar fontes de dados personalizadas.  
   
 -   **Modifique relatórios existentes.** Com o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], você pode personalizar e atualizar relatórios criados no Designer de Relatórios do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -75,7 +75,7 @@ Você também pode publicar um relatório paginado no serviço do Power BI. Leia
 
   [Novidades no SQL Server Reporting Services e no Construtor de Relatórios](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Descreve os novos recursos nesta versão do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].   
-  [Tutorial: Criando um relatório de gráfico rápido offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [Tutorial: Criar um relatório de gráficos rápido offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Apresenta o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e os assistentes disponíveis para ajudá-lo a criar relatórios. O tutorial fornece um conjunto de dados com o qual trabalhar, de modo que você não precise se conectar a uma fonte de dados para começar.  
   
  [Planejando um relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  

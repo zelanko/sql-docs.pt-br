@@ -1,5 +1,5 @@
 ---
-title: Tela 1 do assistente de fonte de dados (driver ODBC para SQL Server) | Microsoft Docs
+title: Tela 1 do Assistente de Fonte de Dados (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6edf465f5b853008c9bdc8c420f6e862e360593
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936601"
 ---
 # <a name="data-source-wizard-screen-1"></a>Tela 1 do Assistente de Fonte de Dados
@@ -33,7 +33,7 @@ O nome da fonte de dados usado por um aplicativo ODBC quando solicita uma conex�
 
 ### <a name="select-or-enter-a-server-name"></a>Selecione ou digite um nome de servidor
 
-O nome de uma instância do SQL Server em sua rede. Você precisará especificar um servidor na próxima caixa de edição.
+O nome de uma instância do SQL Server na sua rede. Você precisará especificar um servidor na próxima caixa de edição.
 
 Na maioria dos casos, o driver ODBC pode se conectar usando a ordem de protocolos padrão e o nome do servidor fornecido nesta caixa. Use o SQL Server Configuration Manager se você desejar criar um alias para o servidor ou configurar bibliotecas de rede de cliente.
 
@@ -47,7 +47,7 @@ Se as informações especificadas nesta tela constituírem todos os dados necess
 
 ### <a name="next"></a>Próximo
 
-Para prosseguir para a próxima tela do assistente, clique em **Avançar**.
+Para passar para a próxima tela do assistente, clique em **Próximo**.
 
 ## <a name="next-steps"></a>Próximas etapas
 

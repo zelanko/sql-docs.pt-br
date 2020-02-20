@@ -21,10 +21,10 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72008442"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificações de capacidade máxima do SQL Server
@@ -40,10 +40,10 @@ ms.locfileid: "72008442"
   
  [Objetos de Replicação do SQL Server](#Replication)  
   
-##  <a name="Engine"></a> [!INCLUDE[ssDE](../includes/ssde-md.md)] Objetos  
+##  Objetos do <a name="Engine"></a> [!INCLUDE[ssDE](../includes/ssde-md.md)]  
  Tamanhos e números máximos de vários objetos definidos nos bancos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou referenciados em instruções [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] objeto||Tamanho máximo/números [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 bits)|Informações adicionais|  
+|Objeto do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]||Tamanho máximo/números [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 bits)|Informações adicionais|  
 |---------------------------------------------------------|-|------------------------------------------------------------------|----------------------------|  
 |Tamanho do lote||65.536 * Tamanho do pacote de rede|Tamanho do pacote de rede é o tamanho dos pacotes do protocolo TDS usados para comunicação entre aplicativos e o [!INCLUDE[ssDE](../includes/ssde-md.md)]relacional. O tamanho de pacote padrão é 4 KB e é controlado pela opção de configuração tamanho do pacote de rede.|  
 |Bytes por coluna de cadeia de caracteres curta||8,000||  
@@ -62,17 +62,17 @@ ms.locfileid: "72008442"
 |Colunas ou expressões em uma instrução GROUP BY WITH CUBE ou WITH ROLLUP||10||  
 |Colunas por chave de índice||32|Se a tabela contiver um ou mais índices XML, a chave de clustering da tabela do usuário será limitada a 31 colunas porque a coluna XML é adicionada à chave de clustering do índice XML primário. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você pode incluir colunas não chave em um índice não clusterizado para evitar a limitação de um máximo de 32 colunas de chave. Para obter mais informações, consulte [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|  
 |Colunas por chave estrangeira ou chave primária||32||  
-|Colunas por instrução `INSERT`||4,096||  
-|Colunas por instrução `SELECT`||4,096||  
-|Colunas por tabela||1,024|As tabelas que incluem conjuntos de colunas esparsas incluem até 30.000 colunas. Confira [Conjuntos de colunas esparsas](../relational-databases/tables/use-column-sets.md).|  
-|Colunas por instrução `UPDATE`||4,096|Diferentes limites se aplicam aos [conjuntos de colunas esparsas](../relational-databases/tables/use-column-sets.md).|  
-|Colunas por exibição||1,024||  
+|Colunas por instrução `INSERT`||4\.096||  
+|Colunas por instrução `SELECT`||4\.096||  
+|Colunas por tabela||1\.024|As tabelas que incluem conjuntos de colunas esparsas incluem até 30.000 colunas. Confira [Conjuntos de colunas esparsas](../relational-databases/tables/use-column-sets.md).|  
+|Colunas por instrução `UPDATE`||4\.096|Diferentes limites se aplicam aos [conjuntos de colunas esparsas](../relational-databases/tables/use-column-sets.md).|  
+|Colunas por exibição||1\.024||  
 |Conexões por cliente||Valor máximo de conexões configuradas||  
 |Tamanho do banco de dados||524.272 terabytes||  
-|Bancos de dados por instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
-|Grupos de arquivos por banco de dados||32,767||  
+|Bancos de dados por instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32.767||  
+|Grupos de arquivos por banco de dados||32.767||  
 |Grupos de arquivo por banco de dados para dados com otimização de memória.||1||  
-|Arquivos por banco de dados||32,767||  
+|Arquivos por banco de dados||32.767||  
 |Tamanho de arquivo (dados)||16 terabytes||  
 |Tamanho de arquivo (log)||2 terabytes||  
 |Arquivos de dados para dados com otimização de memória por banco de dados||4\.096 no [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]. As versões posteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não impõem um limite estrito como esse.||  
@@ -90,7 +90,7 @@ ms.locfileid: "72008442"
 |Níveis aninhados de gatilho||32||  
 |Índices não clusterizados por tabela||999||  
 |Número de expressões distintas na cláusula GROUP BY quando qualquer um dos seguintes estiver presente: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP||32||  
-|Número de conjuntos de agrupamentos gerados por operadores na cláusula GROUP BY||4,096||  
+|Número de conjuntos de agrupamentos gerados por operadores na cláusula GROUP BY||4\.096||  
 |Parâmetros por procedimento armazenado||2,100||  
 |Parâmetros por função definida pelo usuário||2,100||  
 |REFERENCES por tabela||253||  
@@ -100,10 +100,10 @@ ms.locfileid: "72008442"
 |Estatísticas em colunas não indexadas||30,000|| 
 |Tabelas por instrução SELECT||Limitado apenas pelos recursos disponíveis||  
 |Gatilhos por tabela||Limitado pelo número de objetos em um banco de dados|Os objetos de banco de dados incluem objetos como tabelas, exibições, procedimentos armazenados, funções definidas pelo usuário, gatilhos, regras, padrões e restrições. A soma do número de todos os objetos em um banco de dados não pode exceder 2.147.483.647.|  
-|Conexões de usuário||32,767||  
+|Conexões de usuário||32.767||  
 |índices XML||249||  
   
-##  <a name="Utility"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objetos do utilitário  
+##  Objetos do Utilitário do <a name="Utility"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Tamanhos e números máximos de vários objetos que foram testados no Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objeto do utilitário||Tamanho máximo/números [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 bits)|  
@@ -120,7 +120,7 @@ ms.locfileid: "72008442"
   
  *O número máximo de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com suporte do Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode variar com base na configuração de hardware do servidor. Para obter informações de introdução, consulte [Recursos e tarefas do utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não está disponível em todas as edições do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
   
-##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objetos de aplicativo da camada de dados  
+##  Objetos de aplicativo da camada de dados do <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Tamanhos e números máximos de vários objetos que foram testados nos DAC (aplicativos de camada de dados) do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC||Tamanho máximo/números [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 bits)|  
@@ -135,12 +135,12 @@ ms.locfileid: "72008442"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objeto de replicação||Tamanhos/números máximos do SQL Server (64 bits)|  
 |--------------------------------------------------|-|---------------------------------------------------|  
-|Artigos (publicação de mesclagem)||2048|  
-|Artigos (publicação de instantâneo ou transacional)||32,767|  
+|Artigos (publicação de mesclagem)||2\.048|  
+|Artigos (publicação de instantâneo ou transacional)||32.767|  
 |Colunas em uma tabela* (publicação de mesclagem)||246|  
 |Colunas em uma tabela** (instantâneo do[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou publicação transacional)||1,000|  
 |Colunas em uma tabela** (instantâneo do Oracle ou publicação transacional)||995|  
-|Bytes para uma coluna usada em um filtro de linha (publicação de mesclagem)||1,024|  
+|Bytes para uma coluna usada em um filtro de linha (publicação de mesclagem)||1\.024|  
 |Bytes para uma coluna usada em um filtro de linha (publicação de instantâneo ou transacional)||8,000|  
 
  *Se o controle de linha for usado para detecção de conflitos (o padrão), a tabela base poderá incluir no máximo 1.024 colunas, mas as colunas deverão ser filtradas do artigo para que um máximo de 246 colunas seja publicado. Se o rastreamento de coluna for usado, a tabela base poderá incluir no máximo 246 colunas.  

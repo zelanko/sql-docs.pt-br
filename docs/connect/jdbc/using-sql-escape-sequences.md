@@ -11,10 +11,10 @@ ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025890"
 ---
 # <a name="using-sql-escape-sequences"></a>Como usar sequências de escape do SQL
@@ -69,9 +69,9 @@ SELECT {fn UCASE(Name)} FROM Employee
 
 A tabela a seguir lista as várias funções que têm o suporte do driver JDBC ao usar uma sequência de escape de função:  
   
-| Funções de cadeia de caracteres                                                                                                                                                                                                                                                                                                                        | Funções numéricas                                                                                                                                                                                                                                                                                                                                                                                                   | Funções DateTime                                                                                                                                                                                                                                                                                                                                             | Funções de sistema                             |
+| Funções de Cadeia de Caracteres                                                                                                                                                                                                                                                                                                                        | Funções numéricas                                                                                                                                                                                                                                                                                                                                                                                                   | Funções de data e hora                                                                                                                                                                                                                                                                                                                                             | Funções de sistema                             |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> Usuário |
+| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> USER |
 
 > [!NOTE]  
 > Se você tentar usar uma função que não tenha o suporte do banco de dados, ocorrerá um erro.  
@@ -88,7 +88,7 @@ em que `literal-type` é um dos seguintes:
   
 | Tipo de literal | Descrição | Formato do valor               |
 | ------------ | ----------- | -------------------------- |
-| d            | data        | aaaa-mm-dd                 |
+| d            | Data        | aaaa-mm-dd                 |
 | t            | Hora        | hh:mm:ss [1]               |
 | ts           | TimeStamp   | aaaa-mm-dd hh:mm:ss[.f...] |
   
@@ -111,7 +111,7 @@ Um procedimento é um objeto executável armazenado no banco de dados. Em geral,
 
 em que `procedure-name` especifica o nome de um procedimento armazenado e `parameter` especifica um parâmetro de procedimento armazenado.  
   
-Para obter mais informações sobre como `call` usar a sequência de escape com procedimentos armazenados, consulte [usando instruções com procedimentos armazenados](../../connect/jdbc/using-statements-with-stored-procedures.md).  
+Para obter mais informações sobre o uso da sequência de escape `call` com procedimentos armazenados, confira [Como usar instruções com procedimentos armazenados](../../connect/jdbc/using-statements-with-stored-procedures.md).  
 
 ## <a name="outer-joins"></a>Junções externas
 

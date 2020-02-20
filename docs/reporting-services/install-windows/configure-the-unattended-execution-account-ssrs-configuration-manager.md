@@ -1,8 +1,10 @@
 ---
-title: Configurar a conta de execução autônoma (Gerenciador de Configurações do SSRS) | Microsoft Docs
-ms.date: 05/31/2016
+title: Configurar a conta de execução autônoma (Gerenciador de Configurações) | Microsoft Docs
+description: O Reporting Services fornece uma conta especial que é usada para o processamento autônomo de relatórios e para enviar solicitações de conexão pela rede.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -15,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4326c38c84ad7af8fb23a5dde035720a1a7024d4
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593310"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866313"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar a conta de execução autônoma (Gerenciador de configurações do SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma conta especial que é usada para o processamento autônomo de relatórios e para enviar solicitações de conexão pela rede. A conta é usada das seguintes maneiras:  
@@ -50,7 +52,7 @@ ms.locfileid: "73593310"
   
 1.  Crie ou selecione uma conta de domínio que tenha acesso a computadores e servidores que forneçam dados ou serviços a um servidor de relatório. Você deve usar uma conta que tenha permissões reduzidas (por exemplo, permissões somente leitura).  
   
-2.  Abra um prompt de comando: No menu **Iniciar** , clique em **Executar**, digite **cmd**e clique em **OK**.  
+2.  Abra um prompt de comando: No menu **Iniciar**, clique em **Executar**, digite **cmd** e, em seguida, clique em **OK**.  
   
 3.  Digite o seguinte comando para configurar a conta em uma instância local do servidor de relatório:  
   

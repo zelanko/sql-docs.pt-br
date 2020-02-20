@@ -1,5 +1,5 @@
 ---
-title: Gerenciador de Soluções | Microsoft Docs
+title: Gerenciador de Soluções
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -15,19 +15,19 @@ ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: a0e2a3512528bdddc62d89e182a6f074b05bdc75
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: d95b590d4ec0bd9daef6b81822317cfdda0bdad3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988125"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242838"
 ---
 # <a name="solution-explorer"></a>Gerenciador de Soluções
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-O painel Gerenciador de Soluções no [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece contêineres chamado projetos para gerenciar itens como scripts de banco de dados, consultas, conexões de dados e arquivos. Um ou mais projetos relacionados um ao outro podem ser combinados em um contêiner chamado solução.  
+O painel Gerenciador de Soluções no [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece contêineres chamados projetos para gerenciar itens, como scripts de banco de dados, consultas, conexões de dados e arquivos. Um ou mais projetos relacionados um ao outro podem ser combinados em um contêiner chamado solução.  
   
 Uma solução inclui um ou mais projetos, mais arquivos e metadados que ajudam a definir a solução como um todo. Um projeto é um conjunto de arquivos mais metadados relacionados, como informações de conexão. Soluções e projetos contêm itens que representam scripts, consultas, informações de conexão e arquivos necessários para criar sua solução de banco de dados.  
   

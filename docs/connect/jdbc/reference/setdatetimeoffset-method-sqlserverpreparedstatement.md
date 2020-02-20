@@ -11,10 +11,10 @@ ms.assetid: 5014dba9-1755-4769-b070-6cbeecee864e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 429e1720a6fac8c01ce2d201717787146bc8cc63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974357"
 ---
 # <a name="setdatetimeoffset-method-sqlserverpreparedstatement"></a>Método setDateTimeOffset (SQLServerPreparedStatement)
@@ -22,7 +22,7 @@ ms.locfileid: "67974357"
 
   Esse método foi adicionado ao [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
- Define o valor da coluna especificada para o valor da [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .  
+ Define o valor da coluna especificada para o valor da [Classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,14 +31,14 @@ ms.locfileid: "67974357"
 public final void setDateTimeOffset(int n, microsoft.sql.DateTimeOffset x)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *n*  
   
  O ordinal baseado em zero de uma coluna.  
   
  *x*  
   
- O objeto da [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .  
+ O objeto de [Classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md).  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

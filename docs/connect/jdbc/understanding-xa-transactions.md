@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6e7f602107e828ee0bd985345ed5e641d6870558
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027221"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947128"
 ---
 # <a name="understanding-xa-transactions"></a>Noções básicas sobre transações XA
 
@@ -23,10 +23,12 @@ ms.locfileid: "69027221"
 
 O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] oferece suporte a transações distribuídas opcionais para Plataforma Java, Enterprise Edition/JDBC 2.0. Conexões JDBC obtidas da classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) podem participar de ambientes de processamento de transações distribuídas padrão como os servidores de aplicativos da Plataforma Java, Java EE (Enterprise Edition).  
 
-> [!WARNING]  
-> O Microsoft JDBC Driver 4.2 (e superiores) for SQL inclui novas opções de tempo limite para o recurso existente para reversão automática de transações não preparadas. Consulte [definindo configurações de tempo limite do servidor para reversão automática de transações](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) não preparadas posteriormente neste tópico para obter mais detalhes.  
+Neste artigo, o XA significa arquitetura estendida.
 
-## <a name="remarks"></a>Remarks
+> [!WARNING]  
+> O Microsoft JDBC Driver 4.2 (e superiores) for SQL inclui novas opções de tempo limite para o recurso existente para reversão automática de transações não preparadas. Confira [Configuração das definições de tempo limite do servidor para reversão automática de transações não preparadas](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) posteriormente neste tópico para encontrar mais detalhes.  
+
+## <a name="remarks"></a>Comentários
 
 As classes para a implementação das transações distribuídas são as seguintes:  
   
@@ -44,9 +46,9 @@ As diretrizes adicionais a seguir se aplicam a transações firmemente acopladas
 
 - Ao usar transações XA junto com o Coordenador de Transações Distribuídas (MS DTC), talvez você observe que a versão atual do MS DTC não oferece suporte ao comportamento de ramificações XA firmemente acopladas. Por exemplo, o MS DTC tem um mapeamento um-para-um entre uma ID de transação de ramificação XA (XID) e uma ID de transação do MS DTC, e as operações executadas por ramificações XA frouxamente acopladas são isoladas uma da outra.  
   
-     O hotfix fornecido em [MSDTC e transações bem acopladas](https://support.microsoft.com/kb/938653) habilita o suporte a branches XA bem acoplados em que vários branches XA com a mesma GTRID (ID de transação global) são mapeados para uma única ID de transação do MS DTC. Esse suporte permite que vários branches XA bem acoplados reconheçam as alterações feitas no gerenciador de recursos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+- O MS DTC também é compatível com branches XA bem acoplados em que vários branches XA com a mesma GTRID (ID de transação global) são mapeados para uma ID de transação do MS DTC. Esse suporte permite que vários branches XA bem acoplados reconheçam as alterações feitas no gerenciador de recursos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-- Um sinalizador [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) permite que os aplicativos usem as transações XA bem acopladas com IDs de transação de branch XA (BQUAL) diferentes, mas a mesma GTRID (ID de transação global) e a mesma FormatID (ID de formato). Para usar esse recurso, você deve definir o [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) no parâmetro flags do método XAResource. Start:
+- Um sinalizador [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) permite que os aplicativos usem as transações XA bem acopladas com IDs de transação de branch XA (BQUAL) diferentes, mas a mesma GTRID (ID de transação global) e a mesma FormatID (ID de formato). Para usar esse recurso, você deve definir o [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) no parâmetro de sinalizadores do método XAResource.start:
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -60,7 +62,7 @@ As etapas a seguir serão necessárias se você desejar usar fontes de dados XA 
 > Os componentes de transações distribuídas do JDBC são incluídos no diretório xa da instalação do driver JDBC. Esses componentes incluem os arquivos xa_install.sql e sqljdbc_xa.dll.  
 
 > [!NOTE]  
-> A partir do SQL Server versão prévia do 2019 pública CTP 2,0, os componentes de transação distribuída JDBC XA são incluídos no mecanismo de SQL Server e podem ser habilitados ou desabilitados com um procedimento armazenado do sistema.
+> Começando com o CTP 2.0 da versão prévia pública do SQL Server 2019, os componentes da transação distribuída do JDBC XA estão incluídos no mecanismo do SQL Server e podem ser habilitados ou desabilitados com um procedimento armazenado do sistema.
 > Para habilitar os componentes necessários para executar transações distribuídas XA usando o driver JDBC, execute o procedimento armazenado a seguir.
 >
 > EXEC sp_sqljdbc_xa_install
@@ -108,9 +110,9 @@ Há três maneiras de verificar qual versão do sqljdbc_xa.dll está instalada n
   
 1. Abra o diretório LOG do computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que participará de transações distribuídas. Selecione e abra o arquivo "ERRORLOG" do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Procure a frase "Using 'SQLJDBC_XA.dll' version ..." no arquivo "ERRORLOG".  
   
-2. Abra o diretório Binn do computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que participará de transações distribuídas. Selecione o assembly sqljdbc_xa. dll.
+2. Abra o diretório Binn do computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que participará de transações distribuídas. Selecione o assembly sqljdbc_xa.dll.
 
-    - No Windows Vista ou versão posterior: clique com o botão direito do mouse em sqljdbc_xa.dll e selecione Propriedades. Em seguida, clique na guia **Detalhes**. O campo **Versão do Arquivo** mostra a versão de sqljdbc_xa.dll que está instalada no momento na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    - No Windows Vista ou posterior: Clique com o botão direito do mouse em sqljdbc_xa.dll e selecione Propriedades. Em seguida, clique na guia **Detalhes**. O campo **Versão do Arquivo** mostra a versão de sqljdbc_xa.dll que está instalada no momento na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 3. Defina a funcionalidade de registro em log conforme mostrado no exemplo de código na próxima seção. Procure a frase "Server XA DLL version:..." no arquivo de log de saída.  
 
@@ -121,9 +123,9 @@ Há três maneiras de verificar qual versão do sqljdbc_xa.dll está instalada n
 
 Há duas configurações de Registro (valores DWORD) para controlar o comportamento de tempo limite de transações distribuídas:  
   
-- **XADefaultTimeout** (em segundos): o valor de tempo limite padrão a ser usado quando o usuário não especificar nenhum tempo limite. O padrão é 0.  
+- **XADefaultTimeout** (em segundos): O valor de tempo limite padrão a ser usado quando o usuário não especifica nenhum tempo limite. O padrão é 0.  
   
-- **XAMaxTimeout** (em segundos): o valor máximo do tempo limite que um usuário pode definir. O padrão é 0.  
+- **XAMaxTimeout** (em segundos): O valor máximo do tempo limite que um usuário pode definir. O padrão é 0.  
   
 Essas configurações são específicas da instância do SQL Server e devem ser criadas na seguinte chave do Registro:  
 
@@ -159,7 +161,7 @@ Ao instalar uma nova versão do driver JDBC, você também deve usar o arquivo s
 > [!IMPORTANT]  
 > Você deve atualizar o sqljdbc_xa.dll durante a janela de manutenção ou quando não houver nenhuma transação do MS DTC em andamento.
   
-1. Descarregue sqljdbc_xa. dll usando [!INCLUDE[tsql](../../includes/tsql-md.md)] o comando **DBCC sqljdbc_xa (gratuito)** .  
+1. Descarregue o sqljdbc_xa.dll usando o comando [!INCLUDE[tsql](../../includes/tsql-md.md)] **DBCC sqljdbc_xa (FREE)** .  
   
 2. Copie o novo sqljdbc_xa.dll do diretório de instalação do driver JDBC para o diretório Binn de cada computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que participará de transações distribuídas.  
   

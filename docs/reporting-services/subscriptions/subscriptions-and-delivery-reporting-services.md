@@ -20,10 +20,10 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578040"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Assinaturas e entrega (Reporting Services)
@@ -31,7 +31,7 @@ ms.locfileid: "65578040"
   
  Você pode criar várias assinaturas para um único relatório e variar as opções de assinatura. Por exemplo, você pode especificar valores de parâmetros diferentes para produzir três versões de um relatório, como um relatório de vendas da região Ocidental, da região Oriental e de todas as vendas.  
   
- ![fluxo de assinatura do ssrs de exemplo](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "fluxo de assinatura do ssrs de exemplo")  
+ ![exemplo de fluxo de assinatura ssrs](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "exemplo de fluxo de assinatura ssrs")  
   
  As assinaturas não estão disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
@@ -88,7 +88,7 @@ ms.locfileid: "65578040"
 ##  <a name="bkmk_standard_and_datadriven"></a> Assinaturas padrão e assinaturas controladas por dados  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte a dois tipos de assinatura: **padrão** e **controlada por dados**. Assinaturas padrão são criadas e gerenciadas por usuários individuais. Uma assinatura padrão consiste em valores estáticos que não podem ser variados durante o processamento da assinatura. Para cada assinatura padrão há exatamente um conjunto de opções de apresentação de relatório, opções de entrega e parâmetros de relatório.  
   
- Assinaturas controladas por dados obtêm informações de assinatura em tempo de execução consultando a fonte de dados externa que fornece valores usados para especificar um destinatário, parâmetros de relatório ou um formato do aplicativo. Você pode usar assinaturas controladas por dados se tiver uma lista de destinatários muito grande ou desejar variar a saída de relatório para cada destinatário. Para usar assinaturas controladas por dados, é necessário ter conhecimento especializado na criação de consultas e entender como os parâmetros são usados. Administradores de servidor de relatório geralmente criam e administram essas assinaturas. Para obter mais informações, consulte o seguinte:  
+ Assinaturas controladas por dados obtêm informações de assinatura em tempo de execução consultando a fonte de dados externa que fornece valores usados para especificar um destinatário, parâmetros de relatório ou um formato do aplicativo. Você pode usar assinaturas controladas por dados se tiver uma lista de destinatários muito grande ou desejar variar a saída de relatório para cada destinatário. Para usar assinaturas controladas por dados, é necessário ter conhecimento especializado na criação de consultas e entender como os parâmetros são usados. Administradores de servidor de relatório geralmente criam e administram essas assinaturas. Para saber mais, consulte o seguinte:  
   
 -   [Assinaturas controladas por dados](../../reporting-services/subscriptions/data-driven-subscriptions.md)  
   

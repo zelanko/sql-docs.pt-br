@@ -1,5 +1,5 @@
 ---
-title: Recursos preteridos do SQL Server Reporting Services no SQL Server 2016 | Microsoft Docs
+title: Recursos preteridos no SQL Server 2016 Reporting Services | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5aca8d992817ab65a6f618ff544f1dfa0e02252e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 38c050f8b41a8ff6e1bb9601abc562002caa4a27
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502751"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74317944"
 ---
-# <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2016"></a>Recursos preteridos do SQL Server Reporting Services no SQL Server 2016
+# <a name="deprecated-features-in-sql-server-2016-reporting-services"></a>Recursos preteridos no SQL Server 2016 Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-Este tópico descreve os recursos preteridos do SQL Server Reporting Services. Os recursos ainda estão disponíveis na versão em que foram preteridos; porém, os recursos estão agendados para ser removidos em uma versão futura do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Não use recursos preteridos em novos aplicativos.
+Este artigo descreve os recursos preteridos do SQL Server Reporting Services 2016. Os recursos ainda estão disponíveis na versão em que foram preteridos; porém, os recursos estão agendados para ser removidos em uma versão futura do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Não use recursos preteridos em novos aplicativos.
 
 ## <a name="features-not-supported-in-the-next-version-of-sql-server-reporting-services"></a>Recursos sem suporte na próxima versão do SQL Server Reporting Services
 
@@ -38,9 +38,8 @@ Os recursos do SQL Server Reporting Services a seguir não terão suporte na pr�
 
 ## <a name="features-not-supported-in-previous-versions-of-sql-server-reporting-services"></a>Recursos sem suporte em versões anteriores do SQL Server Reporting Services
 
+Recursos preteridos no SQL Server 2014 Reporting Services
 - [Recursos preteridos no SQL Server 2014 Reporting Services](deprecated-features-in-sql-server-reporting-services-ssrs.md)
-
-- [Recursos preteridos no SQL Server 2012 Reporting Services](deprecated-features-in-sql-server-reporting-services-ssrs.md)
 
 ## <a name="next-steps"></a>Próximas etapas
 
@@ -48,4 +47,4 @@ Os recursos do SQL Server Reporting Services a seguir não terão suporte na pr�
  [Alterações de comportamento do SQL Server Reporting Services no SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
  [Funcionalidade descontinuada do SQL Server Reporting Services no SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md) 
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

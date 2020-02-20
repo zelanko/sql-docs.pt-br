@@ -1,5 +1,5 @@
 ---
-title: Configurando as propriedades da fonte de dados | Microsoft Docs
+title: Configurar as propriedades da fonte de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0b3093b87557917655fcbfd6cf7c2ec37151ca44
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027732"
 ---
 # <a name="setting-the-data-source-properties"></a>Configurando as propriedades da fonte de dados
@@ -25,7 +25,7 @@ As fontes de dados são o mecanismo preferencial de criação das conexões JDBC
 
 Os produtos Java EE, como servidores de aplicativos e mecanismos de servlet/JSP, normalmente permitem configurar fontes de dados para o acesso do banco de dados. Qualquer propriedade listada no tópico [Definindo as propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md) pode ser especificada sempre que a configuração permitir a inserção de uma propriedade como um par propriedade=valor.
 
-Para obter mais informações sobre as fontes de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja a classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Para obter um exemplo de como usar a classe SQLServerDataSource para fazer uma conexão com um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados, consulte [exemplo de fonte de dado](../../connect/jdbc/data-source-sample.md).
+Para obter mais informações sobre as fontes de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja a classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Para obter um exemplo de como usar a classe SQLServerDataSource para estabelecer uma conexão com um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [Exemplo de fonte de dados](../../connect/jdbc/data-source-sample.md).
 
 ## <a name="see-also"></a>Confira também
 

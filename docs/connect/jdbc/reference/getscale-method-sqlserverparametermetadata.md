@@ -16,10 +16,10 @@ ms.assetid: 7b8d8d9c-74aa-4e6e-88f1-2fc5c74004ae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29c2da8d8b6645ec9d5186f79db80b03626b2978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980199"
 ---
 # <a name="getscale-method-sqlserverparametermetadata"></a>Método getScale (SQLServerParameterMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67980199"
 public int getScale(int param)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *param*  
   
  Um **int** que indica o índice do parâmetro.  
@@ -45,8 +45,8 @@ public int getScale(int param)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getScale é especificado pelo método getScale na interface java. Sql. ParameterMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método getScale é especificado pelo método getScale na interface java.sql.ParameterMetaData.  
   
  Esse método obtém dígitos da coluna à direita da vírgula decimal. Para tipos que não têm uma vírgula decimal, esse método retorna "0".  
   

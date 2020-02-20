@@ -16,10 +16,10 @@ ms.assetid: e0e2bd28-6949-47dc-b9dd-145ffb337069
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ffe17993b3a03563ec20e8f509e6eae2f6ed47cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977794"
 ---
 # <a name="isbeforefirst-method-sqlserverresultset"></a>Método isBeforeFirst (SQLServerResultSet)
@@ -40,8 +40,8 @@ public boolean isBeforeFirst()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método isBeforeFirst é especificado pelo método isBeforeFirst na interface java. Sql. ResultSet.  
+## <a name="remarks"></a>Comentários  
+ Esse método isBeforeFirst é especificado pelo método isBeforeFirst na interface java.sql.ResultSet.  
   
  Se esse método for usado com cursores dinâmicos, incluindo cursores somente encaminhamento e somente leitura, e se a propriedade de conexão selectMethod estiver definida como "cursor", ocorrerá uma exceção.  
   

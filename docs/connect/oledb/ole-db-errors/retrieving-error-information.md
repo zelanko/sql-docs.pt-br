@@ -1,6 +1,6 @@
 ---
-title: Recuperando informações de erro | Microsoft Docs
-description: Recuperando informações de erro usando OLE DB driver para SQL Server
+title: Como recuperar informações de erro | Microsoft Docs
+description: Como recuperar informações de erro usando o Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: efde220b1cdc849eec9c0483453739b47fac7a75
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70874645"
 ---
 # <a name="retrieving-error-information"></a>Recuperando informações de erro

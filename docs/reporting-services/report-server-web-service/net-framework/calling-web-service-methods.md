@@ -18,10 +18,10 @@ ms.assetid: f6f0c6e3-8bb5-4c44-9d19-1872edc72746
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 65da2d36c53f5f00851b36f47396b7bcbf6a6092
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284606"
 ---
 # <a name="calling-web-service-methods"></a>Chamando métodos do serviço Web
@@ -41,7 +41,7 @@ CatalogItem[] items = rs.ListChildren("/", true);
   
 ## <a name="see-also"></a>Consulte Também  
  [Criando aplicativos usando o serviço Web e o .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Serviço Web do Servidor de Relatório](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Serviço Web Servidor de Relatórios](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Referência técnica &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   

@@ -11,10 +11,10 @@ ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 267605b6a89f323570cfacfc66517b028ef716a2
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025472"
 ---
 # <a name="working-with-a-connection"></a>Trabalhando com uma conexão
@@ -39,7 +39,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 Esta técnica criará uma conexão de banco de dados usando o primeiro driver disponível na lista de drivers que podem se conectar com êxito à URL fornecida.
 
 > [!NOTE]  
-> Ao usar a biblioteca de classes sqljdbc4.jar, os aplicativos não precisam registrar explicitamente ou carregar o driver usando o método Class.forName. Quando o método getConnection da classe DriverManager é chamado, um driver apropriado é localizado no conjunto de drivers JDBC registrados. Para obter mais informações, consulte Como usar JDBC Driver.
+> Ao usar a biblioteca de classes sqljdbc4.jar, os aplicativos não precisam registrar explicitamente ou carregar o driver usando o método Class.forName. Quando o método getConnection da classe DriverManager é chamado, um driver apropriado é localizado no conjunto de drivers JDBC registrados. Para obter mais informações, consulte Usando JDBC Driver.
 
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>Criando uma conexão usando a classe SQLServerDriver
 
@@ -93,7 +93,7 @@ Para conectar-se a um banco de dados específico em um servidor, use o seguinte:
 String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integratedSecurity=true;"
 ```
 
-Para obter mais exemplos de URL de conexão, consulte [criando a URL de conexão](../../connect/jdbc/building-the-connection-url.md).
+Para obter mais exemplos de URL de conexão, confira [Construindo a URL de conexão](../../connect/jdbc/building-the-connection-url.md).
 
 ## <a name="creating-a-connection-with-a-custom-login-time-out"></a>Criando uma conexão com um tempo limite de logon personalizado
 

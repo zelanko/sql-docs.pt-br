@@ -13,10 +13,10 @@ ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67500194"
 ---
 # <a name="role-definitions---predefined-roles"></a>Definições de função – funções predefinidas
@@ -24,7 +24,7 @@ ms.locfileid: "67500194"
   
 ## <a name="how-to-use-predefined-roles"></a>Como usar funções predefinidas  
   
-1. Examine as funções predefinidas para determinar se você pode usá-las no estado em que se encontram. Se for necessário ajustar as tarefas ou definir funções adicionais, faça isso antes de começar a atribuir usuários a funções específicas. Para criar ou editar funções personalizadas usam o SQL Server Management Studio. Para obter mais informações, consulte [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
+1. Examine as funções predefinidas para determinar se você pode usá-las no estado em que se encontram. Se for necessário ajustar as tarefas ou definir funções adicionais, faça isso antes de começar a atribuir usuários a funções específicas. Para criar ou editar funções personalizadas, use o SQL Server Management Studio. Para obter mais informações, consulte [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
   
 2. Identifique quais usuários e grupos requerem acesso ao servidor de relatório, e em que nível. A maioria dos usuários deve ser atribuída à função **Navegador** ou à função **Construtor de Relatórios** . Um número menor de usuários deve ser atribuído à função **Publicador** . Pouquíssimos usuários devem receber a função **Gerenciador de Conteúdo**.  
 
@@ -60,7 +60,7 @@ ms.locfileid: "67500194"
 |Relatórios de consumo|Lê definições de relatório.|  
 |Criar relatórios vinculados|Criar relatórios vinculados com base em um relatório não vinculado.|  
 |Gerenciar todas as assinaturas|Exibir, modificar e excluir qualquer assinatura para relatórios e relatórios vinculados, independentemente de quem for proprietário da assinatura. Essa tarefa também oferece suporte a criação de assinaturas controladas por dados.|  
-|Gerenciar fontes de dados|Criar e excluir itens de fontes de dados compartilhadas, exibir e modificar propriedades de fontes de dados e conteúdos.|  
+|Gerenciar as fontes de dados|Criar e excluir itens de fontes de dados compartilhadas, exibir e modificar propriedades de fontes de dados e conteúdos.|  
 |Gerenciar pastas|Criar, exibir e excluir pastas, e exibir e modificar propriedades de pasta.|  
 |Gerenciar modelos|Criar, exibir e excluir modelos e exibir e modificar propriedades de modelo.|  
 |Administrar assinaturas individuais|Criar, exibir, modificar e excluir assinaturas de propriedade do usuário para relatórios e relatórios vinculados.|  
@@ -95,7 +95,7 @@ ms.locfileid: "67500194"
 |Tarefa|Descrição|  
 |----------|-----------------|  
 |Criar relatórios vinculados|Criar relatórios vinculados e publicá-los em uma pasta do servidor de relatório.|  
-|Gerenciar fontes de dados|Criar e excluir itens de fontes de dados compartilhadas, exibir e modificar propriedades de fontes de dados e conteúdos.|  
+|Gerenciar as fontes de dados|Criar e excluir itens de fontes de dados compartilhadas, exibir e modificar propriedades de fontes de dados e conteúdos.|  
 |Gerenciar pastas|Criar, exibir e excluir pastas; exibir e modificar propriedades de pasta.|  
 |Gerenciar relatórios|Adicione e exclua relatórios, modifique parâmetros de relatório, exiba e modifique propriedades de relatório, exiba e modifique fontes de dados que fornecem conteúdo ao relatório, exiba e modifique definições de relatório.|  
 |Gerenciar modelos|Criar, exibir e excluir modelos de relatório; exibir e modificar propriedades de modelo de relatório.|  
@@ -159,7 +159,7 @@ ms.locfileid: "67500194"
 |----------|-----------------|  
 |Criar relatórios vinculados|Criar relatórios vinculados que são baseados em relatórios armazenados na pasta Meus Relatórios do usuário.|  
 |Gerenciar pastas|Criar, exibir e excluir pastas, e exibir e modificar propriedades de pasta.|  
-|Gerenciar fontes de dados|Criar e excluir itens de fontes de dados compartilhadas, exibir e modificar propriedades de fontes de dados e conteúdos.|  
+|Gerenciar as fontes de dados|Criar e excluir itens de fontes de dados compartilhadas, exibir e modificar propriedades de fontes de dados e conteúdos.|  
 |Administrar assinaturas individuais|Criar, exibir, modificar e excluir assinaturas para relatórios e relatórios vinculados.|  
 |Gerenciar relatórios|Adicionar e excluir relatórios, modificar parâmetros de relatório, exibir e modificar propriedades de relatório, exibir e modificar fontes de dados que fornecem o conteúdo para o relatório, exibir e modificar definições de relatório e definir diretrizes de segurança no nível do relatório.|  
 |Gerenciar recursos|Criar, modificar e excluir recursos e o modo de exibição. e modificar propriedades de recurso.|  
@@ -204,7 +204,7 @@ A tabela a seguir lista as tarefas incluídas na definição da função **Usuá
 |Tarefa|Descrição|  
 |----------|-----------------|  
 |Executar definições de relatório|Execute um relatório sem publicá-lo em um servidor de relatório.|  
-|Exibir propriedades do servidor de relatório|Exiba as propriedades aplicáveis ao servidor de relatório, como o nome do aplicativo, se a configuração Meus Relatórios está habilitada e os padrões de histórico do relatório.<br /><br /> Se você remover essa tarefa da função **Usuário do Sistema** , a página Configurações de Site não estará disponível. Além disso, o título do aplicativo não é exibido na parte superior de cada página. Por padrão, o título para o portal da Web é "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]".|  
+|Exibir propriedades do servidor de relatório|Exiba as propriedades aplicáveis ao servidor de relatório, como o nome do aplicativo, se a configuração Meus Relatórios está habilitada e os padrões de histórico do relatório.<br /><br /> Se você remover essa tarefa da função **Usuário do Sistema** , a página Configurações de Site não estará disponível. Além disso, o título do aplicativo não é exibido na parte superior de cada página. Por padrão, o título do portal da Web é "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]".|  
 |Exibir agendas compartilhadas|Exiba os agendamentos compartilhados usados para executar relatórios ou atualizar um.<br /><br /> Se você remover essa tarefa da função **Usuário do Sistema** , os usuários não poderão selecionar os agendamentos compartilhados a serem usados com assinaturas e outras opções agendadas.|  
   
  A função **Usuário do Sistema** pode ser usada para complementar a segurança padrão. Você pode incluir a função em novas atribuições de função que ampliam o acesso do servidor de relatório aos usuários de relatórios. Para obter mais informações, consulte [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  

@@ -1,24 +1,26 @@
 ---
-title: Alterar os detalhes do agendamento para um trabalho mestre do SQL Server Agent | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Alterar os detalhes de agendamento de um trabalho mestre
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9baa8d095102f63f834342d7145e05c345a6ac1e
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 45eddc3b97099eafdba01ec091f3e860f1b2ab8e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553310"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242542"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -40,31 +42,31 @@ A menos que seja membro da função de servidor fixa **sysadmin** , você poder�
   
 #### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>Para alterar os detalhes do agendamento de uma definição de trabalho  
   
-1.  No **Pesquisador de Objetos** , clique no sinal de adição para expandir o servidor que contém o trabalho cujo agendamento você deseja editar.  
+1. No **Pesquisador de Objetos** , clique no sinal de adição para expandir o servidor que contém o trabalho cujo agendamento você deseja editar.  
   
-2.  Clique no sinal de adição para expandir o **SQL Server Agent**.  
+2. Clique no sinal de adição para expandir o **SQL Server Agent**.  
   
-3.  Clique no sinal de adição para expandir a pasta **Trabalhos** .  
+3. Clique no sinal de adição para expandir a pasta **Trabalhos** .  
   
-4.  Clique com o botão direito do mouse no trabalho cujo agendamento você quer editar e selecione **Propriedades**.  
+4. Clique com o botão direito do mouse no trabalho cujo agendamento você quer editar e selecione **Propriedades**.  
   
-5.  Na caixa de diálogo **Propriedades do Trabalho –** _job\_name_, em **Selecionar uma Página**, selecione **Agendamentos**. Para obter mais informações sobre as opções disponíveis nessa página, consulte [Propriedades do trabalho – Novo trabalho &#40;página Agendamentos&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md).  
+5. Na caixa de diálogo **Propriedades do Trabalho –** _job\_name_, em **Selecionar uma Página**, selecione **Agendamentos**. Para obter mais informações sobre as opções disponíveis nessa página, consulte [Propriedades do trabalho – Novo trabalho &#40;página Agendamentos&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md).  
   
-6.  Quando terminar, clique em **OK**.  
+6. Quando terminar, clique em **OK**.  
   
 ## <a name="TsqlProcedure"></a>Usando Transact-SQL  
   
-#### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>Para alterar os detalhes do agendamento de uma definição de trabalho  
+#### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>Para alterar os detalhes do agendamento de uma definição de trabalho
   
-1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1. No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
-2.  Na barra Padrão, clique em **Nova Consulta**.  
+2. Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
+3. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
     ```  
-    -- changes the enabled status of the NightlyJobs schedule to 0   
-    -- and sets the owner to terrid.   
+    -- changes the enabled status of the NightlyJobs schedule to 0
+    -- and sets the owner to terrid.
     USE msdb ;  
     GO  
   
@@ -75,5 +77,4 @@ A menos que seja membro da função de servidor fixa **sysadmin** , você poder�
     GO  
     ```  
   
-Para obter mais informações, veja [sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe).  
-  
+Para obter mais informações, veja [sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe).

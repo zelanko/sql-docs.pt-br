@@ -1,5 +1,5 @@
 ---
-title: Tela 3 do assistente de fonte de dados (driver ODBC para SQL Server) | Microsoft Docs
+title: Tela 3 do Assistente de Fonte de Dados (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63391969f378fdefbfa9547c079dcce4ff259e22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936543"
 ---
 # <a name="data-source-wizard-screen-3"></a>Tela 3 do Assistente de Fonte de Dados
@@ -67,19 +67,19 @@ Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. 
 
 ### <a name="multi-subnet-failover"></a>Failover de várias sub-redes.
 
-Se seu aplicativo estiver se conectando a um AG (grupo de disponibilidade de recuperação de desastre) de alta disponibilidade (Grupos de Disponibilidade AlwaysOn) em sub-redes diferentes, habilitando o **failover de várias sub-redes.** configura o Driver ODBC para SQL Server para fornecer mais rapidez na detecção do servidor ativo (atualmente) e na conexão a ele.
+Se o aplicativo estiver se conectando a um AG (grupo de disponibilidade) de recuperação de desastre de alta disponibilidade (Grupos de Disponibilidade AlwaysOn) em sub-redes diferentes, habilite **Failover de várias sub-redes.** configura o Driver ODBC para SQL Server para fornecer mais rapidez na detecção do servidor ativo (atualmente) e na conexão a ele.
 
 ### <a name="transparent-network-ip-resolution"></a>Resolução IP de Rede Transparente.
 
-Altera o comportamento do **failover de várias sub-redes** para permitir uma reconexão mais rápida durante o failover. Veja [Usando resolução de IP de rede transparente](../../../connect/odbc/using-transparent-network-ip-resolution.md) para obter mais informações.
+Altera o comportamento de **Failover de várias sub-redes** para permitir uma reconexão mais rápida durante o failover. Veja [Usando resolução de IP de rede transparente](../../../connect/odbc/using-transparent-network-ip-resolution.md) para obter mais informações.
 
 ### <a name="column-encryption"></a>Criptografia de Coluna.
 
 Habilita a descriptografia automática e a criptografia de transferências de dados para e de colunas criptografadas com o recurso [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) disponível no SQL Server 2016 e posterior.
 
-### <a name="use-fmtonly-metadata-discovery"></a>Usar a descoberta de metadados do FMTONLY:
+### <a name="use-fmtonly-metadata-discovery"></a>Use a descoberta de metadados FMTONLY:
 
-Use o método de descoberta de metadados do conjunto herdado FMTONLY ao se conectar ao SQL Server 2012 ou mais recente. Habilite isso somente ao usar consultas sem suporte do [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), como aquelas que contêm tabelas temporárias. 
+Use o método de descoberta de metadados SET FMTONLY herdado ao se conectar ao SQL Server 2012 ou mais recente. Habilite isso somente ao usar consultas não compatíveis com [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), como as que contêm tabelas temporárias. 
 
 ### <a name="next"></a>Próximo
 
@@ -87,7 +87,7 @@ Prossegue para a próxima tela do assistente.
 
 ### <a name="back"></a>Voltar
 
-Retorna à tela anterior do assistente.
+Retorna para a tela anterior do assistente.
 
 ## <a name="next-steps"></a>Próximas etapas
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e98421a76fda260c71c691551151bd9dad245a5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a5a043efe7e80805a9d2c1c18dc86a425f01be7f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579967"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190456"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Publicando fontes de dados e relatórios
   Antes de publicar o relatório, é preciso visualizá-lo para ver qual será sua aparência quando ele for executado. Você pode continuar refinando o projeto até ficar satisfeito com os resultados.  
@@ -27,17 +27,17 @@ ms.locfileid: "65579967"
  Se você usou uma fonte de dados compartilhada para criar o relatório, será preciso publicá-lo no mesmo local do relatório. Assim como os relatórios, as fontes de dados compartilhadas podem ser gerenciadas separadamente no servidor de relatórios.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visualizando relatórios](../../reporting-services/reports/previewing-reports.md)  
+ [Visualizar relatórios](../../reporting-services/reports/previewing-reports.md)  
  Descreve como visualizar um relatório antes de publicá-lo.  
   
- [Publicando relatórios em um servidor de relatórios](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
+ [Publicar relatórios em um servidor de relatórios](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
  Descreve como publicar um relatório em um servidor de relatórios.  
   
  [Exemplos de URL para itens de relatório publicados em um Servidor de Relatório no modo do SharePoint &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  Descreve como publicar um relatório em um site do SharePoint.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Layout da página e renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   

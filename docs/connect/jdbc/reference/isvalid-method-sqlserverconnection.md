@@ -11,10 +11,10 @@ ms.assetid: 3b0a8bbf-9369-4456-9ab8-1434ccacdd7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3915690475e5ce9321af7fc15498c2bde018c640
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977132"
 ---
 # <a name="isvalid-method-sqlserverconnection"></a>Método isValid (SQLServerConnection)
@@ -29,18 +29,18 @@ ms.locfileid: "67977132"
 public boolean isValid(int timeout)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *timeout*  
   
  Um **int** que especifica o número de segundos de espera para validação a conexão.  
   
 ## <a name="return-value"></a>Valor retornado  
- **true** se a conexão for válida; **false** se a conexão não for válida ou se a validade da conexão não puder ser determinada antes de o tempo limite expirar.  
+ **true** se a conexão for válida; **false** se a conexão não for válida ou se a validade da conexão não puder ser determinada antes da expiração do tempo limite.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método isValid é especificado pelo método isValid na interface java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte Também  

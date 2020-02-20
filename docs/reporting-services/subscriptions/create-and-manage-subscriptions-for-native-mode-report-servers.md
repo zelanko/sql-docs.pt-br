@@ -12,10 +12,10 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 69cc078dc5ce605f1d7bf55d872c2a4629eb3301
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66403261"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crie e gerencie assinaturas de servidores de relatório no modo Nativo
@@ -67,15 +67,15 @@ ms.locfileid: "66403261"
 7. Em **Destino**, selecione **Compartilhamento de arquivos do Windows**.  
   
 8. Em **Opções de entrega (compartilhamento de arquivos do Windows)** , especifique:  
-   - **Nome do Arquivo**: digite um nome de arquivo para o relatório.
-   - **Adicionar uma extensão de arquivo quando o arquivo é criado**: essa opção adiciona uma extensão de arquivo de três caracteres ao nome do arquivo. A extensão de arquivo é determinada pelo formato de saída do relatório selecionado.  
-   - **Caminho**: digite um caminho UNC para uma pasta existente na qual você deseja entregar os relatórios (por exemplo, \\<nomedoservidor\>\<meusrelatórios>). Inclua caracteres de barra invertida dupla no começo do caminho. Não especifique barras invertidas à direita.  
+   - **Nome do arquivo**: digite um nome de arquivo para o relatório.
+   - **Adicionar uma extensão de arquivo quando o arquivo é criado**: Esta opção adiciona uma extensão de arquivo de três caracteres ao nome do arquivo. A extensão de arquivo é determinada pelo formato de saída do relatório selecionado.  
+   - **Caminho**: digite um caminho UNC para uma pasta existente na qual você deseja entregar os relatórios (por exemplo, \\<servername\>\<myreports>). Inclua caracteres de barra invertida dupla no começo do caminho. Não especifique barras invertidas à direita.  
   
-     ![assinatura de compartilhamento de arquivos](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "assinatura de compartilhamento de arquivos")  
+     ![assinatura do compartilhamento de arquivo](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "assinatura do compartilhamento de arquivo")  
   
-   - **Formato de Renderização**: selecione um formato de saída de relatório para entrega de arquivo. Escolha um formato que corresponda ao aplicativo de desktop que será usado para abrir o relatório. Evite formatos que não renderizam um relatório em um único fluxo ou que introduzam interatividade não compatível com um arquivo estático (por exemplo, HTML 4.0).  
+   - **Formato de renderização**: selecione um formato de saída de relatório para entrega de arquivo. Escolha um formato que corresponda ao aplicativo de desktop que será usado para abrir o relatório. Evite formatos que não renderizam um relatório em um único fluxo ou que introduzam interatividade não compatível com um arquivo estático (por exemplo, HTML 4.0).  
   
-   - **Credenciais**: selecione para usar a conta de compartilhamento de arquivos ou uma credencial de usuário específica do Windows. O **Usar conta de compartilhamento de arquivos** estará desabilitado se o administrador de relatórios não tiver configurado uma conta de compartilhamento de arquivos. Para obter mais informações, consulte [Configurações de Assinatura e uma Conta de Compartilhamento de Arquivos &#40;Gerenciador de Configurações&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Nas caixas de texto **Nome de usuário** e **Senha**, especifique as credenciais necessárias para acessar o compartilhamento de arquivos, usando o formato *\<domain>* \\ *\<user name>* para o nome de usuário.  
+   - **Credenciais**: selecione para usar a conta de Compartilhamento de arquivo ou uma credencial de usuário específica do Windows. O **Usar conta de compartilhamento de arquivos** estará desabilitado se o administrador de relatórios não tiver configurado uma conta de compartilhamento de arquivos. Para obter mais informações, consulte [Configurações de Assinatura e uma Conta de Compartilhamento de Arquivos &#40;Gerenciador de Configurações&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Nas caixas de texto **Nome de usuário** e **Senha**, especifique as credenciais necessárias para acessar o compartilhamento de arquivos, usando o formato *\<domain>* \\ *\<user name>* para o nome de usuário.  
   
    - **Opções de substituição**:  
      - **Substituir um arquivo existente com uma versão mais recente**.  
@@ -112,7 +112,7 @@ O relatório é entregue como um arquivo estático. Se o relatório incluir recu
      >[!NOTE]  
      > Dependendo de suas permissões, você pode digitar o endereço de email no qual deseja entregar o relatório. Para especificar vários endereços de email, separe-os com um ponto-e-vírgula (;). Você também pode digitar endereços de email adicionais nas caixas de texto **Cc**, **Cco**e **Responder** . Você precisa ter permissão para gerenciar todas as assinaturas.  
   
-   - **Assunto**: usa como padrão "@ReportName foi executado em @ExecutionTime". Você pode editar o assunto, mas observe que o @ReportName e @ExecutionTime são as únicas variáveis globais com suporte no campo **Assunto**.  
+   - **Entidade**: usa como padrão "@ReportName foi executado em @ExecutionTime". Você pode editar o assunto, mas observe que o @ReportName e @ExecutionTime são as únicas variáveis globais com suporte no campo **Assunto**.  
   
      ![assinatura de email](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "assinatura de email")  
 
@@ -135,7 +135,7 @@ O relatório é entregue como um arquivo estático. Se o relatório incluir recu
 ##  <a name="bkmk_modify_subscription"></a> Para modificar uma assinatura  
  Você pode modificar uma assinatura em qualquer momento. Se uma assinatura for modificada enquanto estiver sendo processada, as configurações atualizadas serão usadas se forem salvas no servidor de relatório antes de a extensão de entrega receber os dados da assinatura. Caso contrário, as configurações existentes são usadas.  
   
- Um usuário que cria uma assinatura possui essa assinatura. Cada usuário pode modificar ou excluir as assinaturas que possui. Você pode alterar o proprietário do relatório na página de propriedades de assinatura ou pode alterar a propriedade programaticamente. Para obter mais informações, consulte o seguinte:  
+ Um usuário que cria uma assinatura possui essa assinatura. Cada usuário pode modificar ou excluir as assinaturas que possui. Você pode alterar o proprietário do relatório na página de propriedades de assinatura ou pode alterar a propriedade programaticamente. Para saber mais, consulte o seguinte:  
   
 -   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   

@@ -11,10 +11,10 @@ ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2e3b6101111fea08c86bbf79bf431d91aaa24261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580314"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formatando itens de relatório (Construtor de Relatórios e SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "65580314"
   
  ![rs_FormattingReporttItems](../../reporting-services/report-design/media/rs-formattingreporttitems.gif "rs_FormattingReporttItems")  
   
- A. Caixa de texto com borda de linha dupla e uma grande variedade de estilos de formatação, inclusive um link.  
+ a. Caixa de texto com borda de linha dupla e uma grande variedade de estilos de formatação, inclusive um link.  
   
  B. Caixa de texto com borda tracejada, HTML bruto e HTML renderizado.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "65580314"
   
  É possível alterar as opções de formatação selecionando o item a ser formatado e abrindo a caixa de diálogo Propriedades do item. Por exemplo, se você quiser formatar o conteúdo de uma caixa de texto inteira ou uma palavra selecionada nela, clique com o botão direito do mouse no item e selecione **Propriedades da Caixa de Texto**. Em seguida, aplique os estilos de formatação desejados.  
   
- Para começar a usar rapidamente, consulte [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Para começar rapidamente, confira [Tutorial: formatar o texto &#40Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

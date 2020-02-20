@@ -15,14 +15,14 @@ ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f20551117454ca742c8c681cd43f2704695dd276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571414"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Gerar scripts com o utilitário rs.exe e o serviço Web
-  Desenvolvedores e administradores de servidor de relatório podem executar operações em um servidor de relatório por meio do utilitário **rs** (RS.exe). Com esse utilitário, é possível administrar de forma programática um servidor de relatório usando scripts gravados com [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+  Desenvolvedores e administradores de servidor de relatório podem executar operações em um servidor de relatório por meio do utilitário **rs** (RS.exe). Com esse utilitário, você pode administrar de maneira programática um servidor de relatório usando scripts gravados com [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Os scripts podem ser usados para executar qualquer uma das operações de serviço Web do Servidor de Relatórios. A geração de scripts pode ser usada para copiar a segurança para múltiplos relatórios em um servidor, acrescentar e excluir itens, copiar itens do servidor de relatório de um servidor para outro, entre outros. Para obter mais informações sobre o ambiente de scripts, consulte [Executar um arquivo de script do Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md). Os arquivos de script usam um formato específico e são gravados no [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Para obter mais informações, consulte [Formatar um arquivo de script do Reporting Services](../../reporting-services/tools/format-a-reporting-services-script-file.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "65571414"
   
 ## <a name="see-also"></a>Consulte Também  
  [Implantação de script e tarefas administrativas](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [serviço Web Servidor de Relatórios](../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Serviço Web Servidor de Relatórios](../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Referência técnica &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
  [Utilitário RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   

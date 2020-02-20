@@ -1,21 +1,23 @@
 ---
 title: Instalar ou desinstalar o suplemento Reporting Services para SharePoint | Microsoft Docs
-ms.date: 08/17/2017
+description: Saiba como executar o pacote de instalação do suplemento Microsoft SQL Server Reporting Services para produtos do SharePoint (rsSharePoint.msi) em servidores do SharePoint para habilitar os recursos do Reporting Services em uma implantação do SharePoint.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 41a93cfdac331830477171dfdfc4f306c073bda3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: 1f401a51defd84d9ed6a3160c4961b3087847b2d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893371"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866349"
 ---
-# <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Instalar ou desinstalar o suplemento Reporting Services para SharePoint
+# <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>Instalar ou desinstalar o suplemento SSRS (Reporting Services) para SharePoint
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -51,9 +53,9 @@ ms.locfileid: "68893371"
 ##  <a name="bkmk_3ways_to_install"></a> Visão geral dos métodos de instalação  
  O Suplemento SQL Server 2016 Reporting Services para produtos do SharePoint pode ser instalado usando um dos dois seguintes métodos:  
   
--   **O assistente de instalação:** ![note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") No SQL Server 2016, o suplemento pode ser instalado pelo assistente de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Escolha **suplemento Reporting Services para produtos do SharePoint** na página **Seleção de recursos** do assistente.  
+-   **O assistente de instalação:** ![note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "observação") No SQL Server 2016, o suplemento pode ser instalado pelo assistente de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Escolha **suplemento Reporting Services para produtos do SharePoint** na página **Seleção de recursos** do assistente.  
   
--   **rsSharepoint.msi:** o suplemento pode ser instalado diretamente da mídia de instalação ou baixado e instalado. O rsSharepoint.msi dá suporte à interface gráfica do usuário e à instalação pela linha de comando. Para executar o .msi com privilégios de administrador, abra primeiro um prompt de comando com permissões elevadas e execute o rsSharepoint.msi na linha de comando. Para obter mais informações sobre como baixar o suplemento, veja [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   **rsSharepoint.msi:** O suplemento pode ser instalado diretamente da mídia de instalação ou baixado e instalado. O rsSharepoint.msi dá suporte à interface gráfica do usuário e à instalação pela linha de comando. Para executar o .msi com privilégios de administrador, abra primeiro um prompt de comando com permissões elevadas e execute o rsSharepoint.msi na linha de comando. Para obter mais informações sobre como baixar o suplemento, veja [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
     > [!NOTE]  
     >  Se você usar a opção **/q** para uma instalação de linha de comando silenciosa, o contrato de licença de usuário final não será exibido. Independentemente do método de instalação, o uso deste software é controlado por um contrato de licença e você é responsável por respeitar o contrato de licença.  
@@ -73,7 +75,7 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\` (SharePoint 2013)
   
-     ou em  
+     ou  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\16\` (SharePoint 2016)  
   
@@ -84,7 +86,7 @@ Rssharepoint.msi /?
   
 1.  Abra um prompt de comando **com permissões de administrador**.  
   
-2.  Execute o seguinte comando:  
+2.  Execute o comando a seguir:  
   
     ```  
     Msiexec.exe /i rsSharePoint.msi SKIPCA=1  
@@ -105,7 +107,7 @@ Rssharepoint.msi /?
   
          O arquivo deve estar localizado em: **\Users\\<your name\>\AppData\Local\Temp**  
   
-    2.  Digite o comando a seguir. Esta etapa de configuração demorará alguns minutos para ser concluída. O serviço W3SVC será reiniciado durante esse processo. Várias mensagens de status serão exibidas como os arquivos de cópias de programa, registrarão componentes e executarão o Assistente de Configuração de Produto do SharePoint.  
+    2.  Digite o seguinte comando. Esta etapa de configuração demorará alguns minutos para ser concluída. O serviço W3SVC será reiniciado durante esse processo. Várias mensagens de status serão exibidas como os arquivos de cópias de programa, registrarão componentes e executarão o Assistente de Configuração de Produto do SharePoint.  
   
         ```  
         rsCustomAction.exe /i  
@@ -123,7 +125,7 @@ Rssharepoint.msi /?
   
 1.  Abra um prompt de comando **com permissões de administrador**.  
   
-2.  Execute o seguinte comando:  
+2.  Execute o comando a seguir:  
   
     ```  
     Msiexec.exe /i rsSharePoint.msi /q  
@@ -161,12 +163,12 @@ Rssharepoint.msi /?
   
 3.  Clique em **Remover**.  
   
-### <a name="uninstall-from-the-command-line"></a>Desinstalar da linha de comando  
+### <a name="uninstall-from-the-command-line"></a>Desinstalar usando a linha de comando  
  Para desinstalar o suplemento a partir da linha de comando:  
   
 1.  Abra um prompt de comando **com permissões de administrador**.  
   
-2.  Execute o seguinte comando:  
+2.  Execute o comando a seguir:  
   
     ```  
     msiexec.exe /uninstall rsSharePoint.msi  
@@ -179,7 +181,7 @@ Rssharepoint.msi /?
   
 1.  Abra um prompt de comando **com permissões de administrador**.  
   
-2.  Execute o seguinte comando:  
+2.  Execute o comando a seguir:  
   
     ```  
     Msiexec.exe /uninstall rsSharePoint.msi LocalOnly=1  
@@ -191,7 +193,7 @@ Rssharepoint.msi /?
   
 1.  Abra um prompt de comando **com permissões de administrador**.  
   
-2.  Execute o seguinte comando:  
+2.  Execute o comando a seguir:  
   
     ```  
     rsCustomAction.exe /p  
@@ -204,7 +206,7 @@ Rssharepoint.msi /?
   
 1.  Abra um prompt de comando **com permissões de administrador**.  
   
-2.  Execute o seguinte comando:  
+2.  Execute o comando a seguir:  
   
     ```  
     msiexec.exe /f rssharepoint.msi  
@@ -272,4 +274,4 @@ Rssharepoint.msi /?
 [Instalar o primeiro servidor de relatório no modo do SharePoint](install-the-first-report-server-in-sharepoint-mode.md)   
 [Servidor de relatório do Reporting Services &#40;Modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

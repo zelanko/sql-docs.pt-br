@@ -1,6 +1,6 @@
 ---
 title: Mover dados com o arquivo XDF
-description: Tutorial passo a passo sobre como mover dados usando o XDF e a linguagem R no SQL Server.
+description: 'Tutorial 13 do RevoScaleR: Como mover dados usando o XDF e a linguagem R no SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6935276a47061652647666184637af8ba1535edd
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: d55bdf59eef4c8e7baa0553487a92a06e76326a9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727212"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947357"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>Mover dados entre o SQL Server e o arquivo XDF (Tutorial do SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lição faz parte do [tutorial do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Este é o tutorial 13 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
-Nesta etapa, aprenda a usar um arquivo XDF para transferir dados entre os contextos de computação locais e remotos. Armazenar os dados em um arquivo XDF permite que você execute transformações nos dados.
+Neste tutorial, você aprenderá a usar um arquivo XDF para transferir dados entre os contextos de computação locais e remotos. Armazenar os dados em um arquivo XDF permite que você execute transformações nos dados.
 
 Quando terminar, você usará os dados no arquivo para criar uma tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A função [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) pode aplicar transformações aos dados e executar a conversão entre quadros de dados e arquivos .xdf.
   
@@ -110,7 +110,7 @@ Para este exercício, use os dados de fraude de cartão de crédito novamente. N
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Esta lição conclui a série de tutoriais de várias partes em **RevoScaleR** e SQL Server. Ela apresentou vários conceitos de computação e relacionados a dados, oferecendo uma base para avançar com seus próprios dados e requisitos de projeto.
+Esse tutorial conclui a série de tutoriais de várias partes sobre **RevoScaleR** e SQL Server. Ela apresentou vários conceitos de computação e relacionados a dados, oferecendo uma base para avançar com seus próprios dados e requisitos de projeto.
 
 Para aprofundar seu conhecimento sobre o **RevoScaleR**, você pode voltar para a lista de tutoriais do R para percorrer os exercícios que você possa ter perdido. Como alternativa, examine os artigos de instruções no sumário para obter informações sobre tarefas gerais.
 

@@ -1,5 +1,5 @@
 ---
-title: Conectando-se a um banco de dados SQL do Azure | Microsoft Docs
+title: Conectar-se a um Banco de Dados SQL do Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70155107"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Conectando-se a um banco de dados SQL do Azure
@@ -25,14 +25,14 @@ Este artigo aborda os problemas ocorridos no uso do [!INCLUDE[jdbcNoVersion](../
   
 - [Banco de Dados do SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [Como se conectar ao SQL Azure usando o JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [Como: conectar-se ao SQL do Azure usando o JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
 - [Conectar-se usando a Autenticação do Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>Detalhes
 
-Ao se conectar a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]um, você deve se conectar ao banco de dados mestre para chamar **SQLServerDatabaseMetaData.** getCatalogs.  
-O [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] não dá suporte ao retorno de todo o conjunto de catálogos em um banco de dados de usuário. **SQLServerDatabaseMetaData.** getCatalogs use a exibição sys. databases para obter os catálogos. Consulte a discussão sobre permissões em [Sys. databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) para entender o comportamento de **SQLServerDatabaseMetaData.** getCatalogs em um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+Ao conectar-se a um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], você deve se conectar ao banco de dados mestre para chamar **SQLServerDatabaseMetaData.getCatalogs**.  
+O [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] não dá suporte ao retorno de todo o conjunto de catálogos em um banco de dados de usuário. **SQLServerDatabaseMetaData.getCatalogs** usa a exibição sys.databases para obter os catálogos. Veja a discussão de permissões em [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) para entender o comportamento de **SQLServerDatabaseMetaData.getCatalogs** em um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
 ## <a name="connections-dropped"></a>Conexões descartadas
 
@@ -47,7 +47,7 @@ Para evitar a remoção de conexões ociosas por um componente de rede, as confi
 |Configuração do Registro|Valor recomendado|  
 |----------------------|-----------------------|  
 |HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1\.000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
 |HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 Reinicie o computador para que as configurações do Registro tenham efeito.  
@@ -80,7 +80,7 @@ Antes da versão 4.0 do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Uso de criptografia requer a configuração de hostNameInCertificate
 
-Antes da versão [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]7,2 do, ao conectar-se a um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], você deve especificar **hostNameInCertificate** se especificar **encrypt = true** (se o nome do servidor na cadeia de conexão for *curtoname*. *nome_do_domínio*, defina a propriedade **hostNameInCertificate** como \*. *nome_do_domínio*.). Essa propriedade é opcional a partir da versão 7,2 do driver.
+Com uma versão do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] anterior à 7.2, ao se conectar a um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], você deverá especificar **hostNameInCertificate** caso **encrypt=true** esteja especificado (se o nome do servidor na cadeia de conexão for *shortName*.*domainName*, defina a propriedade **hostNameInCertificate** como \*.*domainName*.). Essa propriedade é opcional da versão 7.2 do driver em diante.
 
 Por exemplo:
 

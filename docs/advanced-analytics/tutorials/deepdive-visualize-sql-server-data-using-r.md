@@ -1,6 +1,6 @@
 ---
 title: Visualizar dados usando o RevoScaleR
-description: Tutorial passo a passo sobre como visualizar dados usando a linguagem R no SQL Server.
+description: 'Tutorial 6 do RevoScaleR: Como visualizar dados usando a linguagem R no SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,30 +9,30 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f64b42e69b1399e67211e82e26502c3fcec96254
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 887c5790a7de70cf111f004be65e3a41748b47bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727113"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947355"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualizar dados do SQL Server usando o R (tutorial de SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lição faz parte do [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Este é o tutorial 6 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
-Nesta lição, use as funções do R para exibir a distribuição de valores na coluna *creditLine* por gênero.
+Neste tutorial, você usará as funções do R para exibir a distribuição de valores na coluna *creditLine* por gênero.
 
 > [!div class="checklist"]
 > * Criar variáveis mín-máx para entradas de histograma
 > * Visualizar dados em um histograma usando **rxHistogram** do **RevoScaleR**
 > * Visualizar com gráficos de dispersão usando **levelplot** do pacote **malha** incluído na distribuição de R base
 
-Conforme demonstrado nesta lição, você pode combinar funções de software livre e específicas da Microsoft no mesmo script.
+Conforme demonstrado nesse tutorial, você pode combinar funções de software livre e específicas da Microsoft no mesmo script.
 
 ## <a name="add-maximum-and-minimum-values"></a>Adicionar valores máximos e mínimos
 
-Com base nas estatísticas de resumo calculadas na lição anterior, você descobriu algumas informações úteis sobre os dados que pode inserir na fonte de dados para cálculos adicionais. Por exemplo, os valores mínimo e máximo podem ser usados para computar histogramas. Neste exercício, adicione os valores alto e baixo à fonte de dados **RxSqlServerData**.
+Com base nas estatísticas de resumo calculadas no tutorial anterior, você descobriu algumas informações úteis sobre os dados que pode inserir na fonte de dados para cálculos adicionais. Por exemplo, os valores mínimo e máximo podem ser usados para computar histogramas. Neste exercício, adicione os valores alto e baixo à fonte de dados **RxSqlServerData**.
 
 1. Comece configurando algumas variáveis temporárias.
   
@@ -41,7 +41,7 @@ Com base nas estatísticas de resumo calculadas na lição anterior, você desco
     var <- sumDF$Name
     ```
   
-2. Use a variável *ccColInfo* que você criou na lição anterior para definir as colunas na fonte de dados.
+2. Use a variável *ccColInfo* que você criou no tutorial anterior para definir as colunas na fonte de dados.
   
    Adicione novas colunas calculadas (*numTrans*, *numIntlTrans*e *creditLine*) à coleção de colunas que substituem a definição original. O script a seguir adiciona fatores com base nos valores mínimo e máximo obtidos de sumOut, que está armazenando a saída na memória de **rxSummary**. 
   

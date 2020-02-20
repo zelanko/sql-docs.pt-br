@@ -1,5 +1,5 @@
 ---
-title: Como usar o espelhamento de banco de dados (JDBC) | Microsoft Docs
+title: Usar espelhamento de banco de dados (JDBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0de521e6ef913d27a020cc76f1dc6de00d0f409
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026431"
 ---
 # <a name="using-database-mirroring-jdbc"></a>Como usar o espelhamento de banco de dados (JDBC)
@@ -40,7 +40,7 @@ Quando o servidor do banco de dados principal falhar, o aplicativo cliente receb
 Quando uma conexão é estabelecida inicialmente, o servidor principal envia a identidade de seu parceiro de failover ao cliente que será usado quando ocorrer um failover. Quando um aplicativo tenta estabelecer uma conexão inicial com um servidor principal falho, o cliente não sabe a identidade do parceiro de failover. Para que os clientes tenham a oportunidade de lidar com esse cenário, a propriedade de cadeia de conexão failoverPartner e, opcionalmente, o método de fonte de dados [setFailoverPartner](../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) permitem ao cliente especificar a identidade do parceiro de failover por sua própria conta. A propriedade do cliente é usada apenas nesse cenário; se o servidor principal estiver disponível, ela não será usada.
 
 > [!NOTE]  
-> Quando uma propriedade failoverPartner é especificada na cadeia de conexão ou com um objeto de fonte de dados, a propriedade databaseName também deve ser definida; caso contrário, uma exceção será lançada. Se as propriedades failoverPartner e databaseName não forem especificadas explicitamente, o aplicativo não tentará fazer failover quando ocorrer falha no servidor de banco de dados principal. Em outras palavras, o redirecionamento transparente só funcionará para conexões que especifiquem explicitamente failoverPartner e databaseName. Para obter mais informações sobre FailoverPartner foi e outras propriedades de cadeia de conexão, consulte [definindo as propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md).
+> Quando uma propriedade failoverPartner é especificada na cadeia de conexão ou com um objeto de fonte de dados, a propriedade databaseName também deve ser definida; caso contrário, uma exceção será lançada. Se as propriedades failoverPartner e databaseName não forem especificadas explicitamente, o aplicativo não tentará fazer failover quando ocorrer falha no servidor de banco de dados principal. Em outras palavras, o redirecionamento transparente só funcionará para conexões que especifiquem explicitamente failoverPartner e databaseName. Para obter mais informações sobre failoverPartner e outras propriedades de cadeia de conexão, confira [Configuração das propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md).
 
 Se o servidor do parceiro de failover fornecido pelo cliente não se referir a um servidor que funciona como um parceiro de failover para o banco de dados especificado, e se o servidor/banco de dados referenciado estiver em uma disposição de espelhamento, a conexão será recusada pelo servidor. Embora a classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) forneça o método [getFailoverPartner](../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md), esse método só retorna o nome do parceiro de failover especificado na cadeia de conexão ou no método setFailoverPartner. Para recuperar o nome do parceiro de failover real que está em uso no momento, use a seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]:
 

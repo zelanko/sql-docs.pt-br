@@ -1,5 +1,5 @@
 ---
-title: 'ISSCommandWithParameters:: ParameterProperties (OLE DB) | Microsoft Docs'
+title: ISSCommandWithParameters::GetParameterProperties (OLE DB) | Microsoft Docs
 description: ISSCommandWithParameters::GetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4ed73892ae0ebe88d4b18f2d2114143423570c60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015423"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
@@ -48,7 +48,7 @@ HRESULT GetParameterProperties(
 ## <a name="return-code-values"></a>Valores do código de retorno  
  O método **GetParameterProperties** retorna os mesmos códigos de erro do método **ICommandProperties::GetProperties** principal do OLE DB, exceto se não é possível acionar DB_S_ERRORSOCCURRED e DB_E_ERRORSOCCURED.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O método **ISSCommandWithParameters::GetParameterProperties** se comporta de forma consistente em relação a **GetParameterInfo**. Se [ISSCommandWithParameters::SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) ou **SetParameterInfo** não foi chamado ou foi chamado com cParams igual a zero, **GetParameterInfo** obtém e retorna as informações de parâmetro. Se **ISSCommandWithParameters::SetParameterProperties** ou **SetParameterInfo** foi chamado para pelo menos um parâmetro, o método **ISSCommandWithParameters::GetParameterProperties** retorna propriedades apenas para os parâmetros para os quais **ISSCommandWithParameters::SetParameterProperties** foi chamado. Se **ISSCommandWithParameters::SetParameterProperties** for chamado após **ISSCommandWithParameters::GetParameterProperties** ou **GetParameterInfo**, as chamadas posteriores a **ISSCommandWithParameters::GetParameterProperties** retornarão os valores substituídos desses parâmetros para os quais o método **ISSCommandWithParameters::SetParameterProperties** foi chamado.  
   
  A estrutura SSPARAMPROPS é definida da seguinte maneira:  
@@ -70,6 +70,6 @@ HRESULT GetParameterProperties(
 |*rgPropertySets*|Um ponteiro para a memória no qual uma matriz de estruturas DBPROPSET deve ser retornada.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [OLE DB &#40;ISSCommandWithParameters&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   
