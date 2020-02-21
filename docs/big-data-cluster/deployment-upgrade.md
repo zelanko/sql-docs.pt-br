@@ -5,26 +5,117 @@ description: Saiba como atualizar Clusters de Big Data do SQL Server para uma no
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f44ef17a712d0d5a19707cf94e7d3e4196a2aba3
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: afb12477dd220e71cf2cf97d6a13b54aa2d35be4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706306"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75831831"
 ---
-# <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Como atualizar o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="how-to-upgrade-big-data-clusters-2019"></a>Como atualizar o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo fornece diretrizes sobre como atualizar um cluster de Big Data do SQL Server para uma nova versão. As etapas neste artigo se aplicam especificamente a como atualizar de uma versão prévia para a versão de atualização de serviço do SQL Server 2019.
+O caminho de atualização depende da versão atual do BDC (Cluster de Big Data) do SQL Server. A atualização de uma versão com suporte, incluindo a GDR (versão de distribuição geral), CU (atualização cumulativa) ou atualização de QFE (Quick Fix Engineering), pode ser feita no local. Não há suporte para a atualização in-loco de uma CTP (versão prévia da tecnologia do cliente) ou da versão Release Candidate do BDC. Você precisa remover e recriar o cluster. As seguintes seções descrevem as etapas de cada cenário:
 
-## <a name="backup-and-delete-the-old-cluster"></a>Fazer backup e excluir o cluster antigo
+- [Atualização a partir da versão com suporte](#upgrade-from-supported-release)
+- [Atualizar uma implantação BDC do CTP ou da versão Release Candidate](#update-a-bdc-deployment-from-ctp-or-release-candidate)
 
-No momento, não há nenhuma atualização in-loco para clusters de Big Data. A única maneira de atualizar para uma nova versão é remover manualmente e recriar o cluster. Cada versão tem uma versão exclusiva do `azdata` que não é compatível com a versão anterior. Além disso, se um cluster mais antigo precisar baixar uma imagem de contêiner em um novo nó, a imagem mais recente poderá não ser compatível com as imagens mais antigas no cluster. Observe que a imagem mais nova será capturada somente se você estiver usando a tag de imagem `latest` para no arquivo de configuração de implantação para as configurações do contêiner. Por padrão, cada versão tem uma tag de imagem específica correspondente à versão de lançamento do SQL Server. Para fazer a atualização para a última versão, use as seguintes etapas:
+>[!NOTE]
+>A primeira versão com suporte de Clusters de Big Data é o SQL Server 2019 GDR1.
+
+## <a name="upgrade-release-notes"></a>Notas sobre a versão da atualização
+
+Antes de continuar, confira as [notas sobre a versão da atualização para ver os problemas conhecidos](release-notes-big-data-cluster.md#known-issues).
+
+## <a name="upgrade-from-supported-release"></a>Atualização a partir da versão com suporte
+
+Esta seção explica como atualizar um BDC do SQL Server de uma versão com suporte (a partir do SQL Server 2019 GDR1) para uma versão mais recente com suporte.
+
+1. Faça backup da instância mestra do SQL Server.
+2. Faça backup do HDFS.
+
+   ```
+   azdata bdc hdfs cp --from-path <path> --to-path <path>
+   ```
+   
+   Por exemplo: 
+
+   ```
+   azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
+   ```
+
+3. Atualizar `azdata`.
+
+   Siga as instruções para instalar o `azdata`. 
+   - [Windows Installer](deploy-install-azdata-installer.md)
+   - [Linux com apt](deploy-install-azdata-linux-package.md)
+   - [Linux com yum](deploy-install-azdata-yum.md)
+   - [Linux com zypper](deploy-install-azdata-zypper.md)
+
+   >[!NOTE]
+   >Se `azdata` tiver sido instalado com `pip`, você precisará removê-lo manualmente antes da instalação com o Windows Installer ou o gerenciador de pacotes do Linux.
+
+1. Atualize o Cluster de Big Data.
+
+   ```
+   azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
+   ```
+
+   Por exemplo, o script a seguir usa a marca de imagem `2019-CU1-ubuntu-16.04`:
+
+   ```
+   azdata bdc upgrade -n bdc -t 2019-CU1-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   ```
+
+>[!NOTE]
+>As marcas de imagem mais recentes estão disponíveis nas [Notas sobre a versão dos Clusters de Big Data do SQL Server 2019](release-notes-big-data-cluster.md).
+
+>[!IMPORTANT]
+>Se você usar um repositório privado para extrair previamente as imagens para implantar ou atualizar o BDC, verifique se as imagens de build atuais e >as imagens de build de destino estão no repositório privado. Isso permitirá a reversão bem-sucedida, caso ela seja necessária. Além disso, se você alterou as >credenciais do repositório privado desde a implantação original, atualize o segredo correspondente no Kubernetes antes de atualizar. >Não há suporte para atualizar as credenciais por meio das variáveis de ambiente DOCKER_PASSWORD e DOCKER_USERNAME. Atualize o segredo >usando os [segredos de edição do kubectl](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). Não há suporte para a atualização usando diferentes >repositórios privados para builds atuais e de destino.
+
+### <a name="increase-the-timeout-for-the-upgrade"></a>Aumentar o tempo limite para a atualização
+
+Um tempo limite poderá acontecer se determinados componentes não forem atualizados no tempo alocado. O seguinte exemplo de código mostra como poderia ser a falha:
+
+   ```
+   >azdata.EXE bdc upgrade --name <mssql-cluster>
+   Upgrading cluster to version 15.0.4003
+
+   NOTE: Cluster upgrade can take a significant amount of time depending on
+   configuration, network speed, and the number of nodes in the cluster.
+
+   Upgrading Control Plane.
+   Control plane upgrade failed. Failed to upgrade controller.
+   ```
+
+Para aumentar os tempos limite de uma atualização, edite o mapa de configuração da atualização. Para editar o mapa de configuração da atualização:
+
+Execute o comando a seguir:
+
+   ```bash
+   kubectl edit configmap controller-upgrade-configmap
+   ```
+
+Edite os seguintes campos:
+
+   **controllerUpgradeTimeoutInMinutes** designa o número de minutos que deverão ser aguardados para que o controlador ou o banco de dados do controlador conclua a atualização. O padrão é 5. Atualize para pelo menos 20.
+   **totalUpgradeTimeoutInMinutes**: designa a quantidade combinada de tempo em que o controlador e o banco de dados do controlador concluem a atualização (atualização do controlador + banco de dados do controlador). O padrão é 10. Atualize para pelo menos 40.
+   **componentUpgradeTimeoutInMinutes**: designa a quantidade de tempo em que cada fase subsequente da atualização precisa ser concluída. O padrão é 30. Atualize para 45.
+
+Salve e saia.
+
+## <a name="update-a-bdc-deployment-from-ctp-or-release-candidate"></a>Atualizar uma implantação BDC do CTP ou da versão Release Candidate
+
+Não há suporte para uma atualização in-loco de uma CTP ou da versão Release Candidate dos Clusters de Big Data do SQL Server. A seção a seguir explica como remover e recriar o cluster manualmente.
+
+### <a name="backup-and-delete-the-old-cluster"></a>Fazer backup e excluir o cluster antigo
+
+Não há atualização in-loco para clusters de Big Data implantados antes do SQL Server 2019 GDR1. A única maneira de atualizar para uma nova versão é remover o cluster manualmente e recriá-lo. Cada versão tem uma versão exclusiva do `azdata` que não é compatível com a versão anterior. Além disso, se uma imagem de contêiner for baixada em um cluster implantado com outra versão mais antiga, a imagem mais recente poderá não ser compatível com as imagens mais antigas no cluster. A imagem mais nova será capturada se você estiver usando a marca de imagem `latest` no arquivo de configuração de implantação nas configurações do contêiner. Por padrão, cada versão tem uma tag de imagem específica correspondente à versão de lançamento do SQL Server. Para fazer a atualização para a última versão, use as seguintes etapas:
 
 1. Antes de excluir o cluster antigo, faça backup dos dados na instância mestra do SQL Server e no HDFS. Para a instância mestra do SQL Server, você poderá usar [Backup e restauração do SQL Server](data-ingestion-restore-database.md). Para o HDFS, você [pode copiar os dados com o `curl`](data-ingestion-curl.md).
 
@@ -40,7 +131,7 @@ No momento, não há nenhuma atualização in-loco para clusters de Big Data. A 
    > [!Note]
    > A emissão de um comando `azdata bdc delete` resultará em todos os objetos criados dentro do namespace identificado com o nome do cluster de Big Data serem excluídos, mas não o próprio namespace. O namespace pode ser reutilizado para implantações subsequentes, desde que esteja vazio e nenhum outro aplicativo tenha sido criado dentro dele.
 
-1. Desinstalar a versão antiga do `azdata`
+1. Desinstale a versão antiga do `azdata`.
 
    ```powershell
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
@@ -63,7 +154,7 @@ No momento, não há nenhuma atualização in-loco para clusters de Big Data. A 
    > [!IMPORTANT]
    > Para cada versão, o caminho para a versão `n-1` do `azdata` muda. Mesmo que você tenha instalado o `azdata` anteriormente, precisará reinstalar com base no caminho mais recente antes de criar o cluster.
 
-## <a id="azdataversion"></a> Verificar a versão do azdata
+### <a id="azdataversion"></a> Verificar a versão do azdata
 
 Antes de implantar um novo cluster de Big Data, verifique se você está usando a última versão do `azdata` com o parâmetro `--version`:
 
@@ -71,7 +162,7 @@ Antes de implantar um novo cluster de Big Data, verifique se você está usando 
 azdata --version
 ```
 
-## <a name="install-the-new-release"></a>Instalar a nova versão
+### <a name="install-the-new-release"></a>Instalar a nova versão
 
 Depois de remover o cluster de Big Data anterior e instalar o `azdata` mais recente, implante o novo cluster de Big Data usando as instruções de implantação atuais. Para obter mais informações, confira [Como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Kubernetes](deployment-guidance.md). Em seguida, restaure os bancos de dados ou os arquivos necessários.
 

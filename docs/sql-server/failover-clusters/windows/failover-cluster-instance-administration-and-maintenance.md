@@ -1,6 +1,7 @@
 ---
-title: Administração e manutenção de instância de cluster de failover | Microsoft Docs
-ms.custom: ''
+title: Administração e manutenção da instância de cluster de failover
+description: Saiba mais sobre a administração e manutenção de instâncias de cluster de failover do SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 46b895dcc560a6e42e9ba5abce39ee22b4075bde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5788d52a119fe6bada56ac2def9d2fbfb2c09cb0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002483"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230072"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Administração e manutenção da instância de cluster de failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "68002483"
 > [!IMPORTANT]  
 >  Não use a mesma conta para a conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e a conta de serviço do WSFC. Se a senha for alterada para a conta de serviço do WSFC, sua instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] falhará.  
   
- No [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], os SIDs de serviço são usados para as contas de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Configurar contas de serviço e permissões do Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ No [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], os SIDs de serviço são usados para as contas de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Configurar contas de serviço e permissões do Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ## <a name="administering-a-failover-cluster-instance"></a>Administrando uma instância de cluster de failover  
   
@@ -60,7 +61,7 @@ ms.locfileid: "68002483"
 |Kerberos é um protocolo de autenticação de rede cuja finalidade é oferecer autenticação forte para aplicativos cliente/servidor. O Kerberos proporciona uma base para interoperabilidade e ajuda a melhorar a segurança da autenticação na rede da empresa inteira. Você pode usar a autenticação Kerberos com instâncias autônomas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou com FCIs AlwaysOn.|[Registrar um nome da entidade de serviço para conexões de Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
 |Fornece links para conteúdo que descreve como habilitar a autenticação Kerberos||  
 |Descreve o procedimento usado para recuperar-se de uma falha de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Recuperar-se de uma falha na instância do cluster de failover](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md)|  
-|Descreva o procedimento usado para alterar o recurso de endereço IP para uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Alterar o endereço IP de uma instância do cluster de failover](../../../sql-server/failover-clusters/windows/change-the-ip-address-of-a-failover-cluster-instance.md)|  
+|Descreva o procedimento usado para alterar o recurso de endereço IP para uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Alterar o endereço IP de uma instância de cluster de failover](../../../sql-server/failover-clusters/windows/change-the-ip-address-of-a-failover-cluster-instance.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Definir configurações da propriedade HealthCheckTimeout](../../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md)   

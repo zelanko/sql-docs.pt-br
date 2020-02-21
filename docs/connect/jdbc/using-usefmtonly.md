@@ -1,5 +1,5 @@
 ---
-title: Recuperando ParameterMetaData por meio de useFmtOnly | Microsoft Docs
+title: Recuperar o ParameterMetaData por meio de useFmtOnly | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -15,26 +15,26 @@ author: rene-ye
 ms.author: v-reye
 manager: kenvh
 ms.openlocfilehash: 6877a6421622ab52a92b89502c68f47c4c315d93
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025500"
 ---
-# <a name="retrieving-parametermetadata-via-usefmtonly"></a>Recuperando ParameterMetaData via useFmtOnly
+# <a name="retrieving-parametermetadata-via-usefmtonly"></a>Recuperar o ParameterMetaData por meio de useFmtOnly
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  O Microsoft JDBC Driver para SQL Server inclui uma maneira alternativa de consultar metadados de parâmetro do servidor, **useFmtOnly**. Esse recurso foi introduzido pela primeira vez na versão 7,4 do driver e é necessário como solução alternativa para problemas conhecidos no `sp_describe_undeclared_parameters`.
+  O Microsoft JDBC Driver para SQL Server inclui uma maneira alternativa de consultar os Metadados de Parâmetros do servidor, **useFmtOnly**. Esse recurso foi introduzido na versão 7.4 do driver e é necessário como solução alternativa para problemas conhecidos no `sp_describe_undeclared_parameters`.
   
-  O driver usa principalmente o procedimento `sp_describe_undeclared_parameters` armazenado para consultar metadados de parâmetro, pois essa é a abordagem recomendada para a recuperação de metadados de parâmetro na maioria das circunstâncias. No entanto, a execução do procedimento armazenado atualmente falha nos seguintes casos de uso:
+  O driver usa principalmente o procedimento armazenado `sp_describe_undeclared_parameters` para consultar os Metadados de Parâmetros, pois essa é a abordagem recomendada para a recuperação de Metadados de Parâmetros na maioria das circunstâncias. No entanto, a execução do procedimento armazenado atualmente falha nos seguintes casos de uso:
   
 -   Em relação às colunas Always Encrypted
   
 -   Em relação a tabelas temporárias e variáveis de tabela
   
--   Contra exibições 
+-   Em relação às exibições 
   
-  A solução proposta para esses casos de uso é analisar a consulta SQL do usuário para parâmetros e destinos de tabela e, em `SELECT` seguida, `FMTONLY` executar uma consulta com habilitado. O trecho a seguir ajudará a visualizar o recurso.
+  A solução proposta para esses casos de uso é analisar a consulta SQL do usuário para parâmetros e destinos de tabela e, em seguida, executar uma consulta `SELECT` com `FMTONLY` habilitado. O trecho a seguir ajudará a visualizar o recurso.
   
 ```sql
 --create a normal table 'Foo' and a temporary table 'Bar'
@@ -52,10 +52,10 @@ SELECT c1 FROM #Bar; --works
 SET FMTONLY OFF;
 ```
  
-## <a name="turning-the-feature-onoff"></a>Ativar/desativar o recurso 
- O recurso **useFmtOnly** está desativado por padrão. Os usuários podem habilitar esse recurso por meio da cadeia de `useFmtOnly=true`conexão especificando. Por exemplo: `jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;`.
+## <a name="turning-the-feature-onoff"></a>Habilitar/desabilitar o recurso 
+ O recurso **useFmtOnly** está desabilitado por padrão. Os usuários podem habilitar esse recurso por meio da cadeia de conexão ao especificar `useFmtOnly=true`. Por exemplo: `jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;`.
  
- Como alternativa, o recurso está disponível por `SQLServerDataSource`meio do.
+ Como alternativa, o recurso está disponível por meio de `SQLServerDataSource`.
  ```java
 SQLServerDataSource ds = new SQLServerDataSource();
 ds.setServerName(<server>);
@@ -69,12 +69,12 @@ try (Connection c = ds.getConnection()) {
 }
  ```
  
- O recurso também está disponível no nível de instrução. Os usuários podem ativar/desativar o recurso por `PreparedStatement.setUseFmtOnly(boolean)`meio do.
+ O recurso também está disponível no nível da Instrução. Os usuários podem habilitar/desabilitar o recurso por meio de `PreparedStatement.setUseFmtOnly(boolean)`.
 > [!NOTE]  
->  O driver priorizará a propriedade de nível de instrução sobre a propriedade de nível de conexão.
+>  O driver priorizará a propriedade de nível da Instrução sobre a propriedade de nível da Conexão.
 
-## <a name="using-the-feature"></a>Como usar o recurso
-  Uma vez habilitado, o driver começará internamente a usar o novo recurso `sp_describe_undeclared_parameters` em vez de ao consultar os metadados do parâmetro. Não há nenhuma ação adicional necessária do usuário final.
+## <a name="using-the-feature"></a>Usar o recurso
+  Uma vez habilitado, o driver começará a usar internamente o novo recurso em vez de `sp_describe_undeclared_parameters` ao consultar os Metadados de Parâmetros. Não há mais nenhuma ação adicional necessária do usuário final.
 ```java
 final String sql = "INSERT INTO #Bar VALUES (?)";
 try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
@@ -90,12 +90,12 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  O recurso só dá `SELECT/INSERT/UPDATE/DELETE` suporte a consultas. As consultas devem começar com uma das 4 palavras-chave com suporte ou uma [expressão de tabela comum](https://docs.microsoft.com/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017) seguida por uma das consultas com suporte. Não há suporte para parâmetros em expressões de tabela comuns.
+>  O recurso apenas dá suporte a consultas `SELECT/INSERT/UPDATE/DELETE`. As consultas devem começar com uma das quatro palavras-chave com suporte ou uma [Expressão de Tabela Comum](https://docs.microsoft.com/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017) seguida por uma das consultas com suporte. Não há suporte para parâmetros dentro de Expressão de Tabela Comum.
 
 ## <a name="known-issues"></a>Problemas conhecidos
-  Atualmente, há alguns problemas com o recurso, causados por deficiências na lógica de análise do SQL. Esses problemas podem ser abordados em uma atualização futura do recurso e documentados abaixo, juntamente com sugestões de solução alternativa.
+  Atualmente, há alguns problemas com o recurso, causados por deficiências na lógica de análise do SQL. Esses problemas podem ser abordados em uma atualização futura do recurso e estão documentados abaixo, juntamente com as sugestões de solução alternativa.
   
-A. Como usar um alias ' encaminhar declarado '
+a. Usar um alias "encaminhar declarado"
 ```sql
 CREATE TABLE Foo(c1 int)
 
@@ -107,7 +107,7 @@ DELETE fooAlias FROM Foo AS fooAlias WHERE c1 > ?;
 DELETE Foo FROM Foo fooAlias WHERE c1 > ?;
 ```
 
-B. Nome de coluna ambíguo quando as tabelas têm nomes de coluna compartilhados
+B. Nome de coluna ambíguo quando as tabelas têm nomes de colunas compartilhados
 ```sql
 CREATE TABLE Foo(c1 int, c2 int, c3 int)
 CREATE TABLE Bar(c1 int, c2 int, c3 int)
@@ -118,7 +118,7 @@ SELECT c1,c2 FROM Foo WHERE c3 IN (SELECT c3 FROM Bar WHERE c1 > ? and c2 < ? an
 SELECT c1,c2 FROM Foo WHERE c3 IN (SELECT c3 FROM Bar b WHERE b.c1 = ? and b.c2 = ? and b.c3 = ?);
 ```
 
-C. SELECIONAR de uma subconsulta com parâmetros
+C. SELECT de uma subconsulta com parâmetros
 ```sql
 
 CREATE TABLE Foo(c1 int)

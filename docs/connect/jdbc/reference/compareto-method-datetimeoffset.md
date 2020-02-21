@@ -11,10 +11,10 @@ ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f70413a7624b9bbd380a664fbf61b9a33f8989b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955512"
 ---
 # <a name="compareto-method-datetimeoffset"></a>Método compareTo (DateTimeOffset)
@@ -29,7 +29,7 @@ ms.locfileid: "67955512"
 public int compareTo(DateTimeOffset other)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  Um valor [DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) que você deseja comparar com a instância atual.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -37,11 +37,11 @@ public int compareTo(DateTimeOffset other)
   
 |Valor retornado|Descrição|  
 |------------------|-----------------|  
-|0|Ambos os objetos **DateTimeOffset** representam o mesmo ponto no tempo.|  
-|número negativo|Esse objeto **DateTimeOffset** representa um ponto no tempo anterior a *outro*.|  
-|número positivo|Esse objeto **DateTimeOffset** representa um ponto no tempo que é posterior a *outro*.|  
+|0|Os dois objetos **DateTimeOffset** representam o mesmo momento.|  
+|número negativo|Esse objeto **DateTimeOffset** representa um momento anterior a *outro*.|  
+|número positivo|Esse objeto **DateTimeOffset** representa um momento posterior a *outro*.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando dois objetos **DateTimeOffset** tiverem a mesma hora em GMT, não haverá nenhuma organização adicional dos objetos com base no deslocamento.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -17,13 +17,13 @@ ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b98533dcc1589e07bc8ae37562bf6734077a78f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935801"
 ---
-# <a name="sqlsrvconfigure"></a>sqlsrv_configure
+# <a name="sqlsrv_configure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Altera as configurações de opções de registro em log e de tratamento de erros.  
@@ -35,10 +35,10 @@ Altera as configurações de opções de registro em log e de tratamento de erro
 sqlsrv_configure( string $setting, mixed $value )  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
-*$setting*: o nome da configuração a ser alterada. Consulte a tabela abaixo para obter uma lista de configurações.  
+#### <a name="parameters"></a>parâmetros  
+*$setting*: o nome da configuração a ser definida. Veja na tabela abaixo uma lista de configurações.  
   
-*$value*: o valor a ser aplicado à configuração especificada no parâmetro *$setting* . Os valores possíveis para esse parâmetro dependem da configuração especificada. A tabela a seguir apresenta as possíveis combinações:  
+*$value*: o valor a ser aplicado à configuração especificada no parâmetro *$setting*. Os valores possíveis para esse parâmetro dependem da configuração especificada. A tabela a seguir apresenta as possíveis combinações:  
   
 |Configuração|Valores possíveis para o parâmetro $value (inteiro equivalente entre parênteses)|Valor padrão|  
 |-----------|------------------------------------------------------------------------------|-----------------|  
@@ -50,15 +50,15 @@ sqlsrv_configure( string $setting, mixed $value )
 ## <a name="return-value"></a>Valor retornado  
 Se **sqlsrv_configure** for chamado com uma configuração ou valor sem suporte, a função retornará **false**. Caso contrário, a função retornará **true**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 (1) Para saber mais sobre as consultas do lado do cliente, confira [Tipos de cursor &#40;SQLSRV Driver&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
 (2) Para saber mais sobre o registro de atividades em log, confira [Logging Activity](../../connect/php/logging-activity.md).  
   
-(3) Para saber mais sobre a configuração do tratamento de erros e avisos, confira [Como configurar o tratamento de erros e avisos usando o driver SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md).  
+(3) Para obter mais informações sobre a configuração do tratamento de erros e avisos, confira [Como: configurar o tratamento de erro e de avisos usando o driver SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Guia de programação para o Microsoft Drivers para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md) 
+[Guia de programação do Microsoft Drivers para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md) 
   

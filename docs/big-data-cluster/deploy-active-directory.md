@@ -5,24 +5,24 @@ description: Saiba como atualizar Clusters de Big Data do SQL Server em um domí
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/13/2019
+ms.date: 12/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 40b1101d9ee6c57db865282d1556f96aa4311a1f
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127444"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253115"
 ---
-# <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no modo do Active Directory Domain Services
+# <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no modo do Active Directory Domain Services
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este documento descreve a implantação de um BDC (cluster de Big Data) do SQL Server 2019 no modo de autenticação do Active Directory Domain Services, que usará um domínio do AD existente para autenticação.
 
-## <a name="background"></a>Plano de fundo
+## <a name="background"></a>Segundo plano
 
 Para habilitar a autenticação do AD (Active Directory), o BDC cria automaticamente os usuários, os grupos, as contas de computadores e os SPNs (nomes da entidade de serviço) de que os diversos serviços do cluster. Para fornecer alguma independência a essas contas e permitir a definição de escopos para as permissões, durante a implantação, indique uma UO (unidade organizacional) em que todos os objetos do AD relacionados ao BDC serão criados. Crie essa UO antes da implantação do cluster.
 
@@ -49,7 +49,7 @@ Esse usuário será chamado de *conta de serviço de domínio do BDC* neste arti
 
 ### <a name="creating-an-ou"></a>Criando uma UO
 
-No controlador de domínio, abra **Usuários e Computadores do Active Directory**. No painel esquerdo, clique com o botão direito do mouse no diretório no qual deseja criar a UO e selecione Novo -\> **Unidade Organizacional** e siga os prompts do assistente para criar a UO. Como alternativa, você pode criar uma UO com o PowerShell:
+No controlador de domínio, abra **Usuários e Computadores do Active Directory**. No painel esquerdo, clique com o botão direito do mouse no diretório no qual deseja criar a UO e selecione Novo –\> **Unidade Organizacional** e siga os prompts do assistente para criar a UO. Como alternativa, você pode criar uma UO com o PowerShell:
 
 ```powershell
 New-ADOrganizationalUnit -Name "<name>" -Path "<Distinguished name of the directory you wish to create the OU in>"
@@ -109,7 +109,7 @@ A DSA (conta de serviço de domínio) do BDC precisa ser capaz de criar usuário
        - **Criar Objetos de usuário**
        - **Excluir objetos de usuário**
 
-    - Clique em **OK**.
+    - Clique em **OK**
 
 - Clique em **Adicionar**
 
@@ -123,7 +123,7 @@ A DSA (conta de serviço de domínio) do BDC precisa ser capaz de criar usuário
 
     - Role de volta para a parte superior e selecione **Redefinir senha**
 
-    - Clique em **OK**.
+    - Clique em **OK**
 
 - Clique em **Adicionar**
 
@@ -137,7 +137,7 @@ A DSA (conta de serviço de domínio) do BDC precisa ser capaz de criar usuário
 
     - Role de volta para a parte superior e selecione **Redefinir senha**
 
-    - Clique em **OK**.
+    - Clique em **OK**
 
 - Clique em **OK** mais duas vezes para fechar as caixas de diálogo abertas
 
@@ -160,7 +160,7 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 
 ## <a name="provide-security-and-endpoint-parameters"></a>Fornecer parâmetros de segurança e ponto de extremidade
 
-Além das variáveis de ambiente para as credenciais, você também precisa fornecer informações de segurança e de ponto de extremidade para que a integração com o AD funcione. Os parâmetros necessários fazem parte automaticamente do [perfil de implantação](deployment-guidance.md#configfile) `kubeadm-prod`.
+Além das variáveis de ambiente para as credenciais, você também precisa fornecer informações de segurança e de ponto de extremidade para que a integração com o AD funcione. Os parâmetros necessários fazem parte automaticamente do `kubeadm-prod` [perfil de implantação](deployment-guidance.md#configfile).
 
 A integração com o AD requer os seguintes parâmetros. Adicione esses parâmetros aos arquivos `control.json` e `bdc.json` usando os comandos `config replace` mostrados mais adiante neste artigo. Todos os exemplos a seguir estão usando o domínio de exemplo `contoso.local`.
 
@@ -174,13 +174,16 @@ A integração com o AD requer os seguintes parâmetros. Adicione esses parâmet
 
 - `security.domainDnsName`: nome do seu domínio (por exemplo, `contoso.local`).
 
-- `security.clusterAdmins`: esse parâmetro usa um grupo *one- grupo do AD. Os membros desse grupo receberão permissões de administrador no cluster. Isso significa que eles terão permissões de sysadmin no SQL Server, permissões de superusuário no HDFS e permissões de administrador no controlador.
+- `security.clusterAdmins`: esse parâmetro usa **um grupo do AD**. Os membros desse grupo receberão permissões de administrador no cluster. Isso significa que eles terão permissões de sysadmin no SQL Server, permissões de superusuário no HDFS e permissões de administrador no controlador. **Observe que esse grupo precisa existir no AD antes do início da implantação. Observe também que esse grupo não pode estar no escopo DomainLocal no Active Directory. Um grupo com escopo no domínio local resultará em falha na implantação.**
 
-- `security.clusterUsers`: lista dos grupos do AD que são usuários comuns (sem permissões de administrador) no cluster de Big Data.
+- `security.clusterUsers`: lista dos grupos do AD que são usuários comuns (sem permissões de administrador) no cluster de Big Data. **Observe que esses grupos precisam existir no AD antes do início da implantação. Observe também que esses grupos não pode estar no escopo DomainLocal no Active Directory. Um grupo com escopo no domínio local resultará em falha na implantação.**
 
-- **Parâmetro opcional** `security.appOwners`: lista dos grupos do AD que têm permissões para criar, excluir e executar qualquer aplicativo.
+- **Parâmetro opcional** `security.appOwners`: lista dos grupos do AD que têm permissões para criar, excluir e executar qualquer aplicativo. **Observe que esses grupos precisam existir no AD antes do início da implantação. Observe também que esses grupos não pode estar no escopo DomainLocal no Active Directory. Um grupo com escopo no domínio local resultará em falha na implantação.**
 
-- **Parâmetro opcional** `security.appReaders`: lista dos usuários ou grupos do AD que têm permissões para executar qualquer aplicativo. 
+- **Parâmetro opcional** `security.appReaders`: lista dos grupos do AD que têm permissões para executar qualquer aplicativo. **Observe que esses grupos precisam existir no AD antes do início da implantação. Observe também que esses grupos não pode estar no escopo DomainLocal no Active Directory. Um grupo com escopo no domínio local resultará em falha na implantação.**
+
+**Como verificar o escopo do grupo do AD:** 
+[clique aqui para obter instruções](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) para verificar o escopo de um grupo do AD e determinar se ele é DomainLocal.
 
 Se ainda não tiver inicializado o arquivo de configuração de implantação, você poderá executar esse comando para obter uma cópia da configuração.
 
@@ -199,6 +202,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dom
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainDnsName=contoso.local"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadminsgroup\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
 ```
 
 Além das informações acima, você também precisa fornecer nomes DNS para os diferentes pontos de extremidade do cluster. As entradas DNS que usam os nomes DNS fornecidos por você serão criadas automaticamente no servidor DNS após a implantação. Você usará esses nomes ao se conectar aos diferentes pontos de extremidade do cluster. Por exemplo, se o nome DNS da instância mestre do SQL for `mastersql`, você usará `mastersql.contoso.local,31433` para se conectar à instância mestre por meio das ferramentas.
@@ -293,3 +297,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - No momento, o modo de segurança do AD só funciona em ambientes de implantação do `kubeadm`, e não no AKS. O perfil de implantação do `kubeadm-prod` inclui as seções de segurança por padrão.
 
 - Somente um BDC por domínio é permitido no momento. A habilitação de vários BDCs por domínio está planejada para uma versão futura.
+
+- Nenhum dos grupos do AD especificados nas configurações de segurança pode estar com escopo DomainLocal. Para verificar o escopo de um grupo do AD, siga [estas instruções](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).

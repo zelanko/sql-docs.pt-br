@@ -1,5 +1,5 @@
 ---
-title: Método createdeclarement (int, int) | Microsoft Docs
+title: Método createStatement (int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 90dbf639-c3d8-4519-9300-5447c79aec17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84afda93fa79d226eec21cb92c16ff5ebbc55fa5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955310"
 ---
 # <a name="createstatement-method-int-int"></a>Método createStatement (int, int)
@@ -35,7 +35,7 @@ public java.sql.Statement createStatement(int resultSetType,
                                           int resultSetConcurrency)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *resultSetType*  
   
  O valor **int** que representa o tipo do conjunto de resultados.  
@@ -45,12 +45,12 @@ public java.sql.Statement createStatement(int resultSetType,
  O valor **int** que representa o tipo de simultaneidade do conjunto de resultados.  
   
 ## <a name="return-value"></a>Valor retornado  
- O objeto de instrução.  
+ O objeto Statement.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método createStatement é especificado pelo método createStatement na interface java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte Também  

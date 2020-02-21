@@ -16,10 +16,10 @@ ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dd512236aa3070ce299756d4e4294c79ac2e94a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982794"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>Método getIndexInfo (SQLServerDatabaseMetaData)
@@ -38,7 +38,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
                                        boolean approximate)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *cat*  
   
  Uma **String** que contém o nome do catálogo.  
@@ -53,7 +53,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  *unique*  
   
- **true** se apenas índices para valores exclusivos forem retornados. **false** se todos os índices forem retornados.  
+ **true** se forem retornados apenas os índices para valores exclusivos. **false** se forem retornados todos os índices.  
   
  *approximate*  
   
@@ -65,26 +65,26 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getIndexInfo é especificado pelo método getIndexInfo na interface java.sql.DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getIndexInfo conterá as seguintes informações:  
   
-|Nome|Tipo|Descrição|  
+|Nome|Type|Descrição|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|O nome do banco de dados no qual a tabela especificada reside.|  
-|TABLE_SCHEM|**String**|O esquema da tabela.|  
-|TABLE_NAME|**String**|O nome da tabela.|  
+|TABLE_CAT|**Cadeia de caracteres**|O nome do banco de dados no qual a tabela especificada reside.|  
+|TABLE_SCHEM|**Cadeia de caracteres**|O esquema da tabela.|  
+|TABLE_NAME|**Cadeia de caracteres**|O nome da tabela.|  
 |NON_UNIQUE|**booleano**|Indica se os valores de índice podem ser não exclusivos.|  
-|INDEX_QUALIFIER|**String**|O nome do proprietário do índice. Ele será nulo quando TYPE for tableIndexStatistic.|  
-|INDEX_NAME|**String**|O nome do índice.|  
+|INDEX_QUALIFIER|**Cadeia de caracteres**|O nome do proprietário do índice. Ele será nulo quando TYPE for tableIndexStatistic.|  
+|INDEX_NAME|**Cadeia de caracteres**|O nome do índice.|  
 |TYPE|**short**|O tipo do índice. Pode ser um dos seguintes valores:<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**short**|A posição ordinal da coluna no índice. A primeira coluna no índice é 1.|  
-|COLUMN_NAME|**String**|O nome da coluna.|  
-|ASC_OR_DESC|**String**|A ordem usada na ordenação do índice. Pode ser um dos seguintes valores:<br /><br /> A (crescente)<br /><br /> D (decrescente)<br /><br /> NULL (não aplicável)<br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sempre retorna "A".|  
+|COLUMN_NAME|**Cadeia de caracteres**|O nome da coluna.|  
+|ASC_OR_DESC|**Cadeia de caracteres**|A ordem usada na ordenação do índice. Pode ser um dos seguintes valores:<br /><br /> A (crescente)<br /><br /> D (decrescente)<br /><br /> NULL (não aplicável)<br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sempre retorna "A".|  
 |CARDINALITY|**int**|O número de linhas na tabela ou os valores exclusivos no índice.|  
 |PAGES|**int**|O número de páginas usadas para armazenar o índice ou a tabela.|  
-|FILTER_CONDITION|**String**|A condição do filtro.<br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sempre retorna nulo.|  
+|FILTER_CONDITION|**Cadeia de caracteres**|A condição do filtro.<br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sempre retorna nulo.|  
   
 > [!NOTE]  
 >  Para saber mais sobre os dados retornados pelo método getIndexInfo, consulte "sp_indexes (Transact-SQL)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

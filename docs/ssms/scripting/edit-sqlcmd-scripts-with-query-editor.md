@@ -1,6 +1,6 @@
 ---
-title: Editar scripts SQLCMD com o Editor de Consultas | Microsoft Docs
-ms.custom: ''
+title: Editar scripts SQLCMD com o Editor de Consultas
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +17,12 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7931e678db7e93dfea385b5ca905dd6968ec78eb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 637de4e8168b97e27da707f3f189d3608786d973
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263484"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253909"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Editar scripts SQLCMD com o Editor de Consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -161,6 +161,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
+ [Utilitário sqlcmd](../../tools/sqlcmd-utility.md)  
   
   

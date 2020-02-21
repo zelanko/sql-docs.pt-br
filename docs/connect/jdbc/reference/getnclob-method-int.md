@@ -11,10 +11,10 @@ ms.assetid: 10dfa251-9408-469e-ae2a-1acf3917cf47
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63dbc19502ef0d22362008c67a17448bfa48d7f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981527"
 ---
 # <a name="getnclob-method-int"></a>Método getNClob (int)
@@ -29,21 +29,21 @@ ms.locfileid: "67981527"
 public java.sql.NClob getNClob(int parameterIndex)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *parameterIndex*  
   
  Um **int** que indica o índice do parâmetro.  
   
 ## <a name="return-value"></a>Valor retornado  
- Enclobobject.  
+ ANClobobject.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getNClob é especificado pelo método getNClob na interface java.sql.CallableStatement.  
   
- Esse método só dá suporte à recuperação de parâmetros **nchar**, **nvarchar**, **ntext**e **XML** . Chamar esses métodos em outros parâmetros de tipo de dados causará uma exceção.  
+ Esse método só dá suporte à recuperação dos parâmetros **NCHAR**, **NVARCHAR**, **NTEXT** e **XML**. Chamar esses métodos em outros parâmetros de tipo de dados causará uma exceção.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getNClob &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)   

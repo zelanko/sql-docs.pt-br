@@ -16,10 +16,10 @@ ms.assetid: aded734f-c96e-460f-afaa-8f64a92560d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5966367c786cc8e591103166bbe8dadb47c664f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968932"
 ---
 # <a name="supportsresultsettype-method-sqlserverdatabasemetadata"></a>Método supportsResultSetType (SQLServerDatabaseMetaData)
@@ -34,8 +34,8 @@ ms.locfileid: "67968932"
 public boolean supportsResultSetType(int type)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- *type*  
+#### <a name="parameters"></a>parâmetros  
+ *tipo*  
   
  Um **int** que indica o tipo do conjunto de resultados, que pode ser um dos valores a seguir, conforme definido em java.sql.ResultSet ou SQLServerResultSet:  
   
@@ -63,8 +63,8 @@ public boolean supportsResultSetType(int type)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método supportsResultSetType é especificado pelo método supportsResultSetType na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método supportsResultSetType é especificado pelo método supportsResultSetType na interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

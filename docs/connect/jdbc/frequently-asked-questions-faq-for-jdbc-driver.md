@@ -11,10 +11,10 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 37f644b07b02c90e74b0b4fe4e0d5215f5efa298
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049815"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Perguntas frequentes sobre o JDBC Driver
@@ -39,9 +39,9 @@ O Microsoft JDBC Driver 7.4 dá suporte às especificações JDBC 4.2 e 4.3 (par
 
 | JAR                        | Especificação do JDBC            | Versão do JDK |
 | -------------------------- | ----------------------------- | ----------- |
-| MSSQL-JDBC-7.4.1. jre12. jar | JDBC 4.3 (parcialmente) e 4.2 | JDK 12.0    |
-| MSSQL-JDBC-7.4.1. jre11. jar | JDBC 4.3 (parcialmente) e 4.2 | JDK 11.0    |
-| MSSQL-JDBC-7.4.1. jre8. jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-7.4.1.jre12.jar | JDBC 4.3 (parcialmente) e 4.2 | JDK 12.0    |
+| mssql-jdbc-7.4.1.jre11.jar | JDBC 4.3 (parcialmente) e 4.2 | JDK 11.0    |
+| mssql-jdbc-7.4.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 O Microsoft JDBC Driver 7.2 dá suporte às especificações JDBC 4.2 e JDBC 4.3 (parcialmente) e inclui duas bibliotecas de classes JAR no pacote de instalação, da seguinte forma:
@@ -129,7 +129,7 @@ Sim. O driver dá suporte ao uso de endereços IPv6. Use a coleção de propried
 O buffer adaptável foi introduzido a partir do JDBC Driver versão 1.2 para Microsoft SQL Server 2005. Ele é criado para recuperar qualquer tipo de dados de valor grande sem a sobrecarga de cursores de servidor. O recurso de buffer adaptável do Microsoft SQL Server JDBC Driver oferece uma propriedade de cadeia de caracteres de conexão, responseBuffering, que pode ser definida como "adaptive" ou "full". Na versão 1.2, o modo de buffer é "cheio" por padrão e o aplicativo deve configurar o modo de buffer adaptável explicitamente. A partir do driver JDBC versão 2.0, o comportamento padrão do driver é "adaptive". Além disso, o aplicativo não precisa solicitar o comportamento adaptável explicitamente para obter o comportamento de buffer adaptável. Para obter mais informações, confira [Usando um buffer adaptável](../../connect/jdbc/using-adaptive-buffering.md) e o blog [What is adaptive response buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575) (O que é o buffer de resposta adaptável e por que devo usá-lo?).
 
 **O driver dá suporte ao pool de conexões?**  
-O driver dá suporte ao pool de conexões da Plataforma Java, Edição Enterprise 5 (Java EE 5). O driver JDBC implementa as interfaces do JDBC 3.0 necessárias para permitir que o driver participe de qualquer implementação de pool de conexões disponibilizada pelos fornecedores de servidores de aplicativos em middleware. O driver participa das conexões em pool nesses ambientes. Para obter mais informações, consulte [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md). O driver não fornece sua própria implementação do pool. Em vez disso, ele utiliza servidores de aplicativos Java de terceiros.
+O driver dá suporte ao pool de conexões da Plataforma Java, Edição Enterprise 5 (Java EE 5). O driver JDBC implementa as interfaces do JDBC 3.0 necessárias para permitir que o driver participe de qualquer implementação de pool de conexões disponibilizada pelos fornecedores de servidores de aplicativos em middleware. O driver participa das conexões em pool nesses ambientes. Confira mais informações em [Como usar o pool de conexões](../../connect/jdbc/using-connection-pooling.md). O driver não fornece sua própria implementação do pool. Em vez disso, ele utiliza servidores de aplicativos Java de terceiros.
 
 **O driver tem suporte disponível?**  
 Há diversas opções de suporte disponíveis. Você pode postar sua dúvida ou problema no [repositório do GitHub](https://github.com/microsoft/mssql-jdbc) que é monitorado pela Microsoft. Os [fóruns](https://go.microsoft.com/fwlink/?LinkID=246673) são monitorados pela Microsoft, MVPs e pela comunidade. Entre em contato com o Suporte ao Cliente Microsoft. A equipe de desenvolvimento pode pedir que você reproduza o problema fora de qualquer servidor de aplicativos de terceiros. Se o problema não puder ser reproduzido fora do ambiente de hospedagem do contêiner Java, você precisará acionar os terceiros envolvidos para que a equipe possa continuar a ajudá-lo. A equipe também poderá pedir que você reproduza o problema em um sistema operacional como o Windows para que seja possível oferecer o melhor suporte.
