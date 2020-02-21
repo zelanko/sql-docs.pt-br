@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 599059c2820bd55132ed98525a60fa9ba6baeec7
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 96049f3ec8f0cd79a25a57ab0467dff29053ee27
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594028"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190486"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo de conexão XML (SSRS)
   Para incluir dados em uma fonte de dados XML em seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo XML. Esse tipo interno de fonte de dados é baseado na extensão de dados XML. Use esse tipo de fonte de dados para se conectar e recuperar dados de documentos XML, serviços Web ou XML inseridos na consulta.  
@@ -29,7 +29,7 @@ ms.locfileid: "73594028"
   
 |Tipo de documento XML|Exemplo de cadeia de conexão|  
 |-----------------------|-------------------------------|  
-|serviço Web|`https://adventure-works.com/results.aspx`|  
+|Serviço Web|`https://adventure-works.com/results.aspx`|  
 |Documento XML|`https://localhost/XML/Customers.xml`|  
 |Documento XML inserido|*Empty (vazio)*|  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73594028"
   
  Não há suporte para credenciais armazenadas nem solicitadas. Lembre-se de que, se você desabilitar a segurança integrada do Windows, não poderá usá-la para recuperar dados. Se você especificar as credenciais armazenadas ou solicitadas, ocorrerá um erro em tempo de execução.  
   
- Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar as credenciais no Construtor de Relatórios](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Confira mais informações em [Criar cadeias de conexão de dados – Construtor de Relatórios e SRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar Informações de Credenciais e de Conexão para Fontes de Dados de Relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ##  <a name="Query"></a> Consultas  
  Uma consulta especifica os dados a serem recuperados de um conjunto de dados de relatório. As colunas no conjunto de resultados para uma consulta populam a coleção de campos para um conjunto de dados. Um relatório só processa o primeiro conjunto de resultados recuperados por uma consulta.  
@@ -79,7 +79,7 @@ ms.locfileid: "73594028"
   
          `-- or --`  
   
-         `<SoapAction>` *ação SOAP* `</SoapAction>`  
+         `<SoapAction>` *ação soap* `</SoapAction>`  
   
          Elementos XML opcionais:  
   
@@ -89,11 +89,11 @@ ms.locfileid: "73594028"
   
          `-- or --`  
   
-         `<SoapAction>` *ação SOAP* `</SoapAction>`  
+         `<SoapAction>` *ação soap* `</SoapAction>`  
   
     -   **A fonte de dados XML é um documento XML**  
   
-         Elementos XML obrigatórios: nenhum  
+         Elementos XML obrigatórios: Nenhum  
   
          Elementos XML opcionais:  
   
@@ -113,9 +113,9 @@ ms.locfileid: "73594028"
   
          `<ElementPath IgnoreNamespaces="true">`  *caminho do elemento*  `</ElementPath>`  
   
- Para obter mais informações, consulte [Sintaxe de consulta XML para dados de relatório XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
+ Confira mais informações em [Sintaxe de Consulta XML para Dados de Relatório XML e#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
   
- Para obter exemplos, consulte [Reporting Services: Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654)[Reporting Services: usando fontes de dados XML e de serviço Web].  
+ Para obter exemplos, confira [Reporting Services: usando fontes de dados XML e de serviço Web](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Requisitos para recuperar os dados do serviço Web XML  
  A extensão de processamento de dados XML não detecta o esquema para você. Portanto, você deve ter alguma maneira de descobrir quais métodos SOAP recuperarão os dados desejados. Você também deve entender o namespace ou esquema de endereçamento que o serviço Web usa para seus dados.  
@@ -156,7 +156,7 @@ ms.locfileid: "73594028"
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Fornece uma visão geral de como acessar dados de seu relatório.  
   
- [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Fornece informações sobre conexões de dados e fontes de dados.  
   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

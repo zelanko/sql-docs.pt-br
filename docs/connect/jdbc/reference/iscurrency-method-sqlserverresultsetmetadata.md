@@ -16,10 +16,10 @@ ms.assetid: 7fe25d90-693c-4d3b-9dd2-0f8351c5a9ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33d21e8bfe8a774d8b5b21584ba9fd3f02246f4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977679"
 ---
 # <a name="iscurrency-method-sqlserverresultsetmetadata"></a>Método isCurrency (SQLServerResultSetMetaData)
@@ -34,19 +34,19 @@ ms.locfileid: "67977679"
 public boolean isCurrency(int column)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *column*  
   
  Um **int** que indica o índice de coluna.  
   
 ## <a name="return-value"></a>Valor retornado  
- **true** se a coluna for um valor de pagamento à vista. Caso contrário, **false**.  
+ **true** se essa coluna for um valor de cash. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método isCurrency é especificado pelo método isCurrency na interface java. Sql. ResultSetMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método isCurrency é especificado pelo método isCurrency na interface java.sql.ResultSetMetaData.  
   
  Esse método retornará **true** somente com tipos de dados money e smallmoney do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

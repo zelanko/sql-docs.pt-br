@@ -11,10 +11,10 @@ ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64c046ade18bfdf8789ce9fec221f3d33517fcbb
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028015"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Recursos internacionais do JDBC Driver
@@ -33,7 +33,7 @@ ms.locfileid: "69028015"
 ## <a name="handling-of-character-data"></a>Tratando de dados de caracteres  
  Dados de caractere no Java são tratados por padrão como Unicode; o objeto de Java **String** representa dados de caracteres Unicode. No driver JDBC, a única exceção a esta regra são os métodos getter e setter de fluxo ASCII que são casos especiais porque usam fluxos de byte com a pressuposição implícita de páginas de código simples e conhecidas (ASCII).  
   
- Além disso, o driver JDBC fornece a propriedade de cadeia de conexão **sendStringParametersAsUnicode** . Essa propriedade pode ser usada para especificar que os parâmetros preparados para dados de caracteres sejam enviados como ASCII ou conjunto de caracteres multibyte (MBCS) em vez de Unicode. Para obter mais informações sobre a propriedade de cadeia de conexão **sendStringParametersAsUnicode** , consulte [definindo as propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md).  
+ Além disso, o JDBC Driver fornece a propriedade de cadeia de conexão **sendStringParametersAsUnicode**. Essa propriedade pode ser usada para especificar que os parâmetros preparados para dados de caracteres sejam enviados como ASCII ou conjunto de caracteres multibyte (MBCS) em vez de Unicode. Confira mais informações sobre a propriedade de conexão **sendStringParametersAsUnicode** em [Definir as propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md).  
   
 ### <a name="driver-incoming-conversions"></a>Conversões de entrada de driver  
  Os dados de texto em Unicode que vêm do servidor não precisam ser convertidos. Eles são passados diretamente como Unicode. Os dados não Unicode que vêm do servidor são convertidos da página de código para os dados, no nível de coluna ou de banco de dados, para Unicode. O driver JDBC usa as rotinas de conversão da Máquina Virtual Java (JVM) para realizar estas conversões. Estas conversões são executadas em todos os métodos getter de fluxo de caracteres e cadeia de caracteres com tipo.  
@@ -46,7 +46,7 @@ ms.locfileid: "69028015"
  Por outro lado, os métodos da API de caracteres não nacionais, como os métodos setString, setCharacterStream e setClob das classes [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) enviam os valores para o servidor em Unicode somente quando a propriedade **sendStringParametersAsUnicode** está definida como "true", que é o valor padrão.  
   
 ## <a name="non-unicode-parameters"></a>Parâmetros não Unicode  
- Para obter o desempenho ideal com o tipo **Char**, **varchar** ou **LONGVARCHAR** de parâmetros não-Unicode, defina a propriedade de cadeia de conexão **sendStringParametersAsUnicode** como "false" e use os métodos de caractere não nacionais.  
+ Para obter o desempenho ideal com os tipos **CHAR**, **VARCHAR** ou **LONGVARCHAR** de parâmetros não Unicode, defina a propriedade de cadeia de conexão **sendStringParametersAsUnicode** como "false" e use métodos de caracteres não nacionais.  
   
 ## <a name="formatting-issues"></a>Problemas de formatação  
  Para data, hora e moedas, toda a formatação com os dados localizados é realizada no nível da linguagem Java usando o objeto Locale; e os vários métodos de formatação para tipos de dados **Date**, **Calendar** e **Number**. Em casos raros em que o JDBC Driver precisar passar dados que fazem distinção de localidade em um formato localizado, o formatador correto é usado com a localidade padrão da JVM.  

@@ -1,5 +1,5 @@
 ---
-title: Método GetDouble (SQLServerCallableStatement) | Microsoft Docs
+title: Método getDouble (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f89ce642-9eac-4d5b-b1ba-45aa3031ab3b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9cde443dc067e21ff0385e988a312095a04da0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983501"
 ---
 # <a name="getdouble-method-sqlservercallablestatement"></a>Método getDouble (SQLServerCallableStatement)

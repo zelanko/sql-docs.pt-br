@@ -1,10 +1,9 @@
 ---
-title: Tipos de consulta com suporte (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Tipos de Consulta com Suporte
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,14 @@ helpviewer_keywords:
 ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 36da701cefd3f74cd21bd960d74b684336a7858c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: a8f5fae345543a3a63bacad0c5cdf0d8f62d2aa5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263181"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242172"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>Tipos de consulta permitidos (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,6 +54,6 @@ Além das consultas, que você pode criar usando os painéis gráficos, pode ins
 Quando você criar consultas que usam instruções SQL que não podem ser representadas nos painéis gráficos, o Designer de Consulta e Exibição escurece esses painéis para indicar que eles não refletem a consulta que você está criando. Porém, os painéis escurecidos ainda estão ativos e, em muitas casos, você pode fazer alterações na consulta nesses painéis. Se as alterações que você fizer resultarem em uma consulta que pode ser representada nos painéis gráficos, esses painéis não são mais escurecidos.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Tópicos de instruções de como criar consultas e exibições (Ferramentas de Banco de Dados Visual)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Tipos de consultas (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[Tópicos de instruções de como criar consultas e exibições](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Tipos de Consultas](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

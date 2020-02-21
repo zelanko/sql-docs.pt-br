@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a7da810593c6b7dee9ab80af17d840ed3d0dc4d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 445057a5ac7144e7bb97f74f8d6eb20d8332f8e0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594036"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190631"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Tipo de conexão do SQL Server Parallel Data Warehouse (SSRS)
 
@@ -37,7 +37,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  Além disso, você usa a caixa de diálogo **Propriedades das Fontes de Dados** para fornecer credenciais, como nome de usuário e senha. As opções `User Id` e `Password` são acrescentadas automaticamente à cadeia de conexão; você não precisa digitá-las como parte da cadeia de conexão. A interface de usuário também fornece opções para especificar o endereço IP do nó de controle no aplicativo [!INCLUDE[ssDW](../../includes/ssdw-md.md)] e o número da porta. Por padrão, a porta é a 17000. A porta é configurável por um administrador, e a cadeia de conexão talvez use um número de porta diferente.  
   
- Para obter mais informações sobre exemplos de cadeias de conexão, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Confira mais informações sobre exemplos de cadeias de conexão em [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Credenciais  
  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] fornece sua própria tecnologia de segurança para implementar e armazenar nomes de usuários e senhas. Não é possível usar a Autenticação do Windows. Se você tentar se conectar ao [!INCLUDE[ssDW](../../includes/ssdw-md.md)] usando a Autenticação do Windows, ocorrerá um erro.  
@@ -50,7 +50,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Nenhuma credencial é necessária. Para usar essa opção, você deve ter a conta de execução autônoma configurada no servidor de relatório. Para obter mais informações, consulte [Configurar a conta de execução autônoma &#40;Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md). 
   
- Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar as credenciais no Construtor de Relatórios](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Confira mais informações em [Criar cadeias de conexão de dados – Construtor de Relatórios e SRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar Informações de Credenciais e de Conexão para Fontes de Dados de Relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Consultas  
@@ -141,7 +141,7 @@ WHERE EmployeeID = (@EmpID)
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Fornece uma visão geral de como acessar dados de seu relatório.  
   
- [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Fornece informações sobre conexões de dados e fontes de dados.  
   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -159,4 +159,4 @@ WHERE EmployeeID = (@EmpID)
 [Filtrar, agrupar e classificar dados](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [Expressões](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,7 +1,7 @@
 ---
-title: Renomear uma instância do cluster de failover do SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Renomear instância do cluster de failover
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 612f0171cbb7786374923dc5ed8c257224474a21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af1ec295ef8567496da84819532342164cb269cb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063886"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230715"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Renomear uma instância do cluster de failover do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,13 +67,13 @@ ms.locfileid: "68063886"
   
 -   Corrija as configurações do Registro se o SQL Agent estiver configurado para encaminhamento de evento. Para obter mais informações, consulte [Designar um servidor de encaminhamento de eventos &#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
   
--   Corrija o servidor mestre (MSX) e os nomes de instância de servidores de destino (TSX) quando os nomes dos computadores e da rede de cluster forem renomeados. Para obter mais informações, consulte os tópicos a seguir:  
+-   Corrija o servidor mestre (MSX) e os nomes de instância de servidores de destino (TSX) quando os nomes dos computadores e da rede de cluster forem renomeados. Para obter mais informações, consulte estes tópicos:  
   
     -   [Remover vários servidores de destino de um servidor mestre](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [Criar um ambiente multisservidor](../../../ssms/agent/create-a-multiserver-environment.md)  
   
--   Reconfigure o envio de logs para que o nome de servidor atualizado seja usado para fazer backup e restaurar logs. Para obter mais informações, consulte os tópicos a seguir:  
+-   Reconfigure o envio de logs para que o nome de servidor atualizado seja usado para fazer backup e restaurar logs. Para obter mais informações, consulte estes tópicos:  
   
     -   [Configurar o envio de logs &#40;SQL Server&#41;](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   

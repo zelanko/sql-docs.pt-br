@@ -11,10 +11,10 @@ ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: efafaa709666620e7237f2481c392aba25dfd5f8
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026828"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Como usar um procedimento armazenado com parâmetros de saída
@@ -28,11 +28,11 @@ Ao chamar esse tipo de procedimento armazenado usando o driver JDBC, você preci
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> Para obter mais informações sobre as sequências de escape do SQL, consulte [usando sequências de escape do SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Para obter mais informações sobre as sequências de escape SQL, confira [Como usar sequências de escape do SQL](../../connect/jdbc/using-sql-escape-sequences.md).
 
 Ao construir a sequência de escape `call`, especifique os parâmetros OUT usando o caractere ? (ponto de interrogação). Esse caractere age como um espaço reservado para os valores de parâmetros que retornarão do procedimento armazenado. Para especificar um valor para um parâmetro OUT, especifique o tipo de dados de cada parâmetro usando o método [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) da classe SQLServerCallableStatement antes de executar o procedimento armazenado.
 
-O valor especificado para o parâmetro OUT no método registerOutParameter precisa ser um dos tipos de dados do JDBC contidos em java.sql.Types que, por sua vez, é mapeado para um dos tipos de dados nativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre o JDBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os tipos de dados, consulte [noções básicas sobre os tipos de dados do driver JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
+O valor especificado para o parâmetro OUT no método registerOutParameter precisa ser um dos tipos de dados do JDBC contidos em java.sql.Types que, por sua vez, é mapeado para um dos tipos de dados nativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre os tipos de dados JDBC e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [Noções básicas sobre os tipos de dados do JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
 
 Ao passar para o método registerOutParameter um valor para um parâmetro OUT, especifique não só o tipo de dados a ser usado para o parâmetro, mas também o posicionamento ordinal do parâmetro ou o nome do parâmetro no procedimento armazenado. Por exemplo, se o procedimento armazenado contiver um único parâmetro OUT, seu valor ordinal será 1; se o procedimento armazenado contiver dois parâmetros, o primeiro valor ordinal será 1 e o segundo valor ordinal será 2.
 
@@ -82,9 +82,9 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 ```
 
 > [!NOTE]  
-> Esses exemplos usam o método Execute da classe SQLServerCallableStatement para executar o procedimento armazenado. Ele é usado porque o procedimento armazenado também não retornou um conjunto de resultados. Se ele tivesse retornado, o método [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) teria sido usado.
+> Esses exemplos usam o método de execução da classe SQLServerCallableStatement para executar o procedimento armazenado. Ele é usado porque o procedimento armazenado também não retornou um conjunto de resultados. Se ele tivesse retornado, o método [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) teria sido usado.
 
-Os procedimentos armazenados podem retornar contagens de atualização e vários conjuntos de resultados. O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] segue a especificação do JDBC 3.0, a qual declara que vários conjuntos de resultados e contagens de atualizações devem ser recuperados antes da recuperação dos parâmetros OUT. Ou seja, o aplicativo deve recuperar todos os objetos ResultSet e as contagens de atualização antes de recuperar os parâmetros OUT usando os métodos CallableStatement. getter. Caso contrário, os objetos ResultSet e as contagens de atualizações que ainda não foram recuperados serão perdidos quando os parâmetros OUT forem recuperados. Para obter mais informações sobre contagens de atualização e vários conjuntos de resultados, consulte [usando um procedimento armazenado com uma contagem de atualizações](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) e [usando vários conjuntos de resultados](../../connect/jdbc/using-multiple-result-sets.md).
+Os procedimentos armazenados podem retornar contagens de atualização e vários conjuntos de resultados. O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] segue a especificação do JDBC 3.0, a qual declara que vários conjuntos de resultados e contagens de atualizações devem ser recuperados antes da recuperação dos parâmetros OUT. Ou seja, o aplicativo deve recuperar todos os objetos ResultSet e as contagens de atualização antes de recuperar os parâmetros OUT usando os métodos CallableStatement.getter. Caso contrário, os objetos ResultSet e as contagens de atualizações que ainda não foram recuperados serão perdidos quando os parâmetros OUT forem recuperados. Para obter mais informações sobre contagens de atualizações e vários conjuntos de resultados, confira [Como usar um procedimento armazenado com uma contagem de atualização](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) e [Como usar vários conjuntos de resultados](../../connect/jdbc/using-multiple-result-sets.md).
 
 ## <a name="see-also"></a>Confira também
 

@@ -11,23 +11,23 @@ ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dc49b466885e63ad9bd380a53a432a936310e18
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68419261"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Etapa 3: prova de conceito da conexão ao SQL usando o Node.js
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Etapa 3: Prova de conceito da conexão ao SQL usando o Node.js
 
-![Download-seta-circulado](../../ssdt/media/download.png)[para baixar o driver SQL node. js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Para baixar o driver SQL do Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Este exemplo deve ser considerado apenas uma prova de conceito.  O código de exemplo é simplificado para fins de clareza e não necessariamente representa as práticas recomendadas recomendadas pela Microsoft. Outros exemplos que usam as mesmas funções cruciais estão disponíveis no github:
+Este exemplo só deve ser considerado como uma prova de conceito.  O código de exemplo está simplificado para fins de clareza e não necessariamente representa as melhores práticas recomendadas pela Microsoft. Outros exemplos que usam as mesmas funções cruciais estão disponíveis no Github:
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
-## <a name="step-1-connect"></a>Etapa 1: conectar-se  
+## <a name="step-1-connect"></a>Etapa 1: Conectar  
   
-A **nova** função de conexão é usada para se conectar ao banco de dados SQL.  
+A função **new Connection** é usada para se conectar ao Banco de Dados SQL.  
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -53,10 +53,10 @@ A **nova** função de conexão é usada para se conectar ao banco de dados SQL.
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>Etapa 2: Executar uma consulta  
+## <a name="step-2--execute-a-query"></a>Etapa 2:  Executar uma consulta  
   
   
-Todas as instruções SQL são executadas usando a **nova função Request ()** . Se a instrução retornar linhas, como uma instrução SELECT, você poderá recuperá-las usando a função **Request. on ()** . Se não houver linhas, a função Request. on () retornará listas vazias.  
+Todas as instruções SQL são executadas usando a função **new Request()** . Se a instrução retornar linhas, como uma instrução select, você poderá recuperá-las usando a função **request.on()** . Se não houver linhas, a função request.on() retornará listas vazias.  
   
   
 ```javascript  
@@ -111,9 +111,9 @@ Todas as instruções SQL são executadas usando a **nova função Request ()** 
     }  
 ```  
   
-## <a name="step-3-insert-a-row"></a>Etapa 3: inserir uma linha  
+## <a name="step-3-insert-a-row"></a>Etapa 3: Inserir uma linha  
   
-Neste exemplo, você verá como executar uma instrução [Insert](../../t-sql/statements/insert-transact-sql.md) com segurança, passar parâmetros que protegem seu aplicativo do valor de [injeção de SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
+Neste exemplo, você verá como executar uma instrução [INSERT](../../t-sql/statements/insert-transact-sql.md) com segurança, passar parâmetros que protegem seu aplicativo contra o valor [injeção de SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
   
 ```javascript  

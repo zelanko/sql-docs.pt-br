@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015444"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
@@ -27,9 +27,9 @@ ms.locfileid: "68015444"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Retorna um ponteiro para um driver de OLE DB para SQL Server estrutura SSERRORINFO que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contém os detalhes do erro.  
+  Retorna um ponteiro para uma estrutura SSERRORINFO do Driver do OLE DB para SQL Server que contém os detalhes de erros do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- O driver OLE DB para SQL Server define a interface de erro **ISQLServerErrorInfo** . Essa interface retorna detalhes de um erro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], incluindo gravidade e estado.  
+ O Driver do OLE DB para SQL Server define a interface de erro **ISQLServerErrorInfo**. Essa interface retorna detalhes de um erro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], incluindo gravidade e estado.  
 
   
 ## <a name="syntax"></a>Sintaxe  
@@ -53,12 +53,12 @@ HRESULT GetErrorInfo(
  O método foi bem-sucedido.  
   
  E_INVALIDARG  
- O argumento *ppSSErrorInfo* ou *ppErrorStrings* era nulo.  
+ O argumento *ppSSErrorInfo* ou *ppErrorStrings* foi NULL.  
   
  E_OUTOFMEMORY  
- O driver OLE DB para SQL Server não pôde alocar memória suficiente para concluir a solicitação.  
+ O Driver do OLE DB para SQL Server não pôde alocar memória suficiente para concluir a solicitação.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O OLE DB Driver for SQL Server aloca memória para as cadeias de caracteres SSERRORINFO e OLECHAR retornadas por meio dos ponteiros passados pelo consumidor. O consumidor precisará desalocar essa memória usando o método **IMalloc::Free** quando não for mais necessário acessar os dados de erro.  
   
  A estrutura SSERRORINFO é definida da seguintes maneira:  

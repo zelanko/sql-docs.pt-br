@@ -16,10 +16,10 @@ ms.assetid: 66c9a8b0-dc4c-4cbb-8004-c7157368cab4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 054ce4f6f646f873d4aff05fbe1d31aa9903ded9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980743"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>Método getProcedures (SQLServerDatabaseMetaData)
@@ -36,7 +36,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
                                         java.lang.String proc)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *sCatalog*  
   
  Uma **String** que contém o nome do catálogo. Fornecer um nulo a esse parâmetro indica que o nome do catálogo não precisa ser usado.  
@@ -55,20 +55,20 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getProcedures é especificado pelo método getProcedures na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ O método getProcedures é especificado pelo método getProcedures na interface java.sql.DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getProcedures conterá as seguintes informações:  
   
-|Nome|Tipo|Descrição|  
+|Nome|Type|Descrição|  
 |----------|----------|-----------------|  
-|PROCEDURE_CAT|**String**|O nome do banco de dados no qual o procedimento armazenado especificado reside.|  
-|PROCEDURE_SCHEM|**String**|O esquema para o procedimento armazenado.|  
-|PROCEDURE_NAME|**String**|O nome do procedimento armazenado.|  
+|PROCEDURE_CAT|**Cadeia de caracteres**|O nome do banco de dados no qual o procedimento armazenado especificado reside.|  
+|PROCEDURE_SCHEM|**Cadeia de caracteres**|O esquema para o procedimento armazenado.|  
+|PROCEDURE_NAME|**Cadeia de caracteres**|O nome do procedimento armazenado.|  
 |NUM_INPUT_PARAMS|**int**|Reservado para uso futuro, atualmente retorna um valor -1.|  
 |NUM_OUTPUT_PARAMS|**int**|Reservado para uso futuro, atualmente retorna um valor -1.|  
 |NUM_RESULT_SETS|**int**|Reservado para uso futuro, atualmente retorna um valor -1.|  
-|REMARKS|**String**|A descrição da coluna de procedimento.<br /><br /> <br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
+|COMENTÁRIOS|**Cadeia de caracteres**|A descrição da coluna de procedimento.<br /><br /> <br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
 |PROCEDURE_TYPE|**smallint**|O tipo do procedimento armazenado. Pode ser um dos seguintes valores:<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
 > [!NOTE]  

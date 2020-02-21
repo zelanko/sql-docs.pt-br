@@ -1,10 +1,9 @@
 ---
-title: Usar cláusulas HAVING e WHERE na mesma consulta | Microsoft Docs
-ms.custom: ''
+title: Usar as cláusulas HAVING e WHERE na mesma consulta
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,14 @@ helpviewer_keywords:
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84abe2405901012565e98950320c8d5aa92fa903
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b74f4847964be363972c4226f124c94cce032a07
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263038"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246016"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Usar cláusulas HAVING e WHERE na mesma consulta (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +57,7 @@ Você pode criar uma cláusula WHERE e uma cláusula HAVING envolvendo a mesma c
   
 ### <a name="to-specify-a-where-condition-in-an-aggregate-query"></a>Para especificar um critério WHERE em uma consulta de agregação  
   
-1.  Especifique os grupos para a sua consulta. Para obter detalhes, veja [Agrupar linhas em resultados da consulta (Visual Database Tools)](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
+1.  Especifique os grupos para a sua consulta. Confira mais detalhes em [Agrupar linhas nos resultados da consulta](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
   
 2.  Se já não estiver no painel Critérios, adicione a coluna na qual você deseja basear o critério WHERE.  
   
@@ -90,6 +91,6 @@ Você pode criar uma cláusula WHERE e uma cláusula HAVING envolvendo a mesma c
     ```  
   
 ## <a name="see-also"></a>Consulte Também  
-[Classificar e agrupar resultados da consulta (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
-[Resumir resultados da consulta (Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[Classificar e Agrupar Resultados da Consulta](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Resumir resultados da consulta](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   

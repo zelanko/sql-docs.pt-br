@@ -9,10 +9,10 @@ ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 332103dd9f100a2477b9ae7392bd6d24088261f6
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67220583"
 ---
 # <a name="manage-shared-datasets"></a>Gerenciar conjuntos de dados compartilhados
@@ -25,7 +25,7 @@ ms.locfileid: "67220583"
   
 -   Construtor de Relatórios   Use o modo de design de conjunto de dados compartilhado e salve o conjunto de dados compartilhado em um servidor de relatório ou site do SharePoint.  
   
--   Designer de relatórios no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] / Visual Studio para criar conjuntos de dados compartilhados na pasta conjuntos de dados no Gerenciador de soluções. Para publicar um conjunto de dados compartilhado, implante-o em um servidor de relatório ou site do SharePoint.  
+-   Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]/Visual Studio para criar conjuntos de dados compartilhados na pasta Conjunto de Dados no Gerenciador de Soluções. Para publicar um conjunto de dados compartilhado, implante-o em um servidor de relatório ou site do SharePoint.  
   
 -   Carregue um arquivo de definição de conjunto de dados compartilhado (.rsd). Você pode carregar um arquivo no servidor de relatório ou site do SharePoint. Em um site do SharePoint. Um arquivo carregado não é validado em relação ao esquema até que o conjunto de dados compartilhado seja armazenado em cache ou use em um relatório.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "67220583"
   
 |Tarefa      |Ferramenta      |Link      |  
 |----------|----------|----------|  
-|Adicionar um conjunto de dados compartilhado ou alterar propriedades da definição de conjuntos de dados compartilhados.|Salvar no Construtor de Relatórios.<br /><br /> Implantar no Designer de Relatórios.<br /><br /> Carregar um arquivo. RSD no portal da web|[Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)]<br /><br /> [Carregar um arquivo ou relatório no servidor de relatório](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)<br /><br /> Se você carregar um conjunto de dados compartilhado antes da fonte de dados compartilhada da qual ele depende ser publicada, deverá associar o conjunto de dados compartilhado manualmente à fonte de dados compartilhada. Para obter mais informações, consulte [... /.. /Reporting-Services/Work com conjuntos de dados compartilhados – portal da web](../work-with-shared-datasets-web-portal.md).|  
+|Adicionar um conjunto de dados compartilhado ou alterar propriedades da definição de conjuntos de dados compartilhados.|Salvar no Construtor de Relatórios.<br /><br /> Implantar no Designer de Relatórios.<br /><br /> Carregar um arquivo .rsd no portal da Web|[Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)]<br /><br /> [Carregar um arquivo ou relatório no servidor de relatório](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)<br /><br /> Se você carregar um conjunto de dados compartilhado antes da fonte de dados compartilhada da qual ele depende ser publicada, deverá associar o conjunto de dados compartilhado manualmente à fonte de dados compartilhada. Para saber mais, confira [../../reporting-services/Work com conjuntos de dados compartilhados – portal da Web](../work-with-shared-datasets-web-portal.md).|  
 |Alterar propriedades de item de conjunto de dados compartilhado.|portal da Web|[Trabalhar com conjuntos de dados compartilhados – portal da Web](../../reporting-services/work-with-shared-datasets-web-portal.md)|  
 |Especificar propriedades adicionais de conjunto de dados compartilhado para uma instância de conjunto de dados compartilhado em um relatório.|Designer de Relatórios do Construtor de Relatórios|[Caixa de diálogo Propriedades do Conjunto de Dados, Consulta (Construtor de Relatórios)](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)|  
 |Associar a uma fonte de dados compartilhada diferente para um conjunto de dados compartilhado.|portal da Web|[Configurar propriedades de fonte de dados para um relatório paginado – SSRS](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
@@ -98,7 +98,7 @@ ms.locfileid: "67220583"
   
 -   Como fontes de dados compartilhadas, os conjuntos de dados são gerenciados independentemente dos relatórios nos quais são usados. Parte do gerenciamento de um conjunto de dados compartilhado em um servidor de relatório é a capacidade de alterar a fonte de dados compartilhada da qual ele depende sem editar a definição do conjunto de dados compartilhado.  
   
--   Como relatórios, conjuntos de dados compartilhados podem ser armazenados em cache. As credenciais exigidas pela fonte de dados devem atender às restrições de armazenamento em cache, e os valores padrão devem ser especificados para cada parâmetro. Para obter mais informações, veja [Conjuntos de dados compartilhados em cache &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
+-   Como relatórios, conjuntos de dados compartilhados podem ser armazenados em cache. As credenciais exigidas pela fonte de dados devem atender às restrições de armazenamento em cache, e os valores padrão devem ser especificados para cada parâmetro. Para obter mais informações, consulte [Armazenar conjuntos de dados compartilhados em cache &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
   
 -   Como relatórios, a cada vez que o processamento ocorre, a definição atual do item no servidor de relatório é usada. Se você fizer alterações em um conjunto de dados compartilhado, cada relatório que o usa usará a definição atual no servidor de relatório quando o relatório for processado. Se o armazenando em cache estiver habilitado para o conjunto de dados compartilhado e você fizer alterações na definição do conjunto de dados compartilhado, as alterações não serão usadas até que os dados no cache expirem. Você pode usar planos de atualização de cache para ajudar a fornecer um conjunto e dados consistente para vários relatórios.  
   
@@ -114,5 +114,5 @@ ms.locfileid: "67220583"
   
 ## <a name="see-also"></a>Confira também  
  [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Conceder permissões em um servidor de relatório no Modo Nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   

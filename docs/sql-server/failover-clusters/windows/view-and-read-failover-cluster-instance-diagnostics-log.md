@@ -1,6 +1,7 @@
 ---
-title: Exibir e ler o log de diagnóstico da instância do cluster de failover | Microsoft Docs
-ms.custom: ''
+title: Exibir e ler o log de diagnóstico da instância do cluster de failover
+description: Saiba como exibir e ler o log de diagnóstico produzido pela instância do cluster de failover do SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0932181110c5c4ec34e3d4bdf6b1395bffc65cca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44b631bb1c453ebc09e8a38a57b1a3160084b09d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904991"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242878"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Exibir e ler o log de diagnóstico da instância do cluster de failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +88,7 @@ ORDER BY Time;
 > [!NOTE]  
 >  Você pode filtrar os resultados para componentes específicos ou um estado usando a cláusula WHERE.  
   
-##  <a name="TsqlConfigure"></a> Usando Transact-SQL  
+##  <a name="TsqlConfigure"></a> Usando o Transact-SQL  
  **Para configurar as propriedades de log de diagnóstico**  
   
 > [!NOTE]  
@@ -100,7 +101,7 @@ ORDER BY Time;
 ####  <a name="TsqlExample"></a> Setting diagnostic log options  
  Os exemplos desta seção mostram como definir os valores para a opção de log de diagnóstico.  
   
-##### <a name="a-starting-diagnostic-logging"></a>A. Iniciando o log de diagnóstico  
+##### <a name="a-starting-diagnostic-logging"></a>a. Iniciando o log de diagnóstico  
  O exemplo a seguir inicia o log de dados de diagnóstico.  
   
 ```  
@@ -131,6 +132,6 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Política de failover para instâncias de cluster de failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: Análise de agrupamento no RevoScaleR
-description: Tutorial passo a passo sobre como agrupar dados para análise distribuída usando a linguagem R no SQL Server.
+description: 'Tutorial 12 do RevoScaleR: como agrupar dados para análise distribuída usando a linguagem R no SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,22 +9,22 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c7aa853f44a04e55802012e81e59a15d2b5282b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0ad082c3a21292b782d5888b48b698c986c0b5b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727240"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947195"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Executar análise de agrupamento usando rxDataStep (tutorial do SQL Server e do RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lição faz parte do [tutorial do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Este é o tutorial 12 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
-Nesta lição, você usará a função **rxDataStep** para processar dados em partes, em vez de exigir que todo o conjunto de dados seja carregado na memória e processado de uma vez, como no R tradicional. As funções **rxDataStep** leem os dados em partes, aplicam as funções do R a cada parte de dados por vez e salvam os resultados resumidos para cada parte em uma fonte de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comum. Quando todos os dados tiverem sido lidos, os resultados serão combinados.
+Neste tutorial, você usará a função **rxDataStep** para processar dados em partes, em vez de exigir que todo o conjunto de dados seja carregado na memória e processado de uma vez, como no R tradicional. As funções **rxDataStep** leem os dados em partes, aplicam as funções do R a cada parte de dados por vez e salvam os resultados resumidos para cada parte em uma fonte de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comum. Quando todos os dados tiverem sido lidos, os resultados serão combinados.
 
 > [!TIP]
-> Nesta lição, calcule uma tabela de contingência usando a função **table** no R. Esse exemplo é para fins de instrução apenas. 
+> Neste tutorial, calcule uma tabela de contingência usando a função **table** no R. Esse exemplo serve apenas para fins de instrução. 
 > 
 > Se você precisar tabular conjuntos de dados do mundo real, será recomendável usar as funções **rxCrossTabs** ou **rxCube** no **RevoScaleR**, que são otimizadas para esse tipo de operação.
 

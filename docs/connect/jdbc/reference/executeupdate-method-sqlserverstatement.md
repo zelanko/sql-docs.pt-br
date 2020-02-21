@@ -16,10 +16,10 @@ ms.assetid: 10ae662a-ce3c-4b24-875c-5c2df319d93b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c13b439c687ea59e895bea8db162a0d64e887e5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954596"
 ---
 # <a name="executeupdate-method-sqlserverstatement"></a>Método executeUpdate (SQLServerStatement)

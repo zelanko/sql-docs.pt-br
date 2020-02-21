@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 22f3b681f9c4256087c17bd1e74011c2ba0916fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015812"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversões executadas do servidor para o cliente
@@ -27,17 +27,17 @@ ms.locfileid: "68015812"
   Este artigo descreve as conversões de data/hora executadas entre [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou posterior) e um aplicativo cliente escrito com o OLE DB Driver para SQL Server.  
   
 ## <a name="conversions"></a>Conversões  
- A tabela a seguir descreve conversões entre o tipo retornado para o cliente e o tipo na associação. Para parâmetros de saída, se ICommandWithParameters:: SetParameterInfo tiver sido chamado e o tipo especificado em *pwszDataSourceType* não corresponder ao tipo real no servidor, uma conversão implícita será executada pelo servidor e o tipo retornado para o cliente corresponderá ao tipo especificado por meio de ICommandWithParameters:: SetParameterInfo. Isto pode levar a resultados de conversão inesperados quando as regras de conversão do servidor são diferentes daquelas descritas neste artigo. Por exemplo, quando é necessário fornecer uma data padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa 1/1/1900 em vez de 30/12/1899.  
+ A tabela a seguir descreve conversões entre o tipo retornado para o cliente e o tipo na associação. Para parâmetros de saída, se ICommandWithParameters::SetParameterInfo tiver sido chamado e o tipo especificado em *pwszDataSourceType* não corresponder ao tipo real no servidor, será executada uma conversão implícita pelo servidor, e o tipo retornado para o cliente corresponderá ao tipo especificado por meio de ICommandWithParameters::SetParameterInfo. Isto pode levar a resultados de conversão inesperados quando as regras de conversão do servidor são diferentes daquelas descritas neste artigo. Por exemplo, quando é necessário fornecer uma data padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa 1/1/1900 em vez de 30/12/1899.  
   
 |Para -><br /><br /> De|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|data|1, 7|OK|-|-|1|1, 3|1, 7|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Data|1, 7|OK|-|-|1|1, 3|1, 7|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Hora|5, 6, 7|-|9|OK|6|3, 6|5, 6|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Smalldatetime|7|8|9, 10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
-|DATETIME|5, 7|8|9, 10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
+|Datetime|5, 7|8|9, 10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
 |Datetime2|5, 7|8|9, 10|10|7|3|5, 7|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|OK|5, 7, 11|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|N/A|N/A|N/A|N/A|N/A|N/A|  
+|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|N/D|N/D|N/D|N/D|N/D|N/D|  
 |Sql_variant<br /><br /> (datetime)|7|8|9, 10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9, 10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (date)|1, 7|OK|2|2|1|1, 3|1, 7|-|OK(VT_BSTR)|OK|OK|4|4|  
@@ -50,7 +50,7 @@ ms.locfileid: "68015812"
 |Símbolo|Significado|  
 |------------|-------------|  
 |OK|Nenhuma conversão é necessária.|  
-|-|Não há suporte a nenhuma conversão. Se a associação for validada quando IAccessor:: createaccess for chamado, DBBINDSTATUS_UPSUPPORTEDCONVERSION será retornado em *rgStatus*. Quando a validação de acessador for adiada, DBSTATUS_E_BADACCESSOR será definido.|  
+|-|Não há suporte a nenhuma conversão. Se a associação for validada quando IAccessor::CreateAccessor for chamado, DBBINDSTATUS_UPSUPPORTEDCONVERSION será retornado em *rgStatus*. Quando a validação de acessador for adiada, DBSTATUS_E_BADACCESSOR será definido.|  
 |1|Os campos de hora são definidos como zero.|  
 |2|DBSTATUS_E_CANTCONVERTVALUE é definido.|  
 |3|O fuso horário é definido como zero.|  

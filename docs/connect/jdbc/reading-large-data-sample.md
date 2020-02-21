@@ -1,5 +1,5 @@
 ---
-title: Lendo exemplo de dados grandes | Microsoft Docs
+title: Ler o exemplo de dados grandes | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 260666488a21b02c0c318d3277b72fc576b0ab08
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027817"
 ---
 # <a name="reading-large-data-sample"></a>Lendo exemplo de dados grandes
@@ -31,7 +31,7 @@ O arquivo de código desta amostra chama-se ReadLargeData.java e pode ser encont
 
 ## <a name="requirements"></a>Requisitos
 
-Para executar este aplicativo de exemplo, você precisará ter acesso ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Você também precisará definir o classpath para incluir o arquivo mssql-jdbc.jar. Para obter mais informações sobre como definir o classpath, consulte [usando o driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
+Para executar este aplicativo de exemplo, você precisará ter acesso ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Você também precisará definir o classpath para incluir o arquivo mssql-jdbc.jar. Para obter mais informações sobre como definir o classpath, confira [Usar o JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
 > O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece os arquivos de biblioteca de classes mssql-jdbc a serem usados de acordo com suas configurações preferenciais do JRE (Java Runtime Environment). Para saber mais sobre qual arquivo JAR escolher, confira os [requisitos do sistema para o JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).

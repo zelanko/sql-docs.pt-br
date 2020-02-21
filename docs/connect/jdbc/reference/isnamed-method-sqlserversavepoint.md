@@ -1,5 +1,5 @@
 ---
-title: Método isnameed (SQLServerSavepoint) | Microsoft Docs
+title: Método isNamed (SQLServerSavepoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 66bcc445-9226-4419-b845-e0334875c80b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ccf64f404926f2fa2c27d6fd3d3d0f417d93619c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977548"
 ---
 # <a name="isnamed-method-sqlserversavepoint"></a>Método isNamed (SQLServerSavepoint)
@@ -35,7 +35,7 @@ public boolean isNamed()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **true** é o pontos de salvamento nomeados. Caso contrário, **false**.  
+ **true** se o savepoint foi nomeado. Caso contrário, **false**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-methods.md)   

@@ -16,10 +16,10 @@ ms.assetid: c9e7b904-2e98-459f-9173-382919d741e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 189b35b98c6b604563d056f286b9640ee47637a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980456"
 ---
 # <a name="getreference-method-sqlserverxadatasource"></a>Método getReference (SQLServerXADataSource)
@@ -35,10 +35,10 @@ public javax.naming.Reference getReference()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Um objeto de referência.  
+ Um objeto Reference.  
   
-## <a name="remarks"></a>Remarks  
- Esse método getReference é especificado pelo método getReference na interface javax. naming. Referenceble.  
+## <a name="remarks"></a>Comentários  
+ Esse método getReference é especificado pelo método getReference na interface javax.naming.Referenceable.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   

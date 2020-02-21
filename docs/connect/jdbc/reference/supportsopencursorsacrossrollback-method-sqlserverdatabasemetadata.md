@@ -16,10 +16,10 @@ ms.assetid: 4bc3e82b-a7e7-43a5-8938-6f29c7570163
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88a989e51a67a8364d2c61660e6146a5945a36c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969145"
 ---
 # <a name="supportsopencursorsacrossrollback-method-sqlserverdatabasemetadata"></a>Método supportsOpenCursorsAcrossRollback (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean supportsOpenCursorsAcrossRollback()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método supportsOpenCursorsAcrossRollback é especificado pelo método supportsOpenCursorsAcrossRollback na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ O método supportedOpenCursorsAcrossRollback é especificado pelo método supportedOpenCursorsAcrossRollback na interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

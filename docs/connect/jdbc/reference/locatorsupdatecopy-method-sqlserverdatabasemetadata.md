@@ -16,10 +16,10 @@ ms.assetid: f6ec8c1d-7ff8-4bc5-8bd3-0199a9294a6e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5e9e800c326f18b5247d1257431bb2243ad00c57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976838"
 ---
 # <a name="locatorsupdatecopy-method-sqlserverdatabasemetadata"></a>Método locatorsUpdateCopy (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean locatorsUpdateCopy()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **true** se forem feitas atualizações em uma cópia. **false** se as atualizações forem feitas diretamente.  
+ **true** se as atualizações forem feitas em uma cópia. **false** se as atualizações forem feitas diretamente.  
   
 ## <a name="exceptions"></a>Exceções  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- Esse método locatorsUpdateCopy é especificado pelo método locatorsUpdateCopy na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método locatorsUpdateCopy é especificado pelo método locatorsUpdateCopy na interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

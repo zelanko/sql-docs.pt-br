@@ -16,10 +16,10 @@ ms.assetid: ebfe236a-dc02-493e-a3ab-5353d3769e36
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdb1eb0053c9bb15c6d03013df13635e022a5072
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980758"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>Método getPrimaryKeys (SQLServerDatabaseMetaData)
@@ -36,7 +36,7 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
                                          java.lang.String table)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *cat*  
   
  Uma **String** que contém o nome do catálogo.  
@@ -55,19 +55,19 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getPrimaryKeys é especificado pelo método getPrimaryKeys na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ O método getPrimaryKeys é especificado pelo método getPrimaryKeys na interface java.sql.DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getPrimaryKeys conterá as seguintes informações:  
   
-|Nome|Tipo|Descrição|  
+|Nome|Type|Descrição|  
 |----------|----------|-----------------|  
-|TABLE_CAT|Cadeia de caracteres|O nome do banco de dados no qual a tabela especificada reside.|  
-|TABLE_SCHEM|Cadeia de caracteres|O esquema da tabela.|  
-|TABLE_NAME|Cadeia de caracteres|O nome da tabela.|  
-|COLUMN_NAME|Cadeia de caracteres|O nome da coluna.|  
+|TABLE_CAT|String|O nome do banco de dados no qual a tabela especificada reside.|  
+|TABLE_SCHEM|String|O esquema da tabela.|  
+|TABLE_NAME|String|O nome da tabela.|  
+|COLUMN_NAME|String|O nome da coluna.|  
 |KEY_SEQ|short|O número de sequência da coluna em uma chave primária de várias colunas.|  
-|PK_NAME|Cadeia de caracteres|O nome da chave primária.|  
+|PK_NAME|String|O nome da chave primária.|  
   
 > [!NOTE]  
 >  Para saber mais sobre os dados retornadas pelo método getPrimaryKeys, consulte "sp_pkeys (Transact-SQL)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

@@ -16,10 +16,10 @@ ms.assetid: 60248447-6908-4036-a779-a501453cd553
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c83fe6aa33d77db98fcdfc757b9bf219a45a9b15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976762"
 ---
 # <a name="next-method-sqlserverresultset"></a>Método next (SQLServerResultSet)
@@ -35,12 +35,12 @@ public boolean next()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **true** se a nova linha atual for válida. **false** se não houver mais linhas para processar.  
+ **true** se a nova linha atual for válida. **false** se não houver mais linhas a processar.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método next é especificado pelo método next na interface java.sql.ResultSet.  
   
  Um cursor de conjunto de resultados é inicialmente posicionado antes da primeira linha. A primeira chamada ao método next torna a primeira linha a linha atual, a segunda chamada torna a segunda linha a linha atual, e assim por diante.  

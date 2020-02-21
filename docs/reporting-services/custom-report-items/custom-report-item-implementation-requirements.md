@@ -11,21 +11,21 @@ ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e25938d690d6e1046d1d0e75ae5a4952b05d4615
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594517"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>Requisitos de implementação de item de relatório personalizado
   Este tópico descreverá os pré-requisitos para desenvolver e implantar itens de relatório personalizados.  
   
 ## <a name="development-and-deployment-requirements"></a>Desenvolvimento e implantação de requisitos  
- O desenvolvimento de um item de relatório personalizado para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requer o seguinte:  
+ O desenvolvimento de um item de relatório personalizado para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exige o seguinte:  
   
 -   Acesso administrativo a um servidor que executa o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
--   [!INCLUDE[vsprvsext](../../includes/vsprvsext-md.md)] ou superior com o SDK (Software Development Kit) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instalado.  
+-   [!INCLUDE[vsprvsext](../../includes/vsprvsext-md.md)] ou posterior com o SDK (Software Development Kit) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instalado.  
   
 -   Acesso à documentação do SDK do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73594517"
 ## <a name="see-also"></a>Consulte Também  
  [Criando um componente de item de relatório personalizado em tempo de execução](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Criando um componente de item de relatório personalizado em tempo de design](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [Como implantar um item de relatório personalizado](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)   
+ [Como: implantar um item de relatório personalizado](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [Bibliotecas de classes de itens de relatório personalizados](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
   
   

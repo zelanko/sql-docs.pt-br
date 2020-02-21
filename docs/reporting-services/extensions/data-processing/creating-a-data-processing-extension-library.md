@@ -13,10 +13,10 @@ ms.assetid: 82f4b71b-dd39-467d-8d8c-6771eb2b12de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7e3c3f4a30b828b889ebfe61617460ff58962fdc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194076"
 ---
 # <a name="creating-a-data-processing-extension-library"></a>Criando uma biblioteca de extensões de processamento de dados
@@ -49,7 +49,7 @@ namespace CompanyName.ExtensionName
 csc /t:library /out:CompanyName.ExtensionName.dll *.cs /r:System.dll /r:Microsoft.ReportingServices.Interfaces.dll  
 ```  
   
- O exemplo de código a seguir mostra o comando que será usado para arquivos do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] com a extensão .vb.  
+ O exemplo de código a seguir mostra o comando que seria usado para arquivos do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] com a extensão .vb.  
   
 ```vb  
 vbc /t:library /out:CompanyName.ExtensionName.dll *.vb /r:System.dll /r:Microsoft.ReportingServices.Interfaces.dll  

@@ -11,15 +11,15 @@ ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 50347f9a975aeb4856a5ee140697f7b13de3e3b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140482"
 ---
 # <a name="create-the-rsexecrole"></a>Criar o RSExecRole
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa uma função de banco de dados predefinida chamada **RSExecRole** para conceder permissões de servidor de relatório ao banco de dados de servidor de relatório. A função **RSExecRole** é criada automaticamente com o banco de dados de servidor de relatório. Como regra geral, você nunca deve modificá-la ou atribuir outros usuários à função. No entanto, quando você move um banco de dados de servidor de relatório para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] novo ou diferente, deverá recriar a função nos bancos de dados Mestre e MSDB do sistema.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa uma função de banco de dados predefinida chamada **RSExecRole** para conceder permissões de servidor de relatório ao banco de dados de servidor de relatório. A função **RSExecRole** é criada automaticamente com o banco de dados de servidor de relatório. Como regra geral, você nunca deve modificá-la ou atribuir outros usuários à função. No entanto, quando você move um banco de dados de servidor de relatório para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] novo ou diferente, deve recriar a função nos bancos de dados Mestre e MSDB do sistema.  
   
  Usando as instruções a seguir, você executará estas etapas:  
   
@@ -30,7 +30,7 @@ ms.locfileid: "67140482"
 > [!NOTE]  
 > As instruções deste tópico são voltadas para os usuários que não desejam executar um script ou gravar um código WMI para provisionar o banco de dados de servidor de relatório. Se você gerenciar uma grande implantação e mover bancos de dados periodicamente, grave um script para automatizar estas etapas. Para obter mais informações, consulte [Acessar o provedor WMI do Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
-## <a name="before-you-start"></a>Antes de iniciar  
+## <a name="before-you-start"></a>Antes de começar  
   
 -   Faça backup das chaves de criptografia de forma que você possa restaurá-las depois que o banco de dados for movido. Essa etapa não afeta diretamente a possibilidade de criar e provisionar o **RSExecRole**, mas é necessário ter um backup das chaves para verificar seu trabalho. Para saber mais, confira [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
@@ -59,13 +59,13 @@ ms.locfileid: "67140482"
   
 6.  Abra **Funções**.  
   
-7.  Clique com o botão direito do mouse em **Funções de Banco de Dados**e selecione **Nova Função de Banco de Dados**. O **função de banco de dados - novo** página será exibida.  
+7.  Clique com o botão direito do mouse em **Funções de Banco de Dados**e selecione **Nova Função de Banco de Dados**. A página **Função de Banco de Dados – Novo** é exibida.  
   
 8.  Em **Nome da função**, digite **RSExecRole**.  
   
 9. Em **Proprietário**, digite **dbo**.  
   
-10. Página selecionar **protegíveis**.  
+10. Selecione a página **Protegíveis**.  
   
 11. Clique em **Pesquisar**. A caixa de diálogo **Adicionar Objetos** é exibida. A opção **Objetos Específicos** é selecionada por padrão.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "67140482"
   
 18. Clique em **OK**e em **OK** novamente.  
   
-19. No **Execute** linha, o **Grant** coluna, marque a caixa de seleção.  
+19. Na linha **Executar**, na coluna **Conceder**, selecione a caixa de seleção.  
   
 20. Repita essas etapas para cada um dos procedimentos armazenados restantes. O**RSExecRole** deve receber permissões Executar para todos os três procedimentos armazenados.  
 
@@ -116,7 +116,7 @@ ms.locfileid: "67140482"
   
 7.  Em Proprietário, digite **dbo**.  
   
-8.  Selecione o **protegíveis** página.  
+8.  Selecione a página **Protegíveis**.  
   
 9.  Clique em **Pesquisar**. A caixa de diálogo **Adicionar Objetos** é exibida. A opção **Especificar Objetos** é selecionada por padrão.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "67140482"
   
 19. Repita essas etapas para cada um dos procedimentos armazenados restantes. O RSExecRole deve obter permissões Executar para os dez procedimentos armazenados.  
   
-20. Ainda na **protegíveis** , clique em **pesquisa** novamente. A caixa de diálogo **Adicionar Objetos** é exibida. A opção **Especificar Objetos** é selecionada por padrão.  
+20. Ainda na página **Protegíveis**, clique em **Pesquisar** novamente. A caixa de diálogo **Adicionar Objetos** é exibida. A opção **Especificar Objetos** é selecionada por padrão.  
   
 21. Clique em **OK**.  
   
@@ -210,9 +210,9 @@ ms.locfileid: "67140482"
   
 5.  Insira o nome do servidor do Mecanismo de Banco de Dados. Se você anexou os bancos de dados do servidor de relatório a uma instância nomeada, digite o nome da instância neste formato: \<servername>\\<instancename\>.  
   
-6.  Clique em **Testar Conexão**. Você deve ver uma caixa de diálogo que afirma, "Êxito de Conexão de teste".
+6.  Clique em **Testar Conexão**. Você deve ver uma caixa de diálogo que diz "Teste de conexão bem-sucedido".
   
-7.  Selecione **Okey** para fechar a caixa de diálogo e, em seguida, selecione **próxima**.  
+7.  Clique em **Ok** para fechar a caixa de diálogo e selecione **Avançar**.  
   
 8.  Em Banco de Dados, selecione o banco de dados de servidor de relatório.  
   
@@ -228,7 +228,7 @@ ms.locfileid: "67140482"
   
 14. Clique em **URL do Portal da Web**.  
   
-15. Clique no link para abrir o portal da web. Você deve ver os itens de servidor de relatório do banco de dados de servidor de relatório.  
+15. Clique no link para abrir o portal da Web. Você deve ver os itens de servidor de relatório do banco de dados de servidor de relatório.  
 
 ## <a name="creating-the-rsexecrole-role-and-permissions-using-t-sql"></a>Criando as permissões e a função RSExecRole usando o T-SQL
 A função também pode ser criada, e as permissões aplicáveis concedidas, nos bancos de dados do sistema usando o seguinte script T-SQL:
@@ -269,4 +269,4 @@ GO
 [Criar um banco de dados de servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Fazer backup e restaurar as chaves de criptografia do Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

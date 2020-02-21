@@ -1,5 +1,5 @@
 ---
-title: Método setNCharacterStream para objeto leitor | Microsoft Docs
+title: Método setNCharacterStream para o objeto Reader | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 77905630-0135-46ad-a419-215e648996e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cdefec49aebd2c5042d9fb8f99486a0ee8d3811e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973858"
 ---
 # <a name="setncharacterstream-method-sqlservercallablestatement"></a>Método setNCharacterStream (SQLServerCallableStatement)

@@ -16,10 +16,10 @@ ms.assetid: 5ab385c2-e18c-4b75-ac2d-2402af5c52a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f56893764392236d563fa2b9a236f55e67e13595
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983248"
 ---
 # <a name="getfetchdirection-method-sqlserverresultset"></a>Método getFetchDirection (SQLServerResultSet)
@@ -40,8 +40,8 @@ public int getFetchDirection()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getFetchDirection é especificado pelo método getFetchDirection na interface java. Sql. ResultSet.  
+## <a name="remarks"></a>Comentários  
+ Esse método getFetchDirection é especificado pelo método getFetchDirection na interface java.sql.ResultSet.  
   
  Esse método retornará FETCH_FORWARD para cursores de somente encaminhamento, a última configuração feita por uma chamada ao método [setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverresultset.md) para outros tipos de cursor e FETCH_UNKNOWN para esses tipos de cursor se o método setFetchDirection nunca foi chamado.  
   

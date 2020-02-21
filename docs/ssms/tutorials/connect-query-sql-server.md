@@ -1,22 +1,22 @@
 ---
-title: conectar-se a uma instância do SQL Server e consultá-la usando o SSMS (SQL Server Management Studio)
+title: Conectar-se a uma instância do SQL Server e consultá-la
 description: Um tutorial para conectar-se a uma instância do SQL Server usando o SQL Server Management Studio e executando consultas T-SQL básicas.
 keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: sstein
+author: markingmyname
+ms.author: maghan
+ms.reviewer: sstein; maghan
 ms.topic: quickstart
 ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: c1d13b939dc0846c88e9bd05a1384d259c3f911c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708338"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76162645"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Tutorial: conectar-se a uma instância do SQL Server e consultá-la usando o SSMS (SQL Server Management Studio)
 
@@ -35,7 +35,7 @@ Este tutorial ensina a usar o SSMS (SQL Server Management Studio) para conectar-
 
 Para concluir este tutorial, você precisa de acesso ao SQL Server Management Studio e a uma instância do SQL Server. 
 
-* Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Se você não tiver acesso a uma instância do SQL Server, selecione sua plataforma nos links a seguir. Se você escolher Autenticação do SQL, use suas credenciais de logon do SQL Server.
 
@@ -109,7 +109,7 @@ Nesta seção, você criará uma tabela no banco de dados TutorialDB recém-cria
    ![Alterar banco de dados](media/connect-query-sql-server/changedb.png)
 
 2. Cole o seguinte snippet de código T-SQL na janela de consulta, selecione-o e, em seguida, escolha **Executar** (ou F5 no teclado).  
-   Você pode substituir o texto existente na janela de consulta ou acrescentá-lo no final. Para executar tudo na janela de consulta, selecione **Executar**. Se você acrescentou o texto, o ideal será executar apenas a parte do texto; portanto, realce essa parte e, em seguida, selecione **Executar**.  
+   Você pode substituir o texto existente na janela de consulta ou acrescentá-lo no final. Para executar tudo na janela de consulta, selecione **Executar**. Se você acrescentou o texto, o ideal será executar apenas a parte do texto; portanto, realce essa parte e, em seguida, escolha **Executar**.  
   
    ```sql
    USE [TutorialDB]
@@ -195,11 +195,16 @@ Você pode encontrar informações sobre as propriedades de conexão nos resulta
     > [!NOTE]
     > Esta ação altera apenas o servidor ao qual a janela de consulta está conectada, não o servidor que o Pesquisador de Objetos usa.
 
+## <a name="azure-data-studio"></a>Azure Data Studio
+
+Você também pode se conectar e consultar o [SQL Server](../../azure-data-studio/quickstart-sql-server.md), um [Banco de Dados SQL do Azure](../../azure-data-studio/quickstart-sql-database.md) e [Data warehouses SQL do Azure](../../azure-data-studio/quickstart-sql-dw.md) usando o Azure Data Studio.
+
 ## <a name="next-steps"></a>Próximas etapas
 
-O melhor modo de se familiarizar com o SSMS é praticando. Esses artigos ajudam nos diversos recursos disponíveis no SSMS.  Estes artigos ensinam a administrar os componentes do SSMS e a encontrar os recursos que você usa com regularidade.
+O melhor modo de se familiarizar com o SSMS é praticando. Esses artigos ajudam nos diversos recursos disponíveis no SSMS. Estes artigos ensinam a administrar os componentes do SSMS e a encontrar os recursos que você usa com regularidade.
 
 * [Script](scripting-ssms.md)
 * [Usando modelos no SSMS](../template/templates-ssms.md)
 * [Configuração do SSMS](ssms-configuration.md)
 * [Mais dicas e truques para usar o SSMS](ssms-tricks.md)
+* [Azure Data Studio](../../azure-data-studio/download.md)

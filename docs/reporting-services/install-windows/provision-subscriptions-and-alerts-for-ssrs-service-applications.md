@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651941"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Provisionar Assinaturas e Alertas para aplicativos de serviço SSRS
@@ -28,7 +28,7 @@ ms.locfileid: "62651941"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
   
- ![Permissões do SQL Agent para BDs do Aplicativo de Serviço](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "Permissões do SQL Agent para BDs do Aplicativo de Serviço")  
+ ![Permissões do SQL Agent para bancos de dados de aplicativo de serviço](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "Permissões do SQL Agent para bancos de dados de aplicativo de serviço")  
   
 ||Descrição|  
 |------|-----------------|  
@@ -55,7 +55,7 @@ ms.locfileid: "62651941"
   
 4.  Se o administrador do SharePoint tiver privilégios suficientes ao banco de dados Mestre e aos bancos de dados de aplicativo de serviço, digite as credenciais.  
   
-5.  Clique no botão **OK** .  
+5.  Clique no botão **OK**.  
   
 ##  <a name="bkmk_download"></a> Para baixar o script Transact-SQL  
   

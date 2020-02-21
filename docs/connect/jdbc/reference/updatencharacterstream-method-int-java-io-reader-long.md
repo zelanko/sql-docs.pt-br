@@ -11,10 +11,10 @@ ms.assetid: aeec0a56-038e-45b1-98c8-b1046ebd25db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 03d1ea61a0f14baed7e83e27fbc585c96ee0e2ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998761"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader-long"></a>Método updateNCharacterStream (int, java.io.Reader, long)
@@ -31,14 +31,14 @@ public void updateNCharacterStream(int columnIndex,
                                     long length)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnIndex*  
   
  Um **int** que indica o índice de coluna.  
   
  *x*  
   
- Um objeto leitor.  
+ Um objeto Reader.  
   
  *length*  
   
@@ -47,10 +47,10 @@ public void updateNCharacterStream(int columnIndex,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método updateNCharacterStream é especificado pelo método updateNCharacterStream na interface java. Sql. ResultSet.  
+## <a name="remarks"></a>Comentários  
+ Esse método updateNCharacterStream é especificado pelo método updateNCharacterStream na interface java.sql.ResultSet.  
   
- Esse método passa caracteres Unicode de um objeto leitor para as colunas **nchar**, **nvarchar (max)** , **ntext**e **XML** selecionadas. O uso em outras colunas de tipo de dados lançará uma exceção.  
+ Esse método passa caracteres Unicode de um objeto Reader para as colunas **nchar**, **nvarchar(max)** , **ntext** e **xml** selecionadas. O uso em outras colunas de tipo de dados lançará uma exceção.  
   
  Se o comprimento do fluxo for diferente do especificado no parâmetro *length*, o driver JDBC lançará uma exceção quando a linha for atualizada ou inserida.  
   

@@ -16,10 +16,10 @@ ms.assetid: 548bd099-019f-487c-87cc-6f0b665f164d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62677c494f4f613846fb6ea621fb143f27098267
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984102"
 ---
 # <a name="getdatabaseproductname-method-sqlserverdatabasemetadata"></a>Método getDatabaseProductName (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public java.lang.String getDatabaseProductName()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getDatabaseProductName é especificado pelo método getDatabaseProductName na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método getDatabaseProductName é especificado pelo método getDatabaseProductName na interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

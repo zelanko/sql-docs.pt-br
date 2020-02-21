@@ -1,6 +1,6 @@
 ---
-title: Utilitário sqlmaint | Microsoft Docs
-ms.custom: ''
+title: utilitário sqlmaint
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ecc0a38acd6ea00656e67e9f582a55c05ca15583
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: c0f87bca3404505e82c903bd868e9b5c2da00bed
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986288"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306968"
 ---
 # <a name="sqlmaint-utility"></a>utilitário sqlmaint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -206,7 +206,7 @@ dbname_log_yyyymmddhhmm.BAK
  Para backups em disco, especifica que um subdiretório deverá ser criado no diretório [*backup_path*] ou no diretório de backup padrão se o **-UseDefDir** também for especificado. O nome do subdiretório é gerado com base no nome do banco de dados especificado em **-D**. **-CrBkSubDir** oferece um modo fácil de colocar todos os backups de bancos de dados diferentes em subdiretórios separados, sem a necessidade de alterar o parâmetro *backup_path* .  
   
  **-UseDefDir**  
- Para backups de disco, especifica que o arquivo de backup seja criado no diretório padrão de backup. **UseDefDir** substituirá *backup_path* se ambos forem especificados. Com uma instalação padrão do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o diretório padrão de backup é C:\Arquivos de Programas\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup.  
+ Para backups de disco, especifica que o arquivo de backup seja criado no diretório padrão de backup. **UseDefDir** substituirá *backup_path* se ambos forem especificados. Com uma instalação padrão do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o diretório padrão de backup é C:\Arquivos de Programas\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup.  
   
  **TAPE**  
  Especifica que a mídia de backup é fita.  
@@ -228,7 +228,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  Se apenas o *number* for especificado, a parte de data padrão será **weeks**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O utilitário **sqlmaint** executa operações de manutenção em um ou mais bancos de dados. Se **-D** for especificado, as operações especificadas nas demais opções serão executadas apenas no banco de dados especificado. Se **-PlanName** ou **-PlanID** forem especificados, a única informação que **sqlmaint** recuperará do plano de manutenção especificado será a lista de bancos de dados no plano. Todas as operações especificadas nos demais parâmetros do **sqlmaint** são aplicadas a cada banco de dados na lista obtida do plano. O utilitário **sqlmaint** não aplica atividades de manutenção definidas no próprio plano.  
   
  O utilitário **sqlmaint** retorna 0 se for executado com êxito ou 1 se apresentar falha. A falha é informada:  
@@ -246,7 +246,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-performing-dbcc-checks-on-a-database"></a>A. Realização de verificações DBCC em um banco de dados  
+### <a name="a-performing-dbcc-checks-on-a-database"></a>a. Realização de verificações DBCC em um banco de dados  
   
 ```  
 sqlmaint -S MyServer -D AdventureWorks2012 -CkDB -CkAl -CkCat -Rpt C:\MyReports\AdvWks_chk.rpt  

@@ -16,10 +16,10 @@ ms.assetid: b50a920c-3839-40f0-9411-c60bbc2a9f34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32a541ae426a450c23af98cf47fba3f3fff85f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975255"
 ---
 # <a name="setbigdecimal-method-sqlservercallablestatement"></a>Método setBigDecimal (SQLServerCallableStatement)
@@ -35,7 +35,7 @@ public void setBigDecimal(java.lang.String sCol,
                           java.math.BigDecimal bd)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *sCol*  
   
  Uma **String** que contém o nome do parâmetro.  
@@ -47,8 +47,8 @@ public void setBigDecimal(java.lang.String sCol,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método setBigDecimal é especificado pelo método setBigDecimal na interface java. Sql. CallableStatement.  
+## <a name="remarks"></a>Comentários  
+ Esse método setBigDecimal é especificado pelo método setBigDecimal na interface do java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

@@ -6,15 +6,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-ms.reviewer: MightyPen
+ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: c06f6e9f95af02ba6240f9f71ac6a92c25bec755
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712926"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911240"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Atributos e palavras-chave da cadeia de conexão e DSN
 
@@ -22,7 +22,7 @@ Esta página lista as palavras-chave para cadeias de conexão e DSNs e os atribu
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>Atributos de conexão e palavras-chave de cadeia de conexão/DSN com suporte
 
-A tabela a seguir lista as palavras-chave e os atributos disponíveis para cada plataforma (L: Linux; M: Mac; W: Windows). Clique na palavra-chave ou no atributo para obter mais detalhes.
+A tabela a seguir lista as palavras-chave disponíveis e os atributos para cada plataforma (L: Linux ; M: Mac ; W: Windows). Clique na palavra-chave ou no atributo para obter mais detalhes.
 
 | Palavras-chave da cadeia de conexão/DSN | Atributo de conexão | Plataforma |
 |-|-|-|
@@ -35,18 +35,18 @@ A tabela a seguir lista as palavras-chave e os atributos disponíveis para cada 
 | [Autenticação](../../connect/odbc/dsn-connection-string-attribute.md#authentication---sql_copt_ss_authentication) | [SQL_COPT_SS_AUTHENTICATION](../../connect/odbc/dsn-connection-string-attribute.md#authentication---sql_copt_ss_authentication) | LMW |
 | [AutoTranslate](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_TRANSLATE](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstranslate) | LMW |
 | [ColumnEncryption](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sql_copt_ss_column_encryption) | [SQL_COPT_SS_COLUMN_ENCRYPTION](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sql_copt_ss_column_encryption) | LMW |
-| [ConnectRetryCount](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_COUNT](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | L |
-| [ConnectRetryInterval](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_INTERVAL](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | L |
+| [ConnectRetryCount](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_COUNT](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
+| [ConnectRetryInterval](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_INTERVAL](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
 | [Backup de banco de dados](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
 | [Descrição](../../connect/odbc/dsn-connection-string-attribute.md#description) | | LMW |
 | [Driver](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [DSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Encrypt](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_ENCRYPT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssencrypt) | LMW |
-| [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | L |
-| [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | L |
+| [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
+| [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | W |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (somente v 17.4 +, DSN)| | LMW |
-| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v 17.4 +, somente DSN) | | LMW |
+| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+, somente DSN)| | LMW |
+| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+, somente DSN) | | LMW |
 | [KeystoreAuthentication](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystorePrincipalId](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystoreSecret](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
@@ -56,16 +56,16 @@ A tabela a seguir lista as palavras-chave e os atributos disponíveis para cada 
 | [Net](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Rede](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [PWD](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [QueryLog_On](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_QUERY](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfquery) | L |
-| [QueryLogFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_QUERY_LOG](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfquerylog) | L |
-| [QueryLogTIme](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_QUERY_INTERVAL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfqueryinterval) | L |
+| [QueryLog_On](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_QUERY](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfquery) | W |
+| [QueryLogFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_QUERY_LOG](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfquerylog) | W |
+| [QueryLogTIme](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_QUERY_INTERVAL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfqueryinterval) | W |
 | [QuotedId](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_QUOTED_IDENT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssquotedident) | LMW |
 | [Regional](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [SaveFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Servidor](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [ServerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_SERVER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
-| [StatsLog_On](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdata) | L |
-| [StatsLogFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_DATA_LOG](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdatalog) | L |
+| [StatsLog_On](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdata) | W |
+| [StatsLogFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_DATA_LOG](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdatalog) | W |
 | [TransparentNetworkIPResolution](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sql_copt_ss_tnir) | [SQL_COPT_SS_TNIR](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sql_copt_ss_tnir) | LMW |
 | [Trusted_Connection](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_INTEGRATED_SECURITY](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssintegratedsecurity) | LMW |
 | [TrustServerCertificate](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_TRUST_SERVER_CERTIFICATE](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstrustservercertificate) | LMW |
@@ -73,11 +73,11 @@ A tabela a seguir lista as palavras-chave e os atributos disponíveis para cada 
 | [UseFMTONLY](../../connect/odbc/dsn-connection-string-attribute.md#usefmtonly) | | LMW |
 | [WSID](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | | [SQL_ATTR_ACCESS_MODE](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_ACCESS_MODE) | LMW |
-| | [SQL_ATTR_ASYNC_DBC_EVENT](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | L |
-| | [SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | L |
-| | [SQL_ATTR_ASYNC_DBC_PCALLBACK](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | L |
-| | [SQL_ATTR_ASYNC_DBC_PCONTEXT](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | L |
-| | [SQL_ATTR_ASYNC_ENABLE](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | L |
+| | [SQL_ATTR_ASYNC_DBC_EVENT](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | W |
+| | [SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | W |
+| | [SQL_ATTR_ASYNC_DBC_PCALLBACK](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | W |
+| | [SQL_ATTR_ASYNC_DBC_PCONTEXT](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | W |
+| | [SQL_ATTR_ASYNC_ENABLE](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | W |
 | | [SQL_ATTR_AUTO_IPD](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
 | | [SQL_ATTR_AUTOCOMMIT](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_AUTOCOMMIT) | LMW |
 | | [SQL_ATTR_CONNECTION_DEAD](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
@@ -95,7 +95,7 @@ A tabela a seguir lista as palavras-chave e os atributos disponíveis para cada 
 | | [SQL_ATTR_TRANSLATE_OPTION](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_TRANSLATE_OPTION) | LMW |
 | | [SQL_ATTR_TXN_ISOLATION](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_TXN_ISOLATION) | LMW |
 | | [SQL_COPT_SS_ACCESS_TOKEN](dsn-connection-string-attribute.md#sql_copt_ss_access_token) | LMW |
-| | [SQL_COPT_SS_ANSI_OEM](dsn-connection-string-attribute.md#sql_copt_ss_ansi_oem)| L |
+| | [SQL_COPT_SS_ANSI_OEM](dsn-connection-string-attribute.md#sql_copt_ss_ansi_oem)| W |
 | | [SQL_COPT_SS_BCP](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbcp) | LMW |
 | | [SQL_COPT_SS_BROWSE_CACHE_DATA](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) | LMW |
 | | [SQL_COPT_SS_BROWSE_CONNECT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbrowseconnect) | LMW |
@@ -105,19 +105,20 @@ A tabela a seguir lista as palavras-chave e os atributos disponíveis para cada 
 | | [SQL_COPT_SS_CLIENT_CONNECTION_ID](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) | LMW |
 | | [SQL_COPT_SS_CONCAT_NULL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconcatnull) | LMW |
 | | [SQL_COPT_SS_CONNECTION_DEAD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconnectiondead) | LMW |
-| | [SQL_COPT_SS_ENLIST_IN_DTC](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistindtc) | L |
+| | [SQL_COPT_SS_ENLIST_IN_DTC](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistindtc) | W |
 | | [SQL_COPT_SS_ENLIST_IN_XA](dsn-connection-string-attribute.md#sql_copt_ss_enlist_in_xa) | LMW |
 | | [SQL_COPT_SS_FALLBACK_CONNECT](dsn-connection-string-attribute.md#sql_copt_ss_fallback_connect) | LMW |
 | | [SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
 | | [SQL_COPT_SS_MUTUALLY_AUTHENTICATED](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
 | | [SQL_COPT_SS_OLDPWD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssoldpwd) | LMW |
-| | [SQL_COPT_SS_PERF_DATA_LOG_NOW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdatalognow) | L |
+| | [SQL_COPT_SS_PERF_DATA_LOG_NOW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdatalognow) | W |
 | | [SQL_COPT_SS_PRESERVE_CURSORS](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsspreservecursors) | LMW |
+| | [SQL_COPT_SS_SPID](../../connect/odbc/dsn-connection-string-attribute.md#sql_copt_ss_spid) (v17.5+) | LMW |
 | | [SQL_COPT_SS_TXN_ISOLATION](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstxnisolation) | LMW |
 | | [SQL_COPT_SS_USER_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssuserdata) | LMW |
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
 | [ClientCertificate](../../connect/odbc/dsn-connection-string-attribute.md#clientcertificate) | | LMW | 
-| [Clientkey vazio](../../connect/odbc/dsn-connection-string-attribute.md#clientkey) | | LMW | 
+| [ClientKey](../../connect/odbc/dsn-connection-string-attribute.md#clientkey) | | LMW | 
 
 
 Aqui estão algumas palavras-chave de cadeia de conexão e os atributos de conexão que não estão documentados em [Usando palavras-chave de cadeia de conexão com SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [Função SQLSetConnectAttr](../../odbc/reference/syntax/sqlsetconnectattr-function.md).
@@ -171,7 +172,7 @@ Controla a criptografia de coluna transparente (Always Encrypted). Veja [Usando 
 
 | Valor de Palavra-Chave | Valor do atributo | Descrição |
 |-|-|-|
-|Habilitado|SQL_CE_ENABLED|Habilita o Always Encrypted.|
+|habilitado|SQL_CE_ENABLED|Habilita o Always Encrypted.|
 |Desabilitado|SQL_CE_ENABLED|(Padrão) Desabilita o Always Encrypted.|
 | |SQL_CE_RESULTSETONLY|Habilite somente descriptografia (resultados e valores retornados).|
 
@@ -181,8 +182,8 @@ Controla o recurso de Resolução de IP de Rede Transparente, que interage com M
 
 | Valor de Palavra-Chave | Valor do atributo| Descrição |
 |-|-|-|
-|Sim|SQL_IS_ON|(Padrão) Habilita a resolução IP de rede transparente.|
-|Não|SQL_IS_OFF|Desativa a resolução IP de rede transparente.|
+|habilitado|SQL_IS_ON|(Padrão) Habilita a resolução IP de rede transparente.|
+|Desabilitado|SQL_IS_OFF|Desativa a resolução IP de rede transparente.|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
 
@@ -200,22 +201,22 @@ Especifica o certificado a ser usado para autenticação. As opções são:
 
 | Valor de Opção | Descrição |
 |-|-|
-| sha1:`<hash_value>` | O driver ODBC usa hash SHA1 para localizar um certificado no repositório de certificados do Windows |
-| assunto:`<subject>` | O driver ODBC usa o assunto para localizar um certificado no repositório de certificados do Windows |
-| arquivo: `<file_location>` [, senha: `<password>`] | O driver ODBC usa um arquivo de certificado. |
+| sha1:`<hash_value>` | O driver ODBC usa o hash SHA1 para localizar um certificado no Repositório de Certificados do Windows |
+| assunto:`<subject>` | O driver ODBC usa o assunto para localizar um certificado no Repositório de Certificados do Windows |
+| arquivo:`<file_location>`[,senha:`<password>`] | O driver ODBC usa um arquivo de certificado. |
 
-Caso o certificado esteja no formato PFX e a chave privada dentro do certificado PFX seja protegida por senha, a palavra-chave password será necessária. Para certificados em formatos PEM e DER, o atributo Clientkey vazio é necessário
+Caso o certificado esteja no formato PFX e a chave privada dentro do certificado PFX esteja protegida por senha, a palavra-chave da senha será exigida. Para certificados nos formatos PEM e DER, o atributo ClientKey é exigido
 
 
-## <a name="clientkey"></a>Clientkey vazio
+## <a name="clientkey"></a>ClientKey
 
-Especifica um local de arquivo da chave privada para certificados PEM ou DER especificados pelo atributo ClientCertificate. Formato: 
+Especifica um local do arquivo da chave privada para certificados PEM ou DER especificados pelo atributo ClientCertificate. Formato: 
 
 | Valor de Opção | Descrição |
 |-|-|
-| arquivo: `<file_location>` [, senha: `<password>`] | Especifica o local do arquivo de chave privada. |
+| arquivo:`<file_location>`[,senha:`<password>`] | Especifica o local do arquivo de chave privada. |
 
-Caso o arquivo de chave privada seja protegido por senha, a palavra-chave password será necessária. Se a senha contiver caracteres ",", um caractere "," extra será adicionado imediatamente após cada um. Por exemplo, se a senha for "a, b, c", a senha de escape presente na cadeia de conexão será "a,, b,, c". 
+Caso o arquivo de chave privada seja protegido por senha, a palavra-chave da senha será exigida. Se a senha contiver caracteres ",", um caractere "," extra será adicionado imediatamente após cada um deles. Por exemplo, se a senha for "a,b,c", a senha de escape presente na cadeia de conexão será "a,,b,,c". 
     
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
@@ -224,7 +225,7 @@ Permite o uso de um token de acesso do Azure Active Directory para autenticaçã
 
 | Valor do atributo | Descrição |
 |-|-|
-| NULL | (Padrão) Nenhum token de acesso é fornecido. |
+| NULO | (Padrão) Nenhum token de acesso é fornecido. |
 | ACCESSTOKEN* | Ponteiro para um token de acesso. |
 
 ### <a name="sql_copt_ss_cekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
@@ -261,3 +262,11 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 |FALSE|Associa a transação à conexão ODBC.|Windows|
 
  Veja [Usando transações XA](../../connect/odbc/use-xa-with-dtc.md) para obter mais informações sobre transações XA.
+
+### <a name="sql_copt_ss_spid"></a>SQL_COPT_SS_SPID
+
+Recupera a ID do processo do servidor da conexão. Isso equivale à variável T-SQL [@@SPID](../../t-sql/functions/spid-transact-sql.md), exceto pelo fato de que ela não incorre em uma viagem de ida e volta adicional ao servidor.
+
+| Valor do atributo | Descrição |
+|-|-|
+| DWORD | SPID |

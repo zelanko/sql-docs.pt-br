@@ -1,5 +1,5 @@
 ---
-title: Método getworkstationid (SQLServerDataSource) | Microsoft Docs
+title: Método getWorkstationID (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f6a701de-a8fa-4668-9310-99a8c6e32c88
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98cde4953d60f13d1768b06dbfab9ada6ea8af55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978052"
 ---
 # <a name="getworkstationid-method-sqlserverdatasource"></a>Método getWorkstationID (SQLServerDataSource)
@@ -37,8 +37,8 @@ public java.lang.String getWorkstationID()
 ## <a name="return-value"></a>Valor retornado  
  Uma **String** que contém o nome do computador cliente.  
   
-## <a name="remarks"></a>Remarks  
- A workstationID é o nome do computador cliente ou da estação de trabalho. Se a propriedade workstationID não for definida, o valor padrão será construído chamando o método InetAddress. getLocalHost (). GetHostName (). Se GetHostName retornar um valor em branco, o método getHostAddress (). toString () será chamado.  
+## <a name="remarks"></a>Comentários  
+ A workstationID é o nome do computador cliente ou da estação de trabalho. Se a propriedade workstationID não estiver configurada, o valor padrão será construído chamando o método InetAddress.getLocalHost ().GetHostName(). Se GetHostName retornar um valor em branco, o método getHostAddress().toString() será chamado.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

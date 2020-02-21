@@ -1,5 +1,5 @@
 ---
-title: Método GetArray (int) | Microsoft Docs
+title: Método getArray (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5b839d3f-5a4e-43da-b93c-dc9e0f6d4b3b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27e9502c707f35ae0406b3cf99843a3e22ea1008
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954374"
 ---
 # <a name="getarray-method-int"></a>Método getArray (int)
@@ -34,7 +34,7 @@ ms.locfileid: "67954374"
 public java.sql.Array getArray(int i)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *i*  
   
  Um **int** que indica o índice do parâmetro.  
@@ -45,7 +45,7 @@ public java.sql.Array getArray(int i)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getArray é especificado pelo método getArray na interface java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte Também  

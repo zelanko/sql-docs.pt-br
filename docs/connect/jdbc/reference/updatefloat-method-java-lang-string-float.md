@@ -1,5 +1,5 @@
 ---
-title: Método updateFloat (Java. lang. String, float) | Microsoft Docs
+title: Método updateFloat (java.lang.String, float) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 19a6164f-f560-4304-8466-e55f0667a3d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74df5537849daddf09d9edbb10f1baa4d8808e41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998948"
 ---
 # <a name="updatefloat-method-javalangstring-float"></a>Método updateFloat (java.lang.String, float)
@@ -35,19 +35,19 @@ public void updateFloat(java.lang.String columnName,
                         float x)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
   
  *x*  
   
- Um valor **float** .  
+ Um valor **float**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método updateFloat é especificado pelo método updateFloat na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -1,6 +1,6 @@
 ---
-title: Selecionar objetos (Pesquisador de Objetos) | Microsoft Docs
-ms.custom: ''
+title: Selecionar objetos (Pesquisador de Objetos)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9bed66d2d2d7bfcd275cc5674c0ec41edd2a0e1b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c60f25406cb10e6ca6a12abe10a65a8a91fd1f59
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262239"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243529"
 ---
 # <a name="select-objects-object-explorer"></a>Selecionar objetos (Pesquisador de Objetos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ Exibe uma lista dos tipos aos quais pertencem os objetos a ser selecionados. Os 
 **Digite os nomes de objeto a selecionar**  
 Digite uma lista separada por ponto-e-vírgula com os nomes dos objetos a ser selecionados. Os objetos a serem selecionados devem ser de um tipo listado na caixa **Selecionar esses tipos de objeto** . Os objetos podem ser selecionados de uma lista acessada clicando no botão **Procurar** .  
   
-**Tipos de objeto**  
+**Tipos de Objeto**  
 Exibe uma lista de tipos de objeto. Selecione um ou mais marcando a caixa de seleção que corresponde ao tipo.  
   
 **Verificar Nomes**  

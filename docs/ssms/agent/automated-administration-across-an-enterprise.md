@@ -1,10 +1,9 @@
 ---
-title: Administração automatizada em toda a empresa | Microsoft Docs
-ms.custom: ''
+title: Administração automatizada em toda a empresa
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,13 +19,15 @@ helpviewer_keywords:
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 29884599271e85e1ea1be04391fe387092351d55
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 874e2bb1099c047e212cb25f7cac11768c28ce20
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252060"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252668"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administração automatizada em toda a empresa
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ Para aproveitar a administração multisservidores, é necessário ter pelo meno
   
 A ilustração a seguir mostra a relação entre servidores mestre e de destino:  
   
-![Configuração da administração multisservidor](../../ssms/agent/media/multisvr.gif "Configuração da administração multisservidor")  
+![Configuração de administração multisservidor](../../ssms/agent/media/multisvr.gif "Configuração de administração multisservidor")  
   
 Se você administrar servidores departamentais em uma grande corporação, poderá definir o seguinte:  
   
@@ -72,7 +73,7 @@ Contém informações sobre como definir a subchave de Registro de agente MsxEnc
 [Gerenciar trabalhos em toda a empresa](../../ssms/agent/manage-jobs-across-an-enterprise.md)  
 Contém informações sobre a verificação do status de trabalho, alteração de servidores de destino para os trabalhos, sincronização de relógios do servidor de destino e sondagem de servidores mestres para o status de trabalho atual.  
   
-[Solucionar problemas de trabalhos multisservidor que usam proxies](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)  
+[Solucionar problemas de trabalhos com multisservidor que usam proxies](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)  
 Contém informações sobre a solução de problemas de trabalhos multisservidor que usam proxies que falham.  
   
 [Sondar servidores](../../ssms/agent/poll-servers.md)  

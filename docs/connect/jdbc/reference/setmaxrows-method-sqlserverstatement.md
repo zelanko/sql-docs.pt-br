@@ -16,10 +16,10 @@ ms.assetid: cccc0667-589b-4655-8ea8-14ae8b2eb9dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1ff4ab9e1db2415c92d42012d45b04c57ac30b67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973974"
 ---
 # <a name="setmaxrows-method-sqlserverstatement"></a>Método setMaxRows (SQLServerStatement)
@@ -34,7 +34,7 @@ ms.locfileid: "67973974"
 public final void setMaxRows(int max)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *max*  
   
  Um **int** que indica o número máximo de linhas ou 0 se não houver limite.  
@@ -42,8 +42,8 @@ public final void setMaxRows(int max)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método setMaxRows é especificado pelo método setMaxRows na interface java. Sql. Statement.  
+## <a name="remarks"></a>Comentários  
+ O método setMaxRows é especificado pelo método setMaxRows na interface java.sql.Statement.  
   
  Esse método setMaxRows não tem nenhum efeito para cursores roláveis dinâmicos. O aplicativo deve usar sintaxe de SQL SELECT TOP N para limitar o número de linhas retornado de conjuntos de resultados potencialmente grandes.  
   

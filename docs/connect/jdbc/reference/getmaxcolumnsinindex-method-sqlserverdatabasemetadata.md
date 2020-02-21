@@ -16,10 +16,10 @@ ms.assetid: 108f0e2c-7dc5-4195-8248-0758a75a314e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f98d3bdb5e893d1c120be059e1ad1de446dc8d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982254"
 ---
 # <a name="getmaxcolumnsinindex-method-sqlserverdatabasemetadata"></a>Método getMaxColumnsInIndex (SQLServerDatabaseMetaData)
@@ -40,7 +40,7 @@ public int getMaxColumnsInIndex()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getMaxColumnsInIndex é especificado pelo método getMaxColumnsInIndex na interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -16,10 +16,10 @@ ms.assetid: 9a077b50-cc5a-4301-9398-49ea68544e89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b57f01670b52eaa17102001411458153be481f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979246"
 ---
 # <a name="gettablename-method-sqlserverresultsetmetadata"></a>Método getTableName (SQLServerResultSetMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67979246"
 public java.lang.String getTableName(int column)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *column*  
   
  Um **int** que indica o índice de coluna.  
@@ -45,8 +45,8 @@ public java.lang.String getTableName(int column)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método gettablenamename é especificado pelo método gettablenamename na interface java. Sql. ResultSetMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método getTableName é especificado pelo método getTableName na interface java.sql.ResultSetMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [SQLServerResultSetMetaData Methods](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

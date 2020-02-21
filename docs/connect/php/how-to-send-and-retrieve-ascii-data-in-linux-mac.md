@@ -1,5 +1,5 @@
 ---
-title: 'Como: enviar e recuperar dados ASCII no Linux e macOS (SQL) | Microsoft Docs'
+title: 'Como fazer: enviar e recuperar dados ASCII em Linux e macOS (SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -15,33 +15,33 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 9edd73f5ef01d1d3f22db78400cc3c204efe1379
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68251902"
 ---
-# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Como enviar e recuperar dados ASCII em Linux e macOS 
+# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Como fazer: Enviar e recuperar dados ASCII em Linux e macOS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Este artigo pressupõe que as localidades ASCII (não UTF-8) foram geradas ou instaladas em seus sistemas Linux ou macOS. 
+Este artigo pressupõe que as localidades ASCII (não UTF-8) foram geradas ou instaladas nos seus sistemas Linux ou macOS. 
 
 Para enviar ou recuperar conjuntos de caracteres ASCII para o servidor:  
 
-1.  Se a localidade desejada não for o padrão no ambiente do sistema, certifique-se de `setlocale(LC_ALL, $locale)` invocar antes de fazer a primeira conexão. A função PHP setlocalment () altera a localidade somente para o script atual e, se for invocada depois de fazer a primeira conexão, ela poderá ser ignorada.
+1.  Se a localidade desejada não for o padrão no ambiente do sistema, invoque `setlocale(LC_ALL, $locale)` antes de fazer a primeira conexão. A função PHP setlocale() altera o local somente para o script atual e, se for invocada depois de fazer a primeira conexão, ela poderá ser ignorada.
  
-2.  Ao usar o driver sqlsrv, você pode especificar `'CharacterSet' => SQLSRV_ENC_CHAR` como uma opção de conexão, mas essa etapa é opcional porque é a codificação padrão.
+2.  Ao usar o driver SQLSRV, você pode especificar `'CharacterSet' => SQLSRV_ENC_CHAR` como uma opção de conexão, mas essa etapa é opcional porque é a codificação padrão.
 
-3.  Ao usar o driver PDO_SQLSRV, há duas maneiras. Primeiro, ao fazer a conexão, defina `PDO::SQLSRV_ATTR_ENCODING` como `PDO::SQLSRV_ENCODING_SYSTEM` (para obter um exemplo de como definir uma opção de conexão, consulte [PDO:: __construct](../../connect/php/pdo-construct.md)). Como alternativa, depois de conectado com êxito, adicione esta linha`$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
+3.  Ao usar o driver PDO_SQLSRV, há duas maneiras. Primeiro, ao fazer a conexão, defina `PDO::SQLSRV_ATTR_ENCODING` como `PDO::SQLSRV_ENCODING_SYSTEM` (para obter um exemplo de como definir uma opção de conexão, confira [PDO::__construct](../../connect/php/pdo-construct.md)). Como alternativa, após conectar com sucesso, adicione esta linha `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
   
-Quando você especifica a codificação de um recurso de conexão (em SQLSRV) ou objeto de conexão (PDO_SQLSRV), o driver pressupõe que as outras cadeias de caracteres de opção de conexão usam essa mesma codificação. Também pressupõe-se que o nome do servidor e as cadeias de caracteres de consulta usem o mesmo conjunto de caracteres.  
+Ao especificar a codificação de um recurso de conexão (em SQLSRV) ou objeto de conexão (PDO_SQLSRV), o driver pressupõe que as outras cadeias de caracteres de opção de conexão usam essa mesma codificação. Também pressupõe-se que o nome do servidor e as cadeias de caracteres de consulta usem o mesmo conjunto de caracteres.  
   
-A codificação padrão para o driver PDO_SQLSRV é UTF-8 (PDO:: SQLSRV_ENCODING_UTF8), diferentemente do driver SQLSRV. Para obter mais informações sobre essas constantes, veja [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
+A codificação padrão para o driver PDO_SQLSRV é UTF-8 (PDO::SQLSRV_ENCODING_UTF8), diferentemente do driver SQLSRV. Para obter mais informações sobre essas constantes, veja [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
   
 ## <a name="example"></a>Exemplo  
-Os exemplos a seguir demonstram como enviar e recuperar dados ASCII usando os drivers do PHP para SQL Server especificando uma localidade específica antes de fazer a conexão. As localidades em várias plataformas Linux podem ser nomeadas de forma diferente das mesmas localidades no macOS. Por exemplo, a localidade ISO-8859-1 (Latin 1) dos EUA `en_US.ISO-8859-1` está no Linux enquanto estiver no MacOS, `en_US.ISO8859-1`o nome é.
+Os exemplos a seguir demonstram como enviar e recuperar dados ASCII usando os drivers PHP para SQL Server especificando uma localidade específica antes de fazer a conexão. As localidades em várias plataformas Linux podem ser nomeadas de forma diferente das mesmas localidades no macOS. Por exemplo, a localidade US ISO-8859-1 (Latin 1) é `en_US.ISO-8859-1` no Linux, enquanto que no macOS o nome é `en_US.ISO8859-1`.
   
-Os exemplos pressupõem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que o esteja instalado em um servidor. Toda a saída é gravada no navegador quando os exemplos são executados do navegador.  
+Os exemplos pressupõem que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado em um servidor. Toda a saída é gravada no navegador quando os exemplos são executados do navegador.  
   
 ```  
 <?php  
@@ -166,8 +166,8 @@ try {
 
 ## <a name="see-also"></a>Consulte Também  
 [Recuperando dados](../../connect/php/retrieving-data.md)  
-[Trabalhando com dados](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
-UTF-8[atualizando &#40;dados drivers da Microsoft para PHP&#41; para SQL Server](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+[Trabalhar com dados UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
+[Atualizar dados &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 [Aplicativo de exemplo &#40;driver SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

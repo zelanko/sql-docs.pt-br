@@ -1,7 +1,6 @@
 ---
-title: Opção de reprodução (ferramenta de administração do Distributed Replay) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Opção Replay na ferramenta de administração
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,16 +9,20 @@ ms.topic: conceptual
 ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 75fb9df87b432dc4b1357901e740ed83d628509e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: b1db107bc9d426036f5831ad8f49f5fc5f7edddc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949964"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306992"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Opção Replay (ferramenta de administração do Distributed Replay)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  A ferramenta de administração [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, **DReplay.exe**, é uma ferramenta de linha de comando que você pode usar para se comunicar com o controlador de reprodução distribuída. Este tópico descreve a opção de linha de comando **replay** e a sintaxe correspondente.  
+
+A ferramenta de administração [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, **DReplay.exe**, é uma ferramenta de linha de comando que você pode usar para se comunicar com o controlador de reprodução distribuída. Este tópico descreve a opção de linha de comando **replay** e a sintaxe correspondente.  
   
  A opção **replay** inicia o estágio de reprodução de eventos, no qual o controlador despacha dados de reprodução aos clientes especificados, inicia a reprodução distribuída e sincroniza os clientes. Opcionalmente, cada cliente que participa da reprodução pode gravar a atividade de reprodução e salvar um arquivo de rastreamento de resultado localmente.  
   
@@ -34,13 +37,13 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
     [-f status_interval]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- **-m** _controller_  
+#### <a name="parameters"></a>parâmetros  
+ **-m** _controlador_  
  Especifica o nome do computador do controlador. Você pode usar "`localhost`" ou "`.`" para fazer referência ao computador local.  
   
  Se o parâmetro **-m** não for especificado, será usado o computador local.  
   
- **-d** _controller_working_dir_  
+ **-d** _diretório_trabalho_controlador_  
  Especifica o diretório no controlador onde o arquivo intermediário será armazenado. O parâmetro **-d** é obrigatório.  
   
  Os seguintes requisitos são aplicados:  
@@ -58,7 +61,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  Quando o parâmetro **-o** não é especificado, o arquivo de rastreamento de resultado não é gerado. A saída do console retorna informações resumidas ao término da reprodução, mas nenhuma outra estatística de reprodução está disponível.  
   
- **-s** _target_server_  
+ **-s** _servidor_de_destino_  
  Especifica a instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na qual a carga de trabalho distribuída deve ser reproduzida. Você deve especificar esse parâmetro no formato **server_name[\nome da instância]** .  
   
  Você não pode usar "`localhost`" ou "`.`" como o servidor de destino.  
@@ -67,18 +70,18 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  Se o parâmetro **-s** for usado, o elemento `<Server>` na seção `<ReplayOptions>` do arquivo de configuração de reprodução será ignorado.  
   
- **-w** _clients_  
+ **-w** _clientes_  
  Esse parâmetro necessário é uma lista separada por vírgulas (sem espaços) que especifica os nomes de computadores de clientes que devem participar da reprodução distribuída. Endereços IP não são permitidos. Lembre-se de que os clientes já devem estar registrados com o controlador.  
   
 > [!NOTE]  
 >  Cada cliente efetua o registro com o controlador que é especificado no arquivo de configuração de cliente quando o serviço de cliente é iniciado.  
   
- **-c** _config_file_  
+ **-c** _arquivo_de_configuração_  
  É o caminho completo do arquivo de configuração de reprodução; usado para especificar o local em que ele é armazenado em um local diferente.  
   
  O parâmetro **-c** não será necessário se você quiser usar os valores padrão do arquivo de configuração de reprodução, `DReplay.exe.replay.config`.  
   
- **-f** _status_interval_  
+ **-f** _intervalo_de_status_  
  Especifica a frequência (em segundos) na qual exibir o status.  
   
  Se **-f** não for especificado, o intervalo padrão será de 30 segundos.  
@@ -90,7 +93,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
 -   O parâmetro **-d** especifica o local do arquivo intermediário no controlador, `c:\WorkingDir`.  
   
--   O parâmetro **-o** especifica que cada cliente especificado captura a atividade de reprodução e salva-a em um arquivo de rastreamento de resultado. Observação: o elemento `<ResultTrace>` no arquivo de configuração pode ser usado para especificar se a contagem de linhas e o conjunto de resultados são registrados.  
+-   O parâmetro **-o** especifica que cada cliente especificado captura a atividade de reprodução e salva-a em um arquivo de rastreamento de resultado. Observação: O elemento `<ResultTrace>` no arquivo de configuração pode ser usado para especificar se a contagem de linhas e o conjunto de resultados são registrados.  
   
 -   O parâmetro **-w** especifica que os computadores `client1` a `client4` participam como clientes na reprodução distribuída.  
   
@@ -157,9 +160,9 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
   
 ## <a name="see-also"></a>Consulte Também  
  [Reproduzir dados de rastreamento](../../tools/distributed-replay/replay-trace-data.md)   
- [Revisar os resultados da reprodução](../../tools/distributed-replay/review-the-replay-results.md)   
+ [Examinar os resultados da reprodução](../../tools/distributed-replay/review-the-replay-results.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)   
+ [Configurar o Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)   
  [Fórum do SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
  [Uso do Distributed Replay para teste de carga do SQL Server – Parte 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
  [Usando o Distributed Replay para teste de carga do SQL Server – Parte 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  

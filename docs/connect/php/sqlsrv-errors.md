@@ -18,13 +18,13 @@ ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08879880e93307a496969b79c3aa05144f7aef62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015065"
 ---
-# <a name="sqlsrverrors"></a>sqlsrv_errors
+# <a name="sqlsrv_errors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Retorna informações estendidas sobre erros e/ou avisos da última operação do **sqlsrv** executada.  
@@ -54,7 +54,7 @@ Independentemente da configuração, os avisos só podem ser recuperados chamand
 sqlsrv_errors( [int $errorsAndOrWarnings] )  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 *$errorsAndOrWarnings*[OPCIONAL]: uma constante predefinida. Esse parâmetro pode assumir um dos valores listados na tabela a seguir:  
   
 |Valor|Descrição|  
