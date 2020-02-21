@@ -1,11 +1,7 @@
 ---
-title: 'Como fazer: usar o Designer de Tabela para gerenciar tabelas e relacionamentos | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Use o Designer de Tabela para gerenciar tabelas e relacionamentos
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.columnspecification.index.dialog
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 91fddb94bf028ec884a4589c7c4a88bd3be923e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 924a48ffe75c043385043f02125c8e07cfe3fbbc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097485"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226833"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Como fazer: Usar o Designer de Tabela para gerenciar tabelas e relacionamentos
+
 O Designer de Tabela fornece uma experiência visual juntamente com o Editor Transact\-SQL para criar e editar a estrutura de tabelas, incluindo objetos de programação específicos de tabela, para bancos de dados do SQL Server.  Ele é iniciado quando você cria uma nova tabela para um banco de dados conectado ou um projeto, ou quando você clica duas vezes para editar uma tabela no Pesquisador de Objetos do SQL Server ou no Gerenciador de Soluções.  
   
 O designer é composto por Grade de Colunas, Painel de Script e Painel Contexto. A Grade de Colunas lista todas as colunas na tabela. Você pode adicionar, editar e excluir colunas nesta grade.  O Painel de Contexto lhe dá uma visão lógica da definição de tabela (Chaves, Índices, Restrições, Gatilhos, etc.) e permite que você selecione um objeto para realçar as relações com colunas individuais. Você também pode adicionar novos objetos à tabela nesse painel e editar as propriedades de um objeto selecionado na Grade de Propriedades. O Painel de Script mostra a definição da estrutura de tabela, realça o script do objeto selecionado no Painel Contexto ou Grade de Colunas. Você pode editar o script lado a lado com a Grade de Colunas e o Painel Contexto na exibição. As alterações de qualquer um dos três painéis serão propagadas para os outros dois imediatamente.  

@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: closeCursor | Microsoft Docs'
+title: PDOStatement::closeCursor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8997ab61-e948-4d54-8d32-fc080d55525c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: caf214fa7055bb0e8000f52f5db43c4f76e48e1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993105"
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
@@ -32,8 +32,8 @@ bool PDOStatement::closeCursor();
 ## <a name="return-value"></a>Valor retornado  
 true se bem-sucedido; caso contrário, false.  
   
-## <a name="remarks"></a>Remarks  
-closeCursor tem efeito quando a opção de conexão MultipleActiveResultSets está definida como false.  Para obter mais informações sobre a opção de conexão MultipleActiveResultSets, veja [Como desabilitar MARS (vários conjuntos de resultados ativos)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).  
+## <a name="remarks"></a>Comentários  
+closeCursor tem efeito quando a opção de conexão MultipleActiveResultSets está definida como false.  Para obter mais informações sobre a opção de conexão MultipleActiveResultSets, confira [Como: desabilitar MARS (conjuntos de resultados ativos múltiplos)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).  
   
 Em vez de chamar closeCursor, você pode apenas definir o identificador de instrução como nulo.  
   

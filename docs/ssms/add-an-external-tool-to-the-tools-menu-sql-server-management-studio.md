@@ -1,6 +1,6 @@
 ---
-title: Adicionar uma ferramenta externa ao menu Ferramentas | Microsoft Docs
-ms.custom: ''
+title: Adicionar uma Ferramenta Externa ao Menu Ferramentas
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 41cb442df9651f4013a8053bf0070350eacac0c3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: aec569600c07fb829836313972c02241f121d088
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265594"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254550"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>Adicionar uma ferramenta externa ao menu Ferramentas (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Você pode iniciar qualquer aplicativo [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows ou [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] por meio do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Aplicativos externos podem ser adicionados e executados do menu **Ferramentas** .  
+Você pode inicializar qualquer aplicativo [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] Windows ou [!INCLUDE[msCoName](../includes/msconame_md.md)] por meio do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Aplicativos externos podem ser adicionados e executados do menu **Ferramentas** .  
   
 ### <a name="to-add-an-external-tool-to-the-tools-menu"></a>Para acrescentar uma ferramenta externa ao menu Ferramentas  
   

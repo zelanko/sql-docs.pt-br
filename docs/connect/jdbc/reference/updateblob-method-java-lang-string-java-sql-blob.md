@@ -16,10 +16,10 @@ ms.assetid: fdd47885-c7ec-4599-a645-ad0e082586f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 945595e147825b0c9c026166fa14b2bbda90a20c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67997084"
 ---
 # <a name="updateblob-method-javalangstring-javasqlblob"></a>Método updateBlob (java.lang.String, java.sql.Blob)
@@ -35,19 +35,19 @@ public void updateBlob(java.lang.String columnName,
                        java.sql.Blob x)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
   
  *x*  
   
- Um objeto de BLOB.  
+ Um objeto de blob.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método updateBlob é especificado pelo método updateBlob na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  

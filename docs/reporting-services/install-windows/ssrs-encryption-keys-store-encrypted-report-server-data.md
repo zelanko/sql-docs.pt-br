@@ -15,10 +15,10 @@ ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ca402d8170c9954f8a85e3b439e14d1d3644d9bb
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593474"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Chaves de criptografia do SSRS – Armazenar dados criptografados do servidor de relatório
@@ -39,7 +39,7 @@ ms.locfileid: "73593474"
   
      Essa conta é usada quando uma conexão com um computador remoto é necessária e não há nenhuma outra credencial disponível para efetuar a conexão. Essa conta é usada principalmente para oferecer suporte ao processamento de relatórios autônomos que não usam credenciais para acessar uma fonte de dados. Se você criar relatórios com base em fontes de dados que não exigem nem usam credenciais para acessar dados, será necessário configurar essa conta para o servidor de relatório a ser usado.  
   
-     Essa conta é necessária em determinadas circunstâncias e pode ser criada somente por meio da ferramenta Configuração do Reporting Services ou do **rsconfig**. Esse valor também é armazenado no arquivo rsreportserver.config. É necessário criar essa conta manualmente. Para obter mais informações sobre essa conta e como ela é usada, veja [Configurar a conta de execução autônoma &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Essa conta é necessária em determinadas circunstâncias e pode ser criada somente por meio da ferramenta Configuração do Reporting Services ou do **rsconfig**. Esse valor também é armazenado no arquivo rsreportserver.config. É necessário criar essa conta manualmente. Para obter mais informações sobre essa conta e como ela é usada, consulte [Configurar a conta de execução autônoma &#40; 	Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 -   A chave simétrica usada para criptografia.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "73593474"
  Um servidor de relatório armazena outros dados que não são criptografados, mas que podem conter informações confidenciais que você quer proteger. Mais especificamente, instantâneos do histórico do relatório e instantâneos de execução do relatório contêm resultados de consultas que podem incluir dados destinados a usuários autorizados. Se você estiver usando a funcionalidade de instantâneo para relatórios que contêm dados confidenciais, saiba que os usuários que podem abrir tabelas em um banco de dados de servidor de relatório talvez possam visualizar partes de um relatório armazenado ao inspecionar o conteúdo da tabela.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não dá suporte ao armazenamento em cache nem histórico de relatórios que usam parâmetros com base na identificação de segurança do usuário.  
+>  O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não dá suporte ao armazenamento em cache nem ao histórico de relatórios que usam parâmetros com base na identificação de segurança do usuário.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0c0e6085ec4e922619c4f2595c63751e82c5a50a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571484"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Gerenciador de Alertas de Dados para Usuários do SharePoint
@@ -44,13 +44,13 @@ Quando um site do SharePoint é habilitado para alertas de dados, duas páginas 
 ##  <a name="ViewingAlerts"></a> Exibir informações de alertas de dados  
  Você pode exibir uma lista dos alertas de dados que criou no Designer de Alertas de Dados. Para abrir o Gerenciador de Alertas de Dados, você clica com o botão direito do mouse em um relatório publicado em uma biblioteca do SharePoint. A imagem a seguir mostra a opção **Gerenciar Alertas de Dados** no menu de atalho de relatório.  
   
- ![Abrir o Gerenciador de Alertas no menu de contexto do relatório](../reporting-services/media/rs-openalertmanager.gif "Abrir o Gerenciador de Alertas no menu de contexto do relatório")  
+ ![Abrir o Gerenciador de Alertas do menu de contexto de relatório](../reporting-services/media/rs-openalertmanager.gif "Abrir o Gerenciador de Alertas do menu de contexto de relatório")  
   
  O Gerenciador de Alertas de Dados inclui uma tabela que lista o nome do alerta, o nome do relatório, seu nome como o criador da definição de alerta, o número de mensagens de alerta enviadas, a última vez que o alerta foi executado, a última vez que a definição do alerta foi modificada e o status da última mensagem de alerta. Se a mensagem de alerta não puder ser gerada ou enviada, a coluna de status conterá informações sobre o erro e ajudará a solucionar problemas do alerta. Para obter mais informações, consulte [Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
  A tabela a seguir mostra dados de exemplo de uma tabela no Gerenciador de Alertas de Dados. Quando um erro ocorre, a mensagem de erro e o identificador da entrada no log (um GUID) são incluídos no campo **Status** na tabela.  
   
-|Nome do Alerta|Nome do Relatório|Criado por|Alertas enviados|Última Execução|Última Modificação|Status|  
+|Nome do alerta|Nome do Relatório|Criado por|Alertas enviados|Última Execução|Última Modificação|Status|  
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|O último alerta foi executado com êxito e o alerta foi enviado.|  
 |UnitsSold|ProductsSalesByQTR|Lauren Johnson|2|7/1/2011|6/28/2011|O último alerta foi executado com êxito, mas os dados estavam inalterados e nenhum alerta foi enviado.|  
@@ -77,15 +77,15 @@ Quando um site do SharePoint é habilitado para alertas de dados, duas páginas 
 ##  <a name="HowTo"></a> Tarefas relacionadas  
  Esta seção lista procedimentos que mostram como gerenciar seus alertas e editar suas definições de alertas.  
   
--   [Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
+-   [Gerenciar Meus alertas de dados no Gerenciador de alertas de dados](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
   
 -   [Editar um alerta de dados no Designer de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 
 ## <a name="see-also"></a>Consulte Também
 
-[Editar um Alerta de Dados no Designer de Alertas](../reporting-services/data-alert-designer.md)   
+[Designer de Alertas de Dados](../reporting-services/data-alert-designer.md)   
 [Criar um alerta de dados no Designer de Alertas de Dados](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -9,10 +9,10 @@ ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571506"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Implantação e suporte de versão no SSDT (SQL Server Data Tools)
@@ -33,7 +33,7 @@ ms.locfileid: "65571506"
   
  Relatórios são compilados antes de serem renderizados como visualizações no Designer de Relatórios ou implantados no servidor de relatório.  
   
- Você define as propriedades de configuração na caixa de diálogo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **do** .  
+ Defina as propriedades de configuração na caixa de diálogo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **Propriedade do Projeto**.  
   
  As propriedades de compilação e implantação incluem:  
   
@@ -41,16 +41,16 @@ ms.locfileid: "65571506"
   
 -   ErrorLevel é uma propriedade de build que identifica a severidade dos problemas de build relatados como erros. Problemas com níveis de severidade menor ou igual ao valor ErrorLevel são relatados como erros; caso contrário, os problemas são relatados como avisos. Para obter mais informações, confira a seção "Validação de relatório e níveis de erro" em [Criar relatórios com o Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
--   TargetServerVersion é uma propriedade de implantação que identifica a versão esperada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que está instalado no servidor de relatório de destino especificado na propriedade TargetServerURL.  
+-   TargetServerVersion é uma propriedade de implantação que identifica a versão esperada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que está instalada no servidor de relatório de destino especificado na propriedade TargetServerURL.  
   
- Quando você especifica a versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na caixa de diálogo **Propriedade do Projeto** os relatórios não serão revertidos automaticamente para a versão anterior. Dessa forma, um projeto do Servidor de Relatórios pode conter relatórios de duas versões diferentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando o projeto do Servidor de Relatório é implantado, todos os relatórios do projeto são convertidos para a versão especificada em TargetServerVersion.  
+ Quando você especifica a versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na caixa de diálogo **Propriedade do Projeto**, os relatórios não são revertidos automaticamente para a versão anterior. Dessa forma, um projeto do Servidor de Relatórios pode conter relatórios de duas versões diferentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando o projeto do Servidor de Relatório é implantado, todos os relatórios do projeto são convertidos para a versão especificada em TargetServerVersion.  
   
  Você pode adicionar mais de uma configuração de projeto a um projeto; cada uma é usada para um cenário diferente, como, por exemplo, implantação de versões diferentes de servidores de relatório. Para obter mais informações, consulte [Definir as propriedades da implantação &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md) e [Caixa de diálogo Páginas de Propriedades do Projeto](../../reporting-services/tools/project-property-pages-dialog-box.md).  
   
 ##  <a name="bkmk_SupportedVersions"></a> Versões com suporte  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o ambiente de desenvolvimento de 32 bits para projetos do Servidor de Relatório, não foi projetado para execução em computadores baseados em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]e não é instalado em servidores baseados em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Porém, o suporte para o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está disponível em computadores baseados em x64.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o ambiente de desenvolvimento de 32 bits para projetos do Servidor de Relatório, não foi projetado para execução em computadores baseados em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] e não é instalado em servidores baseados em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Porém, o suporte para o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está disponível em computadores baseados em x64.  
   
  A tabela a seguir descreve as versões com suporte para criação e publicação de relatórios em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -59,15 +59,15 @@ ms.locfileid: "65571506"
   
 |Tipo de Projeto ou Arquivo|Versão|Criar Relatórios|Publicar Relatórios|Observações|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
-|Projeto do Servidor de Relatório<br /><br /> ou em<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|Esquema 2016 RDL|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
-|Projeto do Servidor de Relatório<br /><br /> ou em<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Esquema 2014 RDL|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Projeto do Servidor de Relatório<br /><br /> ou em<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Esquema 2012 RDL|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Projeto do Servidor de Relatório<br /><br /> ou em<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Esquema do 2008 R2 RDL|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Projeto do Servidor de Relatório<br /><br /> ou em<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Esquema 2008 RDL|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] apenas|Atualiza o 2003 RDL e o 2005 RDL localmente para o esquema 2008 RDL.|  
+|Projeto do Servidor de Relatório<br /><br /> ou<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|Esquema 2016 RDL|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
+|Projeto do Servidor de Relatório<br /><br /> ou<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Esquema 2014 RDL|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Projeto do Servidor de Relatório<br /><br /> ou<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Esquema 2012 RDL|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Projeto do Servidor de Relatório<br /><br /> ou<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Esquema do 2008 R2 RDL|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Projeto do Servidor de Relatório<br /><br /> ou<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Esquema 2008 RDL|Somente servidor de relatório [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Atualiza o 2003 RDL e o 2005 RDL localmente para o esquema 2008 RDL.|  
   
  Para obter mais informações sobre como abrir relatórios em uma versão anterior do esquema de definição de relatório, consulte [Atualizar relatórios](../../reporting-services/install-windows/upgrade-reports.md). Para obter mais informações sobre esquemas de definição de relatório específicos, consulte [Especificação de linguagem RDL](https://go.microsoft.com/fwlink/?linkid=116865).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Publicando fontes de dados e relatórios](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
+ [Publicar fontes de dados e relatórios](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   

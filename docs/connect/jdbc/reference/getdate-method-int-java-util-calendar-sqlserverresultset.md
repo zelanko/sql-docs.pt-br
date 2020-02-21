@@ -16,10 +16,10 @@ ms.assetid: 150411f7-2a73-4380-b921-9698acd5d1f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17f2762975f72ccd1e6482ea7120701eacf0c4c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984080"
 ---
 # <a name="getdate-method-int-javautilcalendar-sqlserverresultset"></a>Método getDate (int, java.util.Calendar) (SQLServerResultSet)
@@ -35,14 +35,14 @@ public java.sql.Date getDate(int columnIndex,
                              java.util.Calendar cal)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnIndex*  
   
  Um **int** que indica o índice de coluna.  
   
  *cal*  
   
- Um objeto de calendário.  
+ Um objeto Calendar.  
   
 ## <a name="return-value"></a>Valor retornado  
  Um objeto Date.  
@@ -50,7 +50,7 @@ public java.sql.Date getDate(int columnIndex,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getDate é especificado pelo método getDate na interface java.sql.ResultSet.  
   
  Esse método retorna uma parte de data válida de um tipo de dados datetime ou smalldatetime do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], com a parte de hora definida como a linha de base da hora do Java de 00:00 (meia-noite) no fuso horário do Calendário fornecido.  

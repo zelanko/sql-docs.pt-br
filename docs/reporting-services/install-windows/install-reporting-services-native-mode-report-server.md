@@ -12,10 +12,10 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d660cc7b3c15706951981540f592589ba92e9df2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62513631"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Instalar o servidor de relatório no modo nativo do Reporting Services 2016
@@ -116,7 +116,7 @@ Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../inclu
   
 2.  Na página **Função de instalação** , selecione **Instalação de recurso do SQL Server**.  
   
-     ![Instalação de recurso do SQL Server para a função de instalação](../../reporting-services/install-windows/media/rs-setuprole.png "Instalação de recurso do SQL Server para a função de instalação")  
+     ![Instalação de recurso do SQL Server para função de instalação](../../reporting-services/install-windows/media/rs-setuprole.png "Instalação de recurso do SQL Server para função de instalação")  
   
 3.  Na página **Seleção de Recurso** , selecione o seguinte:  
   
@@ -124,7 +124,7 @@ Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../inclu
   
     -   (2) **Reporting Services Nativo**.  
   
-     ![Seleção do modo nativo do SSRS na seleção de recursos](../../reporting-services/install-windows/media/rs-setupfeatureselection-native-withcircles.png "Seleção do modo nativo do SSRS na seleção de recursos")  
+     ![Seleção do Modo Nativo do SSRS na Seleção de Recurso](../../reporting-services/install-windows/media/rs-setupfeatureselection-native-withcircles.png "Seleção do Modo Nativo do SSRS na Seleção de Recurso")  
   
 4.  Examine as **Regras de Recurso** aprovadas.  
   
@@ -134,20 +134,20 @@ Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../inclu
   
     -   `https://[ServerName]/Reports_THESQLINSTANCE`  
   
-6.  **Configuração de Servidor**: se você pretende usar o recurso de assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , na página **Configuração de Servidor** , configure o tipo de Inicialização **Automático** do SQL Server Agent.   O padrão é manual.  
+6.  **Configuração do Servidor**: se você pretende usar o recurso de assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], na página **Configuração do Servidor**, configure o tipo de inicialização **Automático** do SQL Server Agent.   O padrão é manual.  
   
 7.  Adicione administradores do SQL Server à página **Configuração do Mecanismo de Banco de Dados** .  
   
 8.  Na página **Configuração do Reporting Services** , selecione **Instalar e Configurar**.  
   
-     ![Configuração do modo nativo do SSRS](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "Configuração do modo nativo do SSRS")  
+     ![Configuração do Modo Nativo do SSRS](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "Configuração do Modo Nativo do SSRS")  
   
     > [!NOTE]  
     >  A opção**Instalar e Configurar** não estará disponível a menos que o recurso de banco de dados a ser instalado também esteja selecionado.  
   
 9. Regras de configuração de recurso: verifique as regras aprovadas. O assistente de instalação avançará automaticamente para **Pronto para instalar** se todas as regras forem aprovadas.  Específicas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], as regras verificam se um catálogo do servidor de relatório e um banco de dados de catálogo temporário ainda não existem.  
   
-10. Na página **Pronto para instalar**, anote o caminho para o arquivo de configuração, pois poderá ser consultado posteriormente para obter um bom resumo da configuração de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicial dos servidores, incluindo os componentes instalados, as contas de serviço e os administradores.  
+10. Na página **Pronto para instalar** , anote o caminho para o arquivo de configuração, pois poderá ser consultado posteriormente para obter um bom resumo da configuração de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicial dos servidores, incluindo os componentes instalados, as contas de serviço e os administradores.  
   
 11. Depois que o assistente de instalação do SQL Server estiver concluído, verifique a instalação padrão do modo nativo usando as etapas básicas a seguir.  
   
@@ -155,7 +155,7 @@ Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../inclu
   
     -   Abra seu navegador **com privilégios administrativos** e conecte-se ao [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], por exemplo `https://localhost/Reports`.  
   
-    -   Abra seu navegador com privilégios administrativos e conecte-se à página do servidor de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por exemplo,  `https://localhost/ReportServer`  
+    -   Abra seu navegador com privilégios administrativos e conecte-se à página do servidor de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por exemplo, `https://localhost/ReportServer`  
   
  Para obter mais informações, consulte a seção Nativa dos dois tópicos a seguir:  
   
@@ -183,4 +183,4 @@ Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../inclu
 [Configurar conexões SSL em um servidor de relatórios de modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

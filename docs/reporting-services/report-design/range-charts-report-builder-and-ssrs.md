@@ -9,10 +9,10 @@ ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e28daac5af66601d8a48b4fc793d6e6c5d178ca0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576462"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>Gráficos de intervalos (Construtor de Relatórios e SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "65576462"
   
  A ilustração a seguir mostra um gráfico de intervalos comum com três séries.  
   
- ![Gráfico de intervalos](../../reporting-services/report-design/media/rs-rangechart.gif "Gráfico de intervalos")  
+ ![Gráfico de intervalo](../../reporting-services/report-design/media/rs-rangechart.gif "Gráfico de intervalo")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

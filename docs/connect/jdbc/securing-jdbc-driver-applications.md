@@ -1,5 +1,5 @@
 ---
-title: Protegendo aplicativos JDBC Driver | Microsoft Docs
+title: Proteger aplicativos do JDBC Driver | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61a17b302499f87d552ec61c90208effc688e164
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027751"
 ---
 # <a name="securing-jdbc-driver-applications"></a>Protegendo aplicativos do JDBC Driver
@@ -32,8 +32,8 @@ Os tópicos nesta seção descrevem algumas preocupações comuns de segurança 
 | [Protegendo cadeias de conexão](../../connect/jdbc/securing-connection-strings.md) | Descreve técnicas para ajudar a proteger informações usadas para conectar a uma fonte de dados.                                                                                    |
 | [Validando entradas de usuário](../../connect/jdbc/validating-user-input.md)             | Descreve técnicas para validar a entrada do usuário.                                                                                                                          |
 | [Segurança do aplicativo](../../connect/jdbc/application-security.md)               | Descreve como usar permissões de política de Java para ajudar a proteger um aplicativo do driver JDBC.                                                                                |
-| [Como usar criptografia SSL](../../connect/jdbc/using-ssl-encryption.md)               | Descreve como estabelecer um canal de comunicação seguro com um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o protocolo SSL. |
-| [Modo FIPS](../../connect/jdbc/fips-mode.md)                                     | Descreve como usar o driver JDBC no modo compatível com FIPS.                                                                                                              |
+| [Usando criptografia SSL](../../connect/jdbc/using-ssl-encryption.md)               | Descreve como estabelecer um canal de comunicação seguro com um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o protocolo SSL. |
+| [Modo FIPS](../../connect/jdbc/fips-mode.md)                                     | Descreve como usar o JDBC Driver no modo compatível com FIPS.                                                                                                              |
   
 ## <a name="see-also"></a>Confira também  
 

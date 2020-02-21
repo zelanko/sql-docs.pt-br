@@ -1,11 +1,7 @@
 ---
-title: Opções do Editor do Transact-SQL | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Opções do Editor do Transact-SQL
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_GRID
@@ -27,14 +23,19 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e5de3a6bef68955611290cce77b95989b7ff72c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110630"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256316"
 ---
 # <a name="transact-sql-editor-options"></a>Opções do Editor do Transact-SQL
+
 Este tópico contém informações sobre algumas das opções do Editor Transact-SQL. Para definir essas opções, navegue até a caixa de diálogo **Opção** pelo menu **Ferramentas\Opções**.  
   
 [Execução da consulta](#QueryExecution)  
@@ -81,7 +82,7 @@ Este tópico contém informações sobre algumas das opções do Editor Transact
 |**Máximo de Caracteres Recuperados**|Dados não XML:<br /><br />Digite um número de 1 a 65535 para especificar o número máximo de caracteres que serão exibidos em cada célula. **Observação:** Especificar um número grande de caracteres pode fazer com que os dados no conjunto de resultados apareçam truncados. O número máximo de caracteres exibido em cada célula depende do tamanho da fonte. Quando conjuntos de resultados grandes são retornados, um valor alto nesta caixa pode fazer com que o SQL Server Management Studio seja executado com pouca memória e prejudicar o desempenho do sistema.<br /><br />Dados XML:<br /><br />Selecione 1 MB, 2 MB ou 5 MB. Selecione Ilimitado para recuperar todos os caracteres.|  
 |**Formato de saída**|Por padrão, a saída é exibida em colunas criadas preenchendo os resultados com espaços. Outras opções são o uso de vírgulas, tabulações ou espaços para separar as colunas. Marque a caixa de seleção **Delimitador personalizado** para especificar um caractere delimitador diferente na caixa **Delimitador personalizado** .|  
 |**Delimitador personalizado**|Especifique o caractere de sua escolha para separar colunas. Essa opção estará disponível somente se a caixa de seleção **Delimitador personalizado** estiver marcada na caixa **Formato de saída** .|  
-|**Incluir cabeçalhos de coluna no conjunto de resultados**|Desmarque esta caixa de seleção se não quiser cada coluna rotulada com um título de coluna.|  
+|**Incluir cabeçalhos de coluna no conjunto de resultados**|Desmarque esta caixa de seleção se não quiser cada coluna rotulada com um título de coluna:|  
 |**Rolar à medida que os resultados forem recebidos**|Marque esta caixa de seleção para manter o foco de exibição nos registros retornados mais recentemente na parte inferior. Desmarque esta caixa de seleção para manter o foco de exibição nas primeiras linhas recebidas.|  
 |**Alinhar valores numéricos à direita**|Marque esta caixa de seleção para alinhar valores numéricos à direita da coluna. Essa opção pode facilitar a revisão de números com um número fixo de casas decimais.|  
 |**Descartar resultado após a execução da consulta**|Libera memória descartando os resultados da consulta depois de serem recebidos pelo monitor.|  

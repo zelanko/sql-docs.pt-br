@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68259360"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Gráficos de mapa de árvore e explosão solar no Reporting Services 
@@ -45,7 +45,7 @@ Por exemplo, na imagem do mapa de árvore de exemplo a seguir, a região Sudoest
     * **Grupos de Categorias** (na seguinte ordem):
         1. CategoryName
         2. SubcategoryName
-    * **Grupos de Séries**: TerritoryName  
+    * **Grupos de séries**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -91,7 +91,7 @@ Em um gráfico de explosão solar, a hierarquia é representada por uma série d
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * **Grupos de Séries**: TerritoryName  
+    * **Grupos de séries**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -115,7 +115,7 @@ A consulta retorna dados de detalhes de ordem de venda do AdventureWorks, com re
   
 1. **Obter os dados**.  
   
-     A consulta desta seção se baseia no banco de dados AdventureWorks, disponível para download no GitHub: [Backup completo de banco de dados do AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases).  
+     A consulta desta seção se baseia no banco de dados AdventureWorks, disponível para download no GitHub: [Backup completo do banco de dados do AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases).  
 
 2. **Criar uma fonte de dados**.  
   
@@ -168,7 +168,7 @@ A consulta retorna dados de detalhes de ordem de venda do AdventureWorks, com re
                                  Sales.SalesOrderHeaderSalesReason.SalesReasonID = Sales.SalesReason.SalesReasonID  
         ```  
   
-    5. Escolha **OK**.  
+    5. Selecione **OK**.  
   
      Para obter mais informações sobre como criar um conjunto de dados, consulte [Criar um conjunto de dados compartilhado ou inserido &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   

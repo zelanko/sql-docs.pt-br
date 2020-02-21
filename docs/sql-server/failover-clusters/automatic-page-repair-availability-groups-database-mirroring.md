@@ -1,6 +1,7 @@
 ---
-title: 'Reparo automático de página (Grupos de Disponibilidade: espelhamento de banco de dados | Microsoft Docs'
-ms.custom: ''
+title: Reparo automático de página para grupos de disponibilidade e espelhamento de banco de dados
+description: 'Repara automaticamente determinados tipos de corrupção de página quando um banco de dados participa de um grupo de disponibilidade Always On ou de um relacionamento de espelhamento de banco de dados. Este tópico fornece informações sobre os tipos de erros e suas possíveis resoluções. '
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9e445d15401b747be6bd690e4ae6884a831e66de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c8d58b7bdc836f44871560c0d1e9908d1f72f23
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035268"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822647"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Reparo automático de página (Grupos de Disponibilidade: espelhamento de banco de dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

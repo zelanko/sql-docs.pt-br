@@ -1,6 +1,6 @@
 ---
-title: Pesquisar texto com expressões regulares | Microsoft Docs
-ms.custom: ''
+title: Pesquisar texto com expressões regulares
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -16,17 +16,17 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1dba6a77288a4bebba70372ecf6fbd7a1f05dda6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 69ce1c16013b9ad27e390ddd91b0655aee2986d5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264166"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253684"
 ---
 # <a name="search-text-with-regular-expressions"></a>Pesquisar texto com expressões regulares
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-As expressões regulares são notação concisa e flexível para pesquisa e substituição de padrões de texto. Um conjunto específico de expressões regulares pode ser usado no campo **Localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
+As expressões regulares são notação concisa e flexível para pesquisa e substituição de padrões de texto. Um conjunto específico de expressões regulares pode ser usado no campo **Localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Localizar e Substituir**.  
   
 ## <a name="find-using-regular-expressions"></a>Localizar usando expressões regulares  
   
@@ -122,7 +122,7 @@ As expressões regulares são notação concisa e flexível para pesquisa e subs
   
 |Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
-|Alfa|:Al|Faz a correspondência de qualquer caractere. Por exemplo: Alhe faz a correspondência de palavras como "The", "then", e "reached".|  
+|Alpha|:Al|Faz a correspondência de qualquer caractere. Por exemplo: Alhe faz a correspondência de palavras como "The", "then", e "reached".|  
 |Numérico|:Nu|Faz a correspondência de qualquer número ou dígito.|  
 |Pontuação|:Pu|Faz a correspondência de qualquer marca de pontuação, como?, @, ' etc.|  
 |Espaço em branco|:Wh|Faz a correspondência de todos os tipos de espaço em branco, inclusive espaços de publicação e ideográficos.|  

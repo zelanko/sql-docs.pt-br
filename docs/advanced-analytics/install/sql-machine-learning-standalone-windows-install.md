@@ -1,29 +1,29 @@
 ---
 title: Instalar o Machine Learning Server (autônomo)
-description: Configure um servidor de aprendizado de máquina autônomo sem reconhecimento de instância para desenvolvimento de R e Python usando RevoScaleR, revoscalepy, MicrosoftML e outros pacotes.
+description: Configure um servidor autônomo de aprendizado de máquina para Python e R. Um servidor autônomo como instalado pela Instalação do SQL Server é funcionalmente equivalente às versões sem marca SQL do Microsoft Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.date: 01/03/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 02df024801dad815b640f4ef4222a0c8face485b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 319ae61fbdca64bc6f27143bdd4a42aec635d129
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727634"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76891717"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Instalar o R Server (autônomo) ou o Machine Learning Server (autônomo) usando a instalação do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-A instalação do SQL Server inclui uma opção de **recurso compartilhado** para instalar um servidor de aprendizado de máquina autônomo sem reconhecimento de instância que é executado fora do SQL Server. Ele é chamado **Machine Learning Server (autônomo)** e inclui R e Python. 
+A Instalação do SQL Server inclui uma opção de **recurso compartilhado** para instalar um servidor de aprendizado de máquina autônomo executado fora do SQL Server. Ele é chamado **Machine Learning Server (autônomo)** e inclui R e Python. 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-A instalação do SQL Server inclui uma opção de **recurso compartilhado** para instalar um servidor de aprendizado de máquina autônomo sem reconhecimento de instância que é executado fora do SQL Server. No SQL Server 2016, esse recurso é chamado **Microsoft R Server (autônomo)** .  
+A Instalação do SQL Server inclui uma opção de **recurso compartilhado** para instalar um servidor de aprendizado de máquina autônomo executado fora do SQL Server. No SQL Server 2016, esse recurso é chamado **Microsoft R Server (autônomo)** .  
 ::: moniker-end
 
 Um servidor autônomo como instalado pela Instalação do SQL Server é funcionalmente equivalente às versões sem marca SQL do [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), compatível com os mesmos casos de uso e cenários, incluindo:
@@ -196,11 +196,7 @@ Em servidores desconectados, são necessárias etapas adicionais. Você deve obt
 
 3. Se você habilitou a operacionalização para executar como nós da Web e nós de computação para implantações de serviço Web, faça backup do arquivo **AppSettings.json** como uma precaução. Aplicar o SQL Server 2017 CU13 ou posterior revisa esse arquivo, portanto, você pode querer uma cópia de backup para preservar a versão original.
 
-4. Em um dispositivo conectado à Internet, clique no link da atualização cumulativa para sua versão do SQL Server.
-
-  + Atualizações do SQL Server 2019 *(ainda não há atualizações disponíveis)*
-  + [Atualizações do SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
-  + [Atualizações do SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
+4. Em um computador conectado à Internet, baixe a atualização cumulativa mais recente para sua versão em [Atualizações mais recentes para Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server).
 
 5. Baixe a atualização cumulativa mais recente. É um arquivo executável.
 
@@ -214,7 +210,7 @@ Em servidores desconectados, são necessárias etapas adicionais. Você deve obt
 
    + Clique duas vezes em .exe para executar a instalação. Ao instalar uma atualização cumulativa em um servidor sem conectividade com a Internet, você será solicitado a selecionar a localização dos arquivos .cab para R e Python.
 
-8. Após a instalação, em um servidor para o qual você habilitou a operacionalização com nós da Web e nós de computação, edite **AppSettings.json**, adicionando uma entrada "MMLResourcePath", diretamente em "MMLNativePath". Por exemplo:
+8. Após a instalação, em um servidor para o qual você habilitou a implantação com nós da Web e nós de computação, edite **AppSettings.json**, adicionando uma entrada "MMLResourcePath" diretamente em "MMLNativePath". Por exemplo:
 
     ```json
     "ScorerParameters": {

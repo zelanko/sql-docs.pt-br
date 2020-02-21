@@ -14,16 +14,16 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140263"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Criar, modificar e excluir assinaturas controladas por dados
   Uma assinatura controlada por dados é uma assinatura com base em consulta que obtém os valores de dados usados para processar a assinatura em tempo de execução. Quando a assinatura é acionada, uma consulta é processada para obter informações atualizadas sobre destinatários, opções de entrega de relatórios, formatos de renderização e configurações de parâmetro. Os resultados da consulta são combinados com a definição da assinatura para criar uma assinatura dinâmica que usa os dados já mantidos em um banco de dados de funcionários, de clientes ou que contenha informações que podem ser usadas como dados do assinante.  
   
- Para criar uma nova assinatura controlada por dados ou modificar uma assinatura existente, use o **Manage** > **assinaturas** página no portal da web. O **assinaturas** página percorre cada etapa da criação ou modificação de uma assinatura. Para acessar uma assinatura depois de criá-la, use a página **Minhas Assinaturas** e a lista de Assinaturas de um relatório. Para saber como criar uma assinatura controlada por dados, consulte [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Para criar uma nova assinatura controlada por dados ou modificar uma assinatura existente, use a página **Gerenciar** > **Assinaturas** no portal da Web. A página **Assinaturas** mostra cada etapa da criação ou modificação de uma assinatura. Para acessar uma assinatura depois de criá-la, use a página **Minhas Assinaturas** e a lista de Assinaturas de um relatório. Para saber como criar uma assinatura controlada por dados, consulte [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
  Neste artigo:  
   
@@ -36,9 +36,9 @@ ms.locfileid: "67140263"
 -   [Executar a assinatura](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> Gerenciar e excluir uma assinatura controlada por dados  
- Uma assinatura controlada por dados que está em andamento não pode ser interrompida ou excluída por meio do portal da web. Por esse motivo, é vantajoso usar uma agenda compartilhada para acionar a assinatura controlada por dados. Dessa forma, se quiser impedir temporariamente o processamento de uma assinatura, poderá fazer uma pausa na agenda que aciona a assinatura. Para saber mais, consulte [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
+ Uma assinatura controlada por dados que está em andamento não pode ser interrompida nem excluída por meio do portal da Web. Por esse motivo, é vantajoso usar uma agenda compartilhada para acionar a assinatura controlada por dados. Dessa forma, se quiser impedir temporariamente o processamento de uma assinatura, poderá fazer uma pausa na agenda que aciona a assinatura. Para saber mais, consulte [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
- Para excluir uma assinatura controlada por dados, marque a caixa de seleção ao lado do relatório sobre o **assinaturas** página e, em seguida, selecione **excluir**.  
+ Para excluir uma assinatura controlada por dados, marque a caixa de seleção ao lado do relatório na página **Assinaturas** e selecione **Excluir**.  
   
  Para obter instruções sobre como cancelar uma assinatura controlada por dados, consulte [Gerenciar um processo em execução](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
@@ -47,11 +47,11 @@ ms.locfileid: "67140263"
   
 ### <a name="to-create-a-data-driven-subscription-native-mode"></a>Para criar uma assinatura controlada por dados (Modo Nativo)  
   
-1. No portal da web, navegue até a pasta que contém o relatório, clique com botão direito do relatório e selecione **gerenciar** no menu suspenso.  
+1. No portal da Web, navegue até a pasta contendo o relatório, clique com o botão direito do mouse no relatório e selecione **Gerenciar** no menu suspenso.  
   
 2. Selecione a guia **Assinaturas** .  
   
-3. Selecione **+ nova assinatura** sobre o **assinaturas** página.  
+3. Selecione **+ Nova assinatura** na página **Assinaturas**.  
   
 ### <a name="to-create-a-data-driven-subscription-sharepoint-mode"></a>Para criar uma assinatura controlada por dados (Modo do SharePoint)  
   
@@ -61,11 +61,11 @@ ms.locfileid: "67140263"
   
 ### <a name="to-modify-an-existing-data-driven-subscription-native-mode"></a>Para modificar uma assinatura controlada por dados existente (Modo Nativo)  
   
-1. No portal da web, navegue até a pasta que contém o relatório, clique com botão direito do relatório e selecione **gerenciar** no menu suspenso.  
+1. No portal da Web, navegue até a pasta contendo o relatório, clique com o botão direito do mouse no relatório e selecione **Gerenciar** no menu suspenso.  
   
 2. Selecione a guia **Assinaturas** .  
   
-3. Marque a caixa de seleção próxima à assinatura que você deseja modificar e, em seguida, selecione **editar**. Assinaturas controladas por dados terá o valor "controlada por dados" no **tipo** coluna.  
+3. Marque a caixa de seleção da assinatura que você deseja modificar e selecione **Editar**. As assinaturas controladas por dados terão o valor "Controlado por dados" na coluna **Tipo**.  
   
 ### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>Para modificar uma assinatura controlada por dados existente (Modo do SharePoint)  
   
@@ -103,5 +103,5 @@ ms.locfileid: "67140263"
  [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [O portal da Web de um servidor de relatório (modo nativo do SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Trabalhando com assinaturas (portal da web)](../../reporting-services/working-with-subscriptions-web-portal.md) [usar Minhas assinaturas (servidor de relatório de modo nativo)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [Trabalhar com assinaturas (Portal da Web)](../../reporting-services/working-with-subscriptions-web-portal.md) [Usar minhas assinaturas (Servidor de Relatório no Modo Nativo)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
  

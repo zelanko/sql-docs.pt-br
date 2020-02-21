@@ -1,6 +1,6 @@
 ---
 title: Modificar dados SQL usando o RevoScaleR
-description: Tutorial passo a passo sobre como consultar e modificar dados usando a linguagem R no SQL Server.
+description: 'Tutorial 3 do RevoScaleR: como consultar e modificar dados usando a linguagem R no SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65db15d8c6778723ff04f82cde985c4827813339
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 48802f815515948c957c718e4bf666b0d7133670
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727188"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947060"
 ---
 # <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>Consultar e modificar os dados do SQL Server (tutorial do SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lição faz parte do [tutorial do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Este é o tutorial 3 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
-Na lição anterior, você carregou os dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nesta etapa, você pode explorar e modificar dados usando **RevoScaleR**:
+No tutorial anterior, você carregou os dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Neste tutorial, você pode explorar e modificar dados usando o **RevoScaleR**:
 
 > [!div class="checklist"]
 > * Retornar informações básicas sobre as variáveis

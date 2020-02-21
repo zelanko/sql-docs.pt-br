@@ -1,23 +1,24 @@
 ---
-title: Verificar o código do banco de dados usando os testes de unidade do SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Verificar o código do banco de dados usando v
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3e720389f790282f1ad7a33302e2d277128178f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ab6cccf656d0951c5f8fd72bb5863bbe91f0e74d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140946"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243493"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>Verificando o código do banco de dados usando os testes de unidade do SQL Server
+
 Você pode usar os testes de unidade do SQL Server para estabelecer um estado de linha de base para o banco de dados e verificar todas as alterações subsequentes feitas nos objetos de banco de dados.  
   
 Para estabelecer um estado de linha de base para um banco de dados, você cria um projeto de teste e escreve conjuntos de Transact\-SQL que operam em seus objetos de banco de dados. Ao usar esses testes, você pode verificar em um ambiente de desenvolvimento isolado se esses objetos funcionam conforme o esperado. O teste de unidade do SQL Server funciona bem em combinação com o desenvolvimento do banco de dados offline usando projetos de banco de dados do SQL Server (confira [Desenvolvimento de banco de dados offline orientado a projetos](../ssdt/project-oriented-offline-database-development.md) para obter mais informações). Assim que você tiver a linha de base definida dos testes de unidade do SQL Server, poderá usar esses testes para verificar se o banco de dados está funcionando corretamente antes de fazer check-in das alterações para o controle de versão.  

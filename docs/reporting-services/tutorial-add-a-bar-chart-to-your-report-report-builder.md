@@ -9,14 +9,14 @@ ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041173"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de barras ao relatório (Construtor de Relatórios)
-Neste tutorial, você usa um assistente no [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] para criar um gráfico de barras em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Em seguida, adicione um filtro e aprimore o gráfico. 
+Neste tutorial, você usa um assistente no [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] para criar um gráfico de barras em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Em seguida, adicione um filtro e aprimore o gráfico. 
 
 Um gráfico de barras exibe os dados de categoria horizontalmente. Ele pode ajudar a:  
   
@@ -30,7 +30,7 @@ A ilustração a seguir mostra o gráfico de barras que você criará, com as ve
   
  
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, criar um conjunto de dados e escolher uma fonte de dados, consulte o primeiro tutorial desta série: [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Confira instruções passo a passo sobre como navegar até um servidor de relatório, como criar um conjunto de dados e escolher uma fonte de dados no primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 15 minutos.  
   
@@ -85,7 +85,7 @@ Em que você cria um conjunto de dados inserido, escolhe uma fonte de dados comp
   
 8.  (Opcional) Clique no botão Executar ( **!** ) para ver os dados em que o gráfico se baseará.  
   
-9. Clique em **Avançar**.  
+9. Clique em **Próximo**.  
   
 ## <a name="ChartType"></a>2. Criar um gráfico de barras  
  
@@ -93,7 +93,7 @@ Em que você cria um conjunto de dados inserido, escolhe uma fonte de dados comp
   
 2.  Clique em **Barra**e em **Avançar**.  
   
-    Na página **Organizar campos de gráfico** , há quatro campos no painel **Campos disponíveis** : FirstName, LastName, SalesYear2015 e SalesYear2014.  
+    Na página **Organizar campos de gráfico**, há quatro campos no painel **Campos disponíveis**: FirstName, LastName, SalesYear2015 e SalesYear2014.  
   
 3.  Arraste LastName para o painel Categorias.  
   
@@ -101,7 +101,7 @@ Em que você cria um conjunto de dados inserido, escolhe uma fonte de dados comp
   
 5.  Arraste SalesYear2014 até o painel Valores sob SalesYear2015. SalesYear2014 representa o valor das vendas de cada vendedor no ano de 2014.  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
 7.  Clique em **Concluir**.  
   
@@ -291,9 +291,9 @@ O gráfico mostra os cinco primeiros nomes de vendedores dos dados de vendas de 
 
     Você pode salvá-lo no computador ou no servidor de relatório.
   
-4.  Clique em **Salvar**.   
+4.  Clique em **Save** (Salvar).   
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
 Você concluiu com êxito o tutorial Adicionando um gráfico de barras seu relatório. Para saber mais sobre gráficos, consulte [Gráficos](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [Gráficos de Barras](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte Também  

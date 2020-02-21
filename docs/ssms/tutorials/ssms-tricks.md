@@ -1,5 +1,5 @@
 ---
-title: Dicas e truques para usar o SSMS (SQL Server Management Studio)
+title: Dicas e truques ao usar o SSMS
 description: Saiba como incluir e remover comentários de seu código, recuar o texto, filtrar os objetos no pesquisador de objetos, acessar o log de erros do SQL Server e localizar o nome da instância do SQL Server usando o SQL Server Management Studio.
 ms.topic: tutorial
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: d5b52a35bce720e3985a8191335491c50e43c50e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267581"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245505"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Dicas e truques para usar o SSMS (SQL Server Management Studio)
 
@@ -41,7 +41,7 @@ Este artigo apresenta algumas dicas e truques para usar o SSMS (SQL Server Manag
 
 Para testar as etapas deste artigo, você precisará do SQL Server Management Studio, acesso a um SQL Server e um banco de dados do AdventureWorks. 
 
-* Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 * Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Baixe um [banco de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para saber como restaurar um banco de dados no SSMS, consulte [Restaurando um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 

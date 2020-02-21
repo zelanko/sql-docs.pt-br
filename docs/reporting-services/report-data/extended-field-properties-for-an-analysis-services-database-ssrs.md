@@ -9,10 +9,10 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573316"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriedades de campos estendidos para um banco de dados do Analysis Services (SSRS)
@@ -42,20 +42,20 @@ ms.locfileid: "65573316"
   
 |**Propriedade**|**Tipo**|**Descrição ou valor esperado**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**Objeto**|Especifica o valor de dados do campo.|  
+|**Valor**|**Objeto**|Especifica o valor de dados do campo.|  
 |**IsMissing**|**Booliano**|Indica se o campo foi encontrado no conjunto de dados resultante.|  
-|**UniqueName**|**String**|Retorna o nome totalmente qualificado de um nível. Por exemplo, o valor **UniqueName** de um funcionário pode ser *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]* .|  
-|**BackgroundColor**|**String**|Retorna a cor do segundo plano definida no banco de dados para o campo.|  
-|**Color**|**String**|Retorna a cor do primeiro plano definida no banco de dados para o item.|  
-|**FontFamily**|**String**|Retorna o nome da fonte definido no banco de dados para o item.|  
-|**FontSize**|**String**|Retorna o tamanho da fonte definido no banco de dados para o item.|  
-|**FontWeight**|**String**|Retorna a espessura da fonte definida no banco de dados para o item.|  
-|**FontStyle**|**String**|Retorna o estilo da fonte definido no banco de dados para o item.|  
-|**TextDecoration**|**String**|Retorna a formatação de texto especial definida no banco de dados para o item.|  
-|**FormattedValue**|**String**|Retorna um valor formatado para a medida ou o número chave. Por exemplo, a propriedade **FormattedValue** para **Cota do Valor de Vendas** retorna um formato de moeda como US$ 1.124.400,00.|  
+|**UniqueName**|**Cadeia de caracteres**|Retorna o nome totalmente qualificado de um nível. Por exemplo, o valor **UniqueName** de um funcionário pode ser *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]* .|  
+|**BackgroundColor**|**Cadeia de caracteres**|Retorna a cor do segundo plano definida no banco de dados para o campo.|  
+|**Color**|**Cadeia de caracteres**|Retorna a cor do primeiro plano definida no banco de dados para o item.|  
+|**FontFamily**|**Cadeia de caracteres**|Retorna o nome da fonte definido no banco de dados para o item.|  
+|**FontSize**|**Cadeia de caracteres**|Retorna o tamanho da fonte definido no banco de dados para o item.|  
+|**FontWeight**|**Cadeia de caracteres**|Retorna a espessura da fonte definida no banco de dados para o item.|  
+|**FontStyle**|**Cadeia de caracteres**|Retorna o estilo da fonte definido no banco de dados para o item.|  
+|**TextDecoration**|**Cadeia de caracteres**|Retorna a formatação de texto especial definida no banco de dados para o item.|  
+|**FormattedValue**|**Cadeia de caracteres**|Retorna um valor formatado para a medida ou o número chave. Por exemplo, a propriedade **FormattedValue** para **Cota do Valor de Vendas** retorna um formato de moeda como US$ 1.124.400,00.|  
 |**Chave**|**Objeto**|Retorna a chave para um nível.|  
-|**LevelNumber**|**Integer**|Para hierarquias pai-filho, retorna o nível ou o número de dimensões.|  
-|**ParentUniqueName**|**String**|Para hierarquias pai-filho, retorna um nome totalmente qualificado do nível pai.|  
+|**LevelNumber**|**Inteiro**|Para hierarquias pai-filho, retorna o nível ou o número de dimensões.|  
+|**ParentUniqueName**|**Cadeia de caracteres**|Para hierarquias pai-filho, retorna um nome totalmente qualificado do nível pai.|  
   
 > [!NOTE]  
 >  Os valores dessas propriedades de campo estendidas passarão a existir somente se a fonte de dados (por exemplo, o cubo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) fornecer esses valores quando você executar e recuperar os dados de seus conjuntos de dados. Dessa forma, você poderá consultar esses valores da propriedade de campo a partir de qualquer expressão usando a sintaxe descrita na seguinte seção. Entretanto, como esses campos são específicos para esse provedor de dados, as alterações que forem feitas nesse valor não serão salvas com a definição de relatório.  
@@ -95,8 +95,8 @@ FROM [Adventure Works]
 |DateCaption|DateUniqueName|DateDayName|DateValueinOriginalDatatype|DateParentUniqueName|DateMemberKeyinOriginalDatatype|  
 |-----------------|--------------------|-----------------|---------------------------------|--------------------------|-------------------------------------|  
 |Todos os Períodos|[Data].[Data].[Todos os Períodos]|(null)|(null)|(null)|0|  
-|1-Jul-01|[Date].[Date].&[1]|Domingo|7/1/2001|[Data].[Data].[Todos os Períodos]|1|  
-|2-Jul-01|[Date].[Date].&[2]|Segunda-feira|7/2/2001|[Data].[Data].[Todos os Períodos]|2|  
+|1-Jul-01|[Date].[Date].&[1]|Sunday|7/1/2001|[Data].[Data].[Todos os Períodos]|1|  
+|2-Jul-01|[Date].[Date].&[2]|Monday|7/2/2001|[Data].[Data].[Todos os Períodos]|2|  
 |3-Jul-01|[Date].[Date].&[3]|Terça-feira|7/3/2001|[Data].[Data].[Todos os Períodos]|3|  
   
  As consultas MDX padrão incorporadas usando o Designer de Consulta MDX no modo gráfico incluem apenas MEMBER_CAPTION e UNIQUENAME para as propriedades de dimensão. Por padrão, esses valores sempre são do tipo de dados **String**.  
@@ -129,7 +129,7 @@ CELL PROPERTIES
 |Propriedade|Valor|  
 |--------------|-----------|  
 |CellOrdinal|0|  
-|Value|2481|  
+|VALUE|2481|  
 |BACK_COLOR|(null)|  
 |FORE_COLOR|(null)|  
 |FORMATTED_VALUE|2,481|  

@@ -16,10 +16,10 @@ ms.assetid: ca0a3b29-30d1-4d20-bc8d-d3d9ed19ff50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fba716696627f29127d64c07843e6d9dcf2b3ce0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978968"
 ---
 # <a name="gettime-method-javalangstring"></a>Método getTime (java.lang.String)
@@ -34,21 +34,21 @@ ms.locfileid: "67978968"
 public java.sql.Time getTime(java.lang.String sCol)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *sCol*  
   
  Uma **String** que contém o nome do parâmetro.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um objeto de hora.  
+ Um objeto Time.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getTime é especificado pelo método getTime na interface java.sql.CallableStatement.  
   
- Consulte o gráfico intitulado "conversões do método getter" em [noções básicas sobre](../../../connect/jdbc/understanding-data-type-conversions.md) conversões de tipo de dados para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ver quais tipos de dados podem ser recuperados com esse método.  
+ Confira o gráfico intitulado "Conversões de método getter" em [Noções básicas sobre conversões de tipo de dados](../../../connect/jdbc/understanding-data-type-conversions.md) para ver quais tipos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem ser recuperados com esse método.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getTime &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

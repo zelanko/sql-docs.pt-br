@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/12/2019
 ms.openlocfilehash: d2d1a8c853bd4ad577dd1c0ced9aed47b15a2ee7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68258540"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Referência de erros e eventos (Reporting Services)
@@ -28,26 +28,26 @@ Causa e informações de resolução estão disponíveis para os erros mais freq
 
 Os eventos a seguir do servidor de relatório são registrados no log do aplicativo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
-|ID do evento|Tipo|Categoria|Origem|Descrição|  
+|ID do evento|Type|Categoria|Fonte|Descrição|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|Erro|Agendamento|Servidor de relatório|O SQL Server Agent deve estar em execução quando você define uma operação agendada (por exemplo, assinatura e entrega de relatório).|  
 |[107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|Erro|Inicialização/desligamento|Servidor de relatório<br /><br /> Processador de agendamento e entrega|A *\<Source>* não pode se conectar ao banco de dados do servidor de relatório. Para obter mais informações, consulte [Serviço Windows do Servidor de Relatório &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md).|  
 |108|Erro|Extensão|Servidor de relatório<br /><br /> portal da Web|A *\<Source>* não pode carregar uma extensão de entrega, de processamento de dados ou de renderização.<br /><br /> Provavelmente, esse é o resultado de uma implantação incompleta ou remoção de uma extensão. Para obter mais informações, consulte [Implantando uma extensão de processamento de dados](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md) e [Implantando uma extensão de entrega](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md).|  
 |109|Informações|Gerenciamento|Servidor de relatório<br /><br /> portal da Web|Um arquivo de configuração foi modificado. Para saber mais, confira [Arquivos de Configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md).|  
 |110|Aviso|Gerenciamento|Servidor de relatório<br /><br /> portal da Web|Uma configuração em um dos arquivos de configuração foi modificada e não é mais válida. Um valor padrão será usado em vez disso. Para saber mais, confira [Arquivos de Configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md).|  
-|111|Erro|Log|Servidor de relatório<br /><br /> portal da Web|A *\<Source>* não pode criar o log de rastreamento. Para obter mais informações, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
+|111|Erro|Registro em log|Servidor de relatório<br /><br /> portal da Web|A *\<Source>* não pode criar o log de rastreamento. Para obter mais informações, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |112|Aviso|Segurança|Servidor de relatório|O servidor de relatório detectou uma possível negação de ataque de serviço. Para obter mais informações, consulte [Segurança e proteção do Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).|  
-|113|Erro|Log|Servidor de relatório|O servidor de relatório não pode criar um contador de desempenho.|  
+|113|Erro|Registro em log|Servidor de relatório|O servidor de relatório não pode criar um contador de desempenho.|  
 |114|Erro|Inicialização/desligamento|portal da Web|O portal da Web não pode se conectar ao serviço Servidor de Relatório.|  
 |115|Aviso|Agendamento|Processador de agendamento e entrega|Uma tarefa agendada na fila do SQL Server Agent foi modificada ou excluída.|  
-|116|Erro|Internal|Servidor de relatório<br /><br /> portal da Web<br /><br /> Processador de agendamento e entrega|Ocorreu um erro interno.|  
+|116|Erro|Interna|Servidor de relatório<br /><br /> portal da Web<br /><br /> Processador de agendamento e entrega|Ocorreu um erro interno.|  
 |117|Erro|Inicialização/desligamento|Servidor de relatório|O banco de dados do servidor de relatório é uma versão inválida.|  
-|118|Aviso|Log|Servidor de relatório<br /><br /> portal da Web|O arquivo de rastreamento não está mais no local do diretório previsto; um novo arquivo de rastreamento será criado no diretório padrão. Para obter mais informações, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
+|118|Aviso|Registro em log|Servidor de relatório<br /><br /> portal da Web|O arquivo de rastreamento não está mais no local do diretório previsto; um novo arquivo de rastreamento será criado no diretório padrão. Para obter mais informações, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |119|Erro|Ativação|Servidor de relatório<br /><br /> Processador de agendamento e entrega|A *\<Source>* não recebeu acesso ao conteúdo do banco de dados do servidor de relatório.|  
 |120|Erro|Ativação|Servidor de relatório|A chave simétrica não pode ser descriptografada. Provavelmente houve uma alteração na conta em que o serviço é executado. Para obter mais informações, consulte [Configurar e gerenciar chaves de criptografia &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Erro|Inicialização/desligamento|Servidor de relatório|Falha ao iniciar o serviço RPC (Chamada de Procedimento Remoto).|  
-|122|Aviso|Entrega|Processador de agendamento e entrega|O Processador de Agendamento e Entrega não pode se conectar ao servidor de SMTP usado para entrega de email. Para obter mais informações sobre conexões de servidor SMTP, consulte [configurações de email-Reporting Services modo nativo (Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
-|123|Aviso|Log|Servidor de relatório<br /><br /> portal da Web|Falha no servidor de relatório ao gravar o log de rastreamento. Para obter mais informações sobre logs de rastreamento, consulte [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md).|  
+|122|Aviso|Entrega|Processador de agendamento e entrega|O Processador de Agendamento e Entrega não pode se conectar ao servidor de SMTP usado para entrega de email. Confira mais informações sobre as conexões do servidor SMTP, confira [Configurações de email – Modo nativo do Reporting Services (Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
+|123|Aviso|Registro em log|Servidor de relatório<br /><br /> portal da Web|Falha no servidor de relatório ao gravar o log de rastreamento. Para obter mais informações sobre logs de rastreamento, consulte [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |124|Informações|Ativação|Servidor de relatório|O serviço Servidor de Relatório foi iniciado. Para obter mais informações, consulte [Inicializar um Servidor de Relatório &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
 |125|Informações|Ativação|Servidor de relatório|A chave usada para criptografar dados foi extraída com êxito. Para obter mais informações sobre chaves, consulte [Configurar e gerenciar chaves de criptografia &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |126|Informações|Ativação|Servidor de relatório|A chave usada para criptografar dados foi aplicada com êxito. Para obter mais informações sobre chaves, consulte [Configurar e gerenciar chaves de criptografia &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  

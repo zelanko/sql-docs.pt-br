@@ -1,7 +1,6 @@
 ---
-title: Examinar os resultados da reprodução | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Examinar os resultados da reprodução
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,16 +9,20 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6b68d6e5376bdf24efb09c50e3df63ed5810373
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 03c6f6e0bcb58037e362ffd4b3ad20914fd9c328
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949933"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306941"
 ---
 # <a name="review-the-replay-results"></a>Revisar os resultados da reprodução
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Depois que o recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay conclui uma reprodução distribuída, a atividade de reprodução para cada cliente pode ser capturada e salva em arquivos de rastreamento de resultado em cada cliente. Para capturar essa atividade, você deve usar o parâmetro **-o** ao executar a ferramenta de administração com a opção **reproduzir**. Para obter mais informações sobre a opção de reprodução, consulte [Opção Reprodução &#40;Ferramenta de administração de reprodução distribuída&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
+
+Depois que o recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay concluir uma reprodução distribuída, a atividade de reprodução de cada cliente poderá ser capturada e salva em arquivos de rastreamento de resultado em cada cliente. Para capturar essa atividade, você deve usar o parâmetro **-o** ao executar a ferramenta de administração com a opção **reproduzir** . Para obter mais informações sobre a opção de reprodução, consulte [Opção Reprodução &#40;Ferramenta de administração de reprodução distribuída&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   
  O local onde os arquivos de rastreamento de resultado são armazenados é especificado pelo elemento XML `<ResultDirectory>` no arquivo de configuração de cliente, `DReplayClient.xml`, situado em cada cliente. Os arquivos de rastreamento no diretório de resultados do cliente são substituídos em cada reprodução.  
   
@@ -32,8 +35,8 @@ ms.locfileid: "67949933"
   
 |Categoria|Nome de EventClass|Frequência de captura|Ponto de captura|  
 |--------------|---------------------|-----------------------|----------------------|  
-|Eventos reproduzíveis|Audit Login|Uma vez para cada evento Audit Login nos dados de rastreamento originais|Na conclusão bem-sucedida ou na falha do evento|  
-||Audit Logout|Uma vez para cada evento Audit Logout nos dados de rastreamento originais|Na conclusão bem-sucedida ou na falha do evento|  
+|Eventos reproduzíveis|Auditar logon|Uma vez para cada evento Audit Login nos dados de rastreamento originais|Na conclusão bem-sucedida ou na falha do evento|  
+||Auditar logoff|Uma vez para cada evento Audit Logout nos dados de rastreamento originais|Na conclusão bem-sucedida ou na falha do evento|  
 ||SQL:BatchCompleted|Uma vez para cada evento SQL:BatchStarting nos dados de rastreamento originais|Na conclusão bem-sucedida ou na falha do evento|  
 ||RPC:Completed|Uma vez para cada evento RPC:Starting nos dados de rastreamento originais|Na conclusão bem-sucedida ou na falha do evento|  
 |Estatísticas e resultados|Replay Settings Event|Uma vez|Primeiro evento de rastreamento de resultado|  
@@ -52,7 +55,7 @@ ms.locfileid: "67949933"
 ## <a name="event-class-column-mapping"></a>Mapeamento de coluna de classe de evento  
  As figura a seguir lista as colunas do rastreamento de resultado disponíveis para cada tipo de classe de evento que é capturada durante a reprodução.  
   
- ![Event class column mapping](../../tools/distributed-replay/media/eventclassmappings.gif "Event class column mapping")  
+ ![Mapeamento de coluna de classe de evento](../../tools/distributed-replay/media/eventclassmappings.gif "Mapeamento de coluna de classe de evento")  
   
 ## <a name="column-descriptions-for-result-trace"></a>Descrições de coluna para rastreamento de resultado  
  A tabela a seguir descreve as colunas dos dados de rastreamento de resultado.  
@@ -79,8 +82,8 @@ ms.locfileid: "67949933"
   
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Requisitos do Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Configurar o Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: 'Lição 3: Definindo um conjunto de dados para o relatório de tabela (Reporting Services) | Microsoft Docs'
+title: 'Lição 3: definir um conjunto de dados para o relatório de tabela | Microsoft Docs'
+description: Depois de definir a fonte de dados para o relatório paginado, é necessário definir um conjunto de dados. No SQL Server Reporting Services, os dados usados em relatórios são mantidos em um conjunto de dados.
 ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eaa2af570ae363e6a48c8d14e5b73c70e6790b5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 25c62e0cd615748a764937d6dc2b8e4c952e59a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106025"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244314"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lição 3: Definindo um conjunto de dados para o relatório de tabela (Reporting Services)
+# <a name="lesson-3-define-a-dataset-for-the-table-report---sql-server-reporting-services"></a>Lição 3: Definir um conjunto de dados para o relatório de tabela – SQL Server Reporting Services
 
-Depois de definir a fonte de dados, é necessário definir um conjunto de dados. No [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)], os dados usados em relatórios são contidos em um *conjunto de dados*. Um conjunto de dados inclui um ponteiro para uma fonte de dados e uma consulta a ser usada pelo relatório, variáveis e campos calculados.
+Depois de definir a fonte de dados para o relatório paginado, é necessário definir um conjunto de dados. No [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)], os dados usados em relatórios são contidos em um *conjunto de dados*. Um conjunto de dados inclui um ponteiro para uma fonte de dados e uma consulta a ser usada pelo relatório, variáveis e campos calculados.
 
 Use o Designer de Consultas no Designer de Relatórios para criar o conjunto de dados. Para este tutorial, você criará uma consulta que recupera informações de pedido de vendas do banco de dados AdventureWorks2016.
 
@@ -60,7 +61,7 @@ Use o Designer de Consultas no Designer de Relatórios para criar o conjunto de 
     HAVING ppc.Name = 'Clothing'
     ```
 
-7. (Opcional) Selecione o botão **Designer de Consultas**. A consulta é exibida no *Designer de Consultas* baseado em texto. Veja os resultados da consulta selecionando o botão ![Executar](media/ssrs-querydesigner-run.png) **ssrs_querydesigner_run** na barra de ferramentas **Designer de Consultas**. O conjunto de dados exibido contém seis campos de quatro tabelas no banco de dados AdventureWorks2016. A consulta utiliza a funcionalidade Transact-SQL como aliases. Por exemplo, a tabela SalesOrderHeader é chamada *soh*.
+7. (Opcional) Selecione o botão **Designer de Consultas**. A consulta é exibida no *Designer de Consultas* baseado em texto. Para conferir os resultados da consulta, selecione o botão ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) **executar** na barra de ferramentas **Designer de Consultas**. O conjunto de dados exibido contém seis campos de quatro tabelas no banco de dados AdventureWorks2016. A consulta utiliza a funcionalidade Transact-SQL como aliases. Por exemplo, a tabela SalesOrderHeader é chamada *soh*.
 
 8. Selecione **OK** para sair do **Designer de Consultas**.
 
@@ -72,7 +73,7 @@ O painel **Dados do Relatório** exibe os campos e o conjunto de dados Adventure
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Você especificou com êxito uma consulta que recupera dados para o relatório. A seguir, você criará o layout do relatório. Continue na [Lição 4: Adicionando uma tabela ao relatório &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).
+Você especificou com êxito uma consulta que recupera dados para o relatório. A seguir, você criará o layout do relatório. Continue com a [Lição 4: Adicionar uma tabela ao relatório &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).
 
 ## <a name="see-also"></a>Confira também
 

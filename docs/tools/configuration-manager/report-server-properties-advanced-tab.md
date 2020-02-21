@@ -1,6 +1,6 @@
 ---
-title: Propriedades do servidor de relatório (guia Avançado) | Microsoft Docs
-ms.custom: ''
+title: Propriedades do servidor de relatório (guia Avançado)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7214cf97b4f7d23f8845e9a6506d1d778883b497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 42cc01602f1f09958bbff07af7525bb48bca3cc8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058456"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306360"
 ---
 # <a name="report-server-properties-advanced-tab"></a>Propriedades do servidor de relatório (guia Avançado)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,29 +1,38 @@
 ---
 title: Instalar em uma máquina virtual do Azure
-description: Execute soluções de aprendizado de máquina e de ciência de dados do R e do Python em uma máquina virtual do SQL Server na nuvem do Azure.
+description: Execute soluções de aprendizado de máquina e de ciência de dados do R e do Python com o Serviços de Machine Learning do SQL Server em uma máquina virtual na nuvem do Azure.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/09/2018
+ms.date: 01/02/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: aeec25b561822e8083b89e03f0f7e74f40660f7b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: d81237f67c82fd7cc8b9259fcd7a0202ffb7fd4b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727618"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776581"
 ---
-# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Instalar os Serviços de Machine Learning do SQL Server com R e Python em uma máquina virtual do Azure
+# <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>Instalar os Serviços de Machine Learning do SQL Server com R e Python em uma máquina virtual do Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Você pode instalar a integração do R e do Python com os Serviços de Machine Learning em uma máquina virtual do SQL Server no Azure, eliminando as tarefas de instalação e configuração. Depois que a máquina virtual for implantada, os recursos estarão prontos para uso.
- 
-Para obter instruções passo a passo, confira [Como provisionar uma máquina virtual do SQL Server do Windows no portal do Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision).
+Aprenda como instalar o Python e o R com os Serviços de Machine Learning do SQL Server em uma máquina virtual no Azure. Isso elimina as tarefas de instalação e configuração para Serviços de Machine Learning.
 
-É na etapa [Definir configurações do SQL Server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) que você adiciona o aprendizado de máquina à sua instância.
+Siga estas etapas:
+
+1. Provisionar uma máquina virtual do SQL Server no Azure
+1. Desbloquear o firewall
+1. Habilitar retornos de chamada ODBC para clientes remotos
+1. Adicionar protocolos de rede
+
+## <a name="provision-sql-server-virtual-machine-in-azure"></a>Provisionar uma máquina virtual do SQL Server no Azure
+
+Para obter instruções passo a passo, confira [Como provisionar uma máquina virtual do SQL Server do Windows no portal do Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision). 
+
+É na etapa [Definir configurações do SQL Server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) que você adiciona os Serviços de Machine Learning à sua instância.
 
 <a name="firewall"></a>
 

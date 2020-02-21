@@ -9,12 +9,12 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ddf088bc8f7ba3d53bb989145e778deb3472e2a7
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 2afc9fce446d277422c564330c5cc7db254f2d00
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632787"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252002"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Como montar o ADLS Gen2 para a camada do HDFS em um cluster de Big Data
 
@@ -84,7 +84,7 @@ Abra um prompt de comando em um computador cliente que possa acessar o cluster d
 Você também pode fazer a montagem usando chaves de acesso que podem ser obtidas para sua conta do ADLS no portal do Azure.
 
  > [!TIP]
-   > Para obter mais informações sobre como encontrar a chave de acesso (`<storage-account-access-key>`) para sua conta de armazenamento, confira [Exibir chaves de conta e cadeia de conexão](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string).
+   > Para obter mais informações sobre como encontrar a chave de acesso (`<storage-account-access-key>`) para sua conta de armazenamento, confira [Exibir chaves de conta e cadeia de conexão](/azure/storage/common/storage-account-keys-manage#view-access-keys-and-connection-string).
 
 ### <a name="set-environment-variable-for-access-key-credentials"></a>Definir variável de ambiente para credenciais de chave de acesso
 

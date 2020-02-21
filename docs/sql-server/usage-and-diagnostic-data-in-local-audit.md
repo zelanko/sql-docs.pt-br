@@ -1,6 +1,7 @@
 ---
-title: Auditoria local para coleta de dados de diagnóstico e uso do SQL Server | Microsoft Docs
-ms.custom: ''
+title: Auditoria local para coleta de dados de diagnóstico e uso
+description: Saiba mais sobre a auditoria local usada pelo SQL Server para coletar e enviar dados de uso e diagnóstico para a Microsoft.
+ms.custom: seo-lt-2019
 ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: security
@@ -13,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3c7697d72aa98429bdaff64044f447dd11384f6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984771"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558029"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Auditoria local para coleta de dados de diagnóstico e uso do SQL Server (Programa de Aperfeiçoamento da Experiência do Usuário)
 
@@ -30,7 +31,7 @@ O Microsoft SQL Server contém recursos habilitados para Internet que podem cole
 
 A partir do SQL Server 2016 CU2, é configurável no nível da instância no Mecanismo de Banco de Dados do SQL Server e o SSAS (Analysis Services). No SQL Server 2016 CU4 e no SQL Server 2016 SP1, a auditoria local também está habilitada para o SQL Server Integration Services (SSIS). Outros componentes do SQL Server que são instalados durante a instalação e as ferramentas do SQL Server que são baixadas ou instaladas após a instalação não têm o recurso de auditoria local para coleta de dados de diagnóstico e uso.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
  - Não há suporte para remover ou desabilitar o serviço Programa de Aperfeiçoamento da Experiência do Usuário do SQL. 
  - Não há suporte para remover os recursos do Programa de Aperfeiçoamento da Experiência do Usuário do SQL do Grupo de Clusters. 
@@ -79,10 +80,10 @@ Crie uma nova pasta (diretório da auditoria local) em que a auditoria local gra
 
   ||Decisão de design|Recomendação|  
   |------|-----------------|----------|  
-  |![Caixa de seleção](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Disponibilidade de espaço |Com uma carga de trabalho moderada com cerca de 10 bancos de dados, planeje ter cerca de 2 MB de espaço em disco por banco de dados por instância.|  
-|![Caixa de seleção](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Diretórios separados | Crie um diretório para cada instância. Por exemplo, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* para uma instância do SQL Server chamada `MSSQLSERVER`. Isso simplifica o gerenciamento de arquivos.
-|![Caixa de seleção](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Pastas separadas |Use uma pasta específica para cada serviço. Por exemplo, para um determinado nome de instância, tenha uma pasta para o mecanismo de banco de dados. Se uma instância do Analysis Services usar o mesmo nome de instância, crie uma pasta separada para o Analysis Services. Ter instâncias do Mecanismo de Banco de Dados e do Analysis Services configuradas para a mesma pasta fará com que a auditoria local grave no mesmo arquivo de log para as duas instâncias.| 
-|![Caixa de seleção](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Conceder permissões para a conta de logon do serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server|Habilite acesso para **Listar Conteúdo da Pasta**, **Ler** e **Gravar** à conta de logon do serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server|
+  |![Caixa de seleção](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Disponibilidade de espaço |Com uma carga de trabalho moderada com cerca de 10 bancos de dados, planeje ter cerca de 2 MB de espaço em disco por banco de dados por instância.|  
+|![Caixa de seleção](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Diretórios separados | Crie um diretório para cada instância. Por exemplo, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* para uma instância do SQL Server chamada `MSSQLSERVER`. Isso simplifica o gerenciamento de arquivos.
+|![Caixa de seleção](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Pastas separadas |Use uma pasta específica para cada serviço. Por exemplo, para um determinado nome de instância, tenha uma pasta para o mecanismo de banco de dados. Se uma instância do Analysis Services usar o mesmo nome de instância, crie uma pasta separada para o Analysis Services. Ter instâncias do Mecanismo de Banco de Dados e do Analysis Services configuradas para a mesma pasta fará com que a auditoria local grave no mesmo arquivo de log para as duas instâncias.| 
+|![Caixa de seleção](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Conceder permissões para a conta de logon do serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server|Habilite acesso para **Listar Conteúdo da Pasta**, **Ler** e **Gravar** à conta de logon do serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server|
 
 
 ### <a name="grant-permissions-to-the-sql-server-ceip-service-logon-account"></a>Conceder permissões para a conta de logon do serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server
@@ -111,19 +112,22 @@ Crie uma nova pasta (diretório da auditoria local) em que a auditoria local gra
    | :------ | :----------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.*nome da instância*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.*nome da instância*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**15**.*Your-Instance-Name*\\CPE |
    | &nbsp; | &nbsp; |
 
    | Versão | ***Analysis Services*** – chave do Registro |
    | :------ | :------------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.*nome da instância*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.*nome da instância*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**15**.*Your-Instance-Name*\\CPE |  
    | &nbsp; | &nbsp; |
 
-  | Versão | ***Integration Services*** – chave do Registro |
-  | :------ | :---------------------------------- |
-  | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
-  | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
-  | &nbsp; | &nbsp; |
+   | Versão | ***Integration Services*** – chave do Registro |
+   | :------ | :---------------------------------- |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
+   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**150** |
+   | &nbsp; | &nbsp; |
 
 1. Clique com o botão direito do mouse no caminho do CPE e escolha **Novo**. Selecione **Valor de cadeia de caracteres**.
 
@@ -156,6 +160,7 @@ O Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server deve re
     - Para o Integration Services, 
         - Para o SQL 2016, use *Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Integration Services 13.0*.
         - Para o SQL 2017, use *Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Integration Services 14.0*.
+    - No SQL 2019, use *Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Integration Services 15.0*.
 
 1. Clique com o botão direito do mouse no serviço e escolha Reiniciar. 
 
@@ -190,7 +195,7 @@ A auditoria local produzirá um arquivo de log por dia. Os arquivos de log estar
 | Instância | instanceUniqueID, correlationID, clientVersion 
 | Session | sessionID, traceName 
 | Consulta | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
-| data |  data 
+| Dados |  data 
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>Definição e exemplos de pares nome/valor 
 

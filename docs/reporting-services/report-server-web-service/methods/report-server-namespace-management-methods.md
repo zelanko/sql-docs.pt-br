@@ -14,10 +14,10 @@ ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7639cd7ce7cd33f59fbc65116264a8b887879b77
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72278290"
 ---
 # <a name="report-server-namespace-management-methods"></a>Métodos de gerenciamento de namespace do Servidor de Relatório
@@ -28,7 +28,7 @@ ms.locfileid: "72278290"
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|Cancela a execução de um trabalho.|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|Adiciona uma pasta ao banco de dados do servidor de relatório ou à biblioteca do SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|Adiciona um novo item a um banco de dados do servidor de relatório ou à biblioteca do SharePoint. Esse método aplica-se aos tipos de item **Report**, **Model**, **Dataset**, **Component**, **Resource** e **DataSource**.|  
-|M:ReportService2010.ReportingService2010.CreateReportEditSession (System. String, System. String, System. Byte [], ReportService2010. Warning [] @)|Cria uma nova sessão de edição de relatório.|  
+|M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String, System.String,System.Byte[],ReportService2010.Warning[]@)|Cria uma nova sessão de edição de relatório.|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|Remove um item do banco de dados do servidor de relatório ou da biblioteca do SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|Retorna os itens do banco de dados do servidor de relatório ou da biblioteca do SharePoint que correspondem aos critérios de pesquisa especificados.|  
 |<xref:ReportService2010.ReportingService2010.FireEvent%2A>|Dispara um evento baseado nos parâmetros fornecidos.|  
@@ -62,7 +62,7 @@ ms.locfileid: "72278290"
   
 ## <a name="see-also"></a>Consulte Também  
  [Criando aplicativos usando o serviço Web e o .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Serviço Web do Servidor de Relatório](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Serviço Web Servidor de Relatórios](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Métodos do serviço Web Servidor de Relatórios](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
  [Referência técnica &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   

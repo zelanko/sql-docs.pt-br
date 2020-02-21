@@ -11,10 +11,10 @@ ms.assetid: 031c01e2-2c65-4fe4-9700-fdbcc7a39f30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2fbe3b6c1721720720b06bdcf4122a289589e639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977455"
 ---
 # <a name="isqlserverconnection-interface"></a>Interface ISQLServerConnection
@@ -33,8 +33,8 @@ ms.locfileid: "67977455"
 public interface ISQLServerConnection  
 ```  
   
-## <a name="remarks"></a>Remarks  
- Essa interface é implementada pela [classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
+## <a name="remarks"></a>Comentários  
+ Essa interface é implementada pela [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
  Essa interface expõe o seguinte campo específico do [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]:  
   

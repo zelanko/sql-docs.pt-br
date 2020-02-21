@@ -1,27 +1,26 @@
 ---
-title: 'Início Rápido: Tipos de dados do R'
-titleSuffix: SQL Server Machine Learning Services
-description: Neste guia de início rápido, saiba como trabalhar com tipos de dados e objetos de dados no R e no SQL Server com os Serviços de Machine Learning do SQL Server.
+title: 'Início Rápido: Estruturas de dados, tipos de dados e objetos de R'
+description: Neste início rápido, você aprenderá a usar estruturas de dados, tipos de dados e objetos ao usar R nos Serviços de Machine Learning do SQL Server. Você aprenderá como mover dados entre o R e o SQL Server e os problemas comuns que podem ocorrer.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4dab7cca8edcc01052ced81ec33a1f411da7ba9a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: a3f978865d2fdd643650a7c7308adb65d2c79fa7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726980"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76916412"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Início Rápido: Manipular tipos de dados e objetos usando o R nos Serviços de Machine Learning do SQL Server
+# <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Início Rápido: Estruturas de dados, tipos de dados e objetos usando o R nos Serviços de Machine Learning do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Neste início rápido, você aprenderá sobre problemas comuns que ocorrem ao mover dados entre o R e o SQL Server. A experiência obtida por meio deste exercício fornece um contexto essencial ao trabalhar usando dados em seu próprio script.
+Neste início rápido, você aprenderá a usar estruturas de dados e tipos de dados ao usar R nos Serviços de Machine Learning do SQL Server. Você aprenderá como mover dados entre o R e o SQL Server e os problemas comuns que podem ocorrer.
 
 Os problemas comuns que se deve conhecer de antemão incluem:
 
@@ -124,7 +123,7 @@ Por enquanto, apenas esteja ciente de que você precisa verificar os resultados 
 
 ## <a name="implicit-conversion-of-data-objects"></a>Conversão implícita de objetos de dados
 
-Cada objeto de dados R tem suas próprias regras para como os valores são manipulados quando combinado com outros objetos de dados se os objetos de dados têm o mesmo número de dimensões ou se qualquer objeto de dados contém tipos de dados heterogêneos.
+Cada objeto de dados R tem suas próprias regras para o modo como os valores são manipulados quando combinados com outros objetos de dados se os objetos de dados têm o mesmo número de dimensões ou se qualquer objeto de dados contém tipos de dados heterogêneos.
 
 Primeiro, crie uma pequena tabela de dados de teste.
 
@@ -163,7 +162,7 @@ Nos bastidores, a coluna de três valores é convertida em uma matriz de coluna 
 |---|---|---|---|
 |12|13|14|15|
 |120|130|140|150|
-|1200|1300|1400|1500|
+|1200|1300|1\.400|1500|
 
 No entanto, observe o que acontece quando você altera o tamanho da matriz `y`.
 

@@ -9,10 +9,10 @@ ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578773"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas
@@ -20,9 +20,9 @@ ms.locfileid: "65578773"
   
  ![rs_DrillThruDrilldownEtc](../../reporting-services/report-design/media/rs-drillthrudrilldownetc.gif "rs_DrillThruDrilldownEtc")  
   
- A. Relatório detalhado  
+ a. Relatório detalhado  
   
- B. sub-relatório  
+ B. Sub-relatório  
   
  C. Regiões de dados aninhadas  
   
@@ -36,9 +36,9 @@ ms.locfileid: "65578773"
 ##  <a name="SummaryCharacteristics"></a> Resumo das características  
  Esta tabela resume essas características diferentes. Os detalhes estarão em seções separadas posteriormente neste tópico. A busca detalhada não está incluída nessas comparações porque é possível aplicar a ação de exibição e ocultação a qualquer item de relatório.  
   
-|Característica|Sub-relatório|detalhamento|aninhado|  
+|Característica|Sub-relatório|Detalhamento|aninhado|  
 |-----------|---------------|------------------|------------|  
-|Usa o conjunto de dados do relatório principal|Igual ou diferente|Igual ou diferente|Igual|  
+|Usa o conjunto de dados do relatório principal|Igual ou diferente|Igual ou diferente|Idêntico|  
 |Recupera dados|Dados recuperados ao mesmo tempo que o relatório principal|Dados recuperaram um relatório detalhado por vez|Dados recuperados todos ao mesmo tempo que o relatório principal|  
 |São processados e renderizados|Com o relatório principal|Quando o link é clicado|Com o relatório principal.|  
 |É executado|Mais lenta (mas recupera todos os dados com o relatório principal)|Mais rápida (mas não recupera todos os dados com o relatório principal)|Mais rápida (e recupera todos os dados com o relatório principal)|  

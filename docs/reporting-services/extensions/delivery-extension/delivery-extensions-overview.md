@@ -12,10 +12,10 @@ ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 69dce8309f96988a9d339aefbb684116c0df2eb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193772"
 ---
 # <a name="delivery-extensions-overview"></a>Visão geral de extensões de entrega
@@ -28,7 +28,7 @@ ms.locfileid: "63193772"
 |Email do servidor de relatório|Usa um servidor SMTP para enviar relatórios de email a usuários individuais ou a grupos.|  
 |Compartilhamento de arquivos do servidor de relatórios|Usado para distribuir relatórios em sua organização para o compartilhamentos de arquivos de rede. Oferece a capacidade de copiar um relatório automaticamente para um compartilhamento de arquivo em uma agenda designada.|  
   
- ![Arquitetura de extensão de entrega do Reporting Services](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Arquitetura de extensão de entrega do Reporting Services")  
+ ![Arquitetura da extensão de entrega do Reporting Services](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Arquitetura da extensão de entrega do Reporting Services")  
 Arquitetura da extensão de entrega do Reporting Services  
   
  As extensões de entrega são emparelhadas com as assinaturas. Durante a criação de uma assinatura, um usuário pode escolher uma das extensões de entrega disponíveis para determinar como o relatório será entregue. No [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], as assinaturas estão localizadas no banco de dados do servidor de relatório. Quando ocorre um evento, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] corresponde o evento às assinaturas contidas no banco de dados do servidor de relatório. Para cada assinatura ligada ao evento, o servidor de relatório criará uma notificação. Para assinaturas controladas por dados, uma notificação será criada para cada destinatário. Depois que a notificação for criada, o servidor de relatório invocará uma determinada extensão de entrega e passará valores para as configurações de extensão especificadas na notificação. A extensão de entrega envia a notificação ao usuário como especificado pela extensão de entrega selecionada.  

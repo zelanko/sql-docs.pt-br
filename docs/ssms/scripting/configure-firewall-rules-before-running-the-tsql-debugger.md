@@ -1,5 +1,7 @@
 ---
-title: Configurar regras de firewall antes de executar o Depurador TSQL
+title: Configurar regras de firewall antes de executar o depurador do T-SQL
+description: Saiba como configurar as regras de firewall do Windows antes de executar o depurador T-SQL (Transact-SQL) quando conectado a um SQL Server no SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
@@ -19,21 +21,20 @@ ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
 ms.date: 10/20/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd9d501f8acdbdbbc9a2942ef522714a445e62fb
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: de184b30270ff301e343b1598327a449907fb508
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097945"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558249"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurar regras de firewall antes de executar o Depurador TSQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-As regras do Firewall do Windows devem ser configuradas para habilitar a depuração do [!INCLUDE[tsql](../../includes/tsql-md.md)] quando conectado a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que esteja em execução em outro computador que não o do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+As regras do Firewall do Windows devem ser configuradas para habilitar a depuração do [!INCLUDE[tsql](../../includes/tsql-md.md)] quando conectado a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que esteja em execução em outro computador que não o do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 

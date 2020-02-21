@@ -16,10 +16,10 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 35355b32c8e4b59618cf146d9de04f3242ec6e6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66403271"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurar um servidor de relatório no modo nativo para a Administração Local (SSRS)
@@ -93,7 +93,7 @@ ms.locfileid: "66403271"
   
 11. Clique em **Adicionar**.  
   
-12. Escolha **OK**.  
+12. Selecione **OK**.  
   
 ###  <a name="bkmk_configure_folder_settings"></a> Configurações de pasta do portal da Web  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66403271"
   
 5.  Selecione **Gerenciador de Conteúdo**.  
   
-6.  Escolha **OK**.  
+6.  Selecione **OK**.  
   
 ###  <a name="bkmk_configure_site_settings"></a> Configurações de site do portal da Web  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66403271"
 
 5.  Selecione **Administrador do Sistema**.  
   
-6.  Escolha **OK**.  
+6.  Selecione **OK**.  
   
 7.  Fechar portal da Web.  
   

@@ -16,13 +16,13 @@ ms.assetid: 55c6c8b6-dfad-499f-befa-042c1caba17f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 924db3a5f26fad62baaded79471786619d1ef9ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65569127"
 ---
-# <a name="msreportserverinstance-properties---instanceid"></a>Propriedades de MSReportServer_Instance – InstanceID
+# <a name="msreportserver_instance-properties---instanceid"></a>Propriedades de MSReportServer_Instance – InstanceID
   Esse objeto dá suporte à infraestrutura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e não destina-se a ser usado diretamente em seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,6 +39,6 @@ public string InstanceID;
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
+ [Membros de MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

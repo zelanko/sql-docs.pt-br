@@ -1,5 +1,5 @@
 ---
-title: Criar, excluir ou modificar uma pasta - Reporting Services | Microsoft Docs
+title: Criar, excluir ou modificar uma pasta – Reporting Services | Microsoft Docs
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 874fb7ba143c8f08a0f25501e1852b4d2b280cb2
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492852"
 ---
-# <a name="create-delete-or-modify-a-folder---reporting-services"></a>Criar, excluir ou modificar uma pasta - Reporting Services
+# <a name="create-delete-or-modify-a-folder---reporting-services"></a>Criar, excluir ou modificar uma pasta – Reporting Services
   É possível criar pastas para organizar e administrar os itens publicados em um servidor de relatório. Criar pastas pode ajudar os usuários a localizar relatórios de seu interesse. Para gerenciadores de conteúdo, pastas fornecem uma estrutura para a aplicação de permissões. É possível criar atribuições de função em pastas específicas para restringir o acesso a relatórios em desenvolvimento ou que não devem ser distribuídos amplamente.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
@@ -64,7 +64,7 @@ ms.locfileid: "67492852"
   
 6.  Ou, para remover a pasta e seu conteúdo, clique em **Excluir**.  
   
-7.  Clique em **Aplicar** para salvar as alterações.  
+7.  Clique em **Aplicar** para salvar os detalhes.  
 
 ::: moniker-end
 
@@ -74,39 +74,39 @@ ms.locfileid: "67492852"
   
 1. Abra [o portal da Web de um servidor de relatório (Modo Nativo do SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
-2. Navegue até a pasta ou subpasta onde você deseja localizar a nova pasta. Selecione o **página inicial** pasta selecionando o **procurar** na barra de ferramentas na parte superior esquerda da página para criá-lo na parte superior da hierarquia de pastas.  
+2. Navegue até a pasta ou subpasta na qual você deseja colocar a nova pasta. Selecione a pasta **Página Inicial** selecionando o botão **Procurar** na barra de ferramentas na parte superior esquerda da página para criá-la na parte superior da hierarquia de pastas.  
   
-3. Selecione o **New** botão na parte superior direita da barra de ferramentas de servidor de relatório e, em seguida, selecione **pasta** no menu suspenso.  
+3. Selecione o botão **Novo** na parte superior direita da barra de ferramentas do servidor de relatório e selecione **Pasta** no menu suspenso.  
   
-4. No **criar uma nova pasta (nome da pasta atual)** caixa de diálogo, digite o nome da nova pasta a ser criado. Um nome de pasta pode incluir espaços, mas não pode incluir caracteres reservados usados para codificação de URL: \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|. Você também não pode digitar uma série de nomes de pasta para criar várias pastas de uma vez.  
+4. Na caixa de diálogo **Criar uma nova pasta em (nome da pasta atual)** , digite o nome da nova pasta a ser criada. Um nome de pasta pode incluir espaços, mas não pode incluir caracteres reservados para uso na codificação de URL: \;\? \: \@ \& \= \+ \, \$ \/ \* \< \> \|. Você também não pode digitar uma série de nomes de pasta para criar várias pastas de uma vez.  
   
-5. Selecione **criar** para concluir a ação.  
+5. Selecione **Criar** para concluir a ação.  
   
 ## <a name="to-delete-a-folder"></a>Para excluir uma pasta  
   
-1. No portal da web, navegar na hierarquia de pasta e localize a pasta que você deseja excluir.  
+1. No portal da Web, navegue na hierarquia de pastas e localize a pasta a excluir.  
   
-2. Direito-click-a pasta e selecione **excluir** no menu suspenso.  
+2. Clique com o botão direito do mouse na pasta e selecione **Excluir** no menu suspenso.  
   
-3. Selecione o **exclua** botão na **excluir <foldername>**  caixa de diálogo para confirmar a exclusão.  
+3. Selecione o botão **Excluir** na caixa de diálogo **Excluir <foldername>**  para confirmar a exclusão.  
   
 ## <a name="to-modify-a-folders-properties"></a>Para modificar as propriedades de uma pasta  
   
-1. No portal da web, navegar na hierarquia de pasta e localize a pasta que você deseja excluir.  
+1. No portal da Web, navegue na hierarquia de pastas e localize a pasta a excluir.  
   
-2. Direito-click-a pasta e selecione **excluir** no menu suspenso.  
+2. Clique com o botão direito do mouse na pasta e selecione **Excluir** no menu suspenso.  
   
-3. Selecione a guia **Propriedades**. O **propriedades** página é exibida por padrão.  
+3. Clique na guia **Propriedades**. A página **Propriedades** é exibida por padrão.  
   
-4. Você pode alterar o nome da pasta na *nome** caixa de texto.  
+4. Você pode alterar o nome da pasta na caixa de texto *Nome**.  
   
-5. Você pode adicionar ou alterar a descrição da pasta na *descrição** caixa de texto.  
+5. Você pode adicionar ou alterar a descrição da pasta na caixa de texto *Descrição**.  
   
-6. Você pode ocultar ou un-ocultar a pasta, marcando ou desmarcando as **Ocultar este item** caixa de seleção, respectivamente.  
+6. Você pode ocultar ou cancelar a ocultação da pasta respectivamente marcando ou desmarcando a caixa de seleção **Ocultar este item**.  
   
-7. Selecione **aplicar** para salvar as alterações de propriedades.  
+7. Selecione **Aplicar** para salvar as alterações de propriedades.  
   
-8. Opcionalmente, você pode mover ou excluir a pasta selecionando o **mova** ou **excluir** botões na parte superior dos **propriedades** página. Consulte a [mover ou excluir um Item (portal da web)](../../reporting-services/report-server/move-or-delete-an-item-report-manager.md) artigo para obter mais informações.  
+8. Opcionalmente, mova ou exclua a pasta selecionando os botões **Mover** ou **Excluir** na parte superior da página **Propriedades**. Confira mais informações no artigo [Mover ou excluir um item (portal da Web)](../../reporting-services/report-server/move-or-delete-an-item-report-manager.md).  
   
 ## <a name="see-also"></a>Confira também  
  [Criar, excluir ou modificar uma pasta (portal da Web)](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)   

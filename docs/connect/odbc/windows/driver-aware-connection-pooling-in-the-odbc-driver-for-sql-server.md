@@ -11,10 +11,10 @@ ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97ddd5aa4abf926ecd4e68e89bef63b8f25ce323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68009975"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Pooling de conexão com reconhecimento de driver no driver ODBC para SQL Server
@@ -24,12 +24,12 @@ ms.locfileid: "68009975"
   
 -   Independentemente das propriedades de conexão, as conexões que usam `SQLDriverConnect` entram em um pool separado das conexões que usam `SQLConnect`.
 - Ao usar a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e o pool de conexões com reconhecimento de driver, o driver não usa o contexto de segurança do usuário do Windows do thread atual para separar as conexões no pool. Ou seja, se as conexões forem equivalentes em seus parâmetros para cenários de representação do Windows com Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e se estiverem usando as mesmas credenciais de Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para se conectar ao back-end, diferentes usuários do Windows poderão potencialmente usar o mesmo pool de conexões. Ao usar a Autenticação do Windows e o pool de conexões com reconhecimento de driver, o driver usa o contexto de segurança do usuário do Windows para separar as conexões no pool. Ou seja, para cenários de representação do Windows, diferentes usuários do Windows não compartilharão conexões mesmo se elas usarem os mesmos parâmetros.
-- Ao usar o Azure Active Directory e o pool de conexões com suporte a Driver, o driver também usa o valor de autenticação para determinar a associação no pool de conexões.
+- Quando usar o Azure Active Directory e o pool de conexões com reconhecimento de driver, o driver também usará o valor de Autenticação para determinar a associação no pool de conexões.
   
 -   O pool de conexões com reconhecimento de driver impede que uma conexão inválida seja retornada do pool.  
   
--   O pool de conexões com reconhecimento de driver reconhece os atributos de conexão específicos do driver. Portanto, se uma conexão usar `SQL_COPT_SS_APPLICATION_INTENT` definida como somente leitura, essa conexão obterá seu próprio pool de conexões.
--   A configuração `SQL_COPT_SS_ACCESS_TOKEN` do atributo faz com que uma conexão seja agrupada separadamente 
+-   O pool de conexões com reconhecimento de driver reconhece os atributos de conexão específicos do driver. Portanto, se uma conexão usar `SQL_COPT_SS_APPLICATION_INTENT` definido como somente leitura, essa conexão obterá seu próprio pool de conexões.
+-   Definir o atributo `SQL_COPT_SS_ACCESS_TOKEN` faz com que uma conexão seja agrupada separadamente 
   
 Se uma das IDs de atributo de conexão ou palavras-chave de cadeia de conexão a seguir for diferente entre a cadeia de conexão e a cadeia de conexão em pool, o driver usará uma conexão em pool. No entanto, o desempenho será melhor se todas as IDs de atributo de conexão ou palavras-chave de cadeia de conexão corresponderem. Para corresponder a uma conexão no pool, o driver redefine o atributo. O desempenho é prejudicado porque, para redefinir os parâmetros a seguir, é necessária uma chamada de rede extra.  
   
@@ -67,7 +67,7 @@ Se uma das IDs de atributo de conexão ou palavras-chave de cadeia de conexão a
     
 - Se houver uma diferença em qualquer um dos atributos de conexão a seguir entre a cadeia de conexão e uma cadeia de conexão em pool, uma conexão em pool não será usada.  
   
-    |attribute|ODBC Driver 13|ODBC Driver 11|  
+    |Atributo|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|Sim|Sim|
     |`SQL_ATTR_PACKET_SIZE`|Sim|Sim|
@@ -107,7 +107,7 @@ Se uma das IDs de atributo de conexão ou palavras-chave de cadeia de conexão a
   
      Se você alterar um dos atributos de conexão a seguir, uma conexão existente poderá ser reutilizada.  O driver redefinirá o valor conforme a necessidade. O driver pode redefinir esses atributos no lado do cliente sem fazer uma chamada de rede extra.  
   
-    |attribute|ODBC Driver 13|ODBC Driver 11|  
+    |Atributo|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
     |Todos os atributos de instrução|Sim|Sim|
     |`SQL_ATTR_AUTOCOMMIT`|Sim|Sim|

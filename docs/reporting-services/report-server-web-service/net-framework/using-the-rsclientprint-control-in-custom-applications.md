@@ -14,10 +14,10 @@ ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a2c548860065672147428c6a5b64bf4ac8be4b79
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593773"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usando o controle RSClientPrint em aplicativos personalizados
@@ -62,7 +62,7 @@ ms.locfileid: "73593773"
   
 ### <a name="rsclientprint-properties"></a>Propriedades do RSClientPrint  
   
-|Propriedade|Tipo|RW|Padrão|Descrição|  
+|Propriedade|Type|RW|Padrão|Descrição|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|RW|configuração de relatório|Obtém ou define a margem esquerda. O valor padrão, caso não seja definido pelo desenvolvedor ou especificado no relatório, é 12,2 milímetros.|  
 |MarginRight|Double|RW|configuração de relatório|Obtém ou define a margem direita. O valor padrão, caso não seja definido pelo desenvolvedor ou especificado no relatório, é 12,2 milímetros.|  
@@ -71,8 +71,8 @@ ms.locfileid: "73593773"
 |PageWidth|Double|RW|configuração de relatório|Obtém ou define a largura da página. O valor padrão, caso não seja definido pelo desenvolvedor ou pela definição de relatório, será 215,9 milímetros.|  
 |PageHeight|Double|RW|configuração de relatório|Obtém ou define a altura da página. O valor padrão, caso não seja definido pelo desenvolvedor ou pela definição de relatório, é 279,4 milímetros.|  
 |Cultura|Int32|RW|Localidade do navegador|Especifica o LCID (identificador de localidade). Este valor determina a unidade de medida para a entrada de usuário. Por exemplo, se um usuário digitar **3**, o valor será medido em milímetros, caso o idioma seja o francês ou em polegadas se o idioma for o inglês (Estados Unidos). Os valores válidos incluem: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|UICulture|Cadeia de caracteres|RW|Cultura do cliente|Especifica localização da cadeia de caracteres da caixa de diálogo. O texto da caixa de diálogo Imprimir está localizado para estes idiomas: chinês simplificado, chinês tradicional, inglês, francês, alemão, italiano, japonês, coreano e espanhol. Os valores válidos incluem: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|Authenticate|Booliano|RW|Falso|Especifica se o controle emite um comando GET para o servidor de relatório para iniciar uma conexão de impressão fora de sessão.|  
+|UICulture|String|RW|Cultura do cliente|Especifica localização da cadeia de caracteres da caixa de diálogo. O texto da caixa de diálogo Imprimir está localizado para estes idiomas: chinês simplificado, chinês tradicional, inglês, francês, alemão, italiano, japonês, coreano e espanhol. Os valores válidos incluem: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|Authenticate|Boolean|RW|Falso|Especifica se o controle emite um comando GET para o servidor de relatório para iniciar uma conexão de impressão fora de sessão.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Quando definir a propriedade Authenticate  
  Quando você imprime em uma sessão do navegador, não precisa definir a propriedade **Authenticate**. No contexto de uma sessão ativa, todas as solicitações do controle de impressão para o servidor de relatório serão manipuladas por meio do navegador. O navegador define as variáveis de sessão necessárias para a comunicação com o servidor de relatório.  
@@ -99,11 +99,11 @@ ms.locfileid: "73593773"
 ### <a name="rsprintclient-support-for-the-print-method"></a>Suporte de RSPrintClient para o método de impressão  
  O objeto **RSClientPrint** dá suporte ao método **Print** usado para iniciar a caixa de diálogo Imprimir. O método **Print** tem os argumentos a seguir.  
   
-|Argumento|E/S|Tipo|Descrição|  
+|Argumento|E/S|Type|Descrição|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|Entrada|Cadeia de caracteres|Especifica o diretório virtual do servidor de relatório (por exemplo, `https://adventure-works/reportserver`).|  
-|ReportPathParameters|Entrada|Cadeia de caracteres|Especifica o nome completo para o relatório no namespace da pasta do servidor de relatório, incluindo os parâmetros. Os relatórios são recuperados por meio do acesso à URL. Por exemplo:: "/AdventureWorks Sample Reports/Resumo de Vendas do Funcionário&EmpID=1234"|  
-|ReportName|Entrada|Cadeia de caracteres|O nome curto do relatório (no exemplo anterior, o nome curto é Resumo de Vendas do Funcionário). Ele será exibido na caixa de diálogo Imprimir e na fila de impressão.|  
+|ServerPath|No|String|Especifica o diretório virtual do servidor de relatório (por exemplo, `https://adventure-works/reportserver`).|  
+|ReportPathParameters|No|String|Especifica o nome completo para o relatório no namespace da pasta do servidor de relatório, incluindo os parâmetros. Os relatórios são recuperados por meio do acesso à URL. Por exemplo:: "/AdventureWorks Sample Reports/Resumo de Vendas do Funcionário&EmpID=1234"|  
+|ReportName|No|String|O nome curto do relatório (no exemplo anterior, o nome curto é Resumo de Vendas do Funcionário). Ele será exibido na caixa de diálogo Imprimir e na fila de impressão.|  
   
 ### <a name="example"></a>Exemplo  
  O exemplo de HTML a seguir mostra como especificar o arquivo .cab, o método **Print** e as propriedades em JavaScript:  

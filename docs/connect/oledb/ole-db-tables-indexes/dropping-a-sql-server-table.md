@@ -1,6 +1,6 @@
 ---
-title: Descartando uma tabela de SQL Server | Microsoft Docs
-description: Descartando uma tabela SQL Server usando o driver OLE DB para SQL Server
+title: Descartar uma tabela do SQL Server | Microsoft Docs
+description: Descartar uma tabela do SQL Server usando o Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 5c5b241af215c04a72bf389079a4a0299d7496b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993996"
 ---
 # <a name="dropping-a-sql-server-table"></a>Descartando uma tabela do SQL Server
@@ -28,7 +28,7 @@ ms.locfileid: "67993996"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O driver OLE DB para SQL Server expõe a função **ITableDefinition::D roptable** para remover uma [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabela de um banco de dados.  
+  O Driver do OLE DB para SQL Server expõe a função **ITableDefinition::DropTable** para remover uma tabela [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de um banco de dados.  
   
  Especifique o nome da tabela como uma cadeia de caracteres Unicode no membro *pwszName* da união *uName* no parâmetro *pTableID*. O membro *eKind* de *pTableID* precisa ser DBKIND_NAME.  
   

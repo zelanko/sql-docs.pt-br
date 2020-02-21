@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 950fa902d2772d131f5ecd626653ad58c97c0fb1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027889"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Matriz de suporte do Microsoft JDBC Driver para SQL Server
@@ -32,12 +32,12 @@ ms.locfileid: "69027889"
   
 |Nome do driver|Versão do pacote de driver|JAR(s) aplicáveis|Fim do Suporte Base|
 |-|-|-|-|  
-|Microsoft JDBC Driver 7.4 para SQL Server|7.4|MSSQL-JDBC-7.4.1. jre12. jar<br> MSSQL-JDBC-7.4.1. jre11. jar<br> MSSQL-JDBC-7.4.1. jre8. jar|2 de agosto de 2024|
+|Microsoft JDBC Driver 7.4 para SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2 de agosto de 2024|
 |Microsoft JDBC Driver 7.2 para SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|16 de abril de 16 de 2024|
 |Microsoft JDBC Driver 7.0 para SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 de julho de 2023|  
 |Microsoft JDBC Driver 6.4 para SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 de fevereiro de 2023|    
 |Microsoft JDBC Driver 6.2 para SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 de junho de 2022|    
-|Microsoft JDBC Driver 6.0 para SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14 de julho de 2021|    
+|Microsoft JDBC Driver 6.0 para SQL Server|6,0|sqljdbc42.jar<br>sqljdbc41.jar|14 de julho de 2021|    
 |Microsoft JDBC Driver 4.2 para SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|24 de agosto de 2020|  
 |Microsoft JDBC Driver 4.1 para SQL Server|4.1|sqljdbc41.jar|12 de dezembro de 2019|  
   
@@ -45,17 +45,17 @@ ms.locfileid: "69027889"
  
 |Nome do driver|Versão do pacote de driver|Fim do Suporte Base|  
 |-|-|-|
-|Microsoft JDBC Driver 4.0 para SQL Server|4.0|6 de março de 2017|  
+|Microsoft JDBC Driver 4.0 para SQL Server|4,0|6 de março de 2017|  
 |Microsoft SQL Server JDBC Driver 3.0|3.0|23 de abril de 2015|  
-|Microsoft SQL Server JDBC Driver 2.0|2.0|31 de dezembro de 2012|  
+|Microsoft SQL Server JDBC Driver 2.0|2,0|31 de dezembro de 2012|  
 |Driver de JDBC 1.2 do Microsoft SQL Server 2005|1.2|25 de junho de 2011|  
-|Microsoft SQL Server 2005 JDBC Driver 1.1|1.1|25 de junho de 2011|  
+|Microsoft SQL Server 2005 JDBC Driver 1.1|1,1|25 de junho de 2011|  
 |Microsoft SQL Server 2005 JDBC Driver 1.0|1.0|25 de junho de 2011|  
 |Microsoft SQL Server 2000 JDBC Driver|2000|9 de julho de 2010|  
   
 ## <a name="sql-version-compatibility"></a>Compatibilidade com versões do SQL  
   
-|Versão do driver|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Banco de dados SQL do Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
+|Versão do driver|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Banco de Dados SQL do Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|Microsoft SQL Server 2017|SQL Server 2019|  
 |-|-|-|-|-|-|-|-|-|-|-|
 |7.4|N|N|S|S|S|S|S|S|S|
 |7.2|N|S|S|S|S|S|S|S|N| 
@@ -63,14 +63,14 @@ ms.locfileid: "69027889"
 |6.4|N|S|S|S|S|S|S|S|N| 
 |6.2|S|S|S|S|S|S|S|S|N|
 |6.1|S|S|S|S|S|S|S|N|N|
-|6.0|S|S|S|S|S|S|S|N|N|
+|6,0|S|S|S|S|S|S|S|N|N|
 |4.2|S|S|S|S|S|S|S|N|N|
 |4.1|S|S|S|S|S|S|S|N|N|
-|4.0|S|S|S|S|S|S|S|N|N|
+|4,0|S|S|S|S|S|S|S|N|N|
 |3.0|S|S|S<sup>1</sup>|S<sup>2</sup>|N|S<sup>5</sup>|N|N|N|
-|2.0|S<sup>3</sup>|S<sup>3</sup>|N|N|N|N|N|N|N|
+|2,0|S<sup>3</sup>|S<sup>3</sup>|N|N|N|N|N|N|N|
 |1.2|S<sup>3</sup>|N|N|N|N|N|N|N|N|
-|1.1|N|N|N|N|N|N|N|N|N|  
+|1,1|N|N|N|N|N|N|N|N|N|  
 |1.0|N|N|N|N|N|N|N|N|N|  
 |2000|N|N|N|N|N|N|N|N|N|  
   
@@ -94,14 +94,14 @@ ms.locfileid: "69027889"
 |6.4|1.7, 1.8, 9|4.1, 4.2, 4.3 (parcialmente)|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  
-|6.0|1.7, 1.8|4.1, 4.2|  
+|6,0|1.7, 1.8|4.1, 4.2|  
 |4.2|1.7, 1.8|4.1, 4.2|  
-|4.1|1.7|4.0|  
-|4.0|1.5, 1.6, 1.7|3.0, 4.0|  
+|4.1|1.7|4,0|  
+|4,0|1.5, 1.6, 1.7|3.0, 4.0|  
 |3.0|1.5, 1.6,|3.0, 4.0|  
-|2.0|1.5, 1.6|3.0, 4.0|  
+|2,0|1.5, 1.6|3.0, 4.0|  
 |1.2|1.4, 1.5, 1.6|3.0|  
-|1.1|1.4|3.0|  
+|1,1|1.4|3.0|  
 |1.0|1.4|3.0|  
 |2000|1.4|3.0|  
   

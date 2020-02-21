@@ -1,6 +1,6 @@
 ---
-title: Estabelecendo uma conexão com uma fonte de dados | Microsoft Docs
-description: Estabelecendo uma conexão com uma fonte de dados usando OLE DB driver para SQL Server
+title: Estabelecimento de uma conexão a uma fonte de dados | Microsoft Docs
+description: Estabelecimento de uma conexão a uma fonte de dados usando o Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 268c81f98a46174aa09df80e8459529e0f854bfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994999"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Estabelecendo uma conexão com uma fonte de dados
@@ -28,7 +28,7 @@ ms.locfileid: "67994999"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Para acessar o OLE DB Driver for SQL Server, primeiro, o consumidor precisa criar uma instância de um objeto de fonte de dados chamando o método **CoCreateInstance**. Um CLSID (identificador de classe) exclusivo identifica cada provedor OLE DB. Para o driver de OLE DB para SQL Server, o identificador de classe é CLSID_MSOLEDBSQL. Você também pode usar o símbolo MSOLEDBSQL_CLSID que será resolvido para o driver OLE DB para SQL Server que é usado no MSOLEDBSQL. h referenciado.  
+  Para acessar o OLE DB Driver for SQL Server, primeiro, o consumidor precisa criar uma instância de um objeto de fonte de dados chamando o método **CoCreateInstance**. Um CLSID (identificador de classe) exclusivo identifica cada provedor OLE DB. No caso do Driver do OLE DB para SQL Server, o identificador de classe é CLSID_MSOLEDBSQL. Você também pode usar o símbolo MSOLEDBSQL_CLSID, que será resolvido para o Driver do OLE DB para SQL Server usado no msoledbsql.h que você referencia.  
   
  O objeto da fonte de dados expõe a interface **IDBProperties**, que é usada pelo consumidor para fornecer informações básicas de autenticação, como o nome do servidor, o nome do banco de dados, a ID de usuário e a senha. O método **IDBProperties::SetProperties** é chamado para definir essas propriedades.  
   

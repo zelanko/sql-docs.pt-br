@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Criação de um relatório de tabela básico (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Criar um relatório de tabela básico (Construtor de Relatórios) | Microsoft Docs'
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041193"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: criando um relatório de tabela básico (Construtor de Relatórios)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Criar um relatório de tabela básico (Construtor de Relatórios)
 Este tutorial ensina a criar um relatório de tabela básico com base em dados de vendas de exemplo. A ilustração a seguir mostra o relatório que você criará.  
   
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
@@ -74,7 +74,7 @@ Neste tutorial, você usará uma fonte de dados inserida. Para saber mais sobre 
   
     Você voltará à página **Escolher uma conexão com uma fonte de dados** , com a nova fonte de dados selecionada.  
   
-9. Clique em **Avançar**.  
+9. Clique em **Próximo**.  
   
 ## <a name="Query"></a>1b. Criar uma Consulta no Assistente de Tabela  
 Em um relatório, é possível usar um conjunto de dados compartilhado que tem uma consulta predefinida. Se preferir, crie um conjunto de dados inserido para ser usado somente neste relatório. Neste tutorial, você criará um conjunto de dados inserido.  
@@ -130,7 +130,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tem u
   
     No conjunto de resultados, os cabeçalhos das colunas têm como base os nomes na consulta. No conjunto de dados, os cabeçalhos das colunas se transformam nos nomes dos campos e são salvos no relatório. Depois de concluir o assistente, você poderá usar o painel de Dados do Relatório para exibir a coleção de campos do conjunto de dados.  
   
-4.  Clique em **Avançar**.  
+4.  Clique em **Próximo**.  
   
 ## <a name="Groups"></a>1c. Organizar Dados em Grupos no Assistente de Tabela  
 Quando você seleciona campos nos quais fazer agrupamentos, cria uma tabela com linhas e colunas que exibem dados detalhados e dados agregados.  
@@ -157,7 +157,7 @@ Quando você seleciona campos nos quais fazer agrupamentos, cria uma tabela com 
   
     As etapas 4 e 5 organizam os valores dos campos primeiro por data e depois por subcategoria de produto dessa data.  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
 ## <a name="Subtotals"></a>1d. Adicionar Linhas de Subtotal e de Total no Assistente de Tabela  
 Depois de criar grupos, é possível adicionar e formatar linhas nas quais exibir valores de agregação dos campos. Você pode optar por exibir todos os dados ou deixar um usuário expandir e recolher dados agrupados de forma interativa.  
@@ -297,7 +297,7 @@ Salve o relatório em um servidor de relatório ou no computador. Se você não 
   
 4.  Em **Nome**, substitua **Sem Título** por **Product_Sales**.  
   
-5.  Clique em **Salvar**.  
+5.  Clique em **Save** (Salvar).  
   
 O relatório será salvo no servidor de relatório. O nome do servidor de relatório ao qual você está conectado é exibido na barra de status da parte inferior da janela.  
   
@@ -309,7 +309,7 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
   
 3.  Em **Nome**, substitua **Sem Título** por **Vendas de Produtos**.  
   
-4.  Clique em **Salvar**.  
+4.  Clique em **Save** (Salvar).  
   
 ## <a name="Export"></a>7. Exportar o relatório  
 Os relatórios podem ser exportados para diferentes formatos, como Microsoft Excel e arquivos CSV (valores separados por vírgula). Para obter mais informações, consulte [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
@@ -342,7 +342,7 @@ Neste tutorial, você exportará o relatório para o Excel e definirá uma propr
   
 5.  Verifique se o tipo de arquivo é **Excel (\*.xlsx)** .  
   
-6.  Clique em **Salvar**.  
+6.  Clique em **Save** (Salvar).  
   
 ### <a name="to-view-the-report-in-excel"></a>Para exibir o relatório no Excel  
   
@@ -350,7 +350,7 @@ Neste tutorial, você exportará o relatório para o Excel e definirá uma propr
   
 2.  Verifique se o nome da guia de pasta de trabalho é **Vendas de Produtos em Excel**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
 Isso conclui o passo a passo sobre como criar um relatório de tabela básico. Para obter mais informações sobre tabelas, consulte [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte Também  

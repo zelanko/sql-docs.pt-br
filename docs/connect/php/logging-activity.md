@@ -1,5 +1,5 @@
 ---
-title: Atividade de registro em log | Microsoft Docs
+title: Registro de atividades em log | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993334"
 ---
 # <a name="logging-activity"></a>Registrando atividades em log
@@ -24,7 +24,7 @@ ms.locfileid: "67993334"
 
 Por padrão, os erros e avisos gerados pelos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] não são registrados em log. Este tópico discute como configurar o registro de atividades em log.  
   
-## <a name="logging-activity-using-the-pdosqlsrv-driver"></a>Registrando atividades em log usando o driver PDO_SQLSRV  
+## <a name="logging-activity-using-the-pdo_sqlsrv-driver"></a>Registrando atividades em log usando o driver PDO_SQLSRV  
 A única configuração disponível para o driver PDO_SQLSRV é a entrada pdo_sqlsrv.log_severity no arquivo php.ini.  
   
 Adicione o seguinte ao final do arquivo php.ini:  
@@ -40,9 +40,9 @@ pdo_sqlsrv.log_severity = <number>
 |---------|---------------|  
 |0|O registro em log está desabilitado (é o padrão se nada estiver definido).|  
 |-1|Especifica que erros, avisos e notificações são registrados em log.|  
-|1|Especifica que os erros são registrados.|  
-|2|Especifica que os avisos são registrados.|  
-|4|Especifica que os avisos são registrados.|  
+|1|Especifica que os erros serão registrados em log.|  
+|2|Especifica que os avisos serão registrados em log.|  
+|4|Especifica que as notificações serão registradas em log.|  
   
 Informações de registro em log são adicionadas ao arquivo phperrors.log.  
   
@@ -95,9 +95,9 @@ A tabela a seguir descreve as constantes que podem ser usadas como o valor para 
 |Valor (inteiro equivalente entre parênteses)|Descrição|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Especifica que erros, avisos e notificações são registrados em log.|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|Especifica que os erros são registrados. Esse é o padrão.|  
-|SQLSRV_LOG_SEVERITY_WARNING (2)|Especifica que os avisos são registrados.|  
-|SQLSRV_LOG_SEVERITY_NOTICE (4)|Especifica que os avisos são registrados.|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|Especifica que os erros serão registrados em log. Esse é o padrão.|  
+|SQLSRV_LOG_SEVERITY_WARNING (2)|Especifica que os avisos serão registrados em log.|  
+|SQLSRV_LOG_SEVERITY_NOTICE (4)|Especifica que as notificações serão registradas em log.|  
   
 Você pode definir mais de um valor por vez para a configuração **LogSeverity** usando o operador lógico OR (|). Por exemplo, a linha de código a seguir especifica que erros e avisos devem ser registrados em log:  
   
@@ -115,7 +115,7 @@ Adicionando valores inteiros juntos, você pode especificar mais de uma opção 
 `sqlsrv.LogSeverity = 3`  
   
 ## <a name="see-also"></a>Consulte Também  
-[Guia de programação para o Microsoft Drivers para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guia de programação do Microsoft Drivers para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 

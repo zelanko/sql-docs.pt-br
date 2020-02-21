@@ -14,13 +14,13 @@ ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e26c0e06ea9a71bdb6b9e39126e646d22ad40ea2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014980"
 ---
-# <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
+# <a name="sqlsrv_num_rows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Informa o número de linhas em um conjunto de resultados.  
@@ -32,13 +32,13 @@ Informa o número de linhas em um conjunto de resultados.
 sqlsrv_num_rows( resource $stmt )  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 *$stmt*: o conjunto de resultados cujas linhas serão contadas.  
   
 ## <a name="return-value"></a>Valor retornado  
 **false** se houve um erro ao calcular o número de linhas. Caso contrário, representa o número de linhas no conjunto de resultados.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 sqlsrv_num_rows requer um cursor do lado do cliente, estático ou de conjunto de chaves e retornará **false** se você usar um cursor de avanço ou dinâmico. (O padrão é um cursor de avanço.) Para obter mais informações sobre os cursores, consulte [sqlsrv_query](../../connect/php/sqlsrv-query.md) e [Tipos de cursor &#40;Driver SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Exemplo  

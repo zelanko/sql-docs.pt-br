@@ -11,10 +11,10 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008435"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Resiliência de conexão no driver ODBC do Windows
@@ -35,7 +35,7 @@ ms.locfileid: "68008435"
   
      Você pode modificar o número de repetições de conexão ao:  
   
-    -   Definir ou modificar uma fonte de dados que use o ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o controle de **Contagem de Repetições de Conexão** .  
+    -   Definir ou modificar uma fonte de dados que use o ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o controle de **Contagem de Repetições de Conexão**.  
   
     -   Usar a palavra-chave de cadeia de conexão **ConnectRetryCount** .  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68008435"
   
      Você pode modificar o intervalo de repetição de conexão ao:  
   
-    -   Definir ou modificar uma fonte de dados que use o ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o controle de **Intervalo de Repetição de Conexão** .  
+    -   Definir ou modificar uma fonte de dados que use o ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o controle de **Intervalo de Repetição de Conexão**.  
   
     -   Usar a palavra-chave de cadeia de conexão **ConnectRetryInterval** .  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68008435"
 |IMC06|A conexão foi interrompida e a recuperação não é possível. A conexão foi marcada pelo driver do cliente como não recuperável. Não foi feita nenhuma tentativa de restaurar a conexão.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir contém duas funções. **func1** mostra como você pode se conectar com um DNS (nome de fonte de dados) que usa o ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Windows. O DSN usa a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e especifica a ID de usuário. em seguida, **func1** recupera o número de tentativas de conexão com **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
+ O exemplo a seguir contém duas funções. **func1** mostra como você pode se conectar com um DNS (nome de fonte de dados) que usa o ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Windows. O DSN usa a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e especifica a ID de usuário. Em seguida, **func1** recupera o número de repetições de conexão com **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** usa **SQLDriverConnect**, a palavra-chave de cadeia de conexão **ConnectRetryCount** e atributos de conexão para recuperar a configuração de repetições de conexão e o intervalo de repetição.  
   
