@@ -1,6 +1,6 @@
 ---
-title: Opções de salvamento avançadas | Microsoft Docs
-ms.custom: ''
+title: Opções Avançadas de Salvamento
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 341a9c32855ca9510c8161df549173c4d69bf39e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1210df560b91cab1239e6fa4b1b2ca0a6446b04a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265034"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253277"
 ---
 # <a name="advanced-save-options"></a>Opções Avançadas de Salvamento
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Use essa caixa de diálogo selecionar um esquema de codificação de linguagem e para especificar os caracteres a serem inseridos no final de cada linha. Para acessar a caixa de diálogo **Opções Avançadas de Salvamento** no menu **Arquivo** , clique em **Salvar** <query name> **.sql como** para abrir a caixa de diálogo **Salvar Arquivo As** , clique na seta para baixo no botão **Salvar** e, em seguida, clique **Salvar with Encoding**.  
+Use essa caixa de diálogo selecionar um esquema de codificação de linguagem e para especificar os caracteres a serem inseridos no final de cada linha. Para acessar a caixa de diálogo **Opções Avançadas de Salvamento** no menu **Arquivo**, clique em **Salvar** <query name> **.sql Como** para abrir a caixa de diálogo **Salvar Arquivo Como**, clique na seta para baixo no botão **Salvar** e, em seguida, clique em **Salvar com Codificação**.  
   
 ## <a name="options"></a>Opções  
 **Codificação**  

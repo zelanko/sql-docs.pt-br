@@ -1,22 +1,23 @@
 ---
-title: Implantar um cluster de Big Data do SQL Server com os notebooks do Azure Data Studio
-titleSuffix: Deploy SQL Server big data cluster cluster with Azure Data Studio notebooks
+title: 'Implantar: notebook do Azure Data Studio'
+titleSuffix: SQL Server Big Data Clusters
 description: Use um notebook do Azure Data Studio para implantar um cluster de Big Data.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dfdf7dfd2ca5521bd80c4fdbf81e7b5c45d58b8d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: e11a4ac0bcbb66d6b3216d8c2f7a4a3b15cedfb8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594221"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246866"
 ---
-# <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebooks"></a>Implantar um cluster de Big Data do SQL Server com os notebooks do Azure Data Studio
+# <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>Implantar um cluster de Big Data do SQL Server com o notebook do Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Como recuperar tipos de data e hora como objetos DateTime PHP usando o driver PDO_SQLSRV | Microsoft Docs
+title: 'Como fazer: recuperar tipos de data e hora como objetos PHP DateTime usando o driver PDO_SQLSRV | Microsoft Docs'
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,26 +12,26 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 165e91cee3b0b4592f9b746f8b35b46bc73bce50
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68264574"
 ---
-# <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdosqlsrv-driver"></a>Como recuperar tipos de data e hora como objetos DateTime PHP usando o driver PDO_SQLSRV
+# <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdo_sqlsrv-driver"></a>Como fazer: recuperar tipos de data e hora como objetos PHP DateTime usando o driver PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Esse recurso, adicionado na versão 5.6.0, só é válido ao usar o driver PDO_SQLSRV para o [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].
+Esse recurso, adicionado na versão 5.6.0, é válido somente ao usar o driver PDO_SQLSRV para o [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].
 
 ### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>Para recuperar tipos de data e hora como objetos DateTime
 
-Ao usar PDO_SQLSRV, os tipos de data e hora (**smalldatetime**, **DateTime**, **Date**, **time**, **datetime2**e **DateTimeOffset**) são retornados por padrão como cadeias de caracteres. Nem os atributos PDO:: ATTR_STRINGIFY_FETCHES nem PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE têm efeito. Para recuperar os tipos de data e hora como objetos [DateTime php](http://php.net/manual/en/class.datetime.php) , defina o atributo `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` Connection ou Statement como **true** (é **false** por padrão).
+Ao usar os tipos PDO_SQLSRV, os tipos de data e hora (**smalldatetime**, **datetime**, **date**, **time**, **datetime2** e **datetimeoffset**) são retornados por padrão como cadeias de caracteres. Nem o atributo PDO::ATTR_STRINGIFY_FETCHES nem o PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE tem qualquer efeito. Para recuperar os tipos de data e hora como objetos [PHP DateTime](http://php.net/manual/en/class.datetime.php), defina o atributo de conexão ou instrução `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` como **true** (ele é **false** por padrão).
 
 > [!NOTE]
-> Este atributo de instrução ou conexão só se aplica à busca regular de tipos de data e hora porque os objetos DateTime não podem ser especificados como parâmetros de saída.
+> Este atributo de conexão ou instrução só se aplica à busca regular de tipos de data e hora porque os objetos DateTime não podem ser especificados como parâmetros de saída.
 
 ## <a name="example---use-the-connection-attribute"></a>Exemplo – usar o atributo de conexão
-Os exemplos a seguir omitem a verificação de erros de clareza. Este mostra como definir o atributo de conexão:
+Os exemplos a seguir omitem a verificação de erros para maior clareza. Este mostra como definir o atributo de conexão:
 
 ```php
 <?php
@@ -80,7 +80,7 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-option"></a>Exemplo – use a opção de instrução
+## <a name="example---use-the-statement-option"></a>Exemplo – usar a opção de instrução
 Como alternativa, o atributo de instrução pode ser definido como uma opção:
 
 ```php
@@ -103,8 +103,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---retrieve-datetime-types-as-strings"></a>Exemplo – recuperar tipos DateTime como cadeias de caracteres
-O exemplo a seguir mostra como alcançar o oposto (que não é realmente necessário porque é false por padrão):
+## <a name="example---retrieve-datetime-types-as-strings"></a>Exemplo – recuperar tipos datetime como cadeias de caracteres
+O seguinte exemplo mostra como alcançar o oposto (que, na verdade, não é necessário porque ele é false por padrão):
 
 ```php
 <?php

@@ -1,7 +1,7 @@
 ---
-title: Desinstalar uma instância existente do SQL Server (configuração) | Microsoft Docs
-ms.custom: ''
-ms.date: 09/11/2019
+title: Desinstalar a instanceInstance existente
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16c406052b563accdc2cd98fd629909cce38e0ce
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 980982f6ae55d72ef6a54fdc07c0c707c4752b8f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251063"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258956"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Desinstalar uma instância existente do SQL Server (Instalação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,13 +55,13 @@ ms.locfileid: "71251063"
     > Os bancos de dados do ReportServer estão incluídos com o SQL Server Reporting Services.   
 
  
-1.  **Interrompa todos os** **serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** É recomendável interromper todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de desinstalar os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Conexões ativas podem impedir a desinstalação com êxito.  
+1.  **Interromper todos** **os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** É recomendável interromper todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de desinstalar os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Conexões ativas podem impedir a desinstalação com êxito.  
   
 1.  **Use uma conta que tenha as permissões apropriadas.** Faça logon no servidor usando a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou usando uma conta que tenha permissões equivalentes. Por exemplo, é possível fazer logon no servidor com uma conta que seja membro do grupo Administradores local.  
   
 ## <a name="uninstall"></a>Desinstalar 
 
-# <a name="windows-10--2016-tabwindows10"></a>[Windows 10 / 2016 +](#tab/Windows10)
+# <a name="windows-10--2016-"></a>[Windows 10 / 2016 +](#tab/Windows10)
 
 Para desinstalar o SQL Server do Windows 10, Windows Server 2016, Windows Server 2019 e posteriores, siga estas etapas: 
 
@@ -84,7 +84,7 @@ Para desinstalar o SQL Server do Windows 10, Windows Server 2016, Windows Server
  
 1. Atualize a janela **Aplicativos e Recursos** para verificar se a instância do SQL Server foi removida com êxito e determinar quais, se houver, componentes do SQL Server ainda existem. Remova esses componentes dessa janela também, se preferir. 
 
-# <a name="windows-2008---2012-r2tabwindows2012"></a>[Windows 2008 – 2012 R2](#tab/windows2012)
+# <a name="windows-2008---2012-r2"></a>[Windows 2008 – 2012 R2](#tab/windows2012)
 
 Para desinstalar o SQL Server do Windows Server 2008, Windows Server 2012 e Windows 2012 R2, siga estas etapas: 
 

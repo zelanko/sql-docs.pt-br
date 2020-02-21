@@ -1,6 +1,6 @@
 ---
-title: Ferramentas de gerenciamento e consulta SQL para SQL Server, SQL do Azure (bancos de dados SQL do Azure, instâncias gerenciadas do SQL do Azure, máquinas virtuais do SQL) e SQL data warehouse do Azure | Microsoft Docs
-description: Ferramentas de gerenciamento e consulta SQL para SQL Server, SQL do Azure (banco de dados SQL do Azure, instância gerenciada do SQL do Azure, máquinas virtuais do SQL) e SQL data warehouse do Azure
+title: Visão geral das ferramentas do SQL
+description: Ferramentas de gerenciamento e consulta do SQL para SQL Server, SQL do Azure (Banco de Dados SQL do Azure, instância gerenciada do SQL do Azure, máquinas virtuais do SQL) e SQL Data Warehouse do Azure.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -9,67 +9,62 @@ ms.assetid: ''
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 09/11/2019
+ms.custom: seo-lt-2019
+ms.date: 12/06/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9c5262dfc610e62f0782b0cc6c8fe523d94d0730
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
-ms.translationtype: MTE75
+ms.openlocfilehash: f4aaea790cf1e308b0675792b110ed129a55ed97
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096882"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76516254"
 ---
-# <a name="sql-query-and-management-tools-for-sql-server"></a>Ferramentas de gerenciamento e consulta SQL para SQL Server
+# <a name="sql-tools-overview"></a>Visão geral das ferramentas do SQL
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Para gerenciar (consulta, monitor, etc.) seu banco de dados, você precisa de uma ferramenta. Embora seus bancos de dados possam ser executados na nuvem, no Windows ou no [Linux](../linux/sql-server-linux-overview.md), sua ferramenta não precisa ser executada na mesma plataforma que o banco de dados.
+Para gerenciar seu banco de dados, você precisa de uma ferramenta. Quer seus bancos de dados sejam executados na nuvem, no Windows, no macOS ou no [Linux](../linux/sql-server-linux-overview.md), sua ferramenta não precisa ser executada na mesma plataforma que o banco de dados.
 
-Há muitas ferramentas de banco de dados disponíveis, portanto, este artigo fornece descrições e ponteiros para algumas das ferramentas disponíveis para trabalhar com seus bancos de dados SQL. Se você precisar de ajuda para decidir qual ferramenta precisa, consulte [qual ferramenta devo usar?](#which-tool-should-i-choose).
+Você pode ver os links para as diferentes ferramentas do SQL nas tabelas a seguir.
 
-Para obter informações adicionais e baixar uma ferramenta, selecione os links na coluna ferramenta nas tabelas a seguir. Para baixar SQL Server, consulte [instalar SQL Server](../database-engine/install-windows/install-sql-server.md).
+> [!Note]
+> Para baixar o SQL Server, confira [Instalar o SQL Server](../database-engine/install-windows/install-sql-server.md).
 
-## <a name="gui-tools-to-manage-databases"></a>Ferramentas de GUI para gerenciar bancos de dados
+## <a name="recommended-tools"></a>Ferramentas recomendadas
 
-As seguintes ferramentas fornecem uma GUI (interface gráfica do usuário):
+As ferramentas a seguir fornecem uma GUI (interface gráfica do usuário).
 
-| Ferramenta | Descrição | É executado em |
+| Ferramenta | Descrição | Sistema operacional |
 |:--|:--|:--|
-| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]o é uma ferramenta gratuita e leve para o gerenciamento de bancos de dados onde quer que estejam em execução. Esta versão de visualização fornece recursos de gerenciamento de banco de dados, incluindo um editor Transact-SQL estendido e informações personalizáveis sobre o estado operacional de seus bancos de dados. | O **[!INCLUDE[name-sos](../includes/name-sos-short.md)] é executado no Windows, no macOS e no Linux**.|
-| [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md) | Use o SQL Server Management Studio (SSMS) para consultar, projetar e gerenciar seu SQL Server, o banco de dados SQL do Azure e o Azure SQL Data Warehouse. | **O SSMS é executado no Windows**.|
-| [SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md) | Transforme o Visual Studio em um ambiente de desenvolvimento avançado para SQL Server, banco de dados SQL do Azure e SQL Data Warehouse do Azure.| **O SSDT é executado no Windows**.|
-| [Visual Studio Code](https://code.visualstudio.com/)| Depois de instalar o Visual Studio Code, instale a [extensão MSSQL](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) para desenvolver Microsoft SQL Server, banco de dados SQL do Azure e SQL data warehouse.| O **Visual Studio Code é executado no Windows, no MacOS e no Linux**.|
+| [ **![Imagem do ADS](../tools/media/overview-sql-tools/azure-data-studio.svg)</br></br>Azure Data Studio**](../azure-data-studio/download.md) | Um editor leve que pode executar consultas SQL sob demanda, exibir e salvar resultados como texto, JSON ou Excel. Edite dados, organize suas conexões de banco de dados favoritas e procure objetos de banco de dados em uma experiência de navegação de objetos familiar. | **Windows</br>macOS</br>Linux** |
+| [ **![Imagem do SSMS](../tools/media/overview-sql-tools/ssms.svg)</br></br>SSMS (SQL Server Management Studio)** ](../ssms/download-sql-server-management-studio-ssms.md) | Gerencie uma instância do SQL Server ou um banco de dados com compatibilidade total com a GUI. Acesse, configure, gerencie, administre e desenvolva todos os componentes do SQL Server, do Banco de Dados SQL do Azure e do SQL Data Warehouse. Fornece um utilitário abrangente que combina um amplo grupo de ferramentas gráficas com vários editores de script avançados para fornecer acesso ao SQL para desenvolvedores e administradores de banco de dados de todos os níveis de conhecimento. | **Windows** |
+| [ **![Imagem do SSDT](../tools/media/overview-sql-tools/ssdt.svg)</br>SSDT (SQL Server Data Tools)** ](../ssdt/download-sql-server-data-tools-ssdt.md) | Uma moderna ferramenta de desenvolvimento para criar bancos de dados relacionais do SQL Server, bancos de dados SQL do Azure, modelos de dados do AS (Analysis Services), pacotes do IS (Integration Services) e relatórios do RS (Reporting Services). Com o SSDT, você pode projetar e implantar qualquer tipo de conteúdo do SQL Server com a mesma facilidade com que desenvolve um aplicativo no **[Visual Studio](https://visualstudio.microsoft.com/downloads/)** . | **Windows** |
+| [ **![Imagem do VS Code](../tools/media/overview-sql-tools/visual-studio-code.svg)</br></br>Visual Studio Code**](https://code.visualstudio.com/) | A **[extensão mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)** para Visual Studio Code é a extensão do SQL Server oficial que é compatível com conexões com SQL Server e com a experiência de edição avançada para o T-SQL no Visual Studio Code. Escreva scripts T-SQL em um editor leve. | **Windows</br>macOS</br>Linux** |
 
-## <a name="command-line-tools-to-manage-databases"></a>Ferramentas de linha de comando para gerenciar bancos de dados
+## <a name="command-line-tools"></a>Ferramentas da linha de comando
 
-A seguir estão as principais ferramentas de linha de comando:
+As ferramentas a seguir são as principais ferramentas de linha de comando.
 
-| Ferramenta | Descrição | É executado em |
+| Ferramenta | Descrição | Sistema operacional |
 |:--|:--|:--|
-|[**mssql-cli (versão prévia)** ](mssql-cli.md)|**MSSQL-CLI** é uma ferramenta de linha de comando interativa para consultar SQL Server. | Windows, macOS e Linux|
-| [**sqlpackage**](sqlpackage.md) |**SqlPackage** é um utilitário de linha de comando que automatiza várias tarefas de desenvolvimento de banco de dados. Atualmente, as versões do pacote do macOS e do Linux estão em versão prévia. | Windows, macOS e Linux|
-|[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** fornece cmdlets para trabalhar com o SQL| Windows, macOS e Linux|
-| [**sqlcmd**](sqlcmd-utility.md) |o utilitário **sqlcmd** permite que você insira instruções TRANSACT-SQL, procedimentos do sistema e arquivos de script no prompt de comando. | Windows, macOS e Linux|
-|[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|O utilitário **bcp** (**b**ulk **c**opy **p**rogram) copia dados em massa entre uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e um arquivo de dados em um formato especificado pelo usuário.|Windows, macOS e Linux|
-|[**MSSQL-Scripter (visualização)** ](https://github.com/Microsoft/mssql-scripter)|**MSSQL-Scripter** é uma experiência de linha de comando de várias plataformas para criar scripts SQL Server bancos de dados|Windows, macOS e Linux|
-|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**MSSQL-conf** configura SQL Server em execução no Linux.|Linux|
+|[**mssql-cli (versão prévia)** ](mssql-cli.md)|O **mssql-cli** é uma ferramenta de linha de comando interativa para consultar o SQL Server. Além disso, consulte o SQL Server com uma ferramenta de linha de comando com IntelliSense, realce de sintaxe e muito mais. | **Windows</br>macOS</br>Linux** |
+| [**sqlpackage**](sqlpackage.md) |O **sqlpackage** é um utilitário de linha de comando que automatiza diversas tarefas de desenvolvimento de banco de dados. |**Windows</br>macOS</br>Linux** |
+|[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| O **SQL Server PowerShell** fornece cmdlets para trabalhar com o SQL. | **Windows</br>macOS</br>Linux** |
+| [**sqlcmd**](sqlcmd-utility.md) |O utilitário **sqlcmd** permite que você insira instruções de Transact-SQL, procedimentos do sistema e arquivos de script no prompt de comando. | **Windows</br>macOS</br>Linux** |
+|[**bcp**](bcp-utility.md)|O utilitário **bcp** (**b**ulk **c**opy **p**rogram) copia dados em massa entre uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e um arquivo de dados em um formato especificado pelo usuário.| **Windows</br>macOS</br>Linux** |
+|[**mssql-scripter (versão prévia)** ](https://github.com/Microsoft/mssql-scripter) | O **mssql-scripter** é uma experiência de linha de comando de várias plataformas para criar scripts de bancos de dados SQL Server. | **Windows</br>macOS</br>Linux** |
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | O **mssql-conf** configura o SQL Server sendo executado no Linux. | **Linux** |
 
-## <a name="which-tool-should-i-choose"></a>Qual ferramenta devo escolher?
+## <a name="migration-and-other-tools"></a>Migração e outras ferramentas
 
-- Deseja gerenciar um banco de dados ou instância de SQL Server, em um editor leve no Windows, Linux ou Mac? Escolha [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md)
-- Deseja gerenciar uma instância de SQL Server ou um banco de dados no Windows com suporte completo a GUI? Escolha [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)
-- Deseja criar ou manter o código do banco de dados, incluindo validação de tempo de compilação, refatoração e suporte de designer no Windows? Escolha [SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md)
-- Deseja consultar SQL Server com uma ferramenta de linha de comando que apresenta o IntelliSense, a sintaxe de alta iluminação e muito mais? Escolha [MSSQL-CLI](mssql-cli.md)
-- Deseja escrever scripts T-SQL em um editor leve no Windows, Linux ou Mac? Escolha [Visual Studio Code](https://code.visualstudio.com/) e a [extensão MSSQL](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
-
-## <a name="additional-tools"></a>Ferramentas adicionais
+Estas ferramentas são usadas para migrar, configurar e fornecer outros recursos para bancos de dados SQL.
 
 | Ferramenta | Descrição |
 |:--|:--|
-| [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Use SQL Server Configuration Manager para configurar SQL Server serviços e configurar a conectividade de rede. Configuration Manager é executado no Windows|
-| [Assistente de Migração do SQL Server](../ssma/sql-server-migration-assistant.md) | Use o Assistente de Migração do SQL Server para automatizar a migração do banco de dados do Microsoft Access, do DB2, do MySQL, do Oracle e do Sybase para o SQL Server.|
-| [Assistente para Experimentos de Banco de Dados](../dea/database-experimentation-assistant-overview.md) | Use Assistente para Experimentos de Banco de Dados para avaliar uma versão de destino do SQL para uma determinada carga de trabalho. |
-| [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | Use o recurso Distributed Replay para ajudá-lo a avaliar o impacto das atualizações futuras do SQL Server. Além disso, use Distributed Replay para ajudar a avaliar o impacto de atualizações de hardware e de sistema operacional e SQL Server o ajuste. |
-| [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | O utilitário ssbdiagnose relata problemas em conversas Service Broker ou na configuração de serviços de Service Broker. |
+| **[Gerenciador de Configurações](../tools/configuration-manager/sql-server-configuration-manager-help.md)** | Use o SQL Server Configuration Manager para configurar os serviços do SQL Server e configurar a conectividade de rede. O Configuration Manager é executado no Windows|
+| **[Assistente de Migração do SQL Server](../ssma/sql-server-migration-assistant.md)** | Use o Assistente de Migração do SQL Server para automatizar a migração do banco de dados do Microsoft Access, do DB2, do MySQL, do Oracle e do Sybase para o SQL Server.|
+| **[Assistente para Experimentos de Banco de Dados](../dea/database-experimentation-assistant-overview.md)** | Use o Assistente para Experimentos de Banco de Dados para avaliar uma versão de destino do SQL para uma determinada carga de trabalho. |
+| **[Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)** | Use o recurso Distributed Replay para ajudar a avaliar o impacto de futuras atualizações do SQL Server. Também use o Distributed Replay para ajudar a avaliar o impacto de atualizações de hardware e do sistema operacional e ajustes do SQL Server. |
+| **[ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)** | O utilitário ssbdiagnose relata problemas em conversas do Service Broker ou na configuração de serviços do Service Broker. |
 
-Se você estiver procurando ferramentas adicionais que não são mencionadas nesta página, consulte [utilitários de prompt de comando do SQL](command-prompt-utility-reference-database-engine.md).
+Se você estiver procurando ferramentas adicionais não mencionadas nesta página, confira [Utilitários de prompt de comando SQL](command-prompt-utility-reference-database-engine.md).

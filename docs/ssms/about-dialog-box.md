@@ -1,6 +1,6 @@
 ---
-title: Caixa de diálogo Sobre| Microsoft Docs
-ms.custom: ''
+title: caixa de diálogo Sobre
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5fb6f3e9-c511-419b-b0b6-173c057e3a54
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23ee5e291bc1007e11a1342968c9cafbc3440909
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ee278c968bbfc9e0bde214080fcdcf20f61e4198
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263309"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254566"
 ---
-# <a name="about-dialog-box"></a>Caixa de diálogo Sobre
+# <a name="about-dialog-box"></a>caixa de diálogo Sobre
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  
 A caixa de diálogo **Sobre** fornece informações do produto e permite o acesso a informações sobre o computador em que o produto está sendo executado. Para obter cópias de avaliação, a entrada [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] mostra o número de dias restantes até que a instalação expire. Essa caixa de diálogo está disponível no menu **Ajuda** .  
   

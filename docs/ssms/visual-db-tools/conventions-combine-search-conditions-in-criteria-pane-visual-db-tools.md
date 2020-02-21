@@ -1,10 +1,9 @@
 ---
-title: Convenções para combinar condições de pesquisa no painel Critérios | Microsoft Docs
-ms.custom: ''
+title: Convenções para combinar condições de pesquisa no painel Critérios
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,14 @@ helpviewer_keywords:
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5575530a70eecfc030e457d20596ebc76040cd01
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 889b0497959e7ac7b624d7659fba2648166f0a63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260428"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254436"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Convenções para combinar critérios de pesquisa no painel de Critérios (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -151,7 +152,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
 O Designer de Consulta e Exibição representa essa cláusula WHERE no Painel de Critérios como segue:  
   
-![Múltiplas cláusulas AND e OR no painel Critérios](../../ssms/visual-db-tools/media/vs_criteriapane2.gif "Múltiplas cláusulas AND e OR no painel Critérios")  
+![Cláusulas múltiplas AND e OR no Painel de Critérios](../../ssms/visual-db-tools/media/vs_criteriapane2.gif "Cláusulas múltiplas AND e OR no Painel de Critérios")  
   
 Se as cláusulas vinculadas OR envolverem só uma coluna de dados, o Designer de Consulta e Exibição pode colocar a toda a cláusula OR em uma única célula da grade, evitando a necessidade de repetir a cláusula AND. Por exemplo, no painel SQL você poderá criar uma cláusula WHERE como a seguinte:  
   
@@ -162,7 +163,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
 O Designer de Consulta e Exibição representa essa cláusula WHERE no Painel de Critérios como segue:  
   
-![Cláusulas OR vinculadas definidas no painel Critérios](../../ssms/visual-db-tools/media/vs_criteriapane3.gif "Cláusulas OR vinculadas definidas no painel Critérios")  
+![Cláusulas vinculadas OR definidas no Painel de Critérios](../../ssms/visual-db-tools/media/vs_criteriapane3.gif "Cláusulas vinculadas OR definidas no Painel de Critérios")  
   
 Se você fizer uma mudança na consulta (como alterar um dos valores no Painel de Critérios), o Designer de Consulta e Exibição recriará a instrução SQL no painel SQL. A instrução SQL recriada se assemelhará à exibição do Painel de Critérios em vez de sua instrução original. Por exemplo, se o Painel de Critérios contiver cláusulas AND distribuídas, a instrução resultante no painel SQL será recriada com cláusulas AND explicitamente distribuídas. Para detalhes, consulte "Como AND funciona com múltiplas cláusulas OR" anteriormente neste tópico.  
   

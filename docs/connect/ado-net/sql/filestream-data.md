@@ -1,38 +1,38 @@
 ---
 title: Dados do FILESTREAM
-description: Descreve como trabalhar com dados de valor grande armazenados no SQL Server 2008 com o atributo FILESTREAM.
+description: Descreve como trabalhar usando dados de valor grande armazenados no SQL Server 2008 com o atributo FILESTREAM.
 ms.date: 08/15/2019
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 83e793fac40a8e41850f2a45e138dd125130c13e
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 602dfe9c96c1e8713b90c607806dd09ed16a37b6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452212"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247757"
 ---
 # <a name="filestream-data"></a>Dados do FILESTREAM
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-O atributo de armazenamento FILESTREAM é para dados binários (BLOB) armazenados em uma coluna varbinary (max). Antes do FILESTREAM, o armazenamento de dados binários exigia tratamento especial. Dados não estruturados, como documentos de texto, imagens e vídeos, geralmente são armazenados fora do banco de dados, o que dificulta o gerenciamento.
+O atributo de armazenamento FILESTREAM é para dados binários (BLOB) armazenados em uma coluna varbinary(max). Antes do FILESTREAM, o armazenamento de dados binários exigia tratamento especial. Dados não estruturados, como documentos de texto, imagens e vídeos, geralmente são armazenados fora do banco de dados, o que dificulta o gerenciamento.
 
 > [!NOTE]
-> Você deve instalar o .NET Framework 3,5 SP1 (ou posterior) ou o .NET Core para trabalhar com dados FILESTREAM usando o SqlClient.
+> Você deve instalar o .NET Framework 3.5 SP1 (ou posterior) ou o .NET Core para trabalhar usando dados FILESTREAM usando o SqlClient.
 
 A especificação do atributo FILESTREAM em uma coluna varbinary(max) faz com que o SQL Server armazene os dados no sistema de arquivos NTFS local em vez de no arquivo de banco de dados. Embora eles sejam armazenados separadamente, você pode usar as mesmas instruções Transact-SQL, que são compatíveis para trabalhar usando dados varbinary(max) que estão armazenados no banco de dados.
 
-## <a name="sqlclient-support-for-filestream"></a>Suporte a SqlClient para FILESTREAM
+## <a name="sqlclient-support-for-filestream"></a>Suporte do SqlClient para FILESTREAM
 
-O provedor de dados Microsoft SqlClient para SQL Server, <xref:Microsoft.Data.SqlClient>, dá suporte à leitura e à gravação em dados FILESTREAM usando a classe <xref:Microsoft.Data.SqlTypes.SqlFileStream> definida no namespace <xref:System.Data.SqlTypes>. o `SqlFileStream` herda da classe <xref:System.IO.Stream>, que fornece métodos para leitura e gravação em fluxos de dados. A leitura de um fluxo transfere dados do fluxo para uma estrutura de dados, como uma matriz de bytes. A gravação transfere os dados da estrutura de dados para um fluxo.
+O provedor de dados Microsoft SqlClient para SQL Server, <xref:Microsoft.Data.SqlClient>, dá suporte à leitura e à gravação em dados FILESTREAM usando a classe <xref:Microsoft.Data.SqlTypes.SqlFileStream> definida no namespace <xref:System.Data.SqlTypes>. O `SqlFileStream` herda da classe <xref:System.IO.Stream>, que fornece métodos para leitura e gravação em fluxos de dados. A leitura de um fluxo transfere dados do fluxo para uma estrutura de dados, como uma matriz de bytes. A gravação transfere os dados da estrutura de dados para um fluxo.
 
-### <a name="creating-the-sql-server-table"></a>Criando a tabela de SQL Server
+### <a name="creating-the-sql-server-table"></a>Como criar a tabela do SQL Server
 
 As instruções Transact-SQL a seguir criam uma tabela denominada employees e insere uma linha de dados. Depois de habilitar o armazenamento de FILESTREAM, você pode usar essa tabela em conjunto com os exemplos de código a seguir. Os links para os recursos nos Manuais Online do SQL Server estão localizados no final deste tópico.
 
@@ -50,13 +50,13 @@ Values(1, 0x00, default)
 GO
 ```
 
-### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>Exemplo: lendo, substituindo e inserindo dados FILESTREAM
+### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>Exemplo: leitura, substituição e inserção de dados FILESTREAM
 
-O exemplo a seguir demonstra como ler dados de um FILESTREAM. O código obtém o caminho lógico para o arquivo, definindo o `FileAccess` como `Read` e o `FileOptions` como `SequentialScan`. Em seguida, o código lê os bytes do-SqlFileStream para o buffer. Em seguida, os bytes são gravados na janela do console.
+A amostra a seguir demonstra como ler dados de um FILESTREAM. O código obtém o caminho lógico para o arquivo, configurando o `FileAccess` como `Read` e o `FileOptions` como `SequentialScan`. Em seguida, o código lê os bytes de SqlFileStream no buffer. Então, os bytes são gravados na janela do console.
 
-O exemplo também demonstra como gravar dados em um FILESTREAM no qual todos os dados existentes são substituídos. O código obtém o caminho lógico para o arquivo e cria o `SqlFileStream`, definindo o `FileAccess` como `Write` e o `FileOptions` como `SequentialScan`. Um único byte é gravado no `SqlFileStream`, substituindo todos os dados no arquivo.
+A amostra a seguir demonstra como gravar dados em um FILESTREAM em que todos os dados existentes são substituídos. O código obtém o caminho lógico para o arquivo e cria o `SqlFileStream`, configurando o `FileAccess` como `Write` e o `FileOptions` como `SequentialScan`. Um byte é gravado no `SqlFileStream`, substituindo todos os dados no arquivo.
 
-O exemplo também demonstra como gravar dados em um FILESTREAM usando o método Seek para acrescentar dados ao final do arquivo. O código obtém o caminho lógico para o arquivo e cria o `SqlFileStream`, definindo o `FileAccess` como `ReadWrite` e o `FileOptions` como `SequentialScan`. O código usa o método Seek para buscar até o final do arquivo, acrescentando um único byte ao arquivo existente.
+O exemplo também demonstra como gravar dados em um FILESTREAM usando o método Seek para acrescentar dados ao final do arquivo. O código obtém o caminho lógico para o arquivo e cria o `SqlFileStream`, configurando o `FileAccess` como `ReadWrite` e o `FileOptions` como `SequentialScan`. O código usa o método Seek para buscar até o final do arquivo, acrescentando um byte ao arquivo existente.
 
 ```csharp
 using System;
@@ -183,14 +183,14 @@ namespace FileStreamTest
 
 Para obter outro exemplo, confira [Como armazenar e buscar dados binários em uma coluna de fluxo de arquivos](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).
 
-## <a name="resources-in-sql-server-books-online"></a>Recursos no Manuais Online do SQL Server
+## <a name="resources-in-sql-server-books-online"></a>Recursos nos Manuais Online do SQL Server
 
 A documentação completa do FILESTREAM está localizada nas seguintes seções dos Manuais Online do SQL Server.
 
 |Tópico|Descrição|
 |-----------|-----------------|
-|[FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)|Descreve quando usar o armazenamento FILESTREAM e como ele integra o SQL Server Mecanismo de Banco de Dados com um sistema de arquivos NTFS.|
-|[Criar aplicativos clientes para dados FILESTREAM](../../../relational-databases/blob/create-client-applications-for-filestream-data.md)|Descreve as funções de API do Windows para trabalhar com dados FILESTREAM.|
+|[FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)|Descreve quando usar o armazenamento FILESTREAM e como ele integra o Mecanismo de Banco de Dados do SQL Server com um sistema de arquivos NTFS.|
+|[Criar aplicativos clientes para dados FILESTREAM](../../../relational-databases/blob/create-client-applications-for-filestream-data.md)|Descreve as funções da API do Windows para trabalhar usando dados FILESTREAM.|
 |[FILESTREAM e outros recursos do SQL Server](../../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)|Fornece considerações, diretrizes e limitações para usar dados FILESTREAM com outros recursos do SQL Server.|
 
 ## <a name="next-steps"></a>Próximas etapas

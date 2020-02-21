@@ -1,27 +1,27 @@
 ---
 title: Suporte do SqlClient para alta disponibilidade e recuperação de desastre
-description: Descreve o suporte a SqlClient para alta disponibilidade, grupos de disponibilidade de recuperação de desastre (AlwaysOn).
+description: Descreve o suporte do SqlClient para grupos de disponibilidade de recuperação de desastre (AlwaysOn) e de alta disponibilidade.
 ms.date: 08/15/2019
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: c60ade4c949574b589bf1e1e660564775b394527
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: b84790960455d60411cae14ae180be0d8891e4a2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451990"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258556"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Suporte do SqlClient para alta disponibilidade e recuperação de desastre
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Este tópico discute o Microsoft SqlClient Provedor de Dados para suporte de SQL Server para alta disponibilidade, recuperação de desastre Grupos de Disponibilidade AlwaysOn.  O recurso dos Grupos de Disponibilidade AlwaysOn foi adicionado ao SQL Server 2012. Para obter mais informações sobre os Grupos de Disponibilidade AlwaysOn, confira os Manuais Online do SQL Server.  
+Este tópico discute o Provedor de Dados do Microsoft SqlClient para suporte ao SQL Server para alta disponibilidade, recuperação de desastre – Grupos de Disponibilidade AlwaysOn.  O recurso dos Grupos de Disponibilidade AlwaysOn foi adicionado ao SQL Server 2012. Para obter mais informações sobre os Grupos de Disponibilidade AlwaysOn, confira os Manuais Online do SQL Server.  
   
 Agora você pode especificar o ouvinte de grupo de disponibilidade de um grupo de disponibilidade (de alta disponibilidade e recuperação de desastres) (AG) ou uma instância de cluster de failover do SQL Server 2012 na propriedade de conexão. Se um aplicativo SqlClient estiver conectado a um banco de dados AlwaysOn que efetua failover, a conexão original será interrompida e o aplicativo deverá abrir uma nova conexão para continuar o trabalho após o failover.  
   
@@ -30,13 +30,13 @@ Se você não estiver conectado a um ouvinte de grupo de disponibilidade ou inst
 > [!NOTE]
 >  O aumento do tempo limite de conexão e a implementação de lógica de repetição de conexão aumentarão a probabilidade de um aplicativo se conectar a um grupo de disponibilidade. Além disso, como uma conexão pode falhar devido a um failover, você deve implementar lógica de repetição de conexão, repetindo uma conexão com falha até se reconectar.  
   
-As propriedades de conexão a seguir têm suporte no Provedor de Dados do Microsoft SqlClient para SQL Server:  
+As seguintes propriedades de conexão são compatíveis com o Provedor de Dados do Microsoft SqlClient para SQL Server:  
   
 - `ApplicationIntent`  
   
 - `MultiSubnetFailover`  
   
-Você pode modificar programaticamente essas palavras-chave de cadeia de conexão com:  
+você pode modificar programaticamente essas palavras-chave de cadeia de conexão com:  
   
 - <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
@@ -59,11 +59,11 @@ Use as diretrizes a seguir para conectar-se a um servidor em um grupo de disponi
   
 - Conectar-se a uma instância do SQL Server configurada com mais de 64 endereços IP causará uma falha de conexão.  
   
-- O comportamento de um aplicativo que usa a propriedade de conexão `MultiSubnetFailover` não é afetado com base no tipo de autenticação: Autenticação do SQL Server, Autenticação Kerberos ou Autenticação do Windows.  
+- Comportamento de um aplicativo que usa a propriedade de conexão do `MultiSubnetFailover` não é afetada com base no tipo de autenticação: Autenticação do SQL Server, Autenticação Kerberos ou Autenticação do Windows.  
   
 - Aumente o valor de `Connect Timeout` para acomodar o tempo de failover e reduza as tentativas de repetição da conexão do aplicativo.  
   
-- Não há suporte a transações distribuídas.  
+- Não há suporte para transações distribuídas.  
   
  Se o roteamento somente leitura não estiver em ação, conectar-se a um local de réplica secundária apresentará falha nas seguintes situações:  
   
@@ -71,7 +71,7 @@ Use as diretrizes a seguir para conectar-se a um servidor em um grupo de disponi
   
 - Se um aplicativo usar `ApplicationIntent=ReadWrite` (abordado abaixo) e o local da réplica secundária estiver configurado para acesso somente leitura.  
   
-Não há suporte para <xref:Microsoft.Data.SqlClient.SqlDependency> em réplicas secundárias somente leitura.  
+O <xref:Microsoft.Data.SqlClient.SqlDependency> não é compatível com réplicas secundárias somente leitura.  
   
 Uma conexão falhará se uma réplica primária estiver configurada para rejeitar cargas de trabalho somente leitura e a cadeia de conexão contiver `ApplicationIntent=ReadOnly`.  
   

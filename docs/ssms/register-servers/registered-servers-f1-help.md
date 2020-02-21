@@ -1,6 +1,6 @@
 ---
-title: Ajuda F1 dos Servidores Registrados | Microsoft Docs
-ms.custom: ''
+title: Ajuda F1 dos Servidores Registrados
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf08f76b0df0b3624aa1450b2463599b31fb85fa
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f8422cd501258d15365e7125c11e616c94d7dc8d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266139"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256234"
 ---
 # <a name="registered-servers-f1-help"></a>Ajuda F1 dos Servidores Registrados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,13 +48,13 @@ ms.locfileid: "68266139"
  **Modo de Autenticação do Windows (Autenticação do Windows)**  
  Conecte-se à instância de servidor de relatório usando as credenciais do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Autenticação Básica**  
+ **Autenticação básica**  
  Conecte-se usando a **Autenticação Básica** se a instalação do Reporting Services estiver configurada para usar a Autenticação Básica.  
   
  **Autenticação de Formulários**  
  Conecte-se usando a **Autenticação de Formulários** se a instalação do Reporting Services estiver configurada para usar uma extensão de autenticação personalizada.  
   
- **Nome do Usuário**  
+ **Nome de usuário**  
  Digite o nome de logon a ser usado na conexão. Essa opção estará disponível somente se você selecionou **Básica** ou **Autenticação de Formulários**.  
   
  **Senha**  
@@ -71,7 +71,7 @@ ms.locfileid: "68266139"
  **Descrição do servidor registrado**  
  Digite uma descrição opcional do servidor.  
   
- **Teste**  
+ **Test**  
  Clique para testar a conexão com o servidor selecionado em **Nome do servidor**.  
   
  
@@ -91,7 +91,7 @@ ms.locfileid: "68266139"
  **Autenticação**  
  A Autenticação do Windows permite que um usuário se conecte usando as credenciais do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, como um usuário do Windows ou como um membro de um grupo do Windows.  
   
- **User name**  
+ **Nome de usuário**  
  Essa opção não está disponível nesta versão.  
   
  **Senha**  
@@ -106,7 +106,7 @@ ms.locfileid: "68266139"
  **Descrição do servidor registrado**  
  Digite uma descrição opcional do servidor.  
   
- **Teste**  
+ **Test**  
  Clique para testar a conexão com o servidor selecionado em **Nome do servidor**. 
  
  ## <a name="ssis-new-or-edit-server-registration-general-tab"></a>Novo Registro ou Editar Registro de Servidor (guia Geral) do SSIS 
@@ -117,7 +117,7 @@ ms.locfileid: "68266139"
   
 ### <a name="options"></a>Opções  
  **Tipo de servidor**  
- Quando um servidor é registrado em Servidores Registrados, a caixa **Tipo de servidor** é somente leitura e corresponde ao tipo de servidor exibido em Servidores Registrados. Para registrar um tipo diferente de servidor, clique em **Database Engine**, **Analysis Server**, **Reporting Services**, **SQL Server Compact** **Edition**, ou **Integration Services** na barra de ferramentas **Servidores Registrados** antes de começar a registrar um novo servidor.  
+ Quando um servidor é registrado em Servidores Registrados, a caixa **Tipo de servidor** é somente leitura e corresponde ao tipo de servidor exibido em Servidores Registrados. Para registrar um tipo diferente de servidor, clique em **Mecanismo de Banco de Dados**, **Analysis Server**, **Reporting Services**, **SQL Server Compact** **Edition** ou **Integration Services** na barra de ferramentas **Servidores Registrados** antes de começar a registrar um novo servidor.  
   
  **Nome do servidor**  
  Selecione o servidor ao qual se conectar. O servidor conectado da última vez é exibido por padrão.  
@@ -125,7 +125,7 @@ ms.locfileid: "68266139"
  **Autenticação**  
  O modo de Autenticação do Windows permite que um usuário se conecte por meio de uma conta de usuário do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **User name**  
+ **Nome de usuário**  
  Essa opção não está disponível nesta versão.  
   
  **Senha**  
@@ -140,7 +140,7 @@ ms.locfileid: "68266139"
  **Descrição do servidor registrado**  
  Digite uma descrição opcional do servidor.  
   
- **Teste**  
+ **Test**  
  Clique para testar a conexão com o servidor selecionado em **Nome do servidor**. 
   
 

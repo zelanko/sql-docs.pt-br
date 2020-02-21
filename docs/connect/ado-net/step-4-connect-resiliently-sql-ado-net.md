@@ -1,73 +1,73 @@
 ---
-title: 'Etapa 4: conectar-se de forma resiliente ao SQL com ADO.NET | Microsoft Docs'
-description: Descreve como conectar o reciliently ao SQL
+title: 'Etapa 4: Conectar-se de maneira resiliente ao SQL com ADO.NET | Microsoft Docs'
+description: Descreve como conectar-se de maneira resiliente ao SQL
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: rothja
+ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 dev_langs:
 - CSharp
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: 62ec2eb775ef5fba76b402d1871afe6c87bcc606
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c323880153939b4f7229e5f04cf4b9a9ed16b99
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451807"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253317"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Etapa 4: Conectar-se de forma resiliente ao SQL com ADO.NET
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-- Artigo anterior:&nbsp;&nbsp;&nbsp;[Etapa 3: prova de conceito da conexão ao SQL usando ADO.NET](step-3-connect-sql-ado-net.md)  
+- Artigo anterior:&nbsp;&nbsp;&nbsp;[Etapa 3: Prova de conceito da conexão ao SQL usando o ADO.NET](step-3-connect-sql-ado-net.md)  
 
   
-Este tópico fornece um exemplo de código do C# que demonstra a lógica de repetição personalizada. A lógica de repetição fornece confiabilidade. A lógica de repetição é projetada para processar normalmente erros temporários ou *falhas transitórias* que tendem a desaparecer se o programa aguardar vários segundos e novas tentativas.  
+Este tópico fornece um exemplo de código do C# que demonstra a lógica de repetição personalizada. A lógica de repetição fornece confiabilidade. A lógica de repetição foi criada para processar normalmente erros transitórios ou *falhas transitórias* que tendem a desaparecer caso o programa aguarde vários segundos e tente novamente.  
   
 As fontes de falhas transitórias incluem:  
   
 - Uma breve falha da rede que dá suporte à Internet.  
-- Um sistema de nuvem pode estar equilibrando a carga de seus recursos no momento em que a consulta foi enviada.  
+- Um sistema de nuvem pode estar realizando balanceamento de carga dos próprios recursos no momento em que a consulta é enviada.  
   
   
-As classes do ADO.NET para conexão ao Microsoft SQL Server local também podem se conectar ao Banco de Dados SQL do Azure. No entanto, por si só, as classes ADO.NET não podem fornecer toda a robustez e a confiabilidade necessárias no uso em produção. O programa cliente pode encontrar falhas transitórias das quais ele deve se recuperar de forma silenciosa e tranqüila e continuar por conta própria.  
+As classes do ADO.NET para conexão ao Microsoft SQL Server local também podem se conectar ao Banco de Dados SQL do Azure. No entanto, por si só, as classes ADO.NET não podem fornecer toda a solidez e confiabilidade necessárias para o uso na produção. O programa cliente pode encontrar falhas transitórias das quais ele deve se recuperar silenciosamente e continuar por conta própria.  
   
-## <a name="step-1-identify-transient-errors"></a>Etapa 1: identificar erros transitórios  
+## <a name="step-1-identify-transient-errors"></a>Etapa 1: Identificar erros transitórios  
   
-Seu programa deve distinguir entre erros transitórios versus erros persistentes. Erros transitórios são condições de erro que podem ser apagadas em um curto período de tempo, como problemas de rede transitórios.  Um exemplo de um erro persistente seria, se o seu programa tiver um erro de ortografia do nome do banco de dados de destino, nesse caso, o "nenhum banco de dados encontrado" persistiria e não terá chance de se limpar em um curto período de tempo.  
+O programa deve distinguir entre erros transitórios versus erros persistentes. Erros transitórios são condições de erro que podem desaparecer em um período curto de tempo, como problemas de rede transitórios.  Um exemplo de um erro persistente seria se o programa tivesse um erro de ortografia no nome do banco de dados de destino, nesse caso, o erro "Nenhum banco de dados encontrado" persistiria e não haveria chance de que esse erro desaparecesse em um período curto de tempo.  
   
-A lista de números de erro categorizados como falhas transitórias está disponível em [mensagens de erro para aplicativos cliente do banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+A lista com os números dos erros que são categorizados como falhas transitórias está disponível em [Mensagens de erro para aplicativos cliente do Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
-## <a name="step-2-create-and-run-sample-application"></a>Etapa 2: criar e executar o aplicativo de exemplo  
+## <a name="step-2-create-and-run-sample-application"></a>Etapa 2: Criar e executar o aplicativo de exemplo  
   
-Este exemplo pressupõe que .NET Framework 4.5.1 ou posterior esteja instalado.  O C# exemplo de código consiste em um arquivo chamado Program.cs. Seu código é fornecido na próxima seção.  
+Este exemplo pressupõe que o .NET Framework 4.5.1 ou posterior esteja instalado.  O exemplo de código em C# consiste em um arquivo chamado Program.cs. Seu código é fornecido na próxima seção.  
   
-### <a name="step-2a-capture-and-compile-the-code-sample"></a>Etapa 2. a: capturar e compilar o exemplo de código  
+### <a name="step-2a-capture-and-compile-the-code-sample"></a>Etapa 2.a: Capturar e compilar o exemplo de código  
   
 Você pode compilar o exemplo com as seguintes etapas:  
   
-1. No [Visual Studio Community Edition gratuito](https://www.visualstudio.com/products/visual-studio-community-vs), crie um novo projeto do modelo de C# aplicativo de console.  
-    - Arquivo > Novo > projeto > instalado > modelos > Visual C# > Windows > área de trabalho clássica > aplicativo de console  
-    - Nomeie o projeto **RetryAdo2**.  
-2. Abra o painel de Gerenciador de Soluções.  
-    - Consulte o nome do seu projeto.  
-    - Consulte o nome do arquivo Program.cs.  
+1. Na [edição gratuita do Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs), crie um novo projeto no modelo de Aplicativo do Console do C#.  
+    - Arquivo > Novo > Projeto > Instalado > Modelos > Visual C# > Windows > Área de Trabalho Clássica > Aplicativo de Console  
+    - Nomeie o projeto como **RetryAdo2**.  
+2. Abra o painel do Gerenciador de Soluções.  
+    - Veja o nome do seu projeto.  
+    - Veja o nome do arquivo Program.cs.  
 3. Abra o arquivo Program.cs.  
-4. Substitua totalmente o conteúdo do arquivo Program.cs pelo código no bloco de código a seguir.  
-5. Clique no menu Compilar > Compilar solução.  
+4. Substitua por completo o conteúdo do arquivo Program.cs pelo código no bloco de código a seguir.  
+5. Clique no menu Compilar > Compilar Solução.  
   
-### <a name="step-2b-copy-and-paste-sample-code"></a>Etapa 2. b: copiar e colar código de exemplo  
+### <a name="step-2b-copy-and-paste-sample-code"></a>Etapa 2.b: Copiar e colar código de exemplo  
   
-Cole esse código em seu arquivo **Program.cs** .  
+Cole este código em seu arquivo **Program.cs** .  
   
-Em seguida, você deve editar as cadeias de caracteres para nome do servidor, senha e assim por diante. Você pode encontrar essas cadeias de caracteres no método chamado **GetSqlConnectionStringBuilder**.  
+Em seguida, você deve editar as cadeias de caracteres de nome do servidor, senha e assim por diante. Você pode encontrar essas cadeias de caracteres no método chamado **GetSqlConnectionStringBuilder**.  
   
-Observação: a cadeia de conexão para o nome do servidor é voltada para o banco de dados SQL do Azure, pois inclui o prefixo de quatro caracteres do **TCP:** . Mas você pode ajustar a cadeia de caracteres do servidor para se conectar ao seu Microsoft SQL Server.  
+OBSERVAÇÃO:  A cadeia de conexão para o nome do servidor é voltada para o Banco de Dados SQL do Azure, pois inclui o prefixo de quatro caracteres de **tcp:** . Mas você pode ajustar a cadeia de caracteres do servidor para se conectar ao seu Microsoft SQL Server.  
   
   
 ```csharp
@@ -244,13 +244,13 @@ SELECT TOP 3
 }  
 ```  
   
-###  <a name="step-2c-run-the-program"></a>Etapa 2. c: executar o programa  
+###  <a name="step-2c-run-the-program"></a>Etapa 2.c: Execute o programa  
   
   
-O executável **RetryAdo2. exe** não insere parâmetros. Para executar o. exe:  
+O executável **RetryAdo2.exe** não insere nenhum parâmetro. Para executar o .exe:  
   
-1. Abra uma janela do console na qual você compilou o binário RetryAdo2. exe.  
-2. Execute RetryAdo2. exe, sem parâmetros de entrada.  
+1. Abra uma janela de console para onde você tiver compilado o binário RetryAdo2.exe.  
+2. Execute o RetryAdo2.exe, sem nenhum parâmetro de entrada.  
   
   
   
@@ -262,19 +262,19 @@ filetable_updates_2105058535    2105058535
   
   
   
-## <a name="step-3-ways-to-test-your-retry-logic"></a>Etapa 3: maneiras de testar sua lógica de repetição  
+## <a name="step-3-ways-to-test-your-retry-logic"></a>Etapa 3: Maneiras de testar sua lógica de repetição  
   
-Há várias maneiras pelas quais você pode simular um erro transitório para testar sua lógica de repetição.  
+Há diversas maneiras que você pode simular um erro transitório para testar sua lógica de repetição.  
   
   
-###  <a name="step-3a-throw-a-test-exception"></a>Etapa 3. a: lançar uma exceção de teste  
+###  <a name="step-3a-throw-a-test-exception"></a>Etapa 3.a: Gerar uma exceção de teste  
   
 O exemplo de código inclui:  
   
-- Uma pequena segunda classe denominada **TestSqlException**, com uma propriedade chamada **Number**.  
-- `//throw new TestSqlException(4060);`, que você pode remover o comentário.  
+- Uma segunda classe pequena chamada **TestSqlException**, com uma propriedade chamada **Number**.  
+- `//throw new TestSqlException(4060);` , do qual você pode remover a marca de comentário.  
   
-Se você remover o comentário da instrução throw e recompile, a próxima execução de **RetryAdo2. exe** produzirá algo semelhante ao seguinte.  
+Se você remover a marca de comentário da instrução throw e recompilar, a próxima execução de **RetryAdo2.exe** gerará algo semelhante ao mostrado a seguir.  
   
 ```  
 [C:\VS15\RetryAdo2\RetryAdo2\bin\Debug\]  
@@ -292,31 +292,31 @@ ERROR: Unable to access the database!
 >>  
 ```  
   
-###  <a name="step-3b-retest-with-a-persistent-error"></a>Etapa 3. b: testar novamente com um erro persistente  
+###  <a name="step-3b-retest-with-a-persistent-error"></a>Etapa 3.b: Teste novamente com um erro persistente  
   
-Para provar que o código manipula erros persistentes corretamente, execute novamente o teste anterior, exceto que não use o número de um erro transitório real como 4060. Em vez disso, use o número insentido de 7654321. O programa deve tratar isso como um erro persistente e deve ignorar qualquer repetição.  
+Para provar que o código lida com erros persistentes corretamente, execute novamente o teste anterior, mas não use o número de um erro transitório real como 4060. Em vez disso, use o número sem sentido 7654321. O programa deve tratar isso como um erro persistente e deve ignorar qualquer nova tentativa.  
   
-###  <a name="step-3c-disconnect-from-the-network"></a>Etapa 3. c: desconectar da rede  
+###  <a name="step-3c-disconnect-from-the-network"></a>Etapa 3.c: Desconectar da rede  
   
 1. Desconecte o computador cliente da rede.  
-    - Para um desktop, desconecte o cabo de rede.  
-    - Para um laptop, pressione a função combinação de chaves para desligar o adaptador de rede.  
-2. Inicie o RetryAdo2. exe e aguarde o console exibir o primeiro erro transitório, provavelmente 11001.  
-3. Reconecte-se à rede, enquanto o RetryAdo2. exe continua a ser executado.  
-4. Observe o êxito do relatório do console em uma nova tentativa subsequente.  
+    - Para uma área de trabalho, desconecte o cabo de rede.  
+    - Para um laptop, pressione a combinação de função das teclas para desativar o adaptador de rede.  
+2. Inicie o RetryAdo2.exe e aguarde o console exibir o primeiro erro transitório, provavelmente 11001.  
+3. Reconecte-se à rede, enquanto o RetryAdo2.exe continua em execução.  
+4. Observe o console relatar o sucesso em uma nova tentativa subsequente.  
   
   
-###  <a name="step-2d-temporarily-misspell-the-server-name"></a>Etapa 2. d: errar temporariamente o nome do servidor  
+###  <a name="step-2d-temporarily-misspell-the-server-name"></a>Etapa 2.d: Temporariamente digitar incorretamente o nome do servidor  
   
-1. Adicione temporariamente 40615 como outro número de erro a **TransientErrorNumbers**e recompile.  
+1. Adicione temporariamente 40615 como outro número de erro para **TransientErrorNumbers**e recompile.  
 2. Defina um ponto de interrupção na linha: `new QC.SqlConnectionStringBuilder()`.  
-3. Use o recurso *Editar e continuar* para errar intencionalmente o nome do servidor, algumas linhas abaixo.  
-    - Deixe o programa ser executado e retorne ao ponto de interrupção.  
+3. Use o recurso *Editar e Continuar* para propositalmente digitar o nome do servidor de maneira incorreta algumas linhas abaixo.  
+    - Deixe o programa ser executado e voltar ao ponto de interrupção.  
     - O erro 40615 ocorre.  
 4. Corrija o erro de ortografia.  
-5. Deixe o programa ser executado e concluído com êxito.  
-6. Remova 40615 e recompile.  
+5. Deixe o programa ser executado e concluir com êxito.  
+6. Remova o 40615 e recompile.  
   
 ## <a name="next-steps"></a>Próximas etapas  
   
-Para explorar outros melhores practicies e diretrizes de design, visite [conectar-se ao banco de dados SQL: links, práticas recomendadas e diretrizes de design](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+Para explorar outras diretrizes de design e melhores práticas, visite [Como conectar-se ao Banco de Dados SQL: links, práticas recomendadas e diretrizes de design](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  

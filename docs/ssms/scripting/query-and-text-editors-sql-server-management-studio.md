@@ -1,5 +1,7 @@
 ---
-title: Editores de Consultas e de Texto (SQL Server Management Studio) | Microsoft Docs
+title: Editores de texto e consulta (SSMS)
+description: Saiba como usar os editores do SSMS (SQL Server Management Studio) para consultar, editar e testar interativamente arquivos.
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -22,17 +24,16 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d8958849239c730aa7f687cd12a559de158d5e1
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 07ab012f916a86ca8642c81e2bdd87dfc815db2e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988156"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558028"
 ---
-# <a name="query-and-text-editors-sql-server-management-studio"></a>Editores de Consultas e de Texto (SQL Server Management Studio)
+# <a name="query-and-text-editors-sql-server-management-studio"></a>Editores de consultas e de texto (SQL Server Management Studio)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -76,7 +77,7 @@ ms.locfileid: "70988156"
  **Codificação por cores**  
  Exibe cores diferentes para cada tipo de elemento de sintaxe, o que melhora a legibilidade de instruções complexas.  
   
- **Estruturação do código**  
+ **Estrutura de tópicos do código**  
  Exibe grupos de códigos com linhas de estruturação à esquerda do código. Os grupos de códigos podem ser recolhidos e expandidos para facilitar o exame do código.  
   
  **Modelo**  
@@ -121,10 +122,10 @@ ms.locfileid: "70988156"
 |Descreve como configurar opções para os vários editores, como numeração de linha e opções do IntelliSense.|[Configurar editores &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-editors-sql-server-management-studio.md)|  
 |Descreve os vários modos nos quais você pode abrir os editores no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Abrir um editor &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/open-an-editor-sql-server-management-studio.md)|  
 |Descreve como gerenciar o modo de exibição, como quebra automática de linha, divisão de uma janela ou guias.|[Gerenciar o editor e o modo de exibição](../../relational-databases/scripting/manage-the-editor-and-view-mode.md)|  
-|Descreve como definir opções de formatação, como texto oculto ou recuo.|[Gerenciar formatação de código](../../relational-databases/scripting/manage-code-formatting.md)|  
-|Descreve como navegar pelo texto em uma janela do editor usando recursos como pesquisa incremental ou ir para.|[Código e texto de navegação](../../relational-databases/scripting/navigate-code-and-text.md)|  
-|Descreve como definir opções de codificação por cores para várias classes de sintaxe, o que facilitará a leitura de instruções complexas.|[Codificação por cores no Editor de Consultas](../../relational-databases/scripting/color-coding-in-query-editors.md)|  
-|Descreve como usar a estrutura de tópicos de código para ocultar partes dos scripts complexos nos quais você não está trabalhando no momento.|[Estruturação do código](../../relational-databases/scripting/code-outlining.md)|  
+|Descreve como definir opções de formatação, como texto oculto ou recuo.|[Gerenciar a formatação do código](../../relational-databases/scripting/manage-code-formatting.md)|  
+|Descreve como navegar pelo texto em uma janela do editor usando recursos como pesquisa incremental ou ir para.|[Navegar no código e no texto](../../relational-databases/scripting/navigate-code-and-text.md)|  
+|Descreve como definir opções de codificação por cores para várias classes de sintaxe, o que facilitará a leitura de instruções complexas.|[Codificação por cores nos Editores de Consulta](../../relational-databases/scripting/color-coding-in-query-editors.md)|  
+|Descreve como usar a estrutura de tópicos de código para ocultar partes dos scripts complexos nos quais você não está trabalhando no momento.|[Estrutura de tópicos do código](../../relational-databases/scripting/code-outlining.md)|  
 |Descreve como arrastar texto de um local em um script e soltá-lo em um novo local.|[Arrastar e soltar texto](../../relational-databases/scripting/drag-and-drop-text.md)|  
 |Descreve como realizar uma pesquisa global e fazer a substituição, como alterar nomes de coluna.|[Pesquisar e substituir](../../relational-databases/scripting/search-and-replace.md)|  
 |Descreve como definir indicadores para localizar partes importantes de código com mais facilidade.|[Gerenciar indicadores](../../relational-databases/scripting/manage-bookmarks.md)|  

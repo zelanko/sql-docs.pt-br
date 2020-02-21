@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27da48f6d124baed5202d5cb75e8086b97fc684e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a7195055e95abe07770633ec672d746c5927054d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577866"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190440"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Criar relatórios paginados do Reporting Services com o Designer de relatórios (SSRS)
 
@@ -44,7 +44,7 @@ Os projetos de relatório atuam como contêineres para recursos e definições d
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] é uma ferramenta de cliente. Você pode testar sua solução de relatório localmente em seu computador, implantá-la em um ambiente de teste para testar a solução de servidor e, em seguida, implantá-la em um ambiente de produção. Depois da implantação, verifique se as extensões de processamento de fonte de dados e as credenciais de fonte de dados estão configuradas para o ambiente de servidor de relatório. Você pode usar o Gerenciador de Configurações para ajudar a gerenciar as propriedades de diferentes implantações. Para obter mais informações, consulte [Reporting Services no SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
- Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Para saber mais, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
    
 ##  <a name="bkmk_SharedDatasets"></a> Conjuntos de dados compartilhados  
  Use o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para definir e implantar conjuntos de dados compartilhados para uma solução de relatório. Os conjuntos de dados compartilhados podem ser implantadas independentemente de outros itens em um projeto por meio das propriedades **OverwriteDatasets** e **TargetDatasetFolder** . Para obter mais informações, consulte [Definir propriedades de implantação &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
@@ -90,7 +90,7 @@ Relatórios paginados são arquivos armazenados em um projeto de relatório. Os 
  As partes de relatório podem ser implantadas independentemente de outros itens em um projeto por meio da propriedade **TargetReportPartFolder** e de outras propriedades. Para obter mais informações, consulte [Definir propriedades de implantação &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
 ##  <a name="bkmk_Resources"></a> Recursos  
- Você pode adicionar arquivos a seu projeto que estejam relacionados a seu relatório, mas não sejam processados pelo servidor de relatório. Por exemplo, você pode adicionar imagens para imagens ou arquivos de forma ESRI para dados espaciais. Para obter mais informações, consulte [Resources](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
+ Você pode adicionar arquivos a seu projeto que estejam relacionados a seu relatório, mas não sejam processados pelo servidor de relatório. Por exemplo, você pode adicionar imagens para imagens ou arquivos de forma ESRI para dados espaciais. Para saber mais, confira [Recursos](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
  
 ##  <a name="bkmk_ReportLayout"></a> Layout de relatório paginado  
  Para criar o layout do relatório, arraste itens do relatório e regiões de dados da Caixa de Ferramentas para a superfície de design e organize-os. Arraste os campos de conjunto de dados para os itens na superfície de design para adicionar dados ao relatório. Para organizar dados em grupos em uma região de dados tablix, arraste campos de conjunto de dados para o painel Agrupamento. Como as ferramentas de criação de relatório são essencialmente uma maneira de criar definições de relatório, a abordagem do design de relatórios é bastante semelhante entre Construtor de Relatórios e Designer de Relatórios.  
@@ -185,4 +185,4 @@ Relatórios paginados são arquivos armazenados em um projeto de relatório. Os 
 [Ferramentas de Design da Consulta](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Implantação e suporte de versão no SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

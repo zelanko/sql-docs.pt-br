@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: componentes e configuração do SQL Server Management Studio'
+title: Componentes e configuração do SSMS"
 description: Um tutorial descrevendo os componentes e as opções de configuração básica para seu ambiente do SQL Server Management Studio.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-ms.openlocfilehash: 68a99d74d96fc4d54c7c97bad8049447761f67c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267083"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247288"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>componentes e configuração do SQL Server Management Studio
 
@@ -33,7 +33,7 @@ Este tutorial descreve os diversos componentes de janela no SSMS (SQL Server Man
 
 Para concluir este tutorial, você precisará do SQL Server Management Studio.  
 
-* Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## <a name="sql-server-management-studio-components"></a>Componentes do SQL Server Management Studio
 

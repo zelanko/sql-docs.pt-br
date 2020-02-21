@@ -1,36 +1,36 @@
 ---
-title: 'Etapa 3: prova de conceito da conexão com o SQL usando o ADO.NET | Microsoft Docs'
-description: Contém C# exemplos de código para se conectar a SQL Server, executar uma consulta e inserir uma linha.
+title: 'Etapa 3: Prova de conceito da conexão com o SQL usando o ADO.NET | Microsoft Docs'
+description: Contém exemplos de código C# para se conectar ao SQL Server, executar uma consulta e inserir uma linha.
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: rothja
+ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: 2819697746f810e0c0b19a9ab7d076fa79c15a2f
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cff776c4881dcc012a825bcd48f6d6271b95bb75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451809"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247523"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Etapa 3: Prova de conceito da conexão ao SQL usando ADO.NET
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-- Artigo anterior:&nbsp;&nbsp;&nbsp;[Etapa 2: criar um banco de dados SQL para o desenvolvimento do ADO.NET](step-2-create-sql-database-ado-net-development.md)  
-- Próximo artigo:&nbsp;&nbsp;&nbsp;[Etapa 4: conectar-se de forma resiliente ao SQL com o ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
+- Artigo anterior:&nbsp;&nbsp;&nbsp;[Etapa 2: Criar um Banco de Dados SQL para o desenvolvimento no ADO.NET](step-2-create-sql-database-ado-net-development.md)  
+- Próximo artigo:&nbsp;&nbsp;&nbsp;[Etapa 4: Conectar-se de modo resiliente ao SQL com ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
 
   
-Este C# exemplo de código deve ser considerado apenas uma prova de conceito. O código de exemplo é simplificado para fins de clareza e não necessariamente representa as práticas recomendadas recomendadas pela Microsoft.  
+Este exemplo de código C# deve ser considerado apenas uma prova de conceito. O código de exemplo está simplificado para fins de clareza e não necessariamente representa as melhores práticas recomendadas pela Microsoft.  
   
-## <a name="step-1-connect"></a>Etapa 1: conectar-se
+## <a name="step-1-connect"></a>Etapa 1: Conectar
   
-O método **SqlConnection. Open** é usado para se conectar ao banco de dados SQL.  
+O método **SqlConnection.Open** é usado para se conectar ao Banco de Dados SQL.  
 
 
 ```csharp
@@ -69,7 +69,7 @@ Press any key to finish...
 
 ## <a name="step-2-execute-a-query"></a>Etapa 2: Executar uma consulta  
   
-O método SqlCommand. ExecuteReader:  
+O método SqlCommand.ExecuteReader:  
   
 - Emite a instrução SQL SELECT para o sistema SQL.  
 - Retorna uma instância de SqlDataReader para fornecer acesso às linhas de resultado.  
@@ -153,14 +153,14 @@ Press any key to finish...
   
   
   
-## <a name="step-3-insert-a-row"></a>Etapa 3: inserir uma linha  
+## <a name="step-3-insert-a-row"></a>Etapa 3: Inserir uma linha  
   
   
 Este exemplo demonstra como:  
   
-- Execute uma instrução SQL INSERT com segurança passando parâmetros.  
+- Executar uma instrução SQL INSERT com segurança passando parâmetros.  
   - O uso de parâmetros protege contra ataques de injeção de SQL.  
-- Recupere o valor gerado automaticamente.  
+- Recuperar o valor gerado automaticamente.  
   
   
   

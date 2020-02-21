@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: b2f96f79b81b79d2abfaadc40c37b864d20a93dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706349"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831397"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Usar um script Python para implantar um cluster de Big Data do SQL Server no AKS (Serviço de Kubernetes do Azure)
 
@@ -57,7 +57,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>Executar o script de implantação
 
-Use as etapas a seguir para executar o script de implantação. Esse script criará um serviço AKS no Azure e, em seguida, implantará um cluster de Big Data do SQL Server 2019 no AKS. Você também pode modificar o script com outras [variáveis de ambiente](deployment-guidance.md#configfile) para criar uma implantação personalizada.
+Use as etapas a seguir para executar o script de implantação em um prompt do Bash do Linux ou Windows PowerShell. Esse script criará um serviço AKS no Azure e, em seguida, implantará um cluster de Big Data do SQL Server 2019 no AKS. Você também pode modificar o script com outras [variáveis de ambiente](deployment-guidance.md#configfile) para criar uma implantação personalizada.
 
 1. Execute o script com o seguinte comando:
 
@@ -88,8 +88,6 @@ Use as etapas a seguir para executar o script de implantação. Esse script cria
    > A conta `sa` do SQL Server é desabilitada durante a implantação do cluster de Big Data. Um novo logon sysadmin é provisionado na instância mestra do SQL Server com o mesmo nome especificado para a entrada de **Nome de usuário** e a senha correspondente à entrada **Senha**. Os mesmos valores de **Nome de usuário** e **Senha** são usados para provisionar um usuário administrador do controlador. O único usuário com suporte para o gateway (Knox) é **raiz** e a senha é a mesma que a apresentada acima.
 
 1. O script será iniciado criando um cluster do AKS usando os parâmetros especificados. Esta etapa demora vários minutos.
-
-   <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
 
 ## <a name="monitor-the-status"></a>Monitorar o status
 

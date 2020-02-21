@@ -1,0 +1,214 @@
+### YamlMime:Landing
+title: Recursos educativos do SQL
+summary: Os tutoriais, os inícios rápidos e outros recursos educacionais ensinam você a trabalhar com SQL Server e o Banco de Dados SQL do Azure.
+metadata:
+  title: Recursos educativos do SQL
+  description: Uma coleção de tutoriais e inícios rápidos para ensinar você a usar o SQL Server e o Banco de Dados SQL do Azure.
+  ms.prod: sql
+  ms.topic: landing-page
+  author: MashaMSFT
+  ms.author: mathoma
+  ms.date: 01/07/2020
+  ms.openlocfilehash: 6ff11b20d71d7af251c1d28d57bd86aef278c330
+  ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 01/31/2020
+  ms.locfileid: "76832207"
+landingContent:
+- title: SQL Server
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: Atualizar o SQL Server
+      url: https://docs.microsoft.com/learn/modules/introduction-upgrading-sql-server/
+    - text: Usar o Assistente de Ajuste de Consultas
+      url: https://docs.microsoft.com/learn/modules/use-sql-server-query-tuning-assistant/
+    - text: Workshops do SQL Server
+      url: https://aka.ms/sqlworkshops
+  - linkListType: quickstart
+    links:
+    - text: Conectar e consultar com o Azure Data Studio
+      url: ../azure-data-studio/quickstart-sql-server.md
+    - text: Conectar e consultar com o SSMS
+      url: ../ssms/tutorials/connect-query-sql-server.md
+    - text: Gravar a T-SQL (Transact-SQL)
+      url: ../t-sql/tutorial-writing-transact-sql-statements.md
+    - text: Eventos estendidos
+      url: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
+    - text: Backup e restauração local
+      url: ../relational-databases/backup-restore/quickstart-backup-restore-database.md
+    - text: Backup e restauração do Armazenamento de Blobs do Azure
+      url: ../relational-databases/backup-restore/quickstart-backup-restore-database.md
+  - linkListType: tutorial
+    links:
+    - text: grupo de disponibilidade
+      url: ../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md
+    - text: Replicação transacional
+      url: ../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md
+    - text: Replicação de mesclagem
+      url: ../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md
+    - text: Criar tabela na memória
+      url: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
+    - text: Assinar procedimento armazenado com um certificado
+      url: ../relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
+    - text: Serviço do Armazenamento de Blobs do Azure
+      url: ../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
+    - text: Assistente de ajuste de banco de dados
+      url: ../tools/dta/tutorial-database-engine-tuning-advisor.md
+  - linkListType: architecture
+    links:
+    - text: Design e arquitetura de índice
+      url: ../relational-databases/sql-server-index-design-guide.md
+    - text: Arquitetura de páginas e extensões
+      url: ../relational-databases/pages-and-extents-architecture-guide.md
+    - text: Validação e otimização após a migração
+      url: ../relational-databases/post-migration-validation-and-optimization-guide.md
+    - text: Arquitetura de processamento de consultas
+      url: ../relational-databases/query-processing-architecture-guide.md
+    - text: Thread e arquitetura de tarefa
+      url: ../relational-databases/thread-and-task-architecture-guide.md
+    - text: Arquitetura de log de transações
+      url: ../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md
+    - text: Controle de versão de linha e bloqueio de transações
+      url: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
+    - text: Arquitetura de gerenciamento de memória
+      url: ../relational-databases/memory-management-architecture-guide.md
+- title: SQL Server na VM do Azure (IaaS)
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Criar VM com o portal
+      url: /azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal
+    - text: Criar VM com o PowerShell
+      url: /azure/virtual-machines/windows/sql/quickstart-sql-vm-create-powershell
+  - linkListType: how-to-guide
+    links:
+    - text: Registrar com o provedor de recursos
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider
+    - text: Configurar o grupo de disponibilidade com a CLI do AZ
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-availability-group-cli
+    - text: Criar FCI usando o compartilhamento de arquivo Premium
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-create-failover-cluster-premium-file-share
+    - text: Usar o Armazenamento do Azure para backup e restauração
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-use-storage-sql-server-backup-restore
+- title: Banco de dados individual do Banco de Dados SQL do Azure
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: Escolher a abordagem de armazenamento de dados
+      url: https://docs.microsoft.com/learn/modules/choose-storage-approach-in-azure/
+    - text: Banco de Dados SQL seguro
+      url: https://docs.microsoft.com/learn/modules/secure-your-azure-sql-database/
+    - text: Aplicativo distribuído geograficamente
+      url: https://docs.microsoft.com/learn/modules/design-a-geographically-distributed-application/
+    - text: Aplicativo ASP.NET para consultas Banco de Dados SQL
+      url: https://docs.microsoft.com/learn/modules/develop-app-that-queries-azure-sql/
+  - linkListType: quickstart
+    links:
+    - text: Criar BD com o portal ou código
+      url: /azure/sql-database/sql-database-single-database-get-started
+    - text: Criar BD com modelo
+      url: /azure/sql-database/sql-database-single-database-get-started-template
+    - text: Configurar regras de firewall de IP no nível do servidor
+      url: /azure/sql-database/sql-database-server-level-firewall-rule
+  - linkListType: tutorial
+    links:
+    - text: Migrar usando o Serviço de Migração de Banco de Dados do Azure
+      url: /azure/dms/tutorial-sql-server-to-azure-sql?toc=/azure/sql-database/toc.json
+    - text: Adicionar um BD a um grupo de failover
+      url: /azure/sql-database/sql-database-single-database-failover-group-tutorial
+    - text: Adicionar pool elástico a um grupo de failover
+      url: /azure/sql-database/sql-database-elastic-pool-failover-group-tutorial
+    - text: Configurar a replicação geográfica ativa
+      url: /azure/sql-database/sql-database-active-geo-replication-portal
+    - text: Configurar a segurança
+      url: /azure/sql-database/sql-database-security-tutorial
+- title: Recursos adicionais
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Microsoft Learn
+      url: /azure/sql-database/sql-database-single-database
+    - text: LinkedIn Learning
+      url: /azure/sql-database/sql-database-managed-instance
+    - text: Microsoft Virtual Academy
+      url: /azure/sql-database/sql-database-single-database
+    - text: Pluralsight
+      url: /azure/sql-database/sql-database-managed-instance
+    - text: Canal 9
+      url: /azure/sql-database/sql-database-managed-instance
+- title: SQL Server em Linux
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: Introdução
+      url: https://docs.microsoft.com/learn/modules/introduction-sql-server-linux/
+    - text: Implantar
+      url: https://docs.microsoft.com/learn/modules/deploy-sql-server-linux/
+    - text: Ajustar automaticamente
+      url: https://docs.microsoft.com/learn/modules/automatically-tune-sql-server-linux/
+    - text: Contêineres
+      url: https://docs.microsoft.com/learn/modules/run-sql-server-2017-linux-containers/
+  - linkListType: quickstart
+    links:
+    - text: Red Hat
+      url: ../linux/quickstart-install-connect-red-hat.md
+    - text: SUSE
+      url: ../linux/quickstart-install-connect-suse.md
+    - text: Ubuntu
+      url: ../linux/quickstart-install-connect-ubuntu.md
+    - text: Docker
+      url: ../linux/quickstart-install-connect-docker.md
+    - text: No Azure
+      url: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine
+  - linkListType: tutorial
+    links:
+    - text: Migrar do Windows
+      url: ../linux/sql-server-linux-migrate-restore-database.md
+    - text: Migrar para o Docker
+      url: ../linux/tutorial-restore-backup-in-sql-server-container.md
+    - text: Criar um trabalho
+      url: ../linux/sql-server-linux-run-sql-server-agent-job.md
+    - text: Configurar autenticação do Active Directory
+      url: ../linux/sql-server-linux-active-directory-authentication.md
+    - text: Configurar o FCI
+      url: ../linux/sql-server-linux-shared-disk-cluster-configure.md
+    - text: Implantar um cluster de Pacemaker
+      url: ../linux/sql-server-linux-deploy-pacemaker-cluster.md
+    - text: Criar e configurar grupo de disponibilidade
+      url: ../linux/sql-server-linux-create-availability-group.md
+    - text: Implantar no Kubernetes
+      url: ../linux/tutorial-sql-server-containers-kubernetes.md
+    - text: Configurar replicação
+      url: ../linux/sql-server-linux-replication-tutorial-tsql.md
+- title: Instância gerenciada do Banco de Dados SQL do Azure
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Criar instância com o portal
+      url: /azure/sql-database/sql-database-managed-instance-get-started
+    - text: Criar instância com o PowerShell
+      url: /azure/sql-database/scripts/sql-database-create-configure-managed-instance-powershell
+    - text: Criar pool de instâncias
+      url: /azure/sql-database/sql-database-instance-pools-how-to
+    - text: Configurar ponto de extremidade público
+      url: /azure/sql-database/sql-database-managed-instance-public-endpoint-configure
+    - text: Conectar uma VM de cliente
+      url: /azure/sql-database/sql-database-managed-instance-configure-vm
+    - text: Configurar conexão ponto a site
+      url: /azure/sql-database/sql-database-managed-instance-configure-p2s
+    - text: Restaurar backup do banco de dados
+      url: /azure/sql-database/sql-database-managed-instance-get-started-restore
+  - linkListType: tutorial
+    links:
+    - text: Migrar usando o Serviço de Migração de Banco de Dados do Azure
+      url: /azure/dms/tutorial-sql-server-to-managed-instance?toc=/azure/sql-database/toc.json
+    - text: Configurar replicação transacional
+      url: /azure/sql-database/sql-database-managed-instance-configure-replication-tutorial
+    - text: Adicionar a um grupo de failover
+      url: /azure/sql-database/sql-database-managed-instance-failover-group-tutorial?tabs=azure-portal
+    - text: Migrar usuários e grupos locais
+      url: /azure/sql-database/tutorial-managed-instance-azure-active-directory-migration
+    - text: Configurar a segurança
+      url: /azure/sql-database/sql-database-managed-instance-aad-security-tutorial

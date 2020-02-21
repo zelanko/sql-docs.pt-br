@@ -1,6 +1,6 @@
 ---
 title: Tutorial de aprofundamento do RevoScaleR
-description: Neste tutorial, aprenda a chamar as funções RevoScaleR usando a integração do R de Machine Learning do SQL Server.
+description: Nesta série de tutoriais, saiba como chamar funções do RevoScaleR usando a integração ao R do Machine Learning do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 853f2e33ff4f801c3668a9f79bcec247dc13963e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: fc1f427659155b5379a681787a633b6037b4bd87
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727219"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918833"
 ---
-# <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Tutorial: Usar funções do R do RevoScaleR com os dados do SQL Server
+# <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Tutorial: Usar funções RevoScaleR do R com os dados do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Neste tutorial de várias partes, você conhecerá uma variedade de funções do **RevoScaleR** para tarefas associadas à ciência de dados. Ao mesmo tempo, aprenderá a criar um contexto de computação remoto, mover dados entre contextos de computação local e remota e executar o código R em um SQL Server remoto. Também aprenderá a analisar e plotar dados localmente e no servidor remoto e a criar e implantar modelos.
 
 O [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) é um pacote R da Microsoft que fornece processamento paralelo e distribuído para cargas de trabalho de ciência de dados e de aprendizado de máquina. Para o desenvolvimento do R no SQL Server, **RevoScaleR** é um dos principais pacotes internos, com funções para criar objetos de fonte de dados, definir um contexto de computação, gerenciar pacotes e o mais importante: trabalhar com os dados de ponta a ponta, de importação a visualização e análise. Os algoritmos de Machine Learning no SQL Server têm uma dependência de fontes de dados **RevoScaleR**. Considerando a importância do **RevoScaleR**, saber quando e como chamar suas funções é uma habilidade essencial. 
 
-Neste tutorial de várias partes, você é apresentado a uma variedade de funções **RevoScaleR** para tarefas associadas à ciência de dados. No processo, você aprenderá a criar um contexto de computação remoto, mover dados entre contextos de computação local e remota e executar o código R em um SQL Server remoto. Você também aprende a analisar e plotar dados localmente e no servidor remoto e a criar e implantar modelos.
-
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 + [Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md) com o recurso R ou [SQL Server R Services (no banco de dados)](../install/sql-r-services-windows-install.md)
   
@@ -33,7 +33,7 @@ Neste tutorial de várias partes, você é apresentado a uma variedade de funç�
 
 + Um IDE (como o RStudio) ou a ferramenta RGUI interna incluída com o R
 
-Para alternar entre os contextos de computação local e remota, você precisa de dois sistemas. A local é normalmente uma estação de trabalho de desenvolvimento com potência suficiente para cargas de trabalho de ciência de dados. A remota, nesse caso, é o SQL Server com o recurso R habilitado. 
+Para alternar entre os contextos de computação local e remota, você precisa de dois sistemas. O local é normalmente uma estação de trabalho de desenvolvimento com energia suficiente para cargas de trabalho de ciência de dados. A remota, nesse caso, é o SQL Server com o recurso R habilitado. 
 
 A alternância de contextos de computação é predicada em ter o **RevoScaleR** da mesma versão em sistemas locais e remotos. Em uma estação de trabalho local, você pode obter os pacotes **RevoScaleR** e provedores relacionados instalando o Microsoft R Client.
 
@@ -49,7 +49,7 @@ Para obter instruções sobre a configuração da cliente, confira [Configurar u
 
 Normalmente, os desenvolvedores do R usam os IDEs para escrever e depurar o código R. Aqui estão algumas sugestões:
 
-- O **RTVS** (Ferramentas do R para Visual Studio) é um plug-in gratuito que fornece o IntelliSense, depuração e suporte para o Microsoft R. Você pode usá-lo com o R Server e o Serviços de Machine Learning do SQL Server. Para baixar, consulte [R Tools para Visual Studio](https://www.visualstudio.com/vs/rtvs/).
+- O **RTVS** (Ferramentas do R para Visual Studio) é um plug-in gratuito que fornece o IntelliSense, depuração e suporte para o Microsoft R. Você pode usá-lo com o R Server e o Serviços de Machine Learning do SQL Server. Para baixar, consulte [R Tools para Visual Studio](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019).
 
 - O**RStudio** é um dos ambientes mais populares para desenvolvimento do R. Para obter mais informações, confira [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/).
 
@@ -71,4 +71,4 @@ Lembre-se de que **RevoScaleR** é necessário em computadores locais e remotos.
 ## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="nextstepaction"]
-> [Lição 1: Criar banco de dados e permissões](deepdive-work-with-sql-server-data-using-r.md)
+> [Tutorial 1: Criar banco de dados e permissões](deepdive-work-with-sql-server-data-using-r.md)

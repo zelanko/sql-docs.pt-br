@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 52285164928e1a4811abc17e931a1af1921c6d07
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653282"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831418"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Carregar dados de exemplo em um cluster de Big Data do SQL Server
 
@@ -36,7 +36,7 @@ Este tutorial explica como usar um script para carregar dados de exemplo em um [
  
 ## <a id="sampledata"></a> Carregar dados de exemplo
 
-As etapas a seguir usam um script de inicialização para baixar um backup de um banco de dados do SQL Server e carregar os dados em seu cluster de Big Data. Para facilitar o uso, essas etapas foram divididas em seções referentes ao [Windows](#windows) e ao [Linux](#linux).
+As etapas a seguir usam um script de inicialização para baixar um backup de um banco de dados do SQL Server e carregar os dados em seu cluster de Big Data. Para facilitar o uso, essas etapas foram divididas em seções referentes ao [Windows](#windows) e ao [Linux](#linux). Se você quiser usar o nome de usuário/senha básico como mecanismo de autenticação, defina as variáveis de ambiente AZDATA_USERNAME e AZDATA_PASSWORD antes de executar o script. Caso contrário, o script usará a autenticação integrada para se conectar à instância mestra do SQL Server e ao gateway do Knox. Além disso, o nome DNS deve ser especificado para os pontos de extremidade a fim de usar a autenticação integrada.
 
 ## <a id="windows"></a> Windows
 
@@ -64,18 +64,16 @@ As etapas a seguir descrevem como usar um cliente do Windows para carregar os da
    | Parâmetro | Descrição |
    |---|---|
    | <CLUSTER_NAMESPACE> | O nome que você atribuiu ao cluster de Big Data. |
-   | <SQL_MASTER_IP> | O endereço IP da instância mestre. |
-   | <SQL_MASTER_SA_PASSWORD> | A senha SA da instância mestra. |
-   | <KNOX_IP> | O endereço IP do gateway de HDFS/Spark. |
-   | <KNOX_PASSWORD> | A senha do gateway de HDFS/Spark. |
-
+   | <SQL_MASTER_ENDPOINT> | O nome DNS ou o endereço IP da instância mestre. |
+   | <KNOX_ENDPOINT> | O nome DNS ou o endereço IP do gateway de HDFS/Spark. |
+   
    > [!TIP]
    > Use [kubectl](cluster-troubleshooting-commands.md) para localizar os endereços IP da instância mestre do SQL Server e o Knox. Execute `kubectl get svc -n <your-big-data-cluster-name>` e examine os endereços IP externos da instância mestra (**master-svc-external**) e do Knox (**gateway-svc-external**). O nome padrão de um cluster é **mssql-cluster**.
 
 1. Execute o script de inicialização.
 
    ```cmd
-   .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
 ## <a id="linux"></a> Linux
@@ -100,10 +98,8 @@ As etapas a seguir descrevem como usar um cliente do Linux para carregar os dado
    | Parâmetro | Descrição |
    |---|---|
    | <CLUSTER_NAMESPACE> | O nome que você atribuiu ao cluster de Big Data. |
-   | <SQL_MASTER_IP> | O endereço IP da instância mestre. |
-   | <SQL_MASTER_SA_PASSWORD> | A senha SA da instância mestra. |
-   | <KNOX_IP> | O endereço IP do gateway de HDFS/Spark. |
-   | <KNOX_PASSWORD> | A senha do gateway de HDFS/Spark. |
+   | <SQL_MASTER_ENDPOINT> | O nome DNS ou o endereço IP da instância mestre. |
+   | <KNOX_ENDPOINT> | O nome DNS ou o endereço IP do gateway de HDFS/Spark. |
 
    > [!TIP]
    > Use [kubectl](cluster-troubleshooting-commands.md) para localizar os endereços IP da instância mestre do SQL Server e o Knox. Execute `kubectl get svc -n <your-big-data-cluster-name>` e examine os endereços IP externos da instância mestra (**master-svc-external**) e do Knox (**gateway-svc-external**). O nome padrão de um cluster é **mssql-cluster**.
@@ -111,7 +107,7 @@ As etapas a seguir descrevem como usar um cliente do Linux para carregar os dado
 1. Execute o script de inicialização.
 
    ```bash
-   sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
 ## <a name="next-steps"></a>Próximas etapas

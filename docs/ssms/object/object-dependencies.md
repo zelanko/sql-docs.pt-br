@@ -1,6 +1,6 @@
 ---
-title: Dependências de objeto | Microsoft Docs
-ms.custom: ''
+title: Dependências de objeto
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 78be395cccceff6c01152b38ddf9aa7008a273c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82aa0e5ae67d3dbbf4e2a897ba5e49976cfc09a6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264088"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257158"
 ---
 # <a name="object-dependencies"></a>Dependências de objeto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,11 +31,11 @@ Use esta caixa de diálogo para entender as dependências antes de alterar ou ex
 **Objetos que dependem do** _\<objeto selecionado>_  
 Clicando neste botão, você exibe uma lista dos objetos que são rastreados por dependência e que dependem do objeto selecionado.  
   
-**Objetos dos quais** _\<o objeto selecionado>_ **depende**  
+**Objetos dos quais** _\<objeto selecionado>_ **depende**  
 Clicando neste botão, você exibe uma lista dos objetos que são rastreados por dependência e dos quais depende o objeto selecionado.  
   
 **Dependências**  
-Se você clicar em **Objetos que dependem de** *<selected object>* , será exibida uma exibição hierárquica dos objetos que dependem do objeto selecionado. Se você clicar em **Objetos dos quais** *<selected object>* **depende**, será exibida uma exibição hierárquica dos objetos dos quais depende o objeto selecionado.  
+Se você clicar em **Objetos que dependem de** *<selected object>* , será exibida uma exibição hierárquica dos objetos que dependem do objeto selecionado. Se **Objetos dos quais** *<selected object>* **depende** for clicado, será exibida uma exibição hierárquica dos objetos dos quais o objeto selecionado depende.  
   
 **Nome**  
 Exibe o nome do objeto selecionado no modo de exibição de árvore **Dependências** acima.  
@@ -43,7 +43,7 @@ Exibe o nome do objeto selecionado no modo de exibição de árvore **Dependênc
 **Tipo**  
 Exibe o tipo do objeto selecionado no modo de exibição de árvore **Dependências** acima.  
   
-**Horário da Última Sincronização**  
+**Hora da Última Sincronização**  
 > [!NOTE]  
 > Esta opção só está disponível na página **Avançado** .  
   
@@ -53,7 +53,7 @@ Especifica a data e a hora em que as informações de dependência foram atualiz
 > [!NOTE]  
 > Esta opção só está disponível na página **Geral** .  
   
-Exibe o tipo de dependência entre dois objetos. Pode ser uma destas opções:  
+Exibe o tipo de dependência entre dois objetos. Um dos seguintes pode ser feito:  
   
 -   Dependência associada a esquema  
   

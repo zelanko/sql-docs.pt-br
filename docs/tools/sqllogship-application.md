@@ -1,6 +1,6 @@
 ---
-title: Aplicativo sqllogship | Microsoft Docs
-ms.custom: ''
+title: Aplicativo sqllogship
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0e59ba2473ce58caebcb76521dcc191479abdb92
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
-ms.translationtype: MTE75
+ms.openlocfilehash: 8f66feb78bb789bf976d6b44b025af20c6575ee6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "68065451"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306652"
 ---
 # <a name="sqllogship-application"></a>Aplicativo sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   O aplicativo **sqllogship** realiza uma operação de backup, cópia ou restauração e as tarefas de limpeza associadas de uma configuração de envio de logs. A operação é realizada em uma instância específica do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para um banco de dados específico.  
   
- Para obter as convenções de sintaxe, veja ![Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../database-engine/configure-windows/media/topic-link.gif "Ícone de vínculo de tópico").  
+ ![Ícone do Link do tópico](../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") Para obter as convenções de sintaxe, confira [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,12 +54,12 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **-verboselevel** _level_  
  Especifica o nível das mensagens adicionadas ao histórico do envio de logs. *level* é um dos seguintes inteiros:  
   
-|level|Descrição|  
+|Nível|Descrição|  
 |-----------|-----------------|  
 |0|Não emite nenhuma mensagem de rastreamento ou de depuração.|  
 |1|Emite mensagens para tratamento de erros.|  
 |2|Emite mensagens para tratamento de erros e avisos.|  
-|**3**|Emite mensagens informativas, avisos e mensagens de tratamento de erros. Este é o valor padrão.|  
+|**3**|Emite mensagens informativas, avisos e mensagens de tratamento de erros. Esse é o valor padrão.|  
 |4|Emite todas as mensagens de depuração e de rastreamento.|  
   
  **-logintimeout** _timeout_value_  
@@ -68,7 +68,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **-querytimeout** _timeout_value_  
  Especifica o tempo designado para iniciar a operação especificada antes da tentativa expirar. O padrão é sem período de expiração. *timeout_value* é **int** _._  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Recomendamos a utilização das opções de backup, copiar e restaurar para realizar as tarefas de backup, copiar e restaurar quando for possível. Para iniciar esses trabalhos em uma operação em lote ou em outro aplicativo, chame o procedimento armazenado [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) .  
   
  O histórico do envio de logs criado por **sqllogship** é intercalado com o histórico criado pelos trabalhos de backup, cópia e restauração do envio de logs. Se você pretende usar **sqllogship** repetidamente para realizar as operações de backup, cópia ou restauração de uma configuração de envio de logs, considere desabilitar o(s) trabalho(s) de envio de logs correspondente(s). Para obter mais informações, consulte [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  

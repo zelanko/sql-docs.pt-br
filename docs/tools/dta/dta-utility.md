@@ -1,10 +1,7 @@
 ---
-title: Utilitário dta | Microsoft Docs
-ms.custom: ''
-ms.date: 01/09/2017
+title: utilitário dta
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,18 +17,24 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23cd3f3b29db6d6c791b97b40401781fa3a3bbfc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/09/2017
+ms.openlocfilehash: 7225e09e0cda9c371d1fc24934f9aeb9a803be9b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981799"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258282"
 ---
 # <a name="dta-utility"></a>utilitário dta
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O utilitário **dta** é a versão do prompt de comando do Orientador de Otimização do Mecanismo de Banco de Dados. O utilitário **dta** foi projetado para permitir o uso da funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em aplicativos e scripts.  
-  
- Assim como o Orientador de Otimização do Mecanismo de Banco de Dados, o utilitário **dta** analisa uma carga de trabalho e recomenda estruturas de design físico para melhorar o desempenho do servidor para a carga de trabalho. A carga de trabalho pode ser um cache de plano, um arquivo de rastreamento ou tabela do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , ou um script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Estruturas de design físico incluem índices, exibições indexadas e particionamento. Depois de analisar uma carga de trabalho, o utilitário **dta** produz uma recomendação para o design físico de bancos de dados e gera o script necessário para implementar a recomendação. Podem ser especificadas cargas de trabalho no prompt de comando com o argumento **-if** ou **-it** . Também é possível especificar um arquivo de entrada XML no prompt de comando com o argumento **-ix** . Nesse caso, a carga de trabalho é especificada no arquivo de entrada XML.  
+
+O utilitário **dta** é a versão do prompt de comando do Orientador de Otimização do Mecanismo de Banco de Dados. O utilitário **dta** foi projetado para permitir o uso da funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em aplicativos e scripts.  
+
+Assim como o Orientador de Otimização do Mecanismo de Banco de Dados, o utilitário **dta** analisa uma carga de trabalho e recomenda estruturas de design físico para melhorar o desempenho do servidor para a carga de trabalho. A carga de trabalho pode ser um cache de plano, um arquivo de rastreamento ou tabela do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , ou um script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Estruturas de design físico incluem índices, exibições indexadas e particionamento. Depois de analisar uma carga de trabalho, o utilitário **dta** produz uma recomendação para o design físico de bancos de dados e gera o script necessário para implementar a recomendação. Podem ser especificadas cargas de trabalho no prompt de comando com o argumento **-if** ou **-it** . Também é possível especificar um arquivo de entrada XML no prompt de comando com o argumento **-ix** . Nesse caso, a carga de trabalho é especificada no arquivo de entrada XML.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -137,7 +140,7 @@ dta -d AdventureWorks2012 ...
   
  Se forem especificados vários nomes de banco de dados, **dta** retornará um erro. O argumento **-d** é opcional.  
   
- Se você estiver usando uma entrada de arquivo XML, poderá especificar o primeiro banco de dados ao qual **dta** se conecta, usando o elemento **DatabaseToConnect** que está localizado no elemento **TuningOptions** . Para saber mais, confira [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
+ Se você estiver usando uma entrada de arquivo XML, poderá especificar o primeiro banco de dados ao qual **dta** se conecta, usando o elemento **DatabaseToConnect** que está localizado no elemento **TuningOptions** . Para obter mais informações, consulte [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
  Se você estiver ajustando apenas um banco de dados, o argumento **-d** fornecerá uma funcionalidade que é semelhante ao argumento **-d** no utilitário **sqlcmd** , mas não executará a instrução USE *database_name* . Para saber mais, confira [sqlcmd Utility](../../tools/sqlcmd-utility.md).  
   
@@ -153,7 +156,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|*nome_do_banco_de_dados* especificado com a opção **-D**||  
 |*owner_name*|**dbo**|*owner_name* deve ser **dbo**. Se qualquer outro valor for especificado, a execução de **dta** falhará e retornará um erro.|  
-|*table_name*|None||  
+|*table_name*|Nenhum||  
   
  Se um arquivo for usado, especifique .xml como sua extensão. Por exemplo, TuningLog.xml.  
   
@@ -214,14 +217,13 @@ dta -d AdventureWorks2012 ...
   
  **-ip**  
  Especifica que o cache de plano seja usado como a carga de trabalho. Os primeiros 1.000 eventos de cache de plano para bancos de dados selecionados explicitamente são analisados. Esse valor pode ser alterado usando a opção **-n**.  
- 
+
 **-iq**  
- Especifica que o Repositório de Consultas ser usado como a carga de trabalho. Os principais eventos 1.000 do Repositório de Consultas para bancos de dados explicitamente selecionados são analisados. Esse valor pode ser alterado usando a opção **-n**.  Confira [Repositório de Consultas](../../relational-databases/performance/how-query-store-collects-data.md) e [Ajustando o banco de dados usando a carga de trabalho do Repositório de Consultas](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) para obter mais informações.
+ Especifica que o Repositório de Consultas seja usado como a carga de trabalho. Os mil principais eventos do Repositório de Consultas para bancos de dados explicitamente selecionados são analisados. Esse valor pode ser alterado usando a opção **-n**.  Confira [Repositório de Consultas](../../relational-databases/performance/how-query-store-collects-data.md) e [Ajustando o banco de dados usando a carga de trabalho do Repositório de Consultas](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) para obter mais informações.
  ||  
 |-|  
 |**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.|  
      
-  
  **-if** _workload_file_  
  Especifica o caminho e o nome do arquivo de carga de trabalho a ser usado como entrada para ajuste. O arquivo deve estar em um destes formatos: .trc (arquivo de rastreamento do SQL Server Profiler), .sql (arquivo SQL) ou .log (arquivo de rastreamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Um arquivo de carga de trabalho ou uma tabela de carga de trabalho deve ser especificada.  
   
@@ -241,7 +243,13 @@ dta -d AdventureWorks2012 ...
   
  **-ix** _input_XML_file_name_  
  Especifica o nome do arquivo XML que contém informações de entrada de **dta** . Esse deve ser um documento XML válido em conformidade com o DTASchema.xsd. Argumentos em conflito especificados no prompt de comando para opções de ajuste anulam o valor correspondente no arquivo XML. A única exceção será se uma configuração especificada pelo usuário for digitada dentro do modo de avaliação no arquivo de entrada XML. Por exemplo, se uma configuração for digitada no elemento **Configuration** do arquivo de entrada XML e o elemento **EvaluateConfiguration** também for especificado como um das opções de ajuste, as opções de ajuste especificadas no arquivo de entrada XML substituirão a opção de ajuste digitada no prompt de comando.  
-  
+
+ **-k** _maxtotalindexes_  
+ Número máximo de índices na recomendação.  
+
+ **-K** _maxtotalindexes_  
+ Número máximo de índices por tabela.
+
  **-m** _minimum_improvement_  
  Especifica a porcentagem mínima de melhoria que a configuração recomendada deve satisfazer.  
   
@@ -251,7 +259,7 @@ dta -d AdventureWorks2012 ...
 |Valor|Descrição|  
 |-----------|-----------------|  
 |OFF|Nenhuma estrutura de design físico recomendada pode ser criada online.|  
-|ON|Todas as estruturas de design físico recomendadas podem ser criadas online.|  
+|ATIVADO|Todas as estruturas de design físico recomendadas podem ser criadas online.|  
 |MIXED|O Orientador de Otimização do Mecanismo de Banco de Dados tenta recomendar estruturas de design físico que podem ser criadas online quando possível.|  
   
  Se forem criados índices online, ONLINE = ON será anexado à definição de objeto.  
@@ -266,11 +274,11 @@ dta -n number_of_events -A 0
  Nessecaso, é importante especificar um tempo de ajuste ilimitado (`-A 0`). Caso contrário, o Orientador de Otimização do Mecanismo de Banco de Dados assume, por padrão, um tempo de ajuste de 8 horas.
  
  **-I** _time_window_in_hours_   
-   Especifica a janela de tempo (em horas) quando uma consulta deve ser executada para que ela seja considerada pelo DTA para ajuste ao usar **a opção-IQ** (carga de trabalho de repositório de consultas). 
+   Especifica a janela de tempo (em horas) em que uma consulta deve ser executada para que ela seja considerada pelo DTA para ajuste ao usar a opção **-iq** (Carga de Trabalho do Repositório de Consultas). 
 ```  
 dta -iq -I 48  
 ```  
-Nesse caso, o DTA usará Repositório de Consultas como a origem da carga de trabalho e apenas considerar as consultas que foram executadas com as últimas 48 horas.  
+Neste caso, o DTA usará o Repositório de Consultas como a origem da carga de trabalho e apenas considerará as consultas executadas nas últimas 48 horas.  
   ||  
 |-|  
 |**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.|  
@@ -361,7 +369,7 @@ Nesse caso, o DTA usará Repositório de Consultas como a origem da carga de tra
  **-x**  
  Inicia a sessão de ajuste e sai.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Pressione CTRL+C uma vez para parar a sessão de ajuste e gerar recomendações com base na análise do **dta** concluída até este ponto. Você será solicitado a indicar se deseja ou não gerar recomendações. Pressione CTRL+C novamente para parar a sessão de ajuste sem gerar recomendações.  
   
 ## <a name="examples"></a>Exemplos  
@@ -390,33 +398,32 @@ dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10
 ```  
   
  **D. Ajustar tabelas específicas listadas em um arquivo**  
-  
+
  Este exemplo demonstra o uso de *table_list_file* (o argumento **-Tf** ). O conteúdo do arquivo table_list.txt é:  
-  
-```  
+
+```
 AdventureWorks2012.Sales.Customer  100000  
 AdventureWorks2012.Sales.Store  
 AdventureWorks2012.Production.Product  2000000  
-```  
+```
+
+O conteúdo de table_list.txt especifica que:  
+
+- Deve-se ajustar apenas as tabelas **Customer**, **Store**e **Product** no banco de dados.  
   
- O conteúdo de table_list.txt especifica que:  
+- Presume-se que o número de linhas nas tabelas **Customer** e **Product** seja 100.000 e 2.000.000, respectivamente.  
   
--   Deve-se ajustar apenas as tabelas **Customer**, **Store**e **Product** no banco de dados.  
-  
--   Presume-se que o número de linhas nas tabelas **Customer** e **Product** seja 100.000 e 2.000.000, respectivamente.  
-  
--   Presume-se que em **Store** o número de linhas seja o número atual de linhas na tabela.  
-  
- Observe que pode haver um ou mais espaços entre a contagem de número de linhas e o nome de tabela anterior em *table_list_file*.  
-  
- O tempo de ajuste é de 2 horas (`-A 120`) e a saída é gravada em um arquivo XML (`-ox XMLTune.xml`).  
-  
-```  
+- Presume-se que em **Store** o número de linhas seja o número atual de linhas na tabela.  
+
+    Observe que pode haver um ou mais espaços entre a contagem de número de linhas e o nome de tabela anterior em *table_list_file*.  
+    
+    O tempo de ajuste é de 2 horas (`-A 120`) e a saída é gravada em um arquivo XML (`-ox XMLTune.xml`).  
+
+``` 
 dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
-```  
-  
-## <a name="see-also"></a>Consulte Também  
- [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../../tools/command-prompt-utility-reference-database-engine.md)   
- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
-  
-  
+``` 
+
+## <a name="see-also"></a>Consulte Também
+
+- [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../../tools/command-prompt-utility-reference-database-engine.md)
+- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)

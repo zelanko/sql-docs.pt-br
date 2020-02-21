@@ -9,18 +9,23 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f6f2813dff5e965f61f15b947725d78bf327dde7
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: e54ee601b180e8883ec9fea49fff810c52fe5f49
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532403"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253140"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>O que são pools de computação em um cluster de Big Data do SQL Server?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este artigo descreve a função dos *pools de computação do SQL Server* em um cluster de Big Data do SQL Server. Os pools de computação fornecem recursos computacionais de expansão para um cluster Big Data. As seções a seguir descrevem a arquitetura e a funcionalidade de um pool de computação.
+
+Você também pode assistir a este vídeo de cinco minutos para obter uma introdução aos pools de computação:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Big-Data-Cluster-Compute-Pool/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="compute-pool-architecture"></a>Arquitetura do pool de computação
 

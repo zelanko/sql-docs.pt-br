@@ -10,35 +10,35 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-mabarw
 ms.openlocfilehash: 3edba0cde94d8661eed053319142ce7f84a70613
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68265175"
 ---
 # <a name="idle-connection-resiliency"></a>Resiliência da Conexão Ociosa
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-A [resiliência da conexão](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) é o princípio de que uma conexão ociosa desfeita pode ser restabelecida, dentro de determinadas restrições. Se uma conexão com o Microsoft SQL Server falhar, a resiliência de conexão permitirá que o cliente tente restabelecer a conexão automaticamente. A resiliência da conexão é uma propriedade da fonte de dados; somente SQL Server 2014 e posterior e o banco de dados SQL do Azure dão suporte à resiliência de conexão.
+[Resiliência de conexão](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) é o princípio de que uma conexão ociosa desfeita pode ser restabelecida, com determinadas restrições. Se uma conexão com o Microsoft SQL Server falhar, a resiliência de conexão permitirá que o cliente tente restabelecer a conexão automaticamente. A resiliência de conexão é uma propriedade da fonte de dados; somente o SQL Server 2014 e versões posteriores e o Banco de Dados SQL do Azure são compatíveis com a resiliência de conexão.
 
 A resiliência de conexão é implementada com duas palavras-chave de conexão que podem ser adicionadas às cadeias de conexão: **ConnectRetryCount** e **ConnectRetryInterval**.
 
 |Palavra-chave|Valores|Padrão|Descrição|
 |-|-|-|-|
-|**ConnectRetryCount**| Um inteiro entre 0 e 255 (inclusive)|1|O número máximo de tentativas de restabelecer uma conexão interrompida antes de desistir. Por padrão, uma única tentativa é feita para restabelecer uma conexão quando quebrada. Um valor de 0 significa que nenhuma nova conexão será tentada.|
-|**ConnectRetryInterval**| Um inteiro entre 1 e 60 (inclusive)|1| O tempo, em segundos, entre as tentativas de restabelecer uma conexão. O aplicativo tentará se reconectar imediatamente após a detecção de uma conexão interrompida e, em seguida, aguardará **ConnectRetryInterval** segundos antes de tentar novamente. Essa palavra-chave será ignorada se **ConnectRetryCount** for igual a 0.
+|**ConnectRetryCount**| Um inteiro entre 0 e 255 (inclusive)|1|O número máximo de tentativas de restabelecer uma conexão interrompida antes de desistir. Por padrão, uma tentativa é feita para restabelecer uma conexão interrompida. O valor 0 indica que não será tentada nenhuma reconexão.|
+|**ConnectRetryInterval**| Um inteiro entre 1 e 60 (inclusive)|1| O tempo, em segundos, entre as tentativas de restabelecer a conexão interrompida. O aplicativo tentará se reconectar imediatamente após detectar a interrupção da conexão e aguardará **ConnectRetryInterval** segundos antes de tentar novamente. Essa palavra-chave será ignorada se **ConnectRetryCount** for igual a 0.
 
-Se o produto de **ConnectRetryCount** multiplicado por **ConnectRetryInterval** for maior que **LoginTimeout**, o cliente deixará de tentar se conectar quando o **LoginTimeout** for atingido; caso contrário, ele continuará a tentar se reconectar até que **ConnectRetryCount** seja atingido.
+Se o produto de **ConnectRetryCount** multiplicado por **ConnectRetryInterval** for maior que **LoginTimeout**, então o cliente deixará de tentar se conectar quando **LoginTimeout** for atingido; caso contrário, ele continuará tentando se reconectar até que **ConnectRetryCount** seja alcançado.
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Comentários
 
-A resiliência da conexão se aplica quando a conexão está ociosa. As falhas que ocorrem durante a execução de uma transação, por exemplo, não dispararão tentativas de reconexão-elas falharão, como seria esperado. As seguintes situações, conhecidas como Estados de sessão não recuperáveis, não disparam tentativas de reconexão:
+A resiliência de conexão se aplica quando a conexão está ociosa. Falhas ocorridas durante a execução de uma transação, por exemplo, não dispararão as tentativas de reconexão – elas falharão, como seria esperado. As seguintes situações, conhecidas como Estados de sessão não recuperáveis, não disparam tentativas de reconexão:
 
 * Tabelas temporárias
 * Cursores globais e locais
 * Bloqueios de transação de nível de sessão e de contexto de transação
 * Bloqueios de aplicativo
-* EXECUTAR como/reverter contexto de segurança
+* Contexto de segurança EXECUTAR COMO/REVERTER
 * Identificadores de automação OLE
 * Identificadores XML preparados
 * Sinalizadores de rastreamento
@@ -47,7 +47,7 @@ A resiliência da conexão se aplica quando a conexão está ociosa. As falhas q
 
 O código a seguir se conecta a um banco de dados e executa uma consulta. A conexão é interrompida finalizando a sessão e uma nova consulta é tentada usando a conexão interrompida. Este exemplo usa o banco de dados [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx) de exemplo.
 
-Neste exemplo, especificamos um cursor em buffer antes de dividir a conexão. Se não especificarmos um cursor em buffer, a conexão não seria restabelecida porque haveria um cursor ativo no lado do servidor e, portanto, a conexão não estaria ociosa quando interrompida. No entanto, nesse caso, poderíamos chamar sqlsrv_free_stmt () antes de dividir a conexão para esvaziar o cursor e a conexão seria restabelecida com êxito.
+Neste exemplo, especificamos um cursor em buffer antes de interromper a conexão. Se não especificássemos um cursor em buffer, a conexão não seria restabelecida porque haveria um cursor ativo no lado do servidor e, portanto, a conexão não estaria ociosa quando interrompida. No entanto, nesse caso, poderíamos chamar sqlsrv_free_stmt() antes de interromper a conexão para esvaziar o cursor e a conexão seria restabelecida com sucesso.
 
 ```php
 <?php

@@ -1,37 +1,46 @@
 ---
 title: Baixar atualizações para instalação offline
-description: Baixe os arquivos CAB e os arquivos de pacote do R e do Python para os Serviços de Machine Learning do SQL Server e o SQL Server 2016 R Services.
+description: Baixe arquivos CAB do Python e do R para os Serviços de Machine Learning do SQL Server. Esses arquivos CAB contêm atualizações do recurso Serviços de Machine Learning (Python e R) e são usados ao instalar o SQL Server em um servidor sem acesso à Internet.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e7266d90e04071c242145fc0df2e59ce86d86a16
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b2b84349e60bf89a066fb2157a9c521d7be8ecbd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727629"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776517"
 ---
-# <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>Downloads CAB para atualizações cumulativas de instâncias de análise no banco de dados do SQL Server
+# <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>Downloads do CAB para atualizações cumulativas dos Serviços de Machine Learning do SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Instâncias do SQL Server configuradas para análise interna no banco de dados incluem recursos de R e Python. Esses recursos são fornecidos em arquivos CAB, instalados e mantidos por meio da instalação do SQL Server. Em dispositivos conectados à Internet, as atualizações por arquivos CAB normalmente são aplicadas por meio do Windows Update. Em servidores desconectados, os arquivos CAB precisam ser baixados e aplicados manualmente. 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Baixe arquivos CAB do Python e do R para os Serviços de Machine Learning do SQL Server. Esses arquivos CAB contêm atualizações do recurso Serviços de Machine Learning (Python e R) e são usados ao instalar o SQL Server em um servidor sem acesso à Internet.
+::: moniker-end
 
-Este artigo fornece links de download para arquivos CAB para cada atualização cumulativa. Para obter mais informações sobre instalações offline, confira [Instalar componentes de aprendizado de máquina do SQL Server sem acesso à Internet](sql-ml-component-install-without-internet-access.md#apply-cu).
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+Baixe arquivos CAB do Python e do R para o SQL Server 2016 R Services. Esses arquivos CAB contêm atualizações do recurso R Services e são usados ao instalar o SQL Server em um servidor sem acesso à Internet.
+::: moniker-end
+
+Abaixo, você encontrará links de download para os arquivos CAB de cada atualização cumulativa. Para obter mais informações sobre instalações offline, confira [Instalar componentes de aprendizado de máquina do SQL Server sem acesso à Internet](sql-ml-component-install-without-internet-access.md#apply-cu).
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Comece com uma instalação de linha de base.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Comece com uma instalação de linha de base. Nos Serviços de Machine Learning do SQL Server, a versão inicial é a instalação de linha de base. 
+::: moniker-end
 
-+ Nos Serviços de Machine Learning do SQL Server, a versão inicial é a instalação de linha de base. 
-+ No SQL Server 2016 R Services, você pode começar com a versão inicial, o SP1 ou o SP2. 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+Comece com uma instalação de linha de base.  No SQL Server 2016 R Services, você pode começar com a versão inicial, o SP1 ou o SP2. 
+::: moniker-end
 
-Você também pode aplicar atualizações cumulativas a um servidor autônomo.
+Aplique também atualizações cumulativas.
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
@@ -94,7 +103,7 @@ Os arquivos CAB são listados na ordem cronológica inversa. Ao baixar os arquiv
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 <a name="bkmk_2016Installers"></a>
 
@@ -106,34 +115,34 @@ Para o SQL Server 2016 R Services, as versões de linha de base são a versão R
 |---------|---------------|
 |**SQL Server 2016 SP2 CU6**     |
 |Microsoft R Open     |[SRO_3.2.2.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079936&clcid=1033)|
-|Microsoft R Server    |[SRS_8.0.3.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079933&clcid=1033)|
+|Servidor R da Microsoft    |[SRS_8.0.3.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079933&clcid=1033)|
 |**SQL Server 2016 SP2 CU1-CU5**     |
 |Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
-|Microsoft R Server    |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038)|
+|Servidor R da Microsoft    |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038)|
 |**SQL Server 2016 SP2**     |
 |Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
-|Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)|
+|Servidor R da Microsoft    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)|
 |**SQL Server 2016 SP1 CU14**     |
 |Microsoft R Open     |[SRO_3.2.2.16100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2080130&clcid=1033)|
-|Microsoft R Server    |[SRS_8.0.3.17200_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079935&clcid=1033)|
+|Servidor R da Microsoft    |[SRS_8.0.3.17200_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079935&clcid=1033)|
 |**SQL Server 2016 SP1 CU1-CU13**     |
 |Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
-|Microsoft R Server    |[SRS_8.0.3.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836818)|
+|Servidor R da Microsoft    |[SRS_8.0.3.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836818)|
 |**SQL Server 2016 SP1**     |
 |Microsoft R Open     |[SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879)|
-|Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)|
+|Servidor R da Microsoft     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)|
 |**SQL Server 2016 CU4-CU9**     |
 |Microsoft R Open     |[SRO_3.2.2.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831785)|
-|Microsoft R Server     |[SRS_8.0.3.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831676)|
+|Servidor R da Microsoft     |[SRS_8.0.3.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831676)|
 |**SQL Server 2016 CU2-CU3**     |
 |Microsoft R Open     |[SRO_3.2.2.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827398)|
-|Microsoft R Server     |[SRS_8.0.3.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827399)|
+|Servidor R da Microsoft     |[SRS_8.0.3.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827399)|
 |**SQL Server 2016 CU1**     |
 |Microsoft R Open     |[SRO_3.2.2.10000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=808803)|
-|Microsoft R Server     |[SRS_8.0.3.10000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=808805)|
+|Servidor R da Microsoft     |[SRS_8.0.3.10000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=808805)|
 |**SQL Server 2016 RTM**     |
 |Microsoft R Open     |[SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266)|
-|Microsoft R Server     |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051)|
+|Servidor R da Microsoft     |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051)|
 
 > [!NOTE]
 > 

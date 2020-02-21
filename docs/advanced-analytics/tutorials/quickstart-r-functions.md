@@ -1,27 +1,26 @@
 ---
-title: 'Início Rápido: Gravar funções do R'
-titleSuffix: SQL Server Machine Learning Services
-description: Neste início rápido, saiba como escrever uma função de R para computação estatística avançada com os Serviços de Machine Learning do SQL Server.
+title: 'Início Rápido: Funções do R'
+description: Neste guia de início rápido, você aprenderá a usar funções matemáticas e utilitárias do R com os Serviços de Machine Learning do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e725282aaacde748b43a37a317037b5471efd009
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e67dcbc35bf5af88d2a7fab37f795cd5cc1d55d9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726887"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831772"
 ---
-# <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>Início Rápido: Escrever funções avançadas do R com os Serviços de Machine Learning do SQL Server
+# <a name="quickstart-r-functions-with-sql-server-machine-learning-services"></a>Início Rápido: Funções do R com os Serviços de Machine Learning do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Este guia de início rápido descreve como inserir funções matemáticas e utilitárias do R em um procedimento armazenado do SQL com os Serviços de Machine Learning do SQL Server. As funções estatísticas avançadas que são complicadas de implementar no T-SQL podem ser feitas no R com apenas uma única linha de código.
+Neste guia de início rápido, você aprenderá a usar funções matemáticas e utilitárias do R com os Serviços de Machine Learning do SQL Server. As funções estatísticas muitas vezes são complicadas de implementar no T-SQL, mas isso pode ser feito no R com apenas algumas linhas de código.
 
 ## <a name="prerequisites"></a>Prerequisites
 

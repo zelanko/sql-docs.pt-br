@@ -1,5 +1,5 @@
 ---
-title: Desenvolver com as APIs REST para o Reporting Services | Microsoft Docs
+title: Desenvolver usando APIs REST
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: ba424fa0c79249a8870962d0df4cdaf383c9aa39
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 48d3cea7dfb57ad771f512806fd0c95528566559
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263027"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75321813"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Desenvolver com as APIs REST para o Reporting Services
 
@@ -32,8 +32,8 @@ Um par de solicitação/resposta da API REST pode ser separado em cinco componen
 
 * O **URI de solicitação**, que consiste em `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`. Embora o URI de solicitação seja incluído no cabeçalho da mensagem de solicitação, chamamos o URI separadamente aqui porque a maioria das linguagens ou estruturas exige que ele seja passado separadamente da mensagem de solicitação.
 
-    * Esquema de URI: indica o protocolo usado para transmitir a solicitação. Por exemplo, `http` ou `https`.
-    * Host de URI: especifica o nome de domínio ou o endereço IP do servidor no qual o ponto de extremidade de serviço REST está hospedado, como `myserver.contoso.com`.
+    * Esquema do URI: indica o protocolo usado para transmitir a solicitação. Por exemplo, `http` ou `https`.
+    * Host do URI: especifica o nome de domínio ou o endereço IP do servidor no qual o ponto de extremidade de serviço REST está hospedado, como `myserver.contoso.com`.
     * Caminho do recurso: especifica o recurso ou a coleção de recursos, que pode incluir vários segmentos usados pelo serviço para determinar a seleção desses recursos. Por exemplo: `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` pode ser usado para obter as propriedades especificadas para o CatalogItem.
     * Cadeia de consulta (opcional): fornece parâmetros adicionais simples, como a versão de API ou os critérios de seleção de recursos.
 
@@ -67,4 +67,4 @@ Examine as APIs disponíveis no [SwaggerHub](https://app.swaggerhub.com/api/micr
 
 As amostras estão disponíveis no [GitHub](https://github.com/Microsoft/Reporting-Services). A amostra inclui um aplicativo HTML5 baseado em TypeScript, React e Webpack, juntamente com um exemplo do PowerShell.
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,83 +1,86 @@
 ---
-title: Passo a passo da criação de um assembly de regra de análise de código estático personalizado para o SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Como criar um assembly de regra de análise de código estático personalizado para o SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6e2f103303a90837a899330952b6f69544b4c496
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: d11446e3ef8fade0c4cfe6ec885c40754861fc26
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659545"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257036"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Passo a passo da criação de um assembly de regra de análise de código estático personalizado para o SQL Server
+
 Este passo a passo demonstra as etapas usadas para criar uma regra de Análise de Código do SQL Server. A regra criada neste passo a passo é usada para evitar instruções WAITFOR DELAY em procedimentos armazenados, gatilhos e funções.  
   
 Neste passo a passo, você criará uma regra personalizada para análise de código estático Transact\-SQL usando os seguintes processos:  
   
-1.  Crie uma biblioteca de classes, habilite a assinatura para o projeto e adicione as referências necessárias.  
+1. Crie uma biblioteca de classes, habilite a assinatura para o projeto e adicione as referências necessárias.  
   
-2.  Crie uma classe de regra personalizada do Visual C\#.  
+2. Crie uma classe de regra personalizada do Visual C\#.  
   
-3.  Crie duas classes auxiliares de Visual C\#.  
+3. Crie duas classes auxiliares de Visual C\#.  
   
-4.  Copie a DLL resultante criada para o diretório Extensões para instalá-la.  
+4. Copie a DLL resultante criada para o diretório Extensões para instalá-la.  
   
-5.  Verifique se a nova regra de análise de código está em vigor.  
+5. Verifique se a nova regra de análise de código está em vigor.  
   
-**Pré-requisitos**  
+**Pré-requisitos**
   
 Você precisará dos seguintes componentes para concluir este passo a passo:  
   
--   Você deverá ter instalada uma versão do Visual Studio que inclui o SQL Server Data Tools e dá suporte ao desenvolvimento em Visual C\# ou Visual Basic.  
+- Você deverá ter instalada uma versão do Visual Studio que inclui o SQL Server Data Tools e dá suporte ao desenvolvimento em Visual C\# ou Visual Basic.  
   
--   Você deve ter um projeto do SQL Server que contenha objetos de SQL Server.  
+- Você deve ter um projeto do SQL Server que contenha objetos de SQL Server.  
   
--   Uma instância do SQL Server ao qual você poderá implantar um projeto de banco de dados.  
+- Uma instância do SQL Server ao qual você poderá implantar um projeto de banco de dados.  
   
 > [!NOTE]  
 > Este passo a passo é destinado a usuários que já estão familiarizados com os recursos de SQL Server do SQL Server Data Tools. Você também já deverá estar familiarizado com os conceitos do Visual Studio, por exemplo, como criar uma biblioteca de classe e como usar o editor de código para adicionar código a uma classe.  
   
 ## <a name="creating-a-custom-code-analysis-rule-for-sql-server"></a>Criando uma regra de análise de código personalizado para SQL Server  
+
 Em primeiro lugar, crie uma biblioteca de classes. Para criar um projeto de biblioteca de classes:  
   
-1.  Crie um projeto de biblioteca de classe do Visual Basic ou Visual C\# denominado SampleRules.  
+1. Crie um projeto de biblioteca de classe do Visual Basic ou Visual C\# denominado SampleRules.  
   
-2.  Renomeie o arquivo Class1.cs para AvoidWaitForDelayRule.cs.  
+2. Renomeie o arquivo Class1.cs para AvoidWaitForDelayRule.cs.  
   
-3.  No Gerenciador de Soluções, clique com o botão direito do mouse no nó do projeto e, depois, clique em **Adicionar referência**.  
+3. No Gerenciador de Soluções, clique com o botão direito do mouse no nó do projeto e, depois, clique em **Adicionar referência**.  
   
-4.  Selecione System.ComponentModel.Composition na guia Estruturas.  
+4. Selecione System.ComponentModel.Composition na guia Estruturas.  
   
-5.  Clique em **Procurar** e navegue até o diretório C:\Arquivos de Programas (x86)\\Microsoft SQL Server\120\SDK\Assemblies, selecione Microsoft.SqlServer.TransactSql.ScriptDom.dll e clique em OK.  
+5. Clique em **Procurar** e navegue até o diretório C:\Arquivos de Programas (x86)\\Microsoft SQL Server\120\SDK\Assemblies, selecione Microsoft.SqlServer.TransactSql.ScriptDom.dll e clique em OK.  
   
-6.  Em seguida, instale as referências DACFx necessárias. Clique em **Procurar** e navegue até o diretório <Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120. Escolha as entradas Microsoft.SqlServer.Dac.dll, Microsoft.SqlServer.Dac.Extensions.dll e Microsoft.Data.Tools.Schema.Sql.dll, clique em **Adicionar** e em **OK**.  
+6. Em seguida, instale as referências DACFx necessárias. Clique em **Procurar** e navegue até o diretório <Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120. Escolha as entradas Microsoft.SqlServer.Dac.dll, Microsoft.SqlServer.Dac.Extensions.dll e Microsoft.Data.Tools.Schema.Sql.dll, clique em **Adicionar** e em **OK**.  
   
     Agora, os binários do DACFx estão instalados em seu diretório de instalação do Visual Studio. Para o Visual Studio 2012, <Visual Studio Install Dir> geralmente será C:\Arquivos de Programas (x86)\\MicrosoftVisual Studio 11.0. Para o Visual Studio 2013, geralmente será C:\Arquivos de Programas (x86)\\MicrosoftVisual Studio 12.0.  
   
 Em seguida, você adicionará as classes de suporte que serão usadas pela regra.  
   
-## <a name="creating-the-custom-code-analysis-rule-supporting-classes"></a>Criação das Classes de suporte de regra de análise de código personalizado  
+## <a name="creating-the-custom-code-analysis-rule-supporting-classes"></a>Criação das Classes de suporte de regra de análise de código personalizado
+
 Antes de criar a classe para a regra em si, você adicionará uma classe do visitante e uma classe de atributo ao projeto. Essas classes podem ser úteis para a criação de regras personalizadas adicionais.  
   
-A primeira classe que você deve definir é a classe WaitForDelayVisitor, derivada de [TSqlConcreteFragmentVisitor](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor). Essa classe fornece acesso às instruções WAITFOR DELAY no modelo. As classes de visitante utilizam as APIs [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) fornecidas pelo SQL Server. Nessa API, o código Transact\-SQL é representado como uma AST (árvore de sintaxe abstrata) e as classes de visitante podem ser úteis quando você deseja localizar objetos de sintaxe específica, como as instruções de WAITFORDELAY. Podem ser difíceis de encontrar usando o modelo de objeto, pois não estão associadas a uma propriedade específica de objeto ou relação, mas é fácil encontrá-las usando o padrão do visitante e a API [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx).  
+A primeira classe que você deve definir é a classe WaitForDelayVisitor, derivada de [TSqlConcreteFragmentVisitor](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor). Essa classe fornece acesso às instruções WAITFOR DELAY no modelo. As classes de visitante utilizam as APIs [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) fornecidas pelo SQL Server. Nessa API, o código Transact\-SQL é representado como uma AST (árvore de sintaxe abstrata) e as classes de visitante podem ser úteis quando você deseja localizar objetos de sintaxe específica, como as instruções de WAITFORDELAY. Podem ser difíceis de encontrar usando o modelo de objeto, pois não estão associadas a uma propriedade específica de objeto ou relação, mas é fácil encontrá-las usando o padrão do visitante e a API [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx).  
   
 ### <a name="defining-the-waitfordelayvisitor-class"></a>Definição da classe WaitForDelayVisitor  
   
-1.  No **Gerenciador de Soluções**, selecione o projeto SampleRules.  
+1. No **Gerenciador de Soluções**, selecione o projeto SampleRules.  
   
-2.  No menu **Projeto**, selecione **Adicionar classe**. A caixa de diálogo **Adicionar novo item** é exibida.  
+2. No menu **Projeto**, selecione **Adicionar classe**. A caixa de diálogo **Adicionar Novo Item** aparecerá.  
   
-3.  Na caixa de texto **Nome**, digite WaitForDelayVisitor.cs e, em seguida, clique no botão **Adicionar**. O arquivo WaitForDelayVisitor.cs é adicionado ao projeto no **Gerenciador de Soluções**.  
+3. Na caixa de texto **Nome**, digite WaitForDelayVisitor.cs e, em seguida, clique no botão **Adicionar**. O arquivo WaitForDelayVisitor.cs é adicionado ao projeto no **Gerenciador de Soluções**.  
   
-4.  Abra o arquivo WaitForDelayVisitor.cs e atualize o conteúdo de acordo com o código a seguir:  
+4. Abra o arquivo WaitForDelayVisitor.cs e atualize o conteúdo de acordo com o código a seguir:  
   
     ```  
     using System.Collections.Generic;  
@@ -87,19 +90,19 @@ A primeira classe que você deve definir é a classe WaitForDelayVisitor, deriva
     }  
     ```  
   
-5.  Na declaração da classe, altere o modificador de acesso para interno e derive a classe de TSqlConcreteFragmentVisitor:  
+5. Na declaração da classe, altere o modificador de acesso para interno e derive a classe de TSqlConcreteFragmentVisitor:  
   
     ```  
     internal class WaitForDelayVisitor : TSqlConcreteFragmentVisitor {}  
     ```  
   
-6.  Adicione o código a seguir para definir a variável de membro da Lista:  
+6. Adicione o código a seguir para definir a variável de membro da Lista:  
   
     ```  
     public IList<WaitForStatement> WaitForDelayStatements { get; private set; }  
     ```  
   
-7.  Defina o construtor da classe adicionando o seguinte código:  
+7. Defina o construtor da classe adicionando o seguinte código:  
   
     ```  
     public WaitForDelayVisitor() {  
@@ -107,7 +110,7 @@ A primeira classe que você deve definir é a classe WaitForDelayVisitor, deriva
     }  
     ```  
   
-8.  Substitua o método ExplicitVisit, adicionando o seguinte código:  
+8. Substitua o método ExplicitVisit, adicionando o seguinte código:  
   
     ```  
     public override void ExplicitVisit(WaitForStatement node) {  
@@ -125,13 +128,13 @@ A segunda classe é LocalizedExportCodeAnalysisRuleAttribute.cs. Ela é uma exte
   
 ### <a name="defining-the-localizedexportcodeanalysisruleattribute-class"></a>Definição da classe LocalizedExportCodeAnalysisRuleAttribute  
   
-1.  No **Gerenciador de Soluções**, selecione o projeto SampleRules.  
+1. No **Gerenciador de Soluções**, selecione o projeto SampleRules.  
   
-2.  No menu **Projeto**, selecione **Adicionar classe**. A caixa de diálogo **Adicionar novo item** é exibida.  
+2. No menu **Projeto**, selecione **Adicionar classe**. A caixa de diálogo **Adicionar Novo Item** aparecerá.  
   
-3.  Na caixa de texto **Nome**, digite LocalizedExportCodeAnalysisRuleAttribute.cs e clique no botão **Adicionar**. O arquivo é adicionado ao projeto no **Gerenciador de Soluções**.  
+3. Na caixa de texto **Nome**, digite LocalizedExportCodeAnalysisRuleAttribute.cs e clique no botão **Adicionar**. O arquivo é adicionado ao projeto no **Gerenciador de Soluções**.  
   
-4.  Abra o arquivo e atualize o conteúdo de acordo com o código a seguir:  
+4. Abra o arquivo e atualize o conteúdo de acordo com o código a seguir:  
   
     ```  
     using Microsoft.SqlServer.Dac.CodeAnalysis;  
@@ -237,17 +240,17 @@ Em seguida, você pode adicionar um arquivo de recurso que definirá o nome da r
   
 ### <a name="to-add-a-resource-file-and-three-resource-strings"></a>Para adicionar um arquivo de recurso e três cadeias de caracteres de recurso  
   
-1.  No **Gerenciador de Soluções**, selecione o projeto SampleRules.  
+1. No **Gerenciador de Soluções**, selecione o projeto SampleRules.  
   
-2.  No menu **Projeto**, selecione **Adicionar novo item**. A caixa de diálogo **Adicionar novo item** é exibida.  
+2. No menu **Projeto**, selecione **Adicionar novo item**. A caixa de diálogo **Adicionar Novo Item** aparecerá.  
   
-3.  Na lista de **Modelos instalados**, clique em **Geral**.  
+3. Na lista de **Modelos instalados**, clique em **Geral**.  
   
-4.  No painel de detalhes, clique em **Arquivo de recursos**.  
+4. No painel de detalhes, clique em **Arquivo de recursos**.  
   
-5.  Em **Nome**, digite RuleResources.resx. O editor de recurso aparece sem recursos definidos.  
+5. Em **Nome**, digite RuleResources.resx. O editor de recurso aparece sem recursos definidos.  
   
-6.  Defina quatro cadeias de caracteres de recurso da seguinte maneira:  
+6. Defina quatro cadeias de caracteres de recurso da seguinte maneira:  
   
     |Nome|Valor|  
     |--------|---------|  
@@ -256,19 +259,19 @@ Em seguida, você pode adicionar um arquivo de recurso que definirá o nome da r
     |CategorySamples|SamplesCategory|  
     |CannotCreateResourceManager|Não é possível criar o ResourceManager para {0} de {1}.|  
   
-7.  No menu **Arquivo**, clique em **Salvar RuleResources.resx**.  
+7. No menu **Arquivo**, clique em **Salvar RuleResources.resx**.  
   
 Em seguida, defina uma classe que faz referência aos recursos no arquivo de recursos que são usados pelo Visual Studio para exibir informações sobre a regra na interface do usuário.  
   
 ### <a name="defining-the-sampleconstants-class"></a>Definição da classe SampleConstants  
   
-1.  No **Gerenciador de Soluções**, selecione o projeto SampleRules.  
+1. No **Gerenciador de Soluções**, selecione o projeto SampleRules.  
   
-2.  No menu **Projeto**, selecione **Adicionar classe**. A caixa de diálogo **Adicionar novo item** é exibida.  
+2. No menu **Projeto**, selecione **Adicionar classe**. A caixa de diálogo **Adicionar Novo Item** aparecerá.  
   
-3.  Na caixa de texto **Nome**, digite SampleRuleConstants.cs e clique no botão **Adicionar**. O arquivo SampleRuleConstants.cs é adicionado ao projeto no **Gerenciador de Soluções**.  
+3. Na caixa de texto **Nome**, digite SampleRuleConstants.cs e clique no botão **Adicionar**. O arquivo SampleRuleConstants.cs é adicionado ao projeto no **Gerenciador de Soluções**.  
   
-4.  Abra o arquivo SampleRuleConstants.cs e adicione as instruções using a seguir ao arquivo:  
+4. Abra o arquivo SampleRuleConstants.cs e adicione as instruções using a seguir ao arquivo:  
   
     ```  
     namespace SampleRules  
@@ -302,20 +305,21 @@ Em seguida, defina uma classe que faz referência aos recursos no arquivo de rec
     }  
     ```  
   
-5.  Clique em **Arquivo** > **Salvar**.  
+5. Clique em **Arquivo** > **Salvar**.  
   
-## <a name="creating-the-custom-code-analysis-rule-class"></a>Criação da classe de regra de análise de código personalizado  
+## <a name="creating-the-custom-code-analysis-rule-class"></a>Criação da classe de regra de análise de código personalizado
+
 Agora que você adicionou as classes auxiliares que a regra de Análise de código personalizada usará, crie uma classe de regra personalizada e nomeie-a como AvoidWaitForDelayRule. A regra personalizada AvoidWaitForDelayRule será usada para ajudar os desenvolvedores de banco de dados a evitar instruções WAITFOR DELAY em procedimentos armazenados, gatilhos e funções.  
   
 ### <a name="creating-the-avoidwaitfordelayrule-class"></a>Criando a classe AvoidWaitForDelayRule  
   
-1.  No **Gerenciador de Soluções**, selecione o projeto SampleRules.  
+1. No **Gerenciador de Soluções**, selecione o projeto SampleRules.  
   
-2.  No menu **Projeto**, selecione **Adicionar classe**. A caixa de diálogo **Adicionar novo item** é exibida.  
+2. No menu **Projeto**, selecione **Adicionar classe**. A caixa de diálogo **Adicionar Novo Item** aparecerá.  
   
-3.  Na caixa de texto **Nome**, digite AvoidWaitForDelayRule.cs e clique em **Adicionar**. O arquivo AvoidWaitForDelayRule.cs é adicionado ao projeto no **Gerenciador de Soluções**.  
+3. Na caixa de texto **Nome**, digite AvoidWaitForDelayRule.cs e clique em **Adicionar**. O arquivo AvoidWaitForDelayRule.cs é adicionado ao projeto no **Gerenciador de Soluções**.  
   
-4.  Abra o arquivo AvoidWaitForDelayRule.cs e adicione as instruções using a seguir ao arquivo:  
+4. Abra o arquivo AvoidWaitForDelayRule.cs e adicione as instruções using a seguir ao arquivo:  
   
     ```  
     using Microsoft.SqlServer.Dac.CodeAnalysis;  
@@ -329,7 +333,7 @@ Agora que você adicionou as classes auxiliares que a regra de Análise de códi
     }  
     ```  
   
-5.  Na declaração de classe AvoidWaitForDelayRule, altere o modificador de acesso para público:  
+5. Na declaração de classe AvoidWaitForDelayRule, altere o modificador de acesso para público:  
   
     ```  
     /// <summary>  
@@ -340,13 +344,13 @@ Agora que você adicionou as classes auxiliares que a regra de Análise de códi
     public sealed class AvoidWaitForDelayRule  
     ```  
   
-6.  Derive a classe AvoidWaitForDelayRule da classe base Microsoft.SqlServer.Dac.CodeAnalysis.SqlCodeAnalysisRule:  
+6. Derive a classe AvoidWaitForDelayRule da classe base Microsoft.SqlServer.Dac.CodeAnalysis.SqlCodeAnalysisRule:  
   
     ```  
     public sealed class AvoidWaitForDelayRule : SqlCodeAnalysisRule  
     ```  
   
-7.  Adicione o LocalizedExportCodeAnalysisRuleAttribute à sua classe.  
+7. Adicione o LocalizedExportCodeAnalysisRuleAttribute à sua classe.  
   
     O LocalizedExportCodeAnalysisRuleAttribute permite que o serviço de análise de código descubra as regras de análise de código personalizado. Somente as classes marcadas com um ExportCodeAnalysisRuleAttribute (ou um atributo que seja herdeiro disso) podem ser usadas na análise de código.  
   
@@ -373,7 +377,7 @@ Agora que você adicionou as classes auxiliares que a regra de Análise de códi
   
     A propriedade RuleScope deve ser Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleScope.Element, pois essa regra analisará os elementos específicos. A regra será chamada uma vez para cada elemento correspondente no modelo. Caso deseje analisar um modelo inteiro, pode usar Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleScope.Model.  
   
-8.  Adicione um construtor que configure o Microsoft.SqlServer.Dac.CodeAnalysis.SqlAnalysisRule.SupportedElementTypes. Isso é necessário para regras de escopo do elemento. Define os tipos de elementos aos quais essa regra será aplicada. Nesse caso, a regra será aplicada para procedimentos armazenados, gatilhos e funções. Observe que a classe Microsoft.SqlServer.Dac.Model.ModelSchema lista todos os tipos de elemento disponíveis que podem ser analisados.  
+8. Adicione um construtor que configure o Microsoft.SqlServer.Dac.CodeAnalysis.SqlAnalysisRule.SupportedElementTypes. Isso é necessário para regras de escopo do elemento. Define os tipos de elementos aos quais essa regra será aplicada. Nesse caso, a regra será aplicada para procedimentos armazenados, gatilhos e funções. Observe que a classe Microsoft.SqlServer.Dac.Model.ModelSchema lista todos os tipos de elemento disponíveis que podem ser analisados.  
   
     ```  
     public AvoidWaitForDelayRule()  
@@ -488,30 +492,32 @@ Agora que você adicionou as classes auxiliares que a regra de Análise de códi
   
 ### <a name="building-the-class-library"></a>Compilação da biblioteca de classes  
   
-1.  No menu **Projeto**, clique em **Propriedades de SampleRules**.  
+1. No menu **Projeto**, clique em **Propriedades de SampleRules**.  
   
-2.  Clique na guia **Assinatura** .  
+2. Clique na guia **Assinatura** .  
   
-3.  Clique em **Assinar o assembly**.  
+3. Clique em **Assinar o assembly**.  
   
-4.  Em **Escolher um arquivo de chave de nome forte**, clique em **<New>** .  
+4. Em **Escolher um arquivo de chave de nome forte**, clique em **<New>** .  
   
-5.  Na caixa de diálogo **Criar chave de nome forte**, em **Nome do arquivo de chaves**, digite MyRefKey.  
+5. Na caixa de diálogo **Criar chave de nome forte**, em **Nome do arquivo de chaves**, digite MyRefKey.  
   
-6.  (opcional) Você pode especificar uma senha para o arquivo de chave de nome forte.  
+6. (opcional) Você pode especificar uma senha para o arquivo de chave de nome forte.  
   
-7.  Clique em **OK**.  
+7. Clique em **OK**.  
   
-8.  No menu **Arquivo** , clique em **Salvar Tudo**.  
+8. No menu **Arquivo** , clique em **Salvar Tudo**.  
   
-9. No menu **Criar** , clique em **Criar Solução**.  
+9. No menu **Compilar**, clique em **Compilar Solução**.  
   
 Em seguida, você deve instalar o assembly de modo que ele seja carregado quando você compilar e implantar projetos do SQL Server.  
   
-## <a name="install-a-static-code-analysis-rule"></a>Instalar uma regra de análise de código estático  
+## <a name="install-a-static-code-analysis-rule"></a>Instalar uma regra de análise de código estático
+
 Para instalar uma regra, você deverá copiar o assembly e o arquivo .pdb associado à pasta Extensões.  
   
-### <a name="to-install-the-samplerules-assembly"></a>Para instalar o Assembly SampleRules  
+### <a name="to-install-the-samplerules-assembly"></a>Para instalar o Assembly SampleRules
+
 Em seguida, você copiará as informações de assembly para o diretório Extensões. Ao iniciar, o Visual Studio identificará todas as extensões no diretório e subdiretórios <Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120\Extensions, além de disponibilizá-las para uso.  
   
 Para o Visual Studio 2012, <Visual Studio Install Dir> geralmente será C:\Arquivos de Programas (x86)\\MicrosoftVisual Studio 11.0. Para o Visual Studio 2013, geralmente será C:\Arquivos de Programas (x86)\\MicrosoftVisual Studio 12.0.  
@@ -522,24 +528,24 @@ A regra já deve estar instalada e será exibida após o reinício do Visual Stu
   
 ### <a name="starting-a-new-visual-studio-session-and-creating-a-database-project"></a>Iniciar uma nova sessão do Visual Studio e criar um projeto de banco de dados  
   
-1.  Inicie uma segunda sessão do Visual Studio.  
+1. Inicie uma segunda sessão do Visual Studio.  
   
-2.  Clique em **Arquivo** > **Novo** > **Projeto**.  
+2. Clique em **Arquivo** > **Novo** > **Projeto**.  
   
-3.  Na caixa de diálogo **Novo projeto**, na lista de **Modelos instalados**, expanda o nó **SQL Server** e clique em **Projeto de Banco de Dados do SQL Server**.  
+3. Na caixa de diálogo **Novo projeto**, na lista de **Modelos instalados**, expanda o nó **SQL Server** e clique em **Projeto de Banco de Dados do SQL Server**.  
   
-4.  Na caixa de texto **Nome**, digite SampleRulesDB e clique em **OK**.  
+4. Na caixa de texto **Nome**, digite SampleRulesDB e clique em **OK**.  
   
 Por fim, você verá a nova regra exibida no projeto SQL Server. Para exibir a nova regra de análise de código AvoidWaitForRule:  
   
-1.  No **Gerenciador de Soluções**, selecione o projeto SampleRulesDB.  
+1. No **Gerenciador de Soluções**, selecione o projeto SampleRulesDB.  
   
-2.  No menu **Projeto** , clique em **Propriedades**. A página de propriedades SampleRulesDB é exibida.  
+2. No menu **Projeto** , clique em **Propriedades**. A página de propriedades SampleRulesDB é exibida.  
   
-3.  Clique em **Análise de código**. Você deve ver uma nova categoria chamada RuleSamples.CategorySamples.  
+3. Clique em **Análise de código**. Você deve ver uma nova categoria chamada RuleSamples.CategorySamples.  
   
-4.  Expanda RuleSamples .CategorySamples. Você deve ver SR1004: evite a declaração WAITFOR DELAY em procedimentos armazenados, gatilhos e funções.  
+4. Expanda RuleSamples .CategorySamples. Você deve ver SR1004: evite a declaração WAITFOR DELAY em procedimentos armazenados, gatilhos e funções.  
   
-## <a name="see-also"></a>Consulte Também  
-[Visão geral de extensibilidade para regras de análise de código do banco de dados](../ssdt/overview-of-extensibility-for-database-code-analysis-rules.md)  
-  
+## <a name="see-also"></a>Consulte Também
+
+[Visão geral de extensibilidade para regras de análise de código do banco de dados](../ssdt/overview-of-extensibility-for-database-code-analysis-rules.md)

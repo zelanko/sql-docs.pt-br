@@ -13,10 +13,10 @@ ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13e1075cd25fa352543837afa31ff2a3d540704f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015125"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>Pool de conexões (Drivers da Microsoft para PHP para SQL Server)
@@ -26,7 +26,7 @@ Veja a seguir pontos importantes a serem observados sobre o pool de conexões no
   
 -   O [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] usa o pool de conexões do ODBC.  
   
--   Por padrão, o pool de conexões está habilitado no Windows. No Linux e no macOS, as conexões serão agrupadas somente se o pool de conexões estiver habilitado para ODBC (consulte [habilitando/desabilitando o pool de conexões](#enablingdisabling-connection-pooling)). Quando o pool de conexões está habilitado e você se conecta a um servidor, o driver tenta usar uma conexão em pool antes de criar um novo. Se uma conexão equivalente não for encontrada no pool, uma nova conexão será criada e adicionada a ele. O driver determina se as conexões são equivalentes com base em uma comparação de cadeias de conexão.  
+-   Por padrão, o pool de conexões está habilitado no Windows. No Linux e no macOS, as conexões serão agrupadas somente se o pool de conexões estiver habilitado para ODBC (confira [Como habilitar/desabilitar o pool de conexões](#enablingdisabling-connection-pooling)). Quando o pool de conexões estiver habilitado e você se conectar a um servidor, o driver tentará usar uma conexão em pool antes de criar uma. Se uma conexão equivalente não for encontrada no pool, uma nova conexão será criada e adicionada a ele. O driver determina se as conexões são equivalentes com base em uma comparação de cadeias de conexão.  
   
 -   Quando uma conexão do pool é usada, o estado da conexão é redefinido.  
   
@@ -34,7 +34,7 @@ Veja a seguir pontos importantes a serem observados sobre o pool de conexões no
   
 Confira mais informações sobre o pool de conexão em [Pool de conexões do Gerenciador de Driver](../../odbc/reference/develop-app/driver-manager-connection-pooling.md).  
   
-## <a name="enablingdisabling-connection-pooling"></a>Habilitando/desabilitando o pool de conexões
+## <a name="enablingdisabling-connection-pooling"></a>Como habilitar/desabilitar o pool de conexões
 ### <a name="windows"></a>Windows
 Você pode forçar o driver a criar uma nova conexão (em vez de procurar uma conexão equivalente no pool de conexões), definindo o valor do atributo *ConnectionPooling* na cadeia de conexão como **false** (ou 0).  
   
@@ -44,9 +44,9 @@ Para obter mais informações sobre outros atributos de conexão, consulte [Conn
 ### <a name="linux-and-macos"></a>Linux e macOS
 O atributo *ConnectionPooling* não pode ser usado para habilitar/desabilitar o pool de conexões. 
 
-O pool de conexões pode ser habilitado/desabilitado editando o arquivo de configuração Odbcinst. ini. O driver deve ser recarregado para que as alterações entrem em vigor.
+O pool de conexões pode ser habilitado/desabilitado pela edição do arquivo de configuração odbcinst.ini. O driver deve ser recarregado para que as alterações entrem em vigor.
 
-Definir `Pooling` como `Yes` e um valor `CPTimeout` positivo no arquivo Odbcinst. ini habilita o pool de conexões. 
+A configuração de `Pooling` como `Yes` e de um valor `CPTimeout` positivo no arquivo odbcinst.ini habilita o pool de conexões. 
 ```
 [ODBC]
 Pooling=Yes
@@ -55,7 +55,7 @@ Pooling=Yes
 CPTimeout=<int value>
 ```
   
-No mínimo, o arquivo Odbcinst. ini deve ser semelhante a este exemplo:
+Resumidamente, o arquivo odbcinst.ini deve ser semelhante a este exemplo:
 
 ```
 [ODBC]
@@ -68,16 +68,16 @@ UsageCount=1
 CPTimeout=120
 ```
 
-A `Pooling` configuração `No` para no arquivo Odbcinst. ini força o driver a criar uma nova conexão.
+Configurar `Pooling` como `No` no arquivo odbcinst.ini força o driver a criar uma conexão.
 ```
 [ODBC]
 Pooling=No
 ```
 
-## <a name="remarks"></a>Remarks
-- No Linux ou no macOS, todas as conexões serão agrupadas se o pooling estiver habilitado no arquivo Odbcinst. ini. Isso significa que a opção de conexão ConnectionPooling não tem nenhum efeito. Para desabilitar o pooling, defina pooling = não no arquivo Odbcinst. ini e recarregue os drivers.
-  - unixODBC < = 2.3.4 (Linux e macOS) pode não retornar informações de diagnóstico apropriadas, como mensagens de erro, avisos e mensagens informativas
-  - por esse motivo, os drivers SQLSRV e PDO_SQLSRV podem não conseguir buscar corretamente dados longos (como XML, Binary) como cadeias de caracteres. Dados longos podem ser obtidos como fluxos como uma solução alternativa. Veja o exemplo abaixo para SQLSRV.
+## <a name="remarks"></a>Comentários
+- No Linux ou no macOS, todas as conexões serão agrupadas se o pool estiver habilitado no arquivo odbcinst.ini. Isso significa que a opção de conexão ConnectionPooling não tem nenhum efeito. Para desabilitar o pool, defina Pooling=No no arquivo odbcinst.ini e recarregue os drivers.
+  - unixODBC <= 2.3.4 (Linux e macOS) pode não retornar informações de diagnóstico apropriadas, como mensagens de erro, avisos e mensagens informativas
+  - por esse motivo, os drivers SQLSRV e PDO_SQLSRV podem não conseguir buscar corretamente dados longos (por exemplo, XML, binários) como cadeias de caracteres. Como uma solução alternativa, os dados longos podem ser obtidos como fluxos. Veja o exemplo abaixo para SQLSRV.
 
 ```
 <?php
@@ -125,7 +125,7 @@ function getColumn($conn)
 
 
 ## <a name="see-also"></a>Consulte Também  
-[Como se conectar usando a Autenticação do Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
+[Como: conectar-se usando a Autenticação do Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
 
-[Como se conectar usando a Autenticação do SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
+[Como: conectar-se usando a Autenticação do SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

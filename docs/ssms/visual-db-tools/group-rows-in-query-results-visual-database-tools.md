@@ -1,10 +1,7 @@
 ---
-title: Agrupar linhas em resultados da consulta (Ferramentas de Banco de Dados Visual) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Agrupar linhas em resultados da consulta
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,20 +11,24 @@ helpviewer_keywords:
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3208a3458098b85325a19c014d99bca3b4f05c4d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 508c7561dc77f375375e174d68d3955e044ae4ee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254470"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247204"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Agrupar linhas em resultados da consulta (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Para criar subtotais ou para mostrar outro resumo informativo de subconjuntos de uma tabela, crie grupos usando uma consulta de agregação. Cada grupo resume os dados de todas as linhas da tabela que possuem o mesmo valor.  
   
 Por exemplo, pode ser necessário exibir o preço médio de um livro na tabela `titles` , mas classifique os resultados por editora. Para isso, agrupe a consulta por publicador (por exemplo, `pub_id`). A saída da consulta resultante poderá ter a seguinte aparência:  
   
-![Resultados da consulta: preço médio agrupado por publicador](../../ssms/visual-db-tools/media/dv3w9e1.gif "Resultados da consulta: preço médio agrupado por publicador")  
+![Resultados de consulta: preço médio agrupado por publicador](../../ssms/visual-db-tools/media/dv3w9e1.gif "Resultados de consulta: preço médio agrupado por publicador")  
   
 Quando se agrupam dados, só é possível exibir dados resumidos ou agrupados, como:  
   
@@ -49,7 +50,7 @@ GROUP BY pub_id, type
   
 A saída resultante pode ter a seguinte aparência:  
   
-![Resultados da consulta: preço agrupado por publicador e tipo](../../ssms/visual-db-tools/media/dv3w9e2.gif "Resultados da consulta: preço agrupado por publicador e tipo")  
+![Resultados de consulta: preço agrupado por publicador e tipo](../../ssms/visual-db-tools/media/dv3w9e2.gif "Resultados de consulta: preço agrupado por publicador e tipo")  
   
 ### <a name="to-group-rows"></a>Para agrupar linhas  
   
@@ -71,9 +72,9 @@ A saída resultante pode ter a seguinte aparência:
   
 5.  Na célula de grade **Agrupar por** da coluna que será agregada, selecione a função de agregação correta.  
   
-    O Designer de Consulta e Exibição atribui automaticamente um alias de coluna à coluna que você está resumindo. Você pode substituir esse alias gerado automaticamente por outro que tenha mais significado. Para obter mais detalhes, veja [Criar aliases de coluna (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
+    O Designer de Consulta e Exibição atribui automaticamente um alias de coluna à coluna que você está resumindo. Você pode substituir esse alias gerado automaticamente por outro que tenha mais significado. Para obter mais detalhes, confira [Criar Aliases de Coluna](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
-    ![Adicionar um alias de coluna para o conjunto de resultados da consulta](../../ssms/visual-db-tools/media/dv3w9e3.gif "Adicionar um alias de coluna para o conjunto de resultados da consulta")  
+    ![Adicionar um alias de coluna ao conjunto de resultados de consulta](../../ssms/visual-db-tools/media/dv3w9e3.gif "Adicionar um alias de coluna ao conjunto de resultados de consulta")  
   
     A instrução correspondente no painel **SQL** pode ter esse formato:  
   
@@ -84,5 +85,5 @@ A saída resultante pode ter a seguinte aparência:
     ```  
   
 ## <a name="see-also"></a>Consulte Também  
-[Classificar e agrupar resultados da consulta (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Classificar e agrupar resultados da consulta](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   

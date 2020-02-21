@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e0a18b05395cffaa4154e8f4a7d74ed04750e430
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5492b4ff50baa805989df3521b01856eb028328e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904308"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831621"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Guia de navegação de documentos do SQL Server 
 
@@ -37,7 +37,7 @@ Se quiser criar um PDF, selecione o link **Baixar PDF** localizado na parte infe
 
 ![Baixar PDF](media/sql-server-docs-navigation-guide/download-pdf.png)
 
-## <a name="toc-navigation-hints"></a>Dicas de navegação no sumário
+## <a name="toc-symbols"></a>Símbolos de sumário 
 
 Entradas no sumário que têm um `>` no final indicam que você será levado para a documentação técnica com um sumário diferente. 
 
@@ -51,26 +51,25 @@ Se navegar para uma dessas páginas, você poderá voltar para a página técnic
 
 ![Navegar de volta para o sumário do SQL](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
-## <a name="toc-search-tip"></a>Dica de pesquisa de sumário
+## <a name="toc-search"></a>Pesquisa de sumário 
 Em docs.microsoft.com, você pode pesquisar o conteúdo no sumário usando a caixa de pesquisa de filtro na parte superior: 
 
 ![Usar caixa de filtro](media/sql-server-docs-navigation-guide/sql-docs-toc-filter.gif)
 
-## <a name="version-filter"></a>Filtro de versão
+## <a name="version-filter"></a>Filtro da versão
 A documentação técnica do SQL Server fornece conteúdo sobre várias versões e tipos de SQL Server com suporte. Os recursos podem variar entre as versões e os tipos do SQL Server e, às vezes, o próprio conteúdo pode variar. 
 
 Você pode usar o [filtro de versão](versioning-system-monikers-ui-sql-server.md) para garantir que está esteja vendo o conteúdo referente à versão e ao tipo corretos do SQL Server: 
 
 ![Filtro de versão dos documentos do SQL](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Selecionar **Todo o SQL** \> **Não ocultar nada** faz todo o conteúdo ficar visível e nada ficar oculto pelo filtro de versão. A opção **Não ocultar nada** pode revelar conteúdo relevante para várias versões diferentes do SQL Server no mesmo artigo, o que pode ser contraditório, incerto ou confuso. Sendo assim, a opção [**Não ocultar nada** não é recomendada para uso de rotina](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
+Selecionar **Todo o SQL** \> **Não ocultar nada** garante que todo o conteúdo fique visível e nada fique oculto pelo filtro de versão. A opção **Não ocultar nada** pode revelar conteúdo relevante para várias versões diferentes do SQL Server no mesmo artigo, o que pode ser contraditório, incerto ou confuso. Sendo assim, a opção [**Não ocultar nada** não é recomendada para uso de rotina](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
 
 ## <a name="breadcrumbs"></a>Trilhas de navegação
 
 As trilhas de navegação podem ser encontradas abaixo do cabeçalho e acima do sumário e indicam onde o artigo atual está localizado no sumário.  Isso não apenas ajuda a definir o contexto do tipo de conteúdo que você está lendo, mas também permite navegar de volta para a árvore de sumário:
 
 ![Trilhas de navegação dos documentos do SQL](media/sql-server-docs-navigation-guide/sql-docs-bread-crumbs.gif)
-
 
 ## <a name="article-section-navigation"></a>Navegação de seção do artigo
 
@@ -95,4 +94,4 @@ Também é possível enviar comentários e sugestões sobre a documentação ger
 
 - Introdução à [Documentação Técnica do SQL Server](index.yml).
 - Para saber mais sobre como enviar comentários ou obter ajuda com o SQL Server, consulte a página [Obter ajuda](sql-server-get-help.md). 
-- Para acessar rapidamente todos os guias de início rápido e tutoriais, vá para o [Centro de educação do SQL Server](../lp/sql-server/sql-education-center.md).
+- Para acessar rapidamente todos os guias de início rápido e tutoriais, confira [Recursos educativos do SQL](../sql-server/educational-sql-resources.yml).

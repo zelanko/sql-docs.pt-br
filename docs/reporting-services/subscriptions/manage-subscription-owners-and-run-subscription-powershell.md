@@ -1,5 +1,6 @@
 ---
 title: Gerenciar os proprietários da assinatura e executar a assinatura – PowerShell | Microsoft Docs
+description: Você pode transferir de maneira programática a propriedade de uma assinatura do Reporting Services de um usuário para outro.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: subscriptions
@@ -8,13 +9,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 04/26/2019
-ms.openlocfilehash: 2a0972f5cd644ed06718791ee20b2c5dfd9a1660
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.date: 01/16/2020
+ms.openlocfilehash: a5ec1524c7105c5a408aa11448984b9366e6d51d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893432"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259324"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>Gerenciar os proprietários da assinatura e executar a assinatura – PowerShell
 
@@ -30,15 +31,15 @@ A partir do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLU
   
 - [Script: listar a propriedade de todas as assinaturas](#bkmk_list_ownership_all)  
   
-- [Script: listar todas as assinaturas de propriedade de um usuário específico](#bkmk_list_all_one_user)  
+- [Script: listar todas as assinaturas pertencentes a um usuário específico](#bkmk_list_all_one_user)  
   
-- [Script: alterar a propriedade de todas as assinaturas de propriedade de um usuário específico](#bkmk_change_all)  
+- [Script: alterar a propriedade de todas as assinaturas pertencentes a um usuário específico](#bkmk_change_all)  
   
 - [Script: listar todas as assinaturas associadas a um relatório específico](#bkmk_list_for_1_report)  
   
 - [Script: alterar a propriedade de uma assinatura específica](#bkmk_change_all_1_subscription)  
   
-- [Script: executar (acionar) uma única assinatura](#bkmk_run_1_subscription)  
+- [Script: executar (acionar) assinatura única](#bkmk_run_1_subscription)  
   
 ## <a name="bkmk_how_to"></a> Como usar os scripts
   
@@ -58,21 +59,21 @@ Esta seção resume os níveis de permissão necessários para usar cada um dos 
   
 - Listar assinaturas: [Enumeração ReportOperation](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) no relatório E o usuário é o proprietário da assinatura OU ReadAnySubscription.  
   
-- Alterar Assinaturas: o usuário deve ser membro do grupo BUILTIN\Administrators  
+- Alterar assinaturas: O usuário deve ser membro do grupo BUILTIN\Administrators  
   
-- Listar Filhos: ReadProperties no Item  
+- Listar filhos: ReadProperties no item  
   
-- Acionar Evento: GenerateEvents (System)  
+- Acionar evento: GenerateEvents (sistema)  
   
  **Modo SharePoint:**
   
 - Listar assinaturas: ManageAlerts OU [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) no relatório E o usuário é o proprietário da assinatura e a assinatura é cronometrada.  
   
-- Alterar Assinaturas: ManageWeb  
+- Alterar assinaturas: ManageWeb  
   
-- Listar Filhos: ViewListItems  
+- Listar filhos: ViewListItems  
   
-- Acionar Evento: ManageWeb  
+- Acionar evento: ManageWeb  
   
  Para obter mais informações, consulte [Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   
@@ -84,7 +85,7 @@ Esta seção resume os níveis de permissão necessários para usar cada um dos 
   
 2. Crie um arquivo de texto para cada script e salve os arquivos na pasta c:\scripts. Quando criar os arquivos .ps1, use o nome de cada sintaxe de linha de comando do exemplo.  
   
-3. Abra um prompt de comando com privilégios administrativos.  
+3. Abra uma prompt de comando com privilégios de administrativos.  
   
 4. Execute cada arquivo de script, usando a respectiva sintaxe de linha de comando de exemplo fornecida.  
   
@@ -136,7 +137,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]  
 > Para verificar URLs de sites no modo do SharePoint, use o cmdlet **Get-SPSite**do SharePoint. Para obter mais informações, consulte [Get-SPSite](https://msdn.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
-##  <a name="bkmk_list_all_one_user"></a> Script: listar todas as assinaturas de propriedade de um usuário específico
+##  <a name="bkmk_list_all_one_user"></a> Script: listar todas as assinaturas pertencentes a um usuário específico
 
 Esse script lista todas as assinaturas de propriedade de um usuário específico. Você pode usar esse script para testar sua conexão ou para verificar o caminho do relatório e a ID da assinatura para uso em outros scripts. Esse script é útil quando alguém sai da organização e você deseja verificar quais assinaturas essa pessoa possuía para alterar o proprietário ou excluir a assinatura.  
   
@@ -174,7 +175,7 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-## <a name="bkmk_change_all"></a> Script: alterar a propriedade de todas as assinaturas de propriedade de um usuário específico
+## <a name="bkmk_change_all"></a> Script: alterar a propriedade de todas as assinaturas pertencentes a um usuário específico
 
 Esse script muda a propriedade de todas as assinaturas de um usuário específico para o parâmetro do novo proprietário.  
   
@@ -216,7 +217,7 @@ ForEach ($item in $items)
         $curRepSubs = $rs2010.ListSubscriptions($item.Path);  
         ForEach ($curRepSub in $curRepSubs)  
         {  
-            if ($curRepSub.Owner -eq $previousOwner)  
+            if ($curRepSub.Owner -eq $currentOwner)  
             {  
                 $subscriptions += $curRepSub;  
             }  
@@ -330,7 +331,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status  
 ```  
   
-## <a name="bkmk_run_1_subscription"></a> Script: executar (acionar) uma única assinatura  
+## <a name="bkmk_run_1_subscription"></a> Script: executar (acionar) uma assinatura única  
 
 Esse script executa uma assinatura específica usando o método FireEvent. O script executa a assinatura de maneira imediata, independentemente da agenda configurada para a assinatura. O EventType é comparado com o conjunto conhecido de eventos que estão definidos no arquivo de configuração do servidor do relatório **rsreportserver.config** O script usa o tipo de evento a seguir para assinaturas padrão:  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: gerar script de objetos no SQL Server Management Studio'
+title: Objetos de script do SSMS
 description: Um tutorial para gerar scripts de objetos no SSMS
 keywords: SQL Server, SSMS, SQL Server Management Studio, Scripts, Gerar script
 author: MashaMSFT
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 36d3b90a9ac1e49af564323c86421216216522a9
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988411"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247303"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>gerar script de objetos no SQL Server Management Studio
 
@@ -43,7 +43,7 @@ Para gerar script de qualquer objeto no **Pesquisador de Objetos**, clique duas 
 
 Para concluir este tutorial, você precisará do SQL Server Management Studio, bem como acesso a um servidor que executa o SQL Server e um banco de dados do AdventureWorks.
 
-* Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 * Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Baixar [Bancos de dados de exemplo do AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases).
 
@@ -135,9 +135,9 @@ A seção a seguir ensina como gerar o script do banco de dados, tanto usando a 
 
 5. Selecione **Avançar** para abrir a página **Definir Opções de Script**. Aqui você pode configurar onde salvar o script e outras opções avançadas. 
 
-    A. Selecione **Salvar em nova janela de consulta**.
+    a. Selecione **Salvar em nova janela de consulta**.
 
-    B. Clique em **Avançado** e certifique-se de que estas opções estejam definidas:
+    b. Clique em **Avançado** e certifique-se de que estas opções estejam definidas:
 
       * **Estatísticas do Script** definida como *Estatísticas do Script*.
       * **Tipos de dados para script** definida como *Somente esquema*.
@@ -148,7 +148,7 @@ A seção a seguir ensina como gerar o script do banco de dados, tanto usando a 
    > [!NOTE]
    > Você pode gerar scripts dos dados do banco de dados ao selecionar *Esquema e dados* na opção **Tipos de dados dos quais gerar script**. No entanto, isso não é ideal com grandes bancos de dados. Pode consumir mais memória do que o SSMS pode alocar. Essa limitação pode ser usada para bancos de dados pequenos. Se você quiser mover dados para um banco de dados maior, use o [Assistente de importação e exportação](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-6. Selecione **OK**e selecione **Avançar**.
+6. Selecione **OK** e, em seguida, selecione **Avançar**.
 
 7. Selecione **Avançar** no **Resumo**. Selecione **Avançar** novamente para gerar o script em uma janela **Nova Consulta**.
 

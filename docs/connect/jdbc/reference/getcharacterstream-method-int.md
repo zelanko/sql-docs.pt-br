@@ -16,10 +16,10 @@ ms.assetid: 4f9f230d-be4c-469a-b3dc-f24531429aae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c0dd69211302a10fe72fc2742cbcd8b6bda7c933
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68213694"
 ---
 # <a name="getcharacterstream-method-int"></a>Método getCharacterStream (int)
@@ -34,19 +34,19 @@ ms.locfileid: "68213694"
 public java.io.Reader getCharacterStream(int columnIndex)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnIndex*  
   
  Um **int** que indica o índice de coluna.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um objeto leitor.  
+ Um objeto Reader.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getCharacterStream é especificado pelo método getCharacterStream na interface java. Sql. ResultSet.  
+## <a name="remarks"></a>Comentários  
+ Esse método getCharacterStream é especificado pelo método getCharacterStream na interface java.sql.ResultSet.  
   
  Esse método lerá apenas tipos de dados de caracteres Unicode do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], como nchar, nvarchar, nvarchar(max) e ntext. Todos os outros tipos de dados, incluindo os tipos de caracteres ASCII, fazem com que uma exceção seja lançada. Para ler os tipos de dados ASCII, use o método [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md).  
   

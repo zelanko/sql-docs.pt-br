@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 93f3eb7db9c00f98d1d4270e9febc105eb6ef6b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574343"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Fazer backup e restaurar aplicativos de serviço SharePoint do Reporting Services
@@ -77,7 +77,7 @@ Para fazer backup do aplicativo de serviço, conclua as seguintes etapas:
   
 ### <a name="verify-execution-account-and-database-authentication"></a>Verificar conta de execução e autenticação do banco de dados
 
- **Conta de Execução:** Para verificar se seu aplicativo de serviço está usando uma conta de execução:  
+ **Conta de execução:** para verificar se o aplicativo de serviço está usando uma conta de execução:  
   
 1.  Na Administração Central do SharePoint, selecione **Gerenciar Aplicativos de Serviço** no grupo **Gerenciamento de Aplicativo**.  
   
@@ -87,7 +87,7 @@ Para fazer backup do aplicativo de serviço, conclua as seguintes etapas:
   
 4.  Se uma conta de execução for configurada, você precisará saber as credenciais quando chegar a hora de restaurar o backup do aplicativo de serviço. Não continue com o procedimento de backup e restauração até que saiba as credenciais corretas.  
   
- **Autenticação de Banco de Dados:** Para verificar se o aplicativo de serviço está usando a Autenticação do Windows na autenticação do banco de dados:  
+ **Autenticação de banco de dados:** para verificar se o aplicativo de serviço está usando a Autenticação do Windows para a autenticação do banco de dados:  
   
 1.  Na Administração Central do SharePoint, selecione **Gerenciar Aplicativos de Serviço** no grupo **Gerenciamento de Aplicativo**.  
   
@@ -135,7 +135,7 @@ Para fazer backup do aplicativo de serviço, conclua as seguintes etapas:
 
 ### <a name="configure-the-execution-account-and-database-authentication"></a>Configurar a conta de execução e a autenticação do banco de dados
 
- **Conta de execução:** Se seu aplicativo de serviço estiver usando uma conta de execução, execute as seguintes etapas para configurá-lo:  
+ **Conta de execução:** se o aplicativo de serviço estava usando uma conta de execução, execute as seguintes etapas para configurá-lo:  
   
 1.  Na Administração Central do SharePoint, selecione **Gerenciar Aplicativos de Serviço** no grupo **Gerenciamento de Aplicativo**.  
   
@@ -145,9 +145,9 @@ Para fazer backup do aplicativo de serviço, conclua as seguintes etapas:
   
 4.  Digite a conta e a senha, e selecione a caixa **Especificar uma Conta de Execução** .  
   
-5.  Escolha **OK**.  
+5.  Selecione **OK**.  
   
- **Autenticação de Banco de Dados:** Se o aplicativo de serviço estiver usando a Autenticação do Windows na autenticação do banco de dados, execute as seguintes etapas:  
+ **Autenticação de banco de dados:** se o aplicativo de serviço estava usando a Autenticação do Windows para autenticação do banco de dados, execute as seguintes etapas:  
   
 1.  Na Administração Central do SharePoint, selecione **Gerenciar Aplicativos de Serviço** no grupo **Gerenciamento de Aplicativo**.  
   
@@ -159,6 +159,6 @@ Para fazer backup do aplicativo de serviço, conclua as seguintes etapas:
   
 5.  Digite a conta e senha. Selecione **Uso como Credenciais do Windows** , se apropriado.  
   
-6.  Selecione **OK**
+6.  Selecione **Ok**
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

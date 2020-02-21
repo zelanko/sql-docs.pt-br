@@ -1,10 +1,9 @@
 ---
-title: Criar consultas Criar Tabela (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Criar consultas de criar tabela
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbacf31bf3fcbb9cafd88e57e7c798a584b74ef7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 50b9e158fe828271cc4e96c6175895cc858ac962
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264377"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254326"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Criar consultas Criar Tabela (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,24 +67,24 @@ Para usar uma consulta Criar Tabela com êxito:
   
     Para criar uma tabela de destino em outro banco de dados, especifique um nome de tabela totalmente qualificado incluindo o nome do banco de dados de destino, o proprietário (se necessário) e o nome da tabela.  
   
-4.  Especifique as colunas a serem copiadas adicionando-as à consulta. Para obter detalhes, veja [Adicionar colunas a consultas (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). As colunas só serão copiadas se você as adicionar à consulta. Para copiar linhas inteiras, escolha **#42; (Todas as colunas)** .  
+4.  Especifique as colunas a serem copiadas adicionando-as à consulta. Para obter detalhes, confira [Adicionar colunas a consultas](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). As colunas só serão copiadas se você as adicionar à consulta. Para copiar linhas inteiras, escolha **#42; (Todas as colunas)** .  
   
     O Designer de Consulta e Exibição adiciona as colunas escolhidas à coluna **Coluna** do painel Critérios.  
   
 5.  Se você quiser copiar as linhas em uma ordem específica, selecione a ordem de classificação. Para obter detalhes, consulte **Classificação e agrupamento de resultados de consultas**.  
   
-6.  Especifique as linhas a serem copiadas inserindo critérios de pesquisa. Para obter detalhes, veja [Especificar critérios de pesquisa (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
+6.  Especifique as linhas a serem copiadas inserindo critérios de pesquisa. Para obter detalhes, confira [Especificar critérios de pesquisa(../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
   
     Se você não especificar um critério de pesquisa, todas as linhas da tabela de origem serão copiadas na tabela de destino.  
   
     > [!NOTE]  
     > Quando você insere uma coluna para ser pesquisada no painel Critérios, o Designer de Consulta e Exibição também a adiciona à lista de colunas a serem copiadas. Se você quiser utilizar uma coluna para fazer uma pesquisa, mas não quiser copiá-la, desmarque a caixa de seleção próxima ao nome da coluna no retângulo que representa a tabela ou o objeto estruturado por tabela.  
   
-7.  Para copiar resumos informativos, especifique as opções Agrupar por. Para obter detalhes, consulte [Resumir resultados da consulta (Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md).  
+7.  Para copiar resumos informativos, especifique as opções Agrupar por. Para obter detalhes, confira [Resumir resultados da consulta (../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md).  
   
 Quando você executa a consulta Criar Tabela, nenhum resultado é relatado no painel de [Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Em vez disso, será exibida uma mensagem indicando o total de linhas copiadas.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Tópicos de instruções de como criar consultas e exibições (Ferramentas de Banco de Dados Visual)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Tipos de consultas (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[Tópicos de instruções sobre como criar consultas e exibições (../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Tipos de consultas(../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

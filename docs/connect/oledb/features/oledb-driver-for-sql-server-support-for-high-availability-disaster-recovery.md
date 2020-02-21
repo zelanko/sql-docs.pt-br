@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0b5172339873ba90b12f65b5334a9014563cd3f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989045"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>Suporte ao Driver do OLE DB para SQL Server para alta disponibilidade e recuperação de desastre
@@ -22,7 +22,7 @@ ms.locfileid: "67989045"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Este artigo discute *OLE DB driver para SQL Server* suporte para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obter mais informações sobre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Ouvintes do Grupo de Disponibilidade, Conectividade do Cliente e Failover do Aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Criação e Configuração de Grupos de Disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de Failover e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) e [Secundárias Ativas: Réplicas Secundárias Legíveis&#40;Grupos de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+  Este artigo discute o suporte do *Driver do OLE DB para SQL Server* para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obter mais informações sobre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], confira [Ouvintes do Grupo de Disponibilidade, Conectividade do Cliente e Failover do Aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Criação e Configuração de Grupos de Disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de Failover e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) e [Secundárias Ativas: Réplicas Secundárias de leitura &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  Você pode especificar o ouvinte de um determinado grupo de disponibilidade na cadeia de conexão. Se um aplicativo do Driver do OLE DB para SQL Server estiver conectado com um banco de dados em um grupo de disponibilidade que executa failover, a conexão original será interrompida e o aplicativo deverá abrir uma nova conexão para continuar o trabalho após o failover.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67989045"
 > O aumento do tempo limite de conexão e a implementação de lógica de repetição de conexão aumentarão a probabilidade de um aplicativo se conectar a um grupo de disponibilidade. Além disso, como uma conexão pode falhar devido a um failover de grupo de disponibilidade, você deve implementar lógica de repetição de conexão, repetindo uma conexão com falha até se reconectar.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Conectando-se ao MultiSubnetFailover  
- Sempre especifique **MultiSubnetFailover=Yes** quando for se conectar a um ouvinte do grupo de disponibilidade Always On do SQL Server ou uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O **MultiSubnetFailover** permite o failover mais rápido para todos os Grupos de Disponibilidade AlwaysOn e instâncias de cluster de failover no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e reduzirá significativamente o tempo de failover para topologias Always On de uma ou várias sub-redes. Durante um failover de várias sub-redes, o cliente tentará conexões em paralelo. Durante um failover de sub-rede, OLE DB driver para SQL Server tentará novamente a conexão TCP.  
+ Sempre especifique **MultiSubnetFailover=Yes** quando for se conectar a um ouvinte do grupo de disponibilidade Always On do SQL Server ou uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O **MultiSubnetFailover** permite o failover mais rápido para todos os Grupos de Disponibilidade AlwaysOn e instâncias de cluster de failover no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e reduzirá significativamente o tempo de failover para topologias Always On de uma ou várias sub-redes. Durante um failover de várias sub-redes, o cliente tentará conexões em paralelo. Durante um failover de sub-rede, o Driver do OLE DB para SQL Server tentará novamente a conexão TCP.  
   
  A propriedade de conexão **MultiSubnetFailover** indica que o aplicativo está sendo implantado em um grupo de disponibilidade ou instância de cluster de failover e que o Driver do OLE DB para SQL Server tentará se conectar ao banco de dados na instância primária do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tentando se conectar a todos os endereços IP do grupo de disponibilidade. Quando **MultiSubnetFailover=Yes** é especificado para uma conexão, o cliente repete as tentativas de conexão TCP mais rápido do que os intervalos de retransmissão TCP padrão do sistema operacional. Isso permite uma reconexão mais rápida depois de failover de um Grupos de Disponibilidade Always On ou uma Instância de Cluster de Failover e é aplicável a grupos de disponibilidade únicos e de várias sub-redes e Instâncias de Cluster de Failover.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "67989045"
   
 -   Conectar-se a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurada com mais de 64 endereços IP causará uma falha de conexão.  
   
--   O comportamento de um aplicativo que usa a propriedade de conexão **MultiSubnetFailover** não é afetado com base no tipo de autenticação: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Autenticação, Autenticação Kerberos ou Autenticação do Windows.  
+-   O comportamento de um aplicativo que usa a propriedade de conexão do **MultiSubnetFailover** não é afetado com base no tipo de autenticação: Autenticação [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Autenticação Kerberos ou Autenticação do Windows.  
   
 -   Você pode aumentar o valor de **loginTimeout** para acomodar o tempo de failover e reduzir as tentativas de repetição de conexão do aplicativo.  
   
--   Não há suporte a transações distribuídas.  
+-   Não há suporte para transações distribuídas.  
   
 Se o roteamento somente leitura não estiver em ação, conectar-se a um local de réplica secundária em um grupo de disponibilidade apresentará falha nas seguintes situações:  
   
@@ -74,9 +74,9 @@ O driver retornará um erro se o espelhamento de banco de dados for usado no ban
 
 
 ## <a name="ole-db"></a>OLE DB  
-O driver OLE DB para SQL Server dá suporte às palavras-chave **ApplicationIntent** e **MultiSubnetFailover** .   
+O Driver do OLE DB para SQL Server dá suporte às palavras-chave **ApplicationIntent** e **MultiSubnetFailover**.   
   
-As duas palavras-chave da cadeia de conexão de dois OLE DB [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] foram adicionadas para dar suporte ao OLE DB driver para SQL Server:  
+As duas palavras-chave do OLE DB da cadeia de conexão foram adicionadas para dar suporte a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no Driver do OLE DB para SQL Server:  
   
 -   **ApplicationIntent** 
 -   **MultiSubnetFailover**  
@@ -91,7 +91,7 @@ As propriedades de conexão equivalentes são:
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
-Um driver de OLE DB para SQL Server aplicativo pode usar um dos métodos para especificar a tentativa de aplicativo:  
+Um aplicativo do Driver do OLE DB para SQL Server pode usar um dos métodos para especificar uma intenção de aplicativo:  
   
  -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** usa o conjunto previamente configurado de propriedades para inicializar a fonte de dados e criar o objeto de fonte de dados. Especifique a tentativa de aplicativo como uma propriedade de provedor ou como parte da cadeia de caracteres de propriedades estendidas.  
@@ -114,7 +114,7 @@ As propriedades de conexão equivalentes são:
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
 
-Um driver de OLE DB para SQL Server aplicativo pode usar um dos seguintes métodos para definir a opção MultiSubnetFailover:  
+Um aplicativo do Driver do OLE DB para SQL Server pode usar um dos seguintes métodos para definir a opção MultiSubnetFailover:  
 
  -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** usa o conjunto previamente configurado de propriedades para inicializar a fonte de dados e criar o objeto de fonte de dados. Especifique a tentativa de aplicativo como uma propriedade de provedor ou como parte da cadeia de caracteres de propriedades estendidas.  
@@ -123,7 +123,7 @@ Um driver de OLE DB para SQL Server aplicativo pode usar um dos seguintes métod
  **IDataInitialize::GetDataSource** usa uma cadeia de conexão de entrada que pode conter a palavra-chave **MultiSubnetFailover**.  
 
 -   **IDBProperties::SetProperties**  
-Para definir o valor da propriedade **MultiSubnetFailover** , chame **IDBProperties:: SetProperties** passando a propriedade **SSPROP_INIT_MULTISUBNETFAILOVER** com o valor **VARIANT_TRUE** ou **VARIANT_FALSE** ou **DBPROP_INIT_** Propriedade ProviderString com valor que contém "**Multisubnetfailover = Yes**" ou "**MultiSubnetFailover = no**".
+Para definir o valor da propriedade **MultiSubnetFailover**, chame **IDBProperties::SetProperties** passando a propriedade **SSPROP_INIT_MULTISUBNETFAILOVER** com o valor **VARIANT_TRUE** ou **VARIANT_FALSE** ou a propriedade **DBPROP_INIT_PROVIDERSTRING** com um valor contendo "**MultiSubnetFailover=Yes**" ou "**MultiSubnetFailover=No**".
 
 #### <a name="example"></a>Exemplo
 

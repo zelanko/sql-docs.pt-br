@@ -1,7 +1,7 @@
 ---
 title: Ciclo de vida de suporte do driver do SqlClient
-description: Página que contém informações do ciclo de vida do suporte ao produto.
-ms.date: 08/15/2019
+description: Página que contém informações sobre o ciclo de vida de suporte do produto.
+ms.date: 11/25/2019
 dev_langs:
 - csharp
 - vb
@@ -10,29 +10,39 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: eafe3463a091ea6d511b1ca71dea6a977411cff6
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 42a64af2e638521a3428d656240944a16b29cd44
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451874"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253358"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>Ciclo de vida de suporte do driver do SqlClient
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Cada iteração do Microsoft SqlClient Provedor de Dados para SQL Server é fornecida com sua plataforma associada. Abaixo estão os detalhes do ciclo de vida:
+A biblioteca Microsoft.Data.SqlClient segue a mais recente política de suporte do .NET Core para todas as versões.
 
-## <a name="microsoft-support-for-net-core"></a>Suporte da Microsoft para .NET Core
+[Exibir a política de suporte do .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)
 
-|  Versão  |  Data de lançamento | Nível de Suporte | Versão de patch com suporte | Fim do suporte |
-| -- | -- | -- | -- | -- |
-| [.NET Core 2.2](https://aka.ms/netcore22announce) | 04 de dezembro de 2018 | Current | [2.2.6](https://www.microsoft.com/net/download/dotnet-core/runtime-2.2.6) | |
-| [.NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1) | 30 de maio de 2018 | LTS | [2.1.12](https://www.microsoft.com/net/download/dotnet-core/runtime-2.1.12) | Pelo menos três anos a partir da declaração LTS (21 de agosto de 2018). |
+## <a name="microsoftdatasqlclient-release-cadence"></a>Cadência de versão do Microsoft.Data.SqlClient
 
-## <a name="microsoft-support-for-net-framework"></a>Suporte da Microsoft para .NET Framework
+Novas versões estáveis (GA) serão publicadas a cada seis meses em uma cadência regular, começando com a versão 1.2 e com duas a três versões prévias entre elas. As versões com LTS (suporte de longo prazo) serão escolhidas pelos participantes e pelos mantenedores com base em algumas qualificações e na resposta dos clientes.
 
-O ciclo de vida do produto .NET Framework pode ser exibido [nesta](https://support.microsoft.com/lifecycle/search?alpha=.net%20framework) página.
+## <a name="release-life-cycles"></a>Ciclos de vida da versão
+
+| Versão | Data de lançamento da oficial | Versão de patch mais recente | Data de lançamento do patch | Nível de Suporte  | Fim do suporte |
+| -- | -- | -- | -- | -- | -- |
+| 1,1 | 20 de novembro de 2019 |  |  | Current |  |
+| 1.0 | 28 de agosto de 2019 | 1.0.19269.1 | 26 de setembro de 2019 | Current | 20 de fevereiro de 2020 |
+
+## <a name="long-term-support-lts-releases"></a>Versões com LTS (suporte de longo prazo)
+
+Versões LTS recebem suporte por três anos após a versão inicial.
+
+## <a name="current-releases"></a>Versões atuais
+
+As versões atuais recebem suporte por três meses após uma versão com LTS ou versão atual subsequente.

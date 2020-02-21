@@ -1,6 +1,6 @@
 ---
-title: Páginas de propriedades no SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Páginas de propriedades no SQL Server Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b42208648f5e310b484105a88335e13046387ea
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 039ad2ec8ea2e0d05eae0ec2d627c07117580bf8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261989"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258918"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Páginas de propriedades no SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

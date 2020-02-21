@@ -1,6 +1,6 @@
 ---
-title: Utilitário tablediff | Microsoft Docs
-ms.custom: ''
+title: utilitário tablediff
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,12 +19,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 48fc2d25bc65e76156da80c6b6117a62fa39e2a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: cb12cc164490e249dae13ef22cdd5279a0427102
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986041"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304803"
 ---
 # <a name="tablediff-utility"></a>utilitário tablediff
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,7 +96,7 @@ tablediff
  É a senha para o logon usada para a conexão com o servidor de origem que usa Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
->  Quando possível, forneça credenciais de segurança em tempo de execução. Se você precisar armazenar credenciais em um arquivo de script, deverá proteger o arquivo para evitar acesso não autorizado.  
+>  Quando possível, forneça credenciais de segurança em runtime. Se você precisar armazenar credenciais em um arquivo de script, deverá proteger o arquivo para evitar acesso não autorizado.  
   
  **-sourceuser** _source_login_  
  É o logon usado para a conexão com o servidor de origem que usa Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se *source_login* não for fornecido, então a autenticação do Windows será usada no momento da conexão com o servidor de origem. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
@@ -104,7 +104,7 @@ tablediff
  **-sourcelocked**  
  A tabela de origem é bloqueada durante a comparação que usa dicas de tabela TABLOCK e HOLDLOCK.  
   
- **-destinationserver** _destination_server_name_[ **\\** _instance_name_]  
+ **-DestinationServer** _destination_server_name_[ **\\** _instance_name_]  
  É o nome do servidor de destino. Especifique *destination_server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifique _destination_server_name_ **\\** _instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** _subscription_database_  
@@ -120,7 +120,7 @@ tablediff
  É a senha para o logon usada para a conexão com o servidor de destino que usa Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
->  Quando possível, forneça credenciais de segurança em tempo de execução. Se você precisar armazenar credenciais em um arquivo de script, deverá proteger o arquivo para evitar acesso não autorizado.  
+>  Quando possível, forneça credenciais de segurança em runtime. Se você precisar armazenar credenciais em um arquivo de script, deverá proteger o arquivo para evitar acesso não autorizado.  
   
  **-destinationuser** _destination_login_  
  É o logon usado para a conexão com o servidor de destino que usa Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se *destination_login* não for fornecido, então a autenticação do Windows será usada no momento da conexão com o servidor. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
@@ -131,7 +131,7 @@ tablediff
  **-b** _large_object_bytes_  
  É o número de bytes a comparar para colunas do tipo de dados de objeto grande, que inclui: **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** e **varbinary(max)** . *large_object_bytes* segue o padrão do tamanho da coluna. Os dados acima de *large_object_bytes* não serão comparados.  
   
- **-bf**  _number_of_statements_  
+ **-bf** _number_of_statements_  
  É o número de instruções [!INCLUDE[tsql](../includes/tsql-md.md)] a serem gravadas no arquivo de script [!INCLUDE[tsql](../includes/tsql-md.md)] atual quando a opção **-f** é usada. Quando o número de instruções [!INCLUDE[tsql](../includes/tsql-md.md)] exceder *number_of_statements*, um arquivo de script [!INCLUDE[tsql](../includes/tsql-md.md)] novo será criado.  
   
  **-c**  
@@ -155,7 +155,7 @@ tablediff
  **-rc** _number_of_retries_  
  Número de vezes que o utilitário repete uma operação com falha.  
   
- **-ri**  _retry_interval_  
+ **-ri** _retry_interval_  
  Intervalo, em segundos, a esperar entre repetições.  
   
  **-strict**  
@@ -168,11 +168,11 @@ tablediff
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**0**|Êxito|  
+|**0**|Sucesso|  
 |**1**|Erro crítico|  
 |**2**|Diferenças de tabela|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O utilitário **tablediff** não pode ser usado com servidores não [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Não há suporte para tabelas com colunas de tipo de dados **sql_variant** .  

@@ -1,6 +1,7 @@
 ---
-title: Movendo os bancos de dados do servidor de relatório para outro computador (modo nativo do SSRS) | Microsoft Docs
-ms.date: 05/30/2017
+title: Mover bancos de dados do servidor de relatório para outro computador (modo nativo) | Microsoft Docs
+description: É possível mover os bancos de dados do servidor de relatório usados em uma instalação do Mecanismo de Banco de Dados do SQL Server para uma instância que está em outro computador.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 762bee43a32bed19b5646ad982467c67c933ed85
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65619687"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254585"
 ---
-# <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Movendo os bancos de dados do servidor de relatório para outro computador (modo nativo do SSRS)
+# <a name="moving-report-server-databases-to-another-computer-ssrs-native-mode"></a>Como mover Bancos de Dados do Servidor de Relatório para outro computador (modo nativo do SSRS)
 
   É possível mover os bancos de dados do servidor de relatório usados em uma instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] para uma instância que está em outro computador. Os bancos de dados reportserver e reportservertempdb devem ser movidos ou copiados juntos. Uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requer os dois bancos de dados; o banco de dados reportservertempdb deve ser relacionado por nome ao banco de dados reportserver primário que está sendo movido.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  A movimentação de um banco de dados não afeta as operações agendadas que estão definidas atualmente para itens de servidor de relatório.  
   
@@ -72,7 +73,7 @@ ms.locfileid: "65619687"
 ## <a name="backing-up-and-restoring-the-report-server-databases"></a>Fazendo backup e restaurando os bancos de dados do servidor de relatório  
  Se não for possível colocar o servidor de relatório offline, use o recurso de backup e restauração para realocar os bancos de dados do servidor de relatório. Você deve usar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] para fazer o backup e a restauração. Depois de restaurar os bancos de dados, configure o servidor de relatório para usar o banco de dados na nova instância do servidor. Para obter mais informações, consulte as instruções no final deste tópico.  
   
-### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>Usando BACKUP e COPY_ONLY para fazer backup dos bancos de dados do servidor de relatório  
+### <a name="using-backup-and-copy_only-to-backup-the-report-server-databases"></a>Usando BACKUP e COPY_ONLY para fazer backup dos bancos de dados do servidor de relatório  
  Ao fazer backup dos bancos de dados, defina o argumento COPY_ONLY. Faça backup dos bancos de dados e dos arquivos de log.  
   
 ```  
@@ -200,15 +201,15 @@ GO
   
 1.  Inicie o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager e abra uma conexão com o servidor de relatório.  
   
-2.  Na página Banco de Dados, clique em **Alterar Banco de Dados**. Clique em **Avançar**.  
+2.  Na página Banco de Dados, clique em **Alterar Banco de Dados**. Clique em **Próximo**.  
   
-3.  Clique em **Escolher um banco de dados existente do servidor de relatório**. Clique em **Avançar**.  
+3.  Clique em **Escolher um banco de dados existente do servidor de relatório**. Clique em **Próximo**.  
   
-4.  Selecione o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que agora hospeda o banco de dados do servidor de relatório e clique em **Testar Conexão**. Clique em **Avançar**.  
+4.  Selecione o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que agora hospeda o banco de dados do servidor de relatório e clique em **Testar Conexão**. Clique em **Próximo**.  
   
-5.  Em Nome do Banco de Dados, selecione o banco de dados do servidor de relatório que deseja usar. Clique em **Avançar**.  
+5.  Em Nome do Banco de Dados, selecione o banco de dados do servidor de relatório que deseja usar. Clique em **Próximo**.  
   
-6.  Em Credenciais, especifique as credenciais que o servidor de relatório usará para conectar-se ao banco de dados do servidor de relatório. Clique em **Avançar**.  
+6.  Em Credenciais, especifique as credenciais que o servidor de relatório usará para conectar-se ao banco de dados do servidor de relatório. Clique em **Próximo**.  
   
 7.  Clique em **Avançar** e em **Concluir**.  
   
@@ -226,4 +227,4 @@ GO
 [Configurar e gerenciar chaves de criptografia](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
 [Banco de dados do Servidor de Relatório](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

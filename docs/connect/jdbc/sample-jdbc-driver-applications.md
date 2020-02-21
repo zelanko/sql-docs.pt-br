@@ -1,5 +1,5 @@
 ---
-title: Aplicativos de driver JDBC de exemplo | Microsoft Docs
+title: Aplicativos de exemplo do JDBC Driver | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0e6a8ac2279446e70c6d31467eacbe54ad50386d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: 8fff14d68fa1e708e2f6daa84aa84c9cd5be2dcf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027800"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941093"
 ---
 # <a name="sample-jdbc-driver-applications"></a>Aplicativos de exemplo do JDBC Driver
 
@@ -39,7 +39,7 @@ Os tópicos nesta seção descrevem como configurar e executar os aplicativos de
 | [Trabalhando com tipos de dados &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)                 | Estes aplicativos de exemplo demonstram como usar os métodos de tipo de dados do driver JDBC para trabalhar usando dados em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].                                                                                           |
 | [Trabalhando com conjuntos de resultados](../../connect/jdbc/working-with-result-sets.md)                                   | Estes aplicativos de exemplo demonstram como usar conjuntos de resultados para processar dados contidos em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].                                                                                                         |
 | [Manipular dados grandes](../../connect/jdbc/working-with-large-data.md)                                     | Estes aplicativos de exemplo demonstram como usar buffer adaptável para recuperar dados de valor grande de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem a sobrecarga de cursores de servidor.                                                      |
-| [Descoberta e classificação de dados SQL](../../connect/jdbc/data-discovery-classification-sample.md) | Este aplicativo de exemplo demonstra como recuperar informações de descoberta e classificação de dados contidas em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dado de um objeto ResultSet usando o driver JDBC.                                      |
+| [Descoberta e classificação de dados SQL](../../connect/jdbc/data-discovery-classification-sample.md) | Este aplicativo de exemplo demonstra como recuperar informações de Descoberta e Classificação de Dados contidas em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um objeto ResultSet usando o JDBC Driver.                                      |
   
 ## <a name="see-also"></a>Confira também
 

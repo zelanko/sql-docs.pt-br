@@ -1,20 +1,21 @@
 ---
-title: Criar um banco de dados de servidor de relatório Configuration Manager do SSRS | Microsoft Docs
+title: Criar um banco de dados de servidor de relatório, Gerenciador de Configurações | Microsoft Docs
+description: O modo nativo do SQL Server Reporting Services usa dois bancos de dados relacionais do SQL Server para armazenar objetos e metadados de servidor de relatório. Um banco de dados é usado para armazenamento primário e o segundo armazena dados temporários.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 08/28/2019
-ms.openlocfilehash: d8bbc1436b3615259248598a9fa19346d4f2a43f
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
-ms.translationtype: MTE75
+ms.date: 12/16/2019
+ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123012"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253315"
 ---
-# <a name="create-a-report-server-database"></a>Criar um banco de dados do servidor de relatório 
+# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>Criar um banco de dados de servidor de relatório, Gerenciador de Configurações do SSRS  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -26,7 +27,7 @@ Os bancos de dados são criados juntamente e associados por nome. Com uma instâ
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-O **modo do SharePoint** do SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]inclui um terceiro banco de dados que é usado para metadados de alertas de dados. Os três bancos de dados são criados para cada aplicativo de serviço SSRS. Por padrão, os nomes de banco de dados incluem um GUID que representa o aplicativo de serviço. 
+O **modo do SharePoint** do SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui um terceiro banco de dados que é usado para metadados de alertas de dados. Os três bancos de dados são criados para cada aplicativo de serviço SSRS. Por padrão, os nomes de banco de dados incluem um GUID que representa o aplicativo de serviço. 
 
 A seguir são apresentados nomes de exemplo dos três bancos de dados do modo do SharePoint:
 
@@ -68,14 +69,14 @@ A página **Opções de Instalação do Servidor de Relatório** tem apenas uma 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é usado para hospedar os bancos de dados de servidor de relatório. A instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pode ser local ou remota. As seguintes versões com suporte do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que podem hospedar os bancos de dados do servidor de relatório:  
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-- Instância Gerenciada do SQL do Azure
+- Instância Gerenciada do Azure SQL
 
 - SQL Server 2019
 
 ::: moniker-end
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
-- SQL Server 2017  
+- Microsoft SQL Server 2017  
 ::: moniker-end
 
 - [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
@@ -101,4 +102,4 @@ Se você criar o banco de dados do servidor de relatório em um computador remot
 
 Leia sobre o [Gerenciador de Configurações do Reporting Services](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434).  
 
-Ainda tem dúvidas? Faça uma pergunta no [Fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).
+Mais perguntas? Faça uma pergunta no [Fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

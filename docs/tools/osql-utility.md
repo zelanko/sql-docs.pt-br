@@ -1,10 +1,7 @@
 ---
-title: Utilitário osql | Microsoft Docs
-ms.custom: ''
-ms.date: 03/16/2017
+title: Utilitário osql
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,17 +20,23 @@ helpviewer_keywords:
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: markingmyname
 ms.author: maghan
+ms.manageR: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cfd8bc56a642442e1a5c5f673ca70bd86eb3ef6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: dbc103ea44027056541dada86451c757a27619ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105754"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307360"
 ---
 # <a name="osql-utility"></a>Utilitário osql
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  O utilitário **osql** permite inserir instruções [!INCLUDE[tsql](../includes/tsql-md.md)] , procedimentos de sistema e arquivos de script. Esse utilitário usa o ODBC para comunicar-se com o servidor.  
+
+O utilitário **osql** permite inserir instruções [!INCLUDE[tsql](../includes/tsql-md.md)] , procedimentos de sistema e arquivos de script. Esse utilitário usa o ODBC para comunicar-se com o servidor.  
   
 > [!IMPORTANT]  
 >  Esse recurso será removido em uma versão futura do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Evite usar esse recurso em novo trabalho de desenvolvimento e planeje modificar os aplicativos que utilizam o recurso atualmente. Use **sqlcmd** em vez disso. Para saber mais, confira [sqlcmd Utility](../tools/sqlcmd-utility.md).  
@@ -193,7 +196,7 @@ osql -E -q "select name, object_id from %table%"
 > [!NOTE]  
 >  As opções **-n**, **-O** e **-D** já não têm suporte do **osql**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O utilitário **osql** é iniciado diretamente do sistema operacional com as opções que diferenciam maiúsculas de minúsculas listadas aqui. Depois que o **osql**é iniciado, ele aceita instruções SQL e as envia interativamente ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Os resultados são formatados e exibidos na tela (**stdout**). Use QUIT ou EXIT para sair do **osql**.  
   
  Se você não especificar um nome de usuário ao iniciar o **osql**, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fará a verificação e usará variáveis de ambiente, como **osqluser=(** _user_ **)** ou **osqlserver=(** _server_ **)** . Se nenhuma variável de ambiente for definida, o nome de usuário da estação de trabalho será usado. Se você não especificar um servidor, o nome da estação de trabalho será usado.  
@@ -264,7 +267,7 @@ osql -E -i titles.qry -o titles.res
  Você pode incluir comentários em uma instrução Transact-SQL enviada ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pelo **osql**. São permitidos dois tipos de estilos de comentário: `--` e `/*...*/`.  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>Usando EXIT para retornar resultados no osql  
- Você pode usar o resultado de uma instrução SELECT como o valor de retorno do **osql**. Se ele for numérico, a última coluna da última linha do resultado será convertida em um inteiro de 4 bytes (longo). O MS-DOS transmite o byte baixo para o processo pai ou nível de erro do sistema operacional. O Windows passa o número inteiro de 4 bytes. A sintaxe é:  
+ Você pode usar o resultado de uma instrução SELECT como o valor de retorno do **osql**. Se ele for numérico, a última coluna da última linha do resultado será convertida em um inteiro de 4 bytes (longo). O MS-DOS transmite o byte baixo para o processo pai ou nível de erro do sistema operacional. O Windows passa o número inteiro de 4 bytes. A sintaxe do é:  
   
 ```  
 EXIT ( < query > )  
@@ -338,7 +341,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Comentário &#40;MDX&#41;](../mdx/comment-mdx.md)   
- [-- &#40;Comentário&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
+ [-- &#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
  [CAST e CONVERT &#40;Transact-SQL&#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../t-sql/language-elements/raiserror-transact-sql.md)  
   

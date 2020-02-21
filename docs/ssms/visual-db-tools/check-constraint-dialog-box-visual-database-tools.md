@@ -1,10 +1,7 @@
 ---
-title: Caixa de diálogo Verificar Restrição (Ferramentas de Banco de Dados Visual) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Caixa de diálogo Verificar Restrição
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,21 +9,28 @@ f1_keywords:
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2532d368392b86b72523f00df982613428a86e7a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: df31dd31192d3aa877301c63ac425af6477dedd3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263685"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255527"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Caixa de diálogo Verificar Restrição (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 Essa caixa de diálogo aparece quando você clica com o botão direito do mouse em uma grade de definição de tabela no Designer de Tabela e clica em **Verificar Restrições**. A caixa de diálogo contém um conjunto de propriedades para restrições não exclusivas anexadas às tabelas em seu banco de dados. As propriedades que se aplicam a restrições exclusivas aparecem na caixa de diálogo **Índices/Chaves** .  
   
 > [!NOTE]  
 > Se a tabela for publicada para replicação, você precisará fazer alterações no esquema usando a instrução Transact-SQL [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou o SMO (SQL Server Management Objects). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  
   
-## <a name="options"></a>Opções  
+## <a name="options"></a>Opções
+
 **Restrições de Verificação Selecionadas**  
 Lista as restrições de verificação disponíveis. Para exibir as propriedades de uma restrição, selecione-a na lista.  
   
@@ -39,8 +43,8 @@ Remova a restrição selecionada da tabela. Para cancelar a adição de uma rest
 **Categoria Geral**  
 Expanda para mostrar o campo de propriedade **Expressão** .  
   
-**Expressão**  
-Exibe a expressão para a restrição de verificação selecionada. Para nova restrições, você deve digitar a expressão antes de sair dessa caixa. Você também pode editar restrições de verificação existentes. Para obter mais informações, veja [Como trabalhar com restrições (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
+**Expression**  
+Exibe a expressão para a restrição de verificação selecionada. Para nova restrições, você deve digitar a expressão antes de sair dessa caixa. Você também pode editar restrições de verificação existentes. Para saber mais, confira [Como trabalhar com restrições(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
   
 **Categoria de identidade**  
 Expanda para mostrar propriedades para **Nome** e **Descrição**.  
@@ -63,7 +67,7 @@ Especifica se a restrição é imposta quando os dados são inseridos ou atualiz
 **Impor para Replicação**  
 Indica se é para impor a restrição quando um agente de replicação executar uma inserção ou atualização nesta tabela.  
   
-## <a name="see-also"></a>Consulte Também  
-[Como trabalhar com restrições (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
-[Índices – caixa de diálogo Chaves &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
-  
+## <a name="see-also"></a>Consulte Também
+
+[Como trabalhar com restrições](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)
+[Caixa de diálogo Índices – Chaves &#40;Ferramentas de Banco de Dados Visual&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)

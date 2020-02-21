@@ -1,6 +1,7 @@
 ---
 title: Definindo valores de tempo limite para processamento de relatório e conjuntos de dados compartilhados (SSRS) | Microsoft Docs
-ms.date: 05/30/2019
+description: No Reporting Services, você pode especificar valores de tempo limite para definir limites para o uso dos recursos do sistema.
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1bc1f2f27fa46f8262d3c0ca99549d23f2381ff0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506445"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259405"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Definindo valores de tempo limite para processamento de relatório e conjuntos de dados compartilhados (SSRS)
-  Você pode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] especificar valores de tempo limite para definir limites para o uso dos recursos do sistema. O servidor de relatório dá suporte a dois valores de tempo limite:  
+No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você pode especificar valores de tempo limite para definir limites para o uso dos recursos do sistema. Os servidores de relatório dão suporte a dois valores de tempo limite:  
   
 - Um valor de tempo limite de consulta de conjunto de dados inserido é o número de segundos durante os quais o servidor de relatório aguarda uma resposta do banco de dados. Esse valor é definido em um relatório.  
   
@@ -33,7 +34,10 @@ ms.locfileid: "66506445"
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>Definir um tempo limite de consulta para um conjunto de dados inserido em um relatório  
  Os valores de tempo limite de consulta são especificados durante a criação do relatório quando você define um conjunto de dados inserido. O valor de tempo limite é armazenado com o relatório, no elemento **Timeout** da definição do relatório. Por padrão, este valor é definido como 30 segundos. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
-  
+ 
+ > [!NOTE]  
+ > Em **Relatórios Paginados no Power BI**, o valor padrão é definido como **600 segundos**.
+ 
  Os usuários com permissão para modificar as propriedades de um relatório publicado podem redefinir esse valor, editando o arquivo de definição do relatório.  
   
  Você também pode especificar um valor de tempo limite de consulta para assinaturas controladas por dados. O valor de tempo limite de consulta é especificado nas páginas de Assinatura Controlada por Dados. O valor especificado determina quanto tempo o servidor de relatório aguarda pela conclusão do processamento da consulta ao recuperar dados da fonte de dados do assinante.  

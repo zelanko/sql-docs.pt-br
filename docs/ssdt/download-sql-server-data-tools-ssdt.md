@@ -1,5 +1,5 @@
 ---
-title: Baixar o SSDT (SQL Server Data Tools) | Microsoft Docs
+title: Baixar o SQL Server Data Tools (SSDT)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
@@ -8,16 +8,17 @@ keywords: instalar o ssdt, baixar o ssdt, ssdt mais recente
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: markingmyname
 ms.author: maghan
+manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: a79940fa5696a65ed580d8550984d090a48eebdf
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 48426127a379efecbc61587f60a798fff14190b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807449"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688233"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Baixar e instalar o SSDT (SQL Server Data Tools) para o Visual Studio
 
@@ -60,15 +61,17 @@ O instalador lista instâncias disponíveis do Visual Studio às quais adicionar
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT para VS 2017 (instalador autônomo)
 
-[![baixar](../ssdt/media/download.png) Baixe o SSDT para Visual Studio 2017 (15.9.2)](https://go.microsoft.com/fwlink/?linkid=2095463)
+[![baixar](../ssdt/media/download.png) Baixe o SSDT para Visual Studio 2017 (15.9.3)](https://go.microsoft.com/fwlink/?linkid=2110080)
 
 > [!IMPORTANT]
-> - Antes de instalar o SSDT para o Visual Studio 2017 (15.9.2), desinstale as extensões *Projetos do Analysis Services* e *Projetos do Reporting Services*, caso já estejam instaladas, e feche todas as instâncias do VS.
+> - Antes de instalar o SSDT para o Visual Studio 2017 (15.9.3), desinstale as extensões *Projetos do Analysis Services* e *Projetos do Reporting Services* caso já estejam instaladas e feche todas as instâncias do VS.
+> - O componente de caixa de entrada Origem do Power Query para SQL Server 2017 foi removido. Agora, anunciamos a Origem do Power Query para SQL Server 2017 e 2019 como componente pronto para uso, que pode ser baixado [aqui](https://www.microsoft.com/en-us/download/details.aspx?id=100619).
+> - O componente de caixa de entrada Microsoft Oracle Connector para SQL Server 2019 foi removido. Agora, anunciamos o Microsoft Oracle Connector para SQL Server 2019 como componente pronto para uso, que pode ser baixado [aqui](https://www.microsoft.com/en-us/download/details.aspx?id=58228).
 > - Use o SSDT para Visual Studio 2017 (15.8.0) ou versões anteriores para criar pacotes do SSIS que contêm a Origem/destino Teradata. As versões do SSDT para Visual Studio 2017 após a versão 15.8.0 não podem criar pacotes do SSIS que contêm a Origem/destino Teradata.
 
 ### <a name="version-information"></a>Informações sobre versão
 
-Número da versão: 15.9.2 Número de build: 14.0.16194.0 Data de lançamento: 17 de julho de 2019 
+Número da versão: 15.9.3 Número de build: 14.0.16203.0 Data de lançamento: 3 de janeiro de 2020 
 
 Para obter uma lista completa de alterações, confira [Notas sobre a versão para o SSDT (SQL Server Data Tools)](release-notes-ssdt.md).
 
@@ -78,17 +81,17 @@ O SSDT para Visual Studio 2017 tem os mesmos [requisitos de sistema](https://doc
 
 Esta versão do **SSDT para VS 2017** pode ser instalada nos seguintes idiomas:
 
-- [Chinês (simplificado)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x804)
-- [Chinês (tradicional)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x404)
-- [Inglês (Estados Unidos)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x409)
-- [Francês]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40c)
-- [Alemão]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x407)
-- [Italiano]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x410)
-- [Japonês]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x411)
-- [Coreano]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x412)
-- [Português (Brasil)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x416)
-- [Russo]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x419)
-- [Espanhol]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40a)
+- [Chinês (simplificado)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x804)
+- [Chinês (tradicional)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x404)
+- [Inglês (Estados Unidos)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x409)
+- [Francês]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40c)
+- [Alemão]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x407)
+- [Italiano]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x410)
+- [Japonês]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x411)
+- [Coreano]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x412)
+- [Português (Brasil)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x416)
+- [Russo]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x419)
+- [Espanhol]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40a)
 
 ## <a name="offline-install"></a>Instalação offline
 
@@ -113,7 +116,7 @@ Depois de concluir as etapas anteriores, as seguintes etapas podem ser realizada
 Para ver as opções disponíveis, execute `SSDT-Setup-ENU.exe /help`
 
 > [!NOTE]
-> Se você usar uma versão completa do Visual Studio 2017, crie uma pasta offline somente para o SSDT e execute `SSDT-Setup-ENU.exe` nessa pasta recém-criada (não adicione o SSDT em outro layout offline do Visual Studio 2017). Se você adicionar o layout do SSDT a um layout offline do Visual Studio existente, os componentes de tempo de execução necessários (.exe) não serão criados lá.
+> Se você usar uma versão completa do Visual Studio 2017, crie uma pasta offline somente para o SSDT e execute `SSDT-Setup-ENU.exe` nessa pasta recém-criada (não adicione o SSDT em outro layout offline do Visual Studio 2017). Se você adicionar o layout do SSDT a um layout offline do Visual Studio existente, os componentes de runtime necessários (.exe) não serão criados lá.
 
 ### <a name="considerations-and-limitations"></a>Considerações e limitações
 
@@ -124,7 +127,7 @@ Para ver as opções disponíveis, execute `SSDT-Setup-ENU.exe /help`
  
 |Modelos de projeto|Plataformas SQL com suporte| 
 |-------------------|--------------------| 
-|Bancos de dados relacionais| SQL Server 2005\* – SQL Server 2017<br> (use o SSDT 17.x ou o SSDT para Visual Studio 2017 para conectar-se ao [SQL Server no Linux](../linux/sql-server-linux-overview.md))<br /><br />Banco de dados SQL do Azure<br /><br />SQL Data Warehouse do Azure (dá suporte somente a consultas; ainda não há suporte para projetos de banco de dados)<br /><br /> \* O suporte ao SQL Server 2005 está preterido,<br /><br /> passe para uma versão do SQL oficialmente com suporte|
+|Bancos de dados relacionais| SQL Server 2005\* – SQL Server 2017<br> (use o SSDT 17.x ou o SSDT para Visual Studio 2017 para conectar-se ao [SQL Server no Linux](../linux/sql-server-linux-overview.md))<br /><br />Banco de Dados SQL do Azure<br /><br />SQL Data Warehouse do Azure (dá suporte somente a consultas; ainda não há suporte para projetos de banco de dados)<br /><br /> \* O suporte ao SQL Server 2005 está preterido,<br /><br /> passe para uma versão do SQL oficialmente com suporte|
 |Modelos do Analysis Services<br /><br />Relatórios do Reporting Services | SQL Server 2008 – SQL Server 2017|
 |pacotes do Integration Services| SQL Server 2012 – SQL Server 2019 |
 

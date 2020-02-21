@@ -1,6 +1,7 @@
 ---
-title: Política de failover para instâncias de cluster de failover | Microsoft Docs
-ms.custom: ''
+title: Política de failover para instâncias de cluster de failover
+description: Uma descrição das diferentes políticas de failover disponíveis para uma instância de cluster de failover do SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e2fae9bbc5f0f601f4d455204df6c9d18383458
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 153de78e01099cf1079c6fe0ad34c15c6d7afc44
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044754"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258161"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Política de failover para instâncias de cluster de failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.locfileid: "68044754"
   
 4.  io_subsystem  
   
-5.  eventos  
+5.  events  
   
  O sistema, o recurso e os componentes do processo de consulta são usados para detecção de falha. O io_subsytem e os componentes de eventos são usados apenas para fins de diagnóstico.  
   

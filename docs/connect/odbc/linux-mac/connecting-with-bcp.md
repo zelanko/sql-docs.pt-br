@@ -1,5 +1,5 @@
 ---
-title: Conectando-se ao bcp | Microsoft Docs
+title: Conectar-se com bcp | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1dd80df3a0f7fabec7ae9ddc51b16cb4456c7970
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996622"
 ---
 # <a name="connecting-with-bcp"></a>Conectando com bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-O utilitário [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) está disponível no [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em Linux e macOS. Esta página documenta as diferenças da versão do Windows do `bcp`.
+O utilitário [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) está disponível no [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em Linux e macOS. Esta página documenta as diferenças da versão Windows do `bcp`.
   
 - O terminador de campo é um tab (“\t”).  
   
@@ -46,7 +46,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>Opções Disponíveis
 Na versão atual, as seguintes sintaxes e opções estão disponíveis:  
 
-[_banco de dados_ **.** ] _esquema_ do **.** _tabela_ **em**  |  _arquivo dedados\__ de**saída** do _arquivo de dados\__
+[_database_ **.** ]_schema_ **.** _table_ **in** _data\_file_ | **out** _data\_file_
 
 - -a *packet_size*  
 Especifica o número de bytes por pacote de rede enviado de e para o servidor.  
@@ -98,11 +98,11 @@ Executa a instrução SET QUOTED_IDENTIFIERS ON na conexão entre o utilitário 
 - -r *row_terminator*  
 Especifica o terminador de linha.  
   
-- -r  
+- -R  
 Especifica que dados de moeda, data e horário são copiados em massa no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o formato regional definido para as configurações de localidade do computador cliente.  
   
 - -S *server*  
-Especifica o nome da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância à qual se conectar, ou se-D for usado, um DSN.  
+Especifica o nome da instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à qual se conectar ou, se -D é usado, um DSN.  
   
 - -t *field_terminator*  
 Especifica o terminador de campo.  
@@ -113,7 +113,7 @@ Especifica que o utilitário `bcp` se conecta ao [!INCLUDE[ssNoVersion](../../..
 - -U *login_id*  
 Especifica a ID de logon usada para conectar-se ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-- -V  
+- -v  
 Informa o número de versão e copyright do utilitário `bcp`.  
   
 - -w  

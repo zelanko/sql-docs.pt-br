@@ -1,21 +1,21 @@
 ---
 title: Notificações de consulta no SQL Server
-description: Descreve como os aplicativos .NET podem solicitar notificações de SQL Server quando os dados são alterados.
+description: Descreve como os aplicativos .NET podem solicitar notificações do SQL Server quando os dados foram alterados.
 ms.date: 08/15/2019
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: d47241e3656e3ca7b4f5ea0eebe9f2cc8b571bf6
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 9bcce207ed8427343e739959c9e91b988d9675cc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452076"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251179"
 ---
 # <a name="query-notifications-in-sql-server"></a>Notificações de consulta no SQL Server
 
@@ -25,17 +25,17 @@ Com base na infraestrutura do Service Broker, as notificações de consulta perm
   
 Há três maneiras pelas quais você pode implementar notificações de consulta usando o ADO.NET:  
   
-- A implementação de nível baixo é fornecida pela classe `SqlNotificationRequest` que expõe a funcionalidade do lado do servidor, permitindo que você execute um comando com uma solicitação de notificação.  
+- A implementação de nível baixo é fornecida pela classe `SqlNotificationRequest`, que expõe a funcionalidade do lado do servidor, permitindo que você execute um comando com uma solicitação de notificação.  
   
-- A implementação de alto nível é fornecida pela classe `SqlDependency`, que é uma classe que fornece uma abstração de alto nível da funcionalidade de notificação entre o aplicativo de origem e SQL Server, permitindo que você use uma dependência para detectar alterações no servidor. Na maioria dos casos, essa é a maneira mais simples e eficiente de aproveitar SQL Server funcionalidade de notificações por aplicativos cliente gerenciados usando o Microsoft SqlClient Provedor de Dados para SQL Server.  
+- A implementação de alto nível é fornecida pela classe `SqlDependency`, que é uma classe que fornece uma abstração de alto nível da funcionalidade de notificação entre o aplicativo de origem e o SQL Server, permitindo que você use uma dependência para detectar alterações no servidor. Na maioria dos casos, essa é a maneira mais simples e eficiente de aproveitar a funcionalidade de notificações do SQL Server por aplicativos cliente gerenciados usando o Provedor de Dados do Microsoft SqlClient para SQL Server.  
   
-- Além disso, os aplicativos Web criados usando o ASP.NET 2,0 ou posterior podem usar as classes auxiliares `SqlCacheDependency`.  
+- Além disso, os aplicativos Web criados usando o ASP.NET 2.0 ou posterior podem usar as classes auxiliares `SqlCacheDependency`.  
   
-As notificações de consulta são usadas para aplicativos que precisam atualizar exibições ou caches em resposta a alterações nos dados subjacentes. Microsoft SQL Server permite que os aplicativos .NET enviem um comando para SQL Server e solicite notificação se a execução do mesmo comando produzir conjuntos de resultados diferentes daqueles recuperados inicialmente. As notificações geradas no servidor são enviadas pelas filas para serem processadas posteriormente.  
+As notificações de consulta são usadas para aplicativos que precisam atualizar exibições ou caches em resposta a alterações nos dados subjacentes. O Microsoft SQL Server permite que os aplicativos .NET enviem um comando para o SQL Server e solicitem notificação caso a execução do mesmo comando viesse a produzir conjuntos de resultados diferentes daqueles recuperados inicialmente. As notificações geradas no servidor são enviadas pelas filas para serem processadas posteriormente.  
   
-Você pode configurar notificações para instruções SELECT e EXECUTE. Ao usar uma instrução EXECUTE, SQL Server registra uma notificação para o comando executado em vez da própria instrução EXECUTE. O comando deve atender os requisitos e as limitações de uma instrução SELECT. Quando um comando que registra uma notificação contiver mais de uma instrução, o Mecanismo de Banco de Dados criará uma notificação para cada instrução no lote.  
+Você pode configurar notificações para as instruções SELECT e EXECUTE. Ao usar uma instrução EXECUTE, o SQL Server registra uma notificação para o comando executado e não a própria instrução EXECUTE. O comando deve atender os requisitos e as limitações de uma instrução SELECT. Quando um comando que registra uma notificação contiver mais de uma instrução, o Mecanismo de Banco de Dados criará uma notificação para cada instrução no lote.  
   
-Se você estiver desenvolvendo um aplicativo em que precise receber notificações confiáveis imediatamente quando os dados forem alterados, examine as seções **Planejando uma estratégia eficiente das notificações de consulta** e **Alternativas para notificações de consulta** no tópico [Planejando para notificações](https://go.microsoft.com/fwlink/?LinkId=211984) nos Manuais Online do SQL Server. Para obter mais informações sobre notificações de consulta e SQL Server Service Broker, consulte os links a seguir para tópicos em Manuais Online do SQL Server.  
+Se você estiver desenvolvendo um aplicativo em que precise receber notificações confiáveis imediatamente quando os dados forem alterados, examine as seções **Planejando uma estratégia eficiente das notificações de consulta** e **Alternativas para notificações de consulta** no tópico [Planejando para notificações](https://go.microsoft.com/fwlink/?LinkId=211984) nos Manuais Online do SQL Server. Para obter mais informações sobre as notificações de consulta e o SQL Server Service Broker, confira os links a seguir para tópicos nos Manuais Online do SQL Server.  
   
 **Documentação do SQL Server**  
   
@@ -54,7 +54,7 @@ Se você estiver desenvolvendo um aplicativo em que precise receber notificaçõ
 Discute como usar notificações de consulta, incluindo os requisitos para habilitá-las e usá-las.  
   
 [SqlDependency em um aplicativo ASP.NET](sqldependency-aspnet-app.md)  
-Demonstra como usar notificações de consulta de um aplicativo ASP.NET.  
+Demonstra como usar notificações de consulta em um aplicativo ASP.NET.  
   
 [Detectando alterações com SqlDependency](detect-changes-sqldependency.md)  
 Demonstra como detectar quando os resultados da consulta serão diferentes daqueles recebidos originalmente.  
@@ -64,13 +64,13 @@ Demonstra como configurar um objeto <xref:Microsoft.Data.SqlClient.SqlCommand> p
   
 ## <a name="reference"></a>Referência  
 <xref:Microsoft.Data.Sql.SqlNotificationRequest>  
-Descreve a classe <xref:Microsoft.Data.Sql.SqlNotificationRequest> e todos os seus membros.  
+Descreve a classe <xref:Microsoft.Data.Sql.SqlNotificationRequest> e todos os membros dela.  
   
 <xref:Microsoft.Data.SqlClient.SqlDependency>  
-Descreve a classe <xref:Microsoft.Data.SqlClient.SqlDependency> e todos os seus membros.  
+Descreve a classe <xref:Microsoft.Data.SqlClient.SqlDependency> e todos os membros dela.  
   
 <xref:System.Web.Caching.SqlCacheDependency>  
-Descreve a classe <xref:System.Web.Caching.SqlCacheDependency> e todos os seus membros.  
+Descreve a classe <xref:System.Web.Caching.SqlCacheDependency> e todos os membros dela.  
   
 ## <a name="next-steps"></a>Próximas etapas
 - [SQL Server e ADO.NET](index.md)

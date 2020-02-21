@@ -1,6 +1,7 @@
 ---
-title: 'Lição 4: Adicionando uma tabela ao relatório (Reporting Services) | Microsoft Docs'
-ms.date: 04/29/2019
+title: 'Lição 4: Adicionar uma tabela ao relatório | Microsoft Docs'
+description: Após definir o conjunto de dados, você poderá começar a criar o relatório paginado. Crie um layout de relatório arrastando e soltando objetos de relatório do painel Caixa de Ferramentas para a Área de design.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,20 +9,20 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e925dec5eb14365a6c313349599a77ffe1d7ab13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: fca89bf8992db9ec3b07cea422ec146993e8aec8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106014"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244297"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lição 4: Adicionando uma tabela ao relatório (Reporting Services)
+# <a name="lesson-4-add-a-table-to-the-report-reporting-services"></a>Lição 4: Adicionar uma tabela ao relatório (Reporting Services)
 
-Depois de definir o conjunto de dados, você pode começar a criar o relatório. Crie um layout de relatório arrastando e soltando *objetos de relatório* do painel **Caixa de Ferramentas** para a **Área de design**. Alguns dos tipos de objetos de relatório incluem:
+Após definir o conjunto de dados, você poderá começar a criar o relatório paginado. Crie um layout de relatório arrastando e soltando *objetos de relatório* do painel **Caixa de Ferramentas** para a **Área de design**. Alguns dos tipos de objetos de relatório incluem:
 
-- Table
+- Tabela
 - Caixa de texto
-- image
+- Imagem
 - Linha
 - Retângulo
 - Gráfico
@@ -54,7 +55,7 @@ Itens que contêm linhas de dados repetidas de conjuntos de dados subjacentes s�
 
 7. Adicione o campo `[LineTotal]` da mesma maneira para criar uma quinta coluna. O rótulo da coluna é adicionado como "Total de Linha". O Designer de Relatórios cria automaticamente um nome amigável para a coluna ao dividir o "Total da Linha" em duas palavras.
 
-O diagrama a seguir mostra uma região de dados de tabela que foi populada com estes campos: Data, Ordem, Produto, Quantidade e Total da Linha.
+O diagrama a seguir mostra uma região de dados de tabela que foi preenchida com estes campos: Data, Ordem, Produto, Quantidade e Total da linha.
 ![rs_BasicTableDetailsDesign](media/rs-basictabledetailsdesign.png)
 
 ## <a name="preview-your-report"></a>Visualizar o relatório
@@ -69,7 +70,7 @@ A visualização de um relatório permite exibir o relatório renderizado sem qu
 
 O diagrama a seguir mostra parte do relatório na exibição **Visualização**.
 
-   ![Visualização, linhas de detalhes da tabela com cinco colunas](media/rs-basictabledetailspreview.png "Visualização, linhas de detalhes da tabela com cinco colunas")
+   ![Visualização, Linhas de detalhes da tabela com cinco colunas](media/rs-basictabledetailspreview.png "Visualização, Linhas de detalhes da tabela com cinco colunas")
 
 Examine os valores de Data e a Total da Linha. Na próxima lição, você aprenderá como formatá-los para uma exibição mais organizada.
 
@@ -78,7 +79,7 @@ Examine os valores de Data e a Total da Linha. Na próxima lição, você aprend
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Você adicionou uma região de dados de tabela ao relatório, adicionou campos à região de dados e visualizou o relatório com êxito. Na próxima lição, você aprenderá como formatar os cabeçalhos de colunas e expressões de campo. Continue a seguir na [Lição 5: Formatando um relatório &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md).
+Você adicionou uma região de dados de tabela ao relatório, adicionou campos à região de dados e visualizou o relatório com êxito. Na próxima lição, você aprenderá como formatar os cabeçalhos de colunas e expressões de campo. Em seguida, prossiga com a [Lição 5: como formatar um relatório &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md).
   
 ## <a name="see-also"></a>Confira também
 

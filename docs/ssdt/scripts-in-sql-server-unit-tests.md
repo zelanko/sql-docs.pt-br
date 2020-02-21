@@ -1,23 +1,24 @@
 ---
-title: Scripts nos testes de unidade do SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Scripts nos testes de unidade do SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f84c8b03343b353cf355f0f604152a82b23627b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c5ff8457d5e2122f3e5bc455c204a5185cc30aec
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110738"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256975"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>Scripts nos testes de unidade do SQL Server
+
 Cada teste de unidade do SQL Server contém uma única ação de pré-teste, ação de teste e ação de pós-teste. Cada uma dessas ações contém o seguinte:  
   
 -   Um script Transact\-SQL executado em um banco de dados.  
@@ -45,7 +46,7 @@ Para saber mais sobre os diferentes contextos de segurança nos quais cada um de
 ## <a name="order-in-which-scripts-are-run"></a>Ordem na qual os scripts são executados  
 É importante compreender a ordem em que cada script é executado. Embora você não possa alterar essa ordem, pode decidir quais scripts serão executados. A ilustração a seguir inclui a seleção dos scripts que você pode usar em uma execução de teste que contém dois testes de unidade do SQL Server e mostra a ordem na qual eles são executados:  
   
-![Dois testes de unidade de banco de dados](../ssdt/media/twodatabaseunittests.png "dois testes de unidade de banco de dados")  
+![Dois testes de unidade de banco de dados](../ssdt/media/twodatabaseunittests.png "Dois testes de unidade de banco de dados")  
   
 > [!NOTE]  
 > Se a implantação do projeto de banco de dados do SQL Server tiver sido configurada, isso ocorrerá no início da execução de teste, na cadeia de conexão de contexto privilegiado. Para obter mais informações, confira [Como Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  

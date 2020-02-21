@@ -1,10 +1,9 @@
 ---
-title: Como o Designer de Consulta e Exibição representa junções | Microsoft Docs
-ms.custom: ''
+title: Como o designer de exibição e de consultas representa junções
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,25 +13,27 @@ helpviewer_keywords:
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6318dfe2cc886e3ea2ea10d089023325ff074c95
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7e0d4b8ff645ad918cea32cbbed3eade62017254
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254436"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255875"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Como o Designer de Consulta e Exibição representa junções (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Se as tabelas forem unidas, o [Designer de Consulta e Exibição](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) representará a junção graficamente no [painel Diagrama](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) e pelo uso da sintaxe SQL no [painel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
-## <a name="diagram-pane"></a>painel Diagrama  
+## <a name="diagram-pane"></a>Painel Diagrama  
 No painel Diagrama, o Designer de Consulta e Exibição exibe uma linha de junção entre as colunas de dados envolvidas na junção. O Designer de Consulta e Exibição exibe uma linha de junção para cada condição de junção. Por exemplo, a ilustração seguinte mostra uma linha de junção entre duas tabelas unidas:  
   
 ![A linha de junção mostra a relação entre duas tabelas](../../ssms/visual-db-tools/media/dv3wbig.gif "A linha de junção mostra a relação entre duas tabelas")  
   
 Se as tabelas forem unidas usando mais de um critério de junção, o Designer de Consulta e Exibição exibirá várias linhas de junção, como no exemplo seguinte:  
   
-![Tabelas unidas usando mais de uma condição de junção](../../ssms/visual-db-tools/media/dv3w9n1.gif "Tabelas unidas usando mais de uma condição de junção")  
+![As tabelas foram unidas com mais de uma condição de junção](../../ssms/visual-db-tools/media/dv3w9n1.gif "As tabelas foram unidas com mais de uma condição de junção")  
   
 Se as colunas de dados unidas não forem exibidas (por exemplo, o retângulo que representa a tabela ou o objeto estruturado por tabela é minimizado ou a junção envolve uma expressão), o Designer de Consulta e Exibição colocará a linha de junção na barra de títulos do retângulo que representa a tabela ou objeto estruturado por tabela.  
   
@@ -40,19 +41,19 @@ A forma do ícone no meio da linha de junção indica como são unidas as tabela
   
 |**Ícone de linha de junção**|**Descrição**|  
 |----------------------|-------------------|  
-|![Ícone das Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbih.gif "Ícone das Ferramentas de Banco de Dados Visual")|Junção interna (criada usando um sinal de igual).|  
-|![Ícone das Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbii.gif "Ícone das Ferramentas de Banco de Dados Visual")|Junção interna baseada no operador "maior que".|  
-|![Ícone das Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbij.gif "Ícone das Ferramentas de Banco de Dados Visual")|A junção externa em que todas as linhas da tabela representada à esquerda serão incluídas, mesmo se não tiverem correspondências na tabela relacionada.|  
-|![Ícone das Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbik.gif "Ícone das Ferramentas de Banco de Dados Visual")|A junção externa em que todas as linhas da tabela representada à direita serão incluídas, mesmo se não tiverem correspondências na tabela relacionada.|  
-|![Ícone das Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbil.gif "Ícone das Ferramentas de Banco de Dados Visual")|Junção externa completa na qual serão incluídas todas as linhas de ambas as tabelas, mesmo se elas não tiverem correspondências com a tabela relacionada.|  
+|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbih.gif "Ícone de Ferramentas de Banco de Dados Visual")|Junção interna (criada usando um sinal de igual).|  
+|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbii.gif "Ícone de Ferramentas de Banco de Dados Visual")|Junção interna baseada no operador "maior que".|  
+|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbij.gif "Ícone de Ferramentas de Banco de Dados Visual")|A junção externa em que todas as linhas da tabela representada à esquerda serão incluídas, mesmo se não tiverem correspondências na tabela relacionada.|  
+|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbik.gif "Ícone de Ferramentas de Banco de Dados Visual")|A junção externa em que todas as linhas da tabela representada à direita serão incluídas, mesmo se não tiverem correspondências na tabela relacionada.|  
+|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbil.gif "Ícone de Ferramentas de Banco de Dados Visual")|Junção externa completa na qual serão incluídas todas as linhas de ambas as tabelas, mesmo se elas não tiverem correspondências com a tabela relacionada.|  
   
 Os símbolos no final da linha de junção indicam o tipo de junção. A tabela a seguir lista os tipos de junções e os ícones exibidos no final da linha de junção.  
   
 |**Ícone nas extremidades da linha de junção**|**Tipo de junção**|  
 |---------------------------------|--------------------|  
-|![Ícone das Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbim.gif "Ícone das Ferramentas de Banco de Dados Visual")|Junção uma a uma.|  
-|![Ícone das Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbin.gif "Ícone das Ferramentas de Banco de Dados Visual")|Junção uma para muitas.|  
-|![Ícone das Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbio.gif "Ícone das Ferramentas de Banco de Dados Visual")|O Designer de Consulta e Exibição não pode determinar o tipo de junção. Essa situação ocorre com mas frequência quando você cria uma junção manualmente.|  
+|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbim.gif "Ícone de Ferramentas de Banco de Dados Visual")|Junção uma a uma.|  
+|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbin.gif "Ícone de Ferramentas de Banco de Dados Visual")|Junção uma para muitas.|  
+|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbio.gif "Ícone de Ferramentas de Banco de Dados Visual")|O Designer de Consulta e Exibição não pode determinar o tipo de junção. Essa situação ocorre com mas frequência quando você cria uma junção manualmente.|  
   
 ## <a name="sql-pane"></a>painel SQL  
 Uma junção pode ser expressada de vários modos em uma instrução SQL. A sintaxe exata depende do banco de dados que você está usando e de como você definiu a junção.  

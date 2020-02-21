@@ -1,28 +1,29 @@
 ---
-title: 'Como fazer: conectar-se a um banco de dados e procurar objetos existentes | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: conectar-se a um Banco de Dados e Procure Objetos Existentes
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.connectionpicker.f1
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 49049fbbff2397f6492cac385b10c23a66d48a74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 65559af8337bc7421f96463a954a212f56a3c269
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897332"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75755823"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Como fazer: conectar-se a um Banco de Dados e Procure Objetos Existentes
+
 Uma tarefa muito comum para administradores de banco de dados e desenvolvedores é conectar a um banco de dados online, criar ou procurar seu esquema e consultar seus objetos. O Pesquisador de Objetos do SQL Server no Visual Studio agora contém um nó **SQL Server** dedicado, sob o qual todas as instâncias conectadas do SQL Server e seus respectivos bancos de dados são agrupados em uma hierarquia semelhante ao SSMS. As instâncias conectadas do SQL Server podem ser uma instância local, como um SQL Server 2008 em execução, ou uma instância do SQL Azure externa.  
   
-O procedimento a seguir supõe que você já tem o banco de dados de exemplo AdventureWorks instalado. Use [CodePlex](https://msftdbprodsamples.codeplex.com/) para localizar e instalar bancos de dados de exemplo para diferentes versões do SQL Server. Se preferir, você também pode seguir as etapas e usar um banco de dados existente no seu servidor.  
+O procedimento a seguir supõe que você já tem o banco de dados de exemplo AdventureWorks instalado. Use [GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) para localizar e instalar bancos de dados de exemplo para diferentes versões do SQL Server. Se preferir, você também pode seguir as etapas e usar um banco de dados existente no seu servidor.  
   
 ### <a name="to-connect-to-a-database-instance"></a>Para conectar-se a uma instância de banco de dados  
   

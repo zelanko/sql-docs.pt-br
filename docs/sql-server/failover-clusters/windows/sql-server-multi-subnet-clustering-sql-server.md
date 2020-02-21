@@ -1,6 +1,7 @@
 ---
-title: Clustering de várias sub-redes do SQL Server (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Clustering de várias sub-redes do SQL Server
+description: Saiba como configurar uma instância de cluster de failover do SQL Server em um ambiente de várias sub-redes.
+ms.custom: seo-lt-2019
 ms.date: 09/01/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16f89fcc50ec7db910d88d8ec807cb28c66cde89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e257ead5f858e80095c077643b283645917271be
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044727"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258148"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Clustering de várias sub-redes do SQL Server (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68044727"
 ##  <a name="VisualElement"></a> Cluster de Failover de Várias Sub-redes do SQL Server (Dois Nós, Duas Sub-redes)  
  A ilustração a seguir representa um FCI (instância de cluster de failover) com dois nós e duas sub-redes no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- ![Arquitetura de várias sub-redes com MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "Arquitetura de várias sub-redes com MultiSubnetFailover")  
+ ![Arquitetura de Várias Redes com MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "Arquitetura de Várias Redes com MultiSubnetFailover")  
   
   
 ##  <a name="Configurations"></a> Configurações da instância do cluster de failover de várias sub-redes  

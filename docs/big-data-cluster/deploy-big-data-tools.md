@@ -5,16 +5,16 @@ description: Saiba como instalar ferramentas usadas com [!INCLUDE[big-data-clust
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 964b6db780564797e35c4a40377227d3b56e4a3e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: fd1cab79ce226a710de1f701cfff5094a82704a5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532233"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721616"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalar as ferramentas de Big Data do SQL Server 2019
 
@@ -58,7 +58,7 @@ A tabela anterior fornece todas as ferramentas comuns que são usadas com cluste
 - `azdata`
 - `kubectl`
 - **Azure Data Studio**
-- **Extensão do SQL Server 2019**
+- **Extensão de Virtualização de Dados**
 
 As ferramentas restantes só são necessárias em determinados cenários. A **CLI do Azure** pode ser usada para gerenciar os serviços do Azure associados a implantações do AKS. **mssql-cli** é uma ferramenta opcional, mas útil, que permite que você se conecte à instância mestra do SQL Server no cluster e execute consultas na linha de comando. O **sqlcmd** e o `curl` são necessários se você planeja instalar dados de exemplo com o script do GitHub.
 
@@ -66,7 +66,7 @@ As ferramentas restantes só são necessárias em determinados cenários. A **CL
 
 1. Em um computador com acesso à Internet, baixe um dos seguintes arquivos compactados que contêm o Python:
 
-   | Sistema operacional | Download |
+   | Sistema operacional | Baixar |
    |---|---|
    | Windows | [https://go.microsoft.com/fwlink/?linkid=2074021](https://go.microsoft.com/fwlink/?linkid=2074021) |
    | Linux   | [https://go.microsoft.com/fwlink/?linkid=2065975](https://go.microsoft.com/fwlink/?linkid=2065975) |

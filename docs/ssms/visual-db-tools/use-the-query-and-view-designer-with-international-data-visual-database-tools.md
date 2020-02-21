@@ -1,10 +1,9 @@
 ---
-title: Usar o Designer de Consulta e Exibição com os dados internacionais   Microsoft Docs
-ms.custom: ''
+title: Usar o designer de consultas e de exibição com os dados internacionais
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,14 @@ helpviewer_keywords:
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff5eafd8a0a150b40c2383523e269691f0a83b08
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 8b2bd268bd46240b5954851946c7546a7f2dbb34
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267406"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246034"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Usar o Designer de Consulta e Exibição com dados internacionais (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,12 +52,12 @@ Por outro lado, dados e palavras-chave do painel SQL devem estar sempre em forma
   
 Quando dados são inseridos usando formato específico de local no painel Critérios, o Designer de Consulta e Exibição traduz  automaticamente esses dados para o formato ANSI no painel SQL. Por exemplo, se as Configurações regionais estiverem definidas como padrão alemão, você poderá inserir dados no painel Critérios em formato "31.12.96". Porém, a data aparecerá no painel SQL em formato ANSI de data e hora como `{ ts '1996-12-31 00:00:00' }.` . Se você inserir dados diretamente no painel SQL, será necessário inseri-los em formato ANSI.  
   
-## <a name="sort-order"></a>Sort Order  
+## <a name="sort-order"></a>Ordem de classificação  
 A ordem de classificação dos dados de uma consulta é determinada pelo banco de dados. As opções definidas na caixa de diálogo Configurações regionais do Windows não afetam a ordem de classificação das consultas. Em qualquer consulta particular, porém, você pode solicitar que as linhas sejam retornadas em determinada ordem.  
   
 ## <a name="using-double-byte-characters"></a>Usando caracteres de dois bytes  
 É possível inserir caracteres DBCS de literais e de nomes de objeto de banco de dados, como nomes de tabelas e de exibições, ou aliases. Você também poderá usar caracteres DBCS para nomes de parâmetro e caracteres de marcador de parâmetro. Porém, não será possível usar caracteres DBCS em elementos de linguagem SQL, como nomes de função ou palavras-chave de SQL.  
   
-## <a name="see-also"></a>Consulte Também  
-[Tópicos de instruções de como criar consultas e exibições (Ferramentas de Banco de Dados Visual)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-  
+## <a name="see-also"></a>Consulte Também
+
+[Tópicos de instruções sobre como criar consultas e exibições](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)

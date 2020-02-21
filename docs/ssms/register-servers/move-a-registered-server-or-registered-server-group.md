@@ -1,7 +1,5 @@
 ---
-title: Mover um servidor registrado ou grupo de servidores registrados | Microsoft Docs
-ms.custom: ''
-ms.date: 03/07/2017
+title: Mover um servidor registrado ou grupo de servidores
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -16,27 +14,31 @@ helpviewer_keywords:
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d512660bddb5cd3090402e0cfb61ca88612a43e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.custom: seo-lt-2019
+ms.date: 03/07/2017
+ms.openlocfilehash: 74f521a83f63d1604e96deda8313fd11f07235c4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256177"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256220"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Mover um servidor registrado ou grupo de servidores registrados
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Este tópico descreve como organizar os servidores em Servidores Registrados movendo um servidor registrado ou grupos de servidores no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Grupos de Servidores podem conter servidores registrados ou outros grupos de servidores. Tanto os servidores como os grupos de servidores podem ser movidos de um grupo de servidores para outro.  
+
+Este tópico descreve como organizar os servidores em Servidores Registrados movendo um servidor registrado ou grupos de servidores no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Grupos de Servidores podem conter servidores registrados ou outros grupos de servidores. Tanto os servidores como os grupos de servidores podem ser movidos de um grupo de servidores para outro.  
+
+## <a name="SSMSProcedure"></a>  
+
+### <a name="to-move-a-registered-server-or-server-group"></a>Para mover um servidor registrado ou grupo de servidores  
+
+1. Em Servidores Registrados, clique com o botão direito do mouse em um servidor ou grupo de servidores e clique em **Mover para**.  
   
-##  <a name="SSMSProcedure"></a>  
-  
-#### <a name="to-move-a-registered-server-or-server-group"></a>Para mover um servidor registrado ou grupo de servidores  
-  
-1.  Em Servidores Registrados, clique com o botão direito do mouse em um servidor ou grupo de servidores e clique em **Mover para**.  
-  
-2.  Na caixa de diálogo **Mover Registro de Servidor** , expanda a lista de grupos de servidor, clique no nó onde você quer o servidor ou grupo de servidores apareça, e então clique em **OK**.  
-  
-## <a name="see-also"></a>Consulte Também  
- [Registrar servidores](../../tools/sql-server-management-studio/register-servers.md)   
- [Criar ou editar um grupo de servidores &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
-  
-  
+2. Na caixa de diálogo **Mover Registro de Servidor** , expanda a lista de grupos de servidor, clique no nó onde você quer o servidor ou grupo de servidores apareça, e então clique em **OK**.  
+
+## <a name="see-also"></a>Consulte Também
+
+[Registrar servidores](../../tools/sql-server-management-studio/register-servers.md)
+
+[Criar ou editar um grupo de servidores &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)

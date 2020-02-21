@@ -1,8 +1,7 @@
 ---
-title: Baixar o SQL Server Management Studio (SSMS) | Microsoft Docs
+title: Baixar o SQL Server Management Studio (SSMS)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: sstein, maghan
 ms.technology: ssms
 ms.topic: conceptual
 keywords:
@@ -21,14 +20,15 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
-ms.custom: ''
+ms.reviewer: sstein, maghan
+ms.custom: seo-lt-2019
 ms.date: 11/04/2019
-ms.openlocfilehash: 38c594e235bf68c18ec493fd8ec43f585ea0378c
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: 3532c1d7cfe148c4fe4f1d5331e711a994916818
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097849"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761740"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Baixar o SQL Server Management Studio (SSMS)
 
@@ -44,7 +44,7 @@ O SSMS é gratuito!
 
 **[![download](media/download-icon.png) Baixar o SSMS (SQL Server Management Studio)](https://aka.ms/ssmsfullsetup)**
 
-O SSMS 18.4 é a versão mais recente de GA (disponibilidade geral) do SSMS. Se você tiver uma versão de GA anterior do SSMS 18 instalada, a instalação do SSMS 18.4 atualizará o produto para a versão 18.4. Se você tiver uma *versão prévia* anterior do SSMS 18.x instalada, desinstale-a antes de instalar o SSMS 18.4.
+O SSMS 18.4 é a versão mais recente de GA (disponibilidade geral) do SSMS. Se você tiver uma versão de GA anterior do SSMS 18 instalada, a instalação do SSMS 18.4 atualizará o produto para a versão 18.4.
 
 ### <a name="version-information"></a>Informações da versão
 
@@ -54,7 +54,7 @@ O SSMS 18.4 é a versão mais recente de GA (disponibilidade geral) do SSMS. Se 
 
 Se você tem sugestões ou comentários ou deseja relatar problemas, a melhor maneira de entrar em contato com a equipe do SSMS é usando o [UserVoice](https://aka.ms/sqlfeedback).
 
-A instalação do SSMS 18.x não atualiza nem substitui versões do SSMS 17.x ou anteriores. O SSMS 18.x é instalado lado a lado com versões anteriores para que ambas versões estejam disponíveis para uso.
+A instalação do SSMS 18.x não atualiza nem substitui versões do SSMS 17.x ou anteriores. O SSMS 18.x é instalado lado a lado com versões anteriores para que ambas versões estejam disponíveis para uso. No entanto, se você tiver uma ***versão prévia*** do SSMS 18.x instalada, será necessário **desinstalar** essa versão antes de instalar o SSMS 18.4.
 
 Se um computador contiver instalações lado a lado do SSMS, verifique se você iniciou a versão correta para suas necessidades específicas. A versão mais recente é rotulada **Microsoft SQL Server Management Studio 18**
 
@@ -112,7 +112,7 @@ Esta versão do SSMS é compatível com as seguintes plataformas de 64 bits quan
 <sup>*</sup> Exige a versão 1607 (10.0.14393) ou posterior
 
 > [!NOTE]
-> O SSMS é executado somente no Windows. Se você precisar de uma ferramenta que seja executada em plataformas diferentes do Windows, confira o Azure Data Studio. O Azure Data Studio é uma nova ferramenta multiplataforma executada no macOS, no Linux e no Windows. Para obter detalhes, veja [Azure Data Studio](../azure-data-studio/what-is.md).
+> O SSMS é executado somente no Windows (AMD ou Intel). Se você precisar de uma ferramenta que seja executada em plataformas diferentes do Windows, confira o Azure Data Studio. O Azure Data Studio é uma nova ferramenta multiplataforma executada no macOS, no Linux e no Windows. Para obter detalhes, veja [Azure Data Studio](../azure-data-studio/what-is.md).
 
 ## <a name="release-notes-ssms-184"></a>Notas sobre a versão (SSMS 18.4)
 
@@ -130,7 +130,9 @@ Para saber detalhes sobre esta versão, confira [as notas sobre a versão do SSM
 
 - [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [Documentação do SQL Server Management Studio](sql-server-management-studio-ssms.md)
-- [Pacotes de serviço e atualizações adicionais](https://technet.microsoft.com/sqlserver/ff803383.aspx)
+- [Atualizações mais recentes](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [Baixar o SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Guia de Arquitetura de Dados do Azure](https://docs.microsoft.com/azure/architecture/data-guide/)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

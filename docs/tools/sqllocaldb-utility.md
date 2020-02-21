@@ -1,6 +1,6 @@
 ---
-title: Utilitário SqlLocalDB | Microsoft Docs
-ms.custom: ''
+title: Utilitário SqlLocalDB
+ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 78358b6477208dcb7aecb4c031ee25318eab9e05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: c829c9adce95dd1a4a84d5fd6fc7b88abdece96a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065459"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306676"
 ---
 # <a name="sqllocaldb-utility"></a>Utilitário SqlLocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ SqlLocalDB.exe
  **-?**  
  Retorna descrições breves de cada opção de **SqlLocalDB** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O argumento *instance name* deve seguir as regras de identificadores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou deve ser colocado entre aspas duplas.  
   
  A execução de SqlLocalDB sem argumentos retorna o texto da ajuda.  
@@ -82,7 +82,7 @@ SqlLocalDB.exe
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-an-instance-of-localdb"></a>A. Criando uma instância do LocalDB  
+### <a name="a-creating-an-instance-of-localdb"></a>a. Criando uma instância do LocalDB  
  O exemplo a seguir cria uma instância do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** denominada `DEPARTMENT` que usa os binários do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e inicia a instância.  
   
 ```  

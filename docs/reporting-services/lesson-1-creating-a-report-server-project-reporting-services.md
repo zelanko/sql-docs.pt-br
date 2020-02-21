@@ -1,6 +1,7 @@
 ---
-title: 'Lição 1: Criando um projeto do servidor de relatório (Reporting Services) | Microsoft Docs'
-ms.date: 05/01/2019
+title: 'Lição 1: Criar um projeto do Servidor de Relatório | Microsoft Docs'
+description: Nesta lição, você criará um projeto do servidor de relatório e um arquivo de definição de relatório (.rdl) usando o Designer de Relatórios.
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3a32b6b27a8919d729c95bfe29f50c2bda81db8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: db412b18a0189f9f68caff79f8e904db5424d673
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095851"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244319"
 ---
-# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lição 1: Criando um projeto do servidor de relatórios (Reporting Services)
+# <a name="lesson-1-create-a-report-server-project-reporting-services"></a>Lição 1: Criar um projeto do Servidor de Relatório (Reporting Services)
 
 Nesta lição, você criará um *projeto do servidor de relatórios* e um arquivo de *definição de relatório (.rdl)* no *Designer de Relatórios*.
 
 > [!NOTE]
-> [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] é um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ambiente para criar soluções de business intelligence. O SSDT contém um ambiente de autoria do Designer de Relatórios, em que você pode abrir, modificar, visualizar, salvar e implantar [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] definições de relatório paginados, fontes de dados compartilhados, conjuntos de dados compartilhados e partes de relatório.
+> [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] é um ambiente do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] para criar soluções de business intelligence. O SSDT contém um ambiente de autoria do Designer de Relatórios, em que você pode abrir, modificar, visualizar, salvar e implantar [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] definições de relatório paginados, fontes de dados compartilhados, conjuntos de dados compartilhados e partes de relatório.
 
 Criar relatórios com o Designer de Relatórios significa que você cria um projeto do servidor de relatório que contém os arquivos de relatórios e outros arquivos de recursos usados pelos relatórios.
 
@@ -37,7 +38,7 @@ Criar relatórios com o Designer de Relatórios significa que você cria um proj
     > [!IMPORTANT]
     > No VS, se você não vir o Reporting Services na coluna esquerda, adicione o Designer de Relatórios ao instalar a carga de trabalho do SSDT. No menu **Ferramentas**, selecione **Obter Ferramentas e Funcionalidades...**  e selecione **SQL Server Data Tools** nas cargas de trabalho exibidas. Se você não vir os objetos de serviços de relatórios na coluna central, adicione as extensões do Reporting Services. No menu **Ferramentas**, selecione **Extensões e Atualizações** > **Online**. Na coluna central, selecione **Projetos do Microsoft Reporting Services** > **Baixar** nas extensões exibidas. Para SSDT, confira [Baixar o SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
-3. Selecione o ícone **Projeto de Servidor de Relatório** &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;na coluna central da caixa de diálogo **Novo Projeto**.
+3. Selecione o ícone **Projeto do Servidor de Relatório** &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;na coluna central da caixa de diálogo **Novo Projeto**.
 
 4. Na caixa de texto **Nome**, digite "Tutorial" como o nome do projeto. Por padrão, a caixa de texto **Local** exibe o caminho para a pasta "Documentos\Visual Studio 20xx\Projetos\". O Designer de Relatórios cria a pasta Tutorial nesse caminho e cria o projeto do Tutorial nessa pasta. Se o projeto não pertencer a uma solução VS, então o VS também cria um arquivo de solução (.sln).
 
@@ -67,4 +68,4 @@ Até agora, você criou o projeto de relatório do Tutorial e o relatório Pedid
 - Criar um conjunto de dados a partir da fonte de dados.
 - Criar e formatar o layout do relatório.
 
-Continue na [Lição 2: especificar informações da conexão &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).
+Continue com a [Lição 2: Especificar informações sobre conexão &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).

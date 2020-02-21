@@ -1,22 +1,23 @@
 ---
-title: Executar trabalhos do Spark no Azure Toolkit for IntelliJ no cluster de Big Data do SQL Server
-titleSuffix: SQL Server big data clusters
+title: 'Executar trabalhos do Spark: Kit de Ferramentas do Azure para IntelliJ'
+titleSuffix: SQL Server Big Data Clusters
 description: Enviar trabalhos do Spark em clusters de Big Data do SQL Server no Azure Toolkit for IntelliJ.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
 ms.topic: conceptual
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 59946731dc1e76716b6202dd6f8aa93d777986b3
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653712"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244079"
 ---
-# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-intellij"></a>Enviar trabalhos do Spark em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no IntelliJ
+# <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>Enviar trabalhos do Spark em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no IntelliJ
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -51,9 +52,9 @@ Um dos principais cenários para [!INCLUDE[big-data-clusters-2019](../includes/s
 
 1. Inicie o IntelliJ IDEA e, em seguida, crie um projeto. Na caixa de diálogo **Novo Projeto**, siga estas etapas: 
 
-   A. Selecione **Azure Spark/HDInsight** > **Projeto do Spark com Amostras (Scala)** .
+   a. Selecione **Azure Spark/HDInsight** > **Projeto do Spark com Amostras (Scala)** .
 
-   B. Na lista **Ferramenta de build**, selecione uma das opções a seguir de acordo com sua necessidade:
+   b. Na lista **Ferramenta de build**, selecione uma das opções a seguir de acordo com sua necessidade:
 
       * **Maven**, para suporte do assistente de criação de projeto do Scala
       * **SBT**, para gerenciar as dependências e compilações para o projeto do Scala
@@ -74,9 +75,9 @@ Um dos principais cenários para [!INCLUDE[big-data-clusters-2019](../includes/s
 
     ![Selecionando o SDK do Spark](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
-   A. Insira um nome e uma localização para o projeto.
+   a. Insira um nome e uma localização para o projeto.
 
-   B. Na lista suspensa **SDK do Projeto**, selecione **Java 1.8** para o cluster do Spark 2.x ou selecione **Java 1.7** para o cluster do Spark 1.x.
+   b. Na lista suspensa **SDK do Projeto**, selecione **Java 1.8** para o cluster do Spark 2.x ou selecione **Java 1.7** para o cluster do Spark 1.x.
 
    c. Na lista suspensa **Versão do Spark**, o assistente de criação de projeto do Scala integra a versão correta do SDK do Spark e do SDK do Scala. Se a versão do cluster do Spark for anterior à 2.0, selecione **Spark 1.x**. Caso contrário, selecione **Spark2.x**. Este exemplo usa o **Spark 2.0.2 (Scala 2.11.8)** .
 
@@ -84,9 +85,9 @@ Um dos principais cenários para [!INCLUDE[big-data-clusters-2019](../includes/s
 
 7. O projeto do Spark cria automaticamente um artefato para você. Para exibir o artefato, execute as seguintes etapas:
 
-   A. No menu **Arquivo**, selecione **Estrutura do Projeto**.
+   a. No menu **Arquivo**, selecione **Estrutura do Projeto**.
 
-   B. Na caixa de diálogo **Estrutura do Projeto**, selecione **Artefatos** para exibir o artefato padrão que é criado. Você também pode criar seu próprio artefato selecionando o sinal de adição ( **+** ).
+   b. Na caixa de diálogo **Estrutura do Projeto**, selecione **Artefatos** para exibir o artefato padrão que é criado. Você também pode criar seu próprio artefato selecionando o sinal de adição ( **+** ).
 
       ![Informações do artefato na caixa de diálogo](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -106,13 +107,13 @@ Após vincular um cluster de Big Data do SQL Server, você pode enviar o aplicat
 
     * Campo **Nome da classe principal**: O valor padrão é a classe principal do arquivo selecionado. Você pode alterar a classe selecionando as reticência ( **...** ) e escolhendo outra classe.   
 
-    * Campo **Configurações do Trabalho**:  os valores padrão são definidos como na imagem mostrada acima. Você pode alterar o valor ou adicionar uma nova chave/valor para o envio do trabalho. Para obter mais informações, consulte: [API REST do Apache Livy](http://livy.incubator.apache.org./docs/latest/rest-api.html)
+    * Campo **Configurações do Trabalho**:  os valores padrão são definidos como na imagem mostrada acima. Você pode alterar o valor ou adicionar uma nova chave/valor para o envio do trabalho. Para mais informações: [API REST do Apache Livy](http://livy.incubator.apache.org./docs/latest/rest-api.html)
 
       ![O significado da configuração do trabalho da caixa de diálogo de Envio do Spark](./media/spark-submit-job-intellij-tool-plugin/submit-job-configurations.png)
 
     * Campo **Argumentos de linha de comando**: você pode inserir os valores dos argumentos divididos por espaço para a classe principal, se necessário.
 
-    * Campos **Jars Referenciados** e **Arquivos Referenciados**: você pode inserir os caminhos para os Jars e os arquivos referenciados, se houver. Para obter mais informações, consulte: [Configuração do Apache Spark](https://spark.apache.org/docs/latest/configuration.html#runtime-environment) 
+    * Campos **Jars Referenciados** e **Arquivos Referenciados**: você pode inserir os caminhos para os Jars e os arquivos referenciados, se houver. Para mais informações: [Configuração do Apache Spark](https://spark.apache.org/docs/latest/configuration.html#runtime-environment) 
 
       ![O significado dos arquivos Jar da caixa de diálogo de Envio do Spark](./media/spark-submit-job-intellij-tool-plugin/jar-files-meaning.png)
 

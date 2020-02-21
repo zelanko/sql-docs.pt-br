@@ -1,22 +1,23 @@
 ---
-title: Criar e exportar modelos de machine learning do Spark com MLeap
-titleSuffix: SQL Server big data clusters
+title: 'Criar, exportar modelos de ML do Spark: MLeap'
+titleSuffix: SQL Server Big Data Clusters
 description: Use PySpark para treinar e criar modelos de machine learning com o Spark em Clusters de Big Data do SQL Server. Exporte com MLeap e, em seguida, pontue o modelo com Java no SQL Server.
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc9191ad90b05e9f48facab0cc4003bbf5adce11
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 717093278790c90486b424678d332f73e056e86e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844226"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255908"
 ---
-# <a name="create-export-and-score-spark-machine-learning-models-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Criar, exportar e pontuar modelos de machine learning do Spark em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>Criar, exportar e pontuar modelos de machine learning do Spark em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 O exemplo a seguir mostra como criar um modelo com [ML do Spark](https://spark.apache.org/docs/latest/ml-guide.html), exportar o modelo para [MLeap](http://mleap-docs.combust.ml/) e pontuar o modelo no SQL Server com sua [Extensão de Linguagem Java](../language-extensions/language-extensions-overview.md). Isso é feito no contexto de um Cluster de Big Data do SQL Server 2019.
 

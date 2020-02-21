@@ -1,39 +1,39 @@
 ---
-title: Recursos do SQL Server Reporting Services compatíveis com as edições dele
+title: Recursos compatíveis com diferentes edições – SQL Server Reporting Services | Microsoft Docs
+description: Esse tópico explica os recursos do SQL Server Reporting Services (SSRS) que têm suporte nas diferentes edições do SQL Server. A edição Evaluation do SQL Server está disponível por um período de avaliação de 180 dias.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/20/2019
-ms.openlocfilehash: 3e61381c2298a197be698ed82c247023ad708789
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.date: 12/16/2019
+ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893282"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76516597"
 ---
-# <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>Recursos do SQL Server Reporting Services compatíveis com as edições dele
+# <a name="sql-server-reporting-services-features-supported-by-editions"></a>Recursos do SQL Server Reporting Services compatíveis com as edições
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Esse tópico explica os recursos do SQL Server Reporting Services (SSRS) que têm suporte nas diferentes edições do SQL Server. A edição Evaluation do SQL Server está disponível por um período de avaliação de 180 dias.  
+
+## <a name="related-links"></a>Links relacionados
   
- Para obter as notas sobre a versão do SQL Server mais recentes, confira [Notas sobre a versão do SQL Server 2017](../sql-server/sql-server-2017-release-notes.md). Confira as últimas informações sobre as novidades em [Novidades no SSRS (SQL Server Reporting Services)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
+ - [Notas sobre a versão do SSRS (SQL Server Reporting Services)](release-notes-reporting-services.md). 
+ - [Novidades do SSRS (SQL Server Reporting Services)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
+ - [Recursos compatíveis com as edições do SQL Server](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
- ## <a name="try-sql-server-2017"></a>Experimentar o SQL Server 2017
-
-> [![Baixar o SQL Server 2017](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Baixar o SQL Server 2017 do Centro de Avaliação](https://go.microsoft.com/fwlink/?LinkID=829477)**    
->
-> ![Máquina Virtual do Azure pequena](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Criar uma Máquina Virtual com o SQL Server 2017 já instalado](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+##  <a name="SSRS"></a> SQL Server Reporting Services  
 
 Para saber quais recursos têm suporte nas edições Evaluation e Developer, confira a coluna SQL Server Enterprise Edition na tabela a seguir.
 
-##  <a name="SSRS"></a> SQL Server Reporting Services  
-  
 |Nome do recurso|Enterprise|Standard|Web|Express with Advanced Services|Desenvolvedor|  
-|------------------|---------|------------------------------------|------------------------|-------------|---------------|  
+|------|---------|---------------|-----------|-------|---------|  
+| Relatórios do Power BI e pastas de trabalho do Excel | Sim, com o Software Assurance | | | | Sim |
 |Relatórios móveis e análises|Sim||||Sim|  
 |Edição [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] do banco de dados de catálogo com suporte|Standard ou superior|Standard ou superior|Web|Express|Standard ou superior|  
 |Fonte de dados com suporte - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Todas as edições do   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Web|Express|Todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
@@ -81,13 +81,14 @@ Para saber quais recursos têm suporte nas edições Evaluation e Developer, con
 |Standard|Edições Enterprise ou Standard (local ou remota)|  
 |Web|Web Edition (apenas localmente)|  
 |Express with Advanced Services|Express with Advanced Services (apenas local)|  
-|Evaluation|Evaluation|  
+|Avaliação|Avaliação|  
   
 ##  <a name="BIC"></a> Clientes de business intelligence  
 Os seguintes aplicativos cliente de software estão disponíveis no Microsoft Download Center. Eles ajudam a criar documentos de business intelligence que são executados em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando esses documentos forem hospedados em um ambiente de servidor, use uma edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que dê suporte para esse tipo de documento. A tabela a seguir identifica qual edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contém os recursos de servidor necessários para hospedar os documentos criados nesses aplicativos cliente.  
   
 |Nome da ferramenta|Enterprise|Standard|Web|Express with Advanced Services|Desenvolvedor|  
-|---------------|----------------|--------------|------------------------|-------------|---------------|  
+|---------------|----------------|--------------|------------------------|-------------|---------------| 
+| Power BI Desktop otimizado para o Servidor de Relatórios do Power BI, **.pbix** | Sim, com o Software Assurance | | | | Sim |
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], **.rdl** e **.rds**|Sim|Sim|Sim|Sim|Sim|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)], **.rsmobile**|Sim||||Sim|  
 |Aplicativos do Power BI para dispositivos móveis (iOS, Windows 10 e Android), **.rsmobile**|Sim||||Sim|  
@@ -103,4 +104,4 @@ Os seguintes aplicativos cliente de software estão disponíveis no Microsoft Do
 
 * [Planejar uma instalação do SQL Server](../sql-server/install/planning-a-sql-server-installation.md).
 
-* Ainda tem dúvidas? Faça uma pergunta no [Fórum do SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).
+* Mais perguntas? Faça uma pergunta no [Fórum do SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

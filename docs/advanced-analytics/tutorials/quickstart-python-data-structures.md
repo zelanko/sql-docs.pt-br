@@ -1,29 +1,28 @@
 ---
-title: 'Início Rápido: Tipos de dados do Python'
-titleSuffix: SQL Server Machine Learning Services
-description: Neste guia de início rápido, saiba como trabalhar com tipos de dados e objetos de dados no Python e no SQL Server com os Serviços de Machine Learning do SQL Server.
+title: 'Início Rápido: estruturas de dados do Python'
+description: Neste início rápido, saiba como trabalhar com estrutura de dados e objetos de dados no Python e nos Serviços de Machine Learning do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1bac339105acdb7318b29426cd0bb4afdc2481e7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0f04e021664a92241c8c029d296a298b10c142d2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727021"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831908"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Início Rápido: Manipular tipos de dados e objetos usando o Python nos Serviços de Machine Learning do SQL Server
+# <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>Início Rápido: estruturas e objetos de dados com o Python nos Serviços de Machine Learning do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Este início rápido mostra como usar estruturas de dados ao usar o Python nos Serviços de Machine Learning do SQL Server.
+Neste início rápido, você aprenderá a usar estruturas de dados ao usar o Python nos Serviços de Machine Learning do SQL Server.
 
-O SQL Server se baseia no pacote **Pandas** do Python, que é ótimo para trabalhar usando dados tabulares. No entanto, você não pode passar um escalar do Python para SQL Server e esperar que ele "simplesmente funcione". Neste guia de início rápido, você examinará algumas definições básicas de tipo de dados, a fim de se preparar para problemas adicionais que pode enfrentar ao passar dados tabulares entre o Python e o SQL Server.
+O SQL Server se baseia no pacote **Pandas** do Python, que é ótimo para trabalhar usando dados tabulares. No entanto, você não pode passar um escalar do Python para SQL Server e esperar que ele "simplesmente funcione". Neste início rápido, você examinará algumas definições básicas de estrutura de dados, a fim de se preparar para problemas adicionais que pode enfrentar ao passar dados tabulares entre o Python e o SQL Server.
 
 Os conceitos que se deve conhecer de antemão incluem:
 
@@ -176,7 +175,7 @@ Agora, você produzirá valores específicos de duas séries de resultados matem
 
    |ResultValue|
    |------|
-   |2.0|
+   |2,0|
 
    Lembre-se de que o índice gerado automaticamente começa em 0. Tente usar um valor de índice fora do intervalo e veja o que acontece.
 
@@ -210,7 +209,7 @@ Agora, você produzirá valores específicos de duas séries de resultados matem
 Para saber mais sobre como escrever funções avançadas do Python no SQL Server, siga este início rápido:
 
 > [!div class="nextstepaction"]
-> [Escrever funções avançadas do Python com os Serviços de Machine Learning do SQL Server](quickstart-python-functions.md)
+> [Gravar funções avançadas do Python com os Serviços de Machine Learning do SQL Server](quickstart-python-functions.md)
 
 Para obter mais informações sobre como usar o Python nos Serviços de Machine Learning do SQL Server, confira os seguintes artigos:
 

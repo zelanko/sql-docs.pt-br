@@ -1,20 +1,21 @@
 ---
-title: Executar trabalhos do Spark com as Ferramentas do Spark & Hive para o VS Code no cluster de Big Data do SQL Server
-titleSuffix: SQL Server big data clusters
+title: 'Executar trabalhos: Ferramentas do Hive e do Spark para VS Code'
+titleSuffix: SQL Server Big Data Clusters
 description: Envie trabalhos do Spark com as Ferramentas do Spark & Hive para o Visual Studio Code no cluster de Big Data do SQL Server.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653723"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255924"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Enviar trabalhos do Spark em clusters de Big Data do SQL Server no Visual Studio Code
 
@@ -146,7 +147,7 @@ Você pode enviar consultas de PySpark interativas seguindo as etapas abaixo:
 
    ![janela de python interativo pyspark interativo](./media/spark-hive-tools-vscode/pyspark-interactive-python-interactive-window.png) 
 
-6. Insira **"%%info"** e, em seguida, pressione **Shift + Enter** para exibir informações do trabalho. (opcional)
+6. Insira **"%%info"** e, em seguida, pressione **Shift + Enter** para exibir informações do trabalho. (Opcional)
 
    ![exibir informações do trabalho](./media/spark-hive-tools-vscode/pyspark-interactive-view-job-information.png)
 
@@ -200,36 +201,36 @@ Envie um arquivo, observe que a pasta `.vscode` é adicionada automaticamente à
 
 **Corpo da solicitação**
 
-| NAME | descrição | Tipo |
+| name | descrição | type |
 | :- | :- | :- |
 | file | Arquivo que contém o aplicativo a ser executado | caminho (obrigatório) |
-| proxyUser | Usuário a representar ao executar o trabalho | cadeia de caracteres |
-| className | Classe principal de Java/Spark do aplicativo | cadeia de caracteres |
+| proxyUser | Usuário a representar ao executar o trabalho | string |
+| className | Classe principal de Java/Spark do aplicativo | string |
 | args | Argumentos de linha de comando para o aplicativo | lista de cadeias de caracteres |
 | jars | jars a serem usados nesta sessão | Lista de cadeias de caracteres |
 | pyFiles | Arquivos Python a serem usados nesta sessão | Lista de cadeias de caracteres |
 | files | arquivos a serem usados nesta sessão | Lista de cadeias de caracteres |
-| driverMemory | Quantidade de memória a ser usada para o processo do driver | cadeia de caracteres |
+| driverMemory | Quantidade de memória a ser usada para o processo do driver | string |
 | driverCores | Número de núcleos a serem usados para o processo do driver | INT |
-| executorMemory | Quantidade de memória a ser usada pelo processo de executor | cadeia de caracteres |
+| executorMemory | Quantidade de memória a ser usada pelo processo de executor | string |
 | executorCores | Número de núcleos a serem usados para cada executor | INT |
 | numExecutors | Número de executores a serem iniciados para esta sessão | INT |
 | archives | Arquivos a serem usados nesta sessão | Lista de cadeias de caracteres |
-| fila | O nome da fila YARN para a qual foi enviado | cadeia de caracteres |
-| NAME | O nome desta sessão | cadeia de caracteres |
+| fila | O nome da fila YARN para a qual foi enviado | string |
+| name | O nome desta sessão | string |
 | conf | Propriedades de configuração do Spark | Mapa de chave = valor |
 
 #### <a name="response-body"></a>Corpo da resposta
 
 O objeto de lote criado.
 
-| NAME | descrição | Tipo |
+| name | descrição | type |
 | :- | :- | :- |
 | id | A ID da sessão | INT |
-| appId | A ID do aplicativo desta sessão | Cadeia de caracteres |
+| appId | A ID do aplicativo desta sessão | String |
 | appInfo | As informações detalhadas do aplicativo | Mapa de chave = valor |
 | log | As linhas de log | lista de cadeias de caracteres |
-| state | O estado do lote | cadeia de caracteres |
+| state | O estado do lote | string |
 
 >[!NOTE]
 >A configuração do Livy atribuída será exibida no painel de saída quando o script for enviado.

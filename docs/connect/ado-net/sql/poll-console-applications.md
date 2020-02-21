@@ -1,6 +1,6 @@
 ---
 title: Sondagem em aplicativos de console
-description: Fornece um exemplo que demonstra o uso de sondagem para aguardar a conclusão de uma execução de comando assíncrono de um aplicativo de console. Essa técnica também é válida em uma biblioteca de classes ou outro aplicativo sem uma interface do usuário.
+description: Fornece um exemplo que demonstra o uso de sondagem para aguardar a conclusão de uma execução de comando assíncrona de um aplicativo de console. Essa técnica também é válida em uma biblioteca de classes ou outro aplicativo sem uma interface do usuário.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: e8dc5597743a277b53f36d0bfb1487a12cbd80d9
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: bf89d2d111452970955953132edd76e602590668
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452106"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247683"
 ---
 # <a name="polling-in-console-applications"></a>Sondagem em aplicativos de console
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-As operações assíncronas no ADO.NET permitem que você inicie operações de banco de dados demoradas em um thread durante a execução de outras tarefas em outro thread. Na maioria dos cenários, no entanto, você chegará a um ponto em que o aplicativo não deve continuar até que a operação do banco de dados seja concluída. Para esses casos, é útil sondar a operação assíncrona para determinar se a operação foi concluída ou não.  
+As operações assíncronas no ADO.NET permitem que você inicie operações de banco de dados demoradas em um thread durante a execução de outras tarefas em outro thread. No entanto, na maioria dos cenários, você eventualmente chegará a um ponto em que o aplicativo não continuará até que a operação do banco de dados seja concluída. Para esses casos, é útil sondar a operação assíncrona para determinar se a operação foi concluída ou não.  
   
 Você pode usar a propriedade <xref:System.IAsyncResult.IsCompleted%2A> para descobrir se a operação foi concluída ou não.  
   
 ## <a name="example"></a>Exemplo  
-O aplicativo de console a seguir atualiza os dados no banco de dado de exemplo **AdventureWorks** , fazendo seu trabalho de forma assíncrona. Para emular um processo de execução demorada, este exemplo insere uma instrução WAITFOR no texto do comando. Normalmente, você não tentaria fazer com que os comandos fossem executados mais lentamente, mas fazer isso nesse caso torna mais fácil demonstrar o comportamento assíncrono.  
+O aplicativo de console a seguir atualiza os dados dentro do banco de dados de exemplo da **AdventureWorks**, fazendo seu trabalho de maneira assíncrona. Para emular um processo de execução demorada, este exemplo insere uma instrução WAITFOR no texto do comando. Normalmente, você não tentaria fazer com que os comandos fossem executados mais lentamente, mas fazer isso nesse caso torna mais fácil demonstrar o comportamento assíncrono.  
   
 ```csharp  
 using System;  

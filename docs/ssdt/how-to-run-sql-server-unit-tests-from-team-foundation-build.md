@@ -1,23 +1,24 @@
 ---
-title: 'Como fazer: executar testes de unidade do SQL Server no Team Foundation Build | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: executar testes de unidade do SQL Server no Team Foundation Build
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c4008d88a2a353ead1ddd16f678c4167ff6714d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035095"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244288"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Como fazer: executar testes de unidade do SQL Server no Team Foundation Build
+
 Você pode usar o Team Foundation Build para executar os testes de unidade do SQL Server como parte de um teste de verificação da compilação (BVT). Você pode configurar os testes de unidade para implantar o banco de dados, gerar dados de teste e executar os testes selecionados. Se você não estiver familiarizado com o Team Foundation Build, analise as seguintes informações antes de seguir os procedimentos deste tópico:  
   
 -   [Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
@@ -198,7 +199,7 @@ Por padrão, o Team Foundation Build cria um arquivo de configuração no arquiv
   
 6.  Clique em **Aplicar**.  
   
-7.  Clique em **Fechar**.  
+7.  Clique em **fechar**  
   
 8.  No menu **Arquivo** , clique em **Salvar Tudo**.  
   
@@ -263,7 +264,7 @@ Neste procedimento, você faz o check-in de todos os arquivos da solução. Esse
   
 10. No grupo **Básico**, em **Testes Automatizados**, especifique os testes a serem executados. Por padrão, os testes contidos nos arquivos denominados \*test\*.dll na solução serão executados.  
   
-11. No menu **Arquivo**, clique em **Salvar**  *Nome do Projeto*.  
+11. No menu **Arquivo**, clique em **Salvar** *ProjectName*.  
   
     Você criou uma definição de compilação. Em seguida, você modificará o projeto de teste.  
   

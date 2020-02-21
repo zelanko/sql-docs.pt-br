@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127379"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831599"
 ---
-# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Como implantar o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Kubernetes
+# <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Como implantar o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -33,7 +33,7 @@ Antes de implantar um cluster de Big Data do SQL Server 2019, primeiro [instale 
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- Extensão do SQL Server 2019 para o Azure Data Studio
+- [Extensão Virtualização de Dados](../azure-data-studio/data-virtualization-extension.md) para o Azure Data Studio
 
 ## <a id="prereqs"></a> Pré-requisitos do Kubernetes
 
@@ -193,7 +193,8 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> Você deve usar o usuário `root` para o gateway do Knox com a senha acima. `root` é o único usuário com suporte para essa configuração de autenticação Básica (nome de usuário/senha). Para o SQL Server mestre, o nome de usuário provisionado para ser usado com a senha acima é `sa`.
+> Você deve usar o usuário `root` para o gateway do Knox com a senha acima. `root` é o único usuário compatível com essa autenticação Básica (nome de usuário/senha).
+> Para se conectar ao SQL Server com a autenticação Básica, use os mesmos valores que as [variáveis de ambiente](#env) AZDATA_USERNAME e AZDATA_PASSWORD. 
 
 
 Depois de definir as variáveis de ambiente, você deve executar `azdata bdc create` para disparar a implantação. Este exemplo usa o perfil de configuração de cluster criado acima:

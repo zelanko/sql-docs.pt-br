@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: a5194f251b7ea47e0d9485446b8957e96037ded0
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68714958"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>Criar um logon para SQLRUserGroup
@@ -33,26 +33,26 @@ Você pode contornar o erro de conexão criando um logon para **SQLServerRUserGr
 
 2. Na caixa de diálogo **Logon – Novo**, selecione **Pesquisar**. (Não digite nada na caixa ainda.)
     
-     ![Clique em Pesquisar para adicionar um novo logon para aprendizado de máquina](media/implied-auth-login1.png "Click search to add new login for machine learning")
+     ![Clicar em Pesquisar para adicionar um novo logon para machine learning](media/implied-auth-login1.png "Clicar em Pesquisar para adicionar um novo logon para machine learning")
 
 3. Na caixa **Selecionar usuário ou grupo**, clique no botão **Tipos de objeto**.
 
-     ![Pesquisar tipos de objeto para adicionar novo logon para aprendizado de máquina](media/implied-auth-login2.png "Search object types to add new login for machine learning")
+     ![Pesquisar tipos de objeto para adicionar um novo logon para machine learning](media/implied-auth-login2.png "Pesquisar tipos de objeto para adicionar um novo logon para machine learning")
 
 4. Na caixa de diálogo **Tipos de objeto**, selecione **Grupos**. Limpe todas as caixas de seleção.
 
-     ![Selecione Grupos na caixa de diálogo Tipos de objetos](media/implied-auth-login3.png "Select Groups in Object Types dialog box")
+     ![Caixa de diálogo Selecionar grupos nos tipos de objetos](media/implied-auth-login3.png "Caixa de diálogo Selecionar grupos nos tipos de objetos")
 
 4. Clique em **Avançado**, verifique se a localização a ser pesquisada é o computador atual e clique em **Localizar agora**.
 
-     ![Clique em Localizar agora para obter a lista de grupos](media/implied-auth-login4.png "Click Find Now to get list of groups")
+     ![Clicar em Localizar agora para obter uma lista de grupos](media/implied-auth-login4.png "Clicar em Localizar agora para obter uma lista de grupos")
 
 5. Percorra a lista de contas de grupo no servidor até encontrar uma começando com `SQLRUserGroup`.
     
     + O nome do grupo associado ao serviço Launchpad para a _instância padrão_ é sempre **SQLRUserGroup**, independentemente de você ter instalado R, Python ou ambos. Selecione esta conta somente para a instância padrão.
     + Se você estiver usando uma _instância nomeada_, o nome da instância será anexado ao nome do grupo de trabalho padrão, `SQLRUserGroup`. Por exemplo, se a instância for denominada "MLTEST", o nome do grupo de usuários padrão para essa instância será **SQLRUserGroupMLTest**.
  
-    ![Exemplo de grupos no servidor](media/implied-auth-login5.png "Example of groups on server")
+    ![Exemplo de grupos no servidor](media/implied-auth-login5.png "Exemplo de grupos no servidor")
    
 5. Clique em **OK** para fechar a caixa de diálogo de pesquisa avançada.
 

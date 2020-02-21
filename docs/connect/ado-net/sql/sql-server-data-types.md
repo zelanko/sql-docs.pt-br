@@ -7,25 +7,25 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 12ad13d6788ae2b8995289100883b06c5ab6d7c6
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 46edb611f29c447f7e1ca2228212ef3e0d594fff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452030"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244038"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Tipos de dados do SQL Server e do ADO.NET
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-SQL Server e o .NET são baseados em sistemas de tipos diferentes, o que pode resultar em potencial perda de dados. Para preservar a integridade dos dados, o Microsoft SqlClient Provedor de Dados for SQL Server (<xref:Microsoft.Data.SqlClient>) fornece métodos de acessadores tipados para trabalhar com dados de SQL Server. Você pode usar as enumerações nas classes de <xref:System.Data.SqlDbType> para especificar <xref:Microsoft.Data.SqlClient.SqlParameter> tipos de dados.  
+O SQL Server e o .NET são baseados em sistemas de tipos diferentes, o que pode resultar em potencial perda de dados. Para preservar a integridade dos dados, o Provedor de Dados do Microsoft SqlClient para SQL Server (<xref:Microsoft.Data.SqlClient>) fornece métodos de acessadores tipados para trabalhar com os dados do SQL Server. Você pode usar as enumerações nas classes de <xref:System.Data.SqlDbType> para especificar tipos de dados <xref:Microsoft.Data.SqlClient.SqlParameter>.  
   
-SQL Server 2008 apresenta novos tipos de dados que são projetados para atender às necessidades de negócios para trabalhar com dados de data e hora, estruturados, semiestruturados e não estruturados. Eles estão documentados nos manuais online do SQL Server 2008.  
+O SQL Server 2008 apresenta novos tipos de dados criados para atender às necessidades empresariais para trabalhar usando dados de data e hora, estruturados, semiestruturados e não estruturados. Eles são documentados nos Manuais Online do SQL Server 2008.  
   
-Os tipos de dados SQL Server que estão disponíveis para uso em seu aplicativo dependem da versão do SQL Server que você está usando. Para obter mais informações, consulte [tipos de dados (mecanismo de banco de dados)](https://go.microsoft.com/fwlink/?LinkID=107468) de manuais online do SQL Server.
+Os tipos de dados do SQL Server disponíveis para uso em seu aplicativo dependem da versão do SQL Server que você está usando. Para obter mais informações, confira [Tipos de Dados (Mecanismo de Banco de Dados)](https://go.microsoft.com/fwlink/?LinkID=107468) nos Manuais Online do SQL Server.
   
 ## <a name="in-this-section"></a>Nesta seção  
 [SqlTypes e o DataSet](sqltypes-dataset.md)  
@@ -35,7 +35,7 @@ Descreve o suporte de tipo para `SqlTypes` no `DataSet`.
 Demonstra como trabalhar com valores nulos e lógica de três valores.  
   
 [Comparando valores de GUID e uniqueidentifier](compare-guid-uniqueidentifier-values.md)  
-Demonstra como trabalhar com valores de GUID e uniqueidentifier em SQL Server e .NET.  
+Demonstra como trabalhar com valores de GUID e uniqueidentifier no SQL Server e .NET.  
   
 [Dados de data e hora](date-time-data.md)  
 Descreve como usar os novos tipos de dados de data e hora introduzidos no SQL Server 2008.  
@@ -44,20 +44,20 @@ Descreve como usar os novos tipos de dados de data e hora introduzidos no SQL Se
 Demonstra como recuperar dados de UDTs de valor grande introduzidos no SQL Server 2008.  
   
 [Dados XML no SQL Server](xml-data-sql-server.md)  
-Descreve como trabalhar com dados XML recuperados do SQL Server.  
+Descreve como trabalhar com os dados XML recuperados do SQL Server.  
   
 ## <a name="reference"></a>Referência  
 <xref:System.Data.DataSet>  
-Descreve a classe `DataSet` e todos os seus membros.  
+Descreve a classe `DataSet` e todos os membros dela.  
   
 <xref:System.Data.SqlTypes>  
-Descreve o namespace `SqlTypes` e todos os seus membros.  
+Descreve o namespace `SqlTypes` e todos os membros dele.  
   
 <xref:System.Data.SqlDbType>  
-Descreve a enumeração de `SqlDbType` e todos os seus membros.  
+Descreve a enumeração `SqlDbType` e todos os membros dela.  
   
 <xref:System.Data.DbType>  
-Descreve a enumeração de `DbType` e todos os seus membros.  
+Descreve a enumeração `DbType` e todos os membros dela.  
   
 ## <a name="next-steps"></a>Próximas etapas
 - [Parâmetros com valor de tabela](table-valued-parameters.md)

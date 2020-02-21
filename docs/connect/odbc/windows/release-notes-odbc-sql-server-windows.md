@@ -7,16 +7,16 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-ms.reviewer: v-jizho2, v-chojas, genemi
+ms.reviewer: v-chojas
 author: v-makouz
-ms.author: v-makouz
+ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 98e7aec7883bc12d04ce24aba7b9a93244f707f6
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
-ms.translationtype: MTE75
+ms.openlocfilehash: c53832e40b055792d98b9bffea368d156d535545
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041163"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910936"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Notas sobre a Versão para ODBC para SQL Server no Windows
 
@@ -44,13 +44,21 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="175-january-2020"></a>17.5, janeiro de 2020
+
+| Recurso adicionado | Detalhes |
+| :------------ | :------ |
+| O atributo de conexão SQL_COPT_SS_SPID para recuperar o SPID sem viagens de ida e volta ao servidor | Confira [Atributos e palavras-chave da cadeia de conexão e DSN](../dsn-connection-string-attribute.md). |
+| Correções de bugs. | Veja [Correções de bug](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## <a name="1742-october-2019"></a>17.4.2, outubro de 2019
 
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
-| Suporte para pontos de extremidade de Azure Key Vault adicionais | Confira [Uso do Always Encrypted com o driver ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
-| Suporte para configuração da versão de classificação de dados | Veja [Classificação de Dados](../data-classification.md#bkmk-version). |
-| Agora, o driver instalará a biblioteca de autenticação do Azure active Drirectory (Adal. dll) usada para autenticação no Azure | |
+| Compatibilidade com pontos de extremidade adicionais do Azure Key Vault | Confira [Uso do Always Encrypted com o driver ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
+| Compatibilidade com a configuração da versão de classificação de dados | Veja [Classificação de Dados](../data-classification.md#bkmk-version). |
+| Incluir a Biblioteca de Autenticação do Azure Active Directory (adal.dll) no instalador | Agora incluída na instalação do driver base, ela atualizará as instalações existentes da Biblioteca de Autenticação do Microsoft Active Directory para SQL Server, removendo-as da lista de aplicativos instalados no Windows. |
 | Correções de bugs. | Veja [Correções de bug](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
@@ -59,7 +67,7 @@ GeneMi (and CraigG).  2019/03/30.
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
 | Always Encrypted com enclaves seguros. | Confira [Uso do Always Encrypted com o driver ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
-| Configurações de Keep Alive de TCP configuráveis. | Confira [Conectar-se ao SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md). |
+| Definições keep alive do TCP configuráveis. | Confira [Conectar-se ao SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md). |
 | Correções de bugs. | Veja [Correções de bug](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
@@ -112,23 +120,23 @@ Esta versão do ODBC contém suporte para a Instância Gerenciada SQL do Azure (
 > [!NOTE]
 > Há várias diferenças ao usar a Instância Gerenciada:
 >
-> - Não há suporte para FILESTREAM.
-> - Não há suporte para acesso ao sistema de arquivos local, mas ele é necessário para itens como tracefiles.
-> - Não há suporte para criar UDT do caminho local.
-> - Não há suporte para Autenticação Integrada do Windows.
-> - Não há suporte para DTC.
+> - Não há compatibilidade com FILESTREAM.
+> - Não há compatibilidade com o acesso ao sistema de arquivos local, mas ele é necessário para itens como tracefiles.
+> - Não há compatibilidade com a criação de UDT do caminho local.
+> - Não há compatibilidade com a Autenticação Integrada do Windows.
+> - Não há compatibilidade com o DTC.
 > - A conta `sa` não está presente (a conta padrão é chamada de `cloudSA`).
 > - TDS token ERROR (0xAA) retorna o nome do servidor incorreto.
-> - Não há suporte para caracteres especiais no nome do banco de dados.
-> - Não há suporte para ALTER DATABASE [dbname1] MODIFY NAME = [dbname2].
+> - Não há compatibilidade com caracteres especiais no nome do banco de dados.
+> - Não há compatibilidade com ALTER DATABASE [dbname1] MODIFY NAME = [dbname2].
 > - As mensagens de erro são sempre mostradas em inglês, independentemente das configurações de idioma (mesmas que as do Azure).
 
 ## <a name="131"></a>13.1
 
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
-| O ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] adiciona suporte para [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) e [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md). | Esses suportes adicionais estão disponíveis ao se conectar ao Microsoft SQL Server 2016 ou a uma versão posterior. |
-| Há palavras-chave e atributos de pooling de conexões, que correspondem aos suportes para Always Encrypted e Azure Active Directory. | Essas palavras-chave e atributos são descritos em [Pooling de conexões com reconhecimento de driver no ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
+| O ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] adiciona suporte para [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) e [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md). | Essas compatibilidades adicionais estão disponíveis ao se conectar ao Microsoft SQL Server 2016 ou a uma versão posterior. |
+| Há palavras-chave e atributos de pooling de conexões, que correspondem à compatibilidade com Always Encrypted e Azure Active Directory. | Essas palavras-chave e atributos são descritos em [Pooling de conexões com reconhecimento de driver no ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ## <a name="13"></a>13

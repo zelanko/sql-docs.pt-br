@@ -1,10 +1,7 @@
 ---
-title: Elemento index (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Elemento de índice (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e7b86c8ac990c7add4856e2c00e43550903f55a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 1d865d3ea2893f255155ee03c229731eed9d48a8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034829"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307701"
 ---
 # <a name="index-element-dta"></a>Elemento de índice (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Contém informações sobre um índice que você quer criar ou descartar para uma configuração especificada pelo usuário.  
+
+Contém informações sobre um índice que você quer criar ou descartar para uma configuração especificada pelo usuário.  
   
 ## <a name="syntax"></a>Sintaxe  
   

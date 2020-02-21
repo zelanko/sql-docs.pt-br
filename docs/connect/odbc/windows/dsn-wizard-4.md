@@ -1,5 +1,5 @@
 ---
-title: Tela 4 do assistente de fonte de dados (driver ODBC para SQL Server) | Microsoft Docs
+title: Tela 4 do Assistente de Fonte de Dados (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989460"
 ---
 # <a name="data-source-wizard-screen-4"></a>Tela 4 do Assistente de Fonte de Dados
@@ -33,7 +33,7 @@ Quando essa opção está selecionada, os dados passados por conexões estabelec
 
 ### <a name="trust-server-certificate"></a>Confiar em certificado do servidor
 
-Essa opção é aplicável somente quando o **uso de criptografia forte para dados** está habilitado. Quando selecionado, o certificado do servidor não será validado para ter o nome de host correto do servidor e ser emitido por uma autoridade de certificação confiável. 
+Essa opção é aplicável somente quando a opção **Usar criptografia forte para dados** está habilitada. Quando essa opção estiver selecionada, o certificado do servidor não será validado para ter o nome de host correto do servidor e ser emitido por uma autoridade de certificação confiável. 
 
 ### <a name="perform-translation-for-character-data"></a>Executar tradução de dados de caracteres
 
@@ -65,7 +65,7 @@ Especifica o número de vezes para tentar novamente uma tentativa de conexão ma
 
 ### <a name="connect-retry-interval-seconds"></a>Intervalo de repetições de conexão (segundos)
 
-Especifica o número de segundos entre cada tentativa de repetição de conexão. Para obter mais informações sobre a operação dessa e as opções de **contagem de repetição** de conexão, consulte [resiliência de conexão no driver ODBC do Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
+Especifica o número de segundos entre cada tentativa de conexão. Para obter mais informações sobre a operação desse recurso e as opções de **Contagem de tentativas de conexão**, confira [Resiliência de conexão no driver ODBC do Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
 
 ### <a name="back"></a>Voltar
 
@@ -73,7 +73,7 @@ Clique neste botão para voltar à página anterior do assistente.
 
 ### <a name="finish"></a>Concluir
 
-Se as informações especificadas nessa tela estiverem concluídas, você poderá clicar em **concluir**. O DSN é criado usando todos os atributos especificados nesta e em outras telas do assistente, e você terá a oportunidade de testar o DSN recém-criado.
+Se as informações especificadas nesta tela estiverem completas, clique em **Concluir**. O DSN é criado usando todos os atributos especificados nesta e em outras telas do assistente e você tem a oportunidade de testar o DSN recém-criado.
 
 ## <a name="next-steps"></a>Próximas etapas
 

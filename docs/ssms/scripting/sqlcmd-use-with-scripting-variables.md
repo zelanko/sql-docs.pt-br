@@ -1,6 +1,6 @@
 ---
-title: Usar sqlcmd com variáveis de script | Microsoft Docs
-ms.custom: ''
+title: Usar sqlcmd com variáveis de script
+ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
 ms.technology: scripting
@@ -18,18 +18,18 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 142fd6bdd0ceb39003aba5c8ec8131c9df6427dd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3a084f84473dd6394aa0ad09e1730bcdb13e4a22
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262861"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761610"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd – Usar com variáveis de script
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   As variáveis usadas em scripts normalmente são chamadas de variáveis de script. As variáveis de script habilitam um script ser usado em vários cenários. Por exemplo, se você desejar executar um script em vários servidores, em vez de modificar o script para cada servidor, pode usar uma variável de script para o nome do servidor. Alterando o nome do servidor fornecido para a variável de script, o mesmo script pode ser executado em diferentes servidores.  
   
- As variáveis de script podem ser definidas explicitamente usando o comando **setvar** , ou implicitamente, usando a opção **sqlcmd-v** .  
+ As variáveis de script podem ser definidas explicitamente usando o comando **setvar** ou implicitamente usando a opção **sqlcmd -v**.  
   
  Este tópico também inclui exemplos que definem variáveis ambientais no prompt de comando Cmd.exe usando **SET**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68262861"
   
 3.  Shell de comando (**SET X=Y**) definido no prompt de comando antes de iniciar o **sqlcmd**  
   
-4.  **sqlcmd-v** X=Y  
+4.  **sqlcmd -v** X=Y  
   
 5.  **:Setvar** X Y  
   
@@ -119,9 +119,9 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 | SQLCMDLOGINTIMEOUT      | -l             | R/W | "8" (segundos)           |
 | SQLCMDSTATTIMEOUT       | -T             | R/W | "0" = espere indefinidamente |
 | SQLCMDHEADERS           | -H             | R/W | "0"                     |
-| SQLCMDCOLSEP            | -S             | R/W | " ."                     |
+| SQLCMDCOLSEP            | -S             | R/W | " "                     |
 | SQLCMDCOLWIDTH          | -w             | R/W | "0"                     |
-| SQLCMDPACKETSIZE        | -A             | R   | "4096"                  |
+| SQLCMDPACKETSIZE        | -a             | R   | "4096"                  |
 | SQLCMDERRORLEVEL        | -M             | R/W | "0"                     |
 | SQLCMDMAXVARTYPEWIDTH   | -y             | R/W | "256"                   |
 | SQLCMDMAXFIXEDTYPEWIDTH | -y             | R/W | "0" = ilimitado         |
@@ -136,7 +136,7 @@ R/W indica que o valor pode ser redefinido usando o comando **setvar** e que com
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-the-setvar-command-in-a-script"></a>A. Usando o comando setvar em um script  
+### <a name="a-using-the-setvar-command-in-a-script"></a>a. Usando o comando setvar em um script  
  Muitas opções do **sqlcmd** podem ser controladas em um script usando o comando **setvar** . No exemplo a seguir, o script `test.sql` é criado e nele a variável `SQLCMDLOGINTIMEOUT` é definida como `60` segundos e outra variável de script, `server`, é definida como `testserver`. O código a seguir está em `test.sql`.  
 
 ```

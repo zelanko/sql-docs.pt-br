@@ -18,10 +18,10 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ff907d83a4d793169872d5abaa059e8b6a1d91b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572745"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interface de usuário do Designer de consultas gráficas
@@ -30,13 +30,13 @@ ms.locfileid: "65572745"
  .  
   
 ## <a name="graphical-query-designer"></a>Designer de Consultas Gráficas  
- Este designer de consultas gráficas dá suporte a três tipos de comandos de consulta: **Text**, **StoredProcedure**ou **TableDirect**. Antes de criar uma consulta para seu conjunto de dados, selecione uma opção de tipo de comando na página Consulta da caixa de diálogo [Propriedades do Conjunto de Dados](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) .  
+ Este designer de consultas gráficas dá suporte a três tipos de comandos de consulta: **Text**, **StoredProcedure** ou **TableDirect**. Antes de criar uma consulta para seu conjunto de dados, selecione uma opção de tipo de comando na página Consulta da caixa de diálogo [Propriedades do Conjunto de Dados](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) .  
   
  As seguintes opções estão disponíveis para o tipo de consulta:  
   
 -   **Text** Dá suporte a texto de consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] padrão para fontes de dados de bancos de dados relacionais, incluindo extensões de processamento de dados para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Oracle.  
   
--   **TableDirect** Seleciona todas as colunas da tabela especificada. Por exemplo, para uma tabela chamada Clientes, isso equivale à instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] `SELECT * FROM Customers`.  
+-   **TableDirect** Seleciona todas as colunas da tabela especificada. Por exemplo, para uma tabela chamada Clientes, isso equivale à instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]`SELECT * FROM Customers`.  
   
 -   **StoredProcedure** Dá suporte a chamadas para procedimentos armazenados na fonte de dados. Para usar esta opção, é necessário que você tenha recebido do administrador de banco de dados as permissões de execução no procedimento armazenado na fonte de dados.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "65572745"
 ### <a name="command-type-text"></a>Tipo de comando Text  
  No tipo **Text** , o designer de consultas gráficas apresenta quatro áreas, ou painéis. É possível especificar colunas, aliases, valores de classificação e valores de filtro para uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] . Você pode exibir o texto da consulta gerado a partir das seleções feitas, executar a consulta e ver o conjunto de resultados. A figura a seguir mostra os quatro painéis.  
   
- ![Designer de consultas gráficas para consulta sql](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "Designer de consultas gráficas para consulta sql")  
+ ![Designer de consultas gráficas para consulta SQL](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "Designer de consultas gráficas para consulta SQL")  
   
  A tabela a seguir descreve a função de cada painel.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65572745"
 |Diagrama|Exibe representações gráficas das tabelas da consulta. Use este painel para selecionar campos e definir relações entre tabelas.|  
 |Grade|Exibe uma lista dos campos retornados pela consulta. Use este painel para definir aliases, ordem de classificação, filtros, grupos e parâmetros.|  
 |SQL|Exibe a consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] representada pelos painéis Diagrama e Grade. Use este painel para gravar ou atualizar uma consulta usando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
-|Resultado|Exibe os resultados da consulta. Para executar a consulta, clique com o botão direito do mouse em qualquer painel e clique em **Executar**ou no botão **Executar** da barra de ferramentas.|  
+|Result|Exibe os resultados da consulta. Para executar a consulta, clique com o botão direito do mouse em qualquer painel e clique em **Executar**ou no botão **Executar** da barra de ferramentas.|  
   
  Quando você altera as informações contidas em qualquer um dos três primeiros painéis, as alterações serão exibidas nos demais painéis. Por exemplo, se você adicionar uma tabela ao painel Diagrama, ela será adicionada automaticamente à consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] do painel SQL. A inclusão de um campo em uma consulta do painel SQL adiciona o campo à lista do painel Grade e atualiza a tabela do painel Diagrama automaticamente.  
   
@@ -69,18 +69,18 @@ ms.locfileid: "65572745"
 |Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas.|  
-|**Importar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Botão de alternância do painel do diagrama Mostrar/Ocultar](../../reporting-services/report-data/media/rsqdicon-showhidediagram.gif "Botão de alternância do painel do diagrama Mostrar/Ocultar")|Mostre ou oculte o painel Diagrama.|  
-|![Botão de alternância do painel da grade Mostrar ou Ocultar](../../reporting-services/report-data/media/rsqdicon-showhidegrid.gif "Botão de alternância do painel da grade Mostrar ou Ocultar")|Mostre ou oculte o painel Grade.|  
-|![Botão de alternância do painel sql Mostrar ou Ocultar](../../reporting-services/report-data/media/rsqdicon-showhidesql.gif "Botão de alternância do painel sql Mostrar ou Ocultar")|Mostre ou oculte o painel SQL.|  
-|![Botão de alternância do painel de resultado Mostrar ou Ocultar](../../reporting-services/report-data/media/rsqdicon-showhideresult.gif "Botão de alternância do painel de resultado Mostrar ou Ocultar")|Mostre ou oculte o painel Resultado.|  
+|**Importaçãoação**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|![Botão de alternância Mostrar/Ocultar o painel Diagrama](../../reporting-services/report-data/media/rsqdicon-showhidediagram.gif "Botão de alternância Mostrar/Ocultar o painel Diagrama")|Mostre ou oculte o painel Diagrama.|  
+|![Botão de alternância Mostrar ou Ocultar o painel Grade](../../reporting-services/report-data/media/rsqdicon-showhidegrid.gif "Botão de alternância Mostrar ou Ocultar o painel Grade")|Mostre ou oculte o painel Grade.|  
+|![Botão de alternância Mostrar ou Ocultar Painel SQL](../../reporting-services/report-data/media/rsqdicon-showhidesql.gif "Botão de alternância Mostrar ou Ocultar Painel SQL")|Mostre ou oculte o painel SQL.|  
+|![Botão de alternância Mostrar ou Ocultar Painel de Resultados](../../reporting-services/report-data/media/rsqdicon-showhideresult.gif "Botão de alternância Mostrar ou Ocultar Painel de Resultados")|Mostre ou oculte o painel Resultado.|  
 |![Executar a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta.|  
-|![Verificar SQL no botão do painel SQL](../../reporting-services/report-data/media/rsqdicon-verifysql.gif "Verificar SQL no botão do painel SQL")|Verifique se a sintaxe do texto da consulta está correta.|  
-|![Definir classificação crescente no campo selecionado](../../reporting-services/report-data/media/rsqdicon-sortascending.gif "Definir classificação crescente no campo selecionado")|Defina a ordem de classificação como **Classificação Crescente** para a coluna selecionada no painel Diagrama.|  
-|![Definir classificação decrescente no campo selecionado](../../reporting-services/report-data/media/rsqdicon-sortdescending.gif "Definir classificação decrescente no campo selecionado")|Defina a ordem de classificação como **Classificação Decrescente** para a coluna selecionada no painel Diagrama.|  
-|![Remover filtro no campo selecionado](../../reporting-services/report-data/media/rsqdicon-removefilter.gif "Remover filtro no campo selecionado")|Remova o filtro para a coluna selecionada no painel de diagrama que está marcado como tendo um filtro (![Gráfico de filtro ao lado da coluna de filtro selecionada](../../reporting-services/report-data/media/rsqdicon-filter.gif "Gráfico de filtro ao lado da coluna de filtro selecionada")).|  
+|![Botão Verificar SQL no painel SQL](../../reporting-services/report-data/media/rsqdicon-verifysql.gif "Botão Verificar SQL no painel SQL")|Verifique se a sintaxe do texto da consulta está correta.|  
+|![Definir Classificação Crescente no campo selecionado](../../reporting-services/report-data/media/rsqdicon-sortascending.gif "Definir Classificação Crescente no campo selecionado")|Defina a ordem de classificação como **Classificação Crescente** para a coluna selecionada no painel Diagrama.|  
+|![Definir Classificação Decrescente no campo selecionado](../../reporting-services/report-data/media/rsqdicon-sortdescending.gif "Definir Classificação Decrescente no campo selecionado")|Defina a ordem de classificação como **Classificação Decrescente** para a coluna selecionada no painel Diagrama.|  
+|![Remover filtro no campo selecionado](../../reporting-services/report-data/media/rsqdicon-removefilter.gif "Remover filtro no campo selecionado")|Remova o filtro da coluna selecionada no painel Diagrama marcado como tendo um filtro (![Gráfico de filtro ao lado da coluna de filtro selecionada](../../reporting-services/report-data/media/rsqdicon-filter.gif "Gráfico de filtro ao lado da coluna de filtro selecionada")).|  
 |![Usar Agrupar por para o campo selecionado](../../reporting-services/report-data/media/rsqdicon-usegroupby.gif "Usar Agrupar por para o campo selecionado")|Mostre ou oculte a coluna **Agrupar por** do painel Grade. Quando o botão de alternância **Agrupar por** está ativo, uma coluna extra, chamada **Agrupar por** , é exibida no painel Grade e cada valor das colunas selecionadas na consulta usa como padrão **Agrupar por**, que faz com que a coluna selecionada seja incluída em uma cláusula Group By no texto SQL. Use o botão Agrupar por para adicionar automaticamente uma cláusula GROUP BY que inclua todas as colunas da cláusula SELECT. Quando a cláusula SELECT inclui chamadas de função de agregação (por exemplo, SUM(ColumnName)), inclua cada coluna que não seja de agregação na cláusula GROUP BY se desejar que ela apareça no conjunto de resultados.<br /><br /> Para aparecer no painel Resultado, cada coluna da consulta deve ter uma função de agregação definida para uso no cálculo do valor a ser exibido no painel Resultado, ou a coluna da consulta deve ser especificada na cláusula GROUP BY da consulta SQL.|  
-|![Adicionar uma nova tabela ao painel de diagrama](../../reporting-services/report-data/media/rsqdicon-addtable.gif "Adicionar uma nova tabela ao painel de diagrama")|Adicione uma nova tabela da fonte de dados ao painel Diagrama.<br /><br /> **Observação** Quando você adiciona uma nova tabela, o designer de consultas tenta combinar as relações de chave estrangeira da fonte de dados. Depois de adicionar uma tabela, verifique se as relações de chave estrangeira representadas por vínculos entre as tabelas estão corretas.|  
+|![Adicionar uma nova tabela ao painel Diagrama](../../reporting-services/report-data/media/rsqdicon-addtable.gif "Adicionar uma nova tabela ao painel Diagrama")|Adicione uma nova tabela da fonte de dados ao painel Diagrama.<br /><br /> **Observação** Quando você adiciona uma nova tabela, o designer de consultas tenta combinar as relações de chave estrangeira da fonte de dados. Depois de adicionar uma tabela, verifique se as relações de chave estrangeira representadas por vínculos entre as tabelas estão corretas.|  
   
 #### <a name="example"></a>Exemplo  
  A consulta a seguir retorna a lista de sobrenomes da tabela [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Pessoa **do banco de dados** :  
@@ -106,7 +106,7 @@ EXEC uspGetEmployeeManagers '1';
 |Painel|Função|  
 |----------|--------------|  
 |Lista suspensa Tabela|Lista todas as tabelas disponíveis na fonte de dados. Selecione um na lista para torná-lo ativo.|  
-|Resultado|Exibe todas as colunas da tabela selecionada. Para executar a consulta de tabela, clique no botão **Executar** da barra de ferramentas.|  
+|Result|Exibe todas as colunas da tabela selecionada. Para executar a consulta de tabela, clique no botão **Executar** da barra de ferramentas.|  
   
 #### <a name="toolbar-buttons-for-the-command-type-tabledirect"></a>Botões da barra de ferramentas relacionados ao tipo de comando TableDirect  
  A barra de ferramentas do designer de consultas gráficas fornece uma lista suspensa das tabelas existentes na fonte de dados. A tabela a seguir lista cada botão e a função correspondente.  
@@ -114,8 +114,8 @@ EXEC uspGetEmployeeManagers '1';
 |Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas.|  
-|**Importar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Ícone do botão Designer de consultas genérico](../../reporting-services/report-data/media/icongenericquerydesigner.gif "Ícone do botão Designer de consultas genérico")|Alterne entre o designer de consultas genéricas e o designer de consultas gráficas, preservando a exibição do texto da consulta ou do procedimento armazenado.|  
+|**Importaçãoação**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|![Ícone do botão Designer de Consultas Genéricas](../../reporting-services/report-data/media/icongenericquerydesigner.gif "Ícone do botão Designer de Consultas Genéricas")|Alterne entre o designer de consultas genéricas e o designer de consultas gráficas, preservando a exibição do texto da consulta ou do procedimento armazenado.|  
 |![Executar a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Executar a consulta")|Selecione todas as colunas da tabela selecionada.|  
   
 ### <a name="command-type-storedprocedure"></a>Tipo de comando StoredProcedure  
@@ -124,7 +124,7 @@ EXEC uspGetEmployeeManagers '1';
 |Painel|Função|  
 |----------|--------------|  
 |Lista suspensa Procedimento armazenado|Lista todos os procedimentos armazenados disponíveis na fonte de dados. Selecione um na lista para torná-lo ativo.|  
-|Resultado|Exibe o resultado da execução do procedimento armazenado. Para executar o procedimento armazenado selecionado, clique no botão **Executar** na barra de ferramentas.|  
+|Result|Exibe o resultado da execução do procedimento armazenado. Para executar o procedimento armazenado selecionado, clique no botão **Executar** na barra de ferramentas.|  
   
 #### <a name="toolbar-buttons-for-command-type-storedprocedure"></a>Botões da barra de ferramentas relacionados ao tipo de comando StoredProcedure  
  A barra de ferramentas do designer de consultas gráficas fornece uma lista suspensa dos procedimentos armazenados existentes na fonte de dados. A tabela a seguir lista cada botão e a função correspondente.  
@@ -132,7 +132,7 @@ EXEC uspGetEmployeeManagers '1';
 |Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas.|  
-|**Importar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|**Importaçãoação**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Executar a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Executar a consulta")|Execute o procedimento armazenado selecionado.|  
 |Lista suspensa Procedimento armazenado|Clique na seta para baixo para exibir uma lista dos procedimentos armazenados disponíveis na fonte de dados. Clique em qualquer procedimento armazenado da lista para selecioná-lo.|  
   

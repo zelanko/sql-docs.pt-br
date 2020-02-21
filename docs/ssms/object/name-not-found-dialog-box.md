@@ -1,6 +1,6 @@
 ---
-title: Caixa de diálogo Nome Não Encontrado | Microsoft Docs
-ms.custom: ''
+title: caixa de diálogo Nome Não Encontrado
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d2ba40f3580a01bb7f72f54bd69407853820a6d7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c6dc23b79346a3e163f896b3f85f120cc9ccc903
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264067"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257168"
 ---
-# <a name="name-not-found-dialog-box"></a>Caixa de diálogo Nome Não Encontrado
+# <a name="name-not-found-dialog-box"></a>caixa de diálogo Nome Não Encontrado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Um ou mais nomes de objeto não pôde ser encontrado na caixa de diálogo. Selecione uma opção para continuar.  
   

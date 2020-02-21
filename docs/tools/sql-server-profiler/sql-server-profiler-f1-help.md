@@ -1,56 +1,28 @@
 ---
-title: Caixas de diálogo SQL Server Profiler | Microsoft Docs
-ms.custom: ''
-ms.date: 07/07/2017
+title: Caixas de diálogo do SQL Server Profiler
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: reference
-f1_keywords:
-- sql13.pro.traceproperties.general.f1;
-- sql13.pro.traceproperties.eventsselection.f1;
-- sql13.pro.traceproperties.eventsselection.f1
-- sql13.pro.traceproperties.general.f1
-- sql13.pro.tracetemplateproperties
-- sql13.pro.edittracetemplateproperties.general.f1
-- sql13.pro.edittracetemplateproperties.eventsselection.f1
-- sql13.pro.tracefileproperties.general.f1
-- sql13.pro.tracefileproperties.eventsselection.f1
-- sql13.pro.performancecounterlimit.f1
-- sql13.pro.replay.tools.generaloptions.f1
-- sql13.pro.replay.tools.sourcetable.f1
-- sql13.pro.replay.tools.destinationtable.f1
-- sql13.pro.replay.generaloptions.f1
-- sql13.pro.replay.generaloptions.advanced.f1
-- sql13.pro.find.f1
-- sql13.pro.organize.columns.f1
-- sql13.pro.editfilter.f1
-helpviewer_keywords:
-- Profiler [SQL Server Profiler], help
-- SQL Server Profiler, help
-- Trace Properties dialog box
-- Trace Template Properties dialog box
-- Trace Files Properties dialog box
-- Performance Counters List dialog box
-- General Options dialog box
-- Select Workload Table dialog box
-- Destination Table dialog box
-- Replay Configuration dialog box
-- Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 32cc19df636f6e0fa98dca0ab45dd8142d9db54f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 07/07/2017
+ms.openlocfilehash: 24375bafa9123c5bba4adf83fce81427f39722e4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059697"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307856"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Caixas de diálogo do SQL Server Profiler
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-O Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma ferramenta que captura eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um servidor. Os eventos são salvos em um arquivo de rastreamento que posteriormente pode ser analisado ou utilizado para reproduzir uma série específica de etapas na tentativa de diagnosticar um problema. A seguir estão os comandos e as configurações disponíveis nas caixas de diálogo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]do.  
+
+O Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma ferramenta que captura eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um servidor. Os eventos são salvos em um arquivo de rastreamento que posteriormente pode ser analisado ou utilizado para reproduzir uma série específica de etapas na tentativa de diagnosticar um problema. A seguir estão os comandos e as configurações disponíveis nas caixas de diálogo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 ## <a name="trace-properties"></a>Propriedades do rastreamento
 ### <a name="general-tab"></a>Guia Geral
 Use a guia **Geral** da caixa de diálogo **Propriedades do Rastreamento** para exibir ou especificar propriedades de um rastreamento.  
@@ -86,7 +58,7 @@ Use a guia **Seleção de Eventos** da caixa de diálogo **Propriedades do Rastr
 |**Organizar Colunas**|Altera a ordem das colunas no rastreamento e agrupa os resultados em uma ou mais colunas.  
 
 ## <a name="trace-template-properties"></a>Propriedades do modelo de rastreamento 
-### <a name="new-general-tab"></a>Novo (guia geral)
+### <a name="new-general-tab"></a>Novo (guia Geral)
 Use a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamento** para criar novos modelos de rastreamento usando as opções a seguir. Para acessar essa caixa de diálogo, no menu **Arquivo** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] aponte para **Modelos** e clique em **Novo**.
 
 |Item|Descrição
@@ -96,8 +68,8 @@ Use a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamen
 |**Basear novo modelo no existente**|Use um modelo da lista como base para esse modelo. Todos os eventos selecionados, colunas de dados e filtros inicialmente correspondem aos do modelo existente e podem, depois, ser modificados conforme necessário.  
 |**Usar como modelo padrão para o tipo de servidor selecionado**|Use esse modelo por padrão para rastreamentos criados para esse tipo de servidor.  
 
-### <a name="edit-general-tab"></a>Editar (guia geral)
- Use a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamento** para visualizar ou editar modelos de rastreamento existentes usando as seguintes opções. Para acessar essa caixa de diálogo, no menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **do** , aponte para **Modelos**e clique em **Editar Modelo**.  
+### <a name="edit-general-tab"></a>Editar (guia Geral)
+ Use a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamento** para visualizar ou editar modelos de rastreamento existentes usando as seguintes opções. Para acessar essa caixa de diálogo, no menu **Arquivo** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], aponte para **Modelos** e clique em **Editar Modelo**.  
 
 |Item|Descrição
 |---|---
@@ -170,7 +142,7 @@ A caixa de diálogo **Limite de Contadores de Desempenho** é populada com objet
 2.  Verifique os contadores que você deseja correlacionar com o arquivo de rastreamento do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
 
 Para selecionar todos os contadores de um objeto de desempenho, marque a caixa adjacente ao objeto. Marcando o nó mais alto, que indica o computador, você seleciona todos os objetos e contadores de desempenho contidos no arquivo de log de desempenho. 
-## <a name="toolsoptions-general-options-page"></a>Ferramentas/opções (página Opções Gerais)
+## <a name="toolsoptions-general-options-page"></a>Ferramentas/opções (página Opções gerais)
 Use a caixa de diálogo **Opções Gerais** para exibir ou especificar as opções a seguir.  
 ### <a name="display-options"></a>Opções de exibição  
 
@@ -266,7 +238,7 @@ Use a caixa de diálogo **Localizar** para pesquisar um rastreamento para caract
 
 |Item|Descrição
 |---|---
-|**Localizar**|Insira o texto que deseja pesquisar. A pesquisa corresponde a qualquer cadeia de caracteres que contenha a cadeia especificada. Por exemplo, a pesquisa por "Concluído" corresponde a "SQL:LoteConcluído". Caracteres curinga (*, ?, etc.) não têm suporte.  
+|**Localizar**|Insira o texto que deseja pesquisar. A pesquisa corresponde a qualquer cadeia de caracteres que contenha a cadeia especificada. Por exemplo, a pesquisa por "Concluído" corresponde a "SQL:BatchCompleted". Caracteres curinga (*, ?, etc.) não têm suporte.  
 |**Pesquisar na coluna**|Clique em uma coluna de dados para pesquisar ou em **\<Todas as colunas>** para pesquisar todas as colunas de dados no rastreamento.  
 |**Diferenciar maiúsculas de minúsculas**|Localiza texto que tem maiúsculas e minúsculas iguais às da caixa **Localizar** . Desmarque essa caixa de seleção para localizar exemplos no rastreamento que tenham caracteres de texto tanto com letras maiúsculas como com minúsculas.  
 |**Coincidir palavra inteira**|Restringe a pesquisa a palavras inteiras. Desmarque a caixa de seleção **Coincidir palavra inteira** para pesquisar caracteres em uma palavra.  
@@ -279,7 +251,7 @@ Use a caixa de diálogo **Organizar Colunas** para selecionar colunas de dados p
 - O agrupamento organiza todas as classes de evento de um tipo específico juntando-as na janela de rastreamento. Porém, os eventos não são recolhidos sob o tipo de classe de evento.  
 
 Quando você agrupa ou agrega eventos em uma janela de rastreamento, as colunas selecionadas para agrupamento ou agregação permanecem fixas na janela de exibição, mas é possível rolar para a direita ou esquerda a fim de exibir todas as outras colunas de dados.  
-Para acessar essa caixa de diálogo, abra um arquivo ou tabela de rastreamento existente e clique em **Propriedades** no menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **do** . Na caixa de diálogo **Propriedades do Rastreamento** , clique na guia **Seleção de Eventos** e em **Organizar Colunas**. Você também pode clicar em **Organizar Colunas** na guia **Seleção de Eventos** ao criar um rastreamento novo.  
+Para acessar essa caixa de diálogo, abra um arquivo ou tabela de rastreamento existente e clique em **Propriedades** no menu **Arquivo** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Na caixa de diálogo **Propriedades do Rastreamento** , clique na guia **Seleção de Eventos** e em **Organizar Colunas**. Você também pode clicar em **Organizar Colunas** na guia **Seleção de Eventos** ao criar um rastreamento novo.  
 Mova os nomes da coluna de dados sob **Grupos** para agrupar ou agregar classes de evento na janela de rastreamento.
 - Para agregar eventos, mova uma coluna de dados para **Grupos**. Com isso, todos os eventos de um tipo específico são recolhidos abaixo do nome do tipo de classe de evento na janela de rastreamento. Um sinal de adição ( **+** ) é exibido à esquerda do nome de classe de evento. Clique no sinal de mais para expandir o tipo de classe de evento e exibir todos os eventos. Você pode ativar e desativar a agregação e o agrupamento clicando em **Exibição Agregada** ou **Exibição Agrupada** no menu **Exibição** .
 - Para agrupar eventos, mova mais de uma coluna de dados para **Grupos**. Com isso, todos os eventos de um tipo específico são agrupados na janela de rastreamento, mas os eventos não são recolhidos abaixo do nome de cada tipo de classe de evento. Você pode alternar entre exibições agrupadas e não agrupadas clicando em **Exibição Agrupada** no menu Exibição. Quando mais de uma coluna de dados é movida para **Grupos**, a opção de alternar para a **Exibição Agregada** fica indisponível.
@@ -287,7 +259,7 @@ Mova os nomes da coluna de dados sob **Grupos** para agrupar ou agregar classes 
 |Item|Descrição
 |---|---
 |**Colunas**|Lista de colunas de dados disponíveis para serem movidas para **Grupos**. Clique no sinal de adição ( **+** ) à esquerda de **Colunas** para expandir a lista.  
-|**Para cima**|Depois de selecionar uma coluna de dados, clique em **Para Cima** para mover colunas de dados para **Grupos**. Você também pode clicar em **Acima** para reorganizar a exibição de colunas na janela de rastreamento.  
+|**Operante**|Depois de selecionar uma coluna de dados, clique em **Para Cima** para mover colunas de dados para **Grupos**. Você também pode clicar em **Acima** para reorganizar a exibição de colunas na janela de rastreamento.  
 |**Para baixo**|Depois de selecionar uma coluna de dados, clique em **Para Baixo** para mover as colunas de dados para fora de **Grupos**. Você também pode clicar em **Abaixo** para reorganizar a exibição de colunas na janela de rastreamento.  
 
 ## <a name="edit-filter"></a>Editar filtro
@@ -296,7 +268,7 @@ Use a caixa de diálogo **Editar Filtro** para criar e modificar filtros da colu
  >Para colunas de dados do tipo cadeia de caracteres, os critérios de filtro exibirão um valor de cadeia de caracteres LIKE ou NOT LIKE.  
 
 ## <a name="select-template-name"></a>Selecionar Nome do Modelo
-Use a caixa de diálogo **Selecionar Nome do Modelo** para selecionar um modelo de rastreamento [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] existente para exportar para um arquivo no sistema operacional. Você também pode usar essa caixa de diálogo para selecionar ou digitar um nome diferente a fim de salvar um modelo de rastreamento ao editar um modelo de rastreamento existente. Para acessar essa caixa de diálogo ao exportar um modelo, no menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Arquivo** aponte para **Modelos**e clique em **Exportar Modelo**. Para acessar essa caixa de diálogo ao mudar o nome de um modelo, no menu **Arquivo** , aponte para **Modelos**, aponte para **Editar Modelo**e, então, clique em **Salvar Como**.  
+Use a caixa de diálogo **Selecionar Nome do Modelo** para selecionar um modelo de rastreamento [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] existente para exportar para um arquivo no sistema operacional. Você também pode usar essa caixa de diálogo para selecionar ou digitar um nome diferente a fim de salvar um modelo de rastreamento ao editar um modelo de rastreamento existente. Para acessar essa caixa de diálogo ao exportar um modelo, no menu **Arquivo** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], aponte para **Modelos** e clique em **Exportar Modelo**. Para acessar essa caixa de diálogo ao mudar o nome de um modelo, no menu **Arquivo** , aponte para **Modelos**, aponte para **Editar Modelo**e, então, clique em **Salvar Como**.  
 
 |Item|Descrição
 |---|---

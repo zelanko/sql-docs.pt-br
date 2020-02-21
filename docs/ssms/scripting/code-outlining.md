@@ -1,6 +1,6 @@
 ---
-title: Estrutura de tópicos de código | Microsoft Docs
-ms.custom: ''
+title: Estruturação do código
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c718d4f6ff1d057c23f8041be755da54f9b5da58
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 366928df4dfe2b4b3c7c2749201d1d3980937f01
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256642"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254030"
 ---
 # <a name="code-outlining"></a>Estruturação do código
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,19 +40,19 @@ ms.locfileid: "68256642"
   
  Quando você clica no sinal de subtração na linha \<InnerTag>, apenas a InnerTag é recolhida, conforme é mostrado na ilustração a seguir.  
   
- ![Código XML com nó interno ocultado](../../ssms/scripting/media/editoutlinexmlinnercol.gif "Código XML com nó interno ocultado")  
+ ![Código XML com nó interno oculto](../../ssms/scripting/media/editoutlinexmlinnercol.gif "Código XML com nó interno oculto")  
   
  Quando você move o ponteiro sobre a caixa com os três pontos, o código da região recolhida é exibido em uma dica de ferramenta, como mostra a ilustração a seguir.  
   
- ![Código XML com dica de ferramenta mostrando o código oculto](../../ssms/scripting/media/editoutlinexmlmouse.gif "Código XML com dica de ferramenta mostrando o código oculto")  
+ ![Código XML com dica de ferramenta que mostra código oculto](../../ssms/scripting/media/editoutlinexmlmouse.gif "Código XML com dica de ferramenta que mostra código oculto")  
   
  Quando você clica no sinal de subtração na linha \<MiddleTag>, tanto a MiddleTag e quanto a InnerTag são recolhidas, como é mostrado na ilustração a seguir.  
   
- ![Código XML com as marcas interna e central ocultadas](../../ssms/scripting/media/editoutlinexmlmiddlecol.gif "Código XML com as marcas interna e central ocultadas")  
+ ![Código XML com as marcas interna e central ocultas](../../ssms/scripting/media/editoutlinexmlmiddlecol.gif "Código XML com as marcas interna e central ocultas")  
   
  Quando você clica no sinal de menos na linha \<OuterTag>, todas as três linhas são recolhidas, como mostra a ilustração a seguir.  
   
- ![Código XML que mostra todas as três marcas ocultadas](../../ssms/scripting/media/editoutlinexmloutercol.gif "Código XML que mostra todas as três marcas ocultadas")  
+ ![Código XML que mostra todas as três marcas ocultas](../../ssms/scripting/media/editoutlinexmloutercol.gif "Código XML que mostra todas as três marcas ocultas")  
   
 ### <a name="database-engine-query-editor-regions"></a>Regiões do Editor de Consultas do Mecanismo de Banco de Dados  
  O Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] gera regiões de estrutura de tópicos para cada elemento na seguinte hierarquia:  

@@ -1,5 +1,5 @@
 ---
-title: Driver de OLE DB para recursos de SQL Server | Microsoft Docs
+title: Recursos do Driver do OLE DB para SQL Server | Microsoft Docs
 description: Recursos do OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 02/11/2019
@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 46f7de1e57686a0f54368407580d90236152d147
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989051"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>Recursos do OLE DB Driver for SQL Server
@@ -36,10 +36,10 @@ ms.locfileid: "67989051"
  Aborda como o OLE DB Driver for SQL Server dá suporte a operações assíncronas, o que possibilita o retorno imediato sem bloqueio no thread de chamada.  
 
 [Como usar o Azure Active Directory](using-azure-active-directory.md)  
-Discute novos métodos de autenticação introduzidos em OLE DB driver 18.2.1 que têm configurações padrão mais seguras e permitem a conexão a uma instância do banco de dados SQL do Azure usando uma identidade federada.
+Discute novos métodos de autenticação introduzidos no Driver do OLE DB 18.2.1 que têm configurações padrão mais seguras e permitem a conexão a uma instância do Banco de Dados SQL do Azure usando uma identidade federada.
 
  [Usando MARS &#40;Multiple Active Result Sets&#41;](../../oledb/features/using-multiple-active-result-sets-mars.md)  
- Discute como OLE DB driver para SQL Server dá suporte a MARS (vários conjuntos de resultados ativos). Os MARS permitem executar e receber vários conjuntos de resultados por meio de uma única conexão de banco de dados.  
+ Aborda como o Driver do OLE DB para SQL Server dá suporte a MARS (conjuntos de resultados ativos múltiplos). Os MARS permitem executar e receber vários conjuntos de resultados por meio de uma única conexão de banco de dados.  
   
  [Usando tipos de dados XML](../../oledb/features/using-xml-data-types.md)  
  Aborda como o OLE DB Driver for SQL Server dá suporte ao tipo de dados XML, um tipo de dados baseado em XML que pode ser usado como um tipo de coluna, um tipo de variável, um tipo de parâmetro ou um tipo de retorno de função.  
@@ -48,7 +48,7 @@ Discute novos métodos de autenticação introduzidos em OLE DB driver 18.2.1 qu
  Aborda como o OLE DB Driver for SQL Server dá suporte a UDTs (Tipos Definidos pelo Usuário), que estendem o sistema de tipos SQL permitindo que você armazene objetos e estruturas de dados personalizadas em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [Usando tipos de valor grande](../../oledb/features/using-large-value-types.md)  
- Discute como OLE DB driver para SQL Server dá suporte a tipos de dados de valor grande, que são tipos de dados de objeto grande (LOB).  
+ Aborda como o Driver do OLE DB para SQL Server dá suporte a tipos de dados de valor grande, que são tipos de dados LOB (objeto grande).  
   
  [Alterando senhas programaticamente](../../oledb/features/changing-passwords-programmatically.md)  
  Aborda como o OLE DB Driver for SQL Server dá suporte ao tratamento de senhas expiradas, de forma que as senhas agora possam ser alteradas no cliente sem o envolvimento do administrador.  
@@ -57,31 +57,31 @@ Discute novos métodos de autenticação introduzidos em OLE DB driver 18.2.1 qu
  Aborda como o OLE DB Driver for SQL Server dá suporte à melhoria do controle de versão de linha que melhora o desempenho do banco de dados prevenindo cenários de bloqueio de leitor/gravador.  
   
  [Trabalhando com notificações de consulta](../../oledb/features/working-with-query-notifications.md)  
- Discute como OLE DB driver para SQL Server dá suporte à notificação do consumidor na modificação do conjunto de linhas.  
+ Aborda como o Driver do OLE DB para SQL Server dá suporte à notificação do consumidor na modificação do conjunto de linhas.  
   
  [Executando operações de cópia em massa](../../oledb/features/performing-bulk-copy-operations.md)  
  Aborda como o OLE DB Driver for SQL Server dá suporte a operações de cópia em massa que permitem a transferência de grandes quantidades de dados para dentro ou fora de uma tabela ou uma exibição do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [Usando criptografia sem validação](../../oledb/features/using-encryption-without-validation.md)  
- Discute como usar o driver OLE DB para SQL Server para criptografar dados enviados ao servidor sem validar o certificado.  
+ Aborda como usar o Driver do OLE DB para SQL Server para criptografar dados enviados para o servidor sem validar o certificado.  
   
  [Parâmetros com valor de tabela &#40;OLE DB Driver for SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)  
- Discute OLE DB driver para SQL Server suporte para os parâmetros com valor de tabela.  
+ Aborda o suporte do Driver do OLE DB para SQL Server para parâmetros com valor de tabela.  
   
  [Tipos de dados CLR grandes definidos pelo usuário](../../oledb/features/large-clr-user-defined-types.md)  
  Aborda o suporte a UDTs CLR (Common Language Runtime) grandes.  
   
  [Suporte a FILESTREAM](../../oledb/features/filestream-support.md)  
- Discute OLE DB driver para SQL Server suporte para o recurso FILESTREAM avançado.  
+ Aborda o suporte do Driver do OLE DB para SQL Server para o recurso avançado FILESTREAM.  
   
  [Suporte a SPN &#40;Nome da Entidade de Serviço&#41; em conexões de cliente](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)  
  Aborda como o suporte a SPNs (nomes da entidade de serviço) foi estendido para possibilitar autenticação mútua em todos os protocolos.  
   
  [Suporte às colunas esparsas no Driver do OLE DB para SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)  
- Discute OLE DB driver para SQL Server suporte a colunas esparsas.  
+ Aborda o suporte do Driver do OLE DB para SQL Server para colunas esparsas.  
   
  [Aprimoramentos de data e hora](../../oledb/features/date-and-time-improvements.md)  
- Discute o suporte adicionado ao driver OLE DB para SQL Server para os tipos de dados de data e hora.  
+ Aborda o suporte adicionado ao Driver do OLE DB para SQL Server para os novos tipos de dados de data e hora.  
   
  [Descoberta de metadados](../../oledb/features/metadata-discovery.md)  
  Discute melhorias de descoberta de metadados que foram feitas no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
@@ -90,7 +90,7 @@ Discute novos métodos de autenticação introduzidos em OLE DB driver 18.2.1 qu
  Discute uma alteração no comportamento apresentada no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Se você fornecer um buffer de comprimento fixo ao associar um resultado de coluna ou um parâmetro de saída e se o caractere **wchar** gravado no buffer antes do caractere de terminação for um ponto de código alternativo alto de um par alternativo e se o próximo caractere **wchar** for um ponto de código alternativo baixo, o OLE DB Driver for SQL Server não adicionará o ponto de código alternativo alto ao buffer.  
  
  [Suporte ao UTF-8 no OLE DB Driver for SQL Server](../../oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
- Discute o suporte para codificação de servidor UTF-8 e precauções de configuração que os usuários devem seguir ao trabalhar com dados codificados em UTF-8.
+ Aborda o suporte para codificação de servidor UTF-8 e precauções de configuração que os usuários devem tomar ao trabalhar usando dados codificados em UTF-8.
   
  [Suporte ao Driver do OLE DB para SQL Server para alta disponibilidade e recuperação de desastre](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  Aborda como seu aplicativo pode ser configurado para aproveitar os recursos de alta disponibilidade e de recuperação de desastre adicionados no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
@@ -99,7 +99,7 @@ Discute novos métodos de autenticação introduzidos em OLE DB driver 18.2.1 qu
  Aborda as melhorias ao OLE DB Driver for SQL Server e o rastreamento de dados que fornece acesso a informações de diagnóstico no buffer de anéis e no log de XEvents.  
   
  [Suporte ao Driver do OLE DB para SQL Server para LocalDB](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
- Discute OLE DB driver para SQL Server suporte para o recurso LocalDB.  
+ Aborda o suporte do Driver do OLE DB para SQL Server para o recurso LocalDB.  
   
 ## <a name="see-also"></a>Consulte Também  
  [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)      

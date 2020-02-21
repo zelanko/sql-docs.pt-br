@@ -1,6 +1,6 @@
 ---
-title: Elementos gerais da interface do usuário | Microsoft Docs
-ms.custom: ''
+title: Elementos gerais da interface de usuário
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f8832355b2ef5ae1969d3bd98e84f654ba9cde16
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8a046f3f94e6c1ab59342f61fac1750bd6da1459
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265057"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246888"
 ---
 # <a name="general-user-interface-elements"></a>Elementos gerais da interface de usuário
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-O **Editor**, a janela **Propriedades** e a **Caixa de Ferramentas** são alguns dos elementos básicos do [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+O **Editor**, a janela **Propriedades** e a **Caixa de ferramentas** são alguns dos elementos básicos de [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
 [Caixa de diálogo Sobre](../ssms/about-dialog-box.md)  

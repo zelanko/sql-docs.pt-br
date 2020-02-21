@@ -1,22 +1,22 @@
 ---
 title: 'Tutorial do Python: preparar dados do cluster'
-description: Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dados do SQL Server para executar clustering em Python com os Serviços de Machine Learning do SQL Server.
+description: Na parte dois desta série de tutoriais de quatro partes, você preparará os dados do SQL para executarem clustering em Python com os Serviços de Machine Learning do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/30/2019
+ms.date: 12/17/2019
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11c24d5403e6540da52ec3557c64e1dc8fa57c78
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 8ee19ddfa59f8f1a4a32c0adf08b8f36eef9aa1f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727084"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75305542"
 ---
 # <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>Tutorial: Preparar dados para categorizar clientes em Python com os Serviços de Machine Learning do SQL Server
 
@@ -55,10 +55,10 @@ Na cadeia de conexão, substitua os detalhes da conexão conforme necessário.
 
 ```python
 # Load packages.
+import pyodbc
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import revoscalepy as revoscale
 from scipy.spatial import distance as sci_distance
 from sklearn import cluster as sk_cluster
 
@@ -69,7 +69,7 @@ from sklearn import cluster as sk_cluster
 ################################################################################################
 
 # Connection string to connect to SQL Server named instance.
-conn_str = 'Driver=SQL Server;Server=localhost;Database=tpcxbb_1gb;Trusted_Connection=True;'
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
 
 input_query = '''SELECT
 ss_customer_sk AS customer,
@@ -115,14 +115,10 @@ column_info = {
 
 ## <a name="load-the-data-into-a-data-frame"></a>Carregar os dados em um quadro de dados
 
-Os resultados da consulta são retornados para o Python usando a função revoscalepy **RxSqlServerData**. Como parte do processo, você usará as informações de coluna definidas no script anterior.
+Os resultados da consulta são retornados para o Python usando a função **read_sql** do Pandas. Como parte do processo, você usará as informações de coluna definidas no script anterior.
 
 ```python
-data_source = revoscale.RxSqlServerData(sql_query=input_query, column_Info=column_info,
-                                        connection_string=conn_str)
-revoscale.RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=False)
-# import data source and convert to pandas dataframe.
-customer_data = pd.DataFrame(revoscale.rx_import(data_source))
+customer_data = pandas.read_sql(input_query, conn_str)
 ```
 
 Agora, exiba o início do quadro de dados para verificar se ela parece correta.

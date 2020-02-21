@@ -1,10 +1,9 @@
 ---
-title: Gerenciar etapas de trabalho | Microsoft Docs
-ms.custom: ''
+title: Gerenciar etapas de trabalho
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,13 +23,15 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dfb4633efcc190782ce62c17d8c7f26f29b8a0a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 61bf9d30ef6e789e56784ac78bf95215f377e85a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258046"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256109"
 ---
 # <a name="manage-job-steps"></a>Gerenciar etapas de trabalho
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ Como as etapas de trabalho são executadas no contexto de um usuário específic
   
 -   Programas executáveis e comandos de sistema operacional.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+-   Instruções[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] tarefas.  
   
@@ -162,7 +163,7 @@ Ao criar uma etapa de trabalho de comando do [!INCLUDE[ssASnoversion](../../incl
   
 -   Identificar o servidor OLAP do banco de dados no qual a etapa de trabalho será executada.  
   
--   Digitar a instrução a ser executada. A instrução deve ser um XML para o método [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **do** . A instrução talvez não tenha um envelope SOAP completo ou um XML para o método [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **do** . Observe que, embora o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dê suporte a envelopes SOAP completos e ao método **Discover** , as etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não dão.  
+-   Digitar a instrução a ser executada. A instrução deve ser um XML para o método [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Execute**. A instrução talvez não tenha um envelope SOAP completo ou um XML para o método [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Discover**. Observe que, embora o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dê suporte a envelopes SOAP completos e ao método **Discover** , as etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não dão.  
   
 ### <a name="analysis-services-query-job-steps"></a>Etapas de trabalho de consulta do Analysis Services  
 Ao criar uma etapa de trabalho de consulta do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] , é necessário:  
@@ -196,7 +197,7 @@ Ao criar uma etapa de trabalho de pacote do [!INCLUDE[ssISnoversion](../../inclu
   
 -   Adicionar ou modificar opções de linha de comando.  
   
-Observe que, se você implantar o pacote no Catálogo do SSIS e especificar o **Catálogo do SSIS** como a origem do pacote, grande parte dessas informações de configuração será obtida automaticamente do pacote. Na guia **Configuração** , você pode especificar o ambiente, valores de parâmetros, valores de gerenciadores de conexões, substituições de propriedade e se o pacote é executado em um ambiente de tempo de execução de 32 bits.  
+Observe que, se você implantar o pacote no Catálogo do SSIS e especificar o **Catálogo do SSIS** como a origem do pacote, grande parte dessas informações de configuração será obtida automaticamente do pacote. Na guia **Configuração** , você pode especificar o ambiente, valores de parâmetros, valores de gerenciadores de conexões, substituições de propriedade e se o pacote é executado em um ambiente de runtime de 32 bits.  
   
 Para obter mais informações sobre como criar etapas de trabalho que executam pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consulte [Trabalhos do SQL Server Agent para pacotes](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
   

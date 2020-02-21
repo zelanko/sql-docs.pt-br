@@ -1,10 +1,7 @@
 ---
-title: Utilitário ssbdiagnose (Service Broker) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Utilitário ssbdiagnose (Service Broker)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,16 +22,22 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a4f198a1b492719a6cf6916f4ee483424b3a7fa
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 5775600e5dc6e0bebd74104dcc9bfa350873de3e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211408"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254199"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitário ssbdiagnose (Service Broker)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  O utilitário **ssbdiagnose** relata problemas em conversas do [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou na configuração de serviços do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . É possível fazer verificações de configuração para dois serviços ou um único serviço. Os problemas são reportados na janela de prompt de comando como texto legível ou XML formatado que pode ser redirecionado para um arquivo ou outro programa.
+
+O utilitário **ssbdiagnose** relata problemas em conversas do [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou na configuração de serviços do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . É possível fazer verificações de configuração para dois serviços ou um único serviço. Os problemas são reportados na janela de prompt de comando como texto legível ou XML formatado que pode ser redirecionado para um arquivo ou outro programa.
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -99,7 +102,7 @@ ssbdiagnose
   
 ```  
   
-## <a name="command-line-options"></a>Opções da linha de comando  
+## <a name="command-line-options"></a>Opções de linha de comando  
  **-XML**  
  Especifica que a saída de **ssbdiagnose** será gerada como XML formatado. Essa saída pode ser redirecionado para um arquivo ou outro aplicativo. Se **-XML** não for especificado, a saída de **ssbdiagnose** será formatada como texto legível.  
   
@@ -157,27 +160,27 @@ WHERE database_id = DB_ID();
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  Solicita verificação se o diálogo está configurado corretamente para o nível especificado de criptografia:  
   
- **ON**: sem configuração padrão. A segurança de diálogo total está configurada. Certificados foram implantados nos dois lados do diálogo, uma associação de serviço remoto está presente e a instrução GRANT SEND do serviço de destino especificou o usuário iniciador.  
+ **LIGADO**: configuração padrão. A segurança de diálogo total está configurada. Certificados foram implantados nos dois lados do diálogo, uma associação de serviço remoto está presente e a instrução GRANT SEND do serviço de destino especificou o usuário iniciador.  
   
- **OFF**: nenhuma segurança de diálogo está configurada. Nenhum certificado foi implantado, nenhuma associação de serviço remoto foi criada e a instrução GRANT SEND do serviço iniciador especificou a função **public** .  
+ **DESLIGADO**: nenhuma segurança de diálogo está configurada. Nenhum certificado foi implantado, nenhuma associação de serviço remoto foi criada e a instrução GRANT SEND do serviço iniciador especificou a função **public** .  
   
- **ANONYMOUS**: a segurança de diálogo anônima está configurada. Um certificado foi implantado, a associação de serviço remoto especificou a cláusula anônima e a instrução GRANT SEND do serviço de destino especificou a função **public** .  
+ **ANÔNIMO**: a segurança de diálogo anônima está configurada. Um certificado foi implantado, a associação de serviço remoto especificou a cláusula anônima e a instrução GRANT SEND do serviço de destino especificou a função **public** .  
   
  **RUNTIME**  
- Solicita um relatório de problemas que causam erros de tempo de execução para uma conversa do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Se nem **-NEW** ou **-ID** forem especificadas, o **ssbdiagnose** monitorará todas as conversas em todos os bancos de dados especificados nas opções de conexão. Se **-NEW** ou **-ID** forem especificadas, o **ssbdiagnose** criará uma lista de IDs especificadas nos parâmetros.  
+ Solicita um relatório de problemas que causam erros de runtime para uma conversa do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Se nem **-NEW** ou **-ID** forem especificadas, o **ssbdiagnose** monitorará todas as conversas em todos os bancos de dados especificados nas opções de conexão. Se **-NEW** ou **-ID** forem especificadas, o **ssbdiagnose** criará uma lista de IDs especificadas nos parâmetros.  
   
- Durante a execução de **ssbdiagnose** , todos os eventos do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] que indicam erros em tempo de execução são registrados. Registra os eventos que ocorrem para as ID especificadas, além de eventos de nível de sistema. Se forem encontrados erros em tempo de execução, **ssbdiagnose** executará um relatório de configuração sobre a configuração associada.  
+ Durante a execução de **ssbdiagnose** , todos os eventos do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] que indicam erros em runtime são registrados. Registra os eventos que ocorrem para as ID especificadas, além de eventos de nível de sistema. Se forem encontrados erros em runtime, **ssbdiagnose** executará um relatório de configuração sobre a configuração associada.  
   
- Por padrão, os erros em tempo de execução não são incluídos no relatório de saída, somente os resultados da análise de configuração. Use **-SHOWEVENTS** para que os erros em tempo de execução sejam incluídos no relatório.  
+ Por padrão, os erros em runtime não são incluídos no relatório de saída, somente os resultados da análise de configuração. Use **-SHOWEVENTS** para que os erros em runtime sejam incluídos no relatório.  
   
  **-SHOWEVENTS**  
  Especifica que **ssbdiagnose** relata eventos do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] durante um relatório RUNTIME. Somente eventos considerados condições de erro são reportados. Por padrão, **ssbdiagnose** monitora apenas eventos de erro; não os relata na saída.  
   
  **-NEW**  
- Solicita o monitoramento no tempo de execução da primeira conversa iniciada após o começo da execução de **ssbdiagnose** .  
+ Solicita o monitoramento no runtime da primeira conversa iniciada após o começo da execução de **ssbdiagnose**.  
   
  **-ID**  
- Solicita o monitoramento de tempo de execução dos elementos de conversa especificados. Você pode especificar **-ID** várias vezes.  
+ Solicita o monitoramento de runtime dos elementos de conversa especificados. Você pode especificar **-ID** várias vezes.  
   
  Se você especificar um identificador de conversa, somente os eventos associados ao ponto de extremidade da conversa associada serão reportados. Se você especificar uma ID de conversa, todos os eventos dessa conversa e seus pontos de extremidade iniciador e de destino serão reportados. Se uma ID de grupo de conversa for especificada, todos os eventos de todas as conversas e pontos de extremidade no grupo de conversa serão reportados.  
   
@@ -201,7 +204,7 @@ WHERE database_id = DB_ID();
  Identificadores de conversa são relatados na coluna **conversation_id** das exibições de catálogo **sys.conversation_endpoints** .  
   
  **-TIMEOUT** _timeout_interval_  
- Especifica o número de segundos para a execução de um relatório **RUNTIME** . Se **-TIMEOUT** não for especificado, o relatório de tempo de execução será executado indefinidamente. **-TIMEOUT** é usado somente em relatórios de **RUNTIME** , não relatórios de **CONFIGURATION** . Use ctrl + C para sair de **ssbdiagnose** if **-TIMEOUT** não foi especificado ou para encerrar um relatório de tempo de execução antes de o intervalo **-** limite expirar. *timeout_interval* deve ser um número entre 1 e 2.147.483.647.  
+ Especifica o número de segundos para a execução de um relatório **RUNTIME** . Se **-TIMEOUT** não for especificado, o relatório de runtime será executado indefinidamente. **-TIMEOUT** é usado somente em relatórios de **RUNTIME** , não relatórios de **CONFIGURATION** . Use ctrl + C para sair de **ssbdiagnose** if **-TIMEOUT** não foi especificado ou para encerrar um relatório de runtime antes de o intervalo **-** limite expirar. *timeout_interval* deve ser um número entre 1 e 2.147.483.647.  
   
  **\<runtimeconnectionoptions>**  
  Especifica as informações de conexão para os bancos de dados que contêm os serviços associados aos elementos de conversa sendo monitorados. Se todos os serviços estiverem no mesmo banco de dados, você terá de especificar apenas uma cláusula **CONNECT TO** . Se os serviços estiverem em bancos de dados separados, você deverá fornecer uma cláusula **CONNECT TO** para cada banco de dados. Se **runtimeconnectionoptions** não for especificado, **ssbdiagnose** usará as informações de conexão de **baseconnectionoptions**.  
@@ -213,10 +216,10 @@ WHERE database_id = DB_ID();
   
  Se **-E** ou **-U** não for especificado, **ssbdiagnose** usará o valor da variável de ambiente SQLCMDUSER. Se SQLCMDUSER também não for definido, **ssbdiagnose** usará a Autenticação do Windows.  
   
- Se a opção **-E** for usada com as opções **-U** ou **-P**, uma mensagem de erro será gerada.  
+ Se a opção **-E** for usada com as opções **-U** ou **-P** , uma mensagem de erro será gerada.  
   
  **-U** _login_id_  
- Abra uma conexão de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a ID de logon especificada. O logon deve ser membro da função de servidor fixa **sysadmin**.  
+ Abra uma conexão de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a ID de logon especificada. O logon deve ser membro da função de servidor fixa **sysadmin** .  
   
  Se **-E** ou **-U** não for especificado, **ssbdiagnose** usará o valor da variável de ambiente SQLCMDUSER. Se SQLCMDUSER também não for definido, **ssbdiagnose** tentará se conectar usando o modo de Autenticação do Windows com base na conta do Windows do usuário que está executando **ssbdiagnose**.  
   
@@ -231,13 +234,13 @@ WHERE database_id = DB_ID();
  Se a opção **-P** for especificada sem uma senha, **ssbdiagnose** usará o valor padrão (NULL).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Para saber mais, confira [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Para obter mais informações, confira [Senhas fortes](../../relational-databases/security/strong-passwords.md).  
   
- O prompt de senha é exibido imprimindo-se o prompt de senha no console, como a seguir: `Password:`  
+ A solicitação de senha é exibida no console, como a seguir: `Password:`  
   
  A entrada do usuário está oculta. Isso significa que nada é exibido e o cursor fica em posição.  
   
- Será gerada uma mensagem de erro se a opção **-P** for usada com a opção **-E**.  
+ Será gerada uma mensagem de erro se a opção **-P** for usada com a opção **-E** .  
   
  Se a opção **-P** for seguida por mais de um argumento, uma mensagem de erro será gerada.  
   
@@ -255,7 +258,7 @@ WHERE database_id = DB_ID();
  **-?**  
  Exibe a ajuda de linha de comando.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use **ssbdiagnose** para fazer o seguinte:  
   
 -   Confirmar que não há erros de configuração em um aplicativo [!INCLUDE[ssSB](../../includes/sssb-md.md)] recém-configurado.  
@@ -273,7 +276,7 @@ WHERE database_id = DB_ID();
   
  O relatório de configuração **ssbdiagnose** analisa apenas um serviço do [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou um único par de serviços cada vez que é executado. Para obter relatórios sobre vários pares de serviços do [!INCLUDE[ssSB](../../includes/sssb-md.md)] , crie um arquivo de comando .cmd que chame **ssbdiagnose** várias vezes.  
   
-## <a name="runtime-reporting"></a>Relatório de tempo de execução  
+## <a name="runtime-reporting"></a>Relatório de runtime  
  Quando -RUNTIME é especificado, o **ssbdiagnose** procura todos os bancos de dados especificados no **runtimeconnectionoptions** e no **baseconnectionoptions** para criar uma lista de IDs do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . A lista completa de IDs criada depende dos itens especificados para - NEW e - ID:  
   
 -   Se **-NEW** ou **-ID** não for especificado, a lista conterá todas as conversas de todos os bancos de dados especificados nas opções de conexão.  
@@ -288,7 +291,7 @@ WHERE database_id = DB_ID();
   
  A lista não inclui elementos de bancos de dados que não são cobertos pelas opções de conexão. Por exemplo, suponhamos que você use **-ID** para especificar uma ID de conversa, mas forneça somente uma cláusula **runtimeconnectionoptions** para o banco de dados iniciador e não para o banco de dados de destino. **ssbdiagnose** não incluirá o identificador de conversa de destino em sua lista de IDs, somente a ID da conversa e o identificador da conversa do iniciador.  
   
- O**ssbdiagnose** monitora os eventos de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] dos bancos de dados cobertos por **runtimeconnectionoptions** e **baseconnectionoptions**. Ele procura eventos do [!INCLUDE[ssSB](../../includes/sssb-md.md)] que indicam que um erro foi encontrado por um ou mais IDs do [!INCLUDE[ssSB](../../includes/sssb-md.md)] na lista de tempo de execução. O**ssbdiagnose** também procura eventos de erro do [!INCLUDE[ssSB](../../includes/sssb-md.md)] no nível do sistema não especificamente associados a nenhum grupo de conversa.  
+ O**ssbdiagnose** monitora os eventos de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] dos bancos de dados cobertos por **runtimeconnectionoptions** e **baseconnectionoptions**. Ele procura eventos do [!INCLUDE[ssSB](../../includes/sssb-md.md)] que indicam que um erro foi encontrado por um ou mais IDs do [!INCLUDE[ssSB](../../includes/sssb-md.md)] na lista de runtime. O**ssbdiagnose** também procura eventos de erro do [!INCLUDE[ssSB](../../includes/sssb-md.md)] no nível do sistema não especificamente associados a nenhum grupo de conversa.  
   
  Se **ssbdiagnose** localizar erros na conversa, o utilitário relatar a causa raiz dos eventos executando também um relatório de configuração. **ssbdiagnose** usa os metadados dos bancos de dados para tentar determinar as instâncias, as IDs do [!INCLUDE[ssSB](../../includes/sssb-md.md)] , os bancos de dados, os serviços e os contratos usados pela conversa. Em seguida, executa um relatório de configuração que usa todas as informações disponíveis.  
   
@@ -315,7 +318,7 @@ WHERE database_id = DB_ID();
 ## <a name="examples"></a>Exemplos  
  Esta seção contém exemplos do uso de **ssbdiagnose** em um prompt de comando.  
   
-### <a name="a-checking-the-configuration-of-two-services-in-the-same-database"></a>A. Verificando a configuração de dois serviços no mesmo banco de dados  
+### <a name="a-checking-the-configuration-of-two-services-in-the-same-database"></a>a. Verificando a configuração de dois serviços no mesmo banco de dados  
  O exemplo a seguir mostra como solicitar um relatório de configuração quando estas condições são verdadeiras:  
   
 -   Os serviços iniciador e de destino estão no mesmo banco de dados.  
@@ -393,7 +396,7 @@ ssbdiagnose RUNTIME -ID D68D77A9-B1CF-41BF-A5CE-279ABCAB140D
 ```  
   
 ### <a name="h-monitor-the-status-of-a-conversation-in-two-databases-in-the-same-instance"></a>H. Monitorar o status de uma conversa em dois bancos de dados na mesma instância  
- O exemplo a seguir mostra como monitorar uma conversa específica na qual os serviços iniciador e de destino estão em bancos de dados separados na mesma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. O exemplo usa **baseconnectionoptions** para especificar as informações de instância e logon e duas cláusulas CONNECT TO para especificar os bancos de dados. -SHOWEVENTS é especificada para que todos os eventos de tempo de execução sejam incluídos na saída do relatório.  
+ O exemplo a seguir mostra como monitorar uma conversa específica na qual os serviços iniciador e de destino estão em bancos de dados separados na mesma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. O exemplo usa **baseconnectionoptions** para especificar as informações de instância e logon e duas cláusulas CONNECT TO para especificar os bancos de dados. -SHOWEVENTS é especificada para que todos os eventos de runtime sejam incluídos na saída do relatório.  
   
 ```  
 ssbdiagnose -E -S TestComputer/DevTestInstance RUNTIME -SHOWEVENTS   

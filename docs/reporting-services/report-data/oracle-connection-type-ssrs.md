@@ -1,6 +1,6 @@
 ---
 title: Tipo de conexão Oracle (SSRS, Servidor de Relatórios do Power BI e Construtor de Relatórios) | Microsoft Docs
-ms.date: 07/26/2019
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -8,31 +8,55 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2942ad1432b2674ab0b9906b5ab6e2f07be83ae7
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
-ms.translationtype: MTE75
+ms.openlocfilehash: f6918d240a6da7f961899d1a4cb71996bbec9ec6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632080"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259394"
 ---
 # <a name="oracle-connection-type-ssrs-power-bi-report-server-and-report-builder"></a>Tipo de conexão Oracle (SSRS, Servidor de Relatórios do Power BI e Construtor de Relatórios)
 
-Para usar dados de um banco de dados Oracle no seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo Oracle. Esse tipo de fonte de dados interno usa o Provedor de Dados Oracle diretamente e exige um componente do software cliente Oracle. Este artigo explica como baixar e instalar drivers para Reporting Services, Servidor de Relatórios do Power BI e Construtor de Relatórios.
+Para usar dados de um banco de dados Oracle no seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo Oracle. Esse tipo de fonte de dados interno usa o Provedor de Dados Oracle diretamente e exige um componente do software cliente Oracle. Este artigo explica como baixar e instalar drivers para o Reporting Services, o Servidor de Relatórios do Power BI e o Construtor de Relatórios.
 
-## <a name="64-bit-drivers-for-the-report-servers"></a>drivers de 64 bits para os servidores de relatório
+## <a name="64-bit-drivers-for-the-report-servers"></a>Drivers de 64 bits para os servidores de relatório
 
-Servidor de Relatórios do Power BI e SQL Server Reporting Services 2016 e 2017 todos usam ODP.NET gerenciados. As etapas a seguir só são necessárias para o ao usar os drivers 18x mais recentes. Eles supõem que você instalou os arquivos no c:\oracle64.
+O Servidor de Relatórios do Power BI e o SQL Server Reporting Services 2016 e 2017 usam o ODP.NET Gerenciado. As etapas a seguir só são necessárias ao usar os drivers 18x mais recentes. Elas supõem que você tenha instalado os arquivos em c:\oracle64.
 
-1. No site de download da Oracle, instale o [oracle 64-bit ODAC Oracle Universal Installer (Oui)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html). 
-2. Registrar o cliente gerenciado do ODP.NET no GAC: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/Action: GAC/providerpath: C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
-3. Adicionar entradas de cliente gerenciado ODP.NET a Machine. config: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/Action: config/Force/Product: odpm/frameworkVersion: v 4.0.30319/ProductVersion: 4.122.18.3
+1. No site de download da Oracle, instale o [OUI (Instalador Universal Oracle) ODAC de 64 bits da Oracle](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html). 
+2. Registre o cliente gerenciado ODP.NET no GAC:  C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. Adicione entradas do cliente gerenciado ODP.NET a machine.config:  C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /productversion:4.122.18.3
 
-## <a name="32-bit-drivers-for-report-builder"></a>drivers de 32 bits para Construtor de Relatórios
-As etapas a seguir só são necessárias para o ao usar os drivers 18x mais recentes. Eles supõem que você instalou os arquivos no c:\oracle32.
+### <a name="power-bi-reports-use-unmanaged-odpnet"></a>Os relatórios do Power BI usam o ODP.NET Não Gerenciado
 
-1. No site de download da Oracle, instale o [oracle 32-bit ODAC Oracle Universal Installer (Oui)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html).
-2. Registrar o cliente gerenciado do ODP.NET no GAC: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/Action: GAC/providerpath: C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
-3. Adicionar entradas de cliente gerenciado ODP.NET a Machine. config: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/Action: config/Force/Product: odpm/frameworkVersion: v 4.0.30319/ProductVersion: 4.122.18.3
+Os relatórios do Power BI usam o **ODP.NET Não Gerenciado**. Siga estas etapas para registrar o ODP.NET Não Gerenciado:
+
+1. Registre o cliente não gerenciado ODP.NET no GAC:
+
+   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+2. Adicione entradas de cliente não gerenciado ODP.NET a machine.config:
+
+   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+ 
+## <a name="32-bit-drivers-for-report-builder"></a>Drivers de 32 bits para o Construtor de Relatórios
+
+As etapas a seguir só são necessárias ao usar os drivers 18x mais recentes. Elas supõem que você tenha instalado os arquivos em c:\oracle32.
+
+1. No site de download da Oracle, instale o [OUI (Instalador Universal Oracle) ODAC de 32 bits da Oracle](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html).
+2. Registre o cliente gerenciado ODP.NET no GAC:  C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. Adicione entradas do cliente gerenciado ODP.NET a machine.config:  C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+
+### <a name="power-bi-reports-use-unmanaged-odpnet"></a>Os relatórios do Power BI usam o ODP.NET Não Gerenciado  
+
+Os relatórios do Power BI usam o **ODP.NET Não Gerenciado**. Siga estas etapas para registrar o ODP.NET Não Gerenciado:
+
+1. Registre o cliente não gerenciado ODP.NET no GAC:
+
+   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+2. Adicione entradas de cliente não gerenciado ODP.NET a machine.config:
+
+   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+ 
 
  Use as informações deste tópico para criar uma fonte de dados. Para obter instruções passo a passo, consulte [Adicionar e verificar uma conexão de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
@@ -43,7 +67,7 @@ As etapas a seguir só são necessárias para o ao usar os drivers 18x mais rece
 Data Source="Oracle"; Unicode="True"  
 ```  
   
- Para obter mais exemplos de cadeias de conexão, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Para ver mais exemplos de cadeias de conexão, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Credenciais  
  As credenciais são necessárias para executar consultas, visualizar o relatório localmente e visualizá-lo no servidor de relatório.  
@@ -56,7 +80,7 @@ Data Source="Oracle"; Unicode="True"
 ##  <a name="Query"></a> Consultas  
  Para criar um conjunto de dados, você pode selecionar um procedimento armazenado na lista suspensa ou criar uma consulta SQL. Para criar uma consulta, use o designer de consulta baseado em texto. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas Baseadas em Texto &#40;Construtor de Relatórios&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
- É possível especificar procedimentos armazenados que retornem apenas um conjunto de resultados. Não há suporte para o uso de consultas com base no cursor.  
+ É possível especificar procedimentos armazenados que retornem apenas um conjunto de resultados. Não há suporte para o uso de consultas baseadas em cursor.  
   
 ##  <a name="Parameters"></a> Parâmetros  
  Se a consulta incluir variáveis de consulta, os parâmetros de relatório correspondentes serão gerados automaticamente. Essa extensão dá suporte a parâmetros nomeados. Para o Oracle versão 9 ou posterior, há suporte para parâmetros de vários valores.  
@@ -67,7 +91,7 @@ Data Source="Oracle"; Unicode="True"
 ##  <a name="Remarks"></a> Comentários  
  Para que você possa se conectar a uma fonte de dados Oracle, o administrador do sistema deve ter instalado a versão do .NET Data Provider for Oracle que dê suporte à recuperação de dados do banco de dados Oracle. O provedor de dados deve ser instalado no mesmo computador que o Construtor de Relatórios e também no servidor de relatório.  
   
- Para obter mais informações, consulte o seguinte:  
+ Para obter mais informações, consulte os seguintes artigos:  
   
 -   [Como usar o Reporting Services para configurar e acessar uma fonte de dados Oracle](https://support.microsoft.com/kb/834305)  
 -   [Como adicionar permissões à entidade de segurança de NETWORK SERVICE](https://support.microsoft.com/kb/870668)  

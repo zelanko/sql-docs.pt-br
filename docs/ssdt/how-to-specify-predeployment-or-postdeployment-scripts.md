@@ -1,23 +1,24 @@
 ---
-title: 'Como fazer: especificar scripts de pré-implantação ou pós-implantação| Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Especificar scripts pré ou pós-implantação
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e8bbc783901c7dd93515424ae811fe66239e9f33
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 56b69a6b84aa3c529c02690f7e6554e76e46b079
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199291"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244272"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Como fazer: Especificar scripts de pré-implantação ou pós-implantação
+
 Os scripts de pré-implantação e pós-implantação executam instruções do Transact\-SQL antes e após o script de implantação principal, que é gerado do projeto de banco de dados. O script pré-implantação não será executado ao atualizar destinos de resultados de comparação de esquema no Visual Studio. Um projeto pode ter somente um script de pré-implantação e um de pós-implantação. Esses scripts podem ser usados para várias finalidades. Por exemplo:  
   
 -   Um script de pré-implantação pode copiar dados de uma tabela que está sendo alterada em uma tabela temporária antes de reformatar e aplicar os dados na tabela alterada em um script de pós-implantação,  

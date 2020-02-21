@@ -8,10 +8,10 @@ ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
 ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68329364"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Trabalhando com KPIs no Reporting Services
@@ -26,7 +26,7 @@ Ao usar os KPIs no SQL Server Reporting Services, você pode visualizar resposta
   
 - O quanto estou adiantado ou atrasado?  
   
-- Quais são os valores mínimos que concluo?  
+- Quais são os valores mínimos que conclui?  
 
 > [!NOTE]
 > Os KPIs só podem ser acessados nas edições Enterprise (Developer) do portal do SSRS.
@@ -54,14 +54,14 @@ Você pode atribuir valores estáticos ou usar dados de um conjunto de dados com
   
 | Campo | Descrição |
 |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| Formato do valor | Usado para alterar o formato do valor que está em exibição. |
+| Formato de valor | Usado para alterar o formato do valor que está em exibição. |
 | Valor | O valor a ser exibido para o KPI. |
-| Meta | Usado como uma comparação para um valor numérico e mostrado como uma diferença percentual. |
+| Goal | Usado como uma comparação para um valor numérico e mostrado como uma diferença percentual. |
 | Status | Valor numérico usado para determinar a cor do bloco do KPI. Os valores válidos são 1 (verde), 0 (âmbar) e -1 (vermelho). |
 | Conjunto de tendências | Valores numéricos separados por vírgula usados para visualizações de gráfico. Pode ser definido também como a coluna de um conjunto de dados com valores que representam a tendência. |
 | Conteúdo relacionado | A capacidade de definir um link de detalhamento. Esse link pode ser um relatório móvel publicado no portal ou uma URL personalizada. |
   
-> **Aviso**: embora você possa usar o valor textual para o campo **Status** em tempo de design, use o valor numérico quando atualizar um conjunto de dados. Se atualizar um conjunto de dados com o valor textual em vez do valor numérico, ele pode corromper os KPIs no servidor.  
+> **Aviso**: embora seja possível o valor textual para o campo **Status** no tempo de design, use o valor numérico ao atualizar um conjunto de dados. Se atualizar um conjunto de dados com o valor textual em vez do valor numérico, ele pode corromper os KPIs no servidor.  
 >
 > **Observação**: os campos **Valor**, **Meta** e **Status** só podem escolher um valor na primeira linha do resultado de um conjunto de dados. No entanto, o campo **Conjunto de tendências** pode escolher a coluna que reflete a tendência.  
   
@@ -77,7 +77,7 @@ Para usar os dados de conjunto de dados compartilhado, execute as seguintes etap
   
 3. Escolha o conjunto de dados com os dados que deseja exibir.  
   
-4. Escolha o campo que pretende usar. Escolha **OK**.  
+4. Escolha o campo que pretende usar. Selecione **OK**.  
   
     ![rsCreateKPI5](../reporting-services/media/rscreatekpi5.png)  
   
@@ -89,19 +89,19 @@ Para usar os dados de conjunto de dados compartilhado, execute as seguintes etap
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)
 
-## <a name="configuring-related-content"></a>Configurando conteúdo relacionado
+## <a name="configuring-related-content"></a>Configurando o conteúdo relacionado
 
-Ao escolher **relatório móvel**, você pode escolher o destino em uma caixa de diálogo.
+Ao escolher **Relatório Móvel**, você pode escolher o destino em uma caixa de diálogo.
 
    ![Relatório móvel](media/rscreatekpi-related-content-mobile-report.png)
 
-Quando você clicar no KPI no portal, uma miniatura do relatório móvel será mostrada na lista suspensa conteúdo relacionado. Clicar nessa miniatura pode navegar diretamente para este relatório.
+Ao clicar no KPI no portal, uma miniatura do relatório móvel será exibida na lista suspensa do conteúdo relacionado. Ao clicar nessa miniatura você poderá navegar diretamente para o relatório em questão.
 
-Você também pode especificar uma URL personalizada. Essa tarefa pode ser qualquer coisa: um site, um site do SharePoint, uma URL para um relatório do SSRS (que permitirá que você passe os parâmetros codificados).
+Você também poderá especificar uma URL personalizada. Essa tarefa pode ser qualquer coisa: um site, um site do SharePoint, uma URL para um relatório do SSRS (que lhe permita transmitir parâmetros embutidos no código).
 
 ![URL personalizada](media/rscreatekpi-related-content-custom-url.png)
 
-Quando você clica no KPI agora, a URL é mostrada em conteúdo relacionado.
+Agora, quando você clica no KPI, a URL é mostrada em conteúdo relacionado.
 
 Só é possível adicionar um relatório móvel ou uma URL personalizada.
   
@@ -109,11 +109,11 @@ Só é possível adicionar um relatório móvel ou uma URL personalizada.
   
 Para remover um KPI, execute as seguintes etapas.
   
-1. Selecione as **reticências (...)** do KPI que deseja remover. Escolha **Gerenciar**.  
+1. Selecione as **reticências (...)** do KPI que deseja remover. Selecione **Gerenciar**.  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
-2. Escolha **Excluir**. Escolha **Excluir** novamente na caixa de diálogo de confirmação.  
+2. Selecione **Excluir**. Escolha **Excluir** novamente na caixa de diálogo de confirmação.  
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   
@@ -126,4 +126,4 @@ Para atualizar o KPI, você precisará configurar um cache para o conjunto de da
 [Portal da Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Trabalhar com conjuntos de dados compartilhados](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

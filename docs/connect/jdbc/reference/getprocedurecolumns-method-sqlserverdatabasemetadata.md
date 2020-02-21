@@ -16,10 +16,10 @@ ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1767519cc2f36bac4a70da84efeb8da9e2a1ec3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980756"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>Método getProcedureColumns (SQLServerDatabaseMetaData)
@@ -37,7 +37,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
                                               java.lang.String col)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *sCatalog*  
   
  Uma **String** que contém o nome do catálogo. Fornecer um nulo a esse parâmetro indica que o nome do catálogo não precisa ser usado.  
@@ -60,41 +60,41 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método getProcedureColumns é especificado pelo método getProcedureColumns na interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Comentários  
+ Esse método getProcedureColumns é especificado pelo método getProcedureColumns na interface java.sql.DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getProcedureColumns conterá as seguintes informações:  
   
-|Nome|Tipo|Descrição|  
+|Nome|Type|Descrição|  
 |----------|----------|-----------------|  
-|PROCEDURE_CAT|**String**|O nome do banco de dados no qual o procedimento armazenado especificado reside.|  
-|PROCEDURE_SCHEM|**String**|O esquema para o procedimento armazenado.|  
-|PROCEDURE_NAME|**String**|O nome do procedimento armazenado.|  
-|COLUMN_NAME|**String**|O nome da coluna.|  
+|PROCEDURE_CAT|**Cadeia de caracteres**|O nome do banco de dados no qual o procedimento armazenado especificado reside.|  
+|PROCEDURE_SCHEM|**Cadeia de caracteres**|O esquema para o procedimento armazenado.|  
+|PROCEDURE_NAME|**Cadeia de caracteres**|O nome do procedimento armazenado.|  
+|COLUMN_NAME|**Cadeia de caracteres**|O nome da coluna.|  
 |COLUMN_TYPE|**short**|O tipo da coluna. Pode ser um dos seguintes valores:<br /><br /> procedureColumnUnknown (0)<br /><br /> procedureColumnIn (1)<br /><br /> procedureColumnInOut (2)<br /><br /> procedureColumnOut (4)<br /><br /> procedureColumnReturn (5)<br /><br /> procedureColumnResult (3)|  
 |DATA_TYPE|**smallint**|O tipo de dados SQL de java.sql.Types.|  
-|TYPE_NAME|**String**|O nome do tipo de dados.|  
+|TYPE_NAME|**Cadeia de caracteres**|O nome do tipo de dados.|  
 |PRECISION|**int**|O número total de dígitos significativos.|  
 |LENGTH|**int**|O comprimento dos dados em bytes.|  
 |SCALE|**short**|O número de dígitos à direita da vírgula decimal.|  
 |RADIX|**short**|A base para tipos numéricos.|  
 |NULLABLE|**short**|Indica se a coluna pode conter um valor nulo. Pode ser um dos seguintes valores:<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
-|REMARKS|**String**|A descrição da coluna de procedimento.<br /><br /> <br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
-|COLUMN_DEF|**String**|O valor padrão da coluna.|  
+|COMENTÁRIOS|**Cadeia de caracteres**|A descrição da coluna de procedimento.<br /><br /> <br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
+|COLUMN_DEF|**Cadeia de caracteres**|O valor padrão da coluna.|  
 |SQL_DATA_TYPE|**smallint**|Esta coluna é igual à coluna **DATA_TYPE**, com exceção dos tipos de dados **datetime** e **interval** ISO.|  
-|SQL_DATETIME_SUB|**smallint**|O subcódigo de **interval** ISO de **datetime**, se o valor de **SQL_DATA_TYPE** for **SQL_DATETIME** ou **SQL_INTERVAL**. Para tipos de dados diferentes de **DateTime** e o **intervalo**ISO, essa coluna é nula.|  
+|SQL_DATETIME_SUB|**smallint**|O subcódigo de **interval** ISO de **datetime**, se o valor de **SQL_DATA_TYPE** for **SQL_DATETIME** ou **SQL_INTERVAL**. Para tipos de dados diferentes de **datetime** e **intervalo** ISO, essa coluna é NULL.|  
 |CHAR_OCTET_LENGTH|**int**|O número máximo de bytes na coluna.|  
 |ORDINAL_POSITION|**int**|O índice da coluna na tabela.|  
-|IS_NULLABLE|**String**|Indica se a coluna permite valores nulos.|  
-|SS_TYPE_CATALOG_NAME|**String**|O nome do catálogo que contém o UDT (tipo definido pelo usuário).|  
-|SS_TYPE_SCHEMA_NAME|**String**|O nome do esquema que contém o UDT (tipo definido pelo usuário).|  
-|SS_UDT_CATALOG_NAME|**String**|O UDT (tipo definido pelo usuário) do nome totalmente qualificado.|  
-|SS_UDT_SCHEMA_NAME|**String**|O nome do catálogo em que é definido um nome da coleção de esquemas XML. Se não for possível localizar o nome do catálogo, essa variável conterá uma cadeia de caracteres vazia.|  
-|SS_UDT_ASSEMBLY_TYPE_NAME|**String**|O nome do esquema no qual é definido um nome da coleção de esquemas XML. Se não for possível localizar o nome do esquema, essa cadeia de caracteres estará vazia.|  
-|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|O nome de uma coleção de esquemas XML. Se não for possível localizar o nome, essa cadeia de caracteres estará vazia.|  
-|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|O nome do catálogo que contém o UDT (tipo definido pelo usuário).|  
-|SS_XML_SCHEMACOLLECTION_NAME|**String**|O nome do esquema que contém o UDT (tipo definido pelo usuário).|  
-|SS_DATA_TYPE|**tinyint**|O tipo de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usado por procedimentos armazenados estendidos.<br /><br /> <br /><br /> **Observação:** para saber mais sobre os tipos de dados retornados pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte "Tipos de dados (Transact-SQL)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|IS_NULLABLE|**Cadeia de caracteres**|Indica se a coluna permite valores nulos.|  
+|SS_TYPE_CATALOG_NAME|**Cadeia de caracteres**|O nome do catálogo que contém o UDT (tipo definido pelo usuário).|  
+|SS_TYPE_SCHEMA_NAME|**Cadeia de caracteres**|O nome do esquema que contém o UDT (tipo definido pelo usuário).|  
+|SS_UDT_CATALOG_NAME|**Cadeia de caracteres**|O UDT (tipo definido pelo usuário) do nome totalmente qualificado.|  
+|SS_UDT_SCHEMA_NAME|**Cadeia de caracteres**|O nome do catálogo em que é definido um nome da coleção de esquemas XML. Se não for possível localizar o nome do catálogo, essa variável conterá uma cadeia de caracteres vazia.|  
+|SS_UDT_ASSEMBLY_TYPE_NAME|**Cadeia de caracteres**|O nome do esquema no qual é definido um nome da coleção de esquemas XML. Se não for possível localizar o nome do esquema, essa cadeia de caracteres estará vazia.|  
+|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**Cadeia de caracteres**|O nome de uma coleção de esquemas XML. Se não for possível localizar o nome, essa cadeia de caracteres estará vazia.|  
+|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**Cadeia de caracteres**|O nome do catálogo que contém o UDT (tipo definido pelo usuário).|  
+|SS_XML_SCHEMACOLLECTION_NAME|**Cadeia de caracteres**|O nome do esquema que contém o UDT (tipo definido pelo usuário).|  
+|SS_DATA_TYPE|**tinyint**|O tipo de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usado por procedimentos armazenados estendidos.<br /><br /> <br /><br /> **Observação:** Para obter mais informações sobre os tipos de dados retornados pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], confira "Tipos de dados (Transact-SQL)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
 > [!NOTE]  
 >  Para saber mais sobre os dados retornados pelo método getProcedureColumns, consulte "sp_sproc_columns (Transact-SQL)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

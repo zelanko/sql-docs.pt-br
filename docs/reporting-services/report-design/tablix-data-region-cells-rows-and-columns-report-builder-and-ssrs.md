@@ -1,6 +1,7 @@
 ---
-title: Células, linhas e colunas da região de dados Tablix (Construtor de Relatórios) e SSRS | Microsoft Docs
-ms.date: 03/07/2017
+title: Células, linhas e colunas em um Tablix | Microsoft Docs
+description: Para controlar como as linhas e colunas de uma região de dados tablix exibem dados em um relatório paginado do SQL Server Reporting Services, você deve compreender como especificá-las para dados detalhados, para dados de grupo e para rótulos e totais.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -13,14 +14,15 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 79cfa786930825e28f41ffe38802f4aa1e0ec6f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574712"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252395"
 ---
-# <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Células, linhas e colunas da região de dados Tablix (Construtor de Relatórios) e SSRS
+# <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>Células, linhas e colunas em uma região de dados Tablix (Construtor de Relatórios) e SSRS
+
   Para controlar como as linhas e colunas de uma região de dados tablix exibem dados em um relatório paginado [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , você deve compreender como especificá-las para dados detalhados, dados de grupo, além de rótulos e totais. Em muitos casos, é possível usar as estruturas padrão em uma tabela, matriz ou lista para exibir os dados. Para obter mais informações, consulte [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Matrizes](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) ou [Listas](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
  Uma região de dados tablix exibe dados detalhados em linhas e colunas detalhadas, além de dados agrupados em linhas e colunas agrupadas. Quando você adiciona grupos de linhas e de colunas a uma região de dados tablix, as linhas e as colunas nas quais os dados são exibidos são adicionadas automaticamente. É possível adicionar e remover manualmente linhas e colunas para personalizar uma região de dados tablix e controlar a forma como os dados são exibidos no relatório.  
@@ -36,7 +38,7 @@ ms.locfileid: "65574712"
 ### <a name="row-and-column-handles"></a>Identificadores de linha e de coluna  
  Quando você seleciona uma região de dados tablix, gráficos indicadores de linha e de coluna apontam o propósito de cada uma delas. Os identificadores mostram as linhas e as colunas que estão dentro ou fora de um grupo. A tabela a seguir mostra várias exibições de identificadores.  
   
-|Ícone|Descrição|  
+|ícone|Descrição|  
 |----------|-----------------|  
 |![Identificador de linha com três linhas paralelas para a linha de detalhes](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Identificador de linha com três linhas paralelas para a linha de detalhes")|Apenas o grupo detalhado na hierarquia do grupo de linhas|  
 |![Identificador de linha com linha de detalhes e um grupo externo](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "Identificador de linha com linha de detalhes e um grupo externo")|Um grupo externo e o grupo detalhado filho|  
@@ -60,7 +62,7 @@ ms.locfileid: "65574712"
 ### <a name="total-rows"></a>Linhas de total  
  Após adicionar grupos de linhas e de colunas, é possível adicionar uma linha para exibir totais de colunas e uma coluna para exibir totais de linhas. A seguinte figura mostra uma matriz com grupos de linhas e de colunas, além de uma linha e uma coluna de total.  
   
- ![Região de dados Tablix](../../reporting-services/report-design/media/rs-tablixparts.gif "Região de dados Tablix")  
+ ![Região de dados Tablix](../../reporting-services/report-design/media/rs-tablixparts.gif "região de dados Tablix")  
   
 ### <a name="grouping-pane"></a>Painel Agrupamento  
  O painel Agrupamento exibe os grupos de linhas e de colunas referentes à região de dados tablix selecionada na superfície de design no momento. A seguinte figura mostra o painel Agrupamento da região de dados tablix.  
@@ -82,11 +84,11 @@ ms.locfileid: "65574712"
   
  A seguinte figura mostra uma região de dados tablix com grupos de linhas aninhados e um grupo detalhado.  
   
- ![Modo de exibição de design, adicionar o total de linhas ao grupo e à tabela](../../reporting-services/report-design/media/rs-basictablegroupstotalscolordesign.gif "Modo de exibição de design, adicionar o total de linhas ao grupo e à tabela")  
+ ![Modo de exibição de Design, adicionar total de linhas ao grupo e à tabela](../../reporting-services/report-design/media/rs-basictablegroupstotalscolordesign.gif "Modo de exibição de Design, adicionar total de linhas ao grupo e à tabela")  
   
  Em uma região de dados tablix que exibe dados detalhados, o grupo detalhado é o grupo filho interno. As linhas adicionadas a um grupo detalhado se repetem uma vez por linha no conjunto de resultados da consulta referente ao conjunto de dados vinculado à região de dados tablix. A seguinte figura mostra a última página do relatório renderizado. Nela, é possível ver as últimas linhas detalhadas e a linha de subtotal referente ao último pedido.  
   
- ![Visualização, tabela com totais de grupo, últimas linhas](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "Visualização, tabela com totais de grupo, últimas linhas")  
+ ![Visualização, Tabela com Totais de Grupo, últimas linhas](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "Visualização, Tabela com Totais de Grupo, últimas linhas")  
   
  Para cada coluna de uma região de dados tablix, se aplicam os mesmos princípios. Por exemplo, uma coluna está dentro ou fora de cada grupo de colunas. Para exibir totais, adicione uma coluna fora do grupo.  
   

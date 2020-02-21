@@ -1,23 +1,24 @@
 ---
-title: Personalizar a compilação e a implantação do banco de dados usando os colaboradores de compilação e implantação | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Personalizar implantações de banco de dados usando colaboradores de implantação
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aa22592bbe86707ec4efa43ba0c188c21a07351e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 4d0c83e0b6adb5981adde576e06b0b74faf42eeb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110569"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256248"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Personalize a compilação e a implantação do banco de dados usando os colaboradores de compilação e implantação
+
 O Visual Studio fornece os pontos de extensibilidade que você pode usar para modificar o comportamento das ações de compilação e implantação de projetos de banco de dados.  
   
 ## <a name="available-extensibility-points"></a>Pontos de extensibilidade disponíveis  
@@ -25,7 +26,7 @@ Você pode criar uma extensão para os pontos de extensibilidade, conforme mostr
   
 |**Ação**|**Tipo de colaborador**|**Observações**|  
 |--------------|------------------------|-------------|  
-|Compilação|BuildContributor|Esse tipo de extensão é executado quando o projeto SQL é compilado depois que o modelo de projeto tiver sido completamente validado. O colaborador de compilação pode acessar o modelo concluído, além de todas as propriedades da tarefa de compilação e todos os argumentos personalizados.|  
+|Build|BuildContributor|Esse tipo de extensão é executado quando o projeto SQL é compilado depois que o modelo de projeto tiver sido completamente validado. O colaborador de compilação pode acessar o modelo concluído, além de todas as propriedades da tarefa de compilação e todos os argumentos personalizados.|  
 |Implantar|DeploymentPlanModifier|Esse tipo de extensão foi executado quando o projeto SQL foi implantado, como parte do pipeline de implantação, depois que o plano de implantação foi gerado, mas antes de o plano de implantação ser executado. Você pode usar um DeploymentPlanModifier para modificar o plano de implantação adicionando ou removendo etapas. Os colaboradores de implantação podem acessar o plano de implantação, os resultados da comparação e os modelos de origem e destino.|  
 |Implantar|DeploymentPlanExecutor|Esse tipo de extensão é executado quando o plano de implantação é executado e fornece acesso somente leitura para o plano de implantação. O DeploymentPlanExectutor executa ações com base no plano de implantação.|  
   

@@ -9,26 +9,26 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: d8f7b561a6aba4539964d73dacfd9e45db2dd6aa
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 613ae5b3326bc49ab25f30628ecd85e13959e2dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452170"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247738"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Inserindo uma imagem de um arquivo
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Você pode gravar um BLOB (objeto binário grande) em um banco de dados como um dado binário ou de caractere, dependendo do tipo de campo na fonte de dados. BLOB é um termo genérico que se refere aos tipos de dados `text`, `ntext` e `image`, que normalmente contêm documentos e imagens.  
+Você pode gravar um BLOB (objeto binário grande) em um banco de dados como dados binários ou de caractere, dependendo do tipo de campo na fonte de dados. BLOB é um termo genérico que se refere aos tipos de dados `text`, `ntext` e `image`, que normalmente contêm documentos e imagens.  
   
-Para gravar um valor de BLOB no banco de dados, emita a instrução INSERT ou UPDATE apropriada e passe o valor de BLOB como um parâmetro de entrada. Se o BLOB for armazenado como texto, como um campo de SQL Server `text`, você poderá passar o BLOB como um parâmetro de cadeia de caracteres. Se o BLOB for armazenado em formato binário, como um campo de SQL Server `image`, você poderá passar uma matriz do tipo `byte` como um parâmetro binário.
+Para gravar um valor de BLOB no banco de dados, emita a instrução INSERT ou UPDATE apropriada e passe o valor de BLOB como um parâmetro de entrada. Se o BLOB for armazenado como texto, como um campo `text` do SQL Server, você poderá passá-lo como um parâmetro de cadeia de caracteres. Se o BLOB for armazenado em formato binário, como um campo `image` do SQL Server, você poderá passar uma matriz do tipo `byte` como um parâmetro binário.
   
 ## <a name="example"></a>Exemplo  
-O exemplo de código a seguir adiciona informações de funcionário à tabela Employees no banco de dados Northwind. Uma foto do funcionário é lida de um arquivo e adicionada ao campo foto na tabela, que é um campo de imagem.  
+O exemplo de código a seguir adiciona informações de funcionário à tabela Funcionários no banco de dados da Northwind. Uma foto do funcionário é lida de um arquivo e adicionada ao campo Foto na tabela, que é um campo de imagem.  
   
 ```csharp  
 public static void AddEmployee(  

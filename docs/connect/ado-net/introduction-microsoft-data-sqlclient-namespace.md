@@ -1,52 +1,69 @@
 ---
 title: Introdução ao namespace Microsoft.Data.SqlClient
-description: Página de introdução para o namespace Microsoft. Data. SqlClient.
+description: Página de introdução ao namespace Microsoft.Data.SqlClient.
 ms.date: 09/30/2019
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 4f4034c557c13054dcfb6ed425ca996b0c5363f6
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: e64a4b04e5059ebc4acbd8e673746fc3953fbb03
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452386"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75250999"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Introdução ao namespace Microsoft.Data.SqlClient
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Esta página descreve como o namespace Microsoft. Data. SqlClient oferece funcionalidade adicional sobre o namespace System. Data. SqlClient existente.
-  
-## <a name="release-notes"></a>Notas de versão
-Todas as notas de versão estão disponíveis no [repositório GitHub](https://github.com/dotnet/SqlClient/tree/master/release-notes).
+## <a name="release-notes-for-microsoftdatasqlclient-110"></a>Notas sobre a versão do Microsoft.Data.SqlClient 1.1.0
 
-## <a name="new-features"></a>Novos recursos
+As notas sobre a versão também estão disponíveis no repositório GitHub: [Notas sobre a versão 1.1](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.1).
 
-### <a name="new-features-over-net-framework-472-systemdatasqlclient"></a>Novos recursos em .NET Framework 4.7.2 System. Data. SqlClient
+### <a name="new-features"></a>Novos recursos
 
-Classificação de dados – disponível no banco de dados SQL do Azure e Microsoft SQL Server 2019 desde o CTP 2,0.
+#### <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted com enclaves seguros
 
-Suporte a UTF-8-disponível em Microsoft SQL Server SQL Server 2019 desde o CTP 2,3.
+O Always Encrypted está disponível no Microsoft SQL Server 2016 e em versões posteriores. Os enclaves seguros estão disponíveis no Microsoft SQL Server 2019 e em versões posteriores. Para usar o recurso de enclave, as cadeias de conexão devem incluir o protocolo de atestado e a URL de atestado necessários. Exemplos:
 
-### <a name="new-features-over-net-core-22-systemdatasqlclient"></a>Novos recursos no .NET Core 2,2 System. Data. SqlClient
+```
+Attestation Protocol=HGS;Enclave Attestation Url=<attestation_url_for_HGS>
+```
 
-Classificação de dados – disponível no banco de dados SQL do Azure e Microsoft SQL Server 2019 desde o CTP 2,0.
+Para obter mais informações, consulte:
 
-Suporte a UTF-8-disponível em Microsoft SQL Server SQL Server 2019 desde o CTP 2,3.
+- [Suporte do SqlClient para Always Encrypted](sql/sqlclient-support-always-encrypted.md)
+- [Tutorial: Desenvolver um aplicativo .NET usando o Always Encrypted com enclaves seguros](sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
 
-Always Encrypted com enclaves-Always Encrypted está disponível no Microsoft SQL Server 2016 e superior. O suporte a enclave foi introduzido no Microsoft SQL Server 2019 CTP 2,0.
+## <a name="release-notes-for-microsoftdatasqlclient-10"></a>Notas sobre a versão do Microsoft.Data.SqlClient 1.0
 
-Autenticação-modo de autenticação de senha Active Directory.
+A versão inicial do namespace Microsoft.Data.SqlClient oferece funcionalidade adicional no namespace System.Data.SqlClient existente.
+As notas sobre a versão também estão disponíveis no repositório GitHub: [Notas sobre a versão 1.0](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.0).
+
+### <a name="new-features"></a>Novos recursos
+
+#### <a name="new-features-over-net-framework-472-systemdatasqlclient"></a>Novos recursos no .NET Framework 4.7.2 System.Data.SqlClient
+
+- **Classificação de dados** – disponível no Banco de Dados SQL do Azure e no Microsoft SQL Server 2019.
+
+- **Suporte a UTF-8** – disponível no Microsoft SQL Server 2019.
+
+#### <a name="new-features-over-net-core-22-systemdatasqlclient"></a>Novos recursos no .NET Core 2.2 System.Data.SqlClient
+
+- **Classificação de dados** – disponível no Banco de Dados SQL do Azure e no Microsoft SQL Server 2019.
+
+- **Suporte a UTF-8** – disponível no Microsoft SQL Server 2019.
+
+- **Autenticação** – modo de autenticação de senha do Active Directory.
 
 ### <a name="data-classification"></a>Classificação de dados
 
-A classificação de dados traz um novo conjunto de APIs expondo informações de classificação e classificações de dados somente leitura sobre objetos recuperados via SqlDataReader quando a fonte subjacente dá suporte ao recurso e contém metadados sobre a [confidencialidade dos dados e classificação](../../relational-databases/security/sql-data-discovery-and-classification.md).
+A classificação de dados traz um novo conjunto de APIs expondo informações de classificação e a confidencialidade de dados somente leitura sobre objetos recuperados via SqlDataReader quando a fonte subjacente dá suporte ao recurso e contém metadados sobre [classificação e confidencialidade de dados](../../relational-databases/security/sql-data-discovery-and-classification.md).
 
 ```csharp
 public class SqlDataReader
@@ -86,20 +103,20 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### <a name="utf-8-support"></a>Suporte para UTF-8
 
-O suporte a UTF-8 não requer nenhuma alteração de código do aplicativo. Essas alterações de SqlClient simplesmente otimizam a comunicação entre o cliente e o servidor quando o servidor dá suporte a UTF-8 e o agrupamento de coluna subjacente é UTF-8. Consulte a seção UTF-8 em [novidades na versão prévia do SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md).
+O suporte a UTF-8 não requer nenhuma alteração de código do aplicativo. Essas alterações de SqlClient simplesmente otimizam a comunicação entre o cliente e o servidor quando o servidor dá suporte a UTF-8 e a ordenação de coluna subjacente é UTF-8. Confira a seção UTF-8 em [Novidades na versão prévia do SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md).
 
 ### <a name="always-encrypted-with-enclaves"></a>Always Encrypted com enclaves
 
-Em geral, a documentação existente que usa System. Data. SqlClient em .NET Framework **e provedores internos de repositório de chaves mestras de coluna** agora deve funcionar com o .NET Core.
+Em geral, a documentação existente que usa System.Data.SqlClient no .NET Framework **e provedores internos de repositório de chaves mestras de coluna** agora deve funcionar também com o .NET Core.
 
  [Desenvolver usando o Always Encrypted com o Provedor de Dados .NET Framework](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 
- [Always Encrypted: proteger dados confidenciais e armazenar chaves de criptografia no repositório de certificados do Windows](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+ [Always Encrypted: Proteger dados confidenciais e armazenar chaves de criptografia no repositório de certificados do Windows](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
 
 ### <a name="authentication"></a>Autenticação
 
-Modos de autenticação diferentes podem ser especificados usando a opção de cadeia de conexão de _autenticação_ . Para obter mais informações, consulte a [documentação de SqlAuthenticationMethod](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2).
+Modos de autenticação diferentes podem ser especificados usando a opção de cadeia de conexão _Authentication_. Para obter mais informações, confira a [documentação do SqlAuthenticationMethod](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2).
 
 > [!NOTE]
-> Provedores de repositório de chaves personalizados, como o provedor de Azure Key Vault, precisarão ser atualizados para dar suporte a Microsoft. Data. SqlClient. Da mesma forma, os provedores de enclave também precisarão ser atualizados para dar suporte a Microsoft. Data. SqlClient.
-> Always Encrypted só tem suporte em destinos do .NET Framework e do .NET Core. Não há suporte para ele em .NET Standard já que .NET Standard não tem determinadas dependências de criptografia.
+> Provedores de repositório de chaves personalizados, como o provedor do Azure Key Vault, precisarão ser atualizados para dar suporte a Microsoft.Data.SqlClient. Da mesma forma, os provedores de enclave também precisarão ser atualizados para dar suporte ao Microsoft.Data.SqlClient.
+> O Always Encrypted só é compatível com destinos do .NET Framework e do .NET Core. Ele não é compatível com o .NET Standard, já que o .NET Standard não tem determinadas dependências de criptografia.

@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: 66bc987b71bb8b139eec5b69e78532aa54f1294d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: e16304765e5f4a51feed4d3d59e790505baa740d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531952"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252030"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>Executar scripts do Python e do R com Serviços de Machine Learning em Clusters de Big Data do SQL Server
 
@@ -22,11 +22,11 @@ ms.locfileid: "73531952"
 Você pode executar scripts do Python e do R na instância mestra de [Clusters de Big Data do SQL Server](big-data-cluster-overview.md) com [Serviços de Machine Learning](../advanced-analytics/index.yml).
 
 > [!NOTE]
-> Você também pode executar o código Java na instância mestra com as [Extensões de Linguagem do SQL Server](../language-extensions/language-extensions-overview.md). Siga as etapas abaixo para habilitar também as Extensões de Linguagem.
+> Você também pode executar o código Java na instância mestra com as [Extensões de Linguagem do SQL Server](../language-extensions/language-extensions-overview.md). A conclusão das etapas abaixo habilitará também as Extensões de Linguagem.
 
 ## <a name="enable-machine-learning-services"></a>Habilitar Serviços de Machine Learning
 
-O Serviços de Machine Learning são instalados por padrão em Clusters de Big Data e exigem instalação separada.
+O Serviços de Machine Learning são instalados por padrão em Clusters de Big Data e não exigem instalação separada.
 
 Para habilitar Serviços de Machine Learning, execute esta instrução na instância mestra:
 
@@ -36,7 +36,7 @@ RECONFIGURE WITH OVERRIDE
 GO
 ```
 
-## <a name="enable-always-on-availability-groups"></a>Habilitar Grupos de Disponibilidade AlwaysOn
+## <a name="enable-always-on-availability-groups"></a>Habilitar grupos de disponibilidade AlwaysOn
 
 Se estiver usando Clusters de Big Data do SQL Server com [grupos de disponibilidade Always On](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), você precisará executar algumas etapas adicionais para habilitar Serviços de Machine Learning.
 

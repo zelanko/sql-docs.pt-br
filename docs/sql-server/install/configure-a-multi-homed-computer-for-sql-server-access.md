@@ -1,7 +1,7 @@
 ---
-title: Configurar um computador multihomed para acesso ao SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Configurar um computador multihomed para acesso
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a024707b5fa7ab70394a068ed47110898ae0518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8733c9a4624bcadb60eb5cfa70cf81f242f43a7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126218"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244458"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurar um computador multihomed para acesso ao SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "68126218"
   
 3.  Observe os endereços IPv4 e IPv6 que estão sendo usados. As outras informações na lista, como endereços temporários, máscaras de sub-rede e gateways padrão são informações importantes para configurar uma rede TCP/IP. Mas estas informações não são usadas neste exemplo.  
   
-#### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Para determinar os endereços IP e as portas usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-determine-the-ip-addresses-and-ports-used-by-ssnoversion"></a>Para determinar os endereços IP e as portas usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Clique em **Iniciar**, escolha **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], para **Ferramentas de Configuração**e clique em **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**.  
   
@@ -105,9 +105,9 @@ ms.locfileid: "68126218"
 10. Na página **Ação** , examine as opções. Neste exemplo, você não está usando o firewall para forçar conexões seguras. Portanto, clique em **Permitir a conexão**e clique em **Avançar**.  
   
     > [!NOTE]  
-    >  Seu ambiente pode exigir conexões seguras. Se você selecionar uma das opções de conexões seguras, poderá ser necessário configurar um certificado e a opção **Forçar Criptografia**. Para obter mais informações sobre conexões seguras, veja [Habilitar conexões criptografadas com o Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) e [Habilitar conexões criptografadas com o Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Seu ambiente pode exigir conexões seguras. Se você selecionar uma das opções de conexões seguras, poderá ser necessário configurar um certificado e a opção **Forçar Criptografia** . Para obter mais informações sobre conexões seguras, veja [Habilitar conexões criptografadas com o Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) e [Habilitar conexões criptografadas com o Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-11. Na página **Perfil**, selecione um ou mais perfis para a regra. Se você não estiver familiarizado com os perfis de firewall, clique no link **Saber mais sobre perfis** no programa de firewall.  
+11. Na página **Perfil** , selecione um ou mais perfis para a regra. Se você não estiver familiarizado com os perfis de firewall, clique no link **Saber mais sobre perfis** no programa de firewall.  
   
     -   Se o computador for um servidor e estiver disponível apenas quando está conectado a um domínio, seleciona **Domínio**e clique em **Avançar**.  
   

@@ -1,6 +1,7 @@
 ---
-title: Especificar informações de credenciais e de conexão para fontes de dados de relatório | Microsoft Docs
-ms.date: 08/17/2018
+title: Definir informações de credenciais e de conexão para fontes de dados de relatório | Microsoft Docs
+description: Um servidor de relatório usa credenciais para se conectar a fontes de dados externas que fornecem conteúdo a relatórios ou informações de destinatário para assinaturas controladas por dados.
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d6b5041b07551ba8bbd23cc3f737fc0c09d72ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575345"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244559"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Especificar informações de credenciais e de conexão para fontes de dados de relatório
   Um servidor de relatório usa credenciais para se conectar a fontes de dados externas que fornecem conteúdo a relatórios ou informações de destinatário para assinaturas controladas por dados. Você pode especificar credenciais que usam a Autenticação do Windows, autenticação de banco de dados, nenhuma autenticação ou autenticação personalizada. Ao enviar uma solicitação de conexão pela rede, o servidor de relatório representará uma conta de usuário ou uma conta de execução autônoma. Para obter mais informações sobre o contexto de segurança sob o qual uma conexão é feita, consulte [Configuração de fontes de dados e conexões de rede](#DataSourceConfigurationConnections) mais adiante neste tópico.  
@@ -39,7 +40,7 @@ ms.locfileid: "65575345"
 > [!NOTE]  
 >  As credenciais são também usadas para autenticar usuários com acesso ao servidor de relatório. As informações sobre como autenticar os usuários para um servidor de relatório são fornecidas em outro tópico.  
   
- A conexão com uma fonte de dados externa é definida quando você cria o relatório. Ela pode ser gerenciada separadamente depois que o relatório for publicado. Você pode especificar uma cadeia de caracteres de conexão estática ou uma expressão que permita aos usuários selecionar uma fonte de dados a partir de uma lista dinâmica. Para obter mais informações sobre como especificar um tipo de fonte de dados e uma cadeia de conexão, consulte [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ A conexão com uma fonte de dados externa é definida quando você cria o relatório. Ela pode ser gerenciada separadamente depois que o relatório for publicado. Você pode especificar uma cadeia de caracteres de conexão estática ou uma expressão que permita aos usuários selecionar uma fonte de dados a partir de uma lista dinâmica. Para obter mais informações sobre como especificar um tipo de fonte de dados e uma cadeia de conexão, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ## <a name="when-credentials-are-used-in-report-builder"></a>Quando as credenciais são usadas no Construtor de Relatórios  
  No Construtor de Relatórios, as credenciais são usadas, em geral, quando você se conecta a um servidor de relatório ou a tarefas relacionadas a dados, tais como criar uma fonte de dados inserida, executar uma consulta de conjunto de dados ou visualizar um relatório. As credenciais não são armazenadas no relatório. Elas são gerenciadas separadamente no servidor de relatório ou no cliente local. A lista a seguir descreve os tipos de credenciais que talvez precisem ser fornecidos, o local em que são armazenados e como são usados:  
@@ -153,15 +154,15 @@ ms.locfileid: "65575345"
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |Segurança integrada|Representar o usuário atual|Para todos os tipos de fonte de dados, conecte-se usando a conta do usuário atual.|  
 |Credenciais do Windows|Representar o usuário especificado|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB: conecte usando a conta do usuário representado.|  
-|Credenciais de banco de dados|Representar a conta de execução autônoma ou conta de serviço<br /><br /> (o Reporting Services remove as permissões de administrador ao enviar a solicitação de conexão que usa a identidade do serviço).|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB:<br /><br /> Acrescente o nome de usuário e senha à cadeia de caracteres de conexão.<br /><br /> Para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> A conexão será bem-sucedida se você estiver usando o protocolo TCP/IP, caso contrário ela falhará.<br /><br /> Para XML:<br /><br /> Falha na conexão com o servidor de relatório se forem usadas as credenciais do banco de dados.|  
-|None|Representar a conta de execução autônoma.|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB:<br /><br /> Use as credenciais definidas na cadeia de caracteres de conexão. A conexão com o servidor de relatório falhará se a conta de execução autônoma estiver indefinida.<br /><br /> Para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> A conexão sempre falhará se nenhuma credencial for especificada, mesmo se a conta de execução autônoma for definida.<br /><br /> Para XML:<br /><br /> Conecte-se como Usuário Anônimo se a conta de execução autônoma estiver definida; caso contrário, a conexão falhará.|  
+|Credenciais do banco de dados|Representar a conta de execução autônoma ou conta de serviço<br /><br /> (o Reporting Services remove as permissões de administrador ao enviar a solicitação de conexão que usa a identidade do serviço).|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB:<br /><br /> Acrescente o nome de usuário e senha à cadeia de caracteres de conexão.<br /><br /> Para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> A conexão será bem-sucedida se você estiver usando o protocolo TCP/IP, caso contrário ela falhará.<br /><br /> Para XML:<br /><br /> Falha na conexão com o servidor de relatório se forem usadas as credenciais do banco de dados.|  
+|Nenhum|Representar a conta de execução autônoma.|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB:<br /><br /> Use as credenciais definidas na cadeia de caracteres de conexão. A conexão com o servidor de relatório falhará se a conta de execução autônoma estiver indefinida.<br /><br /> Para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> A conexão sempre falhará se nenhuma credencial for especificada, mesmo se a conta de execução autônoma for definida.<br /><br /> Para XML:<br /><br /> Conecte-se como Usuário Anônimo se a conta de execução autônoma estiver definida; caso contrário, a conexão falhará.|  
   
 ## <a name="setting-credentials-programmatically"></a>Definindo credenciais programaticamente  
  Você pode definir credenciais em seu código para controlar o acesso a relatórios e ao servidor de relatório. Para obter mais informações, consulte [Fontes de Dados e Métodos de Conexão](../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Gerenciar fontes de dados de relatório](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Configurar propriedades de fonte de dados para um relatório](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   

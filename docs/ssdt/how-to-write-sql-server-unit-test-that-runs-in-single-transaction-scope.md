@@ -1,23 +1,24 @@
 ---
-title: 'Como fazer: gravar um teste de unidade do SQL Server executado no escopo de uma única transação | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Gravar um teste de unidade do SQL Server que executa um escopo de uma transação
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c1a9bf666ac79b76d94cfbd04c88bde6eafd85b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 36bc1ac2a4a20dd0d05d90b8d12ff63b0a7a6b3e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119878"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246493"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Como fazer: Gravar um teste de unidade do SQL Server executado no escopo de uma única transação
+
 Você pode modificar os teste de unidade para execução no escopo de uma única transação. Se você usar essa abordagem, poderá reverter todas as alterações decretadas pelo teste após seu término. Os procedimentos a seguir descreve como:  
   
 -   Criar uma transação em seu script de teste Transact\-SQL que usa **BEGIN TRANSACTION** e **ROLLBACK TRANSACTION**.  

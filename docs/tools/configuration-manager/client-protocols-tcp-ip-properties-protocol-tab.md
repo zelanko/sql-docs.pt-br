@@ -1,6 +1,6 @@
 ---
-title: Protocolos de cliente – propriedades de TCP IP (guia Protocolo) | Microsoft Docs
-ms.custom: ''
+title: Protocolos de Cliente – Propriedades de TCP IP (guia Protocolo)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 81afd532b0bf79e3ea5d9208077fccd474519297
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: ad15bb228002645c929f1ff2d4c049e94f3ae004
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010207"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306514"
 ---
 # <a name="client-protocols---tcp-ip-properties-protocol-tab"></a>Protocolos de Cliente – Propriedades de TCP IP (guia Protocolo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68010207"
   
 ## <a name="see-also"></a>Consulte Também  
  [Escolhendo um protocolo de rede](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
- [Novo Alias &#40;Guia Alias&#41;](../../tools/configuration-manager/new-alias-alias-tab.md)   
+ [Novo Alias &#40;Alias Tab&#41;](../../tools/configuration-manager/new-alias-alias-tab.md)   
  [Propriedades &#60;Alias&#62; &#40;Guia Alias&#41;](../../tools/configuration-manager/alias-properties-alias-tab.md)  
   
   

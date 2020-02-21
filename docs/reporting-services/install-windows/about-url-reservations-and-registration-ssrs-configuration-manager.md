@@ -1,8 +1,10 @@
 ---
-title: Sobre reservas e registro de URL (Gerenciador de Configurações do SSRS) | Microsoft Docs
-ms.date: 06/20/2019
+title: Reservas e registro de URL (Configuration Manager) | Microsoft Docs
+description: As URLs para aplicativos do Reporting Services são definidas como reservas de URL em HTTP.SYS.
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
@@ -11,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dba8913c5aa5fa0aa8d93dd1c4dd639f85ac3081
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.openlocfilehash: 64c458b703d740fa50ff7bcdd6fce20752e6746a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314034"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259329"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Sobre reservas e registro de URL (Gerenciador de configurações do SSRS)
   As URLs para aplicativos do Reporting Services são definidas como reservas de URL em HTTP.SYS. Uma reserva de URL define a sintaxe de um ponto de extremidade de URL para um aplicativo Web. As reservas de URL são definidas para o serviço Web Servidor de Relatórios e para o portal da Web quando você configura os aplicativos no servidor de relatório. As reservas de URL são criadas automaticamente quando você configura URLs através da instalação ou da ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -82,8 +84,8 @@ ms.locfileid: "67314034"
   
 |Tipo de instância|Aplicativo|URL padrão|Reserva de URL real em HTTP.SYS|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|Instância padrão|serviço Web Servidor de Relatórios|`https://\<servername>/reportserver`|`https://<servername>:80/reportserver`|  
-|Instância padrão|Portal da Web|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|Instância padrão|serviço Web Servidor de Relatórios|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|Instância padrão|Portal da Web|`https://<servername>/reports`|`https://<servername>:80/reports`|  
 |Instância nomeada|serviço Web Servidor de Relatórios|`https://<servername>/reportserver_<instancename>`|`https://<servername>:80/reportserver_<instancename>`|  
 |Instância nomeada|Portal da Web|`https://<servername>/reports_<instancename>`|`https://<servername>:80/reports_<instancename>`|  
 |SQL Server Express|serviço Web Servidor de Relatórios|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  

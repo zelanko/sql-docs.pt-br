@@ -2,20 +2,20 @@
 title: Compatibilidade de UTF-8 com OLE DB Driver para SQL Server| Microsoft Docs
 description: Suporte ao UTF-8 no OLE DB Driver para SQL Server
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: fb596365f284a141b5e57bfc8601427fe603d73d
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
-ms.translationtype: MTE75
+ms.reviewer: v-kaywon
+ms.author: jroth
+author: rothja
+ms.openlocfilehash: 340c1bdd7ab3ff54ffab52aebe08eeab258c7b41
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70392014"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257692"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>Suporte ao UTF-8 no OLE DB Driver para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ O Microsoft OLE DB Driver para SQL Server (versão 18.2.1) inclui o suporte à c
 - [Suporte para UTF-8](#ctp23)
 
 > [!IMPORTANT]
-> O Microsoft OLE DB driver for SQL Server usa a função [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) para determinar a codificação do buffer de entrada DBTYPE_STR. Os cenários nos quais o GetACP retorna uma codificação UTF-8 não têm suporte. Se o buffer precisar armazenar dados Unicode, o tipo de dados buffer deverá ser definido como DBTYPE_WSTR (UTF-16 encoded).
+> O Driver do Microsoft OLE DB para SQL Server usa a função [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) para determinar a codificação do buffer de entrada DBTYPE_STR. Os cenários nos quais o GetACP retorna uma codificação UTF-8 não são compatíveis. Se o buffer precisar armazenar dados Unicode, o tipo de dados de buffer deverá ser definido como DBTYPE_WSTR (UTF-16 codificado).
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>Inserção de dados em uma coluna CHAR ou VARCHAR com codificação UTF-8
 Ao criar um buffer de parâmetro de entrada para inserção, o buffer é descrito usando uma matriz de [estruturas DBBINDING](https://go.microsoft.com/fwlink/?linkid=2071182). Cada estrutura DBBINDING tem associado um único parâmetro ao buffer do consumidor e contém informações como o comprimento e o tipo dos valores de dados. Para um buffer de parâmetro de entrada do tipo CHAR, o *wType* da estrutura DBBINDING deve ser definido como DBTYPE_STR. Para um buffer de parâmetro de entrada do tipo WCHAR, o *wType* da estrutura DBBINDING deve ser definido como DBTYPE_WSTR.
@@ -54,7 +54,7 @@ Para o indicador DBTYPE_WSTR de tipo de buffer resultante, o driver converte os 
 
 ### <a name="utf-8-support-sql-server-2019-ctp-23"></a>Suporte a UTF-8 (SQL Server 2019 CTP 2.3)
 
-[!INCLUDE[ss2019](../../../includes/sssqlv15-md.md)] apresenta suporte completo para a amplamente utilizada codificação de caracteres UTF-8 como codificação de importação ou exportação, ou como ordenação em nível de banco de dados ou nível de coluna para dados de texto. A UTF-8 é permitida nos tipos de dados `CHAR` e `VARCHAR` e é habilitada quando você cria ou altera a ordenação de um objeto para uma ordenação com o sufixo `UTF8`.
+O [!INCLUDE[ss2019](../../../includes/sssqlv15-md.md)] apresenta suporte completo para a amplamente utilizada codificação de caracteres UTF-8 como codificação de importação ou exportação ou como ordenação em nível de coluna ou banco de dados ou nível para dados de texto. A UTF-8 é permitida nos tipos de dados `CHAR` e `VARCHAR` e é habilitada quando você cria ou altera a ordenação de um objeto para uma ordenação com o sufixo `UTF8`.
 
 Por exemplo, `LATIN1_GENERAL_100_CI_AS_SC` para `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. A UTF-8 só está disponível para ordenações do Windows com suporte para caracteres suplementares, conforme introduzida no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. `NCHAR` e `NVARCHAR` permitem somente a codificação UTF-16 e permanecem inalterados.
 

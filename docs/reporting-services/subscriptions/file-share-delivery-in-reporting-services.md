@@ -12,10 +12,10 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72278234"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega de compartilhamento de arquivos no Reporting Services
@@ -25,7 +25,7 @@ ms.locfileid: "72278234"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo do SharePoint|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; modo do SharePoint para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
   
  **Neste tópico:**  
   
@@ -68,15 +68,15 @@ ms.locfileid: "72278234"
 ##  <a name="bkmk_file_options"></a> Opções de arquivo  
  Ao criar uma assinatura de compartilhamento de arquivo, você pode definir como o nome do arquivo será criado e se o arquivo substituirá as versões anteriores do relatório. Um nome de arquivo totalmente qualificado possui três partes: nome, extensão e texto ou número anexado ao arquivo para criar um nome de arquivo exclusivo  
   
- **Nome de Arquivo:** o nome de arquivo é tem base no nome do relatório de origem, mas você pode fornecer um nome personalizado na assinatura. A extensão é opcional, mas se você especificá-la, o servidor de relatório criará uma extensão que corresponda ao formato de renderização.  
+ **Nome de Arquivo:** O nome de arquivo é tem base no nome do relatório de origem, mas você pode fornecer um nome personalizado na assinatura. A extensão é opcional, mas se você especificá-la, o servidor de relatório criará uma extensão que corresponda ao formato de renderização.  
   
- **Substituição:** você pode especificar as opões de substituição para reusar o mesmo nome de arquivo para cada entrega de relatório ou para criar um novo arquivo. Para substituir o arquivo, é necessário usar o mesmo nome e extensão de arquivo.  
+ **Substituir:** Você pode especificar as opões de substituição para reusar o mesmo nome de arquivo para cada entrega de relatório ou para criar um novo arquivo. Para substituir o arquivo, é necessário usar o mesmo nome e extensão de arquivo.  
   
  Uma abordagem alternativa para criar arquivos exclusivos para cada entrega é incluir um carimbo de hora no nome de arquivo. Para fazer isso, adicione a variável **\@timestamp** ao nome de arquivo (por exemplo, *CompanySales@timestamp* ). Com essa abordagem, o nome de arquivo será exclusivo por definição, portanto, nunca será substituído.  
   
  A imagem a seguir é um exemplo das configurações de um arquivo para uma assinatura configurada para entrega de compartilhamento de arquivos.  
   
- ![assinatura de compartilhamento de arquivos](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "assinatura de compartilhamento de arquivos")  
+ ![assinatura do compartilhamento de arquivo](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "assinatura do compartilhamento de arquivo")  
   
 ## <a name="see-also"></a>Consulte Também  
  [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   

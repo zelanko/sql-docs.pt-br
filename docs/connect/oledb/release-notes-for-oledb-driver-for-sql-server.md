@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 350856cc27bdec601e0db2998f9ff9953cdf6ec7
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
-ms.translationtype: MTE75
+ms.openlocfilehash: 23c730ce0bba9003b47b777108907763d981c551
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381729"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74401530"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Notas de versão do Driver do Microsoft OLE DB para SQL Server
 
@@ -38,14 +38,14 @@ Outubro de 2019
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
 | Suporte para autenticação do Azure Active Directory (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Como usar o Azure Active Directory](features/using-azure-active-directory.md). |
-| Suporte para ADAL (Biblioteca de Autenticação do Active Directory inserida). | Uma instalação separada da ADAL não é mais necessária para usar determinados métodos de autenticação. |
+| Incluir a Biblioteca de Autenticação do Azure Active Directory (adal.dll) no instalador | Agora incluída na instalação do driver base, ela atualizará as instalações existentes da Biblioteca de Autenticação do Microsoft Active Directory para SQL Server, removendo-as da lista de aplicativos instalados no Windows. |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>Bugs corrigidos
 
 | Correções de bugs | Detalhes |
 | :-------- | :------ |
-| Lógica drop index corrigida em [IIndexDefinition::D ropindex](https://go.microsoft.com/fwlink/?linkid=2106448). | As versões anteriores do driver de OLE DB não podem cancelar um índice de chave primária quando a ID do esquema e a ID de usuário do proprietário do índice não são iguais. |
+| Correção de lógica DROP INDEX em [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | As versões anteriores do driver do OLE DB não podem remover um índice de chave primária quando a ID do esquema e a ID de usuário do proprietário do índice não são iguais. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1823"></a>18.2.3
@@ -56,7 +56,7 @@ Junho de 2019
 
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
-| Suporte para atualizações de driver do SQL Server mídia removível. | Essa melhoria permite atualizações de driver diretamente do SQL Server mídia removível. |
+| Suporte para atualizações de driver da mídia removível do SQL Server. | Esse aprimoramento permite atualizações de driver diretamente da mídia removível do SQL Server. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1822"></a>18.2.2
@@ -90,7 +90,7 @@ Julho de 2018
 
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
-| Suporte para a palavra-chave da cadeia de conexão `UseFMTONLY` e para a propriedade de inicialização `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` controla como os metadados são recuperados ao se conectar ao [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e mais recente.<br/><br/>Para obter mais informações, consulte: [usando palavras-chave de cadeia de conexão com OLE DB driver para SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| Suporte para a palavra-chave da cadeia de conexão `UseFMTONLY` e para a propriedade de inicialização `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` controla como os metadados são recuperados ao se conectar ao [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e mais recente.<br/><br/>Para obter mais informações, consulte: [Como usar palavras-chave de cadeia de conexão com o Driver do OLE DB para SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>Bugs corrigidos
@@ -106,7 +106,7 @@ Julho de 2018
 
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
-| Suporte para a palavra-chave da cadeia de conexão `MultiSubnetFailover` e para a propriedade de inicialização `SSPROP_INIT_MULTISUBNETFAILOVER`. | Para obter mais informações, consulte:<br/>&bull; &nbsp; [Suporte ao Driver do OLE DB para SQL Server para alta disponibilidade e recuperação de desastres](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md),<br/>&bull; &nbsp; [Como usar palavras-chave de cadeia de conexão com o OLE DB Driver para SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| Suporte para a palavra-chave da cadeia de conexão `MultiSubnetFailover` e para a propriedade de inicialização `SSPROP_INIT_MULTISUBNETFAILOVER`. | Para obter mais informações, consulte:<br/>&bull; &nbsp; [Suporte ao Driver do OLE DB para SQL Server para alta disponibilidade e recuperação de desastres](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md),<br/>&bull; &nbsp; [Como usar palavras-chave de cadeia de conexão com o Driver do OLE DB para SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Confira também

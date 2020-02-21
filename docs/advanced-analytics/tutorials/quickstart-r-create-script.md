@@ -1,27 +1,26 @@
 ---
-title: 'Início Rápido: Criar scripts R'
-titleSuffix: SQL Server Machine Learning Services
-description: Criar e executar scripts R simples em uma instância do SQL Server com os Serviços de Machine Learning do SQL Server.
+title: 'Início Rápido: Executar scripts de R'
+description: Execute um conjunto de scripts R simples com os Serviços de Machine Learning do SQL Server. Saiba como usar o procedimento armazenado sp_execute_external_script para executar o script em uma instância do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a8e2779e930671faa9fa3ab94a7384ab1bdca83
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 495bb56cf76391c8baa1734665d5064b586d4be8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726990"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831787"
 ---
-# <a name="quickstart-create-and-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>Início Rápido: Criar e executar scripts R simples com os Serviços de Machine Learning do SQL Server
+# <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>Início Rápido: executar scripts R simples com os Serviços de Machine Learning do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Neste guia de início rápido, você criará e executará um conjunto de scripts R simples usando os [Serviços de Machine Learning do SQL Server](../what-is-sql-server-machine-learning.md). Você aprenderá a encapsular um script R bem formado no procedimento armazenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) e a executar o script em uma instância do SQL Server.
+Neste início rápido, você executará um conjunto de scripts R simples usando os [Serviços de Machine Learning do SQL Server](../what-is-sql-server-machine-learning.md). Você aprenderá a usar o procedimento armazenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para executar o script em uma instância do SQL Server.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -50,7 +49,7 @@ print(c(c, d))
 
 1. Passe o script R completo para o procedimento armazenado `sp_execute_external_script`.
 
-   O script é passado por meio do argumento `@script`. Tudo dentro do argumento `@script` deve ser um código R válido.
+   O script é passado por meio do argumento `@script`. Tudo dentro do argumento `@script` precisa ser código R válido.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -63,7 +62,7 @@ print(c(c, d))
     '
     ```
 
-1. O resultado correto é calculado e a função `print` do R retorna o resultado para a janela **Mensagens**.
+1. O resultado correto é calculado e a função R `print` retorna o resultado na janela **Mensagens**.
 
    O resultado deve ser semelhante ao mostrado a seguir.
 
@@ -91,7 +90,7 @@ As entradas para o procedimento armazenado `sp_execute_external_script` incluem:
 | | |
 |-|-|
 | @language | define a extensão da linguagem a ser chamada, neste caso, R |
-| @script | define os comandos passados para o runtime do R. Todo o script R deve ser colocado neste argumento, como texto Unicode. Você também pode adicionar texto a uma variável do tipo **nvarchar** e chamar a variável |
+| @script | define os comandos passados para o runtime do R. O seu script R inteiro deve ser colocado neste argumento como texto Unicode. Você também pode adicionar texto a uma variável do tipo **nvarchar** e chamar a variável |
 | @input_data_1 | dados retornados pela consulta, passados para o runtime R, que retorna os dados ao SQL Server como uma estrutura de dados |
 |WITH RESULT SETS | cláusula que define o esquema da tabela de dados retornada para o SQL Server, adicionando "Olá, Mundo" com o nome da coluna, **int** para o tipo de dados |
 
@@ -161,7 +160,7 @@ Por enquanto, usaremos as variáveis de entrada e saída padrão de `sp_execute_
     Observe que R diferencia maiúsculas de minúsculas. As variáveis de entrada e saída usadas no script R (**SQL_out**, **SQL_in**) precisam corresponder aos nomes definidos com `@input_data_1_name` e `@output_data_1_name`, incluindo maiúsculas e minúsculas.
 
    > [!TIP]
-   > Apenas um conjunto de dados de entrada pode ser passado como um parâmetro e é possível retornar apenas um conjunto de dados. No entanto, você pode chamar outros conjuntos de dados no código do R e retornar saídas de outros tipos, além do conjunto de dados. Você também pode adicionar a palavra-chave OUTPUT a qualquer parâmetro para que ele seja retornado com os resultados.
+   > Só é possível passar um conjunto de dados de entrada como parâmetro e você pode retornar apenas um conjunto de dados. No entanto, você pode chamar outros conjuntos de dados em seu código R e pode retornar saídas de outros tipos, além do conjunto de dados. Você também pode adicionar a palavra-chave OUTPUT a qualquer parâmetro para que ele retorne com os resultados.
 
 1. Você também pode gerar valores usando apenas o script R sem dados de entrada (`@input_data_1` está definido como em branco).
 
@@ -248,6 +247,6 @@ Para saber como usar estruturas de dados ao usar o R nos Serviços de Machine Le
 
 Para obter mais informações sobre como usar o R nos Serviços de Machine Learning do SQL Server, confira os seguintes artigos:
 
-- [Escrever funções avançadas do R com os Serviços de Machine Learning do SQL Server](quickstart-r-functions.md)
+- [Gravar funções avançadas do R com os Serviços de Machine Learning do SQL Server](quickstart-r-functions.md)
 - [Criar e pontuar um modelo de previsão no R com os Serviços de Machine Learning do SQL Server](quickstart-r-train-score-model.md)
 - [O que são os Serviços de Machine Learning do SQL Server (Python e R)?](../what-is-sql-server-machine-learning.md)

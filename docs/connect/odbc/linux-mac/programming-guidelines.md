@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
-ms.openlocfilehash: d87e39bcabeabe5c0ea5d5648456eded8ea75510
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
-ms.translationtype: MTE75
+ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742796"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911180"
 ---
 # <a name="programming-guidelines"></a>Diretrizes de programação
 
@@ -54,7 +54,7 @@ Os recursos a seguir não foram verificados para funcionar corretamente nesta ve
 
 Os seguintes recursos não estão disponíveis nesta versão do driver ODBC em macOS e Linux: 
 
--   Transações distribuídas (não há suporte para o atributo SQL_ATTR_ENLIST_IN_DTC)  
+-   Transações distribuídas (não há compatibilidade com o atributo SQL_ATTR_ENLIST_IN_DTC)  
 -   Espelhamento de banco de dados  
 -   FILESTREAM  
 -   Criação de perfil de desempenho do driver ODBC, discutido em [SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=234099), e dos seguintes atributos de conexão relacionados ao desempenho:  
@@ -64,15 +64,20 @@ Os seguintes recursos não estão disponíveis nesta versão do driver ODBC em m
     -   SQL_COPT_SS_PERF_QUERY  
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
--   SQLBrowseConnect (antes da versão 17,2)
+-   SQLBrowseConnect (antes da versão 17.2)
 -   Tipos de intervalo de C, como SQL_C_INTERVAL_YEAR_TO_MONTH (documentado em [Identificadores e descritores de tipo de dados](https://msdn.microsoft.com/library/ms716351(VS.85).aspx))
 -   O valor SQL_CUR_USE_ODBC do atributo SQL_ATTR_ODBC_CURSORS da função SQLSetConnectAttr.
 
-## <a name="character-set-support"></a>Suporte a conjuntos de caracteres
+## <a name="character-set-support"></a>Suporte a conjunto de caracteres
 
-Para o ODBC Driver 13 e 13.1, os dados SQLCHAR devem ser UTF-8. Não há suporte para nenhuma outra codificação.
+Para o ODBC Driver 13 e 13.1, os dados SQLCHAR devem ser UTF-8. Não há compatibilidade com nenhuma outra codificação.
 
-Para o ODBC Driver 17, há suporte para dados SQLCHAR em um dos seguintes conjuntos/codificações de caracteres:
+Para o ODBC Driver 17, há compatibilidade com os dados SQLCHAR em um dos seguintes conjuntos/codificações de caracteres:
+
+> [!NOTE]  
+> Devido a diferenças de `iconv` em `musl` e `glibc`, muitos desses locais não são compatíveis com o Alpine Linux.
+>
+> Para saber mais, confira [Diferenças funcionais do glibc](https://wiki.musl-libc.org/functional-differences-from-glibc.html)
 
 |Nome|Descrição|
 |-|-|
@@ -85,7 +90,7 @@ Para o ODBC Driver 17, há suporte para dados SQLCHAR em um dos seguintes conjun
 |CP949|Coreano, EUC-KR|
 |CP950|Chinês tradicional, Big5|
 |CP1251|Cirílico|
-|CP1253|Greek|
+|CP1253|Grego|
 |CP1256|Árabe|
 |CP1257|Báltico|
 |CP1258|Vietnamita|
@@ -118,10 +123,13 @@ Há algumas diferenças de conversão de codificação entre o Windows e várias
 No ODBC Driver 13 e 13.1, quando caracteres multibyte UTF-8 ou UTF-16 substitutos são divididos em buffers SQLPutData, isso resulta em dados corrompidos. Use buffers para transmitir SQLPutData que não terminem em codificações parciais de caracteres. Essa limitação foi removida com o ODBC Driver 17.
 
 ## <a name="bkmk-openssl"></a>OpenSSL
-A partir da versão 17,4, o driver carrega o OpenSSL dinamicamente, o que permite que ele seja executado em sistemas que tenham a versão 1,0 ou 1,1 sem a necessidade de arquivos de driver separados. Quando várias versões do OpenSSL estiverem presentes, o driver tentará carregar a mais recente. O driver atualmente dá suporte a OpenSSL 1.0. x e 1.1. x
+Da versão 17.4 em diante, o driver carrega o OpenSSL dinamicamente, o que permite que ele seja executado em sistemas com as versões 1.0 ou 1.1 sem precisar de arquivos de driver separados. Quando várias versões do OpenSSL estiverem presentes, o driver tentará carregar a mais recente. O driver é compatível com o OpenSSL 1.0.x e 1.1.x no momento
 
 > [!NOTE]  
-> Pode ocorrer um possível conflito se o aplicativo que usa o driver (ou um de seus componentes) estiver vinculado ou carregar dinamicamente uma versão diferente do OpenSSL. Se várias versões do OpenSSL estiverem presentes no sistema e o aplicativo o usar, é altamente recomendável que um tenha um cuidado extra para garantir que a versão carregada pelo aplicativo e o driver não sejam compatíveis, pois os erros podem corromper a memória e, portanto, Não serão necessariamente manifestados de maneiras óbvias ou consistentes.
+> Poderá ocorrer um possível conflito se o aplicativo que usa o driver (ou um de seus componentes) estiver vinculado ou carregar dinamicamente uma versão diferente do OpenSSL. Se várias versões do OpenSSL estiverem presentes no sistema e o aplicativo o usar, tenha cuidado extra para garantir que a versão carregada pelo aplicativo e o driver não sejam incompatíveis, pois os erros podem corromper a memória e, portanto, não serão necessariamente manifestados de maneiras óbvias ou consistentes.
+
+## <a name="bkmk-alpine"></a>Alpine Linux
+No momento em que este artigo foi escrito, o tamanho da pilha padrão em MUSL é de 128 mil, o suficiente para a funcionalidade básica do driver ODBC. No entanto, de acordo com a função do aplicativo, não é difícil exceder esse limite, especialmente ao chamar o driver de vários threads. É recomendável que um aplicativo ODBC no Alpine Linux seja compilado com `-Wl,-z,stack-size=<VALUE IN BYTES>` para aumentar o tamanho da pilha. Para referência, o tamanho de pilha padrão na maioria dos sistemas GLIBC é de 2 MB.
 
 ## <a name="additional-notes"></a>Observações adicionais  
 
@@ -136,11 +144,11 @@ A partir da versão 17,4, o driver carrega o OpenSSL dinamicamente, o que permit
     
 2.  O gerenciador de driver UnixODBC retorna "identificador de atributo/opção inválido" para todos os atributos de instrução quando eles são passados por meio do SQLSetConnectAttr. No Windows, quando o SQLSetConnectAttr recebe um valor de atributo de instrução, ele faz o driver definir esse valor em todas as instruções ativas que sejam filhos do identificador de conexão.  
 
-3.  Ao usar o driver com aplicativos altamente multissegmentados, a validação do identificador do unixODBC pode se tornar um afunilamento de desempenho. Nesses cenários, um desempenho significativamente maior pode ser obtido com a compilação de unixODBC `--enable-fastvalidate` com a opção. No entanto, lembre-se de que isso pode fazer com que os aplicativos passem identificadores `SQL_INVALID_HANDLE` inválidos para APIs ODBC para falhar em vez de retornar erros.
+3.  Ao usar o driver com aplicativos altamente multi-threaded, a validação do identificador do unixODBC pode se tornar um gargalo de desempenho. Nesses cenários, um desempenho significativamente maior pode ser obtido com a compilação de unixODBC com a opção `--enable-fastvalidate`. No entanto, saiba que isso pode fazer com que os aplicativos que passam identificadores inválidos para APIs do ODBC falhem em vez de retornar erros de `SQL_INVALID_HANDLE`.
 
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Veja também  
 [Perguntas frequentes](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 
 [Problemas conhecidos nesta versão do driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
-[Notas de versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Notas sobre a versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)

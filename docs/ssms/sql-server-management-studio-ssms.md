@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL Server Management Studio for Integration Services
 - SQL Server Management Studio for Reporting Services
 - SQL Server Management Studio for Analysis Services
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: a185d7506b23931787699b52fedddfddf21c1cb8
-ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
+ms.openlocfilehash: 613e3eddce55fbc52cd011f5070def12d31d83b9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71038849"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76037177"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>O que é o SSMS (SQL Server Management Studio)?
 
@@ -68,7 +68,7 @@ Para obter mais informações sobre como usar o [!INCLUDE[ssManStudioFull](../in
 
 Use o SQL Server Management Studio para habilitar recursos do Reporting Services, administrar o servidor e os bancos de dados e gerenciar funções e trabalhos.
 
-Você pode gerenciar agendas compartilhadas usando a pasta Agendas Compartilhadas e gerenciar bancos de dados do servidor de relatórios (ReportServer, ReportServerTempdb). Você também pode criar uma função RSExecRole no banco de dados Mestre do sistema ao mover um banco de dados de servidor de relatórios para um Mecanismo de Banco de Dados do SQL Server novo ou diferente ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). Para obter mais informações sobre essas tarefas, confira os seguintes artigos:  
+Você pode gerenciar agendas compartilhadas usando a pasta Agendas Compartilhadas e gerenciar bancos de dados do servidor de relatórios (ReportServer, ReportServerTempdb). Crie também uma RSExecRole no banco de dados Mestre do sistema ao mover um banco de dados do servidor de relatório para um Mecanismo de Banco de Dados do SQL Server novo ou diferente ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). Para obter mais informações sobre essas tarefas, confira os seguintes artigos:  
 
 - [Reporting Services no SSMS](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
 - [Administrar um banco de dados do servidor de relatório](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)
@@ -91,6 +91,10 @@ Para obter mais informações sobre localidade diferente com as versões anterio
 - Começando com o SSMS 17.0, a equipe de Ferramentas SQL adotou a [Política de Ciclo de Vida Moderna da Microsoft](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 - Leia o [comunicado de Política de Ciclo de Vida Moderna](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy) original. Para obter informações adicionais, veja as [Perguntas frequentes sobre a política moderna](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
 - Para obter informações sobre a coleta de dados de diagnóstico e o uso de recursos, confira o [suplemento de privacidade SQL Server](https://docs.microsoft.com/sql/sql-server/sql-server-privacy).
+
+## <a name="cross-platform-tool"></a>Ferramenta multiplataforma
+
+[!INCLUDE[ssms-azure-data-studio-mention](../includes/ssms-azure-data-studio-mention.md)]
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

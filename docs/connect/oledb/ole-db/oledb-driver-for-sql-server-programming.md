@@ -1,5 +1,5 @@
 ---
-title: Driver de OLE DB para programação de SQL Server | Microsoft Docs
+title: Programação no Driver do OLE DB para SQL Server | Microsoft Docs
 description: Programação no OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0645659036af0b00e2cf1b62b67830ded43aecbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993934"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>Programação no OLE DB Driver for SQL Server
@@ -30,17 +30,17 @@ ms.locfileid: "67993934"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O driver de OLE DB para SQL Server é uma API COM de baixo nível usada para acessar dados. O OLE DB Driver for SQL Server é recomendado para desenvolver ferramentas, utilitários ou componentes de baixo nível que precisem de alto desempenho. O OLE DB Driver for SQL Server é um provedor nativo de alto desempenho que acessa o protocolo TDS do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diretamente.  
+  O Driver do OLE DB para SQL Server é uma API COM de baixo nível usada para acessar dados. O OLE DB Driver for SQL Server é recomendado para desenvolver ferramentas, utilitários ou componentes de baixo nível que precisem de alto desempenho. O OLE DB Driver for SQL Server é um provedor nativo de alto desempenho que acessa o protocolo TDS do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diretamente.  
   
- O driver de OLE DB para SQL Server fornece suporte de OLE DB aos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]aplicativos que se conectam ao.  
+ O Driver do OLE DB para SQL Server dá suporte de OLE DB a aplicativos que se conectam ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- O driver OLE DB para SQL Server é um provedor compatível com o OLE DB versão 2,0.  
+ O Driver do OLE DB para SQL Server é um provedor em conformidade com o OLE DB versão 2.0.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
 -   [Criação de aplicativo do Driver do OLE DB para SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
--   [OLE DB de objetos &#40;de fonte de dados&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [Objetos de fonte de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [Comandos](../../oledb/ole-db-commands/commands.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67993934"
   
 -   [Tabelas e índices](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [Tipos &#40;de dados OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+-   [Tipos de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
 -   [Suporte ao conjunto de linhas de esquema &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "67993934"
   
 -   [Suporte a FILESTREAM](../../oledb/features/filestream-support.md)  
   
--   [Transactions](../../oledb/ole-db-transactions/transactions.md)  
+-   [Transações](../../oledb/ole-db-transactions/transactions.md)  
   
 -   [Erros](../../oledb/ole-db-errors/errors.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "67993934"
   
 -   [Suporte a colunas esparsas &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   
--   [Driver de OLE DB para &#40;referência&#41; de OLE DB de SQL Server](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [Referência do Driver do OLE DB para SQL Server &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 -   [Tópicos de instruções do OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   

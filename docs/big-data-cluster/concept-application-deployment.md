@@ -1,29 +1,31 @@
 ---
 title: O que é a Implantação de Aplicativos?
-titleSuffix: Big Data Clusters for SQL Server 2019
+titleSuffix: SQL Server Big Data Clusters
 description: Este artigo descreve a implantação de aplicativos em Clusters de Big Data do SQL Server 2019.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da497f8d7c435a807ba530ae619ff91a6f2dff71
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653002"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831578"
 ---
-# <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>O que é a Implantação de Aplicativos em um cluster de Big Data do SQL Server 2019?
+# <a name="what-is-application-deployment-on-a-big-data-cluster"></a>O que é a Implantação de Aplicativos em um cluster de Big Data?
 
-A Implantação de Aplicativos permite a implantação de aplicativos no cluster de Big Data fornecendo interfaces para criar, gerenciar e executar aplicativos. Os aplicativos implantados no cluster de Big Data se beneficiam do poder computacional do cluster e podem acessar os dados disponíveis no cluster. Isso aumenta a escalabilidade e o desempenho dos aplicativos, ao mesmo tempo que gerencia os aplicativos nos quais os dados residem.
+A Implantação de Aplicativos permite a implantação de aplicativos no cluster de Big Data fornecendo interfaces para criar, gerenciar e executar aplicativos. Os aplicativos implantados no cluster de Big Data se beneficiam do poder computacional do cluster e podem acessar os dados disponíveis no cluster. Isso aumenta a escalabilidade e o desempenho dos aplicativos, ao mesmo tempo que gerencia os aplicativos nos quais os dados residem. Os runtimes do aplicativo compatíveis com os Clusters de Big Data do SQL Server são o R, o Python, o SSIS e o MLeap.
+
 As seções a seguir descrevem a arquitetura e a funcionalidade da Implantação de Aplicativos.
 
 ## <a name="application-deployment-architecture"></a>Arquitetura da Implantação de Aplicativos
 
-A implantação de aplicativos consiste em um controlador e manipuladores de tempo de execução de aplicativo. Ao criar um aplicativo, um arquivo de especificação (`spec.yaml`) é fornecido. Esse arquivo `spec.yaml` contém tudo o que o controlador precisa saber para implantar o aplicativo com êxito. Este é um exemplo de conteúdo para `spec.yaml`:
+A implantação de aplicativos consiste em um controlador e manipuladores de runtime de aplicativo. Ao criar um aplicativo, um arquivo de especificação (`spec.yaml`) é fornecido. Esse arquivo `spec.yaml` contém tudo o que o controlador precisa saber para implantar o aplicativo com êxito. Este é um exemplo de conteúdo para `spec.yaml`:
 
 ```yaml
 #spec.yaml
@@ -41,7 +43,7 @@ output: #output parameter the app expects and the type
   result: int
 ```
 
-O controlador inspeciona o `runtime` especificado no arquivo `spec.yaml` e chama o manipulador de tempo de execução correspondente. O manipulador de tempo de execução cria o aplicativo. Primeiro, um ReplicaSet do Kubernetes é criado contendo um ou mais pods, cada um contendo o aplicativo a ser implantado. O número de pods é definido pelo parâmetro `replicas` definido no arquivo `spec.yaml` do aplicativo. Cada pod pode ter um ou mais pools. O número de pools é definido pelo parâmetro `poolsize` definido no arquivo `spec.yaml`.
+O controlador inspeciona o `runtime` especificado no arquivo `spec.yaml` e chama o manipulador de runtime correspondente. O manipulador de runtime cria o aplicativo. Primeiro, um ReplicaSet do Kubernetes é criado contendo um ou mais pods, cada um contendo o aplicativo a ser implantado. O número de pods é definido pelo parâmetro `replicas` definido no arquivo `spec.yaml` do aplicativo. Cada pod pode ter um ou mais pools. O número de pools é definido pelo parâmetro `poolsize` definido no arquivo `spec.yaml`.
 
 Essas configurações têm um impacto na quantidade de solicitações que a implantação pode manipular em paralelo. O número máximo de solicitações em determinado momento é igual a `replicas` vezes `poolsize`. Se você tiver cinco réplicas e dois pools por réplica, a implantação poderá manipular dez solicitações em paralelo. Confira a imagem abaixo para obter uma representação gráfica de `replicas` e `poolsize`:
 

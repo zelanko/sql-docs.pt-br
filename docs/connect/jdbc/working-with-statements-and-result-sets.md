@@ -11,10 +11,10 @@ ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a57ffc5c9314f8e84c077b6c15ab88ed5411f028
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025366"
 ---
 # <a name="working-with-statements-and-result-sets"></a>Trabalhando com instruções e conjuntos de resultados
@@ -27,9 +27,9 @@ Quando você trabalha com o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversio
 
 Quando você usa um dos objetos de Instrução do driver JDBC, como o objeto [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) ou [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), verifique se você está usando o objeto apropriado para o trabalho.
 
-- Se você não tiver parâmetros de saída, não será necessário usar o objeto SQLServerCallableStatement. Em vez disso, use o objeto SQLServerStatement ou SQLServerPreparedStatement.
+- Se você não tiver parâmetros OUT, não precisará usar o objeto SQLServerCallableStatement. Em vez disso, use o objeto SQLServerStatement ou o SQLServerPreparedStatement.
 
-- Se você não pretende executar a instrução mais de uma vez ou não tem parâmetros de entrada ou saída, não é necessário usar o objeto SQLServerCallableStatement ou SQLServerPreparedStatement. Em vez disso, use o objeto SQLServerStatement.
+- Se não desejar executar a instrução mais de uma vez ou não tiver parâmetros IN ou OUT, você não precisará usar o objeto SQLServerCallableStatement ou o SQLServerPreparedStatement. Em vez disso, use o objeto SQLServerStatement.
 
 ## <a name="use-the-appropriate-concurrency-for-resultset-objects"></a>Usar a simultaneidade apropriada para objetos ResultSet
 
@@ -37,7 +37,7 @@ Não peça simultaneidade atualizável ao criar instruções que geram conjuntos
 
 ## <a name="limit-the-size-of-your-result-sets"></a>Limitar o tamanho dos seus conjuntos de resultados
 
-Considere usar o método [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) (ou a sintaxe de SQL SET ROWCOUNT ou SELECT TOP N) para limitar o número de linhas retornado de conjuntos de resultados potencialmente grandes. Se você precisa lidar com conjuntos de resultados grandes, use um buffer de resposta adaptável configurando a propriedade da cadeia de conexão responseBuffering=adaptive, que é o modo padrão. Esta abordagem permite que o aplicativo processe conjuntos de resultados grandes sem exigir cursores do lado do servidor e minimiza o uso de memória de aplicativo. Para obter mais informações, consulte [usando o buffer adaptável](../../connect/jdbc/using-adaptive-buffering.md).
+Considere usar o método [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) (ou a sintaxe de SQL SET ROWCOUNT ou SELECT TOP N) para limitar o número de linhas retornado de conjuntos de resultados potencialmente grandes. Se você precisa lidar com conjuntos de resultados grandes, use um buffer de resposta adaptável configurando a propriedade da cadeia de conexão responseBuffering=adaptive, que é o modo padrão. Esta abordagem permite que o aplicativo processe conjuntos de resultados grandes sem exigir cursores do lado do servidor e minimiza o uso de memória de aplicativo. Para obter mais informações, confira [Usando o buffer adaptável](../../connect/jdbc/using-adaptive-buffering.md).
 
 ## <a name="use-the-appropriate-fetch-size"></a>Usar o tamanho da busca apropriado
 

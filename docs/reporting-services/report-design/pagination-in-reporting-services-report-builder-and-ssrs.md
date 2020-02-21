@@ -1,6 +1,7 @@
 ---
-title: Paginação no Reporting Services (Construtor de Relatórios e SSRS) | Microsoft Docs
-ms.date: 07/26/2019
+title: Paginação em relatórios (Construtor de Relatórios e SSRS) | Microsoft Docs
+description: A paginação se refere ao número de páginas dentro de um relatório paginado e ao modo como os itens de relatório são organizados nessas páginas. A paginação no Reporting Services depende da extensão de renderização que você usa para exibir e entregar o relatório.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 507aeab666f1849b9216b22e90dfee3d21f92694
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
-ms.translationtype: MTE75
+ms.openlocfilehash: 2c3ce298553ebe5103cc8639a3a86e14977725ce
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632030"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247337"
 ---
-# <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginação no Reporting Services (Construtor de Relatórios e SSRS)
-  A paginação se refere ao número de páginas dentro de um relatório e ao modo como os itens de relatório são organizados nessas páginas. A paginação no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] varia, dependendo da extensão de renderização que você usa para exibir e entregar o relatório. Ao executar um relatório no servidor de relatórios, o relatório usa o processador HTML. O HTML segue um conjunto específico de regras de paginação. Por exemplo, se exportar o mesmo relatório para o PDF, o processador do PDF será utilizado e um conjunto de regras diferente será aplicado, portanto, o relatório será paginado de modo diferente. Para desenvolver com êxito um relatório que seja facilmente lido pelos seus usuários bem como que seja otimizado para o processador que pretende usar na entrega do relatório, você deve entender as regras utilizadas para controlar a paginação no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+# <a name="pagination-in-reports-report-builder--and-ssrs"></a>Paginação em relatórios (Construtor de Relatórios e SSRS)
+  A paginação se refere ao número de páginas dentro de um relatório paginado e ao modo como os itens de relatório são organizados nessas páginas. A paginação no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] varia, dependendo da extensão de renderização que você usa para exibir e entregar o relatório. Ao executar um relatório no servidor de relatórios, o relatório usa o processador HTML. O HTML segue um conjunto específico de regras de paginação. Por exemplo, se exportar o mesmo relatório para o PDF, o processador do PDF será utilizado e um conjunto de regras diferente será aplicado, portanto, o relatório será paginado de modo diferente. Para desenvolver com êxito um relatório que seja facilmente lido pelos seus usuários bem como que seja otimizado para o processador que pretende usar na entrega do relatório, você deve entender as regras utilizadas para controlar a paginação no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Este tópico abrange o impacto do tamanho físico da página e o layout to relatório sobre como os processadores de quebras de página não flexíveis renderizam o relatório. Você pode configurar as propriedades para modificar o tamanho físico da página e as margens, além de dividir o relatório em colunas, usando o painel **Propriedades do Relatório** , o painel **Propriedades** ou a caixa de diálogo **Configurar Página** . Você pode acessar o painel **Propriedades do Relatório** clicando na área azul fora do corpo do relatório. Além disso, pode acessar a caixa de diálogo **Configurar Página** clicando em **Executar** na guia Página Inicial e depois clicar em **Configurar Página** na guia Executar.  
   

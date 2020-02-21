@@ -1,6 +1,6 @@
 ---
-title: Opções (página Ambiente – Teclado) | Microsoft Docs
-ms.custom: ''
+title: Opções (página Ambiente – Teclado)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,21 +13,21 @@ f1_keywords:
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e3df7105bf2cd01736a16b77ab1b367dce80a598
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: dbe6eaed0482642e8200b26561e3b2bb473bfa9e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68257320"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255881"
 ---
 # <a name="options-environment---keyboard-page"></a>Opções (página Ambiente – Teclado)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-A caixa de diálogo **Opções** lhe permite personalizar o esquema de teclado no [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use essa opção para escolher um esquema de teclado. Para acessar essa página, clique em **Opções** no menu **Ferramentas** , selecione a pasta **Ambiente** e, então, clique em **Teclado**.  
+A caixa de diálogo **Opções** permite personalizar o esquema de teclado para [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use essa opção para escolher um esquema de teclado. Para acessar essa página, clique em **Opções** no menu **Ferramentas** , selecione a pasta **Ambiente** e, então, clique em **Teclado**.  
   
 A lista suspensa **Esquema de teclado** fornece as coleções disponíveis de teclas de atalho. Para carregar um esquema específico, selecione-o na lista. Quando estiver pronto para sair da caixa de diálogo **Opções** , clique em **OK**. Seu esquema selecionado será carregado no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 **Standard**  
-O esquema Padrão é o padrão no [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se assemelha muito às teclas de atalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio.  
+O esquema Padrão é o padrão no [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e assemelha-se muito às teclas de atalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio.  
   
 Use a grade **Atalhos de consulta** para associar um procedimento armazenado a um atalho do teclado.  
   

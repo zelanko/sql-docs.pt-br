@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 417bf44993ffc850da03d090e36c29cae472c104
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015827"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>Alterações de cópia em massa para tipos avançados de data e hora (OLE DB)
@@ -24,16 +24,16 @@ ms.locfileid: "68015827"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Este artigo descreve os aprimoramentos de data/hora para dar suporte à funcionalidade de cópia em massa no driver OLE DB para SQL Server.  
+  Este artigo descreve as melhorias de data/hora para oferecer suporte à funcionalidade de cópia em massa no Driver do OLE DB para SQL Server.  
   
 ## <a name="format-files"></a>Arquivos de formato  
  Ao criar arquivos de formato interativamente, a tabela a seguir descreve a entrada usada para especificar os tipos de data/hora e os nomes de tipo de dados do arquivo de host correspondentes.  
   
-|tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Resposta ao aviso: "Insira o tipo de armazenamento de arquivos do campo <field_name> [\<default>]:"|  
+|tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Resposta à solicitação: "Insira o tipo de armazenamento de arquivo do campo <nome_do_campo> [\<padrão>]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|DATETIME|SQLDATETIME|d|  
+|Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|data|SQLDATE|de|  
+|Data|SQLDATE|de|  
 |Hora|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
@@ -64,7 +64,7 @@ ms.locfileid: "68015827"
 ```  
   
 ## <a name="character-data-files"></a>Arquivos de dados de caracteres  
- Em arquivos de dados de caractere, os valores de data e hora são representados conforme descrito na seção "formatos de dados: cadeias de caracteres e literais" do [suporte de tipo de dados para OLE DB melhorias de data e hora](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) para OLE DB.  
+ Em arquivos de dados de caractere, valores de data e hora são representados conforme descrito na seção "Formatos de dados: cadeias de caracteres e literais" em [Suporte a tipo de dados para aprimoramentos de data e hora do OLE DB](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) para OLE DB.  
   
  Em arquivos de dados nativos, os valores de data e os valores temporais para os quatro novos tipos são mostrados como suas representações TDS com uma escala de 7 (porque esse é o máximo com suporte no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e os arquivos de dados bcp não armazenam a escala dessas colunas). Não há nenhuma alteração no armazenamento dos tipos **datetime** e **smalldatetime** existentes nem em suas representações do protocolo TDS.  
   
@@ -74,20 +74,20 @@ ms.locfileid: "68015827"
 |-----------------------|---------------------------|  
 |DATETIME|8|  
 |smalldatetime|4|  
-|Data|3|  
+|date|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
  
   
-## <a name="bcp-types-in-msoledbsqlh"></a>Tipos BCP em msoledbsql. h  
- Os tipos a seguir são definidos em msoledbsql. h. Esses tipos são passados com o parâmetro *eUserDataType* de IBCPSession:: BCPColFmt no OLE DB.  
+## <a name="bcp-types-in-msoledbsqlh"></a>Tipos BCP em msoledbsql.h  
+ Os tipos a seguir estão definidos em msoledbsql.h. Esses tipos são passados com o parâmetro *eUserDataType* do método IBCPSession::BCPColFmt no OLE DB.  
   
-|tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Digite msoledbsql. h para uso com IBCPSession:: BCPColFmt|Valor|  
+|tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Digite msoledbsql.h para uso com o método IBCPSession:: BCPColFmt|Valor|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIM4|0x3a|  
-|data|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|Data|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Hora|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
@@ -95,20 +95,20 @@ ms.locfileid: "68015827"
 ## <a name="bcp-data-type-conversions"></a>Conversões de tipo de dados BCP  
  As tabelas a seguir fornecem informações de conversão.  
   
- **Observação do OLE DB** As conversões a seguir são executadas por IBCPSession. O IRowsetFastLoad usa conversões OLE DB conforme definido em [conversões executadas do cliente para o servidor](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md). Observe que os valores datetime são arredondados para 1/300 de um segundo e os valores smalldatetime têm os segundos definidos como zero depois de concluídas as conversões de cliente descritas a seguir. O arredondamento de datetime se propaga para horas e minutos, mas não para a data.  
+ **Observação do OLE DB** As conversões a seguir são executadas por IBCPSession. O IRowsetFastLoad usa conversões OLE DB conforme definido em [Conversões realizadas de Cliente para Servidor](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md). Observe que os valores datetime são arredondados para 1/300 de um segundo e os valores smalldatetime têm os segundos definidos como zero depois de concluídas as conversões de cliente descritas a seguir. O arredondamento de datetime se propaga para horas e minutos, mas não para a data.  
   
-|Para --><br /><br /> De|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
+|Para --><br /><br /> De|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|data|1|-|1, 6|1, 6|1, 6|1, 5, 6|1, 3|1, 3|  
-|Hora|N/A|1, 10|1, 7, 10|1, 7, 10|1, 7, 10|1, 5, 7, 10|1, 3|1, 3|  
+|Data|1|-|1, 6|1, 6|1, 6|1, 5, 6|1, 3|1, 3|  
+|Hora|N/D|1, 10|1, 7, 10|1, 7, 10|1, 7, 10|1, 5, 7, 10|1, 3|1, 3|  
 |Smalldatetime|1, 2|1, 4, 10|1|1|1, 10|1, 5, 10|1, 11|1, 11|  
-|DATETIME|1, 2|1, 4, 10|1, 12|1|1, 10|1, 5, 10|1, 11|1, 11|  
+|Datetime|1, 2|1, 4, 10|1, 12|1|1, 10|1, 5, 10|1, 11|1, 11|  
 |Datetime2|1, 2|1, 4, 10|1, 12|1, 10|1, 10|1, 5, 10|1, 3|1, 3|  
 |Datetimeoffset|1, 2, 8|1, 4, 8, 10|1, 8, 10|1, 8, 10|1, 8, 10|1, 10|1, 3|1, 3|  
-|Char/wchar (date)|9|-|9, 6, 12|9, 6, 12|9, 6|9, 5, 6|N/A|N/A|  
-|Char/wchar (time)|-|9, 10|9, 7, 10, 12|9, 7, 10, 12|9, 7, 10|9, 5, 7, 10|N/A|N/A|  
-|Char/wchar (datetime)|9, 2|9, 4, 10|9, 10, 12|9, 10, 12|9, 10|9, 5, 10|N/A|N/A|  
-|Char/wchar (datetimeoffset)|9, 2, 8|9, 4, 8, 10|9, 8, 10, 12|9, 8, 10, 12|9, 8, 10|9, 10|N/A|N/A|  
+|Char/wchar (date)|9|-|9, 6, 12|9, 6, 12|9, 6|9, 5, 6|N/D|N/D|  
+|Char/wchar (time)|-|9, 10|9, 7, 10, 12|9, 7, 10, 12|9, 7, 10|9, 5, 7, 10|N/D|N/D|  
+|Char/wchar (datetime)|9, 2|9, 4, 10|9, 10, 12|9, 10, 12|9, 10|9, 5, 10|N/D|N/D|  
+|Char/wchar (datetimeoffset)|9, 2, 8|9, 4, 8, 10|9, 8, 10, 12|9, 8, 10, 12|9, 8, 10|9, 10|N/D|N/D|  
   
 #### <a name="key-to-symbols"></a>Legenda dos símbolos  
   
@@ -123,11 +123,11 @@ ms.locfileid: "68015827"
 |6|A hora é definida como zero.|  
 |7|O componente date é definido como 1900-01-01.|  
 |8|O deslocamento de timezone é ignorado.|  
-|9|A cadeia de caracteres é analisada e convertida em um valor date, datetime, datetimeoffset ou time, dependendo do primeiro caractere de pontuação encontrado e da presença dos componentes restantes. A cadeia de caracteres é então convertida no tipo de destino, seguindo as regras da tabela ao final deste artigo para o tipo de origem descoberto por esse processo. Se os dados fornecidos não puderem ser analisados sem erro ou se alguma parte do componente estiver fora do intervalo permitido, ou se não houver nenhuma conversão do tipo literal para o tipo de destino, um erro será postado. Para os parâmetros datetime e smalldatetime, se o ano estiver fora do intervalo ao qual esses tipos dão suporte, um erro será postado.<br /><br /> Para datetimeoffset, o valor deve estar dentro do intervalo após a conversão em UTC, mesmo que nenhuma conversão em UTC seja solicitada. O motivo disso é que o TDS e o servidor sempre normalizam a hora em valores datetimeoffset para UTC, por isso o cliente deve verificar se os componentes time estão dentro do intervalo com suporte após a conversão em UTC. Se o valor não estiver dentro do intervalo UTC com suporte, um erro será postado.|  
-|10|Para conversões de cliente para servidor, se o truncamento com perda de dados ocorrer, um erro será postado. Esse erro também ocorrerá se o valor estiver fora do intervalo que pode ser representado pelo intervalo UTC usado pelo servidor. Se ocorrer o truncamento de segundos ou de segundos fracionários em uma conversão de cliente para servidor, somente um aviso será emitido.|  
-|11|Para conversões de cliente para servidor, se o truncamento com perda de dados ocorrer, um erro será postado.|
+|9|A cadeia de caracteres é analisada e convertida em um valor date, datetime, datetimeoffset ou time, dependendo do primeiro caractere de pontuação encontrado e da presença dos componentes restantes. A cadeia de caracteres é então convertida no tipo de destino, seguindo as regras da tabela ao final deste artigo para o tipo de origem descoberto por esse processo. Se não for possível analisar sem erro os dados fornecidos ou se qualquer parte do componente estive fora do intervalo permitido ou ainda se não houver nenhuma conversão do tipo literal para o tipo de destino, será postado um erro. Para os parâmetros datetime e smalldatetime, se o ano estiver fora do intervalo compatível com esses tipos, um erro será postado.<br /><br /> Para datetimeoffset, o valor deve estar dentro do intervalo após a conversão em UTC, mesmo que nenhuma conversão em UTC seja solicitada. O motivo disso é que o TDS e o servidor sempre normalizam a hora em valores datetimeoffset para UTC, por isso o cliente deve verificar se os componentes time estão dentro do intervalo com suporte após a conversão em UTC. Se o valor não estiver dentro do intervalo UTC compatível, um erro será postado.|  
+|10|Para conversões de cliente para servidor, se ocorrer truncamento com perda de dados, será postado um erro. Esse erro também ocorrerá se o valor estiver fora do intervalo que pode ser representado pelo intervalo UTC usado pelo servidor. Se ocorrer o truncamento de segundos ou de segundos fracionários em uma conversão de cliente para servidor, somente um aviso será emitido.|  
+|11|Para conversões de cliente para servidor, se ocorrer truncamento com perda de dados, será postado um erro.|
 |12|Os segundos são definidos como zero e os segundos fracionários são descartados. Nenhum erro de truncamento é possível.|  
-|N/A|O [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] existente e o comportamento anterior é mantido.|  
+|N/D|O [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] existente e o comportamento anterior é mantido.|  
   
 ## <a name="see-also"></a>Consulte Também     
  [Melhorias de data e hora &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  

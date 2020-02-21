@@ -1,10 +1,7 @@
 ---
-title: Selecionar uma conta para o Serviço do SQL Server Agent | Microsoft Docs
-ms.custom: ''
-ms.date: 05/04/2017
+title: Selecionar uma conta para o Serviço do SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,15 +18,20 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 05/04/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a1398e56ccb4ade7504d20708fda3c4bdec9d34b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 86ee07ffd09ab72fdce4bde1a247e37328c4b626
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811555"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253229"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Selecionar uma conta para o Serviço do SQL Server Agent
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -82,11 +84,11 @@ A tabela a seguir lista os tipos de conta do Windows que podem ser usadas para o
   
 |Tipo de conta de serviço|Servidor não clusterizado|Servidor em cluster|Controlador de domínio (não clusterizado)|  
 |------------------------|-------------------------|--------------------|--------------------------------------|  
-|[!INCLUDE[msCoName](../../includes/msconame_md.md)] Conta de domínio do Windows (membro do grupo Administradores do Windows)|Tem suporte|Tem suporte|Tem suporte|  
-|Conta de domínio do Windows (não administrativa)|Tem suporte<br /><br />Consulte Limitação 1, abaixo.|Tem suporte<br /><br />Consulte Limitação 1, abaixo.|Tem suporte<br /><br />Consulte Limitação 1, abaixo.|  
-|Conta de Serviço de Rede (NT AUTHORITY\NetworkService)|Tem suporte<br /><br />Consulte limitação 1, 3 e 4 abaixo.|Sem suporte|Sem suporte|  
-|Conta de usuário local (não administrativa)|Tem suporte<br /><br />Consulte Limitação 1, abaixo.|Sem suporte|Não aplicável|  
-|Conta Sistema Local (NT AUTHORITY\System)|Tem suporte<br /><br />Consulte Limitação 2, abaixo.|Sem suporte|Tem suporte<br /><br />Consulte Limitação 2, abaixo.|  
+|[!INCLUDE[msCoName](../../includes/msconame_md.md)] Conta de domínio do Windows (membro do grupo Administradores do Windows)|Com suporte|Com suporte|Com suporte|  
+|Conta de domínio do Windows (não administrativa)|Com suporte<br /><br />Consulte Limitação 1, abaixo.|Com suporte<br /><br />Consulte Limitação 1, abaixo.|Com suporte<br /><br />Consulte Limitação 1, abaixo.|  
+|Conta de Serviço de Rede (NT AUTHORITY\NetworkService)|Com suporte<br /><br />Consulte limitação 1, 3 e 4 abaixo.|Sem suporte|Sem suporte|  
+|Conta de usuário local (não administrativa)|Com suporte<br /><br />Consulte Limitação 1, abaixo.|Sem suporte|Não aplicável|  
+|Conta Sistema Local (NT AUTHORITY\System)|Com suporte<br /><br />Consulte Limitação 2, abaixo.|Sem suporte|Com suporte<br /><br />Consulte Limitação 2, abaixo.|  
 |Conta do Serviço Local (NT AUTHORITY\LocalService)|Sem suporte|Sem suporte|Sem suporte|  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Limitação 1: usar contas não administrativas para administração multisservidor  
@@ -118,7 +120,7 @@ Para resolver isso, reinicie o computador em que está sendo executado o [!INCLU
   
 **Para especificar o perfil de email do SQL Server Agent**  
   
--   [Como: configurar o SQL Server Agent Mail para usar o Database Mail (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [Como: configurar o SQL Server Agent Mail para usar o Database Mail](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > Use o Gerenciador de Configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve ser iniciado quando o sistema operacional for iniciado.  

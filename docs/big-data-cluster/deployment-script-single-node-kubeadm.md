@@ -1,26 +1,27 @@
 ---
-title: Implantar com um script de Bash em um cluster kubeadm de nó único
-titleSuffix: SQL Server big data clusters
+title: Implantar um cluster kubeadm de nó único
+titleSuffix: SQL Server Big Data Clusters
 description: Use um script de implantação de Bash para implantar um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] em um cluster kubeadm de nó único.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2379f96e3b5288fc33f5c925613bf9fd5d35612d
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: f60256e58339387323f923c85d2b880459455663
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71341842"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252098"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>Implantar com um script de Bash em um cluster kubeadm de nó único
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Neste tutorial, você usa um script de implantação de Bash de exemplo para implantar um cluster do Kubernetes de nó único usando o kubeadm e um cluster de Big Data do SQL Server nele.  
+Neste tutorial, você usa um script de implantação de Bash de exemplo para implantar um cluster do Kubernetes de nó único usando o kubeadm e um cluster de Big Data do SQL Server nele.
 
 ## <a name="prerequisites"></a>Prerequisites
 

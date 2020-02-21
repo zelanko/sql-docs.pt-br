@@ -1,7 +1,7 @@
 ---
 title: Conceitos de segurança
 titleSuffix: SQL Server big data clusters
-description: Este artigo descreve os conceitos de segurança dos Clusters de Big Data do SQL Server. Isso inclui a descrição dos pontos de extremidade e da autenticação do cluster.
+description: Este artigo descreve os conceitos de segurança dos Clusters de Big Data do SQL Server. Esse conteúdo inclui a descrição dos pontos de extremidade e da autenticação do cluster.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,24 +9,29 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 35eb5e0a3236d8f016ed5ca99b769d628a4d81ed
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0219022ee2f4d813261aa6181416521e88e5d0f6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532373"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253120"
 ---
-# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Conceitos de segurança do [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="security-concepts-for-big-data-clusters-2019"></a>Conceitos de segurança do [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este artigo abordará os principais conceitos relacionados à segurança no cluster de Big Data
 
-Os [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] fornecem autenticação e autorização coerentes e consistentes. Um cluster de Big Data pode ser integrado ao Active Directory por meio de uma implantação totalmente automatizada que configura a integração do Active Directory em um domínio existente. Depois que um cluster de Big Data for configurado com a integração do Active Directory, aproveite as identidades e os grupos de usuários existentes para acesso unificado em todos os pontos de extremidade. Além disso, depois de criar tabelas externas no SQL Server, você pode controlar o acesso às fontes de dados permitindo acesso a tabelas externas aos usuários e grupos do Active Directory, centralizando as políticas de acesso a dados em uma só localização.
+Os [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] fornecem autenticação e autorização coerentes e consistentes. Um cluster de Big Data pode ser integrado ao AD (Active Directory) por meio de uma implantação totalmente automatizada que configura a integração do AD em um domínio existente. Depois que um cluster de Big Data for configurado com a integração do AD, aproveite as identidades e os grupos de usuários existentes para acesso unificado em todos os pontos de extremidade. Além disso, depois de criar tabelas externas no SQL Server, você pode controlar o acesso às fontes de dados permitindo acesso a tabelas externas aos usuários e grupos do AD, centralizando as políticas de acesso a dados em uma só localização.
+
+Neste vídeo de 14 minutos, você obterá uma visão geral da segurança do cluster de Big Data:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Big-Data-Cluster-Security/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="authentication"></a>Autenticação
 
-Os pontos de extremidade do cluster externo dão suporte à autenticação do Active Directory. Isso significa que você pode usar sua identidade do AD para autenticação no cluster de Big Data.
+Os pontos de extremidade do cluster externo dão suporte à autenticação do AD. Use sua identidade do AD para autenticação no cluster de Big Data.
 
 ### <a name="cluster-endpoints"></a>Pontos de extremidade do cluster
 
@@ -34,7 +39,7 @@ Há cinco pontos de entrada para o cluster de Big Data
 
 * Instância mestra – ponto de extremidade TDS para acessar a instância mestra do SQL Server no cluster, usando ferramentas de banco de dados e aplicativos como o SSMS ou o Azure Data Studio. Ao usar comandos do HDFS ou do SQL Server no azdata, a ferramenta se conectará aos outros pontos de extremidade, dependendo da operação.
 
-* Gateway para acessar arquivos HDFS, Spark (KNOX) – esse é um ponto de extremidade baseado em HTTPS. O ponto de extremidade é usado para acessar serviços como o WebHDFS e o Spark.
+* Gateway para acessar arquivos HDFS, Spark (Knox) – ponto de extremidade HTTPS para acessar serviços como o webHDFS e o Spark.
 
 * Ponto de extremidade do Serviço de Gerenciamento do Cluster (Controlador) – serviço de gerenciamento de cluster de Big Data que expõe APIs REST para gerenciar o cluster. A ferramenta azdata exige conexão com esse ponto de extremidade.
 
@@ -64,15 +69,14 @@ Toda a comunicação do SQL Server com o SQL Server, como a instância mestra do
 
 ## <a name="basic-administrator-login"></a>Logon de administrador básico
 
-Você pode optar por implantar o cluster no modo do Active Directory ou usando somente o logon de administrador básico. Somente usar o logon de administrador básico não é um modo de segurança com suporte em produção e destina-se principalmente à avaliação do produto.
+Você pode optar por implantar o cluster no modo do AD ou usando somente o logon de administrador básico. Somente usar o logon de administrador básico não é um modo de segurança com suporte em produção e destina-se à avaliação do produto.
 
-Mesmo que você escolha o modo do Active Directory, os logons básicos serão criados para o administrador do cluster. Isso fornece uma "porta dos fundos", caso a conectividade do AD esteja inoperante.
+Mesmo que você escolha o modo do Active Directory, os logons básicos serão criados para o administrador do cluster. Esse recurso fornece acesso alternativo, caso a conectividade do AD esteja inoperante.
 
-Após a implantação, esse logon básico receberá permissões de administrador no cluster. Isso significa que o usuário será o administrador do sistema na instância mestra do SQL Server e um administrador no controlador de cluster.
-Os componentes do Hadoop não dão suporte à autenticação de modo misto, o que significa que um logon de administrador básico não pode ser usado para autenticação no gateway (KNOX).
+Após a implantação, esse logon básico receberá permissões de administrador no cluster. O usuário do logon será o administrador do sistema na instância mestra do SQL Server e um administrador no controlador de cluster.
+Os componentes do Hadoop não dão suporte à autenticação de modo misto, o que significa que um logon de administrador básico não pode ser usado para autenticação no gateway (Knox).
 
-
-Estas são as credenciais de logon que precisam ser definidas na implantação.
+As credenciais de logon que você precisa definir na implantação incluem:
 
 Nome de usuário administrador do cluster:
  + `AZDATA_USERNAME=<username>`
