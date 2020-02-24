@@ -1,7 +1,7 @@
 ---
 title: managed_backup. sp_backup_config_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 02/20/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_schedule
 - sp_backup_config_schedule
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 52df69439cecad5fddf3d38b8852a1ce86cc4dbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942079"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507526"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +67,10 @@ EXEC managed_backup.sp_backup_config_schedule
  A duração da janela de tempo de backup. Observe que não há nenhuma garantia de que os backups serão concluídos durante a janela @backup_begin_time de @backup_durationtempo definida por e. As operações de backup iniciadas nesta janela de tempo, mas excederem a duração da janela, não serão canceladas.  
   
  @log_backup_freq  
- Isso determina a frequência dos backups de log de transações. Esses backups ocorrem em intervalos regulares, e não no agendamento especificado para os backups de banco de dados. @log_backup_freqpode ser em minutos ou horas e 0 é válido, o que indica que não há backups de log. Desabilitar backups de log só seria apropriado para bancos de dados com um modelo de recuperação simples.  
+ Isso determina a frequência dos backups de log de transações. Esses backups ocorrem em intervalos regulares, e não no agendamento especificado para os backups de banco de dados. @log_backup_freqpode ser em minutos ou horas e `0:00` é válido, o que indica que não há backups de log. Desabilitar backups de log só seria apropriado para bancos de dados com um modelo de recuperação simples.  
   
 > [!NOTE]  
->  Se o modelo de recuperação mudar de simples para completo, você precisará reconfigurar o log_backup_freq de 0 para um valor diferente de zero.  
+>  Se o modelo de recuperação mudar de simples para completo, você precisará reconfigurar o log_backup_freq `0:00` de para um valor diferente de zero.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito) ou 1 (falha)  

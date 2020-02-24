@@ -1,7 +1,7 @@
 ---
 title: sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/16/2017
+ms.date: 02/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,15 +21,15 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25d4aa1e82097dcc4027809c7292587a20862d75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5d0702848a6fce3255e9bb54597dc20b518b50c7
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73981870"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507516"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna informações de um arquivo de auditoria criado por uma auditoria de servidor no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -57,7 +57,7 @@ fn_get_audit_file ( file_pattern,
   
     -   **caminho> \ LoginsAudit_ {GUID} _00_29384. sqlaudit-Coleta um arquivo de auditoria específico. \<**  
   
- - **Banco de dados SQL do Azure ou SQL data warehouse do Azure**:
+ - **Banco de dados SQL do Azure**:
  
     Esse argumento é usado para especificar uma URL de BLOB (incluindo o ponto de extremidade de armazenamento e o contêiner). Embora não ofereça suporte a um curinga de asterisco, você pode usar um prefixo de nome de arquivo parcial (BLOB) (em vez do nome de blob completo) para coletar vários arquivos (BLOBs) que começam com esse prefixo. Por exemplo:
  
