@@ -30,7 +30,7 @@ Este tópico descreve como usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlp
   
      É exibida a caixa de diálogo **Propriedades do Rastreamento** .  
   
-    > **OBSERVAÇÃO:** A caixa de diálogo Propriedades do Rastreamento não aparecerá, e o rastreamento será iniciado, se **Iniciar rastreamento imediatamente após estabelecer a conexão** será selecionado. Para desabilitar essa configuração, no menu **Ferramentas**, clique em **Opções** e desmarque a caixa de seleção Iniciar rastreamento imediatamente depois de estabelecer a conexão.  
+    > **OBSERVAÇÃO:** A caixa de diálogo **Propriedades do Rastreamento** não aparecerá, e o rastreamento será iniciado, se **Iniciar rastreamento imediatamente após estabelecer a conexão** será selecionado. Para desabilitar essa configuração, no menu **Ferramentas**, clique em **Opções** e desmarque a caixa de seleção Iniciar rastreamento imediatamente depois de estabelecer a conexão.  
   
 2.  Na caixa **Nome do rastreamento** , digite um nome para o rastreamento.  
   
