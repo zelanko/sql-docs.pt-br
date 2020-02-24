@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f6758760d8ea73d9ec0ac95a0e824a0fd46a6dbb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 651467463e0563c9da00e23115ffb7bc4f151d23
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68045192"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479680"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configurar o Grupo de Disponibilidade Always On do SQL Server no Windows e no Linux (multiplataforma)
 
@@ -55,7 +55,7 @@ As etapas para criar o AG são as mesmas que para criar um AG para cargas de tra
 
    **Definir autenticação de modo misto**
 
-   Para obter instruções, confira [Alterar o modo de autenticação do servidor](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure).
+   Para obter instruções, confira [Alterar o modo de autenticação do servidor](../database-engine/configure-windows/change-server-authentication-mode.md#change-authentication-mode-with-ssms).
 
 1. Instale o SQL Server 2017 no Linux. Para obter instruções, confira [Instalar o SQL Server](sql-server-linux-setup.md). Habilite `hadr` via mssql-conf.
 

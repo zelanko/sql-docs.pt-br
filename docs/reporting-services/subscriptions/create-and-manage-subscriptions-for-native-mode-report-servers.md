@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69cc078dc5ce605f1d7bf55d872c2a4629eb3301
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5bcfeabda2eda62a6a4118ac5542e83a4b0afd66
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66403261"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971310"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crie e gerencie assinaturas de servidores de relatório no modo Nativo
   A assinatura padrão é criada por usuários individuais que desejam entregar um relatório por email ou em uma pasta compartilhada. Este tópico fornece informações sobre assinaturas padrão que são criadas e gerenciadas por usuários individuais. As assinaturas controladas por dados têm requisitos e etapas diferentes e são discutidas em um tópico separado. Para obter mais informações, consulte [Criar, modificar e excluir assinaturas controladas por dados](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -46,7 +46,7 @@ ms.locfileid: "66403261"
   
  Este artigo não explica como criar uma assinatura controlada por dados. Para obter instruções sobre como criar uma assinatura controlada por dados, confira [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
-###  <a name="bkmk_create_fileshare_subscription"></a> Para criar uma assinatura de compartilhamento de arquivo  
+## <a name="bkmk_create_fileshare_subscription"></a> Para criar uma assinatura de compartilhamento de arquivo  
   
 1. Navegue até o [portal da Web de um servidor de relatório (Modo Nativo do SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66403261"
   
 O relatório é entregue como um arquivo estático. Se o relatório incluir recursos interativos (por exemplo, links para linhas e colunas adicionais), esses recursos não estarão disponíveis.  
   
-###  <a name="bkmk_create_email_subscription"></a> Para criar uma assinatura de email  
+##  <a name="bkmk_create_email_subscription"></a> Para criar uma assinatura de email  
   
 1. Navegue até o [portal da Web de um servidor de relatório (Modo Nativo do SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -170,4 +170,3 @@ Para cancelar uma assinatura atualmente em processamento no servidor de relatór
  [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
  [O portal da Web de um servidor de relatório (modo nativo do SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)  
  [Usar Minhas Assinaturas &#40;Servidor de Relatório no modo Nativo&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
-  

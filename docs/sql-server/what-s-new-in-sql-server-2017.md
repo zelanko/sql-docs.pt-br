@@ -10,12 +10,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 92f289ec22ca35834420dc7ee84d667c55e29a19
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70874820"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478492"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novidades no SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -54,8 +54,6 @@ O SQL Server 2017 inclui vários novos recursos, aprimoramentos e melhorias de d
 - Os **aprimoramentos de objetos com otimização de memória** incluem o sp_spaceused e a eliminação das oito limitações de índice de tabelas com otimização de memória, sp_rename para tabelas com otimização de memória e módulos T-SQL compilados nativamente, bem como CASE e TOP (N) WITH TIES para módulos T-SQL compilados nativamente. Agora, é possível armazenar, fazer backup e restaurar arquivos de grupo de arquivos com otimização de memória no Armazenamento do Microsoft Azure. (CTP 1.0)
 - A **DATABASE SCOPED CREDENTIAL** é uma nova classe de permissões protegíveis que oferece suporte a CONTROL, ALTER, REFERENCES, TAKE OWNERSHIP e VIEW DEFINITION. ADMINISTER DATABASE BULK OPERATIONS agora está visível em sys.fn_builtin_permissions. (CTP 1.0)
 - O banco de dados **COMPATIBILITY_LEVEL 140** é adicionada. (CTP 1.0).  
-
-Para obter mais informações, consulte [Novidades do Mecanismo de Banco de Dados do SQL Server 2017](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).
 
 ## <a name="sql-server-2017-integration-services-ssis"></a>SQL Server 2017 Integration Services (SSIS)
 - O novo recurso **Scale Out** do SSIS tem os seguintes recursos, novos e alterados. Para obter mais informações, consulte [Novidades do Integration Services no SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md). (RC1)

@@ -1,7 +1,7 @@
 ---
 title: STSymDifference (tipo de dados geometry) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 02/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ea26c364621910d6dd5148a5753bd6709d3e0f07
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2845ecc6189b113bc31ae85b869985cf2ddfdb16
+ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68066283"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051676"
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "68066283"
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- É outra instância de **geometry** além da instância na qual `STSymDistance()` está sendo invocado.  
+ É outra instância de **geometry** além da instância na qual `STSymDifference()` está sendo invocado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno do CLR: **SqlGeometry**  
+ Tipo de retorno CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Comentários  
  Esse método sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes. O resultado poderá conter segmentos de arco circular apenas se as instâncias de entrada contiverem segmentos de arco circulares.  

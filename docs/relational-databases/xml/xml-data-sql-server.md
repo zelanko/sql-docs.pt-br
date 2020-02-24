@@ -1,7 +1,7 @@
 ---
 title: Dados XML (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 02/10/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fc11a8dd385266d38bb12f067d2ffa1a88030b87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 0365bed92a23b3261d3e45232369c32bbdbf521e
+ms.sourcegitcommit: 99ce0c9b28283d292d19637def982e971115dfbc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "70190431"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125263"
 ---
 # <a name="xml-data-sql-server"></a>Dados XML (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma plataforma avançada para o desenvolvimento de aplicativos avançados para gerenciamento de dados semi-estruturados. O suporte para XML é integrado em todos os componentes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e inclui o seguinte:  
   
 -   O tipo de dados **xml** . Os valores XML podem ser armazenados de modo nativo em uma coluna de tipo de dados **xml** que pode ser classificada por tipo de acordo com uma coleção de esquemas XML ou deixada sem-tipo. É possível indexar a coluna XML.  

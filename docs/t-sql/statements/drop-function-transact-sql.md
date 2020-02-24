@@ -1,7 +1,7 @@
 ---
 title: DROP FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/28/2017
+ms.date: 02/11/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b318f7be6b403cb540305eb492cf99a776efc9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5cc1eb2d3c2953fd2bdf24fdf3c13c94872f6632
+ms.sourcegitcommit: 74afe6bdd021f62275158a8448a07daf4cb6372b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68044234"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144187"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,12 +50,12 @@ DROP FUNCTION [ IF EXISTS ] { [ schema_name. ] function_name } [ ,...n ]
 ```  
  -- Azure SQL Data Warehouse, Parallel Data Warehouse 
 
-DROP FUNCTION [ schema_name. ] function_name
+DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 [;] 
 ```  
    
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Argumentos
  *IF EXISTS*    
  Remove condicionalmente a função somente se ela já existe. Disponível do [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 2016 e no [!INCLUDE[sssds_md](../../includes/sssds-md.md)].
   

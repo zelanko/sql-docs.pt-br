@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dba29bb00f0b8d54edd8c8c98d4134cf794fe2fd
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893029"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478501"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novidades no SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -52,7 +52,6 @@ Esta página fornece informações de resumo e links para informações mais det
     - **Máscara de Dados Dinâmicos:** Se especificada na definição da tabela, os dados mascarados ficarão ocultos da maioria dos usuários e apenas os usuários com a permissão UNMASK poderão ver os dados concluídos.
     - **Segurança em Nível de Linha:** O acesso a dados pode ser restringido no nível do mecanismo de banco de dados, portanto, os usuários veem apenas o que é relevante para eles. 
 
-Confira [Mecanismo de banco de dados](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SSAS (SQL Server 2016 Analysis Services)
 O SQL Server 2016 Analysis Services fornece melhor desempenho, criação, gerenciamento de banco de dados, filtragem, processamento e muito mais para bancos de dados de modelo de tabela com base no **nível de compatibilidade 1200**.
 - **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** integram a linguagem de programação R, usada para análise estatística, ao SQL Server. 

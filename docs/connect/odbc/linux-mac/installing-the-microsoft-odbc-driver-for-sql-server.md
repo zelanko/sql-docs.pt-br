@@ -13,14 +13,14 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 79c2276174f0e8f3474350c6c91fb4d3ede0401d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e74da98287c8a55dd8584b200ee02e9c97aa8b6c
+ms.sourcegitcommit: 99ce0c9b28283d292d19637def982e971115dfbc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76911219"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125273"
 ---
-# <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Instalando o Microsoft ODBC Driver for SQL Server em Linux e no macOS
+# <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Instalando o Microsoft ODBC Driver for SQL Server no Linux e no macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Este artigo explica como instalar o [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Linux e no macOS, bem como as Ferramentas de Linha de Comando opcionais para o SQL Server (`bcp` e `sqlcmd`) e os Cabeçalhos de Desenvolvimento unixODBC.
@@ -33,21 +33,22 @@ Este artigo explica como instalar o [!INCLUDE[msCoName](../../../includes/mscona
 ### <a name="alpine-linux"></a>Alpine Linux
 ```
 #Download the desired package(s)
-curl https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.apk
-curl https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.5.1.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.5.1.2-1_amd64.apk
 
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.sig
-curl https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.5.1.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.5.1.2-1_amd64.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql_17.5.1.1-1_amd64.sig msodbcsql_17.5.1.1-1_amd64.apk
+gpg --verify msodbcsql17_17.5.1.1-1_amd64.sig msodbcsql17_17.5.1.1-1_amd64.apk
+gpg --verify mssql-tools_17.5.1.2-1_amd64.sig mssql-tools_17.5.1.2-1_amd64.apk
 
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql_17.5.1.1-1_amd64.apk
-sudo apk add --allow-untrusted mssql-tools_17.5.1.1-1_amd64.apk
+sudo apk add --allow-untrusted msodbcsql17_17.5.1.1-1_amd64.apk
+sudo apk add --allow-untrusted mssql-tools_17.5.1.2-1_amd64.apk
 
 ```
 > [!NOTE]
@@ -188,7 +189,7 @@ sudo apt-get install unixodbc-dev
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install msodbcsql17 mssql-tools
+HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
 ```
 
 ## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver 13.1 for SQL Server 
@@ -492,7 +493,7 @@ Você pode desinstalar o ODBC Driver 11 no Linux executando os seguintes comando
   
 4.  `odbcinst -u -d -n "ODBC Driver 11 for SQL Server"`
   
-## <a name="troubleshooting-connection-problems"></a>Solucionar problemas de conexão  
+## <a name="troubleshooting-connection-problems"></a>Solucionando problemas de conexão  
 Se não for possível estabelecer uma conexão com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o driver ODBC, use as informações a seguir para identificar o problema.  
   
 O problema de conexão mais comum é ter duas cópias do Gerenciador de Driver UnixODBC instaladas. Pesquise por libodbc\*.so\*em /usr. Se houver mais de uma versão do arquivo, você (possivelmente) tem mais de um gerenciador de driver instalado. Seu aplicativo pode usar a versão errada.
@@ -534,7 +535,7 @@ Para obter mais informações sobre como resolver falhas de conexão, consulte:
   
 -   [Solução de problema de conectividade do SQL Server 2005 – Parte I](https://blogs.msdn.com/b/sql_protocols/archive/2005/10/22/sql-server-2005-connectivity-issue-troubleshoot-part-i.aspx)  
   
--   [Solucionar problemas de conectividade no SQL Server 2008 com o Buffer de Anéis de Conectividade](https://blogs.msdn.com/b/sql_protocols/archive/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer.aspx)  
+-   [Solução de problema de conectividade no SQL Server 2008 com o Buffer de Anéis de Conectividade](https://blogs.msdn.com/b/sql_protocols/archive/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer.aspx)  
   
 -   [Solução de problemas de autenticação do SQL Server](https://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
   
@@ -576,10 +577,10 @@ MacOS: `/usr/local/share/msodbcsql17/resources/en_US/`
 
 
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
 
 [Instalando o Gerenciador de Driver](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)
 
-[Notas sobre a versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Notas de Versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
 
 [Requisitos do sistema](../../../connect/odbc/linux-mac/system-requirements.md)
