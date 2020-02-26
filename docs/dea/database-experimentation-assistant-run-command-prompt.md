@@ -2,7 +2,7 @@
 title: Executar Assistente para Experimentos de Banco de Dados em um prompt de comando
 description: Executar Assistente para Experimentos de Banco de Dados em um prompt de comando
 ms.custom: seo-lt-2019
-ms.date: 01/24/2020
+ms.date: 02/25/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,28 +12,58 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 8055ae8b66c2f2b59f18b0ee40dcac8753c0eb7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f2640e9018f29385851839932572aeaa3ee91ad9
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76831755"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600121"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Executar Assistente para Experimentos de Banco de Dados em um prompt de comando
 
 Este artigo descreve como capturar um rastreamento no Assistente para Experimentos de Banco de Dados (DEA) e, em seguida, analisar os resultados, tudo a partir de um prompt de comando.
 
+   > [!NOTE]
+   > Para saber mais sobre cada operação DEA, tente executar o seguinte comando:
+   >
+   > `Deacmd.exe -o <operation> --help`
+   >
+   > Um nome de operação é necessário; as operações válidas são **Analysis**, **StartCapture**e **StopCapture**.
+
 ## <a name="start-a-new-workload-capture-by-using-the-dea-command"></a>Iniciar uma nova captura de carga de trabalho usando o comando DEA
 
 Para iniciar uma nova captura de carga de trabalho, em um prompt de comando, execute o seguinte comando:
 
-`Deacmd.exe -o startcapturetrace -s <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
+`Deacmd.exe -o StartCapture -h <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
 
 **Exemplo**
 
-`Deacmd.exe -o startcapturetrace -s localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
+`Deacmd.exe -o StartCapture -h localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
+
+**Opções adicionais**
+
+Ao iniciar uma nova captura de carga de `Deacmd.exe` trabalho com o comando, você pode usar as seguintes opções adicionais:
+
+| Opção| Descrição |  
+| --- | --- |
+| -n, --name | Necessária nome do arquivo de rastreamento |
+| -x,--formato | Necessária formato do rastreamento (Trace = 0, XEvents = 1) |
+| -d,--duração | Necessária duração máxima da captura, em minutos |
+| -l, --location | Necessária local da pasta de saída para armazenar arquivos de rastreamento/XEvent no computador host |
+| -t,--tipo | (Padrão: 0) tipo/edição do SQL Server (SqlServer = 0, AzureSQLDB = 1, Azure SQL Instância Gerenciada = 2) |
+| -h,--host | Necessária SQL Server nome do host e/ou nome da instância para iniciar a captura |
+| -e,--criptografar | (Padrão: true) Criptografar conexão com SQL Server instância. O padrão é verdadeiro |
+| --confiar | (Padrão: false) Confiar no certificado do servidor ao conectar-se à instância do SQL Server. O padrão é falso |
+| -f,--DatabaseName | (Padrão:) Nome do banco de dados para filtrar os rastreamentos, se não especificado, a captura será iniciada em todos os bancos de dados |
+| -m,--AuthMode | (Padrão: 0) modo de autenticação (Windows = 0, autenticação do SQL = 1) |
+| -u,--nome de usuário | Nome de usuário para se conectar ao SQL Server |
+| -p,--senha | Senha para se conectar ao SQL Server |
 
 ## <a name="replay-a-workload-capture"></a>Reproduzir uma captura de carga de trabalho
+
+**Usando Distributed Replay**
+
+Se você estiver usando Distributed Replay, execute as etapas a seguir.
 
 1. Faça logon no computador do controlador de Distributed Replay.
 2. Para converter o rastreamento de carga de trabalho que você capturou usando o comando DEA para um arquivo IRF, em um prompt de comando, execute o seguinte comando:
@@ -65,15 +95,42 @@ Para iniciar uma nova captura de carga de trabalho, em um prompt de comando, exe
 7. Edite `@Tracefile` para corresponder ao caminho do arquivo de rastreamento no computador de destino que executa o SQL Server.
 8. Execute o script no computador de destino que executa o SQL Server.
 
+**Usando a repetição embutida**
+
+Se você estiver usando a reprodução incompilada, não precisará configurar Distributed Replay. A capacidade de usar a reprodução incompilada por meio da linha de comando está a caminho, mas, no ínterim, você pode usar nossa GUI para executar a reprodução usando a reprodução incompilada.
+
 ## <a name="analyze-traces-using-the-dea-command"></a>Analisar rastreamentos usando o comando DEA
 
 Para iniciar uma nova análise de rastreamento, em um prompt de comando, execute o seguinte comando:
 
-`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -s <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
+`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -h <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
 
 **Exemplo**
 
 `Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
+
+Para exibir os relatórios de análise desses arquivos de rastreamento, você precisa usar a GUI para exibir gráficos e métricas organizadas.  No entanto, o banco de dados de análise é gravado na instância de SQL Server especificada, de modo que você também pode consultar as tabelas de análise geradas diretamente.
+
+**Opções adicionais**
+
+Ao analisar rastreamentos usando o comando DEA, você pode usar as seguintes opções adicionais:
+
+| Opção| Descrição |  
+| --- | --- |
+| -a,--tracea | Necessária caminho do arquivo para o arquivo de evento de uma instância. Exemplo de C:\traces\Sql2008trace.trc.  Se houver um lote de arquivos, selecione o primeiro arquivo e o DEA verificará se há arquivos de substituição automaticamente. Se os arquivos estiverem em BLOB, forneça o caminho da pasta onde você deseja que os arquivos de eventos sejam armazenados localmente.  Exemplo de C:\traces\ |
+| -b,--traceB | Necessária caminho do arquivo para o arquivo de evento da instância B. Exemplo de C:\traces\Sql2014trace.trc. Se houver um lote de arquivos, selecione o primeiro arquivo e o DEA verificará se há arquivos de substituição automaticamente. Se os arquivos estiverem em BLOB, forneça o caminho da pasta onde você deseja que os arquivos de eventos sejam armazenados localmente.  Exemplo de C:\traces\ |
+| -r,--ReportName | Necessária nome para análise atual. O relatório de análise que é gerado será identificado por esse nome. |
+| -t,--tipo | (Padrão: 0) tipo/edição do SQL Server (SqlServer = 0, AzureSQLDB = 1, Azure SQL Instância Gerenciada = 2) |
+| -h,--host | Necessária SQL Server nome do host e/ou nome da instância |
+| -e,--criptografar | (Padrão: true) Criptografar conexão com SQL Server instância. O padrão é verdadeiro |
+| --confiar | (Padrão: false) Confiar no certificado do servidor ao conectar-se à instância do SQL Server. O padrão é falso |
+| -m,--AuthMode | (Padrão: 0) modo de autenticação (Windows = 0, autenticação do SQL = 1) |
+| -u,--nome de usuário | Nome de usuário para se conectar ao SQL Server |
+| --p | Senha para se conectar ao SQL Server |
+| --AB | (Padrão: false) O local de armazenamento do rastreamento A está em BLOB. Se usado, também deve especificar--Abu (rastrear uma URL de BLOB) |
+| --BB | (Padrão: false) O local de armazenamento do rastreamento B está no BLOB. Se usado, também deve especificar--BBU (URL de blob do rastreamento B) |
+| --Abu | URL de BLOB para uma instância com chave SAS |
+| --BBU | URL do blob para a instância B com chave SAS |
 
 ## <a name="see-also"></a>Confira também
 
