@@ -14,12 +14,12 @@ ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bfaaea1b07c17fbf5c47bbcccf20a3ca55862123
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b9d174bb43388af9ea3fe02d839c7a3fcfec202c
+ms.sourcegitcommit: 0381fd3b76933db7bb1c1ee6a3b29de1f08c7ce4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72278203"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77646319"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Alterações no comportamento de recursos do Mecanismo de Banco de Dados no SQL Server 2014
   Este tópico descreve as alterações no comportamento no [!INCLUDE[ssDE](../includes/ssde-md.md)]. Essas alterações afetam a maneira como os recursos funcionam ou interagem no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em comparação com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -35,13 +35,12 @@ ms.locfileid: "72278203"
  A opção [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) para determinar o formato de uma resposta sem realmente executar a consulta é substituída [por Sp_describe_first_result_set &#40;&#41;Transact ](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)-SQL, [sp_describe_undeclared_parameters &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [sys. dm_exec_describe_first_result_set &#40;transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)e [Sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>Alterações de comportamento ao gerar scripts de uma tarefa do SQL Server Agent  
- No [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], se você criar um novo trabalho copiando o script de um trabalho existente, o novo trabalho poderá afetar inadvertidamente o trabalho existente. Para criar um novo trabalho usando o script de um trabalho existente, exclua manualmente o parâmetro * \@schedule_uid* , que geralmente é o último parâmetro da seção que cria a agenda de trabalho no trabalho existente. Isso criará uma nova agenda independente para o novo trabalho sem afetar os trabalhos existentes.  
+A partir [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]do, se você criar um novo trabalho copiando o script de um trabalho existente, o novo trabalho poderá afetar inadvertidamente o trabalho existente. Para criar um novo trabalho usando o script de um trabalho existente, exclua manualmente o parâmetro * \@schedule_uid* , que geralmente é o último parâmetro da seção que cria a agenda de trabalho no trabalho existente. Isso criará uma nova agenda independente para o novo trabalho sem afetar os trabalhos existentes.  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>Dobra constante para funções e métodos de CLR definidos pelo usuário  
- No [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], os objetos CLR definidos pelo usuário a seguir agora são dobráveis:  
-  
+A partir [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]do, os seguintes objetos CLR definidos pelo usuário agora são dobrável:  
+
 -   Funções definidas pelo usuário de CLR com valor escalar determinista.  
-  
 -   Métodos deterministas de tipos de CLR definidos pelo usuário.  
   
  Esta melhoria busca aprimorar o desempenho quando estas funções ou métodos são chamados mais de uma vez com os mesmos argumentos. Porém, esta alteração pode causar resultados inesperados quando funções ou métodos não deterministas são marcados como deterministas em erro. O determinismo de uma função ou um método CLR é indicado pelo valor da propriedade `IsDeterministic` de `SqlFunctionAttribute` ou `SqlMethodAttribute`.  
@@ -51,23 +50,23 @@ ms.locfileid: "72278203"
   
  No [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], o método `STEnvelope` retornou os seguintes resultados quando chamado com objetos vazios:  
   
-```  
-select geometry::Parse('POINT EMPTY').STEnvelope().ToString()  
+```sql  
+SELECT geometry::Parse('POINT EMPTY').STEnvelope().ToString()  
 -- returns POINT EMPTY  
-select geometry::Parse('LINESTRING EMPTY').STEnvelope().ToString()  
+SELECT geometry::Parse('LINESTRING EMPTY').STEnvelope().ToString()  
 -- returns LINESTRING EMPTY  
-select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()  
+SELECT geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()  
 -- returns POLYGON EMPTY  
 ```  
   
  No [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o método `STEnvelope` agora retorna os seguintes resultados quando chamado com objetos vazios:  
   
-```  
-select geometry::Parse('POINT EMPTY').STEnvelope().ToString()  
+```sql  
+SELECT geometry::Parse('POINT EMPTY').STEnvelope().ToString()  
 -- returns GEOMETRYCOLLECTION EMPTY  
-select geometry::Parse('LINESTRING EMPTY').STEnvelope().ToString()  
+SELECT geometry::Parse('LINESTRING EMPTY').STEnvelope().ToString()  
 -- returns GEOMETRYCOLLECTION EMPTY  
-select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()  
+SELECT geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()  
 -- returns GEOMETRYCOLLECTION EMPTY  
 ```  
   
@@ -77,10 +76,10 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  A `LOG` função agora tem um parâmetro *base* opcional. Para obter mais informações, consulte [LOG &#40;Transact-SQL&#41;](/sql/t-sql/functions/log-transact-sql).  
   
 ### <a name="statistics-computation-during-partitioned-index-operations-has-changed"></a>A computação de estatísticas durante operações de índice particionado mudou  
- No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], as estatísticas não são criadas por meio do exame de todas as linhas da tabela quando um índice particionado é criado ou reconstruído. Em vez disso, o otimizador de consultas usa o algoritmo de amostragem padrão para gerar estatísticas. Depois de atualizar um banco de dados com índices particionados, você pode notar uma diferença nos dados de histograma destes índices. Esta alteração no comportamento pode não afetar o desempenho de consulta. Para obter estatísticas em índices particionados por meio do exame de todas as linhas da tabela, use CREATE STATISTICS ou UPDATE STATISTICS com a cláusula FULLSCAN.  
+No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], as estatísticas não são criadas por meio do exame de todas as linhas da tabela quando um índice particionado é criado ou reconstruído. Em vez disso, o otimizador de consulta usa o algoritmo de amostragem padrão para gerar estatísticas. Depois de atualizar um banco de dados com índices particionados, você pode notar uma diferença nos dados de histograma destes índices. Esta alteração no comportamento pode não afetar o desempenho de consulta. Para obter as estatísticas dos índices particionados ao examinar todas as linhas da tabela, use `CREATE STATISTICS` ou `UPDATE STATISTICS` com a cláusula `FULLSCAN`.  
   
 ### <a name="data-type-conversion-by-the-xml-value-method-has-changed"></a>A conversão de tipo de dados pelo método de valor XML mudou  
- O comportamento interno do método `value` do tipo de dados `xml` mudou. Este método executa um XQuery no XML e retorna um valor escalar do tipo de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificado. O tipo xs tem de ser convertido no tipo de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Anteriormente, o método `value` convertia internamente o valor de origem em xs:string e depois convertia xs:string no tipo de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], a conversão em xs:string é ignorada nos seguintes casos:  
+O comportamento interno do método `value` do tipo de dados `xml` mudou. Este método executa um XQuery no XML e retorna um valor escalar do tipo de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificado. O tipo xs tem de ser convertido no tipo de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Anteriormente, o método `value` convertia internamente o valor de origem em xs:string e depois convertia xs:string no tipo de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], a conversão em xs:string é ignorada nos seguintes casos:  
   
 |Tipo de dados de origem XS|Tipo de dados de destino do SQL Server|  
 |-------------------------|--------------------------------------|  
@@ -101,14 +100,14 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  Há alterações de comportamento se você usar o sqlcmd. exe com o modo XML (: XML ON Command) ao executar um SELECT * de T FOR XML....  
   
 ### <a name="dbcc-checkident-revised-message"></a>Mensagem DBCC CHECKIDENT revisada  
- No [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], a mensagem retornada pelo comando DBCC CHECKIDENT só foi alterada quando usada com resemente *new_reseed_value* para alterar o valor de identidade atual. A nova mensagem é "verificando as informações de identidade: valor\<de identidade atual ' valor de identidade atual> '. A execução do DBCC foi concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".  
+ No [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], a mensagem retornada pelo comando DBCC CHECKIDENT só foi alterada quando usada com resemente *new_reseed_value* para alterar o valor de identidade atual. A nova mensagem é *"verificando informações de identidade: valor de\<identidade atual ' valor de identidade atual> '"*. A execução do DBCC foi concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".  
   
- Em versões anteriores, a mensagem é "verificando informações de identidade: valor da\<identidade atual ' valor da identidade atual> ',\<valor da coluna atual ' valor da coluna atual> '. A execução do DBCC foi concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema". A mensagem não muda quando DBCC CHECKIDENT é especificado com NORESEED, sem um segundo parâmetro ou sem um valor reseed. Para obter mais informações, veja [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
+ Em versões anteriores, a mensagem é *"verificando informações de identidade: valor da\<identidade atual ' valor da identidade atual> ',\<valor da coluna atual ' valor da coluna atual> '. Execução de DBCC concluída. Se o DBCC imprimiu mensagens de erro, contate o administrador do sistema. "* A mensagem é inalterada quando `DBCC CHECKIDENT` é especificada com `NORESEED`, sem um segundo parâmetro ou sem um valor de repropagação. Para obter mais informações, veja [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>O comportamento da função exist() no tipo de dados XML mudou  
- O comportamento da função **exist ()** foi alterado ao comparar um tipo de dados XML com um valor nulo como 0 (zero). Considere o exemplo a seguir:  
+ O comportamento da `exist()` função foi alterado ao comparar um tipo de dados XML com um valor nulo como 0 (zero). Considere o exemplo a seguir:  
   
-```xml  
+```sql  
 DECLARE @test XML;  
 SET @test = null;  
 SELECT COUNT(1) WHERE @test.exist('/dogs') = 0;  
@@ -118,7 +117,7 @@ SELECT COUNT(1) WHERE @test.exist('/dogs') = 0;
   
  As comparações a seguir não mudaram:  
   
-```xml  
+```sql  
 DECLARE @test XML;  
 SET @test = null;  
 SELECT COUNT(1) WHERE @test.exist('/dogs') = 1; -- 0 expected, 0 returned  
