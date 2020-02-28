@@ -1,7 +1,7 @@
 ---
 title: Eventos e erros do mecanismo de banco de dados
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 01/28/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -9,16 +9,27 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 941dbe32355ef158f0a0a07c16e5181653738cb1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3ed6d0a694370cf6dbaa14ea861bf3d0d6c618f7
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76918186"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146276"
 ---
 # <a name="database-engine-errors"></a>Erros do mecanismo de banco de dados
 
 As tabelas contêm os números da mensagem de erro e a descrição, que é o texto da mensagem de erro da exibição sys.messages.message_id. Quando aplicável, o número do erro é um link para informações adicionais.
+
+Esta lista não é exaustiva. Para obter uma lista completa de todos os erros, consulte a exibição do catálogo sys.messages com a seguinte consulta:
+
+```sql
+SELECT message_id AS Error, severity AS Severity,  
+[Event Logged] = CASE is_event_logged WHEN 0 THEN 'No' ELSE 'Yes' END,
+text AS [Description]
+FROM sys.messages
+WHERE language_id = <desired language, such as 1033 for US English>
+ORDER BY message_id
+```
 
 ## <a name="errors--2-to-999"></a>Erros de -2 a 999
 
@@ -574,7 +585,31 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   971 |   10  |   Não  |   O banco de dados de recursos foi detectado em dois locais diferentes. Anexando o banco de dados de recursos no mesmo diretório que sqlservr.exe em '%.*ls', ao invés do banco de dados de recursos anexado no momento em '%.* ls'.    |
 |   972 |   17  |   Não  |   Não foi possível usar o banco de dados '%d' durante a execução do procedimento. |
 |   973 |   10  |   Sim |   O banco de dados %ls foi iniciado. No entanto, FILESTREAM não é compatível com as opções READ_COMMITTED_SNAPSHOT e ALLOW_SNAPSHOT_ISOLATION. Remova os arquivos FILESTREAM e os grupos de arquivos FILESTREAM ou defina READ_COMMITTED_SNAPSHOT e ALLOW_SNAPSHOT_ISOLATION como OFF.   |
+|974 | 10  | Não  |  Falha ao anexar o banco de dados do recurso no mesmo diretório que sqlservr.exe em '%.*ls', pois os arquivos do banco de dados não existem.|
+|975 | 10  | Sim |  Não foi possível atualizar objetos de sistema no banco de dados '%.*ls', pois ele é somente leitura. |
+|976 | 14  | Não  |  O banco de dados de destino, '%.*ls', está participando de um grupo de disponibilidade e atualmente não está acessível para consultas. Qualquer movimento de dados é suspenso ou a réplica de disponibilidade não é habilitada para acesso de leitura. Para permitir o acesso somente leitura a este e a outros |
+|977 | 10 |  Não  |  Aviso: não foi possível localizar o índice associado para a restrição '%.*ls' em object_id '%d' do banco de dados '%.* ls'.|
+|978 | 14 |  Não  |  O banco de dados de destino ('%.*ls') está em um grupo de disponibilidade e está acessível no momento para conexões quando a intenção do aplicativo é definida como somente leitura. Para obter mais informações sobre a intenção do aplicativo, confira os Manuais Online do SQL Server. |
+|979  | 14 | Não  |  O banco de dados de destino ('%.*ls') está em um grupo de disponibilidade e atualmente não permite conexões somente leitura. Para obter mais informações sobre a intenção do aplicativo, confira os Manuais Online do SQL Server.|
+|980 |  21 |  Sim |  O SQL Server não pode carregar o banco de dados '%.*ls' porque ele contém um índice columnstore. A edição atualmente instalada do SQL Server |não é compatível com índices columnstore. Desabilite o índice columnstore no banco de dados usando uma edição compatível do SQL Se|
+|981  |  10 | Não | O gerenciador de banco de dados usará a versão de banco de dados de destino %d. |
+|982  |  14 | Não | Não é possível acessar o banco de dados '%.*ls' porque não há réplicas secundárias online habilitadas para acesso somente leitura. Verifique a configuração do grupo de disponibilidade para verificar se pelo menos uma réplica secundária está configurada para acesso somente leitura. Aguarde uma reinicialização habilitada|
+|983 |  14  | Não | Não é possível acessar o banco de dados de disponibilidade '%.*ls' porque a réplica de banco de dados não está na função PRIMÁRIA nem SECUNDÁRIA. As conexões com um banco de dados de disponibilidade são permitidas somente quando a réplica de banco de dados está na função PRIMÁRIA ou SECUNDÁRIA. Tente a operação |
+|984 | 21  | Sim | Falha ao executar uma cópia com versão de sqlscriptdowngrade.dll da pasta Binn para Binn\Cache. Falha na API VerInstallFile com o código de erro %d.|
+|985 |  10 | Sim  |      Instalação bem-sucedida do arquivo '%ls' na pasta '%ls'. |
+|986 |  10 | Não   |     Não foi possível obter uma página de inicialização limpa para o banco de dados '%.*ls' após %d tentativas. Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário. |
+|987 |  23  |    Sim | Ocorreu uma inserção de chave duplicada durante a atualização de objetos do sistema no banco de dados '%.*ls'.|
+|988 |  14  |    Não  | Não é possível acessar o banco de dados '%.*ls' porque ele não tem um quorum de nós para alta disponibilidade. Tente a operação novamente mais tarde.|
+|989 |  16  |    Não  | Falha ao colocar o banco de dados host com a ID %d offline quando um ou mais de seus bancos de dados de partição estão marcados como suspeitos.|
+|990 |  16  |    Não  | Usando o banco de dados host com a ID %d offline, pois um ou mais de seus bancos de dados de partição estão marcados como suspeitos.|
+|991 |  16  |    Não  | Falha ao colocar o banco de dados host '%.*ls' offline quando um ou mais de seus bancos de dados de partição estão marcados como suspeitos.|
+|992 |  16  |    Não  | Falha ao obter o bloqueio compartilhado no banco de dados '%.*ls'.|
+|993 |  10  |    Não  | Refaça para a etapa de atualização da versão aplicada de '%.*ls' do banco de dados de %d para %d.|
+|994 |  10  |    Não  | Aviso: o índice "%.*ls" em "%.* ls"."%.*ls" está desabilitado porque contém uma coluna computada.|
+|995 |  10  |    Não  | Aviso: o índice "%.*ls" em "%.* ls"."%.*ls" está desabilitado. Ele não pode ser atualizado porque reside em um grupo de arquivos somente leitura.|
+|996 |  10  |    Não  | Aviso: o índice "%.*ls" em "%.* ls"."%.*ls" está desabilitado. Este índice columnstore não pode ser atualizado, provavelmente porque excede o limite de tamanho de linha de "%d" bytes.|
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
+
 
 ## <a name="errors-1000-to-1999"></a>Erros 1000 a 1999
 
@@ -2158,11 +2193,12 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   4863    |   16  |   Não  |   Erro de conversão dos dados de carregamento em massa (truncamento) na linha %d, coluna %d (%ls).   |
 |   4864    |   16  |   Não  |   Erro de conversão de dados de carregamento em massa (dados incompatíveis ou caractere inválido para a página de código especificada) na linha %d, coluna %d (%ls).    |
 |   4865    |   16  |   Não  |   Não é possível carregar em massa porque foi excedido o número máximo de erros (%d).    |
-|   4866    |   16  |   Não  |   Falha no carregamento em massa. A coluna é longa demais no arquivo de dados na linha %d, coluna %d. Verifique se o terminador de campo e da linha estão especificados corretamente.   |
+|   4866    |   16  |   Não  |   Falha no carregamento em massa. A coluna é longa demais no arquivo de dados na linha %d, coluna %d. Verifique se o terminador de campo e da linha estão especificados corretamente.   | Falha no carregamento em massa por causa do valor inválido da coluna no arquivo de dados CSV %ls na linha %d, coluna %d | 
 |   4867    |   16  |   Não  |   Erro de conversão dos dados de carregamento em massa (estouro) na linha %d, coluna %d (%ls). |
 |   4868    |   16  |   Não  |   Falha no carregamento em massa. A página de código "%d" não está instalada. Instale a página de código e execute o comando novamente.   |
 |   4869    |   16  |   Não  |   Falha no carregamento em massa. Valor NULL inesperado na linha %d, coluna %d, do arquivo de dados. A coluna de destino (%ls) está definida como NOT NULL.    |
 |   4870    |   16  |   Não  |   Não é possível carregar em massa porque ocorreu um erro ao gravar o arquivo "%ls". Código de erro do sistema operacional %ls.   |
+|   4879    |   16  |   Não  | 
 |   4871    |   16  |   Não  |   Erro de carregamento em massa durante tentativa de registrar erros. |
 |   4872    |   16  |   Não  |   Linha %d no arquivo de formato "%ls": id de elemento duplicado "%ls".   |
 |   4873    |   16  |   Não  |   Linha %d no arquivo de formato "%ls": referência à ID de elemento não existente "%ls".    |
