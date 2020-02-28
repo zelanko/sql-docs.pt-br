@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 994d7f21df09f49329e7547c4330aa95b5745873
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3a6a21cf82a7b94d5526e4492d69bc5f1578b716
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75236296"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478450"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Visão geral de Grupos de Disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "75236296"
 > [!TIP]  
 >  Você pode criar qualquer tipo de backup de um banco de dados primário. Como alternativa, você pode criar backups de log e backups completos somente cópia dos bancos de dados secundários. Para obter mais informações, confira [Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).   
 
- Cada conjunto de bancos de dados de disponibilidade é hospedado por uma *réplica de disponibilidade*. Existem dois tipos de réplicas de disponibilidade: uma *réplica primária*única. que hospeda os bancos de dados primários, e de uma a oito *réplicas secundárias*, cada uma hospedando um conjunto de bancos de dados secundários e atuando como destinos de failover em potencial para o grupo de disponibilidade. Um grupo de disponibilidade faz failover no nível de uma réplica de disponibilidade. Uma réplica de disponibilidade fornece redundância apenas no nível do banco de dados para o conjunto de bancos de dados em um grupo de disponibilidade. Os failovers não são provocados por problemas de banco de dados, como um banco de dados que se torna suspeito devido à perda de um arquivo de dados ou à corrupção de um log de transações.  
+ Cada conjunto de bancos de dados de disponibilidade é hospedado por uma *réplica de disponibilidade*. Existem dois tipos de réplicas de disponibilidade: uma *réplica primária*única. que hospeda os bancos de dados primários, e de uma a oito *réplicas secundárias*, cada uma hospedando um conjunto de bancos de dados secundários e atuando como destinos de failover em potencial para o grupo de disponibilidade. Um grupo de disponibilidade faz failover no nível de uma réplica de disponibilidade. Uma réplica de disponibilidade fornece redundância somente no nível do banco de dados para o conjunto de bancos de dados em um grupo de disponibilidade. Os failovers não são provocados por problemas de banco de dados, como um banco de dados que se torna suspeito devido à perda de um arquivo de dados ou à corrupção de um log de transações.  
   
  A réplica primária torna os bancos de dados primários disponíveis para conexões de leitura-gravação de clientes. A réplica primária envia registros de log de transações de cada banco de dados primário para todos os bancos de dados secundários. Esse processo – conhecido como *sincronização de dados* – ocorre no nível do banco de dados. Cada réplica secundária armazena em cache os registros do log de transações (*intensifica* o log) e os aplica a seu banco de dados secundário correspondente. A sincronização de dados ocorre entre o banco de dados primário e cada banco de dados secundário conectado, independentemente de outros bancos de dados. Assim, um banco de dados secundário pode ser suspenso ou falhar sem que isso afete outros bancos de dados secundários, e um banco de dados primário pode ser suspenso ou falhar sem que isso afete outros bancos de dados primários.  
   

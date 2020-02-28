@@ -1,5 +1,5 @@
 ---
-title: Imagens (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Imagens (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bdcb7800999434cff8b26707ed477c599129e5e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d1336910c5538ff9d15ff7f2d651aa23e220ca87
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580244"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082084"
 ---
 # <a name="images-report-builder-and-ssrs"></a>Imagens (Construtor de Relatórios e SSRS)
   Uma imagem é um item de relatório que contém uma referência a uma imagem inserida em um relatório, armazenada em um banco de dados, no servidor de relatório ou em qualquer outro lugar na Web. Uma imagem pode ser uma imagem que é repetida com linhas de dados. Você também pode usar uma imagem como plano de fundo para determinados itens de relatórios.  

@@ -1,7 +1,7 @@
 ---
 title: Notas sobre a versão do JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,70 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 04a179492b151e664dfe31f4fe4e51c5440fcef5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6d55a856096a830172ced69f9fb28f66c11733e7
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69027794"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004545"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Notas sobre a versão do Microsoft JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 Este artigo lista as versões do _Microsoft JDBC Driver para SQL Server_. Para cada versão de lançamento, as alterações são nominadas e descritas.
+
+## <a name="820"></a>8.2.0
+
+### <a name="compliance"></a>Conformidade
+
+29 de janeiro de 2020
+
+| Alteração de conformidade | Detalhes |
+| :---------------- | :------ |
+| Baixe as atualizações mais recentes do JDBC Driver 8.2. | &bull; &nbsp; [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?linkid=2116870)<br/>&bull; &nbsp; [GitHub, 8.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Totalmente em conformidade com a especificação 4.2 de API do JDBC. | Os jars no pacote 8.2 são denominados de acordo com a compatibilidade da versão do Java.<br/><br/>Por exemplo, o arquivo mssql-jdbc-8.2.0.jre11.jar do pacote 8.2 precisa ser usado com o Java 11. |
+| Compatível com JDK (Java Development Kit) versão 13.0, 11.0 e 1.8. | O Microsoft JDBC Driver 8.2 para SQL Server agora é compatível com o JDK (Java Development Kit), versão 13.0, além do JDK 11.0 e 1.8. |
+| &nbsp; | &nbsp; |
+
+### <a name="support-for-jdk-13"></a>Suporte para JDK 13
+
+O Microsoft JDBC Driver 8.2.0 para SQL Server agora é compatível com o JDK (Java Development Kit), versão 13.0, além do JDK 11.0 e 1.8.
+
+### <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted com enclaves seguros
+
+| Alteração do Always Encrypted | Detalhes |
+| :--------- | :------ |
+| O Microsoft JDBC Driver 8.2.0 para SQL Server agora dá suporte a Always Encrypted com enclaves seguros. Os detalhes podem ser encontrados aqui: Always Encrypted com enclaves seguros. |
+| Mais detalhes e código de exemplo. | Veja [Always Encrypted com enclaves seguros](../../connect/jdbc/always-encrypted-with-secure-enclaves.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="performance-improvement-when-retrieving-temporal-datatypes-from-sql-server"></a>Aprimoramento do desempenho ao recuperar tipos de dados temporais do SQL Server
+
+| Alteração dos tipos de dados temporais | Detalhes |
+| :---------- | :------ |
+| O Microsoft JDBC Driver 8.2.0 para SQL Server aprimorou o desempenho ao recuperar tipos de dados temporais do SQL Server. | Essa alteração elimina conversões de tipo de dados temporais desnecessárias acabando com o uso de java.util.Calendar sempre que possível. |
+| Veja a seguir uma lista dos tipos de dados temporais que foram afetados por esse aprimoramento de desempenho; no formato tipo de dados do SQL Server seguido pelo respectivo mapeamento de Java. | date (java.sql.Date), datetime (java.sql.Timestamp), datetime2 (java.sql.Timestamp), smalldatetime (java.sql.Timestamp) e time (java.sql.Time). |
+| &nbsp; | &nbsp; |
+
+> [!NOTE]
+> Devido às diferenças na maneira como os fusos horários são tratados entre a API java.util.Calendar e java.time.LocalDateTime, os tipos de dados temporais com um objeto java.util.Calendar fornecido pelo usuário associado a ele ou tipos de dados microsoft.sql.DateTimeOffset não se beneficiam desse aprimoramento.
+
+### <a name="deployment-of-mssql-jdbc_auth-version-archdll-previously-sqljdbc_authdll-to-maven-repository"></a>A implantação de mssql-jdbc_auth-\<versão>-\<arch>.dll (anteriormente sqljdbc_auth.dll) no Repositório Maven
+
+| Alteração de sqljdbc_auth.dll | Detalhes |
+| :------------------- | :------ |
+| Do Microsoft JDBC Driver 8.2.0 para SQL Server em diante, o driver depende de mssql-jdbc_auth-\<versão>-\<arch>.dll em vez de sqljdbc_auth.dll para usar o recurso de Autenticação do Azure Active Directory. | &nbsp; |
+| A DLL também foi carregada para o repositório Maven para facilitar o acesso. | Confira [esta página](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problemas conhecidos
+
+| Problemas conhecidos | Detalhes |
+| :----------- | :------ |
+| Ao usar o Always Encrypted com enclaves seguros com o Java 8. | Os usuários devem incluir o Provedor BouncyCastle como uma dependência OU mapear/carregar um provedor de segurança que dá suporte ao algoritmo de assinatura RSASSA-PSS. |
+| &nbsp; | &nbsp; |
+
 ## <a name="741"></a>7.4.1
 
 ### <a name="compliance"></a>Conformidade
@@ -249,7 +301,7 @@ O JDBC Driver implementou o armazenamento em cache de metadados de instrução p
 
 ### <a name="added-support-for-azure-ad-integrated-authentication-on-linuxmac"></a>Foi adicionado o suporte à Autenticação Integrada do Azure AD no Linux/Mac
 
-O JDBC Driver agora é compatível com a Autenticação Integrada do Azure AD (Azure Active Directory) em todos os sistemas operacionais compatíveis (Windows, Linux e Mac) com Kerberos. Como alternativa, nos sistemas de operacionais Windows, os usuários podem autenticar com sqljdbc_auth.dll.
+O JDBC Driver agora é compatível com a Autenticação Integrada do Azure AD (Azure Active Directory) em todos os sistemas operacionais compatíveis (Windows, Linux e Mac) com Kerberos. Como alternativa, nos sistemas de operacionais Windows, os usuários podem autenticar com mssql-jdbc_auth-\<versão>-\<arch>.dll.
 
 ### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>A versão "ADAL4J (Biblioteca de Autenticação do Microsoft Azure Active Directory) para Java" foi atualizada: 1.4.0
 

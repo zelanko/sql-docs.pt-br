@@ -1,5 +1,5 @@
 ---
-title: Armazenando relatórios em cache (SSRS) | Microsoft Docs
+title: Como armazenar relatórios em cache| Microsoft Docs
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ba54a5c29245a178fb1b50139d64f1e05bfd92f1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3e94ed2c05d3c23585abde1f2452f491be089e84
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66175584"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082563"
 ---
 # <a name="caching-reports-ssrs"></a>Armazenando relatórios em cache (SSRS)
   Um servidor de relatório pode armazenar em cache uma cópia de um relatório processado e devolvê-la quando um usuário abrir o relatório. Para o usuário, a única evidência disponível indicativa de que o relatório é uma cópia armazenada em cache são os dados de data e hora de processamento do relatório. Se a data ou a hora não for atual e o relatório não for um instantâneo, ele terá sido recuperado do cache.  

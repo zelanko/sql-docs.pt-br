@@ -9,14 +9,14 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 23eb15b1f7b763688a3657406bab12106a18f977
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75720928"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173642"
 ---
-# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>O que são [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
+# <a name="what-are-big-data-clusters-2019"></a>O que são [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -71,12 +71,11 @@ Os [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 O gerenciamento e o monitoramento são fornecidos por meio de uma combinação de ferramentas de linha de comando, APIs, portais e exibições de gerenciamento dinâmico.
 
-Você pode usar o Azure Data Studio para executar uma variedade de tarefas no cluster de Big Data. Isso é habilitado pela nova **Extensão do SQL Server 2019**. Essa extensão fornece:
-
+É possível usar o [Azure Data Studio](../azure-data-studio/what-is.md) para executar uma variedade de tarefas no cluster de Big Data:
 - Snippets internos para tarefas comuns de gerenciamento.
 - Capacidade de navegar no HDFS, carregar arquivos, visualizar arquivos e criar diretórios.
 - Capacidade de criar, abrir e executar notebooks compatíveis com Jupyter.
-- Assistente de virtualização de dados para simplificar a criação de fontes de dados externas.
+- Assistente de virtualização de dados para simplificar a criação de fontes de dados externas (habilitadas pela **Extensão de Virtualização de Dados**).
 
 ## <a id="architecture"></a> Arquitetura
 

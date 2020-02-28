@@ -1,5 +1,5 @@
 ---
-title: Tipo de conexão do OLE DB (SSRS) | Microsoft Docs
+title: Tipo de conexão OLE DB | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ca477a0e7178e545754a51b33c6a1c2a4880ce15
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cd597c9a85f381e95de3b04fa22c577e89a26047
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190769"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081773"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Tipo de conexão OLE DB (SSRS)
   Para incluir dados de um provedor de dados OLE DB, é necessário ter um conjunto de dados baseado em uma fonte de dados de relatório do tipo OLE DB. Esse tipo de fonte de dados interna tem como base a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extensão de processamento de dados OLE DB.  

@@ -1,5 +1,5 @@
 ---
-title: Classificar dados em uma região de dados (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Classificar dados em uma região de dados (Construtor de Relatórios) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6ad5600def990457834d858b61ba3bad4a241158
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 17c93f66924d6b948264efd9747f72b47bf765a1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65570750"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080973"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Classificar dados em uma região de dados (Construtor de Relatórios e SSRS)
   Para alterar a ordem de classificação dos dados em uma região quando um relatório for executado pela primeira vez, defina a expressão de classificação na região de dados ou no grupo. Por padrão, a expressão de classificação de um grupo é definida automaticamente como o mesmo valor da expressão do grupo.  

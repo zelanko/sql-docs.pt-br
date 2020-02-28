@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e0e8d41e22efd3f51e1e0812d9476cce9b4b324d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6e88e6cf9cb4101f22d3a30f5ca53fdf15b754fa
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75320489"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256739"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Fazer backup e restaurar bancos de dados do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ dispositivo de**backup**
  Não existirá uma estratégia de restauração até que você tenha testado seus backups. É muito importante testar sua estratégia de backup completamente para cada um dos bancos de dados, restaurando uma cópia do banco de dados em um sistema de teste. É necessário testar a restauração de cada tipo de backup que você pretende usar. Também é recomendável que, depois de restaurar o backup, você execute verificações de consistência do banco de dados usando DBCC CHECKDB do banco de dados para validar se a mídia de backup não foi danificada. 
 
 ### <a name="verify-media-stability-and-consistency"></a>Verificar a estabilidade e a consistência da mídia
-Use as opções de verificação fornecidas pelos utilitários de backup (comando T-SQL de BACKUP, Planos de Manutenção do SQL Server, seu software ou solução de backup etc). Para um exemplo, confira [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) Use recursos avançados como BACKUP CHECKSUM para detectar problemas com a mídia de backup em si. Para obter mais informações, confira [](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
+Use as opções de verificação fornecidas pelos utilitários de backup (comando T-SQL de BACKUP, Planos de Manutenção do SQL Server, seu software ou solução de backup etc). Para um exemplo, confira [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) Use recursos avançados como BACKUP CHECKSUM para detectar problemas com a mídia de backup em si. Para obter mais informações, confira os [Possíveis erros de mídia durante o backup e a restauração (SQL Server)](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
 
 ### <a name="document-backuprestore-strategy"></a>Documentar estratégia de backup/restauração 
 Recomendamos que você documente seus procedimentos de backup e restauração e mantenha uma cópia da documentação em seu livro de execuções.

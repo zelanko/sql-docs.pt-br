@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f91edadf5e33c0938a6af0be0244fec7635dd36d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7fe202e213f200dcf98a7f0479c29451d36b8a8f
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952349"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77255970"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -406,7 +406,7 @@ Especifica que o logon é para Autenticação do Azure AD.
 
 PASSWORD **=** '*password*' Especifica a senha do logon do SQL que está sendo criado. Use uma senha forte. Para obter mais informações, consulte [Senhas fortes](../../relational-databases/security/strong-passwords.md) e [Política de senha](../../relational-databases/security/password-policy.md). Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]armazenadas, informações de senha armazenadas são calculadas usando SHA-512 da senha com valor de sal.
 
-As senhas diferenciam maiúsculas de minúsculas. As senhas sempre devem ter pelo menos oito caracteres e não podem exceder 128 caracteres. Elas podem incluir caracteres de a-z, A-Z, 0-9, e a maioria dos caracteres não alfanuméricos. As senhas não podem conter aspas simples nem o *login_name*.
+As senhas diferenciam maiúsculas de minúsculas. As senhas devem ter sempre no mínimo dez caracteres e não podem exceder 128 caracteres. Elas podem incluir caracteres de a-z, A-Z, 0-9, e a maioria dos caracteres não alfanuméricos. As senhas não podem conter aspas simples nem o *login_name*.
 
 SID **=** *sid* Usado para recriar um logon. Aplica-se apenas a logons de autenticação do SQL Server. Especifica o SID do novo logon de autenticação do SQL Server. Se essa opção não for usada, o SQL Server atribuirá um SID automaticamente. A estrutura do SID depende da versão do SQL Server. Para o Banco de Dados SQL, trata-se de um literal de 32 bytes (**binary(32)** ) que consiste em `0x01060000000000640000000000000000`, além de 16 bytes que representam um GUID. Por exemplo, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 

@@ -1,5 +1,5 @@
 ---
-title: Armazenar dados criptografados do servidor de relatório (Gerenciador de Configurações do SSRS) | Microsoft Docs
+title: Armazenar dados criptografados do servidor de relatório (Configuration Manager) | Microsoft Docs
 ms.date: 10/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ca402d8170c9954f8a85e3b439e14d1d3644d9bb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 94161a531c922642fa1c4cf34dc4a683073b957d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73593474"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080817"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Chaves de criptografia do SSRS – Armazenar dados criptografados do servidor de relatório
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena valores criptografados no banco de dados do servidor de relatório e em arquivos de configuração. A maioria dos valores criptografados é credencial usada para acessar fontes de dados externas que fornecem dados a relatórios. Este tópico descreve quais valores são criptografados, a funcionalidade de criptografia usada no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], entre outros tipos de dados confidenciais armazenados sobre os quais é útil saber mais a respeito.  

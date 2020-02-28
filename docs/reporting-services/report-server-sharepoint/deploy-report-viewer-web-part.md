@@ -7,16 +7,16 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3dc42904701ce69e762a203e09cb320cc797c15c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 232338818620069fc31bb57bc29cf07901d0f712
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579984"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256674"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Implantar a web part do Visualizador de Relatórios do SQL Server Reporting Services em um site do SharePoint
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 A web part do Visualizador de Relatórios é uma web part personalizada que pode ser usada para exibir relatórios do SQL Server Reporting Services (modo nativo) no site do SharePoint. Você pode usar a web part para exibir, navegar, imprimir e exportar relatórios em um servidor de relatório. A web part do Visualizador de Relatórios está associada a arquivos de definição de relatório (.rdl) que são processados por um servidor de relatório do SQL Server Reporting Services ou um Servidor de Relatórios do Power BI. Essa web part do Visualizador de Relatórios não pode ser usada com relatórios do Power BI hospedados no Servidor de Relatórios do Power BI.
 
@@ -170,6 +170,6 @@ Há suporte para os seguintes idiomas com a web part:
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Após a implantação e ativação da web part do Visualizador de Relatórios, adicione a web part a uma página do SharePoint. Para obter mais informações, consulte [Adicionar uma web part do Visualizador de Relatórios a uma página do SharePoint](add-report-viewer-web-part-to-page.md).
+Depois que a Web Part do Visualizador de Relatórios tiver sido implantada e ativada, será possível adicioná-la a uma página do SharePoint. Para obter mais informações, consulte [Adicionar uma web part do Visualizador de Relatórios a uma página do SharePoint](add-report-viewer-web-part-to-page.md).
 
 Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

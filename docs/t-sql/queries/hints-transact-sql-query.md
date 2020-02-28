@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 15165b25ba9b8bb4b44172ccd99c3c0c1a2f29bf
+ms.sourcegitcommit: 74afe6bdd021f62275158a8448a07daf4cb6372b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75002331"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144201"
 ---
 # <a name="hints-transact-sql---query"></a>Dicas (Transact-SQL) – consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,6 +105,7 @@ As dicas de consulta especificam que as dicas indicadas devem ser usadas em toda
   | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
   | PARAMETERIZATION { SIMPLE | FORCED }   
+  | QUERYTRACEON trace_flag   
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
@@ -186,7 +187,7 @@ KEEPFIXED PLAN
 Força o otimizador de consulta a não recompilar uma consulta devido às alterações nas estatísticas. Especificar KEEPFIXED PLAN garantirá que uma consulta seja recompilada apenas se o esquema das tabelas subjacentes for alterado ou se **sp_recompile** for executado nessas tabelas.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] em diante e posterior).  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
   
 Impede a consulta de usar um índice columnstore otimizado para memória não clusterizado. Se a consulta contiver a dica de consulta para evitar o uso do índice columnstore e uma dica de índice para usar um índice columnstore, as dicas entrarão em conflito e a consulta retornará um erro.  
   
@@ -240,7 +241,7 @@ OPTIMIZE FOR UNKNOWN
 Instrui o otimizador de consulta a usar dados estatísticos no lugar dos valores iniciais para todas as variáveis locais quando a consulta é compilada e otimizada. Essa otimização inclui parâmetros criados com parametrização forçada.  
   
 Se você usar OPTIMIZE FOR @variable_name = _literal\_constant_ e OPTIMIZE FOR UNKNOWN na mesma dica de consulta, o otimizador de consulta usará a _literal\_constant_ especificada para um valor específico. O otimizador de consulta usará UNKNOWN para o restante dos valores de variável. Os valores só são usados durante a otimização de consulta e não durante a execução das consultas.  
-  
+
 PARAMETERIZATION { SIMPLE | FORCED }     
 Especifica as regras de parametrização que o otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica à consulta quando ela é compilada.  
   
@@ -249,6 +250,11 @@ Especifica as regras de parametrização que o otimizador de consulta do [!INCLU
 > Para obter mais informações, confira [Especificar comportamento de parametrização de consulta usando guias de plano](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
   
 SIMPLE instrui o otimizador de consulta a tentar parametrização simples. FORCED instrui o otimizador de consulta a tentar a parametrização forçada. Para obter mais informações, consulte [Parametrização forçada no Guia de arquitetura de processamento de consulta](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) e [Parametrização simples no Guia de arquitetura de processamento de consulta](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
+
+QUERYTRACEON trace_flag    
+Essa opção permite habilitar um sinalizador de rastreamento que afeta o plano somente durante uma compilação de consulta única. Assim como outras opções de nível de consulta, você pode usá-la junto com guias de plano para corresponder ao texto de uma consulta que está sendo executada em sessão e aplicar automaticamente um sinalizador de rastreamento que afetará o plano quando essa consulta estiver sendo compilada. A opção QUERYTRACEON só é compatível com os sinalizadores de rastreamento do otimizador de consulta documentados na tabela da seção “Mais informações” e em [Sinalizadores de Rastreamento](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). No entanto, essa opção não retornará nenhum erro ou aviso se um número de sinalizador de rastreamento sem suporte for usado. Se o sinalizador de rastreamento especificado não for um que afete um plano de execução de consulta, a opção será silenciosamente ignorada.
+
+Mais de um sinalizador de rastreamento poderá ser especificado na cláusula OPTION se QUERYTRACEON trace_flag_number for duplicado com números de sinalizador de rastreamento diferentes.
 
 RECOMPILE  
 Instrui o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] a gerar um plano novo e temporário para a consulta e descartar esse plano imediatamente depois que a consulta conclui a execução. O plano de consulta gerado não substitui um plano armazenado em cache quando a mesma consulta é executada sem a dica RECOMPILE. Sem especificar RECOMPILE, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazena em cache os planos de consulta e reutiliza-os. Ao compilar planos de consulta, a dica de consulta RECOMPILE usa os valores atuais de todas as variáveis locais na consulta. Se a consulta estiver em um procedimento armazenado, os valores atuais são passados para quaisquer parâmetros.  
@@ -599,7 +605,24 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
 GO  
 ```  
-    
+### <a name="m-using-querytraceon-hint"></a>M. Usar a QUERYTRACEON HINT  
+ O exemplo a seguir usa as dicas de consulta QUERYTRACEON. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Você pode habilitar todos os hotfixes que afetam o plano controlados pelo sinalizador de rastreamento 4199 para uma consulta específica usando a seguinte consulta:
+  
+```sql  
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (QUERYTRACEON 4199);
+```  
+
+ Você também pode usar vários sinalizadores de rastreamento como na seguinte consulta:
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
+```
+
+
 ## <a name="see-also"></a>Consulte Também  
 [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
 [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   

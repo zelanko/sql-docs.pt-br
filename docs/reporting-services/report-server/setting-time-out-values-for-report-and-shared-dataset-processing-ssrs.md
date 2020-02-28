@@ -1,5 +1,5 @@
 ---
-title: Definindo valores de tempo limite para processamento de relatório e conjuntos de dados compartilhados (SSRS) | Microsoft Docs
+title: Como definir valores de tempo limite para processamento de relatório e conjunto de dados compartilhado | Microsoft Docs
 description: No Reporting Services, você pode especificar valores de tempo limite para definir limites para o uso dos recursos do sistema.
 ms.date: 01/16/2020
 ms.prod: reporting-services
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1bc1f2f27fa46f8262d3c0ca99549d23f2381ff0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5996c21b09a722a3cbeac41917bf83ca132feed2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76259405"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082326"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Definindo valores de tempo limite para processamento de relatório e conjuntos de dados compartilhados (SSRS)
 No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você pode especificar valores de tempo limite para definir limites para o uso dos recursos do sistema. Os servidores de relatório dão suporte a dois valores de tempo limite:  

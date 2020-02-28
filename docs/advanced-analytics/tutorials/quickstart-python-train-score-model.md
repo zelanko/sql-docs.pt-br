@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8fd7d734bee00a22af02b014e950f6694b534a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c6c74d73a531a40e0f8e57e7104109de71e27ce3
+ms.sourcegitcommit: acfdeacc80c112992c1201748e0b5c59a473032d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831762"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76977540"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Início Rápido: Criar e pontuar um modelo de previsão no Python com os Serviços de Machine Learning do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ Ao concluir este início rápido, você aprenderá:
 > - Como passar entradas para seu código por meio de entradas no procedimento armazenado
 > - Como os procedimentos armazenados são usados para operacionalizar os modelos
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Este início rápido requer acesso a uma instância do SQL Server que tenha os [Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md) com a linguagem Python instalada.
 
@@ -174,7 +174,7 @@ Agora que você criou, treinau e salvou um modelo, passe para a próxima etapa: 
 
 Neste exercício, você aprendeu a criar procedimentos armazenados dedicados a tarefas diferentes, em que cada procedimento armazenado usou o procedimento armazenado do sistema `sp_execute_external_script` para iniciar um processo do Python. As entradas para o processo do Python são passadas para `sp_execute_external` como parâmetros. O próprio script do Python e as variáveis de dados em um banco de dados do SQL Server são passados como entradas.
 
-Em geral, você deve planejar usar o SSMS apenas com código Python aprimorado ou com código Python simples que retorne saída baseada em linhas. Como uma ferramenta, o SSMS dá suporte a linguagens de consulta como T-SQL e retorna conjuntos de linhas bidimensionanais. Se o código gerar uma saída visual como um histograma ou gráfico de dispersão, você precisará de uma ferramenta ou aplicativo de usuário final que possa renderizar a imagem.
+Em geral, você deve planejar usar o SSMS apenas com código Python aprimorado ou com código Python simples que retorne saída baseada em linhas. Como uma ferramenta, o SSMS dá suporte a linguagens de consulta como T-SQL e retorna conjuntos de linhas bidimensionanais. Caso o código gere uma saída visual como uma dispersão ou um histograma, você precisará de uma ferramenta separada ou de um aplicativo para usuário final que possa renderizar a imagem fora do procedimento armazenado.
 
 Para alguns desenvolvedores de Python acostumados a escrever scripts abrangentes que lidem com uma variedade de operações, organizar tarefas em procedimentos separados pode parecer desnecessário. Mas o treinamento e a pontuação têm casos de uso diferentes. Separando-os, você pode colocar cada tarefa em um agendamento e em permissões de escopo diferentes para cada operação.
 

@@ -1,5 +1,5 @@
 ---
-title: Adicionar ou remover um cabeçalho ou rodapé de página (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Adicionar ou remover um cabeçalho ou rodapé de página (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8c05a90f2d077e76bbbdebb9f285c3f2e8b3f86
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: adb2d9d24bc353c7d1c64c328b342b24022faef8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581908"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081564"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Adicionar ou remover um cabeçalho ou rodapé de página (Construtor de Relatórios e SSRS)
   É possível adicionar texto, imagens, linhas, retângulos e bordas estáticas aos cabeçalhos ou rodapés das páginas. Você poderá colocar expressões e imagens associadas a dados em uma caixa de texto, se desejar a variável ou os dados computados em um cabeçalho ou rodapé.  

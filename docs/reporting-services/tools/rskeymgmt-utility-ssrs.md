@@ -1,5 +1,5 @@
 ---
-title: Utilitário rskeymgmt (SSRS) | Microsoft Docs
+title: Utilitário rskeymgmt | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f64ee56ddbd88f2d981d35fb24d9e156b734ff88
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5ebbda456c402372e7505968414bc044eec87ec4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65571472"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082152"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitário rskeymgmt (SSRS)
   Extrai, restaura, cria e exclui a chave simétrica usada para proteger dados confidenciais de servidor de relatório contra acesso não autorizado. Esse utilitário também é usado para unir instâncias de servidor de relatório em uma implantação de expansão. Uma *implantação em expansão de servidor de relatório* se refere a várias instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.  

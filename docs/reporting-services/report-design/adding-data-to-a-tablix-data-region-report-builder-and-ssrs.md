@@ -1,5 +1,5 @@
 ---
-title: Adicionando dados a uma região de dados Tablix (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Como adicionar dados a uma região de dados Tablix (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 847e3f6e7e76041749b0588bff510caebed11817
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 316bb3980a52bef2c4c52b252b35a4641cede6ac
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581883"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081512"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Adicionando dados a uma região de dados Tablix (Construtor de Relatórios e SSRS)
 Em relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , para exibir dados de um conjunto de dados de relatório em uma tabela ou matriz, em cada célula de dados, especifique o nome de um campo do conjunto de dados a ser exibido. É possível exibir dados de detalhes ou dados agrupados. Se você adicionar grupos a uma tabela ou matriz, linhas e colunas para valores de grupo e dados de grupo serão adicionados automaticamente. Em seguida, é possível adicionar subtotais e totais aos dados.  

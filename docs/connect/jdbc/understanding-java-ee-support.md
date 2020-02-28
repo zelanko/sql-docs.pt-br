@@ -1,7 +1,7 @@
 ---
 title: Noções básicas sobre o suporte ao Java EE | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3eb2778f11aa83498bdfc47ece599aa07c403fe0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c120df0f29e9d4debc0061a13363fc99d8c44c37
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69027260"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004600"
 ---
 # <a name="understanding-java-ee-support"></a>Noções básicas sobre o suporte ao Java EE
 
@@ -38,7 +38,9 @@ Para o JDBC Driver 7.0, o driver está contido no **mssql-jdbc-7.0.0.jre8.jar** 
 Para o JDBC Driver 7.2, o driver está contido no **mssql-jdbc-7.2.2.jre8.jar** ou **mssql-jdbc-7.2.2.jre11.jar**.
 
 Para o JDBC Driver 7.4, o driver está contido no **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** ou **mssql-jdbc-7.4.1.jre12.jar**.
-  
+
+Para o JDBC Driver 8.2, o driver estará contido em **mssql-jdbc-8.2.0.jre8.jar**, em **mssql-jdbc-8.2.0.jre11.jar** ou em **mssql-jdbc-8.2.0.jre13.jar**.
+
 O nome de classe é usado sempre que você carrega o driver com a classe DriverManager do JDBC e sempre que especifica o nome de classe do driver em qualquer configuração de driver. Por exemplo, a configuração de uma fonte de dados em um servidor de aplicativos do Java EE pode exigir que você insira o nome de classe do driver.  
   
 ## <a name="data-sources"></a>Fontes de dados

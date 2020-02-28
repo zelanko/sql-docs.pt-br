@@ -1,5 +1,5 @@
 ---
-title: Formatando texto e espaços reservados (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Como formatar o texto e os espaços reservados (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59e78e1c11b18d71e20c054f69979d3f3679bce2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5c97993b2cc2bd2585bfe6010e6aa4b1cfd59f78
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580294"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079522"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Formatando texto e espaços reservados (Construtor de Relatórios e SSRS)
   Uma caixa de texto pode ser um item de relatório ou uma célula individual dentro de uma região de dados que contém texto, um campo calculado, um ponteiro para um campo em um banco de dados ou uma combinação dos três itens. Você pode misturar fontes e cores, adicionar estilos em negrito e itálico e usar estilos de parágrafo, como alinhamento e recuos deslocados. Você pode formatar uma caixa de texto inteira ou formatar texto, números, expressões ou campos específicos dentro da caixa de texto.  

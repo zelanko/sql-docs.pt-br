@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e9435c52cc0bf318291d38a2511f496c818c2fd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0e28d62292c8bcc4b98d8991fbf4bd8708bbbc76
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74479433"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558370"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Instalar novos pacotes de R com sqlmlutils
 
@@ -26,7 +26,7 @@ Este artigo descreve como usar funções no pacote [**sqlmlutils**](https://gith
 > [!NOTE]
 > O comando do R padrão `install.packages` não é recomendado para adicionar pacotes do R do SQL Server. Em vez disso, use **sqlmlutils**, conforme descrito neste artigo.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Instale o [R](https://www.r-project.org) e o [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) no computador cliente que você usa para conectar-se ao SQL Server. Você pode usar qualquer IDE do R para executar scripts, mas este artigo pressupõe o RStudio.
 
@@ -129,13 +129,15 @@ Se o computador cliente que você usa para se conectar ao SQL Server tiver acess
 
 1. No computador cliente, abra o RStudio e crie um novo arquivo de **Script R**.
 
-1. Use o script R a seguir para instalar o pacote **glue** usando **sqlmlutils**. Substitua suas informações de conexão de banco de dados SQL Server (se você não usar a autenticação do Windows, adicione os parâmetros `uid` e `pwd`).
+1. Use o script R a seguir para instalar o pacote **glue** usando **sqlmlutils**. Substitua suas informações de conexão de banco de dados do SQL Server.
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
-     server= "yourserver",
-     database = "yourdatabase")
+     server   = "server",
+     database = "database",
+     uid      = "username",
+     pwd      = "password")
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC")
    ```

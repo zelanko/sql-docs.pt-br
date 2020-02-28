@@ -1,5 +1,5 @@
 ---
-title: Adicionar um retângulo ou um contêiner (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Adicionar um retângulo ou um contêiner (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2079eeb5cb871b5006ac4b2c45b60e9c8a3a3c97
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fc7cba2147dbcc781a5764173bbd09699ab74385
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574780"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080693"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Adicionar um retângulo ou um contêiner (Construtor de Relatórios e SSRS)
   Adicione um retângulo a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] quando quiser que um elemento gráfico separe áreas do relatório, enfatize áreas de um relatório ou forneça uma tela de fundo para um ou mais itens de relatório. Os retângulos também são usados como contêineres para ajudar a controlar a maneira como as regiões de dados são renderizadas em um relatório. Você pode personalizar a aparência de um retângulo editando suas propriedades, como plano de fundo e cores da borda. Para obter mais informações sobre como usar um retângulo como um contêiner, consulte [Retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md) e [Exibir os mesmos dados em uma matriz e um gráfico &#40;Construtor de Relatórios&#41;](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).    

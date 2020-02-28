@@ -1,5 +1,5 @@
 ---
-title: Adicionar efeitos 3D a um gráfico (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Adicionar efeitos 3D a um gráfico (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb5fd8c6130f7f10effc9f9682fbde6063dca093
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1d8bf9b9951ac461f6aaa3a33602ecb4e2aa4c30
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581678"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078792"
 ---
 # <a name="chart-effects---add-3d-effects-report-builder"></a>Efeitos de gráfico – adicionar efeitos 3D (Construtor de Relatórios)
   É possível usar efeitos 3D (tridimensionais) para fornecer profundidade e adicionar impacto visual aos gráficos em seus relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por exemplo, para enfatizar uma fatia específica de um gráfico de pizza destacada, você pode girar e alterar a perspectiva do gráfico de modo que as pessoas observem essa fatia primeiro. Quando efeitos 3D são aplicados ao gráfico, todas as cores de gradiente e estilos de hachurado são desabilitados.  

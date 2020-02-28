@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo Logon do Reporting Services (SSRS) | Microsoft Docs
+title: Caixa de diálogo de Logon do Reporting Services | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 05d33d719be8bc2e136e34ebb14da394d5d99db9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3d60450f0f4c7feb7d6a00f66fcedeb89c764bf5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190405"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082167"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Caixa de diálogo Logon do Reporting Services (SSRS)
   Use a caixa de diálogo **Logon do Reporting Services** para fornecer credenciais para publicar relatórios no servidor de relatório.  

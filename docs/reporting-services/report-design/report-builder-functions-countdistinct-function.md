@@ -1,5 +1,5 @@
 ---
-title: Função CountDistinct (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Função CountDistinct (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6e7e7f39553d538359395470fca995122a006659
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ff5931ea437a2b91bf2232472fbf5780153f38cb
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579620"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081283"
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>Funções do Construtor de Relatórios – Função CountDistinct
   Retorna uma contagem de todos os valores não nulos distintos especificados pela expressão, avaliados no contexto do escopo fornecido.  

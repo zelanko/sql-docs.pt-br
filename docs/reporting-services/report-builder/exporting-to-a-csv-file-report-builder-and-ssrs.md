@@ -1,5 +1,5 @@
 ---
-title: Exportando para um arquivo CSV (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Como exportar para um arquivo CSV (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eece2e47cee99c1c3716aadc597e8b6e6dd48d79
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0b53c40aeb36b2db7586fe135daa05aff17e54e5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581206"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078372"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportando para um arquivo CSV (Construtor de Relatórios e SSRS)
   A extensão de renderização CSV (Comma-Separated Value) renderiza relatórios paginados como uma representação mesclada dos dados de um relatório padronizado, em formato de texto simples que pode ser facilmente lido e que também permite a troca com vários aplicativos.  

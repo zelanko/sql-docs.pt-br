@@ -1,5 +1,5 @@
 ---
-title: Fontes de dados com suporte no Reporting Services (SSRS) | Microsoft Docs
+title: Fontes de dados compatíveis com o Reporting Services | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6400b708fa90d384c6c7f6d0bf11ca7352bad560
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e37b386b0dd8fd5a596096b8f56e87db1a0fa1e6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190883"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078124"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Fontes de dados com suporte no Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera dados de relatório de fontes de dados por meio de uma camada de dados modular e extensível que usa extensões de processamento de dados. Para recuperar dados de relatório de uma fonte de dados, você deve selecionar uma extensão de processamento de dados que dá suporte ao tipo de fonte de dados, à versão do software em execução na fonte de dados e à plataforma da fonte de dados ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]de 32 bits ou 64 bits).  

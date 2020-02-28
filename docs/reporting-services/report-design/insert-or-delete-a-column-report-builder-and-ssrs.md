@@ -1,5 +1,5 @@
 ---
-title: Inserir ou excluir uma coluna (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Inserir ou excluir uma coluna (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2796447d65a7fcabe029c67f460a76284daf242f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 243b6ea1838e3e6d8666114172ca9c51684878b0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580210"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082031"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>Inserir ou excluir uma coluna (Construtor de Relatórios e SSRS)
   Você pode adicionar ou excluir colunas em uma região de dados tablix em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Essa região pode ser uma tabela, uma matriz ou uma lista. Os procedimentos a seguir não se aplicam às regiões de dados de gráficos e medidores.  

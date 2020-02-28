@@ -1,5 +1,5 @@
 ---
-title: Especificando caminhos para itens externos (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Como especificar caminhos para itens externos (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9848a77ae760fc2c1fa4c4d0ddeaa5b1120ec1ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cad68b0b99479b074e04760f419e12ec9837aac3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65578473"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080912"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Especificando caminhos para itens externos (Construtor de Relatórios e SSRS)
   Você especifica caminhos nas propriedades de item de relatório para referenciar itens, como relatórios detalhados, sub-relatórios e arquivos de imagem, que são externos ao arquivo de definição de relatório e armazenados em um servidor de relatório.  
@@ -37,7 +37,7 @@ ms.locfileid: "65578473"
   
 -   **Um caminho completo para o item.**  
   
-    -   **Em um servidor de relatório:** o caminho começa com **/** , a pasta Base. Por exemplo, ../Reports/AllSubreports/Subreport1.  
+    -   **Em um servidor de relatórios:** o caminho inicia em **/** , a pasta inicial. Por exemplo, ../Reports/AllSubreports/Subreport1.  
   
     -   **Em um site do SharePoint:** você deve especificar o nome do relatório em uma expressão, com a URL completa do item e a extensão de arquivo .rdl. Por exemplo, `="https://server/site/library/folder/Report1.rdl"`.  
   

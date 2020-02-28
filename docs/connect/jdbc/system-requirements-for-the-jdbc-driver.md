@@ -1,7 +1,7 @@
 ---
 title: Requisitos de sistema para o JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5759a1f9936fdb8a6df4de422ae2ff0542dc63a8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e9e74d080ed0e7cd91dcde6cbaa2ca2e32f04dc6
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69027668"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004553"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Requisitos de sistema para o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,6 +26,8 @@ ms.locfileid: "69027668"
 - Java Runtime Environment
 
 ## <a name="java-runtime-environment-requirements"></a>Requisitos do Java Runtime Environment  
+
+ Começando com o Microsoft JDBC Driver 8.2 para SQL Server, há suporte para o JDK (Java Development Kit) 13.0 e o JRE (Java Runtime Environment) 13.0.
 
  Começando com o Microsoft JDBC Driver 7.4 para SQL Server, há suporte para o JDK (Java Development Kit) 12.0 e o JRE (Java Runtime Environment) 12.0.
 
@@ -42,6 +44,31 @@ ms.locfileid: "69027668"
  Começando com o [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], o suporte para o JDBC driver para a API da Especificação do JDBC (Java Database Connectivity) foi estendido para incluir a API do JDBC 4.0. A API do JDBC 4.0 foi introduzida como parte do JDK (Java Development Kit) 6.0 e do JRE (Java Runtime Environment) 6.0. O JDBC 4.0 é um superconjunto da API do JDBC 3.0.
   
  Quando você implanta o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] nos sistemas operacionais Windows e UNIX, deve usar os pacotes de instalação *sqljdbc_\<version>_enu.exe* e *sqljdbc_\<version>_enu.tar.gz*, respectivamente. Para saber mais sobre como implantar o JDBC Driver, confira o tópico [Implantando o JDBC Driver](../../connect/jdbc/deploying-the-jdbc-driver.md).  
+
+**Microsoft JDBC Driver 8.2 para SQL Server:**  
+
+  o JDBC Driver 8.2 inclui três bibliotecas de classes JAR em cada pacote de instalação: **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** e **mssql-jdbc-8.2.0.jre13.jar**.
+
+  O JDBC Driver 8.2 foi desenvolvido para funcionar e ser compatível com todas as principais máquinas virtuais Java, mas foi testado somente nas versões 1.8, 11.0 e 13.0 do OpenJDK e nas versões 1.8, 11.0 e 13.0 do Azul Zulu JRE.
+  
+  Veja abaixo um resumo do suporte fornecido pelos dois arquivos JAR incluídos no Microsoft JDBC Drivers 8.2 para SQL Server:  
+  
+  |JAR|Conformidade de versão do JDBC|Versão do Java recomendada|Descrição|  
+|---------|-----------------------------|----------------------|-----------------|   
+|mssql-jdbc-8.2.0.jre8.jar|4.2|8|Requer um JRE (Java Runtime Environment) 1.8. O uso do JRE 1.7 ou anterior lança uma exceção.<br /><br /> Os novos recursos na versão 8.2 incluem: Suporte ao JDK 13, Always Encrypted com Enclaves Seguros e aprimoramentos de desempenho do tipo de dados temporais. |
+|mssql-jdbc-8.2.0.jre11.jar|4.3|11|Requer um JRE (Java Runtime Environment) 11.0. O uso do JRE 10.0 ou inferior lança uma exceção.<br /><br /> Os novos recursos na versão 8.2 incluem: Suporte ao JDK 13, Always Encrypted com Enclaves Seguros e aprimoramentos de desempenho do tipo de dados temporais. |
+|mssql-jdbc-8.2.0.jre13.jar|4.3|13|Requer um JRE (Java Runtime Environment) 13.0. O uso do JRE 11.0 ou anterior lança uma exceção.<br /><br /> Os novos recursos na versão 8.2 incluem: Suporte ao JDK 13, Always Encrypted com Enclaves Seguros e aprimoramentos de desempenho do tipo de dados temporais. |
+
+
+  O JDBC Driver 8.2 também está disponível no repositório Maven Central e pode ser incluído em um projeto Maven adicionando o seguinte código no POM.XML:  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>8.2.0.jre11</version>
+</dependency>
+```
 
 **Microsoft JDBC Driver 7.4 para SQL Server:**  
 
@@ -196,7 +223,7 @@ O JDBC Driver 6.4 também está disponível no repositório Maven Central e pode
  O driver JDBC dá suporte a conexões ao Banco de Dados SQL do Azure e ao SQL Server. Para o Microsoft JDBC Driver 4.2 e 4.1 para SQL Server, o suporte começa com o SQL Server 2008.
   
 ## <a name="operating-system-requirements"></a>Requisitos do sistema operacional  
- O driver JDBC foi desenvolvido para funcionar em qualquer sistema operacional que ofereça suporte ao uso de uma JVM (Máquina Virtual Java). Porém, só os sistemas operacionais Sun Solaris, SUSE Linux e Windows foram testados oficialmente.  
+ O driver JDBC foi desenvolvido para funcionar em qualquer sistema operacional que ofereça suporte ao uso de uma JVM (Máquina Virtual Java). Porém, só os sistemas operacionais Sun Solaris, SUSE Linux, Ubuntu Linux, CentOS Linux, macOS e Windows foram testados oficialmente.  
   
 ## <a name="supported-languages"></a>Idiomas com suporte  
  O driver JDBC dá suporte a todas as ordenações de coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais sobre as ordenações com suporte no JDBC Driver, confira os [Recursos internacionais do JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  

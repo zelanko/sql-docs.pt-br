@@ -1,5 +1,5 @@
 ---
-title: Criar uma matriz (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Criar uma matriz (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aec3e79fbfbaf96475cf10457c9f21c8c3d78b6c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cd0268916173f4e2b9d3f6c096fceb6787d18487
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581551"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078682"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Criar uma matriz (Construtor de Relatórios e SSRS)
   Use uma matriz para exibir dados agrupados e informações de resumo. É possível agrupar dados por vários campos ou expressões em grupos de linhas e de colunas. As matrizes oferecem funcionalidade semelhante às tabelas de referência cruzada e dinâmicas. Em tempo de execução, conforme os dados e as regiões de dados do relatório são combinados, uma matriz cresce horizontalmente e verticalmente na página. Os valores das células da matriz exibem valores de agregação com escopo para a interseção dos grupos de linhas e de colunas aos quais a célula pertence. É possível formatar as linhas e as colunas para realçar os dados que você deseja enfatizar. Também é possível incluir alternâncias detalhadas que inicialmente ocultam dados de detalhes. Em seguida, o usuário pode clicar nas alternâncias para exibir mais ou menos detalhes, conforme o necessário.  

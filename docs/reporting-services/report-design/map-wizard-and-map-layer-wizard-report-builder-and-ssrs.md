@@ -1,5 +1,5 @@
 ---
-title: Assistente de Mapa e Assistente de Camada do Mapa (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Assistente de mapa e assistente de camada do mapa (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7acbf53f3a77252d00d3ad5de65ffb221afe3b7a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 02be70284a4a32c69618659f1271165677628845
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66499894"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078573"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistente de Mapa e Assistente de Camada do Mapa (Construtor de Relatórios e SSRS)
  Nos relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , o Assistente de Mapa e o Assistente de Camada do Mapa automatizam a tarefa de criar um mapa, adicionar uma camada a um mapa ou alterar as opções de camada do mapa em uma camada existente.  

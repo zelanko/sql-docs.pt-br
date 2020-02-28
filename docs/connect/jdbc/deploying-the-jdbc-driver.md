@@ -1,7 +1,7 @@
 ---
 title: Implantando o JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 01/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 99ca0fab9a23689ac9c20cad6ebf0d94dd7b2113
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73049841"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004672"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Implantando o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,15 +30,8 @@ ms.locfileid: "73049841"
 >  Para obter informações sobre como implantar aplicativos Java em geral, consulte o site de Java.  
   
 ## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>Implantando o JDBC Driver em sistemas Windows  
- Ao implantar o driver JDBC em sistemas operacionais Windows, você deve usar a versão de arquivo zip executável do pacote de instalação, geralmente denominado `sqljdbc_<version>_<language>.exe`.  
-  
- Para executar o arquivo zip executável silenciosamente, use a opção de linha de comando `/auto` ou um arquivo em lotes, como a seguir:  
-  
- `sqljdbc_<version>_<language>.exe /auto`  
-  
-> [!NOTE]  
->  Quando a opção `/auto` é usada, a instalação não é realmente silenciosa, pois uma caixa de diálogo do WinZip ainda é exibida na tela do usuário. No entanto, não é necessário interagir com ela, que é fechada assim que a operação de descompactação é concluída.  
-  
+ Ao implantar o JDBC Driver em sistemas operacionais Windows será necessário desempacotar o pacote de instalação compactado, normalmente chamado de `sqljdbc_<version>_<language>.zip`.
+
 ## <a name="deploying-the-driver-on-unix-systems"></a>Implantando o driver em sistemas UNIX 
  Ao implantar o driver JDBC em sistemas operacionais UNIX, é necessário usar a versão do arquivo gzip do pacote de instalação, geralmente chamado `sqljdbc_<version>_<language>.tar.gz`.  
   
@@ -54,7 +47,7 @@ ms.locfileid: "73049841"
 
 ## <a name="legalities-of-driver-redistribution"></a>Legalidades de redistribuição de driver
 
-Os JDBC Drivers das versões 6.0, 6.2, 6.4 e 7.0 são redistribuíveis. Confira a cláusula sobre _Código Distribuível_ nos contratos de licença.
+As versões 6.0, 6.2, 6.4, 7.0, 7.2, 7.4 e 8.2 do JDBC Driver são redistribuíveis. Confira a cláusula sobre _Código Distribuível_ nos contratos de licença.
 
 As versões 4.x do JDBC Driver são antigas e obsoletas. O suporte para as versões 4.x expirou antes de 2018.
 

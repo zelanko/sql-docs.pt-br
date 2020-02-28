@@ -1,29 +1,35 @@
 ---
 title: Instalar o Construtor de Relatórios | Microsoft Docs
 description: O Construtor de Relatórios é um aplicativo autônomo, instalado no computador por você ou por um administrador.
-ms.date: 01/03/2020
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70cf4c586f6fe38bd36ca99cd1ed36026969a446
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d256ac7cc7f7925ad307c527378abcca5b6d121f
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75776454"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971384"
 ---
 # <a name="install-report-builder"></a>Instalar o Construtor de Relatórios
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] é um aplicativo autônomo, instalado no computador por você ou por um administrador. Você pode instalá-lo do Centro de Download da Microsoft, de um servidor de relatório do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] ou de um site do SharePoint integrado com [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] é um aplicativo autônomo, instalado no computador por você ou por um administrador. Você pode instalá-lo do Centro de Download da Microsoft, de um servidor de relatório do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] ou de um site do SharePoint integrado com [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
 > [!NOTE]
-> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
-  
+> Você está procurando por informações de instalação do Power BI Report Builder em vez disso? Acesse a página [Microsoft Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=58158) no Centro de Download. 
+
  Um administrador normalmente instala e configura o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], concede permissão para baixar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] do portal da Web e gerencia pastas e permissões para relatórios, partes de relatório e conjuntos de dados compartilhados salvos no servidor de relatório. Para obter mais informações sobre a administração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Servidor de relatório do Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
 ## <a name="install-ssrbnoversion-from--a--web-portal-or-sharepoint-library"></a>Instalar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] de um portal da Web ou biblioteca do SharePoint 
+
+> [!NOTE]
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
   
  Você pode iniciar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] de um portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou de um site do SharePoint integrado com [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obter informações, veja [Iniciar o Construtor de Relatórios](../../reporting-services/report-builder/start-report-builder.md).  
 

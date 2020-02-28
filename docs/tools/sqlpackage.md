@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: c5f0b10d0b2bbd953b14873e76b938ecfdce6fd9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d08ee2e48fca1cf7cd473dbd02714b460089353f
+ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74993017"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77250591"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -44,7 +44,29 @@ O **SqlPackage.exe** inicia as ações especificadas usando os parâmetros, as p
 ```
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
-  
+
+### <a name="usage-examples"></a>Exemplos de uso
+
+**Gerar uma comparação entre bancos de dados usando arquivos .dacpac com uma saída do script SQL**
+
+Comece criando um arquivo .dacpac das alterações mais recentes do banco de dados:
+
+```
+sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+ ```
+ 
+Crie um arquivo .dacpac do destino do banco de dados (que não tem alterações):
+
+ ```
+ sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+ ```
+
+Crie um script SQL que gera as diferenças de dois arquivos .dacpac:
+
+```
+sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
+ ```
+
 ### <a name="help-for-the-extract-action"></a>Ajuda para a ação Extrair
 
 |Parâmetro|Forma abreviada|Valor|Descrição|
@@ -206,6 +228,7 @@ Uma operação de publicação SqlPackage.exe atualiza o esquema de um banco de 
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Especifica se diferenças na quantidade de tempo que o SQL Server retém a rota na tabela de roteamento deverão ser ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Especifica se diferenças nos pontos e vírgulas entre instruções T-SQL serão ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Especifica se diferenças nas opções de tabela serão ignoradas ou atualizadas quando você publicar em um banco de dados.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Especifica se diferenças nas opções de partição de tabela serão ignoradas ou atualizadas quando você publicar em um banco de dados.  Essa opção se aplica somente ao banco de dados de data warehouse do Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Especifica se diferenças nos objetos de configurações do usuário serão ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Especifica se diferenças de espaço em branco serão ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Especifica se diferenças no valor da cláusula WITH NOCHECK para restrições de verificação serão ignoradas ou atualizadas quando você publicar.|
@@ -433,6 +456,7 @@ Uma ação de relatório do **SqlPackage.exe** cria um relatório XML das altera
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Especifica se diferenças na quantidade de tempo que o SQL Server retém a rota na tabela de roteamento deverão ser ignoradas ou atualizadas quando você publicar em um banco de dados|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Especifica se diferenças nos pontos e vírgulas entre instruções T-SQL serão ignoradas ou atualizadas quando você publicar em um banco de dados.| 
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Especifica se diferenças nas opções de tabela serão ignoradas ou atualizadas quando você publicar em um banco de dados.| 
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Especifica se diferenças nas opções de partição de tabela serão ignoradas ou atualizadas quando você publicar em um banco de dados.  Essa opção se aplica somente ao banco de dados de data warehouse do Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Especifica se diferenças nos objetos de configurações do usuário serão ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Especifica se diferenças de espaço em branco serão ignoradas ou atualizadas quando você publicar em um banco de dados. |
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Especifica se diferenças no valor da cláusula WITH NOCHECK para restrições de verificação serão ignoradas ou atualizadas quando você publicar em um banco de dados.| 
@@ -597,6 +621,7 @@ Uma ação de script do **SqlPackage.exe** cria um script de atualização incre
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Especifica se diferenças na quantidade de tempo que o SQL Server retém a rota na tabela de roteamento deverão ser ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Especifica se diferenças nos pontos e vírgulas entre instruções T-SQL serão ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Especifica se diferenças nas opções de tabela serão ignoradas ou atualizadas quando você publicar em um banco de dados.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Especifica se diferenças nas opções de partição de tabela serão ignoradas ou atualizadas quando você publicar em um banco de dados.  Essa opção se aplica somente ao banco de dados de data warehouse do Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Especifica se diferenças nos objetos de configurações do usuário serão ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Especifica se diferenças de espaço em branco serão ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Especifica se diferenças no valor da cláusula WITH NOCHECK para restrições de verificação serão ignoradas ou atualizadas quando você publicar.|

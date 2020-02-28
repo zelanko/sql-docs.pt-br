@@ -1,5 +1,5 @@
 ---
-title: Planejar um relatório de mapa (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Planejar um relatório de mapa (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8918251cccca5c04bd42bcb931c4efa5d1f9fd6d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0b90397a154836f41659aba858f55e28502e2741
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576322"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082423"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planejar um relatório de mapa (Construtor de Relatórios e SSRS)
 Bons relatórios apresentam informações que levam a ações ou ideias. Para apresentar dados analíticos como totais de vendas ou dados demográficos em relação a uma tela de fundo geográfica, você pode adicionar um mapa a seu relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Um mapa pode conter várias camadas, onde cada uma exibe elementos de mapas que são definidos por um tipo específico de dados espaciais: pontos que representam locais, linhas que representam rotas ou polígonos que representam áreas. Você pode associar seus dados analíticos a elementos de mapas em cada camada.  

@@ -1,5 +1,5 @@
 ---
-title: Referências de globais internas e referências de usuários (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Referências globais internas e de usuários (Construtor de Relatórios) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b39bf6a3a7c04d5d8ca457bb199229fdaebae76
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8dfd41dfbcbd35712fb2e13925b047e4ed2db962
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581844"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082212"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Referências de globais internas e referências de usuários (Construtor de Relatórios)
   A coleção de campos internos que inclui as coleções **Globals** e **User** representa valores globais fornecidos pelo Reporting Services quando um relatório é processado. A coleção de **Globals** fornece valores, como o nome do relatório, a hora em que o seu processamento foi iniciado e os números das páginas atuais para o cabeçalho ou o rodapé do relatório. A coleção de **User** fornece o identificador de usuário e configurações de idioma. Esses valores podem ser usados em expressões para filtrar resultados em um relatório.  

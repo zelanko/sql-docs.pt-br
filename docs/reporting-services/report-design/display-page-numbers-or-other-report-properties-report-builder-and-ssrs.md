@@ -1,5 +1,5 @@
 ---
-title: Exibir números de página ou outras propriedades do relatório (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Exibir números de página ou outras propriedades do relatório (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0f9e826ff115183180ad42a1c065619f2196cd3e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 14496cc4e46118b5421f4d061136f7b1c5b16850
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580889"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080494"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Exibir números de página ou outras propriedades do relatório (Construtor de Relatórios e SSRS)
   É fácil adicionar números de página, um título de relatório, nome de arquivo e outras propriedades de relatório aos cabeçalhos ou rodapés de seu relatório. Essas propriedades são armazenadas como campos na pasta Campos Internos no painel de dados do relatório:  
@@ -60,7 +60,7 @@ ms.locfileid: "65580889"
   
 1.  Clique com o botão direito do mouse na caixa de texto que contém [&PageNumber] e clique em **Expressões**.  
   
-     A caixa de texto **Definir Expressão para: Valor** contém a expressão =Globals!PageNumber.  
+     A caixa de texto **Definir expressão para: Valor** contém a expressão =Globals!PageNumber.  
   
 2.  Coloque o cursor depois do sinal de = e digite **"Page " &** .  
   

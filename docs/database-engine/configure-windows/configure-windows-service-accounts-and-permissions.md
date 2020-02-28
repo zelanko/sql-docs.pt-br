@@ -50,12 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f8097f477368a9aa4cd8846b8da77e8bff73324e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 491d1e260206121b431276088ff5b34516b4d337
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76929152"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173603"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar contas de serviço e permissões do Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -387,7 +387,7 @@ O[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] habilita o SID por servi�
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|Leitura, Execução, Listar Conteúdo de Pastas|  
 |Launchpad|%binn|Leitura, Execução|
 ||ExtensiblilityData|Controle total|
-||Log\ExtensibiltityLog|Controle total|
+||Log\ExtensibilityLog|Controle total|
   
  \*O serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é desabilitado em instâncias do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] com Advanced Services.  
   

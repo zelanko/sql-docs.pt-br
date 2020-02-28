@@ -2,7 +2,7 @@
 title: Configurar um grupo de disponibilidade distribuído
 description: 'Descreve como criar e configurar um grupo de disponibilidade Always On distribuído. '
 ms.custom: seodec18
-ms.date: 08/17/2017
+ms.date: 01/28/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c49fb6ad9ad1d824a91f2a91c399770f3032b8aa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ebe6152ea59de28c9df7f3bb3abfa149900c826f
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952492"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146301"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Configurar um grupo de disponibilidade Always On distribuído  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ Para criar um grupo de disponibilidade distribuído, você deve criar dois grupo
 
 Para obter uma visão geral técnica dos grupos de disponibilidade distribuídos, consulte [Grupos de disponibilidade distribuídos](distributed-availability-groups.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Definir os ouvintes do ponto de extremidade para escutar em todos os endereços IP
 
@@ -146,7 +146,7 @@ GO
 ### <a name="create-a-listener-for--the-secondary-availability-group"></a>Criar um ouvinte para o grupo de disponibilidade secundário  
  Em seguida, crie um ouvinte para o grupo de disponibilidade secundário no segundo WSFC. Neste exemplo, o ouvinte é denominado `ag2-listener`. Para obter instruções detalhadas sobre como criar um ouvinte, veja [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
-```  
+```sql  
 ALTER AVAILABILITY GROUP [ag2]    
     ADD LISTENER 'ag2-listener' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173);    
 GO  
@@ -228,15 +228,15 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 No momento, apenas o failover manual é permitido. Para fazer failover manual de um grupo de disponibilidade distribuído:
 
-1. Para garantir que nenhum dado seja perdido, defina o grupo de disponibilidade distribuído para confirmação síncrona.
-1. Aguarde até que o grupo de disponibilidade distribuído esteja sincronizado.
+1. Para verificar se nenhum dado foi perdido, interrompa todas as transações nos bancos de dados primários globais (ou seja, bancos de dados do grupo de disponibilidade primário) e defina o grupo de disponibilidade distribuído como commit síncrono.
+1. Aguarde até que o grupo de disponibilidade distribuído seja sincronizado e tenha o mesmo last_hardened_lsn por banco de dados. 
 1. Na réplica primária global, defina a função do grupo de disponibilidade distribuído como `SECONDARY`.
 1. Teste a prontidão de failover.
 1. Faça failover do grupo de disponibilidade para o site primário.
 
 Os exemplos de Transact-SQL a seguir demonstram as etapas detalhadas para fazer failover do grupo de disponibilidade distribuído denominado `distributedag`:
 
-1. Defina o grupo de disponibilidade distribuído como confirmação síncrona executando o seguinte código em *ambos*, na primária global e no encaminhador.   
+1. Para verificar se nenhum dado foi perdido, interrompa todas as transações nos bancos de dados primários globais (ou seja, bancos de dados do grupo de disponibilidade primário). Em seguida, defina o grupo de disponibilidade distribuído como commit síncrono executando o código a seguir em *ambos*, no primário global e no encaminhador.   
     
       ```sql  
       -- sets the distributed availability group to synchronous commit 
@@ -262,24 +262,29 @@ Os exemplos de Transact-SQL a seguir demonstram as etapas detalhadas para fazer 
        GO
 
       ```  
-   >[!NOTE]
-   >Em um grupo de disponibilidade distribuído, o status de sincronização entre os dois grupos de disponibilidade depende do modo de disponibilidade de ambas as réplicas. Para o modo de confirmação síncrona, tanto o grupo de disponibilidade primária quanto o grupo de disponibilidade secundária atuais precisam ter o modo de disponibilidade `SYNCHRONOUS_COMMIT`. Por esse motivo, você precisa executar o script acima, tanto na réplica primária global quanto no encaminhador.
+   > [!NOTE]
+   > Em um grupo de disponibilidade distribuído, o status de sincronização entre os dois grupos de disponibilidade depende do modo de disponibilidade de ambas as réplicas. Para o modo de confirmação síncrona, tanto o grupo de disponibilidade primária quanto o grupo de disponibilidade secundária atuais precisam ter o modo de disponibilidade `SYNCHRONOUS_COMMIT`. Por esse motivo, você precisa executar o script acima, tanto na réplica primária global quanto no encaminhador.
 
-1. Aguarde até que o status do grupo de disponibilidade distribuído seja alterado para `SYNCHRONIZED`. Execute a consulta a seguir na primária global que é a réplica primária do grupo de disponibilidade primário. 
+
+1. Aguarde até que o status do grupo de disponibilidade distribuído seja alterado para `SYNCHRONIZED` e todas as réplicas tenham o mesmo last_hardened_lsn (por banco de dados). Execute a seguinte consulta no primário global, que é a réplica primária do grupo de disponibilidade primário, bem como o encaminhador para verificar synchronization_state_desc e last_hardened_lsn: 
     
       ```sql  
+      -- Run this query on the Global Primary and the forwarder
+      -- Check the results to see if synchronization_state_desc is SYNCHRONIZED, and the last_hardened_lsn is the same per database on both the global primary and       forwarder 
+      -- If not rerun the query on both side every 5 seconds until it is the case
+      --
       SELECT ag.name
              , drs.database_id
+             , db_name(drs.database_id) as database_name
              , drs.group_id
              , drs.replica_id
              , drs.synchronization_state_desc
-             , drs.end_of_log_lsn 
-        FROM sys.dm_hadr_database_replica_states drs,
-        sys.availability_groups ag
-          WHERE drs.group_id = ag.group_id;      
+             , drs.last_hardened_lsn  
+      FROM sys.dm_hadr_database_replica_states drs 
+      INNER JOIN sys.availability_groups ag on drs.group_id = ag.group_id;
       ```  
 
-    Continuar depois que o grupo de disponibilidade **synchronization_state_desc** for `SYNCHRONIZED`. Se **synchronization_state_desc** não for `SYNCHRONIZED`, execute o comando a cada cinco segundos até que ele seja alterado. Não continue até que **synchronization_state_desc** =  seja `SYNCHRONIZED`. 
+    Continue depois que o grupo de disponibilidade **synchronization_state_desc** for `SYNCHRONIZED` e last_hardened_lsn for igual por banco de dados no primário global e no encaminhador.  Se **synchronization_state_desc** não for `SYNCHRONIZED` ou last_hardened_lsn não for igual, execute o comando a cada cinco segundos até que ele seja alterado. Não continue até que **synchronization_state_desc** = `SYNCHRONIZED` e last_hardened_lsn sejam iguais por banco de dados. 
 
 1. Na primária global, defina a função do grupo de disponibilidade distribuído como `SECONDARY`. 
 
@@ -289,23 +294,41 @@ Os exemplos de Transact-SQL a seguir demonstram as etapas detalhadas para fazer 
 
     Neste ponto, o grupo de disponibilidade distribuído não está disponível.
 
-1. Teste a prontidão de failover. Execute a seguinte consulta:
+1. Teste a prontidão de failover. Execute a seguinte consulta no primário global e no encaminhador:
 
     ```sql
-    SELECT ag.name, 
-        drs.database_id, 
-        drs.group_id, 
-        drs.replica_id, 
-        drs.synchronization_state_desc, 
-        drs.end_of_log_lsn 
-    FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
-    WHERE drs.group_id = ag.group_id; 
+     -- Run this query on the Global Primary and the forwarder
+     -- Check the results to see if the last_hardened_lsn is the same per database on both the global primary and forwarder 
+     -- The availability group is ready to fail over when the last_hardened_lsn is the same for both availability groups per database
+     --
+     SELECT ag.name, 
+         drs.database_id, 
+         db_name(drs.database_id) as database_name,
+         drs.group_id, 
+         drs.replica_id,
+         drs.last_hardened_lsn
+     FROM sys.dm_hadr_database_replica_states drs
+     INNER JOIN sys.availability_groups ag ON drs.group_id = ag.group_id;
     ```  
-    O grupo de disponibilidade estará pronto para failover quando **synchronization_state_desc** for `SYNCHRONIZED` e **end_of_log_lsn** for igual para ambos os grupos de disponibilidade. 
 
-1. Faça failover do grupo de disponibilidade primário para o grupo de disponibilidade secundário. Execute o comando a seguir no SQL Server que hospeda a réplica primária do grupo de disponibilidade secundário. 
+    O grupo de disponibilidade estará pronto para fazer failover quando **last_hardened_lsn** for igual para ambos os grupos de disponibilidade por banco de dados. Se last_hardened_lsn não for igual após um período de tempo, para evitar a perda de dados, faça failback para o primário global executando esse comando nele e, em seguida, comece de novo da segunda etapa: 
 
     ```sql
+    -- If the last_hardened_lsn is not the same after a period of time, to avoid data loss, 
+    -- we need to fail back to the global primary by running this command on the global primary 
+    -- and then start over from the second step:
+
+    ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
+    ```
+
+
+1. Faça failover do grupo de disponibilidade primário para o grupo de disponibilidade secundário. Execute o comando a seguir no encaminhador, o SQL Server que hospeda a réplica primária do grupo de disponibilidade secundário. 
+
+    ```sql
+    -- Once the last_hardened_lsn is the same per database on both sides
+    -- We can Fail over from the primary availability group to the secondary availability group. 
+    -- Run the following command on the forwarder, the SQL Server instance that hosts the primary replica of the secondary availability group.
+
     ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
     ```  
 

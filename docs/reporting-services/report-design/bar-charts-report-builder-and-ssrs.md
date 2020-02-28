@@ -1,5 +1,5 @@
 ---
-title: Gráficos de barras (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Gráficos de barras (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ed33d00286119c63042680cfd6d2bd414d58098
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 31749e321ac89d02a046a1bd6d67139bc476c110
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581832"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081479"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Gráficos de barras (Construtor de Relatórios e SSRS)
   Um gráfico de barras exibe as séries como conjuntos de barras horizontais. O gráfico de barras plano está bem relacionado ao gráfico de colunas, que exibe uma série como conjuntos de barras verticais e o gráfico de barras de intervalo, que exibe uma série como conjuntos de barras horizontais com pontos de início e término variáveis.  

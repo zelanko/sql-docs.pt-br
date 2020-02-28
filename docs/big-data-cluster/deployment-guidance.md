@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831599"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256867"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Como implantar o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Kubernetes
 
@@ -71,7 +71,7 @@ Depois de configurar o cluster do Kubernetes, você pode prosseguir com a implan
 
 ## <a name="ensure-you-have-storage-configured"></a>Verifique se você tem o armazenamento configurado
 
-Para que a maioria das implantações de cluster de Big Data tenham armazenamento persistente. Neste momento, você precisa verificar se tem um plano de como fornecerá o armazenamento persistente no cluster do Kubernetes antes de implantar o BDC.
+A maioria das implantações do cluster de Big Data deve ter armazenamento persistente. Neste momento, você precisa verificar se tem um plano de como fornecerá o armazenamento persistente no cluster do Kubernetes antes de implantar o BDC.
 
 Se você fizer a implantação no AKS, nenhuma configuração de armazenamento será necessária. O AKS fornece classes de armazenamento internas com provisionamento dinâmico. Personalize a classe de armazenamento (`default` ou `managed-premium`) no arquivo de configuração de implantação. Os perfis internos usam uma classe de armazenamento `default`. Se você estiver fazendo a implantação em um cluster do Kubernetes implantado com `kubeadm`, precisará garantir que tem armazenamento suficiente para um cluster da escala desejada disponível e configurado para uso. Caso deseje personalizar como o armazenamento é usado, faça isto antes de continuar. Confira [Persistência de dados com o cluster de Big Data do SQL Server no Kubernetes](concept-data-persistence.md).
 

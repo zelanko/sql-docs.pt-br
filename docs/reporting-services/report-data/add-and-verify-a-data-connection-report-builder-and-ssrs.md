@@ -1,5 +1,5 @@
 ---
-title: Adicionar e verificar uma conexão de dados (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Adicionar e verificar uma conexão de dados (Construtor de Relatórios) | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
-ms.openlocfilehash: b3607172643129b7ec327d12f6818dafbde10e23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 26ea58eaaaffbbd0c53d78ca971f472413be322b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190015"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082263"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>Adicionar e verificar uma conexão de dados (Construtor de Relatórios e SSRS)
 

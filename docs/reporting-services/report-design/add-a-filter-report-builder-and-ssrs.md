@@ -1,5 +1,5 @@
 ---
-title: Adicionar um filtro (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Adicionar um filtro (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d748e302606370152fc0c87ac47c350e11f39e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0eadf07ed347ce2b77eccab229ef6551a62d63d8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574835"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080747"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Adicionar um filtro (Construtor de Relatórios e SSRS)
   Adicione um filtro a um conjunto de dados, região de dados ou grupo quando quiser incluir ou excluir valores específicos para cálculos ou exibição. Os filtros são aplicados em tempo de execução, primeiro, no conjunto de dados, depois, na região de dados e, em seguida, no grupo, de cima para baixo nas hierarquias de grupo. Em uma tabela, matriz ou lista, os filtros para grupos de linha, grupos de coluna e grupos adjacentes são aplicados de forma independente. Em um gráfico, os filtros para grupos de categoria e grupos de série são aplicados de forma independente.  
@@ -31,7 +31,7 @@ ms.locfileid: "65574835"
   
 1.  Abra um relatório no modo de exibição de **Design** .  
   
-2.  Selecione a região de dados na superfície de design e, em seguida, clique com o botão direito do mouse em _\<data region>_ **Propriedades**. Para um medidor, selecione **Propriedades do Painel de Medidores**. A caixa de diálogo _Propriedades\< da_ **data region>** será aberta.  
+2.  Selecione a região de dados na superfície de design e, em seguida, clique com o botão direito do mouse em _\<data region>_ **Propriedades**. Para um medidor, selecione **Propriedades do Painel de Medidores**. A caixa de diálogo **Propriedades** da _\<data region>_ será aberta.  
   
     > [!NOTE]  
     >  Em uma região de dados do Tablix, clique com o botão direito do mouse na alça de canto da célula, linha ou coluna e clique em **Propriedades do Tablix**.  

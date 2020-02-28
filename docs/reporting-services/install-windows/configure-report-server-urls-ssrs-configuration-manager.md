@@ -1,5 +1,5 @@
 ---
-title: Configurar as URLs do Servidor de Relatório (	Gerenciador de Configurações do SSRS) | Microsoft Docs
+title: Configurar as URLs do servidor de relatório (Configuration Manager) | Microsoft Docs
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 823df0704b07657b5f7493c03fb14158b73263a2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: da3f7c0f0385ddfd8bdb61ab7009a6503acfb80a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73594072"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080253"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurar as URLs do servidor de relatório (Configuration Manager do SSRS)
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], as URLs são usadas para acessar o serviço Web do Servidor de Relatório e o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Antes de usar qualquer um dos aplicativos, você deve configurar, pelo menos, uma URL para o serviço Web e o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece valores padrão para as URLs de ambos os aplicativos que funcionam bem na maioria dos cenários de implantação, incluindo implantações lado a lado com outros serviços Web e aplicativos.  
@@ -28,7 +28,7 @@ ms.locfileid: "73594072"
 ## <a name="defining-a-report-server-url"></a>Definindo uma URL do servidor de relatório  
  A URL identifica com precisão o local de uma instância de um aplicativo de servidor de relatório em sua rede. Quando você criar a URL de um servidor de relatório, deverá especificar as seguintes partes.  
   
-|Parte|DESCRIÇÃO|  
+|Parte|Descrição|  
 |----------|-----------------|  
 |Nome do host|Uma rede TCP/IP usa um endereço IP para identificar exclusivamente um dispositivo na rede. Há um endereço IP físico para cada placa de adaptador de rede instalada em um computador. Se o endereço IP for resolvido para um cabeçalho de host, você poderá especificar esse cabeçalho. Se estiver implantando o servidor de relatório em uma rede corporativa, você poderá usar o nome de rede do computador.|  
 |Porta|Uma porta TCP é um ponto de extremidade no dispositivo. O servidor de relatório escutará solicitações em uma porta designada.|  

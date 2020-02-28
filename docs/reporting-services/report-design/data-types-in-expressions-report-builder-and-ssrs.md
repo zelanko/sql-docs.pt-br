@@ -1,5 +1,5 @@
 ---
-title: Tipos de dados em expressões (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Tipos de dados em expressões (Construtor de Relatórios) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 998757029ae5e3a8239a937897f176d5994c5880
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fc38e22d7265384e8f16df56ffcab63018ecd4e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68892990"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080532"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de dados em expressões (Construtor de Relatórios e SSRS)
   Os tipos de dados representam tipos diferentes de dados de forma que eles possam ser armazenados e processados com eficiência. Tipos de dados comuns incluem texto (também conhecido como cadeias de caracteres) com e sem casas decimais, datas e horas e imagens. Os valores em um relatório devem ser um tipo de dados RDL. Você pode formatar um valor de acordo com sua preferência ao exibi-lo em um relatório. Por exemplo, um campo que representa moeda pode ser armazenado na definição de relatório como um número de ponto flutuante, mas pode ser exibido em uma variedade de formatos, dependendo da propriedade de formato escolhida.  

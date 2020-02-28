@@ -1,5 +1,5 @@
 ---
-title: Referências de coleções de variáveis de grupo e de relatório (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Referências de coleções de variáveis de grupo e de relatórios (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 97123f3e9802ddbdf452f66e83a1b3c00f99764d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 77373c2a1a160c7621f54f3701564eebe1312618
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581777"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081455"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Coleções internas – referências de variáveis de grupo e de relatório (Construtor de Relatórios)
   Quando há um cálculo complexo usado mais de uma vez em expressões em um relatório, convém criar uma variável. É possível criar uma variável do relatório ou uma variável do grupo. Os nomes de variável devem ser exclusivos em um relatório.  

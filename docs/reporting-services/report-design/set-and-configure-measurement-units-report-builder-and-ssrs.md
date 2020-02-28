@@ -1,5 +1,5 @@
 ---
-title: Definir e configurar unidades de medida (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Definir e configurar unidades de medida (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 48700208f4ff67c9f6b6932537558c283df13ee6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7651373c21b2e22d88a11d196e3f5c0322b07fe0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576644"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081017"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>Definir e configurar unidades de medida (Construtor de Relatórios e SSRS)
   Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , os indicadores usam uma das duas unidades de medida: percentual ou numérica.   

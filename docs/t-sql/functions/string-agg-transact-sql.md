@@ -16,19 +16,17 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7dd020c0ec7f68dbd589b6e07026adfab86c890
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d67efc13e326808b570fc33f054f922e74d5923e
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75720754"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478489"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 Concatena os valores das expressões de cadeia de caracteres e coloca os valores de separador entre eles. O separador não é adicionado ao final da cadeia de caracteres. 
-
-Introduzida no SQL Server 2017.
  
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -87,8 +85,10 @@ Valores nulos são ignorados e o separador correspondente não é adicionado. Pa
 
 O exemplo a seguir gera uma lista de nomes em uma única célula de resultados, separados com retornos de carro.
 ```sql
-SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
-FROM Person.Person; 
+USE AdventureWorks2016
+GO
+SELECT STRING_AGG (CONVERT(nvarchar(max),FirstName), CHAR(13)) AS csv 
+FROM Person.Person;  
 ```
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
@@ -99,31 +99,40 @@ FROM Person.Person;
 Os valores de `NULL` encontrados nas células `name` não são retornados no resultado.   
 
 > [!NOTE]  
->  Se você estiver usando o Editor de Consultas do Management Studio, a opção **Resultados em Grade** não poderá implementar o retorno de carro. Alterne para **Resultados em Texto** para ver o conjunto de resultados corretamente.   
+> Se usar o Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], a opção **Resultados em Grade** não poderá implementar o retorno de carro. Alterne para **Resultados em Texto** para ver o conjunto de resultados corretamente.       
+> Os Resultados em Texto são truncados para 256 caracteres por padrão. Para aumentar esse limite, altere a opção **Número máximo de caracteres exibidos em cada coluna**.
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. Gerar uma lista de nomes separados por vírgula sem valores NULL
 
 O exemplo a seguir substitui valores nulos por 'N/A' e retorna os nomes separados por vírgulas em uma única célula de resultados.  
 ```sql
-SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
+USE AdventureWorks2016
+GO
+SELECT STRING_AGG(CONVERT(nvarchar(max),ISNULL(FirstName,'N/A')), ',') AS csv 
 FROM Person.Person; 
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|Csv | 
+> [!NOTE]
+> Os resultados são mostrados como cortados.
+
+|csv | 
 |--- |
-|Julio, N/A, Marco, Pedro, N/A, N/A, Alice, Diogo |  
+|Syed,Catherine,Kim,Kim,Kim,Hazem,Sam,Humberto,Gustavo,Pilar,Pilar, ...|  
 
 ### <a name="c-generate-comma-separated-values"></a>C. Gerar valores separados por vírgula
 
 ```sql
-SELECT 
-STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
-  AS names 
+USE AdventureWorks2016
+GO
+SELECT STRING_AGG(CONVERT(nvarchar(max),CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')')), CHAR(13)) AS names 
 FROM Person.Person; 
 ```
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
+
+> [!NOTE]
+> Os resultados são mostrados como cortados.
 
 |nomes |
 |--- |
@@ -157,38 +166,70 @@ GROUP BY a.articleId, title;
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. Gerar uma lista de emails por cidades
 
-A seguinte consulta localiza os endereços de email de funcionários e agrupa-os por cidades:
+A seguinte consulta localiza os endereços de email de funcionários e agrupa-os por cidade:
 
 ```sql
-SELECT town, STRING_AGG (email, ';') AS emails 
-FROM dbo.Employee 
-GROUP BY town; 
+USE AdventureWorks2016
+GO
+
+SELECT TOP 10 City, STRING_AGG(CONVERT(nvarchar(max), EmailAddress), ';') AS emails 
+FROM Person.BusinessEntityAddress AS BEA  
+INNER JOIN Person.Address AS A ON BEA.AddressID = A.AddressID
+INNER JOIN Person.EmailAddress AS EA ON BEA.BusinessEntityID = EA.BusinessEntityID 
+GROUP BY City;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|cidade |e-mails |
+> [!NOTE]
+> Os resultados são mostrados como cortados.
+
+|City |e-mails |
 |--- |--- |
-|Seattle |syed0@adventure-works.com;catherine0@adventure-works.com;kim2@adventure-works.com |
-|LA |sam1@adventure-works.com;hazem0@adventure-works.com |
+|Ballard|paige28@adventure-works.com;joshua24@adventure-works.com;javier12@adventure-works.com;...|
+|Baltimore|gilbert9@adventure-works.com|
+|Barstow|kristen4@adventure-works.com|
+|Basingstoke Hants|dale10@adventure-works.com;heidi9@adventure-works.com|
+|Baytown|kelvin15@adventure-works.com|
+|Beaverton|billy6@adventure-works.com;dalton35@adventure-works.com;lawrence1@adventure-works.com;...|
+|Bell Gardens|christy8@adventure-works.com
+|Bellevue|min0@adventure-works.com;gigi0@adventure-works.com;terry18@adventure-works.com;...|
+|Bellflower|philip0@adventure-works.com;emma34@adventure-works.com;jorge8@adventure-works.com;...|
+|Bellingham|christopher23@adventure-works.com;frederick7@adventure-works.com;omar0@adventure-works.com;...|
 
 Os emails retornados na coluna de emails podem ser usados diretamente para enviar emails ao grupo de pessoas que trabalham em algumas cidades específicas. 
 
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. Gerar uma lista classificada de emails por cidades   
 Semelhante ao exemplo anterior, a seguinte consulta localiza os endereços de email de funcionários, agrupa-os por cidade e classifica os emails em ordem alfabética:   
+
 ```sql
-SELECT town, 
-    STRING_AGG (email, ';') WITHIN GROUP (ORDER BY email ASC) AS emails 
-FROM dbo.Employee 
-GROUP BY town; 
+USE AdventureWorks2016
+GO
+
+SELECT TOP 10 City, STRING_AGG(CONVERT(nvarchar(max), EmailAddress), ';') WITHIN GROUP (ORDER BY EmailAddress ASC) AS emails 
+FROM Person.BusinessEntityAddress AS BEA  
+INNER JOIN Person.Address AS A ON BEA.AddressID = A.AddressID
+INNER JOIN Person.EmailAddress AS EA ON BEA.BusinessEntityID = EA.BusinessEntityID 
+GROUP BY City;
 ```
-   
+
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|cidade |e-mails |
+> [!NOTE]
+> Os resultados são mostrados como cortados.
+
+|City |e-mails |
 |--- |--- |
-|Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
-|LA |hazem0@adventure-works.com;sam1@adventure-works.com |
+|Barstow|kristen4@adventure-works.com
+|Basingstoke Hants|dale10@adventure-works.com;heidi9@adventure-works.com
+|Braintree|mindy20@adventure-works.com
+|Bell Gardens|christy8@adventure-works.com
+|Byron|louis37@adventure-works.com
+|Bordeaux|ranjit0@adventure-works.com
+|Carnation|don0@adventure-works.com;douglas0@adventure-works.com;george0@adventure-works.com;...|
+|Boulogne-Billancourt|allen12@adventure-works.com;bethany15@adventure-works.com;carl5@adventure-works.com;...|
+|Berkshire|barbara41@adventure-works.com;brenda4@adventure-works.com;carrie14@adventure-works.com;...|
+|Berks|adriana6@adventure-works.com;alisha13@adventure-works.com;arthur19@adventure-works.com;...|
 
 ## <a name="see-also"></a>Confira também
  

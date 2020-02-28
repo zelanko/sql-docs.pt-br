@@ -1,5 +1,5 @@
 ---
-title: Tipo de conexão do XML (SSRS) | Microsoft Docs
+title: Tipo de conexão XML | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 96049f3ec8f0cd79a25a57ab0467dff29053ee27
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9355ac713c502acbbd319ec7bdc9cb035079ca34
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190486"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081683"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo de conexão XML (SSRS)
   Para incluir dados em uma fonte de dados XML em seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo XML. Esse tipo interno de fonte de dados é baseado na extensão de dados XML. Use esse tipo de fonte de dados para se conectar e recuperar dados de documentos XML, serviços Web ou XML inseridos na consulta.  

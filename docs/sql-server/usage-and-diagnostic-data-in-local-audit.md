@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 626b4277edcb049b2c7b755b70199df899dc5637
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558029"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256649"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Auditoria local para coleta de dados de diagnóstico e uso do SQL Server (Programa de Aperfeiçoamento da Experiência do Usuário)
 
@@ -29,7 +29,7 @@ ms.locfileid: "75558029"
 
 O Microsoft SQL Server contém recursos habilitados para Internet que podem coletar e enviar à Microsoft informações sobre seu computador ou dispositivo. Isso é chamado de *informações padrão do computador*. O componente de auditoria local da [Coleta Dados de Diagnóstico e Uso do SQL Server](usage-and-diagnostic-data-configuration-for-sql-server.md) grava dados coletados pelo serviço em uma pasta designada, que representa os dados (logs) que serão enviados à Microsoft. A finalidade da auditoria local é permitir que os clientes vejam todos os dados que a Microsoft coleta com esse recurso, para fins de conformidade, regulatórios ou de validação de privacidade.  
 
-A partir do SQL Server 2016 CU2, é configurável no nível da instância no Mecanismo de Banco de Dados do SQL Server e o SSAS (Analysis Services). No SQL Server 2016 CU4 e no SQL Server 2016 SP1, a auditoria local também está habilitada para o SQL Server Integration Services (SSIS). Outros componentes do SQL Server que são instalados durante a instalação e as ferramentas do SQL Server que são baixadas ou instaladas após a instalação não têm o recurso de auditoria local para coleta de dados de diagnóstico e uso.
+Para o SQL Server 2016 CU2 e CU3, a auditoria Local é configurável no nível da instância no Mecanismo de Banco de Dados do SQL Server e o SSAS (Analysis Services). Para o SQL Server 2016 CU4, 2016 SP1 e versões mais recentes, a auditoria local também está habilitada para o SSIS (SQL Server Integration Services). Outros componentes do SQL Server que são instalados durante a instalação e as ferramentas do SQL Server que são baixadas ou instaladas após a instalação não têm o recurso de auditoria local para coleta de dados de diagnóstico e uso.
 
 ## <a name="remarks"></a>Comentários
 
@@ -38,11 +38,11 @@ A partir do SQL Server 2016 CU2, é configurável no nível da instância no Mec
 
 Para recusar a coleta de dados, veja [Ativando ou desativando a auditoria local](#turning-local-audit-on-or-off)
 
-## <a name="prerequisites"></a>Prerequisites 
+## <a name="prerequisites"></a>Pré-requisitos 
 
 A seguir estão os pré-requisitos para habilitar a auditoria local em cada instância do SQL Server: 
 
-1. A instância está corrigida para o SQL Server 2016 RTM CU2 ou posterior. Para o Integration Services, a instância é corrigida para o SQL 2016 RTM CU4 ou SQL 2016 SP1
+1. A instância está corrigida para o SQL Server 2016 RTM CU2 ou posterior. Para o Integration Services, o patch da instância é aplicado ao SQL 2016 RTM CU4, ao SQL 2016 SP1 ou a versões mais recentes.
 
 1. O usuário deve ser um administrador do sistema ou ter uma função com acesso para adicionar e modificar a Chave do Registro, criar pastas, gerenciar a segurança das pastas e parar/iniciar um Serviço do Windows.  
 
@@ -320,7 +320,7 @@ Esses arquivos de log são gravados no formato JSON. Cada linha será um objeto 
 Nenhum arquivo da auditoria local será gravado.
 
 **O que acontece se não houver conectividade com a internet/o computador estiver protegido pelo firewall?**
-Os dados de diagnóstico e uso do SQL Server 2016 não serão enviado à Microsoft. Ele ainda tentará gravar os logs de auditoria local, se estiver configurado corretamente.
+Os dados de diagnóstico e uso do SQL Server não serão enviados à Microsoft. Ele ainda tentará gravar os logs de auditoria local, se estiver configurado corretamente.
 
 **Como os DBAs desabilitam a auditoria local?**
 Remova a entrada da chave do registro UserRequestedLocalAuditDirectory.
@@ -333,7 +333,7 @@ Os DBAs precisarão gerenciar automaticamente a limpeza de arquivos no diretóri
 
 **Há um cliente ou ferramenta que posso usar para ler esta saída JSON?**
 A saída pode ser lida com o Bloco de notas, o Visual Studio ou qualquer leitor JSON de sua escolha.
-Você também pode ler o arquivo JSON e analisar os dados em uma instância do SQL Server 2016, conforme ilustrado abaixo. Para obter mais detalhes sobre como ler o arquivo JSON no SQL Server, visite [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(Importar arquivos JSON para o SQL Server usando OPENROWSET (BULK) e OPENJSON (Transact-SQL)).
+Você também pode ler o arquivo JSON e analisar os dados em uma instância do SQL Server, conforme ilustrado abaixo. Para obter mais detalhes sobre como ler o arquivo JSON no SQL Server, visite [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(Importar arquivos JSON para o SQL Server usando OPENROWSET (BULK) e OPENJSON (Transact-SQL)).
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

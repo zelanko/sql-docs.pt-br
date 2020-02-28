@@ -1,20 +1,20 @@
 ---
-title: Implantar um cluster de Big Data do SQL Server no modo do Active Directory Domain Services
-titleSuffix: Deploy SQL Server Big Data Cluster in Active Directory mode
+title: Implantar no modo do Active Directory
+titleSuffix: SQL Server Big Data Cluster
 description: Saiba como atualizar Clusters de Big Data do SQL Server em um domínio do Active Directory Domain Services.
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 12/02/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253115"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544877"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no modo do Active Directory Domain Services
 
@@ -164,23 +164,23 @@ Além das variáveis de ambiente para as credenciais, você também precisa forn
 
 A integração com o AD requer os seguintes parâmetros. Adicione esses parâmetros aos arquivos `control.json` e `bdc.json` usando os comandos `config replace` mostrados mais adiante neste artigo. Todos os exemplos a seguir estão usando o domínio de exemplo `contoso.local`.
 
-- `security.ouDistinguishedName`: nome diferenciado de uma UO (unidade organizacional) a que todas as contas do AD criadas pela implantação do cluster serão adicionadas. Se o nome do domínio for `contoso.local`, o nome diferenciado da UO será `OU=BDC,DC=contoso,DC=local`.
+- `security.activeDirectory.ouDistinguishedName`: nome diferenciado de uma UO (unidade organizacional) a que todas as contas do AD criadas pela implantação do cluster serão adicionadas. Se o nome do domínio for `contoso.local`, o nome diferenciado da UO será `OU=BDC,DC=contoso,DC=local`.
 
-- `security.dnsIpAddresses`: lista de endereços IP dos controladores de domínio
+- `security.activeDirectory.dnsIpAddresses`: lista de endereços IP dos controladores de domínio
 
-- `security.domainControllerFullyQualifiedDns`: lista de FQDNs do controlador de domínio. O FQDN contém o nome do computador/host do controlador de domínio. Se tiver vários controladores de domínio, você poderá fornecer uma lista aqui. Exemplo: `HOSTNAME.CONTOSO.LOCAL`
+- `security.activeDirectory.domainControllerFullyQualifiedDns`: lista de FQDNs do controlador de domínio. O FQDN contém o nome do computador/host do controlador de domínio. Se tiver vários controladores de domínio, você poderá fornecer uma lista aqui. Exemplo: `HOSTNAME.CONTOSO.LOCAL`
 
-- **Parâmetro opcional** `security.realm`: na maioria dos casos, o realm é igual ao nome de domínio. Para casos em que eles não são iguais, use esse parâmetro para definir o nome do realm (por exemplo, `CONTOSO.LOCAL`).
+- **Parâmetro opcional** `security.activeDirectory.realm`: na maioria dos casos, o realm é igual ao nome de domínio. Para casos em que eles não são iguais, use esse parâmetro para definir o nome do realm (por exemplo, `CONTOSO.LOCAL`).
 
-- `security.domainDnsName`: nome do seu domínio (por exemplo, `contoso.local`).
+- `security.activeDirectory.domainDnsName`: nome do seu domínio (por exemplo, `contoso.local`).
 
-- `security.clusterAdmins`: esse parâmetro usa **um grupo do AD**. Os membros desse grupo receberão permissões de administrador no cluster. Isso significa que eles terão permissões de sysadmin no SQL Server, permissões de superusuário no HDFS e permissões de administrador no controlador. **Observe que esse grupo precisa existir no AD antes do início da implantação. Observe também que esse grupo não pode estar no escopo DomainLocal no Active Directory. Um grupo com escopo no domínio local resultará em falha na implantação.**
+- `security.activeDirectory.clusterAdmins`: esse parâmetro usa **um grupo do AD**. Os membros desse grupo receberão permissões de administrador no cluster. Isso significa que eles terão permissões de sysadmin no SQL Server, permissões de superusuário no HDFS e permissões de administrador no controlador. **Observe que esse grupo precisa existir no AD antes do início da implantação. Observe também que esse grupo não pode estar no escopo DomainLocal no Active Directory. Um grupo com escopo no domínio local resultará em falha na implantação.**
 
-- `security.clusterUsers`: lista dos grupos do AD que são usuários comuns (sem permissões de administrador) no cluster de Big Data. **Observe que esses grupos precisam existir no AD antes do início da implantação. Observe também que esses grupos não pode estar no escopo DomainLocal no Active Directory. Um grupo com escopo no domínio local resultará em falha na implantação.**
+- `security.activeDirectory.clusterUsers`: lista dos grupos do AD que são usuários comuns (sem permissões de administrador) no cluster de Big Data. **Observe que esses grupos precisam existir no AD antes do início da implantação. Observe também que esses grupos não pode estar no escopo DomainLocal no Active Directory. Um grupo com escopo no domínio local resultará em falha na implantação.**
 
-- **Parâmetro opcional** `security.appOwners`: lista dos grupos do AD que têm permissões para criar, excluir e executar qualquer aplicativo. **Observe que esses grupos precisam existir no AD antes do início da implantação. Observe também que esses grupos não pode estar no escopo DomainLocal no Active Directory. Um grupo com escopo no domínio local resultará em falha na implantação.**
+- **Parâmetro opcional** `security.activeDirectory.appOwners`: lista dos grupos do AD que têm permissões para criar, excluir e executar qualquer aplicativo. **Observe que esses grupos precisam existir no AD antes do início da implantação. Observe também que esses grupos não pode estar no escopo DomainLocal no Active Directory. Um grupo com escopo no domínio local resultará em falha na implantação.**
 
-- **Parâmetro opcional** `security.appReaders`: lista dos grupos do AD que têm permissões para executar qualquer aplicativo. **Observe que esses grupos precisam existir no AD antes do início da implantação. Observe também que esses grupos não pode estar no escopo DomainLocal no Active Directory. Um grupo com escopo no domínio local resultará em falha na implantação.**
+- **Parâmetro opcional** `security.activeDirectory.appReaders`: lista dos grupos do AD que têm permissões para executar qualquer aplicativo. **Observe que esses grupos precisam existir no AD antes do início da implantação. Observe também que esses grupos não pode estar no escopo DomainLocal no Active Directory. Um grupo com escopo no domínio local resultará em falha na implantação.**
 
 **Como verificar o escopo do grupo do AD:** 
 [clique aqui para obter instruções](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) para verificar o escopo de um grupo do AD e determinar se ele é DomainLocal.
@@ -193,7 +193,22 @@ azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 
 Para definir os parâmetros acima no arquivo `control.json`, use os comandos `azdata` a seguir. Os comandos substituem a configuração e fornecem seus próprios valores antes da implantação.
 
-O exemplo a seguir substitui os valores dos parâmetros relacionados ao AD na configuração de implantação. Os detalhes do domínio a seguir são valores de exemplo.
+ > [!IMPORTANT]
+ > Na versão SQL Server 2019 CU2, a estrutura da seção de configuração de segurança no perfil de implantação mudou de maneira clara e todas as configurações relacionadas ao Active Directory estão no novo *activeDirectory* na árvore json em *security* no arquivo *control.json*.
+
+O exemplo abaixo se baseia no uso do SQL Server 2019 CU2. Ele mostra como substituir os valores de parâmetro relacionados ao AD na configuração de implantação. Os detalhes do domínio a seguir são valores de exemplo.
+
+```bash
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.dnsIpAddresses=[\"10.100.10.100\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainControllerFullyQualifiedDns=[\"HOSTNAME.CONTOSO.LOCAL\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainDnsName=contoso.local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterAdmins=[\"bdcadminsgroup\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
+```
+
+Da mesma forma, em versões anteriores à SQL Server 2019 CU2, você pode executar:
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"

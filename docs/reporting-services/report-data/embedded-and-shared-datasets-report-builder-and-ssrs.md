@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de dados inseridos e compartilhados (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Conjuntos de dados inseridos e compartilhados (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2ba5d42e04758b0577ca77e761a67b352dbbf163
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f1d665699dc2051745b08a56796588dab51e3bcf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190823"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077626"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de dados inseridos e compartilhados (Construtor de Relatórios e SSRS)
   Em um relatório, um conjunto de dados representa dados de relatório retornados em virtude da execução de um consulta em uma fonte de dados externa. O conjunto de dados depende da conexão de dados que contém informações sobre a fonte de dados externa. Os dados em si não são incluídos na definição de relatório. O conjunto de dados contém um comando de consulta, uma coleção de campos, parâmetros, filtros e opções de dados que incluem diferenciação de maiúsculas e minúsculas e ordenação. Existem dois tipos de conjuntos de dados:  

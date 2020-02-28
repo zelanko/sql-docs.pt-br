@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca8f97c98ec94ca021f025ffc5b67152e8253ad6
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.openlocfilehash: b33e22b3d6575e7f83572eeca5692d538b58a16b
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76971456"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77253321"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -166,7 +166,7 @@ Quando for **ON**, as estatísticas reterão o percentual de amostragem definido
 **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior
 
 MAXDOP = *max_degree_of_parallelism*  
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 até [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Substitui a opção de configuração **max degree of parallelism** enquanto durar a operação estatística. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP para limitar o número de processadores usados em uma execução de plano paralelo. O máximo é de 64 processadores.  
   
@@ -181,7 +181,9 @@ MAXDOP = *max_degree_of_parallelism*
  0 (padrão)  
  Usa o número real de processadores, ou menos, com base na carga de trabalho atual do sistema.  
   
- \<update_stats_stream_option> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+ \<update_stats_stream_option> 
+ 
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
 ## <a name="remarks"></a>Comentários  
   
@@ -279,7 +281,7 @@ UPDATE STATISTICS Production.Product(Products)
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-update-statistics-on-a-table"></a>E. Atualizar as estatísticas em uma tabela  
  O exemplo a seguir atualiza as estatísticas de `CustomerStats1` na tabela `Customer`.  

@@ -1,5 +1,5 @@
 ---
-title: Adicionar um medidor a um relatório (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Adicionar um medidor a um relatório (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9b5c1a9989831e6c28cd2aecd58a3e9f8640465c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 45f01040e150a613cf49451371fd4e7b742042c1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65575013"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080733"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>Adicionar um medidor a um relatório (Construtor de Relatórios e SSRS)
   Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , quando você quer resumir os dados em um formato visual, é possível usar uma região de dados do medidor. Depois de adicionar uma região de dados do medidor à superfície de design, você poderá arrastar campos do conjunto de dados do relatório para um painel de dados no medidor.  

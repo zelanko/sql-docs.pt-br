@@ -1,5 +1,5 @@
 ---
-title: Partes de relatório (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Partes de relatório (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3fbef30f8a5bf5658376a37144c8f770317d6981
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0bd0dd7c77e7ebc2501b507324b02ba1bb364190
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576719"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081114"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Partes de relatório (Construtor de Relatórios e SSRS)
   Itens de relatório como tabelas, matrizes, gráficos e imagens podem ser publicados como *partes de relatório*. Partes de relatório são itens de relatório paginados que foram publicados separadamente em um servidor de relatório e que podem ser reutilizados em outros relatórios paginados. As partes de relatório têm uma extensão de arquivo .rsc.  

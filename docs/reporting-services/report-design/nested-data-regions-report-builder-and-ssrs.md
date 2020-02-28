@@ -1,5 +1,5 @@
 ---
-title: Regiões de dados aninhadas (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Regiões de dados aninhadas (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fd50e97693c254e3b28c431a6b2961fc15df8585
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d58cdcf55429a76766e3e1810c1d6599aa360e6d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65578721"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082605"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Regiões de dados aninhadas (Construtor de Relatórios e SSRS)
   É possível aninhar uma região de dados, como um gráfico, em outra, como uma matriz, normalmente para exibir resumos de dados de maneira concisa ou para fornecer uma exibição visual, bem como uma exibição de tabela ou de matriz.  

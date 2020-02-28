@@ -24,12 +24,12 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10ab5b2359d272eb53c7cad3d9c1fc5936c8c71a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d776fbae94ae69af10595d7c0d50b84449dd9875
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72305172"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77255985"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM – usando PIVOT e UNPIVOT
 
@@ -157,6 +157,8 @@ Os valores exclusivos retornados pela coluna `EmployeeID` tornam-se campos no co
   
 > [!IMPORTANT]  
 >  Quando as funções de agregação são usadas com `PIVOT`, a presença de algum valor nulo na coluna de valor não é considerada ao computar uma agregação.  
+
+## <a name="unpivot-example"></a>Exemplo de UNPIVOT
   
 `UNPIVOT` executa praticamente a operação inversa de `PIVOT`, transformando colunas em linhas. Suponha que a tabela produzida no exemplo anterior seja armazenada no banco de dados como `pvt` e que você deseje girar os identificadores de coluna `Emp1`, `Emp2`, `Emp3`, `Emp4` e `Emp5` em valores de linhas que correspondam a um fornecedor específico. Assim, você deve identificar duas colunas adicionais. A coluna que conterá os valores de coluna que você está girando (`Emp1`, `Emp2`,...) será chamada `Employee`, e a coluna que conterá os valores que atualmente existem nas colunas que estão sendo girados será chamada `Orders`. Essas colunas correspondem a *pivot_column* e *value_column*, respectivamente, na definição de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Aqui está a consulta.  
   

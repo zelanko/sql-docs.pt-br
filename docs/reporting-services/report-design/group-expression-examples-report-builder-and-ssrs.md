@@ -1,5 +1,5 @@
 ---
-title: Exemplos de expressões de grupo (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Exemplos de expressão de grupo (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: abfb9f445b52550caf63cc440143e6b008df1d62
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0e6378f523b74483ed6f1a459f63aafbfa1fc5ee
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580263"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082102"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>Exemplos de expressões de grupo (Construtor de Relatórios e SSRS)
   Em uma região de dados, você pode agrupar dados por um único campo ou criar expressões mais complexas que identifiquem os dados nos quais deve ser feito o agrupamento. Expressões complexas incluem referências a vários campos ou parâmetros, instruções condicionais ou código personalizado. Quando você define um grupo para uma região de dados, você adiciona essas expressões às propriedades **Group** . Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "65580263"
 ## <a name="examples-of-group-expressions"></a>Exemplos de expressões de grupo  
  A tabela a seguir fornece exemplos de expressões de grupo que podem ser usadas para definir um grupo.  
   
-|DESCRIÇÃO|Expression|  
+|Descrição|Expression|  
 |-----------------|----------------|  
 |Agrupar pelo campo `Region` .|`=Fields!Region.Value`|  
 |Agrupar por sobrenome e nome.|`=Fields!LastName.Value`<br /><br /> `=Fields!FirstName.Value`|  

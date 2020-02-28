@@ -1,5 +1,5 @@
 ---
-title: Associar um parâmetro de consulta a um parâmetro de relatório (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Associar um parâmetro de consulta a um parâmetro de relatório (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 45161e43e405586bb441088b89fc24494eb928df
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0e9752c14ef2ba03cdb95ad8fe4430c4d4fa23db
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65573234"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081432"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>Associar um parâmetro de consulta a um parâmetro de relatório (Construtor de Relatórios e SSRS)
   Quando você define uma consulta de conjunto de dados que contém uma variável de consulta, o comando de consulta é analisado. Para cada variável de consulta, são criados um parâmetro de conjunto de dados e um parâmetro de relatório correspondentes. O parâmetro de conjunto de dados aponta para o parâmetro de relatório. Dessa forma, o usuário pode inserir um valor que é passado diretamente para a consulta. Toda vez que você edita o comando de consulta, ocorre o mesmo processo.  

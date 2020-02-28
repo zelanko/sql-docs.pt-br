@@ -1,5 +1,5 @@
 ---
-title: Ação de busca detalhada (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Ação de drill down (Construtor de Relatórios) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -38,12 +38,12 @@ f1_keywords:
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee55b7c5b6e5fc1d65f5914cc2850e204c0c0c2e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a0c286663b339171a2536340ca19213879e22091
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579015"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080473"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Ação de análise detalhada (Construtor de Relatórios e SSRS)
 Ao fornecer ícones de sinal de adição ou de subtração em uma caixa de texto, você permite que os usuários ocultem ou exibam itens interativamente. Isso se chama *busca detalhada* . Para uma tabela ou matriz, você pode mostrar ou ocultar linhas e colunas estáticas ou linhas e colunas que estão associadas a grupos.  

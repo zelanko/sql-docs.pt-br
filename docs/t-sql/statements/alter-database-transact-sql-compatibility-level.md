@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ed32cf93d5bbf13580fc15d649ad403b98524cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909646"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544899"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nível de compatibilidade de ALTER DATABASE (Transact-SQL)
 
@@ -307,6 +307,7 @@ Esta seção descreve os novos comportamentos apresentados com o nível de compa
 |Veja o exemplo E na seção Exemplos abaixo.|Veja o exemplo F na seção Exemplos abaixo.|Baixo|
 |A função ODBC {fn CONVERT()} usa o formato de data padrão do idioma. Em alguns idiomas, o formato padrão é YDM, o que pode resultar em erros de conversão quando CONVERT() é combinado com outras funções, como `{fn CURDATE()}`, que espera um formato YMD.|A função ODBC `{fn CONVERT()}` usa o estilo 121 (um formato YMD independente de linguagem) ao converter os tipos de dados ODBC SQL_TIMESTAMP, SQL_DATE, SQL_TIME, SQLDATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP.|Baixo|
 |Datetime intrínseco, como DATEPART, não exige que os valores de entrada de cadeia de caracteres sejam literais válidas de datetime. Por exemplo, `SELECT DATEPART (year, '2007/05-30')` é compilado com êxito.|Partes intrínsecas de datetime, como `DATEPART`, exigem que os valores de entrada de cadeia de caracteres sejam literais de datetime válidos. Erro 241 é retornado quando um datetime literal inválido é usado.|Baixo|
+|Os espaços à direita especificados no primeiro parâmetro de entrada para a função REPLACE são cortados quando o parâmetro é do tipo char. Por exemplo, na instrução SELECT '<' + REPLACE(CONVERT(char(6), 'ABC '), ' ', 'L') + '>', o valor 'ABC ' é avaliado incorretamente como 'ABC'.|Os espaços à direita são sempre preservados. Para aplicativos que dependem do comportamento anterior da função, use a função RTRIM ao especificar o primeiro parâmetro de entrada para a função. Por exemplo, a sintaxe a seguir reproduzirá o comportamento SELECT '<' + REPLACE(RTRIM(CONVERT(char(6), 'ABC ')), ' ', 'L') + '>' do SQL Server 2005.|Baixo|
 
 ## <a name="reserved-keywords"></a>Palavras-chave reservadas
 

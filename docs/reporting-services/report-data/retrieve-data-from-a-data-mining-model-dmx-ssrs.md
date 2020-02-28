@@ -1,5 +1,5 @@
 ---
-title: Recuperar dados de um modelo de mineração de dados (DMX) (SSRS) | Microsoft Docs
+title: Recuperar dados de um modelo de mineração de dados (DMX) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 954ca8c9cf79cf03d311b87c78914264af245ee7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3b49ed7ad49555f83a80ece77f2ba23d2d4252a8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190704"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081815"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>Recuperar dados de um modelo de mineração de dados (DMX) (SSRS)
   Para usar os dados de um modelo de mineração de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em seu relatório, defina uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e um ou mais conjuntos de dados de relatório. Ao criar a definição da fonte de dados, é preciso especificar uma cadeia de conexão e as credenciais para que possa acessar a fonte de dados a partir de seu computador cliente.  

@@ -1,5 +1,5 @@
 ---
-title: Adicionar uma ação de detalhamento a um relatório (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Adicionar uma ação de detalhamento a um relatório (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cfae70562bf244ba9294f31f1dcba9d85f5699f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8f2737d0d67851fdcce06a926d8ceb71849aea2c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574871"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080738"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Adicionar uma ação de detalhamento a um relatório (Construtor de Relatórios e SSRS)
   O relatório aberto quando você clica no link no relatório principal é conhecido como um *relatório detalhado*. Este link de detalhamento habilita uma ação de detalhamento.  

@@ -1,5 +1,5 @@
 ---
-title: Importando HTML para um relatório (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Como importar HTML para um relatório (Construtor de Relatórios) | Microsoft Docs
 ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 54bd3d5acaf487909a4965c1f73a2e8c00aef82a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2e89fb3f197037d757916a60d246c158d43b565b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580226"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082055"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importando HTML para um relatório (Construtor de Relatórios e SSRS)
   É possível usar uma caixa de texto para inserir em um relatório um texto formatado em HTML recuperado de um campo em seu conjunto de dados. O texto pode ser de qualquer expressão simples ou complexa avaliada como HTML formatado corretamente. O texto formatado pode ser renderizado em todos os formatos de saída com suporte, inclusive PDF.  

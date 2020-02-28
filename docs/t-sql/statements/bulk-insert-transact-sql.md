@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/25/2019
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d6802e2f93c4f171797198eda2132e8b0353621f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 999ae75343a71efafd7348065b2a1d3533b4bd10
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910129"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558363"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -59,7 +59,7 @@ BULK INSERT
    [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] FIRSTROW = first_row ]
    [ [ , ] FIRE_TRIGGERS ]
-   [ [ , ] FORMATFILE_DATASOURCE = 'data_source_name' ]
+   [ [ , ] FORMATFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] KEEPIDENTITY ]
    [ [ , ] KEEPNULLS ]
    [ [ , ] KILOBYTES_PER_BATCH = kilobytes_per_batch ]
@@ -166,7 +166,7 @@ FIRE_TRIGGERS Especifica que qualquer gatilho de inserção definido na tabela d
 
 Se FIRE_TRIGGERS não for especificado, nenhum gatilho de inserção será executado.
 
-FORMATFILE_DATASOURCE **=** 'data_source_name' **Aplica-se a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.
+FORMATFILE_DATA_SOURCE **=** "data_source_name" **se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.
 É uma fonte de dados externa nomeada que está apontando para o local de Armazenamento de Blobs do Azure do formato de arquivo que define o esquema de dados importados. A fonte de dados externa deve ser criada usando a opção `TYPE = BLOB_STORAGE` adicionada no [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Para obter mais informações, consulte [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 KEEPIDENTITY Especifica que os valores de identidade no arquivo de dados importado devem ser usados para a coluna de identidade. Se KEEPIDENTITY não for especificado, os valores de identidade dessa coluna serão verificados, mas não importados e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribuirá valores exclusivos automaticamente com base nos valores de semente e de incremento especificados durante a criação da tabela. Se o arquivo de dados não contiver valores para a coluna de identidade na tabela ou exibição, use um arquivo de formato para especificar que a coluna de identidade na tabela ou exibição deve ser ignorada ao importar dados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui valores exclusivos para a coluna automaticamente. Para obter mais informações, veja [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).
@@ -338,7 +338,9 @@ Ao fazer uma importação do Armazenamento de Blobs do Azure e quando os dados n
 
 ### <a name="permissions"></a>Permissões
 
-Requer as permissões INSERT e ADMINISTER BULK OPERATIONS. No Banco de Dados SQL do Azure, são necessárias permissões de INSERT e ADMINISTER DATABASE BULK OPERATIONS. Além disso, a permissão ALTER TABLE será necessária se uma ou mais das seguintes afirmações for verdadeira:
+Requer as permissões INSERT e ADMINISTER BULK OPERATIONS. No Banco de Dados SQL do Azure, são necessárias permissões de INSERT e ADMINISTER DATABASE BULK OPERATIONS. As permissões ADMINISTER BULK OPERATIONS ou a função bulkadmin não são compatíveis com o SQL Server em Linux. Somente `sysadmin` pode executar inserções em massa para o SQL Server em Linux. 
+
+Além disso, a permissão ALTER TABLE será necessária se uma ou mais das seguintes afirmações for verdadeira:
 
 - Existem restrições e a opção CHECK_CONSTRAINTS não foi especificada.
 

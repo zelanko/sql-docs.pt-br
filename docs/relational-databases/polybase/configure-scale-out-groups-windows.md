@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: dfc8560c9834d920a132a54587ba80947db9425d
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72906887"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256749"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configurar grupos de escala horizontal do PolyBase no Windows
 
@@ -21,7 +21,7 @@ ms.locfileid: "72906887"
 
 Este artigo descreve como configurar um [Grupo de escala horizontal do PolyBase](polybase-scale-out-groups.md) no Windows. Isso cria um cluster de instâncias do SQL Server para processar grandes conjuntos de dados de fontes de dados externas, como Hadoop e Armazenamento de Blobs do Azure, de maneira expandir para melhor desempenho de consulta.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
   
 - Mais de um computador no mesmo domínio  
   
@@ -61,7 +61,7 @@ Veja o passo a passo de como configurar um Grupo do PolyBase usando:
   
 3. Na página Configuração do Servidor, use a **conta de domínio** PQTH4A\PolyBaseUser para o Mecanismo PolyBase do SQL Server e o Serviço de Movimentação de Dados PolyBase do SQL Server.
   
-4. Na página Configuração do PolyBase, escolha a opção **Usar a instância do SQL Server como parte de um grupo de escala horizontal do PolyBase**. Isso abre o firewall para permitir conexões de entrada para os serviços do PolyBase.
+4. Na página Configuração do PolyBase, escolha a opção **Usar a instância do SQL Server como parte de um grupo de escala horizontal do PolyBase**. Isso abre o firewall para permitir conexões de entrada para os serviços do PolyBase. Caso o nó principal seja uma instância nomeada, será necessário adicionar manualmente a porta do SQL Server ao Firewall do Windows e iniciar o SQL Browser no nó principal.
   
 5. Depois que a instalação estiver concluída, execute **services.msc**. Verifique se o SQL Server, o Mecanismo de PolyBase e o Serviço de Movimentação de Dados de PolyBase estão em execução.
   

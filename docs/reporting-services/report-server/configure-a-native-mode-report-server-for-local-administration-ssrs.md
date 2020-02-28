@@ -1,5 +1,5 @@
 ---
-title: Configurar um servidor de relatório no modo nativo para a Administração Local (SSRS) | Microsoft Docs
+title: Configurar um servidor de relatório no modo nativo para a administração local | Microsoft Docs
 ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 35355b32c8e4b59618cf146d9de04f3242ec6e6a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 535284c89f54fb39f448a71e5484e81c1a9d31af
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66403271"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080888"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurar um servidor de relatório no modo nativo para a Administração Local (SSRS)
   A implantação de um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um dos seguintes sistemas operacionais exigirá mais etapas de configuração se você desejar administrar localmente a instância do servidor de relatório. Este tópico explica como configurar o servidor de relatório para administração local. Se você ainda não tiver instalado ou configurado o servidor de relatório, confira [Instalar o SQL Server por meio do Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) e [Gerenciar um servidor de relatório no modo nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  

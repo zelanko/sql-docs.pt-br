@@ -1,5 +1,5 @@
 ---
-title: Sintaxe do caminho do elemento para dados de relatório XML (SSRS) | Microsoft Docs
+title: Sintaxe do caminho do elemento para dados de relatório XML | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bdff469a4a96fb7fe5111c619ad1895bcc200c25
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 967ffe24035094296d467e4a60225f31b1558cc5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "72173832"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077665"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxe do caminho do elemento para dados de relatório XML (SSRS)
   No Designer de Relatórios, você especifica os dados para uso em um relatório de uma fonte de dados XML definindo um caminho do elemento que faz distinção entre maiúsculas e minúsculas. Um caminho de elemento indica como transpor os nós hierárquicos XML e seus atributos na fonte de dados XML. Para usar o caminho do elemento padrão, deixe a consulta do conjunto de dados ou o **ElementPath** XML da **Consulta** XML vazio. Quando os dados são recuperados da fonte de dados XML, os nós do elemento que possuem valores de texto e os atributos do nó do elemento se tornam colunas no conjunto de resultados. Os valores dos nós e atributos tornam-se os dados da linha quando a consulta é executada. As colunas são exibidas como a coleção de campos do conjunto de dados no painel de dados do relatório. Este tópico descreve a sintaxe do caminho do elemento.  
@@ -90,7 +90,7 @@ XMLLocalName :: =
 > [!NOTE]  
 >  Quando o caminho do elemento está vazio, a consulta usa o caminho do elemento padrão: o primeiro caminho para uma coleção de nós folha. No primeiro exemplo, deixar o caminho do elemento vazio é equivalente a especificar o caminho do elemento /Clientes/Cliente/Pedidos/Pedido. Todos os valores e atributos do nó ao longo do caminho são retornados no conjunto de resultados, e os nomes de nós e de atributos são exibidos como campos do conjunto de dados.  
   
- **Exemplo nº 1**: *vazio*  
+ **Exemplo 1**: *Vazio*  
   
 |Order|Qtd|ID|Nome|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  

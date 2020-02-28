@@ -1,5 +1,5 @@
 ---
-title: Criar, modificar e excluir fontes de dados compartilhadas (SSRS) | Microsoft Docs
+title: Criar, modificar e excluir fontes de dados compartilhadas | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9f5ed3f000f13d965d9f45c853d831e18d5dd4e8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3cb8f79b892b639e618143fd138920650fb5cfda
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190863"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081821"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Criar, modificar e excluir fontes de dados compartilhadas (SSRS)
   Uma fonte de dados compartilhada é um conjunto de propriedades de conexão de fonte de dados que pode ser referenciada por vários relatórios, modelos e assinaturas controladas por dados que são executados em um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  As fontes de dados compartilhadas fornecem um modo fácil de gerenciar as propriedades da fonte de dados que geralmente são alteradas com o passar do tempo. Se a conta de usuário ou senha for alterada ou se você mover o banco de dados para outro servidor, as informações de conexão poderão ser atualizadas em um único lugar.  

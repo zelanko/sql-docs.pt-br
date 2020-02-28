@@ -1,5 +1,5 @@
 ---
-title: Explorando a flexibilidade de uma região de dados Tablix (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Como explorar a flexibilidade de uma região de dados Tablix (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 45cc3c743c8ece0aecf3a286baef9e1f907c157d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: aaddc6f5671ceb2727ca950459e60dc24402bb9e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579126"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082113"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Explorando a flexibilidade de uma região de dados Tablix (Construtor de Relatórios e SSRS)
 Em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ao adicionar uma tabela, matriz ou região de dados de lista usando a guia Inserir da faixa de opções, você começa com um modelo inicial de região de dados tablix. Mas você não está limitado a esse modelo. É possível continuar a desenvolver a maneira como os dados são exibidos adicionando ou removendo qualquer recurso de região de dados tablix, como grupos, linhas e colunas.  

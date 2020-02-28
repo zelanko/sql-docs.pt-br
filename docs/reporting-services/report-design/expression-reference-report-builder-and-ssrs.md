@@ -1,5 +1,5 @@
 ---
-title: Referência de expressões (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Referência de expressão (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 35bcbd777ac703ad0db2bf6693a1987ef8e124d4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1e7f44eef3fe86685bee473a5e985aad36d21c6d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576365"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080231"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Referência de expressões (Construtor de Relatórios e SSRS)
   As expressões de relatório dão suporte a uma variedade de referências a funções e coleções internas. A sintaxe [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] das expressões deve ser válida para que um relatório possa ser publicado ou processado.  

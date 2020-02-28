@@ -1,5 +1,5 @@
 ---
-title: Formatar o texto em uma caixa de texto (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Formatar o texto em uma caixa de texto (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f50e170276a67e819524e5c9e255ac6801a4091c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f7448ee783e1e4a747942ef774a9106de09487fe
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576014"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079963"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>Formatar o texto em uma caixa de texto (Construtor de Relatórios e SSRS)
   Você pode formatar qualquer parte do texto dentro de uma caixa de texto de forma independente e mesclar texto de espaço reservado e texto estático em uma caixa de texto. Essa capacidade de mesclar formatos e adicionar texto de espaço reservado permite criar mesclagens de mensagens ou modelos de texto no seu relatório. Qualquer expressão pode ser definida e formatada separadamente usando um espaço reservado.  

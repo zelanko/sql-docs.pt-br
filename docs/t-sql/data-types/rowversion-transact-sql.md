@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0129999e61e1df1c61c3a0fb58eab1b3a1cca7b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6c79f2e87ccb6706eab6621cc72bb2fa45b7e9e6
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75245298"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179277"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
-Em seguida, você pode usar as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] de amostra para implementar o controle de simultaneidade otimista na tabela `MyTest` durante a atualização.
+Em seguida, você pode usar as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] de amostra para implementar o controle de simultaneidade otimista na tabela `MyTest` durante a atualização. O script usa `<myRv>` para representar o valor de **rowversion** da última leitura da linha. Substitua o valor pelo valor real de **rowversion**. Um exemplo de um valor real de **rowversion** é `0x00000000000007D3`.
   
 ```sql
 DECLARE @t TABLE (myKey int);  
@@ -89,7 +89,7 @@ UPDATE MyTest
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND RV = myRv;  
+    AND RV = <myRv>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  
@@ -99,12 +99,12 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-`myRv` é o valor de coluna **rowversion** da linha que indica a última vez que você a leu. Esse valor deve ser substituído pelo valor de **rowversion** real. Um exemplo do valor de **rowversion** real é 0x00000000000007D3.
-  
+
+
 Você também pode colocar as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] de amostra em uma transação. Consultando a variável `@t` no escopo da transação, você pode recuperar a coluna `myKey` atualizada da tabela sem consultar a tabela `MyTest`.
-  
-Este é o mesmo exemplo usando a sintaxe de **timestamp**:
-  
+
+Veja a seguir o mesmo exemplo usando a sintaxe de **carimbo de data/hora**. Substitua `<myTS>` por um **carimbo de data/hora real**.
+
 ```sql
 CREATE TABLE MyTest2 (myKey int PRIMARY KEY  
     ,myValue int, TS timestamp);  
@@ -118,7 +118,7 @@ UPDATE MyTest2
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND TS = myTS;  
+    AND TS = <myTS>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  

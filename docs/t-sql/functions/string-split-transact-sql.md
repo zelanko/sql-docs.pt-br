@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 20580d1c746a678771ff3be0e67bab72e2b72be8
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67906829"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179267"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -41,7 +41,7 @@ Para alterar o nível de compatibilidade de um banco de dados, consulte [Exibir 
   
 ## <a name="syntax"></a>Sintaxe  
 
-```sql
+```
 STRING_SPLIT ( string , separator )  
 ```
 
@@ -62,6 +62,8 @@ Retorna uma tabela de coluna única cujas linhas são as subcadeias de caractere
 **STRING_SPLIT** insere uma cadeia de caracteres que tem subcadeias de caracteres delimitadas e insere um caractere a ser usado como separador ou delimitador. STRING_SPLIT gera uma tabela de coluna única cujas linhas contêm as subcadeias de caracteres. O nome da coluna de saída é **value**.
 
 As linhas de saída podem estar em outra ordem. A ordem _não_ é a garantia de corresponder à ordem das subcadeias de caracteres na cadeia de caracteres de entrada. É possível substituir a ordem de classificação final usando uma cláusula ORDER BY na instrução SELECT (`ORDER BY value`).
+
+0x0000 (**char(0)** ) é um caractere indefinido em ordenações do Windows e não pode ser incluído em STRING_SPLIT.
 
 Subcadeias de caracteres de comprimento zero vazias estão presentes quando a cadeia de caracteres de entrada contém duas ou mais ocorrências consecutivas do caractere delimitador. As subcadeias de caracteres vazias são tratadas da mesma forma que são as subcadeias de caracteres sem formatação. É possível filtrar as linhas que contêm a subcadeia de caracteres vazia usando a cláusula WHERE (`WHERE value <> ''`). Se a cadeia de caracteres de entrada for NULL, a função com valor de tabela STRING_SPLIT retornará uma tabela vazia.  
 

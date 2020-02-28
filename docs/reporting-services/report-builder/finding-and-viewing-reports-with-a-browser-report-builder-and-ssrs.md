@@ -1,5 +1,5 @@
 ---
-title: Localizando e exibindo relatórios com um navegador (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Como localizar e exibir relatórios com um navegador (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cf30cee34e988f552a36fac1f7b9eb9ed14d83ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dc69666eaecfcacea21291dec13f6356e0f18d13
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73594003"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079264"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Localizando e exibindo relatórios com um navegador (Construtor de Relatórios e SSRS)
   Você pode usar qualquer navegador da Web com suporte para exibir um relatório por meio de uma conexão direta com um servidor de relatório. Cada relatório tem um endereço URL em um servidor de relatórios. Você pode digitar o endereço da Web de um relatório para abri-lo em uma janela do navegador independentemente de um aplicativo da Web. O relatório é aberto no formato HTML e inclui a barra de ferramentas do relatório para que você possa navegar em páginas ou procurar valores de dados no relatório. Você pode definir parâmetros na URL para ocultar a barra de ferramentas ou selecionar o formato de saída do relatório.  

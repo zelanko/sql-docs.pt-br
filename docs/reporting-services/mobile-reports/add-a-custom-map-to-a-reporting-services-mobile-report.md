@@ -1,6 +1,6 @@
 ---
 title: Adicionar um mapa personalizado a um relatório móvel do Reporting Services | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2f2d3b15021569fe53bfc886f744ed7e53c1444
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9410aac6b74fbb515010517a2fe0667f3c197802
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63141230"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971404"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Adicionar um mapa personalizado a um relatório móvel do Reporting Services
 Os mapas personalizados exigem dois arquivos:  
@@ -22,11 +22,11 @@ Os mapas personalizados exigem dois arquivos:
   
 Leia mais sobre [mapas personalizados nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).  
   
-Armazene os dois arquivos na mesma pasta. Os nomes dos dois arquivos devem corresponder (por exemplo, canada.shp e canada.dbf). Os metadados (arquivos DBF) devem incluir o campo "NOME" com o valor do nome da forma correspondente (chave) a ser usada quando o mapa for populado com dados.   
+Armazene os dois arquivos na mesma pasta. Os nomes dos dois arquivos devem corresponder (por exemplo, canada.shp e canada.dbf). A primeira coluna dos metadados (arquivo DBF) é usada para corresponder ao valor de chave do nome (chave) da forma correspondente a ser usada ao preencher o mapa com os dados.
   
 ## <a name="load-a-custom-map"></a>Carregar um mapa personalizado  
   
-1. Na aba **Layout** , escolha um tipo de mapa: **Mapa de Calor de Gradiente**, **Mapa de Calor de Parada de Intervalo**ou **Mapa de Bolha**, arraste-o para a superfície de design e coloque-o no tamanho desejado.  
+1. Na guia **Layout**, selecione um tipo de mapa: **Mapa de Calor de Gradiente**, **Mapa de Calor de Interrupção de Intervalo**ou **Mapa de Bolhas**, arraste-o para a superfície de design e coloque-o no tamanho desejado.  
   
    ![SSMRP_MapsGallery](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   

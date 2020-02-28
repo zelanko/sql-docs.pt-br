@@ -1,5 +1,5 @@
 ---
-title: Formatando a legenda em um gráfico (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Formatar a legenda em um gráfico (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3306bc4f093a3f05c3caf37d212a8e585ac201c5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4b2babeb60f6208761be04e85889206f9ba407e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581664"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080563"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Legenda de gráfico – formatação (Construtor de Relatórios)
   A legenda do gráfico contém descrições de cada categoria em um gráfico. Uma legenda sempre contém um ou mais itens de legenda, no qual cada item de legenda é composto por uma caixa colorida que representa a série, e uma cadeia de caracteres de texto que descreve a série, conforme indicado na ilustração a seguir.  

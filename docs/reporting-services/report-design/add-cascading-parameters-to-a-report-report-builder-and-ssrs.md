@@ -1,5 +1,5 @@
 ---
-title: Adicionar parâmetros em cascata a um relatório (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Adicionar parâmetros em cascata a um relatório (Construtor de Relatórios) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 56f701d86c180b6bb1d10c3c6ffebfbe057eaf7c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 55cba07f738c9a7a6b87f656687f545b64fd14cf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582085"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080621"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Adicionar parâmetros em cascata a um relatório (Construtor de Relatórios e SSRS)
   Os parâmetros em cascata fornecem um modo de gerenciar grandes volumes de dados de relatório. É possível definir um conjunto de parâmetros relacionados de forma que a lista de valores de um parâmetro dependa do valor escolhido em outro parâmetro. Por exemplo, o primeiro parâmetro é independente e pode apresentar uma lista de categorias de produtos. Quando o usuário seleciona uma categoria, o segundo parâmetro é dependente do valor do primeiro parâmetro. Seus valores são atualizados com uma lista de subcategorias dentro da categoria escolhida. Quando o usuário exibe o relatório, os valores dos dois parâmetros de categoria e subcategoria são usados para filtrar dados do relatório.  

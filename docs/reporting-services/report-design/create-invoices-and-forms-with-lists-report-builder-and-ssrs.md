@@ -1,5 +1,5 @@
 ---
-title: Criar faturas e formulários com listas (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Criar faturas e formulários com listas (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8ec0531056ea1a4ae3ff1850baed21dfb61df8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ce4867fdbaff2ff83f2c7e36d450e6c3b0f07471
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581505"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078595"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>Criar faturas e formulários com listas (Construtor de Relatórios e SSRS)
   Uma região de dados de lista se repete a cada grupo ou linha no conjunto de dados de relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Uma lista pode ser usada para criar relatórios ou formulários de forma livre, como faturas, ou em conjunto com outras regiões de dados. É possível definir listas que contenham qualquer número de itens de relatório. Uma lista pode ser aninhada wit  

@@ -1,5 +1,5 @@
 ---
-title: Caixas de texto (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Caixas de texto (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2c4ad1faa149a384e42c52e7bbd8437dfc03d6f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: db8676a7b00b3cfbf70bca4fecee7539437e1bc2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65573724"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080872"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Caixas de texto (Construtor de Relatórios e SSRS)
   Quando você pensa em uma caixa de texto, provavelmente imagina uma caixa autônoma que contém texto em uma superfície como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. Nos relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , algumas caixas de texto são assim, e podem exibir texto estático para títulos, descrições e rótulos ou texto dinâmico baseado em expressões. Mas todas as células de uma tabela ou matriz (uma região de dados tablix) também contêm uma caixa de texto, que pode ser formatada da mesma maneira que caixas de texto autônomas do seu relatório.  

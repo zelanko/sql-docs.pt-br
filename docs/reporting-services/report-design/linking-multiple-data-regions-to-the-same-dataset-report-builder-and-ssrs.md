@@ -1,5 +1,5 @@
 ---
-title: Vinculando várias regiões de dados ao mesmo conjunto de dados (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Como vincular várias regiões de dados ao mesmo conjunto de dados (Construtor de Relatórios) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c67ddcb48847d3618c9544c50868b555e263fd7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d282c2c84060fb205dc0421d531a5fe23003b77e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580144"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081962"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>Vinculando várias regiões de dados ao mesmo conjunto de dados (Construtor de Relatórios e SSRS)
 

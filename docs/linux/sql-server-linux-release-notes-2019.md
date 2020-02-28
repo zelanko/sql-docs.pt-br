@@ -3,16 +3,16 @@ title: Notas sobre a versão do SQL Server 2019 em Linux
 description: Este artigo contém as notas sobre a versão e os recursos com suporte do SQL Server 2019 em execução no Linux. As notas sobre a versão aqui incluídas são para a versão mais recente, bem como para diversas versões anteriores.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/08/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: f54ffd2753225b0241f7a7d25cd1f11457778ef3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 95289a3c4ad263e2c3ef063e54984a4481cf6109
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831988"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256769"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Notas sobre a versão do SQL Server 2019 em Linux
 
@@ -45,6 +45,7 @@ A tabela a seguir lista o histórico de versões do SQL Server 2019.
 
 | Versão                   | Versão       | Data de liberação |
 |---------------------------|---------------|--------------|
+| [CU2](#cu2)               | 15.0.4013.40  | 2020-02-13   |
 | [CU1](#cu1)               | 15.0.4003.23  | 2020-01-07   |
 | [GA](#ga)                 | 15.0.2000.5   | 2019-11-04   |
 | [Versão Release Candidate](#rc)  | 15.0.1900.25  | 2019-08-21   |
@@ -61,6 +62,23 @@ Se você estiver atualizando pacotes de SQL Server existentes, execute o comando
 - [Instalar o suporte ao R e Python dos Serviços de Machine Learning do SQL Server 2019 no Linux](sql-server-linux-setup-machine-learning.md)
 - [Instalar pacote do PolyBase](../relational-databases/polybase/polybase-linux-setup.md)
 - [Habilitar o SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a id="cu2"></a> CU2 (fevereiro de 2020)
+
+Esta é a versão da CU2 (Atualização Cumulativa 2) do SQL Server 2019 (15.x). A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.4013.40. Para obter informações sobre as correções e aprimoramentos, confira <https://support.microsoft.com/help/4536075>
+
+### <a name="package-details"></a>Detalhes do pacote
+
+Para instalações de pacotes manuais ou offline, você pode baixar os pacotes RPM e Debian com as informações na tabela a seguir:
+
+> [!NOTE]
+> Da CU1 em diante, os links de instalação do pacote offline para Red Hat estão apontando para pacotes do RHEL 8. Se você estiver procurando pacotes do RHEL 7, consulte o caminho de download <https://packages.microsoft.com/rhel/7/mssql-server-2019/>
+
+| Pacote | Versão do pacote | Downloads |
+|-----|-----|-----|
+| Pacote RPM do Red Hat | 15.0.4013.40-8 | [Pacote RPM do mecanismo](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4013.40-8.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4013.40-8.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4013.40-8.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4013.40-8.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4013.40-8.x86_64.rpm)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4013.40-8.x86_64.rpm)|
+| Pacote RPM do SLES | 15.0.4013.40-8 | [Pacote RPM do mecanismo mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4013.40-8.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4013.40-8.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4013.40-8.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4013.40-8.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4013.40-8.x86_64.rpm)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4013.40-8.x86_64.rpm)|
+| Pacote Debian do Ubuntu 16.04 | 15.0.4013.40-8 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4013.40-8_amd64.deb)</br>[Pacote Debian de alta disponibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4013.40-8_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4013.40-8_amd64.deb)</br>[Pacote Debian de extensibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4013.40-8_amd64.deb)</br>[Pacote Debian de extensibilidade do Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4013.40-8_amd64.deb)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4013.40-8_amd64.deb)|
 
 ## <a id="cu1"></a> CU1 (janeiro de 2020)
 
@@ -188,9 +206,9 @@ Para contornar esse problema, adote uma das seguintes medidas:
 #### <a name="network-file-system-nfs"></a>NFS (sistema de arquivos de rede)
 Se você usar compartilhamentos remotos **NFS (Network File System)** em produção, observe os seguintes requisitos de suporte:
 
-- Use o NFS versão **4.2 ou superior**. As versões mais antigas do NFS não dão suporte aos recursos necessários, como fallocate e criação de arquivos esparsos, comuns aos sistemas de arquivos modernos.
+- Use o NFS versão **4.2 ou superior**. As versões mais antigas do NFS não dão suporte aos recursos necessários, como `fallocate` e criação de arquivos esparsos, comuns aos sistemas de arquivos modernos.
 - Localize somente os diretórios **/var/opt/mssql** na montagem NFS. Não há suporte para outros arquivos, como os binários do sistema [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
-- Verifique se os clientes NFS usam a opção 'nolock' ao montar o compartilhamento remoto.
+- Verifique se os clientes NFS usam a opção `nolock` ao montar o compartilhamento remoto.
 
 ### <a name="localization"></a>Localização
 

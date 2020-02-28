@@ -20,12 +20,12 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 91d3d04efa0300683a5ee727cfa0a1fcd31e3c10
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 90ef549988aefd2740d10cf12b04fb5510400ab8
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74822054"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478464"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Solucionar problemas de usuários órfãos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -118,7 +118,7 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 ```  
   
 > [!IMPORTANT]  
->  Qualquer logon pode alterar sua própria senha. Somente logons com a permissão `ALTER ANY LOGIN` podem alterar a senha de logon de outro usuário. Porém, somente membros da função **sysadmin** podem modificar senhas de membros da função **sysadmin** .  
+>  Qualquer logon pode alterar a própria senha. Somente logons com a permissão `ALTER ANY LOGIN` podem alterar a senha de logon de outro usuário. Porém, somente membros da função **sysadmin** podem modificar senhas de membros da função **sysadmin** .  
   
  O procedimento preterido [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) também funciona com usuários órfãos. `sp_change_users_login` não pode ser usado com [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   

@@ -1,7 +1,7 @@
 ---
 title: Conectando-se usando a autenticação do Azure Active Directory | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b596936010fcdce4eb5c0701c5f0c6631cd9687e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7019efd6e1071624eb3e89873918fb9eb2775833
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69028117"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004646"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Conectando-se usando a autenticação do Azure Active Directory
 
@@ -30,7 +30,7 @@ As propriedades de conexão para dar suporte à Autenticação do Azure Active D
     * **ActiveDirectoryMSI**
         * Compatível desde a versão do driver **v7.2**, o `authentication=ActiveDirectoryMSI` pode ser usado para se conectar a um Banco de Dados SQL/SQL Data Warehouse do Azure de dentro de um recurso do Azure com suporte de "Identidade" habilitado. Opcionalmente, **msiClientId** também pode ser especificado nas propriedades Connection/DataSource junto com esse modo de autenticação, que deve conter a ID do cliente de uma Identidade de Serviço Gerenciada a ser usada para adquirir o **accessToken** para estabelecer a conexão.
     * **ActiveDirectoryIntegrated**
-        * Compatível desde a versão do driver **v6.0**, o `authentication=ActiveDirectoryIntegrated` pode ser usado para se conectar a um Banco de Dados SQL/SQL Data Warehouse do Azure usando a autenticação integrada. Para usar esse modo de autenticação, você precisa federar o ADFS (Serviços de Federação do Active Directory) local com o Azure Active Directory na nuvem. Depois de configurado, você pode se conectar adicionando a biblioteca nativa 'sqljdbc_auth.dll' ao caminho da classe de aplicativo no sistema operacional Windows ou configurar um tíquete Kerberos para suporte de autenticação multiplataforma. Você poderá acessar o BD SQL do Azure/DW sem ser solicitado a fornecer credenciais quando estiver conectado a um computador ingressado no domínio.
+        * Compatível desde a versão do driver **v6.0**, o `authentication=ActiveDirectoryIntegrated` pode ser usado para se conectar a um Banco de Dados SQL/SQL Data Warehouse do Azure usando a autenticação integrada. Para usar esse modo de autenticação, você precisa federar o ADFS (Serviços de Federação do Active Directory) local com o Azure Active Directory na nuvem. Depois de configurado, você pode se conectar adicionando a biblioteca nativa 'mssql-jdbc_auth-\<versão>-\<arch>.dll' ao caminho da classe de aplicativo no sistema operacional Windows ou configurar um tíquete Kerberos para suporte de autenticação multiplataforma. Você poderá acessar o BD SQL do Azure/DW sem ser solicitado a fornecer credenciais quando estiver conectado a um computador ingressado no domínio.
     * **ActiveDirectoryPassword**
         * Compatível desde a versão do driver **v6.0**, o `authentication=ActiveDirectoryPassword` pode ser usado para se conectar a um Banco de Dados SQL/SQL Data Warehouse do Azure usando um nome e uma senha de entidade de segurança do Azure AD.
     * **SqlPassword**
@@ -107,7 +107,7 @@ You have successfully logged on as: <your MSI username>
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>Como conectar-se usando o modo de autenticação do ActiveDirectoryIntegrated
 Com a versão 6.4, o Microsoft JDBC Driver adiciona suporte para autenticação ActiveDirectoryIntegrated usando um tíquete Kerberos em várias plataformas (Windows, Linux e macOS).
-Para obter mais informações, confira [Definir tíquete Kerberos no Windows, Linux e Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) para mais detalhes. Como alternativa, no Windows, o sqljdbc_auth.dll também pode ser usado para autenticação ActiveDirectoryIntegrated com o JDBC Driver.
+Para obter mais informações, confira [Definir tíquete Kerberos no Windows, Linux e Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) para mais detalhes. Como alternativa, no Windows, 'mssql-jdbc_auth-\<versão>-\<arch>.dll' também pode ser usada para autenticação ActiveDirectoryIntegrated com o JDBC Driver.
 
 > [!NOTE]
 >  Se você estiver usando uma versão mais antiga do driver, marque este [link](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) para as respectivas dependências que serão necessárias para usar esse modo de autenticação. 
@@ -281,7 +281,7 @@ O exemplo a seguir contém um aplicativo Java simples que se conecta ao Banco de
     6. Não precisamos da URL DE LOGON. Basta fornecer qualquer coisa: "https://mytokentest".
     7. Clique em "Criar" na parte inferior.
     9. Ainda no portal do Azure, clique na guia "Configurações" do seu aplicativo e abra a guia "Propriedades".
-    10. Localize o valor "ID do aplicativo" (também conhecido como ID do cliente) e copie-o em algum local, você precisará dele mais tarde ao configurar seu aplicativo (por exemplo, 1846943b-ad04-4808-aa13-4702d908b5c1). Veja o instantâneo a seguir.
+    10. Localize o valor "ID do aplicativo" (também conhecido como ID do cliente) e copie-o para algum local; você precisará dele mais tarde ao configurar seu aplicativo (por exemplo, 1846943b-ad04-4808-aa13-4702d908b5c1). Veja o instantâneo a seguir.
     11. Na seção "Chaves", crie uma chave preenchendo o campo de nome, selecionando a duração da chave e salvando a configuração (deixe o campo de valor vazio). Depois de salvar, o campo de valor deve ser preenchido automaticamente. Copie o valor gerado. Esse é o Segredo do cliente.
     12. Clique em Azure Active Directory no painel à esquerda. Em "Registros de aplicativo", localize a guia "Pontos de extremidade". Copie a URL em "PONTO DE EXTREMIDADE DO TOKEN 2.0 DO OATH", que é a URL do STS.
     

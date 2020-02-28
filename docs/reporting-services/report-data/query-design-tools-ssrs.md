@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de Design de Consultas (SSRS) | Microsoft Docs
+title: Ferramentas de design de consulta | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0f7dd8b90b59c95121f9924f0fbb077521b0670f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b4d92cb7c7b669b4a3087790397a1965d460dd9a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190784"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082013"
 ---
 # <a name="query-design-tools-ssrs"></a>Ferramentas de Design da Consulta (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece várias ferramentas de design de consulta que podem ser usadas para criar consultas de conjunto de dados no Designer de Relatórios. Alguns designers de consulta fornecem modos alternativos para que você possa escolher se deseja trabalhar no modo visual ou diretamente na linguagem da consulta. Este tópico apresenta cada ferramenta e descreve o tipo de fonte de dados que cada uma suporta. As seguintes ferramentas são descritas neste tópico:  

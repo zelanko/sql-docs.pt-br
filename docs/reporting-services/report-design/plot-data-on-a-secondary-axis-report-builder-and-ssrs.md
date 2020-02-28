@@ -1,5 +1,5 @@
 ---
-title: Plotar dados em um eixo secundário (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Plotar dados em um eixo secundário (Construtor de Relatórios) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 86d73f2ab16bdb7ee801e333f3a75c96a2a1c360
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b53f514104032f55dcdbc88986f8e2679ecd5700
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65578185"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082366"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>Plotar dados em um eixo secundário (Construtor de Relatórios e SSRS)
 

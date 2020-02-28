@@ -1,5 +1,5 @@
 ---
-title: Alterar os ícones de indicadores e os conjuntos de indicadores (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Alterar ícones e conjuntos de indicadores (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a73198264f13725b7c7050b5344c2af3df4ada8f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b93ba65ddda79ef44585c748ee2c465c1b9a25f2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581714"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081862"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>Alterar os ícones de indicadores e os conjuntos de indicadores (Construtor de Relatórios e SSRS)
   Os indicadores pré-configurados definem que o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornecido para os relatórios paginados nem sempre podem descrever seus dados com eficiência e trabalhar bem no relatório produzido. Este tópico fornece procedimentos para alterar a aparência de ícones de indicador e alterar os conjuntos de indicadores para incluir ícones de indicadores diferentes e mais ou menos ícones.  

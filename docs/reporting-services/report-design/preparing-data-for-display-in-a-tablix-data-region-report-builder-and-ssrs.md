@@ -1,5 +1,5 @@
 ---
-title: Preparando dados para exibição em uma região de dados Tablix (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Como preparar dados para exibição em uma região de dados Tablix (Construtor de Relatórios) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 93782573628b711c4e8be9eb0e9a6b52eb4935bd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cf1e776b874a371dceeef8c10306a55efdd1a2ff
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65578211"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082404"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>Preparando dados para exibição em uma região de dados Tablix (Construtor de Relatórios e SSRS)
   Uma região de dados tablix exibe dados de um conjunto de dados. É possível exibir todos os dados recuperados do conjunto de dados ou criar filtros para exibir apenas um subconjunto dos dados. Você também pode adicionar expressões condicionais para preencher valores nulos ou modificar a consulta de um conjunto de dados para incluir colunas que identificam a ordem de classificação de uma coluna existente.  

@@ -1,5 +1,5 @@
 ---
-title: Adicionar um indicador a um relatório (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Adicionar um indicador a um relatório (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 176d4318cad92d74fb7bfdeeadab5e9690843458
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e95f4fc90e35668270f9a126f284f0b9aef1f107
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582251"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080815"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>Adicionar um indicador a um relatório (Construtor de Relatórios e SSRS)
   Adicione indicadores e links de indicadores a um relatório quando quiser fornecer um sumário personalizado ou links de navegação internos personalizados no relatório. Geralmente, os indicadores são adicionados aos relatórios para conduzir os usuários aos locais para os quais deseja direcioná-los, como tabelas, gráficos ou os valores de grupo exclusivos exibidos em uma tabela ou matriz. Você pode criar suas próprias cadeias de caracteres para usar como indicadores, ou, em grupos, pode definir o indicador para uma expressão de grupo.  

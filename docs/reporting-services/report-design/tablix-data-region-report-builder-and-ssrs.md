@@ -1,5 +1,5 @@
 ---
-title: Região de dados Tablix (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Região de dados Tablix (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b80383fee9ede0fece7ed2fd16e95bdf63592b04
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a37105db6639b7d7db35c3beb1fc85020015d7e4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574495"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081375"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Região de dados Tablix (Construtor de Relatórios e SSRS)
   No, [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], a região de dados Tablix é um item de relatório de layout generalizado que exibe dados de relatórios paginados em células organizadas em linhas e em colunas. Os dados do relatório podem ser dados detalhados, já que são recuperados da fonte de dados, ou dados detalhados agregados, organizados em grupos especificados. Cada célula tablix pode conter um item de relatório, como uma caixa de texto ou uma imagem, ou outra região de dados, como uma região, um gráfico ou um medidor tablix. Para adicionar vários itens de relatório a uma célula, adicione primeiro um retângulo para atuar como contêiner. Em seguida, adicione os itens de relatório ao retângulo.  

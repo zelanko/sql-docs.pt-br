@@ -1,7 +1,7 @@
 ---
 title: Como usar Always Encrypted com o JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 01/05/2020
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ae119c85877768f7a3356a139c5aaf3f70dc6f8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41c91f87a62e9f4d912c7e8bbdebe86574ceebe6
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75681707"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004602"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Como usar o Always Encrypted com o driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ Esta página fornece informações sobre como desenvolver aplicativos o Java usa
 
 O Always Encrypted permite que os clientes criptografem dados confidenciais e nunca revelem os dados nem as chaves de criptografia para o SQL Server ou o Banco de Dados SQL do Azure. Um driver habilitado para Always Encrypted, como o Microsoft JDBC Driver 6.0 (ou superior) for SQL Server, consegue esse comportamento criptografando e descriptografando de modo transparente dados confidenciais no aplicativo cliente. O driver determina automaticamente quais parâmetros de consulta correspondem às colunas de banco de dados Always Encrypted e criptografa os valores desses parâmetros antes de enviar os dados para o SQL Server ou o Banco de Dados SQL do Azure. Da mesma forma, o driver descriptografa de modo transparente os dados recuperados das colunas de banco de dados criptografadas nos resultados da consulta. Para obter mais informações, confira [Always Encrypted (Mecanismo de Banco de Dados)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) e [Referência da API Always Encrypted para o JDBC driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 - O Microsoft JDBC Driver 6.0 (ou superior ) para SQL Server deve estar instalado em seu computador de desenvolvimento. 
 - Baixe e instale os arquivos de política de jurisdição de força ilimitada de Java Cryptography Extension (JCE).  Leia o arquivo Leiame incluído no arquivo zip para instruções de instalação e detalhes relevantes sobre problemas possíveis de importação/exportação.  
 
@@ -147,7 +147,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> Embora os outros provedores de repositório de chaves neste artigo estejam disponíveis em todas as plataformas compatíveis com o driver, a implementação SQLServerColumnEncryptionCertificateStoreProvider do JDBC driver está disponível somente em sistemas operacionais Windows. Ele tem uma dependência do sqljdbc_auth.dll que está disponível no pacote do driver. Para usar esse provedor, copie o arquivo sqljdbc_auth.dll para um diretório no caminho do sistema Windows no computador em que o driver JDBC está instalado. Como alternativa, você pode definir a propriedade do sistema java.libary.path para especificar o diretório de sqljdbc_auth.dll. Se você estiver executando uma Máquina Virtual Java (JVM) de 32 bits, use o arquivo sqljdbc_auth.dll na pasta x86, mesmo se o sistema operacional for a versão x64. Se estiver executando uma JVM de 64 bits em um processador x64, use o arquivo sqljdbc_auth.dll na pasta x64. Por exemplo, se você estiver usando a JVM de 32 bits e o driver JDBC estiver instalado no diretório padrão, você poderá especificar o local da DLL usando o seguinte argumento de VM (máquina virtual) quando o aplicativo Java for iniciado: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> Embora os outros provedores de repositório de chaves neste artigo estejam disponíveis em todas as plataformas compatíveis com o driver, a implementação SQLServerColumnEncryptionCertificateStoreProvider do JDBC driver está disponível somente em sistemas operacionais Windows. Ele tem uma dependência do mssql-jdbc_auth-\<versão>-\<arch>.dll que está disponível no pacote do driver. Para usar esse provedor, copie o arquivo mssql-jdbc_auth-\<versão>-\<arch>.dll para um diretório no caminho do sistema Windows no computador em que o driver JDBC está instalado. Como alternativa, você pode definir a propriedade do sistema java.libary.path para especificar o diretório de mssql-jdbc_auth-\<versão>-\<arch>.dll. Se você estiver executando uma Máquina Virtual Java (JVM) de 32 bits, use o arquivo mssql-jdbc_auth-\<versão>-x86.dll na pasta x86, mesmo se o sistema operacional for a versão x64. Se estiver executando uma JVM de 64 bits em um processador x64, use o arquivo mssql-jdbc_auth-\<versão>-x64.dll na pasta x64. Por exemplo, se você estiver usando a JVM de 32 bits e o driver JDBC estiver instalado no diretório padrão, você poderá especificar o local da DLL usando o seguinte argumento de VM (máquina virtual) quando o aplicativo Java for iniciado: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Como usar o provedor de repositório de chaves Java
 O driver JDBC vem com uma implementação de provedor de repositório de chaves interno para o Repositório de Chaves Java. Se a propriedade de cadeia de conexão **keyStoreAuthentication** estiver presente na cadeia de conexão e definida como "JavaKeyStorePassword", o driver instanciará e registrará automaticamente o provedor para o Repositório de Chaves Java. O nome do provedor do Repositório de Chaves Java é MSSQL_JVM_KEYSTORE. Esse nome também pode ser consultado usando a API SQLServerColumnEncryptionJavaKeyStoreProvider.getName(). 
@@ -177,7 +177,7 @@ O SQLServerColumnEncryptionJavaKeyStoreProvider pode ser usado com os tipos de r
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks -storepass mypassword -validity 360 -keysize 2048 -storetype jks
 ```
 
-Esse comando cria uma chave pública e a encapsula em um certificado autoassinado X.509, que é armazenado em `keystore.jks` do repositório de chaves junto com sua chave privada associada. Essa entrada no keystore é identificada pelo alias `AlwaysEncryptedKey`.
+Esse comando cria uma chave pública e a encapsula em um certificado autoassinado X.509, que é armazenado no `keystore.jks` do repositório de chaves junto com sua chave privada associada. Essa entrada no keystore é identificada pelo alias `AlwaysEncryptedKey`.
 
 Veja um exemplo disso usando um tipo de repositório PKCS12:
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a782db89033da42ebf17ed33565ec680fafa0d04
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c73ee7914d0d9ac560d57a204458e5cd4ba57a0d
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68005917"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971441"
 ---
 # <a name="connecting-with-sqlcmd"></a>Conectando com sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -52,6 +52,9 @@ Na versão atual, as seguintes opções estão disponíveis:
 - -e Gravar scripts de entrada no dispositivo de saída padrão (stdout).
 
 - =E Usar uma conexão confiável (autenticação integrada). Para obter mais informações sobre como estabelecer conexões confiáveis que usam autenticação integrada de um cliente Linux ou macOS, confira [Como usar a autenticação integrada](../../../connect/odbc/linux-mac/using-integrated-authentication.md).
+
+- -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] especifica as páginas de código de entrada e saída. O número da página de código é um valor numérico que especifica uma página de código do Linux instalada.
+(disponível desde 17.5.1.1)
 
 - -h *number_of_rows* Especificar o número de linhas a serem impressas entre os títulos das colunas.  
   
@@ -159,8 +162,6 @@ Na versão atual, os seguintes comandos estão disponíveis:
 Na versão atual, as seguintes opções não estão disponíveis:  
 
 - -A Fazer logon no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com uma DAC (conexão de administrador dedicada). Para obter informações sobre como fazer uma DAC (conexão de administrador dedicada), veja as [Diretrizes de programação](../../../connect/odbc/linux-mac/programming-guidelines.md).  
-  
-- -f *code_page* Especificar as páginas de código de entrada e saída.  
   
 - -L Listar os computadores servidores localmente configurados e os nomes dos computadores servidores que estão transmitindo na rede.  
   

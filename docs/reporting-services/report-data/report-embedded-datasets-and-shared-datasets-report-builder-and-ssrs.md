@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de dados inseridos e compartilhados de relatório (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Conjuntos de dados inseridos e compartilhados de relatórios (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a4deeec624f349f7fd40bb89dc9b14b6baf309b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a77d0b930b15d287a010e141c256c9bf311dc303
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190683"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081797"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de dados inseridos e compartilhados de relatório (Construtor de Relatórios e SSRS)
   Um conjunto de dados especifica os dados que você pode usar a partir de uma conexão de dados. Um conjunto de dados é baseado em uma conexão de dados que foi salva no relatório como uma fonte de dados inserida ou uma referência a uma fonte de dados compartilhada em um servidor de relatório. O conjunto de dados inclui uma consulta que especifica um conjunto de campos. Ao arrastar esses campos para a superfície de design, você cria expressões que avaliam os dados reais quando o relatório é executado.  

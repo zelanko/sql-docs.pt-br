@@ -1,5 +1,5 @@
 ---
-title: Adicionar ou excluir um indicador (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Adicionar ou excluir um indicador (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d9bb437acf4b30a4a497286e3b8c6adabd6b5291
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 08dd396fc68bae04d973d6b96f67466006642120
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581906"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081567"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Adicionar ou excluir um indicador (Construtor de Relatórios e SSRS)
   Em uma relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , os indicadores são medidores mínimos que transmitem o estado de um único valor de dados em um relance. Para obter mais informações sobre eles, consulte [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  

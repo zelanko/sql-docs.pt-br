@@ -1,5 +1,5 @@
 ---
-title: Mesclar células em uma região de dados (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Mesclar células em uma região de dados (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c0f695bc5c7cb6d68935d23e918f19c1408d475
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 07a72f62848d3d762dfdf7ac9bb7b250fca97c00
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65570782"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078686"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>Mesclar células em uma região de dados (Construtor de Relatórios e SSRS)
 Em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , você pode mesclar células em uma região de dados para combinar células, melhorar a aparência da região de dados ou fornecer rótulos que abrangem grupos de colunas e de linhas.  

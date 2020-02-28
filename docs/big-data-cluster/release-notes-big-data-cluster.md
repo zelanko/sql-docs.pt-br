@@ -5,16 +5,16 @@ description: Este artigo descreve as atualizações mais recentes e problemas co
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba9d87d4985655b314faf391eaffb8f28ba35519
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9de368594383ef1f7fe3ae3c062f92873fb15698
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75721602"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256893"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Notas sobre a versão de Clusters de Big Data do SQL Server 2019
 
@@ -50,7 +50,7 @@ Esta seção explica as plataformas compatíveis com o BDC ([!INCLUDE[big-data-c
 
 |Plataforma|Versões com suporte|
 |---------|---------|
-|`azdata`|Deve ser a mesma versão secundária que a do servidor (a mesma instância mestra do SQL Server).<br/>Execute `azdata –-version` para validar a versão. Atualmente, esta versão é `15.0.2070`.|
+|`azdata`|Deve ser a mesma versão secundária que a do servidor (a mesma instância mestra do SQL Server).<br/><br/>Execute `azdata –-version` para validar a versão.<br/><br/>A começar pelo SQL Server 2019 CU2, esta versão será `15.0.4013`.|
 |Azure Data Studio|Obtenha o build mais recente do [Azure Data Studio](https://aka.ms/getazuredatastudio).|
 
 ## <a name="release-history"></a>Histórico de versões
@@ -59,12 +59,21 @@ A tabela a seguir lista o histórico de versões do [!INCLUDE[big-data-clusters-
 
 | Versão               | Versão       | Data de liberação |
 |-----------------------|---------------|--------------|
+| [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
 | [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
 
 ## <a name="how-to-install-updates"></a>Como instalar atualizações
 
 Para instalar atualizações, confira [Como atualizar o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a id="cu2"></a> CU2 (fevereiro de 2020)
+
+Versão CU2 (Atualização Cumulativa 2) para o SQL Server 2019. A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.4003.23.
+
+|Versão do pacote | Tag de imagem |
+|-----|-----|
+|15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
 ## <a id="cu1"></a> CU1 (janeiro de 2020)
 

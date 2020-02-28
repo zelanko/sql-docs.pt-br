@@ -1,5 +1,5 @@
 ---
-title: Cabeçalhos e rodapés de página (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Cabeçalhos e rodapés de página (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 217b1ea42ae7af0aef2ece4c6c345b2fac7be89e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8a94f7bf5e149431135972e4911463c5f86ffaa5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576337"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082462"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Cabeçalhos e rodapés de página (Construtor de Relatórios e SSRS)
   Um relatório pode conter um cabeçalho e um rodapé nas partes superior e inferior de cada página, respectivamente. Os cabeçalhos e rodapés podem conter texto estático, imagens, linhas, retângulos, bordas, cor e imagens de plano de fundo e expressões. Expressões incluem referências a campos de conjunto de dados de relatórios com exatamente um conjunto de dados e chamadas de função de agregação que incluem o conjunto de dados como um escopo.  

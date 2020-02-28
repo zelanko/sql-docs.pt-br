@@ -1,5 +1,5 @@
 ---
-title: Linguagem RDL (SSRS) | Microsoft Docs
+title: Linguagem de definição de relatório | Microsoft Docs
 ms.date: 01/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25a6872cd74faae521f9687d20d54541ef1798a6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cd2d8f74169c8adcbf2862b9dcf5a442d5691c81
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579995"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078023"
 ---
 # <a name="report-definition-language-ssrs"></a>Linguagem RDL (SSRS)
   A linguagem RDL é uma representação XML de uma definição de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Uma definição de relatório contém informações de layout e recuperação de dados de um relatório. A linguagem RDL é composta por elementos XML que correspondem a uma gramática XML criada para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Você pode adicionar suas próprias funções personalizadas para controlar valores de itens de relatório, estilos e formatação com o acesso a assemblies de código de arquivos de definição de relatório.  

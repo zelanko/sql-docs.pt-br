@@ -1,5 +1,5 @@
 ---
-title: Alterar a altura da linha ou a largura da coluna (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Alterar a altura da linha ou a largura da coluna (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: adf756e3ef9cbed7689a5cceb80e6ef4d93e2fb9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5396ca15db85405053f8c003fb643e26b13f46fe
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581725"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078920"
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Alterar a altura da linha ou a largura da coluna (Construtor de Relatórios e SSRS)
   Quando você define a altura de uma linha, você está especificando a altura máxima da linha no relatório renderizado. No entanto, por padrão, as caixas de texto na linha são definidas para crescer na vertical para acomodar seus dados em tempo de execução e isso pode fazer com que uma linha seja expandida além da altura especificada. Para definir uma altura de linha fixa, você deve alterar as propriedades da caixa de texto para que elas não se expandam automaticamente.  

@@ -1,5 +1,5 @@
 ---
-title: Imprimir relatórios em um navegador com o controle de impressão (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Imprimir relatórios de um navegador com o controle de impressão (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 535d35ad80f940e7d3ed4a9163b2e65757088e58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bc5eabd755bec6c25c16b3974efe267cf3e27c72
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581165"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082545"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Imprimir relatórios em um navegador com o controle de impressão (Construtor de Relatórios e SSRS)
   Embora um navegador seja o aplicativo cliente mais usado para exibir um relatório, a funcionalidade de impressão do navegador não é ideal para imprimir relatórios. A funcionalidade de impressão de um navegador foi projetada para imprimir páginas da Web. Normalmente, as páginas impressas em um navegador incluem todos os elementos visuais presentes em uma página da Web, além das informações de cabeçalho e rodapé que identificam a página ou o site. Imprimir em um navegador imprime o conteúdo da janela atual. Em um relatório com várias páginas, o navegador normalmente imprime a primeira ou menos caso a página do relatório exceda as dimensões de uma página impressa.  

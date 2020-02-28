@@ -1,6 +1,6 @@
 ---
-title: O portal da Web de um servidor de relatório (modo nativo do SSRS) | Microsoft Docs
-ms.date: 12/05/2018
+title: O portal da Web de um servidor de relatório (modo nativo) | Microsoft Docs
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42844a8783f5d1e1066667ed828906c0549f84c2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 24afa6ec8daa26730ad202d1aad612ba01213bb4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70874916"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082511"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>O portal da Web de um servidor de relatório (modo nativo do SSRS)
 
@@ -30,7 +30,7 @@ Você pode utilizar o portal da Web para executar as seguintes tarefas:
 
 - Exibir, pesquisar, imprimir e assinar os relatórios.
 - Criar, proteger e manter a hierarquia de pastas para organizar itens no servidor.
-- Configure a segurança baseada em função que determina o acesso a itens e operações.
+- Configure a segurança baseada em função que determina o acesso a itens e operações. Confira as [Definições de função – funções predefinidas](security/role-definitions-predefined-roles.md) para obter mais detalhes.
 - Configurar propriedades de execução de relatório, histórico de relatórios e parâmetros de relatório.
 - Criar agendas compartilhadas e fontes de dados compartilhadas para tornar as agendas e as conexões de fonte de dados mais gerenciáveis.
 - Criar assinaturas controladas por dados que distribuem relatórios para uma grande lista de destinatários.

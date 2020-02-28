@@ -1,5 +1,5 @@
 ---
-title: Adicionar e modificar uma linha (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Adicionar e modificar uma linha (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b58cb9cd7b4fcb13454b1a8d7cebcf380987fcbd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e188a075237c7cea2c05bb8bc0a5dd6f1496f39e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582101"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080630"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Adicionar e modificar uma linha (Construtor de Relatórios e SSRS)
   Você poderá adicionar uma linha ao relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] quando desejar que um elemento gráfico separe seções do relatório. Além disso, você pode personalizar a aparência da linha editando as propriedades da linha, como cor ou estilo. Por exemplo, talvez você deseje incorporar as cores da empresa no relatório.    

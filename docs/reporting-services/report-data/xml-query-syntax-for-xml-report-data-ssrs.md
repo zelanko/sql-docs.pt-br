@@ -1,5 +1,5 @@
 ---
-title: Sintaxe de consulta XML para dados de relatório XML (SSRS) | Microsoft Docs
+title: Sintaxe de Consulta XML para dados de relatório XML | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3fc3cddc10dd53225867b910b8a3b3cb9c73d6ca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dd1bccb6bff8f19e9abb779310033f4685b31f67
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574854"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081352"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxe de consulta XML para dados de relatório XML (SSRS)
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é possível criar conjuntos de dados para fontes de dados XML. Após definir uma fonte de dados, crie uma consulta para o conjunto de dados. Dependendo do tipo de dados XML apontado pela fonte de dados, a consulta do conjunto de dados é criada incluindo uma **Query** XML ou um caminho de elemento. Uma **Consulta** XML é iniciada com uma marcação **\<Query>** e inclui namespaces e elementos XML que variam de acordo com a fonte de dados. Um caminho de elemento não depende do namespace e especifica quais nós e atributos de nós devem ser usados nos dados XML subjacentes com uma sintaxe do tipo XPath. Para obter mais informações sobre os caminhos de elemento, consulte [Sintaxe do caminho de elemento para dados de relatório XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "65574854"
 |Documento XML que usa padrão.|*Nenhuma consulta*.<br /><br /> O caminho de elemento deriva do próprio documento XML e independe do namespace.|  
   
 > [!NOTE]  
->  O primeiro exemplo de serviço Web lista o conteúdo do servidor de relatório que usa o método <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Para executar essa consulta, é necessário criar uma nova fonte de dados e definir a cadeia de conexão como `https://localhost/reportserver/reportservice2006.asmx`. O método <xref:ReportService2006.ReportingService2006.ListChildren%2A> utiliza dois parâmetros: **Item** e **Recursive**. Defina o valor padrão de **Item** para **/** e **Recursive** para **1**.  
+>  O primeiro exemplo de serviço Web lista o conteúdo do servidor de relatório que usa o método <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Para executar essa consulta, é necessário criar uma nova fonte de dados e definir a cadeia de conexão como `https://localhost/reportserver/reportservice2006.asmx`. O método <xref:ReportService2006.ReportingService2006.ListChildren%2A> usa dois parâmetros: **Item** e **Recursivo**. Defina o valor padrão de **Item** para **/** e **Recursive** para **1**.  
   
 ## <a name="specifying-namespaces"></a>Especificando namespaces  
  Use o elemento **Query** XML para especificar os namespaces usados nos dados XML da fonte de dados. A seguinte consulta XML usa o namespace **sales**. Os nós XML **ElementPath** para `sales:LineItems` e `sales:LineItem` usam o namespace **sales**.  

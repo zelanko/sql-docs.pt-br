@@ -1,5 +1,5 @@
 ---
-title: Formatando ponteiros em um medidor (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Como formatar os ponteiros de um medidor (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 780cda075d8280d71f3438c79359c58ad1ac3133
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 541cc806804dc2095d7a33c33c449d6cf8768608
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65575641"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079773"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatando ponteiros de um medidor (Construtor de Relatórios e SSRS)
  Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , um ponteiro do medidor indica o valor atual do medidor.   

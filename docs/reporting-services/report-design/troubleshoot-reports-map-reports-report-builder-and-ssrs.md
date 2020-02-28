@@ -1,5 +1,5 @@
 ---
-title: 'Solucionar problemas de relatórios: Mapear relatórios (Construtor de Relatórios e SSRS) | Microsoft Docs'
+title: 'Solucionar problemas de relatórios: Relatórios de mapas (Construtor de Relatórios) | Microsoft Docs'
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 88005509becb45f48702970153f9a891a8a01978
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 87c034202eb5a4c17fd73e75f881361c04b3b636
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73594491"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080845"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de relatórios: Relatórios de mapa (Construtor de Relatórios e SSRS)
   Os problemas com mapas em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] podem ocorrer quando você adiciona um mapa ou camada do mapa ao relatório, quando você personaliza um mapa existente ou camada do mapa em seu relatório, quando visualiza um mapa em um relatório ou quando publica um relatório com um mapa. Use este tópico para ajudar a solucionar esses problemas.  

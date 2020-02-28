@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef5c610cb71a0f638c2dfba8aad1fbdb77308dfa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 652d37ec9f19ccc91e1e0d472cb98d734b65df52
+ms.sourcegitcommit: 99ce0c9b28283d292d19637def982e971115dfbc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74412820"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125283"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ Plano de consulta para uma junção hash de tabelas com base em disco.
   
  Nessa consulta, as linhas da tabela Order são recuperadas usando o índice clusterizado. O operador físico **Hash Match** agora é usado para **Inner Join**. O índice clusterizado em Order não é classificado em CustomerID e, portanto, **Merge Join** exigiria um operador de classificação, o que afetaria o desempenho. Observe o custo relativo do operador **Hash Match** (75%) comparado com o custo do operador **Merge Join** no exemplo anterior (46%). O otimizador consideraria o operador **Hash Match** também no exemplo anterior, mas concluiu que o operador **Merge Join** forneceu melhor desempenho.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Processamento de consulta para tabelas baseadas em disco  
+## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Processamento de consulta para tabelas baseadas em disco  
  O diagrama a seguir descreve o fluxo de processamento de consulta no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para consultas ad hoc:  
   
  ![Pipeline do processamento de consulta do SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "Pipeline do processamento de consulta do SQL Server.")  
@@ -119,7 +119,7 @@ Pipeline do processamento de consulta do SQL Server.
 
  Para a primeira consulta de exemplo, o mecanismo de execução solicita dos Métodos de Acesso as linhas no índice clusterizado em Customer e no índice não clusterizado em Order. Os Métodos de Acesso passam pelas estruturas de índice da árvore B para recuperar as linhas solicitadas. Nesse caso, todas as linhas são recuperadas como os planos de chamada para verificações de índice completo.  
   
-## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Acesso do [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória  
+## <a name="interpreted-tsql-access-to-memory-optimized-tables"></a>Acesso do [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc também são conhecidos como [!INCLUDE[tsql](../../includes/tsql-md.md)]. Interpretado se refere ao fato de que o plano de consulta é interpretado pelo mecanismo de execução da consulta para cada operador no plano de consulta. O mecanismo de execução lê o operador e seus parâmetros e executa a operação.  
   
  O [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado pode ser usado para acessar tabelas com otimização de memória e baseadas em disco. A figura a seguir ilustra o processamento de consulta para acesso do [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória:  
@@ -225,7 +225,7 @@ Execução de procedimentos armazenados compilados nativamente.
   
  A invocação de um procedimento armazenado originalmente compilado é descrita a seguir:  
   
-1.  O usuário emite uma instrução **EXEC**_usp_myproc_ .  
+1.  O usuário emite uma instrução **EXEC** _usp_myproc_.  
   
 2.  O analisador extrai os parâmetros de nome e procedimento armazenado.  
   

@@ -5,16 +5,16 @@ description: Saiba como atualizar Clusters de Big Data do SQL Server para uma no
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afb12477dd220e71cf2cf97d6a13b54aa2d35be4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75831831"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256859"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Como atualizar o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -34,7 +34,7 @@ Antes de continuar, confira as [notas sobre a versão da atualização para ver 
 
 ## <a name="upgrade-from-supported-release"></a>Atualização a partir da versão com suporte
 
-Esta seção explica como atualizar um BDC do SQL Server de uma versão com suporte (a partir do SQL Server 2019 GDR1) para uma versão mais recente com suporte.
+Esta seção explica como atualizar um BDC do SQL Server de uma versão com suporte (do SQL Server 2019 GDR1 em diante) para uma versão mais recente com suporte.
 
 1. Faça backup da instância mestra do SQL Server.
 2. Faça backup do HDFS.
@@ -76,7 +76,7 @@ Esta seção explica como atualizar um BDC do SQL Server de uma versão com supo
 >As marcas de imagem mais recentes estão disponíveis nas [Notas sobre a versão dos Clusters de Big Data do SQL Server 2019](release-notes-big-data-cluster.md).
 
 >[!IMPORTANT]
->Se você usar um repositório privado para extrair previamente as imagens para implantar ou atualizar o BDC, verifique se as imagens de build atuais e >as imagens de build de destino estão no repositório privado. Isso permitirá a reversão bem-sucedida, caso ela seja necessária. Além disso, se você alterou as >credenciais do repositório privado desde a implantação original, atualize o segredo correspondente no Kubernetes antes de atualizar. >Não há suporte para atualizar as credenciais por meio das variáveis de ambiente DOCKER_PASSWORD e DOCKER_USERNAME. Atualize o segredo >usando os [segredos de edição do kubectl](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). Não há suporte para a atualização usando diferentes >repositórios privados para builds atuais e de destino.
+>Se você usar um repositório privado para extrair previamente as imagens para implantar ou atualizar o BDC, verifique se as imagens de build atuais e >as imagens de build de destino estão no repositório privado. Isso permitirá a reversão bem-sucedida, caso ela seja necessária. Além disso, se você tiver alterado as >credenciais do repositório privado depois da implantação original, atualize as variáveis de ambiente DOCKER_PASSWORD e >DOCKER_USERNAME correspondentes. Não há suporte para a atualização usando diferentes repositórios privados para builds atuais e de destino.
 
 ### <a name="increase-the-timeout-for-the-upgrade"></a>Aumentar o tempo limite para a atualização
 
@@ -93,7 +93,15 @@ Um tempo limite poderá acontecer se determinados componentes não forem atualiz
    Control plane upgrade failed. Failed to upgrade controller.
    ```
 
-Para aumentar os tempos limite de uma atualização, edite o mapa de configuração da atualização. Para editar o mapa de configuração da atualização:
+Para aumentar os tempos limite de uma atualização, use os parâmetros **--controller-timeout** e **--component-timeout** para especificar valores maiores ao emitir a atualização. Essa opção está disponível apenas da versão SQL Server 2019 CU2 em diante. Por exemplo:
+
+   ```bash
+   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   ```
+O **--controller-timeout** designa o número de minutos que você deverá aguardar para que o controlador ou o banco de dados do controlador conclua a atualização.
+**--component-timeout** designa a quantidade de tempo em que cada fase subsequente da atualização precisa ser concluída.
+
+Para aumentar os tempos limite de uma atualização antes da versão do SQL Server 2019 CU2, edite o mapa de configuração da atualização. Para editar o mapa de configuração da atualização:
 
 Execute o comando a seguir:
 

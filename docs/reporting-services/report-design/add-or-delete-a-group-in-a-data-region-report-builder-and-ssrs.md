@@ -1,5 +1,5 @@
 ---
-title: Adicionar ou excluir um grupo em uma região de dados (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Adicionar ou excluir um grupo em uma região de dados (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 004cb81902d921380eee21532626f141ca35b646
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e559dc00246fb0b990c81de99c8036356a64034f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581925"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081583"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>Adicionar ou excluir um grupo em uma região de dados (Construtor de Relatórios e SSRS)
 Nos relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , adicione um grupo a uma região de dados quando quiser organizar os dados por um valor ou conjunto de expressões específico para exibição e cálculos. Um grupo tem um nome e uma expressão que identificam quais dados de um conjunto de dados pertencem ao grupo. Para obter mais informações sobre grupos, consulte [Noções básicas sobre grupos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  

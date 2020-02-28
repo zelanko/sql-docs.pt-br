@@ -1,7 +1,7 @@
 ---
 title: Recursos sem suporte – OLTP in-memory
 ms.custom: ''
-ms.date: 05/29/2019
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,19 +11,19 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7427f7ccc70db68d1403cc1a92c7d7dafef82f5c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8464f56274308694ada9e5721ae8e0ceb5ed85ed
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74412506"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558325"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Recursos do SQL Server sem suporte para OLTP na Memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Este tópico discute os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com ou sem suporte para uso com objetos com otimização de memória.  
+Este tópico discute os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com ou sem suporte para uso com objetos com otimização de memória. Além disso, a seção final lista os recursos que não tinham suporte para OLTP in-memory, mas depois passaram a ter.
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Recursos sem suporte para OLTP in-memory  
+## <a name="ssnoversion-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Recursos sem suporte para OLTP in-memory  
 
 Os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a seguir não têm suporte em um banco de dados que possui objetos com otimização de memória (incluindo o grupo de arquivos de dados com otimização de memória).  
 
@@ -44,18 +44,18 @@ Os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a segui
 | Modo fibra | O modo fibra não tem suporte em tabelas com otimização de memória:<br /><br />Se o modo fibra estiver ativo, não será possível criar bancos de dados com grupos de arquivos com otimização de memória ou adicionar grupos de arquivos com otimização de memória a bancos de dados existentes.<br /><br />Você pode habilitar o modo fibra se houver bancos de dados com grupos de arquivos com otimização de memória. No entanto, habilitar o modo fibra exige a reinicialização do servidor. Nessa situação, haverá falha na recuperação dos bancos de dados com grupos de arquivos com otimização de memória. Em seguida, uma mensagem de erro sugerirá que você desabilite o modo fibra para usar bancos de dados com grupos de arquivos com otimização de memória.<br /><br />Haverá falha ao anexar e restaurar bancos de dados com grupos de arquivos com otimização de memória se o modo fibra estiver ativo. Os bancos de dados será marcado como suspeito.<br /><br />Para saber mais, veja [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  
 |Limitação do Service Broker|Não é possível acessar uma fila de um procedimento armazenado originalmente compilado.<br /><br /> Não é possível acessar uma fila em um banco de dados remoto em uma transação que acessa tabelas com otimização de memória.|  
 |Replicação em assinantes|Há suporte para a replicação transacional para tabelas com otimização de memória em assinantes, mas com algumas restrições. Para obter mais informações, veja [Replicação para assinantes de tabela com otimização de memória](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)|  
-
+|||
 
 #### <a name="cross-database-queries-and-transcations"></a>Consultas e transações entre bancos de dados
 
 Com algumas exceções, as transações entre bancos de dados não têm suporte. A tabela a seguir descreve os casos que têm suporte e as limitações correspondentes. (Veja também [Consultas de bancos de dados](../../relational-databases/in-memory-oltp/cross-database-queries.md).)  
 
 
-|Bancos de dados|Permitido|DESCRIÇÃO|  
+|Bancos de dados|Permitido|Descrição|  
 |---------------|-------------|-----------------|  
 | Bancos de dados de usuário, **modelo** e **msdb**. | Não | Na maioria dos casos, *não* há suporte para consultas e transações entre bancos de dados.<br /><br />Uma consulta não poderá acessar outros bancos de dados se utilizar uma tabela com otimização de memória ou um procedimento armazenado compilado nativamente. Essa restrição se aplica a transações e a consultas.<br /><br />As exceções são os bancos de dados do sistema **tempdb** e **mestre**. Aqui, o banco de dados **mestre** está disponível para acesso somente leitura. |
 | Banco de dados de **recursos**, **tempdb** | Sim | Em uma transação com objetos OLTP in-memory, os bancos de dados do sistema **Recurso** e **tempdb** podem ser usados sem restrição adicional.
-
+||||
 
 ## <a name="scenarios-not-supported"></a>Cenários sem suporte  
   
@@ -69,9 +69,7 @@ Com algumas exceções, as transações entre bancos de dados não têm suporte.
 - Não há suporte para o tipo de dados ROWVERSION (TIMESTAMP). Para obter mais informações, consulte [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).
   
 - O fechamento automático não tem suporte nos bancos de dados com um grupo de arquivos MEMORY_OPTIMIZED_DATA.  
-  
-- Os instantâneos de banco de dados não têm suporte nos bancos de dados com um grupo de arquivos MEMORY_OPTIMIZED_DATA.  
-  
+
 - Não há suporte para DDL Transacional, como CREATE/ALTER/DROP, de objetos OLTP in-memory em transações do usuário.  
   
 - Notificação de eventos.  
@@ -82,7 +80,17 @@ Com algumas exceções, as transações entre bancos de dados não têm suporte.
 - Não há suporte para a contenção de banco de dados ([Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)) no OLTP in-memory.
     - Há suporte para autenticação de banco de dados independente. No entanto, todos os objetos OLTP in-memory são marcados como "contenção recente" no **dm_db_uncontained_entities** da exibição de gerenciamento dinâmico (DMV).
 
-  
-## <a name="see-also"></a>Consulte Também  
+## <a name="recently-added-supports"></a>Suportes adicionados recentemente
+
+Às vezes, uma versão mais recente do SQL Server adiciona suporte para um recurso que não tinha suporte anteriormente. Esta seção lista recursos que costumavam não ter suporte para OLTP in-memory, mas que depois passaram a ter para OLTP in-memory.
+
+Na tabela a seguir, os valores de _versão_ como `(15.x)` se referem ao valor retornado pela instrução Transact-SQL `SELECT @@Version;`.
+
+| Nome do recurso | Versão do SQL Server | Comentários |
+| :----------- | :-------------------- | :------- |
+| Instantâneos de banco de dados | 2019 (15.x) | Os instantâneos de banco de dados agora têm suporte nos bancos de dados com um grupo de arquivos MEMORY_OPTIMIZED_DATA. |
+| &nbsp; | &nbsp; | &nbsp; |
+
+## <a name="see-also"></a>Consulte Também
 
 - [Suporte ao SQL Server para OLTP na memória](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)

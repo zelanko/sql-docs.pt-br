@@ -3,18 +3,18 @@ title: Instalar no Windows
 description: Saiba como instalar os Serviços de Machine Learning do SQL Server no Windows. Você pode usar Serviços do Machine Learning (no banco de dados) para executar scripts de Python e R no banco de dados.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/23/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 26fe15ff88a52b6673d5e7de7dcad3a047fca6ba
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9ce47719415c97f7e9e6cecb27768717710537d4
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76891718"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507581"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Instalar Serviços de Machine Learning do SQL Server (R e Python) no Windows
 
@@ -40,7 +40,8 @@ Saiba como instalar os Serviços de Machine Learning do SQL Server no Windows. V
   + Scripts de R e Python executados em bibliotecas externas não podem ser gerenciados pelo SQL Server, o que leva à contenção de recursos.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-+ Os Serviços de Machine Learning são instalados por padrão em Clusters de Big Data do SQL Server. Não será preciso seguir as etapas deste artigo se você usar um cluster de Big Data. Para obter mais informações, confira [Usar Serviços de Machine Learning (Python e R) em Clusters de Big Data](../../big-data-cluster/machine-learning-services.md).
+> [!NOTE]
+> Os Serviços de Machine Learning são instalados por padrão nos **Clusters de Big Data do SQL Server**. Caso use um **Cluster de Big Data**, não será preciso seguir as etapas deste artigo. Para obter mais informações, confira [Usar Serviços de Machine Learning (Python e R) em Clusters de Big Data](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 
 > [!IMPORTANT]
@@ -190,7 +191,7 @@ Esta etapa requer uma reinicialização do servidor. Se estiver prestes a habili
     > [!TIP]
     > Você pode baixar e instalar a versão apropriada nesta página: [Baixe o SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
-    > Você também pode usar o [Azure Data Studio](../../azure-data-studio/what-is.md), que é compatível com tarefas administrativas e consultas no SQL Server.
+    > Você também pode usar o [Azure Data Studio](../../azure-data-studio/what-is.md), que dá suporte a tarefas administrativas e consultas no SQL Server.
   
 2. Conecte-se à instância em que você instalou os Serviços de Machine Learning, clique em **Nova Consulta** para abrir uma janela de consulta e execute o seguinte comando:
 
@@ -207,7 +208,7 @@ Esta etapa requer uma reinicialização do servidor. Se estiver prestes a habili
     RECONFIGURE WITH OVERRIDE
     ```
     
-    Se você já tiver habilitado o recurso para a linguagem R, não execute a reconfiguração uma segunda vez para o Python. A plataforma de extensibilidade subjacente é compatível com as duas linguagens.
+    Se você já tiver habilitado o recurso para a linguagem R, não execute a reconfiguração uma segunda vez para o Python. A plataforma de extensibilidade subjacente dá suporte às duas linguagens.
 
 ## <a name="restart-the-service"></a>Reinicie o serviço.
 

@@ -1,5 +1,5 @@
 ---
-title: Definir a orientação da caixa de texto (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Definir a orientação da caixa de texto (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 119e9f04ddbaf91da420d69343d7fe741fbdd63d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 322c393749f60b1fb505577bf3af57238eb093c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576845"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081003"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>Definir a orientação da caixa de texto (Construtor de Relatórios e SSRS)
 Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , você pode girar uma caixa de texto em direções diferentes:   

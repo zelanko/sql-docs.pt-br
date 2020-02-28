@@ -1,5 +1,5 @@
 ---
-title: Adicionar ou remover margens de um gráfico (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Adicionar ou remover margens de um gráfico (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5736524ba0a57b31a832797fdb9a09c88d321a0b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1a5b9d749cbeab7164bd1ca06d0fc8192561931c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581934"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081543"
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>Adicionar ou remover margens de um gráfico (Construtor de Relatórios e SSRS)
 Para os tipos de gráfico de Colunas e de Dispersão nos relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , o gráfico automaticamente adiciona margens laterais nas extremidades do eixo x. Nos tipos de gráfico de Barras, o gráfico adiciona automaticamente margens laterais nas extremidades do eixo y. Em todos os outros tipos de gráfico, as margens laterais não são adicionadas. Não é possível alterar o tamanho da margem.  

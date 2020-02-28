@@ -1,5 +1,5 @@
 ---
-title: Armazenar conjuntos de dados compartilhados em cache (SSRS) | Microsoft Docs
+title: Conjunto de dados compartilhados em cache | Microsoft Docs
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 097955ece70dfa411c12d1ee5d69af0de14831e6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9436fd4963c5c9af86f3ea4ede200952fb6deb59
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66175594"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082550"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Conjuntos de dados compartilhado em cache (SSRS)
   Os resultados de consultas de um conjunto de dados compartilhado podem ser copiados para um cache para fornecer dados consistentes para vários relatórios e melhorar o tempo de resposta da consulta do conjunto de dados. Como relatórios, você pode configurar um conjunto de dados compartilhado para ser armazenado em cache no primeiro uso ou especificando uma agenda.  

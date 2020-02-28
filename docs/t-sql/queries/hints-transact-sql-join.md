@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f6f89e973d5f021dbd48a1bc7fc8234f9c9b6a89
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 18f91c30715dbf44058a204bd17f9ab1e6e393c6
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67902011"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77255980"
 ---
 # <a name="hints-transact-sql---join"></a>Dicas (Transact-SQL) – junção
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "67902011"
   
 ## <a name="arguments"></a>Argumentos  
  LOOP | HASH | MERGE  
- Especifica que a junção na consulta deve usar loop, hash ou mesclagem. O uso de LOOP | HASH | MERGE JOIN força uma junção específica entre duas tabelas. LOOP não pode ser especificado com RIGHT ou FULL como um tipo de junção.  
+ Especifica que a junção na consulta deve usar loop, hash ou mesclagem. O uso de LOOP | HASH | MERGE JOIN força uma junção específica entre duas tabelas. LOOP não pode ser especificado com RIGHT ou FULL como um tipo de junção. Para obter mais informações, confira as [Junções](../../relational-databases/performance/joins.md).
   
  REMOTE  
  Especifica que a operação de junção é executada no site da tabela direita. Isso é útil quando a tabela esquerda é uma tabela local e a tabela direita é uma tabela remota. REMOTE deverá ser usado somente quando a tabela esquerda tiver menos linhas do que a tabela direita.  

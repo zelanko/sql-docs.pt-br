@@ -1,5 +1,5 @@
 ---
-title: Renderizando dados (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Como renderizar dados (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 31eee586a5e825f3c2252e6e790d27263f04304d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e7645c285ed63ae241fe9df0f5dd468685e5f143
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576425"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077008"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>Renderizando dados (Construtor de Relatórios e SSRS)
   Quando você usa os renderizadores de layout, como HTML, MHTML, Word, Excel, PDF ou Image, os dados e suas organizações permanecem inalterados. Ao exportar usando um formato de renderizador de dados, como CSV (Comma-Separated Value) ou XML, nenhum elemento de layout visual é renderizado. O CSV e o XML aplicam determinadas regras ao relatório e seu conteúdo ao renderizar o relatório. Essas regras determinam como os dados são renderizados nesses formatos.  

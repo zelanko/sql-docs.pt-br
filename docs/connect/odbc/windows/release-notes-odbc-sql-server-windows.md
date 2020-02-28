@@ -11,18 +11,18 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: c53832e40b055792d98b9bffea368d156d535545
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 76ffaac48e8af454e887fd4fd30540eed4c4b453
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910936"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173515"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Notas sobre a Versão para ODBC para SQL Server no Windows
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Este artigo de notas sobre a versão descreve quais são as novidades do Microsoft ODBC Driver for SQL Server no Windows.
+Este artigo de notas sobre a versão descreve as novidades do Microsoft ODBC Driver for SQL Server no Windows.
 
 <!--
 PLEASE USE THE STANDARD 2-COLUMN TABLE FORMAT!
@@ -120,23 +120,23 @@ Esta versão do ODBC contém suporte para a Instância Gerenciada SQL do Azure (
 > [!NOTE]
 > Há várias diferenças ao usar a Instância Gerenciada:
 >
-> - Não há compatibilidade com FILESTREAM.
-> - Não há compatibilidade com o acesso ao sistema de arquivos local, mas ele é necessário para itens como tracefiles.
-> - Não há compatibilidade com a criação de UDT do caminho local.
-> - Não há compatibilidade com a Autenticação Integrada do Windows.
-> - Não há compatibilidade com o DTC.
+> - Não há suporte para FILESTREAM.
+> - Não há suporte para acesso ao sistema de arquivos local, mas ele é necessário para itens como tracefiles.
+> - Não há suporte para criar UDT do caminho local.
+> - Não há suporte para Autenticação Integrada do Windows.
+> - Não há suporte para DTC.
 > - A conta `sa` não está presente (a conta padrão é chamada de `cloudSA`).
 > - TDS token ERROR (0xAA) retorna o nome do servidor incorreto.
-> - Não há compatibilidade com caracteres especiais no nome do banco de dados.
-> - Não há compatibilidade com ALTER DATABASE [dbname1] MODIFY NAME = [dbname2].
+> - Não há suporte para caracteres especiais no nome do banco de dados.
+> - Não há suporte para ALTER DATABASE [dbname1] MODIFY NAME = [dbname2].
 > - As mensagens de erro são sempre mostradas em inglês, independentemente das configurações de idioma (mesmas que as do Azure).
 
 ## <a name="131"></a>13.1
 
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
-| O ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] adiciona suporte para [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) e [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md). | Essas compatibilidades adicionais estão disponíveis ao se conectar ao Microsoft SQL Server 2016 ou a uma versão posterior. |
-| Há palavras-chave e atributos de pooling de conexões, que correspondem à compatibilidade com Always Encrypted e Azure Active Directory. | Essas palavras-chave e atributos são descritos em [Pooling de conexões com reconhecimento de driver no ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
+| O ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] adiciona suporte para [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) e [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md). | Esses suportes adicionais estão disponíveis ao se conectar ao Microsoft SQL Server 2016 ou a uma versão posterior. |
+| Há palavras-chave e atributos de pooling de conexões, que correspondem aos suportes para Always Encrypted e Azure Active Directory. | Essas palavras-chave e atributos são descritos em [Pooling de conexões com reconhecimento de driver no ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ## <a name="13"></a>13

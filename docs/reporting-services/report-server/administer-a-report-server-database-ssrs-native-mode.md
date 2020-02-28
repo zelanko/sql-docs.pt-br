@@ -1,5 +1,5 @@
 ---
-title: Administrar um banco de dados de servidor de relatório (modo nativo do SSRS) | Microsoft Docs
+title: Administrar um banco de dados do servidor de relatório (modo nativo) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7822cadea8dbe051c0e7dbc11417987dd5e5c543
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 63456df52690b25605bce4f279283f608644f553
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73593760"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079113"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Administrar um banco de dados de servidor de relatório (modo nativo do SSRS)
   Uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa dois bancos de dados relacionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenamento interno. Por padrão, os bancos de dados são nomeados como ReportServer e ReportServerTempdb. O ReportServerTempdb é criado com o banco de dados primário do servidor de relatórios e é usado para armazenar dados temporários, informações de sessão e relatórios em cache.  

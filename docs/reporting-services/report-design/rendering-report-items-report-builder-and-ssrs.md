@@ -1,5 +1,5 @@
 ---
-title: Renderizando itens de relatório (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Como renderizar itens de relatório (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ae3b511031b95023ab8ebe2a8e4c0aa065d4f35
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 32bd51cd5dc4419465fac494559dc4d116f796c4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576450"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077024"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Renderizando itens de relatório (Construtor de Relatórios e SSRS)
   O número, o tamanho e o local de itens de relatório afetam a maneira como os renderizadores paginam o corpo de relatório. A seguir uma descrição de como vários itens de relatório são renderizados.  

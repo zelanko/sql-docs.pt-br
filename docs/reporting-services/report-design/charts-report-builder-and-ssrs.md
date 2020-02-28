@@ -1,5 +1,5 @@
 ---
-title: Gráficos (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Gráficos (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +18,12 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ca1a0b760f89e581a4e5209960caa76d89cd1350
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bc2a48d56c5d603714353974b0a775b93140fd7a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73593798"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080593"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Gráficos (Construtor de Relatórios e SSRS)
 Leia mais sobre como usar regiões de dados do gráfico para ajudar os leitores de seus relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] a entender grandes volumes de dados agregados em uma visão rápida.  

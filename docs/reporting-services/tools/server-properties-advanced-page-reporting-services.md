@@ -9,12 +9,12 @@ ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/28/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f7a1e8d3d6341da5812bb44726c5bf8186d3b19
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
+ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831939"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77054842"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>Página Propriedades Avançadas do Servidor – Servidor de Relatórios do Power BI e Reporting Services
 
@@ -115,13 +115,13 @@ Especifica o número de segundos antes que o tempo limite de uma sessão de edi�
 Determina se o controle ActiveX de RSClientPrint está disponível para download no servidor de relatório. Os valores válidos são **true** e **false**. O valor padrão é **true**. Para obter mais informações sobre configurações adicionais necessárias para esse controle, consulte [Habilitar e desabilitar a impressão do lado do cliente para Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
 
 ### <a name="enablecustomvisuals"></a>EnableCustomVisuals 
-(Somente Servidor de Relatórios do Power BI) Para habilitar a exibição de visuais personalizados do Power BI. Os valores são true ou false. *O padrão é True.*  
+(Somente Servidor de Relatórios do Power BI) Para habilitar a exibição de visuais personalizados do Power BI. Os valores aceitos são verdadeiro/falso. *O padrão é True.*  
 
 ###  <a name="enableexecutionlogging"></a>EnableExecutionLogging  
 Indica se o log de execução de relatório está habilitado. O valor padrão é **true**. Para obter mais informações sobre o log de execução do servidor de relatório, consulte [ExecutionLog do Servidor de Relatório e a exibição do ExecutionLog3](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
 
 ### <a name="enableintegratedsecurity"></a>EnableIntegratedSecurity
-Determina se a segurança integrada do Windows é compatível com as conexões de fonte de dados de relatório. O padrão é **True**. Os valores válidos são os seguintes:
+Determina se a segurança integrada do Windows tem suporte para conexões de fontes de dados de relatório. O padrão é **True**. Os valores válidos são os seguintes:
 
 |Valores|Descrição|
 |---------|---------|
@@ -129,7 +129,7 @@ Determina se a segurança integrada do Windows é compatível com as conexões d
 |**Falso**|A segurança integrada do Windows não está habilitada. As fontes de dados de relatório configuradas para usar a segurança integrada do Windows não serão executadas.|
 
 ### <a name="enableloadreportdefinition"></a>EnableLoadReportDefinition
-Selecione essa opção para especificar se os usuários podem realizar uma execução de relatório não planejada de um relatório do Report Builder. A definição dessa opção determina o valor da propriedade **EnableLoadReportDefinition** no servidor de relatórios.  
+Selecione essa opção para especificar se os usuários podem realizar uma execução de relatório não planejada de um relatório do Construtor de Relatórios. A definição dessa opção determina o valor da propriedade **EnableLoadReportDefinition** no servidor de relatórios.  
 
 Se desmarcar essa opção, a propriedade será definida como False. O servidor de relatório não gera relatórios de clickthrough para relatórios que usam um modelo de relatório como fonte de dados. Chamadas ao método LoadReportDefinition são bloqueadas.  
 
@@ -140,6 +140,9 @@ Indica se o recurso Meus Relatórios está habilitado. Um valor **true** indica 
 
 ### <a name="enablepowerbireportexportdata"></a>EnablePowerBIReportExportData 
 (Somente Servidor de Relatórios do Power BI) Habilite a exportação de dados do Servidor de Relatórios do Power BI dos visuais do Power BI. Os valores são True ou False.  O padrão é True. 
+
+### <a name="enablepowerbireportexportunderlyingdata"></a>EnablePowerBIReportExportUnderlyingData 
+(Somente o Servidor de Relatórios do Power BI) Indica se um cliente pode ou não exportar dados subjacentes de elementos visuais do Power BI no Servidor de Relatórios do Power BI. Um valor True indica que o recurso está habilitado.
 
 ### <a name="enableremoteerrors"></a>EnableRemoteErrors
 Inclui informações de erro externo (por exemplo, informações de erros sobre fontes de dados de relatório) com as mensagens de erro retornadas aos usuários que solicitam relatórios de computadores remotos. Os valores válidos são **true** e **false**. O valor padrão é **false**. Para obter mais informações, consulte [Habilitar erros remotos &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
@@ -181,7 +184,7 @@ O nome da função usado ao criar políticas de segurança nas pastas de usuári
 (Somente Servidor de Relatórios do Power BI) Define o endereço da sua instância de servidor do Office Online para exibir pastas de trabalho do Excel.
 
 ### <a name="rdlxreporttimetout"></a>RDLXReportTimetout
-Valor de tempo limite de processamento de relatório RDLX *(relatórios do Power View em um servidor SharePoint)* , em segundos, para todos os relatórios gerenciados no namespace do servidor de relatório. Esse valor pode ser substituído no nível do relatório. Se a propriedade estiver definida, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado expirar. Os valores válidos são de **-1** até **2**,**147**,**483**,**647**. Se o valor for **-1**, relatórios no namespace não atingirão o tempo limite durante o processamento. O valor padrão é **1800**.
+Valor de tempo limite de processamento de relatório RDLX *(relatórios do Power View em um servidor SharePoint)* , em segundos, para todos os relatórios gerenciados no namespace do servidor de relatório. Esse valor pode ser substituído no nível do relatório. Se a propriedade estiver definida, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado expirar. Os valores válidos são de **-1** até **2**,**147**,**483**,**647**. Se o valor for **-1**, relatórios no namespace não expirarão durante o processamento. O valor padrão é **1800**.
 
 ### <a name="requireintune"></a>RequireIntune
 (Servidor de Relatórios do Power BI, somente Reporting Services 2017 e posteriores) Solicita que o Intune acesse os relatórios da organização por meio do aplicativo móvel do Power BI. *O padrão é False.*
@@ -223,7 +226,7 @@ Especifica o número máximo de valores de parâmetro que pode ser armazenado pe
 (Servidor de Relatórios do Power BI [janeiro de 2019], somente Reporting Services 2019 e posteriores) Define uma lista separada por vírgula dos esquemas de URI que podem ser definidos em ações de Hiperlink que têm permissão para serem renderizadas ou "&ast;" para habilitar todos os esquemas de hiperlink. Por exemplo, definir "http,https" permitiria hiperlinks para "https://www. contoso.com", mas removeria hiperlinks para "mailto:bill@contoso.com" ou “javascript:window.open(‘ www.contoso.com’, ‘_blank’)”. O padrão é "&ast;".
 
 ### <a name="systemreporttimeout"></a>SystemReportTimeout
-O valor do tempo limite de processamento do relatório padrão, em segundos, para todos os relatórios gerenciados no namespace do servidor de relatório. Esse valor pode ser substituído no nível do relatório. Se a propriedade estiver definida, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado expirar. Os valores válidos são de **-1** até **2**,**147**,**483**,**647**. Se o valor for **-1**, relatórios no namespace não atingirão o tempo limite durante o processamento. O valor padrão é **1800**.  
+O valor do tempo limite de processamento do relatório padrão, em segundos, para todos os relatórios gerenciados no namespace do servidor de relatório. Esse valor pode ser substituído no nível do relatório. Se a propriedade estiver definida, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado expirar. Os valores válidos são de **-1** até **2**,**147**,**483**,**647**. Se o valor for **-1**, relatórios no namespace não expirarão durante o processamento. O valor padrão é **1800**.  
 
 ### <a name="systemsnapshotlimit"></a>SystemSnapshotLimit
 O número máximo de instantâneos que são armazenados para um relatório. Os valores válidos são de **-1** até **2**,**147**,**483**,**647**. Se o valor for **-1**, não haverá limite de instantâneo.  
@@ -237,7 +240,7 @@ O número máximo de instantâneos que são armazenados para um relatório. Os v
 ### <a name="usesessioncookies"></a>UseSessionCookies
 Indica se o servidor de relatório dever usar cookies de sessão ao se comunicar com navegadores clientes. O valor padrão é **true**.  
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
 
 [Definir propriedades do servidor de relatório &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
 [Conectar-se a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   

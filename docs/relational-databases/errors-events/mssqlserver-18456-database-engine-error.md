@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 737e64973e4651dd36c58fa9ff97a61c65a604a9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ab33fa19b968990e81851edac9d91fb55db81049
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68137088"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146315"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,6 +73,7 @@ Para aumentar a segurança, a mensagem de erro que é retornada ao cliente ocult
 |12|O logon é válido, mas houve falha no acesso ao servidor.|  
 |18|A senha deve ser alterada.|  
 |38, 46|Não foi possível localizar o banco de dados solicitado pelo usuário.|
+|58| Quando o SQL Server é definido para usar somente a autenticação do Windows e um cliente tenta fazer logon usando a autenticação do SQL. Outra causa é quando os SIDs não correspondem.|
 |102 – 111|Falha de AAD.|
 |122 – 124|Falha devido a nome de usuário ou senha vazios.|
 |126|O banco de dados solicitado pelo usuário não existe.|

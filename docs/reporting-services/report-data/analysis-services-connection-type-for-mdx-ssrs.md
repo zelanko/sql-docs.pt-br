@@ -1,5 +1,5 @@
 ---
-title: Tipo de conexão do Analysis Services para MDX (SSRS) | Microsoft Docs
+title: Tipo de conexão Analysis Services para MDX | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4c65e2378f1cfcda7d95a9d2ffea49f33e209925
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: eff17f770599ae953afeaae81779f0326ad89e4c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190940"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081833"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Tipo de conexão Analysis Services para MDX (SSRS)
   Para incluir dados de um cubo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Esse tipo de fonte de dados interna é baseado na extensão de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. É possível recuperar metadados sobre dimensões, hierarquias, níveis, KPIs (indicadores chave de desempenho), medidas e atributos de um cubo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para serem usados como dados de relatório.  

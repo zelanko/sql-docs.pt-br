@@ -1,5 +1,5 @@
 ---
-title: Exportando para um arquivo PDF (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Como exportar para um arquivo PDF (Construtor de Relatórios) | Microsoft Docs
 ms.date: 10/21/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ff2c93000c1b5f0e9d01a3204858717640733228
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 134cf6f645a3e120b1949e8a2dcc175748e1a042
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580784"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078271"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportando para um arquivo PDF (Construtor de Relatórios e SSRS)
   A extensão de renderização PDF renderiza relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para os arquivos que podem ser abertos no Adobe Acrobat e em outros visualizadores em PDF de terceiros que dão suporte ao PDF 1.3. Embora o PDF 1.3 seja compatível com o Adobe Acrobat 4.0 e versões posteriores, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte ao Adobe Acrobat 11.0 ou posterior. A extensão de renderização não requer que o software Adobe renderize o relatório. Porém, os visualizadores de PDF, como o Adobe Acrobat, são necessários para exibir ou imprimir um relatório em formato PDF.  

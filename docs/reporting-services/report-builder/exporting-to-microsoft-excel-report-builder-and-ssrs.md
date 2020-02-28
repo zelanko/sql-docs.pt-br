@@ -1,5 +1,5 @@
 ---
-title: Exportando para o Microsoft Excel (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Como exportar para o Microsoft Excel (Construtor de Relatórios) | Microsoft Docs
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9973ce2f9c5eac344307258e1c212979146c1695
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b067dea118592a58b87a9da50ba31d4ee2897cfe
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580772"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079581"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   A extensão da renderização do Excel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gera um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para o formato [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xslx). Com a extensão de renderização do Excel, a largura de colunas em Excel reflete com maior precisão a largura de colunas em relatórios.  

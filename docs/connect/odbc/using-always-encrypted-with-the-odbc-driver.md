@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: c140087942ebe39870316e21994b6a1169daeba0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8e654dd5be4a306078bd6262220e29470b9a16e7
+ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76706269"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77363241"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Como usar o recurso Always Encrypted com o ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -31,7 +31,7 @@ O Always Encrypted permite que os aplicativos cliente criptografem dados confide
 
 Para obter mais informações, consulte [Always Encrypted (Mecanismo de Banco de Dados)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) e [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Pré-requisitos
 
 Configure o Sempre Criptografado em seu banco de dados. Isso envolve o provisionamento de chaves do Sempre Criptografado e a configuração de criptografia de colunas de banco de dados selecionadas. Se você ainda não tiver um banco de dados com o Sempre Criptografado configurado, siga as instruções em [Getting Started with Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)(Introdução ao Sempre Criptografado). Em particular, seu banco de dados deve conter as definições de metadados para uma chave mestra de coluna (CMK), uma chave de criptografia de coluna (CEK) e uma tabela contendo uma ou mais colunas criptografadas usando esse CEK.
 
@@ -381,7 +381,7 @@ O ODBC Driver for SQL Server tem os seguintes provedores de repositório de chav
 O AKV (Azure Key Vault) é uma opção conveniente para armazenar e gerenciar chaves mestras de coluna do Always Encrypted (especialmente se seus aplicativos estiverem hospedados no Azure). O ODBC Driver for SQL Server no Linux, macOS e Windows inclui um provedor de repositório de chaves mestras de coluna interno para o Azure Key Vault. Confira [Azure Key Vault: passo a passo](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Introdução ao Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) e [Criação de chaves mestras de coluna no Azure Key Vault](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) para saber mais sobre como configurar um Azure Key Vault para Always Encrypted.
 
 > [!NOTE]
-> O Driver ODBC não é compatível com os Serviços de Federação do Active Directory (AD FS) para a autenticação AKV. Se você estiver usando a autenticação do Azure Active Directory para AKV e a configuração do seu Active Directory incluir Serviços Federados, a autenticação poderá falhar.
+> O driver ODBC é compatível somente com a autenticação AKV diretamente no Azure Active Directory. Caso esteja usando a autenticação do Azure Active Directory para AKV e sua configuração do Active Directory exigir autenticação em um ponto de extremidade dos Serviços de Federação do Active Directory (AD FS), a autenticação poderá falhar.
 > No Linux e macOS, para a versão de driver 17.2 e posterior, `libcurl` é necessário para usar esse provedor, mas não é uma dependência explícita, pois outras operações com o driver não precisam dele. Se você encontrar um erro em relação ao `libcurl`, verifique se ele está instalado.
 
 O driver oferece suporte à autenticação no Azure Key Vault usando os seguintes tipos de credenciais:

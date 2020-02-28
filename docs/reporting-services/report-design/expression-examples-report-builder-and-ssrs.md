@@ -1,5 +1,5 @@
 ---
-title: Exemplos de expressões (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Exemplos de expressões (Construtor de Relatórios) | Microsoft Docs
 ms.date: 04/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3becfd5ede4ddd1ca7bfd7d12a6c88db225ced3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 12933c259fa02e77a76b8c31edf61db916dcde49
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68661348"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080344"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Exemplos de expressões (Construtor de Relatórios e SSRS)
 Expressões costumam ser usadas em relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para controlar o conteúdo e a aparência do relatório. As expressões são escritas no [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]e podem usar funções internas, código personalizado, variáveis de relatório/grupo e variáveis definidas pelo usuário. As expressões começam com um sinal de igual (=). Para obter mais informações sobre o editor de expressões e os tipos de referências que podem ser incluídos, consulte [Uso de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) e [Adicionar uma expressão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  

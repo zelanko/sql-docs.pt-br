@@ -1,5 +1,5 @@
 ---
-title: Formatando rótulos dos eixos em um gráfico (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Como formatar rótulos do eixo em um gráfico (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36eb4aff0571be5eb25115df06df5079a59da75b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0838e5d0ea9c592a52408956b75ee651bcc542a4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65575618"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079916"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formatando rótulos dos eixos de um gráfico (Construtor de Relatórios e SSRS)
   Os tipos de gráficos baseados em coordenadas (colunas, barras, áreas, pontos, linhas e intervalo) possuem dois eixos usados para categorizar e exibir relações de dados. Diferentes tipos de formatação são aplicados a cada eixo.  

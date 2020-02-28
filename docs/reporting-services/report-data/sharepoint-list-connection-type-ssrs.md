@@ -1,5 +1,5 @@
 ---
-title: Tipo de conexão da lista do SharePoint (SSRS) | Microsoft Docs
+title: Tipo de conexão de lista do SharePoint | Microsoft Docs
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 43f726dbddb9b9f3737a92a82987dc3832182d49
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4822b70912e847a2cc03a951468171d76ae63597
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190699"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081394"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Conexões de conexão de lista do SharePoint (SSRS)
 

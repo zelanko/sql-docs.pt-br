@@ -1,5 +1,5 @@
 ---
-title: Personalizar os dados e a exibição de um mapa ou de uma camada do mapa (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Personalizar os dados e a exibição de um mapa ou de uma camada do mapa (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 96f1fd480d0260c24bf534dec80eef2e4ff6fda2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 53b1495299dd3a71843ceaa1ad3a43464c374210
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65572339"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080520"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizar os dados e a exibição de um mapa ou de uma camada do mapa (Construtor de Relatórios e SSRS)
   Depois de adicionar um mapa ou uma camada do mapa a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] usando um assistente, você poderá alterar a aparência do mapa no relatório. Você pode fazer melhorias considerando as seguintes ideias:  
@@ -121,7 +121,7 @@ ms.locfileid: "65572339"
   
  A expressão de grupo especifica o modo como os dados analíticos que têm uma relação com dados espaciais são agregados para cada elemento do mapa na camada. Por padrão, a expressão de grupo é o conjunto de campos de correspondência especificado para a relação entre os dados espaciais e os dados analíticos. Por exemplo, para um mapa de bolhas que exibe locais de cidade e o tamanho da população de um país ou região, os campos de correspondência incluem o nome da cidade [Cidade] e o nome da região [Região], porque pode haver várias cidades com o mesmo nome. A expressão de grupo correspondente inclui dois campos: [Cidade] e [Região].  
   
- Para obter mais informações, consulte [Dicas de mapa: como importar arquivos de forma no SQL Server e agregar dados espaciais](https://go.microsoft.com/fwlink/?LinkID=214991).  
+ Para saber mais, confira [Dicas de mapa: como importar shapefiles no SQL Server e agregar dados espaciais](https://go.microsoft.com/fwlink/?LinkID=214991).  
   
 ##  <a name="MapElements"></a> Alterar opções dos elementos de mapas na camada  
  Elementos de mapas são os pontos, linhas ou polígonos em uma camada que se baseiam nos dados espaciais. As opções a seguir podem ser definidas para elementos de mapas. Estas opções se aplicam a todos os elementos de mapas na camada, estejam eles inseridos ou não:  

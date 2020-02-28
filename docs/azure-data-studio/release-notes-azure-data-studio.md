@@ -9,17 +9,47 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 12/26/2019
-ms.openlocfilehash: a6907422afd32296b88d8160af4c35692277e94e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.date: 02/19/2020
+ms.openlocfilehash: 441679bbcf6d6a24e48233d4134d575ec526e0b2
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75521726"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479690"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas sobre a versão relacionadas ao Azure Data Studio
 
 **[Baixe e instale a versão mais recente!](download.md)**
+
+## <a name="february-hotfix"></a>Fevereiro (hotfix)
+
+19 de fevereiro de 2019 &nbsp; / &nbsp; versão: 1.15.1
+
+&nbsp;
+
+| Alterar | Detalhes |
+| :----- | :------ |
+| Correção do bug nº 9149 Mostrar conexões ativas | [Nº 9149](https://github.com/microsoft/azuredatastudio/issues/9149)  |
+| Correção do bug Nº 9061 A grade Editar Dados não é redimensionada devidamente ao mostrar ou ocultar o Painel do SQL | [Nº 9061](https://github.com/microsoft/azuredatastudio/issues/9061)  |
+| &nbsp; | &nbsp; |
+
+## <a name="february-2020"></a>Fevereiro de 2020
+
+13 de fevereiro de 2019 &nbsp; / &nbsp; versão: 1.15.0 
+
+&nbsp;
+
+| Alterar | Detalhes |
+| :----- | :------ |
+| Aprimoramento da nova entrada do Azure | Adição da experiência de entrada do Azure aprimorada, incluindo a remoção de copiar/colar do código do dispositivo para criar uma experiência conectada mais direta. |
+| Suporte Localizar no Notebook | Agora os usuários podem usar Ctrl+F dentro de um notebook. O suporte Localizar no Notebook pesquisa linha por linha usando o código e de células de texto. |
+| Mesclagem do VS Code da versão 1.38 à 1.42 | Essa versão inclui atualizações no VS Code das três versões anteriores do VS Code. [Leia as notas sobre a versão](https://code.visualstudio.com/updates/v1_42) para saber mais. |
+| Correção do problema ["tela preta/branca"](https://github.com/microsoft/azuredatastudio/issues/8775) relatado por muitos usuários. | |
+| Bugs e problemas resolvidos | Para obter uma lista completa das correções, confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22February+2020%22). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issue"></a>Problema conhecido
+- Os usuários no macOS Catalina precisarão clicar com o botão direito do mouse no Azure Data Studio e clicar em abrir.
 
 ## <a name="december-2019-hotfix"></a>Dezembro de 2019 (hotfix)
 

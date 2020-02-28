@@ -1,5 +1,5 @@
 ---
-title: Registrar um provedor de dados .NET Framework padrão (SSRS) | Microsoft Docs
+title: Registrar um Provedor de Dados padrão do .NET Framework | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: badeb4de20aa885a77fa61ec3a261a8c09c79506
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0f9435584579e36e46d55aa6723e0ade60b6642b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65571246"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081953"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrar um provedor de dados padrão do .NET Framework (SSRS)
   Para usar um provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] terceirizado com o objetivo de recuperar dados para um conjunto de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , é preciso implantar e registrar o assembly do provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] em dois locais: no cliente que está criando o relatório e no servidor de relatório. No cliente que está criando o relatório, você deve registrar o provedor de dados como um tipo de fonte de dados e associá-lo a um designer de consulta. Você pode selecionar esse provedor de dados como um tipo de fonte de dados quando criar um conjunto de dados de relatório. O designer de consulta associado é aberto para ajudá-lo a criar consultas para esse tipo de fonte de dados. No servidor de relatório, é preciso registrar o provedor de dados como um tipo de fonte de dados. Você pode processar os relatórios publicados que recuperam dados a partir de uma fonte de dados usando este provedor de dados.  

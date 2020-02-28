@@ -1,5 +1,5 @@
 ---
-title: Usos de expressão em relatórios (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Usos de expressões em relatórios (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd0b847ba4ebaa2d669927abe0665b18a2d517bc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e781df6f5ccbdbb427de7e8b68c9dbc06522be71
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579166"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080273"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Uso de expressões em relatórios (Construtor de Relatórios e SSRS)
 Em relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , as expressões são usadas em toda a definição de relatório para especificar ou calcular valores para parâmetros, consultas, filtros, propriedades de itens de relatório, definições de classificação e grupo, propriedades de caixa de texto, indicadores, mapas do documento, conteúdo de cabeçalho e rodapé de página dinâmica, imagens e definições de fonte de dados dinâmicos. Este tópico contém exemplos dos muitos lugares em que você pode usar expressões para variar o conteúdo ou a aparência de um relatório. Esta lista não é completa. Defina uma expressão para qualquer propriedade em uma caixa de diálogo que exibe o botão de expressão (**fx**) ou em uma lista suspensa que exibe **\<Expression...>** .  

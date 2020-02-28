@@ -12,12 +12,12 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c7912e3048021255da0340f19f5d449d1c13a6c7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9314afbfa0cdcb917edd8942157c87e7db605b9d
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75245291"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544950"
 ---
 # <a name="accelerated-database-recovery"></a>Recuperação de banco de dados acelerada
 
@@ -92,6 +92,10 @@ O processo de recuperação ADR tem as mesmas três fases que o processo de recu
 - **Fase desfazer**
 
    A fase desfazer com a ADR é concluída quase instantaneamente usando o sLog para desfazer operações sem controle de versão e o PVS (repositório de versão persistente) com a reversão lógica para executar desfazer baseado em versão de nível de linha.
+
+Também é possível assistir a este vídeo de 8 minutos que explica sobre a Recuperação Acelerada de Banco de Dados
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Advanced-Database-Recovery--Data-Exposed/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="adr-recovery-components"></a>Componentes de recuperação ADR
 

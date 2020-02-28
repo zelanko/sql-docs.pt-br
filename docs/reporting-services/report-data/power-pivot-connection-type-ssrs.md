@@ -1,5 +1,5 @@
 ---
-title: Tipo de conexão do Power Pivot (SSRS) | Microsoft Docs
+title: Tipo de conexão Power Pivot | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8d6c9273abda883b175a46d9695d4d231cc5bc73
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ab12a58134dd5b7a183a60a2837f013a4de162b4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190759"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081724"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo de conexão Power Pivot (SSRS)
   É possível usar a extensão de processamento de dados do SQL Server Analysis Services para recuperar dados de uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicada em uma Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] do SharePoint.  
   
  Use as informações deste tópico para criar uma fonte de dados. Para obter instruções passo a passo, consulte [Adicionar e verificar uma conexão de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  A fonte de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ser publicada em um Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um site do SharePoint.  
   
  Para dar suporte a conexões do Construtor de Relatórios a uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , o SQL Server 2008 R2 ADOMD.NET deve estar instalado no computador de sua estação de trabalho. Essa biblioteca de cliente é instalada com o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel, mas se você estiver usando um computador que não tenha esse aplicativo, deverá baixar e instalar o ADOMD.NET no [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978).  

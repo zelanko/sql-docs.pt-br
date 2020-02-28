@@ -1,5 +1,5 @@
 ---
-title: Tipo de conexão do ODBC (SSRS) | Microsoft Docs
+title: Tipo de conexão ODBC | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 24163866-f37a-4c38-982e-c3d79bf64d4c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 81a5b6bda053360aa50b1b9ddfef7b573310a735
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3fa8d62f80662c9d99ba0f62a5b7d114b5146fb3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190772"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082140"
 ---
 # <a name="odbc-connection-type-ssrs"></a>Tipo de conexão ODBC (SSRS)
   Para incluir dados de um provedor de dados ODBC, você deve ter um conjunto de dados baseado em uma fonte de dados de relatório do tipo ODBC. Esse tipo de fonte de dados interna é baseada na extensão de processamento de dados ODBC do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

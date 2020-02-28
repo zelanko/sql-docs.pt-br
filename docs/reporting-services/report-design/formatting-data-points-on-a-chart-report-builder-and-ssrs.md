@@ -1,5 +1,5 @@
 ---
-title: Formatar pontos de dados em um gráfico (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Como formatar pontos de dados em um gráfico (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0481f39c0c047f401914e2c710a1f52c393bc335
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5fbcae6cbbadb8665086c65088c32513a632c34a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580333"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079932"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatando pontos de dados em um gráfico (Construtor de Relatórios e SSRS)
 Em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , um ponto de dados é a menor entidade individual no gráfico. Em gráficos sem-forma, os pontos de dados são representados de acordo com seu tipo de gráfico. Por exemplo, uma série de linhas consiste em um ou mais pontos de dados conectados. Em gráficos com forma, os pontos de dados são representados por fatias individuais ou segmentos acrescidos a todo o gráfico. Por exemplo, em um gráfico de pizza, cada pedaço é um ponto de dados. Para obter mais informações, consulte [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
@@ -56,7 +56,7 @@ Em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>Adicionando palavras-chave a rótulos de ponto de dados, dicas de ferramenta e texto de legenda  
  É possível usar palavras-chave específicas do gráfico, diferenciando maiúsculas de minúsculas, para representar um item existente no gráfico. Essas palavras-chave só são aplicáveis a dicas de ferramenta, texto de legenda personalizado e propriedades de rótulo de ponto de dados. Em muitos casos, uma palavra-chave de gráfico tem uma expressão simples equivalente, mas a palavra-chave é mais rápida e mais fácil de digitar. A seguir, uma lista de palavras-chave de gráfico.  
   
-|Palavra-chave de gráfico|DESCRIÇÃO|Aplicável ao tipo de gráfico|Exemplo de uma expressão simples equivalente|  
+|Palavra-chave de gráfico|Descrição|Aplicável ao tipo de gráfico|Exemplo de uma expressão simples equivalente|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|Valor Y do ponto de dados.|Todos|`=Fields!MyDataField.Value`|  
 |#VALY2|Valor Y número 2 do ponto de dados.|Intervalo, bolha|Nenhum|  

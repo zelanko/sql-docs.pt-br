@@ -1,7 +1,7 @@
 ---
 title: Configurar a opção de configuração de servidor max degree of parallelism | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 02/12/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -16,17 +16,23 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2e0296f410c84705e0a31ed6ab3e347b188c180e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 47b9704591acd305a49ff315eb99314f14e87af1
+ms.sourcegitcommit: 38c61c7e170b57dddaae5be72239a171afd293b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72260340"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77259222"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurar a opção de configuração de servidor max degree of parallelism
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Este tópico descreve como configurar a opção de configuração de servidor **max degree of parallelism (MAXDOP)** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executada em um computador com mais de um microprocessador ou CPU, ele detecta o grau de paralelismo, ou seja, o número de processadores utilizados para executar uma única instrução, para cada execução paralela de plano. Você pode usar a opção **max degree of parallelism** para limitar o número de processadores a serem usados na execução de plano paralela. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera os planos de execução paralela para consultas, operações DDL (linguagem de definição de dados), inserções paralelas, alteração online de coluna, coleta de estatísticas paralela e população de cursor estático e controlado por conjunto de chaves.
+  Este tópico descreve como configurar a opção de configuração de servidor **MAXDOP (grau máximo de paralelismo)** no SQL Server usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executada em um computador com mais de um microprocessador ou CPU, ele detecta o grau de paralelismo, ou seja, o número de processadores utilizados para executar uma única instrução, para cada execução paralela de plano. Você pode usar a opção **max degree of parallelism** para limitar o número de processadores a serem usados na execução de plano paralela. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera os planos de execução paralela para consultas, operações DDL (linguagem de definição de dados), inserções paralelas, alteração online de coluna, coleta de estatísticas paralela e população de cursor estático e controlado por conjunto de chaves.
+
+> [!NOTE]
+> [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] apresenta recomendações automáticas para configurar o MAXDOP durante o processo de instalação. A interface do usuário de instalação permite que você aceite as configurações recomendadas ou as personalize. Para obter mais informações, consulte os seguintes artigos:
+>  - [MaxDOP adicionado à instalação do SQL 2019](https://techcommunity.microsoft.com/t5/premier-field-engineering/maxdop-added-to-sql-2019-ctp3-0-setup/ba-p/780071)
+>  - [Aprimoramentos da instalação do SQL Server 2019 para MAXDOP e memória máxima](https://www.mssqltips.com/sqlservertip/6211/sql-server-2019-installation-enhancements-for-maxdop-and-max-memory/)
+>
 
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -50,8 +56,8 @@ ms.locfileid: "72260340"
 
 > [!TIP]
 > Para fazer isso no nível da consulta, use o **MAXDOP**, [dica de consulta](../../t-sql/queries/hints-transact-sql-query.md).     
-> Para fazer isso no nível do banco de dados, use a **configuração com escopo no banco de dados** do [MAXDOP](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).      
-> Para fazer isso no nível de carga de trabalho, use a **opção de configuração de grupo de carga de trabalho do Resource Governor** [MAX_DOP](../../t-sql/statements/create-workload-group-transact-sql.md).      
+> Para fazer isso no nível do banco de dados, use a [configuração com escopo no banco de dados](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) do **MAXDOP**.      
+> Para fazer isso no nível de carga de trabalho, use a [opção de configuração de grupo de carga de trabalho do Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.      
 
 ###  <a name="Guidelines"></a> Diretrizes  
 A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], durante a inicialização do serviço, se o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detectar mais de oito núcleos por nó NUMA ou soquete na inicialização, os nós soft-NUMA serão criados automaticamente por padrão. O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] coloca os processadores lógicos do mesmo núcleo físico em nós soft-NUMA diferentes. As recomendações na tabela a seguir visam manter todos os threads de trabalho de uma consulta paralela dentro do mesmo nó soft-NUMA. Isso melhorará o desempenho das consultas e a distribuição de threads de trabalho em todos os nós NUMA para a carga de trabalho. Para obter mais informações, veja [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
@@ -118,7 +124,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção max degree of parallelism  
+##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção grau máximo de paralelismo  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte Também  

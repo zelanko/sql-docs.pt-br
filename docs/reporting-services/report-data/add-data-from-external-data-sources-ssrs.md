@@ -1,5 +1,5 @@
 ---
-title: Adicionar dados de fontes de dados externas (SSRS) | Microsoft Docs
+title: Adicionar dados de fontes de dados externas | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +9,12 @@ ms.author: maggies
 reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
-ms.openlocfilehash: e96e72540810c42be9f8abd1d656fb2cec0e5d41
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c6d5ebdcc4866c30b9fda3967304cda747a13a83
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190947"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081839"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Adicionar dados de fontes de dados externas (SSRS)
   Para recuperar dados de uma fonte de dados externa, use uma conexão de dados. As informações da conexão de dados normalmente são fornecidas pelo proprietário da fonte de dados externa que é responsável por conceder permissões e especificar os tipos de credenciais a serem usados. As informações de conexão de dados são salvas como uma fonte de dados de relatório. O tipo de fonte de dados especifica a extensão de processamento de dados a ser usada para recuperar a fonte de dados.  

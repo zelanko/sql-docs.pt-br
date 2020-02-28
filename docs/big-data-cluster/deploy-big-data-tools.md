@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fd1cab79ce226a710de1f701cfff5094a82704a5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 12dea4163feba35af6346d347503f42ab31c852a
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75721616"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173627"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalar as ferramentas de Big Data do SQL Server 2019
 
@@ -35,7 +35,7 @@ A seguinte tabela lista as ferramentas comuns de cluster de Big Data e como inst
 | **Extensão de Virtualização de Dados** | Sim | Extensão para o Azure Data Studio que fornece um assistente de Virtualização de Dados. | [Instalar](../azure-data-studio/data-virtualization-extension.md) |
 | **CLI do Azure**<sup>2</sup> | Para o AKS | Interface de linha de comando moderna para gerenciar serviços do Azure. Usada com implantações de cluster de Big Data do AKS ([mais informações](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Instalar](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Opcional | Interface de linha de comando moderna para consulta do SQL Server ([mais informações](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
-| **sqlcmd** | Para alguns scripts | Ferramenta de linha de comando herdada para consulta do SQL Server ([mais informações](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **sqlcmd** | Para alguns scripts | Ferramenta de linha de comando herdada para consulta do SQL Server ([mais informações](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). Talvez seja necessário instalar o Microsoft ODBC Driver 11 for SQL Server antes de instalar o pacote SQLCMD. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | Para alguns scripts | Ferramenta de linha de comando para transferência de dados com URLs. | [Windows](https://curl.haxx.se/windows/) \| Linux: instalar pacote do curl |
 
 <sup>1</sup> É necessário usar o `kubectl` versão 1.13 ou posterior. Além disso, a versão do `kubectl` deve estar acima ou abaixo de uma versão secundária do cluster do Kubernetes. Caso deseje instalar uma versão específica no cliente do `kubectl`, confira [Instalar o binário do `kubectl` por meio da ondulação](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (no Windows 10, use cmd.exe e não o Windows PowerShell para executar a ondulação).

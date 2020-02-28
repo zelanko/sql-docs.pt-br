@@ -3,18 +3,18 @@ title: Baixar atualizações para instalação offline
 description: Baixe arquivos CAB do Python e do R para os Serviços de Machine Learning do SQL Server. Esses arquivos CAB contêm atualizações do recurso Serviços de Machine Learning (Python e R) e são usados ao instalar o SQL Server em um servidor sem acesso à Internet.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/07/2020
+ms.date: 01/13/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b2b84349e60bf89a066fb2157a9c521d7be8ecbd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7b50e11995cc1f07b848a460ecd096f97d7b7f9b
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75776517"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256670"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>Downloads do CAB para atualizações cumulativas dos Serviços de Machine Learning do SQL Server
 
@@ -24,19 +24,19 @@ ms.locfileid: "75776517"
 Baixe arquivos CAB do Python e do R para os Serviços de Machine Learning do SQL Server. Esses arquivos CAB contêm atualizações do recurso Serviços de Machine Learning (Python e R) e são usados ao instalar o SQL Server em um servidor sem acesso à Internet.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Baixe arquivos CAB do Python e do R para o SQL Server 2016 R Services. Esses arquivos CAB contêm atualizações do recurso R Services e são usados ao instalar o SQL Server em um servidor sem acesso à Internet.
 ::: moniker-end
 
 Abaixo, você encontrará links de download para os arquivos CAB de cada atualização cumulativa. Para obter mais informações sobre instalações offline, confira [Instalar componentes de aprendizado de máquina do SQL Server sem acesso à Internet](sql-ml-component-install-without-internet-access.md#apply-cu).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Comece com uma instalação de linha de base. Nos Serviços de Machine Learning do SQL Server, a versão inicial é a instalação de linha de base. 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Comece com uma instalação de linha de base.  No SQL Server 2016 R Services, você pode começar com a versão inicial, o SP1 ou o SP2. 
 ::: moniker-end
 
@@ -50,7 +50,12 @@ Os arquivos CAB são listados na ordem cronológica inversa. Ao baixar os arquiv
 
 |Versão  |Componente | Link de download  | Problemas resolvidos | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)** |  |  |  |
+|**[SQL Server 2017 CU19](https://support.microsoft.com/en-us/help/4535007/)** |  |  |  |
+| | Microsoft R Open | [SRO_3.3.3.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106367&clcid=1033) | Corrige o bug em que `sp_execute_external_script` executando um script R mostra uma mensagem de aviso |
+| | R Server| [SRS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106460&clcid=1033) | Nenhuma alteração das versões anteriores. |
+| | Microsoft Python Open | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033) | Nenhuma alteração das versões anteriores. |
+| | Python Server | [SPS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106459&clcid=1033) | Corrige o bug em que `sp_execute_external_script` executando um script Python às vezes perde dados ao retornar o tipo de dados varbinary ou binário de volta para o SQL Server na forma de um OutputDataSet. |
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)-[CU17](https://support.microsoft.com/en-us/help/4515579/)-[CU18](https://support.microsoft.com/en-us/help/4527377/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| Os binários no pacote agora estão assinados. |
 | | R Server      |[SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| Os binários no pacote agora estão assinados. |
 | | Microsoft Python Open     | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| Os binários no pacote agora estão assinados. |

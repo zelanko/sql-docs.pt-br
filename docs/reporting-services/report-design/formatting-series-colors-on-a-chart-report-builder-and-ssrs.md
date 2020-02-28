@@ -1,5 +1,5 @@
 ---
-title: Formatando cores da série em um gráfico (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Como formatar as cores da série em um gráfico (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e2bdcd1df91408f33c25ad0a8eefa4c9ef2ee771
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f1d56ecf79c427c885814e87437264ca23c13e18
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580310"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079511"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Formatando as cores da série em um gráfico (Construtor de Relatórios e SSRS)
   O Reporting Services fornece várias paletas internas para gráficos. Além disso, você pode definir uma paleta personalizada. Por padrão, os gráficos usam a paleta de cores interna **Pacífico** para preencher cada série. Essas cores também aparecem na legenda. Se forem adicionadas várias séries ao gráfico, ele atribuirá um cor à série na ordem em que as cores foram definidas na paleta.  

@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 02/07/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5acb6181d1878d7d657c8115f78e293427a037f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: fc4b442fc6d6afb7f5e913293733296cdaa4c2b9
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952445"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074416"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -311,7 +311,7 @@ ALTER DATABASE { database_name | CURRENT }
 {
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }
-  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'}
+  | EDITION = { 'Basic' | 'Standard' | 'Premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'}
   | SERVICE_OBJECTIVE =
        { <service-objective>
        | { ELASTIC_POOL (name = <elastic_pool_name>) }
@@ -327,7 +327,7 @@ ALTER DATABASE { database_name | CURRENT }
        }
    }
 
-<service-objective> ::={ 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
+<service-objective> ::={ 'Basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
        | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
       | 'GP_Gen4_1' | 'GP_Gen4_2' | 'GP_Gen4_3' | 'GP_Gen4_4' | 'GP_Gen4_5' | 'GP_Gen4_6'
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
@@ -381,13 +381,13 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;
 ```
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale']) Altera a camada de serviço do banco de dados.
+MODIFY (EDITION **=** ['Basic' | 'Standard' | 'Premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale']) Altera a camada de serviço do banco de dados.
 
-O exemplo a seguir altera a edição para `premium`:
+O exemplo a seguir altera a edição para `Premium`:
 
 ```sql
 ALTER DATABASE current
-    MODIFY (EDITION = 'premium');
+    MODIFY (EDITION = 'Premium');
 ```
 
 > [!IMPORTANT]
@@ -424,7 +424,7 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB) Especifica o taman
 |1024 GB|N/D|√|√|√|√ (D)|
 |De 1024 GB até 4096 GB em incrementos de 256 GB*|N/D|N/D|N/D|N/D|√|
 
-\* P11 e P15 permitem MAXSIZE até 4 TB com 1024 GB sendo o tamanho padrão. P11 e P15 podem usar até 4 TB de armazenamento incluído sem custos adicionais. Na camada Premium, um MAXSIZE maior que 1 TB está atualmente disponível nas seguintes regiões: Leste dos EUA 2, Oeste dos EUA, US Gov – Virgínia, Europa Ocidental, Alemanha Central, Sudeste Asiático, Leste do Japão, Leste da Austrália, Canadá Central e Leste do Canadá. Para obter detalhes adicionais sobre limitações de recursos para o modelo de DTU, veja [Limites de recurso de DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+\* P11 e P15 permitem MAXSIZE até 4 TB com 1024 GB sendo o tamanho padrão. P11 e P15 podem usar até 4 TB de armazenamento incluído sem custos adicionais. Na camada Premium, um MAXSIZE maior que 1 TB está atualmente disponível nas seguintes regiões: Leste dos EUA 2, Oeste dos EUA, US Gov – Virgínia, Europa Ocidental, Região Central da Alemanha, Sudeste da Ásia, Leste do Japão, Leste da Austrália, Região Central do Canadá e Leste do Canadá. Para obter detalhes adicionais sobre limitações de recursos para o modelo de DTU, veja [Limites de recurso de DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
 O valor MAXSIZE do modelo de DTU, se especificado, deve ser um valor válido exibido na tabela acima para a camada de serviço especificada.
 
@@ -509,7 +509,7 @@ As regras a seguir se aplicam aos argumentos MAXSIZE e EDITION:
 - Se EDITION for especificado, mas MAXSIZE não for especificado, o valor padrão da edição será usado. Por exemplo, se EDITION for definido como Standard e MAXSIZE não for especificado, MAXSIZE será automaticamente definido como 250 MB.
 - Se nem MAXSIZE nem EDITION forem especificados, EDITION será definido como Uso Geral e MAXSIZE será definido como 32 GB.
 
-MODIFY (SERVICE_OBJECTIVE = \<service-objective>) Especifica o nível de desempenho. A exemplo a seguir altera o objetivo de serviço de um banco de dados Premium para `P6`:
+MODIFY (SERVICE_OBJECTIVE = \<service-objective>) Especifica o nível de desempenho. O seguinte exemplo altera o objetivo de serviço de um banco de dados Premium para `P6`:
 
 ```sql
 ALTER DATABASE current
@@ -660,9 +660,9 @@ Força um banco de dados secundário db1 no servidor `secondaryserver` a se torn
 ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
 ```
 
-### <a name="g-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>G. Atualizar um banco de dados individual para a camada de serviço S0 (Standard Edition, nível de desempenho 0)
+### <a name="g-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>G. Atualizar um banco de dados individual para a camada de serviço S0 (Edição Standard, nível de desempenho 0)
 
-Atualiza um banco de dados individual para a Standard Edition (camada de serviço) com um nível de desempenho do S0 e um tamanho máximo de 250 GB.
+Atualiza um banco de dados individual para a Edição Standard (camada de serviço) com um nível de desempenho do S0 e um tamanho máximo de 250 GB.
 
 ```sql
 ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJECTIVE = 'S0');
@@ -1075,7 +1075,7 @@ WHERE type = 'CONTROL';
 
 Para obter um exemplo abrangente que demonstra todas as etapas da implementação de TDE, confira [TDE (Transparent Data Encryption)](../../relational-databases/security/encryption/transparent-data-encryption.md).
 
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sspdw"></a>Exemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 ### <a name="a-altering-the-autogrow-setting"></a>a. Alterando a configuração AUTOGROW
 

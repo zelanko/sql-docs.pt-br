@@ -1,5 +1,5 @@
 ---
-title: Solução de problemas de gráficos (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Solucionar problemas de gráficos (Construtor de Relatórios) | Microsoft Docs
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3a327ffa-3b69-40d6-8015-cc01cfae9161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 365128fe0fd67f1b270481f827eef6871acccb5d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 96579c7dadc33c9d8dd74e823cee9cc5ef8e3367
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65573747"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078449"
 ---
 # <a name="troubleshoot-charts-report-builder-and-ssrs"></a>Solução de problemas de gráficos (Construtor de Relatórios e SSRS)
   Esses problemas podem ser úteis durante o trabalho com gráficos.  

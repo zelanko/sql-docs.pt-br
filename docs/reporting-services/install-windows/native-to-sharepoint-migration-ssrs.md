@@ -1,5 +1,5 @@
 ---
-title: Migração do Modo Nativo para o SharePoint (SSRS) | Microsoft Docs
+title: Migração do modo nativo para o SharePoint | Microsoft Docs
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9a13b2a72e66d069d0a3161bab4af8ce4d430157
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4ae49e1110a1d539cbe7095f946be7fc522b80b1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65570705"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082617"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Migração do modo nativo para o SharePoint (SSRS)
 
@@ -31,7 +31,7 @@ ms.locfileid: "65570705"
   
 1.  Fazer backup e restaurar chaves de criptografia. Esta é a chave usada para criptografar dados. A chave de criptografia também é usada para criptografar senhas como as senhas armazenadas para conexões da fonte de dados. Porém, as senhas não podem ser migradas e você precisará inscrevê-las novamente no ambiente de destino.  
   
-2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :** grave um script do Visual Basic que chame métodos SOAP do serviço Web Servidor de Relatórios para copiar dados entre bancos de dados. Use o utilitário **RS.exe** para executar o script. O RS.exe é instalado com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Scripts RSS:** grave um script do Visual Basic que chame os métodos SOAP do serviço Web Servidor de Relatórios para copiar dados entre os bancos. Use o utilitário **RS.exe** para executar o script. O RS.exe é instalado com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
     -   [Script rs.exe do Reporting Services de exemplo para copiar conteúdo entre Servidores de Relatório](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md). Os tópicos a seguir explicam como usar o script de exemplo que você pode baixar do CodePlex.  
   
