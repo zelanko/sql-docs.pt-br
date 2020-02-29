@@ -1,7 +1,7 @@
 ---
 title: sys. dm_db_resource_stats (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/21/2019
+ms.date: 02/27/2020
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1dd66834788896e6952a0352eb2a19fd1a828513
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9165a4a371a611a5b9c2d962e700b424a60a9384
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245960"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78175085"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,22 +43,22 @@ ms.locfileid: "75245960"
 |max_session_percent|**decimal (5, 2)**|Máximo de sessões simultâneas em porcentagem do limite da camada de serviço do banco de dados.|  
 |dtu_limit|**int**|Configuração de DTU máxima do banco de dados atual para este banco de dados durante esse intervalo. Para bancos de dados que usam o modelo baseado em vCore, essa coluna é nula.|
 |cpu_limit|**decimal (5, 2)**|Número de vCores para este banco de dados durante esse intervalo. Para bancos de dados que usam o modelo baseado em DTU, essa coluna é nula.|
-|avg_instance_cpu_percent|**decimal (5, 2)**|Uso médio de CPU do banco de dados como uma porcentagem do processo do BD SQL.|
-|avg_instance_memory_percent|**decimal (5, 2)**|Uso médio de memória do banco de dados como uma porcentagem do processo do BD SQL.|
+|avg_instance_cpu_percent|**decimal (5, 2)**|Uso médio de CPU para a instância de SQL Server que hospeda o banco de dados, conforme medido pelo sistema operacional. Inclui a utilização da CPU por cargas de trabalho internas e de usuário.|
+|avg_instance_memory_percent|**decimal (5, 2)**|Uso médio de memória para a instância de SQL Server que hospeda o banco de dados, conforme medido pelo sistema operacional. Inclui a utilização de memória tanto por usuários quanto por cargas de trabalho internas.|
 |avg_login_rate_percent|**decimal (5, 2)**|Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.|
 |replica_role|**int**|Representa a função da réplica atual com 0 como primário, 1 como secundário e 2 como encaminhador (primário do secundário geográfico). Você verá "1" quando conectado com a intenção ReadOnly a todos os secundários legíveis. Se estiver se conectando a um secundário geográfico sem especificar a intenção ReadOnly, você deverá ver "2" (conectando-se ao encaminhador).|
 |||
   
 > [!TIP]  
->  Para obter mais contexto sobre esses limites e camadas de serviço, consulte os tópicos [camadas de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) e [limites e capacidades de camada de serviço](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
+> Para obter mais contexto sobre esses limites e camadas de serviço, consulte as [camadas de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)de tópicos, [ajustar manualmente o desempenho de consulta no banco de dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)e [limites de recursos do banco de dados SQL e governança de recursos](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server).
   
-## <a name="permissions"></a>Permissões  
+## <a name="permissions"></a>Permissões
  Essa exibição exige a permissão VIEW DATABASE STATE.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Comentários
  Os dados retornados por **Sys. dm_db_resource_stats** são expressos como uma porcentagem do limite máximo permitido para a camada de serviço/nível de desempenho que você está executando.
  
- Se o banco de dados fez failover para outro servidor nos últimos 60 minutos, a exibição retornará apenas dados para o tempo pelo qual ele foi o banco de dados primário desde esse failover.  
+ Se o banco de dados tiver feito failover para outro servidor nos últimos 60 minutos, a exibição retornará apenas os dados para o tempo desde o failover.  
   
  Para uma exibição menos granular desses dados com um período de retenção mais longo, use o modo de exibição de catálogo **Sys. resource_stats** no banco de dados **mestre** . Essa exibição captura dados a cada 5 minutos e mantém dados históricos por 14 dias.  Para obter mais informações, consulte [Sys. resource_stats &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
@@ -101,8 +101,4 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [sys. resource_stats &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [Camadas de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [Limites e recursos da camada de serviço](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
-  
-  
+ [Sys. resource_stats &#40;camadas de serviço do banco de dados SQL do Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)

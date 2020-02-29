@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 91a7278230a0e7201e78354a38af58f417ac26ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108162"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180107"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Exibe as permissões de uma função de banco de dados fixa. **sp_dbfixedrolepermission** retorna informações corretas [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]no. A saída não reflete as alterações para a hierarquia de permissões que foram implementadas no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obter mais informações, consulte[permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Exibe as permissões de uma função de banco de dados fixa. **sp_dbfixedrolepermission** retorna informações corretas [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]no. A saída não reflete as alterações para a hierarquia de permissões que foram implementadas no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obter mais informações, consulte [funções de nível de banco de dados](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles), que mostram uma lista de funções de banco de dados fixas e suas permissões correspondentes.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -57,7 +57,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ## <a name="remarks"></a>Comentários  
  Para exibir uma lista das funções de banco de dados fixas, execute **sp_helpdbfixedrole**. A tabela a seguir mostra as funções de banco de dados fixas.  
   
-|Função de banco de dados fixa|DESCRIÇÃO|  
+|Função de banco de dados fixa|Descrição|  
 |-------------------------|-----------------|  
 |**db_owner**|Proprietários de banco de dados|  
 |**db_accessadmin**|Administradores de acesso de banco de dados|  

@@ -13,32 +13,32 @@ ms.assetid: c3664a94-be89-40c0-a3a0-84b74a7fedbe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: da0f932acb2ab97204aeb27c9e077c7fae154987
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1c922fb612faca72e9f9381990dc777301185cb1
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66057395"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78176576"
 ---
 # <a name="multiple-transactions"></a>Transações múltiplas
-  É possível que um pacote inclua transações não relacionadas em um pacote [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . A qualquer hora que um contêiner no meio de uma hierarquia de contêineres aninhada não oferecer suporte a transações, os contêineres acima ou abaixo da mesma na hierarquia começa a separar as transações, se elas estiverem configuradas para oferecem suporte às transações. As transações confirmam ou revertem na ordem da tarefa interna na hierarquia de contêineres aninhados para o pacote. Entretanto, depois que a transação interna é confirmada, ela não será revertida se uma transação externa for anulada.  
-  
-## <a name="illustration-of-multiple-transactions"></a>Ilustração de várias transações  
- Por exemplo, um pacote tem um contêiner de Sequência que mantém dois contêineres Loop Foreach, e cada contêiner inclui duas tarefas Executar SQL. O contêiner Sequência oferece suporte a transações, os contêineres Loop Foreach não oferecem e as tarefas Executar SQL oferecem. Nesse exemplo, cada tarefa Executar SQL começaria sua própria transação e não reverteria se a transação da tarefa de Sequência fosse cancelada.  
-  
- As propriedades TransactionOption do contêiner Sequência, do contêiner Loop Foreach e das tarefas Executar SQL são definidas da seguinte maneira:  
-  
--   As propriedades TransactionOption do contêiner de Sequência está definida como **Obrigatória**.  
-  
--   As propriedades TransactionOption dos contêineres Loop Foreach são definidas como **NotSupported**.  
-  
--   As propriedades TransactionOption das tarefas Executar SQL são definidas como **Obrigatória**.  
-  
- O diagrama a seguir mostra as cinco transações não relacionadas no pacote. Uma transação é iniciada pelo contêiner de Sequência e quatro transações são iniciadas pelas tarefas Executar SQL.  
-  
- ![Implementação de várias transações](media/mw-dts-trans2.gif "Implementação de várias transações")  
-  
-## <a name="related-tasks"></a>Related Tasks  
- [Configurar um pacote para usar transações](../relational-databases/native-client-ole-db-transactions/transactions.md)  
-  
-  
+  É possível que um pacote inclua transações não relacionadas em um pacote [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . A qualquer hora que um contêiner no meio de uma hierarquia de contêineres aninhada não oferecer suporte a transações, os contêineres acima ou abaixo da mesma na hierarquia começa a separar as transações, se elas estiverem configuradas para oferecem suporte às transações. As transações confirmam ou revertem na ordem da tarefa interna na hierarquia de contêineres aninhados para o pacote. Entretanto, depois que a transação interna é confirmada, ela não será revertida se uma transação externa for anulada.
+
+## <a name="illustration-of-multiple-transactions"></a>Ilustração de várias transações
+ Por exemplo, um pacote tem um contêiner de Sequência que mantém dois contêineres Loop Foreach, e cada contêiner inclui duas tarefas Executar SQL. O contêiner Sequência oferece suporte a transações, os contêineres Loop Foreach não oferecem e as tarefas Executar SQL oferecem. Nesse exemplo, cada tarefa Executar SQL começaria sua própria transação e não reverteria se a transação da tarefa de Sequência fosse cancelada.
+
+ As propriedades TransactionOption do contêiner Sequência, do contêiner Loop Foreach e das tarefas Executar SQL são definidas da seguinte maneira:
+
+-   As propriedades TransactionOption do contêiner de Sequência está definida como **Obrigatória**.
+
+-   As propriedades TransactionOption dos contêineres Loop Foreach são definidas como **NotSupported**.
+
+-   As propriedades TransactionOption das tarefas Executar SQL são definidas como **Obrigatória**.
+
+ O diagrama a seguir mostra as cinco transações não relacionadas no pacote. Uma transação é iniciada pelo contêiner de Sequência e quatro transações são iniciadas pelas tarefas Executar SQL.
+
+ ![Implementação de várias transações](media/mw-dts-trans2.gif "Implementação de várias transações")
+
+## <a name="related-tasks"></a>Related Tasks
+ [Configurar um pacote para usar transações](../relational-databases/native-client-ole-db-transactions/transactions.md)
+
+

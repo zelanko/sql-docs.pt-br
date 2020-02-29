@@ -14,198 +14,197 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e2bfa3fdf09dea1b088fb519b9782999bd20296b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 89e2e5d774abf2a6bee712ec7a1479107d3d1c36
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62768432"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78176195"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Compreendendo o Component Object Model Script
-  Conforme discutido em [codificando e Depurando o componente Script] (.. /Extending-Packages-scripting/data-Flow-script-Component/Coding-and-Debugging-The-script-Component.MD, o projeto de componente de script contém três itens de projeto:  
-  
-1.  O item `ScriptMain`, que contém a classe `ScriptMain` na qual você escreve seu código. A classe `ScriptMain` herda da classe `UserComponent`.  
-  
-2.  O item `ComponentWrapper`, que contém a classe `UserComponent`, uma instância do <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> que contém os métodos e propriedades que você utilizará para processar dados e interagir com o pacote. O item `ComponentWrapper` também contém as classes de coleção `Connections` e `Variables`.  
-  
-3.  O item `BufferWrapper`, que contém classes herdadas de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> para cada entrada e saída, e propriedades digitadas para cada coluna.  
-  
- À medida que você escrever seu código no item `ScriptMain`, usará os objetos, métodos e propriedades discutidos nesse tópico. Cada componente não usará todos os métodos listados aqui; porém, quando usados, eles obedecerão à sequência mostrada.  
-  
- A classe base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> não contém códigos de implementação para os métodos discutidos nesse tópico. Portanto, é desnecessário, mas inofensivo, adicionar uma chamada à implementação de classe base na sua própria implementação do método.  
-  
- Para obter informações sobre como usar os métodos e propriedades dessas classes em um tipo específico de componente Script, consulte a seção [Exemplos adicionais de componente de script](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Os tópicos de exemplo também contêm exemplos de código completos.  
-  
-## <a name="acquireconnections-method"></a>Método AcquireConnections  
- Origens e destinos geralmente precisam se conectar a uma fonte de dados externa. Substitua o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> para recuperar a conexão ou as informações de conexão do gerenciador de conexões apropriado.  
-  
- O exemplo a seguir retorna um `System.Data.SqlClient.SqlConnection` de um gerenciador de conexões ADO.NET.  
-  
-```vb  
-Dim connMgr As IDTSConnectionManager100  
-Dim sqlConn As SqlConnection  
-  
-Public Overrides Sub AcquireConnections(ByVal Transaction As Object)  
-  
-    connMgr = Me.Connections.MyADONETConnection  
-    sqlConn = CType(connMgr.AcquireConnection(Nothing), SqlConnection)  
-  
-End Sub  
-```  
-  
- O exemplo a seguir retorna um caminho completo e o nome de arquivo de um Gerenciador de Conexões de Arquivos Simples e, em seguida, abre o arquivo por meio de um `System.IO.StreamReader`.  
-  
-```vb  
-Private textReader As StreamReader  
-Public Overrides Sub AcquireConnections(ByVal Transaction As Object)  
-  
-    Dim connMgr As IDTSConnectionManager100 = _  
-        Me.Connections.MyFlatFileSrcConnectionManager  
-    Dim exportedAddressFile As String = _  
-        CType(connMgr.AcquireConnection(Nothing), String)  
-    textReader = New StreamReader(exportedAddressFile)  
-  
-End Sub  
-```  
-  
-## <a name="preexecute-method"></a>Método PreExecute  
- Substitua o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PreExecute%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> sempre que existir um processamento que precisa ser executado apenas uma vez antes de iniciar o processamento de linhas de dados. Por exemplo, em um destino, talvez você queira configurar o comando com parâmetros que o destino utilizará para inserir cada linha de dados na fonte de dados.  
-  
-```vb  
-    Dim sqlConn As SqlConnection  
-    Dim sqlCmd As SqlCommand  
-    Dim sqlParam As SqlParameter  
-...  
-    Public Overrides Sub PreExecute()  
-  
-        sqlCmd = New SqlCommand("INSERT INTO Person.Address2(AddressID, City) " & _  
-            "VALUES(@addressid, @city)", sqlConn)  
-        sqlParam = New SqlParameter("@addressid", SqlDbType.Int)  
-        sqlCmd.Parameters.Add(sqlParam)  
-        sqlParam = New SqlParameter("@city", SqlDbType.NVarChar, 30)  
-        sqlCmd.Parameters.Add(sqlParam)  
-  
-    End Sub  
-```  
-  
-```csharp  
-SqlConnection sqlConn;   
-SqlCommand sqlCmd;   
-SqlParameter sqlParam;   
-  
-public override void PreExecute()   
-{   
-  
-    sqlCmd = new SqlCommand("INSERT INTO Person.Address2(AddressID, City) " + "VALUES(@addressid, @city)", sqlConn);   
-    sqlParam = new SqlParameter("@addressid", SqlDbType.Int);   
-    sqlCmd.Parameters.Add(sqlParam);   
-    sqlParam = new SqlParameter("@city", SqlDbType.NVarChar, 30);   
-    sqlCmd.Parameters.Add(sqlParam);   
-  
-}  
-```  
-  
-## <a name="processing-inputs-and-outputs"></a>Processando entradas e saídas  
-  
-### <a name="processing-inputs"></a>Processando entradas  
- Componentes Script que são configurados como transformações ou destinos têm uma entrada.  
-  
-#### <a name="what-the-bufferwrapper-project-item-provides"></a>O que o item de projeto BufferWrapper fornece  
- Para cada entrada configurada, o item de projeto `BufferWrapper` contém uma classe que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> e tem o mesmo nome que a entrada. Cada classe de buffer de entrada contém as seguintes propriedades, funções e métodos:  
-  
--   Propriedades de acessador nomeadas, digitadas para cada coluna de entrada selecionada. Essas propriedades são somente leitura ou de leitura/gravação, dependendo do **Tipo de Uso** especificado para a coluna na página **Colunas de Entrada** do **Editor de Transformação Scripts**.  
-  
--   Uma propriedade **\<coluna>_IsNull** para cada coluna de entrada selecionada. Essa propriedade também é somente leitura ou de leitura/gravação, dependendo do **Tipo de Uso** especificado para a coluna.  
-  
--   Um método **DirectRowTo\<bufferdesaída>** para cada saída configurada. Você usará esses métodos ao filtrar linhas para uma das várias saídas no mesmo `ExclusionGroup`.  
-  
--   Uma função `NextRow` para obter a próxima linha de entrada e uma função `EndOfRowset` para determinar se o último buffer de dados foi processado. Em geral, você não precisa dessas funções ao usar os métodos de processamento de entrada implementados na classe base `UserComponent`. A próxima seção fornece mais informações sobre a classe base `UserComponent`.  
-  
-#### <a name="what-the-componentwrapper-project-item-provides"></a>O que o item de projeto ComponentWrapper fornece  
- O item de projeto ComponentWrapper contém uma classe nomeada `UserComponent` que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A classe `ScriptMain` na qual você escreve seu código personalizado, por sua vez, deriva de `UserComponent`. A classe `UserComponent` contém os seguintes métodos:  
-  
--   Uma implementação substituída do método `ProcessInput`. Esse é o método que o mecanismo de fluxo de dados chama em seguida no tempo de execução, depois do método `PreExecute`, e ele pode ser chamado várias vezes. `ProcessInput`transfere o processamento para o método de ** \<>_ProcessInput inputBuffer** . Depois, o método `ProcessInput` verifica se o buffer de entrada chegou ao final e, em caso positivo, chama o método substituível `FinishOutputs` e o método particular `MarkOutputsAsFinished`. O `MarkOutputsAsFinished` método então chama `SetEndOfRowset` o último buffer de saída.  
-  
--   Uma implementação substituível do método **\<bufferdeentrada>_ProcessInput**. Essa implementação padrão simplesmente executa um loop em cada linha de entrada e chama **\<inputbuffer>_ProcessInputRow**.  
-  
--   Uma implementação substituível do método **\<inputbuffer>_ProcessInputRow**. A implementação padrão é vazia. Esse é o método que, em geral, você substituirá para escrever seu código de processamento de dados personalizado.  
-  
-#### <a name="what-your-custom-code-should-do"></a>O que seu código personalizado deve fazer  
- Você pode usar os seguintes métodos para processar a entrada na classe `ScriptMain`:  
-  
--   Substitua o **\<bufferdeentrada>_ProcessInputRow** para processar os dados em cada linha de entrada conforme ela passa.  
-  
--   Só substitua o **\<bufferdeentrada>_ProcessInput** se você precisar fazer algo adicional enquanto executa um loop em linhas de entrada. (Por exemplo, você precisa testar para `EndOfRowset` para executar alguma outra ação depois que todas as linhas tiverem sido processadas.) Chame ** \<inputBuffer>_ProcessInputRow** para executar o processamento de linha.  
-  
--   Substitua o `FinishOutputs` se precisar fazer algo nas saídas antes de seu fechamento.  
-  
- O método `ProcessInput` garante que esses métodos sejam chamados nos momentos apropriados.  
-  
-### <a name="processing-outputs"></a>Processando saídas  
- Componentes Script configurados como origens ou transformações têm uma ou mais saídas.  
-  
-#### <a name="what-the-bufferwrapper-project-item-provides"></a>O que o item de projeto BufferWrapper fornece  
- Para cada saída configurada, o item de projeto BufferWrapper contém uma classe que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> e possui o mesmo nome que a saída. Cada classe de buffer de entrada contém as seguintes propriedades e métodos:  
-  
--   Propriedades do acessador nomeado, digitado, somente gravação para cada coluna de saída.  
-  
--   Uma ** \<coluna** somente gravação>_IsNull propriedade para cada coluna de saída selecionada que você pode usar para definir o valor da coluna `null`como.  
-  
--   Um método `AddRow` para adicionar uma linha nova vazia ao buffer de saída.  
-  
--   Um método `SetEndOfRowset` para notificar o mecanismo de fluxo de dados buffers de que dados não são mais esperados. Também há uma função `EndOfRowset` para determinar se o buffer atual é o último buffer de dados. Geralmente, você não precisa dessas funções quando usa os métodos de processamento de entrada implementados `UserComponent` na classe base.  
-  
-#### <a name="what-the-componentwrapper-project-item-provides"></a>O que o item de projeto ComponentWrapper fornece  
- O item de projeto ComponentWrapper contém uma classe nomeada `UserComponent` que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A classe `ScriptMain` na qual você escreve seu código personalizado, por sua vez, deriva de `UserComponent`. A classe `UserComponent` contém os seguintes métodos:  
-  
+  Conforme discutido em [codificando e Depurando o componente Script] (.. /Extending-Packages-scripting/data-Flow-script-Component/Coding-and-Debugging-The-script-Component.MD, o projeto de componente de script contém três itens de projeto:
+
+1.  O item `ScriptMain`, que contém a classe `ScriptMain` na qual você escreve seu código. A classe `ScriptMain` herda da classe `UserComponent`.
+
+2.  O item `ComponentWrapper`, que contém a classe `UserComponent`, uma instância do <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> que contém os métodos e propriedades que você utilizará para processar dados e interagir com o pacote. O item `ComponentWrapper` também contém as classes de coleção `Connections` e `Variables`.
+
+3.  O item `BufferWrapper`, que contém classes herdadas de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> para cada entrada e saída, e propriedades digitadas para cada coluna.
+
+ À medida que você escrever seu código no item `ScriptMain`, usará os objetos, métodos e propriedades discutidos nesse tópico. Cada componente não usará todos os métodos listados aqui; porém, quando usados, eles obedecerão à sequência mostrada.
+
+ A classe base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> não contém códigos de implementação para os métodos discutidos nesse tópico. Portanto, é desnecessário, mas inofensivo, adicionar uma chamada à implementação de classe base na sua própria implementação do método.
+
+ Para obter informações sobre como usar os métodos e propriedades dessas classes em um tipo específico de componente Script, consulte a seção [Exemplos adicionais de componente de script](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Os tópicos de exemplo também contêm exemplos de código completos.
+
+## <a name="acquireconnections-method"></a>Método AcquireConnections
+ Origens e destinos geralmente precisam se conectar a uma fonte de dados externa. Substitua o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> para recuperar a conexão ou as informações de conexão do gerenciador de conexões apropriado.
+
+ O exemplo a seguir retorna um `System.Data.SqlClient.SqlConnection` de um gerenciador de conexões ADO.NET.
+
+```vb
+Dim connMgr As IDTSConnectionManager100
+Dim sqlConn As SqlConnection
+
+Public Overrides Sub AcquireConnections(ByVal Transaction As Object)
+
+    connMgr = Me.Connections.MyADONETConnection
+    sqlConn = CType(connMgr.AcquireConnection(Nothing), SqlConnection)
+
+End Sub
+```
+
+ O exemplo a seguir retorna um caminho completo e o nome de arquivo de um Gerenciador de Conexões de Arquivos Simples e, em seguida, abre o arquivo por meio de um `System.IO.StreamReader`.
+
+```vb
+Private textReader As StreamReader
+Public Overrides Sub AcquireConnections(ByVal Transaction As Object)
+
+    Dim connMgr As IDTSConnectionManager100 = _
+        Me.Connections.MyFlatFileSrcConnectionManager
+    Dim exportedAddressFile As String = _
+        CType(connMgr.AcquireConnection(Nothing), String)
+    textReader = New StreamReader(exportedAddressFile)
+
+End Sub
+```
+
+## <a name="preexecute-method"></a>Método PreExecute
+ Substitua o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PreExecute%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> sempre que existir um processamento que precisa ser executado apenas uma vez antes de iniciar o processamento de linhas de dados. Por exemplo, em um destino, talvez você queira configurar o comando com parâmetros que o destino utilizará para inserir cada linha de dados na fonte de dados.
+
+```vb
+    Dim sqlConn As SqlConnection
+    Dim sqlCmd As SqlCommand
+    Dim sqlParam As SqlParameter
+...
+    Public Overrides Sub PreExecute()
+
+        sqlCmd = New SqlCommand("INSERT INTO Person.Address2(AddressID, City) " & _
+            "VALUES(@addressid, @city)", sqlConn)
+        sqlParam = New SqlParameter("@addressid", SqlDbType.Int)
+        sqlCmd.Parameters.Add(sqlParam)
+        sqlParam = New SqlParameter("@city", SqlDbType.NVarChar, 30)
+        sqlCmd.Parameters.Add(sqlParam)
+
+    End Sub
+```
+
+```csharp
+SqlConnection sqlConn; 
+SqlCommand sqlCmd; 
+SqlParameter sqlParam; 
+
+public override void PreExecute() 
+{ 
+
+    sqlCmd = new SqlCommand("INSERT INTO Person.Address2(AddressID, City) " + "VALUES(@addressid, @city)", sqlConn); 
+    sqlParam = new SqlParameter("@addressid", SqlDbType.Int); 
+    sqlCmd.Parameters.Add(sqlParam); 
+    sqlParam = new SqlParameter("@city", SqlDbType.NVarChar, 30); 
+    sqlCmd.Parameters.Add(sqlParam); 
+
+}
+```
+
+## <a name="processing-inputs-and-outputs"></a>Processando entradas e saídas
+
+### <a name="processing-inputs"></a>Processando entradas
+ Componentes Script que são configurados como transformações ou destinos têm uma entrada.
+
+#### <a name="what-the-bufferwrapper-project-item-provides"></a>O que o item de projeto BufferWrapper fornece
+ Para cada entrada configurada, o item de projeto `BufferWrapper` contém uma classe que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> e tem o mesmo nome que a entrada. Cada classe de buffer de entrada contém as seguintes propriedades, funções e métodos:
+
+-   Propriedades de acessador nomeadas, digitadas para cada coluna de entrada selecionada. Essas propriedades são somente leitura ou de leitura/gravação, dependendo do **Tipo de Uso** especificado para a coluna na página **Colunas de Entrada** do **Editor de Transformação Scripts**.
+
+-   Uma propriedade **\<coluna>_IsNull** para cada coluna de entrada selecionada. Essa propriedade também é somente leitura ou de leitura/gravação, dependendo do **Tipo de Uso** especificado para a coluna.
+
+-   Um método **DirectRowTo\<bufferdesaída>** para cada saída configurada. Você usará esses métodos ao filtrar linhas para uma das várias saídas no mesmo `ExclusionGroup`.
+
+-   Uma função `NextRow` para obter a próxima linha de entrada e uma função `EndOfRowset` para determinar se o último buffer de dados foi processado. Em geral, você não precisa dessas funções ao usar os métodos de processamento de entrada implementados na classe base `UserComponent`. A próxima seção fornece mais informações sobre a classe base `UserComponent`.
+
+#### <a name="what-the-componentwrapper-project-item-provides"></a>O que o item de projeto ComponentWrapper fornece
+ O item de projeto ComponentWrapper contém uma classe nomeada `UserComponent` que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A classe `ScriptMain` na qual você escreve seu código personalizado, por sua vez, deriva de `UserComponent`. A classe `UserComponent` contém os seguintes métodos:
+
+-   Uma implementação substituída do método `ProcessInput`. Esse é o método que o mecanismo de fluxo de dados chama em seguida no tempo de execução, depois do método `PreExecute`, e ele pode ser chamado várias vezes. `ProcessInput`transfere o processamento para o método de ** \<>_ProcessInput inputBuffer** . Depois, o método `ProcessInput` verifica se o buffer de entrada chegou ao final e, em caso positivo, chama o método substituível `FinishOutputs` e o método particular `MarkOutputsAsFinished`. O `MarkOutputsAsFinished` método então chama `SetEndOfRowset` o último buffer de saída.
+
+-   Uma implementação substituível do método **\<bufferdeentrada>_ProcessInput**. Essa implementação padrão simplesmente executa um loop em cada linha de entrada e chama **\<inputbuffer>_ProcessInputRow**.
+
+-   Uma implementação substituível do método **\<inputbuffer>_ProcessInputRow**. A implementação padrão é vazia. Esse é o método que, em geral, você substituirá para escrever seu código de processamento de dados personalizado.
+
+#### <a name="what-your-custom-code-should-do"></a>O que seu código personalizado deve fazer
+ Você pode usar os seguintes métodos para processar a entrada na classe `ScriptMain`:
+
+-   Substitua o **\<bufferdeentrada>_ProcessInputRow** para processar os dados em cada linha de entrada conforme ela passa.
+
+-   Só substitua o **\<bufferdeentrada>_ProcessInput** se você precisar fazer algo adicional enquanto executa um loop em linhas de entrada. (Por exemplo, você precisa testar para `EndOfRowset` para executar alguma outra ação depois que todas as linhas tiverem sido processadas.) Chame ** \<inputBuffer>_ProcessInputRow** para executar o processamento de linha.
+
+-   Substitua o `FinishOutputs` se precisar fazer algo nas saídas antes de seu fechamento.
+
+ O método `ProcessInput` garante que esses métodos sejam chamados nos momentos apropriados.
+
+### <a name="processing-outputs"></a>Processando saídas
+ Componentes Script configurados como origens ou transformações têm uma ou mais saídas.
+
+#### <a name="what-the-bufferwrapper-project-item-provides"></a>O que o item de projeto BufferWrapper fornece
+ Para cada saída configurada, o item de projeto BufferWrapper contém uma classe que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> e possui o mesmo nome que a saída. Cada classe de buffer de entrada contém as seguintes propriedades e métodos:
+
+-   Propriedades do acessador nomeado, digitado, somente gravação para cada coluna de saída.
+
+-   Uma ** \<coluna** somente gravação>_IsNull propriedade para cada coluna de saída selecionada que você pode usar para definir o valor da coluna `null`como.
+
+-   Um método `AddRow` para adicionar uma linha nova vazia ao buffer de saída.
+
+-   Um método `SetEndOfRowset` para notificar o mecanismo de fluxo de dados buffers de que dados não são mais esperados. Também há uma função `EndOfRowset` para determinar se o buffer atual é o último buffer de dados. Geralmente, você não precisa dessas funções quando usa os métodos de processamento de entrada implementados `UserComponent` na classe base.
+
+#### <a name="what-the-componentwrapper-project-item-provides"></a>O que o item de projeto ComponentWrapper fornece
+ O item de projeto ComponentWrapper contém uma classe nomeada `UserComponent` que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A classe `ScriptMain` na qual você escreve seu código personalizado, por sua vez, deriva de `UserComponent`. A classe `UserComponent` contém os seguintes métodos:
+
 -   Uma implementação substituída do método `PrimeOutput`. O mecanismo de fluxo de dados chama esse método antes do `ProcessInput` em tempo de execução e ele é chamado apenas uma vez. 
-  `PrimeOutput` entrega o processamento para o método `CreateNewOutputRows`. Depois, se o componente for uma origem (ou seja, se o componente não possuir entradas), o `PrimeOutput` chamará o método `FinishOutputs` substituível e o método `MarkOutputsAsFinished` particular. O método `MarkOutputsAsFinished` chama o `SetEndOfRowset` no último buffer de saída.  
-  
--   Uma implementação substituível do método `CreateNewOutputRows`. A implementação padrão é vazia. Esse é o método que, em geral, você substituirá para escrever seu código de processamento de dados personalizado.  
-  
-#### <a name="what-your-custom-code-should-do"></a>O que seu código personalizado deve fazer  
- Você pode usar os seguintes métodos para processar saídas na classe `ScriptMain`:  
-  
--   Substitua `CreateNewOutputRows` apenas quando você puder adicionar e preencher linhas de saída antes de processar linhas de entrada. Por exemplo, você pode usar o `CreateNewOutputRows` em uma origem. Mas em uma transformação com saídas assíncronas, chame o `AddRow` durante ou depois do processamento de dados de entrada.  
-  
--   Substitua o `FinishOutputs` se precisar fazer algo nas saídas antes de seu fechamento.  
-  
- O método `PrimeOutput` garante que esses métodos sejam chamados nos momentos apropriados.  
-  
-## <a name="postexecute-method"></a>Método PostExecute  
- Substitua o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> sempre que houver processamento a ser executado uma só vez após o processamento das linhas de dados. Por exemplo, em uma origem, talvez você queira fechar o `System.Data.SqlClient.SqlDataReader` usado para carregar dados no fluxo de dados.  
-  
-> [!IMPORTANT]  
->  A coleção de `ReadWriteVariables` só está disponível no método `PostExecute`. Portanto, não será possível incrementar diretamente o valor de uma variável de pacote ao processar cada linha de dados. Em vez disso, aumente o valor de uma variável local e defina o valor da variável de pacote como o valor da variável local no `PostExecute` método depois que todos os dados tiverem sido processados.  
-  
-## <a name="releaseconnections-method"></a>Método ReleaseConnections  
- Origens e destinos geralmente precisam se conectar a uma fonte de dados externa. Substitua o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReleaseConnections%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> para fechar e liberar a conexão aberta anteriormente no método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A>.  
-  
-```vb  
-    Dim connMgr As IDTSConnectionManager100  
-...  
-    Public Overrides Sub ReleaseConnections()  
-  
-        connMgr.ReleaseConnection(sqlConn)  
-  
-    End Sub  
-```  
-  
-```csharp  
-IDTSConnectionManager100 connMgr;  
-  
-public override void ReleaseConnections()  
-{  
-  
-    connMgr.ReleaseConnection(sqlConn);  
-  
-}  
-```  
-  
-![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
-  
-## <a name="see-also"></a>Consulte Também  
- [Configurando o componente script no editor de componentes de script](configuring-the-script-component-in-the-script-component-editor.md)   
- [Codificando e Depurando o componente Script] (.. /extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
-  
-  
+  `PrimeOutput` entrega o processamento para o método `CreateNewOutputRows`. Depois, se o componente for uma origem (ou seja, se o componente não possuir entradas), o `PrimeOutput` chamará o método `FinishOutputs` substituível e o método `MarkOutputsAsFinished` particular. O método `MarkOutputsAsFinished` chama o `SetEndOfRowset` no último buffer de saída.
+
+-   Uma implementação substituível do método `CreateNewOutputRows`. A implementação padrão é vazia. Esse é o método que, em geral, você substituirá para escrever seu código de processamento de dados personalizado.
+
+#### <a name="what-your-custom-code-should-do"></a>O que seu código personalizado deve fazer
+ Você pode usar os seguintes métodos para processar saídas na classe `ScriptMain`:
+
+-   Substitua `CreateNewOutputRows` apenas quando você puder adicionar e preencher linhas de saída antes de processar linhas de entrada. Por exemplo, você pode usar o `CreateNewOutputRows` em uma origem. Mas em uma transformação com saídas assíncronas, chame o `AddRow` durante ou depois do processamento de dados de entrada.
+
+-   Substitua o `FinishOutputs` se precisar fazer algo nas saídas antes de seu fechamento.
+
+ O método `PrimeOutput` garante que esses métodos sejam chamados nos momentos apropriados.
+
+## <a name="postexecute-method"></a>Método PostExecute
+ Substitua o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> sempre que houver processamento a ser executado uma só vez após o processamento das linhas de dados. Por exemplo, em uma origem, talvez você queira fechar o `System.Data.SqlClient.SqlDataReader` usado para carregar dados no fluxo de dados.
+
+> [!IMPORTANT]
+>  A coleção de `ReadWriteVariables` só está disponível no método `PostExecute`. Portanto, não será possível incrementar diretamente o valor de uma variável de pacote ao processar cada linha de dados. Em vez disso, aumente o valor de uma variável local e defina o valor da variável de pacote como o valor da variável local no `PostExecute` método depois que todos os dados tiverem sido processados.
+
+## <a name="releaseconnections-method"></a>Método ReleaseConnections
+ Origens e destinos geralmente precisam se conectar a uma fonte de dados externa. Substitua o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReleaseConnections%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> para fechar e liberar a conexão aberta anteriormente no método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A>.
+
+```vb
+    Dim connMgr As IDTSConnectionManager100
+...
+    Public Overrides Sub ReleaseConnections()
+
+        connMgr.ReleaseConnection(sqlConn)
+
+    End Sub
+```
+
+```csharp
+IDTSConnectionManager100 connMgr;
+
+public override void ReleaseConnections()
+{
+
+    connMgr.ReleaseConnection(sqlConn);
+
+}
+```
+
+![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.
+
+## <a name="see-also"></a>Consulte Também
+ [Configurando o componente script no editor de componentes de script](configuring-the-script-component-in-the-script-component-editor.md) [codificando e Depurando o componente Script] (.. /extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md
+
+

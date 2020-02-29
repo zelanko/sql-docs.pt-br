@@ -10,43 +10,43 @@ ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c04742d0e0a84dd35e300bace9107685685ef75b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4a48b400196a77a9c59219bc28cdff496229ae7e
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75228897"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78175555"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Ferramentas e aplicativos usados no Analysis Services
-  Encontre as ferramentas e aplicativos que você precisa para a criação de modelos do Analysis Services e o gerenciamento de bancos de dados associados em uma instância do Analysis Services.  
-  
-## <a name="analysis-services-model-designers"></a>Designers de modelos do Analysis Services  
- Crie modelos de tabela e multidimensionais a partir de modelos de projeto em uma solução criada no shell do Visual Studio. O modelo de projeto possibilita aos designers a criação de modelos, cubos, dimensões e funções que compõem uma solução do Analysis Services.  
-  
-### <a name="download-sql-server-data-tools-for-business-intelligence-ssdt-bi"></a>Baixe o SQL Server Data Tools para Business Intelligence (SSDT-BI)  
- O [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para Business Intelligence (SSDT-BI), anteriormente conhecido como Business Intelligence Development Studio (BIDS), é usado para criar modelos do Analysis Services, relatórios do Reporting Services e pacotes do Integration Services. Você pode baixar o SSDT-BI nos locais a seguir:  
-  
--   [Download do SSDT-BI para Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=396526)  
-  
--   [Download do SSDT-BI para Visual Studio 2012](https://go.microsoft.com/fwlink/p/?LinkID=273673)  
-  
- Se você tiver uma versão anterior do SSDT-BI ou BIDS instalado no computador, a versão mais recente será instalada lado a lado da versão anterior. É comum executar versões mais recentes e anteriores das ferramentas de design em uma única estação de trabalho para que você possa modificar projetos e soluções associados às versões específicas do servidor.  
-  
-> [!NOTE]  
->  Existem vários sites de download para as versões do Visual Studio 2012 e do Visual Studio 2013 do SSDT. A maioria deles não incluem os modelos de projeto de BI. O uso dos links acima oferecerão a você a versão correta. Você saberá que tem a versão correta do SSDT-BI se vir a pasta Business Intelligence Project templates. Essa pasta contém modelos de projeto para o Analysis Services, o Reporting Services e o Integration Services. Dependendo de como você tiver instalado o SSDT-BI, provavelmente também verá um modelo de projeto adicional para bancos de dados do SQL Server.  
-  
- ![Novos modelos de projeto no SSDT](media/ssdt-biprojects.png "Novos modelos de projeto no SSDT")  
-  
-## <a name="administrative-tools"></a>Ferramentas administrativas  
-  
-### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- O Management Studio é a principal ferramenta de administração para todos os recursos do SQL Server, incluindo o Analysis Services. O SQL Server Management Studio é um componente opcional. Se você não vê-lo com outros aplicativos do SQL Server na página de aplicativos do Windows Server 2012, execute a instalação do SQL Server para adicioná-lo à sua instalação.  
-  
-### <a name="sql-server-profiler"></a>SQL Server Profiler  
- O SQL Server Profiler foi oficialmente preterido, mas oferece uma maneira fácil de monitorar as conexões, a execução de consultas MDX e outras operações do servidor. O SQL Server Profiler é instalado por padrão. Você pode encontrá-lo entre os aplicativos do SQL Server nos aplicativos do Windows Server 2012.  
-  
-### <a name="powershell"></a>PowerShell  
- Você pode usar os comandos do PowerShell para realizar muitas tarefas administrativas. Consulte [Analysis Services PowerShell](analysis-services-powershell.md) para obter mais informações.  
-  
-### <a name="community-and-third-party-tools"></a>Ferramentas da comunidade e de terceiros  
- Verifique a [página de codeplex do Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) para ver exemplos de código da comunidade. Os [fóruns](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) podem ser úteis ao buscar recomendações para ferramentas de terceiros que dão suporte a Analysis Services.  
+  Encontre as ferramentas e aplicativos que você precisa para a criação de modelos do Analysis Services e o gerenciamento de bancos de dados associados em uma instância do Analysis Services.
+
+## <a name="analysis-services-model-designers"></a>Designers de modelos do Analysis Services
+ Crie modelos de tabela e multidimensionais a partir de modelos de projeto em uma solução criada no shell do Visual Studio. O modelo de projeto possibilita aos designers a criação de modelos, cubos, dimensões e funções que compõem uma solução do Analysis Services.
+
+### <a name="download-sql-server-data-tools-for-business-intelligence-ssdt-bi"></a>Baixe o SQL Server Data Tools para Business Intelligence (SSDT-BI)
+ O [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para Business Intelligence (SSDT-BI), anteriormente conhecido como Business Intelligence Development Studio (BIDS), é usado para criar modelos do Analysis Services, relatórios do Reporting Services e pacotes do Integration Services. Você pode baixar o SSDT-BI nos locais a seguir:
+
+-   [Download do SSDT-BI para Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=396526)
+
+-   [Download do SSDT-BI para Visual Studio 2012](https://go.microsoft.com/fwlink/p/?LinkID=273673)
+
+ Se você tiver uma versão anterior do SSDT-BI ou BIDS instalado no computador, a versão mais recente será instalada lado a lado da versão anterior. É comum executar versões mais recentes e anteriores das ferramentas de design em uma única estação de trabalho para que você possa modificar projetos e soluções associados às versões específicas do servidor.
+
+> [!NOTE]
+>  Existem vários sites de download para as versões do Visual Studio 2012 e do Visual Studio 2013 do SSDT. A maioria deles não incluem os modelos de projeto de BI. O uso dos links acima oferecerão a você a versão correta. Você saberá que tem a versão correta do SSDT-BI se vir a pasta Business Intelligence Project templates. Essa pasta contém modelos de projeto para o Analysis Services, o Reporting Services e o Integration Services. Dependendo de como você tiver instalado o SSDT-BI, provavelmente também verá um modelo de projeto adicional para bancos de dados do SQL Server.
+
+ ![Novos modelos de projeto no SSDT](media/ssdt-biprojects.png "Novos modelos de projeto no SSDT")
+
+## <a name="administrative-tools"></a>Ferramentas administrativas
+
+### <a name="sql-server-management-studio"></a>SQL Server Management Studio
+ O Management Studio é a principal ferramenta de administração para todos os recursos do SQL Server, incluindo o Analysis Services. O SQL Server Management Studio é um componente opcional. Se você não vê-lo com outros aplicativos do SQL Server na página de aplicativos do Windows Server 2012, execute a instalação do SQL Server para adicioná-lo à sua instalação.
+
+### <a name="sql-server-profiler"></a>SQL Server Profiler
+ O SQL Server Profiler foi oficialmente preterido, mas oferece uma maneira fácil de monitorar as conexões, a execução de consultas MDX e outras operações do servidor. O SQL Server Profiler é instalado por padrão. Você pode encontrá-lo entre os aplicativos do SQL Server nos aplicativos do Windows Server 2012.
+
+### <a name="powershell"></a>PowerShell
+ Você pode usar os comandos do PowerShell para realizar muitas tarefas administrativas. Consulte [Analysis Services PowerShell](analysis-services-powershell.md) para obter mais informações.
+
+### <a name="community-and-third-party-tools"></a>Ferramentas da comunidade e de terceiros
+ Verifique a [página de codeplex do Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) para ver exemplos de código da comunidade. Os [fóruns](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) podem ser úteis ao buscar recomendações para ferramentas de terceiros que dão suporte a Analysis Services.
