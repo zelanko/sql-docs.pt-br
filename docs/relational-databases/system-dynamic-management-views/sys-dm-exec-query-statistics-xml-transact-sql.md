@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 35f9cdfcc40d417a6aed19a3abe0e590061b2eb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e2bd7a4ce174d547d0cb8d0f9bcb89d23e6543db
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75256009"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180081"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys. dm_exec_query_statistics_xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Retorna o plano de execução de consulta para solicitações em andamento. Use essa DMV para recuperar o Showplan XML com estatísticas transitórias. 
 
@@ -52,7 +52,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |request_id|**int**|ID da solicitação. Não permite valor nulo.|
 |sql_handle|**varbinary (64)**|É um token que identifica exclusivamente o lote ou o procedimento armazenado do qual a consulta faz parte. Anulável.|
 |plan_handle|**varbinary (64)**|É um token que identifica exclusivamente um plano de execução de consulta para um lote em execução no momento. Anulável.|
-|query_plan|**XML**|Contém a representação Showplan do tempo de execução do plano de execução de consulta especificado com *plan_handle* que contém estatísticas parciais. O Showplan está em formato XML. Um plano é gerado para cada lote que contém, por exemplo, instruções ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)], chamadas de procedimento armazenado e chamadas de função definidas pelo usuário. Anulável.|
+|query_plan|**xml**|Contém a representação Showplan do tempo de execução do plano de execução de consulta especificado com *plan_handle* que contém estatísticas parciais. O Showplan está em formato XML. Um plano é gerado para cada lote que contém, por exemplo, instruções ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)], chamadas de procedimento armazenado e chamadas de função definidas pelo usuário. Anulável.|
 
 ## <a name="remarks"></a>Comentários
 Essa função do sistema está disponível a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] partir do SP1. Consulte KB [3190871](https://support.microsoft.com/help/3190871)
@@ -66,7 +66,8 @@ Sob as condições a seguir, nenhuma saída SHOWPLAN é retornada na coluna **qu
 Devido a uma limitação no número de níveis aninhados permitido no tipo de dados **XML** , **Sys. dm_exec_query_statistics_xml** não pode retornar planos de consulta que atendam ou ultrapassem 128 níveis de elementos aninhados. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta condição evitava que o plano de consulta retornasse e gerasse um erro 6335. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versões posteriores, a coluna **query_plan** retorna NULL.   
 
 ## <a name="permissions"></a>Permissões  
- Requer a permissão `VIEW SERVER STATE` no servidor.  
+Ativado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão no servidor.  
+Nas [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .
 
 ## <a name="examples"></a>Exemplos  
   
