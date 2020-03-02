@@ -1,5 +1,5 @@
 ---
-title: Open the Query and View Designer
+title: Abrir o designer de consulta e de exibição
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
