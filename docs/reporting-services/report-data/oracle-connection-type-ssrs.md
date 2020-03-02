@@ -1,6 +1,6 @@
 ---
 title: Tipo de conexão Oracle (Construtor de Relatórios e Servidor de Relatórios do Power BI) | Microsoft Docs
-ms.date: 01/16/2020
+ms.date: 02/26/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e9ee78c6a033443b960ba972b74be2a1e6aebd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 216ab9a4d5dcfe18fe6346eadeec8778415cdeb4
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77081741"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634835"
 ---
 # <a name="oracle-connection-type-report-builder--power-bi-report-server--microsoft-docs"></a>Tipo de conexão Oracle (Construtor de Relatórios e Servidor de Relatórios do Power BI | Microsoft Docs)
 
@@ -93,7 +93,7 @@ Data Source="Oracle"; Unicode="True"
   
  Para obter mais informações, consulte os seguintes artigos:  
   
--   [Como usar o Reporting Services para configurar e acessar uma fonte de dados Oracle](https://support.microsoft.com/kb/834305)  
+-   [Como usar o Reporting Services para configurar e acessar uma fonte de dados Oracle](https://docs.microsoft.com/archive/blogs/dataaccesstechnologies/configure-oracle-data-source-for-sql-server-reporting-services-ssdt-and-report-server)  
 -   [Como adicionar permissões à entidade de segurança de NETWORK SERVICE](https://support.microsoft.com/kb/870668)  
   
 ### <a name="alternate-data-extensions"></a>Extensões de dados alternativas 

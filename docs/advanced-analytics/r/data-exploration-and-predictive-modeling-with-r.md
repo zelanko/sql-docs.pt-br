@@ -9,19 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 561d1d32cef9102200bcc3b0730c96afed06d91a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6b336404d3b69e31ffb6f1a2aa82ade04804eb9e
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73727480"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78172126"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>Exploração e Dados e Modelagem Preditiva com R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Este artigo descreve as melhorias no processo de ciência de dados possíveis por meio da integração com o SQL Server.
-
-Aplica-se a: SQL Server 2016 R Services, Serviços de Machine Learning do SQL Server 2017
 
 ## <a name="the-data-science-process"></a>O processo de ciência de dados
 

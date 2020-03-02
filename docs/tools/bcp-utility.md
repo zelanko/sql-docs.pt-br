@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8aefcae2c8e9c449061b18b4287968120dbae852
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: 22a1a64e11d7cae779531c46ee6b39d26ae403f4
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544914"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634845"
 ---
 # <a name="bcp-utility"></a>Utilitário bcp
 
@@ -228,13 +228,13 @@ Faz com que o valor passado para a opção `-S` do `bcp` seja interpretada como 
 
     O exemplo a seguir exporta dados usando o nome de usuário e a senha do Azure AD, em que o usuário e a senha são uma credencial do AAD. O exemplo exporta a tabela `bcptest` do banco de dados `testdb` do servidor do Azure `aadserver.database.windows.net` e armazena os dados em um arquivo `c:\last\data1.dat`:
 
-    ```cmd
+    ```console
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
     O exemplo a seguir importa dados usando o nome de usuário e a senha do Azure AD, em que o usuário e a senha são uma credencial do AAD. O exemplo importa dados do arquivo `c:\last\data1.dat` na tabela `bcptest` para o banco de dados `testdb` no servidor do Azure `aadserver.database.windows.net` usando o usuário e a senha do Azure AD:
 
-    ```cmd
+    ```console
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
@@ -244,13 +244,13 @@ Faz com que o valor passado para a opção `-S` do `bcp` seja interpretada como 
 
     O exemplo a seguir exporta dados usando a conta integrada do Azure AD. O exemplo exporta a tabela `bcptest` do banco de dados `testdb` usando o Azure AD integrado do servidor do Azure `aadserver.database.windows.net` e armazena os dados em um arquivo `c:\last\data2.dat`:
 
-    ```cmd
+    ```console
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
     O exemplo a seguir importa dados usando a autenticação integrada do Azure AD. O exemplo importa dados do arquivo `c:\last\data2.txt` na tabela `bcptest` para o banco de dados `testdb` no servidor do Azure `aadserver.database.windows.net` usando a autenticação integrada do Azure AD:
 
-    ```cmd
+    ```console
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
@@ -266,13 +266,13 @@ Faz com que o valor passado para a opção `-S` do `bcp` seja interpretada como 
 
    O modo interativo requer que uma senha seja inserida manualmente ou, para contas com a autenticação multifator habilitada, conclua o método de autenticação MFA configurado.
 
-   ```cmd
+   ```console
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
    ```
 
    Caso um usuário do Azure AD seja um domínio federado usando uma conta do Windows, o nome de usuário necessário na linha de comando, contém sua conta de domínio (por exemplo, joe@contoso.com, confira abaixo):
 
-   ```cmd
+   ```console
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
@@ -448,7 +448,7 @@ Executa a operação de cópia em massa usando os tipos de dados nativos (banco 
     
     Para determinar o local em que todas as versões do utilitário bcp estão instaladas, digite no prompt de comando:
     
-    ```cmd
+    ```console
     where bcp.exe
     ```
 
@@ -604,7 +604,7 @@ END
 
 No prompt de comando, digite o seguinte comando:
 
-```cmd
+```console
 bcp -v
 ```
   
@@ -616,7 +616,7 @@ Os exemplos a seguir ilustram a opção **out** na tabela `WideWorldImporters.Wa
 
   No prompt de comando, digite o seguinte comando:
 
-  ```cmd
+  ```console
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -638,7 +638,7 @@ O exemplo a seguir ilustra a opção **out** na tabela `WideWorldImporters.Wareh
 
 No prompt de comando, digite o seguinte comando: \(O sistema solicitará sua senha.\)
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```
 
@@ -650,7 +650,7 @@ Os exemplos a seguir ilustram a opção **in** na tabela `WideWorldImporters.War
 
   No prompt de comando, digite o seguinte comando:
 
-  ```cmd
+  ```console
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -658,7 +658,7 @@ Os exemplos a seguir ilustram a opção **in** na tabela `WideWorldImporters.War
   
 No prompt de comando, digite o seguinte comando:
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
 ```
 
@@ -670,7 +670,7 @@ Para copiar uma coluna específica, você pode usar a opção **queryout** .  O 
   
 No prompt de comando, digite o seguinte comando:
 
-```cmd
+```console
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```
 
@@ -680,7 +680,7 @@ Para copiar uma linha específica, você pode usar a opção **queryout** . O ex
   
 No prompt de comando, digite o seguinte comando:
 
-```cmd
+```console
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```
 
@@ -690,7 +690,7 @@ Para copiar o conjunto de resultados de uma instrução Transact-SQL em um arqui
 
 No prompt de comando, digite o seguinte comando:
 
-```cmd
+```console
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```
 
@@ -700,7 +700,7 @@ O exemplo a seguir cria três arquivos de formato diferentes para a tabela `Ware
 
 No prompt de comando, digite os seguintes comandos:
 
-```cmd
+```console
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -722,7 +722,7 @@ Para usar um arquivo de formato criado anteriormente ao importar dados para uma 
 
 No prompt de comando, digite o seguinte comando:
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
 ```
 
