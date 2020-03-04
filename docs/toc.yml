@@ -8521,7 +8521,7 @@
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
                     - name: Editor de Consultas do Mecanismo de Banco de Dados
-                      href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+                      href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                     - name: Editor de XML
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
                     - name: Codificação por cores no Editor de Consultas

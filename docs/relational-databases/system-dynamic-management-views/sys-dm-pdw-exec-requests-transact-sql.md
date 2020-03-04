@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 15d27881378a88c8f4ae6d65640be6218ecd3530
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 15049436b0d1769361ae1cfc47b52bfb503ba763
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632765"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256870"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -40,14 +40,30 @@ ms.locfileid: "73632765"
 |database_id|**int**|Identificador do banco de dados usado pelo contexto explícito (por exemplo, USE DB_X).|Consulte a ID em [Sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |command|**nvarchar(4000)**|Mantém o texto completo da solicitação como enviado pelo usuário.|Qualquer consulta ou texto de solicitação válido. Consultas com mais de 4000 bytes são truncadas.|  
 |resource_class|**nvarchar (20)**|O grupo de cargas de trabalho usado para esta solicitação. |Classes de recurso estáticas</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Classes de recurso dinâmicas</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importância|**nvarchar(128)**|A importância definindo a solicitação executada em.  Essa é a importância relativa de uma solicitação neste grupo de carga de trabalho e entre grupos de carga de trabalho para recursos compartilhados.  A importância especificada no classificador substitui a configuração de importância do grupo de carga de trabalho.</br>Aplica-se a: SQL Data Warehouse do Azure|NULO</br>baixa</br>below_normal</br>normal (padrão)</br>above_normal</br>alto|
+|importance|**nvarchar(128)**|A importância definindo a solicitação executada em.  Essa é a importância relativa de uma solicitação neste grupo de carga de trabalho e entre grupos de carga de trabalho para recursos compartilhados.  A importância especificada no classificador substitui a configuração de importância do grupo de carga de trabalho.</br>Aplica-se a: SQL Data Warehouse do Azure|NULO</br>baixa</br>below_normal</br>normal (padrão)</br>above_normal</br>alto|
 |group_name|**sysname** |Para solicitações que utilizam recursos, group_name é o nome do grupo de carga de trabalho sob o qual a solicitação está sendo executada.  Se a solicitação não utilizar recursos, group_name será NULL.</br>Aplica-se a: SQL Data Warehouse do Azure|
 |classifier_name|**sysname**|Para solicitações que utilizam recursos, o nome do classificador usado para atribuir recursos e importância.||
 |resource_allocation_percentage|**decimal (5, 2)**|A quantidade percentual de recursos alocados para a solicitação.</br>Aplica-se a: SQL Data Warehouse do Azure|
-|result_set_cache|**bit**|Detalha se uma consulta concluída foi um problema de cache de resultado (1) ou não (0). </br>Aplica-se a: SQL Data Warehouse do Azure|0, 1|
+|result_set_cache|**bit**|Detalha se uma consulta concluída usou o cache do conjunto de resultados.  </br>Aplica-se a: SQL Data Warehouse do Azure| 1 = impacto no cache do conjunto de resultados </br> 0 = erro de cache do conjunto de resultados </br> Valores negativos = motivos pelos quais o cache do conjunto de resultados não foi usado.  Consulte a seção comentários para obter detalhes.|
 ||||
   
+## <a name="remarks"></a>Comentários 
  Para obter informações sobre o máximo de linhas retidas por essa exibição, consulte a seção de metadados no tópico [limites de capacidade](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
+
+ O result_set_cache é um bitmask do uso de uma consulta do cache do conjunto de resultados.  Esta coluna pode ser a [| (OR-bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) produto de um ou mais destes valores:  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|**1**|Impacto no cache do conjunto de resultados|  
+|-**0x00**|Erro de cache do conjunto de resultados|  
+|-**0x01**|O cache do conjunto de resultados está desabilitado no banco de dados.|  
+|-**0x02**|O cache do conjunto de resultados está desabilitado na sessão. | 
+|-**0x04**|O cache do conjunto de resultados está desabilitado devido a nenhuma fonte de dados para a consulta.|  
+|-**0x08**|O cache do conjunto de resultados está desabilitado devido a predicados de segurança em nível de linha.|  
+|-**0x10**|O cache do conjunto de resultados está desabilitado devido ao uso da tabela do sistema, da tabela temporária ou da tabela externa na consulta.|  
+|-**0x20**|O cache do conjunto de resultados está desabilitado porque a consulta contém constantes de tempo de execução, funções definidas pelo usuário ou funções não determinísticas.|  
+|-**0x40**|O cache do conjunto de resultados está desabilitado porque o tamanho do conjunto de resultados estimado é muito grande (> 1 milhão linhas).|  
+|-**0x80**|O cache do conjunto de resultados está desabilitado porque o conjunto de resultados contém linhas com tamanho grande (>64 KB).|  
   
 ## <a name="permissions"></a>Permissões
 
