@@ -25,7 +25,7 @@ ms.locfileid: "77903793"
 
 Para configurar a alta disponibilidade do lado do Mestre do Scale Out com a instância de cluster de failover do SQL Server, siga estas etapas:
 
-## <a name="1-prerequisites"></a>1. Pré-requisitos
+## <a name="1-prerequisites"></a>1. Prerequisites
 Configurar um cluster de failover do Windows. Confira a postagem no blog [Instalando o recurso Cluster de Failover e as Ferramentas para o Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) para obter instruções. Instale o recurso e as ferramentas em todos os nós de cluster.
 
 ## <a name="2-install-sql-server-failover-cluster"></a>2. Instalar um cluster de failover do SQL Server

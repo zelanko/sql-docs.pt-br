@@ -70,7 +70,7 @@ profiler
  Especifica a conexão com a autenticação do Windows com as credenciais do usuário atual.  
   
  **/S**  *nome_servidor_sql*  
- Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O Profiler vai se conectar automaticamente ao servidor especificado usando as informações de autenticação especificadas nas opções **/U** e **/P** ou na opção **/E** . Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/S***nome_servidor_sql*\\*nome_da_instância*.  
+ Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O Profiler vai se conectar automaticamente ao servidor especificado usando as informações de autenticação especificadas nas opções **/U** e **/P** ou na opção **/E** . Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/S** *nome_servidor_sql*\\*nome_da_instância*.  
   
  **/A**  *nome_do_servidor_de_analysis_services*  
  Especifica uma instância do Analysis Services. O Profiler vai se conectar automaticamente ao servidor especificado usando as informações de autenticação especificadas nas opções **/U** e **/P** ou na opção **/E** . Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/A** *nome_do_servidor_de_analysis_services\nome_da_instância*.  

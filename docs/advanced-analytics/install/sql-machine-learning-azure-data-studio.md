@@ -20,7 +20,7 @@ ms.locfileid: "78202306"
 
 Saiba como executar scripts de Python e R em um notebook no [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) com os [Serviços de Machine Learning do SQL Server](../what-is-sql-server-machine-learning.md). O Azure Data Studio é uma ferramenta de banco de dados multiplataforma.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - [Baixe e instale o Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) no computador da estação de trabalho. O Azure Data Studio é multiplataforma. Pode ser executado no Windows, no macOS e no Linux.
 
