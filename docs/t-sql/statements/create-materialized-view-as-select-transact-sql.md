@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: e8acc3ef73c51ccbbf195f9d18dc5f12d661931f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: fd41b851ac7240ded3b0508f0bfd45fad0377c27
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75226741"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568069"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -50,7 +50,7 @@ ms.locfileid: "75226741"
 
 Este artigo explica a instrução criar CREATE MATERIALIZED VIEW AS SELECT T-SQL no SQL Data Warehouse do Azure para o desenvolvimento de soluções. O artigo também fornece exemplos de códigos.
 
-Uma Exibição Materializada persiste os dados retornados da consulta de definição de exibição e é atualizada automaticamente conforme os dados são alterados nas tabelas subjacentes.   Ela melhora o desempenho de consultas complexas (normalmente consultas com junções e agregações) e oferece operações simples de manutenção.   Com seu recurso de correspondência automática do plano de execução, uma exibição materializada não precisa ser referenciada na consulta para o otimizador considerar a exibição na substituição.  Isso permite que os engenheiros de dados implementem as exibições materializadas como um mecanismo para melhorar o tempo de resposta de consulta sem precisar alterar as consultas.  
+Uma Exibição Materializada persiste os dados retornados da consulta de definição de exibição e é atualizada automaticamente conforme os dados são alterados nas tabelas subjacentes.   Ela melhora o desempenho de consultas complexas (normalmente consultas com junções e agregações) e oferece operações simples de manutenção.   Com seu recurso de correspondência automática do plano de execução, uma exibição materializada não precisa ser referenciada na consulta para o otimizador considerar a exibição na substituição.  Essa capacidade permite que os engenheiros de dados implementem as exibições materializadas como um mecanismo para melhorar o tempo de resposta de consulta sem precisar alterar as consultas.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -108,13 +108,17 @@ Quando as agregações MIN/MAX são usadas na lista SELECT da definição da exi
   
 ## <a name="remarks"></a>Comentários
 
-Uma exibição materializada no data warehouse do Azure é muito semelhante a uma exibição indexada no SQL Server.  Ela compartilha quase as mesmas restrições que a exibição indexada (confira [Criar exibições indexadas](/sql/relational-databases/views/create-indexed-views) para obter detalhes), exceto pelo fato de que uma exibição materializada dá suporte a funções de agregação.   Aqui estão considerações adicionais para a exibição materializada.  
- 
+Uma exibição materializada no data warehouse do Azure é semelhante a uma exibição indexada no SQL Server.  Ela compartilha quase as mesmas restrições que a exibição indexada (confira [Criar exibições indexadas](/sql/relational-databases/views/create-indexed-views) para obter detalhes), exceto pelo fato de que uma exibição materializada dá suporte a funções de agregação.   
+
 Somente o CLUSTERED COLUMNSTORE INDEX é compatível com a exibição materializada. 
 
 Uma exibição materializada não pode referenciar outras exibições.  
- 
-Só é possível criar Exibições Materializadas em tabela particionadas.  As operações SPLIT/MERGE têm suporte em tabelas referenciadas em exibições materializadas.  SWITCH não tem suporte em tabelas referenciadas em exibições materializadas. Ao tentar, o usuário verá o erro `Msg 106104, Level 16, State 1, Line 9`
+
+Uma exibição materializada não pode ser criada em uma tabela DDM (máscara de dados dinâmicos), mesmo que a coluna DDM não faça parte da exibição materializada.  Se uma coluna de tabela fizer parte de uma exibição materializada ativa ou de uma exibição materializada desabilitada, o DDM não poderá ser adicionado a essa coluna.  
+
+Uma exibição materializada não pode ser criada em uma tabela com segurança em nível de linha habilitada.
+
+Só é possível criar Exibições Materializadas em tabela particionadas.  Há suporte para a partição SPLIT/MERGE em tabelas base de exibições materializadas; não há suporte para a partição SWITCH.  
  
 ALTER TABLE SWITCH não tem suporte em tabelas referenciadas em exibições materializadas. Desabilite ou descarte as exibições materializadas antes de usar ALTER TABLE SWITCH. Nos cenários a seguir, a criação de exibições materializadas requer novas colunas a adicionar à exibição materializada:
 
@@ -122,8 +126,8 @@ ALTER TABLE SWITCH não tem suporte em tabelas referenciadas em exibições mate
 |-----------------|---------------|-----------------|
 |COUNT_BIG() está ausente na lista SELECT de uma definição de exibição materializada| COUNT_BIG (*) |Adicionado automaticamente pela criação da exibição materializada.  Não é necessária nenhuma ação do usuário.|
 |SUM(a) é especificado por usuários na lista SELECT de uma definição de exibição materializada e AND 'a' é uma expressão que permite valor nulo |COUNT_BIG (a) |Os usuários precisam adicionar a expressão 'a' manualmente na definição de exibição materializada.|
-|AVG(a) é especificado por usuários na lista SELECT de uma definição de exibição materializada onde 'a' é uma expressão.|SUM(a), COUNT_BIG(a)|Adicionado automaticamente pela criação da exibição materializada.  Não é necessária nenhuma ação do usuário.|
-|STDEV(a) é especificado por usuários na lista SELECT de uma definição de exibição materializada onde 'a' é uma expressão.|SUM(a), COUNT_BIG(a), SUM(square(a))|Adicionado automaticamente pela criação da exibição materializada.  Não é necessária nenhuma ação do usuário. |
+|AVG(a) é especificado por usuários na lista SELECT de uma definição de exibição materializada, em que "a" é uma expressão.|SUM(a), COUNT_BIG(a)|Adicionado automaticamente pela criação da exibição materializada.  Não é necessária nenhuma ação do usuário.|
+|STDEV(a) é especificado por usuários na lista SELECT de uma definição de exibição materializada, em que "a" é uma expressão.|SUM(a), COUNT_BIG(a), SUM(square(a))|Adicionado automaticamente pela criação da exibição materializada.  Não é necessária nenhuma ação do usuário. |
 | | | |
 
 Uma vez criadas, as exibições materializadas são visíveis no SQL Server Management Studio na pasta de exibições da instância do SQL Data Warehouse do Azure.

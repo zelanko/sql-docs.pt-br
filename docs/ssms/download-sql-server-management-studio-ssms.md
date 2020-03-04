@@ -23,12 +23,12 @@ ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
 ms.date: 02/18/2020
-ms.openlocfilehash: 5004b46f878a5098e63fb3842569e826b21b764f
-ms.sourcegitcommit: 5a9b8bc4fcb5e875d5ef25362b68ffe7f8a1b6d7
+ms.openlocfilehash: 8045c054d05a1e92eaf18f9aba852d9301f7ef60
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77520939"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652925"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Baixar o SQL Server Management Studio (SSMS)
 
@@ -54,7 +54,7 @@ O SSMS 18.4 é a versão mais recente de GA (disponibilidade geral) do SSMS. Se 
 
 Se você tem sugestões ou comentários ou deseja relatar problemas, a melhor maneira de entrar em contato com a equipe do SSMS é usando o [UserVoice](https://aka.ms/sqlfeedback).
 
-A instalação do SSMS 18.x não atualiza nem substitui versões do SSMS 17.x ou anteriores. O SSMS 18.x é instalado lado a lado com versões anteriores para que ambas versões estejam disponíveis para uso. No entanto, se você tiver uma ***versão prévia*** do SSMS 18.x instalada, será necessário **desinstalar** essa versão antes de instalar o SSMS 18.4. É possível conferir se você tem a *Versão Prévia* acessando a janela Ajuda > Sobre.
+A instalação do SSMS 18.x não atualiza nem substitui versões do SSMS 17.x ou anteriores. O SSMS 18.x é instalado lado a lado com versões anteriores para que as duas versões estejam disponíveis para uso. No entanto, se você tiver uma ***versão prévia*** do SSMS 18.x instalada, será necessário **desinstalar** essa versão antes de instalar o SSMS 18.4. É possível conferir se você tem a *Versão Prévia* acessando a janela Ajuda > Sobre.
 
 Se um computador contiver instalações lado a lado do SSMS, verifique se você iniciou a versão correta para suas necessidades específicas. A versão mais recente é rotulada **Microsoft SQL Server Management Studio 18**
 
@@ -80,6 +80,30 @@ Há alguns [problemas conhecidos](release-notes-ssms.md#known-issues-184) nesta 
 ## <a name="previous-versions"></a>Versões anteriores
 
 Este artigo destina-se somente à versão mais recente do SSMS. Para baixar as versões anteriores do SSMS, acesse [Versões anteriores do SSMS](../ssms/release-notes-ssms.md#previous-ssms-releases).
+
+## <a name="unattended-install"></a>Instalação autônoma
+
+Você também pode instalar o SSMS usando um script de prompt de comando.
+
+Se quiser instalar o SSMS em segundo plano sem prompts de GUI, siga as etapas abaixo.
+
+1. Inicialize o prompt de comando com permissões elevadas.
+
+2. Digite o comando abaixo no prompt de comando.
+
+    ```console
+    start "" <path where SSMS-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
+    ```
+
+    Exemplo:
+
+    ```console
+    start "" %systemdrive%\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=%systemdrive%\SSMSto
+    ```
+
+    Você também pode passar */Passive* em vez de */Quiet* para ver a interface do usuário da configuração.
+
+3. Se tudo correr bem, será possível ver o SSMS instalado em %systemdrive%\SSMSto\Common7\IDE\Ssms.exe” com base no exemplo. Se algo der errado, você poderá inspecionar o código de erro retornado e dar uma olhada em %TEMP%\SSMSSetup para o arquivo de log.
 
 ## <a name="supported-sql-offerings-ssms-184"></a>Ofertas de SQL compatíveis (SSMS 18.4)
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 47b9704591acd305a49ff315eb99314f14e87af1
-ms.sourcegitcommit: 38c61c7e170b57dddaae5be72239a171afd293b9
+ms.openlocfilehash: 94f8c87e0b996be0b9485cbe5a43038e33420fe0
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77259222"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568119"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurar a opção de configuração de servidor max degree of parallelism
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,10 +29,7 @@ ms.locfileid: "77259222"
   Este tópico descreve como configurar a opção de configuração de servidor **MAXDOP (grau máximo de paralelismo)** no SQL Server usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executada em um computador com mais de um microprocessador ou CPU, ele detecta o grau de paralelismo, ou seja, o número de processadores utilizados para executar uma única instrução, para cada execução paralela de plano. Você pode usar a opção **max degree of parallelism** para limitar o número de processadores a serem usados na execução de plano paralela. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera os planos de execução paralela para consultas, operações DDL (linguagem de definição de dados), inserções paralelas, alteração online de coluna, coleta de estatísticas paralela e população de cursor estático e controlado por conjunto de chaves.
 
 > [!NOTE]
-> [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] apresenta recomendações automáticas para configurar o MAXDOP durante o processo de instalação. A interface do usuário de instalação permite que você aceite as configurações recomendadas ou as personalize. Para obter mais informações, consulte os seguintes artigos:
->  - [MaxDOP adicionado à instalação do SQL 2019](https://techcommunity.microsoft.com/t5/premier-field-engineering/maxdop-added-to-sql-2019-ctp3-0-setup/ba-p/780071)
->  - [Aprimoramentos da instalação do SQL Server 2019 para MAXDOP e memória máxima](https://www.mssqltips.com/sqlservertip/6211/sql-server-2019-installation-enhancements-for-maxdop-and-max-memory/)
->
+> [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] apresenta recomendações automáticas para definir a opção de configuração do servidor MAXDOP durante o processo de instalação. A interface do usuário de configuração permite que você aceite as configurações recomendadas ou insira um valor próprio. Para saber mais, veja a [página Configuração do Mecanismo de Banco de Dados – MaxDOP](../../sql-server/install/instance-configuration.md#maxdop).
 
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -107,7 +104,7 @@ Em [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] a [!INCLUDE[ssSQL14](../.
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar o [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) para configurar a opção `max degree of parallelism` como `8`.  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar o [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) para configurar a opção `max degree of parallelism` como `16`.  
   
 ```sql  
 USE AdventureWorks2012 ;  

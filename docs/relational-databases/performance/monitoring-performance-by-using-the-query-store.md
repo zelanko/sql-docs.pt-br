@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 0f11b1e7300027d024b5961f73ffa71c7b07a2bd
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909304"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608500"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitorar o desempenho usando o Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72909304"
 ##  <a name="Enabling"></a> Habilitando o Repositório de Consultas  
  O repositório de consultas não está ativo para novos bancos de dados por padrão.  
   
-#### <a name="use-the-query-store-page-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Use a Página do Repositório de Consultas em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+#### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Use a Página do Repositório de Consultas em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um banco de dados e clique em **Propriedades**.  
   
@@ -595,7 +595,7 @@ Ao usar **sp_query_store_force_plan** você só pode impor planos registrados pe
 
 #### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Planejar forçar suporte para cursores estáticos e de avanço rápido
   
-No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 em diante, o Repositório de Consultas dá suporte à capacidade de impor planos de execução de consulta para cursores estáticos e de avanço rápido de API e [!INCLUDE[tsql](../../includes/tsql-md.md)]. Há suporte para a imposição por meio de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou dos relatórios do Repositório de Consultas do `sp_query_store_force_plan`.
+No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e no Banco de Dados SQL do Azure (todos os modelos de implantação) em diante, o Repositório de Consultas dá suporte à capacidade de impor planos de execução de consulta para cursores estáticos e de avanço rápido de API e [!INCLUDE[tsql](../../includes/tsql-md.md)]. Há suporte para a imposição por meio de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou dos relatórios do Repositório de Consultas do `sp_query_store_force_plan`.
 
 ### <a name="remove-plan-forcing-for-a-query"></a>Remover a imposição de plano de uma consulta
 

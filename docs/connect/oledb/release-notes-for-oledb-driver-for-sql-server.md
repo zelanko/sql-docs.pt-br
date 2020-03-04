@@ -1,18 +1,18 @@
 ---
 title: Notas de versão (OLE DB Driver para SQL Server) | Microsoft Docs
-ms.date: 10/11/2019
+ms.date: 02/27/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 23c730ce0bba9003b47b777108907763d981c551
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 90da0d1d42878fcbe65b1086663775d546751c80
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74401530"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177356"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Notas de versão do Driver do Microsoft OLE DB para SQL Server
 
@@ -31,7 +31,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1830"></a>18.3.0
 
-Outubro de 2019
+![download](../../ssdt/media/download.png) [Baixar o instalador x64](https://go.microsoft.com/fwlink/?linkid=2117515)  
+![download](../../ssdt/media/download.png) [Baixar o instalador x86](https://go.microsoft.com/fwlink/?linkid=2117517)  
+
+Lançado: Outubro de 2019
+
+Se precisar baixar o instalador em um idioma diferente daquele detectado para você, será possível usar esses links diretos.  
+Para o driver x64: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x40a)  
+Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x40a)  
 
 ### <a name="features-added"></a>Recursos adicionados
 
@@ -48,9 +55,20 @@ Outubro de 2019
 | Correção de lógica DROP INDEX em [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | As versões anteriores do driver do OLE DB não podem remover um índice de chave primária quando a ID do esquema e a ID de usuário do proprietário do índice não são iguais. |
 | &nbsp; | &nbsp; |
 
+## <a name="previous-releases"></a>Versões anteriores
+
+Baixe versões anteriores do driver do OLE DB nos links para download nas seções a seguir:
+
 ## <a name="1823"></a>18.2.3
 
-Junho de 2019
+![download](../../ssdt/media/download.png) [Baixar o instalador x64](https://go.microsoft.com/fwlink/?linkid=2119554)  
+![download](../../ssdt/media/download.png) [Baixar o instalador x86](https://go.microsoft.com/fwlink/?linkid=2119738)  
+
+Lançado: Junho de 2019
+
+Se precisar baixar o instalador em um idioma diferente daquele detectado para você, será possível usar esses links diretos.  
+Para o driver x64: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40a)  
+Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40a)  
 
 ### <a name="features-added"></a>Recursos adicionados
 
@@ -61,7 +79,14 @@ Junho de 2019
 
 ## <a name="1822"></a>18.2.2
 
-Maio de 2019
+![download](../../ssdt/media/download.png) [Baixar o instalador x64](https://go.microsoft.com/fwlink/?linkid=2118512)  
+![download](../../ssdt/media/download.png) [Baixar o instalador x86](https://go.microsoft.com/fwlink/?linkid=2118415)  
+
+Lançado: Maio de 2019
+
+Se precisar baixar o instalador em um idioma diferente daquele detectado para você, será possível usar esses links diretos.  
+Para o driver x64: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40a)  
+Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40a)  
 
 ### <a name="bugs-fixed"></a>Bugs corrigidos
 
@@ -72,7 +97,14 @@ Maio de 2019
 
 ## <a name="1821"></a>18.2.1
 
-Fevereiro de 2019
+![download](../../ssdt/media/download.png) [Baixar o instalador x64](https://go.microsoft.com/fwlink/?linkid=2118511)  
+![download](../../ssdt/media/download.png) [Baixar o instalador x86](https://go.microsoft.com/fwlink/?linkid=2118278)  
+
+Lançado: Fevereiro de 2019
+
+Se precisar baixar o instalador em um idioma diferente daquele detectado para você, será possível usar esses links diretos.  
+Para o driver x64: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40a)  
+Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40a)  
 
 ### <a name="features-added"></a>Recursos adicionados
 
@@ -84,7 +116,14 @@ Fevereiro de 2019
 
 ## <a name="1810"></a>18.1.0
 
-Julho de 2018
+![download](../../ssdt/media/download.png) [Baixar o instalador x64](https://go.microsoft.com/fwlink/?linkid=2118506)  
+![download](../../ssdt/media/download.png) [Baixar o instalador x86](https://go.microsoft.com/fwlink/?linkid=2118509)  
+
+Lançado: Julho de 2018
+
+Se precisar baixar o instalador em um idioma diferente daquele detectado para você, será possível usar esses links diretos.  
+Para o driver x64: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40a)  
+Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2118509&2118509=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40a)  
 
 ### <a name="features-added"></a>Recursos adicionados
 
@@ -101,6 +140,15 @@ Julho de 2018
 | &nbsp; | &nbsp; |
 
 ## <a name="1802"></a>18.0.2
+
+![download](../../ssdt/media/download.png) [Baixar o instalador x64](https://go.microsoft.com/fwlink/?linkid=2118504)  
+![download](../../ssdt/media/download.png) [Baixar o instalador x86](https://go.microsoft.com/fwlink/?linkid=2118277)  
+
+Lançado: Março de 2018
+
+Se precisar baixar o instalador em um idioma diferente daquele detectado para você, será possível usar esses links diretos.  
+Para o driver x64: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40a)  
+Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40a)  
 
 ### <a name="features-added"></a>Recursos adicionados
 

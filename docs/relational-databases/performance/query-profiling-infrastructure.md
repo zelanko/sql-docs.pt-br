@@ -17,15 +17,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 40c2c30ff3d44b41d4ddcac4cc9fe0954a06d72e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257669"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705901"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestrutura de Criação de Perfil de Consulta
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] fornece a capacidade de acessar informações de runtime nos planos de execução de consulta. Uma das ações mais importantes quando ocorre um problema de desempenho é obter a compreensão precisa sobre a carga de trabalho que está em execução e como o uso de recursos está sendo controlado. Para isso, o acesso ao [plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md) é importante.
 
@@ -59,7 +59,7 @@ Começando com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLU
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v1"></a>Infraestrutura de criação de perfil de estatísticas de execução de consulta leve v1
 
-**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 até [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
   
 Começando com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a sobrecarga de desempenho para coletar informações sobre planos de execução foi reduzida com a introdução da criação de perfil leve. Ao contrário da criação de perfil padrão, a criação de perfil leve não coleta informações de runtime de CPU. No entanto, a criação de perfil leve ainda coleta informações de uso de E/S e de contagem de linhas.
 
@@ -89,7 +89,7 @@ Ao executar uma sessão de eventos estendidos que usa o evento *query_thread_pro
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>Infraestrutura de criação de perfil de estatísticas de execução de consulta leve v2
 
-**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 até [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
 
 O [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 inclui uma versão revisada da criação de perfil leve com sobrecarga mínima. A criação de perfil leve também pode ser habilitada globalmente usando o [sinalizador de rastreamento 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) para as versões mencionadas acima em *Aplica-se a*. Um novo DMF [DM exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) é introduzido para retornar o plano de execução de consulta para as solicitações em trânsito.
 
@@ -119,9 +119,9 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>Infraestrutura de criação de perfil de estatísticas de execução de consulta leve v3
 
-**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] inclui uma versão revisada recentemente da criação de perfil leve coletando informações de contagem de linha de todas as execuções. A criação de perfil leve é habilitada por padrão em [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e o sinalizador de rastreamento 7412 não tem nenhum efeito. A criação de perfil leve pode ser desabilitada no nível de banco de dados usando a [configuração de escopo do banco de dados](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LIGHTWEIGHT_QUERY_PROFILING: `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] incluem uma versão revisada recentemente da criação de perfil leve coletando informações de contagem de linha de todas as execuções. A criação de perfil leve está habilitada por padrão em [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante, o sinalizador de rastreamento 7412 não tem nenhum efeito. A criação de perfil leve pode ser desabilitada no nível de banco de dados usando a [configuração de escopo do banco de dados](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LIGHTWEIGHT_QUERY_PROFILING: `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
 
 Um novo DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) é introduzido para retornar o equivalente do último plano de execução real conhecido para a maioria das consultas e é chamado de *últimas estatísticas do plano de consulta*. As últimas estatísticas do plano de consulta podem ser habilitadas no nível de banco de dados usando a [configuração de escopo do banco de dados](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LAST_QUERY_PLAN_STATS: `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
 

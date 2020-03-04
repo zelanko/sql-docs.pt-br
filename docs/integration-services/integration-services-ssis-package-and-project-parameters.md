@@ -1,5 +1,5 @@
 ---
-title: Parâmetros de pacote e projeto do SSIS (Integration Services) | Microsoft Docs
+title: Parâmetros de projeto e de pacote | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b595c8e2c09260e6874fc3cbaab8cc06d2a0c9df
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5c773ae8db0b9942e23e40fb5f72b989b97ccfcc
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71296166"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903849"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Parâmetros de pacote e projeto do SSIS (Integration Services)
 

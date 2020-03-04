@@ -1,7 +1,7 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 02/26/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 183edfbae4da98f12d9ed32b594e74b1932b6f1b
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982791"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705891"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -313,7 +313,7 @@ Se *type_schema_name* não for especificado, o [!INCLUDE[ssDE](../../includes/ss
  Quando um parâmetro da função tiver um valor padrão, a palavra-chave DEFAULT deverá ser especificada quando a função for chamada para recuperar o valor padrão. Esse comportamento é diferente do uso de parâmetros com valores padrão em procedimentos armazenados nos quais a omissão do parâmetro também indica o valor padrão. Porém, a palavra-chave DEFAULT não é necessária ao invocar uma função escalar por meio da instrução EXECUTE.  
   
  READONLY  
- Indica que o parâmetro não pode ser atualizado ou modificado na definição da função. Se o tipo de parâmetro for um tipo de tabela definido pelo usuário, READONLY deverá ser especificado.  
+ Indica que o parâmetro não pode ser atualizado ou modificado na definição da função. READONLY é necessário para TVPs (parâmetros de tipo de tabela definidos pelo usuário) e não pode ser usado para nenhum outro tipo de parâmetro.
   
  *return_data_type*  
  É o valor de retorno de uma função escalar definida pelo usuário. Para funções [!INCLUDE[tsql](../../includes/tsql-md.md)], todos os tipos de dados são permitidos, incluindo tipos CLR definidos pelo usuário, com exceção do tipo de dados **timestamp**. Para funções CLR, todos os tipos de dados são permitidos, incluindo tipos CLR definidos pelo usuário, com exceção dos tipos de dados **text**, **ntext**, **image** e **timestamp**. Os tipos não escalares, **cursor** e **table**, não podem ser especificados como um tipo de dados de retorno em funções CLR ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -810,7 +810,7 @@ GO
   
  Para obter um exemplo de como criar um função com valor de tabela CLR, consulte [Funções com valor de tabela CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md).  
   
-### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>E. Exibindo a definição de funções definidas pelo usuário [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+### <a name="e-displaying-the-definition-of-tsql-user-defined-functions"></a>E. Exibindo a definição de funções definidas pelo usuário [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 ```sql  
 SELECT definition, type   

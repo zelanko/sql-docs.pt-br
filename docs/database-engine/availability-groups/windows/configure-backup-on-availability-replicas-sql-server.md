@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 570ac300f8f522d0ea4acfb711d78bd7cfaf7ef2
-ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
+ms.openlocfilehash: f5aa9a2373d622e74b2964c7a6dc967a82ab4e36
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77146286"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177376"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Configurar backups em réplicas secundárias de um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,6 +34,9 @@ ms.locfileid: "77146286"
   
 ##  <a name="Prerequisites"></a> Pré-requisitos  
  Você deve estar conectado à instância do servidor que hospeda a réplica primária.  
+ 
+   > [!NOTE]
+   > A réplica secundária não precisa ser legível para descarregar backups. Os backups ainda terão sucesso na réplica secundária, mesmo se `Readable Secondary` estiver definido como `no`. 
   
   
 ##  <a name="Permissions"></a> Permissões  

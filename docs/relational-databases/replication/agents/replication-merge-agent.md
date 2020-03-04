@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ece6ef614e336b2478779107a4e4f37d2903841a
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "70846741"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705861"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,8 @@ replmerg [-?]
 [-SubscriberSecurityMode [0|1]]  
 [-SubscriberType [0|1|2|3|4|5|6|7|8|9]]  
 [-SubscriptionType [0|1|2]]  
-[-SyncToAlternate [0|1]  
+[-SyncToAlternate [0|1]]  
+[-T [101|102]]  
 [-UploadGenerationsPerBatch upload_generations_per_batch]  
 [-UploadReadChangesPerBatch upload_read_changes_per_batch]  
 [-UploadWriteChangesPerBatch upload_write_changes_per_batch]  
@@ -358,7 +359,10 @@ replmerg [-?]
   
  **-SyncToAlternate** [ **0|1**]  
  Especifica se o Merge Agent está sincronizando entre um Assinante e um Publicador alternativo. Um valor de **1** indica que é um Publicador alternativo. O padrão é **0**.  
-  
+ 
+ **-T** [**101|102**]  
+ Sinalizadores de rastreamento que habilitam funcionalidades adicionais para o Agente de Mesclagem. Um valor de **101** habilita informações adicionais de registro em log detalhadas para ajudar a determinar quanto tempo leva cada etapa do processo de sincronização da replicação de mesclagem. Um valor de **102** grava as mesmas estatísticas que o sinalizador de rastreamento **101**, mas na tabela <Distribution server>..msmerge_history. Habilite o registro em log do agente de mesclagem ao usar o sinalizador de rastreamento 101 com os parâmetros `-output` e `-outputverboselevel`.  Por exemplo, adicione os parâmetros a seguir ao agente de mesclagem e reinicie o agente: `-T 101, -output, -outputverboselevel`. 
+ 
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  É o número de gerações a ser processado em um único lote durante o carregamento de alterações do Assinante para o Publicador. Uma geração está definida como um grupo lógico de alterações por artigo. O padrão para um vínculo de comunicação confiável é **100**. O padrão para um vínculo de comunicação não confiável é **1**.  
   
@@ -394,7 +398,12 @@ replmerg [-?]
   
  Para iniciar o Agente de Mesclagem, execute **replmerg.exe** no prompt de comando. Para obter informações, consulte [Executáveis do agente de replicação](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
+ ### <a name="troubleshooting-merge-agent-performance"></a>Solucionando problemas de desempenho do Agente de Mesclagem 
  O histórico do agente de mesclagem para a sessão atual não é removido durante a execução em modo contínuo. Um agente de longa execução pode resultar em um grande número de entradas nas tabelas de histórico de mesclagem, o que pode afetar o desempenho. Para resolver esse problema, alterne para o modo agendado, ou continue a usar o modo contínuo, mas crie um trabalho dedicado para reiniciar periodicamente o agente de mesclagem, ou reduza o detalhamento em nível de histórico para reduzir o número de linhas e, assim, reduzir o impacto sobre o desempenho.  
+ 
+  Em alguns casos, o Agente de Mesclagem de replicação pode levar muito tempo para replicar as alterações. Para determinar qual etapa do processo de sincronização da replicação de mesclagem é mais demorada, use o sinalizador de rastreamento 101 junto com o registro em log do agente de mesclagem. Para fazer isso, use os parâmetros a seguir para os parâmetros do agente de mesclagem e, em seguida, reinicie o agente:   <br/>-T 101   <br/>-output   <br/>-outputverboselevel
+
+Além disso, se precisar gravar estatísticas para a tabela <Distribution server>..msmerge_history, use o sinalizador de rastreamento -T 102.
   
 ## <a name="see-also"></a>Consulte Também  
  [Administração do agente de replicação](../../../relational-databases/replication/agents/replication-agent-administration.md)  

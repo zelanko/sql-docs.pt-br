@@ -23,18 +23,21 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8dce4ae0ec739bad6df3ac064ca96d04e91dcf7
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
+ms.openlocfilehash: 1637b46d896e0114d5b66004bc1c160e23521e30
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558354"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180071"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-Essa instrução permite várias definições de configuração de banco de dados no nível do **banco de dados individual**. Essa instrução está disponível no [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Essas configurações são:
+Esse comando permite várias definições de configuração de banco de dados no nível do **banco de dados individual**. 
+
+As configurações a seguir têm suporte no [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]: 
 
 - Limpar o cache de procedimento.
 - Definir o parâmetro MAXDOP para um valor arbitrário (1, 2,...) para o banco de dados primário com base naquilo que funciona melhor para esse banco de dados específico e definir um valor diferente (como 0) para todos os bancos de dados secundários usados (como para consultas de relatórios).
@@ -54,11 +57,16 @@ Essa instrução permite várias definições de configuração de banco de dado
 - Habilitar ou desabilitar a coleta do último plano de execução real em [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 - Especifique o número de minutos que uma operação de índice retomável em pausa permanece assim antes de ser anulada automaticamente pelo mecanismo do SQL Server.
 
+Essa configuração está disponível apenas no Azure Synapse Analytics (anteriormente conhecido como SQL DW).
+- Definir o nível de compatibilidade de um banco de dados de usuário
+
 ![Ícone de link](../../database-engine/configure-windows/media/topic-link.gif "ícone de link") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxe
 
 ```
+-- Syntax for SQL Server and Azure SQL Database
+
 ALTER DATABASE SCOPED CONFIGURATION
 {
     { [ FOR SECONDARY] SET <set_options>}
@@ -101,6 +109,21 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_INTERLEAVED_EXECUTION_TVF` foi alterado para `INTERLEAVED_EXECUTION_TVF`
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` foi alterado para `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` foi alterado para `BATCH_MODE_ADAPTIVE_JOINS`
+
+```
+-- Synatx for Azure Synapse Analytics (Formerly SQL DW)
+
+ALTER DATABASE SCOPED CONFIGURATION
+{
+    SET <set_options>
+}
+[;]
+
+< set_options > ::=
+{
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 }
+}
+```
 
 ## <a name="arguments"></a>Argumentos
 
@@ -373,6 +396,18 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 **APLICA-SE A**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Permite que você controle se um predicado da [RLS](../../relational-databases/security/row-level-security.md) (Segurança em Nível de Linha) é afetado pela cardinalidade do plano de execução da consulta geral do usuário. Quando ISOLATE_SECURITY_POLICY_CARDINALITY está ON, um predicado RLS não afeta a cardinalidade de um plano de execução. Por exemplo, considere uma tabela que contém 1 milhão linhas e um predicado RLS que restringe o resultado a 10 linhas para um usuário específico que emite a consulta. Com essa configuração com escopo de banco de dados definida como OFF, a estimativa de cardinalidade desse predicado será 10. Quando essa configuração com escopo do banco de dados estiver definida como ON, a otimização de consulta estimará 1 milhão linhas. É recomendável usar o valor padrão para a maioria das cargas de trabalho.
+
+DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
+
+**APLICA-SE A**: Somente ao Azure Synapse Analytics (anteriormente conhecido como SQL DW)
+
+Define Transact-SQL e os comportamentos de processamento de consulta para que sejam compatíveis com a versão especificada do mecanismo de banco de dados.  Após a definição, quando uma consulta é executada nesse banco de dados, somente os recursos compatíveis serão exercitados.  O nível de compatibilidade de um banco de dados é definido como AUTO por padrão quando é criado pela primeira vez.  O nível de compatibilidade é preservado mesmo após as operações de pausa/retomada e backup/restauração do banco de dados. 
+
+|Nível de Compatibilidade    |   Comentários|  
+|-----------------------|--------------|
+|**AUTO**| Padrão.  Seu valor é igual ao nível de compatibilidade com suporte mais recente.|
+|**10**| Exercita os comportamentos de processamento de consulta e Transact-SQL antes da introdução do suporte em nível de compatibilidade.|
+|**20**| Primeiro nível de compatibilidade que inclui os comportamentos de processamento de consulta e Transact-SQL restritos. |
 
 ## <a name="Permissions"></a> Permissões
 

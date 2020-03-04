@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 563f984ed5aa401ae67572ad0f915698286f0aa4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c50eee13c4831bfb8d3830da6dbd20b9efc64298
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75329948"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568079"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Feature Pack do Azure para o Integration Services (SSIS)
 
@@ -191,8 +191,17 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
  Use o contêiner Loop Foreach com o enumerador de Blob do Azure para processar dados em vários arquivos de blob.
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
-  
+
 ## <a name="release-notes"></a>Notas de versão
+
+### <a name="version-1170"></a>Versão 1.17.0
+
+Esta é uma versão de hotfix lançada somente para o SQL Server 2019.
+
+#### <a name="bugfixes"></a>Correções de bugs
+
+1. Ao executar no Visual Studio 2019 e direcionar para o SQL Server 2019, uma tarefa/origem/destino de arquivo flexível poderá falhar, com a mensagem de erro `Attempted to access an element as a type incompatible with the array.`
+1. Ao executar no Visual Studio 2019 e direcionar para o SQL Server 2019, uma origem/destino de arquivo flexível usando o formato ORC/Parquet poderá falhar, com a mensagem de erro `Microsoft.DataTransfer.Common.Shared.HybridDeliveryException: An unknown error occurred. JNI.JavaExceptionCheckException.`
 
 ### <a name="version-1160"></a>Versão 1.16.0
 

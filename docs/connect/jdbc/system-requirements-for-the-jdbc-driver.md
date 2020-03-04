@@ -1,7 +1,7 @@
 ---
 title: Requisitos de sistema para o JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e9e74d080ed0e7cd91dcde6cbaa2ca2e32f04dc6
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 1a6aac999ef6877356f66f4db1d6d6763cc0f1ea
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004553"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903723"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Requisitos de sistema para o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "77004553"
 
 **Microsoft JDBC Driver 8.2 para SQL Server:**  
 
-  o JDBC Driver 8.2 inclui três bibliotecas de classes JAR em cada pacote de instalação: **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** e **mssql-jdbc-8.2.0.jre13.jar**.
+  o JDBC Driver 8.2 inclui três bibliotecas de classes JAR em cada pacote de instalação: **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** e **mssql-jdbc-8.2.1.jre13.jar**.
 
   O JDBC Driver 8.2 foi desenvolvido para funcionar e ser compatível com todas as principais máquinas virtuais Java, mas foi testado somente nas versões 1.8, 11.0 e 13.0 do OpenJDK e nas versões 1.8, 11.0 e 13.0 do Azul Zulu JRE.
   
@@ -55,9 +55,9 @@ ms.locfileid: "77004553"
   
   |JAR|Conformidade de versão do JDBC|Versão do Java recomendada|Descrição|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-8.2.0.jre8.jar|4.2|8|Requer um JRE (Java Runtime Environment) 1.8. O uso do JRE 1.7 ou anterior lança uma exceção.<br /><br /> Os novos recursos na versão 8.2 incluem: Suporte ao JDK 13, Always Encrypted com Enclaves Seguros e aprimoramentos de desempenho do tipo de dados temporais. |
-|mssql-jdbc-8.2.0.jre11.jar|4.3|11|Requer um JRE (Java Runtime Environment) 11.0. O uso do JRE 10.0 ou inferior lança uma exceção.<br /><br /> Os novos recursos na versão 8.2 incluem: Suporte ao JDK 13, Always Encrypted com Enclaves Seguros e aprimoramentos de desempenho do tipo de dados temporais. |
-|mssql-jdbc-8.2.0.jre13.jar|4.3|13|Requer um JRE (Java Runtime Environment) 13.0. O uso do JRE 11.0 ou anterior lança uma exceção.<br /><br /> Os novos recursos na versão 8.2 incluem: Suporte ao JDK 13, Always Encrypted com Enclaves Seguros e aprimoramentos de desempenho do tipo de dados temporais. |
+|mssql-jdbc-8.2.1.jre8.jar|4.2|8|Requer um JRE (Java Runtime Environment) 1.8. O uso do JRE 1.7 ou anterior lança uma exceção.<br /><br /> Os novos recursos na versão 8.2 incluem: Suporte ao JDK 13, Always Encrypted com Enclaves Seguros e aprimoramentos de desempenho do tipo de dados temporais. |
+|mssql-jdbc-8.2.1.jre11.jar|4.3|11|Requer um JRE (Java Runtime Environment) 11.0. O uso do JRE 10.0 ou inferior lança uma exceção.<br /><br /> Os novos recursos na versão 8.2 incluem: Suporte ao JDK 13, Always Encrypted com Enclaves Seguros e aprimoramentos de desempenho do tipo de dados temporais. |
+|mssql-jdbc-8.2.1.jre13.jar|4.3|13|Requer um JRE (Java Runtime Environment) 13.0. O uso do JRE 11.0 ou anterior lança uma exceção.<br /><br /> Os novos recursos na versão 8.2 incluem: Suporte ao JDK 13, Always Encrypted com Enclaves Seguros e aprimoramentos de desempenho do tipo de dados temporais. |
 
 
   O JDBC Driver 8.2 também está disponível no repositório Maven Central e pode ser incluído em um projeto Maven adicionando o seguinte código no POM.XML:  
@@ -66,7 +66,7 @@ ms.locfileid: "77004553"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.0.jre11</version>
+    <version>8.2.1.jre11</version>
 </dependency>
 ```
 

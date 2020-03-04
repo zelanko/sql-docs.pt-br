@@ -1,5 +1,5 @@
 ---
-title: Solução de problemas do SSIS (SQL Server Integration Services) Scale Out | Microsoft Docs
+title: Solucionar problemas de SSIS Scale Out | Microsoft Docs
 description: Este artigo descreve como solucionar problemas comuns com o SSIS Scale Out
 ms.custom: performance
 ms.date: 01/09/2019
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 87f5ab815fc7d3a5df23aa3675e92ffa206bfcdf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 987217c1afe07b5e917f415b9a5bc0d784ab7c6d
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67896148"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903762"
 ---
 # <a name="troubleshoot-scale-out"></a>Solução de problemas do Scale Out
 

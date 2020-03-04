@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 4e42c60e945512c09b88b19b18b6f24ce45b46dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76536642"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903813"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (versão prévia)
 
@@ -205,7 +205,7 @@ O comando COPY detectará automaticamente o tipo de compactação com base na ex
 
 - .gz  – **GZIP**
 - .snappy – **Snappy**
-- .deflate – **DefaultCodec**
+- .deflate – **DefaultCodec**  (somente Parquet e ORC)
 
  *FIELDQUOTE = 'field_quote'*</br>
 *FIELDQUOTE* aplica-se a CSV e especifica um único caractere que será usado como o caractere de aspas (delimitador de cadeia de caracteres) no arquivo CSV. Se não for especificado, o caractere de aspas (") será usado como o caractere de aspas, conforme definido no padrão RFC 4180. Não há suporte para caracteres ASCII estendidos com UTF-8 para FIELDQUOTE.

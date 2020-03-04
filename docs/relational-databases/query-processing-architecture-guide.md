@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b6000c540d2847686fd8f14c4ae6a0926f8dbb72
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.openlocfilehash: 88e2325af328e32a246ca484ab447cc99be887c0
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77466167"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903863"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,19 +139,22 @@ O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa a dobra constante c
 - Expressões aritméticas, como 1+1, 5/3*2, que contêm apenas constantes.
 - Expressões lógicas, como 1=1 and 1>2 AND 3>4, que contêm apenas constantes.
 - Funções internas consideradas dobráveis pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], inclusive `CAST` e `CONVERT`. Geralmente, uma função intrínseca será dobrável se for uma função de suas entradas apenas e não outras informações contextuais, como opções SET, configurações de idioma, opções de banco de dados e chaves de codificação. Funções não determinísticas não são dobráveis. Funções internas determinísticas são dobráveis, com algumas exceções.
+- Métodos determinísticos de tipos CLR definidos pelo usuário e funções CLR determinísticas com valor escalar definidas pelo usuário (começando com [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Para saber mais, veja [Dobra constante para funções e métodos de CLR definidos pelo usuário](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
 
 > [!NOTE] 
-> Há uma exceção para tipos de objeto grandes. Se o tipo de saída do processo de dobra for um tipo de objeto grande (text, image, nvarchar(max), varchar(max) ou varbinary(max)), então [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não dobrará a expressão.
+> Há uma exceção para tipos de objeto grandes. Se o tipo de saída do processo de dobra for um tipo de objeto grande (text,ntext, image, nvarchar(max), varchar(max), varbinary(max) ou XML), então [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não dobrará a expressão.
 
 #### <a name="nonfoldable-expressions"></a>Expressões não dobráveis
 Todos os outros tipos de expressão são não dobráveis. Especificamente, os tipos seguintes de expressões não são dobráveis:
 - Expressões não constantes, cujo resultado depende do valor de uma coluna.
 - Expressões cujos resultados dependem de um variável local ou parâmetro, como @x.
 - Funções não determinísticas.
-- Funções definidas pelo usuário (ambos [!INCLUDE[tsql](../includes/tsql-md.md)] e CLR).
+- Funções [!INCLUDE[tsql](../includes/tsql-md.md)] definidas pelo usuário<sup>1</sup>.
 - Expressões cujos resultados dependem de configurações de idioma.
 - Expressões cujos resultados dependem de opções SET.
 - Expressões cujos resultados dependem de opções de configuração do servidor.
+
+<sup>1</sup> Antes de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], as funções CLR de valor escalar definidas pelo usuário e os métodos de tipos CLR definidos pelo usuário não eram dobráveis. 
 
 #### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>Exemplos expressões de constantes desdobráveis e não desdobráveis
 Considere a consulta a seguir.
@@ -912,21 +915,27 @@ Durante a otimização da consulta, [!INCLUDE[ssNoVersion](../includes/ssnoversi
 > Determinados construtos inibem a capacidade do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de aproveitar o paralelismo em todo o plano de execução, ou partes ou o plano de execução.
 
 Os constructos que inibem o paralelismo incluem:
->
-> - **UDFs escalares**    
->   Para obter mais informações sobre funções escalares definidas pelo usuário, confira [Create User-defined Functions](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) (Criar funções definidas pelo usuário). Começando com [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] tem a capacidade de embutir essas funções e desbloquear o uso do paralelismo durante o processamento de consultas. Para obter mais informações sobre o inlining do UDF escalar, confira [Processamento inteligente de consultas em bancos de dados SQL](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
-> - **Consulta remota**    
->   Para obter mais informações sobre Consulta Remota, confira [Referência de operadores lógicos e físicos de plano de execução](../relational-databases/showplan-logical-and-physical-operators-reference.md).
-> - **Cursores dinâmicos**    
->   Para saber mais sobre cursores, confira [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
-> - **Consultas recursivas**    
->   Para saber mais sobre recursão, confira [Guidelines for Defining and Using Recursive Common Table Expressions ](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) (Diretrizes para definir e usar Expressões de Tabela Comum Recursivas) e [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx) (Recursão em T-SQL).
-> - **TVFs (Funções com valor de tabela)**     
->   Para saber mais sobre TVFs, confira [Criar funções definidas pelo usuário (Mecanismo de Banco de Dados)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
-> - **Palavra-chave TOP**    
->   Para saber mais, confira [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
+-   **UDFs escalares**        
+    Para obter mais informações sobre funções escalares definidas pelo usuário, confira [Create User-defined Functions](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) (Criar funções definidas pelo usuário). Começando com [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] tem a capacidade de embutir essas funções e desbloquear o uso do paralelismo durante o processamento de consultas. Para obter mais informações sobre o inlining do UDF escalar, confira [Processamento inteligente de consultas em bancos de dados SQL](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
+    
+-   **Consulta remota**        
+    Para obter mais informações sobre Consulta Remota, confira [Referência de operadores lógicos e físicos de plano de execução](../relational-databases/showplan-logical-and-physical-operators-reference.md).
+    
+-   **Cursores dinâmicos**        
+    Para saber mais sobre cursores, confira [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
+    
+-   **Consultas recursivas**        
+    Para saber mais sobre recursão, confira [Guidelines for Defining and Using Recursive Common Table Expressions ](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) (Diretrizes para definir e usar Expressões de Tabela Comum Recursivas) e [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx) (Recursão em T-SQL).
 
-Depois que os operadores de troca são inseridos, o resultado é um plano de execução da consulta paralela. Um plano de execução de consulta paralela pode usar mais de um thread de trabalho. Um plano de execução em série, usado por uma consulta não paralela, usa só um thread de trabalho para sua execução. O número real de threads de trabalho usado por uma consulta paralela é determinado na inicialização da execução do plano de consulta e pela complexidade do plano e seu grau de paralelismo. O grau de paralelismo determina o número máximo de CPUs que estão sendo usadas; isso não significa o número de threads de trabalho que estão sendo usadas. O valor do grau de paralelismo é definido no nível de servidor e pode ser modificado usando-se o procedimento armazenado no sistema sp_configure. Esse valor pode ser substituído por consulta individual ou instruções de índice especificando-se a dica de consulta `MAXDOP` ou a opção de índice `MAXDOP` . 
+-   **TVFs (Funções com valor de tabela)**         
+    Para saber mais sobre TVFs, confira [Criar funções definidas pelo usuário (Mecanismo de Banco de Dados)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+    
+-   **Palavra-chave TOP**        
+    Para saber mais, confira [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
+
+Depois que os operadores de troca são inseridos, o resultado é um plano de execução da consulta paralela. Um plano de execução de consulta paralela pode usar mais de um thread de trabalho. Um plano de execução em série, usado por uma consulta não paralela (em série), usa só um thread de trabalho para sua execução. O número real de threads de trabalho usado por uma consulta paralela é determinado na inicialização da execução do plano de consulta e pela complexidade do plano e seu grau de paralelismo. 
+
+O DOP (grau de paralelismo) determina o número máximo de CPUs que estão sendo usadas; isso não significa o número de threads de trabalho que estão sendo usadas. O limite de DOP é definido por [tarefa](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Não é um limite por [solicitação](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) ou por consulta. Isso significa que, durante uma execução de consulta paralela, uma solicitação única pode gerar várias tarefas que são atribuídas a um [agendador](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Mais processadores do que o especificado pelo MAXDOP podem ser usados simultaneamente em qualquer ponto de execução de consulta específico, quando diferentes tarefas são executadas simultaneamente. Para saber mais, confira o [Guia de arquitetura de threads e tarefas](../relational-databases/thread-and-task-architecture-guide.md).
 
 O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não usa um plano de execução paralela para uma consulta se alguma das condições a seguir for verdadeira:
 
@@ -937,21 +946,15 @@ O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 ### <a name="DOP"></a> Grau de Paralelismo
 O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detecta automaticamente o melhor grau de paralelismo para cada instância de uma execução de consulta paralela ou operação DDL (linguagem de definição de dados) do índice. Isso é feito baseado nos seguintes critérios: 
 
-1. Se o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] estiver sendo executado em um computador que tenha mais de um microprocessador ou mais de uma CPU, como um computador SMP (multiprocessamento simétrico).  
-   Apenas computadores que têm mais de uma CPU podem usar consultas paralelas. 
+1. Se o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] estiver **sendo executado em um computador que tenha mais de um microprocessador ou mais de uma CPU**, como um computador SMP (multiprocessamento simétrico). Apenas computadores que têm mais de uma CPU podem usar consultas paralelas. 
 
-2. Se há threads de trabalho suficientes disponíveis.  
-   Cada operação de consulta ou índice exige um determinado número de threads de trabalho para execução. A execução de um plano paralelo exige mais threads de trabalho que um plano serial e o número de threads de trabalho exigidos aumenta conforme o grau de paralelismo. Quando o requisito de thread de trabalho do plano paralelo de um grau específico de paralelismo não puder ser atendido, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] diminuirá automaticamente o grau de paralelismo ou abandonará completamente o plano paralelo no contexto de carga de trabalho especificado. Depois, ele executará o plano consecutivo (um thread de trabalho). 
+2. Se há **threads de trabalho suficientes disponíveis**. Cada operação de consulta ou índice exige um determinado número de threads de trabalho para execução. A execução de um plano paralelo exige mais threads de trabalho que um plano serial e o número de threads de trabalho exigidos aumenta conforme o grau de paralelismo. Quando o requisito de thread de trabalho do plano paralelo de um grau específico de paralelismo não puder ser atendido, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] diminuirá automaticamente o grau de paralelismo ou abandonará completamente o plano paralelo no contexto de carga de trabalho especificado. Depois, ele executará o plano consecutivo (um thread de trabalho). 
 
-3. O tipo de operação de consulta ou de índice executada.  
-   As operações de índice que criam ou reconstroem um índice, ou descartam um índice cluster e as consultas que usam ciclos de CPU frequentemente são as melhores opções para um plano paralelo. Por exemplo, junções de tabelas grandes, agregações grandes e classificação de conjuntos de resultados grandes são boas alternativas. As consultas simples, frequentemente encontradas em aplicativos de processamento de transações, localizam a coordenação adicional exigida para executar uma consulta em paralelo que supera o aumento de desempenho potencial. Para distinguir as consultas que se beneficiam de paralelismo das que não se beneficiam, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compara o custo estimado da execução da operação de consulta ou índice com o valor [limite de custo para paralelismo](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). Os usuários podem alterar o valor padrão 5 usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) se os testes adequados descobriram que um valor diferente é mais adequado para a carga de trabalho em execução. 
+3. O **tipo de operação de consulta ou de índice executada**. As operações de índice que criam ou reconstroem um índice, ou descartam um índice cluster e as consultas que usam ciclos de CPU frequentemente são as melhores opções para um plano paralelo. Por exemplo, junções de tabelas grandes, agregações grandes e classificação de conjuntos de resultados grandes são boas alternativas. As consultas simples, frequentemente encontradas em aplicativos de processamento de transações, localizam a coordenação adicional exigida para executar uma consulta em paralelo que supera o aumento de desempenho potencial. Para distinguir as consultas que se beneficiam de paralelismo das que não se beneficiam, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compara o custo estimado da execução da operação de consulta ou índice com o valor [limite de custo para paralelismo](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). Os usuários podem alterar o valor padrão 5 usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) se os testes adequados descobriram que um valor diferente é mais adequado para a carga de trabalho em execução. 
 
-4. Se houver um número suficiente de linhas para processar.  
-   Se o otimizador de consulta determinar que o número de linhas é muito baixo, não apresentará os operadores de troca para distribuir as linhas. Por conseguinte, os operadores serão executados em série. A execução dos operadores em um plano consecutivo evita cenários quando os custos de inicialização, distribuição e coordenação excedem os ganhos alcançados pela execução de operador paralela.
+4. Se houver um **número suficiente de linhas para processar**. Se o otimizador de consulta determinar que o número de linhas é muito baixo, não apresentará os operadores de troca para distribuir as linhas. Por conseguinte, os operadores serão executados em série. A execução dos operadores em um plano consecutivo evita cenários quando os custos de inicialização, distribuição e coordenação excedem os ganhos alcançados pela execução de operador paralela.
 
-5. Se as estatísticas de distribuição atuais estiverem disponíveis.  
-   Se o grau mais alto de paralelismo não for possível, os graus inferiores serão considerados antes de o plano paralelo ser abandonado.  
-  Por exemplo, quando você criar um índice cluster em uma exibição, não poderão ser avaliadas estatísticas de distribuição, porque o índice cluster ainda não existirá. Nesse caso, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] não poderá fornecer o grau mais alto de paralelismo para a operação de índice. Porém, alguns operadores, como de classificação e verificação, ainda poderão se beneficiar da execução paralela.
+5. Se as **estatísticas de distribuição atuais estiverem disponíveis**. Se o grau mais alto de paralelismo não for possível, os graus inferiores serão considerados antes de o plano paralelo ser abandonado. Por exemplo, quando você criar um índice cluster em uma exibição, não poderão ser avaliadas estatísticas de distribuição, porque o índice cluster ainda não existirá. Nesse caso, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] não poderá fornecer o grau mais alto de paralelismo para a operação de índice. Porém, alguns operadores, como de classificação e verificação, ainda poderão se beneficiar da execução paralela.
 
 > [!NOTE]
 > As operações de índice paralelas somente estão disponíveis nas edições Enterprise, Developer e Evaluation do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -963,11 +966,23 @@ Em um plano de execução de consulta paralelo, os operadores de inserção, atu
 Cursores estáticos e controlados por conjunto de chaves podem ser populados por planos de execução paralelos. Porém, o comportamento dos cursores dinâmicos só pode ser fornecido por meio da execução consecutiva. O otimizador de consulta sempre gera um plano de execução consecutivo para uma consulta que faz parte de um cursor dinâmico.
 
 #### <a name="overriding-degrees-of-parallelism"></a>Substituindo graus de paralelismo
-Você pode usar a opção de configuração de servidor [grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) ([ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) no [!INCLUDE[ssSDS_md](../includes/sssds-md.md)]) para limitar o número de processadores a serem usados na execução do plano paralelo. O grau máximo da opção paralelismo pode ser substituído por instruções de operação de índice e de consulta individual, especificando a dica de consulta MAXDOP ou a opção de índice MAXDOP. MAXDOP fornece mais controle sobre operações de índice e consultas individuais. Por exemplo, você pode usar a opção MAXDOP para controlar, aumentando ou reduzindo, o número de processadores dedicado a uma operação de índice online. Desse modo, você pode equilibrar os recursos usados por uma operação de índice com aquele dos usuários simultâneos. 
+O grau de paralelismo define o número de processadores a serem usados na execução do plano paralelo. Essa configuração pode ser definida em vários níveis:
+
+1.  Nível do servidor, usando a opção de **grau máximo de paralelismo (MAXDOP)** na [opção de configuração do servidor](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).</br> **Aplica-se a:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+    > [!NOTE]
+    > [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)] apresenta recomendações automáticas para definir a opção de configuração do servidor MAXDOP durante o processo de instalação. A interface do usuário de configuração permite que você aceite as configurações recomendadas ou insira um valor próprio. Para saber mais, veja a [página Configuração do Mecanismo de Banco de Dados – MaxDOP](../sql-server/install/instance-configuration.md#maxdop).
+
+2.  Nível de carga de trabalho, usando **MAX_DOP** na [opção de configuração de grupo de carga de trabalho do Resource Governor](../t-sql/statements/create-workload-group-transact-sql.md).</br> **Aplica-se a:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+3.  Nível de banco de dados, usando **MAXDOP** na [configuração com escopo no banco de dados](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).</br> **Aplica-se a:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
+
+4.  Nível de instrução de consulta ou índice, usando **MAXDOP** como [dica de consulta](../t-sql/queries/hints-transact-sql-query.md) ou **MAXDOP** como opção de índice. Por exemplo, você pode usar a opção MAXDOP para controlar, aumentando ou reduzindo, o número de processadores dedicado a uma operação de índice online. Desse modo, você pode equilibrar os recursos usados por uma operação de índice com aquele dos usuários simultâneos.</br> **Aplica-se a:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
 
 A configuração da opção de grau máximo de paralelismo como 0 (padrão) permite que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] use todos os processadores disponíveis até um máximo de 64 processadores em uma execução de plano paralelo. Embora [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] defina um destino de runtime de 64 processadores lógicos quando a opção MAXDOP é definida como 0, um valor diferente pode ser definido manualmente se necessário. Configurar MAXDOP como 0 para consultas e índices permite ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar todos os processadores disponíveis até um máximo de 64 processadores para as consultas ou índices específicos em uma execução de plano paralela. MAXDOP não é um valor de imposto para todas as consultas em paralelo, mas sim um destino provisório para todas as consultas qualificadas para paralelismo. Isso significa que, se não houver threads de trabalho disponíveis suficientes no runtime, uma consulta poderá ser executada com um grau menor de paralelismo que a opção da configuração de servidor MAXDOP.
 
-Consulte este [artigo do Suporte da Microsoft](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server) para ver as práticas recomendadas de configuração do MAXDOP.
+> [!TIP]
+> Consulte esta [página de documentação](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines) para obter diretrizes sobre como configurar o MAXDOP.
 
 ### <a name="parallel-query-example"></a>Exemplo de consulta paralela
 A consulta a seguir conta o número de ordens emitidas em um trimestre específico, iniciando no dia 1º de abril de 2000, e no qual pelo menos um item de linha da ordem foi recebido pelo cliente depois da data confirmada. Essa consulta lista a contagem de tais ordens agrupadas por cada prioridade de ordem e classificada em ordem de prioridade crescente. 

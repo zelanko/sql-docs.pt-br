@@ -10,17 +10,16 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/28/2019
-ms.openlocfilehash: df1e49af0378b6af4a3d82b5a5ec2a4293be5e35
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b2651dd2d95f0fb8b5aba37b1d755bc26a781dde
+ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74957080"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575420"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Como usar notebooks no Azure Data Studio
 
 Este artigo descreve como iniciar a experiência de Notebook no Azure Data Studio e como começar a criar seus próprios notebooks. Ele também mostra como escrever Notebooks usando kernels diferentes.
-
 
 ## <a name="connect-to-sql-server"></a>Conecte-se ao SQL Server
 
@@ -37,16 +36,16 @@ Há várias maneiras de iniciar um novo notebook.
 
     ![image3](media/sql-notebooks/file-new-notebook.png)
 
-3. Clique com o botão direito do mouse na conexão **SQL Server** e inicie o **Novo Notebook**. 
+2. Clique com o botão direito do mouse na conexão **SQL Server** e inicie o **Novo Notebook**. 
     ![image3](media/sql-notebooks/server-new-notebook.png)
 
-4. Abra a paleta de comandos (**Ctrl+Shift+P**) e digite **Novo Notebook**. Um novo arquivo chamado `Notebook-1.ipynb` é aberto.
+3. Abra a paleta de comandos (**Ctrl+Shift+P**) e digite **Novo Notebook**. Um novo arquivo chamado `Notebook-1.ipynb` é aberto.
 
 ## <a name="supported-kernels-and-attach-to-context"></a>Kernels com suporte e anexar ao contexto
 
-A instalação do Notebook no Azure Data Studio dá suporte nativo ao Kernel do SQL. Se você for um desenvolvedor de SQL e quiser usar Notebooks, esse será o Kernel escolhido. 
+A instalação do Notebook no Azure Data Studio dá suporte nativo ao Kernel do SQL. Se você for um desenvolvedor de SQL e desejar usar Notebooks, esse será o Kernel escolhido.
 
-O Kernel do SQL também pode ser usado para se conectar a instâncias do servidor PostgreSQL. Se você for um desenvolvedor de PostgreSQL e quiser se conectar ao seu Servidor PostgreSQL, baixe a [**Extensão do PostgreSQL**](postgres-extension.md) no marketplace de extensão do Azure Data Studio.
+O Kernel do SQL também pode ser usado para se conectar a instâncias do servidor PostgreSQL. Se você for um desenvolvedor de PostgreSQL e quiser se conectar ao seu Servidor PostgreSQL, baixe a [**Extensão do PostgreSQL**](postgres-extension.md) no Marketplace de extensão do Azure Data Studio.
 
 ![image7](media/sql-notebooks/sql-kernel-dropdown.png)
 
@@ -74,11 +73,11 @@ Resultados da consulta
 
 ### <a name="configure-python-for-notebooks"></a>Configurar o Python para Notebooks
 
-Ao selecionar qualquer um dos outros kernels além do SQL na lista suspensa de kernels, você precisa **Configurar o Python para Notebooks**. As dependências do Notebook são instaladas em uma localização especificada, mas você pode decidir se deseja definir a localização de instalação. Essa instalação pode levar algum tempo e é recomendável não fechar o aplicativo até que ela seja concluída. Quando a instalação for concluída, você poderá começar a escrever o código na linguagem com suporte.
+Ao selecionar qualquer um dos outros kernels além do SQL na lista suspensa de kernels, você precisa **Configurar o Python para Notebooks**. As dependências do Notebook são instaladas em uma localização especificada, mas você pode decidir se deseja definir a localização de instalação. Essa instalação pode levar algum tempo. É recomendável não fechar o aplicativo até que ela seja concluída. Quando a instalação terminar, você poderá começar a escrever o código na linguagem com suporte.
 
 ![image21](media/sql-notebooks/configure-python.png)
 
-Depois que a instalação for realizada com sucesso, você encontrará uma notificação no Histórico de Tarefas junto com a localização do servidor de back-end do Jupyter em execução no Terminal de Saída.
+Depois que a instalação for realizada com sucesso, você poderá encontrar uma notificação no Histórico de Tarefas junto com a localização do servidor de back-end do Jupyter em execução no Terminal de Saída.
 
 ![image22](media/sql-notebooks/jupyter-backend.png)
 
@@ -93,7 +92,7 @@ Depois que a instalação for realizada com sucesso, você encontrará uma notif
 
 Se você estiver usando o Kernel do Python3, `Attach to` será `localhost`. Você pode usar esse kernel para o desenvolvimento local do Python.
 
-Quando você estiver conectado ao cluster de Big Data do SQL Server 2019, o `Attach to` padrão será o ponto de extremidade do cluster e permitirá que você envie código Python, Scala e R usando a computação de Spark do cluster.
+Quando você estiver conectado ao cluster de Big Data do SQL Server 2019, o `Attach to` padrão será o ponto de extremidade do cluster que permite que você envie código Python, Scala e R usando a computação de Spark do cluster.
 
 ### <a name="code-cells-and-markdown-cells"></a>Células de código e células de Markdown
 
@@ -103,11 +102,11 @@ Adicione uma nova célula de texto clicando no comando **+Text** na barra de fer
 
 ![image8](media/sql-notebooks/notebook-toolbar.png)
 
-A célula muda para o modo de edição. Agora, digite markdown e você verá a visualização ao mesmo tempo
+A célula muda para o modo de edição. Agora, digite markdown e você poderá ver a versão prévia ao mesmo tempo
 
 ![image9](media/sql-notebooks/notebook-markdown-cell.png)
 
-Clicar fora da célula de texto mostrará o texto de markdown.
+Clicar fora da célula de texto mostra o texto de markdown.
 
 ![image10](media/sql-notebooks/notebook-markdown-preview.png)
 
@@ -115,9 +114,9 @@ Clicar fora da célula de texto mostrará o texto de markdown.
 
 Os Notebooks abertos no Azure Data Studio são **Confiáveis** por padrão.
 
-Se você abrir um Notebook de alguma outra fonte, ele será aberto no modo **Não Confiável** e você poderá configurá-lo como **Confiável**.
+Se você abrir um Notebook de outra fonte, ele será aberto no modo **Não confiável** e poderá ser configurado como **Confiável**.
 
-### <a name="save"></a>Salvar 
+### <a name="save"></a>Salvar
 
 Você pode salvar o Notebook pressionando **CTRL + S** ou clicando nos comandos **Salvar Arquivo**, **Salvar Arquivo Como...** e **Salvar Todos os Arquivos** no menu Arquivo ou, ainda, nos comandos **Arquivo: Salvar** inseridos na paleta de comandos.
 
@@ -154,7 +153,8 @@ Escolha o Kernel do Python local e, na célula, digite -
 ![image16](media/sql-notebooks/local-python.png)
 
 ## <a name="manage-packages"></a>Gerenciar pacotes
-Um dos aspectos que otimizamos para o desenvolvimento de Python local foi a inclusão da capacidade de instalar pacotes de que os clientes precisariam para seus cenários. Por padrão, incluímos os pacotes comuns, como `pandas`, `numpy` etc., mas se você estiver esperando um pacote que não está incluído, escreva o seguinte código na célula do notebook: 
+
+Um dos aspectos que otimizamos para o desenvolvimento de Python local foi a inclusão da capacidade de instalar pacotes de que os clientes precisariam para seus cenários. Por padrão, incluímos os pacotes comuns, como `pandas`, `numpy` etc.,. No entanto, se você está esperando um pacote que não está incluído, escreva o seguinte código na célula do notebook:
 
 ```python
 import <package-name>
@@ -166,17 +166,17 @@ Se ele retornar um erro `Module not Found`, clique em **Gerenciar Pacotes** para
 
 ![image17](media/sql-notebooks/manage-packages.png)
 
-Neste assistente, você poderá ver os pacotes **Instalados**. Você pode pesquisar na lista e na versão associada de cada um desses pacotes. Se precisar **desinstalar** algum dos pacotes, você poderá clicar em um dos pacotes e, em seguida, clicar na opção **Desinstalar pacotes selecionados**.
+Neste assistente, você pode ver os pacotes **Instalados**. Você pode pesquisar na lista e na versão associada de cada um desses pacotes. Se precisar desinstalar algum dos pacotes, você poderá clicar em um dos pacotes e, em seguida, clicar na opção **Desinstalar pacotes selecionados**.
 
-Você também poderá clicar em **Adicionar novos pacotes** para **Pesquisar** um pacote específico, escolher a versão relacionada e clicar em **instalar**. Por padrão, selecionamos a versão mais recente do pacote pesquisado. 
+Você também pode clicar em **Adicionar novos pacotes** para **Pesquisar** um pacote específico, escolher a versão relacionada e clicar em **Instalar**. Por padrão, selecionamos a versão mais recente do pacote pesquisado.
 
-Depois que o pacote for instalado, você poderá ir para a célula do Notebook e digitar o seguinte comando:
+Depois que o pacote for instalado, você pode ir para a célula do Notebook e digitar o comando a seguir:
 
 ```python
 import <package-name>
 ```
 
-Se precisar **desinstalar** algum dos pacotes, você poderá clicar em um ou em vários pacotes e, em seguida, clicar na opção **Desinstalar pacotes selecionados**.
+Se precisar desinstalar algum dos pacotes, você poderá clicar em um ou em vários pacotes e, em seguida, clicar na opção **Desinstalar pacotes selecionados**.
 
 ## <a name="next-steps"></a>Próximas etapas
 

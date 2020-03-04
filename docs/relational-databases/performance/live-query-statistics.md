@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 724eb513c3a48916e1083e3ce5bb50251896d381
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 82634dc8169fa266e6fb1c92ec9a14129e40e947
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73983248"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180083"
 ---
 # <a name="live-query-statistics"></a>Estatísticas de Consulta ao Vivo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece a capacidade de exibir o plano de execução ao vivo de uma consulta ativa. Esse plano de consulta dinâmica fornece informações em tempo real sobre o processo de execução da consulta, conforme os controles fluem de um [operador de plano de consulta](../../relational-databases/showplan-logical-and-physical-operators-reference.md) para outro. O plano de consulta ao vivo exibe o progresso geral da consulta e as estatísticas de tempo de execução do nível de operador, como o número de linhas produzido, tempo decorrido, progresso do operador, etc. Como esses dados estão disponíveis em tempo real sem a necessidade de aguardar a conclusão da consulta, essas estatísticas de execução são extremamente úteis para depurar problemas de desempenho de consulta. Este recurso está disponível do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] em diante; no entanto, ele pode funcionar com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
 
 > [!NOTE]
 > Internamente, estatísticas de consulta em tempo real aproveitam o DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior).  
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 > [!WARNING]  
 > Este recurso é usado principalmente para a solução de problemas. O uso desse recurso pode diminuir moderadamente o desempenho geral da consulta, especialmente em [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Para obter mais informações, confira [Infraestrutura de Criação de Perfil de Consulta](../../relational-databases/performance/query-profiling-infrastructure.md).  
@@ -62,7 +62,9 @@ O plano de execução em tempo real também pode ser acessado pelo **[Monitor de
  A infraestrutura do perfil de estatísticas deve ser habilitada antes que as estatísticas de consulta ao vivo possam capturar informações sobre o andamento das consultas. Dependendo da versão, a sobrecarga pode ser significativa. Para obter mais informações sobre essa sobrecarga, confira [Infraestrutura de criação de perfil de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).
   
 ## <a name="permissions"></a>Permissões  
- Requer permissão `SHOWPLAN` no nível de banco de dados para preencher a página de resultados de **Estatísticas de Consulta em Tempo Real**, da permissão `VIEW SERVER STATE` no nível de servidor para ver as estatísticas em tempo real e requer quaisquer permissões necessárias para executar a consulta.  
+Requer permissão `SHOWPLAN` no nível de banco de dados para preencher a página de resultados de **Estatísticas de consulta em tempo real** e requer as permissões necessárias para executar a consulta.
+No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é necessária a permissão `VIEW SERVER STATE` de nível de servidor para ver as estatísticas dinâmicas.  
+Nas camadas Premium do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], é necessária a permissão `VIEW DATABASE STATE` no banco de dados para ver as estatísticas dinâmicas. Nas camadas Standard e Basic do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], é necessária a conta de **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** para ver as estatísticas dinâmicas.
   
 ## <a name="see-also"></a>Consulte Também  
  [Monitorar e ajustar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

@@ -1,5 +1,5 @@
 ---
-title: Derivar valores de coluna por meio da transformação Coluna Derivada | Microsoft Docs
+title: Derivar valores de coluna com a transformação Coluna Derivada | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a8b9d523f3c0edd3a642caba8efc2396267e141
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 13ab80fe810559105027070e15ca64c87ddc4161
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71291488"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903918"
 ---
-# <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Derivar valores de coluna por meio da transformação Coluna Derivada
+# <a name="derive-column-values-with-the-derived-column-transformation"></a>Derivar valores de coluna com a transformação Coluna Derivada
 
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

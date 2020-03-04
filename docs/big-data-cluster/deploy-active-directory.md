@@ -5,16 +5,16 @@ description: Saiba como atualizar Clusters de Big Data do SQL Server em um domí
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: e2ce3fd5655655686d6fb27f628f6bdb3d22ceb1
+ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544877"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78200957"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no modo do Active Directory Domain Services
 
@@ -311,6 +311,6 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - No momento, o modo de segurança do AD só funciona em ambientes de implantação do `kubeadm`, e não no AKS. O perfil de implantação do `kubeadm-prod` inclui as seções de segurança por padrão.
 
-- Somente um BDC por domínio é permitido no momento. A habilitação de vários BDCs por domínio está planejada para uma versão futura.
+- Somente um BDC por domínio (Active Directory) é permitido no momento. A habilitação de vários BDCs por domínio está planejada para uma versão futura.
 
 - Nenhum dos grupos do AD especificados nas configurações de segurança pode estar com escopo DomainLocal. Para verificar o escopo de um grupo do AD, siga [estas instruções](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).

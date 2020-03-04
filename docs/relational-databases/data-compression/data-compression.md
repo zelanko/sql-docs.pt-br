@@ -23,12 +23,12 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e31898c8252084a34ed645e5b3f5113f9893ee48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3360957d62c6af05c6d650c0143f9f45fde3bd19
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68055455"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705867"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ Para tabelas e índices columnstore, qualquer tabela e índice columnstore sempr
 -   Para tabelas columnstore particionadas e índices columnstore, você pode configurar a opção de compactação de arquivamento para cada partição, e as várias partições não precisam ter a mesma configuração de compactação de arquivamento.  
   
 > [!NOTE]  
->  Os dados também podem ser compactados usando o formato de algoritmo GZIP. Essa é uma etapa adicional e é mais adequada para compactar partes dos dados ao arquivar dados antigos para armazenamento de longo prazo. Os dados compactados usando a função COMPRESS não podem ser indexados. Para obter mais informações, veja [COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md).  
+> Os dados também podem ser compactados usando o formato de algoritmo GZIP. Essa é uma etapa adicional e é mais adequada para compactar partes dos dados ao arquivar dados antigos para armazenamento de longo prazo. Os dados compactados usando a função `COMPRESS` não podem ser indexados. Para obter mais informações, veja [COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md).  
   
 ## <a name="considerations-for-when-you-use-row-and-page-compression"></a>Considerações sobre quando usar a compactação de linha e de página  
  Ao usar compactação de linha e de página, esteja atento às seguintes considerações:  
@@ -57,7 +57,7 @@ Para tabelas e índices columnstore, qualquer tabela e índice columnstore sempr
 -   A compactação não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
 -   A compactação não está disponível para tabelas do sistema.  
 -   A compactação pode permitir que mais linhas sejam armazenadas em uma página, mas não altera o tamanho máximo de linha de uma tabela ou de um índice.  
--   Uma tabela não pode ser habilitada para compactação quando o tamanho máximo da linha mais a sobrecarga de compactação exceder o tamanho máximo de linha de 8060 bytes. Por exemplo, uma tabela que tenha as colunas c1**char(8000)** e c2**char(53)** não pode ser compactada devido à sobrecarga de compactação adicional. Quando o formato de armazenamento vardecimal é usado, a verificação do tamanho da linha é executada quando o formato é habilitado. Para a compactação de linha e de página, a verificação do tamanho da linha é executada quando o objeto é inicialmente compactado e, depois, verificado à medida que cada linha é inserida ou modificada. A compactação impõe as duas regras seguintes:  
+-   Uma tabela não pode ser habilitada para compactação quando o tamanho máximo da linha mais a sobrecarga de compactação exceder o tamanho máximo de linha de 8060 bytes. Por exemplo, uma tabela que tem as colunas `c1 CHAR(8000)` e `c2 CHAR(53)` não pode ser compactada devido à sobrecarga de compactação adicional. Quando o formato de armazenamento vardecimal é usado, a verificação do tamanho da linha é executada quando o formato é habilitado. Para a compactação de linha e de página, a verificação do tamanho da linha é executada quando o objeto é inicialmente compactado e, depois, verificado à medida que cada linha é inserida ou modificada. A compactação impõe as duas regras seguintes:  
     -   Uma atualização para um tipo de comprimento fixo sempre deve ter êxito.  
     -   A desabilitação da compactação de dados sempre deve ter êxito. Mesmo que a linha compactada caiba em uma página, o que significa que ela é menor do que 8060 bytes, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impedirá atualizações que talvez não caibam na linha quando ela for descompactada.  
 -   Quando uma lista de partições é especificada, o tipo de compactação deve ser definido como ROW, PAGE ou NONE em partições individuais. Se a lista de partições não for especificada, todas as partições serão definidas com a propriedade de compactação de dados especificada na instrução. Quando uma tabela ou índice é criado, a compactação dos dados é definida como NONE, a menos que especificada de outra maneira. Quando uma tabela é modificada a compactação existente é preservada, a menos que especificada de outra maneira.  
@@ -66,8 +66,8 @@ Para tabelas e índices columnstore, qualquer tabela e índice columnstore sempr
 -   Quando um índice clusterizado é criado em um heap, ele herda o estado de compactação do heap, a menos que um estado de compactação alternativo seja especificado.  
 -   Quando um heap é configurado para compactação em nível de página, as páginas só recebem compactação em nível de página nos seguintes modos:  
     -   Os dados são importados em massa com otimizações em massa habilitadas.  
-    -   Os dados são inseridos usando INSERT INTO ... A sintaxe WITH (TABLOCK) e a tabela não têm um índice não clusterizado.  
-    -   Uma tabela é recriada executando ALTER TABLE ... Instrução REBUILD com a opção de compactação PAGE.  
+    -   Os dados são inseridos usando `INSERT INTO ... WITH (TABLOCK)`. A tabela não têm um índice não clusterizado.  
+    -   Uma tabela é recriada executando a instrução `ALTER TABLE ... REBUILD` com a opção de compactação PAGE.  
 -   As novas páginas alocadas em um heap como parte de operações DML não usam a compactação PAGE até o heap ser recompilado. Recompile o heap removendo e reaplicando a compactação ou criando e removendo um índice clusterizado.  
 -   A alteração da configuração de compactação de um heap exige que todos os índices não clusterizados na tabela sejam recriados, para que tenham ponteiros para os novos locais de linha no heap.  
 -   Você pode habilitar ou desabilitar a compactação de ROW ou PAGE online ou offline. A habilitação da compactação em um heap tem thread único para uma operação online.  
@@ -78,11 +78,11 @@ Para tabelas e índices columnstore, qualquer tabela e índice columnstore sempr
 -   As tabelas que implementaram o formato de armazenamento vardecimal no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] retêm essas configurações quando forem atualizadas. Você pode aplicar a compactação de linha a uma tabela com formato de armazenamento vardecimal. Entretanto, como a compactação de linha é um superconjunto de formato de armazenamento vardecimal, não há motivo para reter esse formato. Os valores decimais não ganham compactação adicional quando você combina o formato de armazenamento vardecimal com a compactação de linha. Só é possível aplicar a compactação de página a uma tabela com formato de armazenamento vardecimal; entretanto, as colunas de formato de armazenamento vardecimal provavelmente não alcançarão a compactação adicional.  
   
     > [!NOTE]  
-    >  O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece suporte ao formato de armazenamento vardecimal; porém, como a compactação em nível de linha alcança as mesmas metas, o formato de armazenamento vardecimal é preterido. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    > O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece suporte ao formato de armazenamento vardecimal; porém, como a compactação em nível de linha alcança as mesmas metas, o formato de armazenamento vardecimal é preterido. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>Usando a compactação columnstore e de arquivamento columnstore  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].  
   
 ### <a name="basics"></a>Noções básicas  
  As tabelas e os índices columnstore são sempre armazenados com a compactação columnstore. Você pode reduzir ainda mais o tamanho dos dados de columnstore configurando um compactação adicional denominada compactação de arquivamento.  Para executar a compactação de arquivamento, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa o algoritmo de compactação XPRESS da Microsoft nos dados. Adicione ou remova a compactação de arquivamento usando os seguintes tipos de compactação de dados:  
@@ -92,7 +92,8 @@ Para tabelas e índices columnstore, qualquer tabela e índice columnstore sempr
 Para adicionar a compactação de arquivamento, use [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) ou [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) com a opção REBUILD e DATA COMPRESSION = COLUMNSTORE_ARCHIVE.  
   
 #### <a name="examples"></a>Exemplos:  
-```  
+
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE) ;  
   
@@ -107,7 +108,7 @@ Para remover a compactação de arquivamento e restaurar os dados à compactaç�
   
 #### <a name="examples"></a>Exemplos:  
   
-```  
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE) ;  
   
@@ -120,7 +121,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE ON PARTITIONS (2,4
   
 O exemplo a seguir define a compactação de dados para columnstore em algumas partições, e para o arquivamento columnstore em outras partições.  
   
-```  
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = ALL WITH (  
     DATA_COMPRESSION =  COLUMNSTORE ON PARTITIONS (4,5),  
@@ -142,33 +143,37 @@ O procedimento [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>Como a compactação afeta tabelas e índices particionados  
  Ao usar a compactação de dados com tabelas e índices particionados, esteja atento às seguintes considerações:  
--   Quando as partições são divididas usando a instrução ALTER PARTITION, ambas as partições herdam o atributo de compactação de dados da partição original.  
+-   Quando as partições são divididas usando a instrução `ALTER PARTITION`, ambas as partições herdam o atributo de compactação de dados da partição original.  
 -   Quando duas partições são mescladas, a partição resultante herda o atributo de compactação de dados da partição de destino.  
 -   Para alternar uma partição, a propriedade de compactação de dados da partição deve corresponder à propriedade de compactação da tabela.  
 -   Há duas variações de sintaxe que podem ser usadas para modificar a compactação de uma tabela ou índice particionado:  
     -   A sintaxe seguinte só recria a partição referenciada:  
-        ```  
+    
+        ```sql  
         ALTER TABLE <table_name>   
         REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  <option>)  
         ```  
+    
     -   A sintaxe seguinte recria a tabela inteira usando a configuração de compactação existente para qualquer partição não referenciada:  
-        ```  
+    
+        ```sql  
         ALTER TABLE <table_name>   
         REBUILD PARTITION = ALL   
         WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(<range>),  
         ... )  
         ```  
   
-     Os índices particionados seguem o mesmo princípio usando ALTER INDEX.  
+     Os índices particionados seguem o mesmo princípio usando `ALTER INDEX`.  
   
 -   Quando um índice clusterizado é descartado, as partições de heap correspondentes mantêm sua configuração de compactação de dados, a menos que o esquema de particionamento seja modificado. Se o esquema de particionamento for alterado, todas as partições serão recriadas para um estado não compactado. As etapas seguintes são necessárias para descartar um índice clusterizado e alterar o esquema de particionamento:  
      1. Descarte o índice clusterizado.  
-     2. Modifique a tabela usando a opção ALTER TABLE ... REBUILD... que especifica a opção de compactação.  
+     2. Modifique a tabela usando a opção `ALTER TABLE ... REBUILD` que especifica a opção de compactação.  
   
      Descartar um índice clusterizado OFFLINE é uma operação rápida porque apenas os níveis superiores dos índices clusterizados são removidos. Quando um índice clusterizado é descartado ONLINE, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve recriar o heap duas vezes, uma para a etapa 1 e outra para a etapa 2.  
   
 ## <a name="how-compression-affects-replication"></a>Como a compactação afeta a replicação 
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).   
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])).   
+
 Ao usar a compactação de dados com replicação, esteja atento às seguintes considerações:  
 -   Quando o Agente de Instantâneo gera o script de esquema inicial, o novo esquema usa as mesmas configurações de compactação para a tabela e seus índices. A compactação não pode ser habilitada apenas na tabela e não no índice.  
 -   Para replicação transacional, a opção de esquema de artigo determina quais objetos e propriedades dependentes devem ser incluídos no script. Para obter mais informações, veja [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
@@ -186,7 +191,7 @@ A tabela a seguir mostra as configurações de replicação que controlam a comp
 |Para compactar a tabela no Assinante, se todas as partições forem compactadas no Publicador, mas não replicar o esquema de partição.|Falso|True|Verifica se todas as partições estão habilitadas para compactação.<br /><br /> Gera scripts para a compactação em nível de tabela.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>Como a compactação afeta outros componentes do SQL Server 
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])).  
    
  A compactação ocorre no mecanismo de armazenamento e os dados são apresentados à maioria dos outros componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um estado não compactado. Isso limita os efeitos da compactação nos outros componentes para:  
 -   Operações de importação e exportação em massa  

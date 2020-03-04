@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5245df31c2e3b31d95095fbb6770a786d4be6c03
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 371ef48f968bbc6cfd6a99d225dd8edf81cff6ca
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982813"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634792"
 ---
 # <a name="statistics"></a>Estatísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -159,6 +159,9 @@ Para saber mais sobre como controlar AUTO_UPDATE_STATISTICS, confira [Controland
  O otimizador de consulta já cria estatísticas das seguintes maneiras:  
   
 1.  O otimizador de consulta cria estatísticas para índices em tabelas ou exibições quando o índice é criado. Essas estatísticas são criadas nas colunas de chaves do índice. Se o índice for um índice filtrado, o otimizador de consulta criará estatísticas filtradas no mesmo subconjunto de linhas especificado para o índice filtrado. Para obter mais informações sobre índices filtrados, veja [Criar índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md) e [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
+
+    > [!NOTE]
+    > Começando com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], as estatísticas não são criadas por meio do exame de todas as linhas da tabela quando um índice particionado é criado ou reconstruído. Em vez disso, o otimizador de consulta usa o algoritmo de amostragem padrão para gerar estatísticas. Depois de atualizar um banco de dados com índices particionados, você pode notar uma diferença nos dados de histograma destes índices. Esta alteração no comportamento pode não afetar o desempenho de consulta. Para obter as estatísticas dos índices particionados ao examinar todas as linhas da tabela, use `CREATE STATISTICS` ou `UPDATE STATISTICS` com a cláusula `FULLSCAN`. 
   
 2.  O otimizador de consulta cria estatísticas para colunas únicas em predicados de consulta quando [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) estiver ativada.  
 
@@ -199,7 +202,7 @@ Neste exemplo, o objeto de estatísticas `LastFirst` apresenta densidades para o
 ### <a name="query-selects-from-a-subset-of-data"></a>A consulta faz seleções em um subconjunto de dados  
 Quando o otimizador de consulta cria estatísticas para colunas únicas e índices, as estatísticas são criadas para os valores em todas as linhas. Quando as consultas fazem seleções em um subconjunto de linhas e esse subconjunto tem uma distribuição de dados exclusiva, as estatísticas filtradas podem aprimorar os planos de consulta. É possível criar estatísticas filtradas usando a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) com a cláusula [WHERE](../../t-sql/queries/where-transact-sql.md) para definir a expressão de predicado de filtro.  
   
-Por exemplo, usando o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], cada produto da tabela `Production.Product` pertence a uma das quatro categorias da tabela `Production.ProductCategory`: Bicicletas, Componentes, Roupas e Acessórios. Cada categoria possui uma distribuição de dados diferente para peso: as bicicletas pesam de 13,77 a 30, os componentes pesam de 2,12 a 1050,00 com alguns valores NULL, o peso de todas as roupas é NULL e o peso dos acessórios também é NULL.  
+Por exemplo, usando [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], cada produto na tabela `Production.Product` pertence a uma das quatro categorias na tabela `Production.ProductCategory`: Bicicletas, Componentes, Roupas e Acessórios. Cada categoria possui uma distribuição de dados diferente para peso: as bicicletas pesam de 13,77 a 30, os componentes pesam de 2,12 a 1050,00 com alguns valores NULL, o peso de todas as roupas é NULL e o peso dos acessórios também é NULL.  
   
 Usando Bicicletas como um exemplo, as estatísticas filtradas em todos os pesos de bicicleta fornecerão estatísticas mais precisas ao otimizador de consulta e podem melhorar a qualidade do plano de consulta comparadas com as estatísticas de tabela completa ou estatísticas inexistentes na coluna Peso. A coluna de peso das bicicletas é uma boa candidata para estatísticas filtradas, mas não necessariamente para um índice filtrado se o número de pesquisas de peso for relativamente pequeno. O ganho de desempenho que um índice filtrado oferece às pesquisas pode não compensar os custos adicionais com a manutenção e o custo de armazenamento exigidos para adicionar um índice filtrado ao banco de dados.  
   

@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7bf485ec7f6295ed3ee0f9ca04e3f088e5d9cb5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74687382"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78176686"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -461,7 +461,7 @@ ID     Value
  Uma instrução UPDATE sempre adquire um bloqueio exclusivo (X) na tabela que modifica e mantém esse bloqueio até que a transação seja concluída. Com um bloqueio exclusivo, nenhuma outra transação pode modificar dados. Você pode especificar dicas de tabela para substituir esse comportamento padrão durante a instrução UPDATE especificando outro método de bloqueio; entretanto, é recomendável que as dicas só sejam usadas como último recurso por desenvolvedores experientes e administradores de bancos de dados. Para obter mais informações, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## <a name="logging-behavior"></a>Comportamento de registro em log  
- A instrução UPDATE é registrada em log, no entanto, as atualizações parciais de tipos de dados de valor grande que usam a cláusula **.** WRITE são registradas minimamente. Para obter mais informações, confira "Atualizando tipos de dados de valor grande" na seção anterior "Tipos de dados".  
+ A instrução UPDATE é registrada em log, no entanto, as atualizações parciais de tipos de dados de valor grande que usam a cláusula **\.WRITE** são registradas minimamente. Para obter mais informações, confira "Atualizando tipos de dados de valor grande" na seção anterior "Tipos de dados".  
   
 ## <a name="security"></a>Segurança  
   
@@ -1067,7 +1067,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="ad-using-a-simple-update-statement"></a>AD. Usando uma instrução UPDATE simples  
  Os exemplos a seguir mostram como todas as linhas podem ser afetadas quando uma cláusula WHERE não é usada para especificar as linhas a serem atualizadas.  

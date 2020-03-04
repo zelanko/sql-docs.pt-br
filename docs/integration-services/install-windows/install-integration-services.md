@@ -1,5 +1,5 @@
 ---
-title: Instalar o SSIS (SQL Server Integration Services) | Microsoft Docs
+title: Instalar o SQL Server Integration Services | Microsoft Docs
 description: Saiba como instalar o Microsoft SQL Server Integration Services (SSIS) e como obter outros downloads para SSIS
 ms.custom: ''
 ms.date: 09/19/2019
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0478e345f388b3f4246bf33fdaba29a47a6ec0f6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4f3dbfa81e52d050b3e5df46ea2ea5911a8b1254
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74491959"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903683"
 ---
 # <a name="install-integration-services-ssis"></a>Instalar o SSIS (Integration Services)
 

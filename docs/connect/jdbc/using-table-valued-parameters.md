@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 66d9c24a31002f0c991fbf1dfdd7210adbf53172
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1dfa8438e7afb1763129748368a7f6e08fa892c3
+ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74249710"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575338"
 ---
 # <a name="using-table-valued-parameters"></a>Como usar parâmetros com valor de tabela
 
@@ -127,7 +127,7 @@ pStmt.execute();
   
 ## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>Passando um parâmetro com valor de tabela como um objeto SQLServerDataTable  
 
-Do Microsoft JDBC Driver 6.0 para SQL Server em diante, a classe SQLServerDataTable representa uma tabela na memória de dados relacionais. Este exemplo demonstra como construir um parâmetro com valor de tabela com base em dados na memória usando o objeto SQLServerDataTable. O código cria primeiro um objeto SQLServerDataTable, define seu esquema e popula a tabela usando dados. Em seguida, o código configura um SQLServerPreparedStatement que passa essa tabela de dados como um parâmetro com valor de tabela para o SQL Server.  
+Do Microsoft JDBC Driver 6.0 para SQL Server em diante, a classe SQLServerDataTable representa uma tabela na memória de dados relacionais. Este exemplo demonstra como construir um parâmetro com valor de tabela com base em dados na memória usando o objeto SQLServerDataTable. Primeiramente, o código cria um objeto SQLServerDataTable, define seu esquema e preenche a tabela usando dados. Em seguida, o código configura um SQLServerPreparedStatement que passa essa tabela de dados como um parâmetro com valor de tabela para o SQL Server.  
 
 ```java
 /* Assumes connection is an active Connection object. */
@@ -156,7 +156,7 @@ pStmt.execute();
   
 ## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>Passando um parâmetro com valor de tabela como um objeto ResultSet  
 
-Este exemplo demonstra como transmitir linhas de dados de um ResultSet para um parâmetro com valor de tabela. O código recupera primeiro os dados de uma tabela de origem em um objeto criar um SQLServerDataTable, define seu esquema e popula a tabela usando dados. Em seguida, o código configura um SQLServerPreparedStatement que passa essa tabela de dados como um parâmetro com valor de tabela para o SQL Server.  
+Este exemplo demonstra como transmitir linhas de dados de um ResultSet para um parâmetro com valor de tabela. Primeiramente, o código recupera os dados de uma tabela de origem em um objeto SQLServerDataTable, define seu esquema e preenche a tabela usando dados. Em seguida, o código configura um SQLServerPreparedStatement que passa essa tabela de dados como um parâmetro com valor de tabela para o SQL Server.  
 
 ```java
 /* Assumes connection is an active Connection object. */

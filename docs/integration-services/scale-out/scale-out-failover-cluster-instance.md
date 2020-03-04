@@ -1,5 +1,5 @@
 ---
-title: Suporte do SSIS (SQL Server Integration Services) Scale Out para alta disponibilidade por meio da instância de cluster de failover do SQL Server | Microsoft Docs
+title: Suporte do Scale Out para alta disponibilidade por meio da instância de cluster de failover do SQL Server | Microsoft Docs
 description: Este artigo descreve como configurar o SSIS Scale Out para alta disponibilidade com a instância de cluster de failover do SQL Server
 ms.custom: performance
 ms.date: 04/10/2018
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 5c4d5cc303d297a21b730abc30e10b85c65cc3d2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ba171a1ec1082bbcedd77bd5c7bb7a666efd3d04
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68811202"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903793"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Suporte do Scale Out para alta disponibilidade por meio da instância de cluster de failover do SQL Server
 
@@ -25,7 +25,7 @@ ms.locfileid: "68811202"
 
 Para configurar a alta disponibilidade do lado do Mestre do Scale Out com a instância de cluster de failover do SQL Server, siga estas etapas:
 
-## <a name="1-prerequisites"></a>1. Prerequisites
+## <a name="1-prerequisites"></a>1. Pré-requisitos
 Configurar um cluster de failover do Windows. Confira a postagem no blog [Instalando o recurso Cluster de Failover e as Ferramentas para o Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) para obter instruções. Instale o recurso e as ferramentas em todos os nós de cluster.
 
 ## <a name="2-install-sql-server-failover-cluster"></a>2. Instalar um cluster de failover do SQL Server
