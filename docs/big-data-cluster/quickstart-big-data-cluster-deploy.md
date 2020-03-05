@@ -27,7 +27,7 @@ Neste tutorial, use um script de implantação Python de exemplo para implantar 
 
 A implantação padrão de cluster de Big Data usada aqui consiste em uma instância do SQL mestre, uma instância do pool de computação, duas instâncias do pool de dados e duas instâncias do pool de armazenamento. Os dados são persistidos usando volumes persistentes do Kubernetes que usam as classes de armazenamento padrão do AKS. A configuração padrão usada neste tutorial é adequada para ambientes de desenvolvimento/teste.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Uma assinatura do Azure.
 - [Ferramentas de Big Data](deploy-big-data-tools.md):

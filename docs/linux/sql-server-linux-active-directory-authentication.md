@@ -36,7 +36,7 @@ Este tutorial é composto pelas seguintes etapas:
 > * Criar logons baseados em AD no Transact-SQL
 > * Conectar-se ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando a autenticação do AD
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de iniciar a Autenticação do AD, é necessário:
 
