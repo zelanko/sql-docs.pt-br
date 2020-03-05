@@ -18,12 +18,12 @@ ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
-ms.openlocfilehash: 372d3a1b5722b1a19e9560fe92f61e45b6744ace
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: a463fea7a70b5e01c26a6ff5e93c1c8c1dab32ea
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78180101"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288944"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations (Transact-SQL)
 
@@ -38,7 +38,7 @@ Contém uma linha por configuração.
 |**value**|**sqlvariant**|O valor definido para esta opção de configuração para a réplica primária.|
 |**value_for_secondary**|**sqlvariant**|O valor definido para esta opção de configuração para as réplicas secundárias.|
 |**is_value_default**|**bit** |Especifica se o valor definido é o valor padrão.|
-|**dw_compatibility_level**|**int**|O nível de compatibilidade do banco de dados.  Padrão = 0 (automático)|
+|**dw_compatibility_level**|**int**|O nível de compatibilidade (versão prévia) do banco de dados.  Padrão = 0 (automático)|
 
 ## <a name="Permissions"></a> Permissões
 

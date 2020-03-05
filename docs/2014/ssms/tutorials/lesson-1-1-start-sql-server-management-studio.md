@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd7fed6fff4ddd55ef56e4c5b342c56b6c2f462f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632794"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288990"
 ---
 # <a name="start-sql-server-management-studio"></a>Iniciar o SQL Server Management Studio
   Para iniciar este tutorial, vamos olhar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "73632794"
 1.  No menu **Iniciar** , aponte para **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e clique em **SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  O [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] não é instalado por padrão. Se o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] não estiver disponível, instale-o executando a Instalação. O [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] não está disponível com o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]O Express está disponível como um download gratuito no [centro de download da Microsoft](https://www.microsoft.com/download/details.aspx?id=7593), mas tem uma interface do usuário diferente da descrita neste tutorial.  
+    >  O [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] não é instalado por padrão. Se o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] não estiver disponível, instale-o executando a Instalação. O [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] não está disponível com o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]O Express está disponível como um download gratuito no [centro de download da Microsoft](https://www.microsoft.com/download/details.aspx?id=14630), mas tem uma interface do usuário diferente da descrita neste tutorial.  
   
 2.  Na caixa de diálogo **Conectar ao Servidor** , verifique as configurações padrão e clique em **Conectar**. Para se conectar, a caixa **nome do servidor** deve conter o nome do computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] onde o está instalado. Se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] for uma instância nomeada, a caixa **nome do servidor** também deverá conter o nome da instância no \< *computer_name*>\\<*instance_name*>.  
   

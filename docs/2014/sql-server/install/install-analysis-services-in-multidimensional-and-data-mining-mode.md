@@ -16,12 +16,12 @@ ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 2353d2f623a5aa0e0f1f5c25710724f836093998
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 002a4ce66108622ce5efcf33231edaed9cd1c99b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68890380"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280833"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Instalar o Analysis Services em modo multidimensional e de mineração de dados
   O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece funcionalidade de mineração de dados e OLAP (processamento analítico online) para aplicativos de business intelligence. Nesta versão, o suporte para bancos de dados OLAP e modelos de Data Mining está disponível quando você [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instala o no *modo multidimensional*. O modo multidimensional é um dos três modos do servidor em que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executa. Esse é o modo padrão. Se você instalar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando valores padrão, obterá uma instância que executa bancos de dados multidimensionais e modelos de mineração de dados.  
@@ -67,7 +67,7 @@ ms.locfileid: "68890380"
   
  [Determinar o modo de servidor de uma instância de Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)  
   
- [SQL Server suplementos de mineração de dados](https://go.microsoft.com/fwlink/?LinkId=197091)  
+ [SQL Server suplementos de mineração de dados](https://www.microsoft.com/download/details.aspx?id=35578)  
   
  Por padrão, os bancos de dados de exemplo, o código de exemplo e os suplementos de aplicativos cliente não são instalados como parte da Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para instalar bancos de dados e código de exemplo, veja o [site CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
   
