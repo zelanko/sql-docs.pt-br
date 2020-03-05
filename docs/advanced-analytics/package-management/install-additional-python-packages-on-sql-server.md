@@ -27,7 +27,7 @@ Para obter mais informações sobre a localização e os caminhos de instalaçã
 > [!NOTE]
 > O comando de Python padrão `pip install` não é recomendado para adicionar pacotes de Python do SQL Server 2019. Em vez disso, use **sqlmlutils**, conforme descrito neste artigo.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 + Você precisa ter os [Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md) instalados com a opção de linguagem do Python.
 
@@ -115,7 +115,7 @@ sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/te
 
 ## <a name="use-the-package-in-sql-server"></a>Usar o pacote no SQL Server
 
-Agora, você pode usar o pacote em um script de Python no SQL Server. Por exemplo:
+Agora, você pode usar o pacote em um script de Python no SQL Server. Por exemplo: 
 
 ```python
 EXECUTE sp_execute_external_script

@@ -24,7 +24,7 @@ O PolyBase no SQL Server 2019 permite que você se conecte a fontes de dados com
 
 Este artigo fornece alguns exemplos usando um driver ODBC. Confira se há exemplos específicos com seu provedor ODBC. Veja a documentação do driver ODBC da fonte de dados para determinar as opções de cadeia de conexão apropriadas. Os exemplos neste artigo podem não se aplicar a nenhum driver ODBC específico.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 >[!NOTE]
 >Este recurso requer o SQL Server no Windows.

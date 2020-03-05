@@ -30,7 +30,7 @@ Este artigo descreve as etapas para implantar o Kubernetes no AKS usando a CLI d
 > [!TIP]
 > Você também pode criar o script da implantação do AKS e de um cluster de Big Data em uma única etapa. Para obter mais informações, confira como fazer isso em um [script Python](quickstart-big-data-cluster-deploy.md) ou em um [notebook](deploy-notebooks.md) do Azure Data Studio.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - [Implantar as ferramentas de Big Data do SQL Server 2019](deploy-big-data-tools.md):
    - **Kubectl**

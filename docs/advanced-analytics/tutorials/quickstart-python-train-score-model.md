@@ -31,7 +31,7 @@ Ao concluir este início rápido, você aprenderá:
 > - Como passar entradas para seu código por meio de entradas no procedimento armazenado
 > - Como os procedimentos armazenados são usados para operacionalizar os modelos
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Este início rápido requer acesso a uma instância do SQL Server que tenha os [Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md) com a linguagem Python instalada.
 

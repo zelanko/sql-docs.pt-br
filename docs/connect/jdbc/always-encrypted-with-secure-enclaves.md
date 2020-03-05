@@ -24,7 +24,7 @@ Esta página fornece informações sobre como desenvolver aplicativos do Java us
 
 Os enclaves seguros são uma adição ao recurso existente do [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md). A finalidade dos enclaves seguros é resolver as limitações ao trabalhar usando dados do Always Encrypted. Anteriormente, os usuários podiam executar apenas comparações de igualdade nos dados do Always Encrypted e tinham que recuperar e descriptografar os dados para executar outras operações. Os enclaves seguros solucionam essas limitações, permitindo realizar cálculos em dados de texto não criptografado em um enclave seguro no lado do servidor. Um enclave seguro é uma região protegida de memória dentro do processo do SQL Server e atua como um ambiente de execução confiável para o processamento de dados confidenciais dentro do mecanismo do SQL Server. Um enclave seguro é exibido como uma caixa preta para o restante do SQL Server e outros processos no computador de hospedagem. Não há nenhuma maneira de exibir os dados ou o código dentro do enclave de fora, mesmo com um depurador.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 - O Microsoft JDBC Driver 8.2 (ou superior ) para SQL Server deve estar instalado em seu computador de desenvolvimento. 
 
 > [!Note]

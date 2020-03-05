@@ -8520,8 +8520,6 @@
                 - name: Editores de texto e consulta
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
-                    - name: Editor de Consultas do Mecanismo de Banco de Dados
-                      href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                     - name: Editor de XML
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
                     - name: Codificação por cores no Editor de Consultas
@@ -9023,6 +9021,8 @@
               items:
                 - name: Ajuda de F1 para conexões do servidor (SSMS)
                   href: ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+                - name: Editor de Consultas do Mecanismo de Banco de Dados
+                  href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                 - name: Conectar ao Armazenamento do Microsoft Azure
                   href: ssms/f1-help/connect-to-microsoft-azure-storage.md
                 - name: Conectar a qualquer componente do SQL Server a partir do SQL Server Management Studio

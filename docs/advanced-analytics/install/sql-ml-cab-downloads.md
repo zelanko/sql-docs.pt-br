@@ -30,7 +30,7 @@ Baixe arquivos CAB do Python e do R para o SQL Server 2016 R Services. Esses arq
 
 Abaixo, você encontrará links de download para os arquivos CAB de cada atualização cumulativa. Para obter mais informações sobre instalações offline, confira [Instalar componentes de aprendizado de máquina do SQL Server sem acesso à Internet](sql-ml-component-install-without-internet-access.md#apply-cu).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Comece com uma instalação de linha de base. Nos Serviços de Machine Learning do SQL Server, a versão inicial é a instalação de linha de base. 

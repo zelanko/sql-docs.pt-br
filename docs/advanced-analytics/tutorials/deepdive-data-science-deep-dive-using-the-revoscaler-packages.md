@@ -23,7 +23,7 @@ Neste tutorial de várias partes, você conhecerá uma variedade de funções do
 
 O [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) é um pacote R da Microsoft que fornece processamento paralelo e distribuído para cargas de trabalho de ciência de dados e de aprendizado de máquina. Para o desenvolvimento do R no SQL Server, **RevoScaleR** é um dos principais pacotes internos, com funções para criar objetos de fonte de dados, definir um contexto de computação, gerenciar pacotes e o mais importante: trabalhar com os dados de ponta a ponta, de importação a visualização e análise. Os algoritmos de Machine Learning no SQL Server têm uma dependência de fontes de dados **RevoScaleR**. Considerando a importância do **RevoScaleR**, saber quando e como chamar suas funções é uma habilidade essencial. 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 + [Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md) com o recurso R ou [SQL Server R Services (no banco de dados)](../install/sql-r-services-windows-install.md)
   

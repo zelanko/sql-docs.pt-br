@@ -21,7 +21,7 @@ ms.locfileid: "77256749"
 
 Este artigo descreve como configurar um [Grupo de escala horizontal do PolyBase](polybase-scale-out-groups.md) no Windows. Isso cria um cluster de instâncias do SQL Server para processar grandes conjuntos de dados de fontes de dados externas, como Hadoop e Armazenamento de Blobs do Azure, de maneira expandir para melhor desempenho de consulta.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
   
 - Mais de um computador no mesmo domínio  
   
