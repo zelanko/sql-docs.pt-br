@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72797844"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339059"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Ouvintes de grupo de disponibilidade, conectividade de cliente e failover de aplicativo (SQL Server)
   Este tópico contém informações sobre considerações de conectividade de cliente [!INCLUDE[ssHADR](../includes/sshadr-md.md)] e funcionalidade de failover de aplicativo.  

@@ -13,11 +13,11 @@ ms.author: jtoland
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: f82aba87632abea4ac5fbc8b54daa6dfd0eb5b4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76831866"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338311"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>Criar relatórios de análise no Assistente para Experimentos de Banco de Dados (SQL Server)
 

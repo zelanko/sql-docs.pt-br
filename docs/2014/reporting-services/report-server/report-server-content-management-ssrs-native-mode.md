@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74ec775d958c6842f284dea5bc90e5d45955423b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78175041"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339178"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gerenciamento do Conteúdo do Servidor de Relatório (Modo Nativo SSRS)
   No [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], o gerenciamento de conteúdo se refere ao gerenciamento de itens de servidor de relatório. Todos os itens podem ser gerenciados independentemente um do outro por propriedades e configurações de segurança. Qualquer item pode ser movido para um local diferente no namespace de pasta de servidor de relatório. Para gerenciar os itens com eficiência, você precisa saber quais tarefas são executadas por um gerenciador de conteúdo.

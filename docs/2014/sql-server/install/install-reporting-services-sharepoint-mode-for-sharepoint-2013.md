@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8874d4c57e2fb7b94e4efac44c90e93865d2b40f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72798343"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339182"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Instalar o Reporting Services SharePoint Mode para SharePoint 2013
   Os procedimentos deste tópico conduzirão você pela instalação de servidor único do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo do SharePoint. As etapas incluem a execução do assistente de instalação do SQL Server, bem como as tarefas de configuração que usam a Administração Central do SharePoint. O tópico também pode ser usado para procedimentos individuais para atualizar uma instalação existente, por exemplo, para criar um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -62,8 +62,8 @@ ms.locfileid: "72798343"
 |**uma**|Serviço do SharePoint instalado da instalação do SQL Server. Você pode criar um ou mais aplicativos de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |**2**|
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o suplemento para produtos do SharePoint fornece os componentes de interface do usuário nos servidores do SharePoint.|  
-|**(3)**|O Aplicativo dos Serviços do Excel usado pelo Power View e PowerPivot.|  
-|**(4)**|Aplicativo de serviço PowerPivot.|  
+|**Beta**|O Aplicativo dos Serviços do Excel usado pelo Power View e PowerPivot.|  
+|**quatro**|Aplicativo de serviço PowerPivot.|  
   
  ![Implantação de servidor de modo único do SSRS SharePoint](../../../2014/sql-server/install/media/rs-sharepoint-1server-deployment.gif "Implantação de servidor de modo único do SSRS SharePoint")  
   
@@ -122,7 +122,7 @@ ms.locfileid: "72798343"
   
     -   **Reporting Services suplemento para produtos do SharePoint**.  
   
-         ![Observação](../../../2014/reporting-services/media/rs-fyinote.png "note") A opção do assistente de instalação para instalar o suplemento é nova com a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versão.  
+         ![Observação](../../../2014/reporting-services/media/rs-fyinote.png "observação") A opção do assistente de instalação para instalar o suplemento é nova com a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versão.  
   
     -   Se você ainda não tiver uma instância do SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)], também poderá selecionar **Serviços do Mecanismo de Banco de Dados** e **Ferramentas de Gerenciamento Completas** para um ambiente completo.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "72798343"
   
 12. Se você selecionou os serviços do Mecanismo de Banco de Dados, aceite a instância padrão de **MSSQLSERVER** na página **Configuração da Instância** e clique em **Avançar**.  
   
-     ![Observação](../../../2014/reporting-services/media/rs-fyinote.png "note") A arquitetura de serviço do Reporting Services SharePoint não se baseia em um SQL Server "instância", como era a arquitetura de Reporting Services anterior.  
+     ![Observação](../../../2014/reporting-services/media/rs-fyinote.png "observação") A arquitetura de serviço do Reporting Services SharePoint não se baseia em um SQL Server "instância", como era a arquitetura de Reporting Services anterior.  
   
 13. Examine a página **Requisitos de Espaço em Disco** e clique em **Avançar**.  
   
@@ -413,7 +413,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
 ## <a name="see-also"></a>Consulte Também  
  [Cmdlets do PowerShell para o modo do Reporting Services SharePoint](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [Atualizar e migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [Atualizar e migrar o Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [Roteiro de conteúdo: configurar e configurar o SharePoint Server e o SQL Server BI](https://technet.microsoft.com/library/dn205112.aspx)   
  [Recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Serviços do Reporting Services SharePoint e aplicativos de serviço](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)

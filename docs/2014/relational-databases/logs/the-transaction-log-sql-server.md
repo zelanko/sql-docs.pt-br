@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63144612"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338270"
 ---
 # <a name="the-transaction-log-sql-server"></a>O log de transações (SQL Server)
   Todo banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem um log de transações que registra todas as transações e as modificações de banco de dados feitas por cada transação. O log de transações deve ser truncado regularmente para impedir o preenchimento. No entanto, alguns fatores podem atrasar o truncamento de log e, portanto, o monitoramento do tamanho do log é importante. Algumas operações podem ser registradas em log minimamente para reduzir o impacto no tamanho do log de transações.  

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 033999701141387ee63712a8a9ce055ad3f55cb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68661304"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339109"
 ---
 # <a name="specify-merge-replication-properties"></a>Especificar propriedades de replicação de mesclagem
 Este tópico explica como especificar várias propriedades para sua replicação de mesclagem. 

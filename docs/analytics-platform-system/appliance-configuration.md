@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74401462"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340459"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Listas de verificação de configuração do dispositivo para o Analytics Platform System
 Fornece listas de verificação para as tarefas necessárias para configurar o sistema de plataforma de análise para seu próprio ambiente. Essas tarefas de configuração são necessárias para que você possa usar o dispositivo.  
@@ -49,7 +49,7 @@ O**Configuration Manager** de SQL Server PDW (PDWCM) é uma ferramenta de admini
   
 Use **Configuration Manager** para executar as seguintes tarefas de configuração.  
   
-|Tarefa de configuração|DESCRIÇÃO|  
+|Tarefa de configuração|Descrição|  
 |----------------------|---------------|  
 |Familiarize-se com os nomes de componentes físicos|[Componentes físicos do PDW e da malha de dispositivos &#40;Analytics Platform System&#41;](pdw-and-appliance-fabric-physical-components.md)|  
 |Iniciar SQL Server PDW Configuration Manager|[Inicie o Configuration Manager &#40;o sistema de plataforma de análise&#41;](launch-the-configuration-manager.md)|  
@@ -67,7 +67,7 @@ Use **Configuration Manager** para executar as seguintes tarefas de configuraç�
 ## <a name="AddTasks"></a>Executar tarefas de configuração adicionais  
 Depois de executar as tarefas de **Configuration Manager** , execute a lista de tarefas de configuração adicionais a seguir. Algumas dessas tarefas são opcionais.  
   
-|Tarefa de configuração|DESCRIÇÃO|  
+|Tarefa de configuração|Descrição|  
 |----------------------|---------------|  
 |Softwares antivírus de terceiros podem ser instalados e configurados no dispositivo SQL Server PDW para nós voltados para o público.<br /><br />(Opcional)|Para obter mais informações, consulte [software antivírus &#40;Analytics Platform System&#41;](antivirus-software.md).|  
 |A senha do DSRM pode ser alterada.<br /><br />(Opcional)|Para obter mais informações, consulte [Definir senha de administrador para fazer logon em nós do AD no Modo de Restauração dos Serviços de Diretório &#40;DSRM&#41; &#40;&#41;do sistema de plataforma de análise ](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md).|  

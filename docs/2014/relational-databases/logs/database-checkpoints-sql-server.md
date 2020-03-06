@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68206103"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339304"
 ---
 # <a name="database-checkpoints-sql-server"></a>Pontos de verificação de banco de dados (SQL Server)
   Este tópico fornece uma visão geral dos pontos de verificação de banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um ponto de *verificação* cria um ponto válido conhecido do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qual o pode começar a aplicar as alterações contidas no log durante a recuperação após um desligamento ou falha inesperado.  
@@ -42,7 +42,7 @@ ms.locfileid: "68206103"
   
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] oferece suporte para vários tipos de pontos de verificação: automáticos, indiretos, manuais e internos. A tabela a seguir resume os tipos de pontos de verificação.  
   
-|Nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interface|DESCRIÇÃO|  
+|Nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interface|Descrição|  
 |----------|----------------------------------|-----------------|  
 |Automático|EXEC sp_configure **'`recovery interval`', '*`seconds`*'**|Emitido automaticamente em segundo plano para atender ao limite de tempo superior sugerido pela `recovery interval` opção de configuração de servidor. Pontos de verificação automáticos executados até a conclusão.  Os pontos de verificação automáticos são acelerados com base no número de gravações pendentes e se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] detecta um aumento na latência de gravação acima de 20 milissegundos.<br /><br /> Para obter mais informações, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
 |Indireto.|ALTERAR BANCO DE DADOS... Definir TARGET_RECOVERY_TIME **=** _target_recovery_time_ {segundos &#124; minutos}|Emitido em segundo plano para cumprir um horário de recuperação de destino especificado pelo usuário para um determinado banco de dados. A hora de recuperação de destino padrão é 0, o que faz com que a heurística de ponto de verificação automático seja usada no banco de dados. Se você usou ALTER DATABASE para definir TARGET_RECOVERY_TIME a >0, esse valor será usado, em vez do intervalo de recuperação especificado para a instância do servidor.<br /><br /> Para obter mais informações, consulte [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  

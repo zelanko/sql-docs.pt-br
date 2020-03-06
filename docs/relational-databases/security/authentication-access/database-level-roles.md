@@ -39,11 +39,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
-ms.translationtype: HT
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68742840"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339444"
 ---
 # <a name="database-level-roles"></a>Funções de nível de banco de dados
 
@@ -86,7 +86,7 @@ As permissões atribuídas às funções de banco de dados fixas não podem ser 
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-includesssds_mdincludessssds-mdmd-and-includesssdw_mdincludessssdw-mdmd"></a>Funções especiais para [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
+## <a name="special-roles-for-sssds_md-and-sssdw_md"></a>Funções especiais para [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
 Essas funções de banco de dados existem somente no banco de dados mestre virtual. As permissões são restritas às ações executadas no mestre. Somente os usuários de banco de dados no mestre podem ser adicionados a essas funções. Logons não podem ser adicionados a essas funções, mas é possível criar usuários com base nos logons e esses usuários podem ser adicionados às funções. Os usuários de banco de dados contidos no mestre também podem ser adicionados a essas funções. No entanto, os usuários de banco de dados adicionados contidos na função **dbmanager** no mestre não podem ser usados para criar novos bancos de dados.
 

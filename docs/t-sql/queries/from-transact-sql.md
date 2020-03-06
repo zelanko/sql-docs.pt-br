@@ -35,11 +35,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
-ms.translationtype: HT
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73981977"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340328"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Cláusula FROM mais JOIN, APPLY, PIVOT (Transact-SQL)
 
@@ -697,7 +697,7 @@ FOR SYSTEM_TIME FROM @AsOfFrom TO @AsOfTo
 WHERE ManagerID = 5;
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="n-using-the-inner-join-syntax"></a>N. Usando a sintaxe de INNER JOIN  
  O exemplo a seguir retorna as colunas `SalesOrderNumber`, `ProductKey` e `EnglishProductName` das tabelas `FactInternetSales` e `DimProduct`, em que a chave de junção, `ProductKey`, é correspondente em ambas as tabelas. As colunas `SalesOrderNumber` e `EnglishProductName` existem em uma das tabelas e, portanto, não é necessário especificar o alias da tabela com essas colunas, conforme mostrado; esses aliases são incluídos para facilitar a leitura. A palavra **AS** antes de um alias de nome não é obrigatória, mas é recomendada para facilitar a leitura e estar em conformidade com o padrão ANSI.  

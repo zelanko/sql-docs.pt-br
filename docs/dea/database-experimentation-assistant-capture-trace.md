@@ -13,11 +13,11 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76831541"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338312"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturar um rastreamento no Assistente para Experimentos de Banco de Dados
 
