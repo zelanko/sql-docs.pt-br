@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d79007dccddef604315c57beca1e1274d23c6f0f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74095690"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339664"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guia de Controle de Versão de Linha e Bloqueio de Transações
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -258,7 +258,7 @@ GO
   
  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oferece suporte a uma variedade de controles de simultaneidade. Os usuários especificam o tipo de controle de simultaneidade selecionando níveis de isolamento da transação para conexões ou opções de simultaneidade em cursores. Esses atributos podem ser definidos usando instruções [!INCLUDE[tsql](../includes/tsql-md.md)], ou pelas propriedades e atributos de APIs (interfaces de programação de aplicativo) de banco de dados, como ADO, ADO.NET, OLE DB e ODBC.  
   
-#### <a name="isolation-levels-in-the-includessdenoversionincludesssdenoversion-mdmd"></a>Níveis de Isolamento no [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
+#### <a name="isolation-levels-in-the-ssdenoversion"></a>Níveis de Isolamento no [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
  As transações especificam um nível de isolamento que define o grau em que uma transação deve ser isolada contra modificações de recursos ou de dados feitas por outras transações. Os níveis de isolamento são descritos em termos de quais efeitos colaterais de simultaneidade são permitidos, como leituras sujas ou leituras fantasma.  
   
  Níveis de isolamento da transação controlam:  
@@ -275,7 +275,7 @@ GO
   
  Um nível de isolamento inferior aumenta a capacidade de muitos usuários acessarem dados ao mesmo tempo, mas aumenta o número de efeitos de simultaneidade (como leituras sujas ou atualizações perdidas) que os usuários podem encontrar. Inversamente, um nível de isolamento mais alto reduz os tipos de efeito de simultaneidade que os usuários podem encontrar, mas requer mais recursos do sistema e aumenta as chances de uma transação bloquear outra. Escolher o nível de isolamento apropriado depende de equilibrar os requisitos de integridade de dados do aplicativo em relação à sobrecarga de cada nível de isolamento. O nível de isolamento mais alto, serializável, garante que uma transação recuperará exatamente os mesmos dados toda vez que repetir uma operação de leitura, mas faz isto executando um nível de bloqueio que provavelmente causará impacto em outros usuários em sistemas multiusuários. O mais baixo nível de isolamento, leitura de dados não confirmados, pode recuperar dados que foram modificados mas não foram confirmados por outras transações. Todos os efeitos colaterais de simultaneidade podem acontecer em leitura não confirmada, mas não há nenhum bloqueio de leitura ou controle de versão, assim a sobrecarga é minimizada.  
   
-##### <a name="includessdenoversionincludesssdenoversion-mdmd-isolation-levels"></a>Níveis de Isolamento [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
+##### <a name="ssdenoversion-isolation-levels"></a>Níveis de Isolamento [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
  O padrão ISO define os seguintes níveis de isolamento, todos têm suporte pelo [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]:  
   
 |Nível de Isolamento|Definição|  
