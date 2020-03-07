@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68115273"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338368"
 ---
 # <a name="memory-management-architecture-guide"></a>guia de arquitetura de gerenciamento de memória
 
@@ -47,7 +47,7 @@ Uma das principais metas de design de todo o software de banco de dados é minim
 > [!NOTE]
 > Em um sistema amplamente carregado sob pressão de memória, as consultas com junção de mesclagem, classificação e bitmap no plano de consulta podem cancelar o bitmap quando as consultas não adquirem a memória mínima necessária para o bitmap. Isso pode afetar o desempenho da consulta e, se o processo de classificação não conseguir se ajustar na memória, poderá aumentar o uso de tabelas de trabalho no banco de dados tempdb, aumentando o tempdb. Para resolver esse problema, adicione memória física ou ajuste as consultas para usar um plano de consulta diferente e mais rápido.
  
-### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>Fornecendo a quantidade máxima de memória ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+### <a name="providing-the-maximum-amount-of-memory-to-ssnoversion"></a>Fornecendo a quantidade máxima de memória ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 Ao usar o AWE e o privilégio Páginas Bloqueadas na Memória, você pode fornecer as quantidades de memória a seguir para o Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . 
 
@@ -72,7 +72,7 @@ Ao usar o AWE e o privilégio Páginas Bloqueadas na Memória, você pode fornec
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 
-## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Alterações no gerenciamento de memória a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory-management-starting-with-sssql11"></a>Alterações no gerenciamento de memória a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), a alocação de memória era feita usando cinco mecanismos diferentes:
 -  O **SPA (alocador de página única)** , incluindo somente as alocações de memória que eram menores ou iguais a 8 KB no processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. As opções de configuração *max server memory (MB)* e *min server memory (MB)* determinavam os limites de memória física que o SPA consumia. O pool de buffers era simultaneamente o mecanismo do SPA e o maior consumidor de alocações de uma página.
@@ -107,7 +107,7 @@ Esse comportamento geralmente é observado durante as operações a seguir:
 -  Rastreamento de operações que precisam armazenar grandes parâmetros de entrada.
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
-## <a name="changes-to-memory_to_reserve-starting-with-includesssql11includessssql11-mdmd"></a>Alterações em “memory_to_reserve” a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory_to_reserve-starting-with-sssql11"></a>Alterações em “memory_to_reserve” a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 Nas versões anteriores do SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), o gerenciador de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deixava de lado uma parte do VAS (espaço de endereço virtual) do processo usado pelo **MPA (Alocador de Várias Páginas)** , pelo **Alocador de CLR**, pelas alocações de memória das **pilhas de threads** no processo do SQL Server e pelas **DWA (Alocações Diretas do Windows)** . Esta parte do espaço de endereço virtual também é conhecida como região “Mem-To-Leave” ou como “Pool de buffers sem memória”.
 
 O espaço de endereço virtual reservado para essas alocações é determinado pela opção de configuração _**memory\_to\_reserve**_ . O valor padrão que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa é 256 MB. Para substituir o valor padrão, use o parâmetro de inicialização [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Consulte a página de documentação em [Opções de inicialização do serviço Mecanismo de Banco de Dados](../database-engine/configure-windows/database-engine-service-startup-options.md) para obter informações sobre o parâmetro de inicialização *-g*.
