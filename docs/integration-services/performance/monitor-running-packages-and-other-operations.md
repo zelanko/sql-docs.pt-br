@@ -14,11 +14,11 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71295795"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338340"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Monitorar a execução de pacotes e outras operações
 
@@ -139,7 +139,7 @@ ms.locfileid: "71295795"
   
  O relatório exibe as seções de informações a seguir.  
   
-|Seção|DESCRIÇÃO|  
+|Seção|Descrição|  
 |-------------|-----------------|  
 |**Informações de Execução**|Mostra o número de execuções que estão em estados diferentes (com falha, executando, teve sucesso, outros) nas últimas 24 horas.|  
 |**Informações do Pacote**|Mostra o número total de pacotes que foram executados nas últimas 24 horas.|  
@@ -153,7 +153,7 @@ ms.locfileid: "71295795"
   
  O relatório exibe as seções de informações a seguir.  
   
-|Seção|DESCRIÇÃO|  
+|Seção|Descrição|  
 |-------------|-----------------|  
 |Filtrar|Mostra o filtro atual aplicado ao relatório, como o intervalo de horas de início.|  
 |Informações de Execução|Mostra a hora de início, a hora de término e a duração para cada execução do pacote. Você pode exibir uma lista de valores de parâmetros que foram usados com uma execução de pacote, como valores que foram transmitidos a um pacote filho usando a tarefa Executar Pacote. Para exibir a lista de parâmetros, clique em Visão Geral.|  
@@ -167,7 +167,7 @@ ms.locfileid: "71295795"
   
  O relatório exibe as seções de informações a seguir.  
   
-|Seção|DESCRIÇÃO|  
+|Seção|Descrição|  
 |-------------|-----------------|  
 |Filtrar|Mostra o filtro atual aplicado ao relatório, como conexões com uma cadeia de caracteres especificada e o intervalo de **Hora da Última Falha** .<br /><br /> Você define o intervalo de **Hora da Última Falha** para exibir apenas as falhas de conexão que ocorreram durante um intervalo de datas. O intervalo pode abranger vários dias, meses ou anos.|  
 |Detalhes|Mostra a cadeia de conexão, o número de execuções em que uma conexão falhou, e a data da última falha na conexão.|  
