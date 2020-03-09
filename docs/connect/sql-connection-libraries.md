@@ -1,19 +1,19 @@
 ---
 title: Bibliotecas de conexão para Bancos de Dados do Microsoft SQL | Microsoft Docs
 description: Fornece links para download de módulos que permitem a conexão ao Microsoft SQL Server e ao Banco de Dados SQL do Azure de uma ampla variedade de linguagens de programação do cliente.
-author: MightyPen
+author: RothJa
 ms.prod: sql
 ms.technology: ''
 ms.custom: ''
 ms.topic: article
-ms.date: 06/18/2018
-ms.author: genemi
-ms.openlocfilehash: 71254b937c4c0173af9e1549efb98a0b42f65e02
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.date: 03/05/2020
+ms.author: JRoth
+ms.openlocfilehash: eb842769490b521b248ed4114953b8d828fa80d3
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338607"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866397"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de conexão para bancos de dados do Microsoft SQL
 
@@ -23,7 +23,7 @@ Este artigo fornece links de download para módulos de conexão ou *drivers* que
 - MacOS
 - Windows
 
-#### <a name="oop-to-relational-mismatch"></a>Incompatibilidade de OOP para relacional
+**Incompatibilidade de OOP para relacional:**
 
 *Relacional*: Os programas cliente escritos em uma linguagem OOP (programação orientada a objeto) geralmente usam drivers SQL que retornam dados consultados em um formato mais relacional do que orientado a objetos. O C# usando ADO.NET é um exemplo. Às vezes, a incompatibilidade entre os formatos OOP e relacional torna o código OOP mais difícil de escrever e entender.
 
@@ -34,7 +34,6 @@ Este artigo destina seções separadas para esses dois tipos de drivers de conex
 <a name="anchor-20-drivers-relational-access" />
 
 ## <a name="drivers-for-relational-access"></a>Drivers para acesso relacional
-
 
 <!--
 Each given Microsoft Download Center page should be enhanced
@@ -49,22 +48,20 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
 
 | Linguagem | Baixar o driver do SQL |
 | :------- | :---------------------- |
-| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br /><br />[.NET Core para Linux-Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core para macOS](https://www.microsoft.com/net/core#macos)<br />[.NET Core para Windows](https://www.microsoft.com/net/core) |
+| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br /><br />[.NET Core para: Linux-Ubuntu, macOS, Windows](https://dotnet.microsoft.com/download) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Driver do Node.js, instruções de instalação](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |
 | Python | [pyodbc, instruções de instalação](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Baixar o ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Driver do Ruby, instruções de instalação](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Página de download do Ruby](https://rubyinstaller.org/downloads/) |
-| &nbsp; | <br /> |
+| &nbsp; | <br/> |
 
 <a name="anchor-40-drivers-orm-access" />
 
 ## <a name="drivers-for-orm-access"></a>Drivers para acesso de ORM
 
-
 A tabela a seguir lista exemplos de estruturas de ORM (mapeamento relacional de objeto) que os aplicativos cliente usam para se conectar aos bancos de dados do Microsoft SQL.
-
 
 | Linguagem | Download do driver de ORM |
 | :------- | :------------------ |
@@ -74,12 +71,12 @@ A tabela a seguir lista exemplos de estruturas de ORM (mapeamento relacional de 
 | Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
 | Python | [Django](https://www.djangoproject.com/) |
 | Ruby | [Ruby on Rails](https://rubyonrails.org/) |
-
+| &nbsp; | <br/> |
 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>Páginas da Web sobre criação de aplicativos
-[https://aka.ms/sqldev](https://aka.ms/sqldev) leva você a um conjunto de páginas da Web sobre *criação de aplicativos*. As páginas da Web fornecem informações sobre várias combinações de linguagem de programação, sistema operacional e driver de conexão SQL. Entre as informações fornecidas pelas páginas da Web sobre criação de aplicativos estão os seguintes itens:
+**[https://aka.ms/sqldev](https://aka.ms/sqldev)** leva você a um conjunto de páginas da Web sobre *criação de aplicativos*. As páginas da Web fornecem informações sobre várias combinações de linguagem de programação, sistema operacional e driver de conexão SQL. Entre as informações fornecidas pelas páginas da Web sobre criação de aplicativos estão os seguintes itens:
 
 - Detalhes sobre como começar do zero, para cada combinação de linguagem de programação + sistema operacional + driver.
     - Instruções para instalar os drivers de conexão SQL mais recentes.
@@ -88,18 +85,23 @@ A tabela a seguir lista exemplos de estruturas de ORM (mapeamento relacional de 
     - Exemplos de código ORM.
     - Demonstrações de índice Columnstore para um desempenho muito mais rápido.
 
-#### <a name="first-page-of-build-an-app-webpages"></a>Primeira página das páginas da Web sobre criação de aplicativos
-![Páginas da Web sobre criação de aplicativos, captura de tela da primeira página][image-ref-163-buildanapp-webpages-first-page]
+**Primeira das páginas da Web sobre criação de aplicativos:**  
+![Páginas da Web sobre criação de aplicativos, captura de tela da primeira página](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png)
 
-#### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Menu para Java – Ubuntu das páginas da Web sobre criação de aplicativos
-![Páginas da Web sobre criação de aplicativos, menu Java Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
+**Menu para Java – Ubuntu das páginas da Web sobre criação de aplicativos**  
+![Páginas da Web sobre criação de aplicativos, menu Java Ubuntu](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png)
 
 &nbsp;
 
 ## <a name="related-links"></a>Links relacionados
 - [Exemplos de código para se conectar ao Banco de Dados SQL do Azure na nuvem, com Java e outras linguagens](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
 
-<!-- Image references -->
+<!--
+Image references, **obsolete** markdown syntax alternative:
+
+![Build-an-app webpages, first page screenshot][image-ref-163-buildanapp-webpages-first-page]
+![Build-an-app webpages, menu Java Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
 
 [image-ref-163-buildanapp-webpages-first-page]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png
 [image-ref-167-buildanapp-webpages-menu-java-ubuntu]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png
+-->
