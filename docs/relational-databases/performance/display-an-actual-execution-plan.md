@@ -16,12 +16,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6e96322cdd6dcd310a550fa1cd94d80dba38738
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: eaa3002837dd19335abcc8383612bcb31642265e
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67946883"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256862"
 ---
 # <a name="display-an-actual-execution-plan"></a>Exibir um plano de execução real
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,3 +56,7 @@ ms.locfileid: "67946883"
 > [!NOTE] 
 > Como alternativa, use [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) para retornar informações do plano de execução para cada instrução depois de executá-las. Se usada em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], a guia *Resultados* terá um link para abrir o plano de execução em formato gráfico.   
 > Para obter mais informações, confira [Infraestrutura de Criação de Perfil de Consulta](../../relational-databases/performance/query-profiling-infrastructure.md).
+  
+## <a name="see-also"></a>Consulte Também  
+ [Planos de execução](../../relational-databases/performance/execution-plans.md)    
+ [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md)  

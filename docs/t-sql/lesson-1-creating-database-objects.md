@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial do T-SQL: criar e consultar objetos de banco de dados | Microsoft Docs'
+title: 'Tutorial de T-SQL: Criar e consultar objetos de banco de dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/30/2018
 ms.prod: sql
@@ -10,21 +10,21 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6e19142ab4d447678aedf6c841a74ed435eccea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4b2a0c7a298cda42940e08b532be0df39221a21b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257022"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280943"
 ---
-# <a name="lesson-1-create-and-query-database-objects"></a>Lição 1: criar e consultar objetos de banco de dados
+# <a name="lesson-1-create-and-query-database-objects"></a>Lição 1: Criar e consultar objetos de banco de dados
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Esta lição mostra como criar um banco de dados, criar uma tabela no banco de dados e, então, acessar e alterar os dados na tabela. Como esta lição é uma introdução ao uso de [!INCLUDE[tsql](../includes/tsql-md.md)], ela não usa nem descreve as várias opções disponíveis para essas instruções.  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] As instruções podem ser escritas e enviadas ao [!INCLUDE[ssDE](../includes/ssde-md.md)] das seguintes maneiras:  
   
--   Usando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Este tutorial pressupõe que você esteja usando o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], mas também é possível usar o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, que está disponível como um download gratuito no [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=7593).  
+-   Usando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Este tutorial pressupõe que você esteja usando o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], mas também é possível usar o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, que está disponível como um download gratuito no [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=14630).  
   
 -   Usando o [utilitário sqlcmd](../tools/sqlcmd-utility.md).  
   
@@ -34,13 +34,13 @@ O código é executado da mesma maneira no [!INCLUDE[ssDE](../includes/ssde-md.m
   
 Para executar [!INCLUDE[tsql](../includes/tsql-md.md)] instruções no [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], abra [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e conecte-se a uma instância de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 Para concluir este tutorial, você precisa de acesso ao SQL Server Management Studio e a uma instância do SQL Server. 
 
 - Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Se você não tiver acesso a uma instância do SQL Server, selecione sua plataforma nos links a seguir. Se você escolher Autenticação do SQL, use suas credenciais de logon do SQL Server.
-- **Windows**: [baixe o SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **Windows**: [Baixe o SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - **macOS**: [baixe o SQL Server 2017 no Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 ## <a name="create-a-database"></a>Criar um banco de dados
