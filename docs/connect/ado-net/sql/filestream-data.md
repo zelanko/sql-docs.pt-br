@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 602dfe9c96c1e8713b90c607806dd09ed16a37b6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e3e26a76522d1c1a99794076c5f152e6ec1e1f7d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247757"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896748"
 ---
 # <a name="filestream-data"></a>Dados do FILESTREAM
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 O atributo de armazenamento FILESTREAM é para dados binários (BLOB) armazenados em uma coluna varbinary(max). Antes do FILESTREAM, o armazenamento de dados binários exigia tratamento especial. Dados não estruturados, como documentos de texto, imagens e vídeos, geralmente são armazenados fora do banco de dados, o que dificulta o gerenciamento.
 

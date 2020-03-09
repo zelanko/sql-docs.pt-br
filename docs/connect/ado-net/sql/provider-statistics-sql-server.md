@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 837bb71e81ac2d2ead661915c332ad826c4f944f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76fc14c112d47f04fc790df118eea77f1bec42cb
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251191"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896603"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Estatísticas do provedor para SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 No .NET Framework versão 2.0 e versões posteriores e no .NET Core versão 1.0 e versões posteriores, o Provedor de Dados do Microsoft SqlClient para SQL Server dá suporte a estatísticas em tempo de execução. Você precisa habilitar as estatísticas configurando a propriedade <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> do objeto <xref:Microsoft.Data.SqlClient.SqlConnection> como `True` depois de criar um objeto de conexão válido. Depois que as estatísticas forem habilitadas, você poderá examiná-las como um "instantâneo no tempo" ao recuperar uma referência de <xref:System.Collections.IDictionary> por meio do método <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> do objeto <xref:Microsoft.Data.SqlClient.SqlConnection>. Você enumera os itens na lista como um conjunto de entradas de dicionário de pares de nome/valor. Esses pares de nome/valor não são ordenados. A qualquer momento, você pode chamar o método <xref:Microsoft.Data.SqlClient.SqlConnection.ResetStatistics%2A> do objeto <xref:Microsoft.Data.SqlClient.SqlConnection> para redefinir os contadores. Se a coleta de estatísticas não tiver sido habilitada, uma exceção não será gerada. Além disso, se <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> for chamado sem <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> ter sido chamado primeiro, os valores recuperados serão os valores iniciais para cada entrada. Se você habilitar estatísticas, execute seu aplicativo por um tempo e, em seguida, desabilite as estatísticas. Os valores recuperados refletirão os valores coletados até o ponto em que as estatísticas tiverem sido desabilitadas. Todos os valores estatísticos coletados são contabilizados por conexão.  
   

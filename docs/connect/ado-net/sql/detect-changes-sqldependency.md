@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 6a003670c15ac95b6f0a5f70d0997c1c854b089e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 90b11516e9fa8ed993792bfec2a77757249b696d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247818"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896986"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>Detectando alterações com SqlDependency
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Um objeto <xref:Microsoft.Data.SqlClient.SqlDependency> pode ser associado a um <xref:Microsoft.Data.SqlClient.SqlCommand> para detectar quando os resultados da consulta são diferentes dos recuperados originalmente. Você também pode atribuir um delegado ao evento `OnChange`, que será acionado quando os resultados forem alterados para um comando associado. Antes de executar o comando, você deve associar o <xref:Microsoft.Data.SqlClient.SqlDependency> a ele. A propriedade `HasChanges` do <xref:Microsoft.Data.SqlClient.SqlDependency> também pode ser usada para determinar se os resultados da consulta foram alterados desde que os dados foram recuperados pela primeira vez.
 

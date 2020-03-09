@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 83dca011087150eef5d8fdc948bb65cc6808830e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e8c5fbecb8892639e5e4e0cb608c3c4de0447508
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253376"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896017"
 ---
 # <a name="windows-applications-using-callbacks"></a>Aplicativos do Windows usando retornos de chamada
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Na maioria dos cenários de processamento assíncrono, você deseja iniciar uma operação de banco de dados e continuar executando outros processos sem esperar a conclusão da operação de banco de dados. No entanto, muitos cenários exigem fazer algo depois que a operação do banco de dados termina. Em aplicativos do Windows, por exemplo, você pode querer delegar a operação demorada para um thread em segundo plano enquanto permite que o thread de interface do usuário permaneça responsivo. No entanto, quando a operação de banco de dados é concluída, você deseja usar os resultados para preencher o formulário. A implementação desse tipo de cenário é melhor com um retorno de chamada.  
   

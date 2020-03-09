@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: e3b32e0d0224ee6402b69f112560127eb970b9ae
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: af4e3ff43499f32d276d27873211330bc28f0cc5
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75246958"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896279"
 ---
 # <a name="sql-server-security"></a>Segurança do SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 O SQL Server tem muitos recursos que oferecem suporte à criação de aplicativos de banco de dados seguros.  
   

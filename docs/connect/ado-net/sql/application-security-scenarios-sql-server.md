@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 2173a6aaf0f07ffaa50d87ed7563dca8022ceebc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76ed05f39cba61ea7f26deaef6cd38552b11f199
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75250971"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897078"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Cenários de segurança de aplicativo no SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Não há nenhuma maneira correta de criar um aplicativo cliente seguro do SQL Server. Cada aplicativo é único em seus requisitos, ambiente de implantação e população de usuários. Um aplicativo razoavelmente seguro, após ser inicialmente implantado, pode se tornar menos seguro ao longo do tempo. É impossível prever com alguma precisão quais as ameaças que podem surgir no futuro.  
   

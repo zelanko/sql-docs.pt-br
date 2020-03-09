@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 354b3ef1f0db45c64363d508d4bb055ee32d6416
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c7ace2feb39bcc3f5f257c0ac2c7360649cfc33c
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247827"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897006"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Espelhamento de banco de dados no SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 O espelhamento de banco de dados no SQL Server permite manter uma cópia, ou espelho, de um banco de dados do SQL Server em um servidor em espera. O espelhamento garante que haja sempre duas cópias distintas dos dados, garantindo alta disponibilidade e redundância completa dos dados. O Microsoft SqlClient Provider para SQL Server fornece suporte implícito ao espelhamento de banco de dados, de forma que, depois que ele for configurado para o banco de dados do SQL Server, o desenvolvedor não precise realizar nenhuma ação nem escrever nenhum código. Além disso, o objeto <xref:Microsoft.Data.SqlClient.SqlConnection> oferece suporte a um modo de conexão explícito que permite fornecer o nome de um servidor de parceiro de failover no <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: b84790960455d60411cae14ae180be0d8891e4a2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a7aa6a28a64e35c13c135e509b758a1636b3f896
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75258556"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896284"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Suporte do SqlClient para alta disponibilidade e recuperação de desastre
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Este tópico discute o Provedor de Dados do Microsoft SqlClient para suporte ao SQL Server para alta disponibilidade, recuperação de desastre – Grupos de Disponibilidade AlwaysOn.  O recurso dos Grupos de Disponibilidade AlwaysOn foi adicionado ao SQL Server 2012. Para obter mais informações sobre os Grupos de Disponibilidade AlwaysOn, confira os Manuais Online do SQL Server.  
   

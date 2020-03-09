@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3f435e44ef6fb7fb7ff777e2b5361482fcde9a98
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: aea8e0ecbb542645f0553e8bf34172381f37929b
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251112"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896637"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>Operações de dados do SQL Server no ADO.NET
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Esta seção descreve a funcionalidade e os recursos do SQL Server específicos para o Provedor de Dados do Microsoft SqlClient para SQL Server (<xref:Microsoft.Data.SqlClient>).  
   

@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5477b655554dceaa5f43b7d099e0fc156340f558
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b4ec71c2bd693599106692a45f9e9aa10a63babd
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75233809"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896232"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>Execução de SqlCommand com um SqlNotificationRequest
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Um <xref:Microsoft.Data.SqlClient.SqlCommand> pode ser configurado para gerar uma notificação quando os dados forem alterados após terem sido obtidos do servidor. Além disso, o conjunto de resultados seria diferente caso a consulta seja executada novamente. Isso é útil para cenários em que você deseja usar filas de notificação personalizadas no servidor ou quando não quiser manter objetos dinâmicos.
 
