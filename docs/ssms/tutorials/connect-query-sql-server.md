@@ -12,11 +12,11 @@ ms.technology: ssms
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ms.openlocfilehash: ac805437d716bbc7e8fdf95f491c64331ddb4658
-ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77575542"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339695"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Tutorial: conectar-se a uma instância do SQL Server e consultá-la usando o SSMS (SQL Server Management Studio)
 
