@@ -20,11 +20,11 @@ ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d171085f34e2a20f9e4b1db809327d078ce08436
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67990593"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339614"
 ---
 # <a name="system-data-collection-set-reports"></a>Relatórios do conjuntos de coleta de dados do sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "67990593"
 |--------------|----------------|  
 |Índice|A quantidade de espaço em disco usada para manter páginas de índice.|  
 |Não alocado|A quantidade de espaço em disco disponível para o banco de dados, mas que ainda não foi alocada a objeto algum.|  
-|data|A quantidade de espaço em disco usada para manter páginas de dados.|  
+|Dados|A quantidade de espaço em disco usada para manter páginas de dados.|  
 |Não usado|A quantidade de espaço em disco alocada a um ou mais objetos, mas que ainda não foi utilizada.|  
   
  O uso de espaço para arquivos de log de transação é categorizado como uma espaço usado e não usado.  
@@ -88,14 +88,14 @@ ms.locfileid: "67990593"
  Use o botão de calendário para especificar a data e a hora de início e a duração dos dados que servirão de base para o relatório.  
   
 #### <a name="query-statistics-history-report"></a>Relatório histórico de estatísticas de consulta  
- O gráfico Principais Consultas por CPU Total mostra a despesa relativa de cada consulta para o intervalo de tempo selecionado com base no uso total da CPU. Para ver uma exibição diferente da despesa relativa da consulta, clique em um dos hiperlinks fornecidos abaixo do gráfico: **Duração**, **Total de E/S**, **Leituras Físicas**ou **Gravações Lógicas**.  
+ O gráfico Principais Consultas por CPU Total mostra a despesa relativa de cada consulta para o intervalo de tempo selecionado com base no uso total da CPU. Para mostrar uma exibição diferente da despesa relativa de consulta, clique em um dos hiperlinks fornecidos abaixo do gráfico: **Duração**, **E/S Total**, **Leituras Físicas** ou **Gravações Lógicas**.  
   
  A tabela abaixo do gráfico fornece dados de consulta adicionais. Ele lista o texto de cada consulta do gráfico juntamente com informações estatísticas detalhadas. Observe que as barras do gráfico são links ativos, assim como cada uma das consultas mostradas na tabela. Basta clicar em um link ativo para abrir o sub-relatório Detalhes da Consulta da consulta.  
   
 #### <a name="query-details-subreport"></a>Sub-relatório Detalhes da Consulta  
  O sub-relatório Detalhes da Consulta fornece o texto inteiro da consulta. Há um hiperlink **Editar Texto da Consulta** adjacente à consulta. Basta clicar nele para abrir a consulta no Editor de Consulta. A tabela abaixo da consulta fornece estatísticas de execução de consulta, como duração média por execução de consulta.  
   
- São exibidos um gráfico de planos de consulta e a duração média por execução. Para ver uma exibição diferente do custo relativo do plano de consulta, clique em um dos hiperlinks exibidos abaixo do gráfico: **Duração**, **Leituras Físicas**ou **Gravações Lógicas**. A linha de gráfico está ativa e você pode clicar em qualquer ponto para abrir o sub-relatório Detalhes do Plano de Consulta.  
+ São exibidos um gráfico de planos de consulta e a duração média por execução. Para mostrar uma exibição diferente do custo do plano de consulta relativo, clique em qualquer um dos hiperlinks exibidos abaixo do gráfico: **Duração**, **Leituras Físicas** ou **Gravações Lógicas**. A linha de gráfico está ativa e você pode clicar em qualquer ponto para abrir o sub-relatório Detalhes do Plano de Consulta.  
   
  A tabela abaixo do gráfico mostra os 10 principais planos de consulta baseados no uso de CPU por execução. Cada número na coluna **Nº de Plano** é um link ativo em que você clica para abrir o sub-relatório Detalhes do Plano de Consulta.  
   
@@ -125,9 +125,9 @@ ms.locfileid: "67990593"
   
 |Grafo|Descrição do relatório|  
 |-----------|------------------------|  
-|%CPU|Para acessar esses sub-relatórios, basta clicar em qualquer ponto das linhas do gráfico %CPU do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Sistema.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : o relatório Histórico de Estatísticas de Consulta apresenta um gráfico das consultas mais caras na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A tabela abaixo do gráfico lista as consultas e inclui dados estatísticos para cada uma. Você pode clicar em uma consulta para obter mais detalhes.<br /><br /> **Sistema**: o relatório Uso de CPU do Sistema apresenta um gráfico de % de tempo de CPU por processador e os dados estatísticos de cada processo no formato de tabela.|  
-|Uso de Memória|Para acessar esses sub-relatórios, basta clicar em qualquer ponto das linhas do gráfico Uso de Memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Sistema.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : o relatório Uso de Memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece gráficos para o uso de memória de processamento, contadores de memória, consumo de memória interna por tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e uma tabela que fornece dados sobre o uso médio de memória de acordo com o tipo de componente.<br /><br /> **Sistema**: o relatório Uso de Memória do Sistema apresenta gráficos do uso de memória, taxas de acertos do cache e da página que fornecem informações sobre o conjunto de trabalho e bytes privados de cada processo.|  
-|Uso de E/S de disco|Para acessar esses sub-relatórios, basta clicar em qualquer ponto das linhas do gráfico Uso de E/S de Disco do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Sistema.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : o relatório Uso de E/S de Disco do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apresenta gráficos do tempo de resposta do disco e da taxa de transferência do disco. Uma tabela adicional fornece estatísticas de arquivo virtual por disco, banco de dados e arquivo.<br /><br /> **Sistema**: o relatório Uso de Disco do Sistema fornece gráficos de tempo de resposta do disco, comprimento médio da fila do disco, taxa de transferência do disco e uma tabela que fornece informações sobre gravações e leituras de E/S de cada processo.|  
+|%CPU|Para acessar esses sub-relatórios, basta clicar em qualquer ponto das linhas do gráfico %CPU do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Sistema.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : O relatório Histórico de Estatísticas de Consulta apresenta um gráfico das consultas mais caras na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A tabela abaixo do gráfico lista as consultas e inclui dados estatísticos para cada uma. Você pode clicar em uma consulta para obter mais detalhes.<br /><br /> **Sistema**: O relatório Uso de CPU do Sistema apresenta um gráfico de % de tempo de CPU por processador e os dados estatísticos de cada processo no formato de tabela.|  
+|Uso de Memória|Para acessar esses sub-relatórios, basta clicar em qualquer ponto das linhas do gráfico Uso de Memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Sistema.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : O relatório Uso de Memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apresenta gráficos para o uso de memória de processamento, contadores de memória, consumo de memória interna por tipo e uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que fornece dados sobre o uso médio de memória pelo tipo de componente.<br /><br /> **Sistema**: O relatório Uso de Memória do Sistema apresenta gráficos do uso de memória, taxas de acertos do cache e da página que fornecem informações sobre o conjunto de trabalho e bytes privados de cada processo.|  
+|Uso de E/S de disco|Para acessar esses sub-relatórios, basta clicar em qualquer ponto das linhas do gráfico Uso de E/S de Disco do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Sistema.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : O relatório Uso de E/S de Disco do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apresenta gráficos do tempo de resposta do disco e da taxa de transferência do disco. Uma tabela adicional fornece estatísticas de arquivo virtual por disco, banco de dados e arquivo.<br /><br /> **Sistema**: O relatório Uso de Disco do Sistema fornece gráficos de tempo de resposta do disco, comprimento médio da fila do disco, taxa de transferência do disco e uma tabela que fornece informações sobre gravações e leituras de E/S de cada processo.|  
 |Uso de Rede|Não há mais relatórios disponíveis.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esperas|O gráfico Esperas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibe as esperas encontradas por threads executados por categoria de espera. Para acessar um relatório detalhado, clique em qualquer segmento do gráfico. Além de fornecer estatísticas de espera do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em gráficos em um período reduzido, esse relatório fornece informações sobre as categorias de espera no formato em tabela. Para cada categoria, como CPU e suas subcategorias, a tabela mostra o número de esperas, o tempo de espera e a porcentagem do tempo de espera total.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Atividade|Aspectos diferentes de atividade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser acessados pelo gráfico Atividade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os relatórios que você pode obter clicando em um ponto na linha de gráfico Compilações do SQL/segundo são como se segue:<br /><br /> <br /><br /> Conexões e sessões<br /><br /> Requests<br /><br /> Taxa de acertos do cache de plano<br /><br /> recursos de tempdb|  

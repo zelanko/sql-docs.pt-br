@@ -1,5 +1,5 @@
 ---
-title: Notas sobre a versão do SQL Server 2016 | Microsoft Docs
+title: Notas de versão do SQL Server 2016 | Microsoft Docs
 ms.date: 04/25/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,13 +14,13 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76909846"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338820"
 ---
-# <a name="sql-server-2016-release-notes"></a>Notas sobre a versão do SQL Server 2016.
+# <a name="sql-server-2016-release-notes"></a>Notas de Versão do SQL Server 2016.
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   Este artigo descreve as limitações e os problemas com as versões do SQL Server 2016, incluindo service packs. Para obter informações sobre as novidades, veja [Novidades no SQL Server 2016](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016).
 
@@ -45,7 +45,7 @@ Melhorias de desempenho e escala no SQL Server 2016 SP2.
 |Limpeza do controle de alterações    |   Melhoria do desempenho e da eficiência da limpeza de controle de alterações para tabelas laterais do Controle de Alterações.    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
 |Uso do tempo limite da CPU para cancelar a solicitação Resource Governor   |   Melhoria da manipulação de solicitações de consulta por meio do cancelamento da solicitação, se o limite da CPU para uma solicitação for alcançado. Esse comportamento é habilitado no sinalizador de rastreamento 2422. |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec)   |
 |SELECT INTO para criar a tabela de destino no grupo de arquivos    |   A partir do SQL Server 2016 SP2, a sintaxe SELECT INTO do T-SQL é compatível com o carregamento de uma tabela em um grupo de arquivos diferente do grupo de arquivos padrão do usuário, usando a palavra-chave <Filegroup name> ON na sintaxe do T-SQL. |       |
-|Ponto de verificação indireto aprimorado para TempDB    |   Melhoria do ponto de verificação indireto para TempDB para minimizar a contenção de spinlock em DPLists. Essa melhoria permite que a carga de trabalho de TempDB no SQL Server 2016 seja aumentada imediatamente caso o ponto de verificação indireto seja ON para TempDB.    |   [KB4040276](https://support.microsoft.com/help/4040276) |
+|Ponto de verificação indireto aprimorado para TempDB    |   Melhoria do ponto de verificação indireto para TempDB para minimizar a contenção de spinlock em DPLists. Essa melhoria permite que a carga de trabalho de TempDB no SQL Server 2016 seja escalada horizontalmente imediatamente caso o ponto de verificação indireto seja ON para TempDB.    |   [KB4040276](https://support.microsoft.com/help/4040276) |
 |Melhoria do desempenho do backup de banco de dados em computadores de memória grande  |   O SQL Server 2016 SP2 otimiza a maneira como o E/S em andamento é drenado durante o backup, o que gera grandes ganhos de desempenho de backup para bancos de dados pequenos a médios. Houve uma melhoria de mais de 100x ao fazer backup de banco de dados do sistema em um computador de 2 TB. O ganho de desempenho é reduzido à medida que o tamanho do banco de dados aumenta e conforme as páginas a serem copiadas em backup e a E/S de backup levam mais tempo, comparado ao pool de buffers de iteração. Essa mudança ajudará a melhorar o desempenho de backup para os clientes que hospedam vários bancos de dados pequenos em servidores grandes de alto nível e com muita memória.    |       |
 |Suporte para compactação de backup de VDI para bancos de dados habilitados para TDE   |   O SQL Server 2016 SP2 adicionou suporte à VDI para permitir que soluções de backup de VDI aproveitem a compactação para bancos de dados habilitados para TDE. Com essa melhoria, um novo formato de backup foi introduzido para oferecer suporte à compactação de backup para bancos de dados habilitados para TDE. O mecanismo do SQL Server manipulará formatos de backup novos e antigos de forma transparente, a fim de restaurar backups.   |       |
 |Carregamento dinâmico de parâmetros de perfil de agente de replicação    |   Esse novo aprimoramento permite que parâmetros de agentes de replicação sejam carregados dinamicamente sem a necessidade de reiniciar o agente. Essa alteração se aplica somente aos parâmetros de perfil de agente mais comumente usados. |       |
@@ -56,9 +56,9 @@ Melhorias de compatibilidade e diagnóstico no SQL Server 2016 SP2.
 
 |Recurso|Descrição|Mais informações|
 |---|---|---|
-|Compatibilidade completa com controle DTC para bancos de dados em grupos de disponibilidade    |   No momento, não há compatibilidade com as transações entre bancos de dados para bancos de dados que fazem parte de um grupo de disponibilidade no SQL Server 2016. Com o SQL Server 2016 SP2, introduzimos compatibilidade completa com transações distribuídas com bancos de dados de grupo de disponibilidade.   |       |
+|Compatibilidade completa com controle DTC para bancos de dados em grupos de disponibilidade    |   No momento, não há suporte para as transações entre bancos de dados para bancos de dados que fazem parte de um grupo de disponibilidade no SQL Server 2016. Com o SQL Server 2016 SP2, introduzimos compatibilidade completa com transações distribuídas com bancos de dados de grupo de disponibilidade.   |       |
 |Atualizar para a coluna is_encrypted do sys.databases para refletir de forma precisa o status de criptografia de TempDB |   O valor da coluna is_encryptedcolumn no sys.databases é de 1 para TempDB, mesmo depois da desativação da criptografia para todos os bancos de dados de usuário e da reinicialização do SQL Server. O comportamento esperado é um valor igual a 0, pois TempDB já não é criptografado nessa situação. A partir do SQL Server 2016 SP2, a coluna is_encrypted do sys.databases reflete com precisão o status de criptografia de TempDB.  |       |
-|Novas opções DBCC CLONEDATABASE para gerar clones verificados e backups   |   Com o SQL Server 2016 SP2, o DBCC CLONEDATABASE possibilita duas novas opções: produzir um clone verificado ou um backup de clone. Ao criar um banco de dados clonado com a opção VERIFY_CLONEDB, um banco de dados clonado consistente será criado e verificado e isso terá suporte da Microsoft para uso em produção. Uma nova propriedade foi introduzida para validar a verificação do clone: SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone'). Quando um clone é criado com a opção BACKUP_CLONEDB, um backup é gerado na mesma pasta do arquivo de dados para facilitar a movimentação do clone para um servidor diferente ou enviá-lo para o CSS (Serviço de Suporte e Atendimento ao Cliente Microsoft) para solução de problemas.  |       |
+|Novas opções DBCC CLONEDATABASE para gerar clones verificados e backups   |   Com o SQL Server 2016 SP2, o DBCC CLONEDATABASE possibilita duas novas opções: produzir um clone verificado ou um backup de clone. Ao criar um banco de dados clonado com a opção VERIFY_CLONEDB, um banco de dados clonado consistente será criado e verificado, e isso terá suporte da Microsoft para uso em produção. Uma nova propriedade foi introduzida para validar a verificação do clone: SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone'). Quando um clone é criado com a opção BACKUP_CLONEDB, um backup é gerado na mesma pasta do arquivo de dados para facilitar a movimentação do clone para um servidor diferente ou enviá-lo para o CSS (Serviço de Suporte e Atendimento ao Cliente Microsoft) para solução de problemas.  |       |
 |Suporte do SSB (Service Broker) para DBCC CLONEDATABASE    |   Aprimoramento do comando DBCC CLONEDATABASE para permitir o script de objetos SSB.  |   [KB4092075](https://support.microsoft.com/help/4092075) |
 |Novo DMV para monitorar o uso de espaço de armazenamento de versão de TempDB    |   Um novo DMV sys.dm_tran_version_store_space_usage foi incluído no SQL Server 2016 SP2 para permitir o monitoramento do espaço de armazenamento de versão do TempDB. Agora, os DBAs podem planejar de maneira proativa o dimensionamento do TempDB com base no requisito de uso de armazenamento de versão por banco de dados, sem qualquer sobrecarga de desempenho ao executá-lo em servidores de produção. |       |
 |Despejos completos compatíveis com agentes de replicação | Atualmente, se os agentes de replicação encontram uma exceção sem tratamento, o comportamento padrão é criar um minidespejo dos sintomas da exceção. Isso dificulta a solução de problemas de exceção sem tratamento. Por meio desta mudança, introduzimos uma nova chave do Registro, que permitirá a criação de um despejo completo para agentes de replicação.  |       |
@@ -68,7 +68,7 @@ Melhorias de compatibilidade e diagnóstico no SQL Server 2016 SP2.
 |Informações do processador em sys.dm_os_sys_info|   Novas colunas foram adicionadas ao DMV sys.dm_os_sys_info para expor as informações relacionadas do processador, como socket_count e cores_per_numa.  |       |
 |Informações de extensão modificadas em sys.dm_db_file_space_usage| Uma nova coluna foi adicionada a sys.dm_db_file_space_usage para controlar o número de extensões modificadas desde o último backup completo.  |       |
 |Informações de segmento em sys.dm_exec_query_stats |   Novas colunas foram adicionadas a sys.dm_exec_query_stats para controlar o número de segmentos columnstore ignorados e lidos, como total_columnstore_segment_reads e total_columnstore_segment_skips.   |   [KB4051358](https://support.microsoft.com/help/4051358) |
-|Definição do nível de compatibilidade correto para o banco de dados de distribuição  |   Após a instalação do Service Pack, o nível de compatibilidade do banco de dados de distribuição é alterado para 90. Isso ocorreu devido a um caminho do código no procedimento armazenado sp_vupgrade_replication. Agora o SP foi alterado para definir o nível de compatibilidade correto para o banco de dados de distribuição.   |       |
+|Definição do nível de compatibilidade correto para o banco de dados de distribuição  |   Após a instalação do Service Pack, o nível de compatibilidade do banco de dados de distribuição é alterado para 90. Isso ocorreu devido a um caminho de código no procedimento armazenado sp_vupgrade_replication. Agora o SP foi alterado para definir o nível de compatibilidade correto para o banco de dados de distribuição.   |       |
 |Mostrar as últimas informações conhecidas e bem-sucedidas de DBCC CHECKDB    |   Uma nova opção de banco de dados foi adicionada para retornar programaticamente a data da última execução bem-sucedida de DBCC CHECKDB. Agora, os usuários podem consultar DATABASEPROPERTYEX([database], 'lastgoodcheckdbtime') para obter um valor único que representa a data/hora da última execução bem-sucedida de DBCC CHECKDB no banco de dados especificado.  |       |
 |Melhorias na Execução XML| [Informações sobre quais estatísticas foram usadas para compilar o plano de consulta](https://blogs.msdn.microsoft.com/sql_server_team/sql-server-2017-showplan-enhancements/), incluindo o nome da estatística, o número de alterações, a percentagem de amostragem e quando a estatística foi atualizada pela última vez. Adicionado a modelos CE 120 e versões posteriores. Por exemplo, não é compatível com CE 70.| |
 | |Um novo atributo [EstimateRowsWithoutRowgoal](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-row-goal/) será adicionado à Execução XML se o Otimizador de Consulta usar a lógica "meta de linhas".| |
@@ -88,14 +88,14 @@ Melhorias de compatibilidade e diagnóstico no SQL Server 2016 SP2.
 ![horizontal-bar.png](media/horizontal-bar.png)
 
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
-![info_tip](../sql-server/media/info-tip.png) O SQL Server 2016 SP1 inclui todas as atualizações cumulativas até o SQL Server 2016 RTM CU3, incluindo a Atualização de Segurança MS16-136. Ele contém um rollup de soluções fornecidas nas atualizações cumulativas do SQL Server 2016 até e incluindo a atualização cumulativa mais recente, CU3, e a Atualização de Segurança MS16-136 lançada em 8 de novembro de 2016.
+![info_tip](../sql-server/media/info-tip.png) O SQL Server 2016 SP1 inclui todas as atualizações cumulativas até o SQL Server 2016 RTM CU3, incluindo a Atualização de Segurança MS16-136. Ele contém um rollup de soluções fornecidas nas atualizações cumulativas do SQL Server 2016 até, e incluindo, a atualização cumulativa mais recente, CU3, e a Atualização de Segurança MS16-136 lançada em 8 de novembro de 2016.
 
 Os seguintes recursos estão disponíveis nas edições Standard, Web, Express e Local DB do SQL Server SP1 (salvo indicação em contrário):
 - Always encrypted
 - Captura de dados alterados (não disponível no Express)
 - columnstore
 - Compactação
-- Máscara de Dados Dinâmicos
+- Mascaramento de dados dinâmicos
 - Auditoria refinada
 - OLTP in-memory (não disponível no Local DB)
 - Vários contêineres de fluxo de arquivos (não disponíveis no banco de dados Local)
@@ -122,7 +122,7 @@ A tabela a seguir resume as principais melhorias fornecidas no SQL Server 2016 S
 Além disso, observe as seguintes correções:
 - Com base nos comentários da comunidade do SQL e de DBAs, a partir do SQL 2016 SP1, as mensagens de registro em log do Hekaton são reduzidas ao mínimo.
 - Veja os novos [sinalizadores de rastreamento](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).
-- As versões completas dos bancos de dados de exemplo WideWorldImporters agora funcionam com a Standard Edition e a Express Edition, a partir do SQL Server 2016 SP1 e estão disponíveis no [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0). Nenhuma alteração é necessária no exemplo. Os backups de banco de dados criados no RTM para o trabalho da Edição Enterprise com Standard e Express no SP1.
+- As versões completas dos bancos de dados de exemplo WideWorldImporters agora funcionam com a Standard Edition e a Express Edition, a partir do SQL Server 2016 SP1, e estão disponíveis no [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0). Nenhuma alteração é necessária no exemplo. Os backups de banco de dados criados no RTM para o trabalho do Enterprise edition com Standard e Express no SP1.
 
 A instalação do SQL Server 2016 SP1 pode exigir a reinicialização após a instalação. Como prática recomendada, é melhor planejar e executar uma reinicialização após a instalação do SQL Server 2016 SP1.
 
@@ -135,7 +135,7 @@ A instalação do SQL Server 2016 SP1 pode exigir a reinicialização após a in
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
-##  <a name="bkmk_2016_ga"></a> Lançamento do SQL Server 2016 – GA (disponibilidade geral)
+##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Mecanismo de Banco de Dados (GA)](#bkmk_ga_instalpatch)
 -   [Stretch Database (GA)](#bkmk_ga_stretch)
 -   [Repositório de Consultas (GA)](#bkmk_ga_query_store)
@@ -179,9 +179,9 @@ A instalação do SQL Server 2016 SP1 pode exigir a reinicialização após a in
 
 **Problema e impacto ao cliente:** a tentativa de habilitar o Stretch Database em uma tabela que contém um índice que usa a palavra-chave INCLUDE para incluir colunas adicionais no índice falha com um erro.
 
-**Solução alternativa:** Remova o índice que usa a palavra-chave INCLUDE, habilite o Stretch Database na tabela e recrie o índice. Se você fizer isso, lembre-se de seguir as práticas e políticas de manutenção de sua organização para garantir um impacto mínimo ou nenhum impacto sobre os usuários da tabela afetada.
+**Solução alternativa:** remova o índice que usa a palavra-chave INCLUDE, habilite o Stretch Database na tabela e recrie o índice. Se você fizer isso, lembre-se de seguir as práticas e políticas de manutenção de sua organização para garantir um impacto mínimo ou nenhum impacto sobre os usuários da tabela afetada.
 
-### <a name="bkmk_ga_query_store"></a>Repositório de Consultas
+### <a name="bkmk_ga_query_store"></a>Query Store
 
 #### <a name="problem-with-automatic-data-cleanup-on-editions-other-than-enterprise-and-developer"></a>Problema com a limpeza automática de dados em edições que não sejam Enterprise e Developer
 
@@ -228,7 +228,7 @@ Além disso, execute os seguintes procedimentos armazenados do Repositório de C
 
 ## <a name="additional-information"></a>Informações adicionais
 + [Instalação do SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [Centro de atualização do SQL Server – links e informações para todas as versões compatíveis](https://msdn.microsoft.com/library/ff803383.aspx)
++ [Centro de atualização do SQL Server – links e informações para todas as versões com suporte](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

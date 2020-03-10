@@ -18,11 +18,11 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68419592"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339244"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -229,7 +229,7 @@ Se uma Junção Adaptável alterna para uma operação de Loops Aninhados, ela u
 ### <a name="tracking-adaptive-join-activity"></a>Controlando a atividade da Junção adaptável
 O operador de Junção Adaptável tem os seguintes atributos de operador de plano:
 
-|Atributo de plano|DESCRIÇÃO|
+|Atributo de plano|Descrição|
 |---|---|
 |AdaptiveThresholdRows|Mostra o uso de limite para alternar de uma junção hash para uma junção de loops aninhados.|
 |EstimatedJoinType|Qual é o provável tipo de junção.|

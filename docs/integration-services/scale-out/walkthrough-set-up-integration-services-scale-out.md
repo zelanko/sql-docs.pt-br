@@ -11,11 +11,11 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903623"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338949"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Passo a passo: Configurar o Integration Services (SSIS) Scale Out
 
@@ -107,7 +107,7 @@ Para instalar o recurso Trabalho do Scale Out, use o assistente de instalação 
 
     ![Configuração do servidor 2](media/server-config-2.PNG "Configuração do servidor 2")
 
-3.  Na página de **Configuração de Trabalho de Expansão do Integration Services** especifique o ponto de extremidade para se conectar ao Mestre de Expansão. 
+3.  Na página de **Configuração de Trabalho de Escala Horizontal do Integration Services** especifique o ponto de extremidade para se conectar ao Mestre de Expansão. 
 
     - Para um ambiente de **um único computador**, o ponto de extremidade é gerado automaticamente quando o Mestre e o Trabalho do Scale Out são instalados ao mesmo tempo. 
 

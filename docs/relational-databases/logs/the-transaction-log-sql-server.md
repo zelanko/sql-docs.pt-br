@@ -15,11 +15,11 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75493579"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338730"
 ---
 # <a name="the-transaction-log-sql-server"></a>O log de transações (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ Para obter informações sobre a arquitetura do log de transações e as operaç
 ### <a name="individual-transaction-recovery"></a>Recuperação de transações individuais
 Se um aplicativo emitir uma instrução `ROLLBACK` ou se o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detectar um erro como a perda de comunicação com um cliente, os registros de log serão usados para reverter as modificações feitas por uma transação incompleta. 
 
-### <a name="recovery-of-all-incomplete-transactions-when-includessnoversionincludesssnoversion-mdmd-is-started"></a>Recuperação de todas as transações incompletas quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado
+### <a name="recovery-of-all-incomplete-transactions-when-ssnoversion-is-started"></a>Recuperação de todas as transações incompletas quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado
 Se um servidor falhar, os bancos de dados poderão ser deixados em um estado em que algumas modificações nunca foram gravadas do cache de buffer para os arquivos de dados e poderá haver algumas modificações de transações incompletas nos arquivos de dados. Quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciada, ele executa uma recuperação de cada banco de dados. Em toda modificação registrada no log que não foi gravada nos arquivos de dados é efetuado roll forward. Toda transação incompleta encontrada no log de transações é revertida para assegurar que a integridade do banco de dados seja preservada. Para obter mais informações, confira [Visão geral de restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="rolling-a-restored-database-file-filegroup-or-page-forward-to-the-point-of-failure"></a>Efetuar roll forward em um banco de dados restaurado, um arquivo, grupo de arquivo ou em uma página até ao ponto de falha
@@ -103,7 +103,7 @@ Para evitar a falta de espaço, a menos que o truncamento de log seja atrasado p
   
  Na verdade, o truncamento de log pode ser atrasado por uma variedade de motivos. Descubra o que, se houver, está impedindo o truncamento de log consultando as colunas **log_reuse_wait** e **log_reuse_wait_desc** da exibição do catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). A tabela a seguir descreve os valores dessas colunas.  
   
-|Valor log_reuse_wait|Valor log_reuse_wait_desc|DESCRIÇÃO|  
+|Valor log_reuse_wait|Valor log_reuse_wait_desc|Descrição|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|Atualmente, há um ou mais [VLFs (arquivos de log virtuais)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) reutilizáveis.|  
 |1|CHECKPOINT|Não ocorreu nenhum ponto de verificação desde o último truncamento de log ou a parte inicial do log ainda não foi passou além de um [VLF (arquivo de log virtual)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). (Todos os modelos de recuperação)<br /><br /> Essa é uma razão rotineira para atrasar o truncamento de log. Para obter mais informações, consulte [Pontos de verificação de banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
@@ -133,7 +133,7 @@ O*registro mínimo em log* envolve o registro somente das informações que são
   
  As operações a seguir, completamente registradas sob o modelo de recuperação completa, têm log mínimo no modelo de recuperação simples e bulk-logged:  
   
--   Operações de importação em massa ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)e [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Para obter mais informações sobre quando a importação em massa para uma tabela é minimamente registrada em log, consulte [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Operações de importação em massa ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Para obter mais informações sobre quando a importação em massa para uma tabela é minimamente registrada em log, consulte [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 Quando a replicação transacional está habilitada, as operações `BULK INSERT` são totalmente registradas em log mesmo no modelo de recuperação bulk-logged.  
   

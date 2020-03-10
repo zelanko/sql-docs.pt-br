@@ -15,11 +15,11 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72278280"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340408"
 ---
 # <a name="data-tier-applications"></a>Aplicativos da camada de Dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "72278280"
   
 -   **IMPORT** – o usuário pode importar o esquema e os dados em um novo banco de dados no servidor de host.  
   
- Estes recursos têm suporte nas ferramentas de gerenciamento de banco de dados: SQL Server Management Studio, Portal do Azure e API DACFx.  
+ Ambas as funcionalidades são compatíveis com as ferramentas de gerenciamento de banco de dados: SQL Server Management Studio, portal do Azure e API do DACFx.  
   
 ## <a name="permissions"></a>Permissões  
  Você deve ser membro da função **dbmanager** ou ter permissões **CREATE DATABASE** atribuídas para criar um banco de dados, incluindo criar um banco de dados implantando um pacote de DAC. Você deve ser um membro da função **dbmanager** ou ter permissões **DROP DATABASE** atribuídas para remover um banco de dados.  
