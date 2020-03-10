@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74412523"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339434"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Recursos com suporte para módulos T-SQL compilados nativamente
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "74412523"
 
 Há suporte para as seguintes construções de consulta:  
 
-Expressão CASE: CASE pode ser usado em qualquer instrução ou cláusula que permita uma expressão válida.
+expressão CASE: CASE pode ser usada em qualquer instrução ou cláusula que permita uma expressão válida.
    - **Aplica-se a:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
     A partir do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], agora há suporte para instruções CASE para módulos T-SQL compilados nativamente.
 
@@ -209,7 +209,7 @@ Há suporte para as instruções DML a seguir.
 
 -   Funções NULL: ISNULL  
 
--   Funções Uniqueidentifier: NEWID e NEWSEQUENTIALID  
+-   Funções uniqueidentifier: NEWID e NEWSEQUENTIALID  
 
 -   Funções JSON  
     - **Aplica-se a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
@@ -219,7 +219,7 @@ Há suporte para as instruções DML a seguir.
 
 -   Funções do sistema: @@rowcount. As instruções dentro de procedimentos armazenados compilados nativamente atualizam @@rowcount e você pode usar @@rowcount em um procedimento armazenado compilado nativamente para determinar o número de linhas afetadas pela última instrução executada nesse procedimento armazenado compilado nativamente. No entanto, @@rowcount é redefinido como 0 no início e no final da execução de um procedimento armazenado compilado nativamente.  
 
--   Funções de segurança: IS_MEMBER({'grupo' | 'função'}), IS_ROLEMEMBER ('função' [, 'entidade_do_banco_de_dados']), IS_SRVROLEMEMBER ('função' [, 'logon']), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['logon']), SUSER_SID(['logon'] [, Param2]), SUSER_SNAME([sid_de_usuário_do_servidor]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['usuário']), USER_NAME([id]), CONTEXT_INFO().
+-   Funções de segurança: IS_MEMBER({'group' | 'role'}), IS_ROLEMEMBER ('role' [, 'database_principal']), IS_SRVROLEMEMBER ('role' [, 'login']), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['login']), SUSER_SID(['login'] [, Param2]), SUSER_SNAME([server_user_sid]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['user']), USER_NAME([id]), CONTEXT_INFO().
 
 -   Execuções de módulos nativos podem ser aninhadas.
 
@@ -278,7 +278,7 @@ GO
 
  A limitação de 8192 linhas só se aplica a `TOP N` onde `N` é uma constante, como nos exemplos anteriores.  Se você precisar de `N` maior que 8192, poderá atribuir o valor a uma variável e usar essa variável com `TOP`.  
 
- Exemplo que usa uma variável: compila  
+ Exemplo usando uma variável: compila  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -292,7 +292,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- **Limitações nas linhas retornadas:** Há dois casos em que isso pode, potencialmente, reduzir o número de linhas a serem retornadas pelo operador TOP:  
+ **Limitações nas linhas retornadas:** há dois casos em que isso pode, potencialmente, reduzir o número de linhas a serem retornadas pelo operador TOP:  
 
 -   Uso de JOINs na consulta.  A influência de JOINs na limitação depende do plano de consulta.  
 

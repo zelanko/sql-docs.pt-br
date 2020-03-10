@@ -4,24 +4,22 @@ titleSuffix: ''
 description: Os Serviços de Machine Learning são um recurso no SQL Server que possibilita executar scripts do Python e do R usando dados relacionais. Você pode usar pacotes e estruturas de software livre, bem como os pacotes do R e do Python da Microsoft para análise preditiva e aprendizado de máquina. Os scripts são executados no banco de dados sem mover dados para fora do SQL Server ou pela rede. Este artigo explica os conceitos básicos dos Serviços de Machine Learning do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/04/2020
+ms.date: 02/06/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3cf2b6f61e01230c8657051388647e336d46ed71
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: a94a3aea418a4c404b568fe6df7af701bc46de34
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004570"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78893336"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>O que são os Serviços de Machine Learning do SQL Server (Python e R)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Os Serviços de Machine Learning são um recurso no SQL Server que possibilita executar scripts do Python e do R usando dados relacionais. Você pode usar pacotes e estruturas de software livre, bem como os [pacotes do R e do Python da Microsoft](#packages) para análise preditiva e aprendizado de máquina. Os scripts são executados no banco de dados sem mover dados para fora do SQL Server ou pela rede. Este artigo explica os conceitos básicos dos Serviços de Machine Learning do SQL Server.
-
-No Banco de Dados SQL do Azure, os [Serviços de Machine Learning](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) estão em versão prévia pública.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]

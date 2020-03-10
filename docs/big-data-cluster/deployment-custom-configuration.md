@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558311"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340478"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Definir configurações de implantação para recursos e serviços de cluster
 
@@ -169,7 +169,7 @@ Se quiser aplicar as mesmas configurações para um serviço associado a vários
 
 Para personalizar os arquivos de configuração de implantação de cluster, você pode usar qualquer editor de formato JSON, como o VS Code. Para gerar scripts dessas edições para fins de automação, use o comando `azdata bdc config`. Este artigo explica como configurar implantações de cluster de Big Data modificando arquivos de configuração de implantação. Ele fornece exemplos de como alterar a configuração para cenários diferentes. Para obter mais informações sobre como os arquivos de configuração são usados em implantações, confira a [diretriz de implantação](deployment-guidance.md#configfile).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Instale o azdata](deploy-install-azdata.md).
 
