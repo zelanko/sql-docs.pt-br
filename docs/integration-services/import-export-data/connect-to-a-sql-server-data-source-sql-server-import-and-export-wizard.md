@@ -10,11 +10,11 @@ ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 938a6d8ba779d1cef37b5fab767e609d00b4f022
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74308001"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339764"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do SQL Server (Assistente de Importação e Exportação do SQL Server)
 

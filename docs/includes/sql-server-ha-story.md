@@ -245,7 +245,7 @@ Uma coisa que deve ser observada em todos os cenários de escala de leitura com 
 
 ## <a name="summary"></a>Resumo
 
-As instâncias e os bancos de dados do SQL Server 2017 podem se tornar altamente disponíveis usando os mesmos recursos no Windows Server e no Linux. Além de cenários de disponibilidade padrão de recuperação de desastres e alta disponibilidade local, o tempo de inatividade associado a migrações e atualizações pode ser minimizado com os recursos de disponibilidade do SQL Server. Os grupos de disponibilidade também podem fornecer cópias adicionais de um banco de dados como parte da mesma arquitetura para expandir cópias legíveis. Se você estiver implantando uma nova solução usando o SQL Server 2017 ou considerando fazer uma atualização, o SQL Server 2017 tem a disponibilidade e a confiabilidade que você precisa.
+As instâncias e os bancos de dados do SQL Server 2017 podem se tornar altamente disponíveis usando os mesmos recursos no Windows Server e no Linux. Além de cenários de disponibilidade padrão de recuperação de desastres e alta disponibilidade local, o tempo de inatividade associado a migrações e atualizações pode ser minimizado com os recursos de disponibilidade do SQL Server. Os grupos de disponibilidade também podem fornecer cópias adicionais de um banco de dados como parte da mesma arquitetura para escalar horizontalmente cópias legíveis. Se você estiver implantando uma nova solução usando o SQL Server 2017 ou considerando fazer uma atualização, o SQL Server 2017 tem a disponibilidade e a confiabilidade que você precisa.
  
 [SimpleAG]:media\sql-server-ha-story\image1.png
 [SSMSAGOptions]:media\sql-server-ha-story\image2.png

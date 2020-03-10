@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 626b4277edcb049b2c7b755b70199df899dc5637
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256649"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339754"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Auditoria local para coleta de dados de diagnóstico e uso do SQL Server (Programa de Aperfeiçoamento da Experiência do Usuário)
 
@@ -38,7 +38,7 @@ Para o SQL Server 2016 CU2 e CU3, a auditoria Local é configurável no nível d
 
 Para recusar a coleta de dados, veja [Ativando ou desativando a auditoria local](#turning-local-audit-on-or-off)
 
-## <a name="prerequisites"></a>Prerequisites 
+## <a name="prerequisites"></a>Pré-requisitos 
 
 A seguir estão os pré-requisitos para habilitar a auditoria local em cada instância do SQL Server: 
 
@@ -65,7 +65,7 @@ Execute as seguintes etapas para obter a conta de logon do serviço do Programa 
  
 1. Inicie o console **Serviços**. Para fazer isso, selecione a **tecla Windows + R** no teclado para abrir a caixa de diálogo **Executar**. Em seguida, digite *services.msc* no campo de texto e selecione **OK** para iniciar o console **Serviços**.  
 
-2. Navegue até o serviço apropriado. Por exemplo, para o mecanismo de banco de dados, localize o **Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server** **(*nome da instância*)**. Para o Analysis Services, localize **Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Analysis Services** **(*nome da instância*)**. Para o Integration Services, localize o **serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Integration Services**.
+2. Navegue até o serviço apropriado. Por exemplo, para o mecanismo de banco de dados, localize o **Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server** **(*nome da instância*)** . Para o Analysis Services, localize **Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Analysis Services** **(*nome da instância*)** . Para o Integration Services, localize o **serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Integration Services**.
 
 3. Clique com o botão direito do mouse no serviço e escolha **Propriedades**. 
 
@@ -73,7 +73,7 @@ Execute as seguintes etapas para obter a conta de logon do serviço do Programa 
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>Configurar uma nova pasta para os arquivos de auditoria local.    
 
-Crie uma nova pasta (diretório da auditoria local) em que a auditoria local gravará os logs. Por exemplo, o caminho completo para o Diretório da auditoria local para uma instância padrão do mecanismo de banco de dados é: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
+Crie uma nova pasta (diretório da auditoria local) em que a auditoria local gravará os logs. Por exemplo, o caminho completo para o Diretório da auditoria local para uma instância padrão do mecanismo de banco de dados é: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* . 
  
   >[!NOTE] 
   >Configure o caminho do diretório da auditoria local fora do caminho de instalação do SQL Server para evitar que a funcionalidade de auditoria e a aplicação de patches causem problemas com o SQL Server.
@@ -143,7 +143,7 @@ Depois de concluir as etapas de pré-configuração, você pode ativar a auditor
 
 1. Clique com o botão direito do mouse em **UserRequestedLocalAuditDirectory** e selecione *Modificar*. 
 
-1. Para ativar a auditoria local, digite o caminho da auditoria local, por exemplo, *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*.
+1. Para ativar a auditoria local, digite o caminho da auditoria local, por exemplo, *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* .
  
     Para desativar a auditoria local, esvazie o valor em **UserRequestedLocalAuditDirectory**.
 
@@ -155,8 +155,8 @@ O Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server deve re
 
 1. Navegue até o serviço apropriado. 
 
-    - Para o Mecanismo de Banco de Dados, use **Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server (*nome da instância*)**.     
-    - Para o Analysis Services, use **Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Analysis Services (*nome da instância*)**.
+    - Para o Mecanismo de Banco de Dados, use **Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server (*nome da instância*)** .     
+    - Para o Analysis Services, use **Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Analysis Services (*nome da instância*)** .
     - Para o Integration Services, 
         - Para o SQL 2016, use *Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Integration Services 13.0*.
         - Para o SQL 2017, use *Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Integration Services 14.0*.
@@ -171,7 +171,7 @@ A auditoria local produzirá um arquivo de log por dia. Os arquivos de log estar
   >[!NOTE]
   > Após habilitar a auditoria local, pode levar até 5 minutos para que o arquivo de log seja gravado pela primeira vez. 
 
-## <a name="maintenance"></a>Manutenção  
+## <a name="maintenance"></a>Manutenção 
 
 1. Para limitar o uso do espaço em disco pelos arquivos gravados pela auditoria local, configure uma política ou um trabalho regular para limpar o Diretório da auditoria local para remover arquivos antigos e desnecessários.  
 

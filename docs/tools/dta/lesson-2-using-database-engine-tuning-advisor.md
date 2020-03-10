@@ -14,11 +14,11 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.openlocfilehash: 6352a5d32f7b173343729582cdb1bfb0c1de99b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75307631"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340348"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lição 2: uso do Orientador de Otimização do Mecanismo de Banco de Dados
 
@@ -26,7 +26,7 @@ ms.locfileid: "75307631"
 
 O Orientador de Otimização do Mecanismo de Banco de Dados permite gerenciar sessões de ajuste e exibir recomendações de ajuste. Usuários com conhecimento avançado de estruturas de design físico podem usar essa ferramenta para executar a análise exploratória de ajuste de banco de dados. Os iniciantes em ajuste de banco de dados também podem usar a ferramenta para encontrar a melhor configuração de estruturas de design físico para as cargas de trabalho que forem ajustar. Esta lição oferece a base prática para administradores de banco de dados que são novos usuários da interface gráfica do Orientador de Otimização do Mecanismo de Banco de Dados e para administradores de sistema que podem não ter conhecimento extenso de estruturas de design físico.  
 
-## <a name="prerequisites"></a>Prerequisites 
+## <a name="prerequisites"></a>Pré-requisitos 
 
 Para concluir este tutorial, você precisará do SQL Server Management Studio, bem como acesso a um servidor que executa o SQL Server e um banco de dados do AdventureWorks.
 
