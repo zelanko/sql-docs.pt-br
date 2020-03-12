@@ -11,12 +11,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
-ms.openlocfilehash: adee6ee7d0d769d8e87e228c475b224a3e78675b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1d6a27c171fafc8480cbbcdb03c4683816ec30d4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637874"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112188"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Onde encontrar o suplemento Reporting Services para produtos do SharePoint
 
@@ -57,7 +57,7 @@ ms.locfileid: "73637874"
 ##  <a name="bkmk_sql2008sp2"></a>SQL Server 2008 SP2 Reporting Services suplemento para produtos e tecnologias do SharePoint 2007  
  O Suplemento Microsoft SQL Server 2008 SP2 Reporting Services é uma versão atualizada do suplemento 2008 que adiciona integração de suporte dos servidores de relatório 2008 R2 a produtos do SharePoint 2007.  
   
- A versão mais atualizada desse arquivo está disponível online no Centro de Download da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , na página do [suplemento Microsoft SQL Server 2008 SP2 Reporting Services para Tecnologias do Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=793).  
+ A versão mais atualizada desse arquivo está disponível online no Centro de Download da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , na página do [suplemento Microsoft SQL Server 2008 SP2 Reporting Services para Tecnologias do Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=43344).  
   
 ##  <a name="bkmk_sql2008"></a>SQL Server 2008 Reporting Services suplemento para produtos e tecnologias do SharePoint 2007  
  O Suplemento Microsoft SQL Server 2008 Reporting Services para Tecnologias do Microsoft SharePoint fornece recursos para executar um servidor de relatório em uma implantação do Windows SharePoint Services 3.0 ou do Microsoft Office SharePoint Server 2007.  

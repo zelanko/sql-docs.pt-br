@@ -1,5 +1,6 @@
 ---
 title: Fluxo de trabalho WideWorldImportersDW-ETL | Microsoft Docs
+description: Use o pacote ETL com SQL Server Integration Services (SSIS) para migrar dados periodicamente do banco de WideWorldImporters para o WideWorldImportersDW.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f33d36cccbbea6f37139410f9d3d6e03f740ee96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 000d12b97eb2eefbfcd9a6a73e02c0098b2afdbb
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68067618"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112390"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Fluxo de trabalho ETL WideWorldImportersDW
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ O processamento principal começa preenchendo a tabela de dimensão de data. O p
 
 Em seguida, uma série de tarefas de fluxo de dados carrega cada dimensão. Em seguida, eles carregam cada fato.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - SQL Server 2016 (ou posterior), com os bancos de dados WideWorldImporters e WideWorldImportersDW (no mesmo ou em instâncias diferentes do SQL Server)
 - SQL Server Management Studio
@@ -62,7 +63,7 @@ Para que o código-fonte recrie o banco de dados de exemplo, consulte [Wide-Worl
    2. Insira um nome, por exemplo, *WIDEWORLDIMPORTERS ETL*.
    3. Adicione uma **etapa de trabalho** do tipo **SQL Server Integration Services pacote**.
    4. Selecione o servidor que tem o catálogo Integration Services e, em seguida, selecione o pacote de *ETL diário* .
-   5. Em **** > **gerenciadores de conexões**de configuração, verifique se as conexões com a origem e o destino estão configuradas corretamente. O padrão é conectar-se à instância local.
+   5. Em **Configuration** > **gerenciadores de conexões**de configuração, verifique se as conexões com a origem e o destino estão configuradas corretamente. O padrão é conectar-se à instância local.
    6. Selecione **OK** para criar o trabalho.
 
 3. Execute ou agende o trabalho.

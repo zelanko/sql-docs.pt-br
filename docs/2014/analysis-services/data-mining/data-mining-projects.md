@@ -10,12 +10,12 @@ ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 476159031ad00ada2e70b0c9eca5c775dab67285
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e107dde8a3f811cbc1a24533705863c954dd85c4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73705292"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112156"
 ---
 # <a name="data-mining-projects"></a>Projetos de mineração de dados
   Um projeto de mineração de dados faz parte de uma solução do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante o processo de design, os objetos que você cria neste projeto estão disponíveis para teste e consulta como parte de um banco de dados de workspace. Quando você quiser que os usuários possam consultar ou procurar os objetos no projeto, deverá implantar o projeto em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executado em modo multidimensional.  
@@ -161,7 +161,7 @@ ms.locfileid: "73705292"
   
  Estas visualizações são temporárias e são fechadas sem salvar quando você encerra a sessão com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Portanto, se você precisar exportar estas visualizações para outro aplicativo para apresentação ou análise adicional, use os comandos **Copiar** fornecidos em cada guia ou painel da interface do visualizador.  
   
- Os Suplementos de Mineração de dados para o Excel também fornecem um modelo de Visio que você pode usar para representar seus modelos em um diagrama de Visio, e anotar e modificar o diagrama usando as ferramentas do Visio. Para obter mais informações, consulte [Suplementos de mineração de dados do Microsoft SQL Server 2008 SP2 do Microsoft Office 2007](https://www.microsoft.com/download/details.aspx?id=7294).
+ Os Suplementos de Mineração de dados para o Excel também fornecem um modelo de Visio que você pode usar para representar seus modelos em um diagrama de Visio, e anotar e modificar o diagrama usando as ferramentas do Visio. Para obter mais informações, consulte [Suplementos de mineração de dados do Microsoft SQL Server 2008 SP2 do Microsoft Office 2007](https://www.microsoft.com/download/details.aspx?id=8569).
   
 ###  <a name="bkmk_Validate"></a>Testar e validar modelos  
  Depois de criar um modelo, será possível investigar os resultados e tomar decisões sobre quais modelos apresentam o melhor desempenho.  

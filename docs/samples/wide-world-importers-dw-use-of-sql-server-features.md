@@ -1,5 +1,6 @@
 ---
 title: Principais recursos no banco de dados DW WideWorldImporters
+description: Saiba como o banco de dados WideWorldImportersDW apresenta os principais recursos do SQL Server que são adequados para data warehousing e análise.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -10,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dfce2ce4a6f13a25687d668268f532893c1404e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 431ca4762b15003f49a5145eb603b7508f2d6844
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74056289"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112429"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW o uso de recursos e funcionalidades do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]

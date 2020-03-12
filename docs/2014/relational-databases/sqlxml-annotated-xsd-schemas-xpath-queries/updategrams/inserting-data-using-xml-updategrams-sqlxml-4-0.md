@@ -33,12 +33,12 @@ ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b06e98d5ef3dfc4ad8ab99e374e2d7b5539c98be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 71aba1741b777a593f951300a975df4736525211
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637905"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112196"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Inserindo dados usando diagramas de atualização XML (SQLXML 4.0)
   Um updategram indica uma operação INSERT quando uma instância de registro é exibida no bloco ** \<After>** , mas não no bloco correspondente ** \<before>** . Nesse caso, o updategram insere o registro no bloco ** \<After>** no banco de dados.  
@@ -211,7 +211,7 @@ ms.locfileid: "73637905"
  No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], os nomes de tabela podem incluir um espaço, como a tabela Order Details no banco de dados Northwind. No entanto, isso não é válido em caracteres XML que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] são identificadores válidos, mas não identificadores XML válidos podem ser codificados usando ' __xHHHH\_\_' como o valor de codificação, em que HHHH significa o código UCS-2 hexadecimal de quatro dígitos para o caractere na ordem mais significativa do bit-primeiro.  
   
 > [!NOTE]  
->  Este exemplo usa o banco de dados Northwind. Você pode instalar o banco de dados Northwind usando um script SQL disponível para download neste [site da Microsoft](https://www.microsoft.com/download/details.aspx?id=23654).  
+>  Este exemplo usa o banco de dados Northwind. Você pode instalar o banco de dados Northwind usando um script SQL disponível para download neste [site da Microsoft](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).  
   
  Além disso, o nome de elemento deve ser incluído dentro de colchetes ([]). Como os caracteres [e] não são válidos em XML, você deve codificá-los como\_ _x005B e\__x005D, respectivamente. (Se você usar um esquema de mapeamento, poderá fornecer nomes de elemento que não contêm caracteres inválidos, como espaços em branco. O esquema de mapeamento faz o mapeamento necessário; portanto, você não precisa codificar esses caracteres).  
   

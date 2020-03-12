@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a87e7819d96151ea918b8b5f33fb5f4c9e1fbd3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cbf570a09f3316172a60206730b91644cc603f0b
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096990"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090572"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "68096990"
 |**originating_server_id**|**int**|ID do servidor mestre do qual a agenda de trabalho foi originada.|  
 |**name**|**sysname (nvarchar (128))**|Nome definido pelo usuário para a agenda de trabalho. Este nome deve ser exclusivo em um trabalho.|  
 |**owner_sid**|**varbinary(85)**|O Microsoft Windows *security_identifier* do usuário ou grupo que possui a agenda de trabalho.|  
-|**habilitado**|**int**|O status da agenda de trabalho:<br /><br /> **0** = não habilitado.<br /><br /> **1** = habilitado.<br /><br /> Se o agendamento não estiver habilitado, nenhum trabalho será executado nele.|  
+|**Habilitado**|**int**|O status da agenda de trabalho:<br /><br /> **0** = não habilitado.<br /><br /> **1** = habilitado.<br /><br /> Se o agendamento não estiver habilitado, nenhum trabalho será executado nele.|  
 |**freq_type**|**int**|A frequência com que um trabalho é executado para esta agenda.<br /><br /> **1** = somente uma vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = mensalmente, em relação a **freq_interval**<br /><br /> **64** = é executado quando o serviço de SQL Server Agent é iniciado<br /><br /> **128** = é executado quando o computador está ocioso|  
 |**freq_interval**|**int**|Dias em que o trabalho é executado. Depende do valor de **freq_type**. O valor padrão é **0**, o que indica que **freq_interval** não é usado. Consulte a tabela abaixo para obter os possíveis valores e seus efeitos.|  
 |**freq_subday_type**|**int**|Unidades para o **freq_subday_interval**. A seguir estão os possíveis valores e suas descrições.<br /><br /> <br /><br /> **1** : na hora especificada<br /><br /> **2** : segundos<br /><br /> **4** : minutos<br /><br /> **8** : horas|  
 |**freq_subday_interval**|**int**|Número de períodos de **freq_subday_type** a ocorrer entre cada execução do trabalho.|  
-|**freq_relative_interval**|**int**|Quando **freq_interval** ocorrer em cada mês, se **freq_interval** for **32** (relativo mensal). Pode ser um dos seguintes valores:<br /><br /> **0** = **freq_relative_interval** não é usado<br /><br /> **1** = primeiro<br /><br /> **2** = segundo<br /><br /> **4** = terceiro<br /><br /> **8** = quarto<br /><br /> **16** = última|  
+|**freq_relative_interval**|**int**|Quando **freq_interval** ocorrer em cada mês, se **freq_type** for **32** (relativo mensal). Pode ser um dos seguintes valores:<br /><br /> **0** = **freq_relative_interval** não é usado<br /><br /> **1** = primeiro<br /><br /> **2** = segundo<br /><br /> **4** = terceiro<br /><br /> **8** = quarto<br /><br /> **16** = última|  
 |**freq_recurrence_**<br /><br /> **multi-fator**|**int**|Número de semanas ou meses entre execuções agendadas de um trabalho. **freq_recurrence_factor** será usado somente se **freq_type** for **8**, **16**ou **32**. Se esta coluna contiver **0**, **freq_recurrence_factor** não será usado.|  
 |**active_start_date**|**int**|Data na qual a execução de um trabalho pode começar. A data é formatada como DDMMAAAA. NULL indica a data de hoje.|  
 |**active_end_date**|**int**|Data na qual a execução de um trabalho pode parar. A data é formatada como AAAAMMDD.|  

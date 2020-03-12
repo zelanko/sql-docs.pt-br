@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: c4e6d16645b8a7ecab9ed2e814ed345834e80f1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 58abfde651fb59bc69207db810324eb4c74b8c26
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245924"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112068"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Vinculando aplicativos de acesso ao SQL Server – BD SQL do Azure (AccessToSQL)
 Se você quiser usar seus aplicativos do Access existentes com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o, poderá vincular suas tabelas originais do Access às tabelas migradas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. A vinculação modifica o banco de dados do Access de forma que suas consultas, formulários, relatórios e páginas de acesso a data [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usem os dados do banco de dados do ou do SQL Azure em vez de usarem o banco de dado do Access.  
@@ -56,7 +56,7 @@ Quando você abre uma tabela no Access, os dados são recuperados usando um curs
   
 > [!IMPORTANT]  
 > Para vincular tabelas de acesso a um banco de dados do Azure, você precisa do SQL Server Native Client (SNAC) versão 10,5 ou superior.   
-> Você pode obter a versão mais recente do SNAC do [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978).  
+> Você pode obter a versão mais recente do SNAC do [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).  
   
 ## <a name="unlinking-access-tables"></a>Desvinculando tabelas de acesso  
 Quando você desvincula uma tabela de acesso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uma tabela do ou SQL Azure, o SSMA restaura a tabela de acesso original e seus dados.  

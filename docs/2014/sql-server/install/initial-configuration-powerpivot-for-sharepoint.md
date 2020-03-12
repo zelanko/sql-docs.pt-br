@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 24a52b9dd190032a55306c1fe738c3c1e1787dad
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200432"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112211"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Configuração inicial (PowerPivot para SharePoint)
   Use as etapas deste tópico para configurar uma instalação inicial do PowerPivot para o SharePoint. O modo mais fácil de configurar uma instalação inicial é usar a ferramenta de Configuração do PowerPivot. Ela automatiza todas s etapas de configuração que são descritas abaixo.  
@@ -24,7 +24,7 @@ ms.locfileid: "74200432"
   
  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  O servidor do SharePoint deve ter sido instalado usando a opção de instalação Farm de Servidores na instalação do SharePoint. Um servidor do SharePoint autônomo que usa um banco de dados interno não tem suporte. Para obter mais informações, consulte [diretrizes para usar SQL Server recursos de BI em um farm do SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md).  
   
 > [!IMPORTANT]  
@@ -227,7 +227,7 @@ ms.locfileid: "74200432"
   
  A instalação do provedor permite que as pastas de trabalho que referenciam o MSOLAP.4 na cadeia de conexão de dados funcionem como esperado em um servidor PowerPivot do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. A instalação do provedor OLE DB do SQL Server 2008 R2 é uma abordagem alternativa para atualizar pastas de trabalho criadas em uma versão anterior do PowerPivot para Excel.  
   
- Você pode baixar o provedor na [página SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978). Procure **microsoft® provedor Analysis Services OLE DB para microsoft® SQL Server® 2008 R2**e, em seguida, baixe o pacote x64 do `SQLServer2008_ASOLEDB10.msi` programa de instalação.  
+ Você pode baixar o provedor na [página SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272). Procure **microsoft® provedor Analysis Services OLE DB para microsoft® SQL Server® 2008 R2**e, em seguida, baixe o pacote x64 do `SQLServer2008_ASOLEDB10.msi` programa de instalação.  
   
  Para obter mais informações sobre como instalar o provedor, incluindo etapas de verificação, consulte [instalar o provedor Analysis Services OLE DB em servidores do SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   

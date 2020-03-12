@@ -10,20 +10,20 @@ ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8f7ab6cdbc1b6e0e3dc7d26fb579943a0c8fa95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637778"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112225"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Recursos do SQL Server descontinuados no SQL Server 2014
   Este tópico descreve os recursos que não estão mais disponíveis após a atualização para o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Recursos descontinuados no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-sssql14"></a>Recursos descontinuados no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Sem recursos descontinuados no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>Recursos descontinuados no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-sssql11"></a>Recursos descontinuados no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="discontinued-active-directory-helper-service"></a>Serviço auxiliar do Active Directory descontinuado  
  O serviço auxiliar do Active Directory e os componentes relacionados foram removidos. A tabela a seguir lista os componentes associados que são removidos como consequência:  
@@ -40,7 +40,7 @@ ms.locfileid: "73637778"
 ## <a name="discontinued-features-in-sql-server-2008"></a>Recursos descontinuados no SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>SQL-DMO descontinuado da instalação do SQL Server Express  
- O SQL-DMO para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] foi removido do [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. É recomendável que você modifique os aplicativos que usam atualmente esse recurso o mais rápido possível. Se precisar do suporte ao SQL-DMO para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, instale os Componentes de Compatibilidade com Versões Anteriores do [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Feature Pack a partir do [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=24793). Use o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) para novos trabalhos de desenvolvimento.  
+ O SQL-DMO para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] foi removido do [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. É recomendável que você modifique os aplicativos que usam atualmente esse recurso o mais rápido possível. Se precisar do suporte ao SQL-DMO para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, instale os Componentes de Compatibilidade com Versões Anteriores do [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Feature Pack a partir do [Centro de Download da Microsoft](https://www.microsoft.com/download/). Use o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) para novos trabalhos de desenvolvimento.  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Opção descontinuada para Assistente da Web  
  A opção `sp_configure` para habilitar o Assistente da Web foi removida do [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Em vez dessa função, recomendamos usar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

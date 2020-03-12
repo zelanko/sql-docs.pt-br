@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 80fc19b17ac1c01f0c57d828a3bc4821050f761d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cbbb7ed7a20937d9963af7080fb16be4f6c78da5
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75257888"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79111901"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Instalando o Assistente de Migração do SQL Server para acesso (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O assistente de migração (SSMA) para acesso é instalado usando um assistente baseado em Windows Installer. Este tópico fornece informações sobre os pré-requisitos de instalação, um link para a versão mais recente do SSMA e instruções para instalar, licenciar, desinstalar e atualizar o SSMA.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 Antes de instalar o SSMA, verifique se o seu sistema atende aos seguintes requisitos:  
   
 -   Windows 7 ou uma versão posterior, ou Windows Server 2008 ou uma versão posterior.  
@@ -45,7 +45,7 @@ Antes de instalar o SSMA, verifique se o seu sistema atende aos seguintes requis
   
 -   Provedor DAO (Microsoft Data Access Object) versão 12,0 ou 14,0. Você pode instalar o provedor DAO do produto Microsoft Office 2010/2007 ou baixá-lo do site da Microsoft.  
   
--   O cliente do SQL Server Native Access (SNAC) versão 10,5 e superior para migração para SQL Azure. Você pode obter a versão mais recente do SNAC do [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)  
+-   O cliente do SQL Server Native Access (SNAC) versão 10,5 e superior para migração para SQL Azure. Você pode obter a versão mais recente do SNAC do [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)  
   
 -   4 GB de RAM (recomendado).  
   

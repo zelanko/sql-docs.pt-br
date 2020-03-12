@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811073"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112246"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
   O OLTP na memória incorpora as tabelas com otimização de memória e os procedimentos armazenados compilados nativamente no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este artigo fornece uma visão geral do processamento de consulta para tabelas com otimização de memória e procedimentos armazenados compilados nativamente.  
@@ -60,7 +60,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- Para construir os planos de consulta mostrados neste artigo, as duas tabelas foram populadas com dados de exemplo do banco de dados de exemplo Northwind, que você pode baixar em [Bancos de dados de exemplo Northwind e pubs do SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=23654).  
+ Para construir os planos de consulta mostrados neste artigo, as duas tabelas foram populadas com dados de exemplo do banco de dados de exemplo Northwind, que você pode baixar em [Bancos de dados de exemplo Northwind e pubs do SQL Server 2000](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).  
   
  Considere a consulta a seguir, que une as tabelas Customer e Order e retorna a ID da ordem e as informações de cliente associadas:  
   
@@ -94,7 +94,7 @@ Plano de consulta para uma junção hash de tabelas com base em disco.
   
  Nessa consulta, as linhas da tabela Order são recuperadas usando o índice clusterizado. O operador físico `Hash Match` agora é usado para `Inner Join`. O índice clusterizado em Order não é classificado em CustomerID e, portanto, `Merge Join` exigiria um operador de classificação, o que afetaria o desempenho. Observe o custo relativo do operador `Hash Match` (75%) comparado com o custo do operador `Merge Join` no exemplo anterior (46%). O otimizador consideraria o operador `Hash Match` também no exemplo anterior, mas concluiu que o operador `Merge Join` forneceu melhor desempenho.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Processamento de consulta para tabelas baseadas em disco  
+## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Processamento de consulta para tabelas baseadas em disco  
  O diagrama a seguir descreve o fluxo de processamento de consulta no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para consultas ad hoc:  
   
  ![Pipeline do processamento de consulta do SQL Server.](../../database-engine/media/hekaton-query-plan-3.gif "Pipeline do processamento de consulta do SQL Server.")  
@@ -116,7 +116,7 @@ Pipeline do processamento de consulta do SQL Server.
   
  Para a primeira consulta de exemplo, o mecanismo de execução solicita dos Métodos de Acesso as linhas no índice clusterizado em Customer e no índice não clusterizado em Order. Os Métodos de Acesso passam pelas estruturas de índice da árvore B para recuperar as linhas solicitadas. Nesse caso, todas as linhas são recuperadas como os planos de chamada para verificações de índice completo.  
   
-## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Acesso do [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória  
+## <a name="interpreted-tsql-access-to-memory-optimized-tables"></a>Acesso do [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] ad hoc também são conhecidos como [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Interpretado se refere ao fato de que o plano de consulta é interpretado pelo mecanismo de execução da consulta para cada operador no plano de consulta. O mecanismo de execução lê o operador e seus parâmetros e executa a operação.  
   
  O [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado pode ser usado para acessar tabelas com otimização de memória e baseadas em disco. A figura a seguir ilustra o processamento de consulta para acesso do [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória:  

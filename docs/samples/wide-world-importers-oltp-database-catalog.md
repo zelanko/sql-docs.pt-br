@@ -1,5 +1,6 @@
 ---
 title: Catálogo de banco de dados OLTP WideWorldImporters-SQL | Microsoft Docs
+description: Entenda os esquemas, as tabelas, os procedimentos armazenados e as considerações de design para o catálogo de banco de dados de exemplo WideWorldImporters.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2560043ca6acc4b5df141bcbc898ac09b21f97a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811534"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112408"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catálogo de banco de dados WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ O WideWorldImporters usa esquemas para finalidades diferentes, como armazenar da
 
 Esses esquemas contêm os dados. Várias tabelas são necessárias para todos os outros esquemas e estão localizadas no esquema do aplicativo.
 
-|Esquema|DESCRIÇÃO|
+|Esquema|Descrição|
 |-----------------------------|---------------------|
 |Aplicativo|Usuários, contatos e parâmetros de todo o aplicativo. Isso também contém tabelas de referência com dados que são usados por vários esquemas|
 |Compra|Compras de itens de estoque de fornecedores e detalhes sobre fornecedores.|  
@@ -39,7 +40,7 @@ Esses esquemas contêm os dados. Várias tabelas são necessárias para todos os
 
 Esses esquemas são usados para aplicativos externos que não têm permissão para acessar as tabelas de dados diretamente. Eles contêm exibições e procedimentos armazenados usados por aplicativos externos.
 
-|Esquema|DESCRIÇÃO|
+|Esquema|Descrição|
 |-----------------------------|---------------------|
 |Site|Todo o acesso ao banco de dados do site da empresa é por meio desse esquema.|
 |Relatórios|Todo o acesso ao banco de dados de Reporting Services relatórios é por meio desse esquema.|
@@ -51,7 +52,7 @@ Observe que os esquemas de relatórios e PowerBI não são usados na versão ini
 
 Esquemas de finalidade especial
 
-|Esquema|DESCRIÇÃO|
+|Esquema|Descrição|
 |-----------------------------|---------------------|
 |Integração|Objetos e procedimentos necessários para a integração do data warehouse (ou seja, migrar os dados para o banco de WideWorldImportersDW).|
 |Sequências|Armazena as sequências usadas por todas as tabelas no aplicativo.|
