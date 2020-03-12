@@ -2772,10 +2772,12 @@
       items:
         - name: Requisitos do Sistema
           href: ../connect/odbc/linux-mac/system-requirements.md
-        - name: Instalando o Gerenciador de Driver
+        - name: Instalar o gerenciador de driver
           href: ../connect/odbc/linux-mac/installing-the-driver-manager.md
-        - name: Instalar o Microsoft ODBC Driver for SQL Server
+        - name: Instalar o driver ODBC (Linux)
           href: ../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md
+        - name: Instalar o driver ODBC (macOS)
+          href: ../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
         - name: Guias de recursos
           items:
             - name: Palavras-chave de cadeia de conexão e nomes de fontes de dados (DSNs)
