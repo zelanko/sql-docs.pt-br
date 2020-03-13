@@ -29,11 +29,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339134"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289374"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Criar tabelas e índices particionados
   Você pode criar uma tabela ou um índice particionado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Os dados das tabelas e dos índices particionados são divididos horizontalmente em unidades que podem ser disseminadas por mais de um grupo de arquivos em um banco de dados. O particionamento pode tornar as tabelas e os índices grandes mais gerenciáveis e escalonáveis.  

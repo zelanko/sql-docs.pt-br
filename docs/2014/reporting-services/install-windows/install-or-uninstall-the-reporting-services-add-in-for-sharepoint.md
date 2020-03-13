@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63f45fa174296e4ce79985236da2d97d3f11e937
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339285"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289434"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>Instalar ou desinstalar o suplemento Reporting Services para SharePoint (SharePoint 2010 e SharePoint 2013)
   Execute o suplemento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pacote de instalação para produtos do SharePoint (rsSharepoint. msi) em servidores do SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para habilitar recursos em uma implantação do SharePoint. Os recursos incluem o Power View, uma Web Part do Visualizador de Relatórios, um ponto de extremidade de proxy de URL, tipos de conteúdo e páginas de aplicativos para que você possa criar, exibir e gerenciar relatórios, modelos de relatórios, fontes de dados e outro conteúdo do servidor de relatório em um site do SharePoint. O Suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos do SharePoint é um componente necessário para um servidor de relatório executado no modo do SharePoint. O suplemento pode ser instalado do assistente de configuração do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou baixando o rsSharePoint.msi no pacote de recursos do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obter uma lista das versões do suplemento e páginas de download, veja [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).
@@ -84,7 +84,7 @@ ms.locfileid: "78339285"
 
  **SharePoint 2013**
 
- A ferramenta de preparação de produtos do **** SharePoint 20103 não [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instala o suplemento para produtos do SharePoint.
+ A ferramenta de preparação de produtos do **Not** SharePoint 20103 não [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instala o suplemento para produtos do SharePoint.
 
 ##  <a name="bkmk_3ways_to_install"></a>Visão geral dos métodos de instalação
  O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] suplemento para produtos do SharePoint pode ser instalado usando um dos dois métodos a seguir:

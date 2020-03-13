@@ -35,11 +35,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339009"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289164"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar o Assistente de Plano de Manutenção
   Este tópico descreve como criar um plano de manutenção de um único servidor ou multisservidor usando o Assistente de Plano de Manutenção no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Assistente de Plano de Manutenção cria um plano de manutenção que pode ser executado regularmente pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Isso permite executar várias tarefas de administração de banco de dados, incluindo backups, verificações de integridade de banco de dados ou atualizações de estatísticas de banco de dados em intervalos especificados.  
@@ -60,7 +60,7 @@ ms.locfileid: "78339009"
   
 -   Para criar um plano de manutenção multisservidor, é necessário configurar um ambiente multisservidor contendo um servidor mestre e um ou mais servidores de destino. Devem ser criados e mantidos planos de manutenção multisservidor no servidor mestre. Os planos podem ser exibidos, mas não mantidos, nos servidores de destino.  
   
--   Os membros das funções **db_ssisadmin** e **dc_admin** podem elevar seus privilégios para **sysadmin**. Essa elevação de privilégios pode ocorrer porque essas funções podem modificar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ; esses pacotes podem ser executados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o contexto de segurança **sysadmin** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para se proteger contra essa elevação de privilégio ao executar planos de manutenção, conjuntos de coleta de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dados e outros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pacotes, configure os trabalhos do Agent que executam pacotes para usar uma conta proxy com privilégios limitados ou somente adicione membros **sysadmin** às funções **db_ssisadmin** e **dc_admin** .  
+-   Os membros das funções **db_ssisadmin** e **dc_admin** podem elevar seus privilégios para **sysadmin**. Essa elevação de privilégios pode ocorrer porque essas funções podem modificar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ; esses pacotes podem ser executados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o contexto de segurança **sysadmin** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para se proteger contra essa elevação de privilégio ao executar planos de manutenção, conjuntos de coletas de dados e outros pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure os trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que executam pacotes para usar uma conta proxy com privilégios limitados ou apenas adicione membros **sysadmin** às funções **db_ssisadmin** e **dc_admin** .  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -120,7 +120,7 @@ ms.locfileid: "78339009"
   
                     -   Se você selecionar **Dia**, digite o dia do mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se desejar que a agenda de trabalho seja executada no 15º dia do mês a cada dois meses, selecione **Dia** e digite "15" na primeira caixa e "2" na segunda caixa. Observe que o maior número permitido na segunda caixa é "99".  
   
-                    -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeiro**, **segundo**, **terceiro**ou **quarto**, bem como dias específicos da semana (por exemplo: domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
+                    -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeiro**, **segundo**, **terceiro** ou **quarto**, bem como dias específicos da semana (por exemplo: domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
   
             2.  Em **Frequência diária**, especifique a frequência com que a agenda de trabalho se repete no dia da execução da agenda de trabalho:  
   
@@ -161,26 +161,26 @@ ms.locfileid: "78339009"
   
      As opções a seguir estão disponíveis nesta página.  
   
-     Lista de **bancos de dados**  
+     Lista**Bancos de Dados**  
      Especifique os bancos de dados afetados por essa tarefa.  
   
     -   **Todos os bancos de dados**  
   
-         Gere um plano de manutenção que execute essa tarefa com todos os bancos de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exceto **tempdb**.  
+         Gere um plano de manutenção que executa essa tarefa em todos os bancos de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exceto **tempdb**.  
   
     -   **Bancos de dados do sistema**  
   
          Gere um plano de manutenção que execute essa tarefa com os bancos de dados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exceto **tempdb** e bancos de dados criados pelo usuário.  
   
-    -   **Todos os bancos de dados de usuário (excluindo mestre, modelo, msdb, tempdb)**  
+    -   **Todos os bancos de dados de usuários (exceto mestre, modelo, msdb, tempdb)**  
   
          Gere um plano de manutenção que execute essa tarefa em todos os bancos de dados criados por usuários. Nenhuma tarefa de manutenção é executada com os bancos de dados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-    -   **Esses bancos de dados**  
+    -   **Estes bancos de dados**  
   
          Gera um plano de manutenção que execute essa tarefa somente nos bancos de dados selecionados. Pelo menos um banco de dados da lista deverá ser selecionado se esta opção for escolhida.  
   
-     Caixa de seleção **incluir índices**  
+     Caixa de seleção**Incluir índices**  
      Verifique a integridade de todas as páginas de índice, assim como das páginas de dados de tabela.  
   
 #### <a name="define-database-shrink-tasks"></a>Definir tarefas de redução de bancos de dados  
@@ -192,13 +192,13 @@ ms.locfileid: "78339009"
   
      As opções a seguir estão disponíveis nesta página.  
   
-     Lista de **bancos de dados**  
+     Lista**Bancos de Dados**  
      Especifique os bancos de dados afetados por essa tarefa. Consulte a etapa 9 acima para obter mais informações sobre as opções disponíveis nessa lista.  
   
-     **Reduzir o banco de dados quando ele crescer além** da caixa  
+     Caixa**Reduzir o banco de dados quando ele ultrapassar**  
      Especifique o tamanho em megabytes que faz a tarefa ser executada.  
   
-     **Quantidade de espaço livre para permanecer após a caixa de redução**  
+     Caixa**Quantidade de espaço livre restante após redução**  
      Parar a redução quando o espaço livre nos arquivos de banco de dados alcançar esse tamanho (como porcentagem).  
   
      **Reter espaço livre em arquivos de banco de dados**  
@@ -213,48 +213,48 @@ ms.locfileid: "78339009"
   
      As opções a seguir estão disponíveis nesta página.  
   
-     Lista de **bancos de dados**  
+     Lista**Bancos de Dados**  
      Especifique os bancos de dados afetados por essa tarefa. Consulte a etapa 9 acima para obter mais informações sobre as opções disponíveis nessa lista.  
   
-     Lista de **objetos**  
+     Lista**Objeto**  
      Limite a lista **Seleção** para exibir tabelas, exibições ou ambas. Essa lista estará disponível somente se um único banco de dados for escolhido na lista **Bancos de Dados** acima.  
   
-     Lista de **seleção**  
+     Lista**Seleção**  
      Especifique as tabelas ou índices afetados por esta tarefa. Não disponível quando **Tabelas e Exibições** estiver selecionado na caixa Objeto.  
   
-     Caixa de seleção **compactar objetos grandes**  
+     Caixa de seleção**Compactar objetos grandes**  
      Desaloque espaço em tabelas e exibições quando possível. Esta opção usa `ALTER INDEX ... LOB_COMPACTION = ON`.  
   
 2.  Na página **Definir Tarefa Recompilar Índice** , selecione o banco de dados ou os bancos de dados nos quais vários índices serão recriados. Esta tarefa usa a instrução `ALTER INDEX ... REBUILD PARTITION`. Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).) Ao concluir, clique em **Avançar**.  
   
      As opções a seguir estão disponíveis nesta página.  
   
-     Lista de **bancos de dados**  
+     Lista**Bancos de Dados**  
      Especifique os bancos de dados afetados por essa tarefa. Consulte a etapa 9 acima para obter mais informações sobre as opções disponíveis nessa lista.  
   
-     Lista de **objetos**  
+     Lista**Objeto**  
      Limite a lista **Seleção** para exibir tabelas, exibições ou ambas. Essa lista estará disponível somente se um único banco de dados for escolhido na lista **Bancos de Dados** acima.  
   
-     Lista de **seleção**  
+     Lista**Seleção**  
      Especifique as tabelas ou índices afetados por esta tarefa. Não disponível quando **Tabelas e Exibições** estiver selecionado na caixa Objeto.  
   
-     Área de **Opções de espaço livre**  
+     Área**Opções de espaço livre**  
      Apresenta opções para aplicar o fator de preenchimento a índices e tabelas.  
   
      **Espaço livre padrão por página**  
      Reorganiza as páginas com a quantidade padrão de espaço livre. Isso descartará os índices nas tabelas no banco de dados e os recriará com o fator de preenchimento especificado quando os índices foram criados. Essa é a opção padrão.  
   
-     **Alterar espaço livre por página para** o box  
+     Caixa**Alterar espaço livre por página para**  
      Descarta os índices nas tabelas no banco de dados e recria-os com um fator de preenchimento novo, calculado automaticamente, reservando a quantidade especificada de espaço livre nas páginas de índice. Quanto maior a porcentagem, mais espaço livre será reservado nas páginas de índice e maior ficará o índice. Os valores válidos são de 0 a 100. Usa a opção `FILLFACTOR` .  
   
-     Área de **Opções avançadas**  
+     Área**Opções avançadas**  
      Apresenta opções adicionais para classificar índices e reindexar.  
   
-     Caixa **de seleção classificar resultados em tempdb**  
+     Caixa de seleção**Classificar resultados no tempdb**  
      Usa a opção `SORT_IN_TEMPDB` , que determina onde são armazenados temporariamente os resultados intermediários de classificação, gerados durante a criação do índice. Se uma operação de classificação não for necessária, ou se a classificação puder ser executada na memória, a opção `SORT_IN_TEMPDB` será ignorada.  
   
-     Caixa de seleção **manter índice online ao reindexar**  
-     Usa a opção `ONLINE` , que permite o acesso dos usuários aos dados de índice clusterizado ou da tabela subjacente e todos os índices não clusterizados associados durante as operações de índice. A seleção dessa opção ativa opções adicionais para a recriação de índices que não permitem recriações online: **Não recompilar índices** e **Recompilar índices offline**.  
+     Caixa de seleção**Manter o índice online enquanto estiver reindexando**  
+     Usa a opção `ONLINE` , que permite o acesso dos usuários aos dados de índice clusterizado ou da tabela subjacente e todos os índices não clusterizados associados durante as operações de índice. A seleção dessa opção ativa opções adicionais para a recompilação de índices que não permitem recompilações online: **Não recompilar índices** e **Recompilar índices offline**.  
   
     > [!NOTE]  
     >  As operações de índice online não estão disponíveis em todas as edições do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, consulte [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -265,13 +265,13 @@ ms.locfileid: "78339009"
   
      As opções a seguir estão disponíveis nesta página.  
   
-     Lista de **bancos de dados**  
+     Lista**Bancos de Dados**  
      Especifique os bancos de dados afetados por essa tarefa. Consulte a etapa 9 acima para obter mais informações sobre as opções disponíveis nessa lista.  
   
-     Lista de **objetos**  
+     Lista**Objeto**  
      Limite a lista **Seleção** para exibir tabelas, exibições ou ambas. Essa lista estará disponível somente se um único banco de dados for escolhido na lista **Bancos de Dados** acima.  
   
-     Lista de **seleção**  
+     Lista**Seleção**  
      Especifique as tabelas ou índices afetados por esta tarefa. Não disponível quando **Tabelas e Exibições** estiver selecionado na caixa Objeto.  
   
      **Todas as estatísticas existentes**  
@@ -280,16 +280,16 @@ ms.locfileid: "78339009"
      **Somente estatísticas de coluna**  
      Atualiza apenas as estatísticas de coluna. Usa a opção `WITH COLUMNS` .  
   
-     **Somente estatísticas de índice**  
+     **Somente estatísticas do índice**  
      Só atualiza estatísticas do índice. Usa a opção `WITH INDEX` .  
   
-     **Tipo de verificação**  
+     **Tipo de exame**  
      Tipo de exame usado para coletar estatísticas atualizadas.  
   
-     **Verificação completa**  
+     **Exame completo**  
      Lê todas as linhas na tabela ou exibição para coletar as estatísticas.  
   
-     **Exemplo por**  
+     **Amostra por**  
      Especifique a porcentagem da tabela ou exibição indexada ou o número de linhas de amostragem ao coletar estatísticas de tabelas ou exibições maiores.  
   
 #### <a name="define-the-history-cleanup-task"></a>Definir a tarefa de limpeza do histórico  
@@ -298,7 +298,7 @@ ms.locfileid: "78339009"
   
      As opções a seguir estão disponíveis nesta página.  
   
-     **Selecionar os dados históricos a serem excluídos**  
+     **Selecione os dados históricos a serem excluídos**  
      Escolha o tipo de dados de tarefa a serem excluídos/  
   
      **Histórico de backup e restauração**  
@@ -307,11 +307,11 @@ ms.locfileid: "78339009"
      **Histórico de trabalho do SQL Server Agent**  
      Esse histórico pode ajudar a solucionar problemas de trabalhos com falha ou a determinar por que ações de banco de dados ocorreram.  
   
-     **Histórico do plano de manutenção**  
+     **Histórico do Plano de Manutenção**  
      Esse histórico pode ajudar a solucionar problemas de trabalhos de plano de manutenção com falha ou a determinar por que ações de banco de dados ocorreram.  
   
      **Remover dados históricos com mais de**  
-     Especifique a idade de itens que deseja excluir. Você pode especificar **Hora(s)**, **Dia(s)**, **Semana(s)** (o padrão), **Mês(es)**, ou **Ano(s)**  
+     Especifique a idade de itens que deseja excluir. Você pode especificar **Hora(s)** , **Dia(s)** , **Semana(s)** (o padrão), **Mês(es)** , ou **Ano(s)**  
   
 #### <a name="define-the-execute-agent-job-task"></a>Definir a tarefa de execução de trabalho do Agent  
   
@@ -323,44 +323,44 @@ ms.locfileid: "78339009"
   
      As opções a seguir estão disponíveis nesta página.  
   
-     Lista de **tipos de backup**  
+     Lista**Tipo de Backup**  
      Exibe o tipo de backup a ser executado. Esse item é somente leitura.  
   
-     Lista de **bancos de dados**  
+     Lista**Bancos de Dados**  
      Especifique os bancos de dados afetados por essa tarefa. Consulte a etapa 9 acima para obter mais informações sobre as opções disponíveis nessa lista.  
   
      **Componente de backup**  
      Selecione **Banco de dados** para fazer o backup de todo o banco de dados. Selecione **Arquivo e grupos de arquivos** para fazer o backup de apenas uma parte do banco de dados. Se selecionado, forneça o nome do arquivo ou do grupo de arquivos. Quando vários bancos de dados são selecionados na caixa **Bancos de dados** , especifique apenas **Bancos de dados** para **Componentes de backup**. Para executar backups de arquivo ou grupo de arquivos, crie uma tarefa para cada banco de dados. Essas opções estarão disponíveis somente se um único banco de dados for escolhido na lista **Bancos de Dados** acima.  
   
-     Caixa de seleção o **conjunto de backup será expirado**  
+     Caixa de seleção**O conjunto de backup vai expirar**  
      Especifica quando o conjunto de backup desse backup pode ser substituído. Selecione **Após** e insira um número de dias para a validade ou selecione **Em** e insira a data de validade. Essa opção será desabilitada se a opção **URL** for selecionada como o destino de backup.  
   
      **Fazer backup em**  
      Especifica o meio no qual deve ser feito o backup do banco de dados. Selecione **Disco**, **Fita**ou **URL**. Somente dispositivos de fita anexados ao computador que contém o banco de dados estão disponíveis.  
   
-     **Backup de bancos de dados em um ou mais arquivos**  
+     **Backup de banco de dados por um ou mais arquivos**  
      Clique em **Adicionar** para abrir a caixa de diálogo **Selecionar Destino do Backup** . Essa opção será desabilitada se a opção URL for selecionada como o destino de backup.  
   
      Clique em **Remover** para remover um arquivo da caixa.  
   
      Clique em **Conteúdo** para ler o cabeçalho de arquivo e exibir os conteúdos de backup atuais do arquivo.  
   
-     Caixa de diálogo **Selecionar destino do backup**  
+     Caixa de diálogo**Selecionar Destino do Backup**  
      Selecione o arquivo, a unidade de fita ou o dispositivo de backup para o destino de backup. Essa opção será desabilitada se a opção URL for selecionada como o destino de backup.  
   
-     Lista **se houver arquivos de backup**  
+     Lista**Se houver arquivos de backup**  
      Especifique como tratar backups existentes. Selecione **Anexar** para adicionar os backups novos depois de qualquer backup existente no arquivo ou na fita. Selecione **Substituir** para remover o conteúdo antigo de um arquivo ou fita e substituir por esse backup novo.  
   
-     **Criar um arquivo de backup para cada banco de dados**  
+     **Crie um arquivo de backup para cada banco de dados**  
      Crie um arquivo de backup no local especificado na caixa de pasta. Um arquivo é criado para cada banco de dados selecionado. Essa opção será desabilitada se a opção URL for selecionada como o destino de backup.  
   
-     Caixa **de seleção criar um subdiretório para cada banco de dados**  
+     Caixa de seleção**Criar um subdiretório para cada banco de dados**  
      Crie um subdiretório no diretório da unidade de disco especificada que contém o backup de banco de dados para cada banco de dados cujo backup está sendo executado como parte do plano de manutenção.  
   
     > [!IMPORTANT]  
     >  O subdiretório herdará permissões do diretório pai. Restrinja permissões para evitar acesso não autorizado.  
   
-     Caixa de **pasta**  
+     Caixa**Pasta**  
      Especifique a pasta para os arquivos de banco de dados automaticamente criados. Essa opção será desabilitada se a opção URL for selecionada como o destino de backup.  
   
      **CREDENCIAL DO SQL**  
@@ -373,12 +373,12 @@ ms.locfileid: "78339009"
      Especifique o nome do contêiner de Armazenamento do Microsoft Azure  
   
      **Prefixo da URL:**  
-     Gerado automaticamente com base nas informações da conta de armazenamento armazenadas na Credencial do SQL e o nome do contêiner de armazenamento do Azure que você especificou. Recomendamos que você não edite as informações nesse campo, a menos que esteja usando um domínio que use um formato diferente da ** \<conta de armazenamento>. blob.Core.Windows.net**.  
+     Gerado automaticamente com base nas informações da conta de armazenamento armazenadas na Credencial do SQL e o nome do contêiner de armazenamento do Azure que você especificou. É recomendável não editar as informações neste campo, a menos que você esteja usando um domínio que use um formato diferente de **\<conta de armazenamento>.blob.core.windows.net**.  
   
-     Caixa **extensão do arquivo de backup**  
+     Caixa**Extensão do arquivo de backup**  
      Especifique a extensão a ser usada para os arquivos de backup. O padrão é .bak.  
   
-     Caixa de seleção **verificar integridade do backup**  
+     Caixa de seleção**Verificar integridade do backup**  
      Verifique se o conjunto de backup está completo e se todos os volumes estão legíveis.  
   
      **Criptografia de backup**  
@@ -398,13 +398,13 @@ ms.locfileid: "78339009"
   
      Há suporte somente para as chaves que residem no EKM (Gerenciamento Extensível Chaves).  
   
-     **Definir lista de compactação de backup**  
+     Lista**Definir compactação de backup**  
      Em [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou versões posteriores), selecione um dos seguintes valores [de compactação de backup](../backup-restore/backup-compression-sql-server.md) :  
   
     |||  
     |-|-|  
     |**Usar a configuração padrão do servidor**|Clique para usar o padrão do nível de servidor. Esse padrão é definido pela opção de configuração do servidor **padrão de compactação de backup** . Para obter informações sobre como exibir a configuração atual dessa opção, consulte [Exibir ou configurar a opção de configuração de servidor backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
-    |**Compactar backup**|Clique em compactar backup, independentemente do padrão do nível do servidor.<br /><br /> ** \* Importante \* \* ** Por padrão, a compactação aumenta significativamente o uso da CPU, e a CPU adicional consumida pelo processo de compactação pode afetar negativamente as operações simultâneas. Portanto, convém criar backups compactados de baixa prioridade em uma sessão cujo uso da CPU é limitado pelo Administrador de Recursos. Para obter mais informações, consulte [Usar o Resource Governor para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
+    |**Compactar backup**|Clique em compactar backup, independentemente do padrão do nível do servidor.<br /><br /> **\*\* Importante \*\*** Por padrão, a compactação aumenta consideravelmente o uso da CPU, e o consumo adicional da CPU por parte do processo de compactação pode afetar negativamente as operações simultâneas. Portanto, convém criar backups compactados de baixa prioridade em uma sessão cujo uso da CPU é limitado pelo Administrador de Recursos. Para obter mais informações, consulte [Usar o Resource Governor para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
     |**Não compactar o backup**|Clique em criar um backup não compactado, independentemente do padrão do nível do servidor.|  
   
 2.  Na página **Definir Tarefa de Backup de Banco de Dados (Diferencial)** , selecione o banco de dados ou os bancos de dados dos quais deve ser executado um backup parcial. Consulte lista de definições na etapa 16 acima para obter mais informações sobre as opções disponíveis nessa página. Esta tarefa usa a instrução `BACKUP DATABASE ... WITH DIFFERENTIAL`. Para obter mais informações, veja [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  Ao concluir, clique em **Avançar**.  
@@ -426,7 +426,7 @@ ms.locfileid: "78339009"
      **Arquivos de backup**  
      Exclua arquivos de backup de banco de dados.  
   
-     **Relatórios de texto do plano de manutenção**  
+     **Relatórios de texto do Plano de Manutenção**  
      Exclua relatórios de texto de planos de manutenção executados anteriormente.  
   
      **Local do arquivo**  
@@ -438,19 +438,19 @@ ms.locfileid: "78339009"
      **Pesquisar pasta e excluir arquivos com base em uma extensão**  
      Exclua todos os arquivos com a extensão especificada na pasta especificada. Use para excluir vários arquivos de uma vez, como todos os arquivos de backup com a extensão .bak, na pasta Terça-feira.  
   
-     Caixa de **pasta**  
+     Caixa**Pasta**  
      Caminho e nome da pasta que contém os arquivos a serem excluídos.  
   
-     Caixa **extensão de arquivo**  
+     Caixa**Extensão do arquivo**  
      Forneça a extensão de arquivo dos arquivos a serem excluídos. Para excluir vários arquivos de uma vez, como todos os arquivos de backup com a extensão .bak na pasta Terça-feira, especifique .bak.  
   
-     Caixa **de seleção incluir subpastas de primeiro nível**  
+     Caixa de seleção**Incluir subpastas de primeiro nível**  
      Exclua arquivos com a extensão especificada em **Extensão de arquivo** de subpastas de primeiro nível sob a pasta especificada em **Pasta**.  
   
-     Caixa **de seleção Excluir arquivos com base na idade do arquivo em tempo de execução da tarefa**  
+     Caixa de seleção**Excluir arquivos com base na idade do arquivo em tempo de execução da tarefa**  
      Especifique a idade mínima dos arquivos que você deseja excluir fornecendo um número e unidade de tempo na caixa **Excluir arquivos com idade acima de** .  
   
-     **Excluir arquivos anteriores ao seguinte**  
+     **Excluir arquivos com idade acima de**  
      Especifique a idade mínima dos arquivos que você deseja excluir, fornecendo um número e a unidade de tempo (**Hora**, **Dia**, **Semana**, **Mês**ou **Ano**). Arquivos com idade acima do período especificado serão excluídos.  
   
 #### <a name="select-report-options"></a>Selecionar Opções de Relatório  
@@ -459,16 +459,16 @@ ms.locfileid: "78339009"
   
      As opções a seguir estão disponíveis nesta página.  
   
-     Caixa de seleção **gravar um relatório em um arquivo de texto**  
+     Caixa de seleção**Gravar relatório em um arquivo de texto**  
      Salve o relatório em um arquivo.  
   
-     Caixa **local da pasta**  
+     Caixa**Local da pasta**  
      Especifique o local do arquivo que conterá o relatório.  
   
-     Caixa de seleção **relatório de email**  
+     Caixa de seleção**Enviar relatório por email**  
      Envia um email quando uma tarefa falha. Para usar essa tarefa é necessário ter o Database Mail habilitado e configurado corretamente com MSDB como um Banco de dados do host de correio e ter um operador do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent com um endereço de email válido.  
   
-     **Operador de agente**  
+     **Operador do agente**  
      Especifique o destinatário do email.  
   
      **Perfil de email**  
@@ -494,7 +494,7 @@ ms.locfileid: "78339009"
      **Mensagem**  
      Fornece qualquer mensagem de aviso ou erro retornada pelo processo.  
   
-     **Relatório**  
+     **Report**  
      Cria um relatório contendo os resultados do Assistente para Criar Partição. As opções são **Exibir Relatório**, **Salvar Relatório no Arquivo**, **Copiar Relatório na Área de Transferência**e **Enviar Relatório como Email**.  
   
      **Exibir Relatório**  

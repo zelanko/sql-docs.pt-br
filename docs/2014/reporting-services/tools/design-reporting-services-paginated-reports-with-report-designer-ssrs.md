@@ -13,11 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ffd46d75f0d3dc803f2fa3739b363bbb53b7d55b
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339180"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289554"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Criar relatórios com o Designer de Relatórios (SSRS)
   Use o Designer de Relatórios para criar relatórios e soluções completas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . O Designer de Relatórios fornece uma interface gráfica na qual você pode definir fontes de dados, conjuntos de dados e consultas, posições do layout do relatório para regiões de dados e campos e recursos interativos, como parâmetros e conjuntos de relatórios que funcionam em conjunto.  
@@ -120,7 +120,7 @@ ms.locfileid: "78339180"
      Se você usar a configuração de projeto que cria um relatório mas não o implanta, o relatório especificado na propriedade `StartItem` da configuração atual será aberto em outra janela de visualização.  
   
     > [!NOTE]  
-    >  Para usar o modo de Depuração, defina um item inicial. Em Gerenciador de Soluções, clique com o botão direito do mouse no **** projeto de relatório, `StartItem`clique em Propriedades e, em, selecione o nome do relatório a ser exibido.  
+    >  Para usar o modo de Depuração, defina um item inicial. Em Gerenciador de Soluções, clique com o botão direito do mouse no **Properties**projeto de relatório, `StartItem`clique em Propriedades e, em, selecione o nome do relatório a ser exibido.  
   
      Se quiser visualizar um relatório específico que não é o item inicial do projeto, selecione uma configuração que cria o relatório, mas que não o implanta (por exemplo, a configuração DebugLocal), clique com o botão direito do mouse no relatório e clique em **Executar**. Escolha uma configuração que não implante o relatório, caso contrário, o relatório será publicado no servidor de relatórios em vez de ser exibido localmente na janela de visualização.  
   

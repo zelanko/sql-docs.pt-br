@@ -10,12 +10,12 @@ ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9b6516c427f15c960c6bfb459c4fc375e798b798
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7cd6ea975462a7967c7938de8900d5b1877ff524
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67046676"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217070"
 ---
 # <a name="connection-string-properties-analysis-services"></a>Propriedades de cadeia de conexão (Analysis Services)
   Este tópico documenta as propriedades da cadeia de conexão que você pode definir em uma das ferramentas de designer ou de administração, ou que você pode ver nas cadeias de conexão criadas por aplicativos cliente que se conectam aos dados do Analysis Services ou os consultam. Sendo assim, ele aborda apenas um subconjunto das propriedades disponíveis. A lista completa inclui várias propriedades de servidor e de banco de dados, permitindo que você personalize a conexão de um aplicativo específico, independentemente de como a instância ou o banco de dados está configurado no servidor.  
@@ -48,7 +48,7 @@ ms.locfileid: "67046676"
 ##  <a name="bkmk_common"></a>Parâmetros de conexão em uso comum  
  A tabela a seguir descreve as propriedades mais usadas na criação de uma cadeia de conexão.  
   
-|Propriedade|DESCRIÇÃO|Exemplo|  
+|Propriedade|Descrição|Exemplo|  
 |--------------|-----------------|-------------|  
 |`Data Source` ou `DataSource`|Especifica a instância do servidor. Esta propriedade é necessária para todas as conexões. Os valores válidos incluem o nome da rede ou o endereço IP do servidor, local ou localhost para conexões locais, uma URL se o servidor for configurado para acesso HTTP ou HTTPS, ou o nome de um arquivo de cubo local (.cub).|
   `Data source=AW-SRV01` para a instância padrão e a porta (TCP 2383).<br /><br /> 
@@ -66,7 +66,7 @@ ms.locfileid: "67046676"
   
  As propriedades são listadas em ordem alfabética.  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |`EffectiveUserName`|Use quando uma identidade de usuário final precisar ser representada no servidor. Especifique a conta em um formato domínio\usuário. Para usar essa propriedade, o chamador deve ter permissões administrativas no Analysis Services. Para obter mais informações sobre o uso dessa propriedade em uma pasta de trabalho do Excel no SharePoint, consulte [Usar o EffectiveUserName do Analysis Services no SharePoint Server 2013](https://go.microsoft.com/fwlink/?LinkId=311905). Para obter uma ilustração que demonstre como essa propriedade é usada com o Reporting Services, consulte [Usando EffectiveUserName para representar no SSAS](https://www.artisconsulting.com/blogs/greggalloway/2010/4/1/using-effectiveusername-to-impersonate-in-ssas).<br /><br /> 
   `EffectiveUserName` é usado em uma instalação do PowerPivot para SharePoint a fim de capturar informações de uso. A identidade de usuário é fornecida ao servidor para que os eventos ou erros que incluem a identidade do usuário podem ser registrados nos arquivos de log. No caso do PowerPivot, ela não é usada para fins de autorização.|  
@@ -76,7 +76,7 @@ ms.locfileid: "67046676"
 |`Integrated Security`|A identidade do Windows do chamador é usada para se conectar ao Analysis Services. Os valores válidos são em branco, SSPI e BASIC.<br /><br /> `Integrated Security`=`SSPI`é o valor padrão para conexões TCP, permitindo NTLM, Kerberos ou autenticação anônima. O valor padrão das conexões HTTP é em branco.<br /><br /> Ao usar `SSPI`, `ProtectionLevel` deve ser definido da seguinte maneira: `Connect`, `PktIntegrity` ou `PktPrivacy`.|  
 |`Persist Encrypted`|Defina essa propriedade quando o aplicativo cliente exigir que o objeto da fonte de dados mantenha informações confidenciais de autenticação, como uma senha, em formato criptografado. Por padrão, as informações de autenticação não são mantidas.|  
 |`Persist Security Info`|Os valores válidos são True e False. Quando definidas como True, as informações de segurança, como a identidade do usuário ou a senha especificada anteriormente na cadeia de conexão, poderão ser obtidas na conexão depois que ela for estabelecida. O valor padrão é False.|  
-|`ProtectionLevel`|Determina o nível de segurança usado na conexão. Os valores válidos são:<br /><br /> `None`. Conexões não autenticadas ou anônimas. Não realiza nenhuma autenticação nos dados enviados ao servidor.<br /><br /> `Connect`. Conexões autenticadas. Realiza a autenticação somente quando o cliente estabelece uma relação com um servidor.<br /><br /> `PktIntegrity`. Conexões criptografadas. Verifica se todos os dados serão recebidos do cliente e se eles não foram alterados em trânsito.<br /><br /> `PktPrivacy`. Criptografia assinada, suporte apenas para XMLA. Verifica se todos os dados foram recebidos do cliente, se eles não foram alterados em trânsito, e protege a privacidade dos dados criptografando-os.<br /><br /> <br /><br /> Para obter mais informações, consulte [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections).|  
+|`ProtectionLevel`|Determina o nível de segurança usado na conexão. Os valores válidos são:<br /><br /> `None`. Conexões não autenticadas ou anônimas. Não realiza nenhuma autenticação nos dados enviados ao servidor.<br /><br /> `Connect`. Conexões autenticadas. Realiza a autenticação somente quando o cliente estabelece uma relação com um servidor.<br /><br /> `PktIntegrity`. Conexões criptografadas. Verifica se todos os dados serão recebidos do cliente e se eles não foram alterados em trânsito.<br /><br /> `PktPrivacy`. Criptografia assinada, suporte apenas para XMLA. Verifica se todos os dados foram recebidos do cliente, se eles não foram alterados em trânsito, e protege a privacidade dos dados criptografando-os.<br /><br /> <br /><br /> Para obter mais informações, consulte [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections).|  
 |`Roles`|Especifique uma lista delimitada por vírgulas de funções predefinidas a serem conectadas a um servidor ou banco de dados usando as permissões transmitidas por essa função. Se essa propriedade for omitida, todas as funções serão usadas, e as permissões efetivas serão a combinação de todas as funções. Definir a propriedade como um valor vazio (por exemplo, funções = ' ') a conexão do cliente não tem nenhuma associação de função.<br /><br /> Um administrador que usa essa propriedade se conecta usando as permissões transmitidas por essa função. Alguns comandos poderão apresentar falha se a função não tiver permissão suficiente.|  
 |`SSPI`|Especifica explicitamente qual pacote de segurança será usado para autenticação do cliente quando a `Integrated Security` for definida como `SSPI`. O SSPI oferece suporte a vários pacotes, mas você pode usar esta propriedade para especificar um pacote específico. Os valores válidos são Negotiate, Kerberos, NTLM e Usuário Anônimo. Se esta propriedade não for definida, todos os pacotes estarão disponíveis para a conexão.|  
 |`Use Encryption for Data`|Criptografa as transmissões de dados. Os valores válidos são True e False.|  
@@ -88,7 +88,7 @@ ms.locfileid: "67046676"
   
  As propriedades são listadas em ordem alfabética.  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |`Application Name`|Define o nome do aplicativo associado à conexão. Esse valor pode ser útil para monitorar eventos de rastreamento, especialmente quando você tem vários aplicativos que acessam os mesmos bancos de dados. Por exemplo, adicionar Application Name = ' test ' a uma cadeia de conexão faz com que ' test ' apareça em um rastreamento de SQL Server Profiler, conforme mostrado na seguinte captura de tela:<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> 
   `sspropinitAppName` e `AppName` são os alias dessa propriedade. Para obter mais informações, consulte [Usar o parâmetro Application Name ao conectar-se ao SQL Server](https://www.connectionstrings.com/use-application-name-sql-server/).|  

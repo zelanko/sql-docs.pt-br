@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338989"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289264"
 ---
 # <a name="the-oracle-cdc-databases"></a>Os bancos de dados Oracle CDC
   Uma Instância do Oracle CDC está associada a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pelo mesmo nome na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino. Este banco de dados é chamado de banco de dados Oracle CDC (ou banco de dados CDC).  
@@ -94,7 +94,7 @@ ms.locfileid: "78338989"
   
  A tabela a seguir descreve as colunas da tabela **cdc.xdbcdc_config** .  
   
-|Item|DESCRIÇÃO|  
+|Item|Descrição|  
 |----------|-----------------|  
 |version|Isto mantém o controle da versão da configuração de instância CDC. Ela é atualizada a cada hora que a tabela é atualizada e a cada hora que uma nova instância de captura é adicionada ou uma instância de captura existente é removida.|  
 |connect_string|Uma cadeia de conexão da Oracle. Um exemplo básico é:<br /><br /> `<server>:<port>/<instance>` (por exemplo, `erp.contoso.com:1521/orcl`).<br /><br /> A cadeia de conexão também pode especificar um descritor de conexão do Oracle Net, por exemplo, `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Se estiver usando um servidor de diretório ou tnsnames, a cadeia de conexão pode ser o nome da conexão.<br /><br /> Para obter mais informações sobre cadeias de conexão de banco de dados da Oracle, veja [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153) para o Oracle Instant Client que é usado pelo Serviço Oracle CDC.|  
@@ -107,9 +107,9 @@ ms.locfileid: "78338989"
   
  A tabela a seguir descreve as opções disponíveis.  
   
-|Nome|Padrão|Mín|Max|Estático|DESCRIÇÃO|  
+|Nome|Padrão|Mín|Max|Estático|Descrição|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|rastreamento|Falso|-|-|Falso|Os valores disponíveis:<br /><br /> **Verdadeiro**<br /><br /> **Falso**<br /><br /> **no**<br /><br /> **Desligar**|  
+|rastreamento|Falso|-|-|Falso|Os valores disponíveis:<br /><br /> **Verdadeiro**<br /><br /> **Falso**<br /><br /> **on**<br /><br /> **off**|  
 |cdc_update_state_interval|10|1|120|Falso|O tamanho (em Kbytes) de partes de memória alocadas para uma transação (uma transação pode alocar mais de uma parte). Consulte a coluna memory_limit na tabela [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) .|  
 |target_max_batched_transactions|100|1|1000|True|O número máximo de transações do Oracle que podem ser processadas como uma transação na atualização de tabelas do SQL Server CT.|  
 |target_idle_lsn_update_interval|10|0|1|Falso|O intervalo (em segundos) para atualizar a tabela **lsn_time_mapping** quando as tabelas capturadas não têm nenhuma atividade.|  
@@ -137,7 +137,7 @@ ms.locfileid: "78338989"
   
  A tabela a seguir descreve as colunas da tabela **cdc.xdbcdc_state** .  
   
-|Item|DESCRIÇÃO|  
+|Item|Descrição|  
 |----------|-----------------|  
 |status|O código do status atual para a Instância do Oracle CDC atual. O status descreve o estado atual para o CDC.|  
 |sub_status|Um segundo status de nível que fornece informações adicionais sobre o status atual.|  
@@ -162,7 +162,7 @@ ms.locfileid: "78338989"
   
  A tabela a seguir descreve as colunas da tabela cdc.xdbcdc_trace.  
   
-|Item|DESCRIÇÃO|  
+|Item|Descrição|  
 |----------|-----------------|  
 |timestamp|O carimbo de data/hora UTC exato quando o registro de rastreamento foi gravado.|  
 |type|Contém um dos seguintes valores.<br /><br /> ERROR<br /><br /> INFO<br /><br /> RASTREAMENTO|  
@@ -177,7 +177,7 @@ ms.locfileid: "78338989"
   
  A tabela a seguir descreve as colunas da tabela **cdc.xdbcdc_staged_transactions** .  
   
-|Item|DESCRIÇÃO|  
+|Item|Descrição|  
 |----------|-----------------|  
 |transaction_id|O identificador exclusivo da transação que está sendo preparada.|  
 |seq_num|O número de linha **xcbcdc_staged_transactions** para a transação atual (começando com 0).|  

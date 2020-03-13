@@ -27,14 +27,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339304"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289394"
 ---
 # <a name="database-checkpoints-sql-server"></a>Pontos de verificação de banco de dados (SQL Server)
-  Este tópico fornece uma visão geral dos pontos de verificação de banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um ponto de *verificação* cria um ponto válido conhecido do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qual o pode começar a aplicar as alterações contidas no log durante a recuperação após um desligamento ou falha inesperado.  
+  Este tópico fornece uma visão geral dos pontos de verificação de banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um *ponto de verificação* cria um bom ponto conhecido a partir do qual o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pode começar a aplicar as alterações contidas no log durante a recuperação após um desligamento ou uma falha inesperada.  
   
   
 ##  <a name="Overview"></a>Visão geral dos pontos de verificação  
@@ -45,7 +45,7 @@ ms.locfileid: "78339304"
 |Nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interface|Descrição|  
 |----------|----------------------------------|-----------------|  
 |Automático|EXEC sp_configure **'`recovery interval`', '*`seconds`*'**|Emitido automaticamente em segundo plano para atender ao limite de tempo superior sugerido pela `recovery interval` opção de configuração de servidor. Pontos de verificação automáticos executados até a conclusão.  Os pontos de verificação automáticos são acelerados com base no número de gravações pendentes e se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] detecta um aumento na latência de gravação acima de 20 milissegundos.<br /><br /> Para obter mais informações, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Indireto.|ALTERAR BANCO DE DADOS... Definir TARGET_RECOVERY_TIME **=** _target_recovery_time_ {segundos &#124; minutos}|Emitido em segundo plano para cumprir um horário de recuperação de destino especificado pelo usuário para um determinado banco de dados. A hora de recuperação de destino padrão é 0, o que faz com que a heurística de ponto de verificação automático seja usada no banco de dados. Se você usou ALTER DATABASE para definir TARGET_RECOVERY_TIME a >0, esse valor será usado, em vez do intervalo de recuperação especificado para a instância do servidor.<br /><br /> Para obter mais informações, consulte [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
+|Indireto.|ALTERAR BANCO DE DADOS... Definir TARGET_RECOVERY_TIME **=** _target_recovery_time_ {segundos &#124; minutos}|Emitido em segundo plano para cumprir um horário de recuperação de destino especificado pelo usuário para um determinado banco de dados. A hora de recuperação de destino padrão é 0, o que faz com que a heurística de ponto de verificação automático seja usada no banco de dados. Se você usou ALTER DATABASE para definir TARGET_RECOVERY_TIME a >0, esse valor será usado, em vez do intervalo de recuperação especificado para a instância do servidor.<br /><br /> Para obter mais informações, veja [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
 |Manual|CHECKPOINT [ *checkpoint_duration* ]|Emitido quando você executa um comando [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT. O ponto de verificação manual ocorre no banco de dados atual para sua conexão. Por padrão, pontos de verificação manuais são executados até a conclusão. A aceleração funciona da mesma forma que para pontos de verificação automáticos.  Opcionalmente, o parâmetro *checkpoint_duration* especifica a quantidade de tempo solicitada, em segundos, para a conclusão do ponto de verificação.<br /><br /> Para obter mais informações, consulte [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql).|  
 |Interna|Nenhum.|Emitido por várias operações de servidor, como backup e criação de instantâneo de banco de dados, para garantir que as imagens de disco coincidam com o estado atual do log.|  
   
@@ -59,7 +59,7 @@ ms.locfileid: "78339304"
   
   
   
-###  <a name="InteractionBwnSettings"></a>Interação das opções TARGET_RECOVERY_TIME e ' intervalo de recuperação '  
+###  <a name="InteractionBwnSettings"></a> Interação de TARGET_RECOVERY_TIME e opções 'recovery interval'  
  A tabela a seguir resume a interação entre a configuração de **sp_configure`recovery interval`** de todo o servidor e o ALTER DATABASE específico do banco de dados... Configuração de TARGET_RECOVERY_TIME.  
   
 |target_recovery_time|'recovery interval'|Tipo de ponto de verificação usado|  
@@ -121,7 +121,7 @@ ms.locfileid: "78339304"
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para alterar o intervalo de recuperação em uma instância de servidor**  
   
--   [Configurar a opção recovery interval de configuração de servidor](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)  
+-   [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)  
   
  **Para configurar pontos de verificação indiretos em um banco de dados**  
   

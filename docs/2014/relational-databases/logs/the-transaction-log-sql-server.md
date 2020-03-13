@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338270"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289404"
 ---
 # <a name="the-transaction-log-sql-server"></a>O log de transações (SQL Server)
   Todo banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem um log de transações que registra todas as transações e as modificações de banco de dados feitas por cada transação. O log de transações deve ser truncado regularmente para impedir o preenchimento. No entanto, alguns fatores podem atrasar o truncamento de log e, portanto, o monitoramento do tamanho do log é importante. Algumas operações podem ser registradas em log minimamente para reduzir o impacto no tamanho do log de transações.  
@@ -76,7 +76,7 @@ ms.locfileid: "78338270"
   
  O truncamento de log pode ser atrasado por uma variedade de fatores. É possível descobrir se, de fato, há algo impedindo o truncamento de log consultando as colunas **log_reuse_wait** e **log_reuse_wait_desc** da exibição do catálogo [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) . A tabela a seguir descreve os valores dessas colunas.  
   
-|Valor log_reuse_wait|Valor log_reuse_wait_desc|DESCRIÇÃO|  
+|Valor log_reuse_wait|Valor log_reuse_wait_desc|Descrição|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|Atualmente há um ou mais arquivos de log virtuais reutilizáveis.|  
 |1|CHECKPOINT|Não aconteceu nenhum ponto de verificação desde o último truncamento de log, ou o início do log ainda não foi movido para fora de um arquivo de log virtual. (Todos os modelos de recuperação)<br /><br /> Essa é uma razão rotineira para atrasar o truncamento de log. Para obter mais informações, consulte [Pontos de verificação de banco de dados &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
@@ -106,7 +106,7 @@ ms.locfileid: "78338270"
   
  As operações a seguir, completamente registradas sob o modelo de recuperação completa, têm log mínimo no modelo de recuperação simples e bulk-logged:  
   
--   Operações de importação em massa ([bcp](../../tools/bcp-utility.md), [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql)e [INSERT... SELECT](/sql/t-sql/statements/insert-transact-sql)). Para obter mais informações sobre quando a importação em massa para uma tabela é minimamente registrada em log, consulte [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Operações de importação em massa ([bcp](../../tools/bcp-utility.md), [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) e [INSERT... SELECT](/sql/t-sql/statements/insert-transact-sql)). Para obter mais informações sobre quando a importação em massa para uma tabela é minimamente registrada em log, consulte [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
     > [!NOTE]  
     >  Quando a replicação transacional está habilitada, as operações BULK INSERT são completamente registradas mesmo no modelo de recuperação bulk-logged.  

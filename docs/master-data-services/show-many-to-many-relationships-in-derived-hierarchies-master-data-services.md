@@ -11,11 +11,11 @@ ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340568"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289884"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Mostrar relações muitos para muitos em Hierarquias Derivadas (Master Data Services)
 
@@ -91,7 +91,7 @@ Para obter instruções sobre como implantar o modelo de exemplo Cliente e outro
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a>Segurança de membro  
- Uma hierarquia que permite a duplicação do membro (permite que um membro tenha mais de um pai) não pode ser usada para atribuir permissões de segurança do membro. Por exemplo:   
+ Uma hierarquia que permite a duplicação do membro (permite que um membro tenha mais de um pai) não pode ser usada para atribuir permissões de segurança do membro. Por exemplo:  
   
 -   Uma RDH (Hierarquia Derivada Recursiva) que não ancora recursões nulas (cada membro no nível recursivo aparece sob ROOT e seu pai recursivo).  
   

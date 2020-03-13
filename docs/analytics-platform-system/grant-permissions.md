@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339562"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289694"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Conceder permissões T-SQL para data warehouse paralelos
 Conceda permissões T-SQL para operações de banco de dados em data warehouse paralelas.

@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339284"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289284"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Recursos compatíveis com as edições do SQL Server 2014
 

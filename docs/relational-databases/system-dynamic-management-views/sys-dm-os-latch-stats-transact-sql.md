@@ -19,11 +19,11 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72289407"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289904"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ GO
   
  A tabela a seguir contém breves descrições das diversas classes de trava.  
   
-|Classe de trava|DESCRIÇÃO|  
+|Classe de trava|Descrição|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|Usada internamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para inicializar a sincronização da criação de um buffer de anel de alocação.|  
 |ALLOC_CREATE_FREESPACE_CACHE|Usada para inicializar a sincronização de caches internos de espaço livre para heaps.|  

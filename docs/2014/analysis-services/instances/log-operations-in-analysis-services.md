@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339069"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289134"
 ---
 # <a name="log-operations-in-analysis-services"></a>Operações de log no Analysis Services
   Uma instância de Analysis Services registrará notificações, erros e avisos do servidor no arquivo msmdsrv. log-um para cada instância instalada. Os administradores consultam esse log para compreender eventos de rotina e extraordinários. Nas versões mais recentes, o registro em log foi aprimorado para incluir mais informações. Registros de log agora incluem informações de versão e edição do produto, bem como processador, memória, conectividade e eventos de bloqueio. Você pode revisar a lista inteira de alterações em [Aprimoramentos de log](https://support.microsoft.com/kb/2965035).  

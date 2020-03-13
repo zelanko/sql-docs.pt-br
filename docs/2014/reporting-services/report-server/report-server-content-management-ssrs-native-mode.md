@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74ec775d958c6842f284dea5bc90e5d45955423b
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339178"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289584"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gerenciamento do Conteúdo do Servidor de Relatório (Modo Nativo SSRS)
   No [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], o gerenciamento de conteúdo se refere ao gerenciamento de itens de servidor de relatório. Todos os itens podem ser gerenciados independentemente um do outro por propriedades e configurações de segurança. Qualquer item pode ser movido para um local diferente no namespace de pasta de servidor de relatório. Para gerenciar os itens com eficiência, você precisa saber quais tarefas são executadas por um gerenciador de conteúdo.
@@ -179,6 +179,6 @@ ms.locfileid: "78339178"
  [Carregar arquivos em uma pasta](upload-files-to-a-folder.md)
 
 ## <a name="see-also"></a>Consulte Também
- [](../tools/reporting-services-tools.md) [Funções e permissões de ferramentas de Reporting Services &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) [relatórios Reporting Services &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)
+ [Reporting Services Tools](../tools/reporting-services-tools.md) [Funções e permissões de ferramentas de Reporting Services &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) [relatórios Reporting Services &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)
 
 

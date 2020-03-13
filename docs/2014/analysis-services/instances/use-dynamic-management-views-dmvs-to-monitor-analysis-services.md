@@ -10,12 +10,12 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a02d8d5b113e4773aa7cdfbbf20975fd70218e1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66079579"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217117"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Usar DMVs (Exibições de Gerenciamento Dinâmico) para monitorar o Analysis Services
   As DMVs (Exibições de Gerenciamento Dinâmico) do Analysis Services são estruturas de consulta que expõem informações sobre as operações do servidor local e a integridade do servidor. A estrutura da consulta é uma interface para conjuntos de linhas de esquema que retornam metadados e informações de monitoramento sobre uma instância do Analysis Services.  
@@ -104,7 +104,7 @@ ORDER BY TABLE_NAME ASC
 > [!NOTE]  
 >  Se uma DMV não estiver disponível para um determinado conjunto de linhas, o servidor retornará o seguinte erro: \<"o tipo de solicitação de> SchemaRowset não foi reconhecido pelo servidor". Todos os outros erros apontam para problemas com a sintaxe.  
   
-|Conjunto de linhas|DESCRIÇÃO|  
+|Conjunto de linhas|Descrição|  
 |------------|-----------------|  
 |[Conjunto de linhas DBSCHEMA_CATALOGS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-catalogs-rowset)|Retorna uma lista de bancos de dados do Analysis Services na conexão atual.|  
 |[Conjunto de linhas DBSCHEMA_COLUMNS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-columns-rowset)|Retorna uma lista de todas as colunas no banco de dados atual. Você pode usar esta lista para construir uma consulta DMV.|  
@@ -112,7 +112,7 @@ ORDER BY TABLE_NAME ASC
 |[Conjunto de linhas DBSCHEMA_TABLES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-tables-rowset)|Retorna uma lista de todas as tabelas no banco de dados atual. Você pode usar esta lista para construir uma consulta DMV.|  
 |[Conjunto de linhas DISCOVER_CALC_DEPENDENCY](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)|Retorna uma lista de colunas e tabelas usadas em um modelo que têm dependências em outras colunas e tabelas.|  
 |[Conjunto de linhas DISCOVER_COMMAND_OBJECTS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-command-objects-rowset)|Fornece informações de uso de recurso e atividade sobre objetos em uso pelo comando referenciado.|  
-|[Conjunto de linhas DISCOVER_COMMANDS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-commands-rowset)|Fornece informações de uso de recurso e atividade sobre o comando em execução no momento.|  
+|[Conjunto de linhas DISCOVER_COMMANDS](https://docs.microsoft.com/analysis-services/instances/analysis-services-schema-rowsets)|Fornece informações de uso de recurso e atividade sobre o comando em execução no momento.|  
 |[Conjunto de linhas DISCOVER_CONNECTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-connections-rowset)|Fornece informações de uso de recurso e atividade sobre conexões abertas com o Analysis Services.|  
 |[Conjunto de linhas DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)|Retorna informações sobre um modelo de tabela.<br /><br /> Requer a adição de SYSTEMRESTRICTSCHEMA e parâmetros adicionais.|  
 |[Conjunto de linhas DISCOVER_DB_CONNECTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-db-connections-rowset)|Fornece informações de uso de recurso e atividade sobre conexões abertas do Analysis Services com fontes de dados externas, por exemplo, durante o processamento ou a importação.|  
@@ -159,9 +159,9 @@ ORDER BY TABLE_NAME ASC
 |[Conjunto de linhas MDSCHEMA_INPUT_DATASOURCES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)|Retorna informações sobre os objetos de fonte de dados definidos no banco de dados atual.|  
 |[Conjunto de linhas MDSCHEMA_KPIS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-kpis-rowset)|Retorna informações sobre os KPIs definidos no banco de dados atual.|  
 |[Conjunto de linhas MDSCHEMA_LEVELS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-levels-rowset)|Retorna informações sobre os níveis nas hierarquias definidos no banco de dados atual.|  
-|[Conjunto de linhas MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)|Lista a dimensão dos grupos de medidas.|  
+|[Conjunto de linhas MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/e6399481-a289-41f3-94d2-e081bf29e094)|Lista a dimensão dos grupos de medidas.|  
 |[Conjunto de linhas MDSCHEMA_MEASUREGROUPS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset)|Retorna uma lista dos grupos de medidas na conexão atual.|  
-|[Conjunto de linhas MDSCHEMA_MEASURES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measures-rowset)|Retorna uma lista de medidas na conexão atual.|  
+|[Conjunto de linhas MDSCHEMA_MEASURES](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/ab8e721f-9b9c-4ba1-b105-37a5f200d67c)|Retorna uma lista de medidas na conexão atual.|  
 |[Conjunto de linhas MDSCHEMA_MEMBERS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)|Retorna uma lista de todos os membros na conexão atual, organizada por banco de dados, cubo e dimensão.|  
 |[Conjunto de linhas MDSCHEMA_PROPERTIES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|Retorna um nome totalmente qualificado de cada propriedade, junto com o tipo de propriedade, o tipo de dados e outros metadados.|  
 |[Conjunto de linhas MDSCHEMA_SETS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|Retorna uma lista de conjuntos definidos na conexão atual.|  

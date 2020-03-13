@@ -10,12 +10,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4f911ebf60852fd4ab11c5813fc567deb2d0c87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8431de73b450179592bda39066c72550991a393c
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75225397"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217074"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Configurar o acesso HTTP ao Analysis Services no IIS (Serviços de Informações da Internet) 8.0
   Este artigo explica como configurar um ponto de extremidade HTTP para acessar uma instância do Analysis Services. É possível habilitar o acesso HTTP configurando o MSMDPUMP.dll, uma extensão de ISAPI que é executada no IIS (Serviços de Informações da Internet) e que bombeia dados entre os aplicativos cliente e um servidor do Analysis Services. Esta abordagem oferece um meio alternativo de se conectar ao Analysis Services quando sua solução de BI requer os seguintes recursos:  
@@ -52,7 +52,7 @@ ms.locfileid: "75225397"
   
 -   [Testar a configuração](#bkmk_test)  
   
-##  <a name="bkmk_overview"></a>Sobre  
+##  <a name="bkmk_overview"></a> Visão geral  
  O MSMDPUMP é uma extensão ISAPI que pode ser carregada no IIS e que fornece redirecionamento para uma instância do Analysis Services local ou remota. Ao configurar essa extensão ISAPI, você cria um ponto de extremidade HTTP para uma instância do Analysis Services.  
   
  Você deve criar e configurar um diretório virtual para cada ponto de extremidade HTTP. Cada ponto de extremidade precisará ter seu próprio conjunto de arquivos MSMDPUMP, para cada instância do Analysis Services à qual você deseja se conectar. Um arquivo de configuração nesse conjunto de arquivos especifica o nome da instância do Analysis Services usado para cada ponto de extremidade HTTP.  
@@ -78,11 +78,11 @@ ms.locfileid: "75225397"
   
  Na configuração padrão do IIS 8.0 estão faltando componentes necessários para o acesso HTTP ao Analysis Services. Esses componentes, encontrados nas áreas de recursos **Segurança** e **Desenvolvimento de aplicativos** da função **servidor Web (IIS)** , incluem o seguinte:  
   
--   **** | **Autenticação do Windows**de segurança ou **autenticação básica**e quaisquer outros recursos de segurança necessários para seu cenário de acesso a dados.  
+-   **Security** | **Autenticação do Windows**de segurança ou **autenticação básica**e quaisquer outros recursos de segurança necessários para seu cenário de acesso a dados.  
   
--   **** | **CGI** de desenvolvimento de aplicativos  
+-   **Application Development** | **CGI** de desenvolvimento de aplicativos  
   
--   **** | **Extensões ISAPI** de desenvolvimento de aplicativos  
+-   **Application Development** | **Extensões ISAPI** de desenvolvimento de aplicativos  
   
  Para verificar ou adicionar esses componentes, use **Gerenciador do servidor** | **gerenciar** | **adicionar funções e recursos**. Percorrer o assistente até chegar nas **Funções de servidor**. Role para baixo até localizar o **Servidor Web (IIS)**.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "75225397"
 ## <a name="step-5-grant-data-access-permissions"></a>Etapa 5: Conceder permissões de acesso a dados  
  Como mencionado anteriormente, será preciso conceder permissões à instância do Analysis Services. Cada objeto de banco de dados terá funções que fornecem um nível específico de permissões (leitura ou leitura/gravação), e cada função terá os membros que consistem em identidades de usuário do Windows.  
   
- Para definir permissões, você pode usar o SQL Server Management Studio. Na pasta **** | **funções** de banco de dados, você pode criar funções, especificar permissões de banco de dados, atribuir associação a contas de usuário ou de grupo do Windows e conceder permissões de leitura ou gravação em objetos específicos. Normalmente, as permissões de **Leitura** em um cubo são suficientes para as conexões de cliente que usam, mas não atualizam, dados do modelo.  
+ Para definir permissões, você pode usar o SQL Server Management Studio. Na pasta **Database** | **funções** de banco de dados, você pode criar funções, especificar permissões de banco de dados, atribuir associação a contas de usuário ou de grupo do Windows e conceder permissões de leitura ou gravação em objetos específicos. Normalmente, as permissões de **Leitura** em um cubo são suficientes para as conexões de cliente que usam, mas não atualizam, dados do modelo.  
   
  A atribuição de função varia dependendo de como você configurou a autenticação.  
   
@@ -293,7 +293,7 @@ ms.locfileid: "75225397"
   
  `Data Source=https://<servername>/olap/msmdpump.dll; Initial Catalog=AdventureWorksDW2012; Integrated Security=Basic; User ID=XXXX; Password=XXXXX;`  
   
- Para obter mais informações sobre como configurar a conexão de modo programático, consulte [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections).  
+ Para obter mais informações sobre como configurar a conexão de modo programático, consulte [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections).  
   
  Como etapa final, faça testes mais rigorosos usando um computador cliente executado no ambiente de rede no qual as conexões serão originadas.  
   

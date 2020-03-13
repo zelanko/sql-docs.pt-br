@@ -14,11 +14,11 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ad2a12ba8775fe2c35947bf8783f1bf359fca896
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339049"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289314"
 ---
 # <a name="create-a-composite-domain"></a>Criar um domínio composto
   Este tópico descreve como criar um domínio composto em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio composto consiste em um ou mais domínios únicos que se aplicam a um campo de dados único. Para obter mais informações sobre domínios de composição, consulte [Gerenciando um domínio de composição](../../2014/data-quality-services/managing-a-composite-domain.md).  

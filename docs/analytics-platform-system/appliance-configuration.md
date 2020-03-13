@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340459"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289734"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Listas de verificação de configuração do dispositivo para o Analytics Platform System
 Fornece listas de verificação para as tarefas necessárias para configurar o sistema de plataforma de análise para seu próprio ambiente. Essas tarefas de configuração são necessárias para que você possa usar o dispositivo.  
@@ -24,7 +24,7 @@ Fornece listas de verificação para as tarefas necessárias para configurar o s
   
 ## <a name="BeforeTasks"></a>Antes de começar  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Pré-requisitos  
   
 1.  O dispositivo deve ser instalado no data center e ligado.  
   

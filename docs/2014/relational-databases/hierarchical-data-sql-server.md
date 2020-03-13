@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339234"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289184"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dados hierárquicos (SQL Server)
   O tipo de `hierarchyid` dados interno torna mais fácil armazenar e consultar dados hierárquicos. `hierarchyid`é otimizado para representar árvores, que são o tipo mais comum de dados hierárquicos.  
@@ -159,7 +159,7 @@ GO
   
      Em um índice por amplitude todos os filhos diretos de um nós são colocados. Índices por amplitude são, portanto, eficientes para responder consultas sobre filhos diretos, como "Localizar todos os empregados que se reportam diretamente a esse gerente".  
   
- Ter opções por profundidade, por amplitude, ou ambas, e qual delas tornar a chave de clustering (se houver), depende da importância relativa dos tipos de consultas anteriores e da importância relativa de operações SELECT versus DML. Para obter um exemplo detalhado de estratégias de indexação, consulte [Tutorial: Usando o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Ter opções por profundidade, por amplitude, ou ambas, e qual delas tornar a chave de clustering (se houver), depende da importância relativa dos tipos de consultas anteriores e da importância relativa de operações SELECT versus DML. Para obter um exemplo detalhado de indexação de estratégias, veja [Tutorial: Como usar o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Criando índices  
@@ -265,7 +265,7 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> Tarefas relacionadas  
   
 ###  <a name="migrating"></a> Migrando de Pai/Filho para hierarchyid  
- A maioria das árvores é representada usando Pai/Filho. O modo mais fácil de migrar de uma estrutura Pai/Filho para uma tabela usando `hierarchyid` é usar uma coluna ou uma tabela temporária para manter o controle do número de nós em cada nível da hierarquia. Para obter um exemplo de migração de uma tabela Pai/Filho, consulte a lição 1 do [Tutorial: Usando o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ A maioria das árvores é representada usando Pai/Filho. O modo mais fácil de migrar de uma estrutura Pai/Filho para uma tabela usando `hierarchyid` é usar uma coluna ou uma tabela temporária para manter o controle do número de nós em cada nível da hierarquia. Para obter um exemplo de migração de uma tabela Pai/Filho, veja a lição 1 do [Tutorial: Como usar o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Gerenciando uma árvore com hierarchyid  
@@ -525,7 +525,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de método de tipo de dados hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [Tutorial: Usando o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Usar o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

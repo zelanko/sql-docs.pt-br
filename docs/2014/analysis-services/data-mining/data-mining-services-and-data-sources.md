@@ -10,12 +10,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 048f737266e815a02058a51ebebce0b0f1ff46af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66084923"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217127"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Serviços de mineração de dados e fontes de dados
   A mineração de dados requer uma conexão com uma instância do SQL Server Analysis Services. Os dados de um cubo não são necessários para a mineração de dados e o uso de fontes relacionais é recomendado; porém, a mineração de dados usa componentes fornecidos pelo mecanismo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -46,7 +46,7 @@ ms.locfileid: "66084923"
 ### <a name="xmla-listener"></a>Ouvinte XMLA  
  O componente ouvinte XMLA processa todas as comunicações de XMLA entre o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e seus clientes. A [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` definição de configuração no arquivo msmdsrv. ini pode ser usada para especificar uma porta na qual uma [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância escuta. Um valor 0 nesse arquivo indica que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ouve na porta padrão. A menos que especificado de outro modo, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa as seguintes portas TCP padrão:  
   
-|Porta|DESCRIÇÃO|  
+|Porta|Descrição|  
 |----------|-----------------|  
 |2383|Instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |2382|Redirecionador para outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
@@ -117,7 +117,7 @@ ms.locfileid: "66084923"
   
  Se o procedimento retornar um conjunto de dados, o cliente receberá um conjunto de dados ou uma tabela de dados com uma tabela aninhada contendo as linhas. Por exemplo, se você criar uma consulta baseada no conteúdo de modelo, a consulta retornará o modelo inteiro. Para evitar que sejam retornadas muitas linhas, você pode gravar procedimentos armazenados usando o modelo de objeto ADOMD+.  
   
- Para gravar um procedimento armazenado de servidor, você deve fazer referência ao namespace Microsoft.AnalysisServices.AdomdServer. Para obter mais informações sobre como criar e usar procedimentos armazenados, consulte [Funções e procedimentos armazenados definidos pelo usuário](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
+ Para gravar um procedimento armazenado de servidor, você deve fazer referência ao namespace Microsoft.AnalysisServices.AdomdServer. Para obter mais informações sobre como criar e usar procedimentos armazenados, consulte [Funções e procedimentos armazenados definidos pelo usuário](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
   
 > [!NOTE]  
 >  Os procedimentos armazenados não podem ser usados para alterar a segurança em objetos de servidor de dados. Quando você executa um procedimento armazenado, o contexto atual do usuário é usado para determinar o acesso a todos os objetos de servidor. Portanto, os usuários devem ter as permissões apropriadas em qualquer objeto de banco de dados que eles acessam.  

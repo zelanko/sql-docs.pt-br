@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339089"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289624"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O Agent é um serviço do Microsoft Windows que executa tarefas administrativas agendadas, que ** são chamadas [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]de trabalhos no.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O Agent é um serviço do Microsoft Windows que executa tarefas administrativas agendadas, que *jobs* são chamadas [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]de trabalhos no.  
   
  **Neste tópico**  
   

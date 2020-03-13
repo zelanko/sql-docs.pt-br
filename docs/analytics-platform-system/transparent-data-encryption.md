@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339734"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289744"
 ---
 # <a name="transparent-data-encryption"></a>Criptografia de Dados Transparente
 Você pode adotar várias precauções para ajudar a proteger o banco de dados, como a criação de um sistema seguro, a criptografia de ativos confidenciais e a criação de um firewall em torno de servidores de bancos de dados. No entanto, para um cenário no qual a mídia física (como unidades ou fitas de backup) seja roubada, uma parte mal-intencionada pode apenas restaurar ou anexar o banco de dados e procurar os mesmos. Uma solução é criptografar dados confidenciais no banco de dados e proteger as chaves usadas para criptografar os dados com um certificado. Isso impede que alguém sem as chaves use os dados, mas esse tipo de proteção deve ser planejado antecipadamente.  

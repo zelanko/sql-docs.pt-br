@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e52b36ff9cb8c7d0f4f7fc6086563616325cdc92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72289366"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289924"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -198,7 +198,7 @@ Os bloqueios são mantidos nos recursos [!INCLUDE[ssNoVersion](../../includes/ss
   
  A tabela seguinte fornece o formato da coluna **resource_description** para cada tipo de recurso.  
   
-|Recurso|Formatar|DESCRIÇÃO|  
+|Recurso|Formatar|Descrição|  
 |--------------|------------|-----------------|  
 |DATABASE|Não aplicável|A ID de banco de dados já está disponível na coluna **resource_database_id**.|  
 |FILE|<file_id>|ID do arquivo representado por esse recurso.|  

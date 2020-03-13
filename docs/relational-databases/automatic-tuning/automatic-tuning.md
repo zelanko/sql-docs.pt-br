@@ -14,12 +14,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 365834e3c1cd239a245c1523947a359b7c2dcc57
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67934551"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289114"
 ---
 # <a name="automatic-tuning"></a>Ajuste automático
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ Sem o ajuste automático, os usuários devem monitorar o sistema periodicamente 
 Os planos forçados manualmente não devem ser forçados para [!INCLUDE[ssde_md](../../includes/ssde_md.md)] sempre, porque o deve ser capaz de aplicar planos ideais. O usuário ou DBA deve eventualmente não forçar o plano usando `sp_query_store_unforce_plan` o procedimento e deixar que [!INCLUDE[ssde_md](../../includes/ssde_md.md)] a encontre o plano ideal. 
 
 > [!TIP]
-> Alternativelly, use as **consultas com planos forçados** repositório de consultas exibição para localizar e não forçar planos.
+> Como alternativa, use as **consultas com planos forçados** repositório de consultas exibição para localizar e não forçar planos.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornece todas as exibições e os procedimentos necessários para monitorar o desempenho e corrigir problemas no Repositório de Consultas.
 
