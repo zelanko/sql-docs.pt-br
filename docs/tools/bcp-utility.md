@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 22a1a64e11d7cae779531c46ee6b39d26ae403f4
-ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
+ms.openlocfilehash: 4aad2c9bfbd79079e96339e40d5e36a9146f3ae0
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634845"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280897"
 ---
 # <a name="bcp-utility"></a>Utilitário bcp
 
@@ -121,14 +121,14 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  _**database\_name**_ <a name="db_name"></a>  
  É o nome do banco de dados no qual a tabela ou exibição especificada reside. Se não estiver especificado, esse será o banco de dados padrão do usuário.  
 
- Você também pode especificar explicitamente o nome de banco de dados com **d-** .  
+ Você também pode especificar explicitamente o nome de banco de dados com **-d**.  
 
  **in** *data_file* | **out** *data_file* | **queryout** *data_file* | **format nul**  
  Especifica a direção da cópia em massa, do seguinte modo:  
   
 -   **in**<a name="in"></a> copia de um arquivo em uma tabela ou exibição de banco de dados.  
   
--   **out**<a name="out"></a> copia da tabela ou exibição de banco de dados para um arquivo. Se você especificar um arquivo existente, o arquivo será substituído. Ao extrair dados, observe que o utilitário **bcp** representa uma cadeia de caracteres vazia como nula e uma cadeia de caracteres nula como uma cadeia de caracteres vazia.  
+-   **out**<a name="out"></a> copia da tabela ou exibição de banco de dados para um arquivo. Se você especificar um arquivo existente, o arquivo será substituído. Ao extrair dados, o utilitário **bcp** representa uma cadeia de caracteres vazia como nula e uma cadeia de caracteres nula como vazia.  
   
 -   **queryout**<a name="qry_out"></a> copia de uma consulta e deve ser especificado somente quando você copiar dados em massa de uma consulta.  
   
@@ -187,10 +187,11 @@ Faz com que o valor passado para a opção `-S` do `bcp` seja interpretada como 
   
  Se *err_file* começar com um hífen (-) ou uma barra (/), não inclua um espaço entre **-e** e o valor *err_file* .  
   
- **-E**<a name="E"></a>   
- Especifica que o valor, ou valores, de identidade no arquivo de dados importado deve ser usado para a coluna de identidade. Se **-E** não for fornecido, os valores de identidade para essa coluna no arquivo de dados que está sendo importado serão ignorados e o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] atribuirá automaticamente valores exclusivos com base nos valores semente e de incremento especificados durante a criação da tabela.  
+**-E**<a name="E"></a>
+
+Especifica que o valor, ou valores, de identidade no arquivo de dados importado deve ser usado para a coluna de identidade. Se **-E** não for fornecido, os valores de identidade para essa coluna no arquivo de dados que está sendo importado serão ignorados e o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] atribuirá automaticamente valores exclusivos com base nos valores semente e de incremento especificados durante a criação da tabela.  Para obter mais informações, confira [DBCC CHECKIDENT](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).
   
- Se o arquivo de dados não contiver valores para a coluna de identidade na tabela ou exibição, use um arquivo de formato para especificar que a coluna de identidade na tabela ou exibição deve ser ignorada ao importar dados. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] atribui valores exclusivos para a coluna automaticamente. Para obter mais informações, veja [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
+ Se o arquivo de dados não contiver valores para a coluna de identidade na tabela ou exibição, use um arquivo de formato para especificar que a coluna de identidade na tabela ou exibição deve ser ignorada ao importar dados. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] atribui valores exclusivos para a coluna automaticamente.
   
  A opção **-E** tem um requisito de permissões especial. Para obter mais informações, consulte "[Comentários](#remarks)", mais adiante neste tópico.  
    
@@ -228,13 +229,13 @@ Faz com que o valor passado para a opção `-S` do `bcp` seja interpretada como 
 
     O exemplo a seguir exporta dados usando o nome de usuário e a senha do Azure AD, em que o usuário e a senha são uma credencial do AAD. O exemplo exporta a tabela `bcptest` do banco de dados `testdb` do servidor do Azure `aadserver.database.windows.net` e armazena os dados em um arquivo `c:\last\data1.dat`:
 
-    ```console
+    ```cmd
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
     O exemplo a seguir importa dados usando o nome de usuário e a senha do Azure AD, em que o usuário e a senha são uma credencial do AAD. O exemplo importa dados do arquivo `c:\last\data1.dat` na tabela `bcptest` para o banco de dados `testdb` no servidor do Azure `aadserver.database.windows.net` usando o usuário e a senha do Azure AD:
 
-    ```console
+    ```cmd
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
@@ -244,13 +245,13 @@ Faz com que o valor passado para a opção `-S` do `bcp` seja interpretada como 
 
     O exemplo a seguir exporta dados usando a conta integrada do Azure AD. O exemplo exporta a tabela `bcptest` do banco de dados `testdb` usando o Azure AD integrado do servidor do Azure `aadserver.database.windows.net` e armazena os dados em um arquivo `c:\last\data2.dat`:
 
-    ```console
+    ```cmd
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
     O exemplo a seguir importa dados usando a autenticação integrada do Azure AD. O exemplo importa dados do arquivo `c:\last\data2.txt` na tabela `bcptest` para o banco de dados `testdb` no servidor do Azure `aadserver.database.windows.net` usando a autenticação integrada do Azure AD:
 
-    ```console
+    ```cmd
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
@@ -266,13 +267,13 @@ Faz com que o valor passado para a opção `-S` do `bcp` seja interpretada como 
 
    O modo interativo requer que uma senha seja inserida manualmente ou, para contas com a autenticação multifator habilitada, conclua o método de autenticação MFA configurado.
 
-   ```console
+   ```cmd
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
    ```
 
    Caso um usuário do Azure AD seja um domínio federado usando uma conta do Windows, o nome de usuário necessário na linha de comando, contém sua conta de domínio (por exemplo, joe@contoso.com, confira abaixo):
 
-   ```console
+   ```cmd
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
@@ -448,7 +449,7 @@ Executa a operação de cópia em massa usando os tipos de dados nativos (banco 
     
     Para determinar o local em que todas as versões do utilitário bcp estão instaladas, digite no prompt de comando:
     
-    ```console
+    ```cmd
     where bcp.exe
     ```
 
@@ -604,7 +605,7 @@ END
 
 No prompt de comando, digite o seguinte comando:
 
-```console
+```cmd
 bcp -v
 ```
   
@@ -616,7 +617,7 @@ Os exemplos a seguir ilustram a opção **out** na tabela `WideWorldImporters.Wa
 
   No prompt de comando, digite o seguinte comando:
 
-  ```console
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -638,7 +639,7 @@ O exemplo a seguir ilustra a opção **out** na tabela `WideWorldImporters.Wareh
 
 No prompt de comando, digite o seguinte comando: \(O sistema solicitará sua senha.\)
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```
 
@@ -650,7 +651,7 @@ Os exemplos a seguir ilustram a opção **in** na tabela `WideWorldImporters.War
 
   No prompt de comando, digite o seguinte comando:
 
-  ```console
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -658,7 +659,7 @@ Os exemplos a seguir ilustram a opção **in** na tabela `WideWorldImporters.War
   
 No prompt de comando, digite o seguinte comando:
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
 ```
 
@@ -670,7 +671,7 @@ Para copiar uma coluna específica, você pode usar a opção **queryout** .  O 
   
 No prompt de comando, digite o seguinte comando:
 
-```console
+```cmd
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```
 
@@ -680,7 +681,7 @@ Para copiar uma linha específica, você pode usar a opção **queryout** . O ex
   
 No prompt de comando, digite o seguinte comando:
 
-```console
+```cmd
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```
 
@@ -690,7 +691,7 @@ Para copiar o conjunto de resultados de uma instrução Transact-SQL em um arqui
 
 No prompt de comando, digite o seguinte comando:
 
-```console
+```cmd
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```
 
@@ -700,7 +701,7 @@ O exemplo a seguir cria três arquivos de formato diferentes para a tabela `Ware
 
 No prompt de comando, digite os seguintes comandos:
 
-```console
+```cmd
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -722,7 +723,7 @@ Para usar um arquivo de formato criado anteriormente ao importar dados para uma 
 
 No prompt de comando, digite o seguinte comando:
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
 ```
 

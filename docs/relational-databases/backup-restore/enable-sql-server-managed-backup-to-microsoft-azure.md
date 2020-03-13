@@ -1,5 +1,5 @@
 ---
-title: Usar o backup de gerenciado no Azure"
+title: Usar o backup gerenciado no Azure"
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.description: Enable SQL Server managed backup to Azure
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 07bb9cf8f0fc697e1d31a80e22a72cd5a0ea484a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e59dfd9c79090bc20a517367e0145303822d8079
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257949"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280873"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Habilitar o backup gerenciado do SQL Server no Azure
 
@@ -34,7 +34,7 @@ O processo exige uma conta do Azure. Caso já tenha uma conta, vá para a próxi
 
 Para saber mais sobre contas de armazenamento, confira [Sobre as contas de armazenamento do Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/). 
 
-#### <a name="azure-clitabazure-cli"></a>[CLI do Azure](#tab/azure-cli)
+#### <a name="azure-cli"></a>[CLI do Azure](#tab/azure-cli)
 
 1. Entre em sua conta do Azure.
 
@@ -61,7 +61,7 @@ Para saber mais sobre contas de armazenamento, confira [Sobre as contas de armaz
     az storage container generate-sas --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value
     ```
 
-#### <a name="powershelltabazure-powershell"></a>[PowerShell](#tab/azure-powershell)
+#### <a name="powershell"></a>[PowerShell](#tab/azure-powershell)
 
 1. O comando a seguir conecta você à sua conta do Azure.
 

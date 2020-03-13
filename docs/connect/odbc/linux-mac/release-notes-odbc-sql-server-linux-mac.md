@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: cf6cd4cce3435491632afa98195650a73fe4a23b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 39e010f87b9cf0785ba025cfb8a9cf96825ae9d9
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76911184"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896766"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Notas sobre a versão para Microsoft ODBC Driver para SQL Server em Linux e macOS
 
@@ -36,7 +36,16 @@ Thank you.
 GeneMi.  2019/04/03.
 -->
 
-## <a name="175-january-2020"></a>17. 5 de janeiro de 2020
+## <a name="1752-march-2020"></a>17.5.2, março de 2020
+
+| Recurso adicionado | Detalhes |
+| :------------ | :------ |
+| Suporte à autenticação com a Identidade Gerenciada para o Azure Key Vault | Confira [Uso do Always Encrypted com o driver ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
+| Compatibilidade com pontos de extremidade adicionais do Azure Key Vault | Confira [Uso do Always Encrypted com o driver ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
+| Correções de bugs. | Veja [Correções de bug](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## <a name="175-january-2020"></a>17.5, janeiro de 2020
 
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
@@ -50,8 +59,8 @@ GeneMi.  2019/04/03.
 
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
-| Suporte para pontos de extremidade de Azure Key Vault adicionais | Confira [Uso do Always Encrypted com o driver ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
-| Suporte para a configuração da versão de classificação de dados | Veja [Classificação de Dados](../data-classification.md#bkmk-version). |
+| Compatibilidade com pontos de extremidade adicionais do Azure Key Vault | Confira [Uso do Always Encrypted com o driver ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
+| Compatibilidade com a configuração da versão de classificação de dados | Veja [Classificação de Dados](../data-classification.md#bkmk-version). |
 | Correções de bugs. | Veja [Correções de bug](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
@@ -87,7 +96,7 @@ Ao usar Always Encrypted com enclaves seguros e o Azure Key Vault, os compriment
 | Classificação de Dados para o Banco de Dados SQL do Azure e SQL Server. | Veja [Classificação de Dados](../data-classification.md). |
 | Suporte para codificação de servidor UTF-8. | &nbsp; |
 | `SQLBrowseConnect` | &nbsp; |
-| Dependência dinâmica de `libcurl`. | Começando com esta versão, o pacote `libcurl` não é uma dependência explícita.<br/>O pacote `libcurl` para OpenSSL ou NSS é necessário ao usar a autenticação do Azure Key Vault ou do Azure Active Directory.<br/>Se você encontrar um erro em relação ao `libcurl`, verifique se ele está instalado. |
+| Dependência dinâmica de `libcurl`. | A partir desta versão, o pacote `libcurl` não é uma dependência explícita.<br/>O pacote `libcurl` para OpenSSL ou NSS é necessário ao usar a autenticação do Azure Key Vault ou do Azure Active Directory.<br/>Se você encontrar um erro em relação ao `libcurl`, verifique se ele está instalado. |
 | Resiliência de Conexão Ociosa com palavras-chave ConnectRetryCount e ConnectRetryInterval na cadeia de conexão. | &bull; &nbsp; &nbsp; Use `SQL_COPT_SS_CONNECT_RETRY_COUNT` (somente leitura) para recuperar o número de tentativas de repetição de conexão.<br/><br/>&bull; &nbsp; &nbsp; Use `SQL_COPT_SS_CONNECT_RETRY_INTERVAL` (somente leitura) para recuperar a duração do intervalo de repetição de conexão.<br/><br/>Veja [Resiliência de conexão no Windows ODBC Driver](../windows/connection-resiliency-in-the-windows-odbc-driver.md). |
 | Correções de bugs. | [Correções de bugs](../bug-fixes.md). |
 | &nbsp; | &nbsp; |

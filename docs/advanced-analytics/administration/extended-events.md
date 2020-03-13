@@ -3,18 +3,18 @@ title: Monitorar scripts com eventos estendidos
 description: Saiba como usar eventos estendidos para monitorar e solucionar problemas de operações relacionadas aos scripts externos de trabalhos nos Serviços de Machine Learning do SQL Server, no SQL Server Launchpad, no Python ou no R.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2020
+ms.date: 03/04/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fe8601801a92b28022a83b54ea06ec5836c6c013
-ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
+ms.openlocfilehash: cf0253788e19061fe54b8e2b0b8dfd3142856472
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78200977"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78335736"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>Monitorar scripts do Python e do R com eventos estendidos nos Serviços de Machine Learning do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ Para saber mais sobre como fazer isso, confira a seção [Coletar eventos de pro
 |satellite_message_ring_buffer_record|Registro de buffer de anéis de mensagem||  
 |satellite_message_summary|Informações resumidas sobre mensagens||  
 |satellite_message_version_mismatch|O campo de versão da mensagem não é correspondente||  
-|satellite_messaging|Usado para evento de rastreamento de mensagens (associar, desassociar, etc.)||  
+|satellite_messaging|Usado para evento de rastreamento de mensagens (associar, desassociar etc.)||  
 |satellite_partial_message|Usado para rastreamento de mensagens parciais em camada de rede||  
 |satellite_schema_received|Acionado quando o esquema de mensagens é recebido e lido pelo SQL.||  
 |satellite_schema_sent|Acionado quando o esquema de mensagens é enviado pelo satélite.|Acionado somente a partir de processo externo. Confira instruções sobre a coleta de eventos a partir de processos externos.|  
@@ -84,7 +84,12 @@ Para saber mais sobre como fazer isso, confira a seção [Coletar eventos de pro
 ### <a name="collecting-events-from-external-processes"></a>Coletar eventos de processos externos
 
 Os Serviços de Machine Learning do SQL Server iniciam alguns serviços que são executados fora do processo do SQL Server. Para capturar eventos relacionados a esses processos externos, você deve criar um arquivo de configuração de rastreamento de eventos e colocá-lo no mesmo diretório do executável do processo.  
-  
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!IMPORTANT]
+> A partir do SQL Server 2019, o mecanismo de isolamento foi alterado. Portanto, você precisa fornecer as permissões apropriadas para o diretório no qual o arquivo de configuração de rastreamento de eventos está armazenado. Para obter mais informações sobre como definir essas permissões, confira [a seção Permissões de arquivo em SQL Server 2019 no Windows: alterações de isolamento nos Serviços de Machine Learning](../install/sql-server-machine-learning-services-2019.md#file-permissions).
+::: moniker-end
+
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
     Para capturar eventos relacionados ao Launchpad, coloque o arquivo *.xml* no diretório Binn da instância do SQL Server. Em uma instalação padrão, seria:

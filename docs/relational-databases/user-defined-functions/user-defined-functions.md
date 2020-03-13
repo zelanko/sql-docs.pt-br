@@ -16,12 +16,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a659583df74cdc2e5100fcc25aa25e90af3bf22
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 09fb423dc4d3685b22c67b2a86a74443633ba74a
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73843840"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370539"
 ---
 # <a name="user-defined-functions"></a>Funções definidas pelo usuário
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Por que usar UDFs (funções definidas pelo usuário)?
   
 -   Eles podem reduzir o tráfego de rede.  
   
-     Uma operação que filtra dados com base em alguma restrição complexa que não pode ser expressa em uma única expressão escalar pode ser expressa como uma função. Em seguida, a função pode ser invocada na cláusula WHERE para reduzir o número ou linhas enviadas ao cliente.  
+     Uma operação que filtra dados com base em alguma restrição complexa que não pode ser expressa em uma única expressão escalar pode ser expressa como uma função. Em seguida, a função pode ser invocada na cláusula WHERE para reduzir o número de linhas enviadas ao cliente.  
   
 > [!IMPORTANT]
 > As UDFs [!INCLUDE[tsql](../../includes/tsql-md.md)] em consultas só podem ser executadas em um único thread (plano de execução serial). Portanto, usar UDFs inibe o processamento paralelo de consultas. Para obter mais informações sobre o processamento paralelo de consultas, confira o [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing).

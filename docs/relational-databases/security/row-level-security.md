@@ -17,12 +17,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68809954"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288972"
 ---
 # <a name="row-level-security"></a>Segurança em nível de linha
 
@@ -63,7 +63,7 @@ A RLS permite dois tipos de predicado de segurança.
   
  Os predicados de filtro e bloqueio, bem como as políticas de segurança têm o seguinte comportamento:  
   
-- Você pode definir uma função de predicado que se une a outra tabela e/ou invoca uma função. Se a política de segurança for criada com `SCHEMABINDING = ON`, a junção ou a função será acessível pela consulta e funciona como esperado, sem nenhuma verificação de permissão adicional. Se a política de segurança for criada com `SCHEMABINDING = OFF`, os usuários precisarão ter permissões **SELECT** ou **EXECUTE** nessas tabelas e funções adicionais para consultar a tabela de destino.
+- Você pode definir uma função de predicado que se une a outra tabela e/ou invoca uma função. Se a política de segurança for criada com `SCHEMABINDING = ON` (o padrão), a junção ou função será acessível pela consulta e funcionará como o esperado, sem nenhuma verificação de permissão adicional. Se a política de segurança for criada com `SCHEMABINDING = OFF`, os usuários precisarão ter permissões **SELECT** nessas tabelas e funções adicionais para consultar a tabela de destino. Se a função de predicado invocar uma função de valor escalar CLR, a permissão **EXECUTE** também será necessária.
   
 - Você pode fazer uma consulta em uma tabela que tenha um predicado de segurança definido mas desabilitado. Quaisquer linhas que tenham sido filtradas ou bloqueadas não serão afetadas.  
   
@@ -121,7 +121,7 @@ A RLS permite dois tipos de predicado de segurança.
   
 ## <a name="Best"></a> Práticas recomendadas  
   
-- É altamente recomendável criar um esquema separado para os objetos RLS, função de predicado e política de segurança.  
+- É altamente recomendável criar um esquema separado para os objetos RLS: funções de predicado e políticas de segurança. Isso ajuda a separar as permissões que são exigidas por esses objetos especiais das tabelas de destino. Uma separação adicional de políticas e funções de predicado diferentes pode ser necessária em bancos de dados multilocatário, mas não como padrão para todos os casos.
   
 - A permissão **ALTER ANY SECURITY POLICY** é destinada a usuários altamente privilegiados (como um gerente de políticas de segurança). O gerenciador de políticas de segurança não exige a permissão **SELECT** nas tabelas que protege.  
   

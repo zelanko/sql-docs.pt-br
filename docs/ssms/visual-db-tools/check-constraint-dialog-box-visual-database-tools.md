@@ -13,12 +13,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: df31dd31192d3aa877301c63ac425af6477dedd3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cdcfe6cd4f0c48a6774b8e2518968b8c3d1997f2
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75255527"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280926"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Caixa de diálogo Verificar Restrição (Visual Database Tools)
 
@@ -44,7 +44,7 @@ Remova a restrição selecionada da tabela. Para cancelar a adição de uma rest
 Expanda para mostrar o campo de propriedade **Expressão** .  
   
 **Expression**  
-Exibe a expressão para a restrição de verificação selecionada. Para nova restrições, você deve digitar a expressão antes de sair dessa caixa. Você também pode editar restrições de verificação existentes. Para saber mais, confira [Como trabalhar com restrições(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
+Exibe a expressão para a restrição de verificação selecionada. Para nova restrições, você deve digitar a expressão antes de sair dessa caixa. Você também pode editar restrições de verificação existentes. Para saber mais, confira [Trabalhar com restrições](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
   
 **Categoria de identidade**  
 Expanda para mostrar propriedades para **Nome** e **Descrição**.  

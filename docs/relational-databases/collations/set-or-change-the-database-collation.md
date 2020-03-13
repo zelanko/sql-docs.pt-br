@@ -13,16 +13,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fe614dc28c434a068378d256a6e1c7aaa59e6d6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2221d88e5f564b08f993f68f9be4131588aebe2a
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72289348"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866105"
 ---
 # <a name="set-or-change-the-database-collation"></a>Definir ou alterar a ordenação de banco de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Este tópico descreve como definir e alterar a ordenação de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se nenhuma ordenação for especificada, será usada a ordenação do servidor.  
+  
+> [!IMPORTANT]
+> Alterar a ordenação do banco de dados não é explicitamente proibido no Banco de Dados SQL do Azure. No entanto, alterar a ordenação do banco de dados requer o bloqueio exclusivo do banco de dados e de outros processos de usuário ou em segundo plano (por exemplo, se o segundo plano estiver executando backups), o que pode manter os bloqueios do banco de dados e impedir alterações na ordenação. A instrução `ALTER DATABASE COLLATE` no Banco de Dados SQL do Azure falhará se for executada enquanto os processos em segundo plano estiverem acessando o banco de dados. Você precisaria repetir a instrução se recebesse um erro de tempo limite de bloqueio. 
  
 > [!NOTE]
 > A ordenação não poderá ser alterada usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] depois que o banco de dados tiver sido criado em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Ela só pode ser alterada por meio de [!INCLUDE[tsql](../../includes/tsql-md.md)].

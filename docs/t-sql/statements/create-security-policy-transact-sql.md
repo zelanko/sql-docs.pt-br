@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8cf0332d2a82113145e549d9419b855a222f7441
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 45a1b461c5a56bfd894122eeb67e69672c36d093
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68117292"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288952"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -76,11 +76,11 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
   
  *\<block_dml_operation>* A operação DML específica para à qual o predicado de bloco será aplicado. AFTER especifica que o predicado será avaliado nos valores das linhas após a execução da operação DML (INSERT ou UPDATE). BEFORE especifica que o predicado será avaliado nos valores das linhas antes que a operação DML seja executada (UPDATE ou DELETE). Se nenhuma operação for especificada, o predicado será aplicado a todas as operações.  
   
- [ STATE = { ON | **OFF** } ]  
+ [ STATE = { **ON** | OFF } ]  
  Habilita ou desabilita a política de segurança ao impor seus predicados de segurança nas tabelas de destino. Se não especificado, a política de segurança que está sendo criada é habilitada.  
   
- [ SCHEMABINDING = { ON | OFF } ]  
- Indica se todas as funções de predicado na política devem ser criadas com a opção SCHEMABINDING. Por padrão, todas as funções devem ser criadas com SCHEMABINDING.  
+ [ SCHEMABINDING = { **ON** | OFF } ]  
+ Indica se todas as funções de predicado na política devem ser criadas com a opção SCHEMABINDING. Por padrão, essa configuração está **ON** e todas as funções devem ser criadas com SCHEMABINDING.  
   
  NOT FOR REPLICATION  
  Indica que a política de segurança não deve ser executada quando um agente de replicação modifica o objeto de destino. Para obter mais informações, consulte [Controlar o comportamento de gatilhos e restrições durante a sincronização &#40;programação Transact-SQL de replicação&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  

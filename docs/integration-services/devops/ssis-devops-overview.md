@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 88b8e54867aba5439af9ed87e4a42b2083a479b3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6a1f903d0be82d6f5057af68dce80bda1e48238a
+ms.sourcegitcommit: 951740963d5fe9cea7f2bfe053c45ad5d846df04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76281864"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78225924"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>Ferramentas de DevOps do SSIS (SQL Server Integration Services) (versão prévia)
 
@@ -38,6 +38,8 @@ As **Ferramentas de DevOps do SSIS** incluem a tarefa **Build do SSIS** e a tare
 
 Caminho da pasta do projeto ou do arquivo a ser compilado. Se um caminho de pasta for especificado, a tarefa Build do SSIS pesquisará todos os arquivos dtproj de maneira recursiva nessa pasta e os criará.
 
+O caminho do projeto não pode estar *vazio*, definido como **.** para criar a partir da pasta raiz do repositório.
+
 #### <a name="project-configuration"></a>Configuração do projeto
 
 Nome da configuração de projeto a ser usada para o build. Se ele não for fornecido, usará como padrão a primeira configuração de projeto definida em cada arquivo dtproj.
@@ -50,9 +52,19 @@ Caminho de uma pasta separada para salvar os resultados do build, que podem ser 
 
 - A tarefa Build do SSIS depende do Visual Studio e do Designer SSIS, que é obrigatório nos agentes de build. Portanto, para executar a tarefa Build do SSIS no pipeline, escolha **vs2017-win2016** para agentes hospedados pela Microsoft ou instale o Visual Studio e o Designer SSIS (VS2017 + SSDT2017 ou VS2019 + extensão Projetos do SSIS) em agentes auto-hospedados.
 
-- Para criar projetos do SSIS usando componentes prontos para uso (incluindo o feature pack do SSIS para o Azure e outros componentes de terceiros), os componentes prontos para uso precisam ser instalados no computador em que o agente de pipeline está em execução.  Para o agente hospedado pela Microsoft, o usuário pode adicionar uma [tarefa Script do PowerShell](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) ou uma [tarefa Script de Linha de Comando](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) para baixar e instalar os componentes antes de executar a tarefa Build do SSIS.
+- Para criar projetos do SSIS usando componentes prontos para uso (incluindo o feature pack do SSIS para o Azure e outros componentes de terceiros), os componentes prontos para uso precisam ser instalados no computador em que o agente de pipeline está em execução.  Para o agente hospedado pela Microsoft, o usuário pode adicionar uma [tarefa Script do PowerShell](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) ou uma [tarefa Script de Linha de Comando](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) para baixar e instalar os componentes antes de executar a tarefa Build do SSIS. Confira abaixo o exemplo de script do PowerShell para instalar o Feature Pack do Azure: 
 
-- Não há suporte para o nível de proteção **EncryptSensitiveWithPassword** e **EncryptAllWithPassword** na tarefa Build do SSIS. Verifique se todos os projetos do SSIS na base de código não estão usando esses dois níveis de proteção ou a tarefa Build do SSIS será suspensa e atingirá o tempo limite durante a execução.
+```powershell
+wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
+
+start -Wait -FilePath msiexec -Args "/i AFP.msi /quiet /l* log.txt"
+
+cat log.txt
+```
+
+- Não há suporte para o nível de proteção **EncryptSensitiveWithPassword** e **EncryptAllWithPassword** na tarefa Build do SSIS. Garanta que todos os projetos do SSIS na base de código não estejam usando esses dois níveis de proteção, ou a tarefa Build do SSIS será suspensa e atingirá o tempo limite durante a execução.
+
+- **ConnectByProxy** é uma nova propriedade adicionada recentemente no SSDT. O SSDT instalado no agente hospedado pela Microsoft não está atualizado, portanto, use o agente auto-hospedado como solução alternativa.
 
 ## <a name="ssis-deploy-task"></a>Tarefa Implantação do SSIS
 
