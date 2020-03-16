@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 205f849310ffe2f6139e76783ba7fa6ac315b214
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a124b3a82c75f3da5f7abbdec3b519c86ec7c1c5
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73532357"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090524"
 ---
-# <a name="configure-master-instance-of-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Configurar a instância mestra do [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="configure-master-instance-of-big-data-clusters-2019"></a>Configurar a instância mestra do [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -52,7 +52,7 @@ Para alterar uma dessas configurações, siga estas etapas:
 1. Reinicie a Instância do SQL Server.  Substitua `<namespaceName>` pelo nome do cluster de Big Data.
 
    ```bash
-   kubectl exec -it master-0  -c mssql-server -n <namespaceName>-- /bin/bash
+   kubectl exec -it master-0  -c mssql-server -n <namespaceName> -- /bin/bash
    supervisorctl restart mssql-server
    exit
    ```

@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 652d37ec9f19ccc91e1e0d472cb98d734b65df52
-ms.sourcegitcommit: 99ce0c9b28283d292d19637def982e971115dfbc
+ms.openlocfilehash: 8aae0e199fa1e82116baf0164b0d5c11b68e3711
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77125283"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112346"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- Para construir os planos de consulta mostrados neste artigo, as duas tabelas foram populadas com dados de exemplo do banco de dados de exemplo Northwind, que você pode baixar em [Bancos de dados de exemplo Northwind e pubs do SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=23654).  
+ Para construir os planos de consulta mostrados neste artigo, as duas tabelas foram populadas com dados de exemplo do banco de dados de exemplo Northwind, que você pode baixar em [Bancos de dados de exemplo Northwind e pubs do SQL Server 2000](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).  
   
  Considere a consulta a seguir, que une as tabelas Customer e Order e retorna a ID da ordem e as informações de cliente associadas:  
   

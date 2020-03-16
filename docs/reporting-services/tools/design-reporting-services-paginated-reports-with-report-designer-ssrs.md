@@ -11,11 +11,11 @@ ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e4cfac1ba56647ae0218242d0fb9228a3e80579
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340539"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286160"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Criar relatórios paginados do Reporting Services com o Designer de relatórios (SSRS)
 

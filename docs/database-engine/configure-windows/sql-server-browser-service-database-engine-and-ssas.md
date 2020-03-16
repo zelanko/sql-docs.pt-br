@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fade5e48340e8cc2b51b354f9717a561c632e4d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 19479786362d6773339cc30953451f02e466c2ec
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68028634"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375553"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Serviço SQL Server Browser (Mecanismo de Banco de Dados e SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68028634"
   
  Na inicialização, o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado e reivindica a porta UDP 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser lê o Registro, identifica todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador e anota as portas e os pipes nomeados utilizados. Quando um servidor tiver dois ou mais cartões de rede, o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará para a primeira porta habilitada que encontrar do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser dá suporte ao IPv6 e IPv4.  
   
- Quando clientes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitam recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a biblioteca de rede do cliente envia uma mensagem UDP para o servidor utilizando a porta 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser responde com a porta TCP/IP ou o pipe nomeado da instância solicitada. Em seguida, a biblioteca de rede no aplicativo cliente completa a conexão, enviando uma solicitação ao servidor utilizando a porta ou o pipe nomeado da instância desejada. O Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna informações de porta da instância padrão.  
+ Quando clientes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitam recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a biblioteca de rede do cliente envia uma mensagem UDP para o servidor utilizando a porta 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser responde com a porta TCP/IP ou o pipe nomeado da instância solicitada. Em seguida, a biblioteca de rede no aplicativo cliente completa a conexão, enviando uma solicitação ao servidor utilizando a porta ou o pipe nomeado da instância desejada. 
   
  Para obter informações sobre como iniciar e interromper o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, veja [Iniciar, interromper, pausar, retomar ou reiniciar o Mecanismo de Banco de Dados, o SQL Server Agent ou o serviço SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   

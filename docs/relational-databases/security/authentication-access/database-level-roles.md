@@ -39,11 +39,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
-ms.translationtype: MT
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339444"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287330"
 ---
 # <a name="database-level-roles"></a>Funções de nível de banco de dados
 
@@ -70,7 +70,7 @@ Para obter uma lista de todas as permissões, consulte o cartaz [Permissões do 
   
  A tabela a seguir mostra as funções de banco de dados fixas e suas funcionalidades. Essas funções existem em todos os bancos de dados. Exceto para a função de banco de dados **pública**, as permissões atribuídas às funções de banco de dados fixas não podem ser alteradas.   
   
-|Nome da função de banco de dados fixa|DESCRIÇÃO|  
+|Nome da função de banco de dados fixa|Descrição|  
 |-------------------------------|-----------------|  
 |**db_owner**|Os membros da função de banco de dados fixa **db_owner** podem executar todas as atividades de configuração e manutenção no banco de dados, bem como remover o banco de dados no [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (No [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)], algumas atividades de manutenção exigem permissões em nível de servidor e não podem ser executadas por **db_owners**.)|  
 |**db_securityadmin**|Os membros da função de banco de dados fixa **db_securityadmin** podem modificar a associação de função somente para funções personalizadas e gerenciar permissões. Membros dessa função têm o potencial de elevar seus privilégios e suas ações devem ser monitoradas.|  
@@ -90,18 +90,18 @@ As permissões atribuídas às funções de banco de dados fixas não podem ser 
 
 Essas funções de banco de dados existem somente no banco de dados mestre virtual. As permissões são restritas às ações executadas no mestre. Somente os usuários de banco de dados no mestre podem ser adicionados a essas funções. Logons não podem ser adicionados a essas funções, mas é possível criar usuários com base nos logons e esses usuários podem ser adicionados às funções. Os usuários de banco de dados contidos no mestre também podem ser adicionados a essas funções. No entanto, os usuários de banco de dados adicionados contidos na função **dbmanager** no mestre não podem ser usados para criar novos bancos de dados.
 
-|Nome da função|DESCRIÇÃO|  
+|Nome da função|Descrição|  
 |--------------------|-----------------|
 |**dbmanager** | Pode criar e excluir bancos de dados. Um membro da função dbmanager que cria um banco de dados se torna o proprietário desse banco de dados, o que permite ao usuário se conectar ao banco de dados como o usuário dbo. O usuário dbo tem todas as permissões de banco de dados no banco de dados. Os membros da função dbmanager necessariamente não tem permissão para acessar bancos de dados que eles não possuem.|
 |**loginmanager** | Pode criar e excluir logons no banco de dados mestre virtual.|
 
 > [!NOTE]
-> A entidade de segurança em nível de servidor e o Administrador do Azure Active Directory (se estiver configurado) têm todas as permissões no [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sem precisar ser membros das funções. Para obter mais informações, consulte [Autenticação e autorização do Banco de Dados SQL: Concedendo o acesso](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+> A entidade de segurança em nível de servidor e o Administrador do Azure Active Directory (se estiver configurado) têm todas as permissões no [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sem precisar ser membros das funções. Saiba mais em [Autenticação e autorização do Banco de Dados SQL: concessão de acesso](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
   
 ## <a name="msdb-roles"></a>Funções msdb  
  O banco de dados msdb contém as funções com finalidade especial que são mostradas na tabela a seguir.  
   
-|Nome da função msdb|DESCRIÇÃO|  
+|Nome da função msdb|Descrição|  
 |--------------------|-----------------|  
 |**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Os membros dessas funções de banco de dados podem administrar e usar o [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. As instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que são atualizadas de uma versão anterior podem conter uma versão mais antiga da função que foi nomeada com o DTS (Data Transformation Services), e não com o [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Para obter mais informações, veja [Funções do Integration Services &#40;Serviço do SSIS&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md).|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|Os membros dessas funções de banco de dados podem administrar e usar o coletor de dados. Para obter mais informações, consulte [Data Collection](../../../relational-databases/data-collection/data-collection.md).|  
@@ -114,11 +114,11 @@ Essas funções de banco de dados existem somente no banco de dados mestre virtu
 
 ## <a name="working-with-r-services"></a>Trabalhando com serviços de R  
 
-**Aplica-se a:** SQL Server a partir de [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
+**Aplica-se a:** SQL Server a partir do [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
 
 Quando o R Services está instalado, as funções adicionais de banco de dados ficam disponíveis para gerenciar pacotes. Para obter mais informações, consulte [Gerenciamento de pacotes de R para o SQL Server](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
 
-|Nome da função |DESCRIÇÃO|  
+|Nome da função |Descrição|  
 |-------------|-----------------|
 |**rpkgs-users** |Permite que usuários usem quaisquer pacotes compartilhados que foram instalados por membros da função rpkgs-shared.|
 |**rpkgs-private** |Fornece acesso a pacotes compartilhados com as mesmas permissões que a função rpkgs-users. Os membros desta função também podem instalar, remover e usar pacotes com escopo definido como particular.|
@@ -127,7 +127,7 @@ Quando o R Services está instalado, as funções adicionais de banco de dados f
 ## <a name="working-with-database-level-roles"></a>Trabalhando com funções de nível de banco de dados  
  A tabela a seguir explica os comandos, exibições e funções para trabalhar com funções de nível de banco de dados.  
   
-|Recurso|Type|DESCRIÇÃO|  
+|Recurso|Type|Descrição|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)|Metadados|Retorna uma lista das funções de banco de dados fixas.|  
 |[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)|Metadados|Exibe as permissões de uma função de banco de dados fixa.|  

@@ -12,11 +12,11 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73594105"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288730"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Visão geral do gerenciamento de chaves do Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ Considerando as funções acima, há duas maneiras de executar tarefas de gerenc
 ## <a name="managing-keys-with-role-separation"></a>Gerenciamento de chaves com separação de funções
 Quando chaves Always Encrypted forem gerenciadas com separação de funções, pessoas diferentes em uma organização assumem as funções de Administrador de Segurança e de DBA. Um processo de gerenciamento de chaves com separação de funções garante que DBAs não tenham acesso a chaves ou repositórios de chaves que contém chaves reais e os Administradores de Segurança não tenham acesso ao banco de dados que contêm dados confidenciais. É recomendável gerenciar as chaves com separação de funções se sua meta for garantir que os DBAs na sua organização não possam acessar dados confidenciais. 
 
-**Observação:** Administradores de Segurança geram e trabalham com as chaves de texto não criptografado, por isso nunca devem executar suas tarefas nos mesmos computadores que hospedam um sistema de banco de dados ou computadores que podem ser acessados por DBAs ou outras pessoas que podem ser possíveis adversários. 
+**Observação:** Os Administradores de Segurança geram e trabalham com as chaves de texto não criptografado, por isso eles nunca devem executar as respectivas tarefas nos mesmos computadores que hospedam um sistema de banco de dados ou computadores que possam ser acessados por administradores de banco de dados ou por outras pessoas que possam ser potenciais concorrentes. 
 
 ## <a name="managing-keys-without-role-separation"></a>Gerenciamento de chaves sem separação de funções
 Quando chaves Always Encrypted são gerenciadas sem a separação de funções, uma única pessoa pode assumir ambas as funções de Administrador de Segurança e de DBA, o que significa que a pessoa precisa ser capaz de acessar e gerenciar tanto as chaves/repositório de chaves quanto os metadados de chaves. Gerenciar chaves sem separação de funções pode ser recomendado para organizações que usam o modelo de DevOps ou se o banco de dados estiver hospedado na nuvem e o principal objetivo for impedir que os administradores de nuvem (mas não os DBAs locais) acessem dados confidenciais.

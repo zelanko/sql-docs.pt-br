@@ -10,12 +10,12 @@ ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 6fba15e73edf14b9bb794012c8fe56ec8264a5b2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e06daf1c4963df2706781ba222ef5efd07ab9249
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73632958"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112375"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notas de versão do SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ Use a tabela a seguir para determinar qual arquivo baixar e instalar. Verifique 
 |Uma versão de 32 bits de somente ferramentas do cliente e de gerenciamento para SQL Server 2012 (incluindo SQL Server 2012 Management Studio)|Atualizar as ferramentas do cliente e de gerenciamento para a versão de 32 bits do SQL Server 2012 SP1|SQLManagementStudio_x86_ENU.exe [aqui](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |Uma versão de 32 bits do SQL Server 2012 Management Studio Express|Atualizar a versão de 32 bits do SQL Server 2012 SP1 Management Studio Express|SQLManagementStudio_x86_ENU.exe [aqui](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |Uma versão de 32 bits de qualquer edição do SQL Server 2012 **e** uma versão de 32 bits do cliente e das ferramentas de gerenciamento (incluindo SQL Server 2012 RTM Management Studio)|Atualizar todos os produtos para a versão de 32 bits do SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe [aqui](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|Uma versão de 32 bits de uma ou mais ferramentas do [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)|Atualizar as ferramentas para a versão de 32 bits do Microsoft SQL Server 2012 SP1 Feature Pack|Um ou mais arquivos do [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)|  
+|Uma versão de 32 bits de uma ou mais ferramentas do [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)|Atualizar as ferramentas para a versão de 32 bits do Microsoft SQL Server 2012 SP1 Feature Pack|Um ou mais arquivos do [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)|  
 |Nenhuma instalação de 32 bits do SQL Server 2012|Instalar a versão de 32 bits do SQL Server 2012 incluindo o SP1 (nova instância com SP1 pré-instalado)|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **e** SQLServer2012SP1-FullSlipstream-x86-ENU.box [aqui](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Nenhuma instalação de 32 bits do SQL Server 2012 Management Studio|Instalar a versão de 32 bits do SQL Server 2012 Management Studio incluindo SP1|SQLManagementStudio_x86_ENU.exe [aqui](https://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |Nenhuma versão de 32 Bits do SQL Server 2012 RTM Express|Instalar a versão de 32 bits do SQL Server 2012 Express incluindo SP1|SQLEXPR32_x86_ENU.exe [aqui](https://go.microsoft.com/fwlink/p/?LinkId=267905)|  
@@ -118,7 +118,7 @@ Use a tabela a seguir para determinar qual arquivo baixar e instalar. Verifique 
 |Uma versão de 64 bits com somente o cliente e as ferramentas de gerenciamento para SQL Server 2012 SQL (incluindo SQL Server 2012 Management Studio)|Atualizar o cliente e as ferramentas de gerenciamento para a versão de 64 bits do SQL Server 2012 SP1|SQLManagementStudio_x64_ENU.exe [aqui](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |Uma versão de 64 bits do SQL Server 2012 Management Studio Express|Atualizar a versão de 64 bits do SQL Server 2012 SP1 Management Studio Express|SQLManagementStudio_x64_ENU.exe [aqui](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |Uma versão de 64 bits de qualquer edição do SQL Server 2012 **e** uma versão de 64 bits do cliente e das ferramentas de gerenciamento (incluindo SQL Server 2012 RTM Management Studio)|Atualizar todos os produtos para a versão de 64 bits do SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe [aqui](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|Uma versão de 64 bits de uma ou mais ferramentas do [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=16978)|Atualizar as ferramentas para a versão de 64 bits do Microsoft SQL Server 2012 SP1 Feature Pack|Um ou mais arquivos do [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)|  
+|Uma versão de 64 bits de uma ou mais ferramentas do [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)|Atualizar as ferramentas para a versão de 64 bits do Microsoft SQL Server 2012 SP1 Feature Pack|Um ou mais arquivos do [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)|  
 |Nenhuma instalação de 64 bits do SQL Server 2012|Instalar a versão de 64 bits do SQL Server 2012 incluindo o SP1 (nova instância com SP1 pré-instalado)|SQLServer2012SP1-FullSlipstream-x64-ENU.exe **e** SQLServer2012SP1-FullSlipstream-x64-ENU.box [aqui](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Nenhuma instalação de 64 bits do SQL Server 2012 Management Studio|Instalar a versão de 64 bits do SQL Server 2012 Management Studio incluindo SP1|SQLManagementStudio_x64_ENU.exe [aqui](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |Nenhuma versão de 64 Bits do SQL Server 2012 RTM Express|Instalar a versão de 64 bits do SQL Server 2012 Express incluindo SP1|SQLEXPR_x64_ENU.exe [aqui](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  

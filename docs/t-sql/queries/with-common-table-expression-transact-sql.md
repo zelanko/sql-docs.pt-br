@@ -28,11 +28,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74564809"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287300"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ Especifica um conjunto de resultados nomeado temporário, conhecido como uma CTE
  *CTE_query_definition*  
  Especifica uma instrução SELECT cujo conjunto de resultados popula a expressão de tabela comum. A instrução SELECT de *CTE_query_definition* deve atender aos mesmos requisitos da criação de uma exibição, com a exceção de que uma CTE não pode definir outra CTE. Para obter mais informações, consulte a seção Comentários e [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Se mais de uma *CTE_query_definition* for definida, as definições da consulta deverão ser unidas por um destes operadores de conjunto: UNION ALL, UNION, EXCEPT ou INTERSECT.  
+ Se mais de uma *CTE_query_definition* for definida, as definições de consulta poderão ser unidas por um destes dois conjuntos de operadores: UNION ALL, UNION, EXCEPT ou INTERSECT.  
   
 ## <a name="remarks"></a>Comentários  
   
@@ -142,7 +142,7 @@ As diretrizes a seguir se aplicam a expressões de tabela comuns não recursivas
   
 -   Funções analíticas e de agregação na parte recursiva da CTE são aplicadas para definir o nível de recursão atual e não para a definição da CTE. Funções como `ROW_NUMBER` funcionam apenas no subconjunto de dados passado para elas pelo nível de recursão atual e não no conjunto inteiro de dados passados para a parte recursiva da CTE. Para obter mais informações, veja o exemplo K. Usando funções analíticas em uma CTE recursiva a seguir.  
   
-## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Recursos e limitações de Expressões de Tabela Comum no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="features-and-limitations-of-common-table-expressions-in-sssdw-and-sspdw"></a>Recursos e limitações de Expressões de Tabela Comum no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  A implementação atual das CTEs no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] apresenta os seguintes recursos e limitações:  
   
 -   Uma CTE pode ser especificada em uma instrução `SELECT`.  
@@ -568,7 +568,7 @@ Lvl  N
   
  `N` retorna 1 para cada passagem da parte recursiva da CTE porque apenas o subconjunto de dados daquele nível de recursão é transmitido para `ROWNUMBER`. Para cada uma das iterações da parte recursiva da consulta, apenas uma linha é transmitida para `ROWNUMBER`.  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-using-a-common-table-expression-within-a-ctas-statement"></a>J. Usando uma expressão de tabela comum dentro de uma instrução CTAS  
  O exemplo a seguir cria uma nova tabela que contém o número total de ordens de venda por ano para cada representante de vendas no [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
