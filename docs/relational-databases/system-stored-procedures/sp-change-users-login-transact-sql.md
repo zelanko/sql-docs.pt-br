@@ -17,17 +17,20 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0594066f044288757e5e31f8e078fabb4c2f3775
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b0c847215d31bd2064467c3edbce42ba957c2e78
+ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68120225"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79448336"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Mapeia um usuário de banco de dados existente para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) .  
+  Mapeia um usuário de banco de dados existente para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+  
+ > [!IMPORTANT]
+ > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) .  
   
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -47,10 +50,10 @@ sp_change_users_login [ @Action = ] 'action'
  [ @Action= ] '*ação*'  
  Descreve a ação a ser executada pelo procedimento. a *ação* é **varchar (10)**. a *ação* pode ter um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Auto_Fix**|Vincula uma entrada de usuário na exibição do catálogo de sistema sys.database_principals no banco de dados atual a um logon de nome igual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se ainda não existir um logon com o mesmo nome, ele será criado. Examine o resultado da instrução **Auto_Fix** para confirmar se o link correto foi feito de fato. Evite usar **Auto_Fix** em situações sensíveis à segurança.<br /><br /> Ao usar **Auto_Fix**, você deverá especificar *usuário* e *senha* se o logon ainda não existir, caso contrário, você deverá especificar o *usuário* , mas a *senha* será ignorada. o *logon* deve ser nulo. o *usuário* deve ser um usuário válido no banco de dados atual. Não pode haver outro usuário mapeado para o logon.|  
-|**Relatório**|Lista os usuários e o SID (identificador de segurança) correspondentes no banco de dados atual que não estão vinculados a nenhum logon. *usuário*, *logon*e *senha* devem ser nulos ou não especificados.<br /><br /> Para substituir a opção de relatório por uma consulta usando as tabelas do sistema, compare as entradas em **Sys. server_prinicpals** com as entradas em **Sys. database_principals**.|  
+|**Report**|Lista os usuários e o SID (identificador de segurança) correspondentes no banco de dados atual que não estão vinculados a nenhum logon. *usuário*, *logon*e *senha* devem ser nulos ou não especificados.<br /><br /> Para substituir a opção de relatório por uma consulta usando as tabelas do sistema, compare as entradas em **Sys. server_prinicpals** com as entradas em **Sys. database_principals**.|  
 |**Update_One**|Vincula o *usuário* especificado no banco de dados atual a um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *logon*existente. o *usuário* e o *logon* devem ser especificados. a *senha* deve ser nula ou não especificada.|  
   
  [ @UserNamePattern= ] '*usuário*'  
@@ -75,7 +78,7 @@ sp_change_users_login [ @Action = ] 'action'
 |UserSID|**varbinary(85)**|O identificador de segurança do usuário.|  
   
 ## <a name="remarks"></a>Comentários  
- Use sp_change_users_login para vincular um usuário do banco de dados atual a um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o logon do usuário for alterado, use sp_change_users_login para vinculá-lo ao novo logon sem perder as permissões de usuário. O novo *logon* não pode ser SA e o *usuário*não pode ser dbo, guest ou um usuário INFORMATION_SCHEMA.  
+ Use sp_change_users_login para vincular um usuário do banco de dados atual a um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o logon do usuário for alterado, use sp_change_users_login para vinculá-lo ao novo logon sem perder as permissões de usuário. O novo *logon* não pode ser SA e o *usuário* não pode ser dbo, guest ou um usuário INFORMATION_SCHEMA.  
   
  Não é possível usar sp_change_users_login para mapear os usuários do banco de dados para entidades do nível do Windows, certificados ou chaves assimétricas.  
   

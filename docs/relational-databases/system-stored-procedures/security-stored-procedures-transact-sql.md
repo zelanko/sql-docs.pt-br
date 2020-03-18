@@ -17,12 +17,12 @@ ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05131814c390373261ae492235f36a7841d2f5f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b1e89069fcea6c279401d305a058736f2b92d676
+ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76315626"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79448501"
 ---
 # <a name="security-stored-procedures-transact-sql"></a>Procedimentos armazenados de segurança (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "76315626"
 |[sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md) (preterido) |[sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) (preterido)
 |[sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) (preterido) |[sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md) (preterido)
 |[sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) (preterido) |[sp_approlepassword](../../relational-databases/system-stored-procedures/sp-approlepassword-transact-sql.md) (preterido)
-|[sp_audit_write](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md) |[sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md)
+|[sp_audit_write](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md) |[sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) (preterido)
 |[sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md) (preterido) 
 |[sp_changeobjectowner](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md) (preterido)
 |[sp_control_dbmasterkey_password](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md) |[sp_dbfixedrolepermission](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md) (preterido)
