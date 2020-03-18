@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ca26af4738de25937b71e0c97c6272414a0957a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74096083"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79428147"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Processamento do Graph com o SQL Server e o Banco de Dados SQL do Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,19 +30,19 @@ ms.locfileid: "74096083"
 
 ## <a name="what-is-a-graph-database"></a>O que é um banco de dados de grafo?  
 Um banco de dados do grafo é uma coleção de nós (ou vértices) e bordas (ou relações). Um nó representa uma entidade (por exemplo, uma pessoa ou uma organização) e uma borda representa uma relação entre os dois nós que ela conecta (por exemplo, curtidas ou amigos). Os nós e as bordas podem ter propriedades associadas a eles. Aqui estão alguns recursos que tornam um banco de dados de grafo único:  
--   Bordas ou relações são entidades de primeira classe em um Banco de Dados de Grafo e podem ter atributos ou propriedades associadas a elas. 
--   Uma única borda pode conectar com flexibilidade vários nós em um banco de dados de grafo.
--   É possível expressar facilmente consultas de correspondência de padrões e navegação de salto múltiplo.
--   É possível expressar fechamento transitivo e consultas polimórficas com facilidade.
+-    Bordas ou relações são entidades de primeira classe em um Banco de Dados de Grafo e podem ter atributos ou propriedades associadas a elas. 
+-    Uma única borda pode conectar com flexibilidade vários nós em um banco de dados de grafo.
+-    É possível expressar facilmente consultas de correspondência de padrões e navegação de salto múltiplo.
+-    É possível expressar fechamento transitivo e consultas polimórficas com facilidade.
 
 ## <a name="when-to-use-a-graph-database"></a>Quando usar um banco de dados de grafo
 
-Não há nada que um banco de dados de grafo possa obter, que não possa ser obtido usando um banco de dados relacional. No entanto, um banco de dados de grafo pode facilitar a expressa de determinado tipo de consulta. Além disso, com otimizações específicas, algumas consultas podem ter um desempenho melhor. A decisão para a escolha de um ou de outro pode ser baseada nos seguintes fatores:  
--   Seu aplicativo tem dados hierárquicos. O tipo de dados hierarchyid pode ser usado para implementar hierarquias, mas tem algumas limitações. Por exemplo, ele não permite que você armazene vários pais para um nó.
--   Seu aplicativo tem relacionamentos muitos-para-muitos complexos; à medida que o aplicativo evolui, novas relações são adicionadas.
--   É necessário analisar as relações e os dados interconectados.
+Um banco de dados relacional pode obter qualquer coisa que um banco de dados de grafo possa. No entanto, um banco de dados de grafo torna mais fácil expressar determinados tipos de consultas. Além disso, com otimizações específicas, algumas consultas podem ter um desempenho melhor. Sua decisão de escolher um banco de dados relacional ou de grafo é baseada nos seguintes fatores:  
+-    Seu aplicativo tem dados hierárquicos. O tipo de dados hierarchyid pode ser usado para implementar hierarquias, mas tem algumas limitações. Por exemplo, ele não permite que você armazene vários pais para um nó.
+-    Seu aplicativo tem relacionamentos muitos-para-muitos complexos; à medida que o aplicativo evolui, novas relações são adicionadas.
+-    É necessário analisar as relações e os dados interconectados.
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Recursos de grafo introduzidos no[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-sssqlv14"></a>Recursos de grafo introduzidos no[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 Estamos começando a adicionar extensões de grafo ao SQL Server, para facilitar o armazenamento e a consulta de dados de grafo. Os recursos a seguir são introduzidos na primeira versão. 
 
 
@@ -68,7 +68,7 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Totalmente integrado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo 
+### <a name="fully-integrated-in-ssnoversion-engine"></a>Totalmente integrado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo 
 As extensões de grafo são totalmente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integradas no mecanismo. Use o mesmo mecanismo de armazenamento, metadados, processador de consultas, etc. para armazenar e consultar dados de grafo. Consulta entre grafo e dados relacionais em uma única consulta. Combinação de recursos de grafo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com outras tecnologias como COLUMNSTORE, ha, R Services, etc. O banco de dados SQL Graph também dá suporte a todos os recursos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de segurança e conformidade disponíveis com o.
  
 ### <a name="tooling-and-ecosystem"></a>Ferramentas e ecossistema

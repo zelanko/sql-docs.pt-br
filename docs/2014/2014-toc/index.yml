@@ -3,18 +3,18 @@ title: Documentação do SQL Server 2014
 summary: O Microsoft SQL Server 2014 local é um banco de dados relacional.
 metadata:
   title: Tópicos do SQL Server 2014
-  description: Escolha a área do SQL Server 2014 de seu interesse.
+  description: Escolha a área do banco de dados relacional SQL Server 2014 local ou os produtos e serviços relacionados nos quais você está interessado.
   ms.prod: sql
   ms.topic: landing-page
   author: MightyPen
   ms.author: genemi
   ms.date: 11/25/2019
-  ms.openlocfilehash: 68632f82835836b9097e8547683b069771143e2d
-  ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+  ms.openlocfilehash: 70af131ea185351e1034e1ec093094cce1369e4c
+  ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 01/31/2020
-  ms.locfileid: "75224396"
+  ms.lasthandoff: 03/12/2020
+  ms.locfileid: "79190519"
 landingContent:
 - title: Artigos especiais
   linkLists:
