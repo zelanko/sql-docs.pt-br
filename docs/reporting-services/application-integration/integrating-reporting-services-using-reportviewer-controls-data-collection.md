@@ -1,6 +1,6 @@
 ---
 title: Coleta de dados no Controle do ReportViewer
-description: Dados de uso anônimos são coletados pelo controle para entender melhor como os clientes usam o produto. Os dados de uso permitem que o desenvolvimento futuro se concentre nos aprimoramentos que são mais relevantes para os clientes.
+description: O ReportViewer coleta dados de uso anônimos para entender como os clientes usam o produto e focar o desenvolvimento em melhorias mais relevantes para os clientes.
 author: maggiesMSFT
 ms.author: maggies
 ms.custom: ''
@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
 ms.date: 09/18/2018
-ms.openlocfilehash: d7b70445fc4d8a29d8ebcdf7ecbffe4b54133f0e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 078b36034d48dbb4389c69e64d8b8b18d240b24c
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796889"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198173"
 ---
 # <a name="integrate-reporting-services-using-reportviewer-controls---data-collection"></a>Integrar o Reporting Services usando os controles ReportViewer – coleta de dados
 

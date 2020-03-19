@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 0315f181aad5c61b7d9c5fe7d46f3d81b27c9758
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76a6e99d06061ae581b753ce0edd96a5a82d0f95
+ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73589130"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78946717"
 ---
 # <a name="sql-assessment-api"></a>API de Avaliação do SQL
 
@@ -66,31 +66,31 @@ Siga os exemplos abaixo para começar.
     Get-SqlInstance -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-2. Obtenha uma lista das verificações disponíveis para todos os bancos de dados da instância. Aqui, estamos usando o cmdlet Get-Item e um caminho implementado com o provedor do SQL Server do Windows PowerShell para obter uma lista dos bancos de dados e, em seguida, canalizá-la para o cmdlet Get-SqlDatabase.
+2. Obtenha uma lista das verificações disponíveis para todos os bancos de dados da instância. Aqui, estamos usando o cmdlet Get-Item e um caminho implementado com o provedor do SQL Server do Windows PowerShell para obter uma lista dos bancos de dados e, em seguida, direcioná-la para o cmdlet Get-SqlDatabase.
 
     ```powershell
     Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
     ```
-    
+
     Além disso, você pode usar o cmdlet Get-SqlDatabase para fazer o mesmo.
 
     ```powershell
     Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-3. Obtenha uma lista das verificações disponíveis para todos os bancos de dados da instância. Aqui, estamos usando o cmdlet Get-Item e um caminho implementado com o provedor do SQL Server do Windows PowerShell para obter uma lista dos bancos de dados e, em seguida, canalizá-la para o cmdlet Get-SqlDatabase.
+3. Obtenha uma lista das verificações disponíveis para todos os bancos de dados da instância. Aqui, estamos usando o cmdlet Get-Item e um caminho implementado com o provedor do SQL Server do Windows PowerShell para obter uma lista dos bancos de dados e, em seguida, direcioná-la para o cmdlet Get-SqlDatabase.
 
     ```powershell
     Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
     ```
-    
+
     Além disso, você pode usar o cmdlet Get-SqlDatabase para fazer o mesmo.
 
     ```powershell
     Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-4. Invoque a avaliação para a instância e salve os resultados em uma tabela do SQL. Neste exemplo, estamos canalizando a saída do cmdlet Get-SqlInstance para o cmdlet Invoke-SqlAssessment, cujos resultados são canalizados para o cmdlet Write-SqlTableData. Observe que o cmdlet Invoke-Assessment é executado com o parâmetro `-FlattenOutput` neste exemplo. Esse parâmetro torna a saída adequada para o cmdlet Write-SqlTableData. O último gerará um erro se você omitir o parâmetro.
+4. Invoque a avaliação para a instância e salve os resultados em uma tabela do SQL. Neste exemplo, estamos canalizando a saída do cmdlet Get-SqlInstance para o cmdlet Invoke-SqlAssessment, cujos resultados são canalizados para o cmdlet Write-SqlTableData. O cmdlet Invoke-Assessment é executado com o parâmetro `-FlattenOutput` neste exemplo. Esse parâmetro torna a saída adequada para o cmdlet Write-SqlTableData. O último gerará um erro se você omitir o parâmetro.
 
     ```powershell
     Get-SqlInstance -ServerInstance 'localhost' |
@@ -131,7 +131,7 @@ Regras específicas têm limites que são comparados ao valor atual de uma métr
 Você pode reunir conjuntos de regras adicionando um ou mais arquivos JSON como parâmetros à sua chamada à API de Avaliação do SQL. Sua organização pode gravar esses arquivos ou obtê-los de terceiros. Por exemplo, você pode ter o arquivo JSON que desabilita regras específicas do conjunto de regras da Microsoft e outro arquivo JSON por um especialista do setor que inclui regras que você considera úteis para o seu ambiente, seguido por outro arquivo JSON que altera alguns valores limites em tal arquivo JSON.
 
 > [!IMPORTANT]  
->  Recomendamos não usar RuleSets provenientes de fontes não confiáveis até examiná-los detalhadamente para garantir que sejam seguros.
+> Recomendamos não usar RuleSets provenientes de fontes não confiáveis até examiná-los detalhadamente para garantir que sejam seguros.
 
 ## <a name="next-steps"></a>Próximas etapas
 

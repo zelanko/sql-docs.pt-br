@@ -1,5 +1,6 @@
 ---
 title: Serviço Web Servidor de Relatórios | Microsoft Docs
+description: O Reporting Services fornece a funcionalidade do servidor de relatório com o serviço Web do Servidor de Relatórios, pontos de extremidade de serviço SOAP para execução e gerenciamento de relatórios.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 455fc4c5ea881f370257769d6794628a45017b3a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6fb059d867a7a3448e5a842929df48ad009f2518
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63070341"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198473"
 ---
 # <a name="report-server-web-service"></a>serviço Web Servidor de Relatórios
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece acesso à funcionalidade completa do servidor de relatório por meio do serviço Web Servidor de Relatórios. O serviço Web Servidor de Relatórios é um serviço Web XML com uma API SOAP. Usa o SOAP sobre HTTP e age como uma interface de comunicações entre programas cliente e o servidor de relatório. O serviço Web oferece dois pontos de extremidade - um para a execução de relatórios e outro para o gerenciamento de relatórios - com métodos que exibem a funcionalidade do servidor de relatório e permitem que você crie ferramentas personalizadas para qualquer parte do ciclo e vida.  

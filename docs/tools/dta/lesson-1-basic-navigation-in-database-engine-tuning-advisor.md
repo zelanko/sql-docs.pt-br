@@ -14,12 +14,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9bb0911a0aa678ee160894e6297e5636644bf475
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3e7f0abd6003583858fbf323f96b4cf203236083
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75307651"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286640"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>Lição 1: Navegação básica no DTA (Orientador de Otimização do Mecanismo de Banco de Dados)
 
@@ -27,7 +27,7 @@ ms.locfileid: "75307651"
 
 O Orientador de Otimização do Mecanismo de Banco de Dados fornece um modo baseado em GUI (Interface gráfica do usuário) para exibir sessões de ajuste e relatórios de recomendações. Esta lição mostra como iniciar a ferramenta e como configurar a exibição. Ao término desta lição, você saberá as diversas maneiras de iniciar a ferramenta e como configurar sua exibição para dar suporte às tarefas de ajuste que você executa regularmente.  
 
-## <a name="prerequisites"></a>Prerequisites 
+## <a name="prerequisites"></a>Pré-requisitos 
 
 Para concluir este tutorial, você precisará do SQL Server Management Studio, bem como acesso a um servidor que executa o SQL Server e um banco de dados do AdventureWorks.
 
@@ -57,7 +57,7 @@ Por padrão, o Orientador de Otimização do Mecanismo de Banco de Dados é aber
 ![Janela padrão do Orientador de Otimização do Mecanismo de Banco de Dados](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> A guia **Monitor de Sessão** exibe o nome da sessão, que é o nome do usuário conectado e os dados atuais. 
+> A guia **Monitor de Sessão** exibe o nome da sessão, que é o nome do usuário conectado e a data atual. 
   
 Dois painéis principais são exibidos na GUI do Orientador de Otimização do Mecanismo de Banco de Dados quando ele é aberto pela primeira vez.  
   

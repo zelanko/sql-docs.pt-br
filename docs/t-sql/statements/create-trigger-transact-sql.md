@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 0e3a0829702dfe46a2d6c00925a82938d23bad92
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982695"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287680"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Os gatilhos de logon são disparados em resposta ao evento LOGON gerado quando a
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="sql-server-syntax"></a>Sintaxe do SQL Server  
   
 ``` 
 -- SQL Server Syntax  
@@ -127,7 +127,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="azure-sql-database-syntax"></a>Sintaxe do Banco de Dados SQL do Azure  
   
 ``` 
 -- Azure SQL Database Syntax   
@@ -215,7 +215,7 @@ Especifica que o gatilho DML será iniciado *em vez da* instrução SQL de gatil
   
 No máximo, você pode definir um gatilho INSTEAD OF por instrução INSERT, UPDATE ou DELETE em uma tabela ou exibição. Também pode definir exibições sobre exibições, onde cada uma tem seu próprio gatilho INSTEAD OF.  
   
-Não é possível definir gatilhos INSTEAD OF em exibições atualizáveis que usam WITH CHECK OPTION. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fazer isso gera um erro quando um gatilho INSTEAD OF é adicionado a uma WITH CHECK OPTION de exibição atualizável especificada. Remova essa opção usando ALTER VIEW antes de definir o gatilho INSTEAD OF.  
+Não é possível definir gatilhos INSTEAD OF em exibições atualizáveis que usam WITH CHECK OPTION. Fazer isso gera um erro quando um gatilho INSTEAD OF é adicionado a uma WITH CHECK OPTION de exibição atualizável especificada. Remova essa opção usando ALTER VIEW antes de definir o gatilho INSTEAD OF.  
   
 { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }  
 Especifica as instruções de modificação de dados que, quando tentadas nessa tabela ou exibição, ativam o gatilho DML. Especifique pelo menos uma opção. Use qualquer combinação dessas opções em qualquer ordem na definição do gatilho.  

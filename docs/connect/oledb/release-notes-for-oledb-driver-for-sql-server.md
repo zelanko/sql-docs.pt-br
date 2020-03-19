@@ -1,5 +1,5 @@
 ---
-title: Notas de versão (OLE DB Driver para SQL Server) | Microsoft Docs
+title: Notas sobre a versão (Driver do OLE DB para SQL Server)
 ms.date: 02/27/2020
 ms.prod: sql
 ms.technology: connectivity
@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 8c06b83241f377aa05d7e5c0e4cb0d83a424f15a
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.openlocfilehash: c0a9e1726958a1eda7cf71817479f7c37dcfe854
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866220"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090532"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Notas de versão do Driver do Microsoft OLE DB para SQL Server
 
@@ -45,7 +45,7 @@ Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?lin
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
 | Suporte para autenticação do Azure Active Directory (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Como usar o Azure Active Directory](features/using-azure-active-directory.md). |
-| Incluir a Biblioteca de Autenticação do Azure Active Directory (adal.dll) no instalador | Agora incluída na instalação do driver base, ela atualizará as instalações existentes da Biblioteca de Autenticação do Microsoft Active Directory para SQL Server, removendo-as da lista de aplicativos instalados no Windows. |
+| Incluir a Biblioteca de Autenticação do Azure Active Directory (adal.dll) no instalador | Agora incluída na instalação do driver base, o instalador do OLE DB atualizará as instalações existentes da Biblioteca de Autenticação do Microsoft Active Directory para SQL Server, removendo-as da lista de aplicativos instalados no Windows. |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>Bugs corrigidos
@@ -70,7 +70,7 @@ Se precisar baixar o instalador em um idioma diferente daquele detectado para vo
 Para o driver x64: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40a)  
 Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40a)  
 
-### <a name="features-added"></a>Recursos adicionados
+### <a name="features-added-in-1823"></a>Recursos adicionados na 18.2.3
 
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
@@ -88,7 +88,7 @@ Se precisar baixar o instalador em um idioma diferente daquele detectado para vo
 Para o driver x64: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40a)  
 Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40a)  
 
-### <a name="bugs-fixed"></a>Bugs corrigidos
+### <a name="bugs-fixed-in-1822"></a>Bugs corrigidos na 18.2.2
 
 | Correções de bugs | Detalhes |
 | :-------- | :------ |
@@ -106,7 +106,7 @@ Se precisar baixar o instalador em um idioma diferente daquele detectado para vo
 Para o driver x64: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40a)  
 Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40a)  
 
-### <a name="features-added"></a>Recursos adicionados
+### <a name="features-added-in-1821"></a>Recursos adicionados na 18.2.1
 
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
@@ -125,14 +125,14 @@ Se precisar baixar o instalador em um idioma diferente daquele detectado para vo
 Para o driver x64: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40a)  
 Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2118509&2118509=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40a)  
 
-### <a name="features-added"></a>Recursos adicionados
+### <a name="features-added-in-1810"></a>Recursos adicionados na 18.1.0
 
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
 | Suporte para a palavra-chave da cadeia de conexão `UseFMTONLY` e para a propriedade de inicialização `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` controla como os metadados são recuperados ao se conectar ao [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e mais recente.<br/><br/>Para obter mais informações, consulte: [Como usar palavras-chave de cadeia de conexão com o Driver do OLE DB para SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="bugs-fixed"></a>Bugs corrigidos
+### <a name="bugs-fixed-in-1810"></a>Bugs corrigidos na 18.1.0
 
 | Correções de bugs | Detalhes |
 | :-------- | :------ |
@@ -150,7 +150,7 @@ Se precisar baixar o instalador em um idioma diferente daquele detectado para vo
 Para o driver x64: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40a)  
 Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40a)  
 
-### <a name="features-added"></a>Recursos adicionados
+### <a name="features-added-in-1802"></a>Recursos adicionados na 18.0.2
 
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |

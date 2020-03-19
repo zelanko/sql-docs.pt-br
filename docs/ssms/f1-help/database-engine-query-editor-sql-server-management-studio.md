@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/03/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cef5bdc57a5fb5f0a2cbeed6be3356aade1ba491
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.openlocfilehash: 685397689b390175bd15f6241fc7036004e1e97a
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335770"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198523"
 ---
 # <a name="ssms-query-editor"></a>Editor de Consultas do SSMS
 
@@ -164,7 +164,7 @@ Você também pode comentar uma linha selecionando Ctrl+K e, em seguida, Ctrl+C.
 
 Transforma a linha atual em uma instrução de fonte ativa ao remover um operador de comentário (--) do começo da linha.
 
-Você também pode comentar uma linha selecionando Ctrl+K e, em seguida, Ctrl+U.
+Você também pode remover a marca de comentário em uma linha selecionando Ctrl+K e, em seguida, Ctrl+U.
 
 ### <a name="decrease-indent-using-the-editor-toolbar"></a>Diminuir Recuo usando a barra de ferramentas do editor
 

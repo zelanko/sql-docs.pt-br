@@ -11,12 +11,12 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: c7919232bcd2c84ea58ac2e8b9d23b48cc58ee60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1d1e595918b33ae4fcc11cd59bf0964b2e6d919c
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831699"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112285"
 ---
 # <a name="hybrid-buffer-pool"></a>Pool de Buffers Híbrido
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,14 +86,9 @@ SELECT * FROM
 sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
-O seguinte exemplo retorna duas tabelas:
-
-- A primeira mostra o status atual da configuração do sistema do pool de buffers híbrido para uma instância do SQL Server.
-- A segunda lista os bancos de dados e a configuração no nível de banco de dados para o pool de buffers híbrido (`is_memory_optimized_enabled`).
+O exemplo a seguir lista os bancos de dados e a configuração no nível de banco de dados para o pool de buffers híbrido (`is_memory_optimized_enabled`).
 
 ```sql
-SELECT * FROM sys.configurations WHERE name = 'hybrid_buffer_pool';
-
 SELECT name, is_memory_optimized_enabled FROM sys.databases;
 ```
 

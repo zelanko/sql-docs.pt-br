@@ -1,6 +1,7 @@
 ---
-title: Recursos preteridos do mecanismo de banco de dados | Microsoft Docs
+title: Recursos preteridos do Mecanismo de Banco de Dados | Microsoft Docs
 titleSuffix: SQL Server 2019
+description: Saiba mais sobre os recursos do mecanismo de banco de dados preteridos que ainda estão disponíveis no SQL Server 2017 (14.x), mas que não devem ser usados em novos aplicativos.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2f8529b7fca4782709f8c8981a27e62dae2029a2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 03203f80f3b35fa961fb9faa4eae4099b4744217
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76364098"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190543"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Recursos preteridos do Mecanismo de Banco de Dados no SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

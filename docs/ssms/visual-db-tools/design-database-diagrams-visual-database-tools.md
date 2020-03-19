@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 7cb6fabaa6d1dcbfb632e234b04e2e7bbc95541e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a4edde16397c865d0bc79e280e382857afde8714
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75254652"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198463"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Criar diagramas de banco de dados (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ Dentro de um diagrama de banco de dados, cada tabela pode aparecer com três rec
   
 Se você modificou uma tabela e ainda não a salvou, um asterisco (*) aparecerá no final do nome da tabela, indicando que há alterações ainda não salvas. Para obter informações sobre como salvar tabelas e diagramas alterados, consulte [Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-**Seletor de linhas** Clique no seletor de linhas para selecionar uma coluna de banco de dados na tabela. O seletor de linhas exibirá um símbolo de chave caso a coluna conste da chave primária da tabela. Para obter informações sobre chaves primários, confira [Como trabalhar com chaves (https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd).  
+**Seletor de linhas** Clique no seletor de linhas para selecionar uma coluna de banco de dados na tabela. O seletor de linhas exibirá um símbolo de chave caso a coluna conste da chave primária da tabela. Para obter informações sobre chaves primários, confira [Como trabalhar com chaves](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd).  
   
 **Colunas de propriedade** O conjunto de colunas de propriedade é visível em algumas exibições de sua tabela. Você pode exibir uma tabela em qualquer uma das cinco exibições diferentes para poder gerenciar o tamanho e o layout do diagrama.  
   

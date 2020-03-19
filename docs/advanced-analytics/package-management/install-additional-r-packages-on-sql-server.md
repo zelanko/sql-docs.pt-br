@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e28d62292c8bcc4b98d8991fbf4bd8708bbbc76
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.openlocfilehash: ff2d40dab5fa2d8f03bf3d1fa32b08e66a0ccdbc
+ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558370"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79027943"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Instalar novos pacotes de R com sqlmlutils
 
@@ -26,7 +26,7 @@ Este artigo descreve como usar funções no pacote [**sqlmlutils**](https://gith
 > [!NOTE]
 > O comando do R padrão `install.packages` não é recomendado para adicionar pacotes do R do SQL Server. Em vez disso, use **sqlmlutils**, conforme descrito neste artigo.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Instale o [R](https://www.r-project.org) e o [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) no computador cliente que você usa para conectar-se ao SQL Server. Você pode usar qualquer IDE do R para executar scripts, mas este artigo pressupõe o RStudio.
 
@@ -108,7 +108,7 @@ Em um computador com acesso à Internet:
     , @script = N'print(R.version)'
    ```
 
-1. Baixe o arquivo zip **sqlmlutils** mais recente do https://github.com/Microsoft/sqlmlutils/tree/master/R/dist (não descompacte o arquivo). Por exemplo, baixe o arquivo para `c:\downloads\sqlmlutils_0.7.1.zip`.
+1. Baixe o arquivo zip **sqlmlutils** mais recente em [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist) (não descompacte o arquivo). Por exemplo, baixe o arquivo para `c:\downloads\sqlmlutils_0.7.1.zip`.
 
 1. Copie toda a pasta do repositório **RODBCext** (`c:\downloads\rodbcext`) e o arquivo zip **sqlmlutils** (`c:\downloads\sqlmlutils_0.7.1.zip`) para o computador cliente. Por exemplo, copie-os para a pasta `c:\temp\packages` no computador cliente.
 

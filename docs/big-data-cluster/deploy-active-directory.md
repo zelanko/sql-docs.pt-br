@@ -2,19 +2,19 @@
 title: Implantar no modo do Active Directory
 titleSuffix: SQL Server Big Data Cluster
 description: Saiba como atualizar Clusters de Big Data do SQL Server em um domínio do Active Directory Domain Services.
-author: NelGson
-ms.author: negust
+author: mihaelablendea
+ms.author: mihaelab
 ms.reviewer: mikeray
 ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e2ce3fd5655655686d6fb27f628f6bdb3d22ceb1
-ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
+ms.openlocfilehash: 1cd604c754113f7196963daf714eab3dd41143cc
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78200957"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190588"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no modo do Active Directory Domain Services
 
@@ -174,16 +174,27 @@ A integração com o AD requer os seguintes parâmetros. Adicione esses parâmet
 
 - `security.activeDirectory.domainDnsName`: nome do seu domínio (por exemplo, `contoso.local`).
 
-- `security.activeDirectory.clusterAdmins`: esse parâmetro usa **um grupo do AD**. Os membros desse grupo receberão permissões de administrador no cluster. Isso significa que eles terão permissões de sysadmin no SQL Server, permissões de superusuário no HDFS e permissões de administrador no controlador. **Observe que esse grupo precisa existir no AD antes do início da implantação. Observe também que esse grupo não pode estar no escopo DomainLocal no Active Directory. Um grupo com escopo no domínio local resultará em falha na implantação.**
+- `security.activeDirectory.clusterAdmins`: esse parâmetro usa um grupo do AD. O escopo do grupo do AD deve ser universal ou global do domínio. Os membros desse grupo recebem permissões de administrador no cluster. Isso significa que eles têm permissões `sysadmin` no SQL Server, permissões de superusuário no HDFS e permissões de administrador no controlador. 
 
-- `security.activeDirectory.clusterUsers`: lista dos grupos do AD que são usuários comuns (sem permissões de administrador) no cluster de Big Data. **Observe que esses grupos precisam existir no AD antes do início da implantação. Observe também que esses grupos não pode estar no escopo DomainLocal no Active Directory. Um grupo com escopo no domínio local resultará em falha na implantação.**
+  >[!IMPORTANT]
+  >Crie esse grupo no AD antes do início da implantação. Se o escopo desse grupo do AD for o local do domínio, a implantação falhará.
 
-- **Parâmetro opcional** `security.activeDirectory.appOwners`: lista dos grupos do AD que têm permissões para criar, excluir e executar qualquer aplicativo. **Observe que esses grupos precisam existir no AD antes do início da implantação. Observe também que esses grupos não pode estar no escopo DomainLocal no Active Directory. Um grupo com escopo no domínio local resultará em falha na implantação.**
+- `security.activeDirectory.clusterUsers`: lista dos grupos do AD que são usuários comuns (sem permissões de administrador) no cluster de Big Data. A lista pode incluir grupos do AD que têm o escopo definido como grupos globais ou universais de domínio. Eles não podem ser grupos locais de domínio.
 
-- **Parâmetro opcional** `security.activeDirectory.appReaders`: lista dos grupos do AD que têm permissões para executar qualquer aplicativo. **Observe que esses grupos precisam existir no AD antes do início da implantação. Observe também que esses grupos não pode estar no escopo DomainLocal no Active Directory. Um grupo com escopo no domínio local resultará em falha na implantação.**
+  >[!IMPORTANT]
+  >Crie esses grupos no AD antes do início da implantação. Se o escopo de qualquer um desses grupos do AD for o local do domínio, a implantação falhará.
 
-**Como verificar o escopo do grupo do AD:** 
-[clique aqui para obter instruções](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) para verificar o escopo de um grupo do AD e determinar se ele é DomainLocal.
+- **Parâmetro opcional** `security.activeDirectory.appOwners`: lista dos grupos do AD que têm permissões para criar, excluir e executar qualquer aplicativo. A lista pode incluir grupos do AD que têm o escopo definido como grupos globais ou universais de domínio. Eles não podem ser grupos locais de domínio.
+
+  >[!IMPORTANT]
+  >Crie esses grupos no AD antes do início da implantação. Se o escopo de qualquer um desses grupos do AD for o local do domínio, a implantação falhará.
+
+- **Parâmetro opcional** `security.activeDirectory.appReaders`: lista dos grupos do AD que têm permissões para executar qualquer aplicativo. A lista pode incluir grupos do AD que têm o escopo definido como grupos globais ou universais de domínio. Eles não podem ser grupos locais de domínio.
+
+  >[!IMPORTANT]
+  >Crie esses grupos no AD antes do início da implantação. Se o escopo de qualquer um desses grupos do AD for o local do domínio, a implantação falhará.
+
+[Verifique o escopo do grupo do AD](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) para determinar se ele é DomainLocal.
 
 Se ainda não tiver inicializado o arquivo de configuração de implantação, você poderá executar esse comando para obter uma cópia da configuração.
 

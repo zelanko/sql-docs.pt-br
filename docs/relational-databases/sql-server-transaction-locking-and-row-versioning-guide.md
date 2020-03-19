@@ -1,7 +1,7 @@
 ---
 title: Guia de Controle de Versão de Linha e Bloqueio de Transações
 ms.custom: seo-dt-2019
-ms.date: 02/17/2018
+ms.date: 03/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,23 +12,26 @@ helpviewer_keywords:
 - transaction locking and row versioning guide
 - lock compatibility matrix, [SQL Server]
 - lock granularity and hierarchies, [SQL Server]
+- deadlocks, [SQL Server]
+- lock escalation, [SQL Server]
+- lock partitioning, [SQL Server]
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d79007dccddef604315c57beca1e1274d23c6f0f
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: 7b7341273c36bacdbfd49596df535b9c73ba5049
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339664"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287170"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guia de Controle de Versão de Linha e Bloqueio de Transações
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Em um banco de dados, o gerenciamento incorreto de transações normalmente leva a problemas de contenção e de desempenho em sistemas com muitos usuários. À medida que o número de usuários que acessam os dados aumenta, torna-se importante ter aplicativos que utilizem as transações de maneira eficaz. Este guia descreve os mecanismos de bloqueio e de controle de versão de linha que o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa para assegurar a integridade física de cada transação, além de fornecer informações sobre como os aplicativos podem controlar as transações de maneira eficiente.  
+Em um banco de dados, o gerenciamento incorreto de transações normalmente leva a problemas de contenção e de desempenho em sistemas com muitos usuários. À medida que o número de usuários que acessam os dados aumenta, torna-se importante ter aplicativos que utilizem as transações de maneira eficaz. Este guia descreve os mecanismos de bloqueio e de controle de versão de linha que o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa para assegurar a integridade física de cada transação, além de fornecer informações sobre como os aplicativos podem controlar as transações de maneira eficiente.  
   
-**Aplica-se a**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], a menos que indicado de outra forma. 
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], a menos que indicado de outra forma) e [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. 
   
 ##  <a name="Basics"></a> Noções básicas sobre transações  
  Uma transação é uma sequência de operações executadas como uma única unidade lógica de trabalho. Uma unidade lógica de trabalho deve mostrar quatro propriedades, designadas pelas iniciais ACID (atomicidade, consistência, isolamento e durabilidade), para que seja qualificada como uma transação.  
@@ -94,32 +97,32 @@ ms.locfileid: "78339664"
 |Delete (excluir)|INSERT|TRUNCATE TABLE|  
 |DROP|OPEN|UPDATE|  
   
- **Transações no escopo do Lote**  
- Aplicável apenas a MARS (Conjuntos de Resultados Ativos Múltiplos), a transação [!INCLUDE[tsql](../includes/tsql-md.md)] explícita ou implícita iniciada em uma sessão MARS se torna uma transação de escopo de lote. A transação de escopo de lote que não é confirmada ou revertida quando um lote é concluído, será revertida automaticamente pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-  **Transações no escopo do Lote**  
+   Aplicável apenas a MARS (Conjuntos de Resultados Ativos Múltiplos), a transação [!INCLUDE[tsql](../includes/tsql-md.md)] explícita ou implícita iniciada em uma sessão MARS se torna uma transação de escopo de lote. A transação de escopo de lote que não é confirmada ou revertida quando um lote é concluído, será revertida automaticamente pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- **Transações distribuídas**  
- Transações distribuídas abrangem dois ou mais servidores conhecidos como gerenciadores de recursos. O gerenciamento da transação deve ser coordenado entre os gerenciadores de recursos por um componente de servidor chamado de gerenciador de transações. Cada instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pode operar como um gerenciador de recursos em transações distribuídas coordenadas por gerenciadores de transações, como o MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../includes/msconame-md.md)]), ou outros gerenciadores de transações que dão suporte à especificação XA do Open Group para processamento de transações distribuídas. Para obter mais informações, consulte a documentação do MS DTC.  
+-  **Transações distribuídas**  
+   Transações distribuídas abrangem dois ou mais servidores conhecidos como gerenciadores de recursos. O gerenciamento da transação deve ser coordenado entre os gerenciadores de recursos por um componente de servidor chamado de gerenciador de transações. Cada instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pode operar como um gerenciador de recursos em transações distribuídas coordenadas por gerenciadores de transações, como o MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../includes/msconame-md.md)]), ou outros gerenciadores de transações que dão suporte à especificação XA do Open Group para processamento de transações distribuídas. Para obter mais informações, consulte a documentação do MS DTC.  
   
- Uma transação em uma instância única do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que abrange dois ou mais bancos de dados é, de fato, uma transação distribuída. A instância gerencia a transação distribuída internamente. Para o usuário, ela opera como uma transação local.  
+   Uma transação em uma instância única do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que abrange dois ou mais bancos de dados é, de fato, uma transação distribuída. A instância gerencia a transação distribuída internamente. Para o usuário, ela opera como uma transação local.  
   
- No aplicativo, uma transação distribuída é gerenciada da mesma forma como uma transação local. No final da transação, o aplicativo solicita que a transação seja confirmada ou revertida. Uma confirmação distribuída deve ser gerenciada de forma diferenciada pelo gerenciador de transações para minimizar o risco de que uma falha de rede possa resultar em alguns gerenciadores de recurso que confirmam com êxito enquanto outros revertem a transação. Isso é obtido pelo gerenciamento do processo de confirmação em duas fases (a fase de preparação e a fase de confirmação), o que é conhecido como um protocolo 2PC.  
+   No aplicativo, uma transação distribuída é gerenciada da mesma forma como uma transação local. No final da transação, o aplicativo solicita que a transação seja confirmada ou revertida. Uma confirmação distribuída deve ser gerenciada de forma diferenciada pelo gerenciador de transações para minimizar o risco de que uma falha de rede possa resultar em alguns gerenciadores de recurso que confirmam com êxito enquanto outros revertem a transação. Isso é obtido pelo gerenciamento do processo de confirmação em duas fases (a fase de preparação e a fase de confirmação), o que é conhecido como um protocolo 2PC.  
   
- **Fase de preparação**  
- Quando o gerenciador de transações recebe uma solicitação de confirmação, ele envia um comando de preparação a todos os gerenciadores de recursos envolvidos na transação. Cada gerenciador executa todas as ações necessárias para tornar a transação durável, e todos os buffers que mantêm imagens de log da transação são liberados no disco. À medida que cada gerenciador de recursos conclui a fase de preparação, ele retorna informações de êxito ou de falha ao gerenciador de transações. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] introduziu a durabilidade da transação atrasada. As transações duráveis atrasadas são confirmadas antes de imagens de log da transação serem liberadas para o disco. Para obter mais informações sobre durabilidade de transações atrasadas, consulte o tópico [Durabilidade da transação](../relational-databases/logs/control-transaction-durability.md).  
+   -  **Fase de preparação**  
+      Quando o gerenciador de transações recebe uma solicitação de confirmação, ele envia um comando de preparação a todos os gerenciadores de recursos envolvidos na transação. Cada gerenciador executa todas as ações necessárias para tornar a transação durável, e todos os buffers que mantêm imagens de log da transação são liberados no disco. À medida que cada gerenciador de recursos conclui a fase de preparação, ele retorna informações de êxito ou de falha ao gerenciador de transações. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] introduziu a durabilidade da transação atrasada. As transações duráveis atrasadas são confirmadas antes de imagens de log da transação serem liberadas para o disco. Para obter mais informações sobre durabilidade de transações atrasadas, consulte o tópico [Durabilidade da transação](../relational-databases/logs/control-transaction-durability.md).  
   
- **Fase de confirmação**  
- Se o gerenciador de transações receber preparos bem-sucedidos de todos os gerenciadores de recursos, ele enviará comandos de confirmação a cada gerenciador de recursos. Em seguida, os gerenciadores de recursos podem concluir a confirmação. Se todos os gerenciadores de recursos relatarem uma confirmação bem-sucedida, o gerenciador de transações enviará uma notificação de êxito ao aplicativo. Se um gerenciador de recursos informar uma falha na preparação, o gerenciador de transações enviará um comando de reversão a cada gerenciador de recursos e indicará a falha da confirmação ao aplicativo.  
+   -  **Fase de confirmação**  
+      Se o gerenciador de transações receber preparos bem-sucedidos de todos os gerenciadores de recursos, ele enviará comandos de confirmação a cada gerenciador de recursos. Em seguida, os gerenciadores de recursos podem concluir a confirmação. Se todos os gerenciadores de recursos relatarem uma confirmação bem-sucedida, o gerenciador de transações enviará uma notificação de êxito ao aplicativo. Se um gerenciador de recursos informar uma falha na preparação, o gerenciador de transações enviará um comando de reversão a cada gerenciador de recursos e indicará a falha da confirmação ao aplicativo.  
   
- Os aplicativos [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] podem gerenciar transações distribuídas por meio de [!INCLUDE[tsql](../includes/tsql-md.md)] ou da API do banco de dados. Para obter mais informações, veja [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
+      Os aplicativos [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] podem gerenciar transações distribuídas por meio de [!INCLUDE[tsql](../includes/tsql-md.md)] ou da API do banco de dados. Para obter mais informações, veja [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
   
 #### <a name="ending-transactions"></a>Finalizando transações  
  Você pode finalizar transações com uma instrução COMMIT ou ROLLBACK ou com uma função de API correspondente.  
   
- **COMMIT**  
- Se uma transação for concluída com êxito, confirme-a. Uma instrução COMMIT garante que todas as modificações na transação fazem parte permanente do banco de dados. Um COMMIT também libera recursos, como bloqueios, usados pela transação.  
+-  **COMMIT**  
+   Se uma transação for concluída com êxito, confirme-a. Uma instrução COMMIT garante que todas as modificações na transação fazem parte permanente do banco de dados. Um COMMIT também libera recursos, como bloqueios, usados pela transação.  
   
- **ROLLBACK**  
- Se ocorrer um erro em uma transação ou se o usuário decidir cancelá-la, reverta a transação. Uma instrução ROLLBACK desfaz todas as modificações feitas na transação retornando os dados ao estado anterior ao início da transação. Um ROLLBACK também libera recursos usados pela transação.  
+-  **ROLLBACK**  
+   Se ocorrer um erro em uma transação ou se o usuário decidir cancelá-la, reverta a transação. Uma instrução ROLLBACK desfaz todas as modificações feitas na transação retornando os dados ao estado anterior ao início da transação. Um ROLLBACK também libera recursos usados pela transação.  
   
 > [!NOTE]  
 > Em conexões habilitadas para oferecer suporte a vários conjuntos de resultados ativos (MARS), uma transação explícita iniciada por uma função de API não pode ser confirmada enquanto houver solicitações pendentes para execução. Qualquer tentativa de confirmação desse tipo de transação enquanto houver operações pendentes sendo executadas resultará em um erro.  
@@ -174,13 +177,13 @@ GO
 ##  <a name="Lock_Basics"></a> Noções básicas sobre bloqueio e controle de versão de linha  
  O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa os seguintes mecanismos para garantir a integridade de transações e manter a consistência dos bancos de dados quando vários usuários estão acessando os dados ao mesmo tempo:  
   
--   Bloqueio  
+-  **Bloqueio**    
+
+   Cada transação solicita bloqueios de tipos diferentes nos recursos, como linhas, páginas ou tabelas, dos quais depende a transação. Os bloqueios não permitem que outras transações modifiquem os recursos de uma maneira que causaria problemas para a transação que solicita o bloqueio. Cada transação libera seus bloqueios quando não depende mais dos recursos bloqueados.  
   
-     Cada transação solicita bloqueios de tipos diferentes nos recursos, como linhas, páginas ou tabelas, dos quais depende a transação. Os bloqueios não permitem que outras transações modifiquem os recursos de uma maneira que causaria problemas para a transação que solicita o bloqueio. Cada transação libera seus bloqueios quando não depende mais dos recursos bloqueados.  
-  
--   Controle de versão de linha  
-  
-     Quando um nível de isolamento baseado em controle de versão de linha é habilitado, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mantém versões de cada linha modificada. Os aplicativos podem especificar que uma transação use as versões da linha para exibir dados da forma como eram no início da transação ou consulta ao invés de proteger todas as leituras com bloqueios. Usando o controle de versão de linha, a possibilidade de uma operação de leitura bloquear outras transações é muito reduzida.  
+-  **Controle de versão de linha**    
+
+   Quando um nível de isolamento baseado em controle de versão de linha é habilitado, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mantém versões de cada linha modificada. Os aplicativos podem especificar que uma transação use as versões da linha para exibir dados da forma como eram no início da transação ou consulta ao invés de proteger todas as leituras com bloqueios. Usando o controle de versão de linha, a possibilidade de uma operação de leitura bloquear outras transações é muito reduzida.  
   
  O bloqueio e o controle de versão de linha impedem que os usuários leiam dados não confirmados e impedem que vários usuários tentem alterar os mesmos dados ao mesmo tempo. Sem o bloqueio ou o controle de versão de linha, as consultas executadas em relação a esses dados podem produzir resultados inesperados retornando dados que ainda não foram confirmados no banco de dados.  
   
@@ -275,22 +278,22 @@ GO
   
  Um nível de isolamento inferior aumenta a capacidade de muitos usuários acessarem dados ao mesmo tempo, mas aumenta o número de efeitos de simultaneidade (como leituras sujas ou atualizações perdidas) que os usuários podem encontrar. Inversamente, um nível de isolamento mais alto reduz os tipos de efeito de simultaneidade que os usuários podem encontrar, mas requer mais recursos do sistema e aumenta as chances de uma transação bloquear outra. Escolher o nível de isolamento apropriado depende de equilibrar os requisitos de integridade de dados do aplicativo em relação à sobrecarga de cada nível de isolamento. O nível de isolamento mais alto, serializável, garante que uma transação recuperará exatamente os mesmos dados toda vez que repetir uma operação de leitura, mas faz isto executando um nível de bloqueio que provavelmente causará impacto em outros usuários em sistemas multiusuários. O mais baixo nível de isolamento, leitura de dados não confirmados, pode recuperar dados que foram modificados mas não foram confirmados por outras transações. Todos os efeitos colaterais de simultaneidade podem acontecer em leitura não confirmada, mas não há nenhum bloqueio de leitura ou controle de versão, assim a sobrecarga é minimizada.  
   
-##### <a name="ssdenoversion-isolation-levels"></a>Níveis de Isolamento [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
+##### <a name="database-engine-isolation-levels"></a>Níveis de isolamento do Mecanismo de Banco de Dados  
  O padrão ISO define os seguintes níveis de isolamento, todos têm suporte pelo [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]:  
   
 |Nível de Isolamento|Definição|  
 |---------------------|----------------|  
-|Leitura não confirmada|O nível de isolamento mais baixo, no qual as transações só estão isoladas o bastante para assegurar que dados corrompidos fisicamente não são sejam lidos. Nesse nível, são permitidas leituras sujas, para que uma transação tenha acesso às alterações ainda não confirmadas de outras transações.|  
-|Leitura confirmada|Permite que uma transação leia dados lidos anteriormente (não modificados) por outra transação, sem esperar pela conclusão da primeira transação. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mantém bloqueios de gravação (adquiridos em dados selecionados) até o término da transação, mas os bloqueios de leitura são liberados assim que a operação SELECT é efetuada. Esse é o nível padrão do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].|  
-|Leitura repetida|O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mantém os bloqueios de gravação e leitura adquiridos em dados selecionados até o término da transação. Contudo, poderão ocorrer leituras fantasmas, pois os bloqueios de intervalo não são gerenciados.|  
-|Serializável|O nível mais alto, no qual as transações estão completamente isoladas umas das outras. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mantém os bloqueios de gravação e leitura adquiridos em dados selecionados para que sejam liberados ao final da transação. Os bloqueios de intervalo são adquiridos quando uma operação SELECT usa uma cláusula WHERE em intervalo, sobretudo para evitar leituras fantasmas.<br /><br /> **Observação:** oode haver falha em operações e transações DDL em tabelas replicadas quando o nível de isolamento serializável é solicitado. Isso ocorre porque as consultas de replicação usam dicas que podem ser incompatíveis com o nível de isolamento serializável.|  
+|**Leitura não confirmada**|O nível de isolamento mais baixo, no qual as transações só estão isoladas o bastante para assegurar que dados corrompidos fisicamente não são sejam lidos. Nesse nível, são permitidas leituras sujas, para que uma transação tenha acesso às alterações ainda não confirmadas de outras transações.|  
+|**Leitura confirmada**|Permite que uma transação leia dados lidos anteriormente (não modificados) por outra transação, sem esperar pela conclusão da primeira transação. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mantém bloqueios de gravação (adquiridos em dados selecionados) até o término da transação, mas os bloqueios de leitura são liberados assim que a operação SELECT é efetuada. Esse é o nível padrão do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].|  
+|**Leitura repetível**|O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mantém os bloqueios de gravação e leitura adquiridos em dados selecionados até o término da transação. Contudo, poderão ocorrer leituras fantasmas, pois os bloqueios de intervalo não são gerenciados.|  
+|**Serializável**|O nível mais alto, no qual as transações estão completamente isoladas umas das outras. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mantém os bloqueios de gravação e leitura adquiridos em dados selecionados para que sejam liberados ao final da transação. Os bloqueios de intervalo são adquiridos quando uma operação SELECT usa uma cláusula WHERE em intervalo, sobretudo para evitar leituras fantasmas.<br /><br /> **Observação:** oode haver falha em operações e transações DDL em tabelas replicadas quando o nível de isolamento serializável é solicitado. Isso ocorre porque as consultas de replicação usam dicas que podem ser incompatíveis com o nível de isolamento serializável.|  
   
  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] também oferece suporte a dois níveis adicionais de isolamento da transação que usam controle de versão de linha. O primeiro consiste em uma implementação nova de isolamento de leitura confirmada e o segundo consiste em um nível de isolamento da transação novo, instantâneo.  
   
 |Nível de isolamento do controle de versão de linha|Definição|  
 |------------------------------------|----------------|  
-|Instantâneo de leitura confirmada|Quando a opção de banco de dados READ_COMMITTED_SNAPSHOT estiver definida como ON, o isolamento de leitura confirmada usará o controle de versão de linha para fornecer consistência de leitura no nível da instrução. Operações de leitura só requerem bloqueios de nível de tabela SCH-S e nenhum bloqueio de página ou linha. Ou seja, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa o controle de versão de linha para apresentar a cada instrução um instantâneo transacionalmente consistente dos dados conforme se encontravam no início da instrução. Não são usados bloqueios para proteger os dados contra atualizações efetuadas por outras transações. Uma função definida pelo usuário pode retornar dados confirmados depois do horário de início da instrução que contém que o UDF.<br /><br /> Quando a opção de banco de dados `READ_COMMITTED_SNAPSHOT` estiver configurada como OFF, que é a configuração padrão, o isolamento de leitura confirmada usará os bloqueios compartilhados para evitar que outras transações modifiquem linhas enquanto a transação atual estiver executando uma operação de leitura. Os bloqueios compartilhados também bloqueiam a instrução de ler linhas modificadas por outras transações até que a outra transação seja concluída. Ambas as implementações satisfazem a definição de ISO de isolamento de leitura confirmada.|  
-|Instantâneo|O nível de isolamento do instantâneo usa controle de versão de linha para fornecer consistência de leitura em nível de transação. Operações de leitura não requerem bloqueios de página ou linha; apenas bloqueios de tabela SCH-S são necessários. Ao ler linhas modificadas por outra transação, elas recuperam a versão da linha que existia na inicialização da transação. Você apenas pode usar o isolamento de instantâneo em relação a um banco de dados quando a opção `ALLOW_SNAPSHOT_ISOLATION` de banco de dados estiver definida como ON. Por padrão, essa opção é definida como OFF para bancos de dados de usuários.<br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não tem suporte para controle de versão de metadados. Por isso, há restrições nas operações de DDL que podem ser executadas em uma transação explícita que está sendo executada sob isolamento do instantâneo. As instruções DDL a seguir não são permitidas sob o isolamento de instantâneo após uma instrução BEGIN TRANSACTION: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou qualquer instrução DDL do CLR (common language runtime). Essas instruções serão permitidas quando você estiver usando o isolamento de instantâneo em transações implícitas. Uma transação implícita, por definição, é uma instrução única que torna possível impor semânticas de isolamento do instantâneo, até mesmo com instruções DDL. Violações desse princípio podem causar o erro 3961: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
+|**Instantâneo de leitura confirmada (RCSI)**|Quando a opção de banco de dados READ_COMMITTED_SNAPSHOT estiver definida como ON, o isolamento de leitura confirmada usará o controle de versão de linha para fornecer consistência de leitura no nível da instrução. Operações de leitura só requerem bloqueios de nível de tabela SCH-S e nenhum bloqueio de página ou linha. Ou seja, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa o controle de versão de linha para apresentar a cada instrução um instantâneo transacionalmente consistente dos dados conforme se encontravam no início da instrução. Não são usados bloqueios para proteger os dados contra atualizações efetuadas por outras transações. Uma função definida pelo usuário pode retornar dados confirmados depois do horário de início da instrução que contém que o UDF.<br /><br /> Quando a opção de banco de dados `READ_COMMITTED_SNAPSHOT` estiver configurada como OFF, que é a configuração padrão, o isolamento de leitura confirmada usará os bloqueios compartilhados para evitar que outras transações modifiquem linhas enquanto a transação atual estiver executando uma operação de leitura. Os bloqueios compartilhados também bloqueiam a instrução de ler linhas modificadas por outras transações até que a outra transação seja concluída. Ambas as implementações satisfazem a definição de ISO de isolamento de leitura confirmada.|  
+|**Instantâneo**|O nível de isolamento do instantâneo usa controle de versão de linha para fornecer consistência de leitura em nível de transação. Operações de leitura não requerem bloqueios de página ou linha; apenas bloqueios de tabela SCH-S são necessários. Ao ler linhas modificadas por outra transação, elas recuperam a versão da linha que existia na inicialização da transação. Você apenas pode usar o isolamento de instantâneo em relação a um banco de dados quando a opção `ALLOW_SNAPSHOT_ISOLATION` de banco de dados estiver definida como ON. Por padrão, essa opção é definida como OFF para bancos de dados de usuários.<br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não tem suporte para controle de versão de metadados. Por isso, há restrições nas operações de DDL que podem ser executadas em uma transação explícita que está sendo executada sob isolamento do instantâneo. As instruções DDL a seguir não são permitidas sob o isolamento de instantâneo após uma instrução BEGIN TRANSACTION: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou qualquer instrução DDL do CLR (common language runtime). Essas instruções serão permitidas quando você estiver usando o isolamento de instantâneo em transações implícitas. Uma transação implícita, por definição, é uma instrução única que torna possível impor semânticas de isolamento do instantâneo, até mesmo com instruções DDL. Violações desse princípio podem causar o erro 3961: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
   
  A tabela a seguir mostra os efeitos colaterais de simultaneidade habilitados por níveis de isolamento diferentes.  
   
@@ -306,7 +309,8 @@ GO
   
  Níveis de isolamento da transação podem ser definidos usando [!INCLUDE[tsql](../includes/tsql-md.md)] ou por uma API de banco de dados.  
   
- Scripts [!INCLUDE[tsql](../includes/tsql-md.md)] usam a instrução SET TRANSACTION ISOLATION LEVEL.  
+ **[!INCLUDE[tsql](../includes/tsql-md.md)]**                                      
+ Os scripts [!INCLUDE[tsql](../includes/tsql-md.md)] usam a instrução `SET TRANSACTION ISOLATION LEVEL`.  
   
  **ADO**  
  Aplicativos ADO definem a propriedade `IsolationLevel` do objeto **Connection** como adXactReadUncommitted, adXactReadCommitted, adXactRepeatableRead ou adXactReadSerializable.  
@@ -324,7 +328,7 @@ GO
   
  Para transações de instantâneo, os aplicativos chamam `SQLSetConnectAttr` com Atributo definido como SQL_COPT_SS_TXN_ISOLATION e ValuePtr definido como SQL_TXN_SS_SNAPSHOT. Uma transação de instantâneo que usa SQL_COPT_SS_TXN_ISOLATION ou SQL_ATTR_TXN_ISOLATION pode ser recuperada.  
   
-##  <a name="Lock_Engine"></a> Bloqueio no [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
+##  <a name="Lock_Engine"></a> Bloqueio no Mecanismo de Banco de Dados  
  O bloqueio é um mecanismo usado pelo [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] para sincronizar o acesso de vários usuários à mesma parte dos dados simultaneamente.  
   
  Antes que uma transação adquira uma dependência de uma parte dos dados no estado atual, como por ler ou modificar os dados, ela deve se proteger contra os efeitos de outra transação que modifique os mesmos dados. A transação faz isso, solicitando um bloqueio na parte dos dados. Os bloqueios têm modos diferentes, como compartilhado ou exclusivo. O modo de bloqueio define o nível de dependência que a transação tem nos dados. Nenhuma transação pode receber um bloqueio que conflite com o modo de um bloqueio já atribuído àqueles dados por outra transação. Se uma transação requisitar um modo de bloqueio que conflite com um bloqueio que já tenha sido atribuído aos mesmos dados, a instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] fará uma pausa na transação requerida até que o primeiro bloqueio seja liberado.  
@@ -364,13 +368,13 @@ GO
   
 |Modo de bloqueio|Descrição|  
 |---------------|-----------------|  
-|Compartilhado (S)|Usado para operações de leitura que não alteram nem atualizam dados, como uma instrução `SELECT`.|  
-|Atualização (U)|Usado em recursos que podem ser atualizados. Evita uma forma comum de deadlock que ocorre quando várias sessões estão lendo, bloqueando e potencialmente atualizando recursos mais tarde.|  
-|Exclusivo (X)|Usado para operações de modificação de dados, como `INSERT`, `UPDATE` ou `DELETE`. Assegura que várias atualizações não sejam realizadas no mesmo recurso ao mesmo tempo.|  
-|Intencional|Usado para estabelecer uma hierarquia de bloqueio. Os tipos de bloqueios intencionais são: intencional compartilhado (IS), intencional exclusivo (IX) e compartilhado com intenção exclusiva (SIX).|  
-|Esquema|Usado quando uma operação dependente do esquema de uma tabela está em execução. Os tipos de bloqueios de esquema são: modificação de esquema (Sch-M) e estabilidade de esquema (Sch-S).|  
-|Atualização em massa (BU).|Usado ao copiar dados em massa em uma tabela com a dica `TABLOCK` especificada.|  
-|Intervalo de chave|Protege o intervalo de leitura de linhas lido por uma consulta ao usar o nível de isolamento da transação serializável. Assegura que outras transações não possam inserir linhas que se qualifiquem para consultas da transação serializável se as consultas forem executadas novamente.|  
+|**Compartilhado (S)**|Usado para operações de leitura que não alteram ou atualizam dados, como uma instrução SELECT.|  
+|**Atualização (U)**|Usado em recursos que podem ser atualizados. Evita uma forma comum de deadlock que ocorre quando várias sessões estão lendo, bloqueando e potencialmente atualizando recursos mais tarde.|  
+|**Exclusivo (X)**|Usado para operações da modificação de dados, como INSERT, UPDATE ou DELETE. Assegura que várias atualizações não sejam realizadas no mesmo recurso ao mesmo tempo.|  
+|**Intenção**|Usado para estabelecer uma hierarquia de bloqueio. Os tipos de bloqueios intencionais são: intencional compartilhado (IS), intencional exclusivo (IX) e compartilhado com intenção exclusiva (SIX).|  
+|**Esquema**|Usado quando uma operação dependente do esquema de uma tabela está em execução. Os tipos de bloqueios de esquema são: modificação de esquema (Sch-M) e estabilidade de esquema (Sch-S).|  
+|**BU (atualização em massa)**|Usado quando para copiar dados em massa em uma tabela e a dica **TABLOCK** está especificada.|  
+|**Intervalo de chave**|Protege o intervalo de leitura de linhas lido por uma consulta ao usar o nível de isolamento da transação serializável. Assegura que outras transações não possam inserir linhas que se qualifiquem para consultas da transação serializável se as consultas forem executadas novamente.|  
   
 #### <a name="shared"></a> Bloqueios compartilhados  
  Bloqueios compartilhados (S) permitem que transações simultâneas leiam um recurso (SELECT) sob controle de simultaneidade pessimista. Nenhuma outra transação pode modificar os dados enquanto bloqueios compartilhados (S) existirem no recurso. Bloqueios compartilhados (S) em um recurso são liberados quando a operação de leitura termina, exceto se o nível de isolamento da transação for configurado para leitura repetida ou maior ou uma dica de bloqueio for usada para reter os bloqueios compartilhados (S) pela duração da transação.  
@@ -399,12 +403,12 @@ GO
   
 |Modo de bloqueio|Descrição|  
 |---------------|-----------------|  
-|Intencional compartilhado (IS)|Protege bloqueios solicitados ou bloqueios compartilhados adquiridos em alguns (mas não todos) recursos mais baixos na hierarquia.|  
-|Intencional exclusivo (IX)|Protege os bloqueios solicitados ou bloqueios exclusivos adquiridos em alguns (mas não todos) recursos mais baixos na hierarquia. IX é um superconjunto de IS, e também protege solicitando bloqueios compartilhados em recursos de nível mais baixo.|  
-|Compartilhado com intenção exclusiva (SIX)|Protege bloqueios compartilhados solicitados ou adquiridos em todos os recursos inferiores na hierarquia e bloqueios intencionais exclusivos em alguns (mas não todos) recursos de nível mais baixo. São permitido bloqueios IS simultâneos no recurso de nível mais alto. Por exemplo, adquirir um bloqueio SIX, em uma tabela, também adquire bloqueios intencionais exclusivos nas páginas que estão sendo modificadas e bloqueios exclusivos nas linhas modificadas. Só pode haver um bloqueio SIX por recurso de cada vez, evitando atualizações feitas no recurso por outras transações, embora outras transações possam ler recursos, em uma hierarquia mais baixa, obtendo bloqueios IS no nível de tabela.|  
-|Atualização intencional (IU).|Protege os bloqueios de atualização solicitados ou adquiridos, em todos os recursos dos níveis mais baixos da hierarquia. Bloqueios de IU só são usados em recursos de página. Bloqueios IU são convertidos a bloqueios IX se houver uma operação de atualização.|  
-|Atualização intencional compartilhado (SIU)|Uma combinação de bloqueios S e IU, como resultado de aquisição desses bloqueios, separadamente e simultaneamente, mantendo ambos os bloqueios. Por exemplo, uma transação executa uma consulta com a dica PAGLOCK e, então, executa uma operação de atualização. A consulta com a dica PAGLOCK adquire o bloqueio de S e a operação de atualização adquire o bloqueio IU.|  
-|Atualização intencional exclusiva (UIX)|Uma combinação de bloqueios U e IX, como resultado de aquisição desses bloqueios, separadamente e simultaneamente, mantendo ambos os bloqueios.|  
+|**Tentativa compartilhada (IS)**|Protege bloqueios solicitados ou bloqueios compartilhados adquiridos em alguns (mas não todos) recursos mais baixos na hierarquia.|  
+|**IX (intensão exclusiva)**|Protege os bloqueios solicitados ou bloqueios exclusivos adquiridos em alguns (mas não todos) recursos mais baixos na hierarquia. IX é um superconjunto de IS, e também protege solicitando bloqueios compartilhados em recursos de nível mais baixo.|  
+|**SIX (compartilhado com intenção exclusiva)**|Protege bloqueios compartilhados solicitados ou adquiridos em todos os recursos inferiores na hierarquia e bloqueios intencionais exclusivos em alguns (mas não todos) recursos de nível mais baixo. São permitido bloqueios IS simultâneos no recurso de nível mais alto. Por exemplo, adquirir um bloqueio SIX, em uma tabela, também adquire bloqueios intencionais exclusivos nas páginas que estão sendo modificadas e bloqueios exclusivos nas linhas modificadas. Só pode haver um bloqueio SIX por recurso de cada vez, evitando atualizações feitas no recurso por outras transações, embora outras transações possam ler recursos, em uma hierarquia mais baixa, obtendo bloqueios IS no nível de tabela.|  
+|**IU (atualização intencional)**|Protege os bloqueios de atualização solicitados ou adquiridos, em todos os recursos dos níveis mais baixos da hierarquia. Bloqueios de IU só são usados em recursos de página. Bloqueios IU são convertidos a bloqueios IX se houver uma operação de atualização.|  
+|**SIU (atualização intencional compartilhada)**|Uma combinação de bloqueios S e IU, como resultado de aquisição desses bloqueios, separadamente e simultaneamente, mantendo ambos os bloqueios. Por exemplo, uma transação executa uma consulta com a dica PAGLOCK e, então, executa uma operação de atualização. A consulta com a dica PAGLOCK adquire o bloqueio de S e a operação de atualização adquire o bloqueio IU.|  
+|**UIX (atualização intencional exclusiva)**|Uma combinação de bloqueios U e IX, como resultado de aquisição desses bloqueios, separadamente e simultaneamente, mantendo ambos os bloqueios.|  
   
 #### <a name="schema"></a> Bloqueios de esquema  
  O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa esquema de bloqueios de modificação (Sch-M) durante a operação de definição de linguagem dos dados da tabela (DDL), tal como adicionar uma coluna ou cancelar uma tabela. Durante o tempo em ele é mantido, o bloqueio Sch-M evita o acesso simultâneo à tabela. Isso significa que o bloqueio Sch-M bloqueia todos as operações externas até que o bloqueio seja liberado.  
@@ -452,7 +456,7 @@ GO
   
  O bloqueio de intervalo de chave impede leituras fantasmas. Ao proteger os intervalos de chaves entre as linhas, ele também evita inserções fantasmas em um conjunto de registros acessado por uma transação.  
   
- Um bloqueio de intervalo de chave é colocado em um índice, especificando um valor de chave inicial e final. Esse bloqueio impede quaisquer tentativas de inserção, atualização ou exclusão de qualquer linha de um valor de chave que falhe no intervalo, pois essas operações primeiro teriam que obter um bloqueio no índice. Por exemplo, uma transação serializável pode emitir uma instrução SELECT que leia todas as linhas cujos valores das chaves estejam entre **'** AAA **'** e **'** CZZ **'** . Um bloqueio no intervalo de chave sobre o valor da chave de **'** AAA **'** até **'** CZZ **'** evita que outras transações insiram linhas com valores de chave em qualquer posição daquele intervalo, tais como **'** ADG **'** , **'** BBD **'** , ou **'** CAL **'** .  
+ Um bloqueio de intervalo de chave é colocado em um índice, especificando um valor de chave inicial e final. Esse bloqueio impede quaisquer tentativas de inserção, atualização ou exclusão de qualquer linha de um valor de chave que falhe no intervalo, pois essas operações primeiro teriam que obter um bloqueio no índice. Por exemplo, uma transação serializável pode emitir uma instrução `SELECT` que leia todas as linhas cujos valores de chave correspondam à condição `BETWEEN 'AAA' AND 'CZZ'`. Um bloqueio no intervalo de chave sobre o valor da chave de **'** AAA **'** até **'** CZZ **'** evita que outras transações insiram linhas com valores de chave em qualquer posição daquele intervalo, tais como **'** ADG **'** , **'** BBD **'** , ou **'** CAL **'** .  
   
 #### <a name="key_range_modes"></a> Modos de bloqueio de intervalo de chave  
  O bloqueio de intervalo de chave inclui um intervalo e um componente de linha especificados no formato intervalo-linha:  
@@ -574,9 +578,9 @@ INSERT mytable VALUES ('Dan');
 -   Desempenho superior. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] minimiza a sobrecarga do sistema usando bloqueios adequados à tarefa.  
 -   Os desenvolvedores de aplicativos podem se concentrar no desenvolvimento. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ajusta o bloqueio automaticamente.  
   
- No [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e em versões posteriores, o comportamento do escalonamento de bloqueio mudou com a introdução da opção `LOCK_ESCALATION`. Para obter mais informações, veja a opção `LOCK_ESCALATION` de [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).  
+ Começando com o [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], o comportamento do escalonamento de bloqueio mudou com a introdução da opção `LOCK_ESCALATION`. Para obter mais informações, veja a opção `LOCK_ESCALATION` de [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).  
   
-### <a name="deadlocks"></a> Deadlock  
+## <a name="deadlocks"></a> Deadlocks  
  Um deadlock acontece quando duas ou mais tarefas bloqueiam permanentemente uma à outra; uma tarefa está bloqueando um recurso que a outra tarefa está tentando bloquear. Por exemplo:  
   
 -   A transação A adquire um bloqueio compartilhado da linha 1.  
@@ -590,28 +594,29 @@ INSERT mytable VALUES ('Dan');
   
  O deadlock é frequentemente confundido com bloqueio normal. Quando uma transação solicita um bloqueio em um recurso bloqueado por outra transação, a transação solicitante espera até que o bloqueio seja liberado. Por padrão, as transações [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não têm tempo limite, a menos que LOCK_TIMEOUT seja configurado. A transação solicitante é bloqueada, não em deadlock, por que ela não fez nada para bloquear a transação que deve o bloqueio. Finalmente, a transação proprietária vai terminar e liberar o bloqueio e a transação solicitante terá o bloqueio atribuído e processado.  
   
- Os deadlocks às vezes são chamados de abraço mortal.  
+> [!NOTE]
+> Os deadlocks às vezes são chamados de abraço mortal.  
   
  Deadlock é uma condição que pode ocorrer em qualquer sistema com vários threads, não só em sistemas de gerenciamento de banco de dados relacional, e pode ocorrer para outros recursos, além de bloqueios de objetos em bancos de dados. Por exemplo, um thread em um sistema operacional de vários threads pode adquirir um ou mais recursos, como bloqueios de memória. Se o recurso sendo adquirido é atualmente propriedade de outro thread, o primeiro thread pode ter que esperar o thread proprietário liberar o recurso alvo. O thread em espera tem uma dependência do thread proprietário para aquele recurso em particular. Em uma instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], sessões podem fazer um deadlock ao adquirir recursos que não são de banco de dados, como memória ou threads.  
   
- ![deadlock](../relational-databases/media/deadlock.png)  
+ ![Diagrama mostrando o deadlock de transação](../relational-databases/media/deadlock.png)  
   
  Na ilustração, a transação T1 tem uma dependência da transação T2 para o recurso de bloqueio de tabela **Part**. Da mesma forma, a transação T2 tem uma dependência da transação T1 para o recurso de bloqueio de tabela **Supplier**. Devido a essas dependências formarem um ciclo, há um deadlock entre as transações T1 e T2.  
   
  Os deadlocks também podem ocorrer quando uma tabela é particionada e a configuração `LOCK_ESCALATION` de `ALTER TABLE` é definida como AUTO. Quando `LOCK_ESCALATION` é configurada como AUTO, a simultaneidade aumenta ao permitir que o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] bloqueie partições de tabela no nível de HoBT em vez de no nível de tabela. Entretanto, quando transações separadas mantêm bloqueios de partição em uma tabela e querem um bloqueio em algum lugar de outra partição de transações, isso causa um deadlock. Esse tipo de deadlock pode ser evitado configurando `LOCK_ESCALATION` a `TABLE`, embora essa configuração vá reduzir a simultaneidade forçando as atualizações extensas em uma partição a esperarem por um bloqueio de tabela.  
   
-#### <a name="detecting-and-ending-deadlocks"></a>Detectando e encerrando deadlocks  
+### <a name="detecting-and-ending-deadlocks"></a>Detectando e encerrando deadlocks  
  Um deadlock acontece quando duas ou mais tarefas bloqueiam permanentemente uma à outra; uma tarefa está bloqueando um recurso que a outra tarefa está tentando bloquear. O seguinte gráfico apresenta uma exibição de alto nível de um estado de deadlock em que:  
   
 -   A tarefa T1 tem um bloqueio no recurso R1 (indicado pela seta de R1 para T1) e solicitou um bloqueio no recurso R2 (indicado pela seta de T1 para R2).  
 -   A tarefa T2 tem um bloqueio no recurso R2 (indicado pela seta de R2 a T2) e solicitou um bloqueio no recurso R1 (indicado pela seta de T2 a R1).  
 -   Como nenhuma tarefa pode continuar até que um recurso esteja disponível e nenhum recurso pode ser liberado até que uma tarefa continue, ocorre um estado de deadlock.  
   
- ![Task_Deadlock_State](../relational-databases/media/Task_Deadlock_State.png)  
+ ![Diagrama mostrando tarefas em um estado de deadlock](../relational-databases/media/Task_Deadlock_State.png)  
   
  O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] detecta ciclos de deadlock automaticamente dentro do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] escolhe uma das sessões como vítima de deadlock e a transação atual é encerrada com um erro para quebrar o deadlock.  
   
-##### <a name="deadlock_resources"></a> Recursos que podem acarretar deadlock  
+#### <a name="deadlock_resources"></a> Recursos que podem acarretar deadlock  
  Cada sessão de usuário pode ter uma ou mais tarefas sendo executadas em seu nome, sendo que cada tarefa pode adquirir ou aguardar para adquirir uma variedade de recursos. Os tipos de recursos a seguir podem causar bloqueio que pode resultar em um deadlock.  
   
 -   **Bloqueios**. A espera para adquirir bloqueios em recursos, como objetos, páginas, linhas, metadados e aplicativos pode causar deadlock. Por exemplo, a transação T1 tem um bloqueio compartilhado (S) na linha r1 e está esperando para obter um bloqueio exclusivo (X) em r2. A transação T2 tem um bloqueio compartilhado (S) na linha r1 e está esperando para obter um bloqueio exclusivo (X) em r1. Isso resulta em um ciclo de bloqueio no qual T1 e T2 esperam que uma libere os recursos bloqueados da outra.  
@@ -620,7 +625,7 @@ INSERT mytable VALUES ('Dan');
   
 -   **Memória**. Quando solicitações simultâneas estão esperando por concessões de memória que não podem ser satisfeitas com a memória disponível, pode ocorrer um deadlock. Por exemplo, duas consultas simultâneas, Q1 e Q2, são executadas como funções definidas pelo usuário que adquirem 10MB e 20MB de memória, respectivamente. Se cada consulta precisar de 30MB e a memória disponível total for de 20MB, Q1 e Q2 deverão esperar uma pela outra para liberar memória. Isso resulta em um deadlock.  
   
--   **Recursos relacionados à execução de consultas paralelas** Threads de coordenador, produtor ou consumidor associados a uma porta de troca podem bloquear uns aos outros, provocando um deadlock, normalmente ao incluir pelo menos um outro processo que não faz parte da consulta paralela. Além disso, quando uma consulta paralela começa a ser executada, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] determina o grau de paralelismo, ou o número de threads de trabalho, com base na carga de trabalho atual. Se a carga de trabalho do sistema for alterada inesperadamente, por exemplo, quando novas consultas forem executadas no servidor ou o sistema ficar sem threads de trabalho, poderá ocorrer um deadlock.  
+-   **Recursos relacionados à execução de consultas paralelas**. Threads de coordenador, produtor ou consumidor associados a uma porta de troca podem bloquear uns aos outros, provocando um deadlock, normalmente ao incluir pelo menos um outro processo que não faz parte da consulta paralela. Além disso, quando uma consulta paralela começa a ser executada, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] determina o grau de paralelismo, ou o número de threads de trabalho, com base na carga de trabalho atual. Se a carga de trabalho do sistema for alterada inesperadamente, por exemplo, quando novas consultas forem executadas no servidor ou o sistema ficar sem threads de trabalho, poderá ocorrer um deadlock.  
   
 -   **Recursos MARS (conjunto de resultados ativos múltiplos)** . Esses recursos são usados para controlar a intercalação de várias solicitações ativas em MARS. Para obter mais informações, consulte [Usando MARS (vários conjuntos de resultados ativos)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
@@ -641,7 +646,7 @@ INSERT mytable VALUES ('Dan');
   
  ![LogicFlowExamplec](../relational-databases/media/udb9_LogicFlowExamplec.png)  
   
-##### <a name="deadlock_detection"></a> Detecção de deadlock  
+### <a name="deadlock_detection"></a> Detecção de deadlock  
  Todos os recursos listados na seção anterior participam do esquema de detecção de deadlock [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. A detecção de deadlock é executada por um thread de monitor de bloqueio que periodicamente inicia uma pesquisa por todas as tarefas em uma instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Os seguintes pontos descrevem o processo de pesquisa:  
   
 -   O intervalo padrão é de 5 segundos.  
@@ -659,20 +664,24 @@ INSERT mytable VALUES ('Dan');
   
  Ao trabalhar com CLR, o monitor de deadlock detecta automaticamente um deadlock para recursos de sincronização (monitores, bloqueio de leitura/gravação ou junção de thread) acessados dentro dos procedimentos gerenciados. Entretanto, o deadlock é resolvido ao se lançar uma exceção no procedimento selecionado como a vítima de deadlock. É importante entender que a exceção não libera automaticamente os recursos pertencentes à vítima; os recursos devem ser liberados explicitamente. Em consonância com o comportamento de exceção, a exceção usada para identificar uma vítima de deadlock pode ser capturada e ignorada.  
   
-##### <a name="deadlock_tools"></a> Ferramentas de informações sobre deadlock  
+### <a name="deadlock_tools"></a> Ferramentas de informações sobre deadlock  
  Para exibir informações de deadlock, a [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] fornece ferramentas de monitoramento na forma da sessão xEvent system\_health, dois sinalizadores de rastreamento e o evento de grafo de deadlock no SQL Profiler.  
 
-###### <a name="deadlock_xevent"></a> Deadlock na sessão system_health
-Começando com o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], quando ocorrerem deadlocks, a sessão system\_health captura todos os xEvents `xml_deadlock_report`. A sessão system\_health é habilitado por padrão. O grafo de deadlock capturado geralmente tem três nós distintos:
+#### <a name="deadlock_xevent"></a> Evento Estendido do Deadlock
+Começando com o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o xEvent (Evento Estendido) do `xml_deadlock_report` deve ser usado em vez da classe de evento de grafo de Deadlock no Rastreamento do SQL ou Criador de Perfil do SQL.
+
+Além disso, começando com [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], quando ocorrerem deadlocks, a sessão de integridade do sistema\_vai capturar todos os xEvents `xml_deadlock_report` que contiverem o grafo de deadlock. Como a sessão de integridade do sistema\_é habilitada por padrão, não é necessário que uma sessão xEvent separada esteja configurada para capturar informações de deadlock. 
+
+O grafo de deadlock capturado geralmente tem três nós distintos:
 -   **victim-list**. O identificador de processo da vítima do deadlock.
 -   **process-list**. Informações sobre todos os processos envolvidos no deadlock.
 -   **resource-list**. Informações sobre os recursos envolvidos no deadlock.
 
 Abrindo o arquivo de sessão system\_health ou o anel de buffer, se o `xml_deadlock_report` xEvent estiver registrado, [!INCLUDE[ssManStudio](../includes/ssManStudio-md.md)] apresentará uma representação gráfica das tarefas e dos recursos envolvidos em um deadlock, como mostra o exemplo a seguir: 
 
-![xEventDeadlockGraphc](../relational-databases/media/udb9_xEventDeadlockGraphc.png)
+![Grafo de deadlock de xEvent](../relational-databases/media/udb9_xEventDeadlockGraphc.png)
 
-A consulta a seguir pode exibir todos os eventos de deadlock capturados pelo buffer de anel de sessão system\_health.
+A consulta a seguir pode exibir todos os eventos de deadlock capturados pelo buffer de anel de sessão system\_health:
 
 ```sql
 SELECT xdr.value('@timestamp', 'datetime') AS [Date],
@@ -760,8 +769,11 @@ END
 
 Para obter mais informações, veja [Usar a Sessão system_health](../relational-databases/extended-events/use-the-system-health-session.md)
 
-###### <a name="deadlock_traceflags"></a> Sinalizadores de rastreamento 1204 e 1222  
+#### <a name="deadlock_traceflags"></a> Sinalizadores de rastreamento 1204 e 1222  
  Quando acontecem deadlocks, os sinalizadores de rastreamento 1204 e 1222 retornam informações captadas no log de erros [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O sinalizador de rastreamento 1204 relata informações de deadlock formatadas por cada nó envolvido no deadlock. O sinalizador de rastreamento 1222 formata informações de deadlock, primeiro por processos e depois por recursos. É possível permitir que ambos os sinalizadores de rastreamento obtenham duas representações do mesmo evento de deadlock.  
+
+> [!IMPORTANT]
+> Evite usar o sinalizador de rastreamento 1204 e 1222 em sistemas com uso intensivo de carga de trabalho que causam deadlocks. O uso desses sinalizadores de rastreamento pode introduzir problemas de desempenho. Em vez disso, use o Evento Estendido de Deadlock(#deadlock_xevent).
   
  Além de definir as propriedades dos sinalizadores de rastreamento 1204 e 1222, a tabela a seguir também mostra suas semelhanças e diferenças.  
   
@@ -771,7 +783,7 @@ Para obter mais informações, veja [Usar a Sessão system_health](../relational
 |Identificando atributos|**SPID:<x\> ECID:<x\>.** Identifica o thread de ID de processo de sistema em casos de processos paralelos. A entrada `SPID:<x> ECID:0`, em que <x\> é substituído pelo valor SPID, representa o thread principal. A entrada `SPID:<x> ECID:<y>`, em que <x\> é substituído pelo valor SPID e <y\> é maior que 0, representa os sub-threads para o mesmo SPID.<br /><br /> **BatchID** (**sbid** para sinalizador de rastreamento 1222). Identifica o lote do qual a execução de código está solicitando ou mantendo um bloqueio. Quando vários conjuntos de resultados ativos (MARS) estão desabilitados, o valor BatchID é 0. Quando MARS está habilitado, o valor para lotes ativos é 1 para *n*. Se não houver lotes ativos na sessão, BatchID será 0.<br /><br /> **Modo**. Especifica o tipo de bloqueio de um determinado recurso que é solicitado, concedido ou aguardado por um thread. O modo pode ser IS (Intencional Compartilhado), S (Compartilhado), U (Atualização), IX (Intencional Exclusivo), SIX (Compartilhado com Intenção Exclusiva) e X (Exclusivo).<br /><br /> **Nº de linha** (**linha** para o sinalizador de rastreamento 1222). Lista o número de linha no lote atual de instruções que estava sendo executado quando o deadlock aconteceu.<br /><br /> **Input Buf** (**inputbuf** para o sinalizador de rastreamento 1222). Lista todas as instruções no lote atual.|**Nó**. Representa o número de entrada na cadeia de deadlock.<br /><br /> **Listas**. O proprietário do bloqueio pode fazer parte destas listas:<br /><br /> **Lista de Concessões**. Enumera os proprietários atuais do recurso.<br /><br /> **Lista de Conversão**. Enumera os proprietários atuais que estão tentando converter seus bloqueios em um nível mais alto.<br /><br /> **Lista de Espera**. Enumera as novas solicitações de bloqueio do recurso.<br /><br /> **Tipo de Instrução**. Descreve o tipo de instrução DML (SELECT, INSERT, UPDATE ou DELETE) em que os threads têm permissões.<br /><br /> **Proprietário do Recurso Vítima**. Especifica o thread participante que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] escolhe como a vítima para quebrar o ciclo de deadlock. O thread escolhido e todos os sub-threads existentes são encerrados.<br /><br /> **Próximo Branch**. Representa os dois ou mais sub-threads do mesmo SPID envolvidos no ciclo de deadlock.|**vítima do deadlock**. Representa o endereço de memória física da tarefa (consulte [os_tasks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)) que foi selecionada como vítima de deadlock. Pode ser 0 (zero) no caso de um deadlock não resolvido. Uma tarefa que está sendo revertida não pode ser escolhida como vítima de deadlock.<br /><br /> **executionstack**. Representa o código [!INCLUDE[tsql](../includes/tsql-md.md)] que está sendo executado no momento em que o deadlock ocorre.<br /><br /> **prioridade**. Representa a prioridade do deadlock. Em determinados casos, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pode optar por alterar a prioridade de deadlock para uma duração curta para obter uma simultaneidade melhor.<br /><br /> **logused**. Espaço de log usado pela tarefa.<br /><br /> **ID do proprietário**. A ID da transação que tem controle da solicitação.<br /><br /> **status**. O estado da tarefa. Pode ser um dos seguintes valores:<br /><br /> >> **pendente**. Esperando por um thread de trabalho.<br /><br /> >> **executável**. Pronto para ser executado, mas esperando por um quantum.<br /><br /> >> **em execução**. Atualmente em execução no agendador.<br /><br /> >> **suspenso**. A execução está suspensa.<br /><br /> >> **concluído**. A tarefa foi concluída.<br /><br /> >> **spinloop**. Esperando que um spinlock seja liberado.<br /><br /> **waitresource**. O recurso exigido pela tarefa.<br /><br /> **waittime**. O tempo em milissegundos de espera pelo recurso.<br /><br /> **schedulerid**. O agendador associado à essa tarefa. Veja [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).<br /><br /> **hostname**. O nome da estação de trabalho.<br /><br /> **isolationlevel**. O nível de isolamento da transação atual.<br /><br /> **Xactid**. A ID da transação que tem controle da solicitação.<br /><br /> **currentdb**. A ID do banco de dados.<br /><br /> **lastbatchstarted**. A última vez em que um processo cliente iniciou uma execução em lote.<br /><br /> **lastbatchcompleted**. A última vez em que um processo cliente concluiu uma execução em lote.<br /><br /> **clientoption1 e clientoption2**. Defina as opções nessa conexão de cliente. Esse é um bitmask que inclui informações sobre opções normalmente controladas por instruções SET, como SET NOCOUNT e SET XACTABORT.<br /><br /> **associatedObjectId**. Representa a ID de HoBT (heap ou árvore B).|  
 |Atributos do recurso|**RID**. Identifica a única linha dentro de uma tabela na qual um bloqueio é mantido ou solicitado. RID é representado como RID: *db_id:file_id:page_no:row_no*. Por exemplo, `RID: 6:1:20789:0`.<br /><br /> **OBJECT**. Identifica a tabela na qual um bloqueio é mantido ou solicitado. OBJECT é representado como OBJECT: *db_id:object_id*. Por exemplo, `TAB: 6:2009058193`.<br /><br /> **KEY**. Identifica o intervalo de chave dentro de um índice em que um bloqueio é mantido ou solicitado. KEY é representado como KEY: *db_id:hobt_id* (*o valor de hash da chave de índice*). Por exemplo, `KEY: 6:72057594057457664 (350007a4d329)`.<br /><br /> **PAG**. Identifica o recurso de página no qual um bloqueio é mantido ou solicitado. PAG é representado como PAG: *db_id:file_id:page_no*. Por exemplo, `PAG: 6:1:20789`.<br /><br /> **EXT**. Identifica a estrutura de extensão. EXT é representado como EXT: *db_id:file_id:extent_no*. Por exemplo, `EXT: 6:1:9`.<br /><br /> **DB**. Identifica o bloqueio de banco de dados. **DB é representado de um dos seguintes modos:**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB], que identifica o bloqueio de banco de dados feito pelo banco de dados de backup.<br /><br /> DB: *db_id*[BULK-OP-LOG], que identifica o bloqueio feito pelo log de backup daquele banco de dados específico.<br /><br /> **APP**. Identifica o bloqueio feito por um recurso de aplicativo. APP é representado por APP: *lock_resource*. Por exemplo, `APP: Formf370f478`.<br /><br /> **METADATA**. Representa os recursos de metadados envolvidos em um deadlock. Como METADATA tem muitos sub-recursos, o valor retornado depende do sub-recurso envolvido no deadlock. Por exemplo, METADATA.USER_TYPE retorna `user_type_id =` <*integer_value*>. Para obter mais informações sobre os recursos e sub-recursos METADATA, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).<br /><br /> **HOBT**. Representa um heap ou árvore B envolvida em um deadlock.|Nenhum exclusivo para esse sinalizador de rastreamento.|Nenhum exclusivo para esse sinalizador de rastreamento.|  
   
-###### <a name="trace-flag-1204-example"></a>Exemplo do sinalizador de rastreamento 1204  
+##### <a name="trace-flag-1204-example"></a>Exemplo do sinalizador de rastreamento 1204  
  O exemplo a seguir mostra a saída quando o sinalizador de rastreamento 1204 é ativado. Neste caso, a tabela em Node 1 é um heap sem índices, e a tabela em Node 2 é um heap com índices não clusterizados. A chave de índice em Node 2 é atualizada quando o deadlock ocorre.  
   
 ```  
@@ -811,7 +823,7 @@ Victim Resource Owner:
      Mode: U SPID:55 BatchID:0 ECID:0 TaskProxy:(0x0475E374) Value:0x315d4a0 Cost:(0/380)  
 ```  
   
-###### <a name="trace-flag-1222-example"></a>Exemplo do sinalizador de rastreamento 1222  
+##### <a name="trace-flag-1222-example"></a>Exemplo do sinalizador de rastreamento 1222  
  O exemplo a seguir mostra a saída quando o sinalizador de rastreamento 1222 é ativado. Neste caso, uma tabela é um heap sem índices, e a outra tabela é um heap com um índice não clusterizado. Na segunda tabela, a chave de índice é atualizada quando o deadlock ocorre.  
   
 ```  
@@ -877,7 +889,7 @@ deadlock-list
      waiter id=process689978 mode=U requestType=wait  
 ```  
   
-###### <a name="profiler-deadlock-graph-event"></a>Evento gráfico de deadlock de designer de perfil  
+#### <a name="profiler-deadlock-graph-event"></a>Evento gráfico de deadlock de designer de perfil  
 Este é um evento no SQL Profiler que apresenta uma representação gráfica das tarefas e recursos envolvidos em um deadlock. O exemplo a seguir mostra a saída do SQL Profiler quando o evento de grafo de deadlock é ativado.  
   
  ![ProfilerDeadlockGraphc](../relational-databases/media/udb9_ProfilerDeadlockGraphc.png)  
@@ -886,7 +898,7 @@ Para obter mais informações sobre o evento de deadlock, veja [Classe de evento
 
 Para obter mais informações sobre como executar o grafo de deadlock do SQL Profiler, consulte [Salvar grafo de deadlock &#40;SQL Server Profiler&#41;](../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md).  
   
-#### <a name="handling-deadlocks"></a>Manipulando deadlocks  
+### <a name="handling-deadlocks"></a>Manipulando deadlocks  
  Quando uma instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] escolhe uma transação como vítima do deadlock, ela encerra o lote atual, reverte a transação e retorna a mensagem de erro 1205 ao aplicativo.  
   
  `Your transaction (process ID #52) was deadlocked on {lock | communication buffer | thread} resources with another process and has been chosen as the deadlock victim. Rerun your transaction.`  
@@ -897,7 +909,7 @@ Para obter mais informações sobre como executar o grafo de deadlock do SQL Pro
   
  O aplicativo deveria pausar brevemente antes de enviar novamente a consulta. Isso dá a outra transação envolvida no deadlock uma chance para completar e liberar seus bloqueios que formaram parte do ciclo de deadlock. Isso minimiza a probabilidade do deadlock ocorrer novamente quando a consulta reenviada solicitar seus bloqueios.  
   
-#### <a name="deadlock_minimizing"></a> Minimizando deadlocks  
+### <a name="deadlock_minimizing"></a> Minimizando deadlocks  
  Embora deadlocks não possam ser completamente evitados, seguir certas convenções de codificação pode minimizar a chance de gerar um deadlock. Minimizar deadlocks pode aumentar a taxa de transferência da transação e pode reduzir a sobrecarga do sistema pois poucas transações são:  
   
 -   Revertidas, desfazendo todo o trabalho executado pela transação.  
@@ -910,27 +922,27 @@ Para obter mais informações sobre como executar o grafo de deadlock do SQL Pro
 -   Mantenha as transações curtas e em um lote.  
 -   Use um nível de isolamento inferior.  
 -   Use um nível de isolamento com base em controle de versão de linha  
-    -   Configure a opção de banco de dados READ_COMMITTED_SNAPSHOT em ON, para habilitar que as transações de leitura confirmada utilizem controle de versão de linha.  
+    -   Configure a opção de banco de dados `READ_COMMITTED_SNAPSHOT` em ON para habilitar que as transações de leitura confirmada utilizem controle de versão de linha.  
     -   Use transação de isolamento de instantâneo  
 -   Use associações de saída.  
   
-##### <a name="access-objects-in-the-same-order"></a>Acessar objetos na mesma ordem  
+#### <a name="access-objects-in-the-same-order"></a>Acessar objetos na mesma ordem  
  Se todas as transações simultâneas acessarem objetos na mesma ordem, haverá menos chance de ocorrerem deadlocks. Por exemplo, se duas transações simultâneas obtiverem um bloqueio na tabela **Supplier** e depois na tabela **Part**, uma transação será bloqueada na tabela **Supplier** até que a outra transação seja concluída. Após a primeira transação ser confirmada ou revertida, a segunda continua e um deadlock não acontece. Usar procedimentos armazenados para todas as modificações de dados pode padronizar a ordem de acesso dos objetos.  
   
  ![deadlock2](../relational-databases/media/dedlck2.png)  
   
-##### <a name="avoid-user-interaction-in-transactions"></a>Evitar a interação do usuário durante as transações  
+#### <a name="avoid-user-interaction-in-transactions"></a>Evitar a interação do usuário durante as transações  
  Evite escrever transações que incluam interação de usuário, pois a velocidade de lotes executados sem intervenção de usuário é muito mais rápida que a velocidade que um usuário deve responder manualmente às consultas, como por exemplo, responder a um prompt para um parâmetro solicitado por um aplicativo. Por exemplo, se uma transação estiver esperando por entrada de usuário e o usuário sai para almoçar ou vai para casa durante o fim de semana, esse mesmo usuário atrasa o término da transação. Isto degrada a taxa de transferência do sistema, pois quaisquer bloqueios mantidos pela transação somente são liberados quando a transação é confirmada ou revertida. Até mesmo se uma situação de deadlock não surgir, outras transações que acessem os mesmos recursos serão bloqueadas enquanto esperam pela conclusão da transação.  
   
-##### <a name="keep-transactions-short-and-in-one-batch"></a>Manter as transações curtas e em um lote  
+#### <a name="keep-transactions-short-and-in-one-batch"></a>Manter as transações curtas e em um lote  
  Um deadlock ocorre tipicamente quando várias transações demoradas são executadas simultaneamente no mesmo banco de dados. Quanto mais longa a transação, por mais tempo as atualizações e bloqueios exclusivos são mantidos, bloqueando outras atividades, e levando à possíveis situações de deadlock.  
   
  Manter as transações em um lote minimiza as viagens de ida-e-volta de rede durante uma transação, reduzindo possíveis retardos ao completar a transação e liberando bloqueios.  
   
-##### <a name="use-a-lower-isolation-level"></a>Usar um nível de isolamento inferior  
+#### <a name="use-a-lower-isolation-level"></a>Usar um nível de isolamento inferior  
  Determine se uma transação pode ser executada em um nível inferior de isolamento. Implementar confirmação por leitura permite que uma transação leia dados lidos anteriormente (não modificados) por outra transação, sem esperar pela conclusão da primeira transação. Usar um nível de isolamento inferior, como a leitura confirmada, mantém bloqueios compartilhados por uma período mais curto que um nível de isolamento maior, como o serializável. Isto reduz a contenção de bloqueio.  
   
-##### <a name="use-a-row-versioning-based-isolation-level"></a>Use um nível de isolamento com base em controle de versão de linha  
+#### <a name="use-a-row-versioning-based-isolation-level"></a>Use um nível de isolamento com base em controle de versão de linha  
  Quando a opção `READ_COMMITTED_SNAPSHOT` do banco de dados estiver configurada como ON, uma transação em execução sob o nível de isolamento de leitura confirmada utilizará controle de versão de linha, em vez de bloqueios compartilhados durante operações de leitura.  
   
 > [!NOTE]  
@@ -940,13 +952,13 @@ Para obter mais informações sobre como executar o grafo de deadlock do SQL Pro
   
  Implemente estes níveis de isolamento para minimizar deadlocks, que podem ocorrer entre as operações de leitura e gravação.  
   
-##### <a name="use-bound-connections"></a>Usar conexões associadas  
+#### <a name="use-bound-connections"></a>Usar conexões associadas  
  Usar associações de saída usando, faz com que duas ou mais conexões abertas pelo mesmo aplicativo possam cooperar entre si. Qualquer bloqueio adquirido pelas conexões secundárias é mantido como se tivessem sido adquiridos pela conexão primária, e vice-versa. Portanto, eles não bloqueiam um ao outro.  
   
-### <a name="lock_partitioning"></a> Particionamento de bloqueio  
+## <a name="lock_partitioning"></a> Particionamento de bloqueio  
  Para os grandes sistemas de computador, bloqueios em objetos que são referenciados com frequência podem se tornar um gargalo de desempenho, uma vez que a aquisição e liberação de bloqueios produz contenções em recursos de bloqueios internos. O particionamento de bloqueio melhora o desempenho do bloqueio dividindo um único recurso de bloqueio em vários recursos de bloqueio. Esse recurso só está disponível para sistemas com 16 ou mais CPUs, é habilitado automaticamente e não pode ser desabilitado. Apenas os bloqueios de objeto podem ser particionados. Os bloqueios de objeto que têm um subtipo não são particionados. Para obter mais informações, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
-#### <a name="understanding-lock-partitioning"></a>Compreendendo o particionamento de bloqueio  
+### <a name="understanding-lock-partitioning"></a>Compreendendo o particionamento de bloqueio  
  As tarefas de bloqueio acessam vários recursos compartilhados, dois dos quais são otimizados através de particionamento de bloqueio:  
   
 -   **Spinlock**. Controla o acesso a um recurso de bloqueio, como uma linha ou uma tabela.  
@@ -959,7 +971,7 @@ Para obter mais informações sobre como executar o grafo de deadlock do SQL Pro
   
      Depois que o spinlock é adquirido, são armazenadas estruturas de bloqueio na memória, que então são acessadas e eventualmente modificadas. Distribuir acesso de bloqueio através de vários recursos ajuda eliminar a necessidade de transferir blocos de memória entre CPUs, que ajudará melhorar o desempenho.  
   
-#### <a name="implementing-and-monitoring-lock-partitioning"></a>Implementando e monitorando o particionamento de bloqueio  
+### <a name="implementing-and-monitoring-lock-partitioning"></a>Implementando e monitorando o particionamento de bloqueio  
  O particionamento de bloqueio é ativado por padrão para sistemas com 16 ou mais CPUs. Quando o particionamento de bloqueio é habilitado, uma mensagem informativa é registrada no log de erros do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Ao adquirir bloqueios em um recurso particionado:  
@@ -972,15 +984,14 @@ Para obter mais informações sobre como executar o grafo de deadlock do SQL Pro
   
  A coluna `resource_lock_partition` na Exibição de Gerenciamento Dinâmico `sys.dm_tran_locks` fornece a ID da partição de bloqueio para um recurso de bloqueio particionado. Para obter mais informações, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
-#### <a name="working-with-lock-partitioning"></a>Trabalhando com particionamento de bloqueio  
+### <a name="working-with-lock-partitioning"></a>Trabalhando com particionamento de bloqueio  
  Os exemplos de código a seguir ilustram o particionamento de bloqueio. Nos exemplos, são executadas duas transações em duas sessões diferentes para mostrar o comportamento de particionamento de bloqueio em um sistema de computador com 16 CPUs.  
   
  Estas instruções [!INCLUDE[tsql](../includes/tsql-md.md)] criam objetos de teste que são usados nos exemplos a seguir.  
   
 ```sql  
 -- Create a test table.  
-CREATE TABLE TestTable  
-    (col1        int);  
+CREATE TABLE TestTable  (col1 int);  
 GO  
   
 -- Create a clustered index on the table.  
@@ -993,7 +1004,7 @@ INSERT INTO TestTable VALUES (1);
 GO  
 ```  
   
-##### <a name="example-a"></a>Exemplo A  
+#### <a name="example-a"></a>Exemplo A  
  Sessão 1:  
   
  Uma instrução `SELECT` é executada em uma transação. Devido à dica de bloqueio `HOLDLOCK`, essa instrução adquirirá e reterá um bloqueio IS (Intencional compartilhado) na tabela (para efeitos de ilustração, são ignorados os bloqueios de linha e de página). O bloqueio IS só será adquirido na partição atribuída à transação. Para este exemplo, supõe-se que o bloqueio IS é adquirido na ID 7 da partição.  
@@ -1003,8 +1014,8 @@ GO
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
     SELECT col1  
-        FROM TestTable  
-        WITH (HOLDLOCK);  
+    FROM TestTable  
+    WITH (HOLDLOCK);  
 ```  
   
  Sessão 2:  
@@ -1014,8 +1025,8 @@ BEGIN TRANSACTION
 ```sql  
 BEGIN TRANSACTION  
     SELECT col1  
-        FROM TestTable  
-        WITH (TABLOCK, HOLDLOCK);  
+    FROM TestTable  
+    WITH (TABLOCK, HOLDLOCK);  
 ```  
   
  Sessão 1:  
@@ -1024,11 +1035,11 @@ BEGIN TRANSACTION
   
 ```sql  
 SELECT col1  
-    FROM TestTable  
-    WITH (TABLOCKX);  
+FROM TestTable  
+WITH (TABLOCKX);  
 ```  
   
-##### <a name="example-b"></a>Exemplo B  
+#### <a name="example-b"></a>Exemplo B  
  Sessão 1:  
   
  Uma instrução `SELECT` é executada em uma transação. Devido à dica de bloqueio `HOLDLOCK`, essa instrução adquirirá e reterá um bloqueio IS (Intencional compartilhado) na tabela (para efeitos de ilustração, são ignorados os bloqueios de linha e de página). O bloqueio IS só será adquirido na partição atribuída à transação. Para este exemplo, supõe-se que o bloqueio IS é adquirido na ID 6 da partição.  
@@ -1038,8 +1049,8 @@ SELECT col1
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
     SELECT col1  
-        FROM TestTable  
-        WITH (HOLDLOCK);  
+    FROM TestTable  
+    WITH (HOLDLOCK);  
 ```  
   
  Sessão 2:  
@@ -1051,8 +1062,8 @@ BEGIN TRANSACTION
 ```sql  
 BEGIN TRANSACTION  
     SELECT col1  
-        FROM TestTable  
-        WITH (TABLOCKX, HOLDLOCK);  
+    FROM TestTable  
+    WITH (TABLOCKX, HOLDLOCK);  
 ```   
   
 ##  <a name="Row_versioning"></a> Níveis de isolamento baseados em controle de versão de linha no [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
@@ -1820,8 +1831,7 @@ GO
 -   Para reduzir o bloqueio, considere usar um nível de isolamento de linha baseado em controle de versão de linha para consultas somente leitura.  
   
 -   Utilize bem os níveis de isolamento de transação inferiores.  
-  
-     Muitos aplicativos podem ser prontamente codificados para usar um nível de isolamento de transação de leitura confirmada. Nem todas as transações requerem nível de isolamento de transação serializável.  
+    Muitos aplicativos podem ser prontamente codificados para usar um nível de isolamento de transação de leitura confirmada. Nem todas as transações requerem nível de isolamento de transação serializável.  
   
 -   Utilize bem as opções inferiores de simultaneidade de cursor, como opções de simultaneidade otimista.  
     Em um sistema com pouca probabilidade de atualizações simultâneas, a sobrecarga de lidar com um erro ocasional quando "alguém altera seus dados depois que você os leu" pode ser muito inferior à sobrecarga de sempre bloquear linhas à medida que são lidas.  

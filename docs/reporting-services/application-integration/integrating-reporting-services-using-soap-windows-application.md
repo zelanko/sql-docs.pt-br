@@ -1,6 +1,6 @@
 ---
 title: Usar a API SOAP em aplicativos do Windows
-description: Você pode acessar a funcionalidade completa do servidor de relatório por meio da API SOAP do Reporting Services. Acesse o serviço Web em um aplicativo do Windows escrevendo o código que faz chamadas para o serviço.
+description: Você pode acessar a funcionalidade do servidor de relatório com a API SOAP do Reporting Services. Acesse o serviço Web em um aplicativo do Windows fazendo chamadas para o serviço.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a2cd3fce2844fc815981f7e5ad4850236445f281
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 78bdfb5335f00df64e1ae3a98a6a34aa26f71881
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796983"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198189"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>Integrando o Reporting Services usando o SOAP – Aplicativo do Windows
   Você pode acessar a funcionalidade completa do servidor de relatório por meio da API SOAP do Reporting Services. A API SOAP é um serviço Web e, sendo assim, pode ser acessada facilmente para fornecer os recursos de relatórios corporativos para seus aplicativos comerciais personalizados. Você pode acessar o serviço Web em um aplicativo do Windows simplesmente gravando o código que faz chamadas para o serviço. Usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], é possível gerar uma classe proxy que expõe as propriedades e os métodos do serviço Web e permite que você use uma infraestrutura e ferramentas conhecidas para criar aplicativos de negócios baseados na tecnologia do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

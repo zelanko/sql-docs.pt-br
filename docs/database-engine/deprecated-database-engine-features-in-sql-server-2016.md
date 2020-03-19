@@ -1,6 +1,7 @@
 ---
-title: Recursos preteridos do mecanismo de banco de dados | Microsoft Docs
+title: Recursos preteridos do Mecanismo de Banco de Dados | Microsoft Docs
 titleSuffix: SQL Server 2016
+description: Saiba mais sobre os recursos do mecanismo de banco de dados preteridos que ainda estão disponíveis no SQL Server 2016 (13.x), mas que não devem ser usados em novos aplicativos.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4bfad58a8d1fbcfe6baad67ce38461a6d6bbcf72
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 77c45273b5381a158d8a5cf317f292fd46dec55d
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75247528"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190552"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

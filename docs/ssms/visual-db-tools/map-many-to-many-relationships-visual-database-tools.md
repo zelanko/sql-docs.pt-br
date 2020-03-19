@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 63134fcbb7204bd701af073eee1bcaab22e68b05
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b0467a9e2e00efc695095c631bb8545a9abc9313
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75224612"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090543"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>Mapear relações muitos para muitos (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,9 +40,9 @@ Relações muitos para muitos entre tabelas são acomodadas em bancos de dados p
   
 4.  Copie as colunas de chave primária de cada uma das duas outras tabelas para a tabela de junção. Você pode adicionar outras colunas a esta tabela, da mesma maneira que pode adicionar a qualquer outra tabela.  
   
-5.  Na tabela de junção, defina a chave primária para incluir todas as colunas de chave primária das duas outras tabelas. Para obter detalhes, confira [Como criar chaves primárias (https://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214).  
+5.  Na tabela de junção, defina a chave primária para incluir todas as colunas de chave primária das duas outras tabelas. Para obter detalhes, veja o procedimento [Como criar chaves primárias](https://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214).  
   
-6.  Defina uma relação um para muitos entre cada uma das duas tabelas primárias e a tabela de junção. A tabela de junção deve estar no lado "muitos" de ambas as relações que você criar. Para obter detalhes, confira [Como criar relações entre tabelas (https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c).  
+6.  Defina uma relação um para muitos entre cada uma das duas tabelas primárias e a tabela de junção. A tabela de junção deve estar no lado "muitos" de ambas as relações que você criar. Para obter detalhes, veja o procedimento [Como criar relações entre tabelas](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c).  
   
     > [!NOTE]  
     > A criação de uma tabela de junção em um diagrama de banco de dados não insere dados das tabelas relacionadas na tabela de junção. Para obter informações sobre como inserir dados em uma tabela, veja [Criar consultas Inserir Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md).  

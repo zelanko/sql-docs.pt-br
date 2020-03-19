@@ -1,5 +1,6 @@
 ---
 title: Métodos de relatórios vinculados | Microsoft Docs
+description: Esses métodos adicionam itens vinculados a um banco de dados, obtêm o nome de um item para um item vinculado, obtêm itens vinculados a um item e definem um item de catálogo para um item vinculado.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2bad756be9bf5431a93ba167cc8ec88fd0802a02
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a474b4b3cb3a9973fc4fdaf14e7179cc73a2d2de
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284415"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198243"
 ---
 # <a name="linked-reports-methods"></a>Métodos de relatórios vinculados
   Você pode usar esses métodos para criar e gerenciar itens vinculados.  

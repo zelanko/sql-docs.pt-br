@@ -1,7 +1,7 @@
 ---
 title: ALTER SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 03/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 162cccb3bba13d6d72f1af11effd6ceb8f26ff79
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4bb0b9c6b9d6fe47b69678211122e5c8be7023c7
+ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68044307"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937661"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -97,7 +97,7 @@ ALTER SCHEMA schema_name
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-transferring-ownership-of-a-table"></a>a. Transferindo a propriedade de uma tabela  
- O exemplo a seguir modifica o esquema `HumanResources` por meio da transferência da tabela `Address` do esquema `Person` para o esquema.  
+ O exemplo a seguir modifica o esquema `HumanResources` por meio da transferência da tabela `Address` do esquema `Person` para o esquema 'HumanResources'.  
   
 ```  
 USE AdventureWorks2012;  
@@ -135,7 +135,7 @@ SELECT sys.types.name, sys.types.schema_id, sys.schemas.name
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. Transferindo a propriedade de uma tabela  
  O exemplo a seguir cria uma tabela `Region` no esquema `dbo`, cria um esquema `Sales` e, em seguida, move a tabela `Region` do esquema `dbo` para o esquema `Sales`.  

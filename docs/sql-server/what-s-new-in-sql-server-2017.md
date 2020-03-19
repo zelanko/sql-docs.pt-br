@@ -1,5 +1,6 @@
 ---
 title: Novidades no SQL Server 2017 | Microsoft Docs
+description: Descubra as novidades do SQL Server 2017, que traz o poder do SQL Server para Linux e contêineres do Docker baseados em Linux, bem como o Windows.
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 92f289ec22ca35834420dc7ee84d667c55e29a19
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.openlocfilehash: 48188e98d992f45ca282c3687bf56e255d15a40a
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77478492"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190623"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novidades no SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

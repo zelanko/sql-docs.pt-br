@@ -3,24 +3,24 @@ title: Notebooks do Azure Data Studio (Python, R)
 description: Saiba como executar scripts de Python e R em um notebook no Azure Data Studio com os Serviços de Machine Learning do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c19974e50237da5667f514203145fd637cdc701a
-ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
+ms.openlocfilehash: b090f7e630082fa93951db56deb16d8842f977ea
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78202306"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058715"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>Execute scripts de Python e R em notebooks no Azure Data Studio com os Serviços de Machine Learning do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Saiba como executar scripts de Python e R em um notebook no [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) com os [Serviços de Machine Learning do SQL Server](../what-is-sql-server-machine-learning.md). O Azure Data Studio é uma ferramenta de banco de dados multiplataforma.
+Saiba como executar scripts Python e R em notebooks do [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) com os [Serviços de Machine Learning do SQL Server](../what-is-sql-server-machine-learning.md). O Azure Data Studio é uma ferramenta de banco de dados multiplataforma.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Baixe e instale o Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) no computador da estação de trabalho. O Azure Data Studio é multiplataforma. Pode ser executado no Windows, no macOS e no Linux.
 

@@ -1,5 +1,6 @@
 ---
 title: Métodos do serviço Web Servidor de Relatórios | Microsoft Docs
+description: Os serviços Web do Servidor de Relatório incluem métodos baseados em recursos de componente fornecidos por meio de pontos de extremidade de serviço Web que são expostos por meio de classes geradas.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b7425b205bdc630d17e5c962519348d2b1ce7a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 88a79f66c6cb062dfe563883fbc5fef5eeebfe08
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284656"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198353"
 ---
 # <a name="report-server-web-service-methods"></a>Métodos de serviço Web Servidor de Relatórios
   Os serviços Web Servidor de Relatórios incluem várias categorias de métodos que se baseiam em recursos de componente. Esses métodos são fornecidos através de vários pontos de extremidade de serviço Web (três para gerenciamento de relatórios e um para execução de relatórios), os quais são expostos como membros das classes <xref:ReportService2010.ReportingService2010> e <xref:ReportExecution2005.ReportExecutionService>. Essas classes podem ser geradas por meio de uma ferramenta de classe proxy como wsdl.exe, que está incluída no SDK do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Para obter mais informações sobre os serviços Web Servidor de Relatórios e o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], consulte [Criando aplicativos usando o serviço Web e o .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  

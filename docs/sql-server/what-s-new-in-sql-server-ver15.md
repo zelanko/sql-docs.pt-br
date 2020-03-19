@@ -1,5 +1,6 @@
 ---
 title: Novidades no SQL Server 2019 | Microsoft Docs
+description: Saiba mais sobre os novos recursos do SQL Server 2019 (15.x), que oferecem opções de linguagens de desenvolvimento, tipos de dados, ambientes e sistemas operacionais.
 ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -8,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0cddfe78555d5e5f57e57346aff1ead52f05cebf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831550"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79218051"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 

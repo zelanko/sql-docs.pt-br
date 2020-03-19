@@ -1,5 +1,6 @@
 ---
 title: Fornecendo argumentos de método de serviço Web | Microsoft Docs
+description: Saiba mais sobre argumentos para métodos de serviço Web no Reporting Services, incluindo parâmetros opcionais e tipos de dados complexos.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad5251471fe9be594bf0ffb09c13f5f9afc35990
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 112db971dd632b5114c8a05f9642b740335de03f
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128955"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198543"
 ---
 # <a name="supplying-web-service-method-arguments"></a>Fornecendo argumentos de método de serviço Web
   Um método do serviço Web do servidor de relatório envia uma solicitação para o serviço em uma determinada URL usando o SOAP por meio do HTTP. O serviço recebe a solicitação, a processa e, em seguida, retorna uma resposta. Essas solicitações e respostas estão no formulário de documentos XML.  

@@ -1,5 +1,6 @@
 ---
 title: Usando o controle RSClientPrint em aplicativos personalizados | Microsoft Docs
+description: RSPrintClient fornece impressão do lado do cliente para relatórios exibidos no Visualizador de HTML. O servidor de relatório renderiza o relatório na extensão de renderização da imagem (EMF).
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a2c548860065672147428c6a5b64bf4ac8be4b79
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f352c393f1386dae1839a76a4fd6e5a2553a54c3
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73593773"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198551"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usando o controle RSClientPrint em aplicativos personalizados
   O controle ActiveX [!INCLUDE[msCoName](../../../includes/msconame-md.md)], **RSPrintClient**, fornece impressão do lado do cliente para relatórios exibidos no Visualizador de HTML. Ele fornece uma caixa de diálogo **Imprimir** para que um usuário possa iniciar um trabalho de impressão, visualizar um relatório, especificar páginas a serem impressas e alterar as margens. Durante uma operação de impressão do lado cliente, o servidor de relatório renderiza o relatório na extensão de renderização Image (EMF) e usa os recursos de impressão do sistema operacional para criar o trabalho de impressão e para enviá-lo para uma impressora.  

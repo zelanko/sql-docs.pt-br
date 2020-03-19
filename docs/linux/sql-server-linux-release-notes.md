@@ -3,17 +3,17 @@ title: Notas sobre a versão do SQL Server 2017 em Linux
 description: Este artigo contém as notas sobre a versão e os recursos com suporte do SQL Server 2017 em execução no Linux. As notas sobre a versão aqui incluídas são para a versão mais recente, bem como para diversas versões anteriores.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/14/2020
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 6887026d7aa549af0fef82b007b4034cffaf1d9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e52132e0121b602092a9e1bb94cca3e5e8d1ba73
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952518"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286690"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas sobre a versão do SQL Server 2017 em Linux
 
@@ -46,6 +46,7 @@ A tabela a seguir lista o histórico de versões do [!INCLUDE[ssSQL17](../includ
 
 | Versão               | Versão       | Data de liberação |
 |-----------------------|---------------|--------------|
+| [CU19](#CU19)         | 14.0.3281.6   | 2020-02-05   |
 | [CU18](#CU18)         | 14.0.3257.3   | 09/12/2019   |
 | [CU17](#CU17)         | 14.0.3238.1   | 08-10-2019   |
 | [CU16](#CU16)         | 14.0.3223.3   | 01-08-2019   |
@@ -79,6 +80,20 @@ Se você estiver atualizando pacotes do [!INCLUDE[ssNoVersion](../includes/ssnov
 - [Instalar pacote de Pesquisa de texto completo](sql-server-linux-setup-full-text-search.md)
 - [Instalar o SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Habilitar o SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU19"></a> CU19 (fevereiro de 2020)
+
+Esta é a versão CU19 (Atualização Cumulativa 19) do [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. A versão [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] para esta liberação é 14.0.3281.6. Para obter informações sobre as correções e melhorias nesta versão, confira [https://support.microsoft.com/help/4535007](https://support.microsoft.com/help/4535007).
+
+### <a name="package-details"></a>Detalhes do pacote
+
+Para instalações de pacotes manuais ou offline, você pode baixar os pacotes RPM e Debian com as informações na tabela a seguir:
+
+| Pacote | Versão do pacote | Downloads |
+|-----|-----|-----|
+| Pacote RPM do Red Hat | 14.0.3281.6-2 | [Pacote RPM do mecanismo](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3281.6-2.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3281.6-2.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3281.6-2.x86_64.rpm)</br>[Pacote SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Pacote RPM do SLES | 14.0.3281.6-2 | [Pacote RPM do mecanismo mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3281.6-2.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3281.6-2.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3281.6-2.x86_64.rpm) | 
+| Pacote Debian do Ubuntu 16.04 | 14.0.3281.6-2 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3281.6-2_amd64.deb)</br>[Pacote Debian de alta disponibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3281.6-2_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3281.6-2_amd64.deb)<br/>[Pacote SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU18"></a> CU18 (dezembro de 2019)
 

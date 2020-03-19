@@ -5,16 +5,16 @@ description: Saiba como implantar o cluster de Big Data do SQL Server com alta d
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d6edf4115156bda58c44615e99ffcb19b87913f
-ms.sourcegitcommit: 38c61c7e170b57dddaae5be72239a171afd293b9
+ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77259212"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286040"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implantar o cluster de Big Data do SQL Server com alta disponibilidade
 
@@ -32,11 +32,11 @@ Aqui estão alguns dos recursos que os grupos de disponibilidade habilitam:
 - Todos os bancos de dados são adicionados automaticamente ao grupo de disponibilidade, incluindo todos os bancos de dados do usuário e do sistema, como `master` e `msdb`. Essa funcionalidade fornece um modo de exibição do sistema único entre as réplicas do grupo de disponibilidade. Bancos de dados de modelo adicionais (`model_replicatedmaster` e `model_msdb`) são usadas para propagar a parte replicada dos bancos de dados do sistema. Além desses bancos de dados, você verá bancos de dados `containedag_master` e `containedag_msdb` caso conecte-se diretamente à instância. Os bancos de dados do `containedag` representam o `master` e o `msdb` dentro do grupo de disponibilidade.
 
   > [!IMPORTANT]
-  > No momento da versão do SQL Server CU1 2019, somente os bancos de dados criados como resultado de uma instrução CREATE DATABASE são adicionados automaticamente ao grupo de disponibilidade. Os bancos de dados criados na instância como resultado de outros fluxos de trabalho, como restauração, ainda não foram adicionados ao grupo de disponibilidade e o administrador de cluster de Big Data precisaria fazer isso manualmente. Confira a seção [Conectar à instância do SQL Server](#instance-connect) para obter instruções.
+  > No momento da versão do SQL Server CU1 2019, somente os bancos de dados criados como resultado de uma instrução CREATE DATABASE são adicionados automaticamente ao grupo de disponibilidade. Os bancos de dados criados na instância como resultado de outros fluxos de trabalho, como anexar banco de dados, ainda não foram adicionados ao grupo de disponibilidade e o administrador de cluster de Big Data precisaria fazer isso manualmente. Confira a seção [Conectar à instância do SQL Server](#instance-connect) para obter instruções. Antes da versão do SQL Server 2019 CU2, os bancos de dados criados como resultado de uma instrução RESTORE tinham o mesmo comportamento e exigiam a adição manual dos bancos de dados ao grupo de disponibilidade contido.
   >
 - Bancos de dados de configuração do polybase não são incluídos no grupo de disponibilidade porque eles incluem metadados em nível de instância específicos de cada réplica.
 - Um ponto de extremidade externo é provisionado automaticamente para conectar-se a bancos de dados dentro do grupo de disponibilidade. Esse ponto de extremidade `master-svc-external` desempenha a função do ouvinte do grupo de disponibilidade.
-- Um segundo ponto de extremidade externo é provisionado para conexões somente leitura para as réplicas secundárias para aumentar as cargas de trabalho de leitura.
+- Um segundo ponto de extremidade externo é provisionado para conexões somente leitura para as réplicas secundárias para escalar horizontalmente as cargas de trabalho de leitura.
 
 ## <a name="deploy"></a>Implantar
 
@@ -129,12 +129,15 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 ## <a id="instance-connect"></a> Conectar a uma instância do SQL Server
 
-Para determinadas operações, como definir configurações em nível de servidor ou adicionar manualmente um banco de dados ao grupo de disponibilidade, você deve se conectar à instância do SQL Server. Operações como `sp_configure`, `RESTORE DATABASE` ou qualquer DDL do grupo de disponibilidade exigirão esse tipo de conexão. Por padrão, o cluster de Big Data não inclui um ponto de extremidade que habilita a conexão de instância e você deve expor esse ponto de extremidade manualmente. 
+Para determinadas operações, como definir configurações em nível de servidor ou adicionar manualmente um banco de dados ao grupo de disponibilidade, você deve se conectar à instância do SQL Server. Antes do SQL Server 2019 CU2, operações como `sp_configure`, `RESTORE DATABASE` ou qualquer DDL do grupo de disponibilidade exigirão esse tipo de conexão. Por padrão, o cluster de Big Data não inclui um ponto de extremidade que habilita a conexão de instância e você deve expor esse ponto de extremidade manualmente. 
 
 > [!IMPORTANT]
 > O ponto de extremidade exposto para conexões da instância do SQL Server tem suporte apenas para autenticação SQL, mesmo em clusters em que o Active Directory está habilitado. Por padrão, durante uma implantação de cluster de Big Data, o logon do `sa` é desabilitado e um novo logon do `sysadmin` é provisionado com base nos valores fornecidos no momento da implantação para as variáveis de ambiente `AZDATA_USERNAME` e `AZDATA_PASSWORD`.
 
 Aqui está um exemplo que mostra como expor esse ponto de extremidade e então adicionar o banco de dados criado com um fluxo de trabalho de restauração ao grupo de disponibilidade. Instruções semelhantes para configurar uma conexão com a instância mestra do SQL Server aplicam-se quando você deseja alterar as configurações de servidor com `sp_configure`.
+
+> [!NOTE]
+> Do SQL Server 2019 CU2 em diante os bancos de dados criados como resultado de um fluxo de trabalho de restauração são adicionados automaticamente ao grupo de disponibilidade contido.
 
 - Determine o pod que hospeda a réplica primária conectando-se ao ponto de extremidade `sql-server-master` e execute:
 
@@ -197,10 +200,11 @@ Aqui está um exemplo que mostra como expor esse ponto de extremidade e então a
 
 Os problemas e as limitações conhecidos de grupos de disponibilidade para o SQL Server mestre no cluster de Big Data:
 
-- Os bancos de dados criados como resultado de fluxos de trabalho diferentes de `CREATE DATABASE`, como `RESTORE DATABASE` e `CREATE DATABASE FROM SNAPSHOT`, não são adicionados automaticamente ao grupo de disponibilidade. [Conecte-se à instância](#instance-connect) e adicione o banco de dados ao grupo de disponibilidade manualmente.
+- Antes do SQL Server 2019 CU2, os bancos de dados criados como resultado de fluxos de trabalho que não `CREATE DATABASE` e `RESTORE DATABASE` como `CREATE DATABASE FROM SNAPSHOT` não são adicionados automaticamente ao grupo de disponibilidade. [Conecte-se à instância](#instance-connect) e adicione o banco de dados ao grupo de disponibilidade manualmente.
+- Para restaurar com êxito um banco de dados habilitado para TDE de um backup criado em outro servidor, você deve garantir que os [certificados necessários](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md) sejam restaurados no mestre de instância do SQL Server, bem como no mestre AG contido. Confira [aqui](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/) para obter um exemplo de como fazer backup e restaurar os certificados.
 - Determinadas operações, como a execução de definições de configuração do servidor com `sp_configure`, exigem uma conexão com o banco de dados `master` de instância do SQL Server, não com o grupo de disponibilidade `master`. Você não pode usar o ponto de extremidade primário correspondente. Siga [as instruções](#instance-connect) para expor um ponto de extremidade e conectar-se à instância do SQL Server e executar `sp_configure`. Você só pode usar a autenticação do SQL ao expor manualmente o ponto de extremidade para conectar-se ao banco de dados `master` da instância do SQL Server.
 - A configuração de alta disponibilidade deve ser criada quando o cluster de Big Data é implantado. Não é possível habilitar a configuração de alta disponibilidade com grupos de disponibilidade após a implantação.
-- Embora o banco de dados msdb contido esteja incluído no grupo de disponibilidade e os trabalhos do SQL Agent sejam replicados nele, os trabalhos não são disparados por agendamento. A solução alternativa é [se conectar a cada uma das instâncias do SQL Server](#instance-connect) e criar os trabalhos no msdb da instância.
+- Embora o banco de dados msdb contido esteja incluído no grupo de disponibilidade e os trabalhos do SQL Agent sejam replicados nele, os trabalhos não são disparados por agendamento. A solução alternativa é [se conectar a cada uma das instâncias do SQL Server](#instance-connect) e criar os trabalhos no msdb da instância. Do SQL Server CU2 2019 em diante, somente os trabalhos criados em cada uma das réplicas na instância mestra são compatíveis.
 
 ## <a name="next-steps"></a>Próximas etapas
 

@@ -1,5 +1,6 @@
 ---
 title: Métodos de histórico de relatórios | Microsoft Docs
+description: No Reporting Services, você pode usar esses métodos de histórico de relatórios para criar e gerenciar instantâneos de histórico do item.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a7690e7d703ad5d7973d276741b40c7765d39b3d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 07bd44de33f634b12fe21c004c34a20b5a5544cd
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284435"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198363"
 ---
 # <a name="report-history-methods"></a>Métodos de histórico de relatório
   Você pode usar esses métodos para criar e gerenciar instantâneos de histórico de item.  

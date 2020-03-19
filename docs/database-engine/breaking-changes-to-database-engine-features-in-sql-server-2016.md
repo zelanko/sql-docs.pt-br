@@ -1,7 +1,7 @@
 ---
 title: 'Mecanismo de Banco de Dados: Alterações mais recentes | Microsoft Docs'
 titleSuffix: SQL Server 2016
-description: Alterações mais recentes a recursos do Mecanismo de Banco de Dados no SQL Server 2016
+description: Saiba mais sobre as alterações do Mecanismo de Banco de Dados no SQL Server 2016 (13.x) e anteriores que podem interromper a funcionalidade da versão anterior ao atualizar.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67a37dd07810facf3e18e94dc0f9e552ea05778a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b2003a0adfd2883b83623f5b367e775cc526e052
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75244718"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190574"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Alterações mais recentes a recursos do Mecanismo de Banco de Dados no SQL Server 2016
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Este tópico descreve as últimas alterações no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] e versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar.  
+  Este tópico descreve as últimas alterações no [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] e versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar.  
   
 ##  <a name="SQL15"></a> Últimas alterações do [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   

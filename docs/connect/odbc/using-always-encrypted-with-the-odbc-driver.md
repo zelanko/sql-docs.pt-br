@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 8e654dd5be4a306078bd6262220e29470b9a16e7
-ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
+ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77363241"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285840"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Como usar o recurso Always Encrypted com o ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -31,7 +31,7 @@ O Always Encrypted permite que os aplicativos cliente criptografem dados confide
 
 Para obter mais informações, consulte [Always Encrypted (Mecanismo de Banco de Dados)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) e [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Pré-requisitos
 
 Configure o Sempre Criptografado em seu banco de dados. Isso envolve o provisionamento de chaves do Sempre Criptografado e a configuração de criptografia de colunas de banco de dados selecionadas. Se você ainda não tiver um banco de dados com o Sempre Criptografado configurado, siga as instruções em [Getting Started with Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)(Introdução ao Sempre Criptografado). Em particular, seu banco de dados deve conter as definições de metadados para uma chave mestra de coluna (CMK), uma chave de criptografia de coluna (CEK) e uma tabela contendo uma ou mais colunas criptografadas usando esse CEK.
 
@@ -390,12 +390,15 @@ O driver oferece suporte à autenticação no Azure Key Vault usando os seguinte
 
 - ID do cliente/segredo: com esse método, as credenciais são uma ID do cliente do aplicativo e um segredo do aplicativo.
 
+- Identidade gerenciada (17.5.2 +), atribuída pelo sistema ou pelo usuário; confira [Identidades gerenciadas para recursos do Azure](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/) para obter mais informações.
+
 Para permitir que o driver use CMKs armazenadas no AKV para criptografia de coluna, use as seguintes palavras-chave somente de cadeia de conexão:
 
 |Tipo de Credencial| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
 |Nome de usuário/senha| `KeyVaultPassword`|Nome UPN|Senha|
 |ID do cliente/segredo| `KeyVaultClientSecret`|ID do Cliente|Segredo|
+|Identidade Gerenciada|`KeyVaultManagedIdentity`|ID do objeto (opcional, somente para a opção atribuída pelo usuário)|(não especificado)|
 
 #### <a name="example-connection-strings"></a>Exemplo de cadeias de conexão
 
@@ -413,7 +416,23 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
+**Identidade Gerenciada (atribuída pelo sistema)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity
+```
+
+**Identidade gerenciada (atribuída pelo usuário)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>
+```
+
 Nenhuma outra alteração de aplicativo de ODBC é necessária para usar o AKV para armazenamento de CMK.
+
+> [!NOTE]
+> O driver contém uma lista de pontos de extremidade AKV nos quais ele confia. Do driver versão 17.5.2 em diante, essa lista é configurável: defina a propriedade `AKVTrustedEndpoints` na chave do Registro ODBCINST.INI ou ODBC.INI do DSN ou do driver (Windows) ou seção de arquivo `odbcinst.ini` ou `odbc.ini` (Linux/Mac) para uma lista delimitada por ponto e vírgula. Configurá-la no DSN tem precedência sobre uma configuração no driver. Se o valor começar com um ponto e vírgula, ele estenderá a lista padrão; caso contrário, substituirá a lista padrão. A lista padrão (da 17.5 em diante) é `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`.
+
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Uso do Provedor do Repositório de Certificados do Windows
 
@@ -578,7 +597,7 @@ A tabela a seguir fornece um resumo das ações ao operar em uma coluna criptogr
 
 |`ColumnEncryption`|Direção BCP|Descrição|
 |----------------|-------------|-----------|
-|`Disabled`|OUT (para o cliente)|Recupera o texto cifrado. O tipo de dados observado é **varbinary(max)**.|
+|`Disabled`|OUT (para o cliente)|Recupera o texto cifrado. O tipo de dados observado é **varbinary(max)** .|
 |`Enabled`|OUT (para o cliente)|Recupera texto não criptografado. O driver descriptografará os dados da coluna.|
 |`Disabled`|IN (para servidor)|Insere o texto cifrado. Destina-se a mover os dados criptografados discretamente sem a necessidade de serem descriptografados. A operação falhará se a opção `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` não estiver definida no usuário ou se BCPMODIFYENCRYPTED não estiver definido no identificador de conexão. Veja a seguir para obter mais informações.|
 |`Enabled`|IN (para servidor)|Insere texto não criptografado. O driver descriptografará os dados da coluna.|

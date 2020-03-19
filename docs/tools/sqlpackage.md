@@ -1,19 +1,20 @@
 ---
 title: SqlPackage.exe
 ms.prod: sql
-ms.technology: ssdt
-ms.date: 06/28/2018
-ms.reviewer: alayu; sstein
+ms.prod_service: sql-tools
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: d08ee2e48fca1cf7cd473dbd02714b460089353f
-ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
+ms.reviewer: alayu; sstein
+ms.date: 06/28/2018
+ms.openlocfilehash: f5a1391865b2f08d6eb127fc360d94437c08155e
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250591"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286480"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -228,7 +229,7 @@ Uma operação de publicação SqlPackage.exe atualiza o esquema de um banco de 
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Especifica se diferenças na quantidade de tempo que o SQL Server retém a rota na tabela de roteamento deverão ser ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Especifica se diferenças nos pontos e vírgulas entre instruções T-SQL serão ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Especifica se diferenças nas opções de tabela serão ignoradas ou atualizadas quando você publicar em um banco de dados.|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Especifica se diferenças nas opções de partição de tabela serão ignoradas ou atualizadas quando você publicar em um banco de dados.  Essa opção se aplica somente ao banco de dados de data warehouse do Azure Synapse Analytics.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Especifica se diferenças nas opções de partição de tabela serão ignoradas ou atualizadas quando você publicar em um banco de dados.  Essa opção se aplica somente a bancos de dados (data warehouse) do pool de SQL do Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Especifica se diferenças nos objetos de configurações do usuário serão ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Especifica se diferenças de espaço em branco serão ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Especifica se diferenças no valor da cláusula WITH NOCHECK para restrições de verificação serão ignoradas ou atualizadas quando você publicar.|

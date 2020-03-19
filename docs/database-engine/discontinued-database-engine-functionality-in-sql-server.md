@@ -1,5 +1,6 @@
 ---
-title: Funcionalidades descontinuadas do mecanismo de banco de dados | Microsoft Docs
+title: Funcionalidades descontinuadas do mecanismo de banco de dados
+description: Saiba quais recursos e funcionalidades do mecanismo de banco de dados foram descontinuados no SQL Server 2019 (15.x), SQL Server 2016 (13.x) e versões anteriores.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -35,19 +36,19 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: db10b57b5eda73cb2bb2105f4f99fb6e5cbed733
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 25da4c94448a6527e50fe759e6c75cdbad10b007
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258125"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190533"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve os recursos do [!INCLUDE[ssDE](../includes/ssde-md.md)] que não estão mais disponíveis no [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)].  
 
-## <a name="discontinued-features-in-includesssqlv15includessssqlv15-mdmd"></a>Recursos descontinuados no [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
+## <a name="discontinued-features-in-sssqlv15"></a>Recursos descontinuados no [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
 
 - As opções de configuração a seguir no escopo do banco de dados foram descontinuadas:
 
@@ -60,7 +61,7 @@ Para obter as opções de configuração atuais, confira [ALTER DATABASE SCOPED 
 >[!NOTE]
 >Nenhum recurso foi descontinuado no [!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)].
 
-## <a name="discontinued-features-in-includesssql15includessssql15-mdmd"></a>Recursos descontinuados no [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
+## <a name="discontinued-features-in-sssql15"></a>Recursos descontinuados no [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
 
 - [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] é um aplicativo de 64 bits. A instalação de 32 bits foi descontinuada, embora alguns elementos sejam executados como componentes de 32 bits.  
 

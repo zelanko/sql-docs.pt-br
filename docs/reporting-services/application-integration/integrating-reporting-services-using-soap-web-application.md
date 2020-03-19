@@ -1,6 +1,6 @@
 ---
 title: Usar a API SOAP em aplicativos Web
-description: Você pode acessar a funcionalidade completa do servidor de relatório por meio da API SOAP do Reporting Services.
+description: Você pode acessar a funcionalidade do servidor de relatório por meio da API SOAP do Reporting Services, que pode ser acessada para fornecer recursos de relatórios corporativos.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d7ae6c53033d1ea79a58d566bf57d8ed622e8f8d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0a24b256e6d395b6cfd93773a8cb824fe7ba7ece
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796821"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198187"
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>Integrando o Reporting Services usando o SOAP – aplicativo Web
   Você pode acessar a funcionalidade completa do servidor de relatório por meio da API SOAP do Reporting Services. Por ser um serviço Web, a API SOAP pode ser acessada facilmente para fornecer os recursos de relatórios corporativos para seus aplicativos comerciais personalizados. Você acessa o serviço Web do servidor de relatório a partir de um aplicativo Web da mesma forma que acessa a API SOAP de um aplicativo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], você pode gerar uma classe proxy que expõe as propriedades e os métodos do serviço Web Servidor de Relatórios e que permite usar uma infraestrutura e ferramentas conhecidas para criar aplicativos de negócios na tecnologia do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

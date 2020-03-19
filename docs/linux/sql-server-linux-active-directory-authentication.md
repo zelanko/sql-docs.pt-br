@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: be126095fc300820a60bd4b195d43ec7d2059072
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 83337465d8f8a7c12c9a1d69d7e9e2186485f549
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256669"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198373"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Usar autenticação do Active Directory com o SQL Server em Linux
 
@@ -36,7 +36,7 @@ Este tutorial é composto pelas seguintes etapas:
 > * Criar logons baseados em AD no Transact-SQL
 > * Conectar-se ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando a autenticação do AD
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Antes de iniciar a Autenticação do AD, é necessário:
 
@@ -125,6 +125,7 @@ A configuração da autenticação do AD para o SQL Server em Linux exige uma co
 
    > [!NOTE]
    > Os comandos acima permitem codificações de criptografia AES e RC4 para autenticação do AD. O RC4 é uma codificação de criptografia mais antiga e, se um nível mais alto de segurança for necessário, você poderá optar por criar as entradas keytab apenas com a codificação de criptografia AES.
+   > As duas últimas entradas de `UserName` devem estar em letras minúsculas, ou a autenticação da permissão poderá falhar.
 
 1. Depois de executar o comando acima, você deverá ter um arquivo keytab chamado mssql.keytab. Copie o arquivo para o computador do SQL Server na pasta `/var/opt/mssql/secrets`.
 
