@@ -10,12 +10,12 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7bf73822e8872397499bdfbc04bab6747035fbec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9a51393748d47159cfc4cf6bf8bd25e50307cfb7
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757945"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525437"
 ---
 # <a name="csdlbi-concepts"></a>Conceitos da CSDLBI
   A CSDLBI (Linguagem de Definição de Esquema Conceitual com anotações de BI) baseia-se na Estrutura de Dados de Entidade, que é uma abstração para representar dados de modo a permitir que conjuntos de dados discrepantes sejam acessados, consultados ou exportados de modo programático. A CSDLBI é usada para representar modelos de dados criados com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], pois ele oferece suporte a aplicativos e relatórios avançados orientados a dados.  
@@ -146,6 +146,6 @@ ms.locfileid: "62757945"
  **Limitações:** Não há suporte para segurança de célula.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Anotações de CSDL para Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ [Anotações de CSDL para Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

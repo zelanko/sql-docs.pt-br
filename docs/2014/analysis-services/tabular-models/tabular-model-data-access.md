@@ -10,12 +10,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bf8d4af44f7596bb632a05483c387752ba2e056
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3a35afb1c1bd38aa123211ae1801d914494aec91
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67284856"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525467"
 ---
 # <a name="tabular-model-data-access"></a>Acesso a dados de modelo de tabela
   Os bancos de dados modelo de tabela no Analysis Services podem ser acessados pela maioria dos mesmos clientes, interfaces e idiomas que você usa para recuperar dados ou metadados de um modelo multidimensional. Para obter mais informações, consulte [Acesso a dados de modelo multidimensional &#40;Analysis Services – dados multidimensionais 41](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "67284856"
   
  O cliente do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] determina a estrutura do modelo especificado enviando uma solicitação à fonte de dados especificada, que retorna um esquema que pode ser usado pelo cliente para criar consultas no modelo como uma fonte de dados e executar operações baseadas nos dados. As operações subsequentes na interface do usuário do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] para filtrar dados, executar cálculos ou agregações e exibir dados associados são controlados pelo cliente e não são manipulados programaticamente.  
   
- As consultas que são enviadas pelo cliente do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ao modelo são emitidas como instruções DAX, que você pode monitorar definindo um rastreamento no modelo.  O cliente também emite uma solicitação ao servidor para a definição de esquema inicial, que é apresentada de acordo com o CSDL (linguagem de definição de esquema conceitual). Para obter mais informações, consulte [Anotações CSDLBI &#40;CSDL para Business Intelligence&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ As consultas que são enviadas pelo cliente do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ao modelo são emitidas como instruções DAX, que você pode monitorar definindo um rastreamento no modelo.  O cliente também emite uma solicitação ao servidor para a definição de esquema inicial, que é apresentada de acordo com o CSDL (linguagem de definição de esquema conceitual). Para obter mais informações, consulte [Anotações CSDLBI &#40;CSDL para Business Intelligence&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Você pode usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para gerenciar instâncias que hospedam modelos de tabela e para consultar os metadados e os dados neles. Você pode processar modelos ou os objetos em um modelo, pode criar e gerenciar partições, e definir a segurança que pode ser usada para gerenciar o acesso a dados. Para obter mais informações, consulte estes tópicos:  
@@ -75,7 +75,7 @@ ms.locfileid: "67284856"
 ### <a name="csdl"></a>CSDL  
  O CSDL (linguagem de definição de esquema conceitual) não é uma linguagem de consulta propriamente dita, mas pode ser usado para recuperar informações sobre o modelo e os metadados do modelo, que podem ser usados posteriormente para criar relatórios ou criar consultas no modelo.  
   
- Para obter informações sobre como o CSDL é usado em modelos de tabela, consulte [Anotações CSDLBI &#40;CSDL para Business Intelligence&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi).  
+ Para obter informações sobre como o CSDL é usado em modelos de tabela, consulte [Anotações CSDLBI &#40;CSDL para Business Intelligence&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi).  
   
 ## <a name="programmatic-interfaces"></a>Interfaces programáticas  
  As interfaces principais que são usadas para interagir com modelos de tabela do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] são os conjuntos de linhas de esquema, XMLA e os clientes de consulta e ferramentas de consulta fornecidos pelo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e pelo [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -91,7 +91,7 @@ ms.locfileid: "67284856"
   
  Você também pode recuperar dados diretamente de uma instância do Analysis Services em um formato baseado em XML. Você pode recuperar o esquema do modelo de tabela usando o conjunto de linhas de DISCOVER_CSDL_METADATA ou pode usar um comando EXECUTE ou DISCOVER com elementos, objetos ou propriedades ASSL existentes. Para saber mais, consulte os recursos a seguir:  
   
--   [Anotações de CSDL para Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+-   [Anotações de CSDL para Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="manipulate-analysis-services-objects"></a>Manipular objetos do Analysis Services  
  Você pode criar, modificar, excluir e processar modelos de tabela e objetos neles, inclusive tabelas, colunas, perspectivas, medidas e partições, usando comandos XMLA, ou usando AMO. AMO e XMLA foram atualizados para dar suporte a propriedades adicionais que são usadas em modelos de tabela para relatório e modelagem aprimorados.  

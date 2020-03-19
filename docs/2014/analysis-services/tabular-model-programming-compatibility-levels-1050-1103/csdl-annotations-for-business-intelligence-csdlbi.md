@@ -10,12 +10,12 @@ ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 760e90c34c84bd4b44af90cbbb78aec7e025689a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0348c262453d2de8e4db0c379b5bf70a2d7d7977
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757962"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525447"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>CSDLBI (Anotações CSDL para Business Intelligence)
   O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte à apresentação da definição de um modelo de tabela em um formato XML chamado CSDLBI (Linguagem de Definição de Esquema Conceitual com anotações de Business Intelligence).  
@@ -35,7 +35,7 @@ ms.locfileid: "62757962"
   
  Um esquema da CSDL é gerado pelo servidor do Analysis Services em resposta a uma solicitação por uma definição de modelo de um cliente, como o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. O aplicativo cliente envia uma consulta XML ao servidor do Analysis Services que hospeda os dados modelo. Em resposta, o servidor envia uma mensagem XML que contém uma definição das entidades no modelo, usando as anotações da CSDLBI. O cliente de relatórios usa as informações para apresentar os campos, as agregações e as medidas disponíveis no modelo. As anotações da CSDL também fornecem informações sobre como agrupar, classificar e formatar os dados.  
   
- Para obter informações gerais sobre CSDLBI, consulte [conceitos de CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
+ Para obter informações gerais sobre CSDLBI, consulte [conceitos de CSDLBI](/analysis-services/csdlbi/csdlbi-concepts).  
   
 ### <a name="working-with-csdl"></a>Trabalhando com a CSDL  
  O conjunto de anotações da CSDLBI que representa qualquer modelo de tabela específico é um documento XML que contém uma coleção de entidades, simples e complexas. As entidades definem tabelas (ou dimensões), colunas (atributos), associações (relações) e fórmulas incluídas em colunas calculadas, medidas ou KPIs.  
@@ -71,12 +71,12 @@ ms.locfileid: "62757962"
   
 -   Suporte para perspectivas.  
   
- Para obter informações detalhadas sobre elementos individuais nas anotações do CSDLBI, consulte [Technical Reference for bi Annotations to CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Para obter informações sobre a especificação CSDL principal, consulte a [especificação CSDL v3](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
+ Para obter informações detalhadas sobre elementos individuais nas anotações do CSDLBI, consulte [Technical Reference for bi Annotations to CSDL](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl). Para obter informações sobre a especificação CSDL principal, consulte a [especificação CSDL v3](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
   
   
 ## <a name="see-also"></a>Consulte Também  
  [Compreendendo o modelo de objeto de tabela](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
- [Conceitos de CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
+ [Conceitos de CSDLBI](/analysis-services/csdlbi/csdlbi-concepts)   
  [Compreendendo o modelo de objeto de tabela](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   

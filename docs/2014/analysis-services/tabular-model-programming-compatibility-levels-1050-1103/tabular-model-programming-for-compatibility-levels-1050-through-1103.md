@@ -10,12 +10,12 @@ ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2055602dae01e71ac320f5838181c8d8b08534a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1c9b04245e14be67242d5cd1ea6d257ac4fc6038
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757640"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525427"
 ---
 # <a name="tabular-model-programming"></a>Programação de modelo tabular
   Os modelos tabulares usam construções relacionais para modelar os dados do Analysis Services usados aplicativos analíticos e de relatório. Esses modelos são executados em uma instância do Analysis Services que é configurada para o modo tabular, usando um mecanismo analítico na memória para armazenamento e análises rápidas de tabelas que agregam e calculam dados conforme necessário.  
@@ -25,11 +25,11 @@ ms.locfileid: "62757640"
  Esta seção fornece mais informações sobre como trabalhar programaticamente com entidades de modelos tabulares e suas propriedades.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Anotações de CSDL para Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ [Anotações de CSDL para Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [Compreendendo o modelo de objeto de tabela](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [Referência técnica para anotações de BI para CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
+ [Referência técnica para anotações de BI para CSDL](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl)  
   
  [Interface IMDEmbedded](imdembeddeddata-interface.md)  
   

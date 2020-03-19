@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 511b5b8f01a96f860d9f0c4266f92b323e6f1240
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.sourcegitcommit: a17245869c2d3df97ec8cf083608f754f4b2f40f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "67997357"
 ---
 # <a name="sp_helpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
@@ -69,8 +69,8 @@ sp_helpsort;
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [AGRUPAR &#40;&#41;Transact-SQL](~/t-sql/statements/collations.md)   
- [sys. fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
+ [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
+ [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  
   
   
