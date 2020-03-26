@@ -44,7 +44,7 @@ ms.locfileid: "79286660"
 
  Para obter informações completas sobre construções sem suporte e sobre como resolver problemas de alguns recursos sem suporte em módulos compilados nativamente, consulte [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md). Para mais informações sobre os recursos sem suporte, veja [Constructos do Transact-SQL sem suporte no OLTP in-memory](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
 
-##  <a name="qsancsp"></a> Área da superfície da consulta em módulos nativos  
+##  <a name="query-surface-area-in-native-modules"></a><a name="qsancsp"></a> Área da superfície da consulta em módulos nativos  
 
 Há suporte para as seguintes construções de consulta:  
 
@@ -142,7 +142,7 @@ No entanto, uma constante na cláusula **TOP** resulta em um desempenho melhor c
 Essas restrições em [!INCLUDE[tsql](../../includes/tsql-md.md)] compilado nativamente não se aplica ao acesso [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado em tabelas com otimização de memória.  
 
 
-##  <a name="dml"></a> Modificação de dados  
+##  <a name="data-modification"></a><a name="dml"></a> Modificação de dados  
 
 Há suporte para as instruções DML a seguir.  
 
@@ -154,7 +154,7 @@ Há suporte para as instruções DML a seguir.
 
 -   WHERE tem suporte com instruções UPDATE e DELETE.  
 
-##  <a name="cof"></a> Linguagem de controle de fluxo  
+##  <a name="control-of-flow-language"></a><a name="cof"></a> Linguagem de controle de fluxo  
  Há suporte para as construções de linguagem de controle de fluxo a seguir.  
 
 -   [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
@@ -175,7 +175,7 @@ Há suporte para as instruções DML a seguir.
 
 -   BEGIN ATOMIC (no nível externo do procedimento armazenado). Para obter mais detalhes, consulte [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
 
-##  <a name="so"></a> Operadores com suporte  
+##  <a name="supported-operators"></a><a name="so"></a> Operadores com suporte  
  Há suporte para os operadores que se seguem.  
 
 -   [Operadores de comparação &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (por exemplo, >, \<, >= e <=)  
@@ -194,7 +194,7 @@ Há suporte para as instruções DML a seguir.
     - **Aplica-se a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       A partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], há suporte para o operador APPLY em módulos compilados nativamente.
 
-##  <a name="bfncsp"></a> Funções internas em módulos compilados nativamente  
+##  <a name="built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> Funções internas em módulos compilados nativamente  
  As funções a seguir têm suporte em restrições nas tabelas com otimização de memória e em módulos T-SQL compilados nativamente.  
 
 -   Todas as [Funções matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
@@ -223,12 +223,12 @@ Há suporte para as instruções DML a seguir.
 
 -   Execuções de módulos nativos podem ser aninhadas.
 
-##  <a name="auditing"></a> Auditoria  
+##  <a name="auditing"></a><a name="auditing"></a> Auditoria  
  A auditoria no nível de procedimento tem suporte em procedimentos armazenados compilados nativamente.  
 
- Para obter mais informações sobre a auditoria, consulte [Create a Server Audit and Database Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
+ Para obter mais informações sobre a auditoria, consulte [Criar uma especificação de auditoria de banco de dados e de servidor](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
 
-##  <a name="tqh"></a> Dicas de tabela e de consulta  
+##  <a name="table-and-query-hints"></a><a name="tqh"></a> Dicas de tabela e de consulta  
  Há suporte para o seguinte:  
 
 -   As dicas INDEX, FORCESCAN e FORCESEEK, seja na sintaxe das dicas de tabela ou na [Cláusula OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md) da consulta. Para obter mais informações, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
@@ -241,7 +241,7 @@ Há suporte para as instruções DML a seguir.
 
  Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
 
-##  <a name="los"></a> Limitações na classificação  
+##  <a name="limitations-on-sorting"></a><a name="los"></a> Limitações na classificação  
  Você pode classificar maior que 8.000 linhas em uma consulta que usa [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md). No entanto, sem a [Cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) pode classificar até 8.000 linhas (menos linhas se houver junções).  
 
  Se sua consulta usar o operador [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), você pode especificar até 8192 linhas para o operador TOP. Se você especificar mais de 8192 linhas, receberá a mensagem de erro: **Msg 41398, Nível 16, Estado 1, Procedimento *\<procedureName>* , Linha *\<lineNumber>* O operador TOP pode retornar no máximo 8192 linhas; *\<number>* foi solicitado.**  
