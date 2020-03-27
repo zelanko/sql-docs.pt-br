@@ -185,12 +185,12 @@ GO
 |Símbolo|Significado|  
 |------------|-------------|  
 |LIKE '5[%]'|5%|  
-|LIKE '[_]n'|_n|  
+|LIKE '[\_]n'|_n|  
 |LIKE '[a-cdf]'|a, b, c, d ou f|  
 |LIKE '[-acdf]'|-, a, c, d ou f|  
 |LIKE '[ [ ]'|[|  
 |LIKE ']'|]|  
-|LIKE 'abc[_]d%'|abc_d e abc_de|  
+|LIKE 'abc[\_]d%'|abc_d e abc_de|  
 |LIKE 'abc[def]'|abcd, abce e abcf|  
   
 ## <a name="pattern-matching-with-the-escape-clause"></a>Correspondência de padrão com a cláusula ESCAPE  
