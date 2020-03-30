@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288450"
 ---
 # <a name="query-store-usage-scenarios"></a>Cenários de uso do Repositório de Consultas
@@ -110,7 +110,7 @@ Plano depois da criação do índice ausente (plan_id  = 15, abaixo) agora tem I
   
 Com base na análise, você provavelmente mantém o índice, uma vez que o desempenho da consulta foi aprimorado.  
   
-## <a name="CEUpgrade"></a> Manter a estabilidade do desempenho durante a atualização para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais recente  
+## <a name="keep-performance-stability-during-the-upgrade-to-newer-ssnoversion"></a><a name="CEUpgrade"></a> Manter a estabilidade do desempenho durante a atualização para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais recente  
 Antes do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], os usuários eram expostos ao risco de regressão de desempenho durante a atualização para a versão mais recente da plataforma. O motivo disso era o fato de que a versão mais recente do Otimizador de Consulta ficava ativa imediatamente assim que novos bits eram instalados.  
   
 A partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] todas as alterações do otimizador de consulta são associadas ao [nível de compatibilidade do banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) mais recente, portanto, os planos não são alterados diretamente no ponto de atualização, mas sim quando um usuário altera o `COMPATIBILITY_LEVEL` para o mais recente. Esse recurso, em combinação com o Repositório de Consultas, fornece um excelente nível de controle sobre o desempenho da consulta no processo de atualização. O fluxo de trabalho de atualização recomendado é mostrado na figura a seguir:  

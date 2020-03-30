@@ -14,10 +14,10 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 078b7087669547b183f8bd34daa6c6fe0cf98cc4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258137"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forçar um cluster WSFC para iniciar sem um quorum
@@ -30,15 +30,15 @@ ms.locfileid: "75258137"
   
 -   **Acompanhamento:**  [Acompanhamento: depois de forçar o cluster a iniciar sem um quorum](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de iniciar  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> Antes de iniciar  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
  Exceto nas ocasiões em que houver instruções explícitas, os procedimentos neste tópico deverão funcionar se você executá-los de qualquer nó no cluster WSFC.  No entanto, é possível obter resultados melhores e evitar problemas de rede, executando essas etapas a partir do nó que você pretende forçar a iniciar sem um quorum.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  O usuário deve ser uma conta de domínio que seja membro do grupo Administradores local em cada nó do cluster WSFC.  
   
-##  <a name="FailoverClusterManagerProcedure"></a> Usando o Gerenciador de Cluster de Failover  
+##  <a name="using-failover-cluster-manager"></a><a name="FailoverClusterManagerProcedure"></a> Usando o Gerenciador de Cluster de Failover  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Para forçar um cluster a iniciar sem um quorum  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75258137"
   
 4.  No painel de resumo, confirme se o valor **Configuração de Quorum** atual é:  **Aviso: o cluster está sendo executado no estado ForceQuorum**.  
   
-##  <a name="PowerShellProcedure"></a> Usando o Powershell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usando o Powershell  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Para forçar um cluster a iniciar sem um quorum  
   
@@ -83,7 +83,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 ```  
   
-##  <a name="CommandPromptProcedure"></a> Usando Net.exe  
+##  <a name="using-netexe"></a><a name="CommandPromptProcedure"></a> Usando Net.exe  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Para forçar um cluster a iniciar sem um quorum  
   
@@ -103,7 +103,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de forçar o cluster a iniciar sem um quorum  
+##  <a name="follow-up-after-forcing-cluster-to-start-without-a-quorum"></a><a name="FollowUp"></a> Acompanhamento: depois de forçar o cluster a iniciar sem um quorum  
   
 -   Você deve reavaliar e reconfigurar valores de NodeWeight para construir corretamente um novo quorum antes de colocar os outros nós online novamente. Caso contrário, o cluster talvez fique offline novamente.  
   
@@ -121,7 +121,7 @@ net.exe start clussvc /forcequorum
   
      [Executar failover para um secundário de envio de logs &#40;SQL Server&#41;](../../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   [Exibir eventos e logs de um cluster de failover](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   

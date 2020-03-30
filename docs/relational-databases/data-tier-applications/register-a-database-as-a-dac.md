@@ -19,10 +19,10 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134682"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar um banco de dados como um DAC
@@ -36,15 +36,15 @@ ms.locfileid: "68134682"
 ## <a name="before-you-begin"></a>Antes de começar  
  O processo de registro cria uma definição do DAC que define os objetos no banco de dados. A combinação da definição do DAC e do banco de dados forma uma instância do DAC. Se você registrar um banco de dados como um DAC em uma instância do Mecanismo de Banco de Dados, o DAC registrado será incorporado ao Utilitário do SQL Server na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o Ponto de Controle do Utilitário. O DAC estará presente no nó **Aplicativos no Nível de Dados Implantados** do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Gerenciador do Utilitário** e é relatado na página de detalhes **Aplicativos no Nível de Dados Implantados**.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições  
  O registro do DAC só pode ser executado em um banco de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior. O registro do DAC não poderá ser executado se um DAC já estiver registrado para o banco de dados. Por exemplo, se o banco de dados foi criado através da implantação de um DAC, você não poderá executar o **Assistente para Registrar o Aplicativo da Camada de Dados**.  
   
  Você não poderá registrar um DAC se o banco de dados tiver objetos que não tenham suporte em um DAC ou usuários contidos. Para obter mais informações sobre os tipos de objetos com suporte em um DAC, consulte [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Permissões  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  O registro de um DAC em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] requer, pelo menos, permissões VIEW DEFINITION de escopo de banco de dados e ALTER ANY LOGIN, permissões SELECT em **sys.sql_expression_dependencies**, e associação na função de servidor fixa **dbcreator** . Os membros da função de servidor fixa **sysadmin** ou a conta interna do administrador do sistema do SQL Server denominada **sa** também podem registrar um DAC. O registro de um DAC que não contém logons no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] exige associação nas funções **dbmanager** ou **serveradmin** . O registro de um DAC que contém logons no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] exige associação nas funções **loginmanager** or **serveradmin** .  
   
-##  <a name="UsingRegisterDACWizard"></a> Usando o Assistente para Registrar o Aplicativo da Camada de Dados  
+##  <a name="using-the-register-data-tier-application-wizard"></a><a name="UsingRegisterDACWizard"></a> Usando o Assistente para Registrar o Aplicativo da Camada de Dados  
  **Para registrar um DAC usando um assistente**  
   
 1.  No **Pesquisador de Objetos**, expanda o nó da instância que contém o banco de dados a ser registrado como um DAC.  
@@ -63,7 +63,7 @@ ms.locfileid: "68134682"
   
     4.  [Página Registrar o DAC](#Register)  
   
-##  <a name="Introduction"></a> Página de Introdução  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Página de Introdução  
  Essa página descreve as etapas do registro de um aplicativo da camada de dados.  
   
  **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página no futuro.  
@@ -74,7 +74,7 @@ ms.locfileid: "68134682"
   
  [Usando o Assistente para Registrar o Aplicativo da Camada de Dados](#UsingRegisterDACWizard)  
   
-##  <a name="Set_properties"></a> Página Definir Propriedades  
+##  <a name="set-properties-page"></a><a name="Set_properties"></a> Página Definir Propriedades  
  Use essa página para especificar propriedades no nível do DAC, como o nome e a versão do aplicativo.  
   
  **Nome do aplicativo.** – Uma cadeia de caracteres que especifica o nome usado para identificar a definição do DAC, o campo foi populado com o nome do banco de dados.  
@@ -91,7 +91,7 @@ ms.locfileid: "68134682"
   
  [Usando o Assistente para Registrar o Aplicativo da Camada de Dados](#UsingRegisterDACWizard)  
   
-##  <a name="Summary"></a> Página Validação e Resumo  
+##  <a name="validation-and-summary-page"></a><a name="Summary"></a> Página Validação e Resumo  
  Use essa página para revisar as ações do assistente ao registrar o DAC. A página faz transição por três estados ao verificar se um DAC pode ser compilado a partir dos objetos do banco de dados.  
   
  [Usando o Assistente para Registrar o Aplicativo da Camada de Dados](#UsingRegisterDACWizard)  
@@ -131,7 +131,7 @@ ms.locfileid: "68134682"
   
  [Usando o Assistente para Registrar o Aplicativo da Camada de Dados](#UsingRegisterDACWizard)  
   
-##  <a name="Register"></a> Página Registrar o DAC  
+##  <a name="register-dac-page"></a><a name="Register"></a> Página Registrar o DAC  
  Essa página relata o êxito ou a falha da operação de registro.  
   
  **Registrando o DAC** - Relata o êxito ou a falha de cada ação realizada para registrar o DAC. Analise as informações para determinar o êxito ou falha de cada ação. Todas as ações que encontrarem um erro terão um link na coluna **Resultado** . Selecione o link para exibir um relatório do erro para aquela ação.  
@@ -142,7 +142,7 @@ ms.locfileid: "68134682"
   
  [Usando o Assistente para Registrar o Aplicativo da Camada de Dados](#UsingRegisterDACWizard)  
   
-##  <a name="RegisterDACPowerShell"></a> Registrar um DAC usando o PowerShell  
+##  <a name="register-a-dac-using-powershell"></a><a name="RegisterDACPowerShell"></a> Registrar um DAC usando o PowerShell  
  **Para registrar um banco de dados como um DAC usando o método Register() em um script de PowerShell**  
   
 1.  Crie um objeto de servidor SMO e defina-o como a instância que contém o banco de dados a ser registrado como um DAC.  

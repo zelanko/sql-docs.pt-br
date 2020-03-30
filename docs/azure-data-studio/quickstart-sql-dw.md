@@ -11,17 +11,17 @@ ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
 ms.openlocfilehash: f07d13bc9110b5b9ec96aa17169687f471aeb197
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957103"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Início Rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectar-se ao SQL Data Warehouse do Azure e consultá-lo
+# <a name="quickstart-use-name-sos-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Início Rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectar-se ao SQL Data Warehouse do Azure e consultá-lo
 
 Este guia de início rápido demonstra como usar o [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar ao SQL Data Warehouse do Azure e, em seguida, usar instruções Transact-SQL para criar, inserir e selecionar dados. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 Para concluir este guia de início rápido, você precisa de [!INCLUDE[name-sos](../includes/name-sos-short.md)] e de um SQL Data Warehouse do Azure.
 
 - [Instalar [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).

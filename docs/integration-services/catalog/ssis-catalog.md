@@ -15,10 +15,10 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287720"
 ---
 # <a name="ssis-catalog"></a>Catálogo do SSIS
@@ -71,7 +71,7 @@ ms.locfileid: "79287720"
   
 -   [Execuções e validações](../../integration-services/catalog/ssis-catalog.md#Executions)  
 
-##  <a name="CatalogObjectIdentifiers"></a> Identificadores de objetos do catálogo  
+##  <a name="catalog-object-identifiers"></a><a name="CatalogObjectIdentifiers"></a> Identificadores de objetos do catálogo  
  Quando você cria um novo objeto no catálogo, atribua um nome ao objeto. O nome do objeto é um identificador. O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define regras que estabelecem que os caracteres podem ser usados em um identificador. Os nomes destes objetos devem seguir as regras de identificador.  
   
 -   Pasta  
@@ -84,7 +84,7 @@ ms.locfileid: "79287720"
   
 -   Variável de ambiente  
   
-###  <a name="Folder"></a> Pasta, projeto e ambiente  
+###  <a name="folder-project-environment"></a><a name="Folder"></a> Pasta, projeto e ambiente  
  Considere as seguintes regras ao renomear uma pasta, um projeto ou um ambiente.  
   
 -   Os caracteres inválidos incluem caracteres ASCII/Unicode de 1 a 31, aspas ("), menor que (\<), maior que (>), barra vertical (|), Backspace (\b), nulo (\0) e Tab (\t).  
@@ -95,14 +95,14 @@ ms.locfileid: "79287720"
   
 -   O comprimento do nome deve ser maior ou igual a 0 e menor ou igual a 128.  
   
-###  <a name="Parameter"></a> Parâmetro  
+###  <a name="parameter"></a><a name="Parameter"></a> Parâmetro  
  Considere as seguintes regras ao nomear um parâmetro.  
   
 -   O primeiro caractere do nome deve ser uma letra, conforme definido no Unicode Standard 2.0, ou um caractere de sublinhado (_).  
   
 -   Os caracteres subsequentes podem ser letras ou números, conforme definido no Unicode Standard 2.0, ou um caractere de sublinhado (_).  
   
-###  <a name="EnvironmentVariable"></a> Variável de ambiente  
+###  <a name="environment-variable"></a><a name="EnvironmentVariable"></a> Variável de ambiente  
  Considere as seguintes regras ao nomear uma variável de ambiente.  
   
 -   Os caracteres inválidos incluem caracteres ASCII/Unicode de 1 a 31, aspas ("), menor que (\<), maior que (>), barra vertical (|), Backspace (\b), nulo (\0) e Tab (\t).  
@@ -117,10 +117,10 @@ ms.locfileid: "79287720"
   
 -   Os caracteres subsequentes podem ser letras ou números, conforme definido no Unicode Standard 2.0, ou um caractere de sublinhado (_).  
   
-##  <a name="Configuration"></a> Configuração do catálogo  
+##  <a name="catalog-configuration"></a><a name="Configuration"></a> Configuração do catálogo  
  Você ajusta como o catálogo se comporta ajustando as propriedades do catálogo. As propriedades do catálogo definem como os dados confidenciais serão criptografados, e como as operações e os dados de controle de versão de projeto serão retidos. Para definir as propriedades do catálogo, use a caixa de diálogo **Propriedades do Catálogo** ou chame o procedimento armazenado [catalog.configure_catalog &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md). Para exibir as propriedades, use a caixa de diálogo ou consulte [catalog.catalog_properties &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). Acesse a caixa de diálogo clicando com o botão direito do mouse em **SSISDB** no Pesquisador de Objetos.  
   
-###  <a name="Cleanup"></a> Operações e limpeza de versão do projeto  
+###  <a name="operations-and-project-version-cleanup"></a><a name="Cleanup"></a> Operações e limpeza de versão do projeto  
  Os dados de status de muitas operações no catálogo são armazenados nas tabelas de banco de dados internas. Por exemplo, o catálogo rastreia o status das execuções de pacote e das implantações de projeto. Para manter o tamanho dos dados de operações, o **Trabalho de Manutenção do Servidor SSIS** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é usado para remover dados antigos. Este trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é criado quando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é instalado.  
   
  Você pode atualizar ou reimplantar um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] implantando-o com o mesmo nome na mesma pasta do catálogo. Por padrão, cada vez que você reimplanta um projeto, o catálogo **SSISDB** retém a versão anterior do projeto. Para manter o tamanho dos dados de operações, o **Trabalho de Manutenção do Servidor SSIS** é usado para remover versões antigas de projetos.  
@@ -143,7 +143,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
  **Número Máximo de Versões por Projeto**  
  Define quantas versões de um projeto são armazenadas no catálogo. As versões de projetos mais antigas são removidas.  
   
-###  <a name="Encryption"></a> Algoritmo de Criptografia  
+###  <a name="encryption-algorithm"></a><a name="Encryption"></a> Algoritmo de Criptografia  
  A propriedade **Algoritmo de Criptografia** especifica o tipo de criptografia usado para criptografar valores de parâmetro confidenciais. Você pode escolher entre os seguintes tipos de criptografia.  
   
 -   AES_256 (padrão)  
@@ -181,7 +181,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
 |Número Máximo de Versões por Projeto|MAX_PROJECT_VERSIONS|  
 |Nível de Log Padrão em Todo o Servidor|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> Permissões  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Os projetos, ambientes e pacotes são armazenados em pastas, que são objetos protegíveis. Você pode conceder permissões a uma pasta, incluindo a permissão MANAGE_OBJECT_PERMISSIONS. MANAGE_OBJECT_PERMISSIONS permite delegar a administração do conteúdo da pasta a um usuário sem precisar conceder a associação do usuário à função ssis_admin. Você também pode conceder permissões para projetos, ambientes e operações. As operações incluem a inicialização do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a implantação de projetos, a criando e a inicialização de execuções, a validação de projetos e pacotes, e a configuração do catálogo **SSISDB** .  
   
  Para obter mais informações sobre as funções de banco de dados, veja [Funções no nível de banco de dados](../../relational-databases/security/authentication-access/database-level-roles.md).  
@@ -203,7 +203,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
 
  Para gerenciar permissões usando o Transact-SQL, chame [catalog.grant_permission &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md), [catalog.deny_permission &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md) e [catalog.revoke_permission &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md). Para exibir permissões efetivas para a entidade de segurança atual para todos os objetos, consulte [catalog.effective_object_permissions &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md). Este tópico fornece descrições dos diferentes tipos de permissões. Para exibir as permissões atribuídas explicitamente ao usuário, consulte [catalog.explicit_object_permissions &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md).  
   
-##  <a name="Folders"></a> Pastas  
+##  <a name="folders"></a><a name="Folders"></a> Pastas  
  Uma pasta contém um ou mais projetos e ambientes no catálogo **SSISDB** . Você pode usar a exibição [catalog.folders &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-folders-ssisdb-database.md) para acessar informações sobre pastas no catálogo. Use os seguintes procedimentos armazenados para gerenciar pastas:  
   
 -   [catalog.create_folder &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md)  
@@ -214,7 +214,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
 -   [catalog.set_folder_description &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md)  
   
-##  <a name="ProjectsAndPackages"></a> Projetos e pacotes  
+##  <a name="projects-and-packages"></a><a name="ProjectsAndPackages"></a> Projetos e pacotes  
  Cada projeto pode conter vários pacotes. Os projetos e pacotes podem conter parâmetros e referências a ambientes. Você pode acessar os parâmetros e referências de ambiente usando a [Configure Dialog Box](../../integration-services/catalog/configure-dialog-box.md).  
   
  Realize outras tarefas do projeto chamando os seguintes procedimentos armazenados: 
@@ -237,7 +237,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
 -   [catalog.object_versions &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-object-versions-ssisdb-database.md)  
   
-##  <a name="Parameters"></a> Parâmetros  
+##  <a name="parameters"></a><a name="Parameters"></a> Parâmetros  
  Use os parâmetros para atribuir valores às propriedades de pacote no tempo de execução do pacote. Para definir o valor de um pacote ou parâmetro de projeto e limpar o valor, chame [catalog.set_object_parameter_value &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) e [catalog.clear_object_parameter_value &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md). Para definir o valor de um parâmetro para uma instância de execução, chame [catalog.set_execution_parameter_value &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md). Você pode recuperar valores de parâmetro padrão chamando [catalog.get_parameter_values &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md).  
   
  Estas exibições mostram os parâmetros de todos os pacotes e projetos, e os valores de parâmetro usados para uma instância de execução.  
@@ -246,7 +246,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
 -   [catalog.execution_parameter_values &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)  
   
-##  <a name="ServerEnvironments"></a> Ambientes de servidor, variáveis de servidor e referências de ambiente de servidor  
+##  <a name="server-environments-server-variables-and-server-environment-references"></a><a name="ServerEnvironments"></a> Ambientes de servidor, variáveis de servidor e referências de ambiente de servidor  
  Os ambientes de servidor contêm variáveis de servidor. Os valores variáveis podem ser usados quando um pacote é executado ou validado no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Os procedimentos armazenados a seguir permitem executar muitas outras tarefas de gerenciamento para ambientes e variáveis.  
@@ -287,7 +287,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
 -   [catalog.environment_references &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-environment-references-ssisdb-database.md)  
   
-##  <a name="Executions"></a> Execuções e validações  
+##  <a name="executions-and-validations"></a><a name="Executions"></a> Execuções e validações  
  Uma execução é uma instância de uma execução de pacote. Chame [catalog.create_execution &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) e [catalog.start_execution &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) para criar e iniciar uma execução. Para interromper a execução ou uma validação de pacote/projeto, chame [catalog.stop_operation &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md).  
   
  Para fazer com que um pacote em execução pause ou crie um arquivo de despejo, chame o procedimento armazenado catalog.create_execution_dump. Um arquivo de despejo fornece informações sobre a execução de um pacote que pode ajudar a solucionar problemas de execução. Para obter mais informações sobre como gerar e configurar arquivos de despejo, consulte [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
@@ -306,7 +306,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
 -   [catalog.event_message_context](../../integration-services/system-views/catalog-event-message-context.md)  
   
- Você pode validar projetos e pacotes chamando os procedimentos armazenados [catalog.validate_project &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md) e [catalog.validate_package &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md). A exibição [catalog.validations &amp;#40;Banco de dados SSISDB&amp;#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md) fornece detalhes sobre validações, como as referências de ambiente de servidor consideradas na validação, se é uma validação de dependência ou uma validação completa e se o runtime de 32 ou 64 bits é usado para executar o pacote.  
+ Você pode validar projetos e pacotes chamando os procedimentos armazenados [catalog.validate_project &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md) e [catalog.validate_package &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md). A exibição [catalog.validations &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md) fornece detalhes sobre validações, como as referências de ambiente de servidor consideradas na validação, se é uma validação de dependência ou uma validação completa e se o runtime de 32 ou 64 bits é usado para executar o pacote.  
 
 ## <a name="create-the-ssis-catalog"></a>Criar o catálogo do SSIS
   Depois de criar e testar pacotes no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], você pode implantar os projetos que contêm os pacotes em um servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para poder implantar os projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o servidor deve conter o catálogo do **SSISDB** . O programa de instalação do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] não cria o catálogo automaticamente; você precisará criar o catálogo manualmente por meio das instruções a seguir.  
@@ -372,7 +372,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
 -   [Configurar as opções](#options)  
   
-###  <a name="open_dialog"></a> Abrir a caixa de diálogo Propriedades do Catálogo  
+###  <a name="open-the-catalog-properties-dialog-box"></a><a name="open_dialog"></a> Abrir a caixa de diálogo Propriedades do Catálogo  
   
 1.  Abra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
@@ -380,7 +380,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
 3.  No Pesquisador de Objetos, expanda o nó **Integration Services** , clique com o botão direito do mouse em **SSISDB**e clique em **Propriedades**.  
   
-###  <a name="options"></a> Configurar as opções  
+###  <a name="configure-the-options"></a><a name="options"></a> Configurar as opções  
   
 #### <a name="options"></a>Opções  
  A tabela a seguir descreve determinadas propriedades na caixa de diálogo e as propriedades correspondentes na exibição `catalog.catalog_properties`.  
@@ -399,7 +399,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
  O catálogo do **SSISDB** armazena os pacotes que você implantou no servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obter mais informações sobre o catálogo, consulte [Catálogo do SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
-###  <a name="backup"></a> Para fazer o backup do banco de dados SSIS  
+###  <a name="to-back-up-the-ssis-database"></a><a name="backup"></a> Para fazer o backup do banco de dados SSIS  
   
 1.  Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -579,7 +579,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
 3.  [Atualizando o SSISDB em um grupo de disponibilidade](#Upgrade)  
   
-###  <a name="prereq"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="prereq"></a> Pré-requisitos  
 Execute as etapas de pré-requisito a seguir antes de habilitar o suporte do Always On no banco de dados do SSISDB.  
   
 1.  Configurar um cluster de failover do Windows. Confira a postagem do blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Instalando o recurso Cluster de Failover e as Ferramentas para o Windows Server 2012) para obter instruções. Instale o recurso e as ferramentas em todos os nós de cluster.  
@@ -588,7 +588,7 @@ Execute as etapas de pré-requisito a seguir antes de habilitar o suporte do Alw
   
 3.  Habilite Grupos de Disponibilidade Always On para cada instância do SQL Server. Confira [Habilitar Grupos de Disponibilidade Always On](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md) para obter detalhes.  
   
-###  <a name="Firsttime"></a> Configurar o suporte do SSIS para Always On  
+###  <a name="configure-ssis-support-for-always-on"></a><a name="Firsttime"></a> Configurar o suporte do SSIS para Always On  
   
 -   [Etapa 1: Criar o catálogo do Integration Services](#Step1)  
   
@@ -603,7 +603,7 @@ Execute as etapas de pré-requisito a seguir antes de habilitar o suporte do Alw
 > [!NOTE]
 > Para obter mais informações sobre esse procedimento, confira o seguinte passo a passo com capturas de tela adicionais fornecidas pelo MVP da Plataforma de Dados Marcos Freccia: [Adicionar SSISDB ao AG do SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
 
-####  <a name="Step1"></a> Etapa 1: Criar o catálogo do Integration Services  
+####  <a name="step-1-create-integration-services-catalog"></a><a name="Step1"></a> Etapa 1: Criar o catálogo do Integration Services  
   
 1.  Inicie o **SQL Server Management Studio** e o conecte a uma instância do SQL Server no cluster que você deseja definir como o **nó primário** do grupo de alta disponibilidade do Always On para SSISDB.  
   
@@ -615,14 +615,14 @@ Execute as etapas de pré-requisito a seguir antes de habilitar o suporte do Alw
   
 5.  Digite uma **senha**e clique em **OK**. A senha protege a chave mestra do banco de dados que é usada para criptografar os dados do catálogo. Salve a senha em um local seguro. É recomendado que você também faça backup da chave mestra do banco de dados. Para obter mais informações, consulte [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
-####  <a name="Step2"></a> Etapa 2: Adicionar o SSISDB a um Grupo de Disponibilidade Always On  
+####  <a name="step-2-add-ssisdb-to-an-always-on-availability-group"></a><a name="Step2"></a> Etapa 2: Adicionar o SSISDB a um Grupo de Disponibilidade Always On  
 Adicionar o banco de dados do SSISDB a um Grupo de Disponibilidade Always On é quase igual a adicionar qualquer outro banco de dados de usuário em um grupo de disponibilidade. Confira [Use the Availability Group Wizard](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)(Usar o assistente do Grupo de Disponibilidade).  
   
 Forneça a senha especificada ao criar o Catálogo do SSIS na página **Selecionar Bancos de Dados** do assistente **Novo Grupo de Disponibilidade**.
 
 ![Novo Grupo de Disponibilidade](../../integration-services/service/media/ssis-newavailabilitygroup.png "Novo Grupo de Disponibilidade")  
   
-####  <a name="Step3"></a> Etapa 3: Habilitar o suporte do SSIS para o Always On  
+####  <a name="step-3-enable-ssis-support-for-always-on"></a><a name="Step3"></a> Etapa 3: Habilitar o suporte do SSIS para o Always On  
  Depois de criar o Catálogo do Integration Services, clique com o botão direito do mouse no nó **Catálogos do Integration Services** e clique em **Habilitar Suporte do Always On.** Você deve ver a seguinte caixa de diálogo **Habilitar Suporte para Always On** . Se esse item de menu estiver desabilitado, verifique se você tem todos os pré-requisitos instalados e clique em **Atualizar**.  
   
  ![Habilitar o suporte para Always On](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
@@ -637,7 +637,7 @@ Se a opção **Habilitar suporte do Always On** no menu de contexto parecer esta
 2.  Verifique se você está se conectando ao nó primário. Você precisa habilitar o suporte do Always On no nó primário.
 3.  Verifique se a versão do SQL Server é 13.0 ou superior. O SSIS dá suporte a Always On apenas no SQL Server 2016 e versões posteriores.
 
-###  <a name="Upgrade"></a> Atualizando o SSISDB em um grupo de disponibilidade  
+###  <a name="upgrading-ssisdb-in-an-availability-group"></a><a name="Upgrade"></a> Atualizando o SSISDB em um grupo de disponibilidade  
  Se estiver atualizando o SQL Server de uma versão anterior e o SSISDB estiver em um grupo de disponibilidade Always On, sua atualização poderá ser bloqueada pela regra "Verificação do SSISDB no Grupo de Disponibilidade Always On". Esse bloqueio ocorre porque a atualização é executada no modo de usuário único, enquanto um banco de dados de disponibilidade deve ser um banco de dados de multiusuário. Portanto, durante a atualização ou a aplicação de patch, todos os bancos de dados de disponibilidade, incluindo o SSISDB, são colocados no modo offline e não são atualizados nem corrigidos. Para permitir que o upgrade continue, primeiro remova o SSISDB do grupo de disponibilidade, faça upgrade ou aplique patch a cada nó e, em seguida, adicione o SSISDB novamente ao grupo de disponibilidade.  
   
  Se você estiver bloqueado pela regra "Verificação do SSISDB no Grupo de Disponibilidade Always On", siga estas etapas para atualizar o SQL Server.  
@@ -662,7 +662,7 @@ Se a opção **Habilitar suporte do Always On** no menu de contexto parecer esta
   
 5.  Siga as instruções descritas na [Etapa 3: Habilitar o suporte do SSIS para o Always On](#Step3).  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   Entrada de blog, [SSIS e PowerShell no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), em blogs.msdn.com.  
   

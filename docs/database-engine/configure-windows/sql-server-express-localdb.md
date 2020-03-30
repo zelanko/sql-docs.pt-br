@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 355cb8b80e4a27a7f58bb42dd37ca9b91059fa25
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.openlocfilehash: 3eedcac9715dec28d3a0ee785effa450d7309c89
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77479721"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80342919"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -33,7 +33,7 @@ A instalação do LocalDB copia um conjunto mínimo de arquivos necessários par
 
 ## <a name="try-it-out"></a>Experimente! 
 
-- Para fazer o download e instalar o LocalDB do SQL Server Express, acesse **[Downloads do SQL Server](https://www.microsoft.com/sql-server/sql-server-editions-express)** . LocalDB é um recurso selecionado durante a instalação e que está disponível durante o download da mídia. Se você fizer o download da mídia, escolha **Express Advanced** ou o pacote LocalDB. No **Instalador do Visual Studio**, você pode instalar o SQL Server Express LocalDB como parte da carga de trabalho do **Desenvolvimento para desktop com .NET** ou como um componente individual.
+- Para fazer o download e instalar o LocalDB do SQL Server Express, acesse **[Downloads do SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)** . LocalDB é um recurso selecionado durante a instalação e que está disponível durante o download da mídia. Se você fizer o download da mídia, escolha **Express Advanced** ou o pacote LocalDB. No **Instalador do Visual Studio**, você pode instalar o SQL Server Express LocalDB como parte da carga de trabalho do **Desenvolvimento para desktop com .NET** ou como um componente individual.
 
  >[!TIP]
  > Você pode instalar o LocalDB como parte do Visual Studio. Durante a instalação do Visual Studio, selecione a carga de trabalho do **Desenvolvimento para desktop com .NET**, que inclui o SQL Server Express LocalDB.

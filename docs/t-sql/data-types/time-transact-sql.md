@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239d7ee532f4052caa067be7a20022720740ff3d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000460"
 ---
 # <a name="time-transact-sql"></a>hora (Transact-SQL)
@@ -88,7 +88,7 @@ ms.locfileid: "68000460"
   
  O formato de literais de cadeia de caracteres padrão (usado para cliente de nível inferior) se alinhará com o formulário padrão do SQL, que está definido como hh:mm:ss[.nnnnnnn]. Esse formato se assemelha à definição do ISO 8601 para TIME que exclui segundos fracionários.  
   
-##  <a name="BackwardCompatibilityforDownlevelClients"></a> Compatibilidade com versões anteriores de clientes de nível inferior  
+##  <a name="backward-compatibility-for-down-level-clients"></a><a name="BackwardCompatibilityforDownlevelClients"></a> Compatibilidade com versões anteriores de clientes de nível inferior  
  Alguns clientes de nível inferior não dão suporte aos tipos de dados **time**, **date**, **datetime2** e **datetimeoffset**. A tabela a seguir mostra o mapeamento de tipos entre uma instância de nível superior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e clientes de nível inferior.  
   
 |Tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Formato de literal de cadeia de caracteres padrão passado ao cliente de nível inferior|ODBC de nível inferior|OLEDB de nível inferior|JDBC de nível inferior|SQLCLIENT de nível inferior|  
@@ -241,7 +241,7 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-###  <a name="ExampleB"></a> B. Inserindo literais de cadeia de caracteres válidos na coluna time(7)  
+###  <a name="b-inserting-valid-time-string-literals-into-a-time7-column"></a><a name="ExampleB"></a> B. Inserindo literais de cadeia de caracteres válidos na coluna time(7)  
  A tabela a seguir lista os diferentes literais de cadeia de caracteres que podem ser inseridos em uma coluna de tipo de dados **time(7)** com os valores que, em seguida, são armazenados nessa coluna.  
   
 |Tipo de formato de literal de cadeia de caracteres|Literal de cadeia de caracteres inserido|valor de time(7) que é armazenado|Descrição|  

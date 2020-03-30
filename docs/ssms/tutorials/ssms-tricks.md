@@ -20,10 +20,10 @@ helpviewer_keywords:
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245505"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Dicas e truques para usar o SSMS (SQL Server Management Studio)
@@ -37,7 +37,7 @@ Este artigo apresenta algumas dicas e truques para usar o SSMS (SQL Server Manag
 > * Acessar seu log de erros do SQL Server
 > * Localize o nome da sua instância do SQL Server
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para testar as etapas deste artigo, você precisará do SQL Server Management Studio, acesso a um SQL Server e um banco de dados do AdventureWorks. 
 
@@ -231,7 +231,7 @@ O caminho para o log de erros do SQL Server pode variar dependendo das suas defi
 
 6. Abra o arquivo errorlog.log no Bloco de Notas. 
 
-## <a name="determine-sql-server-name"></a>Localizar o nome da instância do SQL Server
+## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>Localizar o nome da instância do SQL Server
 
 Você tem algumas opções para localizar o nome do SQL Server antes e depois de se conectar ao SQL Server.  
 

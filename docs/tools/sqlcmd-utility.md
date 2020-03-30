@@ -28,10 +28,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77544941"
 ---
 # <a name="sqlcmd-utility"></a>Utilitário sqlcmd
@@ -867,7 +867,7 @@ Quando você pressiona ENTER, a seguinte mensagem informativa é impressa: "Cont
   
  Embora a coluna `BusinessEntityID` tenha apenas quatro caracteres de largura, ela foi expandida para acomodar o nome de coluna mais longo. Por padrão, a saída é finalizada com 80 caracteres. Isso pode ser alterado com a opção **-w** ou com a definição da variável de script SQLCMDCOLWIDTH.  
   
-###  <a name="OutputXML"></a> Formato de saída XML  
+###  <a name="xml-output-format"></a><a name="OutputXML"></a> Formato de saída XML  
  Saída XML é o resultado de uma cláusula FOR XML, não formatada, em um fluxo contínuo.  
   
  Quando você esperar uma saída XML, use o seguinte comando: `:XML ON`.  
@@ -884,7 +884,7 @@ Quando você pressiona ENTER, a seguinte mensagem informativa é impressa: "Cont
 > [!NOTE]  
 >  O comando `:XML` não oferece suporte para a instrução SET STATISTICS XML.  
   
-###  <a name="OutputJSON"></a> Formato de saída JSON  
+###  <a name="json-output-format"></a><a name="OutputJSON"></a> Formato de saída JSON  
  Quando você espera uma saída JSON, use o seguinte comando: `:XML ON`. Caso contrário, a saída incluirá o nome da coluna e o texto JSON. Essa saída não é JSON válido.  
   
  Para definir o modo XML como desativado, use o seguinte comando: `:XML OFF`.  

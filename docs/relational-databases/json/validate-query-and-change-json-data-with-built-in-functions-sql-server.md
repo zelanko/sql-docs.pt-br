@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8ddc5fb198a62374fc43ebacb5fa7423ac9fadd5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287890"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Validar, consultar e alterar dados JSON com funções internas (SQL Server)
@@ -76,7 +76,7 @@ CREATE TABLE Families (
 )
 ``` 
 
-##  <a name="ISJSON"></a> Validar texto JSON por meio da função ISJSON  
+##  <a name="validate-json-text-by-using-the-isjson-function"></a><a name="ISJSON"></a> Validar texto JSON por meio da função ISJSON  
  A função **ISJSON** testa se uma cadeia de caracteres contém JSON válido.  
   
 O exemplo a seguir retorna linhas nas quais a coluna JSON contém um texto JSON válido. Observe que, sem a restrição JSON explícita, é possível inserir qualquer texto na coluna NVARCHAR:  
@@ -89,7 +89,7 @@ WHERE ISJSON(doc) > 0
 
 Para obter mais informações, veja [ISJSON &#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md).  
   
-##  <a name="VALUE"></a> Extrair um valor de texto JSON por meio da função JSON_VALUE  
+##  <a name="extract-a-value-from-json-text-by-using-the-json_value-function"></a><a name="VALUE"></a> Extrair um valor de texto JSON por meio da função JSON_VALUE  
 A função **JSON_VALUE** extrai um valor escalar de uma cadeia de caracteres JSON. A seguinte consulta retornará os documentos em que o campo JSON `id` corresponde ao valor `AndersenFamily`, ordenado pelos campos JSON `city` e `state`:
 
 ```sql  
@@ -109,7 +109,7 @@ Os resultados dessa consulta são mostrados na seguinte tabela:
 
 Para obter mais informações, veja [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md).  
   
-##  <a name="QUERY"></a> Extrair um objeto ou uma matriz de texto JSON por meio da função JSON_QUERY  
+##  <a name="extract-an-object-or-an-array-from-json-text-by-using-the-json_query-function"></a><a name="QUERY"></a> Extrair um objeto ou uma matriz de texto JSON por meio da função JSON_QUERY  
 
 A função **JSON_QUERY** extrai um objeto ou uma matriz de uma cadeia de caracteres JSON. O exemplo a seguir mostra como retornar um fragmento JSON nos resultados da consulta.  
   
@@ -179,7 +179,7 @@ Os resultados dessa consulta são mostrados na seguinte tabela:
 
 O documento raiz é ingressado com duas linhas `children` retornadas pela primeira chamada `OPENJSON(children)` que cria duas linhas (ou tuplas). Em seguida, cada linha será ingressada com as novas linhas geradas por `OPENJSON(pets)` usando o operador `OUTER APPLY`. Jesse tem dois animais de estimação, então `(AndersenFamily, Jesse, Merriam)` é ingressado com duas linhas geradas para Goofy e Shadow. Lisa não tem animais de estimação, portanto não há linhas retornadas por `OPENJSON(pets)` para essa tupla. No entanto, como estamos usando `OUTER APPLY`, estamos obtendo `NULL` na coluna. Se colocássemos `CROSS APPLY` em vez de `OUTER APPLY`, Lisa não seria retornada no resultado, porque não há linhas de animais que pudessem ser ingressadas com essa tupla.
 
-##  <a name="JSONCompare"></a> Comparar JSON_VALUE e JSON_QUERY  
+##  <a name="compare-json_value-and-json_query"></a><a name="JSONCompare"></a> Comparar JSON_VALUE e JSON_QUERY  
 A principal diferença entre **JSON_VALUE** e **JSON_QUERY** é que **JSON_VALUE** retorna um valor escalar, enquanto **JSON_QUERY** retorna um objeto ou uma matriz.  
   
 Considere o seguinte texto JSON de exemplo.  
@@ -242,7 +242,7 @@ GROUP BY JSON_VALUE(Info, '$.Customer.Name'), Status
 HAVING SUM(SubTotal)>1000
 ```  
   
-##  <a name="MODIFY"></a> Atualizar valores de propriedade em texto JSON por meio da função JSON_MODIFY  
+##  <a name="update-property-values-in-json-text-by-using-the-json_modify-function"></a><a name="MODIFY"></a> Atualizar valores de propriedade em texto JSON por meio da função JSON_MODIFY  
 A função **JSON_MODIFY** atualiza o valor de uma propriedade em uma cadeia de caracteres JSON e retorna a cadeia de caracteres JSON atualizada.  
   
 O exemplo a seguir atualiza o valor de uma propriedade JSON em uma variável que contém JSON.  

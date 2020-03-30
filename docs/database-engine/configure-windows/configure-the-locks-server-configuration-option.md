@@ -13,10 +13,10 @@ ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2fa3483acfe078dbdd3537c0b327032765def62d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012606"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>Configurar a opção locks de configuração de servidor
@@ -43,9 +43,9 @@ ms.locfileid: "68012606"
   
 -   **Acompanhamento:**  [depois de configurar a opção bloqueios](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Esta é uma opção avançada e deve ser alterada somente por um administrador de banco de dados experiente ou por um profissional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] certificado.  
   
@@ -57,12 +57,12 @@ ms.locfileid: "68012606"
   
 -   A opção **bloqueios** também é afetada quando ocorre escalonamento de bloqueio. Quando a opção **bloqueios** está definida como 0, o escalonamento de bloqueio ocorre quando a memória usada pelas estruturas de bloqueio atuais atingir 40 por cento do pool de memória do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Quando a opção **bloqueios** não está definida como 0, o escalonamento de bloqueio ocorre quando o número de bloqueios atinge 40 por cento do valor especificado para **bloqueios**.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Permissões de execução sem parâmetros ou com apenas o primeiro parâmetro em **sp_configure** são concedidas a todos os usuários por padrão. Para executar **sp_configure** com ambos os parâmetros para alterar uma opção de configuração ou executar a instrução RECONFIGURE, o usuário deve ter a permissão ALTER SETTINGS no nível do servidor. A permissão ALTER SETTINGS é implicitamente mantida pelas funções de servidor fixas **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-configure-the-locks-option"></a>Para configurar a opção locks  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68012606"
   
      Use a opção **locks** para definir o número máximo de bloqueios disponíveis, limitando a quantidade de memória que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa para eles.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-locks-option"></a>Para configurar a opção locks  
   
@@ -99,7 +99,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção bloqueios  
+##  <a name="follow-up-after-you-configure-the-locks-option"></a><a name="FollowUp"></a> Acompanhamento: depois de configurar a opção bloqueios  
  O servidor deve ser reiniciado para que a configuração entre em vigor.  
   
 ## <a name="see-also"></a>Consulte Também  

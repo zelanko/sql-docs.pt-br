@@ -32,10 +32,10 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287390"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implantação de pacote herdado (SSIS)
@@ -427,7 +427,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Concluir**  
  Crie a configuração e saia do **Assistente de Configuração de Pacotes**.  
 
-## <a name="child"></a> Usar os valores de variáveis e parâmetros em um pacote filho
+## <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a><a name="child"></a> Usar os valores de variáveis e parâmetros em um pacote filho
   Este procedimento descreve como criar uma configuração de pacote que usa o tipo de configuração variável pai. Este tipo de configuração habilita um pacote filho que é executado de um pacote pai para acessar uma variável no pai.  
   
 > [!NOTE]  

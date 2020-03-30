@@ -22,10 +22,10 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981811"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
@@ -205,7 +205,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Para obter mais informações sobre listas de propriedades de pesquisa, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="change-tracking-no-population"></a> Interações do Controle de Alterações com o parâmetro NO POPULATION  
+## <a name="interactions-of-change-tracking-and-no-population-parameter"></a><a name="change-tracking-no-population"></a> Interações do Controle de Alterações com o parâmetro NO POPULATION  
  O fato de o índice de texto completo ser populado depende de o controle de alterações estar habilitado e de WITH NO POPULATION ter sido especificado na instrução ALTER FULLTEXT INDEX. A tabela a seguir resume o resultado da interação.  
   
 |Controle de Alterações|WITH NO POPULATION|Result|  
@@ -217,7 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Para obter mais informações sobre o preenchimento de índices de texto completo, veja [Preencher índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
   
-## <a name="change-search-property-rebuild-index"></a> A alteração da lista de propriedades de pesquisa causa a recriação do índice  
+## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a><a name="change-search-property-rebuild-index"></a> A alteração da lista de propriedades de pesquisa causa a recriação do índice  
  Da primeira vez que um índice de texto completo é associado a uma lista de propriedades de pesquisa, o índice deve ser repopulado para indexar termos de pesquisa específicos da propriedade. Os dados de índice existentes não são truncados.  
   
  Porém, se você associar o índice de texto completo a uma outra lista de propriedades, o índice será recriado. A recriação trunca o índice de texto completo imediatamente, removendo todos os dados existentes, e o índice deve ser repopulado. Enquanto o preenchimento é realizado, consultas de texto completo na tabela base pesquisam apenas nas linhas da tabela que já foram indexadas pelo preenchimento. Os dados de índice repopulados incluirão metadados das propriedades registradas da lista de propriedades de pesquisa recém-adicionada.  
