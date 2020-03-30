@@ -13,10 +13,10 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0ac67de4831d1785f17029bc6c68fa6f7d8aeb16
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77147379"
 ---
 # <a name="url-access-parameter-reference"></a>Referência de parâmetro de acesso à URL
@@ -29,7 +29,7 @@ ms.locfileid: "77147379"
 > A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
   
 
-##  <a name="bkmk_htmlviewer"></a> Comandos do Visualizador de HTML (rc:)
+##  <a name="html-viewer-commands-rc"></a><a name="bkmk_htmlviewer"></a> Comandos do Visualizador de HTML (rc:)
  - Os comandos do Visualizador de HTML são usados para se destinar ao Visualizador de HTML e são prefixados com *rc:* :
   
 -   **Toolbar**: Mostra ou oculta a barra de ferramentas. Se o valor desse parâmetro for **false**, todas as demais opções serão ignoradas. Se você omitir esse parâmetro, a barra de ferramentas será exibida automaticamente para renderizar formatos que dão suporte a ele. O padrão desse parâmetro é **true**.
@@ -113,7 +113,7 @@ ms.locfileid: "77147379"
   
 -   **Configuração de Informações do Dispositivo**: especifica uma configuração de informações do dispositivo no formato `rc:tag=value`, em que *tag* é o nome de uma configuração de informações do dispositivo específica da extensão de renderização atualmente usada. (Confira a descrição do parâmetro *Format*.) Por exemplo, você pode usar a configuração de informações do dispositivo *OutputFormat* para que a extensão de renderização de IMAGE renderize o relatório em uma imagem JPEG usando os seguintes parâmetros na cadeia de caracteres de acesso à URL: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Para obter mais informações sobre todas as configurações de informações do dispositivo específicas da extensão, confira [Configurações de informações do dispositivo para extensões de renderização &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).
   
-##  <a name="bkmk_reportserver"></a> Comandos do servidor de relatório (rs:)
+##  <a name="report-server-commands-rs"></a><a name="bkmk_reportserver"></a> Comandos do servidor de relatório (rs:)
  Os comandos do servidor de relatório são prefixados com *rs:* e são usados para se destinar ao servidor de relatório:
   
 -   **Comando**: Executa uma ação em um item do catálogo, dependendo do tipo do item. O valor padrão é determinado pelo tipo do item do catálogo referenciado na cadeia de caracteres de acesso à URL. Os valores válidos são:
@@ -264,7 +264,7 @@ ms.locfileid: "77147379"
   
 -   **ShowHideToggle**: Alterna o estado de mostrar e ocultar de uma seção do relatório. Especifique um número inteiro positivo para representar a seção a ser alternada.
   
-##  <a name="bkmk_webpart"></a> Comandos da web part do Visualizador de Relatórios (rv:)
+##  <a name="report-viewer-web-part-commands-rv"></a><a name="bkmk_webpart"></a> Comandos da web part do Visualizador de Relatórios (rv:)
  Os nomes de parâmetros de relatório reservados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a seguir são usados para se destinar à web part do Visualizador de Relatórios integrada ao SharePoint. Esses nomes de parâmetro são prefixados com *rv:* . A web part do Visualizador de Relatórios também aceita o parâmetro *rs:ParameterLanguage*.
   
 -   **Toolbar**: Controla a exibição da barra de ferramentas para a web part do Visualizador de Relatórios. O valor padrão é **Completo**. Os valores podem ser:

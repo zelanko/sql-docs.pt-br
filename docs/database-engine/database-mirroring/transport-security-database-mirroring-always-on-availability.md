@@ -21,10 +21,10 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252746"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Segurança do transporte – espelhamento de banco de dados – disponibilidade AlwaysOn
@@ -40,7 +40,7 @@ ms.locfileid: "75252746"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="Authentication"></a> Autenticação  
+##  <a name="authentication"></a><a name="Authentication"></a> Autenticação  
  Autenticação é o processo de verificar se um usuário é quem o usuário diz ser. Conexões entre pontos de extremidade espelhamento de banco de dados requerem autenticação. Exigências de conexão de um parceiro ou testemunha, se existir, devem ser autenticadas.  
   
  O tipo de autenticação usado por uma instância do servidor para o espelhamento de banco de dados ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] é uma propriedade do ponto de extremidade do espelhamento de banco de dados. Dois tipos de segurança do transporte estão disponíveis para os ponto de extremidade de espelhamento de banco de dados: A Autenticação do Windows (a interface SSPI) e autenticação baseada em certificado.  
@@ -64,7 +64,7 @@ ms.locfileid: "75252746"
   
  Uma instância de servidor usa a chave privada de seu próprio certificado para estabelecer sua identidade ao configurar uma conexão. A instância de servidor que recebe a solicitação de conexão usa a chave pública do certificado do remetente para autenticar a identidade do remetente. Por exemplo, considere duas instâncias de servidor, Server_A e Server_B. Server_A usa sua chave privada para criptografar o cabeçalho da conexão antes de enviar uma solicitação de conexão a Server_B. Server_B usa a chave pública do certificado de Server_A para descriptografar o cabeçalho da conexão. Se o cabeçalho descriptografado estiver correto, Server_B saberá que o cabeçalho foi criptografado por Server_A, e a conexão é autenticada. Se o cabeçalho descriptografado estiver incorreto, Server_B saberá que a solicitação de conexão não é autêntica e recusará a conexão.  
   
-##  <a name="DataEncryption"></a> Criptografia de dados  
+##  <a name="data-encryption"></a><a name="DataEncryption"></a> Criptografia de dados  
  Por padrão, um ponto de extremidade de espelhamento de banco de dados solicita a criptografia de dados enviados por conexões de espelhamento. Neste caso, os pontos de extremidade podem se conectar apenas a pontos de extremidade que também usam criptografia. A menos que você possa garantir que sua rede está segura, recomendamos que você solicite criptografia para suas conexões de espelhamento de banco de dados. Porém, você pode desabilitar a criptografia ou torná-la suportável, mas não obrigatória. Se a criptografia estiver desabilitada, nunca serão criptografados dados e os pontos de extremidade não poderão se conectar a um ponto de extremidade que solicita criptografia. Se a criptografia for suportada, só serão criptografados dados se o ponto de extremidade suportar ou solicitar criptografia.  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ ms.locfileid: "75252746"
   
  Para obter informações sobre a sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] para especificar criptografia, consulte [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para configurar a segurança de transporte para o ponto de extremidade do espelhamento de banco de dados**  
   
 -   [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

@@ -11,10 +11,10 @@ ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 44b631bb1c453ebc09e8a38a57b1a3160084b09d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242878"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Exibir e ler o log de diagnóstico da instância do cluster de failover
@@ -27,21 +27,21 @@ ms.locfileid: "75242878"
   
 -   **Para configurar as definições do Log de Diagnóstico, usando:** [Transact-SQL](#TsqlConfigure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
  Por padrão, os arquivos SQLDIAG são armazenados em uma pasta LOG local do diretório de instância do SQL Server, por exemplo, ‘C\Program Files\Microsoft SQL Server\MSSQL13\<InstanceName>\MSSQL\LOG' do nó proprietário da FCI (instância do cluster de failover) Sempre Visível. O tamanho de cada arquivo de log de SQLDIAG é fixo em 100 MB. Dez arquivos de log desse tipo são armazenados no computador antes de serem reciclados para novos logs.  
   
  Os logs usam o formato de arquivo de eventos estendidos. A função do sistema **sys.fn_xe_file_target_read_file** pode ser usada para leitura dos arquivos criados por Eventos Estendidos. É retornado um evento, em formato XML, por linha. Consulte a exibição do sistema para analisar os dados XML como um conjunto de resultados. Para obter mais informações, veja [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  A permissão VIEW SERVER STATE é necessária para executar **fn_xe_file_target_read_file**.  
   
  Abra o SQL Server Management Studio como administrador  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para exibir os arquivos de log de diagnóstico:**  
   
 1.  No menu **Arquivo** , selecione **Abrir**, **Arquivo**e escolha o arquivo de log de diagnóstico a ser exibido.  
@@ -56,7 +56,7 @@ ms.locfileid: "75242878"
   
 4.  Você pode filtrar e classificar os dados de evento usando o menu **ExtendedEvents** e selecionando a opção **Filtrar** .  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para exibir os arquivos de log de diagnóstico:**  
   
  Para exibir todos os itens do log no arquivo de log SQLDIAG, use a seguinte consulta:  
@@ -88,7 +88,7 @@ ORDER BY Time;
 > [!NOTE]  
 >  Você pode filtrar os resultados para componentes específicos ou um estado usando a cláusula WHERE.  
   
-##  <a name="TsqlConfigure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlConfigure"></a> Usando o Transact-SQL  
  **Para configurar as propriedades de log de diagnóstico**  
   
 > [!NOTE]  
@@ -96,9 +96,9 @@ ORDER BY Time;
   
  Usando a instrução DDL (Linguagem de Definição de Dados), **ALTER SERVER CONFIGURATION**, você pode iniciar ou parar o registro em log dos dados de diagnóstico capturados pelo procedimento [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md), além de definir os parâmetros de configuração do log SQLDIAG, como a contagem de substituições de arquivos de log, o tamanho do arquivo de log e o local do arquivo. Para obter detalhes da sintaxe, consulte [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
   
-###  <a name="ConfigTsqlExample"></a> Exemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a> Exemplos (Transact-SQL)  
   
-####  <a name="TsqlExample"></a> Setting diagnostic log options  
+####  <a name="setting-diagnostic-log-options"></a><a name="TsqlExample"></a> Setting diagnostic log options  
  Os exemplos desta seção mostram como definir os valores para a opção de log de diagnóstico.  
   
 ##### <a name="a-starting-diagnostic-logging"></a>a. Iniciando o log de diagnóstico  

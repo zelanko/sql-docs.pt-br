@@ -16,10 +16,10 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710318"
 ---
 # <a name="create-a-full-database-backup"></a>Criar um backup de banco de dados completo
@@ -30,32 +30,32 @@ Este tópico descreve como criar um backup de banco de dados completo no [!INCLU
 
 Para obter informações sobre o backup do SQL Server no serviço do Armazenamento de Blobs do Azure, confira [Backup e restauração do SQL Server com o serviço de Armazenamento de Blobs do Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) e [Backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
-## <a name="Restrictions"></a> Limitações e restrições
+## <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições
 
 - A instrução `BACKUP` não é permitida em uma transação explícita ou implícita.
 - Os backups criados por uma versão mais recente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não podem ser restaurados em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 Antes de prosseguir, confira uma visão geral e aprofundamento sobre os conceitos e tarefas de backup em [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).
 
-## <a name="Recommendations"></a> Recomendações
+## <a name="recommendations"></a><a name="Recommendations"></a> Recomendações
 
 - À medida que um banco de dados aumenta de tamanho, os backups completos do banco de dados levam mais tempo para serem concluídos e exigem mais espaço de armazenamento. Para bancos de dados grandes, considere complementar backups de banco de dados completos com uma série de [backups de bancos de dados diferenciais](../../relational-databases/backup-restore/differential-backups-sql-server.md).
 - Estime o tamanho de um backup de banco de dados completo usando o procedimento armazenado do sistema [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .
 - Por padrão, toda operação de backup bem-sucedida acrescenta uma entrada ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao log de eventos do sistema. Se você fizer backup com frequência, essas mensagens de êxito acumularão rapidamente, resultando em logs de erro grandes. Isso pode dificultar a localização de outras mensagens. Em tais situações, você pode suprimir essas entradas de log de backup usando o sinalizador de rastreamento 3226, caso nenhum dos seus scripts dependa dessas entradas. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
-## <a name="Security"></a> Segurança
+## <a name="security"></a><a name="Security"></a> Segurança
 
 **TRUSTWORTHY** é definido como OFF em um backup de banco de dados. Para obter informações sobre como definir **TRUSTWORTHY** como ON, confira [Opções de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], as opções **PASSWORD** e **MEDIAPASSWORD** foram descontinuadas para a criação de backups. Você ainda poderá restaurar os backups criados com senhas.
 
-## <a name="Permissions"></a> Permissões
+## <a name="permissions"></a><a name="Permissions"></a> Permissões
 
 As permissões `BACKUP DATABASE` e `BACKUP LOG` usam como padrão os membros da função de servidor fixa **sysadmin** e as funções de banco de dados fixas **db_owner** e **db_backupoperator**.
 
  Os problemas de propriedade e permissão no arquivo físico do dispositivo de backup podem interferir em uma operação de backup. O serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisa ter a capacidade de leitura e gravação no dispositivo, o que significa que a conta na qual o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado precisa ter as permissões de gravação no dispositivo de backup. No entanto, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que adiciona uma entrada para um dispositivo de backup nas tabelas do sistema, não verifica permissões de acesso a arquivos. Como resultado, os problemas no arquivo físico do dispositivo de backup podem não aparecer até que o recurso físico seja acessado quando o backup ou restauração é tentado.
 
-## <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio
 
 > [!NOTE]
 > Ao especificar uma tarefa de backup usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é possível gerar o script [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) correspondente, clicando no botão **Script** e selecionando um destino para o script.
@@ -240,7 +240,7 @@ Se você não tiver um contêiner de blobs do Azure em uma conta de armazenament
 
 1. Quando o backup for concluído com êxito, clique em **OK** para fechar a caixa de diálogo do SQL Server Management Studio.
 
-## <a name="TsqlProcedure"></a> Usando o Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL
 
 Crie um backup completo de banco de dados executando a instrução `BACKUP DATABASE` especificando:
 
@@ -278,7 +278,7 @@ Como alternativa, para formatar a mídia de backup, use a opção **FORMAT**:
  > [!IMPORTANT]
  > Tenha muito cuidado ao usar a cláusula **FORMAT** da instrução `BACKUP`, pois isso destrói qualquer backup previamente armazenado na mídia de backup.
 
-### <a name="TsqlExample"></a> Exemplos
+### <a name="examples"></a><a name="TsqlExample"></a> Exemplos
 
 Para os exemplos a seguir, crie um banco de dados de teste com o código Transact-SQL a seguir:
 
@@ -361,7 +361,7 @@ BACKUP DATABASE SQLTestDB
 GO
 ```
 
-## <a name="PowerShellProcedure"></a> Usando o PowerShell
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usando o PowerShell
 
 Use o cmdlet **Backup-SqlDatabase** . Para indicar explicitamente que este é um backup completo de banco de dados, especifique o parâmetro **-BackupAction** com seu valor padrão **Database**. Esse parâmetro é opcional para backups completos de banco de dados.
 
@@ -402,7 +402,7 @@ $backupFile = $container + '/' + $fileName
 Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $backupFile -Credential $credential
 ```
 
-## <a name="RelatedTasks"></a> Related tasks
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks
 
 - [Fazer backup de um banco de dados (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 - [Criar um backup diferencial de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)

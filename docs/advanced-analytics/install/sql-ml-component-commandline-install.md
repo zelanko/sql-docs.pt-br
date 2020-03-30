@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727583"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Instale componentes de Python e R do aprendizado de máquina do SQL Server usando a linha de comando
@@ -89,7 +89,7 @@ Quando você instala pelo prompt de comando, o [!INCLUDE[ssNoVersion](../../incl
 | MPYCACHEDIRECTORY | Reservado para uso futuro. Use %TEMP% para armazenar arquivos CAB do componente de Python para instalação em computadores que não têm uma conexão com a Internet. |
 ::: moniker-end
 
-## <a name="indb"></a> Instalações da instância no banco de dados
+## <a name="in-database-instance-installations"></a><a name="indb"></a> Instalações da instância no banco de dados
 
 A análise no banco de dados está disponível para instâncias do mecanismo de banco de dados, necessárias para adicionar o recurso **AdvancedAnalytics** à sua instalação. Você pode instalar uma instância do mecanismo de banco de dados com análise avançada ou [adicioná-la a uma instância existente](#add-existing). 
 
@@ -138,7 +138,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 ```
 ::: moniker-end
 
-## <a name="post-install"></a> Configuração pós-instalação (obrigatória)
+## <a name="post-install-configuration-required"></a><a name="post-install"></a> Configuração pós-instalação (obrigatória)
 
 Aplica-se apenas a instalações no banco de dados.
 
@@ -159,7 +159,7 @@ São necessárias mais duas tarefas para concluir a instalação:
 1. SQL Server R Services: Habilite scripts externos para usar o recurso. Siga as instruções em [Instalar o SQL Server R Services (no Banco de Dados)](sql-r-services-windows-install.md) como a próxima etapa. 
 ::: moniker-end
 
-## <a name="add-existing"></a> Adicionar análise avançada a uma instância de mecanismo de banco de dados existente
+## <a name="add-advanced-analytics-to-an-existing-database-engine-instance"></a><a name="add-existing"></a> Adicionar análise avançada a uma instância de mecanismo de banco de dados existente
 
 Ao adicionar análise avançada no banco de dados a uma instância do mecanismo de banco de dados existente, forneça o nome da instância. Por exemplo, se tiver instalado um mecanismo de banco de dados do SQL Server 2017 ou posterior e o Python, você poderá usar esse comando para adicionar o R.
 
@@ -168,7 +168,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
 
-## <a name="silent"></a> Instalação silenciosa
+## <a name="silent-install"></a><a name="silent"></a> Instalação silenciosa
 
 Uma instalação silenciosa suprime a verificação dos locais de arquivos .cab. Por esse motivo, você precisa especificar a localização em que os arquivos .cab devem ser desempacotados. Para Python, os arquivos CAB devem estar em %TEMP*. Para R, você pode definir o caminho da pasta usando o diretório temporário.
  
@@ -179,7 +179,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 /MRCACHEDIRECTORY=%temp% 
 ```
 
-## <a name="shared-feature"></a> Instalações do servidor autônomo
+## <a name="standalone-server-installations"></a><a name="shared-feature"></a> Instalações do servidor autônomo
 
 Um servidor autônomo é um "recurso compartilhado" não associado a uma instância do mecanismo de banco de dados. Os exemplos a seguir mostram uma sintaxe válida para a instalação do servidor autônomo.
 

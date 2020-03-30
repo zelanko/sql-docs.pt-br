@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f010a9fbd77d3b6a65103f3ed85a7cc521c279c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70009437"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Índices columnstore – diretrizes de design
@@ -23,7 +23,7 @@ ms.locfileid: "70009437"
 
 Recomendações de alto nível para criação de índices columnstore. Poucas boas decisões de design ajudam a alcançar uma compactação de dados e desempenho de consultas altos que os índices columnstore foram criados para oferecer. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este artigo pressupõe que você esteja familiarizado com a terminologia e a arquitetura columnstore. Para obter mais informações, consulte [Índices columnstore – visão geral](../../relational-databases/indexes/columnstore-indexes-overview.md) e [Índices columnstore – arquitetura](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).
 

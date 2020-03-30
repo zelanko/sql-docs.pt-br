@@ -9,10 +9,10 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 87c034202eb5a4c17fd73e75f881361c04b3b636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080845"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de relatórios: Relatórios de mapa (Construtor de Relatórios e SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "77080845"
  * Registre um problema ou uma sugestão no [UserVoice do Microsoft SQL Server](https://feedback.azure.com/forums/908035-sql-server).  
 
   
-##  <a name="Embedded"></a> Problemas de tamanho da definição de relatório  
+##  <a name="report-definition-size-issues"></a><a name="Embedded"></a> Problemas de tamanho da definição de relatório  
  Use esta seção para ajudar a resolver problemas relacionados ao tamanho da definição do relatório.  
   
 ## <a name="how-do-i-reduce-the-report-definition-size"></a>Como eu reduzo o tamanho da definição de relatório?  
@@ -49,7 +49,7 @@ ms.locfileid: "77080845"
   
  Elementos do mapa de um relatório na Galeria de Mapas sempre serão inseridos em uma camada do mapa.  
   
-##  <a name="Spatial"></a> Problemas de dados espaciais  
+##  <a name="spatial-data-issues"></a><a name="Spatial"></a> Problemas de dados espaciais  
  Use esta seção para ajudar a resolver problemas relacionados a dados espaciais.  
   
 ## <a name="on-the-design-surface-i-see-sample-spatial-data"></a>Na superfície de design, eu vejo dados espaciais de exemplo  
@@ -100,7 +100,7 @@ ms.locfileid: "77080845"
   
 -   Se os dados espaciais vierem de um banco de dados do SQL Server, altere a consulta para usar funções espaciais para limitar os dados a uma área menor.  
   
-##  <a name="Viewport"></a> Problemas de centralização e exibição do visor  
+##  <a name="viewport-center-and-view-issues"></a><a name="Viewport"></a> Problemas de centralização e exibição do visor  
  Use esta seção para ajudar a resolver problemas relacionados às opções do visor.  
   
 ## <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>Eu não posso centralizar e exibir em um elemento de mapa inserido.  
@@ -122,7 +122,7 @@ ms.locfileid: "77080845"
   
 -   Insira os dados espaciais no relatório e exclua os locais que você não deseja incluir.  
   
-##  <a name="Layers"></a> Problemas de camada  
+##  <a name="layer-issues"></a><a name="Layers"></a> Problemas de camada  
  Use esta seção para ajudar a resolver problemas relacionados às opções de camada.  
   
 ## <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>Não vejo uma ou mais camadas no meu mapa.  
@@ -144,7 +144,7 @@ ms.locfileid: "77080845"
 ## <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>Eu defini um filtro na camada do mapa e ele não tem nenhum efeito.  
  Para filtrar os dados de uma camada, o tipo de dados na expressão de filtro deve ser especificado. Verifique se você especificou os o tipo de dados subjacente correto de forma que a equação de filtro seja avaliada corretamente para a condição especificada. Para obter mais informações, consulte [Exemplos de equações de filtro &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-##  <a name="Legend"></a> Problemas de legenda, escala de cores e régua  
+##  <a name="legend-color-scale-and-rule-issues"></a><a name="Legend"></a> Problemas de legenda, escala de cores e régua  
  Use esta seção para ajudar a resolver problemas relacionados às opções de regras, legendas e escala de cores.  
   
 ## <a name="how-do-i-control-the-values-in-the-map-legend"></a>Como eu controlo os valores na legenda do mapa?  
@@ -175,7 +175,7 @@ ms.locfileid: "77080845"
   
  Para exibir a escala de cores, especifique regras de cores para uma camada ou um elemento do mapa inserido. Para obter mais informações, consulte [Alterar legendas de mapa, escala de cores e regras associadas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-##  <a name="Tile"></a> Problemas de peça  
+##  <a name="tile-issues"></a><a name="Tile"></a> Problemas de peça  
  Use esta seção para ajudar a resolver problemas relacionados às opções de plano de fundo lado a lado.  
   
 ## <a name="i-cannot-see-the-bing-maps-tile-background"></a>Eu não consigo visualizar o plano de fundo de mapas do Bing lado a lado.  
@@ -196,7 +196,7 @@ ms.locfileid: "77080845"
   
  Para incluir uma camada de peças sem texto, selecione a exibição **Aérea** .  
   
-##  <a name="Tooltip"></a> Problemas de dica de ferramenta e rótulo  
+##  <a name="tooltip-and-label-issues"></a><a name="Tooltip"></a> Problemas de dica de ferramenta e rótulo  
  Use esta seção para ajudar a resolver problemas relacionados às opções de dica de rótulo ou dica de ferramenta.  
   
 ## <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>Eu recebo um erro de expressão sobre o escopo do conjunto de dados quando defino um rótulo ou Dica de Ferramenta como uma expressão.  

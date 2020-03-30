@@ -10,10 +10,10 @@ ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 74c4591122fa45d4e050718e78296ed672a4c210
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258100"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Localizando, exibindo e gerenciando relatórios (Construtor de Relatórios e SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "75258100"
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FindingAndViewingReportsRB30"></a> Localizando e exibindo relatórios no Construtor de Relatórios  
+##  <a name="finding-and-viewing-reports-in-report-builder"></a><a name="FindingAndViewingReportsRB30"></a> Localizando e exibindo relatórios no Construtor de Relatórios  
  Para localizar um relatório com o qual você deseja trabalhar ou para selecionar uma fonte de dados compartilhados, uma imagem ou um sub-relatório a ser usado em um relatório, procure no computador, nas pastas em um servidor de relatório ou em um site do SharePoint integrado ao Reporting Services.  
   
  Para localizar relatórios em um servidor de relatório, você deve especificar uma URL para o servidor de relatório e ter permissões apropriadas nas pastas que lhe permitem ler e salvar itens de relatório. Peça ao administrador do sistema o servidor de relatório para a URL e as permissões apropriadas.  
@@ -49,7 +49,7 @@ ms.locfileid: "75258100"
 -   **Exibindo relatórios** Você visualiza um relatório no Construtor de Relatórios ao criar ou atualizar relatórios. Quando o Construtor de Relatórios está conectado a um servidor de relatório, esse servidor carrega e processa o relatório; caso contrário, os relatórios são processados localmente. O visualizador de relatório no Construtor de Relatórios exibe o relatório renderizado.  
   
  
-##  <a name="ViewingAndManagingReportServer"></a> Exibindo e gerenciando relatórios em um servidor de relatório  
+##  <a name="viewing-and-managing-reports-on-a-report-server"></a><a name="ViewingAndManagingReportServer"></a> Exibindo e gerenciando relatórios em um servidor de relatório  
  É possível usar o portal da Web para exibir e gerenciar relatórios no servidor de relatório. Procure as pastas no servidor para localizar relatórios, executar relatórios para exibi-los em um navegador e executar tarefas de gerenciamento.  
   
  O portal da Web pode ajudar com as seguintes tarefas de gerenciamento:  
@@ -90,7 +90,7 @@ Após a execução de um relatório, você pode exportá-lo para outro formato, 
 |Combinação de teclado CTRL+F5|Produz o mesmo resultado que clicar no botão **Atualizar** na barra de ferramentas do relatório.|  
   
   
-##  <a name="ViewingAndManagingSharePointSite"></a> Exibindo e gerenciando itens do servidor de relatórios de um site do SharePoint  
+##  <a name="viewing-and-managing-report-server-items-from-a-sharepoint-site"></a><a name="ViewingAndManagingSharePointSite"></a> Exibindo e gerenciando itens do servidor de relatórios de um site do SharePoint  
  Quando o administrador de sistema configurar um servidor de relatório para execução em modo integrado do SharePoint, será possível exibir e gerenciar relatórios e demais itens do servidor de relatório a partir do site do SharePoint.  
   
  O site do SharePoint inclui páginas para definir as propriedades da fonte de dados, histórico do relatório, opções de processamento do relatório, agendas, assinaturas, parâmetros de relatórios e para criar agendas compartilhadas. É possível gerenciar os itens do servidor de relatórios em um site do SharePoint do mesmo modo que você cria e gerencia os mesmos a partir de outras ferramentas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -119,11 +119,11 @@ Após a execução de um relatório, você pode exportá-lo para outro formato, 
  ![Comandos de menu para itens de servidor de relatório](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "Comandos de menu para itens de servidor de relatório")  
   
   
-##  <a name="DeskTop"></a> Exibindo os relatórios em um aplicativo da área de trabalho  
+##  <a name="viewing-reports-in-a-desktop-application"></a><a name="DeskTop"></a> Exibindo os relatórios em um aplicativo da área de trabalho  
  Você pode ignorar totalmente a exibição do navegador e usar um aplicativo da área de trabalho (como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel) como visualizador de relatórios. Para fazer isso, defina uma assinatura que especifica um formato de aplicativo de desktop e um destino de pasta compartilhado. O servidor de relatório gera seu relatório como um arquivo de aplicativo, anexa uma extensão de nome de arquivo e salva o relatório como um arquivo em seu disco rígido. Você pode usar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel (ou outro aplicativo) em vez de um navegador para exibir seu relatório.  
   
   
-##  <a name="AboutUserSessions"></a> Sobre as sessões de usuário  
+##  <a name="about-user-sessions"></a><a name="AboutUserSessions"></a> Sobre as sessões de usuário  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa sessões de navegador para manter a consistência enquanto exibe relatórios. As sessões se baseiam em conexões do navegador, não em usuários autenticados. Uma sessão nova é criada toda vez que um usuário abre um relatório em uma nova janela de navegador. Assim que uma sessão de navegador é estabelecida, você continua a trabalhar com a versão do relatório que foi aberta quando a sessão começou, mesmo que o relatório seja modificado no servidor de relatório. Por exemplo, se você abrir um relatório às 23 horas e um autor de relatório publicar novamente o mesmo relatório às 23h01, sua sessão conterá a versão que você abriu para a duração da sessão.  
   
  Se você atualizar um relatório na mesma sessão usando o botão **Atualizar** do navegador, a versão da sessão original do relatório será exibida. Se você atualizar um relatório sob demanda usando o botão **Atualizar** na barra de ferramentas do relatório, o relatório será executado novamente e novos dados, se houver, serão exibidos.  
@@ -131,7 +131,7 @@ Após a execução de um relatório, você pode exportá-lo para outro formato, 
  As informações da sessão são armazenadas no banco de dados temporário do servidor de relatório. O servidor de relatório não usa o gerenciamento de sessão [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Se você reinicializar o servidor ou executar uma operação de recuperação de banco de dados, o estado de sessão não será restaurado. Para obter mais informações sobre o gerenciamento de sessões, consulte [Identificando o estado de execução](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).  
   
  
-##  <a name="InThisSection"></a> Nesta seção  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Nesta seção  
  Os artigos a seguir fornecem informações adicionais sobre como exibir e gerenciar relatórios.  
   
  [Encontrar, exibir e gerenciar relatórios](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

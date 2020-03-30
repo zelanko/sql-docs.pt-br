@@ -927,7 +927,7 @@
       href: ../integration-services/packages/sql-server-agent-jobs-for-packages.md
     - name: Pacotes de balanceamento de carga em servidores remotos usando o SQL Server Agent
       href: ../integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
-- name: Expansão
+- name: Escalonamento horizontal
   items:
     - name: Visão geral
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
