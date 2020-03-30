@@ -14,10 +14,10 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1f42630e101a60c9d3265ab96a5b126551eeaff0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991591"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Grupos de disponibilidade Always On: interoperabilidade (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "67991591"
 
 Este tópico documenta interoperabilidade do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] com outros recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].
 
-## <a name="Interop"></a> Recursos que interoperam com grupos de disponibilidade Always On
+## <a name="features-that-interoperate-with-always-on-availability-groups"></a><a name="Interop"></a> Recursos que interoperam com grupos de disponibilidade Always On
 
 A tabela a seguir lista os recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que interoperam com [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um link na coluna **Mais Informações** indica que existem considerações de interoperabilidade para um determinado recurso.
 
@@ -46,20 +46,20 @@ A tabela a seguir lista os recursos do [!INCLUDE[ssNoVersion](../../../includes/
 |Agente de Serviço|[Service Broker com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md)|
 |SQL Server Agent|&nbsp;|
 
-## <a name="restrictions"></a> Recursos que interoperam com Grupos de Disponibilidade AlwaysOn com restrições
+## <a name="features-that-interoperate-with-always-on-availability-groups-with-restrictions"></a><a name="restrictions"></a> Recursos que interoperam com Grupos de Disponibilidade AlwaysOn com restrições
 
 Os seguintes recursos interoperam com [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] com restrições específicas. Consulte os tópicos vinculados para obter detalhes.
 
 - Transações distribuídas/transações entre bancos de dados ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] e Windows Server 2016). Para obter mais informações, consulte [Transações entre bancos de dados e transações distribuídas para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 - [Coletor de dados do sistema de estatísticas de consulta](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query) não pode ser executado de forma confiável em um ambiente com secundários não legíveis. Para usar o coletor de dados do sistema de estatísticas de consulta, defina todas as réplicas do grupo de disponibilidade para permitir [acesso de leitura](configure-read-only-access-on-an-availability-replica-sql-server.md). 
 
-## <a name="NoInterop"></a> Recursos que não interoperam com grupos de disponibilidade AlwaysOn
+## <a name="features-that-do-not-interoperate-with-always-on-availability-groups"></a><a name="NoInterop"></a> Recursos que não interoperam com grupos de disponibilidade AlwaysOn
 
 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] não interopera com os seguintes recursos:
 
 - Espelhamento de banco de dados. Para obter mais informações, consulte [Transações entre bancos de dados e transações distribuídas para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 
-## <a name="RelatedContent"></a> Conteúdo relacionado
+## <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado
 
 - **Blogs:**
 

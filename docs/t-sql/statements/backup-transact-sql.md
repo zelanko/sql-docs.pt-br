@@ -47,10 +47,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74249735"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
@@ -556,7 +556,7 @@ Esta seção introduz os seguintes conceitos de backup essenciais:
 > [!NOTE]
 > Para obter uma introdução ao backup no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Visão geral de backup](../../relational-databases/backup-restore/backup-overview-sql-server.md).
 
-### <a name="Backup_Types"></a> Tipos de backup
+### <a name="backup-types"></a><a name="Backup_Types"></a> Tipos de backup
 
 Os tipos de backup com suporte dependem do modelo de recuperação do banco de dados, da seguinte maneira:
 
@@ -579,14 +579,14 @@ Os tipos de backup com suporte dependem do modelo de recuperação do banco de d
 
 - Um *backup somente cópia* é um backup completo para finalidades especiais ou um backup de log que é independente da sequência normal de backups convencionais. Para criar um backup somente cópia, especifique a opção COPY_ONLY na instrução BACKUP. Para obter mais informações, veja [Backups somente cópia](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).
 
-### <a name="Tlog_Truncation"></a> Truncamento do log de transações
+### <a name="transaction-log-truncation"></a><a name="Tlog_Truncation"></a> Truncamento do log de transações
 
 Para evitar o preenchimento do log de transações de um banco de dados, os backups rotineiros são essenciais. No modelo de recuperação simples, o truncamento do log ocorre automaticamente depois que o backup do banco de dados é feito, e no modelo de recuperação completa, depois que o backup do log de transações é feito. No entanto, às vezes o processo de truncamento pode ser demorado. Para ver informações sobre os fatores que podem adiar o truncamento de log, consulte [O log de transações](../../relational-databases/logs/the-transaction-log-sql-server.md).
 
 > [!NOTE]
 > As opções `BACKUP LOG WITH NO_LOG` e `WITH TRUNCATE_ONLY` foram descontinuadas. Se você estiver usando o modelo de recuperação completa ou bulk-logged e dever remover a cadeia de backup de log de um banco de dados, alterne para o modelo de recuperação simples. Para obter mais informações, veja [Exibir ou alterar o modelo de recuperação de um banco de dados](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).
 
-### <a name="Formatting_Media"></a> Formatando uma mídia de backup
+### <a name="formatting-backup-media"></a><a name="Formatting_Media"></a> Formatando uma mídia de backup
 
 A mídia de backup será formatada por uma instrução BACKUP se, e apenas se, qualquer uma das seguintes situações for verdadeira:
 
@@ -594,7 +594,7 @@ A mídia de backup será formatada por uma instrução BACKUP se, e apenas se, q
 - A mídia estiver vazia.
 - A operação estiver gravando uma fita de continuação.
 
-### <a name="Backup_Devices_and_Media_Sets"></a> Trabalhando com dispositivos de backup e conjuntos de mídias
+### <a name="working-with-backup-devices-and-media-sets"></a><a name="Backup_Devices_and_Media_Sets"></a> Trabalhando com dispositivos de backup e conjuntos de mídias
 
 #### <a name="backup-devices-in-a-striped-media-set-a-stripe-set"></a>Dispositivos de backup em um conjunto de mídias distribuído (um conjunto de distribuição)
 Um *conjunto de distribuição* é um conjunto de arquivos de disco nos quais os dados são divididos em blocos e distribuídos em uma ordem fixa. O número de dispositivos de backup usados em um conjunto de distribuição deve permanecer o mesmo (a não ser que a mídia seja reinicializada com `FORMAT`).
@@ -653,13 +653,13 @@ Quando vários dispositivos são listados para cada espelho, a ordem dos disposi
 
 Para obter mais informações sobre conjuntos de mídia espelhadas, consulte [Conjuntos de mídias de backup espelhadas](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md). Para obter mais informações sobre conjuntos de mídias e famílias de mídia em geral, consulte [Conjuntos de mídias, famílias de mídia e conjuntos de backup](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).
 
-### <a name="Restoring_Backups"></a> Restaurando backups do SQL Server
+### <a name="restoring-sql-server-backups"></a><a name="Restoring_Backups"></a> Restaurando backups do SQL Server
 
 Para restaurar um banco de dados e, opcionalmente, recuperá-lo para fazê-lo ficar online ou restaurar um arquivo ou grupo de arquivos, use a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ou as tarefas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Restore**. Para obter mais informações, consulte [Visão geral de restauração e recuperação](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
-## <a name="Additional_Considerations"></a> Considerações adicionais sobre as opções de BACKUP
+## <a name="additional-considerations-about-backup-options"></a><a name="Additional_Considerations"></a> Considerações adicionais sobre as opções de BACKUP
 
-### <a name="Interactions_SKIP_etc"></a> Interação de SKIP, NOSKIP, INIT e NOINIT
+### <a name="interaction-of-skip-noskip-init-and-noinit"></a><a name="Interactions_SKIP_etc"></a> Interação de SKIP, NOSKIP, INIT e NOINIT
 
 Esta tabela descreve interações entre as opções { **NOINIT** | INIT } e { **NOSKIP** | SKIP }.
 
@@ -737,7 +737,7 @@ As permissões BACKUP DATABASE e BACKUP LOG usam como padrão os membros da fun�
 
 Os problemas de propriedade e permissão no arquivo físico do dispositivo de backup podem interferir em uma operação de backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser capaz de ler e gravar no dispositivo; a conta sob a qual o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa deve ter permissões de gravação. No entanto, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que adiciona uma entrada para um dispositivo de backup nas tabelas do sistema, não verifica permissões de acesso a arquivos. Esses problemas no arquivo físico do dispositivo de backup podem não aparecer até que o recurso físico seja acessado quando o backup ou restauração é tentado.
 
-## <a name="examples"></a> Exemplos
+## <a name="examples"></a><a name="examples"></a> Exemplos
 
 Esta seção contém os seguintes exemplos:
 
@@ -755,7 +755,7 @@ Esta seção contém os seguintes exemplos:
 > [!NOTE]
 > Os tópicos de instruções de backup contêm exemplos adicionais. Para obter mais informações, veja [Visão geral do backup](../../relational-databases/backup-restore/backup-overview-sql-server.md).
 
-### <a name="backing_up_db"></a> A. Fazendo backup de um banco de dados completo
+### <a name="a-backing-up-a-complete-database"></a><a name="backing_up_db"></a> A. Fazendo backup de um banco de dados completo
 
 O exemplo a seguir faz backup do banco de dados [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] em um arquivo de disco.
 
@@ -766,7 +766,7 @@ BACKUP DATABASE AdventureWorks2012
 GO
 ```
 
-### <a name="backing_up_db_and_log"></a> B. Fazendo backup do banco de dados e do log
+### <a name="b-backing-up-the-database-and-log"></a><a name="backing_up_db_and_log"></a> B. Fazendo backup do banco de dados e do log
 
 O exemplo a seguir faz backup do banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] que, por padrão, usa o modelo de recuperação simples. Para oferecer suporte a backups de log, o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] é modificado para usar o modelo de recuperação completa.
 
@@ -804,7 +804,7 @@ GO
 > [!NOTE]
 > Para um banco de dados de produção, faça backup do log regularmente. Os backups de log devem ser frequentes o suficiente para fornecer proteção contra perda de dados.
 
-### <a name="full_file_backup"></a> C. Criando um backup completo de arquivos dos grupos de arquivos secundários
+### <a name="c-creating-a-full-file-backup-of-the-secondary-filegroups"></a><a name="full_file_backup"></a> C. Criando um backup completo de arquivos dos grupos de arquivos secundários
 
 O exemplo a seguir cria um backup de arquivo completo de todos os arquivos dos dois grupos de arquivos secundários.
 
@@ -817,7 +817,7 @@ BACKUP DATABASE Sales
 GO
 ```
 
-### <a name="differential_file_backup"></a> D. Criando um backup diferencial de arquivos dos grupos de arquivos secundários
+### <a name="d-creating-a-differential-file-backup-of-the-secondary-filegroups"></a><a name="differential_file_backup"></a> D. Criando um backup diferencial de arquivos dos grupos de arquivos secundários
 
 O exemplo a seguir cria um backup diferencial de cada arquivo nos dois grupos de arquivos secundários.
 
@@ -832,7 +832,7 @@ BACKUP DATABASE Sales
 GO
 ```
 
-### <a name="create_single_family_mirrored_media_set"></a> E. Criando e fazendo backup em um conjunto de mídias espelhado de uma única família
+### <a name="e-creating-and-backing-up-to-a-single-family-mirrored-media-set"></a><a name="create_single_family_mirrored_media_set"></a> E. Criando e fazendo backup em um conjunto de mídias espelhado de uma única família
 
 O exemplo a seguir cria um conjunto de mídias espelhado que contêm uma única família de mídia e quatro espelhos nos quais faz backup do banco de dados [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)].
 
@@ -847,7 +847,7 @@ WITH
     MEDIANAME = 'AdventureWorksSet0';
 ```
 
-### <a name="create_multifamily_mirrored_media_set"></a> F. Criando e fazendo backup em um conjunto de mídias espelhado de várias famílias
+### <a name="f-creating-and-backing-up-to-a-multifamily-mirrored-media-set"></a><a name="create_multifamily_mirrored_media_set"></a> F. Criando e fazendo backup em um conjunto de mídias espelhado de várias famílias
 
 O exemplo a seguir cria um conjunto de mídias espelhado no qual cada espelho consiste em duas famílias de mídia. Em seguida, o exemplo faz backup do banco de dados [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] nos dois espelhos.
 
@@ -860,7 +860,7 @@ WITH
     MEDIANAME = 'AdventureWorksSet1';
 ```
 
-### <a name="existing_mirrored_media_set"></a> G. Fazendo backup em um conjunto de mídias espelhado existente
+### <a name="g-backing-up-to-an-existing-mirrored-media-set"></a><a name="existing_mirrored_media_set"></a> G. Fazendo backup em um conjunto de mídias espelhado existente
 
 O exemplo a seguir anexa um conjunto de backup ao conjunto de mídias criado no exemplo anterior.
 
@@ -876,7 +876,7 @@ WITH
 > [!NOTE]
 > NOINIT, que é o padrão, é mostrado aqui para maior clareza.
 
-### <a name="creating_compressed_backup_new_media_set"></a> H. Criando um backup compactado em um novo conjunto de mídias
+### <a name="h-creating-a-compressed-backup-in-a-new-media-set"></a><a name="creating_compressed_backup_new_media_set"></a> H. Criando um backup compactado em um novo conjunto de mídias
 
 O exemplo a seguir formata a mídia, criando um novo conjunto de mídias e executa um backup completo compactado do banco de dados [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)].
 
@@ -887,7 +887,7 @@ WITH
     COMPRESSION;
 ```
 
-### <a name="url"></a> I. Fazer backup do serviço de Armazenamento de Blobs do Microsoft Azure
+### <a name="i-backing-up-to-the-microsoft-azure-blob-storage-service"></a><a name="url"></a> I. Fazer backup do serviço de Armazenamento de Blobs do Microsoft Azure
 
 O exemplo faz um backup completo do banco de dados do `Sales` no serviço de Armazenamento de Blobs do Microsoft Azure. O nome da Conta de armazenamento é `mystorageaccount`. O contêiner é chamado `myfirstcontainer`. Uma política de acesso armazenado foi criada com direitos de leitura, gravação, exclusão e lista. A credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, foi criada usando uma Assinatura de Acesso Compartilhado associada à Política de Acesso Armazenado. Para obter informações sobre o backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no serviço de Armazenamento de Blobs do Microsoft Azure, consulte [Backup e restauração do SQL Server com o serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) e [Backup do SQL Server em uma URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
@@ -897,7 +897,7 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5;
 ```
 
-### <a name="backup_progress"></a> J. Acompanhar o progresso da instrução de backup
+### <a name="j-track-the-progress-of-backup-statement"></a><a name="backup_progress"></a> J. Acompanhar o progresso da instrução de backup
 
 A seguinte consulta retorna informações sobre as instruções de backup atualmente em execução:
 ```sql
@@ -1095,7 +1095,7 @@ As permissões BACKUP DATABASE usam como padrão os membros da função de servi
 
 Os problemas de propriedade e permissão na URL podem interferir em uma operação de backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser capaz de ler e gravar no dispositivo; a conta sob a qual o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa deve ter permissões de gravação.
 
-## <a name="examples"></a> Exemplos
+## <a name="examples"></a><a name="examples"></a> Exemplos
 
 O exemplo faz um backup COPY_ONLY do `Sales` no serviço de Armazenamento de Blobs do Microsoft Azure. O nome da Conta de armazenamento é `mystorageaccount`. O contêiner é chamado `myfirstcontainer`. Uma política de acesso armazenado foi criada com direitos de leitura, gravação, exclusão e lista. A credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, foi criada usando uma Assinatura de Acesso Compartilhado associada à Política de Acesso Armazenado. Para obter informações sobre o backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no serviço de Armazenamento de Blobs do Microsoft Azure, consulte [Backup e restauração do SQL Server com o serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) e [Backup do SQL Server em uma URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
@@ -1254,7 +1254,7 @@ Para executar um backup, o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] primeir
 
 Coloca um bloqueio ExclusiveUpdate no objeto DATABASE.
 
-## <a name="Security"></a> Segurança
+## <a name="security"></a><a name="Security"></a> Segurança
 
 Os backups do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] não são armazenados no dispositivo. Portanto, sua equipe de TI é responsável por gerenciar todos os aspectos de segurança do backup. Por exemplo, isso inclui gerenciar a segurança dos dados de backup, a segurança do servidor usado para armazenar os backups e a segurança da infraestrutura de rede que conecta o servidor de backup ao dispositivo do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 

@@ -17,10 +17,10 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5e7c3a2fd690b7a19f7d94de7e8d4fbbd9cac355
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75253588"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemplo: configurar espelhamento de banco de dados usando certificados (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "75253588"
   
  Ao copiar um certificado para outro sistema, use um método de cópia seguro. Seja extremamente cauteloso para manter todos os seus certificados em segurança.  
   
-##  <a name="ExampleH2"></a> Exemplo  
+##  <a name="example"></a><a name="ExampleH2"></a> Exemplo  
  O exemplo a seguir demonstra o que deve ser feito em um parceiro que reside em HOST_A. Neste exemplo, os dois parceiros são as instâncias de servidor padrão em três sistemas de computador. As duas instâncias de servidor são executadas em domínios não confiáveis do Windows, portanto, é necessária autenticação baseada em certificado.  
   
  A função principal inicial é assumida pelo HOST_A, e a função de espelho é assumida pelo HOST_B.  
@@ -62,7 +62,7 @@ ms.locfileid: "75253588"
   
 4.  [Configurando os parceiros de espelhamento](#ConfigureMirroringPartners)  
   
-###  <a name="ConfiguringOutboundConnections"></a> Configurando conexões de saída  
+###  <a name="configuring-outbound-connections"></a><a name="ConfiguringOutboundConnections"></a> Configurando conexões de saída  
  **Para configurar Host_A para conexões de saída**  
   
 1.  No banco de dados mestre, crie a chave mestra de banco de dados, se necessário.  
@@ -156,7 +156,7 @@ ms.locfileid: "75253588"
   
  [&#91;Início do Exemplo&#93;](#ExampleH2)  
   
-###  <a name="ConfigureInboundConnections"></a> Configurando conexões de saída  
+###  <a name="configuring-inbound-connections"></a><a name="ConfigureInboundConnections"></a> Configurando conexões de saída  
  **Para configurar Host_A para conexões de entrada**  
   
 1.  Crie um logon em HOST_A para HOST_B.  
@@ -233,7 +233,7 @@ ms.locfileid: "75253588"
 ### <a name="creating-the-mirror-database"></a>Criando o banco de dados espelho  
  Para obter informações sobre como criar um banco de dados espelho, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-###  <a name="ConfigureMirroringPartners"></a> Configurando os parceiros de espelhamento  
+###  <a name="configuring-the-mirroring-partners"></a><a name="ConfigureMirroringPartners"></a> Configurando os parceiros de espelhamento  
   
 1.  Na instância de servidor espelho em HOST_B, defina a instância de servidor em HOST_A como o parceiro (fazendo dele a instância de servidor principal inicial). Substitua um endereço de rede válido por `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
@@ -267,7 +267,7 @@ ms.locfileid: "75253588"
   
  [&#91;Início do Exemplo&#93;](#ExampleH2)  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

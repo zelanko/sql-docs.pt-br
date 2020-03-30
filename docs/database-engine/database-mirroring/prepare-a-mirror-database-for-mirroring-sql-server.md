@@ -16,10 +16,10 @@ ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f93ea5a9b37abcfac0310619b971e3ec5f1e625f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75255977"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Preparar um banco de dados espelho para espelhamento (SQL Server)
@@ -46,9 +46,9 @@ ms.locfileid: "75255977"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Requirements"></a> Requisitos  
+###  <a name="requirements"></a><a name="Requirements"></a> Requisitos  
   
 -   As instâncias de servidor principal e espelho devem ser executadas na mesma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Embora o servidor espelho possa ter uma versão posterior do SQL Server, essa configuração é recomendável somente durante um processo de atualização cuidadosamente planejado. Nessa configuração, você corre o risco de um failover automático, no qual a movimentação de dados é suspensa automaticamente porque os dados não podem migrar para uma versão anterior do SQL Server. Para obter mais informações, veja [Atualizando instâncias espelhadas](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
@@ -64,13 +64,13 @@ ms.locfileid: "75255977"
   
 -   O sistema onde você planeja criar o banco de dados espelho deve ter uma unidade de disco com espaço suficiente para conter o banco de dados espelho.  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Não é possível espelhar os bancos de dados do sistema **mestre**, **msdb**, **temp**ou **modelo** .  
   
 -   Não é possível espelhar um banco de dados que pertence a um [grupo de disponibilidade AlwaysOn](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Use um backup de banco de dados completo muito recente ou diferencial recente do banco de dados principal.  
   
@@ -87,22 +87,22 @@ ms.locfileid: "75255977"
   
 -   Em um banco de dados de produção, sempre faça backup em um dispositivo separado.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  TRUSTWORTHY é definido como OFF em um backup de banco de dados. Portanto, em um novo banco de dados espelho, TRUSTWORTHY será sempre OFF. Se o banco de dados tiver que ser confiável depois de um failover, serão necessárias etapas de instalação adicionais. Para obter mais informações, veja [Configurar um banco de dados espelho para usar a propriedade confiável &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
   
  Para obter informações sobre como habilitar a decodificação automática da chave mestre de um banco de dados espelho, veja [Configurar um banco de dados espelho criptografado](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Proprietário de banco de dados ou administrador do sistema.  
   
-##  <a name="PrepareToRestartMirroring"></a> Para preparar um banco de dados espelho existente para reiniciar o espelhamento  
+##  <a name="to-prepare-an-existing-mirror-database-to-restart-mirroring"></a><a name="PrepareToRestartMirroring"></a> Para preparar um banco de dados espelho existente para reiniciar o espelhamento  
  Se o espelhamento foi removido e o banco de dados espelho ainda está no estado de RECOVERING, você pode reinicializar o espelhamento.  
   
 1.  Faça pelo menos um backup de log no banco de dados principal. Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)).  
   
 2.  No banco de dados espelho, use RESTORE WITH NORECOVERY para restaurar todos os backups de logs efetuados no banco de dados principal desde que o espelhamento foi removido. Para obter mais informações, veja [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
-##  <a name="CombinedProcedure"></a> Para preparar um novo banco de dados espelho  
+##  <a name="to-prepare-a-new-mirror-database"></a><a name="CombinedProcedure"></a> Para preparar um novo banco de dados espelho  
  **Para preparar um banco de dados espelho**  
   
 > [!NOTE]  
@@ -131,13 +131,13 @@ ms.locfileid: "75255977"
   
     -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
-    -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) e [RESTORE Arguments &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+    -   [RESTORE &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/restore-statements-transact-sql.md) e [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 7.  Usando RESTORE WITH NORECOVERY, aplique quaisquer backups de log pendentes ou backups ao banco de dados espelho.  
   
     -   [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  Antes de poder iniciar uma sessão de espelhamento de banco de dados, é preciso criar o banco de dados espelho. Isso deve ser feito antes de iniciar a sessão de espelhamento.  
   
  Esse exemplo usa o banco de dados de exemplo do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] que, por padrão, usa o modelo de recuperação simples.  
@@ -237,7 +237,7 @@ ms.locfileid: "75255977"
   
  Para obter um exemplo completo de configuração de espelhamento de banco de dados, exibição da configuração de segurança, preparo do banco de dados espelho, configuração de parceiros e adição de uma testemunha, veja [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de preparar um banco de dados espelho  
+##  <a name="follow-up-after-preparing-a-mirror-database"></a><a name="FollowUp"></a> Acompanhamento: depois de preparar um banco de dados espelho  
   
 1.  Se algum backup de log adicional tiver sido realizado desde sua operação RESTORE LOG mais recente, você deverá aplicar manualmente todos os backups de log adicionais, usando RESTORE WITH NORECOVERY.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "75255977"
   
 4.  Se o banco de dados precisar estar confiável após um failover, serão necessárias etapas adicionais de instalação após o início do espelhamento. Para obter mais informações, veja [Configurar um banco de dados espelho para usar a propriedade confiável &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   

@@ -21,10 +21,10 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298311"
 ---
 # <a name="execute-sql-task"></a>Tarefa Executar SQL
@@ -272,7 +272,7 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
   
 -   [Obtendo valores de códigos de retorno](#Return_codes)    
   
-###  <a name="Parameter_names_and_markers"></a> Marcadores e nomes de parâmetro  
+###  <a name="parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a> Marcadores e nomes de parâmetro  
  Dependendo do tipo de conexão usado pela tarefa Executar SQL, a sintaxe do comando SQL utiliza marcadores de parâmetro diferentes. Por exemplo, o tipo de gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] exige que o comando SQL use um marcador de parâmetro no formato **\@varParameter**, enquanto que o tipo de conexão OLE DB exige o marcador de parâmetro ponto de interrogação (?).  
   
  Os nomes que você pode usar como nomes de parâmetro nos mapeamentos entre as variáveis e os parâmetros também variam por tipo de gerenciador de conexões. Por exemplo, o tipo de gerenciador de conexão [!INCLUDE[vstecado](../../includes/vstecado-md.md)] usa um nome definido pelo usuário com um prefixo \@, enquanto o tipo de gerenciador de conexões OLE DB requer que você use o valor numérico de ordinal de base 0 como o nome do parâmetro.  
@@ -307,7 +307,7 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
   
  Quando você usa um gerenciador de conexões OLE DB, não pode usar subconsultas com parâmetros, porque a tarefa Executar SQL não pode derivar informações de parâmetro por meio do provedor OLE DB. Entretanto, você pode usar uma expressão para concatenar os valores de parâmetro na cadeia de caracteres de consulta de definir a propriedade SqlStatementSource da tarefa.  
   
-###  <a name="Date_and_time_data_types"></a> Usar parâmetros com tipos de dados de data e hora  
+###  <a name="use-parameters-with-date-and-time-data-types"></a><a name="Date_and_time_data_types"></a> Usar parâmetros com tipos de dados de data e hora  
   
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Usar parâmetros de data e hora com os gerenciadores de conexões ADO.NET e ADO  
  Ao ler dados de tipos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **time** e **datetimeoffset**, uma tarefa Executar SQL que usa um [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ou o gerenciador de conexão ADO tem os seguintes requisitos adicionais:  
@@ -356,7 +356,7 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
   
  Se os dados não forem armazenados no parâmetro de entrada ou saída apropriado, o pacote falhará.  
   
-###  <a name="WHERE_clauses"></a> Usar parâmetros em cláusulas WHERE  
+###  <a name="use-parameters-in-where-clauses"></a><a name="WHERE_clauses"></a> Usar parâmetros em cláusulas WHERE  
  Os comandos SELECT, INSERT, UPDATE e DELETE frequentemente incluem cláusulas WHERE para especificar filtros que definem as condições que cada linha nas tabelas de origem devem atender para se qualificar para um comando SQL. Os parâmetros fornecem os valores de filtro nas cláusulas WHERE.  
   
  Você pode usar marcadores de parâmetro para fornecer valores de parâmetros dinamicamente. As regras para quais marcadores e nomes de parâmetros podem ser usados na instrução SQL dependem do tipo de gerenciador de conexões utilizado por Executar SQL.  
@@ -377,7 +377,7 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
   
 -   O tipo de conexão [!INCLUDE[vstecado](../../includes/vstecado-md.md)] usa os nomes de parâmetro \@parmMinProductID e \@parmMaxProductID.  
   
-###  <a name="Stored_procedures"></a> Usar parâmetros com procedimentos armazenados  
+###  <a name="use-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a> Usar parâmetros com procedimentos armazenados  
  Os comandos SQL que executam procedimentos armazenados também podem usar mapeamento de parâmetro. As regras de como usar marcadores e nomes de parâmetros dependem do tipo de gerenciador de conexões utilizado por Executar SQL, assim como as regras para consultas parametrizadas.  
   
  A tabela a seguir lista exemplos do comando EXEC por tipo de gerenciador de conexões. Os exemplos executam o procedimento armazenado **uspGetBillOfMaterials** em [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. O procedimento armazenado usa os parâmetros `@StartProductID` e `@CheckDate` **entrada**.  
@@ -464,7 +464,7 @@ Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Exec
   
 14. Clique em **OK**.  
 
-##  <a name="Return_codes"></a> Obter os valores de códigos de retorno  
+##  <a name="get-the-values-of-return-codes"></a><a name="Return_codes"></a> Obter os valores de códigos de retorno  
  Um procedimento armazenado pode retornar um valor inteiro chamado código de retorno para indicar o status de execução de um procedimento. Para implementar códigos de retorno na tarefa Executar SQL, use parâmetros do tipo **ReturnValue** .  
   
  A tabela a seguir lista, por tipo de conexão, alguns exemplos de comandos EXEC que implementam códigos de retorno. Todos os exemplos usam um parâmetro **input** . As regras de uso de marcadores e nomes de parâmetro são as mesmas para todos os tipos de parâmetros: **Input**, **Output** e **ReturnValue**.  
@@ -493,7 +493,7 @@ Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Exec
   
 -   [Popular uma variável com um conjunto de resultados](#Populate_variable_with_result_set)  
   
-###  <a name="Result_set_type"></a> Especificar um tipo de conjunto de resultados  
+###  <a name="specify-a-result-set-type"></a><a name="Result_set_type"></a> Especificar um tipo de conjunto de resultados  
  O a tarefa Executar SQL dá suporte aos seguintes tipos de conjuntos de resultados:  
   
 -   O conjunto de resultados **Nenhum** é usado quando a consulta não retorna nenhum resultado. Por exemplo, esse conjunto de resultados é usado para consultas que adicionam, alteram e excluem registros em uma tabela.  
@@ -506,7 +506,7 @@ Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Exec
   
  Se a tarefa Executar SQL usar o **Conjunto de resultados completo** e a consulta retornar vários conjuntos de linhas, a tarefa retornará apenas o primeiro. Se este conjunto de linhas gerar um erro, a tarefa informará o erro. Se outros conjuntos de linhas gerarem erros, a tarefa não os informará.  
   
-###  <a name="Populate_variable_with_result_set"></a> Popular uma variável com um conjunto de resultados  
+###  <a name="populate-a-variable-with-a-result-set"></a><a name="Populate_variable_with_result_set"></a> Popular uma variável com um conjunto de resultados  
  Você poderá associar o conjunto de resultados retornado por uma consulta a uma variável definida pelo usuário se o tipo de conjunto de resultados for uma única linha, um conjunto de linhas ou XML.  
   
  Se o tipo de conjunto resultante for **Linha simples**, você poderá associar uma coluna no resultado de retorno a uma variável usando o nome da coluna como o nome do conjunto de resultados ou pode usar a posição ordinal da coluna na lista de colunas como o nome do conjunto de resultados. Por exemplo, o nome do conjunto de resultados da consulta `SELECT Color FROM Production.Product WHERE ProductID = ?` pode ser **Color** ou **0**. Se a consulta retornar várias colunas e você quiser acessar os valores em todas elas, associe cada coluna a uma variável diferente. Se você mapear as colunas para variáveis usando números como nomes do conjunto de resultados, os números refletirão a ordem em que as colunas aparecerão na lista de colunas da consulta. Por exemplo, na consulta `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`, você usa 0 para a coluna **Color** e 1 para a coluna **ListPrice** . A capacidade de usar um nome de coluna como o nome do conjunto de resultados depende do provedor que a tarefa está configurada para usar. Nem todos os provedores tornam os nomes das colunas disponíveis.  

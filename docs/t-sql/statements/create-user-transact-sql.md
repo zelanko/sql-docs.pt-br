@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fbcdfc0142d448c8ef02898dd8d5610954423c3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056808"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -277,7 +277,7 @@ Ao criar o usuário no banco de dados da instância gerenciada do Banco de Dados
 
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
-##  <a name="SyntaxSummary"></a> Resumo da sintaxe  
+##  <a name="syntax-summary"></a><a name="SyntaxSummary"></a> Resumo da sintaxe  
  **Usuários baseados em logons no mestre**  
   
  A lista a seguir mostra a sintaxe possível para usuários baseados em logons. As opções de esquema padrão não são listadas.  
@@ -388,7 +388,7 @@ CREATE USER JinghaoLiu FOR CERTIFICATE CarnationProduction50;
 GO   
 ```  
   
-###  <a name="withoutLogin"></a> D. Criando e usando um usuário sem um logon  
+###  <a name="d-creating-and-using-a-user-without-a-login"></a><a name="withoutLogin"></a> D. Criando e usando um usuário sem um logon  
  O exemplo a seguir cria um usuário de banco de dados `CustomApp` que não mapeia para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O exemplo concede uma permissão de usuário `adventure-works\tengiz0` para representar o usuário `CustomApp`.  
   
 ```  

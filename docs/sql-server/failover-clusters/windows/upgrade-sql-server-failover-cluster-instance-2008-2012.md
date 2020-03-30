@@ -12,17 +12,17 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6b9d0c843e9a116a6d89198db22053224c2f1d19
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242851"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Fazer upgrade das instâncias do SQL Server em execução em clusters do Windows Server 2008/2008 R2/2012
 
 O [!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] e [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] impedem que os clusters de failover do Windows Server executem upgrades do sistema operacional in-loco, limitando a versão permitida do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de um cluster. Depois que o cluster é atualizado para, no mínimo, o [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], ele pode permanecer atualizado.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 -   Antes de executar uma das estratégias de migração, é necessário preparar um cluster de failover paralelo do Windows Server com o Windows Server 2016/2012 R2. Todos os nós que incluem FCIs (instâncias de cluster de failover) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devem ser ingressados no cluster do Windows com as FCIs paralelas instaladas. Os computadores autônomos **não devem** ser ingressados no cluster de failover do Windows Server antes da migração. Os bancos de dados de usuário devem ser sincronizados no novo ambiente antes da migração.
 -   Todas as instâncias de destino devem executar a mesma versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de sua instância paralela no ambiente original, com os mesmos nomes e IDs de instância e devem ser instaladas com os mesmos recursos. Os caminhos de instalação e a estrutura de diretórios devem ser idênticos nos computadores de destino. Isso não inclui os nomes da rede virtual da FCI, que devem ser diferentes antes da migração. Todos os recursos habilitados pela instância original (Always On, FILESTREAM, etc.) devem ser habilitados na instância de destino.

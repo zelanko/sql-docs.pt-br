@@ -14,10 +14,10 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c636db77ffdf8249cf03814abca031b0897fb4c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909507"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Reverter um banco de dados a um instantâneo do banco de dados
@@ -34,9 +34,9 @@ ms.locfileid: "72909507"
   
 -   **Para reverter um banco de dados para um instantâneo do banco de dados usando:**  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  Não há suporte para a reversão nas seguintes condições:  
   
 -   Há vários instantâneos do banco de dados. Para reverter, deve haver apenas um instantâneo para o banco de dados para o qual você planeja reverter.  
@@ -67,7 +67,7 @@ ms.locfileid: "72909507"
   
 -   A reversão cancela todos os catálogos de texto completo.  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Verifique se o banco de dados de origem e o instantâneo do banco de dados atendem aos seguintes pré-requisitos:  
   
 -   Verifique se o banco de dados não foi corrompido.  
@@ -79,12 +79,12 @@ ms.locfileid: "72909507"
   
 -   Descarte todos os outros instantâneos que existem no banco de dados. Para obter mais informações, veja [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Qualquer usuário que tenha permissões RESTORE DATABASE no banco de dados de origem pode revertê-lo ao estado em que estava quando o instantâneo de banco de dados foi criado.  
   
-##  <a name="TsqlProcedure"></a> Como reverter o banco de dados para um instantâneo do banco de dados (usando Transact-SQL)  
+##  <a name="how-to-revert-a-database-to-a-database-snapshot-using-transact-sql"></a><a name="TsqlProcedure"></a> Como reverter o banco de dados para um instantâneo do banco de dados (usando Transact-SQL)  
  **Para reverter um banco de dados a um instantâneo do banco de dados**  
   
 > [!NOTE]  
@@ -118,14 +118,14 @@ ms.locfileid: "72909507"
   
 6.  Opcionalmente, faça backup do banco de dados revertido, especialmente se usar o modelo de recuperação completa (ou registrada em massa). Para fazer backup de um banco de dados, veja [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
 
-###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  Esta seção contém os seguintes exemplos de reversão de um banco de dados para um instantâneo do banco de dados:  
   
 -   a. [Revertendo um instantâneo no banco de dados AdventureWorks](#Reverting_AW)  
   
 -   B. [Revertendo um instantâneo no banco de dados Sales](#Reverting_Sales)  
   
-####  <a name="Reverting_AW"></a> A. Revertendo um instantâneo no banco de dados AdventureWorks  
+####  <a name="a-reverting-a-snapshot-on-the-adventureworks-database"></a><a name="Reverting_AW"></a> A. Revertendo um instantâneo no banco de dados AdventureWorks  
  Este exemplo presume que existe apenas um instantâneo atualmente no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Por obter o exemplo que cria o instantâneo para o qual o banco de dados é revertido, veja [Criar um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
@@ -136,7 +136,7 @@ DATABASE_SNAPSHOT = 'AdventureWorks_dbss1800';
 GO  
 ```  
   
-####  <a name="Reverting_Sales"></a> B. Revertendo um instantâneo no banco de dados Sales  
+####  <a name="b-reverting-a-snapshot-on-the-sales-database"></a><a name="Reverting_Sales"></a> B. Revertendo um instantâneo no banco de dados Sales  
  Este exemplo presume que existem dois instantâneos atualmente no banco de dados **Sales** : **sales_snapshot0600** e **sales_snapshot1200**. O exemplo exclui o mais antigo dos instantâneos e reverte o banco de dados para o instantâneo mais recente.  
   
  Para obter o código para criar o banco de dados de exemplo e instantâneos dos quais esse exemplo depende, consulte:  
@@ -158,7 +158,7 @@ RESTORE DATABASE Sales FROM DATABASE_SNAPSHOT = 'sales_snapshot1200';
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Criar um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   

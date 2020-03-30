@@ -20,16 +20,16 @@ ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 228cb40e1c0f40d9525ca83129878d30b722b910
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893422"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Desabilitar ou pausar o processamento de relatório e assinatura  
 Há várias abordagens que você pode usar para desabilitar ou pausar o processamento de relatório e assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As abordagens neste artigo abrangem a desabilitação de uma assinatura para interromper a conexão com a fonte de dados. Nem todas as abordagens são possíveis com ambos os modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. As seguintes tabelas resumem os métodos e os modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] compatíveis:  
   
-##  <a name="bkmk_top"></a> Neste artigo  
+##  <a name="in-this-article"></a><a name="bkmk_top"></a> Neste artigo  
   
 ||Modo de servidor com suporte|  
 |-|---------------------------|  
@@ -40,7 +40,7 @@ Há várias abordagens que você pode usar para desabilitar ou pausar o processa
 |[Remover permissões de gerenciamento de assinatura da função (modo Nativo)](#bkmk_remove_manage_subscriptions_permission)|nativo|  
 |[Desabilitar extensões de entrega](#bkmk_disable_extensions)|Modo nativo e do SharePoint|  
   
-##  <a name="bkmk_disable_subscription"></a>Habilitar e desabilitar assinaturas  
+##  <a name="enable-and-disable-subscriptions"></a><a name="bkmk_disable_subscription"></a>Habilitar e desabilitar assinaturas  
   
 >[!TIP]  
 >Novo no SQL 2016 Reporting Services, *habilitar e desabilitar assinaturas*. Novas opções de interface de usuário permitem que você habilite e desabilite rapidamente as assinaturas. As assinaturas desabilitadas mantêm suas outras propriedades de configuração, como o cronograma, e podem ser facilmente reabilitadas. Você também pode habilitar e desabilitar programaticamente assinaturas ou auditar quais assinaturas são desabilitadas.  
@@ -117,14 +117,14 @@ ForEach ($subscription in $subscriptions)
 }  
 ```  
   
-##  <a name="bkmk_pause_schedule"></a> Pausar uma agenda compartilhada  
+##  <a name="pause-a-shared-schedule"></a><a name="bkmk_pause_schedule"></a> Pausar uma agenda compartilhada  
  Se um relatório ou assinatura for executado a partir de uma agenda compartilhada, você pode pausar a agenda para impedir o processamento. Todos os processamentos de relatório e assinatura controlados pelo agendamento serão adiados até o agendamento ser retomado.  
   
 -   **Modo SharePoint:** ![configurações do SharePoint:](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint") nas **Configurações do site**, selecione **Gerenciar agendas compartilhadas**. Selecione a agenda e clique em **Pausar agendamentos selecionados**.  
   
 -   **Modo Nativo:** No portal da Web, selecione o botão **Configurações** ![botão Configurações](media/ssrs-portal-settings-gear.png) na barra de menus, na parte superior da tela do portal da Web, depois selecione **Configurações do site** no menu suspenso. Selecione a guia **Agendamentos** para exibir a página de agendamentos. Marque as caixas de seleção ao lado dos agendamentos que deseja habilitar ou desabilitar e, em seguida, selecione o botão **Habilitar** ou **Desabilitar**, respectivamente, para executar a ação desejada. A coluna de status será atualizada para "Desabilitado" ou "Habilitado", conforme a opção escolhida.  
   
-##  <a name="bkmk_disable_shared_datasource"></a> Desabilitar uma fonte de dados compartilhada  
+##  <a name="disable-a-shared-data-source"></a><a name="bkmk_disable_shared_datasource"></a> Desabilitar uma fonte de dados compartilhada  
  Uma vantagem de usar fontes de dados compartilhadas é poder desabilitá-las para impedir a execução de um relatório ou assinatura controlada por dados. Desabilitar uma fonte de dados compartilhada desconecta o relatório de sua fonte externa. Enquanto está desabilitada, a fonte de dados fica indisponível para todos os relatórios e assinaturas que a utilizam.  
   
  Observe que o relatório ainda é carregado mesmo que a fonte de dados não esteja disponível. O relatório não contém dados, mas os usuários com as permissões adequadas podem acessar as páginas de propriedade, as configurações de segurança, o histórico de relatórios e as informações de assinatura associadas ao relatório.  
@@ -133,12 +133,12 @@ ForEach ($subscription in $subscriptions)
   
 -   **Modo Nativo:** para desabilitar uma fonte de dados compartilhada em um servidor de relatório no modo nativo, abra a fonte de dados no portal da Web e desmarque a caixa de seleção **Habilitar esta fonte de dados**.  
   
-##  <a name="bkmk_modify_role_assignment"></a> Modificar atribuições de função para impedir o acesso a um relatório (modo nativo)  
+##  <a name="modify-role-assignments-to-prevent-access-to-a-report-native-mode"></a><a name="bkmk_modify_role_assignment"></a> Modificar atribuições de função para impedir o acesso a um relatório (modo nativo)  
 Uma maneira de tornar um relatório indisponível é remover temporariamente a atribuição de função que fornece acesso ao relatório. Esta abordagem pode ser usada em todos os relatórios, independentemente de como a conexão de fonte de dados seja feita. Esta abordagem visa apenas o relatório, sem afetar a operação de outros relatórios ou itens.  
   
  Para remover a atribuição de função, abra a página **Segurança** do relatório no portal da Web. Se o relatório herda a segurança de um pai, é possível selecionar **Personalizar segurança** e selecionar **Confirmar** na caixa de diálogo **Segurança do item** para criar uma política de segurança restritiva que omite as atribuições de função que fornecem amplo acesso (por exemplo, você pode remover uma atribuição de função que fornece acesso a Todos e manter a atribuição de função que fornece acesso a um pequeno grupo de usuários, como Administradores).  
   
-##  <a name="bkmk_remove_manage_subscriptions_permission"></a> Remover permissões de gerenciamento de assinatura da função (modo nativo)  
+##  <a name="remove-manage-subscription-permissions-from-role-native-mode"></a><a name="bkmk_remove_manage_subscriptions_permission"></a> Remover permissões de gerenciamento de assinatura da função (modo nativo)  
  Para impedir que os usuários criem assinaturas, desmarque a tarefa **Gerenciar assinaturas individuais** da função. Quando essa tarefa é removida, as páginas Assinatura não estão disponíveis. No portal da Web, a página Minhas Assinaturas parece estar vazia (não é possível excluí-la), mesmo que contivesse assinaturas anteriormente. A remoção de tarefas relacionadas à assinatura impede que os usuários criem e modifiquem assinaturas, mas não exclui as assinaturas existentes. As assinaturas existentes continuarão sendo executadas até serem excluídas. Para remover a permissão:  
   
 1.  Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
@@ -156,7 +156,7 @@ Uma maneira de tornar um relatório indisponível é remover temporariamente a a
 7.  Clique em **OK** para aplicar as alterações.
 
   
-##  <a name="bkmk_disable_extensions"></a> Desabilitar extensões de entrega  
+##  <a name="disable-delivery-extensions"></a><a name="bkmk_disable_extensions"></a> Desabilitar extensões de entrega  
  Todas as extensões de entrega instaladas em um servidor de relatório estão disponíveis para qualquer usuário que tenha permissão para criar uma assinatura em um relatório específico. As extensões de entrega a seguir estão disponíveis e são configuradas automaticamente:  
   
 -   Compartilhamento de Arquivos do Windows  

@@ -15,17 +15,17 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: de6e6a237c0aa80e2793f33373ec664dfe93f953
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908706"
 ---
 # <a name="load-files-into-filetables"></a>Carregar arquivos em FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Descreve como carregar ou migrar arquivos para FileTables.  
   
-##  <a name="BasicsLoadNew"></a> Carregando ou migrando arquivos para um FileTable  
+##  <a name="loading-or-migrating-files-into-a-filetable"></a><a name="BasicsLoadNew"></a> Carregando ou migrando arquivos para um FileTable  
  O método que você escolhe para carregar ou migrar arquivos para uma FileTable depende em onde os arquivos estão armazenados atualmente.  
   
 |Localização atual dos arquivos|Opções de migração|  
@@ -33,7 +33,7 @@ ms.locfileid: "72908706"
 |Os arquivos estão atualmente armazenados no sistema de arquivos.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tem conhecimento dos arquivos.|Como uma FileTable é semelhante a uma pasta no sistema de arquivos do Windows, você pode carregar arquivos com facilidade em uma nova FileTable usando qualquer um dos métodos disponíveis para mover ou copiar arquivos. Esses métodos incluem o Windows Explorer, opções de linha de comando, inclusive xcopy e robocopy, e scripts ou aplicativos personalizados.<br /><br /> Você não pode converter uma pasta existente em uma FileTable.|  
 |Os arquivos estão atualmente armazenados no sistema de arquivos.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém uma tabela de metadados que possui ponteiros para os arquivos.|A primeira etapa é mover ou copiar os arquivos usando um dos métodos mencionados acima.<br /><br /> A segunda etapa é atualizar a tabela existente de metadados para apontar para o novo local dos arquivos.<br /><br /> Para obter mais informações, confira [Exemplo: migrando arquivos do sistema de arquivos para uma FileTable](#HowToMigrateFiles) neste artigo.|  
   
-###  <a name="HowToLoadNew"></a> Como Carregar arquivos em uma nova FileTable  
+###  <a name="how-to-load-files-into-a-filetable"></a><a name="HowToLoadNew"></a> Como Carregar arquivos em uma nova FileTable  
 Você pode usar os seguintes métodos para carregar arquivos em uma FileTable:  
   
 -   Arrastar e soltar arquivos das pastas de origem para a pasta da nova FileTable no Windows Explorer.  
@@ -42,7 +42,7 @@ Você pode usar os seguintes métodos para carregar arquivos em uma FileTable:
   
 -   Escrever um aplicativo personalizado para mover ou copiar os arquivos em C# ou no Visual Basic.NET. Chamar métodos do namespace **System.IO**.  
   
-###  <a name="HowToMigrateFiles"></a> Exemplo: migrando arquivos do sistema de arquivos para uma FileTable  
+###  <a name="example-migrating-files-from-the-file-system-into-a-filetable"></a><a name="HowToMigrateFiles"></a> Exemplo: migrando arquivos do sistema de arquivos para uma FileTable  
  Neste cenário, seus arquivos são armazenados no sistema de arquivos, e você tem uma tabela de metadados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contém ponteiros para os arquivos. Você deseja mover os arquivos para uma FileTable e, em seguida, substituir o caminho UNC original de cada arquivo dos metadados pelo caminho UNC da FileTable. A função [GetPathLocator & #40. O Transact-SQL e 41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) ajuda você a atingir esse objetivo.  
   
  Para este exemplo, suponha que haja uma tabela de banco de dados existente, **PhotoMetadata**, que contém dados sobre fotografias. Esta tabela tem uma coluna **UNCPath** do tipo **varchar**(512) que contém o caminho UNC real para um arquivo .jpg.  
@@ -77,7 +77,7 @@ UPDATE PhotoMetadata
     SET pathlocator = GetPathLocator(UNCPath);  
 ```  
   
-##  <a name="BasicsBulkLoad"></a> Carregando arquivos em massa em uma FileTable  
+##  <a name="bulk-loading-files-into-a-filetable"></a><a name="BasicsBulkLoad"></a> Carregando arquivos em massa em uma FileTable  
  Um FileTable tem o comportamento semelhante ao de uma tabela normal para operações em massa, com as qualificações a seguir:  
   
  Uma FileTable tem restrições definidas pelo sistema que assegura que a integridade do namespace de arquivo e diretório seja mantida. Essas restrições têm de ser verificadas nos dados carregados em massa na FileTable. Algumas operações de inserção em massa permitem ignorar as restrições de tabela. Os requisitos a seguir são impostos.  
@@ -98,7 +98,7 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO... SELECT * FROM OPENROWSET(BULK ...) com a cláusula IGNORE_CONSTRAINTS.  
   
-###  <a name="HowToBulkLoad"></a> Como Carregar arquivos em massa em uma nova FileTable  
+###  <a name="how-to-bulk-load-files-into-a-filetable"></a><a name="HowToBulkLoad"></a> Como Carregar arquivos em massa em uma nova FileTable  
  Você pode usar vários métodos para carregar arquivos em massa em uma FileTable:  
   
 -   **bcp**  
@@ -121,7 +121,7 @@ UPDATE PhotoMetadata
   
  Para obter informações sobre como desabilitar as restrições de FileTable, consulte [Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md).  
   
-###  <a name="disabling"></a> Como Desabilitar restrições de FileTable para carregamento em massa  
+###  <a name="how-to-disable-filetable-constraints-for-bulk-loading"></a><a name="disabling"></a> Como Desabilitar restrições de FileTable para carregamento em massa  
  Para carregar os arquivos em massa em uma FileTable sem a sobrecarga de impor as restrições definidas pelo sistema, você pode desabilitar temporariamente as restrições. Para obter mais informações, consulte [Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md).  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -11,10 +11,10 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286510"
 ---
 # <a name="understanding-xa-transactions"></a>Noções básicas sobre transações XA
@@ -116,7 +116,7 @@ Há três maneiras de verificar qual versão do sqljdbc_xa.dll está instalada n
   
 3. Defina a funcionalidade de registro em log conforme mostrado no exemplo de código na próxima seção. Procure a frase "Server XA DLL version:..." no arquivo de log de saída.  
 
-### <a name="BKMK_ServerSide"></a> Configurando as definições de tempo limite do servidor para reversão automática de transações não preparadas  
+### <a name="configuring-server-side-timeout-settings-for-automatic-rollback-of-unprepared-transactions"></a><a name="BKMK_ServerSide"></a> Configurando as definições de tempo limite do servidor para reversão automática de transações não preparadas  
 
 > [!WARNING]  
 > Essa opção do servidor é nova no Microsoft JDBC Driver 4.2 (e superiores) para SQL Server. Para obter o comportamento atualizado, verifique se o arquivo sqljdbc_xa.dll no servidor foi atualizado. Para saber mais sobre como configurar o tempo limite no cliente, veja [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  

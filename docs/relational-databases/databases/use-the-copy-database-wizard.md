@@ -26,10 +26,10 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68127123"
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar o Assistente para Copiar Banco de Dados
@@ -49,7 +49,7 @@ O Assistente para Copiar Banco de Dados move ou copia bancos de dados e determin
 -   Agende a movimentação ou cópia dos bancos de dados.  
   
 
-##  <a name="Restrictions"></a> Limitações e restrições  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   O Assistente para Copiar Banco de Dados não está disponível na edição Express.  
   
@@ -81,7 +81,7 @@ O Assistente para Copiar Banco de Dados move ou copia bancos de dados e determin
 > **IMPORTANTE:** O método **desanexar e anexar** fará com que a propriedade de banco de dados de origem e destino seja definida como o logon que executa o **Assistente para Copiar Banco de Dados**.  Veja [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md) para alterar a propriedade de um banco de dados.
   
   
-##  <a name="Prerequisites"></a> Pré-requisitos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
 -   Verifique se o SQL Server Agent foi iniciado no servidor de destino.  
 
 -   Verifique se os diretórios de dados e de arquivos de log no servidor de origem podem ser acessados por meio do servidor de destino.
@@ -90,7 +90,7 @@ O Assistente para Copiar Banco de Dados move ou copia bancos de dados e determin
 
 > **IMPORTANTE:** No método **desanexar e anexar** , o processo de cópia ou movimentação falhará se não for usada uma conta Proxy do Integration Services.  Em determinadas situações, o banco de dados de origem não será reanexado ao servidor de origem e todas as permissões de segurança do NTFS serão extraídas dos dados e arquivos de log.  Se isso acontecer, navegue até os arquivos, aplique novamente as permissões relevantes e reanexe o banco de dados à instância do SQL Server.
   
-##  <a name="Recommendations"></a> Recomendações  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Para garantir o desempenho ideal de um banco de dados atualizado, execute [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) (atualização de estatísticas) nele.  
   
@@ -98,10 +98,10 @@ O Assistente para Copiar Banco de Dados move ou copia bancos de dados e determin
   
 
   
-###  <a name="Permissions"></a> Permissões  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ser membro da função de servidor fixa **sysadmin** em ambos os servidores, de origem e de destino.  
   
-##  <a name="Overview"></a> As páginas Copiar Banco de Dados do assistente 
+##  <a name="the-copy-database-wizard-pages"></a><a name="Overview"></a> As páginas Copiar Banco de Dados do assistente 
 Inicie o **Assistente para Copiar Banco de Dados** no SQL Server Management Studio por meio do **Pesquisador de Objetos** e expanda **Bancos de Dados**.  Em seguida, clique com o botão direito do mouse em um banco de dados, aponte para **Tarefas**e clique em **Copiar Banco de Dados**.  Se a tela inicial **Bem-vindo ao Assistente para Copiar Banco de Dados** for exibida, clique em **Avançar**.
 
 
@@ -295,7 +295,7 @@ Exibe um resumo das opções selecionadas.  Clique em **Voltar** para alterar um
 -    **Mensagem**  
 Fornece qualquer mensagem que retornou de cada etapa.
 
-##  <a name="Examples"></a> Exemplos
+##  <a name="examples"></a><a name="Examples"></a> Exemplos
 ### <a name="common-steps"></a>**Etapas comuns** 
 Independentemente de você optar por **Mover** ou **Copiar**, **Desanexar e Anexar** ou **SMO**, as cinco etapas listadas abaixo serão as mesmas.  Para resumir, as etapas são listadas aqui uma vez e todos os exemplos serão iniciados na **Etapa 6**.
 
@@ -384,12 +384,12 @@ Neste exemplo, o banco de dados `Sales` será copiado e criado como `SalesCopy` 
 14. Inicie manualmente o Trabalho `SalesCopy weekly refresh`do SQL Server Agent recém-criado.  Examine o histórico de trabalhos e garanta que `SalesCopy` agora existe na instância.
 
   
-##  <a name="FollowUp"></a> Acompanhamento: Após a atualização de um banco de dados  
+##  <a name="follow-up-after-upgrading-a-database"></a><a name="FollowUp"></a> Acompanhamento: Após a atualização de um banco de dados  
  Após o uso do Assistente para Copiar Banco de Dados para atualizar um banco de dados de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados é disponibilizado imediatamente e é atualizado de forma automática. Se o banco de dados tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices dependendo da configuração da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas, e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida como **Importar**, se não houver um catálogo de texto completo disponível, os índices de texto completo associados serão recompilados. Para obter informações sobre como exibir ou alterar a configuração da propriedade **Full-Text Upgrade Option** , veja [Gerenciar e monitorar a pesquisa de texto completo para uma instância de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  Se o nível de compatibilidade de um banco de dados de usuário era 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização. Se o nível de compatibilidade era 90, no banco de dados atualizado, o nível de compatibilidade será definido como 100, que é o nível de compatibilidade mais baixo com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
  
- ## <a name="Post"></a> Considerações sobre pós-cópia ou movimentação
+ ## <a name="post-copy-or-move-considerations"></a><a name="Post"></a> Considerações sobre pós-cópia ou movimentação
  Considere a possibilidade de executar as seguintes etapas após uma **Cópia** ou **Movimentação**:
 -    Alteração da propriedade dos bancos de dados quando o método desanexar e anexar é usado.
 -    Remoção de objetos do servidor no servidor de origem após uma **Movimentação**.

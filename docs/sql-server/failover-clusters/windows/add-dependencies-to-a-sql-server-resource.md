@@ -16,10 +16,10 @@ ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e78380d509d2b291c0794cb408909a10622c3f53
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822067"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Adicionar dependências a um recurso do SQL Server
@@ -30,9 +30,9 @@ ms.locfileid: "74822067"
   
 -   **Para adicionar uma dependência a um recurso do SQL Server, usando:** [Gerenciador de Cluster de Failover do Windows](#WinClusManager)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  É importante observar que se você adicionar qualquer outro recurso ao grupo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , esses recursos deverão sempre ter seus próprios recursos de nomes de rede do SQL exclusivos e seus próprios recursos de endereço IP do SQL.  
   
  Use os recursos de nome de rede do SQL existentes e os recursos de endereço IP do SQL somente para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se os recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] forem compartilhados com outros recursos, os seguintes problemas poderão ocorrer:  
@@ -55,10 +55,10 @@ ms.locfileid: "74822067"
   
      Se você instalar o MS DTC em seu grupo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e tiver outros recursos que sejam dependentes do MS DTC, o MS DTC não estará disponível se esse grupo estiver offline ou durante um failover. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomendará que você coloque o MS DTC em seu próprio grupo com seu próprio recurso de disco físico, se for possível.  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Se você instalar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um grupo de recursos do WSFC com várias unidades de disco em uma das unidades, o recurso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será definido para ser dependente somente daquela unidade. Para colocar dados ou logs em outro disco, primeiro você deverá adicionar uma dependência ao recurso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para o disco adicional.  
   
-##  <a name="WinClusManager"></a> Usando o snap-in Gerenciador de Cluster de Failover  
+##  <a name="using-the-failover-cluster-manager-snap-in"></a><a name="WinClusManager"></a> Usando o snap-in Gerenciador de Cluster de Failover  
  **Para adicionar uma dependência a um recurso do SQL Server**  
   
 -   Abra o snap-in Gerenciador de Cluster de Failover.  

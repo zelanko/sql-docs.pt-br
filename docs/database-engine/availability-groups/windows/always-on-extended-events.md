@@ -11,10 +11,10 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991557"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Configurar eventos estendidos para Grupos de Disponibilidade AlwaysOn
@@ -25,7 +25,7 @@ ms.locfileid: "67991557"
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
    
-##  <a name="BKMK_alwayson_health"></a> Sessão Alwayson_health  
+##  <a name="alwayson_health-session"></a><a name="BKMK_alwayson_health"></a> Sessão Alwayson_health  
  A sessão de eventos estendidos alwayson_health é criada automaticamente quando você cria o grupo de disponibilidade e captura um subconjunto dos eventos relacionados do grupo de disponibilidade. Esta sessão é pré-configurada como uma ferramenta útil e conveniente para ajudá-lo a começar rapidamente ao solucionar problemas de um grupo de disponibilidade. O assistente Criar grupo de disponibilidade inicia automaticamente a sessão em cada réplica de disponibilidade participante configurada no assistente.  
   
 > [!IMPORTANT]  
@@ -40,7 +40,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 Para obter informações sobre alguns dos eventos cobertos pelo alwayson_health, veja a [referência de eventos estendidos](always-on-extended-events.md#BKMK_Reference).  
 
 
-##  <a name="BKMK_Debugging"></a> Eventos estendidos para depuração  
+##  <a name="extended-events-for-debugging"></a><a name="BKMK_Debugging"></a> Eventos estendidos para depuração  
  Além dos eventos estendidos cobertos pela sessão Alwayson_health, o SQL Server define um amplo conjunto de eventos de depuração para grupos de disponibilidade. Para aproveitar esses eventos estendidos adicionais em uma sessão, siga os procedimentos abaixo:  
   
 1.  No **Pesquisador de Objetos**, expanda **Gerenciamento**, **Eventos Estendidos** e, em seguida, **Sessões**.  
@@ -57,7 +57,7 @@ Para obter informações sobre alguns dos eventos cobertos pelo alwayson_health,
   
 7.  Ao terminar a sessão, clique em **OK** para fechá-la. Verifique se a sessão foi iniciada para capturar os eventos que você selecionou.  
   
-##  <a name="BKMK_Reference"></a> Referência de eventos estendidos de Grupos de Disponibilidade Always On  
+##  <a name="always-on-availability-groups-extended-events-reference"></a><a name="BKMK_Reference"></a> Referência de eventos estendidos de Grupos de Disponibilidade Always On  
  Esta seção descreve alguns dos eventos estendidos que são usados para monitorar os grupos de disponibilidade.  
   
  [availability_replica_state_change](#BKMK_availability_replica_state_change)  
@@ -76,7 +76,7 @@ Para obter informações sobre alguns dos eventos cobertos pelo alwayson_health,
   
  [error_reported (1480): Alteração da função de réplica de banco de dados](#BKMK_error_reported_1480)  
   
-###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
+###  <a name="availability_replica_state_change"></a><a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  Ocorre quando o estado de uma réplica de disponibilidade foi alterado. A criação de um grupo de disponibilidade ou a junção de uma réplica de disponibilidade pode disparar esse evento. É útil para o diagnóstico de failover automático com falha. Ele também pode ser usado para rastrear as etapas de failover.  
   
 #### <a name="event-information"></a>Informações de evento  
@@ -107,7 +107,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_group_lease_expired"></a> availability_group_lease_expired  
+###  <a name="availability_group_lease_expired"></a><a name="BKMK_availability_group_lease_expired"></a> availability_group_lease_expired  
  Ocorre quando o cluster e o grupo de disponibilidade têm um problema de conectividade e o tempo de concessão expirou. Esse evento indica que a conectividade entre o grupo de disponibilidade e o cluster WSFC subjacente foi interrompida. Se o problema de conectividade ocorrer na réplica primária, o evento poderá causar um failover automático ou fazer com que o grupo de disponibilidade fique offline.  
   
 #### <a name="event-information"></a>Informações de evento  
@@ -135,7 +135,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_replica_automatic_failover_validation"></a> availability_replica_automatic_failover_validation  
+###  <a name="availability_replica_automatic_failover_validation"></a><a name="BKMK_availability_replica_automatic_failover_validation"></a> availability_replica_automatic_failover_validation  
  Ocorre quando o failover automático valida a preparação de uma réplica de disponibilidade como uma réplica primária e mostra se a réplica de disponibilidade de destino está pronta para ser a nova réplica primária. Por exemplo, a validação de failover retornará falso se nem todos os bancos de dados estiverem sincronizados ou não estiverem unidos. Esse evento foi projetado para fornecer um ponto de falha durante failovers. Essas informações são de interesse do administrador de banco de dados, especialmente em casos de failovers automáticos, pois um failover automático é uma operação autônoma. O administrador de banco de dados pode examinar o evento para ver por que um failover automático falhou.  
   
 #### <a name="event-information"></a>Informações de evento  
@@ -174,7 +174,7 @@ GO
   
 ```  
   
-###  <a name="BKMK_error_reported"></a> error_reported (vários números de erro): para problemas de conexão ou transporte  
+###  <a name="error_reported-multiple-error-numbers-for-transport-or-connection-issues"></a><a name="BKMK_error_reported"></a> error_reported (vários números de erro): para problemas de conexão ou transporte  
  Cada evento filtrado indica que um problema de conectividade ocorreu no transporte ou no ponto de extremidade de espelhamento de banco de dados do qual esse grupo de disponibilidade depende.  
   
 |Coluna|Descrição|  
@@ -235,7 +235,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_data_movement_suspend_resume"></a> data_movement_suspend_resume  
+###  <a name="data_movement_suspend_resume"></a><a name="BKMK_data_movement_suspend_resume"></a> data_movement_suspend_resume  
  Ocorre quando a movimentação do banco de dados de uma réplica de banco de dados é suspensa ou retomada.  
   
 #### <a name="event-information"></a>Informações de evento  
@@ -278,7 +278,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
+###  <a name="alwayson_ddl_executed"></a><a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
  Ocorre quando uma instrução DDL (linguagem de definição de dados) do grupo de disponibilidade está sendo executada, incluindo CREATE, ALTER ou DROP. O principal objetivo do evento é indicar um problema com uma ação do usuário em uma réplica de disponibilidade ou para indicar o ponto de partida de uma ação operacional, que é seguida por um problema de runtime, como um failover manual, um failover forçado, a movimentação de dados suspensa ou a movimentação de dados retomada.  
   
 #### <a name="event-information"></a>Informações de evento  
@@ -311,7 +311,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_replica_manager_state"></a> availability_replica_manager_state  
+###  <a name="availability_replica_manager_state"></a><a name="BKMK_availability_replica_manager_state"></a> availability_replica_manager_state  
  Ocorre quando o estado do gerenciador de réplica de disponibilidade é alterado. Esse evento indica a pulsação do gerenciador de réplica de disponibilidade. Quando o gerenciador de réplica de disponibilidade não está em estado íntegro, todas as réplicas de disponibilidade da instância do SQL Server ficarão inoperantes.  
   
 #### <a name="event-information"></a>Informações de evento  
@@ -342,7 +342,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_error_reported_1480"></a> error_reported (1480): Alteração da função de réplica de banco de dados  
+###  <a name="error_reported-1480-database-replica-role-change"></a><a name="BKMK_error_reported_1480"></a> error_reported (1480): Alteração da função de réplica de banco de dados  
  Esse evento error_reported filtrado ocorre de forma assíncrona depois da alteração de uma função de réplica de disponibilidade. Ele indica qual banco de dados de disponibilidade falha ao alterar sua função esperada durante o processo de failover.  
   
 #### <a name="event-information"></a>Informações de evento  

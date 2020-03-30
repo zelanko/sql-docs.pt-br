@@ -13,10 +13,10 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 112a925c051b5345933ee4c8fc1fb3b1147c2e48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297313"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Compilando, implantando e depurando objetos personalizados
@@ -26,7 +26,7 @@ ms.locfileid: "71297313"
 
   Depois de escrever o código de um objeto personalizado do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você deve compilar o assembly, implantá-lo e integrá-lo ao Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] para disponibilizar seu uso em pacotes, além de testá-lo e depurá-lo.  
   
-##  <a name="top"></a> Etapas para compilar, implantar e depurar um objeto personalizado para Integration Services  
+##  <a name="steps-in-building-deploying-and-debugging-a-custom-object-for-integration-services"></a><a name="top"></a> Etapas para compilar, implantar e depurar um objeto personalizado para Integration Services  
  Você já gravou a funcionalidade personalizada para seu objeto. Agora você tem que testá-la e disponibilizá-la aos usuários. As etapas são bem similares para todos os tipos de objetos personalizados que você pode criar para o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  Aqui estão as etapas para compilar, implantar e testar esse objeto.  
@@ -47,7 +47,7 @@ ms.locfileid: "71297313"
   
  Agora você pode usar o Designer SSIS no SSDT (SQL Server Data Tools) para criar, manter e executar pacotes destinados a diferentes versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre o impacto desta melhoria em suas extensões personalizadas, consulte [Tornando as extensões personalizadas do SSIS compatíveis com o suporte a várias versões do SSDT 2015 para SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)  
   
-##  <a name="signing"></a> Assinando o assembly  
+##  <a name="signing-the-assembly"></a><a name="signing"></a> Assinando o assembly  
  Quando um assembly for compartilhado, ele deverá ser instalado no cache de assembly global. Depois de acrescentado ao cache de assembly global, ele poderá ser usado por aplicativos como [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Um requisito do cache de assembly global é que o assembly seja assinado com um nome forte, que garante que ele seja globalmente único. Um assembly com nome forte tem um nome totalmente qualificado que inclui nome, cultura, chave pública e número da versão do assembly. O runtime usa essas informações para localizar o assembly e diferenciá-lo de outros assemblies com o mesmo nome.  
   
  Para assinar um assembly com um nome forte, você deve primeiro ter ou criar um par de chaves pública/privada. Esse par de chaves criptográficas pública e privada é usado na hora da compilação para criar um assembly com nome forte.  
@@ -62,7 +62,7 @@ ms.locfileid: "71297313"
   
  Você pode assinar seu assembly facilmente com um nome forte em [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] no momento da compilação. Na caixa de diálogo **Propriedades do Projeto**, selecione a guia **Assinatura**. Selecione a opção **Assinar o assembly** e forneça o caminho do arquivo da chave (.snk).  
   
-##  <a name="building"></a> Compilando o assembly  
+##  <a name="building-the-assembly"></a><a name="building"></a> Compilando o assembly  
  Depois de assinar o projeto, você deve compilar ou recompilar o projeto ou a solução usando os comandos disponíveis no menu **Compilar** do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Sua solução pode conter um projeto separado para uma interface do usuário personalizada, que também deve ser assinada com um nome forte e pode ser compilada ao mesmo tempo.  
   
  O método mais conveniente para realizar as próximas duas etapas – implantação e instalação do assembly no cache de assembly global – é gerar o script dessas etapas como um evento pós-build em [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Os eventos de build estão disponíveis na página **Compilar** de Propriedades do Projeto para um projeto do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e na página **Eventos de Build** para um projeto em C#. O caminho completo é obrigatório para utilitários de prompt de comando, como **gacutil.exe**. São necessárias aspas nos caminhos que contêm espaços e nas macros, como $ (TargetPath) que se expande para caminhos que contêm espaços.  
@@ -75,7 +75,7 @@ ms.locfileid: "71297313"
 copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProviders "  
 ```  
   
-##  <a name="deploying"></a> Implantando o assembly  
+##  <a name="deploying-the-assembly"></a><a name="deploying"></a> Implantando o assembly  
  O Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] localiza os objetos personalizados disponíveis para serem usados em pacotes, enumerando os arquivos encontrados em uma série de pastas que são criadas quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é instalado. Quando as configurações de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] padrão são usadas, esse conjunto de pastas é localizado sob **C:\Arquivos de Programas\Microsoft SQL Server\130\DTS**. Entretanto, se você criar um programa de instalação para seu objeto personalizado, você deverá checar o valor da chave do Registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\Setup\DtsPath** para verificar o local dessa pasta.  
   
 > [!NOTE]  
@@ -99,7 +99,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
 > [!NOTE]  
 >  Os assemblies são copiados para essas pastas para dar suporte à enumeração de tarefas disponíveis, gerenciadores de conexões, e assim por diante. Portanto, não é necessário implantar assemblies que contenham somente a interface do usuário personalizada para objetos personalizados nessas pastas.  
   
-##  <a name="installing"></a> Instalando o assembly no cache de assembly global  
+##  <a name="installing-the-assembly-in-the-global-assembly-cache"></a><a name="installing"></a> Instalando o assembly no cache de assembly global  
  Para instalar o assembly da tarefa no GAC (cache de assembly global), use a ferramenta de linha de comando **gacutil.exe** ou arraste os assemblies até o diretório `%system%\assembly`. Para sua conveniência, também é possível incluir a chamada para **gacutil.exe** em um evento posterior ao build.  
   
  O comando a seguir instala um componente denominado *MyTask.dll* no GAC usando **gacutil.exe**.  
@@ -110,7 +110,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
  Para obter mais informações sobre o GAC, consulte a Ferramenta Cache de Assembly Global (Gactutil.exe) nas Ferramentas [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
-##  <a name="troubleshooting"></a> Solução de problemas de implantação  
+##  <a name="troubleshooting-the-deployment"></a><a name="troubleshooting"></a> Solução de problemas de implantação  
  Se seu objeto personalizado aparecer na **Caixa de Ferramentas** ou na lista de objetos disponíveis mas você não conseguir adicioná-lo a um pacote, tente fazer o seguinte:  
   
 1.  Procure múltiplas versões do seu componente no GAC. Se houver múltiplas versões do componente no GAC, o designer talvez não consiga carregar seu componente. Exclua todas as instâncias do assembly do GAC e adicione o assembly novamente.  
@@ -121,7 +121,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 4.  Anexe [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] a **devenv.exe** e defina um ponto de interrupção para percorrer seu código de inicialização e assegurar que nenhuma exceção ocorra.  
   
-##  <a name="testing"></a> Testar e depurar o código  
+##  <a name="testing-and-debugging-your-code"></a><a name="testing"></a> Testar e depurar o código  
  A abordagem mais simples para depurar os métodos de tempo de execução de um objeto personalizado é iniciar **dtexec.exe** de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] depois de compilar seu objeto personalizado e executar um pacote que use o componente.  
   
  Para depurar os métodos de tempo de design do componente, tais como o método **Validate**, abra um pacote que use o componente em uma segunda instância de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e anexe-o ao seu processo **devenv.exe**.  

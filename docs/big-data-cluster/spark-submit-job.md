@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: fc4f40981d246c47f923cb2a1afa5533a98081ac
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244067"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-azure-data-studio"></a>Enviar trabalhos do Spark em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Azure Data Studio
@@ -23,7 +23,7 @@ ms.locfileid: "75244067"
 
 Um dos principais cenários para clusters de Big Data é a capacidade de enviar trabalhos do Spark para o SQL Server. O recurso de envio de trabalhos do Spark permite que você envie arquivos Jar ou Py locais com referências a clusters de Big Data do SQL Server 2019. Ele também permite que você execute arquivos Jar ou Py, que já estão localizados no sistema de arquivos HDFS. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Ferramentas de Big Data do SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**

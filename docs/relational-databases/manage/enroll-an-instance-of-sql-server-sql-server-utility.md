@@ -21,10 +21,10 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: dda51dd5449719aedd7697310c1f7befe3ee1390
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115418"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrever uma instância do SQL Server (Utilitário do SQL Server)
@@ -87,17 +87,17 @@ ms.locfileid: "68115418"
   
 -   [Inscrevendo a instância do SQL Server](#Enrolling)  
   
-##  <a name="Welcome"></a> Introdução ao Assistente para Inscrever Instância  
+##  <a name="introduction-to-enroll-instance-wizard"></a><a name="Welcome"></a> Introdução ao Assistente para Inscrever Instância  
  Para iniciar o Assistente, expanda a árvore do Gerenciador do Utilitário em um ponto de controle do utilitário, clique com o botão direito do mouse em **Instâncias Gerenciadas** e selecione **Adicionar Instância Gerenciada...** .  
   
  Para continuar, clique em **Avançar**.  
   
-##  <a name="Instance_name"></a> Especificar a instância do SQL Server  
+##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> Especificar a instância do SQL Server  
  Para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar...** . Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName. Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
  Para continuar, clique em **Avançar**.  
   
-##  <a name="Connection_dialog"></a> Caixa de diálogo Conexão  
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> Caixa de diálogo Conexão  
  Na caixa de diálogo Conectar ao Servidor, verifique as informações de tipo de servidor, nome do computador e nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
 > [!NOTE]  
@@ -105,7 +105,7 @@ ms.locfileid: "68115418"
   
  Para continuar, clique em **Conectar...** .  
   
-##  <a name="Proxy_configuration"></a> Conta do conjunto de coleta do utilitário  
+##  <a name="utility-collection-set-account"></a><a name="Proxy_configuration"></a> Conta do conjunto de coleta do utilitário  
  Especifique uma conta de domínio do Windows para executar o conjunto de coleta do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa conta é usada como a conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para o conjunto de coleta do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Alternativamente, você pode usar a conta de Serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent existente. Para passar nos requisitos de validação, use as diretrizes a seguir para especificar a conta.  
   
  Se você especificar a opção de conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:  
@@ -114,7 +114,7 @@ ms.locfileid: "68115418"
   
  Para continuar, clique em **Avançar**.  
   
-##  <a name="Validation_rules"></a> Validação de instância do SQL Server  
+##  <a name="sql-server-instance-validation"></a><a name="Validation_rules"></a> Validação de instância do SQL Server  
  Nesta versão, as seguintes condições devem ser verdadeiras na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para serem inscritas no Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 |Condição|Ação corretiva|  
@@ -141,7 +141,7 @@ ms.locfileid: "68115418"
   
  Para continuar, clique em **Avançar**.  
   
-##  <a name="Summary"></a> Resumo da inscrição da instância  
+##  <a name="summary-of-instance-enrollment"></a><a name="Summary"></a> Resumo da inscrição da instância  
  A página de resumo lista as informações sobre a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a serem adicionadas ao Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Configurações de instâncias gerenciadas:  
@@ -152,7 +152,7 @@ ms.locfileid: "68115418"
   
  Para continuar, clique em **Avançar**.  
   
-##  <a name="Enrolling"></a> Inscrevendo a instância do SQL Server  
+##  <a name="enrolling-the-instance-of-sql-server"></a><a name="Enrolling"></a> Inscrevendo a instância do SQL Server  
  A página de inscrição fornece o status da operação:  
   
 -   Preparando a instância para inscrição.  
@@ -183,7 +183,7 @@ ms.locfileid: "68115418"
   
  Para remover instâncias gerenciadas do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selecione **Instâncias Gerenciadas** no painel de **Navegação do Gerenciador do Utilitário** para popular a exibição de lista de instâncias gerenciadas, clique com o botão direito do mouse no nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na exibição de lista do **Conteúdo do Gerenciador do Utilitário** e selecione **Tornar Instância Não Gerenciada**.  
   
-##  <a name="PowerShell_enroll"></a> Inscrever uma instância do SQL Server usando o PowerShell  
+##  <a name="enroll-an-instance-of-sql-server-using-powershell"></a><a name="PowerShell_enroll"></a> Inscrever uma instância do SQL Server usando o PowerShell  
  Use o seguinte exemplo para inscrever uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente:  
   
 ```  

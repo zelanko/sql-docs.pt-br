@@ -16,10 +16,10 @@ ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d90d3339c34cd79111f498a4d854e19f9776209
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822551"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>Página de Resumo (Assistentes do Grupo de Disponibilidade AlwaysOn)
@@ -29,7 +29,7 @@ ms.locfileid: "74822551"
   
   Este tópico da ajuda descreve as opções mostradas na página **Resumo** . Este tópico aplica-se ao [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] e ao [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use a grade desta página para rever suas escolhas para o novo grupo de disponibilidade. Para fazer uma ou mais alterações, clique em **Anterior** para retornar às páginas relevantes. Quando estiver pronto, clique em **Avançar** para retornar à página **Resumo** . Quando estiver satisfeito com as opções, clique em **Concluir**.  
   
-##  <a name="PageOptions"></a> Opções da página Resumo  
+##  <a name="summary-page-options"></a><a name="PageOptions"></a> Opções da página Resumo  
  **Script**  
  Clique para gerar um script [!INCLUDE[tsql](../../../includes/tsql-md.md)] para as ações listadas na grade de resumo. Você será solicitado a especificar um destino para o script.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74822551"
   
  ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [&#91;Início&#93;](#Top)  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Usar a caixa de diálogo Novo Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

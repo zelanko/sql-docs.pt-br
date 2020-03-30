@@ -20,10 +20,10 @@ ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 852c7f2c8f9f25903ee575d8e3b85df1d0009b1d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68111186"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar um backup de log de transações (SQL Server)
@@ -47,9 +47,9 @@ ms.locfileid: "68111186"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
 -   Os backups devem ser restaurados na ordem em que foram criados. Antes de poder restaurar um backup de log de transações específico, restaure primeiro os backups anteriores seguintes sem reverter as transações não confirmadas, isto é WITH NORECOVERY:  
   
@@ -59,12 +59,12 @@ ms.locfileid: "68111186"
   
          Para obter mais informações sobre backups de log de transações, consulte [Backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md) e [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  As permissões RESTORE são concedidas a funções nas quais as informações de associação estão sempre disponíveis para o servidor. Como a associação da função de banco de dados fixa pode ser verificada apenas quando o banco de dados está acessível e não danificado, o que nem sempre é o caso quando RESTORE é executado, os membros da função de banco de dados fixa **db_owner** não têm permissões RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 > [!WARNING]  
 >  O processo normal de uma restauração é selecionar os backups de log na caixa de diálogo **Restaurar Banco de Dados** junto com os dados e backups diferenciais.  
@@ -191,7 +191,7 @@ ms.locfileid: "68111186"
   
 11. Opcionalmente, especifique o nome do arquivo em espera na caixa de texto **Arquivo em espera** . Essa opção será necessária se você deixar o banco de dados no modo somente leitura. Você pode procurar o arquivo em espera ou pode digitar o nome do caminho na caixa de texto.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 > [!IMPORTANT]  
 >  Nós recomendamos que você sempre especifique explicite WITH NORECOVERY ou WITH RECOVERY em toda instrução RESTORE para eliminar a ambiguidade. Isso é particularmente importante ao escrever scripts.  
@@ -236,7 +236,7 @@ ms.locfileid: "68111186"
     > [!IMPORTANT]  
     >  Se você estiver criando um banco de dados espelho, omita a etapa de recuperação. Um banco de dados espelho deve permanecer no estado RESTORING.  
   
-###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  Por padrão, o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] usa o modelo de recuperação simples. Os exemplos seguintes requerem a modificação do banco de dados para usar o modelo de recuperação completa, como segue:  
   
 ```sql  
@@ -289,7 +289,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   

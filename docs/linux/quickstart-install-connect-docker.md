@@ -14,10 +14,10 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
 ms.openlocfilehash: afc420ffe62f31c5793f00f3acea12dedac7f509
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198379"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Início Rápido: Executar imagens de contêiner do SQL Server com o Docker
@@ -48,7 +48,7 @@ Neste guia de início rápido, você usará o Docker para efetuar pull e executa
 
 Esta imagem consiste no SQL Server em execução no Linux, com base no Ubuntu 18.04. Ela pode ser usada com o Docker Engine 1.8 ou superior no Linux ou no Docker para Mac/Windows. Este guia de início rápido concentra-se especificamente no uso da imagem do SQL Server em **Linux**. A imagem do Windows não é abordada, mas há mais informações sobre ela na [página de Hub do Docker mssql-server-windows-developer](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
-## <a id="requirements"></a> Pré-requisitos
+## <a name="prerequisites"></a><a id="requirements"></a> Pré-requisitos
 
 - O Docker Engine 1.8 ou superior em qualquer distribuição do Linux ou do Docker para Mac/Windows com suporte. Para obter mais informações, veja [Install Docker](https://docs.docker.com/engine/installation/) (Instalar o Docker).
 - Driver de armazenamento **overlay2** do Docker. Esse é o padrão para a maioria dos usuários. Se você perceber que não está usando esse provedor de armazenamento e precisar alterar, confira as instruções e avisos na [documentação do Docker para configurar o overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
@@ -60,7 +60,7 @@ Esta imagem consiste no SQL Server em execução no Linux, com base no Ubuntu 18
 any changes to one section should be duplicated in the other-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="pullandrun2017"></a> Efetuar pull e executar a imagem de contêiner
+## <a name="pull-and-run-the-container-image"></a><a id="pullandrun2017"></a> Efetuar pull e executar a imagem de contêiner
 
 Antes de iniciar as etapas a seguir, verifique se você selecionou o shell de sua preferência (Bash, PowerShell ou cmd) na parte superior deste artigo.
 
@@ -179,7 +179,7 @@ Configurar `-h` e `--name` com o mesmo valor é uma boa maneira de identificar f
 <!--This is the 2019 version of the "Pull and run" section-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="pullandrun2019"></a> Efetuar pull e executar a imagem de contêiner
+## <a name="pull-and-run-the-container-image"></a><a id="pullandrun2019"></a> Efetuar pull e executar a imagem de contêiner
 
 Antes de iniciar as etapas a seguir, verifique se você selecionou o shell de sua preferência (Bash, PowerShell ou cmd) na parte superior deste artigo.
 
@@ -294,7 +294,7 @@ Configurar `-h` e `--name` com o mesmo valor é uma boa maneira de identificar f
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
 
-## <a id="sapassword"></a> Alterar a senha SA
+## <a name="change-the-sa-password"></a><a id="sapassword"></a> Alterar a senha SA
 
 <!-- This section was pasted in from includes/sql-server-linux-change-docker-password.md, to better support zone pivots. 2019/02/11 -->
 
@@ -443,7 +443,7 @@ Agora, execute uma consulta para retornar da tabela `Inventory`.
 
 2. Para sair do prompt de comando interativo no contêiner, digite `exit`. O contêiner continuará a ser executado depois que você sair do shell bash interativo.
 
-## <a id="connectexternal"></a> Conectar-se de fora do contêiner
+## <a name="connect-from-outside-the-container"></a><a id="connectexternal"></a> Conectar-se de fora do contêiner
 
 Você também pode se conectar à instância do SQL Server em seu computador do Docker usando qualquer ferramenta externa do macOS, do Windows ou do Linux que seja compatível com conexões SQL.
 

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 136665cbe354ce0fdbbc575d2e97759f35cb3444
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286220"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Notas sobre a versão de Clusters de Big Data do SQL Server 2019
@@ -68,7 +68,7 @@ A tabela a seguir lista o histórico de versões do [!INCLUDE[big-data-clusters-
 
 Para instalar atualizações, confira [Como atualizar o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
-## <a id="cu3"></a> CU3 (mar 2020)
+## <a name="cu3-mar-2020"></a><a id="cu3"></a> CU3 (mar 2020)
 
 Versão CU3 (Atualização Cumulativa 3) para o SQL Server 2019. A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.4023.6.
 
@@ -83,7 +83,7 @@ O SQL Server 2019 CU3 resolve os seguintes problemas de versões anteriores.
 - [Implantação com repositório privado](#deployment-with-private-repository)
 - [A atualização pode falhar devido ao tempo limite](#upgrade-may-fail-due-to-timeout)
 
-## <a id="cu2"></a> CU2 (fevereiro de 2020)
+## <a name="cu2-feb-2020"></a><a id="cu2"></a> CU2 (fevereiro de 2020)
 
 Versão CU2 (Atualização Cumulativa 2) para o SQL Server 2019. A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.4013.40.
 
@@ -91,7 +91,7 @@ Versão CU2 (Atualização Cumulativa 2) para o SQL Server 2019. A versão do Me
 |-----|-----|
 |15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
-## <a id="cu1"></a> CU1 (janeiro de 2020)
+## <a name="cu1-jan-2020"></a><a id="cu1"></a> CU1 (janeiro de 2020)
 
 Versão CU1 (Atualização Cumulativa 1) para o SQL Server 2019. A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.4003.23.
 
@@ -99,7 +99,7 @@ Versão CU1 (Atualização Cumulativa 1) para o SQL Server 2019. A versão do Me
 |-----|-----|
 |15.0.4003.23|[2019-CU1-ubuntu-16.04]
 
-## <a id="rtm"></a> GDR1 (novembro de 2019)
+## <a name="gdr1-nov-2019"></a><a id="rtm"></a> GDR1 (novembro de 2019)
 
 A GDR1 (Versão de Distribuição Geral 1) do SQL Server 2019 – apresenta a disponibilidade geral para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]. A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.2070.34.
 

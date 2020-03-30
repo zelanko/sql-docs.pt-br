@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f60256e58339387323f923c85d2b880459455663
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252098"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>Implantar com um script de Bash em um cluster kubeadm de nó único
@@ -23,7 +23,7 @@ ms.locfileid: "75252098"
 
 Neste tutorial, você usa um script de implantação de Bash de exemplo para implantar um cluster do Kubernetes de nó único usando o kubeadm e um cluster de Big Data do SQL Server nele.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Um computador físico ou uma máquina virtual com **servidor** vanilla Ubuntu 18.04 ou 16.04. Todas as dependências são configuradas pelo script e você executa o script de dentro da VM.
 

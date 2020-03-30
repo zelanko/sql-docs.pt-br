@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 02c3e6e217ea2918ab36829d6f0cceb4a6269e81
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190387"
 ---
 # <a name="get-started-with-big-data-clusters-2019"></a>Introdução ao [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -38,7 +38,7 @@ Assista a este vídeo de 9 minutos para obter uma visão geral de como implantar
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
 
 
-## <a id="tools"></a> Ferramentas de cliente
+## <a name="client-tools"></a><a id="tools"></a> Ferramentas de cliente
 
 Os clusters de Big Data exigem um conjunto específico de ferramentas de cliente. Antes de implantar um cluster de Big Data no Kubernetes, você deve instalar as seguintes ferramentas:
 
@@ -70,7 +70,7 @@ Depois de configurar o Kubernetes, você implanta um cluster de Big Data com o c
 - Para uma instalação completamente autônoma, você pode passar todas as outras configurações em variáveis de ambiente. Para obter mais informações, confira [implantações autônomas](deployment-guidance.md#unattended).
 
 
-## <a id="scripts"></a> Scripts de implantação
+## <a name="deployment-scripts"></a><a id="scripts"></a> Scripts de implantação
 
 Os scripts de implantação podem ajudar a implantar clusters do Kubernetes e de Big Data em uma única etapa. Geralmente, eles também fornecem valores padrão para configurações de cluster de Big Data. Você pode personalizar qualquer script de implantação criando sua própria versão que configura a implantação do cluster de Big Data de forma diferente.
 

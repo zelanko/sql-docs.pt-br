@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71713275"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configurar transações distribuídas para um grupo de disponibilidade Always On
@@ -41,7 +41,7 @@ O [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] não impede transa�
 
 O DTC não está envolvido no processamento do grupo de disponibilidade, a menos que um banco de dados também seja membro de um cluster de failover. Dentro de um grupo de disponibilidade, a consistência entre as réplicas é mantida pela lógica do grupo de disponibilidade: O primário não concluirá a confirmação nem reconhecerá a confirmação para o chamador até que o secundário tenha confirmado que persistiu os registros de log no armazenamento durável. Em seguida, o primário declara a conclusão da transação. No modo assíncrono, não aguardamos o reconhecimento pelo secundário e há a possibilidade explícita de perda de uma pequena quantidade de dados.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Antes de configurar um grupo de disponibilidade para dar suporte a transações distribuídas, você deve atender aos seguintes pré-requisitos:
 
@@ -102,7 +102,7 @@ ALTER AVAILABILITY GROUP MyaAG
       );
 ```
 
-## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>Transações distribuídas – conceitos técnicos
+## <a name="distributed-transactions---technical-concepts"></a><a name="distTran"/>Transações distribuídas – conceitos técnicos
 
 Uma transação distribuída abrange dois ou mais bancos de dados. Assim como o gerenciador de transação, o DTC coordena as transações entre as instâncias do SQL Server e outras fontes de dados. Cada instância do mecanismo de banco de dados do [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] pode funcionar como um gerenciador de recursos. Quando um grupo de disponibilidade é configurado com `DTC_SUPPORT = PER_DB`, os bancos de dados podem funcionar como gerenciadores de recursos. Para obter mais informações, consulte a documentação do MS DTC.
 

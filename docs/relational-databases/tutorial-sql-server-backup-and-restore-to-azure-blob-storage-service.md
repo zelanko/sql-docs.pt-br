@@ -11,17 +11,17 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165517"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Início Rápido: Backup e restauração do SQL no serviço de armazenamento de Blob do Azure
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 Este início rápido ajuda você a compreender como gravar backups e fazer restaurações no Serviço de Armazenamento de Blobs do Azure.  O artigo explica como criar um Contêiner de Blob do Azure, gravar um backup no serviço blob e, em seguida, executar uma restauração.
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 Para concluir este início rápido, você deve estar familiarizado com os conceitos de backup e restauração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a sintaxe do T-SQL.  Você precisa de uma conta de armazenamento do Azure, SSMS (SQL Server Management Studio) e acesso a um servidor que esteja executando o SQL Server ou uma instância gerenciada do Banco de Dados SQL do Azure. Além disso, a conta de usuário usada para emitir os comandos BACKUP e RESTORE deve estar na função de banco de dados **db_backupoperator** com as permissões **Alterar qualquer credencial**. 
 
 - Obtenha uma [conta do Azure](https://azure.microsoft.com/offers/ms-azr-0044p/) gratuita.
@@ -122,7 +122,7 @@ Use a GUI no SQL Server Management Studio para criar a credencial seguindo as et
 ## <a name="back-up-database"></a>Backup do banco de dados
 Nesta etapa, faça o backup do banco de dados `SQLTestDB` em sua conta de armazenamento de Blob do Azure usando a GUI do SQL Server Management Studio ou o T-SQL (Transact-SQL). 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Se o assistente de **Backup do banco de dados** ainda não estiver aberto, expanda o nó **Banco de dados** no **Pesquisador de Objetos** do [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md).
 1. Clique com o botão direito do mouse no novo banco de dados `SQLTestDB`, focalize **Tarefas** e, em seguida, selecione **Fazer backup...** para iniciar o assistente de **Backup do Banco de Dados**. 
@@ -141,7 +141,7 @@ Nesta etapa, faça o backup do banco de dados `SQLTestDB` em sua conta de armaze
    > Você pode gerar o script do Transact-SQL por trás desse comando selecionando **Script** na parte superior do assistente de **Backup do banco de dados**: ![Comando de script](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Faça backup do banco de dados usando o Transact-SQL executando o seguinte comando: 
 
@@ -160,12 +160,12 @@ GO
 ## <a name="delete-database"></a>Excluir banco de dados
 Nesta etapa, exclua o banco de dados antes de executar a restauração. Esta etapa é necessária apenas para fins deste tutorial, mas é improvável que seja usada em procedimentos normais de gerenciamento de banco de dados. Você pode ignorar esta etapa, mas precisará alterar o nome do banco de dados durante a restauração em uma instância gerenciada ou executar o comando restore `WITH REPLACE` para restaurar com sucesso o banco de dados no local. 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Expanda o nó **Banco de dados** no **Pesquisador de Objetos**, clique com o botão direito do mouse no banco de dados `SQLTestDB` e selecione excluir para iniciar o assistente **Excluir objeto**. 
 1. Em uma instância gerenciada, selecione **OK** para excluir o banco de dados. No local, marque a caixa de seleção ao lado de **Fechar conexões existentes** e, em seguida, selecione **OK** para excluir o banco de dados. 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Exclua o banco de dados executando o seguinte comando Transact-SQL:
 
@@ -192,7 +192,7 @@ GO
 ## <a name="restore-database"></a>Restaurar Banco de Dados 
 Nesta etapa, restaure o banco de dados usando a GUI no SQL Server Management Studio ou o Transact-SQL. 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Clique com o botão direito do mouse no nó **Banco de dados** no **Pesquisador de Objetos** do SQL Server Management Studio e selecione **Restaurar o banco de dados**. 
 1. Selecione **Dispositivo** e, em seguida, selecione as reticências (...) para escolher o dispositivo. 
@@ -216,7 +216,7 @@ Nesta etapa, restaure o banco de dados usando a GUI no SQL Server Management Stu
 1. Clique em **OK** para fechar a caixa de diálogo **Selecionar dispositivos de backup**. 
 1. Selecione **OK** para restaurar o banco de dados. 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Para restaurar seu banco de dados local do armazenamento de Blob do Azure, modifique o comando Transact-SQL a seguir para usar sua própria conta de armazenamento e, em seguida, execute-o em uma nova janela de consulta. 
 

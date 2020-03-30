@@ -14,10 +14,10 @@ ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b0bd7ad95fcda039c6fd5a9299f4339d35b8a619
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67564126"
 ---
 # <a name="reporting-services-configuration-files"></a>Arquivos de configuração do Reporting Services
@@ -34,7 +34,7 @@ ms.locfileid: "67564126"
   
 -   [Resumo de arquivos de configuração (modo do SharePoint)](#bkmk_config_file_Summary_sharepoint_mode)  
   
-##  <a name="bkmk_config_file_Summary_native_mode"></a> Resumo de arquivos de configuração (modo nativo)  
+##  <a name="summary-of-configuration-files-native-mode"></a><a name="bkmk_config_file_Summary_native_mode"></a> Resumo de arquivos de configuração (modo nativo)  
  A tabela a seguir descreve onde são armazenadas as configurações. A maioria das configurações é armazenada em arquivos de configuração incluídos no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Por padrão, o diretório de instalação é o seguinte:  
   
 ```
@@ -57,7 +57,7 @@ C:\Program Files\Microsoft SQL Server Reporting Services\SSRS
 |RSReportDesigner.config|Armazena configurações para o Designer de Relatórios. Para obter mais informações, consulte [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).|\<drive>:\Program Files \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies.|  
 |RSPreviewPolicy.config|Armazena as políticas de segurança de acesso a códigos para as extensões de servidor usadas durante a visualização do relatório. Para obter mais informações sobre esse arquivo, consulte [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|C:\Arquivos de Programas\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssembliesr|  
   
-##  <a name="bkmk_config_file_Summary_sharepoint_mode"></a> Resumo de arquivos de configuração (modo do SharePoint)  
+##  <a name="summary-of-configuration-files-sharepoint-mode"></a><a name="bkmk_config_file_Summary_sharepoint_mode"></a> Resumo de arquivos de configuração (modo do SharePoint)  
  A tabela a seguir fornece uma descrição dos arquivos de configuração usados para um servidor de relatório no modo do SharePoint. A maioria dos parâmetros de configuração é armazenado nos bancos de dados de aplicativo de serviço do SharePoint. Para obter mais informações, consulte [Serviço SharePoint do Reporting Services e aplicativos de serviço](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
   
  Por padrão, o diretório de instalação do modo do SharePoint é o seguinte:  

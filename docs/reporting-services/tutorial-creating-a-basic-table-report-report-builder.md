@@ -9,10 +9,10 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041193"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Criar um relatório de tabela básico (Construtor de Relatórios)
@@ -26,7 +26,7 @@ Tempo estimado para concluir este tutorial: 20 minutos.
 ## <a name="requirements"></a>Requisitos  
 Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="CreateTable"></a>1. Criar um relatório usando um assistente  
+## <a name="1-create-a-report-using-a-wizard"></a><a name="CreateTable"></a>1. Criar um relatório usando um assistente  
 Crie um relatório de tabela com o Assistente de Tabela ou Matriz. Há dois modos: design de relatório e design de conjunto de dados compartilhado. No modo design de relatório, especifique dados no painel de Dados do Relatório e o layout do relatório na superfície de design. No modo design de conjunto de dados compartilhado, crie consultas de conjunto de dados para compartilhar com outras pessoas. Neste tutorial, você usará o modo design de relatório.  
   
 ### <a name="to-create-a-report"></a>Para criar um relatório  
@@ -41,7 +41,7 @@ Crie um relatório de tabela com o Assistente de Tabela ou Matriz. Há dois modo
   
 3.  No painel direito, selecione **Assistente de Tabela ou Matriz**.  
   
-## <a name="DataConnection"></a>1a. Especificar uma conexão de dados no assistente de tabela  
+## <a name="1a-specify-a-data-connection-in-the-table-wizard"></a><a name="DataConnection"></a>1a. Especificar uma conexão de dados no assistente de tabela  
 Uma conexão de dados contém as informações para estabelecer conexões com uma fonte de dados externa, como um banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Geralmente, você obtém as informações sobre a conexão e o tipo de credenciais a ser usado do proprietário da fonte de dados. Para especificar uma conexão de dados, você pode usar uma fonte de dados compartilhada do servidor de relatório ou criar uma fonte de dados inserida que será usada somente neste relatório.  
   
 Neste tutorial, você usará uma fonte de dados inserida. Para saber mais sobre como usar fontes de dados compartilhadas, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -76,7 +76,7 @@ Neste tutorial, você usará uma fonte de dados inserida. Para saber mais sobre 
   
 9. Clique em **Próximo**.  
   
-## <a name="Query"></a>1b. Criar uma Consulta no Assistente de Tabela  
+## <a name="1b-create-a-query-in-the-table-wizard"></a><a name="Query"></a>1b. Criar uma Consulta no Assistente de Tabela  
 Em um relatório, é possível usar um conjunto de dados compartilhado que tem uma consulta predefinida. Se preferir, crie um conjunto de dados inserido para ser usado somente neste relatório. Neste tutorial, você criará um conjunto de dados inserido.  
   
 > [!NOTE]  
@@ -132,7 +132,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tem u
   
 4.  Clique em **Próximo**.  
   
-## <a name="Groups"></a>1c. Organizar Dados em Grupos no Assistente de Tabela  
+## <a name="1c-organize-data-into-groups-in-the-table-wizard"></a><a name="Groups"></a>1c. Organizar Dados em Grupos no Assistente de Tabela  
 Quando você seleciona campos nos quais fazer agrupamentos, cria uma tabela com linhas e colunas que exibem dados detalhados e dados agregados.  
   
 ### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
@@ -159,7 +159,7 @@ Quando você seleciona campos nos quais fazer agrupamentos, cria uma tabela com 
   
 6.  Clique em **Próximo**.  
   
-## <a name="Subtotals"></a>1d. Adicionar Linhas de Subtotal e de Total no Assistente de Tabela  
+## <a name="1d-add-subtotal-and-total-rows-in-the-table-wizard"></a><a name="Subtotals"></a>1d. Adicionar Linhas de Subtotal e de Total no Assistente de Tabela  
 Depois de criar grupos, é possível adicionar e formatar linhas nas quais exibir valores de agregação dos campos. Você pode optar por exibir todos os dados ou deixar um usuário expandir e recolher dados agrupados de forma interativa.  
   
 ### <a name="to-add-subtotals-and-totals"></a>Para adicionar subtotais e totais  
@@ -186,7 +186,7 @@ Depois de criar grupos, é possível adicionar e formatar linhas nas quais exibi
   
 A tabela é adicionada à superfície de design. A tabela tem 5 colunas e 5 linhas. O painel Grupos de Linhas mostra três grupos de linhas: SalesDate, Subcategory e Details. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
   
-## <a name="FormatCurrency"></a>2. Formatar dados como moeda  
+## <a name="2-format-data-as-currency"></a><a name="FormatCurrency"></a>2. Formatar dados como moeda  
 Por padrão, os dados resumidos do campo Sales exibe um número geral. Formate-o para exibir o número como moeda.   
   
 ### <a name="to-format-a-currency-field"></a>Para formatar um campo de conversor de moedas  
@@ -203,7 +203,7 @@ Por padrão, os dados resumidos do campo Sales exibe um número geral. Formate-o
   
 Os valores resumidos de Vendas são exibidos como conversor de moedas.  
   
-## <a name="FormatDate"></a>3. Formatar dados como data  
+## <a name="3-format-data-as-date"></a><a name="FormatDate"></a>3. Formatar dados como data  
 Por padrão, o campo SalesDate exibe a data e hora. É possível formatá-lo para exibir somente a data.  
   
 ### <a name="to-format-a-date-field-as-the-default-format"></a>Para formatar um campo de data como o formato padrão  
@@ -242,7 +242,7 @@ Os valores SalesDate são exibidos no formato de data padrão.
   
 O valor de SalesDate exibe o nome do mês, em vez do número do mês.  
   
-## <a name="Width"></a>4. Alterar a Largura das Colunas  
+## <a name="4-change-column-widths"></a><a name="Width"></a>4. Alterar a Largura das Colunas  
 Por padrão, cada célula da tabela contém uma caixa de texto. Uma caixa de texto é expandida verticalmente para acomodar o texto quando a página é renderizada. No relatório renderizado, cada linha é expandida até a altura da caixa de texto renderizada mais alta da linha. A altura da linha na superfície de design não tem nenhum efeito na altura da linha no relatório renderizado.  
   
 Para reduzir a quantidade de espaço vertical que cada linha ocupa, expanda a largura da coluna para acomodar em uma única linha o conteúdo esperado das caixas de texto da coluna.  
@@ -259,7 +259,7 @@ Para reduzir a quantidade de espaço vertical que cada linha ocupa, expanda a la
   
 4.  Clique em **Executar** para visualizar o relatório.  
   
-## <a name="Title"></a>5. Adicionar um título de relatório  
+## <a name="5-add-a-report-title"></a><a name="Title"></a>5. Adicionar um título de relatório  
 Um título é exibido na parte superior do relatório. É possível colocar o título em um cabeçalho do relatório. No entanto, se ele não usar um cabeçalho, será possível colocar o título em uma caixa de texto na parte superior do corpo do relatório. Neste tutorial, você usará a caixa de texto colocada automaticamente na parte superior do corpo do relatório.  
   
 O texto pode ser aprimorado ainda mais aplicando-se estilos, tamanhos e cores de fontes diferentes a frases e caracteres individuais do texto. Para obter mais informações, consulte [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -282,7 +282,7 @@ O texto pode ser aprimorado ainda mais aplicando-se estilos, tamanhos e cores de
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Save"></a>6. Salvar o relatório  
+## <a name="6-save-the-report"></a><a name="Save"></a>6. Salvar o relatório  
 Salve o relatório em um servidor de relatório ou no computador. Se você não salvar o relatório no servidor de relatório, vários recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , como partes do relatório e sub-relatórios, não estarão disponíveis.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>Para salvar o relatório em um servidor de relatório  
@@ -311,7 +311,7 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
   
 4.  Clique em **Save** (Salvar).  
   
-## <a name="Export"></a>7. Exportar o relatório  
+## <a name="7-export-the-report"></a><a name="Export"></a>7. Exportar o relatório  
 Os relatórios podem ser exportados para diferentes formatos, como Microsoft Excel e arquivos CSV (valores separados por vírgula). Para obter mais informações, consulte [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 Neste tutorial, você exportará o relatório para o Excel e definirá uma propriedade no relatório para atribuir um nome personalizado à guia Pasta de Trabalho.  

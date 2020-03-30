@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 883f554c214809260f69392ad072b1971a34f2da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287811"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Definir os limites e avisos no Replication Monitor
@@ -58,7 +58,7 @@ ms.locfileid: "76287811"
   
 -   [Definir limites e avisos para uma publicação de instantâneo](#Snapshot)  
   
-##  <a name="Transactional"></a> Para definir limites e avisos para uma publicação transacional  
+##  <a name="to-set-thresholds-and-warnings-for-a-transactional-publication"></a><a name="Transactional"></a> Para definir limites e avisos para uma publicação transacional  
   
 1.  Expanda um Grupo do publicador no painel esquerdo, expanda um Publicador e clique em uma publicação.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "76287811"
   
 5.  Clique em **fechar**  
   
-##  <a name="Merge"></a> Definir limites e avisos para uma publicação de mesclagem  
+##  <a name="set-thresholds-and-warnings-for-a-merge-publication"></a><a name="Merge"></a> Definir limites e avisos para uma publicação de mesclagem  
   
 1.  Expanda um Grupo do publicador no painel esquerdo, expanda um Publicador e clique em uma publicação.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "76287811"
   
 5.  Clique em **fechar**  
   
-##  <a name="Snapshot"></a> Definir limites e avisos para uma publicação de instantâneo  
+##  <a name="set-thresholds-and-warnings-for-a-snapshot-publication"></a><a name="Snapshot"></a> Definir limites e avisos para uma publicação de instantâneo  
   
 1.  Expanda um Grupo do publicador no painel esquerdo, expanda um Publicador e clique em uma publicação.  
   

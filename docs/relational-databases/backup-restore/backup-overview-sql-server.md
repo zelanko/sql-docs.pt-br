@@ -23,10 +23,10 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bfda79efac4e64fbb735e424cad4b8bb9ba93851
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70176269"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
@@ -96,10 +96,10 @@ ms.locfileid: "70176269"
  **[conjunto de mídias espelhado](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)**  
  Várias cópias (espelhos) de um conjunto de mídias.  
   
-##  <a name="BackupCompression"></a> Compactação de backup  
+##  <a name="backup-compression"></a><a name="BackupCompression"></a> Compactação de backup  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versões posteriores dão suporte à compactação de backups, e o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores podem restaurar um backup compactado. Para obter mais informações, veja [Compactação de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
-##  <a name="Restrictions"></a>  Restrições de operações de backup 
+##  <a name="backup-operations-restrictions"></a><a name="Restrictions"></a>  Restrições de operações de backup 
  O backup pode ser realizado com o banco de dados online e em uso. No entanto, existem as seguintes restrições.  
   
 ### <a name="cannot-back-up-offline-data"></a>Não é possível fazer backup de dados offline  
@@ -128,7 +128,7 @@ ms.locfileid: "70176269"
   
  Se uma operação de backup for sobreposta por uma operação de gerenciamento de arquivos ou de redução, ocorrerá um conflito. Independentemente de qual operação conflitante começou primeiro, a segunda operação aguardará até que o bloqueio definido para a primeira operação seja esgotado. (O tempo limite é controlado por uma configuração de tempo limite da sessão.) Se o bloqueio for liberado durante o período de tempo limite, a segunda operação continuará. Se o tempo limite do bloqueio for esgotado, a segunda operação falhará.  
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
  **Dispositivos e mídia de backup**  
   
 -   [Definir um dispositivo de backup lógico para um arquivo de disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  

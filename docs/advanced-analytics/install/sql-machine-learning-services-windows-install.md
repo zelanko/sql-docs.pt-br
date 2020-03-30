@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ce47719415c97f7e9e6cecb27768717710537d4
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: ee706d160ac94c80fc826ce6d199fd66bc37d1fa
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286110"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216485"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Instalar Serviços de Machine Learning do SQL Server (R e Python) no Windows
 
@@ -22,7 +22,7 @@ ms.locfileid: "79286110"
 
 Saiba como instalar os Serviços de Machine Learning do SQL Server no Windows. Você pode usar Serviços do Machine Learning (no banco de dados) para executar scripts de Python e R no banco de dados.
 
-## <a name="bkmk_prereqs"> </a> Lista de verificação pré-instalação
+## <a name="pre-install-checklist"></a><a name="bkmk_prereqs"> </a> Lista de verificação pré-instalação
 
 + Uma instância do mecanismo de banco de dados é necessária. Não é possível instalar somente os recursos do R ou do Python, embora seja possível adicioná-los incrementalmente a uma instância existente.
 

@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: d2a051e297b48ed8d813fce0e0e8ffa748a84d16
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252019"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Gerenciar Clusters de Big Data do SQL Server com notebooks do Azure Data Studio
@@ -29,7 +29,7 @@ Você pode usar notebooks para implantar clusters de Big Data para o [!INCLUDE[s
 
 Além dos notebooks, você pode exibir uma coleção de notebooks, que são chamados de Jupyter Books. Um Jupyter Book fornece um sumário para ajudar você a navegar em uma coleção de notebooks. Dessa forma, você encontra facilmente o notebook de que precisa, seja para solucionar problemas no SQL Server ou para exibir o status do cluster.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Você precisa desses pré-requisitos para abrir um notebook:
 

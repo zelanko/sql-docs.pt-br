@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 9f9cca7e761b8f8ec3f5b87e9a195a0eb8b5da6d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76259454"
 ---
 # <a name="manage-big-data-cluster-access-in-active-directory-mode"></a>Gerenciar o acesso ao cluster de Big Data no modo do Active Directory
@@ -61,13 +61,13 @@ Ao seguir os procedimentos nesta seção, você pode conceder acesso de administ
 
 1. Obtenha as credenciais do SQL Server do controlador executando os seguintes comandos:
 
-   a. Execute este comando como administrador do Kubernetes:
+   a. Execute este comando como um administrador do Kubernetes:
 
    ```bash
    kubectl get secret controller-sa-secret -n <cluster name> -o yaml | grep password
    ```
 
-   b. A Base64 decodifica o segredo:
+   b. Decodifique o segredo em Base64:
 
    ```bash
    echo <password from kubectl command>  | base64 --decode && echo
@@ -81,7 +81,7 @@ Ao seguir os procedimentos nesta seção, você pode conceder acesso de administ
 
 1. Use a conexão anterior para inserir uma linha na tabela de funções. Digite o valor *REALM* em letras maiúsculas.
 
-   Se você estiver concedendo permissões de administrador, use a função *bdcAdmin* no *\<nome da função>*. Para usuários que não são administradores, use a função *bdcUser*.
+   Se você estiver concedendo permissões de administrador, use a função *bdcAdmin* no *\<nome da função>* . Para usuários que não são administradores, use a função *bdcUser*.
 
    ```sql
    USE controller;

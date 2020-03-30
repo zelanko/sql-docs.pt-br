@@ -11,10 +11,10 @@ ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243008"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Determine por que as alterações da réplica primária não são refletidas na réplica secundária de um Grupo de Disponibilidade AlwaysOn
@@ -50,7 +50,7 @@ ms.locfileid: "75243008"
 As seções a seguir descrevem as causas comuns porque as alterações na réplica primária não são refletidas na réplica secundária em consultas somente leitura.  
 
 
-##  <a name="BKMK_OLDTRANS"></a> Transações ativas de longa execução  
+##  <a name="long-running-active-transactions"></a><a name="BKMK_OLDTRANS"></a> Transações ativas de longa execução  
  Uma transação de longa execução na réplica primária impede que as atualizações sejam lidas na réplica secundária.  
   
 ### <a name="explanation"></a>Explicação  
@@ -59,7 +59,7 @@ As seções a seguir descrevem as causas comuns porque as alterações na répli
 ### <a name="diagnosis-and-resolution"></a>Diagnóstico e resolução  
  Na réplica primária, use [DBCC OPENTRAN &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-opentran-transact-sql.md) para exibir as transações ativas mais antigas e ver se elas podem ser revertidas. Depois que as transações ativas mais antigas são revertidas e sincronizadas com a réplica secundária, as cargas de trabalho de leitura na réplica secundária podem ver as atualizações no banco de dados de disponibilidade até o início da transação ativa mais antiga até então.  
   
-##  <a name="BKMK_LATENCY"></a> Alta latência da rede ou baixa taxa de transferência de rede causa o acúmulo de log na réplica primária  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> Alta latência da rede ou baixa taxa de transferência de rede causa o acúmulo de log na réplica primária  
  A alta latência ou baixa taxa de transferência da rede pode impedir que os logs sejam enviados à réplica secundária com a rapidez necessária.  
   
 ### <a name="explanation"></a>Explicação  
@@ -92,7 +92,7 @@ As seções a seguir descrevem as causas comuns porque as alterações na répli
   
  Para corrigir esse problema, tente atualizar a largura de banda da sua rede ou remover ou reduzir o tráfego de rede desnecessário.  
   
-##  <a name="BKMK_REDOBLOCK"></a> Outra carga de trabalho de relatório impede a execução do thread refazer  
+##  <a name="another-reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> Outra carga de trabalho de relatório impede a execução do thread refazer  
  O thread refazer na réplica secundária é impedido de fazer alterações de DDL (linguagem de definição de dados) por uma consulta somente leitura de longa execução. O thread refazer deve ser desbloqueado antes de poder fazer novas atualizações disponíveis para cargas de trabalho de leitura.  
   
 ### <a name="explanation"></a>Explicação  
@@ -108,7 +108,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  Você pode permitir que a carga de trabalho de relatório seja concluída, momento em que o thread refazer é desbloqueado, ou pode desbloquear imediatamente o thread refazer executando o comando [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) na ID de sessão que está bloqueando.  
   
-##  <a name="BKMK_REDOBEHIND"></a> Thread refazer atrasa devido à contenção de recursos  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_REDOBEHIND"></a> Thread refazer atrasa devido à contenção de recursos  
  Uma grande carga de trabalho de relatório na réplica secundária reduziu o desempenho da réplica secundária, e o thread refazer atrasou.  
   
 ### <a name="explanation"></a>Explicação  

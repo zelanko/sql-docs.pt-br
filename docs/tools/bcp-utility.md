@@ -29,10 +29,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 4aad2c9bfbd79079e96339e40d5e36a9146f3ae0
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78280897"
 ---
 # <a name="bcp-utility"></a>Utilitário bcp
@@ -441,7 +441,7 @@ Executa a operação de cópia em massa usando os tipos de dados nativos (banco 
  **-x**<a name="x"></a>  
  Usado com as opções **format** e **-f** *format_file*, gera um arquivo em formato baseado em XML em vez do arquivo em formato não XML padrão. O **-x** não funciona ao importar ou exportar dados. Ele gera um erro se usado sem **format** e **-f** *format_file*.  
 
-## Comentários<a name="remarks"></a>
+## <a name="remarks"></a>Comentários<a name="remarks"></a>
 
 - O utilitário **bcp** 13.0 é instalado quando você instala as ferramentas do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Se as ferramentas forem instaladas para o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e para uma versão anterior do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dependendo do valor na variável de ambiente PATH, talvez você esteja usando o cliente **bcp** anterior em vez do cliente **bcp** 13.0. Essa variável de ambiente define o conjunto de diretórios usado pelo Windows para pesquisar por arquivos executáveis. Para descobrir qual versão você está usando, execute o comando **bcp /v** ou **bcp -v** no Prompt de Comando do Windows. Para obter informações sobre como definir o caminho de comando na variável de ambiente PATH, confira [Variáveis de Ambiente](https://docs.microsoft.com/windows/win32/shell/user-environment-variables) ou pesquise Variáveis de Ambiente na Ajuda do Windows.
 

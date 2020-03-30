@@ -16,10 +16,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903831"
 ---
 # <a name="get-started-with-full-text-search"></a>Iniciar a pesquisa de texto completo
@@ -77,7 +77,7 @@ Para configurar a pesquisa de texto completo usando um assistente, consulte [Usa
 
     Para mais informações, consulte [Criar e gerenciar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md).
 
-##  <a name="options"></a> Escolher opções para um índice de texto completo 
+##  <a name="choose-options-for-a-full-text-index"></a><a name="options"></a> Escolher opções para um índice de texto completo 
   
 ### <a name="choose-a-language"></a>Escolher um idioma  
  Para obter mais informações sobre como escolher o idioma das colunas, consulte [Escolher um idioma ao criar um índice de texto completo](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  

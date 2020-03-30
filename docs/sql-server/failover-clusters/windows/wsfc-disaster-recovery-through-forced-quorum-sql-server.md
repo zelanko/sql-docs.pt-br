@@ -15,10 +15,10 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74821985"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Recuperação de desastres WSFC por meio de quorum forçado (SQL Server)
@@ -33,9 +33,9 @@ ms.locfileid: "74821985"
   
 -   [Conteúdo relacionado](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> Antes de iniciar  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> Antes de iniciar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  O Procedimento de Quorum Forçado supõe que um quorum íntegro existia antes da falha de quorum.  
   
 > [!WARNING]  
@@ -43,10 +43,10 @@ ms.locfileid: "74821985"
 >   
 >  Para obter mais informações, consulte:  [WSFC (Clustering de Failover do Windows Server) com SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Configuração de modos de quorum WSFC e votação (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  O usuário deve ser uma conta de domínio que seja membro do grupo Administradores local em cada nó do cluster WSFC.  
   
-##  <a name="Main"></a> Recuperação de desastres WSFC por meio do procedimento de quorum forçado  
+##  <a name="wsfc-disaster-recovery-through-the-forced-quorum-procedure"></a><a name="Main"></a> Recuperação de desastres WSFC por meio do procedimento de quorum forçado  
  Lembre-se de que a falha de quorum deixa offline todos os serviços clusterizados, instâncias do SQL Server e [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]no cluster WSFC, pois o cluster, conforme configurado, não pode garantir tolerância a falhas no nível de nó.  Uma falha de quorum significa que os nós de votação íntegros no cluster WSFC não atendem mais ao modelo de quorum. Alguns nós podem ter falhado totalmente e outros podem ter apenas desligado o serviço WSFC e, nesse caso, são íntegros, exceto pela perda da capacidade de comunicação com um quorum.  
   
  Para colocar o cluster WSFC novamente online, corrija a causa raiz da falha de quorum na configuração existente, recupere os bancos de dados afetados quando necessário e, se desejar, reconfigure os nós restantes no cluster WSFC para refletir a topologia de cluster sobrevivente.  
@@ -104,7 +104,7 @@ ms.locfileid: "74821985"
   
 8.  **Conduza a análise de RPO/RTO.** Você deve analisar logs de sistema do SQL Server, carimbos de data/hora de bancos de dados e logs de eventos do Windows para determinar a causa raiz da falha e para documentar as experiências reais de ponto de recuperação e de tempo de recuperação.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Forçar um cluster WSFC para iniciar sem um quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "74821985"
   
 -   [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   [Exibir eventos e logs de um cluster de failover](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   

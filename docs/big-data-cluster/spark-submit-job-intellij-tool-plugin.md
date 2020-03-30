@@ -11,10 +11,10 @@ ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244079"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>Enviar trabalhos do Spark em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no IntelliJ
@@ -23,7 +23,7 @@ ms.locfileid: "75244079"
 
 Um dos principais cenários para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] é a capacidade de enviar trabalhos do Spark. O recurso de envio de trabalhos do Spark permite que você envie arquivos Jar ou Py locais com referências a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. Ele também permite que você execute arquivos Jar ou Py, que já estão localizados no sistema de arquivos HDFS. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Cluster de Big Data do SQL Server.
 - Kit de Desenvolvimento Java para Oracle. É possível instalá-lo do [site da Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).

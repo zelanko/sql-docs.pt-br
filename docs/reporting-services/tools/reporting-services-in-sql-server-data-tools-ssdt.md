@@ -11,10 +11,10 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68889836"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services no SQL Server Data Tools (SSDT)
@@ -25,14 +25,14 @@ ms.locfileid: "68889836"
   
  Para começar a criação de relatórios, consulte [Criar relatórios com o Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
-##  <a name="bkmk_SolutionsandProjects"></a> Soluções e projetos  
+##  <a name="solutions-and-projects"></a><a name="bkmk_SolutionsandProjects"></a> Soluções e projetos  
  Um projeto de relatório atua como um contêiner para recursos e definições de relatório. Cada arquivo no projeto de relatório é publicado no servidor de relatório quando o projeto é implantado. Quando você cria um projeto pela primeira vez, uma solução também é criada como contêiner para o projeto. É possível adicionar vários projetos a uma única solução.  
   
   
-##  <a name="bkmk_Configurations"></a> Configurações  
+##  <a name="configurations"></a><a name="bkmk_Configurations"></a> Configurações  
  Para criar vários conjuntos de propriedades de projeto para variações de implantação como teste de empresa e servidores de relatórios de produção, use o Gerenciador de Configuração. Para obter mais informações, veja [Implantação e suporte de versão no SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
-##  <a name="bkmk_ReportServerProjects"></a> Projetos do Servidor de Relatório  
+##  <a name="report-server-projects"></a><a name="bkmk_ReportServerProjects"></a> Projetos do Servidor de Relatório  
  Ao instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], os seguintes modelos de projeto são disponibilizados em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
   
 -   **Projeto do servidor de relatório.** Quando você seleciona um Projeto do Servidor de Relatórios, o Designer de Relatórios é aberto. O Projeto do Servidor de Relatório é um modelo Projetos do Business Intelligence instalado pelo [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] que está disponível na caixa de diálogo **Novo Projeto** . Para obter mais informações, consulte [Adicionar um relatório novo ou existente a um projeto de relatório &#40;SSRS&#41;](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md). As propriedades de projeto do Servidor de Relatório se aplicam a todos os relatórios e a todas as fontes de dados compartilhadas em um projeto do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Estas propriedades incluem a URL para o servidor de relatórios e os nomes de pastas para relatórios e fontes de dados compartilhadas. Use a caixa de diálogo **Páginas de Propriedades de Projeto** para exibir os valores da propriedade atual. Para abrir essa caixa de diálogo, no menu **Projeto** , clique em **Propriedades**.  
@@ -42,10 +42,10 @@ ms.locfileid: "68889836"
  ![Novos modelos de projeto no SSDT](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "Novos modelos de projeto no SSDT")  
   
   
-##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Janelas e painéis do Designer de Relatórios  
+##  <a name="report-designer-windows-and-panes"></a><a name="bkmk_ReportDesignerWindowsandPanes"></a> Janelas e painéis do Designer de Relatórios  
  O Designer de Relatórios dá suporte a dois modos de exibição: **Design** para definir os dados e layout do relatório e **Visualização** para mostrar uma exibição renderizada do relatório. Em cada exibição, você pode exibir várias janelas úteis para design ou exibição de um relatório renderizado.  
   
-###  <a name="bkmk_ReportDataPane"></a> Painel de Dados do Relatório  
+###  <a name="report-data-pane"></a><a name="bkmk_ReportDataPane"></a> Painel de Dados do Relatório  
  O painel de Dados do Relatório exibe campos internos, fontes de dados, conjuntos de dados, coleções de campos, parâmetros do relatório e imagens.  
   
  Use o painel de Dados do Relatório para exibir:  
@@ -68,7 +68,7 @@ ms.locfileid: "68889836"
 >  Se o painel Dados do Relatório não estiver visível, clique na área de Design e, em seguida, no menu **Exibir** , clique em **Dados do Relatório**. Se o painel de dados do relatório estiver flutuando, é possível ancorá-lo. Para obter mais informações, consulte [Encaixar o painel de dados do relatório no Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md).  
   
   
-###  <a name="bkmk_GroupingPane"></a> Painel Agrupamento  
+###  <a name="grouping-pane"></a><a name="bkmk_GroupingPane"></a> Painel Agrupamento  
  Use o painel de Agrupamento para definir grupos para uma região de dados tablix. É possível definir grupos de linhas e de detalhes para tabelas, e grupos de linhas e de colunas para matrizes. Você não pode usar o painel de Agrupamento para definir grupos para Gráficos ou outras regiões de dados. Para obter mais informações, consulte [Compreendendo grupos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
  O painel de Agrupamento tem dois modos:  
@@ -85,10 +85,10 @@ ms.locfileid: "68889836"
  Para obter mais informações, consulte [Grouping Pane](../../reporting-services/tools/grouping-pane.md).  
   
   
-###  <a name="bkmk_Toolbox"></a> Caixa de Ferramentas  
+###  <a name="toolbox"></a><a name="bkmk_Toolbox"></a> Caixa de Ferramentas  
  A Caixa de Ferramentas contém itens de relatório que você pode arrastar para a superfície de design. Regiões de dados são itens de relatório que você usa para organizar os dados no relatório. Tabela, Matriz, Lista, Gráfico, Medidor, Barra de dados, Minigráfico e Indicador são regiões de dados. Outros itens de relatório incluem Mapa, Caixa de Texto, Retângulo, Linha, Imagem e Sub-relatório. Itens de relatório personalizados também podem constar dessa lista se forem instalados e registrados pelo administrador do sistema.  
   
-###  <a name="bkmk_PropertiesPane"></a> Painel Propriedades  
+###  <a name="properties-pane"></a><a name="bkmk_PropertiesPane"></a> Painel Propriedades  
  O painel Propriedades é uma janela do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] padrão que apresenta os nomes e os valores das propriedades para o item de relatório atualmente selecionado na superfície de design. Na maioria dos casos, os nomes de propriedades correspondem aos elementos e atributos no arquivo de linguagem RDL. As propriedades mais comumente utilizadas podem ser definidas usando a caixa de diálogo Propriedades do item selecionado. Para abrir a caixa de diálogo correspondente, clique no botão **Páginas de Propriedades** na barra de tarefas do painel Propriedades. Os usuários avançados podem definir valores de propriedades diretamente no painel de Propriedades.  
   
  Use o painel de Propriedades para:  
@@ -102,25 +102,25 @@ ms.locfileid: "68889836"
  Para exibir o painel Propriedades, no menu **Exibir** , clique em **Janela Propriedades**. É possível desencaixar esse painel e movê-lo para outra área da janela do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ou exibi-lo como uma exibição com guias na superfície de design.  
   
   
-###  <a name="bkmk_SolutionExplorer"></a> Gerenciador de Soluções  
+###  <a name="solution-explorer"></a><a name="bkmk_SolutionExplorer"></a> Gerenciador de Soluções  
  O Gerenciador de Soluções é um componente padrão do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] que exibe todos os itens do projeto. Para um projeto do Servidor de Relatório, isso inclui pastas para organizar fontes de dados compartilhadas, conjuntos de dados compartilhados, relatórios e recursos. Os itens de pasta são automaticamente alfabetizados quando você abre o arquivo da solução. Para exibir propriedades de itens no painel de Propriedades, selecione o item.  
   
-###  <a name="bkmk_Output"></a> Output  
+###  <a name="output"></a><a name="bkmk_Output"></a> Output  
  A janela Saída exibe os erros de processamento quando você visualiza um relatório e os erros de publicação quando você implanta um relatório ou uma fonte de dados compartilhada.  
   
  Use a Saída e as janelas da Estrutura de Tópicos do Documento para ajudar a depurar erros em expressões.  
   
   
-###  <a name="bkmk_DocumentOutline"></a> Estrutura de Tópicos do Documento  
+###  <a name="document-outline"></a><a name="bkmk_DocumentOutline"></a> Estrutura de Tópicos do Documento  
  A janela Estrutura de Tópicos do Documento exibe uma lista hierárquica de todos os itens de relatório na definição do relatório. Para abrir o painel Estrutura de Tópicos do Documento, no menu **Exibir** , aponte a **Outras Janelas** e clique em **Janela de Documentos**.  
   
  Use o painel de Estrutura de Tópicos do Documento para ajudar a identificar caixas de texto e outros itens de relatório por nome. Quando você seleciona um item na Estrutura de Tópicos do Documento, o item também é selecionado na Superfície de Design.  
   
-###  <a name="bkmk_TaskList"></a> Lista de Tarefas  
+###  <a name="task-list"></a><a name="bkmk_TaskList"></a> Lista de Tarefas  
  A janela Lista de Tarefas exibe erros de compilação para recursos sem-suporte quando você importa um relatório de outro aplicativo, como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access.  
   
   
-##  <a name="bkmk_ReportDesignerDesignView"></a> Exibição do design do Designer de Relatórios  
+##  <a name="report-designer-design-view"></a><a name="bkmk_ReportDesignerDesignView"></a> Exibição do design do Designer de Relatórios  
  Por padrão, quando você cria um projeto do Servidor de Relatório, o Designer de Relatórios é aberto na exibição Design e exibe a superfície de design. Por padrão, a superfície de design exibe o corpo do relatório e o plano de fundo do relatório.  
   
  O menu de atalhos no plano de fundo apresenta opções para adicionar cabeçalho e rodapé de página e, no menu Exibir, exibe uma régua e o painel Agrupamento.  
@@ -130,7 +130,7 @@ ms.locfileid: "68889836"
  Para criar um relatório, arraste os itens de relatório da Caixa de Ferramentas para a superfície de design e, em seguida, configure suas propriedades e altere sua disposição no relatório.  
   
   
-##  <a name="bkmk_ReportDesignerPreview"></a> Visualização do Designer de Relatórios  
+##  <a name="report-designer-preview"></a><a name="bkmk_ReportDesignerPreview"></a> Visualização do Designer de Relatórios  
  Use Visualização para executar o relatório e exibir o relatório renderizado no visualizador de relatórios. Visualize os dados dos relatórios em cache localmente. Você também pode definir as propriedades de configuração para executar o relatório na exibição de depuração, usando um navegador.  
   
  Quando você visualiza um relatório, o Designer de Relatórios conecta-se às fontes de dados do relatório, executa consultas nos conjuntos de dados, armazena em cache os dados no computador local, processa o relatório de modo a combinar dados e layout, e renderiza o relatório. É possível exibir o relatório na guia Visualizar ou configurar as propriedades do projeto para exibi-lo no modo de depuração e diretamente em um navegador.  
@@ -144,10 +144,10 @@ ms.locfileid: "68889836"
 -   **Monitorando o painel Saída para mensagens de erro.** Quando você visualiza um relatório e o processador de relatório detecta um problema, ele registra as mensagens de erro no painel Saída.  
   
   
-##  <a name="bkmk_ReportDesignerMenus"></a> Menus do Designer de Relatórios  
+##  <a name="report-designer-menus"></a><a name="bkmk_ReportDesignerMenus"></a> Menus do Designer de Relatórios  
  Quando um projeto do Designer de Relatórios está ativo no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], as barras de ferramentas a seguir são adicionadas à barra de ferramentas principal. Os menus do Designer de Relatórios são visíveis apenas na exibição Design.  
   
-###  <a name="FormatMenu"></a> Menu Formatar  
+###  <a name="format-menu"></a><a name="FormatMenu"></a> Menu Formatar  
  Quando você seleciona um item na superfície de design, o menu **Formatar** contém as seguintes opções:  
   
 -   **Cor do Primeiro Plano** Selecione uma cor de texto. Preto é a cor de texto padrão.  
@@ -170,7 +170,7 @@ ms.locfileid: "68889836"
   
 -   **Ordem** Mova os objetos selecionados para o primeiro ou segundo plano.  
   
-###  <a name="ReportMenu"></a> Menu Relatório  
+###  <a name="report-menu"></a><a name="ReportMenu"></a> Menu Relatório  
  Quando o foco está na superfície de design do relatório, o menu **Relatório** contém as seguintes opções:  
   
 -   **Propriedades do Relatório** Selecione esta opção para abrir a caixa de diálogo **Propriedades do Relatório** . Nesta caixa de diálogo, é possível atribuir propriedades gerais do relatório, como o nome do autor e espaçamento da grade, além de propriedades específicas do layout, como o número de colunas e o tamanho da página. Você também pode incluir código personalizado, referência a assemblies e classes, e os nomes de elementos de saída de dados, transformações de dados e esquemas de dados.  
@@ -183,7 +183,7 @@ ms.locfileid: "68889836"
   
 -   **Painel Agrupamento** Mostre ou oculte o painel Agrupamento.  
   
-###  <a name="ViewMenu"></a> Menu Exibir  
+###  <a name="view-menu"></a><a name="ViewMenu"></a> Menu Exibir  
  Use o menu **Exibir** para exibir as janelas do Designer de Relatórios e barras de ferramentas  
   
 -   **Lista de Erros** Use esta opção para exibir os erros detectados ao publicar ou visualizar um relatório.  
@@ -202,7 +202,7 @@ ms.locfileid: "68889836"
   
 -   **Dados do Relatório** Use esta opção para exibir o painel de dados do relatório, onde você pode adicionar parâmetros do relatório, fontes de dados, conjuntos de dados e imagens.  
   
-###  <a name="ProjectMenu"></a> Menu Projeto  
+###  <a name="project-menu"></a><a name="ProjectMenu"></a> Menu Projeto  
  Use o menu **Projeto** para gerenciar fontes de dados compartilhadas e relatórios em um projeto. Quando você adiciona ou remove itens do projeto, a exibição hierárquica de itens de projeto no Gerenciador de Soluções é atualizada automaticamente.  
   
 -   **Adicionar Novo Item** Adicione uma nova fonte de dados compartilhada ou um novo relatório para o projeto.  
@@ -220,7 +220,7 @@ ms.locfileid: "68889836"
 -   **Propriedades** Abra a caixa de diálogo **Páginas de Propriedades** para o projeto. Para obter mais informações, consulte [Caixa de diálogo Páginas de Propriedades do Projeto](../../reporting-services/tools/project-property-pages-dialog-box.md).  
   
   
-##  <a name="bkmk_ReportDesignerToolbars"></a> Barras de Ferramentas do Designer de Relatórios  
+##  <a name="report-designer-toolbars"></a><a name="bkmk_ReportDesignerToolbars"></a> Barras de Ferramentas do Designer de Relatórios  
  O Designer de Relatórios fornece as seguintes barras de ferramentas especializadas para criação de relatórios:  
   
 -   **Relatório** Adicione um cabeçalho ou rodapé à página, defina as propriedades do relatório, alterne para a régua ou painel Agrupamento, ou use o zoom para alterar exibição do relatório.  
@@ -236,16 +236,16 @@ ms.locfileid: "68889836"
  Use o menu **Exibir** para controlar se essas barras de ferramentas serão exibidas. Outras barras de ferramentas do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] podem ser desativadas se a funcionalidade não se aplicar aos recursos do Designer de Relatórios.  
   
 
-##  <a name="bkmk_SourceControl"></a> Controle do código-fonte  
+##  <a name="source-control"></a><a name="bkmk_SourceControl"></a> Controle do código-fonte  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pode ser integrado com plug-ins de origem. Use as páginas de Projetos e Soluções na caixa de diálogo **Opções** para especificar o plug-in e configurar as propriedades.  
   
-##  <a name="bkmk_CustomReportTemplates"></a> Modelos de relatório personalizados  
+##  <a name="custom-report-templates"></a><a name="bkmk_CustomReportTemplates"></a> Modelos de relatório personalizados  
  Para usar relatórios personalizados como modelos de novos relatórios, basta copiá-los na pasta ReportProject no computador em que o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está instalado. Por padrão, essa pasta está no seguinte local: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Quando você adiciona um novo item ao projeto de relatório, o relatório personalizado aparece no painel Modelos.  
   
  Também é possível adicionar estilos personalizados ao assistente de relatório.  
   
   
-##  <a name="bkmk_CommandLineSupportForssdt"></a> Suporte de linha de comando para o SQL Server Data Tools  
+##  <a name="command-line-support-for-sql-server-data-tools"></a><a name="bkmk_CommandLineSupportForssdt"></a> Suporte de linha de comando para o SQL Server Data Tools  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] se baseia no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e no aplicativo devenv.exe subjacente. Antes de usar essas opções, você deve definir valores válidos para estes dois itens:  
   
 -   Propriedades de projeto para OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder e TargetServerURL.  
@@ -274,7 +274,7 @@ ms.locfileid: "68889836"
     devenv.exe "C:\Users\MyUser\Documents\Visual Studio 2015\Projects\Reports\Reports.sln" /build "Debug" /out mybuildlog.txt  
     ```  
   
-##  <a name="bkmk_KeyboardShortcuts"></a> Teclas de atalho no Reporting Services  
+##  <a name="keyboard-shortcuts-in-reporting-services"></a><a name="bkmk_KeyboardShortcuts"></a> Teclas de atalho no Reporting Services  
  Use os atalhos do teclado para:  
   
 -   Controlar janelas e modos no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]:  

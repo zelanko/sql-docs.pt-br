@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72586771"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Criar recurso DTC clusterizado para um grupo de disponibilidade Always On
@@ -332,7 +332,7 @@ GO
 > 
 > A única maneira de habilitar o suporte a DTC em um Grupo de Disponibilidade é criando um Grupo de Disponibilidade com o Transact-SQL.
  
-## <a name="ClusterDTC"></a>8.  Preparar recursos de cluster
+## <a name="8--prepare-cluster-resources"></a><a name="ClusterDTC"></a>8.  Preparar recursos de cluster
 
 Esse script vai preparar os recursos dependentes do DTC: Disco e IP.  O armazenamento compartilhado será adicionado ao Windows Cluster.  Os recursos de rede serão criados e o DTC será criado e transformado em um recurso para o Grupo de Disponibilidade.  Execute o Script do PowerShell a seguir no `SQLNODE1`. Obrigado, [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/), pelo script!
 
@@ -479,7 +479,7 @@ $nodes = (Get-ClusterNode).Name;
 }
 ```  
 
-## <a name="11--cycle-the-includessnoversionincludesssnoversion-mdmd-service-for-each-instance"></a>11.  Realize um ciclo do serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em cada instância
+## <a name="11--cycle-the-ssnoversion-service-for-each-instance"></a>11.  Realize um ciclo do serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em cada instância
 
 Com o serviço DTC clusterizado totalmente configurado, será necessário interromper e reiniciar cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Grupo de Disponibilidade para garantir que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seja inscrito para usar esse serviço DTC.
 

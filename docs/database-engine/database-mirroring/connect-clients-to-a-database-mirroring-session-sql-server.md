@@ -17,10 +17,10 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258877"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a uma sessão de espelhamento de banco de dados (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "75258877"
   Para se conectar a uma sessão de espelhamento de banco de dados, um cliente pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou o .NET Framework Data Provider para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando configurados para um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , esses provedores de acesso de dados dão suporte completo ao espelhamento de banco de dados. Para obter informações sobre as considerações de programação para usar um banco de dados espelho, consulte [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Além disso, a instância de servidor principal atual deve estar disponível e o logon do cliente deve ter sido criado na instância de servidor. Para obter mais informações, consulte [Solução de problemas de usuários órfãos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). As conexões de cliente com uma sessão de espelhamento de banco de dados não envolvem a instância de servidor testemunha, se essa existir.  
   
   
-##  <a name="InitialConnection"></a> Estabelecendo a conexão inicial com uma sessão de espelhamento de banco de dados  
+##  <a name="making-the-initial-connection-to-a-database-mirroring-session"></a><a name="InitialConnection"></a> Estabelecendo a conexão inicial com uma sessão de espelhamento de banco de dados  
  Para a conexão inicial com um banco de dados espelho, um cliente deve fornecer uma cadeia de conexão que no mínimo forneça o nome de uma instância de servidor. Esse nome de servidor exigido deve identificar a instância do servidor principal atual e é conhecido como *nome do parceiro inicial*.  
   
  Opcionalmente, a cadeia de conexão também pode fornecer o nome de outra instância de servidor que deverá identificar a instância do servidor espelho atual para uso, se o parceiro inicial estiver indisponível durante a primeira tentativa de conexão. O segundo nome é conhecido como *nome do parceiro de failover*.  
@@ -155,7 +155,7 @@ Server=123.34.45.56,4724;
 "Server=250.65.43.21,4734; Failover_Partner=Partner_B; Database=AdventureWorks; Network=dbmssocn"  
 ```  
   
-##  <a name="RetryAlgorithm"></a> Algoritmo de nova tentativa de conexão (para conexões TCP/IP)  
+##  <a name="connection-retry-algorithm-for-tcpip-connections"></a><a name="RetryAlgorithm"></a> Algoritmo de nova tentativa de conexão (para conexões TCP/IP)  
  Para uma conexão TCP/IP, quando ambos os nomes de parceiro estiverem no cache, o provedor de acesso a dados aderirá a um algoritmo de nova tentativa de conexão. Isto é verdade tanto para fazer a conexão inicial para a sessão como para reconectar depois de perder uma conexão estabelecida. Quando uma conexão tiver sido estabelecida, completar os passos de pré-logon e logon leva tempo adicional.  
   
 > [!NOTE]  
@@ -204,7 +204,7 @@ Server=123.34.45.56,4724;
   
  ![Algoritmo de repetição-atraso](../../database-engine/database-mirroring/media/dbm-retry-delay-algorithm.gif "Algoritmo de repetição-atraso")  
   
-##  <a name="Reconnecting"></a> Reconectando uma sessão de espelhamento de banco de dados  
+##  <a name="reconnecting-to-a-database-mirroring-session"></a><a name="Reconnecting"></a> Reconectando uma sessão de espelhamento de banco de dados  
  Se uma conexão estabelecida com uma sessão de espelhamento de banco de dados falhar por qualquer motivo, por exemplo, devido a um failover de espelhamento de banco de dados, e o aplicativo tentar se reconectar ao servidor inicial, o provedor de acesso de dados poderá tentar se reconectar usando o nome de parceiro de failover armazenado no cache do cliente. Porém, a reconexão não é automática. O aplicativo deve se dar conta do erro. Então, o aplicativo precisa fechar a conexão com falha e abrir uma conexão nova que use os mesmos atributos de cadeia de caracteres de conexão. Neste momento, o provedor de acesso de dados redireciona a conexão ao parceiro de failover. Se a instância de servidor identificada por este nome for atualmente o servidor principal, a tentativa de conexão normalmente terá sucesso. Caso estiver obscuro se uma transação foi confirmada ou revertida, o aplicativo deve inspecionar o estado da transação, da mesma maneira como ao reconectar a uma instância de servidor autônoma.  
   
  A reconexão se assemelha a uma conexão inicial para a qual a cadeia de caracteres de conexão forneceu um nome de parceiro de failover. Se a primeira tentativa de conexão falhar, as tentativas de conexão alternarão seguidamente entre o nome do parceiro inicial e o nome do parceiro de failover até que o cliente conecte ao servidor principal ou o provedor de acesso de dados expire o tempo limite.  
@@ -225,7 +225,7 @@ Server=123.34.45.56,4724;
   
 ##  <a name="Benefits"></a>   
   
-##  <a name="StalePartnerName"></a> O impacto de um nome de parceiro de failover desatualizado  
+##  <a name="the-impact-of-a-stale-failover-partner-name"></a><a name="StalePartnerName"></a> O impacto de um nome de parceiro de failover desatualizado  
  O administrador do banco de dados pode alterar o parceiro de failover a qualquer momento. Portanto, um nome de parceiro de failover fornecido pelo cliente pode estar desatualizado ou *obsoleto*. Por exemplo, considere um nome de parceiro de failover Partner_B que é substituído por outra instância de servidor, Partner_C. Se um cliente fornecer Partner_B como o nome do parceiro de failover, este nome estará desatualizado. Quando o nome do parceiro de failover fornecido pelo cliente está desatualizado, o comportamento do provedor de acesso de dados é equiparado ao caso em que um nome de parceiro de failover não é fornecido pelo cliente.  
   
  Por exemplo, considere uma situação em que um cliente usa uma cadeia de conexão para uma série de quatro tentativas de conexão. Na cadeia de conexão, o nome do parceiro inicial é Partner_A e o nome do parceiro de failover é Partner_B:  

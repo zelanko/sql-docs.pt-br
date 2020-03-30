@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9669b2c38d2e8b571ef7e519100b13cf5a63a10d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74479408"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutorial: Análise de dados do R para desenvolvedores de SQL
@@ -48,7 +48,7 @@ A finalidade deste tutorial de várias partes é uma introdução a um fluxo de 
 
 Depois que o modelo for salvo no banco de dados, use procedimentos armazenados a fim de chamar o modelo para fazer previsões por meio do [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Todas as tarefas podem ser feitas usando procedimentos armazenados do [!INCLUDE[tsql](../../includes/tsql-md.md)] no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 

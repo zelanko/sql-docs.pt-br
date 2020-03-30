@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286320"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Como contribuir para a documentação do SQL Server
@@ -30,7 +30,7 @@ Há dois fluxos de trabalho principais que você pode usar para contribuir:
 
 Todas as contribuições públicas são validadas pela equipe de conteúdo do SQL para exatidão técnica e consistência. 
 
-## <a id="githubui"></a> Editar no navegador
+## <a name="edit-in-your-browser"></a><a id="githubui"></a> Editar no navegador
 
 Você pode fazer edições simples no conteúdo do SQL Server em seu navegador e, em seguida, enviá-las à Microsoft. Para saber mais, confira o [Guia de visão geral do colaborador do Microsoft Docs](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). 
 
@@ -51,7 +51,7 @@ O seguinte GIF mostra o processo de ponta a ponta para enviar as alterações ao
 
 ![Editar documentos do SQL](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
-## <a id="tools"></a> Editar localmente com ferramentas
+## <a name="edit-locally-with-tools"></a><a id="tools"></a> Editar localmente com ferramentas
 
 Outra opção de edição é criar fork nos repositórios **sql-docs** ou **azure-docs** e cloná-los localmente para seu computador. Dessa forma, você poderá usar um editor de Markdown e um cliente git para enviar as alterações. Este fluxo de trabalho é bom para edições mais complexas ou que envolvem vários arquivos. Também é bom para colaboradores frequentes do docs.microsoft.com.
 

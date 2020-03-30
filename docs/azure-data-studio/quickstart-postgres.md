@@ -11,16 +11,16 @@ ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71127248"
 ---
-# <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Início Rápido: Conectar-se ao PostgreSQL e consultá-lo usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-postgresql-using-name-sos"></a>Início Rápido: Conectar-se ao PostgreSQL e consultá-lo usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Este guia de início rápido mostra como usar o [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectar-se ao Postgres e, em seguida, usar instruções SQL para criar o banco de dados *tutorialdb* e consultá-lo.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para concluir este guia de início rápido, você precisa de [!INCLUDE[name-sos](../includes/name-sos-short.md)], a extensão PostgreSQL para [!INCLUDE[name-sos](../includes/name-sos-short.md)] e acesso a um servidor PostgreSQL.
 

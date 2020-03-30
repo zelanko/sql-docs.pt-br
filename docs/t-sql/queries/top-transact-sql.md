@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67948244"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -161,7 +161,7 @@ Não é possível combinar TOP com OFFSET e FETCH na mesma expressão de consult
 |[Incluindo valores de empate](#tie)|WITH TIES|  
 |[Limitando as linhas afetadas por DELETE, INSERT ou UPDATE](#DML)|DELETE • INSERT • UPDATE|  
   
-###  <a name="BasicSyntax"></a> Sintaxe básica  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Sintaxe básica  
 Os exemplos nesta seção demonstram a funcionalidade básica da cláusula ORDER BY usando a sintaxe mínima necessária.  
   
 #### <a name="a-using-top-with-a-constant-value"></a>a. Usando TOP com um valor constante  
@@ -206,7 +206,7 @@ ORDER BY HireDate DESC;
 GO    
 ```  
   
-###  <a name="tie"></a> Incluindo valores de empate  
+###  <a name="including-tie-values"></a><a name="tie"></a> Incluindo valores de empate  
   
 #### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>a. Usando WITH TIES para incluir linhas que correspondam aos valores da última linha  
 O exemplo a seguir obtém os primeiros `10` por cento de todos os funcionários com o salário mais alto e os retorna em ordem descendente, de acordo com seu salário. Especificar `WITH TIES` assegura que todos os funcionários que recebem salários iguais ao salário mais baixo retornado (a última linha) também serão incluídos no conjunto de resultados, mesmo que isso exceda `10` por cento dos funcionários.  
@@ -225,7 +225,7 @@ ORDER BY Rate DESC;
 GO    
 ```  
   
-###  <a name="DML"></a> Limitando as linhas afetadas por DELETE, INSERT ou UPDATE  
+###  <a name="limiting-the-rows-affected-by-delete-insert-or-update"></a><a name="DML"></a> Limitando as linhas afetadas por DELETE, INSERT ou UPDATE  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>a. Usando TOP para limitar o número de linhas excluídas  
 Quando uma cláusula TOP (*n*) é usada com DELETE, a operação de exclusão é executada em uma seleção indefinida de um número *n* de linhas. Ou seja, a instrução DELETE escolhe qualquer número (*n*) de linhas que atendem aos critérios definidos na cláusula WHERE. O exemplo a seguir exclui `20` linhas da tabela `PurchaseOrderDetail` que têm datas de conclusão anteriores a 1º de julho de 2002.  
@@ -315,7 +315,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 O exemplo a seguir retorna as primeiras 31 linhas que correspondem aos critérios de consulta. A cláusula **ORDER BY** garante que as 31 linhas retornadas sejam as primeiras 31 linhas com base em uma ordem alfabética da coluna `LastName`.  
   
 Usando **TOP** sem especificar empates.  

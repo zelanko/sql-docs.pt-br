@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: eea087ed3a4859e179f7bb0d1e77140bb8229a17
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77608387"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Usar um script Python para implantar um cluster de Big Data do SQL Server no AKS (Serviço de Kubernetes do Azure)
@@ -27,7 +27,7 @@ Neste tutorial, use um script de implantação Python de exemplo para implantar 
 
 A implantação padrão de cluster de Big Data usada aqui consiste em uma instância do SQL mestre, uma instância do pool de computação, duas instâncias do pool de dados e duas instâncias do pool de armazenamento. Os dados são persistidos usando volumes persistentes do Kubernetes que usam as classes de armazenamento padrão do AKS. A configuração padrão usada neste tutorial é adequada para ambientes de desenvolvimento/teste.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Uma assinatura do Azure.
 - [Ferramentas de Big Data](deploy-big-data-tools.md):

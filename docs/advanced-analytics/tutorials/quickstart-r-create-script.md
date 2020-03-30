@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 495bb56cf76391c8baa1734665d5064b586d4be8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831787"
 ---
 # <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>Início Rápido: executar scripts R simples com os Serviços de Machine Learning do SQL Server
@@ -22,7 +22,7 @@ ms.locfileid: "76831787"
 
 Neste início rápido, você executará um conjunto de scripts R simples usando os [Serviços de Machine Learning do SQL Server](../what-is-sql-server-machine-learning.md). Você aprenderá a usar o procedimento armazenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para executar o script em uma instância do SQL Server.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Este início rápido requer acesso a uma instância do SQL Server que tenha os [Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md) com a linguagem R instalada.
 
@@ -160,7 +160,7 @@ Por enquanto, usaremos as variáveis de entrada e saída padrão de `sp_execute_
     Observe que R diferencia maiúsculas de minúsculas. As variáveis de entrada e saída usadas no script R (**SQL_out**, **SQL_in**) precisam corresponder aos nomes definidos com `@input_data_1_name` e `@output_data_1_name`, incluindo maiúsculas e minúsculas.
 
    > [!TIP]
-   > Só é possível passar um conjunto de dados de entrada como parâmetro e você pode retornar apenas um conjunto de dados. No entanto, você pode chamar outros conjuntos de dados em seu código R e pode retornar saídas de outros tipos, além do conjunto de dados. Você também pode adicionar a palavra-chave OUTPUT a qualquer parâmetro para que ele retorne com os resultados.
+   > Só é possível passar um conjunto de dados de entrada como parâmetro, e você pode retornar apenas um conjunto de dados. No entanto, você pode chamar outros conjuntos de dados em seu código R e pode retornar saídas de outros tipos, além do conjunto de dados. Você também pode adicionar a palavra-chave OUTPUT a qualquer parâmetro para que ele retorne com os resultados.
 
 1. Você também pode gerar valores usando apenas o script R sem dados de entrada (`@input_data_1` está definido como em branco).
 
@@ -247,6 +247,6 @@ Para saber como usar estruturas de dados ao usar o R nos Serviços de Machine Le
 
 Para obter mais informações sobre como usar o R nos Serviços de Machine Learning do SQL Server, confira os seguintes artigos:
 
-- [Gravar funções avançadas do R com os Serviços de Machine Learning do SQL Server](quickstart-r-functions.md)
+- [Escrever funções avançadas do R com os Serviços de Machine Learning do SQL Server](quickstart-r-functions.md)
 - [Criar e pontuar um modelo de previsão no R com os Serviços de Machine Learning do SQL Server](quickstart-r-train-score-model.md)
 - [O que são os Serviços de Machine Learning do SQL Server (Python e R)?](../what-is-sql-server-machine-learning.md)

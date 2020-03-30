@@ -11,10 +11,10 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014684"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorar o desempenho de Grupos de Disponibilidade AlwaysOn
@@ -436,7 +436,7 @@ Para criar as políticas, siga as instruções abaixo em todas as instâncias de
   
  Você pode exibir o histórico de trabalhos para inspecionar os resultados da avaliação. As falhas de avaliação também são registradas no log de aplicativos do Windows (no Visualizador de Eventos) com a ID de evento 34052. Você também pode configurar o SQL Server Agent para enviar alertas sobre falhas de política. Para obter mais informações, veja [Configurar alertas para notificar os administradores de políticas sobre falhas](~/relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md).  
   
-##  <a name="BKMK_SCENARIOS"></a> Cenários de solução de problemas de desempenho  
+##  <a name="performance-troubleshooting-scenarios"></a><a name="BKMK_SCENARIOS"></a> Cenários de solução de problemas de desempenho  
  A tabela a seguir lista os cenários comuns de solução de problemas relacionados ao desempenho.  
   
 |Cenário|Descrição|  
@@ -445,7 +445,7 @@ Para criar as políticas, siga as instruções abaixo em todas as instâncias de
 |[Solucionar problemas: o grupo de disponibilidade excedeu o RPO](troubleshoot-availability-group-exceeded-rpo.md)|Depois de executar um failover manual forçado, a perda de dados é maior que o RPO. Ou, ao calcular a possível perda de dados de uma réplica secundária de confirmação assíncrona, você descobre que ela excede o RPO.|  
 |[Solucionar problemas: as alterações na réplica primária não são refletidas na réplica secundária](troubleshoot-primary-changes-not-reflected-on-secondary.md)|O aplicativo cliente conclui uma atualização na réplica primária com êxito, mas uma consulta à réplica secundária mostra que a alteração não foi refletida.|  
   
-##  <a name="BKMK_XEVENTS"></a> Eventos estendidos úteis  
+##  <a name="useful-extended-events"></a><a name="BKMK_XEVENTS"></a> Eventos estendidos úteis  
  Os seguintes eventos estendidos são úteis ao solucionar problemas de réplicas no estado **Sincronizando**.  
   
 |Nome do evento|Categoria|Canal|Réplica de disponibilidade|  

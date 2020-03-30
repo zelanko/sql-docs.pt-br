@@ -14,10 +14,10 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78866369"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solucionar problemas na conexão com o Mecanismo de Banco de Dados do SQL Server
@@ -78,7 +78,7 @@ Para verificar se a instância está em execução, no Configuration Manager, pr
 
 Se a instância estiver parada, clique com o botão direito do mouse nela e clique em **Iniciar**. A instância do servidor é iniciada e o indicador muda para uma seta verde.
 
-## <a name = "startbrowser"></a> Verifique se o serviço SQL Server Browser está em execução
+## <a name="verify---sql-server-browser-service-is-running"></a><a name = "startbrowser"></a> Verifique se o serviço SQL Server Browser está em execução
 
 Para se conectar a uma instância nomeada, o serviço do SQL Server Browser deve estar em execução. No Configuration Manager, localize o serviço **SQL Server Browser** e verifique se ele está em execução. Inicie-o, caso não esteja em execução. O serviço do SQL Server Browser não é necessário para instâncias padrão.
 
@@ -129,7 +129,7 @@ Obtenha o endereço IP do computador que hospeda a instância do SQL Server.
 
   >O SQL Server pode se conectar, usando o protocolo IP versão 4 ou o IP versão 6. Sua rede pode permitir um dos dois ou ambos. A maioria das pessoas começam a solucionar os problemas do endereço **IPv4** . Ele é mais curto e mais fácil de digitar.
 
-## <a name = "getTCP"></a>Obter a porta TCP da instância do SQL Server
+## <a name="get-the-sql-server-instance-tcp-port"></a><a name = "getTCP"></a>Obter a porta TCP da instância do SQL Server
 
 Na maioria dos casos, você está se conectando ao Mecanismo de Banco de Dados de outro computador, usando o protocolo TCP.
 
@@ -142,7 +142,7 @@ Esta mensagem indica que esta instância do SQL Server está escutando em todos 
   > [!NOTE]
   > `IP address 127.0.0.1` provavelmente está listado. Isso é chamado de endereço do adaptador de loopback. Somente os processos no mesmo computador podem usá-lo para se conectar. Pode ser útil para solucionar problemas, mas você não pode usá-lo para se conectar de outro computador.
 
-## <a name = "enableprotocols"></a>Habilitar Protocolos
+## <a name="enable-protocols"></a><a name = "enableprotocols"></a>Habilitar Protocolos
 
 Em algumas instalações do SQL Server, conectar-se ao Mecanismo de Banco de Dados de outro computador não está habilitada, a menos que o administrador use o Configuration Manager para habilitá-lo. Para habilitar conexões de outro computador:
 
@@ -150,7 +150,7 @@ Em algumas instalações do SQL Server, conectar-se ao Mecanismo de Banco de Dad
 1. Usando o Configuration Manager, no painel esquerdo, expanda **Configuração de Rede do SQL Server**e selecione a instância do SQL Server que você deseja se conectar. O painel direito lista os protocolos de conexão disponíveis. Normalmente, a memória compartilhada está habilitada. Ele só pode ser usado no mesmo computador, por isso a maioria das instalações deixam a memória compartilhada habilitada. Para conectar-se ao SQL Server de outro computador, você normalmente usa o TCP/IP. Se o TCP/IP não estiver habilitado, clique com o botão direito do mouse em **TCP/IP**e depois clique em **Habilitar**.
 1. Se você alterou a configuração habilitada para qualquer protocolo, reinicie o Mecanismo de Banco de Dados. No painel esquerdo, selecione **Serviços do SQL Server**. No painel direito, clique com o botão direito do mouse na instância do Mecanismo de Banco de Dados e clique em **Reiniciar**.
 
-## <a name="testTCPIP"></a>Como testar a conectividade TCP/IP
+## <a name="testing-tcpip-connectivity"></a><a name="testTCPIP"></a>Como testar a conectividade TCP/IP
 
 Conectar ao SQL Server usando TCP/IP requer que o Windows possa estabelecer a conexão. Use a ferramenta `ping` para testar TCP.
 

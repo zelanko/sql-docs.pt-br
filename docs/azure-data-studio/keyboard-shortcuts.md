@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 8e577f50152eb5f86b81caa23cc493b92bbab270
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67959477"
 ---
-# <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>Atalhos de teclado no [!INCLUDE[name-sos](../includes/name-sos.md)]
+# <a name="keyboard-shortcuts-in-name-sos"></a>Atalhos de teclado no [!INCLUDE[name-sos](../includes/name-sos.md)]
 
 Este artigo apresenta as etapas para exibir, editar e criar rapidamente atalhos de teclado no [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 

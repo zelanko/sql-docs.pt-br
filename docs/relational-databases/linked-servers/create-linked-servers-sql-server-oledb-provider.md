@@ -11,10 +11,10 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095999"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Consultas distribuídas do Microsoft SQL Server: Conectividade do OLE DB
@@ -610,7 +610,7 @@ Para obter uma lista de todas as interfaces OLE DB usadas pelo SQL Server, confi
 
 O Microsoft SQL Server oferece o conjunto mais robusto de ferramentas para acessar dados de fontes de dados heterogêneos. Ao compreender as interfaces OLE DB expostas pelo SQL Server, os desenvolvedores podem exercer um alto grau de controle e sofisticação em consultas distribuídas.
 
-## <a name="appendixa"></a> Interfaces OLE DB consumidas pelo SQL Server
+## <a name="ole-db-interfaces-consumed-by-sql-server"></a><a name="appendixa"></a> Interfaces OLE DB consumidas pelo SQL Server
 
 A tabela a seguir lista todas as interfaces OLE DB usadas pelo SQL Server. A coluna Obrigatório indica se a interface faz parte da funcionalidade OLE DB mínima necessária para o SQL Server ou se ela é opcional. Se determinada interface não estiver marcada como obrigatória, o SQL Server ainda poderá acessar o provedor, mas uma funcionalidade ou uma otimização específica do SQL Server não será possível no provedor.
 
@@ -654,7 +654,7 @@ No caso das interfaces opcionais, a coluna Cenários indica um ou mais dos seis 
 >[!NOTE]
 >O objeto `Index`, o objeto `Command` e o objeto `Error` não são obrigatórios. No entanto, se houver suporte para eles, as interfaces listadas serão obrigatórias, conforme especificado na coluna Obrigatório.
 
-## <a name="appendixb"></a>Subconjunto SQL usado para gerar consultas remotas
+## <a name="sql-subset-used-for-generating-remote-queries"></a><a name="appendixb"></a>Subconjunto SQL usado para gerar consultas remotas
 
 O subconjunto SQL gerado pelo processador de consultas do SQL Server em um provedor de comando SQL depende do nível de sintaxe ao qual o provedor dá suporte, conforme indicado pela propriedade `DBPROP_SQLSUPPORT`.
 
@@ -794,7 +794,7 @@ digit ::= 0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9
 
 period ::= . 
 
-## <a name="appendixc"></a>Propriedades específicas do SQL Server
+## <a name="sql-server-specific-properties"></a><a name="appendixc"></a>Propriedades específicas do SQL Server
 
 ```
 enum SQLPROPERTIES
