@@ -11,10 +11,10 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a959292b7adc2b5bb547d447f67f2a392de8af4c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027950"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Suporte a JDBC Driver para alta disponibilidade e recuperação de desastre
@@ -69,7 +69,7 @@ Observação:
   
 -   Conectar-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurada com mais de 64 endereços IP causará uma falha de conexão.  
   
--   O comportamento de um aplicativo que usa a propriedade de conexão do **multiSubnetFailover** não é afetado com base no tipo de autenticação: Autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Autenticação Kerberos ou Autenticação do Windows.  
+-   O comportamento de um aplicativo que usa a propriedade de conexão **multiSubnetFailover** não é afetado com base no tipo de autenticação: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticação, Autenticação Kerberos ou Autenticação do Windows.  
   
 -   Aumente o valor de **loginTimeout** para acomodar o tempo de failover e reduzir as tentativas de repetição de conexão do aplicativo.  
   

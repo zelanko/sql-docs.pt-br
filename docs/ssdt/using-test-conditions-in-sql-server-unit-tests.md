@@ -13,10 +13,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243516"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Usando condições de teste nos testes de unidade do SQL Server
@@ -75,7 +75,7 @@ Todos os parâmetros não especificados são ignorados. Você passa esses parâm
   
 Para obter um exemplo de como usar as exceções esperadas e um teste de unidade negativo do SQL Server, consulte [Passo a passo: criar e executar um teste de unidade do SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
-## <a name="SpecifyDataChecksum"></a>Especificar uma soma de verificação de dados  
+## <a name="specifying-a-data-checksum"></a><a name="SpecifyDataChecksum"></a>Especificar uma soma de verificação de dados  
 Para exibir o Designer do Teste de Unidade do SQL Server, clique duas vezes no arquivo do código de origem do teste de unidade no **Gerenciador de Soluções**.  
   
 Depois que você adicionar a condição de teste Soma de Verificação de Dados no teste de unidade de banco de dados, configure a soma de verificação esperada usando o procedimento a seguir:  
@@ -107,7 +107,7 @@ Depois que você adicionar a condição de teste Soma de Verificação de Dados 
   
     A coluna **Valor** da condição de teste exibe o valor da soma de verificação esperada.  
   
-## <a name="SpecifyExpectedSchema"></a>Especificar um esquema esperado  
+## <a name="specifying-an-expected-schema"></a><a name="SpecifyExpectedSchema"></a>Especificar um esquema esperado  
 Depois que você adicionar a condição de teste Esquema Esperado ao teste de unidade do SQL Server, configure o esquema esperado usando o procedimento a seguir:  
   
 #### <a name="to-specify-an-expected-schema"></a>Para especificar um esquema esperado  

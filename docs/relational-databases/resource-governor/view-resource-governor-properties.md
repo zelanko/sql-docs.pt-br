@@ -14,10 +14,10 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903906"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
@@ -25,7 +25,7 @@ ms.locfileid: "72903906"
 
   Você pode criar ou configurar entidades do Administrador de Recursos, como pools de recursos e grupos de cargas de trabalho, usando a página de Propriedades do Administrador de Recursos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- ##  <a name="BeforeYouBegin"></a> Tópicos relacionados 
+ ##  <a name="related-topics"></a><a name="BeforeYouBegin"></a> Tópicos relacionados 
  Além de exibir as propriedades de entidades do Administrador de Recursos, você pode executar várias tarefas de configuração usando a página **Propriedades do Administrador de Recursos** . Para saber mais, consulte esses tópicos:  
   
 -   [Habilitar o Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)  
@@ -48,10 +48,10 @@ ms.locfileid: "72903906"
   
  É possível determinar se há uma configuração pendente consultando a exibição de gerenciamento dinâmico de [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) para obter o status atual de is_configuration_pending.  
   
-##  <a name="Permissions"></a> Permissões  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Exibir propriedades do administrador de recursos exige a permissão VIEW SERVER STATER. As tarefas de configuração do administrador de recursos exigem a permissão CONTROL SERVER.  
   
-##  <a name="ViewRGProp"></a> Página de propriedades do Administrador de Recursos  
+##  <a name="resource-governor-properties-page"></a><a name="ViewRGProp"></a> Página de propriedades do Administrador de Recursos  
  **Para exibir as propriedades do administrador de recursos usando a página de Propriedades do Administrador de Recursos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra o Pesquisador de Objetos e expanda recursivamente o nó **Gerenciamento** para baixo e incluindo o **Administrador de Recursos**.  
@@ -62,7 +62,7 @@ ms.locfileid: "72903906"
   
 4.  Para salvar as alterações, clique em **OK**.  
 
-##  <a name="RGProp"></a> Resource Governor properties  
+##  <a name="resource-governor-properties"></a><a name="RGProp"></a> Resource Governor properties  
  **Nome da função de classificação**  
  Especifique a função de classificação selecionando-a na lista.  
   

@@ -11,10 +11,10 @@ ms.assetid: f1cfa4e4-3e1f-4504-b0de-cc626d653661
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 004f5d89eaaa4293ae7da0058733b261c01c7531
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981689"
 ---
 # <a name="getncharacterstream-method-int-sqlserverresultset"></a>Método getNCharacterStream (int) (SQLServerResultSet)

@@ -13,10 +13,10 @@ ms.assetid: 809e395f-2e10-48ff-8860-56403f130628
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6b8510ebf2b5499dfa9e90a80a49a8241543c4ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291271"
 ---
 # <a name="inferred-dimension-members-slowly-changing-dimension-wizard"></a>Membros de Dimensão Deduzidos (Assistente para Dimensões de Alteração Lenta)

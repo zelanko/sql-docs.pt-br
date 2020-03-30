@@ -19,10 +19,10 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254048"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Exibir ou alterar o modelo de recuperação de um banco de dados (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "75254048"
   Confira uma explicação mais detalhada em [modelos de recuperação](recovery-models-sql-server.md).
   
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
 
 -   [Fazer backup do log de transações](back-up-a-transaction-log-sql-server.md) **antes** de mudar do [mudar de recuperação completa ou recuperação registrada em log em massa](recovery-models-sql-server.md).  
@@ -50,10 +50,10 @@ ms.locfileid: "75254048"
   
 **Observação!** Se você mudar para o modelo de recuperação completa durante uma operação em massa, o log das operações em massa mudará de registro em log mínimo para registro em log completo, e vice-versa.  
   
-###  <a name="Security"></a> Permissões necessárias  
+###  <a name="required-permissions"></a><a name="Security"></a> Permissões necessárias  
    Requer a permissão ALTER no banco de dados.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-recovery-model"></a>Para exibir ou alterar o modelo de recuperação  
   
@@ -71,7 +71,7 @@ ms.locfileid: "75254048"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-the-recovery-model"></a>Para exibir o modelo de recuperação  
   
@@ -102,7 +102,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Recomendações: após a alteração do modelo de recuperação  
+##  <a name="recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a> Recomendações: após a alteração do modelo de recuperação  
   
 -   **Depois de alternar entre os modelos de recuperação completa e bulk-logged**  
   
@@ -128,7 +128,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   Verifique se os backups periódicos de banco de dados estão agendados. Fazer backup de seu banco de dados é essencial para proteger seus dados e truncar a porção inativa do log de transações.  
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 -   [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
@@ -138,7 +138,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
 -   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   [Planos de manutenção de banco de dados](../maintenance-plans/maintenance-plans.md) (nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
   

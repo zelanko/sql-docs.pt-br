@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ef9084e8264caf6b14289d6d2674afca012cd15
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761921"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Índices columnstore – Data Warehouse
@@ -63,7 +63,7 @@ GO
 CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);  
 ```  
   
-### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>Exemplo: use um índice não clusterizado para impor uma restrição de chave primária em um tabela columnstore  
+### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>Exemplo: use um índice não clusterizado para impor uma restrição de chave primária em um tabela columnstore.  
  Por padrão, uma tabela columnstore não permite uma restrição de chave primária clusterizada. Agora você pode usar um índice não clusterizado em uma tabela columnstore para impor uma restrição de chave primária. Uma chave primária é equivalente a uma restrição UNIQUE em uma coluna não NULL e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa uma restrição UNIQUE como um índice não clusterizado. Combinando esses fatos, o exemplo a seguir define uma restrição UNIQUE na accountkey da coluna não NULL. O resultado é um índice não clusterizado que impõe uma restrição de chave primária como uma restrição UNIQUE em uma coluna não NULL.  
   
  Em seguida, a tabela é convertida em um índice columnstore clusterizado. Durante a conversão, o índice não clusterizado persiste. O resultado é um índice columnstore clusterizado com um índice não clusterizado que impõe a restrição de chave primária. Uma vez que qualquer atualização ou inserção na tabela columnstore também afetará o índice não clusterizado, todas as operações que violarem a restrição exclusiva e o não NULL causarão a falha de toda a operação.  

@@ -28,10 +28,10 @@ ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244559"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Especificar informações de credenciais e de conexão para fontes de dados de relatório
@@ -147,7 +147,7 @@ ms.locfileid: "75244559"
 ## <a name="user-name-and-password-login"></a>Logon de nome de usuário e senha  
  Quando você seleciona **Usar este nome de usuário e senha**, um nome de usuário e senha devem ser fornecidos para acessar a fonte de dados. Para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , as credenciais talvez sejam de um logon de banco de dados. As credenciais são passadas para a fonte de dados para autenticação.  
   
-##  <a name="DataSourceConfigurationConnections"></a> Configuração de fontes de dados e conexões de rede  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> Configuração de fontes de dados e conexões de rede  
  A tabela a seguir mostra como são feitas conexões para combinações específicas de tipos de credencial e extensões de processamento de dados. Se você estiver usando uma extensão de processamento de dados personalizada, consulte [Especificar conexões para extensões de processamento de dados personalizados](../../reporting-services/report-data/specify-connections-for-custom-data-processing-extensions.md).  
   
 |**Tipo**|**Contexto para conexão de rede**|**Tipos de fonte de dados**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  

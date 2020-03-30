@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 82f3f7fd1b796d8854363afd84768cd4ee4d3358
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896001"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Transações e operações de cópia em massa
@@ -47,7 +47,7 @@ Você pode especificar explicitamente a opção <xref:Microsoft.Data.SqlClient.S
 > [!NOTE]
 >  Como lotes diferentes são executados em diferentes transações, se ocorrer um erro durante a operação de cópia em massa, todas as linhas no lote atual serão revertidas, mas as linhas de lotes anteriores permanecerão no banco de dados.  
   
-O seguinte aplicativo de console é semelhante ao exemplo anterior, com uma exceção: neste exemplo, a operação de cópia em massa gerencia as próprias transações. Todos os lotes copiados até o ponto do erro são confirmados; o lote que contém a chave duplicada é revertido e a operação de cópia em massa é interrompida antes de processar todos os outros lotes.  
+O aplicativo de console a seguir é semelhante ao exemplo anterior, com uma exceção: neste exemplo, a operação de cópia em massa gerencia suas próprias transações. Todos os lotes copiados até o ponto do erro são confirmados; o lote que contém a chave duplicada é revertido e a operação de cópia em massa é interrompida antes de processar todos os outros lotes.  
   
 > [!IMPORTANT]
 >  Essa amostra não será executada, a menos que você tenha criado as tabelas de trabalho conforme descrito em [Configuração de exemplo de cópia em massa](bulk-copy-example-setup.md). Esse código é fornecido para demonstrar a sintaxe para usar somente **SqlBulkCopy**. Se as tabelas de origem e destino estiverem localizadas na mesma instância do SQL Server, será mais fácil e mais rápido usar uma instrução `INSERT … SELECT` do Transact-SQL para copiar os dados.  

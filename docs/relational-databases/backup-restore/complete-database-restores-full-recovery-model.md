@@ -18,10 +18,10 @@ ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: d7e56c5ceb23d2c42a973c7f8d56edbce5046a86
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908966"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Restaurações completas de banco de dados (modelo de recuperação completa)
@@ -41,7 +41,7 @@ _Não_ é recomendável anexar ou restaurar bancos de dados de origem desconheci
 
 Para obter informações sobre suporte para backups de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja a seção “Suporte de compatibilidade” de [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).
   
-##  <a name="PointOfFailure"></a> Restaurando um banco de dados até o ponto de falha  
+##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a> Restaurando um banco de dados até o ponto de falha  
 
  Normalmente, a recuperação de um banco de dados até o ponto da falha envolve as seguintes etapas básicas:  
   
@@ -69,7 +69,7 @@ Para obter informações sobre suporte para backups de versões anteriores do [!
 > [!NOTE]  
 >  Ao restaurar um backup de banco de dados em uma instância de servidor diferente, veja [Copiar bancos de dados com Backup e Restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
-###  <a name="TsqlSyntax"></a> Sintaxe básica de RESTORE do Transact-SQL  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> Sintaxe básica de RESTORE do Transact-SQL  
  A sintaxe básica de [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] para a sequência de restauração na ilustração anterior é a seguinte:  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
@@ -82,7 +82,7 @@ Para obter informações sobre suporte para backups de versões anteriores do [!
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> Exemplo: Recuperando até o ponto de falha (Transact-SQL)  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a> Exemplo: Recuperando até o ponto de falha (Transact-SQL)  
  O exemplo a seguir de [!INCLUDE[tsql](../../includes/tsql-md.md)] mostra as opções essenciais em uma sequência de restauração que restaura o banco de dados até o ponto de falha. O exemplo cria um backup do final do log do banco de dados. Em seguida, o exemplo restaura um backup de banco de dados completo e, depois, restaura o backup do final do log. O exemplo recupera o banco de dados em uma etapa final, separada.  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 GO  
 ```  
   
-##  <a name="PointWithinBackup"></a> Restaurando um banco de dados em um ponto em um backup de log  
+##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a> Restaurando um banco de dados em um ponto em um backup de log  
  No modelo de recuperação completa, uma restauração de banco de dados completa pode ser recuperada normalmente até um ponto de hora, uma transação marcada ou um LSN dentro de um backup de log. Porém, no modelo de recuperação bulk-logged, se o backup de log contiver alterações registradas em massa, a recuperação pontual não será possível.  
   
 ### <a name="sample-point-in-time-restore-scenarios"></a>Exemplos de cenários de restauração point-in-time  
@@ -145,7 +145,7 @@ GO
 > [!NOTE]  
 >  Para obter um exemplo de uma restauração pontual, veja [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para restaurar um backup de banco de dados completo**  
   
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  

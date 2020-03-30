@@ -13,10 +13,10 @@ ms.assetid: 488f0305-190c-4223-aa5c-e9bd43b520eb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: bfe32fd730d4c81e2df9275ba2cbcc879978808a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940475"
 ---
 # <a name="delete-a-policy-based-management-policy"></a>Excluir uma política do Gerenciamento Baseado em Políticas
@@ -33,14 +33,14 @@ ms.locfileid: "67940475"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a associação à função PolicyAdministratorRole no banco de dados msdb.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-delete-a-policy"></a>Para excluir uma política  
   

@@ -19,10 +19,10 @@ ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a3f1e7f07b95c71eeddc65fed6db3f10cc31ee32
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321473"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Executar lógica de negócios durante sincronizações de mesclagem

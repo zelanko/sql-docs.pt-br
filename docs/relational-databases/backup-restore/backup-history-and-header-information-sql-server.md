@@ -34,10 +34,10 @@ ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: f2b04fb3c35f810e37e1646446f7ebdfb8915ee1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75242587"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Informações de histórico e cabeçalho de backup (SQL Server)
@@ -65,7 +65,7 @@ ms.locfileid: "75242587"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="BnRHistoryTables"></a> Tabelas de histórico de backup e restauração  
+##  <a name="backup-and-restore-history-tables"></a><a name="BnRHistoryTables"></a> Tabelas de histórico de backup e restauração  
  Esta seção apresenta as tabelas de histórico que armazenam backup e restauram metadados no banco de dados do sistema **msdb** .  
   
 |Tabela de histórico|DESCRIÇÃO|  
@@ -82,7 +82,7 @@ ms.locfileid: "75242587"
 > [!NOTE]  
 >  Quando uma restauração é executada, as tabelas de histórico de backup e restauração são modificadas.  
   
-##  <a name="TsqlStatementsForBackupHistory"></a> Instruções Transact-SQL por acessar histórico de backup  
+##  <a name="transact-sql-statements-for-accessing-backup-history"></a><a name="TsqlStatementsForBackupHistory"></a> Instruções Transact-SQL por acessar histórico de backup  
  As instruções de informações de restauração correspondem a informações armazenadas em certas tabelas de histórico de backup.  
   
 > [!IMPORTANT]  
@@ -94,7 +94,7 @@ ms.locfileid: "75242587"
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Recupera todas as informações do cabeçalho de backup de todos os conjuntos de backup em um dispositivo de backup particular. O resultado de executar RESTORE HEADERONLY é um conjunto de resultados.<br /><br /> Para obter mais informações, consulte "Exibindo informações do cabeçalho de backup" mais adiante neste tópico.|  
 |[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|Retorna um conjunto de resultados que contém informações sobre a mídia de backup em um dispositivo de backup especificado.<br /><br /> Para obter mais informações, consulte "Exibindo informações do cabeçalho de mídia" mais adiante neste tópico.|  
   
-##  <a name="ListDbTlogFiles"></a> Arquivos de log de transações e de banco de dados  
+##  <a name="database-and-transaction-log-files"></a><a name="ListDbTlogFiles"></a> Arquivos de log de transações e de banco de dados  
  Informações que são exibidas quando os arquivos de log de transações e de banco de dados são listados em um backup incluem o nome lógico, nome físico, tipo de arquivo (banco de dados ou log), associação de grupo de arquivos, tamanho de arquivo (em bytes), tamanho máximo de arquivo permitido e o tamanho de crescimento de arquivo predefinido (em bytes). Essas informações são úteis nas seguintes situações, para determinar os nomes dos arquivos em um backup de banco de dados antes de restaurar o backup de banco de dados:  
   
 -   Você perdeu uma unidade de disco que contém um ou mais dos arquivos de um banco de dados.  
@@ -105,7 +105,7 @@ ms.locfileid: "75242587"
   
      Listar os arquivos no backup permite que você determine quais arquivos são afetados. Por exemplo, o backup contém um arquivo que tem deve ser restaurado na unidade E, mas o servidor de destino não tem uma unidade E. O arquivo deve ser realocado em outro local, por exemplo, na unidade Z, quando o arquivo for restaurado.  
   
-##  <a name="MediaHeader"></a> Informações de cabeçalho de mídia  
+##  <a name="media-header-information"></a><a name="MediaHeader"></a> Informações de cabeçalho de mídia  
  A exibição do cabeçalho de mídia exibe informações sobre a própria mídia, em vez de informações sobre os backups na mídia. As informações do cabeçalho de mídia exibidas incluem nome da mídia, descrição, nome do software que criou o cabeçalho e a data em que o cabeçalho de mídia foi escrito.  
   
 > [!NOTE]  
@@ -113,7 +113,7 @@ ms.locfileid: "75242587"
   
  Para obter mais informações, veja [Comparação de informações do cabeçalho de mídia e do cabeçalho de backup](#CompareMediaHeaderBackupHeader), mais adiante neste tópico.  
   
-##  <a name="BackupHeader"></a> Informações de cabeçalho de backup  
+##  <a name="backup-header-information"></a><a name="BackupHeader"></a> Informações de cabeçalho de backup  
  A exibição do cabeçalho de backup exibe informações sobre todos os conjuntos de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na mídia. As informações exibidas incluem os tipos de dispositivos de backup usados, os tipos de backup (por exemplo, banco de dados, transação, arquivo ou banco de dados diferencial) e informações de data/hora de início e término do backup. Essas informações são úteis quando é necessário determinar qual conjunto de backup deve ser restaurado na fita, ou os backups contidos na mídia.  
   
 > [!NOTE]  
@@ -128,7 +128,7 @@ ms.locfileid: "75242587"
   
  Para restaurar um conjunto de backup específico, determine o número da posição do conjunto de backup a ser restaurado. Por exemplo, para restaurar o segundo conjunto de backup, especifique 2 como o conjunto de backup a ser restaurado.  
   
-##  <a name="CompareMediaHeaderBackupHeader"></a> Comparação de informações do cabeçalho de mídia e do cabeçalho de backup  
+##  <a name="comparison-of-media-header-and-backup-header-information"></a><a name="CompareMediaHeaderBackupHeader"></a> Comparação de informações do cabeçalho de mídia e do cabeçalho de backup  
  A ilustração a seguir exemplifica as diferenças entre exibir informações do cabeçalho de backup e do cabeçalho de mídia. A obtenção do cabeçalho de mídia requer a recuperação de informações somente do início da fita. A obtenção do cabeçalho de backup requer a varredura da fita toda para verificar o cabeçalho de todos os conjunto de backup.  
   
  ![Conjunto de mídias que contém três conjuntos de backup do SQL Server](../../relational-databases/backup-restore/media/bnr-media-label.gif "Conjunto de mídias que contém três conjuntos de backup do SQL Server")  
@@ -140,10 +140,10 @@ ms.locfileid: "75242587"
   
  Para obter informações sobre como exibir informações do cabeçalho de backup para todos os conjuntos de backup em um dispositivo de backup, consulte "Exibindo informações do cabeçalho de backup", anteriormente neste tópico.  
   
-##  <a name="Verification"></a> Verificação de backup  
+##  <a name="backup-verification"></a><a name="Verification"></a> Verificação de backup  
  Embora não exigido, verificar um backup é uma prática útil. A verificação de um backup constata se o backup está fisicamente intacto, para assegurar que todos os arquivos no backup estão legíveis e podem ser restaurados, e que você pode restaurar seu backup se precisar dele. É importante entender que verificando um backup a estrutura dos dados no backup não é verificada. Porém, se o backup foi criado usando WITH CHECKSUMS, verificar o backup usando WITH CHECKSUMS pode fornecer uma boa indicação da confiabilidade dos dados no backup.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para excluir linhas antigas das tabelas de histórico de backup e restauração**  
   
 -   [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  

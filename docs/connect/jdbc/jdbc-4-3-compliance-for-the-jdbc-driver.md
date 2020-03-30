@@ -11,10 +11,10 @@ ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ed9b10ad9e9a927789505c7d7327c6cf4d1ff3c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027939"
 ---
 # <a name="jdbc-43-compliance-for-the-jdbc-driver"></a>Conformidade do JDBC 4.3 com o JDBC Driver
@@ -28,7 +28,7 @@ A partir da versão 6.4, o Microsoft JDBC Driver para SQL Server passou a ser co
 
 Com o Microsoft JDBC Driver 7.0 para SQL Server, agora o driver é compatível com JAVA 10 e oferece suporte às APIs mencionadas abaixo. O driver gera `SQLFeatureNotSupportedException` para outros métodos não implementados das especificações do JDBC 4.3.
 
-|Nova API|Descrição|Implementação notável|  
+|Nova API|DESCRIÇÃO|Implementação notável|  
 |-----------------|-----------------|-------------------------------|  
 |void java.sql.connection.beginRequest()|Indica para o driver que uma solicitação, uma unidade de trabalho independente, está sendo inicializada nessa conexão. Para obter mais detalhes, confira [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--).|Salva os valores dos campos de conexão modificáveis por meio de métodos públicos da API: `databaseAutoCommitMode`, `transactionIsolationLevel`, `networkTimeout`, `holdability`, `sendTimeAsDatetime`, `statementPoolingCacheSize`, `disableStatementPooling`, `serverPreparedStatementDiscardThreshold`, `enablePrepareOnFirstPreparedStatementCall`, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert`.|
 |void java.sql.connection.endRequest()|Indica para o driver que uma solicitação, uma unidade de trabalho independente, foi concluída. Para obter mais detalhes, confira [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--).|Fecha as instruções criadas durante a unidade de trabalho e reverte todas as transações em aberto. O método também reverte as alterações nos campos de conexão listados acima.|

@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 75b443df235fd99f262cf3fda0abf6a6354da413
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993884"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>Conjuntos de linhas do esquema – conjunto de linhas LINKEDSERVERS
@@ -29,7 +29,7 @@ ms.locfileid: "67993884"
   
  O conjunto de linhas **LINKEDSERVERS** contém as seguintes colunas.  
   
-|Nome da coluna|Indicador de tipo|Descrição|  
+|Nome da coluna|Indicador de tipo|DESCRIÇÃO|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Nome de um servidor vinculado.|  
 |SVR_PRODUCT|DBTYPE_WSTR|Fabricante ou outro nome que identifique o tipo de repositório de dados representado pelo nome do servidor vinculado.|  

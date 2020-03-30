@@ -9,10 +9,10 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65582061"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Adicionar filtros de conjunto de dados, de região de dados e de grupo
@@ -25,12 +25,12 @@ ms.locfileid: "65582061"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="When"></a> Escolhendo quando definir um filtro  
+##  <a name="choosing-when-to-set-a-filter"></a><a name="When"></a> Escolhendo quando definir um filtro  
  Especifique os filtros para itens de relatório quando você não puder filtrar dados na origem. Por exemplo, use os filtros de relatório quando a fonte de dados não oferecer suporte a parâmetros de consulta, quando você precisar executar procedimentos armazenados e não puder modificar a consulta ou quando um instantâneo de relatório com parâmetros exibir dados personalizados para usuários diferentes.  
   
  Você pode filtrar os dados do relatório antes ou depois de recuperá-los para gerar um conjunto de dados de relatório. Para filtrar os dados antes de eles serem recuperados, altere a consulta de cada conjunto de dados. Ao filtrar os dados da consulta, você filtra os dados na fonte de dados, reduzindo o volume de dados que precisa ser recuperado e processado em um relatório. Para filtrar os dados depois de recuperados, crie expressões de filtro no relatório. É possível definir expressões de filtro para um conjunto de dados, uma região de dados ou um grupo, incluindo grupos de detalhes. Você também pode incluir parâmetros nas expressões de filtro, sendo essa uma forma de filtrar os dados para valores ou usuários específicos, por exemplo, aplicando o filtro por um valor que identifica o usuário que está exibindo o relatório.  
   
-##  <a name="Where"></a> Escolhendo onde definir um filtro  
+##  <a name="choosing-where-to-set-a-filter"></a><a name="Where"></a> Escolhendo onde definir um filtro  
  Determine onde você deseja definir um filtro pelo efeito que deseja obter em seu relatório. No tempo de execução, o processador de relatório aplica filtros na seguinte ordem: no conjunto de dados e na região de dados e nos grupos de cima para baixo em cada hierarquia de grupo. Em uma tabela, matriz e lista, os filtros para grupos de linha, grupos de coluna e grupos adjacentes são aplicados de forma independente. Em um gráfico, os filtros para grupos de categoria e grupos de série são aplicados de forma independente. Quando o processador de relatório aplica o filtro, todas as equações de filtros são aplicadas na ordem em que elas foram definidas na página **Filtro** da caixa de diálogo **Propriedades** para cada item de relatório, que é o equivalente a combiná-los com as operações boolianas AND.  
   
  A lista a seguir compara o efeito de definir filtros em itens de relatório diferentes:  
@@ -47,7 +47,7 @@ ms.locfileid: "65582061"
   
  Voltar ao Início  
   
-##  <a name="FilterEquations"></a> Entendendo uma equação de filtro  
+##  <a name="understanding-a-filter-equation"></a><a name="FilterEquations"></a> Entendendo uma equação de filtro  
  Em tempo de execução, o processador de relatório converte o valor para o tipo de dados especificado e usa o operador especificado para comparar a expressão e o valor. A lista a seguir descreve cada parte da equação de filtro:  
   
 -   **Expressão** Define o que você está filtrando. Geralmente, isso é um campo de conjunto de dados.  

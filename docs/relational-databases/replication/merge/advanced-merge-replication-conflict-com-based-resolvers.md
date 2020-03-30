@@ -14,10 +14,10 @@ ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ec508dbaf274816ecf32f8eaa0a8047baa60e2a8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68033393"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>Conflito de replicação de mesclagem avançada – resolvedores baseados em COM
@@ -30,7 +30,7 @@ ms.locfileid: "68033393"
   
  A tabela a seguir descreve os atributos dos resolvedores específicos.  
   
-|Nome|Entrada Requerida|Descrição|Comentários|  
+|Nome|Entrada Requerida|DESCRIÇÃO|Comentários|  
 |----------|--------------------|-----------------|--------------|  
 |Resolvedor de Conflitos Suplementares do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Nome da coluna que será somada. Deve ter um tipo de dado aritmético (como **int**, **smallint**, **numeric**e assim por diante).|O vencedor de conflito é determinado a partir do valor de prioridade. Valores de coluna especificados são definidos pela soma dos valores de coluna de origem e de destino. Se um for definido como NULL, eles serão definidos pelo valor da outra coluna.|Oferece suporte apenas a conflitos de atualização e rastreamento de coluna.|  
 |Resolvedor de Conflitos de Cálculo de Média do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Nome da coluna a ser calculada pela média. Deve ter um tipo de dado aritmético (como **int**, **smallint**, **numeric**e assim por diante).|O vencedor de conflito é determinado a partir do valor de prioridade. Os valores de coluna resultantes são definidos pela média dos valores de coluna de origem e de destino. Se um for definido como NULL, eles serão definidos pelo valor da outra coluna.|Oferece suporte apenas a conflitos de atualização e rastreamento de coluna.|  

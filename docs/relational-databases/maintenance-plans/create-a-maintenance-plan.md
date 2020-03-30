@@ -13,10 +13,10 @@ ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dc50611e1497d84335f29d763c280cb09e9d41b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70874743"
 ---
 # <a name="create-a-maintenance-plan"></a>Criar um plano de manutenção
@@ -39,20 +39,20 @@ ms.locfileid: "70874743"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  Para criar um plano de manutenção multisservidor, é necessário configurar um ambiente multisservidor contendo um servidor mestre e um ou mais servidores de destino. Devem ser criados e mantidos planos de manutenção multisservidor no servidor mestre. Os planos podem ser exibidos, mas não mantidos, nos servidores de destino. 
  
-###  <a name="Prerequisite"></a> Pré-requisito  
+###  <a name="prerequisite"></a><a name="Prerequisite"></a> Pré-requisito  
 A [Opção Agent XPs de configuração do servidor](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) deve estar habilitada.
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Para criar ou gerenciar planos de manutenção, é necessário ser membro da função de servidor fixa **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>Para criar um plano de manutenção usando o Assistente de Plano de Manutenção  
   
@@ -74,7 +74,7 @@ A [Opção Agent XPs de configuração do servidor](../../database-engine/config
   
 4.  Crie um plano de manutenção, seguindo as etapas em [Criar um plano de manutenção &#40; Superfície de Design do Plano de Manutenção&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md).  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-maintenance-plan"></a>Para criar um plano de manutenção  
   

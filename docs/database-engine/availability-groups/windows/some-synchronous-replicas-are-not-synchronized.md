@@ -15,10 +15,10 @@ ms.assetid: e58ed56e-4c30-42e6-a9fc-a8c401620e02
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 494d772f7eff9ccf8ba9783885d5c62e49fddbbe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822597"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>Algumas réplicas síncronas não são sincronizadas

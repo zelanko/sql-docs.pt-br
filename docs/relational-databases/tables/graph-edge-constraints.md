@@ -17,10 +17,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
 ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70873886"
 ---
 # <a name="edge-constraints"></a>Restrições do Microsoft Edge
@@ -29,7 +29,7 @@ ms.locfileid: "70873886"
 
 É possível usar restrições de borda para impor a integridade dos dados e uma semântica específica às tabelas de borda no banco de dados de gráfico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="Connection"></a> Restrições de borda
+## <a name="edge-constraints"></a><a name="Connection"></a> Restrições de borda
 
 Na primeira versão dos recursos de gráfico, as tabelas de borda não impunham nada aos pontos de extremidade da borda. Ou seja, uma borda em um banco de dados de gráfico podia conectar qualquer nó a qualquer outro nó, independentemente do tipo.
 

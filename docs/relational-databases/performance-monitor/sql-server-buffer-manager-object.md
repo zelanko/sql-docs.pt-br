@@ -14,10 +14,10 @@ ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f79d41e3fd247ca596a6257415d29f7ebcbe87b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67986936"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server, objeto Buffer Manager
@@ -39,9 +39,9 @@ ms.locfileid: "67986936"
 -   A frequência com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisa ler dados a partir do disco. Comparada com outras operações, como acesso de memória, a E/S física demora muito mais. Minimizar a E/S física pode melhorar o desempenho de consulta.  
   
 ## <a name="buffer-manager-performance-objects"></a>Objetos de desempenho do Gerenciador de Buffer  
- Esta tabela descreve os objetos de desempenho **Buffer Manager** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Esta tabela descreve os objetos de desempenho [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Buffer Manager**do**.  
   
-|SQL Server, contadores do Gerenciador de Buffer|Descrição|  
+|SQL Server, contadores do Gerenciador de Buffer|DESCRIÇÃO|  
 |----------------------------------------|-----------------|  
 |**Páginas do gravador em segundo plano/s**|Número de páginas liberadas para aplicar as configurações do intervalo de recuperação.| 
 |**Taxa de acertos do cache do buffer**|Indica a porcentagem de páginas localizadas no cache do buffer sem ter que ler do disco. A taxa é o número total de acertos do cache, dividido pelo número total de pesquisas no cache no acesso dos últimos milhares de páginas. Após um tempo longo, a taxa varia muito pouco. Como ler do cache é muito menos dispendioso que ler do disco, convém que esta taxa seja alta. Geralmente, é possível aumentar a taxa de acertos do cache do buffer aumentando a quantidade de memória disponível para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou usando o recurso de extensão do pool de buffers.|  

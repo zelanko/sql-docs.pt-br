@@ -21,10 +21,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68212745"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>Gerenciamento de certificado (SQL Server Configuration Manager)
@@ -41,7 +41,7 @@ Certificados SSL/TLS são amplamente usados para proteger o acesso ao SQL Server
 > [!NOTE]
 > Você pode usar gerenciamento de certificados no SQL Server Configuration Manager com versões anteriores do SQL Server, começando com o SQL Server 2008.
 
-##  <a name="provision-single-server-cert"></a> Para instalar um certificado para uma única instância do SQL Server  
+##  <a name="to-install-a-certificate-for-a-single-sql-server-instance"></a><a name="provision-single-server-cert"></a> Para instalar um certificado para uma única instância do SQL Server  
   
 1. No SQL Server Configuration Manager, no painel de console, expanda **Configuração de Rede do SQL Server**.  
   
@@ -54,7 +54,7 @@ Certificados SSL/TLS são amplamente usados para proteger o acesso ao SQL Server
 5. Selecione **Avançar** para validar o certificado. Se não houver erros, selecione **Avançar** para importar o certificado para a instância local.  
   
  
-##  <a name="provision-failover-cluster-cert"></a> Para instalar um certificado em uma configuração do Cluster de Failover  
+##  <a name="to-install-a-certificate-in-a-failover-cluster-configuration"></a><a name="provision-failover-cluster-cert"></a> Para instalar um certificado em uma configuração do Cluster de Failover  
   
 1. No SQL Server Configuration Manager, no painel de console, expanda **Configuração de Rede do SQL Server**.
   
@@ -77,7 +77,7 @@ Certificados SSL/TLS são amplamente usados para proteger o acesso ao SQL Server
 > [!NOTE]
 > Conclua estas etapas no nó ativo da instância do Cluster de Failover do SQL Server. O usuário precisa ter permissões de administrador em todos os nós de cluster.
 
-##  <a name="provision-availability-group-cert"></a>Para instalar um certificado em uma configuração de Grupo de Disponibilidade  
+##  <a name="to-install-a-certificate-in-an-availability-group-configuration"></a><a name="provision-availability-group-cert"></a>Para instalar um certificado em uma configuração de Grupo de Disponibilidade  
   
 1. No SQL Server Configuration Manager, no painel de console, expanda **Configuração de Rede do SQL Server**.
   

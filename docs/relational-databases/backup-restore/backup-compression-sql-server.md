@@ -18,10 +18,10 @@ ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cc94b300f007a09aef2c16f11015b39765f5e37a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940832"
 ---
 # <a name="backup-compression-sql-server"></a>Compactação de backup (SQL Server)
@@ -29,14 +29,14 @@ ms.locfileid: "67940832"
   Este tópico descreve a compactação dos backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluindo restrições, compensação de desempenho de backups compactados, a configuração da compactação de backup e a taxa de compactação.  Há suporte para a compactação de backup nas edições Enterprise, Standard e Developer do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  Todas as edições do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior podem restaurar um backup compactado. 
  
   
-##  <a name="Benefits"></a> Benefícios  
+##  <a name="benefits"></a><a name="Benefits"></a> Benefícios  
   
 -   Como um backup compactado é menor do que um backup não compactado dos mesmos dados, a compactação de um backup normalmente requer menos operações de E/S do dispositivo e, portanto, normalmente aumenta significativamente a velocidade do backup.  
   
      Para obter mais informações, consulte [Impacto de desempenho dos backups compactados](#PerfImpact), posteriormente neste tópico.  
   
   
-##  <a name="Restrictions"></a> Restrições  
+##  <a name="restrictions"></a><a name="Restrictions"></a> Restrições  
  As restrições a seguir aplicam-se aos backups compactados:  
   
 -   Backups compactados e não compactados não podem coexistir em um conjunto de mídias.  
@@ -46,7 +46,7 @@ ms.locfileid: "67940832"
 -   Backups NT não podem compartilhar uma fita com backups compactados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
-##  <a name="PerfImpact"></a> Impacto de desempenho dos backups compactados  
+##  <a name="performance-impact-of-compressing-backups"></a><a name="PerfImpact"></a> Impacto de desempenho dos backups compactados  
  Por padrão, a compactação aumenta consideravelmente o uso da CPU, e o consumo adicional da CPU por parte do processo de compactação pode afetar negativamente as operações simultâneas. Portanto, convém criar backups compactados de baixa prioridade em uma sessão cujo uso da CPU é limitado pelo[Resource Governor](../../relational-databases/resource-governor/resource-governor.md). Para obter mais informações, consulte [Usar o Resource Governor para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
   
  Para obter uma boa visão do desempenho de E/S do seu backup, é possível isolar o E/S do backup para ou dos dispositivos avaliando as seguintes classificações dos contadores de desempenho:  
@@ -60,7 +60,7 @@ ms.locfileid: "67940832"
  Para obter informações sobre contadores do Windows, consulte a ajuda do Windows. Para obter informações sobre como trabalhar com contadores SQL Server, consulte [Usar objetos do SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
    
-##  <a name="CompressionRatio"></a> Calcular a taxa de compactação de um backup compactado  
+##  <a name="calculate-the-compression-ratio-of-a-compressed-backup"></a><a name="CompressionRatio"></a> Calcular a taxa de compactação de um backup compactado  
  Para calcular a taxa de compactação de um backup, use os valores para o backup nas colunas **backup_size** e **compressed_backup_size** da tabela de histórico [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) da seguinte maneira:  
   
  **backup_size**:**compressed_backup_size**  
@@ -90,12 +90,12 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
      Se o banco de dados for compactado, a compactação de backups poderá não reduzir muito o seu tamanho.  
   
   
-##  <a name="Allocation"></a> Alocação de espaço para o arquivo de backup  
+##  <a name="allocation-of-space-for-the-backup-file"></a><a name="Allocation"></a> Alocação de espaço para o arquivo de backup  
  Para backups compactados, o tamanho do arquivo de backup final depende de como os dados são compactáveis e isto é desconhecido antes da conclusão da operação de backup.  Portanto, por padrão, ao fazer backup de um banco de dados usando compactação, o Mecanismo de Banco de Dados usa um algoritmo de pré-alocação para o arquivo de backup. Este algoritmo pré-aloca um percentual predefinido do tamanho do banco de dados para o arquivo de backup. Se for necessário mais espaço durante a operação de backup, o Mecanismo de Banco de Dados crescerá o arquivo. Se o tamanho final for menor que o espaço alocado, no final da operação de backup, o Mecanismo de Banco de Dados reduzirá o arquivo para o tamanho final real do backup.  
   
  Para permitir que o arquivo de backup somente cresça conforme o necessário para alcançar seu tamanho final, use o sinalizador de rastreamento 3042. O sinalizador de rastreamento 3042 faz a operação de backup ignorar o algoritmo padrão de pré-alocação da compactação de backup. Este sinalizador de rastreamento será útil se você precisar salvar em espaço alocando somente o tamanho real necessário para o backup compactado. Porém, usar este sinalizador de rastreamento pode causar uma pequena penalidade de desempenho (um possível aumento na duração da operação de backup).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Configurar compactação de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/configure-backup-compression-sql-server.md)  
   

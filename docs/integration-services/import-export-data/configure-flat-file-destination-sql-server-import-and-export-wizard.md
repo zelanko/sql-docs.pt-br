@@ -12,10 +12,10 @@ ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8c596f37cb0a83682c5c8dff370a92a5d3d73eb5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285793"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurar Destino Arquivo Simples (Assistente de Importação e Exportação do SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "71285793"
  **Delimitador de linha**  
  Selecione da lista de delimitadores para separar linhas na saída. Não há nenhuma opção para especificar um delimitador de linha *personalizado*.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Delimite as linhas por uma combinação de retorno de carro e alimentação de linha.|  
 |**{CR}**|Delimite linhas com um retorno de carro.|  
@@ -57,7 +57,7 @@ ms.locfileid: "71285793"
  **Delimitador de coluna**  
  Selecione da lista de delimitadores para separar colunas na saída. Não há nenhuma opção para especificar um delimitador de coluna *personalizado*.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Delimite as colunas por uma combinação de retorno de carro e alimentação de linha.|  
 |**{CR}**|Delimite colunas com um retorno de carro.|  

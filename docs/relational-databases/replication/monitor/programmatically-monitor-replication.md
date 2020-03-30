@@ -30,10 +30,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 0926264c25affe2f110227fad4c0fb2b113c9590
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287850"
 ---
 # <a name="programmatically-monitor-replication"></a>Monitore programaticamente a replicação
@@ -56,7 +56,7 @@ ms.locfileid: "76287850"
   
  [RMO (Replication Management Objects)](#RMO)  
   
-##  <a name="Tsql"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="Tsql"></a> Transact-SQL  
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>Para monitorar Publicador, publicações e assinatura a partir do Distribuidor  
   
@@ -106,7 +106,7 @@ ms.locfileid: "76287850"
   
     -   Um valor **1** para **\@mode**, para habilitar a métrica de limite do monitor, ou um valor **2** para desabilitá-la.  
   
-##  <a name="RMO"></a> RMO (Replication Management Objects)  
+##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> RMO (Replication Management Objects)  
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>Para monitorar uma assinatura para uma publicação de mesclagem no Assinante  
   

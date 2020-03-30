@@ -11,10 +11,10 @@ ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 864ed8080c3978ec272f5212fa0a5e8dc40c2350
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822484"
 ---
 # <a name="use-remote-blob-store-rbs-with-always-on-availability-groups"></a>Usar o RBS (Remote BLOB Store) com Grupos de Disponibilidade AlwaysOn
@@ -31,15 +31,15 @@ ms.locfileid: "74822484"
 |Outro banco de dados em uma instância diferente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (armazenado por meio de um provedor remoto FILESTREAM RBS)|Sim<br /><br /> Esse banco de dados deve estar em um grupo de disponibilidade separado.|  
 |Um repositório de BLOB de terceiros|Não<br /><br /> Para proteger esses dados BLOB, use os mecanismos de alta disponibilidade do provedor de repositório de BLOB.|  
   
-##  <a name="Limitations"></a> Limitações  
+##  <a name="limitations"></a><a name="Limitations"></a> Limitações  
   
 -   Os mantenedores do RBS precisam ser direcionados para a réplica primária.  
   
-##  <a name="Recommendations"></a> Recomendações  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Use um ouvinte de grupo de disponibilidade. Para obter mais informações, consulte [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   [Maintaining Remote BLOB Store](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (Mantendo o Remote BLOB Store) (nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] )  
   

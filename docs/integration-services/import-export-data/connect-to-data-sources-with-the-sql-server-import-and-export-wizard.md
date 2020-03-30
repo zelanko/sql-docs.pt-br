@@ -10,10 +10,10 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4598eba24c44bddb66ef97120d4c1decc9ca7d63
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903928"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>Conectar-se a fontes de dados com o Assistente de Importação e Exportação do SQL Server
@@ -40,7 +40,7 @@ Clique no link para saber mais sobre como se conectar a uma das seguintes fontes
 ## <a name="connect-to-other-data-providers"></a>Conectar-se a outros provedores de dados
 Para obter informações sobre como se conectar a uma fonte de dados que não está listada aqui, consulte [A referência de cadeias de conexão](https://www.connectionstrings.com/). Esse site de terceiros contém cadeias de conexão de exemplo e mais informações sobre provedores de dados e as informações de conexão exigidas por elas.
 
-## <a name="related"></a> Tarefas e conteúdo relacionados  
+## <a name="related-tasks-and-content"></a><a name="related"></a> Tarefas e conteúdo relacionados  
 Aqui estão algumas outras tarefas básicas.
 -   **Veja um exemplo rápido de como o assistente funciona.**
 

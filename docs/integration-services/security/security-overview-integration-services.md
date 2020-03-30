@@ -21,10 +21,10 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0bc268c2baea6e0e661fac123df9fe19ec60252c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287640"
 ---
 # <a name="security-overview-integration-services"></a>Visão geral de segurança (Integration Services)
@@ -106,7 +106,7 @@ ms.locfileid: "79287640"
   
  Para obter mais informações, consulte [Acesso ao serviço Integration Services](#service).  
 
-## <a name="files"></a> Acesso aos arquivos usados por pacotes
+## <a name="access-to-files-used-by-packages"></a><a name="files"></a> Acesso aos arquivos usados por pacotes
   O nível de proteção do pacote não protege arquivos armazenados fora do pacote. Esses arquivos incluem o seguinte:  
   
 -   Arquivos de configuração  
@@ -128,7 +128,7 @@ ms.locfileid: "79287640"
 ### <a name="log-files"></a>Arquivos de log  
  As entradas de log que são gravadas no sistema de arquivos também devem ser protegidas usando uma lista de controle de acesso (ACL). As entradas de log também podem ser armazenadas em tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e protegidas pela segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . As entradas de logs podem incluir informações confidenciais, por exemplo, se o pacote contiver uma tarefa Executar SQL que cria uma instrução SQL referente a um número de telefone, a entrada de log para a instrução SQL incluirá o número de telefone. A instrução SQL também pode revelar informações particulares sobre nomes de tabelas e colunas nos bancos de dados. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
 
-## <a name="service"></a> Acesso ao serviço Integration Services
+## <a name="access-to-the-integration-services-service"></a><a name="service"></a> Acesso ao serviço Integration Services
   Os níveis de proteção do pacote podem limitar quem tem permissão para editar e executar um pacote. É necessário ter proteção adicional para limitar quem pode exibir a lista de pacotes que estão sendo executados em um servidor e quem pode interromper a execução de pacotes no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para listar os pacotes em execução. Os membros do grupo Administradores do Windows podem visualizar e parar todos os pacotes em execução. Os usuários que não são membros do grupo Administradores podem visualizar e parar apenas os pacotes iniciados por eles.  
