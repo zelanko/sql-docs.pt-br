@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 0fc4e3bd7565d4227da1e2d29853ff65ed2b7ca5
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866398"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
@@ -25,10 +25,10 @@ ms.locfileid: "78866398"
 O ADO.NET é a principal tecnologia de acesso de dados para linguagens .NET. Use o namespace Microsoft.Data.SqlClient para acessar o SQL Server ou provedores de outros fornecedores para acessar seus armazenamentos. Use System.Data.Odbc ou System.Data.Oledb em linguagens .NET para acessar dados usando outras tecnologias de acesso a dados. Use System.Data.Dataset quando precisar de um cache de dados offline em aplicativos cliente. Ele também fornece recursos XML e de persistência local que podem ser úteis em serviços Web.  
   
 ## <a name="getting-started"></a>Introdução  
-* [Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento no ADO.NET](step-1-configure-development-environment-ado-net-development.md)  
-* [Etapa 2: Criar um Banco de Dados SQL para o desenvolvimento no ADO.NET](step-2-create-sql-database-ado-net-development.md)  
-* [Etapa 3: Prova de conceito da conexão ao SQL usando o ADO.NET](step-3-connect-sql-ado-net.md)  
-* [Etapa 4: Conectar-se de modo resiliente ao SQL com ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
+* [Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento ADO.NET](step-1-configure-development-environment-ado-net-development.md)  
+* [Etapa 2: Criar um banco de dados SQL para o desenvolvimento ADO.NET](step-2-create-sql-database-ado-net-development.md)  
+* [Etapa 3: Prova de conceito da conexão ao SQL usando ADO.NET](step-3-connect-sql-ado-net.md)  
+* [Etapa 4: Conectar-se de forma resiliente ao SQL com ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
   
 ## <a name="documentation"></a>Documentação  
 * [Visão geral do ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)

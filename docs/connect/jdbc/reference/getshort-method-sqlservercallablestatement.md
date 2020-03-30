@@ -16,10 +16,10 @@ ms.assetid: 9e3c51bc-7285-4f28-92c8-cfa05e49da9e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d382ef1b3a07abce21ccdf4b621d214f92d2007
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979790"
 ---
 # <a name="getshort-method-sqlservercallablestatement"></a>Método getShort (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67979790"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[getShort (int)](../../../connect/jdbc/reference/getshort-method-int.md)|Recupera o valor do parâmetro designado como um **short** na linguagem de programação Java, considerando o índice do parâmetro.|  
 |[getShort (java.lang.String)](../../../connect/jdbc/reference/getshort-method-java-lang-string.md)|Recupera o valor do parâmetro designado como um **short** na linguagem de programação Java, considerando o nome do parâmetro.|  

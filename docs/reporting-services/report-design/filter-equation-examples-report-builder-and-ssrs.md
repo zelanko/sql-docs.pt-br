@@ -11,10 +11,10 @@ ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a76863222fdd58d769031020ac888966596146
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080128"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>Exemplos de equações de filtro (Construtor de Relatórios e SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "77080128"
 ## <a name="filter-examples"></a>Exemplos de filtro  
  A tabela a seguir mostra exemplo de equações de filtro que usam diferentes tipos de dados e operadores. O escopo da comparação é determinado pelo item de relatório para o qual é definido um filtro. Por exemplo, no caso de um filtro definido em um conjunto de dados, **TOP % 10** representa os principais 10% de valores do conjunto de dados; no caso de um filtro definido em um grupo, **TOP % 10** são os principais 10% de valores do grupo.  
   
-|Expressão simples|Tipo de Dados|Operador|Valor|Descrição|  
+|Expressão simples|Tipo de Dados|Operador|Valor|DESCRIÇÃO|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**Inteiro**|**>**|`7`|Inclui valores de dados maiores que 7.|  
 |`[SUM(Quantity)]`|**Inteiro**|**TOP N**|`10`|Inclui os 10 principais valores de dados.|  

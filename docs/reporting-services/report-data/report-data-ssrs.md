@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
 ms.openlocfilehash: 6317e8161871d7094486ed8b6178847549d8ab96
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190727"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>Introdução aos dados de relatório no SSRS (SQL Server Reporting Services)
@@ -39,7 +39,7 @@ ms.locfileid: "74190727"
 6.  **Fontes de dados externas** Recupera dados de bancos de dados relacionais, bancos de dados multidimensionais, listas do SharePoint ou serviços Web.  
 
 
-##  <a name="BkMk_ReportDataTerms"></a> Definição dos termos  
+##  <a name="defining-terms"></a><a name="BkMk_ReportDataTerms"></a> Definição dos termos  
   
 - **Conexão de dados.** Também conhecida como uma *fonte de dados*. Uma conexão de dados inclui um nome e propriedades de conexão que dependem do tipo de conexão. Por design, uma conexão de dados não inclui credenciais. Uma conexão de dados não especifica os dados a serem recuperados da fonte de dados externa. Para fazer isso, especifique uma consulta ao criar um conjunto de dados.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74190727"
   
 - **Credenciais.** Credenciais são as informações de autenticação a serem fornecidas para permitir que você acesse dados externos.  
   
-##  <a name="BkMk_ReportDataTips"></a> Dicas para especificar dados de relatório
+##  <a name="tips-for-specifying-report-data"></a><a name="BkMk_ReportDataTips"></a> Dicas para especificar dados de relatório
 
  Use as informações a seguir para criar sua estratégia de dados de relatório.  
   

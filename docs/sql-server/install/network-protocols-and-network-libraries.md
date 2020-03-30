@@ -21,10 +21,10 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: abdd5e7af707bd566288bd1048eda4874d82311c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68126069"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocolos de rede e bibliotecas de rede

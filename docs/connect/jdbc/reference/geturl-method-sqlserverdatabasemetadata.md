@@ -16,10 +16,10 @@ ms.assetid: fcb66851-db5f-4ae8-b728-d129480b6f42
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4aa608851ddbe00c8d7c09523c0f3b8f9ec95ff6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978209"
 ---
 # <a name="geturl-method-sqlserverdatabasemetadata"></a>Método getURL (SQLServerDatabaseMetaData)

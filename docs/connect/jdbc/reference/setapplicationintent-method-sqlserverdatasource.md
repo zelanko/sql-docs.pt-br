@@ -11,10 +11,10 @@ ms.assetid: e164c8ac-a0ae-4638-affb-ed454e7c0708
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 14e7341e2245a5fcdd6fa8a314e2845236e45d99
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975574"
 ---
 # <a name="setapplicationintent-method-sqlserverdatasource"></a>Método setApplicationIntent (SQLServerDataSource)
@@ -34,7 +34,7 @@ public void setApplicationIntent(java.lang.String applicationIntent);
  O novo valor da propriedade de conexão **applicationIntent**.  
   
 ## <a name="remarks"></a>Comentários  
- Para mais informações sobre a propriedade de conexão **applicationIntent**, confira [Definir as propriedades de conexão](../../../connect/jdbc/setting-the-connection-properties.md).  
+ Para mais informações sobre a propriedade de conexão **applicationIntent**, confira [Configuração das propriedades de conexão](../../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [SQLServerDataSource.getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)   

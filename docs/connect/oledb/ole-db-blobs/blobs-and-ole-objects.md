@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67988672"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOBs e objetos OLE
@@ -28,7 +28,7 @@ ms.locfileid: "67988672"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver do OLE DB para SQL Server expõe a interface **ISequentialStream** para dar suporte ao acesso do consumidor aos tipos de dados **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** e **varbinary(max)** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e xml como BLOBs (objetos binários grandes). O método **Read** em **ISequentialStream** permite que o consumidor recupere muitos dados em partes gerenciáveis.  
+  O Driver do OLE DB para SQL Server expõe a interface **ISequentialStream** para dar suporte ao acesso do consumidor aos tipos de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ntext **,** text **,** image **,** varchar(max) **,** nvarchar(max)**e**varbinary(max)**do** e xml como BLOBs (objetos binários grandes). O método **Read** em **ISequentialStream** permite que o consumidor recupere muitos dados em partes gerenciáveis.  
   
  Para obter um exemplo que demonstra esse recurso, confira [Definir &#40;OLE DB&#41; de dados grandes](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   

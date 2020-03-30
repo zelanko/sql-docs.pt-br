@@ -16,10 +16,10 @@ ms.assetid: 672dceac-ddfe-43e1-851b-5172b78fed9c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fdbd0de626b946d17e46f9a46f92235c3b9e1535
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953782"
 ---
 # <a name="getbigdecimal-method-sqlserverresultset"></a>Método getBigDecimal (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67953782"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[Método getBigDecimal &#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-int-sqlserverresultset.md)|Recupera o valor do índice da coluna designada na linha atual do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como um java.math.BigDecimal com precisão total.|  
 |[Método getBigDecimal &#40;int, int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-int-int-sqlserverresultset.md)|(Substituído) Recupera o valor do índice da coluna designada na linha atual do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) usando a escala fornecida.|  

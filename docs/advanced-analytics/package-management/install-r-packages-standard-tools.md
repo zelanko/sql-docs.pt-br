@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 5d7c610f887de137c44f97ca8809e70c548a51db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485311"
 ---
 # <a name="install-packages-with-r-tools"></a>Instalar pacotes com ferramentas de R
@@ -75,7 +75,7 @@ Se o SQL Server tiver acesso à Internet, você poderá usar ferramentas de inst
 
 Se você tiver várias instâncias lado a lado do SQL Server, execute a instalação separadamente para cada instância na qual você deseja usar o pacote. Os pacotes não podem ser compartilhados entre diferentes instâncias.
 
-## <a name = "bkmk_offlineInstall"></a> Instalação offline (sem acesso à Internet)
+## <a name="offline-installation-no-internet-access"></a><a name = "bkmk_offlineInstall"></a> Instalação offline (sem acesso à Internet)
 
 Frequentemente, os servidores que hospedam bancos de dados de produção não têm uma conexão de Internet. Para instalar pacotes de R nesse ambiente, você baixa e prepara pacotes e dependências com antecedência (como arquivos compactados) e, então, copia os arquivos para uma pasta no servidor. Depois que os arquivos estiverem no lugar, os pacotes poderão ser instalados offline.
 

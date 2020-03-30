@@ -9,10 +9,10 @@ ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d506c15c1cc0a9bf2e4d414210b769c02556a32a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081403"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Tipo de conexão do SQL Server Parallel Data Warehouse (SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "77081403"
   
  Use as informações deste tópico para criar uma fonte de dados. Para obter instruções passo a passo, consulte [Adicionar e verificar uma conexão de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a> Cadeia de Conexão  
+##  <a name="connection-string"></a><a name="Connection"></a> Cadeia de Conexão  
  Ao se conectar ao [!INCLUDE[ssDW](../../includes/ssdw-md.md)], você está conectando a um objeto de banco de dados dentro de um aplicativo [!INCLUDE[ssDW](../../includes/ssdw-md.md)] . Especifique o objeto de banco de dados a ser usado no designer de consulta. Se não especificar um banco de dados na cadeia de conexão, você se conectará ao banco de dados padrão atribuído pelo administrador. Contate o administrador do banco de dados para obter informações sobre a conexão e as credenciais que devem ser usadas para se conectar à fonte de dados. O exemplo da cadeia de conexão a seguir especifica o banco de dados de exemplo, **CustomerSales**, no aplicativo [!INCLUDE[ssDW](../../includes/ssdw-md.md)] :  
   
 ```  
@@ -39,7 +39,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  Confira mais informações sobre exemplos de cadeias de conexão em [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-##  <a name="Credentials"></a> Credenciais  
+##  <a name="credentials"></a><a name="Credentials"></a> Credenciais  
  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] fornece sua própria tecnologia de segurança para implementar e armazenar nomes de usuários e senhas. Não é possível usar a Autenticação do Windows. Se você tentar se conectar ao [!INCLUDE[ssDW](../../includes/ssdw-md.md)] usando a Autenticação do Windows, ocorrerá um erro.  
   
  As credenciais devem ser suficientes para acessar o banco de dados. Dependendo da consulta, você talvez precise de outras permissões, como permissões suficientes para acessar tabelas e exibições. O proprietário da fonte de dados externa deve configurar credenciais que sejam suficientes para fornecer acesso somente leitura aos objetos de banco de dados de que você precisa.  
@@ -53,7 +53,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
  Para obter mais informações, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar informações de credenciais e conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
-##  <a name="Query"></a> Consultas  
+##  <a name="queries"></a><a name="Query"></a> Consultas  
  Uma consulta especifica os dados a serem recuperados de um conjunto de dados de relatório.  
   
  As colunas no conjunto de resultados para uma consulta populam a coleção de campos para um conjunto de dados. Se a consulta retornar vários conjuntos de resultados, o relatório só processará o primeiro conjunto de resultados recuperado por uma consulta. Por padrão, se você criar uma nova consulta ou abrir uma consulta existente que possa ser representada no designer de consultas gráficas, o designer de consultas relacionais estará disponível. Você pode especificar uma consulta das seguintes formas:  
@@ -80,7 +80,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  Para obter mais informações sobre [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte a [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
   
-###  <a name="QueryText"></a> Usando o tipo de consulta Text  
+###  <a name="using-query-type-text"></a><a name="QueryText"></a> Usando o tipo de consulta Text  
  No designer de consulta baseado em texto, você digita os comandos do [!INCLUDE[DWsql](../../includes/dwsql-md.md)] para definir os dados em um conjunto de dados. As consultas que você usa para recuperar dados do [!INCLUDE[ssDW](../../includes/ssdw-md.md)] são as mesmas usadas para recuperar dados de instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não estejam em execução dentro de um aplicativo do [!INCLUDE[ssDW](../../includes/ssdw-md.md)] . Por exemplo, a seguinte consulta [!INCLUDE[DWsql](../../includes/dwsql-md.md)] seleciona os nomes de todos os funcionários que são assistentes de marketing:  
   
 ```  
@@ -105,7 +105,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
  Quando você executa a consulta, os parâmetros do relatório que correspondem aos parâmetros da consulta serão criados automaticamente. Para obter mais informações, consulte [Parâmetros de consulta](#Parameters) mais adiante neste tópico.  
   
   
-##  <a name="Parameters"></a> Parâmetros  
+##  <a name="parameters"></a><a name="Parameters"></a> Parâmetros  
  Quando o texto de consulta contém variáveis ou procedimentos armazenados com parâmetros de entrada, os parâmetros de consulta para o conjunto de dados e os parâmetros de relatório para o relatório são automaticamente gerados. O texto de consulta não deve incluir uma instrução DECLARE para cada variável de consulta.  
   
  Por exemplo, a consulta SQL a seguir cria um parâmetro de relatório chamado **EmpID**:  
@@ -119,13 +119,13 @@ WHERE EmployeeID = (@EmpID)
  Por padrão, cada parâmetro de relatório tem o tipo de dados Texto e um conjunto de dados criado automaticamente para fornecer uma lista suspensa dos valores disponíveis. Depois que os parâmetros de relatório forem criados, talvez seja necessário alterar os valores padrão. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
-##  <a name="Remarks"></a> Comentários  
+##  <a name="remarks"></a><a name="Remarks"></a> Comentários  
   
 ###### <a name="platform-and-version-information"></a>Informações sobre plataforma e versão  
  Saiba mais sobre suporte de versão e plataforma em [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
-##  <a name="HowTo"></a> Tópicos de instruções  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Tópicos de instruções  
  Esta seção contém instruções passo a passo para trabalhar com conexões de dados, fontes de dados e conjuntos de dados.  
   
  [Adicionar e verificar uma conexão de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -135,7 +135,7 @@ WHERE EmployeeID = (@EmpID)
  [Adicionar um filtro a um conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> Seções relacionadas  
+##  <a name="related-sections"></a><a name="Related"></a> Seções relacionadas  
  Estas seções da documentação especificam informações conceituais detalhadas sobre os dados do relatório e informações de procedimentos sobre como definir, personalizar e usar partes de um relatório relacionadas aos dados.  
   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

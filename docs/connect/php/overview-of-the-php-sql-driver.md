@@ -11,10 +11,10 @@ ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afa9863d955ef7f075ffd8c8c68844130bcfd9ca
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866487"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Visão geral dos Microsoft Drivers para PHP para SQL Server
@@ -27,7 +27,7 @@ Para usar o [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], você dev
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |---------|---------------|  
 | ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Para baixar os drivers para PHP para SQL Server](download-drivers-php-sql-server.md) | Links para baixar os Microsoft Drivers para PHP para SQL Server. |
 |[Notas sobre a versão dos Microsoft Drivers para PHP para SQL Server](../../connect/php/release-notes-php-sql-driver.md)|Lista os recursos que foram adicionados às versões 4.0, 3.2, 3.1, 3.0 e 2.0.|  

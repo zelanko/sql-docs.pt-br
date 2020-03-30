@@ -9,10 +9,10 @@ ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0eadf07ed347ce2b77eccab229ef6551a62d63d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080747"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Adicionar um filtro (Construtor de Relatórios e SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "77080747"
   
 1.  Abra um relatório no modo de exibição de **Design** .  
   
-2.  Selecione a região de dados na superfície de design e, em seguida, clique com o botão direito do mouse em _\<data region>_ **Propriedades**. Para um medidor, selecione **Propriedades do Painel de Medidores**. A caixa de diálogo **Propriedades** da _\<data region>_ será aberta.  
+2.  Selecione a região de dados na superfície de design e, em seguida, clique com o botão direito do mouse em _\<data region>_ **Propriedades**. Para um medidor, selecione **Propriedades do Painel de Medidores**. A caixa de diálogo _Propriedades\< da_ **data region>** será aberta.  
   
     > [!NOTE]  
     >  Em uma região de dados do Tablix, clique com o botão direito do mouse na alça de canto da célula, linha ou coluna e clique em **Propriedades do Tablix**.  

@@ -12,10 +12,10 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 4a5ac641a98077c09bb38a5fc8fbd3fb1a4bf73d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265141"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Formatação de cadeias de caracteres decimais e valores monetários (driver SQLSRV)
@@ -66,7 +66,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example---format-the-output-parameter"></a>Exemplo – formatar o parâmetro de saída
-Se um campo decimal ou numérico for retornado como o [parâmetro de saída](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md), o valor retornado será considerado uma cadeia de caracteres varchar normal. No entanto, se SQLSRV_SQLTYPE_DECIMAL ou SQLSRV_SQLTYPE_NUMERIC for especificado, você poderá definir `FormatDecimals` como true para garantir que não falte nenhum zero à esquerda no valor da cadeia de caracteres numérica. Para obter mais informações, leia [Como fazer: recuperar parâmetros de saída usando o driver SQLSRV](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
+Se um campo decimal ou numérico for retornado como o [parâmetro de saída](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md), o valor retornado será considerado uma cadeia de caracteres varchar normal. No entanto, se SQLSRV_SQLTYPE_DECIMAL ou SQLSRV_SQLTYPE_NUMERIC for especificado, você poderá definir `FormatDecimals` como true para garantir que não falte nenhum zero à esquerda no valor da cadeia de caracteres numérica. Para saber mais, leia [Como recuperar parâmetros de saída usando o driver SQLSRV](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
 
 O exemplo a seguir mostra como formatar o parâmetro de saída de um procedimento armazenado que retorna um valor decimal (8,4).
 

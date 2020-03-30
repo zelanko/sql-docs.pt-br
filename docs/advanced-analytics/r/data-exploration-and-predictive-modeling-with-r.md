@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6b336404d3b69e31ffb6f1a2aa82ade04804eb9e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78172126"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>Exploração e Dados e Modelagem Preditiva com R no SQL Server
@@ -68,7 +68,7 @@ Além das bibliotecas do R proprietárias incluídas no Microsoft Machine Learni
 
 Ao desenvolver sua solução do R, baixe o Microsoft R Client. Este download gratuito inclui as bibliotecas necessárias para dar suporte a contextos de computação remota e algoritmos escalonáveis:
 
-+ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** Uma distribuição do runtime R e um conjunto de pacotes, como a biblioteca de kernel de matemática da Intel, que melhora o desempenho de operações R padrão.  
++ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** uma distribuição do runtime R e um conjunto de pacotes, como a biblioteca de kernel de matemática da Intel, que melhora o desempenho de operações R padrão.  
   
 + **RevoScaleR:** um pacote de R que lhe permite enviar computações por push a uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]. Ele também inclui um conjunto de funções R comuns que foram reprojetadas para fornecer melhor desempenho e escalabilidade. Você pode identificar essas funções aprimoradas pelo prefixo **rx** . Ele também inclui provedores de dados aprimorados para uma variedade de fontes; essas funções são prefixadas com **Rx**.
 

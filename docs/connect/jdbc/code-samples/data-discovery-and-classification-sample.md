@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 206bd656c1300a6436298c426697f6c1d47a9e86
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028378"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Descoberta e classificação de dados SQL
@@ -22,7 +22,7 @@ ms.locfileid: "69028378"
 
 Este aplicativo de exemplo [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] demonstra como usar os métodos getter do conjunto de resultados para recuperar "informações de descoberta e classificação de dados do SQL" [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] das tabelas que contêm essas informações.
   
-O arquivo de código desta amostra chama-se DataDiscoveryAndClassification.java e pode ser encontrado no seguinte local:  
+O arquivo de código desta amostra chama-se DataDiscoveryAndClassification.java e pode ser encontrado na seguinte localização:  
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\dataclassification  
@@ -30,7 +30,7 @@ O arquivo de código desta amostra chama-se DataDiscoveryAndClassification.java 
 
 ## <a name="requirements"></a>Requisitos  
 
-Para executar este aplicativo de exemplo, é necessário definir o classpath para incluir o arquivo mssql-jdbc.jar. Para obter mais informações sobre como definir o classpath, confira [Usar o JDBC Driver](../../jdbc/using-the-jdbc-driver.md).
+Para executar este aplicativo de exemplo, é necessário definir o classpath para incluir o arquivo mssql-jdbc.jar. Para obter mais informações sobre como definir o caminho de classe, confira [Como usar o JDBC Driver](../../jdbc/using-the-jdbc-driver.md).
 
 ```java
 import java.sql.Connection;

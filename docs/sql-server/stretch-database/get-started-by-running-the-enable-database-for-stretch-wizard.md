@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843799"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Comece executando o Assistente para Habilitar o Banco de Dados para Alongamento
@@ -45,7 +45,7 @@ ms.locfileid: "73843799"
   
 2.  Clique com o botão direito do mouse e selecione **Tarefas**, **Stretch**e **Habilitar** para iniciar o assistente.  
   
-##  <a name="Intro"></a> Introdução  
+##  <a name="introduction"></a><a name="Intro"></a> Introdução  
  Verifique o objetivo do assistente e os pré-requisitos.  
  
  Os pré-requisitos importantes incluem os descritos a seguir.
@@ -55,7 +55,7 @@ ms.locfileid: "73843799"
   
  ![Página de introdução do assistente do Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-1.png "Página de introdução do assistente do Stretch Database")  
   
-##  <a name="Tables"></a> Selecionar tabelas  
+##  <a name="select-tables"></a><a name="Tables"></a> Selecionar tabelas  
  Selecione as tabelas que você deseja habilitar para o Stretch.  
  
 Tabelas com várias linhas aparecem na parte superior da lista classificada. Antes que o Assistente exiba a lista de tabelas, ele analisa os tipos de dados nela para os quais atualmente não há suporte no Stretch Database. 
@@ -102,7 +102,7 @@ Se você desejar usar um tipo diferente de função de filtro para selecionar as
   
 -   Execute a instrução ALTER TABLE para especificar uma função de filtro depois que você sair do assistente. Para as etapas obrigatórias, consulte [Adicionar uma função de filtro após executar o assistente](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz).  
   
-##  <a name="Configure"></a> Configurar o Azure  
+##  <a name="configure-azure"></a><a name="Configure"></a> Configurar o Azure  
   
 1.  Entre no Microsoft Azure com uma conta da Microsoft.  
   
@@ -143,7 +143,7 @@ Se você desejar usar um tipo diferente de função de filtro para selecionar as
   
          ![Selecionar servidor do Azure existente – assistente do Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-5.png "Selecionar servidor do Azure existente – assistente do Stretch Database")  
   
-##  <a name="Credentials"></a> Proteger credenciais  
+##  <a name="secure-credentials"></a><a name="Credentials"></a> Proteger credenciais  
  Você precisa ter uma chave mestra de banco de dados para proteger as credenciais usadas pelo Stretch Database para se conectar ao banco de dados remoto.  
   
  Se já existir uma chave mestra de banco de dados, insira a senha dela.  
@@ -156,26 +156,26 @@ Se você desejar usar um tipo diferente de função de filtro para selecionar as
   
  Para obter mais informações sobre a chave mestra do banco de dados, veja [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) e [Criar uma chave mestra de banco de dados](../../relational-databases/security/encryption/create-a-database-master-key.md). Para obter mais informações sobre as credenciais criadas pelo assistente, veja [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   
-##  <a name="Network"></a> Selecionar endereço IP  
+##  <a name="select-ip-address"></a><a name="Network"></a> Selecionar endereço IP  
  Use o intervalo de endereços IP de sub-rede (recomendado) ou o endereço IP público do SQL Server, para criar uma regra de firewall no Azure que permite ao SQL Server se comunicar com o servidor remoto do Azure.  
   
  O endereço, ou endereços, IP que você fornecer nesta página informarão ao servidor do Azure que permita a passagem de dados de entrada, consultas e operações de gerenciamento iniciadas pelo SQL Server pelo firewall do Azure. O assistente não altera qualquer outra coisa nas configurações do firewall no SQL Server.  
   
  ![Página Selecionar endereço IP do assistente Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Página Selecionar endereço IP do assistente Stretch Database")  
   
-##  <a name="Summary"></a> Resumo  
+##  <a name="summary"></a><a name="Summary"></a> Resumo  
  Examine os valores que você inseriu e as opções selecionadas no assistente, além dos custos estimados no Azure. Em seguida, escolha **Concluir** para habilitar o Stretch.  
   
  ![Página de resumo do assistente do Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-8.png "Página de resumo do assistente do Stretch Database")  
   
-##  <a name="Results"></a> Resultados  
+##  <a name="results"></a><a name="Results"></a> Resultados  
  Revise os resultados.  
   
  Para monitorar o status da migração de dados, veja [Monitorar e solucionar problemas de migração de dados &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   
  ![Página de resultados do assistente do Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Página de resultados do assistente do Stretch Database")  
   
-##  <a name="KnownIssues"></a> Solução de problemas do assistente  
+##  <a name="troubleshooting-the-wizard"></a><a name="KnownIssues"></a> Solução de problemas do assistente  
  **O assistente do Stretch Database falhou.**  
  Se Stretch Database ainda tiver sido habilitado no nível do servidor, e você executar o assistente sem as permissões de administrador do sistema, o assistente falhará. Peça ao administrador do sistema para habilitar o Stretch Database na instância do servidor local e, depois, execute o assistente novamente. Para obter mais informações, consulte [Pré-requisito: permissão para habilitar o Stretch Database no servidor](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
   

@@ -11,10 +11,10 @@ ms.assetid: dac0337e-8088-488c-a25a-801a2190f6ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1b930c13856dd6c0e0945c82364e811730ed236
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971596"
 ---
 # <a name="sqlserverconnectionpooldatasource-members"></a>Membros SQLServerConnectionPoolDataSource
@@ -24,7 +24,7 @@ ms.locfileid: "67971596"
   
 ## <a name="constructors"></a>Construtores  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[SQLServerConnectionPoolDataSource ()](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-constructor.md)|Inicializa uma nova instância da classe [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md).|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67971596"
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|(Herdado de [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Retorna o valor da propriedade de conexão **applicationIntent**.|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|(Herdado de [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Retorna o nome do aplicativo.|  

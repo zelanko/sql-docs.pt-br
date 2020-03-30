@@ -11,10 +11,10 @@ ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f70413a7624b9bbd380a664fbf61b9a33f8989b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955512"
 ---
 # <a name="compareto-method-datetimeoffset"></a>Método compareTo (DateTimeOffset)
@@ -35,7 +35,7 @@ public int compareTo(DateTimeOffset other)
 ## <a name="return-value"></a>Valor retornado  
  A tabela a seguir descreve o valor de retorno do método:  
   
-|Valor retornado|Descrição|  
+|Valor retornado|DESCRIÇÃO|  
 |------------------|-----------------|  
 |0|Os dois objetos **DateTimeOffset** representam o mesmo momento.|  
 |número negativo|Esse objeto **DateTimeOffset** representa um momento anterior a *outro*.|  

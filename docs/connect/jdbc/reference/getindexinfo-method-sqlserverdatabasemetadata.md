@@ -16,10 +16,10 @@ ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dd512236aa3070ce299756d4e4294c79ac2e94a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982794"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>Método getIndexInfo (SQLServerDatabaseMetaData)
@@ -70,7 +70,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  O conjunto de resultados retornado pelo método getIndexInfo conterá as seguintes informações:  
   
-|Nome|Type|Descrição|  
+|Nome|Type|DESCRIÇÃO|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**Cadeia de caracteres**|O nome do banco de dados no qual a tabela especificada reside.|  
 |TABLE_SCHEM|**Cadeia de caracteres**|O esquema da tabela.|  

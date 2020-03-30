@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 22527cdfa08907dfdf120ef32c918ecb9eaf86bb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993982"
 ---
 # <a name="supporting-distributed-transactions"></a>Dando suporte a transações distribuídas
@@ -38,7 +38,7 @@ ms.locfileid: "67993982"
   
  Para transações distribuídas, o OLE DB Driver for SQL Server implementa os parâmetros de **ITransactionJoin::JoinTransaction**, conforme indicado a seguir.  
   
-|Parâmetro|Descrição|  
+|Parâmetro|DESCRIÇÃO|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Um ponteiro para um objeto de transação do MS DTC.|  
 |*IsoLevel*|Ignorado pelo Driver do OLE DB para SQL Server. O nível de isolamento para transações coordenadas pelo MS DTC é determinado quando o consumidor faz a aquisição de um objeto de transação do MS DTC.|  

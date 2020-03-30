@@ -9,10 +9,10 @@ ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081323"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funções do Construtor de Relatórios – Referência de funções de agregação
@@ -47,7 +47,7 @@ ms.locfileid: "77081323"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CalculatingAggregates"></a> Funções de agregação internas  
+##  <a name="built-in-aggregate-functions"></a><a name="CalculatingAggregates"></a> Funções de agregação internas  
  As seguintes funções internas calculam valores resumidos para um conjunto de dados numéricos não nulos no escopo padrão ou no escopo nomeado.  
   
 |**Função**|**Descrição**|  
@@ -66,7 +66,7 @@ ms.locfileid: "77081323"
   
  ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
-##  <a name="Restrictions"></a> Restrições em campos internos, coleções e funções de agregação  
+##  <a name="restrictions-on-built-in-fields-collections-and-aggregate-functions"></a><a name="Restrictions"></a> Restrições em campos internos, coleções e funções de agregação  
  A tabela a seguir resume as restrições em locais no relatório em que é possível adicionar expressões que contêm referências a coleções internas globais.  
   
 |Local no relatório|Campos|parâmetros|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|variáveis|RenderFormat|  
@@ -103,7 +103,7 @@ ms.locfileid: "77081323"
   
  ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
-##  <a name="NestedRestrictions"></a> Restrições em agregações aninhadas  
+##  <a name="restrictions-on-nested-aggregates"></a><a name="NestedRestrictions"></a> Restrições em agregações aninhadas  
  A tabela a seguir resume as restrições nas quais as funções de agregação podem especificar outras funções de agregação como agregações aninhadas.  
   
 |Contexto|RunningValue|RowNumber|Primeiro<br /><br /> Último|Previous|Sum e outras funções de classificação prévia|Agregações de ReportItem|Funções de Lookup|Função de agregação|  
@@ -120,7 +120,7 @@ ms.locfileid: "77081323"
   
  ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
-##  <a name="CalculatingRunningValues"></a> Calculando valores em uso  
+##  <a name="calculating-running-values"></a><a name="CalculatingRunningValues"></a> Calculando valores em uso  
  As funções internas a seguir calculam os valores em uso de um conjunto de dados. **RowNumber** é semelhante a **RunningValue** pois retorna o valor em uso de uma contagem que é incrementada para cada linha no escopo contentor. O parâmetro do escopo dessas funções deve especificar um escopo de contenção que controle quando a contagem é reiniciada.  
   
 |**Função**|**Descrição**|  
@@ -130,7 +130,7 @@ ms.locfileid: "77081323"
   
  ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
-##  <a name="RetrievingRowCounts"></a> Recuperando contagens de linhas  
+##  <a name="retrieving-row-counts"></a><a name="RetrievingRowCounts"></a> Recuperando contagens de linhas  
  A função interna a seguir calcula o número de linhas no escopo fornecido. Use esta função para contar todas as linhas, inclusive as linhas com valores nulos.  
   
 |**Função**|**Descrição**|  
@@ -139,7 +139,7 @@ ms.locfileid: "77081323"
   
  ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
-##  <a name="LookupFunctions"></a> Procurando valores de outro conjunto de dados  
+##  <a name="looking-up-values-from-another-dataset"></a><a name="LookupFunctions"></a> Procurando valores de outro conjunto de dados  
  As funções de pesquisa a seguir recuperam valores de um conjunto de dados especificado.  
   
 |**Função**|**Descrição**|  
@@ -150,7 +150,7 @@ ms.locfileid: "77081323"
   
  ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
-##  <a name="RetrievingPostsortValues"></a> Recuperando valores dependentes de classificação  
+##  <a name="retrieving-sort-dependent-values"></a><a name="RetrievingPostsortValues"></a> Recuperando valores dependentes de classificação  
  As funções internas a seguir retornam o primeiro, o último ou o valor anterior de um escopo fornecido. Estas funções dependem da ordem de classificação dos valores dos dados. Use estas funções, por exemplo, para localizar o primeiro e o último valor em uma página para criar um cabeçalho de página em estilo de dicionário. Use **Previous** para comparar um valor em uma linha com o valor da linha anterior dentro de um escopo específico, por exemplo, para localizar valores de porcentagem ano a ano em uma tabela.  
   
 |**Função**|**Descrição**|  
@@ -161,7 +161,7 @@ ms.locfileid: "77081323"
   
  ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
-##  <a name="RetrievingServerAggregates"></a> Recuperando agregações do servidor  
+##  <a name="retrieving-server-aggregates"></a><a name="RetrievingServerAggregates"></a> Recuperando agregações do servidor  
  A função interna a seguir recupera agregações personalizadas do provedor de dados. Por exemplo, usando um tipo de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , é possível recuperar agregações calculadas no servidor de fonte de dados para uso em um cabeçalho de grupo.  
   
 |**Função**|**Descrição**|  
@@ -170,19 +170,19 @@ ms.locfileid: "77081323"
   
  ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
-##  <a name="TestingforScope"></a> Testando para escopo  
+##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> Testando para escopo  
  A função interna a seguir testa o contexto atual de um item de relatório para verificar se ele é membro de um escopo específico.  
   
-|Função|Descrição|  
+|Função|DESCRIÇÃO|  
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|Indica se a instância atual de um item está dentro do escopo especificado.|  
   
  ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início")Voltar ao Início  
   
-##  <a name="RetrievingRecursiveLevel"></a> Recuperando nível recursivo  
+##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> Recuperando nível recursivo  
  A função interna a seguir recupera o nível atual quando uma hierarquia recursiva é processada. Use o resultado dessa função com a propriedade **Padding** em uma caixa de texto para controlar o nível de recuo de uma hierarquia visual para um grupo recursivo. Para obter mais informações, consulte [Criar grupos de hierarquias recursivas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-|Função|Descrição|  
+|Função|DESCRIÇÃO|  
 |--------------|-----------------|  
 |[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|Retorna o nível atual de profundidade em uma hierarquia recursiva.|  
   

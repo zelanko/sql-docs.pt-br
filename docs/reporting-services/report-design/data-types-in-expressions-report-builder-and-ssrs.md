@@ -9,10 +9,10 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fc38e22d7265384e8f16df56ffcab63018ecd4e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080532"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de dados em expressões (Construtor de Relatórios e SSRS)
@@ -28,10 +28,10 @@ ms.locfileid: "77080532"
   
 |Tipo RDL|Tipos CLR|  
 |--------------|---------------|  
-|String|Padrão: String<br /><br /> Chart, GUID, Timespan|  
+|String|Padrão: cadeia de caracteres<br /><br /> Chart, GUID, Timespan|  
 |Boolean|Padrão: Boolean|  
 |Integer|Padrão: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|Datetime|Padrão: Datetime<br /><br /> DateTimeOffset|  
+|Datetime|Padrão: DateTime<br /><br /> DateTimeOffset|  
 |Float|Padrão: Double<br /><br /> Single, Decimal|  
 |Binário|Padrão: Byte[]|  
 |Variante|Qualquer um dos itens acima, exceto Byte[]|  
@@ -66,7 +66,7 @@ ms.locfileid: "77080532"
 -   Verifique se a extensão de processamento de dados que você está usando inclui metadados para recuperar dados pré-formatados. Por exemplo, uma consulta MDX do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui a propriedade estendida FORMATTED_VALUE para valores de cubo que já foram formatados ao processar o cubo. Para obter mais informações, consulte [Propriedades de campos estendidos para um banco de dados do Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Entendendo os tipos de dados de parâmetro  
- Os parâmetros de relatório devem ser um dos cinco tipos de dados: Booliano, DateTime, Inteiro, Float ou Texto (também chamado de Cadeia de caracteres). Quando sua consulta de conjunto de dados inclui parâmetros de consulta, os parâmetros de relatório são criados automaticamente e vinculados a parâmetros de consulta. O tipo de dados padrão para um parâmetro de relatório é String. Para alterar o tipo de dados padrão de um parâmetro de relatório, selecione o valor correto da lista suspensa **Tipo de dados** na página **Geral** da caixa de diálogo **Propriedades do Parâmetro de Relatórios** .  
+ Os parâmetros de relatório devem ser um dos cinco tipos de dados: Boolean, DateTime, Integer, Float ou Text (também conhecido como String). Quando sua consulta de conjunto de dados inclui parâmetros de consulta, os parâmetros de relatório são criados automaticamente e vinculados a parâmetros de consulta. O tipo de dados padrão para um parâmetro de relatório é String. Para alterar o tipo de dados padrão de um parâmetro de relatório, selecione o valor correto da lista suspensa **Tipo de dados** na página **Geral** da caixa de diálogo **Propriedades do Parâmetro de Relatórios** .  
   
 > [!NOTE]  
 >  Os parâmetros de relatório que são tipos de dados DateTime não oferecem suporte a milissegundos. Embora você possa criar um parâmetro com base em valores que incluem milissegundos, você não pode selecionar um valor a partir de uma lista suspensa de valores disponíveis que inclui valores de Data e Hora que incluem milissegundos.  
@@ -114,7 +114,7 @@ ms.locfileid: "77080532"
   
     -   A expressão a seguir converte a cadeia em um valor de data e hora: `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         Se a cadeia `MyDateTime.Value` tiver um deslocamento UTC, a função `DateTime.Parse` primeiro se ajustará para o deslocamento UTC (7 AM - [`+08:00`] para a hora UTC de 11 PM. da noite anterior). A função `DateTime.Parse` então aplicará o deslocamento UTC do servidor de relatórios local e, se necessário, ajustará a hora novamente para o Horário de Verão. Por exemplo, em Redmond, Washington, o deslocamento de horário local ajustado para o Horário de Verão é `[-07:00]`ou 7 horas antes de 11 PM. O resultado é o seguinte valor **DateTime**: `2007-07-06 04:07:07 PM` (6 de julho de 2007 às 16:07).  
+         Se a cadeia `MyDateTime.Value` tiver um deslocamento UTC, a função `DateTime.Parse` primeiro se ajustará para o deslocamento UTC (7 AM - [`+08:00`] para a hora UTC de 11 PM. da noite anterior). A função `DateTime.Parse` então aplicará o deslocamento UTC do servidor de relatórios local e, se necessário, ajustará a hora novamente para o Horário de Verão. Por exemplo, em Redmond, Washington, o deslocamento de horário local ajustado para o Horário de Verão é `[-07:00]`ou 7 horas antes de 11 PM. O resultado é o seguinte valor **DateTime** : `2007-07-06 04:07:07 PM` (6 de julho de 2007 às 4:07 PM).  
   
  Para obter mais informações sobre como converter cadeias de caracteres em tipos de dados **DateTime** , confira [Analisando cadeias de caracteres de data e hora no .NET Framework](https://go.microsoft.com/fwlink/?LinkId=89703), [Formatação de data e time para uma cultura específica](https://go.microsoft.com/fwlink/?LinkId=89704)e [Escolhendo entre DateTime, DateTimeOffset e TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) no MSDN.  
   

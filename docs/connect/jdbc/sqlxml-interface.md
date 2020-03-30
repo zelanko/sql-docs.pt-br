@@ -11,10 +11,10 @@ ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72cccce89d5e30a92f38b956c8b7996949d3bb46
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027696"
 ---
 # <a name="sqlxml-interface"></a>Interface SQLXML
@@ -34,7 +34,7 @@ A tabela a seguir descreve os métodos definidos na interface SQLXML:
 |[void free()](https://go.microsoft.com/fwlink/?LinkId=131685)|Esse método libera o objeto SQLXML e os recursos que ele contém.|  
 |[InputStream getBinaryStream()](https://go.microsoft.com/fwlink/?LinkId=131754)|Retorna um fluxo de entrada para ler dados do SQLXML.|  
 |[Reader getCharacterStream()](https://go.microsoft.com/fwlink/?LinkId=131755)|Retorna os dados **XML** como um objeto java.io.Reader ou como um fluxo de caracteres.|  
-|[T estende Source T getSource(Class\<T> sourceClass)](https://go.microsoft.com/fwlink/?LinkId=131756)|Retorna um **Source** para ler o valor **XML** especificado por este objeto **SQLXML**.<br /><br /> **Observação:**  o método getSource é compatível com as seguintes origens: javax.xml.transform.dom.DOMSource, javax.xml.transform.sax.SAXSource, javax.xml.transform.stax.StAXSource e java.io.InputStream.|  
+|[T estende Source T getSource(Class\<T> sourceClass)](https://go.microsoft.com/fwlink/?LinkId=131756)|Retorna um **Source** para ler o valor **XML** especificado por este objeto **SQLXML**.<br /><br /> **Observação:** o método getSource é compatível com as seguintes origens: javax.xml.transform.dom.DOMSource, javax.xml.transform.sax.SAXSource, javax.xml.transform.stax.StAXSource e java.io.InputStream.|  
 |[String getString()](https://go.microsoft.com/fwlink/?LinkId=131757)|Retorna uma representação de cadeia de caracteres do valor **XML** designado por este objeto SQLXML.|  
 |[OutputStream setBinaryStream()](https://go.microsoft.com/fwlink/?LinkId=131758)|Recupera um fluxo que pode ser usado para gravar o valor **XML** que este objeto SQLXML representa.|  
 |[Writer setCharacterStream()](https://go.microsoft.com/fwlink/?LinkId=131759)|Retorna um fluxo para ser usado para gravar o valor **XML** que este objeto SQLXML representa.|  

@@ -11,10 +11,10 @@ ms.assetid: e585927c-0dee-43fd-b71e-c9f1701790bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a929b5869e58f4f1207b14474302fdb247251850
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983859"
 ---
 # <a name="getdatetimeoffsetjavalangstring-sqlserverresultset"></a>getDateTimeOffset(java.lang.string) (SQLServerResultSet)

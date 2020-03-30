@@ -12,10 +12,10 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5fbcae6cbbadb8665086c65088c32513a632c34a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079932"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatando pontos de dados em um gráfico (Construtor de Relatórios e SSRS)
@@ -56,7 +56,7 @@ Em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>Adicionando palavras-chave a rótulos de ponto de dados, dicas de ferramenta e texto de legenda  
  É possível usar palavras-chave específicas do gráfico, diferenciando maiúsculas de minúsculas, para representar um item existente no gráfico. Essas palavras-chave só são aplicáveis a dicas de ferramenta, texto de legenda personalizado e propriedades de rótulo de ponto de dados. Em muitos casos, uma palavra-chave de gráfico tem uma expressão simples equivalente, mas a palavra-chave é mais rápida e mais fácil de digitar. A seguir, uma lista de palavras-chave de gráfico.  
   
-|Palavra-chave de gráfico|Descrição|Aplicável ao tipo de gráfico|Exemplo de uma expressão simples equivalente|  
+|Palavra-chave de gráfico|DESCRIÇÃO|Aplicável ao tipo de gráfico|Exemplo de uma expressão simples equivalente|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|Valor Y do ponto de dados.|Todos|`=Fields!MyDataField.Value`|  
 |#VALY2|Valor Y número 2 do ponto de dados.|Intervalo, bolha|Nenhum|  

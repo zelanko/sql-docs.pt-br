@@ -16,10 +16,10 @@ ms.assetid: e1367f39-23d7-4e26-b160-6d988d7e6988
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4be0fdbc622b50ffe6e403a0d1bc05e1be7104b2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954939"
 ---
 # <a name="execute-method-sqlserverstatement"></a>Método execute (SQLServerStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67954939"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[execute (java.lang.String)](../../../connect/jdbc/reference/execute-method-java-lang-string-sqlserverstatement.md)|Executa a instrução SQL fornecida que pode retornar vários resultados.|  
 |[execute (java.lang.String, int)](../../../connect/jdbc/reference/execute-method-java-lang-string-int.md)|Executa a instrução SQL fornecida, que pode retornar diversos resultados, e sinaliza para o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] que as chaves geradas automaticamente devem ser disponibilizadas para recuperação.|  

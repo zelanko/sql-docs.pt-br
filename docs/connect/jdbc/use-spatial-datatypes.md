@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f133fa066ef2c486cf7bb40c5b653c99e077bc46
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026940"
 ---
 # <a name="using-spatial-datatypes"></a>Como usar tipos de dados espaciais
@@ -87,14 +87,14 @@ Essas são as novas APIs públicas que foram introduzidas com essa adição, nas
 
 ### <a name="sqlserverpreparedstatement"></a>SQLServerPreparedStatement
 
-|Método|Descrição|
+|Método|DESCRIÇÃO|
 |:------|:----------|
 |void setGeometry(int n, Geometry x)| Define o parâmetro designado para o objeto Class microsoft.sql.Geometry fornecido.
 |void setGeography(int n, Geography x)| Define o parâmetro designado para o objeto Class microsoft.sql.Geography fornecido.
 
 ### <a name="sqlserverresultset"></a>SQLServerResultSet
 
-|Método|Descrição|
+|Método|DESCRIÇÃO|
 |:------|:----------|
 |Geometry getGeometry(int colunIndex)| Retorna o valor da coluna designada na linha atual do objeto ResultSet como um objeto Geometry com.microsoft.sqlserver.jdbc na linguagem de programação Java.
 |Geometry getGeometry(String columnName)| Retorna o valor da coluna designada na linha atual do objeto ResultSet como um objeto Geometry com.microsoft.sqlserver.jdbc na linguagem de programação Java.
@@ -103,7 +103,7 @@ Essas são as novas APIs públicas que foram introduzidas com essa adição, nas
 
 ### <a name="geometry"></a>Geometry
 
-|Método|Descrição|
+|Método|DESCRIÇÃO|
 |:------|:----------|
 |Geometry STGeomFromText(String wkt, int SRID)| Construtor para uma instância de Geometry de uma representação WKT (Well-Known Text) do OGC (Open Geospatial Consortium) aumentada com valores Z (elevação) e M (medida) presentes na instância.
 |Geometry STGeomFromWKB(byte[] wkb)| Construtor para uma instância de Geometry de uma representação WKB (Well-Known Binary) do OGC (Open Geospatial Consortium).
@@ -128,7 +128,7 @@ Essas são as novas APIs públicas que foram introduzidas com essa adição, nas
 
 ### <a name="geography"></a>painel Geografia do app&#39;s selecionado
 
-|Método|Descrição|
+|Método|DESCRIÇÃO|
 |:------|:----------|
 |Geography STGeomFromText(String wkt, int SRID)| Construtor para uma instância de Geography de uma representação WKT (Well-Known Text) do OGC (Open Geospatial Consortium) aumentada com valores Z (elevação) e M (medida) presentes na instância.
 |Geography STGeomFromWKB(byte[] wkb)| Construtor para uma instância de Geography de uma representação WKB (Well-Known Binary) do OGC (Open Geospatial Consortium).

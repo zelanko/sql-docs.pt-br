@@ -11,10 +11,10 @@ ms.assetid: 02287122-5dc1-455d-987f-95fd9a69d503
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e1396ac28a7e41dbf530f7e4a251876f6c340871
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979939"
 ---
 # <a name="getsendtimeasdatetime-method-sqlserverdatasource"></a>Método getSendTimeAsDatetime (SQLServerDataSource)
@@ -32,7 +32,7 @@ public boolean getSendTimeAsDatetime();
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **true** se os valores de java.sql.Time forem ser enviados ao servidor um tipo **datetime** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **false** se os valores de java.sql.Time forem ser enviados ao servidor um tipo **time** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ **true** se os valores de java.sql.Time forem ser enviados ao servidor um tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datetime**do**. **false** se os valores de java.sql.Time forem ser enviados ao servidor um tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]time**do**.  
   
 ## <a name="remarks"></a>Comentários  
  Confira [Configuração das propriedades de conexão](../../../connect/jdbc/setting-the-connection-properties.md) para obter mais informações sobre a propriedade de conexão **sendTimeAsDatetime**.  

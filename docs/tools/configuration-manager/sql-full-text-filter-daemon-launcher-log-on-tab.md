@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 81cca06132cd63bf344d54004895f1bd9a0ab2e7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306740"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-log-on-tab"></a>Iniciador do Daemon de Filtro de Texto Completo do SQL (guia Fazer Logon)

@@ -11,10 +11,10 @@ ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9374c76a76aa12f60fc3fa5f911916f39000d8b4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028458"
 ---
 # <a name="basic-data-types-sample"></a>Exemplo de tipos de dados básicos
@@ -31,7 +31,7 @@ O arquivo de código desta amostra chama-se BasicDT.java e pode ser encontrado n
 
 ## <a name="requirements"></a>Requisitos
 
-Para executar este aplicativo de exemplo, é necessário definir o classpath para incluir o arquivo mssql-jdbc.jar. Também será necessário ter acesso ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Para obter mais informações sobre como definir o classpath, confira [Usar o JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).
+Para executar este aplicativo de exemplo, é necessário definir o classpath para incluir o arquivo mssql-jdbc.jar. Também será necessário ter acesso ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Para obter mais informações sobre como definir o caminho de classe, confira [Como usar o JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).
 
 O exemplo criará a tabela exigida e inserirá dados de exemplo no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:
 

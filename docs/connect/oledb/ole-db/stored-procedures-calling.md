@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 26e97354d54cb65578bcbb35d2c96fb6914270d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015202"
 ---
 # <a name="stored-procedures---calling"></a>Procedimentos armazenados – Chamando
@@ -123,7 +123,7 @@ ms.locfileid: "68015202"
 ### <a name="transact-sql-execute-statement"></a>Instrução Transact-SQL EXECUTE  
  A sequência de escape ODBC CALL e a sequência de escape RPC são os métodos preferidos para chamar um procedimento armazenado no lugar da instrução [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). O Driver do OLE DB para SQL Server usa o mecanismo de RPC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para otimizar o processamento do comando. Este protocolo de RPC aumenta o desempenho, eliminando grande parte do processamento de parâmetros e da análise da instrução feita no servidor.  
   
- Este é um exemplo da instrução **EXECUTE** do [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
+ Este é um exemplo da instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)]EXECUTE**do**:  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  

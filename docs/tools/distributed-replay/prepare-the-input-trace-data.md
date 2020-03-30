@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: 514d11ded0761cd4719b3d3a44b7c91d08d97e04
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307001"
 ---
 # <a name="prepare-the-input-trace-data"></a>Preparar os dados de rastreamento de entrada
@@ -33,7 +33,7 @@ Antes de iniciar uma reprodução distribuída com o recurso [!INCLUDE[msCoName]
   
 ### <a name="to-prepare-the-input-trace-data"></a>Para preparar os dados de rastreamento de entrada  
   
-1.  **(Opcional) Modificar definições de configuração de pré-processamento**: se desejar modificar as definições de configuração de pré-processamento, como a opção de filtrar sessões do sistema ou configurar o tempo ocioso máximo, modifique o elemento `<PreprocessModifiers>` do arquivo de configuração de pré-processamento baseado em XML, `DReplay.exe.preprocess.config`. Se você modificar o arquivo de configuração de pré-processamento, é recomendável modificar uma cópia em vez do original. Para modificar as configurações, siga estas etapas:  
+1.  **(Opcional) Modifique as definições de configuração de pré-processamento**: se desejar modificar as definições de configuração de pré-processamento, como a opção de filtrar sessões do sistema ou configurar o tempo ocioso máximo, modifique o elemento `<PreprocessModifiers>` do arquivo de configuração de pré-processamento baseado em XML, `DReplay.exe.preprocess.config`. Se você modificar o arquivo de configuração de pré-processamento, é recomendável modificar uma cópia em vez do original. Para modificar as configurações, siga estas etapas:  
   
     1.  Faça uma cópia do arquivo de configuração de pré-processamento padrão, `DReplay.exe.preprocess.config`, e renomeie o novo arquivo. O arquivo de configuração de pré-processamento padrão está localizado na pasta de instalação da ferramenta de administração.  
   
@@ -43,7 +43,7 @@ Antes de iniciar uma reprodução distribuída com o recurso [!INCLUDE[msCoName]
   
      Para obter mais informações sobre o arquivo de configuração de pré-processo, veja [Configurar o Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md).  
   
-2.  **Inicia a fase de pré-processamento**: para preparar os dados de rastreamento de entrada, execute a ferramenta de administração com a opção **pré-processar**. Para obter mais informações, veja [Opção de Pré-processamento &#40;Ferramenta de administração do Distributed Replay&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
+2.  **Inicie o estágio de pré-processamento**: para preparar os dados de rastreamento de entrada, execute a ferramenta de administração com a opção **preprocess** . Para obter mais informações, veja [Opção de Pré-processamento &#40;Ferramenta de administração do Distributed Replay&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
   
     1.  Abra o utilitário Prompt de Comando do Windows (**CMD.exe**) e navegue até o local de instalação da ferramenta de administração Distributed Replay (**DReplay.exe**).  
   

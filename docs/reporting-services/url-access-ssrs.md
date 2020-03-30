@@ -16,10 +16,10 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59f183a3a5063b894bfa8a52a5334bb377119794
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078943"
 ---
 # <a name="url-access-ssrs"></a>Acesso à URL (SSRS)
@@ -102,7 +102,7 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  O texto da URL correspondente ao valor do parâmetro usado.  
   
- **Observação:** Para obter uma lista dos parâmetros de acesso à URL disponíveis, confira a [Referência de parâmetros de acesso à URL](../reporting-services/url-access-parameter-reference.md). Para obter exemplos de como transmitir parâmetros de relatório na URL, consulte [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md).  
+ **Observação:** para obter uma lista dos parâmetros de acesso a URL disponíveis, consulte [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md). Para obter exemplos de como transmitir parâmetros de relatório na URL, consulte [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

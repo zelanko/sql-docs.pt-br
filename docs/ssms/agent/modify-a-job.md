@@ -17,10 +17,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 006ba96e2d614be47c7298a2320df0cf03ec81f0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245217"
 ---
 # <a name="modify-a-job"></a>Modify a Job
@@ -32,15 +32,15 @@ ms.locfileid: "75245217"
 
 Este tópico descreve como alterar as propriedades de trabalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o SQL Server Management Objects.  
 
-## <a name="BeforeYouBegin"></a>Antes de começar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de começar  
   
-### <a name="Restrictions"></a>Limitações e restrições  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitações e restrições  
 Um trabalho mestre do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não pode ser destino em ambos os servidores, local e remoto.  
   
-### <a name="Security"></a>Segurança  
+### <a name="security"></a><a name="Security"></a>Segurança  
 A menos que seja membro da função de servidor fixa **sysadmin** , você poderá modificar somente trabalhos de sua propriedade. Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Usando o SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Usando o SQL Server Management Studio  
   
 #### <a name="to-modify-a-job"></a>Para modificar um trabalho  
   
@@ -50,7 +50,7 @@ A menos que seja membro da função de servidor fixa **sysadmin** , você poder�
   
 3.  Na caixa de diálogo **Propriedades do Trabalho** , atualize as propriedades, etapas, agenda, alertas e notificações do trabalho, usando as páginas correspondentes.  
   
-## <a name="TSQL"></a>Usando Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Usando Transact-SQL  
   
 #### <a name="to-modify-a-job"></a>Para modificar um trabalho  
   
@@ -76,7 +76,7 @@ A menos que seja membro da função de servidor fixa **sysadmin** , você poder�
   
         -   Execute [sp_add_jobserver (Transact-SQL)](https://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286) para associar um servidor ao trabalho atual.  
   
-## <a name="SMO"></a>Usando o SQL Server Management Objects  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Usando o SQL Server Management Objects  
 **Para modificar um trabalho**  
   
 Use a classe **Job** usando uma linguagem de programação que você possa escolher, como Visual Basic, Visual C# ou PowerShell. Para obter mais informações, veja [SMO (SQL Server Management Objects)](https://msdn.microsoft.com/library/ms162169.aspx).  

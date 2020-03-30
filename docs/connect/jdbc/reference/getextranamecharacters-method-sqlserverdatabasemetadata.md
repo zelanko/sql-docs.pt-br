@@ -16,10 +16,10 @@ ms.assetid: a22becfe-0f07-4a15-8d11-06d4054b2369
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6a4aada79019aad4ae01729de8e018edd728b473
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983318"
 ---
 # <a name="getextranamecharacters-method-sqlserverdatabasemetadata"></a>Método getExtraNameCharacters (SQLServerDatabaseMetaData)

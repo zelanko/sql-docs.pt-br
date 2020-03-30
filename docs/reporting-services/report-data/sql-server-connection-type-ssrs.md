@@ -9,10 +9,10 @@ ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 916bf1dc2bf861b46b01a069b6fbe15768e4bc1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081356"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>O tipo de conexão do SQL Server (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "77081356"
   
  Use as informações deste tópico para criar uma fonte de dados. Para obter instruções passo a passo, consulte [Adicionar e verificar uma conexão de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a> Cadeia de Conexão  
+##  <a name="connection-string"></a><a name="Connection"></a> Cadeia de Conexão  
  Ao se conectar a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você está se conectando ao objeto de banco de dados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um servidor. O banco de dados pode ter vários esquemas que tenham várias tabelas, exibições e procedimentos armazenados. Especifique o objeto de banco de dados a ser usado no designer de consulta. Se não especificar um banco de dados na cadeia de conexão, você será conectado ao banco de dados padrão atribuído pelo administrador do banco de dados.  
   
  Contate o administrador do banco de dados para obter informações sobre a conexão e as credenciais que devem ser usadas para se conectar à fonte de dados. O exemplo de cadeia de conexão a seguir especifica um banco de dados de exemplo no cliente local:  
@@ -31,9 +31,9 @@ ms.locfileid: "77081356"
 Data Source=<server>;Initial Catalog=AdventureWorks  
 ```  
   
- Para saber mais sobre exemplos de cadeias de conexão, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Confira mais informações sobre exemplos de cadeias de conexão em [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-##  <a name="Credentials"></a> Credenciais  
+##  <a name="credentials"></a><a name="Credentials"></a> Credenciais  
  As credenciais são necessárias para executar consultas, visualizar o relatório localmente e visualizá-lo no servidor de relatório.  
   
  Após a publicação do relatório, talvez seja necessário alterar as credenciais da fonte de dados para que, quando o relatório for executado no servidor de relatório, as permissões recuperadas sejam válidas.  
@@ -51,7 +51,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
  Para obter mais informações, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar informações de credenciais e conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
-##  <a name="Query"></a> Consultas  
+##  <a name="queries"></a><a name="Query"></a> Consultas  
  Uma consulta especifica os dados a serem recuperados de um conjunto de dados de relatório. As colunas no conjunto de resultados para uma consulta populam a coleção de campos para um conjunto de dados. Um relatório só processa o primeiro conjunto de resultados recuperado por uma consulta.  
   
  Por padrão, se você criar uma nova consulta ou abrir uma consulta existente que possa ser representada no designer de consultas gráficas, o designer de consultas relacionais estará disponível. Você pode especificar uma consulta das seguintes formas:  
@@ -70,7 +70,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   [Procedimento armazenado](#QueryStoredProcedure) Escolha em uma lista de procedimentos armazenados.  
   
-###  <a name="QueryText"></a> Usando o tipo de consulta Text  
+###  <a name="using-query-type-text"></a><a name="QueryText"></a> Usando o tipo de consulta Text  
  No designer de consulta baseado em texto, você pode digitar os comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] para definir os dados em um conjunto de dados. Por exemplo, a seguinte consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] seleciona os nomes de todos os funcionários que são assistentes de marketing:  
   
 ```  
@@ -95,7 +95,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
  Quando você executa a consulta, os parâmetros do relatório que correspondem aos parâmetros da consulta serão criados automaticamente. Para obter mais informações, consulte [Parâmetros de consulta](#Parameters) mais adiante neste tópico.  
   
   
-###  <a name="QueryStoredProcedure"></a> Usando o tipo de consulta StoredProcedure  
+###  <a name="using-query-type-storedprocedure"></a><a name="QueryStoredProcedure"></a> Usando o tipo de consulta StoredProcedure  
  Você pode especificar um procedimento armazenado para uma consulta de conjunto de dados das seguintes maneiras:  
   
 -   Na caixa de diálogo **Propriedades do Conjunto de dados** , defina a opção **Procedimento Armazenado** . Faça suas escolhas na lista suspensa de procedimentos armazenados e funções avaliadas por tabela.  
@@ -113,7 +113,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
  Para obter mais informações, consulte [Criar procedimentos armazenados (Mecanismo de Banco de Dados](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)).  
   
   
-##  <a name="Parameters"></a> Parâmetros  
+##  <a name="parameters"></a><a name="Parameters"></a> Parâmetros  
  Quando o texto de consulta contém variáveis ou procedimentos armazenados com parâmetros de entrada, os parâmetros de consulta para o conjunto de dados e os parâmetros de relatório para o relatório são automaticamente gerados. O texto de consulta não deve incluir uma instrução DECLARE para cada variável de consulta.  
   
  Por exemplo, a consulta SQL a seguir cria um parâmetro de relatório chamado **EmpID**:  
@@ -133,14 +133,14 @@ WHERE EmployeeID = (@EmpID)
  Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
-##  <a name="Remarks"></a> Comentários  
+##  <a name="remarks"></a><a name="Remarks"></a> Comentários  
  Você também pode recuperar dados de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o uso de um tipo de fonte de dados do OLE DB ou ODBC. Para obter mais informações, consulte [Tipo de conexão do OLE DB &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md) ou [Tipo de conexão do ODBC&#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md).  
   
 ###### <a name="platform-and-version-information"></a>Informações sobre plataforma e versão  
  Saiba mais sobre suporte de versão e plataforma em [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
-##  <a name="HowTo"></a> Tópicos de instruções  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Tópicos de instruções  
  Esta seção contém instruções passo a passo para trabalhar com conexões de dados, fontes de dados e conjuntos de dados.  
   
  [Adicionar e verificar uma conexão de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -150,7 +150,7 @@ WHERE EmployeeID = (@EmpID)
  [Adicionar um filtro a um conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> Seções relacionadas  
+##  <a name="related-sections"></a><a name="Related"></a> Seções relacionadas  
  Estas seções da documentação especificam informações conceituais detalhadas sobre os dados do relatório e informações de procedimentos sobre como definir, personalizar e usar partes de um relatório relacionadas aos dados.  
   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

@@ -16,10 +16,10 @@ ms.assetid: 4ad50e54-8246-4012-bd88-4aaaaf7f0f77
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f759ed3e4b2d21866ddd74d6ac21681ae216d024
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953510"
 ---
 # <a name="getboolean-method-sqlservercallablestatement"></a>Método getBoolean (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67953510"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[getBoolean (int)](../../../connect/jdbc/reference/getboolean-method-int.md)|Recupera o valor do parâmetro designado como um valor **booliano**, considerando o índice do parâmetro.|  
 |[getBoolean (java.lang.String)](../../../connect/jdbc/reference/getboolean-method-java-lang-string.md)|Recupera o valor do parâmetro designado como um valor **booliano**, considerando o nome do parâmetro.|  

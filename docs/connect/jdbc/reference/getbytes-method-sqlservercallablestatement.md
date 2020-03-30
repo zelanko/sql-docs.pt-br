@@ -16,10 +16,10 @@ ms.assetid: b6e88cea-54b3-4d18-a9af-db54abf19f45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b8db05472492e7893dd7874e137baaa5cf8fd89e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68213722"
 ---
 # <a name="getbytes-method-sqlservercallablestatement"></a>Método getBytes (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "68213722"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[getBytes (int)](../../../connect/jdbc/reference/getbytes-method-int.md)|Recupera o valor do parâmetro designado como um uma matriz de valores bytes, considerando o índice do parâmetro.|  
 |[getBytes (java.lang.String)](../../../connect/jdbc/reference/getbytes-method-java-lang-string.md)|Recupera o valor do parâmetro designado como uma matriz de valores bytes, considerando o nome do parâmetro.|  

@@ -9,10 +9,10 @@ ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd0268916173f4e2b9d3f6c096fceb6787d18487
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078682"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Criar uma matriz (Construtor de Relatórios e SSRS)
@@ -20,12 +20,12 @@ ms.locfileid: "77078682"
   
  Após o design inicial, é possível continuar a desenvolver uma matriz para melhorar a experiência de exibição para o usuário. Para obter mais informações, consulte [Controlando a exibição da região de dados Tablix em uma página do relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
- Confira uma introdução rápida a matrizes no [Tutorial: Criar um relatório de matriz &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md).  
+ Para começar rapidamente com matrizes, consulte [Tutorial: criação de um relatório de matriz &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md).  
   
 > [!NOTE]  
 >  É possível publicar listas separadamente de um relatório como partes do relatório. Leia mais sobre [Partes de relatório (Construtor de Relatórios e SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
-##  <a name="AddingMatrix"></a> Adicionando uma matriz ao relatório  
+##  <a name="adding-a-matrix-to-your-report"></a><a name="AddingMatrix"></a> Adicionando uma matriz ao relatório  
  Adicione uma matriz à superfície de design usando a guia Inserir ou a faixa de opções. Você tem a opção de adicionar uma matriz usando o Assistente de Tabela ou Matriz, que inclui a criação de uma conexão de fonte de dados e de um conjunto de dados e a configuração ou a adição da matriz com base no modelo de matriz.  
   
 > [!NOTE]  
@@ -50,7 +50,7 @@ ms.locfileid: "77078682"
  A matriz com a qual você inicia é um modelo baseado na região de dados tablix. É possível continuar desenvolvendo o design da matriz adicionando grupos de linhas ou de colunas adjacentes ou até mesmo linhas de detalhes. Para obter mais informações, consulte [Explorando a flexibilidade de uma região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
   
-##  <a name="AddingParentGroupChild"></a> Adicionando um grupo pai ou filho a uma matriz  
+##  <a name="adding-a-parent-group-or-child-group-to-a-matrix"></a><a name="AddingParentGroupChild"></a> Adicionando um grupo pai ou filho a uma matriz  
  Para adicionar um grupo baseado em um único campo de conjunto de dados, arraste o campo do painel de dados do relatório para a área Grupos de Linhas ou Grupos de Colunas do painel Agrupamento. Solte o campo na hierarquia de grupo para definir sua relação com grupos existentes. Solte-o sobre um grupo existente para criar um grupo pai ou abaixo de um grupo existente para criar um grupo filho.  
   
  Várias coisas acontecem quando você solta um campo no painel **Agrupamento** :  
@@ -78,7 +78,7 @@ ms.locfileid: "77078682"
  Para obter mais informações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
   
-##  <a name="AddingAdjacentGroup"></a> Adicionando um grupo adjacente a uma matriz  
+##  <a name="adding-an-adjacent-group-to-a-matrix"></a><a name="AddingAdjacentGroup"></a> Adicionando um grupo adjacente a uma matriz  
  Para adicionar um grupo adjacente com base em um único campo de conjunto de dados, use o menu de atalho no painel Agrupamento. Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). A figura a seguir mostra um grupo baseado em geografia e um grupo adjacente baseado em ano.  
   
  ![Grupos de colunas adjacentes para Geografia e Ano](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "Grupos de colunas adjacentes para Geografia e Ano")  

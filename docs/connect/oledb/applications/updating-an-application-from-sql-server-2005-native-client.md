@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7915b9fb74f05057e05eef022d7f9b0e4ccdd21f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989253"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Atualizando um aplicativo no SQL Server 2005 Native Client
@@ -30,7 +30,7 @@ ms.locfileid: "67989253"
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 fornecido com o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 fornecido com o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 fornecido com o [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 fornecido com o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] e o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
 
-|Comportamento alterado no Driver do OLE DB para SQL Server em comparação com o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client|Descrição|  
+|Comportamento alterado no Driver do OLE DB para SQL Server em comparação com o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client|DESCRIÇÃO|  
 |------------------------------------------------------------------------------------|-----------------|  
 |O OLE DB preenche apenas até a escala definida.|Para conversões em que os dados convertidos são enviados ao servidor, o Driver do OLE DB para SQL Server preenche zeros à direita nos dados apenas até o comprimento máximo dos valores **datetime**. O SQL Server Native Client 9.0 e preenchia até nove dígitos.|  
 |Validar DBTYPE_DBTIMESTAMP para ICommandWithParameter::SetParameterInfo.|O Driver do OLE DB para SQL Server implementa o requisito de OLE DB para *bScale* em ICommandWithParameter::SetParameterInfo para ser definido como a precisão de segundos fracionários para DBTYPE_DBTIMESTAMP.|  

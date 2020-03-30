@@ -24,10 +24,10 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 12933c259fa02e77a76b8c31edf61db916dcde49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080344"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Exemplos de expressões (Construtor de Relatórios e SSRS)
@@ -62,13 +62,13 @@ Para obter exemplos de expressões para usos específicos, consulte os tópicos 
   
 Para obter mais informações sobre expressões simples e complexas, em que você pode usar expressões e os tipos de referências que pode incluir em uma expressão, consulte tópicos em [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Para obter mais informações sobre o contexto em que as expressões são avaliadas para calcular agregações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-Saiba como gravar expressões que usam muitas das funções e dos operadores também empregados por exemplos de expressões neste tópico, mas no contexto da gravação de um relatório, no [Tutorial: Introdução às expressões](../../reporting-services/tutorial-introducing-expressions.md).  
+Para aprender como gravar expressões que usam muitas das funções e dos operadores também empregados por exemplos de expressões neste tópico, mas no contexto da gravação de um relatório, consulte [Tutorial: introdução às expressões](../../reporting-services/tutorial-introducing-expressions.md).  
 
   
 ## <a name="functions"></a>Funções  
  Muitas expressões em um relatório contêm funções. É possível formatar dados, aplicar lógica e acessar metadados do relatório usando estas funções. É possível gravar expressões que usam funções da biblioteca de runtime do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e dos namespaces <xref:System.Convert> e <xref:System.Math>. É possível adicionar referências a funções a partir de outros assemblies ou de código personalizado. Você também pode usar classes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], incluindo <xref:System.Text.RegularExpressions>.  
   
-##  <a name="VisualBasicFunctions"></a> Funções do Visual Basic  
+##  <a name="visual-basic-functions"></a><a name="VisualBasicFunctions"></a> Funções do Visual Basic  
  Você pode usar as funções do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para manipular os dados exibidos nas caixas de texto ou usados para parâmetros, propriedades ou outras áreas do relatório. Esta seção fornece exemplos que demonstram algumas dessas funções. Para obter mais informações, confira [Membros da Biblioteca de Runtime do Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) no MSDN.  
   
  O [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornece muitas opções de formatos personalizados como, por exemplo, para formatos de data específicos. Para obter mais informações, consulte [Tipos de Formatação](https://go.microsoft.com/fwlink/?LinkId=112024) no MSDN.  
@@ -87,7 +87,7 @@ Saiba como gravar expressões que usam muitas das funções e dos operadores tam
     = Round(1.3*5)/5  
     ```  
   
-###  <a name="DateFunctions"></a> Funções de data  
+###  <a name="date-functions"></a><a name="DateFunctions"></a> Funções de data  
   
 -   A função **Today** fornece a data atual. Essa expressão pode ser usada em uma caixa de texto para exibir a data no relatório ou em um parâmetro para filtrar dados baseados na data atual.  
   
@@ -192,7 +192,7 @@ Saiba como gravar expressões que usam muitas das funções e dos operadores tam
 |Um Ano Atrás|`=DateSerial(Year(Parameters!TodaysDate.Value)-1,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 |Dois Anos Atrás|`=DateSerial(Year(Parameters!TodaysDate.Value)-2,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
   
-###  <a name="StringFunctions"></a> Funções de cadeia de caracteres  
+###  <a name="string-functions"></a><a name="StringFunctions"></a> Funções de cadeia de caracteres  
   
 -   Combine mais de um campo usando operadores de concatenação e constantes do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . A expressão a seguir retorna dois campos, cada um em uma linha separada na mesma caixa de texto:  
   
@@ -258,7 +258,7 @@ Saiba como gravar expressões que usam muitas das funções e dos operadores tam
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
     ```  
   
-###  <a name="ConversionFunctions"></a> Funções de conversão  
+###  <a name="conversion-functions"></a><a name="ConversionFunctions"></a> Funções de conversão  
  É possível usar as funções do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para converter um campo de um tipo de dados em outro tipo de dados. As funções de conversão podem ser usadas para converter um tipo de dados padrão de um campo no tipo de dados necessário para cálculos ou para combinar texto.  
   
 -   A expressão a seguir converte a constante 500 para o tipo Decimal a fim de compará-la a um tipo de dados de dinheiro [!INCLUDE[tsql](../../includes/tsql-md.md)] no campo Valor de uma expressão de filtro.  
@@ -273,7 +273,7 @@ Saiba como gravar expressões que usam muitas das funções e dos operadores tam
     =CStr(Parameters!MySelection.Count)  
     ```  
   
-###  <a name="DecisionFunctions"></a> Funções de decisão  
+###  <a name="decision-functions"></a><a name="DecisionFunctions"></a> Funções de decisão  
   
 -   A função **lif** retorna um de dois valores, dependendo da expressão ser verdadeira ou não. A expressão a seguir usará a função **lif** para retornar um valor booliano de **True** se o valor de `LineTotal` exceder 100. Caso contrário, retornará **Falso**:  
   
@@ -328,10 +328,10 @@ Saiba como gravar expressões que usam muitas das funções e dos operadores tam
   
     ```  
   
-##  <a name="ReportFunctions"></a> Funções de relatórios  
+##  <a name="report-functions"></a><a name="ReportFunctions"></a> Funções de relatórios  
  Em uma expressão, você pode adicionar uma referência a funções de relatório adicionais que manipulam dados em um relatório. Esta seção fornece exemplos de duas dessas funções. Para obter mais informações sobre as funções e exemplos de relatório, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
-###  <a name="Sum"></a> Sum  
+###  <a name="sum"></a><a name="Sum"></a> Sum  
   
 -   A função **Sum** pode somar os valores em um grupo ou região de dados. Essa função pode ser útil no cabeçalho ou no rodapé de um grupo. A expressão a seguir exibe a soma de dados no grupo Ordem ou na região de dados:  
   
@@ -345,7 +345,7 @@ Saiba como gravar expressões que usam muitas das funções e dos operadores tam
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
     ```  
   
-###  <a name="RowNumber"></a> RowNumber  
+###  <a name="rownumber"></a><a name="RowNumber"></a> RowNumber  
   
 -   A função **RowNumber** , quando usada em uma caixa de texto dentro de uma região de dados, exibe o número da linha de cada instância da caixa de texto na qual a expressão é exibida. Essa função pode ser útil para numerar linhas em uma tabela. Ela também pode ser útil para tarefas mais complexas, como fornecer quebras de página baseadas no número de linhas. Para obter mais informações, consulte [Quebras de página](#PageBreaks) neste tópico.  
   
@@ -355,10 +355,10 @@ Saiba como gravar expressões que usam muitas das funções e dos operadores tam
     =RowNumber(Nothing)  
     ```  
   
-##  <a name="AppearanceofReportData"></a> Aparência dos dados do relatório  
+##  <a name="appearance-of-report-data"></a><a name="AppearanceofReportData"></a> Aparência dos dados do relatório  
  É possível usar expressões para manipular como os dados são exibidos em um relatório. Por exemplo, é possível exibir os valores de dois campos em uma única caixa de texto, exibir informações sobre o relatório ou afetar o modo como as quebras de página são inseridas no relatório.  
   
-###  <a name="PageHeadersandFooters"></a> Cabeçalhos e rodapés de página  
+###  <a name="page-headers-and-footers"></a><a name="PageHeadersandFooters"></a> Cabeçalhos e rodapés de página  
  Ao criar um relatório, você pode exibir o nome do relatório e o número da página no rodapé. Para fazer isso, você pode usar as expressões a seguir:  
   
 -   A seguinte expressão fornece o nome do relatório e a hora em que foi executado. Ela pode ser colocada em uma caixa de texto no rodapé ou no corpo do relatório. A hora é formatada com a cadeia de caracteres de formatação do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para data abreviada:  
@@ -398,7 +398,7 @@ Saiba como gravar expressões que usam muitas das funções e dos operadores tam
 > [!NOTE]  
 >  Você pode fazer referência a apenas um item de relatório por expressão em um cabeçalho ou rodapé de página. Além disso, é possível fazer referência ao nome da caixa de texto, mas não à expressão de dados reais dentro da caixa de texto, nas expressões de cabeçalho e rodapé de página.  
   
-###  <a name="PageBreaks"></a> Quebras de página  
+###  <a name="page-breaks"></a><a name="PageBreaks"></a> Quebras de página  
  Em alguns relatórios, você pode desejar colocar uma quebra de página no final de um número de linhas especificado ou, além disso, em grupos ou itens de relatório. Para fazer isso, crie um grupo que contenha os grupos ou registros de detalhes desejados, adicione uma quebra de página ao grupo e adicione uma expressão de grupo ao grupo por um número de linhas especificado.  
   
 -   A expressão a seguir, quando colocada na expressão de grupo, atribui um número para cada conjunto de 25 linhas. Quando uma quebra de página é definida para o grupo, essa expressão resulta em uma quebra de página a cada 25 linhas.  
@@ -415,10 +415,10 @@ Saiba como gravar expressões que usam muitas das funções e dos operadores tam
   
      Para obter mais informações sobre como configurar quebras de página para um grupo, consulte [Adicionar uma quebra de página &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
   
-##  <a name="Properties"></a> propriedades  
+##  <a name="properties"></a><a name="Properties"></a> propriedades  
  As expressões não são usadas apenas para exibir dados nas caixas de texto. Elas também podem ser usadas para alterar o modo como as propriedades são aplicadas aos itens do relatório. É possível alterar informações de estilo para um item de relatório ou alterar sua visibilidade.  
   
-###  <a name="Formatting"></a> Formatação  
+###  <a name="formatting"></a><a name="Formatting"></a> Formatação  
   
 -   A expressão a seguir, quando usada na propriedade Color de uma caixa de texto, altera a cor do texto dependendo do valor do campo `Profit` :  
   
@@ -448,7 +448,7 @@ Saiba como gravar expressões que usam muitas das funções e dos operadores tam
 ### <a name="chart-colors"></a>Cores dos gráficos  
  Para especificar cores para um gráfico de Forma, você pode usar código personalizado para controlar a ordem em que as cores são mapeadas para valores de pontos de dados. Isso ajuda a usar cores consistentes para vários gráficos que têm os mesmos grupos de categorias. Para obter mais informações, consulte [Especificar cores consistentes em gráficos com várias formas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md).  
   
-###  <a name="Visibility"></a> Visibilidade  
+###  <a name="visibility"></a><a name="Visibility"></a> Visibilidade  
  Você pode mostrar e ocultar itens em um relatório usando as propriedades de visibilidade para o item de relatório. Em uma região de dados, como uma tabela, é possível ocultar inicialmente as linhas de detalhes com base no valor de uma expressão.  
   
 -   A expressão a seguir, quando usada para visibilidade inicial de linhas de detalhes em um grupo, mostra as linhas de detalhes de todas as vendas que excedem 90 por cento no campo `PctQuota` :  
@@ -469,7 +469,7 @@ Saiba como gravar expressões que usam muitas das funções e dos operadores tam
     =IIF(Fields!Column_1.IsMissing, true, false)  
     ```  
   
-###  <a name="Hyperlinks"></a> URLs  
+###  <a name="urls"></a><a name="Hyperlinks"></a> URLs  
  É possível personalizar URLs usando dados do relatório e também controlar condicionalmente se as URLs são adicionadas como uma ação para uma caixa de texto.  
   
 -   A expressão a seguir, quando usada como uma ação em uma caixa de texto, gera uma URL personalizada que especifica o campo do conjunto de dados `EmployeeID` como um parâmetro da URL.  
@@ -486,10 +486,10 @@ Saiba como gravar expressões que usam muitas das funções e dos operadores tam
     =IIF(Parameters!IncludeURLs.Value,"https://adventure-works.com/productcatalog",Nothing)  
     ```  
   
-##  <a name="ReportData"></a> Dados do Relatório  
+##  <a name="report-data"></a><a name="ReportData"></a> Dados do Relatório  
  As expressões podem ser usadas para manipular os dados usados no relatório. Você pode fazer referência a parâmetros e a outras informações do relatório. É possível até mesmo alterar a consulta usada para recuperar dados para o relatório.  
   
-###  <a name="Parameters"></a> Parâmetros  
+###  <a name="parameters"></a><a name="Parameters"></a> Parâmetros  
  É possível usar expressões em um parâmetro para variar o valor padrão do parâmetro. Por exemplo, você pode usar um parâmetro para filtrar dados para um usuário específico baseado na ID do usuário usada para executar o relatório.  
   
 -   A expressão a seguir, quando usada com o valor padrão para um parâmetro, coleta a ID do usuário da pessoa que executa o relatório:  
@@ -510,7 +510,7 @@ Saiba como gravar expressões que usam muitas das funções e dos operadores tam
     =Fields(Parameters!ParameterField.Value).Value  
     ```  
   
-##  <a name="CustomCode"></a> Código Personalizado  
+##  <a name="custom-code"></a><a name="CustomCode"></a> Código Personalizado  
  É possível usar código personalizado em um relatório. O código personalizado é inserido em um relatório ou armazenado em um assembly personalizado que é usado no relatório. Para obter mais informações sobre o código personalizado, consulte [Referências a código personalizado e assemblies em expressões no Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>Usando variáveis de grupo para agregação personalizada  

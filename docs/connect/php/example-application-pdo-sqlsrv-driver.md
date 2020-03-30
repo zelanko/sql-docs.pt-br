@@ -11,10 +11,10 @@ ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8414497fed891e153399febf84151c82d915d77a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993592"
 ---
 # <a name="example-application-pdo_sqlsrv-driver"></a>Aplicativo de exemplo (driver PDO_SQLSRV)
@@ -32,7 +32,7 @@ O aplicativo de exemplo AdventureWorks Product Reviews é um aplicativo Web que 
 ## <a name="requirements"></a>Requisitos  
 Para executar o aplicativo de exemplo AdventureWorks Product Reviews, as condições a seguir devem ser atendidas em seu computador:  
   
--   O sistema cumpre os requisitos dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para ver informações detalhadas, confira [Requisitos do sistema para os drivers da Microsoft para PHP para SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
+-   O sistema cumpre os requisitos dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para obter informações detalhadas, confira [Requisitos do sistema para os drivers da Microsoft para PHP para SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
  -   Os arquivos adventureworks_demo.php e photo.php estão no diretório raiz do servidor Web. Os arquivos devem conter o código mencionado posteriormente neste documento.  
 -   O SQL Server 2005 ou o SQL Server 2008, com o banco de dados [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) anexado, está instalado no computador local.  
 -   Um navegador da Web está instalado.  

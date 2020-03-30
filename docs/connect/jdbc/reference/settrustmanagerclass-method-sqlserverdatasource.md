@@ -16,10 +16,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d197589cb1b4702404ce8ba22200a7bde7e4da4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972259"
 ---
 # <a name="settrustmanagerclass-method-sqlserverdatasource"></a>Método setTrustManagerClass (SQLServerDataSource)
@@ -37,7 +37,7 @@ public void setTrustManagerClass(java.lang.String trustManagerClass)
 #### <a name="parameters"></a>parâmetros  
  *trustManagerClass*  
   
- Uma **String** que contém o nome de classe totalmente qualificado de um javax.net.ssl.TrustManager personalizado.
+ Uma **cadeia de caracteres** que contém o nome de classe totalmente qualificado de um javax.net.ssl.TrustManager personalizado.
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

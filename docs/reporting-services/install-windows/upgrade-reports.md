@@ -17,10 +17,10 @@ ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bae0cffce8cfacd56feaab289d75b7c70d509ce7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082277"
 ---
 # <a name="upgrade-reports-ssrs"></a>Atualizar relatórios (SSRS)
@@ -37,7 +37,7 @@ Os arquivos de definição de relatório (.rdl) são automaticamente atualizados
   
  Para obter mais informações sobre novos recursos para [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], consulte [What's new in SQL Server Reporting Services (SSRS)](../what-s-new-in-sql-server-reporting-services-ssrs.md) (Novidades do SSRS [SQL Server Reporting Services]).  
 
-##  <a name="bkmk_versionsupported"></a> Versões com suporte da atualização  
+##  <a name="versions-supported-by-upgrade"></a><a name="bkmk_versionsupported"></a> Versões com suporte da atualização  
  Relatórios que foram criados em qualquer versão anterior do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser atualizados. Isso inclui as seguintes versões:  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
@@ -48,7 +48,7 @@ Os arquivos de definição de relatório (.rdl) são automaticamente atualizados
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
-##  <a name="bkmk_rdlfiles"></a> Arquivos de definição de relatório (.rdl) e Designer de Relatórios  
+##  <a name="report-definition-rdl-files-and-report-designer"></a><a name="bkmk_rdlfiles"></a> Arquivos de definição de relatório (.rdl) e Designer de Relatórios  
  Um arquivo de definição de relatório inclui uma referência ao namespace do RDL que especifica a versão do esquema de definição de relatório usado para validar o arquivo .rdl.  
   
  Ao abrir um arquivo .rdl no Designer de Relatórios do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], se o relatório tiver sido criado para um namespace anterior, o Designer de Relatórios criará automaticamente um arquivo de backup e atualizará o relatório para o namespace atual. Esse é o único modo que você pode atualizar um arquivo de definição de relatório.  
@@ -59,30 +59,30 @@ Os arquivos de definição de relatório (.rdl) são automaticamente atualizados
   
  Para identificar o esquema RDL atual de um relatório, de um servidor de relatório ou do Designer de Relatórios, consulte [Localizar a versão do esquema de definição de relatório &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
-##  <a name="bkmk_publishedreports_and_snapshots"></a> Relatórios publicados e instantâneos de relatório  
+##  <a name="published-reports-and-report-snapshots"></a><a name="bkmk_publishedreports_and_snapshots"></a> Relatórios publicados e instantâneos de relatório  
  Na primeira vez que for usado, o servidor de relatório tentará atualizar os relatórios publicados e os instantâneos de relatório existentes para o novo esquema de definição de relatório, sem exigir uma ação específica de sua parte. Quando um usuário exibe um relatório ou um instantâneo de relatório, ou quando o servidor de relatório processa uma assinatura, ocorre uma tentativa de atualização. A definição de relatório não é substituída, mas continua sendo armazenada no servidor de relatório em seu esquema original. Se um relatório não puder ser atualizado, ele será executado no modo da compatibilidade com versões anteriores.  
   
-##  <a name="bkmk_backcompat"></a> Modo de compatibilidade com versões anteriores  
+##  <a name="backward-compatibility-mode"></a><a name="bkmk_backcompat"></a> Modo de compatibilidade com versões anteriores  
  Um relatório atualizado com êxito é processado pelo processador de relatório [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . Um relatório que não pode ser atualizado é processado pelo processador de relatório do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo de compatibilidade com versões anteriores. Um relatório não pode ser processado pelos dois processadores de relatório. Na primeira vez que for usado, um relatório será atualizado com êxito ou marcado para compatibilidade com versões anteriores.  
   
  Só o processador de relatório [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] dá suporte a novos recursos. Se não for possível atualizar um relatório, você ainda poderá exibir o relatório renderizado, mas os recursos novos não estarão disponíveis. Para se beneficiar dos recursos novos, um relatório deverá ser atualizado com êxito.  
   
-##  <a name="bkmk_subreports"></a> Atualizando um relatório com sub-relatórios  
+##  <a name="upgrading-a-report-with-subreports"></a><a name="bkmk_subreports"></a> Atualizando um relatório com sub-relatórios  
  Quando um relatório contiver sub-relatórios, um de quatro possíveis estados poderá ocorrer durante a atualização:  
   
 -   O relatório principal e todos os sub-relatórios podem ser atualizados com êxito. Eles são processados pelo processador de relatório do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
   
 -   O relatório principal e todos os sub-relatórios não podem ser atualizados. Eles são processados pelo processador de relatório do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
--   O relatório principal pode ser atualizado, entretanto um ou mais sub-relatórios não podem ser atualizados. O relatório principal é processado pelo processador de relatório de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], mas o relatório renderizado mostra a mensagem "Erro: não foi possível processar o sub-relatório" na localização em que o sub-relatório que não pôde ser atualizado seria exibido.  
+-   O relatório principal pode ser atualizado, entretanto um ou mais sub-relatórios não podem ser atualizados. O relatório principal é processado pelo processador de relatório do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , mas o relatório renderizado mostra a mensagem "Erro: não foi possível processar o sub-relatório" no local onde o sub-relatório que não foi atualizado seria exibido.  
   
--   Não é possível atualizar o relatório principal, entretanto é possível atualizar um ou mais sub-relatórios. O relatório principal é processado pelo processador de relatório de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], mas o relatório renderizado mostra a mensagem "Erro: não foi possível processar o sub-relatório" na localização em que o sub-relatório seria exibido.  
+-   Não é possível atualizar o relatório principal, entretanto é possível atualizar um ou mais sub-relatórios. O relatório principal é processado pelo processador de relatório do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , mas o relatório renderizado mostra a mensagem "Erro: não foi possível processar o sub-relatório" no local onde o sub-relatório seria exibido.  
   
- Se você vir o erro "Erro: não foi possível processar o sub-relatório", deverá alterar a definição do relatório principal ou do sub-relatório de maneira que os relatórios possam ser processados pela mesma versão do processador de relatórios.  
+ Se você visualizar o erro "Erro: não foi possível processar o sub-relatório", deverá alterar a definição do relatório principal ou do sub-relatório de forma que os relatórios possam ser processados pela mesma versão do processador de relatórios.  
   
  Relatórios detalhados não têm esta limitação porque eles são processados como relatórios independentes.  
   
-##  <a name="bkmk_CRIs"></a> Atualizando um relatório com itens de relatório personalizados  
+##  <a name="upgrading-a-report-with-custom-report-items"></a><a name="bkmk_CRIs"></a> Atualizando um relatório com itens de relatório personalizados  
  Relatórios do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem conter CRIs (itens de relatórios personalizados) fornecidos por fornecedores de software de terceiros e instalados pelo administrador do sistema no computador de criação de relatório e no servidor de relatório. Os relatórios que contêm CRIs podem ser atualizados dos seguintes modos:  
   
 -   Um servidor de relatório do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é atualizado para um servidor de relatório do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. Os relatórios publicados no servidor de relatório serão atualizados automaticamente na primeira vez que forem usados.  
@@ -108,14 +108,14 @@ Os arquivos de definição de relatório (.rdl) são automaticamente atualizados
 |--------------|----------------------------------|  
 |CRIs de terceiros|Atualização não executada.<br /><br /> Processado pelo processador do relatório do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
   
-###  <a name="OpeningaReport"></a> Abrindo um Relatório com CRIs no Designer de Relatórios  
+###  <a name="opening-a-report-with-cris-in-report-designer"></a><a name="OpeningaReport"></a> Abrindo um Relatório com CRIs no Designer de Relatórios  
  Quando você abrir um relatório do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com CRIs no Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o relatório será atualizado para o novo esquema de definição de relatório. Dependendo dos CRIs contidos no relatório, uma das seguintes ações ocorrerá:  
   
 -   CRIs de terceiros detectados. Se a versão do CRI que está instalada no computador de criação de relatórios não for compatível com o novo esquema rdl, a superfície do design mostrará uma caixa de texto com um X vermelho. Você deverá contatar o administrador do sistema para instalar novas versões do CRI de fornecedores de terceiros que sejam compatíveis com o novo esquema rdl.  
   
  Salvar um relatório depois de ele ser atualizado no ambiente de criação de relatórios é a única maneira de atualizar um relatório existente para o novo esquema de definição de relatório.  
   
-###  <a name="bkmk_convertCRIdialog"></a> Caixa de diálogo Converter CRI  
+###  <a name="convert-cri-dialog-box"></a><a name="bkmk_convertCRIdialog"></a> Caixa de diálogo Converter CRI  
  Este relatório contém CRIs (itens de relatório personalizados) com recursos sem suporte. CRIs são extensões para a linguagem RDL (Report Definition Language) que oferecem suporte a objetos personalizados que exibem dados em um relatório. Os CRIs incluem componentes em tempo de design e em tempo de execução oferecidos por fornecedores de software de terceiros.  
   
 > [!NOTE]  

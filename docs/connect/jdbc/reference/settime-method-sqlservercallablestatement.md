@@ -16,10 +16,10 @@ ms.assetid: 04ea83b2-db5e-4b46-b016-9e496363827e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81205764a663930ab2d555c0f231448c6cae4099
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972463"
 ---
 # <a name="settime-method-sqlservercallablestatement"></a>Método setTime (SQLServerCallableStatement)
@@ -33,7 +33,7 @@ ms.locfileid: "67972463"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[setTime (java.lang.String, java.sql.Time)](../../../connect/jdbc/reference/settime-method-java-lang-string-java-sql-time.md)|Define o parâmetro designado como o valor de tempo fornecido.|  
 |[setTime (java.lang.String, java.sql.Time, java.util.Calendar)](../../../connect/jdbc/reference/settime-method-java-lang-string-java-sql-time-java-util-calendar.md)|Define o parâmetro designado como os valores de tempo e calendário fornecidos.|  

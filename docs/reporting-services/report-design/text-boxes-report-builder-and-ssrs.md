@@ -14,10 +14,10 @@ ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: db8676a7b00b3cfbf70bca4fecee7539437e1bc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080872"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Caixas de texto (Construtor de Relatórios e SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "77080872"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a> Ampliando e reduzindo uma caixa de texto  
+##  <a name="growing-and-shrinking-a-text-box"></a><a name="GrowShrinkTextBox"></a> Ampliando e reduzindo uma caixa de texto  
  Por padrão, as caixas de texto apresentam um tamanho fixo. Você pode permitir a redução ou a expansão vertical de uma caixa de texto com base no seu conteúdo. Para obter mais informações, consulte [Permitir que uma caixa de texto seja ampliada ou reduzida &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
 ## <a name="rotating-a-text-box"></a>Girando uma caixa de texto  
@@ -51,9 +51,9 @@ ms.locfileid: "77080872"
   
  A orientação é definida na caixa de texto e se aplica a todo o texto da caixa. Você não pode especificar uma orientação diferente para partes da caixa de texto.  
   
- Para começar, confira a seção sobre como girar texto no [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md) e veja [Definir orientação da caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
+ Para começar, consulte a seção sobre como girar texto em [Tutorial: formatar texto &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md) e veja [Definir orientação da caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
   
-##  <a name="HowTo"></a> Tópicos de instruções  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Tópicos de instruções  
  [Adicionar, mover ou excluir uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  

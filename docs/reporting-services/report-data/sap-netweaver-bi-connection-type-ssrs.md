@@ -9,10 +9,10 @@ ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1c9edca5b50403f47b82cd2e69d51eb568c66f8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081780"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Tipo de conexão SAP NetWeaver BI (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "77081780"
   
  Use as informações deste tópico para criar uma fonte de dados. Para obter instruções passo a passo, consulte [Adicionar e verificar uma conexão de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a> Cadeia de Conexão  
+##  <a name="connection-string"></a><a name="Connection"></a> Cadeia de Conexão  
  Contate o administrador do banco de dados para obter informações sobre a conexão e as credenciais que devem ser usadas para se conectar à fonte de dados. O exemplo de cadeia de conexão a seguir especifica uma fonte de dados do [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] em um servidor usando uma porta 8000 e um XML do Analysis Services (XMLA) na Internet usando SOAP:  
   
 ```  
@@ -32,7 +32,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  Para ver mais exemplos de cadeias de conexão, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
-##  <a name="Credentials"></a> Credenciais  
+##  <a name="credentials"></a><a name="Credentials"></a> Credenciais  
  As credenciais são necessárias para executar consultas, visualizar o relatório localmente e visualizá-lo no servidor de relatório.  
   
  Após a publicação do relatório, talvez seja necessário alterar as credenciais da fonte de dados para que, quando o relatório for executado no servidor de relatório, as permissões recuperadas sejam válidas.  
@@ -40,7 +40,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
-##  <a name="Query"></a> Consultas  
+##  <a name="queries"></a><a name="Query"></a> Consultas  
  É possível usar o designer de consultas gráfico no modo de Design ou de Consulta para criar uma consulta MDX. Para isso, localize as estruturas de dados subjacentes na fonte de dados. Durante a criação, você pode executar uma consulta interativamente usando o designer de consultas para ver os resultados. A consulta criada define os campos do conjunto de dados. Durante a execução, os dados reais são retornados da fonte de dados. Use o designer de consultas gráficas para executar as seguintes ações:  
   
 -   No modo de Design, arraste dimensões, membros, propriedades de membros e imagens chave da fonte de dados para um painel Dados a fim de criar uma consulta de linguagem MDX. Arraste os membros calculados do painel Membros Calculados até o painel Dados para definir campos adicionais para o conjunto de dados.  
@@ -52,7 +52,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  Para obter mais informações sobre como trabalhar com esse designer de consulta, consulte [Interface do usuário do Designer de Consulta do SAP NetWeaver BI &#40;Construtor de Relatórios&#41;](https://msdn.microsoft.com/library/8edda06d-1608-498b-bd50-10905e54f6ce).  
   
   
-##  <a name="Extended"></a> Propriedades de campo estendidas  
+##  <a name="extended-field-properties"></a><a name="Extended"></a> Propriedades de campo estendidas  
  A fonte de dados do [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] dá suporte a propriedades de campo estendidas. As propriedades de campo estendidas são propriedades adicionais a **Value** e **IsMissing** definidas para um campo de conjunto de dados pela extensão do processamento de dados. As propriedades estendidas incluem propriedades predefinidas e propriedades personalizadas. As propriedades predefinidas são propriedades comuns para várias fontes de dados. As propriedades personalizadas são exclusivas para cada fonte de dados.  
   
 ### <a name="working-with-field-properties"></a>Trabalhando com propriedades de campo  
@@ -94,13 +94,13 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  Para obter mais informações sobre como usar campos e propriedades de campo em uma expressão, consulte [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
   
-##  <a name="Remarks"></a> Comentários  
+##  <a name="remarks"></a><a name="Remarks"></a> Comentários  
  Nem todos os modos de entrega de relatório são suportados por esse provedor de dados. Não há suporte para a entrega de relatórios através de assinaturas controladas por dados para essa extensão de processamento de dados. Para obter mais informações, consulte [Usar uma fonte de dados externa para obter dados de assinante &#40;Assinatura controlada por dados&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
  Para obter mais informações, consulte [Usando o Reporting Services do SQL Server 2008 com o SAP NetWeaver Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=167352).  
   
   
-##  <a name="HowTo"></a> Tópicos de instruções  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Tópicos de instruções  
  Esta seção contém instruções passo a passo para trabalhar com conexões de dados, fontes de dados e conjuntos de dados.  
   
  [Adicionar e verificar uma conexão de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -110,7 +110,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [Adicionar um filtro a um conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> Seções relacionadas  
+##  <a name="related-sections"></a><a name="Related"></a> Seções relacionadas  
  Estas seções da documentação fornecem informações conceituais detalhadas sobre dados de relatório, bem como informações de procedimentos sobre como definir, personalizar e usar partes de um relatório relacionadas aos dados.  
   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

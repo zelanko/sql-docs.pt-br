@@ -16,10 +16,10 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2654fba3904788e1eefa2aaa17d4defbad4039a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082631"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>O que é o SQL Server Reporting Services (SSRS)?
@@ -63,7 +63,7 @@ Essa carga de trabalho principal de BI ainda existe hoje, por isso, nós a moder
 * Atualizamos todos os estilos padrão e paletas de cores, portanto, por padrão você cria relatórios com um novo estilo moderno minimalista.
 * Atualizamos o painel Parâmetro, portanto você pode organizar os parâmetros da maneira que desejar.
 * Você pode exportar para novos formatos, como o PowerPoint. As visualizações do Reporting Services no PowerPoint são dinâmicas e editáveis e não apenas capturas de tela.
-* Você pode criar uma experiência híbrida do Power BI/Reporting Services:  em vez de recriar seus relatórios do Reporting Services localmente no Power BI, você pode fixar elementos visuais desses relatórios nos painéis do Power BI. E então, você pode monitorar tudo em um único lugar no seu painel do Power BI.
+* Você pode criar uma experiência híbrida do Power BI/Reporting Services: em vez de recriar seus relatórios do Reporting Services localmente no Power BI, você pode fixar visuais desses relatórios nos painéis do Power BI. E então, você pode monitorar tudo em um único lugar no seu painel do Power BI.
 
 ## <a name="mobile-reports"></a>Relatórios móveis
 
@@ -83,7 +83,7 @@ Conforme você cria visualizações, o Publicador de Relatórios Móveis gera au
 
 Para os usuários finais do Reporting Services de modo nativo, a porta da frente é um portal da Web moderno que pode ser exibido na maioria dos navegadores. Acesse todos os KPIs e relatórios móveis e paginados do Reporting Services no novo portal. Os KPIs podem expor as principais métricas de negócios em um relance no navegador, sem precisar abrir um relatório.
 
-O novo portal da Web é uma reformulação completa do Gerenciador de Relatórios. Agora, é um aplicativo de página única, com base em padrões HTML5, para os quais os navegadores modernos são otimizados: Microsoft Edge, Internet Explorer 10 e 11, Chrome, Firefox, Safari e todos os principais navegadores.
+O novo portal da Web é uma reformulação completa do Gerenciador de Relatórios. Agora é um aplicativo de página única com base em padrões HTML5, para os quais os navegadores modernos estão otimizados: Microsoft Edge, Internet Explorer 10 e 11, Chrome, Firefox, Safari e todos os principais navegadores.
 
 O conteúdo no portal da Web é organizado por tipo:
 
