@@ -9,12 +9,11 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-feedback_product_url: https://feedback.azure.com/forums/927307-sql-server-big-data-clusters/
-ms.openlocfilehash: 69281b0708b2603f232481a5661da111d1b0aae9
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77903759"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>O que são [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
@@ -78,7 +77,7 @@ O gerenciamento e o monitoramento são fornecidos por meio de uma combinação d
 - Capacidade de criar, abrir e executar notebooks compatíveis com Jupyter.
 - Assistente de virtualização de dados para simplificar a criação de fontes de dados externas (habilitadas pela **Extensão de Virtualização de Dados**).
 
-## <a id="architecture"></a> Arquitetura
+## <a name="architecture"></a><a id="architecture"></a> Arquitetura
 
 Um cluster de Big Data do SQL Server é um cluster de contêineres Linux orquestrados pelo [Kubernetes](https://kubernetes.io/docs/concepts/).
 
@@ -101,15 +100,15 @@ O diagrama a seguir mostra os componentes de um cluster de Big Data para o SQL S
 
 ![Visão geral da arquitetura](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
-### <a id="controlplane"></a> Controlador
+### <a name="controller"></a><a id="controlplane"></a> Controlador
 
 O controlador fornece gerenciamento e segurança para o cluster. Ele contém o serviço de controle, o repositório de configurações e outros serviços no nível do cluster, como Kibana, Grafana e Pesquisa Elástica.
 
-### <a id="computeplane"></a> Pool de computação
+### <a name="compute-pool"></a><a id="computeplane"></a> Pool de computação
 
 O pool de computação fornece recursos computacionais para o cluster. Ele contém nós que executam pods do SQL Server em Linux. Os pods no pool de computação são divididos em *instâncias de computação do SQL* para tarefas de processamento específicas. 
 
-### <a id="dataplane"></a> Pool de dados
+### <a name="data-pool"></a><a id="dataplane"></a> Pool de dados
 
 O pool de dados é usado para persistência e cache de dados. O pool de dados é composto por um ou mais pods em execução no SQL Server em Linux. Ele é usado para ingerir dados de consultas SQL ou de trabalhos do Spark. Data marts do cluster de Big Data do SQL Server são persistidos no pool de dados. 
 

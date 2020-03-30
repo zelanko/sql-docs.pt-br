@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70978593"
 ---
 # <a name="expressions-transact-sql"></a>Expressões (Transact-SQL)
@@ -117,7 +117,7 @@ ms.locfileid: "70978593"
   
  A ordenação de qualquer expressão avaliada como uma cadeia de caracteres é definida seguindo as regras de precedência de ordenação. Para obter mais informações, consulte [Precedência de ordenação &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
- Em uma linguagem de programação como C ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], uma expressão sempre é avaliada como um só resultado. Expressões em uma lista selecionada [!INCLUDE[tsql](../../includes/tsql-md.md)] seguem uma variação nesta regra: A expressão é avaliada individualmente para cada linha no conjunto de resultados. Uma única expressão pode ter um valor diferente em cada linha do conjunto de resultados, mas cada linha tem apenas um valor para a expressão. Por exemplo, na seguinte instrução `SELECT`, as referências a `ProductID` e ao termo `1+2` na lista de seleção são expressões:  
+ Em uma linguagem de programação como C ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], uma expressão sempre é avaliada como um só resultado. As expressões em uma lista de seleção [!INCLUDE[tsql](../../includes/tsql-md.md)] seguem uma variação nessa regra: a expressão é avaliada individualmente para cada linha no conjunto de resultados. Uma única expressão pode ter um valor diferente em cada linha do conjunto de resultados, mas cada linha tem apenas um valor para a expressão. Por exemplo, na seguinte instrução `SELECT`, as referências a `ProductID` e ao termo `1+2` na lista de seleção são expressões:  
   
 ```  
 USE AdventureWorks2012;  

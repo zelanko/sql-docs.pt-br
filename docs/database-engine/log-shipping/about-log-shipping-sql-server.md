@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68057915"
 ---
 # <a name="about-log-shipping-sql-server"></a>Sobre o envio de logs (SQL Server)
@@ -50,7 +50,7 @@ ms.locfileid: "68057915"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Benefícios  
+##  <a name="benefits"></a><a name="Benefits"></a> Benefícios  
   
 -   Fornece uma solução de recuperação de desastres para um único banco de dados primário e um ou mais bancos de dados secundários, cada um em uma instância separada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68057915"
   
 -   Permite um atraso especificado pelo usuário entre o momento em que o servidor primário faz backup do log do banco de dados primário e quando os servidores secundários devem restaurar (aplicar) o backup do log. Um atraso mais longo pode ser útil, por exemplo, se dados forem alterados acidentalmente no banco de dados primário. Se a alteração acidental for notada rapidamente, um atraso pode permitir que você recupere dados ainda inalterados de um banco de dados secundário, antes que a alteração seja refletida lá.  
   
-##  <a name="TermsAndDefinitions"></a> Termos e definições  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Termos e definições  
  servidor primário  
  A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é seu servidor de produção.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68057915"
 > [!TIP]  
 >  Para cada alerta, você precisa especificar um número de alerta. Além disso, configure o alerta para notificar um operador quando um alerta for gerado.  
   
-##  <a name="ComponentsAndConcepts"></a> Visão geral do envio de log  
+##  <a name="log-shipping-overview"></a><a name="ComponentsAndConcepts"></a> Visão geral do envio de log  
  O envio de logs engloba três operações:  
   
 1.  Backup do log de transações da instância do servidor primário.  
@@ -128,7 +128,7 @@ ms.locfileid: "68057915"
   
  ![Configuração mostrando trabalhos de backup, cópia e restauração](../../database-engine/log-shipping/media/ls-typical-configuration.gif "Configuração mostrando trabalhos de backup, cópia e restauração")  
   
-##  <a name="Interoperability"></a> Interoperabilidade  
+##  <a name="interoperability"></a><a name="Interoperability"></a> Interoperabilidade  
  O envio de logs pode ser usado com os seguintes recursos ou componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [Pré-requisitos para migrar de envio de logs para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
@@ -140,7 +140,7 @@ ms.locfileid: "68057915"
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] e o espelhamento de banco de dados são mutuamente exclusivos. Um banco de dados que é configurado para um desses recursos não pode ser configurado para o outro.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Atualizando o envio de logs para o SQL Server 2016 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121594"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transações (SQL Data Warehouse)
@@ -99,7 +99,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="locking-behavior"></a>Comportamento de bloqueio  
  O [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] usa o bloqueio para garantir a integridade das transações e manter a consistência dos bancos de dados quando vários usuários estão acessando os dados ao mesmo tempo. O bloqueio é usado por transações implícitas e explícitas. Cada transação solicita bloqueios de diferentes tipos de recursos, como tabelas ou bancos de dados dos quais a transação depende. Todos os bloqueios do [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ocorrem no nível da tabela ou acima. Os bloqueios não permitem que outras transações modifiquem os recursos de uma maneira que causaria problemas para a transação que solicita o bloqueio. Cada transação libera seus bloqueios quando deixa de depender dos recursos bloqueados. As transações explícitas mantêm os bloqueios até que a transação seja concluída, como confirmada ou revertida.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-an-explicit-transaction"></a>a. Usando uma transação explícita  
   

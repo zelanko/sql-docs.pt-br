@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325508"
 ---
 # <a name="create-indexed-views"></a>Criar exibições indexadas
@@ -31,7 +31,7 @@ ms.locfileid: "75325508"
 
 Este artigo descreve como criar índices em uma exibição. O primeiro índice criado em uma exibição deve ser um índice clusterizado exclusivo. Depois que o índice clusterizado exclusivo for criado, você poderá criar mais índices não clusterizados. Criar um índice clusterizado exclusivo em uma exibição melhora o desempenho da consulta porque a exibição é armazenada no banco de dados da mesma forma que uma tabela com um índice clusterizado é armazenada. O otimizador de consulta pode usar exibições indexadas para acelerar a execução da consulta. A exibição não precisa estar referenciada na consulta para o otimizador considerá-la para uma substituição.
 
-## <a name="BeforeYouBegin"></a> Antes de começar
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar
 
 As seguintes etapas são necessárias para criar uma exibição indexada e são essenciais para o êxito da implementação da exibição indexada:
 
@@ -47,7 +47,7 @@ As seguintes etapas são necessárias para criar uma exibição indexada e são 
 >
 > <sup>1</sup> Como as operações UPDATE, DELETE ou INSERT.
 
-### <a name="Restrictions"></a> Opções SET necessárias para exibições indexadas
+### <a name="required-set-options-for-indexed-views"></a><a name="Restrictions"></a> Opções SET necessárias para exibições indexadas
 
 A avaliação da mesma expressão poderá produzir resultados diferentes no [!INCLUDE[ssDE](../../includes/ssde-md.md)] quando houver diferentes opções SET ativas durante a execução da consulta. Por exemplo, depois que a opção SET `CONCAT_NULL_YIELDS_NULL` for definida como ON, a expressão `'abc' + NULL` retornará o valor `NULL`. Entretanto, depois que `CONCAT_NULL_YIELDS_NULL` for definida como OFF, a mesma expressão produzirá `'abc'`.
 
@@ -131,13 +131,13 @@ Além das opções SET e dos requisitos de função determinística, os seguinte
 > [!IMPORTANT]
 > As exibições indexadas não são compatíveis sobre consultas temporais (consultas que usam a cláusula `FOR SYSTEM_TIME`).
 
-### <a name="Recommendations"></a> Recomendações
+### <a name="recommendations"></a><a name="Recommendations"></a> Recomendações
 
 Quando você referencia os literais de cadeia de caracteres **datetime** e **smalldatetime** em exibições indexadas, é recomendável converter explicitamente o literal para o tipo de data desejado, usando um estilo de formato de data determinístico. Para obter uma lista de estilos de formato de data determinísticos, veja [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Para obter mais informações sobre expressões determinísticas e não determinísticas, consulte a seção [Considerações](#nondeterministic) nesta página.
 
 Quando você executa DML (como `UPDATE`, `DELETE` ou `INSERT`) em uma tabela referenciada por um grande número de exibições indexadas ou menos exibições indexadas, mas muito complexas, essas exibições indexadas também terão que ser atualizadas durante a execução da DML. Como resultado, o desempenho da consulta DML poderá diminuir significativamente ou, em alguns casos, um plano de consulta nem mesmo poderá ser produzido. Nesses cenários, teste suas consultas DML antes do uso em produção, analise o plano de consulta e ajuste/simplifique a instrução DML.
 
-### <a name="Considerations"></a> Considerações
+### <a name="considerations"></a><a name="Considerations"></a> Considerações
 
 A configuração da opção **large_value_types_out_of_row** de colunas em uma exibição indexada é herdada da configuração da coluna correspondente na tabela base. Esse valor é definido usando [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). A configuração padrão para colunas formadas de expressões é 0. Isso significa que tipos de valor grandes são armazenados na linha.
 
@@ -151,13 +151,13 @@ Todos os índices em uma exibição são descartados quando a exibição é desc
 
 <a name="nondeterministic"></a> Expressões que envolvem a conversão implícita de cadeias de caracteres em **datetime** ou **smalldatetime** são consideradas não determinísticas. Para obter mais informações, confira [Conversão não determinística de cadeias de caracteres de data literal em valores de DATA](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
 
-### <a name="Security"></a> Segurança
+### <a name="security"></a><a name="Security"></a> Segurança
 
-#### <a name="Permissions"></a> Permissões
+#### <a name="permissions"></a><a name="Permissions"></a> Permissões
 
 Requer a permissão **CREATE VIEW** no banco de dados e a permissão **ALTER** no esquema no qual a exibição está sendo criada.
 
-## <a name="TsqlProcedure"></a> Usando o Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL
 
 ### <a name="to-create-an-indexed-view"></a>Para criar uma exibição indexada
 

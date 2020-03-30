@@ -17,10 +17,10 @@ helpviewer_keywords:
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
 ms.openlocfilehash: 613e3eddce55fbc52cd011f5070def12d31d83b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76037177"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>O que é o SSMS (SQL Server Management Studio)?
@@ -37,7 +37,7 @@ ms.locfileid: "76037177"
 
 ## <a name="sql-server-management-studio-components"></a>Componentes do SQL Server Management Studio  
   
-|Descrição|Componente|  
+|DESCRIÇÃO|Componente|  
 |---------------|---------|  
 |Use o **Pesquisador de Objetos** para exibir e gerenciar todos os objetos em uma ou mais instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Pesquisador de Objetos](../ssms/object/object-explorer.md)|  
 |Como usar o **Gerenciador de Modelos** para criar e gerenciar arquivos de texto de boilerplate que você usa para acelerar o desenvolvimento de consultas e scripts.|[Explorador de Modelos](../ssms/template/template-explorer.md)|  

@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73844546"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Selecionar linhas para migrar usando uma função de filtro (Stretch Database)
@@ -197,7 +197,7 @@ ALTER TABLE SensorTelemetry
   )
 ```
   
-## <a name="addafterwiz"></a>Adicionar uma função de filtro após a execução do Assistente  
+## <a name="add-a-filter-function-after-running-the-wizard"></a><a name="addafterwiz"></a>Adicionar uma função de filtro após a execução do Assistente  
   
 Se você quiser usar uma função que não pode criar o Assistente **Habilitar o banco de dados para Stretch** , você pode executar a instrução **ALTER TABLE** para especificar uma função depois que sair do assistente. Antes de aplicar uma função, no entanto, você precisa interromper a migração de dados que já está em andamento e trazer os dados migrados de volta. (Para obter mais informações sobre por que isso é necessário, consulte [Substituir uma função de filtro existente](#replacePredicate).)
   
@@ -492,7 +492,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
   
  Se a função retornar um resultado não vazio para a linha, a linha será qualificada para ser migrada.  
   
-## <a name="replacePredicate"></a>Substituir uma função de filtro existente  
+## <a name="replace-an-existing-filter-function"></a><a name="replacePredicate"></a>Substituir uma função de filtro existente  
  Você pode substituir uma função de filtro especificado anteriormente executando a instrução **ALTER TABLE** novamente e especificando um novo valor para o parâmetro **FILTER_PREDICATE** . Por exemplo:  
   
 ```sql  

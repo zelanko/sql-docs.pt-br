@@ -23,10 +23,10 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e8838c92e2af7ca79ad1aa69972e46be0a1f64c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287430"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importar e exportar dados com o Assistente de Importação e Exportação do SQL Server
@@ -45,7 +45,7 @@ Se você desejar executar o assistente, mas não tiver o [!INCLUDE[msCoName](../
     \- ou \-
 -   **Veja um exemplo.** Para obter uma visão rápida das várias telas exibidas em uma sessão típica, dê uma olhada neste exemplo simples em uma única página – [Introdução a este exemplo simples do Assistente de Importação e Exportação](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).  
 
-##  <a name="wizardSources"></a> Quais origens e destinos posso usar?  
+##  <a name="what-sources-and-destinations-can-i-use"></a><a name="wizardSources"></a> Quais origens e destinos posso usar?  
  O Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode copiar dados entre as fontes de dados listadas na tabela a seguir. Para se conectar a algumas dessas fontes de dados, talvez você precise baixar e instalar arquivos adicionais.
  
 | Fonte de dados | É necessário baixar outros arquivos? |
@@ -87,7 +87,7 @@ Para obter informações sobre como se conectar a uma fonte de dados que não es
 > [!TIP]
 > Pressione a tecla F1 em qualquer caixa de diálogo ou página do assistente para ver a documentação da página atual.   
   
-##  <a name="wizardSSIS"></a> O assistente usa o SSIS (SQL Server Integration Services)  
+##  <a name="the-wizard-uses-sql-server-integration-services-ssis"></a><a name="wizardSSIS"></a> O assistente usa o SSIS (SQL Server Integration Services)  
  O Assistente usa o SSIS (SQL Server Integration Services) para copiar os dados. O SSIS é uma ferramenta para extrair, transformar e carregar dados (ETL). As páginas do assistente usam parte da linguagem do SSIS.
   
  No SSIS, a unidade básica é o **pacote**. O assistente cria um pacote do SSIS na memória ao percorrer as páginas do assistente e especificar as opções.    

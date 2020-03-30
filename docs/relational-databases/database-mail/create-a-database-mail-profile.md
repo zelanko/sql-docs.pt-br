@@ -15,10 +15,10 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 09b3759af6fc956d83daee464b5120fa80462dcf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72278315"
 ---
 # <a name="create-a-database-mail-profile"></a>Criar um perfil do Database Mail
@@ -31,18 +31,18 @@ ms.locfileid: "72278315"
   
 -   **Para criar um perfil público do Database Mail usando:**  [Assistente de Configuração do Database Mail](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Crie uma ou mais contas do Database Mail para o perfil. Para obter mais informações sobre como criar o Database Mail, veja [Criar uma conta do Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  Um perfil público permite a qualquer usuário acessar o banco de dados **msdb** para enviar emails usando o perfil. Um perfil particular pode ser usado por um usuário ou por uma função. Conceder a funções o acesso a perfis cria uma arquitetura de mais fácil manutenção. Para enviar emails, você deve ser membro da função **DatabaseMailUserRole** no banco de dados **msdb** e ter acesso a pelo menos um perfil do Database Mail.  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  O usuário que cria as contas de perfis e executa procedimentos armazenados deve ser membro da função de servidor fixa sysadmin.  
   
-##  <a name="SSMSProcedure"></a> Usando o assistente para configuração do Database Mail  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="SSMSProcedure"></a> Usando o assistente para configuração do Database Mail  
  **Para criar um perfil do Database Mail**  
   
 -   No Pesquisador de Objetos, conecte-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usada para configurar o Database Mail e expanda a árvore de servidores.  
@@ -85,7 +85,7 @@ ms.locfileid: "72278315"
   
 ## <a name="using-transact-sql"></a>Usando o Transact-SQL  
   
-###  <a name="PrivateProfile"></a> Para criar um perfil privado do Database Mail  
+###  <a name="to-create-a-database-mail-private-profile"></a><a name="PrivateProfile"></a> Para criar um perfil privado do Database Mail  
   
 -   Conecte à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -153,7 +153,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
     @is_default = 1 ;  
 ```  
   
-###  <a name="PublicProfile"></a> Para criar um perfil público do Database Mail  
+###  <a name="to-create-a-database-mail-public-profile"></a><a name="PublicProfile"></a> Para criar um perfil público do Database Mail  
   
 -   Conecte à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

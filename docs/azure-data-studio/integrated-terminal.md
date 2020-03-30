@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67959532"
 ---
 # <a name="integrated-terminal"></a>Terminal Integrado
@@ -87,7 +87,7 @@ Você pode personalizar a fonte de terminal integrado e a altura da linha com as
 * `terminal.integrated.fontSize`
 * `terminal.integrated.lineHeight`
 
-## <a id="key-bindings"></a>Associações de chave de terminal
+## <a name="terminal-key-bindings"></a><a id="key-bindings"></a>Associações de chave de terminal
 
 O comando **Exibir: alternar Terminal Integrado** está associado a **CTRL+'** para alternar rapidamente o painel do terminal integrado para dentro e fora da exibição.
 

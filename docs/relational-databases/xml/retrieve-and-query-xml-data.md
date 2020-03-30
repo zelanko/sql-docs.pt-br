@@ -14,17 +14,17 @@ ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fd1505bbbfc03308cbdbf6a5fc9fba122c4da24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67995272"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperar e consultar dados XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve as opções de consulta que você tem que especificar para consultar dados XML. Também descreve as partes de instâncias XML que não são preservadas quando são armazenadas em bancos de dados.  
   
-##  <a name="features"></a> Recursos de uma Instância XML que não são preservados  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> Recursos de uma Instância XML que não são preservados  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] preserva o conteúdo da instância XML, mas não preserva aspectos da instância XML que não são considerados significativos no modelo de dados XML. Isso significa que uma instância XML recuperada pode não ser idêntica à instância que foi armazenada no servidor, mas conterá as mesmas informações.  
   
 ### <a name="xml-declaration"></a>Declaração XML  
@@ -87,7 +87,7 @@ GO
 ```  
   
   
-##  <a name="query"></a> A configuração solicitou opções de consulta  
+##  <a name="setting-required-query-options"></a><a name="query"></a> A configuração solicitou opções de consulta  
  Ao consultar variáveis ou colunas do tipo **xml** usando métodos de tipo de dados **xml** , as seguintes opções devem ser definidas conforme mostrado.  
   
 |Opções SET|Valores necessários|  

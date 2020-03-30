@@ -11,10 +11,10 @@ ms.assetid: 8997ab61-e948-4d54-8d32-fc080d55525c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: caf214fa7055bb0e8000f52f5db43c4f76e48e1b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993105"
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
@@ -33,7 +33,7 @@ bool PDOStatement::closeCursor();
 true se bem-sucedido; caso contrário, false.  
   
 ## <a name="remarks"></a>Comentários  
-closeCursor tem efeito quando a opção de conexão MultipleActiveResultSets está definida como false.  Para obter mais informações sobre a opção de conexão MultipleActiveResultSets, confira [Como: desabilitar MARS (conjuntos de resultados ativos múltiplos)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).  
+closeCursor tem efeito quando a opção de conexão MultipleActiveResultSets está definida como false.  Para obter mais informações sobre a opção de conexão MultipleActiveResultSets, veja [Como desabilitar MARS (vários conjuntos de resultados ativos)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).  
   
 Em vez de chamar closeCursor, você pode apenas definir o identificador de instrução como nulo.  
   

@@ -12,15 +12,15 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: e6b25e14ebc6f757239046987e338d941c3fbbd8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75304942"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>Propriedades do SQL Server Integration Services (guia Serviço)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Use a guia **Serviço**na caixa de diálogo **Propriedades** do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para exibir ou especificar as opções a seguir.  
+  Use a guia **Serviço**na caixa de diálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Propriedades**do** para exibir ou especificar as opções a seguir.  
   
 ## <a name="options"></a>Opções  
  **Caminho Binário**  
@@ -47,7 +47,7 @@ ms.locfileid: "75304942"
  **Modo Inicial**  
  Defina este serviço com as seguintes opções:  
   
--   Manual: Esse serviço não é iniciado automaticamente na inicialização do computador. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
+-   Manual: este serviço não é iniciado automaticamente na inicialização do computador. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
   
 -   Automático: este serviço tenta ser iniciado na inicialização do computador.  
   

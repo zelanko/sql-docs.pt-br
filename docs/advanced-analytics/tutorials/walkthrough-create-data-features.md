@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 67d2c0bf73e24bc3f70e94cd6cf7ce94d13e5297
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73723862"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Criar recursos de dados usando R e SQL Server (passo a passo)
@@ -31,7 +31,7 @@ Nesta etapa, aprenda dois métodos diferentes de criar um recurso com base nos d
 
 A meta é criar um novo conjunto de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que inclua as colunas originais mais o novo recurso numérico, *direct_distance*.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Esta etapa pressupõe uma sessão do R em andamento com base nas etapas anteriores neste passo a passos. Ela usa as cadeias de conexão e os objetos de fonte de dados criados nessas etapas. As seguintes ferramentas e pacotes são usados para executar o script.
 

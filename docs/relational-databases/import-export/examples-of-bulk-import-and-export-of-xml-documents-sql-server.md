@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401581"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemplos de importação e exportação em massa de documentos XML (SQL Server)
@@ -61,7 +61,7 @@ Para obter mais informações, consulte os tópicos a seguir.
   
 -  [E. Exportação em massa de dados XML](#bulk_export_xml_data)  
   
-## <a name="binary_byte_stream"></a>Importação em massa de dados XML como um fluxo de bytes binários  
+## <a name="bulk-importing-xml-data-as-a-binary-byte-stream"></a><a name="binary_byte_stream"></a>Importação em massa de dados XML como um fluxo de bytes binários  
  Ao importar dados XML em massa de um arquivo que contém uma declaração de codificação que você deseja aplicar, especifique a opção SINGLE_BLOB na cláusula OPENROWSET (BULK…). A opção SINGLE_BLOB assegura que o analisador XML no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importe os dados de acordo com o esquema de codificação especificado na declaração XML.  
   
 #### <a name="sample-table"></a>Tabela de exemplo  
@@ -108,7 +108,7 @@ SELECT * FROM OPENROWSET(
   
  [&#91;Início&#93;](#top)  
   
-##  <a name="existing_row"></a> Importação em massa de dados XML em uma linha existente  
+##  <a name="bulk-importing-xml-data-in-an-existing-row"></a><a name="existing_row"></a> Importação em massa de dados XML em uma linha existente  
  Este exemplo usa o provedor de conjunto de linhas em massa `OPENROWSET` para adicionar uma instância XML a uma linha ou linhas existentes na tabela de exemplo `T`.  
   
 > [!NOTE]  
@@ -143,7 +143,7 @@ GO
   
  [&#91;Início&#93;](#top)  
   
-## <a name="file_contains_dtd"></a> Importação em massa de dados XML de um arquivo que contém um DTD  
+## <a name="bulk-importing-xml-data-from-a-file-that-contains-a-dtd"></a><a name="file_contains_dtd"></a> Importação em massa de dados XML de um arquivo que contém um DTD  
   
 > [!IMPORTANT]  
 >  Recomendamos não habilitar o suporte a definições do tipo de documento (DTDs, Document Type Definitions) se não for necessário em seu ambiente XML. Ativar o suporte a DTD aumenta a área da superfície atacável de seu servidor e pode expô-lo a um ataque de negação de serviço. Caso seja necessário habilitar o suporte a DTD, você pode reduzir esse risco de segurança processando somente documentos XML confiáveis.  
@@ -189,7 +189,7 @@ INSERT T1
   
  [&#91;Início&#93;](#top)  
   
-## <a name="field_terminator_in_format_file"></a> Especificação do terminador de campo que usa explicitamente um arquivo de formato  
+## <a name="specifying-the-field-terminator-explicitly-using-a-format-file"></a><a name="field_terminator_in_format_file"></a> Especificação do terminador de campo que usa explicitamente um arquivo de formato  
  O exemplo abaixo mostra como importar em massa o seguinte documento XML, `Xmltable.dat`.  
   
 #### <a name="sample-data-file"></a>Arquivo de dados de exemplo  
@@ -252,7 +252,7 @@ GO
   
  [&#91;Início&#93;](#top)  
   
-## <a name="bulk_export_xml_data"></a> Exportação em massa de dados XML  
+## <a name="bulk-exporting-xml-data"></a><a name="bulk_export_xml_data"></a> Exportação em massa de dados XML  
  O exemplo abaixo usa o [bcp](../../tools/bcp-utility.md) para exportar dados XML em massa da tabela criada no exemplo anterior usando o mesmo arquivo de formato XML. No comando `bcp` abaixo, `<server_name>` e `<instance_name>` representam espaços reservados que devem ser substituídos com os valores apropriados:  
   
 ```cmd

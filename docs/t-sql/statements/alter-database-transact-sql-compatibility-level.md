@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288660"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nível de compatibilidade de ALTER DATABASE (Transact-SQL)
@@ -121,7 +121,7 @@ Para obter o fluxo de trabalho recomendado para atualizar o nível de compatibil
 ## <a name="compatibility-levels-and-stored-procedures"></a>Níveis de compatibilidade e procedimentos armazenados
 Quando um procedimento armazenado é executado, ele usa o nível de compatibilidade atual do banco de dados no qual está definido. Quando a configuração de compatibilidade de um banco de dados é alterada, todos os seus procedimentos armazenados são recompilados automaticamente conforme necessário.
 
-## <a name="backwardCompat"></a> Usar o nível de compatibilidade para compatibilidade com versões anteriores
+## <a name="using-compatibility-level-for-backward-compatibility"></a><a name="backwardCompat"></a> Usar o nível de compatibilidade para compatibilidade com versões anteriores
 A configuração [Nível de Compatibilidade do Banco de Dados](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) oferece compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com relação ao [!INCLUDE[tsql](../../includes/tsql-md.md)] e comportamentos de otimização de consulta apenas para o banco de dados especificado, não para todo o servidor.  
 
 Começando com o modo de compatibilidade 130, qualquer plano de consulta novo que afete correções e recursos foi adicionado intencionalmente apenas ao novo nível de compatibilidade. Isso foi feito para minimizar o risco durante as atualizações que surge da degradação do desempenho devido a alterações no plano de consulta potencialmente introduzidas pelos novos comportamentos de otimização de consulta.      

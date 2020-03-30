@@ -17,10 +17,10 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1c3ccadbe443ca555e5386ea3d3434405ae97461
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291476"
 ---
 # <a name="dqs-cleansing-transformation"></a>Transformação de Limpeza DQS
@@ -74,13 +74,13 @@ ms.locfileid: "71291476"
   
 -   [Definir as opções na caixa de diálogo Gerenciador de Conexões de Limpeza DQS.](#manager)  
   
-###  <a name="open"></a> Abra o Editor de Transformação de Limpeza DQS.  
+###  <a name="open-the-dqs-cleansing-transformation-editor"></a><a name="open"></a> Abra o Editor de Transformação de Limpeza DQS.  
   
 1.  Adicione a Transformação de Limpeza DQS ao pacote do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
 2.  Clique com o botão direito do mouse no componente e clique em **Editar**.  
   
-###  <a name="connection"></a> Definir as opções na guia de Gerenciador de Conexões  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Definir as opções na guia de Gerenciador de Conexões  
  **Gerenciador de conexões de qualidade de dados**  
  Selecione um gerenciador de conexões DQS existente na lista ou crie uma nova conexão clicando em **Novo**.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "71291476"
   
 -   **Redirecionar Linha**, que indica que os dados de entrada não estão inseridos no banco de dados do Data Quality Services e são redirecionados para a saída do erro.  
   
-###  <a name="mapping"></a> Definir as opções na guia Mapeamento  
+###  <a name="set-options-on-the-mapping-tab"></a><a name="mapping"></a> Definir as opções na guia Mapeamento  
  Para obter mais informações sobre como mapear colunas para domínios compostos, consulte [Map Columns to Composite Domains](../../../integration-services/data-flow/transformations/map-columns-to-composite-domains.md).  
   
  **Colunas de Entrada Disponíveis**  
@@ -134,7 +134,7 @@ ms.locfileid: "71291476"
  **Alias de status**  
  Lista a coluna que contém informações de status para os dados corrigidos. Clique no campo para modificar o nome da coluna.  
   
-###  <a name="advanced"></a> Definir as opções na guia Avançado  
+###  <a name="set-options-on-the-advanced-tab"></a><a name="advanced"></a> Definir as opções na guia Avançado  
  **Padronizar saída**  
  Indique se é preciso produzir os dados no formato padronizado com base no formato de saída definido para domínios. Para obter mais informações sobre o formato padronizado, consulte [Limpeza de dados](../../../data-quality-services/data-cleansing.md).  
   
@@ -150,7 +150,7 @@ ms.locfileid: "71291476"
  **Esquema de dados acrescentado**  
  Indique se é preciso produzir o esquema de dados. Para obter mais informações, consulte [Anexar domínio ou domínio composto para dados de referência](../../../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
-###  <a name="manager"></a> Definir as opções na caixa de diálogo Gerenciador de Conexões de Limpeza DQS.  
+###  <a name="set-the-options-in-the-dqs-cleansing-connection-manager-dialog-box"></a><a name="manager"></a> Definir as opções na caixa de diálogo Gerenciador de Conexões de Limpeza DQS.  
  **Nome do servidor**  
  Selecione ou digite o nome do servidor DQS ao qual você deseja se conectar. Para obter mais informações sobre o servidor, consulte [DQS Administration](../../../data-quality-services/dqs-administration.md).  
   

@@ -16,10 +16,10 @@ ms.assetid: e329de08-7624-4cf6-9da7-350584e87011
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 47a1bccc2e47d0ef8265554374c8ea492e704373
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972654"
 ---
 # <a name="setstring-method-sqlserverclob"></a>Método setString (SQLServerClob)
@@ -29,7 +29,7 @@ ms.locfileid: "67972654"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[setString (long, java.lang.String)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string.md)|Grava a cadeia de caracteresfornecida no CLOB, começando na posição fornecida.|  
 |[setString (long, java.lang.String, int, int)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int.md)|Grava a cadeia de caracteres fornecida no CLOB, começando na posição fornecida e com base no deslocamento e comprimento fornecidos.|  

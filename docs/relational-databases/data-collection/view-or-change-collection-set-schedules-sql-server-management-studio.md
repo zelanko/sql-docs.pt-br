@@ -19,10 +19,10 @@ ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055327"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Exibir ou alterar agendas de conjuntos de coleta (SQL Server Management Studio)
@@ -99,7 +99,7 @@ ms.locfileid: "74055327"
   
 6.  Clique em **OK** para salvar as alterações e fechar a caixa de diálogo **Propriedades do Conjunto de Coleta de Dados** .  
   
-####  <a name="CollectionSet"></a> Caixa de diálogo Propriedades de Conjunto de Coleta de Dados  
+####  <a name="data-collection-set-properties-dialog-box"></a><a name="CollectionSet"></a> Caixa de diálogo Propriedades de Conjunto de Coleta de Dados  
  **Página Geral**  
   
  Use esta página para configurar o modo como os dados devem ser coletados e carregados, para configurar cronogramas e configurar períodos de retenção de dados no data warehouse de gerenciamento. Esta página fornece também informações sobre conjuntos de coleta, como tipos de coletor e frequências de coleta, além de parâmetros de entrada usados em um conjunto de coleta.  

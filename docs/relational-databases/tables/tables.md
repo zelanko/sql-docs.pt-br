@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b59f204fafd7e1b912eea2673783290f67fa786
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287740"
 ---
 # <a name="tables"></a>Tabelas
@@ -44,7 +44,7 @@ As tabelas particionadas são aquelas cujos dados são divididos horizontalmente
 As tabelas temporárias são armazenadas em **tempdb**. Há dois tipos de tabelas temporárias: local e global. Elas diferem uma da outra pelo nome, visibilidade e disponibilidade. As tabelas temporárias locais têm um único sinal numérico (#) como primeiro caractere no nome; elas são visíveis somente na conexão atual para o usuário e são excluídas quando o usuário se desconecta da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As tabelas temporárias globais têm dois sinais numéricos (##) como primeiros caracteres no nome; elas são visíveis a qualquer usuário após serem criadas e são excluídas quando todos os usuários que consultam a tabela se desconectam da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 
-#### <a name="ctp23"></a> Recompilações reduzidas para cargas de trabalho usando tabelas temporárias em vários escopos
+#### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes"></a><a name="ctp23"></a> Recompilações reduzidas para cargas de trabalho usando tabelas temporárias em vários escopos
 
 [!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] em todos os níveis de compatibilidade do banco de dados reduz recompilações para cargas de trabalho usando tabelas temporárias em vários escopos. Esse recurso também está habilitado no Banco de Dados SQL do Azure em nível de compatibilidade do banco de dados 150 para todos os modelos de implantação.  Antes desse recurso, ao fazer referência a uma tabela temporária com uma instrução DML (linguagem de manipulação de dados) (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), se a tabela temporária tivesse sido criada por um lote de escopo externo, isso resultaria em uma recompilação da instrução DML cada vez que ela fosse executada. Com essa melhoria, o SQL Server executa verificações adicionais leves para evitar recompilações desnecessárias:
 

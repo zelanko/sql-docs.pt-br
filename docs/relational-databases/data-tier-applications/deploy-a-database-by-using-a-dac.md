@@ -20,25 +20,25 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1fae39a6cd0fcd61b18419f8e46786067a4a69dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134806"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implantar um banco de dados usando um DAC
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Use o Assistente **Implantar Banco de Dados no SQL Azure** para implantar um banco de dados entre uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e um servidor [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] ou entre dois servidores [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
-##  <a name="BeforeBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeBegin"></a> Antes de começar  
  O assistente usa um arquivo morto BACPAC DAC (aplicativo da camada de dados) para implantar os dados e as definições dos objetos de banco de dados. Ele executa uma operação de exportação de DAC do banco de dados de origem, e uma importação de DAC para o destino.  
   
-###  <a name="DBOptSettings"></a> Opções e configurações de banco de dados  
+###  <a name="database-options-and-settings"></a><a name="DBOptSettings"></a> Opções e configurações de banco de dados  
  Por padrão, o banco de dados criado durante a implantação terá todas as configurações padrão da instrução CREATE DATABASE. A exceção é que a ordenação e o nível de compatibilidade do banco de dados estão definidos como valores do banco de dados de origem.  
   
  As opções de banco de dados, como TRUSTWORTHY, DB_CHAINING e HONOR_BROKER_PRIORITY, não podem ser ajustadas como parte do processo de implantação. Propriedades físicas, como o número de grupos de arquivos ou os números e os tamanhos de arquivos, não podem ser alteradas como parte do processo de implantação. Após a conclusão da implantação, você pode usar a instrução ALTER DATABASE, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell para personalizar o banco de dados.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições  
  O assistente para **Implantar Banco de Dados** oferece suporte à implantação de um banco de dados:  
   
 -   De uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para o [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "68134806"
   
  Uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve estar executando o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior para funcionar com o assistente. Se um banco de dados em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] contiver objetos sem suporte no [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], você não poderá usar o assistente para implantar o banco de dados no [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Se um banco de dados no [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] contiver objetos sem suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você não poderá usar o assistente para implantar o banco de dados nas instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  Para melhorar a segurança, os logons de Autenticação do SQL Server são armazenados em um arquivo BACPAC DAC sem senha. Quando o arquivo BACPAC é importado, o logon é criado como um logon desabilitado com uma senha gerada. Para habilitar os logons, faça logon usando um logon que tenha a permissão de ALTER ANY LOGIN e use ALTER LOGIN para habilitar o logon e atribuir uma nova senha que possa ser comunicada ao usuário. Isso não é necessário para logons de Autenticação do Windows porque suas senhas não são gerenciadas pelo SQL Server.  
   
 #### <a name="permissions"></a>Permissões  
@@ -59,7 +59,7 @@ ms.locfileid: "68134806"
   
  O assistente requer permissões de importação de DAC no servidor ou na instância de destino. O logon deve ser um membro das funções de servidor fixas **sysadmin** ou **serveradmin** , ou da função de servidor fixa **dbcreator** e ter as permissões ALTER ANY LOGIN. A conta interna do administrador de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chamada **sa** também pode importar um DAC. A importação de um DAC com logons no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] exige associação nas funções loginmanager ou serveradmin. A importação de um DAC sem logons no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] exige a associação nas funções dbmanager ou serveradmin.  
   
-##  <a name="UsingDeployDACWizard"></a> Usando o Assistente para Implantar Banco de Dados  
+##  <a name="using-the-deploy-database-wizard"></a><a name="UsingDeployDACWizard"></a> Usando o Assistente para Implantar Banco de Dados  
  **Para migrar um banco de dados usando o Assistente para Implantar Banco de dados**  
   
 1.  Conecte-se ao local do banco de dados que você deseja implantar. Você pode especificar uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou um servidor [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] .  
@@ -82,7 +82,7 @@ ms.locfileid: "68134806"
     
     -   [Resultados](#Results)  
   
-##  <a name="Introduction"></a> Página de Introdução  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Página de Introdução  
  Esta página descreve as etapas do Assistente para **Implantar Banco de Dados** .  
   
  **Opções**  
@@ -93,7 +93,7 @@ ms.locfileid: "68134806"
   
 -   **Cancelar** – cancela a operação e fecha o Assistente.  
   
-##  <a name="Deployment_settings"></a> Página de configurações de implantação  
+##  <a name="deployment-settings-page"></a><a name="Deployment_settings"></a> Página de configurações de implantação  
  Use esta página para especificar o servidor de destino e fornecer detalhes sobre seu novo banco de dados.  
   
  **Host local:**  
@@ -112,13 +112,13 @@ ms.locfileid: "68134806"
   
 -   Especifique um diretório local para o arquivo temporário, que é o arquivo morto BACPAC. Observe que o arquivo será criado no local especificado e permanecerá lá depois que a operação for concluída.  
   
-##  <a name="Summary"></a> Página de Resumo  
+##  <a name="summary-page"></a><a name="Summary"></a> Página de Resumo  
  Use esta página para analisar a origem especificada e as configurações de destino para a operação. Para concluir a operação de implantação usando as configurações especificadas, clique em **Concluir**. Para cancelar a operação de implantação e sair do Assistente, clique em **Cancelar**.  
   
-##  <a name="Progress"></a> Página Progresso  
+##  <a name="progress-page"></a><a name="Progress"></a> Página Progresso  
  Esta página exibe a barra de progresso que indica o status da operação. Para exibir o status detalhado, clique na opção **Exibir detalhes** .  
   
-##  <a name="Results"></a> Página Resultados  
+##  <a name="results-page"></a><a name="Results"></a> Página Resultados  
  Esta página reporta o êxito ou falha da operação de implantação, mostrando os resultados de cada ação. Todas as ações que encontrarem um erro terão um link na coluna **Resultado** . Clique no link para exibir um relatório do erro para essa ação.  
   
  Clique em **Concluir** para fechar o Assistente.  

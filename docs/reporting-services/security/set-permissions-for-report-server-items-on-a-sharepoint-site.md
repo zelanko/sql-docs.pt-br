@@ -12,10 +12,10 @@ ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8bdd50291a009189bf894300cdea4633fdd952f0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570617"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>Definir permissões para itens do servidor de relatório em um site do SharePoint

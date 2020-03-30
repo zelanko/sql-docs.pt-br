@@ -42,10 +42,10 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d4046228f4b0d37e72949f9bc87eac13786e6bba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291129"
 ---
 # <a name="transformation-custom-properties"></a>Propriedades personalizadas da transformação
@@ -76,7 +76,7 @@ ms.locfileid: "71291129"
 ### <a name="transformations-without-custom-properties"></a>Transformações sem propriedades personalizadas  
  As transformações a seguir não têm nenhuma propriedade personalizada nos níveis do componente, da entrada ou da saída: [Transformação Mesclar](../../../integration-services/data-flow/transformations/merge-transformation.md), [Transformação Difusão Seletiva](../../../integration-services/data-flow/transformations/multicast-transformation.md), e [Transformação Unir Tudo](../../../integration-services/data-flow/transformations/union-all-transformation.md). Somente as propriedades comuns a todos os componentes de fluxo de dados são usadas.  
   
-##  <a name="aggregate"></a> Propriedades personalizadas da transformação Agregação  
+##  <a name="aggregate-transformation-custom-properties"></a><a name="aggregate"></a> Propriedades personalizadas da transformação Agregação  
  A transformação Agregação tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Agregação. Todas as propriedades são de leitura/gravação.  
@@ -111,7 +111,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Aggregate Transformation](../../../integration-services/data-flow/transformations/aggregate-transformation.md).  
   
-##  <a name="audit"></a> Propriedades personalizadas da transformação Auditoria  
+##  <a name="audit-transformation-custom-properties"></a><a name="audit"></a> Propriedades personalizadas da transformação Auditoria  
  A transformação Auditoria só tem as propriedades comuns a todos os componentes de fluxo de dados no nível do componente.  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Auditoria. Todas as propriedades são de leitura/gravação.  
@@ -124,7 +124,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Audit Transformation](../../../integration-services/data-flow/transformations/audit-transformation.md).  
   
-##  <a name="cachetransform"></a> Propriedades personalizadas da transformação Cache  
+##  <a name="cache-transform-transformation-custom-properties"></a><a name="cachetransform"></a> Propriedades personalizadas da transformação Cache  
  A transformação Cache tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades da transformação Cache. Todas as propriedades são de leitura/gravação.  
@@ -137,7 +137,7 @@ ms.locfileid: "71291129"
 |InputColumns|String|Lista das colunas de entrada selecionadas.|  
 |CacheColumnName|String|Especifica o nome da coluna mapeada para uma coluna de entrada selecionada.<br /><br /> É necessário que o nome da coluna na propriedade CacheColumnName corresponda ao nome da coluna correspondente listada na página **Colunas** do **Editor do Gerenciador de Conexões do Cache**.<br /><br /> Para obter mais informações, consulte [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).|  
   
-##  <a name="charmap"></a> Propriedades personalizadas da transformação Mapa de Caracteres  
+##  <a name="character-map-transformation-custom-properties"></a><a name="charmap"></a> Propriedades personalizadas da transformação Mapa de Caracteres  
  A transformação Mapa de Caracteres só tem as propriedades comuns a todos os componentes de fluxo de dados no nível do componente.  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Mapa de Caracteres. Todas as propriedades são de leitura/gravação.  
@@ -151,7 +151,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Character Map Transformation](../../../integration-services/data-flow/transformations/character-map-transformation.md).  
   
-##  <a name="condsplit"></a> Propriedades personalizadas da transformação Divisão Condicional  
+##  <a name="conditional-split-transformation-custom-properties"></a><a name="condsplit"></a> Propriedades personalizadas da transformação Divisão Condicional  
  A transformação Divisão Condicional só tem as propriedades comuns a todos os componentes de fluxo de dados no nível do componente.  
   
  A tabela a seguir descreve as propriedades personalizadas da saída da transformação Divisão Condicional. Todas as propriedades são de leitura/gravação.  
@@ -167,7 +167,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md).  
   
-##  <a name="copymap"></a> Propriedades personalizadas da transformação Copiar Coluna  
+##  <a name="copy-column-transformation-custom-properties"></a><a name="copymap"></a> Propriedades personalizadas da transformação Copiar Coluna  
  A transformação Copiar Coluna só tem as propriedades comuns a todos os componentes de fluxo de dados no nível do componente.  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Copiar Coluna. Todas as propriedades são de leitura/gravação.  
@@ -180,7 +180,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Copy Column Transformation](../../../integration-services/data-flow/transformations/copy-column-transformation.md).  
   
-##  <a name="dataconv"></a> Propriedades personalizadas da transformação Conversão de Dados  
+##  <a name="data-conversion-transformation-custom-properties"></a><a name="dataconv"></a> Propriedades personalizadas da transformação Conversão de Dados  
  A transformação Conversão de Dados só tem as propriedades comuns a todos os componentes de fluxo de dados no nível do componente.  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Conversão de Dados. Todas as propriedades são de leitura/gravação.  
@@ -194,7 +194,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
   
-##  <a name="dmquery"></a> Propriedades personalizadas da transformação Consulta de Mineração de Dados  
+##  <a name="data-mining-query-transformation-custom-properties"></a><a name="dmquery"></a> Propriedades personalizadas da transformação Consulta de Mineração de Dados  
  A transformação Consulta de Mineração de Dados tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Consulta de Mineração de Dados. Todas as propriedades são de leitura/gravação.  
@@ -213,7 +213,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Data Mining Query Transformation](../../../integration-services/data-flow/transformations/data-mining-query-transformation.md).  
   
-##  <a name="derived"></a> Propriedades personalizadas da transformação Coluna Derivada  
+##  <a name="derived-column-transformation-custom-properties"></a><a name="derived"></a> Propriedades personalizadas da transformação Coluna Derivada  
  A transformação Coluna Derivada só tem as propriedades comuns a todos os componentes de fluxo de dados no nível do componente.  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada e das colunas de saída da transformação Coluna Derivada. Quando você opta por adicionar a coluna derivada como uma coluna nova, essas propriedades personalizadas se aplicam à nova coluna de saída; quando você opta por substituir o conteúdo de uma coluna de entrada existente com os resultados derivados, essas propriedades personalizadas se aplicam à coluna de entrada existente. Todas as propriedades são de leitura/gravação.  
@@ -227,7 +227,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Derived Column Transformation](../../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
-##  <a name="extract"></a> Propriedades personalizadas da transformação Exportar Coluna  
+##  <a name="export-column-transformation-custom-properties"></a><a name="extract"></a> Propriedades personalizadas da transformação Exportar Coluna  
  A transformação Exportar Coluna só tem as propriedades comuns a todos os componentes de fluxo de dados no nível do componente.  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada da transformação Exportar Coluna. Todas as propriedades são de leitura/gravação.  
@@ -243,7 +243,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Export Column Transformation](../../../integration-services/data-flow/transformations/export-column-transformation.md).  
   
-##  <a name="insert"></a> Propriedades personalizadas da transformação Importar Coluna  
+##  <a name="import-column-transformation-custom-properties"></a><a name="insert"></a> Propriedades personalizadas da transformação Importar Coluna  
  A transformação Importar Coluna só tem as propriedades comuns a todos os componentes de fluxo de dados no nível do componente.  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada da transformação Importar Coluna. Todas as propriedades são de leitura/gravação.  
@@ -257,7 +257,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Import Column Transformation](../../../integration-services/data-flow/transformations/import-column-transformation.md).  
   
-##  <a name="fgroup"></a> Propriedades personalizadas da transformação Agrupamento Difuso  
+##  <a name="fuzzy-grouping-transformation-custom-properties"></a><a name="fgroup"></a> Propriedades personalizadas da transformação Agrupamento Difuso  
  A transformação Agrupamento Difuso tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Agrupamento Difuso. Todas as propriedades são de leitura/gravação.  
@@ -290,7 +290,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md).  
   
-##  <a name="flookup"></a> Propriedades personalizadas da transformação Pesquisa Difusa  
+##  <a name="fuzzy-lookup-transformation-custom-properties"></a><a name="flookup"></a> Propriedades personalizadas da transformação Pesquisa Difusa  
  A transformação Pesquisa Difusa tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Pesquisa Difusa. Todas as propriedades, exceto **ReferenceMetadataXML** , são de leitura/gravação.  
@@ -335,7 +335,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md).  
   
-##  <a name="lookup"></a> Propriedades personalizadas da transformação Pesquisa  
+##  <a name="lookup-transformation-custom-properties"></a><a name="lookup"></a> Propriedades personalizadas da transformação Pesquisa  
  A transformação Pesquisa tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Pesquisa. Todas as propriedades, exceto **ReferenceMetadataXML** , são de leitura/gravação.  
@@ -369,7 +369,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
-##  <a name="mjoin"></a> Propriedades personalizadas da transformação Mesclar Junção  
+##  <a name="merge-join-transformation-custom-properties"></a><a name="mjoin"></a> Propriedades personalizadas da transformação Mesclar Junção  
  A transformação Mesclar Junção tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Mesclar Junção.  
@@ -391,7 +391,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Merge Join Transformation](../../../integration-services/data-flow/transformations/merge-join-transformation.md).  
   
-##  <a name="oledbcmd"></a> Propriedades personalizadas da transformação Comando OLE DB  
+##  <a name="ole-db-command-transformation-custom-properties"></a><a name="oledbcmd"></a> Propriedades personalizadas da transformação Comando OLE DB  
  A transformação Comando OLE DB tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Comando OLE DB.  
@@ -412,7 +412,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [OLE DB Command Transformation](../../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
   
-##  <a name="percent"></a> Propriedades personalizadas da transformação Amostragem Percentual  
+##  <a name="percentage-sampling-transformation-custom-properties"></a><a name="percent"></a> Propriedades personalizadas da transformação Amostragem Percentual  
  A transformação Amostragem Percentual tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Amostragem Percentual.  
@@ -432,7 +432,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Percentage Sampling Transformation](../../../integration-services/data-flow/transformations/percentage-sampling-transformation.md).  
   
-##  <a name="pivot"></a> Propriedades personalizadas da transformação Dinâmica  
+##  <a name="pivot-transformation-custom-properties"></a><a name="pivot"></a> Propriedades personalizadas da transformação Dinâmica  
  A tabela a seguir descreve as propriedades personalizadas dos componentes da transformação Dinâmica.  
   
 |Propriedade|Tipo de dados|Descrição|  
@@ -454,7 +454,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Pivot Transformation](../../../integration-services/data-flow/transformations/pivot-transformation.md).  
   
-##  <a name="rowcount"></a> Propriedades personalizadas da transformação Contagem de Linhas  
+##  <a name="row-count-transformation-custom-properties"></a><a name="rowcount"></a> Propriedades personalizadas da transformação Contagem de Linhas  
  A transformação Contagem de Linhas tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Contagem de Linhas. Todas as propriedades são de leitura/gravação.  
@@ -467,7 +467,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Row Count Transformation](../../../integration-services/data-flow/transformations/row-count-transformation.md).  
   
-##  <a name="rowsamp"></a> Propriedades personalizadas da transformação Amostragem de Linhas  
+##  <a name="row-sampling-transformation-custom-properties"></a><a name="rowsamp"></a> Propriedades personalizadas da transformação Amostragem de Linhas  
  A transformação Amostragem de Linhas tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Amostragem de Linhas. Todas as propriedades são de leitura/gravação.  
@@ -493,7 +493,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Row Sampling Transformation](../../../integration-services/data-flow/transformations/row-sampling-transformation.md).  
   
-##  <a name="script"></a> Propriedades personalizadas do Componente de Script  
+##  <a name="script-component-custom-properties"></a><a name="script"></a> Propriedades personalizadas do Componente de Script  
  O Componente de Script tem propriedades personalizadas e as propriedades comum a todos os componentes de fluxo de dados. As mesmas propriedades personalizadas ficarão disponíveis se o Componente de Script funcionar como uma fonte, transformação ou destino.  
   
  A tabela a seguir descreve as propriedades personalizadas do Componente de Script. Todas as propriedades são de leitura/gravação.  
@@ -507,7 +507,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Script Component](../../../integration-services/data-flow/transformations/script-component.md).  
   
-##  <a name="scd"></a> Propriedades personalizadas da transformação Dimensão de Alteração Lenta  
+##  <a name="slowly-changing-dimension-transformation-custom-properties"></a><a name="scd"></a> Propriedades personalizadas da transformação Dimensão de Alteração Lenta  
  A transformação Dimensão de Alteração Lenta tem propriedades personalizadas e as propriedades comum a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Dimensão de Alteração Lenta. Todas as propriedades são de leitura/gravação.  
@@ -533,7 +533,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  
   
-##  <a name="sort"></a> Propriedades personalizadas da transformação Classificar  
+##  <a name="sort-transformation-custom-properties"></a><a name="sort"></a> Propriedades personalizadas da transformação Classificar  
  A transformação Classificar tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Classificar. Todas as propriedades são de leitura/gravação.  
@@ -560,7 +560,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Sort Transformation](../../../integration-services/data-flow/transformations/sort-transformation.md).  
   
-##  <a name="textract"></a> Propriedades personalizadas da transformação Extração de Termos  
+##  <a name="term-extraction-transformation-custom-properties"></a><a name="textract"></a> Propriedades personalizadas da transformação Extração de Termos  
  A transformação Extração de Termos tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Extração de Termos. Todas as propriedades são de leitura/gravação.  
@@ -580,7 +580,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Term Extraction Transformation](../../../integration-services/data-flow/transformations/term-extraction-transformation.md).  
   
-##  <a name="tlookup"></a> Propriedades personalizadas da transformação Pesquisa de Termos  
+##  <a name="term-lookup-transformation-custom-properties"></a><a name="tlookup"></a> Propriedades personalizadas da transformação Pesquisa de Termos  
  A transformação Pesquisa de Termos tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Pesquisa de Termos. Todas as propriedades são de leitura/gravação.  
@@ -607,7 +607,7 @@ ms.locfileid: "71291129"
   
  Para obter mais informações, consulte [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md).  
   
-##  <a name="unpivot"></a> Propriedades personalizadas da transformação Não Dinâmica  
+##  <a name="unpivot-transformation-custom-properties"></a><a name="unpivot"></a> Propriedades personalizadas da transformação Não Dinâmica  
  A transformação Não Dinâmica só tem as propriedades comuns a todos os componentes de fluxo de dados no nível do componente.  
   
 > [!NOTE]  

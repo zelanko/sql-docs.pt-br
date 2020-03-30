@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial de T-SQL: Criar e consultar objetos de banco de dados | Microsoft Docs'
+title: 'Tutorial do T-SQL: criar e consultar objetos de banco de dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/30/2018
 ms.prod: sql
@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2bea423a9ea039dbc9f0128c7d6b6f106ee03fe
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198403"
 ---
-# <a name="lesson-1-create-and-query-database-objects"></a>Lição 1: Criar e consultar objetos de banco de dados
+# <a name="lesson-1-create-and-query-database-objects"></a>Lição 1: criar e consultar objetos de banco de dados
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Esta lição mostra como criar um banco de dados, criar uma tabela no banco de dados e, então, acessar e alterar os dados na tabela. Como esta lição é uma introdução ao uso de [!INCLUDE[tsql](../includes/tsql-md.md)], ela não usa nem descreve as várias opções disponíveis para essas instruções.  
@@ -34,13 +34,13 @@ O código é executado da mesma maneira no [!INCLUDE[ssDE](../includes/ssde-md.m
   
 Para executar [!INCLUDE[tsql](../includes/tsql-md.md)] instruções no [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], abra [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e conecte-se a uma instância de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 Para concluir este tutorial, você precisa de acesso ao SQL Server Management Studio e a uma instância do SQL Server. 
 
 - Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Se você não tiver uma instância de SQL Server, crie uma. Para criar uma, selecione a plataforma nos links a seguir. Se você escolher Autenticação do SQL, use suas credenciais de logon do SQL Server.
-- **Windows**: [Baixe o SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **Windows**: [baixe o SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - **macOS**: [baixe o SQL Server 2017 no Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 ## <a name="create-a-database"></a>Criar um banco de dados

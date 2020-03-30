@@ -15,10 +15,10 @@ ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68001791"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Usar o modo EXPLICIT com FOR XML
@@ -148,7 +148,7 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>Nesta seção  
  Os exemplos a seguir ilustram o uso do modo EXPLICIT.  
   
--   [Exemplo: Recuperando informações de funcionários](../../relational-databases/xml/example-retrieving-employee-information.md)  
+-   [Exemplo: recuperando informações de funcionários](../../relational-databases/xml/example-retrieving-employee-information.md)  
   
 -   [Exemplo: Especificando a diretiva ELEMENT](../../relational-databases/xml/example-specifying-the-element-directive.md)  
   
@@ -162,7 +162,7 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Exemplo: Especificando a diretiva HIDE](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   
--   [Exemplo: Especificando a diretiva ELEMENT e a codificação de entidade](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Exemplo: Especificando a diretiva ELEMENT e codificação de entidade](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
 -   [Exemplo: Especificando a diretiva CDATA](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
   

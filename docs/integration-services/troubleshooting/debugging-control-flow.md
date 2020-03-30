@@ -20,10 +20,10 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295128"
 ---
 # <a name="debugging-control-flow"></a>Depurando o fluxo de controle
@@ -118,7 +118,7 @@ ms.locfileid: "71295128"
 |Saída|Exibe mensagens de status dos recursos no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
 |Imediata|Usado para depurar e avaliar expressões e imprimir valores variáveis.|  
 
-## <a name="debug"></a> Depurar um pacote por meio da definição de pontos de interrupção em uma tarefa ou contêiner
+## <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a><a name="debug"></a> Depurar um pacote por meio da definição de pontos de interrupção em uma tarefa ou contêiner
   Este procedimento descreve como definir pontos de interrupção em um pacote, uma tarefa, um contêiner Loop For, um contêiner Loop Foreach ou um contêiner Sequência.  
   
 ### <a name="to-set-breakpoints-in-a-package-a-task-or-a-container"></a>Para definir pontos de interrupção em um pacote, uma tarefa ou um contêiner  

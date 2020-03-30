@@ -20,10 +20,10 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578040"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Assinaturas e entrega (Reporting Services)
@@ -71,21 +71,21 @@ ms.locfileid: "65578040"
   
 -   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
-##  <a name="bkmk_subscription_scenarios"></a> Cenários de assinatura e de entrega  
+##  <a name="subscription-and-delivery-scenarios"></a><a name="bkmk_subscription_scenarios"></a> Cenários de assinatura e de entrega  
  Para cada assinatura, você pode configurar opções de entrega, e as opções disponíveis são determinadas pela extensão de entrega escolhida. Uma extensão de entrega é um módulo que dá suporte a alguma maneira de distribuição. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui várias extensões de entrega. Também a extensão de entrega que pode estar disponível por outros fornecedores.  
   
  Se você for um desenvolvedor, poderá criar extensões de entrega personalizadas para oferecer suporte a mais cenários. Para obter mais informações, consulte [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md).  
   
  A tabela a seguir descreve os cenários comuns de assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-|Cenário|Descrição|  
+|Cenário|DESCRIÇÃO|  
 |--------------|-----------------|  
 |Relatórios de email|Relatórios de email a usuários individuais e grupos. Crie uma assinatura e especifique um alias de grupo ou de email para receber um relatório que queira distribuir. Você pode fazer com que o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] determine os dados da assinatura em tempo de execução. Se você quiser enviar o mesmo relatório a um grupo que tenha uma lista mutante de membros, poderá usar uma consulta para derivar a lista de assinaturas em tempo de execução.|  
 |Exibir os relatórios offline|Você pode selecionar um dos seguintes formatos para a saída de assinatura:<br /><br /> -   Arquivo XML com dados de relatório<br />-   CSV (delimitado por vírgulas)<br />-   PDF<br />-   MHTML (arquivo Web)<br />-   Microsoft Excel<br />-   Arquivo TIFF<br />-   Microsoft Word<br /><br /> Os relatórios que você deseja arquivar podem ser enviados diretamente a uma pasta compartilhada cujo backup é feito em uma agenda noturna. Relatórios grandes cujo carregamento é muito demorado em um navegador podem ser enviados a uma pasta compartilhada em um formato que pode ser exibido em um aplicativo de área de trabalho.|  
 |Cache pré-carregado|Se você tiver várias instâncias de um relatório com parâmetros ou um grande número de usuários de relatório que veem relatórios, será possível pré-carregar os relatórios no cache para reduzir o tempo de processamento necessário para exibição dos mesmos.|  
 |Relatórios voltados para dados|Use assinaturas controladas por dados para personalizar a saída do relatório, as opções de entrega e as configurações de parâmetro de relatório em tempo de execução. A assinatura usa uma consulta para obter valores de entrada de uma fonte de dados em tempo de execução. Você pode usar assinaturas controladas por dados para executar uma operação de mesclagem de email que envia um relatório para uma lista de assinantes determinada no momento em que a assinatura é processada.|  
   
-##  <a name="bkmk_standard_and_datadriven"></a> Assinaturas padrão e assinaturas controladas por dados  
+##  <a name="standard-and-data-driven-subscriptions"></a><a name="bkmk_standard_and_datadriven"></a> Assinaturas padrão e assinaturas controladas por dados  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte a dois tipos de assinatura: **padrão** e **controlada por dados**. Assinaturas padrão são criadas e gerenciadas por usuários individuais. Uma assinatura padrão consiste em valores estáticos que não podem ser variados durante o processamento da assinatura. Para cada assinatura padrão há exatamente um conjunto de opções de apresentação de relatório, opções de entrega e parâmetros de relatório.  
   
  Assinaturas controladas por dados obtêm informações de assinatura em tempo de execução consultando a fonte de dados externa que fornece valores usados para especificar um destinatário, parâmetros de relatório ou um formato do aplicativo. Você pode usar assinaturas controladas por dados se tiver uma lista de destinatários muito grande ou desejar variar a saída de relatório para cada destinatário. Para usar assinaturas controladas por dados, é necessário ter conhecimento especializado na criação de consultas e entender como os parâmetros são usados. Administradores de servidor de relatório geralmente criam e administram essas assinaturas. Para saber mais, consulte o seguinte:  
@@ -94,10 +94,10 @@ ms.locfileid: "65578040"
   
 -   [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
   
-##  <a name="bkmk_subscription_requirements"></a> Requisitos de assinatura  
+##  <a name="subscription-requirements"></a><a name="bkmk_subscription_requirements"></a> Requisitos de assinatura  
  Antes de criar uma assinatura para um relatório, os seguintes pré-requisitos devem ser cumpridos:  
   
-|Requisito|Descrição|  
+|Requisito|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |Permissões|Você deve ter acesso ao relatório. Antes de assinar um relatório, você deve ter permissão para exibi-lo.<br /><br /> Para servidores de relatório do modo Nativo, as atribuições de função a seguir afetam as assinaturas:<br /><br /> -   A tarefa “Gerenciar assinaturas individuais” permite que os usuários criem, modifiquem e excluam assinaturas para um relatório específico. Nas funções predefinidas, essa tarefa faz parte das funções Navegador e Construtor de Relatórios. As atribuições de função que incluem essa tarefa permitem que um usuário gerencie somente as assinaturas que ele cria.<br />-   A tarefa “Gerenciar todas as assinaturas” permite que os usuários acessem e modifiquem todas as assinaturas. Essa tarefa é obrigatória para criar assinaturas controladas por dados. Em funções predefinidas, a função Gerenciador de Conteúdo inclui essa tarefa.|  
 |Credenciais armazenadas|Para criar uma assinatura, o relatório deve usar credenciais armazenadas ou nenhuma credencial para recuperar dados em tempo de execução. Você não pode assinar um relatório que é configurado para usar as credenciais representadas ou delegadas do usuário atual para conectar-se a uma fonte de dados externa. As credenciais armazenadas podem ser uma conta do Windows ou uma conta de usuário de banco de dados. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> É necessário ter permissão para exibir o relatório e criar assinaturas individuais. É necessário habilitar**Eventos Agendados e Entrega de Relatórios** no servidor de relatórios. Para saber mais, consulte [old_Criar e gerenciar assinaturas de servidores de relatório no modo Nativo](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).|  
@@ -105,12 +105,12 @@ ms.locfileid: "65578040"
 |Nenhuma segurança do item de modelo|Não é possível assinar um relatório do Construtor de Relatórios que use um modelo como uma fonte de dados se o modelo contiver configurações de segurança do item de modelo. Somente relatórios que usam a segurança do item de modelo são incluídos nesta restrição.|  
 |Valores de parâmetro|Se o relatório usar parâmetros, um valor de parâmetro deverá ser especificado com o próprio relatório ou na assinatura definida. Se valores padrão forem definidos no relatório, você poderá definir o valor de parâmetro a ser usado como o padrão.|  
   
-##  <a name="bkmk_delivery_extensions"></a> Extensões de entrega  
+##  <a name="delivery-extensions"></a><a name="bkmk_delivery_extensions"></a> Extensões de entrega  
  As assinaturas são processadas no servidor de relatórios e são distribuídas através de extensões de entrega implantadas no servidor. Por padrão, é possível criar assinaturas que enviam relatórios para uma pasta compartilhada ou um endereço de email. Se o servidor de relatório for configurado para o modo integrado do SharePoint, também será possível enviar um relatório para uma biblioteca do SharePoint.  
   
  Quando cria uma assinatura, o usuário pode escolher uma das extensões de entrega disponíveis para determinar como o relatório será entregue. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui as seguintes extensões de entrega.  
   
-|Extensão de entrega|Descrição|  
+|Extensão de entrega|DESCRIÇÃO|  
 |------------------------|-----------------|  
 |Compartilhamento de Arquivos do Windows|Entrega um relatório como um arquivo de aplicativo estático para uma pasta compartilhada que pode ser acessada na rede.|  
 |Email|Entrega uma notificação ou um relatório como um anexo de email ou link de URL.|  
@@ -120,7 +120,7 @@ ms.locfileid: "65578040"
 > [!NOTE]  
 >  Entrega de relatório é uma parte extensível da arquitetura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Fornecedores de terceiros podem criar extensões de entrega personalizadas para rotear relatórios a locais ou dispositivos diferentes. Para obter mais informações sobre extensões de entrega personalizadas, consulte [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md).  
   
-##  <a name="bkmk_parts_of_subscription"></a> Partes de uma assinatura  
+##  <a name="parts-of-a-subscription"></a><a name="bkmk_parts_of_subscription"></a> Partes de uma assinatura  
  Uma definição de assinatura consiste nas seguintes partes:  
   
 -   Um ponteiro para um relatório que pode ser executado de modo autônomo (isto é, um relatório que usa credenciais armazenadas ou nenhuma credencial).  
@@ -139,7 +139,7 @@ ms.locfileid: "65578040"
   
  As informações de assinatura são armazenadas com relatórios individuais em um banco de dados do servidor de relatório. Você não pode gerenciar assinaturas separadamente do relatório com o qual estão associadas. Observe que as assinaturas não podem ser estendidas para incluir descrições, outros textos personalizados ou outros elementos. As assinaturas podem conter somente os itens listados anteriormente.  
   
-##  <a name="bkmk_subscription_processing"></a> Como as assinaturas são processadas  
+##  <a name="how-subscriptions-are-processed"></a><a name="bkmk_subscription_processing"></a> Como as assinaturas são processadas  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui um processador de agendamento e entrega, que fornece funcionalidade para o agendamento de relatórios e suas entregas aos usuários. O servidor de relatório responde a eventos monitorados continuamente. Quando o evento que corresponde às condições definidas para uma assinatura ocorre, o servidor de relatório lê a assinatura para determinar como processar e entregar o relatório. O servidor de relatório solicita a extensão de entrega que é especificada na assinatura. Após a execução da extensão de entrega, o servidor de relatório extrai informações de entrega da assinatura e as transmite à extensão de entrega para processamento.  
   
  A extensão de entrega renderiza o relatório no formato definido na assinatura e, em seguida, entrega o relatório ou a notificação ao destino especificado. Se não for possível entregar um relatório, uma entrada será registrada no arquivo de log do servidor de relatório. Se desejar oferecer suporte para operações de repetição, configure o servidor de relatório para tentar entregar novamente caso a primeira tentativa falhe.  
@@ -167,7 +167,7 @@ ms.locfileid: "65578040"
   
  Um evento de atualização de instantâneo usa a atualização agendada de um instantâneo de relatório para acionar uma assinatura. Você pode definir uma assinatura que é acionada sempre que o relatório é atualizado com novos dados, com base nas propriedades de execução definidas no relatório.  
   
-##  <a name="bkmk_code"></a> Controle programático de assinaturas  
+##  <a name="programmatic-control-of-subscriptions"></a><a name="bkmk_code"></a> Controle programático de assinaturas  
  O modelo de objeto [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permite que você audite e controle programaticamente as assinaturas e o processamento de assinaturas.  Veja a seguir alguns exemplos e uma introdução:  
   
 -   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  

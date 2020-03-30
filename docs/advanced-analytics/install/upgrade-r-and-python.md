@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69634547"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Atualizar componentes de aprendizado de máquina (R e Python) em instâncias do SQL Server
@@ -106,7 +106,7 @@ Resumidamente, as etapas para associação são as seguintes:
 
 Em termos de experiência do usuário, a tecnologia e a maneira como você trabalha com ela não mudaram. A única diferença é a presença de pacotes com versão mais recente e, possivelmente, pacotes adicionais que não estavam originalmente disponíveis por meio do SQL Server.
 
-## <a name="bkmk_BindWizard"></a>Associar-se ao MLS usando a Instalação
+## <a name="bind-to-mls-using-setup"></a><a name="bkmk_BindWizard"></a>Associar-se ao MLS usando a Instalação
 
 A Instalação do Microsoft Machine Learning detecta os recursos existentes e a versão do SQL Server e invoca um utilitário chamado SqlBindR.exe para alterar a associação. Internamente, o SqlBindR é encadeado na Instalação e usado indiretamente. Posteriormente, você pode chamar SqlBindR diretamente da linha de comando para exercer opções específicas.
 
@@ -210,7 +210,7 @@ As instruções a seguir explicam como inserir os arquivos para uma instalação
 
 1. Execute ServerSetup.exe e siga os prompts na tela para concluir a instalação.
 
-## <a name="bkmk_BindCmd"></a>Operações de linha de comando
+## <a name="command-line-operations"></a><a name="bkmk_BindCmd"></a>Operações de linha de comando
 
 Após executar o Microsoft Machine Learning Server, um utilitário de linha de comando chamado SqlBindR.exe fica disponível para você poder usar outras operações de associação. Por exemplo, se você decidir reverter uma associação, poderá executar novamente a Instalação ou usar o utilitário de linha de comando. Além disso, você pode usar essa ferramenta para verificar se há compatibilidade e disponibilidade da instância.
 
@@ -229,7 +229,7 @@ Após executar o Microsoft Machine Learning Server, um utilitário de linha de c
 
 4. Quando a atualização tiver sido concluída, reinicie o serviço Launchpad associado a qualquer instância que foi modificada.
 
-## <a name="bkmk_Unbind"></a>Reverter ou desassociar uma instância
+## <a name="revert-or-unbind-an-instance"></a><a name="bkmk_Unbind"></a>Reverter ou desassociar uma instância
 
 Você pode restaurar uma instância associada para uma instalação inicial dos componentes do R e do Python, estabelecida pela Instalação do SQL Server. Há três partes para reverter para os serviços do SQL Server.
 
@@ -243,7 +243,7 @@ Você pode restaurar uma instância associada para uma instalação inicial dos 
 
 Você tem duas opções para reverter a associação: executar novamente a instalação ou usar o utilitário de linha de comando do SqlBindR.
 
-#### <a name="bkmk_wizunbind"></a> Desassociar usando a Instalação
+#### <a name="unbind-using-setup"></a><a name="bkmk_wizunbind"></a> Desassociar usando a Instalação
 
 1. Localize o instalador para o Machine Learning Server. Se você tiver removido o instalador, talvez precise baixá-lo novamente ou copiá-lo de outro computador.
 2. Execute o instalador no computador que tem a instância que você deseja desassociar.
@@ -252,7 +252,7 @@ Você tem duas opções para reverter a associação: executar novamente a insta
 4. Aceite o contrato de licenciamento. Você deverá indicar sua aceitação dos termos de licenciamento mesmo quando estiver instalando.
 5. Clique em **Concluir**. O processo leva algum tempo.
 
-#### <a name="bkmk_cmdunbind"></a> Desassociar usando a linha de comando
+#### <a name="unbind-using-the-command-line"></a><a name="bkmk_cmdunbind"></a> Desassociar usando a linha de comando
 
 1. Abra um prompt de comando e navegue até a pasta que contém **sqlbindr.exe**, conforme descrito na seção anterior.
 

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 13c20f7fb8cd282251c734df1a4bb7b3adab3712
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909621"
 ---
 # <a name="shrink-a-database"></a>Reduzir um banco de dados
@@ -50,9 +50,9 @@ ms.locfileid: "72909621"
   
 -   **Acompanhamento:**  [depois de reduzir um banco de dados](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   O banco de dados não pode se tornar menor que o tamanho mínimo do banco de dados. O tamanho mínimo é aquele especificado na criação inicial do banco de dados ou o último tamanho explicitamente configurado por meio de uma operação de alteração de tamanho de arquivo, como DBCC SHRINKFILE. Por exemplo, se um banco de dados foi criado originalmente com um tamanho de 10 MB e atingir 100 MB, a menor redução desse banco de dados será de 10 MB, mesmo se todos os dados do banco de dados forem excluídos.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72909621"
   
 -   DBCC SHRINKDATABASE falhará quando encontrar um índices columnstore xVelocity de memória otimizada. O trabalho concluído antes de encontrar o índice de columnstore será bem-sucedido, de modo que o banco de dados talvez seja menor. Para concluir DBCC SHRINKDATABASE, desabilite todos os índices de columnstore antes de executar DBCC SHRINKDATABASE e recrie os índices de columnstore.  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Para visualizar a quantidade atual de espaço livre (não alocado) no banco de dados. Para obter mais informações, consulte [Exibir dados e informações de espaço de log para um banco de dados](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
   
@@ -74,12 +74,12 @@ ms.locfileid: "72909621"
   
     -   A menos que você tenha um requisito específico, não defina a opção de banco de dados AUTO_SHRINK como ON.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Exige associação à função de servidor fixa **sysadmin** ou à função de banco de dados fixa **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-shrink-a-database"></a>Para reduzir um banco de dados  
   
@@ -106,7 +106,7 @@ ms.locfileid: "72909621"
   
 4.  Clique em **OK**.  
 
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-shrink-a-database"></a>Para reduzir um banco de dados  
   
@@ -118,7 +118,7 @@ ms.locfileid: "72909621"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../relational-databases/databases/codesnippet/tsql/shrink-a-database_1.sql)]  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de reduzir um banco de dados  
+##  <a name="follow-up-after-you-shrink-a-database"></a><a name="FollowUp"></a> Acompanhamento: depois de reduzir um banco de dados  
  Os dados movidos para reduzir um arquivo podem ser espalhados para qualquer local disponível no arquivo. Isso provoca uma fragmentação do índice e pode reduzir a velocidade do desempenho de consultas que pesquisam um intervalo do índice. Para eliminar a fragmentação, considere a recompilação dos índices no arquivo após a redução.  
   
 ## <a name="see-also"></a>Consulte Também  

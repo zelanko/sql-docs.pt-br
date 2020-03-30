@@ -11,10 +11,10 @@ ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 273a03e088036057f6d7b31c98074391138de07e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027910"
 ---
 # <a name="managing-result-sets-with-the-jdbc-driver"></a>Gerenciando conjuntos de resultados com o JDBC Driver
@@ -32,7 +32,7 @@ ms.locfileid: "69027910"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Noções básicas sobre tipos de cursor](../../connect/jdbc/understanding-cursor-types.md)|Descreve os tipos diferentes de cursor compatíveis com o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].|  
 |[Entendendo o controle de simultaneidade](../../connect/jdbc/understanding-concurrency-control.md)|Descreve como o driver JDBC dá suporte ao controle de simultaneidade.|  

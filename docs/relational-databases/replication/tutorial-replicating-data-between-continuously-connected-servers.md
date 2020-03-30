@@ -16,10 +16,10 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 603846718e4e21c7af8ee81d94210d12242c35c7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321923"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Configurar a replicação entre dois servidores totalmente conectados (transacional)
@@ -38,7 +38,7 @@ Neste tutorial, você aprenderá a:
 > * Validar a assinatura e a latência da medida.
   
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 Este tutorial é destinado a usuários que estão familiarizados com operações básicas de banco de dados, mas que possuem pouca experiência com replicação. Antes de iniciar este tutorial, você deve concluir o [Tutorial: Preparar o SQL Server para replicação](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Para concluir este tutorial, são necessários o SQL Server, o SSMS (SQL Server Management Studio) e um banco de dados do AdventureWorks:  

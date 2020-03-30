@@ -11,10 +11,10 @@ ms.assetid: 9ee3cff7-a422-4805-8516-a8d9d1eb2731
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ccdaa6df027edd9dac3243dffc420898543f9632
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955158"
 ---
 # <a name="datetimeoffset-members"></a>Membros DateTimeOffset
@@ -30,7 +30,7 @@ ms.locfileid: "67955158"
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[compareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|Compara este objeto **DateTimeOffset** com outro objeto **DateTimeOffset** com base no tempo em GMT dele.|  
 |[equals](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|Compara este objeto **DateTimeOffset** com outro **Object**.|  

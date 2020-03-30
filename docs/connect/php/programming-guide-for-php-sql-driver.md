@@ -11,10 +11,10 @@ ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9470b5e4a9e7283930a38c393a4117333fb0fb08
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992933"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Guia de programação para o Microsoft Drivers para PHP para SQL Server
@@ -24,7 +24,7 @@ Esta seção contém tópicos que o ajudarão a desenvolver aplicativos com os [
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |---------|---------------|  
 |[Conectando-se ao servidor](../../connect/php/connecting-to-the-server.md)|Descreve as opções e os procedimentos para se conectar ao SQL Server.|  
 |[Comparando funções de execução](../../connect/php/comparing-execution-functions.md)|Compara as funções usadas para executar uma consulta examinando diferentes casos de uso para cada uma. Especificamente, este documento compara a execução de uma única consulta com a execução de uma consulta preparada várias vezes.|  

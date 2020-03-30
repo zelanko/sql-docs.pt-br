@@ -20,19 +20,19 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 62d63c65ce1fae63fa9453a0dc37ddc134a87012
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287990"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Criar funções definidas pelo usuário (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   Este tópico descreve como criar uma UDF (função definida pelo usuário) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Funções definidas pelo usuário não podem ser usadas para executar ações que modificam o estado do banco de dados.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "79287990"
   
     -   `SEND`  
   
-###  <a name="Security"></a> Permissões 
+###  <a name="permissions"></a><a name="Security"></a> Permissões 
 
 Requer a permissão `CREATE FUNCTION` no banco de dados e a permissão `ALTER` no esquema no qual a função está sendo criada. Se a função especificar um tipo definido pelo usuário, a permissão `EXECUTE` será exigida no tipo.  
   
-##  <a name="Scalar"></a> Funções escalares  
+##  <a name="scalar-functions"></a><a name="Scalar"></a> Funções escalares  
  O exemplo a seguir cria uma **função escalar (UDF escalar)** de várias instruções no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. A função pega um valor de entrada, um `ProductID`, e retorna um único valor de dados, a quantidade agregada do produto especificado no estoque.  
   
 ```sql  
@@ -104,7 +104,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 > [!NOTE]  
 > Para obter mais informações e exemplos de funções escalares, confira [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md). 
 
-##  <a name="TVF"></a> Funções com valor de tabela  
+##  <a name="table-valued-functions"></a><a name="TVF"></a> Funções com valor de tabela  
 O exemplo a seguir cria uma **TVF (função com valor de tabela) embutida** no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. A função pega um parâmetro de entrada, um ID cliente (loja), e retorna as colunas `ProductID`, `Name`e a agregação das vendas do ano, até a data atual, como `YTD Total` para cada produto vendido para a loja.  
   
 ```sql  

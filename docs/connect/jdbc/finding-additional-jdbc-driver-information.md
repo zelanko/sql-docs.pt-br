@@ -11,10 +11,10 @@ ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75047e8c2ea7589247e0c32c7a4710eb6a6e7dbc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028196"
 ---
 # <a name="finding-additional-jdbc-driver-information"></a>Localizando informações adicionais do JDBC Driver
@@ -25,7 +25,7 @@ ms.locfileid: "69028196"
   
 ## <a name="remarks"></a>Comentários  
   
-|Recurso|Descrição|  
+|Recurso|DESCRIÇÃO|  
 |--------------|-----------------|  
 |[Repositório GitHub do JDBC Driver para SQL Server](https://github.com/microsoft/mssql-jdbc)|Esse repositório contém o código-fonte para o JDBC Driver para SQL Server. Use esse site para interagir diretamente com membros da equipe do JDBC Driver. Aqui você pode arquivar problemas, fornecer comentários e contribuir diretamente para o driver.|
 |[Central de Desenvolvedores de Armazenamento e Acesso a Dados](https://go.microsoft.com/fwlink?linkid=4173)|Este site fornece documentação, artigos técnicos, código de exemplo e outros recursos para todas as tecnologias de acesso a dados na [!INCLUDE[msCoName](../../includes/msconame_md.md)].|  

@@ -16,10 +16,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: 1d865d3ea2893f255155ee03c229731eed9d48a8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307701"
 ---
 # <a name="index-element-dta"></a>Elemento de índice (DTA)
@@ -42,7 +42,7 @@ Contém informações sobre um índice que você quer criar ou descartar para um
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|Atributo de índice|Tipo de dados|Descrição|  
+|Atributo de índice|Tipo de dados|DESCRIÇÃO|  
 |---------------------|---------------|-----------------|  
 |**Clusterizado**|**booleano**|Opcional. Especifica um índice clusterizado. Defina como "verdadeiro" ou "falso". Por exemplo:<br /><br /> `<Index Clustered="true">`<br /><br /> Por padrão, esse atributo é definido como "falso".|  
 |**Exclusivo**|**booleano**|Opcional. Especifica um índice exclusivo. Defina como "verdadeiro" ou "falso". Por exemplo:<br /><br /> `<Index Unique="true">`<br /><br /> Por padrão, esse atributo é definido como "falso".|  
@@ -59,7 +59,7 @@ Contém informações sobre um índice que você quer criar ou descartar para um
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  

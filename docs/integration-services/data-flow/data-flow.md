@@ -18,10 +18,10 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b252a53acd98a0c5b445166ffcf3fa4328dd646f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293149"
 ---
 # <a name="data-flow"></a>Fluxo de Dados
@@ -101,7 +101,7 @@ ms.locfileid: "71293149"
 ### <a name="sources-available-for-download"></a>Fontes disponíveis para download  
  A tabela a seguir lista mais tipos de fontes que podem ser baixadas do site da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|Fonte|Descrição|  
+|Fonte|DESCRIÇÃO|  
 |------------|-----------------|  
 |Fonte Oracle|A fonte Oracle é o componente de fonte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui um gerenciador de conexões e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
 |Fonte SAP BI|A fonte SAP BI é o componente de fonte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI também inclui um gerenciador de conexões e um destino. Para obter mais informações, consulte a página de download [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).|  
@@ -112,7 +112,7 @@ ms.locfileid: "71293149"
 ## <a name="transformations"></a>Transformações  
  A capacidade das transformações varia amplamente. As transformações podem executar tarefas como atualizar, resumir, limpar, mesclar e distribuir dados. É possível modificar valores em colunas, pesquisar valores em tabelas, limpar dados e agregar valores de colunas.  
   
- As entradas e saídas de uma transformação definem as colunas de dados de entrada e de saída. Dependendo da operação executada nos dados, algumas transformações têm uma única entrada e várias saídas, enquanto outras têm várias entradas e uma única saída. As transformações também podem incluir saídas de erro, que fornecem informações sobre o erro ocorrido, juntamente com os dados com falha: por exemplo, os dados String que não puderam ser convertidos em um tipo de dados Integer. O modelo de objeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não restringe o número de entradas, de saídas regulares e de saídas de erro que as transformações podem conter. Você pode criar transformações personalizadas que implementam qualquer combinação de várias entradas, saídas regulares e saídas de erro.  
+ As entradas e saídas de uma transformação definem as colunas de dados de entrada e de saída. Dependendo da operação executada nos dados, algumas transformações têm uma única entrada e várias saídas, enquanto outras têm várias entradas e uma única saída. As transformações também podem incluir saídas de erro, que fornecem informações sobre o erro ocorrido, juntamente com os dados com falha: por exemplo, os dados de cadeia de caracteres que não puderam ser convertidos em um tipo de dados inteiro. O modelo de objeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não restringe o número de entradas, de saídas regulares e de saídas de erro que as transformações podem conter. Você pode criar transformações personalizadas que implementam qualquer combinação de várias entradas, saídas regulares e saídas de erro.  
   
  A entrada de uma transformação é definida como uma ou mais colunas de entrada. Algumas transformações do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] também podem fazer referência a colunas externas como entrada. Por exemplo, a entrada da transformação Comando OLE DB inclui colunas externas. Uma coluna de saída é uma coluna que a transformação adiciona ao fluxo de dados. Saídas regulares e saídas de erro contêm colunas de saída. Essas colunas de saída, por sua vez, agem como colunas de entrada para o próximo componente do fluxo de dados, seja outra transformação ou um destino.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "71293149"
 ### <a name="destinations-available-for-download"></a>Destinos disponíveis para download  
  A tabela a seguir lista mais tipos de destinos que podem ser baixados do site da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|Fonte|Descrição|  
+|Fonte|DESCRIÇÃO|  
 |------------|-----------------|  
 |Destino Oracle|O destino Oracle é o componente de destino do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui um gerenciador de conexões e uma fonte. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
 |Destino SAP BI|O destino SAP BI é o componente de destino do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI também inclui um gerenciador de conexões e uma fonte. Para obter mais informações, consulte a página de download [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).|  
@@ -182,7 +182,7 @@ ms.locfileid: "71293149"
  As fontes têm saídas, os destinos têm entradas e as transformações têm entradas e saídas. Além disso, vários componentes de fluxo de dados podem ser configurados para usar uma saída de erro.  
   
 ### <a name="inputs"></a>Entradas  
- Destinos e transformações têm entradas. Uma entrada contém uma ou mais colunas de entrada, que podem fazer referência a colunas externas se o componente de fluxo de dados tiver sido configurado para usá-las. As entradas podem ser configuradas para monitorar e controlar o fluxo de dados: por exemplo, você pode especificar se o componente deverá falhar em resposta a um erro, ignorar os erros ou redirecionar as linhas de erro à saída de erro. Você também pode atribuir uma descrição à entrada ou atualizar o nome da entrada. No Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , as entradas são configuradas usando a caixa de diálogo **Editor Avançado** . Para obter mais informações sobre o **Editor Avançado** , consulte [Integration Services User Interface](../../integration-services/integration-services-user-interface.md).  
+ Destinos e transformações têm entradas. Uma entrada contém uma ou mais colunas de entrada, que podem fazer referência a colunas externas se o componente de fluxo de dados tiver sido configurado para usá-las. As entradas podem ser configuradas para monitorar e controlar o fluxo de dados: por exemplo, você pode especificar se o componente deverá falhar em resposta a um erro, ignorar os erros ou redirecionar linhas de erro à saída de erro. Você também pode atribuir uma descrição à entrada ou atualizar o nome da entrada. No Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , as entradas são configuradas usando a caixa de diálogo **Editor Avançado** . Para obter mais informações sobre o **Editor Avançado** , consulte [Integration Services User Interface](../../integration-services/integration-services-user-interface.md).  
   
 ### <a name="outputs"></a>outputs  
  Fontes e transformações sempre têm saídas. Uma saída contém uma ou mais colunas de saída, que podem fazer referência a colunas externas se o componente de fluxo de dados tiver sido configurado para usá-las. As saídas podem ser configuradas para fornecer informações úteis ao processamento downstream dos dados. Por exemplo, você pode indicar se a saída é classificada. Você também pode fornecer uma descrição para a saída ou atualizar o nome da saída. No Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , as saídas são configuradas usando a caixa de diálogo **Editor Avançado** .  

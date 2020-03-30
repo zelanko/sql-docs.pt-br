@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b880e3758481e5b061221bd2753b5a26f01ed856
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "71708362"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutorial: Consultar o Oracle em um cluster de Big Data do SQL Server
@@ -31,7 +31,7 @@ Neste tutorial, você aprenderá como:
 > [!TIP]
 > Se preferir, você poderá baixar e executar um script para os comandos neste tutorial. Para obter instruções, confira os [Exemplos de virtualização de dados](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) no GitHub.
 
-## <a id="prereqs"></a> Pré-requisitos
+## <a name="prerequisites"></a><a id="prereqs"></a> Pré-requisitos
 
 - [Ferramentas de Big Data](deploy-big-data-tools.md)
    - **kubectl**

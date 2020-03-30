@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024993"
 ---
 # <a name="create-clustered-indexes"></a>Criar índices clusterizados
@@ -45,9 +45,9 @@ ms.locfileid: "68024993"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Implementations"></a> Implementações comuns  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> Implementações comuns  
  Os índices clusterizados são implementados das seguintes maneiras:  
   
 -   **Restrições PRIMARY KEY e UNIQUE**  
@@ -62,7 +62,7 @@ ms.locfileid: "68024993"
   
      Você pode criar um índice clusterizado em uma coluna diferente da coluna de chave primária se uma restrição de chave primária não clusterizada tiver sido especificada.  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Quando uma estrutura de índice clusterizado é criada, o espaço em disco de ambas as estruturas, a antiga (origem) e a nova (destino), é necessário em seus respectivos arquivos e grupos de arquivos. A antiga estrutura não é desalocada até que a transação completa seja confirmada. Pode igualmente ser necessário espaço temporário em disco adicional, para classificação. Para obter mais informações, consulte [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
@@ -72,12 +72,12 @@ ms.locfileid: "68024993"
   
 -   A chave de um índice clusterizado não pode conter colunas **varchar** que tenham dados existentes na unidade de alocação ROW_OVERFLOW_DATA. Se um índice clusterizado for criado em uma coluna **varchar** e os dados existentes estiverem na unidade de alocação IN_ROW_DATA, as ações subsequentes de inserção ou atualização na coluna que faria o push dos dados da linha apresentarão falha. Para obter informações sobre tabelas que podem conter dados de estouro de linha, use a função de gerenciamento dinâmico [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>Para criar um índice clusterizado usando o Pesquisador de Objetos  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68024993"
   
 10. No menu **Arquivo**, clique em **Salvar**_table\_name_.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-clustered-index"></a>Para criar um índice clusterizado  
   

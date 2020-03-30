@@ -22,10 +22,10 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 481cac0715f00c7d29a92b77101c4a09a28056a6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298045"
 ---
 # <a name="sql-server-destination"></a>destino do SQL Server
@@ -39,7 +39,7 @@ ms.locfileid: "71298045"
  Usuários que executam pacotes que incluem o destino do SQL Server precisam da permissão "Criar objetos globais". Você pode conceder esta permissão aos usuários usando a ferramenta Política de Segurança Local, aberta no menu **Ferramentas Administrativas** . Se você receber uma mensagem de erro ao executar um pacote que usa o destino do SQL Server, assegure-se de que a conta que executa o pacote tenha a permissão "Criar objetos globais".  
   
 ## <a name="bulk-inserts"></a>Inserções em massa  
- Se tentar usar o destino do SQL Server para carregar dados em massa em um banco de dados de um SQL Server remoto, você poderá ver uma mensagem de erro semelhante à seguinte: "Um registro OLE DB está disponível. Origem: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 Descrição: "Não foi possível fazer o carregamento em massa porque o objeto de mapeamento de arquivo SSIS 'Global\DTSQLIMPORT' não pôde ser aberto. Erro de sistema operacional código 2 (O sistema não pode achar o arquivo especificado.). Certifique-se de estar acessando um servidor local via "segurança do Windows."  
+ Se tentar usar o destino do SQL Server para carregar dados em massa em um banco de dados de um SQL Server remoto, você poderá ver uma mensagem de erro semelhante à seguinte: "Um registro OLE DB está disponível. Fonte: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 Descrição: “Não foi possível fazer o carregamento em massa porque o objeto de mapeamento de arquivo SSIS 'Global\DTSQLIMPORT ' não pôde ser aberto. Erro de sistema operacional código 2 (O sistema não pode achar o arquivo especificado.). Certifique-se de estar acessando um servidor local via "segurança do Windows."  
   
  O destino do SQL Server oferece a mesma inserção de dados em alta velocidade no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que a tarefa de Inserção em Massa fornece, porém, usando o destino do SQL Server, você pode aplicar transformações em dados de coluna antes de os dados serem carregados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

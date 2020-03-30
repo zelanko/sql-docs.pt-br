@@ -15,10 +15,10 @@ ms.manager: jroth
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.openlocfilehash: 925a3f29ddef590d27622f41be94b9f300111e64
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258900"
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>Conectar-se a um servidor registrado (SQL Server Management Studio)

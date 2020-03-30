@@ -14,10 +14,10 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ac339e638377778065f158b4cbd20280d5d4bb65
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244058"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Gerenciamento baseado em políticas para problemas operacionais com grupos de disponibilidade Always On
@@ -26,7 +26,7 @@ ms.locfileid: "75244058"
   O modelo de integridade dos grupos de disponibilidade Always On avalia um conjunto de políticas predefinidas de PBM (gerenciamento baseado em políticas). Você pode usar essas políticas para visualizar a integridade de um grupo de disponibilidade e de suas réplicas de disponibilidade e seus bancos de dados no SQL Server.  
   
   
-##  <a name="TermsAndDefinitions"></a> Termos e definições  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Termos e definições  
  Políticas predefinidas AlwaysOn  
  Um conjunto de políticas internas que permitem que um administrador de banco de dados verifique um grupo de disponibilidade e suas réplicas de disponibilidade e bancos de dados quanto à conformidade com os estados definidos pelas políticas AlwaysOn.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "75244058"
  Painel AlwaysOn  
  O painel do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] que fornece uma visão geral da integridade de um grupo de disponibilidade. Para obter mais informações, veja [Painel AlwaysOn](#Dashboard), mais adiante neste tópico.  
   
-##  <a name="Always OnPBM"></a> Políticas predefinidas e problemas  
+##  <a name="predefined-policies-and-issues"></a><a name="Always OnPBM"></a> Políticas predefinidas e problemas  
  A tabela a seguir resume as políticas predefinidas.  
   
 |Nome de política|Problema|Categoria **&#42;**|Faceta|  
@@ -68,7 +68,7 @@ ms.locfileid: "75244058"
 > [!IMPORTANT]
 >  **&#42;** Para políticas Always On, os nomes das categorias são usados como IDs. A alteração do nome de uma categoria AlwaysOn interrompe sua funcionalidade de avaliação de integridade. Portanto, não modifique os nomes das categorias AlwaysOn.  
   
-##  <a name="Dashboard"></a> Painel AlwaysOn  
+##  <a name="always-on-dashboard"></a><a name="Dashboard"></a> Painel AlwaysOn  
  O Painel AlwaysOn apresenta uma visão geral da integridade de um grupo de disponibilidade. O Painel AlwaysOn inclui os seguintes recursos:  
   
 -   Permite que você exiba facilmente os detalhes sobre um determinado grupo de disponibilidade, suas réplicas de disponibilidade e seus bancos de dados.  
@@ -83,14 +83,14 @@ ms.locfileid: "75244058"
   
 -   Se o failover do grupo de disponibilidade for uma solução possível para um problema, fornece um ponto de inicialização para os links[Assistente de Grupo de Disponibilidade de Failover](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md). Esse assistente orienta um administrador de banco de dados durante o processo de failover manual.  
   
-##  <a name="ExtendHealthModel"></a> Estendendo o modelo de integridade AlwaysOn  
+##  <a name="extending-the-always-on-health-model"></a><a name="ExtendHealthModel"></a> Estendendo o modelo de integridade AlwaysOn  
  Estender o modelo de integridade do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] é simplesmente uma questão de criar suas próprias políticas definidas pelo usuário e colocá-las em certas categorias com base no tipo de objeto que você está monitorando.  Depois que você alterar algumas configurações, o painel AlwaysOn avaliará automaticamente suas próprias políticas definidas pelo usuário, assim como as políticas predefinidas AlwaysOn.  
   
  Uma política definida pelo usuário pode usar qualquer uma das facetas de PBM disponíveis, inclusive as usadas pelas políticas predefinidas AlwaysOn (veja [Políticas predefinidas e problemas](#Always OnPBM), acima neste tópico). A faceta do servidor fornece as seguintes propriedades para o monitoramento de integridade do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]: (**IsHadrEnabled** e **HadrManagerStatus**). A faceta do servidor também fornece às propriedades as políticas a seguir para monitorar a configuração do cluster WSFC: **ClusterQuorumType** e **ClusterQuorumState**.  
   
  Para obter mais informações, veja [The Always On Health Model Part 2 – Extending the Health Model](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) (O modelo de integridade AlwaysOn Parte 2 – Arquitetura do modelo de integridade) (um blog da equipe AlwaysOn do SQL Server).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Usar as políticas AlwaysOn para exibir a integridade de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "75244058"
   
 -   [Solução de problemas de uma operação de adição de arquivos com falha &#40;Grupos de disponibilidade de AlwaysOn&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   [The Always On Health Model Part 1 – Health Model Architecture (O modelo de integridade AlwaysOn Parte 1 – Arquitetura do modelo de integridade)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/08/the-alwayson-health-model-part-1-health-model-architecture/)  
   
