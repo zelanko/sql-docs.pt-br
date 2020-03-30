@@ -17,10 +17,10 @@ ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f079b7b16f485b92c60952d082281a1dba52d024
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570550"
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>Definições de função – Criar, excluir ou modificar

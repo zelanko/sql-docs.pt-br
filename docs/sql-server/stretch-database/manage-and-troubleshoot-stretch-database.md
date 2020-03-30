@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285770"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Gerenciar e solucionar problemas do Stretch Database
@@ -27,7 +27,7 @@ ms.locfileid: "79285770"
   Para gerenciar e solucionar problemas do Stretch Database, use as ferramentas e os métodos descritos neste artigo.  
 ## <a name="manage-local-data"></a>Gerenciar dados locais  
   
-###  <a name="LocalInfo"></a> Obter informações sobre tabelas e bancos de dados locais habilitados para o Stretch Database  
+###  <a name="get-info-about-local-databases-and-tables-enabled-for-stretch-database"></a><a name="LocalInfo"></a> Obter informações sobre tabelas e bancos de dados locais habilitados para o Stretch Database  
  Abra as exibições de catálogo **sys.databases** e **sys.tables** para ver informações sobre tabelas e bancos de dados do SQL Server habilitados para Stretch. Para obter mais informações, veja [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) e [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md).  
  
  Para ver quanto espaço uma tabela habilitada para Stretch está usando no SQL Server, execute a instrução a seguir.
@@ -44,17 +44,17 @@ GO
 ### <a name="check-the-filter-function-applied-to-a-table"></a>Verificar a função de filtro aplicada a uma tabela  
  Abra a exibição de catálogo **sys.remote_data_archive_tables** e verifique o valor da coluna **filter_predicate** para identificar a função que o Stretch Database está usando para selecionar linhas para migração. Se o valor for nulo, a tabela inteira poderá ser migrada. Para obter mais informações, veja [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) e [Selecione linhas para migrar usando uma função de filtro](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
-###  <a name="Migration"></a> Verificar o status da migração dos dados  
+###  <a name="check-the-status-of-data-migration"></a><a name="Migration"></a> Verificar o status da migração dos dados  
  Para monitorar a migração de dados no Monitor do Stretch Database, selecione **Tarefas | Stretch | Monitorar** para um banco de dados no SQL Server Management Studio. Para obter mais informações, veja [Monitorar e solucionar problemas de migração de dados &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   
  Ou então, abra a exibição de gerenciamento dinâmico **sys.dm_db_rda_migration_status** para ver quantos lotes e linhas de dados foram migradas.  
   
-###  <a name="Firewall"></a> Solucionar problemas de migração de dados  
+###  <a name="troubleshoot-data-migration"></a><a name="Firewall"></a> Solucionar problemas de migração de dados  
  Para obter sugestões de solução de problemas, veja [Monitorar e solucionar problemas de migração de dados &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   
 ## <a name="manage-remote-data"></a>Gerenciar dados remotos  
   
-###  <a name="RemoteInfo"></a> Obter informações sobre tabelas e bancos de dados remotos usados pelo Stretch Database  
+###  <a name="get-info-about-remote-databases-and-tables-used-by-stretch-database"></a><a name="RemoteInfo"></a> Obter informações sobre tabelas e bancos de dados remotos usados pelo Stretch Database  
  Abra as exibições de catálogo **sys.remote_data_archive_databases** e **sys.remote_data_archive_tables** para ver informações sobre as tabelas e os bancos de dados remotos em que os dados migrados são armazenados. Para obter mais informações, veja [sys.remote_data_archive_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md) e [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md).  
  
 Para ver quanto espaço uma tabela habilitada para Stretch está usando no Azure, execute a instrução a seguir.
@@ -103,7 +103,7 @@ Se, acidentalmente, você excluiu colunas da tabela remota, execute **sp_rda_rec
  ### <a name="change-the-scope-of-queries-for-all-queries-by-all-users"></a>Alterar o escopo de consultas para todas as consultas por todos os usuários  
  Para alterar o escopo de todas as consultas por todos os usuários, execute o procedimento armazenado **sys.sp_rda_set_query_mode**. Você pode reduzir o escopo para consultar apenas os dados locais, desabilitar todas as consultas ou restaurar a configuração padrão. Para obter mais informações, veja [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md).  
    
- ### <a name="queryHints"></a>Alterar o escopo de consultas para uma única consulta por um administrador  
+ ### <a name="change-the-scope-of-queries-for-a-single-query-by-an-administrator"></a><a name="queryHints"></a>Alterar o escopo de consultas para uma única consulta por um administrador  
  Para alterar o escopo de uma única consulta por um membro da função db_owner, adicione a dica de consulta **WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *value* )** à instrução SELECT. A dica de consulta REMOTE_DATA_ARCHIVE_OVERRIDE pode ter os valores a seguir.  
  -   **LOCAL_ONLY**. Consultar apenas dados locais.  
    
@@ -120,7 +120,7 @@ SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = 
 GO
 ```  
    
- ## <a name="adminHints"></a>Realizar exclusões e atualizações administrativas  
+ ## <a name="make-administrative-updates-and-deletes"></a><a name="adminHints"></a>Realizar exclusões e atualizações administrativas  
  Por padrão, não é possível atualizar ou excluir linhas qualificadas para migração ou linhas que já foram migradas, em uma tabela habilitada para Stretch. Quando você precisa corrigir um problema, um membro da função db_owner pode executar uma operação UPDATE ou DELETE adicionando a dica de consulta **WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *value* )** à instrução. A dica de consulta REMOTE_DATA_ARCHIVE_OVERRIDE pode ter os valores a seguir.  
  -   **LOCAL_ONLY**. Atualizar ou excluir apenas os dados locais.  
    

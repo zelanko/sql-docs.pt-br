@@ -16,10 +16,10 @@ ms.assetid: 4959a0a9-ae55-4c4e-80a8-21119aaceb92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91e006cbf64d28e7cb62c1957b46fc7e1ce7b1aa
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67997207"
 ---
 # <a name="updateasciistream-method-sqlserverresultset"></a>Método updateAsciiStream (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67997207"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[Método updateAsciiStream &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/updateasciistream-method-int-java-io-inputstream.md)|Atualiza a coluna designada com um valor de fluxo ASCII.|  
 |[updateAsciiStream (int, java.io.InputStream, int)](../../../connect/jdbc/reference/updateasciistream-method-int-java-io-inputstream-int.md)|Atualiza o índice de coluna designado com um valor de fluxo ASCII específico para o índice de coluna.|  

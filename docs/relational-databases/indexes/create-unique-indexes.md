@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67898600"
 ---
 # <a name="create-unique-indexes"></a>Criar índices exclusivos
@@ -53,9 +53,9 @@ ms.locfileid: "67898600"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Benefits"></a> Benefícios de um índice exclusivo  
+###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> Benefícios de um índice exclusivo  
   
 -   Índices exclusivos de multicolunas garantem que cada combinação de valores na chave de índice é exclusivo. Por exemplo, se um índice exclusivo for criado em uma combinação de colunas **LastName**, **FirstName**e **MiddleName** , duas linhas na tabela não poderão ter a mesma combinação de valores que essas colunas.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67898600"
   
 -   Índices exclusivos fornecem informações adicionais úteis para o otimizador de consulta que pode gerar planos de execução mais eficientes.  
   
-###  <a name="Implementations"></a> Implementações comuns  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> Implementações comuns  
  Os índices exclusivos são implementados das seguintes maneiras:  
   
 -   **Restrição PRIMARY KEY ou UNIQUE**  
@@ -86,18 +86,18 @@ ms.locfileid: "67898600"
   
      Para criar uma exibição indexada, um índice clusterizado exclusivo é definido em uma ou mais colunas de exibição. A exibição é executada e o conjunto de resultados é armazenado no nível folha do índice da mesma forma que os dados de tabela são armazenados em um índice clusterizado. Para obter mais informações, veja [Criar exibições indexadas](../../relational-databases/views/create-indexed-views.md).  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Um índice exclusivo, uma restrição UNIQUE ou uma restrição PRIMARY KEY não poderão ser criados, se existirem valores de chave duplicados nos dados.  
   
 -   Um índice não clusterizado exclusivo pode conter colunas não chave incluídas. Para obter mais informações, consulte [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>Para criar um índice exclusivo usando o Designer de Tabela  
   
@@ -151,7 +151,7 @@ ms.locfileid: "67898600"
   
 10. Na caixa de diálogo **Novo Índice** , clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>Para criar um índice exclusivo em uma tabela  
   

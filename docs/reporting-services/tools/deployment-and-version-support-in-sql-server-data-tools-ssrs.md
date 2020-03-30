@@ -9,10 +9,10 @@ ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571506"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Implantação e suporte de versão no SSDT (SQL Server Data Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "65571506"
   
 -   Implantar relatórios nos servidores de relatório.  
   
-##  <a name="bkmk_ConfigurationandDeploymentProperties"></a> Propriedades e configuração e de implantação  
+##  <a name="configuration-and-deployment-properties"></a><a name="bkmk_ConfigurationandDeploymentProperties"></a> Propriedades e configuração e de implantação  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] dá suporte a configurações de projeto. Uma configuração de projeto consiste em um conjunto de propriedades que especificam locais e comportamentos quando um projeto é compilado como uma etapa de visualização ou implantação de relatórios. Para saber mais sobre configurações de projeto, consulte a documentação do Visual Studio.  
   
  Use as configurações de projeto para controlar a atualização de definições de relatório para versões de esquema compatíveis com os servidores de relatório de destino. As propriedades controladas por configurações de projeto incluem o servidor de relatório de destino, a pasta onde o processo de compilação armazena temporariamente as definições de relatórios para visualização e implantação e os níveis de erro.  
@@ -47,7 +47,7 @@ ms.locfileid: "65571506"
   
  Você pode adicionar mais de uma configuração de projeto a um projeto; cada uma é usada para um cenário diferente, como, por exemplo, implantação de versões diferentes de servidores de relatório. Para obter mais informações, consulte [Definir as propriedades da implantação &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md) e [Caixa de diálogo Páginas de Propriedades do Projeto](../../reporting-services/tools/project-property-pages-dialog-box.md).  
   
-##  <a name="bkmk_SupportedVersions"></a> Versões com suporte  
+##  <a name="supported-versions"></a><a name="bkmk_SupportedVersions"></a> Versões com suporte  
   
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o ambiente de desenvolvimento de 32 bits para projetos do Servidor de Relatório, não foi projetado para execução em computadores baseados em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] e não é instalado em servidores baseados em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Porém, o suporte para o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está disponível em computadores baseados em x64.  

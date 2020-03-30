@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 770ef448094e764bcc1ca970354941c0d1d03d4c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072282"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
@@ -122,7 +122,7 @@ CURSOR
 Especifica que a instrução SET contém uma declaração de um cursor.  
   
 SCROLL  
-Especifica que o cursor dá suporte a todas as opções de fetch: FIRST, LAST, NEXT, PRIOR, RELATIVE e ABSOLUTE. Não é possível especificar SCROLL quando também tiver especificado FAST_FORWARD.  
+Especifica que o cursor oferece o suporte para todas as opções de busca: FIRST, LAST, NEXT, PRIOR, RELATIVE e ABSOLUTE. Não é possível especificar SCROLL quando também tiver especificado FAST_FORWARD.  
   
 FORWARD_ONLY  
 Especifica que o cursor oferece suporte somente para a opção FETCH NEXT. O cursor é recuperado somente em uma direção, da primeira para a última linha. Quando FORWARD_ONLY é especificado sem as palavras-chave STATIC, KEYSET ou DYNAMIC, o cursor é implementado como DYNAMIC. Se FORWARD_ONLY ou SCROLL não forem especificados, FORWARD_ONLY será o padrão, a não ser que as palavras-chave STATIC, KEYSET ou DYNAMIC sejam especificadas. Para os cursores STATIC, KEYSET e DYNAMIC, SCROLL é o padrão.  
@@ -306,7 +306,7 @@ DECLARE @p Point = CONVERT(Point, '')
 SET @p.SetXY(22, 23);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>J. Imprimindo o valor de uma variável inicializada com a instrução SET  
 O exemplo a seguir cria a variável `@myvar`, coloca um valor de cadeia de caracteres na variável e imprime o valor da variável `@myvar`.  

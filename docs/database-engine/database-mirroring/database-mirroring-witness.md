@@ -15,10 +15,10 @@ ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4dcb3d5669e62836f859252749469703bf26d29e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68043893"
 ---
 # <a name="database-mirroring-witness"></a>Testemunha de espelhamento de banco de dados
@@ -42,19 +42,19 @@ ms.locfileid: "68043893"
   
 -   [Para adicionar ou remover uma testemunha](#AddRemoveWitness)  
   
-##  <a name="InMultipleSessions"></a> Usando uma testemunha em várias sessões  
+##  <a name="using-a-witness-in-multiple-sessions"></a><a name="InMultipleSessions"></a> Usando uma testemunha em várias sessões  
  Uma instância de servidor específica pode agir como uma testemunha em sessões de espelhamento de banco de dados, cada uma para um banco de dados diferente. As sessões diferentes podem ser com parceiros diferentes. A ilustração a seguir mostra uma instância de servidor que é uma testemunha em duas sessões de espelhamento de banco de dados com parceiros diferentes.  
   
  ![Instância do servidor que é uma testemunha para dois bancos de dados](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "Instância do servidor que é uma testemunha para dois bancos de dados")  
   
  Uma instância de servidor único também pode funcionar ao mesmo tempo como uma testemunha em algumas sessões e um parceiro em outras sessões. Porém, na prática, uma instância de servidor normalmente funciona como uma testemunha ou um parceiro. Isso porque os parceiros exigem computadores sofisticados com hardware suficiente para oferecer suporte a um banco de dados de produção, ao passo que a testemunha pode ser executada em qualquer sistema Windows disponível que ofereça suporte ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-##  <a name="SwHwRecommendations"></a> Recomendações de software e hardware  
+##  <a name="software-and-hardware-recommendations"></a><a name="SwHwRecommendations"></a> Recomendações de software e hardware  
  A localização da testemunha em um computador separado dos parceiros é altamente recomendável. Os parceiros de espelhamento de banco de dados só têm suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard edition e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Enterprise edition. As testemunhas, em contrapartida, também têm suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Exceto durante uma atualização de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as instâncias de servidor em uma sessão de espelhamento devem todas estar executando a mesma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por exemplo, uma testemunha do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tem suporte quando você está atualizando de uma configuração de espelhamento do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , mas não pode ser adicionada a uma configuração de espelhamento do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] existente, nova ou posterior.  
   
  Uma testemunha pode ser executada em qualquer sistema de computador confiável que forneça suporte a quaisquer edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Porém, é recomendável que toda instância de servidor usada como testemunha atenda à configuração mínima exigida para a versão Standard do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo executada. Para obter mais informações sobre requisitos, consulte [Requisitos de hardware e de software para instalar o SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
-##  <a name="InAutoFo"></a> Função da testemunha no failover automático  
+##  <a name="role-of-the-witness-in-automatic-failover"></a><a name="InAutoFo"></a> Função da testemunha no failover automático  
  Ao longo de uma sessão de espelhamento de banco de dados, todas as instâncias de servidor monitoram seus status de conexão. Se os parceiros forem desconectados uns dos outros, confiarão na testemunha para assegurar que apenas um deles esteja atendendo ao banco de dados atualmente. Se um servidor espelho sincronizado perder sua conexão com o servidor principal, mas continuar conectado à testemunha, o servidor espelho entrará em contato com a testemunha para determinar se a testemunha perdeu sua conexão com o servidor principal:  
   
 -   Se o servidor principal ainda estiver conectado à testemunha, não acontecerá o failover automático. Em vez disso, o servidor principal continuará atendendo ao banco de dados enquanto estiver acumulando registros de log para enviar ao servidor espelho quando os parceiros forem reconectados.  
@@ -63,9 +63,9 @@ ms.locfileid: "68043893"
   
 -   Se o servidor espelho estiver desconectado da testemunha e também do servidor principal, não será possível o failover automático, independentemente do estado do servidor principal.  
   
- O requisito de que pelo menos duas das instâncias de servidor estejam conectadas é conhecido como *quorum*. O quorum assegura que o banco de dados só possa ser atendido por um parceiro de cada vez. Para obter informações sobre o funcionamento do quorum e seu impacto em uma sessão, veja [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ O requisito de que pelo menos duas das instâncias de servidor estejam conectadas é conhecido como *quorum*. O quorum assegura que o banco de dados só possa ser atendido por um parceiro de cada vez. Para obter informações sobre como o quorum funciona e seu impacto sobre uma sessão, veja [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
-##  <a name="AddRemoveWitness"></a> Para adicionar ou remover uma testemunha  
+##  <a name="to-add-or-remove-a-witness"></a><a name="AddRemoveWitness"></a> Para adicionar ou remover uma testemunha  
  **Para adicionar uma testemunha**  
   
 -   [Adicionar ou substituir uma testemunha de espelhamento de banco de dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  

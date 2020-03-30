@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67999440"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Restrições de chave primária e chave estrangeira
@@ -36,7 +36,7 @@ ms.locfileid: "67999440"
   
  [Tarefas relacionadas](../../relational-databases/tables/primary-and-foreign-key-constraints.md#Tasks)  
   
-##  <a name="PKeys"></a> Restrições PRIMARY KEY  
+##  <a name="primary-key-constraints"></a><a name="PKeys"></a> Restrições PRIMARY KEY  
  Geralmente, uma tabela tem uma coluna ou uma combinação de colunas que contém valores que identificam exclusivamente cada linha na tabela. Essa coluna, ou colunas, é chamada de chave primária (PK) da tabela e impõe a integridade da entidade da mesma. Como as restrições PRIMARY KEY garantem dados exclusivos, elas são frequentemente definidas em uma coluna de identidade.  
   
  Quando especificar uma restrição PRIMARY KEY para uma tabela, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] impõe a exclusividade dos dados criando automaticamente um índice exclusivo para as colunas de chave primária. Esse índice também permite um acesso rápido aos dados quando a chave primária é usada em consultas. Se uma restrição de chave primária for definida em mais de uma coluna, os valores poderão ser duplicados em uma coluna, mas cada combinação de valores de todas as colunas na definição da restrição de chave primária deve ser exclusiva.  
@@ -57,7 +57,7 @@ ms.locfileid: "67999440"
   
 -   Se a chave primária for definida em uma coluna de tipo CLR definida pelo usuário, a implementação do tipo deverá oferecer suporte a uma ordenação binária.  
   
-##  <a name="FKeys"></a> Foreign Key Constraints  
+##  <a name="foreign-key-constraints"></a><a name="FKeys"></a> Foreign Key Constraints  
  Uma chave estrangeira (FK) é uma coluna ou combinação de colunas usada para estabelecer e impor um link entre os dados de duas tabelas, a fim de controlar os dados que podem ser armazenados na tabela de chave estrangeira. Em uma referência de chave estrangeira, cria-se um link entre duas tabelas quando a coluna ou as colunas que contêm o valor de chave primária para uma tabela são referenciadas pela coluna ou colunas de outra tabela. Essa coluna torna-se uma chave estrangeira na segunda tabela.  
   
  Por exemplo, a tabela **Sales.SalesOrderHeader** tem um link de chave estrangeira para a tabela **Sales.SalesPerson** porque existe uma relação lógica entre os pedidos de vendas e os vendedores. A coluna **SalesPersonID** na tabela **SalesOrderHeader** corresponde à coluna de chave primária da tabela **SalesPerson** . A coluna **SalesPersonID** na tabela **SalesOrderHeader** é a chave estrangeira para a tabela **SalesPerson** . Criando essa relação de chave estrangeira, um valor para **SalesPersonID** não poderá ser inserido na tabela **SalesOrderHeader** se ela não existir na tabela **SalesPerson** .  
@@ -118,7 +118,7 @@ ms.locfileid: "67999440"
   
 -   Uma tabela com um gatilho INSTEAD OF não pode ter igualmente uma cláusula REFERENCES especificando uma ação em cascata. No entanto, um gatilho AFTER em uma tabela direcionada por uma ação em cascata poderá executar instruções INSERT, UPDATE ou DELETE em outra tabela ou exibição que acionem um gatilho INSTEAD OF definido naquele objeto.  
   
-##  <a name="Tasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="Tasks"></a> Tarefas relacionadas  
  A tabela a seguir lista as tarefas comuns associadas às restrições PRIMARY KEY e FOREIGN KEY.  
   
 |Tarefa|Tópico|  

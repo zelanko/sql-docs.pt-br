@@ -1,5 +1,5 @@
 ---
-title: 'Como fazer: Recuperar parâmetros de E/S usando o SQLSRV Driver | Microsoft Docs'
+title: Como recuperar parâmetros de E/S usando o SQLSRV Driver | Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27290272b72b27d3bb051da4e7d9a8df202461c5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993462"
 ---
-# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Como fazer: Recuperar parâmetros de entrada e de saída usando o driver SQLSRV
+# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Como recuperar parâmetros de entrada e de saída usando o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Este tópico demonstra como usar o driver SQLSRV para chamar um procedimento armazenado no qual um parâmetro foi definido como parâmetro de entrada/saída e como recuperar os resultados. Ao recuperar um parâmetro de saída ou de entrada/saída, todos os resultados retornados pelo procedimento armazenado devem ser consumidos antes que o valor do parâmetro retornado esteja acessível.  
@@ -30,7 +30,7 @@ Este tópico demonstra como usar o driver SQLSRV para chamar um procedimento arm
 O exemplo a seguir chama um procedimento armazenado que subtrai horas de férias usadas das horas de férias disponíveis de um funcionário especificado. A variável que representa as horas de férias usadas, *$vacationHrs*, é passada para o procedimento armazenado como um parâmetro de entrada. Depois de atualizar as horas de férias disponíveis, o procedimento armazenado usa o mesmo parâmetro para retornar o número de horas de férias restantes.  
   
 > [!NOTE]  
-> Inicializar *$vacationHrs* como 4 define o PHPTYPE retornado como inteiro. Para garantir a integridade do tipo de dados, os parâmetros de entrada/saída devem ser inicializados antes de chamar o procedimento armazenado ou o PHPTYPE desejado deve ser especificado. Para obter informações sobre como especificar o PHPTYPE, confira [Como especificar tipos de dados do PHP](../../connect/php/how-to-specify-php-data-types.md).  
+> Inicializar *$vacationHrs* como 4 define o PHPTYPE retornado como inteiro. Para garantir a integridade do tipo de dados, os parâmetros de entrada/saída devem ser inicializados antes de chamar o procedimento armazenado ou o PHPTYPE desejado deve ser especificado. Para obter informações sobre como especificar o PHPTYPE, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 Como o procedimento armazenado retorna dois resultados, [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) deve ser chamado depois que o procedimento armazenado for executado para disponibilizar o valor do parâmetro de saída. Depois de chamar **sqlsrv_next_result**, *$vacationHrs* conterá o valor do parâmetro de saída retornado pelo procedimento armazenado.  
   
@@ -152,9 +152,9 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>Consulte Também  
-[Como: Especificar a direção do parâmetro usando o driver SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+[Como especificar a direção do parâmetro usando o driver SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
-[Como: Recuperar parâmetros de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+[Como recuperar parâmetros de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
 [Recuperando dados](../../connect/php/retrieving-data.md)  
   

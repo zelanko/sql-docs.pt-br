@@ -11,10 +11,10 @@ ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 802ade7a34eb5c5174efc35032587f801ef12179
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026271"
 ---
 # <a name="using-multiple-result-sets"></a>Como usar vários conjuntos de resultados

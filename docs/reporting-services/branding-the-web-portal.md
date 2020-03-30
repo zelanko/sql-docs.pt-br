@@ -9,10 +9,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72251915"
 ---
 # <a name="branding-the-web-portal"></a>Identidade visual do portal da Web
@@ -91,7 +91,7 @@ O arquivo colors.json, para o Reporting Services, tem duas categorias principais
   
 A seção da interface é dividida nos seguintes agrupamentos.  
   
-|Seção|Descrição|  
+|Seção|DESCRIÇÃO|  
 |---|---|  
 |Primária|Cores do botão e da passagem do mouse.|  
 |Secundário|Barra de título, barra de pesquisa, menu esquerdo (se for exibido) e cor do texto desses itens|  

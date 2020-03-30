@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68053574"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
@@ -31,7 +31,7 @@ Escreva consultas de texto completo usando os predicados **CONTAINS** e **FREETE
 -   Para corresponder palavras e frases, use **CONTAINS** e **CONTAINSTABLE**.
 -   Para corresponder o significado, mas não as palavras exatas, use **FREETEXT** e **FREETEXTTABLE**.
 
-## <a name="examples_simple"></a> Exemplos de cada predicado e função
+## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> Exemplos de cada predicado e função
 
 Os exemplos a seguir usam o banco de dados de exemplo AdventureWorks. Para encontrar a versão final do AdventureWorks, consulte [Bancos de dados e scripts do AdventureWorks para SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502). Para executar as consultas de exemplo, você também deve configurar a pesquisa de texto completo. Para mais informações, consulte [Introdução à pesquisa de texto completo](get-started-with-full-text-search.md). 
 
@@ -172,9 +172,9 @@ As consultas que usam uma dessas funções também retornam um valor de classifi
 
 **Mais informações**. Para obter mais informações sobre a sintaxe e os argumentos dessas funções, consulte [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).
 
-## <a name="examples_specific"></a> Tipos específicos de pesquisas
+## <a name="specific-types-of-searches"></a><a name="examples_specific"></a> Tipos específicos de pesquisas
 
-###  <a name="Simple_Term"></a> Pesquisar uma palavra ou frase específica (Termo Simples)  
+###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a> Pesquisar uma palavra ou frase específica (Termo Simples)  
  Você pode usar [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)ou [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) para pesquisar uma tabela para uma frase ou palavra específica. Por exemplo, para pesquisar a tabela **ProductReview** no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e localizar todos os comentários sobre um produto com a frase “curva de aprendizado”, use o predicado CONTAINS, da seguinte forma:  
   
 ```sql
@@ -197,7 +197,7 @@ Por exemplo, "croissant" é uma palavra e "café com leite" é uma frase. Palavr
 
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) procuram uma correspondência exata da frase. [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) desmembram a frase em palavras separadas.
 
-###  <a name="Prefix_Term"></a> Pesquisar uma palavra com um prefixo (Termo de Prefixo)  
+###  <a name="search-for-a-word-with-a-prefix-prefix-term"></a><a name="Prefix_Term"></a> Pesquisar uma palavra com um prefixo (Termo de Prefixo)  
  Você pode usar [CONTAINS](../../t-sql/queries/contains-transact-sql.md) ou [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) para procurar palavras ou frases com um prefixo especificado. Todas as entradas na coluna que contêm o texto que começa com o prefixo especificado são retornadas. Por exemplo, para procurar todas as linhas que contêm o prefixo `top`-, como em `top``ple`, `top``ping`e `top`. A consulta será semelhante ao exemplo a seguir:  
   
 ```sql  
@@ -224,7 +224,7 @@ Um *termo de prefixo* refere-se a uma cadeia de caracteres colocada na frente de
 
 Pesquisas de prefixo são compatíveis com [CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).
   
-###  <a name="Inflectional_Generation_Term"></a> Pesquisar as formas flexionadas de uma palavra específica (Termo de Geração)  
+###  <a name="search-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a> Pesquisar as formas flexionadas de uma palavra específica (Termo de Geração)  
 Você pode usar [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)ou [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) para procurar todos os diferentes tempos e conjugações de um verbo ou ambas as formas, singular e plural, de um substantivo (uma pesquisa flexionada) ou sinônimos de uma palavra específica (uma pesquisa de dicionário de sinônimos).  
   
 O exemplo a seguir pesquisa qualquer forma de “pé" ("pé", "pés" e assim por diante) na coluna `Comments` da tabela `ProductReview` do banco de dados `AdventureWorks`: 
@@ -267,7 +267,7 @@ Por exemplo, você quer localizar as linhas em que a palavra "gelo" esteja perto
 
 Para obter mais informações sobre pesquisas de proximidade, consulte [Pesquisar palavras perto de outra palavra com NEAR](search-for-words-close-to-another-word-with-near.md).
 
-###  <a name="Weighted_Term"></a> Pesquisar palavras ou frases usando valores ponderados (Termo Ponderado)  
+###  <a name="search-for-words-or-phrases-using-weighted-values-weighted-term"></a><a name="Weighted_Term"></a> Pesquisar palavras ou frases usando valores ponderados (Termo Ponderado)  
 Você pode usar [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) para procurar palavras ou frases e especificar um valor ponderado. A ponderação, medida como um número de 0,0 a 1,0, indica a importância de cada palavra e frase em um conjunto de palavras e frases. Um peso 0,0 é o mais baixo, e um peso 1,0 é o mais alto.  
   
 O exemplo a seguir mostra uma consulta que procura todos os endereços de clientes usando pesos, em que qualquer texto que comece com a cadeia de caracteres "Baía" tem também "Rua" ou "Vista". Os resultados dão uma classificação mais alta a essas linhas que contêm mais das palavras especificadas.  
@@ -297,7 +297,7 @@ Por exemplo, em uma consulta que pesquisa vários termos, é possível atribuir 
 
 Pesquisas de termo ponderado são compatíveis com [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).
 
-##  <a name="Using_Boolean_Operators"></a> Usar AND, OR e NOT (operadores boolianos)
+##  <a name="use-and-or-and-not-boolean-operators"></a><a name="Using_Boolean_Operators"></a> Usar AND, OR e NOT (operadores boolianos)
  
 O predicado CONTAINS e a função CONTAINSTABLE usam as mesmas condições de pesquisa. Os dois permitem combinar vários termos de pesquisa usando operadores boolianos – AND, OR e NOT – para executar operações lógicas. Você pode usar AND, por exemplo, para localizar linhas que contêm “expresso” e “rosca”. Você pode usar AND NOT, por exemplo, para localizar as linhas que contêm "rosca", mas que não contêm "cream cheese".  
   
@@ -319,7 +319,7 @@ WHERE ProductDescriptionID <> 5 AND
 GO  
 ```  
   
-##  <a name="Additional_Considerations"></a> Maiúsculas e minúsculas, palavras irrelevantes, idioma e dicionário de sinônimos
+##  <a name="case-stopwords-language-and-thesaurus"></a><a name="Additional_Considerations"></a> Maiúsculas e minúsculas, palavras irrelevantes, idioma e dicionário de sinônimos
 
  Ao escrever consultas de texto completo, você também poderá especificar as opções a seguir:
   
@@ -331,7 +331,7 @@ GO
   
 -   **Dicionário de sinônimos**. As consultas FREETEXT e FREETEXTTABLE usam o dicionário de sinônimos por padrão. CONTAINS e CONTAINSTABLE suportam um argumento THESAURUS opcional. Para obter mais informações, consulte [Configurar e gerenciar arquivos do dicionário de sinônimos na pesquisa de texto completo](configure-and-manage-thesaurus-files-for-full-text-search.md).
   
-##  <a name="tokens"></a> Verificar os resultados da geração de tokens
+##  <a name="check-the-tokenization-results"></a><a name="tokens"></a> Verificar os resultados da geração de tokens
 
 Depois de aplicar determinada combinação de separador de palavras, dicionário de sinônimos e lista de palavras irrelevantes a uma consulta, você poderá ver como a pesquisa de texto completo gera tokens dos resultados usando a exibição de gerenciamento dinâmico **sys.dm_fts_parser**. Para obter mais informações, veja [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md).  
   

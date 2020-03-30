@@ -157,7 +157,7 @@ As FCIs podem ser usadas para recuperação de desastres. Assim como acontece co
 ### <a name="log-shipping"></a>Envio de logs
 O envio de logs é um dos métodos mais antigos para fornecer recuperação de desastres aos bancos de dados do SQL Server. O envio de logs é geralmente usado em conjunto com grupos de disponibilidade e FCIs para fornecer recuperação de desastres mais simples e econômica na qual outras opções podem ser difíceis devido ao ambiente, habilidades administrativas ou orçamento. Similar à história de alta disponibilidade para envio de logs, muitos ambientes atrasarão o carregamento de um log de transações para responsabilizar por erro humano.
 
-## <a name = "Migrations"></a> Migrações e atualizações
+## <a name="migrations-and-upgrades"></a><a name = "Migrations"></a> Migrações e atualizações
 
 Ao implantar novas instâncias ou atualizar as antigas, uma empresa não pode tolerar interrupção longa. Esta seção abordará como os recursos de disponibilidade do SQL Server podem ser usados para minimizar o tempo de inatividade em uma alteração de arquitetura planejada, troca de servidor, alteração da plataforma (como Windows Server para Linux ou vice-versa) ou durante a aplicação de patch.
 
@@ -224,7 +224,7 @@ Se um grupo de disponibilidade estiver configurado com um tipo de cluster Nenhum
 
 Como o envio de logs baseia-se somente no backup e na restauração, e não existem diferenças nos bancos de dados, estruturas de arquivos, entre outros, para o SQL Server no Windows Server em comparação com o SQL Server no Linux. Isso significa que o envio de logs pode ser configurado entre uma instalação do SQL Server com base no Windows Server e uma do Linux, bem como entre distribuições do Linux. Todo o resto permanece o mesmo. A única ressalva é que o envio de logs, assim como um grupo de disponibilidade, não funciona quando a fonte estiver em uma versão principal superior do SQL Server em relação a um destino que é uma versão inferior do SQL Server. 
 
-## <a name = "ReadScaleOut"></a> Escala de leitura
+## <a name="read-scale"></a><a name = "ReadScaleOut"></a> Escala de leitura
 
 Desde seu lançamento no SQL Server 2012, as réplicas secundárias tiveram a capacidade de serem usadas para consultas somente leitura. Há duas maneiras que podem ser obtidas com um grupo de disponibilidade: permitindo o acesso direto ao secundário, bem como [configurando o roteamento de somente leitura](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server), que requer o uso do ouvinte.  O SQL Server 2016 introduziu a capacidade de balancear carga de conexões de somente leitura por meio do ouvinte usando um algoritmo de round robin, permitindo que as solicitações de somente leitura sejam distribuídas em todas as réplicas legíveis. 
 

@@ -14,10 +14,10 @@ ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67987367"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, Objeto Métodos de Acesso
@@ -42,9 +42,9 @@ ms.locfileid: "67987367"
   
 -   [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
   
- Esta tabela descreve os contadores dos **Métodos de Acesso** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Esta tabela descreve os contadores dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Métodos de Acesso**do**.  
   
-|Contadores dos Métodos de Acesso do SQL Server|Descrição|  
+|Contadores dos Métodos de Acesso do SQL Server|DESCRIÇÃO|  
 |----------------------------------------|-----------------|  
 |**Lotes de limpeza de unidade de alocação/s**|O número de lotes por segundo concluídos com êxito pela tarefa em segundo plano responsável pela limpeza de unidades de alocação canceladas e adiadas.|  
 |**Limpezas de unidade de alocação/s**|O número de unidades de alocação por segundo descartadas com sucesso pela tarefa em segundo plano responsável pela limpeza das unidades de alocação canceladas e adiadas. Cada descarte de unidade de alocação requer vários lotes.|  

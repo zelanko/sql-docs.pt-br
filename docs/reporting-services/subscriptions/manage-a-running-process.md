@@ -26,10 +26,10 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579011"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
@@ -64,7 +64,7 @@ ms.locfileid: "65579011"
   
 -   [Gerenciando trabalhos programaticamente](#bkmk_programmatically)  
   
-##  <a name="bkmk_native"></a> Exibir e cancelar trabalhos (modo nativo)  
+##  <a name="view-and-cancel-jobs-native-mode"></a><a name="bkmk_native"></a> Exibir e cancelar trabalhos (modo nativo)  
  Você pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para ver ou cancelar um trabalho que está em execução no servidor de relatório. Atualize a página para recuperar uma lista dos trabalhos que estão em execução no momento ou para obter o status atualizado do trabalho do banco de dados do servidor de relatório. Ao se conectar a um servidor de relatório no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], você pode abrir uma pasta Trabalhos para exibir uma lista dos relatórios que estão sendo processados atualmente no computador do servidor de relatório. As informações de status de cada trabalho são exibidas na página Propriedades do Trabalho. Você pode exibir as informações de status de todos os trabalhos abrindo a caixa de diálogo Cancelar Trabalhos do Servidor de Relatório.  
   
  Você pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para ver ou cancelar um trabalho que está em execução no servidor de relatório. Atualize a página para recuperar uma lista dos trabalhos que estão em execução no momento ou para obter o status atualizado do trabalho do banco de dados do servidor de relatório. Ao se conectar a um servidor de relatório no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], você pode abrir uma pasta Trabalhos para exibir uma lista dos relatórios que estão sendo processados atualmente no computador do servidor de relatório. As informações de status de cada trabalho são exibidas na página Propriedades do Trabalho. Você pode exibir as informações de status de todos os trabalhos abrindo a caixa de diálogo Cancelar Trabalhos do Servidor de Relatório.  
@@ -98,7 +98,7 @@ ms.locfileid: "65579011"
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Definindo configurações de frequência para recuperar o status do trabalho  
  Um trabalho em execução é armazenado no banco de dados temporário do servidor de relatório. Você pode modificar as configurações do arquivo RSReportServer.config para controlar a frequência em que o servidor de relatório examina trabalhos em andamento e o intervalo após o qual o status de um trabalho em execução muda de “novo” para “em execução”. A configuração **RunningRequestsDbCycle** especifica com que frequência o servidor de relatório examina processos em execução. Por padrão, as informações de status são registradas a cada 60 segundos. A configuração **RunningRequestsAge** especifica o intervalo em que um trabalho passa de “novo” para “em execução”.  
   
-##  <a name="bkmk_sharepoint"></a> Exibir e cancelar trabalhos (modo do SharePoint)  
+##  <a name="view-and-cancel-jobs-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> Exibir e cancelar trabalhos (modo do SharePoint)  
  O gerenciamento de trabalhos em uma implantação no modo do SharePoint é realizado por meio da Administração Central do SharePoint, para cada aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 #### <a name="to-manage-jobs-in-sharepoint-mode"></a>Para gerenciar trabalhos no modo do SharePoint  
@@ -113,7 +113,7 @@ ms.locfileid: "65579011"
   
 5.  Ou clique na caixa do seu trabalho e clique em **Excluir** para cancelar o trabalho. Excluir o trabalho não exclui a assinatura.  
   
-##  <a name="bkmk_programmatically"></a> Gerenciando trabalhos programaticamente  
+##  <a name="managing-jobs-programmatically"></a><a name="bkmk_programmatically"></a> Gerenciando trabalhos programaticamente  
  Você pode gerenciar trabalhos programaticamente ou usando um script. Para obter mais informações, consulte <xref:ReportService2010.ReportingService2010.ListJobs%2A>e <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
 ## <a name="see-also"></a>Consulte Também  

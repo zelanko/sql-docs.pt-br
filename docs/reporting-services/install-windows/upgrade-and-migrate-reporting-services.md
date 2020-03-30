@@ -12,10 +12,10 @@ ms.author: maggies
 ms.topic: conceptual
 ms.date: 08/17/2017
 ms.openlocfilehash: 9d0ff28e1e9c7784da2c1206f72573ba608797a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68264991"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
@@ -24,16 +24,16 @@ ms.locfileid: "68264991"
 
   Este tópico é uma visão geral das opções de atualização e migração do SQL Server Reporting Services. Há duas abordagens gerais para fazer upgrade de uma implantação do SQL Server Reporting Services:  
  
--   **Atualização:** você atualiza os componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos servidores e nas instâncias em que eles estão instalados atualmente. Isto é geralmente chamado de atualização “no local”. A atualização in-loco não tem suporte de um modo de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para outro. Por exemplo, você não pode atualizar um servidor de relatório de modo nativo para um servidor de relatório no modo do SharePoint. Você pode migrar seus itens de relatório de um modo para outro. Para obter mais informações, confira a seção 'Migração do modo nativo para o SharePoint' mais adiante neste documento.  
+-   **Atualizar:** você atualiza os componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos servidores e instâncias onde elas estão instalados atualmente. Isto é geralmente chamado de atualização “no local”. A atualização in-loco não tem suporte de um modo de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para outro. Por exemplo, você não pode atualizar um servidor de relatório de modo nativo para um servidor de relatório no modo do SharePoint. Você pode migrar seus itens de relatório de um modo para outro. Para obter mais informações, confira a seção 'Migração do modo nativo para o SharePoint' mais adiante neste documento.  
   
--   **Migração**: você instala e configura um novo ambiente do SharePoint, copia seus itens de relatório e recursos para o novo ambiente e configura o novo ambiente para usar o conteúdo existente. Uma forma de nível inferior de migração é copiar os bancos de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , arquivos de configuração e, se estiver usando o modo do SharePoint, os bancos de dados de conteúdo do SharePoint.  
+-   **Migrar**: Você instala e configura um novo ambiente do SharePoint, copia seus itens de relatório e recursos para o novo ambiente, e configura o novo ambiente para usar o conteúdo existente. Uma forma de nível inferior de migração é copiar os bancos de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , arquivos de configuração e, se estiver usando o modo do SharePoint, os bancos de dados de conteúdo do SharePoint.  
     
 > **[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; modo do SharePoint para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
 
 > [!NOTE]
 > A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
    
-##  <a name="bkmk_known_issues"></a> Problemas de atualização conhecidos e práticas recomendadas  
+##  <a name="known-upgrade-issues-and-best-practices"></a><a name="bkmk_known_issues"></a> Problemas de atualização conhecidos e práticas recomendadas  
  Para obter uma lista detalhada das edições e versões com suporte que você pode atualizar, consulte [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 > [!TIP]  
@@ -42,13 +42,13 @@ ms.locfileid: "68264991"
 >  -   [Notas de versão do SQL Server 2016](https://go.microsoft.com/fwlink/?LinkID=398124).  
   
   
-##  <a name="bkmk_side_by_side"></a> Instalações lado a lado  
+##  <a name="side-by-side-installations"></a><a name="bkmk_side_by_side"></a> Instalações lado a lado  
  O modo Nativo do SQL Server Reporting Services pode ser instalado lado a lado com uma implantação no modo Nativo do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  Não há suporte para implantações lado a lado do SQL Server Reporting Services no modo do SharePoint e para nenhuma das versões anteriores de componentes no modo do SharePoint do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
   
-##  <a name="bkmk_inplace_upgrade"></a> Atualização in-loco  
+##  <a name="in-place-upgrade"></a><a name="bkmk_inplace_upgrade"></a> Atualização in-loco  
  A atualização é concluída pela Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser usada para atualizar qualquer ou todos os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , inclusive o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. A Instalação detecta as instâncias existentes e solicita que você faça a atualização. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A Instalação fornece opções de atualização que podem ser especificadas como um argumento de linha de comando ou no Assistente de Instalação.  
   
  Quando a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executada, é possível selecionar a opção para atualizar uma das seguintes versões ou instalar uma nova instância do SQL Server Reporting Services que é executada lado a lado com instalações existentes:  
@@ -68,7 +68,7 @@ ms.locfileid: "68264991"
 * [Instalar o SQL Server 2016 do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)
   
   
-##  <a name="bkmk_upgrade_checklist"></a> Lista de verificação anterior à atualização  
+##  <a name="pre-upgrade-checklist"></a><a name="bkmk_upgrade_checklist"></a> Lista de verificação anterior à atualização  
  Antes de fazer upgrade para o SQL Server Reporting Services, examine o seguinte:  
   
 -   Examine os requisitos para determinar se o hardware e o software do computador podem dar suporte ao [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. Para obter mais informações, veja [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
@@ -83,7 +83,7 @@ ms.locfileid: "68264991"
   
 -   Faça backup de quaisquer personalizações feitas em diretórios virtuais existentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no IIS.  
   
--   Remova certificados SSL inválidos.  Inclusive certificados expirados que você não planeja atualizar antes de atualizar o Reporting Services.  Certificados inválidos provocarão falha na atualização e uma mensagem de erro semelhante à seguinte será gravada no arquivo de log do Reporting Services: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Não há um certificado SSL (protocolo SSL) configurado no site.** .  
+-   Remova certificados SSL inválidos.  Inclusive certificados expirados que você não planeja atualizar antes de atualizar o Reporting Services.  Certificados inválidos causarão falha na atualização, e uma mensagem de erro semelhante à seguinte será gravada no arquivo de Log do Reporting Services: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: um certificado SSL (protocolo SSL) não está configurado no site**.  
   
  Antes de atualizar um ambiente de produção, execute sempre uma atualização de teste em um ambiente de pré-produção que tenha a mesma configuração do ambiente de produção.  
   
@@ -100,8 +100,8 @@ ms.locfileid: "68264991"
 -   Você deseja migrar uma implantação do SharePoint 2010 do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para o SharePoint 2013/2016. O SharePoint 2013/2016 não dá suporte à atualização in-loco do SharePoint 2010. Para obter mais informações, veja [Migrar uma instalação do Reporting Services &#40;Modo do SharePoint&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
   
-##  <a name="bkmk_native_scenarios"></a> Atualização do modo nativo e cenários de migração  
- **Atualização:** a atualização in-loco para o modo nativo é o mesmo processo para cada uma das versões compatíveis listadas anteriormente neste tópico. Execute o assistente de instalação do SQL Server ou uma instalação pela linha de comando. Após a instalação, o banco de dados do servidor de relatório será automaticamente atualizado para o novo esquema de banco de dados do servidor de relatório. Para obter mais informações, veja a seção [Atualização in-loco](#bkmk_inplace_upgrade) neste tópico.  
+##  <a name="native-mode-upgrade-and-migration-scenarios"></a><a name="bkmk_native_scenarios"></a> Atualização do modo nativo e cenários de migração  
+ **Atualização:** a atualização in-loco para modo nativo é o mesmo processo para cada versão com suporte que foi listada anteriormente neste tópico. Execute o assistente de instalação do SQL Server ou uma instalação pela linha de comando. Após a instalação, o banco de dados do servidor de relatório será automaticamente atualizado para o novo esquema de banco de dados do servidor de relatório. Para obter mais informações, veja a seção [Atualização in-loco](#bkmk_inplace_upgrade) neste tópico.  
   
  O processo de atualização começa quando você seleciona uma instância existente do servidor de relatório a ser atualizada.  
   
@@ -129,10 +129,10 @@ ms.locfileid: "68264991"
   
 8.  A Instalação mescla configurações nos arquivos de configuração. Quando você utiliza como base os arquivos de configuração da versão atual, são adicionadas novas entradas. As entradas obsoletas não são removidas, mas não serão mais lidas pelo servidor de relatório depois que a atualização for concluída. A atualização não excluirá arquivos de log antigos, o arquivo RSWebApplication.config obsoleto ou as configurações de diretório virtual no IIS. A atualização não removerá versões mais antigas do Designer de Relatórios, Management Studio ou outras ferramentas de cliente. Se você não mais precisar deles, certifique-se de remover esses arquivos e ferramentas depois que a atualização for concluída.  
   
- **Migração:** migrar uma versão anterior de uma instalação no modo nativo para o SQL Server Reporting Services exige as mesmas etapas para todas as versões compatíveis listadas anteriormente neste tópico. Para obter mais informações, veja [Migrar uma instalação do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+ **Migração:** migrar uma versão anterior de uma instalação no modo nativo para o SQL Server Reporting Services exige as mesmas etapas para todas as versões com suporte listadas anteriormente neste tópico. Para obter mais informações, veja [Migrar uma instalação do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
   
-##  <a name="bkmk_native_scaleout"></a> Atualizar uma implantação em expansão dos Reporting Services em modo nativo  
+##  <a name="upgrade-a-reporting-services-native-mode-scale-out-deployment"></a><a name="bkmk_native_scaleout"></a> Atualizar uma implantação em expansão dos Reporting Services em modo nativo  
  Veja a seguir um resumo de como atualizar uma implantação de modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que é dimensionada para mais de um servidor de relatório. Esse processo requer o tempo de inatividade da implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
 1.  Faça backup dos bancos de dados do servidor de relatório e das chaves de criptografia. Para obter mais informações, consulte [Operações de backup e restauração do Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) e [Adicionar e remover chaves de criptografia para implantação escalável &#40; 	Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
@@ -145,7 +145,7 @@ ms.locfileid: "68264991"
   
      Para cada servidor, repita as etapas de atualização e expansão.  
   
-##  <a name="bkmk_sharePoint_scenarios"></a> Atualização do modo do SharePoint e cenários de migração  
+##  <a name="sharepoint-mode-upgrade-and-migration-scenarios"></a><a name="bkmk_sharePoint_scenarios"></a> Atualização do modo do SharePoint e cenários de migração  
  As seções a seguir descrevem os problemas e as etapas básicas necessárias para atualizar ou migrar de versões especificadas do modo do SharePoint do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para o modo do SharePoint do SQL Server Reporting Services [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Há dois componentes de instalação para atualizar uma implantação do modo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint.  
@@ -167,7 +167,7 @@ ms.locfileid: "68264991"
   
  **Ambiente final:** SQL Server Reporting Services, SharePoint 2013 ou SharePoint 2016.   
   
--   **SharePoint 2013/2016:** O SharePoint 2013/2016 não dá suporte à atualização in-loco do SharePoint 2010. No entanto, há suporte para o procedimento de **atualização da anexação do banco de dados**  .
+-   **SharePoint 2013/2016:** o SharePoint 2013/2016 não dá suporte à atualização in-loco do SharePoint 2010. No entanto, há suporte para o procedimento de **atualização da anexação do banco de dados**  .
   
      Se você tiver uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada com o SharePoint 2010, não poderá atualizar o servidor do SharePoint in-loco. No entanto, você pode migrar bancos de dados de conteúdo e bancos de dados de aplicativo de serviço do farm do SharePoint 2010 para um farm do SharePoint 2013/2016.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "68264991"
   
  **Ambiente final:** SQL Server Reporting Services, SharePoint 2013 ou SharePoint 2016.   
   
--   **SharePoint 2013/2016:** O SharePoint 2013/2016 não dá suporte à atualização in-loco do SharePoint 2010. No entanto, há suporte para o procedimento de **atualização da anexação do banco de dados**  .
+-   **SharePoint 2013/2016:** o SharePoint 2013/2016 não dá suporte à atualização in-loco do SharePoint 2010. No entanto, há suporte para o procedimento de **atualização da anexação do banco de dados**  .
   
      Se você tiver uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada com o SharePoint 2010, não poderá atualizar o servidor do SharePoint in-loco. No entanto, você pode migrar bancos de dados de conteúdo e bancos de dados de aplicativo de serviço do farm do SharePoint 2010 para um farm do SharePoint 2013/2016.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "68264991"
   
  **Ambiente final:** SQL Server Reporting Services, SharePoint 2013 ou SharePoint 2016.  
  
--   **SharePoint 2013/2016:** O SharePoint 2013/2016 não dá suporte à atualização in-loco do SharePoint 2010. No entanto, há suporte para o procedimento de **atualização da anexação do banco de dados**  .
+-   **SharePoint 2013/2016:** o SharePoint 2013/2016 não dá suporte à atualização in-loco do SharePoint 2010. No entanto, há suporte para o procedimento de **atualização da anexação do banco de dados**  .
 
     O SharePoint deve ser migrado primeiro antes da atualização do Reporting Services.
   
@@ -194,7 +194,7 @@ ms.locfileid: "68264991"
 -   Execute a instalação do SQL Server Reporting Services para atualizar do modo do SharePoint em cada ‘servidor de relatório’. O assistente de instalação do SQL Server instalará o Serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e criará um novo aplicativo de Serviço. 
   
   
-##  <a name="bkmk_migration_considerations"></a> Considerações para uma migração  
+##  <a name="considerations-for-a-migration"></a><a name="bkmk_migration_considerations"></a> Considerações para uma migração  
  Ao mover dados de aplicativo, você deve estar atento às seguintes preocupações e restrições:  
   
 -   A proteção da chave de criptografia inclui um hash que incorpora a identidade da máquina.  
@@ -208,9 +208,9 @@ ms.locfileid: "68264991"
   
  Para restabelecer a criptografia reversível no novo computador do servidor de relatório, restaure a chave da qual fez backup anteriormente. O conjunto de chave completo que é armazenado no banco de dados do servidor de relatório consiste em um valor de chave simétrica e em informações sobre a identidade de serviço usada para restringir o acesso à chave, para que ela possa ser usada somente pela instância do servidor de relatório em que foi armazenada. Durante a restauração da chave, o servidor de relatório substitui as cópias existentes da chave pelas novas versões. A nova versão inclui os valores de identidade da máquina e de serviço, conforme definido no computador atual. Para obter mais informações, consulte estes tópicos:  
   
--   Modo SharePoint: confira a seção “Gerenciamento de chaves” em [Gerenciar um aplicativo de serviço do Reporting Services do SharePoint](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
+-   Modo do SharePoint: confira a seção “Gerenciamento de chaves” de [Gerenciar um aplicativo de serviço SharePoint do Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
--   Modo nativo: confira [Fazer backup e restaurar as chaves de criptografia do Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+-   Modo Nativo: veja [Fazer backup e restaurar as chaves de criptografia do Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   
 ### <a name="fixed-database-name"></a>Nome fixo do banco de dados  
@@ -225,7 +225,7 @@ ms.locfileid: "68264991"
 -   Se houver poucos itens, você poderá republicar relatórios e fontes de dados compartilhadas do Designer de Relatórios, do Designer de Modelo e do Construtor de Relatórios no novo servidor de relatório. Você deve recriar atribuições de função, assinaturas, agendas compartilhadas, agendas de instantâneo de relatório, propriedades personalizadas definidas em relatórios ou outros itens, segurança de item de modelo e propriedades definidas no servidor de relatório. Você perderá os dados do histórico de relatório e do log de execução de relatório.  
   
   
-##  <a name="bkmk_additional_resources"></a> Recursos adicionais  
+##  <a name="additional-resources"></a><a name="bkmk_additional_resources"></a> Recursos adicionais  
   
 > [!NOTE]  
 >  Para obter mais informações sobre a atualização da anexação do banco de dados do SharePoint, consulte o seguinte:  

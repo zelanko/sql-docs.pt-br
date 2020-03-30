@@ -15,10 +15,10 @@ ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e4de9bbecbd7c473780d8baa598246f732b0ebcd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115738"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plano de manutenção (Guia Design)
@@ -69,7 +69,7 @@ ms.locfileid: "68115738"
   
  Depois que uma tarefa de manutenção é colocada na superfície de design, suas propriedades podem ser editadas como necessário. Por exemplo, o banco de dados específico para fazer o backup na tarefa Executar Backup do Banco de Dados é especificado depois que a tarefa é adicionada ao plano. Tarefas na superfície de design que não são configuradas corretamente contêm um ícone vermelho com um x branco.  
   
- Para adicionar uma tarefa a um plano, arraste o ícone da tarefa da caixa de ferramentas **Tarefas do Plano de Manutenção** até a superfície de design do plano ou clique duas vezes na tarefa na caixa de ferramentas, o que adiciona a tarefa à superfície de designer ativa no momento. Se a caixa de ferramentas **Tarefas do Plano de Manutenção** não estiver visível, escolha **Caixa de Ferramentas** no menu **Exibir** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Expanda o nó **Tarefas do Plano de Manutenção** no painel **Caixa de Ferramentas** .  
+ Para adicionar uma tarefa a um plano, arraste o ícone da tarefa da caixa de ferramentas **Tarefas do Plano de Manutenção** até a superfície de design do plano ou clique duas vezes na tarefa na caixa de ferramentas, o que adiciona a tarefa à superfície de designer ativa no momento. Se a caixa de ferramentas **Tarefas do Plano de Manutenção** não estiver visível, escolha **Caixa de Ferramentas** no menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Exibir**do**. Expanda o nó **Tarefas do Plano de Manutenção** no painel **Caixa de Ferramentas** .  
   
  Para remover uma tarefa de um plano, selecione a tarefa na superfície do designer e pressione a tecla **DELETE** ou clique com o botão direito do mouse e clique em **Excluir**.  
   

@@ -11,10 +11,10 @@ ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76941202"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
@@ -29,9 +29,9 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>parâmetros
-$*statement*: uma cadeia de caracteres que contém a instrução SQL.
+$*statement*: uma cadeia de caracteres contendo a instrução SQL.
 
-*key_pair*: uma matriz que contém um nome e valor de atributo. Para obter mais informações, consulte a seção Comentários.
+*key_pair*: uma matriz contendo um nome e valor de atributo. Para obter mais informações, consulte a seção Comentários.
 
 ## <a name="return-value"></a>Valor retornado
 Retorna um objeto PDOStatement em caso de êxito. Em caso de falha, retorna um objeto PDOException ou false, dependendo do valor de `PDO::ATTR_ERRMODE`.
@@ -41,7 +41,7 @@ Os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] não avaliam instru
 
 A tabela a seguir mostra os valores possíveis de *key_pair*.
 
-|Chave|Descrição|
+|Chave|DESCRIÇÃO|
 |-------|---------------|
 |PDO::ATTR_CURSOR|Especifica o comportamento do cursor. O padrão é `PDO::CURSOR_FWDONLY`, um cursor de avanço que não é de rolagem. `PDO::CURSOR_SCROLL` é um cursor de rolagem.<br /><br />Por exemplo, `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />Quando definido como `PDO::CURSOR_SCROLL`, você pode usar `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` para definir o tipo de cursor de rolagem, que está descrito abaixo.<br /><br />Veja [Tipos de cursor &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md) para obter mais informações sobre conjuntos de resultados e cursores no driver PDO_SQLSRV.|
 |PDO::ATTR_EMULATE_PREPARES|Por padrão, esse atributo é false, e pode ser alterado usando o seguinte: `PDO::ATTR_EMULATE_PREPARES => true`. Confira [Emulate Prepare](#emulate-prepare) para saber mais e ver exemplos.|
@@ -49,7 +49,7 @@ A tabela a seguir mostra os valores possíveis de *key_pair*.
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|Especifica o número de casas decimais ao formatar valores monetários buscados. Essa opção só funciona quando `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` é true. Para saber mais, confira [Formatação de cadeias de caracteres decimais e valores monetários (driver PDO_SQLSRV) ](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|Se for True, especifica a execução direta da consulta. False significa uma execução preparada da instrução. Para saber mais sobre `PDO::SQLSRV_ATTR_DIRECT_QUERY`, confira [Execução de instrução direta e execução de instrução preparada no driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (padrão)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Especifica quando recuperar tipos de data e hora como objetos de [DateTime PHP](http://php.net/manual/en/class.datetime.php). Para obter mais informações, confira [Como recuperar os tipos de data e hora como objetos DateTime do PHP usando o Driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Especifica quando recuperar tipos de data e hora como objetos de [DateTime PHP](http://php.net/manual/en/class.datetime.php). Para saber mais, confira [Como recuperar tipos de data e hora como objetos DateTime PHP usando o driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|Lida com buscas numéricas de colunas com tipos SQL numéricos. Para obter mais informações, consulte [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|Especifica quando é apropriado adicionar zeros à esquerda em cadeias de caracteres decimais. Se definida, essa opção habilita a opção `PDO::SQLSRV_ATTR_DECIMAL_PLACES` para formatação de tipos de moeda. Para saber mais, confira [Formatação de cadeias de caracteres decimais e valores monetários (driver PDO_SQLSRV) ](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|Para obter mais informações, consulte [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
@@ -60,7 +60,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
 ```
 A tabela a seguir mostra os valores possíveis para `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE`. Para saber mais sobre os cursores de rolagem, confira [Tipos de cursor &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
 
-|Valor|Descrição|
+|Valor|DESCRIÇÃO|
 |---------|---------------|
 |PDO::SQLSRV_CURSOR_BUFFERED|Cria um cursor estático do lado do cliente (em buffer), que armazena em buffer o conjunto de resultados na memória do computador do cliente.|
 |PDO::SQLSRV_CURSOR_DYNAMIC|Cria um cursor dinâmico (sem buffer) do lado do servidor que permite acessar linhas em qualquer ordem e que refletirá as alterações no banco de dados.|

@@ -11,10 +11,10 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247288"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>componentes e configuração do SQL Server Management Studio
@@ -44,7 +44,7 @@ Esta seção descreve os vários componentes de janela que estão disponíveis n
 
     ![No menu Exibir](media/ssms-configuration/viewmenu.png)
 
-* **Pesquisador de Objetos** (F8): Pesquisador de Objetos é uma exibição de árvore de todos os objetos de banco de dados em um servidor. Essa exibição inclui os bancos de dados do Mecanismo de Banco de Dados do SQL Server, SQL Server Analysis Services, SQL Server Reporting Services e SQL Server Integration Services. O Pesquisador de Objetos inclui informações de todos os servidores conectados a ele. 
+* **Pesquisador de Objetos** (F8): o Pesquisador de Objetos é um modo de exibição de árvore de todos os objetos de banco de dados em um servidor. Essa exibição inclui os bancos de dados do Mecanismo de Banco de Dados do SQL Server, SQL Server Analysis Services, SQL Server Reporting Services e SQL Server Integration Services. O Pesquisador de Objetos inclui informações de todos os servidores conectados a ele. 
 
     ![Pesquisador de Objetos](media/ssms-configuration/objectexplorer.png)
 * **Janela de Consulta** (Ctrl+N): depois de selecionar **Nova Consulta**, insira suas consultas T-SQL (Transact-SQL) nesta janela. Os resultados das suas consultas também são exibidos aqui.

@@ -14,10 +14,10 @@ ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 644136f4f7c0c5ea29e9c198dc3aad2bc1c2d733
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298634"
 ---
 # <a name="azure-subscription-connection-manager"></a>Gerenciador de Conexões da Assinatura do Azure
@@ -25,7 +25,7 @@ ms.locfileid: "71298634"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  O **Gerenciador de conexões de Assinatura do Azure** permite que um pacote SSIS se conecte a uma assinatura do Azure usando os valores especificados para as propriedades: ID da assinatura do Azure e Certificado de gerenciamento.  
+  O **Gerenciador de Conexões da Assinatura do Azure** permite que um pacote do SSIS se conecte a uma assinatura do Azure usando os valores especificados para as propriedades: ID da Assinatura do Azure e Certificado de Gerenciamento.  
   
  O **Gerenciador de conexões da Assinatura do Azure** é um componente do Feature Pack do [SSIS (SQL Server Integration Services) para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
   
