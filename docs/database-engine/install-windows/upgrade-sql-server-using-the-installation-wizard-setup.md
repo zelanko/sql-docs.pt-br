@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bb468aff505b4b12d2eabd64f9512c5d0a18267e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258804"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Fazer upgrade do SQL Server usando o Assistente de Instalação (Instalação)
@@ -41,7 +41,7 @@ O Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 > * [Atualizar o Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [Fazer upgrade do Power Pivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 Você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e execução no compartilhamento remoto, e ser um administrador local.  
   
 > [!WARNING]  
@@ -70,7 +70,7 @@ Você deve executar a Instalação como um administrador. Se você instalar o [!
   
 ## <a name="procedure"></a>Procedimento  
   
-### <a name="to-upgrade-includessnoversionincludesssnoversion-mdmd"></a>Para fazer upgrade do [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
+### <a name="to-upgrade-ssnoversion"></a>Para fazer upgrade do [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, na pasta raiz, clique duas vezes em Setup.exe. Para instalar a partir de um compartilhamento de rede, vá para a pasta raiz no compartilhamento e clique duas vezes em Setup.exe.  
   

@@ -11,10 +11,10 @@ ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.openlocfilehash: ea308fca55cd5cc19a6d8cd74427a87e8fbe9ee2
-ms.sourcegitcommit: efb2bb07700f645b3fbfcb400a0666de01388305
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79319836"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Diretrizes de instalação para SQL Server em Linux
@@ -38,7 +38,7 @@ Para ver outros cenários de implantação, confira:
 
 Para obter respostas a perguntas frequentes, confira as [Perguntas frequentes sobre o SQL Server em Linux](../linux/sql-server-linux-faq.md).
 
-## <a id="supportedplatforms"></a> Plataformas compatíveis
+## <a name="supported-platforms"></a><a id="supportedplatforms"></a> Plataformas compatíveis
 
 O SQL Server é compatível com o Red Hat Enterprise Linux (RHEL), o SUSE Linux Enterprise Server (SLES) e o Ubuntu. Também tem suporte como uma imagem do Docker, que pode ser executada em um Mecanismo do Docker em Linux ou Docker for Windows/Mac.
 
@@ -71,7 +71,7 @@ A Microsoft também dá suporte para implantar e gerenciar contêineres do SQL S
 > [!NOTE]
 > O SQL Server é testado e compatível no Linux para as distribuições listadas anteriormente. Se você optar por instalar o SQL Server em um sistema operacional sem suporte, examine a seção **Política de suporte** da [Política de suporte técnico para Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) para entender as implicações de suporte.
 
-## <a id="system"></a> Requisitos do sistema
+## <a name="system-requirements"></a><a id="system"></a> Requisitos do sistema
 
 O SQL Server tem os seguintes requisitos de sistema para o Linux:
 
@@ -90,11 +90,11 @@ Se você usar compartilhamentos remotos **NFS (Network File System)** em produç
 - Localize somente os diretórios **/var/opt/mssql** na montagem NFS. Não há suporte para outros arquivos, como os binários do sistema SQL Server.
 - Verifique se os clientes NFS usam a opção 'nolock' ao montar o compartilhamento remoto.
 
-## <a id="repositories"></a> Configurar repositórios de origem
+## <a name="configure-source-repositories"></a><a id="repositories"></a> Configurar repositórios de origem
 
 Ao instalar ou atualizar o SQL Server, você obtém a versão mais recente do SQL Server de seu repositório Microsoft configurado. Os guias de início rápido usam o repositório **CU** (Atualização Cumulativa) para o SQL Server. Porém, em vez disso, você pode configurar um repositório de **GDR**. Para obter mais informações sobre repositórios e como configurá-los, confira [Configurar repositórios para SQL Server em Linux.](sql-server-linux-change-repo.md)
 
-## <a id="platforms"></a> Instalar o SQL Server
+## <a name="install-sql-server"></a><a id="platforms"></a> Instalar o SQL Server
 
 Você pode instalar o SQL Server 2017 ou o SQL Server 2019 no Linux por meio da linha de comando. Para obter instruções passo a passo, veja um dos seguintes guias de início rápido:
 
@@ -109,7 +109,7 @@ Você também pode executar o SQL Server em Linux em uma máquina virtual do Azu
 
 Após a instalação, considere fazer alterações de configuração adicionais para obter um desempenho ideal. Para obter mais informações, confira [Práticas recomendadas de desempenho e diretrizes de configuração do SQL Server em Linux](sql-server-linux-performance-best-practices.md).
 
-## <a id="upgrade"></a> Atualizar ou fazer upgrade do SQL Server
+## <a name="update-or-upgrade-sql-server"></a><a id="upgrade"></a> Atualizar ou fazer upgrade do SQL Server
 
 Para atualizar o pacote **mssql-server** para a versão mais recente, use um dos seguintes comandos com base em sua plataforma:
 
@@ -123,7 +123,7 @@ Esses comandos baixam o pacote mais recente e substituem os binários localizado
 
 Para atualizar o SQL Server, primeiro [altere o repositório configurado](sql-server-linux-change-repo.md) para a versão desejada do SQL Server. Em seguida, use o mesmo comando **update** para atualizar sua versão do SQL Server. Isso será possível apenas se o caminho de atualização for compatível entre os dois repositórios.
 
-## <a id="rollback"></a> Reverter o SQL Server
+## <a name="rollback-sql-server"></a><a id="rollback"></a> Reverter o SQL Server
 
 Para reverter ou fazer downgrade do SQL Server para uma versão anterior, use as seguintes etapas:
 
@@ -140,7 +140,7 @@ Para reverter ou fazer downgrade do SQL Server para uma versão anterior, use as
 > [!NOTE]
 > Só há suporte para fazer downgrade para uma liberação dentro da mesma versão principal, como SQL Server 2019.
 
-## <a id="versioncheck"></a> Verificar a versão do SQL Server instalada
+## <a name="check-installed-sql-server-version"></a><a id="versioncheck"></a> Verificar a versão do SQL Server instalada
 
 Para verificar a versão e a edição atuais do SQL Server em Linux, siga este procedimento:
 
@@ -152,7 +152,7 @@ Para verificar a versão e a edição atuais do SQL Server em Linux, siga este p
    sqlcmd -S localhost -U SA -Q 'select @@VERSION'
    ```
 
-## <a id="uninstall"></a> Desinstalar o SQL Server
+## <a name="uninstall-sql-server"></a><a id="uninstall"></a> Desinstalar o SQL Server
 
 Para remover o pacote **mssql-server** no Linux, use um dos seguintes comandos com base em sua plataforma:
 
@@ -168,7 +168,7 @@ A remoção do pacote não exclui os arquivos de banco de dados gerados. Se voc�
 sudo rm -rf /var/opt/mssql/
 ```
 
-## <a id="unattended"></a> Instalação autônoma
+## <a name="unattended-install"></a><a id="unattended"></a> Instalação autônoma
 
 Você pode executar uma instalação autônoma da seguinte maneira:
 
@@ -189,7 +189,7 @@ Para obter um script de exemplo mais detalhado, confira os exemplos a seguir:
 - [Script de instalação autônoma do SUSE](sample-unattended-install-suse.md)
 - [Script de instalação autônoma do Ubuntu](sample-unattended-install-ubuntu.md)
 
-## Instalação offline do <a id="offline"></a>
+## <a name="offline-install"></a>Instalação offline do <a id="offline"></a>
 
 Se o computador Linux não tiver acesso aos repositórios online usados nos [guias de início rápido](#platforms), você poderá baixar os arquivos de pacote diretamente. Esses pacotes estão localizados no repositório da Microsoft, [https://packages.microsoft.com](https://packages.microsoft.com).
 

@@ -16,10 +16,10 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b59d2545358c2536bcbd0dc6d4e5e211e0c76caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082614"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Construtor de Relatórios e SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "77082614"
 > [!NOTE]  
 >  Você pode salvar mapas separadamente de um relatório como partes de relatório. Leia mais sobre as [Partes do relatório](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
-##  <a name="Process"></a> Adicionando um mapa ao relatório  
+##  <a name="adding-a-map-to-your-report"></a><a name="Process"></a> Adicionando um mapa ao relatório  
  Para adicionar um mapa ao relatório, veja aqui uma lista das etapas gerais seguir:  
   
 -   Determine os dados analíticos que você deseja exibir e os tipos de dados espaciais necessários. Por exemplo, para exibir as vendas anuais relativas da loja em um mapa de bolha, você precisa do nome e das vendas da loja para dados analíticos e do nome e do local da loja como latitude e longitude para dados espaciais.  
@@ -49,7 +49,7 @@ ms.locfileid: "77082614"
   
  Para obter mais informações, consulte [Planejar um relatório de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
-##  <a name="AddingData"></a> Adicionando dados a um mapa  
+##  <a name="adding-data-to-a-map"></a><a name="AddingData"></a> Adicionando dados a um mapa  
  Um mapa usa dois tipos de dados: dados espaciais e dados analíticos. Os dados espaciais definem a aparência do mapa, enquanto os dados analíticos fornecem os valores associados ao mapa. Por exemplo, os dados espaciais definem os locais de cidades em uma área, enquanto os dados analíticos fornecem a população de cada cidade.  
   
  Um mapa deve ter dados espaciais; os dados analíticos são opcionais. Por exemplo, você pode adicionar um mapa que exibe apenas os locais de lojas em uma cidade.  
@@ -136,12 +136,12 @@ ms.locfileid: "77082614"
   
  Neste exemplo, o nome da cidade apenas não é o bastante para identificar exclusivamente a população. Por exemplo, há muitas cidades denominadas Albany nos Estados Unidos. Para denominar uma cidade específica, você deve especificar a área além do nome de cidade.  
   
-##  <a name="Viewport"></a> Entendendo o visor do mapa  
+##  <a name="understanding-the-map-viewport"></a><a name="Viewport"></a> Entendendo o visor do mapa  
  Depois que especificar dados do mapa para um relatório, você poderá limitar a área de exibição do mapa especificando um *visor*do mapa. Por padrão, o visor corresponde à mesma área do mapa inteiro. Para cortar o mapa, você pode especificar o centro, o nível de zoom e as coordenadas máxima e mínima que definem a área que você deseja incluir no relatório. Para aprimorar a exibição do mapa no relatório, você pode mover as legendas, a escala de distância e a escala de cores para fora do visor. A figura seguinte mostra um visor:  
   
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   
-##  <a name="TileLayer"></a> Adicionando uma camada de peças de mapa do Bing  
+##  <a name="adding-a-bing-map-tiles-layer"></a><a name="TileLayer"></a> Adicionando uma camada de peças de mapa do Bing  
  Você pode adicionar uma camada para peças de mapa do Bing que fornece um plano de fundo geográfico para a exibição de mapa atual conforme definido pelo visor. Para adicionar uma camada lado a lado, você deve especificar o sistema de coordenadas **geográfico** e o tipo de projeção **Mercator**. Itens lado a lado que correspondem ao centro do visor e ao nível de zoom selecionado são recuperados automaticamente dos Serviços Web Bing Maps.  
   
  Você pode personalizar a camada especificando as opções seguintes:  
@@ -162,7 +162,7 @@ ms.locfileid: "77082614"
   
  Para obter mais informações sobre peças, consulte [Sistema de Peças do Bing Maps](https://go.microsoft.com/fwlink/?linkid=147315). Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
-##  <a name="MapLayers"></a> Entendendo camadas e elementos do mapa  
+##  <a name="understanding-map-layers-and-map-elements"></a><a name="MapLayers"></a> Entendendo camadas e elementos do mapa  
  Um mapa pode ter várias camadas. Há três tipos de camadas: Cada camada exibe um tipo de dados espaciais:  
   
 -   **Camada de polígono.** Exibe contornos das áreas ou marcadores para o ponto central do polígono, que é calculado automaticamente para cada polígono.  
@@ -208,7 +208,7 @@ ms.locfileid: "77082614"
   
  Para obter mais informações, consulte [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
-##  <a name="Legends"></a> Entendendo legendas do mapa, escala de cores e escala de distância  
+##  <a name="understanding-map-legends-color-scale-and-distance-scale"></a><a name="Legends"></a> Entendendo legendas do mapa, escala de cores e escala de distância  
  Você pode adicionar várias legendas a seu relatório para ajudar os usuários a interpretarem um mapa. Os mapas podem incluir os seguintes itens:  
   
 -   **Legendas.** Você pode criar várias legendas. Os itens que são listados em uma legenda são gerados automaticamente com base nas regras que você especifica para elementos do mapa em cada camada. Para cada regra, você especifica a legenda a ser usada para exibir seus itens relacionados. Dessa maneira, você pode atribuir itens de várias camadas à mesma legenda ou a legendas diferentes.  
@@ -219,14 +219,14 @@ ms.locfileid: "77082614"
   
  Você pode posicionar as legendas, a escala de cores e a escala de distância em locais discretos dentro ou fora do visor. Para obter mais informações, consulte [Alterar legendas de mapa, escala de cores e regras associadas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-##  <a name="Troubleshooting"></a> Solucionando problemas de mapas  
+##  <a name="troubleshooting-maps"></a><a name="Troubleshooting"></a> Solucionando problemas de mapas  
  Os relatórios de mapa usam dados espaciais e analíticos de várias fontes de dados. Cada camada do mapa pode usar fontes de dados diferentes. As propriedades de exibição de cada camada seguem uma precedência específica com base nas propriedades da camada, nas regras e nas propriedades do elemento do mapa.  
   
  Se você não visualizar o resultado desejado quando quiser exibir um relatório de mapa, as causas-raiz poderão vir vários problemas. Para ajudá-lo a isolar e entender cada problema, é útil trabalhar com uma camada de cada vez. Use o painel de Mapa para selecionar uma camada e alternar sua visibilidade facilmente.  
   
  Saiba mais sobre problemas com relatório de mapa em [Solucionar problemas de relatórios: Mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
-##  <a name="HowTo"></a> Tópicos de instruções  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Tópicos de instruções  
  Esta seção lista procedimentos que mostram para você, passo a passo, como trabalhar com mapas e camadas do mapa em seus relatórios.  
   
 -   [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
@@ -235,7 +235,7 @@ ms.locfileid: "77082614"
   
 -   [Adicionar locais personalizados a um mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
-##  <a name="Section"></a> Nesta seção  
+##  <a name="in-this-section"></a><a name="Section"></a> Nesta seção  
  [Planejar um relatório de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)  
   
  [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

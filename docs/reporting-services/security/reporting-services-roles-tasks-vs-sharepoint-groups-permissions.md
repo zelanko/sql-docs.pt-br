@@ -17,10 +17,10 @@ ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2200027e65978ea0af8cdcc100cda830e8a35881
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75240624"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Funções-tarefas do Reporting Services versus Grupos-permissões do SharePoint
@@ -38,7 +38,7 @@ ms.locfileid: "75240624"
   
 -   [Comparando tarefas do modo nativo e permissões do SharePoint](#bkmk_compare_tasks_permissions)  
   
-##  <a name="bkmk_compare_tools_terms"></a> Comparar ferramentas de permissão e terminologia  
+##  <a name="compare-permission-tools-and-terminology"></a><a name="bkmk_compare_tools_terms"></a> Comparar ferramentas de permissão e terminologia  
  **Modo Nativo:** Os objetos de permissão do modo nativo (funções e tarefas) do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são criados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e configurados para usuários individuais no Gerenciador de Relatórios.  
   
  **Modo SharePoint:** O modo do SharePoint do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utiliza os recursos de permissão do SharePoint. Os grupos e as permissões do SharePoint são gerenciados da página **Configurações de Site** a seguir.  
@@ -53,7 +53,7 @@ ms.locfileid: "75240624"
   
  Para obter mais informações sobre as permissões do SharePoint, consulte [Níveis de permissão e permissões](https://support.office.com/article/Understand-groups-and-permissions-on-a-SharePoint-site-258E5F33-1B5A-4766-A503-D86655CF950D) e [Determinar níveis de permissão e grupos no SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
-##  <a name="bkmk_compare_roles_groups"></a> Comparar funções do modo nativo e grupos do SharePoint  
+##  <a name="compare-native-mode-roles-and-sharepoint-groups"></a><a name="bkmk_compare_roles_groups"></a> Comparar funções do modo nativo e grupos do SharePoint  
  A tabela a seguir compara as definições de função predefinidas no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo nativo com os grupos padrão do SharePoint. Se os grupos do SharePoint não corresponderem à função específica desejada, crie um grupo personalizado e atribua níveis de permissão no SharePoint.  
   
  **Observação**: Os grupos padrão do SharePoint disponíveis dependem do modelo de site usado para criar o site do SharePoint.  
@@ -68,7 +68,7 @@ ms.locfileid: "75240624"
 |-|Use o grupo **Visualizadores** para conceder permissões para exibir relatórios renderizados. O grupo **Visualizadores** não pode baixar ou exibir o conteúdo de itens de relatório.<br /><br /> **Observação:** No SQL Server 2012 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em diante, o grupo **Visualizadores** não tem permissões para criar assinaturas.|  
 |**Usuário do Sistema** e **Administrador do Sistema**|Estas funções não são necessárias para um servidor de relatório executado no modo do SharePoint. **Usuário do Sistema** e **Administrador do Sistema** correspondem às permissões no nível do farm do SharePoint ou do aplicativo Web. O servidor de relatório não fornece nenhuma funcionalidade que requer autorização nesse nível.|  
   
-##  <a name="bkmk_compare_tasks_permissions"></a> Comparando tarefas do modo nativo e permissões do SharePoint  
+##  <a name="comparing-native-mode-tasks-and-sharepoint-permissions"></a><a name="bkmk_compare_tasks_permissions"></a> Comparando tarefas do modo nativo e permissões do SharePoint  
  A tabela a seguir compara tarefas do modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a permissões do SharePoint. A coluna **Tipo** indica se a tarefa do modo nativo está relacionada a uma função de sistema ou função e itens padrão. As funções do sistema gerenciam permissões em um nível do sistema, por exemplo, agendas compartilhadas.  
   
 |Tarefa de modo nativo|Tipo de função|Permissão equivalente do SharePoint|  

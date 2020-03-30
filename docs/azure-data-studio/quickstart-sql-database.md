@@ -11,17 +11,17 @@ ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
 ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957070"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Início Rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectar-se ao Banco de Dados SQL do Azure e consultá-lo
+# <a name="quickstart-use-name-sos-to-connect-and-query-azure-sql-database"></a>Início Rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectar-se ao Banco de Dados SQL do Azure e consultá-lo
 
 Neste guia de início rápido, você usará [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectar-se a um servidor do Banco de Dados SQL do Azure. Em seguida, executará instruções Transact-SQL (T-SQL) para criar e consultar o banco de dados TutorialDB, que é usado em outros tutoriais [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para concluir este guia de início rápido, você precisa de [!INCLUDE[name-sos](../includes/name-sos-short.md)] e de um servidor do Banco de Dados SQL do Azure.
 

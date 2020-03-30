@@ -13,10 +13,10 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02be70284a4a32c69618659f1271165677628845
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078573"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistente de Mapa e Assistente de Camada do Mapa (Construtor de Relatórios e SSRS)
@@ -100,17 +100,17 @@ ms.locfileid: "77078573"
   
  Para obter mais informações sobre mapas, consulte [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). Confira instruções passo a passo sobre como adicionar um mapa a um relatório no [Tutorial: Relatório de Mapa &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-map-report-report-builder.md).  
   
-##  <a name="SpatialDataSource"></a> Escolha uma fonte de dados espaciais  
+##  <a name="choose-a-source-of-spatial-data"></a><a name="SpatialDataSource"></a> Escolha uma fonte de dados espaciais  
  Nesta página, especifique a fonte de dados espaciais e quais dados espaciais deverão ser incluídos. Os dados espaciais podem vir da galeria de mapas, de um Arquivo de Forma ESRI ou de uma consulta de conjunto de dados que especifique dados espaciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um banco de dados do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou de uma versão posterior.  
   
  Você pode usar a mesma fonte ou uma fonte de dados espaciais diferente para cada camada, mas deverá especificar essa fonte cada vez que adicionar uma camada. Quando os dados espaciais forem da galeria de mapas ou de um Arquivo de Forma ESRI, a fonte de dados espaciais não será um item de relatório separado. Ela não aparece no painel de dados do relatório.  
   
-###  <a name="SpatialData"></a> O que são dados espaciais?  
+###  <a name="what-is-spatial-data"></a><a name="SpatialData"></a> O que são dados espaciais?  
  Dados espaciais contêm coordenadas que definem elementos geográficos ou geométricos. Em um mapa, os dados espaciais definem *elementos do mapa*: polígonos que definem áreas ou formas, linhas que definem rotas ou caminhos e pontos que definem marcadores ou pinos. Os dados espaciais são armazenados em formato binário na fonte de dados e especificados como conjuntos de coordenadas. Por exemplo, um ponto é uma coordenada X e Y (X Y), uma linha corresponde a dois conjuntos de coordenadas ((X1 Y1), (X2 Y2)), um polígono corresponde a quatro ou mais conjuntos de coordenadas em que o primeiro e o último conjunto de coordenadas são iguais ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1)).  
   
  Para obter mais informações, consulte a documentação do tipo de dados espaciais que você está usando.  
   
-###  <a name="MapGallery"></a> What is the map gallery?  
+###  <a name="what-is-the-map-gallery"></a><a name="MapGallery"></a> What is the map gallery?  
  A galeria de mapas contém mapas de relatórios localizados na pasta da galeria de mapas do ambiente de criação de relatórios. Os mapas da galeria o ajudam a começar rapidamente a adicionar mapas a seu relatório. Os mapas predefinidos na galeria são fornecidos por um provedor de mapa.  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ ms.locfileid: "77078573"
   
  Para estender a galeria de mapas, você pode adicionar ou remover relatórios do diretório dessa galeria e adicionar pastas para organizar os mapas. Para obter mais informações, consulte [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-###  <a name="Shapefile"></a> What is an ESRI shapefile?  
+###  <a name="what-is-an-esri-shapefile"></a><a name="Shapefile"></a> What is an ESRI shapefile?  
  Um Arquivo de Forma ESRI é um conjunto de arquivos com dados no formato de dados espaciais de Arquivo de Forma ESRI (Environmental Systems Research Institute, Inc.). Em geral, esse conjunto de arquivos inclui o arquivo *\<filename>* .shp, que contém os dados espaciais e um arquivo de suporte, *\<filename>* .dbf.  
   
  Quando você especifica um arquivo de forma como fonte de dados espaciais e ele está em seu computador local, os dados espaciais são inseridos automaticamente no relatório. Para usar dados espaciais de um arquivo ESRI dinamicamente, faça o seguinte:  
@@ -127,10 +127,10 @@ ms.locfileid: "77078573"
   
  No Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], adicione os arquivos .shp e .dbf ao projeto de relatório e especifique o nome do arquivo .shp como a fonte de dados espaciais.  
   
-###  <a name="GetShapefiles"></a> Onde posso obter arquivos de forma ESRI?  
+###  <a name="where-can-i-get-esri-shapefiles"></a><a name="GetShapefiles"></a> Onde posso obter arquivos de forma ESRI?  
  Há arquivos de forma ESRI disponíveis na Web. Para obter mais informações, consulte [Localizando arquivos de forma ESRI para um mapa](https://go.microsoft.com/fwlink/?linkid=178814).  
   
-###  <a name="SqlServerSpatial"></a> O que é uma consulta espacial do SQL Server?  
+###  <a name="what-is-a-sql-server-spatial-query"></a><a name="SqlServerSpatial"></a> O que é uma consulta espacial do SQL Server?  
  Uma consulta espacial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é uma consulta de conjunto de dados que especifica dados do tipo de dados SQLGeometry ou SQLGeography de um banco de dados relacionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
@@ -140,7 +140,7 @@ ms.locfileid: "77078573"
   
  Para obter mais informações, veja [Tipos de dados espaciais](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
-##  <a name="MapView"></a> Escolha dados espaciais e opções de exibição de mapa  
+##  <a name="choose-spatial-data-and-map-view-options"></a><a name="MapView"></a> Escolha dados espaciais e opções de exibição de mapa  
  Nesta página, você pode definir as seguintes opções:  
   
 -   Defina o centro de exibição e o nível de zoom para os dados espaciais que você selecionou na página anterior do assistente. A exibição que você define se aplica ao mapa inteiro.  
@@ -153,12 +153,12 @@ ms.locfileid: "77078573"
   
 -   Especifique se você deseja incluir um plano de fundo de peças de mapa do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-###  <a name="Viewport"></a> O que é a exibição ou o visor do mapa?  
+###  <a name="what-is-the-map-view-or-viewport"></a><a name="Viewport"></a> O que é a exibição ou o visor do mapa?  
  O visor do mapa define a área do mapa a ser exibida para todas as camadas no relatório.  
   
  Por padrão, as escalas de cores e distância aparecem dentro do visor, e a legenda do mapa aparece fora do visor. Você poderá alterar essas opções do visor depois que concluir o assistente.  
   
-###  <a name="Resolution"></a> O que é resolução e otimização do mapa?  
+###  <a name="what-is-map-resolution-and-optimization"></a><a name="Resolution"></a> O que é resolução e otimização do mapa?  
  Quando alterar a resolução dos dados espaciais que representam linhas ou polígonos, você estará especificando o quão detalhado deve ser o desenho do mapa. Por exemplo, para vistas aéreas de uma região, você precisa de granularidade até cem metros da área da superfície na terra ou a resolução de aproximadamente 1,6 km é suficiente?  
   
  Quando dados espaciais são inseridos no relatório, uma resolução mais alta aumenta o número de elementos necessários para desenhar detalhes nessa resolução. Quando os dados espaciais não são inseridos no relatório, uma resolução mais alta aumenta o tempo necessário para que o processador de relatório calcule as linhas do mapa nessa resolução toda vez que o relatório é exibido.  
@@ -167,14 +167,14 @@ ms.locfileid: "77078573"
   
  À medida que você ajusta o controle deslizante, os dados de visualização no painel do assistente são atualizados para dar a você uma indicação do efeito. Depois que adicionar o mapa ao relatório, você poderá ajustar este valor alterando as opções de visor do mapa.  
   
-###  <a name="Embed"></a> O que faz a inserção de dados espaciais?  
+###  <a name="what-does-embedding-spatial-data-do"></a><a name="Embed"></a> O que faz a inserção de dados espaciais?  
  Quando você insere elementos de mapa de peças de mapa do Bing em um relatório, os dados espaciais são armazenados na definição do relatório.  
   
  Um relatório com um mapa pode usar dados espaciais ou peças de mapa do Bing recuperadas dinamicamente quando o relatório é processado ou em tempo de design e depois inserido na definição do relatório. Elementos de mapa inseridos podem aumentar significativamente o tamanho da definição do relatório, mas reduzem o tempo necessário para exibir o mapa no relatório. Os elementos de mapa dinâmicos reduzem o tamanho da definição do relatório, mas aumentam o tempo necessário para processar e exibir o mapa.  
   
  O bom design de relatório requer que você avalie as desvantagens de dados de mapa estáticos ou dinâmicos e encontre o equilíbrio que funciona para suas circunstâncias. Em geral, mais dados significa que a definição do relatório e o relatório compilado exigirão mais armazenamento no servidor de relatório e tempos de processamento maiores. Sempre é uma prática recomendada cortar dados espaciais, bem como limitar outros dados do relatório, para incluir apenas o que for necessário para o relatório.  
   
-###  <a name="Tiles"></a> O que é um plano de fundo de peças de mapa do Bing?  
+###  <a name="what-is-a-bing-map-tile-background"></a><a name="Tiles"></a> O que é um plano de fundo de peças de mapa do Bing?  
  Para adicionar um plano de fundo de imagem geográfica a seu mapa, selecione a opção de peças de mapa do Bing. O processador de relatório baixa itens dos Serviços Web Bing Maps para a área de mapa e resolução que você especifica nesta página do assistente. Você pode especificar um dos seguintes tipos lado a lado:  
   
 -   **Rodoviário.** Exibe um estilo de mapa rodoviário com plano de fundo branco.  
@@ -189,12 +189,12 @@ ms.locfileid: "77078573"
   
  Para obter mais informações sobre outras maneiras de personalizar uma camada lado a lado, consulte [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-##  <a name="Visualization"></a> Escolha a visualização do mapa  
+##  <a name="choose-map-visualization"></a><a name="Visualization"></a> Escolha a visualização do mapa  
  Nesta página, escolha a camada ou o tipo de mapa a ser adicionado ao seu relatório. Na primeira vez em que executar o assistente, você adicionará o mapa e a primeira camada do mapa ao relatório. Um mapa pode conter várias camadas. Cada camada do mapa exibe um tipo específico de dados espaciais: polígonos, linhas ou pontos.  
   
  O tipo de mapa escolhido dependerá do propósito do mapa e dos dados disponíveis.  
   
-###  <a name="MapType"></a> Qual é a diferença entre um Mapa Básico, um Mapa de Bolha e um Mapa Analítico?  
+###  <a name="what-is-the-difference-among-a-basic-map-a-bubble-map-and-an-analytical-map"></a><a name="MapType"></a> Qual é a diferença entre um Mapa Básico, um Mapa de Bolha e um Mapa Analítico?  
  Um **Mapa Básico** exibe apenas locais. Você pode variar as cores das áreas no mapa por sombra, mas a cor não representa valores de dados analíticos.  
   
  Um **Mapa de Bolha** transmite o valor relativo de uma única agregação de dados analíticos como tamanho de bolha, por exemplo, as vendas da loja. Você pode criar mapas de bolha para polígonos ou pontos. Para polígonos, defina as propriedades de ponto central do polígono; para pontos, defina as propriedades de marcador.  
@@ -203,29 +203,29 @@ ms.locfileid: "77078573"
   
  Para obter mais informações, consulte [Planejar um relatório de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
-##  <a name="AnalyticalData"></a> Escolha o conjunto de dados analíticos  
+##  <a name="choose-the-analytical-dataset"></a><a name="AnalyticalData"></a> Escolha o conjunto de dados analíticos  
  Nesta página, especifique onde obter os dados analíticos a serem exibidos nesta camada do mapa.  
   
  Para exibir os dados de relatório ou qualquer dado analítico em relação ao plano de fundo do mapa, especifique o local em que os dados estão e como estão relacionados aos dados espaciais. Os dados podem vir de um conjunto de dados de relatório existente ou de um novo conjunto de dados para o qual você cria uma consulta. Os dados analíticos existentes podem ser incluídos no Arquivo de Forma ESRI que contém os dados espaciais.  
   
-###  <a name="Diff"></a> Qual é a diferença entre dados espaciais e dados analíticos?  
+###  <a name="what-is-the-difference-between-spatial-data-and-analytical-data"></a><a name="Diff"></a> Qual é a diferença entre dados espaciais e dados analíticos?  
  Dados espaciais consistem em conjuntos de coordenadas que especificam pontos, linhas e polígonos. Os elementos do mapa se baseiam em dados espaciais.  
   
  Os dados analíticos são dados numéricos ou categóricos que você deseja usar para variar a aparência do mapa. Os dados analíticos podem vir de um conjunto de dados de relatório ou podem ser incluídos em dados espaciais de um mapa da galeria de mapas ou de um arquivo de forma ESRI.  
   
-##  <a name="SpecifyMatchFields"></a> Especificar os campos de correspondência  
+##  <a name="specify-the-match-fields"></a><a name="SpecifyMatchFields"></a> Especificar os campos de correspondência  
  Nesta página, crie uma relação entre os dados espaciais e os dados analíticos.  
   
-###  <a name="MatchFields"></a> O que são campos de correspondência?  
+###  <a name="what-are-match-fields"></a><a name="MatchFields"></a> O que são campos de correspondência?  
  Os campos de correspondência permitem que o processador de relatório crie uma relação entre os dados analíticos e os dados espaciais. Esses campos especificam valores exclusivos dentro dos dados analíticos. Por exemplo, o nome da loja talvez não ser exclusivo dentro dos dados, portanto, você poderia especificar uma cidade e o nome da loja.  
   
-##  <a name="ThemeandVisualization"></a> Escolha o tema da cor e a visualização dos dados  
+##  <a name="choose-color-theme-and-data-visualization"></a><a name="ThemeandVisualization"></a> Escolha o tema da cor e a visualização dos dados  
  Nesta página. especifique como visualizar os dados em relação ao plano de fundo do mapa, o tema do mapa, os campos a serem visualizados e o que variar: cor, tamanho, e/ou tipo de marcador.  
   
-###  <a name="Theme"></a> O que faz o tema?  
+###  <a name="what-does-the-theme-do"></a><a name="Theme"></a> O que faz o tema?  
  O tema que você escolhe define valores padrão para cor, borda e fonte. Você poderá alterar essas opções depois que concluir o assistente.  
   
-###  <a name="Legends"></a> Para que servem as legendas e as escalas na Visualização de Mapa?  
+###  <a name="what-are-the-legends-and-scales-in-map-preview-for"></a><a name="Legends"></a> Para que servem as legendas e as escalas na Visualização de Mapa?  
  As legendas ajudam um usuário a interpretar os dados exibidos em um mapa. Um mapa fornece um intervalo de cores, uma escala de distância e uma legenda.  
   
 -   **Intervalo de cores.** O intervalo de cores exibe uma barra de cores com uma escala que fornece um guia para os intervalos de dados determinados pelo processador de relatório com base nas regras que você especifica para a camada.  
@@ -234,7 +234,7 @@ ms.locfileid: "77078573"
   
 -   **Legenda.** A legenda fornece uma guia para ajudar a interpretar o significado de cores, tamanhos, e tipos de marcador em um mapa. Por padrão, todas as regras para todas as camadas exibem intervalos de dados na primeira legenda. Você pode personalizar esta legenda e adicionar legendas após a adição do mapa ao relatório.  
   
-###  <a name="Rules"></a> O que são regras?  
+###  <a name="what-are-rules"></a><a name="Rules"></a> O que são regras?  
  Regras são cálculos que o processador de relatório usa para dividir dados analíticos em intervalos. Você pode especificar regras diferentes para cada camada. O tipo de regras que você pode especificar depende do tipo de dados espaciais na camada:  
   
 -   **Polígonos.** Você pode especificar regras de cor.  

@@ -10,10 +10,10 @@ author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
 ms.openlocfilehash: dc70690bfe3d3d95171c885707b5a195c31b2fc1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75233922"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Como usar o Always Encrypted com o Provedor de Dados do Microsoft .NET para SQL Server
@@ -24,7 +24,7 @@ Este artigo fornece informações sobre como desenvolver aplicativos .NET usando
 
 O Always Encrypted permite que os aplicativos cliente criptografem dados confidenciais e nunca revelem os dados nem as chaves de criptografia para o SQL Server ou o Banco de Dados SQL do Azure. Um driver habilitado para Always Encrypted, como o **Provedor de Dados do Microsoft .NET para SQL Server**, consegue fazer isso ao criptografar e descriptografar dados confidenciais de maneira transparente no aplicativo cliente. O driver determina automaticamente quais parâmetros de consulta correspondem às colunas de banco de dados confidenciais (protegidas com o Always Encrypted) e criptografa os valores desses parâmetros antes de passar os dados para o SQL Server ou o Banco de Dados SQL do Azure. Da mesma forma, o driver descriptografa de modo transparente os dados recuperados das colunas de banco de dados criptografadas nos resultados da consulta. Para obter mais informações, confira [Desenvolver aplicativos usando o Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md) e [Desenvolver aplicativos usando o Always Encrypted com enclaves seguros](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Configure o Sempre Criptografado em seu banco de dados. Isso envolve o provisionamento de chaves do Sempre Criptografado e a configuração de criptografia de colunas de banco de dados selecionadas. Se você ainda não tiver um banco de dados com o Always Encrypted configurado, siga as instruções em [Introdução ao Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted).
 - Verifique se a plataforma .NET necessária está instalada em seu computador de desenvolvimento. Com o [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md), o recurso do Always Encrypted será compatível com o .NET Framework e o .NET Core. É necessário garantir que o [.NET Framework 4.6](https://docs.microsoft.com/dotnet/framework/) (ou superior) ou o [.NET Core 2.1](https://docs.microsoft.com/dotnet/core/) (ou superior) esteja configurado como a versão de destino da plataforma .NET em seu ambiente de desenvolvimento. Caso esteja usando o Visual Studio, confira a [Visão geral de direcionamento do Framework](https://docs.microsoft.com/visualstudio/ide/visual-studio-multi-targeting-overview).

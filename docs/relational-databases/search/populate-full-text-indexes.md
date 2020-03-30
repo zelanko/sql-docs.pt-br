@@ -25,17 +25,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903878"
 ---
 # <a name="populate-full-text-indexes"></a>Popular índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A criação e a manutenção de um índice de texto completo envolvem popular o índice usando um processo chamado *população* (também conhecido como *rastreamento*).  
   
-##  <a name="types"></a> Types of population  
+##  <a name="types-of-population"></a><a name="types"></a> Types of population  
 Um índice de texto completo dá suporte aos seguintes tipos de população:
 -   População **completa**
 -   População automática ou manual com base em **controle de alterações**
@@ -171,7 +171,7 @@ Em alguns casos, a solicitação de uma população incremental resulta em uma p
   
  Para executar uma população incremental, execute uma instrução `ALTER FULLTEXT INDEX` usando a cláusula `START INCREMENTAL POPULATION`.  
   
-###  <a name="create"></a> Criar ou alterar uma agenda de população incremental   
+###  <a name="create-or-change-a-schedule-for-incremental-population"></a><a name="create"></a> Criar ou alterar uma agenda de população incremental   
   
 1.  No Management Studio, no Pesquisador de Objetos, expanda o servidor.  
   
@@ -208,7 +208,7 @@ Em alguns casos, a solicitação de uma população incremental resulta em uma p
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 
-##  <a name="crawl"></a> Solucionar erros em uma população de texto completo (rastreamento)  
+##  <a name="troubleshoot-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a> Solucionar erros em uma população de texto completo (rastreamento)  
 Quando um erro ocorrer durante um rastreamento, o recurso de registro de rastreamento de pesquisa de texto completo cria e mantém um log de rastreamento, que é um texto sem-formatação. Cada log de rastreamento corresponde a um catálogo de texto completo específico. Por padrão, os logs de rastreamento para uma determinada instância (no exemplo, a instância padrão) estão localizados na pasta `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG`.
  
 O arquivo de log de rastreamento segue o seguinte esquema de nomeação:  

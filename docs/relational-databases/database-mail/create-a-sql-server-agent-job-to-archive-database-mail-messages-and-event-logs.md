@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 926822356c6e7f9f4d775ca0710ee2f815c0e7f5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74094491"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Criar um trabalho do SQL Server Agent para arquivar mensagens do Database Mail e logs de eventos
@@ -30,20 +30,20 @@ ms.locfileid: "74094491"
   
 -   **Para mensagens e logs do Archive Database Mail usando:**  [SQL Server Agent](#Process_Overview)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  As novas tabelas para armazenar os dados de arquivo morto devem estar localizadas em um banco de dados de arquivo morto especial. Alternativamente as linhas podem ser exportadas para um arquivo de texto.  
    
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
  No seu ambiente de produção, convém adicionar outras verificações de erros e enviar uma mensagem de email aos operadores, caso o trabalho falhe.  
   
   
-###  <a name="Permissions"></a> Permissões  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  É necessário ser membro da função de servidor fixa **sysadmin** para poder executar os procedimentos armazenados descritos neste tópico.  
   
   
-###  <a name="Process_Overview"></a> Visão geral do processo  
+###  <a name="overview-of-the-process"></a><a name="Process_Overview"></a> Visão geral do processo  
   
 -   O primeiro procedimento cria um trabalho denominado Archive Database Mail com as etapas a seguir.  
   

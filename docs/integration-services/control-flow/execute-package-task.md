@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294189"
 ---
 # <a name="execute-package-task"></a>Tarefa Executar Pacote
@@ -137,13 +137,13 @@ ms.locfileid: "71294189"
   
 -   [Defina as opções na Página Associação de Parâmetros](#parameter)  
   
-###  <a name="open"></a> Abrir o editor da tarefa Executar Pacote  
+###  <a name="open-the-execute-package-task-editor"></a><a name="open"></a> Abrir o editor da tarefa Executar Pacote  
   
 1.  Abra um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] que contém um tarefa Executar Pacote.  
   
 2.  Clique com o botão direito do mouse na tarefa no Designer SSIS e clique em **Editar**.  
   
-###  <a name="general"></a> Definir as opções na página Geral  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Definir as opções na página Geral  
  **Nome**  
  Forneça um nome exclusivo para a tarefa Executar Pacote. Esse nome é usado como rótulo no ícone de tarefa.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "71294189"
  **Descrição**  
  Digite uma descrição para a tarefa Executar Pacote.  
   
-###  <a name="package"></a> Definir as opções na página Pacote  
+###  <a name="set-the-options-on-the-package-page"></a><a name="package"></a> Definir as opções na página Pacote  
  **ReferenceType**  
  Selecione **Referência do Projeto** para pacotes filho que estão no projeto. Selecione **Referência Externa** para pacotes filho localizados fora do pacote  
   
@@ -207,7 +207,7 @@ ms.locfileid: "71294189"
  **PackageNameReadOnly**  
  Exibe o nome do pacote.  
   
-###  <a name="parameter"></a> Defina as opções na Página Associação de Parâmetros  
+###  <a name="set-the-options-on-the-parameter-bindings-page"></a><a name="parameter"></a> Defina as opções na Página Associação de Parâmetros  
  Você pode passar valores do pacote pai ou do projeto para o pacote filho. O projeto deve usar o modelo de implantação de projeto e o pacote filho deve ser contido no mesmo projeto que contém o pacote pai.  
   
  Para obter mais informações sobre conversão de um projeto para o modelo de implantação de projetos, consulte [Implantar projetos e pacotes do SSIS (Integration Services)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  

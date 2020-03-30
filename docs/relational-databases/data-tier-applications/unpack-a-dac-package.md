@@ -14,10 +14,10 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e2be902c241403ec044b3d348f90dc85327b8ad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909532"
 ---
 # <a name="unpack-a-dac-package"></a>Desempacotar um pacote de DAC
@@ -28,10 +28,10 @@ ms.locfileid: "72909532"
   
 2.  **Para desempacotar um DAC usando:**  [Caixa de Diálogo Desempacotar Aplicativo da Camada de Dados](#UnpackDACDial), [Examinar o Conteúdo de um Pacote de DAC](#ExamDACPack)  
 
-##  <a name="Security"></a> Segurança  
+##  <a name="security"></a><a name="Security"></a> Segurança  
  Recomendamos não implantar um pacote de DAC de origens desconhecidas ou não confiáveis. Como os DACs podem conter código mal-intencionado que pode executar código [!INCLUDE[tsql](../../includes/tsql-md.md)] sem finalidade ou provocar erros modificando o esquema. Antes de usar um DAC de uma origem desconhecida ou não confiável, implante-o em uma instância de teste isolada do [!INCLUDE[ssDE](../../includes/ssde-md.md)], desempacote o DAC e examine o código, como procedimentos armazenados ou outro código definido pelo usuário.  
   
-##  <a name="UnpackDACDial"></a> Caixa de diálogo Desempacotar Aplicativo da Camada de Dados  
+##  <a name="unpack-data-tier-application-dialog"></a><a name="UnpackDACDial"></a> Caixa de diálogo Desempacotar Aplicativo da Camada de Dados  
  **Para desempacotar um arquivo do pacote de DAC**  
   
 -   No **Windows Explorer**, navegue até a localização de um arquivo de pacote de DAC (.dacpac).  
@@ -48,7 +48,7 @@ ms.locfileid: "72909532"
   
     -   [Procurar Pasta](#Browse)  
   
-###  <a name="Unpack"></a> Desempacotar Arquivo de Pacote de DAC do Microsoft SQL Server  
+###  <a name="unpack-microsoft-sql-server-dac-package-file"></a><a name="Unpack"></a> Desempacotar Arquivo de Pacote de DAC do Microsoft SQL Server  
  Use esta página para especificar a pasta de destino na qual colocar os arquivos desempacotados e execute a operação e desempacotamento.  
   
  **Os arquivos serão desempacotados nesta pasta:** – Especifique o caminho completo da pasta para os arquivos desempacotados. Se a pasta existir e você conhecer o caminho completo, digite o caminho na caixa. Caso contrário, clique no botão **Procurar** para navegar para uma pasta ou criar uma nova pasta.  
@@ -59,7 +59,7 @@ ms.locfileid: "72909532"
   
  **Cancelar** – Encerra a caixa de diálogo sem desempacotar o pacote de DAC.  
   
-###  <a name="Browse"></a> Procurar Pasta  
+###  <a name="browse-for-folder"></a><a name="Browse"></a> Procurar Pasta  
  Use esta página para escolher a pasta de destino para a operação de desempacotamento. Como opção, você também pode criar uma nova pasta.  
   
  **Lista de pastas** – Exibe a hierarquia de arquivos de seu computador. Expanda os nós para navegar para a pasta na qual desempacotar o pacote de DAC. Clique na pasta e, em seguida, clique em **OK**.  
@@ -70,7 +70,7 @@ ms.locfileid: "72909532"
   
  **Cancelar** – Encerra a caixa de diálogo sem selecionar uma pasta.  
   
-##  <a name="ExamDACPack"></a> Examinar o Conteúdo de um Pacote de DAC  
+##  <a name="examine-the-contents-of-a-dac-package"></a><a name="ExamDACPack"></a> Examinar o Conteúdo de um Pacote de DAC  
  Depois de desempacotar o pacote, você poderá examinar os arquivos gerados pela caixa de diálogo **Desempacotar Aplicativo da Camada de Dados** . A caixa de diálogo cria os arquivos a seguir na pasta de destino selecionada:  
   
 1.  Um script do Transact-SQL que contém as instruções para criar os objetos definidos no DAC. O nome do arquivo é *DACName*.sql, em que *DACName* é o nome do DAC.  
