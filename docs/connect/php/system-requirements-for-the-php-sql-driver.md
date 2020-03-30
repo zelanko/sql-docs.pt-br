@@ -13,10 +13,10 @@ author: MightyPen
 ms.reviewer: carlrab
 ms.author: genemi
 ms.openlocfilehash: f384e121d3b4ce0aa7ebcb380ebe5eaaa0ee3d45
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76917818"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Requisitos do sistema para os Microsoft Drivers for PHP for SQL Server
@@ -46,7 +46,7 @@ Para obter informações sobre como baixar e instalar os últimos binários est�
 
 Caso esteja baixando a versão Windows do driver em uma versão de 64 bits do Windows, o instalador de ODBC de 64 bits instalará os drivers de 32 bits e de 64 bits. Caso tenha uma versão de 32 bits do Windows, use o instalador ODBC x86. Em plataformas não Windows, somente as versões de 64 bits do driver estão disponíveis.
 
-|Versão do driver PHP para SQL Server &#8594;<br />&#8595; Versão do ODBC Driver|5.8|5.6|5,3|5.2|4.3|4,0|3.2|
+|PHP para a versão &#8594; do driver do SQL Server<br />&#8595; Versão do ODBC Driver|5.8|5.6|5,3|5.2|4.3|4,0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |ODBC Driver 17+ |S|S|S|S| | | |
 |ODBC Driver 13.1|S|S|S|S|S|S| |
@@ -59,7 +59,7 @@ Caso esteja usando o driver SQLSRV, o [sqlsrv_client_info](../../connect/php/sql
 
 Para obter informações sobre como usar o PHP com o Banco de Dados SQL do Microsoft Azure, confira [Como se conectar ao Banco de Dados SQL do Azure](../../connect/php/connecting-to-microsoft-azure-sql-database.md).
 
-|Versão do driver PHP para SQL Server &#8594;<br />&#8595; Versão do SQL Server|5.8|5.6|5,3|5.2|4.3|4,0|3.2|
+|PHP para a versão &#8594; do driver do SQL Server<br />&#8595; Versão do SQL Server|5.8|5.6|5,3|5.2|4.3|4,0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Banco de Dados SQL do Azure (todas as opções de implantação)        |S|S|S|S| | | |
 |Azure SQL Synapse  |S|S|S|S| | | |

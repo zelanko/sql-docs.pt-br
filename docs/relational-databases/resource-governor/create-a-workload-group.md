@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 237ec09347ab139aabcc9f475f5e3b64aba0f054
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73633009"
 ---
 # <a name="create-a-workload-group"></a>Criar um grupo de carga de trabalho
@@ -28,9 +28,9 @@ ms.locfileid: "73633009"
   
 -   **Para criar um grupo de carga de trabalho usando:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições
 
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
   
@@ -38,11 +38,11 @@ ms.locfileid: "73633009"
   
  A criação de índice pode usar mais workspace de memória do que aquela inicialmente concedida a fim de melhorar o desempenho. Esse tratamento especial tem suporte do Administrador de Recursos. No entanto, a concessão inicial e qualquer concessão de memória adicional estão limitadas pelas configurações de pool de recursos e de grupo de cargas de trabalho.  
   
-###  <a name="Permissions"></a> Permissões
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões
 
  Criar um grupo de cargas de trabalho exige permissão CONTROL SERVER.  
   
-##  <a name="CreRPProp"></a> Criar um grupo de cargas de trabalho usando o SQL Server Management Studio
+##  <a name="create-a-workload-group-using-sql-server-management-studio"></a><a name="CreRPProp"></a> Criar um grupo de cargas de trabalho usando o SQL Server Management Studio
 
  **Para criar um grupo de cargas de trabalho usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "73633009"
   
 7.  Para salvar as alterações, clique em **OK**  
 
-##  <a name="CreRPTSQL"></a> Criar grupo de cargas de trabalho usando Transact-SQL  
+##  <a name="create-a-workload-group-using-transact-sql"></a><a name="CreRPTSQL"></a> Criar grupo de cargas de trabalho usando Transact-SQL  
  **Para criar um grupo de cargas de trabalho usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  Execute a instrução CREATE WORKLOAD GROUP que especifica os valores de propriedade a serem definidos.  

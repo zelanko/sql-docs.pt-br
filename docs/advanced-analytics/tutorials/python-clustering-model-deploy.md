@@ -12,10 +12,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727142"
 ---
 # <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Tutorial: Implantar um modelo em Python para categorizar clientes com os Serviços de Machine Learning do SQL Server
@@ -41,13 +41,13 @@ Na [parte dois](python-clustering-model-prepare-data.md), você aprendeu a prepa
 
 Na [parte três](python-clustering-model-build.md), você aprendeu a criar e treinar um modelo de clustering K-means em Python.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 * A parte quatro desta série de tutoriais pressupõe que você cumpriu os pré-requisitos da [**parte um**](python-clustering-model.md)e concluiu as etapas na [**parte dois**](python-clustering-model-prepare-data.md) e na [**parte três**](python-clustering-model-build.md).
 
 ## <a name="create-a-stored-procedure-that-generates-the-model"></a>Criar o procedimento armazenado que gera o modelo
 
-Execute o seguinte script T-SQL para criar o procedimento armazenado. O procedimento recria as etapas que você desenvolveu nas partes um e dois desta série de tutoriais:
+Execute o seguinte script T-SQL para criar o procedimento armazenado. O procedimento recria as etapas que você desenvolveu na primeira e na segunda parte desta série de tutoriais:
 
 * classificar clientes com base em seu histórico de compras e devoluções e
 * gerar quatro clusters de clientes usando um algoritmo K-means

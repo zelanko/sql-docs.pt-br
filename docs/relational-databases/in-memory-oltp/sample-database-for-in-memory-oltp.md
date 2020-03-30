@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef40223423b1645ce2acd7944db2ba32f85d01db
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258780"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Banco de dados de exemplo para OLTP na memória
@@ -43,13 +43,13 @@ ms.locfileid: "75258780"
   
 -   [Utilização de memória e espaço em disco na amostra](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Pré-requisitos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 -   Para testes de desempenho, um servidor com as especificações semelhantes ao ambiente de produção. Para este exemplo específico, você deve ter pelo menos 16 GB de memória disponível para o SQL Server. Para obter diretrizes gerais sobre hardware para o OLTP in-memory, confira a seguinte postagem no blog: [Considerações sobre hardware para OLTP in-memory no SQL Server 2014](blog-hardware-in-memory-oltp.md)
 
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Instalando a amostra do Na Memória OLTP baseada no AdventureWorks  
+##  <a name="installing-the-in-memory-oltp-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Instalando a amostra do Na Memória OLTP baseada no AdventureWorks  
  Siga estas etapas para instalar o exemplo:  
   
 1.  Baixe AdventureWorks2016CTP3.bak e SQLServer2016CTP3Samples.zip localizado em [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) em uma pasta local, por exemplo, 'c:\temp'.  
@@ -80,7 +80,7 @@ ms.locfileid: "75258780"
   
 3.  Para exibir os scripts de exemplo e a carga de trabalho, descompacte o arquivo SQLServer2016CTP3Samples.zip para uma pasta local. Consulte o arquivo In-Memory OLTP\readme.txt para obter instruções sobre como executar a carga de trabalho.  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> Descrição das tabelas e procedimentos de exemplo  
+##  <a name="description-of-the-sample-tables-and-procedures"></a><a name="Descriptionofthesampletablesandprocedures"></a> Descrição das tabelas e procedimentos de exemplo  
  O exemplo cria novas tabelas para produtos e pedidos de vendas, com base em tabelas existentes no AdventureWorks. O esquema das novas tabelas é semelhante às tabelas existentes, com algumas diferenças, conforme explicado a seguir.  
   
  As novas tabelas com otimização de memória têm o sufixo "_inmem". O exemplo também inclui as tabelas correspondentes que têm o sufixo "_ondisk" – essas tabelas podem ser usadas para fazer uma comparação um-para-um entre o desempenho de tabelas com otimização de memória e tabelas baseadas em disco em seu sistema.  
@@ -309,7 +309,7 @@ Os Manuais Online a seguir fornecem mais informações sobre os seguintes tópic
   
     -   Ele se baseia nos procedimentos auxiliares dbo.usp_GenerateCKCheck auxiliares, dbo.usp_GenerateFKCheck e dbo.GenerateUQCheck para gerar o T-SQL necessário para executar as verificações de integridade.  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Medidas de desempenho usando a carga de trabalho de demonstração  
+##  <a name="performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Medidas de desempenho usando a carga de trabalho de demonstração  
  Ostress é uma ferramenta de linha de comando que foi desenvolvida pela equipe de suporte do Microsoft CSS SQL Server. Essa ferramenta pode ser usada para executar consultas ou executar procedimentos armazenados em paralelo. Você pode configurar o número de threads para executar em paralelo determinada instrução T-SQL, e pode especificar quantas vezes a instrução deve ser executada neste thread; ostress girará os threads e executará a instrução em todos os threads em paralelo. Ao término da execução de todos os threads, ostress relatará quanto tempo levou para concluir a execução de todos os threads.  
   
 ### <a name="installing-ostress"></a>Instalando ostress  
@@ -434,7 +434,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
  Recomendamos uma redefinição após cada demonstração executada. Como essa carga de trabalho é somente de inserção, cada execução consumirá mais memória e, portanto, uma redefinição é necessária para evitar ficar sem memória. A quantidade de memória consumida após uma execução é discutida na seção [Utilização de memória após executar a carga de trabalho](#Memoryutilizationafterrunningtheworkload).  
   
-###  <a name="Troubleshootingslow-runningtests"></a> Solução de problemas em testes com execução lenta  
+###  <a name="troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> Solução de problemas em testes com execução lenta  
  Os resultados de testes variam de acordo com o hardware, e também com o nível de simultaneidade usado na execução do teste. Alguns itens a serem pesquisados se os resultados não forem os esperados:  
   
 -   Número de transações simultâneas: Ao executar a carga de trabalho em um único thread, o ganho de desempenho com OLTP in-memory provavelmente será menor que 2X. A contenção de trava se torna um grande problema apenas se há um nível alto de simultaneidade.  
@@ -447,10 +447,10 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
     -   Sintoma: caso quase 100% da CPU seja utilizada ou apresentar um pico de uso ao executar a carga de trabalho em tabelas com otimização de memória, talvez exista um gargalo de E/S de log. Isso pode ser confirmado abrindo o Monitor de Recursos e examinando o comprimento da fila para a unidade de log.  
   
-##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> Utilização de memória e espaço em disco na amostra  
+##  <a name="memory-and-disk-space-utilization-in-the-sample"></a><a name="MemoryandDiskSpaceUtilizationintheSample"></a> Utilização de memória e espaço em disco na amostra  
  A seguir, descrevemos o que esperar em termos de utilização da memória e do espaço em disco para o banco de dados de exemplo. Também mostramos os resultados observados em um servidor de teste com 16 núcleos lógicos.  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Utilização de memória para as tabelas com otimização de memória  
+###  <a name="memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> Utilização de memória para as tabelas com otimização de memória  
   
 #### <a name="overall-utilization-of-the-database"></a>Utilização geral do banco de dados  
  A consulta a seguir pode ser usada para obter a utilização total de memória para OLTP in-memory no sistema.  
@@ -505,7 +505,7 @@ WHERE t.type='U'
   
  O que chama a atenção aqui é o tamanho da memória alocada para índices, comparado ao tamanho dos dados da tabela. Isso ocorre porque os índices de hash no exemplo são dimensionados previamente para um tamanho maior de dados. Observe que os índices de hash têm um tamanho fixo e, assim, seu tamanho não aumentará conforme o tamanho dos dados na tabela.  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> Utilização de memória após executar a carga de trabalho  
+####  <a name="memory-utilization-after-running-the-workload"></a><a name="Memoryutilizationafterrunningtheworkload"></a> Utilização de memória após executar a carga de trabalho  
  Após a inserção de 10 milhões de pedidos de vendas, qualquer utilização de memória superior terá a seguinte aparência:  
   
 ```sql

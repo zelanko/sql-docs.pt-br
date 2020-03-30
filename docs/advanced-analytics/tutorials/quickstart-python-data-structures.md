@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0f04e021664a92241c8c029d296a298b10c142d2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831908"
 ---
 # <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>Início Rápido: estruturas e objetos de dados com o Python nos Serviços de Machine Learning do SQL Server
@@ -35,7 +35,7 @@ Como você faria para expor o único resultado de um cálculo como uma estrutura
 > [!NOTE]
 > Ao retornar datas, o Python no SQL usa DATETIME, que tem um intervalo de datas restrito de 1753-01-01(-53690) a 9999-12-31 (2958463). 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Este início rápido requer acesso a uma instância do SQL Server que tenha os [Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md) com a linguagem Python instalada.
 
@@ -209,7 +209,7 @@ Agora, você produzirá valores específicos de duas séries de resultados matem
 Para saber mais sobre como escrever funções avançadas do Python no SQL Server, siga este início rápido:
 
 > [!div class="nextstepaction"]
-> [Gravar funções avançadas do Python com os Serviços de Machine Learning do SQL Server](quickstart-python-functions.md)
+> [Escrever funções avançadas do Python com os Serviços de Machine Learning do SQL Server](quickstart-python-functions.md)
 
 Para obter mais informações sobre como usar o Python nos Serviços de Machine Learning do SQL Server, confira os seguintes artigos:
 

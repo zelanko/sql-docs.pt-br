@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75952476"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Fixar itens de relatório paginado do Reporting Services em dashboards no Power BI
@@ -28,7 +28,7 @@ ms.locfileid: "75952476"
 
 Fixe um item de relatório paginado local do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em um dashboard no serviço do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)], como um novo bloco.   Para fixar, o administrador precisa primeiro integrar o servidor de relatório ao Azure Active Directory e ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
-##  <a name="bkmk_requirements_to_pin"></a> Requisitos para fixação  
+##  <a name="requirements-to-pin"></a><a name="bkmk_requirements_to_pin"></a> Requisitos para fixação  
   
 -   O servidor de relatório é configurado para integração do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] . Para obter mais informações, consulte [Integração do servidor de relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). Se o servidor de relatório não tiver sido configurado, você não verá o botão **Fixar no Dashboard do Power BI** na barra de ferramentas do Visualizador de Relatórios.  
   
@@ -44,7 +44,7 @@ Fixe um item de relatório paginado local do [!INCLUDE[ssRSnoversion](../include
  
     Consulte a seção “Configurar credenciais armazenadas para uma fonte de dados específica do relatório (Modo nativo)” em [Armazenar credenciais em uma fonte de dados do Reporting Services](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
-##  <a name="bkmk_supported_items"></a> Itens que podem ser fixados  
+##  <a name="items-you-can-pin"></a><a name="bkmk_supported_items"></a> Itens que podem ser fixados  
  Os itens de relatório a seguir podem ser fixados em um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .  Não é possível fixar itens que estão aninhados em uma região de dados. Por exemplo, não é possível fixar um item que está aninhado em uma tabela ou uma lista do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 -   Gráficos  
@@ -54,7 +54,7 @@ Fixe um item de relatório paginado local do [!INCLUDE[ssRSnoversion](../include
 -   Itens que precisam estar no corpo do relatório.  Não é possível fixar itens que estão no cabeçalho ou no rodapé da página.  
 -   É possível fixar itens individuais que estão em um retângulo de nível superior, mas não é possível fixá-los como um único grupo.  
   
-##  <a name="bkmk_to_pin"></a> Para fixar um item de relatório  
+##  <a name="to-pin-a-report-item"></a><a name="bkmk_to_pin"></a> Para fixar um item de relatório  
   
 1. Verifique se você está conectado ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], selecione o item de menu **Minhas Configurações** e entre. Confira [Minhas configurações para integração do &#40;portal Web&#41; do Power BI](my-settings-for-power-bi-integration-web-portal.md) para saber mais.
 
@@ -78,7 +78,7 @@ Fixe um item de relatório paginado local do [!INCLUDE[ssRSnoversion](../include
   
 6. Selecione **Fechar** para retornar o relatório para a exibição normal.  
   
-##  <a name="bkmk_in_the_dashboard"></a> No painel
+##  <a name="in-the-dashboard"></a><a name="bkmk_in_the_dashboard"></a> No painel
 
 Depois que o item de relatório estiver fixado no painel, o bloco se parecerá com outros blocos do painel e não haverá indicação visível de que o bloco é do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. A lista a seguir resume como as propriedades de bloco são populadas no item de relatório.  
   
@@ -94,7 +94,7 @@ No painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , o item de rela
 
 ![ssrs_pinned_tile_details](../reporting-services/media/ssrs-pinned-tile-details.png "ssrs_pinned_tile_details")  
   
-##  <a name="bkmk-troubleshoot"></a> Solucionar problemas  
+##  <a name="troubleshoot-issues"></a><a name="bkmk-troubleshoot"></a> Solucionar problemas  
   
 -   **O botão do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] não é exibido na barra de ferramentas do Visualizador de Relatórios:**  Essa mensagem indica que o servidor de relatório não foi integrado ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Para obter mais informações, consulte [Integração do servidor de relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
@@ -118,7 +118,7 @@ No painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , o item de rela
 
 -   **Os blocos nos aplicativos do Power BI mostram dados obsoletos:** se você fixar um item de relatório do Reporting Services em um dashboard e, em seguida, distribuir esse dashboard em um aplicativo, o item de relatório fixado nesse dashboard não será atualizado. 
 
-##  <a name="bkmk_subscription_management"></a> Gerenciamento de assinatura  
+##  <a name="subscription-management"></a><a name="bkmk_subscription_management"></a> Gerenciamento de assinatura  
  Além dos problemas relacionados à assinatura descritos na seção de solução de problemas, as informações a seguir ajudarão você a manter as assinaturas relacionadas ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].
   
 -   **Nome do item alterado:** Se um item de relatório fixado for renomeado ou excluído, o bloco do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] não será mais atualizado e você verá uma mensagem de erro semelhante a que se segue.  Se você renomear o item de volta para o nome original, a assinatura começará a funcionar novamente e o bloco será atualizado no agendamento das assinaturas.  

@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e67dcbc35bf5af88d2a7fab37f795cd5cc1d55d9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831772"
 ---
 # <a name="quickstart-r-functions-with-sql-server-machine-learning-services"></a>Início Rápido: Funções do R com os Serviços de Machine Learning do SQL Server
@@ -22,7 +22,7 @@ ms.locfileid: "76831772"
 
 Neste guia de início rápido, você aprenderá a usar funções matemáticas e utilitárias do R com os Serviços de Machine Learning do SQL Server. As funções estatísticas muitas vezes são complicadas de implementar no T-SQL, mas isso pode ser feito no R com apenas algumas linhas de código.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Este início rápido requer acesso a uma instância do SQL Server que tenha os [Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md) com a linguagem R instalada.
 

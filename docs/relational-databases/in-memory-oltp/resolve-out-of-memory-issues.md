@@ -11,10 +11,10 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908447"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memória insuficiente
@@ -31,7 +31,7 @@ ms.locfileid: "72908447"
 |[Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível](#bkmk_PageAllocFailure)|O que fazer se você receber a mensagem de erro “Desautorizando as alocações de página do banco de dados ' *\<databaseName>* ' devido à memória insuficiente no pool de recursos ' *\<resourcePoolName>* '”. ...” quando a memória disponível é suficiente para a operação.|
 |[Práticas recomendadas ao usar o OLTP in-memory em um ambiente de VM](#bkmk_VMs)|O que deve ser levado em consideração ao usar o OLTP in-memory em um ambiente virtualizado.|
   
-##  <a name="bkmk_resolveRecoveryFailures"></a> Resolver falhas de restauração de banco de dados devido a OOM  
+##  <a name="resolve-database-restore-failures-due-to-oom"></a><a name="bkmk_resolveRecoveryFailures"></a> Resolver falhas de restauração de banco de dados devido a OOM  
  Ao tentar restaurar um banco de dados, você pode receber a mensagem de erro: "Falha na operação de restauração do banco de dados ' *\<nomedoBancoDeDados>* ' devido à memória insuficiente no pool de recursos ' *\<nomeDoPoolDeRecursos>* '." Isso indica que o servidor não tem memória suficiente disponível para restaurar o banco de dados. 
    
 O servidor restaurado em um banco de dados deve ter memória suficiente disponível para as tabelas com otimização de memória no backup de banco de dados; caso contrário, o banco de dados não será colocado online e será marcado como suspeito.  
@@ -70,19 +70,19 @@ Se o servidor tiver memória física suficiente, mas você ainda estiver vendo e
 -   Aumente **max server memory**.  
     Para obter informações sobre como configurar a opção **max server memory**, consulte o tópico [Opções de configuração de servidor Server Memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
-##  <a name="bkmk_recoverFromOOM"></a> Resolver o impacto de pouca memória ou condições de OOM na carga de trabalho  
+##  <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a><a name="bkmk_recoverFromOOM"></a> Resolver o impacto de pouca memória ou condições de OOM na carga de trabalho  
  Obviamente, é melhor não ficar com pouca memória ou na situação de OOM (memória insuficiente). Um bom planejamento e monitoramento pode ajudar a evitar situações de OOM. Ainda assim, o melhor planejamento nem sempre prevê o que realmente acontece e você pode acabar com pouca memória ou OOM. Há duas etapas para a recuperação de OOM:  
   
 1.  [Abrir uma DAC (Conexão de Administrador Dedicada)](#bkmk_openDAC)  
   
 2.  [Realizar a ação corretiva](#bkmk_takeCorrectiveAction)  
 
-###  <a name="bkmk_openDAC"></a> Abrir uma DAC (Conexão de Administrador Dedicada)  
+###  <a name="open-a-dac-dedicated-administrator-connection"></a><a name="bkmk_openDAC"></a> Abrir uma DAC (Conexão de Administrador Dedicada)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma DAC (conexão de administrador dedicada). A DAC permite que um administrador acesse uma instância em execução do Mecanismo de Banco de Dados do SQL Server para solucionar problemas no servidor, mesmo quando o servidor não está respondendo às conexões de outro cliente. O DAC é disponibilizado pelo utilitário `sqlcmd` e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Para obter orientações sobre como usar o DAC por meio do SSMS ou do `sqlcmd`, consulte [Conexão de diagnóstico para administradores de banco de dados](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).  
   
-###  <a name="bkmk_takeCorrectiveAction"></a> Realizar a ação corretiva  
+###  <a name="take-corrective-action"></a><a name="bkmk_takeCorrectiveAction"></a> Realizar a ação corretiva  
  Para resolver a sua condição de OOM, você precisa ou liberar memória existente reduzindo o uso ou disponibilizar mais memória para as tabelas de memória.  
   
 #### <a name="free-up-existing-memory"></a>Liberar memória existente  
@@ -135,14 +135,14 @@ GO
 >  Se o servidor estiver sendo executado em uma máquina virtual e não for dedicado, defina o valor de MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT como o mesmo.   
 > Confira o tópico [Práticas recomendadas ao usar o OLTP in-memory em um ambiente de VM](#bkmk_VMs) para obter mais informações.  
   
-##  <a name="bkmk_PageAllocFailure"></a> Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível  
+##  <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a><a name="bkmk_PageAllocFailure"></a> Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível  
  Se você receber a mensagem de erro `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'https://go.microsoft.com/fwlink/?LinkId=330673' for more information.` no log de erros quando a memória física disponível for suficiente para alocar a página, talvez isso ocorra porque um Administrador de Recursos está desabilitado. Quando o Administrador de Recursos é desabilitado, MEMORYBROKER_FOR_RESERVE induz artificial à pressão de memória artificial.  
   
  Para resolver isso, é necessário habilitar o Administrador de Recursos.  
   
  Veja [Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md) para obter informações sobre limites e restrições, bem como diretrizes sobre como habilitar o Administrador de Recursos usando o Pesquisador de Objetos, as propriedades do Administrador de Recursos ou o Transact-SQL.  
  
-## <a name="bkmk_VMs"></a> Práticas recomendadas ao usar o OLTP in-memory em um ambiente de VM
+## <a name="best-practices-using-in-memory-oltp-in-a-vm-environment"></a><a name="bkmk_VMs"></a> Práticas recomendadas ao usar o OLTP in-memory em um ambiente de VM
 A virtualização do servidor pode ajudá-lo a diminuir os custos operacionais e de capital com a TI, e atingir uma maior eficiência de TI com processos de provisionamento de aplicativo, manutenção, disponibilidade e backup/recuperação aprimorados. Com os avanços tecnológicos recentes, as cargas de trabalho de banco de dados complexas podem mais ser prontamente consolidadas usando a virtualização. Este tópico abrange as práticas recomendadas para usar o OLTP in-memory do SQL Server em um ambiente virtualizado.
 
 ### <a name="memory-pre-allocation"></a>Pré-alocação de memória

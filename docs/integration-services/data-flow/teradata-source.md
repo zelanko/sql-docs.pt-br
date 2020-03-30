@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f8eba07362ac5780d1d7790d5553aaa397b7847e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245094"
 ---
 # <a name="connect-to-the-teradata-source"></a>Conectar-se à origem do Teradata
@@ -47,18 +47,18 @@ As propriedades personalizadas da origem do Teradata são listadas na tabela a s
 |BufferMaxSize|Integer|O tamanho máximo total do buffer de dados retornado pela função GetBuffer. Esse tamanho deve ser grande o suficiente para manter pelo menos uma linha de dados, incluindo o cabeçalho da linha, a linha de dados real e o trailer do buffer. O tamanho padrão máximo total do buffer de dados é de 16.775.552 bytes. <br>Confira mais informações em [Exportar dados de um banco de dados do Teradata usando GetBuffer](https://docs.teradata.com/reader/TvVKKmxaBAoyETJZD8zz_g/oaxiwNJmnCa6UctY4k498w).|
 |BufferMode|Boolean|O valor padrão é *True*. O valor deverá ser *True* se o recurso PutBuffer for usado. Essa propriedade está no painel **Editor Avançado**.|
 |DataEncryption|Boolean|O valor padrão é *False*. A criptografia de segurança completa será usada se o valor for *True*.|
-|DefaultCodePage|Integer|A página de código a ser usada quando a fonte de dados não tiver informações sobre a página de código. Essa propriedade está no painel **Editor Avançado**.|
+|DefaultCodePage|Integer|A página de código a usar quando a fonte de dados não tiver informações sobre a página de código. Essa propriedade está no painel **Editor Avançado**.|
 |DetailedTracingLevel|Inteiro (enumeração)|Selecione uma das seguintes opções para o rastreamento avançado: <br> *Off*: sem registro em log avançado. <br> *Geral*: o rastreamento geral de atividades específicas do driver é registrado. <br> *CLI*: o rastreamento de atividades relacionadas ao CLIv2 é registrado. <br> *Notificar Método*: o rastreamento de atividades relacionadas ao recurso de notificação é registrado. <br> *Biblioteca Comum*: o rastreamento de atividades da biblioteca opcommon é registrado. <br> *Tudo*: todo o rastreamento de atividades anteriores é registrado. <br> O arquivo de log de rastreamento avançado é definido na propriedade `DetailedTracingFile`. <br> A propriedade `DetailedTracingFile` deverá ser definida se a opção não estiver *desativada*. Essa propriedade está no painel **Editor Avançado**.|
 |DetailedTracingFile|String|O caminho do arquivo de log gerado automaticamente quando *DetailedTracingLevel* não está *desativado*. Essa propriedade está no painel **Editor Avançado**.|
 |DiscardLargeRow|Boolean|O valor padrão é *False*. Removerá as linhas grandes (maiores que 64 KB) se o valor for *True*.|
 |ExtendedStringColumnsAllocation|Boolean|*Fator de Alocação Máxima de Caracteres de Transferência* será usado se o valor for *True*. <br> Esse valor deverá ser definido como *True* se a propriedade `Export Width Table ID` do banco de dados do Teradata estiver definida como *Padrões Máximos*. <br> O valor padrão é *False*.|
-|JobMaxRowSize|Integer|Pode haver suporte ao tamanho máximo da linha. Esse valor será necessário se o valor `DiscardLargeRow` for *True*.<br>Valores válidos:  <br>*64* (valor padrão): pode haver suporte para comprimentos de linha de 2 bytes. <br>*1024*: pode haver suporte para comprimentos de linha de 4 bytes.|
+|JobMaxRowSize|Integer|Pode haver suporte ao tamanho máximo da linha. Esse valor será necessário se o valor `DiscardLargeRow` for *True*.<br>Valores válidos: <br>*64* (valor padrão): pode haver suporte para comprimentos de linha de 2 bytes. <br>*1024*: pode haver suporte para comprimentos de linha de 4 bytes.|
 |MaxSessions|Integer|O número máximo de sessões que estão conectadas. Esse valor deve ser maior que um. O valor padrão é uma sessão para cada AMP (Processador de Módulo de Acesso) disponível.|
 |MinSessions|Integer|O número mínimo de sessões que estão conectadas. Esse valor deve ser maior que um. O valor padrão é uma sessão para cada AMP disponível.|
 |QueryBandSessInfo|Varchar|Uma expressão de banda de consulta baseada em sessão e definida pelo usuário em um formato de cadeia de conexão. Use essa propriedade para monitoramento e governança de estornos. Essa propriedade está no painel **Editor Avançado**.|
 |SpoolMode|Varchar|Os valores válidos são: <br>*Spool*: use o valor padrão *Spool*. <br> *NoSpool*: Não use *Spool*. Esse valor só será válido se o DBS (servidor de banco de dados) der suporte a *NoSpool*. <br>  *NoSpoolOnly*: não use *Spool* de forma alguma. O trabalho finalizará com um erro se DBS não der suporte a *NoSpool*.|
 |SqlCommand|String|O comando SQL a ser executado quando `AccessMode` estiver definido como *Comando SQL*.|
-|TableName|String|O nome da tabela que contém  os dados a serem usados quando `AccessMode` estiver definido como *Nome da Tabela*.|
+|TableName|String|O nome da tabela com os dados a serem usados quando `AccessMode` estiver definido como *Nome da Tabela*.|
 |TenacityHours|Integer|O número de horas que o driver TPT tenta fazer logon quando o número máximo de operações de carregamento/exportação ainda estiver em execução. O valor padrão é *4 horas*. Essa propriedade está no painel **Editor Avançado**.|
 |TenacitySleep|Integer|O número de minutos que o driver TPT pausa antes de tentar fazer logon quando o limite é atingido. O limite é definido pelas propriedades `MaxSessions` e `TenacityHours`. O valor padrão é 6 minutos. Essa propriedade está no painel **Editor Avançado**.|
 |UnicodePassThrough|Boolean|*Desativado* (valor padrão): desabilita a passagem Unicode. <br>*Em*: habilita a passagem Unicode.|

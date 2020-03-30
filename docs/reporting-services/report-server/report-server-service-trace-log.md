@@ -10,17 +10,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68254864"
 ---
 # <a name="report-server-service-trace-log"></a>Log de rastreamento do serviço Servidor de Relatório
 
 Os logs de rastreamento do servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são um arquivo de texto ASCII que contém informações detalhadas de operações do serviço Servidor de Relatório.  As informações nos arquivos incluem operações executadas pelo serviço Web do servidor de relatório, o portal da Web e o processamento em segundo plano. O arquivo de log de rastreamento inclui informações redundantes que estão registradas em outros arquivos de log, além de informações adicionais que, de outro modo, não seriam disponibilizadas. As informações do log de rastreamento serão úteis se você estiver depurando um aplicativo que inclui um servidor de relatório ou investigando um problema específico que foi gravado no log de evento ou de execução. Por exemplo, ao solucionar problemas com assinaturas.  
 
-## <a name="bkmk_view_log"></a> Onde estão os arquivos de log do Servidor de Relatório?
+## <a name="where-are-the-report-server-log-files"></a><a name="bkmk_view_log"></a> Onde estão os arquivos de log do Servidor de Relatório?
 
 Os arquivos de log de rastreamento são `ReportServerService_<timestamp>.log` e `Microsoft.ReportingServices.Portal.WebHost_<timestamp>.log` e estão localizados na seguinte pasta:
 
@@ -28,7 +28,7 @@ Os arquivos de log de rastreamento são `ReportServerService_<timestamp>.log` e 
 
 Os logs de rastreamento são criados diariamente, começando na primeira entrada que ocorre após a meia-noite (horário local) e sempre que o serviço é reiniciado. O carimbo de data e hora é baseado em UTC (Tempo Universal Coordenado). O arquivo está em formato pt-BR. Por padrão, os logs de rastreamento são limitados a 32 megabytes e, por padrão, excluídos depois de 14 dias.  
 
-## <a name="bkmk_trace_configuration_settings"></a> Configurações de rastreamento
+## <a name="trace-configuration-settings"></a><a name="bkmk_trace_configuration_settings"></a> Configurações de rastreamento
 
 O comportamento do log de rastreamento é gerenciado no arquivo de configuração **ReportingServicesService.exe.config**. O arquivo de configuração está localizado no caminho de pasta a seguir:  
   
@@ -68,7 +68,7 @@ O comportamento do log de rastreamento é gerenciado no arquivo de configuraçã
 |**Categoria do componente**|Especifica os componentes para os quais as informações do log de rastreamento são geradas e o nível de rastreamento neste formato:<br /><br /> \<component category>:\<tracelevel><br /><br /> Você pode especificar todos ou alguns componentes (**all**, **RunningJobs**, **SemanticQueryEngine**, **SemanticModelGenerator**). Se não desejar gerar informações para um componente específico, desabilite o rastreamento desse componente (por exemplo, "SemanticModelGenerator:0"). Não desabilite o rastreamento para **all**.<br /><br /> Defina "SemanticQueryEngine:4" se desejar exibir as instruções Transact-SQL geradas para cada consulta semântica. As instruções Transact-SQL são registradas no log de rastreamento. O exemplo a seguir ilustra a configuração que adiciona instruções Transact-SQL ao log:<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|As categorias de componente podem ser definidas como:<br /><br /> <br /><br /> **All** é usado para rastrear atividades gerais dos servidor de relatório para todos os processos que não estão incluídos em categorias específicas.<br /><br /> **RunningJobs** é usado para rastrear uma operação de relatório ou de assinatura em andamento.<br /><br /> **SemanticQueryEngine** é usado para rastrear uma consulta semântica que é processada quando um usuário executa uma exploração de dados ad hoc em um relatório baseado em modelos.<br /><br /> **SemanticModelGenerator** é usado para rastrear a geração do modelo.<br /><br /> **http** é usado para habilitar o arquivo de log HTTP do servidor de relatório. Para obter mais informações, consulte [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md).|  
 |Valor de **tracelevel** para categorias de componentes|\<component category>:\<tracelevel><br /><br /> <br /><br /> Se você não adicionar um nível de rastreamento ao componente, o valor especificado para **DefaultTraceSwitch** será usado. Por exemplo, se você especificar "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator", todos os componentes utilizarão o nível de rastreamento padrão.|Os valores válidos de nível de rastreamento são:<br /><br /> <br /><br /> 0 = Desabilita o rastreamento<br /><br /> 1 = Exceções e reinicializações<br /><br /> 2 = Exceções, reinicializações, avisos<br /><br /> 3 = Exceções, reinicializações, avisos, mensagens de status (padrão)<br /><br /> 4 = Modo detalhado<br /><br /> O valor padrão do servidor de relatório é: "all:3".|  
   
-## <a name="bkmk_add_custom"></a> Adicionando configurações personalizadas para especificar um local de arquivo de despejo  
+## <a name="adding-custom-configuration-setting-to-specify-a-dump-file-location"></a><a name="bkmk_add_custom"></a> Adicionando configurações personalizadas para especificar um local de arquivo de despejo  
 Você pode adicionar uma configuração personalizada para definir o local usado pela ferramenta Dr. Watson para Windows usa para armazenar arquivos de despejo. A configuração personalizada é **Directory**. O exemplo a seguir fornece uma ilustração de como esta configuração é especificada na seção **RStrace** :  
 
 ```
@@ -77,7 +77,7 @@ Você pode adicionar uma configuração personalizada para definir o local usado
   
 Para obter mais informações, consulte o [Artigo 913046 da Base de Dados de Conhecimento](https://support.microsoft.com/?kbid=913046) no site do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-##  <a name="bkmk_log_file_fields"></a> Campos do arquivo de log
+##  <a name="log-file-fields"></a><a name="bkmk_log_file_fields"></a> Campos do arquivo de log
 
 Os campos a seguir podem ser localizados em um log de rastreamento:  
   

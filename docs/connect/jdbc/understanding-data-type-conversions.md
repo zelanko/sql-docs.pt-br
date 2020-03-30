@@ -11,10 +11,10 @@ ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ed91f1b38f68715cd174a96cb2f0364fc060482
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027479"
 ---
 # <a name="understanding-data-type-conversions"></a>Entendendo conversões de tipo de dados

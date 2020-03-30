@@ -10,10 +10,10 @@ helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 946e99884b4c261393c29cd06747823c3aa7e3a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76761800"
 ---
 # <a name="sql-server-privacy-supplement"></a>Suplemento de privacidade do SQL Server
@@ -46,8 +46,8 @@ Informações relacionadas a credenciais usadas para proteger logons, usuários 
 |Cenário |Restrições de acesso |Requisitos de retenção |
 |---------|---------|---------|
 |Essas credenciais nunca saem do computador do usuário por meio de Dados de Uso e Diagnóstico. |- |- |
-|Os despejos de memória podem conter dados de Controle de Acesso. |- |Despejos de memória: máximo de 30 dias. |
-|Essas credenciais nunca saem do computador do usuário por meio dos comentários de uso, a menos que o cliente as insira manualmente |Limitado a uso interno da Microsoft sem acesso de terceiros. |Comentários do usuário: máximo de um ano|
+|Os despejos de memória podem conter dados de Controle de Acesso. |- |Despejos de memória: no máximo 30 dias. |
+|Essas credenciais nunca saem do computador do usuário por meio dos comentários de uso, a menos que o cliente as insira manualmente |Limitado a uso interno da Microsoft sem acesso de terceiros. |Comentários do usuário: no máximo um ano|
 |&nbsp;|&nbsp;|&nbsp;|
 
 ## <a name="customer-content"></a>Conteúdo do cliente
@@ -65,8 +65,8 @@ O conteúdo do cliente é definido como os dados armazenados em tabelas do usuá
 |Cenário  |Restrições de acesso  |Requisitos de retenção |
 |---------|---------|---------|
 |Esses dados não saem do computador do usuário por meio de Dados de Uso e Diagnóstico. |- |- |
-|Os despejos de memória podem conter conteúdo do cliente e serem emitidos para a Microsoft. |- |Despejos de memória: máximo de 30 dias. |
-|Mediante consentimento, os clientes podem enviar comentários do usuário que contêm conteúdo do cliente à Microsoft. |Limitado a uso interno da Microsoft sem acesso de terceiros. A Microsoft pode expor os dados para o cliente original. |Comentários do usuário: máximo de um ano |
+|Os despejos de memória podem conter conteúdo do cliente e serem emitidos para a Microsoft. |- |Despejos de memória: no máximo 30 dias. |
+|Mediante consentimento, os clientes podem enviar comentários do usuário que contêm conteúdo do cliente à Microsoft. |Limitado a uso interno da Microsoft sem acesso de terceiros. A Microsoft pode expor os dados para o cliente original. |Comentários do usuário: no máximo um ano |
 
 ## <a name="end-user-identifiable-information-euii"></a>EUII (informações de identificação do usuário final)
 
@@ -88,9 +88,9 @@ Os dados recebidos de um usuário ou gerados pelo uso do produto.
 |Cenário  |Restrições de acesso  |Requisitos de retenção|
 |---------|---------|---------|
 |Esses dados não saem do computador do usuário por meio de Dados de Uso e Diagnóstico. |- |- |
-|Os despejos de memória podem conter EUII e serem emitidos para a Microsoft. |- |Despejos de memória: máximo de 30 dias |
+|Os despejos de memória podem conter EUII e serem emitidos para a Microsoft. |- |Despejos de memória: no máximo 30 dias |
 |A ID de identificação do cliente pode ser emitida para a Microsoft visando o fornecimento de novos recursos de nuvem e híbridos que o usuário tenha assinado. |- |No momento, esses tipos de recursos de nuvem ou híbridos não existem.|
-|Mediante consentimento, os clientes podem enviar comentários do usuário contendo conteúdo do cliente à Microsoft.|Limitado a uso interno da Microsoft sem acesso de terceiros. A Microsoft pode expor os dados para o cliente original. |Comentários do usuário: máximo de um ano |
+|Mediante consentimento, os clientes podem enviar comentários do usuário contendo conteúdo do cliente à Microsoft.|Limitado a uso interno da Microsoft sem acesso de terceiros. A Microsoft pode expor os dados para o cliente original. |Comentários do usuário: no máximo 1 ano |
 
 ## <a name="internet-based-services-data"></a>Dados de serviços baseados na Internet
 
@@ -132,17 +132,17 @@ Os seguintes são considerados metadados do sistema quando não incluem conteúd
 - Nomes de evento e códigos de erro
 - Configurações e identificação de hardware, como o fabricante OEM
 
-A Microsoft examina os valores de nome de aplicativo definidos por outros programas que usam o SQL Server (exemplo: SharePoint ou programas de terceiros) e inclui essas informações nos Metadados do Sistema enviados à Microsoft quando os Dados de Uso estão habilitados. Os clientes não devem colocar dados pessoais, como informações de identificação do usuário final, nos campos de metadados do sistema nem criar aplicativos projetados para armazenar dados pessoais nesses campos. 
+A Microsoft examina valores de nome de aplicativo definidos por outros programas que usam o SQL Server (exemplo: o Sharepoint ou programas empacotados de terceiros e inclui essas informações nos metadados do sistema enviados à Microsoft quando a opção Dados de Uso está habilitada). Os clientes não devem colocar dados pessoais, como informações de identificação do usuário final, nos campos de metadados do sistema nem criar aplicativos projetados para armazenar dados pessoais nesses campos. 
 
 ### <a name="permitted-usage-scenarios"></a>Cenários de uso permitidos
 
 |Cenário  |Restrições de acesso  |Requisitos de retenção|
 |---------|---------|---------|
 |Podem ser usados pela Microsoft para melhorar recursos e/ou corrigir erros em recursos atuais.|Limitado a uso interno da Microsoft sem acesso de terceiros. |Mín. 90 dias – Máx. três anos |
-|Podem ser usados para fazer sugestões ao cliente.  Por exemplo, "Com base no uso do produto, use o recurso *X* que terá um desempenho melhor". |A Microsoft pode expor os dados para o cliente original, por exemplo, por meio de painéis. |Logs de Segurança de Dados do Cliente: mín. de três anos – máx. de seis anos |
+|Podem ser usados para fazer sugestões ao cliente.  Por exemplo, "Com base no uso do produto, use o recurso *X* que terá um desempenho melhor". |A Microsoft pode expor os dados para o cliente original, por exemplo, por meio de painéis. |Logs de segurança de dados do cliente: mín. três anos – máx. seis anos |
 |Podem ser usados pela Microsoft para o planejamento futuro de produto. |A Microsoft pode compartilhar essas informações com outros fornecedores de hardware e software para melhorar a execução de seus produtos com softwares da Microsoft. |Mín. 90 dias – Máx. três anos|
 |Podem ser usados pela Microsoft para fornecer serviços baseados em nuvem com base nos Dados de Diagnóstico e Uso emitidos. Por exemplo, um painel de cliente mostrando o uso do recurso em todas as instalações do SQL Server em uma organização. |A Microsoft pode expor os dados para o cliente original, por exemplo, por meio de painéis. |Mín. 90 dias – Máx. três anos |
-|Mediante consentimento, os clientes podem enviar comentários do usuário que contêm conteúdo do cliente à Microsoft. |Limitado a uso interno da Microsoft sem acesso de terceiros. A Microsoft pode expor os dados para o cliente original. |Comentários do usuário: máximo de um ano |
+|Mediante consentimento, os clientes podem enviar comentários do usuário que contêm conteúdo do cliente à Microsoft. |Limitado a uso interno da Microsoft sem acesso de terceiros. A Microsoft pode expor os dados para o cliente original. |Comentários do usuário: no máximo um ano |
 |A Microsoft pode usar o nome do banco de dados e o nome do aplicativo para categorizar bancos de dados e aplicativos, como aqueles que possam estar executando algum software fornecido pela Microsoft ou por outras empresas, em categorias conhecidas.|Limitado a uso interno da Microsoft sem acesso de terceiros.|Mín. 90 dias – Máx. três anos |
 
 ## <a name="object-metadata"></a>Metadados de objeto

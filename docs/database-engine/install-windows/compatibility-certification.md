@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73632930"
 ---
 # <a name="compatibility-certification"></a>Certificação de compatibilidade
@@ -57,7 +57,7 @@ Desde que o aplicativo não precise aproveitar os aprimoramentos que estão disp
 
 Para um novo trabalho de desenvolvimento ou quando um aplicativo existente exige o uso de novos recursos, como o [Processamento de Consulta Inteligente](../../relational-databases/performance/intelligent-query-processing.md), bem como algum novo [!INCLUDE[tsql](../../includes/tsql-md.md)], planeje atualizar o nível de compatibilidade do banco de dados para a versão mais recente disponível em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e garanta que o aplicativo funcione com esse nível de compatibilidade. Para obter mais informações sobre como atualizar o nível de compatibilidade do banco de dados, confira [Melhores práticas para atualizar o nível de compatibilidade do banco de dados](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level).
    
-### <a name="queryplan_shape"></a> Por que usar a forma do plano de consulta?      
+### <a name="why-query-plan-shape"></a><a name="queryplan_shape"></a> Por que usar a forma do plano de consulta?      
 Forma do plano de consulta refere-se à representação visual dos vários operadores que compõem um plano de consulta. Isso inclui operadores como buscas, verificações, junções e classificações, bem como as conexões entre eles que indicam o fluxo de dados e a ordem das operações que precisam ser executadas e o conjunto de resultados pretendidos. A forma do plano de consulta é determinada pelo otimizador de consulta.
 
 Para manter o desempenho de consultas previsível durante uma atualização, uma das metas fundamentais é garantir que a mesma forma de plano de consulta seja usada. Isso pode ser feito ao não alterar o nível de compatibilidade do banco de dados imediatamente após uma atualização, mesmo que o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] subjacente tenha versões diferentes. Se nada mais for alterado no ecossistema de execução de consultas, como alterações significativas em recursos disponíveis ou na distribuição de dos dados subjacentes, o desempenho de uma consulta deverá permanecer inalterado. 

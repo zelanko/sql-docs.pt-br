@@ -16,10 +16,10 @@ ms.assetid: 19d60b8b-7e01-4d7b-afa9-f0705d634cf9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4cafa92966962bbb033cfa2642f7d1a0be343ec1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982725"
 ---
 # <a name="getint-method-sqlservercallablestatement"></a>Método getInt (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67982725"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[getInt (int)](../../../connect/jdbc/reference/getint-method-int.md)|Recupera o valor do parâmetro designado como um **int** na linguagem de programação Java, considerando o índice do parâmetro.|  
 |[getInt (java.lang.String)](../../../connect/jdbc/reference/getint-method-java-lang-string.md)|Recupera o valor do parâmetro designado como um **int** na linguagem de programação Java, considerando o nome do parâmetro.|  

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 12dea4163feba35af6346d347503f42ab31c852a
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77173627"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalar as ferramentas de Big Data do SQL Server 2019
@@ -62,7 +62,7 @@ A tabela anterior fornece todas as ferramentas comuns que são usadas com cluste
 
 As ferramentas restantes só são necessárias em determinados cenários. A **CLI do Azure** pode ser usada para gerenciar os serviços do Azure associados a implantações do AKS. **mssql-cli** é uma ferramenta opcional, mas útil, que permite que você se conecte à instância mestra do SQL Server no cluster e execute consultas na linha de comando. O **sqlcmd** e o `curl` são necessários se você planeja instalar dados de exemplo com o script do GitHub.
 
-### <a id="python"></a> Instalar o Python offline
+### <a name="install-python-offline"></a><a id="python"></a> Instalar o Python offline
 
 1. Em um computador com acesso à Internet, baixe um dos seguintes arquivos compactados que contêm o Python:
 

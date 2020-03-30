@@ -24,10 +24,10 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cbb736b77cef9bcb87dfa7cac2cd5a33943ca66
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288180"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controle de acesso de dados confidenciais em pacotes
@@ -61,7 +61,7 @@ ms.locfileid: "79288180"
 ## <a name="protection-levels"></a>Níveis de proteção  
  A tabela a seguir descreve os níveis de proteção que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oferece. Os valores entre parênteses são valores da enumeração do <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel> . Esses valores são exibidos na janela Propriedades usada para configurar as propriedades do pacote ao trabalhar com pacotes no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-|Nível de proteção|Descrição|  
+|Nível de proteção|DESCRIÇÃO|  
 |----------------------|-----------------|  
 |Não salvar dados confidenciais (**DontSaveSensitive**)|Elimina os valores das propriedades confidenciais no pacote quando o pacote é salvo. Este nível de proteção não criptografa dados, em vez disso impede que as propriedades marcadas como confidenciais sejam salvas com o pacote e, consequentemente, tornam os dados confidenciais indisponíveis para os outros usuários. Se um usuário diferente abrir o pacote, as informações confidenciais serão substituídas por espaços em branco e o usuário precisará fornecer as informações confidenciais.<br /><br /> Quando usado com o utilitário **dtutil** (dtutil.exe), esse nível de proteção corresponde ao valor de 0.|  
 |Criptografar tudo com senha (**EncryptAllWithPassword**)|Usa uma senha para criptografar todo o pacote. O pacote é criptografado usando uma senha fornecida pelo usuário quando o pacote é criado ou exportado. Para abrir o pacote no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer ou executá-lo com o utilitário de prompt de comando **dtexec** o usuário deve fornecer a senha do pacote. Sem a senha o usuário não pode acessar ou executar o pacote.<br /><br /> Quando usado com o utilitário **dtutil** , esse nível de proteção corresponde ao valor de 3.|  
@@ -86,7 +86,7 @@ ms.locfileid: "79288180"
   
 3.  Após a implantação dos pacotes no ambiente de produção, a equipe de operações pode criptografar novamente os pacotes implantados atribuindo uma senha forte conhecida somente por eles. Ou, eles podem criptografar os pacotes implantados selecionando **EncryptSensitiveWithUserKey** ou **EncryptAllWithUserKey**e usando as credenciais locais da conta que executará os pacotes.  
 
-## <a name="set_protection"></a> Definir ou alterar o nível de proteção de pacotes
+## <a name="set-or-change-the-protection-level-of-packages"></a><a name="set_protection"></a> Definir ou alterar o nível de proteção de pacotes
   Para controlar o acesso ao conteúdo de pacotes e aos valores confidenciais que eles contêm, como senhas, defina o valor da propriedade **ProtectionLevel** . Os pacotes contidos em um projeto precisam ter o mesmo nível de proteção que o projeto, para criar o projeto. Se você alterou a configuração de propriedade **ProtectionLevel** no projeto, precisa atualizar manualmente a configuração da propriedade para os pacotes.  
   
  Para obter uma visão geral dos recursos de segurança no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Visão geral de segurança &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
@@ -136,7 +136,7 @@ ms.locfileid: "79288180"
   
          Se você usar um comando semelhante em um arquivo em lotes, digite o espaço reservado do arquivo, "%f", como "%%f" no arquivo em lotes.  
 
-## <a name="protection_dialog"></a> Caixa de diálogo Nível de Proteção do Projeto de Pacote
+## <a name="package-project-protection-level-dialog-box"></a><a name="protection_dialog"></a> Caixa de diálogo Nível de Proteção do Projeto de Pacote
   Use a caixa de diálogo **Nível de Proteção do Pacote** para atualizar o nível de proteção de um pacote. O nível de proteção determina o método de proteção, a senha ou a chave de usuário, bem como o escopo de proteção do pacote. A proteção pode incluir todos os dados ou apenas os dados confidenciais.  
   
  Para entender os requisitos e as opções de segurança de pacote, pode ser útil consultar [Visão geral de segurança &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
@@ -151,7 +151,7 @@ ms.locfileid: "79288180"
  **Digite a senha novamente**  
  Digite a senha novamente.  
 
-## <a name="password_dialog"></a> Caixa de diálogo Senha do Pacote
+## <a name="package-password-dialog-box"></a><a name="password_dialog"></a> Caixa de diálogo Senha do Pacote
   Use a caixa de diálogo **Senha do Pacote** para digitar a senha de um pacote criptografado com uma senha. É necessário digitar uma senha se o pacote usar o nível de proteção **Criptografar dados confidenciais com senha**ou **Criptografar tudo com senha** .  
   
 ### <a name="options"></a>Opções  

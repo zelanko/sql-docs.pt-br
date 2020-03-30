@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 905c1dc08c2d2e766425b62d7e0a920730ae2b41
-ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78256987"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Trabalhar com o controle de alterações (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "78256987"
 
   Os aplicativos que usam o controle de alterações devem ser capazes de obter as alterações controladas, aplicá-las a outro repositório de dados e atualizar o banco de dados de origem. Este tópico descreve como executar essas tarefas e também a função que o controle de alterações desempenha quando ocorre um failover e um banco de dados precisa ser restaurado de um backup.  
   
-##  <a name="Obtain"></a> Obter alterações usando as funções de controle de alterações  
+##  <a name="obtain-changes-by-using-change-tracking-functions"></a><a name="Obtain"></a> Obter alterações usando as funções de controle de alterações  
  Descreve como usar as funções de controle de alterações para obter as alterações feitas em um banco de dados e as respectivas informações.  
   
 ### <a name="about-the-change-tracking-functions"></a>Sobre as funções de controle de alterações  
@@ -295,7 +295,7 @@ Habilitar o isolamento de instantâneo e o controle de alterações no mesmo ban
 > [!NOTE]  
 >  Ao optar pela abordagem que funcionará com o aplicativo quando você estiver usando o controle de alterações (ou qualquer mecanismo de controle personalizado), será preciso considerar uma análise significativa. Portanto, é muito mais simples usar o isolamento de instantâneo.  
   
-##  <a name="Handles"></a> Como o controle de alterações controla as alterações em um banco de dados  
+##  <a name="how-change-tracking-handles-changes-to-a-database"></a><a name="Handles"></a> Como o controle de alterações controla as alterações em um banco de dados  
  Alguns aplicativos que usam controle de alterações executam sincronização de duas vias com outro repositório de dados. Isto é, as alterações que são feitas no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são atualizadas no outro armazenamento de dados, e as alterações feitas no outro repositório são atualizadas no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Quando um aplicativo atualiza o banco de dados local com alteração de outro armazenamento de dados, o aplicativo deve executar as seguintes operações:  
@@ -414,7 +414,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  Há uma possibilidade de que a linha, que está sendo atualizada dentro da transação de instantâneo, possa ter sido atualizada em uma outra transação depois que a transação de instantâneo foi iniciada. Nesse caso, um conflito de atualização de isolamento do instantâneo acontecerá e a transação será encerrada. Se isso acontecer, tente novamente a atualização. Isso levará então a detecção de um conflito do controle de alterações e nenhuma linha será alterada.  
   
-##  <a name="DataRestore"></a> Controle de alterações e restauração de dados  
+##  <a name="change-tracking-and-data-restore"></a><a name="DataRestore"></a> Controle de alterações e restauração de dados  
  Os aplicativos que requerem sincronização devem considerar o caso de um banco de dados, com o controle de alterações habilitado, reverter a uma versão anterior dos dados. Isso pode ocorrer quando um banco de dados é restaurado de um backup, quando há failover de um espelho de banco de dados assíncrono ou quando há uma falha ao usar o envio de logs. O cenário a seguir ilustra o assunto:  
   
 1.  A tabela T1 tem as alterações controladas, e a versão válida mínima para tabela é 50.  
