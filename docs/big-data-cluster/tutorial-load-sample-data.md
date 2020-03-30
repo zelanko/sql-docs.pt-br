@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 52285164928e1a4811abc17e931a1af1921c6d07
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831418"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Carregar dados de exemplo em um cluster de Big Data do SQL Server
@@ -25,7 +25,7 @@ Este tutorial explica como usar um script para carregar dados de exemplo em um [
 > [!TIP]
 > É possível encontrar exemplos adicionais para o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] no repositório do GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster). Eles ficam localizados no caminho **sql-server-samples/samples/features/sql-big-data-cluster/** .
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Um cluster de Big Data implantado](deployment-guidance.md)
 - [Ferramentas de Big Data](deploy-big-data-tools.md)
@@ -34,11 +34,11 @@ Este tutorial explica como usar um script para carregar dados de exemplo em um [
    - **sqlcmd**
    - **curl**
  
-## <a id="sampledata"></a> Carregar dados de exemplo
+## <a name="load-sample-data"></a><a id="sampledata"></a> Carregar dados de exemplo
 
 As etapas a seguir usam um script de inicialização para baixar um backup de um banco de dados do SQL Server e carregar os dados em seu cluster de Big Data. Para facilitar o uso, essas etapas foram divididas em seções referentes ao [Windows](#windows) e ao [Linux](#linux). Se você quiser usar o nome de usuário/senha básico como mecanismo de autenticação, defina as variáveis de ambiente AZDATA_USERNAME e AZDATA_PASSWORD antes de executar o script. Caso contrário, o script usará a autenticação integrada para se conectar à instância mestra do SQL Server e ao gateway do Knox. Além disso, o nome DNS deve ser especificado para os pontos de extremidade a fim de usar a autenticação integrada.
 
-## <a id="windows"></a> Windows
+## <a name="windows"></a><a id="windows"></a> Windows
 
 As etapas a seguir descrevem como usar um cliente do Windows para carregar os dados de exemplo em seu cluster de Big Data.
 
@@ -76,7 +76,7 @@ As etapas a seguir descrevem como usar um cliente do Windows para carregar os da
    .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
-## <a id="linux"></a> Linux
+## <a name="linux"></a><a id="linux"></a> Linux
 
 As etapas a seguir descrevem como usar um cliente do Linux para carregar os dados de exemplo em seu cluster de Big Data.
 

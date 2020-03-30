@@ -12,10 +12,10 @@ author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7e7b3f2d8673972100e01413e5688353cb7c87a6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258979"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>Instalar o SQL Server com a Desired State Configuration do PowerShell
@@ -38,7 +38,7 @@ Os seguintes itens são necessários para este passo a passo:
 - A mídia de instalação do SQL Server 2017.
 - O recurso de DSC **SqlServerDsc**.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Na maioria dos casos, a DSC é usada para lidar com pré-requisitos. Porém, no caso desta demonstração, lidaremos com os pré-requisitos manualmente.
 

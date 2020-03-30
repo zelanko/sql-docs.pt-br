@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287940"
 ---
 # <a name="memory-management-architecture-guide"></a>guia de arquitetura de gerenciamento de memória
@@ -124,7 +124,7 @@ A tabela a seguir indica se um tipo específico de alocação de memória se enc
 |Memória de pilhas de thread|Sim|Sim|
 |Alocações diretas do Windows|Sim|Sim|
 
-## <a name="dynamic-memory-management"></a> Gerenciamento de Memória Dinâmica
+## <a name="dynamic-memory-management"></a><a name="dynamic-memory-management"></a> Gerenciamento de Memória Dinâmica
 O comportamento de gerenciamento de memória padrão do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] é adquirir a quantidade de memória necessária sem provocar escassez de memória no sistema. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] faz isto usando as APIs de notificação de memória no Microsoft Windows.
 
 Quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está usando memória dinamicamente, ele consulta o sistema periodicamente para determinar a quantidade de memória livre. Manter essa memória livre impede a paginação do SO (sistema operacional). Se menos memória estiver livre, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] liberará memória para o SO. Se houver mais memória livre, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] poderá alocar mais memória. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adiciona memória apenas quando sua carga de trabalho exige mais. Um servidor em repouso não aumenta o tamanho de seu espaço de endereço virtual.  
@@ -203,7 +203,7 @@ A opção de configuração *min memory per query* estabelece a quantidade míni
 >    
 > Para obter recomendações sobre como usar essa configuração, consulte [Configurar a opção de configuração de servidor min memory per query](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations).
 
-### <a name="memory-grant-considerations"></a>Considerações de concessão de memória
+### <a name="memory-grant-considerations"></a><a name="memory-grant-considerations"></a>Considerações de concessão de memória
 Para **execução em modo de linha**, a concessão de memória inicial não pode ser excedida sob nenhuma condição. Se mais memória do que a concessão inicial for necessária para executar as operações **hash** ou de **classificação**, essas operações serão despejadas para o disco. Uma operação hash que é despejada tem o suporte de um arquivo de trabalho em TempDB, enquanto uma operação de classificação que é despejada tem o suporte de uma [tabela de trabalho](../relational-databases/query-processing-architecture-guide.md#worktables).   
 
 Um despejo que ocorre durante uma operação de classificação é conhecido como um [aviso de classificação](../relational-databases/event-classes/sort-warnings-event-class.md). Avisos de classificação indicam que operações de classificação não cabem na memória. Isso não inclui operações de classificação envolvendo a criação de índices, somente operações de classificação em uma consulta (como uma cláusula `ORDER BY` usada em uma instrução `SELECT`).

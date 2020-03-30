@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286560"
 ---
 # <a name="installation-wizard-help"></a>Ajuda do Assistente de Instalação
@@ -192,7 +192,7 @@ Os diretórios padrão na tabela a seguir podem ser configurados pelo usuário d
 * Para saber mais sobre nomenclatura de ID de instância, locais de arquivos e diretórios, confira [Locais de arquivo para instâncias nomeadas e padrão do SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md)  
 * [Permissões de compartilhamento e de NTFS em um servidor de arquivos](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
 
-## <a name="serverconfig"></a> Configuração do Mecanismo de Banco de Dados – Página Configuração do Servidor
+## <a name="database-engine-configuration---server-configuration-page"></a><a name="serverconfig"></a> Configuração do Mecanismo de Banco de Dados – Página Configuração do Servidor
 
 Use esta página para definir o modo de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e adicionar grupos ou usuários do Windows como administradores do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
@@ -271,7 +271,7 @@ Para saber mais sobre como escolher a autenticação do Windows vs. autenticaç�
 
 Para saber mais sobre como escolher uma conta para executar o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], confira [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
-## <a name ="datadir"></a> Configuração do Mecanismo de Banco de Dados – página Diretórios de Dados
+## <a name="database-engine-configuration---data-directories-page"></a><a name ="datadir"></a> Configuração do Mecanismo de Banco de Dados – página Diretórios de Dados
 
 Use esta página para especificar a localização de instalação para programas e arquivos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Com base no tipo de instalação, o armazenamento com suporte pode incluir disco local, armazenamento compartilhado ou um servidor de arquivos SMB.  
   
@@ -330,7 +330,7 @@ As seguintes recomendações se aplicam aos servidores de arquivos SMB:
   * Em um diretório onde os arquivos do sistema estão localizados
   * Em uma unidade de rede mapeada em uma instância de cluster de failover  
   
-## <a name="a-nametempdba-database-engine-configuration---tempdb-page"></a><a name="tempdb"><a/> Configuração do Mecanismo de Banco de Dados – página TempDB
+## <a name="a-nametempdb-database-engine-configuration---tempdb-page"></a><a name="tempdb"><a/> Configuração do Mecanismo de Banco de Dados – página TempDB
 
 Use esta página para especificar a localização, tamanho, configurações de crescimento e número de arquivos dos dados de **tempdb** e do arquivo de log para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Com base no tipo de instalação, o armazenamento com suporte pode incluir disco local, armazenamento compartilhado ou um servidor de arquivos SMB.  
   
@@ -417,7 +417,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="a-namemaxdopa-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> Página Configuração do Mecanismo de Banco de Dados – MaxDOP
+## <a name="a-namemaxdop-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> Página Configuração do Mecanismo de Banco de Dados – MaxDOP
 
 O **MaxDOP (grau máximo de paralelismo)** determina o número máximo de processadores que uma única instrução pode utilizar. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduz a capacidade de configurar essa opção durante a instalação. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] também detecta automaticamente a configuração de MaxDOP recomendada para o servidor com base no número de núcleos.  
 
@@ -427,7 +427,7 @@ Se essa página for ignorada durante a instalação, o valor de MaxDOP padrão s
 
 * O **MaxDOP (grau máximo de paralelismo)** é o valor do número máximo de processadores a ser usado durante uma execução paralela de uma única instrução. O valor padrão será alinhado às diretrizes de grau máximo da opção de paralelismo especificadas em [Configurar a opção de configuração de servidor grau máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).
 
-## <a name="a-namememorya-database-engine-configuration---memory-page"></a><a name="memory"><a/> Página Configuração do Mecanismo de Banco de Dados – Memória
+## <a name="a-namememory-database-engine-configuration---memory-page"></a><a name="memory"><a/> Página Configuração do Mecanismo de Banco de Dados – Memória
 
 A **memória mínima do servidor** determina o menor limite de memória que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usará para o pool de buffers e outros caches. Tanto o valor padrão quanto o valor recomendado são 0. Para obter mais informações sobre os efeitos de **memória mínima do servidor**, confira o [Guia de arquitetura de gerenciamento de memória](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
 

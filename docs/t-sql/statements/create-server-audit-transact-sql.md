@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982998"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
@@ -174,7 +174,7 @@ CREATE SERVER AUDIT HIPAA_Audit
     WITH ( QUEUE_DELAY = 1000,  ON_FAILURE = SHUTDOWN);  
 ```  
   
-###  <a name="ExampleWhere"></a> C. Criando uma auditoria de servidor que contém uma cláusula WHERE  
+###  <a name="c-creating-a-server-audit-containing-a-where-clause"></a><a name="ExampleWhere"></a> C. Criando uma auditoria de servidor que contém uma cláusula WHERE  
  O exemplo a seguir cria um banco de dados, um esquema e duas tabelas para o exemplo. A tabela chamada `DataSchema.SensitiveData` contém dados confidenciais e o acesso à tabela deve ser registrado na auditoria. A tabela denominada `DataSchema.GeneralData` não contém dados confidenciais. A especificação de auditoria de banco de dados audita acesso a todos os objetos no esquema `DataSchema`. A auditoria de servidor é criada com uma cláusula WHERE que limita a auditoria de servidor apenas à tabela `SensitiveData`. A auditoria de servidor supõe que exista uma pasta de auditoria em `C:\SQLAudit`.  
   
 ```sql  

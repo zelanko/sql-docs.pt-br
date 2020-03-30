@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7975474859081eb5567c2ee12adf26f9e6501556
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72689657"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Configurar a replicação com Grupos de Disponibilidade AlwaysOn
@@ -27,7 +27,7 @@ ms.locfileid: "72689657"
 
   A configuração dos grupos de disponibilidade AlwaysOn e da replicação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envolve sete etapas. Cada etapa está descrita com mais detalhes nas seções a seguir.  
   
-##  <a name="step1"></a> 1. Configurar as publicações de banco de dados e assinaturas  
+##  <a name="1-configure-the-database-publications-and-subscriptions"></a><a name="step1"></a> 1. Configurar as publicações de banco de dados e assinaturas  
  **Configurar o distribuidor**  
   
  O banco de dados de distribuição não pode ser colocado em um grupo de disponibilidade com o SQL Server 2012 e o SQL Server 2014. O SQL 2016 e superiores oferece suporte à colocação do banco de dados de distribuição em um grupo de disponibilidade. Para obter mais informações, confira [Configurar o banco de dados de distribuição em um grupo de disponibilidade](../../../relational-databases/replication/configure-distribution-availability-group.md).
@@ -98,7 +98,7 @@ ms.locfileid: "72689657"
   
 3.  Criar publicações, artigos e assinaturas da replicação. Para obter mais informações sobre como configurar a replicação consulte os objetos Publishing Data e Database.  
   
-##  <a name="step2"></a> 2. Configurar o Grupo de Disponibilidade AlwaysOn  
+##  <a name="2-configure-the-always-on-availability-group"></a><a name="step2"></a> 2. Configurar o Grupo de Disponibilidade AlwaysOn  
  Na réplica primária pretendida, crie o grupo de disponibilidade com o banco de dados publicado (ou a ser publicado) como um banco de dados membro. Se estiver usando o Assistente de Grupo de Disponibilidade, você poderá permitir que o assistente sincronize os bancos de dados de réplica secundária inicialmente ou poderá executar a inicialização manualmente usando backup e restauração.  
   
  Crie um ouvinte de DNS para o grupo de disponibilidade que será usado pelos agentes de replicação para conectar à replicação primária atual. O nome de ouvinte que é especificado será usado como o destino de redirecionamento para o par publicador original/banco de dados publicado. Por exemplo, se você estiver usando o DDL para configurar o grupo de disponibilidade, o seguinte exemplo de código poderá ser usado para especificar um ouvinte de grupo de disponibilidade para um grupo de disponibilidade existente chamado `MyAG`:  
@@ -111,7 +111,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
  Para obter mais informações, consulte [Criação e configuração de Grupos de Disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md).  
 
   
-##  <a name="step3"></a> 3. Verifique se todos os hosts de réplica secundária estão configurados para replicação  
+##  <a name="3-ensure-that-all-of-the-secondary-replica-hosts-are-configured-for-replication"></a><a name="step3"></a> 3. Verifique se todos os hosts de réplica secundária estão configurados para replicação  
  Em cada host de réplica secundária, verifique se o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] foi configurado para oferecer suporte à replicação. A seguinte consulta pode ser executada em cada host de réplica secundária para determinar se a replicação é instalada:  
   
 ```  
@@ -124,7 +124,7 @@ SELECT @installed;
   
  Se *\@installed* for 0, a replicação deverá ser adicionada à instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-##  <a name="step4"></a> 4. Configurar os hosts de réplica secundária como publicadores de replicação  
+##  <a name="4-configure-the-secondary-replica-hosts-as-replication-publishers"></a><a name="step4"></a> 4. Configurar os hosts de réplica secundária como publicadores de replicação  
  Uma réplica secundária não pode agir como um publicador de replicação ou republicador, mas a replicação deve ser configurada de forma que a secundária possa assumir o comando depois de um failover. No distribuidor, configure a distribuição para cada host de réplica secundária. Especifique o mesmo banco de dados de distribuição e diretório de trabalho que foram especificados quando o publicador original foi adicionado ao distribuidor. Se você estiver usando procedimentos armazenados para configurar a distribuição, use **sp_adddistpublisher** para associar os publicadores remotos ao distribuidor. Se foram usados *\@login* e *\@password* para o publicador original, especifique os mesmos valores para cada um quando adicionar os hosts de réplica secundária como publicadores.  
   
 ```  
@@ -151,7 +151,7 @@ EXEC sys.sp_addlinkedserver
     @server = 'MySubscriber';  
 ```  
   
-##  <a name="step5"></a> 5. Redirecionar o publicador original para o nome do ouvinte do AG  
+##  <a name="5-redirect-the-original-publisher-to-the-ag-listener-name"></a><a name="step5"></a> 5. Redirecionar o publicador original para o nome do ouvinte do AG  
  No distribuidor, no banco de dados de distribuição, execute o procedimento armazenado **sp_redirect_publisher** para associar o publicador original e o banco de dados publicado com o nome do ouvinte do grupo de disponibilidade.  
   
 ```  
@@ -163,7 +163,7 @@ EXEC sys.sp_redirect_publisher
     @redirected_publisher = 'MyAGListenerName';  
 ```  
   
-##  <a name="step6"></a> 6. Executar o procedimento armazenado de validação de replicação para verificar a configuração  
+##  <a name="6-run-the-replication-validation-stored-procedure-to-verify-the-configuration"></a><a name="step6"></a> 6. Executar o procedimento armazenado de validação de replicação para verificar a configuração  
  No distribuidor, no banco de dados de distribuição, execute o procedimento armazenado **sp_validate_replica_hosts_as_publishers** para verificar se todos os hosts de réplica estão configurados para servir como publicadores para o banco de dados publicado.  
   
 ```  
@@ -189,10 +189,10 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
  Este comportamento é esperado. Você deve verificar a presença das entradas de servidor de assinante nesses hosts de réplica secundária, consultando as entradas de sysserver diretamente no host.  
   
-##  <a name="step7"></a> 7. Adicionar o publicador original ao Replication Monitor  
+##  <a name="7-add-the-original-publisher-to-replication-monitor"></a><a name="step7"></a> 7. Adicionar o publicador original ao Replication Monitor  
  Em cada réplica de grupo de disponibilidade, adicione o publicador original ao Replication Monitor.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Replicação**  
   
 -   [Mantendo um banco de dados de publicação AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  

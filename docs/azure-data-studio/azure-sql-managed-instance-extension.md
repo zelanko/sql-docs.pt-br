@@ -12,10 +12,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
 ms.openlocfilehash: 2269c594bd0fff036d4fe5d5d722aa5d78d4ca6d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75883993"
 ---
 # <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Painel de instância gerenciada do Banco de Dados SQL do Azure para o Azure Data Studio (versão prévia)

@@ -21,10 +21,10 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140222"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -52,7 +52,7 @@ As agendas específicas do relatório e assinatura são excluídas quando você 
 
 Uma agenda específica do relatório que expirou permanece anexada ao relatório. Você poderá determinar se uma agenda expirou verificando sua data de término. Uma agenda compartilhada expirado permanece na lista Agendas Compartilhadas. O campo Status indica se a agenda expirou. Você pode restabelecer o agendamento estendendo a data de fim, ou pode remover a referência ao agendamento se ele não for mais necessário.
 
-## <a name="bkmk_native"></a> Criar, excluir ou modificar uma agenda compartilhada (portal da Web)
+## <a name="create-delete-or-modify-a-shared-schedule-web-portal"></a><a name="bkmk_native"></a> Criar, excluir ou modificar uma agenda compartilhada (portal da Web)
  A criação e modificação de uma agenda é composta pela definição de opções de frequência que determinam quando a agenda é executada.
 
  Um agendamento pode ser criado ou modificado a qualquer momento. No entanto, se uma agenda começar a ser executada antes de você ter concluído as modificações, será usada a versão anterior da agenda. O agendamento revisado só entra em vigor quando você o salva.
@@ -114,7 +114,7 @@ clique em **Cancelar**
 
  Se uma agenda compartilhada usada por vários relatórios e assinaturas for excluída, o servidor de relatório criará agendas individuais para cada relatório e assinatura que usou anteriormente a agenda compartilhada. Cada nova agenda individual conterá a data, a hora e o padrão de recorrência que foram especificados na agenda compartilhada.
 
-##  <a name="bkmk_sharepoint"></a>Criar e gerenciar agendas compartilhadas (modo do SharePoint)
+##  <a name="create-and-manage-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a>Criar e gerenciar agendas compartilhadas (modo do SharePoint)
  Você deve ser um administrador de site para criar, modificar ou excluir agendamentos compartilhados em um site do SharePoint.
 
  Você pode identificar um agendamento específico pelo nome descritivo. Se um nome não for especificado, um nome padrão será criado com base nos fatos da agenda, por exemplo, o padrão de recorrência ou as datas e horas em que é executado.

@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288740"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Passo a passo: Configurar o Integration Services (SSIS) Scale Out
@@ -43,7 +43,7 @@ Configure o SSIS ([!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md
 
 * [Habilitar o Trabalho de Expansão](#EnableWorker)
 
-## <a name="InstallMaster"></a> Instalar o Mestre de Expansão
+## <a name="install-scale-out-master"></a><a name="InstallMaster"></a> Instalar o Mestre de Expansão
 
 Para configurar o Mestre do Scale Out, você precisa instalar os Serviços de Mecanismo de Banco de Dados, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] e o recurso Mestre do Scale Out do SSIS ao configurar o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. 
 
@@ -91,7 +91,7 @@ Siga as instruções em [Instalar o SQL Server do Prompt de comando](../../datab
     > [!NOTE]
     > Se o Mestre do Scale Out não estiver instalado junto com o Mecanismo de Banco de Dados e a instância do Mecanismo de Banco de Dados for uma instância nomeada, você precisará configurar `SqlServerName` no arquivo de configuração de serviço do Mestre do Scale Out após a instalação. Para obter mais informações, consulte [Mestre do Scale Out](integration-services-ssis-scale-out-master.md).
 
-## <a name="InstallWorker"></a> Instalar o Trabalho de Expansão
+## <a name="install-scale-out-worker"></a><a name="InstallWorker"></a> Instalar o Trabalho de Expansão
  
 Para configurar o Trabalho do Scale Out, você precisa instalar o [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] e seu recurso Trabalho do Scale Out na instalação do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 
@@ -142,20 +142,20 @@ Siga as instruções em [Instalar o SQL Server do Prompt de comando](../../datab
     -   `/ISWORKERSVCMASTER` (opcional)
     -   `/ISWORKERSVCCERT` (opcional)
  
-## <a name="InstallCert"></a> Instalar certificado de cliente do Trabalho de Expansão
+## <a name="install-scale-out-worker-client-certificate"></a><a name="InstallCert"></a> Instalar certificado de cliente do Trabalho de Expansão
 
 Durante a instalação do Trabalho do Scale Out, um certificado de trabalho é criado automaticamente e instalado no computador. Além disso, um certificado do cliente correspondente, SSISScaleOutWorker.cer, é instalado em `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn`. Para que o Mestre do Scale Out autentique o Trabalho do Scale Out, é necessário adicionar esse certificado do cliente ao repositório Raiz do computador local com o Mestre do Scale Out.
   
 Para adicionar o certificado do cliente ao repositório Raiz, clique duas vezes no arquivo .cer e, em seguida, clique em **Instalar Certificado** na caixa de diálogo Certificado. O **Assistente para Importação de Certificados** será aberto.  
 
-## <a name="Firewall"></a> Abrir porta do firewall
+## <a name="open-firewall-port"></a><a name="Firewall"></a> Abrir porta do firewall
 
 No computador do Mestre do Scale Out, abra a porta especificada durante a instalação do Mestre do Scale Out e a porta do SQL Server (1433, por padrão) no Firewall do Windows.
 
 > [!Note]
 > Depois de abrir a porta do firewall, você também precisa reiniciar o serviço Trabalho do Scale Out.
     
-## <a name="Start"></a> Iniciar os serviços Mestre de Expansão e Trabalho de Expansão do SQL Server
+## <a name="start-sql-server-scale-out-master-and-worker-services"></a><a name="Start"></a> Iniciar os serviços Mestre de Expansão e Trabalho de Expansão do SQL Server
 
 Se você não definir o tipo de inicialização dos serviços como **Automático** durante a instalação, inicie os seguintes serviços:
 
@@ -163,18 +163,18 @@ Se você não definir o tipo de inicialização dos serviços como **Automático
 
 -   Trabalho do SQL Server Integration Services Scale Out 14.0 (SSISScaleOutWorker140)
 
-## <a name="EnableMaster"></a> Habilitar o Mestre de Expansão
+## <a name="enable-scale-out-master"></a><a name="EnableMaster"></a> Habilitar o Mestre de Expansão
 
 Ao criar o catálogo do SSISDB no [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)], selecione **Habilitar este servidor como mestre do SSIS Scale Out** na caixa de diálogo **Criar Catálogo**.
 
 Depois que o catálogo for criado, habilite o Mestre do Scale Out com o [Gerenciador do Scale Out](integration-services-ssis-scale-out-manager.md).
 
-## <a name="EnableAuth"></a> Habilitar o modo de autenticação do SQL Server
+## <a name="enable-sql-server-authentication-mode"></a><a name="EnableAuth"></a> Habilitar o modo de autenticação do SQL Server
 Se você não habilitou a autenticação do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] durante a instalação do Mecanismo de Banco de Dados, habilite o modo de autenticação do SQL Server na instância do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] que hospeda o catálogo do SSISDB. 
 
 A execução de pacote não é bloqueada quando a autenticação do SQL Server está desabilitada. No entanto, o log de execução não pode ser gravado no banco de dados SSISDB.
 
-## <a name="EnableWorker"></a> Habilitar o Trabalho de Expansão
+## <a name="enable-scale-out-worker"></a><a name="EnableWorker"></a> Habilitar o Trabalho de Expansão
 
 Habilite o Trabalho do Scale Out com o [Gerenciador do Scale Out](integration-services-ssis-scale-out-manager.md), que fornece uma interface gráfica do usuário ou com um procedimento armazenado.
 
