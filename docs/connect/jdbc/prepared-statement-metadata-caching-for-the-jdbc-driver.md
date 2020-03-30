@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97224f53bb716abe3b79dd00df12d0eed4a63cec
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027839"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Metadados de instrução em cache preparados para o JDBC Driver
@@ -37,7 +37,7 @@ Outra alteração que foi introduzida na versão 6.1.6-preview é que, antes dis
 
  **SQLServerConnection**
  
-|Novo método|Descrição|  
+|Novo método|DESCRIÇÃO|  
 |-----------|-----------------|  
 |int getDiscardedServerPreparedStatementCount()|Retorna o número das ações atuais de cancelamento de preparação de instruções preparadas pendentes.|
 |void closeUnreferencedPreparedStatementHandles()|Força o cancelamento da preparação de solicitações para as instruções preparadas descartadas pendentes a serem executadas.|
@@ -48,7 +48,7 @@ Outra alteração que foi introduzida na versão 6.1.6-preview é que, antes dis
 
  **SQLServerDataSource**
  
-|Novo método|Descrição|  
+|Novo método|DESCRIÇÃO|  
 |-----------|-----------------|  
 |void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall)|Se essa configuração for false, a primeira execução de uma instrução preparada chamará sp_executesql e não preparará uma instrução. Assim que a segunda execução ocorrer, ela chamará sp_prepexec e configurará efetivamente um identificador de instrução preparada. As execuções subsequentes chamarão sp_execute. Isso elimina a necessidade de sp_unprepare no fechamento da instrução preparada se a instrução é executada apenas uma vez.|
 |boolean getEnablePrepareOnFirstPreparedStatementCall()|Se essa configuração retornar false, a primeira execução de uma instrução preparada chamará sp_executesql e não preparará uma instrução. Assim que a segunda execução ocorrer, ela chamará sp_prepexec e configurará efetivamente um identificador de instrução preparada. As execuções subsequentes chamarão sp_execute. Isso elimina a necessidade de sp_unprepare no fechamento da instrução preparada se a instrução é executada apenas uma vez.|
@@ -69,7 +69,7 @@ Por exemplo: `connection.setStatementPoolingCacheSize(10)`
 
  **SQLServerConnection**
  
-|Novo método|Descrição|  
+|Novo método|DESCRIÇÃO|  
 |-----------|-----------------|  
 |void setDisableStatementPooling(boolean value)|Define o pool de instruções como true ou false.|
 |boolean getDisableStatementPooling()|Retorna true se o pool de instruções está desabilitado.|
@@ -80,7 +80,7 @@ Por exemplo: `connection.setStatementPoolingCacheSize(10)`
 
  **SQLServerDataSource**
  
-|Novo método|Descrição|  
+|Novo método|DESCRIÇÃO|  
 |-----------|-----------------|  
 |void setDisableStatementPooling(boolean disableStatementPooling)|Define o pool de instruções como true ou false|
 |boolean getDisableStatementPooling()|Retorna true se o pool de instruções está desabilitado.|

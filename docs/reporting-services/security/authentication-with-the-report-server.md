@@ -15,10 +15,10 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3246b38461c1445f3335f42944480732ab583a0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570894"
 ---
 # <a name="authentication-with-the-report-server"></a>Autenticação com o servidor de relatório
@@ -30,7 +30,7 @@ ms.locfileid: "65570894"
 ## <a name="authentication-types"></a>Tipos de autenticação  
  Todos os usuários ou aplicativos que solicitam acesso a conteúdo ou operações do servidor de relatório devem ser autenticados com o tipo de autenticação configurado no servidor de relatório para que o acesso seja permitido. A tabela a seguir descreve os tipos de autenticação suportados pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-|Nome do tipo de autenticação|Valor da Camada de Autenticação HTTP|Usado por padrão|Descrição|  
+|Nome do tipo de autenticação|Valor da Camada de Autenticação HTTP|Usado por padrão|DESCRIÇÃO|  
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
 |RSWindowsNegotiate|Negotiate|Sim|Tenta usar Kerberos para a Autenticação Integrada do Windows primeiro, mas reverterá para NTLM se o Active Directory não puder conceder um tíquete para a solicitação do cliente ao servidor de relatório. Negotiate só reverterá para NTLM se a permissão não estiver disponível. Se a primeira tentativa resultar em um erro que não seja de permissão ausente, o servidor de relatório não fará uma segunda tentativa.|  
 |RSWindowsNTLM|NTLM|Sim|Usa NLTM para Autenticação Integrada do Windows.<br /><br /> As credenciais não serão delegadas ou representadas em outras solicitações. As solicitações subsequentes seguirão uma nova sequência de desafio/resposta. Dependendo das configurações de segurança de rede, talvez o usuário precise informar credenciais ou a solicitação de autenticação poderá ser processada de maneira transparente.|  

@@ -9,10 +9,10 @@ ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c37b4999f0fb2dd7cbf14322348e5836e8b38e32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081305"
 ---
 # <a name="report-builder-functions---count-function"></a>Funções do Construtor de Relatórios – Função Count
@@ -60,7 +60,7 @@ Count(expression, scope, recursive)
   
  Exemplo  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  O seguinte exemplo de código mostra uma expressão que calcula o número de valores não nulos de `Size` para o escopo padrão e para um escopo de grupo pai. A expressão é adicionada a uma célula em uma linha que pertence ao `GroupbySubcategory`do grupo filho. O grupo pai é `GroupbyCategory`. A expressão exibe os resultados de `GroupbySubcategory` (o escopo padrão) e de `GroupbyCategory` (o escopo do grupo pai).  
   
 > [!NOTE]  

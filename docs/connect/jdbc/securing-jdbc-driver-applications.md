@@ -11,10 +11,10 @@ ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61a17b302499f87d552ec61c90208effc688e164
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027751"
 ---
 # <a name="securing-jdbc-driver-applications"></a>Protegendo aplicativos do JDBC Driver
@@ -27,7 +27,7 @@ Os tópicos nesta seção descrevem algumas preocupações comuns de segurança 
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-| Tópico                                                                            | Descrição                                                                                                                                                           |
+| Tópico                                                                            | DESCRIÇÃO                                                                                                                                                           |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Protegendo cadeias de conexão](../../connect/jdbc/securing-connection-strings.md) | Descreve técnicas para ajudar a proteger informações usadas para conectar a uma fonte de dados.                                                                                    |
 | [Validando entradas de usuário](../../connect/jdbc/validating-user-input.md)             | Descreve técnicas para validar a entrada do usuário.                                                                                                                          |

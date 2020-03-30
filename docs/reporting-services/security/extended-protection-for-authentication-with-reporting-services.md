@@ -9,10 +9,10 @@ ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b273ef327b666c7c660349657fa9ca9eabe9f4a4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570996"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Proteção Estendida para Autenticação com o Reporting Services
@@ -107,13 +107,13 @@ O SSRS dá suporte e impõe a proteção estendida que foi habilitada no sistema
   
  Quando validação dos parâmetros de configuração falhar, os tipos de autenticação **RSWindowsNTLM**, **RSWindowsKerberos** e **RSWindowsNegotiate** são desativados no servidor de relatórios.  
   
-###  <a name="ConfigurationSettings"></a> Parâmetros de configuração para a proteção estendida dos serviços de relatórios  
+###  <a name="configuration-settings-for-reporting-services-extended-protection"></a><a name="ConfigurationSettings"></a> Parâmetros de configuração para a proteção estendida dos serviços de relatórios  
  A tabela a seguir fornece informações sobre os parâmetros de configuração que aparecem no **rsreportserver.config** para proteção estendida.  
   
-|Configuração|Descrição|  
+|Configuração|DESCRIÇÃO|  
 |-------------|-----------------|  
-|**RSWindowsExtendedProtectionLevel**|Especifica o grau de imposição da proteção estendida. Os valores válidos são:<br /><br /> **Off**: Padrão. Especifica que não há nenhuma verificação de associação de canal nem de associação de serviço.<br /><br /> **Allow** dá suporte à proteção estendida mas não a exige.  Especifica:<br /><br /> \- A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que dão suporte à proteção estendida. A maneira como a proteção é imposta é determinada pela configuração **RsWindowsExtendedProtectionScenario**<br /><br /> \- A autenticação será permitida para aplicativos executados em sistemas operacionais que não dão suporte à proteção estendida.<br /><br /> **Require** especifica:<br /><br /> \- A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que dão suporte à proteção estendida.<br /><br /> A autenticação **não** será permitida para aplicativos executados em sistemas operacionais que não dão suporte para proteção estendida.|  
-|**RsWindowsExtendedProtectionScenario**|Especifica quais formas de proteção estendida serão validadas: associação de canal, associação de serviço ou ambas. Os valores válidos são:<br /><br /> **Proxy**: Padrão. Especifica:<br /><br /> \- A autenticação Windows NTLM, Kerberos e Negotiate quando um token de associação de canal estiver presente.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> **Any** especifica:<br /><br /> \- A autenticação Windows NTLM, Kerberos e Negotiate e uma associação de canal não são obrigatórias.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> **Direct** especifica:<br /><br /> \- A autenticação Windows NTLM, Kerberos e Negotiate quando um CBT estiver presente, uma conexão SSL com o serviço atual estiver presente e quando o CBT da conexão SSL corresponder ao CBT do token NTLM, Kerberos ou Negotiate.<br /><br /> \- A Associação de Serviço não é imposta.<br /><br /> <br /><br /> Observação: a configuração **RsWindowsExtendedProtectionScenario** será ignorada se **RsWindowsExtendedProtectionLevel** estiver definido como **OFF**.|  
+|**RSWindowsExtendedProtectionLevel**|Especifica o grau de imposição da proteção estendida. Os valores válidos são:<br /><br /> **Off**: padrão. Especifica que não há nenhuma verificação de associação de canal nem de associação de serviço.<br /><br /> **Allow** dá suporte à proteção estendida mas não a exige.  Especifica:<br /><br /> \- A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que dão suporte à proteção estendida. A maneira como a proteção é imposta é determinada pela configuração **RsWindowsExtendedProtectionScenario**<br /><br /> \- A autenticação será permitida para aplicativos executados em sistemas operacionais que não dão suporte à proteção estendida.<br /><br /> **Require** especifica:<br /><br /> \- A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que dão suporte à proteção estendida.<br /><br /> A autenticação **não** será permitida para aplicativos executados em sistemas operacionais que não dão suporte para proteção estendida.|  
+|**RsWindowsExtendedProtectionScenario**|Especifica que formas de proteção estendida serão validadas: Associação de Canal, Associação de Serviço ou ambas. Os valores válidos são:<br /><br /> **Proxy**: padrão. Especifica:<br /><br /> \- A autenticação Windows NTLM, Kerberos e Negotiate quando um token de associação de canal estiver presente.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> **Any** especifica:<br /><br /> \- A autenticação Windows NTLM, Kerberos e Negotiate e uma associação de canal não são obrigatórias.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> **Direct** especifica:<br /><br /> \- A autenticação Windows NTLM, Kerberos e Negotiate quando um CBT estiver presente, uma conexão SSL com o serviço atual estiver presente e quando o CBT da conexão SSL corresponder ao CBT do token NTLM, Kerberos ou Negotiate.<br /><br /> \- A Associação de Serviço não é imposta.<br /><br /> <br /><br /> Observação: a configuração **RsWindowsExtendedProtectionScenario** será ignorada se **RsWindowsExtendedProtectionLevel** for definido como **OFF**.|  
   
  Entradas de exemplo no arquivo de configuração **rsreportserver.config** :  
   
@@ -142,7 +142,7 @@ O SSRS dá suporte e impõe a proteção estendida que foi habilitada no sistema
 ### <a name="hosts-collection-sources"></a>Fontes de coleta de hosts.  
  A tabela a seguir lista as possíveis fontes da lista de Hosts.  
   
-|Tipo da fonte.|Descrição|  
+|Tipo da fonte.|DESCRIÇÃO|  
 |--------------------|-----------------|  
 |ComputerNameDnsDomain|O nome do domínio DNS atribuído ao computador local. Se o computador local for um nó de um cluster, será usado o nome de domínio DNS do servidor virtual de cluster.|  
 |ComputerNameDnsFullyQualified|O nome DNS totalmente qualificado que identifica exclusivamente o computador local. Esse nome é uma combinação do nome de host do DNS e o nome de domínio do DNS, usando o formato *HostName*.*DomainName*. Se o computador local for um nó de um cluster, será usado o nome do DNS totalmente qualificado do servidor virtual de cluster.|  
@@ -166,7 +166,7 @@ O SSRS dá suporte e impõe a proteção estendida que foi habilitada no sistema
 [Conectar-se ao mecanismo de banco de dados usando proteção estendida](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
 [Visão geral sobre a Proteção Estendida para Autenticação](https://go.microsoft.com/fwlink/?LinkID=177943)   
 [Autenticação Integrada do Windows com Proteção Estendida](https://go.microsoft.com/fwlink/?LinkId=179922)   
-[Assistente de Segurança da Microsoft: proteção estendida para autenticação](https://go.microsoft.com/fwlink/?LinkId=179923)   
+[Microsoft Security Advisory: Proteção estendida para autenticação](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Método SetExtendedProtectionSettings &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

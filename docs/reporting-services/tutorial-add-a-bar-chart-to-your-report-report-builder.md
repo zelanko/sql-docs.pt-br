@@ -9,10 +9,10 @@ ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041173"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de barras ao relatório (Construtor de Relatórios)
@@ -30,14 +30,14 @@ A ilustração a seguir mostra o gráfico de barras que você criará, com as ve
   
  
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Confira instruções passo a passo sobre como navegar até um servidor de relatório, como criar um conjunto de dados e escolher uma fonte de dados no primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, criar um conjunto de dados e escolher uma fonte de dados, consulte o primeiro tutorial desta série: [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 15 minutos.  
   
 ## <a name="requirements"></a>Requisitos  
 Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Chart"></a>1. Criar um relatório de gráfico no Assistente de Gráfico  
+## <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. Criar um relatório de gráfico no Assistente de Gráfico  
 Em que você cria um conjunto de dados inserido, escolhe uma fonte de dados compartilhada e cria um gráfico de barras usando o Assistente de Gráfico.  
   
 > [!NOTE]  
@@ -87,13 +87,13 @@ Em que você cria um conjunto de dados inserido, escolhe uma fonte de dados comp
   
 9. Clique em **Próximo**.  
   
-## <a name="ChartType"></a>2. Criar um gráfico de barras  
+## <a name="2-create-a-bar-chart"></a><a name="ChartType"></a>2. Criar um gráfico de barras  
  
 1.  Na página **Escolher um tipo de gráfico** , o gráfico de colunas é o tipo de gráfico padrão.  
   
 2.  Clique em **Barra**e em **Avançar**.  
   
-    Na página **Organizar campos de gráfico**, há quatro campos no painel **Campos disponíveis**: FirstName, LastName, SalesYear2015 e SalesYear2014.  
+    Na página **Organizar campos de gráfico** , há quatro campos no painel **Campos disponíveis** : FirstName, LastName, SalesYear2015 e SalesYear2014.  
   
 3.  Arraste LastName para o painel Categorias.  
   
@@ -113,7 +113,7 @@ Em que você cria um conjunto de dados inserido, escolhe uma fonte de dados comp
   
 O gráfico de barras exibe as vendas de cada vendedor nos anos de 2014 e 2015. O comprimento da barra corresponde ao total de vendas.  
   
-## <a name="AllValues"></a>3. Exibir todos os nomes no eixo vertical  
+## <a name="3-display-all-the-names-on-the-vertical-axis"></a><a name="AllValues"></a>3. Exibir todos os nomes no eixo vertical  
 Por padrão, apenas alguns valores no eixo vertical são exibidos. É possível alterar o gráfico para exibir todas as categorias.  
   
 1.  Alterne para a exibição de design de relatório.  
@@ -129,7 +129,7 @@ Por padrão, apenas alguns valores no eixo vertical são exibidos. É possível 
 > [!NOTE]  
 > Se você não conseguir ler os nomes dos vendedores no eixo vertical, poderá aumentar o tamanho do gráfico ou alterar as opções de formatação dos rótulos do eixo.  
   
-### <a name="CategoryExpression"></a>Exibir sobrenome e nome no eixo vertical  
+### <a name="display-last-name-and-first-name-on-vertical-axis"></a><a name="CategoryExpression"></a>Exibir sobrenome e nome no eixo vertical  
 Você pode alterar a expressão de categoria para incluir o sobrenome seguido do nome de cada vendedor.  
   
 1.  Alterne para a exibição de design de relatório.  
@@ -155,7 +155,7 @@ Se os nomes não aparecerem ao executar o relatório, você poderá atualizar os
 > [!NOTE]  
 > Se você não conseguir ler os nomes dos vendedores no eixo vertical, poderá aumentar o tamanho do gráfico ou alterar as opções de formatação dos rótulos do eixo.  
   
-## <a name="Sort"></a>4. Alterar a ordem de classificação no eixo vertical  
+## <a name="4-change-the-sort-order-on-the-vertical-axis"></a><a name="Sort"></a>4. Alterar a ordem de classificação no eixo vertical  
 Quando você classifica dados em um gráfico, está alterando a ordem de valores no eixo de categoria.  
   
 1.  Alterne para a exibição de design de relatório.  
@@ -176,7 +176,7 @@ Quando você classifica dados em um gráfico, está alterando a ordem de valores
   
 Os nomes no eixo horizontal são classificados das maiores para as menores vendas de 2015, com **Zeng** na parte superior.  
   
-## <a name="Legend"></a>5. Mover a legenda  
+## <a name="5-move-the-legend"></a><a name="Legend"></a>5. Mover a legenda  
 Para melhorar a capacidade de leitura dos valores do gráfico, mova a legenda do gráfico. Por exemplo, em um gráfico de barras no qual as barras são mostradas na horizontal, você pode alterar a posição da legenda para que ela fique acima ou abaixo da área do gráfico. Isso dá mais espaço na horizontal às barras.  
   
 #### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>Para exibir a legenda abaixo da área de gráfico de um gráfico de barras  
@@ -195,7 +195,7 @@ Para melhorar a capacidade de leitura dos valores do gráfico, mova a legenda do
   
 6.  Clique em **Executar** para visualizar o relatório.  
   
-## <a name="ChartTitle"></a>6. Intitular o gráfico  
+## <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6. Intitular o gráfico  
   
 1.  Alterne para a exibição de design de relatório.  
   
@@ -205,7 +205,7 @@ Para melhorar a capacidade de leitura dos valores do gráfico, mova a legenda do
   
 4.  Clique em **Executar** para visualizar o relatório.  
   
-## <a name="Horizontal"></a>7. Formatar e rotular o eixo horizontal  
+## <a name="7-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>7. Formatar e rotular o eixo horizontal  
 Por padrão, o eixo horizontal exibe valores em um formato geral que é dimensionado para ajustar o tamanho do gráfico automaticamente. Você pode alterá-lo para o formato de moeda.  
    
 1.  Alterne para a exibição de design de relatório.  
@@ -232,7 +232,7 @@ Por padrão, o eixo horizontal exibe valores em um formato geral que é dimensio
   
 O relatório exibe o valor das vendas no eixo horizontal como moeda em milhares, sem dígitos decimais.  
   
-## <a name="Filter"></a>8. Adicionar um filtro para exibir os cinco valores principais  
+## <a name="8-add-a-filter-to-display-the-top-five-values"></a><a name="Filter"></a>8. Adicionar um filtro para exibir os cinco valores principais  
 Você pode adicionar um filtro ao gráfico para especificar os dados do conjunto de dados a serem incluídos ou excluídos no gráfico.   
   
 1.  Alterne para a exibição de design de relatório.  
@@ -261,7 +261,7 @@ Se os resultados não forem filtrados ao executar o relatório, você poderá at
   
 O gráfico mostra os cinco primeiros nomes de vendedores dos dados de vendas de 2015.  
   
-## <a name="Title"></a>9. Adicionar um título de relatório  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9. Adicionar um título de relatório  
   
 1.  Na superfície de design, clique em **Clique para adicionar título**.  
   
@@ -281,7 +281,7 @@ O gráfico mostra os cinco primeiros nomes de vendedores dos dados de vendas de 
   
 6.  Clique em **Executar** para visualizar o relatório.  
   
-## <a name="Save"></a>10. Salvar o relatório  
+## <a name="10-save-the-report"></a><a name="Save"></a>10. Salvar o relatório  
   
 1.  Alterne para a exibição de design de relatório.  
   

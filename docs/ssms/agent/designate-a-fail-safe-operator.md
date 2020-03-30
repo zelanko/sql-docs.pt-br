@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1c56acaa84b26192d766097294a5ab2bfd31ab8d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242447"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Designar um operador à prova de falhas
@@ -32,9 +32,9 @@ ms.locfileid: "75242447"
 
 Um operador à prova de falhas é um usuário que recebe o alerta caso o operador designado não possa ser localizado. Este tópico descreve como configurar um operador à prova de falhas para receber notificações de alerta do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="BeforeYouBegin"></a>Antes de começar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de começar  
   
-### <a name="Restrictions"></a>Limitações e restrições  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitações e restrições  
   
 -   As opções Pager e **net send** serão removidas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
   
@@ -42,12 +42,12 @@ Um operador à prova de falhas é um usuário que recebe o alerta caso o operado
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gerencia trabalhos de forma fácil e com representação gráfica. Além disso, ele é recomendado para criar e gerenciar a infraestrutura de trabalhos.  
   
-### <a name="Security"></a>Segurança  
+### <a name="security"></a><a name="Security"></a>Segurança  
   
-#### <a name="Permissions"></a>Permissões  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissões  
 Somente membros da função de servidor fixa **sysadmin** podem designar operadores à prova de falhas.  
   
-## <a name="SSMSProcedure"></a>Usando o SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Usando o SQL Server Management Studio  
   
 #### <a name="to-designate-a-fail-safe-operator"></a>Para designar um operador à prova de falhas  
   
@@ -61,7 +61,7 @@ Somente membros da função de servidor fixa **sysadmin** podem designar operado
   
 5.  Na lista **Operador** , selecione o operador que você deseja tornar à prova de falhas.  
   
-6.  Marque uma ou todas as seguintes caixas de seleção para especificar como o operador será notificado: **Email**, **Pager** ou **Net send**.  
+6.  Marque qualquer uma ou todas as caixas de seleção a seguir para especificar como o operador será notificado: **Email**, **Pager**ou **Net send**.  
   
 7.  Quando terminar, clique em **OK**.  
   

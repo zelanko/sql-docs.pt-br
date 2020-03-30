@@ -11,10 +11,10 @@ ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e781df6f5ccbdbb427de7e8b68c9dbc06522be71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080273"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Uso de expressões em relatórios (Construtor de Relatórios e SSRS)
@@ -27,7 +27,7 @@ Em relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnover
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Simple"></a> Usando expressões simples  
+##  <a name="using-simple-expressions"></a><a name="Simple"></a> Usando expressões simples  
  As expressões simples aparecem na superfície de design e em caixas de diálogo entre colchetes. Por exemplo, um campo de conjunto de dados é exibido como `[ProductID]`. As expressões simples são criadas automaticamente quando você arrasta um campo de um conjunto de dados até uma caixa de texto. É criado um espaço reservado, e a expressão define o valor subjacente. Você também pode digitar expressões diretamente em uma célula da região de dados ou em uma caixa de texto, ambas na superfície de design ou em uma caixa de diálogo (por exemplo, `[ProductID]`).  
   
  A tabela a seguir lista exemplos de como usar expressões simples. A tabela descreve a funcionalidade, a propriedade a ser definida, a caixa de diálogo que você costuma usar para defini-la e o valor da propriedade. É possível digitar a expressão simples diretamente na superfície de design, em uma caixa de diálogo ou no painel Propriedades, ou ainda editá-la na caixa de diálogo Expressão, exatamente como você faria com qualquer expressão.  
@@ -46,7 +46,7 @@ Em relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnover
 |Vincule um parâmetro de consulta a um parâmetro de relatório.|Coleção de parâmetros no conjunto de dados. Use **Caixa de Diálogo Propriedades de Conjunto de Dados, Parâmetros**.|`[@Category]`<br /><br /> `[@Category]`|  
 |Passe um parâmetro de um relatório principal para um sub-relatório.|Coleção de parâmetros no sub-relatório. Use **Caixa de Diálogo Propriedades de Sub-relatório, Parâmetros**.|`[@Category]`<br /><br /> `[@Category]`|  
   
-##  <a name="Complex"></a> Usando expressões complexas  
+##  <a name="using-complex-expressions"></a><a name="Complex"></a> Usando expressões complexas  
  As expressões complexas podem conter várias referências internas, operadores e chamadas de função e são exibidas na superfície de design como `<<Expr>>`. Para ver ou alterar o texto da expressão, abra a caixa de diálogo **Expressão** ou digite diretamente no painel Propriedades. A tabela a seguir lista maneiras comuns de usar uma expressão complexa para exibir ou organizar dados ou alterar a aparência de um relatório, inclusive a propriedade a ser definida, a caixa de diálogo que você costuma usar para defini-la e o valor da propriedade. Você pode digitar uma expressão diretamente em uma caixa de diálogo, na superfície de design ou no painel Propriedades.  
   
 |Funcionalidade|Propriedade, contexto e caixa de diálogo|Valor da propriedade|  

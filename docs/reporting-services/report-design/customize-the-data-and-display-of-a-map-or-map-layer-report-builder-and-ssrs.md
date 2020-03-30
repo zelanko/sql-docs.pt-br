@@ -22,10 +22,10 @@ ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 53b1495299dd3a71843ceaa1ad3a43464c374210
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080520"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizar os dados e a exibição de um mapa ou de uma camada do mapa (Construtor de Relatórios e SSRS)
@@ -54,7 +54,7 @@ ms.locfileid: "77080520"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Map"></a> Alterar as opções do mapa  
+##  <a name="change-options-for-the-map"></a><a name="Map"></a> Alterar as opções do mapa  
  Em um item de relatório de mapa, você pode controlar o seguinte:  
   
 -   Adicionar vários títulos.  
@@ -69,7 +69,7 @@ ms.locfileid: "77080520"
   
  Para alterar essas opções, clique com o botão direito do mouse no mapa, clique em **Mapa**e altere as opções.  
   
-##  <a name="Viewport"></a> Alterar as opções do visor  
+##  <a name="change-options-for-the-viewport"></a><a name="Viewport"></a> Alterar as opções do visor  
  Use as opções do visor para alterar a exibição do mapa que aparece em seu relatório.  
   
  A origem de dados espaciais pode fornecer mais área do que você precisa para exibir no relatório. Você pode usar o visor para definir o centro, o nível de zoom, e cortar a área para o mapa.  
@@ -88,7 +88,7 @@ ms.locfileid: "77080520"
   
  Para alterar estas opções, clique com o botão direito do mouse no visor do mapa, use a página [Caixa de diálogo Propriedades do Visor do Mapa, Geral](https://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) e as páginas relacionadas.  
   
-##  <a name="Legends"></a> Alterar as opções das legendas  
+##  <a name="change-options-for-the-legends"></a><a name="Legends"></a> Alterar as opções das legendas  
  As legendas ajudam os usuários a interpretar os dados em um mapa.  
   
  Por padrão, todas as regras especificadas para uma camada adicionam itens à primeira legenda. Além disso, todas as regras de cores exibem valores na escala de cores.  
@@ -99,7 +99,7 @@ ms.locfileid: "77080520"
   
  Para obter mais informações, consulte [Alterar legendas de mapa, escala de cores e regras associadas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-##  <a name="Layer"></a> Alterar as opções da camada  
+##  <a name="change-options-for-the-layer"></a><a name="Layer"></a> Alterar as opções da camada  
  Para exibir as camadas de um mapa, clique no mapa para selecioná-lo. O painel de Mapa aparece. Para alterar opções de uma camada, clique com o botão direito do mouse na camada e use o menu de atalho.  
   
  Uma camada pode ser de três tipos, dependendo dos dados espaciais que são retornados pela fonte de dados espaciais: uma camada de polígono, uma camada de linha ou uma camada de ponto.  
@@ -116,14 +116,14 @@ ms.locfileid: "77080520"
   
  Para obter mais informações sobre as camadas, consulte [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-##  <a name="DataGrouping"></a> Alterar agrupamento de dados para a camada  
+##  <a name="change-data-grouping-for-the-layer"></a><a name="DataGrouping"></a> Alterar agrupamento de dados para a camada  
  Você pode personalizar o modo de agregar dados espaciais para suas próprias formas. Para definir as propriedades do grupo de uma camada, selecione a camada no painel Mapa e, no painel Propriedades da camada, clique em **Grupo** e, em seguida, clique nas reticências (…) para abrir as propriedades do grupo. Nesta caixa de diálogo, você pode especificar expressões de grupo, criar variáveis de grupo e filtrar dados que são usados para agrupar.  
   
  A expressão de grupo especifica o modo como os dados analíticos que têm uma relação com dados espaciais são agregados para cada elemento do mapa na camada. Por padrão, a expressão de grupo é o conjunto de campos de correspondência especificado para a relação entre os dados espaciais e os dados analíticos. Por exemplo, para um mapa de bolhas que exibe locais de cidade e o tamanho da população de um país ou região, os campos de correspondência incluem o nome da cidade [Cidade] e o nome da região [Região], porque pode haver várias cidades com o mesmo nome. A expressão de grupo correspondente inclui dois campos: [Cidade] e [Região].  
   
- Para saber mais, confira [Dicas de mapa: como importar shapefiles no SQL Server e agregar dados espaciais](https://go.microsoft.com/fwlink/?LinkID=214991).  
+ Para obter mais informações, consulte [Dicas de mapa: como importar arquivos de forma no SQL Server e agregar dados espaciais](https://go.microsoft.com/fwlink/?LinkID=214991).  
   
-##  <a name="MapElements"></a> Alterar opções dos elementos de mapas na camada  
+##  <a name="change-options-for-the-map-elements-on-the-layer"></a><a name="MapElements"></a> Alterar opções dos elementos de mapas na camada  
  Elementos de mapas são os pontos, linhas ou polígonos em uma camada que se baseiam nos dados espaciais. As opções a seguir podem ser definidas para elementos de mapas. Estas opções se aplicam a todos os elementos de mapas na camada, estejam eles inseridos ou não:  
   
 -   Rótulos, visibilidade do rótulo, deslocamento do rótulo e formatação.  
@@ -138,7 +138,7 @@ ms.locfileid: "77080520"
   
  Para alterar estas opções, clique com o botão direito do mouse no elemento de mapa, use a caixa de diálogo de propriedades inserida. Por exemplo, para um polígono inserido, use a caixa de diálogo Mapear Propriedades de Polígono Inserido, página Geral e as páginas relacionadas.  
   
-##  <a name="Precedence"></a> Compreendendo a precedência de opções de exibição  
+##  <a name="understanding-display-option-precedence"></a><a name="Precedence"></a> Compreendendo a precedência de opções de exibição  
  Para controlar a aparência de exibição de um ponto, uma linha ou um polígono em uma camada do mapa, é preciso compreender onde é possível definir as opções de exibição e quais delas têm maior precedência. As opções de exibição a seguir estão listadas da inferior à superior. Opções de exibição superior substituem opções de exibição inferior nesta lista:  
   
 -   Opções de camada.  

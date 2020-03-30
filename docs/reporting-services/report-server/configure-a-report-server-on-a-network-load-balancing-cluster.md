@@ -8,10 +8,10 @@ ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
 ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244398"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar um servidor de relatório em um cluster com balanceamento de carga de rede
@@ -40,7 +40,7 @@ ms.locfileid: "75244398"
 |6|Configure o **Hostname** e o **UrlRoot** para usar o IP do servidor virtual do cluster NLB.|[Como configurar Hostname e UrlRoot](#SpecifyingVirtualServerName) neste tópico.|  
 |7|Verifique se é possível acessar os servidores através do nome do host especificado.|[Verificar o acesso ao servidor de relatório](#Verify) neste tópico.|  
   
-## <a name="ViewState"></a> Como configurar a validação do estado de exibição
+## <a name="how-to-configure-view-state-validation"></a><a name="ViewState"></a> Como configurar a validação do estado de exibição
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Para executar uma implantação em expansão em um cluster NLB, você deve configurar a validação do estado de exibição para que os usuários possam exibir relatórios HTML interativos.  Você precisa fazer isso para o serviço Web do servidor de relatório.
@@ -92,7 +92,7 @@ Para executar uma implantação em expansão em um cluster NLB, você deve confi
 
 ::: moniker-end
 
-## <a name="SpecifyingVirtualServerName"></a> Como configurar Hostname e UrlRoot
+## <a name="how-to-configure-hostname-and-urlroot"></a><a name="SpecifyingVirtualServerName"></a> Como configurar Hostname e UrlRoot
 
  Para configurar uma implantação em expansão do servidor de relatório em um cluster NLB, é necessário definir um único nome de servidor virtual que forneça um único ponto de acesso ao cluster de servidores. Então registre esse nome de servidor virtual com o DNS (Domain Name Server, servidor de nomes de domínio) em seu ambiente.  
   
@@ -122,7 +122,7 @@ Para executar uma implantação em expansão em um cluster NLB, você deve confi
   
 6. Repita estas etapas em cada arquivo RSReportServer.config de cada servidor de relatório na implantação em expansão.  
   
-## <a name="Verify"></a> Verificar o acesso ao servidor de relatório
+## <a name="verify-report-server-access"></a><a name="Verify"></a> Verificar o acesso ao servidor de relatório
 
  Verifique se você pode acessar a implantação escalável por meio do nome do servidor virtual (por exemplo, `https://MyVirtualServerName/reportserver` e `https://MyVirtualServerName/reports`).  
   

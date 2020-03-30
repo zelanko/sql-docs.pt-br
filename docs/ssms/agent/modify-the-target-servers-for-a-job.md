@@ -17,10 +17,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a5300935cdbffc501996c7e68ba44b73b2964fa4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252383"
 ---
 # <a name="modify-the-target-servers-for-a-job"></a>Modify the Target Servers for a Job
@@ -32,11 +32,11 @@ ms.locfileid: "75252383"
 
 Este tópico descreve como alterar os servidores de destino para trabalhos do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-## <a name="BeforeYouBegin"></a>Antes de começar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de começar  
   
-### <a name="Security"></a>Segurança  
+### <a name="security"></a><a name="Security"></a>Segurança  
   
-#### <a name="Permissions"></a>Permissões  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissões  
 Por padrão, os membros da função de servidor fixa sysadmin podem executar esse procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do SQL Server Agent no banco de dados msdb:  
   
 1.  **SQLAgentUserRole**  
@@ -45,7 +45,7 @@ Por padrão, os membros da função de servidor fixa sysadmin podem executar ess
   
 3.  SQLAgentOperatorRole  
   
-## <a name="SSMSProcedure"></a>Usando o SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Usando o SQL Server Management Studio  
   
 #### <a name="to-modify-the-target-servers-for-a-job"></a>Para modificar os servidores de destino de um trabalho  
   
@@ -57,7 +57,7 @@ Por padrão, os membros da função de servidor fixa sysadmin podem executar ess
   
     Se optar por **Vários servidores de destino**, designe os servidores a serem destino do trabalho, marcando a caixa à esquerda do nome do servidor. Verifique se as caixas de seleção dos servidores que não devem ser destino do trabalho estão desmarcadas.  
   
-## <a name="TsqlProcedure"></a>Usando Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Usando Transact-SQL  
   
 #### <a name="to-modify-the-target-servers-for-a-job"></a>Para modificar os servidores de destino de um trabalho  
   

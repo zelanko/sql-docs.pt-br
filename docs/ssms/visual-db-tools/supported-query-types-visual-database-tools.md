@@ -24,10 +24,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: a8f5fae345543a3a63bacad0c5cdf0d8f62d2aa5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242172"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>Tipos de consulta permitidos (Visual Database Tools)
@@ -54,6 +54,6 @@ Além das consultas, que você pode criar usando os painéis gráficos, pode ins
 Quando você criar consultas que usam instruções SQL que não podem ser representadas nos painéis gráficos, o Designer de Consulta e Exibição escurece esses painéis para indicar que eles não refletem a consulta que você está criando. Porém, os painéis escurecidos ainda estão ativos e, em muitas casos, você pode fazer alterações na consulta nesses painéis. Se as alterações que você fizer resultarem em uma consulta que pode ser representada nos painéis gráficos, esses painéis não são mais escurecidos.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Tópicos de instruções de como criar consultas e exibições](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Tipos de Consultas](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[Tópicos de instruções sobre como criar consultas e exibições](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Tipos de consultas](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63295894"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Apresentando expressões
@@ -31,7 +31,7 @@ Tempo estimado para concluir este tutorial: 30 minutos.
 ## <a name="requirements"></a>Requisitos  
 Para obter informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Setup"></a>1. Criar um relatório de tabela e conjunto de dados no Assistente de Tabela ou Matriz  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. Criar um relatório de tabela e conjunto de dados no Assistente de Tabela ou Matriz  
 Nesta seção, você cria um relatório de tabela, uma fonte de dados e um conjunto de dados. Ao criar o layout da tabela, você incluirá apenas alguns campos. Depois de concluir o assistente, você adicionará manualmente colunas. O assistente facilita a criação do layout da tabela.  
   
 > [!NOTE]  
@@ -122,7 +122,7 @@ Nesta seção, você cria um relatório de tabela, uma fonte de dados e um conju
   
 17. Clique em **Concluir**.  
   
-## <a name="UpdateNames"></a>2. Atualizar nomes padrão da fonte de dados ou do conjunto de dados  
+## <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2. Atualizar nomes padrão da fonte de dados ou do conjunto de dados  
   
 ### <a name="to-update-the-default-name-of-the-data-source"></a>Para atualizar o nome padrão da fonte de dados  
   
@@ -146,7 +146,7 @@ Nesta seção, você cria um relatório de tabela, uma fonte de dados e um conju
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Concatenate"></a>3. Exibir nome, inicial e sobrenome  
+## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. Exibir nome, inicial e sobrenome  
 Nesta seção, use a função **Left** e o operador **Concatenate** ( **&** ) em uma expressão avaliada com um nome que inclui uma inicial e um sobrenome. Você pode criar a expressão passo a passo ou ignorá-la no procedimento e copiar/colar a expressão do tutorial na caixa de diálogo **Expressão** .   
   
 1.  Clique com o botão direito do mouse na coluna **StateProvince** , aponte para **Inserir Coluna**e clique em **Esquerda**.  
@@ -191,7 +191,7 @@ Nesta seção, use a função **Left** e o operador **Concatenate** ( **&** ) em
   
 12. Clique em **Executar** para visualizar o relatório.  
 
-## <a name="DateFormat"></a>(opcional) Formatar as colunas de data e moeda e a linha de cabeçalho  
+## <a name="optional-format-the-date-and-currency-columns-and-header-row"></a><a name="DateFormat"></a>(opcional) Formatar as colunas de data e moeda e a linha de cabeçalho  
 Nesta seção, você formata a coluna **Last Purchase** , que contém datas, e a coluna YTDPurchase, que contém a moeda. Você também formata a linha de cabeçalho.  
   
 ### <a name="to-format-the-date-column"></a>Para formatar coluna de data  
@@ -227,7 +227,7 @@ Este é o relatório até o momento, com datas, moeda e cabeçalhos de coluna fo
 ![report-builder-expression-tutorial-preview-formatted](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
 
   
-## <a name="Gender"></a>4. Usar cor para indicar o sexo  
+## <a name="4-use-color-to-display-gender"></a><a name="Gender"></a>4. Usar cor para indicar o sexo  
 Nesta seção, você adiciona cor para indicar o sexo de uma pessoa. Você adicionará uma nova coluna para exibir a cor e determinará a cor que aparece na coluna, com base no valor do campo Gender.  
   
 Para manter a cor que você aplicou à célula da tabela quando fez o relatório em tiras, você adiciona um retângulo e adiciona a cor da tela de fundo ao retângulo.  
@@ -309,7 +309,7 @@ Para manter a cor que você aplicou à célula da tabela quando fez o relatório
 
     ![report-builder-expression-tutorial-preview-formatted-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
-## <a name="Lookup"></a>5. Pesquisar o nome de CountryRegion  
+## <a name="5-look-up-the-countryregion-name"></a><a name="Lookup"></a>5. Pesquisar o nome de CountryRegion  
 Nesta seção, você cria o conjunto de dados CountryRegion e usa a função **Lookup** para exibir o nome de um país/região, em vez do identificador do país/região.  
   
 ### <a name="to-create-the-countryregion-dataset"></a>Para criar o conjunto de dados CountryRegion  
@@ -379,7 +379,7 @@ Nesta seção, você cria o conjunto de dados CountryRegion e usa a função **L
   
 11. Clique em **Executar** para visualizar o relatório.  
   
-## <a name="Count"></a>6. Contar dias desde a última compra  
+## <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6. Contar dias desde a última compra  
 Nesta seção, você adiciona uma coluna e usa a função **Now** ou a variável global interna `ExecutionTime` para calcular o número de dias desde a data das últimas compras de um cliente até hoje.  
   
 ### <a name="to-add-the-days-ago-column"></a>Para adicionar a coluna Days Ago  
@@ -419,7 +419,7 @@ Nesta seção, você adiciona uma coluna e usa a função **Now** ou a variável
 
 11. Clique em **Executar** para visualizar o relatório.  
   
-## <a name="Indicator"></a>7. Usar um indicador para mostrar comparação de vendas  
+## <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7. Usar um indicador para mostrar comparação de vendas  
 Nesta seção, você adiciona uma nova coluna e use um indicador para mostrar se as compras de uma pessoa YTD (desde o início do ano) estão acima ou abaixo da média de compras YTD. A função **Round** remove os decimais dos valores.  
   
 Configurar o indicador e seus estados envolve várias etapas. Se desejar, você poderá passar para o procedimento "Para configurar o indicador" e copiar/colar as expressões completas deste tutorial na caixa de diálogo **Expressão**.  
@@ -514,7 +514,7 @@ Configurar o indicador e seus estados envolve várias etapas. Se desejar, você 
 
     ![report-builder-expression-tutorial-preview-indicator](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
   
-## <a name="GreenBar"></a>8. Criar um relatório em tiras  
+## <a name="8-make-a-banded-report"></a><a name="GreenBar"></a>8. Criar um relatório em tiras  
 Crie um parâmetro para que os leitores do relatório possam especificar a cor a ser aplicada a linhas alternadas no relatório, transformando-o em um relatório em tiras.  
   
 ### <a name="to-add-a-parameter"></a>Para adicionar um parâmetro  
@@ -611,7 +611,7 @@ Crie um parâmetro para que os leitores do relatório possam especificar a cor a
     
     ![report-builder-expression-tutorial-preview-banded](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
   
-## <a name="Title"></a>(opcional) Adicionar um título de relatório  
+## <a name="optional-add-a-report-title"></a><a name="Title"></a>(opcional) Adicionar um título de relatório  
 Adicione um título ao relatório.  
   
 ### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
@@ -630,7 +630,7 @@ Adicione um título ao relatório.
   
 3.  Selecione uma cor para as faixas do relatório que não são brancas e clique em **Exibir Relatório**.  
   
-## <a name="Save"></a>(opcional) Salvar o relatório  
+## <a name="optional-save-the-report"></a><a name="Save"></a>(opcional) Salvar o relatório  
 É possível salvar relatórios em um servidor de relatório, em uma biblioteca do SharePoint ou no computador. Para obter mais informações, consulte [Salvando relatórios &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder/saving-reports-report-builder.md).  
   
 Neste tutorial, você salva o relatório em um servidor de relatório. Se você não tiver acesso ao servidor de relatório, salve o relatório no computador.  

@@ -16,10 +16,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 57ceb0963f303a1674642b65ef6c2089fd86ef70
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75254250"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Criar autojunções manualmente (Visual Database Tools)

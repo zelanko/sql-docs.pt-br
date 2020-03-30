@@ -11,10 +11,10 @@ ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ddd61d15e3c363766c7e49b8e9045b60a7be164
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025791"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>Como usar instruções com o JDBC Driver
@@ -35,7 +35,7 @@ O driver JDBC fornece três classes para recuperar dados de um banco de dados do
   
 ## <a name="in-this-section"></a>Nesta seção  
 
-| Tópico                                                                                                    | Descrição                                                                                                                                            |
+| Tópico                                                                                                    | DESCRIÇÃO                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Como usar instruções com SQL](../../connect/jdbc/using-statements-with-sql.md)                             | Descreve como usar instruções SQL com o driver JDBC para trabalhar com os dados em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    |
 | [Como usar instruções com procedimentos armazenados](../../connect/jdbc/using-statements-with-stored-procedures.md) | Descreve como usar procedimentos armazenados com o driver JDBC para trabalhar com os dados em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. |

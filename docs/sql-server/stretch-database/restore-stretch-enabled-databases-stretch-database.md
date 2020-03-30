@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843767"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Restaurar bancos de dados habilitados para Stretch (Stretch Database)
@@ -58,7 +58,7 @@ Para restaurar um banco de dados do Azure excluído no ponto em que ele foi excl
 5. Especifique um novo **Nome de banco de dados** e clique em **Criar**.
 6. O processo de restauração de banco de dados será iniciado e poderá ser monitorado com **NOTIFICATIONS**.
 
-## <a name="reconnect"></a>Restaurar a conexão entre o banco de dados SQL Server e o banco de dados remoto do Azure
+## <a name="restore-the-connection-between-the-sql-server-database-and-the-remote-azure-database"></a><a name="reconnect"></a>Restaurar a conexão entre o banco de dados SQL Server e o banco de dados remoto do Azure
 
 1.  Se você pretende se conectar a um banco de dados Azure restaurado com um nome diferente ou em uma região diferente, execute o procedimento armazenado [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) para se desconectar do banco de dados do Azure anterior.  
   

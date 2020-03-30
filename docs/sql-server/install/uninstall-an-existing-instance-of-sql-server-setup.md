@@ -16,10 +16,10 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 61647a4e0a654d478050268587b2b47fd79fc686
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78335743"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Desinstalar uma instância existente do SQL Server (Instalação)
@@ -55,7 +55,7 @@ ms.locfileid: "78335743"
     > Os bancos de dados do ReportServer estão incluídos com o SQL Server Reporting Services.   
 
  
-1.  **Interromper todos** **os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** É recomendável interromper todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de desinstalar os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Conexões ativas podem impedir a desinstalação com êxito.  
+1.  **Interromper todos** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]os serviços do **.** É recomendável interromper todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de desinstalar os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Conexões ativas podem impedir a desinstalação com êxito.  
   
 1.  **Use uma conta que tenha as permissões apropriadas.** Faça logon no servidor usando a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou usando uma conta que tenha permissões equivalentes. Por exemplo, é possível fazer logon no servidor com uma conta que seja membro do grupo Administradores local.  
   

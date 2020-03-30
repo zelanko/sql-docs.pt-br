@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c908965e745b32222fbddcc7f5691774f02ede4e
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256677"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizar a web part do Visualizador de Relatórios
@@ -63,7 +63,7 @@ Use a Web part do Visualizador de Relatórios para exibir relatórios executados
   
  As propriedades personalizadas da web part do Visualizador de Relatórios são listadas abaixo.  
   
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |Relatório|Um caminho totalmente qualificado para um relatório que esteja no site do SharePoint atual ou em um site no mesmo aplicativo Web ou farm. Para obter os melhores resultados ao definir propriedades adicionais, clique em Aplicar depois de especificar a URL do relatório.|  
 |Destino do Hiperlink|HTML padrão que especifica o quadro de destino para exibir conteúdo vinculado no documento atual. Para relatórios que incluem hiperlinks para sites externos, você pode especificar se um documento de destino substitui o relatório existente dentro da janela atual ou se ele é aberto em uma nova janela do navegador. Os valores válidos incluem **_Top**, **_Blank**, e **_Self**. **_Top** usa a janela atual, **_Blank** carrega o documento em uma nova janela do navegador e **_Self** abre o documento dentro do quadro atual. Embora **_Parent** seja um valor válido para o atributo Target em HTML, não use-o em uma web part do Visualizador de Relatórios inserida em uma página.|  

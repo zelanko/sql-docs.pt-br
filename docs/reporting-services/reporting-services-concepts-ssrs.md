@@ -9,10 +9,10 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4679ed954ac7f422a0f3caa0c59c24e5012c927f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078177"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Conceitos do Reporting Services (SSRS)
@@ -20,8 +20,8 @@ ms.locfileid: "77078177"
   
  **[!INCLUDE[applies](../includes/applies-md.md)]** Modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | Modo do SharePoint para [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]   
   
-##  <a name="bkmk_ReportServerConcepts"></a> Conceitos do servidor de relatório  
- Um servidor de relatório é um computador que tem uma instância do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instalada. Um servidor de relatório armazena internamente itens como relatórios móveis e paginados, itens e recursos relacionados a relatórios, agendas e assinaturas. Um servidor de relatório pode ser configurado como um único servidor autônomo ou como um farm em expansão ou pode ser integrado ao Servidor do SharePoint. Você interage com itens do servidor de relatório por meio do serviço Web do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , do provedor WMI, de acesso à URL ou programaticamente por meio de scripts. A maneira como você interage com um servidor de relatório depende da topologia de implantação e da configuração.  
+##  <a name="report-server-concepts"></a><a name="bkmk_ReportServerConcepts"></a> Conceitos do servidor de relatório  
+ Um servidor de relatório é um computador que tem uma instância do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instalada. Um servidor de relatório armazena internamente itens como relatórios móveis e paginados, itens e recursos relacionados a relatórios, agendas e assinaturas. Um servidor de relatório pode ser configurado como um único servidor autônomo ou como um farm em escala horizontal ou pode ser integrado ao Servidor do SharePoint. Você interage com itens do servidor de relatório por meio do serviço Web do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , do provedor WMI, de acesso à URL ou programaticamente por meio de scripts. A maneira como você interage com um servidor de relatório depende da topologia de implantação e da configuração.  
   
 ### <a name="native-mode-report-servers"></a>Servidores de relatório no modo nativo
  Um servidor de relatório configurado em modo nativo é um computador que tem o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instalado e configurado como um servidor autônomo. Você interage com o servidor de relatório, relatórios e itens relacionados a relatórios por meio de um navegador com o [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] ou comandos de acesso à URL, do SQL Server Management Studio ou programaticamente por meio de scripts. Para obter mais informações, consulte [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "77078177"
  Para obter a lista de ferramentas a serem usadas para interagir com o servidor de relatório, consulte [Ferramentas do Reporting Services](../reporting-services/tools/reporting-services-tools.md).  
   
   
-##  <a name="bkmk_ReportsandRelatedItemConcepts"></a> Conceitos de relatórios e itens relacionados  
+##  <a name="reports-and-related-item-concepts"></a><a name="bkmk_ReportsandRelatedItemConcepts"></a> Conceitos de relatórios e itens relacionados  
 ### <a name="reports-and-report-definitions"></a>Relatórios e definições de relatórios
 
 
@@ -145,7 +145,7 @@ Você pode criar relatórios móveis do Reporting Services (arquivos .rsmobile) 
  Um alerta de dados é um item armazenado interiormente em um banco de dados de alerta. Uma definição de alerta de dados inclui quais dados usar de feeds de dados de relatório existentes, as condições a serem atendidas, uma agenda e os destinatários do alerta. Os alertas de dados estão disponíveis apenas em relatórios publicados em um servidor de relatório integrado com o SharePoint Server. Os alertas de dados não estão disponíveis em uma instalação de servidor de relatório nativo. Para obter mais informações, consulte [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)[Alertas de dados do Reporting Services].  
   
   
-##  <a name="bkmk_TypesofReports"></a> Tipos de relatórios paginados do Reporting Services  
+##  <a name="types-of-reporting-services-paginated-reports"></a><a name="bkmk_TypesofReports"></a> Tipos de relatórios paginados do Reporting Services  
  No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], o termo *relatório* pode se aplicar a um tipo específico de item de servidor de relatório, a um design de layout ou a um design de solução. Um único relatório paginado do Reporting Services pode ter características de mais de um tipo; por exemplo, um relatório pode ser, ao mesmo tempo, um relatório autônomo, um sub-relatório referenciado por um relatório principal, o destino de um relatório detalhado em um relatório principal diferente e um relatório vinculado.  
   
 ### <a name="drilldown-reports"></a>Relatórios detalhados 
@@ -183,7 +183,7 @@ Você pode criar relatórios móveis do Reporting Services (arquivos .rsmobile) 
  Um relatório atualizado é uma definição de relatório publicada que é convertida em um esquema mais novo quando um servidor de relatório é atualizado de uma versão do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para uma versão posterior. A definição do relatório original é preservada. O relatório é atualizado na memória e compilado, e a versão compilada é salva internamente. Para saber mais, confira [Atualizar relatórios do Reporting Services](../reporting-services/install-windows/upgrade-reports.md).  
   
   
-##  <a name="bkmk_StagesofReports"></a> Estágios dos relatórios paginados do Reporting Services  
+##  <a name="stages-of-reporting-services-paginated-reports"></a><a name="bkmk_StagesofReports"></a> Estágios dos relatórios paginados do Reporting Services  
  Uma definição de relatório pode ser criada, publicada ou salva, compilada, processada, armazenada em cache, renderizada, exibida, exportada e salva como histórico. Quando você executa um relatório, o servidor de relatório processa um relatório em três etapas: processamento, processamento de dados e renderização de relatório. O processamento dos dados e do relatório é executado em uma definição de relatório. Os resultados estão em um formato interno intermediário. Os relatórios no formato intermediário são subsequentemente renderizados para um formato de exibição específico. O diagrama a seguir mostra os estágios e os elementos de processamento de relatório.  
   
  ![report processing diagram](../reporting-services/media/report-execution.gif "diagrama de processamento de relatório")  

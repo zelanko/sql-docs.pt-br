@@ -16,10 +16,10 @@ ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e666496383b738b11f20cd9b3d7e3a76e8613416
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198306"
 ---
 # <a name="creating-the-web-service-proxy"></a>Criando o proxy de serviço Web

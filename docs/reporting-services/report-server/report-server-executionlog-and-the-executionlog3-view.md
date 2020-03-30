@@ -12,10 +12,10 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65619694"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>ExecutionLog do servidor de relatório e exibição do ExecutionLog3
@@ -23,7 +23,7 @@ ms.locfileid: "65619694"
   
  Os servidores de relatório configurados no modo do SharePoint também podem utilizar os logs ULS do SharePoint. Para obter mais informações, consulte [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-##  <a name="bkmk_top"></a> Exibindo as informações do log  
+##  <a name="viewing-log-information"></a><a name="bkmk_top"></a> Exibindo as informações do log  
  A execução do servidor de relatório registra dados sobre execução de relatório em uma tabela de banco de dados interna. As informações da tabela estão disponíveis nas exibições do SQL Server.  
   
  O log de execução de relatório é armazenado no banco de dados do servidor de relatório que, por padrão, é denominado **ReportServer**. As exibições SQL fornecem as informações do log de execução. As exibições "2" e "3" foram adicionadas às versões mais recentes e contêm novos campos ou contêm campos com nomes mais amigáveis que as versões anteriores. As exibições mais antigas permanecem no produto; portanto, os aplicativos que dependem delas não são impactados. Se você não tem uma dependência em uma exibição mais antiga, por exemplo, ExecutionLog, é recomendável que use a exibição mais recente, ExecutionLog**3**.  
@@ -42,7 +42,7 @@ ms.locfileid: "65619694"
   
 -   [Campos de log (ExecutionLog)](#bkmk_executionlog)  
   
-##  <a name="bkmk_sharepoint"></a> Configurações de um servidor de relatório no modo SharePoint  
+##  <a name="configuration-settings-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepoint"></a> Configurações de um servidor de relatório no modo SharePoint  
  Você pode ativar ou desativar a execução de relatório nas configurações de sistema de um aplicativo de serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Por padrão, as entradas de log são mantidas por 60 dias. Entradas que excedem essa data são removidas às 2h00 diariamente. Em uma instalação madura, somente 60 dias de informações estarão disponíveis em um dado momento.  
@@ -69,7 +69,7 @@ ms.locfileid: "65619694"
   
 2.  Altere o **ExecutionLogLevel** para **detalhado**. Esse é um campo de entrada de texto, e os dois valores possíveis são **detalhado** e **normal**.  
   
-##  <a name="bkmk_native"></a> Configurações de um servidor de relatório no modo nativo  
+##  <a name="configuration-settings-for-a-native-mode-report-server"></a><a name="bkmk_native"></a> Configurações de um servidor de relatório no modo nativo  
  Você pode ativar ou desativar o log de execução de relatório na página de Propriedades do Servidor do SQL Server Management Studio. O **EnableExecutionLogging** é uma propriedade avançada.  
   
  Por padrão, as entradas de log são mantidas por 60 dias. Entradas que excedem essa data são removidas às 2h00 diariamente. Em uma instalação madura, somente 60 dias de informações estarão disponíveis em um dado momento.  
@@ -96,7 +96,7 @@ ms.locfileid: "65619694"
   
 2.  Na seção **Definido pelo usuário** , altere o **ExecutionLogLevel** para **detalhado**. Esse é um campo de entrada de texto, e os dois valores possíveis são **detalhado** e **normal**.  
   
-##  <a name="bkmk_executionlog3"></a> Campos de log (ExecutionLog3)  
+##  <a name="log-fields-executionlog3"></a><a name="bkmk_executionlog3"></a> Campos de log (ExecutionLog3)  
  Esta exibição adicionou o nó de diagnóstico de desempenho adicional à coluna **AdditionalInfo** baseada em XML. A coluna AdditionalInfo contém uma estrutura XML de 1 para muitos campos adicionais de informação. Este é um exemplo de instrução Transact-SQL para recuperar linhas da exibição ExecutionLog3. O exemplo presume que o nome do banco de dados do servidor de relatório seja **ReportServer**:  
   
 ```  
@@ -127,7 +127,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |RowCount|Número de linhas retornadas pelas consultas.|  
 |AdditionalInfo|Um conjunto de propriedades XML contendo informações adicionais sobre a execução. O conteúdo pode ser diferente para cada linha.|  
   
-##  <a name="bkmk_additionalinfo"></a> O campo AdditionalInfo  
+##  <a name="the-additionalinfo-field"></a><a name="bkmk_additionalinfo"></a> O campo AdditionalInfo  
  O campo AdditionalInfo é uma estrutura ou um conjunto de propriedades XML contendo informações adicionais sobre a execução. O conteúdo pode ser diferente para cada linha do log.  
   
  A seguir estão exemplos de conteúdo do campo AddtionalInfo para registro em log padrão e detalhado:  
@@ -307,7 +307,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
     ```  
   
-##  <a name="bkmk_executionlog2"></a> Campos de log (ExecutionLog2)  
+##  <a name="log-fields-executionlog2"></a><a name="bkmk_executionlog2"></a> Campos de log (ExecutionLog2)  
  Esta exibição adicionou alguns campos novos e renomeou outros. Este é um exemplo de instrução Transact-SQL para recuperar linhas da exibição ExecutionLog2. O exemplo presume que o nome do banco de dados do servidor de relatório seja **ReportServer**:  
   
 ```  
@@ -338,7 +338,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RowCount|Número de linhas retornadas pelas consultas.|  
 |AdditionalInfo|Um conjunto de propriedades XML contendo informações adicionais sobre a execução.|  
   
-##  <a name="bkmk_executionlog"></a> Campos de log (ExecutionLog)  
+##  <a name="log-fields-executionlog"></a><a name="bkmk_executionlog"></a> Campos de log (ExecutionLog)  
  Este é um exemplo de instrução Transact-SQL para recuperar linhas da exibição ExecutionLog. O exemplo presume que o nome do banco de dados do servidor de relatório seja **ReportServer**:  
   
 ```  

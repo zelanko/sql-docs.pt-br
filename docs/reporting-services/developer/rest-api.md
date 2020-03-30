@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
 ms.openlocfilehash: 90ccb4084f9dc2a2a2cd1da4f51281df147524c6
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78937675"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Desenvolver com as APIs REST para o Reporting Services
@@ -32,8 +32,8 @@ Um par de solicitação/resposta da API REST pode ser separado em cinco componen
 
 * O **URI de solicitação**, que consiste em `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`. Embora o URI de solicitação seja incluído no cabeçalho da mensagem de solicitação, chamamos o URI separadamente aqui porque a maioria das linguagens ou estruturas exige que ele seja passado separadamente da mensagem de solicitação.
 
-    * Esquema do URI: indica o protocolo usado para transmitir a solicitação. Por exemplo, `http` ou `https`.
-    * Host do URI: especifica o nome de domínio ou o endereço IP do servidor no qual o ponto de extremidade de serviço REST está hospedado, como `myserver.contoso.com`.
+    * Esquema de URI: indica o protocolo usado para transmitir a solicitação. Por exemplo, `http` ou `https`.
+    * Host de URI: especifica o nome de domínio ou o endereço IP do servidor no qual o ponto de extremidade de serviço REST está hospedado, como `myserver.contoso.com`.
     * Caminho do recurso: especifica o recurso ou a coleção de recursos, que pode incluir vários segmentos usados pelo serviço para determinar a seleção desses recursos. Por exemplo: `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` pode ser usado para obter as propriedades especificadas para o CatalogItem.
     * Cadeia de consulta (opcional): fornece parâmetros adicionais simples, como a versão de API ou os critérios de seleção de recursos.
 

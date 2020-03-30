@@ -19,10 +19,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e61c18fc2312fc3b04569f6a6d536ce077c4c35e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252124"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Remover um servidor de destino de um servidor mestre
@@ -33,14 +33,14 @@ ms.locfileid: "75252124"
 
 Este tópico descreve como remover um servidor de destino de um servidor mestre no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou SQL Server Management Objects (SMO). Execute este procedimento a partir do servidor de destino.  
   
-## <a name="BeforeYouBegin"></a>Antes de começar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de começar  
   
-### <a name="Security"></a>Segurança  
+### <a name="security"></a><a name="Security"></a>Segurança  
   
-#### <a name="Permissions"></a>Permissões  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissões  
 Para executar este procedimento armazenado, o usuário deve ser um membro da função de servidor fixa **sysadmin** .  
   
-## <a name="SSMSProcedure"></a>Usando o SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Usando o SQL Server Management Studio  
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>Para remover um servidor de destino de um servidor mestre  
   
@@ -50,7 +50,7 @@ Para executar este procedimento armazenado, o usuário deve ser um membro da fun
   
 3.  Clique em **Sim** para confirmar que deseja remover o servidor de destino de um servidor mestre.  
   
-## <a name="TsqlProcedure"></a>Usando Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Usando Transact-SQL  
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>Para remover um servidor de destino de um servidor mestre  
   
@@ -66,7 +66,7 @@ sp_msx_defect ;
   
 Para obter mais informações, veja [sp_msx_defect (Transact-SQL)](https://msdn.microsoft.com/0dfd963a-3bc5-4b58-94f7-aec976da2883).  
   
-## <a name="PowerShellProcedure"></a>Usando o SMO (SQL Server Management Objects)  
+## <a name="using-sql-server-management-objects-smo"></a><a name="PowerShellProcedure"></a>Usando o SMO (SQL Server Management Objects)  
 Use o **método MsxDefect**.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -17,10 +17,10 @@ ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0a24b256e6d395b6cfd93773a8cb824fe7ba7ece
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198187"
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>Integrando o Reporting Services usando o SOAP – aplicativo Web
@@ -45,13 +45,13 @@ ms.locfileid: "79198187"
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
- Você também pode usar seu aplicativo Web para gerenciar um servidor de relatório e seu conteúdo. O Gerenciador de Relatórios, incluído com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é um exemplo de aplicativo Web criado completamente por meio do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] e da API SOAP do Reporting Services. Você pode adicionar a funcionalidade de gerenciamento de relatório do Gerenciador de Relatórios para seus aplicativos Web personalizados. Por exemplo, talvez você queira retornar uma lista de relatórios disponíveis no banco de dados do servidor de relatório e exibi-los em um controle **Listbox** do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] para os usuários escolherem. O código a seguir conecta-se ao banco de dados do servidor de relatório e retorna uma lista de itens no banco de dados do servidor de relatório. Os relatórios disponíveis são, em seguida, adicionados a um controle Listbox que exibe o caminho de cada relatório.  
+ Você também pode usar seu aplicativo Web para gerenciar um servidor de relatório e seu conteúdo. O Gerenciador de Relatórios, incluído com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é um exemplo de aplicativo Web criado completamente por meio do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] e da API SOAP do Reporting Services. Você pode adicionar a funcionalidade de gerenciamento de relatório do Gerenciador de Relatórios para seus aplicativos Web personalizados. Por exemplo, talvez você queira retornar uma lista de relatórios disponíveis no banco de dados do servidor de relatório e exibi-los em um controle [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]Listbox**do** para os usuários escolherem. O código a seguir conecta-se ao banco de dados do servidor de relatório e retorna uma lista de itens no banco de dados do servidor de relatório. Os relatórios disponíveis são, em seguida, adicionados a um controle Listbox que exibe o caminho de cada relatório.  
 
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
- Você também pode usar seu aplicativo Web para gerenciar um servidor de relatório e seu conteúdo. O portal da Web, incluído com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é um exemplo de um aplicativo Web que gerencia a maioria das tarefas que você normalmente executaria usando o Reporting Services. Você pode adicionar a funcionalidade de gerenciamento de relatório do portal da Web para seus aplicativos Web personalizados. Por exemplo, talvez você queira retornar uma lista de relatórios disponíveis no banco de dados do servidor de relatório e exibi-los em um controle **Listbox** do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] para os usuários escolherem. O código a seguir conecta-se ao banco de dados do servidor de relatório e retorna uma lista de itens no banco de dados do servidor de relatório. Os relatórios disponíveis são, em seguida, adicionados a um controle Listbox que exibe o caminho de cada relatório.  
+ Você também pode usar seu aplicativo Web para gerenciar um servidor de relatório e seu conteúdo. O portal da Web, incluído com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é um exemplo de um aplicativo Web que gerencia a maioria das tarefas que você normalmente executaria usando o Reporting Services. Você pode adicionar a funcionalidade de gerenciamento de relatório do portal da Web para seus aplicativos Web personalizados. Por exemplo, talvez você queira retornar uma lista de relatórios disponíveis no banco de dados do servidor de relatório e exibi-los em um controle [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]Listbox**do** para os usuários escolherem. O código a seguir conecta-se ao banco de dados do servidor de relatório e retorna uma lista de itens no banco de dados do servidor de relatório. Os relatórios disponíveis são, em seguida, adicionados a um controle Listbox que exibe o caminho de cada relatório.  
 
 ::: moniker-end
   

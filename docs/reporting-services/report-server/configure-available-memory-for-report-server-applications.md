@@ -12,10 +12,10 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67564031"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurar memória disponível para aplicativos do Servidor de Relatórios
@@ -64,7 +64,7 @@ ms.locfileid: "67564031"
   
  A tabela a seguir descreve as configurações do **WorkingSetMaximum**, **WorkingSetMinimum**, **MemorySafetyMargin**e **MemoryThreshold** . As definições de configuração são especificadas no arquivo [RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
 |**WorkingSetMaximum**|Especifica um limite de memória depois do qual nenhuma nova solicitação de alocação de memória é concedida a aplicativos de servidor de relatório.<br /><br /> Por padrão, o servidor de relatório define **WorkingSetMaximum** como a quantidade de memória disponível no computador. Esse valor é detectado quando o serviço é iniciado.<br /><br /> Essa configuração não aparece no arquivo RSReportServer.config a menos que você a adicione manualmente. Para que o servidor de relatório use menos memória, modifique o arquivo RSReportServer.config e adicione o elemento e o valor. O intervalo de valores válidos é de 0 ao inteiro máximo. Esse valor é expresso em quilobytes.<br /><br /> Quando o valor para **WorkingSetMaximum** for alcançado, o servidor de relatório não aceitará novas solicitações. As solicitações atualmente em progresso podem ser concluídas. Novas solicitações são aceitas apenas quando o uso da memória fica abaixo do valor especificado em **WorkingSetMaximum**.<br /><br /> Se solicitações existentes continuarem a consumir memória adicional após o valor **WorkingSetMaximum** ter sido alcançado, todos os domínios de aplicativo para servidores de relatório serão reciclados. Para obter mais informações, consulte [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md).|  
 |**WorkingSetMinimum**|Especifica um limite inferior para consumo de memória; o servidor de relatório não liberará memória se o uso de memória geral estiver abaixo desse limite.<br /><br /> Por padrão, o valor é calculado na inicialização do serviço. O cálculo é que a solicitação de alocação de memória inicial é de 60 por cento de **WorkingSetMaximum**.<br /><br /> Essa configuração não aparece no arquivo RSReportServer.config a menos que você a adicione manualmente. Se você quiser personalizar esse valor, será necessário adicionar o elemento **WorkingSetMinimum** ao arquivo RSReportServer.config. O intervalo de valores válidos é de 0 ao inteiro máximo. Esse valor é expresso em kilobytes.|  

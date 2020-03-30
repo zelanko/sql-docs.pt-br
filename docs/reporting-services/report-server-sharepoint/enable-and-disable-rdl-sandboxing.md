@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65577765"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Habilitar e desabilitar o RDL Sandboxing para o Reporting Services no modo integrado do SharePoint
@@ -65,7 +65,7 @@ O recurso RDL Sandboxing (Linguagem RDL) permite que você detecte e restrinja o
 
  A tabela a seguir fornece informações sobre definições de configuração. As configurações são apresentadas na ordem em que aparecem no arquivo de configuração.  
   
-|Configuração|Descrição|  
+|Configuração|DESCRIÇÃO|  
 |-------------|-----------------|  
 |**MaxExpressionLength**|Número máximo de caracteres permitido em expressões RDL.<br /><br /> Padrão: 1000|  
 |**MaxResourceSize**|Número máximo de KB permitido em um recurso externo.<br /><br /> Padrão: 100|  
@@ -128,7 +128,7 @@ Você pode modificar o recurso RDL Sandboxing para gerenciar os recursos que sã
   
  Para acrescentar funções de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework à lista de permissões, acrescente os tipos correspondentes do namespace Microsoft.VisualBasic à lista de permissões.  
   
- Para acrescentar palavras-chave de tipo do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework à lista de permissões, acrescente o tipo CLR correspondente à lista de permissões. Por exemplo, para usar a palavra-chave **Integer** do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, adicione o seguinte fragmento de XML ao elemento **\<RDLSandboxing>** :  
+ Para acrescentar palavras-chave de tipo do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework à lista de permissões, acrescente o tipo CLR correspondente à lista de permissões. Por exemplo, para usar a palavra-chave [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]Integer**do** .NET Framework, adicione o seguinte fragmento de XML ao elemento **\<RDLSandboxing>** :  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  

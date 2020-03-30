@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286040"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implantar o cluster de Big Data do SQL Server com alta disponibilidade
@@ -127,7 +127,7 @@ Description                                    Endpoint            Name         
 SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-master-readonly  tds
 ```
 
-## <a id="instance-connect"></a> Conectar a uma instância do SQL Server
+## <a name="connect-to-sql-server-instance"></a><a id="instance-connect"></a> Conectar a uma instância do SQL Server
 
 Para determinadas operações, como definir configurações em nível de servidor ou adicionar manualmente um banco de dados ao grupo de disponibilidade, você deve se conectar à instância do SQL Server. Antes do SQL Server 2019 CU2, operações como `sp_configure`, `RESTORE DATABASE` ou qualquer DDL do grupo de disponibilidade exigirão esse tipo de conexão. Por padrão, o cluster de Big Data não inclui um ponto de extremidade que habilita a conexão de instância e você deve expor esse ponto de extremidade manualmente. 
 

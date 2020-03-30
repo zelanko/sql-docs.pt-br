@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: kenvh
 ms.openlocfilehash: 63681ee474d4993e248bf02dcabd9065317ffa39
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028061"
 ---
 # <a name="fips-mode"></a>Modo FIPS
@@ -85,7 +85,7 @@ Para executar o driver JDBC no modo em conformidade com FIPS, configure as propr
 
 #### <a name="properties"></a>Propriedades 
 
-|Propriedade|Type|Padrão|Descrição|Observações|
+|Propriedade|Type|Padrão|DESCRIÇÃO|Observações|
 |---|---|---|---|---|
 |encrypt|boolean ["true / false"]|"false"|Para a JVM habilitada para FIPS, essa propriedade de criptografia deve ser **true**||
 |TrustServerCertificate|boolean ["true / false"]|"false"|Para o FIPS, o usuário precisa validar a cadeia de certificados, de modo que ele deve usar o valor **"false"** para essa propriedade. ||

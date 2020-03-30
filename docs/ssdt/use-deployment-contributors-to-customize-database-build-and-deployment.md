@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 4d0c83e0b6adb5981adde576e06b0b74faf42eeb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256248"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Personalize a compilação e a implantação do banco de dados usando os colaboradores de compilação e implantação
@@ -47,8 +47,8 @@ Além disso, você pode expor pares personalizados de argumentos de nome/valor d
   
 |**Tarefas comuns**|**Conteúdo de suporte**|  
 |--------------------|--------------------------|  
-|**Saiba mais sobre os pontos de extensibilidade:** você pode ler sobre as classes base que usa para implementar os colaboradores de build e implantação.|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
-|**Criar colaboradores de exemplo:** conheça as etapas necessárias para criar um colaborador de compilação ou implantação. Se você seguir esse passo a passo, você poderá:<br /><br />-   Criar um colaborador de compilação que gera um relatório que lista todos os elementos no modelo.<br />-   Criar um colaborador de implantação que altera o plano de implantação antes de ser executado.<br />-   Criar um colaborador de implantação que gera um relatório de implantação quando você implanta um projeto SQL.<br /><br />Você pode criar todos os seus colaboradores em um único assembly ou entre vários assemblies, dependendo de como você deseja que os colaboradores sejam distribuídos em sua equipe.|[Passo a passo: Estender o build do projeto de banco de dados para gerar as estatísticas do modelo](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[Passo a passo: estenda a implantação do projeto de banco de dados para modificar o plano de implantação](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Passo a passo: Estender a implantação do projeto de banco de dados para analisar o plano de implantação](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
+|**Saiba mais sobre os pontos de extensibilidade:** você pode ler sobre as classes base que você usa para implementar os colaborador de compilação e implantação.|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
+|**Crie colaboradores de exemplo:** conheça as etapas necessárias para criar um colaborador de compilação ou implantação. Se você seguir esse passo a passo, você poderá:<br /><br />-   Criar um colaborador de compilação que gera um relatório que lista todos os elementos no modelo.<br />-   Criar um colaborador de implantação que altera o plano de implantação antes de ser executado.<br />-   Criar um colaborador de implantação que gera um relatório de implantação quando você implanta um projeto SQL.<br /><br />Você pode criar todos os seus colaboradores em um único assembly ou entre vários assemblies, dependendo de como você deseja que os colaboradores sejam distribuídos em sua equipe.|[Passo a passo: estender a compilação do projeto de banco de dados para gerar as estatísticas do modelo](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[Passo a passo: estender a implantação do projeto de banco de dados para modificar o plano de implantação](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Passo a passo: estender a implantação do projeto de banco de dados para analisar o plano de implantação](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
 [Definir condições personalizadas para testes de unidade do SQL](https://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  

@@ -11,10 +11,10 @@ ms.author: v-dapugl
 author: david-puglielli
 manager: v-mabarw
 ms.openlocfilehash: 796a77f3be0e1d15609f91ee1c36c2769a541cc5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76941080"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-php-drivers-for-sql-server"></a>Como usar o Always Encrypted com enclaves seguros e com Drivers PHP para SQL Server

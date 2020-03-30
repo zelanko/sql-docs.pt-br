@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 954302809c01769f6d3869e7762917e91cfd8f98
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68892219"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Contadores de desempenho para os objetos de desempenho do MSRS 2011 no modo do SharePoint
@@ -41,12 +41,12 @@ ms.locfileid: "68892219"
   
 -   [Use cmdlets do PowerShell para retornar listas](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> Contadores de desempenho do modo do SharePoint do serviço Web MSRS 2011  
+##  <a name="msrs-2011-web-service-sharepoint-mode-performance-counters"></a><a name="bkmk_webservice"></a> Contadores de desempenho do modo do SharePoint do serviço Web MSRS 2011  
  O objeto de desempenho do **modo do SharePoint do serviço Web MSRS 2011** monitora o desempenho do servidor de relatório. Esse objeto de desempenho inclui uma coleção de contadores usados para controlar o processamento do servidor de relatório iniciado normalmente por operações interativas de exibição de relatórios. Quando você configura este contador, pode aplicá-lo a todas as instâncias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou selecionar instâncias específicas. Esses contadores são redefinidos sempre que o [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] interrompe o serviço Web Servidor de Relatórios.  
   
  A tabela a seguir lista os contadores incluídos com o objeto de desempenho do **modo do SharePoint do serviço Web MSRS 2011** .  
   
-|Contador|Descrição|  
+|Contador|DESCRIÇÃO|  
 |-------------|-----------------|  
 |**Sessões ativas**|Número de sessões ativas. Este contador fornece uma contagem cumulativa de todas as sessões de navegador geradas a partir de execuções de relatórios, independentemente de estarem ativas ou não.<br /><br /> O contador é reduzido à medida que os registros de sessão são removidos. Por padrão, as sessões são removidas após dez minutos de inatividade.|  
 |**Acertos de cache/s**|Número de solicitações por segundo para relatórios armazenados em cache. Essas são solicitações para relatórios re-renderizados e não solicitações para relatórios processados diretamente do cache. (Consulte **Total de acertos de cache** mais adiante neste tópico.)|  
@@ -71,12 +71,12 @@ ms.locfileid: "68892219"
 |**Total de relatórios executados**|Número total de relatórios que foram executados com êxito depois que o serviço foi iniciado. Este contador é zerado sempre que [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] para o serviço Web Servidor de Relatórios.|  
 |**Total de solicitações**|Número total de todas as solicitações feitas ao servidor de relatório depois que o serviço foi iniciado. Este contador é zerado sempre que [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] para o serviço Web Servidor de Relatórios.|  
   
-##  <a name="bkmk_windowsservice"></a> Contadores de desempenho do modo do SharePoint do serviço do Windows MSRS 2011  
+##  <a name="msrs-2011-windows-service-sharepoint-mode-performance-counters"></a><a name="bkmk_windowsservice"></a> Contadores de desempenho do modo do SharePoint do serviço do Windows MSRS 2011  
  O objeto de desempenho do **modo do SharePoint do Serviço Windows MSRS 2011** é usado para monitorar o serviço Windows do Servidor de Relatório. Este objeto de desempenho inclui uma coleção de contadores usados para controlar o processamento de relatórios que é iniciado por operações agendadas. As operações agendadas podem incluir assinatura e entrega, instantâneos de execução de relatório e histórico de relatórios. Quando você configura este contador, pode aplicá-lo a todas as instâncias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou selecionar instâncias específicas.  
   
  A tabela a seguir lista os contadores incluídos no objeto de desempenho do **modo do SharePoint do Serviço Windows MSRS 2011** .  
   
-|Contador|Descrição|  
+|Contador|DESCRIÇÃO|  
 |-------------|-----------------|  
 |**Sessões ativas**|Número de sessões ativas armazenadas no banco de dados do servidor de relatório. Esse contador fornece uma contagem cumulativa de todas as sessões de navegador utilizáveis geradas a partir de assinaturas de relatórios, independentemente de estarem ativas ou não.|  
 |**Alerta: comprimento da fila de evento**||  
@@ -118,7 +118,7 @@ ms.locfileid: "68892219"
 |**Total de solicitações**|Número total de relatórios que foram executados com êxito depois que o serviço foi iniciado. Esse contador é zerado quando o domínio de aplicativo é reciclado.|  
 |**Total de atualizações de instantâneos**|Número total de atualizações de instantâneo de execução de relatório.|  
   
-##  <a name="bkmk_powershell"></a> Use cmdlets do PowerShell para retornar listas  
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> Use cmdlets do PowerShell para retornar listas  
  ![Conteúdo relacionado ao PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")O script do Windows PowerShell a seguir retornará os conjuntos de contadores cujos CounterSetName comecem com "msr"  
   
 ```  

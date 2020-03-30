@@ -11,10 +11,10 @@ author: David-Engel
 ms.author: genemi
 manager: ''
 ms.openlocfilehash: c542a77c3a7cfbbe9c54786116e3e9e800a3dda0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76917805"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Matriz de Suporte do Microsoft PHP Drivers para SQL Server

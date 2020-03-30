@@ -1,5 +1,5 @@
 ---
-title: Como ler o exemplo de dados grandes | Microsoft Docs
+title: Ler o exemplo de dados grandes | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f39bda7c98382e1bb3a63047a80a2afb34008808
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028325"
 ---
 # <a name="reading-large-data-sample"></a>Lendo exemplo de dados grandes

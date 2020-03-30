@@ -16,10 +16,10 @@ ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1670638b32f2f5bd32a9ee7b12e28e7a468b75da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74821995"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>Recuperar-se de uma falha na instância do cluster de failover
@@ -30,7 +30,7 @@ ms.locfileid: "74821995"
   
 -   [Recuperar de uma falha de software](#Scenario2)  
   
-##  <a name="Scenario1"></a> Recuperar de uma falha irreparável  
+##  <a name="recover-from-an-irreparable-failure"></a><a name="Scenario1"></a> Recuperar de uma falha irreparável  
  Use as seguintes etapas para recuperar-se de uma falha irreparável. A falha pode ser causada, por exemplo, por uma falha em um controlador de disco ou no sistema operacional. Nesse caso, a falha é gerada por um problema de hardware no Nó 1 de um cluster de dois nós.  
   
 1.  Após a falha no Nó 1, a FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] executa failover no Nó 2.  
@@ -47,7 +47,7 @@ ms.locfileid: "74821995"
   
 7.  Execute a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para adicionar o Nó 1 à FCI. Para obter mais informações, consulte [Adicionar ou remover nós em um cluster de failover do SQL Server &#40;Instalação&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-##  <a name="Scenario2"></a> Recuperar-se de uma falha reparável  
+##  <a name="recover-from-a-reparable-failure"></a><a name="Scenario2"></a> Recuperar-se de uma falha reparável  
  Execute as seguintes etapas ara recuperar-se de uma falha reparável. Nesse caso, a falha é causada porque o Nó 1 está desativado ou offline, mas não irreparavelmente danificado. Ela pode ser causada por uma falha do sistema operacional, falha de hardware ou falha na própria instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 1.  Após a falha no Nó 1, a FCI executa failover no Nó 2.  

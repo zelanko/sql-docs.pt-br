@@ -9,10 +9,10 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041218"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios)
@@ -34,7 +34,7 @@ Tempo estimado para concluir este tutorial: 10 minutos
 ## <a name="requirements"></a>Requisitos  
 Para obter informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Chart"></a>1. Criar um gráfico de pizza no Assistente de gráfico  
+## <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1. Criar um gráfico de pizza no Assistente de gráfico  
 Nesta seção, você usa o Assistente de Gráfico para criar um conjunto de dados inserido, escolhe uma fonte de dados compartilhada e cria um gráfico de pizza.  
 
   
@@ -77,7 +77,7 @@ Nesta seção, você usa o Assistente de Gráfico para criar um conjunto de dado
   
 9. Clique em **Próximo**.  
   
-## <a name="ChartType"></a>2. Escolher o tipo de gráfico  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. Escolher o tipo de gráfico  
 Você pode escolher um dos diversos tipos de gráfico predefinidos.  
 
   
@@ -103,7 +103,7 @@ O relatório exibe o gráfico de pizza com oito fatias, uma para cada produto. A
 
 ![report-builder-pie-chart-first-preview](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
-## <a name="Percentages"></a>3. Exibir as porcentagens em cada fatia do gráfico  
+## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. Exibir as porcentagens em cada fatia do gráfico  
 Em cada fatia da pizza, é possível exibir uma porcentagem dessa fatia comparada à pizza inteira.  
 
   
@@ -130,7 +130,7 @@ O relatório exibe a porcentagem do todo para cada fatia da pizza.
 
 ![report-builder-pie-chart-preview-percents](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
-## <a name="CombineSlices"></a>4. Combinar pequenas fatias em uma fatia  
+## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. Combinar pequenas fatias em uma fatia  
 Três das fatias do gráfico são bastante pequenas. Você pode combinar várias fatias pequenas em uma maior fatia “Outras” que representa todas elas.  
 
 1.  Alterne para a exibição de design de relatório.  
@@ -155,7 +155,7 @@ Na legenda, agora você vê a categoria “Outros”. A nova fatia da pizza comb
 
 ![report-builder-pie-chart-start-at-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
-## <a name="DrawingEffect"></a>5. Iniciar valores do gráfico de pizza na parte superior 
+## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5. Iniciar valores do gráfico de pizza na parte superior 
 
 Por padrão, em gráficos de pizza, o primeiro valor do conjunto de dados inicia a 90 graus da parte superior da pizza. Você vê isso no gráfico de pizza nas seções anteriores.
 
@@ -173,7 +173,7 @@ Agora, as fatias do gráfico de pizza estão em ordem alfabética, começando na
 
 ![report-builder-pie-chart-start-at-top](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
-## <a name="Title"></a>6. Adicionar um título de relatório  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Adicionar um título de relatório  
   
 Como o gráfico de pizza é a única visualização do relatório, o gráfico não precisa de seu próprio título. O título do relatório será suficiente.
   
@@ -197,7 +197,7 @@ Como o gráfico de pizza é a única visualização do relatório, o gráfico n�
   
 6.  Clique em **Executar** para visualizar o relatório.  
   
-## <a name="Save"></a>7. Salvar o relatório  
+## <a name="7-save-the-report"></a><a name="Save"></a>7. Salvar o relatório  
   
 ### <a name="to-save-the-report"></a>Para salvar o relatório  
   

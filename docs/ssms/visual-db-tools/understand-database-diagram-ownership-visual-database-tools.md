@@ -18,10 +18,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: faebe8539698fbe605035dff737065864c70929b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241839"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>Compreender a propriedade do diagrama de banco de dados (Visual Database Tools)
@@ -41,4 +41,4 @@ Pontos de destaque sobre propriedade de diagrama:
 ## <a name="see-also"></a>Consulte Também
 
 [Trabalhar com diagramas de banco de dados](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[Configurar o Designer de Diagramas de Banco de Dados](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)
+[Configurar o designer de diagramas de bancos de dados](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)

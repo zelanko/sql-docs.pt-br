@@ -9,10 +9,10 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63294704"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: criando um relatório de matriz (Construtor de Relatórios)
@@ -27,7 +27,7 @@ Tempo estimado para concluir este tutorial: 20 minutos.
 ## <a name="requirements"></a>Requisitos  
 Para obter informações sobre os requisitos, consulte [Pré-requisitos dos tutoriais](../reporting-services/prerequisites-for-tutorials-report-builder.md). 
   
-## <a name="CreateMatrix"></a>1. Criar um relatório de matriz e um conjunto de dados no Assistente de Nova Tabela ou Matriz  
+## <a name="1-create-a-matrix-report-and-dataset-from-the-new-table-or-matrix-wizard"></a><a name="CreateMatrix"></a>1. Criar um relatório de matriz e um conjunto de dados no Assistente de Nova Tabela ou Matriz  
 Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto de dados inserido e exibe os dados em uma matriz.  
   
 > [!NOTE]  
@@ -94,7 +94,7 @@ Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto 
 
 11. Clique em **Próximo**.  
   
-## <a name="Groups"></a>2. Organizar dados e escolher o layout no Assistente de Nova Tabela ou Matriz  
+## <a name="2-organize-data-and-choose-layout-from-the-new-table-or-matrix-wizard"></a><a name="Groups"></a>2. Organizar dados e escolher o layout no Assistente de Nova Tabela ou Matriz  
 Use o assistente para fornecer um design inicial no qual exibir dados. O painel de visualização no assistente ajuda a visualizar o resultado dos dados de agrupamento antes de concluir o design da matriz.  
   
 1.  Na página **Organizar campos** , arraste Territory de **Campos disponíveis** até **Grupos de linhas**.  
@@ -145,7 +145,7 @@ Use o assistente para fornecer um design inicial no qual exibir dados. O painel 
 
 ![report-builder-expand-matrix](../reporting-services/media/report-builder-expand-matrix.png)
   
-## <a name="FormatData"></a>3. Formatar dados  
+## <a name="3-format-data"></a><a name="FormatData"></a>3. Formatar dados  
 Por padrão, os dados resumidos do campo Sales exibem um número geral e o campo SalesDate exibe informações de data e hora. Nesta seção, você formata o campo Sales para exibir o número como moeda e o campo SalesDate para exibir apenas a data. Ative/desative **Estilos de Espaço Reservado** para exibir caixas de texto formatadas e texto de espaço reservado como valores de exemplo.  
   
 ### <a name="to-format-fields"></a>Para formatar campos  
@@ -170,7 +170,7 @@ Por padrão, os dados resumidos do campo Sales exibem um número geral e o campo
   
 Os valores de data só exibem datas e os valores de vendas são exibidos como moeda.  
   
-## <a name="AdjacentGroup"></a>4. Adicionar grupo de colunas adjacente  
+## <a name="4-add-adjacent-column-group"></a><a name="AdjacentGroup"></a>4. Adicionar grupo de colunas adjacente  
 É possível aninhar grupos de linhas e de colunas em relações de pai e filho ou adjacentes em relações de irmão.  
   
 Nesta seção, você adiciona um grupo de colunas adjacente ao grupo de colunas Subcategory, copie células para popular o novo grupo de colunas e use uma expressão para criar o valor do cabeçalho do grupo de colunas.  
@@ -216,7 +216,7 @@ O relatório inclui colunas nomeadas Monday e Tuesday. O conjunto de dados cont�
 > [!NOTE]  
 > Se os dados incluíssem outros dias, o relatório também incluiria colunas para eles. Cada coluna tem o cabeçalho da coluna, **Vendas**, e os totais de vendas por território.  
   
-## <a name="Width"></a>5. Alterar a Largura das Colunas  
+## <a name="5-change-column-widths"></a><a name="Width"></a>5. Alterar a Largura das Colunas  
 Um relatório que inclua uma matriz normalmente se expande horizontalmente, bem como verticalmente, quando executado. O controle da expansão horizontal será especialmente importante se você planejar exportar o relatório para formatos como Microsoft Word ou Adobe PDF, usados em relatórios impressos. Se o relatório se expandir horizontalmente em várias páginas, será difícil compreender o relatório impresso. Para minimizar a expansão horizontal, é possível redimensionar colunas seguindo exclusivamente a largura necessária para exibir os dados sem quebra de texto. Também é possível renomear colunas para que os títulos se ajustem à largura necessária para exibir os dados.  
   
 ### <a name="to-rename-and-resize-the-columns"></a>Para renomear e redimensionar as colunas  
@@ -245,7 +245,7 @@ Um relatório que inclua uma matriz normalmente se expande horizontalmente, bem 
   
 As colunas que contêm as quantidades agora são mais estreitas e são nomeadas QTY.  
   
-## <a name="MergeCells"></a>6. Mesclar células na matriz  
+## <a name="6-merge-matrix-cells"></a><a name="MergeCells"></a>6. Mesclar células na matriz  
 A área de canto está no canto superior esquerdo da matriz. Dependendo do número de grupos de linhas e de colunas na matriz, o número de células na área de canto varia. A matriz, interna neste tutorial, tem quatro células na área de canto. As células são organizadas em duas linhas e duas colunas, o que reflete a profundidade das hierarquias dos grupos de linhas e de colunas. As quatro células não são usadas neste relatório, e você as mesclará em uma só.  
   
 ### <a name="to-merge-matrix-cells"></a>Para mesclar células na matriz  
@@ -268,7 +268,7 @@ A área de canto está no canto superior esquerdo da matriz. Dependendo do núme
   
 A célula no canto superior da matriz não está mais visível. 
   
-## <a name="HeaderTitle"></a>7. Adicionar um cabeçalho e um título de relatório  
+## <a name="7-add-a-report-header-and-report-title"></a><a name="HeaderTitle"></a>7. Adicionar um cabeçalho e um título de relatório  
 Um título é exibido na parte superior do relatório. É possível colocar o título em um cabeçalho do relatório. No entanto, se ele não usar um cabeçalho, será possível colocar o título em uma caixa de texto na parte superior do corpo do relatório. Neste tutorial, você irá remover a caixa de texto na parte superior do relatório e adicionar um título ao cabeçalho.  
   
 ### <a name="to-add-a-report-header-and-report-title"></a>Para adicionar um cabeçalho e um título de relatório  
@@ -293,7 +293,7 @@ Um título é exibido na parte superior do relatório. É possível colocar o t�
   
 O relatório inclui um título do relatório no cabeçalho do relatório.  
   
-## <a name="Save"></a>8. Salvar o relatório  
+## <a name="8-save-the-report"></a><a name="Save"></a>8. Salvar o relatório  
 É possível salvar relatórios em um servidor de relatório, em uma biblioteca do SharePoint ou no computador.  
   
 Neste tutorial, salve o relatório em um servidor de relatório. Se você não tiver acesso ao servidor de relatório, salve o relatório no computador.  
@@ -324,7 +324,7 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
   
 4.  Clique em **Save** (Salvar).  
   
-## <a name="RotateTextBox"></a>9. (Opcional) Girar caixa de texto em 270 graus  
+## <a name="9-optional-rotate-text-box-270-degrees"></a><a name="RotateTextBox"></a>9. (Opcional) Girar caixa de texto em 270 graus  
 Um relatório com matrizes pode se expandir horizontal e verticalmente quando executado. Girando-se caixas de texto verticalmente, ou em 270 graus, é possível economizar espaço horizontal. Em seguida, o relatório renderizado é estreitado e, se exportado para um formato como o Microsoft Word, será mais provável o ajuste em uma página impressa.  
   
 Uma caixa de texto também pode exibir texto na horizontal, vertical (de cima para baixo). Para obter mais informações, consulte [Caixas de texto &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  

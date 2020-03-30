@@ -11,10 +11,10 @@ ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b5e17a6b7a98101eac8e3ddbb29a8438bc10075
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75681697"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Referência da API do Always Encrypted para o JDBC Driver
@@ -31,7 +31,7 @@ ms.locfileid: "75681697"
   
  **Classe SQLServerConnection**  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |Nova palavra-chave de cadeia de conexão:<br /><br /> columnEncryptionSetting|columnEncryptionSetting=Enabled habilita a funcionalidade Always Encrypted na conexão e columnEncryptionSetting=Disabled a desabilita. Os valores aceitos são Enabled/Disabled. O padrão é Disabled.|  
 |Nova palavra-chave da cadeia de conexão: (MS JDBC 7.4 em diante)<br /><br /> keyVaultProviderClientId <br /><br /> keyVaultProviderClientKey |keyVaultProviderClientId=\<ClientID>;keyVaultProviderClientKey=\<ClientKey> <br/><br/> Registra o SQLServerColumnEncryptionAzureKeyVaultProvider e usa os valores ClientID e ClientKey para recuperar a chave mestra de coluna do Azure Key Vault|  
@@ -43,7 +43,7 @@ ms.locfileid: "75681697"
 
  **SQLServerConnectionPoolProxy class**
  
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |`public final boolean getSendTimeAsDatetime()` | Retorna a configuração da propriedade de conexão sendTimeAsDatetime.|
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)` | Modifica a configuração da propriedade de conexão sendTimeAsDatetime.|
@@ -51,7 +51,7 @@ ms.locfileid: "75681697"
   
  **Classe SQLServerDataSource**  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |`public void setColumnEncryptionSetting(String columnEncryptionSetting)`|Habilita/desabilita a funcionalidade Sempre Criptografado para o objeto de fonte de dados.<br /><br /> O padrão é Disabled.|  
 |`public String getColumnEncryptionSetting()`|Recupera a configuração da funcionalidade Sempre Criptografado para o objeto de fonte de dados.|
@@ -67,13 +67,13 @@ ms.locfileid: "75681697"
   
  Construtores  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |`public SQLServerColumnEncryptionJavaKeyStoreProvider (String keyStoreLocation, char[] keyStoreSecret)`|Provedor do repositório de chaves para o Repositório de Chaves Java.|  
   
  Métodos  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Descriptografa o valor criptografado especificado de uma coluna da chave de criptografia. O valor criptografado deve ser criptografado usando o certificado com o caminho da chave especificado e o algoritmo especificado.<br /><br /> **O formato do caminho da chave deve ser um dos seguintes:**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Substitui SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
 |`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Criptografa uma chave de criptografia de coluna usando o certificado com o caminho da chave especificado e o algoritmo especificado.<br /><br /> **O formato do caminho da chave deve ser um dos seguintes:**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Substitui SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
@@ -86,13 +86,13 @@ ms.locfileid: "75681697"
   
  Construtores  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |`public SQLServerColumnEncryptionAzureKeyVaultProvider (String clientId, String clientKey)`|Provedor do repositório de chaves para o Azure Key Vault.  Você precisa fornecer o identificador e a chave do cliente solicitando que o token autentique-se no Azure Key Vault.|  
   
  Métodos  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 | `public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)` | Descriptografa uma CEK (chave de criptografia de coluna) criptografada. Essa descriptografia é realizada com um algoritmo de criptografia RSA que usa a chave assimétrica especificada pelo caminho da chave mestra.<br />(Substitui SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).) |  
 | `public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)` | Criptografa uma chave de criptografia de coluna, fornecendo a chave mestra de coluna especificada para o algoritmo especificado.<br />(Substitui SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).) |  
@@ -106,7 +106,7 @@ ms.locfileid: "75681697"
   
  Métodos  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |`public String getAccessToken(String authority, String resource, String scope);`|O método precisa ser substituído. O método é usado para obter o token de acesso para o Azure Key Vault.|  
   
@@ -114,13 +114,13 @@ ms.locfileid: "75681697"
   
  Estenda a classe para implementar um provedor personalizado de repositório de chave.  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |SQLServerColumnEncryptionKeyStoreProvider|Classe base para todos os provedores de repositório de chaves. Um provedor personalizado precisa derivar dessa classe e substituir suas funções de membro e, em seguida, registrá-lo usando SQLServerConnection. registerColumnEncryptionKeyStoreProviders().|  
   
  Métodos  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |`public abstract byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte [] encryptedColumnEncryptionKey)`|Método de classe base para descriptografar o valor especificado de uma coluna da chave de criptografia. O valor criptografado deve ser criptografado usando a chave mestra de coluna com o caminho de chave e o algoritmo especificados.|  
 |`public abstract byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[]  columnEncryptionKey)`|Método da classe base para criptografar a criptografia de uma coluna de chave usando a chave mestra de coluna com o caminho da chave especificado e usar o algoritmo especificado.|
@@ -129,7 +129,7 @@ ms.locfileid: "75681697"
   
  Métodos novos ou sobrecarregados na classe **SQLServerPreparedStatement**  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |`public void setBigDecimal(int parameterIndex, BigDecimal x, int precision, int scale)`<br /><br /> `public void setObject(int parameterIndex, Object x, int targetSqlType, Integer precision, int scale)`<br /><br /> `public void setObject(int parameterIndex, Object x, SQLType targetSqlType, Integer precision, Integer scale)`<br /><br /> `public void setTime(int parameterIndex, java.sql.Time x, int scale)`<br /><br /> `public void setTimestamp(int parameterIndex, java.sql.Timestamp x, int scale)` <br />`public void setDateTimeOffset(int parameterIndex, microsoft.sql.DateTimeOffset x, int scale)`|Esses métodos são sobrecarregados com uma precisão ou um argumento de escala ou ambos para dar suporte a Always Encrypted para tipos de dados específicos que exigem informações de precisão e escala.|  
 |`public void setMoney(int parameterIndex, BigDecimal x)`<br /><br /> `public void setSmallMoney(int parameterIndex, BigDecimal x)`<br /><br /> `public void setUniqueIdentifier(int parameterIndex, String guid)`<br /><br /> `public void setDateTime(int parameterIndex, java.sql.Timestamp x)`<br /><br /> `public void setSmallDateTime(int parameterIndex, java.sql.Timestamp x)`|Esses métodos são adicionados para dar suporte a Always Encrypted para os tipos de dados money, smallmoney, uniqueidentifier, datetime e smalldatetime. <br/><br/>Observe que o método `setTimestamp()` existente é usado para enviar valores de parâmetro para a coluna datetime2 criptografada. Para colunas datetime e smalldatetime criptografadas, use os novos métodos `setDateTime()` e `setSmallDateTime()`, respectivamente.|  
@@ -137,7 +137,7 @@ ms.locfileid: "75681697"
   
  Métodos novos ou sobrecarregados na classe **SQLServerCallableStatement**  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |`public void registerOutParameter(int parameterIndex, int sqlType, int precision, int scale)`<br /><br /> `public void registerOutParameter(int parameterIndex, SQLType sqlType, int precision, int scale)`<br /><br /> `public void registerOutParameter(String parameterName, int sqlType, int precision, int scale)`<br /><br /> `public void registerOutParameter(String parameterName, SQLType sqlType, int precision, int scale)`<br />`public void setBigDecimal(String parameterName, BigDecimal bd, int precision, int scale)`<br /><br /> `public void setTime(String parameterName, java.sql.Time t, int scale)`<br /><br /> `public void setTimestamp(String parameterName, java.sql.Timestamp t, int scale)`<br /><br /> `public void setDateTimeOffset(String parameterName, microsoft.sql.DateTimeOffset t, int scale)`<br/><br/>`public final void setObject(String sCol, Object x, int targetSqlType, Integer precision, int scale)`|Esses métodos são sobrecarregados com uma precisão ou um argumento de escala ou ambos para dar suporte a Always Encrypted para tipos de dados específicos que exigem informações de precisão e escala.|  
 |`public void setDateTime(String parameterName, java.sql.Timestamp x)`<br /><br /> `public void setSmallDateTime(String parameterName, java.sql.Timestamp x)`<br /><br /> `public void setUniqueIdentifier(String parameterName, String guid)`<br /><br /> `public void setMoney(String parameterName, BigDecimal bd)`<br /><br /> `public void setSmallMoney(String parameterName, BigDecimal bd)`<br/><br/>`public Timestamp getDateTime(int index)`<br/><br/>`public Timestamp getDateTime(String sCol)`<br/><br/>`public Timestamp getDateTime(int index, Calendar cal)`<br/><br/>`public Timestamp getSmallDateTime(int index)`<br/><br/>`public Timestamp getSmallDateTime(String sCol)`<br/><br/>`public Timestamp getSmallDateTime(int index, Calendar cal)`<br/><br/>`public Timestamp getSmallDateTime(String name, Calendar cal)`<br/><br/>`public BigDecimal getMoney(int index)`<br/><br/>`public BigDecimal getMoney(String sCol)`<br/><br/>`public BigDecimal getSmallMoney(int index)`<br/><br/>`public BigDecimal getSmallMoney(String sCol)`|Esses métodos são adicionados para dar suporte a Always Encrypted para os tipos de dados money, smallmoney, uniqueidentifier, datetime e smalldatetime. <br/><br/>Observe que o método `setTimestamp()` existente é usado para enviar valores de parâmetro para a coluna datetime2 criptografada. Para colunas datetime e smalldatetime criptografadas, use os novos métodos `setDateTime()` e `setSmallDateTime()`, respectivamente.|  
@@ -146,7 +146,7 @@ ms.locfileid: "75681697"
 
  Métodos novos ou sobrecarregados na classe **SQLServerResultSet**  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |`public String getUniqueIdentifier(int columnIndex)`<br/><br/>`public String getUniqueIdentifier(String columnLabel)`<br/><br/>   `public java.sql.Timestamp getDateTime(int columnIndex)` <br/><br/> `public java.sql.Timestamp getDateTime(String columnName)`   <br/><br/> `public java.sql.Timestamp getDateTime(int columnIndex, Calendar cal)`   <br/><br/>`public java.sql.Timestamp getDateTime(String colName, Calendar cal)`    <br/><br/>`public java.sql.Timestamp getSmallDateTime(int columnIndex)`    <br/><br/> `public java.sql.Timestamp getSmallDateTime(String columnName)`   <br/><br/> `public java.sql.Timestamp getSmallDateTime(int columnIndex, Calendar cal)`   <br/><br/> `public java.sql.Timestamp getSmallDateTime(String colName, Calendar cal)`   <br/><br/>  `public BigDecimal getMoney(int columnIndex)`  <br/><br/> `public BigDecimal getMoney(String columnName)`   <br/><br/> `public BigDecimal getSmallMoney(int columnIndex)`   <br/><br/>  `public BigDecimal getSmallMoney(String columnName)`  <br/><br/>`public void updateMoney(String columnName, BigDecimal x)`    <br/><br/>  `public void updateSmallMoney(String columnName, BigDecimal x)`  <br/><br/>     `public void updateDateTime(int index, java.sql.Timestamp x)` <br/><br/> `public void updateSmallDateTime(int index, java.sql.Timestamp x)` |Esses métodos são adicionados para dar suporte a Always Encrypted para os tipos de dados money, smallmoney, uniqueidentifier, datetime e smalldatetime. <br/><br/>Observe que o método de `updateTimestamp()` existente é usado para atualizar colunas datetime2 criptografadas. Para colunas datetime e smalldatetime criptografadas, use os novos métodos `updateDateTime()` e `updateSmallDateTime()`, respectivamente.|
 |`public void updateBoolean(int index, boolean x, boolean forceEncrypt)`  <br/><br/>  `public void updateByte(int index, byte x, boolean forceEncrypt)`  <br/><br/>  `public void updateShort(int index, short x, boolean forceEncrypt)`  <br/><br/> `public void updateInt(int index, int x, boolean forceEncrypt)`   <br/><br/>  `public void updateLong(int index, long x, boolean forceEncrypt)`  <br/><br/> `public void updateFloat(int index, float x, boolean forceEncrypt)`   <br/><br/> `public void updateDouble(int index, double x, boolean forceEncrypt)`   <br/><br/> `public void updateMoney(int index, BigDecimal x, boolean forceEncrypt)`   <br/><br/>  `public void updateMoney(String columnName, BigDecimal x, boolean forceEncrypt)`  <br/><br/> `public void updateSmallMoney(int index, BigDecimal x, boolean forceEncrypt)`   <br/><br/>  `public void updateSmallMoney(String columnName, BigDecimal x, boolean forceEncrypt)`  <br/><br/> `public void updateBigDecimal(int index, BigDecimal x, Integer precision, Integer scale, boolean forceEncrypt)`   <br/><br/>  `public void updateString(int columnIndex, String stringValue, boolean forceEncrypt)`  <br/><br/>  `public void updateNString(int columnIndex, String nString, boolean forceEncrypt)`  <br/><br/>  `public void updateNString(String columnLabel, String nString, boolean forceEncrypt)`  <br/><br/> `public void updateBytes(int index, byte x[], boolean forceEncrypt)   <br/><br/>  public void updateDate(int index, java.sql.Date x, boolean forceEncrypt)`  <br/><br/> `public void updateTime(int index, java.sql.Time x, Integer scale, boolean forceEncrypt)`   <br/><br/> `public void updateTimestamp(int index, java.sql.Timestamp x, int scale, boolean forceEncrypt)`   <br/><br/> `public void updateDateTime(int index, java.sql.Timestamp x, Integer scale, boolean forceEncrypt)`   <br/><br/> `public void updateSmallDateTime(int index, java.sql.Timestamp x, Integer scale, boolean forceEncrypt)`   <br/><br/>  `public void updateDateTimeOffset(int index, microsoft.sql.DateTimeOffset x, Integer scale, boolean forceEncrypt)`  <br/><br/> `public void updateUniqueIdentifier(int index, String x, boolean forceEncrypt)`    <br/><br/>  `public void updateObject(int index, Object x, int precision, int scale, boolean forceEncrypt)`  <br/><br/>  `public void updateObject(int index, Object obj, SQLType targetSqlType, int scale, boolean forceEncrypt)`  <br/><br/> `public void updateBoolean(String columnName, boolean x, boolean forceEncrypt)`    <br/><br/>  `public void updateByte(String columnName, byte x, boolean forceEncrypt)`  <br/><br/>  `public void updateShort(String columnName, short x, boolean forceEncrypt)`  <br/><br/> `public void updateInt(String columnName, int x, boolean forceEncrypt)`   <br/><br/>   `public void updateLong(String columnName, long x, boolean forceEncrypt)` <br/><br/>  `public void updateFloat(String columnName, float x, boolean forceEncrypt)`  <br/><br/>  `public void updateDouble(String columnName, double x, boolean forceEncrypt)  <br/><br/> public void updateBigDecimal(String columnName, BigDecimal x, boolean forceEncrypt)`   <br/><br/>  `public void updateBigDecimal(String columnName, BigDecimal x, Integer precision, Integer scale, boolean forceEncrypt)`  <br/><br/> `public void updateString(String columnName, String x, boolean forceEncrypt)`   <br/><br/>  `public void updateBytes(String columnName, byte x[], boolean forceEncrypt)`  <br/><br/> `public void updateDate(String columnName, java.sql.Date x, boolean forceEncrypt)`   <br/><br/>  `public void updateTime(String columnName, java.sql.Time x, int scale, boolean forceEncrypt)`  <br/><br/>  `public void updateTimestamp(String columnName, java.sql.Timestamp x, int scale, boolean forceEncrypt)`  <br/><br/> `public void updateDateTime(String columnName, java.sql.Timestamp x, int scale, boolean forceEncrypt)`   <br/><br/>  `public void updateSmallDateTime(String columnName, java.sql.Timestamp x, int scale, boolean forceEncrypt)`  <br/><br/>  `public void updateDateTimeOffset(String columnName, microsoft.sql.DateTimeOffset x, int scale, boolean forceEncrypt)`  <br/><br/>  `public void updateUniqueIdentifier(String columnName, String x, boolean forceEncrypt)`<br/><br/>`public void updateObject(String columnName, Object x, int precision, int scale, boolean forceEncrypt)`<br/><br/>`public void updateObject(String columnName, Object obj, SQLType targetSqlType, int scale, boolean forceEncrypt)`|Atualize a coluna designada para o valor Java fornecido.<br/><br/>Se o booliano forceEncrypt for definido como true, a coluna somente será definida se criptografado e Always Encrypted estiverem habilitados na conexão ou na instrução.<br/><br/>Se o forceEncrypt booliano for definido como false, o driver não forçará a criptografia em parâmetros.|
@@ -154,7 +154,7 @@ ms.locfileid: "75681697"
   
 Novos tipos na classe **microsoft.sql.types**
 
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|Use esses tipos como os tipos SQL de destino ao enviar valores de **parâmetro** para as colunas DateTime criptografado, smalldatetime, Money, `setObject()/updateObject()` smallmoney e uniqueidentifier usando métodos de API.|  
   
@@ -171,7 +171,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
   
  **Membros**  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |UseConnectionSetting|Especifica que o comando deve usar como padrão a configuração de Always Encrypted na cadeia de conexão.|  
 |habilitado|Habilita Always Encrypted para a consulta.|  
@@ -180,7 +180,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
   
  A configuração de nível de instrução para criptografia AE é adicionada à classe SQLServerConnection e à classe SQLServerConnectionPoolProxy. Os métodos a seguir nessas classes são sobrecarregados com a nova configuração.  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |`public Statement createStatement(int nType, int nConcur, int statementHoldability, SQLServerStatementColumnEncryptionSetting stmtColEncSetting)`|Cria um objeto de instrução que gerará objetos ResultSet com as configurações de tipo, simultaneidade, suspensão e criptografia de coluna fornecidas.|  
 |`public CallableStatement prepareCall(String sql, int nType, int nConcur, int statementHoldability, SQLServerStatementColumnEncryptionSetting stmtColEncSetiing)`|Cria um objeto CallableStatement com a configuração de criptografia de coluna fornecida que gerará objetos ResultSet com o tipo, a simultaneidade e a suspensão fornecidos.|  

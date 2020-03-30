@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 75d8b98726a758e0533053dbdf8d2e03b3bfdf0d
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896994"
 ---
 # <a name="date-and-time-data"></a>Dados de data e hora
@@ -32,7 +32,7 @@ A documentação completa para tipos de dados do SQL Server está disponível no
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Tipos de dados de Data/Hora introduzidos no SQL Server 2008  
  A tabela a seguir descreve os novos tipos de dados de data e hora.  
   
-|Tipo de dados do SQL Server|Descrição|  
+|Tipo de dados do SQL Server|DESCRIÇÃO|  
 |--------------------------|-----------------|  
 |`date`|O tipo de dados `date` tem um intervalo de 1º de janeiro de 01 a 31 de dezembro de 9999 com precisão de um dia. O valor padrão é 1º de janeiro de 1900. O tamanho do armazenamento é 3 bytes.|  
 |`time`|O tipo de dados `time` armazena somente valores temporais, com base em um relógio de 24 horas. O tipo de dados `time` tem um intervalo de 00:00:00.0000000 a 23:59:59,9999999 com precisão de 100 nanossegundos. O valor padrão é 00:00:00.0000000 (meia-noite). O tipo de dados `time` dá suporte à precisão de fração de segundo definida pelo usuário. O tamanho do armazenamento varia de 3 a 6 bytes, com base na precisão especificada.|  
@@ -92,7 +92,7 @@ O tipo de Provedor de Dados do Microsoft SqlClient de um objeto de parâmetro é
 ### <a name="sqlparameter-properties"></a>Propriedades SqlParameter  
  A tabela a seguir descreve as propriedades `SqlParameter` que são relevantes para os tipos de dados de data e hora.  
   
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.IsNullable%2A>|Obtém ou define se um valor é anulável. Quando você envia um valor de parâmetro nulo para o servidor, deve especificar <xref:System.DBNull>, não `null` (`Nothing` no Visual Basic). Para obter mais informações sobre nulos de banco de dados, confira [Como lidar com valores nulos](handle-null-values.md).|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.Precision%2A>|Obtém ou define o número máximo de dígitos usados para representar o valor. Essa configuração é ignorada para tipos de dados de data e hora.|  
@@ -170,7 +170,7 @@ A seguinte tabela mostra quais `SqlDbTypes` são inferidos de quais tipos CLR:
 ## <a name="retrieving-date-and-time-data"></a>Como recuperar dados de data e hora  
 A tabela a seguir descreve os métodos que são usados para recuperar os valores de data e hora do SQL Server 2008.  
   
-|Método SqlClient|Descrição|  
+|Método SqlClient|DESCRIÇÃO|  
 |----------------------|-----------------|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetDateTime%2A>|Recupera o valor da coluna especificada como uma estrutura <xref:System.DateTime>.|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetDateTimeOffset%2A>|Recupera o valor da coluna especificada como uma estrutura <xref:System.DateTimeOffset>.|  
@@ -206,7 +206,7 @@ Valores temporais menores que zero ou maiores ou iguais a 24 horas lançarão um
 ## <a name="resources-in-sql-server-2008-books-online"></a>Recursos nos Manuais Online do SQL Server 2008  
 Para obter mais informações sobre como trabalhar com valores de data e temporal no SQL Server 2008, confira os recursos a seguir nos Manuais Online do SQL Server 2008.  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[tipos de dados e funções de data e hora (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Fornece uma visão geral de todos os tipos de dados e as funções de data e hora do Transact-SQL.|  
 |[Usando dados de data e hora](https://go.microsoft.com/fwlink/?LinkId=98361)|Fornece informações sobre as funções e os tipos de dados de data e hora e exemplos de como usá-los.|  

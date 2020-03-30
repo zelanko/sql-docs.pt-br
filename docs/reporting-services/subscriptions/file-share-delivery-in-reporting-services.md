@@ -12,10 +12,10 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72278234"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega de compartilhamento de arquivos no Reporting Services
@@ -37,7 +37,7 @@ ms.locfileid: "72278234"
   
 -   [Opções de arquivo](#bkmk_file_options)  
   
-##  <a name="bkmk_Characteristics"></a> Relatórios de características entregues a pastas compartilhadas  
+##  <a name="characteristics-reports-delivered-to-shared-folders"></a><a name="bkmk_Characteristics"></a> Relatórios de características entregues a pastas compartilhadas  
   
 -   Diferentemente de relatórios hospedados e gerenciados por um servidor de relatório, os relatórios entregues a uma pasta compartilhada são arquivos estáticos.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72278234"
   
 -   Se você quiser reter recursos interativos em um relatório entregue, use a entrega de emails. O email contém um link para o relatório no servidor de relatório e os usuários podem usar os recursos interativos. Para obter mais informações, consulte [Entrega de email no Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
-##  <a name="bkmk_target_folders"></a> Pastas de destino  
+##  <a name="target-folders"></a><a name="bkmk_target_folders"></a> Pastas de destino  
  Ao definir uma assinatura que usa a entrega de compartilhamento de arquivos, você deve especificar uma pasta existente como a pasta de destino. O servidor de relatório não cria pastas no sistema de arquivos. A pasta especificada deve ser acessível por uma conexão de rede.  
   
  Verifique se os usuários que **exibirão** os relatórios na pasta compartilhada têm a permissão de leitura.  
@@ -60,17 +60,17 @@ ms.locfileid: "72278234"
   
  Quando você criar a pasta, considere os limites de conexão desejados. O servidor de relatório precisa de duas conexões, mas você deve incluir conexões suficientes para acomodar usuários adicionais que queiram abrir relatórios na pasta compartilhada.  
   
-##  <a name="bkmk_file_formats"></a> Formatos de arquivo  
+##  <a name="file-formats"></a><a name="bkmk_file_formats"></a> Formatos de arquivo  
  Os relatórios podem ser renderizados em vários formatos de arquivo, como HTML, DOCX e Excel. Para salvar o relatório em um formato de arquivo específico, selecione o formato de renderização ao criar sua assinatura. Por exemplo, se escolher **Excel** , salvará o relatório como um arquivo do [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] . Embora você possa escolher qualquer formato de renderização com suporte, alguns formatos funcionam melhor que outros na renderização em um arquivo.  
   
  Para obter a entrega de compartilhamento de arquivos, escolha um formato que entrega o relatório em um único arquivo, no qual todas as imagens e conteúdo relacionado são incluídos no relatório. Formatos adequados incluem o arquivo da Web, PDF, TIFF e Excel. Evite o HTML4.0. Se seu relatório incluir imagens, os formatos HTML 4.0 não as incluirão no arquivo.  
   
-##  <a name="bkmk_file_options"></a> Opções de arquivo  
+##  <a name="file-options"></a><a name="bkmk_file_options"></a> Opções de arquivo  
  Ao criar uma assinatura de compartilhamento de arquivo, você pode definir como o nome do arquivo será criado e se o arquivo substituirá as versões anteriores do relatório. Um nome de arquivo totalmente qualificado possui três partes: nome, extensão e texto ou número anexado ao arquivo para criar um nome de arquivo exclusivo  
   
- **Nome de Arquivo:** O nome de arquivo é tem base no nome do relatório de origem, mas você pode fornecer um nome personalizado na assinatura. A extensão é opcional, mas se você especificá-la, o servidor de relatório criará uma extensão que corresponda ao formato de renderização.  
+ **Nome de Arquivo:** o nome de arquivo é tem base no nome do relatório de origem, mas você pode fornecer um nome personalizado na assinatura. A extensão é opcional, mas se você especificá-la, o servidor de relatório criará uma extensão que corresponda ao formato de renderização.  
   
- **Substituir:** Você pode especificar as opões de substituição para reusar o mesmo nome de arquivo para cada entrega de relatório ou para criar um novo arquivo. Para substituir o arquivo, é necessário usar o mesmo nome e extensão de arquivo.  
+ **Substituição:** você pode especificar as opões de substituição para reusar o mesmo nome de arquivo para cada entrega de relatório ou para criar um novo arquivo. Para substituir o arquivo, é necessário usar o mesmo nome e extensão de arquivo.  
   
  Uma abordagem alternativa para criar arquivos exclusivos para cada entrega é incluir um carimbo de hora no nome de arquivo. Para fazer isso, adicione a variável **\@timestamp** ao nome de arquivo (por exemplo, *CompanySales@timestamp* ). Com essa abordagem, o nome de arquivo será exclusivo por definição, portanto, nunca será substituído.  
   

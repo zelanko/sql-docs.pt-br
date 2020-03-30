@@ -16,10 +16,10 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 05ed8b22882264aa16efc8c5b7736bcc517e44f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581451"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de tamanho do relatório e do instantâneo
@@ -50,7 +50,7 @@ ms.locfileid: "65581451"
  O único limite fixo do tamanho do relatório é determinado durante a renderização em formato Excel. As planilhas não podem ter mais de 65536 linhas ou 256 colunas. Outros formatos de renderização não têm esses limites, de modo que o tamanho é limitado somente pela quantidade de recursos do servidor.  
   
 > [!NOTE]  
->  O processamento e a renderização do relatório ocorrem na memória. Se houver grandes relatórios ou um grande número de usuários, faça algum tipo de planejamento de capacidade para ter certeza de que a implantação do servidor de relatório seja executada em um nível satisfatório para os usuários. Para obter mais informações sobre ferramentas e diretrizes, confira as seguintes publicações no MSDN: [Planejamento de escalabilidade e desempenho com o Reporting Services](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) e [Como usar o Visual Studio 2005 para realizar o teste de carga em um servidor de relatórios do Reporting Services do SQL Server 2005](https://go.microsoft.com/fwlink/?LinkID=77519).  
+>  O processamento e a renderização do relatório ocorrem na memória. Se houver grandes relatórios ou um grande número de usuários, faça algum tipo de planejamento de capacidade para ter certeza de que a implantação do servidor de relatório seja executada em um nível satisfatório para os usuários. Para obter mais informações sobre ferramentas e diretrizes, consulte as seguintes publicações no MSDN: [Planning for Scalability and Performance with Reporting Services (Planejamento de escalabilidade e desempenho com o Reporting Services)](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) e [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server (Usando o Visual Studio 2005 para realizar o teste de carga em um servidor de relatórios do Reporting Services do SQL Server 2005)](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
 ## <a name="measuring-snapshot-storage"></a>Medindo o armazenamento de instantâneos  
  O tamanho de qualquer instantâneo é diretamente proporcional à quantidade de dados no relatório. Os instantâneos normalmente são muito maiores que outros itens armazenados em um servidor de relatório. O tamanho do instantâneo varia, em geral, de alguns megabytes a dezenas de megabytes. Se você tiver relatórios muito grandes, espere para ver instantâneos que são ainda muito maiores. Dependendo da frequência de uso dos instantâneos e da configuração do histórico de relatórios, a quantidade de espaço em disco necessária para o banco de dados do servidor de relatório pode aumentar rapidamente em um curto período de tempo.  

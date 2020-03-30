@@ -20,10 +20,10 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5ebbda456c402372e7505968414bc044eec87ec4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082152"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitário rskeymgmt (SSRS)
@@ -145,7 +145,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Uma implantação em expansão de servidor de relatório se refere a um modelo de implantação onde várias instâncias do servidor de relatório compartilham o mesmo banco de dados do servidor de relatório. Um banco de dados do servidor de relatório pode ser usado por qualquer instância que armazena suas chaves simétricas no banco de dados. Por exemplo, se um banco de dados do servidor de relatório contiver informações de chave para três instâncias do servidor de relatório, todas as três instâncias serão consideradas membros da mesma implantação em expansão.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Unindo instâncias do servidor de relatório no mesmo computador  
- Você pode criar uma implantação em expansão para várias de instâncias do servidor de relatório instaladas no mesmo computador. Não defina os argumentos **-u** e **-v** se você estiver unindo instâncias do servidor de relatório instaladas localmente. Os argumentos **-u** e **-v** só são usados quando você estiver unindo uma instância de um computador remoto. Se você especificar os argumentos, receberá o seguinte erro: "As credenciais do usuário não podem ser usadas para conexões locais".  
+ Você pode criar uma implantação em expansão para várias de instâncias do servidor de relatório instaladas no mesmo computador. Não defina os argumentos **-u** e **-v** se você estiver unindo instâncias do servidor de relatório instaladas localmente. Os argumentos **-u** e **-v** só são usados quando você estiver unindo uma instância de um computador remoto. Se você especificar os argumentos, receberá o seguinte erro: "Credenciais de usuário não podem ser usadas para conexões locais".  
   
  O exemplo a seguir ilustra a sintaxe para criar uma implantação em expansão que usa várias instâncias locais. Neste exemplo, \<**initializedinstance**> é o nome de uma instância já iniciada para usar o banco de dados do servidor de relatório e \<**newinstance**> é o nome da instância que você deseja adicionar à implantação:  
   

@@ -1,6 +1,6 @@
 ---
 title: Dados de demonstração de voo de companhia aérea para tutoriais
-Description: Crie um banco de dados que contenha um conjunto de dados de companhia aérea em R e Python. Esse conjunto de dados é usado no R e em tutoriais de Python para os Serviços de Machine Learning do SQL Server.
+Description: Crie um banco de dados que contenha um conjunto de dados de companhia aérea em R e Python. Esse conjunto de dados é usado em tutoriais de R e Python para os Serviços de Machine Learning do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/22/2018
@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9bb8d26acb21ff38725c6e993c0b6080a35410f1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74908910"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Dados de demonstração de chegadas de voos de companhias aéreas para tutoriais de Python e R do SQL Server

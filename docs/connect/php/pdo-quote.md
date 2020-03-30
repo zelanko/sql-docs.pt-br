@@ -11,10 +11,10 @@ ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7908655954c0f93bd697599ed0d6c809e97d080f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76916370"
 ---
 # <a name="pdoquote"></a>PDO::quote
@@ -30,9 +30,9 @@ string PDO::quote( $string[, $parameter_type ] )
 ```  
   
 #### <a name="parameters"></a>parâmetros  
-$*string*: a cadeia de caracteres a ser cotada.  
+$*string*: a cadeia de caracteres a ser colocada entre aspas.  
   
-$*parameter_type*: um símbolo opcional (inteiro) que indica o tipo de dados.  O padrão é PDO::PARAM_STR.  
+$*parameter_type*: um símbolo opcional (inteiro) indicando o tipo de dados.  O padrão é PDO::PARAM_STR.  
 
 Novas constantes PDO foram introduzidas no PHP 7.2 para adicionar suporte para [cadeias de caracteres Unicode e não Unicode de associação](https://wiki.php.net/rfc/extended-string-types-for-pdo). As cadeias de caracteres Unicode podem ser colocadas entre aspas com um N como prefixo (ou seja, N"cadeia de caracteres" em vez de "cadeia de caracteres").
 

@@ -9,10 +9,10 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041281"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de colunas ao relatório (Construtor de Relatórios)
@@ -35,7 +35,7 @@ Tempo estimado para concluir este tutorial: 15 minutos.
 ## <a name="requirements"></a>Requisitos  
 Para obter informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Chart"></a>1. Criar um relatório de gráfico no Assistente de Gráfico  
+## <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. Criar um relatório de gráfico no Assistente de Gráfico  
 Nesta seção, você aprende a usar o Assistente de Gráfico para criar um conjunto de dados inserido, escolher uma fonte de dados compartilhada e criar um gráfico de colunas.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ Nesta seção, você aprende a usar o Assistente de Gráfico para criar um conju
   
 9. Clique em **Próximo**.  
   
-## <a name="ChartType"></a>2. Escolher o tipo de gráfico  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. Escolher o tipo de gráfico  
 Você pode escolher um dentre vários tipos de gráficos predefinidos e modificar o gráfico depois de concluir o assistente.  
   
 ### <a name="to-add-a-column-chart"></a>Para adicionar um gráfico de colunas  
@@ -114,7 +114,7 @@ Você pode escolher um dentre vários tipos de gráficos predefinidos e modifica
 
 Observe que o gráfico não rotula cada categoria no eixo horizontal. Por padrão, somente rótulos que se ajustam próximo ao eixo são incluídos. 
   
-## <a name="Horizontal"></a>3. Formatar uma data no eixo horizontal  
+## <a name="3-format-a-date-on-the-horizontal-axis"></a><a name="Horizontal"></a>3. Formatar uma data no eixo horizontal  
 Por padrão, o eixo horizontal exibe valores em um formato geral que é dimensionado para ajustar o tamanho do gráfico automaticamente.  
   
 1.  Alterne para a exibição de design de relatório.  
@@ -159,7 +159,7 @@ No gráfico, os rótulos são girados.
 
 ![report-builder-column-chart-rotate-x-axis-preview](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
   
-## <a name="Legend"></a>5. Mover a legenda  
+## <a name="5-move-the-legend"></a><a name="Legend"></a>5. Mover a legenda  
 A legenda é criada automaticamente de categoria e dados de série. Você pode mover a legenda abaixo da área de gráfico de um gráfico de colunas.  
   
 1.  Alterne para a exibição de design de relatório.  
@@ -176,7 +176,7 @@ A legenda é criada automaticamente de categoria e dados de série. Você pode m
   
 6.  Clique em **Executar** para visualizar o relatório.  
   
-## <a name="ChartTitle"></a>6. Intitular o gráfico  
+## <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6. Intitular o gráfico  
     
 1.  Alterne para a exibição de design de relatório.  
   
@@ -184,7 +184,7 @@ A legenda é criada automaticamente de categoria e dados de série. Você pode m
   
 3.  Clique em **Executar** para visualizar o relatório.  
   
-## <a name="Vertical"></a>7. Formatar e rotular o eixo vertical  
+## <a name="7-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>7. Formatar e rotular o eixo vertical  
 Por padrão, o eixo vertical exibe valores em um formato geral que é dimensionado para ajustar o tamanho do gráfico automaticamente.   
   
 1.  Alterne para a exibição de design de relatório.  
@@ -235,7 +235,7 @@ Observe que apenas alguns dos rótulos no eixo x são mostrados. Nesta seção, 
     
     Agora o gráfico exibe todos os seus rótulos.
   
-## <a name="Average"></a>9. Adicionar uma média móvel com uma série calculada  
+## <a name="9-add-a-moving-average-with-a-calculated-series"></a><a name="Average"></a>9. Adicionar uma média móvel com uma série calculada  
 
 Uma média móvel é uma média dos dados na série, calculada ao longo do tempo. A média móvel pode identificar tendências.
   
@@ -261,7 +261,7 @@ O gráfico exibe uma linha que mostra a média móvel para o total de vendas por
 
 ![report-builder-column-chart-moving-average](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
-## <a name="Title"></a>10. Adicionar um título de relatório  
+## <a name="10-add-a-report-title"></a><a name="Title"></a>10. Adicionar um título de relatório  
   
 1.  Alterne para a exibição de design de relatório.  
   
@@ -283,7 +283,7 @@ O gráfico exibe uma linha que mostra a média móvel para o total de vendas por
   
 7.  Clique em **Executar** para visualizar o relatório.  
   
-## <a name="Save"></a>11. Salvar o relatório  
+## <a name="11-save-the-report"></a><a name="Save"></a>11. Salvar o relatório  
   
 ### <a name="to-save-the-report"></a>Para salvar o relatório  
   

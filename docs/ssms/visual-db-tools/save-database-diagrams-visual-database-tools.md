@@ -16,10 +16,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 5b94759131082e2ce60e8a09dde728cadb4a94cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255138"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Salvar diagramas de banco de dados (Visual Database Tools)

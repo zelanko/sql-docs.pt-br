@@ -11,10 +11,10 @@ ms.assetid: f49ea499-df3c-4e85-9fc7-450fb99622a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de8e357328c151e3762f324dcbeba2525df53530
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026559"
 ---
 # <a name="using-an-sql-statement-to-modify-database-objects"></a>Como usar uma instrução SQL para modificar objetos de banco de dados

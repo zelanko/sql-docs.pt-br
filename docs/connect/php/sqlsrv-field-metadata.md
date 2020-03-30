@@ -17,10 +17,10 @@ ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ef4bd58d352216cd4c64fe6c18a9ffd6dd3b13a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76939569"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
@@ -41,7 +41,7 @@ sqlsrv_field_metadata( resource $stmt)
 ## <a name="return-value"></a>Valor retornado  
 Uma **matriz** de matrizes ou **false**. A matriz consiste em uma matriz para cada campo no conjunto de resultados. Cada submatriz tem chaves, conforme descrito na tabela a seguir. Se ocorrer um erro na recuperação de metadados do campo, será retornado **false** .  
   
-|Chave|Descrição|  
+|Chave|DESCRIÇÃO|  
 |-------|---------------|  
 |Nome|Nome da coluna correspondente ao campo.|  
 |Type|Valor numérico que corresponde a um tipo SQL.|  

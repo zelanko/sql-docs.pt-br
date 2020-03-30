@@ -11,10 +11,10 @@ ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8fff14d68fa1e708e2f6daa84aa84c9cd5be2dcf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76941093"
 ---
 # <a name="sample-jdbc-driver-applications"></a>Aplicativos de exemplo do JDBC Driver
@@ -33,7 +33,7 @@ Os tópicos nesta seção descrevem como configurar e executar os aplicativos de
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-| Tópico                                                                                                        | Descrição                                                                                                                                                                                                                                                             |
+| Tópico                                                                                                        | DESCRIÇÃO                                                                                                                                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Conectando e recuperando dados](../../connect/jdbc/connecting-and-retrieving-data.md)                       | Estes aplicativos de exemplo demonstram como conectar-se a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles também demonstram diferentes maneiras de recuperar dados de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. |
 | [Trabalhando com tipos de dados &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)                 | Estes aplicativos de exemplo demonstram como usar os métodos de tipo de dados do driver JDBC para trabalhar usando dados em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].                                                                                           |

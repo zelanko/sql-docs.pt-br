@@ -9,10 +9,10 @@ ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581125"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
@@ -33,7 +33,7 @@ ms.locfileid: "65581125"
   
 -   [Para editar um arquivo de configuração do Reporting Services](#bkmk_edit_configuation_file)  
   
-##  <a name="bkmk_read_values"></a> Lendo e usando valores de configuração  
+##  <a name="reading-and-using-configuration-values"></a><a name="bkmk_read_values"></a> Lendo e usando valores de configuração  
  Um servidor de relatório lê os arquivos de configuração quando o serviço é iniciado e sempre que o arquivo de configuração é salvo. Os valores novos e revisados entram em vigor em um novo domínio de aplicativo depois que o domínio de aplicativo atual expira. Sempre que possível, as solicitações que ainda estão sendo processadas no domínio de aplicativo atual podem ser concluídas. No entanto, algumas configurações requerem uma operação de reciclagem imediata do domínio de aplicativo. Neste caso, todas as solicitações em andamento são reinicializadas em um novo domínio de aplicativo.  
   
  Se o servidor de relatório detectar um valor inválido, registrará um erro no log de aplicativo do Windows e não será inicializado ou usará um valor padrão, dependendo do erro:  
@@ -44,13 +44,13 @@ ms.locfileid: "65581125"
   
  Todas as alterações do arquivo de configuração, inclusive alterações bem-sucedidas, são registradas no arquivo de log de rastreamento do servidor de relatório. Somente erros são registrados no log de eventos de aplicativo.  
   
-##  <a name="bkmk_default_values"></a> Sobre valores padrão  
+##  <a name="about-default-values"></a><a name="bkmk_default_values"></a> Sobre valores padrão  
  A maioria das configurações tem valores padrão que são especificados internamente no servidor de relatório. O servidor de relatório usa esses valores se um valor definido pelo usuário for inválido ou não for especificado. Se for necessário usar um valor padrão devido a uma configuração inválida, um erro será gravado no arquivo de log de rastreamento.  
   
-##  <a name="bkmk_delete_config_settings"></a> Excluindo configurações  
+##  <a name="deleting-configuration-settings"></a><a name="bkmk_delete_config_settings"></a> Excluindo configurações  
  Para configurações que têm valores padrão, a remoção da configuração do arquivo de configuração não tem nenhum efeito. A maioria das configurações é definida e configurada de fato internamente. Se você excluir um item do arquivo de configuração, a cópia interna ainda estará disponível e usará o valor padrão definido para ela.  
   
-##  <a name="bkmk_edit_configuation_file"></a> Para editar um arquivo de configuração do Reporting Services  
+##  <a name="to-edit-a-reporting-services-configuration-file"></a><a name="bkmk_edit_configuation_file"></a> Para editar um arquivo de configuração do Reporting Services  
   
 1.  Localize o arquivo de configuração que deseja editar:  
   

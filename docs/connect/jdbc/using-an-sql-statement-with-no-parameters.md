@@ -11,10 +11,10 @@ ms.assetid: 4b0728bd-059b-4b71-895c-999335bc7427
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da4342b8640e89a0183a3f80889dd27ecfb1a76e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026538"
 ---
 # <a name="using-an-sql-statement-with-no-parameters"></a>Como usar uma instrução SQL sem parâmetros

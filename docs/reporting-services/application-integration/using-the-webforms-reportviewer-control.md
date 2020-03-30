@@ -13,10 +13,10 @@ ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4339aca9735937e8747968b0060ce8eb2a24f486
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198453"
 ---
 # <a name="use-the-webforms-reportviewer-control"></a>Usar o controle WebForms ReportViewer

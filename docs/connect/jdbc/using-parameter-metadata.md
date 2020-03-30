@@ -11,10 +11,10 @@ ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80ff8cebcc4141e8363c25f83821cb4924e6c46a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026082"
 ---
 # <a name="using-parameter-metadata"></a>Como usar metadados de parâmetro
@@ -32,8 +32,8 @@ No exemplo a seguir, uma conexão aberta para o banco de dados de amostra [!INCL
 > [!NOTE]  
 > Há algumas limitações ao usar a classe SQLServerParameterMetaData com instruções preparadas.
 >
-> **Com o Microsoft JDBC Driver 6.0 (ou superior) para o SQL Server**: Ao usar o SQL Server 2008 ou 2008 R2, o driver JDBC é compatível com as instruções SELECT, DELETE, INSERT e UPDATE, uma vez que essas instruções não contêm subconsultas e/ou junções.
+> **Com o Microsoft JDBC Driver 6.0 (ou superior) para SQL Server**: ao usar o SQL Server 2008 ou 2008 R2, o driver JDBC dá suporte para as instruções SELECT, DELETE, INSERT e UPDATE, uma vez que essas instruções não contêm subconsultas e/ou junções.
 
 Consultas de mesclagem também não têm suporte para a classe SQLServerParameterMetaData ao usar o SQL Server 2008 ou 2008 R2. Para o SQL Server 2012 e metadados de parâmetro de versões anteriores com consultas complexas que têm suporte.
 
-A recuperação dos metadados do parâmetro para colunas criptografadas não é compatível. **Com Microsoft JDBC Driver 4.1 ou 4.2 para SQL Server**: O driver JDBC é compatível com as instruções SELECT, DELETE, INSERT e UPDATE, uma vez que essas instruções não contêm subconsultas e/ou junções. As consultas MERGE também não são compatíveis com a classe SQLServerParameterMetaData.
+A recuperação dos metadados do parâmetro para colunas criptografadas não é compatível. **Com o Microsoft JDBC Driver 4.1 ou 4.2 para SQL Server**: o driver JDBC dá suporte para as instruções SELECIONAR, EXCLUIR, INSERIR e ATUALIZAR, uma vez que essas instruções não contêm subconsultas e/ou junções. As consultas MERGE também não são compatíveis com a classe SQLServerParameterMetaData.

@@ -11,10 +11,10 @@ ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bd0c32d753abf6b907e35daa91851acdd286f417
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66500048"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>Designer de Consulta de Lista do SharePoint (Construtor de Relatórios)
@@ -54,15 +54,15 @@ ms.locfileid: "66500048"
  [Resultados da consulta](#QueryResults)  
  Exibe dados de exemplo do conjunto de resultados da consulta gerada automaticamente.  
   
-###  <a name="DatabaseView"></a> Painel de Listas do SharePoint  
+###  <a name="sharepoint-lists-pane"></a><a name="DatabaseView"></a> Painel de Listas do SharePoint  
  O painel Listas do SharePoint exibe os metadados para objetos de banco de dados que você tem as permissões para exibir, o que é determinado pela conexão da fonte de dados e credenciais. A exibição hierárquica exibe objetos de banco de dados organizados por esquema de banco de dados. Expanda o nó de cada esquema para exibir tabelas, exibições, procedimentos armazenados e funções com valor de tabela. Expanda uma tabela ou exibição para exibir as colunas.  
   
-###  <a name="SelectedFields"></a> Painel Campos Selecionados  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> Painel Campos Selecionados  
  O painel Campos Selecionados exibe os campos de item de lista que você seleciona para itens de lista do SharePoint. Os campos mostrados neste painel se tornam a coleção de campos do conjunto de dados de relatório. Depois de criar um conjunto de dados e uma consulta, expanda o painel de dados do relatório para exibir a coleção de campos de um conjunto de dados de relatório. Esses campos representam os dados que você pode exibir em tabelas, gráficos e outros itens de relatório ao exibir um relatório.  
   
  Para adicionar ou remover campos deste painel, marque ou desmarque as caixas de seleção para os campos de tabela ou exibição no painel Listas do SharePoint.  
   
-###  <a name="AppliedFilters"></a> Painel Filtros Aplicados  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> Painel Filtros Aplicados  
  O painel Filtros Aplicados exibe os critérios usados para limitar o número de linhas de dados recuperadas no tempo de execução. Os critérios especificados nesse painel são usados para gerar uma cláusula [!INCLUDE[tsql](../../includes/tsql-md.md)] WHERE. Quando você seleciona a opção de parâmetro, um parâmetro de relatório é criado automaticamente. Os parâmetros de relatório se baseiam em parâmetros de consulta que permitem a um usuário especificar valores para a consulta, para controlar os dados no relatório.  
   
  As seguintes colunas são exibidas:  
@@ -75,7 +75,7 @@ ms.locfileid: "66500048"
   
 -   **Parâmetro** Exibe a opção para adicionar um parâmetro à consulta. Use as propriedades do conjunto de dados para exibir as relações entre o parâmetro de consulta e o parâmetro do relatório.  
   
-###  <a name="QueryResults"></a> Painel Resultados da Consulta  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> Painel Resultados da Consulta  
  O painel Resultados da Consulta exibe os resultados para a consulta automaticamente gerada que é especificada por seleções nos outros painéis. As colunas do conjunto de resultados são os campos que você especifica no painel Campos Selecionados e os dados de linha são limitados pelos filtros que você especifica no painel Filtros Aplicados.  
   
  Esses dados representam valores da fonte de dados no momento em que você executa a consulta. Os dados não são salvos na definição de relatório. Os dados reais do relatório são recuperados quando o relatório é processado.  
@@ -85,7 +85,7 @@ ms.locfileid: "66500048"
 ### <a name="graphical-query-designer-toolbar"></a>Barra de ferramentas do designer de consultas gráficas  
  A barra de ferramentas do designer de consulta relacional fornece os seguintes botões para ajudá-lo a especificar ou exibir os resultados de uma consulta.  
   
-|Botão|Descrição|  
+|Botão|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna para o designer de consulta baseado em texto para exibir a consulta gerada automaticamente ou para modificar a consulta.|  
 |**Importaçãoação**|Importa uma consulta existente de um arquivo ou relatório. Há suporte para os tipos de arquivo .sql e .rdl.|  

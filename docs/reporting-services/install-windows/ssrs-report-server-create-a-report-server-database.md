@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/16/2019
 ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253315"
 ---
 # <a name="create-a-report-server-database-ssrs-configuration-manager"></a>Criar um banco de dados de servidor de relatório, Gerenciador de Configurações do SSRS  
@@ -27,7 +27,7 @@ Os bancos de dados são criados juntamente e associados por nome. Com uma instâ
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-O **modo do SharePoint** do SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui um terceiro banco de dados que é usado para metadados de alertas de dados. Os três bancos de dados são criados para cada aplicativo de serviço SSRS. Por padrão, os nomes de banco de dados incluem um GUID que representa o aplicativo de serviço. 
+O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]modo do SharePoint**do SQL Server** inclui um terceiro banco de dados que é usado para metadados de alertas de dados. Os três bancos de dados são criados para cada aplicativo de serviço SSRS. Por padrão, os nomes de banco de dados incluem um GUID que representa o aplicativo de serviço. 
 
 A seguir são apresentados nomes de exemplo dos três bancos de dados do modo do SharePoint:
 

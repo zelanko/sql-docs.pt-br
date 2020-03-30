@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: abdbbd7659221fb27df12ff03995b2d246241463
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253859"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Gerar scripts (SQL Server Management Studio)
@@ -28,13 +28,13 @@ Para obter um Tutorial detalhado sobre a criação de script de vários objetos 
 ## <a name="before-you-begin"></a>Antes de começar  
  Escolha o mecanismo que melhor satisfaz seus requisitos.  
   
-###  <a name="GenPubScriptWiz"></a> Assistente para Gerar e Publicar Scripts  
+###  <a name="generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> Assistente para Gerar e Publicar Scripts  
  Use o **Assistente para Gerar e Publicar Scripts** para criar um script [!INCLUDE[tsql](../../includes/tsql-md.md)] para vários objetos. O assistente gera um script de todos os objetos de um banco de dados ou de um subconjunto dos objetos selecionado. O assistente tem muitas opções para seus scripts, por exemplo, se permissões, ordenações, restrições etc. devem ser incluídos. Para obter instruções sobre como usar o assistente, veja [Assistente para Gerar e Publicar Scripts](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md).  
   
-###  <a name="OEScriptAsMenu"></a> Menu Script Como do Pesquisador de Objetos  
+###  <a name="object-explorer-script-as-menu"></a><a name="OEScriptAsMenu"></a> Menu Script Como do Pesquisador de Objetos  
  Use o menu **Gerar Script como do Pesquisador de Objetos** para gerar o script de um único objeto, de vários objetos ou de várias instruções para um único objeto. É possível escolher um de vários tipos de scripts. Por exemplo, para criar, alterar ou descartar o objeto. É possível salvar o script em uma janela do Editor de Consultas em um arquivo ou na Área de Transferência. O script é criado em formato Unicode.  
   
-##  <a name="ScriptSingleObject"></a> Para gerar um script de um único objeto  
+##  <a name="to-generate-a-script-of-a-single-object"></a><a name="ScriptSingleObject"></a> Para gerar um script de um único objeto  
  **Para gerar script de um único objeto**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  

@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 69ce1c16013b9ad27e390ddd91b0655aee2986d5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253684"
 ---
 # <a name="search-text-with-regular-expressions"></a>Pesquisar texto com expressões regulares
@@ -39,7 +39,7 @@ As expressões regulares são notação concisa e flexível para pesquisa e subs
   
  A tabela a seguir descreve as expressões regulares disponíveis na **Lista de Referências**.  
   
-|Expression|Sintaxe|Descrição|  
+|Expression|Sintaxe|DESCRIÇÃO|  
 |----------------|------------|-----------------|  
 |Qualquer caractere|.|Faz a correspondência de qualquer caractere único menos uma quebra de linha.|  
 |Zero ou mais|*|Faz a correspondência de zero ou mais ocorrências da expressão precedente, com todas as correspondentes possíveis.|  
@@ -61,7 +61,7 @@ As expressões regulares são notação concisa e flexível para pesquisa e subs
   
  A lista de todas as expressões regulares válidas em operações **Localizar e Substituir** é mais longa do que pode ser exibido na **Lista de Referências**. Você também pode inserir qualquer uma das seguintes expressões regulares em uma cadeia de caracteres **Localizar** :  
   
-|Expression|Sintaxe|Descrição|  
+|Expression|Sintaxe|DESCRIÇÃO|  
 |----------------|------------|-----------------|  
 |Mínimo – zero ou mais|@|Faz a correspondência de zero ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
 |Mínimo – um ou mais|#|Faz a correspondência de uma ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
@@ -85,7 +85,7 @@ As expressões regulares são notação concisa e flexível para pesquisa e subs
   
  A tabela a seguir relaciona a sintaxe para correspondência por propriedades de caracteres Unicode padrão. A abreviação de duas letras é igual à relacionada no banco de dados de propriedades de caractere Unicode. Elas podem ser especificadas como parte de um conjunto de caracteres. Por exemplo, a expressão [:Nd:Nl:No] faz a correspondência de qualquer tipo de dígito.  
   
-|Expression|Sintaxe|Descrição|  
+|Expression|Sintaxe|DESCRIÇÃO|  
 |----------------|------------|-----------------|  
 |Letra maiúscula|:Lu|Faz a correspondência de qualquer letra maiúscula. Por exemplo, Luhe faz a correspondência de "The" mas não "the".|  
 |Letra minúscula|:Ll|Faz a correspondência de qualquer letra minúscula. Por exemplo, Llhe faz a correspondência de "the" mas não "The".|  
@@ -120,7 +120,7 @@ As expressões regulares são notação concisa e flexível para pesquisa e subs
   
  Além das propriedades de caracteres Unicode padrão, as propriedades adicionais a seguir podem ser especificadas como parte de um conjunto de caracteres.  
   
-|Expression|Sintaxe|Descrição|  
+|Expression|Sintaxe|DESCRIÇÃO|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Faz a correspondência de qualquer caractere. Por exemplo: Alhe faz a correspondência de palavras como "The", "then", e "reached".|  
 |Numérico|:Nu|Faz a correspondência de qualquer número ou dígito.|  

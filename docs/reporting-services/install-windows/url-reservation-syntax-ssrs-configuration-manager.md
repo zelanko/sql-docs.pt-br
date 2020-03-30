@@ -10,10 +10,10 @@ ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f2738eed803691eb8d18bb9affeee6e423ae5bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082231"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Sintaxe de reserva de URL (Gerenciador de Configurações do SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "77082231"
   
  A tabela a seguir descreve cada propriedade e quais valores são válidos para cada uma.  
   
-|Propriedade|Valores válidos|Descrição|  
+|Propriedade|Valores válidos|DESCRIÇÃO|  
 |--------------|------------------|-----------------|  
 |Esquema|http ou https|Prefixos para conexões não SSL e SSL.|  
 |Nome do host|(+) Curinga forte, equipara-se ao valor **(Todos Atribuídos)** para o endereço IP.<br /><br /> (\*) Curinga fraco, equipara-se a um endereço IP **(Todos os Não Atribuídos)** .<br /><br /> Nome de domínio totalmente qualificado<br /><br /> Nome do computador<br /><br /> Endereço IP (IPV4)<br /><br /> Endereço IP (IPV6)|Identifica o servidor na rede.<br /><br /> (+) Curinga forte é o padrão. HTTP.SYS aceitará todas as solicitações em todos os adaptadores de rede para uma determinada combinação de porta e diretório virtual. O servidor de relatório aceitará qualquer solicitação na porta.<br /><br /> (\*) Curinga fraco. HTTP.SYS aceita todas as solicitações não tratadas por outras reservas de URL em todos os adaptadores de rede para uma determinada combinação de porta e diretório virtual.<br /><br /> Nome do computador é o nome NEBIOS do computador na rede.<br /><br /> O nome de domínio totalmente qualificado inclui o endereço do domínio e o nome do servidor, como registrado em um controlador de domínio ou em um servidor de nome de domínio público.<br /><br /> Endereço IP (IPV4) é o endereço IP de um adaptador de rede no computador no formato IPV4: *nnn.nnn.nnn.nnn*.<br /><br /> Endereço IP (IPV6) é o endereço IP de um adaptador de rede no computador no formato IPV6: \<header>:\<header>:*nnn.nnn.nnn.nnn*.|  

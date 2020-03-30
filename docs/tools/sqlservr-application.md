@@ -23,10 +23,10 @@ ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: a4a35081f52ddc6f6e75c4bfa8ff56e1020cb0c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75305781"
 ---
 # <a name="sqlservr-application"></a>Aplicativo sqlservr
@@ -63,7 +63,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 **-l** *master_log_path* Indica o caminho totalmente qualificado para o arquivo de log de transações do banco de dados **mestre**. Não há espaços entre **-l** e *master_log_path*.
 
-**-m** Indica para iniciar uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em modo de usuário único. Somente um único usuário pode conectar quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é iniciado em modo de usuário único. O mecanismo de CHECKPOINT, que garante que transações concluídas sejam gravadas regularmente do cache de disco para o dispositivo de banco de dados, não foi iniciado. (Normalmente, esta opção será usada se você experimentar problemas com bancos de dados do sistema que devem ser corrigidos.) Habilita a opção **sp_configure allow updates**. Por padrão, a opção **allow updates** está desabilitada.
+**-m** Indica para iniciar uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em modo de usuário único. Somente um único usuário pode conectar quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é iniciado em modo de usuário único. O mecanismo de CHECKPOINT, que garante que transações concluídas sejam gravadas regularmente do cache de disco para o dispositivo de banco de dados, não foi iniciado. (Normalmente, esta opção será usada se você experimentar problemas com bancos de dados do sistema que devem ser corrigidos.) Habilita a opção **sp_configure allow updates** . Por padrão, a opção **allow updates** está desabilitada.
 
 **-n** Permite iniciar uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sem o parâmetro **-s** definido, a instância padrão tenta a inicialização. Você deve passar para o diretório BINN apropriado da instância em um prompt de comando antes de iniciar o **sqlservr.exe**. Por exemplo, se Instance1 tiver de usar \mssql$Instance1 para seus binários, o usuário deverá estar no diretório \mssql$Instance1\binn para iniciar **sqlservr.exe -s instance1**. Caso você inicie uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com a opção **-n** , recomendamos usar também a opção **-e** ou os eventos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não serão registrados.
 

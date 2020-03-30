@@ -13,10 +13,10 @@ ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66826895"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
@@ -36,7 +36,7 @@ ms.locfileid: "66826895"
   
 -   [Fazer referência a um recurso de imagem de um relatório](#bkmk_referenceimage)  
   
-##  <a name="bkmk_sum"></a> Resumo do modo nativo  
+##  <a name="summary-of-native-mode"></a><a name="bkmk_sum"></a> Resumo do modo nativo  
  Uma instalação em modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste em vários recursos do servidor que são necessários administrar e manter. Os recursos de servidor são os seguintes:  
   
 -   O serviço Web Servidor de Relatórios, executado dentro do serviço Servidor de Relatório.  
@@ -53,7 +53,7 @@ ms.locfileid: "66826895"
   
 -   Se você estiver instalando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um controlador de domínio, será necessário ser um administrador de domínio.  
   
-##  <a name="bkmk_managecontent"></a> Gerenciando conteúdo  
+##  <a name="managing-content"></a><a name="bkmk_managecontent"></a> Gerenciando conteúdo  
  No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o gerenciamento de conteúdo refere-se ao gerenciamento de relatórios, modelos, pastas, recursos e fontes de dados compartilhadas. Todos esses itens podem ser gerenciados independentemente um do outro por propriedades e configurações de segurança. Qualquer item pode ser movido para um local diferente no namespace de pasta de servidor de relatório. Para gerenciar os itens com eficiência, você precisa saber quais tarefas são executadas por um gerenciador de conteúdo.  
   
 > [!NOTE]  
@@ -79,7 +79,7 @@ ms.locfileid: "66826895"
   
  Ferramentas para gerenciar o conteúdo do servidor de relatórios incluem [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou o portal da Web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] permite definir padrões e habilitar recursos. O portal da Web é usado para conceder acesso a itens e operações do servidor de relatório, exibir e usar relatórios e outros tipos de conteúdo e exibir e usar todos os itens compartilhados e recursos de distribuição de relatórios.  
   
-##  <a name="bkmk_manageresources"></a> Gerenciamento e segurança de um recurso  
+##  <a name="securing-and-managing-a-resource"></a><a name="bkmk_manageresources"></a> Gerenciamento e segurança de um recurso  
  Um recurso é um item gerenciado armazenado, mas não processado, em um servidor de relatório. Normalmente, um recurso fornece conteúdo externo para usuários de relatórios. Alguns exemplos incluem uma imagem em um arquivo .jpg ou um arquivo HTML que descreve as regras de negócio usadas em um relatório. O arquivo JPG ou HTML é armazenado no servidor de relatórios, mas este passa o arquivo diretamente para o navegador, em vez de processá-lo antes.  
   
  Para adicionar um recurso a um servidor de relatórios, você carrega ou publica um arquivo:  
@@ -95,7 +95,7 @@ ms.locfileid: "66826895"
   
  Recursos existem em relatórios, fontes de dados compartilhadas, agendas compartilhadas e pastas como itens nomeados na hierarquia de pasta do servidor de relatório. É possível procurar, exibir, proteger e definir propriedades em recursos assim como acontece com qualquer outro item armazenado em um servidor de relatório. Para visualizar ou gerenciar um recurso, é necessário ter a tarefa Exibir recursos ou a tarefa Gerenciar recursos na sua atribuição de função.  
   
-##  <a name="bkmk_referenceimage"></a> Fazer referência a um recurso de imagem de um relatório  
+##  <a name="referencing-an-image-resource-from-a-report"></a><a name="bkmk_referenceimage"></a> Fazer referência a um recurso de imagem de um relatório  
  Recursos podem conter uma imagem à qual você faz referência em um relatório. Se as exigências de relatório incluírem o uso de imagens externas, considere as seguintes vantagens de armazenar a imagem como recurso:  
   
 -   Armazenamento centralizado no banco de dados do servidor de relatório. Se você mover o banco de dados do servidor de relatório e seu conteúdo, a imagem externa permanecerá com o relatório. Não é necessário rastrear os arquivos de imagem armazenados em disco em computadores diferentes.  

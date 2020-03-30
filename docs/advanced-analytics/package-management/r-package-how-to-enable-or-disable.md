@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485231"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Habilitar ou desabilitar o gerenciamento de pacotes para SQL Server
@@ -31,7 +31,7 @@ Para habilitar ou desabilitar o gerenciamento de pacotes no SQL Server, use o ut
 
 [Desabilitar](#bkmk_disable) o recurso de gerenciamento de pacotes também requer várias etapas: você remove os pacotes de nível de banco de dados e as permissões (uma vez por banco de dados) e, em seguida, remove as funções do servidor (uma vez por instância).
 
-## <a name="bkmk_enable"></a> Habilitar o gerenciamento de pacotes
+## <a name="enable-package-management"></a><a name="bkmk_enable"></a> Habilitar o gerenciamento de pacotes
 
 1. No SQL Server, abra um prompt de comandos com privilégios elevados e navegue até a pasta que contém o utilitário RegisterRExt.exe. A localização padrão é `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
 
@@ -76,7 +76,7 @@ Para habilitar ou desabilitar o gerenciamento de pacotes no SQL Server, use o ut
 
 Após habilitar esse recurso, você pode usar a função RevoScaleR para instalar ou desinstalar pacotes de um cliente R remoto.
 
-## <a name="bkmk_disable"></a> Desabilitar o gerenciamento de pacotes
+## <a name="disable-package-management"></a><a name="bkmk_disable"></a> Desabilitar o gerenciamento de pacotes
 
 1. Em um prompt de comandos com privilégios elevados, execute o utilitário RegisterRExt novamente e desabilite o gerenciamento de pacotes no nível do banco de dados:
 

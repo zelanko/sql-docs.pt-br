@@ -17,10 +17,10 @@ ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3cb8f79b892b639e618143fd138920650fb5cfda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081821"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Criar, modificar e excluir fontes de dados compartilhadas (SSRS)
@@ -30,10 +30,10 @@ ms.locfileid: "77081821"
   
  Uma fonte de dados compartilhada é composta pelas seguintes partes:  
   
-|Parte|Descrição|  
+|Parte|DESCRIÇÃO|  
 |----------|-----------------|  
 |Nome|Um nome que identifica o item dentro da hierarquia de pastas do servidor de relatórios.|  
-|Descrição|Uma descrição exibida com o item no portal da Web quando você exibe o conteúdo da pasta.|  
+|DESCRIÇÃO|Uma descrição exibida com o item no portal da Web quando você exibe o conteúdo da pasta.|  
 |Tipo de conexão|A extensão de processamento de dados usada com a fonte de dados. Você só poderá usar extensões de processamento de dados que estiverem implantadas no servidor de relatórios. Para obter mais informações sobre as extensões de processamento de dados incluídas no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Cadeia de conexão|A cadeia de conexão para o banco de dados. Para saber mais e ver exemplos de cadeias de conexão para fontes de dados usadas com frequência, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
 |Tipo de credencial|Especifica como as credenciais são obtidas para a conexão e se elas serão usadas depois que a conexão for estabelecida. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  

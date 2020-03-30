@@ -8,10 +8,10 @@ ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
 ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68329364"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Trabalhando com KPIs no Reporting Services
@@ -52,7 +52,7 @@ A tela **Novo KPI** será exibida.
   
 Você pode atribuir valores estáticos ou usar dados de um conjunto de dados compartilhado. Quando você cria um novo KPI, ele é preenchido com um conjunto aleatório de dados manual.  
   
-| Campo | Descrição |
+| Campo | DESCRIÇÃO |
 |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | Formato de valor | Usado para alterar o formato do valor que está em exibição. |
 | Valor | O valor a ser exibido para o KPI. |
@@ -61,7 +61,7 @@ Você pode atribuir valores estáticos ou usar dados de um conjunto de dados com
 | Conjunto de tendências | Valores numéricos separados por vírgula usados para visualizações de gráfico. Pode ser definido também como a coluna de um conjunto de dados com valores que representam a tendência. |
 | Conteúdo relacionado | A capacidade de definir um link de detalhamento. Esse link pode ser um relatório móvel publicado no portal ou uma URL personalizada. |
   
-> **Aviso**: embora seja possível o valor textual para o campo **Status** no tempo de design, use o valor numérico ao atualizar um conjunto de dados. Se atualizar um conjunto de dados com o valor textual em vez do valor numérico, ele pode corromper os KPIs no servidor.  
+> **Aviso**: embora você possa usar o valor textual para o campo **Status** em tempo de design, use o valor numérico quando atualizar um conjunto de dados. Se atualizar um conjunto de dados com o valor textual em vez do valor numérico, ele pode corromper os KPIs no servidor.  
 >
 > **Observação**: os campos **Valor**, **Meta** e **Status** só podem escolher um valor na primeira linha do resultado de um conjunto de dados. No entanto, o campo **Conjunto de tendências** pode escolher a coluna que reflete a tendência.  
   

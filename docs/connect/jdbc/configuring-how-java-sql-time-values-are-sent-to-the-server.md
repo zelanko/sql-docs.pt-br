@@ -11,16 +11,16 @@ ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8fe6969d51834d0798a530b9cc9926af1b27fec2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028236"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configuração de como os valores de java.sql.Time são enviados ao servidor
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Se você usar um objeto java.sql.Time ou o tipo java.sql.Types.TIME do JDBC para definir um parâmetro, poderá configurar como o valor java.sql.Time é enviado ao servidor; como um tipo **time** ou um tipo **datetime** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Se você usar um objeto java.sql.Time ou o tipo java.sql.Types.TIME do JDBC para definir um parâmetro, poderá configurar como o valor java.sql.Time é enviado ao servidor; como um tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]time**ou um tipo**datetime**do**.  
   
  Esse cenário se aplica ao usar um dos seguintes métodos:  
   

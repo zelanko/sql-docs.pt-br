@@ -14,10 +14,10 @@ ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 8a046f3f94e6c1ab59342f61fac1750bd6da1459
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246888"
 ---
 # <a name="general-user-interface-elements"></a>Elementos gerais da interface de usuário

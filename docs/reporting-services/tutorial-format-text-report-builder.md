@@ -9,10 +9,10 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63042929"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatar texto (Construtor de Relatórios)
@@ -30,7 +30,7 @@ Tempo estimado para concluir este tutorial: 20 minutos.
 ## <a name="requirements"></a>Requisitos  
 Para obter informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="CreateReport"></a>Criar um relatório em branco com uma fonte de dados e um conjunto de dados  
+## <a name="create-a-blank-report-with-a-data-source-and-dataset"></a><a name="CreateReport"></a>Criar um relatório em branco com uma fonte de dados e um conjunto de dados  
   
 ### <a name="to-create-a-blank-report"></a>Para criar um relatório em branco  
   
@@ -50,7 +50,7 @@ Para obter informações sobre os requisitos, consulte [Pré-requisitos para tut
 
     Se o painel **Dados do Relatório** não estiver visível, na guia **Exibir** , marque **Dados do Relatório**.
   
-2.  Na caixa **Nome**, digite: **TextDataSource**  
+2.  Na caixa **Nome** , digite: **TextDataSource**  
   
 3.  Clique em **Usar uma conexão inserida no meu relatório**.  
   
@@ -67,7 +67,7 @@ Para obter informações sobre os requisitos, consulte [Pré-requisitos para tut
   
 2.  Verifique se a fonte de dados é **TextDataSource**.  
   
-3.  Na caixa **Nome**, digite: **TextDataset.**  
+3.  Na caixa **Nome** , digite: **TextDataset.**  
   
 4.  Verifique se o tipo de consulta **Texto** está selecionado e, em seguida, clique em **Designer de Consulta**.  
   
@@ -119,7 +119,7 @@ Para obter informações sobre os requisitos, consulte [Pré-requisitos para tut
 
 9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="AddField"></a>Adicionar um campo à superfície de design do relatório  
+## <a name="add-a-field-to-the-report-design-surface"></a><a name="AddField"></a>Adicionar um campo à superfície de design do relatório  
 Se você quiser que um campo do conjunto de dados seja exibido em um relatório, seu primeiro impulso poderá ser de arrastá-lo diretamente para a superfície de design. Este exercício aponta por que isso não funciona e o que fazer em vez disso.  
   
 ### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>Para adicionar um campo ao relatório (e obter o resultado errado)  
@@ -174,7 +174,7 @@ Se você quiser que um campo do conjunto de dados seja exibido em um relatório,
   
 7.  Selecione a caixa de listagem e pressione a tecla DEL.  
   
-## <a name="AddTable"></a>Adicionar uma tabela à superfície de design do relatório  
+## <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>Adicionar uma tabela à superfície de design do relatório  
 Crie essa tabela para que você tenha um local para colocar os hiperlinks e o texto girado.   
   
 1.  Na guia **Inserir** > **Tabela** > **Assistente de Tabela**.  
@@ -209,7 +209,7 @@ Crie essa tabela para que você tenha um local para colocar os hiperlinks e o te
     
     ![report-builder-format-one-total](../reporting-services/media/report-builder-format-one-total.png)
   
-## <a name="AddHyperlink"></a>Adicionar um hiperlink ao relatório  
+## <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>Adicionar um hiperlink ao relatório  
 Nesta seção, você adiciona um hiperlink ao texto na tabela da seção anterior.  
   
 1.  Clique em **Design** para retornar à exibição de design.  
@@ -234,7 +234,7 @@ Nesta seção, você adiciona um hiperlink ao texto na tabela da seção anterio
   
 10. Clique em um link. Se o computador estiver conectado à Internet, um navegador abrirá um tópico da Ajuda do Construtor de Relatórios.  
   
-## <a name="RotateText"></a>Girar texto no relatório  
+## <a name="rotate-text-in-the-report"></a><a name="RotateText"></a>Girar texto no relatório  
 Nesta seção, você gira um texto na tabela das seções anteriores.  
  
 1.  Clique em **Design** para retornar à exibição de design.  
@@ -260,7 +260,7 @@ Agora o texto na célula `[Territory]` é executado verticalmente da parte infer
 
 ![report-builder-format-rotate-270](../reporting-services/media/report-builder-format-rotate-270.png)
 
-## <a name="FormatCurrency"></a>Formatar moeda  
+## <a name="format-currency"></a><a name="FormatCurrency"></a>Formatar moeda  
   
 1.  Clique em **Design** a fim de alternar para a exibição de design.  
   
@@ -280,7 +280,7 @@ O relatório agora exibe dados formatados e é mais fácil de ler.
 
 ![report-build-format-report](../reporting-services/media/report-build-format-report.png)
     
-## <a name="FormatHTML"></a>Exibindo texto com formatação HTML  
+## <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>Exibindo texto com formatação HTML  
   
 1.  Clique em **Design** a fim de alternar para a exibição de design.  
   
@@ -322,7 +322,7 @@ O texto na caixa de texto é exibido como um título, um parágrafo e uma lista 
   
 ![report-builder-format-html](../reporting-services/media/report-builder-format-html.png)
 
-## <a name="Save"></a>Salvar o relatório  
+## <a name="save-the-report"></a><a name="Save"></a>Salvar o relatório  
 É possível salvar relatórios em um servidor de relatório, em uma biblioteca do SharePoint ou no computador.  
   
 Neste tutorial, salve o relatório em um servidor de relatório. Se você não tiver acesso ao servidor de relatório, salve o relatório no computador.  
@@ -355,7 +355,7 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Há várias maneiras de formatar um texto no Construtor de Relatórios. [Tutorial: Criar um relatório de forma livre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contém mais exemplos.  
+Há várias maneiras de formatar um texto no Construtor de Relatórios. O [Tutorial: Criação de um relatório de forma livre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contém mais exemplos.  
 
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md) 
 [Formatação de Itens de Relatório](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

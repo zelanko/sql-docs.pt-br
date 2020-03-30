@@ -14,10 +14,10 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140263"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Criar, modificar e excluir assinaturas controladas por dados
@@ -35,14 +35,14 @@ ms.locfileid: "67140263"
   
 -   [Executar a assinatura](#bkmk_run_subscription)  
   
-##  <a name="bkmk_manage_and_delete"></a> Gerenciar e excluir uma assinatura controlada por dados  
+##  <a name="managing-and-deleting-a-data-driven-subscription"></a><a name="bkmk_manage_and_delete"></a> Gerenciar e excluir uma assinatura controlada por dados  
  Uma assinatura controlada por dados que está em andamento não pode ser interrompida nem excluída por meio do portal da Web. Por esse motivo, é vantajoso usar uma agenda compartilhada para acionar a assinatura controlada por dados. Dessa forma, se quiser impedir temporariamente o processamento de uma assinatura, poderá fazer uma pausa na agenda que aciona a assinatura. Para saber mais, consulte [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
  Para excluir uma assinatura controlada por dados, marque a caixa de seleção ao lado do relatório na página **Assinaturas** e selecione **Excluir**.  
   
  Para obter instruções sobre como cancelar uma assinatura controlada por dados, consulte [Gerenciar um processo em execução](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
-##  <a name="bkmk_create_and_modify"></a> Criar e modificar uma assinatura controlada por dados  
+##  <a name="creating-and-modifying-a-data-driven-subscription"></a><a name="bkmk_create_and_modify"></a> Criar e modificar uma assinatura controlada por dados  
  Para criar uma assinatura controlada por dados, selecione um relatório que use credenciais armazenadas ou nenhuma credencial. Quando você criar a assinatura controlada por dados, considere o uso de uma convenção de nomenclatura para o campo de descrição, de modo que seja possível diferenciar facilmente as assinaturas padrão das assinaturas controladas por dados.  
   
 ### <a name="to-create-a-data-driven-subscription-native-mode"></a>Para criar uma assinatura controlada por dados (Modo Nativo)  
@@ -88,14 +88,14 @@ ms.locfileid: "67140263"
   
 -   **Requisitos de usuário**. O autor da assinatura deve ter permissão para "Gerenciar relatórios" e "Gerenciar todas as assinaturas". Para obter mais informações sobre permissões de tarefa em nível de item, consulte [Tarefas e Permissões](../../reporting-services/security/tasks-and-permissions.md). O autor também tem que ter as credenciais necessárias para acessar a fonte de dados externa que contém dados de assinante.  
   
-##  <a name="bkmk_define_query"></a> Definir uma consulta que recupera informações de assinatura  
+##  <a name="defining-a-query-that-retrieves-subscription-information"></a><a name="bkmk_define_query"></a> Definir uma consulta que recupera informações de assinatura  
  Uma assinatura controlada por dados deve especificar uma consulta ou um comando que recupere dados de assinante. A consulta deve produzir uma linha para cada assinante. Se você estiver usando a extensão de entrega de email, a consulta deverá retornar um alias de email válido para cada assinante. O número de entregas feitas se baseia no número de linhas retornadas pela consulta. Se o conjunto de linhas for composto por 10.000 linhas, a assinatura entregará 10.000 relatórios.  
   
  Se executar a consulta for uma tarefa demorada, você poderá aumentar o valor do tempo limite para acomodar outros processamentos.  
   
  Para esta etapa, a consulta deve ser validada a consulta antes de continuar. A validação não processa a consulta, mas ela retorna uma lista de todas as colunas que estão no conjunto de linhas para que você possa fazer referência a colunas nas seleções subsequentes. Se houver falha na validação da consulta, você não poderá continuar. Há uma falha na validação da consulta se a sintaxe da consulta estiver incorreta ou se a conexão com a fonte de dados não for válida. Use o botão **Voltar** para fazer correções na fonte de dados.  
   
-##  <a name="bkmk_run_subscription"></a> Executar a assinatura  
+##  <a name="running-the-subscription"></a><a name="bkmk_run_subscription"></a> Executar a assinatura  
  Você deve especificar condições para processar a assinatura. Você pode especificar uma agenda ou pode acionar a assinatura para coincidir com as atualizações para um instantâneo de execução do relatório. O processamento de assinaturas controladas por dados é o mesmo que o processamento para assinaturas padrão.  
   
 ## <a name="see-also"></a>Confira também  

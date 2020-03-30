@@ -34,10 +34,10 @@ ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e3390f952eaa553c144d8dd50e906276d4f96649
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080885"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tabelas, matrizes e listas (Construtor de Relatórios e SSRS)
@@ -53,12 +53,12 @@ ms.locfileid: "77080885"
   
  ![RS_TableMatrixList](../../reporting-services/report-design/media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- Confira uma introdução rápida a tabelas, matrizes e listas no [Tutorial: Criar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Criar um relatório de matriz &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md) e [Tutorial: Criar um relatório de forma livre &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
+ Para começar rapidamente a trabalhar com tabelas, matrizes e listas, consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: criando um relatório de matriz &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md) e [Tutorial: criando um relatório de formato livre &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  É possível publicar tabelas, matrizes e listas separadamente de um relatório como partes do relatório. Leia mais sobre as [Partes do relatório](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
-##  <a name="Table"></a> Table  
+##  <a name="table"></a><a name="Table"></a> Table  
  Use uma tabela para exibir dados de detalhes, organizar os dados em grupos de linhas ou ambos. O modelo Tabela contém três colunas com uma linha de cabeçalho de tabela e uma linha de detalhes para dados. A figura a seguir mostra o modelo de tabela inicial, selecionado na superfície de design:  
   
  ![Modelo de tabela na superfície de design, selecionado](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "Modelo de tabela na superfície de design, selecionado")  
@@ -69,7 +69,7 @@ ms.locfileid: "77080885"
   
  Para obter mais informações, consulte [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
-##  <a name="Matrix"></a> Matriz  
+##  <a name="matrix"></a><a name="Matrix"></a> Matriz  
  Use uma matriz para exibir resumos de dados agregados, agrupados em linhas e colunas, de maneira semelhante a uma Tabela Dinâmica ou tabela de referência cruzada. O número de linhas e colunas para grupos é determinado pelo número de valores exclusivos de cada linha e grupo de colunas. A figura a seguir mostra o modelo de matriz inicial, selecionado na superfície de design:  
   
  ![Nova Matriz adicionada da Caixa de Ferramentas, selecionada](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nova Matriz adicionada da Caixa de Ferramentas, selecionada")  
@@ -82,14 +82,14 @@ ms.locfileid: "77080885"
   
  Para obter mais informações, consulte [Crie uma matriz](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
   
-##  <a name="List"></a> Lista  
+##  <a name="list"></a><a name="List"></a> Lista  
  Use uma lista para criar um layout de forma livre. Você não está limitado a um layout de grade, mas pode colocar campos livremente dentro da lista. É possível usar uma lista para criar um formulário para exibir muitos campos do conjunto de dados ou como um contêiner para exibir várias regiões de dados lado a lado para dados agrupados. Por exemplo, é possível definir um grupo para uma lista, adicionar uma tabela, gráfico e imagem, e exibir valores em forma de tabela e gráfico para cada valor do grupo, como para um registro de funcionário ou de paciente.  
   
  ![Nova Lista adicionada da Caixa de Ferramentas, selecionada](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "Nova Lista adicionada da Caixa de Ferramentas, selecionada")  
   
  Para obter mais informações, consulte [Criar faturas e formulários com listas].  
   
-##  <a name="PreparingData"></a> Preparando dados  
+##  <a name="preparing-data"></a><a name="PreparingData"></a> Preparando dados  
  Uma região de dados de tabela, matriz e lista exibe dados de um conjunto de dados. Você pode preparar os dados na consulta que recupera os dados para o conjunto de dados ou definindo propriedades na tabela, matriz ou lista.  
   
  As linguagens de consulta como [!INCLUDE[tsql](../../includes/tsql-md.md)]que você usa para recuperar os dados para os conjuntos de dados de relatório podem preparar os dados aplicando filtros para incluir somente um subconjunto dos dados, substituindo valores nulos ou espaços em branco com constantes que tornam o relatório mais legível, e classificando e agrupando dados.  
@@ -98,19 +98,19 @@ ms.locfileid: "77080885"
   
  Para obter mais informações, consulte [Preparando dados para exibição em uma região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs.md).  
   
-##  <a name="BuildingConfiguringTableMatrixList"></a> Criando e configurando uma tabela, matriz ou lista  
+##  <a name="building-and-configuring-a-table-matrix-or-list"></a><a name="BuildingConfiguringTableMatrixList"></a> Criando e configurando uma tabela, matriz ou lista  
  Ao acrescentar tabelas ou matrizes a seu relatório, você pode usar o Assistente de Tabela e Matriz ou criá-las manualmente a partir dos modelos fornecidos pelo Construtor de Relatórios ou pelo Designer de Relatórios. Listas são compiladas manualmente a partir do modelo de lista.  
   
  O assistente ajuda a criar e configurar uma tabela ou matriz rapidamente. Depois de concluir o assistente ou se você criar as regiões de dados do tablix do zero, poderá configurá-los e refiná-los mais adiante. As caixas de diálogo, disponíveis nos menus do botão direito do mouse nas regiões de dados, facilitam a definição das propriedades mais comuns para quebras de páginas, repetição e visibilidade de cabeçalhos e rodapés, opções de exibição, filtros e classificação. Mas a região de dados do tablix fornece uma grande variedade de propriedades adicionais que você só pode definir no painel Propriedades do Construtor de Relatórios. Por exemplo, se você desejar exibir uma mensagem quando o conjunto de dados para uma tabela, matriz ou lista estiver vazio, especifique o texto da mensagem na propriedade do tablix NoRowsMessage no painel Propriedades.  
   
-##  <a name="ChangingBetweenTablixTemplates"></a> Alterando entre modelos do tablix  
+##  <a name="changing-between-tablix-templates"></a><a name="ChangingBetweenTablixTemplates"></a> Alterando entre modelos do tablix  
  Você não está limitado pela escolha inicial do modelo do tablix. Ao adicionar grupos, totais e rótulos, você pode querer modificar o design do tablix. Por exemplo, você pode começar com uma tabela e, em seguida, excluir as linhas de detalhes e adicionar grupos de colunas. Para obter mais informações, consulte [Explorando a flexibilidade de uma região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
  Você pode continuar a desenvolver uma tabela, matriz ou lista adicionando qualquer recurso do tablix. Os recursos do tablix incluem a exibição de dados de detalhes ou agregações para dados agrupados em linhas e colunas. É possível criar grupos aninhados, grupos adjacentes independentes ou grupos recursivos. É possível filtrar e classificar dados agrupados e combinar grupos facilmente com a inclusão de várias expressões de grupo em uma definição de grupo  
   
  Também é possível adicionar totais para um grupo ou totais gerais para a região de dados. É possível ocultar linhas ou colunas para simplificar um relatório e permitir que o usuário alterne a exibição dos dados ocultos como em um relatório de análise. Para obter mais informações, consulte [Controlando a exibição da região de dados Tablix em uma página do relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
-##  <a name="HowTo"></a> Tópicos de instruções  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Tópicos de instruções  
  Esta seção lista procedimentos que mostram, passo a passo, como trabalhar com tabelas, matrizes e listas em seus relatórios; como exibir dados em linhas e colunas, adicionar e excluir colunas, mesclar células, e incluir subtotais para linha e grupos de colunas.  
   
 -   [Adicionar um grupo de detalhes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-a-details-group-report-builder-and-ssrs.md)  
@@ -137,7 +137,7 @@ ms.locfileid: "77080885"
   
 -   [Adicionar, mover ou excluir uma tabela, matriz ou lista &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
-##  <a name="InThisSection"></a> Nesta seção  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Nesta seção  
  Os tópicos a seguir fornecem informações adicionais sobre como trabalhar com regiões de dados do tablix.  
   
  [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  

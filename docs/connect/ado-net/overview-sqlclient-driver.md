@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 0831e307ca0868cd80d92d22f6077070ca1730ea
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897090"
 ---
 # <a name="overview-of-the-sqlclient-driver"></a>Visão geral do driver do SqlClient
@@ -28,7 +28,7 @@ ms.locfileid: "78897090"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Introdução ao namespace Microsoft.Data.SqlClient](introduction-microsoft-data-sqlclient-namespace.md)|Página de introdução ao namespace Microsoft.Data.SqlClient.|  
 |[Baixar o Provedor de Dados do Microsoft SqlClient para SQL Server](download-microsoft-sqlclient-data-provider.md)|Página de download para o ADO.NET e o Provedor de Dados do Microsoft SqlClient para SQL Server.|  

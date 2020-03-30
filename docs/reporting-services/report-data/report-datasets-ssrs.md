@@ -9,10 +9,10 @@ ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73de47423caed308e1a9ae433bdcc7b24b3e69d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081942"
 ---
 # <a name="report-datasets-ssrs"></a>Conjuntos de dados de relatório (SSRS)
@@ -36,12 +36,12 @@ ms.locfileid: "77081942"
   
  Você também pode adicionar conjuntos de dados a um relatório adicionando partes de relatório que incluem os conjuntos de dados dos quais elas dependem. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Para aprender a criar um relatório que exibe dados de um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Para criar um relatório que inclui os próprios dados, confira [Tutorial: Criar um relatório de gráfico rápido offline &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Para saber como criar um relatório que exibe dados de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Para criar um relatório que inclui seus próprios dados, consulte [Tutorial: Criar um gráfico de relatório rápido offline &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Methods"></a> Adicionando dados de relatório  
+##  <a name="adding-report-data"></a><a name="Methods"></a> Adicionando dados de relatório  
  No Construtor de Relatórios, você pode adicionar dados de relatório das seguintes maneiras.  
   
 -   Adicione partes de relatório de um servidor de relatório ao seu relatório. Cada parte de relatório é autossuficiente e inclui conjuntos de dados dependentes. Os conjuntos de dados são predefinidos.  
@@ -76,7 +76,7 @@ ms.locfileid: "77081942"
 -   [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
-##  <a name="QuickStart"></a> Adicionando dados com partes de relatório  
+##  <a name="adding-data-with-report-parts"></a><a name="QuickStart"></a> Adicionando dados com partes de relatório  
  As partes de relatório contêm os conjuntos de dados dos quais elas dependem. Esses conjuntos de dados são criados em fontes de dados compartilhadas que estão disponíveis no servidor de relatório. No Construtor de Relatórios, quando você adiciona uma parte de relatório ao relatório, os conjuntos de dados dependentes são adicionados ao relatório, como se você os tivesse adicionado manualmente. Por exemplo, um gráfico predefinido contém um conjunto de dados. Para ver os dados, visualize o relatório.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ ms.locfileid: "77081942"
 -   Para obter mais informações, consulte [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) e [Partes de relatório no Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
   
-##  <a name="Queries"></a> Consultas e designers de consulta  
+##  <a name="queries-and-query-designers"></a><a name="Queries"></a> Consultas e designers de consulta  
  Para especificar quais dados deseja em uma fonte de dados, crie um comando de consulta. Cada tipo de fonte de dados fornece um *designer de consulta* relacionado para ajudar você a criar a consulta. O designer de consulta pode ser gráfico ou baseado em texto. Em um designer de consulta gráfica, você exibe metadados que representam os dados na fonte de dados externa e criam interativamente uma consulta arrastando campos ou entidades para a superfície de design de consulta. Em um designer de consulta baseado em texto, você escreve ou importa consultas na sintaxe de consulta que tem suporte da fonte de dados externa.  
   
  No designer de consulta, você pode executar a consulta para exibir dados de exemplo e validar a sintaxe do comando de consulta. Os nomes de coluna no conjunto de resultados tornam-se os nomes de campo que você vê no painel Dados do Relatório. O conjunto de resultados deve ser um único conjunto de linhas e colunas em que o mesmo número de valores existe para cada linha de dados. Não há suporte para vários conjuntos de resultados a partir de uma única consulta. Não há suporte para hierarquias imperfeitas, que não têm um número constante de colunas e podem gerar um número diferente de valores de dados para cada linha.  
@@ -97,7 +97,7 @@ ms.locfileid: "77081942"
  A comunicação entre uma extensão de dados e a fonte de dados externa é gerenciada pelos provedores de dados. O suporte para sintaxe do comando de consulta, parâmetros de consulta e tipos de dados para obter valores no conjunto de resultados é determinado por cada provedor de dados. Para saber mais, confira o tópico para o tipo específico de extensão de dados e [Ferramentas de Designers de Consulta &#40;SSRS&#41;](query-design-tools-ssrs.md).  
   
   
-##  <a name="HowTo"></a> Tópicos de instruções  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Tópicos de instruções  
  [Adicionar e verificar uma conexão de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
@@ -117,7 +117,7 @@ ms.locfileid: "77081942"
  [Definir parâmetros no Designer de Consulta MDX do Analysis Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
   
-##  <a name="Section"></a> Nesta seção  
+##  <a name="in-this-section"></a><a name="Section"></a> Nesta seção  
  [Partes de relatório e conjuntos de dados no Construtor de Relatórios](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
  [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  

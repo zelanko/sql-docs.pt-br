@@ -13,10 +13,10 @@ ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: baff01bd8bc02af409a37c5cc1ce193e69663387
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63194824"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Criar uma assinatura controlada por dados (Tutorial do SSRS)

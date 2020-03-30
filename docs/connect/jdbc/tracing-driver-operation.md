@@ -11,10 +11,10 @@ ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027588"
 ---
 # <a name="tracing-driver-operation"></a>Rastreamento de operação do driver
@@ -39,7 +39,7 @@ ms.locfileid: "69027588"
   
  A tabela a seguir descreve cada nível de log disponível para categorias de log públicas.  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |SEVERE|Indica uma falha séria e é o nível mais alto de log. No driver JDBC, este nível é usado para relatar erros e exceções.|  
 |WARNING|Indica um problema potencial.|  
@@ -53,21 +53,21 @@ ms.locfileid: "69027588"
   
  A tabela a seguir descreve cada nível de log disponível para as categorias de log internas.  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |SEVERE|Indica uma falha séria e é o nível mais alto de log. No driver JDBC, este nível é usado para relatar erros e exceções.|  
 |WARNING|Indica um problema potencial.|  
 |INFO|Fornece mensagens informativas.|  
 |FINE|Fornece informações de rastreamento que incluem criação e destruição básicas de objeto. Além disso, todas as exceções lançadas pelos métodos públicos.|  
-|FINER|Fornece informações de rastreamento detalhadas inclusive todas as entradas de método público e pontos de saída com tipos de dados de parâmetro associados e todas as propriedades públicas para classes públicas. Além disso, os parâmetros de entrada, os parâmetros de saída e o método retornam valores, exceto os tipos de valores retornados CLOB, BLOB, NCLOB, Reader, \<stream>.<br /><br /> As seguintes categorias de log existiam na versão 1.2 do JDBC Driver e tinham o nível de registros em log FINE: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA e [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Desde a versão 2.0, estes são atualizados para o nível FINER.|  
-|FINEST|Fornece informações de rastreamento altamente detalhadas. Este é o nível mais baixo de log.<br /><br /> As seguintes categorias de log existiam na versão 1.2 do JDBC Driver e tinham o nível de registros em log FINEST: TDS.DATA e TDS.TOKEN. Desde a versão 2.0, eles mantêm o nível de log FINEST.|  
+|FINER|Fornece informações de rastreamento detalhadas inclusive todas as entradas de método público e pontos de saída com tipos de dados de parâmetro associados e todas as propriedades públicas para classes públicas. Além disso, os parâmetros de entrada, os parâmetros de saída e o método retornam valores, exceto os tipos de valores retornados CLOB, BLOB, NCLOB, Reader, \<stream>.<br /><br /> As categorias de log a seguir existiam na versão 1.2 do driver JDBC e tinham o nível de log FINE: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA e [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Desde a versão 2.0, estes são atualizados para o nível FINER.|  
+|FINEST|Fornece informações de rastreamento altamente detalhadas. Este é o nível mais baixo de log.<br /><br /> As categorias de log a seguir existiam na versão 1.2 do driver JDBC e tinham o nível de log FINEST: TDS.DATA e TDS.TOKEN. Desde a versão 2.0, eles mantêm o nível de log FINEST.|  
 |OFF|Desliga o log.|  
 |ALL|Habilita log de todas as mensagens.|  
   
 ## <a name="logging-categories"></a>Categorias de log  
  Ao criar um objeto Logger, você deve dizer a ele sobre qual entidade ou categoria nomeada você está interessado em obter informações de log. O driver JDBC suporta as categorias de log públicas a seguir, que estão todas definidas no pacote do driver com.microsoft.sqlserver.jdbc.  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |Conexão|Registra em log mensagens na classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Os aplicativos podem definir o nível de log como FINER.|  
 |de|Registra em log mensagens na classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Os aplicativos podem definir o nível de log como FINER.|  
@@ -77,7 +77,7 @@ ms.locfileid: "69027588"
   
  A partir do Microsoft JDBC Driver versão 2.0, o driver também fornece o pacote com.microsoft.sqlserver.jdbc.internals, que inclui o suporte de log para as categorias de log internas a seguir.  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |AuthenticationJNI|Registra mensagens em log sobre problemas de autenticação integrada no Windows (quando a propriedade de conexão **authenticationScheme** está definida de maneira implícita ou explícita como **NativeAuthentication**).<br /><br /> Os aplicativos podem definir o nível de log como FINEST e FINE.|  
 |SQLServerConnection|Registra em log mensagens na classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Os aplicativos podem definir o nível de log como FINE e FINER.|  

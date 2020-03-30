@@ -10,10 +10,10 @@ ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ce25cfe5d8d84926cb9bc993d075372e3a81d336
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245357"
 ---
 # <a name="control-row--column-headings-report-builder--ssrs"></a>Controlar títulos de linha e coluna (Construtor de Relatórios e SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "75245357"
   
  Para regiões de dados tablix com áreas de grupos de linhas ou colunas, controle as linhas e as colunas associadas definindo propriedades na região de dados tablix. Para todos os outros casos, controle as linhas e as colunas definindo propriedades no painel Propriedades para o membro tablix selecionado. Para obter instruções passo a passo, consulte [Exibir cabeçalhos de linhas e colunas em várias páginas e &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md) e [Manter os cabeçalhos visíveis ao rolar por um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md).  
   
-##  <a name="Top"></a> Exemplos  
+##  <a name="examples"></a><a name="Top"></a> Exemplos  
  Os exemplos mais comuns de regiões de dados tablix são para uma matriz, uma tabela sem grupos, e uma tabela com um grupo de linhas e um cabeçalho de grupo de linhas e uma tabela com um grupo de linhas, mas nenhum cabeçalho de grupo de linhas. Para controlar o modo como repetir ou congelar cabeçalhos, você deve determinar se as linhas ou as colunas que deseja controlar estão associadas a um cabeçalho de grupo na área de grupos de linhas ou grupos de colunas.  
   
  As seções seguintes fornecem exemplos para layouts comuns para uma região de dados tablix:  
@@ -58,7 +58,7 @@ ms.locfileid: "75245357"
   
 -   [Tabela com grupos de linhas, mas nenhuma área de grupo de linhas](#TableRowGroupsNoGroupHeader)  
   
-###  <a name="Matrix"></a> Matriz  
+###  <a name="matrix"></a><a name="Matrix"></a> Matriz  
  Por padrão, uma matriz simples tem um grupo de linhas e um grupo de colunas. A figura seguinte mostra uma matriz com um grupo de linhas baseado na Categoria e um grupo de colunas baseado na Geografia:  
   
  ![Matriz, linha Categoria e grupo de colunas Geografia](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Matriz, linha Categoria e grupo de colunas Geografia")  
@@ -73,7 +73,7 @@ ms.locfileid: "75245357"
   
  [Voltar ao início](#Top)  
   
-###  <a name="TableNoGroups"></a> Tabela sem nenhum grupo de linhas  
+###  <a name="table-with-no-row-groups"></a><a name="TableNoGroups"></a> Tabela sem nenhum grupo de linhas  
  Por padrão, uma tabela simples sem grupos inclui o grupo de detalhes. A figura seguinte mostra uma tabela que exibe a categoria, o número do pedido e os dados da venda:  
   
  ![Design, tabela com uma linha estática e uma dinâmica](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "Design, tabela com uma linha estática e uma dinâmica")  
@@ -94,7 +94,7 @@ ms.locfileid: "75245357"
   
  [Voltar ao início](#Top)  
   
-###  <a name="TableRowGroupsGroupHeader"></a> Tabela com grupos de linhas e uma área de grupo de linhas  
+###  <a name="table-with-row-groups-and-a-row-group-area"></a><a name="TableRowGroupsGroupHeader"></a> Tabela com grupos de linhas e uma área de grupo de linhas  
  Se você adicionar um grupo de linhas a uma tabela simples, uma área de grupo de linhas será adicionada à tabela na superfície de design. A figura seguinte mostra uma tabela com um grupo de linhas baseado na Categoria:  
   
  ![Design, tabela com grupo de uma linha e detalhes](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "Design, tabela com grupo de uma linha e detalhes")  
@@ -111,11 +111,11 @@ ms.locfileid: "75245357"
   
  ![Grupos de linhas, modo Avançado com membros estáticos](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "Grupos de linhas, modo Avançado com membros estáticos")  
   
- Para membros do tablix são listados: **Estático**, (**Estático**), Categoria e (**Detalhes**). Um membro tablix que inclui parênteses () indica que não há nenhum cabeçalho de grupo correspondente. Para repetir ou congelar cabeçalhos de coluna, selecione o membro tablix Estático superior e defina as propriedades no painel Propriedades.  
+ Para membros tablix são listados os itens: **Estático**, (**Estático**), Categoria e (**Detalhes**). Um membro tablix que inclui parênteses () indica que não há nenhum cabeçalho de grupo correspondente. Para repetir ou congelar cabeçalhos de coluna, selecione o membro tablix Estático superior e defina as propriedades no painel Propriedades.  
   
  [Voltar ao início](#Top)  
   
-###  <a name="TableRowGroupsNoGroupHeader"></a> Tabela com grupos de linhas e nenhuma área de grupo de linhas  
+###  <a name="table-with-row-groups-and-no-row-group-area"></a><a name="TableRowGroupsNoGroupHeader"></a> Tabela com grupos de linhas e nenhuma área de grupo de linhas  
  Uma tabela pode ter grupos de linhas, mas nenhuma área de grupos de linhas de vários modos. Dois modos possíveis que isso ocorra incluem:  
   
 -   Comece com uma tabela com grupos de linhas e uma área de grupo de linhas e exclua as colunas para a área de grupo de linhas. Exclua as colunas apenas e não os grupos. Por exemplo, talvez você queira controlar o formato de tabela para ser uma grade simples.  
@@ -138,7 +138,7 @@ ms.locfileid: "75245357"
   
  ![Grupos de linhas, Avançado, sem cabeçalho de grupo.](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Grupos de linhas, Avançado, sem cabeçalho de grupo.")  
   
- No painel Grupos de Linhas, os seguintes membros do tablix são listados: (**Estático**), (Categoria), (**Estático**) e (**Detalhes**). Para repetir ou congelar cabeçalhos de coluna, selecione o membro tablix (**Estático**) superior e defina as propriedades no painel Propriedades.  
+ No painel Grupos de Linhas, os membros tablix seguintes são listados: (**Estático**), (Categoria), (**Estático**) e (**Detalhes**). Para repetir ou congelar cabeçalhos de coluna, selecione o membro tablix (**Estático**) superior e defina as propriedades no painel Propriedades.  
   
  [Voltar ao início](#Top)  
   

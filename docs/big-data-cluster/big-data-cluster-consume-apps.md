@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 305080d5c3b0a1c517d757c1f6f2bd07fefb216c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75721401"
 ---
 # <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>Consumir um aplicativo implantado em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] usando um serviço Web RESTful
@@ -33,7 +33,7 @@ Este artigo descreve como consumir um aplicativo implantado em um cluster de Big
 
 Depois de implantar um aplicativo em seu [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], você pode acessar e consumir esse aplicativo usando um serviço Web RESTful. Isso permite a integração desse aplicativo usando outros aplicativos ou serviços (por exemplo, um aplicativo móvel ou site). A tabela a seguir descreve os comandos de implantação do aplicativo que você pode usar com **azdata** para obter informações sobre o serviço Web RESTful para seu aplicativo.
 
-|Comando |Descrição |
+|Comando |DESCRIÇÃO |
 |:---|:---|
 |`azdata app describe` | Descrever o aplicativo. |
 

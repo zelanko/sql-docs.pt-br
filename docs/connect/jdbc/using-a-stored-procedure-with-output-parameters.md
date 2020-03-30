@@ -11,10 +11,10 @@ ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: efafaa709666620e7237f2481c392aba25dfd5f8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026828"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Como usar um procedimento armazenado com parâmetros de saída
@@ -28,7 +28,7 @@ Ao chamar esse tipo de procedimento armazenado usando o driver JDBC, você preci
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> Para obter mais informações sobre as sequências de escape SQL, confira [Como usar sequências de escape do SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Para obter mais informações sobre as sequências de escape do SQL, confira [Como usar sequências de escape do SQL](../../connect/jdbc/using-sql-escape-sequences.md).
 
 Ao construir a sequência de escape `call`, especifique os parâmetros OUT usando o caractere ? (ponto de interrogação). Esse caractere age como um espaço reservado para os valores de parâmetros que retornarão do procedimento armazenado. Para especificar um valor para um parâmetro OUT, especifique o tipo de dados de cada parâmetro usando o método [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) da classe SQLServerCallableStatement antes de executar o procedimento armazenado.
 

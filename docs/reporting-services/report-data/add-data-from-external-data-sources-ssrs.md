@@ -10,10 +10,10 @@ reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
 ms.openlocfilehash: c6d5ebdcc4866c30b9fda3967304cda747a13a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081839"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Adicionar dados de fontes de dados externas (SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "77081839"
   
  Para obter mais informações sobre tipos de fontes de dados, consulte [Nesta seção](#InThisSection).  
   
-##  <a name="DataAccess"></a> Compreendendo a tecnologia de acesso a dados  
+##  <a name="understanding-data-access-technology"></a><a name="DataAccess"></a> Compreendendo a tecnologia de acesso a dados  
  A recuperação de dados para um conjunto de dados de relatório requer várias camadas de software de acesso a dados. A lista a seguir fornece uma descrição simples de como os relatórios funcionam com as tecnologias de acesso a dados:  
   
 -   **Aplicativo e interface do usuário** O aplicativo Construtor de Relatórios usado para criar uma fonte de dados, adicionar uma referência a uma fonte de dados compartilhada, adicionar um conjunto de dados compartilhado ou adicionar uma parte de relatório que inclui as fontes de dados e conjuntos de dados dos quais ele depende.  
@@ -41,7 +41,7 @@ ms.locfileid: "77081839"
 > [!NOTE]  
 >  Quando você não está conectado a um servidor de relatório, pode escolher as extensões de dados instaladas com o Construtor de Relatórios. Você acessa os dados como um usuário único usando as credenciais de seu computador. Quando você está conectado a um servidor de relatório, pode escolher as extensões de dados instaladas no servidor de relatório. Você acessa os dados como um de vários usuários que executam o relatório e usa as credenciais no servidor de relatório. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
   
-##  <a name="ReportData"></a> Compreendendo os dados de relatório  
+##  <a name="understanding-report-data"></a><a name="ReportData"></a> Compreendendo os dados de relatório  
  Na forma mais simples, um relatório exibe dados de um conjunto de dados de relatório em uma região de dados na página do relatório, ou seja, em uma única tabela, gráfico, matriz ou outro tipo de região de dados de relatório. Os dados em um conjunto de dados de relatório provêm do primeiro conjunto de resultados retornado de um único comando de consulta que é executado com acesso somente leitura para uma fonte de dados externa. Cada região de dados é expandidas conforme necessário para exibir todos os dados do conjunto de dados.  
   
  Os dados em um conjunto de dados são essencialmente tabulares. As colunas são os campos da consulta de conjunto de dados. As linhas provêm das linhas no conjunto de resultados. Você pode usar os seguintes tipos de dados generalizados em um relatório:  
@@ -59,11 +59,11 @@ ms.locfileid: "77081839"
 -   Os dados recursivos possuem suporte. Um conjunto de resultados que contém uma hierarquia de dados recursiva inclui todas as informações sobre a estrutura de hierarquia em um conjunto de resultados retangular. Por exemplo, a estrutura de subordinação em uma empresa pode ser representada por uma tabela que inclui duas colunas: um funcionário e um gerente. Cada gerente também é um funcionário com um gerente. O gerente principal normalmente contém um nulo ou outro identificador indicando que esse funcionário não tem gerente.  
   
   
-##  <a name="DataTypes"></a> Trabalhando com tipos de dados  
+##  <a name="working-with-data-types"></a><a name="DataTypes"></a> Trabalhando com tipos de dados  
  Quando você cria um conjunto de dados, os tipos de dados dos campos são mapeados para o subconjunto de tipos de dados CLR do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Os tipos de dados que não puderem ser claramente mapeados serão retornados como cadeias de caracteres. Para obter mais informações sobre como trabalhar com tipos de dados do campo, consulte [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md). Quando você criar um parâmetro, o tipo de dados deverá ser um dos tipos de dados de definição de relatório suportados. Para obter mais informações sobre como mapear tipos de dados do provedor de dados para um parâmetro de relatório, consulte [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
   
-##  <a name="HowTo"></a> Tópicos de instruções  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Tópicos de instruções  
  Esta seção contém instruções passo a passo para trabalhar com conexões de dados, fontes de dados e conjuntos de dados.  
   
  [Adicionar e verificar uma conexão de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -73,7 +73,7 @@ ms.locfileid: "77081839"
  [Adicionar um filtro a um conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="InThisSection"></a> Nesta seção  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Nesta seção  
  Os tópicos a seguir fornecem informações sobre cada extensão de dados interna.  
   
 |Tópico|Tipo de fonte de dados|  
@@ -90,11 +90,11 @@ ms.locfileid: "77081839"
 |[Tipo de Conexão ODBC &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md)|ODBCODBC|  
 |[Tipo de conexão XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)|XML|  
   
-##  <a name="Related"></a> Seções relacionadas
+##  <a name="related-sections"></a><a name="Related"></a> Seções relacionadas
 
  Estas seções da documentação fornecem informações conceituais detalhadas sobre dados de relatório, bem como informações de procedimentos sobre como definir, personalizar e usar partes de um relatório relacionadas aos dados.  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)|Fornece uma visão geral de como acessar dados de seu relatório.|  
 |[Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|Fornece informações sobre conexões de dados e fontes de dados.|  

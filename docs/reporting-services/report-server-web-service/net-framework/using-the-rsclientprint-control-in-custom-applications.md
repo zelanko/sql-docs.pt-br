@@ -15,10 +15,10 @@ ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f352c393f1386dae1839a76a4fd6e5a2553a54c3
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198551"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usando o controle RSClientPrint em aplicativos personalizados
@@ -63,7 +63,7 @@ ms.locfileid: "79198551"
   
 ### <a name="rsclientprint-properties"></a>Propriedades do RSClientPrint  
   
-|Propriedade|Type|RW|Padrão|Descrição|  
+|Propriedade|Type|RW|Padrão|DESCRIÇÃO|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|RW|configuração de relatório|Obtém ou define a margem esquerda. O valor padrão, caso não seja definido pelo desenvolvedor ou especificado no relatório, é 12,2 milímetros.|  
 |MarginRight|Double|RW|configuração de relatório|Obtém ou define a margem direita. O valor padrão, caso não seja definido pelo desenvolvedor ou especificado no relatório, é 12,2 milímetros.|  
@@ -100,7 +100,7 @@ ms.locfileid: "79198551"
 ### <a name="rsprintclient-support-for-the-print-method"></a>Suporte de RSPrintClient para o método de impressão  
  O objeto **RSClientPrint** dá suporte ao método **Print** usado para iniciar a caixa de diálogo Imprimir. O método **Print** tem os argumentos a seguir.  
   
-|Argumento|E/S|Type|Descrição|  
+|Argumento|E/S|Type|DESCRIÇÃO|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|No|String|Especifica o diretório virtual do servidor de relatório (por exemplo, `https://adventure-works/reportserver`).|  
 |ReportPathParameters|No|String|Especifica o nome completo para o relatório no namespace da pasta do servidor de relatório, incluindo os parâmetros. Os relatórios são recuperados por meio do acesso à URL. Por exemplo:: "/AdventureWorks Sample Reports/Resumo de Vendas do Funcionário&EmpID=1234"|  

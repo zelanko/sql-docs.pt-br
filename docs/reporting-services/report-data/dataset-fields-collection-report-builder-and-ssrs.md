@@ -9,10 +9,10 @@ ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b33041f7debc2ad75268973867c72e073459f1de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77077782"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Coleção de campos de conjuntos de dados (Construtor de Relatórios e SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "77077782"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Fields"></a> Campos e consultas de conjunto de dados  
+##  <a name="dataset-fields-and-queries"></a><a name="Fields"></a> Campos e consultas de conjunto de dados  
  Os campos de conjunto de dados são especificados pelo comando de consulta de conjunto de dados e por quaisquer campos calculados que você definir. A coleção de campos que você vê no relatório depende do tipo do seu conjunto de dados:  
   
 -   **Conjunto de dados compartilhado.** A coleção de campos é a lista de campos para a consulta na definição de conjunto de dados compartilhado, no momento em que você adicionou o conjunto de dados compartilhado diretamente ao relatório ou quando adicionou uma parte de relatório que incluía o conjunto de dados compartilhado. A coleção de campos local não se altera quando a definição de conjunto de dados compartilhado é alterada no servidor de relatório. Para atualizar a coleção de campos local, é necessário atualizar a lista para o conjunto de dados compartilhado local.  
@@ -59,7 +59,7 @@ ms.locfileid: "77077782"
 >  Nem todas as propriedades **Field** podem ser usadas com todas as fontes de dados. As propriedades **Value** e **IsMissing** são definidas para todas as fontes de dados. Haverá suporte para outras propriedades predefinidas (como **Key**, **UniqueName**e **ParentUniqueName** para fontes de dados multidimensionais) apenas se a fonte de dados fornecer essas propriedades. Propriedades personalizadas são suportadas por alguns provedores de dados. Para obter mais informações, consulte os tópicos específicos sobre propriedades de campo estendidas para o tipo de fonte de dados em [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Por exemplo, para uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Propriedades de campos estendidos para um banco de dados do Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
-##  <a name="Defaults"></a> Compreendendo as expressões padrão dos campos  
+##  <a name="understanding-default-expressions-for-fields"></a><a name="Defaults"></a> Compreendendo as expressões padrão dos campos  
  Uma caixa de texto pode ser um item de relatório de caixa de texto no corpo do relatório, ou uma caixa de texto em uma célula em uma região de dados tablix. Quando você vincula um campo a uma caixa de texto, a localização da caixa de texto determina a expressão padrão da referência do campo. No corpo do relatório, uma expressão de valor da caixa de texto deve especificar uma agregação e um conjunto de dados. Se houver apenas um conjunto de dados no relatório, essa expressão padrão será criada para você. Para um campo que representa um valor numérico, a função de agregação padrão será Sum. Para um campo que representa um valor não numérico, a função de agregação padrão será First.  
   
  Em uma região de dados tablix, a expressão de campo padrão depende das associações de linha e grupo da caixa de texto que você adiciona ao campo. A expressão de campo para o campo Sales, quando adicionada a uma caixa de texto na linha de detalhes de uma tabela é `[Sales]`. Se você adicionar o mesmo campo a uma caixa de texto de um cabeçalho de grupo, a expressão padrão é `(Sum[Sales])`, pois o cabeçalho do grupo exibe valores resumidos para o grupo, não valores detalhados. Quando o relatório for executado, o processador de relatório avaliará cada expressão e substituirá o resultado no relatório.  
@@ -67,7 +67,7 @@ ms.locfileid: "77077782"
  Para obter mais informações sobre expressões, consulte [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
   
-##  <a name="DataTypes"></a> Tipos de dados de campo  
+##  <a name="field-data-types"></a><a name="DataTypes"></a> Tipos de dados de campo  
  Quando você cria um conjunto de dados, os tipos de dados dos campos na fonte de dados podem não ser exatamente os tipos de dados usados em um relatório. Os tipos de dados podem passar por uma ou mais camadas de mapeamento. A extensão de processamento de dados ou o provedor de dados pode mapear tipos de dados da fonte de dados para tipos de dados da linguagem CLR. Os tipos de dados retornados pelas extensões de processamento de dados são mapeados para um subconjunto de tipos de dados CLR (common language runtime) do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
  Na fonte de dados, os dados são armazenados em tipos de dados que têm o suporte da fonte de dados. Por exemplo, os dados em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem ser tipos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para os quais há suporte como, por exemplo, **nvarchar** ou **datetime**. Quando você recupera dados de uma fonte de dados, os dados passam por uma extensão de processamento ou um provedor de dados associado ao tipo da fonte de dados. Dependendo da extensão de processamento de dados, os dados podem ser convertidos de tipos de dados usados pela fonte de dados em tipos de dados suportados pela extensão de processamento de dados. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa tipos de dados com suporte pelo CLR (Common Language Runtime) instalado com o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. O provedor de dados mapeia todas as colunas do conjunto de resultados do tipo de dados nativo para um tipo de dados CLR do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
@@ -89,7 +89,7 @@ ms.locfileid: "77077782"
   
      Por exemplo, os tipos de dados que o processador de relatório usa para os tipos de data e hora novos introduzidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] são mostrados na tabela a seguir:  
   
-    |Tipo de dados SQL|Tipo de dados CLR|Descrição|  
+    |Tipo de dados SQL|Tipo de dados CLR|DESCRIÇÃO|  
     |-------------------|-------------------|-----------------|  
     |**Data**|**DateTime**|Somente data|  
     |**Hora**|**TimeSpan**|Somente hora|  
@@ -101,7 +101,7 @@ ms.locfileid: "77077782"
  Para obter mais informações sobre como incluir referências a um campo de conjunto de dados de uma expressão, consulte [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
   
-##  <a name="MissingFields"></a> Detectando campos ausentes em tempo de execução  
+##  <a name="detecting-missing-fields-at-run-time"></a><a name="MissingFields"></a> Detectando campos ausentes em tempo de execução  
  Quando o relatório é processado, o conjunto de resultados de um conjunto de dados pode não conter valores para todas as colunas especificadas, porque elas não existem mais na fonte de dados. É possível usar a propriedade de campo IsMissing para detectar se os valores de um campo foram retornados em tempo de execução. Para obter mais informações, consulte [Referências de coleções de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  
   
   

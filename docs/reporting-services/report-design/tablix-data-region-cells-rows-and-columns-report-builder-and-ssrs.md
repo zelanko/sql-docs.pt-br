@@ -15,10 +15,10 @@ ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252395"
 ---
 # <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>Células, linhas e colunas em uma região de dados Tablix (Construtor de Relatórios) e SSRS
@@ -38,7 +38,7 @@ ms.locfileid: "75252395"
 ### <a name="row-and-column-handles"></a>Identificadores de linha e de coluna  
  Quando você seleciona uma região de dados tablix, gráficos indicadores de linha e de coluna apontam o propósito de cada uma delas. Os identificadores mostram as linhas e as colunas que estão dentro ou fora de um grupo. A tabela a seguir mostra várias exibições de identificadores.  
   
-|ícone|Descrição|  
+|ícone|DESCRIÇÃO|  
 |----------|-----------------|  
 |![Identificador de linha com três linhas paralelas para a linha de detalhes](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Identificador de linha com três linhas paralelas para a linha de detalhes")|Apenas o grupo detalhado na hierarquia do grupo de linhas|  
 |![Identificador de linha com linha de detalhes e um grupo externo](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "Identificador de linha com linha de detalhes e um grupo externo")|Um grupo externo e o grupo detalhado filho|  

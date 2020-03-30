@@ -14,10 +14,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: eb0d82c1693c452462b8bef2e55cd4e41b13689b
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198378"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Criar relações entre tabelas em um diagrama (Visual Database Tools)
@@ -30,7 +30,7 @@ Você pode criar relações entre colunas em tabelas diferentes no Designer de D
   
 2.  Arraste as colunas selecionadas para a tabela relacionada.  
   
-3.  Duas caixas de diálogo são exibidas: **Relação de Chaves Estrangeiras** e **Tabelas e Colunas**, com a última aparecendo no primeiro plano.  
+3.  São exibidas duas caixas de diálogo: **Relação de Chaves Estrangeiras** e **Tabelas e Colunas**sendo a última aparecendo no primeiro plano.  
   
 4.  **Nome da relação** tem um nome fornecido pelo sistema no formato FK_*localtable*\_*foreigntable*. Você pode alterar esse valor.  
   

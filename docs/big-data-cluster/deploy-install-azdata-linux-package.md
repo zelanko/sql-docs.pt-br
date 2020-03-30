@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: ac50d0c20f76e78aaa5016f62cefb8c7cc7f075a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75728577"
 ---
 # <a name="install-azdata-with-apt"></a>Instalar `azdata` com apt
@@ -24,11 +24,11 @@ Este artigo descreve como instalar `azdata` para clusters de Big Data do SQL Ser
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 
-## <a id="linux"></a>Instalar `azdata` para Linux
+## <a name="install-azdata-for-linux"></a><a id="linux"></a>Instalar `azdata` para Linux
 
 O pacote de instalação `azdata` está disponível para o Ubuntu com `apt`.
 
-### <a id="azdata-apt"></a>Instalar `azdata` com apt (Ubuntu)
+### <a name="install-azdata-with-apt-ubuntu"></a><a id="azdata-apt"></a>Instalar `azdata` com apt (Ubuntu)
 
 >[!NOTE]
 >O pacote `azdata` não usa o Python do sistema, em vez disso, ele instala seu próprio interpretador do Python.

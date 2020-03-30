@@ -11,10 +11,10 @@ ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027767"
 ---
 # <a name="programming-with-sqlxml"></a>Programando com SQLXML
@@ -50,14 +50,14 @@ ms.locfileid: "69027767"
   
 |Nome do método|Objeto SQLXML de getter<br /><br /> (pode ser lido)|Objeto SQLXML de setter<br /><br /> (gravável)|  
 |-----------------|-------------------------------------------|-------------------------------------------|  
-|CallableStatement.setSQLXML()|Sem suporte|Com suporte|  
-|CallableStatement.setObject()|Sem suporte|Com suporte|  
-|PreparedStatement.setSQLXML()|Sem suporte|Com suporte|  
-|PreparedStatement.setObject()|Sem suporte|Com suporte|  
-|ResultSet.updateSQLXML()|Sem suporte|Com suporte|  
-|ResultSet.updateObject()|Sem suporte|Com suporte|  
-|ResultSet.getSQLXML()|Com suporte|Sem suporte|  
-|CallableStatement.getSQLXML()|Com suporte|Sem suporte|  
+|CallableStatement.setSQLXML()|Sem suporte|Suportado|  
+|CallableStatement.setObject()|Sem suporte|Suportado|  
+|PreparedStatement.setSQLXML()|Sem suporte|Suportado|  
+|PreparedStatement.setObject()|Sem suporte|Suportado|  
+|ResultSet.updateSQLXML()|Sem suporte|Suportado|  
+|ResultSet.updateObject()|Sem suporte|Suportado|  
+|ResultSet.getSQLXML()|Suportado|Sem suporte|  
+|CallableStatement.getSQLXML()|Suportado|Sem suporte|  
   
  Como mostrado na tabela acima, os métodos SQLXML de setter não funcionarão com os objetos SQLXML que podem ser lidos; da mesma forma, os métodos de getter não funcionarão com os objetos SQLXML que podem ser escritos.  
   

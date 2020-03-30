@@ -15,10 +15,10 @@ ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 264159f4c892cc688b15293c0e4283fc46520720
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080833"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Chaves de criptografia do SSRS – inicializar um servidor de relatório
@@ -26,7 +26,7 @@ ms.locfileid: "77080833"
   
  Em parte, as chaves de criptografia têm como base as informações de perfil do serviço Servidor de Relatório. Se você alterar a identidade de usuário usada para executar o serviço Servidor de Relatório, deverá atualizar as chaves adequadamente. Se você estiver usando a ferramenta Configuração do Reporting Services para alterar a identidade, essa etapa será tratada para você automaticamente.  
   
- Se a inicialização falhar por alguma razão, o servidor de relatório retornará um erro **RSReportServerNotActivated** em resposta a solicitações do usuário e do serviço. Nesse caso, poderá ser necessário solucionar o problema da configuração do sistema ou do servidor. Para obter mais informações, confira [SSRS: solucionar problemas e erros com o Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) no Technet Wiki.  
+ Se a inicialização falhar por alguma razão, o servidor de relatório retornará um erro **RSReportServerNotActivated** em resposta a solicitações do usuário e do serviço. Nesse caso, poderá ser necessário solucionar o problema da configuração do sistema ou do servidor. Para saber mais, veja a [SSRS: solução de problemas e erros com o Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) no TechNet Wiki.  
   
 ## <a name="overview-of-the-initialization-process"></a>Visão geral do processo de inicialização  
  O processo de inicialização cria e armazena uma chave simétrica usada para criptografia. A chave simétrica é criada pelos Serviços de Criptografia do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e subsequentemente usada pelo serviço Servidor de Relatório para criptografar e descriptografar dados. A própria chave simétrica é criptografada com uma chave assimétrica.  

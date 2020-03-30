@@ -9,10 +9,10 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 ms.openlocfilehash: 4d01deaf94e18fcf277e11e4a880f99a70693ead
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75656888"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>Parceiros de alta disponibilidade e recuperação de desastre do SQL Server

@@ -26,10 +26,10 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: acd4bd2641296301449138322e0b4d4e15f7ffb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080653"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Adicionar, alterar ou excluir um mapa ou uma camada do mapa (Construtor de Relatórios e SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "77080653"
   
  A tabela a seguir exibe os ícones da barra de ferramentas do painel **Mapa** .  
   
-|Símbolo|Descrição|Quando usar|  
+|Símbolo|DESCRIÇÃO|Quando usar|  
 |------------|-----------------|-----------------|  
 |![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Assistente de Camada do Mapa|Para adicionar uma camada usando um assistente, clique em **Assistente de nova camada**.|  
 |![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Adicionar Camada|Para adicionar uma camada manualmente, clique em **Adicionar Camada**e clique no tipo de camada do mapa a ser adicionada.|  
@@ -59,23 +59,23 @@ ms.locfileid: "77080653"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddLayer"></a> Para adicionar uma camada com o assistente de camada do mapa  
+##  <a name="to-add-a-layer-from-the-map-layer-wizard"></a><a name="AddLayer"></a> Para adicionar uma camada com o assistente de camada do mapa  
   
 -   Na Faixa de Opções, no menu **Inserir** , clique em **Mapa**e em **Mapa Wizard.** . O assistente o permite a adição de uma camada ao mapa existente. A maioria das páginas de assistente são idênticas entre o assistente de mapa e o assistente de camada do mapa.  
   
      Para obter mais informações, consulte [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
-##  <a name="ChangeLayer"></a> Para alterar opções para uma camada usando o assistente de camada do mapa  
+##  <a name="to-change-options-for-a-layer-by-using-the-map-layer-wizard"></a><a name="ChangeLayer"></a> Para alterar opções para uma camada usando o assistente de camada do mapa  
   
 -   Execute o assistente de camada do mapa. Este assistente permite alterar opções para uma camada que você criou usando o assistente de camada do mapa. No painel Mapa, clique com o botão direito do mouse na camada e, na barra de ferramentas, clique no botão do assistente de camada (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
      Para obter mais informações, consulte [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
-##  <a name="AddVectorLayer"></a> Para adicionar uma camada de pontos, linhas ou polígonos da barra de ferramentas do painel Mapa  
+##  <a name="to-add-a-point-line-or-polygon-layer-from-the-map-pane-toolbar"></a><a name="AddVectorLayer"></a> Para adicionar uma camada de pontos, linhas ou polígonos da barra de ferramentas do painel Mapa  
   
 1.  Clique no mapa até que o painel Mapa apareça.  
   
-2.  Na barra de ferramentas, clique no botão **Adicionar Camada** e, na lista suspensa, clique no tipo de camada que você deseja adicionar: **ponto**, **linha** ou **polígono**.  
+2.  Na barra de ferramentas, clique no botão **Adicionar Camada** e, na lista suspensa, clique no tipo de camada que você deseja adicionar: **Ponto**, **Linha**ou **Polígono**.  
   
     > [!NOTE]  
     >  Embora seja possível adicionar uma camada do mapa e configurá-la manualmente, é recomendável usar o assistente de camada do mapa para adicionar novas camadas. Para iniciar o assistente por meio da barra de ferramentas do painel Mapa, clique no botão do assistente de camada (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
@@ -100,7 +100,7 @@ ms.locfileid: "77080653"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="FilterAnalyticalData"></a> Para filtrar dados analíticos para a camada  
+##  <a name="to-filter-analytical-data-for-the-layer"></a><a name="FilterAnalyticalData"></a> Para filtrar dados analíticos para a camada  
   
 1.  Clique no mapa até que o painel Mapa apareça.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "77080653"
   
 4.  Defina uma equação de filtro para limitar os dados analíticos que são usados na exibição de mapa. Para obter mais informações, consulte [Exemplos de equações de filtro &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-##  <a name="PointProperties"></a> Para controlar propriedades de ponto para uma camada de ponto ou para pontos centrais de polígono  
+##  <a name="to-control-point-properties-for-a-point-layer-or-for-polygon-center-points"></a><a name="PointProperties"></a> Para controlar propriedades de ponto para uma camada de ponto ou para pontos centrais de polígono  
   
 1.  Selecione **Geral** na caixa de diálogo **Propriedades do Ponto do Mapa** para alterar as opções de rótulo, dica de ferramenta e tipo de marcador dos seguintes elementos do mapa:  
   
@@ -118,7 +118,7 @@ ms.locfileid: "77080653"
   
     -   O ponto central de todos os polígonos dinâmicos ou inseridos em uma camada de polígono. As regras de cores, as regras de tamanho e as regras de tipo de marcador para pontos centrais substituem essas opções. Para substituir as opções de um ponto central específico, use a página [Caixa de diálogo Mapear Propriedades de Ponto Inserido, Marcador](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) .  
   
-##  <a name="Embedded"></a> Para especificar dados inseridos como uma fonte de dados espaciais  
+##  <a name="to-specify-embedded-data-as-a-source-of-spatial-data"></a><a name="Embedded"></a> Para especificar dados inseridos como uma fonte de dados espaciais  
   
 1.  Clique no mapa até que o painel Mapa apareça.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "77080653"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ESRI"></a> Para especificar um Arquivo de Forma ESRI como uma fonte de dados espaciais  
+##  <a name="to-specify-an-esri-shapefile-as-a-source-of-spatial-data"></a><a name="ESRI"></a> Para especificar um Arquivo de Forma ESRI como uma fonte de dados espaciais  
   
 1.  Clique no mapa até que o painel Mapa apareça.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "77080653"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="DatasetField"></a> Para especificar um campo de conjunto de dados de relatório como uma fonte de dados espaciais  
+##  <a name="to-specify-a-report-dataset-field-as-a-source-of-spatial-data"></a><a name="DatasetField"></a> Para especificar um campo de conjunto de dados de relatório como uma fonte de dados espaciais  
   
 1.  Clique no mapa até que o painel Mapa apareça.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "77080653"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TileLayer"></a> Para adicionar uma camada de peça  
+##  <a name="to-add-a-tile-layer"></a><a name="TileLayer"></a> Para adicionar uma camada de peça  
   
 1.  Clique no mapa até que o painel Mapa apareça.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "77080653"
     > [!NOTE]  
     >  Também é possível adicionar uma camada de peça quando você adiciona uma camada de polígonos, linhas ou pontos no assistente de Mapa ou de Camada do Mapa. Na página **Escolher as opções de dados espaciais e de exibição do mapa** , selecione a opção **Adicionar um plano de fundo do Bing Maps a esta exibição do mapa**.  
   
-##  <a name="DrawingOrder"></a> Para alterar a ordem de desenho de uma camada  
+##  <a name="to-change-the-drawing-order-of-a-layer"></a><a name="DrawingOrder"></a> Para alterar a ordem de desenho de uma camada  
   
 1.  Clique no mapa até que o painel Mapa apareça.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "77080653"
   
 3.  Na barra de ferramentas do painel Mapa, clique na seta para cima ou para baixo para alterar a ordem de desenho de cada camada.  
   
-##  <a name="Transparency"></a> Para alterar a transparência de um polígono, linha ou camada de ponto  
+##  <a name="to-change-the-transparency-of-a-polygon-line-or-point-layer"></a><a name="Transparency"></a> Para alterar a transparência de um polígono, linha ou camada de ponto  
   
 1.  Clique no mapa até que o painel Mapa apareça.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "77080653"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TileTransparency"></a> Para alterar a transparência de uma camada de peça  
+##  <a name="to-change-the-transparency-of-a-tile-layer"></a><a name="TileTransparency"></a> Para alterar a transparência de uma camada de peça  
   
 1.  Clique no mapa até que o painel Mapa apareça.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "77080653"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Secure"></a> Para especificar uma conexão segura para uma camada de peça  
+##  <a name="to-specify-a-secure-connection-for-a-tile-layer"></a><a name="Secure"></a> Para especificar uma conexão segura para uma camada de peça  
   
 1.  Clique no mapa até que o painel Mapa apareça.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "77080653"
   
  A conexão para o serviço Web Bing Maps usará o serviço HTTP SSL para recuperar peças de mapas para essa camada.  
   
-##  <a name="Language"></a> Para especificar o idioma para rótulos de peças  
+##  <a name="to-specify-the-language-for-tile-labels"></a><a name="Language"></a> Para especificar o idioma para rótulos de peças  
   
 1.  Por padrão, para estilos de peças que exibem rótulos, o idioma é determinado a partir da localidade padrão do Construtor de Relatórios. Você pode personalizar a configuração de idioma para rótulos de peças das maneiras a seguir.  
   
@@ -232,7 +232,7 @@ ms.locfileid: "77080653"
   
      A ordem de precedência para configurar o idioma do rótulo do ladrilho é: propriedade do relatório Language, localidade padrão para o Construtor de Relatórios e propriedade de mapa TileLanguage.  
   
-##  <a name="ConditionalHide"></a> Para ocultar uma camada condicionalmente com base no nível de zoom do visor  
+##  <a name="to-conditionally-hide-a-layer-based-on-viewport-zoom-level"></a><a name="ConditionalHide"></a> Para ocultar uma camada condicionalmente com base no nível de zoom do visor  
   
 1.  Defina as opções de **Visibilidade** para controlar a exibição de uma camada do mapa.  
   
@@ -250,6 +250,6 @@ ms.locfileid: "77080653"
   
 ## <a name="see-also"></a>Consulte Também  
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Solucionar problemas de relatórios: Mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solução de problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

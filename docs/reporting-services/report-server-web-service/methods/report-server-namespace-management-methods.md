@@ -1,5 +1,6 @@
 ---
 title: Métodos de gerenciamento de namespace do Servidor de Relatório | Microsoft Docs
+description: O serviço Web de Gerenciamento do Servidor de Relatório contém métodos que podem ser usados para gerenciar relatórios, pastas e recursos no banco de dados do servidor de relatório.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7639cd7ce7cd33f59fbc65116264a8b887879b77
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1ed5267303ad37d76b571c676b2010e8f04c8a09
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "72278290"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509798"
 ---
 # <a name="report-server-namespace-management-methods"></a>Métodos de gerenciamento de namespace do Servidor de Relatório
   O serviço Web de Gerenciamento do Servidor de Relatório contém métodos que podem ser usados para gerenciar relatórios, pastas e recursos no banco de dados do servidor de relatório.  

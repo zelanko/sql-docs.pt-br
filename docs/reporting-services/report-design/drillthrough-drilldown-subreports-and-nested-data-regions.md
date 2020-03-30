@@ -9,10 +9,10 @@ ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578773"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas
@@ -33,7 +33,7 @@ ms.locfileid: "65578773"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SummaryCharacteristics"></a> Resumo das características  
+##  <a name="summary-of-characteristics"></a><a name="SummaryCharacteristics"></a> Resumo das características  
  Esta tabela resume essas características diferentes. Os detalhes estarão em seções separadas posteriormente neste tópico. A busca detalhada não está incluída nessas comparações porque é possível aplicar a ação de exibição e ocultação a qualquer item de relatório.  
   
 |Característica|Sub-relatório|Detalhamento|aninhado|  
@@ -48,36 +48,36 @@ ms.locfileid: "65578773"
 |São exibidos|No relatório principal|Em um relatório diferente|No relatório principal|  
   
   
-##  <a name="Details"></a> Detalhes das características  
+##  <a name="details-of-characteristics"></a><a name="Details"></a> Detalhes das características  
   
-###  <a name="Datasets"></a> Conjuntos de dados usados  
+###  <a name="datasets-they-use"></a><a name="Datasets"></a> Conjuntos de dados usados  
  Os sub-relatórios e os relatórios detalhados podem usar o mesmo conjunto de dados no relatório principal ou usar um diferente. As regiões de dados aninhadas usam o mesmo conjunto de dados.  
   
-###  <a name="RetrieveData"></a> Recuperando dados  
+###  <a name="retrieving-data"></a><a name="RetrieveData"></a> Recuperando dados  
  Os sub-relatórios e as regiões de dados aninhadas recuperam dados ao mesmo tempo que o relatório principal. Os relatórios detalhados, não. Cada relatório detalhado recupera dados quando um usuário clica em cada link. Isso será significativo, se os dados do relatório principal e do relatório subordinado precisarem ser recuperados ao mesmo tempo.  
   
-###  <a name="ProcessRender"></a> Processamento e renderização  
+###  <a name="processing-and-rendering"></a><a name="ProcessRender"></a> Processamento e renderização  
  Um sub-relatório é processado como parte do relatório principal. Por exemplo, se um sub-relatório com informações sobre os detalhes do pedido for adicionado a uma célula de tabela na linha de detalhes, o sub-relatório será processado uma vez por linha e será renderizado como parte do relatório principal. Um relatório detalhado só é processado e renderizado quando o usuário clica no link de detalhamento no relatório de resumo principal.  
   
-###  <a name="Performance"></a> Desempenho  
+###  <a name="performance"></a><a name="Performance"></a> Desempenho  
  Ao decidir qual usar, considere usar uma região de dados, e não um sub-relatório, especialmente se ele não for usado por vários relatórios. Como o servidor de relatório processa cada instância de um sub-relatório como um relatório separado, pode haver impacto no desempenho. As regiões de dados fornecem muito da funcionalidade e flexibilidade de sub-relatórios, mas com melhor desempenho. Os relatórios detalhados também têm desempenho melhor que os sub-relatórios, porque eles não recuperam todos os dados ao mesmo tempo que o relatório principal.  
   
-###  <a name="Parameters"></a> Uso de parâmetros  
+###  <a name="use-of-parameters"></a><a name="Parameters"></a> Uso de parâmetros  
  Normalmente, os relatórios detalhados e os sub-relatórios têm parâmetros de relatório que especificam quais dados de relatório devem ser exibidos. Por exemplo, se você clicar em um número de pedido de venda em um relatório principal, um relatório detalhado será aberto, aceitando o número de pedido de venda como um parâmetro e exibindo todos os dados desse pedido. Ao criar o link no relatório principal, você especifica valores a serem passados como parâmetros ao relatório detalhado.  
   
  Para criar um relatório detalhado ou sub-relatório, você deve criar o relatório detalhado de destino ou o sub-relatório primeiro e, em seguida, criar uma ação de detalhamento ou adicionar a referência ao relatório principal.  
   
-###  <a name="Reusability"></a> Capacidade de reutilização  
+###  <a name="reusability"></a><a name="Reusability"></a> Capacidade de reutilização  
  Os sub-relatórios e os relatórios detalhados são relatórios separados. Dessa forma, eles podem ser usados em vários relatórios ou exibidos como relatórios autônomos. As regiões de dados aninhadas não são reutilizávéis. Não é possível salvá-los como partes de relatório porque eles são aninhados em uma região de dados. É possível salvar a região de dados que os contém como uma parte de relatório, mas não a região de dados aninhada.  
   
-###  <a name="Location"></a> Local  
+###  <a name="location"></a><a name="Location"></a> Local  
  Como os sub-relatórios e os relatórios detalhados são separados, eles são armazenados externamente ao relatório principal. Os sub-relatórios podem estar no mesmo servidor de relatório ou em um diferente, mas os relatórios detalhados devem estar no mesmo servidor de relatório. As regiões de dados aninhadas fazem parte do relatório principal.  
   
-###  <a name="Display"></a> Exibição  
+###  <a name="display"></a><a name="Display"></a> Exibição  
  Os sub-relatórios e as regiões de dados aninhadas são exibidos no relatório principal. Os relatórios detalhados são exibidos sozinhos.  
   
   
-##  <a name="InThisSection"></a> Nesta seção  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Nesta seção  
  [Relatórios de detalhamento &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
  Explica relatórios abertos quando um usuário clica em um link em um relatório principal.  
   

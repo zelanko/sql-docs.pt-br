@@ -9,10 +9,10 @@ ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5217684ab98bd70a996f0a8a0bb50170daf57bf0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573873"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Solucionar problemas de relatório do Reporting Services
@@ -34,7 +34,7 @@ Quando exibe um relatório publicado no Gerenciador de Relatórios, pode ver uma
   
 Para exibir a pilha de chamadas, faça logon no servidor de relatório usando as credenciais de administrador local, clique com o botão direito do mouse na página Gerenciador de Relatórios e clique em **Exibir origem**. A pilha de chamadas fornece contexto detalhado para a mensagem de erro.  
   
-## <a name="use-includessmanstudiofullincludesssmanstudiofullmd-to-verify-queries-and-credentials"></a>Usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] para Verificar Consultas e Credenciais  
+## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>Usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] para Verificar Consultas e Credenciais  
 Use essa o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] para validar consultas complexas antes de incluí-las no relatório.   
   
 Para obter mais informações, consulte [Editor de consultas do Mecanismo de Banco de Dados](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) e [Gerenciar Objetos Usando o Pesquisador de Objetos](~/ssms/object/manage-objects-by-using-object-explorer.md).  

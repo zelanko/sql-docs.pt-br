@@ -13,10 +13,10 @@ ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 06cffe614eaa55713fed862dc03f7c81da7bc287
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193767"
 ---
 # <a name="deploying-a-delivery-extension"></a>Implantando uma extensão de entrega
@@ -31,7 +31,7 @@ ms.locfileid: "63193767"
   
  A tabela a seguir descreve os atributos do elemento **Extension** em extensões de entrega.  
   
-|Atributo|Descrição|  
+|Atributo|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**Nome**|Um nome exclusivo para a extensão (por exemplo "Email do Servidor de Relatório" para a extensão de entrega de email ou "FileShare do Servidor de Relatório" para a extensão de entrega do compartilhamento de arquivo). O comprimento máximo do atributo **Name** é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas dento do elemento **Extension** de um arquivo de configuração. Se um nome duplicado estiver presente, o servidor de relatório retornará um erro.|  
 |**Tipo**|Uma lista separada por vírgulas que inclui o namespace totalmente qualificado junto com o nome do assembly.|  
