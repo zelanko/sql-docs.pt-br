@@ -10,10 +10,10 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013756"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Solução de problemas: o grupo de disponibilidade excedeu o RTO
@@ -28,7 +28,7 @@ ms.locfileid: "68013756"
   
 2.  [Thread refazer atrasa devido à contenção de recursos](#BKMK_CONTENTION)  
   
-##  <a name="BKMK_REDOBLOCK"></a> Carga de trabalho de relatório bloqueia a execução do thread refazer  
+##  <a name="reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> Carga de trabalho de relatório bloqueia a execução do thread refazer  
  O thread refazer na réplica secundária é impedido de fazer alterações de DDL (linguagem de definição de dados) por uma consulta somente leitura de longa execução.  
   
 ### <a name="explanation"></a>Explicação  
@@ -44,7 +44,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  Você pode permitir que a carga de trabalho de relatório seja concluída, momento em que o thread refazer é desbloqueado, ou pode desbloquear imediatamente o thread refazer executando o comando [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) na ID de sessão que está bloqueando.  
   
-##  <a name="BKMK_CONTENTION"></a> Thread refazer atrasa devido à contenção de recursos  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_CONTENTION"></a> Thread refazer atrasa devido à contenção de recursos  
  Uma grande carga de trabalho de relatório na réplica secundária reduziu o desempenho da réplica secundária, e o thread refazer atrasou.  
   
 ### <a name="explanation"></a>Explicação  

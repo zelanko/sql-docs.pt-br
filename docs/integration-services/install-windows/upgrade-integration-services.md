@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68262789"
 ---
 # <a name="upgrade-integration-services"></a>Atualização do Integration Services
@@ -69,7 +69,7 @@ ms.locfileid: "68262789"
   
  Quando atualizar, você poderá atualizar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e o [!INCLUDE[ssDE](../../includes/ssde-md.md)], ou apenas o [!INCLUDE[ssDE](../../includes/ssde-md.md)]ou somente o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se você atualizar somente o [!INCLUDE[ssDE](../../includes/ssde-md.md)], o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] ou posterior continuará funcionando, mas você não terá a funcionalidade do [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]. Se você atualizar apenas o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] funcionará por completo, mas poderá apenas armazenar pacotes no sistema de arquivos, a não ser que a instância do [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] esteja disponível em outro computador.  
   
-## <a name="upgrading-both-integration-services-and-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Atualizando o Integration Services e o Mecanismo de Banco de Dados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-both-integration-services-and-the-database-engine-to-sscurrent"></a>Atualizando o Integration Services e o Mecanismo de Banco de Dados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Esta seção descreve os efeitos da execução de uma atualização que tem os seguintes critérios:  
   
 -   Você atualiza o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -129,7 +129,7 @@ ms.locfileid: "68262789"
   
 -   Por padrão, em uma instalação de atualização, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] está configurado para registrar eventos relacionados à execução dos pacotes para o log de eventos do Aplicativo. Essa configuração pode gerar muitas entradas de log de evento quando você usar o recurso Coletor de Dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Os eventos que são registrados incluem EventID 12288, "Pacote iniciado" e EventID 12289, "Pacote concluído com êxito". Para parar o registro desses dois eventos para o log de eventos do Aplicativo, abra o Registro para edição. Em seguida, no registro, localize o nó HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS e altere o valor DWORD da configuração LogPackageExecutionToEventLog de 1 para 0.  
   
-## <a name="upgrading-only-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Atualizando somente o Mecanismo de Banco de Dados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-only-the-database-engine-to-sscurrent"></a>Atualizando somente o Mecanismo de Banco de Dados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Esta seção descreve os efeitos da execução de uma atualização que tem os seguintes critérios:  
   
 -   Você atualiza somente uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Isto é, a instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] agora é uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], mas a instância do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e as ferramentas de cliente são do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  

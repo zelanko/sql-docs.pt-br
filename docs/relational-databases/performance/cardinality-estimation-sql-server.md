@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67946996"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimativa de cardinalidade (SQL Server)
@@ -59,19 +59,19 @@ Você tem técnicas para identificar uma consulta que tem um desempenho mais len
 
 Em 1998, uma importante atualização da CE fez parte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, para o qual o nível de compatibilidade era 70. Essa versão do modelo da CE é definida em quatro suposições básicas:
 
--  **Independência:** as distribuições de dados em diferentes colunas são consideradas independentes entre si, a menos que haja informações de correlação disponíveis e elas sejam utilizáveis.
+-  **Independência:** as distribuições de dados em diferentes colunas devem ser independentes entre si, a menos que as informações de correlação estejam disponíveis e sejam utilizáveis.
 -  **Uniformidade:** diferentes valores são espaçados uniformemente e todos eles têm a mesma frequência. Mais precisamente, dentro de cada etapa de [histograma](../../relational-databases/statistics/statistics.md#histogram), diferentes valores são distribuídos uniformemente e cada valor tem a mesma frequência. 
--  **Independência (simples):** os usuários consultam dados existentes. Por exemplo, para uma junção de igualdade entre duas tabelas, considere a seletividade de predicados<sup>1</sup> em cada histograma de entrada antes de ingressar histogramas para estimar a seletividade da junção. 
+-  **Confinamento (simples):** os usuários consultam dados existente. Por exemplo, para uma junção de igualdade entre duas tabelas, considere a seletividade de predicados<sup>1</sup> em cada histograma de entrada antes de ingressar histogramas para estimar a seletividade da junção. 
 -  **Inclusão:** para filtrar predicados em que `Column = Constant`, supõe-se que a constante realmente exista para a coluna associada. Se uma etapa do histograma correspondente não estiver vazia, presume-se que um dos valores diferentes da etapa corresponda ao valor do predicado.
 
   <sup>1</sup> Contagem de linhas que satisfaz o predicado.
 
 Atualizações posteriores iniciadas com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], significando níveis de compatibilidade 120 e acima. As atualizações da CE dos níveis 120 e acima incorporam suposições e algoritmos atualizados que funcionam bem em data warehousing moderno e em cargas de trabalho OLTP. De suposições da CE 70, as seguintes suposições de modelo foram alteradas a partir da CE 120:
 
--  **Independência** torna-se **Correlação:** a combinação dos diferentes valores de coluna não é necessariamente independente. Isso poderia parecer mais com uma consulta de dados da vida real.
--  **Independência simples** torna-se **Independência de base:** Os usuários podem consultar dados que não existem. Por exemplo, para que haja uma junção de igualdade entre duas tabelas, usamos histogramas de tabelas básicos para calcular a seletividade da junção e, sem seguida, consideramos a seletividade de predicados.
+-  A **independência** se torna **correlação:** a combinação dos diferentes valores de coluna não é necessariamente independente. Isso poderia parecer mais com uma consulta de dados da vida real.
+-  O **confinamento simples** torna-se **confinamento básico:** os usuários podem consultar dados que não existem. Por exemplo, para que haja uma junção de igualdade entre duas tabelas, usamos histogramas de tabelas básicos para calcular a seletividade da junção e, sem seguida, consideramos a seletividade de predicados.
   
-**Nível de compatibilidade:** é possível garantir que o banco de dados esteja em determinado nível usando o seguinte código do [!INCLUDE[tsql](../../includes/tsql-md.md)] para [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+**Nível de compatibilidade:** é possível garantir que seu banco de dados esteja em determinado nível usando o seguinte código do [!INCLUDE[tsql](../../includes/tsql-md.md)] para [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -89,7 +89,7 @@ GO
   
 Para um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definido no nível de compatibilidade 120 ou superior, a ativação do [sinalizador de rastreamento 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) força o sistema a usar a CE versão 70.  
   
-**CE herdada:** para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definido no nível de compatibilidade 120 e superior, a CE versão 70 pode ser ativada usando o nível do banco de dados com [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+**CE herdada:** para um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definido no nível de compatibilidade 120 e acima, a CE versão 70 pode ser ativada usando o nível do banco de dados usando [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION 
@@ -111,7 +111,7 @@ WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
-**Repositório de Consultas:** Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o Repositório de Consultas é uma ferramenta útil para examinar o desempenho das consultas. No [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], no **Pesquisador de Objetos**, no nó do seu banco de dados, um nó **Repositório de Consultas** é exibido quando o repositório de consultas está habilitado.  
+**Repositório de consultas:** a começar no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o repositório de consultas é uma ferramenta útil para examinar o desempenho de suas consultas. No [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], no **Pesquisador de Objetos**, no nó do seu banco de dados, um nó **Repositório de Consultas** é exibido quando o repositório de consultas está habilitado.  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  

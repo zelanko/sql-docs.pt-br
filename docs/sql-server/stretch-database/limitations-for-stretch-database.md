@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843789"
 ---
 # <a name="limitations-for-stretch-database"></a>Limitações para o Stretch Database
@@ -26,7 +26,7 @@ ms.locfileid: "73843789"
 
   Aprenda sobre as limitações para tabelas habilitadas para Stretch e sobre as limitações que atualmente impedem que você habilite o Stretch para uma tabela.  
   
-##  <a name="Caveats"></a> Limitações para tabelas habilitadas para o Stretch  
+##  <a name="limitations-for-stretch-enabled-tables"></a><a name="Caveats"></a> Limitações para tabelas habilitadas para o Stretch  
   
 As tabelas habilitadas para o Stretch têm as seguintes limitações.  
   
@@ -43,7 +43,7 @@ As tabelas habilitadas para o Stretch têm as seguintes limitações.
   
 -   Filtros em índices [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não são propagados para a tabela remota.  
   
-##  <a name="Limitations"></a> Limitações que atualmente impedem que você habilite o Stretch para uma tabela  
+##  <a name="limitations-that-currently-prevent-you-from-enabling-stretch-for-a-table"></a><a name="Limitations"></a> Limitações que atualmente impedem que você habilite o Stretch para uma tabela  
    
  Os itens a seguir atualmente impedem que você habilite o Stretch para uma tabela.  
   

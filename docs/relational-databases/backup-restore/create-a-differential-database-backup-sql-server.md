@@ -16,10 +16,10 @@ ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bf48a304517eee91ff16c02dab72abb4790e6b0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254068"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>Criar um backup diferencial de banco de dados (SQL Server)
@@ -44,28 +44,28 @@ ms.locfileid: "75254068"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   A instrução BACKUP não é permitida em uma transação explícita ou implícita.  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
 -   A criação de um backup diferencial de banco de dados exige um backup completo de banco de dados anterior. Se seu banco de dados nunca tiver sido salvo, faça um backup completo antes de criar qualquer backup diferencial. Para obter mais informações, veja [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Como os backups diferenciais aumentam em tamanho, a restauração de um backup diferencial aumentará de forma significativa o tempo necessário para restaurar um banco de dados. Recomendamos que você use um backup completo novo em intervalos definidos para estabelecer uma nova base diferencial para os dados. Por exemplo, você poderia usar um backup completo semanal de todo o banco de dados (isto é, um backup completo do banco de dados) seguido de uma série regular de backups diferenciais do banco de dados durante a semana.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Verifique suas permissões primeiro!  
+####  <a name="check-your-permissions-first"></a><a name="Permissions"></a> Verifique suas permissões primeiro!  
  As permissões BACKUP DATABASE e BACKUP LOG usam como padrão os membros da função de servidor fixa **sysadmin** e as funções de banco de dados fixas **db_owner** e **db_backupoperator** .  
   
  Os problemas de propriedade e permissão no arquivo físico do dispositivo de backup vão interferir em uma operação de backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisa ser capaz de ler e gravar no dispositivo; a conta sob a qual o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa deve ter permissões de gravação. No entanto, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que adiciona uma entrada para um dispositivo de backup nas tabelas do sistema, **não** verifica permissões de acesso a arquivos. Os problemas de permissões no arquivo físico do dispositivo de backup não serão óbvios até o recurso físico ser acessado quando você tentar fazer backup ou restaurar.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
+##  <a name="sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio  
   
 #### <a name="create-a-differential-database-backup"></a>Criar um backup diferencial de banco de dados  
 
@@ -136,7 +136,7 @@ ms.locfileid: "75254068"
     > [!NOTE]  
     >  Como alternativa, é possível usar o Assistente para Plano de Manutenção para criar backups de banco de dados diferenciais.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL  
   
 #### <a name="create-a-differential-database-backup"></a>Criar um backup diferencial de banco de dados  
   
@@ -152,7 +152,7 @@ ms.locfileid: "75254068"
   
      BACKUP DATABASE *database_name* TO <backup_device> WITH DIFFERENTIAL  
   
-###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  Este exemplo cria um backup completo e diferencial de banco de dados para o banco de dados `MyAdvWorks` .  
   
 ```sql  

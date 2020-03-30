@@ -15,22 +15,22 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 70798b0e967d62b51879cc694c8eb43363d364c6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67912953"
 ---
 # <a name="semantic-search-sql-server"></a>Pesquisa semântica (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 A Pesquisa Semântica Estatística fornece uma profunda compreensão de documentos não estruturados armazenados em bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extraindo e indexando *frases-chave*estatisticamente relevantes. Portanto, ele usa essas frases-chave para identificar e indexar *documentos semelhantes ou relacionados*.  
   
-##  <a name="whatcanido"></a> O que é possível fazer com a pesquisa semântica?  
+##  <a name="what-can-you-do-with-semantic-search"></a><a name="whatcanido"></a> O que é possível fazer com a pesquisa semântica?  
  A pesquisa semântica tem como base o recurso de pesquisa de texto completo existente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas habilita novos cenários que ampliam as pesquisas de palavra-chave. Enquanto a pesquisa de texto completo permite que você consulte as *palavras* em um documento, a pesquisa semântica permite a consulta do *significado* do documento. Agora, as soluções possíveis incluem a extração automática de marcas, a descoberta de conteúdo relacionado e a navegação hierárquica por conteúdo semelhante. Por exemplo, você pode consultar o índice de frases-chave para criar a taxonomia para uma organização ou para um corpo de documentos. Ou, você pode consultar o índice de similaridade do documento para identificar os currículos que correspondem a uma descrição do trabalho.  
   
  Os exemplos a seguir demonstram os recursos da Pesquisa Semântica. Ao mesmo tempo, esses exemplos demonstram as três funções de conjunto de linhas do Transact-SQL usadas para consultar os índices de semânticos e recuperar os resultados como dados estruturados.  
   
-###  <a name="find1"></a> Localizar as frases-chave em um documento  
+###  <a name="find-the-key-phrases-in-a-document"></a><a name="find1"></a> Localizar as frases-chave em um documento  
  A consulta a seguir obtém as frases-chave que foram identificadas no documento de exemplo. Apresenta os resultados em ordem decrescente pela contagem que classifica a significância estatística de cada frase-chave.
  
  Essa consulta chama a função [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md).  
@@ -48,7 +48,7 @@ SELECT @Title AS Title, keyphrase, score
   
 ```  
   
-###  <a name="find2"></a> Find similar or related documents  
+###  <a name="find-similar-or-related-documents"></a><a name="find2"></a> Find similar or related documents  
  A consulta a seguir obtém os documentos que foram identificados como semelhantes ou relacionados ao documento de exemplo. Apresenta os resultados em ordem decrescente pela pontuação que classifica a semelhança dos dois documentos.
  
  Essa consulta chama a função [semanticsimilaritytable](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md).  
@@ -68,7 +68,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> Localizar as frases-chave que tornam documentos semelhantes ou relacionados  
+###  <a name="find-the-key-phrases-that-make-documents-similar-or-related"></a><a name="find3"></a> Localizar as frases-chave que tornam documentos semelhantes ou relacionados  
  A consulta a seguir obtém as frases-chave que tornam os dois documentos de exemplo semelhantes ou relacionados um ao outro. Apresenta os resultados em ordem decrescente pela contagem que classifica o peso de cada frase-chave.
  
  Essa consulta chama a função [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md).  
@@ -87,14 +87,14 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
   
 ```  
   
-##  <a name="store"></a> Armazenar seus documentos no SQL Server  
+##  <a name="store-your-documents-in-sql-server"></a><a name="store"></a> Armazenar seus documentos no SQL Server  
  Antes de você poder indexar documentos com Pesquisa Semântica, é preciso armazenar os documentos em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  O recurso FileTable no SQL Server transforma arquivos e documentos não estruturados em objetos de primeira classe do banco de dados relacional. Como resultado, os desenvolvedores de banco de dados podem manipular documentos junto com dados estruturados em operações baseadas em conjuntos Transact-SQL.  
   
  Para obter mais informações sobre o recurso FileTable, veja [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md). Para obter informações sobre o recurso FILESTREAM, que é outra opção para armazenar documentos no banco de dados, veja [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
-##  <a name="reltasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Related tasks  
  [Instalar e configurar a pesquisa semântica](../../relational-databases/search/install-and-configure-semantic-search.md)  
  Descreve os pré-requisitos para a pesquisa semântica estatística e como instalá-los ou verificá-los.  
   
@@ -110,7 +110,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  [Gerenciar e monitorar a pesquisa semântica](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
  Descreve o processo de indexação semântica e as tarefas relacionadas a monitoramento e gerenciamento dos índices.  
   
-##  <a name="relcontent"></a> Related content  
+##  <a name="related-content"></a><a name="relcontent"></a> Related content  
  [DDL, funções, procedimentos armazenados e exibições de pesquisa semântica](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)  
  Lista as instruções Transact-SQL e os objetos de banco de dados do SQL Server adicionados ou alterados para oferecer suporte à pesquisa semântica estatística.  
   

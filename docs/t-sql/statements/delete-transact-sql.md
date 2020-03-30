@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75548279"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
@@ -226,7 +226,7 @@ DELETE
 |[Excluindo linhas de uma tabela remota](#RemoteTables)|Servidor vinculado • Função de conjunto de linhas OPENQUERY • Função de conjunto de linhas OPENDATASOURCE|  
 |[Capturando os resultados da instrução DELETE](#CaptureResults)|cláusula OUTPUT|  
   
-###  <a name="BasicSyntax"></a> Sintaxe básica  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Sintaxe básica  
  Os exemplos nesta seção demonstram a funcionalidade básica da instrução DELETE usando a sintaxe mínima necessária.  
   
 #### <a name="a-using-delete-with-no-where-clause"></a>a. Usando DELETE sem a cláusula WHERE  
@@ -237,7 +237,7 @@ DELETE FROM Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-###  <a name="LimitRows"></a> Limitando as linhas excluídas  
+###  <a name="limiting-the-rows-deleted"></a><a name="LimitRows"></a> Limitando as linhas excluídas  
  Exemplos nesta seção demonstram como limitar o número de linhas que serão excluídas.  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Usando a cláusula WHERE para excluir um conjunto de linhas  
@@ -335,7 +335,7 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> Excluindo linhas de uma tabela remota  
+###  <a name="deleting-rows-from-a-remote-table"></a><a name="RemoteTables"></a> Excluindo linhas de uma tabela remota  
  Os exemplos nesta seção demonstram como excluir linhas de uma tabela de remota usando um [servidor vinculado](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ou uma [função de conjunto de linhas](../../t-sql/functions/rowset-functions-transact-sql.md) para referenciar a tabela remota. Uma tabela remota existe em um servidor diferente ou em uma instância do SQL Server.  
   
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
@@ -386,7 +386,7 @@ DELETE FROM OPENDATASOURCE('SQLNCLI',
 WHERE DepartmentID = 17;'  
 ```  
   
-###  <a name="CaptureResults"></a> Capturando os resultados da instrução DELETE  
+###  <a name="capturing-the-results-of-the-delete-statement"></a><a name="CaptureResults"></a> Capturando os resultados da instrução DELETE  
   
 #### <a name="i-using-delete-with-the-output-clause"></a>I. Usando DELETE com a cláusula OUTPUT  
  O exemplo a seguir mostra como salvar os resultados de uma instrução `DELETE` em uma variável de tabela no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -431,7 +431,7 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="k-delete-all-rows-from-a-table"></a>K. Excluir todas as linhas de uma tabela  
  O exemplo a seguir exclui todas as linhas de uma tabela `Table1` porque uma cláusula WHERE não é usada para limitar o número de linhas excluídas.  

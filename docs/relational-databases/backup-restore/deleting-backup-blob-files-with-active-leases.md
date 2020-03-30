@@ -11,10 +11,10 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908942"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Excluir arquivos de blob de backup com concessões ativas
@@ -42,7 +42,7 @@ As etapas a seguir descrevem como efetuar a limpeza após uma atividade de resta
   
 1. **Excluir o Blob:** para excluir um blob com uma concessão ativa, primeiro você deve interromper a concessão.  
 
-###  <a name="Code_Example"></a> Exemplo de script do PowerShell  
+###  <a name="powershell-script-example"></a><a name="Code_Example"></a> Exemplo de script do PowerShell  
   
 > [!IMPORTANT]
 > Se você estiver executando o PowerShell 2.0, você poderá ter problemas ao carregar o assembly do Microsoft WindowsAzure.Storage.dll. Recomendamos que você atualize o [Powershell](https://docs.microsoft.com/powershell/) para solucionar o problema. Use também a seguinte solução alternativa para criar ou modificar o arquivo powershell.exe.config para carregar os assemblies do.NET 2.0 e do.NET 4.0 em runtime com o seguinte:  

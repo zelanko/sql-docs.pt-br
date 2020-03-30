@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2a701e31e53b1d540c3fd586f10f34543895dfde
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74564789"
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompilar um procedimento armazenado
@@ -38,9 +38,9 @@ ms.locfileid: "74564789"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Quando um procedimento é compilado pela primeira vez ou recompilado, o plano de consulta do procedimento é otimizado para o estado atual do banco de dados e seus objetos. Se um banco de dados passar por alterações significativas em seus dados ou estrutura, a recompilação de um procedimento atualizará e otimizará o plano de consulta do procedimento para essas alterações. Isso pode melhorar o desempenho do processamento do procedimento.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "74564789"
   
 -   Se certas consultas em um procedimento usarem valores atípicos ou temporários regularmente, o desempenho do procedimento poderá ser melhorado com o uso da dica de consulta RECOMPILE nessas consultas. Como apenas as consultas que usam a dica de consulta serão recompiladas, em vez de o procedimento completo, o comportamento de recompilação no nível da instrução no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será imitado. Além de usar os valores de parâmetro atuais do procedimento, a dica de consulta RECOMPILE também usa os valores de todas as variáveis locais no procedimento armazenado quando você compila a instrução. Para obter mais informações, veja [Dica de consulta (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Opção**WITH RECOMPILE**  
  Se a opção for usada quando a definição de procedimento for criada, serão necessárias as permissões CREATE PROCEDURE no banco de dados e ALTER no esquema no qual o procedimento está sendo criado.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "74564789"
  Procedimento armazenado do sistema**sp_recompile**  
  Exige a permissão ALTER no procedimento especificado.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
 
 1. Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 42d3d697ace0f427dcad7fdcd394695672061e13
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77429047"
 ---
 # <a name="install-sql-server-reporting-services"></a>Instale o SQL Server Reporting Services
@@ -93,7 +93,7 @@ Um serviço Windows é criado como parte da instalação. Ele é exibido como **
 
 As reservas de URL são compostas de um prefixo, nome de host, porta e diretório virtual:
 
-|Parte|Descrição|
+|Parte|DESCRIÇÃO|
 |----------|-----------------|
 |Prefixo|O prefixo padrão é HTTP. Se você instalou anteriormente um certificado de protocolo SSL, a Instalação tentará criar reservas de URL que usam o prefixo HTTPS.|
 |Nome do host|O nome de host padrão é um curinga forte (+). Ele especifica que o servidor de relatório aceita qualquer solicitação HTTP na porta designada para qualquer nome do host resolvido para o computador, incluindo `https://<computername>/reportserver`, `https://localhost/reportserver` ou `https://<IPAddress>/reportserver.`|

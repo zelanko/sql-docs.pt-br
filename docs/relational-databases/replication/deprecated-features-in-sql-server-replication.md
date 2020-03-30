@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 9f414d0ac6fc35e8ad65cedad2b04f88eb3b3553
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76284696"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>Recursos preteridos em Replicação do Microsoft SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Este tópico descreve os recursos de replicação preteridos que ainda estão disponíveis no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Esses recursos estão programados para serem removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Recursos preteridos não devem ser usados em aplicativos novos.  
   
-## <a name="items-deprecated-in-includesssql15includessssql15-mdmd"></a>Itens preteridos no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+## <a name="items-deprecated-in-sssql15"></a>Itens preteridos no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 |Recurso|DESCRIÇÃO|  
 |-------------|-----------------|  

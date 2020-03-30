@@ -22,10 +22,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056258"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>Configurar e gerenciar separadores de palavras e lematizadores para pesquisa (SQL Server)
@@ -53,7 +53,7 @@ Para ver a lista de idiomas aos quais a Pesquisa de Texto Completo do [!INCLUDE[
 SELECT * FROM sys.fulltext_languages
 ```
 
-##  <a name="register"></a> Obter a lista de separadores de palavras registrados
+##  <a name="get-the-list-of-registered-word-breakers"></a><a name="register"></a> Obter a lista de separadores de palavras registrados
 
 Para que a Pesquisa de Texto Completo use os separadores de palavras de um idioma, eles devem ser registrados. Para separadores de palavras registrados, os recursos linguísticos associados – lematizadores, palavras de ruído (palavras irrelevantes) e arquivos de dicionário de sinônimos – também ficam disponíveis para operações de indexação e consulta de texto completo.
 
@@ -69,7 +69,7 @@ Para obter opções adicionais e mais informações, consulte [sp_help_fulltext_
 ## <a name="if-you-add-or-remove-a-word-breaker"></a>Se você adicionar ou remover um separador de palavras  
 Se você adicionar, remover ou alterar um separador de palavras, precisará atualizar a lista de LCIDs (IDs de localidade) do Microsoft Windows que são suportadas para indexação e consulta de texto completo. Para obter mais informações, consulte [Exibir ou alterar filtros registrados e separadores de palavras](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="default"></a> Definir a opção de idioma de texto completo padrão  
+##  <a name="set-the-default-full-text-language-option"></a><a name="default"></a> Definir a opção de idioma de texto completo padrão  
  Em uma versão localizada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configura a opção **idioma de texto completo padrão** com o idioma do servidor caso exista uma correspondência apropriada. Para uma versão não localizada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a opção **idioma de texto completo padrão** estará em inglês.  
   
  Ao criar ou alterar um índice de texto completo, é possível especificar um idioma diferente para cada coluna indexada de texto completo. Se nenhum idioma for especificado para uma coluna, o padrão será o valor da opção de configuração **idioma de pesquisa de texto completo**.  
@@ -77,7 +77,7 @@ Se você adicionar, remover ou alterar um separador de palavras, precisará atua
 > [!NOTE]  
 >  Todas as colunas listadas em uma única cláusula de função de consulta de texto completo devem usar o mesmo idioma, exceto se a opção LANGUAGE for especificada na consulta. O idioma usado para a coluna indexada de texto completo que está sendo consultada determina a análise linguística realizada nos argumentos dos predicados de consulta de texto completo ([CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)) e das funções ([CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)).  
   
-##  <a name="lang"></a> Escolher o idioma de uma coluna indexada  
+##  <a name="choose-the-language-for-an-indexed-column"></a><a name="lang"></a> Escolher o idioma de uma coluna indexada  
  Quando você cria um índice de texto completo, é recomendável especificar um idioma para cada coluna indexada. Se não for especificado um idioma para uma coluna, será usado o idioma padrão do sistema. O idioma de uma coluna determina que separador de palavras e que lematizador são usados para indexá-la. Além disso, o arquivo do dicionário de sinônimos do idioma será usado por consultas de texto completo na coluna.  
   
  Existem alguns aspectos que devem ser considerados na escolha do idioma da coluna para criar um índice de texto completo. Essas considerações estão relacionadas a como seu texto é transformado em token e, depois, indexado pelo Mecanismo de Texto Completo. Para obter mais informações, veja [Escolher um idioma ao criar um índice de texto completo](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
@@ -90,7 +90,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 
 Para obter opções adicionais e mais informações, consulte [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md).
 
-##  <a name="tshoot"></a> Solucionar problemas de erros de tempo limite na separação de palavras  
+##  <a name="troubleshoot-word-breaking-time-out-errors"></a><a name="tshoot"></a> Solucionar problemas de erros de tempo limite na separação de palavras  
  Um erro de tempo limite na separação de palavras pode ocorrer em diversas situações. ou informações sobre estas situações e o que fazer em cada uma delas, consulte [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md).
 
 ### <a name="info-about-the-mssqlserver_30053-error"></a>Informações sobre o erro MSSQLSERVER_30053
@@ -130,7 +130,7 @@ Para obter opções adicionais e mais informações, consulte [sys.fulltext_inde
 |A configuração do processo de daemon de filtro está incorreta.|Verifique se você está usando a senha atual e se uma política de domínio não está impedindo a conta do daemon de filtro de fazer logon.|  
 |Uma carga de trabalho de consulta muito pesada está em execução na instância do servidor.|Tente executar a consulta novamente com uma carga mais leve.|  
 
-##  <a name="impact"></a> Noções básicas sobre o impacto dos separadores de palavras atualizados  
+##  <a name="understand-the-impact-of-updated-word-breakers"></a><a name="impact"></a> Noções básicas sobre o impacto dos separadores de palavras atualizados  
  Cada versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente inclui novos separadores de palavras que possuem regras linguísticas melhores e mais precisas do que os separadores de palavras anteriores. O comportamento dos novos separadores de palavras pode ser ligeiramente diferente daquele dos separadores de palavras em índices de texto completo importados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
 Isso é significativo se um catálogo de texto completo foi importado durante a atualização de um banco de dados para a versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Agora um ou mais dos idiomas usados pelos índices de texto completo no catálogo de texto completo podem ser associados aos novos separadores de palavras. Para obter mais informações, veja [Atualizar pesquisa de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  

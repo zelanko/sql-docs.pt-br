@@ -11,10 +11,10 @@ ms.assetid: e8e632c4-d6cc-4c5e-b6ad-873579343b19
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d3005e2b5ae8628ab31ceeb6314159afd796e83
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953131"
 ---
 # <a name="getclientinfo-method-javalangstring"></a>Método getClientInfo (java.lang.String)

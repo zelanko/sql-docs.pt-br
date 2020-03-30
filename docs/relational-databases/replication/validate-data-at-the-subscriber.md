@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710764"
 ---
 # <a name="validate-replicated-data"></a>Validar os dados replicados
@@ -259,7 +259,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
   
      Para obter mais informações, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) ou [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
  A replicação permite que você use RMO (Replication Management Objects) para validar programaticamente os dados que no Assinante correspondam aos dados do Publicador. Os objetos usados dependem do tipo de topologia de replicação. A replicação transacional necessita de validação em todas as assinaturas de uma publicação.  
   
 > [!NOTE]  
@@ -309,7 +309,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
   
 5.  Execute o Merge Agent para a assinatura iniciar a validação ou espere pela próxima execução de agente marcada. Para obter mais informações, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md). O resultado da operação de validação é gravado no histórico de agente que você exibe usando o Replication Monitor. Para obter mais informações, consulte [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md).  
   
-###  <a name="RMOExample"></a> Exemplo (RMO)  
+###  <a name="example-rmo"></a><a name="RMOExample"></a> Exemplo (RMO)  
  Este exemplo marca todas as assinatura em uma publicação transacional para a validação de número de linhas.  
   
  [!code-cs[HowTo#rmo_ValidateTranPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_validatetranpub)]  

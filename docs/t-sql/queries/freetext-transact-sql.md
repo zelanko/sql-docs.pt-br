@@ -22,16 +22,16 @@ ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3c0d1ed26fa58934a51ec051eb3aa4e1d5b9a2bd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67902100"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  É um predicado usado na [cláusula WHERE](../../t-sql/queries/where-transact-sql.md) do [!INCLUDE[tsql](../../includes/tsql-md.md)] de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT para executar uma pesquisa de texto completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma coluna indexada de texto completo que contém tipos de dados baseados em caracteres. Esse predicado procura valores correspondentes ao significado e não apenas o teor exato das palavras nos critérios da pesquisa. Quando FREETEXT é usado, o mecanismo de consulta de texto completo executa internamente as ações a seguir na *freetext_string*, atribui um peso a cada termo e, em seguida, localiza as correspondências:  
+  É um predicado usado na [!INCLUDE[tsql](../../includes/tsql-md.md)]cláusula WHERE[ do ](../../t-sql/queries/where-transact-sql.md) de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT para executar uma pesquisa de texto completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma coluna indexada de texto completo que contém tipos de dados baseados em caracteres. Esse predicado procura valores correspondentes ao significado e não apenas o teor exato das palavras nos critérios da pesquisa. Quando FREETEXT é usado, o mecanismo de consulta de texto completo executa internamente as ações a seguir na *freetext_string*, atribui um peso a cada termo e, em seguida, localiza as correspondências:  
   
 -   Separa a cadeia de caracteres em palavras individuais com base em limites de palavra (quebra de palavras).  
   

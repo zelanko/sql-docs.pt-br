@@ -13,10 +13,10 @@ ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 293b58adde0ccbfe6394cd3917d2671f23f3b290
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70212355"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Monitor de Espelhamento de Banco de Dados (página Status)
@@ -37,11 +37,11 @@ ms.locfileid: "70212355"
   
  As colunas são apresentadas assim:  
   
-|Nome da coluna|Descrição|  
+|Nome da coluna|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |**Instância do Servidor**|Nome da instância de servidor cujo status é exibido na linha **Status** .|  
 |**Função Atual**|Função atual da instância de servidor, que é **Principal** ou **Espelho**.|  
-|**Estado de Espelhamento**|O estado de espelhamento informado pela instância de servidor e um ícone que indica a severidade do estado. Os possíveis status e seus ícones associados são os seguintes:<br /><br /> Ícone: -, status **Desconhecido**. O monitor não está conectado a nenhum parceiro. As únicas informações disponíveis são aquelas armazenadas em cache pelo monitor.<br /><br /> Ícone: Ícone de aviso, status **Sincronizando**. O conteúdo do banco de dados espelho está ficando atrás do conteúdo do banco de dados principal. A instância do servidor principal está enviando registros de log para a instância do servidor espelho, a qual está aplicando as alterações ao banco de dados espelho para rolagem para frente. No início de uma sessão de espelhamento de banco de dados, o banco de dados espelho e principal estão nesse estado.<br /><br /> Ícone: cilindro do banco de dados padrão, o status **Sincronizado**. Quando o servidor espelho torna-se suficientemente atualizado em relação ao servidor principal, o estado do banco de dados é alterado para **Sincronizado**. O banco de dados permanece nesse estado enquanto o servidor principal estiver enviando alterações ao servidor espelho e esse estiver aplicando alterações ao banco de dados espelho.  Para o modo de alta segurança, o failover automático e o failover manual são ambos possíveis, sem perda de dados.  No modo de alto desempenho, alguma perda de dados é sempre possível, mesmo no estado **Sincronizado** .<br /><br /> Ícone: ícone de aviso, status **Suspenso**. <br />                            O banco de dados principal está disponível, mas não está enviando logs para o servidor espelho.<br /><br /> Ícone: ícone de erro, status **Desconectado**. A instância do servidor não pode se conectar ao seu parceiro.|  
+|**Estado de Espelhamento**|O estado de espelhamento informado pela instância de servidor e um ícone que indica a severidade do estado. Os possíveis status e seus ícones associados são os seguintes:<br /><br /> Ícone: -, status **Desconhecido**. O monitor não está conectado a nenhum parceiro. As únicas informações disponíveis são aquelas armazenadas em cache pelo monitor.<br /><br /> Ícone: ícone de aviso, status **Sincronizando**. O conteúdo do banco de dados espelho está ficando atrás do conteúdo do banco de dados principal. A instância do servidor principal está enviando registros de log para a instância do servidor espelho, a qual está aplicando as alterações ao banco de dados espelho para rolagem para frente. No início de uma sessão de espelhamento de banco de dados, o banco de dados espelho e principal estão nesse estado.<br /><br /> Ícone: cilindro do banco de dados padrão, o status **Sincronizado**. Quando o servidor espelho torna-se suficientemente atualizado em relação ao servidor principal, o estado do banco de dados é alterado para **Sincronizado**. O banco de dados permanece nesse estado enquanto o servidor principal estiver enviando alterações ao servidor espelho e esse estiver aplicando alterações ao banco de dados espelho.  Para o modo de alta segurança, o failover automático e o failover manual são ambos possíveis, sem perda de dados.  No modo de alto desempenho, alguma perda de dados é sempre possível, mesmo no estado **Sincronizado** .<br /><br /> Ícone: ícone de aviso, status **Suspenso**. <br />                            O banco de dados principal está disponível, mas não está enviando logs para o servidor espelho.<br /><br /> Ícone: ícone de erro, status **Desconectado**. A instância do servidor não pode se conectar ao seu parceiro.|  
 |**Conexão de Testemunha**|Status de conexão da testemunha, precedido por um ícone de status, **Desconhecido**, **Conectado**ou **Desconectado**.|  
 |**Histórico**|Clique para exibir o histórico de espelhamento na instância de servidor. Isso abre a caixa de diálogo **Histórico do Espelhamento de Banco de Dados** , que exibe o histórico de status e as estatísticas de espelhamento de um banco de dados espelho em uma determinada instância de servidor.<br /><br /> O botão **Histórico** ficará esmaecido se o monitor não for conectado à instância de servidor.|  
   

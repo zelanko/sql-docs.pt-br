@@ -14,17 +14,17 @@ ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 156ca6b7c04b8362a15a07f7db7f7aa43b2389a5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68085852"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>Alterações de quebra na replicação do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve alterações de quebra na replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar.  
   
-## <a name="breaking-changes-made-in-includesssql15includessssql15-mdmd"></a>Alterações recentes feitas no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+## <a name="breaking-changes-made-in-sssql15"></a>Alterações recentes feitas no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  O[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] não oferece supoute a replicação para ou do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  

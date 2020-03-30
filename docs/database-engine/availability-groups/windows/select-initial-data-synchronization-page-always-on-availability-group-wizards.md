@@ -15,10 +15,10 @@ ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e8a6a14a6efc6a9d5f96144364f1532c14b0c1c0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235337"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Selecione a Página de Sincronização de Dados Inicial (Assistentes Grupo de Disponibilidade AlwaysOn)
@@ -28,7 +28,7 @@ ms.locfileid: "75235337"
   
  As opções possíveis incluem **Propagação automática**, **Backup completo de log e de banco de dados**, **Somente junção** ou **Ignorar sincronização de dados inicial**. Antes de selecionar **Propagação automática**, **Completo** ou **Somente junção**, verifique se o ambiente atende aos pré-requisitos.  
     
-##  <a name="Recommendations"></a> Recomendações  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Suspenda as tarefas de backup de log para os bancos de dados primários durante a sincronização de dados inicial.  
   
@@ -38,11 +38,11 @@ ms.locfileid: "75235337"
   
      Se for necessário que as operações de backup e restauração sejam altamente protegidas, é recomendável selecionar a opção **Somente junção** ou **Ignorar a sincronização de dados inicial** .  
   
-## <a name="Auto"></a> Propagação automática
+## <a name="automatic-seeding"></a><a name="Auto"></a> Propagação automática
  
  O SQL Server cria automaticamente as réplicas secundárias para cada banco de dados no grupo. A propagação automática exige que os caminhos do arquivo de dados e de log sejam os mesmos em cada instância do SQL Server que faz parte do grupo. Disponível no [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] e posterior. Consulte [Inicializar automaticamente o grupo de disponibilidade AlwaysOn](automatically-initialize-always-on-availability-group.md).
 
-##  <a name="Full"></a> Backup completo de log e de banco de dados 
+##  <a name="full-database-and-log-backup"></a><a name="Full"></a> Backup completo de log e de banco de dados 
  Para cada banco de dados primário, a opção **Backup completo de log e de banco de dados** executa várias operações em um fluxo de trabalho: cria um backup completo e um backup de log do banco de dados primário, cria os bancos de dados secundários correspondentes restaurando esses backups em cada instância de servidor que hospeda uma réplica secundária e ingressa cada banco de dados secundário no grupo de disponibilidade.  
   
  Selecione essa opção apenas se o ambiente atender os seguintes pré-requisitos para usar a sincronização de dados inicial completa, e se você desejar que o assistente inicie automaticamente a sincronização de dados.  
@@ -75,18 +75,18 @@ ms.locfileid: "75235337"
 > [!IMPORTANT]  
 >  Os backups de log farão parte de sua cadeia de backup de log. Armazene os arquivos de backup adequadamente.  
   
-##  <a name="Joinonly"></a> Somente junção  
+##  <a name="join-only"></a><a name="Joinonly"></a> Somente junção  
  Selecione essa opção apenas se os novos bancos de dados secundários já existirem em cada instância do servidor que hospeda uma réplica secundária para o grupo de disponibilidade. Para obter informações sobre como preparar bancos de dados secundários, consulte [Para preparar bancos de dados secundários manualmente](#PrepareSecondaryDbs), posteriormente nesta seção.  
   
  Se você selecionar **Somente junção**, o assistente tentará unir cada banco de dados secundário existente ao grupo de disponibilidade.  
   
-## <a name="Skip"></a> Ignorar a sincronização de dados inicial  
+## <a name="skip-initial-data-synchronization"></a><a name="Skip"></a> Ignorar a sincronização de dados inicial  
  Selecione esta opção se você desejar executar seus próprios backups de banco de dados e de log de cada banco de dados primário e, em seguida, restaurá-los em cada instância de servidor que hospeda uma réplica secundária. Quando sair do assistente, você precisará unir cada banco de dados secundário em cada réplica secundária.  
   
 > [!NOTE]  
 >  Para obter mais informações, veja [Iniciar movimentação de dados em um banco de dados secundário &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="PrepareSecondaryDbs"></a> Para preparar manualmente bancos de dados secundários  
+##  <a name="to-prepare-secondary-databases-manually"></a><a name="PrepareSecondaryDbs"></a> Para preparar manualmente bancos de dados secundários  
  Para preparar bancos de dados secundários independentemente de qualquer assistente do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , você pode usar uma das seguintes abordagens:  
   
 -   Restaurar manualmente um backup recente do banco de dados primário usando RESTORE WITH NORECOVERY e, em seguida, restaurar cada backup de log subsequente usando RESTORE WITH NORECOVERY. Se os bancos de dados primários e secundários tiverem caminhos de arquivos diferentes, você deverá usar a opção WITH MOVE. Executar essa sequência de restauração em cada instância do servidor que hospeda uma réplica secundária para o grupo de disponibilidade.  Você pode usar o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell para executar estas operações de backup e restauração.  
@@ -110,7 +110,7 @@ ms.locfileid: "75235337"
   
  Opcionalmente, você pode preparar todos os bancos de dados secundários antes de executar o assistente. Em seguida, na página **Especificar a Sincronização de Dados Inicial** do assistente, selecione **Somente junção** para unir automaticamente seus novos bancos de dados secundários ao grupo de disponibilidade.  
   
-##  <a name="LaunchWiz"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> Tarefas relacionadas  
   
 -   [Usar a caixa de diálogo Novo Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

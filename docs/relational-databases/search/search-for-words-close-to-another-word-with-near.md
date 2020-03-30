@@ -21,17 +21,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68702828"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Procurar palavras perto de outra palavra com NEAR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Você pode usar o *termo de proximidade* **NEAR** em um predicado [CONTAINS](../../t-sql/queries/contains-transact-sql.md) ou uma função [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) para pesquisar palavras ou frases próximas umas das outras. 
   
-##  <a name="Custom_NEAR"></a> Visão geral de NEAR  
+##  <a name="overview-of-near"></a><a name="Custom_NEAR"></a> Visão geral de NEAR  
 **NEAR** inclui os seguintes recursos:  
 -   Você pode especificar o número máximo de condições não relacionadas à pesquisa que separam a primeira e a última condição da pesquisa.
 
@@ -129,7 +129,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
  Você não pode combinar NEAR com uma condição geracional (ISABOUT...) ou um termo ponderado (FORMSOF...).  
   
-##  <a name="Additional_Considerations"></a> Mais informações sobre buscas de proximidade  
+##  <a name="more-info-about-proximity-searches"></a><a name="Additional_Considerations"></a> Mais informações sobre buscas de proximidade  
    
 -   Sobrepondo ocorrências de condições de pesquisa  
   

@@ -11,10 +11,10 @@ ms.assetid: ce2c0b78-e1f1-409a-9f4c-f90027c70c07
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa3c520480930e9a2c21272d483b1a2e6b9e8cc4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295065"
 ---
 # <a name="troubleshoot-integration-services-ssis-packages"></a>Solucionar problemas de pacotes do SSIS (Integration Services)

@@ -18,17 +18,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68021225"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Melhorar o desempenho de índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Este tópico descreve algumas das causas comuns de baixo desempenho para consultas e índices de texto completo. Ele também fornece algumas sugestões para atenuar esses problemas e melhorar o desempenho.
   
-##  <a name="causes"></a> Common causes of performance issues
+##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a> Common causes of performance issues
 ### <a name="hardware-resource-issues"></a>Problemas de recursos de hardware
 O desempenho da indexação de texto completo e das consultas de texto completo é influenciado por recursos de hardware, como memória, velocidade de disco, velocidade da CPU e pela arquitetura do computador.  
 
@@ -57,7 +57,7 @@ A principal causa da diminuição do desempenho da indexação de texto completo
   
     A mesclagem mestra de grande quantidade de dados pode criar uma transação demorada, atrasando o truncamento do log de transações durante o ponto de verificação. Nesse caso, no modelo de recuperação completa, o log de transações pode crescer significativamente. Como prática recomendada, antes de reorganizar um índice de texto completo grande em um banco de dados que usa o modelo de recuperação completa, verifique se o log de transações contém espaço suficiente para uma transação demorada. Para obter mais informações, veja [Gerenciar o tamanho do arquivo de log de transações](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
   
-##  <a name="tuning"></a> Ajustar o desempenho de índices de texto completo  
+##  <a name="tune-the-performance-of-full-text-indexes"></a><a name="tuning"></a> Ajustar o desempenho de índices de texto completo  
 Para maximizar o desempenho de seus índices de texto completo, implemente as seguintes práticas recomendadas:  
   
 -   Para utilizar ao máximo todos os processadores de CPU ou núcleos, defina [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) '**max full-text crawl range**' como o número de CPUs do sistema. Para obter informações sobre essa opção de configuração, veja [Opção max full-text crawl range de configuração de servidor](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
@@ -70,7 +70,7 @@ Para maximizar o desempenho de seus índices de texto completo, implemente as se
 
 -   Se você usar a população incremental com base em uma coluna de carimbo de data/hora, crie um índice secundário da coluna **carimbo de data/hora** para melhorar o desempenho da população incremental.  
   
-##  <a name="full"></a> Solucionar problemas de desempenho das populações completas  
+##  <a name="troubleshoot-the-performance-of-full-populations"></a><a name="full"></a> Solucionar problemas de desempenho das populações completas  
 ### <a name="review-the-full-text-crawl-logs"></a>Examine os logs de rastreamento de texto completo
  Para ajudar no diagnóstico de problemas de desempenho, examine os logs de rastreamento de texto completo.
  
@@ -140,7 +140,7 @@ Para obter informações essenciais sobre as fórmulas a seguir, consulte as not
 2.  500 MB é uma estimativa da memória exigida por outros processos no sistema. Se o sistema estiver executando trabalho adicional, aumente esse valor de maneira correspondente.  
 3.  .*ism_size* é presumido como 8 MB para plataformas x64.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Exemplo: estimar os requisitos de memória de fdhost.exe  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Exemplo: estimar as necessidades de memória do fdhost.exe  
   
  Este exemplo é para um computador 8GM de RAM com 64 bits e 4 processadores de núcleo dual. O primeiro cálculo estima a memória necessária para fdhost.exe -*F*. O número de intervalos de rastreamento é `8`.  
   
@@ -150,7 +150,7 @@ Para obter informações essenciais sobre as fórmulas a seguir, consulte as not
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>Exemplo: configurando a memória máxima do servidor  
+ #### <a name="example-setting-max-server-memory"></a>Exemplo: Definindo a configuração max server memory  
   
  Este exemplo usa as instruções [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] para definir **max server memory** com o valor calculado para o *M* no exemplo anterior, `7052`:  
   
@@ -178,7 +178,7 @@ O desempenho das populações completas não é ideal quando o consumo de CPU m�
   
      A tabela a seguir descreve os tipos de espera de interesse aqui mencionados.  
   
-    |Tipo de espera|Descrição|Solução possível|  
+    |Tipo de espera|DESCRIÇÃO|Solução possível|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX ou _UP)|Isso pode indicar um gargalo de E/S, caso em que normalmente você também observa um comprimento médio da fila de disco alto.|Mover o índice de texto completo para outro grupo de arquivos em outro disco pode ajudar a reduzir o gargalo de E/S.|  
     |PAGELATCH_EX (ou _UP)|Isso pode indicar muita contenção entre os threads que estão tentando para gravar no mesmo arquivo de banco de dados.|Adicionar arquivos ao grupo de arquivos em que reside o índice de texto completo pode ajudar a aliviar essa contenção.|  
@@ -195,7 +195,7 @@ O desempenho das populações completas não é ideal quando o consumo de CPU m�
   
          Para reduzir a fragmentação, você pode reorganizar ou recriar o índice clusterizado. Para obter mais informações, veja [Reorganizar e recriar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
-##  <a name="filters"></a> Solucionar problemas de indexação lenta de documentos
+##  <a name="troubleshoot-slow-indexing-of-documents"></a><a name="filters"></a> Solucionar problemas de indexação lenta de documentos
 
 > [!NOTE]
 > Esta seção descreve um problema que afeta somente os clientes que indexam documentos (como documentos do Microsoft Word) no quais outros tipos de documentos são inseridos.

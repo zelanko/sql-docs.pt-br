@@ -24,10 +24,10 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7a09cef6ce1e90fe9fce7b7bd4b025598a387c1f
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79112274"
 ---
 # <a name="integration-services-ssis-connections"></a>Conexões do SSIS (Integration Services)
@@ -83,7 +83,7 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
 ### <a name="built-in-connection-managers"></a>Gerenciadores de conexões internos  
  A tabela a seguir lista os tipos de gerenciadores de conexões fornecidos pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Type|Descrição|Tópico|  
+|Type|DESCRIÇÃO|Tópico|  
 |----------|-----------------|-----------|  
 |ADO|Conecta-se a objetos ActiveX Data Objects (ADO).|[Gerenciador de conexões ADO](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|Conecta-se a uma fonte de dados usando um provedor .NET.|[Gerenciador de conexões ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
@@ -98,7 +98,7 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
 |MSOLAP100|Conecta-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou a um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Gerenciador de Conexões do Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|  
 |MULTIFILE|Conecta-se a vários arquivos e pastas.|[Gerenciador de Conexões de Vários Arquivos](../../integration-services/connection-manager/multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|Conecta-se a vários arquivos e pastas de dados.|[Gerenciador de Conexões de Vários Arquivos Simples](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|  
-|OLEDB|Conecta-se a uma fonte de dados usando um provedor OLE DB.|[Gerenciador de Conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
+|OLEDB|Conecta-se a uma fonte de dados usando um provedor OLE DB.|[Gerenciador de conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
 |ODBCODBC|Conecta-se a uma fonte de dados usando ODBC.|[Gerenciador de Conexões ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|  
 |SMOServer|Conecta-se a um servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).|[Gerenciador de Conexões SMO](../../integration-services/connection-manager/smo-connection-manager.md)|  
 |SMTP|Conecta-se a um servidor de email SMTP.|[Gerenciador de Conexões SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)|  
@@ -111,7 +111,7 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
 > [!IMPORTANT]  
 >  Os gerenciadores de conexões listados na tabela a seguir funcionam apenas com o [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] e o [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)].  
   
-|Type|Descrição|Tópico|  
+|Type|DESCRIÇÃO|Tópico|  
 |----------|-----------------|-----------|  
 |ORACLE|Conecta-se a um servidor Oracle \<informações de versão\>.|O gerenciador de conexões Oracle é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui uma origem e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
 |SAPBI|Conecta a um sistema SAP NetWeaver BI versão 7.|O gerenciador de conexões SAP BI é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI também inclui uma origem e um destino. Para obter mais informações, consulte a página de download [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440).|  
@@ -144,13 +144,13 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
   Ambas as versões do provedor têm o mesmo ID. Para especificar se o tempo de execução do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa uma versão de 64 bits disponível do provedor, você define a propriedade Run64BitRuntime do projeto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se a propriedade Run64BitRuntime estiver definida como **true**, o tempo de execução encontrará e usará o provedor de 64 bits; se Run64BitRuntime for **false**, o tempo de execução encontrará e usará o provedor de 32 bits. Para obter mais informações sobre as propriedades que podem ser definidas em projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Ambientes do SSIS (Integration Services) e do Studio](https://msdn.microsoft.com/library/ms140028.aspx).   
 
 ## <a name="add-a-connection-manager"></a>Adicionar um gerenciador de conexão
-###  <a name="wizard"></a> Adicionar um gerenciador de conexões ao criar um pacote  
+###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> Adicionar um gerenciador de conexões ao criar um pacote  
   
 -   Usar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
      Além de criar e configurar um gerenciador de conexões, o assistente também ajuda a criar e configurar origens e destinos que usam o gerenciador de conexões. Para obter mais informações, consulte [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
   
-###  <a name="package"></a> Adicionar um gerenciador de conexões a um pacote existente  
+###  <a name="add-a-connection-manager-to-an-existing-package"></a><a name="package"></a> Adicionar um gerenciador de conexões a um pacote existente  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -182,7 +182,7 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
     |[Gerenciador de Conexões de HTTP](../../integration-services/connection-manager/http-connection-manager.md)|[Editor do Gerenciador de Conexões HTTP &#40;Página Servidor&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [Editor do Gerenciador de Conexões HTTP &#40;Página Proxy&#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
     |[Gerenciador de Conexões MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Editor do Gerenciador de Conexões MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
     |[Gerenciador de Conexões ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Referência da interface do usuário do Gerenciador de Conexões ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
-    |[Gerenciador de Conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Configurar Gerenciador de Conexões OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
+    |[Gerenciador de conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Configurar Gerenciador de Conexões OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Gerenciador de Conexões SMO](../../integration-services/connection-manager/smo-connection-manager.md)|[Editor do Gerenciador de Conexões SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
     |[Gerenciador de Conexões SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)|[Editor do Gerenciador de Conexões SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
     |[Gerenciador de Conexões do SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Editor do Gerenciador de Conexões do SQL Server Compact Edition &#40;Página de Conexão&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Editor do Gerenciador de Conexões do SQL Server Compact Edition &#40;Página Tudo&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
@@ -194,7 +194,7 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
   
 6.  Para salvar o pacote atualizado, clique em **Salvar Item Selecionado** no menu **Arquivo** .  
   
-###  <a name="project"></a> Adicionar um gerenciador de conexões no nível de projeto  
+###  <a name="add-a-connection-manager-at-the-project-level"></a><a name="project"></a> Adicionar um gerenciador de conexões no nível de projeto  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -218,7 +218,7 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
     |[Gerenciador de Conexões de HTTP](../../integration-services/connection-manager/http-connection-manager.md)|[Editor do Gerenciador de Conexões HTTP &#40;Página Servidor&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [Editor do Gerenciador de Conexões HTTP &#40;Página Proxy&#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
     |[Gerenciador de Conexões MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Editor do Gerenciador de Conexões MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
     |[Gerenciador de Conexões ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Referência da interface do usuário do Gerenciador de Conexões ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
-    |[Gerenciador de Conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Configurar Gerenciador de Conexões OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
+    |[Gerenciador de conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Configurar Gerenciador de Conexões OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Gerenciador de Conexões SMO](../../integration-services/connection-manager/smo-connection-manager.md)|[Editor do Gerenciador de Conexões SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
     |[Gerenciador de Conexões SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)|[Editor do Gerenciador de Conexões SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
     |[Gerenciador de Conexões do SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Editor do Gerenciador de Conexões do SQL Server Compact Edition &#40;Página de Conexão&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Editor do Gerenciador de Conexões do SQL Server Compact Edition &#40;Página Tudo&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
@@ -243,14 +243,14 @@ Use a caixa de diálogo **Adicionar Gerenciador de Conexões SSIS** para selecio
  **Adicionar**  
  Especifique propriedades de conexão usando o editor para cada tipo de conexão.  
    
-##  <a name="parameter"></a> Criar um parâmetro para uma propriedade de gerenciador de conexões  
+##  <a name="create-a-parameter-for-a-connection-manager-property"></a><a name="parameter"></a> Criar um parâmetro para uma propriedade de gerenciador de conexões  
   
 1.  Na área **Gerenciadores de Conexões** , clique com o botão direito do mouse no gerenciador de conexões para o qual você deseja criar um parâmetro e clique em **Definir Parâmetros**.  
   
 2.  Configure os parâmetros na caixa de diálogo **Definir Parâmetros** . Para obter mais informações, consulte [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
 
 ## <a name="delete-a-connection-manager"></a>Excluir um gerenciador de conexões 
-###  <a name="DeletePackageLevel"></a> Excluir um gerenciador de conexões de um pacote  
+###  <a name="delete-a-connection-manager-from-a-package"></a><a name="DeletePackageLevel"></a> Excluir um gerenciador de conexões de um pacote  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -270,7 +270,7 @@ Use a caixa de diálogo **Adicionar Gerenciador de Conexões SSIS** para selecio
   
 5.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-###  <a name="DeleteProjectLevel"></a> Excluir um gerenciador de conexões compartilhado (gerenciador de conexões de nível de projeto)  
+###  <a name="delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a> Excluir um gerenciador de conexões compartilhado (gerenciador de conexões de nível de projeto)  
   
 1.  Para excluir um gerenciador de conexões de nível de projeto, clique com o botão direito do mouse no gerenciador de conexões no nó **Gerenciadores de Conexões** na janela **Gerenciador de Soluções** e clique em **Excluir**. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] exibe a seguinte mensagem de aviso:  
   
@@ -327,7 +327,7 @@ Todos os gerenciadores de conexões podem ser configurados usando a janela **Pro
     |[Gerenciador de Conexões de HTTP](../../integration-services/connection-manager/http-connection-manager.md)|[Editor do Gerenciador de Conexões HTTP &#40;Página Servidor&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [Editor do Gerenciador de Conexões HTTP &#40;Página Proxy&#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
     |[Gerenciador de Conexões MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Editor do Gerenciador de Conexões MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
     |[Gerenciador de Conexões ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Referência da interface do usuário do Gerenciador de Conexões ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
-    |[Gerenciador de Conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Configurar Gerenciador de Conexões OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
+    |[Gerenciador de conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Configurar Gerenciador de Conexões OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Gerenciador de Conexões SMO](../../integration-services/connection-manager/smo-connection-manager.md)|[Editor do Gerenciador de Conexões SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
     |[Gerenciador de Conexões SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)|[Editor do Gerenciador de Conexões SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
     |[Gerenciador de Conexões do SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Editor do Gerenciador de Conexões do SQL Server Compact Edition &#40;Página de Conexão&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Editor do Gerenciador de Conexões do SQL Server Compact Edition &#40;Página Tudo&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  

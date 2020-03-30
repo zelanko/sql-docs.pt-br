@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 47d4cb0991bde851fbc6c6f3273a673dfdecf919
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082560"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Especificar colunas computadas em uma tabela
@@ -40,22 +40,22 @@ Uma coluna computada é uma coluna virtual que não está fisicamente armazenada
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Antes de começar
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar
 
-### <a name="Limitations"></a> Limitações e restrições
+### <a name="limitations-and-restrictions"></a><a name="Limitations"></a> Limitações e restrições
 
 - Uma coluna computada não pode ser usada como uma definição de restrição DEFAULT ou FOREIGN KEY ou com uma definição de restrição NOT NULL. Entretanto, se o valor da coluna computada for definido por uma expressão determinística e o tipo de dados do resultado for permitido em colunas de índice, uma coluna computada poderá ser usada como uma coluna de chave em um índice ou como parte de qualquer restrição PRIMARY KEY ou UNIQUE. Por exemplo, se a tabela tiver colunas de inteiros a e b, a coluna computada a + b poderá ser indexada, mas a coluna computada a +DATEPART(dd, GETDATE()) não poderá ser indexada, pois o valor pode ser alterado em invocações subsequentes.
 - Uma coluna computada não pode ser o destino de uma instrução INSERT ou UPDATE.
 
-### <a name="Security"></a> Segurança
+### <a name="security"></a><a name="Security"></a> Segurança
 
-#### <a name="Permissions"></a> Permissões
+#### <a name="permissions"></a><a name="Permissions"></a> Permissões
 
 Exige a permissão ALTER na tabela.
 
-## <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio
 
-### <a name="NewColumn"></a> Para adicionar uma nova coluna computada
+### <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> Para adicionar uma nova coluna computada
 
 1. No **Pesquisador de Objetos**, expanda a tabela na qual você deseja adicionar a nova coluna computada. Clique com o botão direito do mouse em **Colunas** e selecione **Nova Coluna**.
 2. Insira o nome da coluna e aceite o tipo de dados padrão (**nchar**(10)). O [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina o tipo de dados da coluna computada, aplicando as regras de precedência de tipos de dados às expressões especificadas na fórmula. Por exemplo, se a fórmula referenciar uma coluna de tipo **money** e uma coluna de tipo **int**, a coluna computada será do tipo **money** porque esse tipo de dados tem maior precedência. Para obter mais informações, veja [Precedência de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).
@@ -75,7 +75,7 @@ Exige a permissão ALTER na tabela.
 2. Clique com o botão direito do mouse na coluna para a qual você deseja especificar uma fórmula de coluna computada e clique em **Excluir**. Clique em **OK**.
 3. Adicione uma nova coluna e especifique a fórmula de coluna computada seguindo o procedimento anterior para adicionar uma nova coluna computada.
 
-## <a name="TsqlProcedure"></a> Usando o Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL
 
 ### <a name="to-add-a-computed-column-when-creating-a-table"></a>Para adicionar uma coluna computada ao criar uma tabela
 

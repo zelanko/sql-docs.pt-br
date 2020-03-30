@@ -14,19 +14,19 @@ ms.assetid: 2393ea1c-2bf3-41c3-9f37-b9761144eeca
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 36cc64688cb78febb3e023e2b11e6e3da204ad1b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67939529"
 ---
 # <a name="sql-server-latches-object"></a>SQL Server, objeto Latches
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   O objeto **SQLServer:Latches** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece contadores para monitorar bloqueios de recursos internos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , chamados travas. Monitorar as travas para determinar a atividade de usuário e o uso de recursos pode ajudar a identificar gargalos de desempenho.  
   
- Esta tabela descreve os contadores **Travas** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Esta tabela descreve os contadores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Travas**do**.  
   
-|Contadores de travas do SQL Server|Descrição|  
+|Contadores de travas do SQL Server|DESCRIÇÃO|  
 |---------------------------------|-----------------|  
 |**Tempo Médio de Espera de Trava (ms)**|Tempo médio de espera de trava (em milissegundos) para solicitações de trava que tiveram de esperar.|  
 |**Base de Tempo de Espera Médio de Trava**|Apenas para uso interno.| 

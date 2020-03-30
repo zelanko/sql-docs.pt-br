@@ -22,10 +22,10 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74190122"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implantar um aplicativo da camada de dados
@@ -114,7 +114,7 @@ Mais informações sobre algumas das páginas de assistente abaixo:
   
  **Caminho e nome do arquivo de log:** – Especifique o caminho completo e o nome de arquivo para o arquivo de log. A caixa é populada com o caminho e o nome de arquivo padrão. Edite a cadeia de caracteres na caixa para alterar o padrão ou use o botão **Procurar** para navegar para a pasta em que o arquivo de log será colocado.  
   
-###  <a name="Summary"></a> Página de Resumo  
+###  <a name="summary-page"></a><a name="Summary"></a> Página de Resumo  
  Use esta página para examinar as ações do assistente ao implantar o DAC.  
   
  **As configurações a seguir serão usadas para implantar o DAC.** - Examine as informações exibidas para assegurar que as ações executadas estarão corretas. A janela exibe o pacote de DAC selecionado e o nome selecionado para a instância de DAC escolhida. A janela também exibe as configurações que serão usadas durante a criação do banco de dados associado ao DAC.  

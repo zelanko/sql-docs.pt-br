@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 263f398e0c14c1b056185722a0662e031c9d7472
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71297734"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216888"
 ---
-# <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Passo a passo: Publicar um pacote do SSIS como uma exibição SQL
+# <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Passo a passo: publicar um Pacote SSIS como um modo SQL
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "71297734"
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
-## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Etapa 1: compilar e implantar o projeto do SSIS no catálogo do SSIS  
+## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Etapa 1: Compilar e implantar o projeto do SSIS no catálogo do SSIS  
  Nesta etapa, você cria um pacote do SSIS que extrai dados de uma fonte de dados para a qual o SSIS dá suporte (neste exemplo, usamos um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) e promove a saída dos dados usando um componente de Destino do Streaming de Dados. Em seguida, você compila e implanta o projeto do SSIS no catálogo do SSIS.  
   
 1.  Inicie o **SQL Server Data Tools**. Clique no menu **Iniciar** , aponte para **Todos os Programas**, aponte para **Microsoft SQL Server**e clique em **SQL Server Data Tools**.  
@@ -85,7 +85,7 @@ ms.locfileid: "71297734"
   
     2.  Siga as instruções no assistente para implantar o projeto no catálogo do SSIS no servidor de banco de dados local. O exemplo a seguir usa **Power BI** como o nome da pasta e **SSISPackagePublishing** como o nome do projeto no catálogo do SSIS.  
   
-## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Etapa 2: usar o Assistente de publicação do feed de dados do SSIS para publicar o pacote do SSIS como um modo SQL  
+## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Etapa 2: Usar o Assistente de publicação do feed de dados do SSIS para publicar o pacote do SSIS como um modo SQL  
  Nesta etapa, você usará o Assistente de publicação do feed de dados do SSIS (SQL Server Integration Services) para publicar o pacote do SSIS como um modo de exibição em um banco de dados do SQL Server. Os dados de saída do pacote podem ser consumidos ao consultar esse modo de exibição.  
   
  O Assistente de publicação do feed de dados do SSIS cria um servidor vinculado usando o SSISOLEDB (provedor OLE DB para SSIS) e, em seguida, cria um modo SQL que consiste em uma consulta no servidor vinculado. Essa consulta inclui o nome da pasta, o nome do projeto e o nome do pacote no catálogo do SSIS.  
@@ -104,7 +104,7 @@ ms.locfileid: "71297734"
   
          ![Assistente de Publicação de Feed de Dados – Página de Configurações do Pacote](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Assistente de Publicação de Feed de Dados – Página de Configurações do Pacote")  
   
-    2.  Clique em **Procurar** ao lado do campo Caminho, procure o catálogo do SSIS, selecione o pacote do SSIS que deseja publicar (por exemplo: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**) e clique em **OK**.  
+    2.  Clique em **Procurar** ao lado do campo Caminho, procure o catálogo do SSIS, selecione o pacote do SSIS que deseja publicar (por exemplo: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**), e clique em **OK**.  
   
          ![Assistente de Publicação de Feed de Dados – Procurar Pacote](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Assistente de Publicação de Feed de Dados – Procurar Pacote")  
   
@@ -159,7 +159,7 @@ ms.locfileid: "71297734"
     > [!NOTE]  
     >  Não há suporte para os seguintes tipos de dados: text, ntext, image, nvarchar(max), varchar(max) e varbinary(max).  
   
-## <a name="step-3-test-the-sql-view"></a>Etapa 3: testar o modo SQL  
+## <a name="step-3-test-the-sql-view"></a>Etapa 3: Testar o modo SQL  
  Aqui, você executará o modo SQL criado pelo Assistente de publicação do feed de dados do SSIS.  
   
 1.  Inicialização do SQL Server Management Studio.  
@@ -170,7 +170,7 @@ ms.locfileid: "71297734"
   
 4.  Confirme que você vê os resultados do pacote do SSIS.  
   
-## <a name="step-4-verify-the-ssis-package-execution"></a>Etapa 4: verificar a execução de pacote do SSIS  
+## <a name="step-4-verify-the-ssis-package-execution"></a>Etapa 4: Verificar a execução de pacote do SSIS  
  Nesta etapa, você verificará que o pacote do SSIS foi executado.  
   
 1.  No SQL Server Management Studio, expanda **Catálogos do Integration Services**, expanda **SSISDB**, expanda a **pasta** na qual seu projeto SSIS existe, expanda **projetos**, expanda o nó do projeto e expanda **Pacotes**.  
@@ -266,8 +266,6 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
 -   Colchetes esquerdo e direito ([ e ]) – esses caracteres são usados para indicar os espaços à esquerda/direita. Por exemplo, “[ alguns espaços ]” representa a cadeia de caracteres “alguns espaços” com um espaço à esquerda e um espaço à direita. Se esses caracteres forem usados na cláusula de consulta, eles deverão ser usados com escape. Por exemplo: \\[e \\].  
   
 -   Barra (\\) – Cada \ usada na cláusula de consulta deve usar o caractere de escape. Por exemplo, \\\ é avaliada como \ na cláusula de consulta.  
-  
- Barra (\\) – Cada \ usada na cláusula de consulta deve usar o caractere de escape. Por exemplo, \\\ é avaliada como \ na cláusula de consulta.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Destino do Streaming de Dados](../../integration-services/data-flow/data-streaming-destination.md)   

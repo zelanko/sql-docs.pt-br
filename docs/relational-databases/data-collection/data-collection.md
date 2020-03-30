@@ -14,10 +14,10 @@ ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2e50a46d53e1bf8fbee2b711ddce80e21a65beca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68140752"
 ---
 # <a name="data-collection"></a>Coleta de dados
@@ -111,7 +111,7 @@ ms.locfileid: "68140752"
   
 ## <a name="things-you-can-do"></a>O que você pode fazer  
   
-|Descrição|Tópico|  
+|DESCRIÇÃO|Tópico|  
 |----------------------|-----------|  
 |Gerencie diferentes aspectos da coleta de dados; por exemplo, habilitar ou desabilitar a coleta de dados, alterar a configuração de um conjunto de coleta ou exibir dados no data warehouse de gerenciamento.|[Gerenciar coleta de dados](../../relational-databases/data-collection/manage-data-collection.md)|  
 |Use esses relatórios para obter informações para monitorar a capacidade de sistema e solucionar problemas de desempenho do sistema.|[Relatórios do conjunto de coleta de dados do sistema](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  

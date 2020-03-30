@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b039f0cb4ff6aa944adf981ad5fa26e1cc4cbeea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67911169"
 ---
 # <a name="server-memory-change-event-class"></a>classe de evento Server Memory Change
@@ -25,7 +25,7 @@ ms.locfileid: "67911169"
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Colunas de dados da classe de evento Server Memory Change  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Sim|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Sim|  
 |----------------------|---------------|-----------------|---------------|---------|  
 |**EventClass**|**int**|Tipo de evento = 81.|27|Não|  
 |**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|Não|  

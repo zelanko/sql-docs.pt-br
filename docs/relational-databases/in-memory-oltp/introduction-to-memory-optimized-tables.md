@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9fe7d83331ee1dc0824e77602c60be04e070fb6f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68050202"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introdução às tabelas com otimização de memória
@@ -69,11 +69,11 @@ As tabelas com otimização de memória podem ser acessadas com mais eficiência
 
 Os seguintes fatores afetarão os ganhos de desempenho que podem ser obtidos com o OLTP na memória:  
   
-*Comunicação:* Um aplicativo com muitas chamadas para procedimentos armazenados curtos pode ver um ganho de desempenho menor em comparação com um aplicativo com menos chamadas e mais funcionalidade implementada em cada procedimento armazenado.  
+*Comunicação:* um aplicativo com muitas chamadas para procedimentos armazenados curtos pode ver um ganho de desempenho menor em comparação com um aplicativo com menos chamadas e mais funcionalidade implementada em cada procedimento armazenado.  
   
-*[!INCLUDE[tsql](../../includes/tsql-md.md)] Execução:* O OLTP na memória atinge o melhor desempenho usando procedimentos armazenados compilados nativamente do que usando procedimentos armazenados interpretados ou execução de consulta. Pode ser vantajoso acessar tabelas com otimização de memória de tais procedimentos armazenados.  
+*[!INCLUDE[tsql](../../includes/tsql-md.md)] :* o OLTP in-memory atinge o melhor desempenho usando procedimentos armazenados compilados de modo nativo do que usando procedimentos armazenados interpretados ou execução de consulta. Pode ser vantajoso acessar tabelas com otimização de memória de tais procedimentos armazenados.  
   
-*Varredura de intervalo x pesquisa de ponto:* Os índices não clusterizados com otimização de memória dão suporte a exames de intervalo e exames ordenados. Para pesquisas de ponto, os índices de hash com otimização de memória têm desempenho melhor que os índices não clusterizados com otimização de memória. Os índices não clusterizados com otimização de memória têm desempenho melhor que os índices baseados em disco.
+*Varredura de intervalo vs pesquisa de ponto:* os índices não clusterizados com otimização de memória dão suporte a exames de intervalo e exames ordenados. Para pesquisas de ponto, os índices de hash com otimização de memória têm desempenho melhor que os índices não clusterizados com otimização de memória. Os índices não clusterizados com otimização de memória têm desempenho melhor que os índices baseados em disco.
 
 - A partir do SQL Server 2016, o plano de consulta de uma tabela com otimização de memória pode examinar a tabela em paralelo. Isso melhora o desempenho de consultas analíticas.
   - Índices de hash também se tornaram verificáveis em paralelo no SQL Server 2016.
@@ -82,7 +82,7 @@ Os seguintes fatores afetarão os ganhos de desempenho que podem ser obtidos com
   
 *Operações de índice:* as operações de índice não são registradas e existem apenas na memória.  
   
-*Simultaneidade:* Os aplicativos cujo desempenho é afetado pela simultaneidade no nível de mecanismo, como contenção de trava ou bloqueio, melhoram significativamente quando o aplicativo é movido para OLTP na memória.  
+*Simultaneidade:* os aplicativos cujo desempenho é afetado pela simultaneidade no nível de mecanismo, como contenção de trava ou bloqueio, melhoram significativamente quando o aplicativo é movido para o OLTP in-memory.  
   
 A tabela a seguir lista os problemas de desempenho e escalabilidade que geralmente são encontrados em bancos de dados relacionais e como o OLTP na memória pode melhorar o desempenho.  
   
@@ -91,7 +91,7 @@ A tabela a seguir lista os problemas de desempenho e escalabilidade que geralmen
 |Desempenho<br /><br /> Alto uso de recursos (CPU, E/S, rede ou memória).|CPU<br /> Os procedimentos armazenados compilados nativamente podem reduzir significativamente o uso da CPU, pois exigem muito menos instruções para executar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] comparada com os procedimentos armazenados interpretados.<br /><br /> O OLTP na memória pode ajudar a reduzir o investimento de hardware em cargas de trabalho expandidas, pois um servidor pode potencialmente fornecer a taxa de transferência de cinco a dez servidores.<br /><br /> E/S<br /> Se você encontrar um gargalo de E/S, do processamento às páginas de dados ou índice, o OLTP na memória poderá reduzir esse gargalo. Além disso, o ponto de verificação de objetos OLTP na memória é contínuo e não resulta em aumentos repentinos nas operações de E/S. No entanto, se o conjunto de trabalho das tabelas críticas de desempenho não se ajustar na memória, o OLTP na memória não melhorará o desempenho, pois ele exige que os dados sejam residentes na memória. Se você encontrar um gargalo de E/S no log, o OLTP na memória poderá reduzi-lo, pois ele gera menos registros. Se uma ou mais tabelas com otimização de memória forem configuradas como tabelas não duráveis, você poderá eliminar o registro de dados.<br /><br /> Memória<br /> O OLTP na memória não oferece nenhum benefício de desempenho. Além disso, o OLTP na memória pode fazer mais pressão na memória, pois os objetos precisam ser residentes na memória.<br /><br /> Rede<br /> O OLTP na memória não oferece nenhum benefício de desempenho. Os dados precisam ser comunicados da camada de dados à camada de aplicativos.|  
 |Escalabilidade<br /><br /> A maioria dos problemas de colocação em escala nos aplicativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é causada por problemas de simultaneidade, como contenção em bloqueios, travas e spinlocks.|Contenção de trava<br /> Um cenário típico é a contenção na última página de um índice na inserção de linhas simultaneamente na ordem de chave. Como o OLTP na memória não usa travas ao acessar dados, os problemas de escalabilidade relacionados a contenções de trava são totalmente removidos.<br /><br /> Contenção de spinlock<br /> Como o OLTP na memória não usa travas ao acessar dados, os problemas de escalabilidade relacionados a contenções de spinlock são totalmente removidos.<br /><br /> Contenção relacionada ao bloqueio<br /> Se seu aplicativo de banco de dados detectar problemas de bloqueio entre operações de leitura e gravação, o OLTP na memória removerá esses problemas, pois ele usa um novo formulário de controle de simultaneidade otimista para implementar todos os níveis de isolamento de transação. O OLTP na memória não usa TempDB para armazenar versões de linha.<br /><br /> Se o problema de colocação em escala for causado por um conflito entre duas operações de gravação, como duas transações simultâneas tentando atualizar a mesma linha, o OLTP na memória permitirá que uma transação tenha êxito e que a outra falhe. A transação com falha deve ser reenviada explícita ou implicitamente, repetindo a transação. Em ambos os casos, você precisa fazer alterações no aplicativo.<br /><br /> Se seu aplicativo apresentar conflitos frequentes entre duas operações de gravação, o valor do bloqueio otimista será diminuído. O aplicativo não é apropriado para o OLTP na memória. A maioria dos aplicativos OLTP não apresenta conflitos de gravação, a menos que o conflito seja induzido pelo escalonamento de bloqueios.|  
   
-##  <a name="rls"></a> Segurança em nível de linha em tabelas com otimização de memória  
+##  <a name="row-level-security-in-memory-optimized-tables"></a><a name="rls"></a> Segurança em nível de linha em tabelas com otimização de memória  
 
 Há suporte para a[segurança em nível de linha](../../relational-databases/security/row-level-security.md) em tabelas com otimização de memória. Aplicar políticas de segurança de nível de linha a tabelas com otimização de memória é essencialmente o mesmo que fazê-lo a tabelas baseadas em disco, exceto que as funções embutidas com valor de tabela usadas como predicados de segurança devem ser compiladas nativamente (criadas usando a opção WITH NATIVE_COMPILATION). Para obter detalhes, confira a seção [Compatibilidade entre recursos](../../relational-databases/security/row-level-security.md#Limitations) do tópico [Segurança em nível de linha](../../relational-databases/security/row-level-security.md) .  
   

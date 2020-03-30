@@ -12,10 +12,10 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908765"
 ---
 # <a name="enable-and-configure-filestream"></a>Habilitar e configurar o FILESTREAM
@@ -23,7 +23,7 @@ ms.locfileid: "72908765"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Antes de começar a usar FILESTREAM, é necessário habilitá-lo na instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Este tópico descreve como habilitar o FILESTREAM usando o SQL Server Configuration Manager.  
   
-##  <a name="enabling"></a> Habilitando FILESTREAM  
+##  <a name="enabling-filestream"></a><a name="enabling"></a> Habilitando FILESTREAM  
   
 #### <a name="to-enable-and-change-filestream-settings"></a>Para habilitar e alterar configurações de FILESTREAM  
   
@@ -58,9 +58,9 @@ ms.locfileid: "72908765"
   
 13. Reinicie o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
-##  <a name="best"></a> Práticas recomendadas  
+##  <a name="best-practices"></a><a name="best"></a> Práticas recomendadas  
   
-###  <a name="config"></a> Configuração e manutenção física  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a> Configuração e manutenção física  
  Ao configurar volumes de armazenamento de FILESTREAM, considere as seguintes diretrizes:  
   
 -   Desative nomes de arquivos curtos em sistemas de computador FILESTREAM. Nomes de arquivos curtos precisam de significativamente mais tempo para serem criados. Para desabilitar nomes de arquivos curtos, use o utilitário **fsutil** do Windows.  
@@ -84,7 +84,7 @@ ms.locfileid: "72908765"
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
-###  <a name="database"></a> Design físico do banco de dados  
+###  <a name="physical-database-design"></a><a name="database"></a> Design físico do banco de dados  
  Ao criar um banco de dados de FILESTREAM, considere as seguintes diretrizes:  
   
 -   As colunas de FILESTREAM devem ser acompanhadas por uma coluna correspondente **uniqueidentifier**ROWGUID. Esses tipos de tabelas também devem ser acompanhados por um índice exclusivo. Normalmente esse índice não é um índice clusterizado. Se a lógica corporativa do bancos de dados exigir um índice clusterizado, você precisará verificar se os valores armazenados no índice não são aleatórios. Valores aleatórios farão com que o índice seja reorganizado toda vez que uma linha for adicionada ou removida da tabela.  

@@ -11,10 +11,10 @@ ms.assetid: b063f191-175e-4430-aab7-d88907f4ebec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 303742b8e7b7bf8221565e09cf23d2e18cdca8de
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970949"
 ---
 # <a name="sqlservernclob-members"></a>Membros SQLServerNClob
@@ -33,7 +33,7 @@ ms.locfileid: "67970949"
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[gratuito](../../../connect/jdbc/reference/free-method-sqlservernclob.md)|Esse método libera o objeto **NCLOB** e os recursos que ele contém.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|Recupera o valor **NCLOB** designado pelo objeto **java.sql.NClob** como um fluxo ASCII.|  

@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981936"
 ---
 # <a name="create-a-database-user"></a>Criar um usuário de banco de dados
@@ -38,7 +38,7 @@ ms.locfileid: "73981936"
   
  Você pode criar um usuário de banco de dados usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-##  <a name="Understanding"></a> Noções básicas sobre os tipos de usuários  
+##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> Noções básicas sobre os tipos de usuários  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] apresenta seis opções ao criar um usuário de banco de dados. O gráfico a seguir mostra as seis opções na caixa verde e indica o que elas representam.  
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
@@ -56,17 +56,17 @@ ms.locfileid: "73981936"
   
 > **DICA!** Para as pessoas da sua organização, a autenticação do Windows é uma opção melhor, pois eles não precisam lembrar uma senha adicional e a autenticação do Windows oferece recursos de segurança adicionais, como o Kerberos.  
   
-##  <a name="Restrictions"></a> Plano de fundo  
+##  <a name="background"></a><a name="Restrictions"></a> Plano de fundo  
  Um usuário é uma entidade de segurança no nível de banco de dados. Logons devem ser mapeados para um usuário de banco de dados para ser conectados a um banco de dados. Um logon pode ser mapeado para bancos de dados diferentes como usuários diferentes, mas pode ser mapeado somente como um usuário em cada banco de dados. Em um banco de dados parcialmente independente, um usuário pode ser criado sem logon. Para obter mais informações sobre os usuários de banco de dados independente, veja [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Se o usuário convidado em um banco de dados estiver habilitado, um logon que não estiver mapeado para um usuário de banco de dados poderá acessar o banco de dados como um usuário convidado.  
   
 > **IMPORTANTE:** O usuário convidado normalmente é desabilitado. Não habilite o usuário convidado, a menos que seja necessário.  
   
  Como uma entidade de segurança, permissões podem ser concedidas a usuários. O escopo de um usuário é o banco de dados. Para se conectar a um banco de dados específico na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um logon deve ser mapeado para um usuário de banco de dados. Permissões, e não o logon, são concedidas dentro do banco de dados e são negadas ao usuário de banco de dados.  
   
-##  <a name="Permissions"></a> Permissões  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão **ALTER ANY USER** no banco de dados.  
   
-##  <a name="SSMSProcedure"></a> Criar um usuário com o SSMS  
+##  <a name="create-a-user-with-ssms"></a><a name="SSMSProcedure"></a> Criar um usuário com o SSMS  
   
  
 1.  No Pesquisador de Objetos, expanda a pasta **Bancos de Dados** .  
@@ -140,7 +140,7 @@ ms.locfileid: "73981936"
      **Delete (excluir)**  
      Remove a propriedade estendida selecionada.  
   
-##  <a name="TsqlProcedure"></a> Criar um usuário usando o T-SQL  
+##  <a name="create-a-user-using-t-sql"></a><a name="TsqlProcedure"></a> Criar um usuário usando o T-SQL  
     
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

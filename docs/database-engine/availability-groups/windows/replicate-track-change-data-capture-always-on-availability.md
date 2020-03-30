@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e2a794a7e5bdafe4e07b5e7deb9a1007e4a7e73
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f1920374f62f98eed81323eca05ce1e45e66fc6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75235387"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433753"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replicação, controle de alterações e Change Data Capture – grupos de disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Há suporte para a replicação, a CDC (captura de dados de alteração) e o CT (controle de alterações) no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornece alta disponibilidade e recursos adicionais de recuperação de banco de dados.  
   
-##  <a name="Overview"></a> Visão geral da replicação com grupos de disponibilidade  
+##  <a name="overview-of-replication-with-availability-groups"></a><a name="Overview"></a> Visão geral da replicação com grupos de disponibilidade  
   
-###  <a name="PublisherRedirect"></a> Redirecionamento do publicador  
+###  <a name="publisher-redirection"></a><a name="PublisherRedirect"></a> Redirecionamento do publicador  
  Quando um banco de dados publicado reconhecer o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], o distribuidor que fornece ao agente acesso a esse banco de dados será configurado com as entradas de redirected_publishers. Essas entradas redirecionam o par de publicador/banco de dados configurado originalmente, usando um nome do ouvinte do grupo de disponibilidade para conectar-se ao publicador e ao banco de dados de publicação. Haverá falha no failover das conexões estabelecidas pelo nome do ouvinte do grupo de disponibilidade. Quando o agente de replicação for reiniciado depois do failover, a conexão será automaticamente redirecionada para o novo primário.  
   
  Em um grupo de disponibilidade, um banco de dados secundário não pode ser um distribuidor. Há suporte para a republicação apenas quando a replicação transacional é combinada com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
@@ -39,7 +39,7 @@ ms.locfileid: "75235387"
 > [!NOTE]  
 >  Após o failover em uma replica secundária, o Replication Monitor não poderá ajustar o nome da instância de publicação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e continuará exibindo informações de replicação abaixo do nome da instância primária original do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Depois do failover, um token de rastreamento não pode ser inserido usando o Replication Monitor; porém um token de rastreamento inserido no novo publicador usando [!INCLUDE[tsql](../../../includes/tsql-md.md)]é visível no Replication Monitor.  
   
-###  <a name="Changes"></a> Alterações gerais nos agentes de replicação para dar suporte a grupos de disponibilidade  
+###  <a name="general-changes-to-replication-agents-to-support-availability-groups"></a><a name="Changes"></a> Alterações gerais nos agentes de replicação para dar suporte a grupos de disponibilidade  
  Três agentes de replicação foram modificados para dar suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. O Leitor de Log, o Instantâneo e os Agentes de mesclagem foram modificados para consultar o banco de dados de distribuição para o publicador redirecionado e para usar o nome do ouvinte do grupo de disponibilidade retornado, se um publicador redirecionado tiver sido declarado, para conectar-se ao publicador de banco de dados.  
   
  Por padrão, quando os agentes consultam o distribuidor para determinar se o publicador original foi redirecionado, é verificada a adequação do destino atual ou o redirecionamento antes de retornar o host redirecionado ao agente. Este é o comportamento recomendado. No entanto, se a inicialização do agente ocorrer com muita frequência, a sobrecarga associada com o procedimento armazenado de validação poderá ser considerada muito cara. Uma nova opção de linha de comando, *BypassPublisherValidation*, foi adicionada aos agentes de Leitor de Log, Instantâneo e Mesclagem. Quando o comutador é usado, o publicador redirecionado é retornado imediatamente ao agente e a execução do procedimento armazenado de validação é ignorada.  
@@ -59,7 +59,7 @@ ms.locfileid: "75235387"
   
      O sinalizador de rastreamento 1448 permite que o leitor de log de replicação avance, mesmo se as réplicas secundárias assíncronas não tiverem confirmado a recepção de uma alteração. Mesmo com esse sinalizador de rastreamento habilitado, o leitor de log sempre aguardará as réplicas secundárias síncronas. O leitor de log não ultrapassará o reconhecimento mínimo das réplicas secundárias síncronas. Ele se aplica à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], e não apenas a um grupo de disponibilidade, um banco de dados de disponibilidade ou uma instância do leitor de log. Esse sinalizador de rastreamento entrará em vigor imediatamente, sem reinicialização. Ele pode ser ativado antecipadamente ou quando uma réplica secundária assíncrona apresentar falha.  
   
-###  <a name="StoredProcs"></a> Procedimentos armazenados que dão suporte a grupos de disponibilidade  
+###  <a name="stored-procedures-supporting-availability-groups"></a><a name="StoredProcs"></a> Procedimentos armazenados que dão suporte a grupos de disponibilidade  
   
 -   **sp_redirect_publisher**  
   
@@ -81,7 +81,7 @@ ms.locfileid: "75235387"
   
      Esse procedimento armazenado sempre é executado manualmente. O chamador deve ser **sysadmin** no distribuidor, **dbowner** do banco de dados de distribuição ou membro da **Lista de Acesso à Publicação** de uma publicação do banco de dados publicador. Além disso, o logon do chamador deve ser válido para todos os hosts de réplica de disponibilidade e ter privilégios selecionados no banco de dados de disponibilidade associado ao banco de dados publicador.  
   
-###  <a name="CDC"></a> Change Data Capture  
+###  <a name="change-data-capture"></a><a name="CDC"></a> Change Data Capture  
  Os bancos de dados habilitados para CDC (Change Data Capture) podem utilizar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para garantir não apenas que o banco de dados permaneça disponível em caso de falha, mas que as alterações nas tabelas de banco de dados continuem sendo monitoradas e depositadas nas tabelas de alterações de CDC. A ordem na qual o CDC e o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] são configurados não é importante. Os bancos de dados habilitados para CDC podem ser adicionados ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], e os bancos de dados que são membros de um grupo de disponibilidade AlwaysOn podem ser habilitados para CDC. Porém, nos dois casos, a configuração de CDC sempre é executada na réplica primária atual ou pretendida. O CDC usa o agente de leitor de log e tem as mesmas restrições descritas na seção **Modificações do Agente de Leitor de Log** , apresentada anteriormente neste tópico.  
   
 -   **Colhendo alterações para o Change Data Capture sem replicação**  
@@ -123,7 +123,7 @@ ms.locfileid: "75235387"
   
     -   O outro garante que as solicitações de conexão sejam direcionadas para uma réplica secundária somente leitura.  
   
-     Se for usado para localizar uma réplica secundária somente leitura, uma lista de roteamento somente leitura também deverá ser definida para o grupo de disponibilidade. Para obter mais informações sobre roteamento do acesso a secundários legíveis, consulte [Para configurar réplicas de disponibilidade para roteamento somente leitura](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConfigureARsForROR).  
+     Se for usado para localizar uma réplica secundária somente leitura, uma lista de roteamento somente leitura também deverá ser definida para o grupo de disponibilidade. Para obter mais informações sobre roteamento do acesso a secundários legíveis, consulte [Para configurar réplicas de disponibilidade para roteamento somente leitura](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).  
   
     > [!NOTE]  
     >  Há algum atraso de propagação associado à criação de um nome do ouvinte do grupo de disponibilidade e seu uso por aplicativos cliente para acessar uma réplica de banco de dados do grupo de disponibilidade.  
@@ -177,7 +177,7 @@ Se o Change Data Capture precisar ser desabilitado em um banco de dados que faz 
     - Reiniciar o serviço SQL Server em cada instância da réplica secundária
     - OU remover o banco de dados de todas as instâncias da réplica secundária do Grupo de Disponibilidade e adicioná-lo às instâncias da réplica do Grupo de Disponibilidade usando a propagação automática ou manual
   
-###  <a name="CT"></a> Controle de alterações  
+###  <a name="change-tracking"></a><a name="CT"></a> Controle de alterações  
  Um banco de dados habilitado para CT (controle de alterações) pode fazer parte de um grupo de disponibilidade AlwaysOn. Nenhuma configuração adicional é necessária. Os aplicativos cliente de controle de alterações que usam as TVFs (funções com valor de tabela) de CDC para acessar dados de alteração também precisarão localizar a réplica primária após o failover. Se o aplicativo cliente é conectado por meio do nome do ouvinte do grupo de disponibilidade, as solicitações de conexão serão sempre direcionadas corretamente para a réplica primária atual.  
   
 > [!NOTE]  
@@ -187,7 +187,7 @@ Se o Change Data Capture precisar ser desabilitado em um banco de dados que faz 
 >   
 >  Não há suporte para o controle de alterações nos bancos de dados que são membros de uma réplica secundária (ou seja, para bancos de dados secundários). Execute consultas de controle de alterações nos bancos de dados na réplica primária.  
   
-##  <a name="Prereqs"></a> Pré-requisitos, restrições e considerações para usar replicação  
+##  <a name="prerequisites-restrictions-and-considerations-for-using-replication"></a><a name="Prereqs"></a> Pré-requisitos, restrições e considerações para usar replicação  
  Esta seção descreve as considerações para implantar a replicação com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], incluindo pré-requisitos, restrições e recomendações.  
   
 ### <a name="prerequisites"></a>Prerequisites  
@@ -223,7 +223,7 @@ Se o Change Data Capture precisar ser desabilitado em um banco de dados que faz 
   
 -   Os metadados e os objetos que existem fora do banco de dados não são propagados para as réplicas secundárias, inclusive logons, trabalhos, servidores vinculados. Se você precisar dos metadados e dos objetos no novo banco de dados primário após o failover, copie-os manualmente. Para obter mais informações, consulte [Gerenciamento de logons e trabalhos para os bancos de dados de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Replicação**  
   
 -   [Configurar a replicação para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  

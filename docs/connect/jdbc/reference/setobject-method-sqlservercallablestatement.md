@@ -16,10 +16,10 @@ ms.assetid: 7110f6c5-4af3-4b50-a4d4-1bae1876c70d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdd1912a04c503b59064a0e39859a5845c4c6b0d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973306"
 ---
 # <a name="setobject-method-sqlservercallablestatement"></a>Método setObject (SQLServerCallableStatement)
@@ -33,7 +33,7 @@ ms.locfileid: "67973306"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[setObject (java.lang.String, java.lang.Object)](../../../connect/jdbc/reference/setobject-method-java-lang-string-java-lang-object.md)|Define o valor do parâmetro designado usando o objeto fornecido.|  
 |[setObject (java.lang.String, java.lang.Object, int)](../../../connect/jdbc/reference/setobject-method-java-lang-string-java-lang-object-int.md)|Define o valor do parâmetro designado usando o objeto e o tipo de destino fornecidos.|  

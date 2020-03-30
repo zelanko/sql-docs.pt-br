@@ -11,10 +11,10 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67942804"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidade de tabelas com otimização de memória
@@ -41,7 +41,7 @@ ms.locfileid: "67942804"
   
  Quando uma linha é excluída ou atualizada, ela não é removida, nem alterada no local no arquivo de dados, mas as linhas excluídas são rastreadas em outro tipo de arquivo: o arquivo delta. As operações de atualização são processadas como uma tupla de operações de exclusão e inserção para cada linha. Isso elimina a E/S aleatória no arquivo de dados.  
  
-   Tamanho: Cada arquivo de dados é dimensionado aproximadamente para 128MB para computadores com mais memória que 16GB e 16MB para computadores com menos que ou igual a 16GB. No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , o SQL Server pode usar o modo de ponto de verificação grande se considerar que o subsistema de armazenamento é rápido o suficiente. No modo de ponto de verificação grande, os arquivos de dados são dimensionados em 1 GB. Isso permite uma maior eficiência no subsistema de armazenamento para cargas de trabalho com alta taxa de transferência.  
+   Tamanho: cada arquivo de dados é dimensionado aproximadamente para 128 MB para computadores com mais memória que 16 GB e 16 MB para computadores com menos que ou igual a 16 GB. No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , o SQL Server pode usar o modo de ponto de verificação grande se considerar que o subsistema de armazenamento é rápido o suficiente. No modo de ponto de verificação grande, os arquivos de dados são dimensionados em 1 GB. Isso permite uma maior eficiência no subsistema de armazenamento para cargas de trabalho com alta taxa de transferência.  
    
 ### <a name="the-delta-file"></a>O arquivo delta  
  Cada arquivo de dados é emparelhado com um arquivo delta que tem o mesmo intervalo de transações e rastreia as linhas excluídas inseridas por transações nesse intervalo. Estes arquivos de dados e delta são chamados de Par de Arquivos de Ponto de Verificação (CFP) e são a unidade da alocação e deslocamento, bem como a unidade de operações de Mesclagem. Por exemplo, um arquivo delta correspondente ao intervalo de transações (100, 200) armazenará as linhas excluídas que foram inseridas por transações no intervalo (100, 200). Assim como os arquivos de dados, o arquivo delta é acessado sequencialmente.  
@@ -49,7 +49,7 @@ ms.locfileid: "67942804"
  Quando uma linha é excluída, ela não é removida do arquivo de dados, mas uma referência a ela é anexada ao arquivo delta associado ao intervalo de transações em que essa linha de dados foi inserida. Como a linha de dados a ser excluída já existe no arquivo de dados, o arquivo delta armazena apenas as informações de referência `{inserting_tx_id, row_id, deleting_tx_id }` e segue a ordem do log transacional das operações de exclusão ou atualização originais.  
   
 
- Tamanho: cada arquivo delta é dimensionado aproximadamente para 16 MB para computadores com mais memória que 16 GB e 1 MB para computadores com menos que ou igual a 16 GB. A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , o SQL Server pode usar o modo de ponto de verificação grande se considerar que o subsistema de armazenamento é rápido o suficiente. No modo de ponto de verificação grande, os arquivos delta são dimensionados em 128 MB.  
+ Tamanho: cada arquivo de dados é dimensionado aproximadamente para 16 MB para computadores com mais memória que 16 GB e 1 MB para computadores com menos que ou igual a 16 GB. A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , o SQL Server pode usar o modo de ponto de verificação grande se considerar que o subsistema de armazenamento é rápido o suficiente. No modo de ponto de verificação grande, os arquivos delta são dimensionados em 128 MB.  
  
 ## <a name="populating-data-and-delta-files"></a>Populando arquivos de dados e delta  
  Os arquivos delta e de dados são populados com base nos registros do log de transações gerados por transações confirmadas em tabelas com otimização de memória e anexa informações sobre as linhas inseridas e excluídas em arquivos delta e de dados apropriados. Diferentemente das tabelas baseadas em disco, nas quais páginas de dados/índice são liberadas com E/S aleatória quando o ponto de verificação é realizado, a persistência da tabela com otimização de memória é uma operação em segundo plano contínua. Vários arquivos delta são acessados, pois uma transação pode excluir ou atualizar qualquer linha que foi inserida por qualquer transação anterior. As informações de exclusão sempre são anexadas no final do arquivo delta. Por exemplo, uma transação com um carimbo de data/hora de confirmação de 600 insere uma linha nova e exclui linhas inseridas por transações com um carimbo de data/hora de confirmação de 150, 250 e 450, conforme mostrado na imagem a seguir. As quatro operações de E/S de arquivo (três para linhas excluídas e uma para as linhas recentemente inseridas) são operações somente de acréscimo nos arquivos delta e de dados correspondentes.  
@@ -86,7 +86,7 @@ ms.locfileid: "67942804"
   
  Um thread de segundo plano avalia todos os CFPs fechados usando uma política de mesclagem e, em seguida, inicia uma ou mais solicitações de mesclagem para os CFPs de qualificação. Essas solicitações de mesclagem são processadas pelo thread de ponto de verificação offline. A avaliação da política de mesclagem é feita periodicamente e também quando um ponto de verificação é fechado.  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-merge-policy"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Política de mesclagem  
+### <a name="ssnoversion-merge-policy"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Política de mesclagem  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa a seguinte política de mesclagem:  
   
 -   Uma mesclagem será agendada se dois ou mais CFPs consecutivos puderem ser consolidados, após a contagem das linhas excluídas, para que as linhas resultantes possam caber em um CFP do tamanho de destino. O tamanho de destino dos arquivos delta e de dados corresponde ao dimensionamento original, conforme descrito acima.  

@@ -22,10 +22,10 @@ ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f666a327db29468c5bbd91bf7106d7c6e4f61f64
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67929042"
 ---
 # <a name="set-fips_flagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
@@ -47,7 +47,7 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
   
  *level* deve ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |ENTRY|Verificação dos padrões com relação à conformidade do nível de entrada do ISO.|  
 |FULL|Verificação dos padrões com relação à conformidade total com o ISO.|  

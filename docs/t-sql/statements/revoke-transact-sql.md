@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 84271c14e5768728c877b78b63b599d5ef352ecd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74909034"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
@@ -159,7 +159,7 @@ O uso de AS nessa instrução não implica a capacidade de representar outro usu
   
  Os usuários autorizados da permissão CONTROL SERVER, como os membros da função de servidor fixa sysadmin, podem revogar qualquer permissão em qualquer protegível do servidor. Os usuários autorizados da permissão CONTROL em um banco de dados, como os membros da função de banco de dados fixa db_owner, podem revogar qualquer permissão para qualquer item de segurança do banco de dados. Os usuários autorizados da permissão CONTROL em um esquema podem revogar qualquer permissão em qualquer objeto dentro do esquema.  
   
-##  <a name="securable"></a> Sintaxe específica de protegível  
+##  <a name="securable-specific-syntax"></a><a name="securable"></a> Sintaxe específica de protegível  
  A tabela a seguir lista os protegíveis e os tópicos que descrevem a sintaxe específica a protegíveis.  
   
 |Protegível|Tópico|  

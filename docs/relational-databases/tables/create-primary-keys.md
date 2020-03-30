@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e1f9d94f1ddf6f6d3e9a8ce73a263790acc516de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76259384"
 ---
 # <a name="create-primary-keys"></a>Criar chaves primárias
@@ -26,23 +26,23 @@ ms.locfileid: "76259384"
 
 Você pode definir uma chave primária no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A criação de uma chave primária cria automaticamente um índice clusterizado correspondente exclusivo ou um índice não clusterizado, caso seja especificado dessa forma.
 
-## <a name="BeforeYouBegin"></a> Antes de começar
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar
 
-### <a name="Restrictions"></a> Limitações e restrições
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições
 
 - Uma tabela pode conter apenas uma restrição PRIMARY KEY.
 
 - Todas as colunas definidas em uma restrição PRIMARY KEY devem ser definidas como NOT NULL. Se a nulidade não for especificada, todas as colunas participantes de uma restrição FOREIGN KEY devem ter sua nulidade definida como NOT NULL.
 
-### <a name="Security"></a> Segurança
+### <a name="security"></a><a name="Security"></a> Segurança
 
-#### <a name="Permissions"></a> Permissões
+#### <a name="permissions"></a><a name="Permissions"></a> Permissões
 
 A criação de uma nova tabela com uma chave primária requer a permissão CREATE TABLE no banco de dados e a permissão ALTER no esquema no qual a tabela está sendo criada.
 
 Criar uma chave primária em uma tabela existente requer a permissão ALTER na tabela.
 
-## <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio
 
 ### <a name="to-create-a-primary-key"></a>Para criar uma chave primária
 
@@ -59,7 +59,7 @@ Se uma chave primária consistir em mais de uma coluna, serão permitidos valore
 
 Se você definir uma chave combinada, a ordem das colunas na chave primária corresponderá à ordem das colunas, como é mostrado na tabela. Entretanto, você poderá alterar a ordem de colunas depois que a chave primária for criada. Para obter mais informações, veja [Modificar chaves primárias](../../relational-databases/tables/modify-primary-keys.md).
 
-## <a name="TsqlProcedure"></a> Usando o Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL
 
 ### <a name="to-create-a-primary-key-in-an-existing-table"></a>Para criar uma chave primária em uma tabela existente
 

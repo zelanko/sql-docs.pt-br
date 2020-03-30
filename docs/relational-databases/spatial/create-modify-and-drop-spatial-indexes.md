@@ -18,10 +18,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048712"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Criar, modificar e remover índices espaciais
@@ -33,9 +33,9 @@ ms.locfileid: "68048712"
 > [!NOTE]  
 >  Para obter informações sobre a relação de índices espaciais com a partição e os grupos de arquivos, consulte a seção "Comentários" em [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md).  
   
-##  <a name="creating"></a> Criando, modificando e removendo índices espaciais  
+##  <a name="creating-modifying-and-dropping-spatial-indexes"></a><a name="creating"></a> Criando, modificando e removendo índices espaciais  
   
-###  <a name="create"></a> Para criar um índice espacial  
+###  <a name="to-create-a-spatial-index"></a><a name="create"></a> Para criar um índice espacial  
  **Para criar um índice espacial com o Transact-SQL**  
  [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68048712"
 5.  Selecione o novo índice na lista **Índice Espacial Selecionado** e, na grade à direita, defina as propriedades do índice espacial. Para obter informações sobre as propriedades, consulte [Caixa de diálogo Índices Espaciais &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f).  
   
   
-###  <a name="alter"></a> Para alterar um índice espacial  
+###  <a name="to-alter-a-spatial-index"></a><a name="alter"></a> Para alterar um índice espacial  
   
 -   [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "68048712"
 -   [Mover um índice existente para um grupo de arquivos diferente](../../relational-databases/indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
   
-###  <a name="drop"></a> Para descartar um índice espacial  
+###  <a name="to-drop-a-spatial-index"></a><a name="drop"></a> Para descartar um índice espacial  
  **Para descartar um índice espacial com o Transact-SQL**  
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68048712"
 4.  Clique em **Excluir**.  
   
   
-##  <a name="restrictions"></a> Restrições em índices espaciais  
+##  <a name="restrictions-on-spatial-indexes"></a><a name="restrictions"></a> Restrições em índices espaciais  
  Um índice espacial pode ser criado apenas em uma coluna do tipo **geometria** ou **geografia**.  
   
 ### <a name="table-and-view-restrictions"></a>Restrições de tabela e de exibição  

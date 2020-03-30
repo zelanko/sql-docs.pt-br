@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909888"
 ---
 # <a name="get-information-about-a-view"></a>Obter informações sobre uma exibição
@@ -48,14 +48,14 @@ ms.locfileid: "72909888"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Usar `sp_helptext` para retornar a definição de uma exibição exige associação à função **pública** . Usar `sys.sql_expression_dependencies` para localizar todas as dependências em uma exibição exige a permissão VIEW DEFINITION no banco de dados e a permissão SELECT em `sys.sql_expression_dependencies` para o banco de dados. As definições de objeto de sistema, como as retornadas em SELECT OBJECT_DEFINITION, são publicamente visíveis.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>Obter as propriedades da exibição usando o Pesquisador de Objetos  
   
@@ -177,7 +177,7 @@ ms.locfileid: "72909888"
   
 4.  Selecione **Objetos dos quais [nome da exibição] depende** para ver os objetos que são referenciados pela exibição.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>Para obter a definição e as propriedades de uma exibição  
   

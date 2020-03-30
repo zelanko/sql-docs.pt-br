@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a80b90f30ce2b304bd7bbb0229f172407589d3c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571548"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Gerenciador de Alertas de dados para administradores de alertas
@@ -41,7 +41,7 @@ O SQL Server Reporting Services fornece o Gerenciador de Alertas de Dados para o
 > [!NOTE]  
 >  Como um administrador de alertas, você pode conceder permissão a operadores de informações para acessar os recursos de alertas de dados [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Para obter mais informações sobre as permissões necessárias, consulte [Alertas de dados do Reporting Services](../reporting-services/reporting-services-data-alerts.md).  
   
-##  <a name="ViewingAlerts"></a> Exibindo informações de alertas de dados  
+##  <a name="viewing-data-alert-information"></a><a name="ViewingAlerts"></a> Exibindo informações de alertas de dados  
  Quando o Reporting Services está instalado e configurado no SharePoint, a página Configurações do Site do SharePoint inclui as opções do **Reporting Services** . Os administradores de alerta clicam na opção **Gerenciar Alertas de Dados** dentro do Reporting Services para abrir o Gerenciador de Alertas de Dados. A imagem a seguir mostra de onde na página Configurações do Site você abre o Gerenciador de Alertas de Dados.  
   
  ![Seção Reporting Services da página Configurações de Site](../reporting-services/media/rs-sitesettings.gif "Seção Reporting Services da página Configurações de Site")  
@@ -54,7 +54,7 @@ O SQL Server Reporting Services fornece o Gerenciador de Alertas de Dados para o
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|O último alerta foi executado com êxito e o alerta foi enviado.|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|O último alerta foi executado com êxito, mas os dados estavam inalterados e nenhum alerta foi enviado.|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<error message>O arquivo de log contém informações detalhadas sobre o erro. Veja a entrada de log com o identificador: \<GUID>.|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<error message>O arquivo de log contém informações detalhadas sobre o erro. Consulte a entrada de log com o identificador: \<GUID>.|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|Alertas criados.|  
   
  Para obter mais informações, consulte [Gerenciar todos os alertas de dados em um site do SharePoint no Gerenciador de Alertas de Dados](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
@@ -62,7 +62,7 @@ O SQL Server Reporting Services fornece o Gerenciador de Alertas de Dados para o
  É possível exibir todos os alertas criados pelos usuários do site. Você escolhe um usuário e, em seguida, escolhe se deseja exibir todos os alertas do usuário ou apenas alertas para um relatório específico.  
   
   
-##  <a name="DeleteAlerts"></a> Excluir alertas de dados  
+##  <a name="delete-data-alerts"></a><a name="DeleteAlerts"></a> Excluir alertas de dados  
  Você exclui definições de alertas no Gerenciador de Alertas de Dados. Toda definição de alerta de dados tem um proprietário, o usuário do SharePoint que a criou. Os proprietários podem excluir apenas as definições de alertas que criaram. Para obter mais informações, consulte [Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
  A. Os administradores de alerta do SharePoint podem listar e, em seguida, excluir definições de alertas criadas por todos os usuários do site. Para obter mais informações, consulte [Gerenciar todos os alertas de dados em um site do SharePoint Site no Gerenciador de Alertas de Dados](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
@@ -70,7 +70,7 @@ O SQL Server Reporting Services fornece o Gerenciador de Alertas de Dados para o
  Depois que você excluir a definição de alerta, nenhum alerta adicional será enviado. No entanto, se você consultar o banco de dados de alertas, talvez descubra que a definição de alerta ainda existe. O serviço de alerta executa a limpeza de acordo com uma agenda e a definição de alerta será excluída permanentemente na próxima limpeza. O intervalo de limpeza padrão é de 20 minutos. Esse e outros intervalos de limpeza são configuráveis. Para obter mais informações, consulte [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)[Alertas de dados do Reporting Services].  
   
   
-##  <a name="HowTo"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="HowTo"></a> Tarefas relacionadas  
  Esta seção lista um procedimento que mostra como gerenciar seus alertas.  
   
 -   [Gerenciar todos os alertas de dados em um site do SharePoint no Gerenciador de Alertas de Dados](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  

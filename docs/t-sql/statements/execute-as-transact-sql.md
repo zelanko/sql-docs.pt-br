@@ -25,10 +25,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287831"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
@@ -109,7 +109,7 @@ Quando usado fora de um módulo, a instrução não tem nenhuma ação.
   
 Você pode criar uma pilha de contexto de execução chamando a instrução EXECUTE AS várias vezes em várias entidades. Quando chamada, a instrução REVERT alterna o contexto para o logon ou usuário no próximo nível acima da pilha de contexto. Para obter uma demonstração desse comportamento, veja o [Exemplo A](#_exampleA).  
   
-##  <a name="_user"></a> Especificando um nome de logon ou usuário  
+##  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a> Especificando um nome de logon ou usuário  
  O nome de usuário ou de logon especificado em EXECUTE AS \<context_specification> deve existir como uma entidade de segurança em **sys.database_principals** ou **sys.server_principals**, respectivamente, caso contrário, a instrução EXECUTE AS falhará. Além disso, as permissões IMPERSONATE devem ser concedidas na entidade de segurança. A menos que o chamador seja o proprietário do banco de dados ou membro da função de servidor fixa **sysadmin**, a entidade de segurança deverá existir quando o usuário estiver acessando o banco de dados ou a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de uma associação de grupo do Windows. Por exemplo, considere as seguintes condições: 
   
 -   O grupo **CompanyDomain\SQLUsers** tem acesso ao banco de dados **Sales**.  
@@ -141,7 +141,7 @@ Se o usuário ficou órfão (o logon associado não existe mais) e ele não foi 
   
 ## <a name="examples"></a>Exemplos  
   
-###  <a name="_exampleA"></a> A. Usando EXECUTE AS e REVERT para alternar o contexto  
+###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. Usando EXECUTE AS e REVERT para alternar o contexto  
  O exemplo a seguir cria uma pilha de execução de contexto usando várias entidades. A instrução `REVERT` é usada para redefinir o contexto de execução para o chamador anterior. A instrução `REVERT` é executada várias vezes movendo a pilha para cima até o contexto de execução ser definido como o chamador original.  
   
 ```  

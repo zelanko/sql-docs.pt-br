@@ -15,10 +15,10 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 64f427de0a2b2735671a885ca550c76386ce0177
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991498"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>Adicione um banco de dados a um grupo de disponibilidade Always On
@@ -34,10 +34,10 @@ ms.locfileid: "67991498"
 -   O banco de dados deve residir na instância do servidor que hospeda a réplica primária e atender aos pré-requisitos e restrições para bancos de dados de disponibilidade. Para obter mais informações, veja [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
  
-##  <a name="Permissions"></a> Permissões  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usar o SQL Server Management Studio  
+##  <a name="use-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usar o SQL Server Management Studio  
 
   
 1.  No Pesquisador de Objetos, conecte-se à instância de servidor que hospeda a réplica primária e expanda a árvore de servidores.  
@@ -58,7 +58,7 @@ ms.locfileid: "67991498"
   
          Depois que você usar a caixa de diálogo **Propriedades do Grupo de Disponibilidade** para adicionar um banco de dados a um grupo de disponibilidade, configure o banco de dados secundário correspondente em cada instância de servidor que hospeda uma réplica secundária. Para obter mais informações, veja [Iniciar movimentação de dados em um banco de dados secundário &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="TsqlProcedure"></a> Usar o Transact-SQL  
+##  <a name="use-transact-sql"></a><a name="TsqlProcedure"></a> Usar o Transact-SQL  
 
   
 1.  Conecte-se à instância de servidor que hospeda a instância do servidor que hospeda a réplica primária.    
@@ -79,7 +79,7 @@ ms.locfileid: "67991498"
   
 3.  Depois que você adicionar um banco de dados a um grupo de disponibilidade, configure o banco de dados secundário correspondente em cada instância de servidor que hospeda uma réplica secundária. Para obter mais informações, veja [Iniciar movimentação de dados em um banco de dados secundário &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="PowerShellProcedure"></a> Usar o PowerShell  
+##  <a name="use-powershell"></a><a name="PowerShellProcedure"></a> Usar o PowerShell  
 
   
 1.  Altere o diretório (**cd**) para a instância de servidor que hospeda a réplica primária.  
@@ -106,7 +106,7 @@ ms.locfileid: "67991498"
   
  Para obter um exemplo completo, consulte [Exemplo (PowerShell)](#PSExample), abaixo.  
   
-###  <a name="PSExample"></a> Exemplo (PowerShell)  
+###  <a name="example-powershell"></a><a name="PSExample"></a> Exemplo (PowerShell)  
  O exemplo a seguir mostra o processo completo para preparar um banco de dados secundário de um banco de dados na instância de servidor que hospeda a réplica primária de um grupo de disponibilidade, adicionando o banco de dados a um grupo de disponibilidade (como um banco de dados primário) e unindo o banco de dados secundário ao grupo de disponibilidade. Primeiro, o exemplo faz backup do banco de dados e de seu log de transação. Em seguida, o exemplo restaura os backups de banco de dados e log para as instâncias de servidor que hospedam uma réplica secundária.  
   
  O exemplo chama **Add-SqlAvailabilityDatabase** duas vezes. Primeiro, na réplica primária, para adicionar o banco de dados ao grupo de disponibilidade. Em seguida, na réplica secundária, para unir o banco de dados secundário nessa réplica ao grupo de disponibilidade. Se você tiver mais de uma réplica secundária, restaure e junção una o banco de dados secundário em cada um deles.  

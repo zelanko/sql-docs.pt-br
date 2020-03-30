@@ -16,10 +16,10 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287200"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Executar um failover manual planejado de um grupo de disponibilidade Always On (SQL Server)
@@ -31,12 +31,12 @@ Um failover manual planejado é compatível apenas quando a réplica primária e
 > [!NOTE]  
 >  Se as réplicas secundárias e primárias estiverem configuradas para o modo de failover automático, depois que a réplica secundária for sincronizada, ela também poderá servir como o destino de um failover automático. Para obter mais informações, veja [Modos de disponibilidade &#40;grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
    
-##  <a name="BeforeYouBegin"></a> Antes de começar 
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar 
 
 >[!IMPORTANT]
 >Existem procedimentos específicos para fazer failover de um grupo de disponibilidade de escala de leitura sem nenhum gerenciador de cluster. Quando um grupo de disponibilidade tiver CLUSTER_TYPE = NONE, siga os procedimentos em [Fazer failover da réplica primária em um grupo de disponibilidade de escala de leitura](#fail-over-the-primary-replica-on-a-read-scale-availability-group).
 
-###  <a name="Restrictions"></a> Limitações e restrições 
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições 
   
 - Um comando de failover é retornado assim que a réplica secundária de destino aceitar o comando. No entanto, a recuperação de banco de dados ocorre de forma assíncrona depois que o grupo de disponibilidade terminar o failover. 
 - A consistência do banco de dados entre bancos de dados dentro do grupo de disponibilidade pode não ser mantida no failover. 
@@ -44,7 +44,7 @@ Um failover manual planejado é compatível apenas quando a réplica primária e
     > [!NOTE] 
     >  O suporte a transações distribuídas e bancos de dados varia de acordo com o SQL Server e versões do sistema operacional. Para obter mais informações, veja [Transações entre bancos de dados e transações distribuídas para espelhamento de banco de dados e de grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md). 
   
-###  <a name="Prerequisites"></a> Pré-requisitos e restrições 
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> Pré-requisitos e restrições 
   
 -   A réplica secundária de destino e a réplica primária devem estar executando em modo de disponibilidade de confirmação síncrona. 
 -   Nesse momento, a réplica secundária de destino deve estar sincronizada com a réplica primária. Todos os bancos de dados secundários nessa réplica secundária devem estar unidos no grupo de disponibilidade. Eles também devem estar sincronizados com os bancos de dados primários correspondentes (isto é, os bancos de dados secundários locais devem ser SINCRONIZADOS). 
@@ -53,12 +53,12 @@ Um failover manual planejado é compatível apenas quando a réplica primária e
     >  Para determinar a prontidão do failover de uma réplica secundária, consulte a coluna **is_failover_ready** na exibição de gerenciamento dinâmico [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md). Como alternativa, você pode verificar a coluna **Prontidão de Failover** do [painel do grupo AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
 -   Esta tarefa tem suporte apenas na réplica secundária de destino. Você deve estar conectado à instância de servidor que hospeda a réplica secundária de destino. 
   
-###  <a name="Security"></a> Segurança 
+###  <a name="security"></a><a name="Security"></a> Segurança 
   
-####  <a name="Permissions"></a> Permissões 
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões 
  A permissão ALTER AVAILABILITY GROUP é necessária no grupo de disponibilidade. A permissão CONTROL AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP ou CONTROL SERVER também é necessária. 
   
-##  <a name="SSMSProcedure"></a> Usar o SQL Server Management Studio 
+##  <a name="use-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usar o SQL Server Management Studio 
  Para fazer failover de um grupo de disponibilidade manualmente: 
   
 1. No Pesquisador de Objetos, conecte-se a uma instância do servidor que hospeda uma réplica secundária do grupo de disponibilidade que precise ser submetido ao failover. Expanda a árvore de servidor. 
@@ -69,7 +69,7 @@ Um failover manual planejado é compatível apenas quando a réplica primária e
   
 4. O assistente de Grupo de Disponibilidade de Failover é iniciado. Para obter mais informações, veja [Usar o assistente para Grupo de Disponibilidade de Failover &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md). 
   
-##  <a name="TsqlProcedure"></a> Usar o Transact-SQL 
+##  <a name="use-transact-sql"></a><a name="TsqlProcedure"></a> Usar o Transact-SQL 
  Para fazer failover de um grupo de disponibilidade manualmente: 
   
 1. Conecte-se à instância do servidor que hospeda a réplica secundária de destino. 
@@ -86,7 +86,7 @@ Um failover manual planejado é compatível apenas quando a réplica primária e
     ALTER AVAILABILITY GROUP MyAg FAILOVER;  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Usar o PowerShell 
+##  <a name="use-powershell"></a><a name="PowerShellProcedure"></a> Usar o PowerShell 
  Para fazer failover de um grupo de disponibilidade manualmente: 
   
 1. Altere o diretório (**cd**) para a instância do servidor que hospeda a réplica secundária de destino. 
@@ -107,7 +107,7 @@ Um failover manual planejado é compatível apenas quando a réplica primária e
     -   [Provedor do SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
     -   [Obter ajuda do SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
 
-##  <a name="FollowUp"></a> Acompanhamento: depois de fazer failover manual de um grupo de disponibilidade 
+##  <a name="follow-up-after-you-manually-fail-over-an-availability-group"></a><a name="FollowUp"></a> Acompanhamento: após fazer failover manual de um grupo de disponibilidade 
  Se você tiver feito failover fora do [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] do grupo de disponibilidade, ajuste os votos de quorum dos nós de clustering de failover do Windows Server para refletir a nova configuração do grupo de disponibilidade. Para obter mais informações, veja [WSFC &#40;Clustering de Failover do Windows Server &#41; com o SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
 
 <a name = "ReadScaleOutOnly"><a/>

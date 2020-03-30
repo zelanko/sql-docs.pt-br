@@ -16,10 +16,10 @@ ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9d0296e1427d4af206e101513bd54b0d67f7ff46
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013633"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade
@@ -30,10 +30,10 @@ ms.locfileid: "68013633"
 >  Para obter informações sobre como usar o painel de detalhes do Pesquisador de objetos, veja [Painel de detalhes do Pesquisador de Objetos](../../../ssms/object/object-explorer-details-pane.md).  
   
   
-##  <a name="Prerequisites"></a> Pré-requisitos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Conecte-se à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instância de servidor) que hospeda a réplica primária ou uma réplica secundária.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para monitorar os grupos de disponibilidade, as réplicas de disponibilidade e os bancos de dados de disponibilidade**  
   
 1.  No menu Exibir, clique em **Detalhes do Pesquisador de Objetos**ou pressione a tecla **F7** .  
@@ -54,13 +54,13 @@ ms.locfileid: "68013633"
   
          Para executar operações em vários bancos de dados de disponibilidade, selecione-as e clique com o botão direito do mouse para abrir um menu de contexto que lista os comandos disponíveis.  
   
-##  <a name="AvGroupsDetails"></a> Detalhes dos grupos de disponibilidade  
+##  <a name="availability-groups-details"></a><a name="AvGroupsDetails"></a> Detalhes dos grupos de disponibilidade  
  A tela de detalhes **Grupos de Disponibilidade** exibe as seguintes colunas:  
   
  **Nome**  
  Lista as pastas de Ouvintes **Réplicas de Disponibilidade**, **Bancos de Dados de Disponibilidade**e **Grupo de Disponibilidade** do grupo de disponibilidade selecionado.  
   
-##  <a name="AvReplicaDetails"></a> Detalhes da réplica de disponibilidade  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> Detalhes da réplica de disponibilidade  
  A tela de detalhes **Replica de Disponibilidade** exibe as seguintes colunas:  
   
  **Instância do Servidor**  
@@ -101,7 +101,7 @@ ms.locfileid: "68013633"
 > [!NOTE]  
 >  Para obter informações sobre contadores de desempenho para réplicas de disponibilidade, veja [SQL Server, Réplica de Disponibilidade](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbDetails"></a> Detalhes do banco de dados de disponibilidade  
+##  <a name="availability-database-details"></a><a name="AvDbDetails"></a> Detalhes do banco de dados de disponibilidade  
  A tela de detalhes **Banco de Dados de Disponibilidade** exibe as seguintes propriedades dos bancos de dados de disponibilidade em um determinado grupo de disponibilidade:  
   
  **Nome**  

@@ -14,10 +14,10 @@ ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 753c7c08164de1583dd8de1aa1720fcad6a98dff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093634"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent, objeto JobSteps
@@ -26,7 +26,7 @@ ms.locfileid: "68093634"
   
  A tabela abaixo contém os contadores de **SQLAgent:JobSteps** .  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |**Etapas ativas**|Este contador informa o número de etapas de trabalho atualmente em execução.|  
 |**Etapas em fila**|Este contador informa o número de etapas de trabalho que estão prontas para execução pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, mas que ainda não foram iniciadas.|  
@@ -34,7 +34,7 @@ ms.locfileid: "68093634"
   
  Cada contador no objeto contém as seguintes instâncias:  
   
-|Instância|Descrição|  
+|Instância|DESCRIÇÃO|  
 |--------------|-----------------|  
 |**_Total**|Informações de todas as etapas de trabalho.|  
 |**ActiveScripting**|Informações de etapas de trabalho que usam o subsistema **ActiveScripting** .|  

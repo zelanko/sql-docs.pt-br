@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 1f4c73d02d131a0399fd8dde7698592629ef2726
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242671"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Passo a passo: estenda a implantação do projeto de banco de dados para modificar o plano de implantação
@@ -41,7 +41,7 @@ Você precisará dos seguintes componentes para concluir este passo a passo:
 > [!NOTE]  
 > Este passo a passo é destinado a usuários que já estão familiarizados com os recursos do SQL Server Data Tools. Você também já deverá estar familiarizado com os conceitos básicos do Visual Studio, por exemplo, como criar uma biblioteca de classe e como usar o editor de código para adicionar código a uma classe.  
   
-## <a name="CreateDeploymentContributor"></a>Criar um colaborador de implantação  
+## <a name="create-a-deployment-contributor"></a><a name="CreateDeploymentContributor"></a>Criar um colaborador de implantação  
 Para criar um colaborador de implantação, você deverá realizar as seguintes tarefas:  
   
 -   Criar um projeto de biblioteca de classe e adicionar as referências necessárias.  
@@ -639,7 +639,7 @@ Em seguida, crie a biblioteca de classe.
   
     Em seguida, você deve instalar o assembly de modo que ele seja carregado quando você implantar projetos do SQL.  
   
-## <a name="InstallDeploymentContributor"></a>Instalar um colaborador de implantação  
+## <a name="install-a-deployment-contributor"></a><a name="InstallDeploymentContributor"></a>Instalar um colaborador de implantação  
 Para instalar um colaborador de implantação, você deverá copiar o assembly e o arquivo .pdb associado à pasta Extensões.  
   
 #### <a name="to-install-the-myotherdeploymentcontributor-assembly"></a>Para instalar o assembly MyOtherDeploymentContributor  
@@ -648,7 +648,7 @@ Para instalar um colaborador de implantação, você deverá copiar o assembly e
   
 2.  Copie o arquivo de assembly **MyOtherDeploymentContributor.dll** do diretório de saída para o diretório %Arquivos de Programas%Microsoft SQL Server\110\DAC\Bin\Extensions. Por padrão, o caminho do seu arquivo compilado .dll é YourSolutionPath\YourProjectPath\bin\Debug ou YourSolutionPath\YourProjectPath\bin\Release.  
   
-## <a name="TestDeploymentContributor"></a>Executar ou testar seu Colaborador de Implantação  
+## <a name="run-or-test-your-deployment-contributor"></a><a name="TestDeploymentContributor"></a>Executar ou testar seu Colaborador de Implantação  
 Para executar ou testar seu colaborador de implantação, você deverá realizar as seguintes tarefas:  
   
 -   Adicionar propriedades ao arquivo .sqlproj que você planeja criar.  
