@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 37e1b0c050da78722422d9bf20e4eae310565ec1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243757"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>Visão geral das cadeias de conexão e permissões
@@ -27,7 +27,7 @@ Na caixa de diálogo **Configuração de Teste do SQL Server**, você pode espec
 > [!NOTE]  
 > O contexto de execução e o contexto privilegiado serão diferentes somente se você usar a autenticação do SQL Server. Se você usar a autenticação do Windows, as mesmas credenciais serão usadas para ambas as cadeias de conexão.  
   
--   Contexto de execução (obrigatório) - uma conta de usuário para executar o script de teste. Essa cadeia de conexão deve ter as mesmas credenciais que você espera que os usuários tenham. Isso é importante porque garante que as permissões apropriadas sejam aplicadas ao banco de dados. Para obter mais informações, confira [Como Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
+-   Contexto de execução (obrigatório) - uma conta de usuário para executar o script de teste. Essa cadeia de conexão deve ter as mesmas credenciais que você espera que os usuários tenham. Isso é importante porque garante que as permissões apropriadas sejam aplicadas ao banco de dados. Para obter mais informações, consulte [Como: Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
   
     No arquivo app.config do projeto de teste, esse é o elemento `ExecutionContext`.  
   
