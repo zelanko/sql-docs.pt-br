@@ -1,5 +1,5 @@
 ---
-title: Propriedades da publicação do Replicação do SQL Server-| Microsoft Docs
+title: Propriedades de publicação de replicação do servidor SQL - | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 17b2e566be6bedbb032b7a4fc06c938075bd32e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 19fee33c63b1287e43077640f381d4b57f489535
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63022458"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380717"
 ---
-# <a name="sql-server-replication-publication-properties"></a>Propriedades da publicação do Replicação do SQL Server 
-  Esta seção fornece informações sobre todas as páginas da caixa de diálogo **Propriedades da publicação** . 
+# <a name="sql-server-replication-publication-properties"></a>Propriedades de publicação de replicação do servidor SQL 
+  Esta seção fornece informações sobre todas as páginas da caixa de diálogo Propriedades de **publicação.** 
 
 ## <a name="general"></a>Geral
   A página **Geral** da caixa de diálogo **Propriedades de Publicação** contém informações básicas sobre a publicação, incluindo nome, descrição e a política de validade da assinatura.  
@@ -37,7 +37,7 @@ ms.locfileid: "63022458"
  **Nome**  
  O nome da publicação (somente leitura).  
   
- **Backup de banco de dados**  
+ **Database**  
  O nome do banco de dados de publicação (somente leitura).  
   
  **Descrição**  
@@ -55,10 +55,10 @@ ms.locfileid: "63022458"
   
  Para obter mais informações, consulte [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
- **Nível de compatibilidade**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores somente; só publicações de mesclagem. Selecione versão mínima requerida do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Assinantes que sincronizam com essa publicação. Há várias regras associadas com a determinação do nível de compatibilidade.  
+ **Nível de Compatibilidade**  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e apenas versões posteriores; mesclam apenas publicações. Selecione versão mínima requerida do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Assinantes que sincronizam com essa publicação. Há várias regras associadas com a determinação do nível de compatibilidade.  
 
-## <a name="filter-rows"></a>Filtrar linhas
+## <a name="filter-rows"></a>Filtrar Linhas
 
   A página **Filtrar Linhas** da caixa de diálogo **Propriedades de Publicação** permite adicionar, editar ou excluir e permite também:  
   
@@ -101,24 +101,24 @@ ms.locfileid: "63022458"
  **Editar**  
  Selecione um filtro de linha ou um filtro de junção no painel de filtros e clique em **Editar** para iniciar a caixa de diálogo **Editar Filtro** ou **Editar Junção** .  
   
- **Delete (excluir)**  
+ **Excluir**  
  Selecione um filtro de linha ou um filtro de junção no painel de filtro e clique em **Excluir** para excluir o filtro.  
   
  **Localizar Tabela**  
  Somente publicações de mesclagem. Clique em **Localizar Tabela** para localizar uma tabela em uma árvore de filtro complexa. Em um banco de dados com relações complexas, pode haver junção de uma tabela com várias tabelas e, portanto, ela pode aparecer em mais de um lugar na árvore de filtro.  
   
- A tabela real só aparece em um lugar na árvore; em outros lugares a tabela é representada por um atalho. Um atalho para uma tabela é somente uma referência à tabela; ele não mostra os nós filhos da tabela. Um nó de atalho é marcado com uma seta de atalho e expandir esse nó mostra o texto **Clique em localizar tabela para ver a tabela \<tablename>** .  
+ A tabela real só aparece em um lugar na árvore; em outros lugares a tabela é representada por um atalho. Um atalho para uma tabela é somente uma referência à tabela; ele não mostra os nós filhos da tabela. Um nó de atalho é marcado com uma seta de atalho e expandir esse nó mostra o texto **Clique em localizar tabela para ver a tabela \<tablename>**.  
   
  Selecione um nó de atalho no painel e clique em **Localizar Tabela** . O painel é expandido e a tabela é destacada. Se você clicar em **Localizar Tabela** sem um nó de atalho selecionado, uma caixa de diálogo **Localizar Tabela** será ativada.  
   
- **Filter**  
+ **Filtrar**  
  Contém a definição [!INCLUDE[tsql](../../includes/tsql-md.md)] para o filtro selecionado no painel de filtro.  
 
 ## <a name="ftp-snapshot-and-internet"></a>Instantâneo de FTP e Internet
   
 Essa página permite:  
   
--   Definir propriedades de entrega do instantâneo por FTP (File Transfer Protocol). Para obter mais informações, consulte [transferir instantâneos por meio](transfer-snapshots-through-ftp.md) da documentação do Windows FTP para obter mais informações.  
+-   Definir propriedades de entrega do instantâneo por FTP (File Transfer Protocol). Para obter mais informações, consulte [Transferir instantâneos através da](transfer-snapshots-through-ftp.md) documentação do FTP Windows para obter mais informações.  
   
     > [!NOTE]  
     >  Alterações em qualquer configuração do FTP exigem que um novo instantâneo seja gerado.  
@@ -132,7 +132,7 @@ Essa página permite:
  Essa opção permite que os Assinantes usem o FTP para recuperar arquivos de instantâneo, mas não exige que isso seja feito. Se você selecionar essa opção, o Assistente para Nova Assinatura será padronizado para que o Assinante recupere arquivos de instantâneo pelo FTP. Para alterar a configuração, use a caixa de diálogo **Propriedades da Assinatura** . Se você permitir que os Assinantes acessem arquivos de instantâneo pelo FTP, especifique a pasta de FTP como o local de arquivos de instantâneo na página **Instantâneo** da caixa de diálogo **Propriedades da Assinatura** . Essa ação fará com que o Agente de Instantâneo atualize os arquivos na pasta do FTP automaticamente quando um novo instantâneo for gerado. Se o local para a pasta do FTP não for definido, você terá de atualizar os arquivos manualmente quando novos instantâneos forem gerados. Para obter mais informações, consulte [Deliver a Snapshot Through FTP](publish/deliver-a-snapshot-through-ftp.md) (Entregar um instantâneo por meio de FTP).  
   
  **Sincronização da Web**  
- Somente replicação de mesclagem. Selecione **Permitir que os Assinantes sincronizem por meio da conexão com um servidor Web**e especifique um endereço de servidor Web para permitir que Assinantes de mesclagem usem a sincronização da Web. O servidor Web deve usar protocolo SSL (Secure Sockets Layer) e o endereço Web precisa ser totalmente qualificado, como https://server.domain.com/synchronize. Para obter mais informações, consulte [Configurar sincronização da Web](configure-web-synchronization.md).  
+ Somente replicação de mesclagem. Selecione **Permitir que os Assinantes sincronizem por meio da conexão com um servidor Web**e especifique um endereço de servidor Web para permitir que Assinantes de mesclagem usem a sincronização da Web. O servidor Web deve usar protocolo SSL (Secure Sockets Layer) e o endereço Web precisa ser totalmente qualificado, como `https://server.domain.com/synchronize`. Para obter mais informações, consulte [Configurar sincronização da Web](configure-web-synchronization.md).  
 
 ## <a name="publication-access-list"></a>Lista de acesso à publicação
 
@@ -153,7 +153,7 @@ Essa página permite:
 
   Essa página permite:  
   
--   Definir propriedades de entrega do instantâneo por FTP (File Transfer Protocol). Para obter mais informações, consulte [transferir instantâneos por meio](transfer-snapshots-through-ftp.md) da documentação do Windows FTP para obter mais informações.  
+-   Definir propriedades de entrega do instantâneo por FTP (File Transfer Protocol). Para obter mais informações, consulte [Transferir instantâneos através da](transfer-snapshots-through-ftp.md) documentação do FTP Windows para obter mais informações.  
   
     > [!NOTE]  
     >  Alterações em qualquer configuração do FTP exigem que um novo instantâneo seja gerado.  
@@ -167,7 +167,7 @@ Essa página permite:
  Essa opção permite que os Assinantes usem o FTP para recuperar arquivos de instantâneo, mas não exige que isso seja feito. Se você selecionar essa opção, o Assistente para Nova Assinatura será padronizado para que o Assinante recupere arquivos de instantâneo pelo FTP. Para alterar a configuração, use a caixa de diálogo **Propriedades da Assinatura** . Se você permitir que os Assinantes acessem arquivos de instantâneo pelo FTP, especifique a pasta de FTP como o local de arquivos de instantâneo na página **Instantâneo** da caixa de diálogo **Propriedades da Assinatura** . Essa ação fará com que o Agente de Instantâneo atualize os arquivos na pasta do FTP automaticamente quando um novo instantâneo for gerado. Se o local para a pasta do FTP não for definido, você terá de atualizar os arquivos manualmente quando novos instantâneos forem gerados. Para obter mais informações, consulte [Deliver a Snapshot Through FTP](publish/deliver-a-snapshot-through-ftp.md) (Entregar um instantâneo por meio de FTP).  
   
  **Sincronização da Web**  
- Somente replicação de mesclagem. Selecione **Permitir que os Assinantes sincronizem por meio da conexão com um servidor Web**e especifique um endereço de servidor Web para permitir que Assinantes de mesclagem usem a sincronização da Web. O servidor Web deve usar protocolo SSL (Secure Sockets Layer) e o endereço Web precisa ser totalmente qualificado, como https://server.domain.com/synchronize. Para obter mais informações, consulte [Configurar sincronização da Web](configure-web-synchronization.md).  
+ Somente replicação de mesclagem. Selecione **Permitir que os Assinantes sincronizem por meio da conexão com um servidor Web**e especifique um endereço de servidor Web para permitir que Assinantes de mesclagem usem a sincronização da Web. O servidor Web deve usar protocolo SSL (Secure Sockets Layer) e o endereço Web precisa ser totalmente qualificado, como `https://server.domain.com/synchronize`. Para obter mais informações, consulte [Configurar sincronização da Web](configure-web-synchronization.md).  
 
 ## <a name="agent-security"></a>Segurança do agente
   A página **Segurança do Agente** da caixa de diálogo **Propriedades de Publicação** permite acessar as configurações das contas nas quais os seguintes agentes executam e fazem conexões com computadores em uma topologia de replicação:  
@@ -183,7 +183,7 @@ Essa página permite:
  Se um trabalho de agente tiver sido criado, clique em **Configurações de segurança** para acessar a caixa de diálogo que permite alterar as configurações de segurança de um agente. Se um trabalho de agente não tiver sido criado, clique em **Criar Agente** para criar um e especificar as configurações de segurança.  
 
 ## <a name="data-partitions"></a>Partições de Dados
-  A página **Partições de Dados** da caixa de diálogo **Propriedades de Publicação** permite definir partições de dados para publicações de mesclagem que usam filtragem com parâmetros. Depois de definir as partições, você pode gerar instantâneos para essas partições, fornecendo conjuntos de dados iniciais diferentes para Assinantes diferentes, com base nas propriedades de conexão (logon e/ou nome de computador) dos Assinantes. Você pode também selecionar para permitir aos Assinantes solicitarem a entrega e a geração de instantâneo, se não tiverem um instantâneo disponível para a partição, na primeira vez em que sincronizarem. Para obter mais informações, consulte [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+   A página **Partições de Dados** da caixa de diálogo **Propriedades de Publicação** permite definir partições de dados para publicações de mesclagem que usam filtragem com parâmetros. Depois de definir as partições, você pode gerar instantâneos para essas partições, fornecendo conjuntos de dados iniciais diferentes para Assinantes diferentes, com base nas propriedades de conexão (logon e/ou nome de computador) dos Assinantes. Você pode também selecionar para permitir aos Assinantes solicitarem a entrega e a geração de instantâneo, se não tiverem um instantâneo disponível para a partição, na primeira vez em que sincronizarem. Para obter mais informações, consulte [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ### <a name="options"></a>Opções  
  **Adicionar**  
@@ -192,7 +192,7 @@ Essa página permite:
  **Editar**  
  Selecione uma partição existente na grade e clique em **Editar** para editar a partição.  
   
- **Delete (excluir)**  
+ **Excluir**  
  Selecione uma partição existente na grade e clique em **Excluir** para excluir a partição.  
   
  **Gerar os instantâneos selecionados agora**  
@@ -221,7 +221,7 @@ Essa página permite:
  **Local dos arquivos de instantâneo**  
  Selecione o local para armazenar arquivos de instantâneo. Eles podem ser armazenados no local padrão; e também, em vez disso, podem ser armazenados em um local alternativo ou em outro local além do local padrão. Arquivos armazenados em um local alternativo podem ser compactados.  
   
--   Selecione **Colocar os arquivos na pasta padrão** para usar a pasta de instantâneo padrão para o Publicador. O local da pasta de instantâneo é somente leitura nessa caixa de diálogo porque ele só pode ser alterado para o Publicador na caixa de diálogo **Propriedades do Distribuidor** . Para obter mais informações, consulte [especificar o local do instantâneo padrão](snapshot-options.md#snapshot-folder-locations).   
+-   Selecione **Colocar os arquivos na pasta padrão** para usar a pasta de instantâneo padrão para o Publicador. O local da pasta de instantâneo é somente leitura nessa caixa de diálogo porque ele só pode ser alterado para o Publicador na caixa de diálogo **Propriedades do Distribuidor** . Para obter mais informações, consulte [Especificar o local de instantâneo padrão](snapshot-options.md#snapshot-folder-locations).   
 -   Selecione **Colocar os arquivos nesta pasta** para especificar, em vez disso, um local alternativo ou outro local além do padrão. Insira em um caminho na caixa de texto ou clique em **Procurar** e navegue até um local. Selecione **Compactar arquivos de instantâneo nesta pasta** para compactar os arquivos no local de instantâneo alternativo. O local alternativo pode ser em outro servidor, em uma unidade de rede ou em uma mídia removível, como um CD-ROM ou disco removível. Para obter mais informações, consulte [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md) e [Compressed Snapshots](compressed-snapshots.md).  
   
  **Executar scripts adicionais**  
@@ -234,12 +234,12 @@ Essa página permite:
 
 
 
-## <a name="see-also"></a>Consulte Também  
- [Create a Publication](publish/create-a-publication.md)   
- [Exibir e modificar as propriedades da publicação](publish/view-and-modify-publication-properties.md)   
+## <a name="see-also"></a>Consulte também  
+ [Criar uma publicação](publish/create-a-publication.md)   
+ [Exibir e modificar propriedades de publicação](publish/view-and-modify-publication-properties.md)   
  [Publicar dados e objetos de banco de dados](publish/publish-data-and-database-objects.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Segurança de Replicação do SQL Server](security/view-and-modify-replication-security-settings.md)  
+ [Práticas recomendadas de segurança de replicação](security/replication-security-best-practices.md)   
+ [Segurança de replicação do servidor SQL](security/view-and-modify-replication-security-settings.md)  
  [Inicializar uma assinatura com um instantâneo](initialize-a-subscription-with-a-snapshot.md)   
   
   
