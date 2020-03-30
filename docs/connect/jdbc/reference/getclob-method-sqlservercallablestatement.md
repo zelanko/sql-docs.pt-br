@@ -16,10 +16,10 @@ ms.assetid: c1824b89-fc2e-4741-b849-7d06108fda97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cd533ef2dce654ee1a414499094781f1d5a22c51
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953015"
 ---
 # <a name="getclob-method-sqlservercallablestatement"></a>Método getClob (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67953015"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[getClob (int)](../../../connect/jdbc/reference/getclob-method-int.md)|Recupera o valor do parâmetro JDBC BLOB designado como um objeto Clob na linguagem de programação Java, considerando o índice do parâmetro.|  
 |[getClob (java.lang.String)](../../../connect/jdbc/reference/getclob-method-java-lang-string.md)|Recupera o valor do parâmetro JDBC BLOB designado como um objeto Clob na linguagem de programação Java, considerando o nome do parâmetro.|  
