@@ -24,10 +24,10 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: dc76237530ba47a513aba164260061ec6b20e7c3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68892417"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Ajuda de F1 do Assistente para Gerenciar Partição
@@ -44,7 +44,7 @@ ms.locfileid: "68892417"
   
  Esta seção fornece as informações necessárias para gerenciar, modificar e implementar partições usando o **Assistente para Gerenciar Partição**.  
   
-##  <a name="Top"></a> Nesta seção  
+##  <a name="in-this-section"></a><a name="Top"></a> Nesta seção  
  As seções a seguir fornecem ajuda sobre as páginas do **Assistente para Gerenciar Partição**.  
   
  [Assistente para Gerenciar Partição (página Selecionar Ação de Partição)](#SelectPartitionAction)  
@@ -63,7 +63,7 @@ ms.locfileid: "68892417"
   
  [Assistente para Gerenciar Partição (página Progresso)](#Progress)  
   
-##  <a name="SelectPartitionAction"></a> Página Selecionar Ação de Partição  
+##  <a name="select-partition-action-page"></a><a name="SelectPartitionAction"></a> Página Selecionar Ação de Partição  
  Use a página **Selecionar Ação de Partição** para escolher a ação que você deseja executar na partição.  
   
 ### <a name="create-a-staging-table"></a>Criar uma tabela de preparação  
@@ -91,7 +91,7 @@ ms.locfileid: "68892417"
   
  ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
-##  <a name="SwitchIn"></a> Página Selecione as Opções de Inserção de Partição  
+##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Página Selecione as Opções de Inserção de Partição  
  Use a página **Selecione as opções de Inserção de Partição** para selecionar a tabela de preparo que você está ativando na tabela particionada.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
@@ -106,7 +106,7 @@ ms.locfileid: "68892417"
   
  ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
-##  <a name="SwitchOut"></a> Página Selecione as Opções de Extração de Partição  
+##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Página Selecione as Opções de Extração de Partição  
  Use a página **Selecione as opções de Extração de Partição** para selecionar a partição e a tabela de preparo para reter os dados particionados que você está desativando na tabela particionada.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
@@ -124,7 +124,7 @@ ms.locfileid: "68892417"
   
  ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
-##  <a name="StagingTableOptions"></a> Página Selecionar Opções da Tabela de Preparação  
+##  <a name="select-the-staging-table-options-page"></a><a name="StagingTableOptions"></a> Página Selecionar Opções da Tabela de Preparação  
  Use a página **Selecionar Opções da Tabela de Preparação** para criar a tabela de preparo que você deseja usar para alternar os dados particionados.  
   
  As tabelas de preparação devem residir no mesmo grupo de arquivos da partição selecionada da tabela de origem. A tabela de preparação deve espelhar o design da tabela de origem e da tabela de destino.  
@@ -146,7 +146,7 @@ ms.locfileid: "68892417"
   
  ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
-##  <a name="OutputOption"></a> Página Selecionar Opção de Saída  
+##  <a name="select-output-option-page"></a><a name="OutputOption"></a> Página Selecionar Opção de Saída  
  Use a página **Selecionar Opção de Saída** para especificar como deseja concluir as modificações em suas partições.  
   
 ### <a name="create-script"></a>Criar script  
@@ -173,7 +173,7 @@ ms.locfileid: "68892417"
   
  ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
-##  <a name="NewJob"></a> Página Nova Agenda de Trabalho  
+##  <a name="new-job-schedule-page"></a><a name="NewJob"></a> Página Nova Agenda de Trabalho  
  Use a página **Novo Agendamento de Trabalho** para exibir e alterar as propriedades do agendamento.  
   
 ### <a name="options"></a>Opções  
@@ -256,7 +256,7 @@ ms.locfileid: "68892417"
   
  ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
-##  <a name="Summary"></a> Página de Resumo  
+##  <a name="summary-page"></a><a name="Summary"></a> Página de Resumo  
  Use a página **Resumo** para examinar as opções selecionadas nas páginas anteriores.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
@@ -265,7 +265,7 @@ ms.locfileid: "68892417"
   
  ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
-##  <a name="Progress"></a> Página Progresso  
+##  <a name="progress-page"></a><a name="Progress"></a> Página Progresso  
  Use a página **Progresso** para monitorar informações de status das ações do **Assistente para Gerenciar Partição**. Dependendo das opções selecionadas no assistente, a página **Progresso** pode conter uma ou várias ações. A caixa superior exibe o status geral do assistente e o número de mensagens de status, erro e aviso que ele recebeu.  
   
 ### <a name="options"></a>Opções  

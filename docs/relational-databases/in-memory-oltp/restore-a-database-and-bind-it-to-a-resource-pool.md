@@ -11,10 +11,10 @@ ms.assetid: 0d20a569-8a27-409c-bcab-0effefb48013
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 4b19476f08398e6b704ee56125f3290d39c59954
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68111810"
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>Restaurar um banco de dados e associá-lo a um pool de recursos
@@ -34,7 +34,7 @@ ms.locfileid: "68111810"
   
 5.  [Monitorar o desempenho do pool de recursos](../../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md#bkmk_Monitor)  
   
-###  <a name="bkmk_NORECOVERY"></a> Restaurar com NORECOVERY  
+###  <a name="restore-with-norecovery"></a><a name="bkmk_NORECOVERY"></a> Restaurar com NORECOVERY  
  Quando você restaurar um banco de dados, NORECOVERY faz com que o banco de dados seja criado e a imagem de disco seja restaurada sem consumir memória.  
   
 ```sql  
@@ -43,7 +43,7 @@ RESTORE DATABASE IMOLTP_DB
    WITH NORECOVERY  
 ```  
   
-###  <a name="bkmk_createPool"></a> Criar o pool de recursos  
+###  <a name="create-the-resource-pool"></a><a name="bkmk_createPool"></a> Criar o pool de recursos  
  O [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir cria um pool de recursos chamado Pool_IMOLTP com 50% da memória disponível para seu uso.  Depois que o pool é criado, o Administrador de Recursos é reconfigurado para incluir o Pool_IMOLTP.  
   
 ```sql  
@@ -52,7 +52,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-###  <a name="bkmk_bind"></a> Associar o banco de dados e o pool de recursos  
+###  <a name="bind-the-database-and-resource-pool"></a><a name="bkmk_bind"></a> Associar o banco de dados e o pool de recursos  
  Use a função do sistema `sp_xtp_bind_db_resource_pool` para associar o banco de dados ao pool de recursos. A função usa dois parâmetros: o nome do banco de dados seguido pelo nome do pool de recursos.  
   
  O [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir define uma associação do banco de dados IMOLTP_DB ao pool de recursos Pool_IMOLTP. A associação não entra em vigor até que você conclua a próxima etapa.  
@@ -62,7 +62,7 @@ EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'
 GO  
 ```  
   
-###  <a name="bkmk_RECOVERY"></a> Restaurar com RECOVERY  
+###  <a name="restore-with-recovery"></a><a name="bkmk_RECOVERY"></a> Restaurar com RECOVERY  
  Quando você restaura o banco de dados com recuperação, o banco de dados é colocado online e todos os dados restaurados.  
   
 ```sql  
@@ -70,7 +70,7 @@ RESTORE DATABASE IMOLTP_DB
    WITH RECOVERY  
 ```  
   
-###  <a name="bkmk_Monitor"></a> Monitorar o desempenho do pool de recursos  
+###  <a name="monitor-the-resource-pool-performance"></a><a name="bkmk_Monitor"></a> Monitorar o desempenho do pool de recursos  
  Quando o banco de dados for associado ao pool de recursos nomeado e restaurado com recuperação, monitore o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o objeto Resource Pool Stats. Para obter mais informações, consulte [Objeto SQLServer:Resource Pool Stats](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md).  
   
 ## <a name="see-also"></a>Consulte Também  

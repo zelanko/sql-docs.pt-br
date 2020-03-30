@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0eae7e7f1a0a673138b58440ee9c5c8d0b6f20bc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: fe0605cdfd2d2cf341ff6ab51939fee2c78ae797
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75244427"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216271"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opções de arquivo e grupos de arquivos de ALTER DATABASE (Transact-SQL)
 
@@ -78,7 +78,6 @@ ALTER DATABASE database_name
     <add_or_modify_files>
   | <add_or_modify_filegroups>
 }
-[;
 
 <add_or_modify_files>::=
 {
@@ -363,7 +362,7 @@ Por padrão, arquivos de dados e de log são inicializados por meio do preenchim
 
 Arquivos de dados podem ser inicializados instantaneamente. Isso permite uma execução rápida dessas operações de arquivo. Para obter mais informações, consulte [Inicialização de arquivos de bancos de dados](../../relational-databases/databases/database-instant-file-initialization.md).
 
-## <a name="removing-a-filestream-container"></a> Removendo um contêiner FILESTREAM
+## <a name="removing-a-filestream-container"></a><a name="removing-a-filestream-container"></a> Removendo um contêiner FILESTREAM
 
 Embora o contêiner FILESTREAM possa ter sido esvaziado por meio da operação "DBCC SHRINKFILE", o banco de dados ainda pode precisar manter referências aos arquivos excluídos por várias razões de manutenção do sistema. [sp_filestream_force_garbage_collection](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) executará o Coletor de Lixo de FILESTREAM para remover esses arquivos quando for seguro fazê-lo. A menos que o Coletor de Lixo de FILESTREAM tenha removido todos os arquivos de um contêiner FILESTREAM, a operação ALTER DATABASE REMOVE FILE não poderá remover um contêiner FILESTREAM e um erro será retornado. O processo a seguir é recomendado para remover um contêiner FILESTREAM.
 
