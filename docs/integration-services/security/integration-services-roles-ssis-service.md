@@ -21,10 +21,10 @@ ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3290aa2297ca849ed175b7db109f6b200debc789
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295679"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Funções do Integration Services (Serviço do SSIS)
@@ -93,7 +93,7 @@ ms.locfileid: "71295679"
   
      Você pode atribuir uma função de leitor e de gravador a cada pacote.  
 
-## <a name="assign"></a> Atribuir uma função de leitor e de gravador a um pacote
+## <a name="assign-a-reader-and-writer-role-to-a-package"></a><a name="assign"></a> Atribuir uma função de leitor e de gravador a um pacote
   Você pode atribuir uma função de leitor e de gravador a cada pacote.  
   
 ### <a name="assign-a-reader-and-writer-role-to-a-package"></a>Atribuir uma função de leitor e de gravador a um pacote  
@@ -108,7 +108,7 @@ ms.locfileid: "71295679"
   
 5.  Clique em **OK**.
 
-## <a name="create"></a> Criar uma função definida pelo usuário
+## <a name="create-a-user-defined-role"></a><a name="create"></a> Criar uma função definida pelo usuário
     
 ### <a name="to-create-a-user-defined-role"></a>Para criar uma função definida pelo usuário  
   
@@ -134,7 +134,7 @@ ms.locfileid: "71295679"
   
 11. Clique em **OK**.
 
-## <a name="roles_dialog"></a> Referência da interface do usuário da caixa de diálogo Funções do Pacote
+## <a name="package-roles-dialog-box-ui-reference"></a><a name="roles_dialog"></a> Referência da interface do usuário da caixa de diálogo Funções do Pacote
   Use a caixa de diálogo **Funções do Pacote** , disponível no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], para especificar as funções de nível de banco de dados que têm acesso de leitura e as que têm acesso de gravação ao pacote. As funções de nível de banco de dados se aplicam apenas a pacotes armazenados no banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**msdb**.  
   
  As funções listadas na caixa de diálogo são as funções de banco de dados atuais do banco de dados de sistema **msdb** . Se nenhuma função for selecionada, serão aplicadas as funções do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Por padrão, a função de leitor inclui **db_ssisadmin**, **db_ssisoperator**e o usuário que criou o pacote. Um usuário membro de uma dessas funções ou criador dos pacotes pode enumerar, exibir, exportar e executar pacotes. Por padrão, a função de gravador inclui **db_ssisadmin** e o usuário que criou o pacote. Um usuário membro dessa função e o criador dos pacotes podem importar, excluir e alterar pacotes.  

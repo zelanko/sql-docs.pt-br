@@ -12,10 +12,10 @@ ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 095852eb02ba78c261b19a0a96fb639075ee5eab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285122"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Fornecer uma consulta de origem (Assistente de Importação e Exportação do SQL Server)
@@ -59,7 +59,7 @@ Se a sua fonte de dados for Excel, consulte [Fornecer uma consulta de origem par
  **Procurar**  
  Selecione um arquivo salvo que contém o texto de uma consulta SQL usando a caixa de diálogo **Abrir**. Selecionar um arquivo copia o texto do arquivo na caixa de texto **Instrução de SQL** .  
  
-## <a name="excelQueries"></a> Fornecer uma consulta de origem para o Excel
+## <a name="provide-a-source-query-for-excel"></a><a name="excelQueries"></a> Fornecer uma consulta de origem para o Excel
 
 > [!IMPORTANT]
 > Para obter informações detalhadas sobre como se conectar a arquivos do Excel, e sobre limitações e problemas conhecidos para carregar dados de ou para arquivos do Excel, consulte [Carregar dados do ou para o Excel com o SSIS (SQL Server Integration Services)](../load-data-to-from-excel-with-ssis.md).

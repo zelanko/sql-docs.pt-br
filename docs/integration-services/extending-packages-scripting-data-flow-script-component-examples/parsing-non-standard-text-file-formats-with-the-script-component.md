@@ -16,10 +16,10 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 733c3a909629514b55042d21f02cfca563d3c531
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297070"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analisando formatos de arquivo de texto fora do padrão com o componente Script
@@ -36,7 +36,7 @@ ms.locfileid: "71297070"
 > [!NOTE]  
 >  Se desejar criar um componente que possa ser reutilizado mais facilmente em várias tarefas de fluxo de dados e em vários pacotes, procure utilizar o código deste exemplo de componente Script como o ponto inicial de um componente de fluxo de dados personalizado. Para obter mais informações, consulte [Desenvolvendo um componente de fluxo de dados personalizado](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
-##  <a name="example1"></a> Exemplo 1: analisar registros delimitados por linha  
+##  <a name="example-1-parsing-row-delimited-records"></a><a name="example1"></a> Exemplo 1: analisar registros delimitados por linha  
  Este exemplo mostra como utilizar um arquivo de texto em que cada coluna de dados aparece em uma linha separada e analisá-lo em uma tabela de destino usando o componente Script.  
   
  Para obter mais informações sobre como configurar o componente Script para uso como uma transformação no fluxo de dados, consulte [Criando uma transformação síncrona com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) e [Criando uma transformação assíncrona com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
@@ -191,7 +191,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a> Exemplo 2: dividir registros pai e filho  
+##  <a name="example-2-splitting-parent-and-child-records"></a><a name="example2"></a> Exemplo 2: dividir registros pai e filho  
  Este exemplo mostra como utilizar um arquivo de texto, em que uma linha delimitadora precede uma linha de registro pai, que é seguida de um número indefinido de linhas de registro filho, e analisa-as em tabelas de destino pai e filho, adequadamente normalizadas, através do componente Script. Esse exemplo simples pode ser facilmente adaptado para arquivos de origem que utilizam mais de uma linha ou coluna para cada registro pai e filho, desde que exista uma forma de identificar o início e o fim de cada registro.  
   
 > [!CAUTION]  

@@ -12,10 +12,10 @@ ms.reviewer: maggies
 author: RhysSchmidtke
 ms.author: rhys
 ms.openlocfilehash: 5ee9bd80519e9dc9d75bb78a98b548b2a60ef247
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76259374"
 ---
 # <a name="release-notes-for-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>Notas sobre a versão dos controles WebForms e WinForms do Visualizador de Relatórios do SSRS

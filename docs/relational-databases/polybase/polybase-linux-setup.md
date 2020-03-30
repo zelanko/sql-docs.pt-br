@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
 ms.openlocfilehash: 117620c170b183b12d06eb717cfc1bb4b2dc559c
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77173557"
 ---
 # <a name="install-polybase-on-linux"></a>Instalar PolyBase em Linux
@@ -36,7 +36,7 @@ Instalar PolyBase para seu sistema operacional:
 
 
 
-## <a name="RHEL">Instalar no RHEL</a>
+## <a name=""></a><a name="RHEL">Instalar no RHEL</a>
 
 Use o seguinte comando para instalar o **mssql-server-polybase** no Red Hat Enterprise Linux. 
 
@@ -55,7 +55,7 @@ sudo systemctl restart mssql-server
 
 Se você precisar de uma instalação offline, localize o download do pacote do PolyBase nas [Notas sobre a versão](../../linux/sql-server-linux-release-notes.md). Em seguida, use as mesmas etapas de instalação offline descritas no artigo [Instalar o SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
-## <a name="ubuntu">Instalar no Ubuntu</a>
+## <a name=""></a><a name="ubuntu">Instalar no Ubuntu</a>
 
 Use o seguinte comando para instalar o **mssql-server-polybase** no Ubuntu. 
 
@@ -74,7 +74,7 @@ sudo systemctl restart mssql-server
 
 Se você precisar de uma instalação offline, localize o download do pacote do PolyBase nas [Notas sobre a versão](../../linux/sql-server-linux-release-notes.md). Em seguida, use as mesmas etapas de instalação offline descritas no artigo [Instalar o SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
-## <a name="SLES">Instalar no SLES</a>
+## <a name=""></a><a name="SLES">Instalar no SLES</a>
 
 Use o seguinte comando para instalar o **mssql-server-polybase** no SUSE Linux Enterprise Server. 
 
@@ -95,7 +95,7 @@ sudo systemctl restart mssql-server
 Se você precisar de uma instalação offline, localize o download do pacote do PolyBase nas [Notas sobre a versão](../../linux/sql-server-linux-release-notes.md). Em seguida, use as mesmas etapas de instalação offline descritas no artigo [Instalar o SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
 
-## <a name="enable">Habilitar o PolyBase</a> 
+## <a name=""></a><a name="enable">Habilitar o PolyBase</a> 
 
 Após a instalação, o PolyBase deverá ser habilitado para acessar seus recursos. Conectar-se à instância do SQL Server instalada e use o seguinte comando Transact-SQL para habilitar.
 

@@ -12,10 +12,10 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f0bd7fe34b1945c3f0f2255e256ead38a6d15e3a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296262"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Revisar mapeamento de tipo de dados (Assistente de Importação e Exportação do SQL Server)
@@ -47,7 +47,7 @@ Neste exemplo, os resultados da consulta que o usuário forneceu serão copiados
   
  A tabela a seguir descreve as colunas na lista **Tabela** .  
   
-|Coluna|Descrição|  
+|Coluna|DESCRIÇÃO|  
 |------------|-----------------|  
 |(Ícone de origem)|Indica a probabilidade de sucesso para as conversões de tipo de dados:<br /> –   Um ícone de sinal de verificação **verde** indica que o assistente espera que todas as conversões de tipo de dados da tabela sejam bem sucedidas.<br />–   Um ícone de aviso **amarelo** indica que você deveria examinar as conversões individuais que o assistente executará. Para revisar essas conversões, selecione a tabela e revise as conversões das colunas individuais na lista **Mapeamento de tipo de dados** .<br />–   Um ícone de erro **vermelho** indica que o assistente não pode executar algumas das conversões da tabela de maneira segura.|  
 |**Origem**|O nome da tabela de origem.|  
@@ -63,7 +63,7 @@ Neste exemplo, cada coluna na origem será copiada para uma coluna com o mesmo n
 
 A tabela a seguir descreve as colunas da lista **Mapeamento de tipo de dados** . 
 
-|Coluna|Descrição|  
+|Coluna|DESCRIÇÃO|  
 |------------|-----------------|  
 |(Ícone de conversão)|Indica a probabilidade de sucesso para as conversões de tipo de dados:<br /> –   Um ícone de sinal de verificação **verde** indica que o assistente espera que a conversão de tipo de dados da coluna sejam bem sucedida.<br />–   Um ícone de aviso **amarelo** indica que você deveria examinar a conversão que o assistente executará. Para examinar a conversão, clique duas vezes na coluna para exibir a caixa de diálogo **Detalhes da Conversão de Coluna** . Para obter mais informações, consulte [Caixa de diálogo Detalhes da Conversão de Coluna](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md).<br />–   Um ícone de erro **vermelho** indica que o assistente não pode executar a conversão de maneira segura.|  
 |**Coluna de Origem**|O nome da coluna de origem.|  

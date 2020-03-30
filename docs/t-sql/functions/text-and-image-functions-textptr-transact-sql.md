@@ -21,10 +21,10 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68099029"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Funções Text e Image – TEXTPTR (Transact-SQL)
@@ -60,7 +60,7 @@ TEXTPTR ( column )
   
  Essas funções e instruções também são úteis quando você trabalha com os dados **text**, **ntext** e **image**.  
   
-|Função ou instrução|Descrição|  
+|Função ou instrução|DESCRIÇÃO|  
 |---------------------------|-----------------|  
 |PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|Retorna a posição de caracteres de uma cadeia de caracteres especificada nas colunas **text** ou **ntext**.|  
 |DATALENGTH<b>(</b>_expression_ **)**|Retorna o comprimento dos dados nas colunas **text**, **ntext** e **image**.|  

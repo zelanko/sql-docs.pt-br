@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72252039"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
@@ -82,7 +82,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  É um código que determina o espaçamento e a justificação do valor substituído.  
   
-|Código|Prefixo ou justificação|Descrição|  
+|Código|Prefixo ou justificação|DESCRIÇÃO|  
 |----------|-----------------------------|-----------------|  
 |- (menos)|Justificado à esquerda|Justifica o valor de argumento à esquerda dentro da largura de campo especificada.|  
 |+ (mais)|Prefixo de sinal|Precede o valor do argumento com um mais (+) ou menos (-) se o valor for de um tipo assinado.|  
@@ -157,7 +157,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  *opção*  
  É uma opção personalizada para o erro e pode ser um dos valores na tabela a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |LOG|Registra o erro no log de erros e no log do aplicativo para a instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os erros registrados no log de erros atualmente estão limitados a no máximo 440 bytes. Somente um membro da função de servidor fixa sysadmin ou um usuário com permissões ALTER TRACE pode especificar WITH LOG.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|Envia mensagens imediatamente ao cliente.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  

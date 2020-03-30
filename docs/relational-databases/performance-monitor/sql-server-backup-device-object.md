@@ -14,10 +14,10 @@ ms.assetid: 52e7febf-d5e0-4674-945b-aacc40a9ad6e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 93302a5b9645784b3b326229545f92de0dce56f8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67987207"
 ---
 # <a name="sql-server-backup-device-object"></a>SQL Server, objeto Backup Device
@@ -25,9 +25,9 @@ ms.locfileid: "67987207"
 
   O objeto **Backup Device** oferece contadores para monitorar dispositivos de backup do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizados para operações de backup e restauração. Monitore os dispositivos de backup quando quiser determinar a taxa de transferência ou o andamento e o desempenho de operações de backup e restauração por dispositivo. Para monitorar a taxa de transferência da operação de backup ou restauração inteira do banco de dados, use o contador **Taxa de Transferência de Backup/Restauração/s** do objeto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Databases**. Para obter mais informações, consulte [SQL Server, Databases Object](../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
- Esta tabela descreve o contador **Backup Device** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Esta tabela descreve o contador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Backup Device**do**.  
   
-|Contadores do Dispositivo de Backup do SQL Server|Descrição|  
+|Contadores do Dispositivo de Backup do SQL Server|DESCRIÇÃO|  
 |---------------------------------------|-----------------|  
 |**Taxa de Transferência do Dispositivo em Bytes/s**|Taxa de transferência de operações de leitura e gravação (em bytes por segundo) de um dispositivo de backup utilizado no backup ou restauração de bancos de dados. Este contador só existe enquanto a operação de backup ou restauração está em execução.|  
   

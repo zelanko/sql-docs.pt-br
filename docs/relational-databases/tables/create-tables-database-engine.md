@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ce6bea9e9f99cd5db4559c6f4b1d966e809f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123706"
 ---
 # <a name="create-tables-database-engine"></a>Criar tabelas (Mecanismo de Banco de Dados)
@@ -27,7 +27,7 @@ ms.locfileid: "68123706"
   
 
   
-##  <a name="Permissions"></a> Verifique suas permissões primeiro!  
+##  <a name="check-your-permissions-first"></a><a name="Permissions"></a> Verifique suas permissões primeiro!  
 Esta tarefa requer a permissão CREATE TABLE no banco de dados e a permissão ALTER no esquema no qual a tabela está sendo criada.  
   
  Se alguma coluna da instrução CREATE TABLE for definida como um tipo de dado CLR definido pelo usuário, a propriedade do tipo ou a permissão REFERENCES será necessária.  
@@ -69,7 +69,7 @@ Esta tarefa requer a permissão CREATE TABLE no banco de dados e a permissão AL
   
 11. Para exibir a nova tabela, em **Pesquisador de Objetos**, expanda o nó **Tabelas** e pressione **F5** para atualizar a lista de objetos. A nova tabela é exibida na lista de tabelas.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 ## <a name="using-query-editor"></a>Uso do Editor de Consultas  
   

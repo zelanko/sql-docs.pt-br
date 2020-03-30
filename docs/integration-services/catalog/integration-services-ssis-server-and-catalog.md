@@ -14,10 +14,10 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fa5d6c780ce80e8f6de0493494f736f7049edc16
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298968"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Servidor e Catálogo do SSIS (Integration Services)
@@ -40,7 +40,7 @@ ms.locfileid: "71298968"
   
  Você também pode fornecer alta disponibilidade do SSISDB e de seu conteúdo utilizando o SSIS e grupos de disponibilidade Always On. Para obter mais informações, confira [AlwaysOn para Catálogo SSIS (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb). Veja também essa postagem no blog de Matt Masson, [SSIS com Always On](https://go.microsoft.com/fwlink/?LinkId=255873), em blogs.msdn.com.  
   
-##  <a name="ssms"></a> Servidor do Integration Services no SQL Server Management Studio  
+##  <a name="integration-services-server-in-sql-server-management-studio"></a><a name="ssms"></a> Servidor do Integration Services no SQL Server Management Studio  
  Quando você conecta a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que hospeda o banco de dados do **SSISDB** , vê os seguintes objetos no Pesquisador de Objetos:  
   
 -   **Banco de dados SSISDB**  

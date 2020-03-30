@@ -20,10 +20,10 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134789"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extrair um DAC de um banco de dados
@@ -34,13 +34,13 @@ ms.locfileid: "68134789"
 ## <a name="before-you-begin"></a>Antes de começar  
  É possível extrair um DAC de bancos de dados que residam em instâncias do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 ou posterior. Se o processo de extração for executado em um banco de dados que foi implantado de um DAC, só serão extraídas as definições dos objetos no banco de dados. O processo não faz referência ao DAC registrado em **msdb** (**master** no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). O processo de extração não registra a definição do DAC na instância atual do Mecanismo de Banco de Dados. Para obter mais informações sobre como registrar um DAC, consulte [Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md).  
   
-##  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+##  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições  
  Um DAC só pode ser extraído de um banco de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior. Você não poderá extrair um DAC se o banco de dados tiver objetos que não tenham suporte em um DAC ou usuários contidos. Para obter mais informações sobre os tipos de objetos com suporte em um DAC, consulte [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-##  <a name="Permissions"></a> Permissões  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  A extração de um DAC exige, pelo menos, as permissões ALTER ANY LOGIN e VIEW DEFINITION do escopo do banco de dados, bem como as permissões SELECT em **sys.sql_expression_dependencies**. A extração de um DAC pode ser feita por membros da função de servidor fixa securityadmin que também são membros da função de banco de dados fixa database_owner no banco de dados do qual o DAC é extraído. Membros da função de servidor fixa sysadmin ou a conta interna do administrador do sistema do SQL Server chamada **sa** também podem extrair um DAC.  
   
-##  <a name="UsingDACExtractWizard"></a> Usando o Assistente para Extrair um Aplicativo da Camada de Dados  
+##  <a name="using-the-extract-data-tier-application-wizard"></a><a name="UsingDACExtractWizard"></a> Usando o Assistente para Extrair um Aplicativo da Camada de Dados  
  **Para extrair um DAC usando um assistente**  
   
 1.  No **Pesquisador de Objetos**, expanda o nó da instância que contém o banco de dados do qual o DAC será extraído.  
@@ -61,7 +61,7 @@ ms.locfileid: "68134789"
   
     5.  [Página Criar Pacote](#BuildPackage)  
   
-###  <a name="Introduction"></a> Página de Introdução do assistente  
+###  <a name="wizard-introduction-page"></a><a name="Introduction"></a> Página de Introdução do assistente  
  Esta página descreve as etapas para extrair um aplicativo da camada de dados.  
   
  **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página no futuro.  
@@ -72,7 +72,7 @@ ms.locfileid: "68134789"
   
  [&#91;Assistente de Extração&#93;](#UsingDACExtractWizard)  
   
-###  <a name="SelectData"></a> Select data page  
+###  <a name="select-data-page"></a><a name="SelectData"></a> Select data page  
 Selecione os dados de referência que você deseja incluir em seu arquivo de pacote de DAC (aplicativo da camada de dados). A inclusão de dados em seu pacote de DAC é opcional. O pacote de DAC já incluirá o esquema de todos os objetos de banco de dados com suporte e objetos de instância relacionados a seu banco de dados.  
   
  Você pode incluir até 10 MB de dados de referência em seu arquivo de pacote de DAC. No entanto, para que tabelas sejam incluídas no DAC, elas não podem conter tipos de dados BLOB (objeto binário grande) como **image** ou **varchar(max)** . Para extrair quantidades maiores de dados para transferência para outro banco de dados, use o SQL Server Integration Services, o utilitário de cópia em massa ou um das muitas outras técnicas de migração de dados.  
@@ -81,7 +81,7 @@ Selecione os dados de referência que você deseja incluir em seu arquivo de pac
   
  [&#91;Assistente de Extração&#93;](#UsingDACExtractWizard)  
   
-###  <a name="SetProperties"></a> Set properties page  
+###  <a name="set-properties-page"></a><a name="SetProperties"></a> Set properties page  
  Use esta página do assistente para descrever o aplicativo da camada de dados (DAC). Estas propriedades são usadas para identificar o DAC e ajudam a distingui-lo de outros.  
   
  **Nome** – Este nome identifica o DAC. Pode ser diferente do nome do arquivo de pacote de DAC e deve descrever seu aplicativo. Por exemplo, se o banco de dados for usado para um aplicativo de finanças, você poderá nomeá-lo como Finanças do DAC.  
@@ -94,7 +94,7 @@ Selecione os dados de referência que você deseja incluir em seu arquivo de pac
   
  **Substituir o arquivo existente** – Marque esta caixa de seleção para substituir o arquivo do pacote de DAC se já existir um com o mesmo nome.  
   
-###  <a name="ValidateSummary"></a> Validation and summary page  
+###  <a name="validation-and-summary-page"></a><a name="ValidateSummary"></a> Validation and summary page  
  Nesta página, o assistente valida se todos os objetos de banco de dados têm suporte de um DAC (aplicativo da camada de dados). Também verifica dependências entre objetos de banco de dados para determinar o conjunto de objetos que podem ser incluídos com êxito no DAC. Depois disso, exibe o relatório de validação e resume as opções que você selecionou neste assistente. Para alterar uma opção, clique em **Anterior**. Para iniciar a extração de um DAC, clique em **Avançar**.  
   
 > **OBSERVAÇÃO:** se um ou mais objetos não tiverem suporte em um DAC, o botão **Avançar** será desabilitado e o processo de extração talvez não continue. Nesses casos, é recomendável remover os objetos sem suporte e, em seguida, executar esse assistente novamente.  
@@ -113,7 +113,7 @@ Selecione os dados de referência que você deseja incluir em seu arquivo de pac
   
  **Salvar Relatório** – Permite salvar um arquivo baseado em HTML que lista todos os objetos no nó **Objetos do DAC** no resumo. Esse relatório pode ser útil quando alguns de seus objetos de banco de dados não têm suporte em um DAC. Use o relatório para alterar ou remover objetos que não têm suporte, antes de tentar extrair o DAC novamente.  
   
- ###  <a name="BuildPackage"></a> Build package page  
+ ###  <a name="build-package-page"></a><a name="BuildPackage"></a> Build package page  
  Use esta página para monitorar o andamento do assistente enquanto ele extrai o aplicativo da camada de dados (DAC).  
   
  **Ação** – Durante a ação **Criar e salvar arquivo de pacote de DAC** , o assistente extrai um DAC do banco de dados SQL Server. Em seguida, o pacote de DAC é criado na memória e salvo no local especificado. Clique nos links na coluna **Resultado** para ver o resultado da etapa correspondente.  
@@ -122,7 +122,7 @@ Selecione os dados de referência que você deseja incluir em seu arquivo de pac
   
  **Concluir** – Clique para fechar o assistente após a conclusão do processamento, ou se ocorrer um erro.  
    
-##  <a name="ExtractDACPowerShell"></a> Extrair um DAC usando o PowerShell  
+##  <a name="extract-a-dac-using-powershell"></a><a name="ExtractDACPowerShell"></a> Extrair um DAC usando o PowerShell  
  **Para extrair um DAC de um banco de dados usando o método Extract() em um script do PowerShell**  
   
 1.  Crie um objeto do Servidor SMO e defina-o como a instância que contém o banco de dados do qual o DAC será extraído.  

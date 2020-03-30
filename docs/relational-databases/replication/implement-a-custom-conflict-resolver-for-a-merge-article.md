@@ -18,10 +18,10 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a71c7c83afe2fcb8b0192f6dfd12c8072ccdc392
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322153"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementar um resolvedor de conflitos personalizado para um artigo de mesclagem
@@ -36,7 +36,7 @@ ms.locfileid: "75322153"
   
      [Resolvedor baseado em COM](#COM)  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Você pode gravar seu próprio resolvedor de conflito personalizado como um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] em cada Publicador. Durante a sincronização, este procedimento armazenado é invocado quando são encontrados conflitos em um artigo no qual o resolvedor foi registrado. As informações sobre a linha de conflito são passadas pelo Agente de Mesclagem para os parâmetros necessários do procedimento. Resolvedores de conflito personalizados com base em procedimento armazenado sempre são criados no Publicador.  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ ms.locfileid: "75322153"
   
 2.  Execute [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), especificando **\@publication**, **\@article**, um valor de **resolver_info** para **\@property** e o nome do procedimento armazenado que implementa a lógica do resolvedor de conflitos para **\@value**.  
   
-##  <a name="COM"></a> Como usar um resolvedor personalizado com base em COM  
+##  <a name="using-a-com-based-custom-resolver"></a><a name="COM"></a> Como usar um resolvedor personalizado com base em COM  
  O namespace <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa uma interface que permite gravar lógicas empresariais complexas para tratar eventos e resolver conflitos que ocorram durante o processo de sincronização da replicação de Mesclagem. Para saber mais, confira como [implementar um manipulador de lógica de negócios em um artigo de Mesclagem](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). Você também pode gravar sua própria lógica corporativa personalizada com base em código nativo para resolver conflitos. Essa lógica é criada como um componente COM e compilada em bibliotecas de vínculo dinâmico (DLLs), usando produtos como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Esse tipo de resolvedor de conflitos personalizado com base em COM precisa implementar a interface **ICustomResolver**, que foi projetada especificamente para a resolução de conflitos.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>Para criar e registrar um resolvedor de conflitos personalizado com base em COM  

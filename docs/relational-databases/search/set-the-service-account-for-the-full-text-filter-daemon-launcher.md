@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: eed8020872b3d2a3babc0581054bef0dbed64a4d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055946"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Definir a conta de serviço do Iniciador do Daemon de Filtro de Texto Completo
@@ -31,7 +31,7 @@ O serviço Iniciador do Daemon do Filtro de Texto Completo do SQL é usado pela 
   
 O Iniciador do Daemon de Filtro de Texto Completo do SQL é um serviço de reconhecimento de instâncias associado a uma instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O serviço Iniciador do Daemon de Filtro de Texto Completo do SQL propaga as informações da conta de serviço para cada processo do host do daemon de filtro que ele inicia.  
 
-##  <a name="setting"></a> Definir a conta de serviço  
+##  <a name="set-the-service-account"></a><a name="setting"></a> Definir a conta de serviço  
   
 1.  No menu **Iniciar**, aponte para **Todos os Programas**, expanda [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] e clique em **SQL Server 2016 Configuration Manager**.  
   
@@ -43,7 +43,7 @@ O Iniciador do Daemon de Filtro de Texto Completo do SQL é um serviço de recon
   
 ![Propriedades do processo do Iniciador do Daemon de Filtro de Texto Completo do SQL](../../relational-databases/search/media/sql-full-text-filter-daemon-launch-process-properties.png)
   
-##  <a name="error"></a> Solucionar os problemas do serviço Iniciador do Daemon de Filtro de Texto Completo do SQL se ele não iniciar  
+##  <a name="troubleshoot-the-sql-full-text-filter-daemon-launcher-service-if-it-doesnt-start"></a><a name="error"></a> Solucionar os problemas do serviço Iniciador do Daemon de Filtro de Texto Completo do SQL se ele não iniciar  
  Se o serviço Iniciador do Daemon de Filtro de Texto Completo do SQL não for iniciado, examine as seguintes causas possíveis:  
   
 ### <a name="permissions-issues"></a>Problemas de permissões

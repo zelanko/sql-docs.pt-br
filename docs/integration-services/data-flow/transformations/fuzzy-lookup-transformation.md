@@ -34,10 +34,10 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 723c8f8b34ceb9e96ae6da196a64f766b18857ef
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291492"
 ---
 # <a name="fuzzy-lookup-transformation"></a>transformação Pesquisa Difusa
@@ -58,7 +58,7 @@ ms.locfileid: "71291492"
   
  Essa transformação tem uma entrada e uma saída.  
   
- Apenas colunas com os tipos de dados **DT_WSTR** e **DT_STR** podem ser usadas na correspondência difusa. A correspondência exata pode usar qualquer tipo de dados DTS, exceto **DT_TEXT**, **DT_NTEXT**e **DT_IMAGE**. Para obter mais informações, consulte [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Colunas que participam da junção entre a tabela de entrada e de referência deve ter tipos de dados compatíveis. Por exemplo, é válido unir uma coluna com o tipo de dados DTS **DT_WSTR** a uma coluna com o tipo de dados **nvarchar** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mas é inválido unir uma coluna com o tipo de dados **DT_WSTR** a uma coluna com o tipo de dados **int**.  
+ Apenas colunas com os tipos de dados **DT_WSTR** e **DT_STR** podem ser usadas na correspondência difusa. A correspondência exata pode usar qualquer tipo de dados DTS, exceto **DT_TEXT**, **DT_NTEXT**e **DT_IMAGE**. Para obter mais informações, consulte [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Colunas que participam da junção entre a tabela de entrada e de referência deve ter tipos de dados compatíveis. Por exemplo, é válido unir uma coluna com o tipo de dados DTS **DT_WSTR** a uma coluna com o tipo de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]nvarchar**do**, mas é inválido unir uma coluna com o tipo de dados **DT_WSTR** a uma coluna com o tipo de dados **int**.  
   
  Você pode personalizar essa transformação especificando a quantidade máxima de memória, o algoritmo de comparação de linha e o cache de índices e tabelas de referência que a transformação usa.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "71291492"
   
  A tabela a seguir descreve as opções de índice de correspondência.  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**GenerateAndMaintainNewIndex**|Cria um índice novo, salva-o e faz a sua manutenção. A transformação instala acionadores na tabela de referência para manter essa tabela de referência e a tabela de índice sincronizadas.|  
 |**GenerateAndPersistNewIndex**|Cria um índice novo, salva-o, mas não faz a sua manutenção.|  

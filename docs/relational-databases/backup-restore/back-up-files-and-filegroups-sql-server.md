@@ -17,10 +17,10 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708681"
 ---
 # <a name="back-up-files-and-filegroups"></a>Arquivos de backup e grupos de arquivos
@@ -29,9 +29,9 @@ ms.locfileid: "71708681"
   
 Para obter mais informações sobre backups de arquivos, veja [Backups completos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) e [Backups diferenciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
 
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 - A instrução BACKUP não é permitida em uma transação explícita ou implícita.  
   
@@ -39,11 +39,11 @@ Para obter mais informações sobre backups de arquivos, veja [Backups completos
   
 Para obter mais informações sobre limitações e restrições, veja [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
-###  <a name="Recommendations"></a> Recomendações
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações
   
 Por padrão, toda operação de backup bem-sucedida acrescenta uma entrada ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao log de eventos do sistema. Se você fizer backup do log com muita frequência, essas mensagens de êxito serão acumuladas muito rapidamente, resultando em logs de erros imensos que podem dificultar a localização de outras mensagens. Nesses casos, suprima essas entradas de log usando o sinalizador de rastreamento 3226 se nenhum dos scripts depender dessas entradas; confira [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 
-###  <a name="Permissions"></a> Permissões
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões
 
 As permissões `BACKUP DATABASE` e `BACKUP LOG` usam como padrão os membros da função de servidor fixa **sysadmin** e as funções de banco de dados fixas **db_owner** e **db_backupoperator**.  
   
@@ -154,7 +154,7 @@ No modelo de recuperação completa, você deverá também efetuar backup do log
 
 Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)).  
   
-###  <a name="TsqlExample"></a> Exemplos
+###  <a name="examples"></a><a name="TsqlExample"></a> Exemplos
 Os exemplos seguintes fazem backup de um ou mais arquivos dos grupos de arquivos secundários do banco de dados `Sales` . Esse banco de dados usa o modelo de recuperação completa e contém os seguintes grupos de arquivos secundários:  
   
 - Um grupo de arquivo nomeado `SalesGroup1` que tem os arquivos `SGrp1Fi1` e `SGrp1Fi2`.  
@@ -199,7 +199,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-## <a name="PowerShellProcedure"></a> Usando o PowerShell
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usando o PowerShell
 
 Configure e use o [Provedor do SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md).
   

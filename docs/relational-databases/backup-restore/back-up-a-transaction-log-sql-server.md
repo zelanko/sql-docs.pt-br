@@ -15,10 +15,10 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708732"
 ---
 # <a name="back-up-a-transaction-log"></a>Fazer backup de um log de transações
@@ -26,17 +26,17 @@ ms.locfileid: "71708732"
   Este tópico descreve como fazer backup de um log de transações no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell.  
 
 ## <a name="before-you-begin"></a>Antes de começar
-### <a name="Restrictions"></a> Limitações e restrições  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 A instrução `BACKUP` não é permitida em uma transação explícita ou [implícita](../../t-sql/statements/set-implicit-transactions-transact-sql.md). Uma transação explícita é aquela para a qual você define o início e término da transação explicitamente.
 
-### <a name="Recommendations"></a> Recomendações  
+### <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 - Se um banco de dados usar o [modelo de recuperação](recovery-models-sql-server.md) total ou log de transação em massa, você deverá fazer backup do log de transações com regularidade suficiente para proteger os dados e impedir que o [log de transações fique cheio](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md). Isso trunca o log e oferece suporte à restauração do banco de dados para um período específico. 
   
 - Por padrão, toda operação de backup bem-sucedida acrescenta uma entrada ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao log de eventos do sistema. Se você fizer backup do log com frequência, essas mensagens de êxito serão acumuladas muito rapidamente, resultando em logs de erros imensos que dificultam a localização de outras mensagens. Nesses casos, suprima essas entradas de log usando o sinalizador de rastreamento 3226 se nenhum dos scripts depender dessas entradas; confira [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
-### <a name="Permissions"></a> Permissões
+### <a name="permissions"></a><a name="Permissions"></a> Permissões
 
 As permissões `BACKUP DATABASE` e `BACKUP LOG` necessárias são concedidas por padrão aos membros da função de servidor fixa **sysadmin** e às funções de banco de dados fixas **db_owner** e **db_backupoperator**. Verifique se as permissões estão corretas antes de começar.
   
@@ -150,7 +150,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> Usando o PowerShell
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usando o PowerShell
 
 Configure e use o [Provedor do SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md). Use o **Backup-SqlDatabase** cmdlet e especifique **Log** para o valor do parâmetro **-BackupAction** .  
   
@@ -160,7 +160,7 @@ O exemplo a seguir cria um backup do log do banco de dados `<myDatabase>` para o
 Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -BackupAction Log  
 ```
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 - [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

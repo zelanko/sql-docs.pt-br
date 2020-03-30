@@ -33,10 +33,10 @@ ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287980"
 ---
 # <a name="database-files-and-filegroups"></a>Arquivos e grupos de arquivos do banco de dados
@@ -46,7 +46,7 @@ ms.locfileid: "79287980"
 ## <a name="database-files"></a>Arquivos do banco de dados  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possuem três tipos de arquivos, como mostrado na tabela a seguir.  
   
-|Arquivo|Descrição|  
+|Arquivo|DESCRIÇÃO|  
 |----------|-----------------|  
 |Primária|O arquivo de dados primário contém as informações de inicialização do banco de dados e aponta para os outros arquivos no banco de dados. Dados do usuário e objetos podem ser armazenados neste arquivo ou em arquivos de dados secundários. Todo banco de dados possui um arquivo de dados primário. A extensão de nome de arquivo indicada para arquivos de dados primários é .mdf.|  
 |Secundário|Os arquivos de dados secundários são opcionais, definidos pelo usuário, e armazenam dados do usuário. Arquivos secundários podem ser usados para distribuir os dados entre os diversos discos, colocando cada arquivo em uma unidade de disco diferente. Além disso, caso um banco de dados exceda o tamanho máximo em um único arquivo Windows, será possível usar arquivos de dados secundários, assim, o banco de dados continuará a crescer.<br /><br /> A extensão de nome de arquivo indicada para arquivos de dados secundários é .ndf.|  
@@ -59,9 +59,9 @@ ms.locfileid: "79287980"
 ### <a name="logical-and-physical-file-names"></a>Nomes de arquivos lógico e físico
 Os arquivos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm dois tipos de nome de arquivo: 
 
-**logical_file_name:**  o logical_file_name é o nome usado para se referir ao arquivo físico em todas as instruções Transact-SQL. O nome de arquivo lógico deve estar de acordo com as regras de identificadores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e deve ser exclusivo entre os nomes de arquivos lógicos no banco de dados. Isso é definido pelo argumento `NAME` em `ALTER DATABASE`. Para obter mais informações, consulte [Opções de arquivo e grupo de arquivos de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+**logical_file_name:**  O logical_file_name é o nome usado para se referir ao arquivo físico em todas as instruções Transact-SQL. O nome de arquivo lógico deve estar de acordo com as regras de identificadores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e deve ser exclusivo entre os nomes de arquivos lógicos no banco de dados. Isso é definido pelo argumento `NAME` em `ALTER DATABASE`. Para obter mais informações, consulte [Opções de arquivo e grupo de arquivos de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
-**os_file_name:** o os_file_name é o nome do arquivo físico que inclui o caminho de diretório. Ele deve seguir as regras dos nomes de arquivo de sistema operacional. Isso é definido pelo argumento `FILENAME` em `ALTER DATABASE`. Para obter mais informações, consulte [Opções de arquivo e grupo de arquivos de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+**os_file_name:** O os_file_name denomina é o nome do arquivo físico que inclui o caminho de diretório. Ele deve seguir as regras dos nomes de arquivo de sistema operacional. Isso é definido pelo argumento `FILENAME` em `ALTER DATABASE`. Para obter mais informações, consulte [Opções de arquivo e grupo de arquivos de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!IMPORTANT]
 > Os arquivos de log e os dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser colocados em sistemas de arquivos FAT ou NTFS. Em sistemas Windows, recomendamos o uso do sistema de arquivos NTFS devido aos aspectos de segurança do NTFS. 
@@ -101,7 +101,7 @@ O formulário do arquivo usado por um instantâneo do banco de dados para armaze
   
  Todos os arquivos de dados são armazenados nos grupos de arquivos listados na tabela a seguir.  
   
-|Grupo de arquivos|Descrição|  
+|Grupo de arquivos|DESCRIÇÃO|  
 |---------------|-----------------|  
 |Primária|O grupo de arquivos que contém o arquivo primário. Todas as tabelas do sistema são alocadas no grupo de arquivos primário.|  
 |Dados otimizados para memória|Um grupo de arquivos com otimização de memória baseia-se no grupo de arquivos do fluxo de arquivos|  
@@ -199,7 +199,7 @@ As regras a seguir pertencem aos arquivos e grupos de arquivos:
 - Um arquivo pode ser um membro apenas de um único grupo de arquivos.
 - Os arquivos de log de transação nunca integram nenhum grupo de arquivos.
 
-## <a name="Recommendations"></a> Recomendações
+## <a name="recommendations"></a><a name="Recommendations"></a> Recomendações
 A seguir, algumas recomendações gerais para quando se estiver trabalhando com arquivos e grupos de arquivos: 
 - A maioria dos bancos de dados funcionará bem com um único arquivo de dados e um único arquivo de log de transação.
 - Se estiver usando vários arquivos de dados, crie um segundo grupo de arquivos para o arquivo adicional e transforme o grupo de arquivos no grupo de arquivos padrão. Desse modo, o arquivo primário conterá somente tabelas e objetos do sistema.

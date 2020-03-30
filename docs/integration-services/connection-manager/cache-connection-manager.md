@@ -15,10 +15,10 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac44546e0f74e8cdee7e004f33a515b94e16aeb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294454"
 ---
 # <a name="cache-connection-manager"></a>Gerenciador de conexões do cache
@@ -67,7 +67,7 @@ ms.locfileid: "71294454"
   
  A caixa de diálogo **Editor do Gerenciador de Conexões de Cache** inclui as seguintes guias:  
   
-###  <a name="generaltab"></a> Guia Geral  
+###  <a name="general-tab"></a><a name="generaltab"></a> Guia Geral  
  Use a guia **Geral** da caixa de diálogo **Editor do Gerenciador de Conexões de Cache** para indicar se é necessário ler o cache de um arquivo ou salvar o cache em um arquivo.  
   
 #### <a name="options"></a>Opções  
@@ -98,7 +98,7 @@ ms.locfileid: "71294454"
  **Atualizar metadados**  
  Exclua os metadados de colunas no gerenciador de conexões de Cache e popule novamente o gerenciador de conexões do Cache com matadados de colunas de um arquivo de cache selecionado.  
   
-###  <a name="columnstab"></a> Guia Colunas  
+###  <a name="columns-tab"></a><a name="columnstab"></a> Guia Colunas  
  Use a guia **Colunas** da caixa de diálogo **Editor do Gerenciador de Conexões de Cache** para configurar as propriedades de cada coluna no cache.  
   
 #### <a name="options"></a>Opções  

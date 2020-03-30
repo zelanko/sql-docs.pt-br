@@ -18,10 +18,10 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ac8532f2cc5d8e2f50c0408ce983a61626748fb1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68066545"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (tipo de dados geography)
@@ -59,7 +59,7 @@ _relative_
 ## <a name="return-types"></a>Tipos de retorno  
 Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
-Tipo de retorno CLR: **SqlGeography**  
+Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Comentários  
 Esse método gerará uma **ArgumentException** se a _distance_ for NaN (não é um número) ou se _distance_ for um infinito positivo ou negativo.  Este método também gerará uma **ArgumentException** se _tolerance_ for zero (0), NaN (não é um número), negativo ou infinito positivo ou negativo.  

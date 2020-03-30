@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4d763ccf2799ea72a1882a576e4b17ef839e3f1e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68742955"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>Instruções RESTORE – LABELONLY (Transact-SQL)
@@ -78,7 +78,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Conjuntos de resultados  
  O conjunto de resultados de RESTORE LABELONLY consiste em uma única linha com essas informações.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**MediaName**|**nvarchar(128)**|Nome da mídia.|  
 |**MediaSetId**|**uniqueidentifier**|Número de identificação exclusivo do conjunto de mídias.|  
@@ -91,7 +91,7 @@ FROM <backup_device>
 |**SoftwareName**|**nvarchar(128)**|Nome do software de backup que gravou o rótulo.|  
 |**SoftwareVendorId**|**int**|Número exclusivo de identificação do fornecedor do software que gravou o backup.|  
 |**MediaDate**|**datetime**|Data e hora em que o rótulo foi gravado.|  
-|**Mirror_Count**|**int**|Número de espelhos no conjunto (1-4).<br /><br /> Observação: Os rótulos escritos para espelhos diferentes em um conjunto são idênticos.|  
+|**Mirror_Count**|**int**|Número de espelhos no conjunto (1-4).<br /><br /> Observação: os rótulos gravados para espelhos diferentes em um conjunto são idênticos.|  
 |**IsCompressed**|**bit**|Se o backup é compactado:<br /><br /> 0 = não compactado<br /><br /> 1 = compactado|  
   
 > [!NOTE]  

@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eb553ecf259e6733da143428cd6474debd8215f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412692"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar requisitos de memória para tabelas com otimização de memória
@@ -52,7 +52,7 @@ Quando houver uma carga de trabalho ativa, é necessária memória adicional par
   
 - [Memória para o crescimento](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
-###  <a name="bkmk_ExampleTable"></a> Exemplo de tabela com otimização de memória  
+###  <a name="example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a> Exemplo de tabela com otimização de memória  
 
 Considere o esquema de tabela com otimização de memória a seguir:
   
@@ -83,7 +83,7 @@ GO
 
 Usando esse esquema, determinaremos a memória mínima necessária para essa tabela com otimização de memória.  
   
-###  <a name="bkmk_MemoryForTable"></a> Memória da tabela  
+###  <a name="memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a> Memória da tabela  
 
 Uma linha de tabela com otimização de memória é composta de três partes:
   
@@ -102,7 +102,7 @@ Veja a seguir uma computação de tamanho para 5.000.000 (5 milhões) de linhas 
   
 Pelos cálculos acima, o tamanho de cada linha na tabela com otimização de memória é 24 + 32 + 200 ou 256 bytes.  Como temos 5 milhões de linhas, a tabela consumirá 5.000.000 * 256 bytes ou 1.280.000.000 bytes – aproximadamente 1,28 GB.  
   
-###  <a name="bkmk_IndexMeemory"></a> Memória para índices  
+###  <a name="memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a> Memória para índices  
 
 #### <a name="memory-for-each-hash-index"></a>Memória para cada índice de hash  
   
@@ -165,7 +165,7 @@ SELECT * FRON t_hk
    WHERE c2 > 5;  
 ```  
   
-###  <a name="bkmk_MemoryForRowVersions"></a> Memória para o controle de versão de linha
+###  <a name="memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a> Memória para o controle de versão de linha
 
 Para evitar bloqueios, OLTP de memória usa a simultaneidade otimista ao atualizar ou excluir linhas. Isso significa que quando uma linha é atualizada, uma versão de linha adicional será criada. Além disso, as exclusões são lógicas – a linha existente é marcada como excluída, mas não é removida imediatamente. O sistema mantém as versões de linhas antigas (incluindo as linhas excluídas) disponíveis até que todas as transações que possivelmente poderiam usar a versão tenham concluído a execução. 
   
@@ -181,13 +181,13 @@ A necessidade de memória para linhas obsoletas é estimada pela multiplicação
   
 `memoryForRowVersions = rowVersions * rowSize`  
   
-###  <a name="bkmk_TableVariables"></a> Memória para variáveis de tabela
+###  <a name="memory-for-table-variables"></a><a name="bkmk_TableVariables"></a> Memória para variáveis de tabela
   
 A memória usada para uma variável de tabela é liberada apenas quando a variável de tabela sai do escopo. As linhas excluídas, inclusive as linhas excluídas como parte de uma atualização, de uma variável de tabela, não estão sujeitas à coleta de lixo. Nenhuma memória é liberada até a variável de tabela sair do escopo.  
   
 As variáveis de tabela definidas em um lote SQL grande, e não em um escopo do procedimento, que são usadas em muitas transações podem consumir bastante memória. Como elas não têm coleta de lixo, as linhas excluídas em uma variável de tabela podem consumir muita memória e diminuir o desempenho, pois as operações de leitura precisam verificar as linhas excluídas.  
   
-###  <a name="bkmk_MemoryForGrowth"></a> Memória para o crescimento
+###  <a name="memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a> Memória para o crescimento
 
 Os cálculos acima estima suas necessidades de memória para a tabela como existe atualmente. Além dessa memória, você precisa estimar o aumento da tabela e fornecimento de memória suficiente para acomodar esse crescimento.  Por exemplo, se você antecipar o crescimento de 10% no múltiplo da necessidade dos resultados acima por 1,1 para obter a memória total necessária para a tabela.  
   

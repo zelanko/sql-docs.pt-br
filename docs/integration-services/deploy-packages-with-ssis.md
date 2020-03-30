@@ -21,10 +21,10 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b873c611c0e997c5033c2efed341f93e0ec5aa5e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71290733"
 ---
 # <a name="deploy-packages-with-ssis"></a>Implantar pacotes com o SSIS
@@ -52,7 +52,7 @@ O objetivo deste tutorial é simular a complexidade dos problemas reais de impla
 A melhor maneira de se familiarizar com as novas ferramentas, controles e recursos disponíveis no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é usando-os. Este tutorial guia você através das etapas para criar um projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e adicionar pacotes e outros arquivos necessários ao projeto. Após a conclusão do projeto, você criará um grupo de implantação, copiará o grupo para o computador de destino e instalará os pacotes no computador de destino.    
     
 ## <a name="prerequisites"></a>Prerequisites    
-Este tutorial destina-se aos usuários que já estão familiarizados com as operações básicas do sistema de arquivos, mas que tiveram exposição limitada aos novos recursos disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para entender melhor os conceitos básicos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que serão usados neste tutorial, talvez seja útil completar primeiro o seguinte tutorial do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]: [SSIS: Como criar um pacote ETL](../integration-services/ssis-how-to-create-an-etl-package.md).    
+Este tutorial destina-se aos usuários que já estão familiarizados com as operações básicas do sistema de arquivos, mas que tiveram exposição limitada aos novos recursos disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para entender melhor os conceitos básicos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que serão usados neste tutorial, talvez seja útil concluir primeiro este tutorial do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] : [SSIS: Como criar um pacote ETL](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
 ### <a name="on-the-source-computer"></a>No computador de origem
 
@@ -89,13 +89,13 @@ O computador no qual você implanta os pacotes **deve ter os seguintes component
 Se você planeja implantar pacotes no mesmo computador em que criará o grupo de implantação, esse computador deverá atender aos requisitos dos computadores de origem e de destino.    
         
 ## <a name="lessons-in-this-tutorial"></a>Lições neste tutorial    
-[Lição 1: preparar-se para criar o pacote de implantação](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
+[Lição 1: Preparando-se para criar o pacote de implantação](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 Nesta lição, você irá se preparar para implantar uma solução ETL criando um novo projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e adicionando os pacotes e outros arquivos necessários ao projeto.    
     
-[Lição 2: criar o pacote de implantação no SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
+[Lição 2: Criar o pacote de implantação no SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
 Nesta lição, você compilará um utilitário de implantação e verificará se o grupo de implantação inclui os arquivos necessários.    
     
-[Lição 3: instalar os pacotes SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
+[Lição 3: Instalar os pacotes SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
 Nesta lição, você copiará o grupo de implantação para o computador de destino, instalará os pacotes e executará os pacotes.    
     
 

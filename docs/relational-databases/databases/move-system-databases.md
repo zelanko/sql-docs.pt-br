@@ -28,10 +28,10 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68100458"
 ---
 # <a name="move-system-databases"></a>Mover bancos de dados do sistema
@@ -56,7 +56,7 @@ ms.locfileid: "68100458"
 >  Após a movimentação dos arquivos, a conta de serviço do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] deve ter permissão para acessar os arquivos no novo local de pasta do arquivo.
     
   
-##  <a name="Planned"></a> Realocação planejada e procedimento de manutenção de disco agendado  
+##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> Realocação planejada e procedimento de manutenção de disco agendado  
  Para mover um arquivo de dados de um banco de dados do sistema ou arquivo de log como parte de uma realocação planejada ou operação de manutenção, execute as etapas a seguir. Este procedimento se aplica a todos os bancos de dados do sistema exceto os bancos de dados mestre e Recurso.  
   
 1.  Para cada arquivo a ser movido, execute a seguinte instrução.  
@@ -93,7 +93,7 @@ ms.locfileid: "68100458"
   
 2.  Verifique se o Database Mail está funcionando, enviando um email de teste.  
   
-##  <a name="Failure"></a> Falha no procedimento de recuperação  
+##  <a name="failure-recovery-procedure"></a><a name="Failure"></a> Falha no procedimento de recuperação  
  Se um arquivo tiver de ser movido devido à falha de um hardware, siga estas etapas para realocar o arquivo para o novo local. Este procedimento se aplica a todos os bancos de dados do sistema exceto os bancos de dados mestre e Recurso.  
   
 > [!IMPORTANT]  
@@ -141,7 +141,7 @@ ms.locfileid: "68100458"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
-##  <a name="master"></a> Movendo o banco de dados mestre  
+##  <a name="moving-the-master-database"></a><a name="master"></a> Movendo o banco de dados mestre  
  Para mover o banco de dados mestre, siga estas etapas.  
   
 1.  Pelo menu **Iniciar** , aponte para **Todos os Programas**, aponte para **Microsoft SQL Server**, aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
@@ -188,10 +188,10 @@ ms.locfileid: "68100458"
 10. Neste ponto, o SQL Server deverá ser executado normalmente. Porém, a Microsoft também recomenda ajustar a entrada do Registro em `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`, em que *instance_ID* é como `MSSQL13.MSSQLSERVER`. Neste Hive, altere o valor `SQLDataRoot` para o novo caminho. Uma falha em atualizar o Registro poderá causar falha na atualização e aplicação de patch.
 
   
-##  <a name="Resource"></a> Movendo o banco de dados de recursos  
+##  <a name="moving-the-resource-database"></a><a name="Resource"></a> Movendo o banco de dados de recursos  
  A localização do banco de dados Resource é \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\. O banco de dados não pode ser movido.  
   
-##  <a name="Follow"></a> Acompanhamento: depois de mover todos os bancos de dados do sistema  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> Acompanhamento: depois de mover todos os bancos de dados do sistema  
  Se você moveu todos os bancos de dados do sistema para uma nova unidade ou volume ou para outro servidor com uma letra de unidade diferente, faça as atualizações a seguir.  
   
 -   Altere o caminho do log do SQL Server Agent. Se você não atualizar este caminho, o SQL Server Agent não iniciará.  
@@ -216,7 +216,7 @@ ms.locfileid: "68100458"
   
 4.  Pare e inicie o serviço do SQL Server para concluir a alteração.  
   
-##  <a name="Examples"></a> Exemplos  
+##  <a name="examples"></a><a name="Examples"></a> Exemplos  
   
 ### <a name="a-moving-the-tempdb-database"></a>a. Movendo o banco de dados tempdb  
  O seguinte exemplo move os arquivos de log e de dados `tempdb` para um novo local como parte de uma realocação planejada.  

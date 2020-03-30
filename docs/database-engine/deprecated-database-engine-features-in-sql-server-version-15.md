@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-ver15'
 ms.openlocfilehash: c90f78d9aa7773dc4462c732a8181c3340d797f8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252733"
 ---
-# <a name="deprecated-database-engine-features-in-includesssqlv15-mdincludessssqlv15-mdmd"></a>Recursos preteridos do mecanismo de banco de dados no [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
+# <a name="deprecated-database-engine-features-in-sssqlv15-md"></a>Recursos preteridos do mecanismo de banco de dados no [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
 [!INCLUDE[tsql-appliesto-sssver15-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 O SQL Server 2019 não pretere nenhum recurso.

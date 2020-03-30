@@ -11,10 +11,10 @@ ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 44eac2fbcc156b3591bdf02fd00ff0d6bd19366b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028239"
 ---
 # <a name="working-with-result-sets"></a>Trabalhando com conjuntos de resultados
@@ -32,7 +32,7 @@ Os tópicos desta seção descrevem diversas maneiras de usar um conjunto de res
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-| Tópico                                                                                           | Descrição                                                                                                                                                                                             |
+| Tópico                                                                                           | DESCRIÇÃO                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Recuperando exemplo de dados do conjunto de resultados](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | Descreve como usar um conjunto de resultados para recuperar dados de um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e exibi-los.                                                         |
 | [Modificando exemplo de dados de conjunto de resultados](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | Descreve como usar um conjunto de resultados para inserir, recuperar e modificar dados de um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].                                                      |

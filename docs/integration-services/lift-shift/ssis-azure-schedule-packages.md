@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 4217acf163e8603c5993cfa8ade4207c9a79c6cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054558"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Agendar a execução de pacotes SSIS (SQL Server Integration Services) implantados no Azure
@@ -36,13 +36,13 @@ ms.locfileid: "68054558"
 - [Agendar um pacote indiretamente como parte de um pipeline do Azure Data Factory](#activity)
 
 
-## <a name="ssms"></a> Agendar um pacote com o SSMS
+## <a name="schedule-a-package-with-ssms"></a><a name="ssms"></a> Agendar um pacote com o SSMS
 
 No SSMS (SQL Server Management Studio), é possível clicar com o botão direito do mouse em um pacote implantado no banco de dados do Catálogo do SSIS, SSISDB, e selecionar **Agendar** para abrir a caixa de diálogo **Nova agenda**. Para obter mais informações, consulte [Agendar pacotes SSIS no Azure com o SSMS](ssis-azure-schedule-packages-ssms.md).
 
 Esse recurso exige o SQL Server Management Studio versão 17.7 ou superior. Para obter a versão mais recente do SSMS, confira [Baixar o SSMS (SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md).
 
-## <a name="elastic"></a> Agendar um pacote com trabalhos elásticos de Banco de Dados SQL
+## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> Agendar um pacote com trabalhos elásticos de Banco de Dados SQL
 
 Para obter mais informações sobre trabalhos elásticos no Banco de Dados SQL, consulte [Gerenciando bancos de dados de nuvem expandidos](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
 
@@ -88,7 +88,7 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
     @schedule_interval_type='Minutes',Â @schedule_interval_count=60Â 
 ```
 
-## <a name="agent"></a> Agendar um pacote com o SQL Server Agent local
+## <a name="schedule-a-package-with-sql-server-agent-on-premises"></a><a name="agent"></a> Agendar um pacote com o SQL Server Agent local
 
 Para obter mais informações sobre o SQL Server Agent, consulte [Trabalhos do SQL Server Agent para pacotes](../packages/sql-server-agent-jobs-for-packages.md).
 
@@ -160,7 +160,7 @@ Para agendar um pacote com o SQL Server Agent local, crie um trabalho com uma et
 
 6.  Conclua a configuração e o agendamento do trabalho.
 
-## <a name="activity"></a> Agendar um pacote como parte de um pipeline do Azure Data Factory
+## <a name="schedule-a-package-as-part-of-an-azure-data-factory-pipeline"></a><a name="activity"></a> Agendar um pacote como parte de um pipeline do Azure Data Factory
 
 É possível agendar um pacote indiretamente usando um gatilho para executar um pipeline do Azure Data Factory que executa um pacote do SSIS.
 

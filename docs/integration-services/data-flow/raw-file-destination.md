@@ -21,10 +21,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292186"
 ---
 # <a name="raw-file-destination"></a>Destino do Arquivo Bruto
@@ -149,13 +149,13 @@ ms.locfileid: "71292186"
   
 -   [Definir opções na guia Colunas](#mapping)  
   
-###  <a name="open"></a> Abra o Editor de destino Arquivo Bruto  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> Abra o Editor de destino Arquivo Bruto  
   
 1.  Adicione o destino Arquivo Bruto a um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 2.  Clique com o botão direito do mouse no componente e clique em **Editar**.  
   
-###  <a name="connection"></a> Definir as opções na guia de Gerenciador de Conexões  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Definir as opções na guia de Gerenciador de Conexões  
  **Modo de acesso**  
  Selecione o modo como o nome de arquivo é especificado. Selecione **Nome de arquivo** para inserir o nome do arquivo e o caminho diretamente de **Nome de arquivo de variável** para especificar uma variável que contenha o nome de arquivo.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "71292186"
   
  Quando você clica em **Gerar arquivo bruto inicial**, uma caixa de mensagem aparece. Clique em **OK** para continuar a criar o arquivo. Clique em **Cancelamento** para selecionar uma lista diferente de colunas na página de **Colunas** .  
   
-###  <a name="mapping"></a> Definir opções na guia Colunas  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> Definir opções na guia Colunas  
  **Colunas de Entrada Disponíveis**  
  Selecione uma ou mais colunas de entrada para gravar no arquivo bruto.  
   
@@ -191,13 +191,13 @@ ms.locfileid: "71292186"
   
 -   [Definir opções na guia Colunas](#mapping)  
   
-###  <a name="open"></a> Abra o Editor de destino Arquivo Bruto  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> Abra o Editor de destino Arquivo Bruto  
   
 1.  Adicione o destino Arquivo Bruto a um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 2.  Clique com o botão direito do mouse no componente e clique em **Editar**.  
   
-###  <a name="connection"></a> Definir as opções na guia de Gerenciador de Conexões  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Definir as opções na guia de Gerenciador de Conexões  
  **Modo de acesso**  
  Selecione o modo como o nome de arquivo é especificado. Selecione **Nome de arquivo** para inserir o nome do arquivo e o caminho diretamente de **Nome de arquivo de variável** para especificar uma variável que contenha o nome de arquivo.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "71292186"
   
  Quando você clica no botão, uma lista das colunas é exibida. Você pode clicar em cancelar e modificar as colunas ou pode clicar em OK para continuar a criação do arquivo.  
   
-###  <a name="mapping"></a> Definir opções na guia Colunas  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> Definir opções na guia Colunas  
  **Colunas de Entrada Disponíveis**  
  Selecione uma ou mais colunas de entrada para gravar no arquivo bruto.  
   

@@ -15,10 +15,10 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 5f37f0189df126054626fdd4820368911b1fa5cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67946964"
 ---
 # <a name="create-a-new-plan-guide"></a>Criar um novo guia de plano
@@ -27,7 +27,7 @@ Guias de plano influenciam a otimização de consulta, anexando a elas dicas de 
 
 Um Guia de Plano aplica-se a um plano de consulta fixa, e/ou dicas de consulta, para uma consulta.
   
-##  <a name="Restrictions"></a> Limitações e restrições  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
 -   Os argumentos para sp_create_plan_guide devem ser fornecidos na ordem em que aparecem. Quando você fornece valores para os parâmetros de **sp_create_plan_guide**, todos os nomes de parâmetros devem ser especificados explicitamente ou nenhum deles deve ser especificado. Por exemplo, se **@name =** for especificado, então **@stmt =** , **@type =** e assim por diante, também deverá ser especificado. Da mesma forma, se **@name =** for omitido e apenas o valor do parâmetro for fornecido, os nomes de parâmetro restantes também deverão ser omitidos e apenas seus valores deverão ser fornecidos. Os nomes de argumento são usados apenas para fins descritivos, para ajudar compreender a sintaxe. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não verifica se o nome de parâmetro especificado corresponde ao nome do parâmetro na posição em que o nome é usado.  
   
 -   Você pode criar mais de um guia de plano OBJECT ou SQL para a mesma consulta e lote ou módulo. Porém, só um guia de plano pode ser ativado em um determinado momento.  
@@ -36,10 +36,10 @@ Um Guia de Plano aplica-se a um plano de consulta fixa, e/ou dicas de consulta, 
   
 -   A tentativa de cancelar ou modificar uma função, procedimento armazenado ou gatilho DML referenciado por um guia de plano, habilitado ou desabilitado, provoca um erro. A tentativa de descartar uma tabela com um gatilho definido nela que é mencionado por um guia de plano também causa um erro.  
 
-##  <a name="Permissions"></a> Permissões  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Para criar um guia de plano do tipo OBJECT, você precisa da permissão ALTER no objeto referenciado. Para criar um guia de plano do tipo SQL ou TEMPLATE, você precisa de permissão ALTER no banco de dados atual.  
   
-##  <a name="SSMSProcedure"></a> Para criar um guia de plano, usando o SSMS  
+##  <a name="create-a-plan-guide-using-ssms"></a><a name="SSMSProcedure"></a> Para criar um guia de plano, usando o SSMS  
 1.  Clique no sinal de adição para expandir o banco de dados no qual você deseja criar um guia de plano e clique no sinal de adição para expandir a pasta **Programação** .  
   
 2.  Clique com o botão direito do mouse na pasta **Guias de Plano** e selecione **Novo Guia de Plano…** . ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
@@ -70,7 +70,7 @@ Um Guia de Plano aplica-se a um plano de consulta fixa, e/ou dicas de consulta, 
 
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 
-##  <a name="TsqlProcedure"></a> Criar um guia de plano usando T-SQL  
+##  <a name="create-a-plan-guide-using-t-sql"></a><a name="TsqlProcedure"></a> Criar um guia de plano usando T-SQL  
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  

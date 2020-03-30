@@ -26,17 +26,17 @@ ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b4b67ba15f7660c82da249eadec1f6d0da2f7fb3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909181"
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivos de backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Durante uma operação de backup em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , os dados submetidos a backup (o *backup*) são gravados em um dispositivo de backup físico. Esse dispositivo de backup físico é inicializado quando o primeiro backup em um conjunto de mídias é gravado nele. Backups em um conjunto de um ou mais dispositivos de backup compõem um único conjunto de mídias.  
    
-##  <a name="TermsAndDefinitions"></a> Termos e definições  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Termos e definições  
  disco de backup  
  Um disco rígido ou outra mídia de armazenamento em disco que contém um ou mais arquivos de backup. Um arquivo de backup é um arquivo de sistema operacional regular.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72909181"
  Os backups do SQL Server podem ser gravados no serviço de Armazenamento Blobs do Azure, bem como em disco ou fita.  
  
   
-##  <a name="DiskBackups"></a> Usando dispositivos de backup em disco  
+##  <a name="using-disk-backup-devices"></a><a name="DiskBackups"></a> Usando dispositivos de backup em disco  
   
  Se um arquivo de disco ficar cheio enquanto uma operação de backup estiver anexando um backup ao conjunto de mídias, a operação de backup falhará. O tamanho máximo de um arquivo de backup é determinado pelo espaço livre de disco disponível no dispositivo de disco, portanto o tamanho apropriado de um dispositivo de disco de backup depende do tamanho de seus backups.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "72909181"
 >
 >Se os arquivos de banco de dados e os arquivos de backup estiverem no mesmo dispositivo e o dispositivo falhar, o banco de dados e os backups não estarão disponíveis. Além disso, colocar arquivos de banco de dados e de backup em dispositivos separados otimiza o desempenho de E/S para o uso de produção do banco de dados e a gravação de backups.
   
-##  <a name="BackupFileUsingPhysicalName"></a> Especificar um arquivo de backup usando seu nome físico (Transact-SQL)  
+##  <a name="specify-a-backup-file-using-its-physical-name-transact-sql"></a><a name="BackupFileUsingPhysicalName"></a> Especificar um arquivo de backup usando seu nome físico (Transact-SQL)  
  A sintaxe básica [BACKUP](../../t-sql/statements/backup-transact-sql.md) para especificar um arquivo de backup com seu nome de dispositivo físico é:  
   
  BACKUP DATABASE *database_name*  
@@ -90,7 +90,7 @@ RESTORE DATABASE AdventureWorks2012
 ```  
   
   
-##  <a name="BackupFileDiskPath"></a> Especificar o caminho do arquivo de backup em disco 
+##  <a name="specify-the-disk-backup-file-path"></a><a name="BackupFileDiskPath"></a> Especificar o caminho do arquivo de backup em disco 
  Ao especificar um arquivo de backup, você deve digitar seu caminho completo e o nome do arquivo. Se você especificar somente o nome de arquivo ou um caminho relativo ao fazer o backup de um arquivo, o arquivo de backup será armazenado no diretório de backup padrão. O diretório de backup padrão é C:\Arquivos de Programas\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, em que *n* é o número da instância do servidor. Portanto, para a instância de servidor padrão, o diretório de backup padrão é: C:\Arquivos de Programas\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup.  
   
  Para evitar ambiguidade, especialmente em scripts, é recomendável especificar explicitamente o caminho do diretório de backup em cada cláusula DISK. Porém, isto é menos importante quando você está usando o Editor de Consultas. Nesse caso, se você tiver certeza de que o arquivo de backup reside no diretório de backup padrão, pode-se omitir o caminho da cláusula DISK. Por exemplo, a instrução `BACKUP` a seguir faz o backup do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] no diretório de backup padrão.  
@@ -104,7 +104,7 @@ GO
 > **OBSERVAÇÃO:** o local padrão é armazenado na chave do Registro **BackupDirectory** em **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer**.  
   
    
-###  <a name="NetworkShare"></a> Fazer backup em um arquivo de compartilhamento de rede  
+###  <a name="back-up-to-a-network-share-file"></a><a name="NetworkShare"></a> Fazer backup em um arquivo de compartilhamento de rede  
  Para que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acesse um arquivo de disco remoto, a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ter acesso ao compartilhamento de rede. Isso inclui ter as permissões necessárias para que as operações de backup possam gravar no compartilhamento de rede e as operações de restauração possam ler a partir do compartilhamento de rede. A disponibilidade de unidades de rede e permissões depende do contexto no qual o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está executando:  
   
 -   Para fazer backup em uma unidade de rede quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está executando em uma conta de usuário de domínio, a unidade compartilhada deve ser mapeada como uma unidade de rede na sessão onde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executado. Se você iniciar o Sqlservr.exe da linha de comando, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verá todas as unidades de rede mapeadas em sua sessão de logon.  
@@ -127,7 +127,7 @@ GO
 ```  
   
  
-##  <a name="TapeDevices"></a> Usando dispositivos de fita  
+##  <a name="using-tape-devices"></a><a name="TapeDevices"></a> Usando dispositivos de fita  
   
 > **OBSERVAÇÃO:** o suporte para dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.  
    
@@ -141,7 +141,7 @@ GO
   
 -   Se um dispositivo de backup em fita for preenchido durante a operação de backup, e mais dados ainda precisarem ser gravados, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitará uma nova fita e continuará a operação de backup depois que a nova fita for carregada.  
   
-##  <a name="BackupTapeUsingPhysicalName"></a> Especificar uma fita de backup usando seu nome físico (Transact-SQL)  
+##  <a name="specify-a-backup-tape-using-its-physical-name-transact-sql"></a><a name="BackupTapeUsingPhysicalName"></a> Especificar uma fita de backup usando seu nome físico (Transact-SQL)  
  A sintaxe básica de [BACKUP](../../t-sql/statements/backup-transact-sql.md) para especificar uma fita de backup usando o nome do dispositivo físico da unidade de fita é:  
   
  BACKUP { DATABASE | LOG } *database_name*  
@@ -162,7 +162,7 @@ GO
   
  FROM TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
-###  <a name="TapeOptions"></a> Opções BACKUP e RESTORE específicas de fita (Transact-SQL)  
+###  <a name="tape-specific-backup-and-restore-options-transact-sql"></a><a name="TapeOptions"></a> Opções BACKUP e RESTORE específicas de fita (Transact-SQL)  
  Para facilitar o gerenciamento de fitas, a instrução BACKUP fornece as seguintes opções específicas a fitas:  
   
 -   { NOUNLOAD | **UNLOAD** }  
@@ -175,7 +175,7 @@ GO
   
 > **OBSERVAÇÃO:** para obter mais informações sobre a sintaxe BACKUP e argumentos, consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Para obter mais informações sobre a sintaxe e os argumentos de RESTORE, consulte [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) e [Argumentos RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md), respectivamente.  
   
-###  <a name="OpenTapes"></a> Gerenciando fitas abertas  
+###  <a name="managing-open-tapes"></a><a name="OpenTapes"></a> Gerenciando fitas abertas  
  Para exibir uma lista de dispositivos de fitas abertas e o status das solicitações de montagem, consulte a exibição de gerenciamento dinâmico [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) . Esta exibição mostra todas as fitas abertas. Elas incluem fitas em uso que estão temporariamente inativas enquanto esperam a próxima operação de BACKUP ou RESTAURAÇÃO.  
   
  Se uma fita foi acidentalmente deixada aberta, o modo mais rápido de liberá-la é usando o seguinte comando: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Para obter mais informações, consulte [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
@@ -184,7 +184,7 @@ GO
 ## <a name="using-the-azure-blob-storage-service"></a>Usar o serviço de Armazenamento de Blobs do Azure  
  Os backups do SQL Server podem ser gravados no serviço de Armazenamento de Blobs do Azure.  Para obter mais informações sobre como usar o serviço de Armazenamento de Blobs do Azure para seus backups, confira [Backup e restauração do SQL Server com o serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
-##  <a name="LogicalBackupDevice"></a> Usar um dispositivo de backup lógico  
+##  <a name="use-a-logical-backup-device"></a><a name="LogicalBackupDevice"></a> Usar um dispositivo de backup lógico  
  Um *dispositivo de backup lógico* é um nome opcional definido pelo usuário que aponta para um dispositivo de backup físico específico (um arquivo de disco ou uma unidade de fita). Um dispositivo de backup lógico permite que você use nomes indiretos ao fazer referência ao dispositivo de backup físico correspondente.  
   
  Definir um dispositivo de backup lógico envolve a atribuição de um nome lógico a um dispositivo físico. Por exemplo, um dispositivo lógico, AdventureWorksBackups, pode ser definido para apontar para o arquivo Z:\SQLServerBackups\AdventureWorks2012.bak ou a unidade de fita \\\\.\tape0. Os comandos de backup e restauração podem especificar o AdventureWorksBackups como o dispositivo de backup, em vez de DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' ou TAPE = '\\\\.\tape0'.  
@@ -209,19 +209,19 @@ GO
   
 2.  Definir um novo dispositivo de backup lógico que usa o nome de dispositivo lógico original, mas mapeia em um dispositivo de backup físico diferente. Os dispositivos de backup lógicos são especialmente úteis para identificar dispositivos de backup em fita.  
 
-##  <a name="MirroredMediaSets"></a> Conjuntos de mídias de backup espelhado  
+##  <a name="mirrored-backup-media-sets"></a><a name="MirroredMediaSets"></a> Conjuntos de mídias de backup espelhado  
  O espelhamento de conjuntos de mídias de backup reduz o efeito de maus funcionamentos do dispositivo de backup. Esses maus funcionamentos são especialmente sérios uma vez que os backups são a última linha de defesa contra a perda de dados. À medida que o tamanho dos bancos de dados cresce, aumenta a probabilidade de que uma falha de um dispositivo de backup ou mídia torne impossível a restauração de um backup. O espelhamento de mídias de backup aumenta a confiabilidade de backups fornecendo redundância para o dispositivo de backup físico. Para obter mais informações, veja [Conjuntos de mídias de backup espelhadas &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
 > **OBSERVAÇÃO:** há suporte para conjuntos de mídias de backup espelhado apenas no [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] e versões posteriores.  
   
   
-##  <a name="Archiving"></a> Arquivar backups do SQL Server  
+##  <a name="archive-sql-server-backups"></a><a name="Archiving"></a> Arquivar backups do SQL Server  
  Recomendamos que você use um utilitário de backup do sistema de arquivos para arquivar os backups de disco e que armazene os arquivos externamente. Usar um disco tem a vantagem de usar a rede para gravar os backups arquivados em um disco externo. O serviço de Armazenamento de Blobs do Azure pode ser usado como a opção de arquivamento fora do site.  Você pode carregar seus backups em disco ou gravar diretamente os backups no serviço de Armazenamento de Blobs do Azure.  
   
  Outra abordagem de arquivamento comum é gravar os backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um disco de backup local, arquivá-los em uma fita e, em seguida, armazenar as fitas externamente.  
 
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
  **Para especificar um dispositivo de disco (SQL Server Management Studio)**  
   
 -   [Especificar um disco ou fita como destino de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  

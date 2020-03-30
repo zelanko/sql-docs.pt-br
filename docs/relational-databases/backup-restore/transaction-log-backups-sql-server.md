@@ -16,10 +16,10 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 491016d02dfdb890914633333e19a3138c01779d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68041348"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Backups de log de transações (SQL Server)
@@ -32,7 +32,7 @@ Recomendamos que você faça backups de log com frequência para minimizar expos
  
 Em geral, um administrador de banco de dados cria um backup completo de banco de dados ocasionalmente, como semanalmente, e, como opção, cria uma série de backups de banco de dados diferencial em um intervalo mais curto, como diariamente. Independentemente dos backups de banco de dados, o administrador de banco de dados faz backup do log de transações em intervalos frequentes. Para determinado tipo de backup, o intervalo ideal entre backups depende de fatores como importância dos dados, tamanho do banco de dados e carga de trabalho do servidor. Para obter mais informações sobre como implementar uma boa estratégia, consulte [Recomendações](#Recommendations) neste tópico. 
    
-##  <a name="LogBackupSequence"></a> Como funciona uma sequência de backups de log  
+##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a> Como funciona uma sequência de backups de log  
  A sequência de backups de log de transações *log chain* é independente dos backups de dados. Por exemplo, suponha a sequência de eventos a seguir.  
   
 |Hora|Evento|  
@@ -45,7 +45,7 @@ Em geral, um administrador de banco de dados cria um backup completo de banco de
   
  O backup de log de transações criado às 20h contém registros do log de transações das 16h às 20h, abrangendo o tempo em que o backup completo de banco de dados foi criado às 18h. A sequência de backups de log de transações é contínua desde o backup completo de banco de dados inicial criado às 8h até o último backup de log de transações criado às 20h. Para obter informações sobre como aplicar esses backups de log, veja o exemplo [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-##  <a name="Recommendations"></a> Recomendações  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Se um log de transações estiver danificado, o trabalho executado desde o backup válido mais recente será perdido. Portanto, recomendamos enfaticamente que você coloque seus arquivos de log em um armazenamento tolerante a falhas.  
   
@@ -61,7 +61,7 @@ Em geral, um administrador de banco de dados cria um backup completo de banco de
 > Para limitar o número de backups de log que você precisa restaurar, é essencial fazer backup dos dados com frequência. Por exemplo, convém programar um backup de banco de dados completo por semana e backups de diferenciais de banco de dados diariamente.  
 > Mais uma vez, pense no [RTO](https://wikipedia.org/wiki/Recovery_time_objective) e [RPO](https://wikipedia.org/wiki/Recovery_point_objective) necessários ao implementar sua estratégia de recuperação e, especificamente, na cadência de backup completo e diferencial de banco de dados.
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para criar um backup de log de transações**  
   
 -   [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  

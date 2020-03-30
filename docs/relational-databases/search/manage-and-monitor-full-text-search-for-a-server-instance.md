@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 72b34355a11e87540bc8a298d0144988cdbeb17c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056180"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gerenciar e monitorar a pesquisa de texto completo em uma instância do servidor
@@ -31,7 +31,7 @@ ms.locfileid: "74056180"
   
 -   Configurar um banco de dados de usuário para pesquisa de texto completo. Isto envolve criar um ou mais catálogos de texto completo para o banco de dados e definir um índice de texto completo em cada tabela ou exibição indexada em que você deseja executar consultas de texto completo.  
   
-##  <a name="props"></a> Exibindo ou alterando as propriedades do servidor referentes à pesquisa de texto completo  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> Exibindo ou alterando as propriedades do servidor referentes à pesquisa de texto completo  
  Você pode exibir as propriedades de texto completo de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>Para exibir e alterar as propriedades do servidor de alterações para pesquisa de texto completo  
@@ -69,7 +69,7 @@ ms.locfileid: "74056180"
         > [!NOTE]  
         >  A opção de atualização de texto completo também pode ser definida com o uso da ação [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option** .  
   
-##  <a name="metadata"></a> Exibindo propriedades de servidor de texto completo adicionais  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> Exibindo propriedades de servidor de texto completo adicionais  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] as funções podem ser utilizadas para obter o valor de diversas propriedades da pesquisa de texto completo no nível do servidor. Essas informações são úteis para administrar e solucionar problemas de pesquisa de texto completo.  
   
  A tabela a seguir lista propriedades de texto completo de uma instância de servidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e suas funções [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionadas.  
@@ -81,7 +81,7 @@ ms.locfileid: "74056180"
 |**LoadOSResources**|Se os separadores de palavras e os filtros do sistema operacional estão registrados e são usados com essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|FULLTEXTSERVICEPROPERTY|  
 |**VerifySignature**|Especifica se apenas binários assinados são carregados pelo Mecanismo de Texto Completo.|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> Monitorando a atividade de pesquisa de texto completo  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a> Monitorando a atividade de pesquisa de texto completo  
  Existem diversas exibições e funções de gerenciamento dinâmico que são úteis para monitorar a atividade de pesquisa de texto completo em uma instância do servidor.  
   
  **Para exibir informações sobre os catálogos de texto completo com atividade de população em andamento**  

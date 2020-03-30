@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70874759"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Instalar a pesquisa de texto completo do SQL Server no Linux
@@ -30,7 +30,7 @@ Instale a Pesquisa de Texto Completo do SQL Server para sua plataforma:
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">Instalar no RHEL</a>
+## <a name=""></a><a name="RHEL">Instalar no RHEL</a>
 
 Use os seguintes comandos para instalar o **mssql-server-fts** no Red Hat Enterprise Linux. 
 
@@ -47,7 +47,7 @@ sudo yum update mssql-server-fts
 
 Se você precisar de uma instalação offline, localize o download do pacote de Pesquisa de Texto Completo nas [Notas sobre a versão](sql-server-linux-release-notes.md). Em seguida, use as mesmas etapas de instalação offline descritas no artigo [Instalar o SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="ubuntu">Instalar no Ubuntu</a>
+## <a name=""></a><a name="ubuntu">Instalar no Ubuntu</a>
 
 Use os seguintes comandos para instalar o **mssql-server-fts** no Ubuntu. 
 
@@ -65,7 +65,7 @@ sudo apt-get install -y mssql-server-fts
 
 Se você precisar de uma instalação offline, localize o download do pacote de Pesquisa de Texto Completo nas [Notas sobre a versão](sql-server-linux-release-notes.md). Em seguida, use as mesmas etapas de instalação offline descritas no artigo [Instalar o SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="SLES">Instalar no SLES</a>
+## <a name=""></a><a name="SLES">Instalar no SLES</a>
 
 Use o seguinte comando para instalar o **mssql-server-fts** no SUSE Linux Enterprise Server. 
 
@@ -142,7 +142,7 @@ A Pesquisa de Texto Completo usa [separadores de palavras](../relational-databas
 | Urdu | 1056 |
 | Vietnamita | 1066 |
 
-## Filtros <a id="filters"></a>
+## <a name="filters"></a>Filtros <a id="filters"></a>
 
 A Pesquisa de Texto Completo também funciona com texto armazenado em arquivos binários. Mas, nesse caso, um filtro instalado é necessário para processar o arquivo. Para obter mais informações, confira [Configurar e gerenciar filtros para pesquisa](../relational-databases/search/configure-and-manage-filters-for-search.md).
 

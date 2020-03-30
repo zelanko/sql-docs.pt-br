@@ -16,10 +16,10 @@ ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64e805e5dd9b334afe252e2c1d43685e9c92b95f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71290620"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Referência de erros e eventos (Integration Services)
@@ -36,7 +36,7 @@ ms.locfileid: "71290620"
   
 ## <a name="error-messages"></a>Mensagens de erro  
   
-|Nome simbólico de erro|Descrição|  
+|Nome simbólico de erro|DESCRIÇÃO|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|Indica que o pacote não pode ser executado porque uma Transformação Cache está tentando gravar dados no cache na memória. No entanto, um gerenciador de conexões de Cache já carregou um arquivo de cache no cache na memória.|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|Indica que o pacote não pode ser executado porque ocorreu uma falha na conexão especificada.|  
@@ -55,7 +55,7 @@ ms.locfileid: "71290620"
 ## <a name="events-sqlispackage"></a>Eventos (SQLISPackage)  
  Para obter mais informações, consulte [Eventos registrados por um pacote do Integration Services](../integration-services/performance/events-logged-by-an-integration-services-package.md).  
   
-|Evento|Descrição|  
+|Evento|DESCRIÇÃO|  
 |-----------|-----------------|  
 |SQLISPackage_12288|Indica que um pacote foi iniciado.|  
 |SQLISPackage_12289|Indica que um pacote concluiu a execução com êxito.|  
@@ -69,7 +69,7 @@ ms.locfileid: "71290620"
 ## <a name="events-sqlisservice"></a>Eventos (SQLISService)  
  Para obter mais informações, consulte [Eventos registrados pelo serviço do Integration Services](../integration-services/service/events-logged-by-the-integration-services-service.md).  
   
-|Evento|Descrição|  
+|Evento|DESCRIÇÃO|  
 |-----------|-----------------|  
 |SQLISService_256|Indica que o serviço está prestes a ser iniciado.|  
 |SQLISService_257|Indica que o serviço foi iniciado.|  

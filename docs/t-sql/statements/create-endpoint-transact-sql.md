@@ -32,10 +32,10 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67902830"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
@@ -53,7 +53,7 @@ ms.locfileid: "67902830"
   
      Nessa parte, você define a carga útil que tem suporte no ponto de extremidade. A carga útil pode ser uma de vários tipos com suporte: [!INCLUDE[tsql](../../includes/tsql-md.md)], agente de serviços, espelhamento de banco de dados. Nesta parte, você inclui também informações específicas de linguagem.  
   
-> **OBSERVAÇÃO:** Os Serviços Web XML nativos (pontos de extremidade SOAP/HTTP) foram removidos do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> **OBSERVAÇÃO:** serviços Web XML nativos (pontos de extremidade SOAP/HTTP) foram removidos do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

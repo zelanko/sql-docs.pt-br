@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257664"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Criar e gerenciar índices de texto completo
@@ -27,7 +27,7 @@ Este tópico descreve como criar, popular e gerenciar índices de texto completo
 ## <a name="prerequisite---create-a-full-text-catalog"></a>Pré-requisito – Criar um catálogo de texto completo
 Antes de criar um índice de texto completo, é necessário ter um catálogo de texto completo. O catálogo é um contêiner virtual de um ou mais índices de texto completo. Para obter mais informações, consulte [Criar e gerenciar catálogos de texto completo](../../relational-databases/search/create-and-manage-full-text-catalogs.md).
   
-##  <a name="tasks"></a> Criar, alterar ou remover um índice de texto completo  
+##  <a name="create-alter-or-drop-a-full-text-index"></a><a name="tasks"></a> Criar, alterar ou remover um índice de texto completo  
 ### <a name="create-a-full-text-index"></a>Criar um índice de texto completo  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)  
@@ -48,7 +48,7 @@ O processo de criar e manter um índice de texto completo é chamado de *popula�
 
 Para obter mais informações, consulte [Popular índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).
 
-##  <a name="view"></a> Exibir as propriedades de um índice de texto completo
+##  <a name="view-the-properties-of-a-full-text-index"></a><a name="view"></a> Exibir as propriedades de um índice de texto completo
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Exibir as propriedades de um índice de texto completo com o Transact-SQL
 
 |Exibição de catálogo ou de gerenciamento dinâmico|DESCRIÇÃO|  
@@ -80,7 +80,7 @@ Para obter mais informações, consulte [Popular índices de texto completo](../
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] para salvar quaisquer alterações e sair da caixa de diálogo **Propriedades do índice de texto completo**.  
   
-##  <a name="props"></a> Exibir as propriedades de colunas e tabelas indexadas  
+##  <a name="view-the-properties-of-indexed-tables-and-columns"></a><a name="props"></a> Exibir as propriedades de colunas e tabelas indexadas  
  Muitas funções [!INCLUDE[tsql](../../includes/tsql-md.md)], como OBJECTPROPERTYEX, podem ser usadas para obter o valor de diversas propriedades de indexação de texto completo. Essas informações são úteis para administrar e solucionar problemas de pesquisa de texto completo.  
   
  A tabela a seguir lista as propriedades de texto completo relacionadas a colunas e tabelas indexadas e suas funções [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionadas.  
@@ -102,7 +102,7 @@ Para obter mais informações, consulte [Popular índices de texto completo](../
 |**TableFulltextPopulateStatus**|Status de população de uma tabela de texto completo.|OBJECTPROPERTYEX|  
 |**TableHasActiveFulltextIndex**|Se uma tabela tem um índice de texto completo ativo.|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a> Obtenha informações sobre a coluna de chave de texto completo  
+##  <a name="get-info-about-the-full-text-key-column"></a><a name="key"></a> Obtenha informações sobre a coluna de chave de texto completo  
  Normalmente, o resultado de funções com valor de conjunto de linhas CONTAINSTABLE ou FREETEXTTABLE precisam ser unidas à tabela base. Nesses casos, você precisa saber o nome da coluna de chave exclusiva. Você pode perguntar se um dado índice exclusivo é usado como chave de texto completo e pode obter o identificador da coluna de chave de texto completo.  
   
 ### <a name="determine-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>Determinar se um dado índice exclusivo é usado como a coluna de chave de texto completo  
@@ -183,7 +183,7 @@ Para criar um índice de texto completo em uma coluna **varbinary(max)** , o Mec
   
  Para obter mais informações sobre como indexar e fazer consultas em uma coluna **xml**, consulte [Usar a pesquisa de texto completo com colunas XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
   
-##  <a name="disable"></a> Desabilitar ou reabilitar indexação de texto completo para uma tabela   
+##  <a name="disable-or-re-enable-full-text-indexing-for-a-table"></a><a name="disable"></a> Desabilitar ou reabilitar indexação de texto completo para uma tabela   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], todos os bancos de dados criados pelo usuário são habilitados para texto completo por padrão. Além disso, uma tabela individual está automaticamente habilitada para indexação de texto completo desde que o índice de texto completo seja criado nela e uma coluna seja adicionada ao índice. Uma tabela está automaticamente desabilitada para indexação de texto completo quando a última coluna é descartada de seu índice de texto completo.  
   
  Em uma tabela que tenha um índice de texto completo, é possível desabilitar manualmente ou desabilitar de novo uma tabela para indexação de texto completo usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -194,7 +194,7 @@ Para criar um índice de texto completo em uma coluna **varbinary(max)** , o Mec
   
 3.  Selecione **Índice de Texto Completo**e clique em **Disable Full-Text index (Desabilitar Índice de Texto Completo)** ou **Enable Full-Text index (Habilitar Índice de Texto Completo)** .  
   
-##  <a name="remove"></a> Remover um índice de texto completo de uma tabela  
+##  <a name="remove-a-full-text-index-from-a-table"></a><a name="remove"></a> Remover um índice de texto completo de uma tabela  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse na tabela com o índice de texto completo a ser excluído.  
   

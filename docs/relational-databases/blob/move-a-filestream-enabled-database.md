@@ -13,10 +13,10 @@ ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 33d2f34f9f2ea63f23c570c0b4ada95906649215
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091532"
 ---
 # <a name="move-a-filestream-enabled-database"></a>Mover um banco de dados habilitado para FILESTREAM

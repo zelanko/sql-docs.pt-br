@@ -15,10 +15,10 @@ ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a14ae64026443324f7a5dc3f47dcea15f9907f5f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295726"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Gerenciando pacotes e pastas programaticamente
@@ -28,7 +28,7 @@ ms.locfileid: "71295726"
 
 <a name="top"></a> Ao trabalhar de forma programática com pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], convém determinar se um pacote ou pasta individual existe ou então gerenciar as pastas em que os pacotes estão armazenados. A classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> do namespace <xref:Microsoft.SqlServer.Dts.Runtime> fornece diversos métodos para atender a esses requisitos.    
     
-##  <a name="exists"></a> Determinando se existe um pacote ou pasta    
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> Determinando se existe um pacote ou pasta    
  Para determinar programaticamente se existe um pacote salvo, chame um dos métodos a seguir antes de tentar carregar e executar o pacote:    
     
 |Local de armazenamento|Método de chamada|    
@@ -45,10 +45,10 @@ ms.locfileid: "71295726"
     
  [Voltar ao início](#top)    
     
-##  <a name="managing"></a> Gerenciar pacotes e pastas    
+##  <a name="managing-packages-and-folders"></a><a name="managing"></a> Gerenciar pacotes e pastas    
  A classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> do namespace <xref:Microsoft.SqlServer.Dts.Runtime> fornece métodos adicionais para gerenciar pacotes e as pastas nas quais eles são armazenados.    
     
-###  <a name="managing_rempkg"></a> Remover um pacote    
+###  <a name="removing-a-package"></a><a name="managing_rempkg"></a> Remover um pacote    
  Para remover um pacote salvo programaticamente, chame um dos métodos seguintes:    
     
 |Local de armazenamento|Método de chamada|    
@@ -58,7 +58,7 @@ ms.locfileid: "71295726"
     
  [Voltar ao início](#top)    
     
-###  <a name="managing_create"></a> Criar uma pasta    
+###  <a name="creating-a-folder"></a><a name="managing_create"></a> Criar uma pasta    
  Para criar uma pasta de armazenamento programaticamente, chame um dos métodos seguintes:    
     
 |Local de armazenamento|Método de chamada|    
@@ -68,7 +68,7 @@ ms.locfileid: "71295726"
     
  [Voltar ao início](#top)    
     
-###  <a name="managing_remfldr"></a> Remover uma pasta    
+###  <a name="removing-a-folder"></a><a name="managing_remfldr"></a> Remover uma pasta    
  Para remover uma pasta de armazenamento programaticamente, chame um dos métodos seguintes:    
     
 |Local de armazenamento|Método de chamada|    
@@ -78,7 +78,7 @@ ms.locfileid: "71295726"
     
  [Voltar ao início](#top)    
     
-###  <a name="managing_rename"></a> Renomear uma pasta    
+###  <a name="renaming-a-folder"></a><a name="managing_rename"></a> Renomear uma pasta    
  Para renomear uma pasta de armazenamento programaticamente, chame um dos métodos seguintes:    
     
 |Local de armazenamento|Método de chamada|    

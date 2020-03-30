@@ -7,8 +7,8 @@
 
    > Se o firewall não tiver uma configuração de alta disponibilidade interna, abra as portas do Pacemaker a seguir.
    >
-   > * TCP: Portas 2224, 3121 e 21064
-   > * UDP: Porta 5405
+   > * TCP: portas 2224, 3121, 21064
+   > * UDP: porta 5405
 
 1. Instale os pacotes do Pacemaker em todos os nós.
 

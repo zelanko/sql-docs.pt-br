@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: a7aa6a28a64e35c13c135e509b758a1636b3f896
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896284"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Suporte do SqlClient para alta disponibilidade e recuperação de desastre
@@ -59,7 +59,7 @@ Use as diretrizes a seguir para conectar-se a um servidor em um grupo de disponi
   
 - Conectar-se a uma instância do SQL Server configurada com mais de 64 endereços IP causará uma falha de conexão.  
   
-- Comportamento de um aplicativo que usa a propriedade de conexão do `MultiSubnetFailover` não é afetada com base no tipo de autenticação: Autenticação do SQL Server, Autenticação Kerberos ou Autenticação do Windows.  
+- O comportamento de um aplicativo que usa a propriedade de conexão `MultiSubnetFailover` não é afetado com base no tipo de autenticação: Autenticação do SQL Server, Autenticação Kerberos ou Autenticação do Windows.  
   
 - Aumente o valor de `Connect Timeout` para acomodar o tempo de failover e reduza as tentativas de repetição da conexão do aplicativo.  
   

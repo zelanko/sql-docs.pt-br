@@ -20,10 +20,10 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024489"
 ---
 # <a name="utility-explorer-f1-help"></a>Ajuda de F1 do Gerenciador do Utilitário
@@ -173,11 +173,11 @@ ms.locfileid: "68024489"
   
 -   Nível de Compatibilidade: (por exemplo, Version100)  
   
--   Criptografia habilitada: (True ou False)  
+-   Criptografia Habilitada: (True ou False)  
   
--   Modelo de recuperação: (Simples, Completa e Bulk-logged)  
+-   Modelo de Recuperação: (Simples, Completa e Bulk-logged)  
   
--   Hora do último relato: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Hora do Último Relatório: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Guia Utilização da CPU  
  A guia Utilização da CPU mostra gráficos lado a lado de dados históricos da utilização de CPU do computador e do aplicativo da camada de dados.  
@@ -250,11 +250,11 @@ ms.locfileid: "68024489"
   
 -   Nível de Compatibilidade: (por exemplo, Version100)  
   
--   Criptografia habilitada: (True ou False)  
+-   Criptografia Habilitada: (True ou False)  
   
--   Modelo de recuperação: (Simples, Completa e Bulk-logged)  
+-   Modelo de Recuperação: (Simples, Completa e Bulk-logged)  
   
--   Hora do último relato: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
+-   Hora do Último Relatório: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
 
 ## <a name="managed-instance-details-sql-server-utility"></a>Detalhes de instâncias gerenciadas (Utilitário do SQL Server)
  As informações da exibição Instâncias Gerenciadas do Gerenciador do Utilitário fornecem dados de utilização para instâncias individuais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], histórico de utilização da CPU, detalhes de utilização do armazenamento em nível de arquivo e a capacidade de exibir e atualizar limites de políticas. Os limites de políticas podem ser controlados no nível de instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , para um computador, para arquivos de banco de dados e arquivos de log e no nível de volumes de armazenamento. Você também pode exibir detalhes de propriedades de instâncias gerenciadas individuais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -307,17 +307,17 @@ ms.locfileid: "68024489"
   
 -   Edição do SQL Server:  
   
--   Clusterizado: (True ou False)  
+-   Clusterizado: (Verdadeiro ou Falso)  
   
 -   Diretório de Backup:  
   
 -   Ordenação:  
   
--   Diferenciar maiúsculas de minúsculas: (True ou False)  
+-   Diferenciar Maiúsculas de Minúsculas: (Verdadeiro ou Falso)  
   
 -   Linguagem:  
   
--   Hora do último relato: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Hora do Último Relatório: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Guia Utilização da CPU  
  A guia Utilização da CPU mostra gráficos lado a lado de dados históricos da utilização da CPU do computador e da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -404,13 +404,13 @@ ms.locfileid: "68024489"
   
 -   Edição do SQL Server:  
   
--   Clusterizado: (True ou False)  
+-   Clusterizado: (Verdadeiro ou Falso)  
   
 -   Diretório de Backup:  
   
 -   Ordenação:  
   
--   Diferenciar maiúsculas de minúsculas: (True ou False)  
+-   Diferenciar Maiúsculas de Minúsculas: (Verdadeiro ou Falso)  
   
 -   Linguagem:  
 
@@ -488,11 +488,11 @@ Use as guias de Administração do Utilitário para gerenciar configurações de
   
 -   Nome do UMDW: Sysutility_mdw_\<GUID>_DATA.  
   
--   Frequência de upload do conjunto de coleta: a cada 15 minutos.  
+-   Frequência de carregamento do conjunto de coleta: a cada 15 minutos.  
   
- O diretório do UMDW é configurável: \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, em que \<System drive> normalmente é a unidade C:\. O arquivo de log, UMDW_\<GUID>_LOG, está localizado no mesmo diretório.  
+ O diretório do UMDW é configurável: \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, where \<System drive> normalmente é a unidade C:\. O arquivo de log, UMDW_\<GUID>_LOG, está localizado no mesmo diretório.  
   
-> **OBSERVAÇÃO:** O local do arquivo UMDW (sysutility_mdw) pode ser alterado usando-se desanexar/anexar ou ALTER DATABASE. É recomendável usar ALTER DATABASE. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+> **OBSERVAÇÃO:** o local do arquivo UMDW (sysutility_mdw) pode ser alterado com desanexar/anexar ou ALTER DATABASE. É recomendável usar ALTER DATABASE. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  Voltar aos padrões prontos para uso  
  Para redefinir as configurações nessa guia para os valores padrão, clique no botão **Restaurar Padrões** e em **Aplicar**.  

@@ -15,10 +15,10 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6382de8778e5f11e76f4481519284d50b7b52e0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71282165"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Carregando e executando um pacote remoto programaticamente
@@ -33,7 +33,7 @@ ms.locfileid: "71282165"
   
  Alternadamente, você pode executar um pacote remoto de um computador local que tenha o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instalado. Para obter mais informações, consulte [Carregando e executando um pacote local de forma programática](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md).  
   
-##  <a name="top"></a> Executando um pacote remoto no computador remoto  
+##  <a name="running-a-remote-package-on-the-remote-computer"></a><a name="top"></a> Executando um pacote remoto no computador remoto  
  Como mencionado acima, há vários modos com os quais você pode executar um pacote remoto em um servidor remoto:  
   
 -   [Usar o SQL Server Agent para executar o pacote remoto de forma programática](#agent)  
@@ -42,7 +42,7 @@ ms.locfileid: "71282165"
   
  Quase todos os métodos usados neste tópico para carregar e salvar pacotes exigem uma referência ao assembly **Microsoft.SqlServer.ManagedDTS**. A exceção é a abordagem do ADO.NET demonstrada neste tópico para executar o procedimento armazenado **sp_start_job**, que exige apenas uma referência a **System.Data**. Depois de adicionar a referência ao assembly **Microsoft.SqlServer.ManagedDTS** em um novo projeto, importe o namespace <xref:Microsoft.SqlServer.Dts.Runtime> com uma instrução **using** ou **Imports**.  
   
-###  <a name="agent"></a> Usando o SQL Server Agent para executar um pacote remoto de forma programática no servidor  
+###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a> Usando o SQL Server Agent para executar um pacote remoto de forma programática no servidor  
  O exemplo do código seguinte demonstra como usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent programaticamente para executar um pacote remoto no servidor. O exemplo de código chama o procedimento armazenado do sistema, **sp_start_job**, que inicia um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. O trabalho que o procedimento lança é chamado `RunSSISPackage`, e esse trabalho está no computador remoto. O trabalho `RunSSISPackage` executa o pacote no computador remoto.  
   
 > [!NOTE]  
@@ -147,7 +147,7 @@ namespace LaunchSSISPackageAgent_CS
 }  
 ```  
   
-###  <a name="service"></a> Usando um serviço Web ou componente remoto para executar um pacote remoto de forma programática  
+###  <a name="using-a-web-service-or-remote-component-to-run-a-remote-package-programmatically"></a><a name="service"></a> Usando um serviço Web ou componente remoto para executar um pacote remoto de forma programática  
  A solução anterior para executar pacotes programaticamente no servidor não requer nenhum código personalizado no servidor. Porém, você pode preferir uma solução que não confie no SQL Server Agent para executar pacotes. O exemplo seguinte demonstra um serviço Web que pode ser criado no servidor para iniciar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] localmente, e um aplicativo de teste que pode ser usado para chamar o serviço Web de um computador cliente. Se preferir criar um componente remoto em vez de um serviço Web, use a mesma lógica de código com poucas alterações em um componente remoto. Porém, um componente remoto pode requerer configurações mais extensas que um serviço Web.  
   
 > [!IMPORTANT]  

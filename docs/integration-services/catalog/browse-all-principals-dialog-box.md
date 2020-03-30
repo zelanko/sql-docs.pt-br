@@ -13,10 +13,10 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 71ad8a6d52367cf4b3288fa8bdd4bdbaa6863cf5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299021"
 ---
 # <a name="browse-all-principals-dialog-box"></a>Caixa de diálogo Procurar Todas as Entidades de Segurança
@@ -32,7 +32,7 @@ ms.locfileid: "71299021"
   
 -   [Configurar as opções](#options)  
   
-##  <a name="open_dialog"></a> Caixa de diálogo Abrir Todas as Entidades de Segurança  
+##  <a name="open-the-browse-all-principals-dialog-box"></a><a name="open_dialog"></a> Caixa de diálogo Abrir Todas as Entidades de Segurança  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se ao servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71299021"
   
 5.  Selecione a página **Permissões** e clique em **Procurar**.  
   
-##  <a name="options"></a> Configurar as opções  
+##  <a name="configure-the-options"></a><a name="options"></a> Configurar as opções  
  Esta página exibe as entidades de segurança da exibição do catálogo, sys.database_principals, do banco de dados do SSISDB.  
   
  Ao serem selecionadas, as entidades de segurança serão adicionadas à lista **Logons ou funções** na página **Permissões** da caixa de diálogo pai quando você clicar em **OK** e fechar a caixa de diálogo **Procurar Todas as Entidades de Segurança** . Depois de adicionar entidades de segurança à lista **Logons ou funções** , você poderá alterar as permissões no projeto selecionado.  

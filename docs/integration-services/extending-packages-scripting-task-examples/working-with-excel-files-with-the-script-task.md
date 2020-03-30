@@ -17,10 +17,10 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9386f146aee229eb4547ad54b4dd576fda1c0bfc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286571"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Trabalhando com arquivos do Excel com a tarefa Script
@@ -36,7 +36,7 @@ ms.locfileid: "71286571"
 > [!TIP]  
 >  Se desejar criar uma tarefa que possa ser reutilizada em vários pacotes, procure utilizar o código desse exemplo de tarefa Script como o ponto inicial de uma tarefa personalizada. Para obter mais informações, consulte [Desenvolvendo uma tarefa personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
 
-##  <a name="configuring"></a> Configurando um pacote para testar as amostras  
+##  <a name="configuring-a-package-to-test-the-samples"></a><a name="configuring"></a> Configurando um pacote para testar as amostras  
  Você pode configurar um único pacote para testar todos os exemplos neste tópico. Os exemplos usam muitas das mesmas variáveis de pacote e as mesmas classes [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 ### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>Para configurar um pacote para uso com os exemplos neste tópico  
@@ -69,7 +69,7 @@ ms.locfileid: "71286571"
   
 5.  Defina a linguagem de scripts padrão para o componente Script usando a opção **Linguagem de scripts** na página **Geral** da caixa de diálogo **Opções**. Para obter mais informações, consulte [General Page](../general-page-of-integration-services-designers-options.md).  
   
-##  <a name="example1"></a> Descrição do exemplo 1: verificar se existe um arquivo do Excel  
+##  <a name="example-1-description-check-whether-an-excel-file-exists"></a><a name="example1"></a> Descrição do exemplo 1: verificar se existe um arquivo do Excel  
  Esse exemplo determina se o arquivo da pasta de trabalho do Excel especificado na variável `ExcelFile` existe, e define o valor booliano da variável `ExcelFileExists` para o resultado. Você pode usar esse valor booliano para ramificar no fluxo de trabalho do pacote.  
   
 ### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  
@@ -139,7 +139,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> Descrição do exemplo 2: verificar se existe uma tabela do Excel  
+##  <a name="example-2-description-check-whether-an-excel-table-exists"></a><a name="example2"></a> Descrição do exemplo 2: verificar se existe uma tabela do Excel  
  Esse exemplo determina se a planilha ou intervalo nomeado do Excel especificado na variável `ExcelTable` existe no arquivo da pasta de trabalho do Excel especificado na variável `ExcelFile`, e define o valor booliano da variável `ExcelTableExists` para o resultado. Você pode usar esse valor booliano para ramificar no fluxo de trabalho do pacote.  
   
 ### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  
@@ -246,7 +246,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> Descrição do exemplo 3: obter uma lista de arquivos do Excel em uma pasta  
+##  <a name="example-3-description-get-a-list-of-excel-files-in-a-folder"></a><a name="example3"></a> Descrição do exemplo 3: obter uma lista de arquivos do Excel em uma pasta  
  Esse exemplo preenche uma matriz com a lista de arquivos do Excel encontrada na pasta especificada no valor da variável `ExcelFolder`, e copia a matriz para a variável `ExcelFiles`. Você pode usar o Enumerador Foreach de Variável para repetir nos arquivos da matriz.  
   
 ### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  
@@ -318,7 +318,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Solução alternada  
  Em vez de usar uma tarefa Script para reunir uma lista de arquivos do Excel em uma matriz, você também pode usar o Enumerador de Arquivo Foreach para repetir em todos os arquivos do Excel em uma pasta. Para obter mais informações, consulte [Executar um loop por meio de arquivos e tabelas do Excel usando um contêiner do Loop Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-##  <a name="example4"></a> Descrição do exemplo 4: obter uma lista de tabelas em um arquivo do Excel  
+##  <a name="example-4-description-get-a-list-of-tables-in-an-excel-file"></a><a name="example4"></a> Descrição do exemplo 4: obter uma lista de tabelas em um arquivo do Excel  
  Esse exemplo preenche uma matriz com a lista de planilhas e intervalos nomeados encontrados no arquivo da pasta de trabalho especificado pelo valor da variável `ExcelFile`, e copia a matriz para a variável `ExcelTables`. Você pode usar o Enumerador Foreach de Variável para repetir nas tabelas da matriz.  
   
 > [!NOTE]  
@@ -430,7 +430,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Solução alternada  
  Em vez de usar uma tarefa Script para reunir uma lista de tabelas do Excel em uma matriz, você também pode usar o Enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach para repetir em todos as tabelas (planinhas e intervalos nomeados) em um arquivo de pasta de trabalho do Excel. Para obter mais informações, consulte [Executar um loop por meio de arquivos e tabelas do Excel usando um contêiner do Loop Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-##  <a name="testing"></a> Exibindo os resultados das amostras  
+##  <a name="displaying-the-results-of-the-samples"></a><a name="testing"></a> Exibindo os resultados das amostras  
  Se você configurou cada um dos exemplos deste tópico no mesmo pacote, você pode conectar todas as tarefas Script a uma tarefa Script adicional que exibe a saída de todos os exemplos.  
   
 ### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>Para configurar uma tarefa Script para exibir a saída dos exemplos neste tópico  

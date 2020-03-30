@@ -13,10 +13,10 @@ ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a624228a0df45ee0ba2954d27e38be511db629fe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294091"
 ---
 # <a name="hadoop-pig-task"></a>Tarefa de Pig do Hadoop
@@ -33,7 +33,7 @@ ms.locfileid: "71294091"
 ## <a name="options"></a>Opções  
  Configure as seguintes opções na caixa de diálogo **Editor de Tarefa do Pig do Hadoop** .  
   
-|Campo|Descrição|  
+|Campo|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Conexão do Hadoop**|Especifique um gerenciador de conexões do Hadoop existente ou crie um novo. Esse gerenciador de conexões indica onde o serviço WebHCat está hospedado.|  
 |**SourceType**|Especifique o tipo de fonte da consulta. Os valores disponíveis são **ScriptFile** e **DirectInput**.|  

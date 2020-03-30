@@ -1,5 +1,5 @@
 ---
-title: 'Índices columnstore: Visão geral | Microsoft Docs'
+title: 'Índices columnstore: visão geral | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/08/2018
 ms.prod: sql
@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70009402"
 ---
 # <a name="columnstore-indexes-overview"></a>Índices columnstore: Visão geral
@@ -90,7 +90,7 @@ Um índice não clusterizado columnstore permite análises operacionais em tempo
 #### <a name="batch-mode-execution"></a>Execução em modo de lote
 A execução em modo de lote é um método de processamento de consulta usado para processar várias linhas simultaneamente. A execução em modo de lote é estreitamente integrada ao formato de armazenamento columnstore e otimizada com base nele. A execução do modo em lote às vezes é conhecida como execução *baseada em vetor* ou *vetorizada*. Consultas em índices columnstore usam a execução em modo de lote, o que melhora o desempenho de consulta normalmente em duas a quatro vezes. Para saber mais, confira o [Guia da arquitetura de processamento de consultas](../query-processing-architecture-guide.md#execution-modes). 
   
-##  <a name="benefits"></a> Por que devo usar um índice columnstore?  
+##  <a name="why-should-i-use-a-columnstore-index"></a><a name="benefits"></a> Por que devo usar um índice columnstore?  
 Um índice columnstore pode fornecer um nível muito alto de compactação de dados, geralmente de 10 vezes, para reduzir consideravelmente os custos de armazenamento em data warehouse. Para análises, um índice columnstore oferece um desempenho melhor de ordem de magnitude do que um índice de árvore B. Os índice columnstore são o formato de armazenamento de dados preferencial para data warehouse e cargas de trabalho de análise. A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode usar índices columnstore para análises em tempo real da sua carga de trabalho operacional.  
   
 Motivos pelos quais índices columnstore são tão rápidos:  

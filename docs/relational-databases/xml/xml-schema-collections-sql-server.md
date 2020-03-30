@@ -22,10 +22,10 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a334b4a02126023b94e5623b45050b067b48ce6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68096825"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Coleções de esquema XML (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "68096825"
   
  Também é possível usar a coleção de esquema XML para digitar variáveis, parâmetros e colunas XML.  
   
-##  <a name="ddl"></a> DDL para gerenciar coleções de esquemas  
+##  <a name="ddl-for-managing-schema-collections"></a><a name="ddl"></a> DDL para gerenciar coleções de esquemas  
  Você pode criar coleções de esquemas XML no banco de dados e associá-las a variáveis e colunas do tipo **xml** . Para gerenciar coleções de esquema no banco de dados, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece as seguintes instruções DDL:  
   
 -   [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) Importa os componentes de esquema para um banco de dados.  
@@ -61,7 +61,7 @@ ms.locfileid: "68096825"
   
  Para descartar a coleção de esquema, use a instrução DROP XML SCHEMA COLLECTION. Ela descarta todos os esquemas que estão contidos na coleção e remove o objeto da coleção. Observe que, antes de conseguir remover uma coleção de esquema, as condições descritas em [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md) deverão ser atendidas.  
   
-##  <a name="components"></a> Compreendendo componentes de esquema  
+##  <a name="understanding-schema-components"></a><a name="components"></a> Compreendendo componentes de esquema  
  Quando a instrução CREATE XML SCHEMA COLLECTION é usada, vários componentes de esquema são importados no banco de dados. Os componentes de esquema incluem elementos, atributos e definições de tipo de esquema. Quando a instrução DROP XML SCHEMA COLLECTION é usada, a coleção completa é removida.  
   
  CREATE XML SCHEMA COLLECTION salva os componentes do esquema em várias tabelas do sistema.  
@@ -131,7 +131,7 @@ ms.locfileid: "68096825"
 |**targetNamespace**|Informações sobre os componentes que pertencem ao namespace de destino são armazenadas nos metadados.|  
 | &nbsp; | &nbsp; |
   
-##  <a name="perms"></a> Permissões em uma coleção de esquema XML  
+##  <a name="permissions-on-an-xml-schema-collection"></a><a name="perms"></a> Permissões em uma coleção de esquema XML  
  Você deve ter as permissões necessárias para fazer o seguinte:  
   
 -   Criar/carregar a coleção de esquema XML  
@@ -160,7 +160,7 @@ ms.locfileid: "68096825"
   
      Este tópico discute como negar permissões para criar uma coleção de esquema XML e como negar permissões em um objeto de coleção de esquema XML.  
   
-##  <a name="info"></a> Adquirindo Informações sobre esquemas XML e coleções de esquemas  
+##  <a name="getting-information-about-xml-schemas-and-schema-collections"></a><a name="info"></a> Adquirindo Informações sobre esquemas XML e coleções de esquemas  
  Coleções de esquema XML são enumeradas na exibição do catálogo sys.xml_schema_collections. A coleção de esquema XML "sys" está definida pelo sistema. Ela contém os namespaces predefinidos que podem ser usados em todas as coleções de esquema XML definidas pelo usuário sem precisar carregá-las explicitamente. Essa lista contém os namespaces para xml, xs, xsi, fn e xdt. Duas outras exibições do catálogo são sys.xml_schema_namespaces, que enumera todos os namespaces dentro de cada coleção de esquema XML, e sys.xml_components, que enumera todos os componentes do esquema XML dentro de cada esquema XML.  
   
  A função interna **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, produz uma instância de tipo de dados **xml**. Essa instância contém fragmentos de esquema XML estão contidos em uma coleção de esquema XML, exceto os esquemas XML predefinidos.  

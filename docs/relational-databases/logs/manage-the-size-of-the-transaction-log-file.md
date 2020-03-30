@@ -15,17 +15,17 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68084017"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gerenciar o tamanho do arquivo de log de transações
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Este tópico aborda como monitorar o tamanho de um log de transações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], reduzir o log de transações, adicionar ou aumentar um arquivo de log de transações, otimizar a taxa de crescimento do log de transações de **tempdb** e controlar o crescimento de um arquivo de log de transações.  
 
-##  <a name="MonitorSpaceUse"></a>Monitorar o uso do espaço de log  
+##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>Monitorar o uso do espaço de log  
 Monitore o uso do espaço de log usando [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md). Essa DMV retorna informações sobre a quantidade de espaço de log usada atualmente e indica quando o log de transações precisa de truncamento. 
 
 Para obter informações sobre o tamanho do arquivo de log atual, seu tamanho máximo e a opção de crescimento automático para o arquivo, você também pode usar as colunas **size**, **max_size** e **growth** para esse arquivo de log em [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
@@ -33,7 +33,7 @@ Para obter informações sobre o tamanho do arquivo de log atual, seu tamanho m�
 > [!IMPORTANT]
 > Evite sobrecarregar o disco de log. Verifique se o armazenamento de log pode suportar os requisitos de [IOPS](https://wikipedia.org/wiki/IOPS) e baixa latência da carga transacional. 
   
-##  <a name="ShrinkSize"></a> Reduzir o tamanho do arquivo de log  
+##  <a name="shrink-log-file-size"></a><a name="ShrinkSize"></a> Reduzir o tamanho do arquivo de log  
  Para reduzir o tamanho físico de um arquivo de log físico, você deve reduzir o arquivo de log. Isso será útil se você souber que um arquivo de log de transações contém espaço não utilizado. É possível reduzir um arquivo de log somente enquanto o banco de dados estiver online e se, pelo menos, um [VLF (arquivo de log virtual)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) estiver livre. Em alguns casos, talvez não seja possível reduzir o log antes do próximo truncamento de log.  
   
 > [!NOTE]
@@ -60,7 +60,7 @@ A redução de um arquivo de log remove um ou mais [VLFs](../../relational-datab
   
 -   [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) (Consulte as colunas **size**, **max_size** e **growth** do arquivo ou arquivos de log.)  
   
-##  <a name="AddOrEnlarge"></a> Adicionar ou aumentar um arquivo de log  
+##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a> Adicionar ou aumentar um arquivo de log  
 Também é possível obter mais espaço aumentando o arquivo de log existente (se houver espaço em disco) ou adicionando um arquivo de log ao banco de dados, geralmente em um disco diferente. Um arquivo de log de transações é suficiente, a menos que o espaço de log esteja se esgotando e o espaço em disco também esteja se esgotando no volume que contém o arquivo de log.   
   
 -   Para adicionar um arquivo de log ao banco de dados, use a cláusula `ADD LOG FILE` da instrução `ALTER DATABASE`. Adicionar um arquivo de log permite o crescimento do log.  
@@ -68,12 +68,12 @@ Também é possível obter mais espaço aumentando o arquivo de log existente (s
 
 Para obter mais informações, consulte as [Recomendações](#Recommendations) neste tópico.
     
-##  <a name="tempdbOptimize"></a> Otimizar o tamanho do log de transações tempdb  
+##  <a name="optimize-tempdb-transaction-log-size"></a><a name="tempdbOptimize"></a> Otimizar o tamanho do log de transações tempdb  
  Reinicializar uma instância de servidor redimensiona o log de transações do banco de dados **tempdb** ao seu tamanho original, antes do crescimento automático. Isso pode reduzir o desempenho do log de transações do **tempdb** . 
  
  Você pode evitar essa sobrecarga aumentando o tamanho do log de transações do **tempdb** depois de iniciar ou reinicializar a instância de servidor. Para obter mais informações, confira [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
   
-##  <a name="ControlGrowth"></a> Controlar o crescimento de um arquivo de log de transações  
+##  <a name="control-transaction-log-file-growth"></a><a name="ControlGrowth"></a> Controlar o crescimento de um arquivo de log de transações  
  Use a instrução [Opções de arquivo e grupo de arquivos de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) para gerenciar o aumento de um arquivo de log de transações. Observe o seguinte:  
   
 -   Para alterar o tamanho atual do arquivo em unidades de KB, MB, GB e TB, use a opção `SIZE`.  
@@ -82,7 +82,7 @@ Para obter mais informações, consulte as [Recomendações](#Recommendations) n
 
 Para obter mais informações, consulte as [Recomendações](#Recommendations) neste tópico.
 
-## <a name="Recommendations"></a> Recomendações
+## <a name="recommendations"></a><a name="Recommendations"></a> Recomendações
 Estas são algumas recomendações gerais ao trabalhar com arquivos de log de transações:
 
 -   O incremento de aumento automático do log de transações, conforme definido pela opção `FILEGROWTH`, deve ser grande o suficiente para se manter à frente das necessidades das transações da carga de trabalho. O incremento de crescimento do arquivo em um arquivo de log deve ser suficientemente grande para evitar a expansão frequente. Um ponteiro válido para dimensionar corretamente um log de transações é monitorar a quantidade de log ocupado durante:
