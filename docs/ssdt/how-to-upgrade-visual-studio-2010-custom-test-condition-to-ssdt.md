@@ -11,13 +11,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 333ef282fe4e1f9d7af53cd3569371e88018a03f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251070"
 ---
-# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Como fazer: Atualizar uma condição de teste personalizada do Visual Studio 2010 de uma versão anterior do SQL Server Data Tools
+# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Como: Atualizar uma condição de teste personalizado do Visual Studio 2010 de uma versão anterior do SQL Server Data Tools
 
 Para usar uma condição de unidade de teste que você criou em uma versão anterior para o SQL Server Data Tools, você deverá atualizá-la:  
   
@@ -27,7 +27,7 @@ Para usar uma condição de unidade de teste que você criou em uma versão ante
   
 -   [Instalar a condição de teste atualizada](#ApplytheNewRegistrationProcess)  
   
-## <a name="UpdateReferences"></a>Atualizar referências  
+## <a name="update-references"></a><a name="UpdateReferences"></a>Atualizar referências  
 Para atualizar as referências de projeto:  
   
 1.  Apenas no Visual Basic, no **Gerenciador de Soluções**, clique em **Mostrar Todos os Arquivos**.  
@@ -81,7 +81,7 @@ Para atualizar as referências de projeto:
   
 Sua condição de teste agora usa as referências de assembly do teste de unidade do SQL Server.  
   
-## <a name="UpdateClassAttributesandTypeReference"></a>Atualizar atributos de classe e referências de tipo  
+## <a name="update-class-attributes-and-type-references"></a><a name="UpdateClassAttributesandTypeReference"></a>Atualizar atributos de classe e referências de tipo  
 Substitua os atributos de classe de teste de unidade mais antigos por um novo atributo. A extensibilidade de teste de unidade do SQL Server baseia-se agora no Managed Extensibility Framework (MEF). Você também deve atualizar algumas referências de tipo.  
   
 ### <a name="update-class-attributes"></a>Atualizar atributos de classes  
@@ -128,7 +128,7 @@ Alguns nomes de tipo foram alterados na estrutura de teste de unidade do SQL Ser
 |-----------------|-----------------|  
 |`ExecutionResult`|`SqlExecutionResult`|  
   
-## <a name="ApplytheNewRegistrationProcess"></a>Instalar a condição de teste atualizada  
+## <a name="install-the-upgraded-test-condition"></a><a name="ApplytheNewRegistrationProcess"></a>Instalar a condição de teste atualizada  
 Em versões anteriores de teste de unidade de banco de dados, você pode ser solicitado a instalar sua condição de teste no cache de assembly global ou a criar um arquivo XML contendo suas informações de assembly. Com o teste de unidade do SQL Server, este processo adicional não é mais necessário. (Para saber mais, confira [Compilar o projeto e instalar sua condição de teste](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md#xxx).  
   
 Depois de atualizar suas referências, verifique se seu assembly está assinado e compilado.  

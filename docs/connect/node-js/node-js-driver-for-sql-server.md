@@ -11,10 +11,10 @@ ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 66e45137b75eaa22e4945113101d0cc0d91901cd
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896781"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Driver Node.js para SQL Server
@@ -26,8 +26,8 @@ O módulo tedious é uma implementação JavaScript do protocolo TDS, que tem su
 Você pode se conectar a um Banco de Dados SQL usando o Node.js no Windows, Linux ou Mac.  
   
 ## <a name="getting-started"></a>Introdução  
-* [Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento de Node.js](step-1-configure-development-environment-for-node-js-development.md)  
-* [Etapa 2: Criar um Banco de Dados SQL para o desenvolvimento de Node.js](step-2-create-a-sql-database-for-node-js-development.md)  
+* [Etapa 1: configurar o ambiente de desenvolvimento para o desenvolvimento de Node.js](step-1-configure-development-environment-for-node-js-development.md)  
+* [Etapa 2: Criar um banco de dados SQL para o desenvolvimento de Node.js](step-2-create-a-sql-database-for-node-js-development.md)  
 * [Etapa 3: Prova de conceito da conexão ao SQL usando o Node.js](step-3-proof-of-concept-connecting-to-sql-using-node-js.md)  
   
 ## <a name="documentation"></a>Documentação  

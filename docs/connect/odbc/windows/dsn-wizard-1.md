@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6edf465f5b853008c9bdc8c420f6e862e360593
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936601"
 ---
 # <a name="data-source-wizard-screen-1"></a>Tela 1 do Assistente de Fonte de Dados
@@ -27,7 +27,7 @@ Especifique o nome e a descrição da fonte de dados e o nome do servidor que ex
 
 O nome da fonte de dados usado por um aplicativo ODBC quando solicita uma conexão com a fonte de dados. Por exemplo, "Pessoal". O nome da fonte de dados é exibido na caixa de diálogo Administrador de Fonte de Dados ODBC.
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>DESCRIÇÃO
 
 (Opcional) Uma descrição da fonte de dados. Por exemplo, "data de admissão, histórico de salário e análise atual de todos os funcionários".
 

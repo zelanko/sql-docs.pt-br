@@ -18,10 +18,10 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ff907d83a4d793169872d5abaa059e8b6a1d91b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65572745"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interface de usuário do Designer de consultas gráficas
@@ -30,7 +30,7 @@ ms.locfileid: "65572745"
  .  
   
 ## <a name="graphical-query-designer"></a>Designer de Consultas Gráficas  
- Este designer de consultas gráficas dá suporte a três tipos de comandos de consulta: **Text**, **StoredProcedure** ou **TableDirect**. Antes de criar uma consulta para seu conjunto de dados, selecione uma opção de tipo de comando na página Consulta da caixa de diálogo [Propriedades do Conjunto de Dados](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) .  
+ Este designer de consultas gráficas dá suporte a três tipos de comandos de consulta: **Text**, **StoredProcedure**ou **TableDirect**. Antes de criar uma consulta para seu conjunto de dados, selecione uma opção de tipo de comando na página Consulta da caixa de diálogo [Propriedades do Conjunto de Dados](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) .  
   
  As seguintes opções estão disponíveis para o tipo de consulta:  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65572745"
 #### <a name="toolbar-for-the-graphical-query-designer"></a>Barra de ferramentas do Designer de Consultas Gráficas  
  A barra de ferramentas do designer de consultas gráficas contém botões que ajudam você a criar consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] usando a interface gráfica.  
   
-|Botão|Descrição|  
+|Botão|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas.|  
 |**Importaçãoação**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
@@ -111,7 +111,7 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-the-command-type-tabledirect"></a>Botões da barra de ferramentas relacionados ao tipo de comando TableDirect  
  A barra de ferramentas do designer de consultas gráficas fornece uma lista suspensa das tabelas existentes na fonte de dados. A tabela a seguir lista cada botão e a função correspondente.  
   
-|Botão|Descrição|  
+|Botão|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas.|  
 |**Importaçãoação**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
@@ -129,7 +129,7 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-command-type-storedprocedure"></a>Botões da barra de ferramentas relacionados ao tipo de comando StoredProcedure  
  A barra de ferramentas do designer de consultas gráficas fornece uma lista suspensa dos procedimentos armazenados existentes na fonte de dados. A tabela a seguir lista cada botão e a função correspondente.  
   
-|Botão|Descrição|  
+|Botão|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas.|  
 |**Importaçãoação**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  

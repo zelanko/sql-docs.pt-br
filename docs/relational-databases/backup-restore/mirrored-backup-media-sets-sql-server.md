@@ -19,10 +19,10 @@ ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 33875074e9c6975e187baceaff18ad49c057a8e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68033733"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>Conjuntos de mídias de backup espelhadas (SQL Server)
@@ -44,7 +44,7 @@ ms.locfileid: "68033733"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="OverviewofMirroredMediaSets"></a> Visão geral dos conjuntos de mídias espelhados  
+##  <a name="overview-of-mirrored-media-sets"></a><a name="OverviewofMirroredMediaSets"></a> Visão geral dos conjuntos de mídias espelhados  
  Espelhamento de mídia é uma propriedade do conjunto de mídias. Um *conjunto de mídias espelhado* consiste em várias cópias (*espelhos*) do conjunto de mídias. Um conjunto de mídias contém uma ou mais famílias de mídia, cada uma correspondendo a um dispositivo de backup. Por exemplo, se a cláusula TO de uma instrução BACKUP DATABASE listar três dispositivos, BACKUP difundirá os dados entre três famílias de mídia, um por dispositivo. O número de famílias de mídia e espelhos é definido quando o conjunto de mídias é criado (por uma instrução BACKUP DATABASE que especifica WITH FORMAT).  
   
  Um conjunto de mídias espelhado tem de dois a quatro espelhos. Cada espelho contém todas as famílias de mídia no conjunto de mídias. Os espelhos requerem o mesmo número de dispositivos, um por família de mídia. Cada espelho requer um dispositivo de backup separado para cada família de mídia. Por exemplo, um conjunto de mídias espelhado que consiste em quatro famílias de mídia com três espelhos requer doze dispositivos de backup. Todos esses dispositivos devem ser equivalentes. Por exemplo, unidades de fita que tenham o mesmo número de modelo do mesmo fabricante.  
@@ -62,12 +62,12 @@ ms.locfileid: "68033733"
   
  As operações de backup e de restauração impõem requisitos diferentes quanto à presença ou não de todos os espelhos. Para que uma operação de backup grave (ou seja, crie ou estenda) um conjunto de mídias espelhado, todos os espelhos devem estar presentes. Em contrapartida, ao restaurar um backup de um conjunto de mídias espelhado, você poderá especificar apenas um único espelho para cada família de mídia. Você pode executar a restauração de menos dispositivos do que famílias, mas cada família de mídia é processada somente uma vez. Porém, na presença de erros, a existência de outros espelhos permite que alguns problemas de restauração sejam resolvidos rapidamente. Você pode substituir um volume de mídia danificado pelo volume correspondente de outro espelho. Isso ocorre porque RESTORE e RESTORE VERIFYONLY oferecem suporte à substituição de mídias danificadas pelo volume das mídias de backup correspondentes de outro espelho.  
   
-##  <a name="HardwareReqs"></a> Requisitos de hardware para espelhos de backup  
+##  <a name="hardware-requirements-for-backup-mirrors"></a><a name="HardwareReqs"></a> Requisitos de hardware para espelhos de backup  
  O espelhamento se aplica a disco e fita (discos não dão suporte a fitas de continuação). Todos os dispositivos de backup de um único backup ou operação de restauração devem ser do mesmo tipo, disco ou fita.  
   
  Dentro dessas classes mais amplas, deve-se usar dispositivos semelhantes que tenham as mesmas propriedades. Dispositivos insuficientemente semelhantes geram uma mensagem de erro (3212). Para evitar o risco de uma incompatibilidade de dispositivo, use dispositivos que sejam equivalentes, como somente unidades com o mesmo número de modelo do mesmo fabricante.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para fazer backup em dispositivos de backup espelhados**  
   
 -   [Fazer backup em um conjunto de mídias espelhado &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md)  

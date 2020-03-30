@@ -19,17 +19,17 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73983265"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações sobre como exibir e trabalhar com os resultados depois que você ajustar um banco de dados, veja [Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
-##  <a name="Initialize"></a> Inicialize o Orientador de Otimização do Mecanismo de Banco de Dados  
+##  <a name="initialize-the-database-engine-tuning-advisor"></a><a name="Initialize"></a> Inicialize o Orientador de Otimização do Mecanismo de Banco de Dados  
  Ao usá-lo pela primeira vez, um usuário que seja membro da função de servidor fixa **sysadmin** deve inicializar o Orientador de Otimização do Mecanismo de Banco de Dados. Isso acontece porque devem ser criadas vários tabelas do sistema no banco de dados **msdb** para oferecer suporte a operações de ajuste. A inicialização também possibilita que os usuários membros da função de banco de dados fixa **db_owner** ajustem cargas de trabalho em tabelas em seus próprios bancos de dados.  
   
  Um usuário com permissões de administrador do sistema deve executar qualquer um das ações a seguir:  
@@ -38,7 +38,7 @@ ms.locfileid: "73983265"
   
 -   Use o utilitário **dta** para ajustar a primeira carga de trabalho. Para obter mais informações, consulte [Usar o utilitário dta](#dta) mais adiante neste tópico.  
   
-##  <a name="Start"></a> Iniciar o Orientador de Otimização do Mecanismo de Banco de Dados  
+##  <a name="start-the-database-engine-tuning-advisor"></a><a name="Start"></a> Iniciar o Orientador de Otimização do Mecanismo de Banco de Dados  
  Você pode iniciar a GUI (interface gráfica do usuário) do Orientador de Otimização do Mecanismo de Banco de Dados de diversas maneiras diferentes para dar suporte ao ajuste do banco de dados em diversos cenários. As diferentes maneiras de iniciar o Orientador de Otimização do Mecanismo de Banco de Dados incluem: a partir do menu **Iniciar** , a partir do menu **Ferramentas** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no Editor de Consultas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], e a partir do menu **Ferramentas** no [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Ao iniciar o Orientador de Otimização do Mecanismo de Banco de Dados pela primeira vez, o aplicativo exibe uma caixa de diálogo **Conectar ao Servidor** onde você poderá especificar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à qual deseja conecta-se.  
   
 > [!WARNING]  
@@ -62,7 +62,7 @@ ms.locfileid: "73983265"
   
 1.  No menu **Ferramentas** do SQL Server Profiler, clique em **Orientador de Otimização do Mecanismo de Banco de Dados**.  
   
-##  <a name="Create"></a> Crie uma carga de trabalho  
+##  <a name="create-a-workload"></a><a name="Create"></a> Crie uma carga de trabalho  
  A carga de trabalho é um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas em um ou mais bancos de dados a serem ajustados. O Orientador de Otimização do Mecanismo de Banco de Dados analisa essas cargas de trabalho para recomendar índices ou estratégias de particionamento que melhorarão o desempenho de consulta de seu servidor.  
   
  Você pode criar uma carga de trabalho usando um dos métodos a seguir.  
@@ -85,7 +85,7 @@ ms.locfileid: "73983265"
   
 -   As cargas de trabalho também podem ser inseridas em um arquivo de entrada XML, no qual você também pode especificar um peso para cada evento. Para obter mais informações sobre como especificar cargas de trabalho inseridas, consulte [Criar um arquivo de entrada XML](#XMLInput) mais adiante neste tópico.  
   
-###  <a name="SSMS"></a> Para criar cargas de trabalho de script do Transact-SQL  
+###  <a name="to-create-transact-sql-script-workloads"></a><a name="SSMS"></a> Para criar cargas de trabalho de script do Transact-SQL  
   
 1.  Inicie o Editor de Consultas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, veja [Editores de Consultas e de Texto &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
   
@@ -93,7 +93,7 @@ ms.locfileid: "73983265"
   
 3.  Salve o arquivo com uma extensão **.sql** . A interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados e o utilitário de linha de comando **dta** podem usar esse script [!INCLUDE[tsql](../../includes/tsql-md.md)] como carga de trabalho.  
   
-###  <a name="Profiler"></a> Para criar cargas de trabalho de arquivos e tabelas de rastreamento  
+###  <a name="to-create-trace-file-and-trace-table-workloads"></a><a name="Profiler"></a> Para criar cargas de trabalho de arquivos e tabelas de rastreamento  
   
 1.  Inicie o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usando um dos seguintes métodos:  
   
@@ -140,7 +140,7 @@ ms.locfileid: "73983265"
   
  O Orientador de Otimização do Mecanismo de Banco de Dados ajustará a nova carga de trabalho, pois as informações de logon não foram especificadas no rastreamento. Se não houver **LoginName** para uma instrução, o Orientador de Otimização do Mecanismo de Banco de Dados ajustará essa instrução representando o usuário que iniciou a sessão de ajuste (um membro da função de servidor fixa **sysadmin** ou de função de banco de dados fixa **db_owner** ).  
   
-##  <a name="Tune"></a> Ajustar um banco de dados  
+##  <a name="tune-a-database"></a><a name="Tune"></a> Ajustar um banco de dados  
  Para ajustar um banco de dados, você pode usar a GUI do Orientador de Otimização do Mecanismo de Banco de Dados ou o utilitário **dta** .  
   
 > [!NOTE]  
@@ -149,10 +149,10 @@ ms.locfileid: "73983265"
 ### <a name="use-the-database-engine-tuning-advisor-graphical-user-interface"></a>Use a interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados  
  Na GUI (interface gráfica do usuário) do Orientador de Otimização do Mecanismo de Banco de Dados, você pode ajustar um banco de dados usando o cache de planos, arquivos de carga de trabalho ou tabelas de carga de trabalho Você pode usar a GUI do Orientador de Otimização do Mecanismo de Banco de Dados para exibir facilmente os resultados de sua sessão de ajuste atual e os das sessões anteriores. Para obter mais informações sobre as opções da interface do usuário, consulte [Descrições da interface do usuário](#UI) posteriormente neste tópico. Para obter mais informações sobre como trabalhar com a saída depois que você ajustar um banco de dados, veja [Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
 
-####  <a name="PlanCache"></a> Ajustar um banco de dados usando o Repositório de Consultas
+####  <a name="to-tune-a-database-by-using-the-query-store"></a><a name="PlanCache"></a> Ajustar um banco de dados usando o Repositório de Consultas
 Consulte [Ajustar o Banco de Dados Usando Cargas de Trabalho do Repositório de Consulta](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) para obter mais informações.
   
-####  <a name="PlanCache"></a> Para ajustar um banco de dados usando o cache de plano  
+####  <a name="to-tune-a-database-by-using-the-plan-cache"></a><a name="PlanCache"></a> Para ajustar um banco de dados usando o cache de plano  
   
 1.  Inicie o Orientador de Otimização do Mecanismo de Banco de Dados e faça logon em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Iniciar o Orientador de Otimização do Mecanismo de Banco de Dados](#Start) anteriormente neste tópico.  
   
@@ -221,7 +221,7 @@ Consulte [Ajustar o Banco de Dados Usando Cargas de Trabalho do Repositório de 
 > [!NOTE]  
 >  Não há suporte para pausar o Orientador de Otimização do Mecanismo de Banco de Dados. Se você clicar no botão de barra de ferramentas **Iniciar Análise** depois de clicar no botão **Parar Análise** ou **Parar Análise (com Recomendações)** , o Orientador de Otimização do Mecanismo de Banco de Dados iniciará uma nova sessão de ajuste.  
   
-###  <a name="dta"></a> Usar o utilitário dta  
+###  <a name="use-the-dta-utility"></a><a name="dta"></a> Usar o utilitário dta  
  O utilitário [dta utility](../../tools/dta/dta-utility.md) fornece um arquivo executável de prompt de comando que pode ser usado para ajustar bancos de dados. Ele permite usar a funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em scripts e arquivos em lote. O utilitário **dta** assume entradas de cache de plano, arquivos de rastreamento, tabelas de rastreamento e scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] como cargas de trabalho. Ele ainda aceita entrada XML compatível com o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados, que está disponível no [Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=43100).  
   
  Antes de começar a ajustar uma carga de trabalho com o utilitário **dta** , considere o seguinte:  
@@ -305,7 +305,7 @@ Consulte [Ajustar o Banco de Dados Usando Cargas de Trabalho do Repositório de 
   
 5.  Depois que o utilitário terminar de ajustar a carga de trabalho, você pode exibir os resultados das sessões de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados. Como alternativa, também é possível especificar que as recomendações de ajuste sejam gravadas em um arquivo XML na opção **-ox** . Para obter mais informações, consulte [dta Utility](../../tools/dta/dta-utility.md).  
   
-##  <a name="XMLInput"></a> Criar um arquivo de entrada XML  
+##  <a name="create-an-xml-input-file"></a><a name="XMLInput"></a> Criar um arquivo de entrada XML  
  Se você for um desenvolvedor de XML experiente, poderá criar arquivos formatados em XML que podem ser usados pelo Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para ajustar cargas de trabalho. Para criar estes arquivos XML, use suas ferramentas de XML favoritas para editar um arquivo de exemplo ou gerar uma instância do esquema XML do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
  O esquema XML do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] está disponível na instalação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na seguinte localização:  
@@ -331,7 +331,7 @@ Consulte [Ajustar o Banco de Dados Usando Cargas de Trabalho do Repositório de 
 > [!NOTE]  
 >  Se quiser usar uma carga de trabalho embutida, que é uma carga de trabalho especificada diretamente no arquivo de entrada XML, use a [Amostra do arquivo de entrada XML com carga de trabalho embutida &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md).  
   
-##  <a name="UI"></a> Descrições da interface do usuário  
+##  <a name="user-interface-descriptions"></a><a name="UI"></a> Descrições da interface do usuário  
   
 ### <a name="tools-menuoptions-page"></a>Página de Menu/Opções de Ferramentas  
  Use essa caixa de diálogo para especificar parâmetros de configuração gerais para o Orientador de Otimização do Mecanismo de Banco de Dados.  

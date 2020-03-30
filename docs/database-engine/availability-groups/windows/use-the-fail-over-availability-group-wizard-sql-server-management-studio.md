@@ -21,35 +21,35 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821940"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Usar o Assistente para Grupo de Disponibilidade de Failover (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como fazer um failover manual planejado ou um failover manual forçado (failover forçado) em um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um grupo de disponibilidade faz failover no nível de uma réplica de disponibilidade. Se você fizer failover em uma réplica secundária no estado SYNCHRONIZED, o assistente fará um failover manual planejado (sem perda de dados). Se você fizer failover em uma réplica secundária no estado UNSYNCHRONIZED ou NOT SYNCHRONIZING, o assistente executará um failover manual forçado, também conhecido como *failover forçado* (com possível perda de dados). As duas formas de failover manual fazem a transição da réplica secundária à qual você está conectado para a função primária. Um failover manual planejado faz a transição da réplica primária antiga para a função secundária. Após um failover forçado, quando a réplica primária antiga ficar online, ela fará a transição para a função secundária.  
 
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
  Antes de seu primeiro failover manual planejado, consulte a seção "Antes de começar" em [Executar um failover manual planejado de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
   
  Antes do primeiro failover forçado, consulte as seções "Antes de começar" e "Acompanhamento: tarefas essenciais depois de um failover forçado" em [Executar um failover manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Um comando de failover é retornado assim que a réplica secundária de destino aceitar o comando. No entanto, a recuperação de banco de dados ocorre de forma assíncrona depois que o grupo de disponibilidade terminar o failover.  
     
-###  <a name="Prerequisites"></a> Pré-requisitos para o uso do Assistente de Grupo de Disponibilidade de Failover  
+###  <a name="prerequisites-for-using-the-failover-availability-group-wizard"></a><a name="Prerequisites"></a> Pré-requisitos para o uso do Assistente de Grupo de Disponibilidade de Failover  
   
 -   Você deve estar conectado à instância de servidor que hospeda uma réplica de disponibilidade atualmente disponível.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para usar o Assistente de Grupo de Disponibilidade de Failover**  
   
 1.  No Pesquisador de Objetos, conecte-se à instância de servidor que hospeda uma réplica secundária do grupo de disponibilidade que precisa passar por failover e expanda a árvore de servidores.  
@@ -93,7 +93,7 @@ ms.locfileid: "74821940"
   
  As outras páginas deste assistente compartilham a ajuda com um ou mais dos outros assistentes de grupos de disponibilidade AlwaysOn e são documentadas em tópicos de ajuda F1 separados.  
   
-###  <a name="SelectNewPrimaryReplica"></a> Select New Primary Replica Page  
+###  <a name="select-new-primary-replica-page"></a><a name="SelectNewPrimaryReplica"></a> Select New Primary Replica Page  
  Esta seção descreve as opções da página **Selecionar Nova Réplica primária** . Use esta página para selecionar a réplica secundária (destino de failover) na qual o grupo de disponibilidade fará o failover. Essa réplica se tornará a nova réplica primária.  
   
 #### <a name="page-options"></a>Opções da página  
@@ -159,7 +159,7 @@ ms.locfileid: "74821940"
  **Cancelar**  
  Clique para cancelar o assistente. Na página **Selecionar Nova Réplica Primária** , o cancelamento do assistente faz com que ele seja fechado sem executar nenhuma ação.  
   
-###  <a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
+###  <a name="confirm-potential-data-loss-page"></a><a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
  Esta seção descreve as opções da página **Confirmar Potencial Perda de dados** , que será exibida somente se você estiver executando um failover forçado. Este tópico é usado apenas pelo [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]. Use esta página para indicar se você está disposto a arriscar uma possível perda de dados para forçar o failover do grupo de disponibilidade.  
   
 #### <a name="confirm-potential-data-loss-options"></a>Opções da página Confirmar Potencial Perda de Dados  
@@ -171,7 +171,7 @@ ms.locfileid: "74821940"
  **Cancelar**  
  Clique para cancelar o assistente. Na página **Confirmar Potencial Perda de Dados** , o cancelamento do assistente faz com que ele seja fechado sem executar nenhuma ação.  
   
-###  <a name="ConnectToReplica"></a> Connect to Replica Page  
+###  <a name="connect-to-replica-page"></a><a name="ConnectToReplica"></a> Connect to Replica Page  
  Esta seção descreve as opções da página **Conectar à Réplica** do [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]. Esta página só será exibida se você não estiver conectado à réplica secundária de destino. Use esta página para se conectar à réplica secundária que você selecionou como a nova réplica primária.  
   
 #### <a name="page-options"></a>Opções da página  

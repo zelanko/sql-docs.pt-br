@@ -18,10 +18,10 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b0b4a72519a0fa20d0c4a7472760a8f06a9ced32
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79190618"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novidades no SQL Server 2016
@@ -49,9 +49,9 @@ Esta página fornece informações de resumo e links para informações mais det
     - Dá suporte a tabelas de até 2 TB (acima de 256 GB). 
     - Tem aprimoramentos de índice de armazenamento de coluna para classificação e suporte ao Grupo de Disponibilidade AlwaysOn.
 - Novos recursos de segurança:
-    - **Always Encrypted:** Quando habilitado, somente o aplicativo que tem a chave de criptografia pode acessar os dados confidenciais criptografados no banco de dados SQL Server 2016. A chave nunca é passada para o SQL Server.
-    - **Máscara de Dados Dinâmicos:** Se especificada na definição da tabela, os dados mascarados ficarão ocultos da maioria dos usuários e apenas os usuários com a permissão UNMASK poderão ver os dados concluídos.
-    - **Segurança em Nível de Linha:** O acesso a dados pode ser restringido no nível do mecanismo de banco de dados, portanto, os usuários veem apenas o que é relevante para eles. 
+    - **Always Encrypted:** quando esta opção está habilitada, somente o aplicativo que tem a chave de criptografia pode acessar os dados confidenciais criptografados no banco de dados SQL Server 2016. A chave nunca é passada para o SQL Server.
+    - **Máscara de Dados Dinâmicos:** se for especificada na definição da tabela, os dados mascarados ficarão ocultos da maioria dos usuários, e apenas os usuários com a permissão UNMASK poderão ver os dados concluídos.
+    - **Segurança em Nível de Linha:** o acesso aos dados pode ser restringido no nível do mecanismo de banco de dados, portanto, os usuários veem apenas o que é relevante para eles. 
 
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SSAS (SQL Server 2016 Analysis Services)
 O SQL Server 2016 Analysis Services fornece melhor desempenho, criação, gerenciamento de banco de dados, filtragem, processamento e muito mais para bancos de dados de modelo de tabela com base no **nível de compatibilidade 1200**.

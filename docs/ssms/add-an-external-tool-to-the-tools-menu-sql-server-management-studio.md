@@ -16,15 +16,15 @@ ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: aec569600c07fb829836313972c02241f121d088
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75254550"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>Adicionar uma ferramenta externa ao menu Ferramentas (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Você pode inicializar qualquer aplicativo [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] Windows ou [!INCLUDE[msCoName](../includes/msconame_md.md)] por meio do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Aplicativos externos podem ser adicionados e executados do menu **Ferramentas** .  
+Você pode inicializar qualquer aplicativo [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows ou [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] por meio do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Aplicativos externos podem ser adicionados e executados do menu **Ferramentas** .  
   
 ### <a name="to-add-an-external-tool-to-the-tools-menu"></a>Para acrescentar uma ferramenta externa ao menu Ferramentas  
   

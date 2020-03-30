@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761886"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)
@@ -29,24 +29,24 @@ ms.locfileid: "76761886"
 
   Este tópico mostra como criar um servidor vinculado e acessar dados de outro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Criar um servidor vinculado permite trabalhar com dados de várias origens. O servidor vinculado não precisa ser outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas esse é um cenário comum.  
   
-##  <a name="Background"></a> Plano de fundo  
+##  <a name="background"></a><a name="Background"></a> Plano de fundo  
  Um servidor vinculado permite acesso a consultas distribuídas e heterogêneas em fontes de dados OLE DB. Depois que um servidor vinculado é criado, as consultas distribuídas podem ser executadas nesse servidor, e as consultas podem unir tabelas de mais de uma fonte de dados. Se o servidor vinculado estiver definido como uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], poderão ser executados procedimentos armazenados remotos.  
   
  Os recursos e argumentos necessários do servidor vinculado podem variar significativamente. Os exemplos neste tópico fornecem um exemplo típico, mas nem todas as opções são descritas. Para obter mais informações, consulte [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
-##  <a name="Security"></a> Segurança  
+##  <a name="security"></a><a name="Security"></a> Segurança  
   
 ### <a name="permissions"></a>Permissões  
  Ao usar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , exija a permissão **ALTER ANY LINKED SERVER** no servidor ou associação na função de servidor fixa **setupadmin** . Ao usar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , requer a permissão **CONTROL SERVER** ou associação na função de servidor fixa **sysadmin** .  
   
-##  <a name="Procedures"></a> Como criar um servidor vinculado  
+##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> Como criar um servidor vinculado  
  Você pode usar qualquer um dos itens a seguir:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>Para criar um servidor vinculado para outra instância do SQL Server usando o SQL Server Management Studio  
   
@@ -197,7 +197,7 @@ ms.locfileid: "76761886"
      **Oferece suporte ao operador 'Like'**  
      Indica que o provedor oferece suporte a consultas que usam a palavra-chave LIKE.  
   
-###  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Para criar um servidor vinculado usando [!INCLUDE[tsql](../../includes/tsql-md.md)], use as instruções [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)[CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md) e [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md).  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>Para criar um servidor vinculado para outra instância do SQL Server usando Transact-SQL  
@@ -225,7 +225,7 @@ ms.locfileid: "76761886"
   
     ```  
   
-##  <a name="FollowUp"></a> Acompanhamento: tarefas a serem executadas após a criação de um servidor vinculado  
+##  <a name="follow-up-steps-to-take-after-you-create-a-linked-server"></a><a name="FollowUp"></a> Acompanhamento: tarefas a serem executadas após a criação de um servidor vinculado  
   
 #### <a name="to-test-the-linked-server"></a>Para testar o servidor vinculado  
   

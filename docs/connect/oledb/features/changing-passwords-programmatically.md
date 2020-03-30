@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a6c9e52dc46818d3d188f2fa742e2bccad769cf8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989135"
 ---
 # <a name="changing-passwords-programmatically"></a>Alterando senhas programaticamente
@@ -42,15 +42,15 @@ ms.locfileid: "67989135"
   
 |Código de erro do SQL Server|Mensagem de erro|  
 |---------------------------|-------------------|  
-|15113|Falha no logon do usuário '%.*ls' Motivo: Falha na validação de senha. A conta está bloqueada.|  
-|18463|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não pode ser usada neste momento.|  
-|18464|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos de política, pois é muito curta.|  
-|18465|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos de política, pois é muito longa.|  
-|18466|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos de política, pois não é complexa o bastante.|  
-|18467|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos da DLL de filtragem de senha.|  
-|18468|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. Ocorreu um erro inesperado durante a validação da senha.|  
-|18487|Falha no logon do usuário '%.*ls'. Motivo: A senha da conta expirou.|  
-|18488|Falha no logon do usuário '%.*ls'. Motivo: A senha da conta precisa ser alterada.|  
+|15113|Falha no logon do usuário '%.*ls'. Motivo: falha na validação da senha. A conta está bloqueada.|  
+|18463|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não pode ser usada neste momento.|  
+|18464|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não atende aos requisitos de política, pois é muito curta.|  
+|18465|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não atende aos requisitos de política, pois é muito longa.|  
+|18466|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não atende aos requisitos de política, pois não é complexa o bastante.|  
+|18467|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não atende aos requisitos da DLL de filtragem de senha.|  
+|18468|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. Ocorreu um erro inesperado durante a validação da senha.|  
+|18487|Falha no logon do usuário '%.*ls'. Motivo: a senha da conta expirou.|  
+|18488|Falha no logon do usuário '%.*ls'. Motivo: a senha da conta deve ser alterada.|  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server  
  O Driver do OLE DB para SQL Server dá suporte à expiração de senha por meio de uma interface do usuário e programaticamente.  

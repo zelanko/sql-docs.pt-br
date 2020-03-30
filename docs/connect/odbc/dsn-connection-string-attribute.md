@@ -10,10 +10,10 @@ ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
 ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76911240"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Atributos e palavras-chave da cadeia de conexão e DSN
@@ -22,7 +22,7 @@ Esta página lista as palavras-chave para cadeias de conexão e DSNs e os atribu
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>Atributos de conexão e palavras-chave de cadeia de conexão/DSN com suporte
 
-A tabela a seguir lista as palavras-chave disponíveis e os atributos para cada plataforma (L: Linux ; M: Mac ; W: Windows). Clique na palavra-chave ou no atributo para obter mais detalhes.
+A tabela a seguir lista as palavras-chave e os atributos disponíveis para cada plataforma (L: Linux; M: Mac; W: Windows). Clique na palavra-chave ou no atributo para obter mais detalhes.
 
 | Palavras-chave da cadeia de conexão/DSN | Atributo de conexão | Plataforma |
 |-|-|-|
@@ -123,7 +123,7 @@ A tabela a seguir lista as palavras-chave disponíveis e os atributos para cada 
 
 Aqui estão algumas palavras-chave de cadeia de conexão e os atributos de conexão que não estão documentados em [Usando palavras-chave de cadeia de conexão com SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [Função SQLSetConnectAttr](../../odbc/reference/syntax/sqlsetconnectattr-function.md).
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>DESCRIÇÃO
 
 Usado para descrever a fonte de dados.
 
@@ -131,7 +131,7 @@ Usado para descrever a fonte de dados.
 
 Controles para conversão de dados de ANSI em OEM. 
 
-| Valor do atributo | Descrição |
+| Valor do atributo | DESCRIÇÃO |
 |-|-|
 | SQL_AO_OFF | (Padrão) Conversão não é executada. |
 | SQL_AO_ON | Conversão é executada. |
@@ -140,7 +140,7 @@ Controles para conversão de dados de ANSI em OEM.
 
 Controla o uso de Conexões de Fallback do SQL Server. Esse atributo não tem mais suporte.
 
-| Valor do atributo | Descrição |
+| Valor do atributo | DESCRIÇÃO |
 |-|-|
 | SQL_FB_OFF | (Padrão) Conexões de fallback estão desabilitadas. |
 | SQL_FB_ON | Conexões de fallback estão habilitadas. |
@@ -153,7 +153,7 @@ Controla o uso de Conexões de Fallback do SQL Server. Esse atributo não tem ma
 
 Define o modo de autenticação a ser usado ao conectar-se ao SQL Server. Veja [Usando o Azure Active Directory](using-azure-active-directory.md) para obter mais informações.
 
-| Valor de Palavra-Chave | Valor do atributo | Descrição |
+| Valor de Palavra-Chave | Valor do atributo | DESCRIÇÃO |
 |-|-|-|
 | |SQL_AU_NONE|(Padrão) Não definido. A combinação de outros atributos determina o modo de autenticação.|
 |SqlPassword|SQL_AU_PASSWORD|Autenticação do SQL Server com nome de usuário e senha.|
@@ -170,7 +170,7 @@ Define o modo de autenticação a ser usado ao conectar-se ao SQL Server. Veja [
 
 Controla a criptografia de coluna transparente (Always Encrypted). Veja [Usando Always Encrypted (ODBC)](using-always-encrypted-with-the-odbc-driver.md) para obter mais informações.
 
-| Valor de Palavra-Chave | Valor do atributo | Descrição |
+| Valor de Palavra-Chave | Valor do atributo | DESCRIÇÃO |
 |-|-|-|
 |habilitado|SQL_CE_ENABLED|Habilita o Always Encrypted.|
 |Desabilitado|SQL_CE_ENABLED|(Padrão) Desabilita o Always Encrypted.|
@@ -180,7 +180,7 @@ Controla a criptografia de coluna transparente (Always Encrypted). Veja [Usando 
 
 Controla o recurso de Resolução de IP de Rede Transparente, que interage com MultiSubnetFailover para permitir tentativas de reconexão mais rápidas. Veja [Usando resolução de IP de rede transparente](using-transparent-network-ip-resolution.md) para obter mais informações.
 
-| Valor de Palavra-Chave | Valor do atributo| Descrição |
+| Valor de Palavra-Chave | Valor do atributo| DESCRIÇÃO |
 |-|-|-|
 |habilitado|SQL_IS_ON|(Padrão) Habilita a resolução IP de rede transparente.|
 |Desabilitado|SQL_IS_OFF|Desativa a resolução IP de rede transparente.|
@@ -189,7 +189,7 @@ Controla o recurso de Resolução de IP de Rede Transparente, que interage com M
 
 Controla o uso de SET FMTONLY para metadados quando está se conectando ao SQL Server 2012 e versões mais recentes.
 
-| Valor de Palavra-Chave | Descrição |
+| Valor de Palavra-Chave | DESCRIÇÃO |
 |-|-|
 |Não|(Padrão) Use sp_describe_first_result_set para metadados, se disponível. |
 |Sim| Use SET FMTONLY para metadados. |
@@ -199,7 +199,7 @@ Controla o uso de SET FMTONLY para metadados quando está se conectando ao SQL S
 
 Especifica o certificado a ser usado para autenticação. As opções são: 
 
-| Valor de Opção | Descrição |
+| Valor de Opção | DESCRIÇÃO |
 |-|-|
 | sha1:`<hash_value>` | O driver ODBC usa o hash SHA1 para localizar um certificado no Repositório de Certificados do Windows |
 | assunto:`<subject>` | O driver ODBC usa o assunto para localizar um certificado no Repositório de Certificados do Windows |
@@ -212,7 +212,7 @@ Caso o certificado esteja no formato PFX e a chave privada dentro do certificado
 
 Especifica um local do arquivo da chave privada para certificados PEM ou DER especificados pelo atributo ClientCertificate. Formato: 
 
-| Valor de Opção | Descrição |
+| Valor de Opção | DESCRIÇÃO |
 |-|-|
 | arquivo:`<file_location>`[,senha:`<password>`] | Especifica o local do arquivo de chave privada. |
 
@@ -223,7 +223,7 @@ Caso o arquivo de chave privada seja protegido por senha, a palavra-chave da sen
 
 Permite o uso de um token de acesso do Azure Active Directory para autenticação. Veja [Usando o Azure Active Directory](using-azure-active-directory.md) para obter mais informações.
 
-| Valor do atributo | Descrição |
+| Valor do atributo | DESCRIÇÃO |
 |-|-|
 | NULO | (Padrão) Nenhum token de acesso é fornecido. |
 | ACCESSTOKEN* | Ponteiro para um token de acesso. |
@@ -232,7 +232,7 @@ Permite o uso de um token de acesso do Azure Active Directory para autenticaçã
 
 Comunica-se com uma biblioteca de provedor de repositório de chaves carregada. Veja Controla a criptografia de coluna transparente (Always Encrypted). Esse atributo não tem valor padrão. Veja [Provedores do Repositório de Chaves Personalizado](custom-keystore-providers.md) para obter mais informações.
 
-| Valor do atributo | Descrição |
+| Valor do atributo | DESCRIÇÃO |
 |-|-|
 | CEKEYSTOREDATA * | Estrutura de dados de comunicação para a biblioteca do provedor de repositório de chaves |
 
@@ -240,7 +240,7 @@ Comunica-se com uma biblioteca de provedor de repositório de chaves carregada. 
 
 Carrega uma biblioteca de provedor de repositório de chaves para Always Encrypted ou recupera os nomes das bibliotecas de provedor de repositório de chaves carregadas. Veja [Provedores do Repositório de Chaves Personalizado](custom-keystore-providers.md) para obter mais informações. Esse atributo não tem valor padrão.
 
-| Valor do atributo | Descrição |
+| Valor do atributo | DESCRIÇÃO |
 |-|-|
 | char * | Caminho para uma biblioteca de provedores de repositório de chaves |
 
@@ -255,7 +255,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 ``` 
 
-|Valor|Descrição|Plataformas|  
+|Valor|DESCRIÇÃO|Plataformas|  
 |-----------|-----------------|-----------------|  
 |Objeto XACALLPARAM*|O ponteiro para o objeto `XACALLPARAM`.|Windows, Linux e Mac|
 |TRUE|Associa a transação XA à conexão ODBC. Todas as atividades de banco de dados relacionadas serão executadas sob a proteção da transação XA.|Windows|  
@@ -267,6 +267,6 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 
 Recupera a ID do processo do servidor da conexão. Isso equivale à variável T-SQL [@@SPID](../../t-sql/functions/spid-transact-sql.md), exceto pelo fato de que ela não incorre em uma viagem de ida e volta adicional ao servidor.
 
-| Valor do atributo | Descrição |
+| Valor do atributo | DESCRIÇÃO |
 |-|-|
 | DWORD | SPID |

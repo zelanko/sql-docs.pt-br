@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2d4bb708142d4471381a1579baa943d11357823
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113281"
 ---
 # <a name="subqueries-sql-server"></a>Subconsultas (SQL Server)
@@ -39,7 +39,7 @@ FROM Sales.SalesOrderHeader AS Ord;
 GO
 ```
 
-## <a name="fundamentals"></a> Noções básicas sobre subconsultas
+## <a name="subquery-fundamentals"></a><a name="fundamentals"></a> Noções básicas sobre subconsultas
 Uma subconsulta também é chamada de uma consulta interna ou seleção interna, enquanto a instrução que contém uma subconsulta também é chamada de uma consulta externa ou seleção externa.   
 
 Muitas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que incluem subconsultas podem ser alternativamente formuladas como junções. Outras perguntas só podem ser feitas com subconsultas. Em [!INCLUDE[tsql](../../includes/tsql-md.md)], normalmente não há nenhuma diferença de desempenho entre uma instrução que inclui uma subconsulta e uma versão equivalente semanticamente que não inclui. Entretanto, em alguns casos em que a existência deve ser verificada, uma junção tem um desempenho melhor. Em outros casos, a consulta aninhada deve ser processada para cada resultado da consulta externa para assegurar a eliminação de duplicatas. Em tais casos, uma abordagem de junção geraria resultados melhores. O exemplo seguinte mostra uma subconsulta `SELECT` e uma junção `SELECT` que retornam o mesmo conjunto de resultados:
@@ -92,7 +92,7 @@ Há três tipos básicos de subconsultas. Aquelas que:
 -   São introduzidas com um operador de comparação inalterado e devem retornar um único valor.
 -   São testes de existência introduzidos com `EXISTS`.
 
-## <a name="rules"></a> Regras de subconsulta
+## <a name="subquery-rules"></a><a name="rules"></a> Regras de subconsulta
 Uma subconsulta está sujeita às seguintes restrições: 
 -   A lista de seleção de uma subconsulta introduzida com um operador de comparação pode incluir apenas uma expressão ou um nome de coluna (exceto que `EXISTS` e `IN` operam em `SELECT *` ou em uma lista, respectivamente).   
 -   Se a cláusula `WHERE` de uma consulta externa incluir um nome de coluna, ela deverá ser compatível com junção com a coluna na lista de seleção da subconsulta.   
@@ -104,7 +104,7 @@ Uma subconsulta está sujeita às seguintes restrições:
 -   Uma exibição criada usando uma subconsulta não pode ser atualizada.   
 -   A lista de seleção de uma subconsulta introduzida com `EXISTS`, por convenção, tem um asterisco (\*), em vez de um único nome de coluna. As regras para uma subconsulta introduzida com `EXISTS` são iguais àquelas para uma lista de seleção padrão, porque uma subconsulta introduzida com `EXISTS` cria um teste de existência e retorna TRUE ou FALSE, em vez de dados.   
 
-## <a name="qualifying"></a> Qualificando nomes de coluna em subconsultas
+## <a name="qualifying-column-names-in-subqueries"></a><a name="qualifying"></a> Qualificando nomes de coluna em subconsultas
 No exemplo a seguir, a coluna *BusinessEntityID* na cláusula `WHERE` da consulta externa está implicitamente qualificada pelo nome da tabela na cláusula `FROM` da consulta externa (*Sales.Store*). A referência a *CustomerID* na lista de seleção da subconsulta está qualificada pela cláusula `FROM` da subconsulta, ou seja, pela tabela *Sales.Customer*.
 
 ```sql
@@ -140,7 +140,7 @@ Nunca é errado declarar o nome de tabela explicitamente e sempre é possível s
 > [!IMPORTANT]
 > Se uma coluna for referenciada em uma subconsulta que não existe na tabela referenciada da cláusula `FROM` da subconsulta, mas existir em uma tabela referenciada pela consulta externa `FROM` cláusula, a consulta será executada sem erro. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implicitamente qualifica a coluna na subconsulta com o nome da tabela na consulta externa.   
 
-## <a name="nesting"></a> Vários níveis de aninhamento
+## <a name="multiple-levels-of-nesting"></a><a name="nesting"></a> Vários níveis de aninhamento
 Uma subconsulta pode incluir uma ou mais subconsultas. Qualquer número de subconsultas pode ser aninhado em uma instrução.   
 
 A seguinte consulta localiza os nomes de funcionários que também são vendedores.   
@@ -202,7 +202,7 @@ ON e.BusinessEntityID = s.BusinessEntityID;
 GO
 ```
 
-## <a name="correlated"></a> Subconsultas correlacionadas
+## <a name="correlated-subqueries"></a><a name="correlated"></a> Subconsultas correlacionadas
 Muitas consultas podem ser avaliadas pela execução de uma subconsulta, uma vez, e pela substituição do valor ou dos valores resultantes na cláusula `WHERE` da consulta externa. Em consultas que incluem uma subconsulta correlacionada (também conhecida como uma subconsulta repetitiva), a subconsulta depende da consulta externa para obter seus valores. Isso significa que a subconsulta é executada repetidamente, uma vez para cada linha que pode ser selecionada pela consulta externa.
 Essa consulta recupera uma instância do nome e do sobrenome de cada funcionário para os quais os bônus da tabela *SalesPerson* sejam 5000, e para os quais existam números de identificação de funcionário correspondentes nas tabelas *Employee* e *SalesPerson*.
 
@@ -259,7 +259,7 @@ Como isso é falso, a linha para `Syed Abbas` não será incluída nos resultado
 
 As subconsultas correlacionadas também podem incluir funções com valor de tabela na cláusula `FROM`, fazendo referência a colunas de uma tabela na consulta externa como argumento da função com valor de tabela. Nesse caso, para cada linha da consulta externa, a função com valor de tabela é avaliada segundo a subconsulta.    
   
-## <a name="types"></a> Tipos de subconsulta
+## <a name="subquery-types"></a><a name="types"></a> Tipos de subconsulta
 As subconsultas podem ser especificadas em muitos lugares: 
 -   Com aliases. Para obter mais informações, veja [Subconsultas com aliases](#aliases).
 -   Com `IN` ou `NOT IN`. Para obter mais informações, veja [Subconsultas com IN](#in) e [Subconsultas com NOT IN](#notin).
@@ -269,7 +269,7 @@ As subconsultas podem ser especificadas em muitos lugares:
 -   Com `EXISTS` ou `NOT EXISTS`. Para obter mais informações, veja [Subconsultas com EXISTS](#exists) e [Subconsultas com NOT EXISTS](#notexists).
 -   No lugar de uma expressão. Para obter mais informações, veja [Subconsultas usadas no lugar de uma Expressão](#expression).
 
-### <a name="aliases"></a> Subconsultas com aliases
+### <a name="subqueries-with-aliases"></a><a name="aliases"></a> Subconsultas com aliases
 Várias instruções nas quais a subconsulta e a consulta externa se referem à mesma tabela podem ser especificadas como autojunções (associando uma tabela a ela mesma). Por exemplo, você pode localizar endereços de funcionários de um estado específico usando uma subconsulta:   
 
 ```sql
@@ -326,7 +326,7 @@ GO
 
 Os aliases explícitos deixam claro que a referência a *Person.Address* na subconsulta não tem o mesmo significado que referência da consulta externa.   
 
-### <a name="in"></a> Subconsultas com IN
+### <a name="subqueries-with-in"></a><a name="in"></a> Subconsultas com IN
 O resultado de uma subconsulta apresentada com `IN` (ou com `NOT IN`) é uma lista com zero ou mais valores. Depois dos resultados da subconsulta retornarem, a consulta exterior os utiliza.    
 A consulta a seguir encontra os nomes de todos os produtos de roda Adventure Works Cycles fabrica.     
 
@@ -468,7 +468,7 @@ GO
 
 Uma junção sempre pode ser expressada como uma subconsulta. Uma subconsulta pode frequentemente, mas não sempre, ser expressada como uma junção. Isso se deve ao fato de as junções serem simétricas: você pode unir as tabelas A e B em qualquer ordem e obter a mesma resposta. O mesmo não será verdade se uma subconsulta for envolvida.    
 
-### <a name="notin"></a> Subconsultas com NOT IN
+### <a name="subqueries-with-not-in"></a><a name="notin"></a> Subconsultas com NOT IN
 Subconsultas introduzidas com a palavra-chave NOT IN também retornam uma lista com zero ou outros valores.   
 A consulta a seguir encontra os nomes dos produtos que não são bicicletas acabadas.   
 
@@ -488,7 +488,7 @@ GO
 
 Esta instrução não pode ser convertida em uma junção. A junção análoga não igual tem um significado diferente: acha os nomes de produtos que estão em alguma subcategoria que não é uma bicicleta acabada.      
 
-### <a name="upsert"></a> Subconsultas nas instruções UPDATE, DELETE e INSERT
+### <a name="subqueries-in-update-delete-and-insert-statements"></a><a name="upsert"></a> Subconsultas nas instruções UPDATE, DELETE e INSERT
 Subconsultas podem ser aninhadas nas instruções `UPDATE`, `DELETE`, `INSERT` e `SELECT` de DML (manipulação de dados).    
 
 O exemplo a seguir dobra o valor na coluna *ListPrice* na tabela *Production.Product*. A subconsulta na cláusula `WHERE` faz referência à tabela *Purchasing.ProductVendor* para restringir as linhas atualizadas na tabela *Product* somente àquelas fornecidas pela *BusinessEntity* 1540.
@@ -518,7 +518,7 @@ INNER JOIN Purchasing.ProductVendor AS pv
 GO   
 ```
 
-### <a name="comparison"></a> Subconsultas com operadores de comparação
+### <a name="subqueries-with-comparison-operators"></a><a name="comparison"></a> Subconsultas com operadores de comparação
 Podem ser introduzidas subconsultas com um dos operadores de comparação (=, < >, >, > =, <, ! >, ! < ou < =).   
 
 Uma subconsulta introduzida com um operador de comparação não modificado (um operador de comparação não seguido por `ANY` ou `ALL`) deve retornar um valor único, em vez de uma lista de valores, como subconsultas introduzidas com `IN`. Se uma subconsulta desse tipo retornar mais de um valor, o SQL Server exibirá uma mensagem de erro.    
@@ -569,7 +569,7 @@ WHERE ListPrice >
 GO
 ```
 
-### <a name="comparison_modified"></a> Operadores de comparação modificados por ANY, SOME ou ALL
+### <a name="comparison-operators-modified-by-any-some-or-all"></a><a name="comparison_modified"></a> Operadores de comparação modificados por ANY, SOME ou ALL
 Os operadores de comparação que introduzem uma subconsulta podem ser modificados pelas palavras-chave ALL ou ANY. SOME é um padrão ISO equivalente para `ANY`.     
 
 As subconsultas introduzidas por um operador de comparação modificado retornam uma lista com zero ou mais valores e podem incluir uma cláusula `GROUP BY` ou `HAVING`. Essas subconsultas podem ser declaradas novamente com `EXISTS`.     
@@ -667,7 +667,7 @@ Pela mesma razão, quando você usa `NOT IN` nessa consulta, os resultados não 
 
 Você pode obter os mesmos resultados com o operador `<>ALL`, que é equivalente a `NOT IN`.   
 
-### <a name="exists"></a> Subconsultas com EXISTS
+### <a name="subqueries-with-exists"></a><a name="exists"></a> Subconsultas com EXISTS
 Quando uma subconsulta é apresentada com a palavra-chave `EXISTS`, a subconsulta funciona como um teste de existência. A cláusula `WHERE` da consulta externa testa se as linhas retornadas pela subconsulta existem. A subconsulta não produz de fato nenhum dado; ela retorna um valor TRUE ou FALSE.   
 
 Uma subconsulta introduzida com EXISTS tem a seguinte sintaxe:   
@@ -735,7 +735,7 @@ WHERE ProductSubcategoryID IN
 GO
 ```   
 
-### <a name="notexists"></a> Subconsultas com NOT EXISTS
+### <a name="subqueries-with-not-exists"></a><a name="notexists"></a> Subconsultas com NOT EXISTS
 `NOT EXISTS` funciona como `EXISTS`, exceto pela cláusula `WHERE`, em que é usado se nenhuma linha for retornada pela subconsulta.    
 
 Por exemplo, para localizar os nomes de produtos que não estão na subcategoria rodas:   
@@ -754,7 +754,7 @@ WHERE NOT EXISTS
 GO
 ```   
 
-### <a name="expression"></a> Subconsultas usadas em vez de uma expressão
+### <a name="subqueries-used-in-place-of-an-expression"></a><a name="expression"></a> Subconsultas usadas em vez de uma expressão
 Em [!INCLUDE[tsql](../../includes/tsql-md.md)], uma subconsulta pode ser substituída em qualquer lugar em que uma expressão pode ser usada em instruções `SELECT`, `UPDATE`, `INSERT` e `DELETE`, exceto em uma lista `ORDER BY`.    
 
 O exemplo a seguir ilustra como você poderia usar esse aprimoramento. Esta consulta encontra os preços de todos os produtos de mountain bike, o preço médio delas e a diferença entre o preço de cada bicicleta mountain bike e o preço médio.    

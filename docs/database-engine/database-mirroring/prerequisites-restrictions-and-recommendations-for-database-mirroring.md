@@ -20,10 +20,10 @@ ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1f6a1c47cf5672cdf0f9a22be6a252cfc8cdbe87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244374"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Pré-requisitos, restrições e recomendações para espelhamento de banco de dados
@@ -35,13 +35,13 @@ ms.locfileid: "75244374"
  Este tópico descreve os pré-requisitos e as recomendações para configuração do espelhamento de banco de dados. Para obter uma introdução ao espelhamento de banco de dados, consulte [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
   
-##  <a name="DbmSupport"></a> Suporte para espelhamento de banco de dados  
+##  <a name="support-for-database-mirroring"></a><a name="DbmSupport"></a> Suporte para espelhamento de banco de dados  
  Para obter mais informações sobre o suporte para o espelhamento de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte [Edições e recursos com suporte do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   
  Observe que o espelhamento de banco de dados funciona com qualquer nível de compatibilidade de banco de dados com suporte. Para obter informações sobre os níveis de compatibilidade com suporte, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
   
-##  <a name="Prerequisites"></a> Pré-requisitos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
 -   Para que uma sessão de espelhamento seja estabelecida, os parceiros e a testemunha, se houver, deverão ser executados na mesma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -63,7 +63,7 @@ ms.locfileid: "75244374"
     >  Se o espelhamento de banco de dados for interrompido, antes que você possa reiniciá-lo, todos os backups de logs subsequentes do banco de dados principal deverão ser aplicados ao banco de dados espelho.  
   
   
-##  <a name="Restrictions"></a> Restrições  
+##  <a name="restrictions"></a><a name="Restrictions"></a> Restrições  
   
 -   Somente bancos de dados de usuários podem ser espelhados. Você não pode espelhar os bancos de dados **master**, **msdb**, **tempdb**ou **model** .  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75244374"
 -   Não há suporte para espelhamento de banco de dados com transações de banco de dados cruzado ou transações distribuídas. Para obter mais informações, consulte [Transações entre bancos de dados e transações distribuídas para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
   
-##  <a name="RecommendationsForPartners"></a> Recomendações para configuração de servidores de parceiro  
+##  <a name="recommendations-for-configuring-partner-servers"></a><a name="RecommendationsForPartners"></a> Recomendações para configuração de servidores de parceiro  
   
 -   Os parceiros devem ser executados em sistemas comparáveis que podem controlar cargas de trabalho idênticas.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75244374"
 -   Não fazemos nenhuma recomendação sobre a confiabilidade de uma WAN (rede de longa distância) para espelhamento de banco de dados no modo de alta segurança. Se você decidir usar o modo de alta segurança em uma WAN, cuidado ao adicionar uma testemunha à sessão, porque podem ocorrer failovers automáticos indesejados. Para obter mais informações, veja [Recomendações para implantação de espelhamento de banco de dados](#RecommendationsForDeploying), posteriormente neste tópico.  
   
   
-##  <a name="RecommendationsForDeploying"></a> Recomendações para implantação de espelhamento de banco de dados  
+##  <a name="recommendations-for-deploying-database-mirroring"></a><a name="RecommendationsForDeploying"></a> Recomendações para implantação de espelhamento de banco de dados  
  Um desempenho ideal de espelhamento de banco de dados é obtido usando uma operação assíncrona. Uma sessão de espelhamento que usa operação síncrona pode experimentar desempenho reduzido quando sua carga de trabalho gerar grandes quantidades de dados de log de transações.  
   
  Em ambientes de teste, é apropriado explorar todos os modos operacionais para avaliar o desempenho do espelhamento de banco de dados. Porém, antes de implantar o espelhamento em um ambiente de produção, verifique se você entendeu o funcionamento real da rede.  

@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 9c2275e94d30560ae1173a12bfdcc6bfdc1eecb4
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895882"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Gravação de SQL dinâmico seguro no SQL Server
@@ -46,7 +46,7 @@ Veja algumas diretrizes úteis:
   
 - Em ambientes de várias camadas, todos os dados devem ser validados antes de serem admitidos à zona confiável.  
   
-- Não aceite as seguintes cadeias de caracteres nos campos dos quais os nomes de arquivo podem ser criados: AUX, CLOCK$, COM1 a COM8, CON, CONFIG$, LPT1 a LPT8, NUL e PRN.  
+- Não aceite as seguintes cadeias de caracteres em campos dos quais nomes de arquivos podem ser construídos: AUX, CLOCK$, COM1 a COM8, CON, CONFIG$, LPT1 a LPT8, NUL e PRN.  
   
 - Use objetos <xref:Microsoft.Data.SqlClient.SqlParameter> com procedimentos armazenados e comandos para fornecer verificação de tipo e validação de comprimento.  
   
@@ -73,7 +73,7 @@ O encadeamento de propriedade entre bancos de dados não funciona nos casos em q
 ## <a name="external-resources"></a>Recursos externos  
 Para obter mais informações, consulte os recursos a seguir.  
   
-|Recurso|Descrição|  
+|Recurso|DESCRIÇÃO|  
 |--------------|-----------------|  
 |[Procedimentos armazenados](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md) e [Injeção de SQL](../../../relational-databases/security/sql-injection.md) nos Manuais Online do SQL Server|Os tópicos descrevem como criar procedimentos armazenados e como a injeção de SQL funciona.|  
   

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531604"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Como exibir o status de um cluster de Big Data 
@@ -22,7 +22,7 @@ ms.locfileid: "73531604"
 
 Este artigo descreve como acessar os pontos de extremidade de serviço e exibir o status de componentes de um cluster de Big Data do SQL Server. É possível usar o Azure Data Studio e **azdata** e este artigo descreve as duas técnicas.
 
-## <a id="datastudio"></a> Usar o Azure Data Studio
+## <a name="use-azure-data-studio"></a><a id="datastudio"></a> Usar o Azure Data Studio
 
 Depois de baixar o **build para insiders** mais recente do [Azure Data Studio](https://aka.ms/getazuredatastudio), você pode exibir pontos de extremidade de serviço e o status de um cluster de Big Data com o painel do cluster de Big Data do SQL Server. Alguns dos recursos a seguir estão disponíveis apenas no build para insiders do Azure Data Studio.
 
@@ -55,7 +55,7 @@ A tabela de pontos de extremidade de serviço também expõe vários painéis pa
 
 Você pode clicar diretamente nesses links. Você será solicitado a autenticar ao acessar esses painéis. Para os painéis de métricas e logs, forneça as credenciais de administrador do controlador que você definiu no momento da implantação usando as variáveis de ambiente **AZDATA_USERNAME** e **AZDATA_PASSWORD**. Os painéis do Spark usarão as credenciais do gateway (Knox): a identidade do AD em um cluster integrado ao AD ou o usuário **raiz** e **AZDATA_PASSWORD**, se estiver usando a autenticação Básica no cluster. 
 
-### <a id="notebook"></a> Notebook de Status do Cluster
+### <a name="cluster-status-notebook"></a><a id="notebook"></a> Notebook de Status do Cluster
 
 1. Você também pode exibir o status do cluster de Big Data iniciando o notebook de Status do Cluster. Para iniciar o notebook, clique na tarefa **Status do Cluster**.
 

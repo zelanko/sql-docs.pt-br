@@ -11,10 +11,10 @@ ms.assetid: d97c99b3-2224-4abb-8b32-40aff49fe759
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f7406bce05278cad83b28b14f95a241b3eff026
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67986051"
 ---
 # <a name="unwrap-method-sqlserverxadatasource"></a>Método unwrap (SQLServerXADataSource)
@@ -45,7 +45,7 @@ public <T> T unwrap(Class<T> iface)
   
  Os aplicativos talvez precisem acessar extensões para a API do JDBC específicas do [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. O método unwrap é compatível com o desencapsulamento para classes públicas estendidas por esse objeto, caso as classes exponham extensões do fornecedor.  
   
- A classe [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) estende a classe [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), que é estendida da classe [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md). Quando esse método é chamado, ocorre o desencapsulamento do objeto para as seguintes classes: [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)e [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
+ A classe [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) estende a classe [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), que é estendida da classe [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md). Quando este método é chamado, o objeto é desencapsulado nas classes seguintes: [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) e [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
   
  Para obter mais informações, confira [Wrappers e Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   

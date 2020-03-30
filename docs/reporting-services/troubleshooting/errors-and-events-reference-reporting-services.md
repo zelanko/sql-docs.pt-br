@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/12/2019
 ms.openlocfilehash: d2d1a8c853bd4ad577dd1c0ced9aed47b15a2ee7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68258540"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Referência de erros e eventos (Reporting Services)
@@ -28,7 +28,7 @@ Causa e informações de resolução estão disponíveis para os erros mais freq
 
 Os eventos a seguir do servidor de relatório são registrados no log do aplicativo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
-|ID do evento|Type|Categoria|Fonte|Descrição|  
+|ID do evento|Type|Categoria|Fonte|DESCRIÇÃO|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|Erro|Agendamento|Servidor de relatório|O SQL Server Agent deve estar em execução quando você define uma operação agendada (por exemplo, assinatura e entrega de relatório).|  
 |[107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|Erro|Inicialização/desligamento|Servidor de relatório<br /><br /> Processador de agendamento e entrega|A *\<Source>* não pode se conectar ao banco de dados do servidor de relatório. Para obter mais informações, consulte [Serviço Windows do Servidor de Relatório &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md).|  

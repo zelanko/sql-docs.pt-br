@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72251299"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Como usar o Repositório de Consultas com OLTP in-memory
@@ -31,7 +31,7 @@ Para obter informações gerais sobre como usar o Repositório de Consultas, con
  O uso do Repositório de Consultas com OLTP in-memory não exige qualquer configuração de recurso adicional. Quando você o ativa em seu banco de dados, ele funciona para todos os tipos de cargas de trabalho.   
 No entanto, há alguns aspectos específicos dos quais os usuários devem estar cientes ao usar o Repositório de Consultas com OLTP in-memory:  
   
--   Quando o Repositório de Consultas é habilitado, as estatísticas de consultas, planos e tempo de compilação são coletadas por padrão. No entanto, a coleta de estatísticas de runtime não é ativada, a menos que você a habilite com [sys.sp_xtp_control_query_exec_stats &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
+-   Quando o Repositório de Consultas é habilitado, as estatísticas de consultas, planos e tempo de compilação são coletadas por padrão. No entanto, a coleta de estatísticas de runtime não é ativada, a menos que você a habilite com [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
   
 -   Quando você define *\@new_collection_value* como 0, o Repositório de Consultas deixa de coletar estatísticas de tempo de execução do procedimento afetado ou para toda a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

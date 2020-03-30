@@ -9,10 +9,10 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73637980"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: criando relatórios principais e de detalhamento (Construtor de Relatórios)
@@ -35,7 +35,7 @@ Você deve ter acesso a uma instância do [!INCLUDE[ssASnoversion](../includes/s
     
 Para obter mais informações sobre os requisitos gerais, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="DMatrixAndDataset"></a>1. Criar um relatório detalhado no Assistente de Tabela ou Matriz  
+## <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1. Criar um relatório detalhado no Assistente de Tabela ou Matriz  
 Na caixa de diálogo Introdução, crie um relatório de matriz por meio do **Assistente de Tabela ou Matriz**. Há dois modos disponíveis no assistente: design de relatório e design de conjunto de dados compartilhado. Neste tutorial, você usará o modo design de relatório.  
   
 #### <a name="to-create-a-new-report"></a>Para criar um novo relatório  
@@ -50,7 +50,7 @@ Na caixa de diálogo Introdução, crie um relatório de matriz por meio do **As
   
 3.  No painel direito, verifique se a opção **Assistente de Tabela ou Matriz** está selecionada.  
   
-## <a name="DConnection"></a>1a. Especificar uma conexão de dados  
+## <a name="1a-specify-a-data-connection"></a><a name="DConnection"></a>1a. Especificar uma conexão de dados  
 Uma conexão de dados contém as informações necessárias para estabelecer conexões com uma fonte de dados externa, como um cubo do Analysis Services ou um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para especificar uma conexão de dados, você pode usar uma fonte de dados compartilhada do servidor de relatório ou criar uma fonte de dados inserida que será usada somente neste relatório. Neste tutorial, você usará uma fonte de dados inserida. Para saber mais sobre como usar uma fonte de dados compartilhada, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>Para criar uma fonte de dados inserida  
@@ -96,7 +96,7 @@ Uma conexão de dados contém as informações necessárias para estabelecer con
   
 14. Clique em **Próximo**.  
   
-## <a name="DMDXQuery"></a>1b. Criar uma consulta MDX  
+## <a name="1b-create-an-mdx-query"></a><a name="DMDXQuery"></a>1b. Criar uma consulta MDX  
 Em um relatório, é possível usar um conjunto de dados compartilhado que tenha uma consulta predefinida. Se preferir, crie um conjunto de dados inserido para ser usado somente em seu relatório. Neste tutorial, você criará um conjunto de dados inserido.  
   
 #### <a name="to-create-query-filters"></a>Para criar filtros de consulta  
@@ -149,7 +149,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
     > [!NOTE]  
     > O parâmetro contém os nomes das categorias de produto. Quando você clica no nome de uma categoria de produto no relatório principal, o nome é passado para o relatório detalhado por meio desse parâmetro.  
   
-### <a name="DSkip"></a>Para criar o conjunto de dados  
+### <a name="to-create-the-dataset"></a><a name="DSkip"></a>Para criar o conjunto de dados  
   
 1.  Na dimensão Canal, arraste Nome do Canal até o painel de dados.  
   
@@ -165,7 +165,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 7.  Clique em **Próximo**.  
   
-## <a name="DLayout"></a>1c. Organizar dados em grupos  
+## <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. Organizar dados em grupos  
 Quando você seleciona os campos nos quais agrupar os dados, cria uma matriz com linhas e colunas que exibe dados detalhados e dados agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
@@ -191,7 +191,7 @@ Quando você seleciona os campos nos quais agrupar os dados, cria uma matriz com
   
 6.  Clique em **Próximo**.  
   
-## <a name="DTotals"></a>1d. Adicionar subtotais e totais  
+## <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. Adicionar subtotais e totais  
 Depois de criar grupos, é possível adicionar e formatar linhas onde os valores de agregação dos campos serão exibidos. Também é possível escolher mostrar todos os dados ou permitir que um usuário expanda e recolha dados agrupados de forma interativa.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Para adicionar subtotais e totais  
@@ -208,7 +208,7 @@ Depois de criar grupos, é possível adicionar e formatar linhas onde os valores
   
 3.  Para visualizar o relatório, clique em **Executar (!)** .  
   
-## <a name="DFormat"></a>2. Formatar dados como moeda  
+## <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2. Formatar dados como moeda  
 Aplique a formatação de moeda aos campos de valor de vendas no relatório detalhado.  
   
 #### <a name="to-format-data-as-currency"></a>Para formatar dados como moeda  
@@ -219,7 +219,7 @@ Aplique a formatação de moeda aos campos de valor de vendas no relatório deta
   
 3.  Na guia **Início** , no grupo **Número** , clique em **Moeda**.  
   
-## <a name="DSparkline"></a>3. Adicionar colunas para mostrar valores de vendas em minigráficos  
+## <a name="3-add-columns-to-show-sales-values-in-sparklines"></a><a name="DSparkline"></a>3. Adicionar colunas para mostrar valores de vendas em minigráficos  
 Em vez de mostrar vendas e devoluções de vendas como valores de moeda, o relatório mostra os valores em um minigráfico.  
   
 #### <a name="to-add-sparklines-to-columns"></a>Para adicionar minigráficos a colunas  
@@ -252,7 +252,7 @@ Em vez de mostrar vendas e devoluções de vendas como valores de moeda, o relat
   
 13. Para visualizar o relatório, clique em **Executar**.  
   
-## <a name="DReportTitle"></a>4. Adicionar título de relatório com nome da categoria do produto  
+## <a name="4-add-report-title-with-product-category-name"></a><a name="DReportTitle"></a>4. Adicionar título de relatório com nome da categoria do produto  
 Um título é exibido na parte superior do relatório. É possível colocar o título em um cabeçalho do relatório ou, se o relatório não usar um cabeçalho, em uma caixa de texto na parte superior do corpo do relatório. Neste tutorial, você usará a caixa de texto colocada automaticamente na parte superior do corpo do relatório.  
   
 #### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
@@ -279,7 +279,7 @@ Um título é exibido na parte superior do relatório. É possível colocar o t�
   
 O título do relatório inclui o nome da primeira categoria de produto. Posteriormente, depois que você executar esse relatório como um relatório detalhado, o nome da categoria do produto será alterado dinamicamente para refletir o nome da categoria do produto que foi clicada no relatório principal.  
   
-## <a name="DParameter"></a>5. Atualizar propriedades de parâmetros  
+## <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5. Atualizar propriedades de parâmetros  
 Por padrão, os parâmetros estão visíveis, o que não é apropriado para este relatório. Você atualizará as propriedades dos parâmetros do relatório detalhado.  
   
 #### <a name="to-hide-a-parameter"></a>Para ocultar um parâmetro  
@@ -302,7 +302,7 @@ Por padrão, os parâmetros estão visíveis, o que não é apropriado para este
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="DSave"></a>6. Salvar o relatório em uma biblioteca do SharePoint  
+## <a name="6-save-the-report-to-a-sharepoint-library"></a><a name="DSave"></a>6. Salvar o relatório em uma biblioteca do SharePoint  
 É possível salvar o relatório em um biblioteca do SharePoint, em um servidor de relatório ou no computador. Se você salvar o relatório no computador, vários recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , como partes do relatório e sub-relatórios, não estarão disponíveis. Neste tutorial, você salvará o relatório em uma biblioteca do SharePoint.  
   
 #### <a name="to-save-the-report"></a>Para salvar o relatório  
@@ -335,7 +335,7 @@ Por padrão, os parâmetros estão visíveis, o que não é apropriado para este
   
 7.  Clique em **Save** (Salvar).  
   
-## <a name="MMatrixAndDataset"></a>1. Criar um novo relatório no Assistente de Tabela ou Matriz  
+## <a name="1-create-the-main-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. Criar um novo relatório no Assistente de Tabela ou Matriz  
 Na caixa de diálogo **Introdução** , crie um relatório de matriz por meio do **Assistente de Tabela ou Matriz**.  
   
 #### <a name="to-create-the-main-report"></a>Para criar o relatório principal  
@@ -348,7 +348,7 @@ Na caixa de diálogo **Introdução** , crie um relatório de matriz por meio do
  
 2.  Na caixa de diálogo **Introdução** , verifique se a opção **Novo Relatório** está selecionada e clique em **Assistente de Tabela ou Matriz**.  
   
-## <a name="MConnection"></a>1a. Especificar uma conexão de dados  
+## <a name="1a-specify-a-data-connection"></a><a name="MConnection"></a>1a. Especificar uma conexão de dados  
 Você adicionará uma fonte de dados inserida ao relatório principal.  
   
 #### <a name="to-create-an-embedded-data-source"></a>Para criar uma fonte de dados inserida  
@@ -387,7 +387,7 @@ Você adicionará uma fonte de dados inserida ao relatório principal.
   
 14. Clique em **Próximo**.  
   
-## <a name="MMDXQuery"></a>1b. Criar uma consulta MDX  
+## <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. Criar uma consulta MDX  
 Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o designer de consulta para criar filtros, parâmetros e membros calculados como também o próprio conjunto de dados.  
   
 #### <a name="to-create-query-filters"></a>Para criar filtros de consulta  
@@ -469,7 +469,7 @@ Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o 
   
 8.  Na caixa **Nome** , digite  **Vendas Líquidas**e clique em **OK**. O painel Membros Calculados lista o membro calculado **Vendas Líquidas** .  
   
-### <a name="MSkip"></a>Para criar o conjunto de dados  
+### <a name="to-create-the-dataset"></a><a name="MSkip"></a>Para criar o conjunto de dados  
   
 1.  Na dimensão Canal, arraste Nome do Canal até o painel de dados.  
   
@@ -485,7 +485,7 @@ Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o 
   
 6.  Clique em **Próximo**.  
   
-## <a name="MLayout"></a>1c. Organizar dados em grupos  
+## <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. Organizar dados em grupos  
 Quando seleciona os campos nos quais agrupar os dados, você cria uma matriz com linhas e colunas que exibe dados detalhados e dados agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
@@ -504,7 +504,7 @@ Quando seleciona os campos nos quais agrupar os dados, você cria uma matriz com
   
     As etapas 3 e 4 especificam os dados a serem exibidos na matriz.  
   
-## <a name="MTotals"></a>1d. Adicionar subtotais e totais  
+## <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1d. Adicionar subtotais e totais  
 Você pode mostrar subtotais e totais gerais em relatórios. Os dados no relatório principal são exibidos como um indicador; você removerá o total geral depois de concluir o assistente.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Para adicionar subtotais e totais gerais  
@@ -519,7 +519,7 @@ Você pode mostrar subtotais e totais gerais em relatórios. Os dados no relató
   
 3.  Para visualizar o relatório, clique em **Executar**.  
   
-## <a name="MGrandTotal"></a>2. Remover a linha de total geral  
+## <a name="2-remove-the-grand-total-row"></a><a name="MGrandTotal"></a>2. Remover a linha de total geral  
 Os valores de dados são mostrados como estados do indicador, inclusive o totais dos grupos de colunas. Remova a linha que exibe o total geral.  
   
 #### <a name="to-remove-the-grand-total-row"></a>Para remover a linha de total geral  
@@ -530,7 +530,7 @@ Os valores de dados são mostrados como estados do indicador, inclusive o totais
   
 3.  Para visualizar o relatório, clique em **Executar**.  
   
-## <a name="MDrillthrough"></a>3. Configurar ação de caixa de texto para detalhamento  
+## <a name="3-configure-text-box-action-for-drillthrough"></a><a name="MDrillthrough"></a>3. Configurar ação de caixa de texto para detalhamento  
 Para habilitar o detalhamento, especifique uma ação em uma caixa de texto no relatório principal.  
   
 #### <a name="to-enable-an-action"></a>Para habilitar uma ação  
@@ -574,7 +574,7 @@ Para habilitar o detalhamento, especifique uma ação em uma caixa de texto no r
   
 Os nomes das categorias de produto estão no formato de link comum (azul e sublinhado).  
   
-## <a name="MIndicators"></a>4. Substituir valores numéricos por indicadores  
+## <a name="4-replace-numeric-values-with-indicators"></a><a name="MIndicators"></a>4. Substituir valores numéricos por indicadores  
 Use indicadores para mostrar o estado de quantidades e vendas dos canais Online e de Revendedor.  
   
 #### <a name="to-add-an-indicator-for-net-qty-values"></a>Para adicionar um indicador para valores de QTD Líquida  
@@ -605,7 +605,7 @@ Use indicadores para mostrar o estado de quantidades e vendas dos canais Online 
   
 6.  Para visualizar o relatório, clique em **Executar**.  
   
-## <a name="MParameter"></a>5. Atualizar propriedades de parâmetros  
+## <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5. Atualizar propriedades de parâmetros  
 Por padrão, os parâmetros estão visíveis, o que não é apropriado para este relatório. Você atualizará as propriedades dos parâmetros para tornar os parâmetros internos.  
   
 #### <a name="to-make-the-parameter-internal"></a>Para tornar o parâmetro interno  
@@ -620,7 +620,7 @@ Por padrão, os parâmetros estão visíveis, o que não é apropriado para este
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="MTitle"></a>6. Adicionar um título de relatório  
+## <a name="6-add-a-report-title"></a><a name="MTitle"></a>6. Adicionar um título de relatório  
 Adicione um título ao relatório principal.  
   
 #### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
@@ -635,7 +635,7 @@ Adicione um título ao relatório principal.
   
 5.  Para visualizar o relatório, clique em **Executar**.  
   
-## <a name="MSave"></a>7. Salvar o relatório principal em uma biblioteca do SharePoint  
+## <a name="7-save-the-main-report-to-a-sharepoint-library"></a><a name="MSave"></a>7. Salvar o relatório principal em uma biblioteca do SharePoint  
 Salve o relatório principal em uma biblioteca do SharePoint.  
   
 #### <a name="to-save-the-report"></a>Para salvar o relatório  
@@ -661,7 +661,7 @@ Salve o relatório principal em uma biblioteca do SharePoint.
   
 7.  Clique em **Save** (Salvar).  
   
-## <a name="MRunReports"></a>8. Executar os relatórios principal e de detalhamento  
+## <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8. Executar os relatórios principal e de detalhamento  
 Execute o relatório principal e clique nos valores da coluna de categorias de produto para executar o relatório detalhado.  
   
 #### <a name="to-run-the-reports"></a>Para executar os relatórios  

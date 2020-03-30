@@ -15,10 +15,10 @@ ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67285042"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Monitorar assinaturas do Reporting Services
@@ -38,12 +38,12 @@ ms.locfileid: "67285042"
   
 -   [Gerenciar assinaturas inativas](#bkmk_manage_inactive)  
   
-##  <a name="bkmk_native_mode"></a> Interface do usuário de modo nativo  
+##  <a name="native-mode-user-interface"></a><a name="bkmk_native_mode"></a> Interface do usuário de modo nativo  
  Usuários individuais [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem monitorar o status de uma assinatura usando a página **Minhas assinaturas** ou a guia **Assinaturas** no portal da Web. As páginas de assinatura incluem colunas que indicam quando a assinatura foi executada pela última vez e seu status. As mensagens de status são atualizadas quando a assinatura é agendada para ser processada. Se o gatilho nunca ocorrer (por exemplo, um instantâneo de execução de relatório nunca for atualizado ou um agendamento nunca ocorrer), a mensagem de status não será atualizada.  
   
  A tabela a seguir descreve os possíveis valores para a coluna **Status** .  
   
-|Status|Descrição|  
+|Status|DESCRIÇÃO|  
 |------------|-----------------|  
 |Nova assinatura|Aparece quando você cria a assinatura.|  
 |Inativo|Aparece quando uma assinatura não pode ser processada. Para saber mais, confira "Gerenciar assinaturas inativas" posteriormente neste artigo.|  
@@ -76,11 +76,11 @@ ms.locfileid: "67285042"
   
  Esta é uma mensagem de erro de exemplo do arquivo de log de rastreamento, relacionada a assinaturas:  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Inicializando EnableExecutionLogging como 'True' conforme especificado no sistema do servidor properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERRO: **Erro ao enviar email**. Exceção: System.Net.Mail.SmtpException: o servidor SMTP exige uma conexão segura ou o cliente não foi autenticado. A resposta do servidor foi: 5.7.1 cliente não foi autenticado em System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Inicializando EnableExecutionLogging como “True” conforme especificado no sistema do Servidor properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **Erro ao enviar email**. Exceção: System.Net.Mail.SmtpException: o servidor SMTP requer uma conexão segura ou o cliente não foi autenticado. A resposta do servidor foi: o cliente 5.7.1 não foi autenticado em System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  O arquivo de log não informa se o relatório foi aberto ou se a entrega teve êxito realmente. Entrega bem-sucedida significa que não houve erros gerados pelo Processador de Agendamento e Entrega e que o servidor de relatório se conectou ao servidor de email. Se o email resultou em um erro de mensagem que não pode ser entregue na caixa de correio do usuário, essa informação não será incluída no arquivo de log. Para obter mais informações sobre arquivos de log, consulte [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
-##  <a name="bkmk_sharepoint_mode"></a> SharePoint  
+##  <a name="sharepoint-mode"></a><a name="bkmk_sharepoint_mode"></a> SharePoint  
  Para monitorar uma assinatura no modo do SharePoint: o status da assinatura pode ser monitorado na página **Gerenciar Assinaturas** .  
   
 1.  navegue até a biblioteca de documentos que contém o relatório  
@@ -97,12 +97,12 @@ ms.locfileid: "67285042"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Data|Processo|Área|Categoria|Nível|Correlation|Mensagem|  
-|5/21/2019 14:34:06:15|Pool de Aplicativos: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extensão de email do servidor de relatório|Inesperado|(vazio)|**Erro ao enviar email.** Exceção: System.Net.Mail.SmtpException: Caixa de correio não disponível. A resposta do servidor foi: 5.7.1 O cliente não tem permissões para enviar como esse remetente no System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) em System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) em System.Net.Mail.SmtpClient.Send(MailMessage message) em Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|5/21/2019 14:34:06:15|Pool de Aplicativos: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extensão de email do servidor de relatório|Inesperado|(vazio)|**Erro ao enviar email.** Exceção: System.Net.Mail.SmtpException: caixa de correio indisponível. A resposta do servidor foi: o cliente 5.7.1 não tem permissões para enviar como esse remetente no System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) em System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) em System.Net.Mail.SmtpClient.Send(MailMessage message) em Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
-##  <a name="bkmk_use_powershell"></a> Use o PowerShell para monitorar assinaturas  
+##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> Use o PowerShell para monitorar assinaturas  
  Por exemplo, scripts do PowerShell que você pode usar para verificar o status do modo nativo ou assinaturas de modo do SharePoint, confira [Gerenciar Proprietários de Assinatura e Executar Assinatura – PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
-##  <a name="bkmk_manage_inactive"></a> Gerenciar assinaturas inativas  
+##  <a name="managing-inactive-subscriptions"></a><a name="bkmk_manage_inactive"></a> Gerenciar assinaturas inativas  
  Se uma assinatura se tornar inativa, você deverá excluí-la ou reativá-la resolvendo as condições subjacentes que impedem que ela seja processada. As assinaturas podem se tornar inativas se ocorrerem condições que impeçam o processamento. Essas condições incluem:  
   
 -   Remoção ou desinstalação da extensão de entrega especificada na assinatura.  

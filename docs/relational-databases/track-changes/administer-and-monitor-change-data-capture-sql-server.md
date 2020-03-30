@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 00fd02afb8cfd140124a9f476aa4ae0bfb4e1514
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095311"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar e monitorar a captura de dados de alteração (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74095311"
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   Este tópico descreve como administrar e monitorar a captura de dados de alterações.  
   
-## <a name="Capture"></a> Trabalho de captura
+## <a name="capture-job"></a><a name="Capture"></a> Trabalho de captura
 
 O trabalho de captura é iniciado com a execução do procedimento armazenado sem-parâmetros `sp_MScdc_capture_job`. Esse procedimento armazenado é iniciado com a extração de valores configurados para `maxtrans`, `maxscans`, `continuous` e `pollinginterval` para o trabalho de captura de msdb.dbo.cdc_jobs. Estes valores configurados são passados como parâmetros ao procedimento armazenado `sp_cdc_scan`. Ele é usado para invocar `sp_replcmds` para executar a verificação de log.  
   
@@ -71,7 +71,7 @@ No modo contínuo, o trabalho de captura solicita a execução contínua de `sp_
 
 Para o trabalho de captura, você pode aplicar lógica adicional para determinar se uma nova verificação é iniciada imediatamente ou se um estado suspenso é imposto antes do início de uma nova verificação, em vez de depender de um intervalo de sondagem fixo. A opção pode se basear simplesmente na hora do dia, talvez impondo estados suspensos muito longos durante horários de pico de atividade e até mudando para um intervalo de sondagem de 0 no fechamento do dia quando é importante concluir o processamento dos dias e preparar-se para as execuções noturnas. Também foi possível monitorar o andamento do processo de captura para determinar quando todas as transações confirmadas até meia-noite foram verificadas e depositadas em tabelas de alterações. Isso permite a reinicialização do trabalho de captura por uma reinicialização diária agendada após seu término. Ao substituir a etapa de trabalho entregue chamando `sp_cdc_scan` por uma chamada a um invólucro de usuário gravado para `sp_cdc_scan`, é possível obter comportamento altamente personalizado com pouco esforço adicional.  
 
-## <a name="Cleanup"></a> Trabalho de limpeza
+## <a name="cleanup-job"></a><a name="Cleanup"></a> Trabalho de limpeza
 
 Esta seção fornece informações sobre como o trabalho de limpeza do Change Data Capture funciona.  
   
@@ -90,7 +90,7 @@ Quando uma limpeza é executada, a marca d'água baixa para todas as instâncias
 
  Para o trabalho de limpeza, a possibilidade personalização está na estratégia usada para determinar quais entradas da tabela de alterações devem ser descartadas. A única estratégia com suporte no trabalho de limpeza entregue baseia-se na hora. Nessa situação, a nova marca d'água baixa é calculada pela subtração do período de retenção permitido da hora de confirmação da última transação processada. Como os procedimentos de limpeza subjacentes se baseiam no `lsn`, em vez da hora, qualquer número de estratégias pode ser usado para determinar o menor `lsn` a ser mantido nas tabelas de alterações. Somente alguns deles são estritamente baseados na hora. O conhecimento sobre os clientes, por exemplo, pode ser usado para fornecer um mecanismo seguro se não for possível executar os processos de downstream que requerem acesso às tabelas de alterações. Além disso, embora a estratégia padrão seja aplicável ao mesmo `lsn` para limpar todas as tabelas de alterações do banco de dados, o procedimento de limpeza subjacente também pode ser chamado para limpar no nível de captura da instância.  
 
-## <a name="Monitor"></a> Monitorar o processo de captura de dados de alterações
+## <a name="monitor-the-change-data-capture-process"></a><a name="Monitor"></a> Monitorar o processo de captura de dados de alterações
 
 O monitoramento do processo de captura de dados de alteração permite determinar se as alterações estão sendo gravadas corretamente e com latência razoável nas tabelas de alteração. O monitoramento também pode ajudar a identificar os erros que podem ocorrer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém duas exibições de gerenciamento dinâmico para ajudar a monitorar a captura de dados de alterações: [sys.dm_cdc_log_scan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) e [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).  
   
@@ -176,7 +176,7 @@ O coletor de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
 4. No data warehouse configurado na etapa 1, localize a tabela custom_snapshots.cdc_log_scan_data. Essa tabela fornece um instantâneo histórico dos dados das sessões de verificação de log. Esses dados podem ser usados para analisar a latência, a taxa de transferência e outras medidas de desempenho ao longo do tempo.  
 
-## <a name="ScriptUpgrade"></a> Modo de atualização de script
+## <a name="script-upgrade-mode"></a><a name="ScriptUpgrade"></a> Modo de atualização de script
 
 Quando você aplicar atualizações ou service packs cumulativos a uma instância, na reinicialização, a instância pode entrar no modo de Atualização de Script. Nesse modo, o SQL Server pode executar uma etapa para analisar e atualizar tabelas internas de CDA, o que pode resultar na recriação de objetos como índices em tabelas de captura. Dependendo da quantidade de dados envolvidos, esta etapa pode levar algum tempo ou causar um alto uso de log de transações para bancos de dados do CDA habilitados.
 

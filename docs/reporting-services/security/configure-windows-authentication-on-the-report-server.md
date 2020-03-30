@@ -12,10 +12,10 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66499940"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar a Autenticação do Windows no servidor de relatório
@@ -113,7 +113,7 @@ ms.locfileid: "66499940"
   
 8.  Reinicie o servidor de relatório para terminar as sessões que estão atualmente abertas.  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> Resolvendo erros da autenticação Kerberos ao se conectar a um servidor de relatório  
+##  <a name="resolving-kerberos-authentication-errors-when-connecting-to-a-report-server"></a><a name="proxyfirewallRSWindowsNegotiate"></a> Resolvendo erros da autenticação Kerberos ao se conectar a um servidor de relatório  
  Em um servidor de relatório configurado para a autenticação Negotiate ou Kerberos, uma conexão cliente com o servidor de relatório falhará se houver um erro da autenticação Kerberos. Os erros da autenticação Kerberos normalmente ocorrem quando:  
   
 -   O serviço Servidor de Relatório é executado como uma conta de usuário de domínio do Windows e um nome da entidade de serviço (SPN) não tiver sido registrado para a conta.  

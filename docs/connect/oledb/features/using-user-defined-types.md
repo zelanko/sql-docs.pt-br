@@ -22,10 +22,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 731e00fdf4c9f073348389f537fa812e10bcbab5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67988799"
 ---
 # <a name="using-user-defined-types"></a>Usando tipos definidos pelo usuário
@@ -86,7 +86,7 @@ ms.locfileid: "67988799"
 #### <a name="the-procedure_parameters-schema-rowset"></a>O conjunto de linhas do esquema PROCEDURE_PARAMETERS  
  As adições a seguir foram feitas ao conjunto de linhas de esquema de PROCEDURE_PARAMETERS.  
   
-|Nome da coluna|Type|Descrição|  
+|Nome da coluna|Type|DESCRIÇÃO|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|O identificador de nome de três partes.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|O identificador de nome de três partes.|  
@@ -96,7 +96,7 @@ ms.locfileid: "67988799"
 #### <a name="the-sql_assemblies-schema-rowset"></a>O conjunto de linhas do esquema SQL_ASSEMBLIES  
  O OLE DB Driver for SQL Server expõe um novo conjunto de linhas de esquema específico do provedor que descreve os UDTs registrados. O servidor de ASSEMBLY pode ser especificado como um DBTYPE_WSTR, mas não está presente no conjunto de linhas. Se não estiver especificado, o conjunto de linhas seguirá o padrão do servidor atual. O conjunto de linhas de esquema de SQL_ASSEMBLIES é definido na seguinte tabela:  
   
-|Nome da coluna|Type|Descrição|  
+|Nome da coluna|Type|DESCRIÇÃO|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|O nome de catálogo do assembly que contém o tipo.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|O nome do esquema ou nome do proprietário do assembly que contém o tipo. Embora os assemblies tenham escopo por banco de dados e não por esquema, eles ainda têm um proprietário que é refletido aqui.|  
@@ -108,7 +108,7 @@ ms.locfileid: "67988799"
 #### <a name="the-sql_assemblies_-dependencies-schema-rowset"></a>O conjunto de linhas do esquema SQL_ASSEMBLIES_ DEPENDENCIES  
  O OLE DB Driver for SQL Server expõe um novo conjunto de linhas de esquema específico do provedor que descreve as dependências de assembly para um servidor especificado. O ASSEMBLY_SERVER pode ser especificado pelo chamador como um DBTYPE_WSTR, mas não está presente no conjunto de linhas. Se não estiver especificado, o conjunto de linhas seguirá o padrão do servidor atual. O conjunto de linhas de esquema de SQL_ASSEMBLY_DEPENDENCIES é definido na seguinte tabela:  
   
-|Nome da coluna|Type|Descrição|  
+|Nome da coluna|Type|DESCRIÇÃO|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|O nome de catálogo do assembly que contém o tipo.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|O nome do esquema ou nome do proprietário do assembly que contém o tipo. Embora os assemblies tenham escopo por banco de dados e não por esquema, eles ainda têm um proprietário, que é refletido aqui.|  
@@ -118,7 +118,7 @@ ms.locfileid: "67988799"
 #### <a name="the-sql_user_types-schema-rowset"></a>O conjunto de linhas do esquema SQL_USER_TYPES  
  O OLE DB Driver for SQL Server expõe um novo conjunto de linhas de esquema, SQL_USER_TYPES, que descreve quando os UDTs registrados para um servidor especificado são adicionados. O UDT_SERVER deve ser especificado pelo chamador como um DBTYPE_WSTR, mas não está presente no conjunto de linhas. O conjunto de linhas de esquema de SQL_USER_TYPES é definido na tabela a seguir.  
   
-|Nome da coluna|Type|Descrição|  
+|Nome da coluna|Type|DESCRIÇÃO|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|Para colunas UDT, essa propriedade é uma cadeia de caracteres que especifica o nome do catálogo em que o UDT é definido.|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|Para colunas UDT, essa propriedade é uma cadeia de caracteres que especifica o nome do esquema em que o UDT é definido.|  
@@ -128,7 +128,7 @@ ms.locfileid: "67988799"
 #### <a name="the-columns-schema-rowset"></a>O conjunto de linhas do esquema COLUMNS  
  As adições ao conjunto de linhas de esquema COLUMNS incluem as seguintes colunas:  
   
-|Nome da coluna|Type|Descrição|  
+|Nome da coluna|Type|DESCRIÇÃO|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Para colunas UDT, essa propriedade é uma cadeia de caracteres que especifica o nome do catálogo em que o UDT é definido.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Para colunas UDT, essa propriedade é uma cadeia de caracteres que especifica o nome do esquema em que o UDT é definido.|  
@@ -141,7 +141,7 @@ ms.locfileid: "67988799"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>O conjunto de propriedades de DBPROPSET_SQLSERVERPARAMETER  
  Para dar suporte aos UDTs por meio do OLE DB, o OLE DB Driver for SQL Server implementa o novo conjunto de propriedades DBPROPSET_SQLSERVERPARAMETER, que contém os seguintes valores:  
   
-|Nome|Type|Descrição|  
+|Nome|Type|DESCRIÇÃO|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|O identificador de nome de três partes.<br /><br /> Para parâmetros de UDT, essa propriedade é uma cadeia de caracteres que especifica o nome do catálogo onde o tipo definido pelo usuário é definido.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|O identificador de nome de três partes.<br /><br /> Para parâmetros de UDT, essa propriedade é uma cadeia de caracteres que especifica o nome do esquema onde o tipo definido pelo usuário é definido.|  
@@ -152,7 +152,7 @@ ms.locfileid: "67988799"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>O conjunto de propriedades de DBPROPSET_SQLSERVERCOLUMN  
  Para dar suporte à criação de tabelas na interface **ITableDefinition**, o OLE DB Driver for SQL Server adiciona as três novas colunas a seguir ao conjunto de propriedades DBPROPSET_SQLSERVERCOLUMN.  
   
-|Nome|Descrição|Type|Descrição|  
+|Nome|DESCRIÇÃO|Type|DESCRIÇÃO|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|Para colunas de tipo DBTYPE_UDT, essa propriedade é uma cadeia de caracteres que especifica o nome do catálogo onde o UDT é definido.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|Para colunas de tipo DBTYPE_UDT, essa propriedade é uma cadeia de caracteres que especifica o nome do esquema onde o UDT é definido.|  
@@ -183,7 +183,7 @@ ms.locfileid: "67988799"
 #### <a name="the-icolumnsrowset-interface"></a>A interface IColumnsRowset  
  Além da interface **ISSCommandWithParameters**, o OLE DB Driver for SQL Server também adiciona novos valores ao conjunto de linhas retornado da chamada ao método **IColumnsRowset::GetColumnRowset**, incluindo o mostrado a seguir.  
   
-|Nome da coluna|Type|Descrição|  
+|Nome da coluna|Type|DESCRIÇÃO|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|Um identificador do nome de catálogo do UDT.|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|Um identificador do nome do esquema do UDT.|  

@@ -9,10 +9,10 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041741"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: adicionando um KPI ao relatório (Construtor de Relatórios)
@@ -32,7 +32,7 @@ Tempo estimado para concluir este tutorial: 15 minutos.
 ## <a name="requirements"></a>Requisitos  
 Para obter informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Table"></a>1. Criar um relatório de tabela e conjunto de dados no Assistente de Tabela ou Matriz  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Table"></a>1. Criar um relatório de tabela e conjunto de dados no Assistente de Tabela ou Matriz  
 Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto de dados inserido e exibe os dados em uma tabela.  
  
 ### <a name="to-create-a-table-with-an-embedded-dataset"></a>Para criar uma tabela com um conjunto de dados inserido  
@@ -99,7 +99,7 @@ Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto 
 
 11. Clique em **Próximo**.  
   
-## <a name="CompleteWizard"></a>2. Organizar dados e escolher o layout no Assistente  
+## <a name="2-organize-data-and-choose-layout-in-the-wizard"></a><a name="CompleteWizard"></a>2. Organizar dados e escolher o layout no Assistente  
 O Assistente de Tabela ou Matriz fornece um design inicial no qual os dados serão exibidos. O painel de visualização no assistente ajuda a visualizar o resultado do agrupamento de dados antes de concluir o design da tabela ou da matriz.  
   
 ### <a name="to-organize-data-into-groups-and-choose-a-layout"></a>Para organizar dados em grupos e escolher um layout 
@@ -173,7 +173,7 @@ Vamos aumentar a largura das colunas e definir o formato para as datas e a moeda
  
 ![report-builder-kpi-format-numbers](../reporting-services/media/report-builder-kpi-format-numbers.png)
 
-## <a name="BackgroundColors"></a>3. Usar cores do plano de fundo para exibir um KPI  
+## <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3. Usar cores do plano de fundo para exibir um KPI  
 As cores do plano de fundo podem ser definidas como uma expressão avaliada quando você executa o relatório.  
   
 ### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>Para exibir o estado atual de um KPI usando cores de plano de fundo  
@@ -198,7 +198,7 @@ Na linha de subtotal que exibe as vendas de uma subcategoria, a cor do plano de 
 
 ![report-builder-kpi-colors](../reporting-services/media/report-builder-kpi-colors.png)
   
-## <a name="Gauge"></a>4. Exibir um KPI usando um medidor  
+## <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4. Exibir um KPI usando um medidor  
 Um medidor representa um único valor em um conjunto de dados. Este tutorial usa um medidor linear horizontal porque sua forma e simplicidade facilitam a leitura, mesmo quando é menor e usado em uma célula da tabela. Para obter mais informações, consulte [Medidores &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>Para exibir o estado presente de um KPI que usa um medidor  
@@ -253,7 +253,7 @@ Um medidor representa um único valor em um conjunto de dados. Este tutorial usa
   
 ![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
   
-## <a name="Indicator"></a>5. Exibir um KPI usando um indicador  
+## <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5. Exibir um KPI usando um indicador  
 Indicadores são medidores pequenos e simples que comunicam valores de dados em um relance. Por conta de seu tamanho e simplicidade, os indicadores costumam ser usados em tabelas e matrizes. Para obter mais informações, consulte [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>Para exibir o estado atual de um KPI usando um indicador  
@@ -288,7 +288,7 @@ Indicadores são medidores pequenos e simples que comunicam valores de dados em 
 
 ![report-builder-kpi-stoplight](../reporting-services/media/report-builder-kpi-stoplight.png)
   
-## <a name="Title"></a>6. Adicionar um título de relatório  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Adicionar um título de relatório  
 Um título é exibido na parte superior do relatório. É possível colocar o título em um cabeçalho do relatório. No entanto, se ele não usar um cabeçalho, será possível colocar o título em uma caixa de texto na parte superior do corpo do relatório. Nesta seção, você usa a caixa de texto colocada automaticamente na parte superior do corpo do relatório.  
   
 Você pode aprimorar o texto ainda mais com a aplicação de estilos, tamanhos e cores de fontes diferentes a frases e caracteres individuais do texto. Para obter mais informações, consulte [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -303,7 +303,7 @@ Você pode aprimorar o texto ainda mais com a aplicação de estilos, tamanhos e
   
 4.  Clique em **Executar** para visualizar o relatório.  
   
-## <a name="Save"></a>7. Salvar o relatório  
+## <a name="7-save-the-report"></a><a name="Save"></a>7. Salvar o relatório  
 Salve o relatório em um servidor de relatório ou no computador. Se você não salvar o relatório no servidor de relatório, vários recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , como partes do relatório e sub-relatórios, não estarão disponíveis.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>Para salvar o relatório em um servidor de relatório  

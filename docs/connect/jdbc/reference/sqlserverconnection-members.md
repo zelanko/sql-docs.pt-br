@@ -11,10 +11,10 @@ ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3e3ba3d7da52f10b9bd51934b25f44a38a16be0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971726"
 ---
 # <a name="sqlserverconnection-members"></a>Membros de SQLServerConnection
@@ -27,19 +27,19 @@ ms.locfileid: "67971726"
   
 ## <a name="fields"></a>Campos  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[TRANSACTION_SNAPSHOT](../../../connect/jdbc/reference/transaction-snapshot-field-sqlserverconnection.md)|Usado para especificar o nível de isolamento da transação de instantâneo.|  
   
 ## <a name="inherited-fields"></a>Campos herdados  
   
-|Classe herdada de:|Descrição|  
+|Classe herdada de:|DESCRIÇÃO|  
 |---------------------------|-----------------|  
 |java.sql.Connection|TRANSACTION_NONE, TRANSACTION_READ_COMMITTED, TRANSACTION_READ_UNCOMMITTED, TRANSACTION_REPEATABLE_READ, TRANSACTION_SERIALIZABLE|  
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverconnection.md)|Limpa todos os avisos relatados para o objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|Libera imediatamente o banco de dados do objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) em questão e os recursos do JDBC, em vez de aguardar que eles sejam liberados automaticamente.|  

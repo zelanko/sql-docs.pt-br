@@ -10,10 +10,10 @@ ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
 ms.openlocfilehash: b459877be731da11b33d13772bbf186ecf72198c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285800"
 ---
 # <a name="using-azure-active-directory"></a>Como usar o Azure Active Directory
@@ -34,7 +34,7 @@ A versão 18.3 adiciona suporte para os seguintes métodos de autenticação:
 - Autenticação do MSI do Azure Active Directory
 
 > [!NOTE]
-> O uso dos seguintes modos de autenticação **não** é compatível com o uso de `DataTypeCompatibility` (ou sua propriedade correspondente) definida como `80`:
+> O uso dos seguintes modos de autenticação `DataTypeCompatibility`não`80` é compatível com o uso de **(ou sua propriedade correspondente) definida como**:
 > - Autenticação do Azure Active Directory usando ID de logon e senha
 > - Autenticação do Azure Active Directory usando token de acesso
 > - Autenticação integrada do Azure Active Directory
@@ -44,7 +44,7 @@ A versão 18.3 adiciona suporte para os seguintes métodos de autenticação:
 ## <a name="connection-string-keywords-and-properties"></a>Palavras-chave e propriedades da cadeia de conexão
 As seguintes palavras-chave da cadeia de conexão foram introduzidas para dar suporte à autenticação do Azure Active Directory:
 
-|Palavras-chave da cadeia de conexão|Propriedades da conexão|Descrição|
+|Palavras-chave da cadeia de conexão|Propriedades da conexão|DESCRIÇÃO|
 |---               |---                |---        |
 |Token de acesso|SSPROP_AUTH_ACCESS_TOKEN|Especifica um token de acesso para autenticar no Azure Active Directory. |
 |Autenticação|SSPROP_AUTH_MODE|Especifica método de autenticação a ser usado.|

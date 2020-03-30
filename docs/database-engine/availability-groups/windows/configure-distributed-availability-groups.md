@@ -11,10 +11,10 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ebe6152ea59de28c9df7f3bb3abfa149900c826f
-ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77146301"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Configurar um grupo de disponibilidade Always On distribuído  
@@ -217,14 +217,14 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
-## <a name="failover"></a> Ingressar no banco de dados no secundário do segundo grupo de disponibilidade
+## <a name="join-the-database-on-the-secondary-of-the-second-availability-group"></a><a name="failover"></a> Ingressar no banco de dados no secundário do segundo grupo de disponibilidade
 Depois que o banco de dados na réplica secundária do segundo grupo de disponibilidade tiver entrado em um estado de repouso, será necessário uni-o manualmente ao grupo de disponibilidade.
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
 ```
   
-## <a name="failover"></a> Fazer failover em um grupo de disponibilidade secundário  
+## <a name="fail-over-to-a-secondary-availability-group"></a><a name="failover"></a> Fazer failover em um grupo de disponibilidade secundário  
 
 No momento, apenas o failover manual é permitido. Para fazer failover manual de um grupo de disponibilidade distribuído:
 

@@ -14,13 +14,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: d81099054c52b90154bfe6fd42c9d450e17afa01
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241546"
 ---
-# <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>Como fazer: Converter projetos de banco de dados do Visual Studio 2010 em projetos de banco de dados do SQL Server e redirecionar para uma plataforma diferente
+# <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>Como converter projetos de banco de dados do Visual Studio 2010 em projetos de banco de dados do SQL Server e redirecionar para uma plataforma diferente
 
 No SSDT (SQL Server Data Tools), você pode converter projetos existentes de Banco de Dados, CLR e Aplicativo da Camada de Dados do SQL Server criados no Visual Studio 2010 no novo projeto de banco de dados do SQL Server. Ao fazer isso, você pode aproveitar as vantagens da nova experiência de desenvolvimento de bancos de dados proporcionada pelo SSDT, como uma experiência atualizada de edição do Transact\-SQL e a capacidade de redirecionar seu projeto para o Microsoft SQL Server 2012 e para o SQL Azure com validação de código. O processo de conversão converte objetos (tabela, exibições, procedimentos armazenados ou scripts) que tenham um tipo equivalente no SSDT, incluindo as respectivas permissões e os arquivos de política DAC. Artefatos que não podem ser convertidos são realçados em um log/relatório de conversão.  
   
@@ -51,5 +51,5 @@ A tabela a seguir lista todos os artefatos de projeto que podem ou não ser conv
 2.  Selecione as plataformas com suporte pelo SSDT na lista suspensa **Plataforma de Destino**.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como: Alterar a plataforma de destino e publicar um projeto de banco de dados](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
+[Como alterar a plataforma de destino e publicar um projeto de banco de dados](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
   

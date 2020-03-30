@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: 8b0d52f5405e3519b861b7642264460b316acd03
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307846"
 ---
 # <a name="sql-server-profiler-templates"></a>Modelos do SQL Server Profiler
@@ -51,7 +51,7 @@ Você pode usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 
 ## <a name="default-template"></a>Modelo padrão  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] designa automaticamente o modelo **Standard** como padrão aplicado a novos rastreamentos. Porém, você pode alterar o modelo padrão para qualquer outro modelo predefinido ou definido pelo usuário. Para alterar o modelo padrão, marque a caixa de seleção **Usar como modelo padrão para o tipo de servidor selecionado** ao criar ou editar um modelo, usando a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamento** .  
   
- Para navegar até a caixa de diálogo **Propriedades do Modelo de Rastreamento**, no menu **Arquivo** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], escolha **Modelos** e clique em **Novo Modelo** ou em **Editar Modelo**.  
+ Para navegar até a caixa de diálogo **Propriedades do Modelo de Rastreamento**, no menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Arquivo**do**, escolha **Modelos** e clique em **Novo Modelo** ou em **Editar Modelo**.  
   
 > [!NOTE]  
 >  O modelo padrão é específico a cada tipo de servidor. Alterar o padrão para um tipo de servidor não influi no modelo padrão de qualquer outro tipo de servidor. Para obter mais informações sobre como definir um modelo padrão para um servidor específico, veja [Definir padrões de definição de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md).  

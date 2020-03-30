@@ -14,10 +14,10 @@ ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 7841fef89ae4eb0600dcc62c1561bff769500a47
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67995655"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, objeto SQL Statistics
@@ -32,9 +32,9 @@ ms.locfileid: "67995655"
   
  Para obter mais informações sobre parametrização simples e forçada, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
- Esses são os contadores de **Estatísticas do SQL** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Esses são os contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Estatísticas do SQL**do**.  
   
-|Contadores do SQL Server SQL Statistics|Descrição|  
+|Contadores do SQL Server SQL Statistics|DESCRIÇÃO|  
 |----------------------------------------|-----------------|  
 |**Tentativas de Param. Autom./s**|Número de tentativas de parametrização automática por segundo. O total deve ser a soma das parametrizações automáticas que falharam, seguras e inseguras. A parametrização automática ocorre quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta parametrizar uma solicitação do [!INCLUDE[tsql](../../includes/tsql-md.md)] substituindo alguns literais por parâmetros de modo a permitir a reutilização do plano de execução resultante armazenado em cache em várias solicitações que parecem semelhantes. Observe que as parametrizações automáticas também são conhecidas como parametrizações simples em versões mais novas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse contador não inclui parametrizações forçadas.|  
 |**Solicitações em Lote/s**|Número de lotes de comando [!INCLUDE[tsql](../../includes/tsql-md.md)] recebidos por segundo. Essa estatística é afetada por todas as restrições (tais como E/S, número de usuários, tamanho do cache, complexidade das solicitações etc.). Altas solicitações em lote significam uma boa taxa de transferência.|  

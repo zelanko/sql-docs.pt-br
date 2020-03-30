@@ -12,21 +12,21 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4873e91d33363743652f36d15c9015438e479476
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65575235"
 ---
 # <a name="upgrade-a-report-server-database"></a>Atualizar um banco de dados do servidor de relatório
 
 O banco de dados do servidor de relatório fornece armazenamento para uma ou mais instâncias do servidor de relatório. Como o esquema do banco de dados do servidor de relatório pode ser alterado a cada versão nova do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é necessário que a versão do banco de dados corresponda à versão da instância do servidor de relatório que você está usando. Na maioria dos casos, um banco de dados do servidor de relatório pode ser atualizado automaticamente sem ação específica de sua parte.  
   
- **Modo nativo:** no modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o banco de dados do servidor de relatório é realmente composto por dois bancos de dados que têm os nomes padrão de ReportServer e ReportServerTempDB.  
+ **Modo nativo**: no modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o banco de dados do servidor de relatório é realmente composto de dois bancos de dados que têm os nomes padrão de ReportServer e ReportServerTempDB.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
- **Modo SharePoint:** no modo do SharePoint do SQL Server 2016 Reporting Services, o banco de dados do servidor de relatório é, na verdade, uma coleção de bancos de dados que foi criada para cada instância do aplicativo do serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ **Modo do SharePoint:** no modo do SharePoint do SQL Server 2016 Reporting Services, o banco de dados do servidor de relatório é, na verdade, uma coleção de bancos de dados que foi criada para cada instância do aplicativo do serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
 ::: moniker-end
 

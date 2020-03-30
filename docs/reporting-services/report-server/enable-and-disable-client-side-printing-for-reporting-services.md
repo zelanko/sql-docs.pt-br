@@ -14,10 +14,10 @@ ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ae8d963b599191970497d841a6caa1f73fd920b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580349"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Habilitar e desabilitar a impressão do lado do cliente para Reporting Services
@@ -26,7 +26,7 @@ ms.locfileid: "65580349"
   
  Versões anteriores do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usavam um controle ActiveX que exigia o download do servidor de relatório para o computador cliente. Se você atualizar o servidor de relatório para o SQL Server 2016 ou posterior, o controle de impressão não será removido do servidor de relatório nem dos computadores cliente.  
 
-##  <a name="bkmk_clientside_printexpereince"></a> A Experiência de Impressão  
+##  <a name="the-print-experience"></a><a name="bkmk_clientside_printexpereince"></a> A Experiência de Impressão  
  Quando você clica no botão Imprimir ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") na barra de ferramentas do Visualizador de Relatórios, a experiência varia de acordo com quais aplicativos de visualização de .PDF estão instalados no computador cliente e de qual navegador está sendo usado.   Você pode baixar o arquivo PDF ou configurar as opções de impressão de uma caixa de diálogo, ou mesmo fazer ambos, dependendo do computador cliente.  
   
  ![Barra de ferramentas do relatório](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Barra de ferramentas do relatório")  
@@ -36,9 +36,9 @@ ms.locfileid: "65580349"
 |A primeira caixa de diálogo é igual para todos os navegadores e permite que você altere as propriedades de layout básico como a orientação. Quando você clica em **Imprimir**, a experiência será um pouco diferente dependendo do navegador utilizado.|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |No Chrome, uma caixa de diálogo de impressão detalhada do navegador se abre.   Você pode alterar as configurações de impressão, imprimir e abrir a caixa de diálogo de impressão do sistema operacional.|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  
 |Se você tiver um aplicativo de leitor PDF instalado, o botão de impressão abrirá uma janela de visualização do arquivo PDF e você poderá salvar ou imprimir.||  
-|Se você não tiver um aplicativo de leitor PDF instalado, há duas experiências do usuário:<br /><br /> O relatório será renderizado automaticamente e usará o processo de download do seu navegador para baixar o arquivo PDF.   **Observação:** quanto mais complicado for o relatório, maior será o tempo de atraso entre a hora em que você clicar em **Imprimir** e o momento em que você vir a notificação de download do seu navegador. Você também pode forçar o download novamente clicando em **Clique aqui para exibir o PDF do seu relatório**.<br /><br /> Force o download do PDF clicando em **Clique aqui para exibir o PDF do seu relatório**.|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
+|Se você não tiver um aplicativo de leitor PDF instalado, há duas experiências do usuário:<br /><br /> O relatório será renderizado automaticamente e usará o processo de download do seu navegador para baixar o arquivo PDF.   **Observação:** quanto mais complicado o relatório for, maior será o tempo de atraso entre a hora em que você clicar em **Imprimir** e o momento em que você visualizar a notificação de download do seu navegador. Você também pode forçar o download novamente clicando em **Clique aqui para exibir o PDF do seu relatório**.<br /><br /> Force o download do PDF clicando em **Clique aqui para exibir o PDF do seu relatório**.|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
   
-##  <a name="bkmk_troubleshoot_clientsideprinting"></a> Solucionar problemas de impressão do lado do cliente  
+##  <a name="troubleshoot-client-side-printing"></a><a name="bkmk_troubleshoot_clientsideprinting"></a> Solucionar problemas de impressão do lado do cliente  
  Se o botão de impressão da barra de ferramentas do visualizador de relatórios estiver desabilitado, verifique o seguinte:  
   
 -   A impressão do lado do cliente está desabilitada para o servidor de relatório no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Consulte a seção  [Habilitar e desabilitar a impressão do lado do cliente](#bkmk_enable) neste tópico.  
@@ -49,7 +49,7 @@ ms.locfileid: "65580349"
   
      ![ssrs_html5_switch2html5](../../reporting-services/report-server/media/ssrs-html5-switch2html5.png "ssrs_html5_switch2html5")  
   
-##  <a name="bkmk_enable"></a> Habilitar e desabilitar a impressão do lado do cliente  
+##  <a name="enable-and-disable-client-side-printing"></a><a name="bkmk_enable"></a> Habilitar e desabilitar a impressão do lado do cliente  
  Os administradores do servidor de relatório têm a opção de desabilitar o recurso de impressão remota, definindo a propriedade do sistema do servidor de relatório **EnableClientPrinting** como **false**. Isso desabilitará a impressão do lado do cliente para todos os relatórios gerenciados por esse servidor. Por padrão, **EnableClientPrinting** está definido como **true**. Você pode desabilitar a impressão do lado do cliente das seguintes formas:  
   
 -   Para um **Servidor de relatório no modo nativo**:  

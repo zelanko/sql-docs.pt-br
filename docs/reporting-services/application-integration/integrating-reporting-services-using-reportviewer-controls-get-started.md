@@ -11,10 +11,10 @@ ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d7e1e64bddcdcc7efed701770aea0e97c8e84ec5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241833"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>Integrando o Reporting Services usando os controles do Visualizador de Relatórios – Introdução

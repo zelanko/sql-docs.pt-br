@@ -20,10 +20,10 @@ ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ba12a2dc53b845d52d2a3dcac574bed08865c12
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322143"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementar um manipulador de lógica de negócios para um artigo de mesclagem
@@ -52,7 +52,7 @@ ms.locfileid: "75322143"
   
      [RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="ReplProg"></a> Usando a programação de replicação  
+##  <a name="using-replication-programming"></a><a name="ReplProg"></a> Usando a programação de replicação  
   
 #### <a name="to-create-and-deploy-a-business-logic-handler"></a>Para criar e implantar um manipulador de lógica de negócios  
   
@@ -114,7 +114,7 @@ ms.locfileid: "75322143"
   
 1.  Execute [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) especificando **\@publication**, **\@article**, um valor igual a **article_resolver** em **\@property** e o nome amigável do manipulador de lógica de negócios em **\@value**.  
   
-###  <a name="TsqlExample"></a> Exemplos (programação de replicação)  
+###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> Exemplos (programação de replicação)  
  Esse exemplo mostra um manipulador de lógica de negócios que cria um log de auditoria.  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  
@@ -125,7 +125,7 @@ ms.locfileid: "75322143"
   
  [!code-sql[HowTo#sp_RegisterBLH_10](../../relational-databases/replication/codesnippet/tsql/implement-a-business-log_3.sql)]  
   
-##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
   
 #### <a name="to-create-a-business-logic-handler"></a>Para criar um manipulador de lógica de negócios  
   
@@ -220,7 +220,7 @@ ms.locfileid: "75322143"
   
 6.  Defina o nome amigável do manipulador de lógica de negócios para <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>. Esse é o valor da propriedade <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> especificada ao registrar o manipulador de lógica de negócios.  
   
-###  <a name="PShellExample"></a> Exemplos (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemplos (RMO)  
  Este exemplo é um manipulador de lógica de negócios que realiza log de informações sobre inserções, atualizações e exclusões no Assinante.  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  

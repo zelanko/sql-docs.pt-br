@@ -14,16 +14,16 @@ ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 40e4fb9280d7ff9d05412966487997f507fb3dc7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65503093"
 ---
 # <a name="feature-reference-reporting-services"></a>Referência de recurso (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclui várias ferramentas e aplicativos que podem ser usados para criar, gerenciar e exibir relatórios. Esta seção fornece tópicos específicos que descrevem as caixas de diálogo, as páginas da Web e os assistentes dessas ferramentas e desses aplicativos.  
   
- Para acessar um tópico da interface do usuário enquanto a ferramenta ou o aplicativo estiver em execução, pressione F1 ou clique em **Ajuda** enquanto a caixa de diálogo, a página da Web ou o assistente estiver aberto. Para obter mais informações sobre como iniciar as ferramentas do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], confira [Tutorial: Como localizar e iniciar as Ferramentas do SSRS &#40;Reporting Services &#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
+ Para acessar um tópico da interface do usuário enquanto a ferramenta ou o aplicativo estiver em execução, pressione F1 ou clique em **Ajuda** enquanto a caixa de diálogo, a página da Web ou o assistente estiver aberto. Para obter mais informações sobre como iniciar as ferramentas do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Tutorial: Como localizar e iniciar as ferramentas do Reporting Services &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Ajuda F1 do Designer de Relatórios](../reporting-services/tools/report-designer-f1-help.md)  

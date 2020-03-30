@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b7e8ab700404aee32140bc935443e5911e4a56db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989242"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Usar o ADO com o OLE DB Driver for SQL Server
@@ -61,7 +61,7 @@ con.Open
  As seções a seguir fornecem exemplos de como é possível usar o ADO com o Driver do OLE DB para SQL Server.  
 
 ### <a name="retrieving-xml-column-data"></a>Recuperando dados da coluna XML  
- Neste exemplo, um conjunto de registros é usado para recuperar e exibir os dados de uma coluna XML no banco de dados de exemplo **AdventureWorks** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Neste exemplo, um conjunto de registros é usado para recuperar e exibir os dados de uma coluna XML no banco de dados de exemplo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]AdventureWorks**do**.  
 
 ```  
 Dim con As New ADODB.Connection  

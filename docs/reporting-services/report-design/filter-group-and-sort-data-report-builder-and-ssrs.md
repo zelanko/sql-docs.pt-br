@@ -18,10 +18,10 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e08a4a43897c1497c81a9e01f010fa99a252130e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080172"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrar, agrupar e classificar dados (Construtor de Relatórios e SSRS)
@@ -52,7 +52,7 @@ ms.locfileid: "77080172"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Filtering"></a> Filtrando dados no relatório  
+##  <a name="filtering-data-in-the-report"></a><a name="Filtering"></a> Filtrando dados no relatório  
  Os filtros são partes de um relatório que ajuda a controlar dados de relatório depois que eles são recuperados da conexão de dados. Use os filtros quando você não puder alterar uma consulta de conjunto de dados para filtrar os dados antes que eles sejam recuperados de uma fonte de dados externa.  
   
  Quando possível, compile as consultas de conjunto de dados que retornem apenas os dados que você precisa exibir no relatório. Quando você reduz a quantidade dos dados que devem ser recuperados e processados, ajuda a melhorar o desempenho de relatório. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -66,7 +66,7 @@ ms.locfileid: "77080172"
  Para personalizar uma exibição para cada usuário, é possível incluir uma referência ao campo UserID interno em um filtro. Para obter mais informações, consulte [Referências de globais internas e referências de usuários &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
   
-##  <a name="Grouping"></a> Agrupando dados no relatório  
+##  <a name="grouping-data-in-the-report"></a><a name="Grouping"></a> Agrupando dados no relatório  
  Os grupos organizam dados em um relatório para exibir ou calcular os valores de agregação. O entendimento de como definir grupos e usar recursos de grupos ajuda a criar relatórios mais concisos.  
   
  As expressões de grupo são criadas automaticamente quando você faz o seguinte:  
@@ -102,12 +102,12 @@ ms.locfileid: "77080172"
  Quando você aninha uma região de dados em uma célula de uma tabela, matriz ou lista, automaticamente está definindo o escopo dos dados como as associações de grupo internas da célula. Por exemplo, suponha que você adicione um gráfico a uma célula que está tanto no grupo de linhas quanto no grupo de colunas. O escopo dos dados disponíveis do gráfico é a instância de grupo de linhas internas e de colunas internas em tempo de execução. Para obter mais informações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
   
-##  <a name="Sorting"></a> Classificando dados no relatório  
+##  <a name="sorting-data-in-the-report"></a><a name="Sorting"></a> Classificando dados no relatório  
  Para controlar a ordem de classificação dos dados no relatório, é possível classificar dados em uma consulta de conjunto de dados ou definir uma expressão de classificação para um grupo ou região de dados. Você também pode adicionar botões de classificação interativos a tabelas e matrizes para permitir que um usuário altere a ordem das linhas.  
   
  Todos os três tipos de classificação podem ser combinados no mesmo relatório. Por padrão, a ordem de classificação é determinada pela ordem em que os dados são retornados pela consulta de conjunto de dados. As expressões de classificação são aplicadas na região de dados e no grupo de regiões de dados. As classificações interativas são aplicadas depois das expressões de classificação.  
   
- Para expressões que contêm funções de agregação, a maioria dos resultados não é afetada pela ordem de classificação. Os valores de retorno para as seguintes funções de agregação são afetados pela ordem de classificação: Primeiro, Último e Anterior. Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Para expressões que contêm funções de agregação, a maioria dos resultados não é afetada pela ordem de classificação. Os valores de retorno para as seguintes funções de agregação são afetados pela ordem de classificação: primeiro, último e anterior. Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>Classificando dados em uma consulta de conjunto de dados  
  Inclua a ordem de classificação na consulta de conjunto de dados para pré-classificar os dados antes que eles sejam recuperados para um relatório. Com a classificação de dados na consulta, o trabalho de classificação é feito pela fonte de dados em vez de pelo processador de relatório.  
@@ -159,13 +159,13 @@ FROM Production.Product
   
  Para obter mais informações, consulte [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md) e [Função de pesquisa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md).  
   
-###  <a name="Interactive"></a> Adicionando classificação interativa para o usuário  
+###  <a name="adding-interactive-sorting-for-the-user"></a><a name="Interactive"></a> Adicionando classificação interativa para o usuário  
  Para permitir que um usuário altere a ordem de classificação de dados de relatório em uma tabela ou matriz, você pode adicionar botões de classificação interativos a cabeçalhos de coluna e cabeçalhos de grupo. Os usuários podem clicar no botão para alterar a ordem de classificação. A classificação interativa possui suporte em formatos de renderização que permitem a interação do usuário, como HTML.  
   
  Você adiciona botões de classificação interativos a uma caixa de texto em uma célula de região de dados tablix. Por padrão, toda célula contém uma caixa de texto. Nas propriedades da caixa de texto, você especifica qual parte de uma região de dados de tabela ou matriz classificar (os valores do grupo pai, os valores do grupo filho ou as linhas de detalhes), pelo que classificar, e se a expressão de classificação deve ser aplicada a outros itens de relatório que têm uma relação par. Por exemplo, se uma tabela e um gráfico que fornecem exibições sobre o mesmo conjunto de dados estiverem contidos em um retângulo, eles serão regiões de dados pares. Quando um usuário alterna a ordem de classificação na tabela, a ordem de classificação do gráfico também é alternada. Para obter mais informações, consulte [Classificação interativa e &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md).  
   
   
-##  <a name="HowTo"></a> Tópicos de instruções  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Tópicos de instruções  
  [Manter os cabeçalhos visíveis ao rolar por um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
  [Exibir cabeçalhos e rodapés com um grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
@@ -184,14 +184,14 @@ FROM Production.Product
   
  [Adicionar um total a um grupo ou a uma região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
-##  <a name="Section"></a> Nesta seção  
+##  <a name="in-this-section"></a><a name="Section"></a> Nesta seção  
  [Exemplos de expressões de grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
   
  [Exemplos de equações de filtro &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
   
  [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)  
   
-##  <a name="Related"></a> Seções relacionadas  
+##  <a name="related-sections"></a><a name="Related"></a> Seções relacionadas  
  [Noções básicas sobre grupos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)  
   
  [Criar grupos de hierarquia recursiva &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  

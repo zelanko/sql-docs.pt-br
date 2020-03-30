@@ -11,13 +11,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 36bc1ac2a4a20dd0d05d90b8d12ff63b0a7a6b3e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246493"
 ---
-# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Como fazer: Gravar um teste de unidade do SQL Server executado no escopo de uma única transação
+# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Como: Gravar um teste de unidade do SQL Server executado no escopo de uma única transação
 
 Você pode modificar os teste de unidade para execução no escopo de uma única transação. Se você usar essa abordagem, poderá reverter todas as alterações decretadas pelo teste após seu término. Os procedimentos a seguir descreve como:  
   
@@ -156,7 +156,7 @@ Neste exemplo, você está usando uma transação de ambiente com o tipo [System
     ```  
   
 ## <a name="to-start-the-distributed-transaction-coordinator-service"></a>Para iniciar o serviço Coordenador de Transações Distribuídas  
-Alguns procedimentos deste tópico usam os tipos do assembly System.Transactions. Antes de executar estes procedimentos, verifique se o serviço Coordenador de Transações Distribuídas está em execução no computador em que os testes de unidade são executados. Caso contrário, os testes falham e a seguinte mensagem de erro aparece: "O método de teste *ProjectName*.*TestName*.*MethodName* gerou a exceção: System.Data.SqlClient.SqlException: MSDTC no servidor '*ComputerName*' não está disponível".  
+Alguns procedimentos deste tópico usam os tipos do assembly System.Transactions. Antes de executar estes procedimentos, verifique se o serviço Coordenador de Transações Distribuídas está em execução no computador em que os testes de unidade são executados. Do contrário, o teste apresentará falha, e a seguinte mensagem de erro será exibida: "O método de teste *ProjectName*.*TestName*.*MethodName* lançou a exceção: System.Data.SqlClient.SqlException: MSDTC no servidor '*ComputerName*' não está disponível".  
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>Para iniciar o serviço Coordenador de Transações Distribuídas  
   
