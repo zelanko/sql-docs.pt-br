@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: e3e062aa9c0418bb76209e5e8f45c973b7a0f816
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895970"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Etapa 3: Prova de conceito da conexão ao SQL usando ADO.NET

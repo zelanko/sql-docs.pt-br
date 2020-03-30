@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055930"
 ---
 # <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>Especificar formatos de dados para compatibilidade usando o bcp (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74055930"
 >  Se você não estiver familiarizado com os formatos de dados para importar ou exportar dados, veja [Formatos de dados para importação ou exportação em massa &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md).  
   
   
-##  <a name="bcpDataFormatAttr"></a> Atributos bcp Data-Format  
+##  <a name="bcp-data-format-attributes"></a><a name="bcpDataFormatAttr"></a> Atributos bcp Data-Format  
  O comando **bcp** permite especificar a estrutura de cada campo em um arquivo de dados quanto aos seguintes atributos de formato de dados:  
   
 -   tipo de armazenamento de arquivo  
@@ -52,7 +52,7 @@ ms.locfileid: "74055930"
      Para campos de dados de caractere, caracteres terminadores opcionais permitem marcar o término de cada campo em um arquivo de dados (usando um *terminador de campo*) e o término de cada linha (usando um *terminador de linha*). Os caracteres terminadores são um modo de indicar aos programas de leitura o arquivo de dados onde um campo ou uma linha termina, e a outra começa. Para obter mais informações, veja [Especificar terminadores de campo e linha &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
   
-##  <a name="FieldSpecificPrompts"></a> Visão geral dos prompts de campo específicos  
+##  <a name="overview-of-the-field-specific-prompts"></a><a name="FieldSpecificPrompts"></a> Visão geral dos prompts de campo específicos  
  Se um comando **bcp** interativo contiver a opção **in** ou **out** , mas também não contiver a opção de arquivo de formato ( **-f**) ou uma opção de formato de dados ( **-n**, **-c**, **-w**ou **-N**), cada coluna na tabela de destino ou origem, o comando solicitará cada um dos atributos precedentes, por vez. Em cada prompt, o comando **bcp** fornece um valor padrão baseado no tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da coluna de tabela. Aceitar o valor padrão de todos os prompts gera o mesmo resultado de especificar o formato nativo ( **-n**) na linha de comando. Cada prompt exibe um valor padrão entre colchetes: [*default*]. Pressionando ENTER aceita o padrão exibido. Para especificar um valor diferente do padrão, insira o valor novo no prompt.  
   
 ### <a name="example"></a>Exemplo  
@@ -87,7 +87,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  São exibidos prompts equivalentes (quando necessário) para cada uma das colunas de tabela em ordem.  
   
   
-##  <a name="FieldByFieldNonXmlFF"></a> Armazenando dados campo por campo em um arquivo de formato não XML  
+##  <a name="storing-field-by-field-data-in-a-non-xml-format-file"></a><a name="FieldByFieldNonXmlFF"></a> Armazenando dados campo por campo em um arquivo de formato não XML  
  Após todas as colunas de tabela serem especificadas, o comando **bcp** solicita que você gere um arquivo de formato não XML que armazena a informações campo por campo fornecidas (veja o exemplo anterior) opcionalmente. Se você escolher gerar um arquivo de formato, você poderá sempre que exportar dados fora daquela tabela ou importar dados estruturados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  

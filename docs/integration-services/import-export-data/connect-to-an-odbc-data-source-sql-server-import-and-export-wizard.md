@@ -11,10 +11,10 @@ ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75608025"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do ODBC (Assistente de Importação e Exportação do SQL Server)
@@ -65,7 +65,7 @@ A próxima etapa é fornecer as informações de conexão para o driver ODBC e s
 
 Se você fornecer uma cadeia de conexão, a página **Escolher uma fonte de dados** ou **Escolher um destino** exibe todas as informações de conexão que o assistente usará para se conectar à fonte de dados, tais como o método de autenticação e nome do servidor e banco de dados. Se você fornecer um DSN, essas informações não estarão visíveis.
 
-## <a name="odbc_dsn"></a> Opção 1 – fornecer um DSN
+## <a name="option-1---provide-a-dsn"></a><a name="odbc_dsn"></a> Opção 1 – fornecer um DSN
 Se você quiser fornecer as informações de conexão com um DSN (nome de fonte de dados), use o miniaplicativo **Administrador de Fonte de Dados ODBC** para localizar o DSN existente ou criar um novo.
 1.  Pesquise pelo miniaplicativo **fontes de dados ODBC (64 bits)** ou navegue até ele no Menu Iniciar ou Painel de Controle. Se você só tem um driver de 32 bits ou deve usar um driver de 32 bits, em vez disso, pesquise pelas **Fontes de Dados ODBC (32 bits)** ou navegue até elas.
 2.  Inicie o miniaplicativo. A janela **Administrador de Fonte de Dados ODBC** se abre. Eis aqui a aparência desse miniaplicativo.
@@ -88,7 +88,7 @@ Se você quiser fornecer as informações de conexão com um DSN (nome de fonte 
     
 8.  Retorne para o assistente e insira o nome do DSN no campo **Dsn** na página **Escolher uma fonte de dados** ou **Escolher um destino**. Continue para a próxima etapa do assistente.
 
-## <a name="odbc_connstring"></a> Opção 2 – fornecer uma cadeia de conexão
+## <a name="option-2---provide-a-connection-string"></a><a name="odbc_connstring"></a> Opção 2 – fornecer uma cadeia de conexão
 Se você quiser fornecer suas informações de conexão com uma cadeia de conexão, o restante deste tópico lhe ajudará a obter a cadeia de conexão necessária.
 
 Este exemplo usará a cadeia de conexão a seguir, que se conecta ao Microsoft SQL Server. O exemplo de banco de dados usado é **WideWorldImporters** e estamos nos conectando ao SQL Server no computador local.

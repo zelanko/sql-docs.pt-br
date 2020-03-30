@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 636b304d99ee244ef7a367fb8a474ebe8df312a0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557707"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Tutorial: Criar e usar índices em colunas habilitadas para enclave com criptografia aleatória
@@ -28,7 +28,7 @@ Este tutorial ensina como criar e usar índices em colunas habilitadas para encl
 - Como criar um índice quando você tem acesso às chaves (à chave mestra de coluna e à chave de criptografia de coluna) que protegem a coluna.
 - Como criar um índice quando você não tem acesso às chaves de proteção da coluna.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este tutorial é a continuação do [Tutorial: Introdução ao Always Encrypted com enclaves seguros usando o SSMS](./tutorial-getting-started-with-always-encrypted-enclaves.md). Você precisa concluí-lo antes de prosseguir para as próximas etapas.
 

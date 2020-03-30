@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77705901"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestrutura de Criação de Perfil de Consulta
@@ -50,7 +50,7 @@ Os métodos de coleta de informações de plano de execução a seguir para **to
 
 Ao executar uma sessão de eventos estendidos que usa o evento *query_post_execution_showplan*, o DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) também é populado, o que permite estatísticas de consulta dinâmica para todas as sessões, usando o [Monitor de Atividade](../../relational-databases/performance-monitor/activity-monitor.md) ou consultando diretamente o DMV. Para obter mais informações, consulte [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md).
 
-## <a name="lwp"></a> A infraestrutura de criação de perfil de estatísticas de execução de consulta leve
+## <a name="the-lightweight-query-execution-statistics-profiling-infrastructure"></a><a name="lwp"></a> A infraestrutura de criação de perfil de estatísticas de execução de consulta leve
 
 Começando com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], uma nova *infraestrutura de criação de perfil de estatísticas de execução de consulta leve* ou **criação de perfil leve** foi introduzida. 
 

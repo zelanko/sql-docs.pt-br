@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f74883ab152ca1552d1193f204fc0af3a72cdb8f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287223"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Exibir e modificar configurações de segurança de replicação
@@ -46,20 +46,20 @@ ms.locfileid: "76287223"
   
 -   **Acompanhamento:**  [depois de modificar configurações de segurança de replicação](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Os procedimentos armazenados usados dependem do tipo de agente e do tipo de conexão de servidor.  
   
 -   As classes e propriedades RMO que você usa dependem do tipo de agente e do tipo de conexão de servidor.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  Por questões de segurança, os valores reais das senhas são mascarados em conjuntos de resultados retornados por procedimentos armazenados de replicação.  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Exiba e modifique as configurações de segurança nas seguintes caixas de diálogo:  
   
 1.  A caixa de diálogo **Atualizar Senhas de Replicação** que está disponível na pasta **Replicação** do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Se você alterar a senha para uma conta do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou uma conta do Windows no servidor em uma topologia de replicação, use essa caixa de diálogo ao invés de atualizar a senha para cada agente que usa essa conta. Se agentes em mais de um servidor usam a mesma conta, você deverá conectar-se a cada servidor e alterar a senha. A senha será atualizada em todos os lugares em que a replicação usa a senha. A senha não é atualizada em outros lugares, como servidores vinculados.  
@@ -243,7 +243,7 @@ ms.locfileid: "76287223"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 > [!IMPORTANT]  
 >  Em todos os procedimentos a seguir, quando possível, solicite aos usuários que digitem as credenciais de segurança em runtime. Se armazenar credenciais em um arquivo de script, proteja o arquivo para evitar acesso não autorizado.  
@@ -414,7 +414,7 @@ ms.locfileid: "76287223"
   
 2.  Em todos os Publicadores que usam esse Distribuidor remoto, execute [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) especificando a senha da etapa 1 para `@password`.  
   
-##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
   
 > [!IMPORTANT]  
 >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework do Windows.  
@@ -561,14 +561,14 @@ ms.locfileid: "76287223"
   
     -   *PublisherSecurity* - A <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext> objeto que especifica o tipo de modo de segurança usado pelo Assinante de atualização imediata ao se conectar ao Publicador e as credenciais de logon para a conexão.  
   
-###  <a name="PShellExample"></a> Exemplo (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Exemplo (RMO)  
  Este exemplo verifica o valor do logon fornecido e altera todas as senhas para o logon do Windows fornecido ou o logon do SQL Server armazenado por replicação no servidor.  
   
  [!code-cs[HowTo#rmo_ChangeServerPasswords](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changeserverpasswords)]  
   
  [!code-vb[HowTo#rmo_vb_ChangeServerPasswords](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changeserverpasswords)]  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de modificar configurações de segurança de replicação  
+##  <a name="follow-up-after-you-modify-replication-security-settings"></a><a name="FollowUp"></a> Acompanhamento: depois de modificar configurações de segurança de replicação  
  Depois de alterar o logon ou a senha de um agente, você deve parar e reiniciar o agente antes que as alterações entrem em vigor.  
   
 ## <a name="see-also"></a>Consulte Também  

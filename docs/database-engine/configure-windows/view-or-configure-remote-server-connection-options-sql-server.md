@@ -15,10 +15,10 @@ ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 11ca900d4a6f0f820379b0446bcca85e97462177
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67945688"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>Exibir ou configurar opções de conexão de servidor remoto (SQL Server)
@@ -39,14 +39,14 @@ ms.locfileid: "67945688"
   
 -   **Acompanhamento:**  [depois de configurar opções de conexão de servidor remoto](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  A execução de **sp_serveroption** requer a permissão ALTER ANY LINKED SERVER no servidor.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-view-or-configure-remote-server-connection-options"></a>Para exibir ou configurar opções de conexão de servidor remoto  
   
@@ -58,7 +58,7 @@ ms.locfileid: "67945688"
   
 4.  Repita os etapas 1 até 3, no outro servidor do par de servidor remoto.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-remote-server-connection-options"></a>Para exibir as opções de conexão de servidor remoto  
   
@@ -87,7 +87,7 @@ USE master;
 EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';  
 ```  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar opções de conexão de servidor remoto  
+##  <a name="follow-up-after-you-configure-remote-server-connection-options"></a><a name="FollowUp"></a> Acompanhamento: depois de configurar opções de conexão de servidor remoto  
  O servidor remoto deve ser interrompido e reiniciado para que a configuração entre em vigor.  
   
 ## <a name="see-also"></a>Consulte Também  

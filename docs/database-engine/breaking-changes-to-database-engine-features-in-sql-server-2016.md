@@ -16,10 +16,10 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b2003a0adfd2883b83623f5b367e775cc526e052
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79190574"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Alterações mais recentes a recursos do Mecanismo de Banco de Dados no SQL Server 2016
@@ -28,7 +28,7 @@ ms.locfileid: "79190574"
 
   Este tópico descreve as últimas alterações no [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] e versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar.  
   
-##  <a name="SQL15"></a> Últimas alterações do [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
+##  <a name="breaking-changes-in-sssql15"></a><a name="SQL15"></a> Últimas alterações do [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
 -   A coluna *sample_ms* de `sys.dm_io_virtual_file_stats` foi expandida de um tipo de dados **int** para um **bigint**.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "79190574"
 
 -   No nível de compatibilidade 130 do banco de dados, as operações que realizam conversões implícitas entre determinados tipos de dados numéricos e datetime mostram uma precisão aprimorada e podem resultar em diferentes valores convertidos. Isso inclui o uso de funções que exigem cálculos como, por exemplo, `DATEDIFF` e `ROUND`. Para obter mais informações, veja este [Artigo de Suporte da Microsoft](https://support.microsoft.com/help/4010261).
 
-## <a name="previous-versions"></a> Versões anteriores  
+## <a name="previous-versions"></a><a name="previous-versions"></a> Versões anteriores  
 
 Para obter informações sobre alterações da falha no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] e em algumas versões anteriores, confira [Alterações da falha em recursos do mecanismo de banco de dados no SQL Server 2014](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014).
 

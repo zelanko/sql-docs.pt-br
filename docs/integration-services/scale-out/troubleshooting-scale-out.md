@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 987217c1afe07b5e917f415b9a5bc0d784ab7c6d
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903762"
 ---
 # <a name="troubleshoot-scale-out"></a>Solução de problemas do Scale Out
@@ -225,6 +225,6 @@ WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions
 > Essa consulta destina-se apenas à solução de problemas. As exibições internas referenciadas na consulta deverão ser alteradas no futuro. 
 
 ## <a name="next-steps"></a>Próximas etapas
-Para obter mais informações, consulte os seguintes artigos sobre como configurar o SSIS Scale Out:
+Para obter mais informações, consulte os seguintes artigos sobre como configurar a Escala horizontal do SSIS:
 -   [Introdução ao SSIS (Integration Services) Scale Out em um único computador](get-started-with-ssis-scale-out-onebox.md)
 -   [Passo a passo: Configurar SSIS (Integration Services) Scale Out](walkthrough-set-up-integration-services-scale-out.md)

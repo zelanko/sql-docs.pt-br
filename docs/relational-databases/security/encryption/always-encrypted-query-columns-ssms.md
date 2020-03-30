@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287130"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Consultar colunas usando o Always Encrypted com o SQL Server Management Studio
@@ -77,7 +77,7 @@ Além das permissões acima, para descriptografar qualquer resultado de consulta
 
 Para obter mais informações, consulte [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)Criar e armazenar chaves mestras de coluna (Always Encrypted).
 
-## <a name="en-dis"></a> Habilitando e desabilitando Always Encrypted para uma conexão de banco de dados   
+## <a name="enabling-and-disabling-always-encrypted-for-a-database-connection"></a><a name="en-dis"></a> Habilitando e desabilitando Always Encrypted para uma conexão de banco de dados   
 Ao se conectar a um banco de dados no SSMS, habilite ou desabilite o Always Encrypted para a conexão de banco de dados. Por padrão, o Always Encrypted está desabilitado. 
 
 Habilitar o Always Encrypted para uma conexão de banco de dados instrui o .NET Framework Data Provider para SQL Server, usado pelo SQL Server Management Studio, a tentar de forma transparente:   
@@ -106,7 +106,7 @@ Para habilitar (desabilitar) o Always Encrypted:
 > 2.    Selecione **Conexão** > **Alterar Conexão...** . Isso abrirá a caixa de diálogo **Conectar ao Servidor** para a conexão atual na janela do Editor de Consultas. 
 > 2.    Habilite ou desabilite o Always Encrypted seguindo as etapas acima e clique em **Conectar**.  
    
-## <a name="param"></a>Parametrização de Always Encrypted   
+## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Parametrização de Always Encrypted   
  
 A Parametrização de Always Encrypted é um recurso do SQL Server Management Studio que converte automaticamente as variáveis Transact-SQL em parâmetros de consulta (instâncias da [Classe SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)). (Requer pelo menos o SSMS versão 17.0) Isso permite que o .NET Framework Data Provider para SQL Server subjacente detecte dados destinados a colunas criptografadas e criptografe esses dados antes de enviá-los para o banco de dados. 
   

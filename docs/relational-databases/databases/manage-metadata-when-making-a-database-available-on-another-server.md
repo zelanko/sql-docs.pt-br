@@ -35,10 +35,10 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 282e75c071ce220c5b7301b5c4b27fff2cf4b053
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76929109"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gerenciar metadados ao disponibilizar um banco de dados em outro servidor
@@ -59,7 +59,7 @@ ms.locfileid: "76929109"
   
  Ao mover o banco de dados de um aplicativo para outra instância de servidor, é necessário recriar todos os metadados dos objetos e entidades dependentes no **mestre** e no **msdb** na instância do servidor de destino. Por exemplo, se um aplicativo de banco de dados usar gatilhos em nível de servidor, apenas a anexação ou a restauração do banco de dados no novo sistema não será suficiente. O banco de dados não funcionará conforme esperado a não ser que os metadados desses gatilhos sejam recriados manualmente no banco de dados **mestre** .  
   
-##  <a name="information_entities_and_objects"></a> Informações, entidades e objetos que são armazenados fora de bancos de dados de usuário  
+##  <a name="information-entities-and-objects-that-are-stored-outside-of-user-databases"></a><a name="information_entities_and_objects"></a> Informações, entidades e objetos que são armazenados fora de bancos de dados de usuário  
  O restante deste artigo resume os problemas potenciais que podem afetar um banco de dados que está sendo disponibilizado em outra instância de servidor. Talvez você precise recriar um ou mais dos tipos de informações, entidades ou objetos apresentados na lista a seguir. Para ver um resumo, clique no link do item.  
   
 -   [Definições de configuração do servidor](#server_configuration_settings)  
@@ -96,13 +96,13 @@ ms.locfileid: "76929109"
   
 -   [Gatilhos (em nível de servidor)](#triggers)  
   
-##  <a name="server_configuration_settings"></a> Server Configuration Settings  
+##  <a name="server-configuration-settings"></a><a name="server_configuration_settings"></a> Server Configuration Settings  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores instala seletivamente e inicia serviços e recursos chave. Isso ajuda a reduzir a área da superfície de um sistema sujeita a ataque. Na configuração padrão de novas instalações, muitos recursos não estão habilitados. Se o banco de dados depende de qualquer serviço ou recurso que esteja desativado por padrão, esse serviço ou recurso deve ser habilitado na instância do servidor de destino.  
   
  Para obter mais informações sobre essas configurações e como habilitá-las ou desabilitá-las, veja [Opções de configuração de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
   
-##  <a name="credentials"></a> Credenciais  
+##  <a name="credentials"></a><a name="credentials"></a> Credenciais  
  Uma credencial é um registro que contém as informações de autenticação necessárias para conectar-se a um recurso fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A maioria das credenciais consiste em um logon e uma senha do Windows.  
   
  Para obter mais informações sobre esse recurso, veja [Credenciais &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
@@ -110,7 +110,7 @@ ms.locfileid: "76929109"
 > **OBSERVAÇÃO:** Contas proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usam credenciais. Para saber a identificação da credencial de uma conta proxy, use a tabela do sistema [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) .  
   
   
-##  <a name="cross_database_queries"></a> Cross-Database Queries  
+##  <a name="cross-database-queries"></a><a name="cross_database_queries"></a> Cross-Database Queries  
  Por padrão, as opções de banco de dados DB_CHAINING e TRUSTWORTHY estão OFF. Se qualquer uma delas estiver configurada como ON para o banco de dados original, talvez seja necessário habilitá-las no banco de dados na instância do servidor de destino. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  As operações de anexação e desanexação desabilitam o encadeamento de propriedades de bancos de dados para o banco de dados. Para obter informações sobre como habilitar o encadeamento, veja [Opção cross db ownership chaining de configuração de servidor](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
@@ -118,14 +118,14 @@ ms.locfileid: "76929109"
  Para obter mais informações, veja também [Configurar um banco de dados espelho para usar a propriedade confiável &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
   
-##  <a name="database_ownership"></a> Database Ownership  
+##  <a name="database-ownership"></a><a name="database_ownership"></a> Database Ownership  
  Quando um banco de dados é restaurado em outro computador, o logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou usuário Windows que iniciou a operação de restauração torna-se automaticamente o novo proprietário do banco de dados. Quando o banco de dados é restaurado, o administrador de sistema ou o novo proprietário do banco de dados pode alterar a propriedade do banco de dados.  
   
-##  <a name="distributed_queries_and_linked_servers"></a> Consultas distribuídas e servidores vinculados  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a> Consultas distribuídas e servidores vinculados  
  Há suporte para consultas distribuídas e servidores vinculados para aplicativos OLE DB. Consultas distribuídas acessam dados de várias fontes de dados heterogêneos no mesmo ou em diferentes computadores. Uma configuração de servidores vinculados permite ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executar comandos em relação a fontes de dados de OLE DB em servidores remotos. Para obter mais informações sobre esses recursos, veja [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
   
-##  <a name="encrypted_data"></a> Encrypted Data  
+##  <a name="encrypted-data"></a><a name="encrypted_data"></a> Encrypted Data  
  Se o banco de dados que está sendo disponibilizado em outra instância do servidor contiver dados criptografados e se a chave mestra do banco de dados estiver protegida pela chave mestra do serviço no servidor original, talvez seja necessário recriar a criptografia da chave mestra do serviço. A *chave mestra do banco de dados* é uma chave simétrica usada para proteger as chaves privadas dos certificados e as chaves assimétricas em um banco de dados criptografado. Quando criada, a chave mestra do banco de dados é criptografada com o algoritmo DES Triplo e uma senha fornecida pelo usuário.  
   
  Para permitir a descriptografia automática da chave mestra do banco de dados em uma instância do servidor, uma cópia dessa chave é criptografada usando a chave mestra do serviço. Esta cópia criptografada é armazenada no banco de dados e no **mestre**. Normalmente, a cópia armazenada em **mestre** é silenciosamente atualizada sempre que a chave mestra é alterada. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta primeiramente descriptografar a chave mestra do banco de dados com a chave de serviço mestra da instância. Se essa descriptografia falhar, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pesquisará o repositório de credenciais em busca das credenciais de chave mestra que têm o mesmo GUID de família do banco de dados cuja chave mestra é necessária. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta descriptografar a chave mestra de banco de dados com cada credencial compatível até que a descriptografia obtenha êxito ou não haja mais credenciais. Uma chave mestra não criptografada pela chave mestra de serviço deve ser aberta usando a instrução OPEN MASTER KEY e uma senha.  
@@ -143,11 +143,11 @@ ms.locfileid: "76929109"
 -   [Criar chaves simétricas idênticas em dois servidores](../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   
-##  <a name="user_defined_error_messages"></a> User-defined Error Messages  
+##  <a name="user-defined-error-messages"></a><a name="user_defined_error_messages"></a> User-defined Error Messages  
  Mensagens de erro definidas pelo usuário residem na exibição do catálogo [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) . Essa exibição do catálogo é armazenada no **mestre**. Se um aplicativo de banco de dados depender de mensagens de erro definidas pelo usuário e o banco de dados for disponibilizado em outra instância do servidor, use [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) para adicionar essas mensagens definidas pelo usuário à instância do servidor de destino.  
 
   
-##  <a name="event_notif_and_wmi_events"></a> Notificações de eventos e o Windows Management Instrumentation (WMI) eventos (no nível de servidor)  
+##  <a name="event-notifications-and-windows-management-instrumentation-wmi-events-at-server-level"></a><a name="event_notif_and_wmi_events"></a> Notificações de eventos e o Windows Management Instrumentation (WMI) eventos (no nível de servidor)  
   
 ### <a name="server-level-event-notifications"></a>Notificações de eventos em nível de servidor  
  Notificações de eventos em nível de servidor são armazenadas no **msdb**. Portanto, se um aplicativo de banco de dados depender de uma notificação de eventos em nível de servidor, essa notificação de evento deverá ser recriada na instância do servidor de destino. Para exibir as notificações de eventos em uma instância do servidor, use a exibição de catálogo [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) . Para obter mais informações, consulte [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
@@ -175,7 +175,7 @@ ms.locfileid: "76929109"
 -   Se o serviço iniciador estiver no banco de dados espelho, o serviço de destino deverá ter uma rota espelhada de retorno ao iniciador para entregar confirmações e respostas. No entanto, o iniciador pode ter uma rota normal para o destino.  
   
   
-##  <a name="extended_stored_procedures"></a> Extended Stored Procedures  
+##  <a name="extended-stored-procedures"></a><a name="extended_stored_procedures"></a> Extended Stored Procedures  
   
 > **IMPORTANTE:** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use a [Integração CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
   
@@ -189,7 +189,7 @@ ms.locfileid: "76929109"
  Para obter mais informações, veja [GRANT Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md), [DENY Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md) e [REVOKE Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md).  
   
   
-##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
+##  <a name="full-text-engine-for-sql-server-properties"></a><a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
  As propriedades são definidas no Mecanismo de Texto Completo por meio de [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md). Verifique se a instância do servidor de destino tem as configurações necessárias para essas propriedades. Para obter mais informações sobre essas propriedades, veja [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md).  
   
  Além disso, se o componente de [separadores de palavras e lematizadores](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) ou o componente de [filtros de pesquisa de texto completo](../../relational-databases/search/configure-and-manage-filters-for-search.md) tiver versões diferentes nas instâncias de servidor original e de destino, o índice e as consultas de texto completo poderão se comportar de maneira diferente. O [dicionário de sinônimos](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) também é armazenado em arquivos específicos da instância. Você deve transferir uma cópia desses arquivos para um local equivalente na instância do servidor de destino ou recriá-los na nova instância.  
@@ -203,7 +203,7 @@ ms.locfileid: "76929109"
 -   [Espelhamento de banco de dados e catálogos de texto completo &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
 
   
-##  <a name="jobs"></a> Trabalhos  
+##  <a name="jobs"></a><a name="jobs"></a> Trabalhos  
  Se o banco de dados depender de trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, será necessário recriá-los na instância do servidor de destino. Os trabalhos dependem de seus ambientes. Se você planeja recriar um trabalho existente na instância do servidor de destino, a instância do servidor de destino talvez precise ser modificada para corresponder ao ambiente daquele trabalho na instância do servidor original. Os seguintes fatores ambientais são significativos:  
   
 -   O logon usado pelo trabalho  
@@ -255,7 +255,7 @@ ms.locfileid: "76929109"
  Recomendamos iniciar gerando o script de um trabalho simples, recriando o trabalho no outro serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e executando-o para ver se ele funciona conforme pretendido. Isso permite identificar incompatibilidades e tentar resolvê-las. Se um trabalho com script não funcionar conforme pretendido no novo ambiente, é recomendável criar um trabalho equivalente que funcione corretamente naquele ambiente.  
   
 
-##  <a name="logins"></a> Logons  
+##  <a name="logins"></a><a name="logins"></a> Logons  
  O logon em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido. Esse logon é usado no processo de autenticação que verifica se a entidade pode conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um usuário de banco de dados para o qual o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondente não está definido ou está definido incorretamente em uma instância do servidor não pode fazer logon na instância. Esse usuário é um *usuário órfão* do banco de dados nessa instância do servidor. Um usuário de banco de dados pode se tornar órfão após um banco de dados ser restaurado, anexado ou copiado em uma instância diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Para gerar um script para alguns ou todos os objetos na cópia original do banco de dados, é possível usar o Assistente para Gerar Scripts e, na caixa de diálogo **Escolher Opções de Script** , configurar a opção **Logons de Script** como **True**.  
@@ -263,7 +263,7 @@ ms.locfileid: "76929109"
 > **OBSERVAÇÃO:** Saiba mais sobre como configurar logons para um banco de dados espelhado em [Configurar contas de logon para espelhamento de banco de dados ou para Grupos de Disponibilidade AlwaysOn (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) e [Gerenciamento de logons e trabalhos após a troca de função &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
   
-##  <a name="permissions"></a> Permissões  
+##  <a name="permissions"></a><a name="permissions"></a> Permissões  
  Os seguintes tipos de permissão podem ser afetados quando um banco de dados é disponibilizado em outra instância do servidor.  
   
 -   Permissões GRANT, REVOKE ou DENY em objetos do sistema  
@@ -312,21 +312,21 @@ ms.locfileid: "76929109"
 A propriedade de banco de dados TRUSTWORTHY é usada para indicar se a instância do SQL Server confia no banco de dados e em seu conteúdo. Quando um banco de dados é anexado, por padrão e por segurança, essa opção é definida como OFF, mesmo se essa opção foi definida como ON no servidor original. Para obter mais informações sobre essa propriedade, veja [Propriedade de banco de dados TRUSTWORTHY](../security/trustworthy-database-property.md) e para obter informações sobre como ativar essa opção, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
 
 
-##  <a name="replication_settings"></a> Replication Settings  
+##  <a name="replication-settings"></a><a name="replication_settings"></a> Replication Settings  
  Se você restaurar um backup de um banco de dados replicado para outro servidor ou banco de dados, as configurações de replicação não poderão ser preservadas. Nesse caso, é necessário recriar todas as publicações e assinaturas depois que os backups forem restaurados. Para facilitar esse processo, crie scripts para suas configurações de replicação atuais e também para a habilitação e desabilitação da replicação. Para ajudar a recriar as configurações de replicação, copie esses scripts e altere as referências ao nome do servidor para funcionarem para a instância do servidor de destino.  
   
  Para obter mais informações, veja [Fazer backup e restaurar bancos de dados replicados](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md), [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md) e [Replicação e envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
   
-##  <a name="sb_applications"></a> Service Broker Applications  
+##  <a name="service-broker-applications"></a><a name="sb_applications"></a> Service Broker Applications  
  Muitos aspectos de um aplicativo do [!INCLUDE[ssSB](../../includes/sssb-md.md)] são movidos com o banco de dados. No entanto alguns aspectos do aplicativo devem ser recriados ou reconfigurados no novo local.  Por padrão e por segurança, quando um banco de dados é anexo de outro servidor, as opções para *is_broker_enabled* e *is_honor_broker_priority_on* são definidas como OFF. Para obter informações sobre como definir essas opções como ON, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
   
-##  <a name="startup_procedures"></a> Startup Procedures  
+##  <a name="startup-procedures"></a><a name="startup_procedures"></a> Startup Procedures  
  Um procedimento de inicialização é um procedimento armazenado marcado para execução automática e é executado sempre que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado. Se o banco de dados depender de qualquer procedimento de inicialização, o procedimento deverá ser definido na instância do servidor de destino e ser configurado para ser executado automaticamente na inicialização.  
 
   
-##  <a name="triggers"></a> Triggers (at Server Level)  
+##  <a name="triggers-at-server-level"></a><a name="triggers"></a> Triggers (at Server Level)  
  Os gatilhos DDL ativam procedimentos armazenados em resposta a diversos eventos DDL (Linguagem de Definição de Dados). Esses eventos correspondem, principalmente, a instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que começam com as palavras-chave CREATE, ALTER e DROP. Determinados procedimentos armazenados do sistema que executam operações do tipo DDL também podem disparar gatilhos DDL.  
   
  Para obter mais informações sobre esse recurso, consulte [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
