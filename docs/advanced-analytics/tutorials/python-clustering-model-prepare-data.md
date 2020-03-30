@@ -12,10 +12,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 8ee19ddfa59f8f1a4a32c0adf08b8f36eef9aa1f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75305542"
 ---
 # <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>Tutorial: Preparar dados para categorizar clientes em Python com os Serviços de Machine Learning do SQL Server
@@ -36,7 +36,7 @@ Na [parte três](python-clustering-model-build.md), você aprenderá a criar e t
 
 Na [parte quatro](python-clustering-model-deploy.md), você aprenderá a criar um procedimento armazenado em um Banco de Dados SQL que pode executar clusters em Python com base em novos dados.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 * A parte dois deste tutorial pressupõe que você cumpriu os pré-requisitos da [**parte um**](python-clustering-model.md).
 

@@ -27,10 +27,10 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165485"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Exibir e trabalhar com a Saída do DTA (Orientador de Otimização do Mecanismo de Banco de Dados)
@@ -39,7 +39,7 @@ ms.locfileid: "74165485"
 
   Quando o Orientador de Otimização do Mecanismo de Banco de Dados ajusta os bancos de dados, cria resumos, recomendações, relatórios e logs de ajuste. Você pode usar a saída do log de ajuste para solucionar problemas das sessões de ajuste do Orientador de Otimização do Mecanismo de Banco de Dados. Você pode usar os resumos, as recomendações e os relatórios para determinar se deseja implementar recomendações de ajuste ou continuar ajustando até atingir o desempenho de consulta necessário para instalar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter informações sobre como usar o Database Tuning Advisor para criar cargas de trabalho ou ajustar um banco de dados, consulte [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-##  <a name="View"></a> Exibir saída de ajuste  
+##  <a name="view-tuning-output"></a><a name="View"></a> Exibir saída de ajuste  
  Os procedimentos a seguir descrevem como exibir recomendações de ajuste, resumos, relatórios e logs de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados. Para obter mais informações sobre as opções da interface do usuário, consulte [Descrições da interface do usuário](#UI) posteriormente neste tópico.  
   
  Você também pode usar a GUI para exibir a saída de ajuste gerada pelo utilitário de linha de comando **dta** .  
@@ -85,7 +85,7 @@ ms.locfileid: "74165485"
   
      Quando todos os eventos da sessão de ajuste tiverem sido analisados pelo Orientador de Otimização do Mecanismo de Banco de Dados, será exibida uma mensagem indicando que o log de ajuste está vazio para a sessão. Se **Salvar log de ajuste** não estiver marcado na guia **Geral** quando a sessão de ajuste foi executada originalmente, será exibida uma mensagem indicativa.  
   
-##  <a name="Implement"></a> implementar recomendações de ajuste  
+##  <a name="implement-tuning-recommendations"></a><a name="Implement"></a> implementar recomendações de ajuste  
  Você pode implementar as recomendações do Orientador de Otimização do Mecanismo de Banco de Dados manualmente ou automaticamente como parte da sessão de ajuste. Se quiser examinar os resultados do ajuste antes de implementá-los, use a GUI do Orientador de Otimização do Mecanismo de Banco de Dados. Você pode usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para executar manualmente os scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , que o Orientador de Otimização do Mecanismo de Banco de Dados gera como resultado da análise de uma carga de trabalho para implementar as recomendações. Se você não precisar examinar os resultados antes de implementá-los, poderá usar a opção **-a** com o utilitário de prompt de comando **dta** . Isso faz com que o utilitário implemente as recomendações de ajuste automaticamente depois de analisar sua carga de trabalho. Os procedimentos a seguir explicam como usar ambas as interfaces do Orientador de Otimização do Mecanismo de Banco de Dados para implementar as recomendações de ajuste.  
   
 #### <a name="to-manually-implement-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Para implementar manualmente as recomendações de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados  
@@ -120,7 +120,7 @@ ms.locfileid: "74165485"
   
 3.  Pressione ENTER.  
   
-##  <a name="Analysis"></a> Executar análises exploratórias  
+##  <a name="perform-exploratory-analysis"></a><a name="Analysis"></a> Executar análises exploratórias  
  O recurso de configuração especificado pelo usuário do Orientador de Otimização do Mecanismo de Banco de Dados permite que os administradores de banco de dados executem análises exploratórias. Usando esse recurso, os administradores de banco de dados especificam um design de banco de dados físico desejado no Orientador de Otimização do Mecanismo de Banco de Dados e, então, podem avaliar os efeitos de desempenho desse design sem implementá-lo. A configuração especificada pelo usuário é suportada pela interface gráfica do usuário (GUI) e pelo utilitário de linha de comando do Orientador de Otimização do Mecanismo de Banco de Dados. No entanto, o utilitário de linha de comando oferece maior flexibilidade.  
   
  Se você usar a interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados, poderá avaliar os efeitos da implementação de um subconjunto de uma recomendação de ajuste do Orientador, mas não poderá adicionar estruturas de design físicas hipotéticas do Orientador para avaliação.  
@@ -184,7 +184,7 @@ ms.locfileid: "74165485"
   
 7.  Repita os passos 6 e 7 até criar uma configuração hipotética que produza a melhoria no desempenho de consulta que você deseja. Em seguida, você pode implementar a configuração nova. Para obter mais informações, consulte [Implementar recomendações de ajuste](#Implement) , anteriormente neste tópico.  
   
-##  <a name="ReviewEvaluateClone"></a> Revisar, avaliar e clonar sessões de ajuste  
+##  <a name="review-evaluate-and-clone-tuning-sessions"></a><a name="ReviewEvaluateClone"></a> Revisar, avaliar e clonar sessões de ajuste  
  O Orientador de Otimização do Mecanismo de Banco de Dados cria uma nova sessão de ajuste a cada vez que você começa a análise dos efeitos de uma carga de trabalho em seu banco de dados ou bancos de dados. Você pode usar o painel **Monitor de Sessão** da GUI do Orientador de Otimização do Mecanismo de Banco de Dados para exibir ou recarregar todas as sessões de ajuste executadas em uma determinada instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dispor de todas as sessões de ajuste existentes disponíveis para revisão facilita: clonar sessões com base nas sessões existentes, editar recomendações existentes de ajuste e então usar o Orientador de Otimização do Mecanismo de Banco de Dados para avaliar a sessão editada ou executar o ajuste em intervalos regulares para monitorar o design físico dos seus bancos de dados. Por exemplo, você pode decidir ajustar o banco de dados com uma programação mensal.  
   
  Antes de poder revisar qualquer sessão de ajuste para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], crie sessões de ajuste na instância do servidor, ajustando cargas de trabalho com o Orientador de Otimização do Mecanismo de Banco de Dados. Para obter mais informações, consulte [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
@@ -242,7 +242,7 @@ ms.locfileid: "74165485"
   
 6.  Clique no botão **Iniciar Análise** na barra de ferramentas para analisar os efeitos da carga de trabalho como em qualquer outra sessão de ajuste. Quando o Orientador de Otimização do Mecanismo de Banco de Dados terminar, você pode exibir os resultados dessa sessão como faria normalmente com qualquer outra.  
   
-##  <a name="UI"></a> Descrições da interface do usuário  
+##  <a name="user-interface-descriptions"></a><a name="UI"></a> Descrições da interface do usuário  
   
 ### <a name="sessions-monitor"></a>Monitoramento de sessões  
  O**Monitor de Sessão** exibe informações sobre as sessões abertas no Orientador de Otimização do Mecanismo de Banco de Dados. Selecione um nome de sessão no **Monitor de Sessão**para exibir informações sobre a sessão na janela Propriedades.  

@@ -13,10 +13,10 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.openlocfilehash: 83337465d8f8a7c12c9a1d69d7e9e2186485f549
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198373"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Usar autenticação do Active Directory com o SQL Server em Linux
@@ -46,11 +46,11 @@ Antes de iniciar a Autenticação do AD, é necessário:
   * [SUSE Linux Enterprise Server (SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-## <a id="join"></a> Ingressar o host [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no domínio do AD
+## <a name="join-ssnoversion-host-to-ad-domain"></a><a id="join"></a> Ingressar o host [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no domínio do AD
 
 Ingresse no host do SQL Server Linux com um controlador de domínio do Active Directory. Para saber mais sobre como ingressar um domínio do Active Directory, confira [Ingressar SQL Server em um host Linux em um domínio do Active Directory](sql-server-linux-active-directory-join-domain.md).
 
-## <a id="createuser"></a> Criar usuário do AD (ou MSA) para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e definir SPN
+## <a name="create-ad-user-or-msa-for-ssnoversion-and-set-spn"></a><a id="createuser"></a> Criar usuário do AD (ou MSA) para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e definir SPN
 
 > [!NOTE]
 > As seguintes etapas usam seu [nome de domínio totalmente qualificado](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Se você estiver no **Azure**, deverá **[criar um](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** antes de continuar.
@@ -80,14 +80,14 @@ Ingresse no host do SQL Server Linux com um controlador de domínio do Active Di
 
 Para obter mais informações, veja [Registrar um nome de entidade de serviço para conexões de Kerberos](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
-## <a id="configurekeytab"></a> Configurar keytab do serviço do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+## <a name="configure-ssnoversion-service-keytab"></a><a id="configurekeytab"></a> Configurar keytab do serviço do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 A configuração da autenticação do AD para o SQL Server em Linux exige uma conta do AD (uma conta de usuário do AD ou MSA) e o SPN criado na seção anterior.
 
 > [!IMPORTANT]
 > Se a senha da conta do AD for alterada ou a senha da conta à qual os SPNs são atribuídos for alterada, você precisará atualizar o keytab com a nova senha e o KVNO (número de versão da chave). Alguns serviços também podem girar as senhas automaticamente. Examine as políticas de rotação de senha das contas em questão e alinhe-as com as atividades de manutenção agendada para evitar tempo de inatividade inesperado.
 
-### <a id="spn"></a> Entradas keytab do SPN
+### <a name="spn-keytab-entries"></a><a id="spn"></a> Entradas keytab do SPN
 
 1. Verifique o KVNO (número de versão da chave) da conta do AD criada na etapa anterior. Normalmente, é 2, mas poderia ser outro inteiro se você alterasse a senha da conta várias vezes. No computador host do SQL Server, execute os seguintes comandos:
 
@@ -164,7 +164,7 @@ A configuração da autenticação do AD para o SQL Server em Linux exige uma co
 
 Neste ponto, você está pronto para usar logons baseados no AD no SQL Server.
 
-## <a id="createsqllogins"></a> Criar logons baseados em AD no Transact-SQL
+## <a name="create-ad-based-logins-in-transact-sql"></a><a id="createsqllogins"></a> Criar logons baseados em AD no Transact-SQL
 
 1. Conecte-se ao SQL Server e crie um logon baseado no AD:
 
@@ -178,7 +178,7 @@ Neste ponto, você está pronto para usar logons baseados no AD no SQL Server.
    SELECT name FROM sys.server_principals;
    ```
 
-## <a id="connect"></a> Conectar-se ao SQL Server usando a Autenticação do AD
+## <a name="connect-to-sql-server-using-ad-authentication"></a><a id="connect"></a> Conectar-se ao SQL Server usando a Autenticação do AD
 
 Faça logon em um computador cliente usando suas credenciais de domínio. Agora você pode se conectar ao SQL Server sem reinserir sua senha usando a Autenticação do AD. Se você criar um logon para um grupo do AD, qualquer usuário do AD que seja membro desse grupo poderá se conectar da mesma maneira.
 
@@ -213,7 +213,7 @@ A tabela a seguir descreve recomendações para outros drivers do cliente:
 | **ODBC** | Use a Autenticação Integrada. |
 | **ADO.NET** | Sintaxe de Cadeia de Conexão. |
 
-## <a id="additionalconfig"></a> Opções de configuração adicionais
+## <a name="additional-configuration-options"></a><a id="additionalconfig"></a> Opções de configuração adicionais
 
 Se você estiver usando utilitários de terceiros, como [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) ou [Centrify](https://www.centrify.com/) para ingressar o host Linux no domínio do AD e gostaria de forçar o SQL Server a usar a biblioteca openldap diretamente, poderá configurar a opção **disablesssd** com **mssql-conf** da seguinte maneira:
 

@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: e2ec01c0dcb22317e2e20e4485621d2a9aa8352a
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903803"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Mestre de Expansão de Integration Services (SSIS)
@@ -42,7 +42,7 @@ O serviço Mestre do Scale Out é um serviço Windows responsável pela comunica
     - [[catalog].[disable_worker_agent]](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)
     - [[catalog].[enable_worker_agent]](../../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md)
 
-- Para executar pacotes no Scale Out:
+- Para executar pacotes na Escala horizontal:
     - [[catalog].[create_execution]](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)
     - [[catalog].[add_execution_worker]](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)
     - [[catalog].[start_execution]](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)

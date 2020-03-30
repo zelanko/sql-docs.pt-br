@@ -9,10 +9,10 @@ ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 546af7322a8aeced15c0593fa2c1fdde5af632cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079627"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formatando escalas de um medidor (Construtor de Relatórios e SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "77079627"
   
  Para se familiarizar rapidamente com escalas de formatação, consulte [Definir mínimo ou máximo em um medidor &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md).  
   
-##  <a name="DefiningMinMax"></a> Definindo o mínimo, o máximo e os intervalos em uma escala  
+##  <a name="defining-minimum-maximum-and-intervals-on-a-scale"></a><a name="DefiningMinMax"></a> Definindo o mínimo, o máximo e os intervalos em uma escala  
  Um medidor é usado com frequência para exibir KPIs que são medidos em porcentagens de 0 a 100, portanto esses são os valores padrão fornecidos para as propriedades de máximo e de mínimo no medidor. Porém, esses valores podem não representar a escala de valores que você está tentando mostrar. Como não há nenhuma lógica interna para determinar o que o campo de dados de KPI representa, o medidor não calcula automaticamente os valores mínimo e máximo. Se o campo de dados de KPI não for um valor entre 0 e 100, você deverá definir explicitamente os valores das propriedades de mínimo e máximo para fornecer contexto para o valor que está sendo exibido no medidor.  
   
  Há marcas de escala principais e secundárias. Além disso, a escala tem rótulos que normalmente estão associados às marcas de escala principais. Por exemplo, uma escala pode ter marcas principais em 0, 20, 40, 60, 80 e 100. Os rótulos devem corresponder a essas marcas de escala. A diferença entre os valores de rótulos é chamada de intervalo de escala. Neste exemplo, o intervalo de escala está definido como 20. É possível definir a propriedade de Intervalo na caixa de diálogo **Propriedades de Escala Radial** ou **Propriedades de Escala Linear** .  
@@ -47,13 +47,13 @@ ms.locfileid: "77079627"
   
  O deslocamento do intervalo determina o número de unidades que serão puladas antes do primeiro rótulo ser mostrado. Todas as marcas de escala e rótulos principais sucessivos que aparecerem na escala usarão o intervalo especificado. Um valor de 0 para intervalos de rótulo ou marca de escala tem o mesmo efeito que a definição do intervalo como Automático.  
   
-##  <a name="ReducingCollisions"></a> Reduzindo colisões de rótulos com multiplicadores  
+##  <a name="reducing-label-collisions-with-multipliers"></a><a name="ReducingCollisions"></a> Reduzindo colisões de rótulos com multiplicadores  
  Se os valores contiverem muitos dígitos, eles poderão obscurecer a legibilidade do medidor. É possível usar um multiplicador de escala para aumentar ou reduzir a escala dos valores. Quando um multiplicador de escala é especificado, cada valor original na escala é multiplicado pelo multiplicador antes de ser exibido na escala. Para reduzir a escala de valores, você deve especificar um número decimal. Por exemplo, se a escala for de 0 a 10000, mas você desejar mostrar os números 0 a 10 no medidor, um valor multiplicador de 0,001 poderá ser usado.  
   
 > [!NOTE]  
 >  O uso de um multiplicador não multiplica o valor real do campo agregado usado pelo medidor. Ele apenas multiplica os valores dos rótulos exibidos no medidor depois que o mínimo, o máximo e os intervalos estiverem definidos. Considere a possibilidade de manter os cálculos do intervalo como automáticos ao usar um multiplicador.  
   
-##  <a name="SpecifyingScaleBar"></a> Especificando a largura da barra da escala, o raio e os ângulos em uma escala radial  
+##  <a name="specifying-the-scale-bar-width-radius-and-angles-on-a-radial-scale"></a><a name="SpecifyingScaleBar"></a> Especificando a largura da barra da escala, o raio e os ângulos em uma escala radial  
  Use a página **Layout** da caixa de diálogo **Propriedades de Escala Radial** para definir a largura da barra da escala, o raio da escala, o ângulo inicial e o ângulo de flecha da escala. Você pode usar essas propriedades para personalizar o tamanho e o formato da escala. Por exemplo, se você posicionar rótulos da escala fora da escala, será necessário redimensionar o raio da escala para ajustar os rótulos dentro do medidor.  
   
 > [!NOTE]  
@@ -69,7 +69,7 @@ ms.locfileid: "77079627"
   
  O ângulo de flecha é o número de graus, entre 0 e 360, que a escala varrerá em um círculo. Um ângulo de flecha de 360 graus produz uma escala que é um círculo completo. Isto será útil se você desejar criar um medidor parecido com um relógio.  
   
-##  <a name="PositioningLabels"></a> Posicionando rótulos em uma escala linear ou radial  
+##  <a name="positioning-labels-on-a-linear-or-radial-scale"></a><a name="PositioningLabels"></a> Posicionando rótulos em uma escala linear ou radial  
  Há duas propriedades que determinam a posição dos rótulos. A propriedade de posicionamento de rótulos especifica se os rótulos serão exibidos no lado de dentro, de fora, ou ao longo da barra de escala. A propriedade de distância define a distância do rótulo em relação à escala, iniciando na barra da escala. Se você desejar posicionar rótulos dentro da barra da escala, especifique um número negativo. Por exemplo, se os rótulos estiverem fora da escala e você tiver definido uma distância da escala de 10, os rótulos serão mostrados 10 unidades fora do local onde os rótulos são posicionados normalmente, onde 1 unidade é:  
   
 -   1% do diâmetro do medidor em um medidor radial, ou  

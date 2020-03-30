@@ -11,10 +11,10 @@ ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e4cfac1ba56647ae0218242d0fb9228a3e80579
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286160"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Criar relatórios paginados do Reporting Services com o Designer de relatórios (SSRS)
@@ -37,7 +37,7 @@ Os projetos de relatório atuam como contêineres para recursos e definições d
  Use as informações deste tópico para criar relatórios paginados e itens relacionados para um único projeto de relatório em uma solução do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Para saber mais sobre soluções e vários projetos no SQL Server Data Tools, veja [Reporting Services no SQL Server Data Tools](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
 
   
-##  <a name="bkmk_SharedDataSources"></a> Fontes de dados compartilhadas  
+##  <a name="shared-data-sources"></a><a name="bkmk_SharedDataSources"></a> Fontes de dados compartilhadas  
  Use o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para definir e implantar fontes de dados compartilhadas para uma solução de relatório. As fontes de dados compartilhadas podem ser implantadas independentemente de outros itens em um projeto por meio das propriedades **OverwriteDataSources** e **TargetDataSourceFolder** . Para obter mais informações, consulte [Definir propriedades de implantação &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
  No Designer de Relatórios, você trabalha no painel Dados do Relatório e no Gerenciador de Soluções para definir as fontes de dados usadas em um relatório. Para obter mais informações, consulte [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Você não pode usar o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para abrir fontes de dados publicadas em um servidor de relatório ou site do SharePoint, mas não incluídas na solução do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Para esse recurso, use [Ambiente de criação do Construtor de Relatórios &#40;SSRS&#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md).  
@@ -46,14 +46,14 @@ Os projetos de relatório atuam como contêineres para recursos e definições d
   
  Para saber mais, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
    
-##  <a name="bkmk_SharedDatasets"></a> Conjuntos de dados compartilhados  
+##  <a name="shared-datasets"></a><a name="bkmk_SharedDatasets"></a> Conjuntos de dados compartilhados  
  Use o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para definir e implantar conjuntos de dados compartilhados para uma solução de relatório. Os conjuntos de dados compartilhados podem ser implantadas independentemente de outros itens em um projeto por meio das propriedades **OverwriteDatasets** e **TargetDatasetFolder** . Para obter mais informações, consulte [Definir propriedades de implantação &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
  No Designer de Relatórios, você trabalha no painel Dados do Relatório e no Gerenciador de Soluções para definir os conjuntos de dados compartilhados usados em um relatório. Para obter mais informações, consulte [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Você não pode usar o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para abrir conjuntos de dados publicados diretamente em um servidor de relatório ou site do SharePoint. Para esse recurso, use [Ambiente de criação do Construtor de Relatórios &#40;SSRS&#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md) no modo de Conjunto de Dados Compartilhado.  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] é uma ferramenta de cliente. Você pode usar designers de consulta para ajudar a criar e testar os resultados de suas consultas localmente em Visualização. Depois da implantação, você pode gerenciar conjuntos de dados compartilhados independentemente das fontes de dados compartilhadas e dos relatórios dos quais eles dependem. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [Ferramentas de Design da Consulta &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md), e [Gerenciar conjuntos de dados compartilhados](../../reporting-services/report-data/manage-shared-datasets.md).  
   
-##  <a name="bkmk_Reports"></a> Relatórios paginados  
+##  <a name="paginated-reports"></a><a name="bkmk_Reports"></a> Relatórios paginados  
 Relatórios paginados são arquivos armazenados em um projeto de relatório. Os relatórios podem ser usados como relatórios autônomos, sub-relatórios ou os destinos para ações de detalhamento de relatórios principais. Os relatórios podem ser implantadas independentemente de outros itens em um projeto por meio da propriedade **TargetReportFolder** e de outras propriedades. Para obter mais informações, consulte [Definir propriedades de implantação &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
 > [!NOTE]  
@@ -84,18 +84,18 @@ Relatórios paginados são arquivos armazenados em um projeto de relatório. Os 
   
      Para obter mais informações, consulte [Linguagem RDL &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md).  
   
-##  <a name="bkmk_ReportParts"></a> Partes de relatório  
+##  <a name="report-parts"></a><a name="bkmk_ReportParts"></a> Partes de relatório  
  No Designer de Relatórios, depois de criar tabelas, gráficos e outros itens de relatório paginado em um projeto, você pode publicá-los como *partes de relatório* em um servidor de relatório ou site do SharePoint integrado com um servidor de relatório de forma que você e outros usuários possam reutilizá-las em outros relatórios. Para obter mais informações, consulte [Partes de relatório no Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
  As partes de relatório podem ser implantadas independentemente de outros itens em um projeto por meio da propriedade **TargetReportPartFolder** e de outras propriedades. Para obter mais informações, consulte [Definir propriedades de implantação &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
-##  <a name="bkmk_Resources"></a> Recursos  
+##  <a name="resources"></a><a name="bkmk_Resources"></a> Recursos  
  Você pode adicionar arquivos a seu projeto que estejam relacionados a seu relatório, mas não sejam processados pelo servidor de relatório. Por exemplo, você pode adicionar imagens para imagens ou arquivos de forma ESRI para dados espaciais. Para saber mais, confira [Recursos](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
  
-##  <a name="bkmk_ReportLayout"></a> Layout de relatório paginado  
+##  <a name="paginated-report-layout"></a><a name="bkmk_ReportLayout"></a> Layout de relatório paginado  
  Para criar o layout do relatório, arraste itens do relatório e regiões de dados da Caixa de Ferramentas para a superfície de design e organize-os. Arraste os campos de conjunto de dados para os itens na superfície de design para adicionar dados ao relatório. Para organizar dados em grupos em uma região de dados tablix, arraste campos de conjunto de dados para o painel Agrupamento. Como as ferramentas de criação de relatório são essencialmente uma maneira de criar definições de relatório, a abordagem do design de relatórios é bastante semelhante entre Construtor de Relatórios e Designer de Relatórios.  
    
-##  <a name="bkmk_Preview"></a> Visualizar um relatório paginado  
+##  <a name="preview-a-paginated-report"></a><a name="bkmk_Preview"></a> Visualizar um relatório paginado  
  Use a **Visualização** para verificar os dados e o design de layout do relatório. Quando você visualiza um relatório, o processador de relatório valida o esquema de definição de relatório e a sintaxe de expressão e lista os problemas na janela [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) .  
   
 > [!NOTE]  
@@ -138,7 +138,7 @@ Relatórios paginados são arquivos armazenados em um projeto de relatório. Os 
   
     -   O layout do relatório precisa de modificação para melhor leitura em um formato impresso.  
    
-##  <a name="bkmk_SaveandDeploy"></a> Salvar e implantar relatórios paginados  
+##  <a name="save-and-deploy-paginated-reports"></a><a name="bkmk_SaveandDeploy"></a> Salvar e implantar relatórios paginados  
  No Designer de Relatórios, você pode salvar relatórios e outros arquivos de projeto localmente ou implantá-los em um servidor de relatório ou site do SharePoint. Fontes de dados compartilhadas, conjuntos de dados compartilhados, relatórios, recursos e partes de relatório podem ser implantados independentemente ou em conjunto dependendo das propriedades de implantação configuradas. Para obter mais informações, consulte [Configuration and Deployment Properties](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties).  
   
  No Designer de Relatórios, é importante entender que você cria um relatório por meio do esquema de definição de relatório com suporte da versão atual do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Quando você define propriedades de implantação de projeto para um servidor de relatório específico ou site do SharePoint e, em seguida, salva o relatório, o Designer de Relatórios salva a definição de relatório no diretório de compilação no esquema que corresponde à versão no servidor de relatório de destino. Para criar relatórios que podem ser publicados em um servidor de relatório de versão anterior, o Designer de Relatórios remove itens de relatório que não existem no esquema de destino. Isto ocorre automaticamente e sem solicitar. Quando isso ocorre, a definição de relatório original é preservada na pasta do projeto. A definição de relatório modificada que é implantada está na pasta de compilação.  
@@ -159,7 +159,7 @@ Relatórios paginados são arquivos armazenados em um projeto de relatório. Os 
 ### <a name="export-a-paginated-report-to-a-different-file-format"></a>Exportar um relatório paginado para um formato de arquivo diferente  
  Os relatórios podem ser exportados para diversos formatos; esses formatos afetam o funcionamento de alguns recursos de interatividade e de layout de relatório. Para obter mais informações sobre considerações de design para vários formatos de saída, consulte [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
    
-##  <a name="bkmk_ReportValidationandErrorLevels"></a> Validação de relatórios e níveis de erro  
+##  <a name="report-validation-and-error-levels"></a><a name="bkmk_ReportValidationandErrorLevels"></a> Validação de relatórios e níveis de erro  
  Os relatórios são validados antes da visualização e durante a implantação. Vários problemas de compilação podem ocorrer ao compilar relatórios. Os relatórios podem conter cadeias de caracteres como expressões ou consultas incompatíveis com a versão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que a configuração do projeto especifica, por exemplo.  
   
  Use a propriedade ErrorLevel para gerenciar os avisos e os erros de build. A propriedade ErrorLevel pode conter um valor de 0 a 4, inclusive. O valor determina quais problemas de compilação são relatados como erros e quais são relatados como avisos. O valor padrão é 2. Os avisos e erros são gravados na janela [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][Saída](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) .  

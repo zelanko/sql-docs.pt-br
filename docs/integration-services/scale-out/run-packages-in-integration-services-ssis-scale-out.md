@@ -13,10 +13,10 @@ ms.author: haoqian
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72305078"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Executar pacotes no SSIS (Integration Services) Scale Out
@@ -32,7 +32,7 @@ Depois de implantar pacotes no servidor do Integration Services, execute-os no S
 
 -   [trabalhos do SQL Server Agent](#sql_agent)
 
-## <a name="scale_out_dialog"></a> Executar pacotes com a caixa de diálogo Executar Pacote no Scale Out
+## <a name="run-packages-with-the-execute-package-in-scale-out-dialog-box"></a><a name="scale_out_dialog"></a> Executar pacotes com a caixa de diálogo Executar Pacote no Scale Out
 
 1. Abra a caixa de diálogo Executar Pacote no Scale Out.
 
@@ -61,7 +61,7 @@ Depois de implantar pacotes no servidor do Integration Services, execute-os no S
 
     Clique em **OK** para iniciar as execuções de pacote. Para exibir o relatório de execução de um pacote, clique com o botão direito do mouse no pacote em Pesquisador de Objetos, clique em **Relatórios**, clique em **Todas as Execuções**e encontre a execução.
     
-## <a name="stored_proc"></a> Executar pacotes com procedimentos armazenados
+## <a name="run-packages-with-stored-procedures"></a><a name="stored_proc"></a> Executar pacotes com procedimentos armazenados
 
 1.  Crie execuções.
 
@@ -124,7 +124,7 @@ Depois de definir esse modo de execução padrão, você não precisará mais es
 
 Para alternar o modo de execução padrão novamente para que os pacotes não sejam mais executados por padrão no modo do Scale Out, defina **Modo de execução Padrão de todo o servidor** como **Servidor**.
 
-## <a name="sql_agent"></a> Executar pacote em um trabalho do SQL Server Agent
+## <a name="run-package-in-sql-server-agent-job"></a><a name="sql_agent"></a> Executar pacote em um trabalho do SQL Server Agent
 Em um trabalho do SQL Server Agent, você pode executar um pacote do SSIS como uma etapa do trabalho. Para executar o pacote no Scale Out, defina o modo de execução padrão como **Scale Out**. Depois de definir o modo de execução padrão como **Scale Out**, os pacotes em trabalhos do SQL Server Agent serão executados no modo do Scale Out.
 
 ## <a name="next-steps"></a>Próximas etapas

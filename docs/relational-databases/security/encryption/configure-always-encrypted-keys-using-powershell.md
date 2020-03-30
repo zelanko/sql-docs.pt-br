@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2748ffa055927670b840a17590dc4e29436deb30
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73594463"
 ---
 # <a name="provision-always-encrypted-keys-using-powershell"></a>Provisionar chaves do Always Encrypted usando o PowerShell
@@ -27,7 +27,7 @@ Para obter uma visão geral do gerenciamento de chaves do Always Encrypted, incl
 Para obter informações sobre como começar a usar o módulo do SqlServer PowerShell para Always Encrypted, consulte [Configurar Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
 
-## <a name="KeyProvisionWithoutRoles"></a> Provisionamento de chave sem separação de funções
+## <a name="key-provisioning-without-role-separation"></a><a name="KeyProvisionWithoutRoles"></a> Provisionamento de chave sem separação de funções
 
 O método de provisionamento de chave descrito nesta seção não dá suporte à separação de funções entre os Administradores de Segurança e DBAs. Algumas das etapas a seguir combinam operações em chaves físicas com operações em metadados de chaves. Portanto, esse método de provisionamento das chaves é recomendado para organizações que usam o modelo de DevOps ou se o banco de dados está hospedado na nuvem e a principal meta é impedir que os administradores de nuvem (mas não os DBAs locais) acessem dados confidenciais. Isso não é recomendável se os adversários em potencial incluem DBAs ou se os DBAs não devem ter acesso a dados confidenciais.
 
@@ -164,7 +164,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
 ```
 
-## <a name="KeyProvisionWithRoles"></a> Provisionamento de chave com separação de funções
+## <a name="key-provisioning-with-role-separation"></a><a name="KeyProvisionWithRoles"></a> Provisionamento de chave com separação de funções
 
 Esta seção fornece as etapas para configurar a criptografia na qual os administradores de segurança não têm acesso ao banco de dados e os administradores de banco de dados não têm acesso às chaves de texto não criptografado ou ao repositório de chaves.
 

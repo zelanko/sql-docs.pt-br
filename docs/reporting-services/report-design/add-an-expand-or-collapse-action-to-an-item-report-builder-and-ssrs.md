@@ -10,10 +10,10 @@ ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 776326093518aa33f8f031e4c4d6675791acf82d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242546"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder--ssrs"></a>Adicionar uma ação de expandir ou recolher a um item (Construtor de Relatórios e SSRS)

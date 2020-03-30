@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9dc0d760bd7fd6a89d9829fa5e883ef1ad9b59b7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76934198"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar o SQL Server por meio do Assistente de Instalação (Instalação)
@@ -41,7 +41,7 @@ Para ver outras maneiras de instalar o [!INCLUDE[ssNoVersion](../../includes/ssn
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Antes de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira o tópico [Como planejar uma instalação do SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
@@ -50,7 +50,7 @@ Antes de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], c
 
 ::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
-###  <a name="bkmk_ga_instalpatch"></a> Instalar o requisito de patch
+###  <a name="install-patch-requirement"></a><a name="bkmk_ga_instalpatch"></a> Instalar o requisito de patch
 
 A Microsoft identificou um problema com os binários de runtime do Microsoft Visual C++ 2013, que são instalados como um pré-requisito pelo SQL Server 2016 e 2017. Uma atualização está disponível para correção deste problema. Se essa atualização para os binários de runtime do Visual C++ não for instalada, o SQL Server poderá apresentar problemas de estabilidade em determinados cenários. Antes de instalar o SQL Server, siga as instruções das [Notas de versão do SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) para ver se seu computador precisa de um patch para os binários de runtime do Visual C++. 
 

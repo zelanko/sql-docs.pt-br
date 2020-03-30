@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0bca0d4e70c1b147e5c0231936d588cc914bb1d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242703"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Passo a passo: Criar e executar um teste de unidade do SQL Server
@@ -39,10 +39,10 @@ Neste passo a passo, você executará as seguintes tarefas:
   
 Depois que um dos testes de unidade detecta um erro em um procedimento armazenado, você corrige esse erro e executa o teste novamente.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 Para concluir esse passo a passo, você precisa se conectar a um servidor de banco de dados (ou banco de dados LocalDB) no qual tenha permissões para criar e implantar um banco de dados. Para saber mais, confira [Permissões necessárias para os recursos de banco de dados do Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
   
-## <a name="CreateScript"></a>Criar um script que contenha um esquema de banco de dados  
+## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>Criar um script que contenha um esquema de banco de dados  
   
 #### <a name="to-create-a-script-from-which-you-can-import-a-schema"></a>Para criar um script a partir do qual você possa importar um esquema  
   
@@ -222,7 +222,7 @@ Para concluir esse passo a passo, você precisa se conectar a um servidor de ban
   
     Em seguida, você cria um projeto de banco de dados e importa o esquema do script criado.  
   
-## <a name="CreateProjectAndImport"></a>Criar um projeto de banco de dados e importar um esquema  
+## <a name="create-a-database-project-and-import-a-schema"></a><a name="CreateProjectAndImport"></a>Criar um projeto de banco de dados e importar um esquema  
   
 #### <a name="to-create-a-database-project"></a>Para criar um projeto de banco de dados  
   
@@ -263,10 +263,10 @@ Para concluir esse passo a passo, você precisa se conectar a um servidor de ban
   
 2.  No **Pesquisador de Objetos do SQL Server**, observe o banco de dados no nó Projetos.  
   
-## <a name="DeployDBProj"></a>Implantar no LocalDB  
+## <a name="deploying-to-localdb"></a><a name="DeployDBProj"></a>Implantar no LocalDB  
 Por padrão, quando você pressiona F5, implanta (ou publica) o banco de dados em um banco de dados LocalDB. Você pode alterar o local do banco de dados indo para a guia Depurar da página de propriedades do projeto e alterando a cadeia de conexão.  
   
-## <a name="CreateDBUnitTests"></a>Criar testes de unidade do SQL Server  
+## <a name="create-sql-server-unit-tests"></a><a name="CreateDBUnitTests"></a>Criar testes de unidade do SQL Server  
   
 #### <a name="to-create-a-sql-server-unit-test-for-the-stored-procedures"></a>Para criar um teste de unidade do SQL Server para os procedimentos armazenados  
   
@@ -297,7 +297,7 @@ Por padrão, quando você pressiona F5, implanta (ou publica) o banco de dados e
   
     O projeto de teste é compilado e o Designer de Teste de Unidade do SQL Server é exibido. Em seguida, você atualizará a lógica do teste no script Transact\-SQL dos testes de unidade.  
   
-## <a name="DefineTestLogic"></a>Definir a lógica do teste  
+## <a name="define-test-logic"></a><a name="DefineTestLogic"></a>Definir a lógica do teste  
 Esse banco de dados simples tem duas tabelas, Customer e Order. Você atualiza o banco de dados usando os seguintes procedimentos armazenados:  
   
 -   uspNewCustomer - Este procedimento armazenado adiciona um registro à tabela Customer, que define as colunas YTDOrders e YTDSales do cliente como zero.  
@@ -699,7 +699,7 @@ Os testes presumem que o banco de dados começa em um estado limpo. Você criar�
   
     Neste ponto do processo, você estará pronto para a execução dos testes.  
   
-## <a name="RunTests"></a>Executar testes de unidade do SQL Server  
+## <a name="run-sql-server-unit-tests"></a><a name="RunTests"></a>Executar testes de unidade do SQL Server  
   
 #### <a name="to-run-the-sql-server-unit-tests"></a>Para executar testes de unidade do SQL Server  
   
@@ -755,7 +755,7 @@ Os testes presumem que o banco de dados começa em um estado limpo. Você criar�
   
     O teste é aprovado.  
   
-## <a name="NegativeTest"></a>Adicionar um teste de unidade negativo  
+## <a name="add-a-negative-unit-test"></a><a name="NegativeTest"></a>Adicionar um teste de unidade negativo  
 Você pode criar um teste negativo para verificar se um teste apresentará falha quando realmente deveria. Por exemplo, se você tentar cancelar um pedido que já foi preenchido, esse teste apresentará falha. Nesta parte do passo a passo, você cria um teste de unidade negativo para o procedimento armazenado Sales.uspCancelOrder.  
   
 Para criar e verificar um teste negativo, execute as seguintes tarefas:  

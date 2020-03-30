@@ -20,10 +20,10 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4f3dbfa81e52d050b3e5df46ea2ea5911a8b1254
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903683"
 ---
 # <a name="install-integration-services-ssis"></a>Instalar o SSIS (Integration Services)

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6934d3ae816df23d68843eb49d5eca8c95d83d57
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727462"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Como criar consultas MDX em R usando olapR
@@ -32,7 +32,7 @@ Não há suporte para as operações a seguir:
 + Criação de novos objetos OLAP
 + Write-back para partições, incluindo medidas ou somas
 
-## <a name="buildMDX"></a> Criar uma consulta MDX usando o R
+## <a name="build-an-mdx-query-from-r"></a><a name="buildMDX"></a> Criar uma consulta MDX usando o R
 
 1. Defina uma cadeia de conexão que especifica a fonte de dados OLAP (instância do SSAS) e o provedor MSOLAP.
 
@@ -58,7 +58,7 @@ Não há suporte para as operações a seguir:
   + `executeMD` Retorna uma matriz multidimensional
   + `execute2D` Retorna um quadro de dados (tabular) bidimensional
 
-## <a name="executeMDX"></a> Executar uma consulta MDX válida do R
+## <a name="execute-a-valid-mdx-query-from-r"></a><a name="executeMDX"></a> Executar uma consulta MDX válida do R
 
 1. Defina uma cadeia de conexão que especifica a fonte de dados OLAP (instância do SSAS) e o provedor MSOLAP.
 

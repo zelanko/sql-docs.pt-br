@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68077440"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Criar e configurar um grupo de disponibilidade para SQL Server em Linux
@@ -59,7 +59,7 @@ Você também pode modificar o arquivo `mssql.conf`, localizado sob a pasta `/va
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Reinicie o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="restart-ssnoversion-md"></a>Reinicie o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Depois de habilitar os grupos de disponibilidade, como no Windows, você deve reiniciar o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Isso pode ser feito pelo seguinte:
 
 ```bash
@@ -316,7 +316,7 @@ Este exemplo criará certificados para uma configuração de três nós. Os nome
 
 Esta seção aborda como usar o [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] SSMS (ou o Transact-SQL) para criar o grupo de disponibilidade para o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Use [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)].
+### <a name="use-ssmanstudiofull-md"></a>Use [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)].
 
 Esta seção mostra como criar um AG com um tipo de cluster Externo usando o SSMS com o Assistente de Novo Grupo de Disponibilidade.
 
@@ -533,7 +533,7 @@ Este exemplo mostra a criação de uma configuração de duas réplicas usando u
     GO
     ```
 
-## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>Criar o logon [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e as permissões para o Pacemaker
+## <a name="create-the-ssnoversion-md-login-and-permissions-for-pacemaker"></a>Criar o logon [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e as permissões para o Pacemaker
 
 Um cluster de alta disponibilidade do Pacemaker subjacente a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux precisa de acesso à instância do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], bem como permissões no grupo de disponibilidade em si. Essas etapas criam o logon e as permissões associadas, juntamente com um arquivo que informa ao Pacemaker como fazer logon no [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 

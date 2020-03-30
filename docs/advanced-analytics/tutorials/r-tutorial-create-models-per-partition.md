@@ -10,10 +10,10 @@ ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ee5d6cbf9b1d5430e431cf04fb3b86ae7fb5743b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73726231"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutorial: Criar modelos baseados em partição no R no SQL Server
@@ -33,7 +33,7 @@ Neste tutorial, aprenda a usar a modelagem baseada em partição usando os dados
 > * Crie e treine modelos em cada partição e armazene os objetos no banco de dados.
 > * Preveja a probabilidade de resultados de gorjeta em cada modelo de partição usando dados de exemplo reservados para essa finalidade.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
  
 Para concluir este tutorial, é necessário ter o seguinte:
 

@@ -47,10 +47,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287920"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
@@ -331,7 +331,7 @@ DELAYED_DURABILITY = { OFF | ON }
   
  Para obter mais informações, veja [Controlar a durabilidade da transação](../../relational-databases/logs/control-transaction-durability.md).  
 
-## <a name="Simple"></a> Exemplos simples
+## <a name="simple-examples"></a><a name="Simple"></a> Exemplos simples
 
 Para ajudá-lo a começar, aqui estão dois exemplos rápidos:  
 `SELECT DB_NAME() AS ThisDB;` retorna o nome do banco de dados atual.  
@@ -464,7 +464,7 @@ GO
   
  Para procedimentos armazenados CLR, requer a propriedade do assembly referenciado na cláusula EXTERNAL NAME ou na permissão **REFERENCES** nesse assembly.  
   
-##  <a name="mot"></a> CREATE PROCEDURE e tabelas com otimização de memória  
+##  <a name="create-procedure-and-memory-optimized-tables"></a><a name="mot"></a> CREATE PROCEDURE e tabelas com otimização de memória  
  Tabelas com otimização de memória podem ser acessadas por meio de procedimentos armazenados tradicionais e compilados nativamente. Procedimentos nativos são, na maioria dos casos, a maneira mais eficiente.
 Para saber mais, veja [Procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
@@ -487,7 +487,7 @@ GO
   
  Para obter uma discussão sobre capacidade de programação em procedimentos armazenados compilados nativamente, área de superfície de consulta compatível e operadores, veja [Recursos compatíveis com módulos T-SQL compilados nativamente](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
-## <a name="Examples"></a> Exemplos  
+## <a name="examples"></a><a name="Examples"></a> Exemplos  
   
 |Categoria|Elementos de sintaxe em destaque|  
 |--------------|------------------------------|  
@@ -499,7 +499,7 @@ GO
 |[Forçando a recompilação do procedimento](#Recompile)|WITH RECOMPILE|  
 |[Configurando o contexto de segurança](#Security)|EXECUTE AS|  
   
-###  <a name="BasicSyntax"></a> Sintaxe básica  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Sintaxe básica  
  Os exemplos desta seção demonstram a funcionalidade básica da instrução CREATE PROCEDURE por meio da sintaxe mínima necessária.  
   
 #### <a name="a-creating-a-simple-transact-sql-procedure"></a>a. Criando um procedimento Transact-SQL simples  
@@ -558,7 +558,7 @@ AS EXTERNAL NAME HandlingLOBUsingCLR.LargeObjectBinary.GetPhotoFromDB;
 GO  
 ```  
   
-###  <a name="Parameters"></a> Transmitindo parâmetros  
+###  <a name="passing-parameters"></a><a name="Parameters"></a> Transmitindo parâmetros  
  Os exemplos desta seção demonstram como usar parâmetros de entrada e saída para passar valores de e para um procedimento armazenado.  
   
 #### <a name="d-creating-a-procedure-with-input-parameters"></a>D. Criando um procedimento com parâmetros de entrada  
@@ -766,7 +766,7 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-###  <a name="Modify"></a> Modificando dados usando um procedimento armazenado  
+###  <a name="modifying-data-by-using-a-stored-procedure"></a><a name="Modify"></a> Modificando dados usando um procedimento armazenado  
  Os exemplos nesta seção demonstram como inserir ou modificar dados em tabelas ou exibições através da inclusão de uma instrução DML (linguagem de manipulação de dados) na definição do procedimento.  
   
 #### <a name="i-using-update-in-a-stored-procedure"></a>I. Usando UPDATE em um procedimento armazenado  
@@ -790,7 +790,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-###  <a name="Error"></a> Tratamento de erro  
+###  <a name="error-handling"></a><a name="Error"></a> Tratamento de erro  
  Os exemplos desta seção demonstram métodos para tratar erros que podem ocorrer durante a execução do procedimento armazenado.  
   
 #### <a name="j-using-trycatch"></a>J. Usando TRY...CATCH  
@@ -865,7 +865,7 @@ EXEC Production.uspDeleteWorkOrder 15;
 DROP PROCEDURE Production.uspDeleteWorkOrder;  
 ```  
   
-###  <a name="Encrypt"></a> Ofuscando a definição do procedimento  
+###  <a name="obfuscating-the-procedure-definition"></a><a name="Encrypt"></a> Ofuscando a definição do procedimento  
  Os exemplos desta seção mostram como ofuscar a definição do procedimento armazenado.  
   
 #### <a name="k-using-the-with-encryption-option"></a>K. Usando a opção WITH ENCRYPTION  
@@ -911,7 +911,7 @@ WHERE object_id = OBJECT_ID('HumanResources.uspEncryptThis');
  NULL  
  ```  
   
-###  <a name="Recompile"></a> Forçando a recompilação do procedimento  
+###  <a name="forcing-the-procedure-to-recompile"></a><a name="Recompile"></a> Forçando a recompilação do procedimento  
  Os exemplos desta seção usam a cláusula WITH RECOMPILE para forçar a recompilação do procedimento a cada execução.  
   
 #### <a name="l-using-the-with-recompile-option"></a>L. Usando a opção WITH RECOMPILE  
@@ -934,7 +934,7 @@ AS
     WHERE v.Name LIKE @Name;  
 ```  
   
-###  <a name="Security"></a> Configurando o contexto de segurança  
+###  <a name="setting-the-security-context"></a><a name="Security"></a> Configurando o contexto de segurança  
  O exemplos desta seção usam a cláusula EXECUTE AS para definir o contexto de segurança no qual o procedimento armazenado é executado.  
   
 #### <a name="m-using-the-execute-as-clause"></a>M. Usando a cláusula EXECUTE AS  

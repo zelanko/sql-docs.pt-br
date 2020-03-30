@@ -13,10 +13,10 @@ ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993334"
 ---
 # <a name="logging-activity"></a>Registrando atividades em log
@@ -36,7 +36,7 @@ pdo_sqlsrv.log_severity = <number>
   
 **log_severity** pode ser um dos seguintes valores:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |---------|---------------|  
 |0|O registro em log está desabilitado (é o padrão se nada estiver definido).|  
 |-1|Especifica que erros, avisos e notificações são registrados em log.|  
@@ -61,7 +61,7 @@ Você pode ativar o registro em log usando a função [sqlsrv_configure](../../c
   
 A tabela a seguir descreve as constantes que podem ser usadas como o valor para a configuração **LogSubsystems** :  
   
-|Valor (inteiro equivalente entre parênteses)|Descrição|  
+|Valor (inteiro equivalente entre parênteses)|DESCRIÇÃO|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|Ativa o registro em log de todos os subsistemas.|  
 |SQLSRV_LOG_SYSTEM_OFF (0)|Desativa o registro em log. Esse é o padrão.|  
@@ -92,7 +92,7 @@ Depois de ativar o registro em log, você deve especificar o que registrar. Voc�
   
 A tabela a seguir descreve as constantes que podem ser usadas como o valor para a configuração **LogSeverity** :  
   
-|Valor (inteiro equivalente entre parênteses)|Descrição|  
+|Valor (inteiro equivalente entre parênteses)|DESCRIÇÃO|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Especifica que erros, avisos e notificações são registrados em log.|  
 |SQLSRV_LOG_SEVERITY_ERROR (1)|Especifica que os erros serão registrados em log. Esse é o padrão.|  

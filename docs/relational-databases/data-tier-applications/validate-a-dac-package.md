@@ -16,10 +16,10 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7df5bb3b2ef677e597d12dad8b8d92ddbb22fcba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908245"
 ---
 # <a name="validate-a-dac-package"></a>Validar um pacote de DAC
@@ -30,10 +30,10 @@ ms.locfileid: "72908245"
   
 2.  **Para atualizar um DAC, usando:**  [Exibir o Conteúdo de um DAC](#ViewDACContents), [Exibir Alterações no Banco de Dados](#ViewDBChanges), [Exibir Ações de Atualização](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
 
-##  <a name="Prerequisites"></a> Pré-requisitos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Recomendamos não implantar um pacote de DAC de origens desconhecidas ou não confiáveis. Como os DACs podem conter código mal-intencionado que pode executar código [!INCLUDE[tsql](../../includes/tsql-md.md)] sem finalidade ou provocar erros modificando o esquema. Antes de usar um DAC de uma origem desconhecida ou não confiável, implante-o em uma instância de teste isolada do [!INCLUDE[ssDE](../../includes/ssde-md.md)], execute [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no banco de dados. Além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  
   
-##  <a name="ViewDACContents"></a> Exibir o Conteúdo de um DAC  
+##  <a name="view-the-contents-of-a-dac"></a><a name="ViewDACContents"></a> Exibir o Conteúdo de um DAC  
  Existem dois mecanismos para exibição do conteúdo de um pacote de DAC (aplicativo da camada de dados). Você pode importar o pacote de DAC para um projeto de DAC no SQL Server Developer Tools. É possível desempacotar o conteúdo do pacote em uma pasta.  
   
  **Exiba um DAC no SQL Server Developer Tools**  
@@ -60,7 +60,7 @@ ms.locfileid: "72908245"
   
 -   Exiba o conteúdo dos arquivos de texto em ferramentas como o bloco de notas.  
   
-##  <a name="ViewDBChanges"></a> Exibir Alterações no Banco de Dados  
+##  <a name="view-database-changes"></a><a name="ViewDBChanges"></a> Exibir Alterações no Banco de Dados  
  Depois que a versão atual de um DAC for implantada para produção, alterações poderão ter sido feitas diretamente no banco de dados associado que podem estar em conflito com o esquema definido em uma nova versão do DAC. Antes de atualizar para uma nova versão do DAC, verifique se foram feitas alterações no banco de dados.  
   
  **Exibir alterações do banco de dados usando um assistente**  
@@ -105,7 +105,7 @@ $dacName  = "MyApplication"
 $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DACScripts\MyApplicationChanges.txt  
 ```  
   
-##  <a name="ViewUpgradeActions"></a> Exibir Ações de Atualização  
+##  <a name="view-upgrade-actions"></a><a name="ViewUpgradeActions"></a> Exibir Ações de Atualização  
  Antes de usar uma nova versão de um pacote de DAC para atualizar um DAC que foi implantado de um pacote de DAC anterior, você pode gerar um relatório que contém as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] a serem executadas durante a atualização e, depois, examinar as instruções.  
   
  **Relate ações de atualização usando um assistente**  
@@ -162,7 +162,7 @@ $dacstore.GetIncrementalUpgradeScript($dacName, $dacType) | Out-File -Filepath C
 $fileStream.Close()  
 ```  
   
-##  <a name="CompareDACs"></a> Compare DACs  
+##  <a name="compare-dacs"></a><a name="CompareDACs"></a> Compare DACs  
  Antes de atualizar um DAC, é recomendável revisar as diferenças nos objetos em nível de banco de dados e instância entre o DAC atual e o novo. Se você não tiver uma cópia do pacote para o DAC atual, poderá extrair um pacote do banco de dados atual.  
   
  Se você importar os pacotes de DAC para projetos de DAC no SQL Server Developer Tools, poderá usar a ferramenta de comparação de esquemas para analisar as diferenças entre o dois DACs.  

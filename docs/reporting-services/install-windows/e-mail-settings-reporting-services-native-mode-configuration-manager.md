@@ -14,10 +14,10 @@ ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74865999"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Configurações de email - Modo Nativo do Reporting Services (Gerenciador de Configurações)
@@ -48,7 +48,7 @@ Para configurar um servidor de relatório para entrega de email, faça o seguint
 > [!NOTE] 
 > As configurações de email do servidor de relatório têm como base o CDO. Para obter mais detalhes sobre configurações específicas, você pode consultar a documentação de produção do CDO.
 
-## <a name="a-namersconfigmanconfigure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>Configurar o email do servidor de relatório usando o Reporting Services Configuration Manager
+## <a name="configure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>Configurar o email do servidor de relatório usando o Reporting Services Configuration Manager
 
 1. Inicie o Gerenciador de Configurações do Reporting Services e conecte-se à instância do servidor de relatório.
 

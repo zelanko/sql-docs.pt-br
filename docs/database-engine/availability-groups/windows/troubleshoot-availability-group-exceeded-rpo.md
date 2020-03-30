@@ -11,10 +11,10 @@ ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822185"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Solução de problemas: o grupo de disponibilidade excedeu o RPO
@@ -29,7 +29,7 @@ ms.locfileid: "74822185"
   
 2.  [Gargalo de E/S de disco causa lentidão na proteção do log na réplica secundária](#BKMK_IO_BOTTLENECK)  
   
-##  <a name="BKMK_LATENCY"></a> Alta latência da rede ou baixa taxa de transferência de rede causa o acúmulo de log na réplica primária  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> Alta latência da rede ou baixa taxa de transferência de rede causa o acúmulo de log na réplica primária  
  O motivo mais comum para que os bancos de dados excedam o RPO é porque não é possível enviá-los para a réplica secundária rápido o suficiente.  
   
 ### <a name="explanation"></a>Explicação  
@@ -63,7 +63,7 @@ ms.locfileid: "74822185"
 Para corrigir esse problema, tente atualizar a largura de banda da sua rede ou remover ou reduzir o tráfego de rede desnecessário.  
 
 
-##  <a name="BKMK_IO_BOTTLENECK"></a> Gargalo de E/S de disco causa lentidão na proteção do log na réplica secundária  
+##  <a name="disk-io-bottleneck-slows-down-log-hardening-on-the-secondary-replica"></a><a name="BKMK_IO_BOTTLENECK"></a> Gargalo de E/S de disco causa lentidão na proteção do log na réplica secundária  
  Dependendo da implantação do arquivo de banco de dados, a proteção de log poderá causar lentidão devido à contenção de E/S com a carga de trabalho de relatório.  
   
 ### <a name="explanation"></a>Explicação  

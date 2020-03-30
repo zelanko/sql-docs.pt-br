@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
 ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957010"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Tutorial: Habilitar o widget de insight de exemplo de uso do espaço de tabela usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-name-sos"></a>Tutorial: Habilitar o widget de insight de exemplo de uso do espaço de tabela usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Este tutorial demonstra como habilitar um widget de insight no painel de banco de dados, fornecendo uma visão geral do uso do espaço para todas as tabelas de um banco de dados. Neste tutorial, você aprenderá a:
 
@@ -26,14 +26,14 @@ Este tutorial demonstra como habilitar um widget de insight no painel de banco d
 > * Exibir os detalhes do uso do espaço de tabela
 > * Filtrar dados e exibir detalhes do rótulo em um gráfico de insight
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este tutorial requer o SQL Server ou o *TutorialDB* do Banco de Dados SQL do Azure. Para criar o banco de dados *TutorialDB*, siga um destes guias de início rápido:
 
 * [Conectar e consultar o SQL Server usando [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 * [Conectar e consultar o Banco de Dados SQL do Azure usando [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
-## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>Ativar um insight de gerenciamento no painel de banco de dados do [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="turn-on-a-management-insight-on-name-soss-database-dashboard"></a>Ativar um insight de gerenciamento no painel de banco de dados do [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 O [!INCLUDE[name-sos](../includes/name-sos-short.md)] tem um widget de exemplo interno para monitorar o espaço usado pelas tabelas em um banco de dados.
 

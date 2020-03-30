@@ -18,10 +18,10 @@ ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 92f83bb31569a055bf9158a0388d9cb0630e9a1d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251271"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Suspender um banco de dados de disponibilidade (SQL Server)
@@ -60,25 +60,25 @@ ms.locfileid: "75251271"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  O comando SUSPEND retorna assim que é aceito pela réplica que hospeda o banco de dados de destino, mas, na verdade, a suspensão do banco de dados ocorre de forma assíncrona.  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Você deve estar conectado à instância de servidor que hospeda o banco de dados a ser suspenso. Para suspender um banco de dados primários e os bancos de dados secundários correspondentes, conecte-se à instância de servidor que hospeda a réplica primária. Para suspender um banco de dados secundário deixando o banco de dados primário disponível, conecte-se à réplica secundária.  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
  Durante gargalos, a suspensão de um ou mais bancos de dados secundários brevemente poderá ser útil para melhorar temporariamente o desempenho na réplica primária. Desde que um banco de dados secundário permaneça suspenso, o log de transações do banco de dados primário correspondente não poderá ser truncado. Isso faz com que os registros de log sejam acumulados no banco de dados primário. Portanto, é recomendável retomar ou remover um banco de dados secundário suspenso rapidamente. Para obter mais informações, veja [Acompanhamento: evitar um log de transações cheio](#FollowUp) mais adiante neste tópico.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão ALTER no banco de dados.  
   
  Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para suspender um banco de dados**  
   
 1.  No Pesquisador de Objetos, conecte-se à instância de servidor que hospeda a réplica de disponibilidade na qual você deseja suspender um banco de dados e expanda a árvore de servidores. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.  
@@ -96,7 +96,7 @@ ms.locfileid: "75251271"
 > [!NOTE]  
 >  Para suspender bancos de dados adicionais neste local de réplica, repita as etapas 4 e 5 para cada banco de dados.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para suspender um banco de dados**  
   
 1.  Conecte-se à instância do servidor que hospeda a réplica cujo banco de dados você deseja suspender. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.  
@@ -105,7 +105,7 @@ ms.locfileid: "75251271"
   
      ALTER DATABASE *database_name* SET HADR SUSPEND;
   
-##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usando o PowerShell  
  **Para suspender um banco de dados**  
   
 1.  Altere o diretório (**cd**) para a instância do servidor que hospeda a réplica cujo banco de dados você deseja suspender. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.  
@@ -126,7 +126,7 @@ ms.locfileid: "75251271"
   
 -   [Provedor do SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Acompanhamento: evitar um log de transações cheio  
+##  <a name="follow-up-avoiding-a-full-transaction-log"></a><a name="FollowUp"></a> Acompanhamento: evitar um log de transações cheio  
  Normalmente, quando um ponto de verificação automático é executado em um banco de dados, seu log de transações é truncado àquele ponto de verificação após o próximo backup de log. Porém, enquanto um banco de dados secundário está suspenso, todos os registros de log atuais permanecem ativos no banco de dados primário. Se o log de transações ficar cheio (por ter atingido seu tamanho máximo ou porque a instância de servidor ficou sem espaço), o banco de dados não poderá executar mais nenhuma atualização.  
   
  Para evitar esse problema, você deverá proceder da seguinte maneira:  
@@ -141,7 +141,7 @@ ms.locfileid: "75251271"
   
 -   [Solução de problemas de um log de transação completa &#40;Erro do SQL Server 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Retomar um banco de dados de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   

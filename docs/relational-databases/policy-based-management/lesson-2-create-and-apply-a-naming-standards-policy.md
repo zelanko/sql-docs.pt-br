@@ -12,10 +12,10 @@ ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ac5510320783c35c83f84118e9679da4fd351415
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558691"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lição 2: Criar e aplicar uma política de nomeação de padrões
@@ -23,7 +23,7 @@ ms.locfileid: "75558691"
 Alguns tipos de políticas de Gerenciamento Baseado em Políticas podem criar gatilhos para aplicar conformidade futura com a política. Nesta lição, você cria uma política que aplica uma nomeação padrão para tabelas. Então, você testa a política tentando criar uma tabela que viola a política.  
 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 Para concluir este tutorial, é necessário ter o SQL Server Management Studio e acesso a um servidor que está executando o SQL Server.
 
 - Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).

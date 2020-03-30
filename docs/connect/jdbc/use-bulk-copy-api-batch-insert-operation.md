@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027101"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Como usar a API de cópia em massa para a operação de inserção em lote
@@ -25,7 +25,7 @@ O Microsoft JDBC Driver 7.0 para SQL Server dá suporte ao uso da API de Cópia 
 
 Esse recurso só é aplicável a APIs `executeBatch()` & `executeLargeBatch()` de PreparedStatement e CallableStatement.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Há dois pré-requisito para habilitar a API de Cópia em Massa para inserção em lote.
 

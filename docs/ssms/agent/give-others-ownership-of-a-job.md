@@ -17,10 +17,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0e87d9d46392674a8df15b6409c81a9568d9b8ca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242373"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
@@ -41,25 +41,25 @@ Este tópico descreve como reatribuir a propriedade de trabalhos do [!INCLUDE[ms
   
     [SQL Server Management Objects](#SMOProc2)  
   
-## <a name="BeforeYouBegin"></a>Antes de começar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de começar  
   
-### <a name="Restrictions"></a>Limitações e restrições  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitações e restrições  
 Para criar um trabalho, o usuário deve ser membro de uma das funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou da função de servidor fixa **sysadmin** . Um trabalho só pode ser editado por seu proprietário ou por membros da função **sysadmin** . Para obter mais informações sobre as funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 Você precisa ser um administrador do sistema para alterar o proprietário de um trabalho.  
   
 Atribuir um trabalho a outro logon não garante que o novo proprietário tenha permissões adequadas para executar o trabalho com êxito.  
   
-### <a name="Security"></a>Segurança  
+### <a name="security"></a><a name="Security"></a>Segurança  
 Por questão de segurança, apenas o proprietário do trabalho ou um membro da função **sysadmin** pode alterar a definição do trabalho. Somente os membros da função de servidor fixa **sysadmin** podem atribuir a propriedade do trabalho a outros usuários, bem como executar qualquer trabalho, independentemente de seu proprietário.  
   
 > [!NOTE]  
 > Se você transmitir a propriedade a um usuário que não seja membro da função de servidor fixa **sysadmin** e o trabalho estiver executando etapas que exijam contas proxy (por exemplo, execução de pacotes [!INCLUDE[ssIS](../../includes/ssis_md.md)] ), verifique se o usuário tem acesso à conta proxy necessária, ou o trabalho falhará.  
   
-#### <a name="Permissions"></a>Permissões  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissões  
 Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMSProc2"></a>Usando o SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProc2"></a>Usando o SQL Server Management Studio  
 **Para conceder a propriedade de um trabalho a outros**  
   
 1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]e a expanda.  
@@ -70,7 +70,7 @@ Para obter informações detalhadas, consulte [Implementar a segurança do SQL S
   
     Atribuir um trabalho a outro logon não garante que o novo proprietário tenha permissões adequadas para executar o trabalho com êxito.  
   
-## <a name="TsqlProc2"></a>Usando Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProc2"></a>Usando Transact-SQL  
 **Para conceder a propriedade de um trabalho a outros**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do Mecanismo de Banco de Dados e expanda-a.  
@@ -90,7 +90,7 @@ Para obter informações detalhadas, consulte [Implementar a segurança do SQL S
     GO  
     ```  
   
-## <a name="SMOProc2"></a>Usando o SQL Server Management Objects  
+## <a name="using-sql-server-management-objects"></a><a name="SMOProc2"></a>Usando o SQL Server Management Objects  
 **Para conceder a propriedade de um trabalho a outros**  
   
 1.  Chame a classe **Job** com uma linguagem de programação à sua escolha, como Visual Basic, Visual C# ou PowerShell. Para obter um código de exemplo, consulte [Agendamento de tarefas administrativas automáticas no SQL Server Agent](../../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md).  

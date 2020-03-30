@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e8c8f90dbd07af646700a738dcf265785b79475
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981702"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT – Cláusula OVER (Transact-SQL)
@@ -453,7 +453,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>Exemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-the-over-clause-with-the-row_number-function"></a>E. Usando a cláusula OVER com a função ROW_NUMBER  
  O exemplo a seguir retorna o ROW_NUMBER para representantes de vendas com base em suas cotas de vendas atribuídas.  

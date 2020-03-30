@@ -11,10 +11,10 @@ ms.assetid: 222ea248-1185-4c33-ae10-5158bf3f6430
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4c3c6e2b0331f00e5d9fe5d7212a1a48bff8e2c0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974521"
 ---
 # <a name="setclob-method-sqlservercallablestatement"></a>Método setClob (SQLServerCallableStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67974521"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[Método setClob &#40;java.lang.String, java.sql.Clob&#41;](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-sql-clob.md)|Define o parâmetro designado como o objeto Clob especificado.|  
 |[Método setClob &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-io-reader.md)|Define o parâmetro designado como o objeto Reader especificado.|  

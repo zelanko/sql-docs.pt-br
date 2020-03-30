@@ -13,10 +13,10 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 232ecd6278070d928db7485e93e8498adfc70a9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941134"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Atualização do envio de logs para SQL Server 2016 (Transact-SQL)
@@ -38,18 +38,18 @@ ms.locfileid: "76941134"
   
 -   [Atualização da instância primária](#UpgradePrimary)  
   
-##  <a name="Prerequisites"></a> Pré-requisitos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Antes de começar, examine as seguintes informações importantes:  
   
--   [Atualizações compatíveis de versão e edição](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Verifique se você pode atualizar para o SQL Server 2016 de sua versão do sistema operacional Windows e da versão do SQL Server. Por exemplo, não é possível atualizar diretamente de uma instância do SQL Server 2005 para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+-   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verifique se você pode atualizar para o SQL Server 2016 de sua versão do sistema operacional Windows e da versão do SQL Server. Por exemplo, não é possível atualizar diretamente de uma instância do SQL Server 2005 para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
--   [Escolher um método de atualização do mecanismo de banco de dados](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): selecione o método e as etapas de atualização apropriados com base em sua análise de atualizações de versão e de edição com suporte e também com base em outros componentes instalados em seu ambiente a fim de atualizar os componentes na ordem correta.  
+-   [Escolha um método de atualização do mecanismo de banco de dados](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): selecione o método de atualização apropriado e as etapas com base em sua análise de atualizações de versão e edição com suporte e também com base em outros componentes instalados em seu ambiente para atualizar os componentes no ordem correta.  
   
--   [Planejar e testar o plano de atualização do mecanismo de banco de dados](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Analise as notas de versão e os problemas conhecidos da atualização, a lista de verificação pré-atualização, e desenvolva e teste o plano de atualização.  
+-   [Planejar e testar o plano de atualização do mecanismo de banco de dados](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): examine as notas de versão e os problemas conhecidos da atualização, a lista de verificação pré-atualização, e desenvolva e teste o plano de atualização.  
   
--   [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Analise os requisitos de software para a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Se for necessário um software adicional, instale-o em cada nó antes de começar o processo de atualização para minimizar qualquer tempo de inatividade.  
+-   [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): examine os requisitos de software para a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Se for necessário um software adicional, instale-o em cada nó antes de começar o processo de atualização para minimizar qualquer tempo de inatividade.  
   
-##  <a name="ProtectData"></a> Proteja os dados antes da atualização  
+##  <a name="protect-your-data-before-the-upgrade"></a><a name="ProtectData"></a> Proteja os dados antes da atualização  
  Como uma prática recomendada, sugerimos que você proteja seus dados antes de uma atualização de envio de logs.  
   
  **Para proteger os dados**  
@@ -63,12 +63,12 @@ ms.locfileid: "76941134"
 > [!IMPORTANT]  
 >  Verifique se você tem espaço suficiente no servidor primário para manter as cópias de backup do log durante toda a atualização dos secundários.  Se estiver realizando o failover para um secundário, essa mesma preocupação se aplicará ao secundário (o novo primário).  
   
-##  <a name="UpgradeMonitor"></a> Atualização da instância do servidor monitor (opcional)  
+##  <a name="upgrading-the-optional-monitor-server-instance"></a><a name="UpgradeMonitor"></a> Atualização da instância do servidor monitor (opcional)  
  Se existir uma instância do servidor monitor, ela poderá ser atualizada em qualquer momento. No entanto, você não precisa atualizar o servidor de monitor opcional ao atualizar os servidores primário e secundário.  
   
  Enquanto o servidor monitor está sendo atualizado, a configuração de envio de logs continua funcionando, mas seu status não será registrado nas tabelas do monitor. Qualquer alerta que tenha sido configurado não será disparado, enquanto o servidor monitor estiver sendo atualizado. Após a atualização, você poderá atualizar as informações nas tabelas do monitor executando o procedimento armazenado do sistema [sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md).   Para obter mais informações sobre um servidor de monitor, veja [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-##  <a name="UpgradeSecondaries"></a> Atualização das instâncias do servidor secundário  
+##  <a name="upgrading-the-secondary-server-instances"></a><a name="UpgradeSecondaries"></a> Atualização das instâncias do servidor secundário  
  O processo de atualização envolve a atualização das instâncias do servidor secundário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] antes de atualizar a instância de servidor primário. Sempre atualize primeiro a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] secundário. O envio de logs continua ao longo do processo de atualização, pois as instâncias dos servidores secundários atualizados continuam restaurando os backups de log da instância do servidor primário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se o servidor primário for atualizado antes da instância do servidor secundário, o envio de logs falhará, pois um backup criado em uma versão mais recente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode ser restaurado em uma versão mais antiga do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode atualizar as instâncias secundárias de maneira simultânea ou em série, mas todas as instâncias secundárias devem ser atualizadas antes de atualizar a instância primária, a fim de evitar uma falha de envio de logs.  
   
  Enquanto uma instância do servidor secundário estiver sendo atualizada, os trabalhos de cópia e restauração de envio de logs não serão executados. Isso significa que os backups de log de transações não restaurados serão acumulados no primário, e você precisará ter espaço suficiente para manter esses backups não restaurados. A quantidade de acumulação dependerá da frequência de backups agendados na instância do servidor primário e da sequência na qual você atualiza as instâncias secundárias. Além disso, se um servidor monitor separado tiver sido configurado, alertas poderão ser gerados indicando que restaurações não foram realizadas por um período mais longo do que o intervalo configurado.  
@@ -81,7 +81,7 @@ ms.locfileid: "76941134"
 > [!IMPORTANT]  
 >  A opção RESTORE WITH STANDBY não tem suporte para um banco de dados que requer atualização. Se um banco de dados secundário atualizado foi configurado usando RESTORE WITH STANDBY, os logs de transação já não poderão ser restaurados depois da atualização. Para retomar o envio de logs no banco de dados secundário, você precisará configurar o envio de logs novamente no servidor em espera. Para obter mais informações sobre a opção STANDBY, veja [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
-##  <a name="UpgradePrimary"></a> Atualizando a instância do servidor primário  
+##  <a name="upgrading-the-primary-server-instance"></a><a name="UpgradePrimary"></a> Atualizando a instância do servidor primário  
  Como o envio de log é basicamente uma solução de recuperação de desastres, o cenário mais simples e mais comum é atualizar a instância primária no local, e o banco de dados simplesmente fica indisponível durante essa atualização. Quando o servidor é atualizado, o banco de dados fica online automaticamente, o que faz com que ele seja atualizado. Depois que o banco de dados é atualizado, os trabalhos de envio de logs são retomados.  
   
 > [!NOTE]  

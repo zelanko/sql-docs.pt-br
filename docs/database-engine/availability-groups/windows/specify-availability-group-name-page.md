@@ -14,17 +14,17 @@ ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 63995b32f91419ef59184251299b5238d553905a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822570"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Página Especificar Opções do Grupo de Disponibilidade de um Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve as opções da página **Especificar nome de grupo de disponibilidade** . Este tópico é usado pelo [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e pelo [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-##  <a name="PageOptions"></a> Especificar opções do grupo de disponibilidade  
+##  <a name="specify-availability-group-options"></a><a name="PageOptions"></a> Especificar opções do grupo de disponibilidade  
  **Nome do grupo de disponibilidade**  
  Especifique o nome do grupo de disponibilidade. Para um novo grupo de disponibilidade, especifique um identificador válido do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que seja exclusivo em todos os grupos de disponibilidade no WSFC (cluster de failover do Windows Server). O tamanho máximo de um nome de grupo de disponibilidade é 128 caracteres.  
 
@@ -47,7 +47,7 @@ ms.locfileid: "74822570"
 
 Selecionar a página Bancos de Dados (Assistente de Novo Grupo de Disponibilidade e Assistente para Adicionar Banco de Dados)  
   
-##  <a name="LaunchWiz"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> Tarefas relacionadas  
   
 -   [Usar a caixa de diálogo Novo Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

@@ -18,10 +18,10 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6a95082cd732b644105c14c4ba598f859f48456e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014697"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Monitorar grupos de disponibilidade (Transact-SQL)
@@ -32,10 +32,10 @@ ms.locfileid: "68014697"
 >  Muitas dessas exibições podem ser unidas usando suas colunas de ID para retornar informações de várias exibições em uma única consulta.  
   
   
-##  <a name="Permissions"></a> Permissões  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] exigem a permissão VIEW ANY DEFINITION na instância do servidor. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] exigem a permissão VIEW SERVER STATE no servidor.  
   
-##  <a name="AoAgFeatureOnSI"></a> Monitorando o recurso Grupos de Disponibilidade AlwaysOn em uma instância de servidor  
+##  <a name="monitoring-the-always-on-availability-groups-feature-on-a-server-instance"></a><a name="AoAgFeatureOnSI"></a> Monitorando o recurso Grupos de Disponibilidade AlwaysOn em uma instância de servidor  
  Para monitorar o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em uma instância de servidor, use a seguinte função interna:  
   
  função[SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md)  
@@ -43,7 +43,7 @@ ms.locfileid: "68014697"
   
  **Nomes de coluna:** IsHadrEnabled, HadrManagerStatus  
   
-##  <a name="WSFC"></a> Monitorando grupos de disponibilidade no cluster do WSFC  
+##  <a name="monitoring-availability-groups-on-the-wsfc-cluster"></a><a name="WSFC"></a> Monitorando grupos de disponibilidade no cluster do WSFC  
  Para monitorar o WSFC (Windows Server Failover Clustering) que hospeda uma instância do servidor local habilitada para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], use as exibições a seguir:  
   
  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)  
@@ -82,7 +82,7 @@ ms.locfileid: "68014697"
   
  Para obter informações sobre os clusters WSFC e o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], veja [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) e [Clustering de Failover e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
-##  <a name="AvGroups"></a> Monitorando grupos de disponibilidade  
+##  <a name="monitoring-availability-groups"></a><a name="AvGroups"></a> Monitorando grupos de disponibilidade  
  Para monitorar os grupos de disponibilidade para os quais a instância do servidor hospeda uma réplica de disponibilidade, use as exibições a seguir:  
   
  [sys.availability_groups](../../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)  
@@ -100,7 +100,7 @@ ms.locfileid: "68014697"
   
  **Nomes de colunas:** group_id, primary_replica, primary_recovery_health, primary_recovery_health_desc, secondary_recovery_health, secondary_recovery_health_desc, synchronization_health, synchronization_health_desc  
   
-##  <a name="AvReplicas"></a> Monitorando réplicas de disponibilidade  
+##  <a name="monitoring-availability-replicas"></a><a name="AvReplicas"></a> Monitorando réplicas de disponibilidade  
  Para monitorar réplicas de disponibilidade, use as seguintes exibições e a função do sistema:  
   
  [sys.availability_replicas](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)  
@@ -134,7 +134,7 @@ ms.locfileid: "68014697"
 > [!NOTE]  
 >  Para obter informações sobre contadores de desempenho para réplicas de disponibilidade (o objeto de desempenho **SQLServer:Availability Replica**  ), consulte [SQL Server, Réplica de Disponibilidade](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbs"></a> Monitorando bancos de dados de disponibilidade  
+##  <a name="monitoring-availability-databases"></a><a name="AvDbs"></a> Monitorando bancos de dados de disponibilidade  
  Para monitorar bancos de dados de disponibilidade, use as seguintes exibições:  
   
  [sys.availability_databases_cluster](../../../relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)  
@@ -171,7 +171,7 @@ ms.locfileid: "68014697"
 > [!NOTE]  
 >  Para obter informações sobre contadores de desempenho do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para réplicas de disponibilidade (o objeto de desempenho **SQLServer:Réplica de Banco de Dados** ), veja [SQL Server, Réplica de Banco de Dados](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Além disso, para monitorar a atividade de log de transações em bancos de dados de disponibilidade, use os seguintes contadores do objeto de desempenho **SQLServer:Databases**: **Tempo de Gravação de Liberação de Log (ms)** , **Liberações de Log/s**, **Perdas no Cache do Pool de Logs/s**, **Leituras de Disco do Pool de Logs/s** e **Solicitações do Pool de Logs/s**. Para obter mais informações, consulte [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
-##  <a name="AGlisteners"></a> Monitorando ouvintes de grupo de disponibilidade  
+##  <a name="monitoring-availability-group-listeners"></a><a name="AGlisteners"></a> Monitorando ouvintes de grupo de disponibilidade  
  Para monitorar os ouvintes de grupo de disponibilidade em sub-redes do cluster do WSFC, use as seguintes exibições:  
   
  [sys.availability_group_listener_ip_addresses](../../../relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  
@@ -193,7 +193,7 @@ ms.locfileid: "68014697"
   
  Para obter informações sobre ouvintes do grupo de disponibilidade, veja [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativos &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Tarefas de monitoramento dos grupos de disponibilidade AlwaysOn:**  
   
 -   [Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)  

@@ -17,10 +17,10 @@ ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73fd6d47d3108fbfc46e1d1a6189ac21892a3eb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245408"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Usar o Administrador de Recursos para limitar o uso de CPU por meio de compactação de backup (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "75245408"
 > [!IMPORTANT]  
 >  Em um determinado cenário do Administrador de Recursos, a classificação de sessão pode ser baseada em um nome de usuário, em um nome de aplicativo ou em qualquer outro item que possa diferenciar uma conexão. Para obter mais informações, consulte [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md) e [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md).  
   
-##  <a name="Top"></a> Este tópico contém o seguinte conjunto de cenários que são apresentados em sequência:  
+##  <a name="this-topic-contains-the-following-set-of-scenarios-which-are-presented-in-sequence"></a><a name="Top"></a> Este tópico contém o seguinte conjunto de cenários que são apresentados em sequência:  
   
 1.  [Configurando um logon e um usuário para operações de baixa prioridade](#setup_login_and_user)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75245408"
   
 4.  [Compactando backups usando uma sessão com CPU limitada](#creating_compressed_backup)  
   
-##  <a name="setup_login_and_user"></a> Configurando um logon e um usuário para operações de baixa prioridade  
+##  <a name="setting-up-a-login-and-user-for-low-priority-operations"></a><a name="setup_login_and_user"></a> Configurando um logon e um usuário para operações de baixa prioridade  
  O cenário deste tópico requer um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um usuário de baixa prioridade. O nome do usuário será usado para classificar sessões que executam no logon e roteá-las as para um grupo de carga de trabalho do Administrador de Recursos que limita o uso de CPU.  
   
  O seguinte procedimento descreve as etapas para configuração de um logon e um usuário para essa finalidade, seguido por um exemplo do [!INCLUDE[tsql](../../includes/tsql-md.md)], "Exemplo A: Configurando um logon e um usuário (Transact-SQL)".  
@@ -102,7 +102,7 @@ GO
   
  [&#91;Início&#93;](#Top)  
   
-##  <a name="configure_RG"></a> Configurando o Administrador de Recursos para limitar o uso de CPU  
+##  <a name="configuring-resource-governor-to-limit-cpu-usage"></a><a name="configure_RG"></a> Configurando o Administrador de Recursos para limitar o uso de CPU  
   
 > [!NOTE]  
 >  Verifique se o Administrador de Recursos está habilitado. Para obter mais informações, consulte [Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md).  
@@ -240,7 +240,7 @@ GO
   
  [&#91;Início&#93;](#Top)  
   
-##  <a name="verifying"></a> Verificando a classificação da sessão atual (Transact-SQL)  
+##  <a name="verifying-the-classification-of-the-current-session-transact-sql"></a><a name="verifying"></a> Verificando a classificação da sessão atual (Transact-SQL)  
  Opcionalmente, faça logon como o usuário especificado na função de classificação e verifique a classificação da sessão emitindo a seguinte instrução [SELECT](../../t-sql/queries/select-transact-sql.md) no Pesquisador de Objetos:  
   
 ```sql  
@@ -260,7 +260,7 @@ GO
   
  [&#91;Início&#93;](#Top)  
   
-##  <a name="creating_compressed_backup"></a> Compactando backups usando uma sessão com CPU limitada  
+##  <a name="compressing-backups-using-a-session-with-limited-cpu"></a><a name="creating_compressed_backup"></a> Compactando backups usando uma sessão com CPU limitada  
  Para criar um backup compactado em uma sessão com uma CPU máxima limitada, faça logon como o usuário especificado na função de classificação. No comando de backup, especifique WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) ou selecione **Compactar backup** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Para criar um backup de banco de dados compactado, consulte [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Exemplo C: Criando um backup compactado (Transact-SQL)  

@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 2e234e0057db852b6b741a0103412bbacd108287
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558384"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurar o grupo de disponibilidade Always On do SQL Server para alta disponibilidade no Linux

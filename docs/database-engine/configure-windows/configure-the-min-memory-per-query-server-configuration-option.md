@@ -17,10 +17,10 @@ ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9e7a08defb9ff222ac1699c924691c923a7f2c2e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287480"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Configurar a opção min memory per query de configuração de servidor
@@ -46,13 +46,13 @@ ms.locfileid: "79287480"
   
 -   **Acompanhamento:**  [depois de configurar a opção min memory per query](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   A quantidade mínima de memória por consulta tem precedência sobre a opção [index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md). Quando ambas as opções são modificadas, e a index create memory é inferior à min memory per query, você recebe uma mensagem de aviso, mas o valor é definido. Durante a execução da consulta, você receberá um outro aviso semelhante.  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Esta é uma opção avançada e deve ser alterada somente por um administrador de banco de dados experiente ou por um profissional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] certificado.  
   
@@ -62,12 +62,12 @@ ms.locfileid: "79287480"
 
 <sup>1</sup> Nesse cenário, o tipo de espera costuma ser RESOURCE_SEMAPHORE. Para obter mais informações, confira [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).
 
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Permissões de execução sem parâmetros ou com apenas o primeiro parâmetro em **sp_configure** são concedidas a todos os usuários por padrão. Para executar **sp_configure** com ambos os parâmetros para alterar uma opção de configuração ou executar a instrução RECONFIGURE, o usuário deve ter a permissão ALTER SETTINGS no nível do servidor. A permissão ALTER SETTINGS é implicitamente mantida pelas funções de servidor fixas **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-configure-the-min-memory-per-query-option"></a>Para configurar a opção min memory per query  
   
@@ -77,7 +77,7 @@ ms.locfileid: "79287480"
   
 3.  Na caixa **Memória mínima por consulta** , insira a quantidade mínima de memória (em quilobytes) que será alocada para a execução de uma consulta.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-min-memory-per-query-option"></a>Para configurar a opção min memory per query  
   
@@ -100,7 +100,7 @@ RECONFIGURE;
 GO    
 ```  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção min memory per query  
+##  <a name="follow-up-after-you-configure-the-min-memory-per-query-option"></a><a name="FollowUp"></a> Acompanhamento: depois de configurar a opção min memory per query  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte Também  

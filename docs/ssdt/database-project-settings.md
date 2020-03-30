@@ -41,10 +41,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 3a57f52df4dced4f110135cce1ff30346cc1ebb0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241679"
 ---
 # <a name="database-project-settings"></a>Configurações de projeto de banco de dados
@@ -81,7 +81,7 @@ Você usa as configurações de projeto de banco de dados para controlar aspecto
   
 3.  Clique na guia **Configurações do Projeto** . Agora é possível configurar as propriedades gerais de seu projeto de banco de dados. Observe a disponibilidade de várias guias (que representam categorias diferentes) no painel esquerdo.  
   
-## <a name="bkmk_proj_settings"></a>Configurações do Projeto  
+## <a name="project-settings"></a><a name="bkmk_proj_settings"></a>Configurações do Projeto  
 As configurações da tabela a seguir aplicam-se a todas as configurações deste projeto de banco de dados:  
   
 |Campo|Valor padrão|Descrição|  
@@ -97,7 +97,7 @@ As configurações da tabela a seguir aplicam-se a todas as configurações dest
 |Validar Uso de Maiúsculas em Identificadores|sim|Especifica se maiúsculas e minúsculas em identificadores de objetos SQL do projeto são validadas quando o projeto é compilado. Essa opção se aplica a projetos de banco de dados que especificam ordenação com diferenciação de maiúsculas e minúsculas para o banco de dados.|  
 |Configurações do banco de dados|Configurações padrão baseadas nos parâmetros padrão para um banco de dados|Exemplos de configurações que podem ser especificadas incluem o método de ordenação e o nível do banco de dados para um banco de dados do SQL Server.|  
   
-## <a name="bkmk_evf"></a>Verificação Estendida Transact-SQL  
+## <a name="extended-transact-sql-verification"></a><a name="bkmk_evf"></a>Verificação Estendida Transact-SQL  
   
 > [!IMPORTANT]  
 > O recurso de verificação de Transact-SQL estendida será removido da próxima versão do recurso de SQL Server Data Tools e da próxima versão principal do Visual Studio.  
@@ -156,12 +156,12 @@ O recurso de Verificação Estendida também pode ser usado durante o desenvolvi
 ### <a name="special-considerations-for-collations"></a>Considerações especiais para ordenações  
 Para obter mais informações sobre ordenações em bancos de dados parcialmente independentes, consulte [Ordenações de bancos de dados independentes](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  
   
-## <a name="bkmk_sqlclr"></a>SQLCLR  
+## <a name="sqlclr"></a><a name="bkmk_sqlclr"></a>SQLCLR  
 Para obter informações sobre as opções de Assembly, consulte [Caixa de diálogo Informações do Assembly](https://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true).  
   
 Para obter informações sobre como assinar, consulte a seção **Assinatura do Assembly** do tópico [Página de assinatura, Project Designer](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) .  
   
-## <a name="bkmk_sqlclr_sqlclrbuild"></a>Build SQLCLR e SQLCLR  
+## <a name="sqlclr-and-sqlclr-build"></a><a name="bkmk_sqlclr_sqlclrbuild"></a>Build SQLCLR e SQLCLR  
 As páginas de propriedades de **SQLCLR** e **Compilação SQLCLR** contêm muitas configurações para usar objetos SQL CLR em seu projeto. Especificamente, a página de propriedades de **SQLCLR** tem uma configuração de nível de permissão para definir permissões no assembly do SQLCLR. Também tem uma configuração "Gerar DDL" para controlar se o DDL (Dynamic Data Language) é gerado para os objetos SQLCLR adicionados ao projeto. A página de propriedades de **Compilação** contém todas as opções de compilador que podem ser definidas para configurar a compilação de código SQLCLR no projeto.  
   
 A página de propriedades **Compilação SQLCLR** contém configurações avançadas de compilação para compilar seus objetos SQL CLR. São fornecidas diferentes opções com base na linguagem (VB ou C#) usada para codificar os objetos SQL CLR.  
@@ -171,7 +171,7 @@ A página de propriedades **Compilação SQLCLR** contém configurações avanç
 2.  Se o objeto for escrito em VB, você poderá primeiro escolher VB na lista suspensa **Linguagem** e clicar no botão **Avançado** . As descrições para as opções do VB podem ser localizadas em [Caixa de diálogo Configurações de Compilador Avançadas (Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx)  
   
 
-## <a name="bkmk_build"></a>Compilação  
+## <a name="build"></a><a name="bkmk_build"></a>Compilação  
 É possível escolher uma configuração de compilação para cada projeto de banco de dados de sua solução. Por padrão, há uma única configuração, mas você pode adicionar configurações personalizadas. Você pode optar por fazer isso, por exemplo, se desejar uma configuração personalizada na qual você sempre exclui e recria o banco de dados. Em soluções que contém diferentes tipos de projeto, você pode criar uma configuração de solução personalizada que contenha uma configuração de compilação específica para cada projeto.  
   
 #### <a name="to-specify-a-build-configuration-for-a-solution"></a>Para especificar uma configuração de compilação para uma solução.  
@@ -197,14 +197,14 @@ As configurações da tabela a seguir aplicam-se às configurações de compila�
 |Tratar avisos Transact\-SQL como erros|Não|Especifica se um aviso Transact\-SQL deve fazer com que o processo de compilação e implantação seja cancelado. Se essa caixa de seleção estiver desmarcada, os avisos serão exibidos, mas o processo de compilação e implantação continuará. Essa configuração é específica ao projeto, não ao usuário, e é armazenada no arquivo .sqlproj.|  
 |Suprimir avisos Transact\-SQL|Em branco|Especifica uma lista de números de avisos, delimitados por vírgula ou ponto e vírgula, que identificam os avisos suprimidos.<br /><br />Os avisos suprimidos não são exibidos na janela **Lista de Erros** e não afetam o êxito da compilação, mesmo se você marcar a caixa de seleção **Tratar avisos Transact\-SQL como erros**.|  
   
-## <a name="bkmk_sqlcmd_variables"></a>Variáveis SQLCMD  
+## <a name="sqlcmd-variables"></a><a name="bkmk_sqlcmd_variables"></a>Variáveis SQLCMD  
 Em Projetos de Banco de Dados do SQL Server é possível utilizar variáveis SQLCMD para fornecer substituição dinâmica a ser usada para depuração ou publicação. Você insere o nome e os valores da variável e, durante a compilação, os valores são substituídos. Se não houver valores locais, o valor padrão será usado. Com a inserção dessas variáveis em propriedades de projetos, elas serão oferecidas automaticamente na publicação e serão armazenadas em perfis de publicação. É possível efetuar pull nos valores do projeto das variáveis na publicação por meio do botão Carregar Valores.  
   
 Verifique se as variáveis corretas são inseridas nas propriedades do projeto, porque essas variáveis não são validadas em relação a um script no projeto, nem são usadas em script populado automaticamente.  
   
 Além disso, a publicação de linha de comando permite que você substitua esses valores na linha de comando ou usando um perfil.  
   
-## <a name="bkmk_build_events"></a>Eventos de Compilação  
+## <a name="build-events"></a><a name="bkmk_build_events"></a>Eventos de Compilação  
 É possível usar essas configurações para especificar que uma linha de comando seja executada antes do início da operação de compilação e que uma linha de comando seja executada após a operação de compilação ser concluída.  
   
 |Campo|Valor padrão|Descrição|  
@@ -213,7 +213,7 @@ Além disso, a publicação de linha de comando permite que você substitua esse
 |Linha de comando de eventos pós-compilação|Nenhum|Especifica que a linha de comando deve ser executada depois do projeto ser compilado. Clique em **Editar Pós-compilação** para modificar a linha de comando.|  
 |Executar o evento pós-compilação|Na compilação bem-sucedida|Especifica se a linha de comando pós-compilação deve ser executada sempre, apenas se a compilação for bem-sucedida ou apenas quando a compilação atualizar a saída do projeto (o script de compilação).|  
   
-## <a name="bkmk_debug"></a>Depurador  
+## <a name="debug"></a><a name="bkmk_debug"></a>Depurador  
 É possível usar essas configurações para controlar a depuração de seu projeto de banco de dados.  
   
 |Campo|Valor padrão|Descrição|  
@@ -227,10 +227,10 @@ Além disso, a publicação de linha de comando permite que você substitua esse
 |No usar instruções ALTER ASSEMBLY para atualizar tipos CLR|Não|Especifica se as instruções ALTER ASSEMBLY são usadas para atualizar tipos CLR (Common Language Runtime) ou se o objeto que instancia o tipo CLR será removido e recriado quando você implantar alterações.|  
 |Avançado...|Não|Botão de comando que permite especificar opções que controlam os eventos e o comportamento da implantação.|  
   
-## <a name="bkmk_ref_paths"></a>Caminhos de Referência  
+## <a name="reference-paths"></a><a name="bkmk_ref_paths"></a>Caminhos de Referência  
 É possível usar esta página para definir as variáveis do servidor e do banco de dados que estão associadas a uma referência entre bancos de dados. Além disso, você pode especificar os valores dessas variáveis. Para obter mais informações, consulte [Usando referências em projetos de banco de dados](https://msdn.microsoft.com/library/bb386242.aspx).  
   
-## <a name="bkmk_code_analysis"></a>Análise de Código  
+## <a name="code-analysis"></a><a name="bkmk_code_analysis"></a>Análise de Código  
 Você pode usar Análise de Código para descobrir problemas potenciais em seus scripts, como design, nomeação e problemas de desempenho. As regras para projetos de bancos de dados são organizadas em conjuntos de regras predefinidas que se destinam a áreas específicas, e você pode habilitar ou desabilitar qualquer regra na guia **Análise de Código** na página de propriedades **Propriedades de Projeto** . Na mesma guia, você pode especificar a análise de código para ser executada automaticamente toda vez que um projeto é compilado, ou se os avisos são tratados como erros.  
   
 Para usar a Análise de Código manualmente, clique com o botão direito do mouse no seu projeto no **Gerenciador de Soluções** e selecione **Executar Análise de Código**. Os avisos da análise de código são listados na janela **Lista de Erros** . Você pode clicar duas vezes em um aviso para navegar para o código-fonte que contém o problema e você pode exibir informações adicionais e possíveis correções para um aviso usando o menu contextual **Mostrar Ajuda para erros**. Para obter mais informações sobre Análise de Código, consulte [Analisando o código do banco de dados para melhorar a qualidade do código](https://msdn.microsoft.com/library/dd172133.aspx)(a página pode estar em inglês).  

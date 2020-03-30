@@ -47,10 +47,10 @@ author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 35ce03a8619eada5480d0cd656f20946bb11a11c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75924960"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
@@ -644,12 +644,12 @@ Em computadores multiprocessadores, assim como acontece em outras consultas, `AL
 > [!IMPORTANT]
 > Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no qual ele está localizado estiver offline ou definido como somente leitura. Quando a palavra-chave ALL for especificada e um ou mais índices estiver em um grupo de arquivos offline ou somente leitura, a instrução falhará.  
   
-## <a name="rebuilding-indexes"></a> Recompilando índices  
+## <a name="rebuilding-indexes"></a><a name="rebuilding-indexes"></a> Recompilando índices  
 A recriação de um índice descarta e recria o índice. Isso remove a fragmentação, recupera espaço em disco ao compactar as páginas com base na configuração do fator de preenchimento especificada ou existente, e reclassifica as linhas do índice em páginas contíguas. Quando ALL é especificado, todos os índices da tabela são descartados e recriados em uma única transação. As restrições de chave estrangeira não precisam ser descartadas com antecedência. Quando índices com 128 extensões ou mais são recriados, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] adia as desalocações de página atuais e seus bloqueios associados até depois da confirmação da transação.  
  
 Para obter mais informações, veja [Reorganizar e recriar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
   
-## <a name="reorganizing-indexes"></a> Reorganizando índices
+## <a name="reorganizing-indexes"></a><a name="reorganizing-indexes"></a> Reorganizando índices
 A reorganização de um índice utiliza recursos mínimos do sistema. Ela desfragmenta o nível folha de índices clusterizados e não clusterizados em tabelas e exibições, reordenando fisicamente as páginas de nível folha para que correspondam à ordem lógica, da esquerda para a direita, dos nós folha. A reorganização também compacta as páginas de índice. A compactação baseia-se no valor do fator de preenchimento existente. 
   
 Quando `ALL` for especificado, os índices relacionais, clusterizados e não clusterizados e os índices XML da tabela serão reorganizados. Algumas restrições se aplicam quando ALL é especificado; veja a definição de ALL na seção Argumentos deste artigo.  
@@ -659,7 +659,7 @@ Para obter mais informações, veja [Reorganizar e recriar índices](../../relat
 > [!IMPORTANT]
 > Para uma tabela do SQL Data Warehouse do Azure com um índice columnstore clusterizado ordenado, o `ALTER INDEX REORGANIZE` não reclassificará os dados. Para reclassificar os dados, use `ALTER INDEX REBUILD`.
   
-## <a name="disabling-indexes"></a> Desabilitando índices  
+## <a name="disabling-indexes"></a><a name="disabling-indexes"></a> Desabilitando índices  
 A desabilitação de um índice impede o acesso do usuário ao índice, e, para índices clusterizados, aos dados da tabela subjacente. A definição de índice permanece no catálogo do sistema. A desabilitação de um índice não clusterizado ou clusterizado em uma exibição exclui fisicamente os dados do índice. A desabilitação de um índice clusterizado impede o acesso aos dados, mas eles permanecem inalterados na árvore B até que o índice seja descartado ou recriado. Para exibir o status de um índice habilitado ou desabilitado, consulte a coluna **is_disabled** na exibição do catálogo **sys.indexes**.  
   
 Se uma tabela estiver em uma publicação de replicação transacional, não será possível desabilitar nenhum índice associado a colunas de chave primária. Esses índices são necessários para a replicação. Para desabilitar um índice, você deve primeiramente descartar a tabela da publicação. Para obter mais informações, consulte [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
@@ -682,7 +682,7 @@ Se ALL for especificado quando as opções de bloqueio de linha ou de página fo
 |ALLOW_PAGE_LOCKS = ON|Ao heap e a quaisquer índices não clusterizados associados.|  
 |ALLOW_PAGE_LOCKS = OFF|Totalmente aos índices não clusterizados. Isso significa que todos os bloqueios de página não são permitidos nos índices não clusterizados. No heap, somente os bloqueios S (compartilhados), U (atualização) e X (exclusivos) da página não são permitidos. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] ainda pode adquirir um bloqueio de página intencional (IS, IU ou IX) para fins internos.|  
   
-## <a name="online-index-operations"></a> Operações de índice online  
+## <a name="online-index-operations"></a><a name="online-index-operations"></a> Operações de índice online  
 Ao recriar um índice, se a opção ONLINE estiver definida como ON, os objetos, as tabelas e os índices associados subjacentes estarão disponíveis para consultas e modificação de dados. Você também pode recriar online uma parte de um índice que reside em uma única partição. Os bloqueios de tabela exclusivos são mantidos por pouco tempo durante o processo de alteração.  
   
 A reorganização de um índice sempre é executada online. O processo não mantém bloqueios de longo prazo e, portanto, não bloqueia consultas ou atualizações em execução.  
@@ -695,7 +695,7 @@ A reorganização de um índice sempre é executada online. O processo não mant
   
 Todas as outras operações de índice online executadas ao mesmo tempo falham. Por exemplo, não é possível recriar dois ou mais índices na mesma tabela ao mesmo tempo, ou criar um novo índice ao recriar um índice existente na mesma tabela.  
 
-### <a name="resumable-indexes"></a>Operações de índice retomáveis
+### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a>Operações de índice retomáveis
 
 **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 

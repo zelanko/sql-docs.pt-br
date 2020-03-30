@@ -13,10 +13,10 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0e0f85e21898ccf61d7c205305fc9179edc2af4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68810580"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Suporte de DAC para objetos e versões do SQL Server
@@ -42,7 +42,7 @@ ms.locfileid: "68810580"
   
 -   [Considerações adicionais para ações de implantação](#Considerations)  
   
-##  <a name="SupportedObjects"></a> Objetos SQL Server com suporte  
+##  <a name="supported-sql-server-objects"></a><a name="SupportedObjects"></a> Objetos SQL Server com suporte  
  Somente objetos com suporte podem ser especificados em um aplicativo da camada de dados enquanto ele é criado ou editado. Você não pode extrair, registrar ou importar um DAC de um banco de dados existente que contenha objetos sem suporte em um DAC. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece suporte aos objetos a seguir em um DAC.  
   
 |||  
@@ -63,7 +63,7 @@ ms.locfileid: "68810580"
 |TYPE: Tipo de Tabela definido pelo usuário|USER|  
 |VIEW||  
   
-##  <a name="SupportByVersion"></a> Suporte a aplicativo da camada de dados das versões do SQL Server  
+##  <a name="data-tier-application-support-by-the-versions-of-sql-server"></a><a name="SupportByVersion"></a> Suporte a aplicativo da camada de dados das versões do SQL Server  
  As versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm níveis diferentes de suporte para operações do DAC. Todas as operações do DAC com suporte de uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm suporte de todas as edições dessa versão.  
   
  As instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] oferecem suporte às seguintes operações DAC:  
@@ -88,7 +88,7 @@ ms.locfileid: "68810580"
   
  Um pacote de DAC ou arquivo de exportação criados com uma versão do DAC Framework podem ser processados por uma versão posterior do DAC Framework. Por exemplo, um pacote de DAC extraído usando as ferramentas de cliente do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] podem ser implantadas usando as ferramentas de cliente [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 ou superiores.  
   
-##  <a name="DeploymentLimitations"></a> Limitações de implantação de dados  
+##  <a name="data-deployment-limitations"></a><a name="DeploymentLimitations"></a> Limitações de implantação de dados  
  Observe estas limitações de fidelidade do mecanismo de implantação de dados da Estrutura DAC no SQL Server 2012 SP1. As limitações se aplicam às seguintes ações da Estrutura DAC: implantar ou publicar um arquivo .dacpac, e importar um arquivo .bacpac.  
   
 1.  A perda de metadados em certas condições e tipos de base nas colunas sql_variant. Nos casos afetados, você verá um aviso com a seguinte mensagem:  **Algumas propriedades em alguns tipos de dados usados dentro de uma coluna sql_variant não são preservadas quando a implantação é feita pela Estrutura DAC.**  
@@ -113,7 +113,7 @@ ms.locfileid: "68810580"
   
     -   Tipo de base DECIMAL, NUMERIC: quando a precisão do valor é maior que 28.  
   
-##  <a name="Considerations"></a> Considerações adicionais para ações de implantação  
+##  <a name="additional-considerations-for-deployment-actions"></a><a name="Considerations"></a> Considerações adicionais para ações de implantação  
  Observe as seguintes considerações para ações da implantação de dados da Estrutura DAC:  
   
 -   **Extrair/Exportar** – Nas ações que usam a Estrutura DAC para criar um pacote de um banco de dados – por exemplo, extrair um arquivo .dacpac, exportar um arquivo .bacpac – essas restrições não se aplicam. Os dados no pacote são uma representação de fidelidade total dos dados no banco de dados de origem. Se alguma dessas condições estiver presente no pacote, o log de extração/exportação conterá um resumo dos problemas através das mensagens observadas anteriormente. Esse é um aviso ao usuário sobre problemas potenciais de implantação de dados com o pacote criado. O usuário também verá a seguinte mensagem de resumo no log:  **Essas limitações não afetam a fidelidade dos tipos de dados e valores armazenados no pacote DAC que tenha sido criado pela Estrutura DAC; elas se aplicam apenas aos tipos de dados e valores resultantes da implantação de um pacote DAC em um banco de dados. Para obter mais informações sobre os dados afetados e como solucionar essa limitação, confira**[este tópico](https://go.microsoft.com/fwlink/?LinkId=267086).  

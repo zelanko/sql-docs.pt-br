@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 08/02/2019
 ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957040"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Adicionar o widget de exemplo das *cinco consultas mais lentas* ao painel do banco de dados
@@ -29,7 +29,7 @@ Este tutorial demonstra o processo de adicionar um dos widgets de exemplo intern
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclui vários widgets de insights prontos para uso. Este tutorial mostra como adicionar o widget *query-data-store-db-insight*, mas as etapas são basicamente as mesmas para adicionar qualquer widget.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este tutorial requer o SQL Server ou o *TutorialDB* do Banco de Dados SQL do Azure. Para criar o banco de dados *TutorialDB*, siga um destes guias de início rápido:
 

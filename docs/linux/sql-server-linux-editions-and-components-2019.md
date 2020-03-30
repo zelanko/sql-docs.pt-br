@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
 ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288550"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Edições e recursos compatíveis do SQL Server 2019 no Linux
@@ -77,7 +77,7 @@ Para saber quais os recursos com suporte nas edições Developer, Enterprise Cor
 
 A Developer Edition continua a dar suporte a apenas um cliente para o [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
-##  <a name="Cross-BoxScaleLimits"></a> Limites de escala  
+##  <a name="scale-limits"></a><a name="Cross-BoxScaleLimits"></a> Limites de escala  
   
 |Recurso|Enterprise|Standard|Web|Express| 
 |-------------|----------------|--------------|---------|------------------------|
@@ -90,7 +90,7 @@ A Developer Edition continua a dar suporte a apenas um cliente para o [SQL Serve
   
 <sup>1</sup> A Enterprise Edition com licenciamento baseado em Servidor + CAL (licença de acesso para cliente) (não disponível para novos contratos) é limitada ao máximo de 20 núcleos por instância do SQL Server. Não há limites no modelo de Licenciamento de Servidor Baseado em Núcleo. Para saber mais, confira [Calcular limites de capacidade por edição do SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
-##  <a name="RDBMSHA"></a> Alta Disponibilidade do RDBMS  
+##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> Alta Disponibilidade do RDBMS  
   
 |Recurso|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
@@ -118,7 +118,7 @@ A Developer Edition continua a dar suporte a apenas um cliente para o [SQL Serve
 
 <sup>3</sup> A Standard Edition é compatível com grupos de disponibilidade básicos. Um grupo de disponibilidade básico dá suporte a duas réplicas, com um banco de dados. Para obter mais informações sobre grupos de disponibilidade básicos, consulte [Grupos de Disponibilidade Básicos](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
-##  <a name="RDBMSSP"></a> Escalabilidade e desempenho do RDBMS  
+##  <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a> Escalabilidade e desempenho do RDBMS  
   
 |Recurso|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
@@ -143,7 +143,7 @@ A Developer Edition continua a dar suporte a apenas um cliente para o [SQL Serve
 
 <sup>1</sup> Tamanho de dados de OLTP na memória e cache do segmento Columnstore são limitados a quantidade de memória especificada por edição na seção limites de escala. Os graus de máximos de paralelismo é limitado. Os graus de paralelismo do processo (DOP) de criação de um índice são limitados a 2 DOP para a Standard Edition e a 1 DOP para a Web e a Express Editions. Refere-se a índices de columnstore criados em tabelas baseadas em disco e tabelas com otimização de memória.
 
-##  <a name="RDBMSS"></a> Segurança do RDBMS  
+##  <a name="rdbms-security"></a><a name="RDBMSS"></a> Segurança do RDBMS  
   
 |Recurso|Enterprise|Standard|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
@@ -157,7 +157,7 @@ A Developer Edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Bancos de dados independentes|Sim|Sim|Sim|Sim| 
 |Criptografia para backups|Sim|Sim|Não|Não|  
 
-##  <a name="RDBMSM"></a> Gerenciamento RDBMS  
+##  <a name="rdbms-manageability"></a><a name="RDBMSM"></a> Gerenciamento RDBMS  
   
 |Recurso|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
@@ -176,7 +176,7 @@ A Developer Edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Verificação de consistência paralela|Sim|Não|Não|Não| 
 |Ponto de controle do Utilitário do SQL Server|Sim|Não|Não|Não|    
 
-##  <a name="Programmability"></a> Programmability  
+##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
 |Recurso|Enterprise|Standard|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
@@ -197,11 +197,11 @@ A Developer Edition continua a dar suporte a apenas um cliente para o [SQL Serve
 
 <sup>1</sup> Expansão com vários nós de computação requer um nó de cabeçalho.
 
-## <a name="IS"></a> Integration Services
+## <a name="integration-services"></a><a name="IS"></a> Integration Services
 
 Para obter informações sobre os recursos do SSIS (Integration Services) compatíveis com as edições do [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], confira [Recursos do Integration Services compatíveis com as edições do SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
-##  <a name="SLS"></a> Serviços espaciais e de localização  
+##  <a name="spatial-and-location-services"></a><a name="SLS"></a> Serviços espaciais e de localização  
   
 |Nome do recurso|Enterprise|Standard|Web|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
@@ -210,7 +210,7 @@ Para obter informações sobre os recursos do SSIS (Integration Services) compat
 |Bibliotecas espaciais avançadas|Sim|Sim|Sim|Sim|   
 |Importação/exportação de formatos de dados espaciais padrão da indústria|Sim|Sim|Sim|Sim|   
 
-## <a name="Unsupported"></a> Recursos e serviços sem suporte
+## <a name="unsupported-features--services"></a><a name="Unsupported"></a> Recursos e serviços sem suporte
 
 Os seguintes recursos e serviços não estão disponíveis no SQL Server 2019 no Linux. O suporte para esses recursos será habilitado gradativamente com o passar do tempo.
 

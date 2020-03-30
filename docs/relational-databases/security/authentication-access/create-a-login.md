@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75776394"
 ---
 # <a name="create-a-login"></a>Crie um logon
@@ -35,7 +35,7 @@ ms.locfileid: "75776394"
 
   Este tópico descreve como criar um logon no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ou no [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Um logon é a identidade da pessoa ou do processo que está se conectando a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-##  <a name="Background"></a> Plano de fundo  
+##  <a name="background"></a><a name="Background"></a> Plano de fundo  
  Um logon é uma entidade de segurança ou uma entidade que pode ser autenticada por um sistema seguro. Usuários precisam de um logon para se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Você pode criar um logon com base em uma entidade de segurança do Windows (como um usuário de domínio ou um grupo de domínio do Windows) ou pode criar um logon que não esteja baseado em uma entidade de segurança do Windows (como um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
 > **OBSERVAÇÃO:** Para usar a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] deve usar a autenticação de modo misto. Para obter mais informações, veja [Escolher um modo de autenticação](../../../relational-databases/security/choose-an-authentication-mode.md).  
@@ -44,13 +44,13 @@ ms.locfileid: "75776394"
   
 > **OBSERVAÇÃO:** Quando um logon se conecta ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a identidade é validada no banco de dados mestre. Use usuários de banco de dados independentes para autenticar conexões [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] no nível do banco de dados. Quando você usa usuários de banco de dados independente, não é necessário um logon. Um banco de dados independente é um banco de dados isolado de outros bancos de dados e da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (e o banco de dados mestre) que hospeda o banco de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a usuários de bancos de dados independentes para autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Windows. Ao usar [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], combine usuários do banco de dados com regras de firewall de nível de banco de dados. Para obter mais informações, consulte [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-##  <a name="Security"></a> Segurança  
+##  <a name="security"></a><a name="Security"></a> Segurança  
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige a permissão **ALTER ANY LOGIN** ou **ALTER LOGIN** no servidor.  
   
  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] exige a associação à função **loginmanager** .  
   
-##  <a name="SSMSProcedure"></a> Criar um logon usando o SSMS  
+##  <a name="create-a-login-using-ssms"></a><a name="SSMSProcedure"></a> Criar um logon usando o SSMS  
   
   
 1.  No Pesquisador de Objetos, expanda a pasta da instância de servidor no qual deseja criar o novo logon.  
@@ -226,7 +226,7 @@ ms.locfileid: "75776394"
  **Autenticação do SQL Server**  
  A caixa de seleção **O logon está bloqueado** só estará disponível se o logon selecionado se conectar usando a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e se estiver bloqueado. Esta configuração é somente leitura. Para desbloquear um logon bloqueado, execute ALTER LOGIN com a opção UNLOCK.  
   
-##  <a name="TsqlProcedure"></a> Criar um logon usando a Autenticação do Windows e o T-SQL  
+##  <a name="create-a-login-using-windows-authentication-using-t-sql"></a><a name="TsqlProcedure"></a> Criar um logon usando a Autenticação do Windows e o T-SQL  
   
  
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
@@ -263,7 +263,7 @@ ms.locfileid: "75776394"
   
  Para obter mais informações, veja [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: etapas a serem executadas após criar um logon  
+##  <a name="follow-up-steps-to-take-after-you-create-a-login"></a><a name="FollowUp"></a> Acompanhamento: etapas a serem executadas após criar um logon  
  Após ser criado, o logon pode se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mas não necessariamente tem permissão suficiente para executar qualquer trabalho útil. A lista a seguir fornece links a ações de logon comuns.  
   
 -   Para associar o logon a uma função, veja [Unir uma função](../../../relational-databases/security/authentication-access/join-a-role.md).  

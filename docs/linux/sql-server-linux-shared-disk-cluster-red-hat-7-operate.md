@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558521"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Operar a FCI (instância de cluster de failover) RHEL do SQL Server
@@ -39,7 +39,7 @@ O diagrama a seguir ilustra os componentes em um cluster do Linux com o SQL Serv
 
 Para saber mais sobre configuração de cluster, opções de agentes de recursos e gerenciamento, acesse a [Documentação de referência do RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
-## <a name = "failManual"></a>Fazer failover do cluster manualmente
+## <a name="failover-cluster-manually"></a><a name = "failManual"></a>Fazer failover do cluster manualmente
 
 O comando `resource move` cria uma restrição que força o recurso a ser reiniciado no nó de destino.  Depois de executar o comando `move`, a execução do recurso `clear` removerá a restrição, de modo que seja possível mover o recurso novamente ou fazer o failover do recurso automaticamente. 
 

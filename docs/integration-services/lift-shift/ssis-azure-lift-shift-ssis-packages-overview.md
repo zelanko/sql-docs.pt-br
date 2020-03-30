@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 0a402c50e8a7f1c2467b00fbbaa599d6c289ebab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67896186"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrar cargas de trabalho do SQL Server Integration Services por lift-and-shift para a nuvem
@@ -93,7 +93,7 @@ Com o Banco de Dados SQL do Azure, você só pode usar transações elásticas. 
 
 Para começar, confira [Tutorial: implantar e executar um pacote SSIS (SQL Server Integration Services) no Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Pré-requisitos
 
 Para implantar pacotes do SSIS para o Azure, você precisa ter uma das seguintes versões do SSDT (SQL Server Data Tools):
 -   Para o Visual Studio 2017, versão 15.3 ou posterior.

@@ -10,10 +10,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79218051"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
@@ -194,7 +194,7 @@ Uma tarefa comum que todos que implantam o [!INCLUDE[ssNoVersion](../includes/ss
 ## <a name="platform-choice"></a>Opção de plataforma
 O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] baseia-se nas inovações introduzidas no [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] para permitir que você execute [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em sua plataforma preferida com ainda mais funcionalidade e segurança.
 
-### <a id="sql-server-on-linux"></a>Linux
+### <a name="linux"></a><a id="sql-server-on-linux"></a>Linux
 
 | Novo recurso ou atualização | Detalhes |
 |:-----|:-----|
@@ -227,7 +227,7 @@ A maneira mais fácil de começar a trabalhar com o [!INCLUDE[ssNoVersion](../in
 |Aviso de instalação na chave do produto (Product Key) da licença do servidor/CAL|Se uma chave do produto (Product Key) de licença de servidor corporativo/CAL for inserida e o computador tiver mais que 20 núcleos físicos ou 40 núcleos lógicos quando o Hyper-Threading estiver habilitado, será exibido um aviso durante a instalação. Os usuários ainda podem reconhecer a limitação e continuar a instalação ou podem inserir uma Chave de Licença que dê suporte ao número máximo de processadores do sistema operacional.|
 | &nbsp; | &nbsp; |
 
-## <a id="ml"></a> Serviços de Machine Learning do SQL Server
+## <a name="sql-server-machine-learning-services"></a><a id="ml"></a> Serviços de Machine Learning do SQL Server
 
 |Novo recurso ou atualização | Detalhes |
 |:---|:---|

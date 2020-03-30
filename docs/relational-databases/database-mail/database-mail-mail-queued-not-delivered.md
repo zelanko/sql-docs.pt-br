@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 92ff867d98b83f1934972a576df8295c3f9ca79d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70228415"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>Database Mail: Email na fila, não entregue 
@@ -73,7 +73,7 @@ O status de falha indica que o programa externo do Database Mail não pôde entr
 
 
 
-##  <a name="RelatedContent"></a> Confira também
+##  <a name="see-also"></a><a name="RelatedContent"></a> Confira também
   
 -  [Visão geral do Database Mail](database-mail.md)
 

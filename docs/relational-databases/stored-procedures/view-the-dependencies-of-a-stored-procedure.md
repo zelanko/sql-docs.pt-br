@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 027373f9ff65d02c6bc2fb49079be3e1eda817bb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68050916"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>Exibir as dependências de um procedimento armazenado
@@ -30,13 +30,13 @@ ms.locfileid: "68050916"
   
 -   **Para exibir as dependências de um procedimento, usando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Função do sistema: **sys.dm_sql_referencing_entities**  
  Requer a permissão CONTROL da entidade referenciada e a permissão SELECT em sys.dm_sql_referencing_entities. Quando a entidade referenciada é uma função de partição, a permissão CONTROL é exigida no banco de dados. Por padrão, a permissão SELECT é concedida a público.  
   
@@ -46,14 +46,14 @@ ms.locfileid: "68050916"
  Exibição de catálogo do objeto: **sys.sql_expression_dependencies**  
  Requer permissão VIEW DEFINITION no banco de dados e permissão SELECT em sys.sql_expression_dependencies para o banco de dados. Por padrão, a permissão SELECT é concedida somente a membros da função de banco de dados fixa db_owner. Quando são concedidas permissões SELECT e VIEW DEFINITION a outro usuário, o usuário autorizado pode exibir todas as dependências no banco de dados.  
   
-##  <a name="Procedures"></a> Como exibir as dependências de um procedimento armazenado  
+##  <a name="how-to-view-the-dependencies-of-a-stored-procedure"></a><a name="Procedures"></a> Como exibir as dependências de um procedimento armazenado  
  Você pode usar uma das seguintes opções:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para exibir as dependências de um procedimento armazenado no Pesquisador de Objetos**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
@@ -68,7 +68,7 @@ ms.locfileid: "68050916"
   
 6.  Clique em **OK**.  
   
-###  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para exibir as dependências de um procedimento no Editor de Consultas**  
   
  Função do sistema: **sys.dm_sql_referencing_entities**  

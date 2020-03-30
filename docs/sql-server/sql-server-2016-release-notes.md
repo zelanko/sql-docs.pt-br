@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286330"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notas de Versão do SQL Server 2016.
@@ -28,7 +28,7 @@ ms.locfileid: "79286330"
 - [![Máquina Virtual pequena do Azure](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)** para criar uma Máquina Virtual com o SQL Server 2016 SP1 já está instalado.
 - [![Baixar o SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Para obter a versão mais recente do SQL Server Management Studio, veja **[Baixar o SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)** .
 
-## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
+## <a name="sql-server-2016-service-pack-2-sp2"></a><a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
 
 ![info_tip](../sql-server/media/info-tip.png) O SQL Server 2016 SP2 inclui todas as atualizações cumulativas liberadas após SP1 2016, até e incluindo CU8.
 
@@ -87,7 +87,7 @@ Melhorias de compatibilidade e diagnóstico no SQL Server 2016 SP2.
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
-## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
+## <a name="sql-server-2016-service-pack-1-sp1"></a><a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
 ![info_tip](../sql-server/media/info-tip.png) O SQL Server 2016 SP1 inclui todas as atualizações cumulativas até o SQL Server 2016 RTM CU3, incluindo a Atualização de Segurança MS16-136. Ele contém um rollup de soluções fornecidas nas atualizações cumulativas do SQL Server 2016 até, e incluindo, a atualização cumulativa mais recente, CU3, e a Atualização de Segurança MS16-136 lançada em 8 de novembro de 2016.
 
 Os seguintes recursos estão disponíveis nas edições Standard, Web, Express e Local DB do SQL Server SP1 (salvo indicação em contrário):
@@ -135,13 +135,13 @@ A instalação do SQL Server 2016 SP1 pode exigir a reinicialização após a in
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
-##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
+##  <a name="sql-server-2016-release---general-availability-ga"></a><a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Mecanismo de Banco de Dados (GA)](#bkmk_ga_instalpatch)
 -   [Stretch Database (GA)](#bkmk_ga_stretch)
 -   [Repositório de Consultas (GA)](#bkmk_ga_query_store)
 -   [Documentação do produto (GA)](#bkmk_ga_docs)
 
-### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Instalar o requisito de patch (GA)
+### <a name="repl_icon_warn--install-patch-requirement-ga"></a>![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Instalar o requisito de patch (GA)
 **Problema e impacto ao cliente:** a Microsoft identificou um problema que afeta os binários do Runtime Microsoft VC++ 2013 que são instalados como um pré-requisito pelo SQL Server 2016. Uma atualização está disponível para correção deste problema. Se essa atualização para os binários do Runtime de VC não for instalada, o SQL Server 2016 poderá apresentar problemas de estabilidade em determinados cenários. Antes de instalar o SQL Server 2016, verifique se o computador precisa do patch descrito em [KB 3164398](https://support.microsoft.com/kb/3164398). O patch também é incluído no [CU1 (Pacote de Atualização Cumulativa 1) para o SQL Server 2016 RTM](https://www.microsoft.com/download/details.aspx?id=53338).
 
 **Resolução:** use uma das seguintes soluções:
@@ -167,7 +167,7 @@ A instalação do SQL Server 2016 SP1 pode exigir a reinicialização após a in
     - **Centro de Download:** finalmente, a atualização está disponível no Centro de Download da Microsoft. Você pode baixar o software da atualização e instalá-lo nos servidores depois que tiverem o SQL Server 2016.
 
 
-### <a name="bkmk_ga_stretch"></a>Stretch Database
+### <a name="stretch-database"></a><a name="bkmk_ga_stretch"></a>Stretch Database
 
 #### <a name="problem-with-a-specific-character-in-a-database-or-table-name"></a>Problema com um caractere específico em um nome de banco de dados ou de tabela
 
@@ -181,7 +181,7 @@ A instalação do SQL Server 2016 SP1 pode exigir a reinicialização após a in
 
 **Solução alternativa:** remova o índice que usa a palavra-chave INCLUDE, habilite o Stretch Database na tabela e recrie o índice. Se você fizer isso, lembre-se de seguir as práticas e políticas de manutenção de sua organização para garantir um impacto mínimo ou nenhum impacto sobre os usuários da tabela afetada.
 
-### <a name="bkmk_ga_query_store"></a>Query Store
+### <a name="query-store"></a><a name="bkmk_ga_query_store"></a>Query Store
 
 #### <a name="problem-with-automatic-data-cleanup-on-editions-other-than-enterprise-and-developer"></a>Problema com a limpeza automática de dados em edições que não sejam Enterprise e Developer
 
@@ -205,7 +205,7 @@ Além disso, execute os seguintes procedimentos armazenados do Repositório de C
 - `sp_query_store_remove_query`
 
 
-###  <a name="bkmk_ga_docs"></a> Documentação do produto (GA)
+###  <a name="product-documentation-ga"></a><a name="bkmk_ga_docs"></a> Documentação do produto (GA)
  **Problema e impacto ao cliente:** Uma versão para download da documentação do SQL Server 2016 ainda não está disponível. Quando você usa o Gerenciador da Biblioteca da Ajuda para tentar **Instalar o conteúdo online**, a documentação do SQL Server 2012 e do SQL Server 2014 é exibida, mas não existem opções para a documentação do SQL Server 2016.
 
  **Solução alternativa:** use uma das seguintes soluções alternativas:

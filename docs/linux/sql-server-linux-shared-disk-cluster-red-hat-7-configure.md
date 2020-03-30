@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.openlocfilehash: 3ff0c862e93cd3b552b29c4eec8ab91931c809c7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75656623"
 ---
 # <a name="configure-rhel-failover-cluster-instance-fci-cluster-for-sql-server"></a>Configurar o cluster de FCI (instância de cluster de failover) RHEL do SQL Server
@@ -39,7 +39,7 @@ Para usar uma cadeia de conexão que aponta para um nome do servidor de cadeia d
 
 As seções a seguir descrevem as etapas necessárias para configurar uma solução de cluster de failover. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para concluir o cenário de ponta a ponta a seguir, você precisará de dois computadores para implantar o cluster de dois nós e outro servidor para configurar o servidor NFS. As etapas abaixo descrevem como esses servidores serão configurados.
 

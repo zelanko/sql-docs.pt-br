@@ -15,10 +15,10 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3bf32d532c2bf10adb1348352c472cd87f0b8413
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822565"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar réplicas (Assistente de novo grupo de disponibilidade: assistente para adicionar réplica)
@@ -32,7 +32,7 @@ ms.locfileid: "74822565"
 |[Preferências de backup](#BackupPreferencesTab)|Use esta guia para especificar sua preferência de backup para o grupo de disponibilidade como um todo e suas prioridades de backup para as réplicas de disponibilidade individuais.|  
 |[Ouvinte](#Listener)|Use esta guia, se disponível, para criar um ouvinte de grupo de disponibilidade. Por padrão, não é criado um ouvinte.<br /><br /> Esta guia estará disponível apenas se você estiver executando o [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].<br/><br/>O DHCP está desabilitado quando o tipo de cluster é EXTERNAL ou NONE. |  
   
-##  <a name="ReplicasTab"></a> Guia Réplicas  
+##  <a name="replicas-tab"></a><a name="ReplicasTab"></a> Guia Réplicas  
  **Instância do Servidor**  
  Exibe o nome da instância de servidor que hospedará a réplica de disponibilidade.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "74822565"
  **Remover Réplica**  
  Clique para remover a réplica secundária especificada do grupo de disponibilidade.  
   
-##  <a name="EndpointsTab"></a> Guia Pontos de Extremidade  
+##  <a name="endpoints-tab"></a><a name="EndpointsTab"></a> Guia Pontos de Extremidade  
  Para cada instância de servidor que hospedará uma réplica de disponibilidade, a guia **Pontos de Extremidade** exibirá valores reais do ponto de extremidade de espelhamento de banco de dados existente, se houver algum, ou valores sugeridos para um novo ponto de extremidade potencial que usaria a Autenticação do Windows. Para os pontos de extremidade existentes e potenciais, a grade Valores do ponto de extremidade exibe as seguintes informações:  
   
  **Nome do servidor**  
@@ -107,7 +107,7 @@ ms.locfileid: "74822565"
   
      Se você deixar a página **Especificar Réplicas de Disponibilidade** aberta enquanto configura pontos de extremidade, retorne à guia **Pontos de Extremidade** e clique em **Atualizar** para atualizar a grade **Valores do ponto de extremidade** .  
   
-##  <a name="BackupPreferencesTab"></a> Guia Preferências de Backup  
+##  <a name="backup-preferences-tab"></a><a name="BackupPreferencesTab"></a> Guia Preferências de Backup  
  Para especificar onde os backups devem ocorrer, escolha uma das opções a seguir:  
   
  **Preferir Secundário**  
@@ -137,7 +137,7 @@ ms.locfileid: "74822565"
  **Excluir Réplica**  
  Para evitar que esta réplica de disponibilidade seja escolhida para execução de backups. Isso é útil, por exemplo, para uma réplica de disponibilidade remota para a qual você nunca deseja que ocorra o failover de backups.  
   
-##  <a name="Listener"></a> Guia Ouvinte  
+##  <a name="listener-tab"></a><a name="Listener"></a> Guia Ouvinte  
  Especifique sua preferência para um[ouvinte de grupo de disponibilidade](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)que fornecerá um ponto de conexão de cliente entre as seguintes opções:  
   
  **Não crie um ouvinte de grupo de disponibilidade agora.**  
@@ -195,7 +195,7 @@ ms.locfileid: "74822565"
 >  -   Peça ao administrador da rede para reservar o endereço IP do ouvinte para seu uso exclusivo. Informe o nome do host DNS do ouvinte aos desenvolvedores de aplicativos para uso em cadeias de conexão ao pedir conexões cliente com esse grupo de disponibilidade.  
 > -   Informe o nome do host DNS do ouvinte aos desenvolvedores de aplicativos para uso em cadeias de conexão ao pedir conexões cliente com esse grupo de disponibilidade.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Usar o Assistente de Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
