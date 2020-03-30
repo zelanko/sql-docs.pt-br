@@ -33,37 +33,37 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134426"
 ---
 # <a name="database-mail-configuration-objects"></a>Objetos de configuração do Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O Database Mail tem dois objetos de configuração: Os objetos de configuração de banco de dados permitem que você defina as configurações que o Database Mail deve usar ao enviar um email de seu aplicativo de banco de dados ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  O Database Mail tem dois objetos de configuração: os objetos de configuração de banco de dados permitem que você defina as configurações que Database Email deve usar ao enviar um email de seu aplicativo de banco de dados ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   Contas do Database Mail  
   
 -   Perfis do Database Mail  
   
   
-##  <a name="VisualElement"></a> Relação do objeto de configuração do Database Mail  
+##  <a name="database-mail-configuration-object-relationship"></a><a name="VisualElement"></a> Relação do objeto de configuração do Database Mail  
  A ilustração mostra dois perfis, três contas e três usuários. O Usuário 1 tem acesso ao Perfil 1, que usa a Conta 1 e a Conta 2. O Usuário 3 tem acesso ao Perfil 2, que usa a Conta 2 e a Conta 3. O Usuário 2 tem acesso ao Perfil 1 e ao Perfil 2.  
   
  ![Relação de usuários, perfis e contas](../../relational-databases/database-mail/media/databasemailprofileaccount.gif "Relação de usuários, perfis e contas")  
   
   
-##  <a name="DBAccount"></a> Conta do Database Mail  
+##  <a name="database-mail-account"></a><a name="DBAccount"></a> Conta do Database Mail  
  Uma conta do Database Mail contém as informações que o Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa para enviar mensagens de email a um servidor SMTP. Cada conta contém informações de um servidor de email.  
   
  O Database Mail oferece suporte a três métodos de autenticação para se comunicar com um servidor SMTP:  
   
 -   Autenticação do Windows: O Database Mail usa as credenciais da conta de serviço do Windows do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para autenticação no servidor SMTP.  
   
--   Autenticação Básica:  O Database Mail usa o nome de usuário e a senha especificados para autenticação no servidor SMTP.  
+-   Autenticação Básica: O Database Mail usa o nome de usuário e a senha especificados para autenticação no servidor SMTP.  
   
--   Autenticação Anônima:  O servidor SMTP não exige nenhuma autenticação.  O Database Mail não usará nenhuma credencial para a autenticação no servidor SMTP.  
+-   Autenticação Anônima: O servidor SMTP não exige nenhuma autenticação.  O Database Mail não usará nenhuma credencial para a autenticação no servidor SMTP.  
   
  As informações da conta são armazenadas no banco de dados **msdb** . Cada conta consiste nas seguintes informações:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68134426"
  O Assistente para Configuração do Database Mail é um modo conveniente de criar e gerenciar contas. Você também pode usar os procedimentos armazenados de configuração no **msdb** para criar e gerenciar contas.  
   
   
-##  <a name="DBProfile"></a> Perfil do Database Mail  
+##  <a name="database-mail-profile"></a><a name="DBProfile"></a> Perfil do Database Mail  
  Um perfil do Database Mail é uma coleção ordenada de contas relacionadas do Database Mail. Os aplicativos que enviam email por meio do Database Mail especificam perfis, em vez de usar contas diretamente. Separar as informações sobre os servidores de email individuais e os objetos utilizados pelo aplicativo melhora a flexibilidade e a confiabilidade: os perfis proporcionam failover automático, de modo que, se um servidor de email não estiver respondendo, o Database Mail poderá enviar email para outro servidor automaticamente. Os administradores de banco de dados podem adicionar, remover ou reconfigurar contas sem a necessidade de alterações no código do aplicativo ou nas etapas de trabalho.  
   
  Os perfis também ajudam os administradores de banco de dados a controlar o acesso a email. É necessária associação à função **DatabaseMailUserRole** para poder enviar Database Mail. Os perfis propiciam flexibilidade extra aos administradores para controlar quem envia email e quais contas são utilizadas.  
@@ -110,7 +110,7 @@ ms.locfileid: "68134426"
  Se existir mais de uma conta com o mesmo número de sequência, o Database Mail utilizará apenas uma delas para uma dada mensagem de email. Nesse caso, o Database Mail não pode garantir qual das contas será usada para o número de sequência em questão nem que a mesma conta seja usada em todas as mensagens.  
   
   
-##  <a name="RelatedTasks"></a> Tarefas de configuração do Database Mail  
+##  <a name="database-mail-configuration-tasks"></a><a name="RelatedTasks"></a> Tarefas de configuração do Database Mail  
  A tabela a seguir descreve as tarefas de configuração do Database Mail.  
   
 |Tarefa de configuração|Link do tópico|  
@@ -121,21 +121,21 @@ ms.locfileid: "68134426"
 |Descreve como criar um script de configuração do Database Mail usando modelos||  
   
   
-##  <a name="Add_Tasks"></a> Tarefas adicionais de configuração de banco de dados (procedimentos armazenados do sistema)  
+##  <a name="additional-database-configuration-tasks-system-stored-procedures"></a><a name="Add_Tasks"></a> Tarefas adicionais de configuração de banco de dados (procedimentos armazenados do sistema)  
  Os procedimentos armazenados de configuração do Database Mail estão localizados no banco de dados **msdb** .  
   
  As tabelas a seguir listam os procedimentos armazenados utilizados para configurar e gerenciar o Database Mail.  
   
 ### <a name="database-mail-settings"></a>Configurações do Database Mail  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|Altera definições de configuração do Database Mail.|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|Exibe definições de configuração do Database Mail.|  
   
 ### <a name="accounts-and-profiles"></a>Contas e perfis  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|Adiciona uma conta de email a um perfil do Database Mail.|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|Exclui uma conta do Database Mail.|  
@@ -150,7 +150,7 @@ ms.locfileid: "68134426"
   
 ### <a name="security"></a>Segurança  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|Concede permissão a uma entidade de banco de dados para usar um perfil do Database Mail.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|Remove a permissão de um usuário do banco de dados para usar um perfil público ou particular do Database Mail.|  
@@ -159,13 +159,13 @@ ms.locfileid: "68134426"
   
 ### <a name="system-state"></a>Estado do Sistema  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|Inicia o programa externo do Database Mail e a fila associada do SQL Service Broker.|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|Interrompe o programa externo do Database Mail e a fila associada do SQL Service Broker.|  
 |[sysmail_help_status_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-status-sp-transact-sql.md)|Indica se o Database Mail foi iniciado.|  
   
-##  <a name="RelatedContent"></a> Referências adicionais  
+##  <a name="additional-references"></a><a name="RelatedContent"></a> Referências adicionais  
   
 -   [Log e auditoria do Database Mail](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   

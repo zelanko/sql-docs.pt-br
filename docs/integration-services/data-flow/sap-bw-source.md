@@ -11,10 +11,10 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6f510f17f6a03320e8a20bf8a39e0452bfbeb718
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298064"
 ---
 # <a name="sap-bw-source"></a>Origem SAP BW
@@ -40,7 +40,7 @@ ms.locfileid: "71298064"
   
 -   [Configure a origem do SAP BW](#bkmk_Configure_Source)  
   
-##  <a name="bkmk_Prepare_Objects"></a> Preparando os objetos do SAP Netweaver BW que a origem exige  
+##  <a name="preparing-the-sap-netweaver-bw-objects-that-the-source-requires"></a><a name="bkmk_Prepare_Objects"></a> Preparando os objetos do SAP Netweaver BW que a origem exige  
  A origem do SAP BW exige que determinados objetos estejam no sistema SAP Netweaver BW antes que a origem possa funcionar. Se esses objetos ainda não existirem, siga estas etapas para criar e configurar esses objetos do sistema SAP Netweaver BW.  
   
 > [!NOTE]  
@@ -84,12 +84,12 @@ ms.locfileid: "71298064"
   
      A origem do SAP BW pode chamar a cadeia de processo para ativar o processo de transferência de dados.  
   
-##  <a name="bkmk_Connect_Database"></a> Conectando-se ao sistema SAP Netweaver BW  
+##  <a name="connecting-to-the-sap-netweaver-bw-system"></a><a name="bkmk_Connect_Database"></a> Conectando-se ao sistema SAP Netweaver BW  
  Para conectar-se ao sistema SAP Netweaver BW versão 7, a origem do SAP BW usará o gerenciador de conexões do SAP BW que faz parte do pacote do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 para SAP BW. O gerenciador de conexões do SAP BW é o único gerenciador de conexões do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que a origem do SAP BW pode usar.  
   
  Para obter mais informações sobre o gerenciador de conexões do SAP BW, consulte [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md).  
   
-##  <a name="bkmk_Configure_Source"></a> Configurando a origem do SAP BW  
+##  <a name="configuring-the-sap-bw-source"></a><a name="bkmk_Configure_Source"></a> Configurando a origem do SAP BW  
  Você pode configurar a origem do SAP BW das seguintes formas:  
   
 -   Pesquise e selecione o destino do OHS (Open Hub Service) a ser usado para extrair dados.  
@@ -114,7 +114,7 @@ ms.locfileid: "71298064"
   
 -   Use as opções que você selecionou para visualizar os dados que serão extraídos.  
   
- Você também pode habilitar o log das chamadas de função de RFC pela origem. (Esse log é separado do log opcional que você pode habilitar em pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].) Você habilita o log das chamadas de função de RFC quando configura o gerenciador de conexões do SAP BW que a origem usará. Para obter mais informações sobre como configurar o gerenciador de conexões do SAP BW, consulte [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md).  
+ Você também pode habilitar o log das chamadas de função de RFC pela origem. (Esse log é separado do log opcional que você pode habilitar em pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .) Você habilita o log das chamadas de função de RFC quando configura o gerenciador de conexões do SAP BW que a origem usará. Para obter mais informações sobre como configurar o gerenciador de conexões do SAP BW, consulte [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md).  
   
  Se você não souber todos os valores necessários para configurar a origem, talvez precise perguntar ao administrador do SAP.  
   

@@ -19,10 +19,10 @@ ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8708518270e3d7d6597471e855505c06f3853f1b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908571"
 ---
 # <a name="define-an-article"></a>Defina um Artigo
@@ -45,16 +45,16 @@ ms.locfileid: "72908571"
   
      [RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Os nomes de artigos não podem incluir nenhum dos caracteres a seguir: % , * , [ , ] , | , : , " , ? , ' , \ , / , < , >. Se algum objeto do banco de dados incluir qualquer um desses caracteres, para replicá-los será necessário especificar um nome de artigo que seja diferente do nome do objeto.  
   
-##  <a name="Security"></a> Segurança  
+##  <a name="security"></a><a name="Security"></a> Segurança  
  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework do Windows.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Crie publicações e defina artigos com o Assistente para Nova Publicação. Após a criação de uma publicação, exiba e modifique as propriedades da publicação na caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter informações sobre como criar uma publicação de um banco de dados Oracle, consulte [Criar uma publicação de um banco de dados Oracle](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>Para criar uma publicação e definir artigos  
@@ -99,7 +99,7 @@ ms.locfileid: "72908571"
   
     -   Especifique um nome para a publicação.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Após a criação da publicação, artigos poderão ser criados de forma programática, usando os procedimentos armazenados da replicação. Os procedimentos armazenados usados para criar um artigo dependem do tipo de publicação para o qual o artigo é definido. Para obter mais informações, consulte [Criar uma assinatura](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>Para definir um artigo para um instantâneo ou publicação transacional  
@@ -127,7 +127,7 @@ ms.locfileid: "72908571"
   
 3.  (Opcional) No Publicador do banco de dados de publicação, execute [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) para filtrar colunas de tabela. Para obter mais informações, consulte [Definir e modificar um filtro de colunas](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
-###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  Esse exemplo define um artigo com base na tabela `Product` para uma publicação transacional, onde o artigo é filtrado horizontal e verticalmente.  
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../relational-databases/replication/codesnippet/tsql/define-an-article_1.sql)]  
@@ -136,10 +136,10 @@ ms.locfileid: "72908571"
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-an-article_2.sql)]  
   
-##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
  Defina artigos de forma programada, usando o RMO (Replication Management Objects). As classes de RMO usadas para definir um artigo dependem do tipo de publicação para a qual o artigo é definido.  
   
-###  <a name="PShellExample"></a> Exemplos (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemplos (RMO)  
  O exemplo a seguir adiciona um artigo com filtros de linha e de coluna para uma publicação transacional.  
   
  [!code-cs[HowTo#rmo_CreateTranArticles](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createtranarticles)]  

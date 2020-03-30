@@ -17,10 +17,10 @@ ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 92e12a2991d03c125e3247d1dd681b0a5754e2f9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981996"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)

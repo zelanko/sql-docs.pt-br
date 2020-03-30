@@ -16,10 +16,10 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321993"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Criar uma assinatura para um Assinante não SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "75321993"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Para criar uma assinatura para um Assinante não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 1.  Instale e configure o software de cliente Oracle e o provedor OLE DB apropriados no Distribuidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) e [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
@@ -143,7 +143,7 @@ ms.locfileid: "75321993"
   
  Quando o Agente de Instantâneo terminar de gerar o instantâneo, uma mensagem será exibida, como "[100%] Um instantâneo de 17 artigos foi gerado".  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Crie assinaturas push para Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma programática, usando procedimentos armazenados de replicação.  
   
 > [!IMPORTANT]  

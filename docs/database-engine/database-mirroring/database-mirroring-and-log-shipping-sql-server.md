@@ -14,10 +14,10 @@ ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0aecc0f5bb867699bef16ff9f2947fe99a2cf1ec
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006468"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Espelhamento de banco de dados e envio de logs (SQL Server)

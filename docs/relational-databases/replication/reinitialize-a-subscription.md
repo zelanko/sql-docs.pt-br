@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70846507"
 ---
 # <a name="reinitialize-a-subscription"></a>Reinicializar uma assinatura
@@ -30,7 +30,7 @@ ms.locfileid: "70846507"
 
 
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Reinicializar uma assinatura é um processo em duas partes:  
   
 1.  Uma única assinatura ou todas as assinaturas de uma publicação são *marcadas* para reinicialização. Marque as assinaturas para reinicialização na caixa de diálogo **Reinicializar Assinaturas**, disponível nas pastas **Publicações Locais** e **Assinaturas Locais** do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você também pode marcar assinaturas da guia **Todas as Assinaturas** e o nó de publicações no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor). Ao marcar uma assinatura para reinicialização, você tem as seguintes opções:  
@@ -98,7 +98,7 @@ ms.locfileid: "70846507"
   
 3.  Na caixa de diálogo **Reinicializar Assinatura(s)** , selecione opções e então clique em **Marcar para Reinicialização**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As assinaturas podem ser reinicializadas forma programática, usando procedimentos armazenados. O procedimento armazenado usado depende do tipo de assinatura (push ou pull) e o tipo de publicação ao qual a assinatura pertence.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Para reinicializar uma assinatura pull para uma publicação transacional  
@@ -157,7 +157,7 @@ ms.locfileid: "70846507"
   
      Para obter mais informações, consulte [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
  Assinaturas individuais podem ser marcadas para reinicialização, para que durante a próxima sincronização, um novo instantâneo seja aplicado. As assinaturas podem ser reinicializadas programaticamente usando o RMO (Replication Management Objects). As classes que você usa dependem do tipo da publicação às quais as assinaturas pertencem e o tipo de assinatura (ou seja, uma assinatura push ou pull).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Para reinicializar uma assinatura pull para uma publicação transacional  
@@ -226,7 +226,7 @@ ms.locfileid: "70846507"
   
 5.  Sincronize a assinatura push. Para obter mais informações, consulte [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-###  <a name="PShellExample"></a> Exemplos (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemplos (RMO)  
  Esse exemplo reinicializa uma assinatura pull para uma publicação transacional.  
   
  [!code-cs[HowTo#rmo_ReinitTranPullSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_reinittranpullsub)]  

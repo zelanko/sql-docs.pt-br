@@ -10,10 +10,10 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296300"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do Access (Assistente de Importação e Exportação do SQL Server)
@@ -71,7 +71,7 @@ Se você não vê o Access na lista de fontes de dados, você está executando o
 > [!NOTE]
 > Para usar a versão de 64 bits do Assistente de Importação e Exportação do SQL Server, você precisa instalar o SQL Server. O SSDT (SQL Server Data Tools) e o SSMS (SQL Server Management Studio) são aplicativos de 32 bits e somente instalam arquivos de 32 bits, incluindo a versão de 32 bits do assistente.
 
-## <a name="officeDownloads"></a>Obter os arquivos necessários para se conectar ao Access  
+## <a name="get-the-files-you-need-to-connect-to-access"></a><a name="officeDownloads"></a>Obter os arquivos necessários para se conectar ao Access  
 Talvez seja preciso baixar os componentes de conectividade para as fontes de dados do Microsoft Office, incluindo Excel e Access, se eles ainda não estiverem instalados. Baixe a versão mais recente dos componentes de conectividade para arquivos do Excel e do Access aqui: [Mecanismo de Banco de Dados do Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=54920).
   
 A versão mais recente dos componentes podem abrir arquivos criados em versões anteriores do Access.
@@ -82,7 +82,7 @@ Se você tem uma assinatura do Office 365, verifique se você baixou o Mecanismo
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="database_password"></a> O arquivo de banco de dados está protegido por senha?
+## <a name="is-the-database-file-password-protected"></a><a name="database_password"></a> O arquivo de banco de dados está protegido por senha?
 Em alguns casos, um banco de dados do Access está protegido por senha, mas não está usando um arquivo de informações do grupo de trabalho. Todos os usuários precisam fornecer a mesma senha, mas não precisam digitar um nome de usuário. Para fornecer uma senha de banco de dados, faça o descrito a seguir.
 
 1.  Na página **Escolher uma fonte de dados** ou **Escolher um destino**, clique no botão **Avançado** para abrir a caixa de diálogo **Propriedades de Vínculo de Dados**.  

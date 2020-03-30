@@ -26,10 +26,10 @@ ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dfba9eef86ab77ec114bc74712d9573fb5e4c48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70155055"
 ---
 # <a name="execute-as-clause-transact-sql"></a>Cláusula EXECUTE AS (Transact-SQL)
@@ -110,7 +110,7 @@ DDL Triggers with Database Scope
   
  A cadeia de propriedade tem as seguintes limitações:  
   
--   Aplica-se somente a instruções DML: SELECT, INSERT, UPDATE e DELETE.  
+-   Só se aplica a instruções DML: SELECT, INSERT, UPDATE e DELETE.  
   
 -   Os proprietários da chamada e os objetos chamados devem ser os mesmos.  
   

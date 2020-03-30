@@ -20,10 +20,10 @@ ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d70bf0d8e99d24ee0d7ea9e046090ba4ed32453
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67939618"
 ---
 # <a name="full-file-backups-sql-server"></a>Backups completos de arquivos (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "67939618"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Benefícios de backups de arquivos  
+##  <a name="benefits-of-file-backups"></a><a name="Benefits"></a> Benefícios de backups de arquivos  
  Backups de arquivo oferecem as seguintes vantagens sobre backups de banco de dados:  
   
 -   O uso de backups de arquivos pode aumentar a velocidade de recuperação permitindo restaurar somente arquivos danificados, sem restaurar o restante do banco de dados.  
@@ -58,13 +58,13 @@ ms.locfileid: "67939618"
   
 -   Backups de arquivo aumentam a flexibilidade no cronograma e tratamento de mídia em relação aos backups de banco de dados completos, os quais para os casos de bancos de dados muito grandes podem tornar-se difíceis de gerenciar. A maior flexibilidade de arquivo ou backups de grupo de arquivos também é útil para bancos de dados grandes que contêm dados com características variadas de atualização.  
   
-##  <a name="Disadvantages"></a> Desvantagens de backups de arquivos  
+##  <a name="disadvantages-of-file-backups"></a><a name="Disadvantages"></a> Desvantagens de backups de arquivos  
   
 -   A desvantagem básica de backups de arquivo comparada a backups de banco de dados completos está na complexidade administrativa adicional. Manter e rastrear um conjunto completo destes backups pode ser uma tarefa demorada que pode sobrecarregar as exigências de espaço de backups de banco de dados completos.  
   
 -   Uma falha de mídia poderá tornar um banco de dados completo irrecuperável se um arquivo danificado não tiver um backup. Você deve manter um conjunto completo de backups de arquivo, e, para o modelo de recuperação completa/bulk-logged, um ou mais backups de log que abrangem o intervalo entre o primeiro backup de arquivo completo e último backup de arquivo completo.  
   
-##  <a name="Overview"></a> Visão geral de backups de arquivos  
+##  <a name="overview-of-file-backups"></a><a name="Overview"></a> Visão geral de backups de arquivos  
  Um backup completo de arquivo faz o backup de todos os dados em um ou mais arquivos ou grupos de arquivos. Por padrão, backups de arquivos contêm registros de log suficientes para efetuar roll-forward do arquivo até o final da operação de backup.  
   
  Fazer backup de um arquivo ou grupo de arquivos do tipo somente leitura é o mesmo para todo modelo de recuperação. No o modelo de recuperação completa, um conjunto inteiro de backups de arquivo completos junto com backups de log suficientes para abranger todos os backups de arquivos, é equivalente ao backup de banco de dados completo.  
@@ -87,7 +87,7 @@ ms.locfileid: "67939618"
 > [!NOTE]  
 >  No modelo de recuperação completa, você deve efetuar roll-forward do log de transações ao restaurar um backup de arquivo de leitura/gravação para verificar se o arquivo está consistente com o restante do banco de dados. Para evitar que o roll forward seja efetuado em muitos backups de log de transações, considere o uso de backups de arquivo diferenciais. Para obter mais informações, veja [Backups diferenciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para criar backup de um arquivo ou de um grupo de arquivos**  
   
 -   [Fazer backup de arquivos e de grupos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
@@ -100,7 +100,7 @@ ms.locfileid: "67939618"
 ## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [Backup e Restauração: Interoperabilidade e Coexistência &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Backup e restauração: interoperabilidade e coexistência &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Backups diferenciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Restaurações de arquivos &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Restaurações de arquivo &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   

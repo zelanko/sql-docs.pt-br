@@ -13,10 +13,10 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6674cb5f457b634682da90a2b7a2dff27a171da7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908086"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -33,7 +33,7 @@ ms.locfileid: "72908086"
   
 -   [Migrando usuários para usuários de bancos de dados independentes](#users)  
   
-##  <a name="prepare"></a> Preparando para migrar um banco de dados  
+##  <a name="preparing-to-migrate-a-database"></a><a name="prepare"></a> Preparando para migrar um banco de dados  
  Analise os itens a seguir se desejar migrar um banco de dados para o modelo de banco de dados independente parcialmente.  
   
 -   Você deve entender o modelo de banco de dados independente parcialmente. Para obter mais informações, veja [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "72908086"
   
 -   Monitore o XEvent **database_uncontained_usage** para ver quando são usados recursos dependentes.  
   
-##  <a name="enable"></a> Habilitar bancos de dados independentes  
+##  <a name="enable-contained-databases"></a><a name="enable"></a> Habilitar bancos de dados independentes  
  Os bancos de dados independentes devem ser habilitados na instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], antes de os bancos de dados independentes poderem ser criados.  
   
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Habilitando bancos de dados independentes usando Transact-SQL  
@@ -70,7 +70,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="convert"></a> Convertendo um banco de dados para parcialmente independente  
+##  <a name="converting-a-database-to-partially-contained"></a><a name="convert"></a> Convertendo um banco de dados para parcialmente independente  
  Um banco de dados é convertido para um banco de dados independente alterando a opção **CONTAINMENT** .  
   
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Convertendo um banco de dados para independente parcialmente usando Transact-SQL  
@@ -92,7 +92,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="users"></a> Migrando usuários para usuários de bancos de dados independentes  
+##  <a name="migrating-users-to-contained-database-users"></a><a name="users"></a> Migrando usuários para usuários de bancos de dados independentes  
  O exemplo a seguir migra todos os usuários baseados em logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usuários de bancos de dados independentes com senhas. O exemplo exclui os logons que não estão habilitados. O exemplo deve ser executado no banco de dados independente.  
   
 ```sql  

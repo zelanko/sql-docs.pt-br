@@ -15,10 +15,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a6bd6207df7d0e93c1b6d360643a9d549e90af9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295039"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novidades do Integration Services no SQL Server 2016
@@ -153,7 +153,7 @@ Essas novas funcionalidades exigem o SSDT (SQL Server Data Tools) versão 17.2 o
 
 ### <a name="better-deployment"></a>Melhor implantação
 
-####  <a name="ssisdbupgrwiz"></a> Assistente de atualização do SSISDB  
+####  <a name="ssisdb-upgrade-wizard"></a><a name="ssisdbupgrwiz"></a> Assistente de atualização do SSISDB  
  Execute o Assistente de atualização do SSISDB para atualizar o banco de dados do catálogo do SSIS, SSISDB, quando o banco de dados for mais antigo que a versão atual da instância do SQL Server. Isso ocorre quando uma das condições a seguir é verdadeira.  
   
 -   Você restaurou o banco de dados de uma versão anterior do SQL Server.  
@@ -162,14 +162,14 @@ Essas novas funcionalidades exigem o SSDT (SQL Server Data Tools) versão 17.2 o
   
  Para obter mais informações, consulte [Catálogo do SSIS &#40;SSISDB&#41;](../integration-services/catalog/ssis-catalog.md). 
 
-####  <a name="AlwaysOn"></a> Suporte para AlwaysOn no Catálogo do SSIS  
+####  <a name="support-for-always-on-in-the-ssis-catalog"></a><a name="AlwaysOn"></a> Suporte para AlwaysOn no Catálogo do SSIS  
  O recurso Grupos de Disponibilidade AlwaysOn é uma solução de alta disponibilidade e recuperação de desastres que fornece uma alternativa de nível corporativo para espelhamento de banco de dados. Um grupo de disponibilidade dá suporte a um ambiente de failover para um conjunto discreto de bancos de dados de usuário, conhecidos como bancos de dados de disponibilidade, que fazem failover juntos. Para obter mais informações, confira [AlwaysOn em grupos de disponibilidade](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  No SQL Server 2016, o SSIS apresenta novos recursos que permitem a você implantar facilmente em um catálogo de SSIS centralizado (ou seja, banco de dados de usuário do SSISDB). Para fornecer alta disponibilidade ao banco de dados SSISDB e seu conteúdo - projetos, pacotes, logs de execução, etc. - você pode adicionar o banco de dados do SSISDB a um grupo de disponibilidade AlwaysOn, assim como faria com qualquer outro banco de dados de usuário. Quando ocorre um failover, um dos nós secundários automaticamente se torna o novo nó primário.  
   
  Para uma visão geral detalhada e instruções passo a passo para habilitar o Always On para SSISDB, consulte [Catálogo do SSIS](../integration-services/catalog/ssis-catalog.md).  
 
-####  <a name="IncrementalDeployment"></a> Implantação de pacotes incremental  
+####  <a name="incremental-package-deployment"></a><a name="IncrementalDeployment"></a> Implantação de pacotes incremental  
 O recurso de implantação de pacotes incremental permite que você implante um ou mais pacotes para um projeto novo ou existente, sem implantar o projeto inteiro. Você pode implantar pacotes incrementalmente usando as ferramentas a seguir.  
   
 -   Assistente para Implantação  
@@ -184,7 +184,7 @@ O recurso de implantação de pacotes incremental permite que você implante um 
   
  Para obter mais informações, confira [Implantar projetos e pacotes do SSIS (Integration Services)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
 
-####  <a name="encrypted"></a> Suporte para Always Encrypted no Catálogo do SSIS  
+####  <a name="support-for-always-encrypted-in-the-ssis-catalog"></a><a name="encrypted"></a> Suporte para Always Encrypted no Catálogo do SSIS  
  O SSIS já dá suporte ao recurso Always Encrypted no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte as postagens de blog a seguir.  
   
 -   [SSIS com Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
@@ -193,18 +193,18 @@ O recurso de implantação de pacotes incremental permite que você implante um 
 
 ### <a name="better-debugging"></a>Melhor depuração
 
-####  <a name="LogReader"></a> Nova função de nível de banco de dados ssis_logreader no catálogo do SSIS  
+####  <a name="new-ssis_logreader-database-level-role-in-the-ssis-catalog"></a><a name="LogReader"></a> Nova função de nível de banco de dados ssis_logreader no catálogo do SSIS  
  Nas versões anteriores do catálogo do SSIS, somente usuários na função **ssis_admin** podem acessar os modos de exibição que contêm a saída de log. Agora há uma nova função de nível de banco de dados **ssis_logreader** que você pode usar para conceder permissões para acessar os modos de exibição que contêm a saída de log para usuários que não são administradores.  
   
  Há também uma nova função **ssis_monitor** . Essa função dá suporte a AlwaysOn e é para uso interno, apenas pelo catálogo do SSIS.  
 
-####  <a name="RuntimeLineage"></a> Novo nível de log RuntimeLineage no catálogo do SSIS  
+####  <a name="new-runtimelineage-logging-level-in-the-ssis-catalog"></a><a name="RuntimeLineage"></a> Novo nível de log RuntimeLineage no catálogo do SSIS  
  O novo nível de log **RuntimeLineage** no catálogo do SSIS coleta os dados necessários para rastrear informações de linhagem no fluxo de dados. Você pode analisar essas informações de linhagem para mapear o relacionamento de linhagem entre tarefas. ISVs e desenvolvedores podem compilar ferramentas de mapeamento de linhagem personalizadas com essas informações. 
 
-####  <a name="CustomLogging"></a> Novo nível de log personalizado no catálogo do SSIS  
- As versões anteriores do catálogo do SSIS permitem que você escolha um entre quatro níveis de log internos durante a execução de um pacote: **Nenhum, Básico, Desempenho ou Detalhado**. O SQL Server 2016 adiciona o nível de log **RuntimeLineage**. Além disso, agora você pode criar e salvar vários níveis de log personalizados no catálogo do SSIS e escolher o nível de log para usar toda vez que você executar um pacote. Para cada nível de log personalizado, selecione apenas as estatísticas e eventos que você deseja capturar. Opcionalmente, inclua o contexto do evento para ver os valores de variáveis, cadeias de conexão e propriedades da tarefa. Para obter mais informações, consulte [Habilitar o log para a execução do pacote no servidor SSIS](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
+####  <a name="new-custom-logging-level-in-the-ssis-catalog"></a><a name="CustomLogging"></a> Novo nível de log personalizado no catálogo do SSIS  
+ Versões anteriores do catálogo do SSIS permitem que você escolha entre quatro níveis de log internos quando você executa um pacote: **Nenhum, Básico, Desempenho ou Detalhado**. O SQL Server 2016 adiciona o nível de log **RuntimeLineage**. Além disso, agora você pode criar e salvar vários níveis de log personalizados no catálogo do SSIS e escolher o nível de log para usar toda vez que você executar um pacote. Para cada nível de log personalizado, selecione apenas as estatísticas e eventos que você deseja capturar. Opcionalmente, inclua o contexto do evento para ver os valores de variáveis, cadeias de conexão e propriedades da tarefa. Para obter mais informações, consulte [Habilitar o log para a execução do pacote no servidor SSIS](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
 
-####  <a name="ErrorColumn"></a> Nomes de coluna para erros no fluxo de dados  
+####  <a name="column-names-for-errors-in-the-data-flow"></a><a name="ErrorColumn"></a> Nomes de coluna para erros no fluxo de dados  
  Quando você redireciona as linhas no fluxo de dados que contêm erros de saída de erro, a saída contém um identificador numérico para a coluna na qual o erro ocorreu, mas não mostra o nome da coluna. Agora, há várias maneiras de localizar ou exibir o nome da coluna na qual ocorreu o erro.  
   
 -   Quando você configura o log, selecione o evento **DiagnosticEx** para registro em log. Esse evento grava um mapa de coluna de fluxo de dados no log. Em seguida, você pode procurar o nome da coluna no mapa coluna usando o identificador da coluna capturado por uma saída de erro. Para obter mais informações, consulte [Tratamento de erro em dados](../integration-services/data-flow/error-handling-in-data.md).  
@@ -215,12 +215,12 @@ O recurso de implantação de pacotes incremental permite que você implante um 
   
 -   No Componente de Script ou um componente de fluxo de dados personalizado, chame o novo método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> da interface IDTSComponentMetadata100.  
   
- Para obter mais informações sobre essa melhoria, confira a seguinte postagem no blog de Bo Fan, desenvolvedor do SSIS: [Melhorias na coluna de erro do fluxo de dados do SSIS](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx).  
+ Para obter mais informações sobre esse aprimoramento, consulte a seguinte postagem de blog pelo desenvolvedor do SSIS Bo Fan: [Aprimoramentos de coluna de erro para fluxo de dados do SSIS](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx).  
   
 > [!NOTE]  
 >  (Esse suporte foi expandido em versões subsequentes. Para obter mais informações, consulte [Suporte estendido para nomes de coluna de erro](#getidstring) e [Nova interface IDTSComponentMetaData130 na API](#CMD130).)  
 
-####  <a name="getidstring"></a> Suporte expandido para nomes de coluna de erro  
+####  <a name="expanded-support-for-error-column-names"></a><a name="getidstring"></a> Suporte expandido para nomes de coluna de erro  
  O evento **DiagnosticEx** agora registra em log informações de coluna para todas as colunas de entrada e saída, não apenas as colunas de linhagem. Como resultado, podemos chamar agora a saída de um mapa da coluna do pipeline, em vez de um mapa da linhagem do pipeline.  
   
  O método GetIdentificationStringByLineageID foi renomeado para <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>. Para obter mais informações, consulte [Nomes de coluna para erros no fluxo de dados](#ErrorColumn).  
@@ -230,31 +230,31 @@ O recurso de implantação de pacotes incremental permite que você implante um 
 > [!NOTE]  
 >  (No RC0, esse método foi movido para a nova interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> . Para obter mais informações, consulte [Nova interface IDTSComponentMetaData130 na API](#CMD130).)  
 
-####  <a name="ServerLogLevel"></a> Suporte para nível de log padrão em todo o servidor  
+####  <a name="support-for-server-wide-default-logging-level"></a><a name="ServerLogLevel"></a> Suporte para nível de log padrão em todo o servidor  
  Nas **Propriedades do Servidor**do SQL Server, sob a propriedade **Nível de log do servidor** , agora você pode selecionar um nível de log padrão para todo o servidor. Você pode escolher entre um dos níveis de logs internos - básico, nenhum, detalhado, desempenho ou linhagem de runtime - ou você pode escolher um nível de log personalizado existente. O nível de log selecionado aplica-se a todos os pacotes implantados no Catálogo do SSIS. Ele também se aplica por padrão a uma etapa de trabalho do SQL Agent, que executa um pacote do SSIS.  
 
-####  <a name="CMD130"></a> Nova interface IDTSComponentMetaData130 na API  
+####  <a name="new-idtscomponentmetadata130-interface-in-the-api"></a><a name="CMD130"></a> Nova interface IDTSComponentMetaData130 na API  
  O novo nível de log <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> adiciona a nova funcionalidade no SQL Server 2016 à interface existente <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> , especialmente o método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> . (O método **GetIdentificationStringByID** é movido para a nova interface da interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> .) Há também novas interfaces <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> , que fornecem a propriedade **LineageIdentificationString** . Para obter mais informações, consulte [Nomes de coluna para erros no fluxo de dados](#ErrorColumn).  
 
 ### <a name="better-package-management"></a>Melhor gerenciamento de pacotes
 
-####  <a name="ProjectUpgrade"></a> Experiência aprimorada para atualização de projeto  
+####  <a name="improved-experience-for-project-upgrade"></a><a name="ProjectUpgrade"></a> Experiência aprimorada para atualização de projeto  
  Ao atualizar projetos do SSIS das versões anteriores para a versão atual, os gerenciadores de conexões de nível de projeto continuam a funcionar conforme o esperado e as anotações e o layout do pacote são mantidos.  
 
-####  <a name="BufferSize"></a> A propriedade AutoAdjustBufferSize calcula automaticamente o tamanho do buffer do fluxo de dados  
+####  <a name="autoadjustbuffersize-property-automatically-calculates-buffer-size-for-data-flow"></a><a name="BufferSize"></a> A propriedade AutoAdjustBufferSize calcula automaticamente o tamanho do buffer do fluxo de dados  
  Quando você define o valor da nova propriedade **AutoAdjustBufferSize** para **true**, o mecanismo de fluxo de dados calcula automaticamente o tamanho do buffer para o fluxo de dados. Para obter mais informações, consulte [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md).  
 
-####  <a name="Templates"></a> Modelos de fluxo de controle reutilizáveis  
+####  <a name="reusable-control-flow-templates"></a><a name="Templates"></a> Modelos de fluxo de controle reutilizáveis  
  Salve um contêiner ou tarefa de fluxo de controle frequentemente utilizada em um arquivo de modelo autônomo e reutilizar várias vezes em um ou mais pacotes em um projeto, pelo uso de modelos de fluxo de controle. Essa capacidade de reutilização facilita o desenvolvimento e manutenção dos pacotes do SSIS. Para obter mais informações, consulte [Reutilizar o fluxo de controle entre pacotes usando partes do pacote do fluxo de controle](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md).  
 
-####  <a name="Parts"></a> Novos modelos renomeados como partes  
+####  <a name="new-templates-renamed-as-parts"></a><a name="Parts"></a> Novos modelos renomeados como partes  
  Os novos modelos de fluxo de controle reutilizáveis lançados no CTP 3.0 foram renomeados como partes do fluxo de controle ou partes do pacote. Para obter mais informações sobre esse recurso, consulte [Reutilizar o fluxo de controle entre pacotes usando partes do pacote do fluxo de controle](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md).  
 
 ## <a name="connectivity"></a>Conectividade  
 
 ### <a name="expanded-connectivity-on-premises"></a>Conectividade expandida local
 
-####  <a name="ODatav4"></a> Suporte para fontes de dados OData v4  
+####  <a name="support-for-odata-v4-data-sources"></a><a name="ODatav4"></a> Suporte para fontes de dados OData v4  
  A Origem do OData e o Gerenciador de Conexões OData agora dão suporte os protocolos v3 e v4 do OData.  
   
 -   Para o protocolo V3 do OData, o componente dá suporte aos formatos de dados ATOM e JSON.  
@@ -263,13 +263,13 @@ O recurso de implantação de pacotes incremental permite que você implante um 
   
  Para obter mais informações, consulte [OData Source](../integration-services/data-flow/odata-source.md).  
 
-####  <a name="Excel2013"></a> Suporte explícito para fontes de dados do Excel 2013  
+####  <a name="explicit-support-for-excel-2013-data-sources"></a><a name="Excel2013"></a> Suporte explícito para fontes de dados do Excel 2013  
  O Gerenciador de Conexões do Excel, a Origem do Excel, o Destino do Excel e o Assistente de Importação e Exportação do SQL Server agora fornecem suporte explícito para fontes de dados do Excel 2013. 
 
-####  <a name="HDFS"></a> Suporte para o HDFS (sistema de arquivos do Hadoop)  
+####  <a name="support-for-the-hadoop-file-system-hdfs"></a><a name="HDFS"></a> Suporte para o HDFS (sistema de arquivos do Hadoop)  
  O suporte para o HDFS contém gerenciadores de conexões para conectar-se a clusters do Hadoop e tarefas para executar operações comuns do HDFS. Para obter mais informações, consulte [Suporte para Hadoop e HDFS no Integration Services &#40;SSIS&#41;](../integration-services/hadoop-and-hdfs-support-in-integration-services-ssis.md).  
 
-####  <a name="more_hadoop"></a> Suporte expandido para Hadoop e HDFS  
+####  <a name="expanded-support-for-hadoop-and-hdfs"></a><a name="more_hadoop"></a> Suporte expandido para Hadoop e HDFS  
   
 -   O Gerenciador de Conexões do Hadoop agora dá suporte à autenticação dos tipos Básica e Kerberos. Para obter mais informações, consulte [Hadoop Connection Manager](../integration-services/connection-manager/hadoop-connection-manager.md).  
   
@@ -277,38 +277,38 @@ O recurso de implantação de pacotes incremental permite que você implante um 
   
 -   A tarefa de sistema de arquivos Hadoop agora dá suporte à opção CopyWithinHadoop, além das opções CopyToHadoop e CopyFromHadoop. Para obter mais informações, consulte [Hadoop File System Task](../integration-services/control-flow/hadoop-file-system-task.md).  
 
-####  <a name="hdfsORC"></a> O Destino do Arquivo do HDFS agora dá suporte ao formato de arquivo ORC  
+####  <a name="hdfs-file-destination-now-supports-orc-file-format"></a><a name="hdfsORC"></a> O Destino do Arquivo do HDFS agora dá suporte ao formato de arquivo ORC  
  O Destino do Arquivo HDFS agora dá suporte ao formato de arquivo ORC, além de Texto e Avro. (A Origem do Arquivo HDFS dá suporte apenas Texto e Avro.) Para obter mais informações sobre esse componente, consulte [HDFS File Destination](../integration-services/data-flow/hdfs-file-destination.md).  
 
-####  <a name="odbc2016"></a> Componentes ODBC atualizados para o SQL Server 2016  
+####  <a name="odbc-components-updated-for-sql-server-2016"></a><a name="odbc2016"></a> Componentes ODBC atualizados para o SQL Server 2016  
  Os componentes de Origem e Destino ODBC foram atualizadas para fornecer compatibilidade total com o SQL Server 2016. Não há nenhuma nova funcionalidade e não há alterações no comportamento.  
 
-####  <a name="Excel2016"></a> Suporte explícito para fontes de dados do Excel 2016  
+####  <a name="explicit-support-for-excel-2016-data-sources"></a><a name="Excel2016"></a> Suporte explícito para fontes de dados do Excel 2016  
  O Gerenciador de Conexões do Excel, a Origem do Excel e o Destino do Excel agora fornecem suporte explícito para fontes de dados do Excel 2016.  
 
-####  <a name="SAPBW"></a> Conector para SAP BW para SQL Server 2016 liberado  
+####  <a name="connector-for-sap-bw-for-sql-server-2016-released"></a><a name="SAPBW"></a> Conector para SAP BW para SQL Server 2016 liberado  
  O Microsoft® Connector para SAP BW para Microsoft SQL Server® 2016 foi lançado como parte do SQL Server 2016 Feature Pack. Para baixar os componentes do Feature Pack, confira [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).
  
-#### <a name="oracleteradata"></a> Conectores v4.0 para Oracle e Teradata liberados
+#### <a name="connectors-v40-for-oracle-and-teradata-released"></a><a name="oracleteradata"></a> Conectores v4.0 para Oracle e Teradata liberados
 O Conectores v4.0 da Microsoft para Oracle e Teradata foram lançados. Para baixar os conectores, consulte [Conectores v4.0 da Microsoft para Oracle e Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
 
-### <a name="pdwau5"></a> Conectores para a Atualização 5 do Dispositivo do Analytics Platform System (PDW) liberados
+### <a name="connectors-for-analytics-platform-system-pdw-appliance-update-5-released"></a><a name="pdwau5"></a> Conectores para a Atualização 5 do Dispositivo do Analytics Platform System (PDW) liberados
 Os adaptadores de destino para carregar dados em PDW com AU5 foram lançados. Para baixar os adaptadores, consulte [Documentação e ferramentas de cliente da Atualização 5 do dispositivo do Sistema de plataforma de análise](https://www.microsoft.com/download/details.aspx?id=51610).
 
 ### <a name="expanded-connectivity-to-the-cloud"></a>Conectividade expandida com a nuvem
 
-####  <a name="AFP2016"></a> Azure Feature Pack para SSIS lançado para o SQL Server 2016  
+####  <a name="azure-feature-pack-for-ssis-released-for-sql-server-2016"></a><a name="AFP2016"></a> Azure Feature Pack para SSIS lançado para o SQL Server 2016  
  O Azure Feature Pack para o Integration Services foi lançado para o SQL Server 2016. O feature pack contém gerenciadores de conexões para conectar-se a fontes de dados do Azure e tarefas para realizar as operações comuns do Azure. Para obter mais informações, consulte [Feature Pack do Azure para o Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
 
-#### <a name="dynamics"></a> Suporte para recursos online do Microsoft Dynamics liberado no Service Pack 1
+#### <a name="support-for-microsoft-dynamics-online-resources-released-in-service-pack-1"></a><a name="dynamics"></a> Suporte para recursos online do Microsoft Dynamics liberado no Service Pack 1
 
 Com o SQL Server 2016 Service Pack 1 instalado, o Gerenciador de Fontes e de Conexões OData agora tem suporte para conexão aos feeds OData do Microsoft Dynamics AX Online e do Microsoft Dynamics CRM Online.
 
-#### <a name="datalakestore"></a> Suporte para Azure Data Lake Store lançado
+#### <a name="support-for-azure-data-lake-store-released"></a><a name="datalakestore"></a> Suporte para Azure Data Lake Store lançado
 
 A versão mais recente do Feature Pack do Azure inclui um gerenciador de conexões, a origem e o destino para mover dados para e do Azure Data Lake Store. Para saber mais, veja [Feature Pack do Azure para o Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
 
-#### <a name="sqldwupload"></a> Suporte para Azure SQL Data Warehouse lançado
+#### <a name="support-for-azure-sql-data-warehouse-released"></a><a name="sqldwupload"></a> Suporte para Azure SQL Data Warehouse lançado
 
 A versão mais recente do Feature Pack do Azure inclui a tarefa de Upload do Azure SQL DW para preencher o SQL Data Warehouse com dados. Para saber mais, veja [Feature Pack do Azure para o Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
 
@@ -316,12 +316,12 @@ A versão mais recente do Feature Pack do Azure inclui a tarefa de Upload do Azu
  
 ### <a name="better-install-experience"></a>Melhor experiência de instalação
 
-####  <a name="Upgrade"></a> Atualização bloqueada quando o SSISDB pertence a um Grupo de Disponibilidade  
+####  <a name="upgrade-blocked-when-ssisdb-belongs-to-an-availability-group"></a><a name="Upgrade"></a> Atualização bloqueada quando o SSISDB pertence a um Grupo de Disponibilidade  
  Se o SSISDB (banco de dados de catálogo SSIS) pertencer a um Grupo de Disponibilidade AlwaysOn, você precisará remover o SSISDB do grupo de disponibilidade, atualizar o SQL Server e, em seguida, adicionar o SSISDB de volta ao grupo de disponibilidade. Para obter mais informações, consulte [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade).  
 
 ### <a name="better-design-experience"></a>Melhor experiência de design
 
-####  <a name="OneDesigner"></a> Suporte multiplataforma e a várias versões no Designer SSIS  
+####  <a name="multi-targeting-and-multi-version-support-in-ssis-designer"></a><a name="OneDesigner"></a> Suporte multiplataforma e a várias versões no Designer SSIS  
  Agora você pode usar o Designer SSIS no SSDT (SQL Server Data Tools) para Visual Studio 2015 para criar, manter e executar pacotes destinados ao SQL Server 2016, SQL Server 2014 ou SQL Server 2012. Para obter o SSDT, consulte [Baixar o SQL Server Data Tools mais recente](../ssdt/download-sql-server-data-tools-ssdt.md). 
 
  No Gerenciador de Soluções, clique com o botão direito do mouse em um projeto do Integration Services e selecione **Propriedades** para abrir as páginas de propriedades do projeto. Na guia **Geral** de **Propriedades de Configuração**, selecione a propriedade **TargetServerVersion** e, em seguida, escolha o SQL Server 2012, SQL Server 2014 ou SQL Server 2016.  
@@ -333,38 +333,38 @@ A versão mais recente do Feature Pack do Azure inclui a tarefa de Upload do Azu
 
 ### <a name="better-management-experience-in-sql-server-management-studio"></a>Melhor experiência de gerenciamento no SQL Server Management Studio
 
-####  <a name="CatViews"></a> Desempenho aprimorado para exibições do Catálogo do SSIS  
+####  <a name="improved-performance-for-ssis-catalog-views"></a><a name="CatViews"></a> Desempenho aprimorado para exibições do Catálogo do SSIS  
  A maioria das exibições de catálogo do SSIS agora funcionam melhor quando são executadas por um usuário que não é um membro da função ssis_admin.  
 
 ### <a name="other-enhancements"></a>Outros aprimoramentos
 
-####  <a name="BDDinbox"></a> A transformação do Distribuidor de Dados Equilibrado agora faz parte do SSIS  
+####  <a name="balanced-data-distributor-transformation-is-now-part-of-ssis"></a><a name="BDDinbox"></a> A transformação do Distribuidor de Dados Equilibrado agora faz parte do SSIS  
  A transformação do Distribuidor de Dados Equilibrado, que exigia um download separado em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], agora é instalado quando você instala o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para obter mais informações, consulte [Balanced Data Distributor Transformation](../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md).  
   
-####  <a name="ComplexFeedinbox"></a> Os componentes de publicação de feed de dados agora fazem parte do SSIS  
+####  <a name="data-feed-publishing-components-are-now-part-of-ssis"></a><a name="ComplexFeedinbox"></a> Os componentes de publicação de feed de dados agora fazem parte do SSIS  
  Os componentes de publicação de feed de dados, que exigiam um download separado em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], agora são instalados quando você instala o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para obter mais informações, consulte [Data Streaming Destination](../integration-services/data-flow/data-streaming-destination.md).  
 
-####  <a name="AzureBlob"></a> Suporte para o Armazenamento de Blobs do Azure no Assistente de Importação e Exportação do SQL Server  
+####  <a name="support-for-azure-blob-storage-in-the-sql-server-import-and-export-wizard"></a><a name="AzureBlob"></a> Suporte para o Armazenamento de Blobs do Azure no Assistente de Importação e Exportação do SQL Server  
  O Assistente de Importação e Exportação do SQL Server agora pode importar dados de e salvar dados no Armazenamento de Blobs do Azure. Para obter mais informações, consulte [Escolha uma fonte de dados &#40;Assistente de Importação e Exportação do SQL Server&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) e [Escolha um destino &#40;Assistente de Importação e Exportação do SQL Server&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
 
-####  <a name="CDCOracle"></a> Change Data Capture Designer e Service para Oracle para Microsoft SQL Server 2016 liberados  
+####  <a name="change-data-capture-designer-and-service-for-oracle-for-microsoft-sql-server-2016-released"></a><a name="CDCOracle"></a> Change Data Capture Designer e Service para Oracle para Microsoft SQL Server 2016 liberados  
  O Microsoft® Change Data Capture Designer e o Service for Oracle da Attunity para Microsoft SQL Server® 2016 foram lançados como parte do SQL Server 2016 Feature Pack.  Esses componentes agora dão suporte a Oracle 12c na instalação clássica. (Não há suporte para instalação multilocatário) Para baixar os componentes do Feature Pack, confira [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).  
   
-####  <a name="cdc2016"></a> Componentes CDC atualizados para o SQL Server 2016  
+####  <a name="cdc-components-updated-for-sql-server-2016"></a><a name="cdc2016"></a> Componentes CDC atualizados para o SQL Server 2016  
  Os componentes Control Task, Source e Splitter Transformation do CDC (Change Data Capture) foram atualizados para fornecer compatibilidade total com o SQL Server 2016. Não há nenhuma nova funcionalidade e não há alterações no comportamento.  
   
-####  <a name="ASDDL"></a> Tarefa Executar DDL do Analysis Services atualizada  
+####  <a name="analysis-services-execute-ddl-task-updated"></a><a name="ASDDL"></a> Tarefa Executar DDL do Analysis Services atualizada  
  A Tarefa Executar DDL do Analysis Services foi atualizada para aceitar comandos de linguagem de script de modelo de tabela.
 
-####  <a name="ssasrc0"></a> As tarefas do Analysis Services dão suporte a modelos de tabela  
+####  <a name="analysis-services-tasks-support-tabular-models"></a><a name="ssasrc0"></a> As tarefas do Analysis Services dão suporte a modelos de tabela  
  Agora você pode usar todas as tarefas e destinos SSIS que dão suporte ao SSAS (SQL Server Analysis Services) com modelos de tabela do SQL Server 2016. As tarefas SSIS foram atualizadas para representar objetos de tabela em vez de objetos multidimensionais. Por exemplo, quando você seleciona objetos a processar, a tarefa de processamento detecta automaticamente que é um modelo de tabela e exibe uma lista de objetos tabulares em vez de grupos de medidas e dimensões. O Destino de Processamento de Partições agora também mostra objetos tabulares e dá suporte ao envio de dados por push para uma partição.  
   
  O Destino de Processamento de Dimensões não funciona para modelos de tabela com o nível de compatibilidade do SQL 2016.  A Tarefa Processamento do Analysis Services e o Destino de Processamento de Partições são tudo o que você precisa para o processamento de tabelas. 
 
-####  <a name="builtinR"></a> Suporte para R Services interno  
+####  <a name="support-for-built-in-r-services"></a><a name="builtinR"></a> Suporte para R Services interno  
  O SSIS já dá suporte aos serviços do R internos no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você pode usar o SSIS não apenas para extrair dados e carregar a saída da análise, mas para compilar, executar e periodicamente treinar novamente modelos do R. Para obter mais informações, consulte a postagem de blog a seguir. [Operacionalizar seu projeto de aprendizado de máquina usando o SQL Server 2016 SSIS e os Serviços do R](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx). 
 
-####  <a name="ValidateXML"></a> Saída de validação de XML avançada na Tarefa XML  
+####  <a name="rich-xml-validation-output-in-the-xml-task"></a><a name="ValidateXML"></a> Saída de validação de XML avançada na Tarefa XML  
  Valide documentos XML e obtenha saída de erros completa habilitando a propriedade **ValidationDetails** da tarefa XML. Antes da disponibilidade da propriedade **ValidationDetails** , a validação do XML pela tarefa XML retornava apenas um resultado true ou false, sem informações sobre erros ou suas localizações. Agora, quando você define **ValidationDetails** como true, o arquivo de saída contém informações detalhadas sobre cada erro, incluindo o número de linha e a posição. Você pode usar essas informações para entender, localizar e corrigir erros em documentos XML. Para obter mais informações, consulte [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md).  
   
  O[!INCLUDE[ssIS](../includes/ssis-md.md)] introduziu a propriedade **ValidationDetails** no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2. Essa nova propriedade não foi anunciada ou documentada naquele momento. A propriedade **ValidationDetails** também está disponível em [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] e em [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].   

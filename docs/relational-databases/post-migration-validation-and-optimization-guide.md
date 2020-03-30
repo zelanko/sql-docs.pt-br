@@ -13,10 +13,10 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909156"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Validação pós-migração e guia de otimização
@@ -29,7 +29,7 @@ A etapa pós-migração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 
 Abaixo estão alguns dos cenários comuns de desempenho encontrados após a migração para a plataforma [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e como resolvê-los. Isso inclui cenários que são específicos para migração de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (versões mais antigas para versões mais recentes), bem como migração de plataforma externa (como Oracle, DB2, MySQL e Sybase) para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-## <a name="CEUpgrade"></a> Regressões de consulta devido a alteração em versão da CE
+## <a name="query-regressions-due-to-change-in-ce-version"></a><a name="CEUpgrade"></a> Regressões de consulta devido a alteração em versão da CE
 
 **Aplica-se a:** migração de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
@@ -47,9 +47,9 @@ Altere o [nível de compatibilidade do banco de dados](../relational-databases/d
 
 Para obter mais informações sobre este tópico, consulte [Manter a estabilidade do desempenho durante a atualização para a versão mais recente do SQL Server](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
 
-## Sensibilidade do <a name="ParameterSniffing"></a> à detecção de parâmetros
+## <a name="sensitivity-to-parameter-sniffing"></a>Sensibilidade do <a name="ParameterSniffing"></a> à detecção de parâmetros
 
-**Aplica-se a:** migração de plataforma externa (como Oracle, DB2, MySQL e Sybase) para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Aplica-se a:** migração de plataforma externa (como Oracle, DB2, MySQL e Sybase) para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Para migrações de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se esse problema existe na origem de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrar para uma versão mais recente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no estado em que se encontra não resolverá esse cenário. 
@@ -68,9 +68,9 @@ Um possível problema surge quando essa primeira compilação pode não ter usad
 > [!TIP] 
 > Aproveite o recurso de Análise de Plano do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para identificar rapidamente se isso é um problema. Mais informações estão disponíveis [aqui](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
 
-## Índices ausentes do <a name="MissingIndexes"></a>
+## <a name="missing-indexes"></a>Índices ausentes do <a name="MissingIndexes"></a>
 
-**Aplica-se a:** migração de plataforma externa (como Oracle, DB2, MySQL e Sybase) e do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Aplica-se a:** migração de plataforma externa (por exemplo, Oracle, DB2, MySQL e Sybase) e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Índices ausentes ou incorretos causam E/S extra, o que leva a uso de memória extra e desperdício de CPU. Isso pode ser devido a uma alteração do perfil de carga de trabalho usando predicados diferentes, invalidando o design de índice existente. Evidência de uma estratégia de indexação ineficaz ou de alterações no perfil de carga de trabalho incluem:
 -   Procure índices duplicados, redundantes, raramente usados ou nunca utilizados.
@@ -86,9 +86,9 @@ Um possível problema surge quando essa primeira compilação pode não ter usad
 > [!TIP] 
 > Exemplos de tais scripts pré-existentes incluem [Criação de Índice](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation) e [Informações de Índice](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information). 
 
-## Impossibilidade do <a name="InabilityPredicates"></a> para usar predicados para filtrar dados
+## <a name="inability-to-use-predicates-to-filter-data"></a>Impossibilidade do <a name="InabilityPredicates"></a> para usar predicados para filtrar dados
 
-**Aplica-se a:** migração de plataforma externa (como Oracle, DB2, MySQL e Sybase) e do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Aplica-se a:** migração de plataforma externa (por exemplo, Oracle, DB2, MySQL e Sybase) e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Para migrações de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se esse problema existe na origem de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrar para uma versão mais recente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no estado em que se encontra não resolverá esse cenário.
@@ -115,9 +115,9 @@ Alguns exemplos de predicados não SARGable:
 > [!NOTE] 
 > Todas as opções acima podem ser feitas programaticamente.
 
-## Uso do <a name="TableValuedFunctions"></a> de funções com valor de tabela (várias instruções vs embutido)
+## <a name="use-of-table-valued-functions-multi-statement-vs-inline"></a>Uso do <a name="TableValuedFunctions"></a> de funções com valor de tabela (várias instruções vs embutido)
 
-**Aplica-se a:** migração de plataforma externa (como Oracle, DB2, MySQL e Sybase) e do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Aplica-se a:** migração de plataforma externa (por exemplo, Oracle, DB2, MySQL e Sybase) e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Para migrações de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se esse problema existe na origem de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrar para uma versão mais recente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no estado em que se encontra não resolverá esse cenário.
@@ -162,7 +162,7 @@ Funções com valor de tabela retornam um tipo de dados de tabela que pode ser u
 
 2.  Se for mais complexa, considere usar os resultados intermediários armazenados em tabelas com otimização de memória ou tabelas temporárias.
 
-##  <a name="Additional_Reading"></a> Leitura adicional
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Leitura adicional
 
  [Melhor prática com o Repositório de Consultas](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

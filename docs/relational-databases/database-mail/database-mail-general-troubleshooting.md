@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fb063b3af008ad7e734197a0d4360c9d83535cd3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74094557"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Etapas de solução de problemas gerais do Database Mail 
@@ -151,7 +151,7 @@ EXEC msdb.dbo.sysmail_start_sp;
 
 
 
-##  <a name="RelatedContent"></a> Confira também
+##  <a name="see-also"></a><a name="RelatedContent"></a> Confira também
   
 -   [Objetos de configuração do Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)  
   

@@ -11,10 +11,10 @@ ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2e89fb3f197037d757916a60d246c158d43b565b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082055"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importando HTML para um relatório (Construtor de Relatórios e SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "77082055"
 > [!NOTE]  
 >  Ao importar texto contendo marcação HTML, os dados sempre devem ser analisados primeiro pela caixa de texto. Como apenas um subconjunto de marcas HTML possui suporte, o HTML mostrado no relatório renderizado pode ser diferente do HTML original.  
   
- Para começar rapidamente, confira [Tutorial: formatar o texto &#40Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Para começar a usar rapidamente, consulte [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 ## <a name="supported-html-tags"></a>Tags HTML Suportadas  
  A seguir, há uma lista completa de marcas que são renderizadas como HTML quando definidas como texto de espaço reservado:  

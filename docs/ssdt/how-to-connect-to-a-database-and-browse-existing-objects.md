@@ -13,13 +13,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 65559af8337bc7421f96463a954a212f56a3c269
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75755823"
 ---
-# <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Como fazer: conectar-se a um Banco de Dados e Procure Objetos Existentes
+# <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Como: Conecte-se a um Banco de Dados e Procure Objetos Existentes
 
 Uma tarefa muito comum para administradores de banco de dados e desenvolvedores é conectar a um banco de dados online, criar ou procurar seu esquema e consultar seus objetos. O Pesquisador de Objetos do SQL Server no Visual Studio agora contém um nó **SQL Server** dedicado, sob o qual todas as instâncias conectadas do SQL Server e seus respectivos bancos de dados são agrupados em uma hierarquia semelhante ao SSMS. As instâncias conectadas do SQL Server podem ser uma instância local, como um SQL Server 2008 em execução, ou uma instância do SQL Azure externa.  
   

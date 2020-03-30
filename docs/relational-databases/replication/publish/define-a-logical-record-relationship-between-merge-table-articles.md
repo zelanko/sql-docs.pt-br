@@ -16,10 +16,10 @@ ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321211"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definir uma relação de registro lógico entre artigos da tabela de mesclagem
@@ -45,13 +45,13 @@ ms.locfileid: "75321211"
   
      [RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Se você adicionar, modificar ou excluir um registro lógico após a inicialização de assinaturas na publicação, será preciso gerar um novo instantâneo e reinicializar todas as assinaturas depois de fazer a alteração. Para obter mais informações sobre os requisitos para alterações de propriedades, consulte [Alterar propriedades da publicação e do artigo](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Defina registros lógicos na caixa de diálogo **Adicionar Junção**, disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md) e [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
  Os registros lógicos podem ser definidos na caixa de diálogo **Adicionar Junção** apenas se aplicados a um filtro de junção em uma publicação de mesclagem, e se a publicação atender os requisitos para uso de partições pré-calculadas. Para definir os registros lógicos que não se aplicam a filtros de junção e para definir a detecção e resolução de conflitos no nível do registro lógico, é preciso usar procedimentos armazenados.  
@@ -84,7 +84,7 @@ ms.locfileid: "75321211"
   
     -   Na página **Filtrar Linhas** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades da Publicação – \<Publicação>** , selecione um filtro no painel **Tabelas Filtradas** e, em seguida, clique em **Excluir**. Caso o próprio filtro excluído seja estendido por outras junções, essas junções também serão excluídas.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  É possível especificar relações de registro lógico de forma programática entre artigos que usem procedimentos armazenados de replicação.  
   
 #### <a name="to-define-a-logical-record-relationship-without-an-associated-join-filter"></a>Para definir uma relação de registro lógico sem filtro de junção associado  
@@ -146,12 +146,12 @@ ms.locfileid: "75321211"
   
 2.  No Publicador do banco de dados de publicação, execute [sp_dropmergefilter](../../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md). Especifique **\@publication**, o nome de um dos artigos da relação em **\@article** e o nome da relação da etapa 1 em **\@filtername**.  
   
-###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  Esse exemplo habilita partições pré-computadas em uma publicação existente e cria um registro lógico que inclui os dois novos artigos para as tabelas `SalesOrderHeader` e `SalesOrderDetail` .  
   
  [!code-sql[HowTo#sp_AddMergeLogicalRecord](../../../relational-databases/replication/codesnippet/tsql/define-a-logical-record-_2.sql)]  
   
-##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
   
 > [!NOTE]  
 >  A replicação de mesclagem lhe permite também especificar que os conflitos sejam rastreados e resolvidos em nível de registro lógico, mas essas opções não podem ser definidas usando-se RMO.  
@@ -196,7 +196,7 @@ ms.locfileid: "75321211"
   
 10. Repita as etapas 8 e 9 para cada relação de registro lógico remanescente na publicação.  
   
-###  <a name="PShellExample"></a> Exemplo (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Exemplo (RMO)  
  Esse exemplo cria um registro lógico que inclui os dois novos artigos para as tabelas `SalesOrderHeader` e `SalesOrderDetail` .  
   
  [!code-cs[HowTo#rmo_CreateLogicalRecord](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createlogicalrecord)]  

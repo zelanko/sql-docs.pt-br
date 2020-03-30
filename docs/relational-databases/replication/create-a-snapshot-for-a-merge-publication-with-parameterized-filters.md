@@ -16,10 +16,10 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 88c43b8d37861e52b5bda5afc0a38753f2b70d6e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321814"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros
@@ -52,13 +52,13 @@ Quando são usados filtros de linha com parâmetros em publicações de mesclage
  O Agente de Instantâneo cria instantâneos para cada partição. Para instantâneos gerados previamente e instantâneos solicitados por um Assinante, o agente é executado e faz conexões sob as credenciais que foram especificadas quando o trabalho do snapshot agent para a publicação foi criado (o trabalho é criado pelo Assistente para Nova Publicação ou **sp_addpublication_snapshot**). Para alterar as credenciais, use **sp_changedynamicsnapshot_job**. Para obter mais informações, consulte [sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md).  
 
   
-##  <a name="Recommendations"></a> Recomendações  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Ao gerar um instantâneo para uma publicação de mesclagem usando filtros com parâmetros, você deve, primeiro, gerar um instantâneo padrão (esquema), que contenha todos os dados publicados e os metadados do Assinante para a assinatura. Para obter mais informações, consulte [Criar e aplicar o instantâneo inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md). Após ter criado um instantâneo de esquema, você poderá gerar o instantâneo que contém a partição Assinante específica dos dados publicados.  
   
 -   Se a filtragem para um ou mais artigos da publicação gerar partições não sobrepostas, exclusivas de cada assinatura, os metadados serão limpos sempre que o Agente de Mesclagem for executado. Isso significa que o instantâneo particionado irá expirar mais rapidamente. Ao usar essa opção, considere permitir que os Assinantes possam iniciar a geração e a entrega do instantâneo. 
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Gerar instantâneos para partições na página **Partições de Dados** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md). É possível permitir que os Assinantes iniciem a geração de instantâneo e entreguem e/ou gerem instantâneos.  
   
  Antes de gerar instantâneos para uma ou mais partições, é preciso:  
@@ -103,7 +103,7 @@ Quando são usados filtros de linha com parâmetros em publicações de mesclage
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Ao usar os procedimentos armazenados e o Agente de Instantâneo, será possível realizar o seguinte:  
   
 -   Permita que os Assinantes solicitem geração e aplicação de instantâneos na primeira vez que eles sincronizarem.  
@@ -200,7 +200,7 @@ Quando são usados filtros de linha com parâmetros em publicações de mesclage
 > [!NOTE]  
 >  Para obter mais informações sobre como programar agentes de replicação, consulte [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) (Conceitos dos executáveis do agente de replicação).  
   
-###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  Esse exemplo cria uma publicação de mesclagem com filtros com parâmetros onde Assinantes inicia o processo de geração de instantâneo. Os valores em **\@job_login** e **\@job_password** são passados com o uso de variáveis de script.  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../relational-databases/replication/codesnippet/tsql/create-a-snapshot-for-a-_1.sql)]  
@@ -272,7 +272,7 @@ PAUSE
   
 ```  
   
-##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
  Você pode usar RMO (Replication Management Objects) para gerar instantâneos particionados programaticamente dos seguintes modos:  
   
 -   Permita que os Assinantes solicitem geração e aplicação de instantâneos na primeira vez que eles sincronizarem.  
@@ -401,7 +401,7 @@ PAUSE
   
 8.  Repita as etapas 4-7 para cada Assinante.  
   
-###  <a name="PShellExample"></a> Exemplos (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemplos (RMO)  
  Esse exemplo cria uma publicação de mesclagem que permite aos Assinantes solicitar geração de instantâneo.  
   
  [!code-cs[HowTo#rmo_CreateMergePub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepub)]  

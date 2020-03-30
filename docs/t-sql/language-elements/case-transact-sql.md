@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00175ce9c9c9c0f6f83b7661b685063f97ef8c44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67950355"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
@@ -312,7 +312,7 @@ ORDER BY MaximumRate DESC;
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. Usando uma instrução SELECT com uma expressão CASE  
  Dentro de uma instrução SELECT, a expressão CASE permite que os valores sejam substituídos no conjunto de resultados com base nos valores de comparação. O exemplo a seguir usa a expressão CASE para alterar a exibição de categorias de linhas de produtos a fim de torná-las mais compreensíveis. Quando um valor não existe, o texto "Não destinado à venda" é exibido.  

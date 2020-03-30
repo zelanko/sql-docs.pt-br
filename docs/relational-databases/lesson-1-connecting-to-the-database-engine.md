@@ -11,10 +11,10 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73033003"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conectando-se ao mecanismo de banco de dados
@@ -27,7 +27,7 @@ Esta lição contém as seguintes tarefas:
 - [Conectando-se ao Management Studio](#connect)  
 - [Autorizando conexões adicionais](#additional) 
 
-## <a name="tools">Ferramentas para introdução</a> 
+## <a name=""></a><a name="tools">Ferramentas para introdução</a> 
 - O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] transporta com uma variedade de ferramentas. Este tópico descreve as primeiras ferramentas das que você precisará e o ajuda a selecionar a ferramenta certa para o trabalho. Todas as ferramentas podem ser acessadas no menu **Iniciar** . Algumas ferramentas, como [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], não são instaladas por padrão. Você deve selecionar as ferramentas como parte dos componentes de cliente durante a instalação. Para obter uma descrição completa das ferramentas descritas abaixo, pesquise-as nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contém somente um subconjunto das ferramentas.  
 
 ### <a name="basic-tools"></a>Ferramentas básicas
@@ -46,7 +46,7 @@ Os bancos de dados de exemplo e os exemplos não estão incluídos no [!INCLUDE[
 - Nas versões atuais do Windows, na página **Iniciar** , digite **Configuration Manager**e clique em **SQL Server *versão* Configuration Manager**.   
 - Quando estiver usando versões mais antigas do Windows, no menu **Iniciar** , aponte para **Todos os Programas**, para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
 
-## <a name="connect"></a>Conectando-se ao Management Studio  
+## <a name="connecting-with-management-studio"></a><a name="connect"></a>Conectando-se ao Management Studio  
 - É fácil se conectar ao [!INCLUDE[ssDE](../includes/ssde-md.md)] por meio de ferramentas executadas no mesmo computador se você sabe o nome da instância e está se conectando como um membro do grupo de Administradores local no computador. Os procedimentos seguintes devem ser executados no mesmo computador que hospeda o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 > [!NOTE]  
@@ -85,7 +85,7 @@ Pelo menos uma conta de administrador foi selecionada quando o [!INCLUDE[ssNoVer
 > [!NOTE]
 > Este tutorial presume que você não esteja familiarizado com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e que não tenha problemas especiais em estabelecer a conexão. Isso deve ser suficiente para a maioria das pessoas e mantém este tutorial simples. Para obter as etapas de solução de problemas, consulte [Solucionando problemas de conexão com o Mecanismo de Banco de Dados do SQL Server](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md). 
 
-## <a name="additional"></a>Autorizando conexões adicionais  
+## <a name="authorizing-additional-connections"></a><a name="additional"></a>Autorizando conexões adicionais  
 Agora que você se conectou ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como um administrador, uma de suas primeiras tarefas é autorizar que outros usuários se conectem. Você faz isso criando um logon e autorizando esse logon para acessar um banco de dados como um usuário. Logons podem ser de autenticação do Windows, que usam credenciais do Windows ou logons de autenticação do SQL Server, que armazenam informações de autenticação no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e são independentes de suas credenciais do Windows. Use a autenticação do Windows sempre que possível.
 
 > [!TIP]

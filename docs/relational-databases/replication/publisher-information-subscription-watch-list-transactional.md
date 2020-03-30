@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: febbfaf7f42da6e3c0a1dd26b0c8529f6c777d13
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287444"
 ---
 # <a name="publisher-information-subscription-watch-list-transactional"></a>Informações sobre o Publicador, Lista de inspeção de Assinaturas (transacional)

@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 13676265a7e468065506c31bc2362baf25612512
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897056"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticação no SQL Server
@@ -85,7 +85,7 @@ Se você deve usar a autenticação de modo misto, deverá criar os logons do SQ
 ## <a name="external-resources"></a>Recursos externos  
 Para obter mais informações, consulte os recursos a seguir.  
   
-|Recurso|Descrição|  
+|Recurso|DESCRIÇÃO|  
 |--------------|-----------------|  
 |[Entidades](../../../relational-databases/security/authentication-access/principals-database-engine.md)|Descreve logons e outras entidades de segurança no SQL Server.|  
   

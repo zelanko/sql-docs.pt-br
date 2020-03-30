@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 35f6dc79756c192419dbe3a8962d5dcdfeea8aef
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558331"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurar a instância de cluster de failover – NFS – SQL Server em Linux

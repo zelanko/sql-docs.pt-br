@@ -30,10 +30,10 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287880"
 ---
 # <a name="integration-services-ssis-logging"></a>Log do SSIS (Integration Services)
@@ -99,19 +99,19 @@ ms.locfileid: "79287880"
 #### <a name="log-schema"></a>Esquema de log  
  A tabela a seguir descreve os elementos no esquema de log.  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
 |Computador|O nome do computador no qual o evento de log ocorreu.|  
 |Operador|A identidade do usuário que iniciou o pacote.|  
 |SourceName|O nome do contêiner ou tarefa no qual o evento de log ocorreu.|  
 |SourceID|O identificador exclusivo do pacote; o contêiner Loop For, Loop Foreach ou Sequência ou a tarefa na qual o evento de log ocorreu.|  
-|ExecutionID|O GUID da instância de execução do pacote.<br /><br /> Observação: A execução de um pacote simples pode criar entradas de log com valores diferentes para o elemento ExecutionID. Por exemplo, quando você executa um pacote no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], a fase de validação talvez crie entradas de log com um elemento ExecutionID que corresponde ao [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. No entanto, a fase de execução talvez crie entradas de log com um elemento ExecutionID correspondente a dtshost.exe. Para obter outro exemplo, quando você executa um pacote que contém tarefas Executar Pacote, cada uma dessas tarefas executa um pacote filho. Esses pacotes filho podem criar entradas de log com um elemento ExecutionID diferente do das entradas de log criadas pelo pacote pai.|  
+|ExecutionID|O GUID da instância de execução do pacote.<br /><br /> Observação: a execução de um pacote simples pode criar entradas de log com valores diferentes para o elemento ExecutionID. Por exemplo, quando você executa um pacote no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], a fase de validação talvez crie entradas de log com um elemento ExecutionID que corresponde ao [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. No entanto, a fase de execução talvez crie entradas de log com um elemento ExecutionID correspondente a dtshost.exe. Para obter outro exemplo, quando você executa um pacote que contém tarefas Executar Pacote, cada uma dessas tarefas executa um pacote filho. Esses pacotes filho podem criar entradas de log com um elemento ExecutionID diferente do das entradas de log criadas pelo pacote pai.|  
 |MessageText|Uma mensagem associada à entrada de log.|  
 |DataBytes|Uma matriz de bytes específica para a entrada de log. O significado deste campo varia de acordo com a entrada de log.|  
   
  A tabela a seguir descreve três elementos adicionais no esquema de log que não estão disponíveis na guia **Detalhes** da caixa de diálogo **Configurar Logs de SSIS** .  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
 |StartTime|A hora em que o contêiner ou tarefa começa a ser executado.|  
 |EndTime|A hora em que a execução do contêiner ou tarefa para.|  
@@ -122,7 +122,7 @@ ms.locfileid: "79287880"
   
  A tabela a seguir descreve os eventos predefinidos que podem ser habilitados a gravar entradas de log quando eventos de tempo de execução ocorrem. Essas entradas de log se aplicam a executáveis, ao pacote e às tarefas e contêineres que o pacote inclui. O nome da entrada de log é igual ao nome do evento de tempo de execução que foi gerado e fez com que a entrada de log fosse gravada.  
   
-|Eventos|Descrição|  
+|Eventos|DESCRIÇÃO|  
 |------------|-----------------|  
 |**OnError**|Grava uma entrada de log quando ocorre um erro.|  
 |**OnExecStatusChanged**|Grava uma entrada no log quando uma tarefa (não um contêiner) é suspenso ou retomado durante a depuração.|  
@@ -180,7 +180,7 @@ ms.locfileid: "79287880"
 #### <a name="use-the-pipelinecomponenttime-event"></a>Usar o evento PipelineComponentTime  
  Talvez a entrada de log personalizada mais útil seja o evento PipelineComponentTime. Essa entrada de log reporta o número de milissegundos que cada componente do fluxo de dados leva em cada uma das cinco principais etapas de processamento. A tabela a seguir descreve essas etapas de processamento. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Os desenvolvedores reconhecerão essas etapas como os principais métodos de um <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
   
-|Etapa|Descrição|  
+|Etapa|DESCRIÇÃO|  
 |----------|-----------------|  
 |Validar|O componente verifica se há valores de propriedade válidos e os parâmetros de configuração.|  
 |PreExecute|O componente executa processamento único antes de começar a processar linhas de dados.|  
@@ -214,7 +214,7 @@ ms.locfileid: "79287880"
   
 -   A transformação Agregação denominada "Quantidade de Soma e LineItemTotalCost" gastou no total 220 ms – 141 em PrimeOutput e 79 em ProcessInput – executando cálculos e passando os dados para a próxima transformação.  
 
-## <a name="ssdt"></a> Habilitar o log de pacote no SQL Server Data Tools
+## <a name="enable-package-logging-in-sql-server-data-tools"></a><a name="ssdt"></a> Habilitar o log de pacote no SQL Server Data Tools
   Este procedimento descreve como adicionar registros a um pacote, configurar os registros no nível do pacote e salvar a configuração dos registros em um arquivo XML. Você só pode adicionar os registros no nível do pacote, mas o pacote não precisa executar os registros para habilitar os registros nos contêineres incluídos no pacote.  
   
 > [!IMPORTANT]  
@@ -262,7 +262,7 @@ ms.locfileid: "79287880"
   
 11. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
 
-## <a name="configure_logs"></a> Caixa de diálogo Configurar Logs do SSIS
+## <a name="configure-ssis-logs-dialog-box"></a><a name="configure_logs"></a> Caixa de diálogo Configurar Logs do SSIS
   Use a caixa de diálogo **Configurar Logs de SSIS** para definir as opções do log para um pacote.  
   
  **O que você deseja fazer?**  
@@ -275,12 +275,12 @@ ms.locfileid: "79287880"
   
 4.  [Configurar as opções na guia Detalhes](#detail)  
   
-###  <a name="open_dialog"></a> Abrir a caixa de diálogo Configurar Logs de SSIS  
+###  <a name="open-the-configure-ssis-logs-dialog-box"></a><a name="open_dialog"></a> Abrir a caixa de diálogo Configurar Logs de SSIS  
  **Para abrir a caixa de diálogo Configurar Logs de SSIS**  
   
 -   No [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em **Log** no menu **SSIS** .  
   
-###  <a name="container"></a> Configurar as opções no painel Contêineres  
+###  <a name="configure-the-options-in-the-containers-pane"></a><a name="container"></a> Configurar as opções no painel Contêineres  
  Use o painel **Contêineres** da caixa de diálogo **Configurar Logs do SSIS** para habilitar o pacote e seus contêineres para logs.  
   
 #### <a name="options"></a>Opções  
@@ -295,7 +295,7 @@ ms.locfileid: "79287880"
   
  Se um contêiner estiver esmaecido e você quiser definir as opções de log no contêiner, clique duas vezes em sua caixa de seleção. O primeiro clique apaga a caixa de seleção e o segundo clique a seleciona, permitindo escolher os provedores de log que serão usados e selecionar as informações que serão registradas.  
   
-###  <a name="provider"></a> Configurar as opções na guia Provedores e Logs  
+###  <a name="configure-the-options-on-the-providers-and-logs-tab"></a><a name="provider"></a> Configurar as opções na guia Provedores e Logs  
  Use a guia **Provedores e Logs** da caixa de diálogo **Configurar Logs do SSIS** para criar e configurar logs para a captura de eventos do tempo de execução.  
   
 #### <a name="options"></a>Opções  
@@ -311,7 +311,7 @@ ms.locfileid: "79287880"
  **Descrição**  
  O campo de descrição é editável. Clique e modifique a descrição padrão do log.  
   
- **Configuration**  
+ **Configuração**  
  Selecione um gerenciador de conexões existente na lista ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões. Dependendo do tipo de provedor de log, você poderá configurar um gerenciador de conexões OLE DB ou um gerenciador de conexões Arquivo. O provedor de log do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Log de Eventos do Windows não requer conexão.  
   
  Tópicos relacionados: [Gerenciador de conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md) , [Gerenciador de Conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager.md)  
@@ -319,7 +319,7 @@ ms.locfileid: "79287880"
  **Delete (excluir)**  
  Selecione um provedor de log e clique em **Excluir**.  
   
-###  <a name="detail"></a> Configurar as opções na guia Detalhes  
+###  <a name="configure-the-options-on-the-details-tab"></a><a name="detail"></a> Configurar as opções na guia Detalhes  
  Use a guia **Detalhes** da caixa de diálogo **Configurar Logs do SSIS** para especificar eventos e detalhes informativos a serem habilitados para log. As informações selecionadas se aplicam a todos os provedores de logs no pacote. Por exemplo, você não pode gravar determinadas informações na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e informações diferentes em um arquivo de texto.  
   
 #### <a name="options"></a>Opções  
@@ -332,7 +332,7 @@ ms.locfileid: "79287880"
  **Avançado**  
  Marque ou desmarque os eventos para log e marque ou desmarque informações que serão usadas no log de cada evento. Clique em **Básico** para ocultar todos os detalhes de log, exceto a lista de eventos. As informações a seguir estão disponíveis para log:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Computador**|O nome do computador no qual o evento de log ocorreu.|  
 |**Operador**|O nome de usuário da pessoa que iniciou o pacote.|  
@@ -351,7 +351,7 @@ ms.locfileid: "79287880"
  **Salvar**  
  Salve os detalhes de configuração como um modelo para um arquivo XML.  
 
-## <a name="saved_config"></a> Configurar o log usando um arquivo de configuração salvo
+## <a name="configure-logging-by-using-a-saved-configuration-file"></a><a name="saved_config"></a> Configurar o log usando um arquivo de configuração salvo
   Este procedimento descreve como configurar o registro em log de novos contêineres em um pacote carregando um arquivo de configuração de registro em log salvo anteriormente.  
   
  Por padrão, todos os contêineres em um pacote usam a mesma configuração de registro que o seu contêiner pai. Por exemplo, as tarefas em um Loop Foreach usam a mesma configuração de registro que o Loop Foreach.  
@@ -382,7 +382,7 @@ ms.locfileid: "79287880"
   
 9. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
 
-## <a name="server_logging"></a> Habilitar o log para a execução do pacote no servidor SSIS
+## <a name="enable-logging-for-package-execution-on-the-ssis-server"></a><a name="server_logging"></a> Habilitar o log para a execução do pacote no servidor SSIS
   Este tópico descreve como definir ou alterar o nível de registro em log de um pacote quando você executa um pacote implantado no servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O nível de registro em log que você define ao executar o pacote anula o registro em log do pacote configurado no momento do design no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Consulte [Habilitar o log de pacote no SQL Server Data Tools](#ssdt) para obter mais informações.  
   
  Nas **Propriedades do Servidor**do SQL Server, na propriedade **Nível de registro em log do servidor** , você pode selecionar um nível de registro em log padrão para todo o servidor. Você pode escolher entre um dos níveis de registro em log internos descritos neste tópico, ou pode escolher um nível de registro em log personalizado existente. O nível de registro em log selecionado se aplica por padrão a todos os pacotes implantados no Catálogo do SSIS. Ele também se aplica por padrão a uma etapa de trabalho do SQL Agent, que executa um pacote do SSIS.  
@@ -410,7 +410,7 @@ ms.locfileid: "79287880"
 ### <a name="select-a-logging-level"></a>Selecionar um nível de registro em log.  
  Os níveis de registro em log internos a seguir estão disponíveis. Você também pode selecionar um nível de registro em log existente personalizado. Este tópico contém uma descrição dos níveis de registro em log personalizados.  
   
-|Nível de log|Descrição|  
+|Nível de log|DESCRIÇÃO|  
 |-------------------|-----------------|  
 |Nenhum|O log está desativado. Apenas o status da execução do pacote é registrado em log.|  
 |Basic|Todos os eventos são registrados em log, menos personalizados e de diagnóstico. Esse é o valor padrão.|  
@@ -438,7 +438,7 @@ ms.locfileid: "79287880"
   
 -   Somente os usuários na função ssis_admin ou sysadmin podem criar, atualizar ou excluir níveis de registro em log personalizados.  
 
-## <a name="custom_messages"></a> Custom Messages for Logging
+## <a name="custom-messages-for-logging"></a><a name="custom_messages"></a> Custom Messages for Logging
 O SQL Server Integration Services fornece um conjunto avançado de eventos personalizados para gravação de entradas de log para pacotes e diversas tarefas. Você pode usar essas entradas para salvar informações detalhadas sobre progresso de execução, resultados e problemas registrando eventos predefinidos ou mensagens definidas pelo usuário para análise posterior. Por exemplo, você pode registrar quando uma inserção em massa é iniciada ou finalizada para identificar problemas de desempenho na execução do pacote.  
   
  As entradas de log personalizadas são um conjunto de entradas diferente do conjunto de eventos de log padrão, disponível para pacotes e todos os contêineres e tarefas. As entradas de log personalizadas são elaboradas para capturar informações úteis sobre uma tarefa específica em um pacote. Por exemplo, uma das entradas de log personalizadas da tarefa Executar SQL registra a instrução SQL executada pela tarefa no log.  
@@ -491,28 +491,28 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
   
 ### <a name="log-entries"></a>Entradas de log  
   
-####  <a name="Package"></a> Pacote  
+####  <a name="package"></a><a name="Package"></a> Pacote  
  A tabela a seguir relaciona as entradas de log personalizadas para pacotes.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**PackageStart**|Indica que o pacote começou a ser executado. Esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
 |**PackageEnd**|Indica que o pacote foi concluído. Esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
 |**Diagnostic**|Fornece informações sobre a configuração do sistema que afeta a execução de pacotes como os executáveis numéricos que podem ser executados simultaneamente.<br /><br /> A entrada de log **Diagnóstico** também inclui entradas anteriores e posteriores a chamadas para provedores de dados externos.|  
   
-####  <a name="BulkInsert"></a> Tarefa Inserção em Massa  
+####  <a name="bulk-insert-task"></a><a name="BulkInsert"></a> Tarefa Inserção em Massa  
  A seguinte tabela relaciona as entradas de log personalizadas para a tarefa inserção em massa .  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**DTSBulkInsertTaskBegin**|Indica que a inserção em massa iniciou.|  
 |**DTSBulkInsertTaskEnd**|Indica que a inserção em massa foi concluída.|  
 |**DTSBulkInsertTaskInfos**|Fornece informações descritivas sobre a tarefa.|  
   
-####  <a name="DataFlow"></a> Data Flow Task  
+####  <a name="data-flow-task"></a><a name="DataFlow"></a> Data Flow Task  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa de Fluxo de Dados.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|Indica que a tarefa de Fluxo de Dados alterou o tamanho do buffer. A entrada de log descreve os motivos da mudança de tamanho e relaciona o novo tamanho do buffer temporário.|  
 |**OnPipelinePostEndOfRowset**|Indica que um componente recebeu o sinal de final do conjunto de linhas, definido pela última chamada do método **ProcessInput** . Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
@@ -525,50 +525,50 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 |**PipelineExecutionTrees**|Informa as árvores de execução sobre o layout do fluxo de dados. O agendador do mecanismo de fluxo de dados usa as árvores para compilar o plano de execução do fluxo de dados.|  
 |**PipelineInitialization**|Fornece informações de inicialização sobre a tarefa. Essas informações incluem os diretórios para armazenamento temporário de dados de BLOB, o tamanho do buffer padrão e o número de linhas em um buffer. Dependendo da configuração da tarefa de Fluxo de Dados, várias entradas de log podem ser gravadas.|  
   
-####  <a name="ExecuteDTS200"></a> Tarefa Executar DTS 2000  
+####  <a name="execute-dts-2000-task"></a><a name="ExecuteDTS200"></a> Tarefa Executar DTS 2000  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Executar DTS 2000.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**ExecuteDTS80PackageTaskBegin**|Indica que a tarefa começou a ser executada em um pacote DTS 2000.|  
 |**ExecuteDTS80PackageTaskEnd**|Indica que a tarefa foi concluída.<br /><br /> Observação: o pacote DTS 2000 pode continuar a ser executado após a conclusão da tarefa.|  
 |**ExecuteDTS80PackageTaskTaskInfo**|Fornece informações descritivas sobre a tarefa.|  
 |**ExecuteDTS80PackageTaskTaskResult**|Informa o resultado de execução do pacote DTS 2000 executado pela tarefa.|  
   
-####  <a name="ExecuteProcess"></a> Tarefa Executar Processo  
+####  <a name="execute-process-task"></a><a name="ExecuteProcess"></a> Tarefa Executar Processo  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Executar Processo.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**ExecuteProcessExecutingProcess**|Fornece informações sobre o processo do executável que a tarefa está configurada para executar.<br /><br /> São gravadas duas entradas de log. Uma contém informações sobre o nome e o local do executável que a tarefa executa e o outro registra a saída do executável.|  
 |**ExecuteProcessVariableRouting**|Fornece informações sobre quais variáveis são encaminhadas para a entrada e as saídas do executável. As entradas de log são gravadas em stdin (a entrada), stdout (a saída) e stderr (a saída do erro).|  
   
-####  <a name="ExecuteSQL"></a> Tarefa Executar SQL  
+####  <a name="execute-sql-task"></a><a name="ExecuteSQL"></a> Tarefa Executar SQL  
  A tabela a seguir descreve a entrada de log personalizada da tarefa Executar SQL.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|Fornece informações sobre as fases de execução da instrução SQL. As entradas de log são gravadas quando a tarefa adquire conexão com o banco de dados, quando a tarefa começa a preparar a instrução SQL e depois que a execução da instrução SQL é concluída. A entrada de log da fase de preparação inclui a instrução SQL usada pela tarefa.|  
   
-####  <a name="FileSystem"></a> Tarefa Sistema de Arquivos  
+####  <a name="file-system-task"></a><a name="FileSystem"></a> Tarefa Sistema de Arquivos  
  A tabela a seguir descreve a entrada de log personalizada da tarefa Sistema de Arquivos.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**FileSystemOperation**|Informa a operação executada pela tarefa. A entrada de log é gravada quando a operação de sistema de arquivos é iniciada e inclui informações sobre a origem e o destino.|  
   
-####  <a name="FTP"></a> Tarefa FTP  
+####  <a name="ftp-task"></a><a name="FTP"></a> Tarefa FTP  
  A tabela a seguir relaciona as entradas de log personalizadas da tarefa FTP.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|Indica que a tarefa iniciou uma conexão com o servidor FTP.|  
 |**FTPOperation**|Informa o início e o tipo de operação de FTP que a tarefa executa.|  
   
-####  <a name="MessageQueue"></a> Tarefa Fila de Mensagens  
+####  <a name="message-queue-task"></a><a name="MessageQueue"></a> Tarefa Fila de Mensagens  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Fila de Mensagens.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**MSMQAfterOpen**|Indica que a tarefa finalizou a abertura da fila de mensagens.|  
 |**MSMQBeforeOpen**|Indica que a tarefa começou a abrir a fila de mensagens.|  
@@ -579,100 +579,100 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 |**MSMQTaskInfo**|Fornece informações descritivas sobre a tarefa.|  
 |**MSMQTaskTimeOut**|Indica que o tempo limite da tarefa foi esgotado.|  
   
-####  <a name="Script"></a> Tarefa Script  
+####  <a name="script-task"></a><a name="Script"></a> Tarefa Script  
  A tabela a seguir descreve a entrada de log personalizada da tarefa Script.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|Informa os resultados da implementação do registro em log no script. Uma entrada de log é gravada para cada chamada ao método **Log** do objeto **Dts** . A entrada é gravada quando o código é executado. Para obter mais informações, consulte [Registro em log na Tarefa Script](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
-####  <a name="SendMail"></a> Tarefa Enviar Email  
+####  <a name="send-mail-task"></a><a name="SendMail"></a> Tarefa Enviar Email  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Enviar Email.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**SendMailTaskBegin**|Indica que a tarefa começou a enviar uma mensagem de email.|  
 |**SendMailTaskEnd**|Indica que a tarefa terminou de enviar uma mensagem de email.|  
 |**SendMailTaskInfo**|Fornece informações descritivas sobre a tarefa.|  
   
-####  <a name="TransferDatabase"></a> Tarefa Transferir Banco de Dados  
+####  <a name="transfer-database-task"></a><a name="TransferDatabase"></a> Tarefa Transferir Banco de Dados  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Transferir Banco de Dados.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**SourceDB**|Especifica o banco de dados que a tarefa copiou.|  
 |**SourceSQLServer**|Especifica o computador a partir do qual o banco de dados foi copiado.|  
   
-####  <a name="TransferErrorMessages"></a> Tarefa Transferir Mensagens de Erro  
+####  <a name="transfer-error-messages-task"></a><a name="TransferErrorMessages"></a> Tarefa Transferir Mensagens de Erro  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Transferir Mensagens de Erro.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**TransferErrorMessagesTaskFinishedTransferringObjects**|Indica que a tarefa terminou de transferir mensagens de erro.|  
 |**TransferErrorMessagesTaskStartTransferringObjects**|Indica que a tarefa começou a transferir as mensagens de erro.|  
   
-####  <a name="TransferJobs"></a> Tarefa Transferir Trabalhos  
+####  <a name="transfer-jobs-task"></a><a name="TransferJobs"></a> Tarefa Transferir Trabalhos  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Transferir Trabalhos.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**TransferJobsTaskFinishedTransferringObjects**|Indica que a tarefa terminou a transferência dos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |**TransferJobsTaskStartTransferringObjects**|Indica que a tarefa começou a transferência dos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
   
-####  <a name="TransferLogins"></a> Tarefa Transferir Logons  
+####  <a name="transfer-logins-task"></a><a name="TransferLogins"></a> Tarefa Transferir Logons  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Transferir Logons.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**TransferLoginsTaskFinishedTransferringObjects**|Indica que a tarefa terminou a transferência dos logons.|  
 |**TransferLoginsTaskStartTransferringObjects**|Indica que a tarefa começou a transferência dos logons.|  
   
-####  <a name="TransferMasterStoredProcedures"></a> Tarefa Transferir Procedimentos Armazenados Mestres  
+####  <a name="transfer-master-stored-procedures-task"></a><a name="TransferMasterStoredProcedures"></a> Tarefa Transferir Procedimentos Armazenados Mestres  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Transferir Procedimentos Armazenados Mestres.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**TransferStoredProceduresTaskFinishedTransferringObjects**|Indica que a tarefa terminou de transferir procedimentos armazenados definidos pelo usuário armazenados no banco de dados **mestre** .|  
 |**TransferStoredProceduresTaskStartTransferringObjects**|Indica que a tarefa começou a transferir procedimentos armazenados definidos pelo usuário armazenados no banco de dados **mestre** .|  
   
-####  <a name="TransferSQLServerObjects"></a> Tarefa Transferir Objetos do SQL Server  
+####  <a name="transfer-sql-server-objects-task"></a><a name="TransferSQLServerObjects"></a> Tarefa Transferir Objetos do SQL Server  
  A tabela a seguir relaciona as entradas de log personalizadas da tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**TransferSqlServerObjectsTaskFinishedTransferringObjects**|Indica que a tarefa terminou a transferência dos objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**TransferSqlServerObjectsTaskStartTransferringObjects**|Indica que a tarefa começou a transferência dos objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
-####  <a name="WebServices"></a> Tarefa Serviços Web  
+####  <a name="web-services-task"></a><a name="WebServices"></a> Tarefa Serviços Web  
  A tabela a seguir relaciona as entradas de log personalizadas que podem ser habilitadas para a tarefa Serviços Web.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**WSTaskBegin**|A tarefa começou a acessar um serviço Web.|  
 |**WSTaskEnd**|A tarefa completou um método de serviço Web.|  
 |**WSTaskInfo**|Informações descritivas sobre a tarefa.|  
   
-####  <a name="WMIDataReader"></a> Tarefa Leitor de Dados do WMI  
+####  <a name="wmi-data-reader-task"></a><a name="WMIDataReader"></a> Tarefa Leitor de Dados do WMI  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Leitor de Dados do WMI.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**WMIDataReaderGettingWMIData**|Indica que a tarefa começou a ser ler os dados do WMI.|  
 |**WMIDataReaderOperation**|Informa a consulta WQL executada pela tarefa.|  
   
-####  <a name="WMIEventWatcher"></a> Tarefa Detector de Eventos do WMI  
+####  <a name="wmi-event-watcher-task"></a><a name="WMIEventWatcher"></a> Tarefa Detector de Eventos do WMI  
  A tabela a seguir relaciona as entradas de registro personalizadas da tarefa Detector de Eventos do WMI.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**WMIEventWatcherEventOccurred**|Mostra que o evento ocorrido era o que a tarefa estava monitorando.|  
 |**WMIEventWatcherTimedout**|Indica que o tempo limite da tarefa foi esgotado.|  
 |**WMIEventWatcherWatchingForWMIEvents**|Indica que a tarefa começou a executar a consulta WQL. A entrada inclui a consulta.|  
   
-####  <a name="XML"></a> XML Task  
+####  <a name="xml-task"></a><a name="XML"></a> XML Task  
  A tabela a seguir descreve a entrada de log personalizada da tarefa XML.  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**XMLOperation**|Fornece informações sobre a operação executada pela tarefa|  
 

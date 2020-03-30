@@ -15,10 +15,10 @@ ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ae39654a19c73c71c602801b3aa5f594f7d0828
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908155"
 ---
 # <a name="specify-merge-replication-properties"></a>Especificar propriedades de Replicação de Mesclagem
@@ -76,7 +76,7 @@ Na página **Artigos** do Assistente para Nova Publicação, selecione uma tabel
  A Replicação do Microsoft SQL Server fornece um Resolvedor Interativo, que permite a resolução de conflitos de forma manual durante a sincronização sob demanda no Gerenciador de Sincronização do Microsoft Windows. Depois que a resolução interativa estiver habilitada, resolva os conflitos interativamente durante a sincronização, usando o Resolvedor Interativo. O Resolvedor Interativo está disponível pelo Gerenciador de Sincronização do Microsoft Windows. Para obter mais informações, consulte [Como sincronizar uma assinatura usando o Gerenciador de Sincronização do Windows &#40;Gerenciador de Sincronização do Windows&#41;](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
   
-### <a name="Recommendations"></a> Recomendações  
+### <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Se uma sincronização for executada fora do Gerenciador de Sincronização do Windows (como sincronização agendada ou uma sincronização sob demanda no SQL Server Management Studio ou no Replication Monitor), os conflitos serão resolvidos automaticamente sem a intervenção de usuário, usando a resolução de conflitos padrão especificada para o artigo. Para obter mais informações, consulte [Resolução de conflito interativo](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   

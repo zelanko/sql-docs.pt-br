@@ -12,10 +12,10 @@ ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 97725acacdd4486ebd92a4424704288c5e4efd3e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907473"
 ---
 # <a name="delete-a-plan-guide"></a>Excluir um guia de plano
@@ -34,14 +34,14 @@ ms.locfileid: "72907473"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  A exclusão de um guia de plano OBJECT exige a permissão ALTER no objeto (por exemplo: função, procedimento armazenado) que é referenciado pelo guia de plano. Todos os outros guias de plano requerem permissão ALTER DATABASE.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-delete-a-plan-guide"></a>Para excluir um guia de plano  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72907473"
   
 4.  Na caixa de diálogo **Excluir Objeto** , verifique se o guia de plano correto está selecionado e clique em **OK**.  
 
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-delete-a-single-plan-guide"></a>Para excluir um único guia de plano  
   

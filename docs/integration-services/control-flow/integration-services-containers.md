@@ -17,10 +17,10 @@ ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b05b7ffa40bb5b44c9dd3a5fa0d320cfadba0a43
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294057"
 ---
 # <a name="integration-services-containers"></a>Contêineres do Integration Services
@@ -41,7 +41,7 @@ ms.locfileid: "71294057"
 ## <a name="container-types"></a>Tipos de contêineres  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece quatro tipos de contêineres para criar pacotes. A tabela a seguir lista os tipos de contêineres.  
   
-|Contêiner|Descrição|  
+|Contêiner|DESCRIÇÃO|  
 |---------------|-----------------|  
 |[Contêiner do Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md)|Executa um fluxo de controle repetidamente usando um enumerador.|  
 |[Contêiner do Loop For](../../integration-services/control-flow/for-loop-container.md)|Executa um fluxo de controle repetidamente testando uma condição.|  
@@ -53,7 +53,7 @@ ms.locfileid: "71294057"
 ### <a name="summary-of-container-properties"></a>Resumo das propriedades dos contêineres  
  Todos os tipos de contêineres têm um conjunto de propriedades em comum. Se você criar pacotes que usam as ferramentas gráficas fornecidas pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , a janela Propriedades listará as propriedades a seguir dos contêineres Foreach Loop, Loop For e Sequence. As propriedades do contêiner host da tarefa são configuradas como parte da configuração da tarefa que o host da tarefa encapsula. Você define as propriedades Host da Tarefa quando configura a tarefa.  
   
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |**DelayValidation**|Um valor booliano que indica se a validação do contêiner foi adiada até o tempo de execução. O valor padrão para essa propriedade é **False**.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>.|  
 |**Descrição**|É a descrição do contêiner. A propriedade contém uma cadeia de caracteres, mas pode estar em branco.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  

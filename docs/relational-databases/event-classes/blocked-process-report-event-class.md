@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ce090a9018327d1808cf891b5ba6c068d37ccb73
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76516457"
 ---
 # <a name="blocked-process-report-event-class"></a>classe de evento Blocked Process Report
@@ -29,7 +29,7 @@ ms.locfileid: "76516457"
   
 ## <a name="blocked-process-report-event-class-data-columns"></a>Colunas de dados da classe de evento Blocked Process Report  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID do banco de dados no qual foi adquirido o bloqueio. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**Duration**|**bigint**|O intervalo de tempo (em microssegundos) que o processo ficou bloqueado.|13|Sim|  

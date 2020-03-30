@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9859db8e22110e228386dfe23f94341ab1f7be15
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68062548"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo e linha (SQL Server)
@@ -107,7 +107,7 @@ bcp -r '0x0A'
   
  O comando **bcp** contém as opções a seguir.  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**-c**|Especifica que os campos de dados sejam carregados como dados de caracteres.|  
 |**-t** `,`|Especifica uma vírgula (,) como terminador de campo.|  
@@ -135,7 +135,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      Os terminadores podem ser especificados para campos individuais em um arquivo de formato ou para o arquivo de dados inteiro usando os qualificadores mostrados na tabela a seguir.  
   
-    |Qualificador|Descrição|  
+    |Qualificador|DESCRIÇÃO|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***field_terminator***'**|Especifica o terminador de campo a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \t (caractere de tabulação).|  
     |ROWTERMINATOR **='***row_terminator***'**|Especifica o terminador de linha a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \n (caractere de nova linha).|  

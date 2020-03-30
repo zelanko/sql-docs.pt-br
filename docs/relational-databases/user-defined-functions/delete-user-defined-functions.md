@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: aa54440c5b1a506ce9c218dc7213383e0ff43ca0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72906864"
 ---
 # <a name="delete-user-defined-functions"></a>Excluir funções definidas pelo usuário
@@ -36,20 +36,20 @@ ms.locfileid: "72906864"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Você não poderá excluir a função se houver funções Transact-SQL ou exibições no banco de dados que referenciem essa função e forem criadas usando SCHEMABINDING, ou se houver colunas computadas, restrições CHECK ou DEFAULT que referenciem a função.  
   
 -   Você não poderá excluir a função se houver colunas computadas que referenciem essa função e tenham sido indexadas.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer permissão ALTER no esquema ao qual a função pertence ou permissão CONTROL na função.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-delete-a-user-defined-function"></a>Para excluir uma função definida pelo usuário  
   
@@ -72,7 +72,7 @@ ms.locfileid: "72906864"
     > [!IMPORTANT]  
     >  Clique em **Mostrar Dependências** na caixa de diálogo **Excluir Objeto** para abrir a caixa de diálogo _function\_name_**Dependencies**. Isso mostrará todos os objetos que dependem da função e todos os objetos dos quais a função depende.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-delete-a-user-defined-function"></a>Para excluir uma função definida pelo usuário  
   

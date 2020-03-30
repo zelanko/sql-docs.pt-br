@@ -10,15 +10,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
-author: CarlRabeler
-ms.author: carlrab
+author: juliemsft
+ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f5510d6c75380e48008740ab8a0f5b1c9f500fe5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3dd905b58478955bc58d0134e8ca56f9ac219ea7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73064538"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526771"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -172,7 +172,7 @@ GO
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CREATE FUNCTION no banco de dados e a permissão ALTER no esquema no qual a função está sendo criada.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>a. Usando uma função com valor escalar definida pelo usuário para alterar um tipo de dados  
  Essa função simples usa um tipo de dados **int** como uma entrada e retorna um tipo de dados **decimal(10,2)** como uma saída.  

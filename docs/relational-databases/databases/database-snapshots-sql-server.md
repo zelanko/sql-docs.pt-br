@@ -19,10 +19,10 @@ ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68300434"
 ---
 # <a name="database-snapshots-sql-server"></a>Instantâneos de banco de dados (SQL Server)
@@ -48,14 +48,14 @@ Um instantâneo de banco de dados é uma exibição estática somente leitura de
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="FeatureOverview"></a> Visão geral do recurso  
+##  <a name="feature-overview"></a><a name="FeatureOverview"></a> Visão geral do recurso  
  Os instantâneos do banco de dados funcionam no nível da página de dados. Antes que uma página do banco de dados de origem seja modificada pela primeira vez, a página original é copiada do banco de dados de origem ao instantâneo. O instantâneo armazena a página original, preservando os registros de dados da forma como existiam quando o instantâneo foi criado. O mesmo processo é repetido para todas as páginas modificadas pela primeira vez. Para o usuário, um instantâneo do banco de dados parece nunca ser alterado, porque as operações de leitura em um instantâneo do banco de dados sempre acessam as páginas de dados originais, independentemente de onde elas residam.  
   
  Para armazenar as páginas originais copiadas, o instantâneo usa um ou mais *arquivos esparsos*. Inicialmente, um arquivo esparso é, essencialmente, um arquivo vazio que não contém dados de usuário e no qual ainda não foi alocado espaço em disco para os dados do usuário. À medida que mais páginas são atualizadas no banco de dados de origem, o tamanho do arquivo aumenta. A figura a seguir mostra os efeitos de dois padrões de atualização contrastantes no tamanho de um instantâneo. O padrão de atualização A reflete um ambiente em que apenas 30% das páginas originais são atualizadas durante a vida do instantâneo. O padrão de atualização B reflete um ambiente em que 80% das páginas originais são atualizadas durante a vida do instantâneo.  
   
  ![Padrões alternativos de atualização e tamanho do instantâneo](../../relational-databases/databases/media/dbview-04.gif "Padrões alternativos de atualização e tamanho do instantâneo")  
   
-##  <a name="Benefits"></a> Benefícios dos instantâneos de banco de dados  
+##  <a name="benefits-of-database-snapshots"></a><a name="Benefits"></a> Benefícios dos instantâneos de banco de dados  
   
 -   Os instantâneos podem ser utilizados para fins de geração de relatórios.  
   
@@ -96,7 +96,7 @@ Um instantâneo de banco de dados é uma exibição estática somente leitura de
   
      Em um ambiente de teste, pode ser útil manter dados idênticos no início de cada sessão de testes ao executar um protocolo de teste repetidamente para o banco de dados. Antes de executar a primeira sessão, um testador ou desenvolvedor de aplicativos pode criar um instantâneo do banco de dados no banco de dados de teste. Depois de cada execução do teste, o banco de dados poderá retornar rapidamente ao seu estado anterior por meio da reversão do instantâneo do banco de dados.  
   
-##  <a name="TermsAndDefinitions"></a> Termos e definições  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Termos e definições  
  instantâneo do banco de dados  
  Uma exibição estática somente leitura transacionalmente consistente de um banco de dados (o banco de dados de origem).  
   
@@ -106,7 +106,7 @@ Um instantâneo de banco de dados é uma exibição estática somente leitura de
  arquivo esparso  
  Um arquivo fornecido pelo sistema de arquivos NTFS que requer muito menos espaço em disco do que seria necessário de outra forma. Um arquivo esparso é usado para armazenar páginas copiadas para um instantâneo de banco de dados. Quando criado, um arquivo esparso ocupa pouco espaço em disco. Conforme os dados são gravados em um instantâneo de banco de dados, o NTFS aloca gradualmente espaço em disco no arquivo esparso correspondente.  
   
-##  <a name="LimitationsRequirements"></a> Pré-requisitos e limitações dos instantâneos de banco de dados  
+##  <a name="prerequisites-for-and-limitations-on-database-snapshots"></a><a name="LimitationsRequirements"></a> Pré-requisitos e limitações dos instantâneos de banco de dados  
  **Nesta seção:**  
   
 -   [Pré-requisitos](#Prerequisites)  
@@ -119,7 +119,7 @@ Um instantâneo de banco de dados é uma exibição estática somente leitura de
   
 -   [Instantâneos do banco de dados com grupos de arquivos offline](#OfflineFGs)  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  O banco de dados de origem, que pode usar qualquer modelo de recuperação, deve atender aos seguintes pré-requisitos:  
   
 -   A instância de servidor deve estar sendo executada em uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que oferece suporte a instantâneos de banco de dados. Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -141,7 +141,7 @@ Um instantâneo de banco de dados é uma exibição estática somente leitura de
 > [!NOTE]  
 >  Todo modelo de recuperação oferece suporte a instantâneos do banco de dados.  
   
-###  <a name="LimitsOnSourceDb"></a> Limitações do banco de dados de origem  
+###  <a name="limitations-on-the-source-database"></a><a name="LimitsOnSourceDb"></a> Limitações do banco de dados de origem  
  Se houver um instantâneo do banco de dados, as seguintes limitações existirão no banco de dados de origem do instantâneo:  
   
 -   O banco de dados não pode ser eliminado, desanexado nem restaurado.  
@@ -153,7 +153,7 @@ Um instantâneo de banco de dados é uma exibição estática somente leitura de
   
 -   Os arquivos não podem ser eliminados do banco de dados de origem nem de nenhum instantâneo.  
   
-###  <a name="LimitsOnDbSS"></a> Limitações em instantâneos do banco de dados  
+###  <a name="limitations-on-database-snapshots"></a><a name="LimitsOnDbSS"></a> Limitações em instantâneos do banco de dados  
  As limitações a seguir aplicam-se a instantâneos do banco de dados:  
   
 -   É preciso criar um instantâneo do banco de dados, a ser mantido na mesma instância de servidor, como banco de dados de origem.  
@@ -199,7 +199,7 @@ Um instantâneo de banco de dados é uma exibição estática somente leitura de
   
 -   Quando estatísticas em um instantâneo somente leitura estão ausentes ou ficam obsoletas, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria e mantém estatísticas temporárias em tempdb. Para obter mais informações, consulte [Estatísticas](../../relational-databases/statistics/statistics.md).  
   
-###  <a name="DiskSpace"></a> Requisitos de espaço em disco  
+###  <a name="disk-space-requirements"></a><a name="DiskSpace"></a> Requisitos de espaço em disco  
  Os instantâneos do banco de dados consomem espaço em disco. Se um instantâneo do banco de dados for executado sem espaço em disco suficiente, ficará marcado como suspeito e precisará ser cancelado. (O banco de dados de origem, porém, não é afetado; as suas ações prosseguem normalmente.) Em comparação com uma cópia completa de banco de dados, no entanto, os instantâneos são altamente eficazes em termos de espaço. Um instantâneo requer apenas armazenamento suficiente para as páginas alteradas no decorrer de seu tempo de vida. Em geral, os instantâneos são mantidos por certo período, de modo que o tamanho deles não é a principal preocupação.  
   
  Quanto mais tempo o instantâneo for mantido, mais provável se torna que ele venha a gastar espaço disponível. O tamanho máximo de crescimento de um arquivo esparso é o tamanho do arquivo de banco de dados de origem correspondente, no momento da criação do instantâneo. Se um instantâneo do banco de dados for executado sem espaço em disco suficiente, precisará ser excluído (cancelado).  
@@ -207,7 +207,7 @@ Um instantâneo de banco de dados é uma exibição estática somente leitura de
 > [!NOTE]  
 >  Com exceção do espaço em arquivo, o instantâneo do banco de dados consome basicamente tanto recurso quanto o banco de dados.  
   
-###  <a name="OfflineFGs"></a> Instantâneos do banco de dados com grupos de arquivos offline  
+###  <a name="database-snapshots-with-offline-filegroups"></a><a name="OfflineFGs"></a> Instantâneos do banco de dados com grupos de arquivos offline  
  Os grupos de arquivos offline no banco de dados de origem afetam os instantâneos do banco de dados quando se tenta realizar o seguinte:  
   
 -   Criar um instantâneo  
@@ -226,7 +226,7 @@ Um instantâneo de banco de dados é uma exibição estática somente leitura de
   
      Reverter um banco de dados de origem em um instantâneo do banco de dados requer que todos os grupos de arquivos fiquem online, com exceção de grupos de arquivos que estavam offline quando o instantâneo foi criado.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Criar um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   

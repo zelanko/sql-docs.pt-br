@@ -13,10 +13,10 @@ ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b4fa1d2dd8219c28a1fd9c8f3f403c6098d96e4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298075"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Editor de Origem SAP BW (página Gerenciador de Conexões)

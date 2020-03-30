@@ -14,10 +14,10 @@ ms.assetid: b9e9d646-4894-4dee-a02a-0c71a8dc020e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a6d57bbeca2d5393504192683bcf1738374fbc4c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558283"
 ---
 # <a name="evaluate-a-policy-based-management-policy-from-an-object"></a>Avaliar uma política do Gerenciamento Baseado em Políticas de um objeto
@@ -36,20 +36,20 @@ ms.locfileid: "75558283"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   O modo de execução é definido como parte da política e não pode ser alterado na caixa de diálogo **Avaliar Políticas** .  
   
 -   A caixa de diálogo **Avaliar Políticas** só mostra políticas apropriadas para o objeto de banco de dados.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a associação à função PolicyAdministratorRole no banco de dados msdb.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-evaluate-a-policy-from-an-object"></a>Para avaliar uma política em um objeto  
   

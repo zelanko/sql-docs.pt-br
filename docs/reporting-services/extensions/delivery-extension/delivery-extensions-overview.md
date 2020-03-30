@@ -12,10 +12,10 @@ ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 69dce8309f96988a9d339aefbb684116c0df2eb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193772"
 ---
 # <a name="delivery-extensions-overview"></a>Visão geral de extensões de entrega
@@ -23,7 +23,7 @@ ms.locfileid: "63193772"
   
  A tabela a seguir lista as extensões de entrega incluídas no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Extensão da entrega|Descrição|  
+|Extensão da entrega|DESCRIÇÃO|  
 |------------------------|-----------------|  
 |Email do servidor de relatório|Usa um servidor SMTP para enviar relatórios de email a usuários individuais ou a grupos.|  
 |Compartilhamento de arquivos do servidor de relatórios|Usado para distribuir relatórios em sua organização para o compartilhamentos de arquivos de rede. Oferece a capacidade de copiar um relatório automaticamente para um compartilhamento de arquivo em uma agenda designada.|  

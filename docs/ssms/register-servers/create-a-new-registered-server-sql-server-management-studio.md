@@ -17,10 +17,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: a62555b9cb6f94b4fd51e304537551d857d2c525
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246567"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Criar um novo servidor registrado (SQL Server Management Studio)
@@ -42,7 +42,7 @@ Este tópico descreve como salvar as informações de conexão para os servidore
   
      Os Servidores de Gerenciamento Central armazenam registros de servidor no Servidor de Gerenciamento Central em vez de usar o sistema de arquivos. Os Servidores de Gerenciamento Central e os servidores registrados subordinados podem ser registrados somente com o uso da Autenticação do Windows. Após o registro de um Servidor de Gerenciamento Central, seus servidores registrados associados são exibidos automaticamente. Para obter mais informações sobre Servidores de Gerenciamento Central, veja [Administrar vários servidores usando os Servidores de Gerenciamento Central](../../relational-databases/administer-multiple-servers-using-central-management-servers.md). As versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] não podem ser designadas como um Servidor de Gerenciamento Central.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-automatically-register-the-local-server-instances"></a>Para registrar as instâncias de servidor local automaticamente  
   

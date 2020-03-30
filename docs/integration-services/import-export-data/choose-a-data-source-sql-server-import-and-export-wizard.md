@@ -12,10 +12,10 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b707b2b31c15c565353f0ff581ca1f4d7308a25b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71951940"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Escolher uma fonte de dados (Assistente de Importação e Exportação do SQL Server)

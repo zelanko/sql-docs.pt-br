@@ -15,10 +15,10 @@ ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 57625308d1d8e9fcca375e33c72f4bdbf9ace222
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286990"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Solucionar problemas de configuração de grupos de disponibilidade AlwaysOn (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "79286990"
   
  **Neste tópico:**  
   
-|Seção|Descrição|  
+|Seção|DESCRIÇÃO|  
 |-------------|-----------------|  
 |[Os grupos de disponibilidade AlwaysOn não estão habilitados](#IsHadrEnabled)|Se uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não estiver habilitada para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], a instância não dará suporte à criação de grupo de disponibilidade e não poderá hospedar nenhuma réplica de disponibilidade.|  
 |[Contas](#Accounts)|Discute os requisitos para configurar corretamente as contas nas quais o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será executado.|  
@@ -44,10 +44,10 @@ ms.locfileid: "79286990"
 |[Tarefas relacionadas](#RelatedTasks)|Contém uma lista de tópicos orientados para tarefas nos Manuais Online do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que são particularmente relevantes para solucionar problemas de configuração de grupos de disponibilidade.|  
 |[Conteúdo relacionado](#RelatedContent)|Contém uma lista de recursos relevantes que são externos aos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
   
-##  <a name="IsHadrEnabled"></a> Os grupos de disponibilidade AlwaysOn não estão habilitados  
+##  <a name="always-on-availability-groups-is-not-enabled"></a><a name="IsHadrEnabled"></a> Os grupos de disponibilidade AlwaysOn não estão habilitados  
  O recurso do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] deve estar habilitado em cada uma das instâncias do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Para obter mais informações, consulte [Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
-##  <a name="Accounts"></a> Contas  
+##  <a name="accounts"></a><a name="Accounts"></a> Contas  
  As contas nas quais o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está sendo executado devem ser configuradas corretamente.  
   
 1.  As contas têm as permissões corretas?  
@@ -58,7 +58,7 @@ ms.locfileid: "79286990"
   
 2.  Se o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estiver sendo executado como uma conta interna, como Sistema Local, Serviço Local ou Serviço de Rede ou uma conta que não pertença ao domínio, você deverá usar certificados para autenticação de ponto de extremidade. Se suas contas de serviço estiverem usando contas de domínio no mesmo domínio, você poderá escolher conceder acesso de CONNECT a cada conta de serviço em todos os locais de réplica ou usar certificados. Para obter mais informações, veja [Usar certificados para um ponto de extremidade do espelhamento de banco de dados &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-##  <a name="Endpoints"></a> Endpoints  
+##  <a name="endpoints"></a><a name="Endpoints"></a> Endpoints  
  Os pontos de extremidade devem ser configurados corretamente.  
   
 1.  Verifique se cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vai hospedar uma réplica de disponibilidade (cada *local de réplica*) tem um ponto de extremidade de espelhamento de banco de dados. Para determinar se existe um ponto de extremidade de espelhamento do banco de dados em determinada instância do servidor, use a exibição de catálogo [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md). Para obter mais informações, veja [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) ou [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
@@ -111,16 +111,16 @@ ms.locfileid: "79286990"
   
     ```  
   
-##  <a name="SystemName"></a> System Name  
+##  <a name="system-name"></a><a name="SystemName"></a> System Name  
  Para o nome de sistema de uma instância do servidor em uma URL de ponto de extremidade, você pode usar qualquer nome que identifique o sistema inequivocamente. O endereço de servidor pode ser um nome de sistema (se os sistemas estiverem no mesmo domínio), um nome de domínio totalmente qualificado ou um endereço de IP (preferivelmente, um endereço de IP estático). Usando o nome de domínio totalmente qualificado o funcionamento é garantido. Para obter mais informações, consulte [Especificar a URL do ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
-##  <a name="NetworkAccess"></a> Network Access  
+##  <a name="network-access"></a><a name="NetworkAccess"></a> Network Access  
  Cada instância do servidor que esteja hospedando uma réplica de disponibilidade deve poder acessar a porta de cada uma das instâncias do servidor sobre TCP. Isso será especialmente importante se as instâncias do servidor estiverem em domínios diferentes que não confiam um no outro (domínios não confiáveis).  
   
-##  <a name="Msg1418"></a> Acesso ao ponto de extremidade (erro 1418 do SQL Server)  
+##  <a name="endpoint-access-sql-server-error-1418"></a><a name="Msg1418"></a> Acesso ao ponto de extremidade (erro 1418 do SQL Server)  
  Essa mensagem do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] indica que o endereço de rede do servidor especificado na URL do ponto de extremidade não pode ser atingido ou não existe e sugere que você verifique o nome do endereço de rede e emita o comando novamente.  
   
-##  <a name="JoinDbFails"></a> Falha ao unir bancos de dados (erro 35250 do SQL Server)  
+##  <a name="join-database-fails-sql-server-error-35250"></a><a name="JoinDbFails"></a> Falha ao unir bancos de dados (erro 35250 do SQL Server)  
  Discute as possíveis causas e resolução de uma falha ao unir bancos de dados secundários a um grupo de disponibilidade porque a conexão com a réplica primária não está ativa.  
   
  **Resolução:**  
@@ -129,7 +129,7 @@ ms.locfileid: "79286990"
   
 2.  Verifique se a conta de serviço de rede tem permissão para conectar-se ao ponto de extremidade.  
   
-##  <a name="ROR"></a> O roteamento somente leitura não está funcionando corretamente  
+##  <a name="read-only-routing-is-not-working-correctly"></a><a name="ROR"></a> O roteamento somente leitura não está funcionando corretamente  
  Verifique as configurações de valores a seguir e corrija-as se necessário.  
   
 ||Ligado...|Ação|Comentários|Link|  
@@ -141,7 +141,7 @@ ms.locfileid: "79286990"
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Cada réplica em read_only_routing_list|Verifique se READ_ONLY_ROUTING_URL (TCP<strong>://</strong>*system-address*<strong>:</strong>*port*) contém o FQDN (nome de domínio totalmente qualificado) e o número da porta corretos.|-|[Calculando read_only_routing_url de AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Sistema cliente|Verifique se o driver cliente dá suporte a roteamento somente leitura.|-|[Conectividade de cliente AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)|  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Criação e configuração de grupos de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
@@ -157,13 +157,13 @@ ms.locfileid: "79286990"
   
 -   [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   [Exibir eventos e logs de um cluster de failover](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
 -   [Cluster de failover Get-ClusterLog do cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
--   [Blog da equipe do Always On do SQL Server: o blog oficial da equipe do Always On do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

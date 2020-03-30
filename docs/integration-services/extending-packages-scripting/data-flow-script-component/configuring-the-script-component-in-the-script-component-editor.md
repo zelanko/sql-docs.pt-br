@@ -18,10 +18,10 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 98333f81a1e7c50434936c2df958da21366c6e9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296985"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configurando o componente Script no Editor de Componentes de Script

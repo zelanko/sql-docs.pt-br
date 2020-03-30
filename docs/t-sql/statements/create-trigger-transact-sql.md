@@ -29,10 +29,10 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0e3a0829702dfe46a2d6c00925a82938d23bad92
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287680"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
@@ -162,7 +162,7 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
   
 ## <a name="arguments"></a>Argumentos
 OR ALTER  
-**Aplica-se ao**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 em diante). 
+**Aplica-se a**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1). 
   
 Altera condicionalmente o gatilho somente se ele já existir. 
   

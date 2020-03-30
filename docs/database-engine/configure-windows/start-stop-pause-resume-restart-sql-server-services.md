@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 6fee83f5560891e6160c3e885ca0a0ed4e5e8058
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78946729"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server
@@ -121,7 +121,7 @@ Como o SQL Server Configuration Manager é um snap-in do programa Console de Ger
 |SQL Server 2014|C:\Windows\SysWOW64\SQLServerManager12.msc|
 |SQL Server 2012|C:\Windows\SysWOW64\SQLServerManager11.msc|
 
-#### <a name="configmande"></a> Para iniciar, parar, pausar, retomar ou reiniciar uma instância do Mecanismo de Banco de Dados do SQL Server
+#### <a name="to-start-stop-pause-resume-or-restart-an-instance-of-the-sql-server-database-engine"></a><a name="configmande"></a> Para iniciar, parar, pausar, retomar ou reiniciar uma instância do Mecanismo de Banco de Dados do SQL Server
 
 1. Inicie o SQL Server Configuration Manager usando as instruções acima.
 
@@ -153,7 +153,7 @@ Como o SQL Server Configuration Manager é um snap-in do programa Console de Ger
 
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
-### <a name="ssmsde"></a> Para iniciar, parar, pausar, retomar ou reiniciar uma instância do Mecanismo de Banco de Dados do SQL Server
+### <a name="to-start-stop-pause-resume-or-restart-an-instance-of-the-sql-server-database-engine"></a><a name="ssmsde"></a> Para iniciar, parar, pausar, retomar ou reiniciar uma instância do Mecanismo de Banco de Dados do SQL Server
 
 1. No Pesquisador de Objetos, conecte-se à instância do Mecanismo de Banco de Dados, clique com o botão direito do mouse na instância do Mecanismo de Banco de Dados que deseja iniciar e, em seguida, clique em **Iniciar**, **Parar**, **Pausar**, **Retomar** ou **Reiniciar**.
 
@@ -171,11 +171,11 @@ Como o SQL Server Configuration Manager é um snap-in do programa Console de Ger
 
 3. Quando solicitado se você deseja executar uma ação, clique em **Sim**.
 
-## <a name="CommandPrompt"></a> Janela do prompt de comando usando comandos .NET
+## <a name="command-prompt-window-using-net-commands"></a><a name="CommandPrompt"></a> Janela do prompt de comando usando comandos .NET
 
 Os serviços do Microsoft SQL Server podem ser iniciados, parados ou colocados em pausa com os comandos do Microsoft Windows **.NET**.
 
-### <a name="dbDefault"></a> Para iniciar a instância padrão do Mecanismo de Banco de Dados
+### <a name="to-start-the-default-instance-of-the-database-engine"></a><a name="dbDefault"></a> Para iniciar a instância padrão do Mecanismo de Banco de Dados
 
 - Em um prompt de comando, digite um dos seguintes comandos:  
   
@@ -185,7 +185,7 @@ Os serviços do Microsoft SQL Server podem ser iniciados, parados ou colocados e
 
     **net start MSSQLSERVER**
 
-### <a name="dbNamed"></a> Para iniciar uma instância nomeada do Mecanismo de Banco de Dados
+### <a name="to-start-a-named-instance-of-the-database-engine"></a><a name="dbNamed"></a> Para iniciar uma instância nomeada do Mecanismo de Banco de Dados
 
 - Em um prompt de comando, digite um dos comandos a seguir. Substitua *\<instancename>* pelo nome da instância que você deseja gerenciar.  
   
@@ -195,7 +195,7 @@ Os serviços do Microsoft SQL Server podem ser iniciados, parados ou colocados e
   
     **net start MSSQL$** *instancename*  
   
-### <a name="dbStartup"></a> Para iniciar o Mecanismo de Banco de Dados com opções de inicialização  
+### <a name="to-start-the-database-engine-with-startup-options"></a><a name="dbStartup"></a> Para iniciar o Mecanismo de Banco de Dados com opções de inicialização  
 
 - Adicione opções de inicialização ao final da instrução **net start "SQL Server (MSSQLSERVER)"** , separadas por espaço. Quando começar usando **net start**, as opções de inicialização usam uma barra (/) em vez de um hífen (-).  
   
@@ -208,7 +208,7 @@ Os serviços do Microsoft SQL Server podem ser iniciados, parados ou colocados e
   > [!NOTE]
   >  Para obter mais informações sobre as opções de inicialização, consulte [Opções de inicialização do serviço Mecanismo de Banco de Dados](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
-###  <a name="agDefault"></a> Para iniciar o SQL Server Agent na instância padrão do SQL Server
+###  <a name="to-start-the-sql-server-agent-on-the-default-instance-of-sql-server"></a><a name="agDefault"></a> Para iniciar o SQL Server Agent na instância padrão do SQL Server
   
 - Em um prompt de comando, digite um dos seguintes comandos:  
   
@@ -218,7 +218,7 @@ Os serviços do Microsoft SQL Server podem ser iniciados, parados ou colocados e
   
     **net start SQLSERVERAGENT**
   
-###  <a name="agNamed"></a> Para iniciar o SQL Server Agent em uma instância nomeada do SQL Server  
+###  <a name="to-start-the-sql-server-agent-on-a-named-instance-of-sql-server"></a><a name="agNamed"></a> Para iniciar o SQL Server Agent em uma instância nomeada do SQL Server  
   
 - Em um prompt de comando, digite um dos comandos a seguir. Substitua *instancename* pelo nome da instância que você deseja gerenciar.  
   
@@ -230,7 +230,7 @@ Os serviços do Microsoft SQL Server podem ser iniciados, parados ou colocados e
   
  Para obter informações sobre como executar o SQL Server Agent no modo detalhado para solução de problemas, confira [Aplicativo sqlagent90](../../tools/sqlagent90-application.md).  
 
-### <a name="Browser"></a> Para iniciar o SQL Server Browser  
+### <a name="to-start-the-sql-server-browser"></a><a name="Browser"></a> Para iniciar o SQL Server Browser  
 
 - Em um prompt de comando, digite um dos seguintes comandos:  
   
@@ -240,7 +240,7 @@ Os serviços do Microsoft SQL Server podem ser iniciados, parados ou colocados e
   
     **net start SQLBrowser**
   
-### <a name="pauseStop"></a> Para pausar ou parar os serviços na janela Prompt de Comando  
+### <a name="to-pause-or-stop-services-from-the-command-prompt-window"></a><a name="pauseStop"></a> Para pausar ou parar os serviços na janela Prompt de Comando  
 
 - Para pausar ou parar serviços, modifique os comandos conforme mostrado a seguir.  
 
@@ -248,7 +248,7 @@ Os serviços do Microsoft SQL Server podem ser iniciados, parados ou colocados e
 
 - Para pausar um serviço, substitua **net start** com **net pause**.  
 
-## <a name="TsqlProcedure"></a> Transact-SQL
+## <a name="transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL
 
 O Mecanismo de Banco de Dados pode ser interrompido com a instrução **SHUTDOWN**.  
 
@@ -268,7 +268,7 @@ O Mecanismo de Banco de Dados pode ser interrompido com a instrução **SHUTDOWN
 
 Para obter mais informações sobre a instrução **SHUTDOWN**, consulte [SHUTDOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/shutdown-transact-sql.md).  
 
-## <a name="PowerShellProcedure"></a> PowerShell
+## <a name="powershell"></a><a name="PowerShellProcedure"></a> PowerShell
 
 ### <a name="to-start-and-stop-database-engine-services"></a>Para iniciar e parar serviços do Mecanismo de Banco de Dados
 

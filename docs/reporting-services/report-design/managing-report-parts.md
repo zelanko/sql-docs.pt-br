@@ -9,10 +9,10 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 241d74d615f9aac2cbe48d084fd2d8e91ea9abbf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580097"
 ---
 # <a name="managing-report-parts"></a>Gerenciando partes de relatório
@@ -47,10 +47,10 @@ ms.locfileid: "65580097"
   
  (*) indica que isso é novo para esta versão.  
   
-|Propriedade|Descrição|Parte de relatório<br /><br /> Critérios de pesquisa de galeria|  
+|Propriedade|DESCRIÇÃO|Parte de relatório<br /><br /> Critérios de pesquisa de galeria|  
 |--------------|-----------------|---------------------------------------------|  
 |Nome|Esse é um dos critérios pelos quais um usuário pode pesquisar na Galeria de Partes de Relatório.|Sim|  
-|Descrição|Você deve organizar os nomes de partes de relatório de uma maneira que facilite para os usuários a localização na galeria. Por exemplo, você pode pesquisar pela descrição iniciando com "Vendas>>" para procurar as partes de relatório que envolvem dados e apresentações relacionadas a vendas.|Sim|  
+|DESCRIÇÃO|Você deve organizar os nomes de partes de relatório de uma maneira que facilite para os usuários a localização na galeria. Por exemplo, você pode pesquisar pela descrição iniciando com "Vendas>>" para procurar as partes de relatório que envolvem dados e apresentações relacionadas a vendas.|Sim|  
 |CreatedBy|A ID do usuário que adicionou originalmente a parte de relatório ao banco de dados do servidor de relatório. O formato exato depende do método de autenticação. Por exemplo, alguns métodos de autenticação mostrarão o domínio\nome de usuário completo nos campos CreatedBy e ModifiedBy.|Sim|  
 |CreationDate|As data em que a parte de relatório foi criada originalmente.<br /><br /> Esse é um dos critérios pelos quais um usuário pode pesquisar na Galeria de Partes de Relatório.|Sim|  
 |ModifiedBy|ModifiedBy é a ID do usuário que modificou por último a parte do relatório.|Sim|  

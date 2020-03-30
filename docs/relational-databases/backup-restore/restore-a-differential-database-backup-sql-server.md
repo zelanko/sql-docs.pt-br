@@ -17,10 +17,10 @@ ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d9114879622ea6d856e890a4f248ea1bc9a5d522
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75253488"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Restaurar um backup de banco de dados diferencial (SQL Server)
@@ -46,9 +46,9 @@ ms.locfileid: "75253488"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   RESTORE não é permitido em uma transação explícita ou implícita.  
   
@@ -56,18 +56,18 @@ ms.locfileid: "75253488"
   
 -   No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], é possível restaurar um banco de dados de usuário de um backup de banco de dados criado por meio do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou de uma versão posterior.  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
 -   No modelo de recuperação completa ou bulk-logged, antes de poder restaurar um banco de dados, é necessário fazer backup do log de transações ativas (conhecido como a parte final do log). Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Se o banco de dados que está sendo restaurado não existir, o usuário deverá ter permissões CREATE DATABASE para poder executar o comando RESTORE. Se o banco de dados existir, as permissões RESTORE usarão como padrão os membros das funções de servidor fixas **sysadmin** e **dbcreator** e o proprietário (**dbo**) do banco de dados (para a opção FROM DATABASE_SNAPSHOT, o banco de dados sempre existe).  
   
  As permissões RESTORE são concedidas a funções nas quais as informações de associação estão sempre disponíveis para o servidor. Como a associação da função de banco de dados fixa pode ser verificada apenas quando o banco de dados está acessível e não danificado, o que nem sempre é o caso quando RESTORE é executado, os membros da função de banco de dados fixa **db_owner** não têm permissões RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-restore-a-differential-database-backup"></a>Para restaurar um backup de banco de dados diferencial  
   
@@ -135,7 +135,7 @@ ms.locfileid: "75253488"
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-restore-a-differential-database-backup"></a>Para restaurar um backup de banco de dados diferencial  
   
@@ -151,7 +151,7 @@ ms.locfileid: "75253488"
   
 3.  Com o modelo de recuperação completa ou bulk-logged, a restauração de um backup de banco de dados diferencial restaura o banco de dados até o ponto que o backup de banco de dados diferencial foi concluído. Para recuperar até o ponto da falha, você deve aplicar todos os backups de log de transações criados depois de o último backup de banco de dados diferencial ter sido criado. Para obter mais informações, veja [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemplos (Transact-SQL)  
   
 #### <a name="a-restoring-a-differential-database-backup"></a>a. Restaurando um backup de banco de dados diferencial  
  Este exemplo restaura um banco de dados e um backup de banco de dados diferencial do banco de dados `MyAdvWorks` .  
@@ -203,7 +203,7 @@ RESTORE LOG MyAdvWorks
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Criar um backup diferencial de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   

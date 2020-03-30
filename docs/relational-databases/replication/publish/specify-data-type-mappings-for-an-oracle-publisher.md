@@ -16,10 +16,10 @@ ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8449d7c6c766824628c3352897c25303f10e3a29
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75320757"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Especificar mapeamentos de tipo de dados para um Publicador Oracle
@@ -34,7 +34,7 @@ ms.locfileid: "75320757"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Especifique mapeamentos de tipo de dados na guia **Mapeamento de Dados** da caixa de diálogo **Propriedades do Artigo – \<Artigo>** . Isso está disponível na página **Artigos** do Assistente para Nova Publicação e na caixa de diálogo **Propriedades de Publicação – \<Publicação>** . Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma Publicação de um Banco de Dados Oracle](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md) e [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-data-type-mapping"></a>Para especificar um mapeamento de tipo de dados  
@@ -51,7 +51,7 @@ ms.locfileid: "75320757"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Você pode especificar programaticamente mapeamentos de tipo de dados personalizados usando procedimentos armazenados de replicação. Você pode também definir os mapeamentos padrão que são usados ao mapear tipos de dados entre o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e um DBMS (sistema de gerenciamento de banco de dados) que não seja do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Mapeamento de tipo de dados para Publicadores Oracle ](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
   
 #### <a name="to-define-custom-data-type-mappings-when-creating-an-article-belonging-to-an-oracle-publication"></a>Para definir mapeamentos de tipo de dados personalizados ao criar um artigo que pertence a uma publicação Oracle  
@@ -82,7 +82,7 @@ ms.locfileid: "75320757"
   
 1.  No Distribuidor em qualquer banco de dados, execute [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md). Especifique um valor de **ORACLE** para **\@source_dbms** e quaisquer outros parâmetros necessários para filtrar o conjunto de resultados.  
   
-###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  Este exemplo altera uma coluna com um tipo de dados Oracle de NUMBER, de modo que ele seja mapeado para o tipo de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (38,38) do **ssNoVersion**, em vez do tipo de dados padrão **float**.  
   
  [!code-sql[HowTo#sp_changecolumndatatype](../../../relational-databases/replication/codesnippet/tsql/specify-data-type-mappin_1.sql)]  

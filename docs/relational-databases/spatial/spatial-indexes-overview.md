@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 95e9d1139619f64aa9ff1be53711019fdbdf6637
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909298"
 ---
 # <a name="spatial-indexes-overview"></a>Visão geral de índices espaciais
@@ -26,9 +26,9 @@ ms.locfileid: "72909298"
 > [!IMPORTANT]  
 >  Para obter uma descrição detalhada e exemplos dos recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo recursos que afetam índices espaciais, baixe o white paper sobre [Novos recursos espaciais no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
-##  <a name="about"></a> Sobre índices espaciais  
+##  <a name="about-spatial-indexes"></a><a name="about"></a> Sobre índices espaciais  
   
-###  <a name="decompose"></a> Decompondo espaço indexado em uma hierarquia de grade  
+###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> Decompondo espaço indexado em uma hierarquia de grade  
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], índices espaciais são criados usando árvores B, o que significa que os índices devem representar os dados espaciais bidimensionais na ordem linear de árvores B. Portanto, antes de ler dados em um índice espacial, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa uma decomposição uniforme hierárquica do espaço. O processo de criação de índice *decompõe* o espaço em uma *hierarquia de grade*de quatro níveis. Esses níveis são chamados de *nível 1* (o nível superior), *nível 2*, *nível 3*e *nível 4*.  
   
  Cada nível sucessivo decompõe ainda mais o nível acima dele, de forma que cada célula de nível superior contém uma grade completa no próximo nível. Em um determinado nível, todas as grades têm o mesmo número de células ao longo dos dois eixos (por exemplo, 4x4 ou 8x8) e as células são todas de um único tamanho.  
@@ -62,7 +62,7 @@ ms.locfileid: "72909298"
 > [!NOTE]  
 >  As densidades de grade de um índice espacial são visíveis nas colunas level_1_grid, level_2_grid, level_3_grid, e level_4_grid da exibição de catálogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) quando o nível de compatibilidade do banco de dados é definido como 100 ou abaixo. As opções de esquema de mosaico **GEOMETRY_AUTO_GRID**/**GEOGRAPHY_AUTO_GRID** não preenchem essas colunas. A exibição de catálogo sys.spatial_index_tessellations tem valores **NULL** para essas colunas quando as opções de grade automática são usadas.  
   
-###  <a name="tessellation"></a> Mosaico  
+###  <a name="tessellation"></a><a name="tessellation"></a> Mosaico  
  Após a decomposição de um espaço indexado em uma hierarquia de grade, o índice espacial lê os dados da coluna espacial, linha a linha. Depois de ler os dados de um objeto espacial (ou instância), o índice espacial executa um *processo de mosaico* para esse objeto. O processo de mosaico ajusta o objeto na hierarquia da grade associando o objeto a um conjunto de células de grade tocadas por ele (*células tocadas*). Iniciando no nível 1 da hierarquia de grade, o processo de mosaico continua com *amplitude primeiro* em todo o nível. Potencialmente, o processo pode continuar por todos os quatro níveis, um nível de cada vez.  
   
  A saída do processo de mosaico é um conjunto de células tocadas que são registradas no índice espacial do objeto. Consultando essas células registradas, o índice espacial pode localizar o objeto no espaço em relação a outros objetos na coluna espacial que também são armazenados no índice.  
@@ -108,11 +108,11 @@ ms.locfileid: "72909298"
 #### <a name="deepest-cell-rule"></a>Regra de célula mais profunda  
  A regra da célula mais profunda explora o fato de que cada célula de nível inferior pertence à célula acima dela: uma célula de nível 4 pertence a uma célula de nível 3, uma célula de nível 3 pertence a uma célula de nível 2 e uma célula de nível 2 pertence a uma célula de nível 1. Por exemplo, um objeto que pertence à célula 1.1.1.1 também pertence à célula 1.1.1, à célula 1.1 e à célula 1. O conhecimento de tais relações da hierarquia de células é incorporado ao processador de consultas. Portanto apenas as células de nível mais profundo precisam ser registradas no índice minimizando as informações que o índice precisa armazenar.  
   
- Na ilustração seguinte, um polígono em forma de diamante relativamente pequeno é incluído no mosaico. O índice usa o limite de células por objeto padrão de 16 que não é atingido para esse objeto pequeno. Portanto, o mosaico continua descendo até o nível 4. O polígono reside nas células de nível 1 até as células de nível 3: 4, 4.4, 4.4.10 e 4.4.14. Entretanto, usando a regra da célula mais profunda, o mosaico conta apenas as doze células de nível 4: 4.4.10.13-15, 4.4.14.1-3, 4.4.14.5-7 e 4.4.14.9-11.  
+ Na ilustração seguinte, um polígono em forma de diamante relativamente pequeno é incluído no mosaico. O índice usa o limite de células por objeto padrão de 16 que não é atingido para esse objeto pequeno. Portanto, o mosaico continua descendo até o nível 4. O polígono reside nas células de nível 1 até as células de nível 3: 4, 4.4 e 4.4.10 e 4.4.14. Entretanto, usando a regra da célula mais profunda, o mosaico conta apenas doze células de nível 4: 4.4.10.13-15 e 4.4.14.1-3, 4.4.14.5-7 e 4.4.14.9-11.  
   
  ![Otimização de célula mais profunda](../../relational-databases/spatial/media/spndx-opt-deepest-cell.gif "Otimização de célula mais profunda")  
   
-###  <a name="schemes"></a> Esquemas de mosaico  
+###  <a name="tessellation-schemes"></a><a name="schemes"></a> Esquemas de mosaico  
  O comportamento de um índice espacial depende parcialmente de seu *esquema de mosaico*. O esquema de mosaico é específico ao tipo de dados. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], índices espaciais oferecem suporte a dois esquemas de mosaico:  
   
 -   O*mosaico de grade geométrica*, que é o esquema do tipo de dados **geometry** .  
@@ -178,10 +178,10 @@ ms.locfileid: "72909298"
   
  ![Grade de geografia de nível 1](../../relational-databases/spatial/media/spndx-geodetic-level1grid.gif "Grade de geografia de nível 1")  
   
-##  <a name="methods"></a> Métodos com suporte de índices espaciais  
+##  <a name="methods-supported-by-spatial-indexes"></a><a name="methods"></a> Métodos com suporte de índices espaciais  
   
-###  <a name="geometry"></a> Métodos de geometria com suporte de índices espaciais  
- Os índices espaciais dão suporte aos seguintes métodos de geometria orientados a conjunto em determinadas condições: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() e STWithin(). Para que tenham suporte em um índice espacial, esses métodos devem ser usados dentro da cláusula WHERE ou JOIN ON de uma consulta e ocorrer dentro de um predicado com o seguinte formato geral:  
+###  <a name="geometry-methods-supported-by-spatial-indexes"></a><a name="geometry"></a> Métodos de geometria com suporte de índices espaciais  
+ Índices espaciais dão suporte aos seguintes métodos geometry orientados por conjunto em determinadas condições: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() e STWithin(). Para que tenham suporte em um índice espacial, esses métodos devem ser usados dentro da cláusula WHERE ou JOIN ON de uma consulta e ocorrer dentro de um predicado com o seguinte formato geral:  
   
  *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*  
   
@@ -205,8 +205,8 @@ ms.locfileid: "72909298"
   
 -   *geometry1*.[STWithin](../../t-sql/spatial-geometry/stwithin-geometry-data-type.md)(*geometry2*)= 1  
   
-###  <a name="geography"></a> Métodos de geografia com suporte de índices espaciais  
- Em determinadas condições, os índices espaciais dão suporte aos seguintes métodos de geografia orientados a conjunto: STIntersects(), STEquals() e STDistance(). Para que tenham suporte de um índice espacial, esses métodos devem ser usados dentro da cláusula WHERE de uma consulta e ocorrer dentro de um predicado do seguinte formulário geral:  
+###  <a name="geography-methods-supported-by-spatial-indexes"></a><a name="geography"></a> Métodos de geografia com suporte de índices espaciais  
+ Em determinadas condições, índices espaciais dão suporte aos seguintes métodos de geografia orientados a conjunto: STIntersects(), STEquals() e STDistance(). Para que tenham suporte de um índice espacial, esses métodos devem ser usados dentro da cláusula WHERE de uma consulta e ocorrer dentro de um predicado do seguinte formulário geral:  
   
  *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
   

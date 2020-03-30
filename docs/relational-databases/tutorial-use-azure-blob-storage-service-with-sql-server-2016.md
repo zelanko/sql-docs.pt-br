@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Usar o serviço de Armazenamento de Blobs do Azure com o SQL Server 2016'
+title: 'Tutorial: usar o serviço de Armazenamento de Blobs do Azure com o SQL Server 2016'
 ms.custom: seo-dt-2019
 ms.date: 01/10/2019
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286970"
 ---
-# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Usar o serviço de Armazenamento de Blobs do Azure com o SQL Server 2016
+# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: usar o serviço de Armazenamento de Blobs do Azure com o SQL Server 2016
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Bem-vindo ao tutorial “Trabalhando com o SQL Server 2016 no serviço de Armazenamento de Blobs do Microsoft Azure”. Este tutorial o ajudará a entender como usar o serviço de armazenamento de Blobs do Microsoft Azure para arquivos de dados e backups do SQL Server.  
@@ -30,7 +30,7 @@ O suporte da integração do SQL Server no serviço de armazenamento de Blobs do
 
 Este tutorial mostra como trabalhar com arquivos de dados do SQL Server no serviço de Armazenamento de Blobs do Microsoft Azure em várias seções. Cada seção é centrada em uma tarefa específica e as seções devem ser concluídas na sequência. Primeiro, você aprenderá a criar um novo contêiner no armazenamento de Blobs com uma política de acesso armazenado e uma assinatura de acesso compartilhado. Em seguida, você aprenderá a criar uma credencial do SQL Server para integrar o SQL Server com o Armazenamento de Blobs do Azure. Em seguida, você vai fazer backup de um banco de dados no armazenamento de Blobs e restaurá-lo em uma máquina virtual do Azure. Depois, você vai usar o backup de log de transações de instantâneo de arquivo do SQL Server 2016 para restaurá-lo em um ponto específico e em um novo banco de dados. Por fim, o tutorial demonstrará o uso dos procedimentos armazenados e funções do sistema de metadados para ajudá-lo a entender e trabalhar com backups de instantâneo de arquivo.
   
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para concluir este tutorial, você deve estar familiarizado com os conceitos de backup e restauração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a sintaxe do T-SQL. Para usar este tutorial, você precisa de uma conta de Armazenamento do Azure, o SSMS (SQL Server Management Studio), acesso a uma instância local do SQL Server, acesso a uma VM (máquina virtual) do Azure que execute o SQL Server 2016 e um banco de dados AdventureWorks2016. Além disso, a conta de usuário usada para emitir os comandos BACKUP e RESTORE deve estar na função de banco de dados **db_backupoperator** com as permissões **Alterar qualquer credencial**. 
 
@@ -482,8 +482,8 @@ Para excluir o grupo de recursos, execute o seguinte código do powershell:
 
 [Arquivos de dados do SQL Server no Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [Backups de Instantâneo de Arquivo para Arquivos de Banco de Dados no Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
-[Backup do SQL Server para URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
-[Assinaturas de Acesso Compartilhado, Parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+[Backup do SQL Server em URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
+[Assinaturas de Acesso Compartilhado, parte 1: noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Criar contêiner](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Definir ACL do contêiner](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Obter ACL do contêiner](https://msdn.microsoft.com/library/azure/dd179469.aspx)

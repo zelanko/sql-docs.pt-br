@@ -19,10 +19,10 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 50938fe4f3be40f280340fff5bfbca23ac8b1b44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71680983"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Projetos e soluções do Integration Services (SSIS)
@@ -68,7 +68,7 @@ Os pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] residem
   
  A tabela a seguir descreve as pastas que aparecem em um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
-|Pasta|Descrição|  
+|Pasta|DESCRIÇÃO|  
 |------------|-----------------|
 |Gerenciadores de conexões|Contém Gerenciadores de Conexões de Projeto. Para obter mais informações, confira [Conexões do SSIS (Integration Services)](../integration-services/connection-manager/integration-services-ssis-connections.md).|
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] Packages|Contém pacotes. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Pacotes](../integration-services/integration-services-ssis-packages.md).|  
@@ -115,7 +115,7 @@ Os pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] residem
   
 7.  Se o software de controle do código-fonte for o [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, a caixa de diálogo **Logon do Visual SourceSafe** será aberta. Em **Logon do Visual SourceSafe**, forneça um nome de usuário, uma senha e o nome do banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe. Clique em **Procurar** para localizar o banco de dados.  
   
-    > **OBSERVAÇÃO:** Para exibir e alterar o plug-in de controle do código-fonte selecionado e configurar o ambiente de controle do código-fonte, clique em **Opções** no menu **Ferramentas** e expanda o nó **Controle do Código-fonte**.  
+    > **OBSERVAÇÃO:** para exibir e alterar o plug-in de controle do código-fonte selecionado e configurar o ambiente de controle do código-fonte, clique em **Opções** no menu **Ferramentas** e expanda o nó **Controle do Código-fonte**.  
   
 8.  Clique em **OK** para adicionar a solução ao **Gerenciador de Soluções** e adicionar o projeto à solução.  
 

@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63225687"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Adicionar um servidor de relatório a um farm (expansão SSRS)
@@ -23,14 +23,14 @@ ms.locfileid: "63225687"
 >  Não há suporte expansão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, confira a seção [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de [Recursos compatíveis com as edições do SQL Server](~/sql-server/editions-and-components-of-sql-server-2017.md#SSRS).  
   
 > [!TIP]  
->  A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , você não usa o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para adicionar servidores e expandir servidores de relatório. Os produtos do SharePoint gerenciam a expansão dos serviços de relatório à medida que os servidores do SharePoint com o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são adicionados ao farm.  
+>  A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , você não usa o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para adicionar servidores e escalar horizontalmente servidores de relatório. Os produtos do SharePoint gerenciam a expansão dos serviços de relatório à medida que os servidores do SharePoint com o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são adicionados ao farm.  
   
  Para obter informações sobre como expandir os servidores de relatório do modo nativo, veja [Configurar uma implantação em expansão do servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
-##  <a name="bkmk_loadbalancing"></a> Balanceamento de carga  
+##  <a name="load-balancing"></a><a name="bkmk_loadbalancing"></a> Balanceamento de carga  
  O balanceamento de carga de aplicativos de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] será gerenciado automaticamente pelo SharePoint a menos que seu ambiente tenha uma solução de balanceamento de carga personalizada ou de terceiros. O comportamento padrão de balanceamento de carga do SharePoint é que cada Aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] será balanceado em todos os servidores de aplicativos onde você iniciou o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para verificar se o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está instalado e iniciado, clique em **Gerenciar serviços no servidor** na Administração Central do SharePoint.  
   
-##  <a name="bkmk_prerequisites"></a> Pré-requisitos  
+##  <a name="prerequisites"></a><a name="bkmk_prerequisites"></a> Pré-requisitos  
   
 -   Você deve ser um administrador local para executar a Instalação do SQL Server.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63225687"
   
 -   O novo servidor precisará ter a mesma versão de SharePoint instalado que os servidores de farm atuais estão executando. Por exemplo, se o farm já tiver o SharePoint 2013 Service Pack 1 (SP1) instalado, você também precisará instalar o SP1 no novo servidor antes de unir o farm.  
   
-##  <a name="bkmk_steps"></a> Etapas  
+##  <a name="steps"></a><a name="bkmk_steps"></a> Etapas  
  As etapas neste tópico pressupõem que um administrador de farm do SharePoint esteja instalando e configurando o servidor. O diagrama mostra um ambiente típico de três camadas e os itens numerados no diagrama são descritos na lista a seguir:  
   
 -   (1) Vários servidores de front-end da Web (WFE). Os servidores WFE exigem o suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para SharePoint 2016.  
@@ -63,7 +63,7 @@ ms.locfileid: "63225687"
 |Instalar e configurar o modo do SharePoint do Reporting Services.|Execute a instalação do SQL Server. Para obter mais informações sobre a instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do modo do SharePoint, veja [Instalar o primeiro servidor de relatório no modo do SharePoint](install-the-first-report-server-in-sharepoint-mode.md)<br /><br /> Se o servidor for usado somente como um servidor de aplicativos e não como um WFE, você não precisará selecionar o **Suplemento do Reporting Services para produtos do SharePoint**.<br /><br /> 1) Na página **Função de instalação** , selecione **Instalação de recurso do SQL Server**<br /><br /> 2) Na página **Seleção de Recursos** , selecione **Reporting Services - SharePoint**<br /><br /> 3) Na página **Configuração do Reporting Services**  , verifique se a opção **Instalar somente** está marcada para o **Modo do SharePoint do Reporting Services**.|  
 |Verifique se o Reporting Services está funcionando.|1) Na Administração Central do SharePoint, clique em **Gerenciar servidores neste farm** no grupo **Configurações do Sistema** .<br /><br /> 2) Verifique o serviço **SQL Server Reporting Services Service**.<br /><br />Para obter mais informações, consulte [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).|  
   
-##  <a name="bkmk_additional"></a> Configuração adicional  
+##  <a name="additional-configuration"></a><a name="bkmk_additional"></a> Configuração adicional  
  Você pode otimizar servidores individuais do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em uma implantação em expansão para realizar somente processamento em segundo plano, para que eles não tenham que competir por recursos com execução interativa de relatório. O processamento em segundo plano inclui agendas, assinaturas e alertas de dados.  
   
  Para alterar o comportamento de servidores de relatórios individuais, defina **\<IsWebServiceEnable>** como falso no arquivo de configuração **RSreportServer.config**.  

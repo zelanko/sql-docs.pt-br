@@ -15,10 +15,10 @@ ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67901125"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Mapeamento de tipo de dados para Publicadores Oracle
@@ -82,7 +82,7 @@ ms.locfileid: "67901125"
 ### <a name="float-and-number-types"></a>Tipos FLOAT e NUMBER  
  A escala e precisão especificadas durante o mapeamento de tipos de dados FLOAT e NUMBER dependem da escala e precisão especificadas para a coluna usando o tipo de dados no banco de dados do Oracle. A precisão é o número de dígitos em um número. A escala é o número de dígitos à direita da casa decimal em um número. Por exemplo, o número 123,45 tem uma precisão de 5 e uma escala de 2.  
   
- O Oracle permite números a serem definidos com a escala maior que a precisão, tal como NUMBER(4,5), mas o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requer que a precisão seja igual ou maior que a escala. Para que não haja truncamento de dados, se a escala for maior que a precisão no Publicador Oracle, a precisão será definida igual à escala quando o tipo de dados for mapeado: NUMBER (4,5) seria mapeado como NUMERIC (5,5).  
+ O Oracle permite números a serem definidos com a escala maior que a precisão, tal como NUMBER(4,5), mas o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requer que a precisão seja igual ou maior que a escala. Para garantir que não há truncamento de dados, se a escala for maior que a precisão no Publicador Oracle, a precisão é definida igual à escala quando o tipo de dados for mapeado: NUMBER (4,5) ele seria mapeado como NUMERIC (5,5).  
   
 > [!NOTE]  
 >  Se você não especificar a escala e a precisão para NUMBER, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa o padrão máximo de escala (8) e precisão (38). É recomendável que você defina uma escala e precisão específicas no Oracle para melhor armazenamento e desempenho quando os dados forem replicados.  

@@ -13,10 +13,10 @@ ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 606c83c59147bf6ef171d4fa4f802d13f55f8219
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006827"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>Exemplo: Construindo irmãos com o modo EXPLICIT

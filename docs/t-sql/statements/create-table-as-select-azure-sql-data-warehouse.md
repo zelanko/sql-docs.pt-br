@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73660787"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (SQL Data Warehouse do Azure)

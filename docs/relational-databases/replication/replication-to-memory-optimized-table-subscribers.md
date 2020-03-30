@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 2b0f576365ef8e6221196eef4a9fca92f54f6318
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287339"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicação para assinantes de tabela com otimização de memória
@@ -84,7 +84,7 @@ ms.locfileid: "76287339"
   
 -   Nem todos os recursos de Transact-SQL têm suporte com tabelas com otimização de memória. Consulte [Construtos Transact-SQL sem suporte no OLTP in-memory](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para ver mais detalhes.  
   
-##  <a name="Schema"></a> Modificando um arquivo de esquema  
+##  <a name="modifying-a-schema-file"></a><a name="Schema"></a> Modificando um arquivo de esquema  
   
 -   Se você estiver usando a opção de tabela com otimização de memória `DURABILITY = SCHEMA_AND_DATA` , a tabela deverá ter um índice de chave primária não clusterizado.  
   

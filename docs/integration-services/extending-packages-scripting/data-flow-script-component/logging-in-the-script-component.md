@@ -13,10 +13,10 @@ ms.assetid: 17c19787-379e-43fe-9107-e36e17ecda53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 52f4c841d2022216480051576bb0b6da7bdb5d34
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286468"
 ---
 # <a name="logging-in-the-script-component"></a>Registrando o componente Script

@@ -24,10 +24,10 @@ ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: d0b6f9dac0cb065a9509040b5693b09b1fa9d5e5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68039101"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
@@ -66,7 +66,7 @@ Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 DBCC INPUTBUFFER retorna um conjunto de linhas com as seguintes colunas.
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar(30)**|Tipo de evento. Pode ser **Evento de RPC** ou **Evento de Linguagem**. A saída será **Nenhum Evento** quando não for detectado nenhum último evento.|  
 |**Parâmetros**|**smallint**|0 = Texto<br /><br /> 1- *n* = Parâmetros|  

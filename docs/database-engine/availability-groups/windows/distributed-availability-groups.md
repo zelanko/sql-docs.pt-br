@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5499bb5106deddcd073c52453a477190e3150bb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941114"
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidade distribuídos
@@ -127,11 +127,11 @@ Após a migração, na qual o segundo grupo de disponibilidade agora é o novo g
 * Renomeie o ouvinte no grupo de disponibilidade secundário (e possivelmente exclua ou renomeie o antigo no grupo de disponibilidade primário original) ou recrie-o com o ouvinte do grupo de disponibilidade primário original, para que os aplicativos e os usuários possam acessar a nova configuração.
 * Se uma renomeação ou recriação não for possível, aponte os aplicativos e os usuários para o ouvinte no segundo grupo de disponibilidade.
 
-### <a name="scale-out-readable-replicas-with-distributed-availability-groups"></a>Expandir réplicas legíveis com grupos de disponibilidade distribuídos
+### <a name="scale-out-readable-replicas-with-distributed-availability-groups"></a>Escalar horizontalmente réplicas legíveis com grupos de disponibilidade distribuídos
 
 Um único grupo de disponibilidade distribuído pode ter até 16 réplicas secundárias, conforme necessário. Portanto, ele pode ter até 18 cópias para leitura, incluindo as duas réplicas primárias dos grupos de disponibilidade diferentes. Essa abordagem significa que mais de um site pode ter acesso quase em tempo real para relatar para vários aplicativos.
 
-Os grupos de disponibilidade distribuídos podem ajudar você a expandir um farm somente leitura mais do que conseguirá com apenas um único grupo de disponibilidade. Um grupo de disponibilidade distribuído pode expandir réplicas legíveis de duas maneiras:
+Os grupos de disponibilidade distribuídos podem ajudar você a escalar horizontalmente um farm somente leitura mais do que conseguirá com apenas um único grupo de disponibilidade. Um grupo de disponibilidade distribuído pode escalar horizontalmente réplicas legíveis de duas maneiras:
 
 * Use a réplica primária do segundo grupo de disponibilidade em um grupo de disponibilidade distribuído para criar outro grupo de disponibilidade distribuído, mesmo que o banco de dados não esteja no estado RECOVERY.
 * Você também pode usar a réplica primária do primeiro grupo de disponibilidade para criar outro grupo de disponibilidade distribuído.
@@ -140,7 +140,7 @@ Em outras palavras, uma réplica primária pode fazer parte de dois grupos de di
 
 ![Colocação em escala das leituras com grupos de disponibilidade distribuída](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
-A figura a seguir mostra o AG 1 como a réplica primária para dois grupos de disponibilidade distribuídos diferentes: AG 1 distribuído (composto por AG 1 e AG2) e AG 2 distribuído (composto por AG 1 e AG 3).
+A figura a seguir mostra o AG 1 como a réplica primária para dois grupos de disponibilidade distribuídos diferentes: AG 1 Distribuído (composto por AG 1 e AG 2) e AG 2 Distribuído (composto por AG 1 e AG 3).
 
 
 ![Outra colocação em escala das leituras usando o exemplo de grupos de disponibilidade distribuída]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)
@@ -231,7 +231,7 @@ INNER JOIN sys.availability_replicas AS ar
 GO
 ```
 
-Um exemplo de saída do segundo cluster WSFC que está participando de um grupo de disponibilidade distribuída é mostrado na figura a seguir. SPAG1 é composto por duas réplicas: DENNIS e JY. No entanto, o grupo de disponibilidade distribuída denominado SPDistAG tem os nomes dos dois grupos de disponibilidade participantes (SPAG1 e SPAG2) em vez dos nomes de instâncias, assim como acontece com um grupo de disponibilidade tradicional. 
+Um exemplo de saída do segundo cluster WSFC que está participando de um grupo de disponibilidade distribuída é mostrado na figura a seguir. SPAG1 é composto de duas réplicas: DENNIS e JY. No entanto, o grupo de disponibilidade distribuída denominado SPDistAG tem os nomes dos dois grupos de disponibilidade participantes (SPAG1 e SPAG2) em vez dos nomes de instâncias, assim como acontece com um grupo de disponibilidade tradicional. 
 
 ![Exemplo de saída da consulta anterior](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
 

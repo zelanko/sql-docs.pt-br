@@ -23,10 +23,10 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056469"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurar o Data Warehouse de Gerenciamento (SQL Server Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "74056469"
 > [!NOTE]  
 >  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent estiver configurado para ser executado usando uma das contas de serviço do Sistema (Sistema Local, Serviço de Rede ou Serviço Local) e o data warehouse de gerenciamento for criado em uma instância diferente do coletor de dados, você deverá configurar os conjuntos de coleta para usar um proxy para carregar dados no data warehouse de gerenciamento.  
   
-### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Configurar o data warehouse de gerenciamento em uma ou várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-ssnoversion"></a>Configurar o data warehouse de gerenciamento em uma ou várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Verifique se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent está em execução.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "74056469"
   
 6.  Repita a etapa 5 até que todas as instâncias do banco de dados que usam o coletor de dados sejam configuradas para carregar os dados para o data warehouse de gerenciamento compartilhado.  
 
-####  <a name="Wizard"></a> Configurar o Assistente de Data Warehouse de Gerenciamento  
+####  <a name="configure-management-data-warehouse-wizard"></a><a name="Wizard"></a> Configurar o Assistente de Data Warehouse de Gerenciamento  
  **Página de boas-vindas**  
   
  A página Bem-vindo é a página inicial do Assistente para Configurar Coleta de Dados. A exibição dessa página é opcional.  

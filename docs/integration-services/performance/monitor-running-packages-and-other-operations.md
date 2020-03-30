@@ -14,10 +14,10 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287840"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Monitorar a execução de pacotes e outras operações
@@ -55,12 +55,12 @@ ms.locfileid: "79287840"
   
  São usados nove tipos de status diferentes para indicar o status de uma operação. Para ver uma lista completa dos tipos de status, consulte a exibição [catalog.operations &#40;Banco de Dados do SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).  
 
-## <a name="active_ops"></a> Caixa de diálogo Operações Ativas
+## <a name="active-operations-dialog-box"></a><a name="active_ops"></a> Caixa de diálogo Operações Ativas
   Use a caixa de diálogo **Operações Ativas** para exibir o status de operações do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em execução no momento no servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , como implantação, validação e execução de pacotes. Esses dados são armazenados no catálogo SSISDB.  
   
  Para obter mais informações sobre modos de exibição do [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionados, consulte [catalog.operations &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md), [catalog.validations &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md), e [catalog.executions &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)  
   
-###  <a name="open_dialog"></a> Abrir a caixa de diálogo Operações Ativas  
+###  <a name="open-the-active-operations-dialog-box"></a><a name="open_dialog"></a> Abrir a caixa de diálogo Operações Ativas  
   
 1.  Abra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
@@ -127,7 +127,7 @@ ms.locfileid: "79287840"
  Acesso programático por meio de API gerenciada  
  Consulte o namespace <xref:Microsoft.SqlServer.Management.IntegrationServices> e suas classes.  
 
-## <a name="reports"></a> Reports for the Integration Services Server
+## <a name="reports-for-the-integration-services-server"></a><a name="reports"></a> Reports for the Integration Services Server
   Na versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], os relatórios padrão estão disponíveis no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para ajudar a monitorar projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , que foram implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Esses relatórios ajudam a exibir o status e o histórico do pacote e, se necessário, a identificar a causa de falhas na execução do pacote.  
   
  Na parte superior de cada página de relatório, o ícone de voltar leva você à página anteriormente exibida, o ícone de atualização atualiza as informações exibidas na página e o ícone de impressão permite imprimir a página atual.  
@@ -139,7 +139,7 @@ ms.locfileid: "79287840"
   
  O relatório exibe as seções de informações a seguir.  
   
-|Seção|Descrição|  
+|Seção|DESCRIÇÃO|  
 |-------------|-----------------|  
 |**Informações de Execução**|Mostra o número de execuções que estão em estados diferentes (com falha, executando, teve sucesso, outros) nas últimas 24 horas.|  
 |**Informações do Pacote**|Mostra o número total de pacotes que foram executados nas últimas 24 horas.|  
@@ -153,7 +153,7 @@ ms.locfileid: "79287840"
   
  O relatório exibe as seções de informações a seguir.  
   
-|Seção|Descrição|  
+|Seção|DESCRIÇÃO|  
 |-------------|-----------------|  
 |Filtrar|Mostra o filtro atual aplicado ao relatório, como o intervalo de horas de início.|  
 |Informações de Execução|Mostra a hora de início, a hora de término e a duração para cada execução do pacote. Você pode exibir uma lista de valores de parâmetros que foram usados com uma execução de pacote, como valores que foram transmitidos a um pacote filho usando a tarefa Executar Pacote. Para exibir a lista de parâmetros, clique em Visão Geral.|  
@@ -167,7 +167,7 @@ ms.locfileid: "79287840"
   
  O relatório exibe as seções de informações a seguir.  
   
-|Seção|Descrição|  
+|Seção|DESCRIÇÃO|  
 |-------------|-----------------|  
 |Filtrar|Mostra o filtro atual aplicado ao relatório, como conexões com uma cadeia de caracteres especificada e o intervalo de **Hora da Última Falha** .<br /><br /> Você define o intervalo de **Hora da Última Falha** para exibir apenas as falhas de conexão que ocorreram durante um intervalo de datas. O intervalo pode abranger vários dias, meses ou anos.|  
 |Detalhes|Mostra a cadeia de conexão, o número de execuções em que uma conexão falhou, e a data da última falha na conexão.|  

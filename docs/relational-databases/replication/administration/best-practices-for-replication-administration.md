@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 5d0948f6732b97da93b1136635175b90d5e92059
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286868"
 ---
 # <a name="best-practices-for-replication-administration"></a>Práticas recomendadas para administração de replicação
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Depois de configurar a replicação, é importante entender como administrar uma topologia de replicação. Este tópico fornece diretrizes básicas de práticas recomendadas em várias áreas com links para mais informações para cada área. Além das seguintes diretrizes de práticas recomendadas apresentadas neste tópico, considere a leitura do tópico de perguntas frequentes para se familiarizar com as questões e problemas mais comuns: [Perguntas frequentes para os administradores de replicação](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
+  Depois de configurar a replicação, é importante entender como administrar uma topologia de replicação. Este tópico fornece diretrizes básicas de práticas recomendadas em várias áreas com links para mais informações para cada área. Além das seguintes diretrizes de práticas recomendadas apresentadas neste tópico, considere ler o tópico de perguntas frequentes para familiarizar-se com as questões e problemas mais comuns: [Perguntas frequentes para administradores de replicação](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
   
  É útil dividir as diretrizes de prática recomendada em duas áreas:  
   

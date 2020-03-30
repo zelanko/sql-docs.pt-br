@@ -21,10 +21,10 @@ ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c1912b398ca0d5db28bef668572a3a07d752694e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287942"
 ---
 # <a name="developing-a-custom-destination-component"></a>Desenvolvendo um componente de destino personalizado

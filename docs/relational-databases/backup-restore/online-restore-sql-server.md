@@ -14,10 +14,10 @@ ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: e4f5817fe575422dddeedd525b077dbf643a29b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908877"
 ---
 # <a name="online-restore-sql-server"></a>Restauração online (SQL Server)
@@ -63,7 +63,7 @@ ms.locfileid: "72908877"
     > [!NOTE]  
     >  Alternativamente, você pode colocar o arquivo offline manualmente antes da sequência de restauração. Para obter mais informações, consulte "Colocando um banco de dados ou arquivo offline", adiante neste tópico.  
   
-##  <a name="taking_db_or_file_offline"></a> Colocando um banco de dados ou arquivo offline  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> Colocando um banco de dados ou arquivo offline  
  Se você não quiser usar a restauração online, poderá colocar o banco de dados offline antes de iniciar a sequência de restauração usando um dos seguintes métodos:  
   
 -   Em qualquer modelo de recuperação, você pode colocar o banco de dados offline usando a seguinte instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) :  
@@ -95,7 +95,7 @@ ms.locfileid: "72908877"
   
 -   [Exemplo: restauração online de um arquivo somente leitura &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Restaurar arquivos e grupos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   

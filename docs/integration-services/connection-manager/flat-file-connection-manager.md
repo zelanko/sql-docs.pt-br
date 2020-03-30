@@ -23,10 +23,10 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f865a560cb530060cf8f2f0a2f0a6208fcc924ed
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298601"
 ---
 # <a name="flat-file-connection-manager"></a>Gerenciador de conexões de arquivos simples
@@ -110,7 +110,7 @@ ms.locfileid: "71298601"
  **Formato**  
  Indique se o arquivo usa formatação delimitada, de largura fixa ou irregular à direita.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |Delimitado|As colunas são separadas por delimitadores, especificados na página **Colunas** .|  
 |Largura fixa|As colunas têm uma largura fixa.|  
@@ -125,7 +125,7 @@ ms.locfileid: "71298601"
  **Delimitador de linha de cabeçalho**  
  Selecione na lista de delimitadores de linhas de cabeçalho ou digite o texto do delimitador.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**{CR}{LF}**|A linha do cabeçalho é delimitada por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|A linha do cabeçalho é delimitada por um retorno de carro.|  
@@ -159,7 +159,7 @@ ms.locfileid: "71298601"
  **Delimitador de linha**  
  Selecione na lista de delimitadores de linha disponíveis ou digite o texto delimitador.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|As linhas são delimitadas por um retorno de carro.|  
@@ -173,7 +173,7 @@ ms.locfileid: "71298601"
  **Delimitador de coluna**  
  Selecione na lista de delimitadores de coluna disponíveis ou digite o texto delimitador.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.|  
 |**{CR}**|As colunas são delimitadas por um retorno de carro.|  
@@ -220,7 +220,7 @@ ms.locfileid: "71298601"
  **Delimitador de linha**  
  Selecione na lista de delimitadores de linha disponíveis ou digite o texto delimitador.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|As linhas são delimitadas por um retorno de carro.|  
@@ -250,12 +250,12 @@ ms.locfileid: "71298601"
  **Configurar as propriedades de cada coluna**  
  Selecione uma coluna no painel esquerdo para exibir suas propriedades no painel direito. Consulte a tabela a seguir para obter uma descrição das propriedades dos tipos de dados. Algumas das propriedades listadas são configuráveis apenas para alguns formatos de arquivo simples.  
   
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |**ColumnType**|Denota se a coluna é delimitada, de largura fixa ou com imperfeição à direita. Essa propriedade é somente leitura. Arquivos irregulares à direita são arquivos em que toda coluna tem uma largura fixa, à exceção da última coluna. Ela é delimitada pelo delimitador de linha.|  
 |**OutputColumnWidth**|Especifique um valor a ser armazenado como contagem de bytes; para arquivos Unicode, esse valor corresponde a uma contagem de caracteres. Na tarefa Fluxo de Dados, esse valor é usado para definir a largura de coluna de saída para a fonte de Arquivo Simples. No modelo de objeto, o nome desta propriedade é MaximumWidth.|  
 |**DataType**|Seleciona na lista de tipos de dados disponíveis. Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
-|**TextQualified**|Indique se os dados de texto são delimitados por caracteres qualificadores de texto, como aspas.<br /><br /> True: os dados de texto no arquivo simples são qualificados. False: Os dados de texto no arquivo simples NÃO são qualificados.|  
+|**TextQualified**|Indique se os dados de texto são delimitados por caracteres qualificadores de texto, como aspas.<br /><br /> True: os dados de texto no arquivo simples são qualificados. False: os dados de texto no arquivo simples NÃO são qualificados.|  
 |**Nome**|Forneça um nome de coluna descritivo. Se você não digitar um nome, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] criará um nome automaticamente, no formato Coluna 0, Coluna 1 e assim por diante.|  
 |**DataScale**|Especifica a escala de dados numéricos. A escala se refere ao número de casas decimais. Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**ColumnDelimiter**|Seleciona na lista de delimitadores de coluna disponíveis. Escolha delimitadores com pouca probabilidade de ocorrer no texto. Esse valor é ignorado para colunas de largura fixa.<br /><br /> **{CR}{LF}** . As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.<br /><br /> **{CR}** . As colunas são delimitadas por um retorno de carro.<br /><br /> **{LF}** . As colunas são delimitadas por uma alimentação de linha.<br /><br /> **Porto e vírgula {;}** . As colunas são delimitadas por um ponto-e-vírgula.<br /><br /> **Dois pontos {:}** . As colunas são delimitadas por dois-pontos.<br /><br /> **Vírgula {,}** . As colunas são delimitadas por uma vírgula.<br /><br /> **Tabulação {t}** . As colunas são delimitadas por uma tabulação.<br /><br /> **Barra vertical {&#124;}** . As colunas são delimitadas por uma barra vertical.|  
@@ -265,7 +265,7 @@ ms.locfileid: "71298601"
  **Novo**  
  Adicione uma nova coluna, clicando em **Nova**. Por padrão, o botão **Nova** adiciona uma nova coluna ao final da lista. O botão também tem as opções a seguir, disponíveis na lista suspensa.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Adicionar Coluna**|Adiciona uma nova coluna fim da lista.|  
 |**Insert Before**|Insere uma nova coluna antes da coluna selecionada.|  

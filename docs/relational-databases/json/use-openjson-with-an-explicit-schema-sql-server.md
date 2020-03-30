@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9acdbdba5aec458640b61935bd4eb9d28497b4a7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74096054"
 ---
 # <a name="use-openjson-with-an-explicit-schema-sql-server"></a>Usar OPENJSON com um esquema explícito (SQL Server)
@@ -62,7 +62,7 @@ WITH ( k1 int,
 |31|"32"|*NULL*|*NULL*|*NULL*|{"k1": 31, "k2": 32 }|  
 |41|*NULL*|*NULL*|false|{ "dados": falso }|{"k1": 41, "k2": nulo,       "k4": { "dados": falso }    }|  
   
-## <a name="example---load-json-into-a-includessnoversionincludesssnoversion-mdmd-table"></a>Exemplo – Carregar o objeto JSON em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+## <a name="example---load-json-into-a-ssnoversion-table"></a>Exemplo – Carregar o objeto JSON em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
  O exemplo a seguir carrega um objeto JSON inteiro em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ```sql  

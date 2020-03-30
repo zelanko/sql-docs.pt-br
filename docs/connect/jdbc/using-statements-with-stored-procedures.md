@@ -11,10 +11,10 @@ ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7fe07352ff1bcda9dd3ff3e77a6b879e592235a6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025860"
 ---
 # <a name="using-statements-with-stored-procedures"></a>Como usar instruções com procedimentos armazenados
@@ -48,7 +48,7 @@ Os tópicos desta seção descrevem as maneiras de chamar procedimentos armazena
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Como usar um procedimento armazenado sem parâmetros](../../connect/jdbc/using-a-stored-procedure-with-no-parameters.md)|Descreve como usar o driver JDBC para executar procedimentos armazenados que não contêm parâmetros de entrada ou saída.|  
 |[Como usar um procedimento armazenado com parâmetros de entrada](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)|Descreve como usar o driver JDBC para executar procedimentos armazenados que contêm parâmetros de entrada.|  

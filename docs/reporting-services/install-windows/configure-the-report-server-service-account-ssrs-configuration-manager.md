@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 12/04/2019
 ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866019"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurar a conta de serviço do servidor de relatório (Gerenciador de configurações SSRS)
@@ -60,7 +60,7 @@ ms.locfileid: "74866019"
   
 5. Quando for solicitado que você faça backup da chave simétrica, digite um nome e um local de arquivo para o backup da chave simétrica, digite uma senha para bloquear e desbloquear o arquivo e clique em **OK**.  
   
-6. Se o servidor de relatório usar a conta de serviço para conectar-se ao banco de dados do servidor de relatório, as informações de conexão serão atualizadas para usar a nova conta ou senha. A atualização das informações da conexão exige que você se conecte ao banco de dados. Se a caixa de diálogo **Conexão de Banco de Dados** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for exibida, insira as credenciais que têm permissão para se conectar ao banco de dados e, em seguida, clique em **OK**.  
+6. Se o servidor de relatório usar a conta de serviço para conectar-se ao banco de dados do servidor de relatório, as informações de conexão serão atualizadas para usar a nova conta ou senha. A atualização das informações da conexão exige que você se conecte ao banco de dados. Se a caixa de diálogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Conexão de Banco de Dados**do** for exibida, insira as credenciais que têm permissão para se conectar ao banco de dados e, em seguida, clique em **OK**.  
   
 7. Quando for avisado para restaurar a chave simétrica, digite a senha que você especificou na etapa 5 e clique em **OK**.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "74866019"
 |**Serviço Local**|**Serviço Local** é uma conta interna semelhante a uma conta de usuário autenticada local do Windows. Os serviços executados como a conta **Serviço Local** acessam os recursos de rede como uma sessão nula sem credenciais. Essa conta não é apropriada para cenários de implantação de intranet em que o servidor de relatório deve se conectar a um banco de dados do servidor de relatório remoto ou a um controlador de domínio de rede para autenticar um usuário antes de abrir um relatório ou processar uma assinatura.|  
 |**Sistema Local**|**Sistema Local** é uma conta altamente privilegiada que não é exigida para executar um servidor de relatório. Evite usar essa conta para instalações do servidor de relatório. Escolha uma conta de domínio ou um **Serviço de Rede** .|  
   
-## <a name="localaccounts"></a> Considerações sobre o uso de contas locais
+## <a name="considerations-for-using-local-accounts"></a><a name="localaccounts"></a> Considerações sobre o uso de contas locais
 
  A primeira questão a ser considerada ao usar contas locais é se o servidor de relatório exige acesso aos servidores de banco de dados remotos, aos servidores de email e aos controladores de domínio. Se você configurar o servidor de relatório para ser executado como uma conta de usuário local do Windows, um Serviço Local ou um Sistema Local, surgirão questões que deverão ser consideradas com relação à especificação das demais configurações e à criação e à entrega de assinaturas.  
   

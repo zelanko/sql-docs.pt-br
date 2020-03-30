@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822256"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering de failover e Grupos de Disponibilidade AlwaysOn (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74822256"
 >  Para obter informações sobre os conceitos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , confira [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
   
-##  <a name="WSFC"></a> Windows Server Failover Clustering e grupos de disponibilidade  
+##  <a name="windows-server-failover-clustering-and-availability-groups"></a><a name="WSFC"></a> Windows Server Failover Clustering e grupos de disponibilidade  
  A implantação do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] exige um WSFC (Windows Server Failover Cluster). Para ser habilitado para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve residir em um nó WSFC, e o nó e o WSFC devem estar online. Além do mais, cada réplica de disponibilidade de um determinado grupo de disponibilidade deve residir em um nó diferente do mesmo WSFC. A única exceção é que, embora tenha sido migrado para outro WSFC, um grupo de disponibilidade pode temporariamente abranger dois clusters.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] conta com o cluster WSFC (Windows Server Failover Cluster) para monitorar e gerenciar as funções atuais das réplicas de disponibilidade que pertencem a determinado grupo de disponibilidade e especificar como um evento de failover afeta as réplicas de disponibilidade. Um grupo de recursos do WSFC é criado para cada grupo de disponibilidade que você cria. O WSFC monitora este grupo de recursos para avaliar a integridade da réplica primária.  
@@ -49,7 +49,7 @@ ms.locfileid: "74822256"
   
  Para obter informações sobre como executar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em nós de cluster WSFC e sobre o quorum do WSFC, veja [Clustering de Failover do Windows Server &#40;WSFC&#41; com SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
-##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCIs (Instâncias de Cluster de Failover) e grupos de disponibilidade  
+##  <a name="ssnoversion-failover-cluster-instances-fcis-and-availability-groups"></a><a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCIs (Instâncias de Cluster de Failover) e grupos de disponibilidade  
  Você pode configurar uma segunda camada de failover no nível da instância do servidor implementando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] um FCI junto com o WSFC. Uma réplica de disponibilidade pode ser hospedada por ou uma instância autônoma do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou uma instância FCI. Somente um parceiro FCI pode hospedar uma réplica para um determinado grupo de disponibilidade. Quando uma réplica de disponibilidade estiver sendo executada em um FCI, a lista de proprietários possíveis para o grupo de disponibilidade conterá apenas o nó de FCI ativo.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] não depende de nenhuma forma de armazenamento compartilhado. No entanto, se você usar uma FCI (instância de cluster de failover) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para hospedar uma ou mais réplicas de disponibilidade, cada uma dessas FCIs exigirá armazenamento compartilhado para cada instalação de instância de cluster de failover padrão do SQL Server.  
@@ -97,7 +97,7 @@ ms.locfileid: "74822256"
   
  Para obter mais informações sobre FCIs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Instâncias do cluster de failover do Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-##  <a name="FCMrestrictions"></a> Restrições em relação ao uso do Gerenciador de Cluster de Failover do WSFC com grupos de disponibilidade  
+##  <a name="restrictions-on-using-the-wsfc-failover-cluster-manager-with-availability-groups"></a><a name="FCMrestrictions"></a> Restrições em relação ao uso do Gerenciador de Cluster de Failover do WSFC com grupos de disponibilidade  
  Não use o Gerenciador de Cluster de Failover para manipular grupos de disponibilidade, por exemplo:  
   
 -   Não adicione nem remova recursos no serviço clusterizado (grupo de recursos) para o grupo de disponibilidade.  
@@ -109,7 +109,7 @@ ms.locfileid: "74822256"
   >[!WARNING]
   > Usando o Gerenciador de Cluster de Failover para mover uma *instância de cluster de failover* que hospeda um grupo de disponibilidade para um nó que *já* está hospedando uma réplica do mesmo grupo de disponibilidade pode resultar na perda da réplica do grupo de disponibilidade, impedindo que ele seja colocado online no nó de destino. Um único nó de um cluster de failover não pode hospedar mais de uma réplica do mesmo grupo de disponibilidade. Para obter mais informações sobre como isso ocorre e como recuperar, consulte o blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Réplica removida inesperadamente no grupo de disponibilidade). 
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   **Blogs:**  
   

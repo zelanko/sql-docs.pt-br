@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 61d240262d491976eaa9e591fa15e4ffd1f1258e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72904176"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar um aplicativo da camada de dados
@@ -44,18 +44,18 @@ ms.locfileid: "72904176"
  O processo de exportação define a versão de DAC como 1.0.0.0 e a descrição de DAC no arquivo de exportação para uma cadeia de caracteres vazia. Se o banco de dados foi implantado de um DAC, a definição do DAC no arquivo de exportação conterá o nome atribuído ao DAC original; caso contrário, o nome do DAC será definido como o nome do banco de dados.  
   
 
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições  
  Um DAC ou banco de dados só pode ser exportado de um banco de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior.  
   
  Você não poderá exportar um banco de dados com objetos sem suporte em um DAC ou usuários contidos. Para obter mais informações sobre os tipos de objetos com suporte em um DAC, consulte [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Permissões  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  A exportação de um DAC exige, no mínimo, as permissões ALTER ANY LOGIN e VIEW DEFINITION do escopo do banco de dados, bem como as permissões SELECT em **sys.sql_expression_dependencies**. A exportação de um DAC pode ser feita por membros da função de servidor fixa securityadmin que também são membros da função de banco de dados fixa database_owner no banco de dados do qual o DAC é exportado. Membros da função de servidor fixa sysadmin ou da conta interna do administrador do sistema do SQL Server denominada **sa** também podem exportar um DAC.
  
 No Banco de Dados SQL do Azure, é necessário conceder a permissão VIEW DEFINITION e SELECT **para cada banco de dados** em todas as tabelas ou em tabelas específicas
 
   
-##  <a name="UsingDeployDACWizard"></a> Usando o Assistente para Exportar Aplicativo da Camada de Dados  
+##  <a name="using-the-export-data-tier-application-wizard"></a><a name="UsingDeployDACWizard"></a> Usando o Assistente para Exportar Aplicativo da Camada de Dados  
  **Para exportar um DAC usando um assistente**  
   
 1.  Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seja no local ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -80,7 +80,7 @@ No Banco de Dados SQL do Azure, é necessário conceder a permissão VIEW DEFINI
   
     -   [Página Resultados](#Results)  
   
-##  <a name="Introduction"></a> Página de Introdução  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Página de Introdução  
  Esta página descreve as etapas do Assistente de Exportação do Aplicativo da Camada de Dados.  
   
  **Opções**  
@@ -91,7 +91,7 @@ No Banco de Dados SQL do Azure, é necessário conceder a permissão VIEW DEFINI
   
  **Cancelar** – cancela a operação e fecha o Assistente.  
   
-##  <a name="Export_settings"></a> Página Configurações de Exportação  
+##  <a name="export-settings-page"></a><a name="Export_settings"></a> Página Configurações de Exportação  
  Use essa página para especificar o local onde criar o arquivo BACPAC a ser criado.  
   
 -   **Salvar no disco local** – Cria um arquivo BACPAC em um diretório no computador local. Clique em **Procurar...** para navegar no computador local ou especifique o caminho no espaço fornecido. O nome do caminho deve incluir um nome de arquivo e a extensão .bacpac.  
@@ -100,23 +100,23 @@ No Banco de Dados SQL do Azure, é necessário conceder a permissão VIEW DEFINI
   
  Para especificar um subconjunto de tabelas a serem exportadas, use a opção **Avançado** .  
   
-##  <a name="Validation"></a> Página de Validação  
+##  <a name="validation-page"></a><a name="Validation"></a> Página de Validação  
  Use a página de validação para revisar os problemas que bloqueiam a operação. Para continuar, resolva os problemas de bloqueio e clique em **Executar Novamente a Validação** para verificar se a validação foi bem-sucedida.  
   
  Para continuar, clique em **Avançar**.  
   
-##  <a name="Summary"></a> Página de Resumo  
+##  <a name="summary-page"></a><a name="Summary"></a> Página de Resumo  
  Use esta página para analisar a origem especificada e as configurações de destino para a operação. Para concluir a operação de exportação usando as configurações especificadas, clique em **Concluir**. Para cancelar a operação de exportação e sair do Assistente, clique em **Cancelar**.  
   
-##  <a name="Progress"></a> Página Progresso  
+##  <a name="progress-page"></a><a name="Progress"></a> Página Progresso  
  Esta página exibe a barra de progresso que indica o status da operação. Para exibir o status detalhado, clique na opção **Exibir detalhes** .  
   
-##  <a name="Results"></a> Página Resultados  
+##  <a name="results-page"></a><a name="Results"></a> Página Resultados  
  Esta página reporta o êxito ou falha da operação de exportação, mostrando os resultados de cada ação. Todas as ações que encontrarem um erro terão um link na coluna **Resultado** . Clique no link para exibir um relatório do erro para essa ação.  
   
  Clique em **Concluir** para fechar o Assistente.  
   
-##  <a name="NetApp"></a> Usando um aplicativo .NET Framework  
+##  <a name="using-a-net-framework-application"></a><a name="NetApp"></a> Usando um aplicativo .NET Framework  
  **Para exportar um DAC usando o método Export() em um aplicativo .NET Framework.**  
   
  Para exibir um exemplo de código, baixe o aplicativo de exemplo do DAC em [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  

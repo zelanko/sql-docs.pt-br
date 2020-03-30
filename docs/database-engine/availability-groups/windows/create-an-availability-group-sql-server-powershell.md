@@ -13,10 +13,10 @@ ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9b307c932925331fc28473186f120b2d05cc09c5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708411"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>Criar um grupo de disponibilidade Always On usando o PowerShell
@@ -30,14 +30,14 @@ ms.locfileid: "71708411"
 > Como alternativa para o uso dos cmdlets do PowerShell, você pode usar o assistente para Criar Grupo de Disponibilidade ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Para obter mais informações, veja [Usar a caixa de diálogo Novo Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) ou [Criar um grupo de disponibilidade &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md).  
 
 ## <a name="before-you-begin"></a>Antes de começar
-### <a name="PrerequisitesRestrictions"></a> Pré-requisitos, restrições e recomendações  
+### <a name="prerequisites-restrictions-and-recommendations"></a><a name="PrerequisitesRestrictions"></a> Pré-requisitos, restrições e recomendações  
 
 - Antes de criar um grupo de disponibilidade, verifique se cada instância de host do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] reside em um nó diferente do WSFC (Windows Server Failover Clustering) de um único cluster de failover do WSFC. Verifique também se suas instâncias de servidor atendem aos outros pré-requisitos de instância de servidor, se todos os outros requisitos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] são atendidos e se você está ciente das recomendações. Para obter mais informações, é altamente recomendável que você leia [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
 
-### <a name="Permissions"></a> Permissões  
+### <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a associação na função de servidor fixa **sysadmin** e a permissão de servidor CREATE AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
 
-## <a name="PowerShellProcedure"></a> Usando o PowerShell para criar e configurar um grupo de disponibilidade  
+## <a name="using-powershell-to-create-and-configure-an-availability-group"></a><a name="PowerShellProcedure"></a> Usando o PowerShell para criar e configurar um grupo de disponibilidade  
  
 A tabela a seguir lista as tarefas básicas envolvidas na configuração de um grupo de disponibilidade e indica as tarefas com suporte nos cmdlets do PowerShell. As tarefas [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] devem ser executadas na sequência em que são apresentadas na tabela.  
   
@@ -81,7 +81,7 @@ Configure e use o [Provedor do SQL Server PowerShell](../../../relational-databa
 > [!NOTE]  
 > Se as contas de serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] das instâncias do servidor forem executadas em diferentes contas de usuário de domínio, em cada instância do servidor, crie um logon para a outra instância do servidor e conceda a permissão CONNECT a esse logon para o ponto de extremidade de espelhamento do banco de dados local.  
 
-### <a name="ExampleConfigureGroup"></a> Exemplo
+### <a name="example"></a><a name="ExampleConfigureGroup"></a> Exemplo
 O exemplo doe PowerShell a seguir cria e configura um grupo de disponibilidade simples denominado `<myAvailabilityGroup>` com duas réplicas de disponibilidade e um banco de dados de disponibilidade. O exemplo:  
 
 1. Faz backup do `<myDatabase>` e de seu log de transações.  
@@ -157,7 +157,7 @@ Join-SqlAvailabilityGroup -Path "SQLSERVER:\SQL\SecondaryComputer\Instance" -Nam
 Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\AvailabilityGroups\<myAvailabilityGroup>" -Database "<myDatabase>"  
 ```  
   
-## <a name="RelatedTasks"></a> Tarefas relacionadas  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para configurar uma instância de servidor para grupos de disponibilidade AlwaysOn**  
   
 - [Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
@@ -208,7 +208,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 - [Solução de problemas de uma operação de adição de arquivos com falha &#40;Grupos de disponibilidade de AlwaysOn&#41;](~/database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-## <a name="RelatedContent"></a> Conteúdo relacionado  
+## <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 - **Blogs:**  
   

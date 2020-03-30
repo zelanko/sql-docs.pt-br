@@ -22,10 +22,10 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a437704946f379f38aa590ccbf53f240fad94cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296914"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codificando e depurando a tarefa Script
@@ -226,7 +226,7 @@ To open Help, press F1.
   
  A classe <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> também contém alguns membros públicos que você provavelmente não usará.  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|A propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> fornece acesso mais conveniente a variáveis. Embora você possa usar o <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>, chame explicitamente métodos para bloquear e desbloquear variáveis para leitura e gravação. A tarefa Script trata de semânticas de bloqueio quando você usa a propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>.|  
   

@@ -15,10 +15,10 @@ ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0de4fe433a1f34b49dbfb12082759c954e87a7a4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298564"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services
@@ -35,7 +35,7 @@ ms.locfileid: "71298564"
  Use a conexão padrão a um servidor que está executando uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ou crie uma nova conexão clicando em **Editar**.  
   
  **Editar**  
- Use a caixa de diálogo **Gerenciador de Conexões[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para criar uma conexão a um servidor que está executando uma instância do**  e para editar propriedades de conexão.  
+ Use a caixa de diálogo **Gerenciador de Conexões** para criar uma conexão a um servidor que está executando uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e para editar propriedades de conexão.  
   
  **Criar uma conexão com um projeto do Analysis Services nesta solução**  
  Especifique que a conexão usará um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na solução aberta.  

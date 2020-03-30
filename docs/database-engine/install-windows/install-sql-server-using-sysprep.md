@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8e8b9a36fac2e90719d3f8a8dbeee5d4c4a0e662
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67990953"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Instalar o SQL Server com o SysPrep
@@ -34,10 +34,10 @@ Antes de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e
   
 Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os requisitos de hardware e software, consulte [Requisitos de hardware e software para a instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
     
-##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Suporte a cluster do SysPrep  
+##  <a name="ssnoversion-sysprep-cluster-support"></a><a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Suporte a cluster do SysPrep  
  A partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o SysPrep dá suporte a instâncias clusterizadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em instalações de linha de comando. Para saber mais, consulte [O que é Sysprep?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx). 
   
-### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Para preparar um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (autônomo)  
+### <a name="to-prepare-a-ssnoversion-failover-cluster-unattended"></a>Para preparar um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (autônomo)  
   
 1. Prepare a imagem (como discutido em [Considerações para instalação do SQL Server usando SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)) e capturar a imagem da janela com a generalização do SysPrep. O exemplo a seguir prepara a imagem:  
   
@@ -57,7 +57,7 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-### <a name="complete-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Concluir um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (autônomo)  
+### <a name="complete-a-ssnoversion-failover-cluster-unattended"></a>Concluir um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (autônomo)  
   
 1. Execute setup.exe com **/ACTION=CompleteFailoverCluster** no nó que possui o grupo de armazenamento disponível:  
   
@@ -65,7 +65,7 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
     setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName=<InstanceName>  /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'>:" /FAILOVERCLUSTERNETWORKNAME="<Insert FOI Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSYSADMINACCOUNTS="<DomainName\UserName>"  
     ```  
   
-### <a name="adding-a-node-to-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Adicionando um nó a um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente (autônomo)  
+### <a name="adding-a-node-to-an-existing-ssnoversion-failover-cluster-unattended"></a>Adicionando um nó a um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente (autônomo)  
   
 1. Implante a imagem executando o Windows SysPrep Specialize. 
   
@@ -77,9 +77,9 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
     setup.exe /q /ACTION=AddNode /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-##  <a name="prepare"></a> Preparar imagem  
+##  <a name="prepare-image"></a><a name="prepare"></a> Preparar imagem  
   
-### <a name="prepare-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Preparar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+### <a name="prepare-a-stand-alone-instance-of-ssnoversion"></a>Preparar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
 1. Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Na pasta raiz, clique duas vezes em Setup.exe. Para instalar a partir de um compartilhamento de rede, localize a pasta raiz no compartilhamento e clique duas vezes em Setup.exe. 
   
@@ -135,9 +135,9 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
 18. Isto conclui a etapa de preparação. Você pode concluir a imagem ou implantar a imagem preparada conforme descrito em [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
   
-##  <a name="complete"></a> Concluir Imagem  
+##  <a name="complete-image"></a><a name="complete"></a> Concluir Imagem  
   
-### <a name="complete-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Concluir uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="complete-a-prepared-instance-of-ssnoversion"></a>Concluir uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. Se você tiver uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluída na imagem de seu computador, verá um atalho no Menu Iniciar. Você também pode iniciar a Central de Instalação e clicar em **Conclusão de imagem de uma instância autônoma preparada** na página **Avançado** . 
   
@@ -153,7 +153,7 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
 7. Na página **Selecione uma Instância Preparada** , selecione a instância preparada que você deseja concluir na caixa suspensa. Selecione a instância não configurada na lista **ID da Instância** . 
   
-     **Instâncias Instaladas:** esta grade exibe todas as instâncias que incluem qualquer instância preparada neste computador. 
+     **Instâncias instaladas:** Esta grade exibe todas as instâncias que incluem qualquer instância preparada nesta máquina. 
   
 8. Na página **Revisão de Recurso** , você verá os recursos selecionados e os componentes incluídos na instalação durante a etapa de preparação. Se você desejar acrescentar mais recursos a sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não incluído na instância preparada, você deverá concluir esta etapa primeiro para concluir a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, em seguida, adicione os recursos em **Adicionar Recursos** na **Central de Instalação**. 
   
@@ -219,9 +219,9 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
 23. Essa etapa conclui a configuração da instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e você concluiu a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
-##  <a name="AddFeatures"></a> Add Features to a Prepared Instance  
+##  <a name="add-features-to-a-prepared-instance"></a><a name="AddFeatures"></a> Add Features to a Prepared Instance  
   
-### <a name="add-features-to-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Adicionar recursos a uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="add-features-to-a-prepared-instance-of-ssnoversion"></a>Adicionar recursos a uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Na pasta raiz, clique duas vezes em Setup.exe. Para instalar a partir de um compartilhamento de rede, localize a pasta raiz no compartilhamento e clique duas vezes em Setup.exe. 
   
@@ -251,9 +251,9 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
 13. Se você for instruído a reiniciar o computador, faça-o agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para saber mais, veja [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md). 
   
-##  <a name="RemoveFeatures"></a> Remover recursos de uma instância preparada  
+##  <a name="remove-features-from-a-prepare-instance"></a><a name="RemoveFeatures"></a> Remover recursos de uma instância preparada  
   
-### <a name="removing-features-from-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Removendo recursos de uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="removing-features-from-a-prepared-instance-of-ssnoversion"></a>Removendo recursos de uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. Para começar o processo de desinstalação, no menu **Iniciar** , clique em **Painel de Controle** e clique duas vezes em **Programa e Recursos**. 
   
@@ -273,9 +273,9 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
 9. Na página **Concluir** , você pode revisar o status de conclusão da operação. Clique em **fechar** para sair do assistente de instalação. 
   
-##  <a name="Uninstall"></a> Desinstalando uma instância preparada  
+##  <a name="uninstalling-a-prepared-instance"></a><a name="Uninstall"></a> Desinstalando uma instância preparada  
   
-### <a name="uninstall-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Desinstalar uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="uninstall-a-prepared-instance-of-ssnoversion"></a>Desinstalar uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. Para começar o processo de desinstalação, no menu **Iniciar** , clique em **Painel de Controle** e clique duas vezes em **Programa e Recursos**. 
   
@@ -297,7 +297,7 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
 10. Repita as etapas de 1 a 9 até que todos os componentes do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tenham sido removidos. 
   
-##  <a name="bk_Modifying_Uninstalling"></a> Modificando ou desinstalando uma instância concluída do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+##  <a name="modifying-or-uninstalling-a-completed-instance-of-ssnoversion"></a><a name="bk_Modifying_Uninstalling"></a> Modificando ou desinstalando uma instância concluída do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  O processo para adicionar ou remover recursos ou desinstalar uma instância concluída de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é semelhante ao processo para uma instância instalada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte os seguintes artigos:  
   
 - [Adicionar recursos a uma instância do SQL Server &#40;instalação&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  

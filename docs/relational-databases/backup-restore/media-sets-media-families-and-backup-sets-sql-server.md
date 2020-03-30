@@ -23,10 +23,10 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 168a471a57b3f1d8cd3ea2a5428d8b0bd9063965
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258678"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Conjuntos de mídias, famílias de mídia e conjuntos de backup (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "75258678"
   
 >**OBSERVAÇÃO:** Para saber mais sobre o backup do SQL Server no serviço de Armazenamento de Blobs do Azure, confira [Backup e restauração do SQL Server com o serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
    
-##  <a name="TermsAndDefinitions"></a> Termos  
+##  <a name="terms"></a><a name="TermsAndDefinitions"></a> Termos  
  **conjunto de mídias**  
  Uma coleção ordenada de mídias de backup, fitas ou arquivos de disco, em que uma ou mais operações de backup foram gravadas, usando um número e um tipo fixo de dispositivos de backup.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75258678"
  O conteúdo de backup adicionado a um conjunto de mídias por uma operação de backup bem-sucedida.  
   
 
-##  <a name="OvMediaSetsFamiliesBackupSets"></a> Visão geral dos conjuntos de mídias, famílias de mídia e conjuntos de backup  
+##  <a name="overview-of-media-sets-media-families-and-backup-sets"></a><a name="OvMediaSetsFamiliesBackupSets"></a> Visão geral dos conjuntos de mídias, famílias de mídia e conjuntos de backup  
  Os backups em um conjunto de uma ou mais mídias de backup compõem um único conjunto de mídias. Um *conjunto de mídias* é uma coleção ordenada de *mídia de backup*, fitas ou arquivos de disco, ou Blobs do Azure, em que uma ou mais operações de backup foram gravadas usando um tipo fixo e número de dispositivos de backup. Um conjunto de mídias específica usa unidades de fita, ou unidades de disco ou blobs do Azure, mas não uma combinação dos dois ou mais. 
  
 **Exemplo:** os dispositivos de backup associados ao conjunto de mídias podem ser três unidades de fita chamadas `\\.\TAPE0`, `\\.\TAPE1`e `\\.\TAPE2`. Aquele conjunto de mídias contém apenas fitas, começando com um mínimo de três fitas (uma por unidade). O tipo e o número de dispositivos de backup são estabelecidos quando um conjunto de mídias é criado, e não podem ser alterados. No entanto, entre as operações de backup e de restauração, um determinado dispositivo pode ser substituído por outro dispositivo do mesmo tipo, se necessário.  
@@ -166,7 +166,7 @@ GO
 -   Número de conjuntos de backup  
 
   
-##  <a name="CreatingMediaSet"></a> Creating a new media set  
+##  <a name="creating-a-new-media-set"></a><a name="CreatingMediaSet"></a> Creating a new media set  
  Para criar um novo conjunto de mídias, é necessário formatar a mídia de backup (uma ou mais fitas ou arquivos de disco). O processo de formatação altera as mídias de backup da seguinte forma:  
   
 1.  Exclui o cabeçalho antigo (se houver), excluindo efetivamente o conteúdo anterior da mídia de backup.  
@@ -176,7 +176,7 @@ GO
 2.  Grava um novo cabeçalho de mídia na mídia de backup (fita ou arquivo de disco) em cada um dos dispositivos de backup.  
 
   
-##  <a name="UseExistingMediaSet"></a> Fazendo backup em um conjunto de mídias existente  
+##  <a name="backing-up-to-an-existing-media-set"></a><a name="UseExistingMediaSet"></a> Fazendo backup em um conjunto de mídias existente  
  Quando você estiver fazendo backup em um conjunto de mídias existente, estas serão as duas opções disponíveis:  
   
 -   Anexar ao conjunto de backups existente.  
@@ -193,7 +193,7 @@ O acréscimo, que é o comportamento padrão do BACKUP, pode ser especificado ex
 
     >  A substituição de conjuntos de backup existentes é especificada com a opção INIT da instrução BACKUP.  
   
-##  <a name="Appending"></a> Appending to existing backup sets  
+##  <a name="appending-to-existing-backup-sets"></a><a name="Appending"></a> Appending to existing backup sets  
  Backups executados em momentos diferentes no mesmo banco de dados ou em bancos de dados diferentes podem ser armazenados na mesma mídia. Ao anexar outro conjunto de backups a uma mídia existente, o conteúdo anterior da mídia permanece intacto e o novo backup é gravado após o final do último backup da mídia.  
   
  Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre acrescenta backups novos à mídia. O acréscimo só pode ocorrer no final da mídia. Por exemplo, se um volume de mídia contiver cinco conjuntos de backup, não é possível ignorar os três primeiros conjuntos de backup para substituir o quarto conjunto de backup por um conjunto novo.  
@@ -205,7 +205,7 @@ O acréscimo, que é o comportamento padrão do BACKUP, pode ser especificado ex
 > **IMPORTANTE:** Os backups compactados e não compactados não podem ser feitos juntos em um conjunto de mídias. Qualquer edição do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou versões posteriores podem ler backups compactados. Para obter mais informações, veja [Compactação de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
  
-##  <a name="Overwriting"></a> Overwriting backup sets  
+##  <a name="overwriting-backup-sets"></a><a name="Overwriting"></a> Overwriting backup sets  
  A substituição de conjuntos de backup existentes é especificada com a opção INIT da instrução BACKUP. Essa opção substitui todos os conjuntos de backups na mídia e preserva o cabeçalho da mídia, se houver. Se não houver nenhum cabeçalho da mídia, será criado um.  
   
  No caso de cabeçalhos de fita, deixar o cabeçalho no lugar pode fazer sentido. Em mídias de backup em disco, serão substituídos somente os arquivos usados pelos dispositivos de backup especificados na operação de backup; os outros arquivos no disco não são afetados. Quando backups são substituídos, qualquer cabeçalho da mídia existente é preservado e o backup novo é criado como o primeiro backup no dispositivo de backup. Se não houver nenhum cabeçalho da mídia, será gravado automaticamente um cabeçalho da mídia válido com um nome e descrição de mídia associados. Se o cabeçalho da mídia existente for inválido, a operação de backup será encerrada. Se a mídia estiver vazia, o novo cabeçalho de mídia será gerado com o MEDIANAME, MEDIAPASSWORD e MEDIADESCRIPTION fornecidos, se houver.  
@@ -227,7 +227,7 @@ O acréscimo, que é o comportamento padrão do BACKUP, pode ser especificado ex
   
 
   
-##  <a name="SequenceNumbers"></a> Números de sequência  
+##  <a name="sequence-numbers"></a><a name="SequenceNumbers"></a> Números de sequência  
  A ordem correta é importante para várias famílias de mídia dentro de um conjunto de mídia ou de vários backups de mídia dentro de uma família de mídia. Portanto, o backup atribui números de sequência dos modos seguintes:  
   
 -   Famílias de mídia sequenciais dentro de um conjunto de mídia  
@@ -238,7 +238,7 @@ O acréscimo, que é o comportamento padrão do BACKUP, pode ser especificado ex
   
      Um número de sequência de mídia indica a ordem das mídias físicas dentro de uma família de mídia. O número de sequência é 1 para a mídia inicial do backup. Esse é marcado com 1; o segundo (a primeira fita de continuação) é marcado com 2; e assim por diante. Quando o conjunto de backup é restaurado, os números de sequência de mídia garantem que o operador que restaura o backup montará as mídias corretas na ordem correta.  
   
-###  <a name="MultipleDevices"></a> Vários dispositivos  
+###  <a name="multiple-devices"></a><a name="MultipleDevices"></a> Vários dispositivos  
  Quando você usa várias unidades de fita ou arquivos de disco, as considerações seguintes se aplicam:  
   
 -   Para backup:  
@@ -249,7 +249,7 @@ O acréscimo, que é o comportamento padrão do BACKUP, pode ser especificado ex
   
      Para qualquer restauração de backups de disco e qualquer restauração online, todas as famílias de mídia devem ser montadas simultaneamente. Para uma restauração offline de backups em fita, você pode processar as famílias de mídia a partir de menos dispositivos de backup. Cada família de mídia deve ser totalmente processada antes de começar a processar outra família de mídia. As famílias de mídia sempre serão processadas em paralelo, a menos que estejam sendo restauradas com um dispositivo único.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Criar um novo conjunto de mídias**  
   
 -   [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) (opção **Fazer backup em um novo conjunto de mídias e apagar todos os conjuntos de backup existentes**)  

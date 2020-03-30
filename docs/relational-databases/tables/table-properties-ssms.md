@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72905946"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
@@ -39,7 +39,7 @@ ms.locfileid: "72905946"
   
 4.  [Página Armazenamento](#Storage)  
 
-##  <a name="GeneralPage"></a> Página Geral  
+##  <a name="general-page"></a><a name="GeneralPage"></a> Página Geral  
  **Backup de banco de dados**  
  O nome do banco de dados que contém esta tabela.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "72905946"
  **A tabela é replicada**  
  Indica quando a tabela é replicada em outro banco de dados usando a replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os valores possíveis são **True** ou **False**.  
   
-##  <a name="ChangeTracking"></a> Página Controle de Alterações  
+##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> Página Controle de Alterações  
  **Controle de alterações**  
  Indica se o controle de alterações está habilitado para a tabela. O valor padrão é **Falso**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "72905946"
   
  Para obter mais informações sobre o controle de alterações, veja [Sobre o controle de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).  
   
-##  <a name="FileTable"></a> Página FileTable  
+##  <a name="filetable-page"></a><a name="FileTable"></a> Página FileTable  
  Exibe as propriedades da tabela relacionada a FileTables. Para obter mais informações, veja [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
  **Ordenação da colunas de nome FileTable**  
@@ -110,7 +110,7 @@ ms.locfileid: "72905946"
  **Namespace habilitado da FileTable**  
  Quando **True**, esse valor indica que a tabela é uma FileTable. Se você alterar esse valor para **False**, estará alterando a FileTable para uma tabela de usuário comum. Se você desejar reverter novamente a tabela para FileTable, ela precisará passar em uma verificação de consistência da FileTable para que a conversão seja bem-sucedida.  
   
-##  <a name="Storage"></a> Página Armazenamento  
+##  <a name="storage-page"></a><a name="Storage"></a> Página Armazenamento  
  Exibe as propriedades relacionadas ao armazenamento da tabela selecionada.  
   
 ### <a name="compression"></a>Compactação  

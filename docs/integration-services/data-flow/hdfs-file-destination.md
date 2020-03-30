@@ -13,10 +13,10 @@ ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eec72a0421576ed4c09d35cd19bb0d842bd08f78
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292370"
 ---
 # <a name="hdfs-file-destination"></a>Destino de Arquivo HDFS
@@ -33,7 +33,7 @@ ms.locfileid: "71292370"
 ## <a name="options"></a>Opções
  Configure as seguintes opções na guia **Geral** da caixa de diálogo **Editor de Destino de Arquivo Hadoop** .
 
-|Campo|Descrição|
+|Campo|DESCRIÇÃO|
 |-----------|-----------------|
 |**Conexão do Hadoop**|Especifique um gerenciador de conexões do Hadoop existente ou crie um novo. Esse gerenciador de conexões indica onde os arquivos HDFS estão hospedados.|
 |**Caminho do Arquivo**|Especifique o nome do arquivo HDFS.|

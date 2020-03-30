@@ -17,10 +17,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 689206ce4462b4befeded788fc6e679af6215a59
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056367"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>Especificar o tamanho do prefixo em arquivos de dados usando o bcp (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "74056367"
 > [!IMPORTANT]  
 >  Quando você usa formato nativo usa prefixos de comprimento em vez de terminadores de campo. Dados de formato nativo podem conflitar com terminadores porque um arquivo de dados de formato nativo é armazenado no formato de dados binário interno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="PrefixLengthsExport"></a> Comprimentos do prefixo para exportação em massa  
+##  <a name="prefix-lengths-for-bulk-export"></a><a name="PrefixLengthsExport"></a> Comprimentos do prefixo para exportação em massa  
   
 > [!NOTE]  
 >  O valor padrão que é fornecido ao prompt de comprimento do prefixo quando você exporta um campo indica o comprimento do prefixo mais eficiente para o campo.  
@@ -86,7 +86,7 @@ ms.locfileid: "74056367"
   
  \*Os tipos de dados **ntext**, **text**e **image** serão removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses tipos de dados em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que os utilizam atualmente. Em vez disso, use **nvarchar(max)** , **varchar(max)** e **varbinary(max)** .  
   
-##  <a name="PrefixLengthsImport"></a> Comprimentos do prefixo para importação em massa  
+##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Comprimentos do prefixo para importação em massa  
  Quando dados são importados em massa, o comprimento do prefixo é o valor que foi especificado quando o arquivo de dados foi criado originalmente. Se o arquivo de dados não foi criado por um comando **bcp** , os caracteres de prefixo do comprimento provavelmente não existirão. Nessa instância, especifique 0 para o comprimento do prefixo.  
   
 > [!NOTE]  

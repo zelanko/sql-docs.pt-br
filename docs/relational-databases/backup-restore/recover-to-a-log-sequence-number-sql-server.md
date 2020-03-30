@@ -22,10 +22,10 @@ ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 46ab24ff86eb7a68e48f58e67f03a859d0c43aa7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72916042"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Recuperar para um número de sequência de log (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "72916042"
   
  Você pode usar um LSN (número de sequência de log) para definir o ponto de recuperação para uma operação de restauração. No entanto, esse é um recurso especializado destinado a fornecedores de ferramentas e provavelmente não é de uso geral.  
   
-##  <a name="LSNs"></a> Visão geral de números de sequência de log  
+##  <a name="overview-of-log-sequence-numbers"></a><a name="LSNs"></a> Visão geral de números de sequência de log  
  Os LSNs são usados internamente durante uma sequência RESTORE para localizar o point-in-time para o qual os dados foram restaurados. Quando um backup é restaurado, os dados são restaurados ao LSN que corresponde ao point-in-time em que o backup foi realizado. O backup diferencial e o backup de log avançam o banco de dados restaurado para uma hora posterior que corresponde a um LSN mais alto. Saiba mais sobre LSNs no [Guia de arquitetura e gerenciamento de log de transações do SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).  
   
 > [!NOTE]  
@@ -78,7 +78,7 @@ WITH STOPATMARK = 'lsn:15000000040000037'
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   

@@ -17,10 +17,10 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 94f8c87e0b996be0b9485cbe5a43038e33420fe0
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288720"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurar a opção de configuração de servidor max degree of parallelism
@@ -31,15 +31,15 @@ ms.locfileid: "79288720"
 > [!NOTE]
 > [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] apresenta recomendações automáticas para definir a opção de configuração do servidor MAXDOP durante o processo de instalação. A interface do usuário de configuração permite que você aceite as configurações recomendadas ou insira um valor próprio. Para saber mais, veja a [página Configuração do Mecanismo de Banco de Dados – MaxDOP](../../sql-server/install/instance-configuration.md#maxdop).
 
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Se a opção de máscara de afinidade não estiver definida com o padrão, poderá restringir o número de processadores disponíveis para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em sistemas SMP simétricos.  
 
 -   O limite de **MAXDOP (grau máximo de paralelismo)** é definido por [tarefa](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Não é um limite por [solicitação](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) ou por consulta. Isso significa que, durante uma execução de consulta paralela, uma solicitação única pode gerar várias tarefas que são atribuídas a um agendador. Para saber mais, confira o [Guia de arquitetura de threads e tarefas](../../relational-databases/thread-and-task-architecture-guide.md). 
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Esta é uma opção avançada e deve ser alterada somente por um administrador de banco de dados experiente ou por um profissional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] certificado.  
   
@@ -53,10 +53,10 @@ ms.locfileid: "79288720"
 
 > [!TIP]
 > Para fazer isso no nível da consulta, use o **MAXDOP**, [dica de consulta](../../t-sql/queries/hints-transact-sql-query.md).     
-> Para fazer isso no nível do banco de dados, use a [configuração com escopo no banco de dados](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) do **MAXDOP**.      
-> Para fazer isso no nível de carga de trabalho, use a [opção de configuração de grupo de carga de trabalho do Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.      
+> Para fazer isso no nível do banco de dados, use a **configuração com escopo no banco de dados** do [MAXDOP](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).      
+> Para fazer isso no nível de carga de trabalho, use a **opção de configuração de grupo de carga de trabalho do Resource Governor** [MAX_DOP](../../t-sql/statements/create-workload-group-transact-sql.md).      
 
-###  <a name="Guidelines"></a> Diretrizes  
+###  <a name="guidelines"></a><a name="Guidelines"></a> Diretrizes  
 A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], durante a inicialização do serviço, se o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detectar mais de oito núcleos por nó NUMA ou soquete na inicialização, os nós soft-NUMA serão criados automaticamente por padrão. O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] coloca os processadores lógicos do mesmo núcleo físico em nós soft-NUMA diferentes. As recomendações na tabela a seguir visam manter todos os threads de trabalho de uma consulta paralela dentro do mesmo nó soft-NUMA. Isso melhorará o desempenho das consultas e a distribuição de threads de trabalho em todos os nós NUMA para a carga de trabalho. Para obter mais informações, veja [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
 
 A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use as seguintes diretrizes ao configurar o valor de configuração de servidor **grau máximo de paralelismo**:
@@ -81,12 +81,12 @@ Em [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] a [!INCLUDE[ssSQL14](../.
 |Servidor com vários nós NUMA|Menor ou igual a 8 processadores lógicos por nó NUMA|Manter MAXDOP com o mesmo número ou abaixo do número de processadores lógicos por nó NUMA|
 |Servidor com vários nós NUMA|Mais de 8 processadores lógicos por nó NUMA|Manter MAXDOP em 8|
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Permissões de execução sem parâmetros ou com apenas o primeiro parâmetro em **sp_configure** são concedidas a todos os usuários por padrão. Para executar **sp_configure** com ambos os parâmetros para alterar uma opção de configuração ou executar a instrução RECONFIGURE, o usuário deve ter a permissão ALTER SETTINGS no nível do servidor. A permissão ALTER SETTINGS é implicitamente mantida pelas funções de servidor fixas **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-configure-the-max-degree-of-parallelism-option"></a>Para configurar a opção max degree of parallelism  
   
@@ -96,7 +96,7 @@ Em [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] a [!INCLUDE[ssSQL14](../.
   
 3.  Na caixa **Grau Máximo de Paralelismo** , selecione o número máximo de processadores a serem usados na execução de plano paralelo.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-max-degree-of-parallelism-option"></a>Para configurar a opção max degree of parallelism  
   
@@ -121,7 +121,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção grau máximo de paralelismo  
+##  <a name="follow-up-after-you-configure-the-max-degree-of-parallelism-option"></a><a name="FollowUp"></a> Acompanhamento: depois de configurar a opção max degree of parallelism  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte Também  

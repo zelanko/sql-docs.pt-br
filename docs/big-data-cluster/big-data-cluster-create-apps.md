@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253155"
 ---
 # <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>Como implantar um aplicativo no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -46,7 +46,7 @@ Há suporte para os seguintes tipos de aplicativos:
 
 No SQL Server 2019, você pode criar, excluir, descrever, inicializar, listar, executar e atualizar seu aplicativo. A tabela a seguir descreve os comandos de implantação de aplicativos que você pode usar com o **azdata**.
 
-|Comando |Descrição |
+|Comando |DESCRIÇÃO |
 |:---|:---|
 |`azdata login` | Entrar em um cluster de Big Data do SQL Server |
 |`azdata app create` | Criar aplicativo. |

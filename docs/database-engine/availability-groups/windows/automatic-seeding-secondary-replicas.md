@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288540"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Usar a propagação automática para inicializar uma réplica secundária para um grupo de disponibilidade Always On
@@ -46,7 +46,7 @@ A propagação automática é um processo single-threaded que pode manipular at�
 
 A compactação pode ser usada para a propagação automática, mas ela está desabilitada por padrão. A ativação da compactação reduz a largura de banda de rede e, possivelmente, acelera o processo, mas a desvantagem é a sobrecarga adicional do processador. Para usar a compactação durante a propagação automática, habilite o sinalizador de rastreamento 9567 – consulte [Ajustar a compactação do grupo de disponibilidade](tune-compression-for-availability-group.md).
 
-## <a name = "disklayout"></a> Layout de disco
+## <a name="disk-layout"></a><a name = "disklayout"></a> Layout de disco
 
 No SQL Server 2016 e nas versões anteriores, a pasta na qual o banco de dados é criado pela propagação automática já deve existir e ser a mesma que a do caminho da réplica primária. 
 
@@ -109,7 +109,7 @@ Em uma instância que se torna uma réplica secundária, depois que a instância
 
 >A réplica de disponibilidade local do grupo de disponibilidade ‘AGName’ não recebeu permissão para criar bancos de dados, mas tem um `SEEDING_MODE` do `AUTOMATIC`. Use `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` para permitir a criação de bancos de dados propagados pela réplica de disponibilidade primária.
 
-### <a name = "grantCreate"></a> Conceder permissão para criar banco de dados na réplica secundária do grupo de disponibilidade
+### <a name="grant-create-database-permission-on-secondary-replica-to-availability-group"></a><a name = "grantCreate"></a> Conceder permissão para criar banco de dados na réplica secundária do grupo de disponibilidade
 
 Depois de ingressar, conceda permissão ao grupo de disponibilidade para criar bancos de dados na instância da réplica secundária do SQL Server. Para que a propagação automática funcione, o grupo de disponibilidade precisa ter permissão para criar um banco de dados. 
 
@@ -230,7 +230,7 @@ GO
 
 A tabela a seguir lista os eventos estendidos relacionados à propagação automática.
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|Mensagem de solicitação de propagação.|
 |hadr_physical_seeding_backup_state_change|Alteração de estado lateral de backup da propagação física.|

@@ -22,10 +22,10 @@ ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 67a62cc33877644f9feb6384c5d454b2cf30695b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76831801"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores com Gerenciamento Baseado em Políticas
@@ -48,7 +48,7 @@ Por exemplo, como o administrador de banco de dados, é recomendável garantir q
   
  Para as políticas com falha, o Pesquisador de Objetos indica um aviso de integridade crítica como um ícone vermelho ao lado do destino e dos nós superiores na árvore do Pesquisador de Objetos.  
   
-> **OBSERVAÇÃO:** Quando o sistema computar o objeto definido para uma política, por padrão os objetos do sistema serão excluídos.  Por exemplo, se o conjunto de objetos da política referenciar todas as tabelas, a política não se aplicará a tabelas do sistema. Se os usuários desejarem avaliar uma política em relação a objetos do sistema, eles poderão explicitamente adicionar objetos do sistema ao conjunto de objetos. Entretanto, embora todas as políticas tenham suporte para o modo de avaliação **verificação de agenda** , por questões de desempenho, nem todas as políticas com conjuntos de objetos arbitrários têm suporte para o modo de avaliação **verificação de alterações** . Para obter mais informações, consulte [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+> **OBSERVAÇÃO:** quando o sistema calcula o objeto definido para uma política, por padrão, os objetos do sistema são excluídos.  Por exemplo, se o conjunto de objetos da política referenciar todas as tabelas, a política não se aplicará a tabelas do sistema. Se os usuários desejarem avaliar uma política em relação a objetos do sistema, eles poderão explicitamente adicionar objetos do sistema ao conjunto de objetos. Entretanto, embora todas as políticas tenham suporte para o modo de avaliação **verificação de agenda** , por questões de desempenho, nem todas as políticas com conjuntos de objetos arbitrários têm suporte para o modo de avaliação **verificação de alterações** . Para obter mais informações, consulte [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="three-policy-based-management-components"></a>Três componentes do Gerenciamento Baseado em Políticas  
  O Gerenciamento Baseado em Políticas tem três componentes:  
@@ -117,6 +117,6 @@ Por exemplo, como o administrador de banco de dados, é recomendável garantir q
 
 ## <a name="see-also"></a>Confira também  
  
- - [Tutorial: Criar e aplicar uma política desativada por padrão](lesson-1-create-and-apply-an-off-by-default-policy.md)
- - [Tutorial: Criar e aplicar uma política de padrões de nomenclatura](lesson-2-create-and-apply-a-naming-standards-policy.md)
+ - [Tutorial: criar e aplicar uma política desativada por padrão](lesson-1-create-and-apply-an-off-by-default-policy.md)
+ - [Tutorial: criar e aplicar uma política de padrões de nomenclatura](lesson-2-create-and-apply-a-naming-standards-policy.md)
  - [Exibições de Gerenciamento Baseado em Políticas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  

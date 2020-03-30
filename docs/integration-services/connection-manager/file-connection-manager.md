@@ -20,10 +20,10 @@ ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6c2578e1f002878ade93551a5abc48dfd2144709
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294513"
 ---
 # <a name="file-connection-manager"></a>Gerenciador de conexões de arquivos
@@ -38,7 +38,7 @@ ms.locfileid: "71294513"
   
  A tabela a seguir lista os valores de **FileUsageType**.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**0**|O gerenciador de conexões de arquivos utiliza um arquivo existente.|  
 |**1**|O gerenciador de conexões de arquivos cria um arquivo.|  
@@ -79,7 +79,7 @@ ms.locfileid: "71294513"
  **Tipo de Uso**  
  Especifique se o **Gerenciador de Conexões de Arquivos** conecta a um arquivo ou pasta existente ou crie um novo arquivo ou pasta.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |Criar arquivo|Crie um novo arquivo em tempo de execução.|  
 |Arquivo existente|Use um arquivo existente.|  

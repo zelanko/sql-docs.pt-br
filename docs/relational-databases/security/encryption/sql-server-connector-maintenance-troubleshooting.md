@@ -13,10 +13,10 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557921"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Manutenção e solução de problemas do Conector do SQL Server
@@ -25,7 +25,7 @@ ms.locfileid: "75557921"
   Informações complementares sobre o Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] são fornecidos neste tópico. Para obter mais informações sobre o conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41; (Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Setup Steps for Extensible Key Management Using the Azure Key Vault (Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure)](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) e [Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL)](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
   
   
-##  <a name="AppendixA"></a> A. Instruções de manutenção do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+##  <a name="a-maintenance-instructions-for-ssnoversion-connector"></a><a name="AppendixA"></a> A. Instruções de manutenção do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 ### <a name="key-rollover"></a>Substituição de Chave  
   
@@ -94,7 +94,7 @@ ms.locfileid: "75557921"
     GO  
     ```  
   
-### <a name="upgrade-of-includessnoversionincludesssnoversion-mdmd-connector"></a>Atualização do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="upgrade-of-ssnoversion-connector"></a>Atualização do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 Versões 1.0.0.440 e anteriores foram substituídas e não têm mais suporte em ambientes de produção. Há suporte para versões 1.0.1.0 e mais recentes em ambientes de produção. Use as instruções a seguir para atualizar para a última versão disponível no [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=45344).
 
@@ -138,7 +138,7 @@ Se você estiver usando a Versão 1.0.0.440 ou mais antiga, siga estas etapas pa
   
 8.  Depois de validar que a atualização funciona, você poderá excluir a antiga pasta do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (se você optar por renomeá-la em vez de desinstalá-la na Etapa 3).  
   
-### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>Revertendo a Entidade de Serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="rolling-the-ssnoversion-service-principal"></a>Revertendo a Entidade de Serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa entidades de serviço criadas no Azure Active Directory como credenciais para acessar o Cofre de Chaves.  A entidade de serviço tem uma ID do Cliente e uma Chave de Autenticação.  Uma credencial do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é configurada com o **VaultName**, a **ID do cliente**e a **Chave de Autenticação**.  A **Chave de Autenticação** é válida por determinado período (um ou dois anos).   Antes do período de tempo expirar, uma nova chave deve ser gerada no Azure AD para a Entidade de Serviço.  Em seguida, a credencial deve ser alterada no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mantém um cache de credencial na sessão atual, portanto, quando uma credencial é alterada, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] deve ser reiniciado.  
   
 ### <a name="key-backup-and-recovery"></a>Backup e Recuperação de Chaves  
@@ -156,7 +156,7 @@ Resumindo, estas são as etapas:
 Backups de chaves podem ser restaurados em regiões do Azure, desde que eles permaneçam na mesma região geográfica ou nuvem nacional: EUA, Canadá, Japão, Austrália, Índia, APAC, Europa, Brasil, China, Governo dos EUA ou Alemanha.  
   
   
-##  <a name="AppendixB"></a> B. Perguntas frequentes  
+##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> B. Perguntas frequentes  
 ### <a name="on-azure-key-vault"></a>No Cofre de Chaves do Azure  
   
 **Como funcionam as operações de chave com o Cofre de Chaves do Azure?**  
@@ -165,7 +165,7 @@ Backups de chaves podem ser restaurados em regiões do Azure, desde que eles per
  **O que é um URI de chave?**  
  Cada chave no Cofre de Chaves do Azure tem um URI (Uniform Resource Identifier), que pode ser usado para fazer referência à chave em seu aplicativo. Use o formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` para obter a versão atual e use o formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` para obter uma versão específica.  
   
-### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>Em Configurando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="on-configuring-ssnoversion"></a>Em Configurando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 **Quais são os pontos de extremidade que o Conector do SQL Server precisa acessar?** O Conector se comunica com dois pontos de extremidade que precisam ser incluídos na lista de permissões. A única porta necessária para comunicação de saída a esses outros serviços é 443 para Https:
 -  login.microsoftonline.com/*:443
@@ -203,7 +203,7 @@ O Conector usa as definições de configuração de proxy do Internet Explorer. 
 
 Para saber mais sobre o Active Directory, leia [Como a assinatura do Azure está relacionada ao Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-how-subscriptions-associated-directory/)
   
-##  <a name="AppendixC"></a> C. Explicações de Código de Erro do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> C. Explicações de Código de Erro do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  **Códigos de erro do provedor:**  
   
 Código do erro  |Símbolo  |DESCRIÇÃO    

@@ -13,10 +13,10 @@ ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68083980"
 ---
 # <a name="open-log-file-viewer"></a>Abrir o Visualizador do Arquivo de Log
@@ -41,7 +41,7 @@ ms.locfileid: "68083980"
   
  Você pode abrir o Visualizador do Arquivo de Log de várias maneiras, dependendo das informações que você deseja exibir.  
   
-##  <a name="BeforeYouBegin"></a> Permissões  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permissões  
  Para acessar arquivos de log de instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão online, é necessária associação na função de servidor fixa securityadmin.  
   
  Para acessar arquivos de log de instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão offline, é necessário ter acesso de leitura no namespace do WMI **Root\Microsoft\SqlServer\ComputerManagement10** e na pasta em que os arquivos de log estão armazenados. Para obter mais informações, veja a seção Segurança do tópico [Exibir arquivos de log offline](../../relational-databases/logs/view-offline-log-files.md).  

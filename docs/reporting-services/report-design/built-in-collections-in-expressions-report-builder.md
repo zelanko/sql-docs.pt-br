@@ -9,24 +9,24 @@ ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73fcabfe163fce811b208861adbde97e4411300b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082201"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>Coleções internas em expressões (Construtor de Relatórios)
-  Em uma expressão de um relatório, você pode incluir referências às seguintes coleções internas: ReportItems, Parameters, Fields, DataSets, DataSources, Variables, além de campos internos para informações globais, como nome do relatório. Nem todas as coleções são exibidas na caixa de diálogo **Expressão** . As coleções de DataSets e DataSources estão disponíveis apenas em tempo de execução para relatórios publicados em um servidor de relatório. A coleção de ReportItems é a coleção de caixas de texto em uma região do relatório, por exemplo, as caixas de texto em uma página ou em um cabeçalho de página.  
+  Em uma expressão em um relatório, você pode incluir referências às seguintes coleções internas: ReportItems, Parâmetros, Campos, DataSets, DataSources, Variáveis e campos internos para informações globais, como o nome do relatório. Nem todas as coleções são exibidas na caixa de diálogo **Expressão** . As coleções de DataSets e DataSources estão disponíveis apenas em tempo de execução para relatórios publicados em um servidor de relatório. A coleção de ReportItems é a coleção de caixas de texto em uma região do relatório, por exemplo, as caixas de texto em uma página ou em um cabeçalho de página.  
   
  Para obter mais informações, consulte [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Collections"></a> Entendendo as coleções internas  
+##  <a name="understanding-built-in-collections"></a><a name="Collections"></a> Entendendo as coleções internas  
  A tabela a seguir lista as coleções internas disponíveis quando você escreve uma expressão. Cada linha inclui o nome programático que diferencia maiúsculas de minúsculas para a coleção, você puder usar a caixa de diálogo Expressão para adicionar uma referência interativamente à coleção, um exemplo e uma descrição que inclui quando os valores da coleção são inicializados e estão disponíveis para uso.  
   
-|Coleção interna|Categoria na caixa de diálogo Expressão|Exemplo|Descrição|  
+|Coleção interna|Categoria na caixa de diálogo Expressão|Exemplo|DESCRIÇÃO|  
 |--------------------------|-------------------------------------------|-------------|-----------------|  
 |**Variáveis globais**|Campos internos|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|Representa variáveis globais úteis para relatórios, como o nome do relatório ou o número da página. Sempre disponível.<br /><br /> Para obter mais informações, consulte [Referências de globais internas e referências de usuários &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
 |**Usuário**|Campos internos|`=User.UserID`<br /><br /> - ou -<br /><br /> `=User.Language`|Representa uma coleção de dados sobre o usuário que executa o relatório, como a configuração de idioma ou a ID de usuário. Sempre disponível.<br /><br /> Para obter mais informações, consulte [Referências de globais internas e referências de usuários &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
@@ -37,7 +37,7 @@ ms.locfileid: "77082201"
 |**Variáveis**|`Variables`|`=Variables!CustomTimeStamp.Value`|Representa a coleção de variáveis de relatório e variáveis de grupo. Para obter mais informações, consulte [Referências de coleções de variáveis de grupo e de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).|  
 |**ReportItems**|Não exibido|`=ReportItems("Textbox1").Value`|Representa a coleção de caixas de texto para um item de relatório. Essa coleção pode ser usada para resumir itens na página para inclusão em um cabeçalho ou rodapé de página. Para obter mais informações, consulte [Referências de coleções ReportItems &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md).|  
   
-##  <a name="Syntax"></a> Usando sintaxe de coleção em uma expressão  
+##  <a name="using-collection-syntax-in-an-expression"></a><a name="Syntax"></a> Usando sintaxe de coleção em uma expressão  
  Para fazer referência a uma coleção em uma expressão, use a sintaxe padrão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para um item em uma coleção. A tabela a seguir mostra exemplos de sintaxe de coleção.  
   
 |Sintaxe|Exemplo|  

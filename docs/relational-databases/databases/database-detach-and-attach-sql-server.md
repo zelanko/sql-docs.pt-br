@@ -28,10 +28,10 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287870"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Anexar e desanexar bancos de dados (SQL Server)
@@ -39,14 +39,14 @@ ms.locfileid: "79287870"
 Os dados e os arquivos de log de transações de um banco de dados podem ser desanexados e, em seguida, reanexados à mesma ou a outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Desanexar e anexar um banco de dados é útil se você deseja alterar o banco de dados a uma instância diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mesmo computador ou mover o banco de dados.  
   
   
-##  <a name="Security"></a> Segurança  
+##  <a name="security"></a><a name="Security"></a> Segurança  
 As permissões de acesso ao arquivo são definidas durante algumas operações de banco de dados, inclusive desanexar ou anexar um banco de dados.  
   
 > [!IMPORTANT]  
 > Não é recomendável anexar ou restaurar bancos de dados de origem desconhecida ou não confiável. Esses bancos de dados podem conter um código mal-intencionado que pode executar um código [!INCLUDE[tsql](../../includes/tsql-md.md)] inesperado ou provocar erros modificando o esquema ou a estrutura física do banco de dados.   
 > Antes de usar um banco de dados de origem desconhecida ou não confiável, execute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no banco de dados, em um servidor que não seja de produção. Além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  
   
-##  <a name="DetachDb"></a> Desanexando um banco de dados  
+##  <a name="detaching-a-database"></a><a name="DetachDb"></a> Desanexando um banco de dados  
 Desanexar um banco de dados remove-o da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mas deixa intacto o banco de dados, com seus arquivos de dados e arquivos de log de transações. Esses arquivos podem então ser usados para anexar o banco de dados a qualquer instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], inclusive o servidor do qual o banco de dados foi desanexado.  
   
 Você não poderá desanexar um banco de dados se alguma das seguintes opções for verdadeira:  
@@ -83,7 +83,7 @@ Os erros produzidos ao desanexar um banco de dados podem impedir que o banco de 
   
 3.  Desanexe o banco de dados novamente.  
   
-##  <a name="AttachDb"></a> Anexando um banco de dados  
+##  <a name="attaching-a-database"></a><a name="AttachDb"></a> Anexando um banco de dados  
 Você pode anexar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiado ou desanexado. Quando você anexa um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] que contém arquivos de catálogo de texto completo a uma instância de servidor do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , os arquivos de catálogo são anexados de seus locais anteriores junto com os outros arquivos de banco de dados, assim como ocorre no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obter mais informações, veja [Atualizar pesquisa de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  
   
 Quando você anexa um banco de dados, todos os arquivos de dados (arquivos MDF e NDF) devem estar disponíveis. Se algum arquivo de dados tiver um caminho diferente de quando o banco de dados foi inicialmente criado ou anexado pela última vez, você deverá especificar o caminho atual do arquivo.  
@@ -101,7 +101,7 @@ Quando um banco de dados criptografado é anexado primeiro a uma instância do [
   
 -   Se o arquivo de dados primário que está sendo anexado for somente leitura, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] presumirá que o banco de dados é somente leitura. Para um banco de dados somente leitura, o arquivo ou arquivos de log devem estar disponíveis no local especificado no arquivo primário do banco de dados. Um novo arquivo de log não pode ser criado porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode atualizar o local de log armazenado no arquivo primário.  
  
-###  <a name="Metadata"></a> Alterações de metadados na anexação de um banco de dados  
+###  <a name="metadata-changes-on-attaching-a-database"></a><a name="Metadata"></a> Alterações de metadados na anexação de um banco de dados  
 Quando um banco de dados somente leitura é desanexado e reanexado, as informações de backup sobre a base diferencial atual são perdidas. A *base diferencial* é o backup completo mais recente de todos os dados no banco de dados ou em um subconjunto dos arquivos ou de grupos de arquivos do banco de dados. Sem a informações de backup de base, o banco de dados **master** se torna não sincronizado com o banco de dados somente leitura, portanto backups diferenciais utilizados posteriormente podem fornecer resultados inesperados. Portanto, se você estiver usando backups diferenciais com um banco de dados somente leitura, deverá estabelecer uma nova base diferencial obtendo um backup completo após reanexar o banco de dados. Para obter informações sobre backups diferenciais, veja [Backups diferenciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
 Na anexação, ocorre inicialização do banco de dados. Geralmente, a anexação de um banco de dados coloca-o no mesmo estado em que estava quando foi desanexado ou copiado. No entanto, as operações de anexação e desanexação desabilitam o encadeamento de propriedades de bancos de dados para o banco de dados. Para obter informações sobre como habilitar o encadeamento, veja [Opção cross db ownership chaining de configuração de servidor](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). 
@@ -112,14 +112,14 @@ Na anexação, ocorre inicialização do banco de dados. Geralmente, a anexaçã
 ### <a name="backup-and-restore-and-attach"></a>Backup e restauração e anexação  
 Como qualquer banco de dados que esteja offline total ou parcialmente, um banco de dados com arquivos de restauração não pode ser anexado. Se você interromper a sequência de restauração, poderá anexar o banco de dados. Em seguida, você poderá reiniciar a sequência de restauração.  
   
-###  <a name="OtherServerInstance"></a> Anexando um banco de dados a outra instância do servidor  
+###  <a name="attaching-a-database-to-another-server-instance"></a><a name="OtherServerInstance"></a> Anexando um banco de dados a outra instância do servidor  
   
 > [!IMPORTANT]  
 > Um banco de dados criado por uma versão mais recente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode ser anexado em versões anteriores. Isso impede o banco de dados seja usado fisicamente com uma versão anterior do [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. No entanto, isso se relaciona com o estado dos metadados e não afeta o [nível de compatibilidade do banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).   
   
 Quando você anexa um banco de dados a outra instância do servidor, para oferecer uma experiência consistente aos usuários e aplicativos, talvez precise recriar alguns ou todos os metadados para o banco de dados, como logons e trabalhos, na outra instância de servidor. Para obter mais informações, veja [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
 **Para desanexar um banco de dados**  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  

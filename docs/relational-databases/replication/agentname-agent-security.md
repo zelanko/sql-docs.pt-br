@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 039ec0c4401bc9748e1fa04fe89bcb69f055270c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288146"
 ---
 # <a name="ltagentnamegt-agent-security"></a>Segurança do Agente &lt;AgentName&gt;
@@ -35,23 +35,23 @@ ms.locfileid: "76288146"
  **Conexão com o Distribuidor**  
  Exibido para replicação de instantâneo e transacional. O contexto no qual a conexão com o Distribuidor é feita. Conexões locais sempre são feitas usando o contexto de conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows no qual o agente executa:  
   
--   Para assinaturas push, a conexão local é a conexão com o Distribuidor, portanto, esse campo sempre exibirá: **Representar '\<Domínio>\\<Logon\>'** ou **Representar '\<Computador>\\<Logon\>'** para assinatura push.  
+-   Para assinaturas por push, a conexão local é a conexão ao Distribuidor, portanto, esse campo sempre exibirá: **Representar '\<Domain>\\<Login\>'** ou **Representar '\<Computer>\\<Login\>'** para assinaturas por push.  
   
--   Para assinaturas pull, a conexão pode ser feita também no contexto de um logon [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O campo exibe uma das opções a seguir: **Use logon '\<Logon>'** , **Representar '\<Domínio>\\<Logon\>'** ou **Representar '\<Computador>\\<Logon\>'** . A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que todas as conexões sejam feitas com o uso do contexto da conta do Windows.  
+-   Para assinaturas pull, a conexão pode ser feita também no contexto de um logon [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O campo exibe uma das seguintes opções: **Usar logon '\<Login>'** , **Representar '\<Domain>\\<Login\>'** ou **Representar '\<Computer>\\<Login\>'** . A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que todas as conexões sejam feitas com o uso do contexto da conta do Windows.  
   
  **Conexão com o Publicador e Distribuidor**  
  Exibido para replicação de mesclagem. O contexto no qual as conexões com o Publicador e o Distribuidor são feitas. Conexões locais sempre são feitas usando o contexto da conta do Windows na qual o agente é executado:  
   
--   Para assinaturas push, a conexão local é a conexão com o Editor e o Distribuidor, portanto, esse campo sempre exibirá: **Representar '\<Domínio>\\<Logon\>'** ou **Representar '\<Computador>\\<Logon\>'** para assinatura push.  
+-   Para assinaturas por push, a conexão local é a conexão com o Publicador e o Distribuidor, portanto, esse campo sempre exibirá: **Representar '\<Domain>\\<Login\>'** ou **Representar '\<Computer>\\<Login\>'** para assinaturas por push.  
   
--   Para assinaturas pull, a conexão pode ser feita também no contexto de um logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O campo exibe uma das opções a seguir: **Use logon '\<Logon>'** , **Representar '\<Domínio>\\<Logon\>'** ou **Representar '\<Computador>\\<Logon\>'** . A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que todas as conexões sejam feitas com o uso do contexto da conta do Windows.  
+-   Para assinaturas pull, a conexão pode ser feita também no contexto de um logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O campo exibe uma das seguintes opções: **Usar logon '\<Login>'** , **Representar '\<Domain>\\<Login\>'** ou **Representar '\<Computer>\\<Login\>'** . A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que todas as conexões sejam feitas com o uso do contexto da conta do Windows.  
   
  **Conexão com o Assinante**  
  O contexto no qual a conexão com o Assinante é feita. Conexões locais sempre são feitas usando o contexto da conta do Windows na qual o agente é executado:  
   
--   Para assinaturas pull, a conexão local é a conexão com o Assinante, portanto, esse campo sempre exibirá: **Representar '\<Domínio>\\<Logon\>'** ou **Representar '\<Computador>\\<Logon\>'** para assinatura push.  
+-   Para assinaturas pull, a conexão local é a conexão com o Assinante, portanto, esse campo sempre exibirá: **Representar '\<Domain>\\<Login\>'** ou '**Representar '\<Computer>\\<Login\>'** para assinaturas por push.  
   
--   Para assinaturas push, a conexão pode ser feita também no contexto de um logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O campo exibe uma das opções a seguir: **Use logon '\<Logon>'** , **Representar '\<Domínio>\\<Logon\>'** ou **Representar '\<Computador>\\<Logon\>'** . A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que todas as conexões sejam feitas com o uso do contexto da conta do Windows.  
+-   Para assinaturas push, a conexão pode ser feita também no contexto de um logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O campo exibe uma das seguintes opções: **Usar logon '\<Login>'** , **Representar '\<Domain>\\<Login\>'** ou **Representar '\<Computer>\\<Login\>'** . A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que todas as conexões sejam feitas com o uso do contexto da conta do Windows.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar propriedades de assinatura pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   

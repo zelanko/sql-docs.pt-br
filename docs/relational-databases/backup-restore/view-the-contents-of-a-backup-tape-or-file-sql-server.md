@@ -18,10 +18,10 @@ ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0a84dc069bbd6472434b79a0f3d7bf5fe1e1e220
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75255661"
 ---
 # <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>Exibir o conteúdo de um arquivo ou fita de backup (SQL Server)
@@ -44,15 +44,15 @@ ms.locfileid: "75255661"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  Para obter informações sobre segurança, veja [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões posteriores, a obtenção de informações sobre um conjunto ou dispositivo de backup exige a permissão CREATE DATABASE. Para obter mais informações, veja [GRANT Database Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-view-the-content-of-a-backup-tape-or-file"></a>Para exibir o conteúdo de um arquivo ou fita de backup  
   
@@ -70,7 +70,7 @@ ms.locfileid: "75255661"
   
 6.  O painel direito exibe informações sobre o conjunto de mídias definido e conjuntos de backup no arquivo ou fita selecionado.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-the-content-of-a-backup-tape-or-file"></a>Para exibir o conteúdo de um arquivo ou fita de backup  
   

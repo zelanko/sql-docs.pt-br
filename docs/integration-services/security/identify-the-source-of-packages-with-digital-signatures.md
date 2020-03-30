@@ -19,10 +19,10 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295700"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identificar a origem dos pacotes com assinaturas digitais
@@ -47,7 +47,7 @@ ms.locfileid: "71295700"
   
 > **OBSERVAÇÃO:** o valor opcional do registro **BlockedSignatureStates** pode especificar uma configuração mais restritiva do que a opção de assinatura digital definida no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou na linha de comando do **dtexec** . Nesta situação, a configuração de Registro mais restritiva substitui as outras configurações.  
 
-## <a name="registry"></a> Implementar uma política de assinatura por meio da configuração de um valor do Registro
+## <a name="implement-a-signing-policy-by-setting-a-registry-value"></a><a name="registry"></a> Implementar uma política de assinatura por meio da configuração de um valor do Registro
   Você pode usar um valor opcional do Registro para gerenciar uma política da organização para carregar pacotes assinados ou não assinados. Se você usar o valor do Registro, será preciso criar esse valor em cada computador em que os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] serão executados e no qual deseja aplicar a política. Depois que o valor do Registro tiver sido definido, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verificará as assinaturas antes de carregar pacotes.  
   
  Esse procedimento deste tópico descreve como adicionar o valor opcional **BlockedSignatureStates** DWORD para a chave do Registro HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS. Os valores de dados no **BlockedSignatureStates** determinam se um pacote deverá ser bloqueado se tiver uma assinatura não confiável, uma assinatura inválida ou não esteja assinado. Com relação ao status das assinaturas usadas para assinar os pacotes, o valor do Registro **BlockedSignatureStates** usa as seguintes definições:  
@@ -92,7 +92,7 @@ ms.locfileid: "71295700"
   
 9. No menu **Arquivo** , clique em **Sair**.    
 
-## <a name="cert"></a> Assinar um pacote por meio de um certificado digital
+## <a name="sign-a-package-by-using-a-digital-certificate"></a><a name="cert"></a> Assinar um pacote por meio de um certificado digital
   Este tópico descreve como assinar um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com um certificado digital. Você pode usar uma assinatura digital, junto com outras configurações, para evitar o carregamento e a execução de um pacote inválido.  
   
  Antes de poder assinar um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , você deve realizar as seguintes tarefas:  
@@ -137,7 +137,7 @@ ms.locfileid: "71295700"
   
      Embora o pacote tenha sido assinado, é necessário configurar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para verificar a assinatura digital antes de carregar o pacote.  
 
-## <a name="signing_dialog"></a> Referência da interface do usuário da caixa de diálogo Assinatura Digital
+## <a name="digital-signing-dialog-box-ui-reference"></a><a name="signing_dialog"></a> Referência da interface do usuário da caixa de diálogo Assinatura Digital
   Use a caixa de diálogo **Assinatura Digital** para assinar um pacote com uma assinatura digital ou remover a assinatura. A caixa de diálogo **Assinatura Digital** está disponível na opção **Assinatura Digital** do menu **SSIS** no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Para saber mais, veja [Assinar um pacote por meio de um certificado digital](#cert).  

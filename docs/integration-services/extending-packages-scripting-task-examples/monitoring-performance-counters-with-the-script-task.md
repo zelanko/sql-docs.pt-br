@@ -20,10 +20,10 @@ ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ed4bca496d48e5fe268c1a425223fe03c8fcc6e7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297035"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>Monitorando contadores de desempenho com a tarefa Script
@@ -40,7 +40,7 @@ ms.locfileid: "71297035"
 > [!NOTE]  
 >  Se desejar criar uma tarefa mais fácil de ser reutilizada em vários pacotes, procure utilizar o código desse exemplo de tarefa Script como o ponto inicial de uma tarefa personalizada. Para obter mais informações, consulte [Desenvolvendo uma tarefa personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  O exemplo a seguir cria um contador de desempenho personalizado e incrementa o contador. Primeiro, o exemplo determina se o contador de desempenho já existe. Se o contador de desempenho não tiver sido criado, o script chamará o método **Create** do objeto **PerformanceCounterCategory** para criá-lo. Depois que o contador de desempenho for criado, o script irá incrementá-lo. Por fim, o exemplo adota a prática ideal de chamar o método **Close** no contador de desempenho quando ele não é mais necessário.  
   
 > [!NOTE]  

@@ -11,10 +11,10 @@ ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04cbe39698a99fbde43043b70bb9b1f0e5887f58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977005"
 ---
 # <a name="jdbc-driver-api-reference"></a>Referência de API do JDBC Driver
@@ -71,7 +71,7 @@ A documentação da versão 6.0 do JDBC e algumas versões posteriores também e
 
 ## <a name="interfaces"></a>Interfaces  
   
-|Nome da Interface|Descrição|  
+|Nome da Interface|DESCRIÇÃO|  
 |--------------------|-----------------|  
 |[Interface ISQLServerCallableStatement](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|Permite especificar o nome do procedimento armazenado para chamar juntamente com os parâmetros de entrada e saída.|  
 |[Interface ISQLServerConnection](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|Representa uma conexão JDBC com um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
@@ -85,7 +85,7 @@ A documentação da versão 6.0 do JDBC e algumas versões posteriores também e
   
 ## <a name="classes"></a>Classes  
   
-|Nome da Classe|Descrição|  
+|Nome da Classe|DESCRIÇÃO|  
 |----------------|-----------------|  
 |[DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)|Representa um objeto do tipo microsoft.sql.DateTimeOffset.|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)|Representa um BLOB (objeto binário grande).|  

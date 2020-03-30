@@ -16,10 +16,10 @@ ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 08bc847d6b3bffe57df7fc0c70be622365f156d0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710863"
 ---
 # <a name="optimize-parameterized-row-filters"></a>Otimizar filtros de linha com parâmetros
@@ -38,15 +38,15 @@ ms.locfileid: "71710863"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Quando você usar filtros com parâmetros, será possível controlar como os filtros serão processados pela replicação de mesclagem, especificando a opção **use partition groups** ou a opção **keep partition changes** ao criar uma publicação. Essas opções melhoram o desempenho de sincronização para publicações com artigos filtrados, armazenando metadados adicionais no banco de dados de publicação. Você pode controlar como os dados serão compartilhados entre Assinantes definindo as **opções de partição** ao criar um artigo. Para obter mais informações sobre esses requisitos, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
      Com os assinantes do [!INCLUDE[ssEW](../../../includes/ssew-md.md)]SQL Server Compact, keep_partition_changes deve ser definido como true para assegurar que as exclusões sejam propagadas corretamente. Quando definido como falso, o assinante pode ter mais linhas do que o esperado.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  As configurações seguintes podem ser usadas para aperfeiçoar filtros de linha com parâmetros:  
   
  **Partition Options**  
@@ -116,7 +116,7 @@ ms.locfileid: "71710863"
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Para definições sobre as opções de filtragem de `@keep_partition_changes` e `@use_partition_groups`, consulte [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>Para especificar otimizações de filtro de mesclagem ao criar uma nova publicação  

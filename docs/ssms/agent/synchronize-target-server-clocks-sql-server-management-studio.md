@@ -19,10 +19,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7fa715d0df6c94630564ede8a162a940542d7510
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257906"
 ---
 # <a name="synchronize-target-server-clocks"></a>Sincronizar os relógios dos servidores alvo
@@ -34,14 +34,14 @@ ms.locfileid: "75257906"
 
 Este tópico descreve como sincronizar os relógios dos servidores de destino no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] com o relógio do servidor mestre usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Sincronizar esses relógios do sistema dá suporte às agendas de trabalho.  
 
-## <a name="BeforeYouBegin"></a>Antes de começar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de começar  
   
-### <a name="Security"></a>Segurança  
+### <a name="security"></a><a name="Security"></a>Segurança  
   
-#### <a name="Permissions"></a>Permissões  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissões  
 Exige associação à função de servidor fixa **sysadmin** .  
   
-## <a name="SSMSProcedure"></a>Usando o SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Usando o SQL Server Management Studio  
   
 #### <a name="to-synchronize-target-server-clocks"></a>Para sincronizar os relógios dos servidores de destino  
   
@@ -61,7 +61,7 @@ Exige associação à função de servidor fixa **sysadmin** .
   
 6.  Quando terminar, clique em **OK**.  
   
-## <a name="TsqlProcedure"></a>Usando Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Usando Transact-SQL  
   
 #### <a name="to-synchronize-target-server-clocks"></a>Para sincronizar os relógios dos servidores de destino  
   

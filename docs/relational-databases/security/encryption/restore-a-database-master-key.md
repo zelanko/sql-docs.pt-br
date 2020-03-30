@@ -12,10 +12,10 @@ ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: cf48b449fc10f0f6837c86768878a77f0727594f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957352"
 ---
 # <a name="restore-a-database-master-key"></a>Restaurar uma chave mestra de banco de dados

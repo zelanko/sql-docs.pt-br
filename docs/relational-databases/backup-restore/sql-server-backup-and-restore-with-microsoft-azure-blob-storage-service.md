@@ -11,10 +11,10 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251130"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure
@@ -35,7 +35,7 @@ ms.locfileid: "75251130"
   
 -   **Deixe o SQL Server gerenciar os backups para o Microsoft Azure:** configure o SQL Server para gerenciar a estratégia de backup e agendar backups para um único banco de dados ou vários bancos de dados, ou defina valores padrão no nível da instância. Esse recurso é conhecido como **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** . Para obter mais informações, veja [Backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md). Esse recurso está disponível no SQL Server 2014 ou posterior.  
   
-## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>Benefícios do uso do serviço Blob do Microsoft Azure para backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-ssnoversion-backups"></a>Benefícios do uso do serviço Blob do Microsoft Azure para backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Armazenamento externo flexível, confiável e ilimitado: armazenar os backups no serviço Blob do Microsoft Azure pode ser uma opção conveniente, flexível e de fácil acesso externo. Criar o armazenamento externo para backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser tão fácil quanto modificar scripts/trabalhos existentes. O armazenamento externo deve estar, normalmente, distante o suficiente do local do banco de dados de produção para evitar um único desastre que possa afetar os locais dos bancos de dados externo e de produção. Ao optar por replicar geograficamente o armazenamento de Blob, você terá uma camada adicional de proteção caso ocorra algum desastre que possa afetar a região inteira. Além disso, os backups estão disponíveis em qualquer lugar e a qualquer momento, e podem ser facilmente acessados para restaurações.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "75251130"
   
 -   Benefícios do custo: pague apenas pelo serviço utilizado. Pode ser tão econômico quanto uma opção de arquivamento externo e de backup. Consulte a seção [Considerações sobre cobrança do Microsoft Azure](#Billing) para obter mais informações e links.  
   
-##  <a name="Billing"></a> Considerações sobre cobrança do Microsoft Azure:  
+##  <a name="microsoft-azure-billing-considerations"></a><a name="Billing"></a> Considerações sobre cobrança do Microsoft Azure:  
  Compreender os custos de armazenamento do Microsoft Azure habilita você a fazer uma previsão do custo da criação e do armazenamento de backups no Microsoft Azure.  
   
  A [calculadora de preços do Microsoft Azure](https://go.microsoft.com/fwlink/?LinkId=277060) pode ajudar a estimar os custos.  

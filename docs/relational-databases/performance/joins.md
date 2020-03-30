@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287470"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
@@ -35,7 +35,7 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emprega quatro tipos
 -   Junções de hash   
 -   Junções adaptáveis (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
 
-## <a name="fundamentals"></a> Conceitos básicos de junção
+## <a name="join-fundamentals"></a><a name="fundamentals"></a> Conceitos básicos de junção
 Usando junções, é possível recuperar dados de duas ou mais tabelas com base em relações lógicas entre as tabelas. Junções indicam como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deveria usar dados de uma tabela para selecionar as linhas em outra tabela.    
 
 Uma condição de junção define o modo como duas tabelas são relacionadas em uma consulta por:    
@@ -108,7 +108,7 @@ A maioria das consultas que usam uma junção pode ser regravada usando uma subc
 > Por exemplo, `SELECT * FROM t1 JOIN t2 ON SUBSTRING(t1.textcolumn, 1, 20) = SUBSTRING(t2.textcolumn, 1, 20)` executa uma junção interna de duas tabelas nos primeiros 20 caracteres de cada coluna de texto em tabelas t1 e t2.   
 > Além disso, outra possibilidade de comparação das colunas ntext ou text de duas tabelas é comparar o comprimento das colunas com a cláusula `WHERE`, por exemplo: `WHERE DATALENGTH(p1.pr_info) = DATALENGTH(p2.pr_info)`
 
-## <a name="nested_loops"></a> Compreendendo junções de Loops Aninhados
+## <a name="understanding-nested-loops-joins"></a><a name="nested_loops"></a> Compreendendo junções de Loops Aninhados
 Se uma entrada de junção for pequena (menos que 10 linhas) e a outra entrada de junção for bastante grande e indexada a suas colunas de junção, uma junção de loops aninhados de índice será a operação de junção mais rápida porque eles requerem o mínimo de E/S e comparações. 
 
 A junção de loops aninhados, também denominada *iteração aninhada*, usa uma entrada de junção como a tabela de entrada externa (mostrada como a entrada superior no plano de execução) e outra como a tabela de entrada interna (na parte inferior). O loop externo consome a tabela de entrada externa linha por linha. O loop interno, executado para cada linha externa, pesquisa linhas correspondentes na tabela de entrada interna.   
@@ -119,7 +119,7 @@ Uma junção de loops aninhados será particularmente eficaz se a entrada extern
 
 Quando o atributo OPTIMIZED de um Operador de junção de loops aninhados é definido como **True**, isso significa que um Loop aninhado otimizado (ou Classificação em lote) é usado para minimizar a E/S quando a tabela de lado interno é grande, independentemente de ser paralelizada ou não. A presença dessa otimização em um determinado plano pode não ser muito óbvia durante a análise de um plano de execução, uma vez que a própria classificação é uma operação oculta. Mas ao examinar o XML do plano para o atributo OPTIMIZED, isso indica que a Junção de loops aninhados pode tentar reordenar as linhas de entrada para melhorar o desempenho de E/S.
 
-## <a name="merge"></a> Compreendendo Junções de Mesclagem
+## <a name="understanding-merge-joins"></a><a name="merge"></a> Compreendendo Junções de Mesclagem
 Se as duas entradas de junção não são pequenas, mas são classificadas na coluna de junção (por exemplo, se foram obtidas de exames em índices classificados), uma junção de mesclagem será a operação de junção mais rápida. Se ambas as entradas de junção forem grandes e as duas entradas forem de tamanhos semelhantes, uma junção de mesclagem com classificação prévia e uma junção de hash oferecerão desempenho semelhante. Porém, operações de junção de hash são muitas vezes mais rápidas quando os dois tamanhos da entrada diferem significativamente um do outro.       
 
 A junção de mescla exige que as duas entradas sejam classificadas nas colunas de mesclagem, que são definidas pelas cláusulas de igualdade (ON) do predicado de junção. O otimizador de consulta geralmente examina um índice, caso exista um no conjunto de colunas, ou coloca um operador de classificação abaixo da junção de mescla. Em casos raros, podem existir diversas cláusulas de igualdade, mas as colunas de mesclagem são tiradas somente de algumas das cláusulas de igualdade disponíveis.    
@@ -132,7 +132,7 @@ Se houver um predicado residual presente, todas as linhas que satisfaçam ao pre
 
 A junção de mescla é muito rápida, mas pode ser uma escolha cara se forem necessárias operações de classificação. Porém, se o volume de dados for grande e os dados desejados puderem ser obtidos pré-classificados de índices da árvore B existentes, frequentemente a junção de mescla será o algoritmo de junção mais rápido disponível.    
 
-## <a name="hash"></a> Compreendendo junções hash
+## <a name="understanding-hash-joins"></a><a name="hash"></a> Compreendendo junções hash
 Junções de hash podem processar com eficácia grande volume de entradas não classificadas e não indexadas. Elas são úteis para resultados intermediários em consultas complexas por que:
 -   Os resultados intermediários não são indexados (a menos que salvos explicitamente no disco e depois indexados) e muitas vezes não são classificados adequadamente para a próxima operação no plano de consulta.
 -   Otimizadores de consulta só calculam tamanhos de resultado intermediário. Como as estimativas podem ser muito imprecisas para consultas complexas, os algoritmos para processar resultados intermediários não só devem ser eficientes, mas também devem ser degradados de forma suave se um resultado intermediário for muito maior do que o previsto.   
@@ -145,13 +145,13 @@ Junções de hash são usadas para muitos tipos de operações para definir corr
 
 As seções seguintes descrevem tipos diferentes de junções de hash: junção de hash em-memória, junção de hash de cortesia e junção de hash recursiva.    
 
-### <a name="inmem_hash"></a> Junção hash em memória
+### <a name="in-memory-hash-join"></a><a name="inmem_hash"></a> Junção hash em memória
 A junção de hash primeiro verifica ou calcula a entrada de construção inteira e então constrói uma tabela de hash em memória. Cada linha é inserida em um compartimento de memória hash que depende do valor de hash computado para a chave hash. Se a entrada de construção inteira for menor que a memória disponível, todas as linhas poderão ser inseridas na tabela de hash. Essa fase de construção é seguida pela fase de investigação. A entrada de investigação inteira é verificada ou calculada uma linha de cada vez e o valor da chave de hash é calculado para cada linha de investigação, o compartimento de hash correspondente é verificado e as correspondências são produzidas.    
 
-### <a name="grace_hash"></a> Junção hash de cortesia
+### <a name="grace-hash-join"></a><a name="grace_hash"></a> Junção hash de cortesia
 Se a entrada de construção não couber na memória, uma junção de hash continua em vários passos. Isso é conhecido como uma junção hash de cortesia. Cada passo tem uma fase de construção e fase de investigação. Inicialmente, a construção inteira e entradas de investigação são consumidas e particionadas (usando uma função de hash na chave hash) em arquivos múltiplos. Usando a função de hash nas chaves de hash garante que quaisquer dois registros de junção devem estar no mesmo par de arquivos. Portanto, a tarefa de unir duas entradas grandes foi reduzida a instâncias múltiplas, mas menores, das mesmas tarefas. A junção de hash é se aplicada então a cada par de arquivos particionados.    
 
-### <a name="recursive_hash"></a> Junção hash recursiva
+### <a name="recursive-hash-join"></a><a name="recursive_hash"></a> Junção hash recursiva
 Se a entrada de construção for tão grande que entradas para uma fusão externa padrão requereriam níveis de fusão múltiplos, serão requeridos passos de particionamentos múltiplos e níveis de particionamentos múltiplos. Se somente algumas das partições forem grandes, passos de particionamentos adicionais serão usados apenas para essas partições específicas. Para fazer todos os passos de particionamento tão rápido quanto possível, operações grandes, assíncronas de I/O são usadas de forma que um único thread pode manter unidades de disco múltiplas ocupadas.    
 
 > [!NOTE]
@@ -164,7 +164,7 @@ Se o Otimizador de Consulta prever incorretamente qual das duas entradas será m
 > [!NOTE]
 > A reversão de papel acontece independente de qualquer dica de consulta ou estrutura. A reversão de papel não aparecerá em seu plano de consulta; quando acontecer, é transparente ao usuário.
 
-### <a name="hash_bailout"></a> Esgotamento de hash
+### <a name="hash-bailout"></a><a name="hash_bailout"></a> Esgotamento de hash
 O termo de esgotamento de hash às vezes é usado para descrever junções hash de cortesia ou junções hash recursivas.    
 
 > [!NOTE]
@@ -172,7 +172,7 @@ O termo de esgotamento de hash às vezes é usado para descrever junções hash 
 
 Para obter mais informações sobre esgotamento de hash, veja [Classe de evento de aviso de Hash](../../relational-databases/event-classes/hash-warning-event-class.md).    
 
-## <a name="adaptive"></a> Como são as junções adaptáveis
+## <a name="understanding-adaptive-joins"></a><a name="adaptive"></a> Como são as junções adaptáveis
 As Junções adaptáveis de [Modo de lote](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) permitem a escolha de um método de [Junção Hash](#hash) ou de [Junção de loops aninhados](#nested_loops) a ser adiado até **depois** que a primeira entrada for verificada. O operador de Junção Adaptável define um limite que é usado para decidir quando mudar para um plano de Loops aninhados. Portanto, um plano de consulta pode alternar dinamicamente para uma estratégia de junção melhor durante a execução sem precisar ser recompilado. 
 
 > [!TIP]
@@ -229,7 +229,7 @@ Se uma Junção Adaptável alterna para uma operação de Loops Aninhados, ela u
 ### <a name="tracking-adaptive-join-activity"></a>Controlando a atividade da Junção adaptável
 O operador de Junção Adaptável tem os seguintes atributos de operador de plano:
 
-|Atributo de plano|Descrição|
+|Atributo de plano|DESCRIÇÃO|
 |---|---|
 |AdaptiveThresholdRows|Mostra o uso de limite para alternar de uma junção hash para uma junção de loops aninhados.|
 |EstimatedJoinType|Qual é o provável tipo de junção.|
@@ -291,7 +291,7 @@ OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS'));
 > [!NOTE]
 > Uma dica de consulta USE HINT tem precedência sobre uma configuração de escopo do banco de dados ou uma configuração de sinalizador de rastreamento. 
 
-## <a name="nulls_joins"></a> Valores nulos e junções
+## <a name="null-values-and-joins"></a><a name="nulls_joins"></a> Valores nulos e junções
 Quando há valores nulos nas colunas de tabelas sendo associadas, eles não correspondem uns aos outros. A presença de valores nulos em uma coluna de uma das tabelas que estão sendo associadas pode ser retornada apenas usando uma junção externa (a menos que a cláusula `WHERE` exclua valores nulos).     
 
 Veja duas tabelas que contêm NULL na coluna que participará da junção:     

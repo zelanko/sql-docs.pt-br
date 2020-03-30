@@ -16,10 +16,10 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76516536"
 ---
 # <a name="rebuild-system-databases"></a>Recriar bancos de dados do sistema
@@ -46,12 +46,12 @@ ms.locfileid: "76516536"
   
      [Solução de problemas de erros de recriação](#Troubleshoot)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  Quando os bancos de dados do sistema mestre, modelo, msdb e tempdb são recriados, os bancos de dados são descartados e recriados em seu local original. Se uma ordenação nova for especificada na instrução REBUILD, os bancos de dados do sistema serão criados usando essa configuração de ordenação. Todas as modificações do usuário nesses bancos de dados são perdidas. Por exemplo, você pode ter objetos definidos pelo usuário no banco de dados mestre, trabalhos agendados no msdb ou alterações nas configurações padrão do banco de dados modelo.  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Execute as tarefas a seguir antes de recriar os bancos de dados do sistema para garantir que os bancos de dados possam ser restaurados para suas configurações atuais.  
   
 1.  Registre todos os valores de configuração em todo o servidor.  
@@ -87,7 +87,7 @@ ms.locfileid: "76516536"
   
 7.  Verifique se as cópias dos arquivos de log modelo do mestre, do modelo e do msdb existem no servidor local. O local padrão dos arquivos de modelo é C:\Arquivos de Programas\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Templates. Esses arquivos são usados durante o processo de recriação e devem estar presentes para que a Instalação tenha êxito. Se eles estiverem ausentes, execute o recurso de Instalação Reparar ou copie os arquivos manualmente da mídia de instalação. Para localizar os arquivos na mídia de instalação, navegue até o diretório da plataforma adequada (x86 ou x64) e, em seguida, navegue até setup\sql_engine_core_inst_msi\Pfiles\SqlServr\MSSQL.X\MSSQL\Binn\Templates.  
   
-##  <a name="RebuildProcedure"></a> Recriar bancos de dados do sistema  
+##  <a name="rebuild-system-databases"></a><a name="RebuildProcedure"></a> Recriar bancos de dados do sistema  
  O procedimento a seguir recria os bancos de dados do sistema mestre, modelo, msdb e tempdb. Você não pode especificar os bancos de dados do sistema que devem ser recriados. Para instâncias clusterizadas, esse procedimento deve ser executado no nó ativo, e o recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no grupo de aplicativos de cluster correspondente deve estar offline antes da execução do procedimento.  
   
  Esse procedimento não recria o banco de dados de recursos. Consulte a seção, "Procedimento de recriação do banco de dados de recursos" mais adiante neste tópico.  
@@ -100,21 +100,21 @@ ms.locfileid: "76516536"
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName /SQLSYSADMINACCOUNTS=accounts [ /SAPWD= StrongPassword ] [ /SQLCOLLATION=CollationName]**  
   
-    |Nome do parâmetro|Descrição|  
+    |Nome do parâmetro|DESCRIÇÃO|  
     |--------------------|-----------------|  
     |/QUIET ou /Q|Especifica que a Instalação é executada sem nenhuma interface do usuário.|  
     |/ACTION=REBUILDDATABASE|Especifica que Instalação recria os bancos de dados do sistema.|  
     |/INSTANCENAME=*InstanceName*|É o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para a instância padrão, digite MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS =*contas*|Especifica os grupos ou contas individuais do Windows a serem adicionados à função de servidor fixa **sysadmin** . Ao especificar mais de uma conta, separe as contas com um espaço em branco. Por exemplo, digite **BUILTIN\Administrators MyDomain\MyUser**. Quando você estiver especificando uma conta que contém um espaço em branco dentro do nome de conta, coloque a conta entre aspas duplas. Por exemplo, digite **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*StrongPassword* ]|Especifica a senha da conta **sa** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse parâmetro será exigido se a instância usar o modo de Autenticação Mista (Autenticação do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows).<br /><br /> **&#42;&#42; Observação de Segurança &#42;&#42;** A conta **sa** é uma conta conhecida do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, geralmente, é visada por usuários mal-intencionados. É muito importante que você use uma senha forte para o logon **sa** .<br /><br /> Não especifique esse parâmetro para o modo de Autenticação do Windows.|  
+    |[ /SAPWD=*StrongPassword* ]|Especifica a senha da conta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sa**do**. Esse parâmetro será exigido se a instância usar o modo de Autenticação Mista (Autenticação do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows).<br /><br /> **&#42;&#42; Observação de Segurança &#42;&#42;** A conta **sa** é uma conta conhecida do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, geralmente, é visada por usuários mal-intencionados. É muito importante que você use uma senha forte para o logon **sa** .<br /><br /> Não especifique esse parâmetro para o modo de Autenticação do Windows.|  
     |[ /SQLCOLLATION=*CollationName* ]|Especifica uma nova ordenação no nível do servidor. Esse parâmetro é opcional. Quando não está especificado, a ordenação atual do servidor é usada.<br /><br /> **\*\* Importante \*\*** A alteração da ordenação no nível do servidor não altera a ordenação de bancos de dados de usuário existentes. Por padrão, todos os bancos de dados do usuário criados recentemente usarão a nova ordenação.<br /><br /> Para obter mais informações, veja [Definir ou alterar a ordenação do servidor](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NúmeroDeArquivos ]|Especifica o número de arquivos de dados tempdb. Esse valor pode ser aumentado para até 8 ou o número de núcleos, o que for maior.<br /><br /> Valor padrão: 8 ou o número de núcleos, o que for menor.|  
     |[ /SQLTEMPDBFILESIZE=TamanhoDoArquivoEmMB ]|Especifica o tamanho inicial de cada arquivo de dados tempdb em MB. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 8|  
     |[ /SQLTEMPDBFILEGROWTH=TamanhoDoArquivoEmMB ]|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 64|  
-    |[ /SQLTEMPDBLOGFILESIZE=TamanhoDoArquivoEmMB ]|Especifica o tamanho inicial do arquivo de log tempdb em MB. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 8.<br /><br /> Intervalo permitido: Mín = 8, máx = 1024.|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=TamanhoDoArquivoEmMB ]|Especifica o tamanho do incremento de aumento do arquivo de log tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: Mín = 8, máx = 1024.|  
-    |[ /SQLTEMPDBDIR=Diretórios ]|Especifica os diretórios para arquivos de dados do tempdb. Ao especificar mais de um diretório, separe os diretórios com um espaço em branco. Se vários diretórios forem especificados, os arquivos de dados tempdb serão espalhados pelos diretórios de modo round robin.<br /><br /> Valor padrão: Diretório de Dados do Sistema|  
-    |[/SQLTEMPDBLOGDIR = Diretório]|Especifica o diretório para o arquivo de log tempdb.<br /><br /> Valor padrão: Diretório de Dados do Sistema|  
+    |[ /SQLTEMPDBLOGFILESIZE=TamanhoDoArquivoEmMB ]|Especifica o tamanho inicial do arquivo de log tempdb em MB. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 8.<br /><br /> Intervalo permitido: Mín. = 8, Máx. = 1024.|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=TamanhoDoArquivoEmMB ]|Especifica o tamanho do incremento de aumento do arquivo de log tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: Mín. = 8, Máx. = 1024.|  
+    |[ /SQLTEMPDBDIR=Diretórios ]|Especifica os diretórios para arquivos de dados do tempdb. Ao especificar mais de um diretório, separe os diretórios com um espaço em branco. Se vários diretórios forem especificados, os arquivos de dados tempdb serão espalhados pelos diretórios de modo round robin.<br /><br /> Valor padrão: diretório de dados do sistema|  
+    |[/SQLTEMPDBLOGDIR = Diretório]|Especifica o diretório para o arquivo de log tempdb.<br /><br /> Valor padrão: diretório de dados do sistema|  
   
 3.  Quando a Instalação tiver concluído a recriação dos bancos de dados do sistema, ela retornará ao prompt de comando sem mensagens. Examine o arquivo de log Summary.txt para verificar se o processo foi concluído com êxito. Esse arquivo está localizado em C:\Arquivos de Programas\Microsoft SQL Server\130\Setup Bootstrap\Logs.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "76516536"
   
 -   Verifique se os valores da configuração de todo o servidor correspondem aos valores registrados anteriormente.  
   
-##  <a name="Resource"></a> Recriar o banco de dados de recursos  
+##  <a name="rebuild-the-resource-database"></a><a name="Resource"></a> Recriar o banco de dados de recursos  
  O procedimento a seguir recria o banco de dados de recursos do sistema. Quando você recompila o banco de dados de recursos, todos os hot fixes são perdidos e, portanto, devem ser reaplicados.  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>Para recriar o banco de dados do sistema de recursos:  
@@ -156,7 +156,7 @@ ms.locfileid: "76516536"
   
 6.  Na página **Pronto para Reparar** , clique em **Reparar**. A página Concluído indica que a operação foi concluída.  
   
-##  <a name="CreateMSDB"></a> Criar um novo banco de dados msdb  
+##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> Criar um novo banco de dados msdb  
  Se o banco de dados **msdb** estiver danificado e você não tiver um backup do banco de dados **msdb** , poderá criar um novo **msdb** usando o script **instmsdb** .  
   
 > [!WARNING]  
@@ -186,7 +186,7 @@ ms.locfileid: "76516536"
   
 10. Faça um backup do banco de dados **msdb** .  
   
-##  <a name="Troubleshoot"></a> Solução de problemas de erros de recriação  
+##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> Solução de problemas de erros de recriação  
  Erros de sintaxe e outros erros em tempo de execução são exibidos na janela do prompt de comando. Examine os erros de sintaxe a seguir na instrução da Instalação:  
   
 -   Marca de barra (/) ausente na frente de cada nome de parâmetro.  

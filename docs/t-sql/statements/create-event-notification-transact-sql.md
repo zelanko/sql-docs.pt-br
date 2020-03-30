@@ -24,10 +24,10 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67902807"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
@@ -51,7 +51,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
 ## <a name="arguments"></a>Argumentos  
  *event_notification_name*  
- É o nome da notificação de eventos. O nome de uma notificação de evento deve estar em conformidade com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md) e deve ser exclusivo no escopo em que é criado: SERVER, DATABASE ou *object_name*.  
+ É o nome da notificação de eventos. O nome de uma notificação de eventos deve estar em conformidade com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md) e deve ser exclusivo no escopo em que é criado: SERVER, DATABASE ou *object_name*.  
   
  SERVER  
  Aplica o escopo da notificação de eventos à instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se for especificada, a notificação será acionada sempre que o evento especificado na cláusula FOR ocorrer em qualquer lugar na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

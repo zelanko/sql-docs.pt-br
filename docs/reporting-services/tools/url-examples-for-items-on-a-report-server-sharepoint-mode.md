@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574014"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Exemplos de URL para itens em um servidor de relatório – modo do SharePoint
@@ -29,7 +29,7 @@ ms.locfileid: "65574014"
   
  Podem ser usados os seguintes elementos da hierarquia da Web para acessar e proteger o conteúdo do servidor de relatório. Outros objetos, como listas e páginas, não são usados para acessar o conteúdo do servidor de relatório e, portanto, não estão descritos na tabela seguinte.  
   
-|Objeto|Descrição|  
+|Objeto|DESCRIÇÃO|  
 |------------|-----------------|  
 |Aplicativo Web do SharePoint|Um aplicativo da Web do SharePoint pode ser instalado como um servidor autônomo ou em um farm que tenha uma coleção de servidores virtuais. Um aplicativo Web tem uma URL (por exemplo, `http:*//servername*`) e pode conter vários sites.|  
 |Site|Um site é um site pai de um aplicativo da Web ou um subsite.|  
@@ -100,7 +100,7 @@ ms.locfileid: "65574014"
 |O relatório de exemplo Company Sales na pasta **Documents/Doc** em uma instância do [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
 |O relatório de exemplo de vendas da empresa na **Central de Relatórios** em uma instância do [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
-##  <a name="publishingToDocLib"></a> Publicando de uma ferramenta de criação para uma biblioteca do SharePoint  
+##  <a name="publishing-from-an-authoring-tool-to-a-sharepoint-library"></a><a name="publishingToDocLib"></a> Publicando de uma ferramenta de criação para uma biblioteca do SharePoint  
  Quando você usa a ferramenta de criação de relatório para publicar relatórios e arquivos relacionados em uma biblioteca, os arquivos são validados antes de serem adicionados. Se você carregar os relatórios e os arquivos relacionados, usando a ação **Carregar** na biblioteca do SharePoint, nenhuma validação ocorrerá. Você não saberá se o arquivo é válido até acessar o relatório, gerenciando, editando ou executando-o.  
   
 > [!NOTE]  

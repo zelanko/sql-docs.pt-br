@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2221d88e5f564b08f993f68f9be4131588aebe2a
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78866105"
 ---
 # <a name="set-or-change-the-database-collation"></a>Definir ou alterar a ordenação de banco de dados
@@ -46,9 +46,9 @@ ms.locfileid: "78866105"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   As ordenações somente Unicode do Windows podem ser usadas somente com a cláusula COLLATE para aplicar ordenações aos tipos de dados **nchar**, **nvarchar**e **ntext** em dados nos níveis de coluna e de expressão. Não é possível usá-los com a cláusula COLLATE para alterar a ordenação de uma instância de banco de dados ou de servidor.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "78866105"
 
 -   A ordenação não poderá ser alterada usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] depois que o banco de dados tiver sido criado em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Ela só pode ser alterada por meio de [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 Você pode encontrar os nomes de ordenação com suporte no [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [SQL Server Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md) ou pode usar a função do sistema [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
   
@@ -70,14 +70,14 @@ Ao alterar a ordenação de banco de dados, você altera o seguinte:
   
 Você pode alterar a ordenação de qualquer novo objeto que seja criado em um banco de dados de usuário usando a cláusula `COLLATE` da instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Essa instrução **não altera** a ordenação das colunas em nenhuma tabela existente definida pelo usuário. Isso pode ser alterado usando a cláusula `COLLATE` de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  A criação de um novo banco de dados requer a permissão `CREATE DATABASE` no banco de dados **mestre** ou as permissões `CREATE ANY DATABASE` ou `ALTER ANY DATABASE`.  
   
  A alteração da ordenação de um banco de dados existente requer a permissão `ALTER` no banco de dados.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-set-or-change-the-database-collation"></a>Para definir ou alterar a ordenação de banco de dados  
   
@@ -89,7 +89,7 @@ Você pode alterar a ordenação de qualquer novo objeto que seja criado em um b
   
 3.  Quando terminar, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-set-the-database-collation"></a>Para definir a ordenação de banco de dados  
   

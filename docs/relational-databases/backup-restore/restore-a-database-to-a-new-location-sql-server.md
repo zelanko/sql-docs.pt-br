@@ -20,38 +20,38 @@ ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4e3c7cfdc24c55dde67e8abe5473b934fc6ac5f4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72989557"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurar um banco de dados em um novo local (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como restaurar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um novo local e, opcionalmente, renomear o banco de dados, no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SSMS (SQL Server Management Studio) ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você pode mover um banco de dados para um novo caminho ou criar uma cópia de um banco de dados na mesma instância do servidor ou em uma instância de servidor diferente.  
     
-##  <a name="BeforeYouBegin"></a> Antes de começar.  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar.  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   O administrador do sistema que restaura um backup de banco de dados completo deve ser a única pessoa a usar o banco de dados a ser restaurado.  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
 -   No modelo de recuperação completa ou bulk-logged, para que você possa restaurar um banco de dados, faça backup do log de transações ativas. Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)).  
 
 -   Para restaurar um banco de dados criptografado, **você deve ter acesso ao certificado ou à chave assimétrica usada para criptografar o banco de dados**. Sem esse certificado ou essa chave assimétrica, não é possível restaurar o banco de dados. Você deverá manter o certificado usado para criptografar a chave de criptografia do banco de dados durante o tempo em que você precisar do backup! Para obter mais informações, consulte [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Para obter considerações adicionais sobre a movimentação de um banco de dados, consulte [Copiar bancos de dados com backup e restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 -   Se você restaurar um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou superior para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados será atualizado automaticamente. Normalmente, o banco de dados se torna disponível imediatamente. No entanto, se um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices, dependendo da configuração da propriedade de servidor  **upgrade_option** . Se a opção de atualização for definida como importar (**upgrade_option** = 2) ou recriar (**upgrade_option** = 0), os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas, e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida para importar, os índices de texto completo associados serão recriados se um catálogo de texto completo não estiver disponível. Para alterar a configuração da propriedade de servidor **upgrade_option** , use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  Por motivos de segurança, é recomendável não anexar ou restaurar bancos de dados de origens desconhecidas ou não confiáveis. Esses bancos de dados podem conter um código mal-intencionado que pode executar um código [!INCLUDE[tsql](../../includes/tsql-md.md)] inesperado ou provocar erros modificando o esquema ou a estrutura física do banco de dados. Antes de usar um banco de dados de origem desconhecida ou não confiável, execute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no banco de dados, em um servidor que não seja de produção. Além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Se o banco de dados que está sendo restaurado não existir, o usuário deverá ter permissões CREATE DATABASE para poder executar o comando RESTORE. Se o banco de dados existir, as permissões RESTORE assumirão como padrão os membros das funções de servidor fixas **sysadmin** e **dbcreator** , e o proprietário (**dbo**) do banco de dados.  
   
  As permissões RESTORE são concedidas a funções nas quais as informações de associação estão sempre disponíveis para o servidor. Como a associação da função de banco de dados fixa pode ser verificada apenas quando o banco de dados está acessível e não danificado, o que nem sempre é o caso quando RESTORE é executado, os membros da função de banco de dados fixa **db_owner** não têm permissões RESTORE.  
@@ -166,7 +166,7 @@ ms.locfileid: "72989557"
   |*operating_system_file_name*|Especifica um novo local para o arquivo especificado por *logical_file_name_in_backup*. O arquivo será restaurado neste local.<br /><br /> Opcionalmente, *operating_system_file_name* especifica um novo nome de arquivo para o arquivo restaurado. Isso será necessário se você estiver criando uma cópia de um banco de dados existente na mesma instância de servidor.|  
   |*n*|É um espaço reservado que indica que você pode especificar instruções MOVE adicionais.|  
   
-###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  Este exemplo cria um novo banco de dados denominado `MyAdvWorks` por meio da restauração de um backup do banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] que inclui dois arquivos: [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log. Esse banco de dados usa o modelo de recuperação simples. O banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] já existe na instância do servidor, portanto, os arquivos no backup devem ser restaurados em um novo local. A instrução RESTORE FILELISTONLY é usada para determinar o número e os nomes dos arquivos no banco de dados que está sendo restaurado. O backup do banco de dados é o primeiro conjunto de backup no dispositivo de backup.  
   
 > **OBSERVAÇÃO:** os exemplos de como fazer backup e restaurar o log de transações, incluindo restaurações pontuais, usam o banco de dados `MyAdvWorks_FullRM` que é criado no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] exatamente como no exemplo `MyAdvWorks` a seguir. No entanto, o banco de dados `MyAdvWorks_FullRM` resultante deve ser alterado para usar o modelo de recuperação completa por meio da seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]: ALTER DATABASE <database_name> SET RECOVERY FULL.  
@@ -190,7 +190,7 @@ GO
   
  Para obter um exemplo de como criar um backup de banco de dados completo do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , consulte [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 -   [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   

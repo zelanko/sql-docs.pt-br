@@ -15,10 +15,10 @@ ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 80bf829afcbc93e397e8ea797f22905b3b55c0cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295765"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Enumerando pacotes disponíveis programaticamente
@@ -28,7 +28,7 @@ ms.locfileid: "71295765"
 
   <a name="top"></a> Ao trabalhar programaticamente com pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], talvez você queira determinar se existe um pacote ou pasta individual ou enumerar os pacotes salvos que estão disponíveis para carregamento e execução. A classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> do namespace <xref:Microsoft.SqlServer.Dts.Runtime> fornece diversos métodos para atender a esses requisitos.    
     
-##  <a name="exists"></a> Determinando se existe um pacote ou pasta    
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> Determinando se existe um pacote ou pasta    
  Para determinar programaticamente se existe um pacote salvo, chame um dos métodos a seguir antes de tentar carregá-lo e executá-lo:    
     
 |Local de armazenamento|Método de chamada|    
@@ -45,7 +45,7 @@ ms.locfileid: "71295765"
     
  [Voltar ao início](#top)    
     
-##  <a name="listing"></a> Enumerando pacotes disponíveis    
+##  <a name="enumerating-available-packages"></a><a name="listing"></a> Enumerando pacotes disponíveis    
  Para obter uma lista de pacotes salvos programaticamente, chame um dos seguintes métodos:    
     
 |Local de armazenamento|Método de chamada|    
@@ -55,7 +55,7 @@ ms.locfileid: "71295765"
     
  Os exemplos a seguir são aplicativos de console que demonstram o uso desses métodos.    
     
-###  <a name="listing_store"></a> Exemplo (Repositório de Pacotes do SSIS)    
+###  <a name="example-ssis-package-store"></a><a name="listing_store"></a> Exemplo (Repositório de Pacotes do SSIS)    
  Use o método <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> para listar pacotes armazenados no Armazenamento de Pacotes do SSIS. Os locais de armazenamento padrão gerenciados pelo Repositório de Pacotes do SSIS são Sistema de Arquivos e MSDB. Você pode criar pastas lógicas adicionais dentro desses locais.    
     
 ```vb    
@@ -161,7 +161,7 @@ namespace EnumeratePackagesSSIS_CS
     
  [Voltar ao início](#top)    
     
-###  <a name="listing_sql"></a> Exemplo (SQL Server)    
+###  <a name="example-sql-server"></a><a name="listing_sql"></a> Exemplo (SQL Server)    
  Use o método <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> para listar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que estão armazenados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
     
 ```vb    

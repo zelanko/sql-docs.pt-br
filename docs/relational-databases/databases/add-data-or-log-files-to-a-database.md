@@ -19,10 +19,10 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 34e976dca163289450c3aa481d1f72bb46712046
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68137402"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Adicionar arquivos de dados ou de log a um banco de dados
@@ -43,20 +43,20 @@ ms.locfileid: "68137402"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Você não pode adicionar ou remover um arquivo enquanto uma instrução BACKUP está em execução.  
   
 -   Um máximo de 32.767 arquivos e 32.767 grupos de arquivos pode ser especificado para cada banco de dados.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão ALTER no banco de dados.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>Para adicionar arquivos de dados ou de log a um banco de dados existente  
   
@@ -102,7 +102,7 @@ ms.locfileid: "68137402"
   
 12. Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>Para adicionar arquivos de dados ou de log a um banco de dados existente  
   

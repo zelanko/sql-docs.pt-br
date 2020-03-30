@@ -22,10 +22,10 @@ ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5e8523831fd181c17bd8fcff1698d85f46c824e2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73983322"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)

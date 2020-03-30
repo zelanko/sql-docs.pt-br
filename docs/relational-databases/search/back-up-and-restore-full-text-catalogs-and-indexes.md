@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 38eaba8bdf2772fe03690773881c67306a024b64
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056130"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Fazer backup e restaurar índices e catálogos de texto completo
@@ -32,9 +32,9 @@ ms.locfileid: "74056130"
 > [!IMPORTANT]  
 >  É possível importar catálogos de texto completo durante a atualização de um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Cada catálogo de texto completo importado é um arquivo de banco de dados em seu próprio grupo de arquivos. Para fazer backup de um catálogo importado, basta fazer backup do grupo de arquivos correspondente. Para obter mais informações, veja [Fazendo backup e restaurando catálogos de texto completo](https://go.microsoft.com/fwlink/?LinkID=121052), nos Manuais Online do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
-##  <a name="backingup"></a> Fazendo backup dos índices de texto completo de um catálogo de texto completo  
+##  <a name="backing-up-the-full-text-indexes-of-a-full-text-catalog"></a><a name="backingup"></a> Fazendo backup dos índices de texto completo de um catálogo de texto completo  
   
-###  <a name="Find_FTIs_of_a_Catalog"></a> Localizando os índices de texto completo de um catálogo de texto completo  
+###  <a name="finding-the-full-text-indexes-of-a-full-text-catalog"></a><a name="Find_FTIs_of_a_Catalog"></a> Localizando os índices de texto completo de um catálogo de texto completo  
  É possível recuperar as propriedades dos índices de texto completo usando a seguinte instrução [SELECT](../../t-sql/queries/select-transact-sql.md) , que seleciona colunas das exibições do catálogo [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) e [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) .  
   
 ```  
@@ -50,7 +50,7 @@ GO
 ```  
   
   
-###  <a name="Find_FG_of_FTI"></a> Localizando o grupo de arquivos ou o arquivo que contém um índice de texto completo  
+###  <a name="finding-the-filegroup-or-file-that-contains-a-full-text-index"></a><a name="Find_FG_of_FTI"></a> Localizando o grupo de arquivos ou o arquivo que contém um índice de texto completo  
  Quando criado, um índice de texto completo é colocado em um destes locais:  
   
 -   Um grupo de arquivos especificado pelo usuário.  
@@ -73,7 +73,7 @@ GO
 ```  
   
   
-###  <a name="Back_up_FTIs_of_FTC"></a> Fazendo backup dos grupos de arquivos que contêm índices de texto completo  
+###  <a name="backing-up-the-filegroups-that-contain-full-text-indexes"></a><a name="Back_up_FTIs_of_FTC"></a> Fazendo backup dos grupos de arquivos que contêm índices de texto completo  
  Depois de localizar os grupos de arquivos que contêm os índices de um catálogo de texto completo, você precisa fazer backup de cada um dos grupos de arquivos. Durante o processo de backup, catálogos de texto completo não podem ser descartados ou adicionados.  
   
  O primeiro backup de um grupo de arquivos deve ser um backup de arquivo completo. Depois de ter criado um backup de arquivo completo de um grupo de arquivos, você pode fazer backup somente das alterações feitas em um grupo de arquivos; para isso, crie uma série de um ou mais backups de arquivo diferenciais baseados no backup de arquivo completo.  
@@ -85,7 +85,7 @@ GO
 -   [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
   
-##  <a name="Restore_FTI"></a> Restaurando um índice de texto completo  
+##  <a name="restoring-a-full-text-index"></a><a name="Restore_FTI"></a> Restaurando um índice de texto completo  
  A restauração de um grupo de arquivos submetido a backup restaura os arquivos de índice de texto completo, bem como os demais arquivos do grupo de arquivos. Por padrão, o grupo de arquivos é restaurado no local do disco em que foi feito backup do grupo de arquivos.  
   
  Se uma tabela indexada com texto completo estava online e uma operação de população estava sendo executada quando o backup foi criado, a população será retomada após a restauração.  

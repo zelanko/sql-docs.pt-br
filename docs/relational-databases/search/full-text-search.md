@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72930269"
 ---
 # <a name="full-text-search"></a>Pesquisa de Texto Completo
@@ -40,7 +40,7 @@ Um índice de texto completo inclui uma ou mais colunas baseadas em caractere em
   
  As consultas de texto completo executam pesquisas linguísticas nos dados de texto em índices de texto completo trabalhando em palavras e frases com base em regras de um idioma específico, como inglês ou japonês. As consultas de texto completo podem incluir palavras e frases simples ou várias formas de uma palavra ou frase. Uma consulta de texto completo retorna todos os documentos que contiverem, pelo menos, uma correspondência (também conhecida como uma *ocorrência*). Uma correspondência ocorre quando um documento de destino contém todos os termos especificados na consulta de texto completo e atende a quaisquer outros critérios de pesquisa, como a distância entre os termos correspondentes.    
   
-##  <a name="queries"></a> Consultas da pesquisa de texto completo  
+##  <a name="full-text-search-queries"></a><a name="queries"></a> Consultas da pesquisa de texto completo  
  Depois que colunas forem adicionadas a um índice de texto completo, os usuários e aplicativos poderão executar consultas de texto completo no texto das colunas. Essas consultas podem procurar qualquer um dos seguintes itens:  
   
 -   Uma ou mais palavras ou frases específicas (*termo simples*)  
@@ -78,10 +78,10 @@ Um índice de texto completo inclui uma ou mais colunas baseadas em caractere em
   
  Para obter mais informações, veja [Consulta com pesquisa de texto completo](../../relational-databases/search/query-with-full-text-search.md).  
   
-##  <a name="like"></a> Compare as consultas de pesquisa de texto completo para o predicado LIKE
+##  <a name="compare-full-text-search-queries-to-the-like-predicate"></a><a name="like"></a> Compare as consultas de pesquisa de texto completo para o predicado LIKE
  Ao contrário da pesquisa de texto completo, o predicado [LIKE](../../t-sql/language-elements/like-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] funciona apenas em padrões de caracteres. Além disso, não é possível usar o predicado LIKE para consultar dados binários formatados. Além disso, uma consulta LIKE feita em uma grande quantidade de dados de texto não estruturados é bem mais lenta do que uma consulta de texto completo equivalente feita nos mesmos dados. Uma consulta LIKE executada em milhões de linhas de dados de texto pode demorar muitos minutos, enquanto uma consulta de texto completo pode demorar alguns segundos ou menos para ser executada nos mesmos dados, dependendo do número de linhas retornadas.  
   
-##  <a name="architecture"></a> Arquitetura da pesquisa de texto completo
+##  <a name="full-text-search-architecture"></a><a name="architecture"></a> Arquitetura da pesquisa de texto completo
  A arquitetura de pesquisa de texto completo é formada pelos seguintes processos:  
   
 -   O processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlservr.exe).  
@@ -94,7 +94,7 @@ Um índice de texto completo inclui uma ou mais colunas baseadas em caractere em
   
  ![arquitetura da pesquisa de texto completo](../../relational-databases/search/media/ifts-arch.gif "arquitetura da pesquisa de texto completo")  
 
-###  <a name="sqlprocess"></a> Processo do SQL Server  
+###  <a name="sql-server-process"></a><a name="sqlprocess"></a> Processo do SQL Server  
  O processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa os seguintes componentes na pesquisa de texto completo:  
   
 -   **Tabelas de usuário.** Essas tabelas contêm os dados para serem indexados com texto completo.  
@@ -116,7 +116,7 @@ Um índice de texto completo inclui uma ou mais colunas baseadas em caractere em
   
 -   **Gerenciador de daemon de filtro.** O gerenciador de daemon de filtro é responsável por monitorar o status do host do daemon de filtro do Mecanismo de Texto Completo.  
   
-###  <a name="fdhostprocess"></a> Filter Daemon Host process  
+###  <a name="filter-daemon-host-process"></a><a name="fdhostprocess"></a> Filter Daemon Host process  
  O host do daemon de filtro é um processo que é iniciado pelo Mecanismo de Texto Completo. Ele executa os seguintes componentes de pesquisa de texto completo que são responsáveis por acessar, filtrar e separar palavras de dados de tabelas, bem como por separar palavras e lematizar a entrada da consulta.  
   
  Os componentes do host do daemon de filtro são os seguintes:  
@@ -127,10 +127,10 @@ Um índice de texto completo inclui uma ou mais colunas baseadas em caractere em
   
 -   **Separadores de palavras e lematizadores.** Um separador de palavras é um componente específico a um idioma que encontra limites de palavras com base nas regras lexicais de determinado idioma (*separação de palavras*). Cada separador de palavras é associado a um componente lematizador específico do idioma, que conjuga verbos e executa expansões flexionadas. No momento da indexação, o host do daemon de filtro usa um separador de palavras e um lematizador para executar a análise linguística dos dados textuais de uma determinada coluna de tabela. O idioma associado a uma coluna de tabela no índice de texto completo determina qual separador de palavras e qual lematizador são usados para indexar a coluna. Para obter mais informações, veja [Configurar e gerenciar separadores de palavras e lematizadores para pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-##  <a name="processing"></a> Processamento da pesquisa de texto completo  
+##  <a name="full-text-search-processing"></a><a name="processing"></a> Processamento da pesquisa de texto completo  
  A pesquisa de texto completo é ativada pelo Mecanismo de Texto Completo. O Mecanismo de Texto Completo tem duas funções: suporte a indexação e suporte a consulta.  
   
-###  <a name="indexing"></a> Processo de indexação de texto completo  
+###  <a name="full-text-indexing-process"></a><a name="indexing"></a> Processo de indexação de texto completo  
  Quando uma população de texto completo (também conhecida como rastreamento) é iniciada, o mecanismo de texto completo entrega grandes lotes de dados à memória e notifica o host do daemon de filtro. O host filtra e o Word divide os dados e converte os dados convertidos em listas de palavras invertidas. A pesquisa de texto completo pega os dados convertidos nas listas de palavras, processa-os para remover palavras irrelevantes e mantém as listas de palavras para um lote em um ou mais índices invertidos.  
   
  Durante a indexação de dados armazenados em uma coluna **varbinary(max)** ou **image** , o filtro, que implementa a interface **IFilter** , extrai texto com base no formato de arquivo especificado para aqueles dados (por exemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). Em alguns casos, os componentes de filtro exigem que os dados de **varbinary(max)** ou **image** sejam gravados fora da pasta de dados do filtro, em vez de serem postos na memória.  
@@ -141,7 +141,7 @@ Um índice de texto completo inclui uma ou mais colunas baseadas em caractere em
   
  Quando a população for concluída, um processo de mesclagem final será disparado, mesclando os fragmentos de índice em um índice de texto completo mestre. Isso resulta em desempenho aprimorado de consultas, uma vez que apenas o índice precisa ser consultado, em vez de uma série de fragmentos de índice, e melhores estatísticas de pontuação podem ser usadas para classificação de relevância.  
   
-###  <a name="querying"></a> Processo de consulta de texto completo  
+###  <a name="full-text-querying-process"></a><a name="querying"></a> Processo de consulta de texto completo  
  O processador de consultas passa as partes do texto completo de uma consulta para o Mecanismo de Texto Completo para processamento. O Mecanismo de Texto Completo executa a quebra de palavras e, opcionalmente, expansões do dicionário de sinônimos, lematização e processamento de palavras irrelevantes (palavras de ruído). Em seguida, as partes de texto completo da consulta são representadas na forma de operadores SQL, principalmente como STVFs (funções com valor de tabela de fluxo). Durante a execução da consulta, essas STVFs acessam o índice invertido para recuperar os resultados corretos. Os resultados são retornados para o cliente neste momento ou processados mais um pouco antes de serem retornados ao cliente.  
 
 ## <a name="full-text-index-architecture"></a>Arquitetura de índice de texto completo
@@ -151,7 +151,7 @@ Um índice de texto completo inclui uma ou mais colunas baseadas em caractere em
   
 Só é permitido um índice de texto completo por tabela. Para que um índice de texto completo seja criado em uma tabela, a tabela deve ter uma única coluna não nula exclusiva. É possível criar um índice de texto completo em colunas do tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**e **varbinary(max)** , que podem ser indexadas para a pesquisa de texto completo. A criação de um índice de texto completo em uma coluna cujo tipo de dados é  **varbinary**, **varbinary(max)** , **image**ou **xml** exige a especificação de uma coluna de tipo. Uma *coluna de tipo* consiste em uma coluna de tabela em que você armazena a extensão de arquivo (.doc, .pdf, .xls, etc.) do documento em cada linha.  
 
-###  <a name="structure"></a> Estrutura de índice de texto completo  
+###  <a name="full-text-index-structure"></a><a name="structure"></a> Estrutura de índice de texto completo  
  Um bom conhecimento da estrutura do índice de texto completo ajudará você a entender como funciona o Mecanismo de Texto Completo. Este tópico usa o trecho a seguir da tabela **Document** em [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] como tabela de exemplo. Esse trecho mostra apenas duas colunas, **DocumentID** e **Title** , e três linhas da tabela.  
   
  Para este exemplo, assumiremos que um índice de texto completo foi criado na coluna **Title** .  
@@ -195,7 +195,7 @@ Só é permitido um índice de texto completo por tabela. Para que um índice de
   
  A coluna **Occurrence** contém um valor inteiro. Para cada valor de DocId, há uma lista de valores de ocorrência que correspondem aos deslocamentos relativos de palavras de uma palavra-chave específica dentro de DocId. Os valores de ocorrência são úteis para definir as correspondências de frase ou de proximidade, por exemplo, as frases têm valores de ocorrência numericamente adjacentes. Eles também são úteis para calcular pontuações de relevância; por exemplo, o número de ocorrências de uma palavra-chave em DocId pode ser usado na pontuação.   
   
-###  <a name="fragments"></a> Fragmentos de índice de texto completo  
+###  <a name="full-text-index-fragments"></a><a name="fragments"></a> Fragmentos de índice de texto completo  
  O índice de texto completo lógico normalmente é dividido entre várias tabelas internas. Cada tabela interna é chamada de fragmento de índice de texto completo. Alguns desses fragmentos podem conter dados mais novos do que outros. Por exemplo, se um usuário atualiza a linha a seguir cujo DocId é 3 e a tabela tem controle de alterações automático, é criado um novo fragmento.  
   
 |DocumentID|Title|  
@@ -238,7 +238,7 @@ Só é permitido um índice de texto completo por tabela. Para que um índice de
 |A adição de dados a índices de texto completo, chamada de *população*, pode ser solicitada através de uma agenda ou de uma solicitação específica e pode ocorrer automaticamente com a inclusão de novos dados.|Atualizados automaticamente quando os dados nos quais eles se baseiam são inseridos, atualizados ou excluídos.|  
 |Agrupados no mesmo banco de dados em um ou mais catálogos de texto completo.|Não agrupado.|  
 
-##  <a name="components"></a> Componentes linguísticos e suporte de idioma na pesquisa de texto completo
+##  <a name="full-text-search-linguistic-components-and-language-support"></a><a name="components"></a> Componentes linguísticos e suporte de idioma na pesquisa de texto completo
  A pesquisa de texto completo oferece suporte a quase 50 idiomas diferentes, como inglês, espanhol, chinês, japonês, árabe, bengalês e híndi. Para obter uma lista completa dos idiomas de texto completo com suporte, veja [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md). Cada uma das colunas do índice de texto completo é associada a um LCID (identificador de localidade) do Microsoft Windows que equivale a um idioma suportado pela pesquisa de texto completo. Por exemplo, o LCID 1033 equivale ao inglês norte-americano e o LCID 2057, ao inglês britânico. Para cada idioma de texto completo suportado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece componentes linguísticos que dão suporte à indexação e à consulta de dados de texto completo armazenados nesse idioma.  
   
  Os componentes específicos de idioma incluem:  

@@ -7,10 +7,10 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
 ms.openlocfilehash: c2013e99f5e222c50d954e292cbc0b48b39cb7c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265638"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integração de servidor de relatório do Power BI (Configuration Manager)
@@ -19,13 +19,13 @@ ms.locfileid: "68265638"
 
 A página  **Integração do Power BI** no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager é usada para registrar o servidor de relatório no locatário gerenciado do Azure AD (Active Directory) desejado, a fim de permitir que os usuários do servidor de relatório fixem itens de relatório com suporte nos dashboards do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] . Para obter uma lista dos itens com suporte que podem ser fixados, veja [Fixar itens do Reporting Services nos dashboards do Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).
 
-## <a name="bkmk_requirements"></a> Requisitos para integração do Power BI
+## <a name="requirements-for-power-bi-integration"></a><a name="bkmk_requirements"></a> Requisitos para integração do Power BI
 
 Além de uma conexão de Internet ativa para que você possa navegar até o serviço do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , estes são os requisitos para concluir a integração do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)].
 
 - **Azure Active Directory:** sua organização deve usar o Azure Active Directory, que fornece gerenciamento de identidades e diretórios para serviços e aplicativos Web do Azure. Para obter mais informações, confira [O que é Azure Active Directory?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
-- **Locatário gerenciado:** o dashboard do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ao qual você deseja fixar itens de relatório deve fazer parte de um locatário gerenciado do Azure AD.  Um locatário gerenciado é criado automaticamente na primeira vez em que sua empresa assina os serviços do Azure, como o Office 365 e o Microsoft Intune.   Não há suporte para locatários virais no momento.  Para obter mais informações, confira as seções “O que é um locatário do Azure AD” e “Como obter um diretório do Azure AD” em [O que é um diretório do Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
+- **Locatário gerenciado:** o painel do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ao qual você deseja fixar itens de relatório devem ser parte de um locatário gerenciado do Azure AD.  Um locatário gerenciado é criado automaticamente na primeira vez em que sua empresa assina os serviços do Azure, como o Office 365 e o Microsoft Intune.   Não há suporte para locatários virais no momento.  Para obter mais informações, confira as seções “O que é um locatário do Azure AD” e “Como obter um diretório do Azure AD” em [O que é um diretório do Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
 
 - O usuário que executando a integração do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] precisa ser um membro do locatário do Azure AD, um administrador de sistema do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e um administrador de sistema para o banco de dados de catálogo ReportServer.
 
@@ -33,17 +33,17 @@ Além de uma conexão de Internet ativa para que você possa navegar até o serv
 
 - Os relatórios dos quais você deseja fixar devem usar credenciais armazenadas. Isso não é um requisito da própria integração do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , mas do processo de atualização para os itens fixados.  A ação de fixar um item de relatório cria uma assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para gerenciar o agendamento de atualização dos blocos no [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exigem credenciais armazenadas. Se um relatório não usar credenciais armazenadas, um usuário poderá ainda assim fixar itens de relatório, mas quando a assinatura associada tentar atualizar os dados para o [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)], você verá uma mensagem de erro semelhante à seguinte na página **Minhas Assinaturas** .
 
-    Erro de Entrega do Power BI: dashboard: Amostra de Análise de Gastos de TI, visual: Chart2, erro: A ação atual não pode ser concluída. As credenciais da fonte de dados do usuário não atendem aos requisitos para executar esse relatório ou conjunto de dados compartilhado. A credencial da fonte de dados do usuário.
+    PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: A ação atual não pode ser concluída. As credenciais da fonte de dados do usuário não atendem aos requisitos para executar esse relatório ou conjunto de dados compartilhado. A credencial da fonte de dados do usuário.
 
 Para obter mais informações sobre como armazenar credenciais, consulte a seção “Configurar as credenciais armazenadas para uma fonte de dados específica ao relatório” em [Armazenar as credenciais em uma fonte de dados do Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
 
 Um administrador pode examinar os arquivos de log do  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para saber mais.  Ele verá mensagens semelhantes à seguinte. Uma ótima maneira de examinar e monitorar arquivos de log do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é usar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query nos arquivos.  Para saber mais e para assistir a um vídeo curto, veja [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
 
-- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Erro de Entrega do Power BI: dashboard: Amostra de Análise de Gastos de TI, visual: Chart2, erro: A ação atual não pode ser concluída. As credenciais da fonte de dados do usuário não atendem aos requisitos para executar esse relatório ou conjunto de dados compartilhado. Ou as credenciais de fonte de dados do usuário não estão armazenadas no banco de dados de servidor de relatório ou a fonte de dados do usuário está configurada para não exigir credenciais, mas a conta de execução autônoma não foi especificada.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Erro de Entrega do PowerBI: painel: Amostra de Análise de Gastos de TI, visual: Gráfico2, erro: A ação atual não pode ser concluída. As credenciais da fonte de dados do usuário não atendem aos requisitos para executar esse relatório ou conjunto de dados compartilhado. Ou as credenciais de fonte de dados do usuário não estão armazenadas no banco de dados de servidor de relatório ou a fonte de dados do usuário está configurada para não exigir credenciais, mas a conta de execução autônoma não foi especificada.
 
-- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Ocorreu um erro ao processar a assinatura fcdb8581-d763-4b3b-ba3e-8572360df4f9: Erro de Entrega do Power BI: dashboard: Amostra de Análise de Gastos de TI, visual: Chart2, erro: A ação atual não pode ser concluída. As credenciais da fonte de dados do usuário não atendem aos requisitos para executar esse relatório ou conjunto de dados compartilhado. Ou as credenciais de fonte de dados do usuário não estão armazenadas no banco de dados de servidor de relatório ou a fonte de dados do usuário está configurada para não exigir credenciais, mas a conta de execução autônoma não foi especificada.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Erro de processamento da assinatura fcdb8581-d763-4b3b-ba3e-8572360df4f9: Erro de Entrega do PowerBI: painel: Amostra de Análise de Gastos de TI, visual: Gráfico2, erro: A Ação atual não pode ser concluída. As credenciais da fonte de dados do usuário não atendem aos requisitos para executar esse relatório ou conjunto de dados compartilhado. Ou as credenciais de fonte de dados do usuário não estão armazenadas no banco de dados de servidor de relatório ou a fonte de dados do usuário está configurada para não exigir credenciais, mas a conta de execução autônoma não foi especificada.
 
-## <a name="bkmk_steps2integrate"></a> Para integrar e registrar o Servidor de Relatório
+## <a name="to-integrate-and-register-the-report-server"></a><a name="bkmk_steps2integrate"></a> Para integrar e registrar o Servidor de Relatório
 
 Conclua as seguintes etapas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Para obter mais informações, consulte [Gerenciador de Configurações do Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
@@ -60,7 +60,7 @@ Conclua as seguintes etapas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnover
 
 5. Selecione o botão **Copiar** na janela **Resultados** para copiar os detalhes do registro na área de transferência do Windows e salvá-los para referência futura.
 
-## <a name="bkmk_unregister"></a> Cancelar o registro com o Power BI
+## <a name="unregister-with-power-bi"></a><a name="bkmk_unregister"></a> Cancelar o registro com o Power BI
 
 **Cancelar o registro:** o cancelamento do registro do servidor de relatório do Azure Active Directory resultará no seguinte:
 
@@ -74,7 +74,7 @@ Conclua as seguintes etapas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnover
 
 Na página do **Power BI** do Configuration Manager, selecione o botão **Cancelar registro no Power BI** .
 
-##  <a name="bkmk_updateregistration"></a> Atualizar registro
+##  <a name="update-registration"></a><a name="bkmk_updateregistration"></a> Atualizar registro
 
 Use **Atualizar Registro** se a configuração do seu servidor de relatório tiver sido alterada. Por exemplo, se você deseja adicionar ou remover as URLS que seus usuários usam para navegar até o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
@@ -90,7 +90,7 @@ Use **Atualizar Registro** se a configuração do seu servidor de relatório tiv
 
      Você precisará fazer logon no Azure AD. A página será atualizada e você verá a nova URL listada nas **URLs de redirecionamento**.
 
-##  <a name="bkmk_integration_process"></a> Resumo do processo de fixação e integração do Power BI
+##  <a name="summary-of-the-power-bi-integration-and-pin-process"></a><a name="bkmk_integration_process"></a> Resumo do processo de fixação e integração do Power BI
 
 Esta seção resume as etapas básicas e as tecnologias envolvidas ao integrar seu servidor de relatório com o [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] e fixar um item de relatório em um painel.
 
@@ -112,7 +112,7 @@ Esta seção resume as etapas básicas e as tecnologias envolvidas ao integrar s
 
 1. Os usuários visualizam relatórios no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] e na primeira vez que clicarem para fixar um item de relatório do [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
-2. Eles serão redirecionados para a página de logon do Azure AD. Eles também poderão entrar por meio da página **Minhas configurações** do [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Quando os usuários entram no locatário gerenciado do Azure, uma relação é estabelecida entre a sua conta do Azure e as permissões do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Para obter mais informações, consulte [Minhas Configurações para integração do Power BI &#40;portal da Web&#41;](../my-settings-for-power-bi-integration-web-portal.md).
+2. Eles serão redirecionados para a página de logon do Azure AD. Eles também poderão entrar por meio da página [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]Minhas configurações**do**. Quando os usuários entram no locatário gerenciado do Azure, uma relação é estabelecida entre a sua conta do Azure e as permissões do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Para obter mais informações, consulte [Minhas Configurações para integração do Power BI &#40;portal da Web&#41;](../my-settings-for-power-bi-integration-web-portal.md).
 
 3. Um token de segurança do usuário é retornado para o servidor de relatório.
 

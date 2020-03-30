@@ -13,10 +13,10 @@ ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3e8c86c1ba590ab574e7afe351b3e29c2c918b7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63194065"
 ---
 # <a name="deploying-a-data-processing-extension"></a>Implantando uma extensão de processamento de dados
@@ -27,7 +27,7 @@ ms.locfileid: "63194065"
   
  A tabela a seguir descreve os atributos do elemento **Extension** das extensões de processamento de dados.  
   
-|Atributo|Descrição|  
+|Atributo|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**Nome**|Um nome exclusivo para a extensão, por exemplo, o "SQL" para a extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou "OLEDB" para a extensão de processamento de dados OLE DB. O comprimento máximo do atributo **Name** é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas dento do elemento **Extension** de um arquivo de configuração.|  
 |**Tipo**|Uma lista separada por vírgulas que inclui o namespace totalmente qualificado junto com o nome do assembly.|  
@@ -37,10 +37,10 @@ ms.locfileid: "63194065"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[Como: implantar uma extensão de processamento de dados para um Servidor de Relatórios](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-a-report-server.md)|Descreve como implantar sua extensão de processamento de dados em um servidor de relatório.|  
-|[Como: implantar uma extensão de processamento de dados para o Designer de Relatórios](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)|Descreve como implantar sua extensão de processamento de dados em um Designer de Relatórios.|  
+|[Como implantar uma extensão de processamento de dados para um Servidor de Relatório](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-a-report-server.md)|Descreve como implantar sua extensão de processamento de dados em um servidor de relatório.|  
+|[Como implantar uma extensão de processamento de dados para o Designer de Relatórios](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)|Descreve como implantar sua extensão de processamento de dados em um Designer de Relatórios.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Extensões do Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   

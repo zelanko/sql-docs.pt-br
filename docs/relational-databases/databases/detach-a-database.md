@@ -16,10 +16,10 @@ ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35a118575be4ac15cb44588f1773ea1bb4fbc257
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006195"
 ---
 # <a name="detach-a-database"></a>Desanexar um banco de dados
@@ -40,17 +40,17 @@ ms.locfileid: "68006195"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  Para obter uma lista de limitações e restrições, veja [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer associação na função de banco de dados fixa db_owner.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-detach-a-database"></a>Para desanexar um banco de dados  
   
@@ -95,7 +95,7 @@ ms.locfileid: "68006195"
 > [!NOTE]  
 >  O banco de dados recém-desanexado permanecerá visível no nó **Bancos de Dados** do Pesquisador de Objetos até que a exibição seja atualizada. Você pode atualizar a exibição a qualquer momento: Clique no painel Pesquisador de Objetos e, na barra de menus, selecione **Exibir** e, depois, **Atualizar**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-detach-a-database"></a>Para desanexar um banco de dados  
   

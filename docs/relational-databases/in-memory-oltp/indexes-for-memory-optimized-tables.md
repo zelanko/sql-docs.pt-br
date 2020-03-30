@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70929694"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Índices em tabelas com otimização de memória
@@ -230,7 +230,7 @@ A tabela a seguir lista todas as operações com suporte dos diferentes tipos de
 
 Aproveite soluções como a [Desfragmentação de índice adaptável](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) para gerenciar automaticamente a desfragmentação de índice e as atualizações de estatísticas em um ou mais bancos de dados. Este procedimento escolhe automaticamente se deve recompilar ou reorganizar um índice de acordo com seu nível de fragmentação, entre outros parâmetros, e atualizar as estatísticas com um limite linear.
 
-## <a name="Additional_Reading"></a> Consulte também   
+## <a name="see-also"></a><a name="Additional_Reading"></a> Consulte também   
  [Guia de criação de índice do SQL Server](../../relational-databases/sql-server-index-design-guide.md)   
  [Índices de hash para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [Índices não clusterizados para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    

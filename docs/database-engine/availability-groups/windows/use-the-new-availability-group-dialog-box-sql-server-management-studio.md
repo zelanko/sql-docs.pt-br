@@ -13,10 +13,10 @@ ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2c53998ea56c02e43a62573b31767c1beea78a8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821957"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Usar a caixa de diálogo Novo Grupo de Disponibilidade (SQL Server Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "74821957"
 >  Para obter informações sobre modos alternativos de criar um grupo de disponibilidade, consulte [Tarefas relacionadas](#RelatedTasks), mais adiante neste tópico.  
   
   
-##  <a name="PrerequisitesRestrictions"></a> Pré-requisitos  
+##  <a name="prerequisites"></a><a name="PrerequisitesRestrictions"></a> Pré-requisitos  
   
 -   Antes de criar um grupo de disponibilidade, verifique se as instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedam réplicas de disponibilidade residem em um nó diferente do WSFC (Windows Server Failover Clustering), dentro do mesmo cluster de failover do WSFC. Também verifique se cada instância de servidor está habilitada para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] atende a todos os outros pré-requisitos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obter mais informações, é altamente recomendável que você leia [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "74821957"
   
 -   Para usar a caixa de diálogo **Novo Grupo de Disponibilidade** , você precisa saber os nomes das instâncias de servidor que hospedarão réplicas de disponibilidade. Além disso, você precisa saber os nomes dos bancos de dados que pretende adicionar ao seu novo grupo de disponibilidade e verificar se esses bancos de dados atendem aos pré-requisitos de banco de dados de disponibilidade e às restrições descritas em [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). Se você inserir valores inválidos, o novo grupo de disponibilidade não funcionará.  
   
-## <a name="Limitations"></a> Limitações  
+## <a name="limitations"></a><a name="Limitations"></a> Limitações  
  A caixa de diálogo **Novo Grupo de Disponibilidade** não permite:  
   
 -   Criar um ouvinte de grupo de disponibilidade.    
@@ -47,10 +47,10 @@ ms.locfileid: "74821957"
   
  Para obter informações sobre essas tarefas de configuração, consulte [Acompanhamento: depois de criar um grupo de disponibilidade](#FollowUp), mais adiante neste tópico.  
   
-##  <a name="Permissions"></a> Permissões  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a associação na função de servidor fixa **sysadmin** e a permissão de servidor CREATE AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usando a caixa de diálogo Novo Grupo de Disponibilidade (SQL Server Management Studio)  
+##  <a name="using-the-new-availability-group-dialog-box-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando a caixa de diálogo Novo Grupo de Disponibilidade (SQL Server Management Studio)  
  **Para criar um grupo de disponibilidade**  
   
 1.  No Pesquisador de Objetos, conecte-se à instância de servidor que hospeda a réplica primária e clique no nome do servidor.  
@@ -76,7 +76,7 @@ ms.locfileid: "74821957"
   
      Para sair da caixa de diálogo sem criar o grupo de disponibilidade, clique em **Cancelar**.  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de usar a caixa de diálogo Novo Grupo de Disponibilidade para criar um grupo de disponibilidade  
+##  <a name="follow-up-after-using-the-new-availability-group-dialog-box-to-create-an-availability-group"></a><a name="FollowUp"></a> Acompanhamento: depois de usar a caixa de diálogo Novo Grupo de Disponibilidade para criar um grupo de disponibilidade  
   
 -   Você precisa conectar-se a cada instância de servidor, uma por vez, que está hospedando uma réplica secundária para o grupo de disponibilidade e concluir as seguintes etapas:  
   
@@ -88,7 +88,7 @@ ms.locfileid: "74821957"
   
 -   Recomendamos que você crie um ouvinte de grupo de disponibilidade para o novo grupo de disponibilidade. Isso exige que você esteja conectado à instância do servidor que hospeda a réplica primária atual. Para obter mais informações, consulte [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para configurar um grupo de disponibilidade e propriedades de réplica**  
   
 -   [Alterar o modo de disponibilidade de uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -147,7 +147,7 @@ ms.locfileid: "74821957"
   
 -   [Solução de problemas de uma operação de adição de arquivos com falha &#40;Grupos de disponibilidade de AlwaysOn&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

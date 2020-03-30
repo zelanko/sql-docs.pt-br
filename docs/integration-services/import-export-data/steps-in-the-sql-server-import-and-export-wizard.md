@@ -10,10 +10,10 @@ ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a6fb370c80af6221812b88d3694a230dc206f7b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296202"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Etapas no Assistente de Importação e Exportação do SQL Server
@@ -43,7 +43,7 @@ Para obter uma visão rápida das várias telas exibidas em uma sessão típica,
 > [!TIP]
 > Pressione a tecla F1 em qualquer caixa de diálogo ou página do assistente para ver a documentação da página atual.
 
-## <a name="related"></a> Tarefas e conteúdo relacionados  
+## <a name="related-tasks-and-content"></a><a name="related"></a> Tarefas e conteúdo relacionados  
 Aqui estão algumas outras tarefas básicas.
 -   **Veja um exemplo rápido de como o assistente funciona.**
 

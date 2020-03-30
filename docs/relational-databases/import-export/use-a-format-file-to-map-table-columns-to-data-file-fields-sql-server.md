@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: a3c8b1fbe01bf97eeba11d57ae2d7ee9095c3964
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056340"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Usar um arquivo de formato para mapear colunas de tabela para campos de arquivo de dados (SQL Server)
@@ -30,12 +30,12 @@ Um arquivo de dados pode conter campos organizados em uma ordem diferente das co
 |[Condições de teste de exemplo](#etc)<br />&emsp;&#9679;&emsp;[Tabela de exemplo](#sample_table)<br />&emsp;&#9679;&emsp;[Arquivo de dados de exemplo](#sample_data_file)<br />[Criando os arquivos de formato](#create_format_file)<br />&emsp;&#9679;&emsp;[Criando um arquivo de formato não XML](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[Modificando o arquivo de formato não XML](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[Criando um arquivo de formato XML](#xml_format_file)<br />&emsp;&#9679;&emsp;[Modificando o arquivo de formato XML](#modify_xml_format_file)<br />[Importando dados com um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados](#import_data)<br />&emsp;&#9679;&emsp;[Usando bcp e um arquivo de formato não XML](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[Usando bcp e um arquivo de formato XML](#bcp_xml)<br />&emsp;&#9679;&emsp;[Usando BULK INSERT e um arquivo de formato não XML](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[Usando BULK INSERT e um arquivo de formato XML](#bulk_xml)<br />&emsp;&#9679;&emsp;[Usando OPENROWSET(BULK...) e um arquivo de formato não XML](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[Usando OPENROWSET(BULK...) e um arquivo de formato XML](#openrowset_xml)|
 
 > [!NOTE]  
->  Um arquivo de formato XML ou não XML pode ser usado para a importação em massa de um arquivo de dados para a tabela usando um comando do [utilitário bcp](../../tools/bcp-utility.md), uma instrução [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ou INSERT... Instrução SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md). Para obter mais informações, veja [Usar um arquivo de formato para importação de dados em massa &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
+>  Um arquivo de formato XML ou não XML pode ser usado para a importação em massa de um arquivo de dados para a tabela usando um comando do [utilitário bcp](../../tools/bcp-utility.md) , uma instrução [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ou INSERT... Instrução SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) . Para obter mais informações, veja [Usar um arquivo de formato para importação de dados em massa &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
 
-## Condições de teste de exemplo<a name="etc"></a>  
+## <a name="example-test-conditions"></a>Condições de teste de exemplo<a name="etc"></a>  
 Os exemplos de arquivos de formato modificados neste tópico baseiam-se na tabela e no arquivo de dados definidos abaixo.
 
-### Tabela de exemplo<a name="sample_table"></a>
+### <a name="sample-table"></a>Tabela de exemplo<a name="sample_table"></a>
 O script abaixo cria um banco de dados de teste e uma tabela chamada `myRemap`.  Execute o seguinte script Transact-SQL no Microsoft SSMS (SQL Server Management Studio):
 ```sql
 CREATE DATABASE TestDatabase;
@@ -51,7 +51,7 @@ CREATE TABLE myRemap
    );
 ```
 
-### Arquivo de dados de exemplo<a name="sample_data_file"></a>
+### <a name="sample-data-file"></a>Arquivo de dados de exemplo<a name="sample_data_file"></a>
 Os dados abaixo apresentam `FirstName` e `LastName` na ordem inversa como apresentados na tabela `myRemap`.  Usando o Bloco de Notas, crie um arquivo vazio `D:\BCP\myRemap.bcp` e insira os seguintes dados:
 ```
 1,Grosse,Anthony,M
@@ -59,7 +59,7 @@ Os dados abaixo apresentam `FirstName` e `LastName` na ordem inversa como aprese
 3,Rosenhain,Stella,F
 ```
 
-## Criando os arquivos de formato<a name="create_format_file"></a>
+## <a name="creating-the-format-files"></a>Criando os arquivos de formato<a name="create_format_file"></a>
 Para importar em massa dados de `myRemap.bcp` para a tabela `myRemap` , o arquivo de formato deverá fazer o seguinte:
 * Mapear o primeiro campo de dados para a primeira coluna, `PersonID`.
 * Mapear o segundo campo de dados para a terceira coluna, `LastName`.
@@ -68,12 +68,12 @@ Para importar em massa dados de `myRemap.bcp` para a tabela `myRemap` , o arquiv
 
 O método mais simples para criar o arquivo de formato é usando o [utilitário bcp](../../tools/bcp-utility.md).  Primeiro, crie um arquivo de formato base da tabela existente.  Em segundo lugar, modifique o arquivo de formato base para refletir o arquivo de dados real.
 
-### Criando um arquivo de formato não XML<a name="nonxml_format_file"></a>
+### <a name="creating-a-non-xml-format-file"></a>Criando um arquivo de formato não XML<a name="nonxml_format_file"></a>
 Examine [Arquivos de formato não XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) para obter informações detalhadas. O comando a seguir usará o [utilitário bcp](../../tools/bcp-utility.md) para gerar um arquivo de formato não XML, `myRemap.fmt`, com base no esquema de `myRemap`.  Além disso, o qualificador `c` é usado para especificar dados de caractere, `t,` é usado para especificar uma vírgula como um terminador de campo e `T` é usado para especificar uma conexão confiável usando a segurança integrada.  No prompt de comando, digite o seguinte comando:
 ```
 bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
-### Modificando o arquivo de formato não XML <a name="modify_nonxml_format_file"></a>
+### <a name="modifying-the-non-xml-format-file"></a>Modificando o arquivo de formato não XML <a name="modify_nonxml_format_file"></a>
 Consulte [Estrutura de arquivos de formato não XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md#Structure) para obter a terminologia.  Abra `D:\BCP\myRemap.fmt` no Bloco de Notas e realize as seguintes modificações:
 1.  Reorganize a ordem das linhas do arquivo de formato para que as linhas estejam na mesma ordem que os dados do `myRemap.bcp`.
 2.  Verifique se os valores de ordem do campo do arquivo de host são sequenciais.
@@ -106,12 +106,12 @@ O arquivo de formato modificado agora reflete:
 * O terceiro campo de dados do `myRemap.bcp` é mapeado para a segunda coluna, `myRemap.. FirstName`
 * O quarto campo de dados do `myRemap.bcp` é mapeado para a quarta coluna, `myRemap.. Gender`
 
-### Criando um arquivo de formato XML <a name="xml_format_file"></a>  
+### <a name="creating-an-xml-format-file"></a>Criando um arquivo de formato XML <a name="xml_format_file"></a>  
 Examine [Arquivos de formato XML (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) para obter informações detalhadas.  O comando a seguir usará o [utilitário bcp](../../tools/bcp-utility.md) para criar um arquivo de formato XML, `myRemap.xml`, com base no esquema de `myRemap`.  Além disso, o qualificador `c` é usado para especificar dados de caractere, `t,` é usado para especificar uma vírgula como um terminador de campo e `T` é usado para especificar uma conexão confiável usando a segurança integrada.  O qualificador `x` deve ser usado para gerar um arquivo de formato baseado em XML.  No prompt de comando, digite o seguinte comando:
 ```
 bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 ```
-### Modificando o arquivo de formato XML <a name="modify_xml_format_file"></a>
+### <a name="modifying-the-xml-format-file"></a>Modificando o arquivo de formato XML <a name="modify_xml_format_file"></a>
 Consulte [Sintaxe de esquema para arquivos de formato XML](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) para obter a terminologia.  Abra `D:\BCP\myRemap.xml` no Bloco de Notas e realize as seguintes modificações:
 1. A ordem na qual os elementos \<FIELD> são declarados no formato de arquivo é a ordem na qual os campos são exibidos no arquivo de dados; portanto, inverta a ordem dos elementos \<FIELD> com os atributos de ID 2 e 3.
 2. Verifique se os valores do atributo de ID \<FIELD> são sequenciais.
@@ -161,22 +161,22 @@ O arquivo de formato modificado agora reflete:
 * FIELD 4, que corresponde à COLUMN 4, é mapeado para a quarta coluna da tabela, `myRemap.. Gender`
 
 
-## Importando dados com um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados<a name="import_data"></a>
+## <a name="importing-data-with-a-format-file-to-map-table-columns-to-data-file-field"></a>Importando dados com um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados<a name="import_data"></a>
 Os exemplos abaixo usam o banco de dados, o arquivo de dados e os arquivos de formato criados acima.
 
-### Usando o [bcp](../../tools/bcp-utility.md) e um [arquivo de formato não XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bcp_nonxml"></a>
+### <a name="using-bcp-and-non-xml-format-file"></a>Usando o [bcp](../../tools/bcp-utility.md) e um [arquivo de formato não XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bcp_nonxml"></a>
 No prompt de comando, digite o seguinte comando:
 ```
 bcp TestDatabase.dbo.myRemap IN D:\BCP\myRemap.bcp -f D:\BCP\myRemap.fmt -T
 ```
 
-### Usando o [bcp](../../tools/bcp-utility.md) e um [arquivo de formato XML](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bcp_xml"></a>
+### <a name="using-bcp-and-xml-format-file"></a>Usando o [bcp](../../tools/bcp-utility.md) e um [arquivo de formato XML](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bcp_xml"></a>
 No prompt de comando, digite o seguinte comando:
 ```
 bcp TestDatabase.dbo.myRemap IN D:\BCP\myRemap.bcp -f D:\BCP\myRemap.xml -T
 ```
 
-### Usando [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e um [arquivo de formato não XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
+### <a name="using-bulk-insert-and-non-xml-format-file"></a>Usando [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e um [arquivo de formato não XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
 Execute o seguinte script Transact-SQL no Microsoft SSMS (SQL Server Management Studio):
 ```sql
 USE TestDatabase;  
@@ -192,7 +192,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myRemap;
 ```
 
-### Usando [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e um [arquivo de formato XML](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a>
+### <a name="using-bulk-insert-and-xml-format-file"></a>Usando [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e um [arquivo de formato XML](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a>
 Execute o seguinte script Transact-SQL no Microsoft SSMS (SQL Server Management Studio):
 ```sql
 USE TestDatabase;  
@@ -208,7 +208,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myRemap;
 ```
 
-### Usando [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) e um [arquivo de formato não XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>    
+### <a name="using-openrowsetbulk-and-non-xml-format-file"></a>Usando [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) e um [arquivo de formato não XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>    
 Execute o seguinte script Transact-SQL no Microsoft SSMS (SQL Server Management Studio):
 ```sql
 USE TestDatabase;
@@ -227,7 +227,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myRemap;
 ```
 
-### Usando [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) e um [arquivo de formato XML](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a>
+### <a name="using-openrowsetbulk-and-xml-format-file"></a>Usando [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) e um [arquivo de formato XML](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a>
 Execute o seguinte script Transact-SQL no Microsoft SSMS (SQL Server Management Studio):
 ```sql
 USE TestDatabase;  

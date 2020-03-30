@@ -22,10 +22,10 @@ ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 692f62c6a5b9d6268a27de350a860c0cb58c74bc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68067551"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
@@ -63,7 +63,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
  *language_term* pode ser especificado como uma cadeia de caracteres, um inteiro ou valor hexadecimal que corresponde ao LCID (ID de localidade) do idioma, da seguinte maneira:  
   
-|Formatar|Descrição|  
+|Formatar|DESCRIÇÃO|  
 |------------|-----------------|  
 |String|*language_term* corresponde ao valor da coluna **alias** no modo de exibição de compatibilidade [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). A cadeia de caracteres precisa ser colocada entre aspas, como em **'***language_term***'** .|  
 |Integer|*language_term* é o LCID do idioma.|  

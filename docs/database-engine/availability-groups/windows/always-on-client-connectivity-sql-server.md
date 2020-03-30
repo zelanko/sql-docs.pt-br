@@ -15,10 +15,10 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dcff763612b51918eb13336379c01f1c1ac9e108
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822082"
 ---
 # <a name="driver-and-client-connectivity-support-for-availability-groups"></a>Suporte de driver e conectividade de cliente para grupos de disponibilidade
@@ -27,7 +27,7 @@ ms.locfileid: "74822082"
   Este tópico descreve as considerações sobre conectividade de cliente para Grupos de Disponibilidade AlwaysOn, incluindo pré-requisitos, restrições e recomendações para configurações de cliente.  
   
  
-##  <a name="ClientConnSupport"></a> Suporte à conectividade de cliente  
+##  <a name="client-connectivity-support"></a><a name="ClientConnSupport"></a> Suporte à conectividade de cliente  
  A seção abaixo oferece informações sobre o suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para conectividade de cliente.  
   
  **Suporte de driver**  
@@ -52,7 +52,7 @@ ms.locfileid: "74822082"
 > [!IMPORTANT]  
 >  Para se conectar a um ouvinte de grupo de disponibilidade, um cliente deve usar uma cadeia de conexão TCP.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Criação e configuração de grupos de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   

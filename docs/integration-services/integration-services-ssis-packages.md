@@ -21,10 +21,10 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 78aa101ac0f7c86bc2563f7cf0151e7f976a5b80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296183"
 ---
 # <a name="integration-services-ssis-packages"></a>Pacotes do SSIS (Integration Services)
@@ -88,10 +88,10 @@ ms.locfileid: "71296183"
 ## <a name="custom-log-entries-available-on-the-package"></a>Entradas de log personalizadas disponíveis no pacote  
  A tabela a seguir relaciona as entradas de log personalizadas para pacotes. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
-|**PackageStart**|Indica que o pacote começou a ser executado.<br /><br /> Observação: Esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
-|**PackageEnd**|Indica que o pacote foi concluído.<br /><br /> Observação: Esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
+|**PackageStart**|Indica que o pacote começou a ser executado.<br /><br /> Observação: esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
+|**PackageEnd**|Indica que o pacote foi concluído.<br /><br /> Observação: esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
 |**Diagnostic**|Fornece informações sobre a configuração do sistema que afeta a execução de pacotes como os executáveis numéricos que podem ser executados simultaneamente.|  
   
 ## <a name="set-the-properties-of-a-package"></a>Definir as propriedades de um pacote  

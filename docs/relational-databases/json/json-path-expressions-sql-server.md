@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095739"
 ---
 # <a name="json-path-expressions-sql-server"></a>Expressões de demarcador JSON (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "74095739"
   
 2.  O [demarcador](#PATH) em si.  
 
-##  <a name="PATHMODE"></a> Path mode  
+##  <a name="path-mode"></a><a name="PATHMODE"></a> Path mode  
  No início da expressão de demarcador, opcionalmente, declare o modo demarcador especificando a palavra-chave **lax** ou **strict**. O padrão é **lax**.  
   
 -   No modo **lax**, as funções retornarão valores vazios se a expressão do demarcador contiver um erro. Por exemplo, se você solicitar o valor **$.name** e o texto JSON não contiver uma chave **name**, a função retornará nula, mas não gerará um erro.  
@@ -58,7 +58,7 @@ SET @json=N'{ ... }'
 SELECT * FROM OPENJSON(@json, N'lax $.info')
 ```  
   
-##  <a name="PATH"></a> Path  
+##  <a name="path"></a><a name="PATH"></a> Path  
  Após a declaração de modo de demarcador opcional, especifique o demarcador em si.  
   
 -   O símbolo de cifrão (`$`) representa o item de contexto.  

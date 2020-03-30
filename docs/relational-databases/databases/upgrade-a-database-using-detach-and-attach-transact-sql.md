@@ -18,10 +18,10 @@ ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8e26f678ae13fac11c39569d15e26c0e79e46deb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095534"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Atualizar um banco de dados usando desanexação e anexação (Transact-SQL)
@@ -44,9 +44,9 @@ Este tópico descreve como usar operações de desanexação e anexação para a
 
      [Depois de atualizar um banco de dados do SQL Server](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Os bancos de dados de sistema não podem ser anexados.  
   
@@ -58,10 +58,10 @@ Este tópico descreve como usar operações de desanexação e anexação para a
   
     -   Se você anexar o banco de dados a uma instância de servidor diferente (independentemente da versão), deverá executar **sp_removedbreplication** para remover a replicação após a conclusão da operação de anexação. Para obter mais informações, veja [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md).  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
 Não é recomendável anexar ou restaurar bancos de dados de origem desconhecida ou não confiável. Esses bancos de dados podem conter um código mal-intencionado que pode executar um código [!INCLUDE[tsql](../../includes/tsql-md.md)] inesperado ou provocar erros modificando o esquema ou a estrutura física do banco de dados. Antes de usar um banco de dados de origem desconhecida ou não confiável, execute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no banco de dados, em um servidor que não seja de produção. Além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  
   
-##  <a name="SSMSProcedure"></a> Para atualizar um banco de dados usando desanexar e anexar  
+##  <a name="to-upgrade-a-database-by-using-detach-and-attach"></a><a name="SSMSProcedure"></a> Para atualizar um banco de dados usando desanexar e anexar  
   
 1.  Desanexe o banco de dados. Para obter mais informações, veja [Desanexar um banco de dados](../../relational-databases/databases/detach-a-database.md).  
   
@@ -107,10 +107,10 @@ Não é recomendável anexar ou restaurar bancos de dados de origem desconhecida
   
     No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um banco de dados anexado recentemente não fica imediatamente visível no Pesquisador de Objetos. Para exibir o banco de dados, no Pesquisador de Objetos, clique em **Exibir** e depois em **Atualizar**. Quando o nó **Bancos de Dados** for expandido no Pesquisador de Objetos, o banco de dados recentemente anexado será exibido na lista de bancos de dados.  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de atualizar um banco de dados do SQL Server  
+##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> Acompanhamento: depois de atualizar um banco de dados do SQL Server  
 Se o banco de dados tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices, dependendo da configuração da propriedade de servidor **upgrade_option** . Se a opção de atualização for definida como importar (**upgrade_option** = 2) ou recriar (**upgrade_option** = 0), os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas, e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida para importar, os índices de texto completo associados serão recriados se um catálogo de texto completo não estiver disponível. Para alterar a configuração da propriedade de servidor **upgrade_option** , use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
-### <a name="dbcompat"></a> Nível de compatibilidade do banco de dados após a atualização  
+### <a name="database-compatibility-level-after-upgrade"></a><a name="dbcompat"></a> Nível de compatibilidade do banco de dados após a atualização  
 Se o nível de compatibilidade de um banco de dados de usuário for 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização. Se o nível de compatibilidade for 90 ou inferior antes da atualização, no banco de dados atualizado, o nível de compatibilidade será definido como 100, que é o nível de compatibilidade mais baixo com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ### <a name="managing-metadata-on-the-upgraded-server-instance"></a>Gerenciando metadados na instância do servidor atualizado  

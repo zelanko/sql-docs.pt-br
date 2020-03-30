@@ -11,13 +11,13 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957050"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gerenciar servidores e bancos de dados com widgets de insights no [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-name-sos"></a>Gerenciar servidores e bancos de dados com widgets de insights no [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Os widgets de insight usam as consultas Transact-SQL (T-SQL) que você usa para monitorar servidores e bancos de dados e as transforma em visualizações repletas de insights.
 

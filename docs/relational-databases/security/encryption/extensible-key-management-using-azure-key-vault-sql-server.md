@@ -18,10 +18,10 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: df42a2d0f7dea2e32df61670aff88374a6fcff54
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558024"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Gerenciamento extensível de chaves usando o Azure Key Vault (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "75558024"
   
  Este tópico descreve o conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Informações adicionais estão disponíveis em [Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md), [Use o Conector do SQL Server com recursos de criptografia do SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)e [Manutenção e solução de problemas do Conector do SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
   
-##  <a name="Uses"></a> O que é o EKM (Gerenciamento Extensível de Chaves) e por que o usamos?  
+##  <a name="what-is-extensible-key-management-ekm-and-why-use-it"></a><a name="Uses"></a> O que é o EKM (Gerenciamento Extensível de Chaves) e por que o usamos?  
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece vários tipos de criptografia que ajudam a proteger dados confidenciais, incluindo [Transparent Data Encryption&#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md), [CLE](../../../t-sql/functions/cryptographic-functions-transact-sql.md) (Criptografia de Nível de Coluna) e [Criptografia de Backup](../../../relational-databases/backup-restore/backup-encryption.md). Em todos esses casos, nessa hierarquia de chave tradicional, os dados são criptografados usando uma chave de criptografia simétrica de dados (DEK). A chave de criptografia simétrica de dados é ainda mais protegida ao criptografar com uma hierarquia de chaves armazenadas em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Em vez de nesse modelo, a alternativa é o Modelo de Provedor EKM. Usar a arquitetura de provedor EKM permite que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proteja as chaves de criptografia de dados usando uma chave assimétrica armazenada fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um provedor de criptografia externo. Esse modelo acrescenta uma camada adicional de segurança e separa o gerenciamento de chaves e dados.  
    
  A imagem a seguir compara o serviço tradicional de gerenciamento de hierarquia de chave com o sistema de Cofre de Chaves do Azure.  

@@ -15,10 +15,10 @@ ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 6ebda9e472f2b276b66d393a808aaac3e8b595b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907626"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>Habilitar ou desabilitar um guia de plano
@@ -39,20 +39,20 @@ ms.locfileid: "72907626"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   A tentativa de cancelar ou modificar uma função, procedimento armazenado ou gatilho DML referenciado por um guia de plano, habilitado ou desabilitado, provoca um erro. Sempre verifique se há dependências antes de cancelar ou modificar qualquer um dos objetos listados acima.  
   
 -   A desabilitação de um guia de plano desabilitado ou a habilitação de um guia de plano habilitado não tem nenhum efeito e ocorre sem erro.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  A habilitação ou desabilitação de um guia de plano OBJECT exige a permissão ALTER no objeto (por exemplo: função, procedimento armazenado) que é referenciado pelo guia de plano. Todos os outros guias de plano requerem permissão ALTER DATABASE.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-disable-or-enable-a-plan-guide"></a>Para habilitar ou desabilitar um guia de plano  
   
@@ -72,7 +72,7 @@ ms.locfileid: "72907626"
   
 3.  Na caixa de diálogo **Desabilitar Todos os Guias de Plano** ou **Habilitar Todos os Guias de Plano** , verifique se a ação escolhida foi bem-sucedida e clique em **Fechar**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-disable-or-enable-a-plan-guide"></a>Para habilitar ou desabilitar um guia de plano  
   

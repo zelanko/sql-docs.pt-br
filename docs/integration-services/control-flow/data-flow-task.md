@@ -19,10 +19,10 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298342"
 ---
 # <a name="data-flow-task"></a>Tarefa de Fluxo de Dados
@@ -50,7 +50,7 @@ ms.locfileid: "71298342"
 ## <a name="log-entries"></a>Entradas de log  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece um conjunto de eventos de log que estão disponíveis para todas as tarefas. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] também fornece entradas de log personalizadas a muitas tarefas. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md). A tarefa de Fluxo de Dados inclui as seguintes entradas de log personalizadas:  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|Indica que a tarefa de Fluxo de Dados alterou o tamanho do buffer. A entrada de log descreve os motivos da mudança de tamanho e relaciona o novo tamanho do buffer temporário.|  
 |**OnPipelinePostEndOfRowset**|Indica que um componente recebeu o sinal de final do conjunto de linhas, definido pela última chamada do método **ProcessInput** . Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
@@ -90,9 +90,9 @@ ms.locfileid: "71298342"
   
  Muitos eventos de log gravam várias entradas, e as mensagens para várias entradas de log contêm dados complexos. Para facilitar a compreensão e comunicar o conteúdo de mensagens complexas, você pode analisar a mensagem de texto. Dependendo do local dos logs, você poderá usar as instruções Transact-SQL ou um componente Script para separar o texto complexo em colunas ou em outros formatos que considere mais útil.  
   
- Por exemplo, a tabela a seguir contém a mensagem "Foram fornecidas linhas para um componente de fluxo de dados como entrada. :  : 1185 : Saída da origem OLE DB : 1180 : Classificar : 1181 : Classificar entrada : 76", analisado em colunas. A mensagem foi gravada pelo evento **OnPipelineRowsSent** quando foram enviadas linhas da origem OLE DB para a transformação Classificação.  
+ Por exemplo, a tabela a seguir contém a mensagem "Foram fornecidas linhas para um componente de fluxo de dados como entrada. :  : 1185: Saída de origem OLE DB: 1180: Classificação: 1181: Classificar entrada: 76", analisado em colunas. A mensagem foi gravada pelo evento **OnPipelineRowsSent** quando foram enviadas linhas da origem OLE DB para a transformação Classificação.  
   
-|Coluna|Descrição|Valor|  
+|Coluna|DESCRIÇÃO|Valor|  
 |------------|-----------------|-----------|  
 |**PathID**|O valor da propriedade **ID** do caminho entre a origem OLE DB e a transformação Classificação.|1185|  
 |**PathName**|O valor da propriedade **Nome** do caminho.|Saída da origem OLE DB|  

@@ -14,10 +14,10 @@ ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235436"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>Página Resultado da Avaliação da Política (Painel AlwaysOn)
@@ -25,7 +25,7 @@ ms.locfileid: "75235436"
 
   Use a página **Resultado da Avaliação de Política** do Painel do AlwaysOn para ver os problemas de política atuais.  
     
-##  <a name="Options"></a> Opções de caixas de diálogo  
+##  <a name="dialog-box-options"></a><a name="Options"></a> Opções de caixas de diálogo  
  **Problema detectado**  
  Exibe uma linha para cada problema detectado. O ícone associado a um problema fornece um indicador visual para indicar a severidade do problema, como segue:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75235436"
  **Mais informações**  
  Clique neste link para abrir o tópico de ajuda do problema selecionado.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

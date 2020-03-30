@@ -17,10 +17,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 536bba3034dc4aa80d0e0588e382aae085941b8b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75239212"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
@@ -32,17 +32,17 @@ ms.locfileid: "75239212"
 
 A conta de inicialização de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent define a conta do Windows como a qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é executado, bem como suas permissões de rede. Este tópico descreve como definir a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="BeforeYouBegin"></a>Antes de começar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de começar  
   
-### <a name="Restrictions"></a>Limitações e restrições  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitações e restrições  
   
 -   A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não exige mais que a conta de inicialização do serviço seja membro do grupo Administradores da [!INCLUDE[msCoName](../../includes/msconame_md.md)] . No entanto, a conta de inicialização do serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve ser membro da função de servidor fixa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin. A conta também deverá ser membro da função TargetServersRole do banco de dados msdb no servidor mestre se o processamento de trabalhos multisservidor for usado.  
   
 -   O Pesquisador de Objetos só exibirá o nó [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent se você tiver permissão para usá-lo.  
   
-### <a name="Security"></a>Segurança  
+### <a name="security"></a><a name="Security"></a>Segurança  
   
-#### <a name="Permissions"></a>Permissões  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissões  
 Para executar suas funções, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve ser configurado de modo a usar as credenciais de uma conta que seja membro da função de servidor fixa **sysadmin** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A conta deve ter as seguintes permissões do Windows:  
   
 -   Fazer logon como um serviço (SeServiceLogonRight)  
@@ -55,7 +55,7 @@ Para executar suas funções, o [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 Para obter mais informações sobre as permissões do Windows necessárias para a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte [Selecionar uma conta para o serviço do SQL Server Agent](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) e [Setting Up Windows Service Accounts (Configurando as contas de serviço do Windows)](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-## <a name="SSMSProcedure"></a>Usando o SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Usando o SQL Server Management Studio  
   
 #### <a name="to-set-the-service-startup-account-for-sql-server-agent"></a>Para definir a conta de inicialização do serviço do SQL Server Agent  
   
@@ -71,7 +71,7 @@ Para obter mais informações sobre as permissões do Windows necessárias para 
   
 6.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server Agent** _(server\_name)_ , em que *server_name* é o nome da instância do Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o qual você deseja alterar a conta de inicialização de serviço, e selecione **Propriedades**.  
   
-7.  Na caixa de diálogo **Propriedades** do **SQL Server Agent** _(nome\_servidor)_ , na guia **Fazer logon**, selecione uma das seguintes opções em **Fazer logon como**:  
+7.  Na caixa de diálogo **Propriedades** do _SQL Server Agent\__ (nome**servidor)** , na guia **Fazer logon**, selecione uma das seguintes opções em **Fazer logon como**:  
   
     -   **Conta interna**: selecione essa opção se os trabalhos precisarem somente de recursos do servidor local. Para obter informações sobre como escolher um tipo de conta interna do Windows, consulte [Seleção de uma conta para o Serviço do SQL Server Agent.](https://msdn.microsoft.com/library/ms191543.aspx)  
   

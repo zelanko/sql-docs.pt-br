@@ -18,10 +18,10 @@ ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2879665878826a4469cd2652c305f079d7cb5c14
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77507732"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Usar a caixa de diálogo Assistente de Grupo de Disponibilidade (SQL Server Management Studio)
@@ -31,10 +31,10 @@ ms.locfileid: "77507732"
 > [!NOTE]  
 >  Para obter uma introdução aos grupos de disponibilidade, confira [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
     
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
  É recomendável que você leia esta seção antes de tentar criar seu primeiro grupo de disponibilidade.  
   
-###  <a name="Prerequisites"></a> Pré-requisitos, restrições e recomendações  
+###  <a name="prerequisites-restrictions-and-recommendations"></a><a name="Prerequisites"></a> Pré-requisitos, restrições e recomendações  
 
 Na maioria dos casos, você pode usar o Assistente de Novo Grupo de Disponibilidade para concluir todas as tarefas necessárias para criar e configurar um grupo de disponibilidade. No entanto, talvez seja necessário concluir algumas das tarefas manualmente.  
   
@@ -63,14 +63,14 @@ Na maioria dos casos, você pode usar o Assistente de Novo Grupo de Disponibilid
   
      Se você não puder usar o assistente para executar a sincronização de dados inicial completa, precisará preparar seus bancos de dados secundários manualmente. Você pode fazer isto antes de ou depois de executar o assistente. Para obter mais informações, consulte [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a associação na função de servidor fixa **sysadmin** e a permissão de servidor CREATE AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
   
  Também exige permissão CONTROL ON ENDPOINT se você desejar permitir que o Assistente de grupo de disponibilidade gerencie o ponto de extremidade de espelhamento de banco de dados.  
   
-##  <a name="RunAGwiz"></a> Usando o Assistente de Novo Grupo de Disponibilidade  
+##  <a name="using-the-new-availability-group-wizard"></a><a name="RunAGwiz"></a> Usando o Assistente de Novo Grupo de Disponibilidade  
   
 1.  No Pesquisador de Objetos, conecte-se à instância do servidor que hospeda a réplica de disponibilidade primária.  
   
@@ -92,12 +92,12 @@ Na maioria dos casos, você pode usar o Assistente de Novo Grupo de Disponibilid
   
      Se o banco de dados contiver uma chave mestra de banco de dados, insira a senha para a chave mestra de banco de dados na coluna **Senha**.  
   
-7.  Na página **Especificar Réplicas** , especifique e configure uma ou mais réplicas para o novo grupo de disponibilidade. Essa página contém quatro guias: A tabela a seguir apresenta essas guias. Para saber mais, confira o tópico [Página Especificar Réplicas &#40;Assistente de Novo Grupo de Disponibilidade: Assistente para Adicionar Réplica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
+7.  Na página **Especificar Réplicas** , especifique e configure uma ou mais réplicas para o novo grupo de disponibilidade. Essa página contém quatro guias: A tabela a seguir apresenta essas guias. Para obter mais informações, confira o tópico [Página Especificar Réplicas &#40;Assistente de Novo Grupo de Disponibilidade: Assistente para Adicionar Réplica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
     |Tab|Breve descrição|  
     |---------|-----------------------|  
     |**Réplicas**|Use esta guia para especificar cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedará uma réplica secundária. Observe que a instância de servidor à qual você está conectado no momento deve hospedar a réplica primária.|  
-    |**Pontos de extremidade**|Use esta guia para verificar quaisquer pontos de extremidade de espelhamento de banco de dados existentes e também, se esse ponto de extremidade estiver ausente em uma instância de servidor cujas contas de serviço usam a Autenticação do Windows para criar o ponto de extremidade automaticamente.<br /><br /> Observação: Se alguma instância de servidor estiver sendo executada em uma conta de usuário que não pertence a um domínio, você precisará fazer uma alteração manual na instância de servidor para que possa continuar as etapas do assistente. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.|  
+    |**Pontos de extremidade**|Use esta guia para verificar quaisquer pontos de extremidade de espelhamento de banco de dados existentes e também, se esse ponto de extremidade estiver ausente em uma instância de servidor cujas contas de serviço usam a Autenticação do Windows para criar o ponto de extremidade automaticamente.<br /><br /> Observação: se alguma instância de servidor estiver sendo executada em uma conta de usuário que não pertença a um domínio, você precisará fazer uma alteração manual na instância de servidor para que possa continuar as etapas do assistente. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.|  
     |**Preferências de backup**|Use esta guia para especificar sua preferência de backup para o grupo de disponibilidade como um todo e suas prioridades de backup para as réplicas de disponibilidade individuais.|  
     |**Ouvinte**|Use esta guia para criar um ouvinte de grupo de disponibilidade. Por padrão, o assistente não cria um ouvinte.|  
   
@@ -138,7 +138,7 @@ Na maioria dos casos, você pode usar o Assistente de Novo Grupo de Disponibilid
   
      Quando o assistente for concluído, clique em **Fechar** para sair.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para concluir a configuração do grupo de disponibilidade**  
   
 -   [Unir uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
@@ -177,21 +177,21 @@ Na maioria dos casos, você pode usar o Assistente de Novo Grupo de Disponibilid
   
 -   [Solução de problemas de uma operação de adição de arquivos com falha &#40;Grupos de disponibilidade de AlwaysOn&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   **Blogs:**  
   
-     [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On – série de aprendizagem do HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON)  
+     [Série de aprendizado do AlwaysOn – HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Blogs da equipe do Always On do SQL Server: o blog oficial da equipe do Always On do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Blogs da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Blogs dos engenheiros do CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Vídeos:**  
   
-     [Microsoft SQL Server Code-Named "Denali" Always On Series, Part 1: Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (Série do Always On, codinome "Denali" do Microsoft SQL Server, parte 1: apresentando a próxima geração de solução de alta disponibilidade)  
+     [Microsoft SQL Server codinome “Denali” Série AlwaysOn, Parte 1: Introduzindo a próxima geração de solução de alta disponibilidade](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server Code-Named "Denali" Always On Series, Part 2: Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404) (Série do Always On de codinome "Denali" do Microsoft SQL Server, parte 2: criando uma solução de alta disponibilidade crítica usando Always On)  
+     [Microsoft SQL Server codinome “Denali” Série AlwaysOn, Parte 2: Criando uma solução de alta disponibilidade de missão crítica usando AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Whitepapers:**  
   

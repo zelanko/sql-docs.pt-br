@@ -19,10 +19,10 @@ ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 8c4c252de5a9d23ecfbaee06ca6322f3b08b275f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761880"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Especificar comportamento de parametrização de consulta usando guias de plano

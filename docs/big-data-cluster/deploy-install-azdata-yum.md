@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: cf6e061b0ca4fca7c843575a87038a801ab8f758
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75728547"
 ---
 # <a name="install-azdata-with-yum"></a>Instalar o `azdata` com o yum
 
-Para distribuições do Linux com o `yum` há um pacote para o `azdata-cli`. O pacote do CLI foi testado em versões do Linux que usam `yum`:
+Para distribuições do Linux com o `yum`, há um pacote para o `azdata-cli`. O pacote do CLI foi testado em versões do Linux que usam `yum`:
 
 - RHEL 7, RHEL 8
 
@@ -28,15 +28,15 @@ Para distribuições do Linux com o `yum` há um pacote para o `azdata-cli`. O p
 ## <a name="install-with-yum"></a>Instalar com yum
 
 >[!IMPORTANT]
-> O pacote RPM da CLI do `azdata-cli` depende do pacote python3. Em seu sistema, isso pode ser uma versão do Python que antecede o requisito do *Python 3.6.x*. Se isso representar um problema para você, localize um pacote python3 substituto ou siga as instruções de instalação manual que usam [`pip`](deploy-install-azdata-pip.md).
+> O pacote RPM da CLI do `azdata-cli` depende do pacote python3. Em seu sistema, isso pode ser uma versão do Python que antecede o requisito do *Python 3.6.x*. Se isso é um problema para você, localize um pacote python3 substituto ou siga as instruções de instalação manual que usam [`pip`](deploy-install-azdata-pip.md).
 
-1. Importe a chave do repositório da Microsoft
+1. Importar a chave do repositório da Microsoft
 
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
 
-1. Crie informações sobre o repositório do local
+1. Criar informações sobre o repositório do local
 
    Para um cliente RHEL 7, execute:
 

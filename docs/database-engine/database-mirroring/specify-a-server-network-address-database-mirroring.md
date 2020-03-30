@@ -17,10 +17,10 @@ ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252758"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Especificar um endereço de rede do servidor (Espelhamento de banco de dados)
@@ -30,7 +30,7 @@ ms.locfileid: "75252758"
  Antes de você poder especificar uma porta em um endereço de rede de servidor, deve existir o ponto de extremidade do espelhamento de banco de dados na instância de servidor. Para obter mais informações, veja [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
   
-##  <a name="Syntax"></a> Sintaxe para um endereço de rede de servidor  
+##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> Sintaxe para um endereço de rede de servidor  
  A sintaxe para um endereço de rede de servidor é do formato:  
   
  TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
@@ -121,7 +121,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `MYSERVER.mydomain.Adventure-Works.com`  
   
-##  <a name="Examples"></a> Exemplos  
+##  <a name="examples"></a><a name="Examples"></a> Exemplos  
  O exemplo a seguir mostra o endereço de rede de servidor para uma instância de servidor em um sistema de computador nomeado `REMOTESYSTEM3` em outro domínio. As informações de domínio são `NORTHWEST.ADVENTURE-WORKS.COM`e a porta do ponto de extremidade de espelhamento de banco de dados é `7025`. Tendo estes exemplos de componentes determinados, o endereço de rede de servidor é.  
   
  `TCP://REMOTESYSTEM3.NORTHWEST.ADVENTURE-WORKS.COM:7025`  
@@ -130,7 +130,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `TCP://DBSERVER1:7022`  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   

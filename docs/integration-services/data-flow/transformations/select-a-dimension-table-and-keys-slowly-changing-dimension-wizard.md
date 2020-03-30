@@ -13,10 +13,10 @@ ms.assetid: 01e0495f-de35-4607-ba19-0539e801e8fd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 47753a678aa92b02024145a0159fda7eefcfae77
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297815"
 ---
 # <a name="select-a-dimension-table-and-keys-slowly-changing-dimension-wizard"></a>Selecionar uma Tabela e Chaves de Dimensão (Assistente para Dimensões de Alteração Lenta)

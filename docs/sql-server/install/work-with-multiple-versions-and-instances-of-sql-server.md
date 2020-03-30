@@ -20,10 +20,10 @@ ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0ff71430707e210daf970e969d854e408d777e4e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258976"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Trabalhar com várias versões e instâncias do SQL Server
@@ -64,7 +64,7 @@ Os seguintes itens relacionados ao SQL Server são compatíveis com a instalaç�
 
  Alguns componentes são compartilhados por todas as instâncias de todas as versões instaladas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando você instalar versões diferentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lado a lado na mesma máquina, esses componentes serão atualizados automaticamente para a versão mais recente. Esses componentes são geralmente desinstalados automaticamente quando a última instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é desinstalada.
   
- Exemplos: Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Gravador VSS do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+ Exemplos: Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Gravador VSS do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
 ### <a name="components-shared-across-all-instances-of-the-same-major-version-of-ssnoversion"></a>Componentes compartilhados por todas as instâncias da mesma versão principal do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -76,7 +76,7 @@ Exemplos: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLU
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] As versões que têm os mesmos componentes compartilhados de versão principal.secundária.
   
-Exemplo: Arquivos de suporte à Instalação.
+Exemplo: arquivos de suporte à instalação.
   
 ### <a name="components-specific-to-an-instance-of-ssnoversion"></a>Componentes específicos de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

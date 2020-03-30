@@ -17,10 +17,10 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295123"
 ---
 # <a name="debugging-data-flow"></a>Depurando fluxo de dados
@@ -65,7 +65,7 @@ ms.locfileid: "71295123"
   
  A tabela a seguir descreve a codificação de cores.  
   
-|Color|Descrição|  
+|Color|DESCRIÇÃO|  
 |-----------|-----------------|  
 |Nenhuma cor|Esperando ser chamado pelo mecanismo de fluxo de dados.|  
 |Amarelo|Executando uma transformação, extraindo dados ou carregando dados.|  
@@ -183,7 +183,7 @@ order by source_component_name desc
   
 8.  Para salvar o pacote atualizado, no menu **Arquivo** , clique em **Salvar Itens Selecionados**.  
 
-## <a name="add_viewer"></a> Adicionar um visualizador de dados a um fluxo de dados
+## <a name="add-a-data-viewer-to-a-data-flow"></a><a name="add_viewer"></a> Adicionar um visualizador de dados a um fluxo de dados
   Este tópico descreve como adicionar e configurar um visualizador de dados em um fluxo de dados. Um visualizador de dados exibe dados que estão se movendo entre dois componentes de fluxo de dados. Por exemplo, um visualizador de dados pode exibir os dados extraídos de uma fonte antes de uma transformação no fluxo de dados modificar os dados.  
   
  Um caminho conecta componentes em um fluxo de dados conectando a saída de um componente de fluxo de dados à entrada de outro componente.  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 79f24f3115f61b088fce684d0b7ada0bc1d39697
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287033"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Sincronizar uma assinatura pull
@@ -36,7 +36,7 @@ ms.locfileid: "76287033"
   
      [RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Assinaturas são sincronizadas pelo Agente de Distribuição (para replicação transacional e de instantâneo) ou pelo Agente de Mesclagem (para replicação de mesclagem). Os agentes podem ser executados continuamente, sob demanda ou em um agendamento. Para obter mais informações sobre como especificar agendas de sincronização, consulte [Especificar agendas de sincronização](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
  Sincronize uma assinatura em demanda na pasta **Assinaturas Locais** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -53,7 +53,7 @@ ms.locfileid: "76287033"
   
 5.  Clique em **fechar**  
   
-##  <a name="ReplProg"></a> Replication Agents  
+##  <a name="replication-agents"></a><a name="ReplProg"></a> Replication Agents  
  As assinaturas pull podem ser sincronizadas programaticamente e sob demanda chamando o arquivo executável do agente de replicação apropriado do prompt de comando. O arquivo executável do agente de replicação chamado dependerá do tipo de publicação para a qual a assinatura pull pertence. Para obter mais informações, consulte [Replication Agents](../../relational-databases/replication/agents/replication-agents-overview.md).  
   
 > [!NOTE]  
@@ -143,7 +143,7 @@ ms.locfileid: "76287033"
   
     -   **-SubscriberSecurityMode** = **0**  
   
-###  <a name="TsqlExample"></a> Exemplos (agentes de replicação)  
+###  <a name="examples-replication-agents"></a><a name="TsqlExample"></a> Exemplos (agentes de replicação)  
  O exemplo a seguir inicia o Agente de Distribuição para sincronizar uma assinatura pull. Todas as conexões são feitas usando a Autenticação do Windows.  
   
 ```  
@@ -181,7 +181,7 @@ SET Publication=AdvWorksSalesOrdersMerge
 -Validate 3  -ParallelUploadDownload 1 ;  
 ```  
   
-##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
  É possível sincronizar as assinaturas pull programaticamente usando o RMO (Replication Management Objects) e o acesso de código gerenciado para as funcionalidades do agente de replicação. As classes usadas para sincronizar uma assinatura pull dependem do tipo de publicação ao qual a assinatura pertence.  
   
 > [!NOTE]
@@ -241,7 +241,7 @@ SET Publication=AdvWorksSalesOrdersMerge
         > [!NOTE]  
         >  Se você especificou um valor **false** for <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (o padrão) quando criou a assinatura pull, também precisará especificar <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>e, opcionalmente, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>e <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> porque os metadados relativos ao trabalho do agente para a assinatura não estão disponíveis em [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md).  
   
-###  <a name="PShellExample"></a> Exemplos (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemplos (RMO)  
  Esse exemplo sincroniza a assinatura pull para uma publicação transacional, onde o agente é iniciado em modo assíncrono usando o trabalho do agente.  
   
 ```csharp  

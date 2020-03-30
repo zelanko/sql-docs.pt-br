@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 177886f6b43e90a094ae69945a1deee7adcab61d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68136688"
 ---
 # <a name="rename-a-stored-procedure"></a>Renomear um procedimento armazenado
@@ -38,9 +38,9 @@ ms.locfileid: "68136688"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Os nomes de procedimento devem estar de acordo com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
@@ -50,16 +50,16 @@ ms.locfileid: "68136688"
 
 -   A alteração do nome ou definição de um procedimento pode causar falha em objetos dependentes que não são atualizados para refletir as alterações que tenham sido feitas no procedimento. Para obter mais informações, veja [Exibir as dependências de um procedimento armazenado](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  CREATE PROCEDURE  
  Exige a permissão CREATE PROCEDURE no banco de dados e a permissão ALTER no esquema em que o procedimento está sendo criado, ou exige a associação na função de banco de dados fixa **db_ddladmin** .  
   
  ALTER PROCEDURE  
  Exige a permissão ALTER no procedimento, ou exige a associação na função de banco de dados fixa **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-rename-a-stored-procedure"></a>Para renomear um procedimento armazenado  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68136688"
 5.  Modifique o nome do procedimento.  
 6.  Modifique o nome do procedimento referenciado em qualquer objeto dependente ou script.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-rename-a-stored-procedure"></a>Para renomear um procedimento armazenado  
   

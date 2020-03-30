@@ -20,10 +20,10 @@ ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c4ca01f461d3013482ceca066a6ce141adf0aaae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908926"
 ---
 # <a name="file-restores-full-recovery-model"></a>Restaurações de arquivo (modelo de recuperação completa)
@@ -55,7 +55,7 @@ ms.locfileid: "72908926"
     >  Se quiser que o banco de dados fique offline para uma restauração de arquivo, coloque o banco de dados offline antes de iniciar a sequência de restauração, executando a seguinte instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) : ALTER DATABASE *database_name* SET OFFLINE.  
   
   
-##  <a name="Overview"></a> Restaurando arquivos danificados de backups de arquivo  
+##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> Restaurando arquivos danificados de backups de arquivo  
   
 1.  Antes de restaurar um ou mais arquivos danificados, tente criar um [backup da parte final do log](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
@@ -121,7 +121,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [Exemplo: restauração offline do grupo de arquivos primário e mais um &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para restaurar arquivos e grupos de arquivos**  
   
 -   [Restaurar arquivos em um novo local &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  

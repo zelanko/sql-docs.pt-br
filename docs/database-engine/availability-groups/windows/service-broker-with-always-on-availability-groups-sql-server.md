@@ -14,10 +14,10 @@ ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8845f69e619c8cd2cc7a194b6f03a4dec5f592c1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822614"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker com grupos de disponibilidade AlwaysOn (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74822614"
   Este tópico contém informações sobre como configurar o Service Broker para funcionar com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
   
-##  <a name="ReceiveRemoteMessages"></a> Requisitos para um serviço em um grupo de disponibilidade para receber mensagens remotas  
+##  <a name="requirements-for-a-service-in-an-availability-group-to-receive-remote-messages"></a><a name="ReceiveRemoteMessages"></a> Requisitos para um serviço em um grupo de disponibilidade para receber mensagens remotas  
   
 1.  **Verifique se o grupo de disponibilidade tem um ouvinte.**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "74822614"
   
      Para obter informações sobre como criar rotas, veja [Exemplos de roteamento do Service Broker](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (na versão do [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] dos Manuais Online) e [CREATE ROUTE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-route-transact-sql.md).  
   
-##  <a name="SendRemoteMessages"></a> Requisitos para enviar mensagens para um serviço remoto em um grupo de disponibilidade  
+##  <a name="requirements-for-sending-messages-to-a-remote-service-in-an-availability-group"></a><a name="SendRemoteMessages"></a> Requisitos para enviar mensagens para um serviço remoto em um grupo de disponibilidade  
   
 1.  **Criar uma rota para o serviço de destino.**  
   
@@ -99,7 +99,7 @@ ms.locfileid: "74822614"
   
 2.  **Verifique se msdb contém uma rota AutoCreatedLocal ou uma rota para o serviço específico.** (Para obter mais informações, veja [Requisitos para que um serviço em um grupo de disponibilidade receba mensagens remotas](#ReceiveRemoteMessages), acima neste tópico.)  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  
   

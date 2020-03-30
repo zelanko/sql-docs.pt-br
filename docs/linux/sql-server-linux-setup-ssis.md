@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 0f400667e73effb73ff41c3c7270e3f89a2ca0da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76162637"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Instalar o SSIS (SQL Server Integration Services) no Linux
@@ -26,7 +26,7 @@ Você pode instalar o SQL Server Integration Services nestas plataformas:
 - [Ubuntu 16.04](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-## <a name="ubuntu"></a> Instalar o SSIS no Ubuntu
+## <a name="install-ssis-on-ubuntu"></a><a name="ubuntu"></a> Instalar o SSIS no Ubuntu
 
 Para instalar o pacote **mssql-server-is** no Ubuntu, siga estas etapas:
 
@@ -118,7 +118,7 @@ Para remover **mssql-server-is**, execute o seguinte comando:
 sudo apt-get remove mssql-server-is
 ```
 
-## <a name="RHEL"></a> Instalar o SSIS no RHEL
+## <a name="install-ssis-on-rhel"></a><a name="RHEL"></a> Instalar o SSIS no RHEL
 Para instalar o pacote **mssql-server-is** no RHEL, siga estas etapas:
 
 <!--SQL Server 2017 on Linux-->
@@ -214,7 +214,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 ### <a name="environment-variables-for-unattended-installation"></a>Variáveis de ambiente para instalação autônoma
 
-| Variável de ambiente | Descrição |
+| Variável de ambiente | DESCRIÇÃO |
 |---|---|
 | ACCEPT_EULA | Aceita os termos de licença SQL Server quando definidos para qualquer valor como "Y".|
 | SSIS_PID | Define a edição do SQL Server ou a chave do produto (Product Key). Estes são os valores possíveis:<ul><li>Avaliação</li><li>Desenvolvedor</li><li>Express</li><li>Web</li><li>Standard</li><li>Enterprise</li><li>Uma chave do produto (Product Key)</li></ul>Se você especificar uma chave do produto (Product Key), ela deverá estar no formato *#####* - *#####* - *#####* - *#####* - *#####* , em que *#* é uma letra ou um dígito.  |

@@ -14,10 +14,10 @@ ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e1b4811e15d9f6927d06a4d4f9ff99466eb164c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68112914"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>Colunas com o nome de um teste de nó XPath

@@ -27,10 +27,10 @@ ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
 ms.openlocfilehash: d662eb333ae932370c09847319cb69a5deb4773e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67950333"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
@@ -59,7 +59,7 @@ CHECKPOINT [ checkpoint_duration ]
   
  O impacto do uso de *checkpoint_duration* no desempenho depende do número de páginas sujas, da atividade no sistema e da duração atual especificada. Por exemplo, se o ponto de verificação normalmente é concluído em 120 segundos, especificar um *checkpoint_duration* de 45 segundos fará com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dedique mais recursos ao ponto de verificação do que a quantidade que seria atribuída por padrão. Por outro lado, especificar um *checkpoint_duration* de 180 segundos fará com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribua menos recursos do que a quantidade que seria atribuída por padrão. Em geral, um *checkpoint_duration* curto aumentará os recursos dedicados ao ponto de verificação, enquanto um *checkpoint_duration* longo reduzirá os recursos dedicados ao ponto de verificação. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre conclui um ponto de verificação, se possível, e a instrução CHECKPOINT retorna imediatamente quando um ponto de verificação é concluído. Então, em alguns casos, um ponto de verificação pode ser concluído antes da duração especificada ou pode ser executado por mais tempo que a duração especificada.  
   
-##  <a name="Security"></a> Segurança  
+##  <a name="security"></a><a name="Security"></a> Segurança  
   
 ### <a name="permissions"></a>Permissões  
  As permissões de CHECKPOINT são o padrão para os membros da função de servidor fixa **sysadmin** e das funções de banco de dados fixas **db_owner** e **db_backupoperator** e não podem ser transferidas.  

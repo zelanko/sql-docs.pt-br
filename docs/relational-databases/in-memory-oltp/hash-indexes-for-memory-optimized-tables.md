@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6216e8e008bff92ce502aa6dda8025c5ef63f0ba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412660"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>Solução de problemas dos índices de hash para tabelas com otimização de memória
@@ -232,6 +232,6 @@ As cargas de trabalho OLTP concentram-se em linhas individuais. Geralmente, as v
   - Um aumento do tempo necessário para uma verificação completa do índice de hash.  
   
 
-##  <a name="Additional_Reading"></a> Leitura adicional  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Leitura adicional  
  [Índices de hash para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [Índices não clusterizados para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)  

@@ -19,10 +19,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 973e5e1449205d5e72abfa03068db3c8c3e98f87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296159"
 ---
 # <a name="integration-services-ssis-variables"></a>Variáveis do SSIS (Integration Services)
@@ -251,7 +251,7 @@ Use a caixa de diálogo **Adicionar Variável** para especificar as propriedades
   
 -   Janela Variáveis.  
   
--   Janela Propriedades. A janela **Propriedades** lista as propriedades para configuração de variáveis que não estão disponíveis na janela de **Variáveis**: Description, EvaluateAsExpression, Expression, ReadOnly, ValueType e IncludeInDebugDump.  
+-   Janela Propriedades. A janela **Propriedades** lista propriedades para configurar variáveis não disponíveis na janela **Variáveis** : Description, EvaluateAsExpression, Expression, ReadOnly, ValueType e IncludeInDebugDump.  
   
 > [!NOTE]  
 >  O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] também fornece um conjunto de variáveis do sistema cujas propriedades não podem ser atualizadas, com a exceção da propriedade RaiseChangedEvent.  

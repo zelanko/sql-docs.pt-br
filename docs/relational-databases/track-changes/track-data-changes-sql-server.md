@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 94f5ccf6d7983a25bb8cafe084dbca103f966255
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095423"
 ---
 # <a name="track-data-changes-sql-server"></a>Controle de alterações de dados (SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "74095423"
 |Se a coluna foi alterada|Sim|Sim|  
 |Tipo de DML|Sim|Sim|  
   
-##  <a name="Capture"></a> Change Data Capture  
+##  <a name="change-data-capture"></a><a name="Capture"></a> Change Data Capture  
  A captura de dados de alteração fornece informações de alteração de histórico para uma tabela de usuário, capturando o motivo pelo qual as alterações de DML foram feitas e os dados reais que foram alterados. As alterações são capturadas por meio de um processo assíncrono que lê o log de transações e tem baixo impacto no sistema.  
   
  Como mostrado na ilustração a seguir, as alterações feitas para tabelas de usuários são capturadas nas tabelas de alteração correspondentes. Essas tabelas de alteração fornecem uma exibição histórica das alterações com o passar do tempo. As funções de [captura de dados de alterações](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md) fornecidas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilitam o consumo fácil e sistemático dos dados de alteração.  
@@ -137,7 +137,7 @@ ms.locfileid: "74095423"
   
  Você pode usar [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) para remover a captura de dados de alterações de um banco de dados restaurado ou anexado.  
   
-##  <a name="Tracking"></a> Controle de alterações  
+##  <a name="change-tracking"></a><a name="Tracking"></a> Controle de alterações  
  O controle de alteração captura o motivo pelo qual as linhas em uma tabela foram alteradas, mas não captura o que foi alterado. Isso permite que os aplicativos determinem as linhas que foram alteradas com os últimos dados de linha obtidos diretamente das tabelas de usuários. Então, o controle de alterações é mais limitado nas perguntas de histórico do que pode responder comparado à captura de dados de alterações. Entretanto, para aqueles aplicativos que não exigem informações de histórico, há menos sobrecarga de armazenamento pois os dados alterados não são capturados. Um mecanismo de controle síncrono é usado para controlar as alterações. Isso foi projetado para ter o mínimo de sobrecarga nas operações de DML.  
   
  A ilustração a seguir mostra um cenário de sincronização que se beneficiaria com o uso do controle de alterações. No cenário, um aplicativo requer as seguintes informações: todas as linhas da tabela que foram alteradas desde a última sincronização da tabela e apenas os dados da linha atual. Como um mecanismo síncrono é usado para controlar as alterações, um aplicativo pode executar a sincronização de duas vias e detectar de modo confiável qualquer conflito que possa ocorrer.  

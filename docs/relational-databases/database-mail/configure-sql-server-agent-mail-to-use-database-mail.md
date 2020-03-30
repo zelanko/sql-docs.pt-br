@@ -14,10 +14,10 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0692421ca7e63b419c99ecc835516af4cbd5af0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095776"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurar o SQL Server Agent Mail para usar o Database Mail
@@ -34,12 +34,12 @@ ms.locfileid: "74095776"
   
 -   [Tarefas de acompanhamento](#Follow_Up)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
   > [!NOTE]
   > O SQL Agent na Instância Gerenciada sempre é configurado para usar o Database Mail, portanto, esse conteúdo não é aplicável na Instância Gerenciada. Na Instância Gerenciada, você precisa ter um perfil que precisa ser chamado **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** para associar o SQL Agent ao Database Mail. 
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
 -   [Habilite o Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  
   
@@ -49,12 +49,12 @@ ms.locfileid: "74095776"
   
 -   Defina o perfil como o perfil padrão para o banco de dados **msdb** .  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  O usuário que cria as contas de perfis e executa procedimentos armazenados deve ser membro da função de servidor fixa sysadmin.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para configurar o SQL Server Agent para usar o Database Mail**  
   
 -   No Pesquisador de Objetos, expanda uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -71,7 +71,7 @@ ms.locfileid: "74095776"
   
 -   Reinicie o SQL Server Agent.  
   
-##  <a name="Follow_Up"></a> Tarefas de acompanhamento  
+##  <a name="follow-up-tasks"></a><a name="Follow_Up"></a> Tarefas de acompanhamento  
  As tarefas a seguir são necessárias para concluir a configuração do Agent a fim de enviar alertas e notificações.  
   
 -   [Alertas](../../ssms/agent/alerts.md)  

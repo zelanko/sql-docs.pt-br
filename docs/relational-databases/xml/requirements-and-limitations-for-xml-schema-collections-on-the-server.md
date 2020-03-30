@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: fe65ba7995dc21b4bb5f5889c8667e9c8dfb6c10
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257618"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Requisitos e limitações de uso de coleções de esquema XML no servidor
