@@ -9,10 +9,10 @@ ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee04e2cef1f4f4681b42ff8ffb4ce549aeae624d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082453"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Layout de página e renderização (Construtor de Relatórios e SSRS)
@@ -24,7 +24,7 @@ Leia sobre as extensões de renderização do [!INCLUDE[ssRSnoversion](../../inc
   
  A obtenção dos melhores resultados para relatórios exportados é frequentemente um processo iterativo; você cria e visualiza o relatório no Construtor de Relatórios ou no Designer de Relatórios, exporta o relatório para o formato de sua preferência, examina o relatório exportado e faz as alterações no relatório.  
     
-##  <a name="PageLayout"></a> Itens de relatório  
+##  <a name="report-items"></a><a name="PageLayout"></a> Itens de relatório  
  Os itens de relatório são elementos de layout que são associados a diferentes tipos de dados de relatório. 
  
 * Tabela, matriz, lista, gráfico e medidor são itens de relatório da região de dados que se vinculam a um conjunto de dados de relatório. Quando o relatório é processado, a região de dados é expandida para cima e para baixo da página de relatório para exibir dados. 
@@ -44,14 +44,14 @@ Um relatório também pode conter sub-relatórios.
   
  Um relatório pode ajustar várias páginas, com cabeçalho e rodapé iguais em cada uma das páginas. Além disso, um relatório pode conter elementos gráficos, como imagens e linhas, além de várias fontes, cores e estilos que podem ter como base as expressões.  
   
-##  <a name="ReportSections"></a> Seções do relatório  
+##  <a name="report-sections"></a><a name="ReportSections"></a> Seções do relatório  
  Um relatório é formado por três seções principais: um cabeçalho de *página* opcional, um rodapé de *página* opcional e um corpo do relatório. O cabeçalho e o rodapé do *relatório* não são seções separadas do relatório, mas fazem parte dos itens de relatório que são colocados na parte superior e inferior do corpo do relatório. O cabeçalho e o rodapé repetem o mesmo conteúdo na parte superior e inferior de cada página do relatório. Você pode colocar imagens, caixas de texto e linhas em cabeçalhos e rodapés. Todos os tipos de itens de relatório podem ser colocados no corpo do relatório.  
   
  Você também pode definir propriedades nos itens de relatório para inicialmente ocultá-los ou mostrá-los na página. As propriedades de visibilidade podem ser definidas em linhas, colunas ou grupos para regiões de dados e fornecer botões de alternância, permitindo ao usuário mostrar ou ocultar os dados do relatório de maneira interativa. Também é possível definir a visibilidade ou a visibilidade inicial usando expressões, inclusive expressões baseadas em parâmetros de relatórios.  
   
  Quando um relatório é processado, os dados do relatório são combinados com os elementos de layout do relatório e os dados combinados são enviados para um processador de relatórios. O processador segue regras predefinidas de item de expansão e determina a quantidade de dados que será ajustada em cada página. Para desenvolver com êxito um relatório que seja lido facilmente e que seja otimizado para o processador que você pretende usar, é preciso compreender as regras usadas para controlar a paginação no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obter mais informações, consulte [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-##  <a name="RenderingExtensions"></a> Renderizadores  
+##  <a name="renderers"></a><a name="RenderingExtensions"></a> Renderizadores  
  O Reporting Services inclui um conjunto de renderizadores, também chamado extensões de renderização, que você pode usar para exportar relatórios para formatos diferentes. Há três tipos de renderizadores:  
   
 -   **Renderizadores de dados** Os renderizadores de dados eliminam todas as informações de formatação e layout do relatório e exibem apenas os dados. O arquivo resultante pode ser usado para importar os dados brutos do relatório para outro tipo de arquivo, como o Excel, ou outro banco de dados, como uma mensagem de dados XML ou um aplicativo personalizado. Os renderizadores de dados disponíveis são CSV e XML.  
@@ -65,7 +65,7 @@ Um relatório também pode conter sub-relatórios.
   
  Quando você visualiza um relatório no Construtor de Relatórios, no Designer de Relatórios ou executa um relatório no servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ele sempre é renderizado primeiro em HTML. Depois que executar o relatório, é possível exportá-lo para diversos formatos de arquivo. Para obter mais informações, consulte [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
-##  <a name="RenderingBehaviors"></a> Comportamentos de renderização  
+##  <a name="rendering-behaviors"></a><a name="RenderingBehaviors"></a> Comportamentos de renderização  
  Dependendo do renderizador selecionado, algumas regras são aplicadas durante a renderização do relatório. Como os itens de relatório são ajustados juntos em uma página é determinado pela combinação destes fatores:  
   
 -   Renderizando regras.  
@@ -78,7 +78,7 @@ Um relatório também pode conter sub-relatórios.
   
  Para obter mais informações, consulte [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
    
-##  <a name="Pagination"></a> Paginação  
+##  <a name="pagination"></a><a name="Pagination"></a> Paginação  
  A paginação se refere ao número de páginas dentro de um relatório e ao modo como os itens de relatório são organizados nessas páginas. A paginação no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] varia, dependendo da extensão de renderização que você usa para exibir e entregar o relatório e das opções de quebra de página e keep-together configuradas para uso do relatório.  
   
  Para desenvolver com êxito um relatório que seja facilmente lido pelos seus usuários bem como que seja otimizado para o processador que pretende usar na entrega do relatório, você deve entender as regras utilizadas para controlar a paginação no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Os relatórios exportados com o uso das extensões de renderização de **dados** e de **página flexível** na memória geralmente não são afetados pela paginação. Quando você usa uma extensão de renderização de dados, o relatório é renderizado como conjunto de linhas de tabela no formato XML ou CSV. Para assegurar que os dados de relatório exportados sejam utilizáveis, você deve entender as regras aplicadas para renderizar um conjunto de linhas de tabela mescladas de um relatório.  
@@ -87,7 +87,7 @@ Um relatório também pode conter sub-relatórios.
   
  Os renderizadores de**página impressa** têm o maior impacto no layout do relatório e o tamanho de página física. Para saber mais, consulte [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
    
-##  <a name="HowTo"></a> Tópicos de instruções  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Tópicos de instruções  
  Esta seção lista procedimentos que mostram a você, passo a passo, como trabalhar com a paginação em relatórios.  
   
 -   [Adicionar uma quebra de página &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)  
@@ -102,7 +102,7 @@ Um relatório também pode conter sub-relatórios.
   
 -   [Ocultar um cabeçalho ou rodapé de página na primeira ou na última página &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
-##  <a name="InThisSection"></a> Nesta seção  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Nesta seção  
  Os tópicos a seguir fornecem informações adicionais sobre layout e renderização de página.  
   
  [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  

@@ -16,10 +16,10 @@ ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095097"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Gravar eventos de auditoria do SQL Server no log de segurança  
@@ -41,17 +41,17 @@ A política de auditoria do Windows poderá afetar a auditoria do [!INCLUDE[ssNo
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não conseguirá detectar que o sistema não pode registrar os eventos no log de segurança, o que resultará na possível perda de eventos de auditoria  
 -   Depois que o administrador do computador corrigir o log de segurança, o comportamento de log voltará ao normal.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  Os administradores do computador com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devem entender que as configurações locais do log de segurança podem ser substituídas por uma política de domínio. Nesse caso, a política de domínio poderá substituir a configuração de subcategoria (**auditpol /get /subcategory:"application generated"** ). Isso pode afetar a capacidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de registrar eventos em log, sem que haja uma maneira de detectar que os eventos que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está tentando auditar não serão registrados.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ser um administrador do Windows para definir essas configurações.  
   
-##  <a name="auditpolAccess"></a> Para definir a configuração de acesso ao objeto de auditoria no Windows usando auditpol  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-auditpol"></a><a name="auditpolAccess"></a> Para definir a configuração de acesso ao objeto de auditoria no Windows usando auditpol  
   
 1.  Abra um prompt de comando com permissões administrativas.  
   
@@ -67,7 +67,7 @@ A política de auditoria do Windows poderá afetar a auditoria do [!INCLUDE[ssNo
   
 3.  Feche a janela do prompt de comando.  
   
-##  <a name="secpolAccess"></a> Para conceder a permissão gerar auditorias de segurança a uma conta usando secpol  
+##  <a name="to-grant-the-generate-security-audits-permission-to-an-account-using-secpol"></a><a name="secpolAccess"></a> Para conceder a permissão gerar auditorias de segurança a uma conta usando secpol  
   
 1.  Para qualquer sistema operacional Windows, no menu **Iniciar** , clique em **Executar**.  
   
@@ -87,7 +87,7 @@ A política de auditoria do Windows poderá afetar a auditoria do [!INCLUDE[ssNo
   
 9. Reinicie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para habilitar essa configuração.  
   
-##  <a name="secpolPermission"></a> Para definir a configuração de acesso ao objeto de auditoria no Windows usando secpol  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-secpol"></a><a name="secpolPermission"></a> Para definir a configuração de acesso ao objeto de auditoria no Windows usando secpol  
   
 1.  Se o sistema operacional for anterior ao [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ou Windows Server 2008, no menu **Iniciar** , clique em **Executar**.  
   

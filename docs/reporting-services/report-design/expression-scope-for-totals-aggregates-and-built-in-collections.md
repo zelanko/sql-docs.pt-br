@@ -9,10 +9,10 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c822f0b6a3a17ccba2afbaf8bf0a9e4a4e2f7b12
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579821"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Escopo das expressões para totais, agregações e coleções internas
@@ -41,7 +41,7 @@ ms.locfileid: "65579821"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DataScope"></a> Entendendo escopo de dados e hierarquia de dados  
+##  <a name="understanding-data-scope-and-data-hierarchy"></a><a name="DataScope"></a> Entendendo escopo de dados e hierarquia de dados  
  O escopo de dados especifica um conjunto de dados de relatório. O escopo de dados possui uma hierarquia natural com uma relação de contenção inerente. Escopos mais alto na hierarquia contêm escopos que são mais baixos na hierarquia. A lista de escopos de dados a seguir descreve a hierarquia de mais dados para menos dados:  
   
 -   **Conjunto de dados, após a aplicação dos filtros de conjunto de dados** Especifica o conjunto de dados do relatório vinculado à região de dados ou a um item de relatório no corpo do relatório. Os dados usados para agregação são do conjunto de dados do relatório após as expressões de filtro de conjunto de dados serem aplicadas. Para conjuntos de dados compartilhados, isto significa os filtros na definição do conjunto de dados compartilhado e os filtros na instância do conjunto de dados compartilhada no relatório.  
@@ -56,7 +56,7 @@ ms.locfileid: "65579821"
   
  Entender escopos de conteúdo e contidos é importante ao escrever expressões que incluem funções de agregação.  
   
-##  <a name="Aggregates"></a> Escopo de célula e expressões  
+##  <a name="cell-scope-and-expressions"></a><a name="Aggregates"></a> Escopo de célula e expressões  
  Ao especificar um escopo, você está indicando ao processador de relatório quais dados deseja usar para um cálculo de agregação. Dependendo da expressão e do local da expressão, escopos válidos podem ser *escopos de conteúdo*, também conhecidos como escopos pai, ou *escopos contidos*, também conhecidos como escopos filho ou aninhados. Em geral, você não pode especificar uma instância de grupo individual em um cálculo de agregação. Você pode especificar uma agregação em todas as instâncias de grupo.  
   
  Como o processador de relatório combina dados de um conjunto de dados de relatório com a região de dados tablix, ele avalia expressões de grupo e cria as linhas e as colunas necessárias para representar as instâncias de grupo. O valor de expressões em uma caixa de texto em cada célula do tablix é avaliado no contexto do escopo de célula. Dependendo da estrutura do tablix, uma célula pode pertencer a vários grupos de linhas e de colunas. Para funções de agregação, você pode especificar qual escopo desejado usando um dos escopos seguintes:  
@@ -77,7 +77,7 @@ ms.locfileid: "65579821"
   
  Cada tópico de função de agregação lista os escopos que são válidos para uso. Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
-##  <a name="Examples"></a> Expressões de agregação de exemplo para uma região de dados de tabela  
+##  <a name="example-aggregate-expressions-for-a-table-data-region"></a><a name="Examples"></a> Expressões de agregação de exemplo para uma região de dados de tabela  
  Escrever expressões que especificam escopos não padrão exige alguma prática. Para ajudar a entender escopos diferentes, use a figura e a tabela a seguir. A figura rotula cada célula em uma tabela de informações de vendas que exibe a quantidade de itens vendidos por ano e trimestre, e também por território de vendas. Observe as sugestões visuais nos identificadores de linha e coluna que exibem a estrutura de grupo de linha e coluna, indicando grupos aninhados. A tabela possui a seguinte estrutura:  
   
 -   Um cabeçalho de tabela que contém a célula de canto e três linhas que incluem os cabeçalhos de grupo de coluna.  
@@ -117,7 +117,7 @@ ms.locfileid: "65579821"
  Para obter mais informações sobre como interpretar indicações visuais nas regiões de dados tablix, consulte [Células, linhas e colunas da região de dados Tablix &#40;Construtor de Relatórios&#41; e SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Para obter mais informações sobre a região de dados Tablix, consulte [Células, linhas e colunas da região de dados Tablix &#40;Construtor de Relatórios&#41; e SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Para obter mais informações, consulte [Expressão Uses em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) e [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
   
-##  <a name="Sparklines"></a> Sincronizando escalas para minigráficos  
+##  <a name="synchronizing-scales-for-sparklines"></a><a name="Sparklines"></a> Sincronizando escalas para minigráficos  
  Para comparar valores por tempo no eixo horizontal para um gráfico de minigráfico que é aninhado em uma tabela ou matriz, você pode sincronizar os valores de grupo de categorias. Isto é chamado de alinhar eixos. Ao selecionar a opção para alinhar eixos, o relatório automaticamente define os valores mínimo e máximo para um eixo e fornece espaços reservados para valores de agregação que não existem em todas as categorias. Isto faz os valores no minigráfico se alinharem em todas as categorias e permite comparar valores para cada linha de dados agregados. Ao selecionar esta opção, você está alterando o escopo da avaliação de expressão para o *escopo de domínio*. Definir o escopo de domínio para um gráfico aninhado também controla indiretamente a atribuição de cores para cada categoria na legenda.  
   
  Por exemplo, em um minigráfico que mostra tendências semanais, suponha que uma cidade tenha dados de vendas por 3 meses e outra cidade tenha dados de vendas por 12 meses. Sem escalas sincronizadas, o minigráfico para a primeira cidade teria somente 3 barras e elas seriam muito mais largas e ocupariam o mesmo espaço que o conjunto de barras de 12 meses para a segunda cidade.  
@@ -125,13 +125,13 @@ ms.locfileid: "65579821"
  Para obter mais informações, consulte [Alinhar os dados de um gráfico em uma tabela ou matriz &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
   
   
-##  <a name="Indicators"></a> Sincronizando intervalos para indicadores  
+##  <a name="synchronizing-ranges-for-indicators"></a><a name="Indicators"></a> Sincronizando intervalos para indicadores  
  Para especificar os valores de dados a serem usados para um conjunto de indicadores, você deve especificar um escopo. Dependendo do layout da região de dados que contém o indicador, especifique um escopo ou um escopo de conteúdo. Por exemplo, em uma linha de cabeçalho de grupo associada a vendas de categoria, um conjunto de setas (para cima, para baixo, para os lados) pode indicar valores de vendas relativos a um limite. O escopo de conteúdo é o nome da tabela ou matriz que contém os indicadores.  
   
  Para obter mais informações, consulte [Definir o escopo da sincronização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md).  
   
   
-##  <a name="Page"></a> Especificando escopos a partir do cabeçalho ou rodapé de página  
+##  <a name="specifying-scopes-from-the-page-header-or-page-footer"></a><a name="Page"></a> Especificando escopos a partir do cabeçalho ou rodapé de página  
  Para exibir dados que são diferentes em cada página de um relatório, adicione expressões a um item de relatório que deve estar na página renderizada. Como um relatório é dividido em páginas enquanto é renderizado, somente durante a renderização podem ser determinados quais itens existem em uma página. Por exemplo, uma célula em uma linha de detalhes possui uma caixa de texto que tem muitas instâncias em uma página.  
   
  Para este propósito, existe uma coleção global chamada ReportItems. Este é o conjunto de caixas de texto na página atual.  
@@ -139,7 +139,7 @@ ms.locfileid: "65579821"
  Para obter mais informações, consulte [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md) e [Referências da coleção ReportItems &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md).  
   
   
-##  <a name="Toggles"></a> Especificando um item de alternância para busca detalhada e visibilidade condicional  
+##  <a name="specifying-a-toggle-item-for-drilldown-and-conditional-visibility"></a><a name="Toggles"></a> Especificando um item de alternância para busca detalhada e visibilidade condicional  
  Alternâncias são sinais de adição ou subtração adicionados a uma caixa de texto e nos quais um usuário pode clicar para mostrar ou ocultar outros itens de relatório. Na página **Visibilidade** para a maioria das propriedades de item de relatório, você pode especificar a qual item de relatório deseja adicionar a alternância. O item de alternância deve estar em um escopo de contenção mais alto que o item para mostrar ou ocultar.  
   
  Em uma região de dados do tablix, para criar um efeito de busca detalhada em que você clica em uma caixa de texto para expandir a tabela e mostrar mais dados, você deve definir a propriedade **Visibilidade** no grupo e selecionar como alternância uma caixa de texto em um cabeçalho de grupo que é associado a um grupo de conteúdo.  
@@ -147,13 +147,13 @@ ms.locfileid: "65579821"
  Para obter mais informações, consulte [Adicionar uma ação de expandir/recolher a um item &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).  
   
   
-##  <a name="Sort"></a> Especificando uma expressão de classificação para sincronizar a ordem de classificação  
+##  <a name="specifying-a-sort-expression-to-synchronize-sort-order"></a><a name="Sort"></a> Especificando uma expressão de classificação para sincronizar a ordem de classificação  
  Ao adicionar um botão de classificação interativo a uma coluna de tabela, você pode sincronizar a classificação para vários itens que têm um escopo de conteúdo comum. Por exemplo, você pode adicionar um botão de classificação a um cabeçalho de coluna em uma matriz e especificar o escopo de conteúdo como o nome do conjunto de dados que é associado à matriz. Quando um usuário clicar no botão de classificação, não somente as linhas da matriz serão classificadas, mas também os grupos de série de gráficos que são associados ao mesmo conjunto de dados. Deste modo, todas as regiões de dados que dependem daquele conjunto de dados podem ser sincronizadas para apresentar a mesma ordem de classificação.  
   
  Para obter mais informações, consulte [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
   
-##  <a name="Nulls"></a> Suprimindo valores nulos ou zeros em uma célula  
+##  <a name="suppressing-null-or-zero-values-in-a-cell"></a><a name="Nulls"></a> Suprimindo valores nulos ou zeros em uma célula  
  Para muitos relatórios, cálculos com escopo de grupos podem criar muitas células que têm valores nulos ou zeros (0). Para reduzir a desordem em relatórios, adicione uma expressão para retornar espaços em branco se o valor de agregação for 0. Para obter mais informações, consulte "Exemplos que suprimem valores nulos ou zeros" em [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
   

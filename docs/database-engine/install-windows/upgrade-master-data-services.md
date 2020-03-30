@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934820"
 ---
 # <a name="upgrade-master-data-services"></a>Atualizar o Master Data Services
@@ -38,7 +38,7 @@ ms.locfileid: "67934820"
 > -   Pacotes de implantação de modelo só podem ser usados na edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na qual foram criados. Você não pode implantar pacotes de implantação de modelo criados no [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
 > -   Depois de atualizar o Data Quality Services e o Master Data Services para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], uma versão anterior do suplemento Master Data Services para Excel deixará de funcionar. Baixe o suplemento [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Master Data Services para Excel em [Suplemento Master Data Services para Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
-##  <a name="fileLocation"></a> Local do arquivo  
+##  <a name="file-location"></a><a name="fileLocation"></a> Local do arquivo  
   
 -   No [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)], por padrão, os arquivos são instalados em *drive*:\Program Files\Microsoft SQL Server\140\Master Data Services.  
 
@@ -50,7 +50,7 @@ ms.locfileid: "67934820"
   
 -   No [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], por padrão, os arquivos são instalados em *unidade*:\Arquivos de Programas\Microsoft SQL Server\Master Data Services.  
   
-##  <a name="noengine"></a> Atualize sem a atualização do Mecanismo de Banco de Dados  
+##  <a name="upgrade-without-database-engine-upgrade"></a><a name="noengine"></a> Atualize sem a atualização do Mecanismo de Banco de Dados  
  Neste cenário, você continua usando o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para hospedar o banco de dados do MDS. Entretanto, você precisa fazer upgrade do esquema do banco de dados do MDS e, depois, criar um aplicativo Web do [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] atual para acessar o banco de dados do MDS. Após o upgrade, o banco de dados do MDS não poderá mais ser acessado pelo aplicativo Web anterior.  
   
  Você pode instalar o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] atual e uma versão anterior do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] no mesmo computador. Os arquivos são instalados em locais diferentes, conforme mostrado no [Local do arquivo](#fileLocation).  
@@ -107,18 +107,18 @@ ms.locfileid: "67934820"
   
     3.  Clique em **Aplicar**.  
   
-##  <a name="engine"></a> Atualize com a atualização do Mecanismo de Banco de Dados  
+##  <a name="upgrade-with-database-engine-upgrade"></a><a name="engine"></a> Atualize com a atualização do Mecanismo de Banco de Dados  
  Neste cenário, você fará upgrade do mecanismo de banco de dados e do aplicativo [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] de uma versão anterior para o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ou [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  
   
  **Para atualizar com a atualização do Mecanismo de Banco de Dados**  
   
-1.  **Para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] apenas**: abra o **Painel de Controle** > **Programas e Recursos** e desinstale o Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **Somente para o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** : abra o **Painel de Controle** > **Programas e Recursos** e desinstale o Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Faça upgrade do mecanismo de banco de dados para o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ou [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]. Para obter mais informações, consulte [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
 3.  Conclua todas as etapas em [Atualize sem a atualização do Mecanismo de Banco de Dados](#noengine) .  
   
-##  <a name="twocomputer"></a> Atualizar em Cenário de Dois Computadores  
+##  <a name="upgrade-in-two-computer-scenario"></a><a name="twocomputer"></a> Atualizar em Cenário de Dois Computadores  
  Neste cenário, você faz upgrade de um sistema no qual o SQL Server está instalado em dois computadores: um com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ou [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] e o outro com uma versão anterior do [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)].  
   
  Se uma versão anterior do [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] estiver instalada, você continuará usando a versão anterior para hospedar o banco de dados do MDS em um computador. Entretanto, é necessário fazer upgrade do esquema do banco de dados do MDS e, depois, usar o aplicativo Web [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ou [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)], respectivamente, para acessar o banco de dados do MDS. O banco de dados do MDS não pode mais ser acessado pelo aplicativo Web com a versão anterior.  
@@ -127,7 +127,7 @@ ms.locfileid: "67934820"
   
 -   Conclua todas as etapas em [Atualize sem a atualização do Mecanismo de Banco de Dados](#noengine).  
   
-##  <a name="restore"></a> Atualizar com Restaurar um banco de dados do backup  
+##  <a name="upgrade-with-restoring-a-database-from-backup"></a><a name="restore"></a> Atualizar com Restaurar um banco de dados do backup  
  Neste cenário, o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ou o [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] é instalado junto com uma versão anterior no mesmo computador ou em dois computadores diferentes. Um banco de dados foi copiado em backup em uma versão anterior ao [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ou [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)], antes do upgrade e o banco de dados deve ser restaurado.  
   
  **Para atualizar com restauração de um banco de dados do backup**  
@@ -148,7 +148,7 @@ ms.locfileid: "67934820"
   
 3.  Atualize o esquema de banco de dados do MDS, crie um aplicativo Web e associe o novo aplicativo Web com o banco de dados do MDS atualizado. Para obter instruções, confira as etapas 2 a 4 em [Atualizar sem a atualização do Mecanismo de Banco de Dados](#noengine)  
   
-## <a name="troubleshooting"></a>Solução de problemas  
+## <a name="troubleshooting"></a>solução de problemas  
  **Problema:** ao abrir o aplicativo Web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a mensagem de erro "a versão de cliente não é compatível com a versão de banco de dados" é exibida.  
   
  **Solução:** esse problema ocorre quando um aplicativo Web do Master Data Manager do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tenta acessar um banco de dados que foi atualizado para o [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services. Use um ou um aplicativo Web [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  

@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: e30ec27733885521f8d6e5b487fde40afafca4dd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241702"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Comparar e sincronizar dados em uma ou mais tabelas com dados em um banco de dados de referência
@@ -27,9 +27,9 @@ Você pode comparar dados em dois bancos de dados, mas não pode especificar um 
   
 Esta seção contém os seguintes tópicos:  
   
--   [Como: comparar e sincronizar os dados de dois bancos de dados](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
+-   [Como comparar e sincronizar os dados de dois bancos de dados](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
   
--   [Como: exibir diferenças de dados](../ssdt/how-to-view-data-differences.md)  
+-   [Como exibir diferenças de dados](../ssdt/how-to-view-data-differences.md)  
   
 ## <a name="requirements"></a>Requisitos  
 Quando você compara dados em uma tabela ou exibição, a tabela ou exibição no banco de dados de origem deve compartilhar vários atributos com uma tabela ou exibição no banco de dados de destino. Tabelas e exibições que não atendem os critérios a seguir não são comparadas e não aparecem na segunda página do assistente **Nova Comparação de Dados**:  
@@ -49,11 +49,11 @@ Cada objeto tem uma chave ou índice que determina os outros objetos aos quais c
 ## <a name="common-tasks"></a>Tarefas comuns  
 Nesta seção, você pode encontrar descrições das tarefas comuns que oferecem suporte para esse cenário.  
   
-**Definir opções para controlar como os dados são comparados:** quando você compara dados, pode ignorar as colunas de identidade, desabilitar gatilhos e desabilitar chaves estrangeiras. Você também pode ignorar chaves primárias, índices e restrições exclusivas do script de atualização.  
+**Definir opções para controlar como os dados são comparados**: quando você compara dados, pode ignorar com segurança colunas de identidade, desabilitar gatilhos e desabilitar chaves estrangeiras. Você também pode ignorar chaves primárias, índices e restrições exclusivas do script de atualização.  
   
-**Comparar dados em tabelas e, opcionalmente, atualizar o destino para corresponder à origem:** Depois de especificar uma origem e um banco de dados de destino com o qual comparar e executar a comparação, você pode exibir os resultados na janela **Comparação de Dados**. Você não pode exibir somente os detalhes das diferenças, mas também o script de atualização que você pode usar para sincronizar os dados. Depois de identificar as diferenças entre os dois bancos de dados, você poderá especificar uma ação para cada diferença. Você pode atualizar o destino ou exportar o script de atualização para o editor Transact\-SQL ou para um arquivo. Talvez você queira exportar o script de modo que você ou outra pessoa possa examiná-lo antes de aplicar as alterações.  
+**Comparar dados em tabelas e opcionalmente atualizar o destino para corresponder à origem:** depois de especificar um banco de dados de origem e destino para comparar e executar a comparação, você poderá exibir os resultados na janela **Comparação de Dados**. Você não pode exibir somente os detalhes das diferenças, mas também o script de atualização que você pode usar para sincronizar os dados. Depois de identificar as diferenças entre os dois bancos de dados, você poderá especificar uma ação para cada diferença. Você pode atualizar o destino ou exportar o script de atualização para o editor Transact\-SQL ou para um arquivo. Talvez você queira exportar o script de modo que você ou outra pessoa possa examiná-lo antes de aplicar as alterações.  
   
-## <a name="UnderstandingDataCompareResults"></a>Entender os resultados da comparação  
+## <a name="understanding-comparison-results"></a><a name="UnderstandingDataCompareResults"></a>Entender os resultados da comparação  
 A tabela a seguir descreve as cinco colunas na janela **Comparação de Dados**.  
   
 |Coluna|Observações|  
@@ -69,5 +69,5 @@ Quando você clica em qualquer tabela ou exibição na janela **Comparação de 
   
 ## <a name="see-also"></a>Consulte Também  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  
-[Como: Usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Como usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

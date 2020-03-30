@@ -29,10 +29,10 @@ ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: aa1521e40df7483c7a4dc336484d6ecf28e909cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325434"
 ---
 # <a name="recovery-models-sql-server"></a>Modelos de recuperação (SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "75325434"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="RMov"></a> Visão geral do modelo de recuperação  
+##  <a name="recovery-model-overview"></a><a name="RMov"></a> Visão geral do modelo de recuperação  
  A tabela a seguir resume os três modelos de recuperação.  
   
 |modelo de recuperação|DESCRIÇÃO|Exposição à perda de trabalho|Recuperação pontual?|  
@@ -54,7 +54,7 @@ ms.locfileid: "75325434"
 |**Full**|Requer backups de log.<br /><br /> Nenhum trabalho é perdido devido a um arquivo de dados perdido ou danificado.<br /><br /> Pode executar uma recuperação pontual (por exemplo, antes de um erro de aplicativo ou usuário). Para obter informações sobre backups de banco de dados no modelo de recuperação completa, veja [Backups completos de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md) e [Restaurações completas de banco de dados &#40;Modelo de recuperação completo&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).|Geralmente nenhum.<br /><br /> Se a parte final do log estiver danificada, as alterações desde o backup de log mais recente deverão ser refeitas.|Pode executar uma recuperação pontual, supondo que seus backups estejam concluídos até aquele ponto. Para obter informações sobre como usar backups de log para restaurar no ponto de falha, veja [Restaurar um Banco de dados SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).<br /><br /> Observação: se você tiver dois ou mais bancos de dados de modelo de recuperação completa que devem ser logicamente consistentes, é possível que você precise implementar procedimentos especiais para verificar a possibilidade de recuperação desses bancos de dados. Para obter mais informações, veja [Recuperação de bancos de dados relacionados que contêm transação marcada](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md).|  
 |**Bulk-logged**|Requer backups de log.<br /><br /> Um suplemento do modelo de recuperação completa que permite operações de cópia em massa de alto desempenho.<br /><br /> Reduz o uso de espaços de log usando o mínimo de registro em log para a maioria das operações em massa. Para obter informações sobre as operações que podem ser minimamente registradas, veja [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).<br /><br /> Os backups de log podem ter um tamanho significativo, porque as operações minimamente registradas em log são capturadas no backup de log. Para obter informações sobre backups de banco de dados no modelo de recuperação bulk-logged, veja [Backups completos de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md) e [Restaurações completas de banco de dados &#40;Modelo de recuperação completo&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).|Se o log estiver danificado ou se ocorreu registro de operações em massa desde o backup de log mais recente, as alterações desde o último backup deverão ser refeitas.<br /><br /> Caso contrário, nenhum trabalho será perdido.|Pode recuperar até o final de qualquer backup. Não há suporte para recuperação pontual.|  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Exibir ou alterar o modelo de recuperação de um banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   

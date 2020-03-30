@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0db1834114a8bb2ea21d9fb566f2201dd933803c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68088463"
 ---
 # <a name="delete-columns-from-a-table"></a>Excluir colunas de uma tabela
@@ -46,21 +46,21 @@ Este tópico descreve como excluir colunas de tabelas no [!INCLUDE[ssCurrent](..
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Antes de começar
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar
 
-### <a name="Restrictions"></a> Limitações e restrições
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições
 
 Você não pode excluir uma coluna que tenha uma restrição CHECK. Você deve excluir primeiramente a restrição.
 
 Você não pode excluir uma coluna que tenha restrições PRIMARY KEY ou FOREIGN KEY ou outras dependências, exceto quando estiver usando o Designer de Tabela. No Pesquisador de Objetos ou no [!INCLUDE[tsql](../../includes/tsql-md.md)], você deve primeiramente remover todas as dependências da coluna.
 
-### <a name="Security"></a> Segurança
+### <a name="security"></a><a name="Security"></a> Segurança
 
-#### <a name="Permissions"></a> Permissões
+#### <a name="permissions"></a><a name="Permissions"></a> Permissões
 
 Exige a permissão ALTER na tabela.
 
-## <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio
 
 ### <a name="to-delete-columns-by-using-object-explorer"></a>Para excluir colunas usando o Pesquisador de Objetos
 
@@ -77,7 +77,7 @@ Se a coluna contiver restrições ou outras dependências, uma mensagem de erro 
 2. Clique com o botão direito do mouse na coluna que deseja excluir e escolha **Excluir Coluna** no menu de atalho.
 3. Se a coluna participar de uma relação (FOREIGN KEY ou PRIMARY KEY), uma mensagem solicitará que você confirme a exclusão das colunas selecionadas e suas relações. Escolha **Sim**.
 
-## <a name="TsqlProcedure"></a> Usando o Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL
 
 ### <a name="to-delete-columns"></a>Para excluir colunas
 

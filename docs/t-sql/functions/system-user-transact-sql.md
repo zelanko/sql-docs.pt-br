@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86c10915b811578f82e50bd4322439863e610766
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76315616"
 ---
 # <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
@@ -54,7 +54,7 @@ SYSTEM_USER
   
  Se o nome de usuário e o nome de logon forem diferentes, SYSTEM_USER retornará o nome de logon.  
   
- Se o usuário atual estiver conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a Autenticação do Windows, SYSTEM_USER retornará o nome de identificação de logon do Windows no formato: *DOMAIN*\\*user_login_name*. Entretanto, se o usuário atual tiver feito logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a Autenticação do SQL Server, SYSTEM_USER retornará o nome de identificação de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como `WillisJo` para um usuário conectado como `WillisJo`.  
+ Se o usuário atual tiver feito logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a Autenticação do Windows, SYSTEM_USER retornará o nome de identificação de logon do Windows no formato: *DOMAIN*\\*user_login_name*. Entretanto, se o usuário atual tiver feito logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a Autenticação do SQL Server, SYSTEM_USER retornará o nome de identificação de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como `WillisJo` para um usuário conectado como `WillisJo`.  
   
  SYSTEM_USER retorna o nome do contexto em execução no momento. Se a instrução EXECUTE AS tiver sido usada para alternar o contexto, SYSTEM_USER retornará o nome do contexto representado.  
 
@@ -129,9 +129,9 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
 (5 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>C: Usando SYSTEM_USER para retornar o nome de usuário do sistema atual  
+### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>C. Usando SYSTEM_USER para retornar o nome de usuário do sistema atual  
  O exemplo a seguir retorna o valor atual de `SYSTEM_USER`.  
   
 ```  

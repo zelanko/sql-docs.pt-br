@@ -13,10 +13,10 @@ ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 3f457b485994d2619e68b4315a308e66a05715cb
-ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77051666"
 ---
 # <a name="sql-tools-overview"></a>Visão geral das ferramentas do SQL
@@ -34,7 +34,7 @@ Você pode ver os links para as diferentes ferramentas do SQL nas tabelas a segu
 
 As ferramentas a seguir fornecem uma GUI (interface gráfica do usuário).
 
-| Ferramenta | Descrição | Sistema operacional |
+| Ferramenta | DESCRIÇÃO | Sistema operacional |
 |:--|:--|:--|
 | [ **![Imagem do ADS](../tools/media/overview-sql-tools/azure-data-studio.svg)</br></br>Azure Data Studio**](../azure-data-studio/download.md) | Um editor leve que pode executar consultas SQL sob demanda, exibir e salvar resultados como texto, JSON ou Excel. Edite dados, organize suas conexões de banco de dados favoritas e procure objetos de banco de dados em uma experiência de navegação de objetos familiar. | **Windows</br>macOS</br>Linux** |
 | [ **![Imagem do SSMS](../tools/media/overview-sql-tools/ssms.svg)</br></br>SSMS (SQL Server Management Studio)** ](../ssms/download-sql-server-management-studio-ssms.md) | Gerencie uma instância do SQL Server ou um banco de dados com compatibilidade total com a GUI. Acesse, configure, gerencie, administre e desenvolva todos os componentes do SQL Server, do Banco de Dados SQL do Azure e do SQL Data Warehouse. Fornece um utilitário abrangente que combina um amplo grupo de ferramentas gráficas com vários editores de script avançados para fornecer acesso ao SQL para desenvolvedores e administradores de banco de dados de todos os níveis de conhecimento. | **Windows** |
@@ -45,7 +45,7 @@ As ferramentas a seguir fornecem uma GUI (interface gráfica do usuário).
 
 As ferramentas a seguir são as principais ferramentas de linha de comando.
 
-| Ferramenta | Descrição | Sistema operacional |
+| Ferramenta | DESCRIÇÃO | Sistema operacional |
 |:--|:--|:--|
 |[**bcp**](bcp-utility.md)|O utilitário **bcp** (**b**ulk **c**opy **p**rogram) copia dados em massa entre uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e um arquivo de dados em um formato especificado pelo usuário.| **Windows</br>macOS</br>Linux** |
 |[**mssql-cli (versão prévia)** ](mssql-cli.md)|O **mssql-cli** é uma ferramenta de linha de comando interativa para consultar o SQL Server. Além disso, consulte o SQL Server com uma ferramenta de linha de comando com IntelliSense, realce de sintaxe e muito mais. | **Windows</br>macOS</br>Linux** |
@@ -59,7 +59,7 @@ As ferramentas a seguir são as principais ferramentas de linha de comando.
 
 Estas ferramentas são usadas para migrar, configurar e fornecer outros recursos para bancos de dados SQL.
 
-| Ferramenta | Descrição |
+| Ferramenta | DESCRIÇÃO |
 |:--|:--|
 | **[Gerenciador de Configurações](../tools/configuration-manager/sql-server-configuration-manager-help.md)** | Use o SQL Server Configuration Manager para configurar os serviços do SQL Server e configurar a conectividade de rede. O Configuration Manager é executado no Windows|
 | **[Assistente para Experimentos de Banco de Dados](../dea/database-experimentation-assistant-overview.md)** | Use o Assistente para Experimentos de Banco de Dados para avaliar uma versão de destino do SQL para uma determinada carga de trabalho. |

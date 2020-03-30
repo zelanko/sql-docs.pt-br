@@ -11,10 +11,10 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245426"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup Gerenciado do SQL Server para o Microsoft Azure
@@ -34,7 +34,7 @@ ms.locfileid: "75245426"
   
  Você também pode criptografar os backups para obter segurança adicional, e pode configurar um agendamento personalizado para controlar quando os backups são feitos. Para obter mais detalhes sobre os benefícios de usar o armazenamento de Blobs do Microsoft Azure para backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
-##  <a name="Prereqs"></a> Pré-requisitos  
+##  <a name="prerequisites"></a><a name="Prereqs"></a> Pré-requisitos  
  O Armazenamento do Microsoft Azure é usado pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para armazenar os arquivos de backup. Os seguintes pré-requisitos são necessários:  
   
 |Pré-requisito|DESCRIÇÃO|  
@@ -112,7 +112,7 @@ ms.locfileid: "75245426"
 > Não há suporte para backup gerenciado do SQL Server com servidores proxy.
 >
   
-##  <a name="support_limits"></a> Suporte  
+##  <a name="supportability"></a><a name="support_limits"></a> Suporte  
  As seguintes limitações e considerações de suporte são específicas para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
 -   Há suporte para o backup de bancos de dados de sistema **master**, **model**e **msdb** . Não há suporte para o backup de **tempdb** . 

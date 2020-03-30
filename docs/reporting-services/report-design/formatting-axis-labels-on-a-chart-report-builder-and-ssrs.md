@@ -26,10 +26,10 @@ ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0838e5d0ea9c592a52408956b75ee651bcc542a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079916"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formatando rótulos dos eixos de um gráfico (Construtor de Relatórios e SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "77079916"
   
  A escala do eixo é associada por um valor mínimo e máximo que define o intervalo de dados a serem exibidos ao longo do eixo. O gráfico calcula o valor mínimo e máximo ao longo de cada eixo com base nos valores no conjunto de resultados. No eixo de valor, a escala é sempre determinada pelo número menor e maior no campo de valor. No eixo de categoria, os tipos de valor mínimo e máximo são determinados de acordo com o tipo de campo de categoria. Qualquer campo em um conjunto de dados pode ser categorizado em um dos três tipos de campo de categoria. A tabela a seguir ilustra esses três tipos de campos de categoria.  
   
-|Tipo de campo de categoria|Descrição|Exemplo|  
+|Tipo de campo de categoria|DESCRIÇÃO|Exemplo|  
 |-------------------------|-----------------|-------------|  
 |Numérico|As categorias são plotadas em ordem numérica ao longo do eixo x.|Um relatório de vendas pelo número de identificação do funcionário exibe os números de identificação dos funcionários ao longo do eixo x.|  
 |Data/hora|As categorias são plotadas em ordem cronológica ao longo do eixo x.|Um relatório de vendas mensal exibe datas formatadas ao longo do eixo x.|  

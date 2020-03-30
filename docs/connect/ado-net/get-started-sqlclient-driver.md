@@ -12,18 +12,18 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 39e83bab2e5a159d97b3b5bdd0ef5feaa69f43c5
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897101"
 ---
 # <a name="getting-started-with-the-sqlclient-driver"></a>Introdução ao driver do SqlClient
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-* [Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento no ADO.NET](step-1-configure-development-environment-ado-net-development.md)  
-* [Etapa 2: Criar um Banco de Dados SQL para o desenvolvimento no ADO.NET](step-2-create-sql-database-ado-net-development.md)  
-* [Etapa 3: Prova de conceito da conexão ao SQL usando o ADO.NET](step-3-connect-sql-ado-net.md)  
-* [Etapa 4: Conecte-se de modo resiliente ao SQL com ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
+* [Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento ADO.NET](step-1-configure-development-environment-ado-net-development.md)  
+* [Etapa 2: Criar um banco de dados SQL para o desenvolvimento ADO.NET](step-2-create-sql-database-ado-net-development.md)  
+* [Etapa 3: Prova de conceito da conexão ao SQL usando ADO.NET](step-3-connect-sql-ado-net.md)  
+* [Etapa 4: Conectar-se de forma resiliente ao SQL com ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
 

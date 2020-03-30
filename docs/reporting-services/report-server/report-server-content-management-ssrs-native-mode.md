@@ -14,10 +14,10 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 78fb75acfefce3a1f0c8cb28ea286a028463a56b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286380"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gerenciamento do Conteúdo do Servidor de Relatório (Modo Nativo SSRS)
@@ -46,7 +46,7 @@ No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o gerenciament
   
 Ferramentas para gerenciar o conteúdo do servidor de relatório incluem [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e o portal da Web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] permite definir padrões e habilitar recursos. O portal da Web é usado para conceder acesso a itens e operações do servidor de relatório, exibir e usar relatórios e outros tipos de conteúdo e exibir e usar todos os itens compartilhados e recursos de distribuição de relatórios. O portal da Web é um site atualizado que contém grande parte da funcionalidade do Gerenciador de Relatórios preterido. Para obter mais informações, consulte [Ferramentas do Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
-##  <a name="bkmk_ReportServerItems"></a> Itens do servidor de relatório  
+##  <a name="report-server-items"></a><a name="bkmk_ReportServerItems"></a> Itens do servidor de relatório  
  Os itens de servidor de relatório incluem relatórios, fontes de dados compartilhadas, conjuntos de dados compartilhados, partes de relatórios, recursos (itens armazenados, mas não processados por um servidor de relatório) e pastas. Os itens podem depender de outros itens, por exemplo, um relatório pode depender d fontes de dados compartilhadas que referencia. Se você mover um item dependente, o servidor de relatório atualizará as informações de referência automaticamente.  
   
  Você pode mover itens do servidor de relatório para locais de pasta diferentes na hierarquia de pastas do servidor de relatório. Quando você move um item, todas as propriedades (inclusive configurações de segurança) são movidas com o item para o novo local. Ao mover uma pasta, todos os itens na pasta são movidos juntos.  
@@ -58,9 +58,9 @@ Ferramentas para gerenciar o conteúdo do servidor de relatório incluem [!INCLU
   
   ![Ícones do servidor de relatório para itens que podem ser movidos](media/report-server-content-management-ssrs-native-mode/report-server-content-icons.png)
 
- Nem todos os itens com os quais você trabalha podem ser movidos. Não é possível mover itens associados a um relatório, como assinaturas ou histórico de relatório. Esses itens são movidos com os seus relatórios associados. De maneira semelhante, não é possível mover itens, como agendas compartilhadas, que existem fora da hierarquia de pasta. Não é possível mover itens sem a devida permissão. A permissão para mover um item é concedida quando as seguintes tarefas são selecionadas na atribuição de função para o item em questão: “Gerenciar relatórios”, “Gerenciar pastas” e “Gerenciar fontes de dados”.  
+ Nem todos os itens com os quais você trabalha podem ser movidos. Não é possível mover itens associados a um relatório, como assinaturas ou histórico de relatório. Esses itens são movidos com os seus relatórios associados. De maneira semelhante, não é possível mover itens, como agendas compartilhadas, que existem fora da hierarquia de pasta. Não é possível mover itens sem a devida permissão. A permissão para mover um item é concedida quando as seguintes tarefas são selecionadas na atribuição de função para o item em questão: "Gerenciar relatórios", "Gerenciar pastas" e "Gerenciar fontes de dados".  
   
-##  <a name="bkmk_Folders"></a> Pastas  
+##  <a name="folders"></a><a name="bkmk_Folders"></a> Pastas  
  Uma hierarquia de pastas é usada para tratar itens que são armazenados e gerenciados por um servidor de relatório.  Por padrão, a estrutura de pastas consiste em um nó raiz denominado Página Inicial e em pastas reservadas que dão suporte ao recurso opcional Meus Relatórios. Pastas adicionais são definidas pelo usuário. As pastas do servidor de relatórios serão úteis se você quiser conceder o mesmo nível de acesso a vários itens. As permissões que você define na pasta podem ser herdadas por itens na pasta e por pastas adicionais ramificadas dessa pasta. Por exemplo, você pode criar um conjunto de pastas na pasta Base, atribuir permissões de equipe a cada pasta e permitir que os membros da equipe personalizem pastas sob a pasta de equipe quando necessário.  
   
  Se estiver usando um navegador para conectar-se diretamente a um servidor de relatório da estrutura de pastas, o nó raiz terá o nome do diretório virtual do servidor de relatório. No nó raiz, você pode criar, modificar e excluir pastas conforme necessário para organizar o conteúdo do servidor de relatório. Você pode adicionar conteúdo a uma pasta, mover itens entre pastas, modificar nomes ou locais de pasta e excluir pastas que não são mais necessárias.  
@@ -115,7 +115,7 @@ Ferramentas para gerenciar o conteúdo do servidor de relatório incluem [!INCLU
   
  A visibilidade de um item em uma pasta depende das atribuições de função (isto é, da permissão para exibir um item) e das opções de exibição habilitadas para uma pasta. No portal da Web, você pode definir a página Conteúdo para exibição de lista ou de detalhes. Em alguns casos, um relatório ou item pode estar oculto na exibição de lista. Não se esqueça de exibir uma pasta em detalhes antes de excluir seu conteúdo.  
   
-##  <a name="bkmk_Resources"></a> Recursos  
+##  <a name="resources"></a><a name="bkmk_Resources"></a> Recursos  
  Um recurso é um item gerenciado armazenado, mas não processado, em um servidor de relatório. Normalmente, um recurso fornece conteúdo externo para usuários de relatórios. Alguns exemplos incluem uma imagem em um arquivo .jpg, um arquivo de forma ESRI que contém dados espaciais ou um arquivo HTML que descreve as regras de negócio usadas em um relatório. O arquivo JPG, SHP ou HTML é armazenado no servidor de relatório, mas o servidor de relatório passa o arquivo diretamente ao navegador em vez de processá-lo antes. Para obter mais informações, confira [Imagens &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) e a seção "Adicionando dados a um mapa" em [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ### <a name="adding-and-viewing-a-resource"></a>Adicionar e exibir um recurso  
@@ -144,7 +144,7 @@ Ferramentas para gerenciar o conteúdo do servidor de relatório incluem [!INCLU
   
  Para obter mais informações, confira [Atualizar um Recurso (portal da Web)](../../reporting-services/report-server/update-a-resource-report-manager.md).  
   
-##  <a name="bkmk_MyReports"></a> Meus Relatórios  
+##  <a name="my-reports"></a><a name="bkmk_MyReports"></a> Meus Relatórios  
  A pasta Meus Relatórios é um workspace pessoal para cada usuário que efetua logon em um servidor de relatório com uma conta de domínio válida. Essa pasta de finalidade especial armazena relatórios de trabalhos em andamento, relatórios que não serão distribuídos amplamente ou relatórios que foram modificados para atender a uma necessidade. Não é possível restringir o número ou o tamanho dos itens armazenados em uma pasta Meus Relatórios, nem configurá-la para ser compartilhada entre usuários.  
   
  Tecnicamente, a pasta Meus Relatórios mapeia o nome de uma pasta virtual que cada usuário vê (Meus Relatórios) para uma pasta Pastas dos Usuários mestre e uma subpasta exclusiva baseada no nome de usuário. Quando um usuário acessa sua pasta Meus Relatórios, na realidade, ele é redirecionado para sua subpasta em Pastas dos Usuários. Cada subpasta armazena os relatórios e itens que um usuário adiciona à sua pasta Meus Relatórios. No portal da Web, você não verá Meus Relatórios no nível raiz. Será necessário aprofundar na pasta Usuários.  

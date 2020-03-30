@@ -14,17 +14,17 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 21918147a6efdc750ecb56eb44c457fea9d962ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558500"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover um banco de dados protegido por TDE para outro SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como proteger um banco de dados usando a TDE (Transparent Data Encryption) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de log e de dados. A criptografia usa uma chave de criptografia de banco de dados (DEK), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados **mestre** do servidor ou uma chave assimétrica protegida por um módulo EKM.   
    
-##  <a name="Restrictions"></a> Limitações e restrições  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Ao mover um banco de dados protegido por TDE, é necessário também mover o certificado ou a chave assimétrica que é usada para abrir a DEK. O certificado ou a chave assimétrica devem ser instalados no banco de dados **mestre** do servidor de destino, de forma que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possa acessar os arquivos do banco de dados. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
@@ -32,7 +32,7 @@ ms.locfileid: "75558500"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] armazena os arquivos criados aqui em **C:\Arquivos de Programas\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** por padrão. Os nomes e locais dos seus arquivos poderão ser diferentes.  
   
-##  <a name="Permissions"></a> Permissões  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissões  
   
 -   Requer a permissão **CONTROL DATABASE** no banco de dados **mestre** para criar a chave mestra de banco de dados.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "75558500"
   
 -   Requer a permissão **CONTROL DATABASE** no banco de dados e a permissão **VIEW DEFINITION** na chave assimétrica ou no certificado usado para criptografar a chave de criptografia do banco de dados.  
   
-##  <a name="SSMSProcedure"></a> Para criar um banco de dados protegido por criptografia de dados transparente  
+##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a> Para criar um banco de dados protegido por criptografia de dados transparente  
 
 Os procedimentos a seguir mostram a que você precisa criar um banco de dados protegido por TDE usando o SQL Server Management Studio e usando o Transact-SQL.
   
-###  <a name="SSMSCreate"></a> Usando o SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> Usando o SQL Server Management Studio  
   
 1.  Crie uma chave mestra e um certificado de banco de dados no banco de dados **mestre** . Para obter mais informações, veja **Usando o Transact-SQL** abaixo.  
   
@@ -76,7 +76,7 @@ Os procedimentos a seguir mostram a que você precisa criar um banco de dados pr
   
 8.  Quando terminar, clique em **OK**.  
 
-###  <a name="TsqlCreate"></a> Usando o Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlCreate"></a> Usando o Transact-SQL  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -136,11 +136,11 @@ Os procedimentos a seguir mostram a que você precisa criar um banco de dados pr
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-##  <a name="TsqlProcedure"></a> Para mover um banco de dados protegido por Transparent Data Encryption 
+##  <a name="to-move-a-database-protected-by-transparent-data-encryption"></a><a name="TsqlProcedure"></a> Para mover um banco de dados protegido por Transparent Data Encryption 
 
 Os procedimentos a seguir mostram a que você precisa mover um banco de dados protegido por TDE usando o SQL Server Management Studio e usando o Transact-SQL.
   
-###  <a name="SSMSMove"></a> Usando o SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> Usando o SQL Server Management Studio  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse no banco de dados que você criptografou acima, aponte para **Tarefas** e selecione **Desanexar...** .  
   
@@ -251,7 +251,7 @@ Os procedimentos a seguir mostram a que você precisa mover um banco de dados pr
      **Mensagem**  
      Exibe uma mensagem em branco ou um hiperlink “**Arquivo não encontrado**”.  
   
-###  <a name="TsqlMove"></a> Usando o Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Usando o Transact-SQL  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

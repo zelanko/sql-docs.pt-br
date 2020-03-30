@@ -24,12 +24,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8baf9a3ab87f53bf1e193f680e5977dc9631c4b3
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.openlocfilehash: 666b10f91db9fa5cdf53dd2a826b38752708e3cd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77608478"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216965"
 ---
 # <a name="alerts"></a>Alertas
 
@@ -108,7 +108,9 @@ O tipo do evento determina os parâmetros utilizados para especificar o evento p
     > [!NOTE]  
     > Uma variável de log de eventos que armazena o nome do servidor limita-se a 32 caracteres. Portanto, se o tamanho combinado do nome do host e do nome da instância for maior que 32 caracteres, você poderá receber o seguinte erro:
     
-    Aviso, [466] Falha ao copiar o nome do servidor LONGNAMESQLSERV\LONGINSTANCENAME ao gerar alertas do contador de desempenho.
+   ``` 
+   Warning,[466] Failed to copy server name LONGNAMESQLSERV\LONGINSTANCENAME while generating performance counter alerts.
+   ```
   
   
 ## <a name="selecting-a-wmi-event"></a>Selecionando um evento do WMI  

@@ -11,10 +11,10 @@ ms.assetid: 56f9ee96-e1d2-46cc-b137-38f06a251863
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80a3f907e4606201255d0442d136f77c9b31dd40
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76940461"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
@@ -29,7 +29,7 @@ bool PDO::setAttribute ( $attribute, $value );
 ```  
   
 #### <a name="parameters"></a>parâmetros  
-*$attribute*: a atributo a ser definido. Consulte a seção Comentários para obter uma lista de atributos com suporte.  
+*$attribute*: o atributo a ser definido. Consulte a seção Comentários para obter uma lista de atributos com suporte.  
   
 *$value*: o valor (tipo misto).  
   
@@ -38,7 +38,7 @@ Retorna true se for bem-sucedido; caso contrário, false.
   
 ## <a name="remarks"></a>Comentários  
   
-|Atributo|Processado por|Valores com suporte|Descrição|  
+|Atributo|Processado por|Valores com suporte|DESCRIÇÃO|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Especifica se serão usadas maiúsculas ou minúsculas nos nomes das colunas.<br /><br />PDO::CASE_LOWER faz com que os nomes das colunas sejam escritos em minúsculas.<br /><br />PDO::CASE_NATURAL (o padrão) exibe os nomes das colunas conforme são retornados pelo banco de dados.<br /><br />PDO::CASE_UPPER faz com que os nomes das colunas sejam escritos em maiúsculas.<br /><br />Esse atributo pode ser definido usando PDO::setAttribute.|  
 |PDO::ATTR_DEFAULT_FETCH_MODE|PDO|Consulte a documentação do PDO.|Consulte a documentação do PDO.|  
@@ -51,7 +51,7 @@ Retorna true se for bem-sucedido; caso contrário, false.
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Um inteiro entre 0 e 4 (inclusive)|Especifica o número de casas decimais ao formatar valores monetários buscados.<br /><br />Qualquer inteiro negativo ou um valor maior que 4 será ignorado.<br /><br />Esta opção só funciona quando PDO::SQLSRV_ATTR_FORMAT_DECIMALS é verdadeiro.<br /><br />Esta opção também pode ser definida no nível de instrução. Nesse caso, a opção de nível de instrução substitui essa.<br /><br />Para saber mais, confira [Formatação de cadeias de caracteres decimais e valores monetários (driver PDO_SQLSRV) ](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true ou false|Especifica a execução direta ou preparada da consulta. Para obter mais informações, consulte [Execução de instrução direta e execução de instrução preparada no driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM.|Define a codificação do conjunto de caracteres usada pelo driver para se comunicar com o servidor.<br /><br />Não há suporte para PDO::SQLSRV_ENCODING_BINARY.<br /><br />O padrão é PDO::SQLSRV_ENCODING_UTF8.|  
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true ou false|Especifica quando recuperar tipos de data e hora como objetos de [DateTime PHP](http://php.net/manual/en/class.datetime.php). Se for deixado como false, o comportamento padrão é retorná-los como cadeias de caracteres.<br /><br />Esta opção também pode ser definida no nível de instrução. Nesse caso, a opção de nível de instrução substitui essa.<br /><br />Para obter mais informações, confira [Como recuperar os tipos de data e hora como objetos DateTime do PHP usando o Driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true ou false|Especifica quando recuperar tipos de data e hora como objetos de [DateTime PHP](http://php.net/manual/en/class.datetime.php). Se for deixado como false, o comportamento padrão é retorná-los como cadeias de caracteres.<br /><br />Esta opção também pode ser definida no nível de instrução. Nesse caso, a opção de nível de instrução substitui essa.<br /><br />Para saber mais, confira [Como recuperar tipos de data e hora como objetos DateTime PHP usando o driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true ou false|Lida com buscas numéricas de colunas com tipos numéricos do SQL (bit, inteiro, smallint, tinyint, float ou real).<br /><br />Quando o sinalizador de opção de conexão ATTR_STRINGIFY_FETCHES está ativado, o valor de retorno é uma cadeia de caracteres, mesmo quando SQLSRV_ATTR_FETCHES_NUMERIC_TYPE estiver ativado.<br /><br />Quando o tipo PDO retornado na coluna de associação for PDO_PARAM_INT, o valor de retorno de uma coluna de números inteiros é int, mesmo se SQLSRV_ATTR_FETCHES_NUMERIC_TYPE estiver desativado.|  
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true ou false|Especifica quando é apropriado adicionar zeros à esquerda em cadeias de caracteres decimais. Se definida, essa opção habilita a opção PDO::SQLSRV_ATTR_DECIMAL_PLACES para formatação de tipos de moedas. Se for deixado como false, será usado o comportamento padrão de retornar a precisão exata e omitir zeros para valores menores do que 1.<br /><br />Esta opção também pode ser definida no nível de instrução. Nesse caso, a opção de nível de instrução substitui essa.<br /><br />Para saber mais, confira [Formatação de cadeias de caracteres decimais e valores monetários (driver PDO_SQLSRV) ](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|inteiro|Define o tempo limite da consulta em segundos.<br /><br />O padrão é 0, o que significa que o driver aguardará resultados indefinidamente.<br /><br />Números negativos não são permitidos.|  

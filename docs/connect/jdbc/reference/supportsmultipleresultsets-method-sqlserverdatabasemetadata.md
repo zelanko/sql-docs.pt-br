@@ -16,10 +16,10 @@ ms.assetid: cb4d0b91-db1d-4a6f-a87c-8ea125215afc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 688d17b7f703dc34658e66e3915b8ffaeda24e7b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969229"
 ---
 # <a name="supportsmultipleresultsets-method-sqlserverdatabasemetadata"></a>Método supportsMultipleResultSets (SQLServerDatabaseMetaData)

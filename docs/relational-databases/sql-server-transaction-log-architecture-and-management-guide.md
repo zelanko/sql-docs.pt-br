@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 82ee5bbda78f41796134a2d1ad3a639f76748bcd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287080"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guia de arquitetura e gerenciamento do log de transações do SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "79287080"
   Todo banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem um log de transações que registra todas as transações e modificações feitas no banco de dados a cada transação. O log de transações é um componente crítico do banco de dados e, se houver uma falha do sistema, será necessário que o log de transações retorne seu banco de dados a um estado consistente. Este guia fornece informações sobre a arquitetura física e lógica do log de transações. A compreensão da arquitetura pode melhorar sua efetividade na administração de logs de transações.  
 
   
-##  <a name="Logical_Arch"></a> Arquitetura lógica de log de transações  
+##  <a name="transaction-log-logical-architecture"></a><a name="Logical_Arch"></a> Arquitetura lógica de log de transações  
  O log de transações do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] opera de forma lógica como se o log de transações fosse uma cadeia de caracteres de registros de log. Cada registro de log é identificado por um LSN (número de sequência de log). Cada registro de log novo é gravado no final lógico do log com um LSN maior que o do registro antes da gravação. Os registros de log são armazenados em uma sequência serial à medida que são criados, de tal modo que se LSN2 for maior que LSN1, a alteração descrita pelo registro de log mencionado por LSN2 ocorreu após a alteração descrita no registro de log LSN1. Cada registro de log contém a ID da transação a que pertence. Para cada transação, todos os registros de log associados com a transação são vinculados individualmente em uma cadeia usando ponteiros de retrocesso que aceleram a reversão da transação.  
   
  Os registros de log para modificações de dados registram a operação lógica executada ou as imagens anteriores e posteriores dos dados modificados. A imagem anterior é uma cópia dos dados antes da execução da operação; a imagem posterior é uma cópia dos dados após a execução da operação.  
@@ -69,7 +69,7 @@ São registrados muitos tipos de operações no log de transações. Essas opera
 
 O backup diferencial e o backup de log avançam o banco de dados restaurado para uma hora posterior que corresponde a um LSN mais alto. 
   
-##  <a name="physical_arch"></a> Arquitetura física de log de transações  
+##  <a name="transaction-log-physical-architecture"></a><a name="physical_arch"></a> Arquitetura física de log de transações  
 O log de transações em um banco de dados mapeia um ou mais arquivos físicos. Conceitualmente, o arquivo de log é uma cadeia de caracteres de registros de log. Fisicamente, a sequência de registros de log é armazenada com eficiência no conjunto de arquivos físicos que implementam o log de transações. Deve haver, no mínimo, um arquivo de log para cada banco de dados.  
   
 O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] divide cada arquivo de log físico internamente em vários VLFs (arquivos de log virtuais). Os arquivos de log virtuais não têm tamanho fixo e não há número fixo de arquivos de log virtuais para um arquivo de log físico. O [!INCLUDE[ssDE](../includes/ssde-md.md)] escolhe o tamanho dos arquivos de log virtuais dinamicamente enquanto está criando ou estendendo os arquivos de log. O [!INCLUDE[ssDE](../includes/ssde-md.md)] tenta manter um pequeno número de arquivos virtuais. O tamanho dos arquivos virtuais depois que um arquivo de log for estendido é a soma do tamanho do log existente com o tamanho do incremento do arquivo novo. O tamanho ou o número de arquivos de log virtuais não pode ser configurado nem definido por administradores.  
@@ -130,14 +130,14 @@ Para obter mais informações sobre os argumentos `FILEGROWTH` e `SIZE` de `ALTE
   
  O truncamento de log pode ser atrasado por uma variedade de fatores. No caso de uma demora longa em truncamento de log, o log de transações pode ficar cheio. Para obter informações, consulte [Fatores que podem atrasar o truncamento de log](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) e [Solução de problemas de um log de transações cheio &#40;Erro 9002 do SQL Server&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
-##  <a name="WAL"></a> Log de transações write-ahead  
+##  <a name="write-ahead-transaction-log"></a><a name="WAL"></a> Log de transações write-ahead  
  Esta seção descreve a função do log de transações write-ahead no registro de modificações de dados no disco. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa um algoritmo WAL (log write-ahead), que garante que nenhuma modificação de dados seja gravada no disco antes de o registro de log associado ser gravado no disco. Isso mantém as propriedades ACID de uma transação.  
   
  Para entender como o log write-ahead funciona, é importante saber como os dados modificados são gravados em disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mantém um cache de buffer em que ele lê páginas de dados quando dados precisam ser recuperados. Quando uma página é modificada no cache do buffer, não é gravada imediatamente de volta no disco. Em vez disso, a página é marcada como *suja*. Uma página de dados pode ter mais de uma gravação lógica feita antes de ser gravada fisicamente no disco. Para cada gravação lógica, um registro de log de transações é inserido no cache de log que registra a modificação. Os registros de log devem ser gravados no disco antes de a página suja associada ser removida do cache do buffer e gravada no disco. O processo de ponto de verificação examina o cache do buffer periodicamente para buffers com páginas de um banco de dados especificado e grava todas as páginas sujas no disco. Os pontos de verificação economizam tempo durante uma recuperação posterior, pois criam um ponto em que todas as páginas sujas são gravadas no disco.  
   
  A gravação de uma página de dados modificada do cache do buffer no disco é chamada de liberação de página. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem uma lógica que impede que uma página suja seja removida antes do registro de log associado ser gravado. Os registros de log são gravados em disco quando os buffers do log são liberados.  Isso ocorre sempre que uma transação é confirmada ou que os buffers de log ficam cheios.  
   
-##  <a name="Backups"></a> Backups de log de transações  
+##  <a name="transaction-log-backups"></a><a name="Backups"></a> Backups de log de transações  
  Esta seção apresenta conceitos sobre como fazer backup e restaurar (aplicar) logs de transações. Nos modelos de recuperação completa e de recuperação com log de operações em massa é necessário fazer backups de rotina de logs de transações (*backups de log*) para recuperar dados. É possível fazer backup do log enquanto qualquer backup completo está em execução. Para obter mais informações sobre os modelos de recuperação, consulte [Fazer backup e restaurar bancos de dados do SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
  Para poder criar o primeiro backup de log, você deve criar um backup completo, como um backup de banco de dados ou o primeiro de um conjunto de backups de arquivo. A restauração de um banco de dados usando apenas backups de arquivo pode tornar-se complexa. Portanto, recomendamos que, assim que possível, você inicie com um backup de banco de dados. Assim, é necessário fazer backup de log de transações regularmente. Isto não só minimiza a exposição à perda de trabalho, como também habilita o truncamento do log de transações. Normalmente, o log de transações é truncado após todos os backups de log convencionais.  

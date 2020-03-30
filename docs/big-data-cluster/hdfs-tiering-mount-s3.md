@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69652304"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Como montar um S3 para camadas do HDFS em um cluster de Big Data
@@ -43,7 +43,7 @@ Abra um prompt de comando em um computador cliente que possa acessar o cluster d
    > [!TIP]
    > Para obter mais informações sobre como criar chaves de acesso de S3, consulte [Chaves de acesso de S3](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
 
-## <a id="mount"></a> Montar o armazenamento HDFS remoto
+## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> Montar o armazenamento HDFS remoto
 
 Agora que preparou um arquivo de credencial com chaves de acesso, você pode iniciar a montagem. As etapas a seguir montam o armazenamento HDFS remoto no S3 no armazenamento HDFS local de seu cluster de Big Data.
 
@@ -72,7 +72,7 @@ Agora que preparou um arquivo de credencial com chaves de acesso, você pode ini
 
 Se a montagem tiver sido bem-sucedida, você poderá consultar os dados do HDFS e executar trabalhos do Spark com eles. Ela será exibida no HDFS do cluster de Big Data na localização especificada por `--mount-path`.
 
-## <a id="status"></a> Obter o status das montagens
+## <a name="get-the-status-of-mounts"></a><a id="status"></a> Obter o status das montagens
 
 Para listar o status de todas as montagens no cluster de Big Data, use o seguinte comando:
 
@@ -94,7 +94,7 @@ O exemplo a seguir atualiza a montagem.
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> Excluir a montagem
+## <a name="delete-the-mount"></a><a id="delete"></a> Excluir a montagem
 
 Para excluir a montagem, use o comando **azdata bdc hdfs mount delete** e especifique o caminho da montagem no HDFS:
 

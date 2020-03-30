@@ -16,10 +16,10 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 535284c89f54fb39f448a71e5484e81c1a9d31af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080888"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurar um servidor de relatório no modo nativo para a Administração Local (SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "77080888"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo|  
   
 -   [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]  
   
@@ -57,19 +57,19 @@ ms.locfileid: "77080888"
   
 -   [Informações adicionais](#bkmk_addiitonal_informaiton)  
   
-##  <a name="bkmk_configuraiton_overview"></a> Visão geral de alterações de configuração  
+##  <a name="overview-of-configuration-changes"></a><a name="bkmk_configuraiton_overview"></a> Visão geral de alterações de configuração  
  As seguintes alterações de configuração configuram o servidor para que você possa usar permissões de usuário padrão para gerenciar o conteúdo e as operações do servidor de relatório:  
   
 -   Adicione URLs do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a sites confiáveis. Por padrão, o Internet Explorer que é executado nos sistemas operacionais listados é executado no **Modo Protegido**, um recurso que impede que solicitações do navegador alcancem processos de nível superior executados no mesmo computador. Você pode desabilitar o modo protegido para os aplicativos do servidor de relatório adicionando-os como Sites Confiáveis.  
   
 -   Crie atribuições de função que concedam a você, o administrador do servidor de relatório, permissão para gerenciar o conteúdo e as operações, sem precisar usar o recurso **Executar como administrador** no Internet Explorer. Ao criar atribuições de funções para sua conta de usuário do Windows, você obtém acesso a um servidor de relatório com permissões de Gerenciador de Conteúdo e Administrador do Sistema por meio de atribuições explícitas de funções que substituem as atribuições de funções internas predefinidas que o Reporting Services cria.  
   
-##  <a name="bkmk_configure_local_server"></a> Para configurar um Servidor de Relatório local e uma administração do portal da Web  
+##  <a name="to-configure-local-report-server-and-web-portal-administration"></a><a name="bkmk_configure_local_server"></a> Para configurar um Servidor de Relatório local e uma administração do portal da Web  
  Conclua as etapas de configuração nessa seção se você estiver navegando para um servidor de relatórios local e vir erros semelhantes ao seguinte:  
   
 -   O usuário `'Domain\[user name]`' não tem as permissões necessárias. Verifique se as permissões suficientes foram concedidas e as restrições do UAC (Controle da conta de usuário) do Windows foram resolvidas.  
   
-###  <a name="bkmk_site_settings"></a> Configurações de site confiável no navegador  
+###  <a name="trusted-site-settings-in-the-browser"></a><a name="bkmk_site_settings"></a> Configurações de site confiável no navegador  
   
 1.  Abra uma janela do navegador com permissões Executar como administrador. No menu **Iniciar**, clique com o botão direito do mouse em **Internet Explorer** e selecione **Executar como administrador**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "77080888"
   
 12. Selecione **OK**.  
   
-###  <a name="bkmk_configure_folder_settings"></a> Configurações de pasta do portal da Web  
+###  <a name="web-portal-folder-settings"></a><a name="bkmk_configure_folder_settings"></a> Configurações de pasta do portal da Web  
   
 1.  No portal da Web, na página inicial, clique em **Gerenciar pasta**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "77080888"
   
 6.  Selecione **OK**.  
   
-###  <a name="bkmk_configure_site_settings"></a> Configurações de site do portal da Web  
+###  <a name="web-portal-site-settings"></a><a name="bkmk_configure_site_settings"></a> Configurações de site do portal da Web  
   
 1.  Abra seu navegador com privilégios administrativos e navegue até o portal da Web, `https://<server name>/reports`.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "77080888"
   
 8. Abra novamente o portal da Web no Internet Explorer sem usar **Executar como administrador**.  
   
-##  <a name="bkmk_configure_ssms"></a> Para configurar o SQL Server Management Studio (SSMS) para a administração de servidor de relatórios local  
+##  <a name="to-configure-sql-server-management-studio-ssms-for-local-report-server-administration"></a><a name="bkmk_configure_ssms"></a> Para configurar o SQL Server Management Studio (SSMS) para a administração de servidor de relatórios local  
  Por padrão, você não pode acessar todas as propriedades do servidor de relatório disponíveis no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] a menos que inicie o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] com privilégios administrativos.  
   
  **Para configurar as atribuições de função do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** , você não precisa iniciar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] com permissões elevadas a cada vez:  
@@ -152,7 +152,7 @@ ms.locfileid: "77080888"
   
  Agora, quando você abre o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e não seleciona explicitamente **Executar como administrador** , tem acesso às propriedades do servidor de relatório.  
   
-##  <a name="bkmk_configure_ssdt"></a> Para configurar o SSDT (SQL Server Data Tools) para publicar em um servidor de relatório local  
+##  <a name="to-configure-sql-server-data-tools-ssdt-to-publish-to-a-local-report-server"></a><a name="bkmk_configure_ssdt"></a> Para configurar o SSDT (SQL Server Data Tools) para publicar em um servidor de relatório local  
  Se você instalou o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] em um dos sistemas operacionais listados na primeira seção desse tópico, e quiser que o SSDT interaja com um servidor de relatório de modo Nativo local, receberá erros de permissão a menos que abra o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] com permissões elevadas ou configure as funções de serviços de relatório. Por exemplo, se você não tiver permissões adequadas, terá problemas semelhantes aos seguintes:  
   
 -   Quando você tentar implantar itens de relatório no servidor de relatório local, verá uma mensagem de erro semelhante à seguinte na janela **Lista de Erros** :  
@@ -171,7 +171,7 @@ Agora você deve poder implantar relatórios e outros itens em um servidor de re
   
 -   Confira as seções [Configurações da pasta do portal da Web](#bkmk_configure_folder_settings) e [Configurações do Site do portal da Web](#bkmk_configure_site_settings) anteriores neste tópico.  
   
-##  <a name="bkmk_addiitonal_informaiton"></a> Informações adicionais  
+##  <a name="additional-information"></a><a name="bkmk_addiitonal_informaiton"></a> Informações adicionais  
  Uma etapa de configuração adicional e comum relacionada à administração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é abrir a porta 80 no Windows Firewall para permitir o acesso ao computador do servidor de relatório. Para obter instruções, consulte [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
 ## <a name="see-also"></a>Confira também  
