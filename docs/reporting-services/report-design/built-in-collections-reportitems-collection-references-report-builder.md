@@ -9,10 +9,10 @@ ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e8819e97cbece0ab9682252c3afdedee7d671428
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081894"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Coleções internas – referências de coleções de ReportItems (Construtor de Relatórios)
@@ -22,7 +22,7 @@ ms.locfileid: "77081894"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>Usando a propriedade Value de ReportItems  
- Itens na coleção **ReportItems** têm apenas uma propriedade: Value. O valor para um item de **ReportItems** pode ser usado para exibir ou calcular dados de outro campo no relatório. Para acessar o valor da caixa de texto atual, é possível usar o Me.Value ou simplesmente o Value global interno de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Em funções de relatório, como First e funções de agregação, use a sintaxe totalmente qualificada.  
+ Itens dentro da coleção **ReportItems** têm apenas uma propriedade: Value. O valor para um item de **ReportItems** pode ser usado para exibir ou calcular dados de outro campo no relatório. Para acessar o valor da caixa de texto atual, é possível usar o Me.Value ou simplesmente o Value global interno de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Em funções de relatório, como First e funções de agregação, use a sintaxe totalmente qualificada.  
   
  Por exemplo:  
   

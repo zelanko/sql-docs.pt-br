@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015444"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
@@ -77,7 +77,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |*pwszMessage*|A mensagem de erro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A mensagem é retornada por meio do método **IErrorInfo::GetDescription**.|  
 |*pwszServer*|O nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na qual o erro ocorreu.|  

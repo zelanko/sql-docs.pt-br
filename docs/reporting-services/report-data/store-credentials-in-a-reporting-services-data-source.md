@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
 ms.openlocfilehash: 09fcacbd2f1c5c197517f962073dce6294aed2e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68891852"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
@@ -32,7 +32,7 @@ ms.locfileid: "68891852"
 
 Você pode configurar credenciais armazenadas usadas por um servidor de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para acessar dados externos de um relatório. As credenciais armazenadas serão usadas se o relatório for executado autônomo, por exemplo, uma assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que publica um relatório como um email. O servidor de relatórios recupera e usa as credenciais quando o processamento do relatório é agendado ou disparado. Este tópico explica como configurar credenciais armazenadas para servidores de relatórios tanto no modo nativo quanto no modo do SharePoint.  
   
-##  <a name="bkmk_top"></a> Requisitos da política de segurança para credenciais armazenadas  
+##  <a name="security-policy-requirements-for-stored-credentials"></a><a name="bkmk_top"></a> Requisitos da política de segurança para credenciais armazenadas  
  ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") é necessário que a conta usada para as credenciais armazenadas esteja configurada para uma das políticas de segurança a seguir no servidor de relatório. É recomendável escolher a política com o nível mínimo de permissões que você precisa para o ambiente.  
   
 1.  **Permitir logon localmente**. Para obter mais informações, consulte [Permitir logon localmente](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
@@ -41,7 +41,7 @@ Você pode configurar credenciais armazenadas usadas por um servidor de relatór
   
 3.  Para obter informações gerais sobre as políticas, consulte [Editar configurações de segurança em um objeto de política de grupo](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
   
-##  <a name="bkmk_stored_credentials_data_source_native"></a> Configurar credenciais armazenadas para uma fonte de dados específica do relatório (modo nativo)  
+##  <a name="configure-stored-credentials-for-a-report-specific-data-source-native-mode"></a><a name="bkmk_stored_credentials_data_source_native"></a> Configurar credenciais armazenadas para uma fonte de dados específica do relatório (modo nativo)  
   
 1.  No portal da Web, procure a pasta que contém o relatório. Clique nas reticências (...) no canto superior direito do bloco de relatório.  
   
@@ -69,7 +69,7 @@ Você pode configurar credenciais armazenadas usadas por um servidor de relatór
   
      ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Requisitos da política de segurança para credenciais armazenadas](#bkmk_top)  
   
-##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a> Configurar credenciais armazenadas para uma fonte de dados específica do relatório (modo SharePoint)  
+##  <a name="configure-stored-credentials-for-a-report-specific-data-source-sharepoint-mode"></a><a name="bkmk_stored_credentials_data_source_sharepoint"></a> Configurar credenciais armazenadas para uma fonte de dados específica do relatório (modo SharePoint)  
   
 1.  Navegue até a biblioteca de documentos que contém o relatório e, em seguida, clique no menu aberto ![menu de contexto da biblioteca de documentos para itens do SSRS](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "menu de contexto da biblioteca de documentos para itens SSRS").  
   
@@ -97,7 +97,7 @@ Você pode configurar credenciais armazenadas usadas por um servidor de relatór
   
      ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Requisitos da política de segurança para credenciais armazenadas](#bkmk_top)  
   
-##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Configurar credenciais armazenadas para uma fonte de dados compartilhada (modo nativo)  
+##  <a name="configure-stored-credentials-for-a-shared-data-source-native-mode"></a><a name="bkmk_stored_credentials_shared_data_source_native"></a> Configurar credenciais armazenadas para uma fonte de dados compartilhada (modo nativo)  
   
 1.  No portal da Web, navegue até o item da fonte de dados compartilhada. 
   
@@ -123,7 +123,7 @@ Você pode configurar credenciais armazenadas usadas por um servidor de relatór
   
      ![Ícone de seta usado com o link Voltar ao Início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Requisitos da política de segurança para credenciais armazenadas](#bkmk_top)  
   
-##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> Configurar credenciais armazenadas para uma fonte de dados compartilhada (modo SharePoint)  
+##  <a name="configure-stored-credentials-for-a-shared-data-source-sharepoint-mode"></a><a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> Configurar credenciais armazenadas para uma fonte de dados compartilhada (modo SharePoint)  
   
 1.  Na biblioteca de documentos, navegue até o item de fonte de dados compartilhada.![Ícone de fonte de dados compartilhada](../../reporting-services/report-data/media/hlp-16datasource.png "Ícone da fonte de dados compartilhada")  
   

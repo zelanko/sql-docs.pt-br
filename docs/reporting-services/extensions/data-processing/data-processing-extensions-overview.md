@@ -11,10 +11,10 @@ ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67e20d8d0bdcfbb03d0188ac62b4d89bc12b704f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63194211"
 ---
 # <a name="data-processing-extensions-overview"></a>Visão geral das extensões de processamento de dados
@@ -22,7 +22,7 @@ ms.locfileid: "63194211"
   
  A tabela a seguir lista as extensões de processamento de dados incluídas no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Extensão de processamento de dados|Descrição|  
+|Extensão de processamento de dados|DESCRIÇÃO|  
 |-------------------------------|-----------------|  
 |Extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Usa o Provedor de Dados .NET Framework para SQL Server para se conectar e recuperar dados do [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].|  
 |Extensão de processamento de dados para OLE DB|Usa o Provedor de Dados .NET Framework para OLE DB. Com essa extensão, o servidor de relatório pode consultar qualquer fonte de dados que tenha um provedor OLE DB.|  

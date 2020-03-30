@@ -9,10 +9,10 @@ ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eff17f770599ae953afeaae81779f0326ad89e4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081833"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Tipo de conexão Analysis Services para MDX (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "77081833"
   
  Use as informações deste tópico para criar uma fonte de dados. Para obter instruções passo a passo, consulte [Adicionar e verificar uma conexão de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a> Cadeia de Conexão  
+##  <a name="connection-string"></a><a name="Connection"></a> Cadeia de Conexão  
  Ao se conectar a um cubo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , você está se conectando ao objeto de banco de dados em uma instância do Analysis Services em um servidor. O banco de dados pode ter vários cubos. Especifique o cubo no designer de consulta ao criar a consulta. O exemplo a seguir mostra uma cadeia de conexão:  
   
 ```  
@@ -32,7 +32,7 @@ data source=<server name>;initial catalog=<database name>
  Para ver mais exemplos de cadeias de conexão, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
-##  <a name="Credentials"></a> Credenciais  
+##  <a name="credentials"></a><a name="Credentials"></a> Credenciais  
  As credenciais são necessárias para executar consultas, visualizar o relatório localmente e visualizá-lo no servidor de relatório.  
   
  Após a publicação do relatório, talvez seja necessário alterar as credenciais da fonte de dados para que, quando o relatório for executado no servidor de relatório, as permissões recuperadas sejam válidas.  
@@ -50,7 +50,7 @@ data source=<server name>;initial catalog=<database name>
  Para obter mais informações, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar informações de credenciais e conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
-##  <a name="Query"></a> Consultas  
+##  <a name="queries"></a><a name="Query"></a> Consultas  
  Depois de se conectar a uma fonte de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , você pode criar um conjunto de dados e definir uma consulta MDX que especifique quais dados devem ser recuperados do cubo. Use o designer de consulta gráfica MDX procurando e selecionando a partir das estruturas de dados subjacentes na fonte de dados.  
   
  Você pode especificar uma consulta das seguintes formas:  
@@ -70,13 +70,13 @@ data source=<server name>;initial catalog=<database name>
  A extensão de processamento de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte às propriedades estendidas de campo do conjunto de dados. Estes são valores que estão disponíveis a partir da fonte de dados externa, mas que não são exibidos no painel de dados do relatório. Você pode usar as propriedades de campo ampliadas com suporte pela extensão de processamento de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em seu relatório por meio da coleção **Fields** interna. Para as propriedades com valores na fonte de dados, você pode acessar os valores de propriedade predefinidos como **FormattedValue**, **Color**ou **UniqueName**. Para obter mais informações, consulte [Propriedades de campos estendidos para um banco de dados do Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
-##  <a name="Parameters"></a> Parâmetros  
+##  <a name="parameters"></a><a name="Parameters"></a> Parâmetros  
  Para incluir parâmetros de consulta, crie um filtro na área de filtros no designer de consultas e marque o filtro como um parâmetro. Para cada filtro, um conjunto de dados é criado automaticamente para fornecer os valores disponíveis. Por padrão, esses conjuntos de dados não são exibidos no painel de dados do relatório. Para obter mais informações, consulte [Definir parâmetros no Designer de Consulta MDX para o Analysis Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md) e [Mostrar conjuntos de dados ocultos para obter valores de parâmetro para dados multidimensionais &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
  Por padrão, cada parâmetro de relatório tem o tipo de dados **Text**. Depois que os parâmetros de relatório forem criados, talvez seja necessário alterar os valores padrão. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
-##  <a name="Remarks"></a> Comentários  
+##  <a name="remarks"></a><a name="Remarks"></a> Comentários  
  A extensão de dados do Analysis Services é baseada no protocolo XMLA (XML for Analysis). Os conjuntos de resultados de cubos são recuperados por meio do protocolo XMLA como um conjunto de linhas plano. Não há suporte para hierarquias desbalanceadas. Para obter mais informações, consulte [Hierarquias desbalanceadas](https://docs.microsoft.com/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies).  
   
  Você também pode recuperar os dados de um cubo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] do tipo de fonte de dados OLE DB. Para obter mais informações, consulte [Tipo de conexão OLE DB &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
@@ -84,7 +84,7 @@ data source=<server name>;initial catalog=<database name>
  Para obter mais informações sobre suporte de versão, consulte [Fontes de dados compatíveis com o Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
-##  <a name="Related"></a> Seções relacionadas  
+##  <a name="related-sections"></a><a name="Related"></a> Seções relacionadas  
  Estas seções da documentação fornecem informações conceituais detalhadas sobre dados de relatório, bem como informações de procedimentos sobre como definir, personalizar e usar partes de um relatório relacionadas aos dados.  
   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

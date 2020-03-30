@@ -11,10 +11,10 @@ ms.assetid: f9ebb203-2013-4feb-94f5-494b7f098f9a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 82e005a4e81dd08643613f0c90dafbd9124dd3bb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970870"
 ---
 # <a name="sqlserverparametermetadata-members"></a>Membros de SQLServerParameterMetaData
@@ -30,13 +30,13 @@ ms.locfileid: "67970870"
   
 ## <a name="inherited-fields"></a>Campos herdados  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |java.sql.ParameterMetaData|parameterModeIn, parameterModeInOut, parameterModeOut, parameterModeUnknown, parameterNoNulls, parameterNullable, parameterNullableUnknown|  
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[getParameterClassName](../../../connect/jdbc/reference/getparameterclassname-method-sqlserverparametermetadata.md)|Recupera o nome totalmente qualificado da classe Java cujas instâncias devem ser passadas para o método [setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) da classe [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).|  
 |[getParameterCount](../../../connect/jdbc/reference/getparametercount-method-sqlserverparametermetadata.md)|Recupera o número de parâmetros no objeto [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) para o qual esse objeto [SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md) contém informações.|  

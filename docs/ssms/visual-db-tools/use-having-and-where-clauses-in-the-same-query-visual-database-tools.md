@@ -22,10 +22,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: b74f4847964be363972c4226f124c94cce032a07
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246016"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Usar cláusulas HAVING e WHERE na mesma consulta (Visual Database Tools)
@@ -91,6 +91,6 @@ Você pode criar uma cláusula WHERE e uma cláusula HAVING envolvendo a mesma c
     ```  
   
 ## <a name="see-also"></a>Consulte Também  
-[Classificar e Agrupar Resultados da Consulta](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Classificar e agrupar resultados da consulta](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [Resumir resultados da consulta](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   

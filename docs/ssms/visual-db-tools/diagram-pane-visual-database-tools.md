@@ -17,10 +17,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 9ba8a064256541ffc756ef37fe01f1205e6bc243
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251894"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Painel de Diagrama (Visual Database Tools)
@@ -65,7 +65,7 @@ Cada retângulo mostra as colunas de dados da tabela ou objeto com valor de tabe
   
 A tabela a seguir lista as caixas de seleção e os símbolos usados no retângulo para cada tabela ou objeto com valor de tabela.  
   
-|Caixa de seleção ou símbolo|Descrição|  
+|Caixa de seleção ou símbolo|DESCRIÇÃO|  
 |-----------------------|---------------|  
 |![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbi7.gif "Ícone de Ferramentas de Banco de Dados Visual")<br /><br />![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbi8.gif "Ícone de Ferramentas de Banco de Dados Visual")<br /><br />![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbi9.gif "Ícone de Ferramentas de Banco de Dados Visual")<br /><br />![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbia.gif "Ícone de Ferramentas de Banco de Dados Visual")|Especifica se uma coluna de dados é exibida no conjunto de resultados da consulta (consulta  Select) ou se é usada em uma consulta Update, Insert From, Make Table ou Insert Into. Selecione a coluna a ser adicionada aos resultados. Se **(Todas as Colunas)** for selecionado, todas as colunas de dados serão exibidas na saída.<br /><br />O ícone usado com a caixa de seleção é alterado de acordo com o tipo de consulta que você está criando. Ao criar uma consulta Excluir, não podem ser selecionadas colunas individuais.|  
 |![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbib.gif "Ícone de Ferramentas de Banco de Dados Visual")<br /><br />![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbic.gif "Ícone de Ferramentas de Banco de Dados Visual")|Indica que a coluna de dados está sendo usada para ordenar os resultados da consulta (faz parte de uma cláusula ORDER BY). O ícone é exibido como A-Z se a ordem de classificação for crescente ou Z-A se ordem de classificação for decrescente.|  
@@ -81,7 +81,7 @@ Se a consulta envolver uma junção, uma linha de junção é exibida entre as c
   
 A forma do ícone no meio da linha de junção indica como são unidas as tabelas ou objetos com estrutura de tabela. Se a cláusula de junção usar um operador diferente de igual (=), o operador será exibido no ícone da linha de junção. A tabela a seguir lista os ícones que podem ser exibidos em uma linha de junção.  
   
-|Ícone de linha de junção|Descrição|  
+|Ícone de linha de junção|DESCRIÇÃO|  
 |------------------|---------------|  
 |![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbih.gif "Ícone de Ferramentas de Banco de Dados Visual")|Junção interna (criada usando o sinal de igual).|  
 |![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbii.gif "Ícone de Ferramentas de Banco de Dados Visual")|Junção interna baseada no operador "maior que". (O operador exibido no ícone da linha de junção reflete o operador usado na junção.)|  
@@ -91,7 +91,7 @@ A forma do ícone no meio da linha de junção indica como são unidas as tabela
   
 Os ícones nas extremidades da linha de junção indicam o tipo de junção. A tabela a seguir lista os tipos de junções e os ícones que podem ser exibidos nas extremidades da linha de junção.  
   
-|Ícone nas extremidades da linha de junção|Descrição|  
+|Ícone nas extremidades da linha de junção|DESCRIÇÃO|  
 |-----------------------------|---------------|  
 |![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbim.gif "Ícone de Ferramentas de Banco de Dados Visual")|Junção uma para uma|  
 |![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbin.gif "Ícone de Ferramentas de Banco de Dados Visual")|Junção uma para muitas|  

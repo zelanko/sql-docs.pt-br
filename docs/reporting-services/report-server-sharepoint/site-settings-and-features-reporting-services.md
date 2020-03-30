@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 73d357b6a601265df5e579f1b6acaff6ce8d648d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580454"
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Configurações de site e recursos de site do Reporting Services (modo do SharePoint)
@@ -26,7 +26,7 @@ O modo do SharePoint do Reporting Services contém vários recursos personalizad
 > [!NOTE]
 > A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
 
-|Configuração do site|Descrição|  
+|Configuração do site|DESCRIÇÃO|  
 |------------------|-----------------|  
 |Configurações de Site do Reporting Services|Configurações que abrangem todo o site descritas neste tópico.|  
 |Gerenciar Alertas de Dados|Gerenciamento do recurso Alerta de Dados.|  
@@ -40,7 +40,7 @@ O modo do SharePoint do Reporting Services contém vários recursos personalizad
   
 ## <a name="options-for-reporting-services-site-settings"></a>Opções de configurações de site do Reporting Services
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Habilitar download do controle ActiveX RSClientPrint**|O controle exibe uma caixa de diálogo de impressão personalizada que fornece recursos de suporte comuns a outras caixas de diálogo de impressão, inclusive visualização de impressão, seleções de páginas para definir páginas e intervalos específicos, margens de páginas e orientação de página. Para saber mais sobre o controle, consulte [Usando o controle RSClientPrint em aplicativos personalizados](../../reporting-services/report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md)|  
 |**Habilitar erros remotos em modo local**|Mostrar ou ocultar mensagens de erro detalhadas em computadores remotos ao executar em modo local. Se você ver uma mensagem de erro semelhante à seguinte, pode ser útil habilitar erros remotos:<br /><br /> `For more information about this error navigate to the report server on the local server machine or enable remote errors`|  

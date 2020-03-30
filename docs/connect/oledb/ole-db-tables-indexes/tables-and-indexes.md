@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0fc8aeed348f64c17894fa3432a7a81274ffbea4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015241"
 ---
 # <a name="tables-and-indexes"></a>Tabelas e índices
@@ -39,9 +39,9 @@ ms.locfileid: "68015241"
   
  No conjunto de propriedades específico de provedor DBPROPSET_SQLSERVERCOLUMN, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] define a propriedade a seguir.  
   
-|ID da propriedade|Descrição|  
+|ID da propriedade|DESCRIÇÃO|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|Tipo: VT_BSTR<br /><br /> L/G: Gravar<br /><br /> Padrão: Nulo<br /><br /> Descrição: Esta propriedade só é usada em **ITableDefinition**. A cadeia de caracteres especificada nesta propriedade é usada ao criar uma instrução [CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md)<br /><br /> .|  
+|SSPROP_COL_COLLATIONNAME|Tipo: VT_BSTR<br /><br /> Leitura/gravação: gravação<br /><br /> Padrão: Null<br /><br /> Descrição: essa propriedade só é usada em **ITableDefinition**. A cadeia de caracteres especificada nesta propriedade é usada ao criar uma instrução [CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md)<br /><br /> .|  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

@@ -15,10 +15,10 @@ ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 41d02ba0cd1dc9067bd6425895e53d9a949fd0d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573263"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Interface do usuário do Designer de Consulta MDX do Analysis Services
@@ -37,7 +37,7 @@ ms.locfileid: "65573263"
   
  A figura a seguir mostra os painéis do modo Design.  
   
- ![Designer de consultas MDX do Analysis Services, exibição de design](../../reporting-services/report-data/media/rsqd-dsawas-mdx-designmode.gif "Designer de consultas MDX do Analysis Services, exibição de design")  
+ ![Designer de consultas MDX do Analysis Services, modo de exibição de Design](../../reporting-services/report-data/media/rsqd-dsawas-mdx-designmode.gif "Designer de consultas MDX do Analysis Services, modo de exibição de Design")  
   
  A tabela a seguir lista os painéis neste modo:  
   
@@ -62,12 +62,12 @@ ms.locfileid: "65573263"
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>Barra de ferramentas do Designer de Consultas Gráficas MDX no modo Design  
  A barra de ferramentas do designer de consulta fornece botões para ajudá-lo a criar consultas MDX por meio da interface gráfica. A tabela a seguir lista os botões e as suas funções.  
   
-|Botão|Descrição|  
+|Botão|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Editar como Texto**|Não habilitado para esse tipo de fonte de dados.|  
 |**Importaçãoação**|Importa uma consulta existente de um arquivo de definição de relatório (.rdl) no sistema de arquivos. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Alterar para a exibição de consulta MDX](../../reporting-services/report-data/media/rsqdicon-commandtypemdx.gif "Alterar para a exibição de consulta MDX")|Alternar para Tipo de Comando MDX.|  
-|![Alterar para a exibição de linguagem de consulta DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Alterar para a exibição de linguagem de consulta DMX")|Alternar para Tipo de Comando DMX.|  
+|![Alterar para Visualização da Consulta MDX](../../reporting-services/report-data/media/rsqdicon-commandtypemdx.gif "Alterar para Visualização da Consulta MDX")|Alternar para Tipo de Comando MDX.|  
+|![Alterar para o modo de exibição de linguagem de consulta DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Alterar para o modo de exibição de linguagem de consulta DMX")|Alternar para Tipo de Comando DMX.|  
 |![Atualizar dados de resultado](../../reporting-services/report-data/media/rsqdicon-refresh.gif "Atualizar dados de resultado")|Atualiza metadados na fonte de dados.|  
 |![Adicionar membro calculado](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Adicionar Membro Calculado")|Exibe a caixa de diálogo **Construtor de Membro Calculado** .|  
 |![Alternar para mostrar células vazias](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias")|Alterna entre mostrar ou ocultar células vazias no painel Dados. (Equivale a usar a cláusula NON EMPTY em MDX).|  
@@ -78,7 +78,7 @@ ms.locfileid: "65573263"
 |![Botão Preparar Consulta](../../reporting-services/report-data/media/rsqdicon-preparequery.gif "Botão Preparar Consulta")|Prepara a consulta.|  
 |![Executar a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe os resultados no painel Dados.|  
 |![Cancelar a consulta](../../reporting-services/report-data/media/rsqdicon-cancel.gif "Cancelar a consulta")|Cancela a consulta.|  
-|![Alternar para o modo de design](../../reporting-services/media/rsqdicon-designmode.gif "Alterna para o modo de design")|Alterna entre o modo Design e o modo Consulta.|  
+|![Alternar para o modo Design](../../reporting-services/media/rsqdicon-designmode.gif "Alterna para o modo de design")|Alterna entre o modo Design e o modo Consulta.|  
   
 ## <a name="graphical-mdx-query-designer-in-query-mode"></a>Designer de Consultas Gráficas MDX no modo Consulta  
  Para alterar o designer de consultas gráficas para o modo **Consulta** , clique no botão de alternância **Modo Design** na barra de ferramentas.  
@@ -107,9 +107,9 @@ ms.locfileid: "65573263"
   
 -   **Editar como Texto**  
   
--   **Adicionar Membro Calculado** (![Adicionar membro calculado](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Adicionar Membro Calculado"))  
+-   **Adicionar membro calculado** (![Adicionar membro calculado](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Adicionar Membro Calculado"))  
   
--   **Mostrar células vazias** (![Alternar para mostrar células vazias](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias"))  
+-   **Mostrar Células Vazias** (![Alternar para mostrar células vazias](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias"))  
   
 -   **Executar automaticamente** (![Executar a consulta automaticamente](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente"))  
   

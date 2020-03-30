@@ -7,10 +7,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/06/2018
 ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68262898"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar uma instalação do Reporting Services (Modo Nativo)
@@ -50,7 +50,7 @@ Para obter informações sobre como migrar uma implantação do modo do SharePoi
   
 * Você detecta um problema que impede a atualização.
 
-## <a name="bkmk_nativemode_migration_overview"></a> Visão geral da migração de modo nativo
+## <a name="native-mode-migration-overview"></a><a name="bkmk_nativemode_migration_overview"></a> Visão geral da migração de modo nativo
 
  O processo de migração para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui etapas manuais e automatizadas. As seguintes tarefas fazem parte de uma migração de servidor de relatório:  
   
@@ -79,7 +79,7 @@ Para obter informações sobre como migrar uma implantação do modo do SharePoi
   
 * [Criar um banco de dados do servidor de relatório](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
   
-## <a name="bkmk_fixed_database_name"></a> Nome fixo do banco de dados
+## <a name="fixed-database-name"></a><a name="bkmk_fixed_database_name"></a> Nome fixo do banco de dados
 
  Você não pode renomear o banco de dados de servidor de relatório. A identidade do banco de dados é registrada em procedimentos armazenados do servidor de relatório quando o banco de dados é criado. A renomeação dos bancos de dados primário ou temporário do servidor de relatório ocasiona erros quando os procedimentos são executados, invalidando a instalação do servidor de relatório.  
   
@@ -91,7 +91,7 @@ Para obter informações sobre como migrar uma implantação do modo do SharePoi
   
 * Se houver poucos itens, é possível republicar relatórios e fontes de dados compartilhadas do Designer de Relatórios, do Designer de Modelos e do Construtor de Relatórios no novo servidor de relatório. Recrie atribuições de função, assinaturas, agendamentos compartilhados, agendamentos de instantâneo, propriedades personalizadas definidas em relatórios ou outros itens, segurança de item de modelo e propriedades definidas no servidor de relatório. Esteja preparado para perder o histórico de relatórios e os dados de log de execução de relatório se você seguir essas ações.
   
-## <a name="bkmk_before_you_start"></a> Antes de iniciar
+## <a name="before-you-start"></a><a name="bkmk_before_you_start"></a> Antes de iniciar
 
  Embora você esteja migrando e não atualizando a instalação, considere a possibilidade de executar o Supervisor de Atualização na instalação existente para identificar problemas que poderiam afetar a migração. Esta etapa será especialmente útil se você estiver migrando um servidor de relatório que não instalou ou configurou. Ao executar o Supervisor de Atualização, você poderá obter informações sobre configurações personalizadas que podem não ter suporte em uma nova instalação do SQL Server.  
   
@@ -117,7 +117,7 @@ Para obter informações sobre como migrar uma implantação do modo do SharePoi
   
 Para obter mais informações sobre as alterações no SQL Server Reporting Services, veja a documentação do Supervisor de Atualização e [Novidades no Reporting Services](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
-## <a name="bkmk_backup"></a> Arquivos e dados para backup
+## <a name="backup-files-and-data"></a><a name="bkmk_backup"></a> Arquivos e dados para backup
 
  Antes de instalar uma nova instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], faça backup de todos os arquivos da instalação atual.  
   
@@ -141,7 +141,7 @@ Para obter mais informações sobre as alterações no SQL Server Reporting Serv
   
     7. Machine.config de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] caso ele tenha sido modificado para operações do servidor de relatório.  
 
-## <a name="bkmk_install_ssrs"></a> Instale o SQL Server Reporting Services
+## <a name="install-sql-server-reporting-services"></a><a name="bkmk_install_ssrs"></a> Instale o SQL Server Reporting Services
 
  Instale uma nova instância do servidor de relatório no modo somente arquivos para que você possa configurá-la para usar valores diferentes do padrão. Para a instalação pela linha de comando, use o argumento **FilesOnly**. No Assistente de Instalação, selecione a **opção Instalar, mas não configurar**.  
   
@@ -151,7 +151,7 @@ Para obter mais informações sobre as alterações no SQL Server Reporting Serv
   
 * [Instalar o SQL Server do prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
 
-## <a name="bkmk_move_database"></a> Mover o banco de dados do servidor de relatório
+## <a name="move-the-report-server-database"></a><a name="bkmk_move_database"></a> Mover o banco de dados do servidor de relatório
 
  O banco de dados do servidor de relatório contém relatórios publicados, modelos, fontes de dados compartilhadas, agendas, recursos, assinaturas e pastas. Ele também contém propriedades do sistema e de itens e permissões para acessar conteúdo do servidor de relatório.  
   
@@ -191,7 +191,7 @@ Para obter mais informações sobre as alterações no SQL Server Reporting Serv
   
  Lembre-se de que o banco de dados do servidor de relatório e o banco de dados temporário são interdependentes e devem ser movidos juntos. Não copie os bancos de dados; a cópia não transfere todas as configurações de segurança para a nova instalação. Não mova trabalhos do SQL Server Agent para operações de servidor de relatório agendadas. O servidor de relatório recria esses trabalhos automaticamente.  
 
-## <a name="bkmk_move_custom"></a> Mover assemblies ou extensões personalizadas
+## <a name="move-custom-assemblies-or-extensions"></a><a name="bkmk_move_custom"></a> Mover assemblies ou extensões personalizadas
 
  Se a instalação inclui extensões, itens de relatório ou assemblies personalizados, reimplante os componentes personalizados. Se você não estiver usando componentes personalizados, vá para a seção [Configurar o servidor de relatório](#bkmk_configure_reportserver).  
   
@@ -215,7 +215,7 @@ Para obter mais informações sobre as alterações no SQL Server Reporting Serv
   
     1. [Implantando um assembly personalizado](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2. [Como: implantar um Item de relatório personalizado](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2. [Como implantar um item de relatório personalizado](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3. [Implantando uma extensão de processamento de dados](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)  
   
@@ -225,7 +225,7 @@ Para obter mais informações sobre as alterações no SQL Server Reporting Serv
   
     6. [Implementando uma extensão de segurança](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
 
-## <a name="bkmk_configure_reportserver"></a> Configurar o servidor de relatório
+## <a name="configure-the-report-server"></a><a name="bkmk_configure_reportserver"></a> Configurar o servidor de relatório
 
  Configure as URLs do serviço Web Servidor de Relatórios e do portal da Web e configure a conexão com o banco de dados do servidor de relatório.  
   
@@ -252,7 +252,7 @@ Antes de excluir as chaves, é recomendável primeiro fazer backup da chave de C
   
 6. Se você desejar administrar localmente seu servidor de relatório de modo nativo, configure o sistema operacional para permitir a administração local com o portal da Web. Para obter mais informações, consulte [Configurar um servidor de relatório no modo nativo para a Administração Local](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
 
-## <a name="bkmk_copy_custom_config"></a> Copiar parâmetros de configuração personalizados para o arquivo RSReportServer.config
+## <a name="copy-custom-configuration-settings-to-rsreportserverconfig-file"></a><a name="bkmk_copy_custom_config"></a> Copiar parâmetros de configuração personalizados para o arquivo RSReportServer.config
 
 Se você modificou os arquivos RSReportServer.config ou RSWebApplication.config na instalação anterior, deverá fazer as mesmas modificações no novo arquivo RSReportServer.config. A lista a seguir resume alguns dos motivos pelos quais você pode ter modificado o arquivo de configuração anterior e apresenta links para informações adicionais sobre como definir as mesmas configurações no SQL Server 2016.  
   
@@ -261,17 +261,17 @@ Se você modificou os arquivos RSReportServer.config ou RSWebApplication.config 
 |Entrega de email do Servidor de Relatório com configurações personalizadas|[Configurações de email * Modo nativo do Reporting Services](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |Configurações de informações de dispositivo|[Personalizar parâmetros de extensão de renderização em RSReportServer.config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
 
-## <a name="bkmk_windowsservice_group"></a> Grupo de Serviços do Windows e ACLs de segurança
+## <a name="windows-service-group-and-security-acls"></a><a name="bkmk_windowsservice_group"></a> Grupo de Serviços do Windows e ACLs de segurança
 
  No [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], há um grupo de serviços, o grupo de Serviços Windows do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], usado para criar ACLs de segurança para todos os arquivos, pastas e chaves do registro instalados com o SQL Server Reporting Services. Este nome de grupo do Windows aparece no formato SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*>.  
 
-## <a name="bkmk_verify"></a> Verificar a implantação
+## <a name="verify-your-deployment"></a><a name="bkmk_verify"></a> Verificar a implantação
 
 1. Teste os diretórios virtuais do servidor de relatório e do [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] abrindo um navegador e digitando a URL. Para obter mais informações, veja [Verificar uma instalação do Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
   
 2. Teste os relatórios e verifique se eles contêm os dados esperados. Revise as informações de fonte de dados para detectar se as informações de conexão de fonte de dados ainda estão especificadas. O servidor de relatório usa o modelo de objeto de relatório ao processar e renderizar relatórios, mas não substitui os constructos [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] com elementos de linguagem de definição do novo relatório. Para obter mais informações sobre como os relatórios existentes são executados em uma nova versão do servidor de relatório, consulte [Atualizar relatórios](../../reporting-services/install-windows/upgrade-reports.md).  
 
-## <a name="bkmk_remove_unused"></a> Remover programas e arquivos que não são usados
+## <a name="remove-unused-programs-and-files"></a><a name="bkmk_remove_unused"></a> Remover programas e arquivos que não são usados
 
 Depois de migrar o servidor de relatório com êxito para uma nova instância, é recomendável executar as etapas descritas a seguir para remover programas e arquivos que não são mais necessários.  
   

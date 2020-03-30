@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593787"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Gerenciador de Configurações do Reporting Services (Modo Nativo).
@@ -29,7 +29,7 @@ Use o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/
 > [!NOTE]
 > A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016. A partir da versão [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não foi desenvolvido para gerenciar servidores de relatório no modo do SharePoint. O modo do SharePoint é gerenciado e configurado por meio de scripts da Administração Central do SharePoint e do PowerShell.  
   
-##  <a name="bkmk_scenarios"></a> Cenários para usar o Gerenciador de Configuração do Reporting Services.  
+##  <a name="scenarios-to-use-reporting-services-configuration-manager"></a><a name="bkmk_scenarios"></a> Cenários para usar o Gerenciador de Configuração do Reporting Services.  
  Você pode usar a ferramenta Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para executar as seguintes tarefas:  
   
 -   Configurar a conta de serviço do Servidor de Relatório. A conta é configurada inicialmente durante a instalação, mas pode ser modificada usando a ferramenta Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se você atualizar a senha ou quiser usar uma conta diferente.  
@@ -48,7 +48,7 @@ Use o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/
   
  A ferramenta Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não o ajuda a gerenciar o conteúdo do servidor de relatório, habilitar recursos adicionais ou conceder acesso ao servidor. A implantação completa exige que você também use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para habilitar recursos adicionais ou modificar valores padrão e o portal da Web para conceder acesso do usuário ao servidor.
 
-##  <a name="bkmk_requirements"></a> Requisitos
+##  <a name="requirements"></a><a name="bkmk_requirements"></a> Requisitos
 
 O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager é específico da versão. O Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalada com esta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode ser usado para configurar uma versão anterior do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se você estiver executando versões mais antigas e mais novas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] lado a lado no mesmo computador, deverá usar o Gerenciador de Configurações do Reporting Services fornecido com cada versão para configurar cada instância.  
 
@@ -64,7 +64,7 @@ Para usar o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../inc
 
 O Gerenciador de Configurações do Reporting Services é instalado automaticamente quando você instala o SQL Server Reporting Services.
 
-##  <a name="bkmk_start_configuration_manager"></a> Para iniciar o Gerenciador de Configuração do Reporting Services
+##  <a name="to-start-the-reporting-services-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a> Para iniciar o Gerenciador de Configuração do Reporting Services
 
 1.  Use a seguinte etapa que for apropriada para sua versão do Microsoft Windows:
 

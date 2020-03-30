@@ -1,5 +1,5 @@
 ---
-title: Como trabalhar com tipos de dados (JDBC) | Microsoft Docs
+title: Trabalhar com tipos de dados (JDBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee1e64794480346b1742b441437db95b8ae41456
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028292"
 ---
 # <a name="working-with-data-types-jdbc"></a>Trabalhando com tipos de dados (JDBC)
@@ -32,7 +32,7 @@ Os tópicos nesta seção descrevem como usar os tipos de dados do driver JDBC p
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-| Tópico                                                                         | Descrição                                                                                                                                                                                                                                                  |
+| Tópico                                                                         | DESCRIÇÃO                                                                                                                                                                                                                                                  |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Exemplo de tipos de dados básicos](../../../connect/jdbc/code-samples/basic-data-types-sample.md)   | Descreve como usar métodos getter de conjunto de resultados para recuperar valores de tipo de dados básicos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], além de como usar métodos de atualização de conjunto de resultados para atualizar esses valores.                                             |
 | [Exemplo de tipo de dados SQLXML](../../../connect/jdbc/code-samples/sqlxml-data-type-sample.md)   | Descreve como armazenar dados XML em um banco de dados relacional, como recuperar dados XML de um banco de dados, e como analisar dados XML com um tipo de dados **SQLXML** Java.                                                                                   |

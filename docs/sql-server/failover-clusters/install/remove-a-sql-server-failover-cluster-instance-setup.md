@@ -15,10 +15,10 @@ ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 97573a3a8a7d08f9eb615443dd7b0d42d6fd1b23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230729"
 ---
 # <a name="remove-a-sql-server-failover-cluster-instance-setup"></a>Remover uma instância de cluster de failover do SQL Server (instalação)

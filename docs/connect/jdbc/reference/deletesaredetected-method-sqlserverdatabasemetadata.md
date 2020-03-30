@@ -16,10 +16,10 @@ ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aef2ebd78b1aed2d03ba56ef3371d7f0dbfade31
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955127"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>Método deletesAreDetected (SQLServerDatabaseMetaData)

@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 1d5d832d41f6bd087c6e9b334ebeac03728f97b1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485281"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>Usar o RevoScaleR para instalar pacotes de R
@@ -31,7 +31,7 @@ Este artigo descreve como usar as funções do [RevoScaleR](../r/ref-r-revoscale
 
 A tabela a seguir descreve as funções usadas para a instalação e o gerenciamento do pacote do R.
 
-| Função | Descrição |
+| Função | DESCRIÇÃO |
 |----------|-------------|
 | [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | Determine o caminho da biblioteca de instâncias no SQL Server remoto. |
 | [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) | Obtém o caminho para um ou mais pacotes no SQL Server remoto. |

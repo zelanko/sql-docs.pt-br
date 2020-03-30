@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651941"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Provisionar Assinaturas e Alertas para aplicativos de serviço SSRS
@@ -30,7 +30,7 @@ ms.locfileid: "62651941"
   
  ![Permissões do SQL Agent para bancos de dados de aplicativo de serviço](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "Permissões do SQL Agent para bancos de dados de aplicativo de serviço")  
   
-||Descrição|  
+||DESCRIÇÃO|  
 |------|-----------------|  
 |**1**|A instância do mecanismo de banco de dados do SQL Server que está hospedando os bancos de dados do aplicativo do serviço Reporting Services.|  
 |**2**|A instância do SQL Server Agent para a instância do mecanismo de banco de dados SQL.|  
@@ -57,7 +57,7 @@ ms.locfileid: "62651941"
   
 5.  Clique no botão **OK**.  
   
-##  <a name="bkmk_download"></a> Para baixar o script Transact-SQL  
+##  <a name="to-download-the-transact-sql-script"></a><a name="bkmk_download"></a> Para baixar o script Transact-SQL  
   
 1.  Na Administração Central do SharePoint, no grupo **Gerenciamento de Aplicativo** , clique em **Gerenciar Aplicativos de Serviço**  
   

@@ -16,10 +16,10 @@ ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2418bd5e62f00e46ddc329c1c7ba987505fb5a7f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982820"
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>Método getImportedKeys (SQLServerDatabaseMetaData)
@@ -60,7 +60,7 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
   
  O conjunto de resultados retornado pelo método getImportedKeys conterá as seguintes informações:  
   
-|Nome|Type|Descrição|  
+|Nome|Type|DESCRIÇÃO|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**Cadeia de caracteres**|O nome do catálogo que contém a tabela de chaves primárias.|  
 |PKTABLE_SCHEM|**Cadeia de caracteres**|O nome do esquema da tabela de chaves primárias.|  

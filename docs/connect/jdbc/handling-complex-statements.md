@@ -11,10 +11,10 @@ ms.assetid: 6b807a45-a8b5-4b1c-8b7b-d8175c710ce0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ebd2aee0990b744df1420e88f8cc79870b350f2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027988"
 ---
 # <a name="handling-complex-statements"></a>Tratando instruções complexas

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190398"
 ---
 # <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>Configurar as camadas do HDFS no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -57,7 +57,7 @@ Damos suporte à conexão com o Azure Data Lake Storage Gen2 e o Amazon S3. Enco
 - [Como montar o ADLS Gen2 para a camada do HDFS em um cluster de Big Data](hdfs-tiering-mount-adlsgen2.md)
 - [Como montar o S3 para a camada do HDFS em um cluster de Big Data](hdfs-tiering-mount-s3.md)
 
-## <a id="issues"></a> Problemas conhecidos e limitações
+## <a name="known-issues-and-limitations"></a><a id="issues"></a> Problemas conhecidos e limitações
 
 A seguinte lista fornece os problemas conhecidos e as limitações atuais ao usar as camadas do HDFS no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]:
 

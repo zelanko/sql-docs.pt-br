@@ -15,10 +15,10 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593386"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interface de usuário do Designer de Consulta relacional (Construtor de Relatórios)
@@ -66,10 +66,10 @@ ms.locfileid: "73593386"
  [Resultados da consulta](#QueryResults)  
  Exibe dados de exemplo do conjunto de resultados da consulta gerada automaticamente.  
   
-###  <a name="DatabaseView"></a> Painel Exibição de Banco de Dados  
+###  <a name="database-view-pane"></a><a name="DatabaseView"></a> Painel Exibição de Banco de Dados  
  O painel Exibição de Banco de Dados exibe os metadados de objetos de banco de dados que você tem permissões para exibir, o que é determinado pela conexão da fonte de dados e credenciais. A exibição hierárquica exibe objetos de banco de dados organizados por esquema de banco de dados. Expanda o nó de cada esquema para exibir tabelas, exibições, procedimentos armazenados e funções com valor de tabela. Expanda uma tabela ou exibição para exibir as colunas.  
   
-###  <a name="SelectedFields"></a> Painel Campos Selecionados  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> Painel Campos Selecionados  
  O painel Campos Selecionados exibe os campos do conjunto de dados do relatório e os grupos e agregações a serem incluídos na consulta.  
   
  As seguintes opções são exibidas:  
@@ -93,7 +93,7 @@ ms.locfileid: "73593386"
   
  A tabela a seguir lista as agregações e fornece descrições resumidas delas.  
   
-|Agregado|Descrição|  
+|Agregado|DESCRIÇÃO|  
 |---------------|-----------------|  
 |Avg|Retorna a média dos valores em um grupo. Implementa a agregação SQL AVG.|  
 |Contagem|Retorna o número de itens de um grupo. Implementa a agregação SQL COUNT.|  
@@ -114,14 +114,14 @@ ms.locfileid: "73593386"
 |Var Distinct|Retorna variações estatísticas exclusivas. Implementa uma combinação da agregação VAR e da palavra-chave DISTINCT.|  
 |VarP Distinct|Retorna variações estatísticas exclusivas. Implementa uma combinação da agregação VARP e da palavra-chave DISTINCT.|  
   
-###  <a name="FunctionParameters"></a> Painel Parâmetros de Função  
+###  <a name="function-parameters-pane"></a><a name="FunctionParameters"></a> Painel Parâmetros de Função  
  O painel Parâmetros de Função exibe os parâmetros de um procedimento armazenado ou função com valor de tabela. As seguintes colunas são exibidas:  
   
 -   **Nome do Parâmetro** Exibe o nome do parâmetro definido pelo procedimento armazenado ou função com valor de tabela.  
   
 -   **Valor** Um valor a ser usado para o parâmetro quando a consulta é executada para recuperar dados a serem exibidos no painel Resultados da Consulta em tempo de design. Esse valor não é usado quando o relatório executado em tempo de execução.  
   
-###  <a name="Relationships"></a> Painel Relações  
+###  <a name="relationships-pane"></a><a name="Relationships"></a> Painel Relações  
  O painel Relações exibe as relações de junção. As relações podem ser detectadas automaticamente a partir de relações de chave estrangeira recuperadas dos metadados de banco do dados. Se preferir, você pode criá-las manualmente.  
   
  As seguintes opções são exibidas:  
@@ -159,7 +159,7 @@ ms.locfileid: "73593386"
   
 -   **Campos de Junção** Lista os pares de campos unidos. Se uma relação tiver várias condições de junção, os pares de campos unidos serão separados por vírgulas (,).  
   
-###  <a name="AppliedFilters"></a> Painel Filtros Aplicados  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> Painel Filtros Aplicados  
  O painel Filtros Aplicados exibe os critérios usados para limitar o número de linhas de dados recuperadas no tempo de execução. Os critérios especificados nesse painel são usados para gerar uma cláusula SQL WHERE. Quando você seleciona a opção de parâmetro, um parâmetro de relatório é criado automaticamente. Os parâmetros de relatório se baseiam em parâmetros de consulta que permitem a um usuário especificar valores para a consulta, para controlar os dados no relatório.  
   
  As seguintes colunas são exibidas:  
@@ -172,7 +172,7 @@ ms.locfileid: "73593386"
   
 -   **Parâmetro** Exibe a opção para adicionar um parâmetro à consulta. Use as propriedades do conjunto de dados para exibir as relações entre o parâmetro de consulta e o parâmetro do relatório.  
   
-###  <a name="QueryResults"></a> Painel Resultados da Consulta  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> Painel Resultados da Consulta  
  O painel Resultados da Consulta exibe os resultados para a consulta automaticamente gerada que é especificada por seleções nos outros painéis. As colunas do conjunto de resultados são os campos que você especifica no painel Campos Selecionados e os dados de linha são limitados pelos filtros que você especifica no painel Filtros Aplicados. Se a consulta incluir agregações, o conjunto de resultados incluirá as novas colunas de agregações. Por exemplo, se a **Cor** da coluna for agregada com a agregação Count, os resultados da consulta incluirão uma nova coluna. Por padrão, essa coluna é denominada **Count_Color**.  
   
  Esses dados representam valores da fonte de dados no momento em que você executa a consulta. Os dados não são salvos na definição de relatório. Os dados reais do relatório são recuperados quando o relatório é processado.  
@@ -182,7 +182,7 @@ ms.locfileid: "73593386"
 ### <a name="graphical-query-designer-toolbar"></a>Barra de ferramentas do designer de consultas gráficas  
  A barra de ferramentas do designer de consulta relacional fornece os seguintes botões para ajudá-lo a especificar ou exibir os resultados de uma consulta.  
   
-|Botão|Descrição|  
+|Botão|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna para o designer de consulta baseado em texto para exibir a consulta gerada automaticamente ou para modificar a consulta.|  
 |**Importaçãoação**|Importa uma consulta existente de um arquivo ou relatório. Há suporte para os tipos de arquivo .sql e .rdl.|  

@@ -11,10 +11,10 @@ ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fed1b515d6e003f00cebbaf3f3a9306572e2ad2b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970566"
 ---
 # <a name="sqlserverresultset-members"></a>Membros de SQLServerResultSet
@@ -27,7 +27,7 @@ ms.locfileid: "67970566"
   
 ## <a name="fields"></a>Campos  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|Usado para especificar um tipo de simultaneidade otimista de leitura/gravação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sem bloqueios de linha.|  
 |[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|Usado para especificar um tipo de simultaneidade otimista de leitura/gravação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sem bloqueios de linha.|  
@@ -40,13 +40,13 @@ ms.locfileid: "67970566"
   
 ## <a name="inherited-fields"></a>Campos herdados  
   
-|Classe herdada de:|Descrição|  
+|Classe herdada de:|DESCRIÇÃO|  
 |---------------------------|-----------------|  
 |java.sql.ResultSet|CLOSE_CURSORS_AT_COMMIT, CONCUR_READ_ONLY, CONCUR_UPDATABLE, FETCH_FORWARD, FETCH_REVERSE, FETCH_UNKNOWN, HOLD_CURSORS_OVER_COMMIT, TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITIVE|  
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[absolute](../../../connect/jdbc/reference/absolute-method-sqlserverresultset.md)|Move o cursor para a linha especificada no objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) em questão.|  
 |[afterLast](../../../connect/jdbc/reference/afterlast-method-sqlserverresultset.md)|Move o cursor para depois da última linha do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  

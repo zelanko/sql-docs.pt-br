@@ -11,10 +11,10 @@ ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3d5a6afaa4580623bade5ac6d7dd5b13a4cbdc6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992783"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>Referência da API do driver JDBC
@@ -25,7 +25,7 @@ O nome da API para o driver SQLSRV nos [!INCLUDE[ssDriverPHP](../../includes/ssd
 ## <a name="in-this-section"></a>Nesta seção  
 O driver SQLSRV contém as seguintes funções:  
   
-|Função|Descrição|  
+|Função|DESCRIÇÃO|  
 |------------|---------------|  
 |[sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md)|Começa uma transação.|  
 |[sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)|Cancela uma instrução; descarta qualquer resultado pendente para a instrução.|  

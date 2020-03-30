@@ -11,10 +11,10 @@ ms.manager: jroth
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.openlocfilehash: 073843550503ff70aa0dbeba81b2f84f1535fecb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247212"
 ---
 # <a name="go-to-line-dialog-box"></a>Caixa de diálogo Ir para a Linha

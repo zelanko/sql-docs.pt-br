@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2019
 ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68255168"
 ---
 # <a name="configure-report-builder-access"></a>Configurar o acesso ao Construtor de Relatórios
@@ -101,7 +101,7 @@ Depois que você criar as atribuições de função, os usuários terão permiss
 
     4. Em Descrição, insira uma descrição para a função de modo que os usuários do portal da Web saibam de que se trata a função.  
 
-    5. Adicione as seguintes tarefas: **Relatórios de consumo**, **Exibir relatórios**, **Exibir modelos**, **Exibir recursos**, **Exibir pastas** e **Gerenciar assinaturas individuais**.  
+    5. Adicione as seguintes tarefas: **Relatórios de consumo**, **Exibir relatórios**, **Exibir modelos**, **Exibir recursos**, **Exibir pastas**e **Gerenciar assinaturas individuais**.  
 
     6. Clique em **OK** para salvar a função.  
 

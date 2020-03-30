@@ -11,10 +11,10 @@ ms.assetid: 546d77e2-723a-42ac-ba3f-fabf2395d376
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0a76052ccf05927ebd598e2baa37fbf0229bf54
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981396"
 ---
 # <a name="getnstring-method-javalangstring-sqlserverresultset"></a>Método getNString (java.lang.String) (SQLServerResultSet)

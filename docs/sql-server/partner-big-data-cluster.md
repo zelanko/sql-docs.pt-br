@@ -10,10 +10,10 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 ms.openlocfilehash: 918b3b6bfcb217ef90ae08a9fb746a4836d51900
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256889"
 ---
 # <a name="sql-server-big-data-clusters-partners"></a>Parceiros de Clusters de Big Data do SQL Server
@@ -22,7 +22,7 @@ Para compatibilidade com a implementação de soluções com Clusters de Big Dat
 
 ## <a name="our-partners"></a>Nossos parceiros
 
-| Partner (parceiro) | Descrição | Links |
+| Partner (parceiro) | DESCRIÇÃO | Links |
 | --- | --- | --- |
 |![dellemc][1] |A Dell EMC vende armazenamento de dados, segurança de informações, virtualização, análise, computação em nuvem e outros produtos e serviços que permitem que as organizações armazenem, gerenciem, protejam e analisem dados.|[Marketplace][dellemc_marketplace]<br>[Site][dellemc_website]<br>[Folha de dados][dellemc_datasheet]<br>[Twitter][dellemc_twitter]<br>[Vídeo][dellemc_youtube]<br>[Blog][dellemc_blog] |
 |![HPE][2] |Desempenho empresarial para o Microsoft SQL Server<br>Nossas soluções de armazenamento fornecem o Microsoft SQL Server sem preocupações. A integração aprimora o gerenciamento de dados de cópia, aprimora a proteção de dados, acelera o DevOps e fornece uma passagem para a nuvem.|[Site][hpe_website]<br>[Folha de dados][hpe_datasheet]<br>[Baixar a avaliação][hpe_download]<br>[Twitter][hpe_twitter]<br>[Vídeo][hpe_youtube]<br>[Blog][hpe_download]|

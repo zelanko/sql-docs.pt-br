@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b8caa58c178f68ebcf773fcef8f18509b85ad24a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74908755"
 ---
 # <a name="python-tutorials-for-sql-server-machine-learning-services"></a>Tutoriais de Python para os Serviços de Machine Learning do SQL Server
@@ -29,7 +29,7 @@ Este artigo descreve os tutoriais e guias de início rápido de Python para os [
 
 ## <a name="python-tutorials"></a>Tutoriais do Python
 
-| Tutorial | Descrição |
+| Tutorial | DESCRIÇÃO |
 |-|-|
 | [Prever aluguel de esqui com regressão linear](python-ski-rental-linear-regression.md) | Use Python e regressão linear para prever o número de locações de esqui. Use notebooks no Azure Data Studio para preparar dados e treinar o modelo e o T-SQL para implantação de modelo. |
 | [Categorizar clientes usando cluster K-means](python-clustering-model.md) | Use Python para desenvolver e implantar um modelo de cluster K-means para categorizar os clientes. Use notebooks no Azure Data Studio para preparar dados e treinar o modelo e o T-SQL para implantação de modelo. |
@@ -40,7 +40,7 @@ Este artigo descreve os tutoriais e guias de início rápido de Python para os [
 
 Se você não estiver familiarizado com os Serviços de Machine Learning do SQL Server, também poderá experimentar os guias de início rápido de Python.
 
-| Guia de Início Rápido | Descrição |
+| Guia de Início Rápido | DESCRIÇÃO |
 |-|-|
 | [Olá, Mundo em Python e no SQL Server](quickstart-python-create-script.md) | Aprenda as noções básicas de como chamar o Python no T-SQL usando [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
 | [Manipular tipos de dados e objetos usando Python no SQL Server](quickstart-python-data-structures.md) | Mostra como o SQL Server usa o pacote Pandas do Python para lidar com estruturas de dados. |

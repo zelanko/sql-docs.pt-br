@@ -11,10 +11,10 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: “”
 ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256991"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Permissões necessárias para SQL Server Data Tools
@@ -35,7 +35,7 @@ Antes de você realizar uma ação em um banco de dados no Visual Studio, faça 
   
 -   [Permissões para projetos SQL CLR (Common Language Runtime do SQL Server)](#SQLCLRPermissions)  
   
-## <a name="DatabaseCreationAndDeploymentPermissions"></a>Permissões para criar ou implantar um banco de dados  
+## <a name="permissions-to-create-or-deploy-a-database"></a><a name="DatabaseCreationAndDeploymentPermissions"></a>Permissões para criar ou implantar um banco de dados  
 Você deve ter as permissões a seguir para criar ou implantar um banco de dados.  
   
 |||  
@@ -51,10 +51,10 @@ Você deve ter as permissões a seguir para criar ou implantar um banco de dados
   
 Para obter mais informações, consulte os Manuais Online do SQL Server.  
   
-## <a name="DatabaseRefactoringPermissions"></a>Permissões para refatorar um banco de dados  
+## <a name="permissions-to-refactor-a-database"></a><a name="DatabaseRefactoringPermissions"></a>Permissões para refatorar um banco de dados  
 A *refatoração de banco de dados* ocorre somente dentro de um projeto de banco de dados. Você deve ter permissões para usar o projeto de banco de dados. Você não precisa de permissões em um banco de dados de destino até implantar suas alterações nele.  
   
-## <a name="DatabaseUnitTestingPermissions"></a>Permissões para realizar testes de unidade em um banco de dados do SQL Server  
+## <a name="permissions-to-perform-unit-testing-on-a-sql-server-database"></a><a name="DatabaseUnitTestingPermissions"></a>Permissões para realizar testes de unidade em um banco de dados do SQL Server  
 Você deve ter as permissões a seguir para realizar testes de unidade em um banco de dados.  
   
 |||  
@@ -66,10 +66,10 @@ Você deve ter as permissões a seguir para realizar testes de unidade em um ban
 |Implantar alterações de banco de dados antes de executar os testes|Você deve usar a conexão de banco de dados do contexto privilegiado. Para obter mais informações, consulte [Como: Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
 |Gerar dados antes de executar os testes|Você deve usar a conexão de banco de dados do contexto privilegiado. Para obter mais informações, consulte [Como: Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
   
-## <a name="DataGenerationPermissions"></a>Permissões para gerar dados  
+## <a name="permissions-to-generate-data"></a><a name="DataGenerationPermissions"></a>Permissões para gerar dados  
 Você deve ter as permissões **INSERT** e **SELECT** nos objetos no banco de dados de destino para gerar os dados de teste usando o Gerador de Dados. Se você limpar os dados antes de gerar dados, também deverá ter as permissões **DELETE** nos objetos no banco de dados de destino. Para redefinir a coluna **IDENTITY** em uma tabela, você deverá possuir a tabela ou ser membro da função db_owner ou db_ddladmin.  
   
-## <a name="SchemaAndDataComparePermissions"></a>Permissões para comparar esquemas e dados  
+## <a name="permissions-to-compare-schemas-and-data"></a><a name="SchemaAndDataComparePermissions"></a>Permissões para comparar esquemas e dados  
 Você deve ter as permissões a seguir para comparar esquemas ou dados.  
   
 |||  
@@ -82,10 +82,10 @@ Você deve ter as permissões a seguir para comparar esquemas ou dados.
   
 Para obter mais informações, consulte os Manuais Online do SQL Server.  
   
-## <a name="Transact-SQLEditorPermissions"></a>Permissões para executar o Editor do Transact\-SQL  
+## <a name="permissions-to-run-the-transact-sql-editor"></a><a name="Transact-SQLEditorPermissions"></a>Permissões para executar o Editor do Transact\-SQL  
 O que você pode fazer dentro do editor do Transact\-SQL é determinado pelo seu contexto de execução para o banco de dados de destino.  
   
-## <a name="SQLCLRPermissions"></a>Permissões para projetos Common Language Runtime do SQL Server  
+## <a name="permissions-for-sql-server-common-language-run-time-projects"></a><a name="SQLCLRPermissions"></a>Permissões para projetos Common Language Runtime do SQL Server  
 A tabela a seguir lista as permissões que você deve ter para implantar ou depurar projetos de CLR:  
   
 |Ações|Permissões necessárias|  

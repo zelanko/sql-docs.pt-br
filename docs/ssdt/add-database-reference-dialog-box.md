@@ -10,10 +10,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: a43b16b3c45a0f98ca22a4d1e0d3e291cf92f95d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256140"
 ---
 # <a name="add-database-reference-dialog-box"></a>Caixa de diálogo Adicionar Referência de Banco de Dados

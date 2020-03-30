@@ -11,10 +11,10 @@ ms.assetid: e4f1e99c-4c7a-4c83-b202-4608538ab50b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 57d93c8d99c775232c0f5ad5c418fe32e57922cd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981599"
 ---
 # <a name="getncharacterstream-method-sqlservercallablestatement"></a>Método getNCharacterStream (SQLServerCallableStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67981599"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[Método getNCharacterStream &#40;int&#41;](../../../connect/jdbc/reference/getncharacterstream-method-int.md)|Recupera o valor do parâmetro designado como um objeto java.io.Reader, considerando o índice do parâmetro.|  
 |[Método getNCharacterStream &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getncharacterstream-method-java-lang-string.md)|Recupera o valor do parâmetro designado como um objeto java.io.Reader, considerando o nome do parâmetro.|  

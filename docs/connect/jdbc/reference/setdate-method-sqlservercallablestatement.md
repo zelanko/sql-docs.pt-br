@@ -16,10 +16,10 @@ ms.assetid: 2a134217-276a-4d0e-8a75-4e1bf300c946
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09696aba368f5dcec6f13fb97bd290dab17e552a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974414"
 ---
 # <a name="setdate-method-sqlservercallablestatement"></a>Método setDate (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67974414"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[setDate (java.lang.String, java.sql.Date)](../../../connect/jdbc/reference/setdate-method-java-lang-string-java-sql-date.md)|Define o parâmetro designado como o valor de data fornecido.|  
 |[setDate (java.lang.String, java.sql.Date, java.util.Calendar)](../../../connect/jdbc/reference/setdate-method-java-lang-string-java-sql-date-java-util-calendar.md)|Define o parâmetro designado como os valores de data e calendário fornecidos.|  

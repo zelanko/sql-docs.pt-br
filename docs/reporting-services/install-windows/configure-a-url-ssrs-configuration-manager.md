@@ -10,10 +10,10 @@ ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 894ba4f1b73cb482ab521e859d0472f7039bfabf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77077062"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar uma URL (Gerenciador de Configurações do SSRS)
@@ -162,7 +162,7 @@ ms.locfileid: "77077062"
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>URLs para várias instâncias do Servidor de Relatório no mesmo computador  
  Se você estiver reservando URLs para várias instâncias do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], deverá seguir as convenções de nomenclatura para que possa evitar conflitos de nomenclatura. Para obter mais informações, veja [Reservas de URL para implantações do Servidor de Relatório com várias instâncias &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).  
   
-##  <a name="URLExamples"></a> Exemplos de configurações de URL  
+##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a> Exemplos de configurações de URL  
  A lista a seguir mostra alguns exemplos de qual pode ser a aparência de uma URL de servidor de relatório:  
   
 -   `https://localhost/reportserver`  

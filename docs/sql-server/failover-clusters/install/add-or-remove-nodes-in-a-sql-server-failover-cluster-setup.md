@@ -18,10 +18,10 @@ ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cba52dccb916e7dc1400d36b17eb3fd884c9faee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230886"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Adicionar ou remover nós em um cluster de failover do SQL Server (instalação)
@@ -43,7 +43,7 @@ ms.locfileid: "75230886"
 > [!IMPORTANT]  
 >  A letra da unidade do sistema operacional para locais de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve ser igual em todos os nós adicionados ao cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-##  <a name="Add"></a> Adicionar nó  
+##  <a name="add-node"></a><a name="Add"></a> Adicionar nó  
   
 #### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster"></a>Para adicionar um nó a um cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "75230886"
   
 15. Se você for instruído a reiniciar o computador, faça-o agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para obter mais informações sobre os arquivos de log da Instalação, veja [Exibir e ler arquivos de log da Instalação do SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-##  <a name="Remove"></a> Remover nó  
+##  <a name="remove-node"></a><a name="Remove"></a> Remover nó  
   
 #### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster"></a>Para remover um nó de um cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   

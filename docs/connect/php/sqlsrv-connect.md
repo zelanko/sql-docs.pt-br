@@ -19,10 +19,10 @@ ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11da2b4eca130eafe93a01315aaa1f6d9919632c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015042"
 ---
 # <a name="sqlsrv_connect"></a>sqlsrv_connect
@@ -44,13 +44,13 @@ A partir da versão 3.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md
   
 A partir da versão 3.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], também é possível especificar um nome de rede virtual para se conectar a um grupo de disponibilidade AlwaysOn. Para obter mais informações sobre o suporte do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] para [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], confira [Suporte para alta disponibilidade, recuperação de desastre](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).  
   
-*$connectionInfo* [OPCIONAL]: uma **matriz** associativa que contém atributos de conexão (por exemplo, **array**("Database" = > "AdventureWorks")). Consulte [Connection Options](../../connect/php/connection-options.md) para obter uma lista das chaves com suporte para a matriz.  
+*$connectionInfo* [OPCIONAL]: uma **matriz** associativa que contém atributos de conexão (por exemplo, **matriz**("Database" => "AdventureWorks")). Consulte [Connection Options](../../connect/php/connection-options.md) para obter uma lista das chaves com suporte para a matriz.  
   
 ## <a name="return-value"></a>Valor retornado  
 Um recurso de conexão PHP. Se uma conexão não puder ser criada e aberta com êxito, **false** será retornado.  
   
 ## <a name="remarks"></a>Comentários  
-Se os valores das chaves *UID* e *PWD* não forem especificadas no parâmetro *$connectionInfo* opcional, a conexão será tentada usando a Autenticação do Windows. Para obter mais informações sobre como se conectar ao servidor, confira [Como conectar-se usando a Autenticação do Windows](../../connect/php/how-to-connect-using-windows-authentication.md) e [Como conectar-se usando a Autenticação do SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md).  
+Se os valores das chaves *UID* e *PWD* não forem especificadas no parâmetro *$connectionInfo* opcional, a conexão será tentada usando a Autenticação do Windows. Para obter mais informações sobre como se conectar ao servidor, consulte [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md) e [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md).  
   
 ## <a name="example"></a>Exemplo  
 O exemplo a seguir cria e abre uma conexão usando a Autenticação do Windows. O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://www.codeplex.com/SqlServerSamples) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  

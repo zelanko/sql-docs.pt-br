@@ -32,10 +32,10 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d8df41eb7c0a0463648898c08091dd8f8c01f29
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581736"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Alterar legendas de mapa, escala de cores e regras associadas (Construtor de Relatórios e SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "65581736"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
-##  <a name="Viewport"></a> Para alterar a posição de uma legenda em relação ao visor  
+##  <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a><a name="Viewport"></a> Para alterar a posição de uma legenda em relação ao visor  
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>Para alterar a posição de uma legenda em relação ao visor  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65581736"
     > [!NOTE]  
     >  Na visualização, as legendas de mapa e a escala de cores aparecem somente quando há resultados de regras relacionadas a essa legenda. Se não houver nenhum item para exibição, a legenda não aparecerá no relatório renderizado.  
   
-##  <a name="MapLegend"></a> Para alterar o layout de uma legenda de mapa  
+##  <a name="to-change-the-layout-of-a-map-legend"></a><a name="MapLegend"></a> Para alterar o layout de uma legenda de mapa  
   
 #### <a name="to-change-the-layout-of-a-map-legend"></a>Para alterar o layout de uma legenda de mapa  
   
@@ -76,19 +76,19 @@ ms.locfileid: "65581736"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="MapLegendTitle"></a> Para mostrar ou ocultar um título de legenda de mapa  
+##  <a name="to-show-or-hide-a-map-legend-title"></a><a name="MapLegendTitle"></a> Para mostrar ou ocultar um título de legenda de mapa  
   
 #### <a name="to-show-or-hide-a-map-legend-title"></a>Para mostrar ou ocultar um título de legenda de mapa  
   
 -   Clique com o botão direito do mouse na legenda do mapa na superfície de design e clique em **Mostrar Título da Legenda**.  
   
-##  <a name="ColorScaleTitle"></a> Para mostrar ou ocultar um título de escala de cores  
+##  <a name="to-show-or-hide-a-color-scale-title"></a><a name="ColorScaleTitle"></a> Para mostrar ou ocultar um título de escala de cores  
   
 #### <a name="to-show-or-hide-a-color-scale-title"></a>Para mostrar ou ocultar um título de escala de cores  
   
 -   Clique com o botão direito do mouse na escala de cores na superfície de design e clique em **Mostrar Título da Escala de Cores**.  
   
-##  <a name="MoveItems"></a> Para remover itens da primeira legenda  
+##  <a name="to-move-items-out-of-the-first-legend"></a><a name="MoveItems"></a> Para remover itens da primeira legenda  
  Crie quantas legendas adicionais forem necessárias e atualize as regras de cada camada do mapa, especificando em qual legenda devem ser exibidos os resultados de regras.  
   
 #### <a name="to-create-a-new-legend"></a>Para criar uma nova legenda  
@@ -109,7 +109,7 @@ ms.locfileid: "65581736"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TemplateStyle"></a> Para variar cores do elemento do mapa com base em um estilo de modelo  
+##  <a name="to-vary-map-element-colors-based-on-a-template-style"></a><a name="TemplateStyle"></a> Para variar cores do elemento do mapa com base em um estilo de modelo  
   
 #### <a name="to-vary-map-element-colors-based-on-a-template-style"></a>Para variar cores do elemento do mapa com base em um estilo de modelo  
   
@@ -123,7 +123,7 @@ ms.locfileid: "65581736"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorPalette"></a> Para variar as cores do elemento do mapa com base em uma paleta de cores  
+##  <a name="to-vary-map-element-colors-based-on-color-palette"></a><a name="ColorPalette"></a> Para variar as cores do elemento do mapa com base em uma paleta de cores  
   
 #### <a name="to-vary-map-element-colors-based-on-color-palette"></a>Para variar as cores do elemento do mapa com base em uma paleta de cores  
   
@@ -141,7 +141,7 @@ ms.locfileid: "65581736"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorRanges"></a> Para variar as cores do elemento do mapa com base em intervalos de cores  
+##  <a name="to-vary-map-element-colors-based-on-color-ranges"></a><a name="ColorRanges"></a> Para variar as cores do elemento do mapa com base em intervalos de cores  
   
 #### <a name="to-vary-map-element-colors-based-on-color-ranges"></a>Para variar as cores do elemento do mapa com base em intervalos de cores  
   
@@ -163,7 +163,7 @@ ms.locfileid: "65581736"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="CustomColors"></a> Para variar as cores do elemento do mapa com base em cores personalizadas  
+##  <a name="to-vary-map-element-colors-based-on-custom-colors"></a><a name="CustomColors"></a> Para variar as cores do elemento do mapa com base em cores personalizadas  
   
 #### <a name="to-vary-map-element-colors-based-on-custom-colors"></a>Para variar as cores do elemento do mapa com base em cores personalizadas  
   
@@ -181,7 +181,7 @@ ms.locfileid: "65581736"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="DistributionOptions"></a> Para definir as opções de distribuição de uma legenda  
+##  <a name="to-set-distribution-options-for-a-legend"></a><a name="DistributionOptions"></a> Para definir as opções de distribuição de uma legenda  
   
 #### <a name="to-set-distribution-options-for-a-legend"></a>Para definir as opções de distribuição de uma legenda  
   
@@ -213,7 +213,7 @@ ms.locfileid: "65581736"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="RuleLegend"></a> Para alterar o conteúdo de uma legenda de regras  
+##  <a name="to-change-the-contents-of-a-rule-legend"></a><a name="RuleLegend"></a> Para alterar o conteúdo de uma legenda de regras  
   
 #### <a name="to-change-the-contents-of-a-color-size-width-or-marker-type-legend"></a>Para alterar o conteúdo da legenda de cor, tamanho, largura ou tipo de marcador  
   
@@ -234,7 +234,7 @@ ms.locfileid: "65581736"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorScale"></a> Para alterar o conteúdo da escala de cores  
+##  <a name="to-change-the-contents-of-the-color-scale"></a><a name="ColorScale"></a> Para alterar o conteúdo da escala de cores  
   
 #### <a name="to-change-the-contents-of-the-color-scale-or-a-color-legend"></a>Para alterar o conteúdo da escala de cores ou de uma legenda de cor  
   
@@ -255,7 +255,7 @@ ms.locfileid: "65581736"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="HideItems"></a> Para remover todos os itens de uma legenda  
+##  <a name="to-remove-all-items-from-a-legend"></a><a name="HideItems"></a> Para remover todos os itens de uma legenda  
   
 #### <a name="to-hide-items-based-on-a-rule"></a>Para ocultar itens com base em uma regra  
   
@@ -267,7 +267,7 @@ ms.locfileid: "65581736"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ChangeFormatItems"></a> Para alterar o formato de conteúdo em uma legenda  
+##  <a name="to-change-the-format-of-content-in-a-legend"></a><a name="ChangeFormatItems"></a> Para alterar o formato de conteúdo em uma legenda  
  Defina as opções de legenda para a regra associada à legenda de mapa.  
   
 #### <a name="to-change-the-format-of-content-in-a-legend"></a>Para alterar o formato de conteúdo em uma legenda  
@@ -286,7 +286,7 @@ ms.locfileid: "65581736"
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Solucionar problemas de relatórios: Mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Solução de problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

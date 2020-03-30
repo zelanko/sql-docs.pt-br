@@ -9,13 +9,13 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041428"
 ---
-# <a name="tutorial-map-report-report-builder"></a>Tutorial: Relatório de Mapa (Construtor de Relatórios)
+# <a name="tutorial-map-report-report-builder"></a>Tutorial: Relatório de mapa (construtor de relatórios)
 Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , você aprenderá sobre os recursos de mapa que podem ser usados para exibir dados em uma tela de fundo geográfica de um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
   
 Os mapas se baseiam em dados espaciais que geralmente consistem em pontos, linhas e polígonos. Por exemplo, um polígono pode representar a estrutura de tópicos de um município, uma linha pode representar uma estrada e um ponto pode representar o local de uma cidade. Cada tipo de dados espaciais é exibido em uma camada do mapa separada como um conjunto de elementos de mapa.  
@@ -27,7 +27,7 @@ Para variar a aparência de elementos de mapas, especifique um campo com valores
 Neste tutorial, você cria um relatório de mapa que exibe a localização de lojas em condados estatais de Nova York.  
    
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, confira o primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 30 minutos.  
   
@@ -36,7 +36,7 @@ Para este tutorial, o servidor de relatório deve ser configurado para dar supor
 
 Para obter informações sobre outros requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Map"></a>1. Criar um mapa com uma camada de polígono usando o Assistente de Mapas  
+## <a name="1-create-a-map-with-a-polygon-layer-from-the-map-wizard"></a><a name="Map"></a>1. Criar um mapa com uma camada de polígono usando o Assistente de Mapas  
 Nesta seção, você adiciona um mapa ao relatório na galeria de mapas. O mapa tem uma camada que exibe os municípios do estado de Nova York. A forma de cada município é um polígono com base em dados espaciais inseridos no mapa a partir da galeria de mapas.  
   
 ### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>Para adicionar um mapa com o assistente de mapa em um novo relatório  
@@ -108,7 +108,7 @@ O relatório renderizado exibe o título do mapa, o mapa e a escala de distânci
   
 A legenda de mapa e a escala de cores ainda não são exibidos porque não há dados analíticos associados a cada município. Você adicionará dados analíticos posteriormente neste tutorial.  
   
-## <a name="PointLayer"></a>2. Adicionar uma camada de ponto de mapa para exibir locais de loja  
+## <a name="2-add-a-map-point-layer-to-display-store-locations"></a><a name="PointLayer"></a>2. Adicionar uma camada de ponto de mapa para exibir locais de loja  
 Nesta seção, você usa o assistente de camadas do mapa para adicionar uma camada de pontos que exibe a localização das lojas.  
   
 > [!NOTE]  
@@ -171,10 +171,10 @@ Nesta seção, você usa o assistente de camadas do mapa para adicionar uma cama
     O conjunto de resultados contém sete colunas que representam um conjunto de lojas no estado de Nova York que vendem bens de consumo. Aqui está uma lista, com explicações para aquelas que podem não ser óbvias: 
     *   **StoreKey**: um identificador de repositório.  
     *   **StoreName**.
-    *   **SellingArea**: a área disponível para exibição do produto, que varia de 455 pés quadrados a 1125 pés quadrados.
+    *   **SellingArea**: a área disponível para exibição do produto, que varia de 455 pés quadrados a 1.125 pés quadrados.
     *   **City**.
     *   **County**.
-    *   **Vendas**: total de vendas. 
+    *   **Sales**: Total de vendas. 
     *   **SpatialLocation**: local em longitude e latitude. 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
@@ -227,7 +227,7 @@ Nesta seção, você usa o assistente de camadas do mapa para adicionar uma cama
 
 
   
-## <a name="LineLayer"></a>3. Adicionar uma camada de linha de mapa para exibir uma rota  
+## <a name="3-add-a-map-line-layer-to-display-a-route"></a><a name="LineLayer"></a>3. Adicionar uma camada de linha de mapa para exibir uma rota  
 Use o assistente de camada do mapa para adicionar uma camada do mapa que exibe uma rota entre duas lojas. Neste tutorial, o caminho é criado de três locais de loja. Em um aplicativo comercial, o caminho pode ser a melhor rota entre lojas.  
   
 ### <a name="to-add-a-line-layer-to-map"></a>Para adicionar uma camada de linha ao mapa  
@@ -284,7 +284,7 @@ Use o assistente de camada do mapa para adicionar uma camada do mapa que exibe u
 
       Este é o percentual de zoom. Em 125%, você deverá ver o estado inteiro.
   
-## <a name="TileLayer"></a>4. Adicionar um plano de fundo lado a lado do Bing Maps  
+## <a name="4-add-a-bing-maps-tile-background"></a><a name="TileLayer"></a>4. Adicionar um plano de fundo lado a lado do Bing Maps  
 Nesta seção, você adiciona uma camada do mapa que exibe uma tela de fundo do bloco do Bing Mapas.  
   
 1.  Alterne para o modo Design.  
@@ -306,7 +306,7 @@ Nesta seção, você adiciona uma camada do mapa que exibe uma tela de fundo do 
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Transparent"></a>5. Tornar uma camada transparente  
+## <a name="5-make-a-layer-transparent"></a><a name="Transparent"></a>5. Tornar uma camada transparente  
 Nesta seção, para permitir que os itens em uma camada sejam exibidos por meio de outra camada, você ajusta a ordem e a transparência das camadas para o efeito desejado. Você começa com a primeira camada criada, PolygonLayer1. 
   
 1.  Clique duas vezes no mapa para exibir o painel **Camada do Mapa** .  
@@ -321,12 +321,12 @@ Nesta seção, para permitir que os itens em uma camada sejam exibidos por meio 
 
     ![report-builder-map-transparency](../reporting-services/media/report-builder-map-transparency.png)
   
-## <a name="Vary"></a>6. Variar as cores de municípios com base em vendas  
+## <a name="6-vary-county-color-based-on-sales"></a><a name="Vary"></a>6. Variar as cores de municípios com base em vendas  
 Cada município na camada do polígono tem uma cor diferente porque o processador de relatório atribui um valor de cor automaticamente da paleta de cores com base no tema que você escolheu na última página do assistente de mapa.  
   
 Nesta seção, você especifica uma regra de cor para associar cores específicas a um intervalo de vendas de lojas de cada condado. As cores vermelho-amarelo-verde indicam vendas altas-médias-baixas relativas. Formate a escala de cores para mostrar a moeda. Exiba os intervalos de vendas anuais em uma nova legenda. Para municípios que não contêm lojas, não use nenhuma cor para mostrar que não há dados associados.  
   
-### <a name="Relationship"></a>6a. Criar um relacionamento entre dados espaciais e analíticos  
+### <a name="6a-build-a-relationship-between-spatial-and-analytical-data"></a><a name="Relationship"></a>6a. Criar um relacionamento entre dados espaciais e analíticos  
 Para variar as formas do condado por cor, com base em dados analíticos, primeiro você precisa associar os dados analíticos aos dados espaciais. Neste tutorial, você usará o nome do município para correspondência. 
   
 1.  Alterne para o modo Design.  
@@ -355,7 +355,7 @@ Ao especificar um campo de correspondência com base na fonte de dados espaciais
   
 Cada município que contém uma loja tem uma cor baseada na paleta de cores para o estilo escolhido no assistente. Os outros condados são cinza.  
   
-### <a name="ColorRules"></a>6b. Especificar as regras de cores para polígonos  
+### <a name="6b-specify-color-rules-for-polygons"></a><a name="ColorRules"></a>6b. Especificar as regras de cores para polígonos  
 Para criar uma regra que varia a cor de cada município baseada em vendas da loja, você deve especificar os valores de intervalo, o número de divisões dentro daquele intervalo que você deseja exibir, e as cores a serem usadas.  
   
 #### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>Para especificar regras de cores para todos os polígonos com dados associados  
@@ -398,7 +398,7 @@ Para criar uma regra que varia a cor de cada município baseada em vendas da loj
   
     A escala de cores exibe quatro cores: vermelho, laranja, amarelo e verde. Cada cor representa um intervalo de vendas que é calculado automaticamente com base nas vendas por município.  
   
-### <a name="ColorScale"></a>6c. Formatar os dados na escala de cores como moeda  
+### <a name="6c-format-the-data-in-the-color-scale-as-currency"></a><a name="ColorScale"></a>6c. Formatar os dados na escala de cores como moeda  
 Por padrão, os dados têm um formato geral. Nesta seção, você aplica formatos personalizados.  
   
 1. Alterne para o modo Design.  
@@ -409,7 +409,7 @@ Por padrão, os dados têm um formato geral. Nesta seção, você aplica formato
   
     A escala de cores exibe as vendas anuais no formato de moeda para cada intervalo.  
   
-### <a name="NewLegend"></a>6d. Adicionar um título à legenda   
+### <a name="6d-add-a-legend-title"></a><a name="NewLegend"></a>6d. Adicionar um título à legenda   
   
 1.  Com a escala de cores ainda selecionada, no painel Propriedades, você vê as propriedades de **MapColorScale**. 
   
@@ -423,7 +423,7 @@ Por padrão, os dados têm um formato geral. Nesta seção, você aplica formato
   
 Os municípios que têm lojas e vendas associadas são exibidos de acordo com as regras de cores. Municípios que não têm nenhuma venda não têm cores.  
   
-### <a name="NoData"></a>6f. Alterar a cor dos municípios para os quais não há dados  
+### <a name="6f-change-color-for-counties-with-no-data"></a><a name="NoData"></a>6f. Alterar a cor dos municípios para os quais não há dados  
 Você pode definir as opções de exibição padrão para todos os elementos de mapas em uma camada. As regras de cores têm precedência sobre essas opções de exibição.  
   
 #### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>Para definir as propriedades de exibição para todos os elementos em uma camada  
@@ -448,7 +448,7 @@ Você pode definir as opções de exibição padrão para todos os elementos de 
   
 Condados sem dados associados são exibidos em azul acinzentado. Somente os condados com dados analíticos associados têm as cores **Vermelho** a **Verde** nas regras de cores especificadas.  
   
-## <a name="CustomPoint"></a>7. Adicionar um ponto personalizado  
+## <a name="7-add-a-custom-point"></a><a name="CustomPoint"></a>7. Adicionar um ponto personalizado  
 Para representar uma nova loja que ainda não foi construída, nesta seção, você especifica um ponto com o tipo de marcador **Estrela** .  
   
 1.  Alterne para o modo Design.  
@@ -491,7 +491,7 @@ O rótulo aparece acima do local da loja.
 
 ![report-builder-map-custom-point-new-store](../reporting-services/media/report-builder-map-custom-point-new-store.png)
   
-## <a name="CenterView"></a>8. Centralizar e redimensionar o mapa   
+## <a name="8-center-and-resize-the-map"></a><a name="CenterView"></a>8. Centralizar e redimensionar o mapa   
 Nesta seção, você aprende a alterar o centro do mapa e outra maneira de alterar o nível de zoom.  
  
 1.  Alterne para o modo Design.  
@@ -512,7 +512,7 @@ Nesta seção, você aprende a alterar o centro do mapa e outra maneira de alter
   
 No modo Design, o mapa na superfície de exibição e a exibição se baseiam em dados de exemplo. No relatório renderizado, a exibição de mapa é centralizada na exibição especificada.  
   
-## <a name="Title"></a>9. Adicionar um título de relatório  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9. Adicionar um título de relatório  
   
 1.  Alterne para o modo Design.
   
@@ -522,7 +522,7 @@ No modo Design, o mapa na superfície de exibição e a exibição se baseiam em
   
 Esse título aparecerá na parte superior do relatório. Os itens na parte superior do corpo do relatório quando não há cabeçalho de página definido são os equivalentes de um cabeçalho de relatório.  
   
-## <a name="Save"></a>10. Salvar o relatório  
+## <a name="10-save-the-report"></a><a name="Save"></a>10. Salvar o relatório  
   
 1.  No modo de exibição de Design ou Visualização, no menu **Arquivo** > **Salvar Como**.
  

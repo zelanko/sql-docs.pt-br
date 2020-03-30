@@ -9,10 +9,10 @@ ms.assetid: 24163866-f37a-4c38-982e-c3d79bf64d4c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3fa8d62f80662c9d99ba0f62a5b7d114b5146fb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082140"
 ---
 # <a name="odbc-connection-type-ssrs"></a>Tipo de conexão ODBC (SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "77082140"
   
  Use as informações deste tópico para criar uma fonte de dados. Para obter instruções passo a passo, consulte [Adicionar e verificar uma conexão de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a> Cadeia de Conexão  
+##  <a name="connection-string"></a><a name="Connection"></a> Cadeia de Conexão  
  A cadeia de conexão da extensão de processamento de dados ODBC depende do driver ODBC desejado. Uma cadeia de conexão típica contém pares de nome/valor aos quais o driver dá suporte. Por exemplo, a cadeia de conexão a seguir especifica o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e do banco de dados AdventureWorks:  
   
 ```  
@@ -28,7 +28,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
 ```  
   
   
-##  <a name="Credentials"></a> Credenciais  
+##  <a name="credentials"></a><a name="Credentials"></a> Credenciais  
  As credenciais são necessárias para executar consultas, visualizar o relatório localmente e visualizá-lo no servidor de relatório.  
   
  Após a publicação do relatório, talvez seja necessário alterar as credenciais da fonte de dados para que, quando o relatório for executado no servidor de relatório, as permissões recuperadas sejam válidas.  
@@ -41,7 +41,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
  Para obter mais informações, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar informações de credenciais e conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
-##  <a name="Remarks"></a> Comentários  
+##  <a name="remarks"></a><a name="Remarks"></a> Comentários  
  ODBC é uma antiga tecnologia de acesso a dados que antecedeu o OLEDB. A ODBC só dá suporte a fontes de dados relacionais. Os provedores de dados ODBC são chamados de *drivers*. Os drivers ODBC são fornecidos pela Microsoft e por fornecedores terceiros. Por exemplo, o Microsoft Office instala drivers ODBC que se conectam a formatos de arquivo do Office.  
   
  Para compilar uma cadeia de conexão ODBC, você deve ter drivers ODBC instalados e compilar um DSN de máquina ou sistema. Para recuperar os dados desejados com êxito, você deve fornecer uma sintaxe de consulta compatível com o driver. O suporte a parâmetro varia de acordo com o driver. Para obter mais informações, consulte os tópicos específicos ao driver selecionado, por exemplo, [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md).  
@@ -50,7 +50,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
  Para saber mais sobre os provedores de dados específicos do ODBC, confira [Fontes de dados compatíveis com o Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).
   
   
-##  <a name="HowTo"></a> Tópicos de instruções  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Tópicos de instruções  
  Esta seção contém instruções passo a passo para trabalhar com conexões de dados, fontes de dados e conjuntos de dados.  
   
  [Adicionar e verificar uma conexão de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -60,7 +60,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
  [Adicionar um filtro a um conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> Seções relacionadas  
+##  <a name="related-sections"></a><a name="Related"></a> Seções relacionadas  
  Estas seções da documentação fornecem informações conceituais detalhadas sobre dados de relatório, bem como informações de procedimentos sobre como definir, personalizar e usar partes de um relatório relacionadas aos dados.  
   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

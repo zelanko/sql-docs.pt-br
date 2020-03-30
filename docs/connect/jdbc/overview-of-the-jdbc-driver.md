@@ -11,10 +11,10 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 10a2411f26315a7c0cf50e9eca4daec45567fab4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73049824"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Visão geral do JDBC Driver
@@ -33,7 +33,7 @@ As versões 4.x do JDBC Driver são antigas e obsoletas. O suporte para as vers�
 
 Os tópicos nesta seção apresentam uma visão geral do JDBC Driver, inclusive os requisitos do sistema necessários para usá-lo, como ele pode ser usado e onde você pode obter mais informações.  
 
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Baixar o Microsoft JDBC Driver para SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)|Links para download do Microsoft JDBC Driver para SQL Server|  
 |[Notas sobre a versão do JDBC Driver](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)|Descreve os recursos que foram acrescentados à versão atual do Microsoft JDBC Driver.|  

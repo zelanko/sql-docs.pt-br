@@ -11,10 +11,10 @@ ms.assetid: 9383e14d-c83e-43c5-980c-50a3e0bedc31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 264de7ac150aca7494a380fbbd4f5b490607c5c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974646"
 ---
 # <a name="setdatetimeoffset-method-sqlservercallablestatement"></a>Método setDateTimeOffset (SQLServerCallableStatement)

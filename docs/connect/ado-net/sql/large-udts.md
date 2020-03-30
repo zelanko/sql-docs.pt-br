@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: e572b8fcf1550562c7a9f1841eec1c311f18c3f8
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896702"
 ---
 # <a name="large-udts"></a>UDTs grandes
@@ -73,7 +73,7 @@ Observe que nenhuma das conversões são feitas para a versão atual do ADO.NET.
 ## <a name="specifying-sqlparameters"></a>Especificar SqlParameters  
 As propriedades <xref:Microsoft.Data.SqlClient.SqlParameter> a seguir foram estendidas para funcionar com UDTs grandes.  
   
-|Propriedade SqlParameter|Descrição|  
+|Propriedade SqlParameter|DESCRIÇÃO|  
 |---------------------------|-----------------|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A>|Obtém ou define um objeto que representa o valor do parâmetro. O padrão é nulo. A propriedade pode ser `SqlBinary`, `Byte[]` ou um objeto gerenciado.|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.SqlValue%2A>|Obtém ou define um objeto que representa o valor do parâmetro. O padrão é nulo. A propriedade pode ser `SqlBinary`, `Byte[]` ou um objeto gerenciado.|  

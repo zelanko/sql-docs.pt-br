@@ -1,5 +1,5 @@
 ---
-title: 'Como fazer: Recuperar parâmetros de saída usando o driver SQLSRV | Microsoft Docs'
+title: Como recuperar parâmetros de saída usando o driver SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db1216f513f353a6c703805c7aabe7b8dd468115
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993403"
 ---
-# <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Como fazer: Recuperar parâmetros de saída usando o driver SQLSRV
+# <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Como recuperar parâmetros de saída usando o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Este tópico demonstra como chamar um procedimento armazenado no qual um parâmetro foi definido como parâmetro de saída. Ao recuperar um parâmetro de saída ou de entrada/saída, todos os resultados retornados pelo procedimento armazenado devem ser consumidos antes que o valor do parâmetro retornado esteja acessível.  
@@ -32,7 +32,7 @@ Pode ocorrer truncamento de dados quando tipos de fluxo como SQLSRV_SQLTYPE_VARC
 O exemplo a seguir chama um procedimento armazenado que retorna as vendas acumuladas no ano por um funcionário especificado. A variável PHP *$lastName* é um parâmetro de entrada e *$salesYTD* é um parâmetro de saída.  
   
 > [!NOTE]  
-> Inicializar *$salesYTD* como 0.0 define o PHPTYPE retornado como **float**. Para garantir a integridade do tipo de dados, os parâmetros de saída devem ser inicializados antes de chamar o procedimento armazenado, ou o PHPTYPE desejado deve ser especificado. Para obter informações sobre como especificar o PHPTYPE, confira [Como especificar tipos de dados do PHP](../../connect/php/how-to-specify-php-data-types.md).  
+> Inicializar *$salesYTD* como 0.0 define o PHPTYPE retornado como **float**. Para garantir a integridade do tipo de dados, os parâmetros de saída devem ser inicializados antes de chamar o procedimento armazenado, ou o PHPTYPE desejado deve ser especificado. Para obter informações sobre como especificar o PHPTYPE, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 Como apenas um resultado é retornado pelo procedimento armazenado, *$salesYTD* contém o valor retornado do parâmetro de saída imediatamente após o procedimento armazenado ser executado.  
   
@@ -150,9 +150,9 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>Consulte Também  
-[Como: Especificar a direção do parâmetro usando o driver SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+[Como especificar a direção do parâmetro usando o driver SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
-[Como: Recuperar parâmetros de entrada e de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
+[Como recuperar parâmetros de entrada e de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
 
 [Recuperando dados](../../connect/php/retrieving-data.md)  
   

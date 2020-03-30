@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
 ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285860"
 ---
 # <a name="programming-guidelines"></a>Diretrizes de programação
@@ -79,7 +79,7 @@ Para o ODBC Driver 17, há suporte para dados SQLCHAR em um dos seguintes conjun
 >
 > Para saber mais, confira [Diferenças funcionais do glibc](https://wiki.musl-libc.org/functional-differences-from-glibc.html)
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |-|-|
 |UTF-8|Unicode|
 |CP437|MS-DOS Latim EUA|
@@ -122,13 +122,13 @@ Há algumas diferenças de conversão de codificação entre o Windows e várias
 
 No ODBC Driver 13 e 13.1, quando caracteres multibyte UTF-8 ou UTF-16 substitutos são divididos em buffers SQLPutData, isso resulta em dados corrompidos. Use buffers para transmitir SQLPutData que não terminem em codificações parciais de caracteres. Essa limitação foi removida com o ODBC Driver 17.
 
-## <a name="bkmk-openssl"></a>OpenSSL
+## <a name="openssl"></a><a name="bkmk-openssl"></a>OpenSSL
 Da versão 17.4 em diante, o driver carrega o OpenSSL dinamicamente, o que permite que ele seja executado em sistemas com as versões 1.0 ou 1.1 sem precisar de arquivos de driver separados. Quando várias versões do OpenSSL estiverem presentes, o driver tentará carregar a mais recente. O driver é compatível com o OpenSSL 1.0.x e 1.1.x no momento
 
 > [!NOTE]  
 > Poderá ocorrer um possível conflito se o aplicativo que usa o driver (ou um de seus componentes) estiver vinculado ou carregar dinamicamente uma versão diferente do OpenSSL. Se várias versões do OpenSSL estiverem presentes no sistema e o aplicativo o usar, tenha cuidado extra para garantir que a versão carregada pelo aplicativo e o driver não sejam incompatíveis, pois os erros podem corromper a memória e, portanto, não serão necessariamente manifestados de maneiras óbvias ou consistentes.
 
-## <a name="bkmk-alpine"></a>Alpine Linux
+## <a name="alpine-linux"></a><a name="bkmk-alpine"></a>Alpine Linux
 No momento em que este artigo foi escrito, o tamanho da pilha padrão em MUSL é de 128 mil, o suficiente para a funcionalidade básica do driver ODBC. No entanto, de acordo com a função do aplicativo, não é difícil exceder esse limite, especialmente ao chamar o driver de vários threads. É recomendável que um aplicativo ODBC no Alpine Linux seja compilado com `-Wl,-z,stack-size=<VALUE IN BYTES>` para aumentar o tamanho da pilha. Para referência, o tamanho de pilha padrão na maioria dos sistemas GLIBC é de 2 MB.
 
 ## <a name="additional-notes"></a>Observações adicionais  

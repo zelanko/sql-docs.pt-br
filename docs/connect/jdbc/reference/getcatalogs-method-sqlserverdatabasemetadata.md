@@ -16,10 +16,10 @@ ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 786f55e436b9582eaed875f8c7cd265b1d3e2cc5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953451"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>Método getCatalogs (SQLServerDatabaseMetaData)
@@ -48,7 +48,7 @@ public java.sql.ResultSet getCatalogs()
   
  O conjunto de resultados retornado pelo método getCatalogs conterá as seguintes informações:  
   
-|Nome|Type|Descrição|  
+|Nome|Type|DESCRIÇÃO|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**Cadeia de caracteres**|O nome do catálogo, inclusive bancos de dados do sistema no [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   

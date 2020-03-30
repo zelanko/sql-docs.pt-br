@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c758a55b39eeecde4a3a713bc13462f01aa77a32
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015183"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>SPNs (Nomes da Entidade de Serviço) em conexões de cliente (OLE DB)
@@ -28,7 +28,7 @@ ms.locfileid: "68015183"
 ## <a name="provider-initialization-string-keywords"></a>Palavras-chave da cadeia de caracteres de inicialização do provedor  
  As palavras-chave da cadeia de caracteres de inicialização de provedor a seguir dão suporte a SPNs em aplicativos OLE DB. Na tabela a seguir, os valores na coluna de palavra-chave são usados para a cadeia de caracteres do provedor de IDBInitialize::Initialize. Os valores na coluna de descrição são usados em cadeias de inicialização na conexão usando o ADO ou IDataInitialize::GetDataSource.  
   
-|Palavra-chave|Descrição|Valor|  
+|Palavra-chave|DESCRIÇÃO|Valor|  
 |-------------|-----------------|-----------|  
 |ServerSPN|SPN do servidor|O SPN do servidor. O valor padrão é uma cadeia de caracteres vazia, o que faz com que o Driver do OLE DB para SQL Server use o SPN padrão gerado pelo provedor.|  
 |FailoverPartnerSPN|SPN do parceiro de failover:|O SPN do parceiro de failover. O valor padrão é uma cadeia de caracteres vazia, o que faz com que o Driver do OLE DB para SQL Server use o SPN padrão gerado pelo provedor.|  
@@ -52,14 +52,14 @@ ms.locfileid: "68015183"
 ## <a name="ole-db-api-support-for-spns"></a>Suporte de API do OLE DB para SPNs  
  A tabela a seguir descreve o as funções do membro OLE DB que dá suporte a SPNs em conexões do cliente:  
   
-|Função de membro|Descrição|  
+|Função de membro|DESCRIÇÃO|  
 |---------------------|-----------------|  
 |IDataInitialize::GetDataSource|*pwszInitializationString* pode conter as novas palavras-chave **ServerSPN** e **FailoverPartnerSPN**.|  
 |IDataInitialize::GetInitializationString|Se SSPROP_INIT_SERVERSPN e SSPROP_INIT_FAILOVERPARTNERSPN tiverem valores não padrão, eles serão incluídos na cadeia de caracteres de inicialização por meio dos valores de palavra-chave *ppwszInitString* para **ServerSPN** e **FailoverPartnerSPN**. Caso contrário, essas palavras-chave não serão incluídas na cadeia de inicialização.|  
 |IDBInitialize::Initialize|Se o aviso for habilitado pela definição de DBPROP_INIT_PROMPT nas propriedades de inicialização da fonte de dados, a caixa de diálogo Logon no OLE DB será exibida. Isto permite que os SPNs sejam inseridos no servidor principal e no seu parceiro de failover.<br /><br /> Se a cadeia de caracteres do provedor em DPPROP_INIT_PROVIDERSTRING estiver definida, ela reconhecerá as novas palavras-chave **ServerSPN** e **FailoverPartnerSPN** e usará seus valores, caso estejam presentes, para inicializar SSPROP_INIT_SERVER_SPN e SSPROP_INIT_FAILOVER_PARTNER_SPN.<br /><br /> IDBProperties::SetProperties pode ser chamada para definir as propriedades SSPROP_INIT_SERVER_SPN e SSPROP_INIT_FAILOVER_PARTNER_SPN antes de IDBInitialize::Initialize ser chamado. Essa é uma alternativa ao uso de uma cadeia de caracteres de provedor.<br /><br /> Se uma propriedade for definida em mais de um local, um valor definido programaticamente terá precedência sobre um conjunto de valor na cadeia de caracteres de provedor. Um valor definido na cadeia de inicialização tem precedência sobre um valor definido em uma caixa de diálogo de login.<br /><br /> Se a mesma palavra-chave aparecer mais de uma vez na cadeia de caracteres de provedor, o valor da primeira ocorrência terá precedência.|  
 |IDBProperties::GetProperties|IDBProperties::GetProperties pode ser chamado para obter os valores das novas propriedades de inicialização da fonte de dados SSPROP_INIT_SERVERSPN e SSPROP_INIT_FAILOVERPARTNERSPN, e das novas propriedades da fonte de dados SSPROP_AUTHENTICATIONMETHOD e SSPROP_MUTUALLYAUTHENTICATED.|  
 |IDBProperties::GetPropertyInfo|IdbProperties::GetPropertyInfo incluirá as novas propriedades de inicialização da fonte de dados SSPROP_INIT_SERVERSPN e SSPROP_INIT_FAILOVERPARTNERSPN, ou as novas propriedades da fonte de dados SSPROP_AUTHENTICATION_METHOD e SSPROP_MUTUALLYAUTHENTICATED.|  
-|IDBProperties::SetProperties|IDBProperties::SetProperties pode ser chamado para definir os valores das novas propriedades de inicialização da fonte de dados SSPROP_INITSERVERSPN e SSPROP_INIT_FAILOVERPARTNERSPN.<br /><br /> Essas propriedades podem ser definidas a qualquer momento, mas se a fonte de dados já estiver aberta, o seguinte erro será retornado: DB_E_ERRORSOCCURRED, "Uma operação de várias etapas do OLE DB gerou erros. Verifique todos os valores de status do OLE DB, se disponíveis. Não foram executados trabalhos."|  
+|IDBProperties::SetProperties|IDBProperties::SetProperties pode ser chamado para definir os valores das novas propriedades de inicialização da fonte de dados SSPROP_INITSERVERSPN e SSPROP_INIT_FAILOVERPARTNERSPN.<br /><br /> Essas propriedades podem ser definidas a qualquer momento, mas se a fonte de dados já estiver aberta, o erro a seguir será retornado:DB_E_ERRORSOCCURRED, "Operação de várias etapas do OLE DB gerou erros. Verifique todos os valores de status do OLE DB, se disponíveis. Não foram executados trabalhos."|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Programação no Driver do OLE DB para SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

@@ -17,10 +17,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a5880ab0e6ff8ab173c9c0a5a42b1380fe4a989a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242425"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
@@ -31,14 +31,14 @@ ms.locfileid: "75242425"
 
 Este tópico descreve como editar um alerta do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="BeforeYouBegin"></a>Antes de começar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de começar  
   
-### <a name="Security"></a>Segurança  
+### <a name="security"></a><a name="Security"></a>Segurança  
   
-#### <a name="Permissions"></a>Permissões  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissões  
 Por padrão, os membros da função de servidor fixa **sysadmin** podem editar as informações em um alerta. Deve ser concedida a outros usuários a função de banco de dados fixa **SQLAgentOperatorRole** no banco de dados **msdb** .  
   
-## <a name="SSMSProcedure"></a>Usando o SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Usando o SQL Server Management Studio  
   
 #### <a name="to-edit-an-alert"></a>Para editar um alerta  
   
@@ -54,7 +54,7 @@ Por padrão, os membros da função de servidor fixa **sysadmin** podem editar a
   
 6.  Quando terminar, clique em **OK**.  
   
-## <a name="TsqlProcedure"></a>Usando Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Usando Transact-SQL  
   
 #### <a name="to-edit-an-alert"></a>Para editar um alerta  
   

@@ -11,19 +11,19 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244288"
 ---
-# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Como fazer: executar testes de unidade do SQL Server no Team Foundation Build
+# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Como: Executar testes de unidade do SQL Server no Team Foundation Build
 
 Você pode usar o Team Foundation Build para executar os testes de unidade do SQL Server como parte de um teste de verificação da compilação (BVT). Você pode configurar os testes de unidade para implantar o banco de dados, gerar dados de teste e executar os testes selecionados. Se você não estiver familiarizado com o Team Foundation Build, analise as seguintes informações antes de seguir os procedimentos deste tópico:  
   
 -   [Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [Como: configurar e executar testes agendados depois de criar seu aplicativo](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [Como configurar e executar testes agendados depois de criar seu aplicativo](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
 -   [Criar uma definição de build básica](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
@@ -67,7 +67,7 @@ Quando você executar testes de unidade em um computador de compilação, possiv
   
 Para resolver esses problemas, determine uma seção de substituição no app.config que substitua o arquivo app.config por um arquivo de configuração específico do ambiente do Team Foundation Build. Para saber mais, confira [Modificar o Projeto de Teste](#ModifyTestProject) posteriormente neste tópico.  
   
-## <a name="ConfigureX64"></a>Definir configurações de teste para executar testes de unidade do SQL Server em um Agente de Build x64  
+## <a name="configure-test-settings-to-run-sql-server-unit-tests-on-an-x64-build-agent"></a><a name="ConfigureX64"></a>Definir configurações de teste para executar testes de unidade do SQL Server em um Agente de Build x64  
 Para que você possa executar os testes de unidade em um agente de compilação x64, defina as configurações de teste para alterar a plataforma do processo do host.  
   
 #### <a name="to-specify-the-host-process-platform"></a>Para especificar a plataforma do processo do host  
@@ -84,7 +84,7 @@ Para que você possa executar os testes de unidade em um agente de compilação 
   
 5.  Clique em **Aplicar**.  
   
-## <a name="CreateATestList"></a>Atribuir testes a uma categoria de teste (opcional)  
+## <a name="assign-tests-to-a-test-category-optional"></a><a name="CreateATestList"></a>Atribuir testes a uma categoria de teste (opcional)  
 Normalmente, ao criar uma definição de compilação para executar testes de unidade, você especifica uma ou mais categorias de teste. Todos os testes nas categorias especificadas são executados quando a compilação é executada.  
   
 #### <a name="to-assign-tests-to-a-test-category"></a>Para atribuir testes a uma categoria de teste  
@@ -101,7 +101,7 @@ Normalmente, ao criar uma definição de compilação para executar testes de un
   
     A nova categoria de teste será atribuída ao teste e estará disponível para outros testes através de suas propriedades.  
   
-## <a name="ModifyTestProject"></a>Modificar o projeto de teste  
+## <a name="modify-the-test-project"></a><a name="ModifyTestProject"></a>Modificar o projeto de teste  
 Por padrão, o Team Foundation Build cria um arquivo de configuração no arquivo app.config do projeto ao criar o projeto de testes de unidade. O caminho para o projeto de banco de dados é armazenado como um caminho relativo no arquivo app.config. Os caminhos relativos que funcionam no Visual Studio não funcionarão, pois o Team Foundation Build coloca os arquivos compilados em locais diferentes, de acordo com o local em que você executou os testes de unidade. Além de isso, o arquivo app.config contém as cadeias de conexão que especificam o banco de dados a ser testado. Você também precisará de um arquivo app.config separado para o Team Foundation Build se o teste de unidade precisar se conectar a um banco de dados que não seja o que você usou quando o projeto de teste foi criado. Fazendo as modificações no próximo procedimento, você poderá configurar o projeto de teste e o servidor de compilação de modo que o Team Foundation Build use uma configuração diferente.  
   
 > [!IMPORTANT]  
@@ -205,7 +205,7 @@ Por padrão, o Team Foundation Build cria um arquivo de configuração no arquiv
   
     Em seguida, faça o check-in da solução para controle de versão.  
   
-## <a name="CheckInTheTestList"></a>Fazer check-in da solução  
+## <a name="check-in-the-solution"></a><a name="CheckInTheTestList"></a>Fazer check-in da solução  
 Neste procedimento, você faz o check-in de todos os arquivos da solução. Esses arquivos incluem o arquivo de metadados de teste da sua solução, que contém suas associações de categoria de teste e testes. Sempre que você adicionar, excluir, reorganize ou alterar o conteúdo dos teste, o arquivo de metadados de teste será atualizado automaticamente para refletir essas alterações.  
   
 > [!NOTE]  
@@ -234,7 +234,7 @@ Neste procedimento, você faz o check-in de todos os arquivos da solução. Esse
   
     Os testes estão disponíveis para o Team Foundation Build. Agora você pode criar uma definição de compilação que contenha os testes a serem executados.  
   
-## <a name="CreateBuildDef"></a>Criar uma definição de build  
+## <a name="create-a-build-definition"></a><a name="CreateBuildDef"></a>Criar uma definição de build  
   
 #### <a name="to-create-a-build-definition"></a>Para criar uma definição de compilação  
   
@@ -268,7 +268,7 @@ Neste procedimento, você faz o check-in de todos os arquivos da solução. Esse
   
     Você criou uma definição de compilação. Em seguida, você modificará o projeto de teste.  
   
-## <a name="RunBuild"></a>Executar a nova definição de build  
+## <a name="run-the-new-build-definition"></a><a name="RunBuild"></a>Executar a nova definição de build  
   
 #### <a name="to-run-the-new-build-type"></a>Para executar o novo tipo de compilação  
   

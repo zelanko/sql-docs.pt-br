@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 ms.date: 05/08/2019
 ms.openlocfilehash: f5d2aad7b0a306dd4bd2c8e64b7a49581c8fb5d2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68264970"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Operações de backup e restauração para o Reporting Services

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5b2e87cf96d6237521caeaae55802d2d72769603
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73594333"
 ---
-# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-with-windows-installer"></a>Instalar o `azdata` para gerenciar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] com o Windows Installer
+# <a name="install-azdata-to-manage-big-data-clusters-2019-with-windows-installer"></a>Instalar o `azdata` para gerenciar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] com o Windows Installer
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -48,7 +48,7 @@ Depois de removida, [instale o `azdata` no Windows](#install-azdata-windows).
 >[!NOTE]
 >Se a instalação anterior tiver sido feita usando o MSI, não será necessário desinstalar nenhuma versão atual antes de usar o instalador do MSI.
 
-### <a id="install-azdata-windows"></a>Instalar com o Windows Installer
+### <a name="install-with-windows-installer"></a><a id="install-azdata-windows"></a>Instalar com o Windows Installer
 
 Use o Windows Installer para instalar ou atualizar o `azdata` no Windows.
 

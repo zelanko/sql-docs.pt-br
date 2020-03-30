@@ -12,12 +12,12 @@ manager: jroth
 ms.custom: seo-lt-2019
 ms.date: 09/05/2018
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 07504e19591b1f64aac77ebbc825bea58931b536
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7b22b71f3e5b9428e15a529917056565b874d55d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75688572"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271412"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Versões anteriores do SQL Server Data Tools (SSDT e SSDT-BI)
 
@@ -35,14 +35,7 @@ Os últimos downloads são fornecidos no caso pouco provável de você enfrentar
 
 |Versão do SSDT| Visual Studio 2017|
 |:---|:---|
-|15.9.2|[SSDT para VS2017 15.9.2](https://go.microsoft.com/fwlink/?linkid=2095463)|
-|15.9.1|[SSDT para VS2017 15.9.1](https://go.microsoft.com/fwlink/?linkid=2086373)|
-|15.9.0|[SSDT para VS2017 15.9.0](https://go.microsoft.com/fwlink/?linkid=2052454)|
-|15.8.2|[SSDT para VS2017 15.8.2](https://go.microsoft.com/fwlink/?linkid=2038031)|
-|15.8.0|[SSDT para VS2017 15.8.0](https://go.microsoft.com/fwlink/?linkid=2014060)|
-|15.7.1|[SSDT para VS2017 15.7.1](https://go.microsoft.com/fwlink/?LinkId=875613)|
-|15.7.0|[SSDT para VS2017 15.7.0](https://go.microsoft.com/fwlink/?LinkId=874716)|
-|15.6.0|[SSDT para VS2017 15.6.0](https://go.microsoft.com/fwlink/?LinkId=871368)|
+|15.8.0|[SSDT para VS2017 15.8.0](https://go.microsoft.com/fwlink/?linkid=2124319)
 
 <br>
 
@@ -65,7 +58,7 @@ Os últimos downloads são fornecidos no caso pouco provável de você enfrentar
 
   
 ## <a name="links-to-download-pages"></a>Links para páginas de download 
-**SQL Relacional: Mecanismo de Banco de Dados**  
+**Relacional do SQL: mecanismo de banco de dados**  
   
 Fornece modelos para criar bancos de dados relacionais para o RDBMS e o Banco de Dados SQL do Microsoft Azure. O SSDT é independente de versão em relação ao design do banco de dados relacional. Você pode usar a versão do Visual Studio 2012 ou 2013 com qualquer versão do Mecanismo de Banco de Dados do SQL Server ou do Banco de Dados SQL do Microsoft Azure.  
   

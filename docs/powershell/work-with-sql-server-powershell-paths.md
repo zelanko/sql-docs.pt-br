@@ -10,10 +10,10 @@ ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 17c898e02f63a9d491c514967137e1f357b2db74
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68121348"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Trabalhar com caminhos do SQL Server PowerShell
@@ -35,7 +35,7 @@ Depois de navegar até um nó em um caminho do provedor do [!INCLUDE[ssDE](../in
   
  O provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é usado para gerenciar os objetos em uma instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Ele não é usado para trabalhar com dados em bancos de dados. Se você navegou até uma tabela ou exibição, não é possível usar o provedor para selecionar, inserir, atualizar ou excluir dados. Use o cmdlet **Invoke-Sqlcmd** para consultar ou alterar dados em tabelas e exibições do ambiente do Windows PowerShell. Para obter mais informações, veja [Cmdlet Invoke-Sqlcmd](invoke-sqlcmd-cmdlet.md).  
   
-##  <a name="ListPropMeth"></a> Listando métodos e propriedades  
+##  <a name="listing-methods-and-properties"></a><a name="ListPropMeth"></a> Listando métodos e propriedades  
  **Listando métodos e propriedades**  
   
  Para exibir os métodos e as propriedades disponíveis para objetos ou classes de objetos específicos, use o cmdlet **Get-Member** .  
@@ -65,7 +65,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012
 Get-Item . | Get-Member -Type Properties  
 ```  
   
-##  <a name="UsePropMeth"></a> Usando métodos e propriedades  
+##  <a name="using-methods-and-properties"></a><a name="UsePropMeth"></a> Usando métodos e propriedades  
  **Usando métodos e propriedades do SMO**  
   
  Para executar trabalhos em objetos de um caminho de provedor do [!INCLUDE[ssDE](../includes/ssde-md.md)] , você pode usar métodos e propriedades do SMO.  
