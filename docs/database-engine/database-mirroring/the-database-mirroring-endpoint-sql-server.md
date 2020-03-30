@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f8652f227c43354f54e8ec76f9c174f4551dcb2a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68047994"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>O ponto de extremidade de espelhamento de banco de dados (SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "68047994"
 >  O recurso de espelhamento de banco de dados será removido em uma versão futura do Microsoft SQL Server. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente usam o espelhamento de banco de dados para usar o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
   
   
-##  <a name="ServerNetworkAddress"></a> Endereços de rede do servidor  
+##  <a name="server-network-address"></a><a name="ServerNetworkAddress"></a> Endereços de rede do servidor  
  O endereço de rede de uma instância de servidor (seu *endereço de rede de servidor* ou *URL do ponto de extremidade*) contém o número da porta de seu ponto de extremidade, como também o nome de sistema e nome de domínio do seu computador host. O número da porta identifica uma instância de servidor específica exclusivamente.  
   
  A figura seguinte ilustra como duas instâncias de servidor no mesmo servidor são identificadas exclusivamente. Os endereços de rede de servidor de ambas as instâncias de servidor contêm o mesmo nome de sistema, `MYSYSTEM`e nome de domínio, `Adventure-Works.MyDomain.com`. Para permitir o sistema a rotear conexões para uma instância de servidor, um endereço de rede de servidor inclui o número da porta associado ao ponto de extremidade de espelhamento de uma instância de servidor particular.  
@@ -57,7 +57,7 @@ ms.locfileid: "68047994"
 >  Não reconfigure um ponto de extremidade de espelhamento de banco de dados em uso. Cada instância de servidor usa o ponto de extremidade do outro para aprender o estado dos outros sistemas. Se o ponto de extremidade for reconfigurado, poderia reinicializar, o que pode parecer ser um erro para as outras instâncias de servidor. Isso é particularmente importante no modo de failover automático no qual a reconfiguração de um ponto de extremidade em um parceiro poderia provocar um failover.  
   
   
-##  <a name="EndpointAuthenticationTypes"></a> Determinando o tipo de autenticação para um ponto de extremidade de espelhamento de banco de dados  
+##  <a name="determining-the-authentication-type-for-a-database-mirroring-endpoint"></a><a name="EndpointAuthenticationTypes"></a> Determinando o tipo de autenticação para um ponto de extremidade de espelhamento de banco de dados  
  É importante entender que as contas de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de suas instâncias de servidor determinam que tipo de autenticação você pode usar para seus pontos de extremidade de espelhamento de banco de dados, desta forma:  
   
 -   Se cada instância de servidor estiver em execução em uma conta de serviço de domínio, você poderá usar a Autenticação do Windows para seus pontos de extremidade de espelhamento de banco de dados. Se todas as instâncias de servidor forem executadas como a mesma conta de usuário do domínio, os logons de usuário corretos existirão automaticamente em ambos os bancos de dados **mestres** . Isso simplifica a configuração da segurança dos bancos de dados de disponibilidade e é recomendável.  
@@ -74,7 +74,7 @@ ms.locfileid: "68047994"
      Não há nenhum método automatizado para configurar a segurança do espelhamento de banco de dados usando certificados. Você precisará usar a instrução CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o cmdlet **New-SqlHadrEndpoint** do PowerShell. Para obter mais informações, veja [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md). Para obter informações sobre como habilitar a autenticação de certificado em uma instância de servidor, consulte [Usar certificados para um ponto de extremidade de Espelhamento de Banco de Dados (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para configurar um ponto de extremidade de espelhamento de banco de dados**  
   
 -   [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

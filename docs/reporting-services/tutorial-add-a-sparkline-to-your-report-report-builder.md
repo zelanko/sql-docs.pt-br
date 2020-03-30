@@ -9,10 +9,10 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63043064"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adicionar um minigráfico ao relatório (Construtor de Relatórios)
@@ -28,7 +28,7 @@ Tempo estimado para concluir este tutorial: 30 minutos.
 ## <a name="requirements"></a>Requisitos  
 Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="CreateTable"></a>1. Criar um relatório com uma tabela  
+## <a name="1-create-a-report-with-a-table"></a><a name="CreateTable"></a>1. Criar um relatório com uma tabela  
   
 1.  [Inicie o Construtor de Relatórios](../reporting-services/report-builder/start-report-builder.md) no computador, no portal da Web do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou no modo integrado do SharePoint.  
   
@@ -71,7 +71,7 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
   
 13. Clique em **Próximo**.  
   
-## <a name="Query"></a>2. Criar uma consulta e o layout da tabela no Assistente de Tabela  
+## <a name="2-create-a-query-and-table-layout-in-the-table-wizard"></a><a name="Query"></a>2. Criar uma consulta e o layout da tabela no Assistente de Tabela  
 Em um relatório, é possível usar um conjunto de dados compartilhado que tenha uma consulta predefinida. Se preferir, crie um conjunto de dados inserido para ser usado somente em seu relatório. Neste tutorial, você criará um conjunto de dados inserido.  
   
 > [!NOTE]  
@@ -160,7 +160,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 15. Clique em **Executar** para visualizar o relatório.  
 
-### <a name="FormatCurrency"></a>2a. Formatar dados como moeda  
+### <a name="2a-format-data-as-currency"></a><a name="FormatCurrency"></a>2a. Formatar dados como moeda  
 Por padrão, os dados de resumo do campo **Sales** exibem um número geral. Formate-o para exibir o número como moeda. Ative/desative **Estilos de Espaço Reservado** para exibir caixas de texto formatadas e texto de espaço reservado como valores de exemplo.  
   
 1.  Clique em **Design** a fim de alternar para a exibição de design.  
@@ -177,7 +177,7 @@ Por padrão, os dados de resumo do campo **Sales** exibem um número geral. Form
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
    
-### <a name="FormatDates"></a>2b. (Opcional) Formatar dados como datas  
+### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. (Opcional) Formatar dados como datas  
 Por padrão, o campo **SalesDate** exibe informações de data e hora. É possível formatá-lo para exibir somente a data.  
   
 1.  Clique na célula que contém `[SalesDate]`.  
@@ -190,7 +190,7 @@ Por padrão, o campo **SalesDate** exibe informações de data e hora. É possí
   
 Os valores de **SalesDate** são exibidos no formato de data padrão e os valores de resumo de **Sales** são exibidos como moeda.   
   
-## <a name="Sparkline"></a>3. Adicionar um minigráfico    
+## <a name="3-add-a-sparkline"></a><a name="Sparkline"></a>3. Adicionar um minigráfico    
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
@@ -224,7 +224,7 @@ Os valores de **SalesDate** são exibidos no formato de data padrão e os valore
   
      ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
-## <a name="AlignSparklines"></a>4. Alinhar os minigráficos vertical e horizontalmente  
+## <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4. Alinhar os minigráficos vertical e horizontalmente  
 Os minigráficos são difíceis de ler quando todos não apresentam as mesmas medidas. Os eixos horizontal e vertical de cada um deles precisa corresponder ao resto.  
    
 1.  Clique em **Design** para retornar à exibição de design.  
@@ -251,7 +251,7 @@ Agora todas as barras em cada minigráfico são alinhadas às barras dos outros 
   
 ![report-builder-sparkline-aligned](../reporting-services/media/report-builder-sparkline-aligned.png)
   
-## <a name="Width"></a>7. (Opcional) Alterar larguras da coluna  
+## <a name="7-optional-change-column-widths"></a><a name="Width"></a>7. (Opcional) Alterar larguras da coluna  
 Por padrão, cada célula da tabela contém uma caixa de texto. Uma caixa de texto é expandida verticalmente para acomodar o texto quando a página é renderizada. No relatório renderizado, cada linha é expandida até a altura da caixa de texto renderizada mais alta da linha. A altura da linha na superfície de design não tem nenhum efeito na altura da linha no relatório renderizado.  
   
 Para reduzir a quantidade de espaço vertical que cada linha ocupa, expanda a largura da coluna para acomodar em uma única linha o conteúdo esperado das caixas de texto da coluna.  
@@ -266,7 +266,7 @@ Para reduzir a quantidade de espaço vertical que cada linha ocupa, expanda a la
   
 4.  Clique em **Executar** para visualizar o relatório e veja se ele é grande o suficiente.  
   
-## <a name="Title"></a>8. (Opcional) Adicionar um título de relatório  
+## <a name="8-optional-add-a-report-title"></a><a name="Title"></a>8. (Opcional) Adicionar um título de relatório  
 Um título é exibido na parte superior do relatório. É possível colocar o título em um cabeçalho do relatório. No entanto, se ele não usar um cabeçalho, será possível colocar o título em uma caixa de texto na parte superior do corpo do relatório. Neste tutorial, você usará a caixa de texto colocada automaticamente na parte superior do corpo do relatório.  
   
 O texto pode ser aprimorado ainda mais aplicando-se estilos, tamanhos e cores de fontes diferentes a frases e caracteres individuais do texto. Para obter mais informações, consulte [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -285,7 +285,7 @@ O texto pode ser aprimorado ainda mais aplicando-se estilos, tamanhos e cores de
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Save"></a>9. Salvar o relatório  
+## <a name="9-save-the-report"></a><a name="Save"></a>9. Salvar o relatório  
 Salve o relatório em um servidor de relatório ou no computador. Se você não salvar o relatório no servidor de relatório, vários recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , como partes do relatório e sub-relatórios, não estarão disponíveis.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>Para salvar o relatório em um servidor de relatório  

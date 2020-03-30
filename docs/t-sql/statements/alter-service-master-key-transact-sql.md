@@ -25,10 +25,10 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 29a30f6b8d65cf1b821c93de0f051925b3cb6626
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68112865"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
@@ -90,7 +90,7 @@ ALTER SERVICE MASTER KEY
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] usa o algoritmo de criptografia AES para proteger a SMK (chave mestra de serviço) e a DMK (chave mestra de banco de dados). O AES é um algoritmo de criptografia mais novo que o 3DES usado em versões anteriores. Depois de atualizar uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , o SMK e o DMK devem ser regenerados para atualizar as chave mestras para AES. Para obter mais informações sobre como regenerar a DMK, veja [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
-##  <a name="_changing"></a> Alterando a conta de serviço do SQL Server  
+##  <a name="changing-the-sql-server-service-account"></a><a name="_changing"></a> Alterando a conta de serviço do SQL Server  
  Para alterar a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Para gerenciar uma alteração da conta de serviço, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena uma cópia redundante da chave mestra de serviço protegida pela conta do computador que tem as permissões necessárias concedidas ao grupo de serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o computador for recriado, o mesmo usuário de domínio que foi usado anteriormente pela conta de serviço poderá recuperar a chave mestra de serviço. Isso não funciona com contas locais nem com o Sistema Local, o Serviço Local ou as contas de Serviço de Rede. Quando estiver movendo o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para outro computador, migre a chave mestra de serviço usando backup e restauração.  
   
  A frase REGENERATE gera a chave mestra de serviço novamente. Quando a chave mestra de serviço é gerada novamente, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] descriptografa todas as chaves que foram criptografadas com ela e, em seguida, as criptografa com a nova chave mestra de serviço. Essa operação utiliza muitos recursos. É recomendável agendar essa operação em um período de baixa demanda, a menos que a chave esteja comprometida. Se qualquer uma das descriptografias falhar, a instrução inteira falhará.  

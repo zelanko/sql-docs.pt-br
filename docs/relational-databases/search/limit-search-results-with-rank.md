@@ -19,10 +19,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68132284"
 ---
 # <a name="limit-search-results-with-rank"></a>Limite resultados de pesquisa com RANK
@@ -36,7 +36,7 @@ ms.locfileid: "68132284"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ordena as correspondências por classificação e retorna somente o número especificado de linhas. Essa opção pode resultar em um aumento significativo no desempenho. Por exemplo, uma consulta que normalmente retornaria 100.000 linhas de uma tabela de um milhão de linhas será processada com muito mais rapidez se apenas as 100 primeiras linhas forem solicitadas.  
   
-##  <a name="examples"></a> Exemplos do uso de RANK para limitar os resultados da pesquisa  
+##  <a name="examples-of-using-rank-to-limit-search-results"></a><a name="examples"></a> Exemplos do uso de RANK para limitar os resultados da pesquisa  
   
 ### <a name="example-a-searching-for-only-the-top-three-matches"></a>Exemplo A: Pesquisando apenas as três primeiras correspondências  
  O exemplo a seguir usa CONTAINSTABLE para retornar apenas as três primeiras correspondências.  
@@ -91,7 +91,7 @@ GO
 ```  
   
   
-##  <a name="how"></a> Como os resultados de consultas de pesquisa são classificados  
+##  <a name="how-search-query-results-are-ranked"></a><a name="how"></a> Como os resultados de consultas de pesquisa são classificados  
  A pesquisa de texto completo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode gerar uma pontuação (ou valor de classificação) opcional que indica a relevância dos dados retornados por uma consulta de texto completo. Este valor de classificação é calculado para cada linha e pode ser usado como critério de ordenação para classificar o conjunto de resultados de uma determinada consulta por relevância. Os valores de classificação indicam apenas uma ordem relativa de relevância das linhas do conjunto de resultados. Os valores reais não são importantes e geralmente são diferentes em cada execução da consulta. O valor de classificação não guarda nenhuma importância entre as consultas.  
   
 ### <a name="statistics-for-ranking"></a>Estatísticas para a classificação  
