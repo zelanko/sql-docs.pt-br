@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: f51e5326d29d7edd6a518c02f7042cc9ed104b4f
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895953"
 ---
 # <a name="table-valued-parameters"></a>Parâmetros com valor de tabela
@@ -32,7 +32,7 @@ Os valores de coluna em parâmetros com valor de tabela podem ser acessados usan
   
 Para obter mais informações sobre os parâmetros com valor de tabela, confira os recursos a seguir.  
   
-|Recurso|Descrição|  
+|Recurso|DESCRIÇÃO|  
 |--------------|-----------------|  
 |[Parâmetros de valores de tabela (Mecanismo de Banco de Dados)](https://go.microsoft.com/fwlink/?LinkId=98363) nos Manuais Online do SQL Server|Descreve como criar e usar parâmetros com valor de tabela.|  
 |[Tipos de tabela definidos pelo usuário](https://go.microsoft.com/fwlink/?LinkId=98364) nos Manuais Online do SQL Server|Descreve os tipos de tabela definidos pelo usuário usados para declarar parâmetros com valor de tabela.|  
@@ -118,7 +118,7 @@ SqlParameter tvpParam = insertCommand.Parameters.AddWithValue("@tvpNewCategories
 tvpParam.SqlDbType = SqlDbType.Structured;  
 ```  
   
-## <a name="passing"></a> Passando um parâmetro com valor de tabela para um procedimento armazenado  
+## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a> Passando um parâmetro com valor de tabela para um procedimento armazenado  
 Este exemplo demonstra como passar dados de parâmetro com valor de tabela para um procedimento armazenado. O código extrai linhas adicionadas em um novo <xref:System.Data.DataTable> usando o método <xref:System.Data.DataTable.GetChanges%2A>. Em seguida, o código define um <xref:Microsoft.Data.SqlClient.SqlCommand>, configurando a propriedade <xref:Microsoft.Data.SqlClient.SqlCommand.CommandType%2A> como <xref:System.Data.CommandType.StoredProcedure>. O <xref:Microsoft.Data.SqlClient.SqlParameter> é preenchido usando o método <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> e o <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> é definido como `Structured`. Em seguida, o <xref:Microsoft.Data.SqlClient.SqlCommand> é executado usando o método <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>.  
   
 ```csharp  

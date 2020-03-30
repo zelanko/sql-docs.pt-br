@@ -10,17 +10,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68259360"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Gráficos de mapa de árvore e explosão solar no Reporting Services 
 
 As visualizações de mapa de árvore e explosão solar do SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são ótimas para representar dados hierárquicos visualmente. Este artigo é uma visão geral de como adicionar um gráfico de mapa de árvore ou explosão solar a um relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. O artigo também inclui uma consulta de exemplo do AdventureWorks para ajudá-lo a começar.  
   
-##  <a name="bkmk_treemap_chart"></a> Gráfico de mapa de árvore  
+##  <a name="treemap-chart"></a><a name="bkmk_treemap_chart"></a> Gráfico de mapa de árvore  
 
 Um gráfico de mapa de árvore divide a área do gráfico em retângulos que representam os diferentes níveis e os tamanhos relativos da hierarquia de dados. O mapa é semelhante às ramificações de uma árvore, começando com um tronco e dividindo-se em galhos menores. Cada retângulo é dividido em retângulos menores que representam o próximo nível na hierarquia. Os retângulos de nível superior do mapa de árvore são organizados com o retângulo maior no canto superior esquerdo do gráfico até o retângulo menor no canto inferior direito.  Dentro de um retângulo, o próximo nível mais alto também é disposto com retângulos do canto superior esquerdo para o canto inferior direito.  
 
@@ -45,7 +45,7 @@ Por exemplo, na imagem do mapa de árvore de exemplo a seguir, a região Sudoest
     * **Grupos de Categorias** (na seguinte ordem):
         1. CategoryName
         2. SubcategoryName
-    * **Grupos de séries**: TerritoryName  
+    * **Grupos de Séries**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -67,7 +67,7 @@ Por exemplo, na imagem do mapa de árvore de exemplo a seguir, a região Sudoest
   
 7. A quantidade de valores de rótulo exibidos é afetada pelo tamanho da fonte, o tamanho da área geral do gráfico e o tamanho de retângulos específicos. Para ver mais rótulos, altere a propriedade **Fonte do Rótulo** de **LineTotal** para **10pt**, do padrão de **8pt**.  
 
-##  <a name="bkmk_sunburst_chart"></a> Gráfico de explosão solar  
+##  <a name="sunburst-chart"></a><a name="bkmk_sunburst_chart"></a> Gráfico de explosão solar  
 
 Em um gráfico de explosão solar, a hierarquia é representada por uma série de círculos. O nível mais alto da hierarquia está no centro e os níveis inferiores da hierarquia são anéis exibidos fora do centro.  O nível mais baixo da hierarquia é o anel externo.  
   
@@ -91,7 +91,7 @@ Em um gráfico de explosão solar, a hierarquia é representada por uma série d
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * **Grupos de séries**: TerritoryName  
+    * **Grupos de Séries**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -107,7 +107,7 @@ Em um gráfico de explosão solar, a hierarquia é representada por uma série d
 
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
 
-##  <a name="bkmk_sample_data"></a> Dados de exemplo do AdventureWorks
+##  <a name="sample-adventureworks-data"></a><a name="bkmk_sample_data"></a> Dados de exemplo do AdventureWorks
 
 Esta seção inclui uma consulta de exemplo e as etapas básicas para criação de uma fonte de dados e um conjunto de dados no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Se o relatório já contiver uma fonte de dados e um conjunto de dados, ignore esta seção.  
   
@@ -115,7 +115,7 @@ A consulta retorna dados de detalhes de ordem de venda do AdventureWorks, com re
   
 1. **Obter os dados**.  
   
-     A consulta desta seção se baseia no banco de dados AdventureWorks, disponível para download no GitHub: [Backup completo do banco de dados do AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases).  
+     A consulta desta seção se baseia no banco de dados AdventureWorks, disponível para download no GitHub: [Backup completo de banco de dados do AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases).  
 
 2. **Criar uma fonte de dados**.  
   

@@ -11,10 +11,10 @@ ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aab60ed1db5d7749c4edbc52fcad4bebddf93d52
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025459"
 ---
 # <a name="working-with-large-data"></a>Trabalhando com dados grandes
@@ -31,7 +31,7 @@ O valor **adaptável** é o modo de buffer padrão, e o driver JDBC armazena em 
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-| Tópico                                                                                                                      | Descrição                                                              |
+| Tópico                                                                                                                      | DESCRIÇÃO                                                              |
 | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | [Lendo exemplo de dados grandes](../../connect/jdbc/reading-large-data-sample.md)                                               | Descreve como usar uma instrução SQL para recuperar dados de valor grande.       |
 | [Lendo exemplo de dados grandes com procedimentos armazenados](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) | Descreve como recuperar um valor grande do parâmetro OUT do CallableStatement. |

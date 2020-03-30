@@ -11,10 +11,10 @@ ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd4751fe3d1acb7119c87e39ecd8694a0fa83c19
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028220"
 ---
 # <a name="connecting-and-retrieving-data"></a>Conectando e recuperando dados
@@ -32,7 +32,7 @@ Os tópicos nesta seção descrevem os modos diferentes nos quais você pode se 
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-| Tópico                                                                | Descrição                                                                                                                                                   |
+| Tópico                                                                | DESCRIÇÃO                                                                                                                                                   |
 | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Exemplo de URL de conexão](../../connect/jdbc/connection-url-sample.md) | Descreve como usar uma URL de conexão para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e usar uma instrução SQL para recuperar dados. |
 | [Exemplo de fonte de dados](../../connect/jdbc/data-source-sample.md)       | Descreve como usar uma fonte de dados para se conectar ao SQL Server e, em seguida, usar um procedimento armazenado para recuperar dados.                                                 |

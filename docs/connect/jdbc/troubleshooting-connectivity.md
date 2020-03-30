@@ -11,10 +11,10 @@ ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027625"
 ---
 # <a name="troubleshooting-connectivity"></a>Solução de problemas de conectividade
@@ -24,7 +24,7 @@ ms.locfileid: "69027625"
   
  Uma tentativa de conexão de banco de dados pode falhar por muitas razões. Podem incluir o seguinte:  
   
--   O TCP/IP não está habilitado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o servidor ou número da porta especificados estão incorretos. Verifique se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está escutando com TCP/IP no servidor e na porta especificados. Isso pode ser relatado com uma exceção semelhante a: "O logon falhou. A conexão TCP/IP ao host falhou". Isso pode ser uma das seguintes situações:  
+-   O TCP/IP não está habilitado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o servidor ou número da porta especificados estão incorretos. Verifique se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está escutando com TCP/IP no servidor e na porta especificados. Isto poderia ser relatado com uma exceção semelhante a: "O logon falhou. A conexão TCP/IP ao host falhou". Isso pode ser uma das seguintes situações:  
   
     -   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi instalado, mas o TCP/IP não foi instalado como um protocolo de rede do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Network Utility da [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e posterior.  
   

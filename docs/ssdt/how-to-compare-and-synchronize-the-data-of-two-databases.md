@@ -15,10 +15,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241578"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Como comparar e sincronizar os dados de dois bancos de dados
@@ -41,7 +41,7 @@ Para saber mais, confira [Comparar e sincronizar dados em uma ou mais tabelas co
 > [!NOTE]  
 > Você também pode comparar o *esquema* de dois bancos de dados ou de duas versões do mesmo banco de dados. Para saber mais, confira [Como usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
   
-## <a name="CompareDatabaseData"></a>Comparar dados do banco de dados  
+## <a name="comparing-database-data"></a><a name="CompareDatabaseData"></a>Comparar dados do banco de dados  
   
 #### <a name="to-compare-data-by-using-the-new-data-comparison-wizard"></a>Para comparar dados usando o Assistente de Nova Comparação de Dados  
   
@@ -87,7 +87,7 @@ Para saber mais, confira [Comparar e sincronizar dados em uma ou mais tabelas co
   
     Os dados nos bancos de dados de origem e destino especificados são comparados. Os resultados aparecem na sessão Comparação de Dados. Para saber mais sobre como exibir resultados ou sincronizar os dados, confira [Exibir diferenças de dados](#ViewDifferences) e [Sincronizar dados do banco de dados](#Synchronize).  
   
-## <a name="ViewDifferences"></a>Exibir diferenças de dados  
+## <a name="viewing-data-differences"></a><a name="ViewDifferences"></a>Exibir diferenças de dados  
 Depois que você comparar os dados em dois bancos de dados, a Comparação de Dados lista cada *objeto de banco de dados* que você comparou e seu status. Você também pode exibir os resultados para os registros dentro de cada objeto, agrupados por status. Para saber mais sobre o designações de status, confira [Comparar e sincronizar dados em uma ou mais tabelas com dados em um banco de dados de referência](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).  
   
 Depois que você exibir as diferenças, poderá atualizar o destino para corresponder à origem para alguns ou todos os objetos ou registros que forem diferentes, ausentes ou novos. Para saber mais, confira [Sincronizar dados do banco de dados](#Synchronize).  
@@ -102,7 +102,7 @@ Depois que você exibir as diferenças, poderá atualizar o destino para corresp
   
     -   Para exibir resultados para registros dentro de um objeto específico, clique no objeto no painel de resultados principal e clique em uma guia no painel da exibição de registros. Cada guia exibe todos os registros dentro desse objeto que têm um status específico: diferente, somente na origem, somente no destino e idêntico. Os dados são exibidos por registro e coluna.  
   
-## <a name="Synchronize"></a>Sincronizar dados de bancos de dados  
+## <a name="synchronizing-database-data"></a><a name="Synchronize"></a>Sincronizar dados de bancos de dados  
 Depois de comparar os dados em dois bancos de dados, você poderá sincronizá-los atualizando todo ou parte do destino para corresponder à origem. Você pode comparar os dados em dois tipos de objetos de banco de dados: tabelas e exibições.  
   
 #### <a name="to-update-target-data-by-using-the-write-updates-command"></a>Para atualizar os dados de destino usando o comando Escrever Atualizações  

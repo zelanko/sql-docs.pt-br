@@ -17,15 +17,15 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 766bb8d9a90fb3f1af5a7697e52ae42f6c8fc8d7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253619"
 ---
 # <a name="search-text-with-wildcards"></a>Pesquisar texto com curingas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  As expressões a seguir podem substituir caracteres ou dígitos no campo **O que localizar** da caixa de diálogo **Localizar e Substituir** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  As expressões a seguir podem substituir caracteres ou dígitos no campo **O que localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Localizar e Substituir**do**.  
   
 #### <a name="to-search-using-wildcards"></a>Para pesquisar usando curingas  
   
@@ -35,7 +35,7 @@ ms.locfileid: "75253619"
   
  A tabela a seguir descreve os curingas disponíveis na **Lista de Referências**.  
   
-|Expression|Sintaxe|Descrição|  
+|Expression|Sintaxe|DESCRIÇÃO|  
 |----------------|------------|-----------------|  
 |Qualquer caractere único|?|Corresponde a qualquer caractere único.|  
 |Qualquer dígito único|#|Corresponde a qualquer dígito único. Por exemplo, 7# corresponde a números que incluem 7 seguidos por outro número, como 71, mas não 17.|  

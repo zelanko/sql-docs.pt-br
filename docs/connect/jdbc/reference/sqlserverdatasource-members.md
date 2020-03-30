@@ -11,10 +11,10 @@ ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 800f87c82987396743ec4c0c278444c4ba61d49b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971413"
 ---
 # <a name="sqlserverdatasource-members"></a>Membros de SQLServerDataSource
@@ -24,7 +24,7 @@ ms.locfileid: "67971413"
   
 ## <a name="constructors"></a>Construtores  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[SQLServerDataSource ()](../../../connect/jdbc/reference/sqlserverdatasource-constructor.md)|Inicializa uma nova instância da classe [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67971413"
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|Retorna o valor da propriedade de conexão **applicationIntent**.|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|Retorna o nome do aplicativo.|  

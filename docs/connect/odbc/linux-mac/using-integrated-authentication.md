@@ -13,10 +13,10 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 034df879dc79f920219a43e2faaaf0e3ac4fc17b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68008706"
 ---
 # <a name="using-integrated-authentication"></a>Como usar a autenticação integrada
@@ -98,7 +98,7 @@ Para acessar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usan
 
 A sintaxe que os SPNs usam em cadeia de conexão ou atributos de conexão é a seguinte:  
 
-|Sintaxe|Descrição|  
+|Sintaxe|DESCRIÇÃO|  
 |----------|---------------|  
 |MSSQLSvc/*fqdn*:*port*|O SPN padrão gerado pelo provedor quando o protocolo TCP é usado. *port* é um número de porta TCP. *fqdn* é um nome de domínio totalmente qualificado.|  
   

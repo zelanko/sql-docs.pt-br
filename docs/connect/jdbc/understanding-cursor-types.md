@@ -11,10 +11,10 @@ ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ea30d2280ffea4c2ccf09d1f884a03751ed843
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027495"
 ---
 # <a name="understanding-cursor-types"></a>Noções básicas sobre tipos de cursor
@@ -40,7 +40,7 @@ ms.locfileid: "69027495"
 ## <a name="remarks"></a>Comentários  
  O driver JDBC oferece suporte aos seguintes tipos de cursores:  
   
-|Conjunto de resultados<br /><br /> resultados (cursor)|Tipo de cursor do SQL Server|Características|select<br /><br /> Método|resposta<br /><br /> de resposta|Descrição|  
+|Conjunto de resultados<br /><br /> resultados (cursor)|Tipo de cursor do SQL Server|Características|select<br /><br /> Método|resposta<br /><br /> de resposta|DESCRIÇÃO|  
 |------------------------------------|----------------------------|---------------------|-----------------------|----------------------------|-----------------|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|N/D|Somente encaminhamento, somente leitura|direct|completa|O aplicativo tem que fazer uma única passagem (para a frente) pelo conjunto de resultados. Esse é o comportamento padrão, que é o mesmo de um cursor TYPE_SS_DIRECT_FORWARD_ONLY. O driver lê o conjunto de resultados inteiro do servidor em uma memória durante o tempo de execução da instrução.|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|N/D|Somente encaminhamento, somente leitura|direct|adaptive|O aplicativo tem que fazer uma única passagem (para a frente) pelo conjunto de resultados. O comportamento é igual ao de um cursor TYPE_SS_DIRECT_FORWARD_ONLY. O driver lê as linhas do servidor à medida que o aplicativo as solicita e assim minimiza o uso de memória do lado do cliente.|  

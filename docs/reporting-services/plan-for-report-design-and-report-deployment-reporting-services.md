@@ -9,10 +9,10 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581243"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planejar a criação e implantação de relatórios | Reporting Services
@@ -22,7 +22,7 @@ Este tópico apresenta uma visão geral do suporte para definição de relatóri
   
  Arquivos RDL são criados no Designer de Relatórios em projetos do [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] e no Construtor de Relatórios. Os arquivos RDLC são criados com o uso de controles ReportViewer incluídos no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
   
-##  <a name="bkmk_rdl_schema_versions"></a> Versões de esquema RDL  
+##  <a name="rdl-schema-versions"></a><a name="bkmk_rdl_schema_versions"></a> Versões de esquema RDL  
  A tabela a seguir lista cada versão de esquema disponível e a abreviação usada no restante deste tópico:  
   
 |Abreviação|Versão do esquema|  
@@ -43,10 +43,10 @@ Este tópico apresenta uma visão geral do suporte para definição de relatóri
   
  Para obter mais informações sobre os controles ReportViewer, consulte [Controles ReportViewer (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx).  
   
-##  <a name="bkmk_report_server_rdl_schema_support"></a> Suporte para servidor de relatório e esquema RDL  
+##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> Suporte para servidor de relatório e esquema RDL  
  Um arquivo de definição de relatório pode ser implantado em um servidor de relatório do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] das seguintes maneiras:  
   
--   **Designer de Relatórios:** implante um relatório do Designer de Relatórios em [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
+-   **Designer de Relatórios:** implante um relatório do Designer de Relatórios no [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
 -   **Construtor de Relatórios:** salve um relatório no servidor de relatório do Construtor de Relatórios.  
   
@@ -82,7 +82,7 @@ Em uma implantação do modo do SharePoint, vá para a biblioteca de documentos,
   
  Para obter mais informações sobre atualizações de relatório e versões de esquema com suporte, consulte [Atualizar relatórios](../reporting-services/install-windows/upgrade-reports.md).  
   
-##  <a name="bkmk_report_authoring_and_deployment"></a> Suporte para a criação e a implantação de relatório  
+##  <a name="report-authoring-and-deployment-support"></a><a name="bkmk_report_authoring_and_deployment"></a> Suporte para a criação e a implantação de relatório  
  O ambiente de criação de relatórios é o Designer de Relatórios em projetos do [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] e o Construtor de Relatório. Os ambientes de criação de relatórios fornecem vários recursos de suporte para atualização de relatório, design de relatório, visualização de relatório no modo local, visualização de relatório no servidor de relatório e implantação de relatório.  
   
  A tabela a seguir resume o suporte para criar e implantar definições de relatório para versões de esquema diferentes:  
@@ -101,7 +101,7 @@ Em uma implantação do modo do SharePoint, vá para a biblioteca de documentos,
   
 -   [SQL Server Data Tools para Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
-##  <a name="bkmk_reportviewer"></a> Controles ReportViewer  
+##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a> Controles ReportViewer  
  Um controle [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ReportViewer pode exibir um relatório .rdlc no modo de visualização local ou no modo remoto, o controle pode exibir um arquivo .rdl hospedado em um servidor de relatório [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . A tabela a seguir fornece a lista de versões de RDL com suporte dos controles ReportViewer para processamento local (.rdlc). O suporte para RDL no lado do servidor é resumido na seção [Suporte para servidor de relatório e esquema RDL](#bkmk_report_server_rdl_schema_support).  
   
 |Controle ReportViewer no produto|Versão do RDL para a visualização local|  

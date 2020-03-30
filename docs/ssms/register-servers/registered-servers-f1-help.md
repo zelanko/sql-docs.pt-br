@@ -15,10 +15,10 @@ ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: f8422cd501258d15365e7125c11e616c94d7dc8d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256234"
 ---
 # <a name="registered-servers-f1-help"></a>Ajuda F1 dos Servidores Registrados
@@ -63,7 +63,7 @@ ms.locfileid: "75256234"
  **Lembrar senha**  
  Armazene a senha que você digitou. Essa opção só estará disponível se você clicou em **Básico** ou **Autenticação de Formatos**.  
   
-> **OBSERVAÇÃO:** Caso você tenha armazenado a senha e não queira mais fazê-lo, desmarque essa caixa de seleção e clique em **Salvar**.  
+> **OBSERVAÇÃO:** caso você tenha armazenado a senha e não queira mais fazê-lo, desmarque essa caixa de seleção e clique em **Salvar**.  
   
  **Nome do servidor registrado**  
  O nome que você deseja exibir em Servidores Registrados. Esse nome não precisa corresponder ao nome na caixa **Nome do servidor** .  

@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7e41a75e543c325dce4353a512a8396887fe853c
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79090600"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd – Usar o utilitário
@@ -56,7 +56,7 @@ ms.locfileid: "79090600"
     sqlcmd -S <ComputerName>  
     ```  
   
-    > **OBSERVAÇÃO:** No exemplo anterior, **-E** não é especificado porque é o padrão e o **sqlcmd** se conecta à instância padrão usando a Autenticação do Windows.  
+    > **OBSERVAÇÃO:** no exemplo anterior, **-E** não é especificado porque é o padrão e o **sqlcmd** se conecta à instância padrão usando a Autenticação do Windows.  
   
 -   Conexão com uma instância nomeada usando a Autenticação do Windows para executar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] interativamente:  
   

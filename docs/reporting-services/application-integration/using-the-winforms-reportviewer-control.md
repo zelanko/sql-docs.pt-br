@@ -13,10 +13,10 @@ ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8ae42ea326af05bd715b9380b794384d6690fdb7
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198437"
 ---
 # <a name="use-the-winforms-reportviewer-control"></a>Usar o controle ReportViewer do WinForms
@@ -40,7 +40,7 @@ ms.locfileid: "79198437"
   
  Depois que o controle for adicionado ao formulário, a marcação inteligente **Tarefas do ReportViewer** será exibida e solicitará a seleção de um relatório.  
   
- Se o relatório que você deseja exibir tiver sido implantado em um servidor de relatório, selecione a opção **\<Server Report>** na lista suspensa **Escolher Relatório**. Após a opção **\<Server Report>** ser selecionada, são exibidas duas propriedades adicionais: **URL do Servidor de Relatório** e **Caminho do Relatório**. A **URL do Servidor de Relatório** é o endereço para o servidor de relatório e o **Caminho do Relatório** é o caminho completo para o relatório a ser renderizado.  
+ Se o relatório que você deseja exibir tiver sido implantado em um servidor de relatório, selecione a opção **\<Server Report>** na lista suspensa **Escolher Relatório**. Depois que a opção **\<Server Report>** for selecionada, serão exibidas duas propriedades adicionais: **URL do Servidor de Relatório** e **Caminho do Relatório**. A **URL do Servidor de Relatório** é o endereço para o servidor de relatório e o **Caminho do Relatório** é o caminho completo para o relatório a ser renderizado.  
   
  ![Selecionar relatório do servidor](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Selecionar relatório do servidor")  
   

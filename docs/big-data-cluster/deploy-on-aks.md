@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77173605"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurar o Serviço de Kubernetes do Azure para implantações de cluster de Big Data do SQL Server
@@ -161,7 +161,7 @@ Escolha a versão mais recente disponível para o cluster. Registre o número de
    kubectl get nodes
    ```
 
-## <a id="troubleshoot"></a> Solução de problemas
+## <a name="troubleshooting"></a><a id="troubleshoot"></a> Solução de problemas
 
 Se você tiver problemas ao criar um Serviço de Kubernetes do Azure com os comandos anteriores, tente as seguintes resoluções:
 

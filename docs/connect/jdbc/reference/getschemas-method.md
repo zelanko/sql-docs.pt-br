@@ -16,10 +16,10 @@ ms.assetid: adba0ee6-ff6d-4215-b646-62c735be3fe9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0a5f453e6300258cacffa6606259f85cdd25977
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980083"
 ---
 # <a name="getschemas-method-"></a>Método getSchemas ()
@@ -45,7 +45,7 @@ public java.sql.ResultSet getSchemas()
   
  O conjunto de resultados retornado pelo método getSchemas contém as seguintes informações:  
   
-|Nome|Type|Descrição|  
+|Nome|Type|DESCRIÇÃO|  
 |----------|----------|-----------------|  
 |TABLE_SCHEM|**Cadeia de caracteres**|O nome do esquema.|  
 |TABLE_CATALOG|**Cadeia de caracteres**|O nome de catálogo para o esquema.|  

@@ -11,10 +11,10 @@ ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac090ad8831397bf31c0911ab8a8db21486528db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015107"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Tipos de cursor (driver SQLSRV)
@@ -27,7 +27,7 @@ Ao criar um conjunto de resultados com [sqlsrv_query](../../connect/php/sqlsrv-q
   
 Você pode criar um conjunto de resultados com um cursor rolável, que permite acessar qualquer linha no conjunto de resultados, em qualquer ordem. A tabela a seguir lista os valores que podem ser passados para a opção **Scrollable** em sqlsrv_query ou sqlsrv_prepare.  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |----------|---------------|  
 |SQLSRV_CURSOR_FORWARD|Permite que você mova uma linha por vez, começando na primeira linha do conjunto de resultados até chegar ao final do conjunto de resultados.<br /><br />Esse é o tipo de cursor padrão.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) retorna um erro para conjuntos de resultados criados com esse tipo de cursor.<br /><br />**forward** é a forma abreviada de SQLSRV_CURSOR_FORWARD.|  
 |SQLSRV_CURSOR_STATIC|Permite acessar linhas em qualquer ordem, mas não refletirá alterações no banco de dados.<br /><br />**static** é a forma abreviada de SQLSRV_CURSOR_STATIC.|  
@@ -42,7 +42,7 @@ Depois de criar um conjunto de resultados, você pode usar [sqlsrv_fetch](../../
   
 A tabela a seguir lista e descreve os valores que podem ser especificados no parâmetro *row*.  
   
-|Parâmetro|Descrição|  
+|Parâmetro|DESCRIÇÃO|  
 |-------------|---------------|  
 |SQLSRV_SCROLL_NEXT|Especifica a próxima linha. Esse será o valor padrão se você não especificar o parâmetro *row* para um conjunto de resultados rolável.|  
 |SQLSRV_SCROLL_PRIOR|Especifica a linha imediatamente anterior à linha atual.|  

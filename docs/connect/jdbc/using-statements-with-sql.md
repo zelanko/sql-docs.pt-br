@@ -11,10 +11,10 @@ ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 553c0e742b34406b23a68f1403c372dcc7080088
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025834"
 ---
 # <a name="using-statements-with-sql"></a>Como usar instruções com SQL
@@ -32,7 +32,7 @@ As seções a seguir descrevem os cenários diferentes para trabalhar usando dad
 
 ## <a name="in-this-section"></a>Nesta seção  
 
-| Tópico                                                                                                                        | Descrição                                                       |
+| Tópico                                                                                                                        | DESCRIÇÃO                                                       |
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | [Como usar uma instrução SQL sem parâmetros](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)                 | Descreve como usar instruções SQL sem parâmetros.   |
 | [Como usar uma instrução SQL com parâmetros](../../connect/jdbc/using-an-sql-statement-with-parameters.md)                       | Descreve como usar instruções SQL com parâmetros.      |

@@ -11,10 +11,10 @@ ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3cbc805ece4cc28a646d93d6607bcc45d65cd563
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027641"
 ---
 # <a name="understanding-concurrency-control"></a>Entendendo o controle de simultaneidade
@@ -28,7 +28,7 @@ ms.locfileid: "69027641"
 ## <a name="remarks"></a>Comentários  
  O driver JDBC oferece suporte aos seguintes tipos de simultaneidade:  
   
-|Tipo de simultaneidade|Características|Bloqueios de linha|Descrição|  
+|Tipo de simultaneidade|Características|Bloqueios de linha|DESCRIÇÃO|  
 |----------------------|---------------------|---------------|-----------------|  
 |CONCUR_READ_ONLY|Somente leitura|Não|Não são permitidas atualizações pelo cursor e não é mantido nenhum bloqueio nas linhas que compõem o conjunto de resultados.|  
 |CONCUR_UPDATABLE|Gravação de leitura otimista|Não|O banco de dados assumir contenção de linha é improvável, mas possível. A integridade de linha é verificada com uma comparação de carimbo de data e hora.|  
@@ -39,7 +39,7 @@ ms.locfileid: "69027641"
 ## <a name="result-sets-that-are-not-updateable"></a>Conjuntos de resultados que não são atualizáveis  
  Um conjunto de resultados atualizável é um conjunto de resultados no qual linhas podem ser inseridas, atualizadas e excluídas. Nos casos seguintes, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode criar um cursor atualizável. A exceção gerada é "O conjunto de resultados não é atualizável".  
   
-|Causa|Descrição|Medida|  
+|Causa|DESCRIÇÃO|Medida|  
 |-----------|-----------------|------------|  
 |A instrução não é criada usando a sintaxe do JDBC 2.0 (ou posterior)|O JDBC 2.0 introduziu novos métodos para criar instruções. Se a sintaxe do JDBC 1.0 for usada, o conjunto de resultados seguirá o padrão somente leitura.|Especifique o tipo de conjunto de resultados e simultaneidade ao criar a instrução.|  
 |A instrução é criada usando TYPE_SCROLL_INSENSITIVE|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um cursor de instantâneo estático. Ele é desconectado das linhas de tabela subjacentes para ajudar a proteger o cursor de atualizações de linha feitas por outros usuários.|Use TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC ou TYPE_FORWARD_ONLY com CONCUR_UPDATABLE para evitar criar um cursor estático.|  

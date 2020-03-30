@@ -22,10 +22,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 29aaab523b3a754c65b1b7a0312ceb5ea122f2d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68419322"
 ---
 # <a name="working-with-query-notifications"></a>Trabalhando com notificações de consulta
@@ -50,7 +50,7 @@ As assinaturas de notificação permanecem válidas mesmo após o encerramento d
 
 As notificações só são enviadas uma vez. Para que as notificações de alteração de dados sejam contínuas, crie uma assinatura reexecutando a consulta depois que cada notificação for processada.
 
-Os aplicativos do Driver do OLE DB para SQL Server normalmente recebem notificações usando o comando [RECEIVE](../../../t-sql/statements/receive-transact-sql.md) do [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Ele usa esse comando para ler notificações da fila associada ao serviço especificado nas opções da notificação.
+Os aplicativos do Driver do OLE DB para SQL Server normalmente recebem notificações usando o comando [!INCLUDE[tsql](../../../includes/tsql-md.md)]RECEIVE[ do ](../../../t-sql/statements/receive-transact-sql.md). Ele usa esse comando para ler notificações da fila associada ao serviço especificado nas opções da notificação.
 
 > [!NOTE]
 > Os nomes de tabela devem ser qualificados nas consultas para as quais a notificação é requerida. Por exemplo, `dbo.myTable`. Os nomes de tabela devem ser qualificados com nomes de duas partes. A assinatura é considerada inválida se nomes com três ou quatro partes são usados.
@@ -79,7 +79,7 @@ O Driver do OLE DB para SQL Server é compatível com notificações ao consumid
 
 Para dar suporte a notificações de consulta por meio do OLE DB, o Driver do OLE DB para SQL Server adiciona as novas propriedades a seguir ao conjunto de propriedades `DBPROPSET_SQLSERVERROWSET`.
 
-|Nome|Type|Descrição|
+|Nome|Type|DESCRIÇÃO|
 |----------|----------|-----------------|
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|O número de segundos que a notificação de consulta permanece ativa.<br /><br /> O padrão é 432.000 segundos (5 dias). O valor mínimo é 1 segundo e o valor máximo é 2^31-1 segundos.|
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|O texto da mensagem da notificação. Esse texto é definido pelo usuário e não tem um formato predefinido.<br /><br /> Por padrão, a cadeia de caracteres fica vazia. Especifique uma mensagem usando de 1 a 2000 caracteres.|

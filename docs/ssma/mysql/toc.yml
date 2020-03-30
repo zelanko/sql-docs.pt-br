@@ -38,7 +38,7 @@
   href: save-metadata-mysqltosql.md
 - name: Comandos de menu e outras teclas de atalho
   href: menu-commands-and-other-shortcut-keys-mysqltosql.md
-- name: Solução de problemas
+- name: solução de problemas
   href: troubleshooting-mysqltosql.md
 - name: Conectar-se ao MySQL
   href: connect-to-mysql-mysqltosql.md

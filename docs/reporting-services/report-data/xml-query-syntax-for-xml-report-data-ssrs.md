@@ -14,10 +14,10 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dd1bccb6bff8f19e9abb779310033f4685b31f67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081352"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxe de consulta XML para dados de relatório XML (SSRS)
@@ -61,7 +61,7 @@ ms.locfileid: "77081352"
 |Documento XML que usa padrão.|*Nenhuma consulta*.<br /><br /> O caminho de elemento deriva do próprio documento XML e independe do namespace.|  
   
 > [!NOTE]  
->  O primeiro exemplo de serviço Web lista o conteúdo do servidor de relatório que usa o método <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Para executar essa consulta, é necessário criar uma nova fonte de dados e definir a cadeia de conexão como `https://localhost/reportserver/reportservice2006.asmx`. O método <xref:ReportService2006.ReportingService2006.ListChildren%2A> usa dois parâmetros: **Item** e **Recursivo**. Defina o valor padrão de **Item** para **/** e **Recursive** para **1**.  
+>  O primeiro exemplo de serviço Web lista o conteúdo do servidor de relatório que usa o método <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Para executar essa consulta, é necessário criar uma nova fonte de dados e definir a cadeia de conexão como `https://localhost/reportserver/reportservice2006.asmx`. O método <xref:ReportService2006.ReportingService2006.ListChildren%2A> utiliza dois parâmetros: **Item** e **Recursive**. Defina o valor padrão de **Item** para **/** e **Recursive** para **1**.  
   
 ## <a name="specifying-namespaces"></a>Especificando namespaces  
  Use o elemento **Query** XML para especificar os namespaces usados nos dados XML da fonte de dados. A seguinte consulta XML usa o namespace **sales**. Os nós XML **ElementPath** para `sales:LineItems` e `sales:LineItem` usam o namespace **sales**.  
