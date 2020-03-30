@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 93b906a0604772fe224b1e63eaf6eed9eb8af983
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989227"
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Usando os arquivos de biblioteca e de cabeçalho do OLE DB Driver for SQL Server
