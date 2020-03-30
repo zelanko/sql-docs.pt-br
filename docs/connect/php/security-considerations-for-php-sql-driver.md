@@ -13,10 +13,10 @@ ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1fecf1add70a7b3bd96484cbd3634db2cfda01cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992893"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Considerações de segurança para os drivers da Microsoft para PHP para SQL Server
@@ -31,7 +31,7 @@ A Autenticação do Windows deve ser usada para se conectar ao SQL Server sempre
   
 -   **Os usuários estão sujeitos ao gerenciamento centralizado de contas.** Políticas de segurança, como períodos de validade da senha, comprimento mínimo da senha e bloqueio de conta após várias solicitações de logon inválidas são impostas.  
   
-Para obter informações sobre como se conectar a um servidor com a Autenticação do Windows, confira [Como conectar usando a Autenticação do Windows](../../connect/php/how-to-connect-using-windows-authentication.md).  
+Para obter informações sobre como se conectar a um servidor com a Autenticação do Windows, consulte [How to: Connect using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md).  
   
 Quando você se conecta usando a Autenticação do Windows, é recomendável configurar seu ambiente para que o SQL Server possa usar o protocolo de autenticação Kerberos. Para obter mais informações, veja [Como certificar-se de que você está usando a Autenticação Kerberos ao criar uma conexão remota com uma instância do SQL Server 2005](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c) ou [Autenticação Kerberos e SQL Server](https://msdn.microsoft.com/library/cc280744.aspx).  
   
@@ -39,7 +39,7 @@ Quando você se conecta usando a Autenticação do Windows, é recomendável con
 Devem-se usar conexões criptografadas sempre que dados confidenciais forem enviados para ou recuperados do SQL Server. Para obter informações sobre como habilitar conexões criptografadas, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados (SQL Server Configuration Manager)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Para estabelecer uma conexão segura com os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], use o atributo de conexão Encrypt ao se conectar ao servidor. Para obter mais informações sobre atributos de conexão, consulte [Connection Options](../../connect/php/connection-options.md).  
   
 ## <a name="use-parameterized-queries"></a>Usar consultas parametrizadas  
-Use consultas parametrizadas para reduzir o risco de ataques de injeção de SQL. Para exemplos de execução de consultas parametrizadas, confira [Como Executar consultas parametrizadas](../../connect/php/how-to-perform-parameterized-queries.md).  
+Use consultas parametrizadas para reduzir o risco de ataques de injeção de SQL. Para obter exemplos de como executar consultas parametrizadas, consulte [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md).  
   
 Para obter mais informações sobre ataques de injeção de SQL e as considerações de segurança relacionadas, veja [Injeção SQL](https://msdn.microsoft.com/library/ms161953.aspx).  
   

@@ -16,10 +16,10 @@ ms.assetid: fa96d0f8-101b-422f-a767-405be9a5f74f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f7e87040fa74954435ed52f9923568e8bfed3fd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954923"
 ---
 # <a name="execute-method-"></a>Método execute ()
@@ -35,7 +35,7 @@ public boolean execute()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **true** se a instrução retornar como um conjunto de resultados. **false** se ela retornar uma contagem de atualizações ou nenhum resultado.  
+ **true**  se a instrução retornar como um conjunto de resultados. **false** se ela retornar uma contagem de atualizações ou nenhum resultado.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

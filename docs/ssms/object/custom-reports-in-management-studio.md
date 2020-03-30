@@ -15,10 +15,10 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 0e5dafb96c0bb94fcb2dd0134fefb3f96b7c5708
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257233"
 ---
 # <a name="custom-reports-in-management-studio"></a>Relatórios personalizados no Management Studio

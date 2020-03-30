@@ -11,10 +11,10 @@ ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 700aa5adb410c7718667bf05313f18636be01a69
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75557941"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Executar etapas do Windows PowerShell no SQL Server Agent
@@ -37,13 +37,13 @@ Existem vários tipos de etapas de trabalho do [!INCLUDE[ssNoVersion](../include
 
 - Use uma etapa de trabalho de prompt de comando para executar o PowerShell.exe e especifique um script que importa o módulo **sqlps** .
 
-### <a name="LimitationsRestrictions"></a> Cuidado sobre o consumo de memória
+### <a name="caution-about-memory-consumption"></a><a name="LimitationsRestrictions"></a> Cuidado sobre o consumo de memória
 
 Cada etapa de trabalho do Agente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que executa o PowerShell com o módulo **sqlps** inicia um processo, que consome aproximadamente **20 MB** de memória. A execução de um grande número de etapas de trabalho concorrentes do Windows PowerShell pode afetar o desempenho de forma negativa.  
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-##  <a name="PShellJob"></a> Criar uma etapa de trabalho do PowerShell  
+##  <a name="create-a-powershell-job-step"></a><a name="PShellJob"></a> Criar uma etapa de trabalho do PowerShell  
  **Para criar uma etapa de trabalho do PowerShell**  
   
 1.  Expanda **SQL Server Agent**, crie um novo trabalho ou clique com o botão direito do mouse em um trabalho existente e clique em **Propriedades**. Para obter mais informações sobre como criar um trabalho, consulte [Criando trabalhos](../ssms/agent/create-jobs.md).  
@@ -60,7 +60,7 @@ Cada etapa de trabalho do Agente do [!INCLUDE[ssNoVersion](../includes/ssnoversi
   
 7.  Clique na página **Avançado** para definir as seguintes opções de etapa de trabalho: a ação a tomar em caso de êxito ou falha da etapa, quantas vezes o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent deve tentar executar a etapa e com que frequência.  
   
-##  <a name="CmdExecJob"></a> Criar uma etapa de trabalho de prompt de comando  
+##  <a name="create-a-command-prompt-job-step"></a><a name="CmdExecJob"></a> Criar uma etapa de trabalho de prompt de comando  
  **Para criar uma etapa de trabalho CmdExec**  
   
 1.  Expanda **SQL Server Agent**, crie um novo trabalho ou clique com o botão direito do mouse em um trabalho existente e clique em **Propriedades**. Para obter mais informações sobre como criar um trabalho, consulte [Criando trabalhos](../ssms/agent/create-jobs.md).  

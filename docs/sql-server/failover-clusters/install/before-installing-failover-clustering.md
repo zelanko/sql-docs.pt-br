@@ -14,10 +14,10 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72517936"
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar o cluster de failover
@@ -37,7 +37,7 @@ ms.locfileid: "72517936"
   
  
   
-##  <a name="BestPractices"></a> Práticas recomendadas  
+##  <a name="best-practices"></a><a name="BestPractices"></a> Práticas recomendadas  
   
 -   Examinar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [Notas sobre a versão](https://go.microsoft.com/fwlink/?LinkId=296445)  
   
@@ -47,9 +47,9 @@ ms.locfileid: "72517936"
   
     -   O .NET Framework 3.5 SP1 não é mais instalado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mas pode ser necessário durante a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em sistemas operacionais antigos do Windows. Para obter mais informações, veja [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Notas de versão](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Pacote de atualização:** Para evitar que o computador seja reinicializado devido à instalação do .NET Framework 4 durante a instalação, a instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] requer que uma atualização do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] seja instalada no computador.  Se você estiver instalando o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] no Windows 7 SP1 ou [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, essa atualização será incluída. Se você estiver instalando em um sistema operacional Windows mais antigo, baixe-o em [Microsoft Update para .NET Framework 4.0 no Windows Vista e Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update:** para evitar que o computador seja reinicializado devido à instalação do .NET Framework 4 durante a instalação, a instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] exige a instalação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update no computador.  Se você estiver instalando o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] no Windows 7 SP1 ou [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, essa atualização será incluída. Se você estiver instalando em um sistema operacional Windows mais antigo, baixe-o em [Microsoft Update para .NET Framework 4.0 no Windows Vista e Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
-    -   .NET Framework 4: O .NET Framework 4 é instalado em um sistema operacional clusterizado. Para reduzir o tempo de instalação, convém instalar o .NET Framework 4 antes de executar a Instalação.  
+    -   .NET Framework 4: a instalação instala o .NET Framework 4 em um sistema operacional clusterizado. Para reduzir o tempo de instalação, convém instalar o .NET Framework 4 antes de executar a Instalação.  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Arquivos de suporte à Instalação. Você pode instalar esses arquivos executando o SqlSupport.msi localizado na mídia de instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
@@ -81,7 +81,7 @@ ms.locfileid: "72517936"
   
     -   Se estiver usando o compartilhamento de arquivo SMB como opção de armazenamento, a conta de Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve ter SeSecurityPrivilege no servidor de arquivo. Para fazer isso, usando o console Política de Segurança Local no servidor de arquivos, adicione a conta de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aos direitos de **Gerenciar a auditoria e o log de segurança** .  
   
-##  <a name="Hardware"></a> Verifique sua solução de hardware  
+##  <a name="verify-your-hardware-solution"></a><a name="Hardware"></a> Verifique sua solução de hardware  
   
 -   Se a solução de cluster incluir nós de clusters dispersos geograficamente, deverão ser verificados itens adicionais, como latência de rede e suporte a disco compartilhado.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "72517936"
   
 -   Para instalar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando os arquivos de instalação de origem do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e o cluster existirem em domínios diferentes, copie os arquivos de instalação no domínio atual disponível para o cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-##  <a name="Security"></a> Examine as considerações sobre segurança  
+##  <a name="review-security-considerations"></a><a name="Security"></a> Examine as considerações sobre segurança  
   
 -   Para usar criptografia, instale o certificado de servidor com o nome DNS totalmente qualificado do cluster do WSFC em todos os nós no cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por exemplo, se você tiver um cluster de dois nós, com nós nomeados "Test1.DomainName.com" e "Test2.DomainName.com" e uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] denominada"Virtsql", deverá obter um certificado para "Virtsql.DomainName.com" e instalar o certificado nos nós test1 e test2. Em seguida, você pode marcar a caixa de seleção **Forçar criptografia de protocolo** no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager para configurar o cluster de failover para criptografia.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "72517936"
     *   FCI do SQL em clusters de Domínio + Grupo de trabalho. 
 
   
-##  <a name="Network"></a> Examine as considerações sobre rede, porta e firewall  
+##  <a name="review-network-port-and-firewall-considerations"></a><a name="Network"></a> Examine as considerações sobre rede, porta e firewall  
   
 -   Verifique se você desabilitou o NetBIOS para todas as placas de rede privada antes de começar a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -183,7 +183,7 @@ ms.locfileid: "72517936"
   
     5.  Após o término da instalação, volte para Conexões de Rede no Painel de Controle e desabilite todos os adaptadores de rede que não estiverem em uso.  
   
-##  <a name="OS_Support"></a> Verifique seu sistema operacional  
+##  <a name="verify-your-operating-system"></a><a name="OS_Support"></a> Verifique seu sistema operacional  
  Verifique se o sistema operacional está instalado corretamente e se foi projetado para dar suporte a clustering de failover. A tabela a seguir é uma lista das edições do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e dos sistemas operacionais com suporte para elas.  
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] edição|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
@@ -199,7 +199,7 @@ ms.locfileid: "72517936"
   
  **Com suporte para clustering de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-##  <a name="MultiSubnet"></a> Considerações adicionais para configurações de várias sub-redes  
+##  <a name="additional-considerations-for-multi-subnet-configurations"></a><a name="MultiSubnet"></a> Considerações adicionais para configurações de várias sub-redes  
  As seções a seguir descrevem os requisitos a serem considerados ao instalar um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Uma configuração de várias sub-redes envolve o clustering em várias sub-redes, envolvendo, assim, o uso de vários endereços IP e alterações em dependências de recurso do endereço IP.  
   
 ### <a name="ssnoversion-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Considerações sobre a edição e o sistema operacional  
@@ -225,7 +225,7 @@ ms.locfileid: "72517936"
 #### <a name="related-content"></a>Conteúdo relacionado  
  Para obter mais informações sobre o failover de multissite do [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] , veja o [Site sobre clustering de failover do Windows Server 2008 R2](https://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) e o artigo [Design de um serviço ou aplicativo clusterizado em um cluster de failover de multissite](https://go.microsoft.com/fwlink/?LinkId=177873).  
   
-##  <a name="WSFC"></a> Configurar um cluster de failover do Windows Server  
+##  <a name="configure-windows-server-failover-cluster"></a><a name="WSFC"></a> Configurar um cluster de failover do Windows Server  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] O WSFC (Serviço de Cluster) deve ser configurado em, pelo menos, um nó de cluster de servidores. Você também deve executar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard com o WSFC. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise dá suporte a clusters de failover com até 16 nós. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard dão suporte a clusters de failover com dois nós.  
   
@@ -235,7 +235,7 @@ ms.locfileid: "72517936"
   
 -   Configure o DNS (Serviço de Nomes de Domínio) ou o WINS (Serviço de Cadastramento na Internet do Windows). Um servidor DNS ou WINS deve estar em execução no ambiente onde o cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será instalado. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] A Instalação exige o registro de serviço de nomes de domínio dinâmico da referência virtual da interface IP do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A configuração do servidor DNS deve permitir que nós de cluster registrem dinamicamente um mapa de endereço IP online para Nome de Rede. Se o registro dinâmico não puder ser concluído, ocorrerá falha na Instalação e ela será revertida. Para obter mais informações, confira [este artigo da Base de Dados de Conhecimento](https://support.microsoft.com/kb/947048)  
   
-##  <a name="MSDTC"></a> Instalar o Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
+##  <a name="install-msconame-distributed-transaction-coordinator"></a><a name="MSDTC"></a> Instalar o Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
  Antes de instalar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um cluster de failover, determine se o recurso de cluster do MSDTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ) deve ser criado. Se você estiver instalando somente o [!INCLUDE[ssDE](../../../includes/ssde-md.md)], o recurso de cluster do MSDTC não será necessário. Se estiver instalando o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e o SSIS, os Componentes da Estação de Trabalho, ou se usar transações distribuídas, você deverá instalar o MSDTC. Observe que o MSDTC não é necessário para instâncias somente do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  No [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] e no [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)], você pode instalar várias instâncias do MSDTC em um único cluster de failover. A primeira instância do MSDTC instalada será a instância padrão de cluster do MSDTC. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aproveitará as vantagens de uma instância do MSDTC instalada no grupo de recursos do cluster local do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a instância do MSDTC automaticamente. Porém, podem ser mapeados aplicativos individuais para qualquer instância do MSDTC no cluster.  

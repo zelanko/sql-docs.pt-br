@@ -11,10 +11,10 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5f744f0bb5d1ced6424fc8882a0a215042fbfc69
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76920339"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Melhores práticas e solução de problemas de backup para URL do SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "76920339"
   
 -   [Tutorial: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## <a name="managing-backups-mb1"></a> Como gerenciar backups  
+## <a name="managing-backups"></a><a name="managing-backups-mb1"></a> Como gerenciar backups  
  A lista a seguir inclui recomendações gerais para gerenciar backups:  
   
 -   O nome de arquivo exclusivo para cada backup é recomendável para evitar a substituição acidental dos blobs.  

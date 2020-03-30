@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 1:  Configurar o ambiente de desenvolvimento para o desenvolvimento de Node.js | Microsoft Docs'
+title: 'Etapa 1: configurar o ambiente de desenvolvimento para o desenvolvimento de Node.js | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce89cc12c7493522de55adffb69fcbe3307cbdf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68003761"
 ---
-# <a name="step-1--configure-development-environment-for-nodejs-development"></a>Etapa 1:  Configurar o ambiente de desenvolvimento para o desenvolvimento de Node.js
+# <a name="step-1--configure-development-environment-for-nodejs-development"></a>Etapa 1: configurar o ambiente de desenvolvimento para o desenvolvimento de Node.js
 Você precisará configurar seu ambiente de desenvolvimento com os pré-requisitos para desenvolvimento um aplicativo usando o Driver do Node.js para SQL Server.  O método mais comum é usar o npm (gerenciador de pacotes de nó) para instalar o módulo tedious, mas você poderá baixar o módulo tedious diretamente do [GitHub](https://github.com/pekim/tedious) se preferir.  
   
 Observe que o Driver do Node.js usa o protocolo TDS, que é habilitado por padrão no SQL Server e no Banco de Dados SQL do Azure.  É necessário realizar uma configuração adicional.  

@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68995849"
 ---
 # <a name="permissions-database-engine"></a>Permissões (Mecanismo de Banco de Dados)
@@ -40,7 +40,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
 Para obter dicas sobre como planejar um sistema de permissões, confira [Introdução a permissões de mecanismo de banco de dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
   
-##  <a name="_conventions"></a> Convenções de Nomenclatura de Permissões  
+##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a> Convenções de Nomenclatura de Permissões  
  A seguir, encontram-se as convenções gerais a serem adotadas ao se nomear permissões:  
   
 -   CONTROL  
@@ -96,7 +96,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 ## <a name="chart-of-sql-server-permissions"></a>Gráfico de permissões do SQL Server  
 [!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
-##  <a name="_securables"></a> Permissões Aplicáveis a Protegíveis Específicos  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a> Permissões Aplicáveis a Protegíveis Específicos  
  A tabela a seguir lista classes principais de permissões e os tipos de protegíveis aos quais elas podem ser aplicadas.  
   
 |Permissão|Aplica-se a|  
@@ -118,7 +118,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 > [!CAUTION]  
 >  As permissões padrão concedidas aos objetos de sistema no momento da instalação são avaliadas cuidadosamente contra possíveis ameaças e não precisam ser alteradas como parte do sistema de proteção de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Qualquer alteração nas permissões nos objetos de sistema poderia limitar ou interromper a funcionalidade e potencialmente pode deixar a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um estado sem suporte.  
   
-##  <a name="_permissions"></a> Permissões do SQL Server  
+##  <a name="sql-server-permissions"></a><a name="_permissions"></a> Permissões do SQL Server  
  A tabela a seguir fornece uma lista completa de permissões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . As permissões[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] estão disponíveis apenas para protegíveis base com suporte. Não é possível dar permissões no nível do servidor no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], no entanto, permissões de banco de dados são disponibilizadas em alguns casos.  
   
 |Protegível base|Permissões granulares no protegível base|Código de tipo de permissão|Protegível que contém o protegível base|Permissão no protegível de contêiner que implica permissão granular no protegível base|  
@@ -361,7 +361,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a> Resumo do algoritmo de verificação de permissão  
+##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Resumo do algoritmo de verificação de permissão  
  A verificação de permissões pode ser uma tarefa complexa. O algoritmo de verificação de permissão inclui a sobreposição de associações de grupo e o encadeamento de propriedades, as permissões explícita e implícita, e pode ser afetado pelas permissões em classes de protegíveis que contêm a entidade protegível. O processo geral do algoritmo é coletar todas as permissões pertinentes. Se nenhum bloqueio DENY for localizado, o algoritmo irá procurar uma permissão GRANT que fornece acesso suficiente. O algoritmo contém três elementos essenciais, o **contexto de segurança**, o **espaço de permissão**e a **permissão necessária**.  
   
 > [!NOTE]  
@@ -423,7 +423,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 DENY na tabela é substituído por GRANT em uma coluna. No entanto, um DENY posterior na tabela removerá a coluna GRANT. 
   
-##  <a name="_examples"></a> Exemplos  
+##  <a name="examples"></a><a name="_examples"></a> Exemplos  
  Os exemplos nesta seção mostram como recuperar informações sobre permissões.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>a. Retornando a lista completa de permissões que podem ser concedidas  

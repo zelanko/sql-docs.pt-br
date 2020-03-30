@@ -11,10 +11,10 @@ ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
 ms.openlocfilehash: d35c339798b4385cb903d8a4a83f13184bbf4db3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72381752"
 ---
 # <a name="sql-server-login-dialog-box"></a>Caixa de diálogo de logon do SQL Server
@@ -32,10 +32,10 @@ Quando você tenta se conectar sem especificar informações o suficiente, o dri
 ![Captura de tela da Caixa de Diálogo de Logon do SQL Server](../media/sql-server-login-dialog.png)
 
 ## <a name="options"></a>Opções
-|Opção|Descrição|
+|Opção|DESCRIÇÃO|
 |---   |---        |
 |Servidor|O nome de uma instância do SQL Server na sua rede. Selecione um nome de servidor\instância na lista ou digite o nome do servidor\instância na caixa **Servidor**. Se desejar, crie um alias de servidor no computador cliente usando o **SQL Server Configuration Manager** e digite esse nome na caixa **Servidor**. <br/><br/>Digite "(local)" quando estiver usando o mesmo computador como SQL Server. Assim, você pode se conectar a uma instância local do SQL Server, até mesmo ao executar uma versão não em rede do SQL Server.<br/><br/>Para obter mais informações sobre nomes de servidor para diferentes tipos de rede, confira [Instalação do SQL Server](https://go.microsoft.com/fwlink/?linkid=2067541).|
-|Modo de autenticação|Você pode selecionar as seguintes opções de autenticação na lista suspensa:<br/><ul><li>Autenticação do `Windows Authentication:` para SQL Server usando as credenciais da conta do Windows do usuário conectado no momento.</li><li>Autenticação do `SQL Server Authentication:` usando a ID de logon e a senha.</li><li>Autenticação integrada do `Active Directory - Integrated:` com uma identidade do Azure Active Directory. Esse modo também pode ser usado para a autenticação do Windows para SQL Server.</li><li>Autenticação de ID e senha do usuário do `Active Directory - Password:` com uma identidade do Azure Active Directory.</li><li>Autenticação interativa do `Active Directory - Universal with MFA support:` com uma identidade do Azure Active Directory. Este modo é compatível com a Autenticação Multifator (MFA) do Azure</li></ul>|
+|Modo de autenticação|Você pode selecionar as seguintes opções de autenticação na lista suspensa:<br/><ul><li>Autenticação do `Windows Authentication:` para SQL Server usando as credenciais da conta do Windows do usuário conectado no momento.</li><li>Autenticação do `SQL Server Authentication:` usando a ID de logon e a senha.</li><li>Autenticação integrada do `Active Directory - Integrated:` com uma identidade do Azure Active Directory. Esse modo também pode ser usado para a autenticação do Windows para SQL Server.</li><li>Autenticação de ID de usuário e senha do `Active Directory - Password:` com uma identidade do Azure Active Directory.</li><li>Autenticação interativa do `Active Directory - Universal with MFA support:` com uma identidade do Azure Active Directory. Este modo é compatível com a Autenticação Multifator (MFA) do Azure.</li></ul>|
 |SPN do servidor|Se você usar uma conexão confiável, poderá especificar um SPN (nome de entidade de serviço) para o servidor.|
 |ID de Logon|Especifica a ID de logon a ser usada na conexão. A caixa de texto ID de logon só será habilitada se `Authentication Mode` for definido como `SQL Server Authentication`, `Active Directory - Password` ou `Active Directory - Universal with MFA support`.|
 |Senha|Especifica a senha usada para a conexão. A caixa de texto de senha só será integrada se `Authentication Mode` for definido como `SQL Server Authentication` ou `Active Directory - Password`.|
@@ -49,8 +49,8 @@ Quando você tenta se conectar sem especificar informações o suficiente, o dri
 |Linguagem|Especifica o idioma nacional a ser usado para mensagens de sistema do SQL Server. O computador que executa o SQL Server deve ter o idioma instalado. Essa configuração substitui o idioma padrão especificado para o logon no servidor. Se nenhum idioma for especificado, a conexão usará o idioma padrão especificado para o logon no servidor.|
 |Nome do Aplicativo|Especifica o nome do aplicativo a ser armazenado na coluna **program_name** na linha dessa conexão em **sys.sysprocesses**.|
 |ID da Estação de Trabalho|Especifica a ID da estação de trabalho a ser armazenada na coluna **hostname** na linha dessa conexão em **sys.sysprocesses**.|
-|Usar criptografia forte para dados|Quando selecionado, os dados transmitidos pela conexão serão criptografados.|
-|Confiar em certificado do servidor|Quando selecionado, o certificado do servidor será validado. O certificado do servidor deve ter o nome de host correto do servidor e ser emitido por uma autoridade de certificação confiável.|
+|Usar criptografia forte para dados|Quando for selecionado, os dados transmitidos pela conexão serão criptografados.|
+|Confiar em certificado do servidor|Quando for selecionado, o certificado do servidor será validado. O certificado do servidor deve ter o nome de host correto do servidor e ser emitido por uma autoridade de certificação confiável.|
 
 > [!NOTE]  
 > Ao usar os modos `Windows Authentication` ou `SQL Server Authentication`, o **Certificado do servidor confiável** é considerado somente quando a opção **Usar criptografia forte para os dados** está habilitada.

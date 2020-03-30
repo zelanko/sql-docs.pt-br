@@ -14,10 +14,10 @@ ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7a65b7559770b6de0d1ebd928815458c02acfd41
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299047"
 ---
 # <a name="saving-a-package-programmatically"></a>Salvando um pacote programaticamente
@@ -30,7 +30,7 @@ ms.locfileid: "71299047"
  Todos os métodos usados nesse tópico para salvar pacotes exigem uma referência ao assembly **Microsoft.SqlServer.ManagedDTS** . Após adicionar a referência em um novo projeto, importe o namespace <xref:Microsoft.SqlServer.Dts.Runtime> com uma instrução **using** ou **Imports**.  
   
 ## <a name="saving-a-package-programmatically"></a>Salvando um pacote programaticamente  
- Para salvar um pacote programaticamente, chame um dos seguintes métodos da classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  
+ Para salvar um pacote programaticamente, chame um dos seguintes métodos da classe [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do <xref:Microsoft.SqlServer.Dts.Runtime.Application>:  
   
 |Local de armazenamento|Método de chamada|  
 |----------------------|--------------------|  

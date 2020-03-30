@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a3d52368ac0eaeba118d0ba6e7abc88ef5e69db9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68063140"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamanho da tabela e da linha em tabelas com otimização de memória
@@ -42,7 +42,7 @@ Uma tabela com otimização de memória consiste em uma coleção de linhas e í
 ![Tabela com otimização de memória.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Tabela com otimização de memória.")  
 Tabela com otimização de memória composta por índices e linhas.  
 
-##  <a name="bkmk_TableSize"></a> Calculando o tamanho da tabela
+##  <a name="computing-table-size"></a><a name="bkmk_TableSize"></a> Calculando o tamanho da tabela
 O tamanho de uma tabela na memória, em bytes, é calculado da seguinte forma:  
   
 ```  
@@ -63,7 +63,7 @@ O tamanho da linha é calculado adicionando-se o cabeçalho e o corpo:
 [row size] = [row header size] + [actual row body size]  
 [row header size] = 24 + 8 * [number of indexes]  
 ```  
-##  <a name="bkmk_RowBodySize"></a> Calculando o tamanho do corpo da linha
+##  <a name="computing-row-body-size"></a><a name="bkmk_RowBodySize"></a> Calculando o tamanho do corpo da linha
 
 **Estrutura de Linha** As linhas em uma tabela com otimização de memória têm os seguintes componentes:  
   
@@ -126,17 +126,17 @@ A tabela a seguir descreve o cálculo do tamanho do corpo da linha, fornecido co
   
 |Seção|Tamanho|Comentários|  
 |-------------|----------|--------------|  
-|Colunas do tipo superficial|SUM([tamanho dos tipos superficiais]). O tamanho dos tipos individuais em bytes é o seguinte:<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (precisão <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric**(precisão>18): 16<br /><br /> **Uniqueidentifier**: 16||  
+|Colunas do tipo superficial|SUM([tamanho dos tipos superficiais]). O tamanho dos tipos individuais em bytes é o seguinte:<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (precisão < = 18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric** (precisão > 18): 16<br /><br /> **Uniqueidentifier**: 16||  
 |Preenchimento da coluna superficial|Os valores possíveis são:<br /><br /> 1 se houver colunas do tipo profundas e o tamanho total dos dados das colunas superficiais for como um número ímpar.<br /><br /> Caso contrário, será 0|Os tipos profundos são os tipos (var)binary e (n)(var)char.|  
 |Matriz de deslocamento para colunas do tipo profundas|Os valores possíveis são:<br /><br /> 0 se não houver nenhuma coluna do tipo profunda<br /><br /> Caso contrário, 2 + 2 * [número de colunas do tipo profundas]|Os tipos profundos são os tipos (var)binary e (n)(var)char.|  
 |Matriz NULL|[número de colunas que permitem valor nulo] / 8, arredondado para bytes completos.|A matriz tem um bit por coluna que permite valor nulo. Ele é arredondado para bytes completos.|  
 |Preenchimento da matriz NULL|Os valores possíveis são:<br /><br /> 1 se houver colunas do tipo profundas e o tamanho da matriz NULL é um número ímpar de bytes.<br /><br /> Caso contrário, será 0|Os tipos profundos são os tipos (var)binary e (n)(var)char.|  
-|Preenchimento|Se não houver colunas de tipo profunda: 0<br /><br /> Se houver colunas do tipo profundas, de 0 a 7 bytes de preenchimento serão adicionados, com base no maior alinhamento exigido por uma coluna superficial. Cada coluna superficial exige alinhamento igual a seu tamanho, como documentado acima, exceto pelo fato de que as colunas GUID precisam de alinhamento de 1 byte (e não 16) e as colunas numéricas sempre precisam de alinhamento de 8 bytes (nunca 16). O requisito de maior alinhamento entre todas as colunas superficiais é usado, e de 0 a 7 bytes de preenchimento são adicionados, de modo que o tamanho total até agora (sem as colunas do tipo profundas) é um múltiplo do alinhamento requerido.|Os tipos profundos são os tipos (var)binary e (n)(var)char.|  
+|Preenchimento|Se não houver nenhuma coluna do tipo profunda: 0<br /><br /> Se houver colunas do tipo profundas, de 0 a 7 bytes de preenchimento serão adicionados, com base no maior alinhamento exigido por uma coluna superficial. Cada coluna superficial exige alinhamento igual a seu tamanho, como documentado acima, exceto pelo fato de que as colunas GUID precisam de alinhamento de 1 byte (e não 16) e as colunas numéricas sempre precisam de alinhamento de 8 bytes (nunca 16). O requisito de maior alinhamento entre todas as colunas superficiais é usado, e de 0 a 7 bytes de preenchimento são adicionados, de modo que o tamanho total até agora (sem as colunas do tipo profundas) é um múltiplo do alinhamento requerido.|Os tipos profundos são os tipos (var)binary e (n)(var)char.|  
 |Colunas do tipo profundas de comprimento fixo|SUM(*tamanho das colunas do tipo profundo de tamanho fixo*)<br /><br /> O tamanho de cada coluna é o seguinte:<br /><br /> i para char(i) e binary(i).<br /><br /> 2 * i para nchar(i)|As colunas do tipo profundas de comprimento fixo são colunas do tipo char(i), nchar(i) ou binary(i).|  
 |*Tamanho calculado* das colunas do tipo profundo de tamanho variável|SUM(*tamanho calculado das colunas do tipo profundo de tamanho variável*)<br /><br /> O tamanho calculado de cada coluna é o seguinte:<br /><br /> i para varchar(i) e varbinary(i)<br /><br /> 2 * i para nvarchar(i)|Essa linha é aplicada somente ao *tamanho calculado do corpo da linha*.<br /><br /> As colunas do tipo profundas de comprimento variável são colunas do tipo varchar(i), nvarchar(i) ou varbinary(i). O tamanho calculado é determinado pelo comprimento máximo (i) da coluna.|  
 |*Tamanho real* das colunas do tipo profundo de tamanho variável|SUM(*tamanho real das colunas do tipo profundo de tamanho variável*)<br /><br /> O tamanho real de cada coluna é o seguinte:<br /><br /> n, onde n é o número de caracteres armazenados na coluna, para varchar(i).<br /><br /> 2 * n, onde n é o número de caracteres armazenados na coluna, para nvarchar(i).<br /><br /> n, onde n é o número de bytes armazenados na coluna, para varbinary(i).|Essa linha é aplicada somente ao *tamanho real do corpo da linha*.<br /><br /> O tamanho real é determinado pelos dados armazenados nas colunas da linha.|   
   
-##  <a name="bkmk_ExampleComputation"></a> Exemplo: cálculo do tamanho da tabela e da linha  
+##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a> Exemplo: Cálculo do tamanho da tabela e da linha  
  Para índices de hash, o número de buckets real é arredondado até a potência mais próxima de 2. Por exemplo, se o `bucket_count` especificado for 100000, o número real de buckets do índice será 131072.  
   
 Considere uma tabela Orders com a seguinte definição:  
@@ -204,7 +204,7 @@ Em seguida, vamos calcular o [tamanho real do corpo da linha]:
   
     -   O preenchimento total é 24 - 22 = 2 bytes.  
   
--   Não há colunas de tipo profundas de comprimento fixo (colunas de tipo profundas de comprimento fixo: 0.).  
+-   Não há colunas do tipo profundas de comprimento fixo (Colunas do tipo profundas de comprimento fixo: 0.).  
   
 -   O tamanho real da coluna do tipo profunda é 2 * 78 = 156. A única coluna do tipo profundo `OrderDescription` tem o tipo `nvarchar`.  
   
@@ -228,7 +228,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
 
-##  <a name="bkmk_OffRowLimitations"></a> Limitações de coluna fora da linha
+##  <a name="off-row-column-limitations"></a><a name="bkmk_OffRowLimitations"></a> Limitações de coluna fora da linha
   Certas limitações e restrições ao uso de colunas fora da linha em uma tabela com otimização de memória estão listadas abaixo:
   
 -   Se houver um índice columnstore em uma tabela com otimização de memória, todas as colunas deverão caber na linha. 

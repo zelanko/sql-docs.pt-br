@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8081b4b4b4c8a9d19af0c558d162974d98e16878
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68094740"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Adicionar colunas a uma tabela (Mecanismo de Banco de Dados)
@@ -28,19 +28,19 @@ ms.locfileid: "68094740"
 
 Este artigo descreve como adicionar novas colunas a uma tabela no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-## <a name="BeforeYouBegin"></a> Antes de começar
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar
 
-### <a name="Restrictions"></a> Limitações e restrições
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições
 
  Usar a instrução ALTER TABLE para adicionar colunas a uma tabela automaticamente adiciona essas colunas ao final da tabela. Se você desejar que as colunas fiquem em uma ordem específica na tabela, use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. No entanto, observe que esta não é uma prática recomendada de design de banco de dados. A prática recomendada é especificar a ordem em que as colunas serão retornadas nos níveis de aplicativo e de consulta. Você não deve confiar no uso de SELECT * para retornar todas as colunas na ordem esperada com base na ordem em que são definidas na tabela. Sempre especifique as colunas por nome em suas consultas e aplicativos na ordem em que você gostaria que elas aparecessem.
 
-### <a name="Security"></a> Segurança
+### <a name="security"></a><a name="Security"></a> Segurança
 
-#### <a name="Permissions"></a> Permissões
+#### <a name="permissions"></a><a name="Permissions"></a> Permissões
 
 Exige a permissão ALTER na tabela.
 
-## <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio
 
 ### <a name="to-insert-columns-into-a-table-with-table-designer"></a>Para inserir colunas em uma tabela com o Designer de Tabela
 
@@ -61,7 +61,7 @@ Exige a permissão ALTER na tabela.
 
 6. Quando você terminar de adicionar as colunas, no menu **Arquivo**, escolha **Salvar** _nome da tabela_.
   
-## <a name="TsqlProcedure"></a> Usando o Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL
   
 ### <a name="to-insert-columns-into-a-table"></a>Para inserir colunas em uma tabela  
   
@@ -71,4 +71,4 @@ O exemplo a seguir adiciona duas colunas à tabela `dbo.doc_exa`.
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;
 ```
 
-#### <a name="FollowUp"></a> Para obter mais informações, consulte [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
+#### <a name="for-more-information-see-alter-table-40transact-sql41"></a><a name="FollowUp"></a> Para obter mais informações, consulte [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)

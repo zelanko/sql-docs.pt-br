@@ -9,10 +9,10 @@ ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e527b4059e225b012a2fa39cf21033b8af5ab9e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081092"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Dicas de design de relatórios (Construtor de Relatórios e SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "77081092"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DesigningReports"></a> Criando relatórios  
+##  <a name="designing-reports"></a><a name="DesigningReports"></a> Criando relatórios  
   
 -   Um relatório criado corretamente transmite informações que resultam em ação. Identifique as perguntas que o relatório ajuda responder. Se lembre dessas perguntas como você cria o relatório.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "77081092"
   
  Para obter mais informações sobre ideias a serem considerar na criação do seu relatório, consulte [Planejando um relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
   
-##  <a name="NamingConventions"></a> Convenções de nomenclatura para relatórios, fontes de dados e conjuntos de dados  
+##  <a name="naming-conventions-for-reports-data-sources-and-datasets"></a><a name="NamingConventions"></a> Convenções de nomenclatura para relatórios, fontes de dados e conjuntos de dados  
   
 -   Use convenções de nomenclatura para fontes de dados e conjuntos de dados que documentam a origem dos dados.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "77081092"
   
 -   Use sublinhados em vez de espaços em nomes de relatório. Se você baixar um relatório do portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , os espaços serão substituídos por sublinhados. Se você usar o recurso de download para salvar relatórios localmente e, em seguida, incluí-los no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o uso de sublinhados manterá as dependências do relatório para sub-relatórios e os links de detalhamento precisos.  
   
-##  <a name="Data"></a> Trabalhando com dados  
+##  <a name="working-with-data"></a><a name="Data"></a> Trabalhando com dados  
   
 -   Como uma primeira etapa, obtenha todos os dados com os quais você deseja trabalhar para aparecerem no painel de dados do relatório. Ao refinar as perguntas que o relatório deve responder, pense em como limitar ao máximo os dados nos conjuntos de dados do relatório.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "77081092"
   
 -   Dependendo dos seus requisitos, é possível exibir nomes e locais de fontes de dados do relatório, texto de comandos de consultas do conjunto de dados e valores dos parâmetros no relatório. A primeira pergunta de muitos novos usuários é sobre a origem dos dados. Para reduzir a desordem no relatório, você pode ocultar caixas de texto condicionalmente com este tipo de informações e permitir que os usuários escolham se desejam visualizá-las. Tente adicionar essas informações na última página do relatório. Defina a visibilidade da caixa de texto com base em um parâmetro que o usuário pode mudar.  
   
-##  <a name="DesignSurface"></a> Interagindo com a superfície de design do relatório  
+##  <a name="interacting-with-the-report-design-surface"></a><a name="DesignSurface"></a> Interagindo com a superfície de design do relatório  
  A superfície de design do relatório não é o que aparece na tela. Quando você coloca itens do relatório na superfície de design, o local relativo afeta o modo como os itens aparecem na página do relatório renderizado. O espaço em branco é preservado.  
   
 -   Use guias de alinhamento e botões de layout para alinhar e organizar itens na superfície de design do relatório. Por exemplo, você pode alinhar as partes superiores ou as bordas de itens selecionados, expandir um item para que corresponda ao tamanho de outro item ou ajustar o espaçamento entre itens.  
@@ -88,7 +88,7 @@ ms.locfileid: "77081092"
   
 -   Para arrastar campos do painel de dados do relatório para o painel Agrupamento, evite arrastar o campo por outros itens do relatório na superfície de design, pois isso seleciona os outros itens e desmarca a região de dados Tablix. Arraste o campo para baixo no painel de dados do relatório e, em seguida, horizontalmente no painel Agrupamento.  
   
-###  <a name="Selecting"></a> Selecionando itens  
+###  <a name="selecting-items"></a><a name="Selecting"></a> Selecionando itens  
  Para ajudar a selecionar o objeto que você deseja na superfície de design de relatório, use a tecla ESC, o menu de contexto do botão direito do mouse, o painel Propriedades e o painel Agrupamento.  
   
 -   -   Pressione ESC para alternar entre a pilha de itens do relatório que ocupam o mesmo espaço na superfície de design.  
@@ -101,31 +101,31 @@ ms.locfileid: "77081092"
   
  No Designer de Relatórios do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], você pode selecionar da lista suspensa de objetos na barra de ferramentas do painel Propriedades ou da exibição hierárquica de itens de relatório na janela de Estrutura de Tópicos do Documento. Você pode selecionar itens neste painel e verificar o item selecionado na superfície de design. Para abrir a janela Estrutura de Tópicos do Documento, no menu **Exibir** , aponte para **Outras Janelas**e clique em **Estrutura de Tópicos do Documento**.  
   
-##  <a name="ReportItems"></a> Trabalhando com tipos específicos de itens de relatório  
+##  <a name="working-with-specific-types-of-report-items"></a><a name="ReportItems"></a> Trabalhando com tipos específicos de itens de relatório  
   
-###  <a name="Parameters"></a> Trabalhando com parâmetros  
+###  <a name="working-with-parameters"></a><a name="Parameters"></a> Trabalhando com parâmetros  
   
 -   O objetivo principal dos parâmetros do relatório é filtrar dados na fonte de dados e recuperar apenas o que é necessário para o objetivo do relatório.  
   
 -   Para parâmetros de relatório, encontre um equilíbrio entre habilitar interatividade e ajudar um usuário a obter os resultados que deseja. Por exemplo, você pode definir os valores padrão para um parâmetro com valores que você sabe que são populares.  
   
-###  <a name="Text"></a> Trabalhando com texto  
+###  <a name="working-with-text"></a><a name="Text"></a> Trabalhando com texto  
   
 -   Quando você cola várias linhas em uma caixa de texto, o texto é adicionado com uma sequência de texto. Cada sequência de texto pode ser formatada como uma unidade apenas. Para formatar cada linha independentemente, insira uma nova linha pressionando RETURN no texto conforme necessário. Em seguida, é possível aplicar formatação e estilos a cada linha independente de texto na caixa de texto.  
   
 -   Você pode definir propriedades de formato e ações em uma caixa de texto ou no texto do espaço reservado na caixa de texto. Se houver apenas uma linha de texto, é mais eficiente definir as propriedades na caixa de texto do que no texto.  
   
-###  <a name="Expressions"></a> Trabalhando com expressões  
+###  <a name="working-with-expressions"></a><a name="Expressions"></a> Trabalhando com expressões  
   
 -   Entenda os formatos de expressões simples e complexas. Você pode digitar um formato de expressão simples diretamente nas caixas de texto, propriedades no painel Propriedade ou em locais em caixas de diálogo que aceitam uma expressão. Para obter mais informações, consulte [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 -   Quando você cria uma expressão, ele ajuda a criar independentemente cada parte e verificar seu valor. Então, você pode combinar todas as partes em uma expressão final. Uma técnica útil é adicionar uma caixa de texto em uma célula de matriz, exibir cada parte da expressão e definir a visibilidade condicional na caixa de texto. Para controlar o estilo e a cor da borda quando a caixa de texto é ocultada, primeiro coloque a caixa de texto em um retângulo e, em seguida, defina o estilo e a cor da borda do retângulo para que correspondam aos da matriz.  
   
-###  <a name="Indicators"></a> Trabalhando com indicadores  
+###  <a name="working-with-indicators"></a><a name="Indicators"></a> Trabalhando com indicadores  
   
 -   Por padrão, um indicador mostra pelo menos três estados. Após adicionar um indicador a um relatório, você poderá configurá-lo adicionando ou removendo estados. Para facilitar a exibição por seus usuários, escolha um indicador que varie de cor e forma.  
   
-##  <a name="Rendering"></a> Controlando a renderização de itens de relatório na página de relatório  
+##  <a name="controlling-the-rendering-of-report-items-on-the-report-page"></a><a name="Rendering"></a> Controlando a renderização de itens de relatório na página de relatório  
   
 -   Na superfície de design do relatório, os itens do relatório crescem para acomodar o conteúdo do conjunto de dados, expressão, sub-relatório ou texto associado.  
   

@@ -12,10 +12,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.openlocfilehash: 8945f27e22eb614abd806dd4da8f6a2ecf982740
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256259"
 ---
 # <a name="view-registered-servers-in-sql-server-management-studio"></a>Exibir Servidores Registrados no SQL Server Management Studio

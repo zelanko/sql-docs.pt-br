@@ -11,10 +11,10 @@ ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 425beac7bcae36170ff378b59d36da05838df645
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028250"
 ---
 # <a name="working-with-large-data"></a>Trabalhando com dados grandes
@@ -31,7 +31,7 @@ Os tópicos nesta seção descrevem maneiras diferentes de recuperar dados de va
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-| Tópico                                                                                                                         | Descrição                                                              |
+| Tópico                                                                                                                         | DESCRIÇÃO                                                              |
 | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | [Lendo exemplo de dados grandes](../../../connect/jdbc/code-samples/reading-large-data-sample.md)                                               | Descreve como usar uma instrução SQL para recuperar dados de valor grande.       |
 | [Lendo exemplo de dados grandes com procedimentos armazenados](../../../connect/jdbc/code-samples/reading-large-data-with-stored-procedures-sample.md) | Descreve como recuperar um valor grande do parâmetro OUT do CallableStatement. |

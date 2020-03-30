@@ -12,10 +12,10 @@ ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4767267c1fc88eab6dafe646a0f61e3bd1992de8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284975"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Bem-vindo ao Assistente de Importação e Exportação do SQL Server
@@ -44,7 +44,7 @@ A captura de tela a seguir mostra a página o **Bem-vindo ao Assistente de Impor
 ## <a name="whats-next"></a>O que vem a seguir?  
  Após a página de boas-vindas, a próxima página é **Escolher uma Fonte de Dados**. Nessa página, você fornece informações sobre a fonte de dados e sobre como se conectar a ela. Para obter mais informações, consulte [Escolher uma fonte de dados](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 
-## <a name="related"></a> Tarefas e conteúdo relacionados  
+## <a name="related-tasks-and-content"></a><a name="related"></a> Tarefas e conteúdo relacionados  
  Aqui estão algumas outras tarefas básicas.
 -   **Veja um exemplo rápido de como o assistente funciona.**
 

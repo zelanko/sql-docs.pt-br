@@ -19,10 +19,10 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 68f0f1ea718d867b2fb26f08bb5b6c30e49dd739
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291219"
 ---
 # <a name="pivot-transformation"></a>transformação Dinâmica
@@ -49,7 +49,7 @@ ms.locfileid: "71291219"
   
  Os dados de entrada poderiam conter linhas duplicadas que causarão uma falha na transformação dinâmica. "Linhas duplicadas" significam linhas que têm os mesmos valores nas colunas de chave definidas e nas colunas dinâmicas. Para evitar uma falha, você pode configurar a transformação para redirecionar linhas de erro para uma saída de erro ou pode pré-agregar valores para ter certeza de que não existem linhas duplicadas.  
   
-##  <a name="options"></a> Opções da caixa de diálogo Dinâmica  
+##  <a name="options-in-the-pivot-dialog-box"></a><a name="options"></a> Opções da caixa de diálogo Dinâmica  
  Você configura a operação dinâmica definindo as opções na caixa de diálogo **Dinâmica** . Para abrir a caixa de diálogo **Dinâmica** , adicione a transformação Dinâmica ao pacote no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]e clique com o botão direito do mouse no componente e clique em **Editar**.  
   
  A lista a seguir descreve as opções da caixa de diálogo **Dinâmica** .  

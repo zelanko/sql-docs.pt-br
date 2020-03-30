@@ -11,10 +11,10 @@ ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
 ms.openlocfilehash: d92555fba1d9e0a380ffdc9051817ddfae9ca4b7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72381756"
 ---
 # <a name="universal-data-link-udl-configuration"></a>Configuração do UDL (Universal Data Link)
@@ -29,7 +29,7 @@ Use a guia Conexão para especificar como se conectar aos seus dados usando o Dr
 
 A guia Conexão é específica do provedor e exibe apenas as propriedades de conexão necessárias ao Microsoft OLE DB Driver para SQL Server.
 
-|Opção|Descrição|
+|Opção|DESCRIÇÃO|
 |---   |---        |
 |Selecione ou digite um nome de servidor|selecione um nome de servidor na lista suspensa ou digite o local do servidor em que o banco de dados que você deseja acessar está localizado. Selecionar o banco de dados no servidor é uma ação separada. Atualize a lista clicando em "Atualizar".
 |Digite as informações para entrar no servidor|Você pode selecionar as seguintes opções de autenticação nesta lista suspensa: <ul><li>Autenticação do `Windows Authentication:` para SQL Server usando as credenciais da conta do Windows do usuário conectado no momento.</li><li>Autenticação do `SQL Server Authentication:` usando a ID de logon e a senha.</li><li>Autenticação integrada do `Active Directory - Integrated:` com uma identidade do Azure Active Directory. Esse modo também pode ser usado para a autenticação do Windows para SQL Server.</li><li>Autenticação de ID de usuário e senha do `Active Directory - Password:` com uma identidade do Azure Active Directory.</li><li>Autenticação interativa do `Active Directory - Universal with MFA support:` com uma identidade do Azure Active Directory. Este modo é compatível com a Autenticação Multifator (MFA) do Azure.</li></ul>|
@@ -37,7 +37,7 @@ A guia Conexão é específica do provedor e exibe apenas as propriedades de con
 |Nome de usuário|Digite a ID de usuário a ser usada para autenticação quando você entrar na fonte de dados.|
 |Senha|Digite a senha a ser usada para autenticação quando você entrar na fonte de dados.|
 |Senha em branco|Quando marcada, habilita o provedor especificado a usar uma senha em branco na cadeia de conexão.|
-|Permitir Salvamento de Senha|Quando marcada, permite que a senha seja salva com a cadeia de conexão. Se a senha será incluída na cadeia de conexão dependerá da funcionalidade do aplicativo de chamada. <br/><br/>**OBSERVAÇÃO:** se salva, a senha é retornada e salva sem máscara e sem criptografia.|
+|Permitir Salvamento de Senha|Quando marcada, permite que a senha seja salva com a cadeia de conexão. Se a senha será incluída na cadeia de conexão dependerá da funcionalidade do aplicativo de chamada. <br/><br/>**OBSERVAÇÃO:** se salva, a senha é retornada e salva sem-máscara e sem-criptografia.|
 |Usar criptografia forte para dados|Quando for selecionado, os dados transmitidos pela conexão serão criptografados.|
 |Confiar em certificado do servidor|Quando for selecionado, o certificado do servidor será validado. O certificado do servidor deve ter o nome de host correto do servidor e ser emitido por uma autoridade de certificação confiável.|
 |Selecione o banco de dados|Selecione ou digite o nome do banco de dados que você deseja acessar.|
@@ -50,7 +50,7 @@ Use a guia Avançado para ver e definir propriedades de inicialização adiciona
 
 ![Captura de tela das páginas de link de dados do OLE DB – guia Avançado](../media/data-link-pages-advanced-tab.png)
 
-|Opção|Descrição|
+|Opção|DESCRIÇÃO|
 |---   |---        |
 | Tempo limite de conexão | Especifica a quantidade de tempo (em segundos) que o Driver do Microsoft OLE DB para SQL Server aguarda a conclusão da inicialização. Se o tempo limite da inicialização for alcançado, um erro será retornado e a conexão não será criada.|
 

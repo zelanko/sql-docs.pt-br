@@ -19,10 +19,10 @@ ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 19118cde56109895213a733127b202c49feb23c1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822418"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>Descarregar backups com suporte nas réplicas secundárias de um grupo de disponibilidade
@@ -34,7 +34,7 @@ ms.locfileid: "74822418"
 >  As instruções RESTORE não são permitidas em nenhum dos bancos de dados primários ou secundários de um grupo de disponibilidade.  
   
  
-##  <a name="SupportedBuTypes"></a> Tipos de backup com suporte nas réplicas secundárias  
+##  <a name="backup-types-supported-on-secondary-replicas"></a><a name="SupportedBuTypes"></a> Tipos de backup com suporte nas réplicas secundárias  
   
 -   O **BACKUP DATABASE** é compatível apenas com backups completos somente cópia de bancos de dados, arquivos ou grupos de arquivos quando executado nas réplicas secundárias. Backups somente cópia não afetam a cadeia de logs nem limpam o bitmap diferencial.  
   
@@ -50,14 +50,14 @@ ms.locfileid: "74822418"
 
 Em um grupo de disponibilidade distribuída, os backups podem ser executados em réplicas secundárias no mesmo grupo de disponibilidade que a réplica primária ativa ou na réplica primária de quaisquer grupos de disponibilidade secundários. Os backups não podem ser executados em uma réplica secundária em um grupo de disponibilidade secundário, porque as réplicas secundárias se comunicam somente com a réplica primária em seu próprio grupo de disponibilidade. Apenas réplicas que se comunicam diretamente com a réplica primária global podem executar operações de backup.
 
-##  <a name="WhereBuJobsRun"></a> Configurando onde os trabalhos de backup são executados  
+##  <a name="configuring-where-backup-jobs-run"></a><a name="WhereBuJobsRun"></a> Configurando onde os trabalhos de backup são executados  
  A execução de backups em uma réplica secundária para descarregar a carga de trabalho do backup do servidor de produção primário é um grande benefício. No entanto, a execução de backups em réplicas secundárias introduz uma complexidade significativa no processo de determinação de onde os trabalhos de backup devem ser executados. Para resolver isto, configure onde os trabalhos de backup são executados, da seguinte maneira:  
   
 1.  Configure o grupo de disponibilidade para especificar em quais réplicas de disponibilidade você prefere que os backups sejam executados. Para obter mais informações, confira os parâmetros *AUTOMATED_BACKUP_PREFERENCE* e *BACKUP_PRIORITY* em [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md) ou [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
 2.  Crie trabalhos de backup com script para cada banco de dados de disponibilidade em cada instância de servidor que hospeda uma réplica de disponibilidade que é candidata a executar backups. Para obter mais informações, confira a seção “Acompanhamento: Depois de configurar o backup em réplicas secundárias” de [Configurar backup em réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para configurar o backup em réplicas secundárias**  
   
 -   [Configurar backup em réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  

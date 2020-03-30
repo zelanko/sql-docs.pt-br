@@ -21,10 +21,10 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f540278d8f27eb091d4818f838d069c82a61159c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296219"
 ---
 # <a name="integration-services-programming-overview"></a>Visão geral da programação do Integration Services
@@ -69,7 +69,7 @@ ms.locfileid: "71296219"
 ## <a name="commonly-used-assemblies"></a>Assemblies comumente usados  
  A tabela a seguir lista os assemblies usados com frequência durante a programação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] através do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
   
-|Assembly|Descrição|  
+|Assembly|DESCRIÇÃO|  
 |--------------|-----------------|  
 |Microsoft.SqlServer.ManagedDTS.dll|Contém o mecanismo de tempo de execução gerenciado.|  
 |Microsoft.SqlServer.RuntimeWrapper.dll|Contém o assembly de interoperabilidade primária (PIA), ou wrapper, para o mecanismo de tempo de execução nativo.|  

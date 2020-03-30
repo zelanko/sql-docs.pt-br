@@ -11,10 +11,10 @@ ms.assetid: 71156863-3588-453e-b5a5-0573b2c1bebf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b1a572d3ab2dfba9d0aa0b8284fc770f3422782
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977103"
 ---
 # <a name="iswrapperfor-method-sqlservercallablestatement"></a>Método isWrapperFor (SQLServerCallableStatement)
