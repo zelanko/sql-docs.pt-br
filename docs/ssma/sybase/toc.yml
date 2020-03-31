@@ -70,7 +70,7 @@
   href: finishing-test-case-preparation-sybasetosql.md
 - name: Selecionando e Configurando Objetos a Testar
   href: selecting-and-configuring-objects-to-test-sybasetosql.md
-- name: solução de problemas
+- name: Solução de problemas
   href: troubleshooting-sybasetosql.md
 - name: Mapeando tipos de dados do Sybase ASE e do SQL Server
   href: mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md

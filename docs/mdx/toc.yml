@@ -153,7 +153,7 @@
           href: ../mdx/comment-mdx.md
         - name: // (Comment)
           href: ../mdx/comment-mdx-double-slash.md
-        - name: ': (Intervalo)'
+        - name: ': (Range)'
           href: ../mdx/range-mdx.md
         - name: + (Somar)
           href: ../mdx/add-mdx.md

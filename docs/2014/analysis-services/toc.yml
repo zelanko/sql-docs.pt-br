@@ -307,7 +307,7 @@
 - name: Referência de erros e eventos (PowerPivot para SharePoint)
   href: power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md
   items:
-    - name: 'Erro ao tentar estabelecer uma conexão com a fonte de dados externa. As seguintes conexões não foram atualizadas: Dados PowerPivot'
+    - name: 'Erro ao tentar estabelecer uma conexão com a fonte de dados externa. As conexões a seguir não foram atualizadas: Dados PowerPivot'
       href: power-pivot-sharepoint/an-error-occurred-during-an-attempt-to-establish-a-connection.md
     - name: Não foi possível carregar o arquivo ou assembly 'Microsoft.Data.Services
       href: power-pivot-sharepoint/could-not-load-file-or-assembly-microsoft-data-services.md
@@ -315,7 +315,7 @@
       href: power-pivot-sharepoint/could-not-load-microsoft-analysisservices-sharepoint-integration.md
     - name: O caminho de conexão de dados na pasta de trabalho aponta para um arquivo na unidade local ou é um URI inválido
       href: power-pivot-sharepoint/the-data-connection-path-is-invalid.md
-    - name: 'A conexão de dados usa a Autenticação do Windows e não foi possível delegar as credenciais de usuário. As seguintes conexões não foram atualizadas: Dados PowerPivot'
+    - name: 'A conexão de dados usa a Autenticação do Windows e não foi possível delegar as credenciais de usuário. As conexões a seguir não foram atualizadas: Dados PowerPivot'
       href: power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md
     - name: 'Os recursos a seguir não têm suporte dos Serviços do Excel e podem não ser exibidos ou ser exibidos apenas parcialmente: Comentários, Formas ou outros objetos'
       href: power-pivot-sharepoint/comments-shapes-other-objects-not-supported-by-excel-services.md
@@ -352,7 +352,7 @@
           href: rename-columns.md
         - name: 'Lição 4: Marcar como Tabela de Data'
           href: lesson-3-mark-as-date-table.md
-        - name: 'Lição 5: Criar relações'
+        - name: 'Lição 5: Criar Relações'
           href: lesson-4-create-relationships.md
         - name: 'Lição 6: Criar colunas calculadas'
           href: lesson-5-create-calculated-columns.md
@@ -366,7 +366,7 @@
           href: lesson-9-create-hierarchies.md
         - name: 'Lição 11: Criar partições'
           href: lesson-10-create-partitions.md
-        - name: 'Lição 12: Criar funções'
+        - name: 'Lição 12: Criar Funções'
           href: lesson-11-create-roles.md
         - name: 'Lição 13: Analisar no Excel'
           href: lesson-12-analyze-in-excel.md
@@ -386,7 +386,7 @@
           href: analysis-services-tutorial-scenario.md
         - name: Instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional do Analysis Services
           href: install-sample-data-and-projects.md
-        - name: 'Lição 1: Definindo uma exibição da fonte de dados em um Projeto do Analysis Services'
+        - name: 'Lição 1: Definir uma exibição da fonte de dados em um projeto do Analysis Services'
           href: lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
           items:
             - name: Criando um projeto do Analysis Services
@@ -397,7 +397,7 @@
               href: lesson-1-3-defining-a-data-source-view.md
             - name: Modificando nomes de tabela padrão
               href: lesson-1-4-modifying-default-table-names.md
-        - name: 'Lição 2: Definindo e implantando um cubo'
+        - name: 'Lição 2: Definir e implantar um cubo'
           href: lesson-2-defining-and-deploying-a-cube.md
           items:
             - name: Definindo uma dimensão
@@ -412,7 +412,7 @@
               href: lesson-2-5-deploying-an-analysis-services-project.md
             - name: Navegando pelo cubo
               href: lesson-2-6-browsing-the-cube.md
-        - name: 'Lição 3: Modificando medidas, atributos e hierarquias'
+        - name: 'Lição 3: Como modificar medidas, atributos e hierarquias'
           href: lesson-3-modifying-measures-attributes-and-hierarchies.md
           items:
             - name: Modificando medidas
@@ -425,7 +425,7 @@
               href: lesson-3-4-modifying-the-date-dimension.md
             - name: Navegando no cubo implantado
               href: lesson-3-5-browsing-the-deployed-cube.md
-        - name: 'Lição 4: Definindo propriedades de dimensão e atributo avançadas'
+        - name: 'Lição 4: Como definir propriedades avançadas de dimensão e de atributo'
           href: lesson-4-defining-advanced-attribute-and-dimension-properties.md
           items:
             - name: Usando uma versão modificada do projeto do Tutorial do Analysis Services
@@ -442,7 +442,7 @@
               href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
             - name: Definindo o membro desconhecido e as propriedades de processamento nulo
               href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
-        - name: 'Lição 5: Definindo relações entre grupos de medidas e dimensões'
+        - name: 'Lição 5: Como definir relações entre grupos de medidas e dimensões'
           href: lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
           items:
             - name: Definindo uma relação referenciada
@@ -453,31 +453,31 @@
               href: lesson-5-3-defining-a-many-to-many-relationship.md
             - name: Definindo a granularidade da dimensão dentro de um grupo de medidas
               href: lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
-        - name: 'Lição 6: Definindo cálculos'
+        - name: 'Lição 6: Como definir cálculos'
           href: lesson-6-defining-calculations.md
           items:
             - name: Definindo membros calculados
               href: lesson-6-1-defining-calculated-members.md
             - name: Definindo conjuntos nomeados
               href: lesson-6-2-defining-named-sets.md
-        - name: 'Lição 7: Definindo KPIs (indicadores chave de desempenho)'
+        - name: 'Lição 7: Definir KPIs (indicadores chave de desempenho)'
           href: lesson-7-defining-key-performance-indicators-kpis.md
           items:
             - name: Definindo e procurando KPIs
               href: lesson-7-1-defining-and-browsing-kpis.md
-        - name: 'Lição 8: Definindo ações'
+        - name: 'Lição 8: Como definir ações'
           href: lesson-8-defining-actions.md
           items:
             - name: Definindo e usando uma ação de detalhamento
               href: lesson-8-1-defining-and-using-a-drillthrough-action.md
-        - name: 'Lição 9: Definindo perspectivas e traduções'
+        - name: 'Lição 9: Como definir perspectivas e traduções'
           href: lesson-9-defining-perspectives-and-translations.md
           items:
             - name: Definindo e procurando perspectivas
               href: lesson-9-1-defining-and-browsing-perspectives.md
             - name: Definindo e procurando traduções
               href: lesson-9-2-defining-and-browsing-translations.md
-        - name: 'Lição 10: Definindo funções administrativas'
+        - name: 'Lição 10: Como definir funções administrativas'
           href: lesson-10-defining-administrative-roles.md
           items:
             - name: Concedendo permissões ao banco de dados do processo

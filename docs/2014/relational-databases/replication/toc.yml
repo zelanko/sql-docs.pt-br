@@ -432,7 +432,7 @@
                   href: non-sql/backup-and-restore-for-oracle-publishers.md
                 - name: Objetos criados
                   href: non-sql/objects-created-on-the-oracle-publisher.md
-                - name: solução de problemas
+                - name: Solução de problemas
                   href: non-sql/troubleshooting-oracle-publishers.md
         - name: Assinantes não SQL
           href: non-sql/non-sql-server-subscribers.md
