@@ -1,5 +1,5 @@
 ---
-title: Atualizando um driver 3,5 para um driver 3,8 | Microsoft Docs
+title: Atualizando um driver 3.5 para um driver 3.8 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,61 +18,61 @@ ms.lasthandoff: 03/13/2020
 ms.locfileid: "79289794"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>Atualizar um driver 3.5 para um driver 3.8
-Este tópico fornece diretrizes e considerações para atualizar um driver ODBC 3,5 para um driver ODBC 3,8.  
+Este tópico fornece diretrizes e considerações para atualizar um driver ODBC 3.5 para um driver ODBC 3.8.  
   
 ##### <a name="version-numbers"></a>Números de versão  
- As diretrizes a seguir estão relacionadas aos números de versão:  
+ As seguintes diretrizes referem-se aos números das versões:  
   
--   Um driver deve dar suporte a SQL_OV_ODBC3_80 para SQL_ATTR_ODBC_VERSION, retornando SQL_ERROR para valores diferentes de SQL_OV_ODBC2, SQL_OV_ODBC3 e SQL_OV_ODBC3_80. As versões futuras do Gerenciador de driver assumirão que um driver dá suporte a um nível de conformidade ODBC se o driver retornar SQL_SUCCESS da [função SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md).  
+-   O motorista deve apoiar SQL_OV_ODBC3_80 para SQL_ATTR_ODBC_VERSION, retornando SQL_ERROR por valores diferentes SQL_OV_ODBC2, SQL_OV_ODBC3 e SQL_OV_ODBC3_80. As versões futuras do Driver Manager assumirão que um driver suporta um nível de conformidade ODBC se o driver retornar SQL_SUCCESS da [função SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md).  
   
--   Um driver da versão 3,8 deve retornar 3,80 de **SQLGetInfo** quando SQL_DRIVER_ODBC_VER for passado para *InfoType*. No entanto, os gerenciadores de driver mais antigos, que foram incluídos em versões mais antigas do Microsoft Windows, tratarão o driver como um driver de versão 3,5 e emitirão um aviso.  
+-   Um driver versão 3.8 deve retornar 03.80 do **SQLGetInfo** quando SQL_DRIVER_ODBC_VER for passado para *infoType*. No entanto, os driver managers mais antigos, que foram incluídos em versões mais antigas do Microsoft Windows, tratarão o driver como um driver versão 3.5 e emitirão um aviso.  
   
-     No Windows 7, a versão do Gerenciador de driver é 3,80. No Windows 8, a versão do Gerenciador de driver é 3,81 por meio do SQL_DM_VER SQLGetInfo (parâmetro*InfoType* ). SQL_ODBC_VER relata a versão como 3,80 no Windows 7 e no Windows 8.  
+     No Windows 7, a versão driver manager é 03.80. No Windows 8, a versão driver manager é 03.81 através do sqlgetinfo SQL_DM_VER ( parâmetro*InfoType).* SQL_ODBC_VER relata a versão como 03.80 tanto no Windows 7 quanto no Windows 8.  
   
-##### <a name="driver-specific-c-data-types"></a>Tipos de dados C específicos do driver  
- Um driver pode ter tipos de dados C personalizados quando ele funciona com um aplicativo ODBC da versão 3,8. (Para obter mais informações, consulte [C Data Types in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).) No entanto, não há nenhum requisito para um driver 3,8 implementar qualquer tipo C específico de driver. Mas o driver ainda deve executar a verificação de intervalo de tipos de C; o Gerenciador de driver não fará isso para drivers de 3,8. Para facilitar o desenvolvimento de driver, o valor do tipo de dados C específico pode ser definido no seguinte formato:  
+##### <a name="driver-specific-c-data-types"></a>Tipos de dados C específicos para o driver  
+ Um driver pode ter tipos de dados C personalizados quando trabalha com um aplicativo ODBC versão 3.8. (Para obter mais informações, consulte [C Data Types in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).) No entanto, não há necessidade de um driver 3.8 implementar qualquer tipo C específico do driver. Mas o motorista ainda deve realizar a verificação de faixa dos tipos C; o Driver Manager não fará isso para 3,8 motoristas. Para facilitar o desenvolvimento do driver, o valor do tipo de dados C específico do driver pode ser definido no seguinte formato:  
   
 ```  
 SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1  
 ```  
   
 ##### <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Tipos de dados específicos do driver, tipos de descritores, tipos de informações, tipos de diagnóstico e atributos  
- Ao desenvolver um novo driver, você deve usar o intervalo específico do driver para tipos de dados, tipos de descritores, tipos de informações, tipos de diagnóstico e atributos. Os intervalos específicos de driver e seus valores de tipo base são discutidos em [tipos de dados específicos de driver, tipos de descritores, tipos de informações, tipos de diagnóstico e atributos](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
+ Ao desenvolver um novo driver, você deve usar a faixa específica do driver para tipos de dados, tipos de descritores, tipos de informações, tipos de diagnóstico e atributos. As faixas específicas do driver e seus valores de tipo base são discutidos em [tipos de dados específicos do driver, tipos de descritores, tipos de informações, tipos de diagnóstico e atributos](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
 ##### <a name="connection-pooling"></a>Pool de conexões  
- Para um melhor gerenciamento do pool de conexões, o ODBC 3,8 apresenta o atributo de conexão SQL_ATTR_RESET_CONNECTION em **SQLSetConnectAttr**. SQL_RESET_CONNECTION_YES é o único valor válido para este atributo. SQL_ATTR_RESET_CONNECTION será definido logo antes que o Gerenciador de driver Coloque uma conexão no pool de conexões, permitindo que o driver redefina os outros atributos de conexão com seus valores padrão.  
+ Para um melhor gerenciamento do pool de conexões, o ODBC 3.8 introduz o atributo de conexão SQL_ATTR_RESET_CONNECTION no **SQLSetConnectAttr**. SQL_RESET_CONNECTION_YES é o único valor válido para este atributo. SQL_ATTR_RESET_CONNECTION serão definidos pouco antes de o Driver Manager colocar uma conexão no pool de conexões, permitindo que o motorista redefinisse os outros atributos de conexão aos seus valores padrão.  
   
- Para evitar a comunicação desnecessária com o servidor, um driver pode adiar a redefinição do atributo de conexão até a próxima comunicação com o servidor remoto, após a conexão ser reutilizada do pool.  
+ Para evitar uma comunicação desnecessária com o servidor, o driver pode adiar o atributo de conexão redefinido até a próxima comunicação com o servidor remoto, depois que a conexão for reutilizada do pool.  
   
- Observe que SQL_ATTR_RESET_CONNECTION é usado somente na comunicação entre o Gerenciador de driver e um driver. Um aplicativo não pode definir esse atributo diretamente. Todos os drivers da versão 3,8 devem implementar esse atributo de conexão.  
+ Observe que SQL_ATTR_RESET_CONNECTION só é usado na comunicação entre o Driver Manager e um motorista. Um aplicativo não pode definir esse atributo diretamente. Todos os drivers da versão 3.8 devem implementar este atributo de conexão.  
   
 ##### <a name="streamed-output-parameters"></a>Parâmetros de saída em fluxo  
- A versão 3,8 do ODBC apresenta parâmetros de saída em fluxo, uma maneira mais escalonável de recuperar parâmetros de saída. (Para obter mais informações, consulte [recuperando parâmetros de saída usando SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).) Para dar suporte a esse recurso, um driver deve definir SQL_GD_OUTPUT_PARAMS no valor de retorno quando SQL_GETDATA_EXTENSIONS é o *InfoType* em uma chamada **SQLGetInfo** . O suporte para um tipo SQL com parâmetros de saída transmitidos deve ser implementado no driver. O Gerenciador de driver não gerará um erro para um tipo SQL inválido. Os tipos SQL que oferecem suporte a parâmetros de saída transmitidos são definidos no driver.  
+ A versão 3.8 do ODBC introduz parâmetros de saída em fluxo, uma maneira mais escalável de recuperar parâmetros de saída. (Para obter mais informações, consulte [Recuperando parâmetros de saída usando SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).) Para suportar esse recurso, um driver deve definir SQL_GD_OUTPUT_PARAMS no valor de retorno quando SQL_GETDATA_EXTENSIONS é o *InfoType* em uma chamada **SQLGetInfo.** O suporte para um tipo SQL com parâmetros de saída streamed deve ser implementado no driver. O Gerenciador de driver não gerará um erro para um tipo SQL inválido. Os tipos SQL que suportam parâmetros de saída em fluxo são definidos no driver.  
   
- Um driver deve retornar SQL_ERROR se o aplicativo usou **SQLGetData** para recuperar um parâmetro que não seja o mesmo que o parâmetro retornado por **SQLParamData**.  
+ Um driver deve retornar SQL_ERROR se o aplicativo usou **SQLGetData** para recuperar um parâmetro que não seja o mesmo que o parâmetro retornado pelo **SQLParamData**.  
   
-##### <a name="asynchronous-execution-for-connection-operations-polling-method"></a>Execução assíncrona para operações de conexão (método de sondagem)  
- Um driver pode habilitar o suporte assíncrono para várias operações de conexão.  
+##### <a name="asynchronous-execution-for-connection-operations-polling-method"></a>Execução assíncrona para operações de conexão (método de votação)  
+ Um driver pode habilitar suporte assíncrono para várias operações de conexão.  
   
- A partir do Windows 7, o ODBC dá suporte ao método de sondagem (para obter mais informações, consulte [execução assíncrona (método de sondagem)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). Não há nenhum requisito para um driver ODBC da versão 3,8 implementar operações assíncronas em identificadores de conexão. Mesmo que um driver não implemente operações assíncronas em identificadores de conexão, o driver ainda deve implementar o SQL_ASYNC_DBC_FUNCTIONS *InfoType* e retornar **SQL_ASYNC_DBC_NOT_CAPABLE**.  
+ A partir do Windows 7, o ODBC suporta o método de votação (para obter mais informações, consulte [Execução Assíncrona (Método de Votação)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). Não há necessidade de um driver ODBC versão 3.8 implementar operações assíncronas nas alças de conexão. Mesmo que um driver não implemente operações assíncronas nas alças de conexão, o motorista ainda deve implementar o *infoType* SQL_ASYNC_DBC_FUNCTIONS e retornar **SQL_ASYNC_DBC_NOT_CAPABLE**.  
   
- Quando operações de conexão assíncronas são habilitadas, o tempo de execução de uma operação de conexão é o tempo total de todas as chamadas repetidas. Se a última chamada repetida ocorrer depois que o tempo total tiver excedido o valor definido pelo atributo de conexão SQL_ATTR_CONNECTION_TIMEOUT e a operação não tiver sido concluída, o driver retornará SQL_ERROR e registrará um registro de diagnóstico com SQLState HYT01 e o mensagem "tempo limite de conexão expirado". Não haverá tempo limite se a operação tiver sido concluída.  
+ Quando as operações de conexão assíncronas são habilitadas, o tempo de execução de uma operação de conexão é o tempo total de todas as chamadas repetidas. Se a última chamada repetida ocorrer após o tempo total ter excedido o valor definido pelo atributo de conexão SQL_ATTR_CONNECTION_TIMEOUT e a operação não tiver terminado, o driver retorna SQL_ERROR e registra um registro de diagnóstico com o SQLState HYT01 e o mensagem "Tempo de conexão expirado". Não há tempo nem um para o final da operação.  
   
 ##### <a name="sqlcancelhandle-function"></a>Função SQLCancelHandle  
- O ODBC 3,8 dá suporte à [função SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md), que é usada para cancelar operações de conexão e de instrução. Um driver que dá suporte a **SQLCancelHandle** deve exportar a função. Um driver não deve cancelar nenhuma função de conexão síncrona ou assíncrona que está em andamento se o aplicativo chamar **SQLCancel** ou **SQLCancelHandle** em um identificador de instrução. Da mesma forma, um driver não deve cancelar nenhuma função de instrução síncrona ou assíncrona que esteja em andamento se um aplicativo chamar **SQLCancelHandle** no identificador de conexão. Além disso, um driver não deve cancelar a operação de navegação (**SQLBrowseConnect** retorna SQL_NEED_DATA) se o aplicativo chamar **SQLCancelHandle** no identificador de conexão. Nesses casos, um driver deve retornar HY010, "erro de sequência de função".  
+ O ODBC 3.8 suporta [a função SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md), que é usada para cancelar operações de conexão e declaração. Um driver que suporta **SQLCancelHandle** deve exportar a função. Um driver não deve cancelar nenhuma função de conexão síncrona ou assíncrona que esteja em andamento se o aplicativo chamar **SQLCancel** ou **SQLCancelHandle** em uma alça de declaração. Da mesma forma, um driver não deve cancelar qualquer função de declaração síncrona ou assíncrona que esteja em andamento se um aplicativo chamar **SQLCancelHandle** na alça de conexão. Além disso, um driver não deve cancelar a operação de navegação **(O SQLBrowseConnect** retorna SQL_NEED_DATA) se o aplicativo chamar **SQLCancelHandle** na alça de conexão. Nestes casos, um driver deve retornar HY010, "erro de seqüência de função".  
   
- Não é necessário dar suporte a operações de conexão assíncronas e **SQLCancelHandle** ao mesmo tempo. Um driver pode dar suporte A operações de conexão assíncronas, mas não **SQLCancelHandle**, nem vice-versa.  
+ Não é necessário suportar tanto as operações **de conexão SQLCancelHandle** quanto assíncronas ao mesmo tempo. Um driver pode suportar operações de conexão assíncronas, mas não **SQLCancelHandle,** ou vice-versa.  
   
 ##### <a name="suspended-connections"></a>Conexões suspensas  
- O Gerenciador de driver ODBC 3,8 pode colocar uma conexão no estado suspenso. Um aplicativo chamará **SQLDisconnect** para liberar recursos associados à conexão. Nesse caso, um driver deve tentar liberar o máximo possível de recursos sem verificar o estado da conexão. Para obter mais informações sobre o estado suspenso, consulte a [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).  
+ O Gerenciador de Driver ODBC 3.8 pode colocar uma conexão em estado suspenso. Um aplicativo chamará **o SQLDisconnect** para liberar recursos associados à conexão. Neste caso, um motorista deve tentar liberar o máximo de recursos possível sem verificar o estado da conexão. Para obter mais informações sobre o estado suspenso, consulte [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).  
   
 ##### <a name="driver-aware-connection-pooling"></a>Pool de conexões com reconhecimento de driver  
- O ODBC no Windows 8 permite que os drivers personalizem o comportamento do pool de conexões. Para obter mais informações, consulte [pooling de conexão com reconhecimento de driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md).  
+ O ODBC no Windows 8 permite que os drivers personalizem o comportamento do pool de conexões. Para obter mais informações, consulte [Pooling de conexão com reconhecimento de driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md).  
   
 ##### <a name="asynchronous-execution-notification-method"></a>Execução assíncrona (método de notificação)  
- O ODBC 3,8 dá suporte ao método de notificação para operações assíncronas, disponíveis a partir do Windows 8. Para obter mais informações, consulte [execução assíncrona (método de notificação)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md).  
+ O ODBC 3.8 suporta o método de notificação para operações assíncronas, disponível a partir do Windows 8. Para obter mais informações, consulte [Execução Assíncrona (Método de Notificação)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md).  
   
-## <a name="see-also"></a>Consulte Também  
- [Desenvolvendo um driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
+## <a name="see-also"></a>Consulte também  
+ [Desenvolvendo um Driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Drivers ODBC fornecidos pela Microsoft](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)   
  [Novidades no ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

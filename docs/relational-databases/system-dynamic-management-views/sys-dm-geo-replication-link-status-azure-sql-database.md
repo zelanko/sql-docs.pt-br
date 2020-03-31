@@ -29,31 +29,31 @@ ms.locfileid: "79198221"
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Contém uma linha para cada link de replicação entre bancos de dados primários e secundários em uma parceria de replicação geográfica. Isso inclui os bancos de dados primários e secundários. Se houver mais de um link de replicação contínua para um determinado banco de dados primário, essa tabela conterá uma linha para cada uma das relações. A exibição é criada em todos os bancos de dados, incluindo o mestre lógico. No entanto, consultar essa exibição no mestre lógico retorna um conjunto vazio.  
+  Contém uma linha para cada link de replicação entre bancos de dados primários e secundários em uma parceria de geo-replicação. Isso inclui os bancos de dados primários e secundários. Se houver mais de um link de replicação contínua para um determinado banco de dados primário, essa tabela conterá uma linha para cada uma das relações. A exibição é criada em todos os bancos de dados, incluindo o mestre lógico. No entanto, a consulta dessa exibição no mestre lógico retorna um conjunto vazio.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|link_guid|**uniqueidentifier**|ID exclusiva do link de replicação.|  
-|partner_server|**sysname**|Nome do servidor do banco de dados SQL que contém o banco de dados vinculado.|  
-|partner_database|**sysname**|Nome do banco de dados vinculado no servidor do Banco de Dados SQL.|  
-|last_replication|**datetimeoffset**|O carimbo de data/hora da última confirmação da transação pelo secundário com base no relógio do banco de dados primário. Esse valor está disponível somente no banco de dados primário.|  
-|replication_lag_sec|**int**|Diferença de tempo em segundos entre o valor de last_replication e o carimbo de data/hora da confirmação da transação no primário com base no relógio do banco de dados primário.  Esse valor está disponível somente no banco de dados primário.|  
-|replication_state|**tinyint**|O estado de replicação geográfica para este banco de dados, um dos:.<br /><br /> 1 = propagação. O destino de replicação geográfica está sendo propagado, mas os dois bancos de dados ainda não estão sincronizados. Até que a propagação seja concluída, você não poderá se conectar ao banco de dados secundário. Remover o banco de dados secundário do primário cancelará a operação de propagação.<br /><br /> 2 = atualização. O banco de dados secundário está em um estado transacionalmente consistente e está sendo constantemente sincronizado com o banco de dados primário.<br /><br /> 4 = suspenso. Essa não é uma relação de cópia contínua ativa. Esse estado geralmente indica que a largura de banda disponível para o interlink é insuficiente para o nível de atividade da transação no banco de dados primário. No entanto, a relação de cópia contínua ainda permanece intacta.|  
+|link_guid|**Uniqueidentifier**|ID exclusivo do link de replicação.|  
+|partner_server|**Sysname**|Nome do servidor SQL Database contendo o banco de dados vinculado.|  
+|partner_database|**Sysname**|Nome do banco de dados vinculado no servidor do Banco de Dados SQL.|  
+|last_replication|**Datetimeoffset**|O carimbo de data e hora do reconhecimento da última transação pelo secundário com base no relógio de banco de dados primário. Este valor está disponível apenas no banco de dados principal.|  
+|replication_lag_sec|**Int**|Diferença de tempo em segundos entre o valor last_replication e o carimbo de tempo do compromisso dessa transação no principal com base no relógio de banco de dados principal.  Este valor está disponível apenas no banco de dados principal.|  
+|replication_state|**Tinyint**|O estado de geo-replicação para este banco de dados, um dos mais.<br /><br /> 1 = Semeada. O alvo de geo-replicação está sendo semeado, mas os dois bancos de dados ainda não estão sincronizados. Até que a semeadura seja concluída, você não pode se conectar ao banco de dados secundário. A remoção do banco de dados secundário da primária cancelará a operação de semeação.<br /><br /> 2 = Catch-up. O banco de dados secundário está em um estado transamente consistente e está sendo constantemente sincronizado com o banco de dados principal.<br /><br /> 4 = Suspenso. Esta não é uma relação de cópia contínua ativa. Esse estado geralmente indica que a largura de banda disponível para o interlink é insuficiente para o nível de atividade da transação no banco de dados primário. No entanto, a relação de cópia contínua ainda permanece intacta.|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
-|função|**tinyint**|Função de replicação geográfica, uma das:<br /><br /> 0 = primário. O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.<br /><br /> 1 = secundário.  O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.|  
+|função|**Tinyint**|Função de geo-replicação, uma das:<br /><br /> 0 = Primário. O database_id refere-se ao banco de dados primário na parceria de georeplicação.<br /><br /> 1 = Secundário.  O database_id refere-se ao banco de dados primário na parceria de georeplicação.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
-|secondary_allow_connections|**tinyint**|O tipo secundário, um de:<br /><br /> 0 = nenhuma conexão direta é permitida para o banco de dados secundário e o banco de dados não está disponível para acesso de leitura.<br /><br /> 2 = todas as conexões são permitidas para o banco de dados no repl secundário; vo para acesso somente leitura.|  
+|secondary_allow_connections|**Tinyint**|O tipo secundário, um de:<br /><br /> 0 = Não são permitidas conexões diretas ao banco de dados secundário e o banco de dados não está disponível para acesso à leitura.<br /><br /> 2 = Todas as conexões são permitidas ao banco de dados no repl;ication secundário para acesso somente leitura.|  
 |secondary_allow_connections_desc|**nvarchar(256)**|Não<br /><br /> Todos|  
-|last_commit|**datetimeoffset**|A hora da última transação confirmada no banco de dados. Se for recuperado no banco de dados primário, ele indica a hora da última confirmação no banco de dados primário. Se for recuperado no banco de dados secundário, ele indica a hora da última confirmação no banco de dados secundário. Se for recuperado no banco de dados secundário quando o primário do link de replicação estiver inativo, ele indicará até que ponto o secundário foi pego.|
+|last_commit|**Datetimeoffset**|O tempo da última transação comprometida com o banco de dados. Se recuperado no banco de dados principal, ele indica o último tempo de confirmação no banco de dados principal. Se recuperado no banco de dados secundário, ele indica o último tempo de confirmação no banco de dados secundário. Se recuperado no banco de dados secundário quando o principal do link de replicação estiver desligado, ele indica até que ponto o secundário foi alcançado.|
   
 > [!NOTE]  
->  Se a relação de replicação for encerrada com a remoção do banco de dados secundário (seção 4,2), a linha desse banco de dados na exibição **Sys. dm_geo_replication_link_status** desaparecerá.  
+>  Se a relação de replicação for encerrada removendo o banco de dados secundário (seção 4.2), a linha para esse banco de dados na exibição **sys.dm_geo_replication_link_status** desaparece.  
   
 ## <a name="permissions"></a>Permissões  
- Qualquer conta com view_database_state permissão pode consultar **Sys. dm_geo_replication_link_status**.  
+ Qualquer conta com permissão view_database_state pode consultar **sys.dm_geo_replication_link_status**.  
   
 ## <a name="example"></a>Exemplo  
- Mostrar atraso de replicação e tempo da última replicação dos meus bancos de dados secundários.  
+ Mostrar atrasos de replicação e o tempo de replicação final dos meus bancos de dados secundários.  
   
 ```  
 SELECT   
@@ -64,9 +64,9 @@ SELECT
 FROM sys.dm_geo_replication_link_status;  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [ALTER DATABASE &#40;banco de dados SQL do Azure&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [sys. geo_replication_links &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [sys. dm_operation_status &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
+## <a name="see-also"></a>Consulte também  
+ [BANCO DE DADOS ALTER &#40;&#41;de banco de dados SQL do Azure](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [sys.geo_replication_links &#40;&#40;&#41;de banco de dados SQL Do Azure](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [sys.dm_operation_status &#40;&#41;de banco de dados SQL Do Azure](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
  [sp_wait_for_database_copy_sync](../system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md)
   
