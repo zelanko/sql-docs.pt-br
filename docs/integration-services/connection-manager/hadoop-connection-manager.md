@@ -13,10 +13,10 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5149f7e470720a2efc99c522bd905a4a1a13f2c6
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903783"
 ---
 # <a name="hadoop-connection-manager"></a>Gerenciador de conexões do Hadoop
@@ -69,7 +69,7 @@ Há duas opções para configurar o ambiente local. Assim, você pode usar a aut
 -   Opção 1: [ingressar o computador do SSIS ao realm do Kerberos](#kerberos-join-realm)
 -   Opção 2: [habilitar a confiança mútua entre o domínio do Windows e o realm do Kerberos](#kerberos-mutual-trust)
 
-### <a name="kerberos-join-realm"></a>Opção 1: ingressar o computador do SSIS ao realm do Kerberos
+### <a name="option-1-join-the-ssis-computer-to-the-kerberos-realm"></a><a name="kerberos-join-realm"></a>Opção 1: ingressar o computador do SSIS ao realm do Kerberos
 
 #### <a name="requirements"></a>Requisitos:
 
@@ -99,7 +99,7 @@ No computador do SSIS:
         kdc = <your_kdc_server_address>
     ```
 
-### <a name="kerberos-mutual-trust"></a>Opção 2: habilitar a confiança mútua entre o domínio do Windows e o realm do Kerberos
+### <a name="option-2-enable-mutual-trust-between-the-windows-domain-and-the-kerberos-realm"></a><a name="kerberos-mutual-trust"></a>Opção 2: habilitar a confiança mútua entre o domínio do Windows e o realm do Kerberos
 
 #### <a name="requirements"></a>Requisitos:
 -   O computador do gateway deve ingressar em um domínio do Windows.
