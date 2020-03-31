@@ -11,10 +11,10 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7f2e417ddefc0094fc6320deafea40251ba77372
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761850"
 ---
 # <a name="dtexec-utility"></a>Utilitário dtexec
@@ -52,7 +52,7 @@ ms.locfileid: "76761850"
   
 -   [Exemplos](#example)  
   
-##  <a name="server"></a> Serviço do Integration Services e arquivo de projeto  
+##  <a name="integration-services-server-and-project-file"></a><a name="server"></a> Serviço do Integration Services e arquivo de projeto  
  Quando você usa o **dtexec** para executar pacotes no servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o **dtexec** chama os procedimentos armazenados [catalog.create_execution &#40;banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value &#40;banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) e [catalog.start_execution &#40;banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) para criar uma execução, definir valores de parâmetros e iniciar a execução. Todos os logs de execução podem ser consultados do servidor nas exibições relacionadas ou usando relatórios padrão disponíveis no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para saber mais sobre os relatórios, consulte [Relatórios do servidor do Integration Services](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
  Veja a seguir um exemplo de execução de um pacote no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -65,7 +65,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  Você pode usar o **dtexec** com ferramentas de agendamento de terceiros para agendar pacotes que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-##  <a name="bit"></a> Considerações sobre a instalação em computadores de 64 bits  
+##  <a name="installation-considerations-on-64-bit-computers"></a><a name="bit"></a> Considerações sobre a instalação em computadores de 64 bits  
  Em um computador de 64 bits, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala a versão de 64 bits do utilitário **dtexec** (dtexec.exe). Se for necessário executar alguns pacotes no modo de 32 bits, você precisará instalar a versão de 32 bits do utilitário **dtexec** . Para instalar a versão de 32 bits do utilitário **dtexec** , você deve selecionar Ferramentas de Cliente ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante a instalação.  
   
  Por padrão, um computador de 64 bits que tem as versões de 64 e de 32 bits de um prompt de comando do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instaladas executará a versão de 32 bits no prompt de comando. A versão de 32 bits é executada porque o caminho do diretório da versão de 32 bits aparece na variável de ambiente PATH antes do caminho do diretório da versão de 64 bits. (Normalmente, o caminho do diretório de 32 bits é *\<drive>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn, enquanto o caminho do diretório de 64 bits é *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn.)  
@@ -80,12 +80,12 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
 -   Altere permanentemente a ordem dos caminhos na variável de ambiente PATH colocando o caminho de 64 bits ( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) antes do caminho de 32 bits ( *\<drive>* :\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) na variável.  
   
-##  <a name="side"></a> Considerações em computadores com instalações lado a lado  
+##  <a name="considerations-on-computers-with-side-by-side-installations"></a><a name="side"></a> Considerações em computadores com instalações lado a lado  
  Quando o [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] é instalado em um computadou o com o [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] instalado, várias versões do utilitário **dtexec** são instaladas.  
   
  Para garantir a execução da versão correta do utilitário, no prompt de comando, execute o utilitário inserindo o caminho completo ( *\<drive>* :\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn).  
   
-##  <a name="phases"></a> Fases de execução  
+##  <a name="phases-of-execution"></a><a name="phases"></a> Fases de execução  
  O utilitário passa por quatro fases à medida que é executado. As fases são as seguintes:  
   
 1.  Fase de fornecimento de comando: o prompt de comando lê a lista de opções e argumentos que foram especificados. Todas as fases subsequentes serão ignoradas se uma opção **/?** ou **/HELP** for encontrada.  
@@ -102,7 +102,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
 4.  Fase de validação e execução: O pacote será executado ou validado sem executar se a opção **/VALIDATE** tiver sido especificada.  
   
-##  <a name="exit"></a> Códigos de saída retornados  
+##  <a name="exit-codes-returned"></a><a name="exit"></a> Códigos de saída retornados  
  **Códigos de saída retornados do utilitário dtexec**  
   
  Quando um pacote é executado, o **dtexec** pode retornar um código de saída. O código de saída é usado para popular a variável ERRORLEVEL, cujo valor pode, então, ser testado em instruções condicionais ou lógica de ramificação dentro de um arquivo em lote. A tabela a seguir lista os valores que o utilitário **dtexec** pode definir ao sair.  
@@ -116,7 +116,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 |5|O utilitário não pôde carregar o pacote solicitado. Não foi possível carregar o pacote.|  
 |6|O utilitário encontrou um erro interno de sintática ou semântica na linha de comando.|  
   
-##  <a name="syntaxRules"></a> Regras de sintaxe  
+##  <a name="syntax-rules"></a><a name="syntaxRules"></a> Regras de sintaxe  
  **Regras de sintaxe do utilitário**  
   
  Todas as opções devem iniciar com uma barra (/) ou um sinal de menos (-). As opções que são mostradas aqui iniciam com uma barra (/), mas ela pode ser substituída pelo sinal de menos (-).  
@@ -127,7 +127,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  Opções e argumentos não diferenciam maiúsculas e minúsculas, exceto em senhas.  
   
-##  <a name="cmdshell"></a> Usando dtexec a partir do xp_cmdshell  
+##  <a name="using-dtexec-from-the-xp_cmdshell"></a><a name="cmdshell"></a> Usando dtexec a partir do xp_cmdshell  
  **Usando dtexec a partir do xp_cmdshell**  
   
  Você pode executar o dtexec no prompt do **xp_cmdshell** . O exemplo a seguir mostra como executar um pacote chamado UpsertData.dtsx e ignorar o código de retorno:  
@@ -145,7 +145,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
   
 > **IMPORTANTE:** No [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a opção **xp_cmdshell** é desabilitada por padrão nas novas instalações. A opção pode ser habilitada com a execução do procedimento armazenado de sistema **sp_configure** . Para obter mais informações, veja [Opção de configuração de servidor xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
 
-##  <a name="bash"></a> Usar dtexec no Bash
+##  <a name="using-dtexec-from-bash"></a><a name="bash"></a> Usar dtexec no Bash
 
 O shell **Bash** é um shell popular para Linux. Ele também pode ser usado no Windows. Você pode executar o dtexec no prompt do Bash. Observe que um ponto e vírgula (`;`) é um operador de delimitador de comando no Bash. Isso é particularmente importante ao passar valores para o pacote usando as opções `/Conn[ection]`, `/Par[arameter]` ou '`/Set`, pois elas usam o ponto e vírgula para separar o nome e o valor do item fornecido. O exemplo a seguir mostra como escapar corretamente o ponto e vírgula e outros itens ao usar o Bash e passar valores para um pacote:
 
@@ -153,13 +153,13 @@ O shell **Bash** é um shell popular para Linux. Ele também pode ser usado no W
 dtexec /F MyPackage.dtsx /CONN "MyConnection"\;"\"MyConnectionString\""
 ```
 
-##  <a name="syntax"></a> Sintaxe  
+##  <a name="syntax"></a><a name="syntax"></a> Sintaxe  
   
 ```  
 dtexec /option [value] [/option [value]]...  
 ```  
   
-##  <a name="parameter"></a> Parâmetros  
+##  <a name="parameters"></a><a name="parameter"></a> Parâmetros  
   
 -   **/?** [*option_name*]: (Opcional). Exibe as opções de prompt de comando ou a ajuda para o *option_name* especificado e fecha o utilitário.  
   
@@ -482,7 +482,7 @@ dtexec /option [value] [/option [value]]...
   
      Esta opção só é usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Essa opção será ignorada se você executar o utilitário **dtexec** no prompt de comando.  
   
-##  <a name="remark"></a> Comentários  
+##  <a name="remarks"></a><a name="remark"></a> Comentários  
  A ordem na qual as opções de comando são especificadas pode influenciar o modo de execução do pacote:  
   
 -   As opções são processadas na ordem em que são encontradas na linha de comando. Os arquivos de comando são lidos à medida que são encontrados na linha de comando. Os comandos no arquivo de comandos também são processados na ordem em que são encontrados.  
@@ -491,7 +491,7 @@ dtexec /option [value] [/option [value]]...
   
 -   As opções **/Set** e **/ConfigFile** são processadas na ordem em que são encontradas.  
   
-##  <a name="example"></a> Exemplos  
+##  <a name="examples"></a><a name="example"></a> Exemplos  
  Os exemplos a seguir demonstram como usar o utilitário de prompt de comando **dtexec** para configurar e executar pacotes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  **Pacotes em Execução**  
