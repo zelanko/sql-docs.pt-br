@@ -4,11 +4,11 @@ ms.service: sql
 ms.topic: include
 ms.date: 01/13/2020
 ms.author: mikeray
-ms.openlocfilehash: 7a2dd5981324b470c3046e69c0f1149a7590ba11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0201d8dbf20557b9fc8b7e5856b0e64c85902759
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76038096"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80502307"
 ---
-<Token>**Aplica-se a:** ![sim](media/yes.png)SQL Server 2017 ![e](media/yes.png)posterior Sim banco de dados SQL do ![Azure](media/no.png)(somente ![instância gerenciada](media/no.png)) não SQL data warehouse do Azure não Parallel Data Warehouse</Token>
+<Token>**APLICA-SE A:** ![](media/yes-icon.png)Sim SQL Server ![2017 e, posteriormente,](media/yes-icon.png)Yes ![Azure SQL Database (somente instância gerenciada) Nenhum](media/no-icon.png)Data Warehouse ![SQL Do Azure SQL Nenhum](media/no-icon.png)Data Warehouse Paralelo</Token>
