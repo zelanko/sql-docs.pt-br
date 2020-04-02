@@ -4,11 +4,11 @@ ms.service: sql
 ms.topic: include
 ms.date: 01/13/2020
 ms.author: mikeray
-ms.openlocfilehash: 1cbedde99adc84327efce1755f1783ddac4842ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 01e5ab3158eceb714598940e2dc2cc8e73a79344
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76037831"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80502354"
 ---
-<Token>**APLICA-SE A:** ![sim](media/yes.png)SQL Server ![sim](media/yes.png)Banco de Dados SQL do Azure ![sim](media/yes.png)Azure Synapse Analytics (SQL DW) ![sim](media/yes.png)Parallel Data Warehouse </Token>
+<Token>**APLICA-SE A:** ![Sim](media/yes-icon.png)SQL Server ![Sim](media/yes-icon.png)Banco de Dados SQL do Azure ![Sim](media/yes-icon.png)Azure Synapse Analytics (SQL DW) ![Sim](media/yes-icon.png)Parallel Data Warehouse </Token>
