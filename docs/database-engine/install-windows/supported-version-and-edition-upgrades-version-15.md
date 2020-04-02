@@ -1,5 +1,6 @@
 ---
-title: Atualizações de versão e edição com suporte – SQL Server 2019 | Microsoft Docs
+title: Atualizações de versão e edição com suporte (SQL Server 2019)
+description: As atualizações de versão e edição com suporte do SQL Server 2019.
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -15,14 +16,14 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 6cff48da9e251fedd56d676349480e350c88bcae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c1f38c4563c01d756a7b81c0bdc34ecc429d5dbf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73531549"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434133"
 ---
-# <a name="supported-version-and-edition-upgrades-for-sql-server-2019"></a>Atualizações de versão e edição com suporte do SQL Server 2019
+# <a name="supported-version--edition-upgrades-sql-server-2019"></a>Atualizações de versão e edição com suporte (SQL Server 2019)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -45,7 +46,7 @@ ms.locfileid: "73531549"
   
 - Não é possível adicionar novos recursos durante a atualização da instância existente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois de atualizar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], você poderá adicionar recursos usando a Instalação do [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]. Para obter mais informações, consulte [Adicionar recursos a uma instância do SQL Server &#40;Instalação&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
  
-## <a name="upgrades-from-earlier-versions-to-includesssqlv15-mdincludessssqlv15-mdmd"></a>Atualizações de versões anteriores para o [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]  
+## <a name="upgrades-from-earlier-versions-to-sssqlv15-md"></a>Atualizações de versões anteriores para o [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]  
  
 O [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] dá suporte ao upgrade das seguintes versões do SQL Server:
 
@@ -108,7 +109,7 @@ As seguintes dicas e ferramentas podem ajudar você a planejar e implementar sua
 
 - Carregamento em massa: As tabelas podem ser copiadas em massa do SQL Server 2008 ou do SQL Server 2008 R2 para o SQL Server 2019.
 
-## <a name="includesssqlv15-mdincludessssqlv15-mdmd-edition-upgrade"></a>[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Edition 
+## <a name="sssqlv15-md-edition-upgrade"></a>[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Edition 
 
 A tabela a seguir lista os cenários de atualização de edição com suporte no [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)].  
 
@@ -117,7 +118,7 @@ Para obter instruções passo a passo sobre como fazer um upgrade de edição, c
 |Atualização de|Atualização para|  
 |------------------|----------------|  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (Licença Server+CAL e Baseada em Núcleo)**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise |  
-|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (Licença Server+CAL ou Baseada em Núcleo) <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> A atualização da Evaluation (uma edição gratuita) para qualquer uma das edições pagas tem suporte em instalações autônomas, mas não tem suporte em instalações clusterizadas.|  
+|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (Licença Server+CAL ou Baseada em Núcleo) <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> A atualização da Evaluation (uma edição gratuita) para qualquer uma das edições pagas tem suporte em instalações autônomas, mas não tem suporte em instalações clusterizadas. Essa limitação não se aplica a instâncias autônomas instaladas em um cluster de failover do Windows que participa de um grupo de disponibilidade. |  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (Licença Server+CAL ou Baseada em Núcleo)|  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (Licença Server+CAL ou Baseada em Núcleo) <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard|  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (Licença Server+CAL ou Baseada em Núcleo) <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard|  

@@ -1,5 +1,6 @@
 ---
 title: SELECTs e JOINs de exibições do sistema dos Eventos Estendidos
+description: Há exibições do sistema de eventos estendidos no SQL Server e no Banco de Dados SQL do Azure. Saiba como as informações de sessão de evento são representadas em perspectivas diferentes.
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3bcb7e272c1a5120b65018aab781546ba8d0f2b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3245b4288871e4b92b783aad0f08ca1027b401a0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242897"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526751"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Seleções e junções em exibições do sistema dos Eventos Estendidos no SQL Server
 
@@ -348,26 +349,22 @@ ORDER BY
 #### <a name="output"></a>Saída
 
 
-A seguir está a saída real da execução de SELECT JOIN UNION anterior. Os nomes de parâmetro de saída e os valores mapeiam para o que é claramente visível na instrução CREATE EVENT SESSION anterior.
+A tabela a seguir mostra a saída da execução de SELECT JOIN UNION anterior. Os nomes de parâmetro de saída e os valores mapeiam para o que é claramente visível na instrução CREATE EVENT SESSION anterior.
 
-
-```
-Session-Name          Clause-Type            Parameter-Name                  Parameter-Value
-------------          -----------            --------------                  ---------------
-event_session_test3   1_EVENT                Event-Name                      lock_deadlock
-event_session_test3   2_EVENT_SET            collect_database_name           1
-event_session_test3   3_EVENT_ACTION         sqlserver.client_hostname       (Not_Applicable)
-event_session_test3   3_EVENT_ACTION         sqlserver.collect_system_time   (Not_Applicable)
-event_session_test3   3_EVENT_ACTION         sqlserver.event_sequence        (Not_Applicable)
-event_session_test3   4_EVENT_PREDICATES     ([sqlserver].[equal_i_sql_unicode_string]([database_name],N'InMemTest2') AND [package0].[counter]<=(16))   (Not_Applicable)
-event_session_test3   5_TARGET               event_file                      (Not_Applicable)
-event_session_test3   6_TARGET_SET           filename                        C:\Junk\event_session_test3_EF.xel
-event_session_test3   6_TARGET_SET           max_file_size                   20
-event_session_test3   6_TARGET_SET           max_rollover_files              2
-event_session_test3   7_WITH_MAX_MEMORY      max_memory                      4096
-event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
-```
-
+| Session-Name | Clause-Type | Parameter-Name | Parameter-Value |
+|---|---|---|---|
+|event_session_test3  | 1_EVENT |                Event-Name |                       lock_deadlock |
+|event_session_test3  |  2_EVENT_SET |             collect_database_name |            1 |
+|event_session_test3  |  3_EVENT_ACTION |          sqlserver.client_hostname |       (Not_Applicable) |
+|event_session_test3  |  3_EVENT_ACTION |         sqlserver.collect_system_time |   (Not_Applicable) |
+|event_session_test3  |  3_EVENT_ACTION |         sqlserver.event_sequence |        (Not_Applicable) |
+|event_session_test3  |  4_EVENT_PREDICATES |     (\[sqlserver\].\[equal_i_sql_unicode_string\]\(\[database_name\],N'InMemTest2'\) AND \[package0\].\[counter\]<=\(16\)\) |   (Not_Applicable) |
+|event_session_test3  |  5_TARGET |               event_file |                      (Not_Applicable) |
+|event_session_test3  |  6_TARGET_SET |           nome do arquivo  |                       C:\Junk\event_session_test3_EF.xel |
+|event_session_test3  |  6_TARGET_SET |           max_file_size |                   20 |
+|event_session_test3  |  6_TARGET_SET |           max_rollover_files |              2 |
+|event_session_test3  |  7_WITH_MAX_MEMORY |      max_memory |                      4096 |
+|event_session_test3  |  7_WITH_STARTUP_STATE |   startup_state |                   1 |
 
 Isso conclui a seção sobre exibições do catálogo.
 
@@ -423,28 +420,23 @@ SELECT  --C.1
 
 Aqui está a lista de pacotes.
 
-
-```
-/***  (The unique p.guid values are not shown.)
-Package        Package-Description
--------        -------------------
-filestream     Extended events for SQL Server FILESTREAM and FileTable
-package0       Default package. Contains all standard types, maps, compare operators, actions and targets
-qds            Extended events for Query Store
-SecAudit       Security Audit Events
-sqlclr         Extended events for SQL CLR
-sqlos          Extended events for SQL Operating System
-SQLSatellite   Extended events for SQL Satellite
-sqlserver      Extended events for Microsoft SQL Server
-sqlserver      Extended events for Microsoft SQL Server
-sqlserver      Extended events for Microsoft SQL Server
-sqlsni         Extended events for Microsoft SQL Server
-ucs            Extended events for Unified Communications Stack
-XtpCompile     Extended events for the XTP Compile
-XtpEngine      Extended events for the XTP Engine
-XtpRuntime     Extended events for the XTP Runtime
-***/
-```
+| Pacote        |Package-Description|
+|---|---|
+|fluxo de arquivos|     Eventos estendidos para SQL Server FILESTREAM e FileTable |
+|package0   |    Pacote padrão. Contém todos os tipos, mapas, operadores de comparação, ações e destinos padrão |
+|qds         |   Eventos estendidos para Repositório de Consultas |
+|SecAudit     |  Eventos de auditoria de segurança |
+|sqlclr        | Eventos estendidos para SQL CLR |
+|sqlos         | Eventos estendidos para o Sistema Operacional SQL |
+|SQLSatellite |  Eventos estendidos para SQL Satellite |
+|sqlserver   |   Eventos estendidos para o Microsoft SQL Server |
+|sqlserver  |    Eventos estendidos para o Microsoft SQL Server |
+|sqlserver  |    Eventos estendidos para o Microsoft SQL Server |
+|sqlsni     |    Eventos estendidos para o Microsoft SQL Server |
+|ucs        |    Eventos estendidos para Pilha de Comunicações Unificadas |
+|XtpCompile |    Eventos estendidos para a Compilação XTP |
+|XtpEngine  |    Eventos estendidos para o mecanismo XTP |
+|XtpRuntime |    Eventos estendidos para o Runtime XTP |
 
 
 *Definições dos inicialismos anteriores:*
@@ -481,23 +473,16 @@ SELECT  --C.2
 
 Aqui está a contagem de objetos por tipo de objeto. Existem aproximadamente 1915 objetos.
 
-
-```
-/***  Actual output, sum is about 1915:
-
-Count-of-Type   object_type
--------------   -----------
-1303            event
-351             map
-84              message
-77              pred_compare
-53              action
-46              pred_source
-28              type
-17              target
-***/
-```
-
+|Count-of-Type |   object_type |
+|---|---|
+|1303|            event |
+|351  |           map |
+|84    |          message |
+|77     |         pred_compare |
+|53     |        ação |
+|46     |         pred_source |
+|28     |         type |
+|17     |         destino |
 
 <a name="section_C_3_select_all_available_objects"></a>
 
@@ -537,34 +522,28 @@ SELECT  --C.3
 Para aguçar seu apetite, a seguir está uma amostragem arbitrária dos objetos retornados pelo SELECT anterior.
 
 
-```
-/***
-Type-of-Item   Package        Item                          Item-Description
-------------   -------        ----                          ----------------
-action         package0       callstack                     Collect the current call stack
-action         package0       debug_break                   Break the process in the default debugger
-action         sqlos          task_time                     Collect current task execution time
-action         sqlserver      sql_text                      Collect SQL text
-event          qds            query_store_aprc_regression   Fired when Query Store detects regression in query plan performance
-event          SQLSatellite   connection_accept             Occurs when a new connection is accepted. This event serves to log all connection attempts.
-event          XtpCompile     cgen                          Occurs at start of C code generation.
-map            qds            aprc_state                    Query Store Automatic Plan Regression Correction state
-message        package0       histogram_event_required      A value is required for the parameter 'filtering_event_name' when source type is 0.
-pred_compare   package0       equal_ansi_string             Equality operator between two ANSI string values
-pred_compare   sqlserver      equal_i_sql_ansi_string       Equality operator between two SQL ANSI string values
-pred_source    sqlos          task_execution_time           Get current task execution time
-pred_source    sqlserver      client_app_name               Get the current client application name
-target         package0       etw_classic_sync_target       Event Tracing for Windows (ETW) Synchronous Target
-target         package0       event_counter                 Use the event_counter target to count the number of occurrences of each event in the event session.
-target         package0       event_file                    Use the event_file target to save the event data to an XEL file, which can be archived and used for later analysis and review. You can merge multiple XEL files to view the combined data from separate event sessions.
-target         package0       histogram                     Use the histogram target to aggregate event data based on a specific event data field or action associated with the event. The histogram allows you to analyze distribution of the event data over the period of the event session.
-target         package0       pair_matching                 Pairing target
-target         package0       ring_buffer                   Asynchronous ring buffer target.
-type           package0       xml                           Well formed XML fragment
-***/
-```
-
-
+|Type-of-Item|   Pacote|        Item|                          Item-Description|
+|---|---|---|---|
+|ação|         package0  |     callstack                     |Coletar a pilha de chamadas atual|
+|ação |        package0  |     debug_break                   |Interromper o processo no depurador padrão|
+|ação |       sqlos      |    task_time                     |Coletar tempo de execução da tarefa atual|
+|ação |        sqlserver |     sql_text                     | Coletar texto SQL|
+|event  |        qds       |     query_store_aprc_regression  | Acionado quando o Repositório de Consultas detecta regressão no desempenho do plano de consulta|
+|event  |        SQLSatellite |  connection_accept            | Ocorre quando uma nova conexão é aceita. Este evento serve para registrar todas as tentativas de conexão.|
+|event  |        XtpCompile  |   cgen                          |Ocorre no início da geração de código C.|
+|map    |        qds         |   aprc_state                    |Estado de correção de regressão do plano automático do Repositório de Consultas|
+|message |       package0    |   histogram_event_required      |É necessário um valor para o parâmetro 'filtering_event_name' quando o tipo de origem é 0.|
+|pred_compare |  package0   |    equal_ansi_string             |Operador de igualdade entre dois valores de cadeia de caracteres ANSI|
+|pred_compare |  sqlserver  |    equal_i_sql_ansi_string       |Operador de Igualdade entre dois valores de cadeia de caracteres SQL ANSI|
+|pred_source |   sqlos      |    task_execution_time           |Obter o tempo de execução da tarefa atual|
+|pred_source |   sqlserver  |    client_app_name               |Obter o nome do aplicativo cliente atual|
+|destino |        package0   |    etw_classic_sync_target       |Destino Síncrono do ETW (Rastreamento de Eventos para Windows)|
+|destino |        package0   |    event_counter                 |Use o destino event_counter para contar o número de ocorrências de cada evento na sessão de evento.|
+|destino  |       package0  |     event_file                    |Use o destino event_file para salvar os dados de evento em um arquivo XEL, que pode ser arquivado e usado para análise e revisão posteriores. Você pode mesclar vários arquivos XEL para ver os dados combinados de sessões de evento separadas.|
+|destino  |       package0   |    histogram                     |Use o destino de histograma para agregar dados de evento com base em um campo de dados de evento específico ou ação associada ao evento. O histograma permite que você analise a distribuição dos dados do evento durante o período da sessão de evento.|
+|destino   |      package0  |     pair_matching                 |Destino de emparelhamento|
+|destino   |      package0  |     ring_buffer                   |Destino de buffer de anéis assíncrono|
+|type     |      package0  |     Xml                           |Fragmento XML bem formado|
 
 <a name="section_C_4_data_fields"></a>
 
@@ -611,34 +590,29 @@ As linhas a seguir foram retornadas pelo SELECT, WHERE `o.name = 'lock_deadlock'
 
 - Cada linha representa um filtro opcional para o evento *sqlserver.lock_deadlock* .
 - A coluna *\[Column-Description\]* é omitida da exibição a seguir. Geralmente, seu valor é NULL.
+- Essa é a saída real, exceto pela coluna de descrição omitida, que costuma ser nula.
+- Essas são as linhas em que object_type = 'lock_deadlock'.
 
+|Pacote|     Evento|           Column-for-Predicate-Data|
+|---|---|---|
+|sqlserver|   lock_deadlock|   associated_object_id|
+|sqlserver|  lock_deadlock |  database_id|
+|sqlserver|  lock_deadlock |  database_name|
+|sqlserver|   lock_deadlock|   deadlock_id|
+|sqlserver|   lock_deadlock|   duration|
+|sqlserver|   lock_deadlock|   lockspace_nest_id|
+|sqlserver|   lock_deadlock|   lockspace_sub_id|
+|sqlserver|   lock_deadlock|   lockspace_workspace_id|
+|sqlserver|   lock_deadlock|   mode|
+|sqlserver|   lock_deadlock|   object_id|
+|sqlserver|   lock_deadlock|   owner_type|
+|sqlserver|   lock_deadlock|   resource_0|
+|sqlserver|   lock_deadlock|  resource_1|
+|sqlserver|   lock_deadlock|   resource_2|
+|sqlserver|   lock_deadlock|   resource_description|
+|sqlserver|   lock_deadlock|   resource_type|
+|sqlserver|   lock_deadlock|   transaction_id|
 
-```
-/***
-Actual output, except for the omitted Description column which is often NULL.
-These rows are where object_type = 'lock_deadlock'.
-
-Package     Event           Column-for-Predicate-Data
--------     -----           -------------------------
-sqlserver   lock_deadlock   associated_object_id
-sqlserver   lock_deadlock   database_id
-sqlserver   lock_deadlock   database_name
-sqlserver   lock_deadlock   deadlock_id
-sqlserver   lock_deadlock   duration
-sqlserver   lock_deadlock   lockspace_nest_id
-sqlserver   lock_deadlock   lockspace_sub_id
-sqlserver   lock_deadlock   lockspace_workspace_id
-sqlserver   lock_deadlock   mode
-sqlserver   lock_deadlock   object_id
-sqlserver   lock_deadlock   owner_type
-sqlserver   lock_deadlock   resource_0
-sqlserver   lock_deadlock   resource_1
-sqlserver   lock_deadlock   resource_2
-sqlserver   lock_deadlock   resource_description
-sqlserver   lock_deadlock   resource_type
-sqlserver   lock_deadlock   transaction_id
-***/
-```
 
 
 

@@ -1,5 +1,6 @@
 ---
 title: Segurança (Construtor de Relatórios) | Microsoft Docs
+description: Os recursos de segurança do Construtor de Relatórios estão relacionados aos locais de publicação, aos relatórios publicados, às fontes de dados externas e aos modelos baseados neles, bem como aos recursos interativos.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8b89f31330fa09d5dbe1f70fd10b2c473d26c0d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1d2c4c195b0d21d2090e13eff578cc533871da4d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190104"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290833"
 ---
 # <a name="security-report-builder"></a>Segurança (Construtor de Relatórios)
   O Construtor de Relatórios é um aplicativo cliente de criação de relatórios projetado para funcionar com um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de relatório. O servidor de relatório pode ser configurado para funcionar em modo nativo como um servidor autônomo ou em modo integrado do SharePoint para oferecer suporte a relatórios em um site do SharePoint.  
@@ -34,7 +35,7 @@ ms.locfileid: "74190104"
   
  Revise as informações neste tópico para compreender melhor como usar recursos de segurança para ajudar a gerenciar e proteger relatórios e itens relacionados a relatórios.  
   
-##  <a name="ReportServers"></a> Compreensão da segurança para servidores de relatórios  
+##  <a name="understanding-security-for-report-servers"></a><a name="ReportServers"></a> Compreensão da segurança para servidores de relatórios  
  A publicação e a exibição de relatórios são operações privilegiadas. Um administrador de servidor de relatório concede permissões para garantir que apenas usuários autorizados possam publicar e exibir relatórios em um dos seguintes tipos de servidores de relatórios:  
   
 -   Servidor de relatório configurado em modo nativo  
@@ -54,7 +55,7 @@ ms.locfileid: "74190104"
      Se você não puder se conectar ou navegar até um site do SharePoint ou subsite, entre em contato com o administrador de site do SharePoint.  
   
   
-##  <a name="Reports"></a> Compreensão da segurança para relatórios publicados e itens relacionados a relatórios  
+##  <a name="understanding-security-for-published-reports-and-report-related-items"></a><a name="Reports"></a> Compreensão da segurança para relatórios publicados e itens relacionados a relatórios  
  A segurança para relatórios e itens relacionados a relatórios é gerenciada pelo administrador de servidor de relatório. Itens relacionados a relatório incluem fontes de dados inseridas e compartilhadas, inclusive credenciais, conjuntos de dados compartilhados, parâmetros, partes de relatório e modelos.  
   
  Em um servidor de relatório ou site do SharePoint, os relatórios, itens relacionados a relatórios e operações são independentemente protegidos. A permissão para acessar itens e operações é concedida por meio das políticas de segurança que mapeiam uma conta de usuário ou grupo com um nível de permissão, em relação a um item. Para reduzir a complexidade e sobrecarga de manter um grande número de políticas, as permissões em um contêiner, como uma pasta, são herdadas através de itens no contêiner. Por exemplo, se um usuário tiver a permissão de Relatórios de Exibição específica em uma pasta, ele terá permissão de Relatórios de Exibição nos itens da pasta.  
@@ -81,7 +82,7 @@ ms.locfileid: "74190104"
  Para obter mais informações, consulte [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
   
-##  <a name="Data"></a> Compreensão da segurança para dados de relatório e fontes de dados externas  
+##  <a name="understanding-security-for-report-data-and-external-data-sources"></a><a name="Data"></a> Compreensão da segurança para dados de relatório e fontes de dados externas  
  Para acessar dados de cada fonte de dados externa em um relatório, crie uma fonte de dados inserida, adicione uma referência a uma fonte de dados compartilhada ou compartilhe o conjunto de dados em seu relatório.  
   
  Para cada fonte de dados externa, forneça credenciais suficientes para acessar a origem e os dados subjacentes. O proprietário de fonte de dados especifica o tipo de credenciais que fornece este acesso.  
@@ -96,13 +97,13 @@ ms.locfileid: "74190104"
  Para saber mais sobre as fontes de dados, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
-##  <a name="Models"></a> Compreensão de modelos e filtros de segurança  
+##  <a name="understanding-models-and-security-filters"></a><a name="Models"></a> Compreensão de modelos e filtros de segurança  
  Quando os dados são recuperados de um modelo de relatório com base em dados externos, você pode aplicar filtros de segurança no modelo. Essa é uma boa maneira de proteger dados, de forma que cada usuário que executar um relatório poderá consultar somente os dados que eles tiverem permissões.  
   
  Os parâmetros de relatório não são usados para segurança no nível de linha; eles não evitam que usuários ou grupos de usuários vejam linhas específicas de dados. Para aplicar segurança aos dados exibidos em um relatório, use filtros de segurança ou segurança do item de modelo.  
   
   
-##  <a name="Interactive"></a> Compreensão da segurança para criação de relatórios para recursos interativos  
+##  <a name="understanding-security-for-report-authoring-for-interactive-features"></a><a name="Interactive"></a> Compreensão da segurança para criação de relatórios para recursos interativos  
  Frequentemente, os relatórios usam parâmetros para permitir que um usuário personalize a exibição de um relatório interativamente. Use as dicas a seguir para criar relatórios que seguem as práticas recomendadas:  
   
 -   Não use parâmetros com base em parâmetros de consulta que são do tipo **Texto** , a menos que você forneça valores válidos. Uma lista de valores disponível ajuda um usuário a escolher apenas valores válidos. Sem uma lista de valores disponível, não é possível restringir quais valores um usuário pode inserir.  

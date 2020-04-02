@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: f0f244c15f4183f3214ae28efc2bf3300c571f0e
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.openlocfilehash: 8575a966dba903b17a6c5dcb015eb4471faf28a8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335758"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80290754"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -104,7 +104,7 @@ Quando as agregações MIN/MAX são usadas na lista SELECT da definição da exi
   GROUP BY i.i_item_sk, i.i_item_id, i.i_category_id
   ```
 
-- A exibição materializada será desabilitada quando UPDATE ou DELETE ocorrerem nas tabelas base referenciadas.  Essa restrição não se aplica a INSERTs.  Para habilitar novamente a exibição materializada, execute ALTER MATERIALIZED INDEX com REBUILD.
+- A exibição materializada será desabilitada quando UPDATE ou DELETE ocorrerem nas tabelas base referenciadas.  Essa restrição não se aplica a INSERTs.  Para habilitar novamente a exibição materializada, execute ALTER MATERIALIZED VIEW com REBUILD.
   
 ## <a name="remarks"></a>Comentários
 
@@ -125,9 +125,9 @@ ALTER TABLE SWITCH não tem suporte em tabelas referenciadas em exibições mate
 |Cenário|Novas colunas a adicionar à exibição materializada|Comentário|  
 |-----------------|---------------|-----------------|
 |COUNT_BIG() está ausente na lista SELECT de uma definição de exibição materializada| COUNT_BIG (*) |Adicionado automaticamente pela criação da exibição materializada.  Não é necessária nenhuma ação do usuário.|
-|SUM(a) é especificado por usuários na lista SELECT de uma definição de exibição materializada e AND 'a' é uma expressão que permite valor nulo |COUNT_BIG (a) |Os usuários precisam adicionar a expressão 'a' manualmente na definição de exibição materializada.|
-|AVG(a) é especificado por usuários na lista SELECT de uma definição de exibição materializada, em que "a" é uma expressão.|SUM(a), COUNT_BIG(a)|Adicionado automaticamente pela criação da exibição materializada.  Não é necessária nenhuma ação do usuário.|
-|STDEV(a) é especificado por usuários na lista SELECT de uma definição de exibição materializada, em que "a" é uma expressão.|SUM(a), COUNT_BIG(a), SUM(square(a))|Adicionado automaticamente pela criação da exibição materializada.  Não é necessária nenhuma ação do usuário. |
+|SUM(a) é especificado por usuários na lista SELECT de uma definição de exibição materializada E 'a' é uma expressão anulável |COUNT_BIG (a) |Os usuários precisam adicionar a expressão 'a' manualmente na definição de exibição materializada.|
+|AVG(a) é especificado por usuários na lista SELECT de uma definição de exibição materializada, em que 'a' é uma expressão.|SUM(a), COUNT_BIG(a)|Adicionado automaticamente pela criação da exibição materializada.  Não é necessária nenhuma ação do usuário.|
+|STDEV(a) é especificado por usuários na lista SELECT de uma definição de exibição materializada, em que 'a' é uma expressão.|SUM(a), COUNT_BIG(a), SUM(square(a))|Adicionado automaticamente pela criação da exibição materializada.  Não é necessária nenhuma ação do usuário. |
 | | | |
 
 Uma vez criadas, as exibições materializadas são visíveis no SQL Server Management Studio na pasta de exibições da instância do SQL Data Warehouse do Azure.

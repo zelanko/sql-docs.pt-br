@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 602502f636d4204364025ae9a8e4b039e822ae8b
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 6674f818d9983de56b4b015cb446b2c8f2931b84
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79190567"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434153"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Configurar um ouvinte para um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "79190567"
 >  Para criar o primeiro ouvinte do grupo de disponibilidade de um grupo de disponibilidade, é altamente recomendável usar o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Evite criar um ouvinte diretamente no cluster WSFC, exceto se necessário, por exemplo, para criar um ouvinte adicional.  
   
  
-##  <a name="DoesListenerExist"></a> Já existe um ouvinte para esse grupo de disponibilidade?  
+##  <a name="does-a-listener-exist-for-this-availability-group-already"></a><a name="DoesListenerExist"></a> Já existe um ouvinte para esse grupo de disponibilidade?  
 
  **Para determinar se um ouvinte já existe para o grupo de disponibilidade**  
   
@@ -40,14 +40,14 @@ ms.locfileid: "79190567"
 > [!NOTE]  
 >  Se já houver um ouvinte e você desejar criar um ouvinte adicional, consulte [Para criar um ouvinte adicional para um grupo de disponibilidade (opcional)](#CreateAdditionalListener)posteriormente neste tópico.  
   
-##  <a name="Restrictions"></a> Limitações e restrições  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Só é possível criar um ouvinte por grupo de disponibilidade via [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Geralmente, cada grupo de disponibilidade exige somente um ouvinte. No entanto, alguns cenários de cliente exigem vários ouvintes para um grupo de disponibilidade.   Depois de criar um ouvinte pelo SQL Server, você pode usar o Windows PowerShell para clusters de failover ou o Gerenciador de Cluster de Failover do WSFC para criar ouvintes adicionais. Para obter mais informações, consulte [Para criar um ouvinte adicional para um grupo de disponibilidade (opcional)](#CreateAdditionalListener), posteriormente neste tópico.  
   
-##  <a name="Recommendations"></a> Recomendações  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
  O uso de um endereço IP estático é recomendável, embora não obrigatório, para várias configurações de sub-rede.  
   
-##  <a name="Prerequisites"></a> Pré-requisitos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
 -   Você deve estar conectado à instância do servidor que hospeda a réplica primária.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "79190567"
 > [!IMPORTANT]  
 >  Antes de criar seu primeiro ouvinte, é altamente recomendável ler [Conectividade de cliente AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
-###  <a name="DNSnameReqs"></a> Requisitos para o nome DNS de um ouvinte de grupo de disponibilidade  
+###  <a name="requirements-for-the-dns-name-of-an-availability-group-listener"></a><a name="DNSnameReqs"></a> Requisitos para o nome DNS de um ouvinte de grupo de disponibilidade  
  Cada ouvinte de grupo de disponibilidade exige um nome de host DNS que é exclusivo no domínio e no NetBIOS. O nome DNS é um valor da cadeia de caracteres. Este nome pode conter somente caracteres alfanuméricos, traços/hifens (-) e sublinhados (_), em qualquer ordem. Os nomes de host DNS diferenciam maiúsculas de minúsculas. O comprimento máximo é 63 caracteres; no entanto, no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o comprimento máximo que você pode especificar é 15 caracteres.  
   
  Nós recomendamos que você especifique uma cadeia de caracteres significativa. Por exemplo, para um grupo de disponibilidade denominado `AG1`, um nome de host de DNS significativo seria `ag1-listener`.  
@@ -64,7 +64,7 @@ ms.locfileid: "79190567"
 > [!IMPORTANT]  
 >  O NetBIOS reconhece somente os primeiros 15 caracteres no dns_name. Se você tiver dois clusters do WSFC que sejam controlados pelo mesmo Active Directory e tentar criar ouvintes de grupo de disponibilidade nos dois clusters usando nomes com mais de 15 caracteres e um prefixo idêntico de 15 caracteres, você obterá um erro relatando que o recurso Nome de Rede virtual não pôde ser colocado online. Para obter informações sobre regras da nomenclatura de prefixos para nomes DNS, consulte [Atribuindo nomes de domínio](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
-##  <a name="WinPermissions"></a> Permissões do Windows  
+##  <a name="windows-permissions"></a><a name="WinPermissions"></a> Permissões do Windows  
   
 |Permissões|Link|  
 |-----------------|----------|  
@@ -74,14 +74,14 @@ ms.locfileid: "79190567"
 > [!TIP]  
 >  Geralmente, é mais simples não pré-preparar a conta de computador para um nome de rede virtual de ouvinte. Se possível, deixe a conta ser criada e configurada automaticamente ao executar o Assistente de Alta Disponibilidade do WSFC.  
   
-##  <a name="SqlPermissions"></a> Permissões do SQL Server  
+##  <a name="sql-server-permissions"></a><a name="SqlPermissions"></a> Permissões do SQL Server  
   
 |Tarefa|Permissões|  
 |----------|-----------------|  
 |Para criar um ouvinte de grupo de disponibilidade|Requer a associação na função de servidor fixa **sysadmin** e a permissão de servidor CREATE AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.|  
 |Para modificar um ouvinte de grupo de disponibilidade existente|Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.|  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 > [!TIP]  
 >  O [Assistente de Novo Grupo de Disponibilidade](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) dá suporte à criação do ouvinte para um novo grupo de disponibilidade.  
@@ -98,7 +98,7 @@ ms.locfileid: "79190567"
   
     -   Para alterar o número da porta de um ouvinte existente, expanda o nó **Ouvintes do Grupo de Disponibilidade** , clique com o botão direito do mouse no ouvinte e selecione o comando **Propriedades** . Digite o novo número da porta no campo **Porta** e clique em **OK**.  
   
-###  <a name="AddAgListenerDialog"></a> Novo Ouvinte do Grupo de Disponibilidade (caixa de diálogo)  
+###  <a name="new-availability-group-listener-dialog-box"></a><a name="AddAgListenerDialog"></a> Novo Ouvinte do Grupo de Disponibilidade (caixa de diálogo)  
  **Nome DNS do Ouvinte**  
  Especifica o nome de host DNS do ouvinte de grupo de disponibilidade. O nome DNS é uma cadeia de caracteres que deve ser exclusivo no domínio e no NetBIOS. Este nome pode conter somente caracteres alfanuméricos, traços (-) e hífens (_), em qualquer ordem. Os nomes de host DNS diferenciam maiúsculas de minúsculas. O tamanho máximo é de 15 caracteres.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "79190567"
  **OK**  
  Clique para criar o ouvinte do grupo de disponibilidade especificado.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para criar ou configurar um ouvinte de grupo de disponibilidade**  
   
 1.  Conecte-se à instância de servidor que hospeda a réplica primária.  
@@ -154,7 +154,7 @@ ms.locfileid: "79190567"
   
     ```  
   
-##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usando o PowerShell  
  **Para criar ou configurar um ouvinte de grupo de disponibilidade**  
   
 1.  Altere o diretório (**cd**) para a instância de servidor que hospeda a réplica primária.  
@@ -204,16 +204,16 @@ ms.locfileid: "79190567"
   
 ## <a name="troubleshooting"></a>Solução de problemas  
   
-###  <a name="ADQuotas"></a> Falha ao criar um ouvinte de grupo de disponibilidade devido a cotas do Active Directory  
+###  <a name="failure-to-create-an-availability-group-listener-because-of-active-directory-quotas"></a><a name="ADQuotas"></a> Falha ao criar um ouvinte de grupo de disponibilidade devido a cotas do Active Directory  
  Pode haver falha na criação de um novo ouvinte de grupo de disponibilidade porque você atingiu uma cota do Active Directory para a conta da máquina do nó de cluster participante.  Para obter mais informações, consulte os seguintes artigos:  
   
 -   [Como solucionar problemas da conta do serviço de cluster quando ela modifica objetos de computador](https://support.microsoft.com/kb/307532)  
   
 -   [Cotas do Active Directory](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de criar um ouvinte de grupo de disponibilidade  
+##  <a name="follow-up-after-creating-an-availability-group-listener"></a><a name="FollowUp"></a> Acompanhamento: depois de criar um ouvinte de grupo de disponibilidade  
   
-###  <a name="MultiSubnetFailover"></a> Palavra-chave MultiSubnetFailover e recursos associados  
+###  <a name="multisubnetfailover-keyword-and-associated-features"></a><a name="MultiSubnetFailover"></a> Palavra-chave MultiSubnetFailover e recursos associados  
  **MultiSubnetFailover** é uma nova palavra-chave da cadeia de conexão usada para habilitar failover mais rápido com os Grupos de Disponibilidade AlwaysOn e Instâncias de cluster de failover AlwaysOn no SQL Server 2012. Os três sub-recursos a seguir são habilitados quando `MultiSubnetFailover=True` está definido na cadeia de conexão:  
   
 -   Um failover de várias sub-redes mais rápido para um ouvinte de várias sub-redes para um Grupo de Disponibilidade AlwaysOn ou instâncias de cluster de failover.  
@@ -244,7 +244,7 @@ ms.locfileid: "79190567"
   
      **Contras:** Se ocorrer um failover entre sub-redes, o tempo de recuperação do cliente poderá ser de 15 minutos ou mais, dependendo da configuração de **HostRecordTTL** e da configuração da agenda de replicação do DNS/AD entre sites.  
   
-###  <a name="RegisterAllProvidersIP"></a> Configuração RegisterAllProvidersIP  
+###  <a name="registerallprovidersip-setting"></a><a name="RegisterAllProvidersIP"></a> Configuração RegisterAllProvidersIP  
  Quando você usa o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell para criar um ouvinte de grupo de disponibilidade, o Ponto de Acesso para Cliente é criado no WSFC com a propriedade **RegisterAllProvidersIP** definida como 1 (true). O efeito de esse valor de propriedade depende da cadeia de conexão do cliente, da seguinte maneira:  
   
 -   Cadeias de conexão que definem **MultiSubnetFailover** como true  
@@ -267,10 +267,10 @@ ms.locfileid: "79190567"
     > [!IMPORTANT]  
     >  Quando você cria um ouvinte do grupo de disponibilidade no cluster WSFC (GUI do Gerenciador de Cluster de Failover), **RegisterAllProvidersIP** será 0 (false) por padrão.  
   
-###  <a name="HostRecordTTL"></a> Configuração HostRecordTTL  
+###  <a name="hostrecordttl-setting"></a><a name="HostRecordTTL"></a> Configuração HostRecordTTL  
  Por padrão, os clientes armazenam em cache registros DNS do cluster por 20 minutos.  Os clientes herdados poderão se reconectar mais rapidamente reduzindo a configuração **HostRecordTTL**, a TTL (vida útil) do registro armazenado em cache.  No entanto, a redução da configuração **HostRecordTTL** também pode resultar em maior tráfego para os servidores DNS.  
   
-###  <a name="SampleScript"></a> Exemplo de script PowerShell para desabilitar RegisterAllProvidersIP e reduzir o TTL  
+###  <a name="sample-powershell-script-to-disable-registerallprovidersip-and-reduce-ttl"></a><a name="SampleScript"></a> Exemplo de script PowerShell para desabilitar RegisterAllProvidersIP e reduzir o TTL  
  O exemplo do PowerShell a seguir demonstra como configurar os parâmetros de cluster **RegisterAllProvidersIP** e **HostRecordTTL** para o recurso de ouvinte.  O registro DNS será armazenado em cache por 5 minutos, e não pelos 20 minutos padrão.  A modificação dos dois parâmetros de cluster pode reduzir o tempo de conexão ao endereço IP correto após um failover para clientes herdados que não podem usar o parâmetro **MultiSubnetFailover** .  Substitua `yourListenerName` pelo nome do ouvinte que você está alterando.  
   
 ```  
@@ -283,7 +283,7 @@ Start-ClusterResource yourListenerName
   
  Para obter mais informações sobre os tempos de recuperação durante o failover, consulte [Client Recovery Latency During Failover](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md#DNS).  
   
-###  <a name="FollowUpRecommendations"></a> Recomendações de acompanhamento  
+###  <a name="follow-up-recommendations"></a><a name="FollowUpRecommendations"></a> Recomendações de acompanhamento  
  Após criar um ouvinte de grupo de disponibilidade:  
   
 -   Peça ao administrador da rede para reservar o endereço IP do ouvinte para seu uso exclusivo.  
@@ -292,7 +292,7 @@ Start-ClusterResource yourListenerName
   
 -   Incentive os desenvolvedores a atualizarem cadeias de conexão do cliente para especificar `MultiSubnetFailover = True`, se possível. Para obter informações sobre o suporte do driver para failover de várias sub-redes, consulte [Conectividade de cliente AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
-###  <a name="CreateAdditionalListener"></a> Criar um ouvinte adicional para um grupo de disponibilidade (opcional)  
+###  <a name="create-an-additional-listener-for-an-availability-group-optional"></a><a name="CreateAdditionalListener"></a> Criar um ouvinte adicional para um grupo de disponibilidade (opcional)  
  Depois de criar um ouvinte pelo SQL Server, você poderá adicionar um ouvinte adicional, da seguinte maneira:  
   
 1.  Crie o ouvinte usando uma das ferramentas a seguir:  
@@ -321,21 +321,11 @@ Start-ClusterResource yourListenerName
   
  Para obter mais informações, consulte [How to create multiple listeners for same availability group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/) (Como criar vários ouvintes para o mesmo grupo de disponibilidade) (um blog da equipe do SQL Server AlwaysOn).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+ 
   
--   [Exibir propriedades do ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
-  
--   [Remover um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
-  
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
-  
--   [How to create multiple listeners for same availability group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/)  
-  
--   [Blog da equipe do Always On do SQL Server: o blog oficial da equipe do Always On do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
-  
-## <a name="see-also"></a>Consulte Também  
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [Clustering de várias sub-redes do SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
-  
+## <a name="next-steps"></a>Próximas etapas
+
+Agora que você criou o ouvinte, configure seu aplicativo para [conectar-se ao ouvinte](listeners-client-connectivity-application-failover.md). Você também pode examinar várias [estratégias de monitoramento do grupo de disponibilidade](monitoring-of-availability-groups-sql-server.md) para garantir a integridade do seu grupo de disponibilidade.
+
+Você também pode [ver as propriedades de um ouvinte](view-availability-group-listener-properties-sql-server.md) ou aprender a [remover o ouvinte](remove-an-availability-group-listener-sql-server.md), se necessário. 
   

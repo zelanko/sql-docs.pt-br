@@ -24,12 +24,12 @@ ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9b0e4e37eef574fd50d28e02c4f92ee1805c953
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 63eb298fab5e2c62ac9403325368b008efa95dab
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68117615"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526741"
 ---
 # <a name="suser_name-transact-sql"></a>SUSER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -58,6 +58,9 @@ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0, o SID 
 SUSER_NAME retorna um nome de logon apenas para um logon que tenha uma entrada na tabela do sistema **syslogins**.  
   
 SUSER_NAME pode ser usado em uma lista de seleção, em uma cláusula WHERE e em qualquer lugar em que uma expressão for permitida. Use parênteses após SUSER_NAME, mesmo se nenhum parâmetro for especificado.  
+
+> [!NOTE]
+> Embora a função SUSER_NAME tenha suporte no Banco de Dados SQL do Azure, usar *Executar como* com SUSER_NAME não tem suporte no Banco de Dados SQL do Azure. 
   
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir retorna o nome de identificação de logon do usuário com um número de identificação de logon de `1`.  

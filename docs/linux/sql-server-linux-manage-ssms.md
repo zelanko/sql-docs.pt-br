@@ -1,6 +1,6 @@
 ---
 title: Usar o SSMS para gerenciar o SQL Server em Linux
-description: ''
+description: Este artigo apresenta o SQL Server Management Studio, um ambiente integrado para acessar, configurar, gerenciar, administrar e desenvolver componentes do SQL Server.
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/21/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 753845d41c946d955b80a927901f827ee4643567
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3ddc3ffa91b62956fdfef91ff3c19a784fc2fe2b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68000096"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216645"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Usar o SQL Server Management Studio no Windows para gerenciar o SQL Server em Linux
 
@@ -55,7 +55,7 @@ Use as seguintes etapas básicas para se conectar:
 
 1. Na janela **Conectar ao Servidor**, insira as seguintes informações (se o SSMS já estiver em execução, clique em **Conectar > Mecanismo de Banco de Dados** para abrir a janela **Conectar ao Servidor**):
 
-   | Configuração | DESCRIÇÃO |
+   | Configuração | Descrição |
    |-----|-----|
    | **Tipo de servidor** | O padrão é o mecanismo de banco de dados; não altere esse valor. |
    | **Nome do servidor** | Insira o nome do computador de destino do SQL Server em Linux ou seu endereço IP. |
@@ -63,7 +63,7 @@ Use as seguintes etapas básicas para se conectar:
    | **Logon** | Insira o nome de um usuário com acesso a um banco de dados no servidor (por exemplo, a conta **SA** padrão criada durante a instalação). |
    | **Senha** | Insira a senha do usuário especificado (para a **conta SA**, você criou isso durante a instalação). |
 
-    ![SQL Server Manager Studio: conectar-se a um servidor do Banco de Dados SQL](./media/sql-server-linux-manage-ssms/connect.png)
+    ![SQL Server Management Studio: Conectar-se ao servidor do Banco de Dados SQL](./media/sql-server-linux-manage-ssms/connect.png)
 
 1. Clique em **Conectar**.
 

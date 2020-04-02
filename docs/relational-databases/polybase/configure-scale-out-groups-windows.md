@@ -1,5 +1,6 @@
 ---
 title: Configurar grupos de escala horizontal do PolyBase no Windows | Microsoft Docs
+description: Configure um grupo de escala horizontal do PolyBase para criar um cluster de instâncias do SQL Server. Isso aprimora o desempenho de consulta para grandes conjuntos de dados de fontes externas.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: dfc8560c9834d920a132a54587ba80947db9425d
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 658dcbccb515b7d5d720d0bb0c677aa2178b7606
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256749"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216075"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configurar grupos de escala horizontal do PolyBase no Windows
 
@@ -21,7 +22,7 @@ ms.locfileid: "77256749"
 
 Este artigo descreve como configurar um [Grupo de escala horizontal do PolyBase](polybase-scale-out-groups.md) no Windows. Isso cria um cluster de instâncias do SQL Server para processar grandes conjuntos de dados de fontes de dados externas, como Hadoop e Armazenamento de Blobs do Azure, de maneira expandir para melhor desempenho de consulta.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
   
 - Mais de um computador no mesmo domínio  
   

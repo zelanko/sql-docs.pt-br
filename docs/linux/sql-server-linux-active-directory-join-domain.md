@@ -1,7 +1,7 @@
 ---
 title: Ingressar o SQL Server em Linux no Active Directory
 titleSuffix: SQL Server
-description: ''
+description: Este artigo fornece orientações sobre como ingressar um computador host Linux do SQL Server em um domínio do AD. Você pode usar um pacote SSSD interno ou provedores do AD de terceiros.
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c787409d4e8772d89fc748d39c605506f5dcb520
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76761870"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216185"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Ingressar o SQL Server em um host Linux em um domínio do Active Directory
 
@@ -22,7 +22,7 @@ ms.locfileid: "76761870"
 
 Este artigo oferece diretrizes gerais sobre como ingressar um computador host Linux do SQL Server em um domínio do AD (Active Directory). Há dois métodos: usar um pacote SSSD interno ou usar provedores de Active Directory de terceiros. Os exemplos de produtos de ingresso no domínio de terceiros são are [PBIS (Serviços de Identidade PowerBroker)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/) e [Centrify](https://www.centrify.com/). Este guia inclui etapas para verificar a configuração do Active Directory. No entanto, ele não pretende fornecer instruções sobre como ingressar um computador em um domínio ao usar utilitários de terceiros.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Antes de configurar a autenticação do Active Directory, é necessário configurar um controlador de domínio do Active Directory, Windows, em sua rede. Em seguida, ingresse o host SQL Server em Linux em um domínio do Active Directory.
 
@@ -129,7 +129,7 @@ Depois que a configuração básica e a conectividade com o controlador de domí
 - [Opção 1: usar um pacote SSSD](#option1)
 - [Opção 2: usar utilitários de provedor openldap de terceiros](#option2)
 
-### <a id="option1"></a> Opção 1: usar o pacote SSSD para ingressar no domínio do AD
+### <a name="option-1-use-sssd-package-to-join-ad-domain"></a><a id="option1"></a> Opção 1: usar o pacote SSSD para ingressar no domínio do AD
 
 Esse método ingressa o host SQL Server em um domínio do AD usando os pacotes **realmd** e **sssd**.
 
@@ -203,7 +203,7 @@ Use as etapas a seguir para ingressar um host SQL Server em um domínio do Activ
 
 Para saber mais, confira a documentação do Red Hat para [Descobrir e ingressar domínios de identidade](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
 
-### <a id="option2"></a> Opção 2: usar utilitários de provedor openldap de terceiros
+### <a name="option-2-use-third-party-openldap-provider-utilities"></a><a id="option2"></a> Opção 2: usar utilitários de provedor openldap de terceiros
 
 Você pode usar utilitários de terceiros, como [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) ou [Centrify](https://www.centrify.com/). Este artigo não aborda etapas para cada utilitário individual. Primeiro, você deve usar um desses utilitários para ingressar o host Linux do SQL Server no domínio antes de continuar.  
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 11b3c1d06c74f8d5c19aa95ba8de20fbce67d3dd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e67682a25768e80469aa13a027099bacc515f8a7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75259040"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448106"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "75259040"
   
 -   **Para criar um ponto de extremidade de espelhamento de banco de dados usando:**  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  Os métodos de autenticação e de criptografia da instância do servidor são estabelecidos pelo administrador do sistema.  
   
 > [!IMPORTANT]  
 >  O algoritmo RC4 é preterido. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Recomendamos usar AES.  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Exige a permissão CREATE ENDPOINT ou a associação na função de servidor fixa sysadmin. Para obter mais informações, consulte [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-database-mirroring-endpoint-that-uses-windows-authentication"></a>Para criar um ponto de extremidade do espelhamento de banco de dados que usa a Autenticação do Windows  
   
@@ -122,7 +122,7 @@ ms.locfileid: "75259040"
   
     -   *\<algorithm>* fornece a opção de especificar os padrões de criptografia para o ponto de extremidade. O valor de *\<algorithm>* pode ser um dos seguintes algoritmos ou combinações de algoritmos: RC4, AES, AES RC4 ou RC4 AES.  
   
-         AES RC4 especifica que esse ponto de extremidade negociará um algoritmo de criptografia, dando preferência ao algoritmo AES. RC4 AES especifica que esse ponto de extremidade negociará um algoritmo de criptografia, dando preferência ao algoritmo RC4. Se ambos os ponto de extremidade especificarem ambos os algoritmos, mas em ordens diferentes, vence o ponto de extremidade que aceita a conexão.  
+         AES RC4 especifica que esse ponto de extremidade negociará um algoritmo de criptografia, dando preferência ao algoritmo AES. RC4 AES especifica que esse ponto de extremidade negociará um algoritmo de criptografia, dando preferência ao algoritmo RC4. Se ambos os ponto de extremidade especificarem ambos os algoritmos, mas em ordens diferentes, vence o ponto de extremidade que aceita a conexão. Forneça o mesmo algoritmo explicitamente para evitar erros de conexão entre servidores diferentes.
   
         > [!NOTE]  
         >  O algoritmo RC4 é preterido. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Recomendamos usar AES.  
@@ -139,7 +139,7 @@ ms.locfileid: "75259040"
     > [!NOTE]  
     >  Para alterar um ponto de extremidade existente, use [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
-###  <a name="TsqlExample"></a> Exemplo: criar pontos de extremidade compatíveis com espelhamento de banco de dados (Transact-SQL)  
+###  <a name="example-creating-endpoints-to-support-for-database-mirroring-transact-sql"></a><a name="TsqlExample"></a> Exemplo: criar pontos de extremidade compatíveis com espelhamento de banco de dados (Transact-SQL)  
  O seguinte exemplo cria pontos de extremidade do espelhamento de banco de dados para as instâncias de servidor padrão em três sistemas de computador separados:  
   
 |Função da instância de servidor|Nome do computador host|  
@@ -179,7 +179,7 @@ CREATE ENDPOINT endpoint_mirroring
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para configurar um ponto de extremidade de espelhamento de banco de dados**  
   
 -   [Criar um ponto de extremidade de espelhamento de banco de dados para grupos de disponibilidade AlwaysOn &#40;SQL Server PowerShell&#41;](../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  

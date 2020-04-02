@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 34599160e206d89eaee04074ddbaee2bac7c5f89
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.openlocfilehash: a138a8451211436d55da537b9d8a45d26c534e48
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77173569"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215735"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Persistência de dados com o cluster de Big Data do SQL Server em Kubernetes
 
@@ -33,6 +33,8 @@ Estes são alguns aspectos importantes a serem considerados quando você estiver
 - Se o provisionador de armazenamento para a classe de armazenamento que você está fornecendo na configuração não der suporte ao provisionamento dinâmico, você precisará pré-criar os volumes persistentes. Por exemplo, o provisionador `local-storage` não habilita o provisionamento dinâmico. Confira este [script de exemplo](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) para obter diretrizes sobre como proceder em um cluster do Kubernetes implantado com `kubeadm`.
 
 - Ao implantar um cluster de Big Data, você pode configurar a mesma classe de armazenamento para ser usada por todos os componentes no cluster. Mas, como uma melhor prática para uma implantação de produção, vários componentes exigirão configurações de armazenamento diferentes para acomodar várias cargas de trabalho em termos de tamanho ou taxa de transferência. Substitua a configuração de armazenamento padrão especificada no controlador para cada um dos pools de armazenamento, conjuntos de dados e instâncias mestres do SQL Server. Este artigo fornece exemplos de como fazer isso.
+
+- Ao calcular os requisitos de dimensionamento do pool de armazenamento, considere o fator de replicação com o qual o HDFS está configurado.  O fator de replicação é configurável no momento da implantação no arquivo de configuração da implantação do cluster. O valor padrão para os perfis de DevTest (ou seja, `aks-dev-test` ou `kubeadm-dev-test`) é 2 e, para os perfis que recomendamos para implantações de produção (ou seja, `kubeadm-prod`), é 3. Como melhor prática, recomendamos que você configure sua implantação de produção do cluster de Big Data com um fator de replicação para o HDFS de pelo menos 3. O valor do fator de replicação afetará o número de instâncias no pool de armazenamento: no mínimo, você precisa implantar um número de instâncias do pool de armazenamento equivalente ao valor do fator de replicação. Além disso, você precisa dimensionar o armazenamento adequadamente e levar em conta os dados sendo replicados no HDFS tantas vezes quanto for o valor do fator de replicação. Encontre mais informações sobre a replicação de dados no HDFS [aqui](https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#Data_Replication). 
 
 - Da versão SQL Server 2019 CU1 em diante, não é possível modificar uma definição de configuração de armazenamento após a implantação. Esta restrição impede você não apenas de modificar o tamanho da declaração de volume persistente para cada instância, mas também de expandir operações de dimensionamento após a implantação. Portanto, é muito importante planejar o layout de armazenamento antes de implantar um cluster de Big Data.
 
@@ -101,7 +103,7 @@ azdata bdc config init --source aks-dev-test --target custom
 Esse processo cria dois arquivos, `bdc.json` e `control.json`, que você pode personalizar, editando-os manualmente ou usando o comando `azdata bdc config`. Você pode usar uma combinação de bibliotecas jsonpath e jsonpatch para fornecer maneiras de editar os arquivos de configuração.
 
 
-### <a id="config-samples"></a> Configurar o nome da classe de armazenamento e/ou o tamanho das declarações
+### <a name="configure-storage-class-name-andor-claims-size"></a><a id="config-samples"></a> Configurar o nome da classe de armazenamento e/ou o tamanho das declarações
 
 Por padrão, o tamanho das declarações de volume persistente provisionadas para cada um dos pods provisionados no cluster é de 10 gigabytes (GB). É possível atualizar esse valor para acomodar as cargas de trabalho que você está executando em um arquivo de configuração personalizado antes da implantação do cluster.
 

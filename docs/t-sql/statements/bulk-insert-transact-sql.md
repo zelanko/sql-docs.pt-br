@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 999ae75343a71efafd7348065b2a1d3533b4bd10
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.openlocfilehash: e333a2e489f178ff1301001822f80ec24354184c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558363"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448401"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -310,7 +310,7 @@ Antes do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, arquivo
 
  Para obter informações sobre quando as operações de inserção de linhas executadas por importações em massa para o SQL Server são registradas no log de transações, confira [Pré-requisitos para log mínimo na importação em massa](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md). Não há suporte para o log mínimo no Banco de Dados SQL do Azure.
 
-## <a name="Limitations"></a> Restrições
+## <a name="restrictions"></a><a name="Limitations"></a> Restrições
 
 Ao usar um arquivo de formato com BULK INSERT, você pode especificar até somente 1024 campos. Isso é o mesmo que o número máximo de colunas permitido em uma tabela. Se você usar um arquivo de formato com BULK INSERT com um arquivo de dados que contém mais de 1.024 campos, BULK INSERT gerará o erro 4822. O [utilitário BCP](../../tools/bcp-utility.md) não tem esta limitação, portanto, para arquivos de dados que contêm mais de 1.024 campos, use BULK INSERT sem um arquivo de formato ou o comando **bcp**.
 
@@ -464,6 +464,24 @@ CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH ( TYPE = BLOB_STORAGE,
           LOCATION = 'https://****************.blob.core.windows.net/invoices'
           , CREDENTIAL= MyAzureBlobStorageCredential --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+);
+
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-12-08.csv'
+WITH (DATA_SOURCE = 'MyAzureBlobStorage');
+```
+Outra maneira de acessar a conta de armazenamento é por meio de [Identidade Gerenciada](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview). Para fazer isso, siga as [Etapas de 1 a 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps) para configurar o Banco de Dados SQL para acessar o armazenamento via identidade gerenciada, após o que você poderá implementar o exemplo de código como abaixo
+```sql
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
+GO
+--> Change to using Managed Identity instead of SAS key 
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
+GO
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH ( TYPE = BLOB_STORAGE,
+          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
+          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
 );
 
 BULK INSERT Sales.Invoices

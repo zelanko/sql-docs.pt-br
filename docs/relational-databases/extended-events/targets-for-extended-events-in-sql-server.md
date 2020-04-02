@@ -1,5 +1,6 @@
 ---
 title: Destinos de eventos estendidos no SQL Server
+description: Este artigo explica os destinos do package0 em eventos estendidos no SQL Server. Saiba mais sobre as capacidades de destino na coleta e no relatório de dados e parâmetros de destino.
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ba516e2e58a19ffdd5d225f3bc0a8c495c0432bd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75501980"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487514"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos de eventos estendidos no SQL Server
 
@@ -34,10 +35,10 @@ Este artigo explica quando e como usar o destino package0 em eventos estendidos 
 A [seção ring_buffer](#h2_target_ring_buffer) inclui um exemplo de como usar o [XQuery no Transact-SQL](../../xquery/xquery-language-reference-sql-server.md) para copiar uma cadeia de caracteres XML em um conjunto de linhas relacional.
 
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Pré-requisitos
 
 
-- Esteja familiarizado com os conceitos básicos dos eventos estendidos, conforme descrito em [Início Rápido: Eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
+- Esteja familiarizado com os conceitos básicos dos eventos estendidos, conforme descrito em [Início Rápido: eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
 
 - Instalou uma versão recente do utilitário SQL Server Management Studio (SSMS.exe) atualizado com frequência. Para obter detalhes, confira:

@@ -1,5 +1,6 @@
 ---
 title: Dados para relatórios móveis do Reporting Services | Microsoft Docs
+description: Depois de importar dados para o Publicador de Relatórios Móveis do SQL Server, a criação e o design de relatórios móveis são os mesmos, independentemente de os dados serem de arquivos do Excel ou de conjuntos de dados compartilhados.
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6131f6bce9cb6d1c87a4a75215a906b6d097c7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3c022631d0f21c4e23756e39e4824fe9f52ef3b5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63129735"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79447865"
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Dados para relatórios móveis do Reporting Services
 O modelo de dados do [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] é simples. Os dados são importados para o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] como uma coleção de conjuntos de dados. Relacionamentos formais entre conjuntos de dados não são necessários. As pesquisas de um conjunto de dados para outro funcionam desde que seus valores de chave correspondam. Agregações de data/hora são manipuladas pelo runtime do relatório móvel e corresponderão entre diferente conjuntos de dados, mesmo que a granularidade de dados de data/hora seja diferente entre os conjuntos de dados.   

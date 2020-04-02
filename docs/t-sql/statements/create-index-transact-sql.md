@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/12/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80f3fba621cbfe4f8411f618ca60025685c2da34
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: d3695dcb6f322f2b0509bca2bb98b1c592c13a1f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287250"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448356"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -750,7 +750,7 @@ As diretrizes a seguir são aplicáveis ao executar operações de índice onlin
 
 Para obter mais informações, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
 
-### <a name="resumable-indexes"></a>Operações de índice retomáveis
+### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a>Operações de índice retomáveis
 **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 As diretrizes a seguir se aplicam a operações de índice retomável:
@@ -820,7 +820,7 @@ As restrições a seguir se aplicam a índices particionados:
 Para avaliar como a alteração do estado de compactação afetará uma tabela, um índice ou uma partição, use o procedimento armazenado [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) .
 
 ## <a name="permissions"></a>Permissões
-Requer a permissão `ALTER` na tabela ou exibição. O usuário deve ser membro da função de servidor fixa `sysadmin` ou das funções de banco de dados fixas `db_ddladmin` e `db_owner`.
+Requer a permissão `ALTER` na tabela ou exibição. O usuário deve ser membro da função de servidor fixa `sysadmin` ou das funções de banco de dados fixas `db_ddladmin` ou `db_owner`.
 
 ## <a name="limitations-and-restrictions"></a>Limitações e Restrições
 No [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], não é possível criar:

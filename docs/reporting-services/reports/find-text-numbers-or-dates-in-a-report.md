@@ -1,5 +1,6 @@
 ---
 title: Localizar texto, números ou datas em um relatório | Microsoft Docs
+description: Saiba como usar o Reporting Services para pesquisar conteúdo em um relatório, como texto, números e datas.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f76bc00eca721a2ca118062d21cafe042e572dbb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39dad6e1717e151a7fc90cfac60a6adc1c7dddf2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576410"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510147"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>Localizar texto, números ou datas em um relatório
   Você pode procurar conteúdo em um relatório digitando a palavra ou expressão que deseja localizar (o tamanho máximo de um termo de pesquisa é de 256 caracteres). A pesquisa é uma técnica de navegação na Internet que localiza um valor correspondente no relatório e destaca essa parte do relatório que contém o valor.  

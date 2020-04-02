@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e2024af63b1a033b2dcb5afbde461cff02b9462b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d4cd11ea250637c172a9d8343af934c326089add
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082223"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80380767"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>URLs em arquivos de configuração (Gerenciador de configurações do SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena configurações de aplicativos em um arquivo RSReportServer.config. Nesse arquivo, há parâmetros de configuração para URLs e reservas de URL. Esses parâmetros de configuração têm propósitos muito diferentes e regras para modificação. Se estiver acostumado a modificar arquivos de configuração para ajustar uma implantação, este tópico pode ajudá-lo a entender como cada configuração de URL é usada.  
@@ -36,7 +36,7 @@ ms.locfileid: "77082223"
   
  **UrlRoot** será especificada automaticamente no arquivo RSReportServer.config quando você configurar as URLs para acesso a aplicativos. Se você modificar esse valor no arquivo de configuração, deverá especificar um endereço de URL válido para um serviço Web Servidor de Relatórios que esteja conectado a um banco de dados do servidor de relatório que contém os relatórios que você deseja entregar. Você pode especificar apenas uma **UrlRoot** para uma única instância do servidor de relatório; apenas uma entrada **UrlRoot** pode existir no arquivo RSReportServer.config para qualquer instância específica do servidor de relatório. Se você tiver várias URLs reservadas para o serviço Web Servidor de Relatórios, deverá escolher um dos valores disponíveis para **UrlRoot**.  
   
- Na maioria dos casos, não é necessário modificar **UrlRoot**. Entretanto, se o servidor de relatório será acessado por uma URL totalmente qualificada e você não configurou uma URL que use um cabeçalho de host para o nome de site totalmente qualificado, deverá editar manualmente o arquivo RSReportServer.config para definir a **UrlRoot** como a URL totalmente qualificada do servidor de relatório que será usada para renderizar o relatório (por exemplo, https://www.adventure-works.com/mywebapp/reportserver).  
+ Na maioria dos casos, não é necessário modificar **UrlRoot**. Entretanto, se o servidor de relatório for ser acessado por uma URL totalmente qualificada e você não tiver configurado uma URL que usa um cabeçalho de host para o nome do site totalmente qualificado, você deverá editar manualmente RSReportServer.config para definir a **UrlRoot** como a URL totalmente qualificada do servidor de relatório que será usada para renderizar o relatório (por exemplo, `https://www.adventure-works.com/mywebapp/reportserver`).  
   
 #### <a name="urls-connecting-the-ssrswebportal-and-web-parts-to-the-report-server-web-service"></a>URLs conectando o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] e Web Parts ao serviço Web Servidor de Relatórios  
  O [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] e o SharePoint 2.0 Web Parts for Reporting Services são componentes front-end da Web que se conectam a um servidor de relatório. As URLs usadas para conexão a um servidor de relatório back-end incluem o seguinte:  

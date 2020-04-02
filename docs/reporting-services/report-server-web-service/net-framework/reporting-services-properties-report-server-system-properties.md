@@ -1,5 +1,6 @@
 ---
 title: Propriedades do sistema do servidor de relatório | Microsoft Docs
+description: As propriedades do sistema são globais para o banco de dados do servidor de relatório. Você poderá ler ou modificar muitas dessas propriedades usando os métodos de serviço Web.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30455d77efff3c9a9e4f48b9cbeccfa983001220
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ecb90d65a011e5bb00c66f5f6ccd32ab4be663ee
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128813"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509628"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Propriedades do Reporting Services – propriedades do sistema do servidor de relatório
   Os seguintes nomes da propriedade do sistema estão reservados. Você não pode criar propriedades definidas pelo usuário com o mesmo nome. Você poderá ler ou modificar muitas dessas propriedades usando os métodos de serviço Web.  
   
 ## <a name="properties"></a>Propriedades  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |SiteName|O nome do site do servidor de relatório exibido na interface do usuário. O valor padrão é **Servidor de Relatório do Microsoft**. Essa propriedade pode ser uma cadeia de caracteres vazia. O tamanho máximo é de 8.000 caracteres.|  
 |SystemSnapshotLimit|O número máximo de instantâneos que são armazenados para um relatório. Os valores válidos são de **-1** até **2**,**147**,**483**,**647**. Se o valor for **-1**, não haverá limite de instantâneo.|  

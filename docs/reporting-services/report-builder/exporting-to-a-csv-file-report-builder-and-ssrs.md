@@ -1,5 +1,6 @@
 ---
 title: Como exportar para um arquivo CSV (Construtor de Relatórios) | Microsoft Docs
+description: No Construtor de Relatórios, a extensão de renderização de CSV renderiza relatórios paginados para um formato de texto sem formatação que é legível e compatível com muitos aplicativos.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b53c40aeb36b2db7586fe135daa05aff17e54e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1104054faef55ca3b3b661ea210c279c9aa55841
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078372"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342885"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportando para um arquivo CSV (Construtor de Relatórios e SSRS)
   A extensão de renderização CSV (Comma-Separated Value) renderiza relatórios paginados como uma representação mesclada dos dados de um relatório padronizado, em formato de texto simples que pode ser facilmente lido e que também permite a troca com vários aplicativos.  
@@ -27,7 +28,7 @@ ms.locfileid: "77078372"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> Renderização de CSV  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> Renderização de CSV  
  Quando renderizado usando as configurações padrão, um relatório de CSV tem as seguintes características:  
   
 -   A cadeia de caracteres delimitadora de campo padrão é uma vírgula (,).  
@@ -95,7 +96,7 @@ ms.locfileid: "77078372"
  Para obter mais informações, consulte [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
   
-##  <a name="RenderingModes"></a> Modos do renderizador  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> Modos do renderizador  
  A extensão de renderização CSV pode operar em dois modos: um otimizado para o Excel e o outro otimizado para aplicativos de terceiros que requerem total compatibilidade com a especificação CSV no RFC 4180. Dependendo do modo usado, as regiões de dados semelhantes são controladas de maneira diferente.  
   
 ### <a name="default-mode"></a>Modo Padrão  
@@ -119,7 +120,7 @@ ms.locfileid: "77078372"
 #### <a name="formatting"></a>Formatação  
  Os valores não são formatados.  
   
-##  <a name="Interactivity"></a> Interatividade  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interatividade  
  A interatividade não é suportada por formatos de CSV gerados por este renderizador. Os elementos interativos a seguir não são renderizados:  
   
 -   Hiperlinks  
@@ -137,7 +138,7 @@ ms.locfileid: "77078372"
 -   Indicadores  
   
   
-##  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Configurações de informações de dispositivo  
  Você pode alterar algumas configurações padrão deste renderizador, incluindo qual o modo de processamento, quais caracteres serão usados como delimitadores e quais caracteres serão usados como a cadeia de caracteres padrão do qualificador de texto, alterando as configurações de informações de dispositivo. Para obter mais informações, consulte [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
   

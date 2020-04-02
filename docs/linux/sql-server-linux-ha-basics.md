@@ -1,6 +1,6 @@
 ---
 title: Alta disponibilidade do SQL Server para implantações do Linux
-description: Saiba mais sobre as diferentes opções de alta disponibilidade disponíveis para o SQL Server em Linux, como grupos de disponibilidade Always On, FCI (instâncias de cluster de failover) e envio de logs.
+description: Saiba mais sobre as opções de alta disponibilidade para o SQL Server em Linux, como os grupos de disponibilidade Always On, as FCIs (instâncias de cluster de failover) e o envio de logs.
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 474533a69d74512e3e305f44d96f90009aa64e00
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c999228cdcd78ca2996ee134266a36543e97d913
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75656604"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216676"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Noções básicas de disponibilidade do SQL Server para implantações do Linux
 
@@ -22,7 +22,7 @@ ms.locfileid: "75656604"
 
 Começando com o [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] é compatível no Linux e no Windows. Como as implantações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseadas no Windows, os bancos de dados e as instâncias do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] precisam estar altamente disponíveis no Linux. Este artigo aborda os aspectos técnicos do planejamento e da implantação de instâncias e bancos de dados do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseados no Linux altamente disponíveis, bem como algumas das diferenças das instalações baseadas no Windows. Como o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pode ser novo para profissionais do Linux e o Linux pode ser novo para profissionais do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], às vezes, o artigo apresenta conceitos que podem ser familiares para alguns e desconhecidos para outros.
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>Opções de disponibilidade do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para implantações do Linux
+## <a name="ssnoversion-md-availability-options-for-linux-deployments"></a>Opções de disponibilidade do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para implantações do Linux
 Além de backup e restauração, os mesmos três recursos de disponibilidade estão disponíveis no Linux como nas implantações baseadas no Windows:
 -   AGs (Grupos de Disponibilidade) Always On
 -   FCIs (Instâncias do cluster de failover) do Always On
@@ -51,7 +51,7 @@ Alguns comandos comuns, cada um com vários comutadores e opções que podem ser
 -   `systemctl` – iniciar, parar ou habilitar serviços
 -   Comandos do editor de texto. No Linux, há várias opções de editor de texto, como vi e emacs.
 
-## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Tarefas comuns de configurações de disponibilidade do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux
+## <a name="common-tasks-for-availability-configurations-of-ssnoversion-md-on-linux"></a>Tarefas comuns de configurações de disponibilidade do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux
 Esta seção aborda as tarefas comuns a todas as implantações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseadas no Linux.
 
 ### <a name="ensure-that-files-can-be-copied"></a>Verifique se os arquivos podem ser copiados
@@ -120,7 +120,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
-### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Instalar pacotes do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para disponibilidade
+### <a name="install-ssnoversion-md-packages-for-availability"></a>Instalar pacotes do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para disponibilidade
 Em uma instalação do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseada no Windows, alguns componentes são instalados mesmo em uma instalação básica do mecanismo, enquanto outros não são. No Linux, somente o mecanismo do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] é instalado como parte do processo de instalação. Tudo o mais é opcional. Para instâncias do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] altamente disponíveis no Linux, dois pacotes devem ser instalados com o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]: [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent (*mssql-server-agent*) e o pacote de HA (alta disponibilidade) (*mssql-server-ha*). Embora o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent seja tecnicamente opcional, ele é o agendador do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para trabalhos e é exigido pelo envio de logs, portanto, a instalação é recomendada. Em instalações baseadas no Windows, o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent não é opcional.
 
 >[!NOTE]
@@ -204,10 +204,10 @@ Os locais de log para clusters do Pacemaker diferem dependendo da distribuição
 
 Para alterar a localização padrão do registro em log, modifique `corosync.conf`.
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Planejar clusters do Pacemaker para o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+## <a name="plan-pacemaker-clusters-for-ssnoversion-md"></a>Planejar clusters do Pacemaker para o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Esta seção aborda os pontos de planejamento importantes para um cluster do Pacemaker.
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Virtualização de clusters do Pacemaker baseados no Linux para o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-ssnoversion-md"></a>Virtualização de clusters do Pacemaker baseados no Linux para o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 O uso de máquinas virtuais para implantar implantações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseadas no Linux para AGs e FCIs é coberto pelas mesmas regras que as de suas contrapartes baseadas no Windows. Há um conjunto básico de regras para a compatibilidade de implantações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] virtualizadas fornecidas pela Microsoft no [Suporte da Microsoft KB 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Hipervisores diferentes, como o Hyper-V da Microsoft e o ESXi da VMware, podem ter variações diferentes sobre isso, devido a diferenças nas próprias plataformas.
 
 Quando se trata de AGs e FCIs em virtualização, verifique se a antiafinidade está definida para os nós de um determinado cluster do Pacemaker. Quando configuradas para alta disponibilidade em uma configuração de AG ou FCI, as VMs que hospedam o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] nunca devem estar em execução no mesmo host de hipervisor. Por exemplo, se uma FCI de dois nós for implantada, serão necessários *pelo menos* três hosts de hipervisor para que haja algum lugar para que uma das VMs que hospeda um nó continue no caso de uma falha de host, especialmente se estiver usando recursos como Migração ao Vivo ou vMotion.

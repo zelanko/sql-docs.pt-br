@@ -1,5 +1,6 @@
 ---
 title: Usar o Provedor do PowerShell para eventos estendidos
+description: Use o provedor do SQL Server PowerShell para gerenciar os Eventos Estendidos do SQL Server. Este artigo mostra exemplos de criação, alteração e gerenciamento de sessões.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7fba3c0ad9ab6f004d001b1a8e04d86e27d1818
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 86c1aeeca719fff8f63926ff1c28fb810f0c5d8f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242894"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487554"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Usar o Provedor do PowerShell para eventos estendidos
 

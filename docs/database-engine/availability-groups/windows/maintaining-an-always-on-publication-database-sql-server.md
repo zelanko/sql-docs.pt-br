@@ -2,7 +2,7 @@
 title: Gerenciar um banco de dados Publicador replicado como parte de um grupo de disponibilidade
 description: Uma descrição de como gerenciar e manter um banco de dados que funciona como um Publicador em uma replicação do SQL e também participa de um grupo de disponibilidade Always On.
 ms.custom: seodec18
-ms.date: 05/17/2016
+ms.date: 05/18/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -13,33 +13,33 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7371acd7c96dbf4baa6edf31ca88d1994141663f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4a9bf2731cf91c18a1c8dfa7ce015b0b7c21d0d3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75228185"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448420"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Gerenciar um banco de dados Publicador replicado como parte de um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Este tópico discute considerações especiais para manter um banco de dados de publicação quando você usa grupos de disponibilidade AlwaysOn.  
   
-##  <a name="MaintainPublDb"></a> Mantendo um banco de dados publicado em um grupo de disponibilidade  
+##  <a name="maintaining-a-published-database-in-an-availability-group"></a><a name="MaintainPublDb"></a> Mantendo um banco de dados publicado em um grupo de disponibilidade  
  Manter um banco de dados de publicação AlwaysOn é basicamente o mesmo que manter um banco de dados de publicação padrão, com as seguintes considerações:  
   
 -   A administração deve ocorrer no host de réplica primária. No [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], as publicações aparecem sob a pasta **Publicações Locais** para o host de réplica primária e também para réplicas secundárias legíveis. Depois do failover, talvez você precise atualizar manualmente o [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] para que a alteração seja refletida se a réplica secundária elevada a primária não estiver legível.  
   
 -   O monitor de replicação sempre exibe informações de publicação sob o publicador original. Entretanto, estas informações podem ser exibidas no Monitor de Replicação de qualquer réplica, adicionando o publicador original como um servidor.  
   
--   Ao usar os procedimentos armazenados ou RMO (Replication Management Objects) para gerenciar na réplica primária atual, nos casos em que você especifica o nome do Publicador, especifique o nome da instância na qual o banco de dados foi habilitado para a replicação (o publicador original). Para determinar o nome apropriado, use a função **PUBLISHINGSERVERNAME** . Quando um banco de dados de publicação ingressa em um grupo de disponibilidade, os metadados de replicação armazenados nas réplicas de banco de dados secundárias são idênticos aos da réplica primária. Portanto, para os bancos de dados de publicação habilitados para replicação na réplica primária, o nome da instância do publicador armazenado em tabelas do sistema na réplica secundária é o nome da réplica primária, e não da secundária. Isso afeta a configuração e a manutenção da replicação, em caso de falha do banco de dados de publicação para uma réplica secundária. Por exemplo, se você estiver configurando a replicação com procedimentos armazenados em um secundário após o failover e desejar uma assinatura pull de um banco de dados de publicação que foi habilitado em outra réplica, especifique o nome do publicador original em vez do publicador atual como o parâmetro *\@publisher* de **sp_addpullsubscription** ou **sp_addmergepulllsubscription**. Entretanto, se você habilitar um banco de dados de publicação depois do failover, o nome de instância de publicador armazenado nas tabelas do sistema será o nome do host primário atual. Neste caso, você usará o nome do host da réplica primária atual no parâmetro *\@publisher*.  
+-   Ao usar os procedimentos armazenados ou RMO (Replication Management Objects) para gerenciar na réplica primária atual, nos casos em que você especifica o nome do Publicador, especifique o nome da instância na qual o banco de dados foi habilitado para a replicação (o publicador original). Para determinar o nome apropriado, use a função **PUBLISHINGSERVERNAME** . Quando um banco de dados de publicação ingressa em um grupo de disponibilidade, os metadados de replicação armazenados nas réplicas de banco de dados secundárias são idênticos aos da réplica primária. Portanto, para os bancos de dados de publicação habilitados para replicação na réplica primária, o nome da instância do publicador armazenado em tabelas do sistema na réplica secundária é o nome da réplica primária, e não da secundária. Isso afeta a configuração e a manutenção da replicação, em caso de falha do banco de dados de publicação para uma réplica secundária. Por exemplo, se você estiver configurando a replicação com procedimentos armazenados em um secundário após o failover e desejar uma assinatura pull de um banco de dados de publicação que foi habilitado em outra réplica, especifique o nome do publicador original em vez do publicador atual como o parâmetro *\@publisher* de **sp_addpullsubscription** ou **sp_addmergepullsubscription**. Entretanto, se você habilitar um banco de dados de publicação depois do failover, o nome de instância de publicador armazenado nas tabelas do sistema será o nome do host primário atual. Neste caso, você usará o nome do host da réplica primária atual no parâmetro *\@publisher*.  
   
     > [!NOTE]  
     >  Para alguns procedimentos, como **sp_addpublication**, há suporte para o parâmetro *\@publisher* apenas nos publicadores que não são instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; nesses casos, ele não é relevante para o Always On do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Para sincronizar uma assinatura no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] após o failover, sincronize as assinaturas pull do assinante e sincronize as assinaturas push do publicador ativo.  
   
-##  <a name="RemovePublDb"></a> Removendo um banco de dados publicado de um grupo de disponibilidade  
+##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a> Removendo um banco de dados publicado de um grupo de disponibilidade  
  Considere os problemas a seguir se um banco de dados publicado for removido de um grupo de disponibilidade, ou se um grupo de disponibilidade que tem um banco de dados de membro publicado for removido.  
   
 -   Se o banco de dados de publicação no publicador original for removido de uma réplica primária do grupo de disponibilidade, execute **sp_redirect_publisher** sem especificar um valor no parâmetro *\@redirected_publisher* para remover o redirecionamento para o par publicador/banco de dados.  
@@ -100,7 +100,7 @@ ms.locfileid: "75228185"
   
      Neste momento, a cópia do banco de dados publicado pode ser retida ou removida.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Configurar a replicação para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   
@@ -113,7 +113,7 @@ ms.locfileid: "75228185"
 ## <a name="see-also"></a>Consulte Também  
  [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Grupos de Disponibilidade AlwaysOn: Interoperabilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Grupos de Disponibilidade Always On: interoperabilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Replicação do SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   
   

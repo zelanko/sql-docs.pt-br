@@ -1,5 +1,6 @@
 ---
 title: Declarando permissões em assemblies personalizados | Microsoft Docs
+description: Saiba como declarar permissões para que você possa implementar um assembly personalizado que faça chamadas seguras para recursos protegidos em seu sistema de segurança.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dabfe56423a08c6624adc6da322cf442e5a63b7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2b3f4600c4c03fe356f5694f0d9a6cd5bc7afb98
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194328"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217050"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Declarando permissões em assemblies personalizados
   Por padrão, o código de assembly personalizado é executado com o conjunto de permissões limitado **Execução**. Em alguns casos, talvez você queira implementar um assembly personalizado que crie chamadas seguras para proteger recursos em seu sistema de segurança (como um arquivo ou o Registro). Para realizar isso, faça o seguinte:  

@@ -1,7 +1,7 @@
 ---
-title: Perguntas frequentes sobre o JDBC Driver | Microsoft Docs
+title: Perguntas frequentes sobre o JDBC Driver
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e982c4b90c1c856d67720301fdf13595872b18c2
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: b91e728eb9ea3403db0f0b40c5d32ce16f542408
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903603"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271372"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Perguntas frequentes sobre o JDBC Driver
 
@@ -31,17 +31,17 @@ O JDBC Driver é um software livre, e o código-fonte pode ser encontrado no [Gi
 **Quais versões do SQL Server e do Java são compatíveis com o driver?**  
 Confira mais detalhes na página [Matriz de suporte do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
 
-**Qual é a diferença entre os pacotes do JDBC Driver disponíveis no Centro de Download da Microsoft e o JDBC Driver disponível no GitHub?**  
-Os arquivos do JDBC Driver que estão disponíveis no repositório do GitHub para o Microsoft JDBC Driver são a essência do JDBC Driver e estão sob a licença de software livre, listada no repositório. Os pacotes de driver disponíveis no Centro de Download da Microsoft incluem bibliotecas adicionais para a autenticação integrada no Windows e para habilitar transações XA com o JDBC Driver. Essas bibliotecas adicionais estão sob a licença incluída com o pacote que pode ser baixado.
+**Qual é a diferença entre os pacotes do JDBC Driver disponíveis na [Página de Download da Microsoft](download-microsoft-jdbc-driver-for-sql-server.md) e o JDBC Driver disponível no GitHub?**  
+Os arquivos do JDBC Driver que estão disponíveis no repositório do GitHub para o Microsoft JDBC Driver são a essência do JDBC Driver e estão sob a licença de software livre, listada no repositório. Os pacotes de driver na [Página de download da Microsoft](download-microsoft-jdbc-driver-for-sql-server.md) incluem bibliotecas adicionais para autenticação integrada no Windows e para habilitar transações XA com o JDBC Driver. Essas bibliotecas adicionais estão sob a licença incluída com o pacote que pode ser baixado.
 
 **O que devo saber ao atualizar meu driver?**  
 O Microsoft JDBC Driver 8.2 é compatível com as especificações JDBC 4.2 e 4.3 (parcialmente) e inclui três bibliotecas de classe JAR no pacote de instalação da seguinte maneira:
 
 | JAR                        | Especificação do JDBC            | Versão do JDK |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-8.2.1.jre13.jar | JDBC 4.3 (parcialmente) e 4.2 | JDK 13.0    |
-| mssql-jdbc-8.2.1.jre11.jar | JDBC 4.3 (parcialmente) e 4.2 | JDK 11.0    |
-| mssql-jdbc-8.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-8.2.2.jre13.jar | JDBC 4.3 (parcialmente) e 4.2 | JDK 13.0    |
+| mssql-jdbc-8.2.2.jre11.jar | JDBC 4.3 (parcialmente) e 4.2 | JDK 11.0    |
+| mssql-jdbc-8.2.2.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 O Microsoft JDBC Driver 7.4 dá suporte às especificações JDBC 4.2 e 4.3 (parcialmente) e inclui três bibliotecas de classes JAR no pacote de instalação, da seguinte forma:

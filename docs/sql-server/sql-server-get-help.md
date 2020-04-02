@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 71864b1670d61448b48e3acdc89d9c2d231c782d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7588cb2c2c49992bbed4ceea29b035200a70128d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75244414"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80380757"
 ---
 # <a name="sql-server-help-and-feedback"></a>Ajuda e comentários do SQL Server
 
@@ -60,6 +60,7 @@ Há algumas comunidades de que podem ajudá-lo com seus problemas relativos ao S
 Você pode enviar sugestões de melhoria, bem como enviar bugs para:
 
 - **Comentários sobre o SQL Server**: [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback)
+- **Comentários sobre os Clusters de Big Data do SQL Server**: [Comentários sobre os Clusters de Big Data do SQL Server](https://aka.ms/sql-server-bdc-feedback)
 - **Problemas do Azure Data Studio**: [GitHub do Azure Data Studio](https://github.com/microsoft/azuredatastudio/issues)
  
 

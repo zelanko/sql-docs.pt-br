@@ -1,5 +1,6 @@
 ---
 title: Definir opções padrão para o Construtor de Relatórios | Microsoft Docs
+description: Este artigo descreve padrões úteis que podem ser definidos no Construtor de Relatórios. Esses padrões facilitam e aceleram a criação de relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f6c77bc80b31eb34beea99d0634b17934ea01db4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cad43cd9b4a842cd022e9139b7b303b15134af6f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577914"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290772"
 ---
 # <a name="set-default-options-for-report-builder"></a>Definir opções padrão para o Construtor de Relatórios
   No Construtor de Relatórios, você pode definir um número de padrões úteis para tornar a criação de relatórios mais rápida e fácil.  Por exemplo, se você puder definir ou alterar o servidor de relatório padrão, o Construtor de Relatórios salva seus relatórios no mesmo servidor de relatório automaticamente, a menos que você especifique o contrário.  

@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68ad6f8f3c56b094b5d14d369452d78237b6dcee
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288550"
+ms.locfileid: "80402665"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Edições e recursos compatíveis do SQL Server 2019 no Linux
 
@@ -227,6 +227,7 @@ Os seguintes recursos e serviços não estão disponíveis no SQL Server 2019 no
 | **SQL Server Agent** |  Subsistemas: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alertas |
 | &nbsp; | Backup Gerenciado |
+| &nbsp; | Administração Multisservidor usando MSX/TSX |
 | **Alta disponibilidade** | Espelhamento de banco de dados  |
 | **Segurança** | Gerenciamento Extensível de Chaves |
 | &nbsp; | Autenticação do AD para servidores vinculados | 

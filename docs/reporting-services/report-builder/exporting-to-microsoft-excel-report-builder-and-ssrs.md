@@ -1,5 +1,6 @@
 ---
 title: Como exportar para o Microsoft Excel (Construtor de Relatórios) | Microsoft Docs
+description: No Construtor de Relatórios, a extensão de renderização do Excel renderiza um relatório paginado no formato Office Open XML para uso com o Microsoft Excel.
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b067dea118592a58b87a9da50ba31d4ee2897cfe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 865caa0938aa89feacbb5e330eb38f292039446c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079581"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342898"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   A extensão da renderização do Excel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gera um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para o formato [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xslx). Com a extensão de renderização do Excel, a largura de colunas em Excel reflete com maior precisão a largura de colunas em relatórios.  
@@ -29,7 +30,7 @@ ms.locfileid: "77079581"
 >   
 >  Para reduzir o risco de execução acidental de scripts mal-intencionados, só abra relatórios renderizados de fontes confiáveis. Para obter mais informações sobre como proteger relatórios, consulte [Protegendo Relatórios e Recursos](../../reporting-services/security/secure-reports-and-resources.md).  
   
-##  <a name="ExcelLimitations"></a> Limitações do Excel  
+##  <a name="excel-limitations"></a><a name="ExcelLimitations"></a> Limitações do Excel  
  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] impõe limitações a relatórios exportados devido aos recursos do Excel e de seus formatos de arquivo. Estas são as mais significativas:  
   
 -   A largura máxima de coluna está limitada a 255 caracteres ou 1726,5 pontos. O processador não verifica se a largura da coluna é inferior ao limite.  
@@ -178,7 +179,7 @@ ms.locfileid: "77079581"
   
  Como o relatório define explicitamente a altura da linha, a altura de linha padrão só afeta linhas dimensionadas automaticamente na exportação para o Excel.  
   
-##  <a name="ReportItemsExcel"></a> Itens de relatório do Excel  
+##  <a name="report-items-in-excel"></a><a name="ReportItemsExcel"></a> Itens de relatório do Excel  
  Retângulos, sub-relatórios, corpo do relatório e regiões de dados são renderizados como um intervalo de células do Excel. Caixas de texto, imagens, gráficos, barras de dados, minigráficos, mapas, medidores e indicadores devem ser renderizados dentro de uma célula do Excel, que pode ser mesclada dependendo do layout do restante do relatório.  
   
  Imagens, gráficos, minigráficos, barras de dados, mapas, medidores, indicadores e linhas são posicionados dentro de uma célula do Excel mas eles ficam sobre a grade de célula. Linhas são renderizadas como bordas de célula.  
@@ -192,7 +193,7 @@ ms.locfileid: "77079581"
   
  Se nenhuma correspondência for encontrada, o Excel usará o tamanho de página padrão para a impressora. Se a altura do papel for maior que a largura, a orientação será definida como Retrato; caso contrário, será Paisagem.  
   
-##  <a name="WorksheetTabNames"></a> Nomes de guia de planilha  
+##  <a name="worksheet-tab-names"></a><a name="WorksheetTabNames"></a> Nomes de guia de planilha  
  Quando você exporta um relatório para o Excel, as páginas do relatório criadas por quebras de página são exportadas para planilhas diferentes. Se você forneceu um nome de página inicial para o relatório, cada planilha da pasta de trabalho do Excel terá seu nome por padrão. O nome aparece na guia da planilha. No entanto, como cada planilha em uma pasta de trabalho deve ter um nome exclusivo, um número inteiro iniciado em 1 e incrementado em 1 é anexado ao nome de página inicial para cada planilha adicional. Por exemplo, se o nome da página inicial é **Relatório de Vendas por Ano Fiscal**, a segunda planilha será denominada **Relatório de Vendas por Ano Fiscal1**, a terceira **Relatório de Vendas por Ano Fiscal2**e assim por diante.  
   
  Se todas as páginas de relatório criadas por quebras de páginas fornecerem novos nomes de página, cada planilha terá o nome de página associado. No entanto, esses nomes de páginas talvez não sejam exclusivos. Se os nomes de páginas não forem exclusivos, as planilhas serão nomeadas da mesma maneira que as páginas iniciais. Por exemplo, se o nome de página de dois grupos for **Vendas para NW**, uma guia de planilha terá o nome **Vendas para NW**e a outra **Vendas para NW1**.  
@@ -201,7 +202,7 @@ ms.locfileid: "77079581"
   
  O Reporting Services fornece propriedades a serem definidas em relatórios, regiões de dados, grupos e retângulos para ajudá-lo a criar relatórios que possam ser exportados para o Excel da maneira desejada. Para obter mais informações, consulte [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-##  <a name="DocumentProperties"></a> Propriedades do documento  
+##  <a name="document-properties"></a><a name="DocumentProperties"></a> Propriedades do documento  
  O processador do Excel grava os metadados a seguir no arquivo Excel.  
   
 |Propriedades do Elemento de Relatório|Descrição|  
@@ -211,7 +212,7 @@ ms.locfileid: "77079581"
 |Descrição|Descrição do Relatório|  
 |LastSaved|Data e hora da execução do relatório como um valor ISO de data/hora.|  
   
-##  <a name="PageHeadersFooters"></a> Cabeçalhos e rodapés de página  
+##  <a name="page-headers-and-footers"></a><a name="PageHeadersFooters"></a> Cabeçalhos e rodapés de página  
  Dependendo da configuração SimplePageHeaders das Informações do Dispositivo, o cabeçalho da página pode ser renderizado de duas maneiras: o cabeçalho da página pode ser renderizado no topo de cada grade de célula na planilha, ou na seção real do cabeçalho da planilha Excel. Por padrão, o cabeçalho é renderizado à grade de célula na planilha do Excel.  
   
  O rodapé da página é sempre renderizado na seção real do rodapé da planilha Excel, independentemente do valor da configuração SimplePageHeaders.  
@@ -227,7 +228,7 @@ ms.locfileid: "77079581"
   
  Devido às limitações do Excel, as caixas de texto são o único tipo de item de relatório que pode ser renderizado na seção de cabeçalho/rodapé do Excel.  
   
-##  <a name="Interactivity"></a> Interatividade  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interatividade  
  Alguns elementos interativos têm suporte no Excel. A seguir, uma descrição dos comportamentos específicos.  
   
 ### <a name="show-and-hide"></a>Mostrar e Ocultar  
@@ -262,7 +263,7 @@ ms.locfileid: "77079581"
 ### <a name="bookmarks"></a>Indicadores  
  Os links indicadores nas caixas de texto são renderizados como hiperlinks Excel na célula em que o texto é renderizado. Os links indicadores para imagens e gráficos são renderizados como hiperlinks Excel na imagem quando renderizada. Quando clicado, a indicação vai para a célula do Excel na qual o item de relatório indicado é renderizado.  
   
-##  <a name="ConditionalFormat"></a> Alterando relatórios em tempo de execução  
+##  <a name="changing-reports-at-run-time"></a><a name="ConditionalFormat"></a> Alterando relatórios em tempo de execução  
  Se um relatório precisar ser renderizado em vários formatos e não for possível criar um layout de relatório que renderize da forma desejada em todos os formatos obrigatórios, você pode considerar usar o valor em RenderFormat global interno para alterar condicionalmente a aparência do relatório em tempo de execução. Dessa forma, é possível ocultar ou mostrar itens de relatório dependendo do renderizador usado para obter os melhores resultados em cada formato. Para obter mais informações, consulte [Referências de globais internas e referências de usuários &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -1,5 +1,6 @@
 ---
 title: Solucionar problemas de conectividade do PolyBase Kerberos | Microsoft Docs
+description: Para solucionar problemas de autenticação do PolyBase com um cluster Hadoop protegido por Kerberos, você pode usar o diagnóstico interativo interno do PolyBase.
 author: alazad-msft
 ms.author: alazad
 ms.reviewer: mikeray
@@ -10,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 23aaaef5f85b814bda8f576fc6a0cfe671fea8e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909149"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215845"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solucionar problemas de conectividade do PolyBase Kerberos
 
@@ -30,7 +31,7 @@ Este artigo descreve o processo de depuração desses problemas por dessa ferram
 > Essa ferramenta ajudará a resolver problemas não relativos ao SQL Server, para ajudá-lo a se concentrar na resolução de problemas de configuração de Kerberos do HDFS, principalmente identificando problemas com configurações incorretas de nome de usuário/senha e configurações incorretas de instalação de Kerberos em clusters.      
 > Essa ferramenta é completamente independente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ela está disponível como um Jupyter Notebook e requer o Azure Data Studio.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 1. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU6/[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU3/[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ou superior com o PolyBase instalado
 1. Um cluster Hadoop (Cloudera ou Hortonworks) protegido por Kerberos (Active Directory ou MIT)

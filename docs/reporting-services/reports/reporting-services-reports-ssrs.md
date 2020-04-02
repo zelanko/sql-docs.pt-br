@@ -1,5 +1,6 @@
 ---
 title: Relatórios do Reporting Services | Microsoft Docs
+description: Confira detalhes sobre relatórios do Reporting Services, incluindo os benefícios dos relatórios, como criar relatórios paginados e como ver relatórios.
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d178d69c68d2466fcec808b0cabdd180368f23a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9eb81b3b3274afa8a53a217ea1139a8a904979ef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082433"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510057"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Relatórios do Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Os relatórios paginados são definições de relatório baseadas em XML que incluem dados de relatório e elementos de layout de relatório. Em um sistema de arquivos cliente, as definições de relatório têm a extensão de arquivo .rdl. Depois que você publica um relatório paginado, ele é um item de relatório armazenado no servidor de relatório ou site do SharePoint. Os relatórios paginados são uma parte da plataforma de relatório baseada em servidor fornecida pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Você também pode [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -45,7 +46,7 @@ ms.locfileid: "77082433"
   
     ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
-##  <a name="bkmk_StagesSummary"></a> Estágios do processamento de relatório  
+##  <a name="stages-of-report-processing"></a><a name="bkmk_StagesSummary"></a> Estágios do processamento de relatório  
  Ao criar um relatório, você define um arquivo de definição de relatório (.rdl) em formato XML. Esse arquivo contém todas as informações necessárias para combinar dados e layout de relatório pelo processador de relatório. Ao exibir um relatório, o relatório passa pelas seguintes fases:  
   
 -   **Compilar.** Avalie expressões na definição de relatório e armazene o formato intermediário compilado internamente no servidor de relatório.  
@@ -155,7 +156,7 @@ ms.locfileid: "77082433"
   
  Para obter mais informações sobre o desempenho, consulte [Desempenho, instantâneos, caching &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md).  
   
-##  <a name="bkmk_SecureReportsSummary"></a> Proteger relatórios  
+##  <a name="secure-reports"></a><a name="bkmk_SecureReportsSummary"></a> Proteger relatórios  
  Para proteger um relatório:  
   
 Como administrador do servidor de relatório, identifique a autorização e o sistema de autenticação usados em sua instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Por padrão, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa a autenticação do Windows, segurança integrada e atribuição de função para ajudar a controlar o acesso aos relatórios publicados. Para obter mais informações, consulte [Funções e permissões &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md) e [Segurança e proteção do Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).  

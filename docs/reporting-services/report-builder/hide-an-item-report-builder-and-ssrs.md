@@ -1,5 +1,6 @@
 ---
 title: Ocultar um item (Construtor de Relatórios) | Microsoft Docs
+description: No Construtor de Relatórios, você pode configurar a visibilidade de um item de relatório. Você pode especificar um parâmetro do relatório ou outra expressão para ocultar um item condicionalmente.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 00d0544c6580e54f34b16bcce9dac2ce8604efdc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dab0377e1f558c48be751b523c7129feefb18e66
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079055"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342783"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ocultar um item (Construtor de Relatórios e SSRS)
   Defina a visibilidade de um item de relatório quando quiser ocultar condicionalmente um item com base em um parâmetro de relatório ou alguma outra expressão que você especificar.  

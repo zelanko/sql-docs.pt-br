@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7b1c32e3e569b8c29dd75df1fafb98bb7c0c979f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73983028"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486585"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instruções RESTORE – HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -97,7 +97,7 @@ FROM <backup_device>
 |**BackupDescription**|**nvarchar(255)**|Descrição do conjunto de backup.|  
 |**BackupType**|**smallint**|Tipo de backup:<br /><br /> **1** = Banco de dados<br /><br /> **2** = Log de transações<br /><br /> **4** = Arquivo<br /><br /> **5** = Banco de dados diferencial<br /><br /> **6** = Arquivo diferencial<br /><br /> **7** = Parcial<br /><br /> **8** = Parcial diferencial|  
 |**ExpirationDate**|**datetime**|Data de vencimento do conjunto de backup.|  
-|**Compactado**|**BYTE(1)**|Se o conjunto de backup é compactado com compactação de software:<br /><br /> **0** = Não<br /><br /> **1** = Sim|  
+|**Compactado**|**BIT(1)**|Se o conjunto de backup é compactado com compactação de software:<br /><br /> **0** = Não<br /><br /> **1** = Sim|  
 |**Posição**|**smallint**|Posição do conjunto de backup no volume (para uso com o FILE = opção).|  
 |**DeviceType**|**tinyint**|Número que corresponde ao dispositivo usado na operação de backup.<br /><br /> Disco:<br /><br /> **2** = Lógico<br /><br /> **102** = Físico<br /><br /> Fita:<br /><br /> **5** = Lógico<br /><br /> **105** = Físico<br /><br /> Dispositivo virtual:<br /><br /> **7** = Lógico<br /><br /> **107** = Físico<br /><br /> Os nomes de dispositivo lógico e os números de dispositivo estão em **sys.backup_devices**; para obter mais informações, consulte [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
 |**UserName**|**nvarchar(128)**|Nome do usuário que realizou a operação de backup.|  

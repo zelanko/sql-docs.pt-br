@@ -11,12 +11,12 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: 1d1e595918b33ae4fcc11cd59bf0964b2e6d919c
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79112285"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216255"
 ---
 # <a name="hybrid-buffer-pool"></a>Pool de Buffers Híbrido
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,9 +96,7 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 Ao formatar seu dispositivo PMEM no Windows, use o maior tamanho de unidade de alocação disponível para NTFS (2 MB no Windows Server 2019) e verifique se o dispositivo foi formatado para o DAX (Direct Access).
 
-Use o modelo de alocação de memória de página grande, que pode ser habilitado com o [sinalizador de rastreamento 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). O sinalizador de rastreamento 834 é um sinalizador de rastreamento de inicialização.
-
-Usar o modelo de alocação de memória de página grande requer o uso de [páginas bloqueadas na memória](./enable-the-lock-pages-in-memory-option-windows.md) no Windows.
+Usar [Páginas bloqueadas na memória](./enable-the-lock-pages-in-memory-option-windows.md) no Windows.
 
 Os tamanhos de arquivos devem ser um múltiplo de 2 MB (2 MB de módulo deve igual a zero).
 

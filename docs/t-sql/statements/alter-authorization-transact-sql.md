@@ -26,12 +26,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af69908f78c5f6a0958c87d315c0ba20da25cfb3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 01fc7ed0e32df7c5c3465f85b5358c2c359fc767
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982877"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215907"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -191,7 +191,7 @@ ALTER AUTHORIZATION ON
 |CERTIFICATE ou ASYMMETRIC KEY|Não pode transferir a propriedade dessas entidades a uma função ou grupo.|    
 |ENDPOINT|A entidade deve ser um logon.|    
   
-## <a name="AlterDB"></a> ALTER AUTHORIZATION para bancos de dados  
+## <a name="alter-authorization-for-databases"></a><a name="AlterDB"></a> ALTER AUTHORIZATION para bancos de dados  
 **APLICA-SE A**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 ### <a name="for-sql-server"></a>Para SQL Server:  
 **Requisitos para o novo proprietário:**    
@@ -270,7 +270,7 @@ Em vez de usar os usuários do Azure AD como proprietários individuais do banco
   ```    
   
 Agora, os membros do `mydbogroup` podem gerenciar centralmente o banco de dados como membros da função **db_owner**.  
-- Quando os membros desse grupo são removidos do grupo do Azure AD, eles automaticamente perdem as permissões de dbo do banco de dados.  
+- Quando os membros desse grupo são removidos do grupo do Azure AD, eles perdem automaticamente as permissões de dbo do banco de dados.  
 - Da mesma forma, se novos membros são adicionados ao `mydbogroup` grupo do Azure AD, eles obtêm automaticamente acesso de dbo para esse banco de dados.  
   
 Para verificar se um usuário específico tem a permissão de dbo efetiva, peça para o usuário executar a seguinte instrução:  

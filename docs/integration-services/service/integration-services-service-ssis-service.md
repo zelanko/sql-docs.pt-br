@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c2350410fe4aa70a9091314034a849a2ed8c4e18
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71296945"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216905"
 ---
 # <a name="integration-services-service-ssis-service"></a>Serviço do Integration Services (Serviço SSIS)
 
@@ -85,7 +85,7 @@ ms.locfileid: "71296945"
   
  Se o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] for interrompido, você poderá continuar executando pacotes com o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , o Utilitário de Execução de Pacotes e o utilitário de prompt de comando **dtexec** (dtexec.exe). Porém, você não pode monitorar os pacotes em execução.  
   
- Por padrão, o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] executa no contexto da conta de SERVIÇO DE REDE.  
+ Por padrão, o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] executa no contexto da conta de SERVIÇO DE REDE. É recomendável executar o serviço SQL Server Integration Services em uma conta que tenha permissões limitadas, como a conta de SERVIÇO DE REDE. Executar o serviço SQL Server Integration Services em uma conta com privilégios elevados representa um possível risco de segurança. 
   
  O serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] grava no log de evento do Windows. Você pode exibir eventos de serviço em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você também pode exibir eventos de serviço usando Visualizador de Eventos do Windows.  
   

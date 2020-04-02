@@ -1,7 +1,7 @@
 ---
 title: Como usar o Azure Active Directory com o Driver ODBC | Microsoft Docs for SQL Server
 ms.custom: ''
-ms.date: 11/08/2018
+ms.date: 03/18/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e32889ceafa78d6c6eac716fca213f17badc5cea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: af611e9c59e34030d594ecf6bcd8031fb5b253cb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286420"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79526811"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Como usar o Azure Active Directory com o Driver ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="purpose"></a>Finalidade
 
-O Microsoft ODBC Driver for SQL Server, versão 13.1 ou posterior, permite que os aplicativos ODBC se conectem a uma instância do SQL Azure usando uma identidade federada no Azure Active Directory com um nome de usuário/senha, um token de acesso do Azure Active Directory, uma identidade de serviço gerenciado do Azure Active Directory ou a autenticação integrada do Windows (_somente driver do Windows_). No caso do Driver ODBC versão 13.1, a autenticação do token de acesso do Azure Active Directory é _somente Windows_. O Driver ODBC versão 17 e posterior dá suporte a essa autenticação em todas as plataformas (Windows, Linux e Mac). Uma nova autenticação interativa do Azure Active Directory com a ID de logon é introduzida no Driver ODBC versão 17.1 para Windows. Um novo método de autenticação de identidade de serviço gerenciado do Azure Active Directory foi adicionado no Driver ODBC versão 17.3.1.1 para identidades atribuídas pelo sistema e pelo usuário. Todos eles são realizados por meio da utilização de novas palavras-chave de cadeia de conexão e DSN e atributos de conexão.
+O Microsoft ODBC Driver for SQL Server, versão 13.1 ou posterior, permite que os aplicativos ODBC se conectem a uma instância do SQL Azure usando uma identidade federada no Azure Active Directory com um nome de usuário/senha, um token de acesso do Azure Active Directory, uma identidade de serviço gerenciado do Azure Active Directory ou a autenticação integrada do Windows (_somente driver do Windows_). No caso do Driver ODBC versão 13.1, a autenticação do token de acesso do Azure Active Directory é _somente Windows_. O Driver ODBC versão 17 e posterior dá suporte a essa autenticação em todas as plataformas (Windows, Linux e macOS). Uma nova autenticação interativa do Azure Active Directory com a ID de logon é introduzida no Driver ODBC versão 17.1 para Windows. Um novo método de autenticação de identidade de serviço gerenciado do Azure Active Directory foi adicionado no Driver ODBC versão 17.3.1.1 para identidades atribuídas pelo sistema e pelo usuário. Todos eles são realizados por meio da utilização de novas palavras-chave de cadeia de conexão e DSN e atributos de conexão.
 
 > [!NOTE]
 > O driver ODBC no Linux e no macOS é compatível somente com a autenticação diretamente no Azure Active Directory. Caso esteja usando a autenticação de nome de usuário/senha do Azure Active Directory de um cliente Linux ou macOS e sua configuração do Active Directory exigir que o cliente seja autenticado em um ponto de extremidade dos Serviços de Federação do Active Directory (AD FS), a autenticação poderá falhar.
@@ -110,8 +110,8 @@ Para identidade atribuída pelo sistema,<br>
 Para a identidade atribuída pelo usuário com a ID de objeto igual a myObjectId,<br>
 `server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;`
 
-> [!NOTE] 
->- Ao usar as novas opções do Active Directory com o Driver ODBC do Windows, verifique se a [Biblioteca de Autenticação do Active Directory para SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) foi instalada. Quando usar drivers do Linux e macOS, verifique se `libcurl` foi instalado. Para o driver versão 17.2 e posterior, essa não é uma dependência explícita já que não é necessária para os demais métodos de autenticação ou operações ODBC.
+> [!NOTE]
+>- Ao usar as novas opções do Active Directory com o Driver ODBC do Windows ***anterior*** à versão 17.4.2, verifique se a [Biblioteca de Autenticação do Active Directory para SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) foi instalada. Quando usar drivers do Linux e macOS, verifique se `libcurl` foi instalado. Para o driver versão 17.2 e posterior, essa não é uma dependência explícita já que não é necessária para os demais métodos de autenticação ou operações ODBC.
 >- Para se conectar usando um nome de usuário e senha da conta de SQL Server, você pode usar a nova opção `SqlPassword` que é recomendada especialmente para o SQL Azure já que permite padrões de conexão mais seguros.
 >- Para se conectar usando um nome de usuário e senha da conta do Azure Active Directory, especifique `Authentication=ActiveDirectoryPassword` na cadeia de conexão e as palavras-chave `UID` e `PWD` com o nome de usuário e a senha, respectivamente.
 >- Para se conectar usando a autenticação integrada do Windows ou do Active Directory (somente driver do Windows), especifique `Authentication=ActiveDirectoryIntegrated` na cadeia de conexão. O driver escolherá o modo de autenticação correto automaticamente. `UID` e `PWD` não devem ser especificados.
@@ -141,7 +141,7 @@ O exemplo a seguir mostra o código necessário para se conectar ao SQL Server p
     ...
     SQLCHAR connString[] = "Driver={ODBC Driver 13 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=ActiveDirectoryPassword"
     ...
-    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
+    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);    
     ...
 ~~~
 O exemplo a seguir mostra o código necessário para se conectar ao SQL Server por meio do Azure Active Directory com a autenticação de token de acesso. Nesse caso, é necessário modificar o código do aplicativo para processar o token de acesso e definir o atributo de conexão associado.
@@ -159,7 +159,7 @@ O exemplo a seguir mostra o código necessário para se conectar ao SQL Server p
     }
     ...
     SQLSetConnectAttr(hDbc, SQL_COPT_SS_ACCESS_TOKEN, (SQLPOINTER)pAccToken, SQL_IS_POINTER);
-    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);      
+    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);        
     ...
     free(pAccToken);
 ~~~

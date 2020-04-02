@@ -1,5 +1,6 @@
 ---
 title: Pontos de extremidade do serviço Web Servidor de Relatórios | Microsoft Docs
+description: O serviço Web do Servidor de Relatórios fornece três pontos de extremidade para gerenciar um servidor de relatório, bem como executar e navegar por relatórios.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 19daac65c808691be20621d6718b4b71e33b83f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a546ba4143b7f0cc63281ce9e7a95a4eb6910366
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284627"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509747"
 ---
 # <a name="report-server-web-service-endpoints"></a>Pontos de extremidade do serviço Web Servidor de Relatórios
   O serviço Web Servidor de Relatórios fornece vários pontos de extremidade para gerenciar um servidor de relatório como também executar relatórios e navegar neles.  
@@ -61,9 +62,9 @@ https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx
 ## <a name="sharepoint-proxy-endpoints"></a>Pontos de extremidade de proxy do SharePoint  
  Quando um servidor de relatório for configurado para o modo integrado do SharePoint e o Suplemento [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] tiver sido instalado, um conjunto de pontos de extremidade de proxy será instalado no servidor do SharePoint. Os pontos de extremidade de proxy são a API primária para desenvolver soluções de relatório quando um servidor de relatório é configurado para o modo integrado do SharePoint. Quando você estiver desenvolvendo soluções nos pontos de extremidade de proxy, o Suplemento [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] gerenciará a troca de credenciais entre o SharePoint Server e o servidor de relatório no modo de autenticação de conta confiável. Quando você estiver desenvolvendo soluções nos pontos de extremidade do servidor de relatório, o aplicativo de chamada terá que gerenciar a troca de credencial no modo de autenticação de conta confiável. A tabela a seguir lista os pontos de extremidade que são instalados com o Suplemento [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Ponto de extremidade de proxy|DESCRIÇÃO|  
+|Ponto de extremidade de proxy|Descrição|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|Fornece as APIs para gerenciar um servidor de relatório que é configurado para o modo de integração do SharePoint.<br /><br /> Observação: esse ponto de extremidade foi preterido no [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
+|<xref:ReportService2006>|Fornece as APIs para gerenciar um servidor de relatório que é configurado para o modo de integração do SharePoint.<br /><br /> Observação: Esse ponto de extremidade foi preterido no [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
 |<xref:ReportService2010>|Fornece as APIs para gerenciamento de um servidor de relatório configurado para o modo nativo ou o modo integrado do SharePoint.|  
 |<xref:ReportExecution2005>|Fornece as APIs para executar relatórios e navegar neles.|  
 |<xref:ReportServiceAuthentication>|Fornece as APIs para autenticar os usuários em um servidor de relatório quando o aplicativo Web do SharePoint é configurado para a Autenticação de Formulários.|  

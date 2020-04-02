@@ -1,5 +1,6 @@
 ---
 title: Modo de exibição de Design do relatório (Construtor de Relatórios) | Microsoft Docs
+description: Este artigo descreve os controles na janela do Construtor de Relatórios usados para adicionar, selecionar e organizar os recursos de relatório e alterar as propriedades de item de relatório.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ecc2115b106fe61492be388c90cfa2bd27eae9f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ca82e7fa0a302c4156c56c2e5ff66ad0cc49da99
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190038"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290862"
 ---
 # <a name="report-design-view-report-builder"></a>Exibição do design de relatório (Construtor de Relatórios)
   A janela do Construtor de Relatórios foi criada para ajudá-lo a organizar facilmente seus recursos de relatório e criar rapidamente os relatórios paginados de que você precisa. A superfície de design está no centro da janela, com a faixa de opções e os painéis em torno dela. A superfície de design é o local em que você adiciona e organiza seus itens de relatório. Este artigo explica os painéis usados para adicionar, selecionar e organizar os recursos de relatório e alterar as propriedades de item de relatório.  
@@ -47,13 +48,13 @@ ms.locfileid: "74190038"
   
 8.  Barra de status do relatório atual  
   
-##  <a name="Ribbon"></a> Painel Parâmetros  
+##  <a name="parameters-pane"></a><a name="Ribbon"></a> Painel Parâmetros  
  Com os parâmetros de relatório, você pode controlar dados de relatório, conectar relatórios relacionados e variar a apresentação do relatório. O painel Parâmetros fornece um layout flexível para os parâmetros de relatório.  
   
  Leia mais sobre [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
-##  <a name="RptDesignSurface"></a> A superfície de design do relatório  
+##  <a name="the-report-design-surface"></a><a name="RptDesignSurface"></a> A superfície de design do relatório  
  A superfície de design de relatório do Construtor de Relatórios é a área de trabalho principal para criar os relatórios. Para colocar itens de relatório, como regiões de dados, sub-relatórios, caixas de texto, imagens, retângulos e linhas no relatório, você os adiciona na Faixa de Opções ou na Galeria de Partes de Relatório à superfície de design. Nela, você pode adicionar grupos, expressões, parâmetros, filtros, ações, visibilidade e formatação a seus itens de relatório.  
   
  Também é possível alterar o seguinte:  
@@ -75,7 +76,7 @@ ms.locfileid: "74190038"
 >  Para exibir a régua, na guia **Exibir**, marque a caixa de seleção **Régua**.  
   
   
-##  <a name="ReptDataPane"></a> The Report Data Pane  
+##  <a name="the-report-data-pane"></a><a name="ReptDataPane"></a> The Report Data Pane  
  No painel Dados do Relatório, você define os dados e os recursos de relatório de que você precisa para um relatório antes de criar o layout do relatório. Por exemplo, é possível adicionar fontes de dados, conjuntos de dados, campos calculados, parâmetros de relatório e imagens ao painel de dados do relatório.  
   
  Depois de adicionar itens ao painel de dados do relatório, basta arrastar campos para os itens do relatório na superfície de design para controlar onde os dados são exibidos no relatório.  
@@ -105,7 +106,7 @@ ms.locfileid: "74190038"
 -   [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
-##  <a name="ReptPartGallery"></a> A Galeria de Partes de Relatório  
+##  <a name="the-report-part-gallery"></a><a name="ReptPartGallery"></a> A Galeria de Partes de Relatório  
  A forma mais fácil de criar um relatório é localizando uma parte de relatório existente, como uma tabela ou um gráfico, no servidor de relatório ou em um servidor de relatório integrado a um site do SharePoint.  
   
  Clique em **Partes de Relatório** na guia Inserir para abrir a Galeria de Partes do Relatório. Nela, você poderá pesquisar partes de relatório para adicionar ao relatório. É possível filtrar as partes de relatório por todo ou parte do nome da parte de relatório, quem criou, quem modificou por último, quando foi a última modificação, onde está armazenado ou que tipo de parte de relatório. Por exemplo, você pode procurar todos os gráficos criados na semana passada por um de seus colaboradores.  
@@ -116,7 +117,7 @@ ms.locfileid: "74190038"
  Você pode exibir os resultados da pesquisa como miniaturas ou como uma lista, e classificar os resultados da pesquisa por nome, data de criação e modificação, e criador. Para obter mais informações, consulte [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
   
-##  <a name="PropertiesPane"></a> O painel Propriedades (Construtor de Relatórios)  
+##  <a name="the-properties-pane-report-builder"></a><a name="PropertiesPane"></a> O painel Propriedades (Construtor de Relatórios)  
  Todos os itens de um relatório, incluindo regiões de dados, imagens, caixas de texto e o próprio corpo do relatório, têm propriedades associadas a eles. Por exemplo, a propriedade BorderColor de uma caixa de texto mostra o valor de cor da borda da caixa de texto e PageSize de um relatório indica o tamanho da página do relatório.  
   
  Essas propriedades são exibidas no painel Propriedades. As propriedades no painel mudam de acordo com o item de relatório selecionado.  
@@ -142,7 +143,7 @@ ms.locfileid: "74190038"
  O painel Propriedades tem três botões na parte superior: Categoria, Classificar em ordem alfabética e Páginas de propriedades. Clique nos botões Categoria e Ordem Alfabética para alternar entre as exibições do painel Propriedades. Clique no botão **Páginas de Propriedades** para abrir a caixa de diálogo de propriedades do item de relatório selecionado.  
   
   
-##  <a name="GroupPane"></a> O painel Agrupamento (Construtor de Relatórios)  
+##  <a name="the-grouping-pane-report-builder"></a><a name="GroupPane"></a> O painel Agrupamento (Construtor de Relatórios)  
  Os grupos são usados para organizar seus dados de relatório em uma hierarquia visual e para calcular totais. Você pode exibir grupos de linhas e colunas de uma região de dados na superfície de design e no painel Agrupamento. O painel de Agrupamento tem dois painéis: Grupos de linhas e grupos de colunas. Quando você seleciona uma região de dados, o painel Agrupamento exibe todos os grupos dentro dessa região como uma lista hierárquica: os grupos filho aparecem recuados abaixo dos grupos pai.  
   
  ![Grupos de linhas do Construtor de Relatórios](../../reporting-services/report-builder/media/ssrb-rowgroups.png "Grupos de linhas do Construtor de Relatórios")  
@@ -154,7 +155,7 @@ ms.locfileid: "74190038"
  Para obter mais informações, consulte [Painel Agrupamento &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md) e [Noções básicas sobre grupos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
   
-##  <a name="RunMode"></a> Visualizando o relatório no modo de execução  
+##  <a name="previewing-your-report-in-run-mode"></a><a name="RunMode"></a> Visualizando o relatório no modo de execução  
  Na exibição de design do relatório, você não está trabalhando com os dados reais, mas com uma representação dos dados indicados pelo nome do campo ou da expressão. Para ver os dados reais exibidos no contexto do relatório criado, você pode executar o relatório para visualizar os dados do banco de dados subjacente exibidos no layout do relatório. Alternar entre os modos de design e de execução do relatório permite ajustar seu design e ver os resultados imediatamente. Para visualizar o relatório, clique em **Executar** no grupo **Exibições** group on the ribbon.  
   
  Quando você clica em **Execução**, o Construtor de Relatórios conecta-se às fontes de dados de relatório, armazena em cache os dados do computador, combina os dados e o layout e renderiza o relatório no Visualizador de HTML. O relatório pode ser executado com a frequência desejada durante a fase de criação. Quando estiver satisfeito, você poderá salvá-lo no servidor de relatório onde outras pessoas, com as permissões apropriadas, podem exibi-lo.  

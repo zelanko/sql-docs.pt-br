@@ -1,5 +1,6 @@
 ---
 title: Usando blocos Try e Catch | Microsoft Docs
+description: Saiba como fornecer outra camada de proteção contra solicitações que não são válidas aplicando o tratamento de exceções adequado usando blocos try/catch.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a7a9ef53-e3b6-4bf7-81f3-d85615954e6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 055c1a98dd1c77f19712be66dc2b4dcaa6060b60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 51f6c4d3cbc7751df8e7685835057c4c5e58daa9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62992175"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216352"
 ---
 # <a name="using-try-and-catch-blocks"></a>Usando blocos Try e Catch
   Depois de limitar solicitações inválidas feitas ao servidor de relatório ao adicionar instruções condicionais ao seu código, forneça a manipulação de exceções adequada usando blocos try/catch. Essa técnica oferece outra camada de proteção contra solicitações que não são válidas. Se uma solicitação feita ao servidor de relatório for encapsulada em um bloco try e se essa solicitação fizer com que o servidor de relatório lance uma exceção, a exceção será capturada em um bloco catch, impedindo que o seu aplicativo seja interrompido inesperadamente. Depois que a exceção tiver sido capturada, você poderá usá-la para instruir o usuário a fazer algo diferente ou simplesmente avisá-lo, de uma forma amigável, de que houve um erro. Por fim, você poderá usar um bloco finally para limpar qualquer recurso. Idealmente, você deve gerar um plano de manipulação de exceções gerais para evitar a duplicação desnecessária de blocos try/catch.  

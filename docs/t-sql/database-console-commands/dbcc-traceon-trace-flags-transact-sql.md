@@ -1,7 +1,7 @@
 ---
 title: Sinalizadores de rastreamento (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/11/2020
+ms.date: 03/27/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e19d4af33285f68033dbcead3f7bc275b2e029cb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 3296dad876dc0f3ce95a29dc1b9f21f38db7b0a5
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288630"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402588"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON – sinalizadores de rastreamento (Transact-SQL)
 
@@ -184,10 +184,11 @@ A tabela a seguir lista e descreve os sinalizadores de rastreamento disponíveis
 |**9939**|Habilita os planos paralelos e a verificação paralela das tabelas com otimização de memória e das variáveis de tabela em operações de DML que referenciam tabelas com otimização de memória ou variáveis de tabela, desde que elas não sejam o destino da operação de DML no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/4013877).<br /><br />**Observação:** o sinalizador de rastreamento 9939 não será necessário se o sinalizador de rastreamento 4199 também estiver habilitado explicitamente.<br /><br />**Escopo**: global, sessão ou consulta (QUERYTRACEON)|   
 |**10204**|Desabilita a mesclagem/recompactação durante a reorganização do índice columnstore. No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], quando um índice columnstore é reorganizado, há uma nova funcionalidade para mesclar automaticamente todos os pequenos rowgroups compactados em rowgroups maiores compactados, bem como recompactar todos os rowgroups com um grande número de linhas excluídas.<br /><br />**Observação:** o sinalizador de rastreamento 10204 não se aplica a índices columnstore que são criados em tabelas com otimização de memória.<br /><br />**Escopo**: global ou sessão|   
 |**10316**|Permite a criação de índices adicionais na [tabela temporal interna de preparo com otimização de memória](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md), além do padrão. Se você tiver um padrão de consulta específico que inclua colunas que não estejam cobertas pelo índice padrão, considere adicionar outros.<br /><br />**Observação:** as tabelas temporais de versão do sistema para tabelas com otimização de memória são projetadas para fornecer alta produtividade transacional. Esteja ciente de que a criação de índices adicionais pode apresentar sobrecarga para operações de DML que atualizam ou excluem linhas na tabela atual. Com os índices adicionais, você deve buscar encontrar o equilíbrio certo entre desempenho das consultas temporais e a sobrecarga adicional de DML.<br /><br />**Escopo**: global ou sessão|
-|**11023**|Desabilita o uso da última taxa de amostra persistente para todas as atualizações de estatísticas subsequentes em que uma taxa de amostra não está especificada explicitamente como parte da instrução [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/4039284).<br /><br />**Escopo**: global ou sessão|    
-|**11024**|Permite disparar a atualização automática de estatísticas quando a contagem de modificação de qualquer partição exceder o [limite](../../relational-databases/statistics/statistics.md#AutoUpdateStats) local. Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/4041811).<br /><br />**Observação:** sinalizador de rastreamento se aplica ao [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e a builds superiores.<br /><br />**Escopo**: global ou sessão| 
-|**11047**|Aplica o tempo limite padrão definido por `query wait (s)` ou a configuração do Resource Governor `REQUEST_MEMORY_GRANT_TIMEOUT_SEC` a operações de build de índice Columnstore. Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/4480641).<br /><br />**Observação:** Esse sinalizador de rastreamento se aplica ao [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU5, ao [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 e a builds superiores.<br /><br />**Escopo**: global ou sessão|  
-
+|**11023**|Desabilita o uso da última taxa de amostra persistente para todas as atualizações de estatísticas subsequentes em que uma taxa de amostra não está especificada explicitamente como parte da instrução [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/4039284).<br /><br />**Escopo**: apenas global|    
+|**11024**|Permite disparar a atualização automática de estatísticas quando a contagem de modificação de qualquer partição exceder o [limite](../../relational-databases/statistics/statistics.md#AutoUpdateStats) local. Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/4041811).<br /><br />**Observação:** sinalizador de rastreamento se aplica ao [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e a builds superiores.<br /><br />**Escopo**: apenas global| 
+|**11047**|Aplica o tempo limite padrão definido por `query wait (s)` ou a configuração do Resource Governor `REQUEST_MEMORY_GRANT_TIMEOUT_SEC` a operações de build de índice columnstore. Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/4480641).<br /><br />**Observação:** Esse sinalizador de rastreamento se aplica ao [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU5, ao [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 e a builds superiores.<br /><br />**Escopo**: apenas global| 
+|**11064**|Aprimora a escalabilidade das operações de carregamento de dados em índices columnstore otimizando a distribuição de memória entre as instruções `SELECT` e `INSERT`. Para saber mais sobre como carregar dados em um índice columnstore, confira [Índices columnstore – diretrizes de carregamento de dados](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md).<br /><br />**Observação:** Esse sinalizador de rastreamento aplica-se ao [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e a builds superiores.<br /><br />**Escopo**: apenas global| 
+|**11068**|Usa o valor de MAXDOP (grau máximo de paralelismo) configurado para operações de inserção de índice columnstore. Para obter mais informações sobre como substituir graus de paralelismo, confira o [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md#overriding-degrees-of-parallelism).<br /><br />**Importante:** esse sinalizador de rastreamento só será eficaz se o sinalizador de rastreamento 11064 também estiver habilitado.<br /><br />**Importante:** use esse sinalizador de rastreamento quando houver preferência por cargas de dados mais rápidas em detrimento de manter a qualidade do [segmento columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md#column-segment). Por exemplo, usar esse sinalizador de rastreamento ao carregar 1.048.577 linhas em um columnstore poderá resultar em mais de um rowgroup compactado se a operação de inserção estiver sendo executada em modo paralelo. Sem esse sinalizador de rastreamento, a operação de inserção resultaria em um rowgroup compactado.<br /><br />**Observação:** Esse sinalizador de rastreamento aplica-se ao [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e a builds superiores.<br /><br />**Escopo**: apenas global| 
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir ativa o sinalizador de rastreamento 3205 para todas as sessões no nível do servidor usando DBCC TRACEON.  

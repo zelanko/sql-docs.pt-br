@@ -1,5 +1,6 @@
 ---
 title: Bibliotecas de classes de itens de relatório personalizados | Microsoft Docs
+description: Saiba mais sobre as bibliotecas de classes de itens de relatório personalizados e use exemplos de código para entender como usar essas classes.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ed0bd3c53550a21f4a157ee637e7d153d8f2922
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f30b581c67eb161bd0d221b9a4aa341d90ab7148
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194104"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216941"
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliotecas de classes de itens de relatório personalizados
   Os itens de relatório personalizados usam classes do namespace **Microsoft.ReportDesigner**. As classes usadas para implementar um item de relatório personalizado podem ser agrupadas em duas categorias principais: classes exclusivas destinadas a dar suporte à infraestrutura do item de relatório personalizado, e classes de wrapper gerenciado que encapsula a funcionalidade de elementos relevantes em linguagem RDL. Para obter um exemplo de código sobre como usar essas classes, consulte [Amostras de produto do SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
@@ -40,7 +41,7 @@ ms.locfileid: "63194104"
 |**CustomProperties**|Uma coleção de propriedades personalizadas do item de relatório personalizado.|  
 |**Height**|A altura do controle do item de relatório personalizado.|  
 |**Width**|A largura do controle do item de relatório personalizado.|  
-|**Relatório**|Um contêiner das propriedades em nível de relatório, como a lista de conjuntos de dados do relatório.|  
+|**Report**|Um contêiner das propriedades em nível de relatório, como a lista de conjuntos de dados do relatório.|  
 |**AltReportItem**|O objeto de item de relatório alternativo, a ser usado onde o controle de item de relatório personalizado em tempo de execução não tem suporte.|  
 |**Estilo**|As propriedades de estilo do item de relatório personalizado.|  
 |**Adornment**|Uma janela de adorno usada para a edição interativa do controle.|  

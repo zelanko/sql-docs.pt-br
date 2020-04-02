@@ -1,5 +1,5 @@
 ---
-title: SQLServerDriver Members | Microsoft Docs
+title: Membros do SQLServerDriver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 079c7eb7-71e4-4109-83de-f6d785433c95
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 069b366f4414d4d6706ba14eb44662996273dad0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971187"
 ---
 # <a name="sqlserverdriver-members"></a>Membros do SQLServerDriver
@@ -24,7 +24,7 @@ ms.locfileid: "67971187"
   
 ## <a name="constructors"></a>Construtores  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[SQLServerDriver ()](../../../connect/jdbc/reference/sqlserverdriver-constructor.md)|Inicializa uma nova instância da classe [SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md).|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67971187"
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[acceptsURL](../../../connect/jdbc/reference/acceptsurl-method-sqlserverdriver.md)|Verifica se a URL fornecida é válida.|  
 |[connect](../../../connect/jdbc/reference/connect-method-sqlserverdriver.md)|Faz uma conexão ao banco de dados.|  

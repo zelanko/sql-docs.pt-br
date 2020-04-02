@@ -1,5 +1,6 @@
 ---
 title: Mapas em relatórios móveis do Reporting Services | Microsoft Docs
+description: O Publicador de Relatórios Móveis do SQL Server fornece três tipos de visualização do mapa e mapas internos para continentes e uma série de países individuais.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6b7635b0af96f0009ef6220fc8360a1373d2f998
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62683744"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448430"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Mapas nos relatórios móveis do Reporting Services
 Os mapas são uma ótima maneira de visualizar dados geográficos. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] fornece três tipos diferentes de visualização do mapa e mapas internos para continentes e uma série de países individuais. Você também pode [carregar e usar mapas personalizados](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   

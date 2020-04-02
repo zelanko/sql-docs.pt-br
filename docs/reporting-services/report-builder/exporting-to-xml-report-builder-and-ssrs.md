@@ -1,5 +1,6 @@
 ---
 title: Como exportar para XML (Construtor de Relatórios) | Microsoft Docs
+description: No Construtor de Relatórios, a extensão de renderização XML renderiza relatórios paginados no formato XML. Importe o XML para um banco de dados, use como uma mensagem ou envie para aplicativos.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ac6d962838191365048b3c41d5a8efd367d8355
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 71e3b5102fa1ff37e7cea22562919b202889ecc3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079313"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342835"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportando para XML (Construtor de Relatórios e SSRS)
   A extensão XML de renderização retorna um relatório paginado no formato XML. O esquema para o XML do relatório é específico para este relatório e contém somente dados. As informações de layout não são renderizadas e a paginação não é mantida pela extensão XML de renderização. O XML gerado por esta extensão pode ser importado para um banco de dados, usado como uma mensagem de dados XML ou enviado para um aplicativo personalizado.  
@@ -21,7 +22,7 @@ ms.locfileid: "77079313"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> Itens de relatório  
+##  <a name="report-items"></a><a name="ReportItems"></a> Itens de relatório  
  A tabela a seguir descreve como os itens de relatório são renderizados.  
   
 |Item|Comportamento da renderização|  
@@ -52,7 +53,7 @@ ms.locfileid: "77079313"
 -   **Images, lines, and custom report items** são ignorados.  
   
   
-##  <a name="DataTypes"></a> Tipos de dados  
+##  <a name="data-types"></a><a name="DataTypes"></a> Tipos de dados  
  Ao elemento ou atributo da caixa de texto é atribuído um tipo de dados XSD baseado nos valores que a caixa de texto exibe.  
   
 |Se todos os valores da caixa de texto forem:|O tipo de dados atribuído será:|  
@@ -68,7 +69,7 @@ ms.locfileid: "77079313"
 |Outros|**xsd:string**|  
   
   
-##  <a name="XMLSpecificRenderingRules"></a> Regras de renderização específicas de XML  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a> Regras de renderização específicas de XML  
  As seções a seguir descrevem como as extensões de renderização XML interpretam os itens dentro do relatório.  
   
 ### <a name="report-body"></a>Corpo do relatório  
@@ -150,15 +151,15 @@ ms.locfileid: "77079313"
  Se o valor da propriedade DataElementOutput for igual à Saída, o cabeçalho de um item repetido será renderizado com um filho do elemento de detalhes.  
   
   
-##  <a name="CustomFormatsXSLTransformations"></a> Formatos personalizados e transformações XSL  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a> Formatos personalizados e transformações XSL  
  Os arquivos XML produzidos pela extensão de renderização XML podem ser transformados em qualquer formato que utiliza as Transformações de XSL (XSLT). Esta funcionalidade pode ser usada para produzir dados em formatos que já não têm suporte pelas extensões de renderização existentes. Considere o uso da extensão de renderização XML e o XSLT antes de tentar criar sua própria extensão de renderização.  
   
   
-##  <a name="DuplicateName"></a> Nomes duplicados  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a> Nomes duplicados  
  Se houver nomes de elemento de dados duplicados dentro do mesmo escopo, o processador exibirá uma mensagem de erro.  
   
   
-##  <a name="XSLTTransformations"></a> Transformações XSLT  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a> Transformações XSLT  
  O processador XML pode aplicar uma transformação XSLT do lado de servidor para os dados de XML originais. Quando um XSLT é aplicado, o processador emite o conteúdo transformado ao invés dos dados XML originais. A transformação ocorre no servidor, não no cliente.  
   
  O XSLT a ser aplicado à saída é definido no arquivo de definição do relatório com a propriedade DataTransform do relatório ou com o parâmetro XSLT *DeviceInfo* . Se nenhum desses valores for definido, a transformação ocorre sempre que o processador XML é usado. Ao usar assinaturas, o XSLT deve ser definido na propriedade RDL DataTransform.  
@@ -166,7 +167,7 @@ ms.locfileid: "77079313"
  Se um arquivo XSLT for especificado, tanto pela propriedade de definição DataTransform como pela definição das informações do dispositivo, o XSLT especificado no DataTransform ocorrerá primeiro, seguido do XSLT definido pelas configurações das informações do dispositivo.  
   
   
-###  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Configurações de informações de dispositivo  
  Você pode alterar algumas configurações padrão para este processador alterando as configurações de informações de dispositivo, incluindo:  
   
 -   Uma transformação (XSLT) para aplicar ao XML.  

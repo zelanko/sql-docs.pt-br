@@ -1,5 +1,6 @@
 ---
 title: Criar um relatório vinculado | Microsoft Docs
+description: Saiba como criar um relatório vinculado para que você possa criar versões adicionais de um relatório existente.
 ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6dad85f35be1d7fb26f4c9eef6241e01baadb692
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cb362f699e8bf87e0f386c3ec726869f67aec934
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67492793"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510157"
 ---
 # <a name="create-a-linked-report"></a>Criar um relatório vinculado
   Um relatório vinculado é um item de servidor de relatório que fornece um ponto de acesso a um relatório existente. Conceitualmente, é semelhante a um atalho de programa usado para executar um programa ou abrir um arquivo.  

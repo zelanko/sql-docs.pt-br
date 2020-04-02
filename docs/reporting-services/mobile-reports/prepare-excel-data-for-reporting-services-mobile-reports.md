@@ -1,5 +1,6 @@
 ---
 title: Preparar dados do Excel para relatórios móveis do Reporting Services | Microsoft Docs
+description: Os relatórios móveis do Reporting Services podem usar dados de arquivos do Excel. Siga estas dicas para preparar arquivos e planilhas do Excel para facilitar a importação.
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9285b9b89930fe540f9b5493f1730184cf4e9526
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ef25e90b8a9deb641a72006faf0a0c903a554ba5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62499935"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448379"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Preparar dados do Excel para relatórios móveis do Reporting Services
   

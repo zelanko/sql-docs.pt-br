@@ -9,31 +9,31 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2afc9fce446d277422c564330c5cc7db254f2d00
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 481e0170e14b978f9fa26689a71383d981313a57
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75252002"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215376"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Como montar o ADLS Gen2 para a camada do HDFS em um cluster de Big Data
 
 As seções a seguir fornecem um exemplo de como configurar a camada do HDFS com uma fonte de dados do Azure Data Lake Storage Gen2.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Cluster de Big Data implantado](deployment-guidance.md)
 - [Ferramentas de Big Data](deploy-big-data-tools.md)
   - **azdata**
   - **kubectl**
 
-## <a id="load"></a> Carregar dados no Azure Data Lake Storage
+## <a name="load-data-into-azure-data-lake-storage"></a><a id="load"></a> Carregar dados no Azure Data Lake Storage
 
 A seção a seguir descreve como configurar o Azure Data Lake Storage Gen2 para testar a camada do HDFS. Caso você já tenha dados armazenados no Azure Data Lake Storage, ignore esta seção para usar seus próprios dados.
 
-1. [Crie uma conta de armazenamento com funcionalidades do Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+1. [Crie uma conta de armazenamento com funcionalidades do Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
-1. [Crie um contêiner de blob/sistema de arquivos](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal) nesta conta de armazenamento para seus dados externos.
+1. [Crie um sistema de arquivos](/azure/storage/blobs/data-lake-storage-explorer) nesta conta de armazenamento para seus dados.
 
 1. Faça upload de um arquivo CSV ou Parquet no contêiner. Estes são os dados do HDFS externos que serão montados no HDFS no cluster de Big Data.
 
@@ -46,9 +46,9 @@ Para usar as credenciais do OAuth para montagem, é necessário seguir as etapas
 1. Acesse o [portal do Azure](https://portal.azure.com)
 1. Navegue para o "Azure Active Directory". Você deve ver esse serviço na barra de navegação à esquerda.
 1. Na barra de navegação à direita, selecione "Registros de aplicativo" e crie um registro
-1. Crie um "Aplicativo Web e siga o assistente. **Lembre-se do nome do aplicativo que você cria aqui**. Você precisará adicionar esse nome à sua conta do ADLS como um usuário autorizado. Observe também a ID do cliente do aplicativo na visão geral ao selecionar o aplicativo.
-1. Depois que o aplicativo Web for criado, vá para "Certificados e segredos" e crie um **Novo segredo do cliente** e selecione uma duração de chave. **Adicione** o segredo.
-1.  Volte à página Registros de aplicativo e clique em "Pontos de Extremidade" na parte superior. **Anote a URL do "ponto de extremidade do token OAuth (v2)**
+1. Crie um "Aplicativo Web" e siga o assistente. **Lembre-se do nome do aplicativo que você cria aqui**. Você precisará adicionar esse nome à sua conta do ADLS como um usuário autorizado. Observe também a ID do cliente do aplicativo na visão geral ao selecionar o aplicativo.
+1. Depois que o aplicativo Web for criado, vá para "Certificados e segredos" e crie um **Segredo do cliente** e selecione uma duração de chave. **Adicione** o segredo.
+1.     Volte à página Registros de aplicativo e clique em "Pontos de Extremidade" na parte superior. **Anote a URL do "Ponto de extremidade do token OAuth (v2)"**
 1. Agora você deverá ter os seguintes itens anotados para o OAuth:
 
     - A "ID do Cliente do Aplicativo" do aplicativo Web
@@ -99,7 +99,7 @@ Você também pode fazer a montagem usando chaves de acesso que podem ser obtida
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
-## <a id="mount"></a> Montar o armazenamento HDFS remoto
+## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> Montar o armazenamento HDFS remoto
 
 Agora que você definiu a variável de ambiente MOUNT_CREDENTIALS para chaves de acesso ou usando o OAuth, inicie a montagem. As etapas a seguir montam o armazenamento HDFS remoto do Azure Data Lake no armazenamento HDFS local do cluster de Big Data.
 
@@ -127,7 +127,7 @@ Agora que você definiu a variável de ambiente MOUNT_CREDENTIALS para chaves de
 
 Se a montagem tiver sido bem-sucedida, você poderá consultar os dados do HDFS e executar trabalhos do Spark com eles. Ela será exibida no HDFS do cluster de Big Data na localização especificada por `--mount-path`.
 
-## <a id="status"></a> Obter o status das montagens
+## <a name="get-the-status-of-mounts"></a><a id="status"></a> Obter o status das montagens
 
 Para listar o status de todas as montagens no cluster de Big Data, use o seguinte comando:
 
@@ -149,7 +149,7 @@ O exemplo a seguir atualiza a montagem. Essa atualização também limpará o ca
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> Excluir a montagem
+## <a name="delete-the-mount"></a><a id="delete"></a> Excluir a montagem
 
 Para excluir a montagem, use o comando **azdata bdc hdfs mount delete** e especifique o caminho da montagem no HDFS:
 

@@ -1,5 +1,6 @@
 ---
 title: 'Como fazer: Depurar Assemblies Personalizados | Microsoft Docs'
+description: Saiba como usar as ferramentas de depuração do Microsoft .NET Framework, que ajudam você a analisar o código de seu assembly personalizado e localizar erros nele.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ec4fb2f9d38997c7000e576a36fa8c6c1407e45
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 17162c5cb862c496c70459818497e66d1342923a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194309"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217067"
 ---
 # <a name="how-to-debug-custom-assemblies"></a>Como fazer: Depurar assemblies personalizados
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornece várias ferramentas de depuração que podem ajudar você a analisar o código de assembly personalizado e localizar erros nele. A melhor ferramenta a ser usada dependerá do que você estiver tentando realizar. Este exemplo usa o [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  

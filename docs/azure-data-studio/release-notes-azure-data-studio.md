@@ -1,25 +1,40 @@
 ---
 title: Notas de versão
-titleSuffix: Azure Data Studio
 description: Notas sobre a versão do Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: alayu; sstein
+author: yualan
+ms.author: alayu
+ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 02/19/2020
-ms.openlocfilehash: 3b37609f6db3e9dc8fa0d6622574054686552350
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.date: 03/18/2020
+ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408858"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215475"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas sobre a versão relacionadas ao Azure Data Studio
 
 **[Baixe e instale a versão mais recente!](download.md)**
+
+## <a name="march-2020"></a>Março de 2020
+
+18 de março de 2020 &nbsp; / &nbsp; versão: 1.16.0 
+
+&nbsp;
+
+| Alterar | Detalhes |
+| :----- | :------ |
+| Adição de suporte a gráficos em Notebooks SQL | Ao executar uma consulta SQL em uma célula de código, agora os usuários podem criar e salvar gráficos. |
+| Adição da experiência Criar Jupyter Book | Agora, os usuários podem criar os próprios Jupyter Books usando um notebook. |
+| Adição do suporte do AAD para a extensão de Postgres | |
+| Correção de vários bugs de acessibilidade | [Lista de bugs de acessibilidade](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22S360+-+Accessibility%22+label%3AA11y_AzureDataStudio) |
+| Mesclagem do VS Code com o 1.42 | Essa versão inclui atualizações no VS Code das três versões anteriores do VS Code. [Leia as notas sobre a versão](https://code.visualstudio.com/updates/v1_42) para saber mais. |
+| Bugs e problemas resolvidos | Para obter uma lista completa das correções, confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22March+2020%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
 
 ## <a name="february-hotfix"></a>Fevereiro (hotfix)
 
@@ -49,6 +64,7 @@ ms.locfileid: "78408858"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>Problema conhecido
+
 - Os usuários no macOS Catalina precisarão clicar com o botão direito do mouse no Azure Data Studio e clicar em abrir.
 
 ## <a name="december-2019-hotfix"></a>Dezembro de 2019 (hotfix)
@@ -139,11 +155,12 @@ ms.locfileid: "78408858"
 | :----- | :------ |
 | Versão da extensão do histórico de consulta | A extensão do histórico do SQL salva todas as consultas passadas executadas em uma sessão de Azure Data Studio e as lista na ordem de execução. Os usuários podem ver e abrir a consulta, executá-la, excluí-la, pausar o histórico de consultas ou excluir todas as entradas desse histórico. |
 | Novos Copiar/Colar Resultados | Adicionamos outras maneiras de copiar/colar resultados da grade de resultados. |
-| Atualizar para extensão do PowerShell |  |
+| Atualizar para a extensão do PowerShell |  |
 | Bugs e problemas resolvidos | Para obter uma lista completa das correções, confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/milestone/42?closed=1). |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemas conhecidos
+
 - Notebooks
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Caso raros em que o notebook é serializado incorretamente
 
@@ -163,6 +180,7 @@ ms.locfileid: "78408858"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemas conhecidos
+
 - Notebooks
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Caso raros em que o notebook é serializado incorretamente
 
@@ -201,10 +219,9 @@ ms.locfileid: "78408858"
 | Bugs e problemas resolvidos | Nas versões anteriores do Azure Data Studio, se um banco de dados de usuário fosse selecionado ao se conectar usando a caixa de diálogo Conexão, a entrada resultante do Pesquisador de Objetos seria totalmente delimitada para esse banco de dados individual. Dessa versão em diante, esse comportamento está sendo alterado para que as propriedades de nível de servidor também sejam mostradas no pesquisador de objetos. <br/> Para obter uma lista completa das correções, confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
 | &nbsp; | &nbsp; |
 
-
 ## <a name="june-2019"></a>Junho de 2019
 
-6 de junho, 2019 &nbsp; / &nbsp; versão: 1.8.0 
+6 de junho, 2019 &nbsp; / &nbsp; versão: 1.8.0
 
 &nbsp;
 
@@ -220,8 +237,9 @@ ms.locfileid: "78408858"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemas conhecidos
+
 - Extensões da Ferramenta de Administração de Banco de Dados para Windows
-    - Não é possível iniciar propriedades em nó de servidor desconectado
+    - Não é possível iniciar propriedades em um nó de servidor desconectado
     - Não é possível iniciar propriedades de servidores do Azure
     - Nem todos os objetos têm caixas de diálogo de propriedades
     - As caixas de diálogo levam muito tempo para iniciar
@@ -256,7 +274,7 @@ ms.locfileid: "78408858"
 | :----- | :------ |
 | Guia **Servidores** renomeada para **Conexões** | |
 | Mudança do Azure Resource Explorer como um viewlet do Azure em Conexões | Agora os usuários podem exibir suas instâncias do SQL do Azure por meio de viewlet do Azure na exibição Conexões e expandir para exibir objetos em cada servidor ou banco de dados.|
-| Melhorias do Notebook do SQL | &bull; &nbsp; Adição do botão à barra de ferramentas para limpar a saída de todas as células <br/>&bull; &nbsp; Adição do botão à barra de ferramentas para executar todas as células <br/>&bull; &nbsp; Correção do nome de conexão em vez do nome do servidor (se definido) na lista suspensa Anexar ao <br/>&bull; &nbsp; Correção da não renderização de imagens em Markdown ao usar caminhos de imagem relativos <br/>&bull; &nbsp; Funcionalidade aprimorada em grades de notebook por meio da adição de redimensionamento automático do tamanho de coluna ao clicar duas vezes e compatibilidade aprimorada com o botão de rolagem do mouse <br/>&bull; &nbsp; Melhorias no tratamento de erro e na resiliência da instalação do Python ao instalar o Python por meio de notebooks <br/>&bull; &nbsp; Melhorias na funcionalidade “Selecionar tudo” ao selecionar células de notebook <br/>&bull; &nbsp; Melhorias nas conexões de notebook para evitar o fechamento de um notebook e o impacto em uma conexão com o Pesquisador de Objetos <br/>&bull; &nbsp; Experiência de notebook aprimorada para exibir uma mensagem ao usuário quando o notebook estiver desconectado e precisar de uma conexão para executar células<br/>&bull; &nbsp; Suporte aprimorado para que notebooks não salvos sejam reidratados no ADS quando o ADS for iniciado novamente |
+| Melhorias do Notebook do SQL | &bull; &nbsp; Adição do botão à barra de ferramentas para limpar a saída de todas as células <br/>&bull; &nbsp; Adição do botão à barra de ferramentas para executar todas as células <br/>&bull; &nbsp; Correção do nome de conexão em vez do nome do servidor (se definido) na lista suspensa Anexar ao <br/>&bull; &nbsp; Correção da não renderização de imagens em Markdown ao usar caminhos de imagem relativos <br/>&bull; &nbsp; Funcionalidade aprimorada em grades de notebook por meio da adição de redimensionamento automático do tamanho de coluna ao clicar duas vezes e compatibilidade aprimorada com o botão de rolagem do mouse <br/>&bull; &nbsp; Melhorias no tratamento de erro e na resiliência da instalação do Python ao instalar o Python por meio de notebooks <br/>&bull; &nbsp; Aprimoramentos na funcionalidade "selecionar tudo" ao selecionar células de notebook <br/>&bull; &nbsp; Melhorias nas conexões de notebook para evitar o fechamento de um notebook e o impacto em uma conexão com o Pesquisador de Objetos <br/>&bull; &nbsp; Experiência de notebook aprimorada para exibir uma mensagem ao usuário quando o notebook estiver desconectado e precisar de uma conexão para executar células<br/>&bull; &nbsp; Suporte aprimorado para que notebooks não salvos sejam reidratados no ADS quando o ADS for iniciado novamente |
 | Bugs e problemas resolvidos. | Confira [Bugs e problemas, no GitHub](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -268,7 +286,7 @@ ms.locfileid: "78408858"
 
 | Alterar | Detalhes |
 | :----- | :------ |
-| Correção de alguns problemas descobertos na versão 1.5.1. | Confira [Versão de hotfix de março, no GitHub](https://github.com/Microsoft/azuredatastudio/milestone/28).<br/> <br/>&bull; &nbsp; Correção do problema em que o usuário não conseguia fechar o notebook aberto na tarefa “Abrir Notebook” no Painel <br/>&bull; &nbsp; Correção do problema em que o JSON do Notebook tem uma } extra após o salvamento <br/>&bull; &nbsp; Correção do problema em que as grades de notebook não respondiam às alterações do tema <br/>&bull; &nbsp; Correção do problema em que o caminho completo do notebook era mostrado no cabeçalho da guia. Agora, apenas o nome do arquivo é mostrado. |
+| Correção de alguns problemas descobertos na versão 1.5.1. | Confira [Versão de hotfix de março, no GitHub](https://github.com/Microsoft/azuredatastudio/milestone/28).<br/> <br/>&bull; &nbsp; Correção do problema em que o usuário não conseguia fechar o notebook aberto na tarefa "Abrir Notebook" no Painel <br/>&bull; &nbsp; Correção do problema em que o JSON do Notebook tem uma } extra após o salvamento <br/>&bull; &nbsp; Correção do problema em que as grades de notebook não respondiam às alterações do tema <br/>&bull; &nbsp; Correção do problema em que o caminho completo do notebook era mostrado no cabeçalho da guia. Agora, apenas o nome do arquivo é mostrado. |
 | &nbsp; | &nbsp; |
 
 ## <a name="march-2019"></a>Março de 2019
@@ -300,7 +318,7 @@ ms.locfileid: "78408858"
 - [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458): Extração de dacpac trava o SqlToolsService se uma versão inválida for usada <br/>
 **Solução alternativa:** Reinicie o Azure Data Studio e use a versão correta.
 - Os ícones Novo Notebook e Abrir Notebook ficam perdidos <br/>
-**Solução alternativa:** O tipo de conexão herdada foi preterido. É recomendável conectar-se ao ponto de extremidade do SQL Server e você obterá todas as ações (Novo Notebook, Trabalho do Spark) conforme o esperado. 
+**Solução alternativa:** O tipo de conexão herdada foi preterido. É recomendável conectar-se ao ponto de extremidade do SQL Server para obter todas as ações (Novo Notebook, Trabalho do Spark) conforme o esperado. 
 
 ## <a name="february-2019"></a>Fevereiro de 2019
 
@@ -361,8 +379,8 @@ ms.locfileid: "78408858"
 | Apresentando a extensão Colar o Plano. | &nbsp; |
 | Introdução à extensão de consultas High Color, incluindo o tema do editor do SSMS. | &nbsp; |
 | Correções no SQL Server Agent, no Profiler e nas extensões de Importação. | &nbsp; |
-| Correção no problema KeepAlive do soquete do .Net Core que causava quedas de conexões inativas no macOS. | &nbsp; |
-| Atualização do serviço de Ferramentas do SQL para .Net Core 2.2 Preview 3 (para suporte eventual ao AAD). | &nbsp; |
+| Correção no problema de manutenção de atividade do soquete do .NET Core que causava quedas de conexões inativas no macOS. | &nbsp; |
+| Atualização do serviço de Ferramentas SQL para o .NET Core 2.2 Preview 3 (para suporte eventual ao AAD). | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-november-2018"></a>Correções de bugs, novembro de 2018

@@ -1,6 +1,6 @@
 ---
 title: Gerenciar o failover do grupo de disponibilidade – SQL Server em Linux
-description: ''
+description: 'Este artigo descreve os tipos de failover: automático, failover manual planejado e failover manual forçado. Os tipos automático e manual planejado preservam todos os seus dados.'
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 92d9a7518e0a6176199f39dcd69c87ea25c8004d
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280877"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216845"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover do grupo de disponibilidade Always On no Linux
 
@@ -24,7 +24,7 @@ Dentro do contexto de um AG (grupo de disponibilidade), as funções primária e
 
 Para obter informações em segundo plano sobre failover, confira [Failover e modos de failover](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).
 
-## <a name="failover"></a>Failover manual
+## <a name="manual-failover"></a><a name="failover"></a>Failover manual
 
 Use as ferramentas de gerenciamento de clusters para fazer failover de um AG gerenciado por um gerenciador de clusters externo. Por exemplo, se uma solução usar o Pacemaker para gerenciar um cluster do Linux, use `pcs` para executar failovers manuais no RHEL ou no Ubuntu. No SLES, use `crm`. 
 
@@ -43,7 +43,7 @@ Faça failover manualmente em duas etapas.
 
    Segundo, [remover a restrição de localização](#removeLocConstraint).
 
-#### <a name="manualMove"></a> Etapa 1. Fazer failover manualmente movendo o recurso do grupo de disponibilidade
+#### <a name="step-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove"></a> Etapa 1. Fazer failover manualmente movendo o recurso do grupo de disponibilidade
 
 Para fazer failover manual de um recurso do AG denominado *ag_cluster* para o nó de cluster denominado *nodeName2*, execute o comando apropriado para a sua distribuição:
 
@@ -62,7 +62,7 @@ Para fazer failover manual de um recurso do AG denominado *ag_cluster* para o n�
 >[!IMPORTANT]
 >Depois que você fizer failover manualmente de um recurso, você precisará remover a restrição de localização adicionada automaticamente.
 
-#### <a name="removeLocConstraint"> </a> Etapa 2. Remover a restrição de local
+#### <a name="step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> </a> Etapa 2. Remover a restrição de local
 
 Durante um failover manual, o comando `move` do `pcs` ou o comando `migrate` do `crm` adiciona uma restrição de localização ao recurso a ser colocado no novo nó de destino. Para ver a nova restrição, execute o comando a seguir depois de mover manualmente o recurso:
 
@@ -107,7 +107,7 @@ Para mais informações:
 - [Pacemaker – mover recursos manualmente](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html)
  [Guia de administração do SLES – recursos](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
-## <a name="forceFailover"></a> Forçar o failover 
+## <a name="force-failover"></a><a name="forceFailover"></a> Forçar o failover 
 
 Um failover forçado destina-se estritamente à recuperação de desastre. Nesse caso, não é possível fazer failover com as ferramentas de gerenciamento de cluster porque o datacenter primário está inativo. Se você forçar o failover em uma réplica secundária não sincronizada, talvez ocorra alguma perda de dados. Só force o failover se for preciso restaurar imediatamente o serviço para o AG e se estiver disposto a correr o risco de perder dados.
 

@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Criar um relatório de gráficos rápido offline (Construtor de Relatórios) | Microsoft Docs'
+description: Neste tutorial, você cria um gráfico de pizza em um relatório paginado do Reporting Services no Construtor de Relatórios. Em seguida, você adiciona porcentagens e modifica o gráfico de pizza.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41e26cbdeaa794ebae01371207d7ff7847619dc2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67037962"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290742"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Criar um relatório de gráficos rápido offline (Construtor de Relatórios)
 
@@ -27,10 +28,10 @@ ms.locfileid: "67037962"
   
  ![Gráfico de pizza rápido do Construtor de Relatórios](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Gráfico de pizza rápido do Construtor de Relatórios")  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Se você usa dados XML ou uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)], precisa ter acesso ao Construtor de Relatórios. Você pode iniciar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] de um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em modo nativo ou no modo integrado do SharePoint, ou você pode baixar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] do Centro de Download da Microsoft. Para obter mais informações, consulte [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
   
-##  <a name="TwoWays"></a> Duas formas de executar este tutorial  
+##  <a name="two-ways-to-do-this-tutorial"></a><a name="TwoWays"></a> Duas formas de executar este tutorial  
   
 -   [Criar o gráfico de pizza com dados XML](#CreatePieChartXML)  
   
@@ -50,7 +51,7 @@ ms.locfileid: "67037962"
   
  [Criar o gráfico de pizza com uma consulta Transact-SQL que contém dados](#CreatePieQueryData)  
   
-##  <a name="CreatePieChartXML"></a> Criando o gráfico de pizza com dados XML  
+##  <a name="creating-the-pie-chart-with-xml-data"></a><a name="CreatePieChartXML"></a> Criando o gráfico de pizza com dados XML  
   
 1.  [Inicie o Construtor de Relatórios](../../reporting-services/report-builder/start-report-builder.md) do portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ou do servidor de relatório no modo integrado do SharePoint, ou do seu computador.  
   
@@ -137,7 +138,7 @@ ms.locfileid: "67037962"
   
 18. Para continuar a modificar o gráfico de pizza, vá para [Depois que você executar o assistente](#AfterWizard) neste artigo.  
   
-##  <a name="CreatePieQueryData"></a> Criando o gráfico de pizza com uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+##  <a name="creating-the-pie-chart-with-a-tsql-query"></a><a name="CreatePieQueryData"></a> Criando o gráfico de pizza com uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 1.  [Inicie o Construtor de Relatórios](../../reporting-services/report-builder/start-report-builder.md) por meio do portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , do servidor de relatórios no modo integrado do SharePoint ou em seu computador.  
   
@@ -187,7 +188,7 @@ ms.locfileid: "67037962"
   
 15. Para ver seu gráfico de pizza real, clique em **Executar** na guia **Início** da Faixa de Opções.  
  
-##  <a name="AfterWizard"></a> Depois que você executar o assistente  
+##  <a name="after-you-run-the-wizard"></a><a name="AfterWizard"></a> Depois que você executar o assistente  
  Agora que você tem seu relatório de gráfico de pizza, pode brincar com ele. Na guia **Executar** da Faixa de Opções, clique em **Design**, para que você possa continuar modificando-o.  
   
 ## <a name="make-the-chart-bigger"></a>Aumentar o gráfico  
@@ -219,7 +220,7 @@ Observe que a superfície de design fica maior à medida que você arrasta.
   
  Para saber mais sobre como personalizar legendas e rótulos de gráfico, veja [Exibir valores de porcentagem em um gráfico de pizza e &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) e [Alterar o texto de um item de legenda &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
-##  <a name="WhatsNext"></a> O que vem a seguir?  
+##  <a name="whats-next"></a><a name="WhatsNext"></a> O que vem a seguir?  
  Agora que você criou seu primeiro relatório no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], está pronto tentar os outros tutoriais e começar a criar relatórios com seus próprios dados. Para executar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], você deve ter permissão para acessar suas fontes de dados, como bancos de dados, com uma *cadeia de conexão* que realmente conecte você à fonte de dados. O administrador do sistema terá essas informações e poderá configurá-las.  
   
  Para trabalhar nos outros tutoriais, você precisa do nome de uma instância do SQL Server e de credenciais suficientes para ter acesso somente leitura a qualquer banco de dados. O administrador do sistema também pode definir isso para você.  

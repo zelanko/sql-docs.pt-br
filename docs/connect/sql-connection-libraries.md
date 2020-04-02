@@ -8,19 +8,19 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/05/2020
 ms.author: JRoth
-ms.openlocfilehash: eb842769490b521b248ed4114953b8d828fa80d3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 88fbd0e3fd01492b8e7d920eb132196f8a005478
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286400"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79434113"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de conexão para bancos de dados do Microsoft SQL
 
 Este artigo fornece links de download para módulos de conexão ou *drivers* que seus programas cliente podem usar para interagir com o [Microsoft SQL Server](../relational-databases/database-features.md) e com o gêmeo dele na nuvem, o [Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/). Os drivers estão disponíveis para uma variedade de linguagens de programação, em execução nos seguintes sistemas operacionais:
 
 - Linux
-- MacOS
+- macOS
 - Windows
 
 **Incompatibilidade de OOP para relacional:**
@@ -34,17 +34,6 @@ Este artigo destina seções separadas para esses dois tipos de drivers de conex
 <a name="anchor-20-drivers-relational-access" />
 
 ## <a name="drivers-for-relational-access"></a>Drivers para acesso relacional
-
-<!--
-Each given Microsoft Download Center page should be enhanced
-with a link to the next NEWER version page, on the day that the
-original page is no longer the latest because the newer page is being added.
-But this policy is not agreed on or observed,
-putting the links in the following table at risk for being outdated.
-
-PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
--->
 
 | Linguagem | Baixar o driver do SQL |
 | :------- | :---------------------- |
@@ -76,14 +65,15 @@ A tabela a seguir lista exemplos de estruturas de ORM (mapeamento relacional de 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>Páginas da Web sobre criação de aplicativos
+
 **[https://aka.ms/sqldev](https://aka.ms/sqldev)** leva você a um conjunto de páginas da Web sobre *criação de aplicativos*. As páginas da Web fornecem informações sobre várias combinações de linguagem de programação, sistema operacional e driver de conexão SQL. Entre as informações fornecidas pelas páginas da Web sobre criação de aplicativos estão os seguintes itens:
 
 - Detalhes sobre como começar do zero, para cada combinação de linguagem de programação + sistema operacional + driver.
-    - Instruções para instalar os drivers de conexão SQL mais recentes.
+  - Instruções para instalar os drivers de conexão SQL mais recentes.
 - Exemplos de código para cada um dos seguintes itens:
-    - Exemplos de código relacional de objeto.
-    - Exemplos de código ORM.
-    - Demonstrações de índice Columnstore para um desempenho muito mais rápido.
+  - Exemplos de código relacional de objeto.
+  - Exemplos de código ORM.
+  - Demonstrações de índice Columnstore para um desempenho muito mais rápido.
 
 **Primeira das páginas da Web sobre criação de aplicativos:**  
 ![Páginas da Web sobre criação de aplicativos, captura de tela da primeira página](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png)
@@ -94,6 +84,7 @@ A tabela a seguir lista exemplos de estruturas de ORM (mapeamento relacional de 
 &nbsp;
 
 ## <a name="related-links"></a>Links relacionados
+
 - [Exemplos de código para se conectar ao Banco de Dados SQL do Azure na nuvem, com Java e outras linguagens](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
 
 <!--

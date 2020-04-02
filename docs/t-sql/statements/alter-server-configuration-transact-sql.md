@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 39273f66a62f713e7aa95c3ce20d9ed3204776e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288290"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380807"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,8 +177,10 @@ Define o nível do log do clustering de failover do SQL Server. Pode ser ativado
   
 -   2 – Erros e avisos  
   
+Em cenários de failover de recurso, a DLL de recurso do SQL Server pode obter um arquivo de despejo antes que o failover ocorra. Isso se aplica às tecnologias de FCI e de Grupo de Disponibilidade. Quando determina que um recurso do SQL Server falhou, a DLL de recurso do SQL Server usa o utilitário Sqldumpr.exe para obter um arquivo de despejo do processo do SQL Server. Para garantir que o utilitário Sqldumpr.exe gere com êxito o arquivo de despejo no momento do failover do recurso, você precisa definir as três seguintes propriedades como pré-requisitos: SqlDumperDumpTimeOut, SqlDumperDumpPath, SqlDumperDumpFlags.
+
 SQLDUMPEREDUMPFLAGS  
-Determina o tipo de arquivos de despejo gerados pelo utilitário SQLDumper do SQL Server. A configuração padrão é 0. Para obter mais informações, veja o [artigo da Base de Dados de Conhecimento sobre o utilitário do SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  
+Determina o tipo de arquivos de despejo gerados pelo utilitário SQLDumper do SQL Server. A configuração padrão é 0. Valores decimais, em vez de hexadecimais, são usados para essa configuração. Para o minidespejo, use 288, para o minidespejo com uso indireto de memória, use 296 e, para o despejo filtrado, use 33024. Para obter mais informações, veja o [artigo da Base de Dados de Conhecimento sobre o utilitário do SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
 SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
 O local onde o utilitário SQLDumper armazena os arquivos de despejo. Para obter mais informações, veja o [artigo da Base de Dados de Conhecimento sobre o utilitário do SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  
@@ -304,7 +306,7 @@ A DLL de recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!I
 |[Como definir opções do Banco de Dados em Memória](#MemoryOptimized)|MEMORY_OPTIMIZED|
 
   
-###  <a name="Affinity"></a> Configurando a afinidade do processo  
+###  <a name="setting-process-affinity"></a><a name="Affinity"></a> Configurando a afinidade do processo  
 Os exemplos desta seção mostram como definir a afinidade do processo para CPUs e nós NUMA. Os exemplos presumem que o servidor contém 256 CPUs que são organizadas em quatro grupos de 16 nós NUMA cada um. Não são atribuídos threads a nenhum nó NUMA ou CPU.  
   
 -   Grupo 0: Nós NUMA 0 a 3, CPUs 0 a 63  
@@ -351,7 +353,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  
   
-###  <a name="Diagnostic"></a> Setting diagnostic log options  
+###  <a name="setting-diagnostic-log-options"></a><a name="Diagnostic"></a> Setting diagnostic log options  
   
 **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).    
   
@@ -387,7 +389,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-###  <a name="Failover"></a> Configurando as propriedades do cluster de failover  
+###  <a name="setting-failover-cluster-properties"></a><a name="Failover"></a> Configurando as propriedades do cluster de failover  
   
 **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).   
   
@@ -401,7 +403,7 @@ ALTER SERVER CONFIGURATION
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-###  <a name="ChangeClusterContextExample"></a> B. Como alterar o contexto do cluster de uma réplica de disponibilidade  
+###  <a name="b-changing-the-cluster-context-of-an-availability-replica"></a><a name="ChangeClusterContextExample"></a> B. Como alterar o contexto do cluster de uma réplica de disponibilidade  
 O exemplo a seguir altera o contexto do cluster HADR da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para especificar o cluster WSFC de destino, `clus01`, o exemplo especifica o nome de objeto completo do cluster, `clus01.xyz.com`.  
   
 ```sql  
@@ -410,7 +412,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ### <a name="setting-buffer-pool-extension-options"></a>Definindo opções de extensão do pool de buffers  
   
-####  <a name="BufferPoolExtension"></a> A. Definindo a opção de extensão do pool de buffers  
+####  <a name="a-setting-the-buffer-pool-extension-option"></a><a name="BufferPoolExtension"></a> A. Definindo a opção de extensão do pool de buffers  
   
 **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
@@ -439,7 +441,7 @@ SET BUFFER POOL EXTENSION ON
 GO   
 ```  
 
-### <a name="MemoryOptimized"></a> Como definir opções do Banco de Dados em Memória
+### <a name="setting-in-memory-database-options"></a><a name="MemoryOptimized"></a> Como definir opções do Banco de Dados em Memória
 
 **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 

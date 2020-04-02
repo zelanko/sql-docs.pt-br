@@ -1,5 +1,6 @@
 ---
 title: Salvar relatórios em um servidor de relatório (Construtor de Relatórios) | Microsoft Docs
+description: No Construtor de Relatórios, você pode publicar um relatório em um servidor de relatório. Outras pessoas podem vê-lo. Sempre que executa o relatório publicado, você vê os dados mais atuais.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e5a622aaca18bed1cda8c4ad8a1a1dec8f91849
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6f16f6e58a227c25a2c631a949a96e73e5aaf8a1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580666"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290808"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Salvar relatórios em um servidor de relatório (Construtor de Relatórios)
   No Construtor de Relatórios, é possível salvar uma definição de relatório em um servidor de relatório (processo também conhecido como publicação de relatório). Quando o relatório for salvo em um servidor de relatório, outros usuários poderão exibi-lo. Cada vez que você executa o relatório publicado, recupera os dados mais atuais. Para salvar uma cópia estática de um relatório renderizado, exporte o relatório para um formato de arquivo diferente e salve-o ou use o recurso de histórico de relatório para salvar versões dos relatórios renderizados.  

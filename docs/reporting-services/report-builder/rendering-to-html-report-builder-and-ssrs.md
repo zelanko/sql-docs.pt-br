@@ -1,5 +1,6 @@
 ---
 title: Como renderizar para HTML (Construtor de Relatórios) | Microsoft Docs
+description: No Construtor de Relatórios, a extensão de renderização HTML renderiza relatórios paginados no formato HTML. Ela pode produzir páginas HTML completas ou fragmentos para inserção em outras páginas.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6b8a27924bcceefe54d4a4663e3d55888920dbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5862081622d9d5c1a42fa8806ae482f02919a7b3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082477"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290879"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Renderizando para HTML (Construtor de Relatórios e SSRS)
   A extensão de renderização HTML renderiza um relatório paginado no formato HTML. A extensão de renderização também pode produzir páginas HTML totalmente formadas ou fragmentos de HTML a serem inseridos em outras páginas HTML. Todo o HTML é gerado com a codificação UTF-8.  
@@ -27,11 +28,11 @@ ms.locfileid: "77082477"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a> Renderizando em MHTML  
+##  <a name="rendering-in-mhtml"></a><a name="RenderingMHTML"></a> Renderizando em MHTML  
  A extensão de renderização HTML também pode renderizar relatórios em MHTML (encapsulamento MIME de documentos HTML agregados). O MHTML estende o HTML para inserir objetos codificados, como imagens, no documento HTML. Usando a extensão de renderização MHTML, você pode inserir recursos, como imagens, documentos ou outros arquivos binários, como estruturas MIME, no relatório HTML, em um único arquivo. Os relatórios MHTML também são úteis para serem inseridos em mensagens de email, pois todos os recursos estão incluídos no relatório. Embora na verdade seja a extensão de renderização HTML que renderiza o MHTML, esse recurso também pode ser referido como a extensão de renderização MHTML.  
   
   
-##  <a name="BrowserSupport"></a> Suporte do navegador  
+##  <a name="browser-support"></a><a name="BrowserSupport"></a> Suporte do navegador  
  Essa extensão de renderização oferece suporte às seguintes versões de navegador:  
   
 -   Internet Explorer 5.5 e posterior  
@@ -43,7 +44,7 @@ ms.locfileid: "77082477"
  Devido a considerações de navegador cruzadas, o relatório renderizado pode variar ligeiramente do navegador para navegador. Por exemplo, a caixa de texto contém uma propriedade chamada WritingMode. O Firefox não oferece suporte a essa propriedade.  
   
   
-##  <a name="HTMLSpecificRenderingRules"></a> HTML - Regras específicas de renderização  
+##  <a name="html-specific-rendering-rules"></a><a name="HTMLSpecificRenderingRules"></a> HTML - Regras específicas de renderização  
  As seguintes regras específicas de HTML são aplicadas ao renderizar:  
   
 -   O processador criará uma estrutura de tabela HTML para conter todos os itens em cada coleção de **ReportItems** , se houver mais de uma.  
@@ -61,7 +62,7 @@ ms.locfileid: "77082477"
 -   Todas as coordenadas e tamanhos de item de relatório são convertidos para milímetros. Todos os outros tamanhos, inclusive propriedades de estilo, retêm suas unidades originais. Diferenças de tamanho e posição menores que 0,2 mm são tratadas como 0 mm.  
   
   
-##  <a name="Interactivity"></a> Interatividade  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interatividade  
  Alguns elementos interativos têm suporte em HTML. A seguir, uma descrição dos comportamentos específicos.  
   
 ### <a name="show-and-hide"></a>Mostrar e Ocultar  
@@ -84,10 +85,10 @@ ms.locfileid: "77082477"
   
  Uma funcionalidade adicional de pesquisa e localização é fornecida pelo controle Web Forms do ReportViewer.  
   
-##  <a name="FontsOnClient"></a> Fontes no computador cliente
+##  <a name="fonts-on-the-client-computer"></a><a name="FontsOnClient"></a> Fontes no computador cliente
  Quando uma fonte personalizada é usada no relatório, o computador usado para exibir o relatório (o computador cliente) precisa ter a fonte personalizada instalada para o relatório ser exibido corretamente. Se a fonte não estiver instalada no computador cliente, o relatório exibirá uma fonte padrão do sistema em vez de a fonte personalizada.
   
-##  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Configurações de informações de dispositivo  
  Você pode alterar algumas configurações padrão para este processador, incluindo qual modo deve ser renderizado, alterando as configurações de informações de dispositivo: Para obter mais informações, consulte [Configurações de informações do dispositivo HTML](../../reporting-services/html-device-information-settings.md).  
   
   

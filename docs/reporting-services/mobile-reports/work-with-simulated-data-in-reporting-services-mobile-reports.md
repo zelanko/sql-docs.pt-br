@@ -1,5 +1,6 @@
 ---
 title: Trabalhar com os dados simulados em relatórios móveis do Reporting Services | Microsoft Docs
+description: Quando você coloca um elemento de galeria na superfície do design, o Publicador de Relatórios Móveis gera imediatamente dados simulados para esse ele. Projete seus protótipos com os dados simulados.
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39640b3ce6e8d3c8760e3c1a1153949426eba80c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62474847"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448362"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Trabalhar com dados simulados em relatórios do Reporting Services móveis
 Quando você coloca um elemento de galeria na superfície do design, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] gera imediatamente dados simulados para esse elemento. Esses dados servem para várias finalidades úteis ao criar relatórios móveis.   
@@ -38,7 +39,7 @@ Conforme mencionado anteriormente, você pode exportar dados simulados para um a
   
 Depois que todos os controles são associados a dados reais, as tabelas simuladas que não estão mais em uso são automaticamente removidas do relatório móvel. Não é possível remover tabelas simuladas ainda referenciadas por elementos na superfície do design.  
   
->**Observação**: dados simulados não acrescentam à superfície geral móvel do relatório porque não são serializados com o relatório móvel, mas geradas dinamicamente em runtime.  
+>**Observação**: os dados simulados não acrescentam à superfície geral móvel do relatório porque não são serializados com o relatório móvel, mas gerados dinamicamente em runtime.  
   
 ### <a name="see-also"></a>Confira também  
 - [Criar e publicar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  

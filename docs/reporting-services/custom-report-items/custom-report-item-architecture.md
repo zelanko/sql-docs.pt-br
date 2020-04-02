@@ -1,5 +1,6 @@
 ---
 title: Arquitetura de item de relatório personalizado | Microsoft Docs
+description: Saiba como a arquitetura dos itens de relatório personalizados é uma extensão que permite que os desenvolvedores adicionem funcionalidades que não têm suporte nativo no RDL.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2a88ea46-c9f8-4dd7-aad1-16de11da4f06
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15e81e7cc32e32f0cfc56da2a3ec3bb0983dde6d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 039afae1b8be540869930055e77320c27857e23d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194267"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216955"
 ---
 # <a name="custom-report-item-architecture"></a>Arquitetura de item de relatório personalizado
   Um item de relatório personalizado é uma extensão da linguagem RDL que permite que desenvolvedores adicionem funcionalidade que não tem suporte nativo na RDL ou estendam a funcionalidade de controles existentes. Existem dois componentes principais para um item de relatório personalizado: o componente de tempo de execução e o componente tempo de design. Esses componentes são implementados como assemblies [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e podem ser escritos em qualquer linguagem em conformidade com CLS.  

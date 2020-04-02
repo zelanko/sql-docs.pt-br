@@ -9,12 +9,12 @@ ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1cd604c754113f7196963daf714eab3dd41143cc
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 2bbacb2bdeeb409f08e6e68438535bc0d6671b01
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79190588"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79487614"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no modo do Active Directory Domain Services
 
@@ -77,19 +77,19 @@ A DSA (conta de serviço de domínio) do BDC precisa ser capaz de criar usuário
 
     ![image15](./media/deploy-active-directory/image15.png)
 
-1. Clique em **Adicionar...** e adicione o usuário do **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**
+1. Clique em **Adicionar...** e adicione o usuário do **bdcDSA**
 
     ![image16](./media/deploy-active-directory/image16.png)
 
     ![image17](./media/deploy-active-directory/image17.png)
 
-1. Selecione o usuário do **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**, desmarque todas as permissões e clique em **Avançado**
+1. Selecione o usuário do **bdcDSA**, desmarque todas as permissões e clique em **Avançado**
 
 1. Clique em **Adicionar**
 
     ![image18](./media/deploy-active-directory/image18.png)
 
-    - Clique em **Selecionar uma Entidade de Segurança**, insira **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** e clique em OK
+    - Clique em **Selecionar uma Entidade de Segurança**, insira **bdcDSA** e clique em OK
 
     - Defina o **Tipo** como **Permitir**
 
@@ -113,7 +113,7 @@ A DSA (conta de serviço de domínio) do BDC precisa ser capaz de criar usuário
 
 - Clique em **Adicionar**
 
-    - Clique em **Selecionar uma Entidade de Segurança**, insira **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** e clique em OK
+    - Clique em **Selecionar uma Entidade de Segurança**, insira **bdcDSA** e clique em OK
 
     - Defina o **Tipo** como **Permitir**
 
@@ -127,7 +127,7 @@ A DSA (conta de serviço de domínio) do BDC precisa ser capaz de criar usuário
 
 - Clique em **Adicionar**
 
-    - Clique em **Selecionar uma Entidade de Segurança**, insira **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** e clique em OK
+    - Clique em **Selecionar uma Entidade de Segurança**, insira **bdcDSA** e clique em OK
 
     - Defina o **Tipo** como **Permitir**
 
@@ -166,7 +166,7 @@ A integração com o AD requer os seguintes parâmetros. Adicione esses parâmet
 
 - `security.activeDirectory.ouDistinguishedName`: nome diferenciado de uma UO (unidade organizacional) a que todas as contas do AD criadas pela implantação do cluster serão adicionadas. Se o nome do domínio for `contoso.local`, o nome diferenciado da UO será `OU=BDC,DC=contoso,DC=local`.
 
-- `security.activeDirectory.dnsIpAddresses`: lista de endereços IP dos controladores de domínio
+- `security.activeDirectory.dnsIpAddresses`: contém a lista de endereços IP de servidores DNS do domínio. 
 
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: lista de FQDNs do controlador de domínio. O FQDN contém o nome do computador/host do controlador de domínio. Se tiver vários controladores de domínio, você poderá fornecer uma lista aqui. Exemplo: `HOSTNAME.CONTOSO.LOCAL`
 
@@ -250,7 +250,7 @@ Você pode encontrar aqui um script de exemplo para [implantar um cluster de Big
 
 Agora, você precisa definir todos os parâmetros necessários para uma implantação do BDC com a integração do Active Directory.
 
-Para obter a documentação completa sobre como implantar [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], visite a [documentação oficial](deployment-guidance.md).
+Agora você pode implantar o cluster BDC integrado com Active Directory usando o comando `azdata` e o perfil de implantação kubeadm-prod. Para obter a documentação completa de como implantar [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], acesse [Como implantar Clusters de Big Data do SQL Server no Kubernetes](deployment-guidance.md).
 
 ## <a name="verify-reverse-dns-entry-for-domain-controller"></a>Verificar a entrada DNS inversa para o controlador de domínio
 
@@ -325,3 +325,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - Somente um BDC por domínio (Active Directory) é permitido no momento. A habilitação de vários BDCs por domínio está planejada para uma versão futura.
 
 - Nenhum dos grupos do AD especificados nas configurações de segurança pode estar com escopo DomainLocal. Para verificar o escopo de um grupo do AD, siga [estas instruções](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
+
+- A conta do AD que pode ser usada para fazer logon no BDC é permitida do mesmo domínio que foi configurado para o BDC. A habilitação de logons de outro domínio confiável está planejada para uma versão futura

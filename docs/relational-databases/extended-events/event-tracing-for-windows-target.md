@@ -1,5 +1,6 @@
 ---
 title: destino do rastreamento de eventos do Windows
+description: Saiba como usar o ETW (Rastreamento de Eventos para Windows) como um destino. Use o rastreamento junto com o recurso Eventos Estendidos ou como um consumidor do evento de Eventos Estendidos.
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8923769d3edb35b328c9b0351fd9700ff9168c6c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cdff5b987e6ff86a148cdb8d8ad317e9c14a543f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234659"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433963"
 ---
 # <a name="event-tracing-for-windows-target"></a>destino do rastreamento de eventos do Windows
 
@@ -51,7 +52,7 @@ ms.locfileid: "75234659"
   
  A tabela a seguir descreve as opções disponíveis para configuração do destino de ETW.  
   
-|Opção|Valores permitidos|DESCRIÇÃO|  
+|Opção|Valores permitidos|Descrição|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|Qualquer cadeia de caracteres até 256 caracteres. Esse valor é opcional.|O nome da sessão de Eventos Estendidos. Por padrão, este é XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Qualquer cadeia de caracteres até 256 caracteres. Esse valor é opcional.|O caminho para o arquivo de log da sessão de Eventos Estendidos. Por padrão, esse é % TEMP% \ XEEtw.etl.|  

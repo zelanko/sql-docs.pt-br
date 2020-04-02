@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 860888bf0f2292a68fa6a4c6a6b92489466a586c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b83ceb3dd5079f82a13e8f1e2aba37fcf5ca5835
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75688785"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271422"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notas sobre a versão para o SSDT (SQL Server Data Tools)
 
@@ -44,6 +44,39 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1594nbsp-ssdt-for-vs-2017"></a>15.9.4,&nbsp; SSDT para VS 2017
+
+_Lançamento:_ &nbsp; 26 de março de 2020  
+_Número de build:_ &nbsp; 14.0.16214.0  
+_SSDT para Visual Studio 2017._
+
+### <a name="whats-new"></a>Novidades
+
+| Novo item | Detalhes |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Correção de um problema em que o VS podia falhar ao mover linhas de restrição do fluxo de controle dentro de um contêiner. |
+| Integration Services (SSIS) | Correção de um problema em que a interface do usuário das tarefas do plano de manutenção não pode listar gerenciadores de conexões ADO.NET criados fora da interface do usuário da tarefa. |
+| Integration Services (SSIS) | Correção de um problema em que a página de logon interativo do Azure não aparece ao implantar um projeto do SSAS que pertence a uma solução que também tem projetos do SSIS carregados. |
+| Integration Services (SSIS) | Correção de um problema em que clicar no botão de propriedades do driver MSOLAP faz com que o assistente do DTS falhe quando o SQL Server não está instalado. |
+| Integration Services (SSIS) | Correção de um problema em que o driver MSOLEDBSQL não dá suporte à autenticação do AAD no assistente do DTS. |
+| Integration Services (SSIS) | Correção de um problema em que a Origem XML e o Destino ADO.NET não podem persistir corretamente quando o alvo é o SQL Server 2012. |
+| Integration Services (SSIS) | Correção de um problema em que o botão "Baixar WSDL" no editor de Tarefa do Serviço Web pode não ser exibido corretamente. |
+| Integration Services (SSIS) | Correção de um problema em que não é possível selecionar a tabela na página Gerenciador de Conexões do editor de Transformação de Pesquisa. |
+| Integration Services (SSIS) | Correção de um problema em que o layout do editor de Transformação de Cache pode ficar bagunçado. |
+| Integration Services (SSIS) | Correção de um problema em que a área "Gerenciadores de Conexões" no editor de pacote pode não ser exibida corretamente. |
+| Integration Services (SSIS) | Correção de um problema em que o ícone de status pode não ser exibido corretamente no Assistente Converter em Modelo de Implantação de Pacote. |
+| Integration Services (SSIS) | Alteração do instalador para o instalador completo, que não requer o download de conteúdo da Internet. |
+
+### <a name="known-issues"></a>Problemas conhecidos
+
+| Problema conhecido | Detalhes |
+| :---------- | :------ |
+| A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. | Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados. |
+| O Power Query Source pode não ser compatível com OData v4 quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
+| O Power Query Source pode não ser compatível com o uso de ODBC para se conectar ao Oracle quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
+| Power Query Source não é localizado | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1593nbsp-ssdt-for-vs-2017"></a>15.9.3,&nbsp; SSDT para VS 2017
 

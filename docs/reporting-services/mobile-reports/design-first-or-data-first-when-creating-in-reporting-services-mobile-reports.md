@@ -1,5 +1,6 @@
 ---
 title: Começar pelo design ou pelos dados ao criar relatórios móveis do Reporting Services | Microsoft Docs
+description: O Publicador de Relatórios Móveis é compatível com as abordagens primeiro dados e primeiro design à criação de relatórios. Importe todos os dados primeiro ou crie um design e, em seguida, importe os dados.
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a7b355fa-312b-4074-bc9b-776269d4fb51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cf9afd8c4aa916d87929a8e7d73347cc33456252
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8e6628c233e90d59cb940521995234ee8a2b30e8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63066626"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79447887"
 ---
 # <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>Começar pelo design ou pelos dados ao criar relatórios móveis do Reporting Services
   

@@ -1,5 +1,6 @@
 ---
 title: Métodos de autorização | Microsoft Docs
+description: No Reporting Services, você pode usar esses métodos de autorização para gerenciar tarefas, funções e políticas no servidor de relatório.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 119b795eacb217aff6b5a4aeca2fffa12519c752
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5a8c9ba25c3f9dfd03aa528b4d02f9e02e197546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63025946"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509827"
 ---
 # <a name="authorization-methods"></a>Métodos de autorização
   Você pode usar estes métodos para gerenciar tarefas, funções e políticas no servidor de relatório.  

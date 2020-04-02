@@ -1,5 +1,6 @@
 ---
-title: Como implantar um item de relatório personalizado | Microsoft Docs
+title: 'Como fazer: Implantar um item de relatório personalizado | Microsoft Docs'
+description: Saiba como implantar um item de relatório personalizado. Você modificará os arquivos de configuração do servidor de relatório e copiará os assemblies de componentes para as pastas apropriadas.
 ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b28d1b2f29dca3ab23ba658c8718173fe5d09779
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 31347efeda4805d4faffc993c164441cba1697c4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194120"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216918"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>Como implantar um item de relatório personalizado
+# <a name="how-to-deploy-a-custom-report-item"></a>Como fazer: Implantar um item de relatório personalizado
   Para implantar um item de relatório personalizado no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], modifique os arquivos de configuração do servidor de relatório e copie os assemblies de componente em tempo de design e em tempo de execução nas pastas de aplicativo apropriadas para o Designer de Relatórios e o servidor de relatório.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>Para implantar um item de relatório personalizado  

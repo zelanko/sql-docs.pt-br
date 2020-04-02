@@ -1,5 +1,6 @@
 ---
 title: Usando assemblies de nome forte personalizados | Microsoft Docs
+description: Saiba como usar um assembly personalizado com nome forte para identificar exclusivamente um assembly para o CLR (Common Language Runtime) e garantir a integridade binária.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 31479ae9b460b6a660ec865e68e46afd912f49b6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bdee8daafe68742dce4c91f1dffb61f849445998
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194090"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216991"
 ---
 # <a name="using-strong-named-custom-assemblies"></a>Usando assemblies de nome forte personalizados
   Um nome forte identifica um assembly e inclui seu nome de texto, o número de versão de quatro partes, informações de cultura (se fornecidas), uma chave pública e uma assinatura digital armazenada no manifesto do assembly. Um nome forte identifica exclusivamente um assembly para o CLR (common language runtime) e garante a integridade binária.  

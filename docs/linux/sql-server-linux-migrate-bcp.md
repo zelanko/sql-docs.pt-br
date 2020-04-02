@@ -1,6 +1,6 @@
 ---
 title: Copiar dados em massa para o SQL Server em Linux
-description: ''
+description: Este artigo descreve o utilitário bcp. Use bcp para importar grandes números de linhas para tabelas do SQL Server ou para exportar dados de tabelas do SQL Server para arquivos de dados.
 author: VanMSFT
 ms.author: vanto
 ms.date: 01/30/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: b611ef63532dd855648354bb85fc96f7cb52bd60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cd1af76a6cd22e8f8004c869127585f66e03badc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68127318"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216605"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Copiar dados em massa com bcp para o SQL Server em Linux
 

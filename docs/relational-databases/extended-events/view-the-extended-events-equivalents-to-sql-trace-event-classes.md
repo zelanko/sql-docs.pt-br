@@ -1,5 +1,6 @@
 ---
 title: Eventos estendidos equivalentes às classes de rastreamento de eventos do SQL
+description: Este artigo mostra como ver as ações e os eventos dos Eventos Estendidos que são equivalentes a cada evento de Rastreamento do SQL e suas colunas associadas.
 ms.date: 03/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c98eeec91bdc86af8109cd715b5c0fde9d685f44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 33f26f04173761a5b64576665a0dbab887c5c489
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75246118"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487574"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Exibir os Eventos Estendidos equivalentes às classes de evento de Rastreamento do SQL
 

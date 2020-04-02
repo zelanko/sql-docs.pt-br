@@ -1,5 +1,6 @@
 ---
 title: Adicionar visualizações a relatórios móveis do Reporting Services | Microsoft Docs
+description: 'Saiba mais sobre os três tipos de gráfico básicos que você pode usar em relatórios móveis do Reporting Services: tempo, categoria e totais e seus gráficos de comparação correspondentes.'
 ms.date: 09/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3379d5eb53bc255a09e255d4986eb924912e5eb3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63316561"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79447983"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Adicionar visualizações a relatórios móveis do Reporting Services
 Os gráficos são uma parte essencial da visualização de dados. Saiba mais sobre os gráficos que você pode usar nos relatórios móveis do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para cobrir diversos cenários. 
@@ -143,7 +144,7 @@ Os mapas de árvore exibem métricas aplicando seus valores ao tamanho e à cor 
 
      * Em **O Tamanho Representa** , selecione um campo numérico para o tamanho dos blocos.
      * Em **A Cor Representa** , selecione um campo numérico para a cor dos blocos. 
-     * [opcional] **Valor central personalizado**: só é possível usar o **Valor central personalizado** quando o tipo de visualização é HeatMapWithCustomCenterValue.
+     * [opcional] **Valor do Centro Personalizado**: só é possível usar o **Valor do Centro Personalizado** quando o tipo de visualização é HeatMapWithCustomCenterValue.
      
          O valor central decide a cor de uma caixa. Quanto melhor a métrica comparada ao valor central, mais verde ela ficará. Quanto pior a métrica, mais vermelha ela ficará.
      

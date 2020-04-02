@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Sintaxe de criação de banco de dados para SQL Server, Banco de Dados SQL do Azure, Azure Synapse Analytics e Analytics Platform System
 ms.custom: ''
-ms.date: 02/07/2020
+ms.date: 03/16/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b809d3512c16a366f8f4add88cf8a0b091156d2
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.openlocfilehash: 1e20a18a405bc0bf2bf8fe94926d5bf4a6cb30ec
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074474"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448416"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -75,7 +75,7 @@ No SQL Server, essa instrução cria um novo banco de dados e os arquivos usados
 
 Criar um banco de dados.
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name
 [ CONTAINMENT = { NONE | PARTIAL } ]
 [ ON
@@ -134,7 +134,7 @@ FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY
 
 Anexar um banco de dados
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name
     ON <filespec> [ ,...n ]
     FOR { { ATTACH [ WITH <attach_database_option> [ , ...n ] ] }
@@ -151,7 +151,7 @@ CREATE DATABASE database_name
 
 Criar um instantâneo do banco de dados
 
-```sql
+```syntaxsql
 CREATE DATABASE database_snapshot_name
     ON
     (
@@ -432,7 +432,7 @@ A instrução `CREATE DATABASE` deve ser executada em modo de confirmação auto
 
 No máximo 32.767 bancos de dados podem ser especificados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-Cada banco de dados tem um proprietário que pode executar atividades especiais no banco de dados. O proprietário é o usuário que cria o banco de dados. O proprietário do banco de dados pode ser alterado usando [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md).
+Cada banco de dados tem um proprietário que pode executar atividades especiais no banco de dados. O proprietário é o usuário que cria o banco de dados. O proprietário do banco de dados pode ser alterado usando [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).
 
 Alguns recursos de banco de dados dependem de recursos ou capacidades presentes no sistema de arquivos para a funcionalidade completa de um banco de dados. Alguns exemplos de recursos que dependem do conjunto de recursos de sistema de arquivos incluem:
 
@@ -837,7 +837,7 @@ GO
 - [Anexar e desanexar bancos de dados](../../relational-databases/databases/database-detach-and-attach-sql-server.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
-- [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)
+- [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)
 - [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)
 - [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)
 - [Instantâneos do banco de dados](../../relational-databases/databases/database-snapshots-sql-server.md)
@@ -864,7 +864,7 @@ No banco de dados individual/pool elástico do [!INCLUDE[ssSDSfull](../../includ
 
 ### <a name="create-a-database"></a>Criar um banco de dados
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 {
   (<edition_options> [, ...n])
@@ -900,7 +900,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 ### <a name="copy-a-database"></a>Copiar um banco de dados
 
-```
+```stntaxsql
 CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name
     [ ( SERVICE_OBJECTIVE =
@@ -1230,7 +1230,7 @@ Na Instância Gerenciada de Banco de Dados do SQL, essa instrução é usada par
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]
 ```
@@ -1300,7 +1300,7 @@ No Azure Synapse, essa instrução pode ser usada com um servidor do Banco de Da
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
     [ MAXSIZE = {
@@ -1411,7 +1411,7 @@ No Analytics Platform System, essa instrução é usada para criar um banco de d
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```syntaxsql
 CREATE DATABASE database_name
 WITH (
     [ AUTOGROW = ON | OFF , ]

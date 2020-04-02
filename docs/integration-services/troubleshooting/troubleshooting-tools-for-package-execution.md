@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 660ac899b1cf649bcc431bf10e2f9b18ca12cbc4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12922974abd63412b381989d4f6587a9d336ccfe
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/30/2020
-ms.locfileid: "73637949"
+ms.locfileid: "80402585"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Solucionando problemas de ferramentas para execução de pacotes
 
@@ -30,7 +30,7 @@ ms.locfileid: "73637949"
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui recursos e ferramentas que podem ser usados para solucionar problemas de pacotes quando eles são executados depois de concluídos e implantados.  
   
- No momento da criação, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fornece pontos de interrupção para pausar a execução do pacote, a janela Progresso, e os visualizadores de dados para visualizar como os dados passam pelo fluxo de dados. No entanto, esses recursos não estarão disponíveis quando você estiver executando pacotes que foram implantados. As principais técnicas para a solução problemas de pacotes implantados são as seguintes:  
+ Em tempo de design, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fornece pontos de interrupção para pausar a execução do pacote, a janela Progresso e os visualizadores de dados. Os pontos de interrupção permitem inspecionar como os dados passam pelo fluxo de dados. No entanto, esses recursos não ficam disponíveis quando você está executando pacotes implantados. As principais técnicas para a solução problemas de pacotes implantados são as seguintes:  
   
 -   Capturar e manipular os erros de pacote usando os manipuladores de eventos.  
   
@@ -45,20 +45,20 @@ ms.locfileid: "73637949"
 -   **Reiniciar os pacotes a partir do ponto de falha usando os pontos de verificação**. Para saber mais, confira [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Capturar e manipular os erros de pacotes com os manipuladores de eventos  
- Você pode responder a muitos eventos gerados pelo pacote e os objetos no pacote usando os manipuladores de eventos.  
+ Use manipuladores de eventos para responder a eventos gerados pelo pacote e pelos objetos do pacote.  
   
--   **Criar um manipulador de eventos para o evento OnError**. No manipulador de eventos, você pode usar uma tarefa Enviar Email para notificar um administrador sobre a falha, usar uma tarefa Script e a lógica personalizada para obter informações do sistema para a solução de problemas, ou limpar os recursos temporários ou as saídas incompletas. Para obter mais informações, consulte [Manipuladores de Eventos do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
+-   **Criar um manipulador de eventos para o evento OnError**. No manipulador de eventos, você pode usar uma tarefa de Enviar Email para notificar um administrador sobre a falha. Use uma tarefa de Script e uma lógica personalizada para obter informações do sistema para solucionar problemas ou para limpar recursos temporários e saídas incompletas. Para obter mais informações, consulte [Manipuladores de Eventos do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
   
 ## <a name="troubleshoot-bad-data-by-using-error-outputs"></a>Solucionar problemas de dados inválidos por meio das saídas de erro  
  Você pode usar a saída de erro disponível em muitos componentes de fluxo de dados para direcionar as linhas com erros a outro destino para análise posterior. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).  
   
 -   **Capturar dados inválidos usando saídas de erro**. Envie as linhas que contêm erros a outro destino como uma tabela de erros ou um arquivo de texto. A saída de erro adiciona linhas automaticamente a duas colunas que contém o número do erro que fez com que a linha fosse rejeitada e a ID da coluna na qual o erro ocorreu.  
   
--   **Adicionar informações amigáveis às saídas de erro**. A análise da saída de erro pode tornar-se uma tarefa mais fácil se você adicionar a mensagem de erro e o nome da coluna além dos dois identificadores numéricos que são fornecidos pela saída de erro. Para obter um exemplo de como acrescentar essas duas colunas adicionais usando scripts, consulte [Aprimorando uma saída de erro com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
+-   **Adicionar informações amigáveis às saídas de erro**. Para que a saída de erro fique mais clara, adicione a mensagem de erro e o nome da coluna além dos dois identificadores numéricos que são fornecidos pela saída de erro. Para obter um exemplo de como acrescentar essas duas colunas adicionais usando scripts, consulte [Aprimorando uma saída de erro com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
 -   **Ou obtenha os nomes de coluna registrando o evento DiagnosticEx**. Esse evento grava um mapa de linhagem de fluxo de dados no log. Em seguida, você pode procurar o nome da coluna nesse mapa de linhagem usando o identificador da coluna capturado por uma saída do erro.  Para obter mais informações, consulte [Tratamento de erro em dados](../../integration-services/data-flow/error-handling-in-data.md).  
   
-     O valor da coluna de mensagem para **DiagnosticEx** é texto XML. Para exibir o texto da mensagem para uma execução de pacote, consulte a exibição [catalog.operation_messages &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Observe que o evento **DiagnosticEx** não preservar o espaço em branco em sua saída XML, a fim de reduzir o tamanho do log. Para melhorar a legibilidade, copie o log em um editor de XML, no Visual Studio, por exemplo, que ofereça suporte à formatação XML e ao realce de sintaxe.  
+     O valor da coluna de mensagem para **DiagnosticEx** é texto XML. Para exibir o texto da mensagem para uma execução de pacote, consulte a exibição [catalog.operation_messages &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Observe que o evento **DiagnosticEx** não preserva o espaço em branco em sua saída XML, a fim de reduzir o tamanho do log. Para melhorar a legibilidade, copie o log em um editor de XML, no Visual Studio, por exemplo, que ofereça suporte à formatação XML e ao realce de sintaxe.  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>Solucionar problemas de execução de pacotes por meio relatórios de operações  
  Os relatórios de operações padrão estão disponíveis no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para ajudar você a monitorar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que foram implantados no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Esses relatórios de pacote ajudam a exibir o status e o histórico do pacote e, se necessário, a identificar a causa de falhas de execução.  
@@ -69,7 +69,7 @@ ms.locfileid: "73637949"
  Várias exibições de banco de dados SSISDB estão disponíveis para você consultar e monitorar a execução de pacotes e outras informações de operações. Para obter mais informações, consulte [Monitorar a execução de pacotes e outras operações](../../integration-services/performance/monitor-running-packages-and-other-operations.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Solucionar problemas de execução de pacotes por meio dos logs  
- Você pode controlar muitas ocorrências em seus pacotes de execução ativando os logs. Os provedores de logs capturam as informações sobre os eventos especificados para análise posterior e salvam essas informações em uma tabela de banco de dados, um arquivo simples, um arquivo XML ou outro formato de saída suportado.  
+ Você pode controlar muitas ocorrências em seus pacotes em execução com o registro em log. Os provedores de logs coletam informações sobre os eventos especificados para análise posterior e salvam essas informações em dos diversos formatos com suporte.  Os formatos do provedor de logs com suporte incluem tabela de banco de dados, arquivo simples e um arquivo XML.  
   
 -   **Habilitar logs**. Você pode refinar a saída de logs selecionando apenas os eventos e apenas os itens de informação que deseja capturar. Para obter mais informações, consulte [Log do SSIS (Integration Services)](../performance/integration-services-ssis-logging.md).  
   
@@ -83,9 +83,9 @@ ms.locfileid: "73637949"
   
     2.  **Adicionar informações de auditoria ao fluxo de dados**. Você pode usar a transformação Auditoria para adicionar informações às linhas no fluxo de dados sobre a execução do pacote que criou ou modificou cada linha. A transformação Auditoria disponibiliza nove partes de informações, incluindo PackageName e ExecutionInstanceGUID. Para obter mais informações, consulte [Audit Transformation](../../integration-services/data-flow/transformations/audit-transformation.md). Se você tiver informações personalizadas que gostaria de incluir nas linhas para fins de auditoria, poderá adicioná-las às linhas no fluxo de dados usando uma transformação Coluna Derivada. Para obter mais informações, consulte [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
-    3.  **Considerar a captura de dados de contagem de linhas**. Considere a criação de tabelas separadas para as informações de contagem de linhas, onde cada instância de execução de pacote possa ser identificada por ExecutionID. Use a transformação Contagem de Linhas para salvar a contagem de linhas em uma série de variáveis em pontos críticos no fluxo de dados. Após o término do fluxo de dados, use uma tarefa Executar SQL para inserir as séries de valores em uma linha na tabela para análise e geração de relatório posterior.  
+    3.  **Considerar a captura de dados de contagem de linhas**. Considere a criação de tabelas separadas para as informações de contagem de linhas, onde cada instância de execução de pacote possa ser identificada por ExecutionID. Use a transformação Contagem de Linhas para salvar a contagem de linhas em uma série de variáveis em pontos críticos no fluxo de dados. Adicione uma tarefa Executar SQL para inserir as séries de valores em uma linha na tabela para análise e geração de relatório posterior.  
   
-     Para obter mais informações sobre essa abordagem, consulte a seção "ETL Auditing and Logging" no white paper da [!INCLUDE[msCoName](../../includes/msconame-md.md)] intitulado [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582)(Projeto REAL: práticas de design ETL de Business Intelligence).  
+     Para obter mais informações sobre essa abordagem, consulte a seção "ETL Auditing and Logging" no white paper da [!INCLUDE[msCoName](../../includes/msconame-md.md)] intitulado [Projeto REAL: práticas de design ETL de Business Intelligence](https://www.microsoft.com/download/details.aspx?id=14582).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Solucionar problemas de execução de pacotes por meio de arquivos de despejo de depuração  
  No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode criar arquivos de despejo de depuração que fornecem informações sobre a execução de um pacote. Para obter mais informações, consulte [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
@@ -93,7 +93,7 @@ ms.locfileid: "73637949"
 ## <a name="troubleshoot-run-time-validation-issues"></a>Solucionar problemas de validação em tempo de execução  
  Às vezes, você não poderá se conectar às suas fontes de dados ou validar partes de seu pacote até que as tarefas anteriores no pacote tenham sido executadas. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui os seguintes recursos para ajudar a evitar os erros de validação que resultam dessas condições:  
   
--   **Configurar uma propriedade DelayValidation em elementos de pacote que não são válidos quando o pacote estiver carregado**. Você pode definir **DelayValidation** para **True** em elementos do pacote cujas configurações não são válidas para evitar erros de validação quando o pacote for carregado. Por exemplo, você pode ter uma tarefa Fluxo de Dados que usa uma tabela de destino que não existe até que uma tarefa Executar SQL crie a tabela no tempo de execução. A propriedade **DelayValidation** pode ativada no nível do pacote ou no nível das tarefas individuais e contêineres que o pacote inclui.  
+-   **Configurar a propriedade DelayValidation em elementos de pacote inválidos conhecidos**. Para evitar erros de validação para elementos de pacote com problemas de configuração conhecidos, configure **DelayValidation** como **True**. Por exemplo, o pacote contém uma tarefa de Fluxo de Dados que usa uma tabela de destino que não existe até que uma tarefa Executar SQL crie a tabela no tempo de execução. A propriedade **DelayValidation** pode ativada no nível do pacote ou no nível das tarefas individuais e contêineres que o pacote inclui.  
   
      A propriedade **DelayValidation** pode ser definida em uma tarefa de Fluxo de Dados, mas não em componentes de fluxo de dados individuais. Você pode conseguir um efeito semelhante definindo a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> dos componentes de fluxo de dados individuais como **false**. Entretanto, quando o valor dessa propriedade for **false**, o componente não reconhecerá as alterações para o metadados de fontes de dados externas. Ao definir como **true**, a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> poderá ajudar a evitar os problemas de bloqueio causados por bloqueios no banco de dados, especialmente quando o pacote estiver usando as transações.  
   
@@ -107,10 +107,7 @@ ms.locfileid: "73637949"
 -   **Alguns provedores de dados não estão disponíveis em plataformas de 64 bits**. Em particular, o Provedor OLE DB do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet, que é necessário para conectar as fontes de dados do Excel ou do Access, não está disponível em versões de 64 bits.  
   
 ## <a name="troubleshoot-errors-without-a-description"></a>Solucionar problemas de erros sem uma descrição  
- Se você encontrar um erro do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que não seja acompanhado de uma descrição, localize a descrição no [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md) e procure o erro pelo número. No momento, a lista não inclui informações para solução de problemas.  
+ Se você encontrar um erro do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que não seja acompanhado de uma descrição, localize a descrição no [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md). No momento, a lista não inclui informações para solução de problemas.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Depurar o fluxo de dados](../../integration-services/troubleshooting/debugging-data-flow.md)  
-  
-## <a name="related-content"></a>Conteúdo relacionado  
- Entrada de blog, [Adicionando o nome da coluna de erro a uma saída de erro](https://go.microsoft.com/fwlink/?LinkId=261546)em dougbert.com.  
+ [Depurar o fluxo de dados](../../integration-services/troubleshooting/debugging-data-flow.md)

@@ -21,17 +21,17 @@ ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 381eb06e646f98b3ec092cbaa4b6431677be559c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ea01281d77206ceccfe8598efc31d073ceea9391
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67906878"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448266"
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna dados de caractere convertidos de dados numéricos.  
+  Retorna dados de caractere convertidos de dados numéricos. Os dados de caractere são justificados à direita, com comprimento e precisão decimal especificados. 
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  **varchar**  
   
 ## <a name="remarks"></a>Comentários  
- Se for fornecidos, os valores para os parâmetros *length* e *decimal* para STR devem ser positivos. O número é arredondado para um número inteiro por padrão ou se o parâmetro decimal for 0. O comprimento especificado deve ser maior ou igual à parte do número antes do ponto decimal mais o sinal do número (se houver). Uma *float_expression* breve é justificada à direita no comprimento especificado e uma *float_expression* longa é truncada para o número especificado de casas decimais. Por exemplo, STR(12 **,** 10) gera 12 como resultado. É justificado à direita no conjunto de resultados. Entretanto, STR (1223 **,** 2) trunca o conjunto de resultados com **. As funções de cadeia de caracteres podem ser aninhadas.  
+ Se for fornecidos, os valores para os parâmetros *length* e *decimal* para STR devem ser positivos. O número é arredondado para um número inteiro por padrão ou se o parâmetro decimal for 0. O comprimento especificado deve ser maior ou igual à parte do número antes do ponto decimal mais o sinal do número (se houver). Uma *float_expression* breve é justificada à direita no comprimento especificado e uma *float_expression* longa é truncada para o número especificado de casas decimais. Por exemplo, STR(12, 10) gera 12 como resultado. É justificado à direita no conjunto de resultados. Entretanto, STR (1223, 2) trunca o conjunto de resultados com \*\*. As funções de cadeia de caracteres podem ser aninhadas.  
   
 > [!NOTE]  
 >  Para converter para dados Unicode, use STR dentro de uma função de conversão CONVERT ou [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md).  

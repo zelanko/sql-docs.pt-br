@@ -1,5 +1,6 @@
 ---
 title: 'Acessar dados externos: SQL Server – PolyBase'
+description: Saiba como usar o PolyBase em uma instância do SQL Server para consultar dados externos em outra instância do SQL Server. Criar tabelas externas para fazer referência a dados externos.
 ms.date: 12/13/2019
 ms.custom: seo-lt-2019
 ms.prod: sql
@@ -9,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: fa0a133e7a2c966798c168a74841350702b54295
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 17fd981feb92e75bb875a2b40bfd8fe5831f02c8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75252323"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215798"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurar o PolyBase para acessar dados externos no SQL Server
 
@@ -22,7 +23,7 @@ ms.locfileid: "75252323"
 
 Este artigo explica como usar o PolyBase em uma instância do SQL Server para consultar dados externos em outra instância do SQL Server.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Se você ainda não instalou o PolyBase, veja [Instalação do PolyBase](polybase-installation.md). O artigo sobre a instalação explica os pré-requisitos. Uma vez instalado, certifique-se também de [habilitar o PolyBase](polybase-installation.md#enable).
 

@@ -1,5 +1,6 @@
 ---
 title: Imprimir relatórios | Microsoft Docs
+description: Você pode ver e imprimir um relatório do portal da Web ou de um aplicativo que usa para exibi-lo. O computador cliente executa o processamento da impressão sob demanda.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4dd9fc438ba1ec30a85119ceef6d5e1503a5ea1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f81be70bf4de9d9f15a3c35d3a3dc4b5c81f2609
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082487"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290888"
 ---
 # <a name="print-reports---reporting-services-ssrs"></a>Imprimir relatórios – SSRS (Reporting Services)
   Após salvar um relatório em um servidor de relatório, será possível exibir e imprimir o relatório do portal da Web ou qualquer aplicativo que você usa para exibir um relatório exportado. Antes de salvar um relatório, você pode imprimi-lo quando o visualiza.  

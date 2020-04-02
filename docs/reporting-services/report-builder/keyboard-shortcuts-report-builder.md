@@ -1,5 +1,6 @@
 ---
 title: Atalhos de teclado (Construtor de Relatórios) | Microsoft Docs
+description: Quando cria e edita relatórios paginados do Reporting Services no Construtor de Relatórios, você tem acesso a todas as teclas de atalho para navegação no ambiente do Windows.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 624f48c3c3a118aecd20a389973cb7f79a6f448d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67037865"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342763"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Atalhos de teclado (Construtor de Relatórios)
   Quando você cria e edita relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no Construtor de Relatórios, tem acesso a todas as teclas de atalho para navegação fornecidas pelo ambiente do Windows. Você pode selecionar de vários esquemas de mapeamento de teclado padrão.  
@@ -30,7 +31,7 @@ ms.locfileid: "67037865"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>Atalhos de teclado no Construtor de Relatórios  
   
-|DESCRIÇÃO|Combinação de teclas|  
+|Descrição|Combinação de teclas|  
 |-----------------|---------------------|  
 |Abre o menu Construtor de Relatórios.|ALT + F|  
 |Criar um relatório.|Ctrl+N|  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 811438987106a5eb73a914e5d7bbceb139cd5c37
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: bb7a6689d2cf6638f2d4e2de078e4e4412225595
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75558623"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487604"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Início Rápido: instalar o SQL Server e criar um banco de dados no SUSE Linux Enterprise Server
 
@@ -31,14 +31,14 @@ Neste início rápido, você instalará o SQL Server 2017 ou o SQL Server 2019 n
 Neste início rápido, você instalará o SQL Server 2019 no SLES (SUSE Linux Enterprise Server) v12. Em seguida, você se conecta ao **sqlcmd** parar criar seu primeiro banco de dados e executar consultas.
 
 > [!IMPORTANT]
-> O SQL Server 2019 tem suporte no SUSE Enterprise Linux Server v12 SP2, SP3 ou SP4.
+> O SQL Server 2019 tem suporte no SUSE Enterprise Linux Server v12 SP2, SP3, SP4 ou SP5.
 
 ::: moniker-end
 
 > [!TIP]
 > Este tutorial requer a entrada do usuário e uma conexão com a Internet. Se estiver interessado nos procedimentos de instalação [autônoma](sql-server-linux-setup.md#unattended) ou [offline](sql-server-linux-setup.md#offline), confira [Diretrizes de instalação para o SQL Server em Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -50,7 +50,7 @@ Neste início rápido, você instalará o SQL Server 2019 no SLES (SUSE Linux En
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-É necessário ter um computador SLES v12 SP2. SP3 ou SP4 com **pelo menos 2 GB** de memória. O sistema de arquivos deve ser **XFS** ou **EXT4**. Não há suporte para outros sistemas de arquivos, como **BTRFS**.
+É necessário ter um computador SLES v12 SP2, SP3, SP4 ou SP5 com **pelo menos 2 GB** de memória. O sistema de arquivos deve ser **XFS** ou **EXT4**. Não há suporte para outros sistemas de arquivos, como **BTRFS**.
 
 ::: moniker-end
 
@@ -66,7 +66,7 @@ Para obter outros requisitos do sistema, confira [Requisitos do sistema do SQL S
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>Instalar o SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>Instalar o SQL Server
 
 Para configurar SQL Server no SLES, execute os seguintes comandos em um terminal para instalar o pacote **mssql-server**:
 
@@ -125,7 +125,7 @@ Neste momento, o SQL Server está em execução no seu computador SLES e está p
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>Instalar o SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>Instalar o SQL Server
 
 Para configurar SQL Server no SLES, execute os seguintes comandos em um terminal para instalar o pacote **mssql-server**:
 
@@ -173,7 +173,7 @@ Neste momento, o SQL Server 2019 está em execução no seu computador SLES e es
 ::: moniker-end
 
 
-## <a id="tools"></a>Instalar as ferramentas de linha de comando do SQL Server
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>Instalar as ferramentas de linha de comando do SQL Server
 
 Para criar um banco de dados, é necessário conectar-se a uma ferramenta que pode executar instruções Transact-SQL no SQL Server. As seguintes etapas instalam as ferramentas de linha de comando do SQL Server: [sqlcmd](../tools/sqlcmd-utility.md) e [bcp](../tools/bcp-utility.md).
 

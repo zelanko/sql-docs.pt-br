@@ -1,5 +1,6 @@
 ---
 title: Visualizando relatórios no Construtor de Relatórios | Microsoft Docs
+description: Durante a criação de um relatório paginado do Reporting Services, você pode visualizar o relatório para verificar se ele mostra o que você deseja.
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36c1c3172e4d37963340fdbebce85eff9b5086b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c5af8a22b4cba1fd7d2ad43629b379e351b207b3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580721"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342758"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Visualizando relatórios no Construtor de Relatórios
   Durante a criação de um relatório paginado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , é útil visualizar o relatório frequentemente para verificar se o relatório exibe o que você deseja. Para visualizar o relatório, clique em **Executar**. O relatório é renderizado no modo de visualização.  

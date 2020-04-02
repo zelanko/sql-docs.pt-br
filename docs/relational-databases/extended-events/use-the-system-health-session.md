@@ -1,5 +1,6 @@
 ---
 title: Usar a sessão de system_health
+description: A sessão de Eventos Estendidos system_health está incluída no SQL Server. Esta sessão coleta dados do sistema para solucionar problemas de desempenho para o Mecanismo de Banco de Dados.
 ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab31461888588ee54f1715f5e98ddb0f3b9aa23b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ffa5587415d9f4bc689a37a5ba49be87eaf14716
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75246137"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487584"
 ---
 # <a name="use-the-system_health-session"></a>Usar a sessão de system_health
 

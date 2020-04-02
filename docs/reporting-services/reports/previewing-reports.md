@@ -1,5 +1,6 @@
 ---
 title: Visualizar relatórios
+description: Saiba como visualizar relatórios no SQL Server Reporting Services antes de publicar em um ambiente de produção.
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.technology: reports
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 82559832d11d9461665e89963026a267d9f0554c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fe2d8ff228978270867780e14053c950690f1f22
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68267495"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510127"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Visualizar relatórios no SSRS (SQL Server Reporting Services)
 

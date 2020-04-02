@@ -1,5 +1,6 @@
 ---
 title: Formatar um relatório móvel do Reporting Services para telefone ou tablet | Microsoft Docs
+description: Depois de criar um relatório móvel do Reporting Services no Publicador de Relatórios Móveis do SQL Server, você pode estabelecer uma versão para telefone e tablet dele.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f8632816-068f-4a87-b15a-779387f3d3a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59de5d316bcef9fb2842d26ef2e7a1154270f5cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 40333dd0fc5dd53c03c412aa3fb5f19b4e92dabe
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63129671"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448462"
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>Formatar um relatório móvel do Reporting Services para telefone ou tablet
 Agora que você já [criou seu relatório móvel do Reporting Services](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) no [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)], você pode formatar uma versão dele para telefone e tablet.  

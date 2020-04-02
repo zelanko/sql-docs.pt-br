@@ -1,5 +1,6 @@
 ---
 title: Como exportar para um arquivo PDF (Construtor de Relatórios) | Microsoft Docs
+description: No Construtor de Relatórios, a extensão de renderização de PDF renderiza relatórios paginados em arquivos que podem ser abertos no Adobe Acrobat e em outros visualizadores de PDF de terceiros.
 ms.date: 10/21/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 134cf6f645a3e120b1949e8a2dcc175748e1a042
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e9c00901c1a409ec2a8a52476b201f2bf7992017
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078271"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342850"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportando para um arquivo PDF (Construtor de Relatórios e SSRS)
   A extensão de renderização PDF renderiza relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para os arquivos que podem ser abertos no Adobe Acrobat e em outros visualizadores em PDF de terceiros que dão suporte ao PDF 1.3. Embora o PDF 1.3 seja compatível com o Adobe Acrobat 4.0 e versões posteriores, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte ao Adobe Acrobat 11.0 ou posterior. A extensão de renderização não requer que o software Adobe renderize o relatório. Porém, os visualizadores de PDF, como o Adobe Acrobat, são necessários para exibir ou imprimir um relatório em formato PDF.  
@@ -25,7 +26,7 @@ ms.locfileid: "77078271"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> Inserção de fonte  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a> Inserção de fonte  
  Quando possível, a extensão de renderização de PDF insere o subconjunto de cada fonte necessária para exibir o relatório no arquivo PDF. As fontes usadas no relatório devem ser instaladas no servidor de relatório. Quando o servidor de relatórios gera um relatório no formato PDF, ele usa as informações armazenadas nas fontes referenciadas no relatório para criar mapeamentos de caracteres no arquivo PDF. Se a fonte usada não estiver instalada no servidor de relatório, o arquivo PDF resultante talvez não contenha os mapeamentos corretos, e não seja exibido corretamente no momento da visualização.  
   
  As fontes são inseridas no arquivo PDF quando as condições seguintes se aplicam:  
@@ -54,7 +55,7 @@ ms.locfileid: "77078271"
   
  As fontes incorporadas no arquivo PDF são incluídas na propriedade Fonts salva com o arquivo, como metadados.  
   
-##  <a name="Metadata"></a> Metadados  
+##  <a name="metadata"></a><a name="Metadata"></a> Metadados  
  Além do layout do relatório, a extensão de renderização do PDF grava os seguintes metadados no Dicionário de Informações do Documento PDF.  
   
 |Propriedade do PDF|Criado em|  
@@ -67,7 +68,7 @@ ms.locfileid: "77078271"
 |**CreationDate**|Tempo de execução do relatório no formato PDF **datetime** .|  
   
   
-##  <a name="Interactivity"></a> Interatividade  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interatividade  
  Alguns elementos interativos têm suporte em PDF. A seguir, uma descrição dos comportamentos específicos.  
   
 ### <a name="show-and-hide"></a>Mostrar e Ocultar  
@@ -88,7 +89,7 @@ ms.locfileid: "77078271"
  Hiperlinks em relatórios são renderizados como links no arquivo em PDF. Quando você clica no Acrobat, ele abre o navegador de cliente padrão e navega até o URL do hiperlink.  
   
   
-##  <a name="Compression"></a> Compactação  
+##  <a name="compression"></a><a name="Compression"></a> Compactação  
  A compactação de imagens se baseia no tipo original do arquivo da imagem. A extensão de renderização do PDF compacta os arquivos em PDF por padrão.  
   
  Para preservar a compactação de imagens incluídas no arquivo em PDF, quando possível, as imagens JPEG são armazenadas como JPEG e todos os demais tipos de imagens são armazenados como BMP.  
@@ -97,7 +98,7 @@ ms.locfileid: "77078271"
 >  Os arquivos PDF não têm suporte para a incorporação de imagens PNG.  
   
   
-##  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Configurações de informações de dispositivo  
  Você pode alterar algumas configurações padrão desse renderizador alterando as configurações de informações de dispositivo. Para obter mais informações, consulte [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md).  
   
   

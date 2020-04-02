@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 50b9e158fe828271cc4e96c6175895cc858ac962
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8b4503c55545867639a3a437371d6265a85706af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75254326"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271472"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Criar consultas Criar Tabela (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,18 +73,18 @@ Para usar uma consulta Criar Tabela com êxito:
   
 5.  Se você quiser copiar as linhas em uma ordem específica, selecione a ordem de classificação. Para obter detalhes, consulte **Classificação e agrupamento de resultados de consultas**.  
   
-6.  Especifique as linhas a serem copiadas inserindo critérios de pesquisa. Para obter detalhes, confira [Especificar critérios de pesquisa(../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
+6.  Especifique as linhas a serem copiadas inserindo critérios de pesquisa. Para obter detalhes, confira [Especificar critérios de pesquisa](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
   
     Se você não especificar um critério de pesquisa, todas as linhas da tabela de origem serão copiadas na tabela de destino.  
   
     > [!NOTE]  
     > Quando você insere uma coluna para ser pesquisada no painel Critérios, o Designer de Consulta e Exibição também a adiciona à lista de colunas a serem copiadas. Se você quiser utilizar uma coluna para fazer uma pesquisa, mas não quiser copiá-la, desmarque a caixa de seleção próxima ao nome da coluna no retângulo que representa a tabela ou o objeto estruturado por tabela.  
   
-7.  Para copiar resumos informativos, especifique as opções Agrupar por. Para obter detalhes, confira [Resumir resultados da consulta (../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md).  
+7.  Para copiar resumos informativos, especifique as opções Agrupar por. Para obter detalhes, confira [Resumir resultados da consulta](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md).  
   
 Quando você executa a consulta Criar Tabela, nenhum resultado é relatado no painel de [Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Em vez disso, será exibida uma mensagem indicando o total de linhas copiadas.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Tópicos de instruções sobre como criar consultas e exibições (../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Tópicos de instruções de como criar consultas e exibições](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Tipos de consultas(../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

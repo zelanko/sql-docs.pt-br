@@ -1,5 +1,6 @@
 ---
 title: Definindo o namespace de item para o método GetProperties | Microsoft Docs
+Description: Saiba como recuperar propriedades com base no caminho ou na ID de um item usando o método GetProperties e o cabeçalho SOAP ItemNamespaceHeader.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d415d1f8b8dc25143fc704c19b3d1d0c755aa02
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bc0dee4442b18913521deb97c0c9655188f64631
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63026163"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216245"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>Definindo o namespace Item para o método GetProperties
   Você pode usar o cabeçalho SOAP <xref:ReportService2010.ItemNamespaceHeader> no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para recuperar propriedades de item baseadas em dois identificadores de item diferentes: o caminho completo do item ou a ID do item.  

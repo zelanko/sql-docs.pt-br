@@ -1,5 +1,6 @@
 ---
 title: Funcionalidade interativa – extensões de renderização de relatório diferentes | Microsoft Docs
+description: O Reporting Services permite interagir com um relatório paginado em runtime. Este artigo descreve como os recursos interativos funcionam em formatos específicos.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1038958e969a04531cf790a9254816b24d3b5646
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8df9a5b08f4aa8883bb9351fa59df147e80bac95
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580697"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342771"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Funcionalidade interativa – extensões de renderização de relatório diferentes
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece recursos para interagir com um relatório paginado no tempo de execução. Nem todos os formatos de renderização de relatório dão suporte a uma gama completa de recursos interativos. Use a tabela a seguir para entender como cada recurso interativo funciona em formatos específicos.  
@@ -60,7 +61,7 @@ ms.locfileid: "65580697"
   
 |Opção de exportação|Informações de suporte|  
 |-------------------|-------------------------|  
-|Visualização/Visualizador de Relatórios, HTML|Para relatórios tabulares, os usuários clicam nas setas de classificação na coluna para alterar o modo como os dados estão classificados.|  
+|Visualização/Visualizador de Relatórios, HTML|Para relatórios tabulares, os usuários clicam nas setas de classificação na coluna para alterar o modo como os dados são classificados.|  
 |PDF|Não disponível em PDF.|  
 |Excel|Não disponível em Excel.|  
 |Word|Não disponível em Word.|  

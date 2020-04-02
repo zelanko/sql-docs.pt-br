@@ -1,5 +1,6 @@
 ---
 title: Acessando a API SOAP | Microsoft Docs
+description: O serviço Web Servidor de Relatórios usa o SOAP sobre HTTP e age como uma interface de comunicações entre cliente e o servidor de relatório. Use o WSDL para chamar o serviço.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c78f160e51265e4ce87a191aa3076dc4464c31d2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 165302d4bb324dfb79f43e37b8a47e5e11973ce5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63026169"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509907"
 ---
 # <a name="accessing-the-soap-api"></a>Acessando a API SOAP
   O serviço Web Serviço de Relatório usa o SOAP sobre HTTP e age como uma interface de comunicações entre programas cliente e o servidor de relatório. O serviço Web oferece dois pontos de extremidade - um para a execução de relatórios e outro para o gerenciamento de relatórios - e consiste em métodos e em um conjunto de objetos de tipo complexo que podem ser usados para o acesso da funcionalidade completa do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para chamar o serviço, referencie a WSDL (Reporting Services Web Services Description Language).  

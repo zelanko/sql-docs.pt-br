@@ -1,5 +1,6 @@
 ---
 title: Como exportar para um arquivo de imagem (Construtor de Relatórios) | Microsoft Docs
+description: No Construtor de Relatórios, a extensão de renderização de Imagem renderiza um relatório paginado para um bitmap ou metarquivo. O padrão é um arquivo TIFF que pode ser exibido em várias páginas.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2393769b4d6ca1676833b4e208e7f09dfcd444df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d5a3bd0cd2dfdba8b34ff6dc97f56fb3eaf53306
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77081384"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342842"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>Exportando para um arquivo de imagem (Construtor de Relatórios e SSRS)
   A extensão de renderização da Imagem renderiza um relatório para um bitmap ou metarquivo. Por padrão, a extensão de renderização da Imagem produz um arquivo TIFF do relatório, que pode ser exibido em várias páginas. Quando o cliente receber a imagem, ela pode ser exibida em um visualizador de imagem e impressa. Este tópico fornece as informações específicas do processador de Imagem e descreve as exceções às regras de renderização.  
@@ -23,7 +24,7 @@ ms.locfileid: "77081384"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SupportedImageFormats"></a> Formatos de imagem com suporte  
+##  <a name="supported-image-formats"></a><a name="SupportedImageFormats"></a> Formatos de imagem com suporte  
  A tabela a seguir mostra a extensão de arquivo e MimeType para cada formato do processador de Imagem.  
   
 |**Tipo**|**Extensão**|**MIMEType**|  
@@ -37,11 +38,11 @@ ms.locfileid: "77081384"
 |EMFPlus|EMF|imagem/emf|  
   
   
-##  <a name="RenderingMultiplePages"></a> Renderizando várias páginas  
+##  <a name="rendering-multiple-pages"></a><a name="RenderingMultiplePages"></a> Renderizando várias páginas  
  TIFF é o único formato que dá suporte a documentos de várias páginas em um único arquivo. Os demais formatos, como JPG ou PNG, emitem uma página por vez e requerem uma chamada separada para a extensão de renderização de cada página.  
   
   
-##  <a name="Interactivity"></a> Interatividade  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interatividade  
  A interatividade não tem suporte em formatos de Imagem gerados por esse renderizador. Os elementos interativos a seguir não são renderizados:  
   
 -   Hiperlinks  
@@ -59,7 +60,7 @@ ms.locfileid: "77081384"
 -   Indicadores  
   
   
-##  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Configurações de informações de dispositivo  
  Você pode alterar algumas configurações padrão desse renderizador alterando as configurações de informações de dispositivo. Para obter mais informações, consulte [Image Device Information Settings](../../reporting-services/image-device-information-settings.md).  
   
   

@@ -1,5 +1,6 @@
 ---
 title: 'Acessar dados externos: Tipos genéricos ODBC – PolyBase'
+description: O PolyBase no SQL Server permite que você se conecte a fontes de dados compatíveis usando o conector ODBC. Instalar o driver ODBC e criar tabelas externas.
 ms.date: 02/19/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
@@ -9,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: ddee333a437ca7250252fb3938ee248bb28269f3
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.openlocfilehash: de3d0489acfca3363824b45ce87ba7ac4b63bf7a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507569"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215831"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurar o PolyBase para acessar dados externos no SQL Server
 
@@ -24,7 +25,7 @@ O PolyBase no SQL Server 2019 permite que você se conecte a fontes de dados com
 
 Este artigo fornece alguns exemplos usando um driver ODBC. Confira se há exemplos específicos com seu provedor ODBC. Veja a documentação do driver ODBC da fonte de dados para determinar as opções de cadeia de conexão apropriadas. Os exemplos neste artigo podem não se aplicar a nenhum driver ODBC específico.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 >[!NOTE]
 >Este recurso requer o SQL Server no Windows.

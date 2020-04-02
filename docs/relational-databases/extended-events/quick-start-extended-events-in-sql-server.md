@@ -1,5 +1,6 @@
 ---
 title: 'Início Rápido: Eventos estendidos no SQL Server'
+description: Este guia de início rápido ajuda você a usar Eventos Estendidos, um sistema de monitoramento de desempenho leve, para coletar os dados para monitorar e solucionar problemas no SQL Server.
 ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e4512400d2f05500f2db9a98a72f57ac50bc3a7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f38c8c3097009a755355e5a7b50e55b55faba3cb
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242918"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487644"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Início Rápido: Eventos estendidos no SQL Server
 
@@ -555,7 +556,7 @@ As exibições do sistema para os eventos estendidos incluem:
 
 [!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
-## <a name="appendix1"></a> Apêndice: SELECTs para determinar o proprietário da permissão com antecedência
+## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a><a name="appendix1"></a> Apêndice: SELECTs para determinar o proprietário da permissão com antecedência
 
 As permissões mencionadas neste artigo são:
 

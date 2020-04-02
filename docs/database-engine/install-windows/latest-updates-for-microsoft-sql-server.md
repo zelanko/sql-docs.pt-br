@@ -12,18 +12,22 @@ author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 975ea7d96e50dbdb375580919a5cac5503e831c2
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 6d81ddb24d11e9357819b43338341b818fb35583
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79198267"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434093"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Atualizações mais recentes para o Microsoft SQL Server
 
 Encontre e gerencie atualizações em um único lugar para seus Produtos do SQL Server. Siga o [blog da versão do SQL Server](https://aka.ms/sqlreleases) para receber informações sobre atualizações e baixá-las.
 
-Esta página controla as atualizações mais recentes para todas as versões com suporte do SQL Server. Para saber mais sobre quais produtos têm suporte, confira a [Página de Ciclo de Vida do Produto da Microsoft](https://support.microsoft.com/lifecycle/).
+Esta página controla as atualizações mais recentes para todas as versões com suporte do SQL Server. 
+
+Para obter informações sobre atualizações anteriores, confira o [blog de builds do SQL Server](https://sqlserverbuilds.blogspot.com/). 
+
+Para saber mais sobre quais produtos têm suporte, confira a [Página de Ciclo de Vida do Produto da Microsoft](https://support.microsoft.com/lifecycle/). 
 
 ## <a name="latest-updates"></a>Atualizações mais recentes
 
@@ -66,3 +70,5 @@ Cada um dos links a seguir fornece informações para todos os produtos e tecnol
   - [SQL Server DevCenter](https://msdn.microsoft.com/sqlserver/default.aspx)
   - [SQL Server TechCenter](https://technet.microsoft.com/sqlserver/default.aspx)
   - [Centro de informações de produtos do SQL Server](https://www.microsoft.com/sqlserver/default.aspx)
+  - [Blog de builds SQL Server](https://sqlserverbuilds.blogspot.com/)
+  - [Blogs de versão do SQL Server](https://aka.ms/sqlreleases)

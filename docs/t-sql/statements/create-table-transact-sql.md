@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e90aea4fc05a01f67527e33cac4ba90913405c7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 5c95568167d1a783ed8d605bc64bc60a135046f0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287660"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380667"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -69,7 +69,7 @@ Cria uma nova tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
 ```
 -- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
@@ -956,7 +956,7 @@ Antes de criar uma tabela particionada usando CREATE TABLE, crie uma função de
 - As restrições FOREIGN KEY só podem fazer referência a tabelas que estão no mesmo banco de dados e no mesmo servidor. A integridade referencial em todos os bancos de dados deve ser implementada por gatilhos. Para mais informações, veja [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md).
 - As restrições FOREIGN KEY podem fazer referência a outra coluna da mesma tabela. Isso se chama autorreferência.
 - A cláusula REFERENCES de uma restrição FOREIGN KEY no nível de coluna pode listar apenas uma coluna de referência. Essa coluna deve ter o mesmo tipo de dados da coluna na qual a restrição foi definida.
-- O número de colunas de referência da cláusula REFERENCES de uma restrição FOREIGN KEY deve ser igual ao número de colunas da lista de colunas de restrição. O tipo de dados de cada coluna de referência também deve ser igual ao da coluna correspondente na lista de colunas.
+- O número de colunas de referência da cláusula REFERENCES de uma restrição FOREIGN KEY deve ser igual ao número de colunas da lista de colunas de restrição. O tipo de dados de cada coluna de referência também deve ser igual ao da coluna correspondente na lista de colunas. As colunas de referência devem ser especificadas na mesma ordem que foi usada ao especificar as colunas da chave primária ou restrição exclusiva na tabela referenciada.
 - CASCADE, SET NULL ou SET DEFAULT não poderão ser especificados se uma coluna do tipo **timestamp** integrar a chave estrangeira ou a chave referenciada.
 - CASCADE, SET NULL, SET DEFAULT e NO ACTION podem ser combinados nas tabelas que tenham relacionamentos referenciais entre si. Se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] encontrar NO ACTION, parará e reverterá as ações CASCATA, SET NULL e SET DEFAULT. Quando uma instrução DELETE provoca uma combinação de ações CASCADE, SET NULL, SET DEFAULT e NO ACTION, todas as ações CASCADE, SET NULL e SET DEFAULT são aplicadas antes que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifique se existe alguma NO ACTION.
 - O [!INCLUDE[ssDE](../../includes/ssde-md.md)] não tem um limite predefinido quanto ao número de restrições FOREIGN KEY que uma tabela pode conter para referenciar outras tabelas nem quanto ao número de restrições FOREIGN KEY que são propriedade de outras tabelas e fazem referência a uma tabela específica.

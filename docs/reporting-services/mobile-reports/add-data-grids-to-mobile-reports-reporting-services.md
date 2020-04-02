@@ -1,5 +1,6 @@
 ---
 title: Adicionar grades de dados a relatórios móveis | Reporting Services | Microsoft Docs
+description: Você pode apresentar dados em uma grade no Publicador de Relatórios Móveis do SQL Server. Escolha uma grade de dados simples, uma grade de dados do indicador ou uma grade de dados do gráfico.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2658eb0eec1bd99c4e4503e8d8ae8894638e8c23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 403e6b3873b93dace3f124eb5931143e8dd4b322
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63280455"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448314"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Adicionar grades de dados aos relatórios móveis | Reporting Services
 Às vezes, a melhor visualização são os próprios dados. Saiba mais sobre as três *grades de dados*, ou tabelas, para exibir dados em [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]:

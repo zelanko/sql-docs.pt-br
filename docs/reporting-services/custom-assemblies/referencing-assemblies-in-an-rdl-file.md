@@ -1,5 +1,6 @@
 ---
 title: Referenciando assemblies em um arquivo RDL | Microsoft Docs
+description: Saiba como referenciar assemblies em um arquivo RDL, especificamente nos elementos CodeModules e Classes.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 87285bffd5136c4ac2a66ae17755edcecd35f065
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d310ec6895f1e8d027378fca71df36331dfbf5a8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63193976"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217015"
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>Referenciando assemblies em um arquivo RDL
   Para dar suporte ao uso de assemblies de código personalizado em arquivos de definição de relatório, dois elementos da linguagem RDL foram incluídos na especificação de RDL: o elemento **CodeModules** e o elemento **Classes**.  

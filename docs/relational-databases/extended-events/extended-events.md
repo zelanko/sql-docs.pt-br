@@ -1,5 +1,6 @@
 ---
 title: Visão geral de XEvents – SQL Server
+description: A arquitetura de Eventos Estendidos do SQL Server permite que você colete os dados necessários para identificar e solucionar problemas de desempenho. Ela é configurável e escalonável.
 ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 34ebcae99f096d095839cb533fb6efe58b113050
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3dbd6e4beee31e90d0354345bb25e4f0c32fc969
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234597"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434043"
 ---
 # <a name="extended-events-overview"></a>Visão geral de eventos estendidos
 
@@ -29,7 +30,7 @@ ms.locfileid: "75234597"
 
 Você pode encontrar mais informações sobre Eventos Estendidos em [Início Rápido: eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Benefícios de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="benefits-of-ssnoversion-extended-events"></a>Benefícios de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
 Os Eventos Estendidos são um sistema de monitoramento de desempenho de peso leve que usa o mínimo possível de recursos de desempenho. Os Eventos Estendidos fornecem duas interfaces gráficas do usuário para criar, modificar, exibir e analisar os dados da sessão. Essas interfaces são nomeadas:
 

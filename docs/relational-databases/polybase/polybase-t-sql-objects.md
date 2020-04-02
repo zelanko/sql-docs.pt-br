@@ -1,5 +1,6 @@
 ---
 title: Referência do Transact-SQL do PolyBase | Microsoft Docs
+description: Para usar o PolyBase, crie tabelas externas para seus dados externos no Hadoop, no Armazenamento de Blobs do Azure, no Azure Data Lake Storage, no SQL Server, no Oracle, no Teradata e no MongoDB.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -12,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: e1e07db85220c9312ab71bb5fb020b9a9d611a5f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7773d7a294e24e4aa191e6422e72097f2dc28743
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71710522"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215776"
 ---
 # <a name="polybase-transact-sql-reference"></a>Referência do Transact-SQL do PolyBase
 
@@ -38,7 +39,7 @@ Para usar o PolyBase, você precisa criar tabelas externas para fazer referênci
 >[!NOTE]
 >Para usar o PolyBase, você deve permissões no nível de sysadmin ou SERVER CONTROL no banco de dados.
 
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 
 Configurar o PolyBase. Veja [Configuração do PolyBase](../../relational-databases/polybase/polybase-configuration.md).  
   

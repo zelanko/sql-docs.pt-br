@@ -10,12 +10,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 996d0f90a76760c4c02a7a3d2bbf08f8c7ba6981
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c3de07aaa65e2dac2859aaf5c0be3e63e0f22dcf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258790"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434123"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Fazer upgrade para outra edição do SQL Server (Instalação)
 
@@ -29,9 +29,9 @@ A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá 
 - [Requisitos de Hardware e Software para a Instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
-> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância de cluster de failover:** a execução do upgrade da edição em um de nós da instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é suficiente. Esse nó pode ser ativo ou passivo e o mecanismo não coloca os recursos offline durante o upgrade da edição. Após a atualização da edição, será necessário reiniciar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou executar o failover em um nó diferente.  
+> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância de cluster de failover:** executar a atualização da edição em um de nós da instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é suficiente. Esse nó pode ser ativo ou passivo e o mecanismo não coloca os recursos offline durante o upgrade da edição. Após a atualização da edição, será necessário reiniciar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou executar o failover em um nó diferente.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 Para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura no compartilhamento remoto.  
   
 > [!IMPORTANT]  
@@ -39,7 +39,7 @@ Para instalações locais, você deve executar a Instalação como um administra
   
 ## <a name="procedure"></a>Procedimento  
   
-### <a name="to-upgrade-to-a-different-edition-of-includessnoversionincludesssnoversion-mdmd"></a>Para atualizar para outra edição do [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
+### <a name="to-upgrade-to-a-different-edition-of-ssnoversion"></a>Para atualizar para outra edição do [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Na pasta raiz, clique duas vezes em setup.exe ou inicie a Central de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em Ferramentas de Configuração. Para instalar a partir de um compartilhamento de rede, localize a pasta raiz no compartilhamento e clique duas vezes em Setup.exe.  
   
@@ -78,7 +78,15 @@ Para instalações locais, você deve executar a Instalação como um administra
 -   Os tamanhos e o modo de recuperação para os bancos de dados de sistemas model e tempdb permanecem inalterados após a atualização. Reconfigure essas configurações, conforme necessário. Para obter mais informações, consulte [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
 -   Os bancos de dados modelo permanecem no computador após a atualização.  
-  
+
+> [!NOTE]  
+> Se o procedimento falhar na regra Engine_SqlEngineHealthCheck, você poderá usar a opção de instalação de linha de comando para ignorar essa regra específica e permitir que o processo de atualização seja concluído com êxito. Para ignorar a verificação desta regra, abra um prompt de comando e altere para o caminho que contém a Configuração do SQL Server (Setup.exe). Em seguida, digite o seguinte comando: 
+
+```console
+setup.exe /q /ACTION=editionupgrade /InstanceName=MSSQLSERVER /PID=<appropriatePid> /SkipRules=Engine_SqlEngineHealthCheck
+```
+
+
 ## <a name="see-also"></a>Consulte Também  
  [Fazer upgrade do SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Compatibilidade com versões anteriores_excluída](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  

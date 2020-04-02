@@ -1,5 +1,6 @@
 ---
 title: Adicionar medidores a relatórios móveis | Reporting Services | Microsoft Docs
+description: Você pode adicionar medidores a um relatório móvel do Reporting Services. Os medidores exibem um valor em um conjunto de dados em si só ou em comparação a uma meta.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 456c50650afc01fc18465b0d96f3cfeb715ddecb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63280560"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448285"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Adicionar medidores a relatórios móveis | Reporting Services
 Medidores são os visuais mais básicos e amplamente usados em relatórios móveis. Eles exibem um único valor em um conjunto de dados – apenas o valor ou o valor comparado a uma meta.
@@ -42,7 +43,7 @@ Você pode filtrar os valores de medidor conectando-os a navegadores no relatór
 
 4. [opcional] Para alterar a agregação, selecione **Opções** e selecione uma agregação diferente.
    
-   >**Observação**: quando alterar a agregação para o valor principal, você provavelmente também precisará alterar a agregação para o valor de comparação, embora em alguns casos você possa querer combinar os métodos de agregação.  
+   >**Observação**: quando alterar a agregação para o valor principal, provavelmente você também precisará alterar a agregação para o valor de comparação, embora em alguns casos você possa querer combinar os métodos de agregação.  
 
 ## <a name="filter-a-gauge"></a>Filtrar um medidor
   

@@ -1,5 +1,6 @@
 ---
 title: Abrir um relatório móvel com parâmetros de cadeia de consulta específicos | Microsoft Docs
+description: Para um relatório móvel do Reporting Services com parâmetros e uma fonte de dados, você pode usar parâmetros de consulta na URL do relatório para abri-lo com valores especificados.
 ms.date: 10/25/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7204574d10b674c7cea4e08fb570c3550fe33e03
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f953a8ee9371f3e8919d53f017f27a7e863a52ca
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62499970"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448398"
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>Abrir um relatório móvel com parâmetros de cadeia de consulta específicos | Reporting Services
 Se você tiver um relatório móvel [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] com parâmetros e uma fonte de dados [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)], poderá incluir parâmetros de cadeia de consulta na URL do relatório para que abra automaticamente com os valores especificados. 
@@ -27,7 +28,7 @@ Se você tiver um relatório móvel [!INCLUDE[ssRSnoversion_md](../../includes/s
     
 2.  A sintaxe da URL depende de sua fonte de dados. 
 
-     **Para uma fonte de dados do SQL Server Analysis Services**: compile uma URL com um parâmetro de cadeia de caracteres de consulta neste formato:
+     **Para uma fonte de dados do SQL Server Analysis Services**: Crie uma URL com um parâmetro de cadeia de consulta neste formato:
 
     `https://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.<field-name>=<parameter-value>`
 

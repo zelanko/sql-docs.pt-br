@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 6b00c445f75c4cdc36e34d471b01d4fa56f81f9e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90c7c7863228ce210e56e76ab3e12c77e7ccc902
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/30/2020
-ms.locfileid: "70963559"
+ms.locfileid: "80408011"
 ---
 Cada grupo de disponibilidade tem apenas uma réplica primária. A réplica primária permite leituras e gravações. Para alterar qual réplica é a primária, faça failover. Em um grupo de disponibilidade para alta disponibilidade, o gerenciador de cluster automatiza o processo de failover. Em um grupo de disponibilidade com o tipo de cluster NONE, o processo de failover é manual. 
 
@@ -76,19 +76,26 @@ Para fazer failover manualmente sem perda de dados:
    ```
 
    Essa configuração garante que todas as transações ativas são confirmadas na réplica primária e em, pelo menos, uma réplica secundária síncrona. 
-
-4. Rebaixe a réplica primária para uma réplica secundária. Depois que a réplica primária for rebaixada, ela será somente leitura. Para atualizar a função para `SECONDARY`, execute o comando a seguir na instância do SQL Server que hospeda a réplica primária:
-
+   >[!NOTE]
+   >Essa configuração não é específica do failover e deve ser definida com base nos requisitos do ambiente.
+   
+4. Coloque a réplica primária offline em preparação para as alterações de função.
    ```SQL
-   ALTER AVAILABILITY GROUP [ag1] 
-        SET (ROLE = SECONDARY); 
+   ALTER AVAILABILITY GROUP [ag1] OFFLINE
    ```
 
 5. Promova a réplica secundária de destino para a primária. 
 
    ```SQL
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
-   ```  
+   ``` 
+
+6. Atualize a função da antiga primária para `SECONDARY`, execute o seguinte comando na instância do SQL Server que hospeda a réplica primária:
+
+   ```SQL
+   ALTER AVAILABILITY GROUP [ag1] 
+        SET (ROLE = SECONDARY); 
+   ```
 
    > [!NOTE] 
    > Para excluir um grupo de disponibilidade, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql). Para um grupo de disponibilidade criado com o tipo de cluster NONE ou EXTERNAL, execute o comando em todas as réplicas que fazem parte do grupo de disponibilidade.

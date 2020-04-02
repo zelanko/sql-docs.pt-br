@@ -1,5 +1,6 @@
 ---
 title: Exportar relatórios (Construtor de Relatórios) | Microsoft Docs
+description: Você pode exportar um relatório do Reporting Services para outro formato de arquivo, como PowerPoint ou PDF, usando o Construtor de Relatórios, o Designer de Relatórios ou o servidor de relatório.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-builder
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a213d0decf0b2765dca07faec69135ddd3e44d99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a97450563aa62e7b8179b7c5a0d2bead5f156f1b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078493"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342922"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Exportar relatórios (Construtor de Relatórios e SSRS)
 
@@ -37,7 +38,7 @@ ms.locfileid: "77078493"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-## <a name="bkmk_export_from_rb"></a> Para exportar um relatório do Construtor de Relatórios
+## <a name="to-export-a-report-from-report-builder"></a><a name="bkmk_export_from_rb"></a> Para exportar um relatório do Construtor de Relatórios
 
 1.  Execute ou visualize o relatório.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "77078493"
   
      A caixa **Salvar Como** é aberta. Por padrão, o nome do arquivo é o mesmo do relatório que você exportou. Opcionalmente, você pode alterar o nome do arquivo.  
   
-##  <a name="bkmk_export_from_rm"></a> Para exportar um relatório do portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+##  <a name="to-export-a-report-from-the-ssrsnoversion-web-portal"></a><a name="bkmk_export_from_rm"></a> Para exportar um relatório do portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 1.  Na [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] página inicial **do portal da Web do** , navegue até o relatório que deseja exportar.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "77078493"
   
      Usando o aplicativo associado ao formato escolhido, o relatório é exibido ou salvo. Se você clicar em **Salvar**, você será solicitado a indicar um local no qual seja possível salvar o relatório.  
   
-##  <a name="bkmk_export_from_sharepoint"></a> Para exportar o relatório de uma biblioteca do SharePoint  
+##  <a name="to-export-a-report-from-a-sharepoint-library"></a><a name="bkmk_export_from_sharepoint"></a> Para exportar o relatório de uma biblioteca do SharePoint  
   
 1.  Visualize o relatório.  
   
@@ -91,7 +92,7 @@ ms.locfileid: "77078493"
   
      **Observação** Se o programa não puder abrir o relatório no formato escolhido porque você não tem um programa associado a esse tipo de arquivo, você será solicitado a salvar o relatório exportado ou a localizar um programa online para abri-lo.  
   
-##  <a name="RendererTypes"></a> Tipos de extensão de renderização  
+##  <a name="rendering-extension-types"></a><a name="RendererTypes"></a> Tipos de extensão de renderização  
  Há três tipos de extensões de renderização do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
 -   **Extensões dos processadores de dados** As extensões de renderização de dados eliminam todas as informações de formatação e layout do relatório e exibem apenas os dados. O arquivo resultante pode ser usado para importar os dados brutos do relatório em outro tipo de arquivo, como o Excel, outro banco de dados, uma mensagem de dados XML, ou um aplicativo personalizado. Processadores de dados não oferecem suporte a quebras de páginas.  
@@ -106,8 +107,8 @@ ms.locfileid: "77078493"
   
      Há suporte para as seguintes extensões de renderização de quebra de página não flexível: TIFF e PDF.  
   
-##  <a name="ExportFormats"></a> Formatos para os quais você pode exportar enquanto exibe relatórios  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece extensões de renderização que renderizam relatórios em formatos diferentes. Você deve otimizar o design de relatório para seu formato de arquivo escolhido.  A tabela a seguir lista os formatos para osquais você pode exportar da interface do usuário.  Há formatos adicionais que podem ser usados com assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou caso você esteja exportando do acesso à URL.  Consulte a seção [Outros modos de exportar relatórios](#OtherWaysExportingReports)neste tópico.  
+##  <a name="formats-you-can-export-while-viewing-reports"></a><a name="ExportFormats"></a> Formatos para os quais você pode exportar enquanto exibe relatórios  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece extensões de renderização que renderizam relatórios em formatos diferentes. Você deve otimizar o design de relatório para seu formato de arquivo escolhido.  A tabela a seguir lista os formatos que você pode exportar da interface do usuário.  Há formatos adicionais que podem ser usados com assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou caso você esteja exportando do acesso à URL.  Consulte a seção [Outros modos de exportar relatórios](#OtherWaysExportingReports)neste tópico.  
   
 |Formatar|Tipos de extensão de renderização|Descrição|  
 |------------|------------------------------|-----------------|  
@@ -121,12 +122,12 @@ ms.locfileid: "77078493"
 |WORDOPENXML|Quebra de página flexível|Exibido como "Word" no menu Exportar ao exibir relatórios. A extensão de renderização do Word renderiza um relatório como um documento do Word (.docx) que é compatível com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013.  Para obter mais informações, consulte [Exportando para o Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).|  
 |XML|Dados|A extensão XML de renderização retorna um relatório no formato XML. O esquema para o XML do relatório é específico para este relatório e contém somente dados. As informações de layout não são renderizadas e a paginação não é mantida pela extensão XML de renderização. O XML gerado por esta extensão pode ser importado para um banco de dados, usado como uma mensagem de dados XML ou enviado para um aplicativo personalizado.<br/><br/> Para obter mais informações, consulte [Exportando para XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  
   
-##  <a name="GeneratingDataFeedsFromReport"></a> Gerando feeds de dados a partir do relatório  
+##  <a name="generating-data-feeds-from-a-report"></a><a name="GeneratingDataFeedsFromReport"></a> Gerando feeds de dados a partir do relatório  
  Para gerar feeds de dados de um relatório, execute-o no portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e clique no ícone **Gerar Feed de Dados** na barra de ferramentas do portal da Web. Você deverá escolher se deseja salvar ou abrir o arquivo. Se você escolheu **Abrir**, o documento de serviço do Atom será aberto no aplicativo associado à extensão do arquivo .atomsvc. Se você escolheu **Salvar**, o documento será salvo como um arquivo .atomsvc. Por padrão, o nome do arquivo é o nome do relatório. Você pode alterar o nome para um que seja mais significativo.  
   
  Salve o documento de serviço do Atom em seu computador. Posteriormente, será possível carregá-lo em um servidor de relatório ou outro servidor para que ele seja disponibilizado ao uso de outras pessoas. Para obter mais informações, consulte [Gerando feeds de dados com base em relatórios](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) e [Gerar feeds de dados com base em um relatório](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
-##  <a name="Troubleshooting"></a> Solucionando problemas de relatórios exportados  
+##  <a name="troubleshooting-exported-reports"></a><a name="Troubleshooting"></a> Solucionando problemas de relatórios exportados  
  Às vezes, os relatórios parecem diferente ou não funcionam da maneira desejada depois que você os exporta para um formato diferente. Isso ocorre porque determinas regras e limitações podem se aplicar ao renderizador. É possível resolver muitas limitações, considerando-as durante a criação do relatório. Você talvez precise usar um layout um pouco diferente no relatório, alinhar cuidadosamente itens dentro do relatório, confinar rodapés do relatório a uma única linha de texto e assim por diante.  
   
  Se o seu relatório contiver texto Unicode com números arábicos ou contiver datas em árabe, as datas e os números não serão renderizados corretamente quando você exportar o relatório para qualquer um dos seguintes formatos ou imprimir o relatório.  
@@ -163,7 +164,7 @@ ms.locfileid: "77078493"
   
  Além disso, é possível usar RenderFormat interno global para aplicar condicionalmente layouts de relatório diferentes a renderizadores distintos. Para obter mais informações, consulte [Referências de globais internas e referências de usuários](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)
 
-##  <a name="OtherWaysExportingReports"></a> Outros modos de exportar relatórios  
+##  <a name="other-ways-of-exporting-reports"></a><a name="OtherWaysExportingReports"></a> Outros modos de exportar relatórios  
  A exportação de um relatório é uma tarefa sob demanda que você executa quando o relatório é aberto no portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou no Construtor de Relatórios. Se quiser automatizar uma operação de exportação (por exemplo, para exportar um relatório para uma pasta compartilhada como um tipo de arquivo específico em uma agenda recorrente), crie uma assinatura que entregue o relatório para uma pasta compartilhada. Para obter mais informações, consulte [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
   
  Os relatórios visualizados nas ferramentas para relatórios ou abertos em um aplicativo de navegação como o portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são sempre renderizados primeiro em HTML. Você não pode especificar uma extensão de renderização diferente como padrão para visualização. Todavia, você pode criar uma assinatura que produz um relatório no formato de renderização desejado para a entrega subsequente a uma caixa de entrada de email ou uma pasta compartilhada. Para obter mais informações, consulte [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) e [Criar, modificar e excluir assinaturas controladas por dados](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  

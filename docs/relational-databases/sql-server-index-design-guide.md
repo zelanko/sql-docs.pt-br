@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cf6e85cef8d95e2b1bb167d482f36ec540196f6
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 68b29bd0497598909914cb71f9f180ccf57191c0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287310"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486522"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guia de arquitetura e design de índices do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ Para obter informações sobre índices espaciais, consulte [Visão geral de ín
 
 Para obter informações sobre índices de texto completo, consulte [Popular índices de texto completo](../relational-databases/search/populate-full-text-indexes.md).
   
-##  <a name="Basics"></a> Noções básicas sobre criação de índice  
+##  <a name="index-design-basics"></a><a name="Basics"></a> Noções básicas sobre criação de índice  
  Pense em um livro normal: no final do livro, há um índice que ajuda a localizar rapidamente as informações dentro dele. O índice é uma lista classificada de palavras-chave e, ao lado de cada palavra-chave, está um conjunto de números de página que aponta para as páginas em que cada palavra-chave pode ser encontrada. Um índice do SQL Server não é diferente: é uma lista ordenada de valores e, para cada valor, há ponteiros para as [páginas](../relational-databases/pages-and-extents-architecture-guide.md) de dados em que esses valores estão localizados. O índice em si é armazenado em páginas, compondo as Páginas de Índice no SQL Server. Em um livro normal, se o índice abranger várias páginas e você precisar localizar ponteiros para todas as páginas que contêm a palavra "SQL", por exemplo, você precisará folhear até encontrar a página de índice que contém a palavra-chave "SQL". De lá, você seguirá os ponteiros para todas as páginas do livro.  Isso poderá ser otimizado ainda mais se, no início do índice, você criar uma única página contendo uma lista alfabética do local em que cada letra pode ser encontrada. Por exemplo:  "A a D – página 121", "E a G – página 122" e assim por diante. Essa página adicional eliminaria a etapa de folhear no índice para encontrar o local inicial. Essa página não existe em livros normais, mas existe em um índice do SQL Server. Essa página única é chamada de página raiz do índice. A página raiz é a página inicial da estrutura de árvore usada por um índice do SQL Server. Seguindo a analogia da árvore, as páginas finais que contêm ponteiros para os dados reais são chamadas de "páginas de folha" da árvore. 
 
  Um índice do SQL Server é uma estrutura em disco ou na memória associada a uma tabela ou exibição que acelera a recuperação de linhas de uma tabela ou exibição. Um índice contém chaves criadas de uma ou mais colunas da tabela ou exibição. Para índices em disco, essas chaves são armazenadas em uma estrutura de árvore (árvore B) que permite ao SQL Server localizar a linha ou as linhas associadas aos valores de chave de forma rápida e eficaz.  
@@ -83,7 +83,7 @@ Para obter informações sobre índices de texto completo, consulte [Popular ín
 5.  Determine o melhor local de armazenamento para o índice. Um índice não clusterizado pode ser armazenado no mesmo grupo de arquivos que a tabela subjacente ou em um grupo de arquivos diferente. O local de armazenamento de índices pode melhorar o desempenho de consulta aumentando desempenho de E/S do disco. Por exemplo, o armazenamento de um índice não clusterizado em um grupo de arquivos que está em um disco diferente do grupo de arquivos de tabela pode melhorar o desempenho porque vários discos podem ser lidos ao mesmo tempo.  
      Alternativamente, os índices clusterizados e não clusterizados podem usar um esquema de partição em vários grupos de arquivos. O particionamento facilita o gerenciamento de tabelas ou índices grandes permitindo o acesso ou o gerenciamento de subconjuntos de dados de forma rápida e eficaz, enquanto mantém a integridade geral da coleção. Para saber mais, confira [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md). Quando você pensar em particionamento, determine se o índice deve ser alinhado; isto é, particionado essencialmente da mesma maneira que a tabela ou particionado de forma independente.   
 
-##  <a name="General_Design"></a> Diretrizes para criação de índice geral  
+##  <a name="general-index-design-guidelines"></a><a name="General_Design"></a> Diretrizes para criação de índice geral  
  Administradores de banco de dados experientes podem projetar um bom conjunto de índices, mas essa tarefa é muito complexa, demorada e propensa a erros até mesmo para bancos de dados e cargas de trabalho moderadamente complexos. Compreender as características de seu banco de dados, consultas e colunas de dados pode lhe ajudar a projetar índices melhores.  
   
 ### <a name="database-considerations"></a>Considerações sobre banco de dados  
@@ -153,7 +153,7 @@ Para obter informações sobre índices de texto completo, consulte [Popular ín
   
 Você também pode personalizar as características de armazenamento inicial do índice para aperfeiçoar seu desempenho ou manutenção definindo uma opção como FILLFACTOR. Além disso, você pode determinar o local de armazenamento de índice usando grupos de arquivos ou esquemas de partição para aperfeiçoar o desempenho.  
   
-###  <a name="Index_placement"></a> Posição do índice em grupos de arquivos ou esquemas de partição  
+###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a> Posição do índice em grupos de arquivos ou esquemas de partição  
  À medida que desenvolve sua estratégia de design de índices, considere a colocação dos índices nos grupos de arquivos associados ao banco de dados. A seleção cuidadosa do grupo de arquivos ou esquema de partição pode melhorar o desempenho da consulta.  
   
  Por padrão, os índices são armazenados no mesmo grupo de arquivos que a tabela base na qual o índice é criado. Um índice cluster não particionado e a tabela base sempre residem no mesmo grupo de arquivos. No entanto, você pode fazer o seguinte:  
@@ -177,7 +177,7 @@ Como você não pode prever que tipo de acesso acontecerá e quando ocorrerá, p
   
 Para saber mais, confira [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
-###  <a name="Sort_Order"></a> Diretrizes de criação de ordem de classificação de índice  
+###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a> Diretrizes de criação de ordem de classificação de índice  
  Ao definir índices, confirme se os dados da coluna de chave de índice deverão ser armazenados em ordem crescente ou decrescente. Ordem crescente é o padrão e assegura a compatibilidade com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. A sintaxe das instruções CREATE INDEX, CREATE TABLE e ALTER TABLE dá suporte às palavras-chave ASC (crescente) e DESC (decrescente) em colunas individuais de índices e restrições.  
   
  A especificação da ordem de armazenamento dos valores de chave em um índice é útil quando as consultas que fazem referência à tabela contêm cláusulas ORDER BY que especificam direcionamentos diferentes para a coluna de chave ou as colunas daquele índice. Nesses casos, o índice pode eliminar a necessidade de um operador SORT no plano de consulta, o que torna a consulta mais eficaz. Por exemplo, os compradores do departamento de compras da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] devem avaliar a qualidade dos produtos que adquirem de fornecedores. Os compradores estão mais interessados em localizar os produtos enviados por esses fornecedores, e que têm alta taxa de rejeição. Como demonstrado pela consulta a seguir, recuperar os dados para atender esses critérios requer que a coluna `RejectedQty` da tabela `Purchasing.PurchaseOrderDetail` seja classificada em ordem decrescente (do maior para o menor) e que a coluna `ProductID` seja classificada em ordem crescente (do menor para o maior).  
@@ -207,7 +207,7 @@ ON Purchasing.PurchaseOrderDetail
   
  O [!INCLUDE[ssDE](../includes/ssde-md.md)] pode se mover para qualquer direção de forma igualmente eficaz. Um índice definido como `(RejectedQty DESC, ProductID ASC)` ainda pode ser usado em uma consulta na qual a direção de classificação das colunas da cláusula ORDER BY é invertida. Por exemplo, uma consulta com a cláusula ORDER BY `ORDER BY RejectedQty ASC, ProductID DESC` pode utilizar o índice.  
   
- A ordem de classificação só pode ser especificada para colunas de chave. A exibição de catálogo [sys.index_columns](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) e a função INDEXKEY_PROPERTY relatam se a coluna de índice está armazenada em ordem crescente ou decrescente.  
+ A ordem de classificação só pode ser especificada para colunas de chave no índice. A exibição de catálogo [sys.index_columns](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) e a função INDEXKEY_PROPERTY relatam se a coluna de índice está armazenada em ordem crescente ou decrescente.  
 
 ## <a name="metadata"></a>Metadados  
 Use essas exibições de metadados para ver os atributos de índices. Mais informações arquitetônicas são inseridas em algumas dessas exibições.
@@ -228,7 +228,7 @@ Use essas exibições de metadados para ver os atributos de índices. Mais infor
 |[sys.dm_db_xtp_nonclustered_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-nonclustered-index-stats-transact-sql.md)|[sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)|
 |[sys.hash_indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
 
-##  <a name="Clustered"></a> Diretrizes de design de índices clusterizados  
+##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a> Diretrizes de design de índices clusterizados  
  Os índices clusterizados classificam e armazenam as linhas de dados da tabela com base em seus valores de chave. Pode haver apenas um índice clusterizado por tabela, porque as próprias linhas de dados podem ser classificadas apenas em uma única ordem. Com poucas exceções, toda tabela deveria ter um índice clusterizado definido na coluna ou colunas, o qual proporciona o seguinte:  
   
 -   Pode ser usado para consultas frequentemente usadas.  
@@ -302,7 +302,7 @@ Se o índice clusterizado não for criado com a propriedade `UNIQUE`, o [!INCLUD
   
     Chaves largas são uma combinação de várias colunas ou de várias colunas de tamanho grande. Os valores de chave do índice clusterizado são usados por todos os índices não clusterizados como chaves de pesquisa. Qualquer índice não clusterizado definido na mesma tabela será significativamente maior porque as entradas de índice não clusterizado contêm a chave de cluster e também as colunas de chave definidas para aquele índice não clusterizado.  
   
-##  <a name="Nonclustered"></a> Diretrizes de criação de índice não clusterizado  
+##  <a name="nonclustered-index-design-guidelines"></a><a name="Nonclustered"></a> Diretrizes de criação de índice não clusterizado  
  Um índice não clusterizado contém os valores de chave do índice e os localizadores de linha que apontam para o local de armazenamento dos dados da tabela. Você pode criar vários índices não clusterizados em uma tabela ou exibição indexada. Em geral, os índices não clusterizados devem ser criados para aprimorar o desempenho de consultas utilizadas com frequência que não são cobertas pelo índice clusterizado.  
   
  Semelhante à maneira como o índice de um livro é usado, o otimizador de consulta procura um valor de dados pesquisando o índice não clusterizado para encontrar o local do valor de dados na tabela e, depois, recupera os dados diretamente daquele local. Isso faz com que os índices não clusterizados sejam a opção ideal para consultas de correspondência exata, uma vez que o índice contém entradas que descrevem o local preciso na tabela dos valores de dados pesquisados pelas consultas. Por exemplo, para consultar a tabela `HumanResources. Employee` de todos os funcionários que reportam para um determinado gerente, o otimizador de consulta pode usar o índice não clusterizado `IX_Employee_ManagerID`, que tem `ManagerID` como sua coluna de chave. O otimizador de consulta pode localizar rapidamente todas as entradas no índice que correspondem ao `ManagerID`especificado. Cada entrada do índice aponta para a página e a linha exatas na tabela ou índice clusterizado, em que os dados correspondentes podem ser localizados. Depois que o otimizador de consulta localizar todas as entradas no índice, poderá ir diretamente para a página e a linha exatas e recuperar os dados.  
@@ -371,7 +371,7 @@ A ilustração a seguir mostra a estrutura de um índice não clusterizado em um
   
      Se houver poucos valores distintos, como apenas 1 e 0, a maioria das consultas não usará o índice porque uma verificação de tabela é, em geral, mais eficaz. Para esse tipo de dados, considere a criação de um índice filtrado em um valor diferente que ocorra apenas em um número pequeno de linhas. Por exemplo, se a maioria dos valores for 0, o otimizador de consulta pode usar um índice filtrado para as linhas de dados que contêm 1.  
   
-####  <a name="Included_Columns"></a> Usar colunas incluídas para estender índices não clusterizados  
+####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a> Usar colunas incluídas para estender índices não clusterizados  
  Você pode estender a funcionalidade de índices não clusterizados acrescentando colunas de não chave ao nível folha do índice não cluster. Ao incluir colunas não chave, você pode criar você índices não clusterizados que abrangem mais consultas. Isto porque as colunas não chave têm os seguintes benefícios:  
   
 -   Elas podem ser tipos de dados não permitidos como colunas de chave de índice.  
@@ -471,7 +471,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Você terá que determinar se os ganhos no desempenho de consulta superam o efeito no desempenho durante a modificação de dados, e em requisitos adicionais de espaço em disco.  
   
-##  <a name="Unique"></a> Diretrizes de design de índice exclusivo  
+##  <a name="unique-index-design-guidelines"></a><a name="Unique"></a> Diretrizes de design de índice exclusivo  
  Um índice exclusivo garante que a chave de índice não contém nenhum valor duplicado e, portanto, cada linha na tabela é exclusiva de algum modo. Especificar um índice exclusivo só faz sentido quando a exclusividade for uma característica dos próprios dados. Por exemplo, se você quiser garantir que os valores na coluna `NationalIDNumber` na tabela `HumanResources.Employee` sejam exclusivos, quando a chave primária for `EmployeeID`, crie uma restrição UNIQUE na coluna `NationalIDNumber` . Se o usuário tentar digitar o mesmo valor naquela coluna para mais de um empregado, será exibida uma mensagem de erro e o valor duplicado não é inserido.  
   
  Com índices exclusivos de multicolunas, o índice garante que cada combinação de valores na chave de índice é exclusivo. Por exemplo, se um índice exclusivo for criado em uma combinação de colunas `LastName`, `FirstName`e `MiddleName` , duas linhas na tabela não poderão ter a mesma combinação de valores que essas colunas.  
@@ -495,7 +495,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 -   Um índice não clusterizado exclusivo pode conter colunas não chave incluídas. Para obter mais informações, consulte [Índice com colunas incluídas](#Included_Columns).  
   
   
-##  <a name="Filtered"></a> Diretrizes de criação de índice filtrado  
+##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> Diretrizes de criação de índice filtrado  
  Um índice filtrado é um índice não clusterizado otimizado, criado especialmente para consultas que fazem seleções a partir de um subconjunto bem-definido de dados. Ele usa um predicado de filtro para indexar uma parte das linhas da tabela. Um índice filtrado bem projetado pode melhorar o desempenho da consulta e reduzir os custos de manutenção e armazenamento do índice em comparação com os índices de tabela completa.  
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -635,7 +635,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  A movimentação da conversão de dados da esquerda para a direita de um operador de comparação pode alterar o significado da conversão. No exemplo anterior, quando o operador CONVERT foi adicionado à direita, a comparação mudou de uma comparação de número inteiro para uma comparação **varbinary** .  
   
-## <a name="columnstore_index"></a> Diretrizes de design de índice columnstore
+## <a name="columnstore-index-design-guidelines"></a><a name="columnstore_index"></a> Diretrizes de design de índice columnstore
 
 Um *columnstore index* é uma tecnologia para armazenamento, recuperação e gerenciamento de dados usando um formato de dados colunar, chamado columnstore. Para obter mais informações, consulte [Visão geral de índices columnstore](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
@@ -725,7 +725,7 @@ Para obter mais informações, consulte [Índices columnstore – desempenho de 
  
 Para obter mais informações, consulte [Índices columnstore – diretrizes de design](../relational-databases/indexes/columnstore-indexes-design-guidance.md).
 
-##  <a name="hash_index"></a> Diretrizes de design de índice de hash 
+##  <a name="hash-index-design-guidelines"></a><a name="hash_index"></a> Diretrizes de design de índice de hash 
 
 Todas as tabelas com otimização de memória devem ter, pelo menos, um índice, porque são os índices que conectam as linhas. Em uma tabela com otimização de memória, cada índice também tem otimização de memória. Índices de hash são um dos tipos de índice possíveis em uma tabela com otimização de memória. Para obter mais informações, consulte [Índices para tabelas com otimização de memória](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
@@ -759,7 +759,7 @@ A interação entre o índice de hash e os buckets é resumida na imagem a segui
   
 ![hekaton_tables_23d](../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Chaves de índice, inseridas na função de hash, a saída é o endereço de um bucket de hash, que aponta para o início da cadeia.")  
 
-### <a name="configuring_bucket_count"></a> Configurando o número de buckets do índice de hash
+### <a name="configuring-the-hash-index-bucket-count"></a><a name="configuring_bucket_count"></a> Configurando o número de buckets do índice de hash
 O número de buckets do índice de hash é especificado no momento da criação do índice e pode ser alterado com a sintaxe `ALTER TABLE...ALTER INDEX REBUILD`.  
   
 Na maioria dos casos, o ideal é que a contagem de buckets deve estar entre 1 e 2 vezes o número de valores distintos na chave de índice.   
@@ -794,7 +794,7 @@ O desempenho de um índice de hash é:
 
 Se um índice de hash for usado e o número de chaves de índice exclusivo for 100 vezes (ou mais) a contagem de linhas, considere a possibilidade de aumentar o número de buckets para evitar cadeias de linhas grandes ou use um [índice não clusterizado](#inmem_nonclustered_index).
 
-### <a name="h3-b2-declaration-limitations"></a> Considerações sobre declaração  
+### <a name="declaration-considerations"></a><a name="h3-b2-declaration-limitations"></a> Considerações sobre declaração  
 Um índice de hash apenas pode existir em uma tabela com otimização de memória. Ele não pode existir em uma tabela baseada em disco.  
   
 Um índice de hash pode ser declarado como:  
@@ -817,7 +817,7 @@ O índice de hash também pode ter versões diferentes de suas entradas para aco
   
 Posteriormente, quando as versões mais antigas não forem mais necessárias, um thread de GC (coleta de lixo) percorrerá os buckets e suas listas de links para limpar as entradas antigas. A execução do thread da GC é melhor se os tamanhos de cadeia de lista de link são curtos. Para obter mais informações, consulte [Coleta de lixo de OLTP in-memory](../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md). 
 
-##  <a name="inmem_nonclustered_index"></a> Diretrizes de design de índice não clusterizado com otimização de memória 
+##  <a name="memory-optimized-nonclustered-index-design-guidelines"></a><a name="inmem_nonclustered_index"></a> Diretrizes de design de índice não clusterizado com otimização de memória 
 
 Índices não clusterizados são um dos tipos de índice possíveis em uma tabela com otimização de memória. Para obter mais informações, consulte [Índices para tabelas com otimização de memória](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
@@ -886,7 +886,7 @@ O desempenho de um índice não clusterizado é melhor do que o de índices de h
 > [!TIP]
 > Quando uma coluna em colunas de chave de índice não clusterizado tem muitos valores duplicados, o desempenho pode ser prejudicado para atualizações, inserções e exclusões. Uma maneira de melhorar o desempenho nessa situação é adicionar outra coluna ao índice não clusterizado.
 
-##  <a name="Additional_Reading"></a> Leitura adicional  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Leitura adicional  
 [CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
 [ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
 [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  

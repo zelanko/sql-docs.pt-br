@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a3f978865d2fdd643650a7c7308adb65d2c79fa7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 83bb4fa7861feaccd2ff430ca10f80ef0bc5b10a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76916412"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80380797"
 ---
 # <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Início Rápido: Estruturas de dados, tipos de dados e objetos usando o R nos Serviços de Machine Learning do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ Os problemas comuns que se deve conhecer de antemão incluem:
 - Às vezes, operações de conversão são necessárias
 - R e SQL usam objetos de dados diferentes
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Este início rápido requer acesso a uma instância do SQL Server que tenha os [Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md) com a linguagem R instalada.
 
@@ -70,7 +70,7 @@ Por que os resultados são tão diferentes?
 
 A resposta geralmente pode ser encontrada usando o comando `str()` de R. Adicione a função `str(object_name)` em qualquer ponto do script R para fazer com que o esquema de dados do objeto R especificado seja retornado como uma mensagem informativa. Para exibir mensagens, consulte o painel **Mensagens** do código do Visual Studio ou a guia **Mensagens** no SSMS.
 
-Para descobrir por que os exemplos 1 e 2 demonstram resultados tão diferentes, insira a linha `str(OutputDataSet)` no final da definição de variável _@script_ em cada instrução, dessa forma:
+Para descobrir por que os exemplos 1 e 2 apresentam resultados tão diferentes, insira a linha `str(OutputDataSet)` no final da definição de variável `@script` em cada instrução, dessa forma:
 
 **Exemplo 1 com a função str adicionada**
 
