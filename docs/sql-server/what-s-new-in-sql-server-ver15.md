@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eb85d1867461ba25bb4fc572634fba443dd14282
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79218051"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665359"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -231,7 +231,7 @@ A maneira mais fácil de começar a trabalhar com o [!INCLUDE[ssNoVersion](../in
 
 |Novo recurso ou atualização | Detalhes |
 |:---|:---|
-|Modelagem baseada em partição | Processe scripts externos por partição de seus dados usando os novos parâmetros adicionados ao `sp_execute_external_script`. Essa funcionalidade dá suporte ao treinamento de muitos modelos pequenos (um modelo para cada partição de dados) em vez de um modelo grande. Confira [Criar modelos baseados em partição](../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).|
+|Modelagem baseada em partição | Processe scripts externos por partição de seus dados usando os novos parâmetros adicionados ao `sp_execute_external_script`. Essa funcionalidade dá suporte ao treinamento de muitos modelos pequenos (um modelo para cada partição de dados) em vez de um modelo grande. Confira [Criar modelos baseados em partição](../machine-learning/tutorials/r-tutorial-create-models-per-partition.md).|
 |Cluster de failover do Windows Server| Configure alta disponibilidade para Serviços de Machine Learning em um Cluster de failover do Windows Server.|
 | &nbsp; | &nbsp; |
 

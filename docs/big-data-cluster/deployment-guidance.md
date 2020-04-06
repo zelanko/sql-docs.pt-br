@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 828ad42bd6ecdc31d6e1c99a489fb4cbe8548d0e
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286060"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531084"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Como implantar o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Kubernetes
 
@@ -54,7 +54,7 @@ Você pode optar por implantar o Kubernetes de uma das três maneiras:
 | **Uma ou várias máquinas (`kubeadm`)** | Um cluster do Kubernetes implantado em máquinas virtuais ou físicas usando `kubeadm` | [Instruções](deploy-with-kubeadm.md) |
 
 > [!TIP]
-> Você também pode criar o script da implantação do AKS e de um cluster de Big Data em uma única etapa. Para obter mais informações, confira como fazer isso em um [script Python](quickstart-big-data-cluster-deploy.md) ou em um [notebook](deploy-notebooks.md) do Azure Data Studio.
+> Você também pode criar o script da implantação do AKS e de um cluster de Big Data em uma única etapa. Para obter mais informações, confira como fazer isso em um [script Python](quickstart-big-data-cluster-deploy.md) ou em um [notebook](notebooks-deploy.md) do Azure Data Studio.
 
 ### <a name="verify-kubernetes-configuration"></a>Verificar configuração do Kubernetes
 

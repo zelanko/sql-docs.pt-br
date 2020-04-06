@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 39bebccfc01d379a2c3839fcd7f8fd8824aa18e4
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77173605"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531099"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurar o Serviço de Kubernetes do Azure para implantações de cluster de Big Data do SQL Server
 
@@ -28,7 +28,7 @@ O AKS simplifica a criação, a configuração e o gerenciamento de um cluster d
 Este artigo descreve as etapas para implantar o Kubernetes no AKS usando a CLI do Azure. Caso não tenha uma assinatura do Azure, crie uma conta gratuita antes de começar.
 
 > [!TIP]
-> Você também pode criar o script da implantação do AKS e de um cluster de Big Data em uma única etapa. Para obter mais informações, confira como fazer isso em um [script Python](quickstart-big-data-cluster-deploy.md) ou em um [notebook](deploy-notebooks.md) do Azure Data Studio.
+> Você também pode criar o script da implantação do AKS e de um cluster de Big Data em uma única etapa. Para obter mais informações, confira como fazer isso em um [script Python](quickstart-big-data-cluster-deploy.md) ou em um [notebook](notebooks-deploy.md) do Azure Data Studio.
 
 ## <a name="prerequisites"></a>Prerequisites
 

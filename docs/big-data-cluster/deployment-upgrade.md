@@ -9,12 +9,12 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 776c54ef7475b1ff7c5679f98e994a1b42784262
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256859"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607833"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Como atualizar o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -66,10 +66,10 @@ Esta seção explica como atualizar um BDC do SQL Server de uma versão com supo
    azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
    ```
 
-   Por exemplo, o script a seguir usa a marca de imagem `2019-CU1-ubuntu-16.04`:
+   Por exemplo, o script a seguir usa a marca de imagem `2019-CU4-ubuntu-16.04`:
 
    ```
-   azdata bdc upgrade -n bdc -t 2019-CU1-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   azdata bdc upgrade -n bdc -t 2019-CU4-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
    ```
 
 >[!NOTE]
@@ -96,7 +96,7 @@ Um tempo limite poderá acontecer se determinados componentes não forem atualiz
 Para aumentar os tempos limite de uma atualização, use os parâmetros **--controller-timeout** e **--component-timeout** para especificar valores maiores ao emitir a atualização. Essa opção está disponível apenas da versão SQL Server 2019 CU2 em diante. Por exemplo:
 
    ```bash
-   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   azdata bdc upgrade -t 2019-CU4-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
    ```
 O **--controller-timeout** designa o número de minutos que você deverá aguardar para que o controlador ou o banco de dados do controlador conclua a atualização.
 **--component-timeout** designa a quantidade de tempo em que cada fase subsequente da atualização precisa ser concluída.

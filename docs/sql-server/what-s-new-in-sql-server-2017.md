@@ -11,12 +11,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48188e98d992f45ca282c3687bf56e255d15a40a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55ed24599e3bed15a0478ce12ac316edb623f0cf
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79190623"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662881"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novidades no SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ Os desenvolvedores do SQL Server agora têm acesso a bibliotecas Python ML e AI 
 - **Melhorias de desempenho** – o procedimento armazenado `sp_execute_external_script` foi otimizado para dar suporte à execução em modo de lote para dados de columnstore.
 
 
-Para obter mais informações, consulte [Novidades do Serviços do SQL Server Machine Learning](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
+Para obter mais informações, consulte [Novidades do Serviços do SQL Server Machine Learning](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 - Consulte as [Notas de Versão do SQL Server 2017](sql-server-2017-release-notes.md).

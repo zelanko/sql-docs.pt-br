@@ -12,12 +12,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a6592781464bb148bf31fdaa135d17a159b5e13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 907fc65dc781ed3308e2f6752ab09702c5d7c16a
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68136526"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625499"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notas de Versão do SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ Você pode instalar o SQL Server no Windows Server 2008 R2 Server Core SP1 com a
   
 **Solução alternativa:** para configurar o banco de dados de estatísticas semânticas de idioma como um pré-requisito para a indexação semântica, realize as seguintes tarefas:  
   
-1.  Localize e execute o pacote do Windows Installer denominado SemanticLanguageDatabase.msi na mídia de instalação do SQL Server para extrair o banco de dados. Para o SQL Server 2012 Express, baixe o banco de dados de estatísticas semânticas de idioma do [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582) ) e execute o pacote do Windows Installer.  
+1.  Localize e execute o pacote do Windows Installer denominado SemanticLanguageDatabase.msi na mídia de instalação do SQL Server para extrair o banco de dados. Para o SQL Server 2012 Express, baixe o banco de dados de estatísticas semânticas de idioma do [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=52681) (https://www.microsoft.com/download/details.aspx?id=52681) ) e execute o pacote do Windows Installer.  
   
 2.  Mova o banco de dados para uma pasta de dados apropriada. Se você deixar o banco de dados no local padrão, deverá alterar as permissões antes de anexá-lo com êxito.  
   

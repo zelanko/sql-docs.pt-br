@@ -8,18 +8,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: e16304765e5f4a51feed4d3d59e790505baa740d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd8e1b948d259b4c233aebcb3614dea5b3e72129
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252030"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664128"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>Executar scripts do Python e do R com Serviços de Machine Learning em Clusters de Big Data do SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Você pode executar scripts do Python e do R na instância mestra de [Clusters de Big Data do SQL Server](big-data-cluster-overview.md) com [Serviços de Machine Learning](../advanced-analytics/index.yml).
+Você pode executar scripts do Python e do R na instância mestra de [Clusters de Big Data do SQL Server](big-data-cluster-overview.md) com [Serviços de Machine Learning](../machine-learning/index.yml).
 
 > [!NOTE]
 > Você também pode executar o código Java na instância mestra com as [Extensões de Linguagem do SQL Server](../language-extensions/language-extensions-overview.md). A conclusão das etapas abaixo habilitará também as Extensões de Linguagem.
@@ -82,7 +82,7 @@ Agora você está pronto para executar scripts do Python e do R na instância me
 
 ## <a name="next-steps"></a>Próximas etapas
 
-+ [Início Rápido: Criar e executar scripts Python simples com os Serviços de Machine Learning do SQL Server](../advanced-analytics/tutorials/quickstart-python-create-script.md)
-+ [Início Rápido: Criar e pontuar um modelo de previsão no Python com os Serviços de Machine Learning do SQL Server](../advanced-analytics/tutorials/quickstart-python-train-score-model.md)
-+ [Início Rápido: Criar e executar scripts R simples com os Serviços de Machine Learning do SQL Server](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [Início Rápido: Criar e pontuar um modelo de previsão no R com os Serviços de Machine Learning do SQL Server](../advanced-analytics/tutorials/quickstart-r-train-score-model.md)
++ [Início Rápido: Criar e executar scripts Python simples com os Serviços de Machine Learning do SQL Server](../machine-learning/tutorials/quickstart-python-create-script.md)
++ [Início Rápido: Criar e pontuar um modelo de previsão no Python com os Serviços de Machine Learning do SQL Server](../machine-learning/tutorials/quickstart-python-train-score-model.md)
++ [Início Rápido: Criar e executar scripts R simples com os Serviços de Machine Learning do SQL Server](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [Início Rápido: Criar e pontuar um modelo de previsão no R com os Serviços de Machine Learning do SQL Server](../machine-learning/tutorials/quickstart-r-train-score-model.md)

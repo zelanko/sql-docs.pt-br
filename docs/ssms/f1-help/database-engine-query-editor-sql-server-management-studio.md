@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/03/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 685397689b390175bd15f6241fc7036004e1e97a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a6298057dbc5d4dcb4dc71cedb166186a95cbddf
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198523"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80530818"
 ---
 # <a name="ssms-query-editor"></a>Editor de Consultas do SSMS
 
@@ -272,4 +272,4 @@ Abre a caixa de diálogo **Opções de Consulta** . Use esta caixa de diálogo p
 
 - [Personalizar menus e teclas de atalho](../customize-menus-and-shortcut-keys.md)
 
-- [Alternativas ao SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)
+- [Atalhos de teclado do SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

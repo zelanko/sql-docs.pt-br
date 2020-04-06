@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0d85376a8ebcd946950062ead62387897c47b537
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658843"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664407"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Instalar Extensões de Linguagem do SQL Server no Windows
 
@@ -39,7 +39,7 @@ Saiba como instalar o componente de Extensões de Linguagem no SQL Server execut
 
 + Não instale Extensões de Linguagem do SQL Server em um controlador de domínio. A parte da instalação de Extensões de Linguagem falhará.
 
-+ As Extensões de Linguagem e os [Serviços de Machine Learning](../../advanced-analytics/index.yml) são instalados por padrão em Clusters de Big Data do SQL Server. Se você usar Clusters de Big Data, não precisará seguir as etapas neste artigo. Para obter mais informações, confira [Usar Serviços de Machine Learning (Python e R) em Clusters de Big Data](../../big-data-cluster/machine-learning-services.md).
++ As Extensões de Linguagem e os [Serviços de Machine Learning](../../machine-learning/index.yml) são instalados por padrão em Clusters de Big Data do SQL Server. Se você usar Clusters de Big Data, não precisará seguir as etapas neste artigo. Para obter mais informações, confira [Usar Serviços de Machine Learning (Python e R) em Clusters de Big Data](../../big-data-cluster/machine-learning-services.md).
 
 > [!IMPORTANT]
 > Após a conclusão da instalação, conclua as etapas de pós-configuração descritas neste artigo. Essas etapas incluem a habilitação do SQL Server para usar código externo e a adição de contas necessárias para o SQL Server executar o código Java em seu nome. Geralmente, as alterações na configuração exigem uma reinicialização da instância ou do serviço Launchpad.
@@ -87,7 +87,7 @@ Para instalações locais, você deve executar a Instalação como um administra
 
         - Se você desejar usar seu próprio runtime do Java, selecione **Serviços de Machine Learning e Extensões de Linguagem**. Não selecione Java.
 
-        Se desejar usar R e Python, confira [Instalar Serviços de Machine Learning do SQL Server no Windows](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install).
+        Se desejar usar R e Python, confira [Instalar Serviços de Machine Learning do SQL Server no Windows](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install).
 
     ![Opções de recurso para Extensões de Linguagem](../media/sql-install-feature-selection.png)
 
@@ -227,17 +227,17 @@ Se você receber um erro ao executar o comando, examine as etapas de configuraç
 
 No nível da instância, a configuração adicional pode incluir:
 
-* [Configuração de firewall para os Serviços de Machine Learning do SQL Server](../../advanced-analytics/security/firewall-configuration.md)
+* [Configuração de firewall para os Serviços de Machine Learning do SQL Server](../../machine-learning/security/firewall-configuration.md)
 * [Habilitar protocolos de rede adicionais](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Habilitar conexões remotas](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
-* [Criar um logon para SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
+* [Criar um logon para SQLRUserGroup](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
 No banco de dados, talvez você precise das seguintes atualizações de configuração:
 
-* [Conceder aos usuários permissão para os Serviços de Machine Learning do SQL Server](../../advanced-analytics/security/user-permission.md)
+* [Conceder aos usuários permissão para os Serviços de Machine Learning do SQL Server](../../machine-learning/security/user-permission.md)
 * [Conceder aos usuários permissão para executar uma linguagem específica](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql#permissions)
 
 > [!NOTE]
