@@ -1,0 +1,109 @@
+### YamlMime:Landing
+title: Documentação dos Serviços de Machine Learning do SQL Server (Python e R)
+summary: Saiba como usar os Serviços de Machine Learning do SQL Server para executar scripts de Python e R em dados relacionais. Tutoriais, exemplos de código, guias de instalação e outros tipos de documento mostram como fazer isso.
+metadata:
+  title: Documentação dos Serviços de Machine Learning do SQL Server (Python, R) – tutoriais, guias de início rápido e manuais de instalação
+  description: Saiba como usar os Serviços de Machine Learning do SQL Server para executar scripts de Python e R em dados relacionais. Tutoriais, exemplos de código, guias de instalação e outros tipos de documento mostram como fazer isso.
+  ms.prod: sql
+  ms.technology: machine-learning
+  ms.topic: landing-page
+  author: dphansen
+  ms.author: davidph
+  ms.date: 09/12/2019
+  ms.openlocfilehash: 8f218580a9a2f4e7a9744987b6dd7fca2f1f4107
+  ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 04/04/2020
+  ms.locfileid: "80665437"
+landingContent:
+- title: Sobre os Serviços de Machine Learning
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: O que são os Serviços de Machine Learning do SQL Server (Python e R)?
+      url: what-is-sql-server-machine-learning.md
+  - linkListType: whats-new
+    links:
+    - text: Quais são as novidades dos Serviços de Machine Learning?
+      url: what-s-new-in-sql-server-machine-learning-services.md
+  - linkListType: video
+    links:
+    - text: Como executar R/Python no SQL Server com os Serviços de Machine Learning
+      url: https://www.youtube.com/watch?v=ACejZ9optCQ
+- title: Introdução ao Python
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Executar um script de Python "Olá, Mundo" no SQL Server
+      url: tutorials/quickstart-python-create-script.md
+    - text: Lidar com entradas e saídas
+      url: tutorials/quickstart-python-create-script.md#use-inputs-and-outputs
+    - text: Usar estruturas de dados de Python no SQL Server
+      url: tutorials/quickstart-python-data-structures.md
+    - text: Treinar e usar seu primeiro modelo
+      url: tutorials/quickstart-python-train-score-model.md
+  - linkListType: tutorial
+    links:
+    - text: Prever aluguel de esqui com regressão linear
+      url: tutorials/python-ski-rental-linear-regression.md
+    - text: Categorizar clientes usando cluster K-means
+      url: tutorials/python-clustering-model.md
+- title: Introdução ao R
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Executar um script de R "Olá, Mundo" no SQL Server
+      url: tutorials/quickstart-r-create-script.md
+    - text: Lidar com entradas e saídas
+      url: tutorials/quickstart-r-create-script.md#use-inputs-and-outputs
+    - text: Usar estruturas de dados de R no SQL Server
+      url: tutorials/quickstart-r-data-types-and-objects.md
+    - text: Treinar e usar seu primeiro modelo
+      url: tutorials/quickstart-r-train-score-model.md
+  - linkListType: tutorial
+    links:
+    - text: Usar o R no T-SQL
+      url: tutorials/sqldev-in-database-r-for-sql-developers.md
+    - text: Usar os Serviços de Machine Learning nas ferramentas do R
+      url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+- title: Instalar os Serviços de Machine Learning
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Instalar os Serviços de Machine Learning no Windows
+      url: install/sql-machine-learning-services-windows-install.md
+    - text: Instalar os Serviços de Machine Learning no Linux
+      url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json
+  - linkListType: how-to-guide
+    links:
+    - text: Configurar um cliente Python
+      url: python/setup-python-client-tools-sql.md
+    - text: Configurar um cliente R
+      url: r/set-up-a-data-science-client.md
+- title: Arquitetura e segurança
+  linkLists:
+  - linkListType: architecture
+    links:
+    - text: Estrutura de extensibilidade
+      url: concepts/extensibility-framework.md
+    - text: Extensão Python
+      url: concepts/extension-python.md
+    - text: Extensão R
+      url: concepts/extension-r.md
+  - linkListType: concept
+    links:
+    - text: Segurança para a estrutura de extensibilidade
+      url: concepts/security.md
+- title: Gerenciar pacotes de Python e R
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Obter informações sobre o pacote do Python
+      url: package-management/python-package-information.md
+    - text: Instalar pacotes de Python com sqlmlutils
+      url: package-management/install-additional-python-packages-on-sql-server.md
+    - text: Obter informações sobre o pacote do R
+      url: package-management/r-package-information.md
+    - text: Instalar novos pacotes de R com sqlmlutils
+      url: package-management/install-additional-r-packages-on-sql-server.md
