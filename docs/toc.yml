@@ -78,6 +78,8 @@
           items:
             - name: Diretrizes de implantação
               href: big-data-cluster/deployment-guidance.md
+            - name: Recursos implantados
+              href: big-data-cluster/concept-architecture-pods.md
             - name: Atualizar para uma nova versão
               href: big-data-cluster/deployment-upgrade.md
             - name: Personalizar implantações
@@ -107,7 +109,7 @@
                 - name: Script kubeadm de nó único
                   href: big-data-cluster/deployment-script-single-node-kubeadm.md
                 - name: Implantar com notebooks
-                  href: big-data-cluster/deploy-notebooks.md
+                  href: big-data-cluster/notebooks-deploy.md
     - name: Conceitos
       items:
         - name: Implantação de aplicativo
@@ -190,26 +192,18 @@
               href: big-data-cluster/connect-to-big-data-cluster.md
             - name: Exibir status do cluster
               href: big-data-cluster/view-cluster-status.md
-            - name: Solução de problemas para Kubernetes
-              href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: Gerenciar com o notebook
-              href: big-data-cluster/manage-notebooks.md
             - name: Gerenciar com o painel do controlador
               href: big-data-cluster/manage-with-controller-dashboard.md
+            - name: Gerenciar notebooks existentes
+              href: big-data-cluster/notebooks-manage-bdc.md
+            - name: Executar um notebook com o Spark
+              href: big-data-cluster/notebooks-tutorial-spark.md
             - name: Segurança
               items:
                 - name: Atualizar AZDATA_PASSWORD
                   href: big-data-cluster/change-azdata-password.md
                 - name: Gerenciar o acesso de usuário
                   href: big-data-cluster/manage-user-access.md
-        - name: Notebooks
-          items:
-            - name: Visão geral dos notebooks
-              href: big-data-cluster/notebooks-guidance.md
-            - name: Tutorial de notebooks
-              href: big-data-cluster/tutorial-notebook-spark.md
-            - name: Gerenciar notebooks existentes
-              href: big-data-cluster/notebooks-how-to-manage.md
         - name: Trabalhos do Spark
           items:
             - name: Enviar trabalhos do Spark no Azure Data Studio
@@ -222,7 +216,9 @@
               href: big-data-cluster/spark-history-server.md
         - name: Solucionar problemas
           items:
-            - name: Implantação do Active Directory
+            - name: Solucionar problemas do Kubernetes
+              href: big-data-cluster/cluster-troubleshooting-commands.md
+            - name: Escopo de grupo do Active Directory
               href: big-data-cluster/troubleshoot-active-directory.md
     - name: Referência
       items:
@@ -2555,7 +2551,11 @@
             - name: Tipos de dados Java para SQL
               href: language-extensions/how-to/java-to-sql-data-types.md
             - name: Criar um arquivo de jar Java
-              href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
+              href: language-extensions/how-to/call-java-from-sql.md
+        - name: Referência
+          items:
+            - name: API Extensibility Framework
+              href: language-extensions/reference/extensibility-framework-api.md
     - name: SQL Server Native Client
       href: relational-databases/native-client/sql-server-native-client.md
       items:
@@ -7017,8 +7017,8 @@
           href: relational-databases/synonyms/create-synonyms.md
 - name: Relatórios e análise
   items:
-    - name: Análise avançada e aprendizado de máquina >
-      href: advanced-analytics/
+    - name: Serviços de Machine Learning >
+      href: machine-learning/
     - name: Analytics Platform System >
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
@@ -7791,8 +7791,6 @@
               href: azure-data-studio/keyboard-shortcuts.md
             - name: Explorar os recursos do SQL do Azure
               href: azure-data-studio/azure-resource-explorer.md
-            - name: Blocos de anotações do SQL
-              href: azure-data-studio/sql-notebooks.md
             - name: Grupos de servidores
               href: azure-data-studio/server-groups.md
             - name: Controle do código-fonte
@@ -7801,6 +7799,14 @@
               href: azure-data-studio/settings.md
             - name: Autenticação do Windows (Kerberos)
               href: azure-data-studio/enable-kerberos.md
+            - name: Notebooks
+              items:
+                - name: Visão geral dos notebooks
+                  href: azure-data-studio/notebooks-guidance.md
+                - name: Como usar o Kernel do SQL
+                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+                - name: Como gerenciar um notebook
+                  href: azure-data-studio/notebooks-manage-sql-server.md
             - name: Coleta de dados de uso
               href: azure-data-studio/usage-data-collection.md
         - name: Extensões
