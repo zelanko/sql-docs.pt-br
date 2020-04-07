@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: b83ceb3dd5079f82a13e8f1e2aba37fcf5ca5835
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 79ee8bba588f7d429cf0a6fd279ec4b8d0271262
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271422"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742327"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notas sobre a versão para o SSDT (SQL Server Data Tools)
 
@@ -106,7 +106,6 @@ _SSDT para Visual Studio 2017._
 | Problema conhecido | Detalhes |
 | :---------- | :------ |
 | A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. | Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados. |
-| O SSDT para Visual Studio 2017 superior a 15.8 não dá suporte para a criação de pacotes com origem/destino Teradata. | Use o SSDT para Visual Studio 2017 (15.8). |
 | O Power Query Source pode não ser compatível com OData v4 quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
 | O Power Query Source pode não ser compatível com o uso de ODBC para se conectar ao Oracle quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
 | Power Query Source não é localizado | &nbsp; |
@@ -134,7 +133,6 @@ _SSDT para Visual Studio 2017._
 | Problema conhecido | Detalhes |
 | :---------- | :------ |
 | A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. | Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados. |
-| O SSDT para Visual Studio 2017 superior a 15.8 não dá suporte para a criação de pacotes com origem/destino Teradata. | Use o SSDT para Visual Studio 2017 (15.8). |
 | Não é possível criar ou editar fontes de dados no modelo de implantação de pacote. | Falha ao abrir o Assistente de Fonte de Dados. |
 | O Power Query Source pode não ser compatível com OData v4 quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
 | O Power Query Source pode não ser compatível com o uso de ODBC para se conectar ao Oracle quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
@@ -164,7 +162,6 @@ _SSDT para Visual Studio 2017._
 | Problema conhecido | Detalhes |
 | :---------- | :------ |
 | A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. | Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados. |
-| O SSDT para Visual Studio 2017 superior a 15.8 não dá suporte para a criação de pacotes com origem/destino Teradata. | Use o SSDT para Visual Studio 2017 (15.8). |
 | Não é possível criar ou editar fontes de dados no modelo de implantação de pacote. | Falha ao abrir o Assistente de Fonte de Dados. |
 | O Power Query Source pode não ser compatível com OData v4 quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
 | O Power Query Source pode não ser compatível com o uso de ODBC para se conectar ao Oracle quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
@@ -198,7 +195,6 @@ _SSDT para Visual Studio 2017._
 | Problema conhecido | Detalhes |
 | :---------- | :------ |
 | A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. | Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados. |
-| O SSDT para Visual Studio 2017 superior a 15.8 não dá suporte para a criação de pacotes com origem/destino Teradata. | Use o SSDT para Visual Studio 2017 (15.8). |
 | O Power Query Source pode não ser compatível com OData v4 quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
 | O Power Query Source pode não ser compatível com o uso de ODBC para se conectar ao Oracle quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
 | Power Query Source não é localizado. | &nbsp; |
@@ -218,7 +214,6 @@ Correção de um problema em que a implantação do projeto SSIS, que contém pa
 ### <a name="known-issues"></a>Problemas conhecidos:
 
 - A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados.
-- O SSDT para Visual Studio 2017 (15.8.2) não dá suporte para a criação de pacotes com origem/destino Oracle/Teradata. Use o SSDT para Visual Studio 2017 (15.8).
 
 ## <a name="1581nbsp-ssdt-for-vs-2017"></a>15.8.1,&nbsp; SSDT para VS 2017
 
@@ -237,7 +232,6 @@ _SSDT para Visual Studio 2017._
 
 - A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados.
 - A implantação de projetos do SSIS que contêm pacotes com o destino de Tarefa de Script/Arquivo simples no Azure-SSIS resulta na falha dos pacotes ao executar no Azure-SSIS.
-- O SSDT para Visual Studio 2017 (15.8.1) não é compatível com a criação de pacotes com origem/destino Oracle/Teradata. Use o SSDT para Visual Studio 2017 (15.8).
 
 
 ## <a name="158nbsp-ssdt-for-vs-2017"></a>15.8,&nbsp; SSDT para VS 2017
