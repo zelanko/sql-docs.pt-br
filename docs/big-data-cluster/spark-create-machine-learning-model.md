@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 717093278790c90486b424678d332f73e056e86e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d51cc4164cbb40ff647cad337240e689696b449
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255908"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531123"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>Criar, exportar e pontuar modelos de machine learning do Spark em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -52,7 +52,7 @@ Para este exemplo, dados de censo (**AdultCensusIncome.csv**) são usados para c
 
    Este notebook contém células com os comandos necessários para esta seção do exemplo.
 
-1. Abra o notebook no Azure Data Studio e execute cada bloco de código. Para obter mais informações sobre como trabalhar com notebooks, confira [Como usar notebooks no SQL Server](notebooks-guidance.md).
+1. Abra o notebook no Azure Data Studio e execute cada bloco de código. Para saber mais sobre como trabalhar com notebooks, confira [Como usar notebooks com o SQL Server](../azure-data-studio/notebooks-guidance.md).
 
 Os dados são lidos primeiro no Spark e são divididos em conjuntos de dados de treinamento e teste. Em seguida, o código treina um modelo de pipeline com os dados de treinamento. Por fim, ele exporta o modelo para um pacote MLeap.
 
@@ -61,7 +61,7 @@ Os dados são lidos primeiro no Spark e são divididos em conjuntos de dados de 
 
 ## <a name="model-scoring-with-sql-server"></a>Pontuação de modelo com o SQL Server
 
-Agora que o modelo de pipeline de ML do Spark está em um formato de [pacote MLeap](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) de serialização comum, você pode pontuar o modelo no Java sem a presença do Spark. 
+Agora que o modelo de pipeline de ML do Spark está em um formato de [pacote MLeap](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) de serialização comum, você pode pontuar o modelo no Java sem a presença do Spark.
 
 Este exemplo usa a [Extensão de Linguagem Java](../language-extensions/language-extensions-overview.md) no SQL Server. Para pontuar o modelo no SQL Server, primeiro você precisa criar um aplicativo Java que possa carregar o modelo em Java e pontuá-lo. Você pode encontrar o código de exemplo para este aplicativo Java na pasta [MSSQL-mleap-app](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app).
 

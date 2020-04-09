@@ -1,5 +1,6 @@
 ---
 title: Assinaturas controladas por dados | Microsoft Docs
+description: Saiba mais sobre as assinaturas controladas por dados, que fornecem uma maneira de usar dados dinâmicos de assinatura recuperados de uma fonte de dados externa em tempo de execução.
 ms.date: 05/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2791293f805f1e2c0d9bd39822bc3f452777c007
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bfdd423b50a1d0b644c7db8fbfd0635675ef09fc
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66175605"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742292"
 ---
 # <a name="data-driven-subscriptions"></a>assinaturas controladas por dados
   Uma assinatura controlada por dados fornece uma maneira de usar dados dinâmicos de assinatura recuperados de uma fonte de dados externa em tempo de execução. Uma assinatura controlada por dados também pode usar texto estático e valores padrão especificados pelo usuário quando a assinatura é definida. É possível usar assinaturas controladas por dados para fazer o seguinte:  
@@ -50,7 +51,7 @@ ms.locfileid: "66175605"
 ## <a name="working-with-data-driven-subscriptions"></a>Trabalhando com assinaturas controladas por dados  
  Os tópicos a seguir fornecem mais informações sobre assinaturas controladas por dados.  
   
-|Tópicos|DESCRIÇÃO|  
+|Tópicos|Descrição|  
 |------------|-----------------|  
 |[Criar, modificar e excluir assinaturas controladas por dados](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)|Explica como criar, modificar ou excluir uma assinatura controlada por dados.|  
 |[Usar uma fonte de dados externa para obter dados de assinante &#40;Assinatura controlada por dados&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Fornece informações sobre as fontes de dados que podem ser usadas para uma assinatura controlada por dados.|  

@@ -4,11 +4,11 @@ ms.service: analysis-services
 ms.topic: include
 ms.date: 06/14/2019
 ms.author: owend
-ms.openlocfilehash: 33516687a5275226a400ace636dfd423c7448efe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 875f435824d0b37dcb6eae8f33fb04a900ffbde6
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68210241"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80502428"
 ---
-**APLICA-SE A:** ![sim](media/yes.png)SQL Server 2016 Analysis Services e posterior ![não](media/no.png)Azure Analysis Services ![não](media/no.png)Power BI Premium
+**APLICA-SE A:** ![Sim](media/yes-icon.png)SQL Server 2016 Analysis Services e posterior ![Não](media/no-icon.png)Azure Analysis Services ![Não](media/no-icon.png)Power BI Premium

@@ -1,5 +1,6 @@
 ---
-title: Solução de problemas de assinaturas e entrega do Reporting Services | Microsoft Docs
+title: Solucionar problemas de assinaturas e entrega do Reporting Services
+description: Neste artigo, você verá como diagnosticar e corrigir os problemas encontrados ao trabalhar com inscrições, agendas e entrega de relatórios no SQL Server Reporting Services.
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 577ca01b2764df923c0208934c597e17e8412ff2
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572112"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662750"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Solucionar problemas de assinaturas e entrega do Reporting Services
   
@@ -24,7 +25,7 @@ Use este tópico para solucionar os problemas encontrados ao trabalhar com as as
 A página Assinatura no [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] inclui um status de uma assinatura, mas se houver um problema com a assinatura, as informações detalhadas estarão nos logs do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
 ![ssrs_tutorial_datadriven_subscription_status_ReportManager](../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png)
 
-**Logs de rastreamento:** os logs de rastreamento são gravados de arquivos de texto: `\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`
+**Logs de rastreamento:** Os logs de rastreamento são arquivos de texto gravados em: `\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`
 
 Veja a seguir um exemplo de entrada de log:
 
@@ -52,7 +53,7 @@ em que \<error message> é substituído pelas informações de mensagem de erro 
   
 Para obter mais informações sobre como usar um serviço de SMTP local para a entrega de relatórios por email, consulte Configurando um Servidor de Relatório para a Entrega por EMail.  
   
-## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>Falha ao enviar email: o servidor rejeitou o endereço do remetente. A resposta do servidor era: 454 5.7.3 Cliente não tem permissão para enviar email para este servidor  
+## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>Falha ao enviar o email: o servidor rejeitou o endereço do remetente. A resposta do servidor foi: 454 5.7.3 O cliente não tem permissão para enviar mensagem a esse servidor  
 Esse erro ocorre quando as configurações da política de segurança no servidor SMTP permitem que somente usuários autenticados enviem email para entrega posterior. Se o servidor SMTP não aceitar envios de email de usuários anônimos, consulte o administrador do sistema para saber como obter permissão para usar o servidor.  
 > Esse erro também pode ocorrer quando você especifica um nome de servidor do Exchange como a Servidor SMTP. Para usar um servidor do Exchange para entrega de email, é necessário especificar o nome do gateway do SMTP configurado para o servidor do Exchange. Consulte o administrador do Exchange para obter informações a respeito.  
   

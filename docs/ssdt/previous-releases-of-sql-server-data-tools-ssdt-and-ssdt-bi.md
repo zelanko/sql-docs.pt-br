@@ -10,14 +10,14 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.custom: seo-lt-2019
-ms.date: 09/05/2018
+ms.date: 03/26/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b22b71f3e5b9428e15a529917056565b874d55d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a877bf2edd04e937cfafaece19c6acd9ecd09c07
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271412"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742249"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Versões anteriores do SQL Server Data Tools (SSDT e SSDT-BI)
 
@@ -54,11 +54,11 @@ Os últimos downloads são fornecidos no caso pouco provável de você enfrentar
 <br>
 
 
-\* O SSDT oferece suporte às duas versões mais recentes do Visual Studio. Com a versão do Visual Studio 2017, o SSDT para VS2013 não será atualizado novamente. Para obter mais informações, consulte a seção *perguntas frequentes*[desta postagem do blog da equipe do SSDT](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
+\* O SSDT oferece suporte às duas versões mais recentes do Visual Studio. Com a versão do Visual Studio 2019, o SSDT para VS2015 não será atualizado novamente. Para obter mais informações, consulte a seção *perguntas frequentes*[desta postagem do blog da equipe do SSDT](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
 
   
 ## <a name="links-to-download-pages"></a>Links para páginas de download 
-**Relacional do SQL: mecanismo de banco de dados**  
+**SQL Relacional: Mecanismo de Banco de Dados**  
   
 Fornece modelos para criar bancos de dados relacionais para o RDBMS e o Banco de Dados SQL do Microsoft Azure. O SSDT é independente de versão em relação ao design do banco de dados relacional. Você pode usar a versão do Visual Studio 2012 ou 2013 com qualquer versão do Mecanismo de Banco de Dados do SQL Server ou do Banco de Dados SQL do Microsoft Azure.  
   

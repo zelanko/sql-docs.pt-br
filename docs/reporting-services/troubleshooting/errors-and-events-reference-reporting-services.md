@@ -1,5 +1,6 @@
 ---
-title: Referência de erros e eventos (Reporting Services) | Microsoft Docs
+title: Referência de erros e eventos (Reporting Services)
+description: Exiba a ID, o tipo, a categoria, a origem e a descrição de diferentes eventos do servidor de relatório. Esses eventos incluem tipos de erros, de avisos e de informações.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: d2d1a8c853bd4ad577dd1c0ced9aed47b15a2ee7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9bfaa996eb0a0bf02440268c68a8a543470fd022
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68258540"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664405"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Referência de erros e eventos (Reporting Services)
 
@@ -28,7 +29,7 @@ Causa e informações de resolução estão disponíveis para os erros mais freq
 
 Os eventos a seguir do servidor de relatório são registrados no log do aplicativo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
-|ID do evento|Type|Categoria|Fonte|DESCRIÇÃO|  
+|ID do evento|Type|Categoria|Fonte|Descrição|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|Erro|Agendamento|Servidor de relatório|O SQL Server Agent deve estar em execução quando você define uma operação agendada (por exemplo, assinatura e entrega de relatório).|  
 |[107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|Erro|Inicialização/desligamento|Servidor de relatório<br /><br /> Processador de agendamento e entrega|A *\<Source>* não pode se conectar ao banco de dados do servidor de relatório. Para obter mais informações, consulte [Serviço Windows do Servidor de Relatório &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md).|  

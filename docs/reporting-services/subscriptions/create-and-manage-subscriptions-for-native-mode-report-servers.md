@@ -1,5 +1,6 @@
 ---
 title: Criar e gerenciar assinaturas de servidores de relatório no modo Nativo | Microsoft Docs
+description: Saiba como criar e gerenciar uma assinatura padrão como um usuário individual que quer entregar um relatório por email ou em uma pasta compartilhada.
 ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bcfeabda2eda62a6a4118ac5542e83a4b0afd66
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c0521826132a51b6f0ec18b43bb8008098c61bd4
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76971310"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742300"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crie e gerencie assinaturas de servidores de relatório no modo Nativo
   A assinatura padrão é criada por usuários individuais que desejam entregar um relatório por email ou em uma pasta compartilhada. Este tópico fornece informações sobre assinaturas padrão que são criadas e gerenciadas por usuários individuais. As assinaturas controladas por dados têm requisitos e etapas diferentes e são discutidas em um tópico separado. Para obter mais informações, consulte [Criar, modificar e excluir assinaturas controladas por dados](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -67,15 +68,15 @@ ms.locfileid: "76971310"
 7. Em **Destino**, selecione **Compartilhamento de arquivos do Windows**.  
   
 8. Em **Opções de entrega (compartilhamento de arquivos do Windows)** , especifique:  
-   - **Nome do Arquivo**: digite um nome de arquivo para o relatório.
-   - **Adicionar uma extensão de arquivo quando o arquivo é criado**: essa opção adiciona uma extensão de arquivo de três caracteres ao nome do arquivo. A extensão de arquivo é determinada pelo formato de saída do relatório selecionado.  
-   - **Caminho**: digite um caminho UNC para uma pasta existente na qual você deseja entregar os relatórios (por exemplo, \\<nomedoservidor\>\<meusrelatórios>). Inclua caracteres de barra invertida dupla no começo do caminho. Não especifique barras invertidas à direita.  
+   - **Nome do arquivo**: digite um nome de arquivo para o relatório.
+   - **Adicionar uma extensão de arquivo quando o arquivo é criado**: Esta opção adiciona uma extensão de arquivo de três caracteres ao nome do arquivo. A extensão de arquivo é determinada pelo formato de saída do relatório selecionado.  
+   - **Caminho**: digite um caminho UNC para uma pasta existente na qual você deseja entregar os relatórios (por exemplo, \\<servername\>\<myreports>). Inclua caracteres de barra invertida dupla no começo do caminho. Não especifique barras invertidas à direita.  
   
      ![assinatura do compartilhamento de arquivo](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "assinatura do compartilhamento de arquivo")  
   
-   - **Formato de Renderização**: selecione um formato de saída de relatório para entrega de arquivo. Escolha um formato que corresponda ao aplicativo de desktop que será usado para abrir o relatório. Evite formatos que não renderizam um relatório em um único fluxo ou que introduzam interatividade não compatível com um arquivo estático (por exemplo, HTML 4.0).  
+   - **Formato de renderização**: selecione um formato de saída de relatório para entrega de arquivo. Escolha um formato que corresponda ao aplicativo de desktop que será usado para abrir o relatório. Evite formatos que não renderizam um relatório em um único fluxo ou que introduzam interatividade não compatível com um arquivo estático (por exemplo, HTML 4.0).  
   
-   - **Credenciais**: selecione para usar a conta de compartilhamento de arquivos ou uma credencial de usuário específica do Windows. O **Usar conta de compartilhamento de arquivos** estará desabilitado se o administrador de relatórios não tiver configurado uma conta de compartilhamento de arquivos. Para obter mais informações, consulte [Configurações de Assinatura e uma Conta de Compartilhamento de Arquivos &#40;Gerenciador de Configurações&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Nas caixas de texto **Nome de usuário** e **Senha**, especifique as credenciais necessárias para acessar o compartilhamento de arquivos, usando o formato *\<domain>* \\ *\<user name>* para o nome de usuário.  
+   - **Credenciais**: selecione para usar a conta de Compartilhamento de arquivo ou uma credencial de usuário específica do Windows. O **Usar conta de compartilhamento de arquivos** estará desabilitado se o administrador de relatórios não tiver configurado uma conta de compartilhamento de arquivos. Para obter mais informações, consulte [Configurações de Assinatura e uma Conta de Compartilhamento de Arquivos &#40;Gerenciador de Configurações&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Nas caixas de texto **Nome de usuário** e **Senha**, especifique as credenciais necessárias para acessar o compartilhamento de arquivos, usando o formato *\<domain>* \\ *\<user name>* para o nome de usuário.  
   
    - **Opções de substituição**:  
      - **Substituir um arquivo existente com uma versão mais recente**.  
@@ -112,7 +113,7 @@ O relatório é entregue como um arquivo estático. Se o relatório incluir recu
      >[!NOTE]  
      > Dependendo de suas permissões, você pode digitar o endereço de email no qual deseja entregar o relatório. Para especificar vários endereços de email, separe-os com um ponto-e-vírgula (;). Você também pode digitar endereços de email adicionais nas caixas de texto **Cc**, **Cco**e **Responder** . Você precisa ter permissão para gerenciar todas as assinaturas.  
   
-   - **Assunto**: usa como padrão "@ReportName foi executado em @ExecutionTime". Você pode editar o assunto, mas observe que o @ReportName e @ExecutionTime são as únicas variáveis globais com suporte no campo **Assunto**.  
+   - **Entidade**: usa como padrão "@ReportName foi executado em @ExecutionTime". Você pode editar o assunto, mas observe que o @ReportName e @ExecutionTime são as únicas variáveis globais com suporte no campo **Assunto**.  
   
      ![assinatura de email](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "assinatura de email")  
 

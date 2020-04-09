@@ -1,5 +1,6 @@
 ---
-title: Solução de problemas de Design de Relatório com o Reporting Services | Microsoft Docs
+title: Solucionar problemas de Design de Relatório com o Reporting Services
+description: Neste artigo, você verá como diagnosticar e corrigir os problemas de design de relatório, que podem ocorrer quando você cria o layout do relatório no modo de exibição de Design em um aplicativo de criação de relatório.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3eb298bc6b359b0df92566f9add8d7011cdc907
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd38603a00c01187c131c2f515c2a4c6c1cb858e
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573851"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662811"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Solucionar problemas de Design de Relatório com o Reporting Services
 Os problemas de design de relatórios podem ocorrer quando você cria o layout do relatório na exibição Design em um aplicativo de criação de relatório. Use este tópico para ajudar a solucionar esses problemas.   
@@ -41,7 +42,7 @@ Os campos internos [&PageNumber] e [&TotalPages] somente são válidos no cabeç
 Para adicionar [&PageNumber] ou [&TotalPages] a um relatório, primeiro você deve adicionar um cabeçalho ou rodapé de página. Para obter mais informações, consulte [Adicionar ou remover um cabeçalho de página](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
-> A inclusão de [&TotalPages] no cabeçalho ou rodapé da página pode ter consequências para o processamento de um relatório. Para obter mais informações, consulte Solucionando problemas de relatório: relatórios exportados para um formato de arquivo específico.  
+> A inclusão de [&TotalPages] no cabeçalho ou rodapé da página pode ter consequências para o processamento de um relatório. Para saber mais, confira "Solucionar problemas de relatórios: relatórios exportados para um formato de arquivo específico".  
 [Processamento de solução de problemas dos relatórios do Reporting Services](../../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md).  
   
 ## <a name="how-do-i-design-two-tables-or-a-chart-and-a-table-to-display-side-by-side"></a>Como faço para criar duas tabelas ou um gráfico e uma tabela para exibição lado a lado?  

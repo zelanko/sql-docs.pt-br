@@ -1,5 +1,6 @@
 ---
-title: Solução de problemas ao publicar ou exibir um relatório em um Servidor de Relatório no modo nativo | Microsoft Docs
+title: Solução de problemas ao publicar ou exibir um relatório em um Servidor de Relatório no modo nativo
+description: Neste artigo, você verá como diagnosticar e corrigir os problemas que ocorrem ao publicar ou carregar um relatório para um servidor de relatório configurado em modo nativo.
 ms.date: 02/28/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6e3a96e3eef90778b0e7877b88ba79cb4e0dd43e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 097ef18fe98b20794813e711650a9bb85add5c35
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573856"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662731"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Solução de problemas ao publicar ou exibir um relatório em um Servidor de Relatório no modo nativo
   

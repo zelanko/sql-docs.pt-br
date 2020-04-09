@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bd9624ed1b3d6b164168d162ee68f1773b7a55ac
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285850"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550201"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Definir configurações de implantação para recursos e serviços de cluster
 
@@ -466,6 +466,8 @@ azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.zookeeper.spec
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.gateway.spec.nodeLabel=bdc-shared"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.appproxy.spec.nodeLabel=bdc-shared"
 ```
+>[!NOTE]
+> A melhor prática evita fornecer ao mestre Kubernetes qualquer uma das funções do BDC acima. Se você planejar atribuir essas funções ao nó mestre do Kubernetes de qualquer maneira, precisará [remover o taint ``master:NoSchedule``.](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) Lembre-se: isso pode sobrecarregar o nó mestre e inibir a capacidade dele de executar as funções de gerenciamento do Kubernetes em clusters grandes. É normal ver alguns pods agendados para o mestre em qualquer implantação: eles já toleram o taint ``master:NoSchedule`` e são usados principalmente para ajudar a gerenciar o cluster. 
 
 ## <a name="other-customizations-using-json-patch-files"></a><a id="jsonpatch"></a> Outras personalizações usando arquivos de patch JSON
 

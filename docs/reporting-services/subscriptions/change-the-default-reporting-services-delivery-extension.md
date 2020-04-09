@@ -1,5 +1,6 @@
 ---
 title: Alterar a extensão de entrega padrão do Reporting Services | Microsoft Docs
+description: Saiba como definir as configurações do Reporting Services para reorganizar as extensões de entrega mostradas na lista "Entregue por" e definir a extensão de entrega padrão.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 007427739f91a12ea6603bbf58450821d2c999ea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 83c2c0c6bb3c2a457182e8dcf56c5caa68397184
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66500399"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742307"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Alterar a extensão de entrega padrão do Reporting Services
   Você pode modificar as definições de configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para alterar a extensão de entrega padrão que aparece na lista **Entregue por** de uma página de definição de assinatura. Por exemplo, você pode modificar a configuração de modo que quando os usuários criem uma nova assinatura, a entrega de compartilhamento de arquivos seja selecionada por padrão, em vez da entrega de email. Você também pode alterar a ordem em que as extensões de entrega são listadas na interface do usuário.  
@@ -83,9 +84,9 @@ ms.locfileid: "66500399"
   
      O evento a seguir é gravado no log de eventos do Windows quando a configuração é lida.  
   
-     **ID do Evento:** 109  
+     **ID de evento:** 109  
   
-     **Fonte:** Serviço Windows Servidor de Relatórios (nome da instância)  
+     **Fonte:** Serviço Windows do Servidor de Relatórios (nome da instância)  
   
      O arquivo RSReportServer.config foi modificado  
   

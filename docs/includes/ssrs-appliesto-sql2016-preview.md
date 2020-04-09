@@ -1,1 +1,1 @@
-**APLICA-SE A:** ![sim](media/yes.png)SQL Server 2016 ![sim](media/yes.png)Servidor de Relatórios do Power BI
+**APLICA-SE A:** ![Sim](media/yes-icon.png)SQL Server 2016 ![Sim](media/yes-icon.png)Servidor de Relatórios do Power BI

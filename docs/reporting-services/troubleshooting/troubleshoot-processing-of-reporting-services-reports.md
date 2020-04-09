@@ -1,5 +1,6 @@
 ---
-title: Solução de problemas de processamento de relatórios do Reporting Services | Microsoft Docs
+title: Processamento de solução de problemas dos relatórios do Reporting Services
+description: Neste artigo, você verá como solucionar problemas que ocorrem quando o processador de relatórios combina dados e informações de layout e avalia as expressões de propriedade de item do relatório.
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 85486e929683abaf99216a4d4b03c19a146f230c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d10dc9e4e5808fbc9c315cb262a1b2136c73029
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573867"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664440"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Processamento de solução de problemas dos relatórios do Reporting Services
 Após a recuperação dos dados do relatório, o processador de relatório combina esses dados e as informações de layout. Cada propriedade de item de relatório que tenha uma expressão é avaliada no contexto dos dados e do layout combinado. Use este tópico para ajudar a solucionar esses problemas.   

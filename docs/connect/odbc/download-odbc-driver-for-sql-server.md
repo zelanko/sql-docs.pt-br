@@ -1,6 +1,6 @@
 ---
 title: Baixar o driver ODBC para SQL Server
-ms.date: 03/10/2020
+ms.date: 04/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0646ac7388edfefcf598556753225a182a4aa13e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 807c4d315341bba288036ad9d7f8425458d64a37
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79090389"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550155"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Baixar o driver ODBC para SQL Server
 
@@ -67,6 +67,10 @@ Se você precisar baixar os pacotes para instalação offline, todas as versões
 
 > [!Note]
 > Os pacotes nomeados `msodbcsql17-*` são a última versão. Os pacotes nomeados `msodbcsql-*` são a versão 13 do driver.
+
+### <a name="alpine"></a>Alpine
+
+- [Pacote do Alpine](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.apk) ([Assinatura do PGP](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.sig))
 
 ### <a name="debian"></a>Debian
 

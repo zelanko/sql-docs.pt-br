@@ -1,5 +1,6 @@
 ---
 title: Desabilitar ou pausar o processamento de relatório e assinatura | Microsoft Docs
+description: Gerencie assinaturas, pause agendas compartilhadas, desabilite fontes de dados compartilhadas, bloqueie o acesso a relatórios, gerencie permissões de assinatura e remova as extensões de entrega.
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 228cb40e1c0f40d9525ca83129878d30b722b910
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f82420b687c3714c75b69e778c1bcc881aad8e82
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893422"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742092"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Desabilitar ou pausar o processamento de relatório e assinatura  
 Há várias abordagens que você pode usar para desabilitar ou pausar o processamento de relatório e assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As abordagens neste artigo abrangem a desabilitação de uma assinatura para interromper a conexão com a fonte de dados. Nem todas as abordagens são possíveis com ambos os modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. As seguintes tabelas resumem os métodos e os modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] compatíveis:  

@@ -1,5 +1,6 @@
 ---
 title: Agendamentos | Microsoft Docs
+description: Nesta visão geral, você aprenderá a usar agendas compartilhadas e agendas específicas do relatório para controlar o processamento e a distribuição dos relatórios.
 ms.date: 07/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 503396c71b1f3795177d7a6e1e23032f4833beba
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578094"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742155"
 ---
 # <a name="schedules"></a>Agendas
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece **agendas compartilhadas** e **específicas de relatório** para ajudar a controlar o processamento e a distribuição de relatórios. A diferença entre os dois tipos de agendas é como elas são definidas, armazenadas e administradas. A construção interna dos dois tipos de agendas é a mesma. Todas as agendas especificam um tipo de recorrência: mensal, semanal ou diária. Dentro do tipo de recorrência, você define os intervalos e as faixas para a frequência com que um evento ocorre. O tipo de padrão de recorrência e a forma como ele é especificado são os mesmos para criar uma agenda compartilhada ou uma agenda específica de relatório.

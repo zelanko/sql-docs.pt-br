@@ -1,5 +1,6 @@
 ---
-title: Solução de problemas de renderização de relatório do Reporting Services | Microsoft Docs
+title: Solucionar problemas de renderização de relatório do Reporting Services
+description: Neste artigo, você verá como diagnosticar e corrigir os problemas de exibição quando o relatório compilado e os dados de layout são enviados para um renderizador de relatórios no SQL Server Reporting Services.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f8c5029d66a068d43ebc659592697fd2914fd2b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3a834ee415fd725c26314b95d507b86ff5280f78
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574683"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662778"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Solucionar problemas de renderização de relatório do Reporting Services
 Após a combinação dos dados do relatório e das informações de layout, o relatório compilado é enviado a um renderizador de relatório. Por exemplo, quando você visualiza um relatório localmente, está usando o renderizador HTML para exibir o relatório compilado. Use este tópico para ajudar a solucionar problemas específicos da renderização de relatório.   
@@ -58,9 +59,9 @@ Quando a fonte de dados estiver configurada para uma tipo de conexão do tipo Sh
 `Query execution failed for dataset 'DataSet1'.`   
 `The request failed with HTTP status 401: Unauthorized.`  
   
-**Para contornar este problema:** modifique a fonte de dados para usar credenciais armazenadas, em vez das credenciais do Windows.  
+**Para resolver o problema:** modifique a fonte de dados para usar credenciais armazenadas em vez das credenciais do Windows.  
   
-**Este problema se aplica a:** navegadores configurados para solicitar credenciais.  
+**Esse problema afeta:** navegadores configurados para solicitar credenciais.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Erros e eventos (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

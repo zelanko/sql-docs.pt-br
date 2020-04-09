@@ -1,1 +1,1 @@
-**APLICA-SE A:** ![sim](media/yes.png)SQL Server 2016 e posterior (somente Windows) ![não](media/no.png)Banco de Dados SQL do Azure ![não](media/no.png)Azure Synapse Analytics (SQL DW) ![não](media/no.png)Parallel Data Warehouse
+**APLICA-SE A:** ![Sim](media/yes-icon.png)SQL Server 2016 e posterior (somente Windows) ![Não](media/no-icon.png)Banco de Dados SQL do Azure ![Não](media/no-icon.png)Azure Synapse Analytics (SQL DW) ![Não](media/no-icon.png)Parallel Data Warehouse

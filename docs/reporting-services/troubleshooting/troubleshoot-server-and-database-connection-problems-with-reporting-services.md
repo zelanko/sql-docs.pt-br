@@ -1,6 +1,6 @@
 ---
-title: Solução de problemas de conexão de banco de dados e de servidor | Microsoft Docs
-description: Use este tópico para solucionar problemas de conexão com um servidor de relatório. Este tópico também fornece informações sobre mensagens de "erro inesperado".
+title: Solucionar problemas do servidor e da conexão de banco de dados
+description: Neste artigo, você verá como diagnosticar e corrigir os problemas que ocorrem ao se conectar a um servidor de relatório. Veja também as mensagens de "Erro inesperado".
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6d91ea5d1daf7d63c56ae84b2cf76d3ee82846c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5946e49610acd59603b6730381e586ea3456ac8d
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243627"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662789"
 ---
 # <a name="troubleshoot-server--database-connection-problems-with-reporting-services"></a>Solucionar problemas de conexão de banco de dados e de servidor com o Reporting Services
 Use este tópico para solucionar problemas de conexão com um servidor de relatório. Este tópico também fornece informações sobre mensagens de "erro inesperado". Para saber mais sobre configuração de fonte de dados e como configurar a conexão do servidor de relatório, confira [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) e [Configurar uma conexão de banco de dados do servidor de relatório (Gerenciador de configurações do SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -29,7 +29,7 @@ O usuário não tem permissão para acessar a fonte de dados. Se você estiver u
 Este erro ocorre quando as credenciais são transmitidas em várias conexões de computador. Se você estiver usando a Autenticação do Windows e o protocolo Kerberos versão 5 não estiver habilitado, este erro ocorrerá quando as credenciais forem transmitidas em mais de uma conexão de computador. Para resolver este erro, use credenciais armazenadas ou credenciais solicitadas. Para saber mais sobre como contornar esse problema, confira [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ### <a name="an-error-has-occurred-while-establishing-a-connection-to-the-server"></a>Ocorreu um erro ao estabelecer uma conexão com o servidor.  
-Ao conectar-se ao SQL Server, essa falha pode ser provocada porque, sob as configurações padrão, o SQL Server não permite conexões remotas. (provedor: Provedor de Pipes Nomeados, erro: 40 - não foi possível abrir uma conexão com o SQL Server). Esse erro é retornado pela instância do Mecanismo de Banco de Dados que hospeda o banco de dados do servidor de relatório. Na maioria das vezes, esse erro ocorre porque o serviço SQL Server é interrompido. Ou, se você estiver usando o SQL Server Express com Advanced Services ou uma instância nomeada, esse erro ocorrerá caso a URL do servidor de relatório ou a cadeia de conexão do banco de dados de tal servidor não esteja correta. Para resolver esses problemas, siga este procedimento:  
+Ao conectar-se ao SQL Server, essa falha pode ser provocada porque, sob as configurações padrão, o SQL Server não permite conexões remotas. (provedor: Provedor de Pipes Nomeados, erro: 40 – Não foi possível abrir uma conexão com o SQL Server). Esse erro é retornado pela instância do Mecanismo de Banco de Dados que hospeda o banco de dados do servidor de relatório. Na maioria das vezes, esse erro ocorre porque o serviço SQL Server é interrompido. Ou, se você estiver usando o SQL Server Express com Advanced Services ou uma instância nomeada, esse erro ocorrerá caso a URL do servidor de relatório ou a cadeia de conexão do banco de dados de tal servidor não esteja correta. Para resolver esses problemas, siga este procedimento:  
   
 * Verifique se o serviço SQL Server (**MSSQLSERVER**) foi iniciado. No computador que hospeda a instância do Mecanismo de Banco de Dados, clique em Iniciar, em Ferramentas Administrativas, em Serviços e role até o SQL Server (**MSSQLSERVER**). Se ele ainda não tiver sido iniciado, clique com o botão direito do mouse no serviço, selecione Propriedades, em Tipo de Inicialização, escolha Automático e clique consecutivamente em Aplicar, Iniciar e OK.   
 * Verifique se a URL do servidor de relatório e a cadeia de conexão do banco de dados de tal servidor estão corretas. Se o Reporting Services ou o Mecanismo de Banco de Dados tiver sido instalado como uma instância nomeada, a cadeia de conexão padrão criada durante a Instalação incluirá o nome da instância. Por exemplo, se você instalou uma instância padrão do SQL Server Express com Advanced Services em um servidor denominado DEVSRV01, a URL do portal da Web será DEVSRV01\Reports$SQLEXPRESS. Além disso, o nome de servidor de banco de dados na cadeia de conexão será semelhante a DEVSRV01\SQLEXPRESS. Para saber mais sobre URLs e cadeias de conexão de fonte de dados para SQL Server Express, confira [Reporting Services no SQL Server Express com Advanced Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx). Para verificar a cadeia de conexão do banco de dados do servidor de relatório, inicie a ferramenta Configuração do Reporting Services e exiba a página Configuração do Banco de Dados.  
@@ -67,7 +67,7 @@ Para resolver o erro e conseguir se conectar usando o provedor de WMI, execute o
 ## <a name="connection-error-where-login-failed-due-to-unknown-user-name-or-bad-password"></a>Erro de conexão; o logon falhou devido a um nome de usuário desconhecido ou uma senha inválida  
 Um erro **rsReportServerDatabaseLogonFailed** poderá ocorrer se você estiver usando uma conta de domínio para a conexão do servidor de relatório com o banco de dados do servidor de relatório e se a senha da conta de domínio tiver sido alterada.   
   
-O texto completo do erro é: “O servidor de relatório não pode abrir uma conexão com seu banco de dados. Falha de logon (**rsReportServerDatabaseLogonFailed**). Falha de logon: nome de usuário desconhecido ou senha inválida”.  
+O texto completo de erro é: "O servidor de relatório não pode abrir uma conexão com o banco de dados do servidor de relatório. Falha de logon (**rsReportServerDatabaseLogonFailed**). Falha de logon: nome de usuário desconhecido ou senha inválida”.  
   
 Se a senha for redefinida, atualize a conexão. Para saber mais, confira [Configurar uma conexão de banco de dados do servidor de relatório (Configuration Manager do SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
@@ -77,7 +77,7 @@ Esse erro ocorre quando o servidor de relatório não consegue se conectar ao ba
   
 Esse erro também poderá ocorrer se a instância do Mecanismo de Banco de Dados que hospeda o banco de dados do servidor de relatório não estiver configurada para conexões remotas. A conexão remota é habilitada, por padrão, em algumas edições do SQL Server. Para verificar se ela está habilitada na instância do Mecanismo de Banco de Dados do SQL Server que você está usando, execute a ferramenta SQL Server Configuration Manager. Você deve habilitar TCP/IP e pipes nomeados. Um servidor de relatório usa os dois protocolos. Para obter instruções sobre como habilitar conexões remotas, confira a seção "Como configurar conexões remotas com o banco de dados do servidor de relatório" em [Configurar um servidor de relatório para administração remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
-Se o erro incluir o texto adicional a seguir, a senha expirou na conta usada para executar a instância do Mecanismo de Banco de Dados: "Erro ao estabelecer uma conexão com o servidor. Ao conectar-se ao SQL Server, essa falha pode ser provocada porque, sob as configurações padrão, o SQL Server não permite conexões remotas. (**provedor: Interfaces de Rede do SQL Server, erro: 26 — erro ao localizar servidor/instância especificada)** ". Para resolver esse erro, redefina a senha.   
+Se o erro incluir o texto adicional a seguir, isso significa que a senha expirou na conta usada para executar a instância do Mecanismo de Banco de Dados: "Ocorreu um erro ao estabelecer uma conexão com o servidor. Ao conectar-se ao SQL Server, essa falha pode ser provocada porque, sob as configurações padrão, o SQL Server não permite conexões remotas. (**provedor: Interfaces de Rede do SQL Server, erro: 26 – Erro ao Localizar Servidor/Instância Especificada)** ." Para resolver esse erro, redefina a senha.   
   
 ## <a name="rpc-server-is-not-listening"></a>“O servidor RPC não está escutando”  
 O serviço Servidor de Relatório usa o servidor RPC (Chamada de Procedimento Remoto) para algumas operações. Se o erro “O servidor RPC não está escutando” for exibido, verifique se o serviço Servidor de Relatório está em execução.  
@@ -86,7 +86,7 @@ O serviço Servidor de Relatório usa o servidor RPC (Chamada de Procedimento Re
 Esse erro indica um erro de conexão de fonte de dados. Verifique a cadeia de conexão e verifique se você tem permissão para acessar a fonte de dados. Se estiver usando a Autenticação do Windows para acessar uma fonte de dados, você deve ter permissão para acessar o computador que hospeda a fonte de dados.  
   
 ## <a name="unable-to-grant-database-access-in-sharepoint-central-administration"></a>Não é possível conceder acesso a banco de dados na Administração Central do SharePoint  
-Ao configurar o Reporting Services para integração a um produto SharePoint, ou uma tecnologia no Windows Vista ou Windows Server 2008, você poderá receber a mensagem de erro a seguir ao tentar conceder acesso na página **Conceder Acesso ao Banco de Dados** na Administração Central do SharePoint: "Não é possível estabelecer uma conexão com o computador".  
+Ao configurar o Reporting Services para integração a um produto SharePoint ou a uma tecnologia no Windows Vista ou Windows Server 2008, você poderá receber a mensagem de erro a seguir ao tentar conceder acesso na página **Conceder Acesso ao Banco de Dados** na Administração Central do SharePoint: "Não é possível estabelecer uma conexão com o computador."  
   
 Isso acontece porque o UAC (Controle de Conta de Usuário) no Windows Vista e no Windows Server 2008 requer aceitação explícita de um administrador para elevar e usar o token de administrador na execução de tarefas que exigem permissões de administrador. No entanto, nesse caso, o serviço Administração do Windows SharePoint Services não pode ser elevado para conceder às contas de serviço do Reporting Services acesso aos bancos de dados de conteúdo e configuração do SharePoint.  
   

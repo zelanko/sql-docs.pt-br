@@ -1,5 +1,6 @@
 ---
-title: Solução de problemas de recuperação de dados com relatórios do Reporting Services | Microsoft Docs
+title: Solucionar problemas de recuperação de dados com relatórios do Reporting Services
+description: Neste artigo, você verá como diagnosticar e corrigir os problemas que ocorrem ao recuperar dados de relatório por meio da visualização local ou da execução no servidor de relatório.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d62cff71d6967203ab3980624b1f7b192fb89906
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574422"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664455"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Solucionar problemas de recuperação de dados com relatórios do Reporting Services
 A primeira etapa durante o processamento do relatório é recuperar seus dados para cada conjunto de dados executando a consulta de conjunto de dados. Quando você visualiza um relatório localmente, as conexões de fonte de dados e credenciais precisam usar permissões suficientes para recuperar os dados para o computador. Quando você executa um relatório no servidor de relatório, as conexões de fonte de dados e credenciais precisam usar permissões suficientes para recuperar os dados nesse servidor. Use este tópico para ajudar a solucionar problemas sobre a recuperação de dados do relatório.   
   
 ## <a name="i-cannot-create-a-connection-to-a-data-source"></a>Não consigo criar uma conexão com uma fonte de dados  
-Quando você cria uma fonte de dados, executa uma consulta de conjunto de dados ou visualiza um relatório, pode receber a seguinte mensagem: Não é possível criar uma conexão com a fonte de dados `<data source name>`.   
+Ao criar uma fonte de dados, executar uma consulta de conjunto de dados ou visualizar um relatório, você poderá ver a seguinte mensagem: Não é possível criar uma conexão com a fonte de dados `<data source name>`.   
     
 ### <a name="data-source-is-not-available"></a>A fonte de dados não está disponível.  
 A fonte de dados está offline ou não disponível por algum outro motivo.   
@@ -57,7 +58,7 @@ Quando você define uma consulta na caixa de diálogo Propriedades do Conjunto d
 Para popular a coleção de campos do conjunto de dados, siga este procedimento:  
 * Você deve ter permissões para recuperar informações de campo do banco de dados. Para algumas fontes de dados, talvez você tenha permissões para acessar essas fontes, mas não a tabela ou coluna. Talvez você tenha permissão para acessar uma exibição, mas não para executar os procedimentos armazenados que criam a exibição. Para validar seu acesso a tabelas ou colunas específicas em um banco de dados, verifique os resultados da consulta em um aplicativo separado, como o SQL Server Management Studio usando as mesmas permissões que utiliza para o relatório. Se você não puder ver os resultados desejados para sua consulta, trabalhe com o administrador do sistema a fim de ajustar suas permissões para os dados.   
 * Execute a consulta no painel de consultas da caixa de diálogo **Propriedades do Conjunto de Dados** . Para saber mais, confira [Conjuntos de Dados de Relatório (Construtor de Relatórios 3.0 e SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
-* Adicione campos manualmente. Para saber mais, confira [Como adicionar, editar e atualizar campos no painel de dados do relatório (Construtor de Relatórios 3.0 e SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)   
+* Adicione campos manualmente. Para obter mais informações, confira [Como Adicionar, editar e atualizar campos no painel de dados do relatório (Construtor de Relatórios 3.0 e SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
   
 ## <a name="see-also"></a>Consulte Também  
 [Erros e eventos (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

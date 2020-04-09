@@ -8,13 +8,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: seo-lt-2019, seo-mmd-2019
-ms.date: 12/04/2019
-ms.openlocfilehash: d65c0e8bebf9f4019055e2fbabb30785235dacea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 01/04/2020
+ms.openlocfilehash: 0497915a9f1f0f2a50eafeed70f9dde4550bd1f0
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866032"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531162"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>Configurar uma conexão de banco de dados do servidor de relatório (Gerenciador de configurações do SSRS)
 
@@ -91,6 +91,13 @@ Há três tipos de credenciais que podem ser usados em uma conexão com um banco
   
 Se a instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] for configurada para Autenticação do Windows e estiver no mesmo domínio ou em um domínio confiável com o computador do servidor de relatório, você poderá configurar a conexão para usar a conta de serviço ou uma conta de usuário do domínio que você gerencie como uma propriedade de conexão através da ferramenta de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se o servidor de banco de dados estiver em um domínio diferente ou se você estiver usando a segurança de grupo de trabalho, será necessário configurar a conexão para usar um logon de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nesse caso, certifique-se de criptografar a conexão.  
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> Ao usar a Instância Gerenciada do SQL do Azure para hospedar bancos de dados do servidor de relatório, a autenticação do SQL Server é o único tipo de credencial compatível. Além disso, a Instância Gerenciada não pode hospedar uma instância do servidor de relatório.
+
+::: moniker-end
+
 #### <a name="using-service-accounts-and-integrated-security"></a>Usando contas de serviço e segurança integrada
 
 Você pode usar a segurança integrada do Windows para se conectar pela conta de serviço do Servidor de Relatório. A conta recebe direitos de logon no banco de dados do servidor de relatório. Esse será o tipo de credencial padrão escolhido pela Instalação se você instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na configuração padrão.  
@@ -105,14 +112,7 @@ Você pode especificar uma conta de usuário do Windows para a conexão do servi
 
 #### <a name="using-a-sql-server-login"></a>Usando um logon do SQL Server
 
-Você pode especificar um único logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para se conectar ao banco de dados do servidor de relatório. Se você usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o banco de dados do servidor de relatório estiver em um computador remoto, use IPSec para ajudar a proteger a transmissão de dados entre os servidores. Se você usar um logon do banco de dados, deverá atualizar a conexão do banco de dados do servidor de relatório sempre que alterar a senha ou a conta.  
-
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-
-> [!NOTE]
-> Ao usar um Instância Gerenciada do SQL do Azure para hospedar bancos de dados do Reporting Services 2019, a compatibilidade é limitada ao uso de credenciais de logon do SQL Server para a conexão.
-
-::: moniker-end
+Você pode especificar um único logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para se conectar ao banco de dados do servidor de relatório. Se você usar a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o banco de dados do servidor de relatório estiver em um computador remoto, use IPSec para ajudar a proteger a transmissão de dados entre os servidores. Se você usar um logon do banco de dados, deverá atualizar a conexão do banco de dados do servidor de relatório sempre que alterar a senha ou a conta.
 
 ### <a name="database-permissions"></a>Permissões de banco de dados
 
