@@ -11,14 +11,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c1cc42a09e455fa42d3f89b05903a22afc945424
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 95217b384788ea78bd389948930ba34f580036ec
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971128"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80902609"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>Construtor SQLServerException (java.lang.Object, java.lang.String, java.lang.String, StreamError, booliano)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
