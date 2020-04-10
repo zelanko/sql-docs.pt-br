@@ -15,12 +15,12 @@ ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d061fbb3065f16f7b4d64aa11cf4363738e93088
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3cc82e51469a6eba82fb3ba6890bb84f0825c0e7
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74095150"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002732"
 ---
 # <a name="managing-users-roles-and-logins"></a>Gerenciando usuários, funções e logons
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "74095150"
  Bancos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] também têm funções que especificam um conjunto de privilégios em nível de banco de dados que permitem a um usuário executar tarefas específicas. Diferente das funções de servidor, as funções de banco de dados não são fixas. Elas podem ser criadas, modificadas e removidas. Privilégios e usuários podem ser designados a uma função de banco de dados para administração em massa.  
   
 ## <a name="example"></a>Exemplo  
- Para os exemplos de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um projeto do Visual C&#35; Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para os exemplos de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [Criar um Projeto SMO Visual C&#35; no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>Enumerando logons e usuários associados no Visual C#  
  Cada usuário em um banco de dados é associado a um logon. O logon pode ser associado a usuários em mais de um banco de dados. O exemplo de código mostra como chamar o método <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Login> para listar todos os usuários de banco de dados associados ao logon. O exemplo cria um logon e um usuário no banco de dados [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] para garantir a existência de informações de mapeamento a serem enumeradas.  
@@ -66,32 +66,31 @@ foreach ( Database db in srv.Databases) {
  Cada usuário em um banco de dados é associado a um logon. O logon pode ser associado a usuários em mais de um banco de dados. O exemplo de código mostra como chamar o método <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Login> para listar todos os usuários de banco de dados associados ao logon. O exemplo cria um logon e um usuário no banco de dados [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] para garantir a existência de informações de mapeamento a serem enumeradas.  
   
 ```powershell  
-# Set the path context to the local, default instance of SQL Server.  
-CD \sql\localhost\Default\Databases  
-  
-#Iterate through all databases  
- foreach ($db in Get-ChildItem)  
- {  
- "====="  
- "Login Mappings for the database: "+ $db.Name  
-  
- #get the datatable containing the mapping from the smo database oject  
- $dt = $db.EnumLoginMappings()  
-  
- #display the results  
- foreach($row in $dt.Rows)  
-     {  
-        foreach($col in $row.Table.Columns)  
-      {  
-        $col.ColumnName + "=" + $row[$col]  
-       }  
-  
-     }  
- }  
+# Set the path context to the local, default instance of SQL Server.
+CD \sql\localhost\Default\Databases
+
+#Iterate through all databases 
+foreach ($db in Get-ChildItem)
+{
+  "====="
+  "Login Mappings for the database: "+ $db.Name
+
+  #get the datatable containing the mapping from the smo database oject
+  $dt = $db.EnumLoginMappings()
+
+  #display the results
+  foreach($row in $dt.Rows)
+  {
+     foreach($col in $row.Table.Columns)
+     {
+       $col.ColumnName + "=" + $row[$col]
+     }
+   }
+ }
 ```  
   
 ## <a name="managing-roles-and-users"></a>Gerenciando funções e usuários  
- Este exemplo demonstra como gerenciar funções e usuários. Para executar este exemplo, você precisará referenciar os seguintes assemblies:  
+ Este exemplo demonstra como gerenciar funções e usuários. Para executar esta amostra, você precisará fazer referência às seguintes assembléias:  
   
 -   Microsoft.SqlServer.Smo.dll  
   
