@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - streaming data
 ms.assetid: a16fe7da-e4c8-45f5-be54-aad03c4fa168
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 92c28fe249d766fff33d2c52e20497cebd1f486b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae18b0e3e5c3add352f2efe71c78c3591740dd6c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993681"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928047"
 ---
 # <a name="data-types-with-stream-support-using-the-sqlsrv-driver"></a>Tipos de dados com suporte a fluxo usando o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 91046e09-837d-4c4a-9f4f-3a10042f1c19
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 81a499cb80b11ae695267760726f97d48e3517e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f8f0a004029cb30d12b3d7e6906ad20a1d7ffb9a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67992636"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926890"
 ---
 # <a name="step-2-create-a-sql-database-for-php-development"></a>Etapa 2: Criar um Banco de Dados SQL para o desenvolvimento de PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

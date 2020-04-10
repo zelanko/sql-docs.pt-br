@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d70f502f-f60f-436a-83e6-797a0ed71bf3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a47b7ea56873b0b502ba39a91e4d1ba30044e993
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 66cb3ba13b24747075f85b32c8dd75854f6b57cd
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67953254"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80907812"
 ---
 # <a name="getcharacterstream-method-long-long"></a>Método getCharacterStream (long, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
