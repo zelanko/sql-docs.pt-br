@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 19d75051b03a3d6d966961e681e9ce9d70396e86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5d5f4414e596ab59f33ab73b6d01908b16d89b24
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76934439"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923921"
 ---
 # <a name="working-with-data-types-jdbc"></a>Trabalhando com tipos de dados (JDBC)
 
@@ -32,7 +32,7 @@ Os tópicos nesta seção descrevem como usar os tipos de dados do driver JDBC p
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Exemplo de tipos de dados básicos](../../connect/jdbc/basic-data-types-sample.md)|Descreve como usar métodos getter de conjunto de resultados para recuperar valores de tipo de dados básicos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], além de como usar métodos de atualização de conjunto de resultados para atualizar esses valores.|  
 |[Exemplo de tipo de dados SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md)|Descreve como armazenar dados XML em um banco de dados relacional, como recuperar dados XML de um banco de dados, e como analisar dados XML com um tipo de dados **SQLXML** Java.|  

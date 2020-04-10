@@ -9,13 +9,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
-author: MightyPen
-ms.openlocfilehash: 0cf2946517be732094d01ff9889faf080a36e85b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.openlocfilehash: c3658c1b7e745ad9b51746b26daf68c1b912f2b7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68006486"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924563"
 ---
 # <a name="custom-keystore-providers"></a>Provedores de repositório de chaves personalizado
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

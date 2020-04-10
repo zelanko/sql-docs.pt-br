@@ -6,12 +6,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 2ed9c2a5070a1034970f2f34f5e7bf88a77e8533
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49a42d5b84217e5fd2b49cd9de0092336d7933b2
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68264996"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002664"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) e Reporting Services
 
@@ -49,7 +49,7 @@ Se seu ambiente usar a delegação restrita de Kerberos, o serviço do SharePoin
 
     **Como melhor prática, o C2WTS deve ser executado com sua própria identidade de domínio.**
 
-    * Crie uma conta do Active Directory e registre a conta como uma conta gerenciada no SharePoint Server. Para saber mais sobre contas gerenciadas, consulte [Contas gerenciadas no Sharepoint](https://blog.wbaer.net/2010/04/11/managed-accounts-in-sharepoint-2010/)
+    * Crie uma conta do Active Directory e registre a conta como uma conta gerenciada no SharePoint Server.
    
     * Configure o serviço do C2WTS para usar a conta gerenciada em Administração Central do SharePoint > Segurança > Configurar Contas de Serviço > Serviço Windows – Declarações do Serviço de Token do Windows
 

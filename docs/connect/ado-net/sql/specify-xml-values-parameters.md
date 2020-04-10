@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: b4d0f31c8f5fbb282c880abaee62f05dc190bbfc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f53811919e6bec8e1d5c5985c303e282ce81ed07
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896655"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920002"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Especificando valores XML como parâmetros
 
