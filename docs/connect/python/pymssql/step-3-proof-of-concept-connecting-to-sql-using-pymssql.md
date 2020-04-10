@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c1dfce515eeadbdbaf1fd96e6dcf1a08cd536ab5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ea474658e57c3f61df7eb95866ea4688c942a750
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74200454"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80913092"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Etapa 3: Prova de conceito da conexão ao SQL usando pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
