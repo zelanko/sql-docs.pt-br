@@ -63,6 +63,8 @@
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages.md
     - name: Agendar pacotes no Azure com SSMS
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md
+    - name: Migrar para o processo e as ferramentas do Azure
+      href: ../integration-services/lift-shift/ssis-migration-to-Azure.md
 - name: Instalar o Integration Services
   href: ../integration-services/install-windows/install-integration-services.md
 - name: Instalando as Versões do Integration Services Lado a Lado
@@ -446,7 +448,7 @@
         - name: Destino do Fluxo de Dados
           href: ../integration-services/data-flow/data-streaming-destination.md
           items:
-            - name: 'Passo a passo: publicar um Pacote SSIS como um modo SQL'
+            - name: 'Passo a passo: Publicar um pacote do SSIS como uma exibição SQL'
               href: ../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md
         - name: Destino DataReader
           href: ../integration-services/data-flow/datareader-destination.md
@@ -733,7 +735,7 @@
       href: ../integration-services/data-flow/extract-data-by-using-the-xml-source.md
     - name: Propriedades personalizadas da origem XML
       href: ../integration-services/data-flow/xml-source-custom-properties.md
-- name: variáveis
+- name: Variáveis
   href: ../integration-services/integration-services-ssis-variables.md
   items:
     - name: Janela Variáveis
@@ -933,7 +935,7 @@
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
     - name: Introdução ao SSIS Scale Out em um único computador
       href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-    - name: 'Passo a passo: configurar a Expansão do Integration Services'
+    - name: 'Passo a passo: Configurar o Integration Services Scale Out'
       href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
     - name: Executar pacotes em Expansão
       href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
@@ -1730,7 +1732,7 @@
     - name: Criar um pacote
       href: ../integration-services/ssis-how-to-create-an-etl-package.md
       items:
-        - name: 'Lição 1: criar um projeto e um pacote básico'
+        - name: 'Lição 1: Criar um projeto e um pacote básico'
           href: ../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md
           items:
             - name: Lição 1-1 – criar um novo projeto do Integration Services
@@ -1751,7 +1753,7 @@
               href: ../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
             - name: Lição 1-9 – testar o pacote de tutoriais da Lição 1
               href: ../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md
-        - name: 'Lição 2: adicionar um loop'
+        - name: 'Lição 2: Adicionar looping'
           href: ../integration-services/lesson-2-adding-looping-with-ssis.md
           items:
             - name: Lição 2-1 – copiar o pacote da Lição 1
@@ -1762,7 +1764,7 @@
               href: ../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md
             - name: Lição 2-4 – testar o pacote de tutoriais da Lição 2
               href: ../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md
-        - name: 'Lição 3: adicionar registro em log'
+        - name: 'Lição 3: Adicionar registro em log'
           href: ../integration-services/lesson-3-add-logging-with-ssis.md
           items:
             - name: Lição 3-1 – copiar o pacote da Lição 2
@@ -1771,7 +1773,7 @@
               href: ../integration-services/lesson-3-2-adding-and-configuring-logging.md
             - name: Lição 3-3 – testar o pacote de tutoriais da Lição 3
               href: ../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md
-        - name: 'Lição 4: adicionar o redirecionamento de fluxo de erro'
+        - name: 'Lição 4: Adicionar redirecionamento de fluxo de erro'
           href: ../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md
           items:
             - name: Lição 4-1 – copiar o pacote da Lição 3
@@ -1784,7 +1786,7 @@
               href: ../integration-services/lesson-4-4-adding-a-flat-file-destination.md
             - name: Lição 4-5 – testar o pacote de tutoriais da Lição 4
               href: ../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md
-        - name: 'Lição 5: adicionar configurações de pacote para o modelo de implantação de pacote'
+        - name: 'Lição 5: Adicionar configurações de pacote para o modelo de implantação de pacote'
           href: ../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
           items:
             - name: Lição 5-1 – copiar o pacote da Lição 4
@@ -1795,7 +1797,7 @@
               href: ../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md
             - name: Lição 5-4 – testar o pacote de tutoriais da Lição 5
               href: ../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md
-        - name: 'Lição 6: Usando parâmetros com o modelo de implantação de projeto'
+        - name: 'Lição 6: Como usar parâmetros com o modelo de implantação de projeto'
           href: ../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
           items:
             - name: Lição 6-1 – copiar o pacote da Lição 5
@@ -1822,14 +1824,14 @@
               href: ../integration-services/lesson-1-4-adding-package-configurations.md
             - name: Lição 1-5 – testar os pacotes atualizados
               href: ../integration-services/lesson-1-5-testing-the-updated-packages.md
-        - name: 'Lição 2: criar o pacote de implantação'
+        - name: 'Lição 2: Criar o pacote de implantação'
           href: ../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md
           items:
             - name: Lição 2-1 – compilar o utilitário de implantação
               href: ../integration-services/lesson-2-1-building-the-deployment-utility.md
             - name: Lição 2-2 – verificar o pacote de implantação
               href: ../integration-services/lesson-2-2-verifying-the-deployment-bundle.md
-        - name: 'Lição 3: instalar pacotes'
+        - name: 'Lição 3: Instalar pacotes'
           href: ../integration-services/lesson-3-install-ssis-packages.md
           items:
             - name: Lição 3-1 – copiar o pacote de implantação
