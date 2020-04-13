@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3a282e3e9493bb1cfbcc57186a8e1b9f53faf22f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aaabf611574c60620df600264537436b41e85c18
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095458"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664808"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Adicionar lógica de negócios a dados XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Sua lógica comercial pode ser adicionada a dados XML de vários modos:  
   
 -   Você pode gravar restrições de linha ou de coluna para impor restrições específicas ao domínio durante inserção e modificação de dados XML.  

@@ -17,17 +17,17 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5874c8714706e760f40c1862d18b94b3c28952b
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907255"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664418"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Gera um valor previsto ou pontuações com base em um modelo armazenado. Para obter mais informações, confira [Pontuação nativa usando a função PREDICT T-SQL](../../advanced-analytics/sql-native-scoring.md).
+Gera um valor previsto ou pontuações com base em um modelo armazenado. Para obter mais informações, confira [Pontuação nativa usando a função PREDICT T-SQL](../../machine-learning/sql-native-scoring.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -98,7 +98,7 @@ Não é necessário que R, Python ou outra linguagem de aprendizado de máquina 
 
 ### <a name="supported-algorithms"></a>Algoritmos compatíveis
 
-O modelo usado precisa ter sido criado usando um dos algoritmos compatíveis do pacote RevoScaleR. Para obter uma lista de modelos compatíveis no momento, confira [Pontuação em tempo real](../../advanced-analytics/real-time-scoring.md).
+O modelo usado precisa ter sido criado usando um dos algoritmos compatíveis do pacote RevoScaleR. Para obter uma lista de modelos compatíveis no momento, confira [Pontuação em tempo real](../../machine-learning/real-time-scoring.md).
 
 ### <a name="permissions"></a>Permissões
 
@@ -182,4 +182,4 @@ WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Pontuação nativa usando a função PREDICT T-SQL](../../advanced-analytics/sql-native-scoring.md)
+- [Pontuação nativa usando a função PREDICT T-SQL](../../machine-learning/sql-native-scoring.md)

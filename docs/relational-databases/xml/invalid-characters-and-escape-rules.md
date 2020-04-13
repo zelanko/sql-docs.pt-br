@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 35c3537371df1cb9fc83976605b65fdcfedd1000
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b908d83bad116ea42ce9cfe4845b86e7d367857
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026653"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665185"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>Caracteres inválidos e regras de escape
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Este tópico descreve como caracteres XML inválidos são tratados pela cláusula FOR XML e lista as regras de escape para caracteres inválidos em nomes XML.  
   
 ## <a name="for-xml-and-invalid-characters"></a>Para XML e caracteres inválidos  

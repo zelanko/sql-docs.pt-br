@@ -10,15 +10,15 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e4ffb1cc9a2b63047c6ade58d82001a2e0ebea4c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6053f7fbff8126976d607cb7423a93976621fa8c
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257610"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665227"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Especificar caminhos e dicas de otimização para índices XML seletivos
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Este tópico descreve como especificar caminhos de nós a serem indexados e dicas de otimização de indexação ao criar ou alterar índices XML seletivos.  
   
  Especifique caminhos de nós e dicas de otimização ao mesmo tempo em uma das seguintes instruções:  

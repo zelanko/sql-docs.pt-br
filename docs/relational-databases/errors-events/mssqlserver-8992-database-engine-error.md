@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d5da60bc3e2716fb808c47f949b3b918b4e9d85
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25d673f7f385649afb0a46ae65a61e3eb0f270f9
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77479672"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531072"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+|Item|Valor|
+|:---|:---|
 |Nome do Produto|SQL Server|  
 |ID do evento|8992|  
 |Origem do Evento|MSSQLSERVER|  
@@ -43,9 +43,9 @@ Esse erro pode ocorrer quando uma ou mais tabelas do sistema foram atualizadas m
 Esse erro pode ocorrer ao executar DBCC CHECKDB em um banco de dados que foi atualizado do SQL Server 2000 para o SQL Server 2005 ou posterior. No SQL Server 2000, o DBCC CHECKDB não incluía a funcionalidade DBCC CHECKCATALOG, portanto o erro não seria capturado antes da atualização a menos que DBCC CHECKCATALOG fosse executado especificamente no banco de dados no SQL Server 2000.  
   
 Você pode consultar quaisquer um dos erros a seguir em conjunto com o erro 8992:  
-|||
-|-|-| 
+
 |ID da Msg|Texto da Msg|
+|:---|:---|
 |3851|Uma linha inválida (%ls) foi encontrada na tabela do sistema sys.%ls%ls.|
 |3852|Linha (%ls) em sys.%ls%ls sem linha correspondente (%ls) em sys.%ls%ls.|
 |3853|Atributo (%ls) da linha (%ls) em sys.%ls%ls sem linha correspondente (%ls) em sys.%ls%ls.|

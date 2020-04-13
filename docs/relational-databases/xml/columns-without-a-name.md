@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0d8fb8fc597fd0562640821769e3314b4f3020bb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 685be1c7e6c43e28500dd1ee96ea6fe696ad8e20
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68112897"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664634"
 ---
 # <a name="columns-without-a-name"></a>Colunas sem um nome
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Qualquer coluna sem um nome será embutida. Por exemplo, colunas computadas ou consultas escalares aninhadas que não especificam o alias de coluna gerarão colunas sem nome. Se a coluna for de tipo **xml** , o conteúdo dessa instância de tipo de dados será inserido. Caso contrário, o conteúdo da coluna será inserido como um nó de texto.  
   
 ```  

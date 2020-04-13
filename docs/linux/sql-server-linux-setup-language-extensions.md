@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52d67c4fb8bf48726c5ac65f3f312fc97a1d9628
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76971219"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664346"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Instalar Extensões de Linguagem do SQL Server no Linux
 
@@ -30,7 +30,7 @@ A localização do pacote das extensões Java está nos repositórios de origem 
 
 As extensões de linguagem também são compatíveis com contêineres do Linux. Não fornecemos contêineres pré-criados com as extensões de linguagem, mas você pode criar um com base nos contêineres de SQL Server usando [um modelo disponível no GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-As Extensões de Linguagem e os [Serviços de Machine Learning](../advanced-analytics/index.yml) são instalados por padrão em Clusters de Big Data do SQL Server. Se você usar Clusters de Big Data, não precisará seguir as etapas neste artigo. Para obter mais informações, confira [Usar Serviços de Machine Learning (Python e R) em Clusters de Big Data](../big-data-cluster/machine-learning-services.md).
+As Extensões de Linguagem e os [Serviços de Machine Learning](../machine-learning/index.yml) são instalados por padrão em Clusters de Big Data do SQL Server. Se você usar Clusters de Big Data, não precisará seguir as etapas neste artigo. Para obter mais informações, confira [Usar Serviços de Machine Learning (Python e R) em Clusters de Big Data](../big-data-cluster/machine-learning-services.md).
 
 ## <a name="uninstall-preview-version"></a>Desinstalar a versão prévia
 

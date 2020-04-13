@@ -2,11 +2,11 @@
 title: Estrutura SSVARIANT | Microsoft Docs
 description: Estrutura SSVARIANT no Driver do OLE DB para SQL Server
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: connectivity
 ms.topic: reference
 f1_keywords:
 - SSVARIANT
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 09ff4af7026ce75a8668db22910e550dc0c72857
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0583e1cdbf7f1e336698a794bef29f804a053318
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995164"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219245"
 ---
 # <a name="ssvariant-structure"></a>Estrutura SSVARIANT
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,6 +79,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |BinaryVal|Não existe um indicador de tipo OLE DB correspondente.|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|Dá suporte aos tipos de dados **binary** e **varbinary**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Inclui os seguintes membros:<br /><br /> *sActualLength* (**SHORT**) especifica o comprimento real dos dados para os quais *prgbBinaryVal* aponta.<br /><br /> *sMaxLength* (**SHORT**) especifica o comprimento máximo dos dados para os quais *prgbBinaryVal* aponta.<br /><br /> *prgbBinaryVal* (**BYTE** \*) Ponteiro para os dados binários.<br /><br /> Membro não usado: *dwReserved*.|  
 |UnknownType|UNUSED|UNUSED|UNUSED|UNUSED|  
 |BLOBType|UNUSED|UNUSED|UNUSED|UNUSED|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="see-also"></a>Consulte Também  
  [Tipos de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 4e1920e1-e7a4-4069-965e-3f6039a6099e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ecfbc108ef35928d08a36bc7a22c415cabece27e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df404c4c666b43bf9b2c7275196e5cb7ba74bb48
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943305"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665148"
 ---
 # <a name="for-xml-support-for-the-timestamp-data-type"></a>Suporte de FOR XML para o tipo de dados timestamp
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Na transformação FOR XML, valores de tipo **timestamp** são tratados como dados **varbinary(8)** e sempre serão codificados na base 64. O esquema XSD ou XDR, se solicitado, reflete esse tipo.  
   
 ```  

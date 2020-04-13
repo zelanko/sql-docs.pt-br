@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 91ba54ce9141cd0e891e442c5cb89aab02dec1f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 384e312ca4deb3266da403e796ea93e504c6ab1a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001725"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664996"
 ---
 # <a name="use-nested-for-xml-queries"></a>Usar consultas FOR XML aninhadas
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   O tipo de dados **xml** e a diretiva [TYPE em consultas FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md) permitem que o XML retornado por consultas FOR XML seja processado no servidor e no cliente.  
   
 ## <a name="processing-with-xml-type-variables"></a>Processando com variáveis de tipo xml  

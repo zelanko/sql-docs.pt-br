@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ba4e15016ca7b6ae3094b575ee87a1c7508b8aac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8613bed755158854851483faf3ea6af4fb60402
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68096948"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665350"
 ---
 # <a name="wildcard-components-and-content-validation"></a>Componentes curinga e validação de conteúdo
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Componentes curinga são usados para aumentar a flexibilidade do que é permitido aparecer em um modelo de conteúdo. Esses componentes têm suporte na linguagem XSD das seguintes maneiras:  
   
 -   Componentes curinga de elemento. Eles são representados pelo elemento **\<xsd:any>** .  

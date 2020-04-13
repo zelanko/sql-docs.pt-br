@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e67e7f0d764a35dab94e26a70b7af39dfd23dae2
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 619fddade48e56c28995b193776e6d13f31918ac
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402644"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809720"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>Ferramentas de DevOps do SSIS (SQL Server Integration Services) (versão prévia)
 
@@ -172,7 +172,7 @@ Confira os detalhes de como [definir a configuração do JSON](#define-configura
 
 Caminho do arquivo JSON de configuração do catálogo do SSIS. Essa propriedade só é visível ao selecionar "Caminho do arquivo" como origem do arquivo de configuração.
 
-Para usar [variáveis de pipeline](https://docs.microsoft.comazure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch) no arquivo JSON de configuração, você precisa adicionar uma [Tarefa de Transformação de Arquivo](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) antes dessa tarefa para substituir valores de configuração por variáveis de pipeline. Para obter mais informações, confira [Substituição de variável JSON](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution).
+Para usar [variáveis de pipeline](/azure/devops/pipelines/process/variables) no arquivo JSON de configuração, você precisa adicionar uma [Tarefa de Transformação de Arquivo](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) antes dessa tarefa para substituir valores de configuração por variáveis de pipeline. Para obter mais informações, confira [Substituição de variável JSON](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution).
 
 #### <a name="inline-configuration-json"></a>JSON de configuração embutido
 

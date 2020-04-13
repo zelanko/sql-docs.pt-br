@@ -1,21 +1,20 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) – SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/19/2020
+ms.date: 04/03/2020
 ms.prod: sql
-ms.reviewer: dphansen
 ms.technology: language-extensions
 ms.topic: language-reference
-author: nelgson
-ms.author: negust
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65f805c0d2467f3b4301ed1d237284cb61224b97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76d14fac74d806427f67eadaea3bb5363b17d88a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77520889"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664210"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,7 +22,7 @@ ms.locfileid: "77520889"
 Registra as extensões de linguagem externa no banco de dados com base no fluxo de bytes ou no caminho de arquivo especificado. Essa instrução funciona como um mecanismo genérico para o administrador de banco de dados registrar novas extensões de linguagens externas em qualquer plataforma de sistema operacional compatível com o SQL Server. Para saber mais, confira [Extensões de Linguagem](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 
 > [!NOTE]
-> No momento, apenas o **Java** é compatível como linguagem externa. **R** e **Python** são nomes reservados, e nenhuma linguagem externa pode ser criada com esses nomes específicos. Para saber mais sobre como usar **R** e **Python**, confira [Serviços de Machine Learning do SQL Server](https://docs.microsoft.com/sql/advanced-analytics/).
+> No momento, apenas o **Java** é compatível como linguagem externa. **R** e **Python** são nomes reservados, e nenhuma linguagem externa pode ser criada com esses nomes específicos. Para saber mais sobre como usar **R** e **Python**, confira [Serviços de Machine Learning do SQL Server](https://docs.microsoft.com/sql/machine-learning/).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -106,10 +105,6 @@ Isso permite uma possibilidade de fornecer um conjunto de variáveis de ambiente
 **platform**
 
 Esse parâmetro é necessário para cenários de sistema operacional híbrido. Em uma arquitetura híbrida, a linguagem precisa ser registrada uma vez por plataforma. O nome da plataforma e da linguagem será a chave exclusiva por linguagem externa. Se nenhuma plataforma for especificada, o sistema operacional atual será considerado.
-
-## <a name="remarks"></a>Comentários
-
-Atualmente, não há suporte para **PARAMETERS** e **ENVIRONMENT_VARIABLES**.
 
 ## <a name="permissions"></a>Permissões
 

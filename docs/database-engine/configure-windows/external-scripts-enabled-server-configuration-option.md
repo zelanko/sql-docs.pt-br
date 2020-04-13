@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3f47352cc82ac831ebcd64548baa24423490094f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 14e3d788034fad9e26f8283e5155d29286ad7360
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72006051"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664297"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>Opção de configuração de servidor External Scripts Enabled
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ RECONFIGURE WITH OVERRIDE;
 
 Você deve reiniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para efetivar a alteração.
 
-Para obter mais informações, consulte [Configurar o SQL Server Machine Learning](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
+Para obter mais informações, consulte [Configurar o SQL Server Machine Learning](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
 
 ## <a name="see-also"></a>Confira também
 
@@ -63,4 +63,4 @@ Para obter mais informações, consulte [Configurar o SQL Server Machine Learnin
 
 [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-[Serviços de Machine Learning do SQL Server](../../advanced-analytics/r/sql-server-r-services.md)
+[Serviços de Machine Learning do SQL Server](../../machine-learning/index.yml)

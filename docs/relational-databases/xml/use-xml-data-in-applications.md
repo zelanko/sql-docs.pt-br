@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 998504b936681c5e20d185ab17b787630a6ae2f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fa573c4d824d8a1f419335fa0c7b3d451b80f96e
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68039155"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664981"
 ---
 # <a name="use-xml-data-in-applications"></a>Usar dados XML em aplicativos
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Este tópico descreve as opções disponíveis para trabalhar com o tipo de dados **xml** em seu aplicativo. O tópico contém informações sobre o seguinte:  
   
 -   Tratando XML de uma coluna de tipo **xml** usando o ADO e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  

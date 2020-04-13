@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5b98f2283cfb9d89277ad97ffc7a883e43a42b4f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9bef65845acd2e81cfea0910e81443d7e4bc390f
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042524"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80891147"
 ---
 # <a name="spatial-types---geography"></a>Tipos espaciais – geografia
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68042524"
 ### <a name="a-showing-how-to-add-and-query-geography-data"></a>a. Mostrando como adicionar e consultar dados de geografia  
  Os exemplos a seguir mostram como adicionar e consultar dados de geografia. O primeiro exemplo cria uma tabela com uma coluna de identidade e uma coluna de `geography`, a `GeogCol1`. Uma terceira coluna renderiza a coluna de `geography` em sua representação WKT (Well-Known Text) do Open Geospatial Consortium (OGC) e usa o método `STAsText()` . Em seguida, duas linhas são inseridas: uma linha que contém uma instância `LineString` de `geography`e uma linha que contém uma instância de `Polygon` .  
   
-```  
+```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  
@@ -64,7 +64,7 @@ GO
 ### <a name="b-returning-the-intersection-of-two-geography-instances"></a>B. Retornando a interseção de duas instâncias de geografia  
  O exemplo a seguir usa o método `STIntersection()` para retornar os pontos onde as duas instâncias `geography` se cruzam.  
   
-```  
+```sql  
 DECLARE @geog1 geography;  
 DECLARE @geog2 geography;  
 DECLARE @result geography;  
@@ -78,7 +78,7 @@ SELECT @result.STAsText();
 ### <a name="c-using-geography-in-a-computed-column"></a>C. Usando geografia em uma coluna computada  
  O exemplo a seguir cria uma tabela com uma coluna computada persistente usando um tipo de **geografia**.  
   
-```  
+```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  
@@ -88,7 +88,7 @@ CREATE TABLE SpatialTable
     locationId int IDENTITY(1,1),  
     location geography,  
     deliveryArea as location.STBuffer(10) persisted  
-)  
+);  
 ```  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa53478ba653961d255ee3a03038d44fcbd15f3e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7fdf9bda5ddf8f3fdd0012c8f8fffced6f8f9b19
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943255"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665310"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Suporte a FOR XML para o tipo de dados xml
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Se uma consulta FOR XML especificar uma coluna de tipo **xml** na cláusula SELECT, os valores da coluna serão mapeados como elementos no XML retornado, independentemente da diretiva ELEMENTS estar especificada. Qualquer declaração XML na coluna de tipo **xml** não é serializada.  
   
  Por exemplo, a consulta a seguir recupera informações de contato do cliente, tais como as colunas `BusinessEntityID`, `FirstName`e `LastName` , e os números de telefone da coluna `AdditionalContactInfo` de tipo **xml** .  

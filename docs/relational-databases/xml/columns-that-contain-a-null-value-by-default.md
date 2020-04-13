@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0fb8b86daedb73f62396e1dc13a06a5a4e2a7bb3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f7672d59b2355c0733a5e26da6217fbabf729c6a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113076"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664706"
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>Colunas que contêm um valor nulo por padrão
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Por padrão, um valor nulo em uma coluna é mapeado para a ausência do atributo, nó ou elemento. Esse comportamento padrão pode ser substituído com o uso da frase de palavra-chave ELEMENTS XSINIL. Essa frase solicita o XML centrado em elemento. Isso significa que os valores nulos são explicitamente indicados nos resultados retornados. Esses elementos não terão nenhum valor.
 

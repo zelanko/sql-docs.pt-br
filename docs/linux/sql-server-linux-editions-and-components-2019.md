@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 68ad6f8f3c56b094b5d14d369452d78237b6dcee
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: b1ebc05fcae4bbf6065b0821101618b7eb64f541
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402665"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002779"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Edições e recursos compatíveis do SQL Server 2019 no Linux
 
@@ -152,7 +152,7 @@ A Developer Edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Mascaramento de dados dinâmicos|Sim|Sim|Sim|Sim|   
 |Auditoria básica|Sim|Sim|Sim|Sim| 
 |Auditoria refinada|Sim|Sim|Sim|Sim| 
-|Criptografia transparente do banco de dados|Sim|Não|Não|Não|   
+|Criptografia transparente do banco de dados|Sim|Sim|Não|Não|   
 |Funções definidas pelo usuário|Sim|Sim|Sim|Sim| 
 |Bancos de dados independentes|Sim|Sim|Sim|Sim| 
 |Criptografia para backups|Sim|Sim|Não|Não|  
@@ -227,7 +227,6 @@ Os seguintes recursos e serviços não estão disponíveis no SQL Server 2019 no
 | **SQL Server Agent** |  Subsistemas: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alertas |
 | &nbsp; | Backup Gerenciado |
-| &nbsp; | Administração Multisservidor usando MSX/TSX |
 | **Alta disponibilidade** | Espelhamento de banco de dados  |
 | **Segurança** | Gerenciamento Extensível de Chaves |
 | &nbsp; | Autenticação do AD para servidores vinculados | 
