@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50c2d3aba84ce537e34b5c2bf5948c6ee84ac359
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd7bcfd87f6ab51f2692d9d1a9ec11d9740aaab9
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165221"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809857"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Como criar uma tabela temporal com controle de versão do sistema
 
@@ -52,7 +52,7 @@ WITH (SYSTEM_VERSIONING = ON);
 - Supõe-se que as colunas **PERIOD** sempre são não anuláveis, mesmo se a nulidade não for especificada. Se as colunas **PERIOD** forem definidas explicitamente como anuláveis, a instrução **CREATE TABLE** falhará.
 - A tabela de histórico deve sempre ser alinhada ao esquema com a tabela atual ou temporal, em termos de número de colunas, nomes de coluna, ordenação e tipos de dados.
 - Uma tabela de histórico anônimo é criada automaticamente no mesmo esquema que a tabela temporal ou atual.
-- O nome da tabela de histórico anônimo tem o seguinte formato: *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* . O sufixo é opcional e será adicionado somente se a primeira parte do nome da tabela não for exclusivo.
+- O nome da tabela de histórico anônimo tem o seguinte formato: *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[sufixo]* . O sufixo é opcional e será adicionado somente se a primeira parte do nome da tabela não for exclusivo.
 - A tabela de histórico é criada como uma tabela rowstore. Se possível, a compactação de PÁGINA será aplicada, caso contrário, a tabela de histórico será descompactada. Por exemplo, algumas configurações de tabela, como as colunas ESPARSAS, não permitem a compactação.
 - Um índice clusterizado padrão é criado para a tabela de histórico com um nome gerado automaticamente no formato *IX_<history_table_name>* . O índice clusterizado contém as colunas **PERIOD** (início, fim).
 - Para criar a tabela atual como uma tabela com otimização de memória, consulte [Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md).
@@ -164,9 +164,8 @@ ALTER TABLE InsurancePolicy
 
 - A adição de colunas não nulas com padrões à tabela com dados existente é uma operação de tamanho de dados (size of data operation) em todas as edições com exceção do SQL Server Enterprise Edition (em que é uma operação de metadados). Com uma tabela de histórico grande e com dados existente no SQL Server Standard Edition, a adição de uma coluna não nula pode ser uma operação dispendiosa.
 - As restrições para colunas com período de início e período de término devem ser escolhidas com cuidado:
-
   - O padrão para a coluna inicial especifica a partir de qual ponto no tempo você considera as linhas existentes válidas. Isso não pode ser especificado como um ponto de data/hora no futuro.
-  - A hora de término deve ser especificada como o valor máximo para uma determinada precisão de datetime2
+  - A hora de término precisa ser especificada como o valor máximo para determinada precisão de datetime2, por exemplo, `9999-12-31 23:59:59` ou `9999-12-31 23:59:59.9999999`.
 - A adição de um período executará a verificação de consistência dos dados na tabela atual a fim de se certificar de que os padrões para colunas do período são válidos.
 - Quando uma tabela de histórico existente é especificada ao habilitar **SYSTEM_VERSIONING**, uma verificação de consistência de dados temporais é executada na tabela atual e de histórico. Ela poderá ser ignorada se você especificar **DATA_CONSISTENCY_CHECK = OFF** como um parâmetro adicional.
 

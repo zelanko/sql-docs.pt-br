@@ -1,7 +1,7 @@
 ---
 title: Monitorando o desempenho usando o Repositório de Consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 04/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44d90d6f77433c3dceba4d3bf16de10d6eb70c36
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448180"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012412"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitorar o desempenho usando o Repositório de Consultas
 
@@ -34,9 +34,9 @@ Para obter informações sobre como operar o Repositório de Consultas no [!INCL
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Habilitando o Repositório de Consultas
 
- O repositório de consultas não está ativo para novos bancos de dados por padrão.
+ O Repositório de Consultas não está habilitado por padrão em novos bancos de dados do SQL Server e do Azure Synapse Analytics (SQL DW) e está habilitado por padrão em novos bancos de dados do Banco de Dados SQL do Azure.
 
-## <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Use a Página do Repositório de Consultas em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Use a Página do Repositório de Consultas em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
 1. No Pesquisador de Objetos, clique com o botão direito do mouse em um banco de dados e clique em **Propriedades**.
 
@@ -47,7 +47,7 @@ Para obter informações sobre como operar o Repositório de Consultas no [!INCL
 
 3. Na caixa **Modo de Operação (Solicitado)** , selecione **Leitura Gravação**.
 
-## <a name="use-transact-sql-statements"></a>Usar Instruções Transact-SQL
+### <a name="use-transact-sql-statements"></a>Usar Instruções Transact-SQL
 
 Use a instrução **ALTER DATABASE** para habilitar o repositório de consultas para um determinado banco de dados. Por exemplo:
 

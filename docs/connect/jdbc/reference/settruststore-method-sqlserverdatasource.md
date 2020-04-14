@@ -15,12 +15,12 @@ apitype: Assembly
 ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3d229e9e9c4758f43a090c1481d751560d072da
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 30af86d585602c730dfe49e1a5f6b557b065f6cc
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901912"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219148"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>Método setTrustStore (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "80901912"
 public void setTrustStore(java.lang.String trustStore)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *trustStore*  
   
  Uma **Cadeia de Caracteres** que contém o caminho (inclusive o nome de arquivo) para o arquivo trustStore do certificado.  
@@ -50,7 +50,7 @@ public void setTrustStore(java.lang.String trustStore)
   
  Para obter mais informações, consulte a documentação da interface do SunX509 TrustManager no site da Sun Microsystems.  
   
- Se a propriedade trustStore for definida como uma cadeia de caracteres ou uma cadeia de caracteres vazia "", o driver usará esse valor para localizar o arquivo trustStore para validar o certificado SSL do servidor.  
+ Se a propriedade trustStore for definida como uma cadeia de caracteres ou uma cadeia de caracteres vazia "", o driver usará esse valor para encontrar o arquivo trustStore a fim de validar o certificado TLS/SSL do servidor.  
   
  Uma propriedade trustStorePassword pode ser especificada junto com a propriedade trustStore e seu valor é usado para abrir o arquivo trustStore. Para obter mais informações, veja [setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md).  
   

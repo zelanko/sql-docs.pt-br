@@ -1,6 +1,6 @@
 ---
 title: DATEADD (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Referência de Transact-SQL para a função DATEADD. Essa função retorna uma data que foi modificada pela parte de data especificada.
 ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -26,12 +26,12 @@ ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed302e9361e46b8403cea168201fc6cadaa17986
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2915eb998c4eb9ae3e7efd79f71d9552462bcdb9
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026187"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517554"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

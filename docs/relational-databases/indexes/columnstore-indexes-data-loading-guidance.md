@@ -11,12 +11,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a91cffde531d7d72564df6935a48aff91dae8187
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286670"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550218"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Índices columnstore – diretrizes de carregamento de dados
 
@@ -47,7 +47,7 @@ O carregamento em tem estas otimizações de desempenho internas:
 
 -   **Registro em log reduzido:** Os dados carregados diretamente em grupos de linhas compactadas levam a uma redução significativa no tamanho do log. Por exemplo, se os dados tiverem sido compactados em 10 vezes, o log de transações correspondente será de aproximadamente 10 vezes menor sem a necessidade de um modelo de recuperação TABLOCK ou bulk-logged/simples. Todos os dados que vão para um rowgroup delta são totalmente registrados. Isso inclui qualquer tamanho de lote com menos de 102.400 linhas.  A melhor prática é usar o batchsize > = 102400. Como não há um TABLOCK necessário, você pode carregar os dados em paralelo. 
 
--   **Log mínimo:** Você poderá obter mais redução no registro em log se seguir os pré-requisitos para o [registro em log mínimo](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md). No entanto, ao contrário do carregamento de dados em um rowstore, o TABLOCK leva a um bloqueio X na tabela em vez de um bloqueio BU (Atualização em Massa) e, portanto, o carregamento de dados paralelo não pode ser feito. Para obter mais informações sobre o bloqueio, confira [Bloqueio e controle de versão de linha[(../sql-server-transaction-locking-and-row-versioning-guide.md).
+-   **Log mínimo:** Você poderá obter mais redução no registro em log se seguir os pré-requisitos para o [registro em log mínimo](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md). No entanto, ao contrário do carregamento de dados em um rowstore, o TABLOCK leva a um bloqueio X na tabela em vez de um bloqueio BU (Atualização em Massa) e, portanto, o carregamento de dados paralelo não pode ser feito. Para obter mais informações sobre o bloqueio, confira [Bloqueio e controle de versão de linha](../sql-server-transaction-locking-and-row-versioning-guide.md).
 
 -   **Otimização de bloqueio:** O bloqueio X em um grupo de linhas é adquirido automaticamente ao carregar dados em um grupo de linhas compactado. No entanto, durante o carregamento em massa em um rowgroup delta, um bloqueio X é adquirido em um rowgroup, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda bloqueia PAGE/EXTENT porque o bloqueio do rowgroup X não faz parte da hierarquia de bloqueios.  
   
@@ -97,7 +97,7 @@ SELECT <list of columns> FROM <Staging Table>
 -   **Otimização de log:** Registro em log reduzido quando os dados são carregados em um rowgroup compactado.   
 -   **Otimização de bloqueio:** Ao carregar no rowgroup compactado, o bloqueio X no rowgroup é adquirido. No entanto, com o rowgroup delta, um bloqueio X é adquirido em um rowgroup, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda bloqueia os bloqueios PAGE/EXTENT porque o bloqueio do rowgroup X não faz parte da hierarquia de bloqueios.  
   
- Se você tiver um ou mais índices não clusterizados, não haverá otimização de registro nem bloqueio para o índice em si, mas as otimizações no índice columnstore clusterizado, conforme descrito acima, permanecerão.  
+ Se você tiver um ou mais índices não clusterizados, não haverá otimização de log nem de bloqueio para o índice em si, mas as otimizações no índice columnstore clusterizado, conforme descrito acima, permanecerão.  
   
 ## <a name="what-is-trickle-insert"></a>O que é a inserção de fluxo?
 

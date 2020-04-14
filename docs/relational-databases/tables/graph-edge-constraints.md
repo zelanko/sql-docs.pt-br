@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ea69255ecd92b8df7fbaa9199e948ae171bfaebb
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70873886"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625559"
 ---
 # <a name="edge-constraints"></a>Restrições do Microsoft Edge
 
@@ -50,7 +50,7 @@ Considere que você tem os nós `Product` e `Customer` em seu gráfico e você u
 Criar uma restrição de borda não cria automaticamente um índice correspondente nas colunas `$from_id` e `$to_id` da tabela de borda. Criar manualmente um índice em um par `$from_id`, `$to_id` é recomendado se você tem consultas de pesquisa de ponto ou carga de trabalho de OLTP.
 
 ### <a name="on-delete-referential-actions-on-edge-constraints"></a>Ações referenciais ON DELETE em restrições de borda
-As ações em cascata em uma restrição de borda permite que os usuários definam as ações que o mecanismo de banco de dados usa quando um usuário exclui os nós, que a borda especificada conecta. As ações referenciais a seguir podem ser definidas:  
+As ações em cascata em uma restrição de borda permitem que os usuários definam as ações que o mecanismo de banco de dados usa quando um usuário exclui os nós que a borda especificada conecta. As ações referenciais a seguir podem ser definidas:  
 *NO ACTION*   
 O mecanismo de banco de dados gera um erro quando você tenta excluir um nó que tem bordas de conexão.  
 

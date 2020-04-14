@@ -1,6 +1,6 @@
 ---
 title: FORMAT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Referência de Transact-SQL para a função FORMAT.
 ms.date: 08/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +18,12 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc64f97123a14d971a531b489eeddbec42f3931b
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155802"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517638"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 

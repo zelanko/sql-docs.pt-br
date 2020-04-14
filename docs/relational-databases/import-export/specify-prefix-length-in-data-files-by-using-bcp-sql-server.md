@@ -1,5 +1,6 @@
 ---
 title: Especificar o tamanho do prefixo em arquivos de dados com o bcp
+description: Este artigo descreve o campo de prefixo, que codifica o tamanho de um campo para fornecer armazenamento de arquivos compactados para exportação em massa em formato nativo para um arquivo de dados.
 ms.date: 07/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -16,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 689206ce4462b4befeded788fc6e679af6215a59
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d8b55e88d1264ce8204083fd260eb427dc428e7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056367"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980502"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>Especificar o tamanho do prefixo em arquivos de dados usando o bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

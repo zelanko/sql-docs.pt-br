@@ -1,5 +1,6 @@
 ---
 title: Importar e exportar dados em massa com o bcp
+description: Use o bcp para exportar dados de qualquer lugar em um banco de dados do SQL Server no qual a instrução SELECT funcione. Exporte dados em massa de uma tabela ou de uma consulta e importe dados em massa de um arquivo.
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.technology: data-movement
@@ -13,15 +14,15 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.reviewer: ''
-ms.custom: seo-lt-2019
 ms.date: 09/28/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 521ef35d9d06244c36395e96ab681a21abffe6ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: c8e3309cc1e0e4c36960fb2a4e8c9432188c0076
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055992"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980048"
 ---
 # <a name="import-and-export-bulk-data-using-bcp-sql-server"></a>Importar e exportar dados em massa usando o bcp (SQL Server)
 

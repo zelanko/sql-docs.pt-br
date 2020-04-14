@@ -1,6 +1,6 @@
 ---
 title: SUBSTRING (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Referência de Transact-SQL para a função SUBSTRING. Essa função retorna uma parte de uma expressão de caractere, binário, texto ou imagem especificada.
 ms.date: 10/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -24,12 +24,12 @@ ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68618e0dbafd152c8bdba71f0abf4b7c0b99bdac
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117675"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517090"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,10 +87,10 @@ WHERE database_id < 5;
 
 |name |Inicial |ThirdAndFourthCharacters|
 |---|--|--|
-|master  |m  |st |
-|tempdb  |t  |mp |
-|modelo   |m  |de |
-|msdb    |m  |db |
+|master    |m    |st |
+|tempdb    |t    |mp |
+|modelo    |m    |de |
+|msdb    |m    |db |
 
 
   

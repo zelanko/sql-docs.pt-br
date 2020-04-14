@@ -25,12 +25,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28329315313f6f08f84aa2d8944eef55d26fdd46
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75548279"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80873162"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -192,7 +192,7 @@ DELETE
  TOP não pode ser usado em uma DELETE instrução para exibições particionadas.  
   
 ## <a name="locking-behavior"></a>Comportamento de bloqueio  
- Por padrão, uma instrução DELETE sempre adquire um bloqueio exclusivo (X) na tabela que modifica e mantém esse bloqueio até que a transação seja concluída. Com um bloqueio exclusivo (X), nenhuma outra transação pode modificar os dados; operações de leitura podem ser realizadas apenas com o uso da dica NOLOCK ou nível de isolamento de leitura não confirmada. Você pode especificar dicas de tabela para substituir esse comportamento padrão durante a instrução DELETE especificando outro método de bloqueio; entretanto, é recomendável que as dicas só sejam usadas como último recurso por desenvolvedores experientes e administradores de bancos de dados. Para obter mais informações, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ Por padrão, uma instrução DELETE sempre adquire um bloqueio exclusivo (IX) de intenção no objeto de tabela que ela modifica e mantém esse bloqueio até que a transação seja concluída. Com um bloqueio exclusivo (IX) de intenção, nenhuma outra transação pode modificar os dados; as operações de leitura podem ser realizadas apenas com o uso da dica NOLOCK ou no nível de isolamento de leitura não confirmada. Você pode especificar dicas de tabela para substituir esse comportamento padrão durante a instrução DELETE especificando outro método de bloqueio; entretanto, é recomendável que as dicas só sejam usadas como último recurso por desenvolvedores experientes e administradores de bancos de dados. Para obter mais informações, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Quando linhas são excluídas de um heap, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode usar bloqueio de linha ou página para a operação. Como resultado, as páginas que ficaram vazias pela operação de exclusão permanecem alocadas no heap. Quando páginas vazias não são desalocadas, o espaço associado não pode ser usado novamente por outros objetos do banco de dados.  
   
@@ -200,7 +200,7 @@ DELETE
   
 -   Especifique a dica TABLOCK na instrução DELETE. Usar a dica TABLOCK faz com que a operação de exclusão use um bloqueio exclusivo na tabela em vez de um bloqueio de linha ou página. Isso permite que as páginas sejam desalocadas. Para obter mais informações sobre a dica TABLOCK, veja [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
--   Use TRUNCATE TABLE se todas as linhas forem excluídas da tabela.  
+-   Use `TRUNCATE TABLE` se todas as linhas forem excluídas da tabela.  
   
 -   Crie um índice clusterizado no heap antes de excluir as linhas. Você pode cancelar o índice clusterizado depois que as linhas forem excluídas. Esse método consome mais tempo do que os métodos anteriores e usa mais recursos temporários.  
   
@@ -208,14 +208,14 @@ DELETE
 >  Páginas vazias podem ser removidas de um heap a qualquer momento usando a instrução `ALTER TABLE <table_name> REBUILD`.  
   
 ## <a name="logging-behavior"></a>Comportamento de log  
- A DELETE instrução sempre é registrada em log completamente.  
+A DELETE instrução sempre é registrada em log completamente.  
   
 ## <a name="security"></a>Segurança  
   
 ### <a name="permissions"></a>Permissões  
- São necessárias permissões DELETE na tabela de destino. Também serão necessárias permissões SELECT se a instrução tiver uma cláusula WHERE.  
+ São necessárias permissões `DELETE` na tabela alvo. Também serão necessárias permissões `SELECT` se a instrução tiver uma cláusula WHERE.  
   
- As permissões DELETE assumem como padrão os membros da função de servidor fixa **sysadmin**, as funções de banco de dados fixa **db_owner** e **db_datawriter** e o proprietário da tabela. Os membros das funções **sysadmin**, **db_owner** e **db_securityadmin** e o proprietário da tabela podem transferir permissões para outros usuários.  
+ As permissões DELETE usam como padrão os membros da função de servidor fixa `sysadmin`, as funções de banco de dados fixas `db_owner` e `db_datawriter` e o proprietário da tabela. Os membros das funções `sysadmin`, `db_owner` e `db_securityadmin`, bem como o proprietário da tabela, podem transferir permissões para outros usuários.  
   
 ## <a name="examples"></a>Exemplos  
   

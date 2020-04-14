@@ -1,5 +1,6 @@
 ---
 title: Tabela de exemplo HumanResources.myTeam (SQL Server) | Microsoft Docs
+description: Para executar exemplos de código para importar e exportar dados em massa no SQL Server, você precisará criar uma tabela de teste chamada myTeam no esquema HumanResources.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a95168f9c932b187a77d0d8e97511fd0070ea8ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73ec7e3d639d49fd12a0c0b6708278702a423f0e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68035677"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980441"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Tabela de exemplo HumanResources.myTeam (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68035677"
   
  A tabela **myTeam** contém as colunas a seguir.  
   
-|Coluna|Tipo de dados|Nulidade|DESCRIÇÃO|  
+|Coluna|Tipo de dados|Nulidade|Descrição|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|Não nulo|Chave primária para as linhas. A ID de funcionário de um membro da minha equipe.|  
 |**Nome**|**nvarchar(50)**|Não nulo|Nome de um membro de myTeam.|  

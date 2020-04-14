@@ -17,12 +17,12 @@ ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c7fed197491d26c4aaad4b4d09ba480d2d7eb82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 445453f6be42c6015fc3b6728eb12ee9a78f0ef6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123596"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928171"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Funções determinísticas e não determinísticas
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68123596"
 ## <a name="built-in-function-determinism"></a>Determinismo de função interna  
  Você não pode influenciar o determinismo de nenhuma função interna. Cada função interna é determinística ou não determinística com base no modo como a função é implementada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por exemplo, a especificação de uma cláusula ORDER BY em uma consulta não altera o determinismo de uma função usada nessa consulta.  
   
- Todas as funções internas de cadeia de caracteres são determinísticas. Para obter uma lista dessas funções, consulte [Funções de sequência de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md).  
+ Todas as funções internas de cadeia de caracteres são determinísticas, exceto [FORMAT](../../t-sql/functions/format-transact-sql.md). Para obter uma lista dessas funções, consulte [Funções de sequência de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md).  
   
  As seguintes funções internas pertencentes a categorias de funções internas que não sejam de cadeia de caracteres sempre são determinísticas.  
   

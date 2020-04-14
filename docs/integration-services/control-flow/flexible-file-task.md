@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 83ef614593641b762a628838354a6a3bef9dfadd
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72807416"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607851"
 ---
 # <a name="flexible-file-task"></a>Tarefa Arquivo Flexível
 
@@ -44,18 +44,19 @@ Para a operação **Copy**, as seguintes propriedades estão disponíveis.
 - **SourceConnectionType:** especifica o tipo do gerenciador de conexões de origem.
 - **SourceConnection:** especifica o gerenciador de conexões de origem.
 - **SourceFolderPath:** especifica o caminho da pasta de origem.
-- **SourceFileName:** especifica o nome do arquivo de origem. Se deixada em branco, a pasta de origem será copiada.
+- **SourceFileName:** especifica o nome do arquivo de origem. Se deixada em branco, a pasta de origem será copiada. Os seguintes curingas são permitidos no nome do arquivo de origem: `*` (corresponde a zero ou mais caracteres), `?` (corresponde a zero ou a um só caractere) e `^` (caractere de escape).
 - **SearchRecursively:** especifica se as subpastas devem ser copiadas de maneira recursiva.
 - **DestinationConnectionType:** especifica o tipo do gerenciador de conexões de destino.
 - **DestinationConnection:** especifica o gerenciador de conexões de destino.
 - **DestinationFolderPath:** especifica o caminho da pasta de destino.
-- **DestinationFileName:** especifica o nome do arquivo de destino.
+- **DestinationFileName:** especifica o nome do arquivo de destino. Se esse campo for deixado em branco, os nomes do arquivo de origem serão usados.
 
 Para a operação **Delete**, as seguintes propriedades estão disponíveis.
 - **ConnectionType:** especifica o tipo do gerenciador de conexões.
 - **Connection:** especifica o gerenciador de conexões.
 - **FolderPath:** especifica o caminho da pasta.
-- **FileName:** especifica o nome do arquivo. Se deixada em branco, a pasta será excluída. No Armazenamento de Blobs do Azure, não há suporte para a exclusão de pastas.
+- **FileName:** especifica o nome do arquivo. Se deixada em branco, a pasta será excluída. No Armazenamento de Blobs do Azure, não há suporte para a exclusão de pastas. Os seguintes curingas são permitidos no nome do arquivo: `*` (corresponde a zero ou mais caracteres), `?` (corresponde a zero ou a um só caractere) e `^` (caractere de escape).
+- **DeleteRecursively:** especifica se os arquivos serão excluídos recursivamente.
 
 ***Observações sobre a configuração de permissão da entidade de serviço***
 

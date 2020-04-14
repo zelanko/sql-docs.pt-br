@@ -15,12 +15,12 @@ apitype: Assembly
 ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 84499024a5e4dbd158c54624a4ae1c03af9832b1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: da0aa987f1ec773e2f61e738bc4045136c64859a
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922383"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219226"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>Método setEncrypt (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,17 +34,17 @@ ms.locfileid: "80922383"
 public void setEncypt(boolean encrypt)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *encrypt*  
   
- **true** se a criptografia de protocolo SSL estiver habilitada entre o cliente e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Caso contrário, **false**.  
+ **true** se a criptografia TLS, anteriormente conhecida como SSL, estiver habilitada entre o cliente e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Caso contrário, **false**.  
   
 ## <a name="remarks"></a>Comentários  
- Se a propriedade de criptografia estiver definida como **true**, o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] garantirá que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] use a criptografia SSL para todos os dados enviados entre o cliente e o servidor se o servidor tiver um certificado instalado. O valor padrão é **false**.  
+ Se a propriedade de criptografia estiver definida como **true**, o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] verificará se o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa a criptografia TLS para todos os dados enviados entre o cliente e o servidor se o servidor tiver um certificado instalado. O valor padrão é **false**.  
   
- O driver JDBC detecta que a Máquina Virtual Java (JVM) está em execução ao tentar estabelecer um handshake SSL.  
+ O driver JDBC detecta que a JVM (Máquina Virtual Java) está em execução ao tentar estabelecer um handshake TLS.  
   
- Se a propriedade de criptografia for definida como **true**, o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] usará o provedor de segurança JSSE padrão da JVM para negociar a criptografia SSL com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O provedor de segurança padrão pode não dar suporte a todos os recursos necessários para negociar a criptografia SSL com êxito. Por exemplo, o provedor de segurança padrão pode não ser compatível com o tamanho da chave pública RSA usada no certificado SSL do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Nesse caso, o provedor de segurança padrão pode gerar um erro que fará com que o driver JDBC encerre a conexão. Para resolver esse problema, siga um destes procedimentos:  
+ Se a propriedade de criptografia for definida como **true**, o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] usará o provedor de segurança JSSE padrão da JVM para negociar a criptografia TLS com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O provedor de segurança padrão pode não dar suporte a todos os recursos necessários para negociar a criptografia TLS com êxito. Por exemplo, o provedor de segurança padrão pode não dar suporte ao tamanho da chave pública RSA usada no certificado TLS/SSL do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Nesse caso, o provedor de segurança padrão pode gerar um erro que fará com que o driver JDBC encerre a conexão. Para resolver esse problema, siga um destes procedimentos:  
   
 -   Configure o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com um certificado do servidor que tenha uma chave pública RSA menor  
   
@@ -52,7 +52,7 @@ public void setEncypt(boolean encrypt)
   
 -   Use uma JVM diferente  
   
- Se a propriedade de criptografia não for especificada nem estiver definida como **false**, o driver não exigirá que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dê suporte à criptografia SSL. Se a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não for configurada para forçar a criptografia SSL, será estabelecida uma conexão sem criptografia. Se a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for configurada para forçar a criptografia SSL, o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] habilitará a criptografia SSL automaticamente ao executar a JVM configurada adequadamente; caso contrário, a conexão será encerrada e o driver gerará um erro.  
+ Se a propriedade de criptografia não for especificada ou for definida como **false**, o driver não exigirá que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dê suporte à criptografia TLS. Se a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não for configurada para forçar a criptografia TLS, será estabelecida uma conexão sem criptografia. Se a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for configurada para forçar a criptografia TLS, o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] habilitará a criptografia TLS automaticamente na execução em uma JVM configurada corretamente; caso contrário, a conexão será encerrada e o driver produzirá um erro.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

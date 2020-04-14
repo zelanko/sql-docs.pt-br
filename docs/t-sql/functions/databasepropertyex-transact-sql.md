@@ -20,12 +20,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9384317f0e58e77a6bb51fe066458dcf956882ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 997d227c3c5a2ea493d96c4b55f5b42f8a8c9845
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448301"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531210"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], `DATABASEPROPERTYEX` requer 
 |IsTornPageDetectionEnabled|O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] detecta operações de E/S incompletas causadas por falhas de energia ou outros problemas no sistema.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada inválida<br /><br /> Tipo de dados base: **int**| 
 |IsVerifiedClone|O banco de dados é uma cópia somente de esquema e estatísticas de um banco de dados de usuário criado usando a opção WITH VERIFY_CLONEDB de DBCC CLONEDATABASE. Confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/help/3177838) para obter mais informações.|**Aplica-se ao**: Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada inválida<br /><br /> Tipo de dados base: **int**| 
 |IsXTPSupported|Indica se o banco de dados dá suporte a OLTP in-memory, ou seja, criação e uso de tabelas com otimização de memória e módulos compilados nativamente.<br /><br /> Específico ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported não depende da existência de um grupo de arquivos MEMORY_OPTIMIZED_DATA, que é necessário para a criação de objetos OLTP in-memory.|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada inválida, um erro ou não aplicável<br /><br /> Tipo de dados base: **int**|  
-|LastGoodCheckDbTime|A data e hora do último DBCC CHECKDB bem-sucedido executado no banco de dados especificado.<sup>1</sup> Se DBCC CHECKDB não tiver sido executado em um banco de dados, 1900-01-01 00:00:00.000 será retornado.|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] do SP2 em diante.</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] do CU9 em diante.</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] ou posterior.</br>Banco de Dados SQL do Azure.<br/><br/>Um valor datetime<br /><br /> NULL: Entrada inválida<br /><br /> Tipo de dados base: **datetime**| 
+|LastGoodCheckDbTime|A data e hora do último DBCC CHECKDB bem-sucedido executado no banco de dados especificado.<sup>1</sup> Se DBCC CHECKDB não tiver sido executado em um banco de dados, 1900-01-01 00:00:00.000 será retornado.|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] do SP2 em diante.</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] a partir da CU9.</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] ou posterior.</br>Banco de Dados SQL do Azure.<br/><br/>Um valor datetime<br /><br /> NULL: Entrada inválida<br /><br /> Tipo de dados base: **datetime**| 
 |LCID|O LCID (identificador de localidade) do Windows da ordenação.|Valor LCID (em formato decimal).<br /><br /> Tipo de dados base: **int**|  
 |MaxSizeInBytes|Tamanho máximo do banco de dados, em bytes.|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: O banco de dados não foi iniciado<br /><br /> Tipo de dados base: **bigint**|  
 |Recuperação|Modelo de recuperação de banco de dados|FULL: Modelo de recuperação completa<br /><br /> BULK_LOGGED: Modelo registrado em log em massa<br /><br /> SIMPLE: Modelo de recuperação simples<br /><br /> Tipo de dados base: **nvarchar(128)**|  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb926c0696f0e926f91297ee5b719bbafce3eda8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 91f71543b9fecd994cc2b951758caacd23e8ae1f
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909112"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219355"
 ---
 # <a name="tracing-driver-operation"></a>Rastreamento de operação do driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "80909112"
   
  A tabela a seguir descreve cada nível de log disponível para categorias de log públicas.  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |SEVERE|Indica uma falha séria e é o nível mais alto de log. No driver JDBC, este nível é usado para relatar erros e exceções.|  
 |WARNING|Indica um problema potencial.|  
@@ -53,21 +53,21 @@ ms.locfileid: "80909112"
   
  A tabela a seguir descreve cada nível de log disponível para as categorias de log internas.  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |SEVERE|Indica uma falha séria e é o nível mais alto de log. No driver JDBC, este nível é usado para relatar erros e exceções.|  
 |WARNING|Indica um problema potencial.|  
 |INFO|Fornece mensagens informativas.|  
 |FINE|Fornece informações de rastreamento que incluem criação e destruição básicas de objeto. Além disso, todas as exceções lançadas pelos métodos públicos.|  
-|FINER|Fornece informações de rastreamento detalhadas inclusive todas as entradas de método público e pontos de saída com tipos de dados de parâmetro associados e todas as propriedades públicas para classes públicas. Além disso, os parâmetros de entrada, os parâmetros de saída e o método retornam valores, exceto os tipos de valores retornados CLOB, BLOB, NCLOB, Reader, \<stream>.<br /><br /> As categorias de log a seguir existiam na versão 1.2 do driver JDBC e tinham o nível de log FINE: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA e [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Desde a versão 2.0, estes são atualizados para o nível FINER.|  
-|FINEST|Fornece informações de rastreamento altamente detalhadas. Este é o nível mais baixo de log.<br /><br /> As categorias de log a seguir existiam na versão 1.2 do driver JDBC e tinham o nível de log FINEST: TDS.DATA e TDS.TOKEN. Desde a versão 2.0, eles mantêm o nível de log FINEST.|  
+|FINER|Fornece informações de rastreamento detalhadas inclusive todas as entradas de método público e pontos de saída com tipos de dados de parâmetro associados e todas as propriedades públicas para classes públicas. Além disso, os parâmetros de entrada, os parâmetros de saída e o método retornam valores, exceto os tipos de valores retornados CLOB, BLOB, NCLOB, Reader, \<stream>.<br /><br /> As seguintes categorias de log existiam na versão 1.2 do JDBC Driver e tinham o nível de registros em log FINE: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA e [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Desde a versão 2.0, estes são atualizados para o nível FINER.|  
+|FINEST|Fornece informações de rastreamento altamente detalhadas. Este é o nível mais baixo de log.<br /><br /> As seguintes categorias de log existiam na versão 1.2 do JDBC Driver e tinham o nível de registros em log FINEST: TDS.DATA e TDS.TOKEN. Desde a versão 2.0, eles mantêm o nível de log FINEST.|  
 |OFF|Desliga o log.|  
 |ALL|Habilita log de todas as mensagens.|  
   
 ## <a name="logging-categories"></a>Categorias de log  
  Ao criar um objeto Logger, você deve dizer a ele sobre qual entidade ou categoria nomeada você está interessado em obter informações de log. O driver JDBC suporta as categorias de log públicas a seguir, que estão todas definidas no pacote do driver com.microsoft.sqlserver.jdbc.  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |Conexão|Registra em log mensagens na classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Os aplicativos podem definir o nível de log como FINER.|  
 |de|Registra em log mensagens na classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Os aplicativos podem definir o nível de log como FINER.|  
@@ -77,7 +77,7 @@ ms.locfileid: "80909112"
   
  A partir do Microsoft JDBC Driver versão 2.0, o driver também fornece o pacote com.microsoft.sqlserver.jdbc.internals, que inclui o suporte de log para as categorias de log internas a seguir.  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |AuthenticationJNI|Registra mensagens em log sobre problemas de autenticação integrada no Windows (quando a propriedade de conexão **authenticationScheme** está definida de maneira implícita ou explícita como **NativeAuthentication**).<br /><br /> Os aplicativos podem definir o nível de log como FINEST e FINE.|  
 |SQLServerConnection|Registra em log mensagens na classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Os aplicativos podem definir o nível de log como FINE e FINER.|  
@@ -89,7 +89,7 @@ ms.locfileid: "80909112"
 |XA|Registra mensagens para todas as transações XA na classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md). Os aplicativos podem definir o nível de log como FINE e FINER.|  
 |KerbAuthentication|Registra mensagens em log sobre a autenticação Kerberos tipo 4 (quando a propriedade de conexão **authenticationScheme** está definida como **JavaKerberos**). O aplicativo pode definir o nível de log como FINE ou FINER.|  
 |TDS.DATA|Registra mensagens que contêm a conversa no nível do protocolo TDS entre o driver e o SQL Server. O conteúdo detalhado de cada pacote TDS enviado e recebido é registrado em ASCII e hexadecimal. As credenciais de logon (nomes de usuários e senhas) não são registradas. Todos os outros dados são registrados.<br /><br /> Esta categoria cria mensagens muito detalhadas e detalhadas, e só poderá ser habilitada definindo o nível de registro como FINEST.|  
-|TDS.Channel|Esta categoria rastreia ações do canal de comunicação TCP com SQL Server. As mensagens registradas incluem abertura e fechamento de soquete, além de leituras e gravações. Elas também rastreiam mensagens relacionadas a estabelecer uma conexão de Protocolo SSL (SSL) com SQL Server.<br /><br /> Esta categoria só poderá ser habilitada definindo o nível de log como FINE, FINER ou FINEST.|  
+|TDS.Channel|Esta categoria rastreia ações do canal de comunicação TCP com SQL Server. As mensagens registradas incluem abertura e fechamento de soquete, além de leituras e gravações. Elas também rastreiam mensagens relacionadas ao estabelecimento de uma conexão TLS, anteriormente conhecido como SSL, com o SQL Server.<br /><br /> Esta categoria só poderá ser habilitada definindo o nível de log como FINE, FINER ou FINEST.|  
 |TDS.Writer|Esta categoria rastreia gravações no canal de TDS. Observe que somente o comprimento das gravações é rastreado, não o conteúdo. Esta categoria também rastreia problemas quando um sinal de atenção é enviado ao servidor para cancelar a execução de uma instrução.<br /><br /> Esta categoria só poderá ser habilitada definindo o nível de log como FINEST.|  
 |TDS.Reader|Esta categoria rastreia determinadas operações de leitura do canal de TDS no nível FINEST. No nível FINEST, o rastreamento pode ser detalhado. Nos níveis WARNING e SEVERE, esta categoria rastreia quando o driver recebe um protocolo TDS inválido do SQL Server antes de o driver fechar a conexão.<br /><br /> Esta categoria só poderá ser habilitada definindo o nível de log como FINER e FINEST.|  
 |TDS.Command|Esta categoria rastreia transições de estado de baixo nível e outras informações associadas à execução de comandos TDS, como execuções de instrução [!INCLUDE[tsql](../../includes/tsql-md.md)], buscas do cursor ResultSet, confirmações e assim por diante.<br /><br /> Esta categoria só poderá ser habilitada definindo o nível de log como FINEST.|  

@@ -1,5 +1,6 @@
 ---
 title: Arquivos de formato XML (SQL Server) | Microsoft Docs
+description: O SQL Server 2019 fornece um esquema XML que define a sintaxe para escrever arquivos de formato XML a serem usados para importar dados em massa para uma tabela do SQL Server.
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -15,18 +16,18 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 724898bb35df9126ba61b5ebac147a37f272effc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ad508056c5ba614b92e06ca6453ea87bc4ed730
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091429"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980363"
 ---
 # <a name="xml-format-files-sql-server"></a>Arquivos de formato XML (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece um esquema XML que define a sintaxe para escrever *arquivos de formato XML* a serem usados para importar dados em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Arquivos no formato XML devem aderir a este esquema que está definido no Schema Definition Language XML (XSDL). Os arquivos de formato XML só têm suporte quando as ferramentas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são instaladas junto com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- Você pode usar um arquivo no formato XML com um comando **bcp** , uma instrução BULK INSERT ou INSERT ... Instrução SELECT \* FROM OPENROWSET(BULK...). O comando **bcp** permite gerar automaticamente um arquivo no formato XML para uma tabela; para obter mais informações, consulte [bcp Utility](../../tools/bcp-utility.md).  
+ Você pode usar um arquivo no formato XML com um comando **bcp**, uma instrução BULK INSERT ou INSERT ... Instrução SELECT \* FROM OPENROWSET(BULK...). O comando **bcp** permite gerar automaticamente um arquivo no formato XML para uma tabela; para obter mais informações, consulte [bcp Utility](../../tools/bcp-utility.md).  
   
 > [!NOTE]  
 >  Há suporte a dois tipos de arquivos de formato de exportação e importação em massa: *arquivos de formato não XML* e *arquivos de formato XML*. Arquivos de formato XML fornecem uma alternativa flexível e poderosa para arquivos de formato não XML. Para obter informações sobre arquivos de formato não XML, veja [Arquivos de formato não XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
@@ -199,7 +200,7 @@ ms.locfileid: "68091429"
   
  Cada elemento \<FIELD> é independente dos outros. Um campo é descrito em termos dos seguintes atributos:  
   
-|Atributo FIELD|DESCRIÇÃO|Opcional /<br /><br /> Obrigatório|  
+|Atributo FIELD|Descrição|Opcional /<br /><br /> Obrigatório|  
 |---------------------|-----------------|------------------------------|  
 |ID **="** _fieldID_ **"**|Especifica o nome lógico do campo no arquivo de dados. A ID de um campo é a chave para fazer referência ao campo.<br /><br /> \<FIELD ID **="** _fieldID_ **"** /> é mapeado para \<COLUMN SOURCE **="** _fieldID_ **"** />|Obrigatório|  
 |xsi:type **="** _fieldType_ **"**|Essa é uma construção XML (usada como um atributo) que identifica o tipo da instância do elemento. O valor de *fieldType* determina de quais atributos opcionais (abaixo) você necessita em determinada instância.|Obrigatório (dependendo do tipo de dados)|  
@@ -252,7 +253,7 @@ ms.locfileid: "68091429"
   
  Um campo é mapeado para uma coluna na tabela de destino usando os seguintes atributos:  
   
-|Atributo COLUMN|DESCRIÇÃO|Opcional /<br /><br /> Obrigatório|  
+|Atributo COLUMN|Descrição|Opcional /<br /><br /> Obrigatório|  
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="** _fieldID_ **"**|Especifica a ID do campo que é mapeado para a coluna.<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** /> é mapeado para \<FIELD ID **="** _fieldID_ **"** />|Obrigatório|  
 |NAME = "*columnName*"|Especifica o nome da coluna no conjunto de linhas representado pelo arquivo de formato. Esse nome de coluna é usado para identificar a coluna no conjunto de resultados e não precisa corresponder ao nome da coluna usado na tabela de destino.|Obrigatório|  
@@ -277,7 +278,7 @@ ms.locfileid: "68091429"
 |Cadeia de caracteres|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**e **SQLNVARCHAR**|Nenhum.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
->  Para importar ou exportar em massa dados SQLXML, use um dos seguinte tipos de dados em seu arquivo de formato: SQLCHAR ou SQLVARYCHAR (os dados são enviados na página de código cliente ou na página de código indicada pela ordenação), SQLNCHAR ou SQLNVARCHAR (os dados são enviados como Unicode) e SQLBINARY ou SQLVARYBIN (os dados são enviados sem qualquer conversão).  
+>  Para exportar ou importar dados SQLXML em massa, use um dos tipos de dados a seguir em seu arquivo de formato: SQLCHAR ou SQLVARYCHAR (os dados são enviados na página de código do cliente ou na página de código implícita pela ordenação), SQLNCHAR ou SQLNVARCHAR (os dados são enviados como Unicode), ou SQLBINARY ou SQLVARYBIN (os dados são enviados sem nenhuma conversão).  
   
  Para obter mais informações sobre os tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
@@ -350,9 +351,9 @@ for(int i=0;i<ColumnList.Count;i++)
 ###  <a name="a-ordering-character-data-fields-the-same-as-table-columns"></a><a name="OrderCharFieldsSameAsCols"></a> A. Ordenar campos de dados de caracteres da mesma forma que colunas de tabelas  
  O exemplo a seguir mostra um arquivo de formato XML que descreve um arquivo de dados com três campos de dados de caracteres. O arquivo de formato mapeia o arquivo de dados para uma tabela que contém três colunas. Os campos de dados correspondem um a um às colunas da tabela.  
   
- **Tabela (linha):** Person [Age int, FirstName varchar(20), LastName varchar(30)]  
+ **Tabela (linha):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **Arquivo de dados (registro)** : Age\<tab>Firstname\<tab>Lastname\<return>  
+ **Arquivo de dados (registro):** Age\<tab>Firstname\<tab>Lastname\<return>  
   
  O arquivo de formato XML a seguir grava do arquivo de dados na tabela.  
   
@@ -388,9 +389,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="b-ordering-data-fields-and-table-columns-differently"></a><a name="OrderFieldsAndColsDifferently"></a> B. Ordenar campos de dados e colunas de tabela diferentemente  
  O exemplo a seguir mostra um arquivo de formato XML que descreve um arquivo de dados com três campos de dados de caracteres. O arquivo de formato mapeia o arquivo de dados para uma tabela que contém três colunas ordenadas diferentemente dos campos do arquivo de dados.  
   
- **Tabela (linha):** Person [Age int, FirstName varchar(20), LastName varchar(30)]  
+ **Tabela (linha):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **Arquivo de dados (registro)** : Age\<tab>Lastname\<tab>Firstname\<return>  
+ **Arquivo de dados** (registro): Age\<tab>Lastname\<tab>Firstname\<return>  
   
  No elemento `<RECORD>` , o arquivo de formato representa os valores de dados em todos os três campos como dados de caracteres.  
   
@@ -423,7 +424,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="c-omitting-a-data-field"></a><a name="OmitField"></a> C. Omitir um campo de dados  
  O exemplo a seguir mostra um arquivo de formato XML que descreve um arquivo de dados com quatro campos de dados de caracteres. O arquivo de formato mapeia o arquivo de dados para uma tabela que contém três colunas. O segundo campo de dados não corresponde a nenhuma coluna de tabela.  
   
- **Tabela (linha):** Person [Age int, FirstName Varchar(20), LastName Varchar(30)]  
+ **Tabela (linha):** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
   
  **Arquivo de dados (registro):** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
   

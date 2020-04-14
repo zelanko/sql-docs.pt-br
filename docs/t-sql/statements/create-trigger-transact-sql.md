@@ -1,10 +1,9 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Referência de Transact-SQL para a instrução CREATE TRIGGER, que é usada para criar um gatilho DML, DDL ou de logon.
 ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: mathoma
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -28,12 +27,13 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e3a0829702dfe46a2d6c00925a82938d23bad92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: mathoma
+ms.openlocfilehash: 93f97568bbdc2d640e947311acd90152a9ddf4ca
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287680"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517470"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -162,7 +162,7 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
   
 ## <a name="arguments"></a>Argumentos
 OR ALTER  
-**Aplica-se a**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1). 
+**Aplica-se ao**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 em diante). 
   
 Altera condicionalmente o gatilho somente se ele já existir. 
   

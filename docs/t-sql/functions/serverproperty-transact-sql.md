@@ -1,7 +1,7 @@
 ---
 title: SERVERPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4654771be070cc02f2c56b1f08950d120706216d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db0bbc0fe85809ea827b005e8c10bbbfe4f30670
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761635"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517523"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -67,6 +67,7 @@ SERVERPROPERTY ( 'propertyname' )
 |InstanceDefaultLogPath|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a versão atual em atualizações a partir do final de 2015.<br /><br /> Nome do caminho padrão para os arquivos de log da instância.|  
 |InstanceName|Nome da instância à qual o usuário está conectado.<br /><br /> Retornará NULL se o nome de instância for a instância padrão, se a entrada não for válida, ou erro.<br /><br /> NULL = Entrada inválida, um erro ou não aplicável.<br /><br /> Tipo de dados base: **nvarchar(128)**|  
 |IsAdvancedAnalyticsInstalled|Retorna 1 se o recurso Advanced Analytics foi instalado durante a instalação; 0 se o Advanced Analytics não foi instalado.|  
+|IsBigDataCluster| Introduzido no [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] a partir da CU4.<br /><br />Retorna 1 se a instância é o Cluster de Big Data do SQL Server; caso contrário, 0.|  
 |IsClustered|A instância de servidor é configurada em um cluster de failover.<br /><br /> 1 = Clusterizado.<br /><br /> 0 = Não clusterizado.<br /><br /> NULL = Entrada inválida, um erro ou não aplicável.<br /><br /> Tipo de dados base: **int**|  
 |IsFullTextInstalled|Os componentes de indexação de texto completo e semântica são instalados na instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Componentes de indexação de texto completo e semântica são instalados.<br /><br /> 0 = Componentes de indexação de texto completo e semântica não são instalados.<br /><br /> NULL = Entrada inválida, um erro ou não aplicável.<br /><br /> Tipo de dados base: **int**|  
 |IsHadrEnabled|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] é habilitado nessa instância do servidor.<br /><br /> 0 = O [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] está desabilitado.<br /><br /> 1 = O recurso [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] está habilitado.<br /><br /> NULL = Entrada inválida, um erro ou não aplicável.<br /><br /> Tipo de dados base: **int**<br /><br /> Para que réplicas de disponibilidade sejam criadas e executadas em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] deve estar habilitado na instância do servidor. Para obter mais informações, consulte [Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Observação:** a propriedade IsHadrEnabled pertence somente ao [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Outros recursos de alta disponibilidade ou de recuperação de desastre, como espelhamento de banco de dados ou envio de logs, não são afetados por essa propriedade de servidor.|  

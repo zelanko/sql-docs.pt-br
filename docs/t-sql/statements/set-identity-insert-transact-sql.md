@@ -1,6 +1,6 @@
 ---
 title: SET IDENTITY_INSERT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Referência de Transact-SQL para a instrução SET IDENTITY_INSERT. Quando definido como ON, isso permite inserir valores explícitos na coluna de identidade de uma tabela.
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -23,12 +23,12 @@ ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
 author: CarlRabeler
 ms.author: carlrab
 monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 1b1706a78402c705eac92f135a492ea352544fe9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ec5ad11e85df28992e40be22315395de744e2276
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67928968"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517546"
 ---
 # <a name="set-identity_insert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]

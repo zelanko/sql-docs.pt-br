@@ -1,5 +1,6 @@
 ---
 title: Preparar para importar dados em massa (SQL Server) | Microsoft Docs
+description: Use o comando bcp, a instrução BULK INSERT ou a função OPENROWSET(BULK) para a importação de dados em massa somente de um arquivo de dados.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b65577b7f6b69bd4fb27392a7d71a2d68f17d7c5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e80c94b8198b3564e76d67e5a632a4791d9c64e1
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68063160"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980626"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Preparar para importar dados em massa (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "68063160"
   
 -   Obtenha as permissões exigidas para sua conta do usuário.  
   
-     A conta do usuário na qual você usa o utilitário **bcp** , a instrução BULK INSERT ou a instrução INSERT... SELECT * FROM OPENROWSET(BULK...) deve ter as permissões exigidas na tabela, que são atribuídas pelo proprietário de tabela. Para obter mais informações sobre as permissões necessárias para cada método, veja [Utilitário bcp](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)e [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
+     A conta do usuário na qual você usa o utilitário **bcp**, a instrução BULK INSERT ou a instrução INSERT... SELECT * FROM OPENROWSET(BULK...) deve ter as permissões exigidas na tabela, que são atribuídas pelo proprietário de tabela. Para obter mais informações sobre as permissões necessárias para cada método, veja [Utilitário bcp](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)e [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
 -   Use o modelo de recuperação bulk-logged  
   

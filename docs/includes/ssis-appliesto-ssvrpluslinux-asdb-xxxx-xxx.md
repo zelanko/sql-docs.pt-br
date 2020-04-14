@@ -1,1 +1,1 @@
-<Token>**APLICA-se a:** ![sim](media/yes.png)SQL Server ![sim](media/yes.png)Integration Runtime do SSIS no Azure Data Factory</Token>
+<Token>**APLICA-SE A:** ![Sim](media/yes-icon.png)SQL Server ![Sim](media/yes-icon.png)SSIS Integration Runtime no Azure Data Factory</Token>

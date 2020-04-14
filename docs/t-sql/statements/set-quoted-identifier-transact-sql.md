@@ -25,12 +25,12 @@ ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b080efcb7af0f813f798c7f572f464d4718fdd75
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f49a731b57b56c5c4499d6d46f7fe8a70875ec1d
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68008880"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550183"
 ---
 # <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -55,18 +55,18 @@ SET QUOTED_IDENTIFIER ON
 ```
 
 ## <a name="remarks"></a>Comentários
+Quando `SET QUOTED_IDENTIFIER` for ON (padrão), os identificadores podem ser delimitados por aspas duplas (" "), e os literais precisam ser delimitados por aspas simples (' '). Todas as cadeias de caracteres delimitadas por aspas duplas são interpretadas como identificadores de objeto. Portanto identificadores entre aspas não precisam seguir as regras [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Elas podem ser palavras-chave reservadas e incluir caracteres geralmente não permitidos nos identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]. Aspas duplas não podem ser usadas para delimitar expressões de cadeias de caracteres literais. Aspas simples devem ser usadas para delimitar cadeias de caracteres literais. Se um sinal de aspas simples (') fizer parte da cadeia de caracteres literal, ele poderá ser representado por duas aspas simples (''). `SET QUOTED_IDENTIFIER` precisará ser ON quando palavras-chave reservadas forem usadas para nomes de objetos no banco de dados.
 
-Quando SET QUOTED_IDENTIFIER está ON, os identificadores podem ser delimitados por aspas duplas e literais devem ser delimitadas por aspas simples. Quando SET QUOTED_IDENTIFIER está OFF, os identificadores não podem estar entre aspas e devem seguir todas as regras [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md). Literais podem ser delimitados por aspas simples ou duplas.
+Quando `SET QUOTED_IDENTIFIER` for OFF, os identificadores não poderão estar entre aspas e precisarão seguir todas as regras [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md). Literais podem ser delimitados por aspas simples ou duplas. Se uma cadeia de caracteres literal estiver delimitada por aspas duplas, a cadeia de caracteres poderá conter aspas simples inseridas, como apóstrofos.
 
-Quando SET QUOTED_IDENTIFIER está ON (padrão), todas as cadeias de caracteres delimitadas por aspas duplas são interpretadas como identificadores de objetos. Portanto identificadores entre aspas não precisam seguir as regras [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Elas podem ser palavras-chave reservadas e incluir caracteres geralmente não permitidos nos identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]. Aspas duplas não podem ser usadas para delimitar expressões de cadeias de caracteres literais. Aspas simples devem ser usadas para delimitar cadeias de caracteres literais. Se um sinal de aspas simples ( **'** ) fizer parte da cadeia de caracteres literal, ele poderá ser representado por duas aspas simples ( **''** ). SET QUOTED_IDENTIFIER deve estar ON quando palavras-chave reservadas são usadas para nomes de objetos do banco de dados.
+> [!NOTE]
+> QUOTED_IDENTIFIER não afeta os identificadores delimitados entre colchetes ([ ]).
 
-Quando SET QUOTED_IDENTIFIER está OFF, cadeias de caracteres literais em expressões podem ser delimitadas por aspas simples ou duplas. Se uma cadeia de caracteres literal estiver delimitada por aspas duplas, a cadeia de caracteres poderá conter aspas simples inseridas, como apóstrofos.
+`SET QUOTED_IDENTIFIER` precisará ser ON ao criar ou alterar índices em colunas computadas ou exibições indexadas. Se `SET QUOTED_IDENTIFIER` for OFF, as instruções CREATE, UPDATE, INSERT e DELETE falharão nas tabelas com índices em colunas computadas ou nas tabelas com exibições indexadas. Para obter mais informações sobre as configurações da opção SET necessárias com exibições indexadas e índices em colunas computadas, confira [Considerações sobre o uso das instruções SET](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).
 
-SET QUOTED_IDENTIFIER deve estar ON quando você está criando ou alterando índices em colunas computadas ou exibições indexadas. Se SET QUOTED_IDENTIFIER estiver OFF, as instruções CREATE, UPDATE, INSERT e DELETE em tabelas com índices em colunas computadas ou exibições indexadas falharão. Para obter mais informações sobre as configurações exigidas da opção SET com exibições indexadas e índices em colunas computadas, consulte "Considerações sobre o uso das instruções SET" em [Instruções SET](../../t-sql/statements/set-statements-transact-sql.md).
+`SET QUOTED_IDENTIFIER` precisará ser ON quando você estiver criando um índice filtrado.
 
-SET QUOTED_IDENTIFIER deverá estar definido como ON quando você estiver criando um índice filtrado.
-
-SET QUOTED_IDENTIFIER deverá estar definido como ON quando você invocar métodos de tipo de dados XML.
+`SET QUOTED_IDENTIFIER` precisará ser ON quando você invocar métodos de tipo de dados XML.
 
 O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e o Provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definem QUOTED_IDENTIFIER automaticamente como ON durante a conexão. Isso pode ser configurado em fontes de dados ODBC, em atributos de conexão ODBC ou em propriedades de conexão OLE DB. O padrão para SET QUOTED_IDENTIFIER é OFF para conexões de aplicativos DB-Library.
 
@@ -76,32 +76,30 @@ Quando um procedimento armazenado é criado, as configurações SET QUOTED_IDENT
 
 Quando executada dentro de um procedimento armazenado, a configuração de SET QUOTED_IDENTIFIER não é alterada.
 
-Quando SET ANSI_DEFAULTS está ON, SET QUOTED_IDENTIFIER está habilitado.
+Quando `SET ANSI_DEFAULTS` for ON, o QUOTED_IDENTIFIER também será ON.
 
-SET QUOTED_IDENTIFIER também corresponde à configuração QUOTED_IDENTIFIER de ALTER DATABASE. Para obter mais informações sobre as configurações de banco de dados, consulte [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
+`SET QUOTED_IDENTIFIER` também corresponde à configuração QUOTED_IDENTIFIER de [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
 
-SET QUOTED_IDENTIFIER entra em vigor no momento da análise e afeta apenas a análise, não a execução da consulta.
+`SET QUOTED_IDENTIFIER` entra em vigor no momento da análise [!INCLUDE[tsql](../../includes/tsql-md.md)] e afeta apenas a análise, não a otimização de consulta nem a execução da consulta.
 
-Para um lote ad hoc de nível superior, a análise começa usando a configuração atual da sessão para QUOTED_IDENTIFIER. Conforme o lote é analisado, qualquer ocorrência de SET QUOTED_IDENTIFIER mudará o comportamento de análise desse ponto em diante e salvará essa configuração para a sessão. Portanto depois que o lote for analisado e executado, a configuração QUOTED_IDENTIFER da sessão será definida de acordo com a última ocorrência de SET QUOTED_IDENTIFIER no lote.
+Para um lote ad hoc de nível superior, a análise começa usando a configuração atual da sessão para QUOTED_IDENTIFIER. Conforme o lote for analisado, qualquer ocorrência de `SET QUOTED_IDENTIFIER` mudará o comportamento de análise desse ponto em diante e salvará essa configuração para a sessão. Portanto, depois que o lote for analisado e executado, a configuração QUOTED_IDENTIFER da sessão será definida de acordo com a última ocorrência de `SET QUOTED_IDENTIFIER` no lote.
 
-SQL estático em um procedimento armazenado é analisado usando a configuração QUOTED_IDENTIFIER em vigor para o lote que criou ou alterou o procedimento armazenado. SET QUOTED_IDENTIFIER não tem efeito quando aparece no corpo de um procedimento armazenado como SQL estático.
+O [!INCLUDE[tsql](../../includes/tsql-md.md)] estático em um procedimento armazenado é analisado usando a configuração QUOTED_IDENTIFIER em vigor para o lote que criou ou alterou o procedimento armazenado. `SET QUOTED_IDENTIFIER` não tem efeito quando aparece no corpo de um procedimento armazenado como [!INCLUDE[tsql](../../includes/tsql-md.md)] estático.
 
-Para um lote aninhado usando sp_executesql ou EXEC(), a análise inicia usando a configuração de QUOTED_IDENTIFIER da sessão. Se o lote aninhado dentro de um procedimento armazenado a análise começará a usar a configuração QUOTED_IDENTIFIER do procedimento armazenado. Conforme o lote aninhado é analisado, qualquer ocorrência de SET QUOTED_IDENTIFIER mudará o comportamento de análise desse ponto em diante, mas a configuração QUOTED_IDENTIFIER da sessão não será atualizada.
+Para um lote aninhado que usa `sp_executesql` ou `exec()`, a análise é iniciada com a configuração QUOTED_IDENTIFIER da sessão. Se o lote aninhado estiver em um procedimento armazenado, a análise será iniciada com a configuração QUOTED_IDENTIFIER do procedimento armazenado. Conforme o lote aninhado for analisado, qualquer ocorrência de `SET QUOTED_IDENTIFIER` mudará o comportamento de análise desse ponto em diante, mas a configuração QUOTED_IDENTIFIER da sessão não será atualizada.
 
-O uso de colchetes, **[** e **]** , para delimitar identificadores não é afetado pela configuração QUOTED_IDENTIFIER.
-
-Para exibir a configuração atual dessa configuração, execute a consulta a seguir.
+Para exibir a configuração atual dessa configuração, execute a seguinte consulta:
 
 ```sql
 DECLARE @QUOTED_IDENTIFIER VARCHAR(3) = 'OFF';
-IF ( (256 & @@OPTIONS) = 256 ) SET @QUOTED_IDENTIFIER = 'ON';
-SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
+IF ( (256 & @@OPTIONS) = 256 ) 
+SET @QUOTED_IDENTIFIER = 'ON';
 
+SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
 ```
 
 ## <a name="permissions"></a>Permissões
-
-Requer associação à função public.
+Exige a associação à função `PUBLIC`.
 
 ## <a name="examples"></a>Exemplos
 
@@ -112,15 +110,15 @@ O exemplo a seguir mostra que a configuração de `SET QUOTED_IDENTIFIER` deve e
 ```sql
 SET QUOTED_IDENTIFIER OFF
 GO
--- An attempt to create a table with a reserved keyword as a name
--- should fail.
+
+-- Create statement fails.
 CREATE TABLE "select" ("identity" INT IDENTITY NOT NULL, "order" INT NOT NULL);
 GO
 
 SET QUOTED_IDENTIFIER ON;
 GO
 
--- Will succeed.
+-- Create statement succeeds.
 CREATE TABLE "select" ("identity" INT IDENTITY NOT NULL, "order" INT NOT NULL);
 GO
 
@@ -143,6 +141,7 @@ GO
 ```sql
 SET QUOTED_IDENTIFIER OFF;
 GO
+
 USE AdventureWorks2012;
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
     WHERE TABLE_NAME = 'Test')
@@ -197,17 +196,17 @@ GO
  ```
 
 ## <a name="see-also"></a>Consulte Também
-
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
-- [CREATE DEFAULT](../../t-sql/statements/create-default-transact-sql.md)
-- [CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)
-- [CREATE RULE](../../t-sql/statements/create-rule-transact-sql.md)
-- [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
-- [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)
-- [CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)
-- [Data Types](../../t-sql/data-types/data-types-transact-sql.md)
-- [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)
-- [SELECT](../../t-sql/queries/select-transact-sql.md)
-- [Instruções SET](../../t-sql/statements/set-statements-transact-sql.md)
-- [SET ANSI_DEFAULTS](../../t-sql/statements/set-ansi-defaults-transact-sql.md)
-- [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
+[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)    
+[CREATE DEFAULT](../../t-sql/statements/create-default-transact-sql.md)    
+[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)    
+[CREATE RULE](../../t-sql/statements/create-rule-transact-sql.md)    
+[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)    
+[CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)    
+[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)    
+[Tipos de dados](../../t-sql/data-types/data-types-transact-sql.md)    
+[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)    
+[SELECT](../../t-sql/queries/select-transact-sql.md)    
+[Instruções SET](../../t-sql/statements/set-statements-transact-sql.md)    
+[SET ANSI_DEFAULTS](../../t-sql/statements/set-ansi-defaults-transact-sql.md)    
+[sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)    
+[Identificadores de banco de dados](../../relational-databases/databases/database-identifiers.md)

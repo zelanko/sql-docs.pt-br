@@ -1,5 +1,6 @@
 ---
 title: Especificar terminadores de campo e linha (SQL Server) | Microsoft Docs
+description: Os terminadores de campo e os terminadores de linha indicam aos programas que leem o arquivo de dados os locais em que um campo ou uma linha termina e em que outro campo ou outra linha começa.
 ms.custom: ''
 ms.date: 07/26/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9859db8e22110e228386dfe23f94341ab1f7be15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 151254168260a2d7a5a48747daee4de662bdfb70
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68062548"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980522"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo e linha (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,7 +108,7 @@ bcp -r '0x0A'
   
  O comando **bcp** contém as opções a seguir.  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**-c**|Especifica que os campos de dados sejam carregados como dados de caracteres.|  
 |**-t** `,`|Especifica uma vírgula (,) como terminador de campo.|  
@@ -135,7 +136,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      Os terminadores podem ser especificados para campos individuais em um arquivo de formato ou para o arquivo de dados inteiro usando os qualificadores mostrados na tabela a seguir.  
   
-    |Qualificador|DESCRIÇÃO|  
+    |Qualificador|Descrição|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***field_terminator***'**|Especifica o terminador de campo a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \t (caractere de tabulação).|  
     |ROWTERMINATOR **='***row_terminator***'**|Especifica o terminador de linha a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \n (caractere de nova linha).|  

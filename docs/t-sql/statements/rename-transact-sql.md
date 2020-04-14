@@ -9,17 +9,17 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 624131beece632cffd13bde3d6ad378f67b3a340
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 13488d4ab9fe2622322eb6e66c653391ff4415b3
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68141267"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625514"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-Renomeia uma tabela criada pelo usuário no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renomeia uma tabela ou um banco de dados criado pelo usuário em [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+Renomeia uma tabela criada pelo usuário no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renomeia uma tabela criada pelo usuário, uma coluna em uma tabela ou um banco de dados criado pelo usuário em [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 > [!NOTE]
 > Para renomear um banco de dados no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use [ALTER DATABASE (SQL Data Warehouse do Azure](alter-database-transact-sql.md?view=aps-pdw-2016-au7). Para renomear um banco de dados no Banco de Dados SQL do Azure, use a instrução [ALTER DATABASE (Banco de Dados SQL do Azure)](alter-database-transact-sql.md?view=azuresqldb-mi-current). Para renomear um banco de dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use o procedimento armazenado [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
@@ -45,6 +45,9 @@ RENAME OBJECT [::] [ [ database_name . [ schema_name ] . ] | [ schema_name . ] ]
 -- Rename a database
 RENAME DATABASE [::] database_name TO new_database_name
 [;]
+
+-- Rename a column 
+RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name COLUMN column_name TO new_column_name [;]
 ```
 
 ## <a name="arguments"></a>Argumentos
@@ -69,6 +72,12 @@ Altere o nome de um banco de dados definido pelo usuário de *database_name* par
 - DWDiagnostics
 - DWQueue
 
+
+RENAME OBJECT [::] [ [*database_name*. [ *schema_name* ]. ] | [ *schema_name* . ] ]*table_name* COLUMN *column_name* TO *new_column_name*
+**APLICA-SE AO:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+
+Altere o nome de uma coluna em uma tabela. 
+
 ## <a name="permissions"></a>Permissões
 
 Para executar esse comando, é necessário ter esta permissão:
@@ -85,11 +94,17 @@ Não é possível renomear uma tabela externa, índices ou exibições. Em vez d
 
 Não é possível renomear uma tabela ou um banco de dados enquanto ele está em uso. A renomeação de uma tabela exige um bloqueio exclusivo na tabela. Se a tabela estiver em uso, você precisará encerrar as sessões que usam a tabela. Para terminar uma sessão, use o comando KILL. Use KILL com cuidado, pois quando uma sessão for terminada, qualquer trabalho não confirmado será revertido. As sessões no SQL Data Warehouse são prefixadas com 'SID'. Inclua o ‘SID’ e o número da sessão ao invocar o comando KILL. Este exemplo exibe uma lista de sessões ativas ou ociosas e, em seguida, termina a sessão 'SID1234'.
 
+### <a name="rename-column-restrictions"></a>Renomear restrições de coluna
+
+Não é possível renomear uma coluna que é usada para a distribuição da tabela. Também não é possível renomear nenhuma coluna em uma tabela externa ou em uma tabela temporária. 
+
 ### <a name="views-are-not-updated"></a>As exibições não são atualizadas
 
 Ao renomear um banco de dados, todas as exibições que usam o nome antigo do banco de dados se tornarão inválidas. Esse comportamento se aplica às exibições dentro e fora do banco de dados. Por exemplo, se o banco de dados Sales for renomeado, uma exibição que contém `SELECT * FROM Sales.dbo.table1` se tornará inválida. Para resolver esse problema, evite usar nomes de três partes em exibições ou atualizar as exibições para elas referenciarem o novo nome de banco de dados.
 
 Ao renomear uma tabela, as exibições não são atualizadas para referenciar o novo nome da tabela. Toda exibição, dentro ou fora do banco de dados, que referencia o nome da tabela antiga se tornará inválida. Para resolver esse problema, atualize cada exibição para ela referenciar o novo nome da tabela.
+
+Ao renomear uma coluna, as exibições não são atualizadas para referenciar o novo nome da coluna. As exibições continuarão mostrando o antigo nome da coluna até que uma instrução ALTER VIEW seja executada. Em alguns casos, as exibições podem se tornar inválidas, precisando de uma instrução DROP e RECREATE.
 
 ## <a name="locking"></a>Bloqueio
 
@@ -150,4 +165,17 @@ WHERE status='Active' OR status='Idle';
 
 -- Terminate a session using the session_id.
 KILL 'SID1234';
+```
+
+### <a name="e-rename-a-column"></a>E. Renomear uma coluna 
+
+**APLICA-SE AO:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+
+Este exemplo renomeia a coluna FName da tabela Customer para FirstName.
+
+```sql
+-- Rename the Fname column of the customer table
+RENAME OBJECT::Customer COLUMN FName TO FirstName;
+
+RENAME OBJECT mydb.dbo.Customer COLUMN FName TO FirstName;
 ```

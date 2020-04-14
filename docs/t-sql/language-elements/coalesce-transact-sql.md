@@ -1,6 +1,6 @@
 ---
 title: COALESCE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Referência de Transact-SQL para COALESCE, que retorna o valor da primeira expressão que não é avaliada como NULL.
 ms.date: 08/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,12 +21,12 @@ ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 085972109c9b19173e46c97cc5cef239a454dcb7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9e3692da70cf2d503dc994646a6cb2e92a05fe94
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950298"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517680"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -219,7 +219,7 @@ NULL         White      PN9876         White
   
 Observe que na primeira linha, o valor de `FirstNotNull` é `PN1278`, não `Socks, Mens`. Esse valor funciona assim porque a coluna `Name` não foi especificada como um parâmetro para `COALESCE` no exemplo.  
   
-### <a name="d-complex-example"></a>D. Exemplo complexo  
+### <a name="d-complex-example"></a>D: Exemplo complexo  
 O exemplo a seguir usa `COALESCE` para comparar os valores em três colunas e retornar apenas o valor não nulo encontrado nas colunas.  
   
 ```sql  

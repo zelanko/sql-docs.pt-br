@@ -3,7 +3,7 @@ title: Recursos preteridos do Mecanismo de Banco de Dados | Microsoft Docs
 titleSuffix: SQL Server 2019
 description: Saiba mais sobre os recursos do mecanismo de banco de dados preteridos que ainda estão disponíveis no SQL Server 2017 (14.x), mas que não devem ser usados em novos aplicativos.
 ms.custom: seo-lt-2019
-ms.date: 03/30/2020
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -17,33 +17,31 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9e5bccc61c9c1f395e49a7a0a601271ed46f3502
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 9fcc5f3ebca860e35365bd640a3473b478e06b49
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402599"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550168"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Recursos preteridos do Mecanismo de Banco de Dados no SQL Server 2017
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Este tópico descreve os recursos preteridos do Mecanismo de Banco de Dados do SQL Server que ainda estão disponíveis no SQL Server 2017 (14.x). Recursos preteridos não devem ser usados em aplicativos novos.  
+  Este tópico descreve os recursos substituídos do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que ainda estão disponíveis no [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Recursos preteridos não devem ser usados em aplicativos novos.  
+  
+Quando um recurso está marcado como preterido, isso significa que:\
 
-Quando um recurso está marcado como preterido, isso significa que:
+- O recurso está somente no modo de manutenção. Nenhuma alteração será feita, incluindo as relacionadas à interoperabilidade com novos recursos.
+- Buscamos não remover um recurso preterido de versões futuras para facilitar a atualização. No entanto, em situações raras, podemos optar por remover permanentemente o recurso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] caso ele limite inovações futuras.
+- Para novos desenvolvimentos, não recomendamos usar recursos preteridos.      
 
-- O recurso está somente no modo de manutenção. Nenhuma alteração é feita, incluindo as relacionadas à interoperabilidade com novos recursos.
+É possível monitorar o uso de recursos preteridos usando o contador de desempenho do Objeto Recursos Preteridos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e os eventos de rastreamento. Para obter mais informações, confira o artigo [Usar objetos do SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).  
 
-- Buscamos não remover um recurso preterido de versões futuras para facilitar a atualização. No entanto, em situações raras, podemos optar por remover permanentemente o recurso do SQL Server caso ele limite inovações futuras.
-
-- Para novos desenvolvimentos, não recomendamos usar recursos preteridos.
-
-É possível monitorar o uso de recursos preteridos usando o contador de desempenho do Objeto e os eventos de rastreamento de Recursos Preteridos do SQL Server. Para obter mais informações, confira o artigo [Usar objetos do SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).
-
-Os valores desses contadores também estão disponíveis com a execução da seguinte instrução:
+O valor desses contadores também está disponível com a execução da seguinte instrução:  
 
 ```sql
-SELECT * FROM sys.dm_os_performance_counter
+SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name = 'SQLServer:Deprecated Features';
 ```
 
@@ -77,31 +75,21 @@ Atualização da versão 100 (SQL Server 2008 e SQL Server 2008 R2). | Quando um
 | Recurso substituído | Substituição | Nome do recurso | ID do Recurso |
 |--------------------|-------------|--------------|------------|
 | A criptografia que usa o RC4 ou RC4_128 foi substituída e está programada para ser removida na próxima versão. A descriptografia do RC4 e do RC4_128 não será preterida. | Usar outro algoritmo de criptografia, como AES. | Algoritmo de criptografia substituído | 253 |
-
-### <a name="hash-algorithms"></a>Algoritmos de hash
-
-| Recurso substituído | Substituição | Nome do recurso | ID do Recurso |
-|--------------------|-------------|--------------|------------|
 | O uso de MD2, MD4, MD5, SHA e SHA1 foi preterido. | Use SHA2_256 ou SHA2_512. Os algoritmos mais antigos continuam funcionando, mas acionam um evento de preterimento. |Algoritmo de hash preterido | Nenhum |
 
 ### <a name="remote-servers"></a>Servidores remotos
 
 | Recurso substituído | Substituição | Nome do recurso | ID do Recurso |
 |--------------------|-------------|--------------|------------|
-| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|Substitua servidores remotos usando servidores vinculados. sp_addserver só pode ser usado com a opção local. | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
+| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|Substitua servidores remotos usando servidores vinculados. sp_addserver só pode ser usado com a opção local. | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br > sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
 | \@\@remserver | Substitua servidores remotos usando servidores vinculados. | Nenhum | Nenhum |
 | SET REMOTE_PROC_TRANSACTIONS|Substitua servidores remotos usando servidores vinculados. | SET REMOTE_PROC_TRANSACTIONS | 110 |
 
-### <a name="set-options"></a>Opções Set
+### <a name="transact-sql"></a>Transact-SQL
 
 | Recurso substituído | Substituição | Nome do recurso | ID do Recurso |
 |--------------------|-------------|--------------|------------|
 | **SET ROWCOUNT** para as instruções **INSERT**, **UPDATE**e **DELETE** | Palavra-chave TOP | SET ROWCOUNT | 109 |
-
-### <a name="table-hints"></a>Dicas de tabela
-
-| Recurso substituído | Substituição | Nome do recurso | ID do Recurso |
-|--------------------|-------------|--------------|------------|
 | Dica de tabela HOLDLOCK sem parênteses. | Use HOLDLOCK com parênteses. | Dica de tabela HOLDLOCK sem parênteses | 167 |
 
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>Recursos preteridos em uma versão futura do SQL Server
@@ -131,12 +119,6 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 | Híndi <br /><br /> Macedônio | Estas ordenações existem no SQL Server 2005 (9.x) e superiores, mas não são visíveis por meio de fn_helpcollations. Em vez disso, use Macedonian_FYROM_90 e Indic_General_90.|Híndi <br /><br /> Macedônio |
 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 | Azeri_Latin_100 <br /><br /> Azeri_Cyrilllic_100 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 |
 
-### <a name="configuration"></a>Configuração
-
-| Recurso substituído | Substituição | Nome do recurso |
-|--------------------|-------------|--------------|
-| Opção de banco de dados SET ANSI_NULLS OFF e ANSI_NULLS OFF<br /><br />Opção de banco de dados SET ANSI_PADDING OFF e ANSI_PADDING OFF<br /><br />Opção de banco de dados SET CONCAT_NULL_YIELDS_NULL OFF e CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS | Nenhum. <br /><br /> ANSI_NULLS, ANSI_PADDING e CONCAT_NULLS_YIELDS_NULL sempre são definidos como ON. SET OFFSETS não estão disponíveis. | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
-
 ### <a name="data-types"></a>Tipos de dados
 
 | Recurso substituído | Substituição | Nome do recurso |
@@ -152,6 +134,9 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 | Recurso substituído | Substituição | Nome do recurso |
 |--------------------|-------------|--------------|
 | sp_attach_db <br /><br /> sp_attach_single_file_db|Instrução CREATE DATABASE com a opção FOR ATTACH. Para recriar vários arquivos de log quando um ou mais tiver um novo local, use a opção FOR ATTACH_REBUILD_LOG. | sp_attach_db <br /><br /> sp_attach_single_file_db |
+| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
+| sp_dbremove | DROP DATABASE | sp_dbremove |
+| sp_renamedb | MODIFY NAME em ALTER DATABASE | sp_renamedb |
 
 ### <a name="database-objects"></a>Objetos de banco de dados
 
@@ -161,7 +146,6 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 | CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule | Palavra-chave CHECK em CREATE TABLE e ALTER TABLE | CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule |
 | sp_change_users_login | Use ALTER USER. | sp_change_users_login |
 | sp_depends | sys.dm_sql_referencing_entities e sys.dm_sql_referenced_entities | sp_depends |
-| sp_renamedb | MODIFY NAME em ALTER DATABASE | sp_renamedb |
 | sp_getbindtoken | Use MARS ou transações distribuídas. | sp_getbindtoken |
 
 ### <a name="database-options"></a>Opções de banco de dados
@@ -201,12 +185,6 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc | Em vez disso, use a Integração CLR. | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc |
 | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Use CREATE LOGIN<br /><br /> Use o argumento DROP LOGIN IsIntegratedSecurityOnly de SERVERPROPERTY | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig |
 
-### <a name="function"></a>Função
-
-| Recurso substituído | Substituição | Nome do recurso |
-|--------------------|-------------|--------------|
-| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
-
 ### <a name="high-availability"></a>Alta disponibilidade
 
 | Recurso substituído | Substituição | Nome do recurso |
@@ -235,12 +213,6 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 |--------------------|-------------|--------------|
 | Especificando o provedor SQLOLEDB para servidores vinculados. | SQL Server Native Client (SQLNCLI) | SQLOLEDDB para servidores vinculados |
 
-### <a name="locking"></a>Bloqueio
-
-| Recurso substituído | Substituição | Nome do recurso |
-|--------------------|-------------|--------------|
-| sp_lock | sys.dm_tran_locks | sp_lock |
-
 ### <a name="metadata"></a>Metadados
 
 | Recurso substituído | Substituição | Nome do recurso |
@@ -258,13 +230,6 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 | Recurso substituído | Substituição | Nome do recurso |
 |--------------------|-------------|--------------|
 | DB-Library<br /><br />Embedded SQL para C|Embora o Mecanismo de Banco de Dados ainda tenha suporte para conexões de aplicativos existentes que usam as APIS de DB-Library e Embedded SQL, ele não inclui a documentação ou os arquivos necessários para fazer o trabalho de programação em aplicativos que usam essas APIs. Uma versão futura do Mecanismo de Banco de Dados do SQL Server descarta o suporte para conexões de DB-Library ou aplicativos do Embedded SQL. Não use DB-Library ou Embedded SQL para desenvolver novos aplicativos. Remova qualquer dependência do DB-Library ou do Embedded SQL ao modificar aplicativos existentes. Em vez destas APIs, use o namespace SQLClient ou uma API como ODBC. O SQL Server 2019 (15.x) não inclui a DLL DB-Library necessária para executar estes aplicativos. Para executar a DB-Library ou os aplicativos Embedded SQL, é necessário ter disponível a DLL DB-Library DLL do SQL Server versão 6.5, SQL Server 7.0 ou SQL Server 2000 (8.x). | Nenhum |
-
-### <a name="removable-databases"></a>Bancos de dados removíveis
-
-| Recurso substituído | Substituição | Nome do recurso |
-|--------------------|-------------|--------------|
-| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
-| sp_dbremove | DROP DATABASE | sp_dbremove |
 
 ### <a name="security"></a>Segurança
 
@@ -288,12 +253,6 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 | Função intrínseca PERMISSIONS | Consulte sys.fn_my_permissions. | PERMISSIONS |
 | SETUSER | EXECUTE AS | SETUSER |
 | Algoritmos de criptografia RC4 e DESX|Usar outro algoritmo, como AES. | Algoritmo DESX |
-
-### <a name="set-options"></a>Opções Set
-
-| Recurso substituído | Substituição | Nome do recurso |
-|--------------------|-------------|--------------|
-| SET FMTONLY | [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) e [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md). | SET FMTONLY |
 
 ### <a name="server-configuration-options"></a>Opções de configuração de servidor
 
@@ -319,11 +278,14 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 |--------------------|-------------|--------------|
 | Integração do Gerenciador de Soluções no SQL Server Management Studio | | Nenhum |
 
-### <a name="system-stored-procedures"></a>Procedimentos armazenados do sistema
+### <a name="system-stored-procedures-and-functions"></a>Funções e procedimentos armazenados no sistema
 
 | Recurso substituído | Substituição | Nome do recurso |
 |--------------------|-------------|--------------|
 | sp_db_increased_partitions | Nenhum. O suporte ao aumento de partições está disponível, por padrão, no SQL Server 2019 (15.x). | sp_db_increased_partitions |
+| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br /> fn_servershareddrives |
+| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
+| sp_lock | sys.dm_tran_locks | sp_lock |
 
 ### <a name="system-tables"></a>Tabelas do sistema
 
@@ -338,12 +300,6 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 |--------------------|-------------|--------------|
 | sp_trace_create<br /><br />sp_trace_setevent<br /><br />sp_trace_setfilter<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values|[Eventos estendidos](../relational-databases/extended-events/extended-events.md) | sp_trace_create<br /><br />sp_trace_setevent<br /><br />sp_trace_setfilter<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values |
 
-### <a name="system-functions"></a>Funções do sistema
-
-| Recurso substituído | Substituição | Nome do recurso |
-|--------------------|-------------|--------------|
-| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br />fn_servershareddrives |
-
 ### <a name="system-views"></a>Exibições do sistema
 
 | Recurso substituído | Substituição | Nome do recurso |
@@ -357,14 +313,6 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 | O uso do formato de armazenamento vardecimal. | O formato de armazenamento vardecimal foi preterido. Compactação de dados do SQL Server 2019 (15.x), compacta valores decimais e outros tipos de dados. É recomendável usar a compactação de dados em vez do formato de armazenamento vardecimal. | Formato de armazenamento vardecimal |
 | Uso do procedimento sp_db_vardecimal_storage_format.|O formato de armazenamento vardecimal foi preterido. Compactação de dados do SQL Server 2019 (15.x), compacta valores decimais e outros tipos de dados. É recomendável usar a compactação de dados em vez do formato de armazenamento vardecimal. | sp_db_vardecimal_storage_format |
 | Uso do procedimento sp_estimated_rowsize_reduction_for_vardecimal.|Use a compactação de dados e o procedimento sp_estimate_data_compression_savings em vez disso. |sp_estimated_rowsize_reduction_for_vardecimal |
-
-### <a name="table-hints"></a>Dicas de tabela
-
-| Recurso substituído | Substituição | Nome do recurso |
-|--------------------|-------------|--------------|
-| Especificando NOLOCK ou READUNCOMMITTED na cláusula FROM de uma instrução UPDATE ou DELETE. | Remova as dicas de tabela NOLOCK ou READUNCOMMITTED da cláusula FROM. | NOLOCK ou READUNCOMMITTED em UPDATE ou DELETE |
-| Especificando dicas de tabela sem usar a palavra-chave WITH.|Use WITH.|Dica de tabela sem WITH |
-| INSERT_HINTS | | INSERT_HINTS |
 
 ### <a name="text-pointers"></a>Ponteiros de texto
 
@@ -386,13 +334,18 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 | GROUP BY ALL|Use solução caso a caso personalizada com UNION ou tabela derivada. | GROUP BY ALL |
 | ROWGUIDCOL como um nome de coluna em instruções DML.|Use $rowguid.|ROWGUIDCOL |
 | IDENTITYCOL como um nome de coluna em instruções DML.|Use $identity.|IDENTITYCOL |
-| Uso de #, ## como tabela temporária e nomes de procedimento armazenado temporários.|Use pelo menos um caractere adicional.|'#' e '##' como o nome de tabelas temporárias e procedimentos armazenados|185|  
-| O uso de \@, \@\@ ou \@\@ como identificadores Transact-SQL.|Não use \@ nem \@\@ ou nomes que comecem com \@\@ como identificadores.|'\@' e nomes que começam com '\@\@' como identificadores de Transact-SQL |
+| Uso de #, ## como tabela temporária e nomes de procedimento armazenado temporários. | Use pelo menos um caractere adicional.|'#' e '##' como o nome de tabelas temporárias e procedimentos armazenados
+| O uso de \@, \@\@ ou \@\@ como identificadores Transact-SQL. | Não use \@ nem \@\@ ou nomes que comecem com \@\@ como identificadores. | '\@' e nomes que começam com '\@\@' como identificadores de Transact-SQL |
 | Uso da palavra-chave DEFAULT como valor padrão.|Não use a palavra DEFAULT como um valor padrão. | A palavra-chave DEFAULT como um valor padrão |
 | Uso de um espaço como um separador entre dicas de tabela.|Use uma vírgula para separar dicas de tabela. | Várias dicas de tabela sem vírgula |
-| A lista de seleção de uma exibição indexada de agregação deve conter COUNT_BIG (\*) no modo de compatibilidade 90 | Use COUNT_BIG (\*). | A exibição de índice seleciona a lista sem COUNT_BIG(\*)|2|  
+| A lista de seleção de uma exibição indexada de agregação deve conter COUNT_BIG (\*) no modo de compatibilidade 90 | Use COUNT_BIG (\*). | A exibição de índice seleciona a lista sem COUNT_BIG(\*) |
 | O aplicativo indireto de dicas de tabela para uma invocação de uma função com valor de tabela (TVF) de várias instruções por meio de uma exibição.|Nenhum.|Dicas TVF indiretas |
-| Sintaxe ALTER DATABASE:<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| Sintaxe ALTER DATABASE:<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE | MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| Opção de banco de dados SET ANSI_NULLS OFF e ANSI_NULLS OFF<br /><br />Opção de banco de dados SET ANSI_PADDING OFF e ANSI_PADDING OFF<br /><br />Opção de banco de dados SET CONCAT_NULL_YIELDS_NULL OFF e CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS | Nenhum. <br /><br /> ANSI_NULLS, ANSI_PADDING e CONCAT_NULLS_YIELDS_NULL sempre são definidos como ON. SET OFFSETS não estão disponíveis. | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
+| SET FMTONLY | [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) e [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md). | SET FMTONLY |
+| Especificando NOLOCK ou READUNCOMMITTED na cláusula FROM de uma instrução UPDATE ou DELETE. | Remova as dicas de tabela NOLOCK ou READUNCOMMITTED da cláusula FROM. | NOLOCK ou READUNCOMMITTED em UPDATE ou DELETE |
+| Especificando dicas de tabela sem usar a palavra-chave WITH. | Use WITH. | Dica de tabela sem WITH |
+| INSERT_HINTS | | INSERT_HINTS |
 
 ### <a name="tools"></a>Ferramentas
 
@@ -415,7 +368,8 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 
 > [!NOTE]
 > O parâmetro **OUTPUT** de cookie para **sp_setapprole** está documentado atualmente como **varbinary(8000)** , que tem o tamanho máximo correto. No entanto, a implementação atual retorna **varbinary(50)** . Se os desenvolvedores alocaram **varbinary(50)** , o aplicativo poderá exigir alterações se o cookie retornar aumentos de tamanho em uma versão futura. Embora não seja um problema de substituição, isto é mencionado neste tópico porque os ajustes de aplicativo são semelhantes. Para obter mais informações, veja [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
+  
+## <a name="see-also"></a>Consulte Também  
+ [Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
+  
 
-## <a name="see-also"></a>Consulte Também
-
- [Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)

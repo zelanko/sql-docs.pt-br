@@ -1,7 +1,7 @@
 ---
 title: JSON_MODIFY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2016
+ms.date: 04/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: genemi
@@ -11,12 +11,12 @@ ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: d340d362301698f7dfaef28476ea659b948163bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 36e6f8f630439baddf1fb3a88ab8df7eb6687e4c
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109377"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002819"
 ---
 # <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 
@@ -64,6 +64,7 @@ No [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e no [!INCLUDE[ssSDSfu
   
  *newValue*  
  O novo valor para a propriedade especificada por *path*.  
+ O novo valor precisa ser um [n]varchar ou texto.
   
  No modo incerto, JSON_MODIFY exclui a chave especificada se o novo valor é NULL.  
   

@@ -1,5 +1,6 @@
 ---
 title: Criar um arquivo de formato (SQL Server) | Microsoft Docs
+description: Quando você importa ou exporta em massa uma tabela do SQL Server, um arquivo de formato permite gravar arquivos de dados com pouca edição ou ler arquivos de dados de outros programas.
 ms.custom: ''
 ms.date: 02/23/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95ac8a8a42523d513a6025d85308c4e130c044c8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68035821"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980478"
 ---
 # <a name="create-a-format-file-sql-server"></a>Criar um formato de arquivo (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68035821"
  Geralmente, arquivos de formato XML e não XML são intercambiáveis. Entretanto, recomendamos que você use a sintaxe XML para novos arquivos de formato porque eles oferecem diversas vantagens em relação aos arquivos de formato não XML.  
   
 > [!NOTE]  
->  A versão do utilitário **bcp** (Bcp.exe) usada para ler um arquivo de formato deve ser igual ou posterior à versão usada para criar o arquivo de formato. Por exemplo, o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]bcp**do** pode ler um arquivo de formato da versão 10.0, que é gerado pelo [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]bcp**do**, mas o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]bcp**do** não pode ler um arquivo de formato da versão 11.0, que é gerado pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]bcp**do**.  
+>  A versão do utilitário **bcp** (Bcp.exe) usada para ler um arquivo de formato deve ser igual ou posterior à versão usada para criar o arquivo de formato. Por exemplo, o **bcp** do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] pode ler um arquivo de formato da versão 10.0, que é gerado pelo **bcp** do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], mas o **bcp** do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] não pode ler um arquivo de formato da versão 11.0, que é gerado pelo **bcp** do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  Este tópico descreve como usar o [utilitário bcp](../../tools/bcp-utility.md) para criar um arquivo de formato para uma tabela específica. O arquivo de formato se baseia na opção do tipo de dados especificada ( **-n**, **-c**, **-w**ou **-N**) e nos delimitadores de exibição ou tabela.  
   
@@ -63,7 +64,7 @@ ms.locfileid: "68035821"
   
  O comando **bcp** contém os qualificadores a seguir.  
   
-|Qualificadores|DESCRIÇÃO|  
+|Qualificadores|Descrição|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_|Especifica o arquivo de formato não XML.|  
 |**-n**|Especifica tipos de dados nativos.|  
@@ -93,7 +94,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  O comando **bcp** contém os qualificadores a seguir.  
   
-|Qualificadores|DESCRIÇÃO|  
+|Qualificadores|Descrição|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_|Especifica um arquivo de formato não XML.|  
 |**-c**|Especifica dados de caracteres.|  
@@ -191,11 +192,11 @@ A seguir, um exemplo do formato de arquivo sem as informações de ordenação.
   
  O comando **bcp** contém os qualificadores a seguir.  
   
-|Qualificadores|DESCRIÇÃO|  
+|Qualificadores|Descrição|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|Especifica o arquivo de formato XML.|  
 |**-c**|Especifica dados de caracteres.|  
-|**-t** `,`|Especifica uma vírgula ( **,** ) como terminador de campo.<br /><br /> Se o arquivo de dados usar o terminador de campo padrão (`\t`), a opção **-t** será desnecessária.|  
+|**-t** `,`|Especifica uma vírgula ( **,** ) como terminador de campo.<br /><br /> Observação: se o arquivo de dados usar o terminador de campo padrão (`\t`), a opção **-t** será desnecessária.|  
 |**-T**|Especifica que o utilitário **bcp** se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com uma conexão confiável usando segurança integrada. Se **-T** não for especificado, será necessário especificar **-U** e **-P** para o logon ser efetuado com êxito.|  
   
  No prompt de comando do Windows, digite o seguinte comando `bcp` :  
@@ -231,7 +232,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  O comando **bcp** contém os qualificadores a seguir.  
   
-|Qualificadores|DESCRIÇÃO|  
+|Qualificadores|Descrição|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|Especifica o arquivo de formato XML.|  
 |**-n**|Especifica tipos de dados nativos.|  

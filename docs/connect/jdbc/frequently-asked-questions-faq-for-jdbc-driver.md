@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9f753fde186e056b5c7222c2c801303661e1fd79
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 78fe63a54214ad7ff231ebf5df2353ef09d0fc09
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924671"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219135"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Perguntas frequentes sobre o JDBC Driver
 
@@ -113,8 +113,8 @@ Os JDBC Drivers 6.0, 6.2, 6.4 e 7.0 são redistribuíveis. Consulte a cláusula 
 **Posso usar o driver para acessar o Microsoft SQL Server de um computador Linux?**  
 Sim! Você pode usar o driver para acessar o SQL Server no Linux, Unix e outras plataformas não Windows. Para saber mais, confira a [matriz de suporte do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
 
-**O driver dá suporte à criptografia do protocolo SSL?**  
-A partir da versão 1.2, o driver dá suporte à criptografia Secure Sockets Layer (SSL). Confira mais informações em [Como usar a criptografia SSL](../../connect/jdbc/using-ssl-encryption.md).
+**O driver dá suporte à criptografia TLS?**  
+A partir da versão 1.2, o driver dá suporte à criptografia TLS, anteriormente conhecida como SSL. Para obter mais informações, confira [Como usar a criptografia](../../connect/jdbc/using-ssl-encryption.md).
 
 **Quais tipos de autenticação são compatíveis com o Microsoft JDBC Driver para SQL Server?**  
 A tabela a seguir lista as opções de autenticação disponíveis. Uma autenticação Kerberos em Java puro está disponível a partir da versão 4.0 do driver.

@@ -1,6 +1,6 @@
 ---
 title: Tipos de dados (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Este artigo fornece um resumo dos diferentes tipos de dados disponíveis no SQL Server.
 ms.date: 09/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,12 +17,12 @@ ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a03da24fe18f0d910f5054d8cfb321c42d633db8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c2da43f8adfd4fcec107c3832d8d0619e9a371e6
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113738"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517595"
 ---
 # <a name="data-types-transact-sql"></a>Tipos de dados (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
