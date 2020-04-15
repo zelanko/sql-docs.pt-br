@@ -1,5 +1,5 @@
 ---
-title: Considerações de programação de driver de arquivo de texto | Microsoft Docs
+title: Considerações de programação do driver de arquivo de texto | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], text file driver
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: aabff9d9-20ea-4b68-b8fd-1e33061bd0ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba56db60d38f6babc52f81f65f9b94e2c3a2f531
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 72f624f65cadd6d7cbd5eb9d9354c84200733de0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939693"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81279836"
 ---
 # <a name="text-file-driver-programming-considerations"></a>Considerações sobre programação de drivers do Arquivo de texto
 Esta seção contém os seguintes tópicos:  
   
--   [Configurar opções programaticamente para drivers de Arquivo de texto](../../odbc/microsoft/setting-options-programmatically-for-the-text-file-driver.md)  
+-   [Configurando opções programaticamente para drivers de Arquivo de texto](../../odbc/microsoft/setting-options-programmatically-for-the-text-file-driver.md)  
   
 -   [Tipos de dados de Arquivo de texto](../../odbc/microsoft/text-file-data-types.md)  
   

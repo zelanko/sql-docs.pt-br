@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - product support [ODBC]
 ms.assetid: 585c41c6-5c5a-437e-a4b4-e32a346b478d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09e62da5bf1f68ddf5ad2ab974d85cfb8dec859a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: baabb4b5beb1c089ae1d53b7de08d14955d83158
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67988096"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304847"
 ---
 # <a name="product-support"></a>Suporte ao produto
-O suporte ao produto para ODBC é fornecido pelo atendimento Microsoft. Como muitos produtos da Microsoft usam o ODBC como um componente principal e também redistribuem drivers ODBC, o atendimento Microsoft considera o ODBC como parte de cada produto que incorpora o ODBC como um componente. O suporte para ODBC é fornecido de acordo com o contrato de suporte do produto. Consulte a documentação do produto individual para obter mais informações.
+O suporte ao produto para ODBC é fornecido pelos Serviços de Suporte a Produtos da Microsoft. Como muitos produtos da Microsoft usam o ODBC como um componente principal e também redistribuem drivers ODBC, os Serviços de Suporte a Produtos da Microsoft consideram o ODBC como parte de cada produto que incorpora o ODBC como um componente. O suporte à ODBC é fornecido de acordo com o acordo de suporte desse produto. Consulte a documentação individual do produto para obter mais informações.

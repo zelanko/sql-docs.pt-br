@@ -1,5 +1,5 @@
 ---
-title: Programa de instalação | Microsoft Docs
+title: Programa de Configuração | Microsoft Docs
 ms.custom: ''
 ms.date: 08/31/2016
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - installing ODBC components [ODBC], setup program
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dc79bb5d12b53938e3e2ef1c531fd03b0002ed78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b89cae70db65bd2aa54b8e9789a5c2b35696923e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093829"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81296146"
 ---
 # <a name="setup-program"></a>Programa de instalação
-> **Observação:** A partir do Windows XP e do Windows Server 2003, **o ODBC está incluído no sistema operacional Windows**. Você só deve instalar explicitamente o ODBC em versões anteriores do Windows.  
+> **NOTA:** Começando com o Windows XP e o Windows Server 2003, **o ODBC está incluído no sistema operacional Windows**. Você só deve instalar explicitamente o ODBC em versões anteriores do Windows.  
   
- O usuário executa o programa de instalação para iniciar o processo de instalação. O programa de instalação é escrito pelo desenvolvedor do aplicativo ou driver. Além de instalar componentes ODBC, ele pode instalar outro software. Por exemplo, os desenvolvedores de aplicativos podem usar o mesmo programa de instalação para instalar componentes ODBC e para instalar seus aplicativos.  
+ O usuário executa o programa de configuração para iniciar o processo de configuração. O programa de configuração é escrito pelo desenvolvedor de aplicativos ou driver. Além de instalar componentes ODBC, ele pode instalar outros softwares. Por exemplo, os desenvolvedores de aplicativos podem usar o mesmo programa de configuração tanto para instalar componentes ODBC quanto para instalar seus aplicativos.  
   
- Os desenvolvedores podem escrever o programa de instalação do zero, usando os utilitários de instalação do Microsoft® Windows® SDK ou o software de instalação de outros fornecedores. Isso dá aos desenvolvedores controle total sobre a aparência do programa de instalação. O programa de instalação pode ser escrito para instalar software adicional, como um aplicativo ODBC. Para obter mais informações sobre os utilitários de instalação do SDK do Windows, consulte a documentação do SDK do Windows.  
+ Os desenvolvedores podem escrever o programa de configuração do zero, usando os utilitários de configuração SDK do Microsoft® Windows® ou software de configuração de outros fornecedores. Isso dá a esses desenvolvedores controle completo sobre a aparência do programa de configuração. O programa de configuração pode ser gravado para instalar software adicional, como um aplicativo ODBC. Para obter mais informações sobre os utilitários de configuração do Windows SDK, consulte a documentação do Windows SDK.  
   
- A quantidade de instalação realmente feita pelo programa de instalação depende de quais funções ele chama na DLL do instalador. A DLL do instalador contém funções para instalar componentes individuais do ODBC. O programa de instalação simplesmente chama **SQLInstallDriverManager**, **SQLInstallDriverEx**ou **SQLInstallTranslatorEx** na DLL do instalador para recuperar o caminho do diretório no qual o componente deve ser instalado e adicionar informações sobre o componente ao registro. Essas funções não copiam arquivos de fato; o programa de instalação faz isso usando as informações nos argumentos dessas funções.  
+ Quanto da instalação é realmente feita pelo programa de configuração depende de quais funções ele chama no instalador DLL. O instalador DLL contém funções para instalar componentes ODBC individuais. O programa de configuração simplesmente chama **SQLInstallDriverManager,** **SQLInstallDriverEx**ou **SQLInstallTranslatorEx** no instalador DLL para recuperar o caminho do diretório no qual o componente deve ser instalado e adicionar informações sobre o componente ao registro. Essas funções não copiam arquivos; o programa de configuração faz isso usando as informações nos argumentos dessas funções.  
   
- A DLL do instalador também contém funções para remover componentes ODBC. O programa de instalação chama **SQLRemoveDriverManager**, **SQLRemoveDriver**ou **SQLRemoveTranslator** na DLL do instalador para decrementar a contagem de uso de um componente no registro e, se a nova contagem de uso do componente for para 0, remova todas as informações sobre o componente do registro. Essas funções, na verdade, não removem os arquivos para o componente; o programa de instalação faz isso se a nova contagem de uso se enquadrar em 0.
+ O instalador DLL também contém funções para remover componentes ODBC. O programa de configuração chama **SQLRemoveDriverManager,** **SQLRemoveDriver**ou **SQLRemoveTranslator** no instalador DLL para diminuir a contagem de uso de um componente no registro e, se a nova contagem de uso do componente cair para 0, remova todas as informações sobre o componente do registro. Essas funções não removem os arquivos do componente; o programa de configuração faz isso se a nova contagem de uso cair para 0.

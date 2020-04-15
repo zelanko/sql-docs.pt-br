@@ -12,18 +12,18 @@ helpviewer_keywords:
 - thread-safe drivers [ODBC]
 - multithreaded applications [ODBC]
 ms.assetid: cdfebdf5-12ff-4e28-8055-41f49b77f664
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1eaa07ce22436bc8bfae215c0431480081ee0f06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c10d1b401ac780d24184c4c2337199e99973e916
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086348"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302405"
 ---
 # <a name="multithreading"></a>Multithreading
-Em sistemas operacionais multithread, os drivers devem ser thread-safe. Ou seja, deve ser possível que os aplicativos usem o mesmo identificador em mais de um thread. Como isso é feito é específico do driver e é provável que os drivers serializarão qualquer tentativa de usar simultaneamente o mesmo identificador em dois threads diferentes.  
+Em sistemas operacionais multithread, os drivers devem ser seguros para rosca. Ou seja, deve ser possível que as aplicações usem a mesma alça em mais de um segmento. Como isso é alcançado é específico do driver, e é provável que os drivers serializem qualquer tentativa de usar simultaneamente a mesma alça em dois segmentos diferentes.  
   
- Aplicativos geralmente usam vários threads em vez de processamento assíncrono. O aplicativo cria um thread separado, chama uma função ODBC nele e continua o processamento no thread principal. Em vez de ter que sondar continuamente a função assíncrona, como é o caso quando o atributo de instrução de SQL_ATTR_ASYNC_ENABLE é usado, o aplicativo pode simplesmente permitir que o thread recém-criado seja concluído.  
+ Os aplicativos geralmente usam vários threads em vez de processamento assíncrono. O aplicativo cria um segmento separado, chama uma função ODBC nele e, em seguida, continua o processamento no segmento principal. Em vez de ter que fazer uma pesquisa contínua da função assíncrona, como é o caso quando o atributo de declaração SQL_ATTR_ASYNC_ENABLE é usado, o aplicativo pode simplesmente deixar o segmento recém-criado terminar.  
   
- As funções que aceitam um identificador de instrução e estão em execução em um thread podem ser canceladas chamando **SQLCancel** com o mesmo identificador de instrução de outro thread. Embora os drivers não devam serializar o uso de **SQLCancel** dessa maneira, não há nenhuma garantia de que chamar **SQLCancel** irá realmente cancelar a função em execução no outro thread.
+ Funções que aceitam uma alça de declaração e estão sendo executados em um segmento podem ser canceladas ligando para **o SQLCancel** com a mesma alça de declaração de outro segmento. Embora os drivers não deva serializar o uso do **SQLCancel** desta maneira, não há garantia de que chamar **o SQLCancel** realmente cancelará a função em execução no outro segmento.
