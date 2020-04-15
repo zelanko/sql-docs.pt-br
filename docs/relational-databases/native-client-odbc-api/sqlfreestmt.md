@@ -11,23 +11,23 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLFreeStmt function
 ms.assetid: d9666d0b-3446-480e-bf1a-10b01213e411
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b985db3cb58a7029a3b5ec489d2e23b0c1292919
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3eb86f9b7b1076fa3a01135b5780637ee9857f90
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786733"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298442"
 ---
 # <a name="sqlfreestmt"></a>SQLFreeStmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Geralmente   
-      O **SQLFreeStmt** não é recomendado no ODBC 3,0 e posterior. No entanto, se o aplicativo precisar reutilizar a instrução, você ainda deverá usar **SQLFreeStmt** com as opções **SQL_RESET_PARAMS** e **SQL_UNBIND** ). Você também pode usar [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md), [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md), [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md), [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)e [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) para substituir ou duplicar a função de **SQLFreeStmt** e usá-los em vez disso.  
+      **SQLFreeStmt** não é recomendado no ODBC 3.0 e posterior. No entanto, se o aplicativo precisar reutilizar a declaração, você ainda deve usar **o SQLFreeStmt** com as opções **SQL_RESET_PARAMS** e **SQL_UNBIND).** Você também pode usar [SQLCloseCursor,](../../relational-databases/native-client-odbc-api/sqlclosecursor.md) [SQLBindParameter,](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) [SQLBindCol,](../../relational-databases/native-client-odbc-api/sqlbindcol.md) [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)e [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) para substituir ou duplicar a função do **SQLFreeStmt** e usá-los em seu lugar.  
   
- Em geral, é mais eficiente reutilizar instruções do que descartar e alocar novas. No entanto, em algumas situações, como a reutilização de instruções, SQLFreeStmt ainda deve ser usado.  
+ Em geral, é mais eficiente reutilizar declarações do que solhá-las e alocar novas. No entanto, em algumas situações, como a reutilização de declarações, sqlFreestmt ainda deve ser usado.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Função SQLFreeStmt](https://go.microsoft.com/fwlink/?LinkId=59346)   

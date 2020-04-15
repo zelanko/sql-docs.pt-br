@@ -11,34 +11,34 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], architecture
 - FoxPro ODBC driver [ODBC], architecture
 ms.assetid: ef5a91cd-158e-40bf-b5a8-8ba535c4705e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 833c953df3502eb7e5d5676da8df057734174619
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cd55290e09fbd35f5a1559ce4209693ef8eaaf73
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68071918"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303457"
 ---
 # <a name="driver-architecture-overview"></a>Visão geral de arquitetura do driver
-O driver ODBC do Microsoft Visual FoxPro é um driver de 32 bits que permite abrir e consultar um banco de dados do Microsoft Visual FoxPro ou tabelas do FoxPro por meio da interface ODBC (Open Database Connectivity). Você pode acessar dados do FoxPro usando os seguintes tipos de aplicativos:  
+O Microsoft Visual FoxPro ODBC Driver é um driver de 32 bits que permite que você abra e consulte um banco de dados Microsoft Visual FoxPro ou tabelas FoxPro através da interface Open Database Connectivity (ODBC). Você pode acessar os dados do FoxPro usando os seguintes tipos de aplicativos:  
   
--   Um aplicativo Microsoft Office, como o Microsoft Excel ou o Microsoft Word, que usa o Microsoft Query para se comunicar com o ODBC.  
+-   Um aplicativo do Microsoft Office, como o Microsoft Excel ou o Microsoft Word, que usa o Microsoft Query para se comunicar com o ODBC.  
   
--   Um aplicativo escrito em Microsoft Visual C++ ou C que usa a API ODBC SDK.  
+-   Um aplicativo escrito no Microsoft Visual C++ ou C que usa a API ODBC SDK.  
   
--   Um aplicativo escrito no Microsoft Visual Basic ou no Microsoft Visual Basic for Applications.  
+-   Um aplicativo escrito no Microsoft Visual Basic ou Microsoft Visual Basic para aplicativos.  
   
- Em cada caso, a solicitação de informações usa a API ODBC. O Gerenciador de driver ODBC funciona com o driver ODBC do Visual FoxPro para abrir e recuperar dados de tabelas e bancos de dado do FoxPro.  
+ Em cada caso, a solicitação de informações utiliza a API ODBC. O Gerenciador de Driver sustal oDBC trabalha com o Visual FoxPro ODBC Driver para abrir e recuperar dados de tabelas e bancos de dados FoxPro.  
   
- A arquitetura é representada no diagrama a seguir:  
+ A arquitetura está representada no seguinte diagrama:  
   
- ![Mostra a arquitetura do driver ODBC](../../odbc/microsoft/media/vfparch.gif "vfparch")  
+ ![Mostra a arquitetura do Driver ODBC](../../odbc/microsoft/media/vfparch.gif "vfparch")  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Terminologia do Visual FoxPro](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
--   [Instalando e Configurando o driver ODBC do Visual FoxPro](../../odbc/microsoft/installing-and-configuring.md)  
+-   [Instalação e configuração do driver Visual FoxPro ODBC](../../odbc/microsoft/installing-and-configuring.md)  
   
--   [Usar o driver ODBC do Visual FoxPro](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver.md)
+-   [Usando o driver ODBC do Visual FoxPro](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver.md)

@@ -1,5 +1,5 @@
 ---
-title: Modo de confirmação | Microsoft Docs
+title: Modo de compromisso | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - committing transactions [ODBC]
 - commit modes [ODBC]
 ms.assetid: 963fe470-f7cb-4dbe-a779-05f98d7ff17d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22519e6d3be8ab4474fd88309da1b7e8be0fb49e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0bdff581ed20ffd2768f4ebd2a033476873dcfec
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083331"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299116"
 ---
 # <a name="commit-mode"></a>Modo de confirmação
-As transações no ODBC podem estar em um dos dois modos: modo de confirmação automática ou modo de confirmação manual.  
+As transações no ODBC podem ser em um dos dois modos: modo de confirmação automática ou modo de confirmação manual.  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Modo de confirmação automática](../../../odbc/reference/develop-app/auto-commit-mode.md)  
   

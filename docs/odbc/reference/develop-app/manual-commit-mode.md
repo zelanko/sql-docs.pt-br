@@ -15,16 +15,16 @@ helpviewer_keywords:
 - commit modes [ODBC]
 - transactions [ODBC], rolling back
 ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7189a0586ba4f62091d5eb209a56931627bc6f7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2a00ff373e374d0940b3e7259eeb01e26b620cae
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036405"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287870"
 ---
 # <a name="manual-commit-mode"></a>Modo de confirmação manual
-*No modo de confirmação manual,* os aplicativos devem concluir explicitamente as transações chamando **SQLEndTran** para confirmá-las ou redistribuí-las de volta. Esse é o modo de transação normal para a maioria dos bancos de dados relacionais.  
+*No modo de confirmação manual,* os aplicativos devem concluir explicitamente as transações ligando para **o SQLEndTran** para comprometê-las ou revertê-las. Este é o modo normal de transação para a maioria dos bancos de dados relacionais.  
   
- As transações em ODBC não precisam ser iniciadas explicitamente. Em vez disso, uma transação começa implicitamente sempre que o aplicativo começa a operar no banco de dados. Se a fonte de dados exigir um início de transação explícito, o driver deverá fornecê-lo sempre que o aplicativo executar uma instrução que requer uma transação e não houver nenhuma transação atual.
+ As transações na ODBC não devem ser explicitamente iniciadas. Em vez disso, uma transação começa implicitamente sempre que o aplicativo começa a operar no banco de dados. Se a fonte de dados exigir início explícito da transação, o motorista deve fornecê-lo sempre que o aplicativo executar uma declaração exigindo uma transação e não houver transação atual.

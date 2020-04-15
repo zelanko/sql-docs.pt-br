@@ -1,5 +1,5 @@
 ---
-title: Buscando linhas | Microsoft Docs
+title: Buscar linhas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - IRowset interface
 - SQL Server Native Client OLE DB provider, fetching
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab6242348f3020b5b9719c41c7cb7563b0c30729
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2dee6b8b6967046bb8ce69984fe29b71f223789d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761705"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298866"
 ---
 # <a name="fetching-rows"></a>Buscando linhas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

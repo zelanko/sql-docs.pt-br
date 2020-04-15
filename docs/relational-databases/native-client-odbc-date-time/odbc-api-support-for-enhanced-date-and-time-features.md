@@ -1,5 +1,5 @@
 ---
-title: API ODBC para data e hora
+title: API ODBC para data
 ms.custom: ''
 ms.date: 12/18/2019
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], API support
 ms.assetid: 430c029d-f8c1-4de7-a9dd-330e9b6bfc20
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6646b899f990ea4be09b09b0780d24bb80778e53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a776392c756f033ec35c5abcc9e5f882941de3a7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75243796"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306187"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>Suporte à API ODBC para recursos avançados de data e hora
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,6 +72,6 @@ ms.locfileid: "75243796"
 -   [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Melhorias de data e hora &#40;&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Melhorias de data e hora &#40;&#41;da ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

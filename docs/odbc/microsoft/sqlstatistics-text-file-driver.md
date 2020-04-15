@@ -1,5 +1,5 @@
 ---
-title: SQLStatistics (driver de arquivo de texto) | Microsoft Docs
+title: SQLStatistics (Driver de arquivo de texto) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLStatistics
 - SQLStatistics function [ODBC], Text File Driver
 ms.assetid: 311afc01-d656-425f-be43-4a8e7cbc9a97
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4deede2060821ed05a58a637adcf09493fd910dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 76b9810236b4ec415f8abb8ecefca748c13b51c8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68037825"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299306"
 ---
 # <a name="sqlstatistics-text-file-driver"></a>SQLStatistics (Driver de Arquivo de texto)
 > [!NOTE]  
->  Este tópico fornece informações específicas do driver de arquivo de texto. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico fornece informações específicas do Driver de arquivo de texto. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [Referência à API oDBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |Coluna|Comentários|  
 |------------|--------------|  
-|TABLE_QUALIFIER|O caminho para um diretório.<br /><br /> Não há suporte para a correspondência de padrões no argumento *szTableQualifier* .|  
-|TABLE_OWNER|NULL é retornado nesta coluna porque não há suporte para o nome do proprietário.|  
-|TABLE_NAME|Nome de tabela não delimitado.<br /><br /> Não há suporte para a correspondência de padrões no argumento *szTableName* .|  
-|INDEX_QUALIFIER|NULL é sempre retornado.|  
+|TABLE_QUALIFIER|O caminho para um diretório.<br /><br /> A correspondência de padrões não é suportada no argumento *szTableQualifier.*|  
+|TABLE_OWNER|NULL é devolvido nesta coluna porque o nome do proprietário não é suportado.|  
+|TABLE_NAME|Nome de tabela não limitado.<br /><br /> A correspondência de padrões não é suportada no argumento *szTableName.*|  
+|INDEX_QUALIFIER|NULL é sempre devolvido.|  
 |INDEX_NAME|Dependente de índice.|  
-|TYPE|Somente SQL_TABLE_STAT ou SQL_INDEX_OTHER serão retornados para o tipo.|  
+|TYPE|Somente SQL_TABLE_STAT ou SQL_INDEX_OTHER serão devolvidos para TYPE.|  
 |SEQ_IN_INDEX|Dependente de índice.|  
 |COLUMN_NAME|Dependente de índice.|  
 |COLLATION|Dependente de índice.|  
-|PAGES|NULL é sempre retornado.|  
+|PAGES|NULL é sempre devolvido.|  
   
- A filtragem se baseia na exclusividade (o argumento *fUnique* ). O parâmetro *fAccuracy* é ignorado.
+ A filtragem é baseada na exclusividade (o argumento *fUnique).* O parâmetro *fAccuracy* é ignorado.

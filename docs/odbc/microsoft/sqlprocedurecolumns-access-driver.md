@@ -1,5 +1,5 @@
 ---
-title: SQLProcedureColumns (driver de acesso) | Microsoft Docs
+title: Colunas de procedimento sql (driver de acesso) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - Access driver [ODBC], SQLProcedureColumns
 - SQLProcedureColumns function [ODBC], Access Driver
 ms.assetid: 34fee995-5848-4ecb-bda0-fc362a77b2d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1a33d449396b5cc80e8d29767708d2f9f16736fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: be17776ac6b6879140a7c57bede1b3cb539d97be
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987842"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299456"
 ---
 # <a name="sqlprocedurecolumns-access-driver"></a>SQLProcedureColumns (Driver do Access)
 > [!NOTE]  
->  Este tópico fornece informações específicas do driver de acesso. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico fornece informações específicas do Access Driver. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [Referência à API oDBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Os desenvolvedores de aplicativos devem procurar colunas definidas pelo driver, começando no final do conjunto de resultados e prosseguindo para trás.  
+ Os desenvolvedores de aplicativos devem procurar por colunas definidas pelo driver a partir do final do conjunto de resultados e procedendo para trás.  
   
 |Coluna|Comentários|  
 |------------|--------------|  
 |COLUMN_TYPE|SQL_PARAM_INPUT ou SQL_RESULT_COL|  
-|NUMERA|Esta é uma coluna específica do driver que é retornada no final do conjunto de resultados. O tipo SQL da coluna é um inteiro.|
+|Ordinal|Esta é uma coluna específica do driver que é devolvida no final do conjunto de resultados. O tipo SQL da coluna é um inteiro.|

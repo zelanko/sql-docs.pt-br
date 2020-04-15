@@ -1,5 +1,5 @@
 ---
-title: Associação de coluna | Microsoft Docs
+title: Vinculação de Coluna-Wise | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f91dca1ac20173f9c10b4a52adf292e7abc45d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 538f225de2e08adcd7fea8a27edea35dc4b4e17f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083378"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299146"
 ---
 # <a name="column-wise-binding"></a>Associação de coluna
-Ao usar a associação de coluna, um aplicativo associa um ou dois casos de matrizes a cada coluna para a qual os dados serão retornados. A primeira matriz contém os valores de dados, e a segunda matriz contém buffers de comprimento/indicador. Os indicadores e os valores de comprimento podem ser armazenados em buffers separados definindo os campos de descritor SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR com valores diferentes; Se isso for feito, uma terceira matriz será associada. Cada matriz contém tantos elementos quantos houver linhas no conjunto de linhas.  
+Ao usar a vinculação em termos de coluna, um aplicativo vincula um ou dois, ou em alguns casos três, matrizes a cada coluna para a qual os dados devem ser retornados. O primeiro array contém os valores de dados, e o segundo array mantém buffers de comprimento/indicador. Os indicadores e os valores de comprimento podem ser armazenados em buffers separados definindo os campos de descritor SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR para valores diferentes; se isso for feito, uma terceira matriz está vinculada. Cada matriz contém tantos elementos quanto há linhas no conjunto de linhas.  
   
- O aplicativo declara que está usando Associação de coluna com o atributo de instrução SQL_ATTR_ROW_BIND_TYPE, que determina o tipo de associação para buffers de conjunto de linhas, em oposição aos buffers de conjunto de parâmetros. O driver retorna os dados para cada linha em elementos sucessivos de cada matriz. A ilustração a seguir mostra como a associação por coluna funciona.  
+ O aplicativo declara que está usando a vinculação em termos de coluna com o atributo de declaração SQL_ATTR_ROW_BIND_TYPE, que determina o tipo de vinculação para buffers de conjunto de linhas em oposição aos buffers de conjunto de parâmetros. O driver retorna os dados de cada linha em elementos sucessivos de cada matriz. A ilustração a seguir mostra como funciona a vinculação em termos de coluna.  
   
- ![Associação de coluna&#45;inteligente de três colunas](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![Coluna&#45;ligação sábia de três colunas](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
- Por exemplo, o código a seguir associa matrizes de 10 elementos às colunas OrderID, SalesPerson e status:  
+ Por exemplo, o código a seguir vincula matrizes de 10 elementos às colunas OrderID, SalesPerson e Status:  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

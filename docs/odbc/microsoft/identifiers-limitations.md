@@ -11,16 +11,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: b3466382-71cb-4f82-8318-092a8fcef3df
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 251ae0e4e94cec903e2c4b5cf687ed9b8b41dfc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7154f2db09b69e6376b1fe3af1de3f2c646ee94e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952395"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81286246"
 ---
 # <a name="identifiers-limitations"></a>Limitações de identificadores
-Se um identificador contiver um espaço ou um símbolo especial, o identificador deverá ser colocado entre aspas. Um nome válido é uma cadeia de caracteres com até 64 caracteres, dos quais o primeiro caractere não deve ser um espaço. Os nomes válidos não podem incluir caracteres de controle ou os seguintes caracteres especiais: ' &#124; # *? [ ] . ! $ .  
+Se um identificador contiver um espaço ou um símbolo especial, o identificador deve ser incluído entre aspas traseiras. Um nome válido é uma seqüência de não mais de 64 caracteres, dos quais o primeiro caractere não deve ser um espaço. Nomes válidos não podem incluir caracteres de controle ou os seguintes caracteres especiais: ' &#124; # * ? [ ] . ! $ .  
   
- Não use as palavras reservadas listadas na gramática do SQL no Apêndice C da *referência do programador de ODBC* (ou a forma abreviada dessas palavras reservadas) como identificadores (ou seja, nomes de tabela ou coluna), a menos que você coloque a palavra entre aspas de trás (').
+ Não use as palavras reservadas listadas na gramática SQL no apêndice C da *Referência do Programador ODBC* (ou a forma abreviada dessas palavras reservadas) como identificadores (isto é, nomes de tabela ou coluna), a menos que você cerque a palavra entre aspas (').

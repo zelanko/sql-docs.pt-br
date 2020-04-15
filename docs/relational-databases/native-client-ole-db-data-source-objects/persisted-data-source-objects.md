@@ -1,5 +1,5 @@
 ---
-title: Objetos de fonte de dados persistentes | Microsoft Docs
+title: Objetos persistidos da fonte de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, persisted data source objects
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1c553835cc0380082821dd49f53f69e767baacb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3355b086d884d68f829c34fb461589e4a46e05fc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73771474"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297186"
 ---
 # <a name="persisted-data-source-objects"></a>Objetos persistidos da fonte de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte a objetos de fonte de dados persistentes com a interface **IPersistFile** .  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor Native Client OLE DB suporta objetos de origem de dados persistentes com a interface **IPersistFile.**  
   
 ## <a name="examples"></a>Exemplos  
  **A. Inicialização de fonte de dados persistente:**  

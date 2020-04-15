@@ -1,5 +1,5 @@
 ---
-title: Referência de&#39;s do driver ODBC para Oracle Programmer | Microsoft Docs
+title: Driver ODBC para Programador Oracle&#39;de referência | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,18 +8,18 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4fe50584664d625040753a666cf7ebdf0c25ab11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 763c9892836b262f308b82ef96794a03dc33fd12
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915778"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298116"
 ---
-# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Referência do driver ODBC para Oracle Programmer&#39;s
+# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Driver ODBC para Programador Oracle&#39;de Referência
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
+>  Esse recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
   
  Esta seção inclui os tópicos a seguir:  
   
@@ -31,21 +31,21 @@ ms.locfileid: "67915778"
   
 -   [Tipo de cursor e combinações de simultaneidade](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)  
   
--   [Usar os serviços de componentes da Microsoft](../../odbc/microsoft/using-microsoft-component-services.md)  
+-   [Usando os serviços de componentes da Microsoft](../../odbc/microsoft/using-microsoft-component-services.md)  
   
--   [Usar os Serviços de Informações da Internet da Microsoft](../../odbc/microsoft/using-microsoft-internet-information-services.md)  
+-   [Usando os Serviços de Informações da Internet da Microsoft](../../odbc/microsoft/using-microsoft-internet-information-services.md)  
   
--   [Usar a autenticação do sistema operacional](../../odbc/microsoft/using-operating-system-authentication.md)  
+-   [Usando a autenticação do sistema operacional](../../odbc/microsoft/using-operating-system-authentication.md)  
   
--   [Usar SQLConfigDatasource com o driver ODBC para Oracle](../../odbc/microsoft/using-sqlconfigdatasource-with-the-odbc-driver-for-oracle.md)  
+-   [Usando SQLConfigDatasource com o driver ODBC para Oracle](../../odbc/microsoft/using-sqlconfigdatasource-with-the-odbc-driver-for-oracle.md)  
   
 -   [Limitações de uso de cursores controlados por conjunto de chaves](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)  
   
--   [Procedimentos armazenados do driver ODBC para Oracle](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
+-   [Driver ODBC para procedimentos armazenados por Oracle](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
   
--   [Mensagens de erro do driver ODBC para Oracle](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
+-   [Driver ODBC para mensagens de erro oracle](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
   
--   [Níveis de conformidade ODBC](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
+-   [Níveis de conformidade da ODBC](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
   
 -   [Funções de API](../../odbc/microsoft/api-functions-odbc-driver-for-oracle.md)  
   

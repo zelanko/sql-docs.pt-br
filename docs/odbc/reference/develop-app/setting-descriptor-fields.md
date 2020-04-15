@@ -1,5 +1,5 @@
 ---
-title: Configurando campos de descritor | Microsoft Docs
+title: Definindo campos de descritores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], retrieving or setting field values
 ms.assetid: d735dc64-370f-48ab-a59f-6cef9bc4e1e8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 34c4a6e3d98b6711c77fb50d7156207de148881a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 04f9520e2ef462df481bb104e389aeb57b5dd457
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094250"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304147"
 ---
 # <a name="setting-descriptor-fields"></a>Configurar campos de descritor
-Para modificar os campos de um descritor, um aplicativo pode chamar **SQLSetDescField**. Alguns campos são somente leitura e não podem ser definidos. (Consulte a descrição da função [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) .)  
+Para modificar os campos de um descritor, um aplicativo pode chamar **SQLSetDescField**. Alguns campos são somente leitura e não podem ser definidos. (Veja a descrição da função [SQLSetDescField.)](../../../odbc/reference/syntax/sqlsetdescfield-function.md)  
   
- Os campos de registro de descritor são definidos com um número de registro (*RecNumber*) de 1 ou superior, enquanto os campos de cabeçalho do descritor são definidos com um número de registro de 0. Um número de registro de 0 também é usado para definir campos de indicador, de acordo com a Convenção em que os indicadores estão contidos na coluna 0. Isso pode deixar a impressão de que os campos de indicador estão contidos no cabeçalho do descritor, mas esse não é o caso. Os campos de indicador são diferentes dos campos de cabeçalho.  
+ Os campos de registro do descritor são definidos com um número recorde *(RecNumber)* de 1 ou mais, enquanto os campos de cabeçalho do descritor são definidos com um número recorde de 0. Um número recorde de 0 também é usado para definir campos de marcação, de acordo com a convenção de que os marcadores estão contidos na coluna 0. Isso pode deixar a impressão de que os campos de marcadores estão contidos no cabeçalho do descritor, mas este não é o caso. Os campos de marcação são diferentes dos campos de cabeçalho.  
   
- Ao definir os campos individualmente, o aplicativo deve seguir a sequência definida em [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Definir alguns campos faz com que o driver defina outros campos. Isso garante que o descritor esteja sempre pronto para uso quando o aplicativo tiver especificado um tipo de dados. Quando o aplicativo define o campo SQL_DESC_TYPE, o driver verifica se outros campos que especificam o tipo são válidos e consistentes.  
+ Ao definir campos individualmente, o aplicativo deve seguir a seqüência definida no [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). A configuração de alguns campos faz com que o driver defina outros campos. Isso garante que o descritor esteja sempre pronto para ser usado depois que o aplicativo tiver especificado um tipo de dados. Quando o aplicativo define o campo SQL_DESC_TYPE, o driver verifica se outros campos que especificam o tipo são válidos e consistentes.  
   
- Se uma chamada de função que define um campo de descritor falhar, o conteúdo do campo de descritor será indefinido após a chamada de função com falha.
+ Se uma chamada de função que definirum campo descritor falhar, o conteúdo do campo descritor será indefinido após a chamada de função com falha.

@@ -1,5 +1,5 @@
 ---
-title: Resumo da função da DLL de instalação | Microsoft Docs
+title: Resumo da função DLL de configuração | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], setup DLL functions
 ms.assetid: d18169eb-89f7-4079-be70-a85713030191
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c72c5e3c8176b878265dcaa4a7b27544ed8946b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4d141cdd88614c1a4881d794b345e7d2ada4ba69
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68073788"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298869"
 ---
 # <a name="setup-dll-function-summary"></a>Resumo de funções de DLL da instalação
-A tabela a seguir descreve as funções de DLL de instalação. Para obter mais informações sobre a sintaxe e a semântica para cada função, consulte [Setup DLL API Reference](../../../odbc/reference/syntax/setup-dll-api-reference.md).  
+A tabela a seguir descreve as funções de Configuração dLL. Para obter mais informações sobre a sintaxe e semântica de cada função, consulte [Configuração de Referência de API DLL](../../../odbc/reference/syntax/setup-dll-api-reference.md).  
   
 |Tarefa|Nome da função|Finalidade|  
 |----------|-------------------|-------------|  
-|Configurando fontes de dados e tradutores|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)<br /><br /> [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)<br /><br /> [ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|Instala ou desinstala um driver.<br /><br /> Adiciona, modifica ou exclui uma fonte de dados.<br /><br /> Retorna uma opção de conversão padrão.|
+|Configuração de fontes de dados e tradutores|[Driver de configuração](../../../odbc/reference/syntax/configdriver-function.md)<br /><br /> [Configdsn](../../../odbc/reference/syntax/configdsn-function.md)<br /><br /> [Tradutor de config](../../../odbc/reference/syntax/configtranslator-function.md)|Instala ou desinstala um driver.<br /><br /> Adiciona, modifica ou exclui uma fonte de dados.<br /><br /> Retorna uma opção de tradução padrão.|

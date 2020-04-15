@@ -12,18 +12,18 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b5f1aabd23a587e681c33aed4b4119523444219
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 093cb7352a7f509b0afcc061e2691311bb183169
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402608"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298126"
 ---
 # <a name="odbc-driver-for-oracle"></a>Driver ODBC para Oracle
 > [!IMPORTANT]  
->  Esse recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o [driver ODBC fornecido pela Oracle](https://www.oracle.com/database/technologies/releasenote-odbc-ic.html).  
+>  Esse recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
   
  O Driver ODBC ® Microsoft para Oracle permite conectar seu aplicativo compatível com ODBC a um banco de dados Oracle. O Driver ODBC for Oracle está em conformidade com a especificação De conectividade de banco de dados aberto (ODBC) descrita na *referência do programador ODBC*. Ele permite acesso a pacotes PL/SQL, integração XA/DTC e acesso Oracle a partir de Serviços de Informação da Internet (IIS).  
   

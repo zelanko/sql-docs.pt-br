@@ -1,5 +1,5 @@
 ---
-title: Determinando os componentes do Oracle instalados | Microsoft Docs
+title: Determinando componentes Oracle instalados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], determining installed components
 ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0567e38d34b9400dcaf6b170d821aa0e5fd0e263
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 73a406487ea6a4e1ab00e0320923b0b276a359a6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079008"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303487"
 ---
 # <a name="determining-installed-oracle-components"></a>Determinar os componentes da Oracle instalados
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
+>  Esse recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
   
- Para determinar os componentes do Oracle instalados no seu sistema (e suas versões), navegue até o diretório \Orainst no diretório base do Oracle. Abra um dos seguintes arquivos de texto: NT. rgs, Win95. rgs ou Win98. rgs.  
+ Para determinar os componentes Oracle instalados em seu sistema (e suas versões), navegue até o diretório \Orainst sob o diretório inicial oracle. Abra um dos seguintes arquivos de texto: Nt.rgs, Win95.rgs ou Win98.rgs.  
   
- O formato de arquivo é semelhante ao seguinte:  
+ O formato do arquivo é semelhante ao seguinte:  
   
 ```  
 0 ntinstall     all    "orainst"  "3.3.1.0.0C"  "Oracle Installer"  
@@ -37,4 +37,4 @@ ms.locfileid: "68079008"
 69 w32plus80    all    "plus80"   "8.0.5.0.0"   "SQL*Plus"  
 ```  
   
- Os arquivos. rgs também incluem informações de instalação e descrições de cada componente.
+ Os arquivos .rgs também incluem informações de instalação e descrições de cada componente.

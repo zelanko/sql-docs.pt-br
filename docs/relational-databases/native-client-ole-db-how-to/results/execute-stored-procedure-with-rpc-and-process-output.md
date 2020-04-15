@@ -1,5 +1,5 @@
 ---
-title: Procedimento armazenado, RPC, saída
+title: Procedimento armazenado, RPC, Saída
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - RPC syntax
 - stored procedures [SQL Server], RPC syntax
 ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9148f3aca9a5ea66407a2b471516cc4eade16f39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 385a0930b817c4f897619903ae1fa8501fa763ce
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244465"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302192"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Executar o procedimento armazenado com RPC e a saída do processo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "75244465"
   Os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem ter códigos de retorno e parâmetros de saída inteiros. Os códigos de retorno e os parâmetros de saída são enviados no último pacote do servidor e, portanto, não estão disponíveis para o aplicativo enquanto o conjunto de linhas não é completamente liberado. Se o comando retornar vários resultados, os dados do parâmetro de saída ficarão disponíveis quando **IMultipleResults::GetResult** retornar DB_S_NORESULT ou quando a interface **IMultipleResults** for completamente liberada, o que ocorrer primeiro.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário persistir as credenciais, criptografe-as com a [Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você deve persistir as credenciais, você deve criptografá-las com a [API cripto Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Para processar códigos de retorno e parâmetros de saída  
   
@@ -37,13 +37,13 @@ ms.locfileid: "75244465"
   
 3.  Crie um conjunto de associações (um para cada criador de parâmetro) usando uma matriz de estruturas DBBINDING.  
   
-4.  Crie um acessador para os parâmetros definidos usando o método **IAccessor:: Createaccesser** . O **Createaccesser** cria um acessador de um conjunto de associações.  
+4.  Crie um acessador para os parâmetros definidos usando o método **IAccessor::CreateAccessor**. **CreateAccessor** cria um acessador com base em um conjunto de associações.  
   
 5.  Preencha a estrutura DBPARAMS.  
   
 6.  Chame o comando **Execute** (neste caso, uma chamada a um procedimento armazenado).  
   
-7.  Processe o conjunto de linhas e libere-o usando o método **IRowset:: Release** .  
+7.  Processe o conjunto de linhas e libere-o usando o método **IRowset::Release**.  
   
 8.  Processe os valores de código de retorno e de parâmetro de saída recebidos do procedimento armazenado.  
 

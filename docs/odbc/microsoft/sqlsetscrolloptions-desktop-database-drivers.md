@@ -1,5 +1,5 @@
 ---
-title: SQLSetScrollOptions (drivers de banco de dados de desktop) | Microsoft Docs
+title: SQLSetScrollOptions (Drivers de banco de dados da área) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], Desktop Database Drivers
 ms.assetid: 51d643ed-015b-4639-969a-9491d9875aca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0adedfb69cd4a7b5cf195916747687826805e8bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5c47255b455354c49133d61c3546be63ab2380a1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67905388"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299426"
 ---
 # <a name="sqlsetscrolloptions-desktop-database-drivers"></a>SQLSetScrollOptions (Drivers de banco de dados de área de trabalho)
-Há suporte para cursores diretos e estáticos para SQL_CONCUR_READ_ONLY.  
+Cursores dianteiros e estáticos são suportados para SQL_CONCUR_READ_ONLY.  
   
- Somente cursores controlados por conjunto de chaves têm suporte para um argumento *fConcurrency* de SQL_CONCUR_LOCK.  
+ Apenas os cursores orientados por keyset são suportados para um argumento *fConcurrency* de SQL_CONCUR_LOCK.  
   
- Não há suporte para um argumento *fConcurrency* de SQL_CONCUR_ROWVER.  
+ Um *argumento fConcurrency* de SQL_CONCUR_ROWVER não é suportado.  
   
- Não há suporte para cursores dinâmicos e mistos.
+ Não são suportados cursores dinâmicos e cursores mistos.

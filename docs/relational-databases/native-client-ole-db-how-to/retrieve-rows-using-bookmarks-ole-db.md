@@ -1,5 +1,5 @@
 ---
-title: Recuperar linhas usando indicadores (OLE DB) | Microsoft Docs
+title: Recuperar linhas usando indicadores (OLE DB)| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - bookmarks [OLE DB]
 - rows [OLE DB]
 ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67509c447134edd816c06ac57e7714efd16c7359
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9f12644175b20d9055d3a5a73a4ad1e1b003805b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73766389"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302167"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Recuperar linhas usando indicadores (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  O consumidor define o valor de campo **dwFlag** da estrutura de associação a DBCOLUMNSINFO_ISBOOKMARK para indicar que a coluna é usada como um indicador. O consumidor também define a propriedade DBPROP_BOOKMARKS do conjunto de linhas como VARIANT_TRUE. Isso permite que a coluna 0 esteja presente no conjunto de linhas. **IRowsetLocate:: GetRowsAt** é usado para buscar linhas começando com a linha especificada um deslocamento de um indicador.  
+  O consumidor define o valor de campo **dwFlag** da estrutura de associação a DBCOLUMNSINFO_ISBOOKMARK para indicar que a coluna é usada como um indicador. O consumidor também define a propriedade DBPROP_BOOKMARKS do conjunto de linhas como VARIANT_TRUE. Isso permite que a coluna 0 esteja presente no conjunto de linhas. **IRowsetLocate::GetRowsAt** é usado para buscar linhas a partir da linha especificada por um deslocamento de um indicador.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você precisar manter as credenciais, deverá criptografá-las com a [API de criptografia do Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
   
 ### <a name="to-retrieve-rows-using-bookmarks"></a>Para recuperar linhas usando indicadores  
   

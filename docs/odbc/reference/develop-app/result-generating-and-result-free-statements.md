@@ -1,5 +1,5 @@
 ---
-title: Instruções de geração de resultados e de resultado livre | Microsoft Docs
+title: Demonstrações geradoras de resultados e sem resultados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - result-free statements [ODBC]
 ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55b2ff4d428f02b59883b675fde95531366f0b4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fc94aabd7982fba5879519573980db03b1857ef6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020605"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300086"
 ---
 # <a name="result-generating-and-result-free-statements"></a>Instruções de geração de resultado e sem resultados
-As instruções SQL podem ser divididas livremente nas cinco categorias a seguir:  
+As instruções SQL podem ser vagamente divididas nas cinco categorias a seguir:  
   
--   **Instruções de geração de conjunto de resultados** Essas são instruções SQL que geram um conjunto de resultados. Por exemplo, uma instrução **Select** .  
+-   **Demonstrações geradoras de conjuntode resultados** Estas são instruções SQL que geram um conjunto de resultados. Por exemplo, uma declaração **SELECT.**  
   
--   **Contagem de linhas – gerando instruções** Essas são instruções SQL que geram uma contagem de linhas afetadas. Por exemplo, uma instrução **Update** ou **delete** .  
+-   **Demonstrações geradoras de contagem de linhas** Estas são instruções SQL que geram uma contagem de linhas afetadas. Por exemplo, uma **declaração UPDATE** ou **DELETE.**  
   
--   **Instruções DDL (linguagem de definição de dados)** Essas são instruções SQL que modificam a estrutura do banco de dados. Por exemplo, **CREATE TABLE** ou **drop index**.  
+-   **Instruções de Linguagem de Definição de Dados (DDL)** Estas são instruções SQL que modificam a estrutura do banco de dados. Por exemplo, **CRIAR TABELA** ou **ÍNDICE DE QUEDA**.  
   
--   **Instruções de alteração de contexto** Essas são instruções SQL que alteram o contexto de um banco de dados. Por exemplo, as instruções **use** e **set** em SQL Server.  
+-   **Declarações que mudam o contexto** Estas são declarações SQL que mudam o contexto de um banco de dados. Por exemplo, as instruções **USE** e **SET** no SQL Server.  
   
--   **Instruções administrativas** Essas são instruções SQL usadas para fins administrativos em um banco de dados. Por exemplo, **Grant** e **REVOKE**.  
+-   **Declarações Administrativas** Estas são declarações SQL usadas para fins administrativos em um banco de dados. Por exemplo, **GRANT** e **REVOKE**.  
   
- As instruções SQL nas duas primeiras categorias são coletivamente conhecidas como *instruções de geração de resultados*. As instruções SQL nas últimas três categorias são coletivamente conhecidas como *instruções livres de resultado*. O ODBC define a semântica de lotes que incluem apenas instruções de geração de resultados. Essas semânticas variam muito e, portanto, são específicas da fonte de dados. Por exemplo, o driver SQL Server não oferece suporte a descartar um objeto e, em seguida, referir ou recriar o mesmo objeto no mesmo lote. Portanto, o termo *lote* como usado neste manual refere-se apenas a lotes de instruções que geram resultados.
+ As declarações sql nas duas primeiras categorias são coletivamente conhecidas como *declarações geradoras de resultados*. As declarações sql nas três últimas categorias são coletivamente conhecidas como *declarações livres de resultados*. A ODBC define a semântica dos lotes que incluem apenas declarações geradoras de resultados. Essas semânticas variam amplamente e, portanto, são específicas da fonte de dados. Por exemplo, o driver SQL Server não suporta soltar um objeto e, em seguida, referir-se ou recriar o mesmo objeto no mesmo lote. Portanto, o termo *lote* usado neste manual refere-se apenas a lotes de demonstrações geradoras de resultados.

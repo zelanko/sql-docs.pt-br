@@ -23,41 +23,41 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a42c8767228c75d3b7b0da308d739516875cf966
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ee4a6e845e0bc0830f514b2e768075dd75bcf6e6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67947551"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304962"
 ---
 # <a name="interval-data-types"></a>Tipo de dados de intervalo
-Um intervalo é definido como a diferença entre duas datas e horas. Os intervalos são expressos de uma das duas maneiras diferentes. Um é um intervalo de *ano-mês* que expressa intervalos em termos de anos e um número integral de meses. O outro é um intervalo de *dia-hora* que expressa intervalos em termos de dias, minutos e segundos. Esses dois tipos de intervalos são distintos e não podem ser misturados, pois os meses podem ter diversos números de dias.  
+Um intervalo é definido como a diferença entre duas datas e horários. Os intervalos são expressos de uma das duas maneiras diferentes. Um deles é um intervalo *de um ano* que expressa intervalos em termos de anos e um número integral de meses. O outro é um intervalo *diurno* que expressa intervalos em termos de dias, minutos e segundos. Esses dois tipos de intervalos são distintos e não podem ser misturados, pois meses podem ter números variados de dias.  
   
- Um intervalo consiste em um conjunto de campos. Há uma ordenação implícita entre os campos. Por exemplo, em um intervalo de ano a mês, o ano vem primeiro, seguido pelo mês. Da mesma forma, em um intervalo de dia a minuto, os campos estão no dia do pedido, na hora e no minuto. O primeiro campo em um tipo de intervalo é chamado de campo *principal* , ou o campo de *ordem superior* . O último campo é chamado de campo *à direita* .  
+ Um intervalo consiste em um conjunto de campos. Há uma ordem implícita entre os campos. Por exemplo, em um intervalo de um ano para o mês, o ano vem em primeiro lugar, seguido pelo mês. Da mesma forma, em um intervalo de dia a minuto, os campos estão na ordem dia, hora e minuto. O primeiro campo em um tipo de intervalo é chamado de campo *principal,* ou campo *de alta ordem.* O último campo é chamado de campo *de perseguição.*  
   
- Em todos os intervalos, o campo principal não é restrito por regras do calendário gregoriano. Por exemplo, em um intervalo de hora a minuto, o campo de hora não é restrito para estar entre 0 e 23 (inclusivo), como normalmente é. Os campos à direita subsequentes para o campo à esquerda seguem as restrições usuais do calendário gregoriano. Para obter mais informações, consulte [restrições do calendário gregoriano](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md), mais adiante neste apêndice.  
+ Em todos os intervalos, o campo principal não é constrangido pelas regras do calendário gregoriano. Por exemplo, em um intervalo de hora para minuto, o campo de horas não é limitado a ser entre 0 e 23 (inclusive), como normalmente é. Os campos de perseguição posteriores ao campo principal seguem as restrições habituais do calendário gregoriano. Para obter mais informações, consulte [Restrições do Calendário Gregoriano](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md), mais tarde neste apêndice.  
   
- Há 13 tipos de dados SQL de intervalo e tipos de dados de 13 intervalos C. Cada um dos tipos de dados do intervalo C usa a mesma estrutura, SQL_INTERVAL_STRUCT, para conter os dados do intervalo. (Para obter mais informações, consulte a próxima seção, [estrutura de intervalo de C](../../../odbc/reference/appendixes/c-interval-structure.md).) Para obter mais informações sobre os tipos de dados SQL, consulte [tipos de dados SQL](../../../odbc/reference/appendixes/sql-data-types.md); para obter mais informações sobre os tipos de dados C, consulte [tipos de dados c](../../../odbc/reference/appendixes/c-data-types.md).  
+ Existem 13 tipos de dados SQL de intervalo e 13 tipos de dados de intervalo C. Cada um dos tipos de dados do intervalo C usa a mesma estrutura, SQL_INTERVAL_STRUCT, para conter os dados de intervalo. (Para obter mais informações, consulte a próxima seção, [C Interval Structure](../../../odbc/reference/appendixes/c-interval-structure.md).) Para obter mais informações sobre os tipos de dados SQL, consulte [tipos de dados SQL;](../../../odbc/reference/appendixes/sql-data-types.md) para obter mais informações sobre os tipos de dados C, consulte [C Data Types](../../../odbc/reference/appendixes/c-data-types.md).  
   
-|Identificador de tipo|Classe|DESCRIÇÃO|  
+|Identificador de tipo|Classe|Descrição|  
 |---------------------|-----------|-----------------|  
-|MONTH|Ano-mês|Número de meses entre duas datas.|  
-|YEAR|Ano-mês|Número de anos entre duas datas.|  
-|YEAR_TO_MONTH|Ano-mês|Número de anos e meses entre duas datas.|  
-|DAY|Dia e hora|Número de dias entre duas datas.|  
-|HOUR|Dia e hora|Número de horas entre duas datas/horas.|  
-|MINUTE|Dia e hora|Número de minutos entre duas datas/horas.|  
-|SECOND|Dia e hora|Número de segundos entre duas datas/horas.|  
-|DAY_TO_HOUR|Dia e hora|Número de dias/horas entre duas data/hora.|  
-|DAY_TO_MINUTE|Dia e hora|Número de dias/horas/minutos entre duas data/hora.|  
-|DAY_TO_SECOND|Dia e hora|Número de dias/horas/minutos/segundos entre duas datas/horas.|  
-|HOUR_TO_MINUTE|Dia e hora|Número de horas/minutos entre duas datas/horas.|  
-|HOUR_TO_SECOND|Dia e hora|Número de horas/minutos/segundos entre duas datas/horas.|  
-|MINUTE_TO_SECOND|Dia e hora|Número de minutos/segundos entre duas datas/horas.|  
+|MONTH|Mês do Ano|Número de meses entre duas datas.|  
+|YEAR|Mês do Ano|Número de anos entre duas datas.|  
+|YEAR_TO_MONTH|Mês do Ano|Número de anos e meses entre duas datas.|  
+|DAY|Dia- a- dia|Número de dias entre duas datas.|  
+|HOUR|Dia- a- dia|Número de horas entre duas datas/horários.|  
+|MINUTE|Dia- a- dia|Número de minutos entre duas datas/horários.|  
+|SECOND|Dia- a- dia|Número de segundos entre duas datas/horários.|  
+|DAY_TO_HOUR|Dia- a- dia|Número de dias/horas entre duas datas/horários.|  
+|DAY_TO_MINUTE|Dia- a- dia|Número de dias/horas/minutos entre duas datas/horários.|  
+|DAY_TO_SECOND|Dia- a- dia|Número de dias/horas/minutos/segundos entre duas datas/horários.|  
+|HOUR_TO_MINUTE|Dia- a- dia|Número de horas/minutos entre duas datas/horários.|  
+|HOUR_TO_SECOND|Dia- a- dia|Número de horas/minutos/segundos entre duas datas/horários.|  
+|MINUTE_TO_SECOND|Dia- a- dia|Número de minutos/segundos entre duas datas/horários.|  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Estrutura de intervalo do C](../../../odbc/reference/appendixes/c-interval-structure.md)  
   
@@ -67,4 +67,4 @@ Um intervalo é definido como a diferença entre duas datas e horas. Os interval
   
 -   [Literais de intervalo](../../../odbc/reference/appendixes/interval-literals.md)  
   
--   [Substituir precisão inicial e de segundos padrão para tipos de dados de intervalo](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)
+-   [Substituindo precisão inicial e de segundos padrão para tipos de dados de intervalo](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)

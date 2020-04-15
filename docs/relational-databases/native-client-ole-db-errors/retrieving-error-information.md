@@ -1,5 +1,5 @@
 ---
-title: Recuperando informações de erro | Microsoft Docs
+title: Como recuperar informações de erro | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ helpviewer_keywords:
 - errors [OLE DB], retrieving information
 - OLE DB error handling, examples
 ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f6c93002a5182375725703d159565782d978268
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0e7419d0c39b05d23f60d3ff137672970fc20e6e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73769727"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306077"
 ---
 # <a name="retrieving-error-information"></a>Recuperando informações de erro
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Este exemplo obtém informações das várias interfaces de erro expostas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo.  
+  Este exemplo obtém informações das várias interfaces de erro expostas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor Native Client OLE DB.  
   
 ```  
 // DumpErrorInfo queries SQLOLEDB error interfaces, retrieving available  

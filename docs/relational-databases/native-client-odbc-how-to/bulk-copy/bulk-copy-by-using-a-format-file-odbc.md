@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bulk copy using format file [ODBC]
 - ODBC, bulk copy operations
 ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0698d534a75d6fb1b66af733c3d1eb00f88c26cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 46639c02c606ed317d0d0bfe94bcf0ae9734a62b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73782004"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299608"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Copiar em massa usando um arquivo de formato (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "73782004"
   
 3.  Conecte ao Microsoft® SQL Server™.  
   
-4.  Chame [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para definir as seguintes informações:  
+4.  Chamar [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para definir as seguintes informações:  
   
     -   O nome da tabela ou da exibição da qual ou para a qual será feita a cópia em massa.  
   
@@ -44,18 +44,18 @@ ms.locfileid: "73782004"
   
     -   A direção da cópia: DB_IN do arquivo para a tabela ou exibição.  
   
-5.  Chame [bcp_readfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) para ler o arquivo de formato que descreve o arquivo de dados a ser usado pela operação de cópia em massa.  
+5.  A [bcp_readfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) de chamadas para ler o arquivo de formato descrevendo o arquivo de dados a ser usado pela operação de cópia em massa.  
   
 6.  Chame [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) para executar a operação de cópia em massa.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo não tem suporte em IA64.  
   
- Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks do [Microsoft SQL Server exemplos e projetos da comunidade](https://go.microsoft.com/fwlink/?LinkID=85384) Home Page.) Essa fonte de dados deve ser baseada no driver ODBC fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
+ Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo adventureworks da página inicial [do Microsoft SQL Server Samples and Community Projects.)](https://go.microsoft.com/fwlink/?LinkID=85384) Essa fonte de dados deve ser baseada no driver ODBC fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- Execute a primeira listagem [!INCLUDE[tsql](../../../includes/tsql-md.md)]de código () para criar a tabela que será usada pelo exemplo.  
+ Execute a [!INCLUDE[tsql](../../../includes/tsql-md.md)]primeira ( ) listagem de código para criar a tabela que a amostra usará.  
   
  Copie a segunda listagem de código e cole-a em um arquivo denominado Bcpfmt.fmt. Cada coluna na tabela é separada por um caractere de tabulação.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73782004"
   
  Compile a quarta listagem de código (C++) com odbc32.lib e odbcbcp.lib. Se você compilou com o MSBuild.exe, copie primeiro o Bcpfmt.fmt e o Bcpodbc.bcp do diretório do projeto no diretório com o .exe e, em seguida, invoque o .exe.  
   
- Execute a quinta listagem [!INCLUDE[tsql](../../../includes/tsql-md.md)]de código () para excluir a tabela usada pelo exemplo.  
+ Execute a [!INCLUDE[tsql](../../../includes/tsql-md.md)]lista de código sél () para excluir a tabela utilizada pela amostra.  
   
 ```  
 use AdventureWorks  
@@ -188,7 +188,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tópicos de instruções sobre cópia em massa com o SQL Server ODBC Driver &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Cópia em massa com o Driver ODBC Driver How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Usando arquivos de dados e de formato](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

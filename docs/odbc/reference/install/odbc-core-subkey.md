@@ -1,5 +1,5 @@
 ---
-title: Subchave ODBC Core | Microsoft Docs
+title: Subchave do Núcleo ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - registry entries for components [ODBC], core subkey
 - core subkey [ODBC]
 ms.assetid: 055b31fc-f96c-450b-a596-d4570079fbf2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98c9380083eb5a0ad796f436af271564676b757d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9e6bfcf3c1efa87076e6d3e27a438cde6f794157
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094014"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304047"
 ---
 # <a name="odbc-core-subkey"></a>Subchave do núcleo ODBC
-O valor na subchave ODBC core fornece a contagem de uso para os componentes principais (Gerenciador de driver, biblioteca de cursores, DLL do instalador e assim por diante). O formato desse valor é mostrado na tabela a seguir.  
+O valor sob a subchave ODBC Core fornece a contagem de uso para os componentes principais (Driver Manager, biblioteca de cursor, instalador DLL e assim por diante). O formato deste valor é mostrado na tabela a seguir.  
   
-|Nome|Tipo de dados|data|  
+|Nome|Tipo de dados|Dados|  
 |----------|---------------|----------|  
-|UsageCount|REG_DWORD|*contagem*|  
+|Contagem de usos|REG_DWORD|*contagem*|  
   
- Por exemplo, suponha que os componentes do ODBC Core tenham sido instalados pelos programas de instalação para três aplicativos diferentes e dois drivers diferentes. O valor na subchave ODBC Core seria:  
+ Por exemplo, suponha que os componentes do Núcleo ODBC tenham sido instalados pelos programas de configuração para três aplicativos diferentes e dois drivers diferentes. O valor sob a subchave Do Núcleo ODBC seria:  
   
 ```  
 UsageCount : REG_DWORD : 0x5  

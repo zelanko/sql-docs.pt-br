@@ -17,28 +17,28 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, indexes
 - indexes [OLE DB]
 ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b05c19cd713efb8f858409c98fd9806471a39f8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 83757abfc78b5ffbee7a46a9f7c49c89daae7118
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761611"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305610"
 ---
 # <a name="tables-and-indexes"></a>Tabelas e índices
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo expõe as interfaces **IIndexDefinition** e **ITableDefinition** , permitindo que os consumidores criem, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alterem e removam tabelas e índices. As definições válidas de tabela e de índice dependem da versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor Native Client OLE DB expõe as interfaces **IIndexDefinition** e **ITableDefinition,** permitindo que os consumidores criem, alterem e soltem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelas e índices. As definições válidas de tabela e de índice dependem da versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  A capacidade de criar ou descartar tabelas e índices depende dos direitos de acesso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do usuário do aplicativo de consumidor. Descartar uma tabela pode ser uma operação ainda mais restrita pela presença de restrições de integridade referencial declarativas ou outros fatores.  
   
- A maioria dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicativos que visam usar o SQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -DMO em vez dessas interfaces do provedor de OLE DB do cliente nativo. SQL-DMO é uma coleção de objetos de automação OLE que dão suporte a todas as funções administrativas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os aplicativos destinados a vários provedores OLE DB usam essas interfaces OLE DB genéricas suportadas pelos vários provedores OLE DB.  
+ A maioria dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicativos direcionados usa SQL-DMO em vez dessas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interfaces do provedor Nativo Cliente OLE DB. SQL-DMO é uma coleção de objetos de automação OLE que dão suporte a todas as funções administrativas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os aplicativos destinados a vários provedores OLE DB usam essas interfaces OLE DB genéricas suportadas pelos vários provedores OLE DB.  
   
  No conjunto de propriedades específico de provedor DBPROPSET_SQLSERVERCOLUMN, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define a propriedade a seguir.  
   
-|ID da propriedade|DESCRIÇÃO|  
+|ID da propriedade|Descrição|  
 |-----------------|-----------------|  
 |SSPROP_COL_COLLATIONNAME|Tipo: VT_BSTR<br /><br /> Leitura/gravação: gravação<br /><br /> Padrão: Null<br /><br /> Descrição: essa propriedade só é usada em **ITableDefinition**. A cadeia de caracteres especificada nesta propriedade é usada ao criar uma instrução [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)<br /><br /> .|  
   
@@ -57,8 +57,8 @@ ms.locfileid: "73761611"
 -   [Descartando um índice do SQL Server](../../relational-databases/native-client-ole-db-tables-indexes/dropping-a-sql-server-index.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
- [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [Cliente nativo do servidor SQL &#40;o ledb&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [TABELA DE GOTA &#40;&#41;Transact-SQL](../../t-sql/statements/drop-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
   

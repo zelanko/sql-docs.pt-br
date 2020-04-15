@@ -11,32 +11,32 @@ helpviewer_keywords:
 - SQLGetInfo function [ODBC], Text File Driver
 - text file driver [ODBC], SQLGetInfo
 ms.assetid: 6b7a630e-47f8-4ee1-b2a7-476bc1d0b0d4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 892fdabc319b1d495120cdce20d77f05cd232418
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 09ca2e42e20a6f314de3b68fe5d5b143f41269c3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67898825"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298497"
 ---
 # <a name="sqlgetinfo-text-file-driver"></a>SQLGetInfo (Driver de Arquivo de texto)
 > [!NOTE]  
->  Este tópico fornece informações específicas do driver de arquivo de texto. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico fornece informações específicas do Driver de arquivo de texto. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [Referência à API oDBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** dá suporte ao tipo de informações SQL_FILE_USAGE. O valor retornado é um inteiro de 16 bits que indica como o driver trata diretamente os arquivos em uma fonte de dados:  
+ **O SQLGetInfo** suporta o SQL_FILE_USAGE tipo de informação. O valor retornado é um inteiro de 16 bits que indica como o driver trata diretamente os arquivos em uma fonte de dados:  
   
--   SQL_FILE_NOT_SUPPORTED-o driver não é um driver de camada única.  
+-   SQL_FILE_NOT_SUPPORTED - O motorista não é um motorista de nível único.  
   
--   SQL_FILE_TABLE-um driver de camada única trata arquivos em uma fonte de dados como tabelas.  
+-   SQL_FILE_TABLE - Um driver de nível único trata arquivos em uma fonte de dados como tabelas.  
   
--   SQL_FILE_QUALIFIER-um driver de camada única trata arquivos em uma fonte de dados como um qualificador.  
+-   SQL_FILE_QUALIFIER - Um driver de nível único trata arquivos em uma fonte de dados como um qualificador.  
   
- O driver ODBC retorna SQL_FILE_TABLE para o textunidader, porque cada arquivo é uma tabela.  
+ O driver ODBC retorna SQL_FILE_TABLE para o Textdriver, porque cada arquivo é uma tabela.  
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|Format|Versão|Formato dos números de versão|  
+|Isam|Versão|Formato dos números de versão|  
 |----------|-------------|-------------------------------|  
 |Texto|1.0|01.00.0000|  
   

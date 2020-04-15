@@ -1,5 +1,5 @@
 ---
-title: DLL de rastreamento | Microsoft Docs
+title: Trace DLL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - trace DLLs [ODBC]
 - tracing options [ODBC], trace DLLs
 ms.assetid: 5ab99bd3-cdc3-4e2c-8827-932d1fcb6e00
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6fe910c93beac676e5fb0f663b740c03a826c326
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8e1f9dc57415ad9865ca1b2ad02487b62a93f18f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67985228"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298066"
 ---
 # <a name="trace-dll"></a>DLL de rastreamento
-A DLL que executa o rastreamento é um dos componentes do ODBC Core. No momento, a DLL de rastreamento é fornecida como uma DLL de exemplo no componente ODBC do SDK do Windows e, anteriormente, incluiu o SDK do MDAC (Microsoft Data Access Components). Portanto, a entrada do registro, a interface e o código de exemplo para a DLL de rastreamento estão disponíveis. Essa DLL pode ser substituída por uma DLL de rastreamento produzida por um usuário ODBC ou por um fornecedor de terceiros. Uma DLL de rastreamento personalizada deve receber um nome diferente da DLL de rastreamento de exemplo original. As DLLs de rastreamento devem ser instaladas no diretório do sistema ou não serão carregadas. As cadeias de conexão não serão passadas para a DLL de rastreamento pelo Gerenciador de driver.  
+A DLL que realiza o rastreamento é um dos componentes principais do ODBC. O DLL de rastreamento é atualmente fornecido como uma dLL de amostra no componente ODBC do Windows SDK, e foi anteriormente incluído o Microsoft Data Access Components (MDAC) SDK. Portanto, a entrada de registro, interface e código de amostra para o DLL de rastreamento estão disponíveis. Esta DLL pode ser substituída por um DLL de rastreamento produzido por um usuário ODBC ou por um fornecedor de terceiros. Um DLL de rastreamento personalizado deve receber um nome diferente do dLL de amostra original. Os DLLs de rastreamento devem ser instalados no diretório do sistema ou não serão carregados. As strings de conexão não serão passadas para o dLL de rastreamento pelo Gerenciador de Driver.  
   
- A DLL de rastreamento rastreia argumentos de entrada, argumentos de saída, argumentos adiados, códigos de retorno e sqlstates. Quando o rastreamento está habilitado, o Gerenciador de driver chama a DLL de rastreamento em dois pontos: uma vez na entrada da função (antes da validação do argumento) e novamente antes da função retornar.  
+ O trace DLL rastreia argumentos de entrada, argumentos de saída, argumentos diferidos, códigos de devolução e SQLSTATEs. Quando o rastreamento é ativado, o Driver Manager chama o DLL de rastreamento em dois pontos: uma vez após a entrada da função (antes da validação do argumento) e novamente pouco antes do retorno da função.  
   
- Quando um aplicativo chama uma função, o Gerenciador de driver chama uma função de rastreamento na DLL de rastreamento antes de chamar a função no driver ou processar a chamada em si. Cada função ODBC tem uma função de rastreamento correspondente (prefixada com *trace*) que é idêntica à função ODBC com a exceção do nome. Quando a função de rastreamento é chamada, a DLL de rastreamento captura os argumentos de entrada e retorna um código de retorno. Como a DLL de rastreamento é chamada antes de o Gerenciador de driver validar argumentos, as chamadas de função inválidas são rastreadas e, portanto, erros de transição de estado e argumentos inválidos são registrados.  
+ Quando um aplicativo chama uma função, o Driver Manager chama uma função de rastreamento no DLL de rastreamento antes de chamar a função no driver ou processar a chamada em si. Cada função ODBC tem uma função de rastreamento correspondente (prefixada com *Trace*) que é idêntica à função ODBC, com exceção do nome. Quando a função de rastreamento é chamada, o DLL de rastreamento captura os argumentos de entrada e retorna um código de retorno. Como o DLL de rastreamento é chamado antes que o Driver Manager valide argumentos, as chamadas de função inválidas são rastreadas, para que erros de transição de estado e argumentos inválidos sejam registrados.  
   
- Depois de chamar a função trace na DLL de rastreamento, o Gerenciador de driver chama a função ODBC no driver. Em seguida, ele chama **TraceReturn** na DLL de rastreamento. Essa função usa dois argumentos: o valor retornado pela DLL de rastreamento para a função de rastreamento e o código de retorno retornado pelo driver para o Gerenciador de driver para a função ODBC (ou o valor retornado pelo próprio Gerenciador de driver se ele tiver processado a função). A função usa o valor retornado para a função de rastreamento para manipular valores de argumento de entrada capturados. Ele grava o código retornado para a função ODBC no arquivo de log (ou exibe-o dinamicamente, se estiver habilitado). Ele desreferencia os ponteiros do argumento de saída e registra os valores de argumento de saída.
+ Depois de chamar a função de rastreamento no DLL de rastreamento, o Driver Manager chama a função ODBC no driver. Em seguida, ele chama **TraceReturn** no trace DLL. Esta função leva a dois argumentos: o valor devolvido pelo DLL de rastreamento para a função trace e o código de retorno devolvido pelo driver ao Driver Manager para a função ODBC (ou o valor devolvido pelo próprio Driver Manager se ele processou a função). A função usa o valor retornado para a função trace para manipular os valores de argumento de entrada capturados. Ele grava o código retornado para a função ODBC para o arquivo de log (ou exibe-o dinamicamente, se isso estiver ativado). Ele defaz referência susta os ponteiros do argumento de saída e registra os valores do argumento de saída.

@@ -1,5 +1,5 @@
 ---
-title: Sequência de escape de junção externa | Microsoft Docs
+title: Sequência de fuga de adesão externa | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,41 +12,41 @@ helpviewer_keywords:
 - escape sequences [ODBC], outer join
 - ODBC escape sequences [ODBC], outer join
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 576fe7268ccf71a8c926f6b1124ebbf8a8c711b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 37ce446328d263f492cdfd369f6e8f9f64fe6dfc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100640"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303607"
 ---
 # <a name="outer-join-escape-sequence"></a>Sequência de escape de junção externa
-O ODBC usa sequências de escape para junções externas. A sintaxe dessa sequência de escape é a seguinte:  
+ODBC usa seqüências de fuga para junções externas. A sintaxe desta seqüência de fuga é a seguinte:  
   
 ```  
 {oj outer-join}  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Na notação BNF, a sintaxe é a seguinte:  
+ Na notação da BNF, a sintaxe é a seguinte:  
   
- *ODBC-externo-junção-escape* :: =  
+ *ODBC-outer-join-escape* ::=  
   
- *ODBC-ESC-Initiator* OJ *externo-junção ODBC-ESC-terminador*  
+ *ODBC-esc-iniciador* oj *outer-join ODBC-esc-terminator*  
   
- *externa-junção* :: = *table-name* [*correlação-nome*] {Left &#124; direita &#124; Full}  
+ *externa-juntar::=* *nome da tabela* *[correlação-nome*] {ESQUERDA &#124; DIREITA &#124; FULL}  
   
- JUNÇÃO externa {*table-name* [*Correlation-Name*] &#124; *OUTER-JOIN*} on  
+ OUTER JOIN{*nome de tabela* *[nome de correlação*] &#124; *adesão externa*} ON  
   
- *procurando*  
+ *pesquisa-*  
   
- *problema*  
+ *Condição*  
   
- *correlação-nome* :: = *nome definido pelo usuário*  
+ *nome de correlação* ::= *nome definido pelo usuário*  
   
- *ODBC-ESC-Initiator* :: = {  
+ *ODBC-esc-iniciador* ::= {  
   
- *ODBC-ESC-terminador* :: =}  
+ *ODBC-esc-terminator* ::= }  
   
- Para determinar quais partes dessa instrução têm suporte, um aplicativo chama **SQLGetInfo** com o tipo de informação SQL_OJ_CAPABILITIES. Para junções externas, a *condição de pesquisa* deve conter apenas a condição de junção entre os *nomes de tabela*especificados.
+ Para determinar quais partes desta declaração são suportadas, um aplicativo chama **SQLGetInfo** com o SQL_OJ_CAPABILITIES tipo de informação. Para as adesões externas, *a condição de pesquisa* deve conter apenas a condição de adesão entre os nomes de *tabela*especificados .
