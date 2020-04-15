@@ -1,5 +1,5 @@
 ---
-title: Alocando um identificador de instrução ODBC | Microsoft Docs
+title: Alocando uma Alça de Declaração ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - allocating statement handles [ODBC]
 - handles [ODBC], statement
 ms.assetid: 4ce3b446-34ab-46dc-96e5-f40ec95c267e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d50b0a31aed4935c805ca30620575ccff70d4a0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf9a15bc4622b15afa9838327edd90383a812270
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077213"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288426"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>Alocar um identificador de instrução ODBC
-Antes que o aplicativo possa executar uma instrução, ele deve alocar um identificador de instrução da seguinte maneira:  
+Antes que o aplicativo possa executar uma declaração, ele deve alocar uma alça de declaração da seguinte forma:  
   
-1.  O aplicativo declara uma variável do tipo HSTMT. Em seguida, ele chama **SQLAllocHandle** e passa o endereço dessa variável, o identificador da conexão na qual alocar a instrução e a opção SQL_HANDLE_STMT. Por exemplo:  
+1.  O aplicativo declara uma variável do tipo HSTMT. Em seguida, ele chama **SQLAllocHandle** e passa o endereço desta variável, a alça da conexão em que alocar a declaração e a opção SQL_HANDLE_STMT. Por exemplo:  
   
     ```  
     SQLHSTMT hstmt1;  
@@ -33,10 +33,10 @@ Antes que o aplicativo possa executar uma instrução, ele deve alocar um identi
     SQLAllocHandle(SQL_HANDLE_STMT, hdbc1, &hstmt1);  
     ```  
   
-2.  O Gerenciador de driver aloca uma estrutura na qual armazenar informações sobre a instrução e chama **SQLAllocHandle** no driver com a opção SQL_HANDLE_STMT.  
+2.  O Driver Manager aloca uma estrutura na qual armazenar informações sobre a declaração e chama **SQLAllocHandle** no driver com a opção SQL_HANDLE_STMT.  
   
-3.  O driver aloca sua própria estrutura na qual armazenar informações sobre a instrução e retorna o identificador da instrução do driver para o Gerenciador de driver.  
+3.  O motorista aloca sua própria estrutura para armazenar informações sobre a declaração e devolve a alça da declaração do motorista ao Driver Manager.  
   
-4.  O Gerenciador de driver retorna o identificador de instrução do Gerenciador de driver para o aplicativo na variável de aplicativo.  
+4.  O Gerenciador de driver retorna a alça de declaração do Driver Manager para o aplicativo na variável de aplicativo.  
   
- O identificador de instrução identifica qual instrução usar ao chamar funções ODBC. Para obter mais informações sobre identificadores de instrução, consulte [identificadores de instrução](../../../odbc/reference/develop-app/statement-handles.md).
+ O identificador de declaração identifica qual declaração usar ao ligar para funções ODBC. Para obter mais informações sobre as alças de declaração, consulte ['Alças de declaração'](../../../odbc/reference/develop-app/statement-handles.md)

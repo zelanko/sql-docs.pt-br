@@ -11,17 +11,17 @@ helpviewer_keywords:
 - correlation names [ODBC]
 - SQL grammar [ODBC], correlation names
 ms.assetid: 76c36c6f-f8e1-4ece-a77b-611dde3bdd8a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 535c169123923cdb36c355e098f6e0c55ebb9d56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dfe0655ace4bbd622dfb80b833f49562732394e2
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68127313"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280956"
 ---
 # <a name="correlation-names"></a>Nomes de correlação
-Os nomes de correlação têm suporte total, incluindo dentro da lista de tabelas. Por exemplo, na cadeia de caracteres a seguir, E1 é o nome de correlação para a tabela chamada EMP:  
+Os nomes de correlação são totalmente suportados, inclusive dentro da lista de tabelas. Por exemplo, na seqüência a seguir, E1 é o nome de correlação para a tabela chamada Emp:  
   
 ```  
 SELECT * FROM Emp E1   

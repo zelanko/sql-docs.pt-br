@@ -1,5 +1,5 @@
 ---
-title: Exemplo de código da biblioteca de cursores | Microsoft Docs
+title: Exemplo do Código da Biblioteca do Cursor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], examples
 - cursor library [ODBC], examples
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d985786e4743b8bcc691cf6888c24153f5cb5f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cdbc751ecf6ed2427809c70707226f335a7b8d4b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019062"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284676"
 ---
 # <a name="cursor-library-code-example"></a>Exemplo de código de biblioteca de cursores
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que atualmente usam esse recurso. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
+>  Esse recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar aplicativos que atualmente usam esse recurso. A Microsoft recomenda o uso da funcionalidade do cursor do driver.  
   
- O exemplo a seguir usa a biblioteca de cursores para recuperar a ID de cada pedido, a data de abertura e o status da tabela ORDERs. Em seguida, ele exibe 20 linhas de dados. Se o usuário atualizar esses dados, o código atualizará os buffers do conjunto de linhas e executará uma instrução UPDATE posicionada. Por fim, ele solicita ao usuário a direção para rolar e repetir o processo.  
+ O exemplo a seguir usa a biblioteca cursor para recuperar o ID, a data de abertura e o status de cada pedido na tabela ORDERS. Em seguida, exibe 20 linhas de dados. Se o usuário atualizar esses dados, o código atualizará os buffers do conjunto de linhas e executará uma declaração de atualização posicionada. Finalmente, ele solicita ao usuário a direção para rolar e repete o processo.  
   
 ```  
 #define ROWS 20  

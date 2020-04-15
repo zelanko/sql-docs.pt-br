@@ -17,28 +17,28 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetStmtOption function [ODBC]
 ms.assetid: 9cbe2b62-4cf7-43ab-8fb4-9a53df2c6b3f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 66a944c22c5f3c31ac1bd4cd8f556e97f28d331d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fbbb186176868681c60831db71c4530edd97de4d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039575"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287246"
 ---
 # <a name="sqlsetstmtoption-function"></a>Função SQLSetStmtOption
 **Conformidade**  
- Versão introduzida: conformidade de padrões do ODBC 1,0: preterida  
+ Versão introduzida: ODBC 1.0 Normas Conformidade: Preterido  
   
  **Resumo**  
- No ODBC 3 *. x*, a função **SQLSetStmtOption** do ODBC 2,0 foi substituída por **SQLSetStmtAttr**. Para obter mais informações, consulte [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
+ Em ODBC 3 *.x,* a função ODBC 2.0 **SQLSetStmtOption** foi substituída por **SQLSetStmtAttr**. Para obter mais informações, consulte [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
 > [!NOTE]
->  Para obter mais informações sobre como o Gerenciador de driver mapeia essa função quando um aplicativo ODBC 2 *. x* está trabalhando com um driver ODBC 3 *. x* , consulte [mapeando funções preteridas](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no apêndice G: diretrizes de driver para compatibilidade com versões anteriores.  
+>  Para obter mais informações sobre o que o Driver Manager mapeia essa função para quando um aplicativo ODBC*2.x* estiver trabalhando com um driver ODBC 3 *.x,* consulte [Mapping Deprecated Functions](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Apêndice G: Driver Guidelines for Backward Compatibility.  
   
 ## <a name="remarks"></a>Comentários  
- Consulte [informações de ODBC 64-bit](../../../odbc/reference/odbc-64-bit-information.md), se seu aplicativo for executado em um sistema operacional de 64 bits.  
+ Consulte [As informações de 64 bits do ODBC,](../../../odbc/reference/odbc-64-bit-information.md)se o aplicativo for executado em um sistema operacional de 64 bits.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Referência da API oDBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

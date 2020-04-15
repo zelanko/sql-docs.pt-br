@@ -1,5 +1,5 @@
 ---
-title: Considerações sobre programação | Microsoft Docs
+title: Considerações de Programação | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c12a94abcc8f31071bb13639c6df1e9c1e2e264a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 22f71822847d72751ba3c2e5bec2f8e7ce776bd0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023258"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282176"
 ---
 # <a name="programming-considerations"></a>Considerações sobre programação
-Esta seção aborda brevemente alguns tópicos relacionados à gravação de drivers e aplicativos ODBC.  
+Esta seção discute brevemente uma série de tópicos relacionados à escrita de aplicativos e drivers da ODBC.  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Multithreading](../../../odbc/reference/develop-app/multithreading.md)  
   
@@ -30,7 +30,7 @@ Esta seção aborda brevemente alguns tópicos relacionados à gravação de dri
   
 -   [DLLs de conversão](../../../odbc/reference/develop-app/translation-dlls.md)  
   
--   [Ferramentas de Diagnóstico](../../../odbc/reference/develop-app/diagnostic-tools.md)  
+-   [Ferramentas de diagnóstico](../../../odbc/reference/develop-app/diagnostic-tools.md)  
   
 -   [Analisador do Visual Studio](../../../odbc/reference/develop-app/visual-studio-analyzer.md)  
   

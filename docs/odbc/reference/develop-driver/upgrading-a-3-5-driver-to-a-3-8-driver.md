@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97b100b1ade97e1e88cf1421f09a7723412c8b76
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dcd01d050e806b733d75c54058945d367a33d6a7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79289794"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294427"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>Atualizar um driver 3.5 para um driver 3.8
 Este tópico fornece diretrizes e considerações para atualizar um driver ODBC 3.5 para um driver ODBC 3.8.  
@@ -56,7 +56,7 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
   
  A partir do Windows 7, o ODBC suporta o método de votação (para obter mais informações, consulte [Execução Assíncrona (Método de Votação)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). Não há necessidade de um driver ODBC versão 3.8 implementar operações assíncronas nas alças de conexão. Mesmo que um driver não implemente operações assíncronas nas alças de conexão, o motorista ainda deve implementar o *infoType* SQL_ASYNC_DBC_FUNCTIONS e retornar **SQL_ASYNC_DBC_NOT_CAPABLE**.  
   
- Quando as operações de conexão assíncronas são habilitadas, o tempo de execução de uma operação de conexão é o tempo total de todas as chamadas repetidas. Se a última chamada repetida ocorrer após o tempo total ter excedido o valor definido pelo atributo de conexão SQL_ATTR_CONNECTION_TIMEOUT e a operação não tiver terminado, o driver retorna SQL_ERROR e registra um registro de diagnóstico com o SQLState HYT01 e o mensagem "Tempo de conexão expirado". Não há tempo nem um para o final da operação.  
+ Quando as operações de conexão assíncronas são habilitadas, o tempo de execução de uma operação de conexão é o tempo total de todas as chamadas repetidas. Se a última chamada repetida ocorrer após o tempo total ter excedido o valor definido pelo atributo de conexão SQL_ATTR_CONNECTION_TIMEOUT e a operação não tiver terminado, o driver retorna SQL_ERROR e registra um registro de diagnóstico com o SQLState HYT01 e a mensagem "Tempo de conexão expirado". Não há tempo nem um para o final da operação.  
   
 ##### <a name="sqlcancelhandle-function"></a>Função SQLCancelHandle  
  O ODBC 3.8 suporta [a função SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md), que é usada para cancelar operações de conexão e declaração. Um driver que suporta **SQLCancelHandle** deve exportar a função. Um driver não deve cancelar nenhuma função de conexão síncrona ou assíncrona que esteja em andamento se o aplicativo chamar **SQLCancel** ou **SQLCancelHandle** em uma alça de declaração. Da mesma forma, um driver não deve cancelar qualquer função de declaração síncrona ou assíncrona que esteja em andamento se um aplicativo chamar **SQLCancelHandle** na alça de conexão. Além disso, um driver não deve cancelar a operação de navegação **(O SQLBrowseConnect** retorna SQL_NEED_DATA) se o aplicativo chamar **SQLCancelHandle** na alça de conexão. Nestes casos, um driver deve retornar HY010, "erro de seqüência de função".  
@@ -72,7 +72,7 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
 ##### <a name="asynchronous-execution-notification-method"></a>Execução assíncrona (método de notificação)  
  O ODBC 3.8 suporta o método de notificação para operações assíncronas, disponível a partir do Windows 8. Para obter mais informações, consulte [Execução Assíncrona (Método de Notificação)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Desenvolvendo um Driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Drivers ODBC fornecidos pela Microsoft](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)   
  [Novidades no ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

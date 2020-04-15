@@ -1,5 +1,5 @@
 ---
-title: Instrução CREATE INDEX | Microsoft Docs
+title: DECLARAÇÃO DE ÍNDICE DE CRIAÇÃO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - CREATE INDEX [ODBC]
 - SQL grammar [ODBC], create index
 ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ad15ad436b0f34f00acbd75e371e998183f22d2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c6aa512ff789fcbd00f45f84fb194d4ab3f5da07
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081915"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280966"
 ---
 # <a name="create-index-statement"></a>Instrução CREATE INDEX
-A sintaxe da instrução CREATE INDEX é:  
+A sintaxe da declaração CREATE INDEX é:  
   
- CRIAR índice de índice [exclusivo] *-nome* no *nome da tabela* (*identificador de coluna* [asc] [desc] [, *identificador de coluna* [asc] [desc]...]) Com \< *lista de opções de índice*>  
+ CRIAR [EXCLUSIVO] *INDEX-name* ON *nome de tabela* *(identificador de coluna* [ASC][DESC][, *identificador de coluna* [ASC][DESC]...]] LISTA \<DE *OPÇÕES DE ÍNDICE* COM>  
   
- onde \<a *lista de opções de índice*> pode ser: Primary &#124; não permitir nulo &#124; ignorar nulo  
+ onde \<> *da lista de opções de índice* pode ser: PRIMARY &#124; DISALLOW NULL &#124; IGNORE NULL NULL  
   
- Somente o driver do Microsoft Access usa as opções de não permitir nulo e ignorar índice nulo. Os drivers do dBASE e do Paradox aceitam a sintaxe, mas ignoram a presença de qualquer uma das opções.  
+ Apenas o driver microsoft access usa as opções de índice DISALLOW NULL e IGNORE NULL. Os drivers dBASE e Paradox aceitam a sintaxe, mas ignoram a presença de qualquer opção.  
   
- Quando o driver do Paradox é usado, a instrução CREATE INDEX cria arquivos de chave primária do Paradox e arquivos secundários.  
+ Quando o driver Paradox é usado, a declaração CREATE INDEX cria arquivos-chave primários do Paradox e arquivos secundários.  
   
- Não há suporte para essa instrução nos drivers de texto ou do Microsoft Excel.
+ Esta declaração não é suportada pelos drivers Microsoft Excel ou Text.

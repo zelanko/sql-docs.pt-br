@@ -1,5 +1,5 @@
 ---
-title: Suporte a conjunto de linhas de esquema (OLE DB) | Microsoft Docs
+title: Suporte ao conjunto de linhas de esquema (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, schema rowsets
 - rowsets [OLE DB], schema
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 316bfd740f909321798cc2203af9577c5ef6e404
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e54a81cf47804e1cf4568e739bb2c4cf83b9fe25
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73759551"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288546"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Suporte a conjunto de linhas de esquema (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo também dá suporte ao retorno de informações de esquema [!INCLUDE[tsql](../../../includes/tsql-md.md)] de um servidor vinculado ao processar consultas distribuídas.  
+  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor Nativo Cliente OLE DB também suporta o retorno de [!INCLUDE[tsql](../../../includes/tsql-md.md)] informações de esquema de um servidor vinculado ao processar consultas distribuídas.  
   
 > [!NOTE]  
 >  Apesar de o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suportar sinônimos, metadados para sinônimos não são retornados pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- As tabelas a seguir listam conjuntos de linhas de esquema e as colunas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de restrição com suporte do provedor de OLE DB de cliente nativo.  
+ As tabelas a seguir listam conjuntos de linhas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de esquema e as colunas de restrição suportadas pelo provedor Native Client OLE DB.  
   
 |Conjunto de linhas de esquema|Colunas de restrição|  
 |-------------------|-------------------------|  
@@ -58,7 +58,7 @@ ms.locfileid: "73759551"
  [Conjunto de linhas LINKEDSERVERS &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [Cliente nativo do servidor SQL &#40;o ledb&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [Usando tipos definidos pelo usuário](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   
