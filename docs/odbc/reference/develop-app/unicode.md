@@ -11,31 +11,31 @@ helpviewer_keywords:
 - Unicode [ODBC]
 - Unicode [ODBC], about Unicode
 ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7e0044a2e2efbf0d8921a07ed4679806ba50bcd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9824e76cebabb6f5f84505292801a0094e359f0f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087560"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302437"
 ---
 # <a name="unicode"></a>Unicode
-O Unicode define a codificação para caracteres em muitas linguagens.  
+Unicode define codificação para caracteres em muitos idiomas.  
   
- Para obter mais informações sobre o padrão Unicode, consulte [o consórcio Unicode](https://www.unicode.org).  
+ Para obter mais informações sobre a norma Unicode, consulte [o Consórcio Unicode](https://www.unicode.org).  
   
- O Unicode define um conjunto de caracteres universais. Uma página de código ANSI do Windows define um conjunto de caracteres, normalmente contendo caracteres para um idioma. Pode ser mais difícil escrever um aplicativo necessário para usar páginas de código diferentes.  
+ Unicode define um conjunto de caracteres universal. Uma página de código DO Windows ANSI define um conjunto de caracteres, normalmente contendo caracteres para um idioma. Pode ser mais difícil escrever um aplicativo que é necessário para usar diferentes páginas de código.  
   
- O Unicode não requer uma página de código. Cada ponto de código é mapeado para um único caractere em algum idioma.  
+ Unicode não requer uma página de código. Cada ponto de código é mapeado para um único caractere em algum idioma.  
   
- Atualmente, a única codificação Unicode com a qual o ODBC dá suporte é o UCS-2, que usa um inteiro de 16 bits (comprimento fixo) para representar um caractere. O Unicode permite que os aplicativos funcionem em diferentes idiomas.  
+ Atualmente, a única codificação Unicode que o ODBC suporta é o UCS-2, que usa um inteiro de 16 bits (comprimento fixo) para representar um caractere. O Unicode permite que os aplicativos funcionem em diferentes idiomas.  
   
- O Gerenciador de driver ODBC 3,5 (ou superior) está habilitado para Unicode. Isso afeta duas áreas principais: chamadas de função e tipos de dados de cadeia de caracteres. O Gerenciador de driver mapeia os argumentos da cadeia de caracteres da função e os dados de cadeia de caracteres conforme exigido pelo aplicativo e Driver, ambos podem ser habilitados para Unicode ou habilitados para ANSI. Essas duas áreas são discutidas em detalhes nas seções, [argumentos de função Unicode](../../../odbc/reference/develop-app/unicode-function-arguments.md) e [dados Unicode](../../../odbc/reference/develop-app/unicode-data.md).  
+ O Gerenciador de Driver ODBC 3.5 (ou superior) é habilitado para Unicode. Isso afeta duas áreas principais: chamadas de função e tipos de dados de string. O Driver Manager mapeia argumentos de seqüência de funções e dados de seqüência conforme exigido pelo aplicativo e pelo driver, ambos podem ser habilitados para Unicode ou habilitados para ANSI. Essas duas áreas são discutidas detalhadamente nas seções, [Argumentos de Função Unicode](../../../odbc/reference/develop-app/unicode-function-arguments.md) e [Dados Unicode](../../../odbc/reference/develop-app/unicode-data.md).  
   
- O Gerenciador de driver ODBC 3,5 (ou superior) dá suporte ao uso de um driver Unicode com um aplicativo Unicode e um aplicativo ANSI. Ele também dá suporte ao uso de um driver ANSI com um aplicativo ANSI. O Gerenciador de driver fornece mapeamento limitado de Unicode para ANSI para um aplicativo Unicode que funcione com um driver ANSI.  
+ O Gerenciador de Driver ODBC 3.5 (ou superior) suporta o uso de um driver Unicode com um aplicativo Unicode e um aplicativo ANSI. Ele também suporta o uso de um driver ANSI com um aplicativo ANSI. O Driver Manager fornece mapeamento Unicode-to-ANSI limitado para um aplicativo Unicode que funciona com um driver ANSI.  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Argumentos da função Unicode](../../../odbc/reference/develop-app/unicode-function-arguments.md)  
   

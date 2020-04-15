@@ -11,28 +11,28 @@ helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2e5896456f3c4f8074b62f6e1d4707cc7c41d21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 27df569ba94cd5acb22ba2ee974751bd5d80d1b6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73770807"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81296987"
 ---
 # <a name="sessions"></a>Sessões
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sessão de provedor de OLE DB de cliente nativo representa uma única conexão a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]uma instância do.  
+  Uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sessão do provedor Nativo Cliente OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]representa uma única conexão a uma instância de .  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo requer que as sessões delimitem o espaço de transação para uma fonte de dados. Todos os objetos de comando criados de um objeto de sessão específico participam da transação local ou distribuída do objeto de sessão.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor Native Client OLE DB exige que as sessões delimitem o espaço de transação para uma fonte de dados. Todos os objetos de comando criados de um objeto de sessão específico participam da transação local ou distribuída do objeto de sessão.  
   
  O primeiro objeto de sessão criado na fonte de dados inicializada recebe a conexão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estabelecida na inicialização. Quando todas as referências nas interfaces do objeto de sessão são liberadas, a conexão com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] torna-se disponível a outro objeto de sessão criado na fonte de dados.  
   
  Um objeto de sessão adicional criado na fonte de dados estabelece sua própria conexão com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conforme especificado pela fonte de dados. A conexão com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é cancelada quando o aplicativo libera todas as referências aos objetos criados naquela sessão.  
   
- O exemplo a seguir demonstra como usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo para se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conectar a um banco de dados:  
+ O exemplo a seguir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demonstra como usar o provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB para se conectar a um banco de dados:  
   
 ```  
 int main()  
@@ -181,7 +181,7 @@ EXIT:
 }  
 ```  
   
- Conectar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de sessão de provedor de OLE DB de cliente nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a uma instância do pode gerar uma sobrecarga significativa para aplicativos que criam e liberam continuamente objetos de sessão. A sobrecarga pode ser minimizada Gerenciando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de sessão de provedor de OLE DB de cliente nativo com eficiência. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Os aplicativos do provedor de OLE DB de clientes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativos podem manter a conexão de um objeto de sessão ativo mantendo uma referência em pelo menos uma interface do objeto.  
+ Conectar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de sessão do provedor DeLE DO Cliente Nativo a uma instância de pode gerar sobrecarga significativa para aplicativos que criam e liberam continuamente objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sessão. A sobrecarga pode ser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] minimizada gerenciando objetos de sessão do provedor Native Client OLE DB de forma eficiente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Os aplicativos do provedor Nativo Cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB podem manter a conexão de um objeto de sessão ativa, mantendo uma referência em pelo menos uma interface do objeto.  
   
  Por exemplo, manter um pool de referências a objeto de criação de comando mantém ativas as conexões a esses objetos de sessão no pool. Como os objetos de sessão são necessários, o código de manutenção do pool passa um ponteiro de interface **IDBCreateCommand** válido para o método de aplicativo que solicita a sessão. Quando o método do aplicativo não necessita mais da sessão, o método retorna o ponteiro de interface para o código de manutenção do pool em vez de liberar a referência do aplicativo ao objeto de criação de comando.  
   

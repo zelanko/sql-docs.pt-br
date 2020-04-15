@@ -1,5 +1,5 @@
 ---
-title: Nomes de tabela | Microsoft Docs
+title: Nomes de mesa | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - SQL grammar [ODBC], table names
 - table names [ODBC]
 ms.assetid: f7a5cb0a-3be7-4f46-82f9-64ffdbceaa9b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5dd8de055521f4a1831d20a9a34bedb9309d1de6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 91a415cd456186f18ef358b9d504145f78152774
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939784"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303117"
 ---
 # <a name="table-names"></a>Nomes de tabela
-Quando o dBASE, o Microsoft Excel, o Paradox ou o driver de texto são usados, os nomes de tabela que ocorrem na cláusula FROM de SELECT ou DELETE, após a cláusula INTO em INSERT, e após UPDATE, CREATE TABLE e DROP TABLE podem conter um caminho válido, um nome primário e uma extensão de nome de arquivo .  
+Quando o driver dBASE, Microsoft Excel, Paradox ou Text é usado, os nomes de tabela que ocorrem na cláusula DE DE SELECT ou DELETE, após a cláusula INTO em INSERT, e após ATUALIZAÇÃO, TABELA DE CRIAÇÃO e TABELA DE GOTA podem conter um caminho válido, nome principal e extensão de nome do arquivo.  
   
- O uso de um nome de tabela em outro lugar em uma instrução SQL não oferece suporte ao uso de caminhos ou extensões, mas aceitará apenas o nome primário (por exemplo, EMP de C:\ABC\EMP).  
+ O uso de um nome de tabela em outro lugar em uma declaração SQL não suporta o uso de caminhos ou extensões, mas aceitará apenas o nome principal (por exemplo, EMP DE C:\ABC\EMP).  
   
- Os nomes de correlação (aliases) podem ser usados. Por exemplo:  
+ Nomes de correlação (pseudônimos) podem ser usados. Por exemplo:  
   
 ```  
 SELECT *    

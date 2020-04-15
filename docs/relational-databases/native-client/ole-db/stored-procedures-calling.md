@@ -16,20 +16,20 @@ helpviewer_keywords:
 - stored procedures [OLE DB], calling
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c30e6ca03f1d1d4c794d01bd594efd88306410e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ca4a3bb78f1f08ea8bfcdc08d5e8bacac4495087
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73759036"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305326"
 ---
 # <a name="stored-procedures---calling"></a>Procedimentos armazenados – Chamando
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Um procedimento armazenado pode ter zero ou mais parâmetros. Também pode retornar um valor. Ao usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo, os parâmetros para um procedimento armazenado podem ser passados por:  
+  Um procedimento armazenado pode ter zero ou mais parâmetros. Também pode retornar um valor. Ao usar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o provedor Native Client OLE DB, os parâmetros para um procedimento armazenado podem ser passados por:  
   
 -   Hard-coding o valor de dados.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73759036"
   
 1.  Preencha as informações dos parâmetros em uma matriz de estruturas DBPARAMBINDINFO; isto é, nome do parâmetro, nome específico do provedor para o tipo de dados do parâmetro ou um nome de tipo de dados padrão, e assim por diante. Cada estrutura na matriz descreve um parâmetro. Em seguida, essa matriz é transmitida ao método **SetParameterInfo**.  
   
-2.  Chame o método **ICommandWithParameters::SetParameterInfo** para descrever parâmetros ao provedor. **SetParameterInfo** especifica o tipo de dados nativo de cada parâmetro. Os argumentos **SetParameterInfo** são:  
+2.  Chame o método **ICommandWithParameters::SetParameterInfo** para descrever parâmetros ao provedor. **SetParameterInfo** especifica o tipo de dados nativo de cada parâmetro. Os argumentos de **SetParameterInfo** são:  
   
     -   O número de parâmetros para o qual definir informações de tipo.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73759036"
 5.  Execute o comando usando **ICommand::Execute**.  
 
 ## <a name="methods-of-calling-a-stored-procedure"></a>Métodos de chamar um procedimento armazenado  
- Ao executar um procedimento armazenado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte ao:  
+ Ao executar um procedimento [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]armazenado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em , o provedor Native Client OLE DB suporta o:  
   
 -   Sequência de escape CALL do ODBC.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "73759036"
   
  A sintaxe geral para chamar um procedimento usando a sequência de escape ODBC CALL é:  
   
- {[**? =**]**chamar**_procedure_name_[**(**[*parâmetro*] [**,**[*Parameter*]]... **)**]}  
+ {[**?=**]**chamar**_procedure_name_[**[**[ [ [ [*parameter***parâmetro**]...*parameter* **)**]}  
   
  Por exemplo:  
   
@@ -117,18 +117,18 @@ ms.locfileid: "73759036"
 {rpc SalesByCategory}  
 ```  
   
- Para um aplicativo de exemplo que demonstra uma sequência de escape RPC, consulte [executar um procedimento armazenado &#40;usando a sintaxe rpc&#41; e processar códigos de retorno e parâmetros de saída &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Para um aplicativo de exemplo que demonstra uma sequência de escape RPC, confira [Executar um procedimento armazenado &#40;usando a sintaxe RPC&#41; e processar códigos de retorno e parâmetros de saída &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Instrução Transact-SQL EXECUTE  
- A sequência de escape ODBC CALL e a sequência de escape RPC são os métodos preferidos para chamar um procedimento armazenado no lugar da instrução [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo usa o mecanismo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] RPC do para otimizar o processamento de comandos. Este protocolo de RPC aumenta o desempenho, eliminando grande parte do processamento de parâmetros e da análise da instrução feita no servidor.  
+ A sequência de escape ODBC CALL e a sequência de escape RPC são os métodos preferidos para chamar um procedimento armazenado no lugar da instrução [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor Native Client OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa o mecanismo RPC para otimizar o processamento de comandos. Este protocolo de RPC aumenta o desempenho, eliminando grande parte do processamento de parâmetros e da análise da instrução feita no servidor.  
   
- Este é um exemplo da instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**:  
+ Este é um exemplo da instrução  **EXECUTE** do [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
+ [Procedimentos Armazenados](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQLBindParameter (driver do Excel) | Microsoft Docs
+title: SQLBindParameter (Driver Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Excel driver [ODBC], SQLBindParameter
 - SQLBindParameter function [ODBC], Excel Driver
 ms.assetid: 40489bc5-3e2a-425e-892d-e0dc037f4d7a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8b33200e0628566bc88f770ca1fe8fd895ecbf2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c3a2d0a03bded3ec909cd158b36f52ee9007647e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063252"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300626"
 ---
 # <a name="sqlbindparameter-excel-driver"></a>SQLBindParameter (Driver do Excel)
 > [!NOTE]  
->  Este tópico fornece informações específicas do driver do Excel. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico fornece informações específicas do Excel Driver. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [Referência à API oDBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Quando o driver do Microsoft Excel é usado, a execução de uma instrução INSERT que usa um parâmetro para inserir um NULL em uma coluna SQL_CHAR retornará SQL_SUCCESS_WITH_INFO com SQLSTATE 01004, "dados truncados".
+ Quando o driver do Microsoft Excel for usado, executando uma instrução INSERT que usa um parâmetro para inserir um NULL em uma coluna SQL_CHAR retornará SQL_SUCCESS_WITH_INFO com SQLSTATE 01004, "Data Truncado".

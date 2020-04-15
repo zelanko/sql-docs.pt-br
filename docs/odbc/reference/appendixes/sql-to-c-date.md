@@ -1,5 +1,5 @@
 ---
-title: 'SQL to C: Date | Microsoft Docs'
+title: 'SQL a C: Data | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,34 +12,34 @@ helpviewer_keywords:
 - date data type [ODBC]
 - data conversions from SQL to C types [ODBC], date
 ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d282798a31ac9059ed3c1901ea01f1f3104f09c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fe9656c0c02c0ff5a10029525da3d38280530cc3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68056883"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81296526"
 ---
 # <a name="sql-to-c-date"></a>SQL para C: data
-O identificador para o tipo de dados SQL ODBC de data é:  
+O identificador para a data em que o tipo de dados SQL o DSBC é:  
   
  SQL_TYPE_DATE  
   
- A tabela a seguir mostra os tipos de dados ODBC C para os quais os dados SQL podem ser convertidos. Para obter uma explicação das colunas e dos termos na tabela, consulte [convertendo dados de SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
+ A tabela a seguir mostra os tipos de dados ODBC C para a qual os dados SQL de data podem ser convertidos. Para obter uma explicação das colunas e termos da tabela, consulte [Convertendo Dados de SQL para C Tipos de Dados](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
   
-|Identificador de tipo C|Teste|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
+|Identificador de tipo C|Teste|**TargetValuePtr*|**Strlen_or_indptr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > comprimento de byte de caractere<br /><br /> 11 <= *BufferLength* <= comprimento de byte de caractere<br /><br /> *BufferLength* < 11|data<br /><br /> Dados truncados<br /><br /> Indefinido|10<br /><br /> Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > comprimento de caractere<br /><br /> 11 <= *BufferLength* <= comprimento do caractere<br /><br /> *BufferLength* < 11|data<br /><br /> Dados truncados<br /><br /> Indefinido|10<br /><br /> Comprimento dos dados em caracteres<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Comprimento de bytes de dados <= *BufferLength*<br /><br /> Comprimento de bytes de dados > *BufferLength*|data<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|Nenhum [a]|data|6 [c]|n/d|  
-|SQL_C_TYPE_TIMESTAMP|Nenhum [a]|Dados [b]|16 [c]|n/d|  
+|SQL_C_CHAR|*BufferLength* > comprimento do byte do caractere<br /><br /> 11 <= *TampãoComprimento* <= Comprimento do byte do caractere<br /><br /> *Comprimento do tampão* < 11|Dados<br /><br /> Dados truncados<br /><br /> Indefinido|10<br /><br /> Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*Comprimento do > comprimento* do caractere do buffer<br /><br /> 11 <= *TampãoComprimento* <= Comprimento do caractere<br /><br /> *Comprimento do tampão* < 11|Dados<br /><br /> Dados truncados<br /><br /> Indefinido|10<br /><br /> Comprimento dos dados em caracteres<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|Comprimento de byte de dados <= *BufferLength*<br /><br /> Comprimento de byte de dados > *BufferLength*|Dados<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|Nenhum[a]|Dados|6[c]|n/d|  
+|SQL_C_TYPE_TIMESTAMP|Nenhum[a]|Dados[b]|16[c]|n/d|  
   
- [a] o valor de *BufferLength* é ignorado para essa conversão. O driver pressupõe que o tamanho de **TargetValuePtr* é o tamanho do tipo de dados C.  
+ [a] O valor do *BufferLength* é ignorado para esta conversão. O driver assume que o tamanho de **TargetValuePtr* é do tamanho do tipo de dados C.  
   
- [b] os campos de tempo da estrutura de carimbo de data/hora são definidos como zero.  
+ [b] Os campos de tempo da estrutura do carimbo de tempo são definidos como zero.  
   
  [c] Este é o tamanho do tipo de dados C correspondente.  
   
- Quando os dados SQL de data são convertidos em dados de caractere C, a cadeia de caracteres resultante está no formato "*aaaa*-*mm*-*DD*". Esse formato não é afetado pela configuração de país do Windows®.
+ Quando os dados SQL de data são convertidos em dados do caractere C, a seqüência resultante está no formato "*yyyy*-*mm*-*dd*". Este formato não é afetado pela configuração de país ® Windows.

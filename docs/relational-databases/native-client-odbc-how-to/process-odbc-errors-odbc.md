@@ -1,5 +1,5 @@
 ---
-title: Processar erros de ODBC (ODBC) | Microsoft Docs
+title: Erros de Processo ODBC (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,42 +10,42 @@ ms.topic: reference
 helpviewer_keywords:
 - errors [ODBC]
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2acf7bd227d04cfd5b99a45ef4fa336b78bd4cfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 52c744a096ea55a98aa00a1471f816a93f59c6b0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781045"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300400"
 ---
 # <a name="process-odbc-errors-odbc"></a>Processar erros ODBC (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   É possível usar duas chamadas de função ODBC para recuperar mensagens ODBC: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Para obter informações relacionadas ao ODBC principal nos campos de diagnóstico **SQLState**, **pfNative** e **ErrorMessage**, chame [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) até ele retornar SQL_NO_DATA. Para cada registro de diagnóstico, é possível chamar [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) a fim de recuperar campos individuais. Todos os campos específicos do driver devem ser recuperados usando **SQLGetDiagField**.  
   
- [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) são processados pelo Gerenciador de driver ODBC, não por um driver individual. O Gerenciador de Driver ODBC não armazena em cache campos de diagnóstico específicos do driver até que seja feita uma conexão bem-sucedida. Não é possível chamar [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) para campos de diagnóstico específicos do driver antes de obter uma conexão bem-sucedida. Isso inclui os comandos de conexão ODBC, mesmo se eles retornarem SQL_SUCCESS_WITH_INFO. Os campos de diagnóstico específicos do driver não estarão disponíveis até a próxima chamada de função ODBC.  
+ [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) são processados pelo Gerenciador de Driver ODBC, não por um driver individual. O Gerenciador de Driver ODBC não armazena em cache campos de diagnóstico específicos do driver até que seja feita uma conexão bem-sucedida. Não é possível chamar [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) para campos de diagnóstico específicos do driver antes de obter uma conexão bem-sucedida. Isso inclui os comandos de conexão ODBC, mesmo se eles retornarem SQL_SUCCESS_WITH_INFO. Os campos de diagnóstico específicos do driver não estarão disponíveis até a próxima chamada de função ODBC.  
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>DESCRIÇÃO  
+### <a name="description"></a>Descrição  
  O exemplo mostra um manipulador de erros simples que chama [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) para as informações ODBC padrão. Em seguida, ele testa se há uma conexão válida e, em caso positivo, chama o **SQLGetDiagField** para os campos de diagnósticos específicos de driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este exemplo não tem suporte em IA64.  
   
  Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você precisar manter as credenciais, deverá criptografá-las com a [API de criptografia do Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
   
- Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks do [Microsoft SQL Server exemplos e projetos da comunidade](https://go.microsoft.com/fwlink/?LinkID=85384) Home Page.) Essa fonte de dados deve ser baseada no driver ODBC fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
+ Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo adventureworks da página inicial [do Microsoft SQL Server Samples and Community Projects.)](https://go.microsoft.com/fwlink/?LinkID=85384) Essa fonte de dados deve ser baseada no driver ODBC fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- Execute a primeira listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () para criar o procedimento armazenado usado por este exemplo.  
+ Execute a [!INCLUDE[tsql](../../includes/tsql-md.md)]primeira ( ) listagem de código para criar o procedimento armazenado usado por esta amostra.  
   
  Compile a segunda listagem de código (C++) com odbc32.lib. Em seguida, execute o programa.  
   
- Execute a terceira listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () para excluir o procedimento armazenado usado por este exemplo.  
+ Execute a [!INCLUDE[tsql](../../includes/tsql-md.md)]terceira ( ) listagem de código para excluir o procedimento armazenado usado por esta amostra.  
   
 ### <a name="code"></a>Código  
   

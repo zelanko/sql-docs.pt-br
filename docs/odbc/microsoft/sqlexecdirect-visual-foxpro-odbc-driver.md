@@ -1,5 +1,5 @@
 ---
-title: SQLExecDirect (driver ODBC do Visual FoxPro) | Microsoft Docs
+title: SQLExecDirect (driver Visual FoxPro ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,31 +10,31 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLExecDirect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 5004060f-8510-4018-87a4-d41789e69d3e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e701340217a885fbf1e3372c33ed1a8cfdb21457
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 40c0a3404a3e7a9a67b6f71d197343eddb417955
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053853"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298666"
 ---
 # <a name="sqlexecdirect-visual-foxpro-odbc-driver"></a>SQLExecDirect (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
->  Este tópico contém informações específicas do driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico contém informações específicas do driver Visual FoxPro ODBC. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [Referência à API oDBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Suporte: completo  
+ Suporte: Completo  
   
- Conformidade da API ODBC: nível de núcleo  
+ Conformidade da API ODBC: Nível do núcleo  
   
- Executa uma nova [instrução SQL preparável](../../odbc/microsoft/visual-foxpro-terminology.md). O driver ODBC do Visual FoxPro usa os valores atuais das variáveis de marcador de parâmetro se existirem parâmetros na instrução.  
+ Executa uma nova [e preparável declaração SQL](../../odbc/microsoft/visual-foxpro-terminology.md). O driver Visual FoxPro ODBC usa os valores atuais das variáveis de marcador de parâmetro se houver algum parâmetro na declaração.  
   
- Para criar um comando em lotes para enviar mais de uma instrução SQL por vez, use um ponto-e-vírgula (;) para separar cada instrução SQL no lote.  
+ Para criar um comando em lote para enviar mais de uma declaração SQL por vez, use um ponto e vírgula (;) para separar cada declaração SQL no lote.  
   
- Se os nomes de tabela, exibição ou campo contiverem espaços, coloque os nomes nas aspas de fundo. Por exemplo, se seu banco de dados contiver uma tabela denominada minha tabela e o campo meu campo, coloque cada elemento do identificador da seguinte maneira:  
+ Se a sua tabela, exibição ou nomes de campo contiverem espaços, feche os nomes nas marcas de aspas traseiras. Por exemplo, se o seu banco de dados contiver uma tabela chamada Minha Tabela e o campo Meu Campo, indescisse cada elemento do identificador da seguinte forma:  
   
 ```  
 SELECT `My Table`.`Field1`, `My Table`.`Field2` FROM `My Table`  
 ```  
   
- Para obter mais informações, consulte [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md) na *referência do programador de ODBC*.
+ Para obter mais informações, consulte [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md) no *Programador ODBC*.

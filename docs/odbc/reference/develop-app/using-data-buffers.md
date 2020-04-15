@@ -12,19 +12,19 @@ helpviewer_keywords:
 - buffers [ODBC], data
 - data buffers [ODBC]
 ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4b3128e0b8be8ec5bfaa2c4f0e7e64ce866b6295
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 510d3a6728efb63c3c352e5215e54d1bf7c4e025
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079578"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306767"
 ---
 # <a name="using-data-buffers"></a>Usar buffers de dados
-Os buffers de dados são descritos por três partes de informações: seu tipo, endereço e comprimento de byte. Sempre que uma função precisa de uma dessas informações e ainda não a conhece, ela tem um argumento com o qual o aplicativo a transmite.  
+Os buffers de dados são descritos por três informações: seu tipo, endereço e comprimento de byte. Sempre que uma função precisa de uma dessas informações e ainda não a conhece, ela tem um argumento com o qual o aplicativo passa por ela.  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Tipo de buffer de dados](../../../odbc/reference/develop-app/data-buffer-type.md)  
   

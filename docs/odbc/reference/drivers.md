@@ -1,5 +1,5 @@
 ---
-title: Drivers | Microsoft Docs
+title: Motoristas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - drivers [ODBC]
 - drivers [ODBC], about drivers
 ms.assetid: d6795d92-877e-44e1-b7d5-2ff2fd3989bd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6460410488186c94713d859bf2912f2844ca2736
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7c8b40641be3db34fc6929edecdd5dd923700957
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915437"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294179"
 ---
 # <a name="drivers"></a>Drivers
-*Drivers* são bibliotecas que implementam as funções na API ODBC. Cada um é específico para um DBMS específico; por exemplo, um driver para Oracle não pode acessar dados diretamente em um DBMS do Informix. Os drivers expõem os recursos dos DBMSs subjacentes; Eles não são necessários para implementar recursos não suportados pelo DBMS. Por exemplo, se o DBMS subjacente não oferecer suporte a junções externas, nenhum deverá ser o driver. A única exceção importante para isso é que os drivers para DBMSs que não têm mecanismos de banco de dados autônomos, como Xbase, devem implementar um mecanismo de banco de dados que, pelo menos, dá suporte a uma quantidade mínima de SQL.  
+*Drivers* são bibliotecas que implementam as funções na API ODBC. Cada um é específico para um DBMS específico; por exemplo, um driver para Oracle não pode acessar diretamente dados em um Informix DBMS. Os drivers expõem as capacidades dos DBMSs subjacentes; eles não são obrigados a implementar recursos não suportados pelo DBMS. Por exemplo, se o DBMS subjacente não suportar as junções externas, então o driver também não deve. A única grande exceção a isso é que os drivers para DBMSs que não possuem mecanismos de banco de dados autônomos, como o Xbase, devem implementar um mecanismo de banco de dados que pelo menos suporte uma quantidade mínima de SQL.  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Tarefas de driver](../../odbc/reference/driver-tasks.md)  
   

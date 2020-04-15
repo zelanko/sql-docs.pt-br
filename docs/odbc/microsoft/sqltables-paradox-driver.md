@@ -1,5 +1,5 @@
 ---
-title: SQLTables (driver do Paradox) | Microsoft Docs
+title: SQLTables (Driver Paradoxo) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - Paradox driver [ODBC], SQLTables
 - SQLTables function [ODBC], Paradox Driver
 ms.assetid: d68adad6-97bd-4b47-bcf9-0102aafb00d4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 48cbc19506a7f695433489c952f53864b614a05e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: aa13b5395d8f3c2cb470a4eff1b1ef02a43bad53
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949025"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299277"
 ---
 # <a name="sqltables-paradox-driver"></a>SQLTables (Driver do Paradox)
 > [!NOTE]  
->  Este tópico fornece informações específicas do driver do Paradox. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico fornece informações específicas do Paradox Driver. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [Referência à API oDBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |Argumento|Comentários|  
 |--------------|--------------|  
-|*szTableOwner*|O único argumento válido para *szTableOwner* é nulo porque nenhum dos drivers dá suporte a nomes de proprietários. Com *szTableOwner* definido como NULL, todas as tabelas são retornadas. NULL é retornado na coluna TABLE_OWNER.|  
-|*szTableQualifier*|Na coluna TABLE_QUALIFIER, **SQLTables** retornará o caminho para um diretório.|  
-|*SzTableType*|Para arquivos do Paradox, "TABLE" é o único tipo de tabela com suporte.|  
+|*szTableOwner*|O único argumento válido para *szTableOwner* é NULL porque nenhum dos drivers suporta nomes de proprietários. Com *szTableOwner* definido como NULL, todas as tabelas são devolvidas. NULL é devolvido na coluna TABLE_OWNER.|  
+|*szTableQualifier*|Na coluna TABLE_QUALIFIER, o **SQLTables** retornará o caminho para um diretório.|  
+|*SzTableType*|Para arquivos Paradox, "TABLE" é o único tipo de tabela suportado.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Função SQLTables](../../odbc/reference/syntax/sqltables-function.md)

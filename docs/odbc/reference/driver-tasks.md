@@ -1,5 +1,5 @@
 ---
-title: Tarefas do driver | Microsoft Docs
+title: Tarefas do motorista | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], tasks
 ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e2ed50ac3f9e914953abdd64907199a5f978af2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1b30df63a3c955d2ed074ab13649ea55c21a6da7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915465"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294196"
 ---
 # <a name="driver-tasks"></a>Tarefas de driver
-Tarefas específicas executadas por drivers incluem:  
+Tarefas específicas executadas pelos drivers incluem:  
   
--   Conectando-se e desconectando-se da fonte de dados.  
+-   Conectando e desconectando da fonte de dados.  
   
--   Verificando se há erros de função não verificados pelo Gerenciador de driver.  
+-   Verificando se há erros de função não verificados pelo Gerenciador de Driver.  
   
--   Iniciando transações; Isso é transparente para o aplicativo.  
+-   Início das transações; isso é transparente para a aplicação.  
   
--   Enviando instruções SQL para a fonte de dados para execução. O driver deve modificar o ODBC SQL para SQL específico do DBMS; Isso geralmente é limitado à substituição de cláusulas de escape definidas pelo ODBC por SQL específico do DBMS.  
+-   Submetendo declarações SQL à fonte de dados para execução. O driver deve modificar o ODBC SQL para o SQL específico do DBMS; isso é muitas vezes limitado à substituição de cláusulas de escape definidas pela ODBC por SQL específico do DBMS.  
   
--   Enviando dados para e recuperando dados da fonte de dados, incluindo a conversão de tipos de dados conforme especificado pelo aplicativo.  
+-   Envio de dados e recuperação de dados da fonte de dados, incluindo a conversão de tipos de dados conforme especificado pelo aplicativo.  
   
--   Mapeamento de erros específicos do DBMS para o ODBC sqlstates.
+-   Mapeamento de erros específicos do DBMS para ODBC SQLSTATEs.
