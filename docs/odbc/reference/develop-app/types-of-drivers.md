@@ -1,5 +1,5 @@
 ---
-title: Tipos de drivers | Microsoft Docs
+title: Tipos de Drivers | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,52 +13,52 @@ helpviewer_keywords:
 - backward compatibility [ODBC], application and driver compatibility
 - compatibility [ODBC], application and driver compatibility
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea99ec6a5b0a76ce0647e3681a4cf919d3f086b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: de6d8e1473f127d28c69969e0fc298afd69d3023
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087770"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304867"
 ---
 # <a name="types-of-drivers"></a>Tipos de drivers
-Os drivers ODBC podem ser classificados da seguinte maneira:  
+Os drivers ODBC podem ser classificados da seguinte forma:  
   
--   **ODBC de 32 bits 2.**  
-     ** _x_ driver** um driver de 32 bits que:  
+-   **ODBC 2 de 32 bits.**  
+     ** _x_ Driver** Um driver de 32 bits que:  
   
-    -   Exporta somente as funções ODBC *2. x* .  
+    -   Exporta apenas funções ODBC *2.x.*  
   
-    -   Exibe o comportamento do ODBC *2. x* para alterações comportamentais.  
+    -   Exibe o comportamento oDBC *2.x* para mudanças comportamentais.  
   
--   **ISO e abrir o driver em conformidade com o grupo** Um driver de 32 bits que:  
+-   **Iso e Motorista compatível com grupo aberto** Um driver de 32 bits que:  
   
-    -   Exporta todas as funções documentadas nos documentos Open Group ou ISO CLI. Isso incluirá algumas funções que são preteridas no ODBC.  
+    -   Exporta todas as funções documentadas nos documentos CLI do Grupo Aberto ou ISO. Isso incluirá algumas das funções que são preteridas no ODBC.  
   
-    -   Exibe o comportamento do ODBC 3,0 para alterações comportamentais.  
+    -   Exibe o comportamento oDBC 3.0 para mudanças comportamentais.  
   
-    -   Não percorre necessariamente o Gerenciador de driver ODBC 3,0.  
+    -   Não necessariamente passa pelo Gerenciador de Driver ODBC 3.0.  
   
--   **Driver ODBC 3,0** Um driver de 32 bits que:  
+-   **Driver ODBC 3.0** Um driver de 32 bits que:  
   
-    -   Exporta somente as funções que estão em ODBC 3,0 menos funções preteridas.  
+    -   As exportações só funcionam em ODBC 3.0 menos funções depreciadas.  
   
-    -   É capaz de exibir o comportamento do ODBC *2. x* ou o comportamento do ODBC 3,0 com relação às alterações comportamentais, com base no atributo de ambiente SQL_ATTR_APP_ODBC_VERSION.  
+    -   É capaz de exibir comportamento ODBC *2.x* ou comportamento ODBC 3.0 em relação a mudanças comportamentais, com base no SQL_ATTR_APP_ODBC_VERSION atributo do ambiente.  
   
--   **ODBC 3,5 (ou posterior) Driver ANSI** Um driver de 32 bits que:  
+-   **Driver ANSI ODBC 3.5 (ou posterior)** Um driver de 32 bits que:  
   
-    -   Exporta somente as funções que estão em ODBC 3,5 menos funções preteridas.  
+    -   As exportações só funcionam em ODBC 3,5 menos funções depreciadas.  
   
-    -   É capaz de exibir o comportamento do ODBC *2. x* ou o comportamento do ODBC 3,0 ou o comportamento do ODBC 3,5 em relação às alterações comportamentais, com base no atributo de ambiente SQL_ATTR_APP_ODBC_VERSION.  
+    -   É capaz de exibir comportamento ODBC *2.x* ou comportamento ODBC 3.0, ou comportamento ODBC 3.5 em relação a mudanças comportamentais, com base no atributo SQL_ATTR_APP_ODBC_VERSION ambiente.  
   
--   **Driver Unicode do ODBC 3,5 (ou posterior)** Um driver de 32 bits que:  
+-   **Driver Unicode ODBC 3.5 (ou posterior)** Um driver de 32 bits que:  
   
-    -   Dá suporte a todos os recursos de um driver ANSI do ODBC 3,5.  
+    -   Suporta todos os recursos de um driver ODBC 3.5 ANSI.  
   
-    -   Exporta as versões Unicode de todas as APIs de cadeia de caracteres ODBC.  
+    -   Exporta versões Unicode de todas as APIs de seqüência de strings ODBC.  
   
     -   Pode armazenar e processar dados Unicode na fonte de dados.  
   
 > [!NOTE]  
->  drivers ODBC de 16 bits não funcionarão diretamente com o Gerenciador de driver ODBC *3. x* . No entanto, é possível que drivers de 16 bits funcionem com o Gerenciador de driver ODBC 2,0, que é então conversões mais tarde para o Gerenciador de driver *3. x* .
+>  Os drivers ODBC de 16 bits não funcionarão diretamente com o Gerenciador de Driver ODBC *3.x.* No entanto, é possível que os drivers de 16 bits trabalhem com o Gerenciador de Driver 2.0 ODBC, que posteriormente se depara com o Driver Manager *3.x.*

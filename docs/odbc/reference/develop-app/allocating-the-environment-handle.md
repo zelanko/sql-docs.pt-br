@@ -1,5 +1,5 @@
 ---
-title: Alocando o identificador de ambiente | Microsoft Docs
+title: Alocando a Alça do Meio Ambiente | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - connecting to data source [ODBC], environment handles
 - handles [ODBC], environment
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 823ea02a2acb6a28f56c58bb40fe684a2589bd24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e33b850b2786960a368720deaf89a2203c7dd159
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077178"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302999"
 ---
 # <a name="allocating-the-environment-handle"></a>Alocar o identificador de ambiente
-A primeira tarefa para qualquer aplicativo ODBC é carregar o Gerenciador de driver; como isso é feito é dependente do sistema operacional. Por exemplo, em um computador que executa o Microsoft® Windows NT® Server/Windows 2000 Server, Windows NT Workstation/Windows 2000 Professional ou Microsoft Windows® 95/98, o aplicativo se vincula à biblioteca do Driver Manager ou chama **LoadLibrary** para carregar a DLL do Gerenciador de driver.  
+A primeira tarefa para qualquer aplicativo ODBC é carregar o Driver Manager; como isso é feito é dependente do sistema operacional. Por exemplo, em um computador que executa o Microsoft® O Servidor do Windows® Server/Windows 2000, o Windows NT Workstation/Windows 2000 Professional ou o Microsoft Windows® 95/98, o aplicativo vincula-se à biblioteca do Gerenciador de driver ou chama **loadLibrary** para carregar o DLL do Driver Manager.  
   
- A próxima tarefa, que deve ser feita antes que um aplicativo possa chamar qualquer outra função ODBC, é inicializar o ambiente ODBC e alocar um identificador de ambiente, da seguinte maneira:  
+ A próxima tarefa, que deve ser feita antes que um aplicativo possa chamar qualquer outra função ODBC, é inicializar o ambiente ODBC e alocar uma alça de ambiente, da seguinte forma:  
   
-1.  O aplicativo declara uma variável do tipo SQLHENV. Em seguida, ele chama **SQLAllocHandle** e passa o endereço dessa variável e a opção SQL_HANDLE_ENV. Por exemplo:  
+1.  O aplicativo declara uma variável do tipo SQLHENV. Em seguida, ele chama **SQLAllocHandle** e passa o endereço desta variável e a opção SQL_HANDLE_ENV. Por exemplo:  
   
     ```  
     SQLHENV henv1;  
@@ -38,12 +38,12 @@ A primeira tarefa para qualquer aplicativo ODBC é carregar o Gerenciador de dri
     SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &henv1);  
     ```  
   
-2.  O Gerenciador de driver aloca uma estrutura na qual armazenar informações sobre o ambiente e retorna o identificador de ambiente na variável.  
+2.  O Driver Manager aloca uma estrutura na qual armazenar informações sobre o ambiente e devolve a alça do ambiente na variável.  
   
- O Gerenciador de driver não chama **SQLAllocHandle** no driver no momento porque ele não sabe qual driver deve ser chamado. Ele atrasa a chamada de **SQLAllocHandle** no driver até que o aplicativo chame uma função para se conectar a uma fonte de dados. Para obter mais informações, consulte [função do Gerenciador de driver no processo de conexão](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md), mais adiante nesta seção.  
+ O Driver Manager não chama **SQLAllocHandle** no driver neste momento porque não sabe qual motorista chamar. Ele atrasa a chamada **SQLAllocHandle** no driver até que o aplicativo chame uma função para se conectar a uma fonte de dados. Para obter mais informações, consulte [a função do driver manager no processo de conexão,](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)mais tarde nesta seção.  
   
- Quando o aplicativo termina de usar o ODBC, ele libera o identificador de ambiente com **SQLFreeHandle**. Depois de liberar o ambiente, é um erro de programação de aplicativo usar o identificador do ambiente em uma chamada para uma função ODBC; Isso tem conseqüências indefinidas, mas provavelmente fatais.  
+ Quando o aplicativo tiver terminado usando o ODBC, ele libera o cabo do ambiente com **sQLFreeHandle**. Depois de liberar o ambiente, é um erro de programação de aplicativos usar a alça do ambiente em uma chamada para uma função ODBC; fazê-lo tem consequências indefinidas, mas provavelmente fatais.  
   
- Quando **SQLFreeHandle** é chamado, o driver libera a estrutura usada para armazenar informações sobre o ambiente. Observe que **SQLFreeHandle** não pode ser chamado para um identificador de ambiente até que todos os identificadores de conexão nesse identificador de ambiente tenham sido liberados.  
+ Quando **o SQLFreeHandle** é chamado, o driver libera a estrutura usada para armazenar informações sobre o ambiente. Observe que **o SQLFreeHandle** não pode ser chamado para uma alça de ambiente até que todas as alças de conexão na alça do ambiente tenham sido liberadas.  
   
- Para obter mais informações sobre o identificador de ambiente, consulte [identificadores de ambiente](../../../odbc/reference/develop-app/environment-handles.md).
+ Para obter mais informações sobre o manuseio do ambiente, consulte [Environment Handles](../../../odbc/reference/develop-app/environment-handles.md).

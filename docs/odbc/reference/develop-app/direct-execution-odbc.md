@@ -1,5 +1,5 @@
 ---
-title: Execução direta ODBC | Microsoft Docs
+title: Execução Direta ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - direct execution [ODBC]
 - SQL statements [ODBC], executing
 ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72d9222be541a8d41b5b9935ac7cbbcfde4da19c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bc5d942ac0c2af54168248d8e416ca233b2c69e6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039801"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305157"
 ---
 # <a name="direct-execution-odbc"></a>Execução direta ODBC
-A execução direta é a maneira mais simples de executar uma instrução. Quando a instrução é enviada para execução, a fonte de dados a compila em um plano de acesso e, em seguida, executa esse plano de acesso.  
+A execução direta é a maneira mais simples de executar uma declaração. Quando a declaração é submetida à execução, a fonte de dados compila-a em um plano de acesso e, em seguida, executa esse plano de acesso.  
   
- A execução direta é normalmente usada por aplicativos genéricos que criam e executam instruções em tempo de execução. Por exemplo, o código a seguir cria uma instrução SQL e a executa uma única vez:  
+ A execução direta é comumente usada por aplicativos genéricos que constroem e executam instruções em tempo de execução. Por exemplo, o código a seguir constrói uma declaração SQL e executa-a uma única vez:  
   
 ```  
 SQLCHAR *SQLStatement;  
@@ -36,20 +36,20 @@ BuildStatement(SQLStatement);
 SQLExecDirect(hstmt, SQLStatement, SQL_NTS);  
 ```  
   
- A execução direta funciona melhor para instruções que serão executadas uma única vez. Sua grande desvantagem é que a instrução SQL é analisada toda vez que é executada. Além disso, o aplicativo não pode recuperar informações sobre o conjunto de resultados criado pela instrução (se houver) até que a instrução seja executada; Isso é possível se a instrução for preparada e executada em duas etapas separadas.  
+ A execução direta funciona melhor para declarações que serão executadas uma única vez. Sua maior desvantagem é que a declaração SQL é analisado toda vez que é executada. Além disso, o aplicativo não pode recuperar informações sobre o conjunto de resultados criado pela declaração (se houver) até depois que a declaração for executada; isso é possível se a declaração for preparada e executada em duas etapas separadas.  
   
- Para executar uma instrução diretamente, o aplicativo executa as seguintes ações:  
+ Para executar uma declaração diretamente, o aplicativo executa as seguintes ações:  
   
-1.  Define os valores de qualquer parâmetro. Para obter mais informações, consulte [parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md), mais adiante nesta seção.  
+1.  Define os valores de quaisquer parâmetros. Para obter mais informações, consulte [Parâmetros de declaração,](../../../odbc/reference/develop-app/statement-parameters.md)mais tarde nesta seção.  
   
-2.  Chama **SQLExecDirect** e passa uma cadeia de caracteres que contém a instrução SQL.  
+2.  Chama **SQLExecDirect** e passa-a uma string contendo a declaração SQL.  
   
-3.  Quando **SQLExecDirect** é chamado, o driver:  
+3.  Quando **o SQLExecDirect** é chamado, o driver:  
   
-    -   Modifica a instrução SQL para usar a gramática SQL da fonte de dados sem analisar a instrução; Isso inclui substituir as sequências de escape abordadas em [sequências de escape no ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md). O aplicativo pode recuperar a forma modificada de uma instrução SQL chamando **SQLNativeSql**. As sequências de escape não serão substituídas se o atributo da instrução SQL_ATTR_NOSCAN for definido.  
+    -   Modifica a declaração SQL para usar a gramática SQL da fonte de dados sem analisar a declaração; isso inclui a substituição das seqüências de fuga discutidas em [Seqüências de Fuga no ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md). O aplicativo pode recuperar a forma modificada de uma declaração SQL ligando para **SQLNativeSql**. As seqüências de escape não são substituídas se o atributo de declaração SQL_ATTR_NOSCAN estiver definido.  
   
-    -   Recupera os valores de parâmetro atuais e os converte conforme necessário. Para obter mais informações, consulte [parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md), mais adiante nesta seção.  
+    -   Recupera os valores atuais do parâmetro e converte-os conforme necessário. Para obter mais informações, consulte [Parâmetros de declaração,](../../../odbc/reference/develop-app/statement-parameters.md)mais tarde nesta seção.  
   
-    -   Envia a instrução e os valores de parâmetro convertidos para a fonte de dados para execução.  
+    -   Envia a declaração e os valores dos parâmetros convertidos para a fonte de dados para execução.  
   
-    -   Retorna quaisquer erros. Isso inclui o controle de sequenciamento ou de estado como SQLSTATE 24000 (estado de cursor inválido), erros sintáticos como SQLSTATE 42000 (erro de sintaxe ou violação de acesso) e erros semânticos como SQLSTATE 42S02 (tabela base ou exibição não encontrada).
+    -   Retorna qualquer erro. Estes incluem sequenciamento ou diagnósticos estaduais, como SQLSTATE 24000 (estado cursor inválido), erros sintáticos como SQLSTATE 42000 (erro de sintaxe ou violação de acesso) e erros semânticos como SQLSTATE 42S02 (tabela base ou exibição não encontrada).

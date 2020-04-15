@@ -1,5 +1,5 @@
 ---
-title: Instruções UPDATE, DELETE e INSERT | Microsoft Docs
+title: ATUALIZAR, EXCLUIR E INSERIR Declarações | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,40 +14,40 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c2a2787be1bf44e1f214d396444a73b938acf7ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f12682a5d012d6981afce0085e9c920ed2f2ffbc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942834"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284256"
 ---
 # <a name="update-delete-and-insert-statements"></a>Instruções UPDATE, DELETE e INSERT
-Os aplicativos baseados em SQL fazem alterações nas tabelas executando as instruções **Update**, **delete**e **Insert** . Essas instruções fazem parte do nível mínimo de conformidade da gramática do SQL e devem ter suporte de todos os drivers e fontes de dados.  
+Os aplicativos baseados em SQL fazem alterações nas tabelas executando as instruções **UPDATE,** **DELETE**e **INSERT.** Essas declarações fazem parte do nível mínimo de conformidade gramatical SQL e devem ser suportadas por todos os drivers e fontes de dados.  
   
- A sintaxe dessas instruções é:  
+ A sintaxe dessas declarações é:  
   
- **Atualizar** _tabela-nome_  
+ **ATUALIZAR** _nome da tabela_  
   
- **Definir** _coluna-identificador_ **=** {*expressão* &#124; **NULL**}  
+ **Identificador** _column-identifier_ **=** de coluna SET {*expressão* &#124; **NULL**}  
   
- [**,** **=** o _identificador de coluna_ {*expression* &#124; **NULL**}]...  
+ [**,** _foto-identificador_ **=** de coluna {*expressão* &#124; **NULL**}]...  
   
- [**Onde** _condição de pesquisa_]  
+ [**ONDE** _condição de pesquisa_]  
   
- **Excluir do** _table-name_[**em que** _Search-Condition_]  
+ **EXCLUA do** _nome da tabela_**[ONDE** _a condição de pesquisa]_  
   
- **Inserir em** _table-name_[**(** _coluna-identificador_ [**,** _coluna-identificador_]... **)**]  
+ **INSIRA NO** _nome da tabela_[**(** _identificador de coluna_ [**,** _identificador de coluna_]... **)**]  
   
- {a*especificação de consulta* &#124; **valores (** _Inserir-valor_ [**,** _Inserir valor_]... **)**}  
+ {*especificação de consulta* &#124; **VALORES** _(insert-value_ **[,** _insert-value_]... **)**}  
   
- Observe que o elemento de *especificação de consulta* é válido somente nas gramáticas de núcleo e SQL estendidas e que os elementos de *expressão* e de *condição de pesquisa* se tornam mais complexos no núcleo e nas gramáticas de SQL estendidas.  
+ Observe que o elemento *de especificação de consulta* é válido apenas nas gramáticas SQL Core e Extended, e que os elementos de *expressão* e condição *de pesquisa* se tornam mais complexos nas gramáticas Core e Extended SQL.  
   
- Como outras instruções SQL, as instruções **Update**, **delete**e **Insert** são geralmente mais eficientes quando usam parâmetros. Por exemplo, a instrução a seguir pode ser preparada e executada repetidamente para inserir várias linhas na tabela Orders:  
+ Como outras instruções SQL, AS instruções **UPDATE,** **DELETE**e **INSERT** são muitas vezes mais eficientes quando usam parâmetros. Por exemplo, a seguinte instrução pode ser preparada e executada repetidamente para inserir várias linhas na tabela Ordens:  
   
 ```  
 INSERT INTO Orders (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- Essa eficiência pode ser aumentada passando-se matrizes de valores de parâmetro. Para obter mais informações sobre parâmetros de instrução e matrizes de valores de parâmetro, consulte [parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md).
+ Essa eficiência pode ser aumentada passando matrizes de valores de parâmetros. Para obter mais informações sobre parâmetros de declaração e matrizes de valores de parâmetros, consulte [Parâmetros de declaração](../../../odbc/reference/develop-app/statement-parameters.md).

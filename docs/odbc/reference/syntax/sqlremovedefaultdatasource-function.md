@@ -1,5 +1,5 @@
 ---
-title: Função SQLRemoveDefaultDataSource | Microsoft Docs
+title: SQLRemoveDefaultDataSource function | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLRemoveDefaultDataSource function [ODBC]
 ms.assetid: db803266-57df-4864-a41b-901247549c1f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cfefcd9f2f55e2d78c5c6e5b1bac7ce52e9033e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 952ace7d17e8bb5b4c824761b02e5c8a0895f519
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68024598"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303937"
 ---
 # <a name="sqlremovedefaultdatasource-function"></a>Função SQLRemoveDefaultDataSource
 **Conformidade**  
- Versão introduzida: ODBC 1,0, preterido  
+ Versão introduzida: ODBC 1.0, Depreciada  
   
  **Resumo**  
- No ODBC 3,0, a função **SQLRemoveDefaultDataSource** foi substituída por uma chamada para [SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md) com um argumento *fRequest* de ODBC_REMOVE_DEFAULT_DSN. Se um programa de instalação ODBC 2 *. x* chamar essa função, o instalador ODBC o mapeará para a seguinte chamada **SQLConfigDataSource** :  
+ No ODBC 3.0, a função **SQLRemoveDefaultDataSource** foi substituída por uma chamada para [SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md) com um argumento *fRequest* de ODBC_REMOVE_DEFAULT_DSN. Se um programa de instalação ODBC*2.x* chamar essa função, o instalador ODBC irá mapeá-lo para a seguinte chamada **SQLConfigDataSource:**  
   
 ```cpp  
 SQLConfigDataSource (NULL, ODBC_REMOVE_DEFAULT_DSN, NULL, NULL)  

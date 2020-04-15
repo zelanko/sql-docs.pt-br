@@ -1,5 +1,5 @@
 ---
-title: Outros detalhes de programação de driver do Excel | Microsoft Docs
+title: Outros detalhes da programação do Driver Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 464d454928b575e5151b09663d96b1f837356761
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d7a932d99ba30e84de0ccd4cfbcce1516cd2fad9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68043776"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290996"
 ---
 # <a name="other-excel-driver-programming-details"></a>Outros detalhes de programação de drivers do Excel
 > [!NOTE]  
->  Esta seção fornece informações específicas do driver do Excel sobre funções ODBC e outros detalhes de programação. Para obter informações gerais sobre uma função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Esta seção fornece informações específicas do Excel Driver sobre funções ODBC e outros detalhes de programação. Para obter informações gerais sobre uma função, consulte o tópico apropriado em [Referência à API oDBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [SQLBindParameter (Driver do Excel)](../../odbc/microsoft/sqlbindparameter-excel-driver.md)  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68043776"
   
 -   [SQLColumns (Driver do Excel)](../../odbc/microsoft/sqlcolumns-excel-driver.md)  
   
--   [SQLConfigDataSource (driver do Excel)](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)  
+-   [SQLConfigDataSource (Driver Excel)](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)  
   
 -   [SQLDriverConnect (Driver do Excel)](../../odbc/microsoft/sqldriverconnect-excel-driver.md)  
   

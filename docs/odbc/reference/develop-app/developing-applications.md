@@ -1,5 +1,5 @@
 ---
-title: Desenvolvendo aplicativos | Microsoft Docs
+title: Desenvolvimento de Aplicações | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - ODBC [ODBC], application development
 - application development [ODBC], about application development
 ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a9cdf20fa57da4b6085fc0e2fab61a23f3fed83e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 995d6b9ada4576bb5792042a1f0b5b6a25cde452
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039908"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305857"
 ---
 # <a name="developing-applications"></a>Desenvolver aplicativos
-Esta seção contém informações sobre como desenvolver aplicativos que usam a interface ODBC e os drivers que o implementam.  
+Esta seção contém informações sobre o desenvolvimento de aplicativos que usam a interface ODBC e drivers que a implementam.  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Conceitos básicos de ODBC](../../../odbc/reference/develop-app/odbc-fundamentals.md)  
   
@@ -46,13 +46,13 @@ Esta seção contém informações sobre como desenvolver aplicativos que usam a
   
 -   [Descritores](../../../odbc/reference/develop-app/descriptors.md)  
   
--   [Transações](../../../odbc/reference/develop-app/transactions-odbc.md)  
+-   [Transactions](../../../odbc/reference/develop-app/transactions-odbc.md)  
   
 -   [Diagnósticos](../../../odbc/reference/develop-app/diagnostics.md)  
   
 -   [Interoperabilidade](../../../odbc/reference/develop-app/interoperability.md)  
   
--   [Considerações sobre programação](../../../odbc/reference/develop-app/programming-considerations.md)  
+-   [Considerações de programação](../../../odbc/reference/develop-app/programming-considerations.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência do programador ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)

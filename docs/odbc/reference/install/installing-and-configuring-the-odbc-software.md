@@ -1,5 +1,5 @@
 ---
-title: Instalando e Configurando o software ODBC | Microsoft Docs
+title: Instalação e Configuração do Software ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ helpviewer_keywords:
 - ODBC [ODBC], configuring
 - installing ODBC [ODBC]
 ms.assetid: e2580f7d-d614-4e14-a9a3-804e8061b00e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9bc3770140d6ff5befbafefc26cb8936e14b494a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a71d021f7ff9d1ef73a3a64c1b5bb27dea1caeba
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094030"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301921"
 ---
 # <a name="installing-and-configuring-the-odbc-software"></a>Instalar e configurar o software ODBC
 > [!NOTE]  
->  A partir do Windows XP e do Windows Server 2003, o ODBC está incluído no sistema operacional Windows. Você só deve instalar explicitamente o ODBC em versões anteriores do Windows.  
+>  Começando com o Windows XP e o Windows Server 2003, o ODBC está incluído no sistema operacional windows. Você só deve instalar explicitamente o ODBC em versões anteriores do Windows.  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Instalar componentes ODBC](../../../odbc/reference/install/installing-odbc-components.md)  
   
--   [Configurar fontes de dados](../../../odbc/reference/install/configuring-data-sources.md)  
+-   [Configurando fontes de dados](../../../odbc/reference/install/configuring-data-sources.md)  
   
 -   [Referência de componentes de instalação e de configuração](../../../odbc/reference/install/installation-and-configuration-components-reference.md)  
   

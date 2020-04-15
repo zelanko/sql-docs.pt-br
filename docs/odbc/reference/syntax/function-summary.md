@@ -11,17 +11,17 @@ helpviewer_keywords:
 - functions [ODBC], types
 - functions [ODBC]
 ms.assetid: e7fc96e3-3f16-4799-b70f-49febed53a44
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eb4a037e8ddf7d0cfa1b4075f5f67676667da0c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b14480c2621a77472da78382082ec6d7a89c2f67
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68007160"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306017"
 ---
 # <a name="function-summary"></a>Resumo de funções
-As seções a seguir resumem as funções usadas por aplicativos habilitados para ODBC e software relacionado.  
+As seções a seguir resumem as funções usadas por aplicativos habilitados para ODBC e softwares relacionados.  
   
 -   [Resumo de funções do ODBC](../../../odbc/reference/syntax/odbc-function-summary.md)  
   

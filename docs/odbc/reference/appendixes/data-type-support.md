@@ -13,16 +13,16 @@ helpviewer_keywords:
 - data types [ODBC], ODBC drivers
 - ODBC drivers [ODBC], data types
 ms.assetid: 782b4490-372b-4366-aad7-a486fb8a07c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b5fe4081d0786ace40dd027606a830982798075e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3abfe85ee32fb9ff4a8499c9949c0685563fec70
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68044963"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284423"
 ---
 # <a name="data-type-support"></a>Suporte do tipo de dados
-Os drivers ODBC devem oferecer suporte a pelo menos um dos SQL_CHAR e SQL_VARCHAR. O suporte para outros tipos de dados é determinado pelo nível de conformidade do SQL-92 da fonte de dados ou do driver. Um aplicativo deve chamar **SQLGetTypeInfo** para determinar os tipos de dados com suporte pelo driver.  
+Os motoristas da ODBC devem suportar pelo menos um de SQL_CHAR e SQL_VARCHAR. O suporte para outros tipos de dados é determinado pelo nível de conformidade SQL-92 do driver ou da fonte de dados. Um aplicativo deve ligar para **o SQLGetTypeInfo** para determinar os tipos de dados suportados pelo driver.  
   
- Para obter mais informações sobre tipos de dados, consulte o [Apêndice D: tipos de dados](../../../odbc/reference/appendixes/appendix-d-data-types.md).
+ Para obter mais informações sobre os tipos de dados, consulte [o apêndice D: Tipos de dados](../../../odbc/reference/appendixes/appendix-d-data-types.md).

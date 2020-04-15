@@ -1,5 +1,5 @@
 ---
-title: Códigos de erro da biblioteca de cursores ODBC | Microsoft Docs
+title: Códigos de erro da biblioteca do Cursor ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,45 +12,45 @@ helpviewer_keywords:
 - error codes [ODBC], cursor library
 - ODBC cursor library [ODBC], error codes
 ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3fb86e1332e3b7e4d89003ccf6421151e5d9cec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c263ce53c41546e63dc2a830d3db3b903e2e3515
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100676"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301427"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>Códigos de erro da Biblioteca de cursores do ODBC
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do componente de acesso a dados da Microsoft. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que atualmente usam esse recurso. Em vez disso, use cursores de driver e servidor.  
+>  Esse recurso será removido em uma versão futura do Microsoft Data Access Component. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar aplicativos que atualmente usam esse recurso. Em vez disso, use cursores de driver e servidor.  
   
- A biblioteca de cursores ODBC retorna os seguintes sqlstates além daqueles listados na [referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md).  
+ A biblioteca do cursor ODBC retorna os seguintes SQLSTATEs, além daqueles listados na [Referência a API do ODBC](../../../odbc/reference/syntax/odbc-api-reference.md).  
   
 > [!NOTE]  
->  A biblioteca de cursores não ordena os registros de status; o Gerenciador de driver e ODBC 3. os drivers *x* são responsáveis pela ordenação de registros de status.  
+>  A biblioteca do cursor não encomenda registros de status; o Driver Manager e o ODBC 3. *x* drivers são responsáveis por encomendar registros de status.  
   
-|SQLSTATE|DESCRIÇÃO|Pode ser retornado de|  
+|SQLSTATE|Descrição|Pode ser devolvido de|  
 |--------------|-----------------|--------------------------|  
-|01000|O cursor não é atualizável.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|01000|Biblioteca de cursores não usada. Falha no carregamento.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
-|01000|Biblioteca de cursores não usada. Suporte a driver insuficiente.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
-|01000|Biblioteca de cursores não usada. Incompatibilidade de versão com o Gerenciador de driver.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
-|01000|O driver retornou SQL_SUCCESS_WITH_INFO. A mensagem de aviso foi perdida.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|S1000|Erro geral: não é possível criar o buffer de arquivo.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Erro geral: não é possível ler o buffer do arquivo.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Erro geral: não é possível gravar no buffer do arquivo.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Erro geral: não é possível fechar ou remover o buffer de arquivo.|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
-|SL001|A solicitação posicionada não pode ser executada porque nenhuma coluna pesquisável foi associada.|**SQLExecDirect**<br /><br /> **SQLGetData**<br /><br /> **SQLPrepare**|  
-|SL002|A solicitação posicionada não pôde ser realizada porque o conjunto de resultados foi criado por uma condição de junção.|**SQLExecute**<br /><br /> **SQLExecDirect**<br /><br /> **SQLGetData**|  
-|SL003|O buffer associado excede o tamanho máximo do segmento.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|SL004|O conjunto de resultados não foi gerado por uma instrução **Select** .|**SQLGetData**|  
-|SL005|A instrução **Select** contém uma cláusula Group by.|**SQLGetData**|  
-|SL006|Não há suporte para matrizes de parâmetros com solicitações posicionadas.|**SQLPrepare**<br /><br /> **SQLExecDirect**|  
-|SL008|**SQLGetData** não é permitido em um cursor de somente avanço (sem buffer).|**SQLGetData**|  
-|SL009|Nenhuma coluna foi associada antes de chamar **SQLFetch** ou **SQLFetchScroll**.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|SL010|**SQLBindCol** retornou SQL_ERROR durante uma tentativa de associar a um buffer interno.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|SL011|A opção de instrução é válida somente após chamar **SQLFetch** ou **SQLFetchScroll**.|**SQLGetStmtAttr**|  
-|SL012|As associações de instrução não podem ser alteradas enquanto um cursor estiver aberto.|**SQLBindCol**<br /><br /> **SQLFreeHandle**<br /><br /> **SQLFreeStmt**<br /><br /> **SQLSetStmtAttr**|  
-|SL014|Uma solicitação posicionada foi emitida e nem todos os campos de contagem de coluna foram armazenados em buffer.|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLPrepare**|  
-|SL015|**SQLFetch** e **SQLFetchScroll** não podem ser misturados.|**SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**|
+|01000|Cursor não é updatable.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
+|01000|Biblioteca cursor não usada. A carga falhou.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
+|01000|Biblioteca cursor não usada. Suporte de motorista insuficiente.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
+|01000|Biblioteca cursor não usada. Incompatibilidade de versão com driver manager.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
+|01000|O motorista voltou SQL_SUCCESS_WITH_INFO. A mensagem de aviso foi perdida.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
+|S1000|Erro geral: Não é possível criar buffer de arquivos.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Erro geral: Não é possível ler a partir do buffer de arquivos.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Erro geral: Não é possível gravar para buffer de arquivo.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Erro geral: Não é possível fechar ou remover o buffer de arquivo.|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
+|SL001|A solicitação posicionada não pode ser realizada porque nenhuma coluna pesquisável foi vinculada.|**SQLExecDirect**<br /><br /> **SQLGetData**<br /><br /> **SQLPrepare**|  
+|SL002|A solicitação posicionada não pôde ser realizada porque o conjunto de resultados foi criado por uma condição de adesão.|**SQLExecute**<br /><br /> **SQLExecDirect**<br /><br /> **SQLGetData**|  
+|SL003|O buffer bound excede o tamanho máximo do segmento.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
+|SL004|O conjunto de resultados não foi gerado por uma declaração **SELECT.**|**SQLGetData**|  
+|SL005|**A** declaração SELECT contém uma cláusula GROUP BY.|**SQLGetData**|  
+|SL006|As matrizes de parâmetros não são suportadas com solicitações posicionadas.|**SQLPrepare**<br /><br /> **SQLExecDirect**|  
+|SL008|**SQLGetData** não é permitido em um cursor somente para frente (não tamponado).|**SQLGetData**|  
+|SL009|Nenhuma coluna foi vinculada antes de chamar **SQLFetch** ou **SQLFetchScroll**.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
+|SL010|**SQLBindCol** retornou SQL_ERROR durante uma tentativa de vincular a um buffer interno.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|SL011|A opção de declaração só é válida depois de ligar para **SQLFetch** ou **SQLFetchScroll**.|**SQLGetStmtAttr**|  
+|SL012|As vinculações da declaração não podem ser alteradas enquanto um cursor estiver aberto.|**SQLBindCol**<br /><br /> **SQLFreeHandle**<br /><br /> **SQLFreeStmt**<br /><br /> **SQLSetStmtAttr**|  
+|SL014|Uma solicitação posicionada foi emitida e nem todos os campos de contagem de colunas foram tamponados.|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLPrepare**|  
+|SL015|**SQLFetch** e **SQLFetchScroll** não podem ser misturados.|**Sqlextendedfetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**|

@@ -1,5 +1,5 @@
 ---
-title: SQLRowCount (biblioteca de cursores) | Microsoft Docs
+title: SQLRowCount (Biblioteca cursor) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLRowCount function [ODBC], Cursor Library
 ms.assetid: 781cf5a5-325e-4523-8633-d96d9e98277c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: be902866cfcf98a10af2c3741926de8b7541bb79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf9fe597f54ecb4bc82439251e2228ac5fdc4ea3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125603"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300576"
 ---
 # <a name="sqlrowcount-cursor-library"></a>SQLRowCount (Biblioteca de cursores)
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que atualmente usam esse recurso. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
+>  Esse recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar aplicativos que atualmente usam esse recurso. A Microsoft recomenda o uso da funcionalidade do cursor do driver.  
   
- Este tópico discute o uso da função **SQLRowCount** na biblioteca de cursores. Para obter informações gerais sobre **SQLRowCount**, consulte [função SQLRowCount](../../../odbc/reference/syntax/sqlrowcount-function.md).  
+ Este tópico discute o uso da função **SQLRowCount** na biblioteca do cursor. Para obter informações gerais sobre **o SQLRowCount,** consulte [SQLRowCount Function](../../../odbc/reference/syntax/sqlrowcount-function.md).  
   
- Quando um aplicativo chama **SQLRowCount** com a instrução associada ao cursor, a biblioteca de cursores retorna o número de linhas de dados que ele recuperou do driver.  
+ Quando um aplicativo chama **sqlrowcount** com a declaração associada ao cursor, a biblioteca do cursor retorna o número de linhas de dados que recuperou do driver.  
   
- Quando um aplicativo chama **SQLRowCount** com a instrução associada a uma instrução UPDATE ou DELETE posicionada, a biblioteca de cursores retorna o número de linhas afetadas pela instrução.  
+ Quando um aplicativo chama **o SQLRowCount** com a declaração associada a uma atualização posicionada ou à declaração de exclusão, a biblioteca do cursor retorna o número de linhas afetadas pela declaração.  
   
- Quando um aplicativo chama **SQLRowCount** após uma instrução **Select** , a biblioteca de cursores retorna-1.
+ Quando um aplicativo chama **SQLRowCount** após uma declaração **SELECT,** a biblioteca do cursor retorna -1.

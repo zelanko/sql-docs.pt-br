@@ -11,20 +11,20 @@ helpviewer_keywords:
 - cursors [ODBC], static
 - static cursors [ODBC]
 ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bcb7c39d39492b91c0b62c5eff2229eb5f61df6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b99566c473e88684e8b092a5ac9fc899e7dce177
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987831"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282436"
 ---
 # <a name="odbc-static-cursors"></a>Cursores estáticos ODBC
-Um cursor estático é aquele em que o conjunto de resultados parece ser estático. Geralmente, ele não detecta alterações que foram feitas na associação, na ordem ou nos valores do conjunto de resultados depois que o cursor é aberto. Por exemplo, suponha que um cursor estático busque uma linha e outro aplicativo, em seguida, atualize essa linha. Se o cursor estático rebuscar a linha, os valores que ela vê serão inalterados, apesar das alterações feitas pelo outro aplicativo.  
+Um cursor estático é aquele em que o conjunto de resultados parece estar estático. Ele não costuma detectar alterações que foram feitas na adesão, ordem ou valores do resultado definido após a abertura do cursor. Por exemplo, suponha que um cursor estático busque uma linha e outro aplicativo, em seguida, atualiza essa linha. Se o cursor estático rebusca a linha, os valores que ele vê são inalterados, apesar das alterações que foram feitas pela outra aplicação.  
   
- Cursores estáticos podem detectar suas próprias atualizações, exclusões e inserções, embora não sejam obrigadas a fazer isso. Se um cursor estático específico detectar essas alterações é relatado por meio da opção SQL_STATIC_SENSITIVITY em **SQLGetInfo**. Cursores estáticos nunca detectam outras atualizações, exclusões e inserções.  
+ Os cursores estáticos podem detectar suas próprias atualizações, exclusões e inserções, embora não sejam obrigados a fazer isso. Se um cursor estático específico detecta essas alterações é relatado através da opção SQL_STATIC_SENSITIVITY no **SQLGetInfo**. Os cursores estáticos nunca detectam outras atualizações, exclusões e inserções.  
   
- A matriz de status de linha especificada pelo atributo de instrução SQL_ATTR_ROW_STATUS_PTR pode conter SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO ou SQL_ROW_ERROR para qualquer linha. Ele retorna SQL_ROW_UPDATED, SQL_ROW_DELETED ou SQL_ROW_ADDED para linhas atualizadas, excluídas ou inseridas pelo cursor, supondo que o cursor possa detectar essas alterações.  
+ A matriz de status da linha especificada pelo atributo de declaração SQL_ATTR_ROW_STATUS_PTR pode conter SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO ou SQL_ROW_ERROR para qualquer linha. Ele retorna SQL_ROW_UPDATED, SQL_ROW_DELETED ou SQL_ROW_ADDED para linhas atualizadas, excluídas ou inseridas pelo cursor, assumindo que o cursor possa detectar tais alterações.  
   
- Cursores estáticos são normalmente implementados bloqueando as linhas no conjunto de resultados ou fazendo uma cópia, ou instantâneo, do conjunto de resultados. Embora as linhas de bloqueio sejam relativamente fáceis de fazer, ela tem a desvantagem de reduzir significativamente a simultaneidade. Fazer uma cópia permite uma simultaneidade maior e permite que o cursor Mantenha o controle de suas próprias atualizações, exclusões e inserções modificando a cópia. No entanto, uma cópia é mais cara para fazer e pode divergir dos dados subjacentes, pois esses dados são alterados por outras pessoas.
+ Os cursores estáticos são normalmente implementados bloqueando as linhas no conjunto de resultados ou fazendo uma cópia, ou instantâneo, do conjunto de resultados. Embora as linhas de bloqueio sejam relativamente fáceis de fazer, ela tem a desvantagem de reduzir significativamente a concorrência. Fazer uma cópia permite uma maior concorrência e permite que o cursor acompanhe suas próprias atualizações, exclusões e inserções modificando a cópia. No entanto, uma cópia é mais cara de fazer e pode divergir dos dados subjacentes à medida que esses dados são alterados por outros.

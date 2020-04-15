@@ -10,33 +10,33 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], minimum SQL syntax supported
 - parameter markers [ODBC]
 ms.assetid: 07213d04-cd31-45fd-a8c8-2e16e09eeaf4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: ''
-ms.openlocfilehash: acb8d5f9687798bc0efa514ee8646b16140fcd36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 132473de586094f79dd34c999d44f6dd59aefaef
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100581"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303567"
 ---
 # <a name="parameter-markers"></a>Marcadores de parâmetro
-De acordo com a especificação do SQL-92, um aplicativo não pode posicionar os marcadores de parâmetro nos locais a seguir. Para obter uma lista mais abrangente, consulte a especificação do SQL-92.  
+De acordo com a especificação SQL-92, um aplicativo não pode colocar marcadores de parâmetros nos seguintes locais. Para obter uma lista mais abrangente, consulte a especificação SQL-92.  
   
--   Em uma lista de **seleção**  
+-   Em uma **lista SELECT**  
   
--   Como as duas *expressões* em um *predicado de comparação*  
+-   Como ambas as *expressões* em um *predicado de comparação*  
   
--   Como ambos os operandos de um operador binário  
+-   Como ambos os operands de um operador binário  
   
--   Como o primeiro e o segundo operandos de uma operação **between**  
+-   Como o primeiro e o segundo operands de uma operação **BETWEEN**  
   
--   Como o primeiro e terceiro operandos de uma operação **between**  
+-   Como o primeiro e o terceiro operands de uma operação **BETWEEN**  
   
--   Como a expressão e o primeiro valor de uma operação **in**  
+-   Como a expressão e o primeiro valor de uma operação **IN**  
   
--   Como o operando de uma operação unário + or  
+-   Como o operand de uma unary + ou - operação  
   
--   Como o argumento de uma *referência de set-Function*  
+-   Como o argumento de uma *referência de função de set*  
   
- Para obter mais informações sobre marcadores de parâmetro, consulte a especificação do SQL-92. Para obter mais informações sobre parâmetros, consulte [parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md).
+ Para obter mais informações sobre marcadores de parâmetros, consulte a especificação SQL-92. Para obter mais informações sobre parâmetros, consulte [Parâmetros de declaração](../../../odbc/reference/develop-app/statement-parameters.md).

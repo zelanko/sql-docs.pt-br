@@ -1,5 +1,5 @@
 ---
-title: SQLDataSources (driver ODBC do Visual FoxPro) | Microsoft Docs
+title: SQLDataSources (driver Visual FoxPro ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLDataSources function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 033f8d37-b2dd-4a4e-b93a-70c25b25b72e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 82351d7cc01dbf1318d443d1afd7f6a73b36707f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c3ba904c023ac49435f7844f79c6e7b4548d4b7b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054052"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283866"
 ---
 # <a name="sqldatasources-visual-foxpro-odbc-driver"></a>SQLDataSources (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
->  Este tópico contém informações específicas do driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico contém informações específicas do driver Visual FoxPro ODBC. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [Referência à API oDBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Suporte: completo  
+ Suporte: Completo  
   
- Conformidade da API ODBC: nível 2  
+ Conformidade da API ODBC: Nível 2  
   
- Lista nomes de fontes de dados.  
+ Lista nomes de origem de dados.  
   
- Para obter mais informações, consulte [SQLDataSources](../../odbc/reference/syntax/sqldatasources-function.md) na *referência do programador de ODBC*.
+ Para obter mais informações, consulte [SQLDataSources](../../odbc/reference/syntax/sqldatasources-function.md) no *Programador ODBC .*

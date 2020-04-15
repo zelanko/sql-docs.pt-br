@@ -1,5 +1,5 @@
 ---
-title: Preparar e executar uma instrução (ODBC) | Microsoft Docs
+title: Preparar e Executar uma Declaração (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - statement execution
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea4ce4bfe51f844d6d2916623f5a9cc3ffbe01a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: eaf7e3518f369639ba3d2eb854a103ff839276c7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781390"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294056"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Preparar e executar uma instrução (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "73781390"
   
     -   Defina SQL_ATTR_PARAMS_STATUS_PTR de forma que aponte para uma matriz[S] de variáveis SQLUSSMALLINT que contém indicadores de status de parâmetro.  
   
-2.  Chame SQLPrepare para preparar a instrução.  
+2.  Ligue para a SQLPrepare-se para preparar a declaração.  
   
 3.  Opcionalmente, chame [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) para determinar o número de parâmetros na instrução preparada.  
   
-4.  Opcionalmente, para cada parâmetro na instrução preparada, chame SQLDescribeParam para obter informações de parâmetro.  
+4.  Opcionalmente, para cada parâmetro na declaração preparada, ligue para o SQLDescribeParam para obter informações de parâmetros.  
   
 5.  Para cada marcador de parâmetro:  
   
@@ -101,9 +101,9 @@ ms.locfileid: "73781390"
   
     -   Defina SQL_ATTR_PARAMS_STATUS_PTR de forma que aponte para uma matriz[S] de variáveis SQLUSSMALLINT que contém indicadores de status de parâmetro.  
   
-3.  Chame SQLPrepare para preparar a instrução.  
+3.  Ligue para a SQLPrepare-se para preparar a declaração.  
   
-4.  Para cada marcador de parâmetro, chame SQLBindParameter para apontar o valor de dados de parâmetro e o ponteiro de comprimento de dados para suas variáveis no primeiro elemento da matriz de estruturas alocada na etapa 1. Se o parâmetro for um parâmetro de dados em execução, configure-o.  
+4.  Para cada marcador de parâmetro, chame SQLBindParameter para apontar o valor dos dados do parâmetro e o ponteiro do comprimento dos dados para suas variáveis no primeiro elemento do conjunto de estruturas alocadas na Etapa 1. Se o parâmetro for um parâmetro de dados em execução, configure-o.  
   
 5.  Para cada execução de uma instrução preparada:  
   
@@ -114,6 +114,6 @@ ms.locfileid: "73781390"
     -   Se forem usados parâmetros de entrada de dados em execução, SQLExecute retornará SQL_NEED_DATA. Envie os dados em partes useo SQLParamData e SQLPutData.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tópicos de instruções sobre como executar consultas &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [Executando consultas como fazer tópicos &#40;&#41;da ODBC](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   
