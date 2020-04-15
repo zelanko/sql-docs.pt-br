@@ -1,5 +1,5 @@
 ---
-title: Usar parâmetros de dados em execução (ODBC) | Microsoft Docs
+title: Use parâmetros de data-at-execution (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9235d096be513e1480dab7e23672e14011c63f0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 957a46b2a93013305e8642d4b311c22c9ec16d6f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781211"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298810"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>Gerenciar colunas Text e Image – Usar parâmetros de dados em execução
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,15 +45,15 @@ ms.locfileid: "73781211"
 ## <a name="example"></a>Exemplo  
  O exemplo mostra como ler dados de caracteres variáveis do SQL_LONG por meio de SQLParamData e SQLPutData. Este exemplo não tem suporte em IA64.  
   
- Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks do [Microsoft SQL Server exemplos e projetos da comunidade](https://go.microsoft.com/fwlink/?LinkID=85384) Home Page.) Essa fonte de dados deve ser baseada no driver ODBC fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
+ Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo adventureworks da página inicial [do Microsoft SQL Server Samples and Community Projects.)](https://go.microsoft.com/fwlink/?LinkID=85384) Essa fonte de dados deve ser baseada no driver ODBC fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- Execute a primeira listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () para criar a tabela usada pelo exemplo.  
+ Execute a [!INCLUDE[tsql](../../includes/tsql-md.md)]primeira ( ) listagem de código para criar a tabela usada pela amostra.  
   
  Compile a segunda listagem de código (C++) com odbc32.lib. Em seguida, execute o programa.  
   
- Execute a terceira listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () para excluir a tabela usada pelo exemplo.  
+ Execute a [!INCLUDE[tsql](../../includes/tsql-md.md)]terceira ( ) listagem de código para excluir a tabela usada pela amostra.  
   
 ```  
 use AdventureWorks  
@@ -225,6 +225,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tópicos de instruções sobre como gerenciar colunas de texto e imagem &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+ [Gerenciamento de texto e imagens Colunas como fazer &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

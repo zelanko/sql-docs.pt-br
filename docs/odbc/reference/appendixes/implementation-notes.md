@@ -8,25 +8,25 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7ec14b9c-69b8-4c6e-838a-88d1ebdc8725
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 95b60ba35a867135cfc1f823e08b1a99f0262ca9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 970188a2fca45706405e398cece0f04d38dfdc68
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135740"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284306"
 ---
 # <a name="implementation-notes"></a>Notas de implementação
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que atualmente usam esse recurso. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
+>  Esse recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar aplicativos que atualmente usam esse recurso. A Microsoft recomenda o uso da funcionalidade do cursor do driver.  
   
- Esta seção descreve como a biblioteca de cursores ODBC é implementada. Ele descreve como a biblioteca de cursores mantém seu cache, executa instruções SQL e implementa funções ODBC.  
+ Esta seção descreve como a biblioteca do cursor ODBC é implementada. Descreve como a biblioteca do cursor mantém seu cache, executa instruções SQL e implementa funções ODBC.  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Cache de biblioteca de cursores](../../../odbc/reference/appendixes/cursor-library-cache.md)  
   
--   [Processar instruções SQL](../../../odbc/reference/appendixes/processing-sql-statements.md)  
+-   [Processando instruções SQL](../../../odbc/reference/appendixes/processing-sql-statements.md)  
   
 -   [Funções ODBC e a biblioteca de cursores](../../../odbc/reference/appendixes/odbc-functions-and-the-cursor-library.md)

@@ -13,61 +13,61 @@ helpviewer_keywords:
 - descriptors [ODBC], Jet-supported descriptor fields
 - ODBC desktop database drivers [ODBC], descriptors
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c0096dad8fbb4cf9847385759702e39ac074c4c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4ef79855f71d23e5a884822371f1894eb83442a9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68112056"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303507"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Descritores e drivers de banco de dados de área de trabalho
-Um descritor é uma estrutura de dados que contém informações sobre os dados da coluna ou os parâmetros dinâmicos. **SQLGetDescField** pode ser usado para recuperar os descritores com suporte listados abaixo. Os descritores de parâmetro de implementação (IPD) não são populados automaticamente porque não há suporte para **SQLDescribeParam** . Os campos de descritores que não estão disponíveis por meio do Jet (como SQL_DESC_BASE_TABLE_NAME) também não têm suporte.  
+Um descritor é uma estrutura de dados que contém informações sobre dados de coluna ou parâmetros dinâmicos. **SQLGetDescField** pode ser usado para recuperar os descritores suportados listados abaixo. Os Descritores de parâmetros de implementação (IPD) não são preenchidos automaticamente porque **o SQLDescribeParam** não é suportado. Os campos de descritores que não estão disponíveis através do Jet (como SQL_DESC_BASE_TABLE_NAME) também não são suportados.  
   
- Para obter mais informações sobre os campos de descritor com suporte do Jet, consulte o *Guia do programador do Microsoft Jet mecanismo de banco de dados*.  
+ Para obter mais informações sobre campos de descritores suportados por jato, consulte o *Guia do Programador do Motor do Banco de Dados microsoft jet*.  
   
- Para obter mais informações sobre descritores, consulte os tópicos em "descritores" na *referência do programador de ODBC*.  
+ Para obter mais informações sobre descritores, consulte os tópicos em "Descritores" no *Programador da ODBC*.  
   
-|Campos de descritor|Nível de suporte|  
+|Campos descritores|Nível de suporte|  
 |-----------------------|-------------------|  
-|SQL_DESC_ALLOC_TYPE|Suportado|  
-|SQL_DESC_ARRAY_SIZE|Com suporte apenas para ARD|  
-|SQL_DESC_ARRAY_STATUS_PTR|Suportado|  
-|SQL_DESC_BIND_OFFSET_PTR|Suportado|  
-|SQL_DESC_BIND_TYPE|Suportado|  
-|SQL_DESC_COUNT|Suportado|  
-|SQL_DESC_ROWS_PROCESSED_PTR|Com suporte apenas para ARD|  
-|SQL_DESC_AUTO_UNIQUE_VALUE|Suportado|  
-|SQL_DESC_BASE_COLUMN_NAME|Com suporte (novo)|  
-|SQL_DESC_BASE_TABLE_NAME|Com suporte (novo)|  
-|SQL_DESC_CASE_SENSITIVE|Sempre FALSE|  
+|SQL_DESC_ALLOC_TYPE|Com suporte|  
+|SQL_DESC_ARRAY_SIZE|Suportado apenas para ARD|  
+|SQL_DESC_ARRAY_STATUS_PTR|Com suporte|  
+|SQL_DESC_BIND_OFFSET_PTR|Com suporte|  
+|SQL_DESC_BIND_TYPE|Com suporte|  
+|SQL_DESC_COUNT|Com suporte|  
+|SQL_DESC_ROWS_PROCESSED_PTR|Suportado apenas para ARD|  
+|SQL_DESC_AUTO_UNIQUE_VALUE|Com suporte|  
+|SQL_DESC_BASE_COLUMN_NAME|Suportado (NOVO)|  
+|SQL_DESC_BASE_TABLE_NAME|Suportado (NOVO)|  
+|SQL_DESC_CASE_SENSITIVE|Sempre FALSO|  
 |SQL_DESC_CATALOG_NAME|Sem suporte|  
-|SQL_DESC_CONCISE_TYPE|Suportado|  
-|SQL_DESC_DATA_PTR|Suportado|  
-|SQL_DESC_DATETIME_INTERVAL_CODE|Suportado|  
-|SQL_DESC_DATETIME_INTERVAL_PRECISION|Com suporte para tipos de intervalo C|  
-|SQL_DESC_DISPLAY_SIZE|Suportado|  
-|SQL_DESC_FIXED_PREC_SCALE|Com suporte (verdadeiro para o Money)|  
-|SQL_DESC_INDICATOR_PTR|Suportado|  
-|SQL_DESC_LABEL|Suportado|  
-|SQL_DESC_LENGTH|Suportado|  
-|SQL_DESC_LITERAL_PREFIX|Suportado|  
-|SQL_DESC_LITERAL_SUFFIX|Suportado|  
-|SQL_DESC_LOCAL_TYPE_NAME|Sem suporte (retorna uma cadeia de caracteres vazia)|  
-|SQL_DESC_NAME|Suportado|  
-|SQL_DESC_NULLABLE|Suportado<br /><br /> **Observação** Sem suporte em versões anteriores ao Jet 4,0|  
-|SQL_DESC_NUM_PREC_RADIX|Suportado|  
-|SQL_DESC_OCTET_LENGTH|Suportado|  
-|SQL_DESC_OCTET_LENGTH_PTR|Suportado|  
-|SQL_DESC_PARAMETER_TYPE|Somente parâmetros de entrada|  
-|SQL_DESC_PRECISION|Suportado|  
-|SQL_DESC_SCALE|Suportado|  
+|SQL_DESC_CONCISE_TYPE|Com suporte|  
+|SQL_DESC_DATA_PTR|Com suporte|  
+|SQL_DESC_DATETIME_INTERVAL_CODE|Com suporte|  
+|SQL_DESC_DATETIME_INTERVAL_PRECISION|Suportado para tipos INTERVAL C|  
+|SQL_DESC_DISPLAY_SIZE|Com suporte|  
+|SQL_DESC_FIXED_PREC_SCALE|Suportado (TRUE for money)|  
+|SQL_DESC_INDICATOR_PTR|Com suporte|  
+|SQL_DESC_LABEL|Com suporte|  
+|SQL_DESC_LENGTH|Com suporte|  
+|SQL_DESC_LITERAL_PREFIX|Com suporte|  
+|SQL_DESC_LITERAL_SUFFIX|Com suporte|  
+|SQL_DESC_LOCAL_TYPE_NAME|Não suportado (retorna seqüência DE string EMPTY)|  
+|SQL_DESC_NAME|Com suporte|  
+|SQL_DESC_NULLABLE|Com suporte<br /><br /> **Nota** Sem suporte em versões anteriores ao Jet 4.0|  
+|SQL_DESC_NUM_PREC_RADIX|Com suporte|  
+|SQL_DESC_OCTET_LENGTH|Com suporte|  
+|SQL_DESC_OCTET_LENGTH_PTR|Com suporte|  
+|SQL_DESC_PARAMETER_TYPE|Apenas parâmetros de entrada|  
+|SQL_DESC_PRECISION|Com suporte|  
+|SQL_DESC_SCALE|Com suporte|  
 |SQL_DESC_SCHEMA_NAME|Sem suporte|  
-|SQL_DESC_SEARCHABLE|Suportado|  
+|SQL_DESC_SEARCHABLE|Com suporte|  
 |SQL_DESC_TABLE_NAME|Sem suporte|  
-|SQL_DESC_TYPE|Suportado|  
-|SQL_DESC_TYPE_NAME|Suportado|  
-|SQL_DESC_UNNAMED|Suportado|  
-|SQL_DESC_UNSIGNED|Suportado|  
-|SQL_DESC_UPDATABLE|Suportado|
+|SQL_DESC_TYPE|Com suporte|  
+|SQL_DESC_TYPE_NAME|Com suporte|  
+|SQL_DESC_UNNAMED|Com suporte|  
+|SQL_DESC_UNSIGNED|Com suporte|  
+|SQL_DESC_UPDATABLE|Com suporte|

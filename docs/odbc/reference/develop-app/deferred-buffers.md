@@ -1,5 +1,5 @@
 ---
-title: Buffers adiados | Microsoft Docs
+title: Buffers diferidos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - buffers [ODBC], deferred
 - deferred buffers [ODBC]
 ms.assetid: 02c9a75c-2103-4f68-a1db-e31f7e0f1f03
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1f7c90dacc375877b4e449b8d59533ce75ff8a4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f34c6d3d886a0a75c309dc4f5c71f5c7ba3df447
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076832"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305977"
 ---
 # <a name="deferred-buffers"></a>Buffers adiados
-Um *buffer adiado* é aquele cujo valor é usado em algum momento *depois* de ser especificado em uma chamada de função. Por exemplo, **SQLBindParameter** é usado para *associar ou associar um buffer de dados* a um parâmetro em uma instrução SQL. O aplicativo especifica o número do parâmetro e passa o endereço, o comprimento do byte e o tipo do buffer. O driver salva essas informações, mas não examina o conteúdo do buffer. Posteriormente, quando o aplicativo executar a instrução, o driver recuperará as informações e as usará para recuperar os dados do parâmetro e enviá-los para a fonte de dados. Portanto, a entrada de dados no buffer é adiada. Como os buffers adiados são especificados em uma função e usados em outro, é um erro de programação de aplicativo liberar um buffer adiado enquanto o driver ainda espera que ele exista; para obter mais informações, consulte [alocando e liberando buffers](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md), mais adiante nesta seção.  
+Um *buffer diferido* é aquele cujo valor é usado em algum momento *depois* de especificado em uma chamada de função. Por exemplo, **SQLBindParameter** é usado para associar, ou *vincular,* um buffer de dados com um parâmetro em uma declaração SQL. O aplicativo especifica o número do parâmetro e passa o endereço, o comprimento do byte e o tipo do buffer. O driver salva essas informações, mas não examina o conteúdo do buffer. Mais tarde, quando o aplicativo executa a declaração, o motorista recupera as informações e as usa para recuperar os dados do parâmetro e enviá-los para a fonte de dados. Portanto, a entrada de dados no buffer é adiada. Como os buffers diferidos são especificados em uma função e usados em outra, é um erro de programação de aplicativo para liberar um buffer diferido enquanto o driver ainda espera que ele exista; para obter mais informações, consulte [Alocando e Liberando Buffers,](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)mais tarde nesta seção.  
   
- Os buffers de entrada e de saída podem ser adiados. A tabela a seguir resume os usos de buffers adiados. Observe que os buffers adiados associados às colunas do conjunto de resultados são especificados com **SQLBindCol**, e os buffers adiados associados aos parâmetros da instrução SQL são especificados com **SQLBindParameter**.  
+ Tanto os buffers de entrada quanto de saída podem ser adiados. A tabela a seguir resume os usos de buffers diferidos. Observe que os buffers diferidos vinculados às colunas de conjunto de resultados são especificados com **SQLBindCol**e os buffers diferidos vinculados aos parâmetros de declaração SQL são especificados com **SQLBindParameter**.  
   
-|Uso do buffer|Type|Especificado com|Usado por|  
+|Uso de buffer|Type|Especificado com|Usado por|  
 |----------------|----------|--------------------|-------------|  
-|Enviando dados para parâmetros de entrada|Entrada adiada|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
-|Enviando dados para atualizar ou inserir uma linha em um conjunto de resultados|Entrada adiada|**SQLBindCol**|**SQLSetPos**|  
-|Retornando dados para saída e parâmetros de entrada/saída|Saída adiada|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
-|Retornando dados do conjunto de resultados|Saída adiada|**SQLBindCol**|**SQLFetch**<br /> **SQLFetchScroll SQLSetPos**|
+|Envio de dados para parâmetros de entrada|Entrada diferida|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
+|Enviar dados para atualizar ou inserir uma linha em um conjunto de resultados|Entrada diferida|**SQLBindCol**|**SQLSetPos**|  
+|Retornar dados para parâmetros de saída e entrada/saída|Saída diferida|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
+|Devolução de dados do conjunto de resultados|Saída diferida|**SQLBindCol**|**SQLFetch**<br /> **SQLFetchScroll SQLSetPos**|

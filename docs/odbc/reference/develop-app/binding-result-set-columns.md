@@ -1,5 +1,5 @@
 ---
-title: Vinculando colunas do conjunto de resultados | Microsoft Docs
+title: Colunas de conjunto de resultados de vinculação | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,34 +11,34 @@ helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: becda51a0fac924fce31e6cb15331321990d8a42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 558ceb79d42d82477b70a028395de82cc023c170
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68134998"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306357"
 ---
 # <a name="binding-result-set-columns"></a>Associar colunas de conjunto de resultados
-Os aplicativos podem associar tantas ou poucas colunas do conjunto de resultados que escolherem, incluindo a associação de nenhuma coluna. Quando uma linha de dados é buscada, o driver retorna os dados para as colunas associadas ao aplicativo. Se o aplicativo associa todas as colunas no conjunto de resultados depende do aplicativo. Por exemplo, os aplicativos que geram relatórios geralmente têm um formato fixo; esses aplicativos criam um conjunto de resultados contendo todas as colunas usadas no relatório e, em seguida, associam e recuperam os dados para todas essas colunas. Os aplicativos que exibem telas cheia de dados às vezes permitem que o usuário decida quais colunas exibir; esses aplicativos criam um conjunto de resultados contendo todas as colunas que o usuário pode querer, mas associam e recuperam os dados somente para as colunas escolhidas pelo usuário.  
+Os aplicativos podem vincular quantas ou poucas colunas do conjunto de resultados quiserem, incluindo a vinculação de nenhuma coluna. Quando uma linha de dados é buscada, o motorista retorna os dados para as colunas vinculadas ao aplicativo. Se o aplicativo vincula todas as colunas no conjunto de resultados depende do aplicativo. Por exemplo, aplicativos que geram relatórios geralmente têm um formato fixo; tais aplicativos criam um conjunto de resultados contendo todas as colunas usadas no relatório e, em seguida, vinculam e recuperam os dados de todas essas colunas. Aplicativos que exibem telas cheias de dados às vezes permitem que o usuário decida quais colunas exibir; tais aplicativos criam um conjunto de resultados contendo todas as colunas que o usuário pode querer, mas vinculam e recuperam os dados apenas para as colunas escolhidas pelo usuário.  
   
- Os dados podem ser recuperados de colunas desassociadas chamando **SQLGetData**. Isso é normalmente chamado para recuperar dados longos, que geralmente excedem o comprimento de um único buffer e devem ser recuperados em partes.  
+ Os dados podem ser recuperados a partir de colunas não vinculadas ligando para **SQLGetData**. Isso é comumente chamado para recuperar dados longos, que muitas vezes excedem o comprimento de um único buffer e devem ser recuperados em partes.  
   
- As colunas podem ser associadas a qualquer momento, mesmo depois que as linhas forem buscadas. No entanto, as novas associações não entram em vigor até a próxima vez que uma linha for buscada; Eles não são aplicados a dados de linhas já buscadas.  
+ As colunas podem ser ligadas a qualquer momento, mesmo depois de linhas terem sido buscadas. No entanto, as novas ligações não surtem efeito até a próxima vez que uma linha for buscada; eles não são aplicados a dados de linhas já buscadas.  
   
- Uma variável permanece associada a uma coluna até que uma variável diferente seja associada à coluna, até que a coluna seja desassociada chamando **SQLBindCol** com um ponteiro nulo como o endereço da variável, até que todas as colunas sejam desassociadas chamando **SQLFreeStmt** com a opção SQL_UNBIND ou até que a instrução seja liberada. Por esse motivo, o aplicativo deve ter certeza de que todas as variáveis associadas permanecem válidas desde que estejam associadas. Para obter mais informações, consulte [alocando e liberando buffers](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
+ Uma variável permanece vinculada a uma coluna até que uma variável diferente esteja vinculada à coluna, até que a coluna seja desvinculada ligando para **SQLBindCol** com um ponteiro nulo como endereço da variável, até que todas as colunas sejam desvinculadas ligando para **SQLFreeStmt** com a opção SQL_UNBIND, ou até que a declaração seja liberada. Por essa razão, o aplicativo deve ter certeza de que todas as variáveis vinculadas permanecem válidas enquanto estiverem vinculadas. Para obter mais informações, consulte [Alocando e Liberando Buffers](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
   
- Como as associações de coluna são apenas informações associadas à estrutura da instrução, elas podem ser definidas em qualquer ordem. Eles também são independentes do conjunto de resultados. Por exemplo, suponha que um aplicativo associe as colunas do conjunto de resultados gerado pela seguinte instrução SQL:  
+ Como as vinculações da coluna são apenas informações associadas à estrutura da declaração, elas podem ser definidas em qualquer ordem. Eles também são independentes do conjunto de resultados. Por exemplo, suponha que um aplicativo vincule as colunas do conjunto de resultados gerado pela seguinte declaração SQL:  
   
 ```  
 SELECT * FROM Orders  
 ```  
   
- Se o aplicativo executar a instrução SQL novamente  
+ Se o aplicativo executar a declaração SQL  
   
 ```  
 SELECT * FROM Lines  
 ```  
   
- no mesmo identificador de instrução, as associações de coluna para o primeiro conjunto de resultados ainda estão em vigor porque essas são as associações armazenadas na estrutura da instrução. Na maioria dos casos, essa é uma prática de programação ruim e deve ser evitada. Em vez disso, o aplicativo deve chamar **SQLFreeStmt** com a opção SQL_UNBIND para desassociar todas as colunas antigas e, em seguida, associar as novas.
+ na mesma alça de declaração, as amarras da coluna para o primeiro conjunto de resultados ainda estão em vigor porque essas são as amarras armazenadas na estrutura da declaração. Na maioria dos casos, esta é uma prática de programação ruim e deve ser evitada. Em vez disso, o aplicativo deve chamar **SQLFreeStmt** com a opção SQL_UNBIND de desvincular todas as colunas antigas e, em seguida, vincular novas.

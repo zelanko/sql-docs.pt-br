@@ -1,5 +1,5 @@
 ---
-title: Visão geral de atualização de dados | Microsoft Docs
+title: Atualização da visão geral dos dados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,21 +13,21 @@ helpviewer_keywords:
 - updating data [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0701218b5ef489d1f8962ffadc9409986a0c36c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9972ab61f041385ae4ca616df093ae63ad7a47d9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942811"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300382"
 ---
 # <a name="updating-data-overview"></a>Atualizar a visão geral de dados
-Os aplicativos podem atualizar os dados executando instruções SQL ou chamando **SQLSetPos** ou **SQLBulkOperations**. As instruções **Update**, **delete**e **Insert** agem diretamente na fonte de dados e geralmente são suportadas pelos drivers. As instruções UPDATE e Delete pesquisadas contêm uma especificação das linhas a serem alteradas. As instruções UPDATE e DELETE posicionadas e **SQLSetPos** atuam na fonte de dados por meio de um cursor e têm menos suporte.  
+Os aplicativos podem atualizar dados executando declarações SQL ou ligando para **SQLSetPos** ou **SQLBulkOperations**. **ATUALIZAR,** **EXCLUIR**e **INSERIR** declarações atuam diretamente na fonte de dados e geralmente são suportadas por drivers. As instruções de atualização e exclusão pesquisadas contêm uma especificação das linhas a serem alterantes. As declarações de atualização e exclusão posicionadas e os **SQLSetPos** atuam na fonte de dados através de um cursor e são menos amplamente suportados.  
   
- Se os cursores podem detectar alterações feitas no conjunto de resultados com os métodos descritos nesta seção dependem do tipo de cursor e de como ele é implementado. Os cursores de somente avanço não revisitam linhas e, portanto, não detectarão nenhuma alteração. Para obter informações sobre se os cursores roláveis podem detectar alterações, consulte [cursores roláveis](../../../odbc/reference/develop-app/scrollable-cursors.md).  
+ Se os cursores podem detectar alterações feitas no conjunto de resultados com os métodos descritos nesta seção depende do tipo do cursor e de como ele é implementado. Os cursores somente para frente não revisitam linhas e, portanto, não detectarão alterações. Para obter informações sobre se os cursores roláveis podem detectar alterações, consulte [Cursors Roláveis](../../../odbc/reference/develop-app/scrollable-cursors.md).  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Instruções UPDATE, DELETE e INSERT](../../../odbc/reference/develop-app/update-delete-and-insert-statements.md)  
   

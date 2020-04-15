@@ -17,25 +17,25 @@ f1_keywords:
 helpviewer_keywords:
 - SQLFreeConnect function [ODBC]
 ms.assetid: 0d22eaeb-3c75-47fb-af9a-6f7397e61b9c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 37ecdbee0795734e0f046a78f6c262e9b3fe660b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1f73de19565b8c9c264736d74818c6234d610ef4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002955"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81285846"
 ---
 # <a name="sqlfreeconnect-function"></a>Função SQLFreeConnect
 **Conformidade**  
- Versão introduzida: conformidade de padrões do ODBC 1,0: preterida  
+ Versão introduzida: ODBC 1.0 Normas Conformidade: Preterido  
   
  **Resumo**  
- No ODBC *3. x*, a função **SQLFreeConnect** do ODBC 2,0 foi substituída por **SQLFreeHandle**. Para obter mais informações, consulte [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ Em ODBC *3.x,* a função ODBC 2.0 **SQLFreeConnect** foi substituída por **SQLFreeHandle**. Para obter mais informações, consulte [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 > [!NOTE]
->  Para obter mais informações sobre como o Gerenciador de driver mapeia essa função quando um aplicativo ODBC *2. x* está trabalhando com um driver ODBC *3. x* , consulte [mapeando funções preteridas](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no apêndice G: diretrizes de driver para compatibilidade com versões anteriores.  
+>  Para obter mais informações sobre o que o Driver Manager mapeia essa função para quando um aplicativo ODBC *2.x* estiver trabalhando com um driver ODBC *3.x,* consulte [Mapeamento de Funções Depreciadas](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no Apêndice G: Diretrizes do driver para compatibilidade retrógrada.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Referência da API oDBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,5 +1,5 @@
 ---
-title: SQLColAttribute | Microsoft Docs
+title: SQLColattribute | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLColAttribute function
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d1d929f2d514b12050c79c8251cd58cfeadb6b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6113316f3be68ca03b5c107ed54965577b6963c8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787425"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302605"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "73787425"
 > [!NOTE]  
 >  Os atributos do identificador de coluna ODBC não estão disponíveis em todos os conjuntos de resultados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Identificador de campo|DESCRIÇÃO|  
+|Identificador de campo|Descrição|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|Disponível em conjuntos de resultados recuperados de instruções que geram cursores de servidor ou em instruções SELECT executadas que contêm uma cláusula FOR BROWSE.|  
 |SQL_DESC_BASE_COLUMN_NAME|Disponível em conjuntos de resultados recuperados de instruções que geram cursores de servidor ou em instruções SELECT executadas que contêm uma cláusula FOR BROWSE.|  
@@ -41,7 +41,7 @@ ms.locfileid: "73787425"
 |SQL_DESC_TABLE_NAME|Disponível em conjuntos de resultados recuperados de instruções que geram cursores de servidor ou em instruções SELECT executadas que contêm uma cláusula FOR BROWSE.|  
 |SQL_DESC_UNNAMED|SQL_NAMED para todas as colunas de um conjunto de resultados, a menos que uma coluna seja o resultado de uma expressão que não contém uma atribuição de rótulo como parte da expressão. Quando SQL_DESC_UNNAMED retorna SQL_UNNAMED, todos os atributos de identificador de coluna ODBC contêm cadeias de caracteres de comprimento zero para a coluna.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O driver ODBC do Native Client usa a instrução SET FMTONLY para reduzir a sobrecarga do servidor quando **SQLColAttribute** é chamado para instruções preparadas, mas não executadas.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O driver Nativo Cliente ODBC usa a instrução SET FMTONLY para reduzir a sobrecarga do servidor quando **o SQLColAttribute** é chamado para instruções preparadas, mas não executadas.  
   
  Para tipos de valores grandes, **SQLColAttribute** retornará os valores a seguir:  
   
@@ -70,15 +70,15 @@ ms.locfileid: "73787425"
 |SQL_CA_SS_COLUMN_UTYPE|Tipo de dados básico do tipo de dados definido pelo usuário da coluna do SQL Server. As definições dos valores de tipo estão em sqlncli.h.|  
 |SQL_CA_SS_COLUMN_VARYLEN|TRUE se os dados da coluna puderem variar em comprimento; ou FALSE em caso contrário.|  
 |SQL_CA_SS_COMPUTE_BYLIST|Ponteiro para uma matriz de WORD (unsigned short) que especifica as colunas usadas na frase BY de uma cláusula COMPUTE. Se a cláusula COMPUTE não especificar uma frase BY, um ponteiro NULL será retornado.<br /><br /> O primeiro elemento da matriz contém a contagem de colunas de lista BY. Os elementos adicionais são os ordinais da coluna.|  
-|SQL_CA_SS_COMPUTE_ID|*computeid* de uma linha que é o resultado de uma cláusula COMPUTE na instrução SELECT TRANSACT-SQL atual.|  
+|SQL_CA_SS_COMPUTE_ID|*computeid* de uma linha que é o resultado de uma cláusula COMPUTE na instrução SELECT Transact-SQL atual.|  
 |SQL_CA_SS_NUM_COMPUTES|Número de cláusulas COMPUTE especificado na instrução SELECT Transact-SQL atual.|  
 |SQL_CA_SS_NUM_ORDERS|Número de colunas especificado em uma cláusula ORDER BY da instrução SELECT Transact-SQL ou ODBC.|  
   
- \*Disponível se o atributo de instrução SQL_SOPT_SS_HIDDEN_COLUMNS estiver definido como SQL_HC_ON.  
+ \*Disponível se o SQL_SOPT_SS_HIDDEN_COLUMNS de atributo de declaração estiver definido como SQL_HC_ON.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]introduziu campos de descritor específicos de driver para fornecer informações adicionais para indicar o nome da coleção de esquemas XML, o nome do esquema e o nome do catálogo, respectivamente. Essas propriedades não exigem aspas ou um caractere de escape se eles contiverem caracteres não alfanuméricos. A tabela a seguir lista esses novos campos de descritor:  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]introduziu campos de descritores específicos do driver para fornecer informações adicionais para denotar o nome da coleção do esquema XML, o nome do esquema e o nome do catálogo, respectivamente. Essas propriedades não exigem aspas ou um caractere de escape se eles contiverem caracteres não alfanuméricos. A tabela a seguir lista esses novos campos de descritor:  
   
-|Nome da coluna|Type|DESCRIÇÃO|  
+|Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|O nome do catálogo em que é definido um nome da coleção de esquemas XML. Se não for possível localizar o nome do catálogo, essa variável conterá uma cadeia de caracteres vazia.<br /><br /> Essas informações são retornadas do campo de registro SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME do IRD, que é um campo de leitura-gravação.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|CharacterAttributePtr|O nome do esquema no qual é definido um nome da coleção de esquemas XML. Se não for possível localizar o nome do esquema, essa variável conterá uma cadeia de caracteres vazia.<br /><br /> Essas informações são retornadas do campo de registro SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME do IRD, que é um campo de leitura-gravação.|  
@@ -86,7 +86,7 @@ ms.locfileid: "73787425"
   
  Além disso, o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu campos de descritor específicos de driver para fornecer informações adicionais para uma coluna de UDT (tipo definido pelo usuário) de um conjunto de resultados ou um parâmetro de UDT de um procedimento armazenado ou consulta parametrizada. Essas propriedades não exigem aspas ou um caractere de escape se eles contiverem caracteres não alfanuméricos. A tabela a seguir lista esses novos campos de descritor:  
   
-|Nome da coluna|Type|DESCRIÇÃO|  
+|Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|O nome do catálogo que contém o UDT.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|O nome do esquema que contém o UDT.|  
@@ -98,19 +98,19 @@ ms.locfileid: "73787425"
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>Suporte do SQLColAttribute a recursos aprimorados de data e hora  
  Para obter os valores retornados para tipos de data/hora, consulte a seção sobre informações retornadas em campos IRD em [Parameter and Result Metadata](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Para obter mais informações, consulte [melhorias de data e hora &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obter mais informações, consulte [melhorias de data e hora &#40;&#41;da ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>Suporte do SQLColAttribute a UDTs CLR grandes  
- O **SQLColAttribute** dá suporte a UDTs (tipos definidos pelo usuário) CLR grandes. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ O**SQLColAttribute** suporta UDTs CLR grandes. Para obter mais informações, consulte [Grandes tipos definidos pelo usuário da CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>Suporte do SQLColAttribute a colunas esparsas  
- SQLColAttribute consulta o novo campo IRD (descritor de linha de implementação), SQL_CA_SS_IS_COLUMN_SET, para determinar se uma coluna é uma coluna de **column_set** .  
+ SQLColAttribute consulta o novo campo de descritor de linha de implementação (IRD) SQL_CA_SS_IS_COLUMN_SET, para determinar se uma coluna é uma coluna **column_set.**  
   
- Para obter mais informações, consulte [suporte a colunas esparsas &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ Para obter mais informações, consulte [Colunas Esparsas Suporte &#40;o&#41;ODBC ](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Função SQLColAttribute](https://go.microsoft.com/fwlink/?LinkId=59334)   
- [Detalhes de implementação da API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
+ [Função SQLColATTRIBUTE](https://go.microsoft.com/fwlink/?LinkId=59334)   
+ [Detalhes da implementação da API da ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
   
   
