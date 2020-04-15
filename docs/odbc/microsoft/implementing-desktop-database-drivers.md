@@ -12,21 +12,21 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], implementing
 - desktop database drivers [ODBC], implementing
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cb4f4c2b1e9658e1e0199ec6d856ef21db80cf07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0b25a5e8ed7a39a11b207c185f47855c7670473e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952353"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290606"
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implementar os drivers de banco de dados de área de trabalho
-As instruções e as notas técnicas sobre como implementar e configurar o Microsoft ODBC Desktop Database Drivers podem ser encontradas na ajuda online do administrador de fonte de dados ODBC. Esse arquivo pode ser acessado durante rotinas de instalação de driver do [administrador de fonte de dados ODBC da Microsoft](../../odbc/admin/odbc-data-source-administrator.md).  
+Instruções e notas técnicas sobre como implementar e configurar os drivers de banco de dados de desktop do Microsoft ODBC podem ser encontradas na ajuda on-line do Administrador de Fonte de Dados da ODBC. Este arquivo pode ser acessado durante as rotinas de configuração do driver do [Microsoft ODBC Data Source Administrator](../../odbc/admin/odbc-data-source-administrator.md).  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
--   [Arquivos a usar com os drivers de banco de dados de área de trabalho](../../odbc/microsoft/files-to-use-with-the-desktop-database-drivers.md)  
+-   [Arquivos a serem usados com os drivers de banco de dados de área de trabalho](../../odbc/microsoft/files-to-use-with-the-desktop-database-drivers.md)  
   
 -   [Arquivos de componentes ODBC](../../odbc/microsoft/odbc-component-files.md)  
   

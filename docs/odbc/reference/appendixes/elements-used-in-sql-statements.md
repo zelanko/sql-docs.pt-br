@@ -1,5 +1,5 @@
 ---
-title: Elementos usados em instruções SQL | Microsoft Docs
+title: Elementos usados em declarações SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,50 +12,50 @@ helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: caf8f68221c1ac14649bf10be0105e1e691c7482
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 49a1cd54957426d4d14d84d43df670c8c3d96189
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68129964"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307017"
 ---
 # <a name="elements-used-in-sql-statements"></a>Elementos usados em instruções SQL
-Os elementos a seguir são usados nas instruções SQL listadas anteriormente.  
+Os seguintes elementos são usados nas instruções SQL listadas anteriormente.  
   
 ## <a name="element"></a>Elemento  
- *identificação de tabela base-identificador* :: = *nome definido pelo usuário*  
+ *identificador de tabela base* ::= *nome definido pelo usuário*  
   
- *base-tabela-nome* :: = *base-tabela-identificador*  
+ *nome da tabela base* :== *identificador de tabela base*  
   
- *booliano de fator* :: = [not] *booliano-primário*  
+ *fator booleano* ::= [NÃO] *boolean-primary*  
   
- *booliano-primário* :: = &#124;*de predicado de* comparação ( *condição de pesquisa* )  
+ *boolean-primário* ::= comparação *-predicado* &#124; *(condição de pesquisa)*  
   
- *valor booliano* :: = *booliano-fator* [e *booliano-termo*]  
+ *boolean-term* ::= *boolean-factor* [AND *boolean-term*]  
   
- *caractere-Cadeia de caracteres-literal* :: = ' ' {*Character*}... ' ' (*Character* é qualquer caractere no conjunto de caracteres da fonte de dados/driver. Para incluir um caractere de aspa literal único (' ') em um caractere-Cadeia de caracteres literal, use dois caracteres de aspas literais [' ' ' '].)  
+ *caractere-string-literal* ::= ''{*caractere*}...'' *(caractere* é qualquer personagem no conjunto de caracteres do driver/fonte de dados. Para incluir um único caractere de citação literal ('') em um caractere-string-literal, use dois caracteres de citação literal ['''].)  
   
- *coluna-identificador* :: = *nome definido pelo usuário*  
+ *identificador de coluna* ::= *nome definido pelo usuário*  
   
- *nome da coluna* :: = [*nome-da-tabela*.] *identificador de coluna*  
+ *nome da coluna* ::= [*nome da tabela*.] *coluna identificador*  
   
- *comparação-operador* :: = < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
+ *operador de comparação* ::= < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
   
- *comparação-predicado* :: = expressão de comparação-operador de *expressão*  
+ *predicado de comparação* ::= expressão de comparação de *expressão-operador*  
   
- *Data-Type* :: = *caractere-Cadeia de caracteres-* tipo (*caractere-Cadeia de caracteres-tipo* é qualquer tipo de dados para o qual a coluna "" data_type "" no conjunto de resultados retornado por SQLGetTypeInfo é SQL_CHAR ou SQL_VARCHAR.)  
+ *tipo de dados* ::= *caractere-string-type* *(caractere-string-type* é qualquer tipo de dados para o qual a coluna "DATA_TYPE"" no conjunto de resultados retornado pelo SQLGetTypeInfo é SQL_CHAR ou SQL_VARCHAR.)  
   
- *dígito* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
+ *dígito* ::= 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
   
- *parâmetro dinâmico* :: =?  
+ *parâmetro dinâmico* ::= ?  
   
- *expressão* :: = Term &#124; expressão {+&#124;-} termo  
+ *expressão* ::= termo &#124; expressão {+&#124;-}  
   
- *fator* :: = [*+*&#124;*-*]*primário*  
+ *fator* ::=*+* *-*[&#124;]*primário*  
   
- *Inserir valor* :: =  
+ *valor de inserção* ::=  
   
  *parâmetro dinâmico*  
   
@@ -65,42 +65,42 @@ Os elementos a seguir são usados nas instruções SQL listadas anteriormente.
   
  &#124; USUÁRIO  
   
- *letra* :: = *letra minúscula maiúscula &#124; letra* maiúscula  
+ *letra* ::= letra minúscula &#124; letra *maiúscula*  
   
- *literal* :: = *Character-String-literal*  
+ *literal* ::= *caractere-string-literal*  
   
- *letra* minúscula:: = a &#124; b &#124; c &#124; d &#124; e &#124; f &#124; g &#124; h &#124; i &#124; j &#124; k &#124; l &#124; m &#124; n &#124; o &#124; p &#124; q &#124; r &#124; s &#124; t &#124; u &#124; v &#124; w &#124; x &#124; y &#124; z  
+ *letras-maiúsculas* ::= um &#124; b &#124; c &#124; d &#124; e &#124; f &#124; g g &#124; h &#124; &#124; j &#124; &#124; &#124; l &#124; m &#124; n &#124; o &#124; p &#124; q &#124; r &#124; s &#124; t &#124; u &#124; v &#124; w &#124; x &#124; y &#124; z  
   
- *ordem por cláusula* :: = ordem por *especificação de classificação* [, *classificação-especificação*]...  
+ *ordem por cláusula* ::= ORDEM POR *especificação de classificação* [, *especificação de classificação*]...  
   
- *primário* :: = *nome da coluna*  
+ *principal* ::= *nome da coluna*  
   
- &#124; *parâmetro dinâmico*  
+ *&#124; parâmetro dinâmico*  
   
  &#124; *literal*  
   
- &#124; ( *expressão* )  
+ &#124; *(expressão)*  
   
- *Search-Condition* :: = *booliano-Term* [ou *Search-Condition*]  
+ *condição de pesquisa* ::= *termo booleano* [condição *de pesquisa*]  
   
- *Select-List* :: = \* &#124; *selecionar-sublista* [, *selecionar-sublista*]...  (*Select-List* não pode conter parâmetros.)  
+ *lista de seleção* ::= \* &#124; *sublista select* [, *select-sublist*]...  (lista*selecionada* não pode conter parâmetros.)  
   
- *selecionar-sublista* :: = *expressão*  
+ *seleção-sublista* ::= *expressão*  
   
- *classificação-especificação* :: = {*não assinado-inteiro &#124; nome-da-coluna*} [*ASC &#124; desc*]  
+ *especificação do tipo* ::= {*não assinado-inteiro-inteiro &#124; nome de coluna*} [*ASC &#124; DESC*]  
   
- *identificador de tabela* :: = *nome definido pelo usuário*  
+ *identificador de tabela* ::= *nome definido pelo usuário*  
   
- *nome da tabela* :: = *identificador de tabela*  
+ *nome da tabela* ::= *identificador de tabela*  
   
- *tabela-referência* :: = *nome da tabela*  
+ *referência de tabela* ::= *nome da tabela*  
   
- *tabela-referência-lista* :: = *tabela-* referência [,*tabela-referência*]...  
+ *tabela-referência-lista* ::= *referência da tabela* [,*tabela-referência*]...  
   
- *termo* :: = *factor* &#124; *termo* {\*&#124;*/*} *fator*  
+ *termo* ::= *fator* \* &#124; */* *termo* {&#124;} *fator*  
   
- *sem sinal-inteiro* :: = {*digit*}  
+ *inteiro sem assinatura* ::= {*dígito*}  
   
- *letra* maiúscula:: = *A &#124; B &#124; C &#124; D &#124; E &#124; F &#124; G &#124; H &#124; i &#124; J &#124; K &#124; L &#124; M &#124; N &#124; O &#124; P &#124; Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; W &#124; X &#124; Y &#124; Z*  
+ *letras maiúsculas* ::= *Um &#124; B &#124; C &#124; D &#124; E &#124; F &#124; G &#124; H &#124; Eu &#124; J &#124; K &#124; L &#124; M &#124; N &#124; O &#124; P &#124; &#124; &#124; R &#124; S &#124; T &#124; U &#124; &#124; W &#124; X &#124; Y &#124; Y &#124; Z*  
   
- *nome definido pelo usuário* :: = *letra*[*dígito* &#124; *letra* &#124; *_*]...
+ *nome definido pelo usuário* ::= *letra*[*dígito* &#124; *letra* &#124; *_*]...

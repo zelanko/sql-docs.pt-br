@@ -1,5 +1,5 @@
 ---
-title: Gramática de SQL ODBC com suporte adicional | Microsoft Docs
+title: Gramática SQL Adicional Suportada ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,31 +11,31 @@ helpviewer_keywords:
 - SQL grammar [ODBC]
 - ODBC drivers [ODBC], SQL grammar
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a5939ee2b8163e5e71899d5074b851dfda87484
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d6ac9bd3a54e1f06f17bf6b92485ce5b9cc52882
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901391"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307127"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Gramática SQL adicional do ODBC com suporte
-Os drivers ODBC suportam completamente a gramática mínima de ODBC 2,5 e as seguintes cláusulas no núcleo e na gramática de ODBC 2,5 estendida. Informações adicionais podem ser exibidas ao saltar para a [instrução ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), os [nomes de correlação](../../odbc/microsoft/correlation-names.md)e os tópicos de [invocação de procedimento](../../odbc/microsoft/procedure-invocation.md) .  
+Os drivers ODBC suportam completamente a gramática Mínima ODBC 2.5 e as seguintes cláusulas na gramática Core e Extended ODBC 2.5. Informações adicionais podem ser exibidas pulando para os [tópicos ALTER TABLE Statement,](../../odbc/microsoft/alter-table-statement.md) [Correlation Names](../../odbc/microsoft/correlation-names.md)e [Procedure Invocation.](../../odbc/microsoft/procedure-invocation.md)  
   
--   Literal numérico aproximado (núcleo)  
+-   Literal numérico aproximado (Núcleo)  
   
--   [Instrução ALTER TABLE](../../odbc/microsoft/alter-table-statement.md) (núcleo)  
+-   [DECLARAÇÃO DE TABELA ALTER](../../odbc/microsoft/alter-table-statement.md) (Núcleo)  
   
--   Literais binários (estendidos)  
+-   Literações binárias (Estendidas)  
   
--   [Nomes de correlação](../../odbc/microsoft/correlation-names.md) (núcleo)  
+-   [Nomes de correlação](../../odbc/microsoft/correlation-names.md) (Núcleo)  
   
--   [Invocação de procedimento](../../odbc/microsoft/procedure-invocation.md) (estendida)  
+-   [Invocação do Procedimento](../../odbc/microsoft/procedure-invocation.md) (Prorrogada)  
   
--   [Predicado between](../../odbc/microsoft/between-predicate.md) (núcleo)  
+-   [ENTRE Predicado](../../odbc/microsoft/between-predicate.md) (Núcleo)  
   
--   [Instrução CREATE INDEX](../../odbc/microsoft/create-index-statement.md)  
+-   [CRIAR Declaração DE ÍNDICE](../../odbc/microsoft/create-index-statement.md)  
   
 -   [Aritmética de data](../../odbc/microsoft/date-arithmetic.md)  
   
@@ -51,15 +51,15 @@ Os drivers ODBC suportam completamente a gramática mínima de ODBC 2,5 e as seg
   
 -   [ORDER BY com GROUP BY](../../odbc/microsoft/order-by-with-group-by.md)  
   
--   Predicado EXISTs (núcleo)  
+-   EXISTE predicado (Núcleo)  
   
--   IN (*valorlist*) (núcleo)  
+-   EM *(lista de valores)*(Núcleo)  
   
--   [Jet: junções externas](../../odbc/microsoft/jet-outer-joins.md) (estendidas)  
+-   [Jato: Junções Externas](../../odbc/microsoft/jet-outer-joins.md) (Estendida)  
   
--   Instrução SELECT (estendida) (incluindo as cláusulas agrupar por, HAVING e UNION)  
+-   Declaração SELECT (Estendida) (incluindo cláusulas DO GRUPO BY, HAVING e UNION)  
   
--   Subconsultas (subseleções) (núcleo)  
+-   Subconsultas (SUBSELECTs) (Núcleo)  
   
 -   [Funções escalares](../../odbc/microsoft/scalar-functions.md)  
   

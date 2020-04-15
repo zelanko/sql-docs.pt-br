@@ -11,22 +11,22 @@ helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057212"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307987"
 ---
 # <a name="reserved-keywords"></a>Palavras-chave reservadas
-As palavras seguintes são reservadas para uso em chamadas de função ODBC. Essas palavras não restringem a gramática SQL mínima; no entanto, para garantir a compatibilidade com drivers que dão suporte à gramática SQL principal, os aplicativos devem evitar o uso de qualquer uma dessas palavras-chave. O valor de #**define** SQL_ODBC_KEYWORDS contém uma lista separada por vírgula dessas palavras-chave.  
+As palavras seguintes são reservadas para uso em chamadas de função ODBC. Estas palavras não restringem a gramática SQL mínima; no entanto, para garantir a compatibilidade com drivers que suportam a gramática SQL principal, os aplicativos devem evitar o uso de qualquer uma dessas palavras-chave. O valor**de definição** # SQL_ODBC_KEYWORDS contém uma lista separada por comma dessas palavras-chave.  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
-|AÇÃO|ISOLATION|  
+|ACTION|ISOLATION|  
 |ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
@@ -66,9 +66,9 @@ As palavras seguintes são reservadas para uso em chamadas de função ODBC. Ess
 |CONECTAR|OUTPUT|  
 |CONNECTION|OVERLAPS|  
 |CONSTRAINT|PAD|  
-|RESTRIÇÕES|PARTIAL|  
+|CONSTRAINTS|PARTIAL|  
 |CONTINUE|PASCAL|  
-|CONVERT|PROPOSTAS|  
+|CONVERT|Posição|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
 |CREATE|PRESERVE|  
@@ -94,7 +94,7 @@ As palavras seguintes são reservadas para uso em chamadas de função ODBC. Ess
 |DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINTO|TAMANHO adequado|  
+|DISTINTO|SIZE|  
 |DOMAIN|SMALLINT|  
 |DOUBLE|SOME|  
 |DROP|SPACE|  
@@ -127,7 +127,7 @@ As palavras seguintes são reservadas para uso em chamadas de função ODBC. Ess
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|IDENTIDADE|USER|  
+|IDENTITY|USER|  
 |IMMEDIATE|USING|  
 |IN|VALUE|  
 |INCLUDE|VALUES|  

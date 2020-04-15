@@ -1,5 +1,5 @@
 ---
-title: Usando o driver ODBC do Visual FoxPro | Microsoft Docs
+title: Usando o driver Visual FoxPro ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver
 - FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver
 ms.assetid: c50371a0-b1b2-406c-a4e5-d5191d519f5b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b6c0aa518e1471e0b316dcf9ffd8e5a668851fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2ce3cb5e16aca2587a7dc892763f194f54e085ad
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087988"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292546"
 ---
 # <a name="using-the-visual-foxpro-odbc-driver"></a>Usar o driver ODBC do Visual FoxPro
-Nesta seção, os tópicos a seguir discutem como usar o driver ODBC do Microsoft® Visual FoxPro®:  
+Nesta seção, os seguintes tópicos discutem como usar o Driver ODBC ® Microsoft®®:  
   
--   [Adicionar uma fonte de dados do Visual FoxPro](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)  
+-   [Adicionando uma fonte de dados do Visual FoxPro](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)  
   
--   [Modificar uma fonte de dados do Visual FoxPro](../../odbc/microsoft/modifying-a-visual-foxpro-data-source.md)  
+-   [Modificando uma fonte de dados do Visual FoxPro](../../odbc/microsoft/modifying-a-visual-foxpro-data-source.md)  
   
--   [Excluir uma fonte de dados do Visual FoxPro](../../odbc/microsoft/deleting-a-visual-foxpro-data-source.md)  
+-   [Excluindo uma fonte de dados do Visual FoxPro](../../odbc/microsoft/deleting-a-visual-foxpro-data-source.md)  
   
--   [Conectar-se a uma fonte de dados do Visual FoxPro](../../odbc/microsoft/connecting-to-a-visual-foxpro-data-source.md)  
+-   [Conectando-se a uma fonte de dados do Visual FoxPro](../../odbc/microsoft/connecting-to-a-visual-foxpro-data-source.md)  
   
--   [Usar cadeias de conexão](../../odbc/microsoft/using-connection-strings.md)  
+-   [Usando cadeias de conexão](../../odbc/microsoft/using-connection-strings.md)  
   
--   [Usando o driver ODBC do Visual FoxPro com seu aplicativo Visual Basic](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)  
+-   [Usando o driver Visual FoxPro ODBC com seu aplicativo básico visual](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)  
   
--   [Usando o driver ODBC do Visual FoxPro com seu aplicativo C ou C++](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
+-   [Usando o driver Visual FoxPro ODBC com seu aplicativo C ou C++](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
   
--   [Acessar dados do Visual FoxPro do Microsoft Office](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)
+-   [Acessando dados do Visual FoxPro do Microsoft Office](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)

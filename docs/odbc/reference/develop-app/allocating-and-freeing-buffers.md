@@ -12,17 +12,17 @@ helpviewer_keywords:
 - allocating buffers [ODBC]
 - freeing buffers [ODBC]
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b783c2fc6766f0e2d2685724169894160c15ffc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e6aab888d24fcbc987b3db921436f14812618519
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077196"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288396"
 ---
 # <a name="allocating-and-freeing-buffers"></a>Alocar e liberar buffers
-Todos os buffers são alocados e liberados pelo aplicativo. Se um buffer não for adiado, ele precisará existir somente pela duração da chamada para uma função. Por exemplo, **SQLGetInfo** retorna o valor associado a uma opção específica no buffer apontado pelo argumento *InfoValuePtr* . Esse buffer pode ser liberado imediatamente após a chamada para **SQLGetInfo**, conforme mostrado no exemplo de código a seguir:  
+Todos os buffers são alocados e liberados pelo aplicativo. Se um buffer não for adiado, ele só precisa existir durante a duração da chamada para uma função. Por exemplo, **o SQLGetInfo** retorna o valor associado a uma determinada opção no buffer apontado pelo argumento *InfoValuePtr.* Este buffer pode ser liberado imediatamente após a chamada para **SQLGetInfo,** conforme mostrado no exemplo de código a seguir:  
   
 ```  
 SQLSMALLINT   InfoValueLen;  
@@ -34,7 +34,7 @@ SQLGetInfo(hdbc, SQL_DBMS_NAME, (SQLPOINTER)InfoValuePtr, 50,
 free(InfoValuePtr);                        // OK to free InfoValuePtr.  
 ```  
   
- Como os buffers adiados são especificados em uma função e usados em outro, é um erro de programação de aplicativo para liberar um buffer adiado enquanto o driver ainda espera que ele exista. Por exemplo, o endereço \*do buffer *ValuePtr* é passado para **SQLBindCol** para uso posterior por **SQLFetch**. Esse buffer não pode ser liberado até que a coluna não esteja associada, como com uma chamada para **SQLBindCol** ou **SQLFreeStmt** , conforme mostrado no exemplo de código a seguir:  
+ Como os buffers diferidos são especificados em uma função e usados em outra, é um erro de programação de aplicativo para liberar um buffer diferido enquanto o driver ainda espera que ele exista. Por exemplo, o \*endereço do buffer *ValuePtr* é passado para **SQLBindCol** para uso posterior pelo **SQLFetch**. Este buffer não pode ser liberado até que a coluna seja desvinculada, como com uma chamada para **SQLBindCol** ou **SQLFreeStmt,** conforme mostrado no seguinte exemplo de código:  
   
 ```  
 SQLRETURN    rc;  
@@ -59,7 +59,7 @@ SQLFreeStmt(hstmt, SQL_UNBIND);
 free(ValuePtr);  
 ```  
   
- Esse erro é facilmente feito declarando o buffer localmente em uma função; o buffer é liberado quando o aplicativo deixa a função. Por exemplo, o código a seguir causa um comportamento indefinido e provavelmente fatal no driver:  
+ Tal erro é facilmente cometido declarando o buffer localmente em uma função; o buffer é liberado quando o aplicativo deixa a função. Por exemplo, o seguinte código causa um comportamento indefinido e provavelmente fatal no motorista:  
   
 ```  
 SQLRETURN   rc;  

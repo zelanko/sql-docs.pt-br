@@ -1,5 +1,5 @@
 ---
-title: Estrutura de intervalo de C | Microsoft Docs
+title: Estrutura do Intervalo C | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - interval data type [ODBC], structure
 - C data types [ODBC], interval
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3387b4fa48eb1a04102daadcc08f971765d7ca2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 02c86ebe24a0e12531e355f95185b01f3089a31b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68037786"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292148"
 ---
 # <a name="c-interval-structure"></a>Estrutura de intervalo do C
-Cada um dos tipos de dados de intervalo de C listados na seção [tipos de dados c](../../../odbc/reference/appendixes/c-data-types.md) usa a mesma estrutura para conter os dados do intervalo. Quando **SQLFetch**, **SQLFetchScroll**ou **SQLGetData** é chamado, o driver retorna dados para a estrutura de SQL_INTERVAL_STRUCT, usa o valor que foi especificado pelo aplicativo para os tipos de dados C (na chamada de **SQLBindCol**, **SQLGetData**ou **SQLBindParameter**) para interpretar o conteúdo de SQL_INTERVAL_STRUCT e popula o campo *interval_type* da estrutura com o valor de *Enumeração* correspondente ao tipo C. Observe que os drivers não lêem o campo *interval_type* para determinar o tipo do intervalo; Eles recuperam o valor do campo descritor de SQL_DESC_CONCISE_TYPE. Quando a estrutura é usada para dados de parâmetro, o driver usa o valor especificado pelo aplicativo no campo SQL_DESC_CONCISE_TYPE do APD para interpretar o conteúdo de SQL_INTERVAL_STRUCT, mesmo que o aplicativo defina o valor do campo *interval_type* para um valor diferente.  
+Cada um dos tipos de dados do intervalo C listados na seção [C Data Types](../../../odbc/reference/appendixes/c-data-types.md) usa a mesma estrutura para conter os dados de intervalo. Quando **o SQLFetch**, **SQLFetchScroll**ou **SQLGetData** é chamado, o driver retorna os dados na estrutura SQL_INTERVAL_STRUCT, usa o valor especificado pelo aplicativo para os tipos de dados C (na chamada para **SQLBindCol,** **SQLGetData,** ou **SQLBindParameter**) para interpretar o conteúdo de SQL_INTERVAL_STRUCT, e preenche o campo *interval_type* da estrutura com o valor *de eum* correspondente ao tipo C. Observe que os drivers não lêem o campo *interval_type* para determinar o tipo do intervalo; eles recuperam o valor do campo descritor SQL_DESC_CONCISE_TYPE. Quando a estrutura é usada para dados de parâmetros, o motorista usa o valor especificado pelo aplicativo no campo SQL_DESC_CONCISE_TYPE da APD para interpretar o conteúdo de SQL_INTERVAL_STRUCT, mesmo que o aplicativo defina o valor do *campo interval_type* para um valor diferente.  
   
- Essa estrutura é definida da seguinte maneira:  
+ Esta estrutura é definida da seguinte forma:  
   
 ```  
 typedef struct tagSQL_INTERVAL_STRUCT  
@@ -69,4 +69,4 @@ typedef struct tagSQL_DAY_SECOND
 } SQL_DAY_SECOND_STRUCT;  
 ```  
   
- O campo *interval_type* da SQL_INTERVAL_STRUCT indica para o aplicativo qual estrutura é mantida na União e também quais membros da estrutura são relevantes. O campo *interval_sign* tem o valor SQL_FALSE se o campo à esquerda do intervalo não estiver assinado; Se for SQL_TRUE, o campo à esquerda será negativo. O valor no campo principal é sempre não assinado, independentemente do valor de *interval_sign*. O campo *interval_sign* atua como um bit de sinal.
+ O *campo interval_type* da SQL_INTERVAL_STRUCT indica para a aplicação qual a estrutura que é realizada no sindicato e também quais são os membros da estrutura relevantes. O campo *interval_sign* tem o valor SQL_FALSE se o campo de liderança do intervalo não estiver assinado; se for SQL_TRUE, o campo principal é negativo. O valor no campo de liderança em si é sempre não assinado, independentemente do valor de *interval_sign*. O campo *interval_sign* age como um sinal.

@@ -1,5 +1,5 @@
 ---
-title: Sequências de escape de GUID | Microsoft Docs
+title: SEQÜÊNCIAS DE Fuga GUID | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,46 +12,46 @@ helpviewer_keywords:
 - escape sequences [ODBC], guid
 - guid escape sequence [ODBC]
 ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a74ed9d4dfe0afb8bf59abb11220a0677d000bfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 44907bfbd884bf361ce5f2ab8b3f6d8a247aba44
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67947581"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306967"
 ---
 # <a name="guid-escape-sequences"></a>Sequências de escape GUID
-O ODBC usa sequências de escape para literais GUID. A sintaxe dessa sequência de escape é a seguinte:  
+ODBC usa seqüências de fuga para literais GUID. A sintaxe desta seqüência de fuga é a seguinte:  
   
 ```  
 {guid 'nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn'}  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Na notação BNF, a sintaxe é a seguinte:  
+ Na notação da BNF, a sintaxe é a seguinte:  
   
- *ODBC-GUID-escape* :: =  
-     *ODBC-ESC-GUID do iniciador* '*GUID-Value*' *ODBC-ESC-terminador*  
+ *ODBC-guid-escape* ::=  
+     *Guia oDBC-esc-iniciador* '*guid-value*' *ODBC-esc-terminator*  
   
- *ODBC-ESC-Initiator* :: = {  
+ *ODBC-esc-iniciador* ::= {  
   
- *ODBC-ESC-terminador* :: =}  
+ *ODBC-esc-terminator* ::= }  
   
- *GUID-valor* :: = *relógio-baixo-valor GUID-tempo de separação de relógio-meio-valor GUID-separador relógio-valor do GUID de alto valor-separador Clock-Seq-valor GUID-Value*  
+ *valor guia* ::= *relógio-baixo valor guid-separador relógio-separador de valor médio-separador-separador-relógio-separador de alto valor guia-separador relógio-seq-valor guid-separador-valor-valor*  
   
- *GUID-separador* :: =-  
+ *guia-separador* ::= -  
   
- *Clock-baixo-valor* :: = *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
+ *relógio de baixo valor* ::= *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
   
- *Clock-meio-valor* :: = *hex_digit hex_digit hex_digit hex_digit*  
+ *relógio-valor médio* ::= *hex_digit hex_digit hex_digit hex_digit*  
   
- *relógio-alto valor* :: = *hex_digit hex_digit hex_digit hex_digit*  
+ *relógio de alto valor* ::= *hex_digit hex_digit hex_digit hex_digit*  
   
- *Clock-Seq-valor* :: = *hex_digit hex_digit hex_digit hex_digit*  
+ *relógio-seq-valor* ::= *hex_digit hex_digit hex_digit hex_digit*  
   
- *Clock-nó-valor* :: = *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit* hex_digit hex_digit  
+ *valor da hex_digit* do hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit *hex_digit hex_digit hex_digit*  
   
- *hex_digit* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; A &#124; B &#124; C &#124; D &#124; E &#124; F  
+ *hex_digit::=* 0 &#124; 1 &#124; 2 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; A &#124; B &#124; &#124; D &#124; e &#124; F  
   
- A sequência de escape literal de GUID terá suporte se o tipo de dados GUID for suportado pela fonte de dados. Um aplicativo deve chamar **SQLGetTypeInfo** para determinar se há suporte para esse tipo de dados.
+ A seqüência de fuga literal GUID é suportada se o tipo de dados GUID for suportado pela fonte de dados. Um aplicativo deve ligar para **o SQLGetTypeInfo** para determinar se esse tipo de dados é suportado.

@@ -1,5 +1,5 @@
 ---
-title: Comandos SET com suporte (driver ODBC do Visual FoxPro) | Microsoft Docs
+title: Comandos SET suportados (driver Visual FoxPro ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,23 +16,23 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver [ODBC], SET commands
 ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54cc247827a176bc9921884ae318120b07108293
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e4139751de61738903e4e152535fb75bf30a97a3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939864"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303127"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>Comandos SET com suporte (Driver ODBC do Visual FoxPro)
-Seu aplicativo pode enviar os seguintes comandos **set** do Visual FoxPro para uma fonte de dados:  
+Seu aplicativo pode enviar os seguintes comandos Visual FoxPro **SET** para uma fonte de dados:  
   
  [DEFINIR ANSI](../../odbc/microsoft/set-ansi-command.md)  
   
- [DEFINIR BLOCKSIZE](../../odbc/microsoft/set-blocksize-command.md)  
+ [DEFINIR TAMANHO DE BLOCO](../../odbc/microsoft/set-blocksize-command.md)  
   
- [DEFINIR AGRUPAMENTO](../../odbc/microsoft/set-collate-command.md)  
+ [CONJUNTO COLLATE](../../odbc/microsoft/set-collate-command.md)  
   
  [DEFINIR EXCLUÍDO](../../odbc/microsoft/set-deleted-command.md)  
   
@@ -44,6 +44,6 @@ Seu aplicativo pode enviar os seguintes comandos **set** do Visual FoxPro para u
   
  [DEFINIR CAMINHO](../../odbc/microsoft/set-path-command.md)  
   
- [DEFINIR REPROCESSAMENTO](../../odbc/microsoft/set-reprocess-command.md)  
+ [DEFINIR REPROCESSO](../../odbc/microsoft/set-reprocess-command.md)  
   
- [DEFINIR EXCLUSIVO](../../odbc/microsoft/set-unique-command.md)
+ [DEFINIR ÚNICO](../../odbc/microsoft/set-unique-command.md)

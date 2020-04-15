@@ -11,17 +11,17 @@ helpviewer_keywords:
 - API reference [ODBC]
 - ODBC [ODBC], API reference
 ms.assetid: 1ba0f6cc-dfa7-4fe8-8bc2-f862b386156d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1fab61517e226a0f78089d909188a275a61d0928
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cb7296920987683c97cdd37bb9cb6742ffec9361
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036347"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290526"
 ---
 # <a name="odbc-reference"></a>Propriedade ODBC
-Os tópicos a seguir contêm informações de sintaxe e semântica para todas as funções ODBC.  
+Os tópicos a seguir contêm sintaxe e informações semânticas para todas as funções da ODBC.  
   
 -   [Resumo de funções](../../../odbc/reference/syntax/function-summary.md)  
   
@@ -29,8 +29,8 @@ Os tópicos a seguir contêm informações de sintaxe e semântica para todas as
   
 -   [Referência de API de DLL de instalação](../../../odbc/reference/syntax/setup-dll-api-reference.md)  
   
--   [Referência da API da DLL do instalador](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)  
+-   [Referência de API do instalador DLL](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)  
   
--   [Referência de função DLL de tradução](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
+-   [Referência da função DLL de tradução](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
   
 -   [Referência da SPI (Interface do Provedor de Serviços) do ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

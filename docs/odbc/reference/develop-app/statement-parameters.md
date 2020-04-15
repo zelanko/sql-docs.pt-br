@@ -1,5 +1,5 @@
 ---
-title: Parâmetros da instrução | Microsoft Docs
+title: Parâmetros de declaração | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,37 +10,37 @@ ms.topic: conceptual
 helpviewer_keywords:
 - statement parameters [ODBC]
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0f3aad1537475e288cff06725b5dbd0fe2383924
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 02327ff4bb6a1ac3ac57fbf7d3c6b09b70c11534
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107240"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306817"
 ---
 # <a name="statement-parameters"></a>Parâmetros de instrução
-Um *parâmetro* é uma variável em uma instrução SQL. Por exemplo, suponha que uma tabela de peças tenha colunas denominadas partid, descrição e preço. Para adicionar uma parte sem parâmetros, seria necessário construir uma instrução SQL, como:  
+Um *parâmetro* é uma variável em uma declaração SQL. Por exemplo, suponha que uma tabela De peças tenha colunas chamadas PartID, Description e Price. Adicionar uma peça sem parâmetros exigiria a construção de uma declaração SQL, como:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
 ```  
   
- Embora essa instrução Insira um novo pedido, ela não é uma boa solução para um aplicativo de entrada de pedidos porque os valores a serem inseridos não podem ser embutidos em código no aplicativo. Uma alternativa é construir a instrução SQL em tempo de execução, usando os valores a serem inseridos. Essa também não é uma boa solução, devido à complexidade da construção de instruções em tempo de execução. A melhor solução é substituir os elementos da cláusula **Values** por pontos de interrogação (?) ou *marcadores de parâmetro*:  
+ Embora esta instrução insira uma nova ordem, não é uma boa solução para um aplicativo de entrada de pedidos porque os valores a serem inseridos não podem ser codificados no aplicativo. Uma alternativa é construir a instrução SQL em tempo de execução, utilizando os valores a serem inseridos. Esta também não é uma boa solução, devido à complexidade da construção de declarações em tempo de execução. A melhor solução é substituir os elementos da cláusula **VALUES** por pontos de interrogação (?), ou *marcadores de parâmetro:*  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- Os marcadores de parâmetro são associados a variáveis do aplicativo. Para adicionar uma nova linha, o aplicativo tem apenas que definir os valores das variáveis e executar a instrução. O driver recupera os valores atuais das variáveis e os envia para a fonte de dados. Se a instrução for executada várias vezes, o aplicativo poderá tornar o processo ainda mais eficiente, preparando a instrução.  
+ Os marcadores de parâmetro são associados a variáveis do aplicativo. Para adicionar uma nova linha, o aplicativo tem apenas que definir os valores das variáveis e executar a declaração. O driver recupera os valores atuais das variáveis e os envia para a fonte de dados. Se a declaração for executada várias vezes, o aplicativo poderá tornar o processo ainda mais eficiente, preparando a declaração.  
   
- A instrução que acaba de ser mostrada pode ser embutida em código em um aplicativo de entrada de pedido para inserir uma nova linha. No entanto, os marcadores de parâmetro não estão limitados a aplicativos verticais. Para qualquer aplicativo, eles facilitam a dificuldade de construir instruções SQL em tempo de execução, evitando conversões de e para texto. Por exemplo, a ID da parte que acaba de ser mostrada é provavelmente armazenada no aplicativo como um inteiro. Se a instrução SQL for construída sem marcadores de parâmetro, o aplicativo deverá converter a ID de parte em texto e a fonte de dados deverá convertê-la de volta em um inteiro. Usando um marcador de parâmetro, o aplicativo pode enviar a ID da parte para o driver como um inteiro, que geralmente pode enviá-la para a fonte de dados como um inteiro. Isso salva duas conversões. Para valores de dados longos, isso é muito importante, pois as formas de texto desses valores geralmente excedem o comprimento permitido de uma instrução SQL.  
+ A instrução mostrada pode ser codificada em um aplicativo de entrada de pedidos para inserir uma nova linha. No entanto, os marcadores de parâmetros não se limitam a aplicações verticais. Para qualquer aplicação, eles facilitam a dificuldade de construir instruções SQL no tempo de execução, evitando conversões de e para texto. Por exemplo, a parte iD mostrada é provavelmente armazenada no aplicativo como um inteiro. Se a declaração SQL for construída sem marcadores de parâmetros, o aplicativo deve converter a parte ID em texto e a fonte de dados deve convertê-la de volta a um inteiro. Usando um marcador de parâmetro, o aplicativo pode enviar o ID de peça para o driver como um inteiro, que geralmente pode enviá-lo para a fonte de dados como um inteiro. Isso salva duas conversões. Para valores de dados longos, isso é muito importante, porque as formas de texto de tais valores frequentemente excedem o comprimento permitido de uma declaração SQL.  
   
- Os parâmetros são válidos somente em determinados locais nas instruções SQL. Por exemplo, eles não são permitidos na lista de seleção (a lista de colunas a serem retornadas por uma instrução **Select** ), nem são permitidas como ambos os operandos de um operador binário, como o sinal de igual (=), porque seria impossível determinar o tipo de parâmetro. Em geral, os parâmetros são válidos somente em instruções DML (linguagem de manipulação de dados) e não em instruções DDL (linguagem de definição de dados). Para obter mais informações, consulte [marcadores de parâmetro](../../../odbc/reference/appendixes/parameter-markers.md) no Apêndice C: gramática SQL.  
+ Os parâmetros são válidos apenas em determinados lugares em instruções SQL. Por exemplo, eles não são permitidos na lista de seleção (a lista de colunas a ser devolvida por uma declaração **SELECT),** nem são permitidas como ambos os operands de um operador binário, como o sinal igual (=), porque seria impossível determinar o tipo de parâmetro. Geralmente, os parâmetros são válidos apenas em instruções DML (Data Manipulation Language, linguagem de manipulação de dados) e não em instruções DDL (Data Definition Language, linguagem de definição de dados). Para obter mais informações, consulte [Marcadores de parâmetros](../../../odbc/reference/appendixes/parameter-markers.md) no apêndice C: Gramática SQL.  
   
- Quando a instrução SQL invoca um procedimento, parâmetros nomeados podem ser usados. Os parâmetros nomeados são identificados por seus nomes, não pela sua posição na instrução SQL. Eles podem ser associados a uma chamada para **SQLBindParameter**, mas o parâmetro é identificado pelo campo SQL_DESC_NAME do IPD (descritor de parâmetro de implementação), não pelo argumento *ParameterNumber* de **SQLBindParameter**. Eles também podem ser associados chamando **SQLSetDescField** ou **SQLSetDescRec**. Para obter mais informações sobre parâmetros nomeados, consulte [ligando parâmetros por nome (parâmetros nomeados)](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md), mais adiante nesta seção. Para obter mais informações sobre descritores, consulte [descritores](../../../odbc/reference/develop-app/descriptors.md).  
+ Quando a declaração SQL invoca um procedimento, os parâmetros nomeados podem ser usados. Os parâmetros nomeados são identificados por seus nomes, não por sua posição na declaração SQL. Eles podem ser vinculados por uma chamada ao **SQLBindParameter,** mas o parâmetro é identificado pelo campo SQL_DESC_NAME do IPD (descritor de parâmetro de implementação), não pelo argumento *ParameterNumber* do **SQLBindParameter**. Eles também podem ser vinculados chamando **SQLSetDescField** ou **SQLSetDescRec**. Para obter mais informações sobre os parâmetros nomeados, consulte [Parâmetros de vinculação por nome (parâmetros nomeados)](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md), mais tarde nesta seção. Para obter mais informações sobre descritores, consulte [Descritores](../../../odbc/reference/develop-app/descriptors.md).  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Associando parâmetros](../../../odbc/reference/develop-app/binding-parameters-odbc.md)  
   

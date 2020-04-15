@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (driver do Excel) | Microsoft Docs
+title: SQLDriverConnect (Driver Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - Excel driver [ODBC], SQLDriverConnect
 - SQLDriverConnect function [ODBC], Excel Driver
 ms.assetid: 285cb1ea-f461-4596-97f2-fc57af05dede
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e38f2f513b7da2c9342470ba75e2ee11b3d7e52a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1108206bf38183887540b114fda5a1e913aa67d9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053906"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307117"
 ---
 # <a name="sqldriverconnect-excel-driver"></a>SQLDriverConnect (Driver do Excel)
 > [!NOTE]  
->  Este tópico fornece informações específicas do driver do Excel. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico fornece informações específicas do Excel Driver. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [Referência à API oDBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- O **SQLDriverConnect** permite que você se conecte a um driver sem criar uma fonte de dados (DSN).  
+ **O SQLDriverConnect** permite que você se conecte a um driver sem criar uma fonte de dados (DSN).  
   
- As seguintes palavras-chave têm suporte na cadeia de conexão para todos os drivers: **DSN**, **DBQ**e **Fil**.  
+ As seguintes palavras-chave são suportadas na seqüência de conexões para todos os drivers: **DSN,** **DBQ**e **FIL**.  
   
- A tabela a seguir mostra as palavras-chave mínimas necessárias para se conectar a cada driver e fornece um exemplo de pares de palavra-chave/valor usados com **SQLDriverConnect**. Para obter uma lista completa dos valores de DRIVERid, consulte [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).  
+ A tabela a seguir mostra as palavras-chave mínimas necessárias para se conectar a cada driver e fornece um exemplo de pares de palavras-chave/valor usados com **SQLDriverConnect**. Para obter uma lista completa de valores driverid, consulte [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).  
   
 > [!NOTE]  
->  Se DBQ ou DefaultDir não for especificado para o driver do Microsoft Excel 3,0 ou 4,0, o driver será conectado ao diretório atual.  
+>  Se o DBQ ou o DefaultDir não forem especificados para o driver Microsoft Excel 3.0 ou 4.0, o driver se conectará ao diretório atual.  
   
 |Driver|Palavras-chave necessárias|Exemplos|  
 |------------|-----------------------|--------------|  
-|Microsoft Excel 3,0 ou 4,0|Driver, DriverID|Driver = {Microsoft Excel driver (*. xls)}; DBQ = c:\temp; DriverID = 278|  
-|Microsoft Excel 5.0/7.0|Driver, DriverID, DBQ|Driver = {Microsoft Excel driver (*. xls)}; DBQ = c:\Temp\sample.xls; DriverID = 22|  
-|Microsoft Excel 97 e posterior|Driver, DriverID, DBQ|Driver = {Microsoft Excel driver (*. xls)}; DBQ = c:\Temp\sample.xls; DriverID = 790|
+|Microsoft Excel 3.0 ou 4.0|Motorista, DriverID|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp; DriverID=278|  
+|Microsoft Excel 5.0/7.0|Motorista, DriverID, DBQ|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp\sample.xls; DriverID=22|  
+|Microsoft Excel 97 e posterior|Motorista, DriverID, DBQ|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp\sample.xls; DriverID=790|
