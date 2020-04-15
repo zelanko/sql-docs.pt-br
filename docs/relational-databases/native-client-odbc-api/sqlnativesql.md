@@ -11,15 +11,15 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLNativeSql function
 ms.assetid: 2d999fec-9e22-4514-ad5f-22a64b82f95b
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4d2baef508d6273ec6c89cca38961aa22742e69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 19db781408b419c5aa657ac3a256188ff20e4554
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73926015"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298426"
 ---
 # <a name="sqlnativesql"></a>SQLNativeSql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

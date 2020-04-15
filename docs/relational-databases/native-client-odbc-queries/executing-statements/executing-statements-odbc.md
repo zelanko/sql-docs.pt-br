@@ -1,5 +1,5 @@
 ---
-title: Executando instruções (ODBC) | Microsoft Docs
+title: Executando Declarações (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,26 +13,26 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statements [ODBC], executing
 ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efd0b9ba46975512491dadccb5a44940af52ec28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3489c26073da15fb41af6d1560cb48fe38897386
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73791030"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297926"
 ---
 # <a name="executing-statements-odbc"></a>Executando instruções (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client oferece várias maneiras de executar instruções SQL em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados:  
+  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Cliente Nativo oferece uma variedade [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de maneiras de executar instruções SQL em um banco de dados:  
   
 -   Execução direta  
   
 -   Execução preparada  
   
- A execução direta envolve criar uma cadeia de caracteres [!INCLUDE[tsql](../../../includes/tsql-md.md)] que contém uma instrução e enviá-la para execução usando a função **SQLExecDirect** . A execução preparada envolve a compilação de uma cadeia de caracteres contendo uma instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] e a execução em dois estágios. O primeiro estágio usa a função de [função SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) para analisar e compilar o plano de execução para a instrução [!INCLUDE[ssDE](../../../includes/ssde-md.md)]no. O segundo estágio usa a função **SQLExecute** para executar o plano de execução preparado anteriormente. Dessa forma, a sobrecarga de análise e compilação é salva em cada execução. A execução preparada geralmente é usada através de aplicativos para executar a mesma instrução SQL com parâmetros várias vezes.  
+ A execução direta envolve a [!INCLUDE[tsql](../../../includes/tsql-md.md)] construção de uma seqüência de caracteres contendo uma declaração e enviá-la para execução usando a função **SQLExecDirect.** A execução preparada envolve a compilação de uma cadeia de caracteres contendo uma instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] e a execução em dois estágios. O primeiro estágio usa a função [SQLPrepare function](https://go.microsoft.com/fwlink/?LinkId=59360) para analisar e [!INCLUDE[ssDE](../../../includes/ssde-md.md)]compilar o plano de execução da declaração no . O segundo estágio usa a função **SQLExecute** para executar o plano de execução previamente preparado. Dessa forma, a sobrecarga de análise e compilação é salva em cada execução. A execução preparada geralmente é usada através de aplicativos para executar a mesma instrução SQL com parâmetros várias vezes.  
   
  As execuções direta e preparada podem executar uma única instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou um lote de instruções SQL, ou elas podem chamar um procedimento armazenado.  
   
@@ -49,6 +49,6 @@ ms.locfileid: "73791030"
 -   [Efeitos das opções ISO](../../../relational-databases/native-client-odbc-queries/executing-statements/effects-of-iso-options.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Executando consultas &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [Execução de consultas &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

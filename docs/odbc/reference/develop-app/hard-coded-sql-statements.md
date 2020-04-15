@@ -1,5 +1,5 @@
 ---
-title: Instruções SQL embutidas em código | Microsoft Docs
+title: Declarações SQL codificadas em código rígido | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - hard-coded SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b0205208a28238f4fbccb5ae2fd96639b664bd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c7a092742e5f0151b7b08f434b453645cbd804a5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139149"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300196"
 ---
 # <a name="hard-coded-sql-statements"></a>Instruções SQL embutidas em código
-Os aplicativos que executam uma tarefa fixa geralmente contêm instruções SQL embutidas em código. Por exemplo, um sistema de entrada de pedidos pode usar a seguinte chamada para listar ordens de vendas abertas:  
+Os aplicativos que executam uma tarefa fixa geralmente contêm instruções SQL codificadas. Por exemplo, um sistema de entrada de pedidos pode usar a seguinte chamada para listar ordens de venda abertas:  
   
 ```  
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- Há várias vantagens em instruções SQL embutidas em código: elas podem ser testadas quando o aplicativo é escrito; Eles são mais simples de implementar do que as instruções construídas em tempo de execução; e eles simplificam o aplicativo.  
+ Existem várias vantagens para declarações SQL codificadas: Elas podem ser testadas quando o aplicativo é escrito; são mais simples de implementar do que as declarações construídas em tempo de execução; e eles simplificam a aplicação.  
   
- O uso de parâmetros de instrução e instruções de preparação fornecem maneiras ainda melhores de usar instruções SQL embutidas em código. Por exemplo, suponha que a tabela Parts contenha as colunas partid, descrição e preço. Uma maneira de inserir uma nova linha nessa tabela seria construir e executar uma instrução **Insert** :  
+ Usar parâmetros de instrução e preparar instruções fornece maneiras ainda melhores de usar instruções SQL codificadas. Por exemplo, suponha que a tabela Partes contenha as colunas PartID, Description e Price. Uma maneira de inserir uma nova linha nesta tabela seria construir e executar uma instrução **INSERT:**  
   
 ```  
 #define DESC_LEN 51  
@@ -51,7 +51,7 @@ sprintf_s(Statement, 100, "INSERT INTO Parts (PartID, Description,  Price) "
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- Uma maneira ainda melhor é usar uma instrução parametrizada e embutida em código. Isso tem duas vantagens em relação a uma instrução com valores de dados embutidos em código. Primeiro, é mais fácil construir uma instrução parametrizada porque os valores de dados podem ser enviados em seus tipos nativos, como inteiros e números de ponto flutuante, em vez de convertê-los em cadeias de caracteres. Em segundo lugar, essa instrução pode ser usada mais de uma vez simplesmente alterando os valores de parâmetro e executando-a novamente; Não é necessário reconstruí-lo.  
+ Uma maneira ainda melhor é usar uma declaração codificada e parametrizada. Isso tem duas vantagens sobre uma declaração com valores de dados codificados. Primeiro, é mais fácil construir uma declaração parametrizada porque os valores de dados podem ser enviados em seus tipos nativos, como inteiros e números de pontos flutuantes, em vez de convertê-los em strings. Em segundo lugar, tal declaração pode ser usada mais de uma vez simplesmente alterando os valores dos parâmetros e reexecutando-os; não há necessidade de reconstruí-lo.  
   
 ```  
 #define DESC_LEN 51  
@@ -78,7 +78,7 @@ GetNewValues(&PartID, Desc, &Price);
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- Supondo que essa instrução seja executada mais de uma vez, ela pode ser preparada para uma eficiência ainda maior:  
+ Supondo que esta declaração seja executada mais de uma vez, ela pode ser preparada para uma eficiência ainda maior:  
   
 ```  
 #define DESC_LEN 51  
@@ -106,7 +106,7 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecute(hstmt);  
 ```  
   
- Talvez a maneira mais eficiente de usar a instrução seja construir um procedimento que contenha a instrução, conforme mostrado no exemplo de código a seguir. Como o procedimento é construído no tempo de desenvolvimento e armazenado na fonte de dados, ele não precisa ser preparado em tempo de execução. Uma desvantagem desse método é que a sintaxe para a criação de procedimentos é específica do DBMS e os procedimentos devem ser construídos separadamente para cada DBMS no qual o aplicativo deve ser executado.  
+ Talvez a maneira mais eficiente de usar a declaração seja construir um procedimento contendo a declaração, como mostrado no exemplo de código a seguir. Como o procedimento é construído na hora do desenvolvimento e armazenado na fonte de dados, ele não precisa ser preparado em tempo de execução. Uma desvantagem deste método é que a sintaxe para a criação de procedimentos é específica do DBMS e os procedimentos devem ser construídos separadamente para cada DBMS no qual o aplicativo deve ser executado.  
   
 ```  
 #define DESC_LEN 51  
@@ -129,4 +129,4 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecDirect(hstmt, "{call InsertPart(?, ?, ?)}", SQL_NTS);  
 ```  
   
- Para obter mais informações sobre parâmetros, instruções preparadas e procedimentos, consulte [executando uma instrução](../../../odbc/reference/develop-app/executing-a-statement.md).
+ Para obter mais informações sobre parâmetros, declarações preparadas e procedimentos, consulte [Executando uma Declaração](../../../odbc/reference/develop-app/executing-a-statement.md).

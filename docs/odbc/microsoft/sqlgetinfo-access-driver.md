@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (driver de acesso) | Microsoft Docs
+title: SQLGetInfo (Driver de acesso) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,33 +11,33 @@ helpviewer_keywords:
 - SQLGetInfo function [ODBC], Access Driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d71e3522ab46116e378b2ee17689a7048af04c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9a9208ce32faa221d543baf62e2169e4523ae437
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003310"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298586"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (Driver do Access)
 > [!NOTE]  
->  Este tópico fornece informações específicas do driver de acesso. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico fornece informações específicas do Access Driver. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [Referência à API oDBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** dá suporte ao tipo de informações SQL_FILE_USAGE. O valor retornado é um inteiro de 16 bits que indica como o driver trata diretamente os arquivos em uma fonte de dados:  
+ **O SQLGetInfo** suporta o SQL_FILE_USAGE tipo de informação. O valor retornado é um inteiro de 16 bits que indica como o driver trata diretamente os arquivos em uma fonte de dados:  
   
--   SQL_FILE_NOT_SUPPORTED-o driver não é um driver de camada única.  
+-   SQL_FILE_NOT_SUPPORTED - O motorista não é um motorista de nível único.  
   
--   SQL_FILE_TABLE-um driver de camada única trata arquivos em uma fonte de dados como tabelas.  
+-   SQL_FILE_TABLE - Um driver de nível único trata arquivos em uma fonte de dados como tabelas.  
   
--   SQL_FILE_QUALIFIER-um driver de camada única trata arquivos em uma fonte de dados como um qualificador.  
+-   SQL_FILE_QUALIFIER - Um driver de nível único trata arquivos em uma fonte de dados como um qualificador.  
   
  O driver ODBC retorna SQL_FILE_QUALIFIER porque cada arquivo é um banco de dados completo.  
   
 ## <a name="sql_bookmark_persistence"></a>SQL_BOOKMARK_PERSISTENCE  
- SQL_BP_SCROLL &#124; SQL_BP_UPDATE [1]  
+ SQL_BP_UPDATE &#124; SQL_BP_SCROLL  
   
- [1] os indicadores persistem após uma confirmação, mas não persistem após uma reversão.  
+ [1] Os marcadores persistem após um compromisso, mas não persistem após uma reversão.  
   
 ## <a name="sql_convert_binary"></a>SQL_CONVERT_BINARY  
  SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
@@ -92,15 +92,15 @@ ms.locfileid: "68003310"
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|Format|Versão|Formato dos números de versão|  
+|Isam|Versão|Formato dos números de versão|  
 |----------|-------------|-------------------------------|  
-|Microsoft Access|2.0|02.00.0000|  
+|Microsoft Access|2,0|02.00.0000|  
 ||3.0|03.00.0000|  
-||3.5|03.50.0000|  
-||4.0|04.00.0000|  
+||3,5|03.50.0000|  
+||4,0|04.00.0000|  
   
 > [!NOTE]  
->  As versões 1,0 e 1,1 não têm suporte. Além disso, não há nenhuma diferença no formato de dados no Microsoft Access versões 3,0, 7,0 e 97.  
+>  As versões 1.0 e 1.1 não são suportadas. Além disso, não há diferença no formato de dados nas versões 3.0, 7.0 e 97 do Microsoft Access.  
   
 ## <a name="sql_ddl_index"></a>SQL_DDL_INDEX  
  SQL_DL_CREATE_INDEX  
@@ -111,9 +111,9 @@ ms.locfileid: "68003310"
  SQL_GD_ANY_ORDER &#124; SQL_GD_ANY_COLUMN &#124; SQL_GD_BLOCK &#124; SQL_GD_BOUND  
   
 ## <a name="sql_keywords"></a>SQL_KEYWORDS  
- ALFANUMÉRICO  
+ Alfanumérico  
   
- AUTOINCREMENT  
+ Autoincrement  
   
  BINARY  
   
@@ -121,19 +121,19 @@ ms.locfileid: "68003310"
   
  BYTE  
   
- NEUTRALIZA  
+ Counter  
   
  CURRENCY  
   
  DATABASE  
   
- NOMEDOBANCODEDADOS  
+ Databasename  
   
  DATETIME  
   
- DESATIVAR  
+ Impedir  
   
- DISTINCTROW  
+ Distinctrow  
   
  DOUBLEFLOAT  
   
@@ -151,35 +151,35 @@ ms.locfileid: "68003310"
   
  IMAGE  
   
- INTEGER1  
+ INTEIRO1  
   
- INTEGER2  
+ INTEIRO2  
   
- INTEGER4  
+ INTEIRO4  
   
- LÓGICO  
+ Lógico  
   
- LOGICAL1  
+ LÓGICA1  
   
  LONG  
   
  LONGBINARY  
   
- LONGCHAR  
+ Longchar  
   
- LONGTEXT  
+ Longtext  
   
- CAMPOS  
+ Memorando  
   
  MONEY  
   
- NOTE  
+ OBSERVAÇÃO  
   
  NUMBER  
   
- OLEOBJECT  
+ Oleobject  
   
- Option  
+ ACESSO AO PROPRIETÁRIO  
   
  PARAMETERS  
   
@@ -187,9 +187,9 @@ ms.locfileid: "68003310"
   
  PIVOT  
   
- BAIXO  
+ SHORT  
   
- EXCLUSIVO  
+ Único  
   
  SINGLEFLOAT  
   
@@ -199,15 +199,15 @@ ms.locfileid: "68003310"
   
  STRING  
   
- TABLEID  
+ Tableid  
   
  TEXT  
   
  INÍCIO  
   
- TENHA  
+ Transformar  
   
- UNSIGNEDBYTE  
+ Unsignedbyte  
   
  VAR  
   
@@ -215,7 +215,7 @@ ms.locfileid: "68003310"
   
  VARP  
   
- YESNO  
+ Yesno  
   
 ## <a name="sql_numeric_functions"></a>SQL_NUMERIC_FUNCTIONS  
  SQL_FN_NUM_ABS &#124; SQL_FN_NUM_ATAN &#124; SQL_FN_NUM_CEILING &#124; SQL_FN_NUM_COS &#124; SQL_FN_NUM_EXP &#124; SQL_FN_NUM_FLOOR &#124; SQL_FN_NUM_LOG &#124; SQL_FN_NUM_MOD &#124; SQL_FN_NUM_POWER &#124; SQL_FN_NUM_RAND &#124; SQL_FN_NUM_SIGN &#124; SQL_FN_NUM_SIN &#124; SQL_FN_NUM_SQRT &#124; SQL_FN_NUM_TAN  

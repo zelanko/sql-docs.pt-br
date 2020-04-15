@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de linhas de data e hora e esquema
+title: Data e hora e conjuntos de linhas de esquema
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -9,16 +9,16 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 36ba34985cde2f88606a13a4f07f6afb7af5dc7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 66aad8634cdb4d71ba765da94e1e395fc1583226
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74095363"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301036"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadados – conjuntos de linhas de esquema e data e hora
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,10 +30,10 @@ ms.locfileid: "74095363"
   
 |Tipo de coluna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|Limpar|0|  
+|date|DBTYPE_DBDATE|Liberada|0|  
 |time|DBTYPE_DBTIME2|Definir|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Limpar|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|Limpar|3|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Liberada|0|  
+|DATETIME|DBTYPE_DBTIMESTAMP|Liberada|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|Definir|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Definir|0..7|  
   
@@ -94,6 +94,6 @@ ms.locfileid: "74095363"
  O OLE DB apenas define MINIMUM_SCALE e MAXIMUM_SCALE para tipos decimais e numéricos, portanto, o uso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client destas colunas para time, datetime2 e datetimeoffset é não padrão.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;de metadados &#40;OLE DB](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+ [Metadados &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

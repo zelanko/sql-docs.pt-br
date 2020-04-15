@@ -1,5 +1,5 @@
 ---
-title: Referência de linguagem do Visual FoxPro | Microsoft Docs
+title: Referência visual foxpro ling | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - commands for FoxPro ODBC driver [ODBC]
 - Visual FoxPro ODBC driver [ODBC], commands
 ms.assetid: 8e052213-ca6f-44ca-917e-054ecb3eb0e5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 88993a80fa629c2f4cdc8448483fc8a65a6f2adf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 97615b04861c02d4319e7a301043bb9f3c17e8c3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087821"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304777"
 ---
 # <a name="visual-foxpro-language-reference"></a>Referência de linguagem do Visual FoxPro
-Esta seção contém os seguintes tópicos:  
+Esta seção contém os seguintes tópicos.  
   
 -   [ALTER TABLE – comando SQL](../../odbc/microsoft/alter-table-sql-command.md)  
   

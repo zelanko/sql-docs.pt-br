@@ -1,5 +1,5 @@
 ---
-title: Criar SQL Native Client aplicativo ODBC
+title: Criar aplicativo ODBC do cliente nativo do SQL
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - ODBC, driver extensions
 - function calls [ODBC]
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0cf46cdf2fb658623a549f3eef160ae6293ab9c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1b210066caedef8a1efe6c702860f434f483269a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75247387"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303727"
 ---
 # <a name="creating-a-driver-application"></a>Criar um aplicativo da driver
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "75247387"
 |Driver|Processa todas as chamadas de funções ODBC do aplicativo, conecta-se a uma fonte de dados, passa instruções SQL do aplicativo para a fonte de dados e retorna os resultados para o aplicativo. Se necessário, o driver converte SQL ODBC do aplicativo em SQL nativo usado pela fonte de dados.|  
 |Fonte de dados|Contém todas as informações necessárias a um driver para acessar uma instância específica de dados em um DBMS.|  
   
- Um aplicativo que usa o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client para se comunicar com uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância do executa as seguintes tarefas:  
+ Um aplicativo que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa o driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cliente Nativo para se comunicar com uma instância de executa as seguintes tarefas:  
   
 -   Conecta-se com uma fonte de dados  
   
@@ -55,7 +55,7 @@ ms.locfileid: "75247387"
   
 -   Finaliza a conexão com a fonte de dados  
   
- Um aplicativo mais complexo escrito para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client também pode executar as seguintes tarefas:  
+ Um aplicativo mais complexo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] escrito para o driver ODBC do Cliente Nativo também pode executar as seguintes tarefas:  
   
 -   Usar cursores para controlar o local em um conjunto de resultados  
   
@@ -69,7 +69,7 @@ ms.locfileid: "75247387"
   
 -   Executar operações de cópia em massa  
   
--   Gerenciar operações de dados grandes (**varchar (max)**, **nvarchar (max)** e **varbinary (max)** )  
+-   Gerenciar grandes operações de dados **(varchar(max)**, **nvarchar(max)** e **varbinary (max)**  
   
 -   Usar lógica de reconexão para facilitar o failover quando o espelhamento de banco de dados é configurado  
   
@@ -77,21 +77,21 @@ ms.locfileid: "75247387"
   
  Para fazer chamadas de função ODBC, um aplicativo C ou C++ deve incluir os arquivos de cabeçalhos sql.h, sqlext.h e sqltypes.h. Para fazer chamadas às funções de API do instalador ODBC, um aplicativo deve incluir o arquivo de cabeçalho odbcinst.h. Um aplicativo ODBC Unicode deve incluir o arquivo de cabeçalho sqlucode.h. Os aplicativos ODBC devem ser vinculados ao arquivo odbc32.lib. Os aplicativos ODBC que chamam as funções de API do instalador ODBC devem ser vinculados ao arquivo odbccp32.lib. Esses arquivos são incluídos no SDK da Plataforma Windows.  
   
- Muitos drivers ODBC, incluindo o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client, oferecem extensões ODBC específicas do driver. Para aproveitar as extensões [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] específicas do driver ODBC do Native Client, um aplicativo deve incluir o arquivo de cabeçalho sqlncli. h. Esse arquivo de cabeçalho contém:  
+ Muitos drivers ODBC, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluindo o driver ODBC cliente nativo, oferecem extensões ODBC específicas para o motorista. Para aproveitar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as extensões específicas do driver Do Cliente Nativo ODBC, um aplicativo deve incluir o arquivo de cabeçalho sqlncli.h. Esse arquivo de cabeçalho contém:  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Atributos de conexão específicos do driver ODBC do Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Atributos de conexão específicos do driver do Cliente Nativo ODBC.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Atributos de instrução específicos do driver ODBC do Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Atributos de declaração específicos do driver do Cliente Nativo ODBC.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Atributos de coluna específicos do driver ODBC do Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Atributos de coluna específicos do driver do Cliente Nativo ODBC.  
   
 -   Tipos de dados específicos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Tipos de dados definidos pelo usuário específicos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Tipos específicos de [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) do driver ODBC do Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Tipos [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) específicos para driver sdbc específicos do cliente nativo.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Campos de diagnóstico de driver ODBC do Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Campos de diagnóstico de driver do Cliente Nativo ODBC.  
   
 -   Códigos de função dinâmica de diagnóstico específicos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -103,14 +103,14 @@ ms.locfileid: "75247387"
   
 -   Chame as funções de API de metadados de consulta distribuída para listas de servidores vinculados e seus catálogos.  
   
- Qualquer aplicativo ODBC C ou C++ que usa o recurso de cópia em massa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do driver ODBC do Native Client deve ser vinculado ao arquivo sqlncli11. lib. Aplicativos que chamam as funções de API de metadados de consulta distribuída também devem ser vinculados ao sqlncli11.lib. Os arquivos sqlncli. h e sqlncli11. lib são distribuídos como parte das ferramentas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do desenvolvedor. Os diretórios Include e Lib do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devem estar nos caminhos INCLUDE e LIB do compilador conforme o exemplo a seguir:  
+ Qualquer aplicativo C ou C++ ODBC que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] use o recurso de cópia em massa do driver ODBC do Cliente Nativo deve ser vinculado ao arquivo sqlncli11.lib. Aplicativos que chamam as funções de API de metadados de consulta distribuída também devem ser vinculados ao sqlncli11.lib. Os arquivos sqlncli.h e sqlncli11.lib são [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distribuídos como parte das ferramentas do desenvolvedor. Os diretórios Include e Lib do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devem estar nos caminhos INCLUDE e LIB do compilador conforme o exemplo a seguir:  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- Uma decisão de design que deve ser tomada no início do processo de criação de um aplicativo é se ele precisa ter várias chamadas ODBC pendentes ao mesmo tempo. Há dois métodos de suporte a várias chamadas ODBC simultâneas, que são descritos nos próximos tópicos desta seção. Para obter mais informações, consulte a [referência do programador de ODBC](https://go.microsoft.com/fwlink/?LinkId=45250).  
+ Uma decisão de design que deve ser tomada no início do processo de criação de um aplicativo é se ele precisa ter várias chamadas ODBC pendentes ao mesmo tempo. Há dois métodos de suporte a várias chamadas ODBC simultâneas, que são descritos nos próximos tópicos desta seção. Para obter mais informações, consulte a [referência do programador ODBC](https://go.microsoft.com/fwlink/?LinkId=45250).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

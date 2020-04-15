@@ -1,5 +1,5 @@
 ---
-title: Recuperando indicadores | Microsoft Docs
+title: Recuperando marcadores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - result sets [ODBC], bookmarks
 - bookmarks [ODBC]
 ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f18b87adf31f19d2a93bb3af3e14c265ae3940af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3d146b2fb9bfc0e7294709e971f1b6752dc99ab3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020568"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300066"
 ---
 # <a name="retrieving-bookmarks"></a>Recuperar indicadores
-Se o aplicativo usar indicadores, ele deverá definir o atributo SQL_ATTR_USE_BOOKMARKS Statement como SQL_UB_VARIABLE antes de preparar ou executar a instrução. Isso é necessário porque criar e manter indicadores pode ser uma operação cara, portanto, os indicadores devem ser habilitados somente quando um aplicativo puder fazer um bom uso deles.  
+Se o aplicativo usar marcadores, ele deve definir o atributo de declaração SQL_ATTR_USE_BOOKMARKS para SQL_UB_VARIABLE antes de preparar ou executar a declaração. Isso é necessário porque construir e manter marcadores pode ser uma operação cara, por isso os marcadores devem ser habilitados apenas quando um aplicativo pode fazer bom uso deles.  
   
- Os indicadores são retornados como a coluna 0 do conjunto de resultados. Há três maneiras pelas quais um aplicativo pode recuperá-los:  
+ Os marcadores são devolvidos como a coluna 0 do conjunto de resultados. Há três maneiras de um aplicativo recuperá-los:  
   
--   Associe a coluna 0 do conjunto de resultados. **SQLFetch** ou **SQLFetchScroll** retorna os indicadores para cada linha no conjunto de linhas junto com os dados para outras colunas associadas.  
+-   Vincule a coluna 0 do conjunto de resultados. **SQLFetch** ou **SQLFetchScroll** retorna os marcadores para cada linha no conjunto de linhas, juntamente com os dados de outras colunas vinculadas.  
   
--   Chame **SQLSetPos** para posicioná-lo em uma linha no conjunto de linhas e, em seguida, chame **SQLGetData** para a coluna 0. Se um driver oferecer suporte a indicadores, ele deverá sempre oferecer suporte à capacidade de chamar **SQLGetData** para a coluna 0, mesmo que não permita que os aplicativos chamem **SQLGetData** para outras colunas antes da última coluna associada.  
+-   Ligue para **SQLSetPos** para posicionar-se em uma linha no conjunto de linhas e, em seguida, chame **SQLGetData** para a coluna 0. Se um driver suportar marcadores, ele deve sempre suportar a capacidade de chamar **SQLGetData** para a coluna 0, mesmo que não permita que aplicativos chamem **SQLGetData** para outras colunas antes da última coluna vinculada.  
   
--   Chame **SQLBulkOperations** com o argumento de *operação* definido como SQL_ADD e a coluna 0 associada. O cursor insere a linha e retorna o indicador para a linha no buffer associado.
+-   Ligue para **a SQLBulkOperations** com o argumento *Operação* definido para SQL_ADD e a coluna 0 vinculada. O cursor insere a linha e retorna o marcador para a linha no buffer bound.

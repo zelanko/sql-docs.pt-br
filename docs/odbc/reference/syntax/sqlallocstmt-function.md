@@ -17,25 +17,25 @@ f1_keywords:
 helpviewer_keywords:
 - SQLAllocStmt function [ODBC]
 ms.assetid: 7bb38a06-e3d5-4c9a-a0e8-7b59b2ec6927
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54aeb0ecd88509f9390103e8e476bb0f3cb60440
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4b45dd8444d5ca2511672952e0637cc3cc500c5d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036227"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298746"
 ---
 # <a name="sqlallocstmt-function"></a>Função SQLAllocStmt
 **Conformidade**  
- Versão introduzida: conformidade de padrões do ODBC 1,0: preterida  
+ Versão introduzida: ODBC 1.0 Normas Conformidade: Preterido  
   
  **Resumo**  
- No ODBC 3. *x*, o ODBC 2. a função *x* **SQLAllocStmt** foi substituída por **SQLAllocHandle**. Para obter mais informações, consulte [função SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md).  
+ Em ODBC 3. *x*, o ODBC 2. *x* função **SQLAllocStmt** foi substituído por **SQLAllocHandle**. Para obter mais informações, consulte [SQLAllocHandle Function](../../../odbc/reference/syntax/sqlallochandle-function.md).  
   
 > [!NOTE]  
->  Para obter mais informações sobre como o Gerenciador de driver mapeia essa função quando um ODBC 2. o aplicativo *x* está trabalhando com um ODBC 3. Driver *x* , consulte [mapeando funções preteridas](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no apêndice G: diretrizes de driver para compatibilidade com versões anteriores.  
+>  Para obter mais informações sobre o que o Driver Manager mapeia essa função para quando um ODBC 2. *x* aplicativo está trabalhando com um ODBC 3. *x* driver, consulte [Mapeamento de Funções Depreciadas](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no Apêndice G: Diretrizes do driver para compatibilidade retrógrada.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Referência da API oDBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

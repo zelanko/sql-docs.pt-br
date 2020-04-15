@@ -10,23 +10,23 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLGetDescRec function
 ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9363fca515ba712e8968da57bf046bf2690e3ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 42c8a45bb50e5fda8946cc3819aa4702f5c2fb3f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787292"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299556"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Este tópico discute a funcionalidade do SQLGetDescRec que é específica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o Native Client.  
+  Este tópico discute a funcionalidade SQLGetDescRec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é específica para o Cliente Nativo.  
   
 ## <a name="sqlgetdescrec-and-table-valued-parameters"></a>SQLGetDescRec e parâmetros com valor de tabela  
- SQLGetDescRec pode ser usado para obter valores para atributos de parâmetros com valor de tabela e colunas de parâmetro com valor de tabela. O parâmetro *RecNumber* de SQLGetDescRec corresponde ao parâmetro *ParameterNumber* de SQLBindParameter.  
+ O SQLGetDescRec pode ser usado para obter valores para atributos de parâmetros avaliados em tabela e colunas de parâmetros de valor de tabela. O parâmetro *RecNumber* do SQLGetDescRec corresponde ao parâmetro *ParameterNumber* do SQLBindParameter.  
   
  As colunas do parâmetro com valor de tabela ficam disponíveis somente quando o campo do cabeçalho do descritor SQL_SOPT_SS_PARAM_FOCUS é definido como o ordinal de um registro que tenha SQL_DESC_TYPE definido como SQL_SS_TABLE. Para obter mais informações sobre SQL_SOPT_SS_PARAM_FOCUS, consulte [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
@@ -37,17 +37,17 @@ ms.locfileid: "73787292"
 |*Nome*|O nome de parâmetro formal para uma chamada de procedimento armazenado; caso contrário, uma cadeia de caracteres de comprimento 0.|O nome da coluna do parâmetro com valor de tabela.|  
 |*TypePtr*|SQL_DESC_TYPE. Para parâmetros com valor de tabela, este é SQL_SS_TABLE.|SQL_DESC_TYPE|  
 |*SubTypePtr*|Indefinido|SQL_DESC_DATETIME_INTERVAL_CODE (Para registros do tipo SQL_DATETIME ou SQL_INTERVAL.)|  
-|*LengthPtr*|0|SQL_DESC_OCTET_LENGTH|  
+|*ComprimentoPtr*|0|SQL_DESC_OCTET_LENGTH|  
 |*PrecisionPtr*|0|SQL_DESC_PRECISION|  
 |*ScalePtr*|0|SQL_DESC_SCALE|  
-|*NullablePtr*|1|SQL_DESC_NULLABLE|  
+|*AnuladoPtr*|1|SQL_DESC_NULLABLE|  
   
- Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Para obter mais informações sobre parâmetros avaliados em tabela, consulte [Parâmetros valorizados em tabela &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlgetdescrec-support-for-enhanced-date-and-time-features"></a>Suporte de SQLGetDescRec a recursos aprimorados de data e hora  
  Os valores retornados para tipos de data/hora são os seguintes:  
   
-||*TypePtr*|*SubTypePtr*|*LengthPtr*|*PrecisionPtr*|*ScalePtr*|  
+||*TypePtr*|*SubTypePtr*|*ComprimentoPtr*|*PrecisionPtr*|*ScalePtr*|  
 |-|---------------|------------------|-----------------|--------------------|----------------|  
 |DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
@@ -56,13 +56,13 @@ ms.locfileid: "73787292"
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
   
- Para obter mais informações, consulte [melhorias de data e hora &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obter mais informações, consulte [melhorias de data e hora &#40;&#41;da ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlgetdescrec-support-for-large-clr-udts"></a>Suporte de SQLGetDescRec para UDTs CLR grandes  
- O **SQLGetDescRec** dá suporte a UDTs (tipos definidos pelo usuário) CLR grandes. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **O SQLGetDescRec** suporta grandes tipos de UDTs (ClR definidos pelo usuário) de CLR. Para obter mais informações, consulte [Grandes tipos definidos pelo usuário da CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)   
+ [Sqlgetdescrec](https://go.microsoft.com/fwlink/?LinkId=80707)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

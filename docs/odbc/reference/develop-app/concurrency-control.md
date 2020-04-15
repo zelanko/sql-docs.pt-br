@@ -11,26 +11,26 @@ helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7c541bf28c1d4c7ec2e2041201bd7c168625bb34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8afba3b3b8c8fee1307473c790186d509b37d982
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083258"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294846"
 ---
 # <a name="concurrency-control"></a>Controle de simultaneidade
-A *simultaneidade* é a capacidade de duas transações usarem os mesmos dados ao mesmo tempo e, com o maior isolamento da transação, geralmente vem com uma simultaneidade reduzida. Isso ocorre porque o isolamento de transação é geralmente implementado por linhas de bloqueio e, à medida que mais linhas são bloqueadas, menos transações podem ser concluídas sem serem bloqueadas pelo menos temporariamente por uma linha bloqueada. Embora a simultaneidade reduzida seja geralmente aceita como uma compensação para os níveis de isolamento de transação mais altos necessários para manter a integridade do banco de dados, ela pode se tornar um problema em aplicativos interativos com alta atividade de leitura/gravação que usa cursores.  
+*A concorrência* é a capacidade de duas transações de usar os mesmos dados ao mesmo tempo, e com o aumento do isolamento das transações geralmente vem a concorrência reduzida. Isso ocorre porque o isolamento das transações geralmente é implementado por linhas de bloqueio e, à medida que mais linhas são bloqueadas, menos transações podem ser concluídas sem serem bloqueadas pelo menos temporariamente por uma linha bloqueada. Embora a concorrência reduzida seja geralmente aceita como uma troca para os níveis mais altos de isolamento de transações necessários para manter a integridade do banco de dados, ela pode se tornar um problema em aplicativos interativos com alta atividade de leitura/gravação que usam cursores.  
   
- Por exemplo, suponha que um aplicativo execute a instrução SQL **Select \* em Orders**. Ele chama **SQLFetchScroll** para rolar pelo conjunto de resultados e permite que o usuário atualize, exclua ou insira pedidos. Depois que o usuário atualiza, exclui ou insere um pedido, o aplicativo confirma a transação.  
+ Por exemplo, suponha que um aplicativo execute a declaração SQL **SELECT \* FROM Orders**. Ele chama **SQLFetchScroll** para percorrer o conjunto de resultados e permite que o usuário atualize, exclua ou insira ordens. Depois que o usuário atualiza, exclui ou insere um pedido, o aplicativo comete a transação.  
   
- Se o nível de isolamento for de leitura repetida, a transação poderá-depender de como ela é implementada-bloquear cada linha retornada por **SQLFetchScroll**. Se o nível de isolamento for serializável, a transação poderá bloquear a tabela de pedidos inteira. Em ambos os casos, a transação libera seus bloqueios somente quando ele é confirmado ou revertido. Portanto, se o usuário gastar muito tempo lendo pedidos e, muito pouco, atualizando, excluindo ou inserindo-os, a transação poderá bloquear facilmente um grande número de linhas, tornando-as indisponíveis para outros usuários.  
+ Se o nível de isolamento for Read Repetível, a transação pode - dependendo de como ela é implementada - bloquear cada linha retornada pelo **SQLFetchScroll**. Se o nível de isolamento for serializável, a transação pode bloquear toda a tabela Orders. Em ambos os casos, a transação libera seus bloqueios somente quando está comprometida ou revertida. Assim, se o usuário gasta muito tempo lendo pedidos e muito pouco tempo atualizando, excluindo ou inserindo-os, a transação pode facilmente bloquear um grande número de linhas, tornando-as indisponíveis para outros usuários.  
   
- Esse é um problema, mesmo que o cursor seja somente leitura e o aplicativo permita que o usuário Leia apenas os pedidos existentes. Nesse caso, o aplicativo confirma a transação e libera os bloqueios, quando chama **SQLCloseCursor** (no modo de confirmação automática) ou **SQLEndTran** (no modo de confirmação manual).  
+ Isso é um problema, mesmo que o cursor seja somente leitura e o aplicativo permita que o usuário leia apenas as ordens existentes. Neste caso, o aplicativo comete a transação e libera bloqueios, quando ele chama **SQLCloseCursor** (no modo de confirmação automática) ou **SQLEndTran** (no modo de confirmação manual).  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Tipos de simultaneidade](../../../odbc/reference/develop-app/concurrency-types.md)  
   
--   [Simultaneidade otimista](../../../odbc/reference/develop-app/optimistic-concurrency.md)
+-   [Concorrência Otimista](../../../odbc/reference/develop-app/optimistic-concurrency.md)

@@ -1,5 +1,5 @@
 ---
-title: Referência da API ODBC | Microsoft Docs
+title: Referência da API da ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,23 +9,23 @@ ms.technology: connectivity
 ms.topic: conceptual
 apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5073d7efcb2cb99e51fe0d9cd0382806501cfd0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085465"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298930"
 ---
 # <a name="odbc-api-reference"></a>Referência de API do ODBC
-Os tópicos nesta seção descrevem cada função ODBC em ordem alfabética. Cada função é definida como uma função de linguagem de programação C. As descrições incluem o seguinte:  
+Os tópicos desta seção descrevem cada função ODBC em ordem alfabética. Cada função é definida como uma função de linguagem de programação C. As descrições incluem:  
   
 -   Finalidade  
   
--   Versão do ODBC  
+-   Versão ODBC  
   
--   Nível de conformidade da CLI padrão  
+-   Nível padrão de conformidade CLI  
   
 -   Sintaxe  
   
@@ -35,18 +35,18 @@ Os tópicos nesta seção descrevem cada função ODBC em ordem alfabética. Cad
   
 -   Diagnósticos  
   
--   Comentários sobre o uso e a implementação  
+-   Comentários sobre uso e implementação  
   
 -   Exemplo de código  
   
 -   Referências a funções relacionadas  
   
- O nível de conformidade da CLI padrão pode ser um dos seguintes: ISO 92, Open Group, ODBC ou preterido. Uma função marcada como ISO 92-compatível também aparece no Open Group versão 1, pois Open Group é um superconjunto puro de ISO 92. Uma função marcada como em conformidade com grupo aberto também aparece no ODBC 3. *x*, porque o ODBC 3. *x* é um superconjunto puro do Open Group versão 1. Uma função marcada como em conformidade com ODBC aparece em nenhum padrão. Uma função marcada como preterida foi preterida no ODBC 3. *x*.  
+ O nível de conformidade CLI padrão pode ser um dos seguintes: ISO 92, Open Group, ODBC ou Depreciado. Uma função marcada como ISO 92-conformant também aparece na versão 1 do Open Group, porque o Open Group é um superconjunto puro da ISO 92. Uma função marcada como compatível com o Grupo Aberto também aparece no ODBC 3. *x*, porque ODBC 3. *x* é um superconjunto puro do Open Group versão 1. Uma função marcada como compatível com ODBC aparece em nenhum dos padrões. Uma função marcada como depreciada foi preterida em ODBC 3. *x*.  
   
- A manipulação de informações de diagnóstico é descrita na descrição da função [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) . O texto associado a valores SQLSTATE está incluído para fornecer uma descrição da condição, mas não se destina a prescrever um texto específico.  
+ O manuseio das informações de diagnóstico é descrito na descrição da função [SQLGetDiagField.](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) O texto associado aos valores de SQLSTATE está incluído para fornecer uma descrição da condição, mas não se destina a prescrever texto específico.  
   
 > [!NOTE]  
->  Para obter informações específicas do driver sobre funções ODBC, consulte a seção para o driver.  
+>  Para obter informações específicas do driver sobre as funções ODBC, consulte a seção do driver.  
   
  Esta seção contém tópicos para as seguintes funções:  
   
@@ -154,7 +154,7 @@ Os tópicos nesta seção descrevem cada função ODBC em ordem alfabética. Cad
   
 -   [Função SQLNativeSql](../../../odbc/reference/syntax/sqlnativesql-function.md)  
   
--   [SQLNumParams Função](../../../odbc/reference/syntax/sqlnumparams-function.md)  
+-   [Função SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md)  
   
 -   [Função SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLAllocStmt (driver ODBC do Visual FoxPro) | Microsoft Docs
+title: SQLAllocStmt (Visual FoxPro ODBC Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLAllocStmt function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: ba973025-18c8-481b-a383-6ed935237894
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4f21a2b1c7c8573d06f92654f85b4ecaacc1484a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 76a5be30378e1bf4101e72de621d803c084e6c66
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063279"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300646"
 ---
 # <a name="sqlallocstmt-visual-foxpro-odbc-driver"></a>SQLAllocStmt (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
->  Este tópico contém informações específicas do driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico contém informações específicas do driver Visual FoxPro ODBC. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [Referência à API oDBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Suporte: completo  
+ Suporte: Completo  
   
- Conformidade da API ODBC: nível de núcleo  
+ Conformidade da API ODBC: Nível do núcleo  
   
- Aloca memória para um identificador de instrução e associa o identificador de instrução à conexão especificada por *HDBC*. O Gerenciador de driver passa essa chamada para o driver, que aloca a memória para a estrutura *HSTMT* .  
+ Aloca a memória para uma alça de declaração e associa a alça da declaração com a conexão especificada pelo *hdbc*. O Driver Manager passa esta chamada para o driver, que aloca a memória para a estrutura *hstmt.*  
   
- Para obter mais informações, consulte [SQLAllocStmt](../../odbc/reference/syntax/sqlallocstmt-function.md) na *referência do programador de ODBC*.
+ Para obter mais informações, consulte [SQLAllocStmt](../../odbc/reference/syntax/sqlallocstmt-function.md) no *Programador da ODBC*.

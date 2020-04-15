@@ -1,5 +1,5 @@
 ---
-title: Guia de&#39;s do ODBC driver for Oracle User | Microsoft Docs
+title: Driver ODBC para Guia de&#39;do Usuário Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,37 +10,37 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], using ODBC driver for Oracle
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5ca4e8aa690aae9c8c3e30ed73745f2054dc396
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 09eed63bec2a7dd7ff361a1407159977a3a84b4d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915796"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293147"
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>Guia do usuário do ODBC driver for Oracle&#39;s
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>Driver ODBC para Guia de&#39;do Usuário Oracle
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
+>  Esse recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
   
- O guia do usuário do driver ODBC para Oracle destina-se a complementar a ajuda da instalação que pode ser acessada por meio do [administrador de fonte de dados ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
+ O Guia do Usuário ODBC driver for Oracle destina-se a complementar a ajuda de configuração que pode ser acessada através do Administrador de Fonte de Dados da [ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Esquema de versão do driver](../../odbc/microsoft/driver-version-scheme.md)  
   
--   [Instalando o software](../../odbc/microsoft/installing-the-software-odbc.md)  
+-   [Instalação do Software](../../odbc/microsoft/installing-the-software-odbc.md)  
   
 -   [Patches de software da Oracle](../../odbc/microsoft/oracle-software-patches.md)  
   
--   [Adicionar e modificar fontes de dados usando a instalação](../../odbc/microsoft/adding-and-modifying-data-sources-using-setup.md)  
+-   [Adicionando e modificando fontes de dados usando a instalação](../../odbc/microsoft/adding-and-modifying-data-sources-using-setup.md)  
   
--   [Testar a conexão ODBC](../../odbc/microsoft/testing-the-odbc-connection.md)  
+-   [Testando a conexão ODBC](../../odbc/microsoft/testing-the-odbc-connection.md)  
   
--   [Configurar o driver ODBC para Oracle](../../odbc/microsoft/configuring-the-odbc-driver-for-oracle.md)  
+-   [Configurando o driver ODBC para Oracle](../../odbc/microsoft/configuring-the-odbc-driver-for-oracle.md)  
   
--   [Conectando-se a uma fonte de dados](../../odbc/microsoft/connecting-to-a-data-source-odbc-driver-for-oracle.md)  
+-   [Conectando a uma Fonte de Dados](../../odbc/microsoft/connecting-to-a-data-source-odbc-driver-for-oracle.md)  
   
--   [Determinar os componentes da Oracle instalados](../../odbc/microsoft/determining-installed-oracle-components.md)  
+-   [Determinando os componentes da Oracle instalados](../../odbc/microsoft/determining-installed-oracle-components.md)  
   
--   [Configurar o formato de data na conexão](../../odbc/microsoft/setting-the-date-format-on-connection.md)
+-   [Configurando o formato de data na conexão](../../odbc/microsoft/setting-the-date-format-on-connection.md)
