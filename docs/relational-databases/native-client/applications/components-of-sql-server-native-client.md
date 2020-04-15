@@ -1,5 +1,5 @@
 ---
-title: Componentes de SQL Server Native Client | Microsoft Docs
+title: Componentes do Cliente Nativo do Servidor SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,27 +12,27 @@ helpviewer_keywords:
 - components [SQL Server Native Client]
 - SQLNCLI, about SQL Server Native Client
 ms.assetid: 65f932d5-daa1-4eff-b6df-ee633fcf2a7c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2dfe1dd9192277ebdf02017abae692dff30e2e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: bae5a3871750791d3339e2b98b715ec3779d105d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73772544"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302497"
 ---
 # <a name="components-of-sql-server-native-client"></a>Componentes do SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client contém os seguintes componentes:  
   
-|Componente|DESCRIÇÃO|  
+|Componente|Descrição|  
 |---------------|-----------------|  
 |sqlncli11.dll|O arquivo de biblioteca de vínculo dinâmico (DLL) que contém toda a funcionalidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Isso inclui o provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e o driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|  
 |sqlnclir11.rll|O arquivo de recursos que acompanha a biblioteca do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|   
-|sqlncli.h|O arquivo do cabeçalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client que contém todas as novas definições necessárias para usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Esse arquivo de cabeçalho substitui os arquivos de cabeçalho odbcss.h e sqloledb.h.<br /><br /> Observação: não é possível referenciar sqlncli. h e odbcss. h no mesmo programa, mas você pode fazer referência a sqlncli. h e SQLOLEDB. h no mesmo programa, contanto que SQLOLEDB. h seja definido primeiro.|  
-|sqlncli11.lib|O arquivo de biblioteca necessário para chamar diretamente as funções do utilitário **bcp** que fazem parte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do driver ODBC do Native Client.<br /><br /> Observação: se você fizer referência ao arquivo sqlncli11. lib no código de programação, precisará certificar-se de que o arquivo sqlncli11. dll está no caminho do sistema e no caminho do sistema dos usuários que usam seu aplicativo.|  
+|sqlncli.h|O arquivo do cabeçalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client que contém todas as novas definições necessárias para usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Esse arquivo de cabeçalho substitui os arquivos de cabeçalho odbcss.h e sqloledb.h.<br /><br /> Nota: Você não pode referenciar sqlncli.h e odbcss.h no mesmo programa, mas você pode referenciar sqlncli.h e sqloledb.h no mesmo programa enquanto sqloledb.h for definido primeiro.|  
+|sqlncli11.lib|O arquivo de biblioteca necessário para chamar diretamente as [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] funções de utilitário **bcp** que fazem parte do driver ODBC cliente nativo.<br /><br /> Nota: Se você fizer referência ao arquivo sqlncli11.lib em seu código de programação, você precisa ter certeza de que o arquivo sqlncli11.dll está no caminho do sistema e no caminho do sistema dos usuários que fazem uso do seu aplicativo.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criando aplicativos com o SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  

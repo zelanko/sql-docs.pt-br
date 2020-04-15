@@ -1,5 +1,5 @@
 ---
-title: DLLs de instalação do Tradutor | Microsoft Docs
+title: DLLs de configuração do tradutor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - translator setup DLL [ODBC]
 ms.assetid: b3ca79e9-01b9-4541-81de-bbbad24ca736
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b6c99dffc94f2675efdbbc3d5c1d142a5ae9b7e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 28c354fddb36b9e035361fa4ba03fbde34b7d399
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093845"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81296046"
 ---
 # <a name="translator-setup-dlls"></a>DLLs de instalação do conversor
 > [!NOTE]  
->  A partir do Windows XP e do Windows Server 2003, o ODBC está incluído no sistema operacional Windows. Você só deve instalar explicitamente o ODBC em versões anteriores do Windows.  
+>  Começando com o Windows XP e o Windows Server 2003, o ODBC está incluído no sistema operacional windows. Você só deve instalar explicitamente o ODBC em versões anteriores do Windows.  
   
- A DLL de instalação do tradutor contém a função **ConfigTranslator** , que retorna a opção padrão para um tradutor. Se necessário, ele solicita essas informações ao usuário. Para obter uma descrição completa dessa função, consulte [Setup DLL API Reference](../../../odbc/reference/syntax/setup-dll-api-reference.md).  
+ A configuração do tradutor DLL contém a função **ConfigTranslator,** que retorna a opção padrão para um tradutor. Se necessário, ele solicita ao usuário essas informações. Para obter uma descrição completa desta função, consulte [Configuração de referência de API DLL](../../../odbc/reference/syntax/setup-dll-api-reference.md).  
   
- A DLL de instalação do tradutor é escrita pelo desenvolvedor do tradutor. Ele pode fazer parte da DLL do tradutor ou de uma DLL separada.
+ A configuração do tradutor DLL é escrita pelo desenvolvedor do tradutor. Pode ser parte do DLL tradutor ou de um DLL separado.

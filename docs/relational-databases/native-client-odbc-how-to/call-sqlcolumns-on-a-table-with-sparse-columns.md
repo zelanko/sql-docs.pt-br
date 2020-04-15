@@ -1,5 +1,5 @@
 ---
-title: Chamar SQLColumns em uma tabela com colunas esparsas | Microsoft Docs
+title: Ligue para colunas SQL em uma tabela com colunas esparsas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.technology: native-client
 yms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffe65b15ef18618058ea9ccc385dd12cd0482d96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 57dc76c3373623ac133b0911e37ac4298682fa92
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781701"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298306"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Chamar SQLColumns em uma tabela com colunas esparsas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "73781701"
   
  Compile com /EHsc /D, "UNICODE" e odbc32.lib.  
   
- A segunda listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () exclui a tabela criada por este exemplo.  
+ A segunda [!INCLUDE[tsql](../../includes/tsql-md.md)]listagem de código () exclui a tabela criada por esta amostra.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

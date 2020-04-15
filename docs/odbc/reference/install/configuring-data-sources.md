@@ -1,5 +1,5 @@
 ---
-title: Configurando fontes de dados | Microsoft Docs
+title: Configuração de fontes de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], configuring
 ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa845e44e2f8999ed4e103583acb0536e2aca096
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b0d52c154f4e9d38aad9d08668f41917793e5893
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68068625"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300346"
 ---
 # <a name="configuring-data-sources"></a>Configurar fontes de dados
-As informações sobre fontes de dados são armazenadas no registro do sistema. Os usuários modificam informações de fonte de dados por meio de um programa de administração. Esse pode ser o Administrador ODBC, o dispositivo do painel de controle ODBC ou um programa de administração escrito por um desenvolvedor de aplicativo ou driver.  
+As informações sobre fontes de dados são armazenadas no registro do sistema. Os usuários modificam as informações de origem de dados através de um programa de administração. Este pode ser o Administrador ODBC, o dispositivo ODBC Control Panel ou um programa de administração escrito por um desenvolvedor de aplicativos ou driver.  
   
- Você pode usar comandos do PowerShell para modificar fontes de dados. Para obter mais informações sobre esses comandos do PowerShell, consulte [comandos do PowerShell dos componentes de acesso a dados do Windows](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
+ Você pode usar os comandos PowerShell para modificar fontes de dados. Para obter mais informações sobre esses comandos PowerShell, consulte [os comandos PowerShell do Windows Data Access Components](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
   
 > [!NOTE]  
->  Esta seção é específica para plataformas do Microsoft Windows®. Como as fontes de dados são configuradas em outras plataformas é específica da plataforma.  
+>  Esta seção é específica para as plataformas ® Microsoft Windows. A forma como as fontes de dados são configuradas em outras plataformas é específica da plataforma.  
   
- Esta seção contém o tópico a seguir:  
+ Esta seção contém o seguinte tópico:  
   
 -   [Componentes de configuração](../../../odbc/reference/install/configuration-components.md)
