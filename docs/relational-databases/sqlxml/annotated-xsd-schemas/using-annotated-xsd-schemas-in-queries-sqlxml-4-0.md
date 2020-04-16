@@ -1,5 +1,6 @@
 ---
-title: Usando esquemas XSD anotados em consultas (SQLXML)
+title: Usando schemas XSD anotados em consultas (SQLXML)
+description: Saiba como especificar consultas do XPath contra um esquema XSD anotado no SQLXML 4.0 para recuperar dados do banco de dados.
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,18 +23,18 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a53e53f27b9b0c9c94519cb55aa136349f6ff7c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e9ecd9d65d0f70f7c25328c15bb886ca52122de2
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75247000"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388687"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Usando esquemas XSD anotados em consultas (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Você pode especificar consultas com relação a um esquema anotado para recuperar dados do banco de dados especificando consultas XPath em um modelo com relação ao esquema XSD.  
   
- O ** \<elemento SQL: XPath-Query>** permite que você especifique uma consulta XPath em relação ao modo de exibição XML que é definido pelo esquema anotado. O esquema anotado no qual a consulta XPath deve ser executada é identificada usando o atributo **Mapping-Schema** do elemento ** \<SQL: XPath-Query>** .  
+ O elemento ** \<sql:xpath-query>** permite especificar uma consulta XPath contra a exibição XML definida pelo esquema anotado. O esquema anotado contra o qual a consulta XPath deve ser executada é identificado usando o atributo **mapeamento-esquema** do ** \<elemento sql:xpath-query>.**  
   
  Os modelos são documentos XML válidos que contêm uma ou mais consultas. As consultas FOR XML e XPath retornam um fragmento de documento. Os modelos atuam como contêineres dos fragmentos de documento; os modelos oferecem uma maneira de especificar um único elemento de nível superior.  
   
@@ -64,12 +65,12 @@ ms.locfileid: "75247000"
 </sql:xpath-query>  
 ```  
   
- Em seguida, você poderá criar e usar o Script de Teste SQLXML 4.0 (Sqlxml4test.vbs) para executar a consulta como parte de um arquivo de modelo. Para obter mais informações, consulte [esquemas XDR anotados &#40;preteridos no SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+ Em seguida, você poderá criar e usar o Script de Teste SQLXML 4.0 (Sqlxml4test.vbs) para executar a consulta como parte de um arquivo de modelo. Para obter mais informações, consulte [Schemas XDR anotados &#40;Preteridos em SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="using-inline-mapping-schemas"></a>Usando esquemas de mapeamento embutidos  
  Um esquema anotado pode ser incluído diretamente em um modelo e, em seguida, uma consulta XPath pode ser especificada no modelo com relação ao esquema embutido. O modelo pode também ser um diagrama de atualização.  
   
- Um modelo pode incluir vários esquemas embutidos. Para usar um esquema embutido que está incluído em um modelo, especifique o atributo **ID** com um valor exclusivo no elemento ** \<xsd: Schema>** e, em seguida, use **#idvalue** para fazer referência ao esquema embutido. O atributo **ID** é idêntico em comportamento para o **SQL: ID** ({urn: schemas-microsoft-com: XML-SQL} ID) usado em esquemas XDR.  
+ Um modelo pode incluir vários esquemas embutidos. Para usar um esquema inline incluído em um modelo, especifique o atributo **id** com um valor único no elemento ** \<>xsd:schema** e use **#idvalue** para referenciar o esquema inline. O atributo **id** é idêntico no comportamento do **sql:id** ({urn:schemas-microsoft-com:xml-sql}id) usado em schemas XDR.  
   
  Por exemplo, o seguinte modelo especifica dois esquemas anotados embutidos:  
   
@@ -116,23 +117,23 @@ ms.locfileid: "75247000"
 </ROOT>  
 ```  
   
- O modelo também especifica duas consultas XPath. Cada um dos elementos de ** \<>de consulta XPath** identifica exclusivamente o esquema de mapeamento especificando o atributo **Mapping-Schema** .  
+ O modelo também especifica duas consultas XPath. Cada um ** \<** dos elementos de consulta xpath>identifica exclusivamente o esquema de mapeamento especificando o atributo **mapeamento-esquema.**  
   
- Quando você especifica um esquema embutido no modelo, a anotação **SQL: is-Mapping-Schema** também deve ser especificada no elemento ** \<xsd: Schema>** . O **SQL: is-Mapping-Schema** usa um valor booliano (0 = false, 1 = true). Um esquema embutido com **SQL: is-Mapping-Schema = "1"** é tratado como esquema anotado embutido e não é retornado no documento XML.  
+ Quando você especifica rumina um esquema inline no modelo, a anotação **sql:is-mapping-schema** também deve ser especificada no elemento ** \<xsd:esquema>.** O **esquema sql:is-mapping** leva um valor booleano (0=falso, 1=verdadeiro). Um esquema inline com **sql:is-mapping-schema="1"** é tratado como esquema anotado inline e não é devolvido no documento XML.  
   
- A anotação **SQL: is-Mapping-Schema** pertence ao namespace do modelo **urn: schemas-microsoft-com: XML-SQL**.  
+ A anotação **sql:is-mapping-schema** pertence ao modelo namespace **urn:schemas-microsoft-com:xml-sql**.  
   
- Para testar este exemplo, salve o modelo (InlineSchemaTemplate.xml) em um diretório local e, em seguida, crie e use o Script de Teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo. Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+ Para testar este exemplo, salve o modelo (InlineSchemaTemplate.xml) em um diretório local e, em seguida, crie e use o Script de Teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo. Para obter mais informações, consulte [Usando OA para executar consultas SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Além de especificar o atributo **Mapping-Schema** no elemento ** \<SQL: XPath-Query>** em um modelo (quando há uma consulta XPath) ou no ** \<elemento updg: Sync>** em um updategram, você pode fazer o seguinte:  
+ Além de especificar o atributo **mapeamento-esquema** no elemento ** \<sql:xpath-query>** em um modelo (quando há uma consulta XPath) ou em ** \<updg:sync>** elemento em um updategram, você pode fazer o seguinte:  
   
--   Especifique o atributo **Mapping-Schema** no elemento de ** \<>raiz** (declaração global) no modelo. Esse esquema de mapeamento torna-se o esquema padrão que será usado por todos os nós XPath e updategram que não têm nenhuma anotação **de esquema de mapeamento** explícita.  
+-   Especifique o atributo **mapeamento-esquema** no elemento ** \<>ROOT** (declaração global) no modelo. Esse esquema de mapeamento torna-se, então, o esquema padrão que será usado por todos os nós xpath e updategram que não têm nenhuma anotação explícita **de esquema de mapeamento.**  
   
--   Especifique o atributo de **esquema de mapeamento** usando o objeto de **comando** ADO.  
+-   Especifique o atributo **do esquema de mapeamento** usando o objeto **Comando** ADO.  
   
- O atributo **Mapping-Schema** especificado no elemento ** \<XPath-Query>** ou ** \<updg: Sync>** tem a precedência mais alta; o objeto de **comando** ADO tem a menor precedência.  
+ O atributo **mapeamento-esquema** especificado no ** \<>de consulta xpath** ou ** \<updg:sync>** elemento tem a maior precedência; o **objeto** Comando ADO tem a menor precedência.  
   
- Observe que, se você especificar uma consulta XPath em um modelo e não especificar um esquema de mapeamento no qual a consulta XPath é executada, a consulta XPath será tratada como uma consulta de tipo **dbobject** . Por exemplo, considere este modelo:  
+ Observe que se você especificar uma consulta XPath em um modelo e não especificar um esquema de mapeamento com o qual a consulta XPath é executada, a consulta XPath será tratada como uma consulta de tipo **dbobject.** Por exemplo, considere este modelo:  
   
 ```  
 <sql:xpath-query   
@@ -141,6 +142,6 @@ ms.locfileid: "75247000"
 </sql:xpath-query>  
 ```  
   
- O modelo especifica uma consulta Xpath, mas não especifica um esquema de mapeamento. Portanto, essa consulta é tratada como uma consulta de tipo **dbobject** em que Production. ProductPhoto é o nome da @ProductPhotoIDtabela e = ' 100 ' é um predicado que localiza uma foto do produto com o valor de ID de 100. @LargePhotoé a coluna da qual recuperar o valor.  
+ O modelo especifica uma consulta Xpath, mas não especifica um esquema de mapeamento. Portanto, essa consulta é tratada como uma consulta do tipo **dbobject** na @ProductPhotoIDqual Production.ProductPhoto é o nome da tabela e ='100' é um predicado que encontra uma foto do produto com o valor de ID de 100. @LargePhotoé a coluna a partir da qual recuperar o valor.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Suporte UTF-16 no Cliente Nativo do Servidor SQL 11.0 | Microsoft Docs
+title: Suporte a UTF-16
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.assetid: f2520424-8ef4-409f-8147-d83da5076e96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56a368c8b01e1afec2fab5de5eb3c575c6ebdf14
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: e81de975a3f8e2d5549ee968fc7e47bb5e3746c3
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303157"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388400"
 ---
 # <a name="utf-16-support-in-sql-server-native-client-110"></a>Suporte a UTF-16 no SQL Server Native Client 11.0
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

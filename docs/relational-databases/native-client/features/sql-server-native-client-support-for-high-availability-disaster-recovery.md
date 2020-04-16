@@ -1,5 +1,5 @@
 ---
-title: Cliente nativo, alta disponibilidade, recuperação
+title: Alta disponibilidade, recuperação
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db1126876179ca1e642f29cbd5b7425f4d12e3c9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: f940302db497dd02b3fc5ef89056aef29a6b64a7
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303277"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388437"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

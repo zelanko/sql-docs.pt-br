@@ -1,5 +1,5 @@
 ---
-title: Definindo e procurando perspectivas | Microsoft Docs
+title: Definindo e Navegando Perspectivas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "69493772"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definindo e procurando perspectivas
@@ -41,7 +41,7 @@ ms.locfileid: "69493772"
   
      ![Nova perspectiva na coluna Nome da Perspectiva](../../2014/tutorials/media/l9-perspectives-2.gif "Nova perspectiva na coluna Nome da Perspectiva")  
   
-3.  Altere o nome da perspectiva `Internet Sales`para.  
+3.  Mude o nome `Internet Sales`da perspectiva para .  
   
 4.  Na próxima linha, defina DefaultMeasure como **Vendas pela Internet/Valor das Vendas**.  
   
@@ -52,37 +52,37 @@ ms.locfileid: "69493772"
   
 5.  Desmarque a caixa de seleção dos seguintes objetos:  
   
-    -   `Reseller Sales`grupo de medidas  
+    -   `Reseller Sales`grupo de medida  
   
-    -   Grupo de medidas **cotas de vendas**  
+    -   Grupo de medidas**Cotas de Vendas**  
   
-    -   Grupo de medidas **cotas de vendas 1**  
+    -   Grupo de medidas**Cotas de Vendas 1**  
   
-    -   Dimensão do cubo do **revendedor**  
+    -   Dimensão de cubo**Revendedor**  
   
-    -   Dimensão do cubo de **Geografia do revendedor**  
+    -   Dimensão de cubo**Geografia do Revendedor**  
   
-    -   Dimensão do cubo de **região de vendas**  
+    -   Dimensão de cubo**Região de Vendas**  
   
-    -   Dimensão do cubo do **funcionário**  
+    -   Dimensão de cubo**Funcionário**  
   
-    -   Dimensão do cubo de **promoção**  
+    -   Dimensão de cubo**Promoção**  
   
-    -   **Receita do revendedor** KPI  
+    -   **Receita do Revendedor**  
   
-    -   Conjunto nomeado de **revendedores grandes**  
+    -   Conjunto nomeado**Grandes Revendedores**  
   
-    -   Membro calculado do **valor total de vendas**  
+    -   Membro calculado**Valor Total das Vendas**  
   
-    -   Membro calculado **custo total do produto**  
+    -   Membro calculado**Custo Total do Produto**  
   
-    -   Membro calculado do **GPM do revendedor**  
+    -   Membro calculado**MLB do Revendedor**  
   
-    -   Membro calculado do **GPM total**  
+    -   Membro calculado**MLB Total**  
   
-    -   Membro calculado **taxa de vendas do revendedor para todos os produtos**  
+    -   Membro calculado**Índice de Vendas do Revendedor para Todos os Produtos**  
   
-    -   Membro calculado da **taxa de vendas total para todos os produtos**  
+    -   Membro calculado**Índice Total de Vendas para Todos os Produtos**  
   
      Esses objetos não estão relacionados às vendas pela Internet.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493772"
   
 1.  Na barra de ferramentas da guia **Perspectivas** , clique no botão **Nova Perspectiva** .  
   
-2.  Altere o nome da nova perspectiva para `Reseller Sales`.  
+2.  Mude o nome da `Reseller Sales`nova perspectiva para .  
   
 3.  Defina **Vendas do Revendedor/Valor das Vendas** como a medida padrão.  
   
@@ -101,29 +101,29 @@ ms.locfileid: "69493772"
   
 4.  Desmarque a caixa de seleção dos seguintes objetos:  
   
-    -   `Internet Sales`grupo de medidas  
+    -   `Internet Sales`grupo de medida  
   
-    -   Grupo de medidas **motivo de vendas pela Internet**  
+    -   Grupo de medidas**Motivo de Vendas pela Internet**  
   
-    -   Dimensão do cubo do **cliente**  
+    -   Dimensão de cubo**Cliente**  
   
-    -   Dimensão do cubo **detalhes do pedido de vendas pela Internet**  
+    -   Dimensão de cubo**Detalhes do Pedido de Vendas pela Internet**  
   
-    -   Dimensão do cubo **motivo de vendas**  
+    -   Dimensão de cubo**Motivo de Vendas**  
   
-    -   Ação de detalhamento da ação de detalhamento de **vendas pela Internet**  
+    -   Ação de detalhamento**Ação de Detalhamento Detalhes de Vendas pela Internet**  
   
-    -   Membro calculado do **valor total de vendas**  
+    -   Membro calculado**Valor Total das Vendas**  
   
-    -   Membro calculado **custo total do produto**  
+    -   Membro calculado**Custo Total do Produto**  
   
-    -   Membro calculado do **GPM de Internet**  
+    -   Membro calculado**MLB pela Internet**  
   
-    -   Membro calculado do **GPM total**  
+    -   Membro calculado**MLB Total**  
   
-    -   Membro calculado **taxa de vendas pela Internet para todos os produtos**  
+    -   Membro calculado**Índice de Vendas pela Internet para Todos os Produtos**  
   
-    -   Membro calculado da **taxa de vendas total para todos os produtos**  
+    -   Membro calculado**Índice Total de Vendas para Todos os Produtos**  
   
      Esses objetos não estão relacionados às vendas do revendedor.  
   
@@ -131,34 +131,34 @@ ms.locfileid: "69493772"
   
 1.  Na barra de ferramentas da guia **Perspectivas** , clique no botão **Nova Perspectiva** .  
   
-2.  Altere o nome da nova perspectiva para `Sales Summary`.  
+2.  Mude o nome da `Sales Summary`nova perspectiva para .  
   
     > [!NOTE]  
     >  Você não pode especificar uma medida calculada como a medida padrão.  
   
 3.  Desmarque a caixa de seleção dos seguintes objetos:  
   
-    -   `Internet Sales`grupo de medidas  
+    -   `Internet Sales`grupo de medida  
   
-    -   `Reseller Sales`grupo de medidas  
+    -   `Reseller Sales`grupo de medida  
   
-    -   Grupo de medidas **motivo de vendas pela Internet**  
+    -   Grupo de medidas**Motivo de Vendas pela Internet**  
   
-    -   Grupo de medidas **cotas de vendas**  
+    -   Grupo de medidas**Cotas de Vendas**  
   
-    -   Grupo de medidas **Sales Quotas1**  
+    -   Grupo de medidas**Cotas de Vendas1**  
   
-    -   Dimensão do cubo **detalhes do pedido de vendas pela Internet**  
+    -   Dimensão de cubo**Detalhes do Pedido de Vendas pela Internet**  
   
-    -   Dimensão do cubo **motivo de vendas**  
+    -   Dimensão de cubo**Motivo de Vendas**  
   
-    -   Ação de detalhamento da ação de detalhamento de **vendas pela Internet**  
+    -   Ação de detalhamento**Ação de Detalhamento Detalhes de Vendas pela Internet**  
   
 4.  Selecione a caixa de seleção dos seguintes objetos:  
   
-    -   Medida de **contagem de vendas pela Internet**  
+    -   Medida**Contagem das Vendas pela Internet**  
   
-    -   Medida de **contagem de vendas do revendedor**  
+    -   Medida**Contagem das Vendas do Revendedor**  
   
 ## <a name="browsing-the-cube-through-each-perspective"></a>Navegando no cubo usando cada perspectiva  
   
@@ -176,13 +176,13 @@ ms.locfileid: "69493772"
   
      ![Assistente de Conexão de Dados no Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Assistente de Conexão de Dados no Excel")  
   
-6.  Selecione `Internet Sales` na lista **perspectiva** e, em seguida, examine as medidas e dimensões no painel metadados.  
+6.  Selecione `Internet Sales` na lista **Perspectiva** e, em seguida, revise as medidas e dimensões no painel de metadados.  
   
      Observe que somente aqueles objetos especificados na perspectiva Vendas pela Internet são exibidos.  
   
 7.  No painel de metadados, expanda **Medidas**.  
   
-     Observe que apenas o `Internet Sales` grupo de medidas aparece, junto com o **GPM da Internet** e a taxa de **vendas pela Internet para** membros calculados de todos os produtos.  
+     Observe que `Internet Sales` apenas o grupo de medidas aparece, juntamente com o **GPM** da Internet e a **Razão de Vendas pela Internet para todos os membros** calculados.  
   
 8.  No modelo, selecione Excel novamente. Selecione `Sales Summary`.  
   

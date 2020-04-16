@@ -1,5 +1,6 @@
 ---
 title: Executando um updategram usando ADO (SQLXML)
+description: Aprenda a estabelecer uma conexão com uma instância do Microsoft SQL Server e execute um updategram.by usando ODO (SQLXML 4.0).
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9982a7128c8b6d34fefad77045bda59ed4f2f5f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7392ec41759116b350047302cfe770da006e6c66
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75252487"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388733"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Executando um diagrama de atualização usando o ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,19 +29,19 @@ ms.locfileid: "75252487"
   
  Neste aplicativo de exemplo:  
   
--   O objeto **Conn** (**ADODB. Conexão**) estabelece uma conexão com uma instância em execução do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um computador servidor específico.  
+-   O objeto **conn** **(ADODB. Conexão**) estabelece uma conexão [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com uma instância em execução de um computador servidor específico.  
   
--   O objeto **cmd** (**ADODB. Command**) é executado na conexão estabelecida.  
+-   O objeto **cmd** **(ADODB.Command)** é executado na conexão estabelecida.  
   
 -   O dialeto do comando é definido como DBGUID_MSSQLXML.  
   
--   O updategram é copiado para o fluxo de comando (**strmIn**).  
+-   O updategram é copiado para o fluxo de comando **(strmIn**).  
   
--   O fluxo de saída do comando é definido como o objeto **StrmOut** (**ADODB. Stream**) para receber todos os dados retornados.  
+-   O fluxo de saída do comando está definido como objeto **StrmOut** **(ADODB). Fluxo**) para receber quaisquer dados devolvidos.  
   
 -   Por fim, o comando (diagrama de atualização) é executado.  
   
- Veja o código de exemplo:  
+ Segue o código de exemplo:  
   
 ```vb  
 Private Sub Form_Load()  
@@ -183,8 +184,8 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
-## <a name="passing-parameters"></a>Passando parâmetros  
- Nos aplicativos do Visual Basic fornecidos anteriormente, os parâmetros não são passados. Neste aplicativo, os valores **ContactID** e **MiddleName** são passados como entrada parametrizada para o updategram.  
+## <a name="passing-parameters"></a>Passar parâmetros  
+ Nos aplicativos do Visual Basic fornecidos anteriormente, os parâmetros não são passados. Neste aplicativo, os valores **ContactID** e **MiddleName** são passados como entrada parametrizada para o gráfico de atualização.  
   
 ```vb  
 Private Sub Form_Load()  
