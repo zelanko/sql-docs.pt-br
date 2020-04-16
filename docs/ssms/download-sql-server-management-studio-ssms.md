@@ -1,5 +1,6 @@
 ---
 title: Baixar o SQL Server Management Studio (SSMS)
+description: Baixe a versão mais recente do SSMS (SQL Server Management Studio).
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -22,13 +23,13 @@ author: dnethi
 ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
-ms.date: 02/18/2020
-ms.openlocfilehash: 8045c054d05a1e92eaf18f9aba852d9301f7ef60
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 04/07/2020
+ms.openlocfilehash: 5eb94f5755ee0f707ed753140633f923fad4d61b
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77652925"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80873142"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Baixar o SQL Server Management Studio (SSMS)
 
@@ -44,17 +45,17 @@ O SSMS é gratuito!
 
 **[![download](media/download-icon.png) Baixar o SSMS (SQL Server Management Studio)](https://aka.ms/ssmsfullsetup)**
 
-O SSMS 18.4 é a versão mais recente de GA (disponibilidade geral) do SSMS. Se você tiver uma versão de GA anterior do SSMS 18 instalada, a instalação do SSMS 18.4 atualizará o produto para a versão 18.4.
+O SSMS 18.5 é a versão mais recente de GA (disponibilidade geral) do SSMS. Se você tiver uma versão de GA anterior do SSMS 18 instalada, a instalação do SSMS 18.5 atualizará o produto para a versão 18.5.
 
 ### <a name="version-information"></a>Informações da versão
 
-- Número da versão: 18.4  
-- Número de build: 15.0.18206.0  
-- Data de lançamento: 04 de novembro de 2019  
+- Número da versão: 18.5  
+- Número de build: 15.0.18330.0  
+- Data de lançamento: 7 de abril de 2020  
 
 Se você tem sugestões ou comentários ou deseja relatar problemas, a melhor maneira de entrar em contato com a equipe do SSMS é usando o [UserVoice](https://aka.ms/sqlfeedback).
 
-A instalação do SSMS 18.x não atualiza nem substitui versões do SSMS 17.x ou anteriores. O SSMS 18.x é instalado lado a lado com versões anteriores para que as duas versões estejam disponíveis para uso. No entanto, se você tiver uma ***versão prévia*** do SSMS 18.x instalada, será necessário **desinstalar** essa versão antes de instalar o SSMS 18.4. É possível conferir se você tem a *Versão Prévia* acessando a janela Ajuda > Sobre.
+A instalação do SSMS 18.x não atualiza nem substitui versões do SSMS 17.x ou anteriores. O SSMS 18.x é instalado lado a lado com versões anteriores para que as duas versões estejam disponíveis para uso. No entanto, se você tiver uma ***versão prévia*** do SSMS 18.x instalada, será necessário **desinstalá-la** antes de instalar o SSMS 18.5. É possível conferir se você tem a *Versão Prévia* acessando a janela Ajuda > Sobre.
 
 Se um computador contiver instalações lado a lado do SSMS, verifique se você iniciou a versão correta para suas necessidades específicas. A versão mais recente é rotulada **Microsoft SQL Server Management Studio 18**
 
@@ -65,8 +66,8 @@ Se um computador contiver instalações lado a lado do SSMS, verifique se você 
 
 Esta versão do SSMS pode ser instalada nos seguintes idiomas:
 
-SQL Server Management Studio 18.4:  
-[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40a)
+SQL Server Management Studio 18.5:  
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40a)
 
 > [!NOTE]
 > O módulo do SQL Server PowerShell é uma instalação separada por meio da Galeria do PowerShell. Para obter mais informações, consulte [Baixar o Módulo SQL Server PowerShell](download-sql-server-ps-module.md).
@@ -75,7 +76,7 @@ SQL Server Management Studio 18.4:
 
 Para obter detalhes e mais informações sobre as novidades desta versão, confira as [Notas sobre a versão do SSMS](release-notes-ssms.md).
 
-Há alguns [problemas conhecidos](release-notes-ssms.md#known-issues-184) nesta versão.
+Há alguns [problemas conhecidos](release-notes-ssms.md#known-issues-185) nesta versão.
 
 ## <a name="previous-versions"></a>Versões anteriores
 
@@ -103,15 +104,15 @@ Se quiser instalar o SSMS em segundo plano sem prompts de GUI, siga as etapas ab
 
     Você também pode passar */Passive* em vez de */Quiet* para ver a interface do usuário da configuração.
 
-3. Se tudo correr bem, será possível ver o SSMS instalado em %systemdrive%\SSMSto\Common7\IDE\Ssms.exe” com base no exemplo. Se algo der errado, você poderá inspecionar o código de erro retornado e dar uma olhada em %TEMP%\SSMSSetup para o arquivo de log.
+3. Se tudo correr bem, será possível ver o SSMS instalado em %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" com base no exemplo. Se algo der errado, você poderá inspecionar o código de erro retornado e dar uma olhada em %TEMP%\SSMSSetup para o arquivo de log.
 
-## <a name="supported-sql-offerings-ssms-184"></a>Ofertas de SQL compatíveis (SSMS 18.4)
+## <a name="supported-sql-offerings-ssms-185"></a>Ofertas de SQL compatíveis (SSMS 18.5)
 
 - Esta versão do SSMS funciona com todas as [versões com suporte do SQL Server 2008 – [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) e fornece o maior nível de suporte para trabalhar com os recursos de nuvem mais recentes no Banco de Dados SQL do Azure e SQL Data Warehouse do Azure.
 - Além disso, o SSMS 18.x pode ser instalado lado a lado com o SSMS 17.x, o SSMS 16.x ou o SSMS do SQL Server 2014 e anteriores.
 - SSIS (SQL Server Integration Services) – a versão SSMS 17.x ou posterior não dá suporte à conexão com o serviço herdado do SQL Server Integration Services. Para conectar-se a uma versão anterior do Integration Services herdado, use a versão do SSMS alinhada com a versão do SQL Server. Por exemplo, use o SSMS 16.x para conectar ao serviço herdado do SQL Server Integration Services 2016. O SSMS 17.x e o 16.x podem ser instalados lado a lado no mesmo computador. Desde o lançamento do SQL Server 2012, o banco de dados de catálogo do SSIS, o SSISDB, é a maneira recomendada para armazenar, gerenciar, executar e monitorar os pacotes do Integration Services. Para obter detalhes, veja o [Catálogo do SSIS](../integration-services/catalog/ssis-catalog.md).
 
-## <a name="supported-operating-systems-ssms-184"></a>Sistemas operacionais compatíveis (SSMS 18.4)
+## <a name="supported-operating-systems-ssms-185"></a>Sistemas operacionais compatíveis (SSMS 18.5)
 
 Esta versão do SSMS é compatível com as seguintes plataformas de 64 bits quando usada com o service pack mais recente disponível:
 

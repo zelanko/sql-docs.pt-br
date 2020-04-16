@@ -1,22 +1,22 @@
 ---
-title: API Extensibility Framework para Microsoft SQL Server
+title: API Extensibility Framework
 titleSuffix: SQL Server Language Extensions
-description: ''
+description: É possível usar a estrutura de extensibilidade para escrever extensões de linguagem de programação para o SQL Server. A API Extensibility Framework para Microsoft SQL Server pode ser usada por uma extensão de linguagem para interagir e trocar dados com o SQL Server.
 author: dphansen
 ms.author: davidph
-ms.date: 03/30/2020
+ms.date: 04/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ba2405be5b4bb4805c524197bbac4ee9baa73ce
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: bc33ebc4ae271841cba2de73cb9168e1a41e7b69
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517707"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012422"
 ---
-# <a name="extensibility-framework-api-for-microsoft-sql-server"></a>API Extensibility Framework para Microsoft SQL Server
+# <a name="extensibility-framework-api-for-sql-server"></a>API Extensibility Framework para SQL Server
 
 É possível usar a estrutura de extensibilidade para escrever extensões de linguagem de programação para o SQL Server. A API Extensibility Framework para Microsoft SQL Server pode ser usada por uma extensão de linguagem para interagir e trocar dados com o SQL Server.
 

@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f6a7628d324236a8fbbe7afa5b80c746f95fec13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ca30249097fa9ad4eec386ca0fc0698976e5362a
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271482"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809590"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Baixe o SSDT (SQL Server Data Tools) para Visual Studio
 
@@ -84,7 +84,11 @@ O instalador lista instâncias disponíveis do Visual Studio para adicionar as f
 > [!IMPORTANT]
 > * Antes de instalar o SSDT para Visual Studio 2017 (15.9.4), desinstale as extensões *Projetos do Analysis Services* e *Projetos do Reporting Services* caso já estejam instaladas e feche todas as instâncias do VS.
 > * O componente de caixa de entrada Origem do Power Query para SQL Server 2017 foi removido. Agora, anunciamos a Origem do Power Query para SQL Server 2017 e 2019 como componente pronto para uso, que pode ser baixado [aqui](https://www.microsoft.com/download/details.aspx?id=100619).
-> * O componente de caixa de entrada Microsoft Oracle Connector para SQL Server 2019 foi removido. Agora, anunciamos o Microsoft Oracle Connector para SQL Server 2019 como componente pronto para uso, que pode ser baixado [aqui](https://www.microsoft.com/download/details.aspx?id=58228).
+> * Para criar pacotes usando os conectores Oracle e Teradata e direcionar uma versão anterior do SQL Server antes do SQL 2019, além do [Microsoft Oracle Connector para SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) e [Microsoft Teradata Connector para SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599), você também precisa instalar a versão correspondente do Microsoft Connector para Oracle e Teradata do Attunity.
+>    * [Microsoft Connector versão 5.0 para Oracle e Teradata da Attunity direcionado ao SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
+>    * [Microsoft Connector versão 4.0 para Oracle e Teradata da Attunity direcionado ao SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52950)
+>    * [Microsoft Connector versão 3.0 para Oracle e Teradata da Attunity direcionado ao SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=44582)
+>    * [Microsoft Connector versão 2.0 para Oracle e Teradata da Attunity direcionado ao SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29283)
 
 ### <a name="release-notes"></a>Notas de versão
 
