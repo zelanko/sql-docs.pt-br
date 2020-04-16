@@ -14,10 +14,10 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 730e18fca866891d62b68d321ec13e4be5da59bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "73728486"
 ---
 # <a name="create-a-model-master-data-services"></a>Criar um modelo (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73728486"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um modelo para conter objetos de modelo.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
+-   Você deve ter permissão para acessar a área funcional da Administração do **Sistema.**  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, consulte [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-a-model"></a>Para criar um modelo  
   
@@ -45,9 +45,9 @@ ms.locfileid: "73728486"
   
 5.  (Opcionalmente) No campo **Descrição** , digite a descrição do modelo.  
   
-6.  No campo **Dias de Retenção de Log** , selecione uma das opções para a retenção de dados de log. O valor padrão é **configuração do sistema**, que indica que o valor é herdado para configurações do sistema no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
+6.  No **dias de retenção de Log** selecione uma das opções para a retenção de dados de log. O valor padrão é **configuração do sistema**, que indica que o valor é herdado para configurações do sistema no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-     Para substituir a configuração do sistema sem remover os dados de log de transação, selecione **NÃO**. Para manter somente os dados de log de hoje e dados de truncamento do log para todos os últimos dias, selecione **Sim** e defina o campo **Dias** como 0. Para manter os dados de log para um número especificado de dias, selecione **Sim** e defina o campo **Dias** para o número de dias.  
+     Para substituir a configuração do sistema sem remover os dados de log de transação, selecione **NÃO**. Para reter apenas os dados de log de hoje e truncar os dados de registro para todos os dias anteriores, selecione **SIM** e defina o campo **Dias** como 0. Para manter os dados de log para um número especificado de dias, selecione **Sim** e defina o campo **Dias** para o número de dias.  
   
 7.  Como opção, selecione **Criar entidade com o mesmo nome que o modelo** para criar uma entidade com o mesmo nome do modelo.  
   
@@ -55,31 +55,31 @@ ms.locfileid: "73728486"
   
  Para cada modelo criado, uma linha com oito colunas é adicionada à grade. As oito colunas são:  
   
--   **Status**: o status do modelo. Quando você clica no botão **salvar modelo** , a imagem de ![atualização](../master-data-services/media/mds-model-status-updating.png "Atualizando") é exibida, o que indica que o modelo está sendo atualizado. Se houver erros ao criar ou editar um modelo, a imagem de ![erro](../master-data-services/media/mds-model-status-error.png "Erro") será exibida. Caso contrário, o status será OK e a imagem ![OK](../master-data-services/media/mds-model-status-ok.png "OK") será exibida.  
+-   **Status**: o status do modelo. Quando você clica no botão **Salvar modelo,** a imagem ![Atualizando](../master-data-services/media/mds-model-status-updating.png "Atualizando") é exibida, o que indica que o modelo está sendo atualizado. Se houver erros ao criar ou editar um modelo, a imagem ![Erro](../master-data-services/media/mds-model-status-error.png "Erro") será exibida. Caso contrário, o status é OK e a imagem ![OK](../master-data-services/media/mds-model-status-ok.png "OK") é exibida.  
   
 -   **Nome**: o nome do modelo.  
   
--   **Descrição**: a descrição do modelo.  
+-   **Descrição**: A descrição do modelo.  
   
--   **Dias de retenção de log**: o número de dias que o log é retido para o modelo.  
+-   **Dias de Retenção de Log**: O número de dias pelos quais o log é retido para o modelo.  
   
--   **Criado por**: o nome do usuário que criou o modelo.  
+-   **Criado Por**: o nome do usuário que criou o modelo.  
   
--   **Data e hora da criação**: a data e a hora em que o modelo foi criado.  
+-   **Data e Hora da Criação**: a data e hora em que o modelo foi criado.  
   
--   **Atualizado por**: o nome do usuário que atualizou o modelo pela última vez.  
+-   **Atualizado Por**: o nome de usuário do usuário que atualizou o modelo pela última vez.  
   
--   **Data e hora da atualização**: a data e a hora em que o modelo foi atualizado pela última vez.  
+-   **Data e Hora da Atualização**: a data e hora em que o modelo foi atualizado.  
   
 ## <a name="next-steps"></a>Próximas etapas  
   
 -   [Criar uma entidade &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Modelos &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
+ [Modelos &#40;&#41;de Serviços de Dados Mestres](../master-data-services/models-master-data-services.md)   
  [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
- [Excluir um modelo &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
- [Editar &#40;de Master Data Services de modelo&#41;](../master-data-services/edit-model-master-data-services.md)   
+ [Exclua um modelo &#40;serviços de dados mestres&#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [Editar&#41;de serviços de dados mestres do modelo &#40;](../master-data-services/edit-model-master-data-services.md)   
  [Transações &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   
