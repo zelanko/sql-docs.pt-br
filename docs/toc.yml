@@ -1385,6 +1385,15 @@
                       href: relational-databases/databases/database-properties-mirroring-page.md
                     - name: Página Repositório de Consultas
                       href: relational-databases/databases/database-properties-query-store-page.md
+    - name: Notificação de eventos
+      href: relational-databases/service-broker/event-notifications.md
+      items:
+        - name: Implementar
+          href: relational-databases/service-broker/implement-event-notifications.md
+        - name: Configurar a segurança da caixa diálogo
+          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
+        - name: Obter informações
+          href: relational-databases/service-broker/get-information-about-event-notifications.md
     - name: 'Fluxo de arquivos, Filetable e BLOB'
       href: relational-databases/blob/binary-large-object-blob-data-sql-server.md
       items:
@@ -1539,15 +1548,8 @@
       items:
         - name: Propriedades da sequência
           href: relational-databases/sequence-numbers/sequence-properties-general-page.md
-    - name: Service Broker
-      href: relational-databases/service-broker/event-notifications.md
-      items:
-        - name: Implementar
-          href: relational-databases/service-broker/implement-event-notifications.md
-        - name: Configurar a segurança da caixa diálogo
-          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
-        - name: Obter informações
-          href: relational-databases/service-broker/get-information-about-event-notifications.md
+    - name: Agente de Serviço
+      href: database-engine/configure-windows/sql-server-service-broker.md
     - name: Dados espaciais
       href: relational-databases/spatial/spatial-data-sql-server.md
       items:
@@ -1600,7 +1602,7 @@
           href: relational-databases/stored-procedures/specify-parameters.md
         - name: Conceder permissões
           href: relational-databases/stored-procedures/grant-permissions-on-a-stored-procedure.md
-        - name: parâmetros
+        - name: Parâmetros
           href: relational-databases/stored-procedures/parameters.md
         - name: Propriedades
           href: relational-databases/stored-procedures/stored-procedure-properties-general-page.md
@@ -2172,7 +2174,7 @@
                   href: relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md
                 - name: Codificação
                   href: relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md
-            - name: 'Registrar '
+            - name: Registrar
               href: relational-databases/clr-integration-database-objects-user-defined-types/registering-user-defined-types-in-sql-server.md
             - name: Trabalhando com
               href: relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md
@@ -2702,7 +2704,7 @@
         - name: Comandos
           href: relational-databases/native-client-ole-db-commands/commands.md
           items:
-            - name: parâmetros
+            - name: Parâmetros
               href: relational-databases/native-client-ole-db-commands/command-parameters.md
             - name: Sintaxe
               href: relational-databases/native-client-ole-db-commands/command-syntax.md
@@ -4370,8 +4372,6 @@
           href: database-engine/configure-windows/remote-servers.md
         - name: Visão geral do SQL Server Monitor
           href: database-engine/configure-windows/sql-server-monitor-overview.md
-        - name: Agente de Serviço
-          href: database-engine/configure-windows/sql-server-service-broker.md
         - name: Buffer Pool Extension
           href: database-engine/configure-windows/buffer-pool-extension.md
         - name: Opções de configuração de servidor
@@ -5338,7 +5338,7 @@
                   href: relational-databases/replication/publisher-properties.md
                 - name: Propriedades do assinante
                   href: relational-databases/replication/subscriber-properties.md
-                - name: 'Propriedades de publicação '
+                - name: Propriedades de publicação
                   href: relational-databases/replication/publication-properties-publication.md
                   items:
                     - name: Artigos
@@ -15023,7 +15023,7 @@
                   href: t-sql/spatial-geometry/tostring-geometry-data-type.md
                 - name: Z
                   href: t-sql/spatial-geometry/z-geometry-data-type.md
-            - name: 'Métodos de geometria estática do OGC '
+            - name: Métodos de geometria estática do OGC
               href: t-sql/spatial-geometry/ogc-static-geometry-methods.md
               items:
                 - name: STGeomCollFromText
@@ -16097,7 +16097,7 @@
                   href: t-sql/language-elements/rollback-work-transact-sql.md
                 - name: SAVE TRANSACTION
                   href: t-sql/language-elements/save-transaction-transact-sql.md
-            - name: variáveis
+            - name: Variáveis
               href: t-sql/language-elements/variables-transact-sql.md
               items:
                 - name: SET @local_variable
