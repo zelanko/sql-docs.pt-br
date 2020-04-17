@@ -1,12 +1,12 @@
 - name: Programação de modelo tabular
   href: tabular-model-programming-for-compatibility-levels-1050-through-1103.md
 - name: CSDLBI (Anotações CSDL para Business Intelligence)
-  href: 'https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi'
+  href: 'https://docs.microsoft.com/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi'
   items:
     - name: Conceitos da CSDLBI
-      href: 'https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts'
+      href: 'https://docs.microsoft.com/analysis-services/csdlbi/csdlbi-concepts'
     - name: Atributos CSDLBI para design de relatórios
-      href: 'https://docs.microsoft.com/bi-reference/csdl/csdlbi-attributes-for-report-design'
+      href: 'https://docs.microsoft.com/analysis-services/csdlbi/csdlbi-attributes-for-report-design'
 - name: Compreendendo o modelo de objeto de tabela
   href: representation/understanding-tabular-object-model-at-levels-1050-through-1103.md
   items:

@@ -1,5 +1,6 @@
 ---
-title: Tempos de vida da transação | Microsoft Docs
+title: Vida útil das transações | Microsoft Docs
+description: Saiba mais sobre a vida útil das transações na integração SQL Server CLR. As transações iniciadas nos procedimentos armazenados transact-SQL diferem das iniciadas em código gerenciado.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa57b82d0e3f18e4ee1c3d0147935fa00cd5c06a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1fed737c644ebb241a5761fffd2409c2556d28ea
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70874856"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487479"
 ---
 # <a name="transaction-lifetimes"></a>Vidas úteis de transação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "70874856"
   
 -   Uma tentativa de confirmar uma transação não iniciada no mesmo procedimento causa um erro em tempo de execução.  
   
--   Uma tentativa de reverter uma transação não iniciada no mesmo procedimento faz com que a transação pare de responder (impedindo que qualquer outra operação de efeito colateral ocorra). A transação é descontinuada até que o código CLR saia do escopo. Observe que isso pode ser útil quando você detecta um erro em seu procedimento e deseja verificar se a transação inteira é finalizada.  
+-   Uma tentativa de reverter uma transação não iniciada no mesmo procedimento faz com que a transação pare de responder (impedindo que qualquer outra operação de efeito colateral aconteça). A transação é descontinuada até que o código CLR saia do escopo. Observe que isso pode ser útil quando você detecta um erro em seu procedimento e deseja verificar se a transação inteira é finalizada.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Integração CLR e transações](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  

@@ -1,5 +1,6 @@
 ---
 title: Criando um tipo definido pelo usuário | Microsoft Docs
+description: Para criar um UDT para instalar no SQL Server, primeiro crie uma classe em uma linguagem de programação .NET Framework, que esteja em conformidade com as especificações para a criação de UDTs.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54aa7db3d2c2ea0d268874f0d59c3096b8e1a0ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 09480763fe03e5191fdaaf778e2490988a3e334e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76911080"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486942"
 ---
 # <a name="creating-user-defined-types"></a>Criar tipos definidos pelo usuário
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Para criar um tipo definido pelo usuário (UDT) que possa ser instalado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], primeiro crie uma classe em uma das linguagens de programação .NET Framework com suporte, como Visual C# ou Visual Basic, que esteja de acordo com as especificações para criação de UDTs. A classe poderá, então, ser compilada como uma DLL (Dynamic-Link Library), que poderá ser carregada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você também poderá criar e implantar UDTs com o Visual Studio.  
   
- A capacidade de executar código CLR (Common Language Runtime) é definida, por padrão, como OFF no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O CLR pode ser habilitado usando o procedimento armazenado do sistema **sp_configure** , conforme mostrado nas instruções a [!INCLUDE[tsql](../../includes/tsql-md.md)] seguir:  
+ A capacidade de executar código CLR (Common Language Runtime) é definida, por padrão, como OFF no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O CLR pode ser habilitado usando o procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] no sistema **sp_configure,** conforme mostrado nas seguintes instruções:  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -40,9 +41,9 @@ Reconfigure
  Demonstra as técnicas de codificação envolvidas na criação de tipos definidos pelo usuário.  
   
 ## <a name="example"></a>Exemplo  
- A listagem de código a seguir define o ponto UDT, que é descrito em detalhes na [codificação de tipos definidos pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ A lista de código satisfaz o Ponto UDT, que é descrito em detalhes em [Tipos definidos pelo usuário de codificação](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
- As listagens de código completas para os outros exemplos abordados nesta seção podem ser obtidas mediante a instalação dos exemplos de CLR. Para obter instruções sobre como instalar esses exemplos, consulte [SQL Server mecanismo de banco de dados exemplos](https://msftengprodsamples.codeplex.com/).  
+ As listagens de código completas para os outros exemplos abordados nesta seção podem ser obtidas mediante a instalação dos exemplos de CLR. Para obter instruções sobre a instalação dessas amostras, consulte [Amostras do mecanismo do banco de dados do servidor SQL](https://msftengprodsamples.codeplex.com/).  
   
  C#  
   

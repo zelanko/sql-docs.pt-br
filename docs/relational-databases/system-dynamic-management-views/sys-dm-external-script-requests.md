@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 67e24b9c5c4ccd5f6ab2159ed5924474ff77bc84
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 70f1024f73ff955facaa2b6a2af2b9f5f4ccf247
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664285"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488195"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,14 +32,14 @@ Retorna uma linha para cada conta de trabalho ativa que executa um script extern
   
 > [!NOTE] 
 >  
-> Essa visão de gerenciamento dinâmico (Detran) só está disponível se você tiver instalado e habilitado o recurso que suporta a execução de script externo. Para obter mais informações, consulte [Serviços R no SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) e [Serviços de Aprendizado de Máquina (R, Python) no SQL Server 2017 e posteriores](../../machine-learning/what-is-sql-server-machine-learning.md).  
+> Essa visão de gerenciamento dinâmico (Detran) só está disponível se você tiver instalado e habilitado o recurso que suporta a execução de script externo. Para obter mais informações, consulte [Serviços R no SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) e [Serviços de Aprendizado de Máquina (R, Python) no SQL Server 2017 e posteriores](../../machine-learning/sql-server-machine-learning-services.md).  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**identificador exclusivo**|ID do processo que enviou a solicitação de script externo. Isso corresponde ao ID do processo recebido por[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
-|Linguagem|**NVARCHAR**|Palavra-chave que representa uma linguagem de script com suporte. |  
-|degree_of_parallelism|**Int**|Número que indica o número de processos paralelos que foram criados. Esse valor pode ser diferente do número de processos paralelos solicitados.|  
-|external_user_name|**NVARCHAR**|A conta de trabalho do Windows na qual o script foi executado.|  
+|Linguagem|**nvarchar**|Palavra-chave que representa uma linguagem de script com suporte. |  
+|degree_of_parallelism|**int**|Número que indica o número de processos paralelos que foram criados. Esse valor pode ser diferente do número de processos paralelos solicitados.|  
+|external_user_name|**nvarchar**|A conta de trabalho do Windows na qual o script foi executado.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW SERVER STATE no servidor.  

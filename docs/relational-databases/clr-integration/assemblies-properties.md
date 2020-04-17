@@ -1,5 +1,6 @@
 ---
-title: Propriedades do assembly (página Geral) | Microsoft Docs
+title: Propriedades de montagem (página geral) | Microsoft Docs
+description: Você pode visualizar ou modificar propriedades para um conjunto hospedado no SQL Server. Estes incluem nome de montagem e proprietário, conjunto de permissões e outras propriedades.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cab96fb470e4cc19da0612163f364d6339841985
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 64e1847db5477ce556824d1b424649f617a0fa9f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68027967"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488015"
 ---
 # <a name="assemblies---properties"></a>Assemblies – propriedades
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,20 +31,20 @@ ms.locfileid: "68027967"
  Digite um nome de proprietário ou nome de esquema ou selecione na lista.  
   
  **Conjunto de permissões**  
- Defina o nível de segurança para o assembly. Três níveis de segurança são fornecidos: **seguro**, **acesso externo**e acesso **não seguro** .  
+ Defina o nível de segurança para o assembly. Três níveis de segurança são fornecidos: **seguro,** **acesso externo**e acesso **inseguro.**  
   
  **Caminho para assembly**  
  Digite o caminho do arquivo assembly.  
   
  **Procurar**  
- Navegue para o assembly que você quer adicionar. Clique em **procurar** se você não quiser digitar o caminho para o arquivo do assembly.  
+ Navegue para o assembly que você quer adicionar. Clique **em Procurar** se você não quiser digitar o caminho para o arquivo de montagem.  
   
 ## <a name="additional-properties-grid"></a>Grade de propriedades adicionais  
  **Data de Criação**  
  Exibe a data em que o assembly foi criado/registrado.  
   
  **Nome Forte**  
- Exibe **true** se o assembly tiver sido assinado digitalmente, **false** se ele não tiver sido assinado digitalmente.  
+ Displays **Verdadeiro** se a montagem foi assinada digitalmente, **false** se não foi assinado digitalmente.  
   
  **Versão**  
  Exibe o número de versão do assembly.  

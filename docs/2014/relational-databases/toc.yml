@@ -208,9 +208,9 @@
           href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
           items:
             - name: Criar a política Nome Financeiro
-              href: policy-based-management/lesson-2-1-create-the-finance-name-policy.md
+              href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
             - name: Assinar e verificar a política Nome Financeiro
-              href: policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md
+              href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
     - name: 'Tutorial: Como avaliar práticas recomendadas usando o Gerenciamento Baseado em Políticas'
       href: ../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md
       items:

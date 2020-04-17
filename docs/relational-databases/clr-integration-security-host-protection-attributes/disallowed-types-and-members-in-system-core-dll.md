@@ -1,5 +1,6 @@
 ---
-title: Tipos e membros não permitidos em System. Core. dll | Microsoft Docs
+title: Tipos e Membros Proibidos no System.Core.dll | Microsoft Docs
+description: A programação clr do Servidor SQL não permite um tipo ou membro com alguns valores para o enum HostProtectionResource. Este artigo lista valores proibidos do System.Core.dll.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,19 +10,19 @@ ms.topic: reference
 ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d3282d3781305e806a6ed5d12c35ae42fd735cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e89af3c6f93fb6c8576a6e627eed8e984fb0f0ae
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028144"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486838"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>Tipos e membros desaprovados no System.Core.dll
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a programação comum de integração de linguagem (CLR) não permite o uso de um tipo ou membro que tenha um **HostProtectionAttribute** que especifique uma enumeração **System. Security. Permissions. HostProtectionResource** com um valor de **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**ou **UI**. A tabela a seguir lista os membros e os tipos dos assemblies System.Core.dll cujos valores de HPA (atributo de proteção de host) não são permitidos.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]A programação de integração de linguagem comum (CLR) proíbe o uso de um tipo ou membro que tenha um **HostProtectionAttribute** que especifica um **System.Security.Permissions.HostProtectionEnumeração** de recursos com valor de **ExternalProcessMgmt,** **ExternalThreading,** **MayLeakOnAbort,** **SecurityInfrastructure,** **SelfAffectingProcessMgmnt,** **SelfAffectingThreading,** **SharedState,** **Synchronization**ou **UI**. A tabela a seguir lista os membros e os tipos dos assemblies System.Core.dll cujos valores de HPA (atributo de proteção de host) não são permitidos.  
   
 > [!NOTE]  
->  Esta lista foi gerada dos assembly com suporte. Para obter mais informações, consulte [bibliotecas de .NET Framework com suporte](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Esta lista foi gerada dos assembly com suporte. Para obter mais informações, consulte [Bibliotecas-quadro .NET suportadas](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md). NET .  
   
 |Tipo ou membro|Valor(es) de HPA|  
 |--------------------|--------------------|  
@@ -128,10 +129,10 @@ ms.locfileid: "68028144"
 |System.Threading.ReaderWriterLockSlim|MayLeakOnAbort|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Atributos de proteção do host e programação de integração CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [Tipos e membros não permitidos em Microsoft. VisualBasic. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Tipos e membros não permitidos em mscorlib. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
- [Tipos e membros não permitidos em System. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
+ [Atributos de proteção de host e programação de integração CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
+ [Tipos e membros proibidos no Microsoft.VisualBasic.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Tipos e Membros Proibidos em mscorlib.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
+ [Tipos e membros proibidos no System.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
  [Tipos e membros não permitidos em System.Data.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)  
   
   

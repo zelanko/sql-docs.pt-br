@@ -1,5 +1,6 @@
 ---
 title: Atributos personalizados para rotinas CLR | Microsoft Docs
+description: Atributos personalizados podem ser aplicados a rotinas CLR, tipos definidos pelo usuário e agregados definidos pelo usuário que são registrados no Microsoft SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1ff346abc41ee4589a8d0b2193b167fb2cf24e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a32a606f73858ede15569d1ade891ad2ce1c69a5
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70212379"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487932"
 ---
 # <a name="clr-integration-custom-attributes-for-clr-routines"></a>Atributos personalizados da integração CLR para rotinas CLR
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Os atributos listados podem ser aplicados a rotinas de Common Language Runtime (CLR), tipos definidos pelo usuário e agregações definidas pelo usuário que são registradas no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se o atributo não for aplicado, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assumirá o valor padrão. Os atributos listados são definidos no namespace **Microsoft. SqlServer. Server** .  
+  Os atributos listados podem ser aplicados às rotinas de tempo de execução de linguagem comum [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](CLR), tipos definidos pelo usuário e agregados definidos pelo usuário que estão registrados em . Se o atributo não for aplicado, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assumirá o valor padrão. Os atributos listados são definidos no namespace **microsoft.SqlServer.Server.**  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>O atributo SqlUserDefinedAggregate  
- O atributo **SqlUserDefinedAggregate** indica que o método deve ser registrado como uma agregação definida pelo usuário. Todas as agregações definidas pelo usuário devem ser anotadas com esse atributo.  
+ O atributo **SqlUserDefinedAggregate** indica que o método deve ser registrado como um agregado definido pelo usuário. Todas as agregações definidas pelo usuário devem ser anotadas com esse atributo.  
   
  Para obter mais informações, consulte [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626).  
   
@@ -43,7 +44,7 @@ ms.locfileid: "70212379"
  Para obter mais informações, consulte [SqlFunctionAttribute](https://go.microsoft.com/fwlink/?LinkId=128019).  
   
 ## <a name="the-sqlfacet-attribute"></a>O atributo SqlFacet  
- O atributo **sqlfacial** é usado para retornar informações sobre o tipo de retorno de uma expressão UDT (tipo definido pelo usuário).  
+ O atributo **SqlFacet** é usado para retornar informações sobre o tipo de retorno de uma expressão UDT (tipo definido pelo usuário).  
   
  Para obter mais informações, consulte [SqlFacetAttribute](https://go.microsoft.com/fwlink/?LinkId=128020).  
   
@@ -63,15 +64,15 @@ ms.locfileid: "70212379"
  Para obter mais informações, consulte [SqlUserDefinedTypeAttribute](https://go.microsoft.com/fwlink/?LinkId=128024).  
   
 ## <a name="the-sqlmethod-attribute"></a>O atributo SqlMethod  
- O atributo **SqlMethod** é usado para indicar o determinante e as propriedades de acesso a dados de um método ou uma propriedade em um UDT.  
+ O atributo **SqlMethod** é usado para indicar as propriedades de determinismo e acesso de dados de um método ou de uma propriedade em um UDT.  
   
  Para obter mais informações, consulte [SqlMethodAttribute](https://go.microsoft.com/fwlink/?LinkId=128025).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Agregações CLR definidas pelo usuário](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)   
- [Funções CLR definidas pelo usuário](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
- [Tipos definidos pelo usuário de CLR](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
- [Procedimentos armazenados CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+ [Agregados definidos pelo usuário da CLR](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)   
+ [Funções definidas pelo usuário da CLR](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
+ [Tipos definidos pelo usuário da CLR](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
+ [ClR Procedimentos Armazenados](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [Gatilhos CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
   
   

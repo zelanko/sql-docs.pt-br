@@ -1,5 +1,6 @@
 ---
-title: Restrições em conexões regulares e de contexto | Microsoft Docs
+title: Restrições às conexões regulares e de contexto | Microsoft Docs
+description: Este artigo descreve as restrições associadas ao código em execução no processo do Microsoft SQL Server através de contexto e conexões regulares.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8cbdd195f698090602b98cdb6e5bab0a86556ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fac92658366cceffc3d4fac5ba650f9a14501185
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68216417"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81485188"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>Conexões de contexto e conexões normais – Restrições
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tópico discute as restrições associadas ao código em execução no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processo por meio de contexto e conexões regulares.  
+  Este tópico discute as restrições associadas [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à execução de códigos no processo por meio de contexto e conexões regulares.  
   
 ## <a name="restrictions-on-context-connections"></a>Restrições em conexões de contexto  
  Ao desenvolver seu aplicativo, leve em consideração as restrições a seguir que se aplicam a conexões de contexto:  
@@ -30,26 +31,26 @@ ms.locfileid: "68216417"
   
 -   Uma conexão de contexto não oferece suporte a Vários Conjuntos de Resultados Ativos (MARS).  
   
--   A classe **SqlBulkCopy** não funciona em uma conexão de contexto.  
+-   A classe **SqlBulkCopy** não opera em uma conexão de contexto.  
   
 -   Não existe suporte para a execução de atualizações em lote em uma conexão de contexto.  
   
--   **SqlNotificationRequest** não pode ser usado com comandos que são executados em uma conexão de contexto.  
+-   **SqlNotificationRequest** não pode ser usado com comandos que executam contra uma conexão de contexto.  
   
--   Não existe suporte para o cancelamento de comandos que estão sendo executados na conexão de contexto. O método **SqlCommand. Cancel** ignora silenciosamente a solicitação.  
+-   Não existe suporte para o cancelamento de comandos que estão sendo executados na conexão de contexto. O método **SqlCommand.Cancel** silenciosamente ignora a solicitação.  
   
 -   Nenhuma outra palavra-chave de cadeia de conexão poderá ser usada quando você usar "context connection=true".  
   
--   A propriedade **SqlConnection. DataSource** retornará NULL se a cadeia de conexão para **SqlConnection** for "context connection = true", em vez do nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   A propriedade **SqlConnection.DataSource** retorna nula se a seqüência de conexão para o **SqlConnection** for "context connection=true", em vez do nome da instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Definir a propriedade **SqlCommand. CommandTimeout** não tem efeito quando o comando é executado em uma conexão de contexto.  
+-   A configuração da propriedade **SqlCommand.CommandTimeout** não tem efeito quando o comando é executado contra uma conexão de contexto.  
   
 ## <a name="restrictions-on-regular-connections"></a>Restrições em conexões comuns  
  Ao desenvolver seu aplicativo, leve em consideração as restrições a seguir que se aplicam a conexões comuns:  
   
--   Não existe suporte para a execução assíncrona de comandos em servidores internos. Incluir "Async = true" na cadeia de conexão de um comando e, em seguida, executar o comando, resulta em **System. NotSupportedException** que está sendo gerado. Esta mensagem será exibida: "Não existe suporte para processamento assíncrono quando executado dentro do processo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Não existe suporte para a execução assíncrona de comandos em servidores internos. Incluir "async=true" na seqüência de conexão de um comando e, em seguida, executar o comando, resulta em **System.NotSupportedException** sendo lançado. Esta mensagem será exibida: "Não existe suporte para processamento assíncrono quando executado dentro do processo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Não há suporte para o objeto **SqlDependency** .  
+-   O objeto **SqlDependency** não é suportado.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Conexão de contexto](../../../relational-databases/clr-integration/data-access/context-connection.md)  

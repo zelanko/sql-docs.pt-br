@@ -166,7 +166,7 @@
     - name: Analisar um modelo tabular no Excel
       href: analyze-a-tabular-model-in-excel-ssas-tabular.md
 - name: Implantação de uma solução de modelo tabular
-  href: tabular-model-solution-deployment-ssas-tabular.md
+  href: 'https://docs.microsoft.com/analysis-services/deployment/tabular-model-solution-deployment'
   items:
     - name: Implantar das Ferramentas de Dados do SQL Server
       href: deploy-from-sql-server-data-tools-ssas-tabular.md

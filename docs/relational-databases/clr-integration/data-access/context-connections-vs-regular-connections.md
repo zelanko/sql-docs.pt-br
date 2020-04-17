@@ -1,5 +1,6 @@
 ---
-title: Conexões regulares vs. de contexto | Microsoft Docs
+title: Conexões regulares vs. Contexto | Microsoft Docs
+description: No SQL Server, às vezes você deve usar conexões regulares para instruções Transact-SQL, mas conexões de contexto oferecem vantagens de desempenho e uso de recursos.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 69733cbf3357ba26dc9e9fdf818858dc4e747b99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 881b7463400665d22baaa9b19f13cb5949df0830
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138708"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81485136"
 ---
-# <a name="context-connections-vs-regular-connections"></a>Conexões de contexto versus conexões regulares
+# <a name="context-connections-vs-regular-connections"></a>Conexões de contexto vs. Conexões Regulares
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Se você estiver conectando a um servidor remoto, sempre use conexões normais, em vez de conexões de contexto. Se você precisar se conectar ao mesmo servidor em que o procedimento armazenado ou a função está sendo executado, use a conexão de contexto na maioria dos casos. Isto tem benefícios, como executar no mesmo espaço de transação e não precisar se autenticar novamente.  
   
- Além disso, o uso da conexão de contexto normalmente resulta em melhor desempenho e menos uso de recurso. A conexão de contexto é uma conexão somente em processo, portanto, ela pode entrar em contato com o servidor "diretamente", ignorando as camadas de protocolo de rede e transporte para enviar instruções Transact-SQL e receber resultados. O processo de autenticação é ignorado também. A figura a seguir mostra os principais componentes do provedor gerenciado **SqlClient** , bem como como os diferentes componentes interagem entre si ao usar uma conexão regular e ao usar a conexão de contexto.  
+ Além disso, o uso da conexão de contexto normalmente resulta em melhor desempenho e menos uso de recurso. A conexão de contexto é uma conexão somente no processo, para que possa entrar em contato com o servidor "diretamente" contornando o protocolo de rede e as camadas de transporte para enviar instruções Transact-SQL e receber resultados. O processo de autenticação é ignorado também. A figura a seguir mostra os componentes principais do provedor gerenciado pelo **SqlClient,** bem como como os diferentes componentes interagem entre si ao usar uma conexão regular e ao usar a conexão de contexto.  
   
  ![Caminhos de código de um contexto e uma conexão regular.](../../../relational-databases/clr-integration/data-access/media/clrintdataaccess.gif "Caminhos de código de um contexto e uma conexão regular.")  
   
  A conexão de contexto segue um caminho de código mais curto e envolve menos componentes. Dessa forma, você pode esperar que as solicitações e os resultados sejam enviados e recebidos do servidor mais rapidamente do que em uma conexão normal. O tempo de execução da consulta no servidor é o mesmo para conexões de contexto e normais.  
   
- Há alguns casos em que você pode precisar abrir uma conexão normal separada para o mesmo servidor. Por exemplo, há certas restrições no uso da conexão de contexto, descritas em [restrições em conexões regulares e de contexto](../../../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md).  
+ Há alguns casos em que você pode precisar abrir uma conexão normal separada para o mesmo servidor. Por exemplo, existem certas restrições ao uso da conexão de contexto, descritas em [Restrições às Conexões Regulares e de Contexto](../../../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Conexão de contexto](../../../relational-databases/clr-integration/data-access/context-connection.md)  

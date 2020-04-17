@@ -1,5 +1,6 @@
 ---
-title: Usando System. Transactions | Microsoft Docs
+title: Usando System.Transactions | Microsoft Docs
+description: O namespace System.Transactions fornece uma estrutura de transação totalmente integrada à integração ADO.NET e SQL Server CLR.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9b99842a92649a42e9a0a42e6732368dc5e06ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7fa98e9e13062d358a6a1810485d45c8d9d3e911
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081351"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488472"
 ---
 # <a name="using-systemtransactions"></a>Usando System.Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68081351"
   
  Se ocorrer uma exceção no **TransactionScope**, a transação será marcada como inconsistente e abandonada. Ela será revertida quando o **TransactionScope** for descartado. Se nenhuma exceção ocorrer, as transações participantes serão confirmadas.  
   
- O **TransactionScope** deve ser usado somente quando fontes de dados locais e remotas ou gerenciadores de recursos externos estiverem sendo acessados. Isso porque **TransactionScope** sempre causa a elevação de transações, mesmo que esteja sendo usado apenas em uma conexão de contexto.  
+ **TransactionScope** deve ser usado somente quando são acessados gerenciadores de recursos externos ou fontes de dados locais e remotas. Isso porque **TransactionScope** sempre causa a elevação de transações, mesmo que esteja sendo usado apenas em uma conexão de contexto.  
   
 > [!NOTE]  
 >  Por padrão, a classe **TransactionScope** cria uma transação com um **System.Transactions.Transaction.IsolationLevel** de **Serializable** . Dependendo do seu aplicativo, talvez você queira considerar abaixar o nível de isolamento para evitar uma contenção elevada em seu aplicativo.  

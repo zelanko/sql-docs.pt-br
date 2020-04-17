@@ -1,5 +1,6 @@
 ---
-title: Projetando assemblies | Microsoft Docs
+title: Elaboração de Montagens | Microsoft Docs
+description: Este artigo descreve fatores a considerar quando você projeta uma montagem para hospedar no SQL Server, incluindo embalagem, gerenciamento e restrições em conjuntos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,29 +13,29 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 205347e9d70ae378e10245c45d2580767eafbd8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 65dbc1a4fdabbf234f4676d75011522a8f3481d8
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028028"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488032"
 ---
 # <a name="assemblies---designing"></a>Assemblies – criação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve os seguintes fatores que você deve considerar ao projetar assemblies:  
   
--   Assemblies de empacotamento  
+-   Conjuntos de embalagens  
   
--   Gerenciando a segurança do assembly  
+-   Gerenciamento da segurança da montagem  
   
--   Restrições em assemblies  
+-   Restrições às assembléias  
   
 ## <a name="packaging-assemblies"></a>Empacotando assemblies  
  Um assembly pode conter funcionalidade para mais de uma rotina do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou tipo em suas classes e métodos. A maior parte do tempo, faz sentido empacotar a funcionalidade de rotinas que executam funções relacionadas dentro do mesmo assembly, especialmente se essas rotinas compartilharem classes cujos métodos chamam um ao outro. Por exemplo, classes que executam tarefas de gerenciamento de entrada de dados para gatilhos CLR (Common Language Runtime) e procedimentos armazenados CLR podem ser empacotados no mesmo assembly. Isso porque os métodos para essas classes têm maior probabilidade de chamar um ao outro do que aqueles de tarefas menos relacionadas.  
   
  Quando você estiver empacotando código em um assembly, você deverá considerar o seguinte:  
   
--   Tipos de dados CLR definidos pelo usuário e índices que dependem de funções CLR definidas pelo usuário podem fazer com que dados persistentes fiquem no banco de dados que dependem do assembly. Modificar o código de um assembly é frequentemente mais complexo quando há dados persistentes que dependem do assembly no banco de dados. Portanto, geralmente é melhor separar o código onde haja dependências de dados persistentes (como tipos definidos pelo usuário e índices com funções definidas pelo usuário) do código que não tenha tal dependência de dados persistentes. Para obter mais informações, consulte [implementando assemblies](../../relational-databases/clr-integration/assemblies-implementing.md) e [ALTER assembly &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
+-   Tipos de dados CLR definidos pelo usuário e índices que dependem de funções CLR definidas pelo usuário podem fazer com que dados persistentes fiquem no banco de dados que dependem do assembly. Modificar o código de um assembly é frequentemente mais complexo quando há dados persistentes que dependem do assembly no banco de dados. Portanto, geralmente é melhor separar o código onde haja dependências de dados persistentes (como tipos definidos pelo usuário e índices com funções definidas pelo usuário) do código que não tenha tal dependência de dados persistentes. Para obter mais informações, consulte [Implementando Assembléias](../../relational-databases/clr-integration/assemblies-implementing.md) e [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
 -   Se uma parte do código gerenciado requerer permissão mais alta, será melhor separar aquele código em um assembly separado do código que não requer tal permissão.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "68028028"
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE concede aos assemblies acesso irrestrito aos recursos, dentro e fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Código executado em um assembly UNSAFE pode chamar código não gerenciado.  
   
- Além disso, especificando UNSAFE permite que o código no assembly execute operações consideradas como tipo inseguro pelo verificador CLR. Essas operações podem potencialmente acessar buffers de memória no espaço de processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma maneira descontrolada. Assemblies UNSAFE também podem potencialmente subverter o sistema de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do CLR. Somente permissões UNSAFE devem ser concedidas a assemblies altamente confiáveis por desenvolvedores ou administradores experientes. Somente os membros da função de servidor fixa **sysadmin** podem criar assemblies não seguros.  
+ Além disso, especificando UNSAFE permite que o código no assembly execute operações consideradas como tipo inseguro pelo verificador CLR. Essas operações podem potencialmente acessar buffers de memória no espaço de processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma maneira descontrolada. Assemblies UNSAFE também podem potencialmente subverter o sistema de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do CLR. Somente permissões UNSAFE devem ser concedidas a assemblies altamente confiáveis por desenvolvedores ou administradores experientes. Apenas membros da função servidor fixo **sysadmin** podem criar conjuntos INSEGUROS.  
   
 ## <a name="restrictions-on-assemblies"></a>Restrições em assemblies  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coloca certas restrições em código gerenciado em assemblies para verificar se eles podem ser executados de uma maneira segura e evolutiva. Isso significa que não são permitidas certas operações que podem comprometer a robustez do servidor em assemblies SAFE e EXTERNAL_ACCESS.  
@@ -83,7 +84,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>APIs não permitidas do .NET Framework  
- Qualquer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] API que esteja anotada com um dos **HostProtectionAttributes** não permitidos não pode ser chamada de assemblies seguros e EXTERNAL_ACCESS.  
+ Qualquer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] API anotada com um dos **HostProtectionAttributes proibidos** não pode ser chamada de conjuntos SAFE e EXTERNAL_ACCESS.  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -117,7 +118,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Assemblies &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [&#41;do mecanismo de banco de dados &#40;conjuntos](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Segurança da integração CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

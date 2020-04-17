@@ -18,12 +18,12 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770850"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487004"
 ---
 # <a name="raw-file-destination"></a>Destino do Arquivo Bruto
   O destino Arquivo Bruto grava dados brutos em um arquivo. Devido ao formato dos dados ser nativo para o destino, os dados não requerem nenhuma tradução e pouca análise. Isso significa que o destino do Arquivo Bruto pode gravar dados mais rápido que outros destinos, tais como o Arquivo Plano e os destinos de OLE DB.  
@@ -113,7 +113,7 @@ ms.locfileid: "62770850"
   
 1.  Defina a propriedade WriteOption como **CreateOnce** ou **CreateAlways**e execute uma iteração do loop. O arquivo é criado. Isto assegura que os metadados de dados acrescentados e o arquivo correspondam.  
   
-2.  Redefina a propriedade WriteOption como **Append** e defina a propriedade ValidateExternalMetadata `False`como.  
+2.  Redefinir a propriedade WriteOption **para Anexar** e definir `False`a propriedade ValidateExternalMetadata para .  
   
  Se você usar a opção **TruncateAppend** em vez da opção **Append** , truncará filas que foram adicionadas a qualquer iteração anterior e então acrescentará novas filas. Usar a opção **TruncateAppend** também requer que os dados correspondam ao formato do arquivo.  
   
@@ -130,10 +130,10 @@ ms.locfileid: "62770850"
  Para obter informações sobre como definir as propriedades do componente, consulte [Definir as propriedades de um componente de fluxo de dados](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Entrada de blog, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)(Arquivos brutos são incríveis), em sqlservercentral.com.  
+ Entrada de blog, [Raw Files Are Awesome](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)(Arquivos brutos são incríveis), em sqlservercentral.com.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Origem do arquivo bruto](raw-file-source.md)   
+ [Fonte de arquivo bruto](raw-file-source.md)   
  [Fluxo de Dados](data-flow.md)  
   
   

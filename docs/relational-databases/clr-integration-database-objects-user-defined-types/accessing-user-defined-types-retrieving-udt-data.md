@@ -1,5 +1,6 @@
 ---
 title: Recuperando dados UDT | Microsoft Docs
+description: Este artigo descreve como acessar UDTs em um banco de dados do SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,40 +22,40 @@ helpviewer_keywords:
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5ceaa0e9812ba69820b8ac912ba8b5441cc73fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e3d14c6d24d6db5d27b12bcc3f28c1b6ba383442
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68009603"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488213"
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>Acessar tipos definidos pelo usuário – Recuperar dados UDT
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Para criar um tipo definido pelo usuário (UDT) no cliente, o assembly que foi registrado como UDT em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve estar disponível para o aplicativo cliente. O assembly UDT pode ser colocado no mesmo diretório que o aplicativo ou no Cache de Assembly Global (GAC). Também é possível definir uma referência para o assembly em seu projeto.  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>Requisitos para usar UDTs no ADO.NET  
- O assembly carregado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o assembly no cliente devem ser compatíveis para que o UDT seja criado no cliente. Para UDTs definidos com o formato de serialização **nativa** , os assemblies devem ser estruturalmente compatíveis. Para assemblies definidos com o formato **UserDefined** , o assembly deve estar disponível no cliente.  
+ O assembly carregado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o assembly no cliente devem ser compatíveis para que o UDT seja criado no cliente. Para UDTs definidos com o formato de serialização **Nativo,** os conjuntos devem ser estruturalmente compatíveis. Para montagens definidas com o formato **UserDefined,** o conjunto deve estar disponível no cliente.  
   
  Não é necessário ter uma cópia do assembly UDT no cliente para recuperar os dados raw de uma coluna UDT em uma tabela.  
   
 > [!NOTE]  
->  O **SqlClient** pode falhar ao carregar um UDT no caso de versões UDT incompatíveis ou outros problemas. Nesse caso, use os mecanismos de solução de problemas comuns para determinar porque o assembly que contém o UDT não pode ser localizado pelo aplicativo que fez a chamada. Para obter mais informações, consulte o tópico "Diagnosticando erros com Assistentes para Depuração Gerenciada" na documentação do .NET Framework.  
+>  **O SqlClient** pode não carregar um UDT no caso de versões UDT incompatíveis ou outros problemas. Nesse caso, use os mecanismos de solução de problemas comuns para determinar porque o assembly que contém o UDT não pode ser localizado pelo aplicativo que fez a chamada. Para obter mais informações, consulte o tópico "Diagnosticando erros com Assistentes para Depuração Gerenciada" na documentação do .NET Framework.  
   
 ## <a name="accessing-udts-with-a-sqldatareader"></a>Acessando UDTs com um SqlDataReader  
- Um **System. Data. SqlClient. SqlDataReader** pode ser usado do código do cliente para recuperar um conjunto de resultados que contém uma coluna UDT, que é exposta como uma instância do objeto.  
+ Um **System.Data.SqlClient.SqlDataReader** pode ser usado a partir do código do cliente para recuperar um conjunto de resultados que contém uma coluna UDT, que é exposta como uma instância do objeto.  
   
 ### <a name="example"></a>Exemplo  
- Este exemplo mostra como usar o método **Main** para criar um novo objeto **SqlDataReader** . As ações a seguir ocorrem no exemplo de código:  
+ Este exemplo mostra como usar o método **Principal** para criar um novo objeto **SqlDataReader.** As ações a seguir ocorrem no exemplo de código:  
   
-1.  O método Main cria um novo objeto **SqlDataReader** e recupera os valores da tabela Points, que tem uma coluna UDT chamada Point.  
+1.  O método Principal cria um novo objeto **SqlDataReader** e recupera os valores da tabela Pontos, que tem uma coluna UDT chamada Point.  
   
 2.  O UDT de Point expõe as coordenadas X e Y definidas como inteiros.  
   
-3.  O UDT define um método **Distance** e um método **GetDistanceFromXY** .  
+3.  O UDT define um método **Distance** e um método **GetDistanceFromXY.**  
   
 4.  O código de exemplo recupera os valores da chave primária e das colunas UDT para demonstrar os recursos do UDT.  
   
-5.  O código de exemplo chama os métodos **Point. distance** e **Point. GetDistanceFromXY** .  
+5.  O código de exemplo chama os métodos **Point.Distance** e **Point.GetDistanceFromXY.**  
   
 6.  Os resultados são exibidos na janela do console.  
   
@@ -157,10 +158,10 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>Associando UDTs como bytes  
- Em algumas situações, você pode desejar recuperar os dados raw da coluna UDT. Talvez o tipo não esteja disponível localmente ou você não queira instanciar uma instância uma instância do UDT. Você pode ler os bytes brutos em uma matriz de bytes usando o método **GetBytes** de um **SqlDataReader**. Esse método lê um fluxo de bytes do deslocamento de coluna especificado no buffer de uma matriz, começando com um deslocamento de buffer especificado. Outra opção é usar um dos métodos **GetSqlBytes** ou **GetSqlBinary** e ler todo o conteúdo em uma única operação. De qualquer maneira, o objeto UDT nunca é instanciado; assim, não é necessário definir uma referência para o UDT no assembly cliente.  
+ Em algumas situações, você pode desejar recuperar os dados raw da coluna UDT. Talvez o tipo não esteja disponível localmente ou você não queira instanciar uma instância uma instância do UDT. Você pode ler os bytes brutos em uma matriz de bytes usando o método **GetBytes** de um **SqlDataReader**. Esse método lê um fluxo de bytes do deslocamento de coluna especificado no buffer de uma matriz, começando com um deslocamento de buffer especificado. Outra opção é usar um dos **métodos GetSqlBytes** ou **GetSqlBinary** e ler todo o conteúdo em uma única operação. De qualquer maneira, o objeto UDT nunca é instanciado; assim, não é necessário definir uma referência para o UDT no assembly cliente.  
   
 ### <a name="example"></a>Exemplo  
- Este exemplo mostra como recuperar os dados do **ponto** como bytes brutos em uma matriz de bytes usando um **SqlDataReader**. O código usa um **System. Text. StringBuilder** para converter os bytes brutos em uma representação de cadeia de caracteres a ser exibida na janela do console.  
+ Este exemplo mostra como recuperar os dados **point** como bytes brutos em uma matriz de bytes usando um **SqlDataReader**. O código usa um **System.Text.StringBuilder** para converter os bytes brutos em uma representação de string a ser exibida na janela do console.  
   
 ```vb  
 Option Explicit On  
@@ -266,7 +267,7 @@ class GetRawBytes
 ```  
   
 ### <a name="example-using-getsqlbytes"></a>Exemplo de uso de GetSqlBytes  
- Este exemplo mostra como recuperar os dados do **ponto** como bytes brutos em uma única operação usando o método **GetSqlBytes** . O código usa um **StringBuilder** para converter os bytes brutos em uma representação de cadeia de caracteres a ser exibida na janela do console.  
+ Este exemplo mostra como recuperar os dados **point** como bytes brutos em uma única operação usando o método **GetSqlBytes.** O código usa um **StringBuilder** para converter os bytes brutos em uma representação de string a ser exibida na janela do console.  
   
 ```vb  
 Option Explicit On  
@@ -374,13 +375,13 @@ class GetRawBytes
  Os UDTs podem ser usados como parâmetros de entrada e de saída no código do ADO.NET.  
   
 ## <a name="using-udts-in-query-parameters"></a>Usando UDTs em parâmetros de consulta  
- Os UDTs podem ser usados como valores de parâmetro ao configurar um **SqlParameter** para um objeto **System. Data. SqlClient. SqlCommand** . A enumeração **SqlDbType. UDT** de um objeto **SqlParameter** é usada para indicar que o parâmetro é um UDT ao chamar o método **Add** para a coleção de **parâmetros** . A propriedade **UdtTypeName** de um objeto **SqlCommand** é usada para especificar o nome totalmente qualificado do UDT no banco de dados usando a sintaxe *Database. schema_name. object_name* . Embora não seja necessário, o uso do nome totalmente qualificado elimina a ambiguidade do código.  
+ Os UDTs podem ser usados como valores de parâmetro ao configurar um **SqlParameter** para um objeto **System.Data.SqlClient.SqlCommand.** A enumeração **SqlDbType.Udt** de um objeto **SqlParameter** é usada para indicar que o parâmetro é um UDT ao chamar o método **Adicionar** à coleção **Parâmetros.** A propriedade **UdtTypeName** de um objeto **SqlCommand** é usada para especificar o nome totalmente qualificado do UDT no banco de dados usando a sintaxe *de banco de dados.schema_name.object_name.* Embora não seja necessário, o uso do nome totalmente qualificado elimina a ambiguidade do código.  
   
 > [!NOTE]  
 >  Uma cópia local do assembly UDT deve estar disponível para o projeto cliente.  
   
 ### <a name="example"></a>Exemplo  
- O código neste exemplo cria objetos **SqlCommand** e **SqlParameter** para inserir dados em uma coluna UDT em uma tabela. O código usa a enumeração **SqlDbType. UDT** para especificar o tipo de dados e a propriedade **UdtTypeName** do objeto **SqlParameter** para especificar o nome totalmente qualificado do UDT no banco de dados.  
+ O código neste exemplo cria objetos **SqlCommand** e **SqlParameter** para inserir dados em uma coluna UDT em uma tabela. O código usa a enumeração **SqlDbType.Udt** para especificar o tipo de dados e a propriedade **UdtTypeName** do objeto **SqlParameter** para especificar o nome totalmente qualificado do UDT no banco de dados.  
   
 ```vb  
 Option Explicit On  

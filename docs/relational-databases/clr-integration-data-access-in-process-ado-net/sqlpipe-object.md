@@ -1,5 +1,6 @@
 ---
 title: Objeto SqlPipe | Microsoft Docs
+description: Para objetos de banco de dados CLR em execução no SQL Server, você pode enviar resultados para o tubo conectado usando os métodos Enviar do objeto SqlPipe.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ecc3f87313b6ddcd48b7b0e527ba4effd58e624
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7b95788d37fa8f8c2e57c2b20aa222938c65dc6c
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913555"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487500"
 ---
 # <a name="sqlpipe-object"></a>Objeto SqlPipe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "67913555"
  **SendResultsStart** usa um **SqlDataRecord** como uma entrada. Ele marca o começo de um conjunto de resultados e usa os metadados de registro para criar os metadados que descrevem o conjunto de resultados. Ele não envia o valor do registro com **SendResultsStart**. Todas as linhas subsequentes, enviadas com **SendResultsRow**, devem corresponder àquela definição de metadados.  
   
 > [!NOTE]  
->  Depois de chamar o método **SendResultsStart** apenas **SendResultsRow** e **SendResultsEnd** podem ser chamados. Chamar qualquer outro método na mesma instância de **SqlPipe** resulta em um **InvalidOperationException**. **SendResultsEnd** define **SqlPipe** de volta para o estado inicial no qual outros métodos podem ser chamados.  
+>  Depois de chamar o método **SendResultsStart** apenas **SendResultsRow** e **SendResultsEnd** podem ser chamados. Chamar qualquer outro método na mesma instância de **SqlPipe** resulta em um **InvalidOperationException**. **SendResultsEnd** define **SqlPipe** de volta ao estado original no qual outros métodos podem ser chamados.  
   
 ### <a name="example"></a>Exemplo  
  O procedimento armazenado **uspGetProductLine** retorna o nome, o número do produto, a cor e o preço de tabela de todos os produtos de uma linha de produtos específica. Esse procedimento armazenado aceita correspondências exatas para *prodLine*.  
@@ -141,7 +142,7 @@ EXEC uspGetProductLineVB 'T';
   
 ## <a name="see-also"></a>Consulte Também  
  [Objeto SqlDataRecord](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
- [Procedimentos armazenados CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+ [ClR Procedimentos Armazenados](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [Extensões específicas em processo do SQL Server para o ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
   
   

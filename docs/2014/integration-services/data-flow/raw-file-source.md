@@ -16,12 +16,12 @@ ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bedefd277f1be7f44d807e6539097dd24f5ab2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4c015844fd0b0a3ed219adabaf95f4b2af98d663
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62900906"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486972"
 ---
 # <a name="raw-file-source"></a>Origem do arquivo bruto
   A fonte Arquivo Bruto lê dados brutos de um arquivo. Como a representação dos dados é nativa à fonte, os dados não necessitam de conversão e praticamente nenhuma análise. Isso significa que a fonte de arquivo bruto pode ler dados mais rapidamente do que outras fontes, como o arquivo simples e as fontes OLE DB.  
@@ -51,10 +51,10 @@ ms.locfileid: "62900906"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Entrada de blog, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), em sqlservercentral.com  
+-   Entrada de blog, [Raw Files Are Awesome](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131), em sqlservercentral.com  
   
 ## <a name="see-also"></a>Consulte Também  
- [Destino do arquivo bruto](raw-file-destination.md)   
+ [Destino de arquivo bruto](raw-file-destination.md)   
  [Fluxo de Dados](data-flow.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: Tipos CLR definidos pelo usuário | Microsoft Docs
+title: Tipos definidos pelo usuário da CLR | Microsoft Docs
+description: Este artigo descreve o processo de criação de tipos definidos pelo usuário (UDTs) para armazenar objetos CLR em um banco de dados SQL Server.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -31,21 +32,21 @@ helpviewer_keywords:
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2078b11b44232b44e94191c07fca91998f2c1172
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b3983459ac8ca4b38c82cc926c2f1b0f55bb1d58
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028353"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487845"
 ---
 # <a name="clr-user-defined-types"></a>Tipos CLR definidos pelo usuário
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oferece a capacidade de criar objetos de banco de dados que são programados em um assembly criado no .NET Framework Common Language Runtime (CLR). Os objetos do banco de dados que podem usufruir o modelo de programação avançado fornecido pelo CLR incluem gatilhos, procedimentos armazenados, funções, funções de agregação e tipos.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dá-lhe a capacidade de criar objetos de banco de dados programados contra um conjunto criado no .NET Framework common language runtime (CLR). Os objetos do banco de dados que podem usufruir o modelo de programação avançado fornecido pelo CLR incluem gatilhos, procedimentos armazenados, funções, funções de agregação e tipos.  
   
 > [!NOTE]  
->  Por padrão, a possibilidade de executar código do CLR está definida como OFF no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O CLR pode ser habilitado usando o procedimento armazenado do sistema **sp_configure** .  
+>  Por padrão, a possibilidade de executar código do CLR está definida como OFF no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O CLR pode ser habilitado usando o procedimento armazenado **no sistema sp_configure.**  
   
- A partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]do, você pode usar UDTs (tipos definidos pelo usuário) para estender o sistema de tipos escalares do servidor, permitindo o armazenamento de objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR em um banco de dados. As UDTs podem conter vários elementos e apresentar comportamentos, o que as diferencia dos tipos de dados de alias tradicionais, que consistem em um único tipo de dados de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Começando [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]com , você pode usar tipos definidos pelo usuário (UDTs) para estender o sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de tipo escalar do servidor, permitindo o armazenamento de objetos CLR em um banco de dados. As UDTs podem conter vários elementos e apresentar comportamentos, o que as diferencia dos tipos de dados de alias tradicionais, que consistem em um único tipo de dados de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Como as UDTs são acessadas pelo sistema como um todo, seu uso em tipos de dados complexos pode apresentar um impacto negativo em relação ao desempenho. Dados complexos costumam ser mais bem modelados usando linhas e tabelas tradicionais. As UDTs do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são bem-apropriadas ao seguinte:  
   
@@ -57,16 +58,16 @@ ms.locfileid: "68028353"
   
  O processo de desenvolvimento das UDTs no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste nas seguintes etapas:  
   
-1.  **Codifique e compile o assembly que define a UDT.** Os UDTs são definidos usando qualquer um dos idiomas com suporte pelo the.NET Framework Common Language Runtime (CLR) que produz código verificável. Isso inclui o Visual C# e o Visual Basic .NET. Os dados são expostos como campos e propriedades de uma classe ou estrutura do .NET Framework, e os comportamentos são definidos pelos métodos da classe ou estrutura.  
+1.  **Codifique e compile o assembly que define a UDT.** Os UDTs são definidos usando qualquer um dos idiomas suportados por the.NET Framework common language runtime (CLR) que produzem código verificável. Isso inclui o Visual C# e o Visual Basic .NET. Os dados são expostos como campos e propriedades de uma classe ou estrutura do .NET Framework, e os comportamentos são definidos pelos métodos da classe ou estrutura.  
   
 2.  **Registre o assembly.** As UDTs podem ser implantadas por meio da interface do usuário do Visual Studio em um projeto de banco de dados ou usando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY, que copia o assembly que contém a classe ou a estrutura para um banco de dados.  
   
 3.  **Crie a UDT no SQL Server.** Uma vez que o assembly está carregado em um banco de dados de host, você usa a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TYPE para criar uma UDT e expor os membros da classe ou da estrutura como membros da UDT. As UDTs só existem no contexto de um único banco de dados e, uma vez registradas, não têm dependências quanto a arquivos externos nos quais foram criados.  
   
     > [!NOTE]  
-    >  Antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], não havia suporte para UDTs criadas em assemblies do .NET Framework. No entanto, você ainda [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar tipos de dados de alias usando **sp_addtype**. A sintaxe de CREATE TYPE pode ser usada para criar tanto tipos de dados definidos nativos definidos pelo usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quanto UDTs.  
+    >  Antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], não havia suporte para UDTs criadas em assemblies do .NET Framework. No entanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] você ainda pode usar os tipos de dados de alias usando **sp_addtype**. A sintaxe de CREATE TYPE pode ser usada para criar tanto tipos de dados definidos nativos definidos pelo usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quanto UDTs.  
   
-4.  **Criar tabelas, variáveis ou parâmetros usando o UDT** A partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]do, um tipo definido pelo usuário pode ser usado como a definição de coluna de uma tabela, como uma variável [!INCLUDE[tsql](../../includes/tsql-md.md)] em um lote ou como um argumento de [!INCLUDE[tsql](../../includes/tsql-md.md)] uma função ou procedimento armazenado.  
+4.  **Criar tabelas, variáveis ou parâmetros usando o UDT** Começando [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]com , um tipo definido pelo usuário pode ser usado como [!INCLUDE[tsql](../../includes/tsql-md.md)] a definição de coluna [!INCLUDE[tsql](../../includes/tsql-md.md)] de uma tabela, como uma variável em um lote, ou como um argumento de uma função ou procedimento armazenado.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Criar um tipo definido pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  

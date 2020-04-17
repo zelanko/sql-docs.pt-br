@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 19eaefc6fcd6615b74614893a37aa1722095e63d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 9597b55eabb247dc4a95ed83fe04abac5067a269
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664310"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488171"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "80664310"
 Retorna uma linha para cada tipo de solicitação de script externo. As solicitações de script externo são agrupadas pela linguagem de script externo com suporte. Uma linha é gerada para cada função de script externo registrada. Funções de script externo arbitrárias não são registradas, exceto se forem enviadas por um processo pai, como `rxExec`.
   
 > [!NOTE]  
-> Essa visão de gerenciamento dinâmico (Detran) só está disponível se você tiver instalado e habilitado o recurso que suporta a execução de script externo. Para obter mais informações, consulte [Serviços R no SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) e [Serviços de Aprendizado de Máquina (R, Python) no SQL Server 2017 e posteriores](../../machine-learning/what-is-sql-server-machine-learning.md).  
+> Essa visão de gerenciamento dinâmico (Detran) só está disponível se você tiver instalado e habilitado o recurso que suporta a execução de script externo. Para obter mais informações, consulte [Serviços R no SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) e [Serviços de Aprendizado de Máquina (R, Python) no SQL Server 2017 e posteriores](../../machine-learning/sql-server-machine-learning-services.md).  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|Linguagem|**NVARCHAR**|Nome da linguagem de script externo registrada. Cada script externo deve especificar a linguagem na solicitação de script para iniciar o inicializador associado. |  
-|counter_name|**NVARCHAR**|Nome de uma função de script externo registrada. Não permite valor nulo.|  
+|Linguagem|**nvarchar**|Nome da linguagem de script externo registrada. Cada script externo deve especificar a linguagem na solicitação de script para iniciar o inicializador associado. |  
+|counter_name|**nvarchar**|Nome de uma função de script externo registrada. Não permite valor nulo.|  
 |counter_value|**inteiro**|Número total de instâncias nas quais a função de script externo registrada foi chamada no servidor. Esse valor é cumulativo, começando com a hora em que o recurso foi instalado na instância, e não pode ser redefinido.|  
 
   
