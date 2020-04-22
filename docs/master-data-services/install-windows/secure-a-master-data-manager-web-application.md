@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0442f63413c3fd0213fb5b63151208fb10b55351
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 57ba6a83d48254bdd0d86fee9a5d2d6300cb58bc
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73729172"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728495"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Proteger um aplicativo Web Master Data Manager
 
@@ -25,7 +25,7 @@ ms.locfileid: "73729172"
 > [!NOTE]  
 >  O aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] pode usar HTTP ou HTTPS, mas não ambos.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar o procedimento:  
   
 -   Você deve ser um administrador no servidor Web onde o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] é instalado.  
@@ -44,7 +44,7 @@ ms.locfileid: "73729172"
   
 5.  Na lista, selecione **https**.  
   
-6.  Selecione o certificado SSL.  
+6.  Selecione o certificado TLS/SSL.  
   
 7.  Clique em **OK**.  
   
@@ -65,6 +65,6 @@ ms.locfileid: "73729172"
 
   
 ## <a name="see-also"></a>Consulte Também  
- [Criar um aplicativo Web Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
+ [Criar um aplicativo Web do Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   
