@@ -1,5 +1,6 @@
 ---
 title: rsProcessingError – erro do Reporting Services | Microsoft Docs
+description: 'Nesta página de referência de erro, saiba mais sobre a ID de evento "rsProcessingError": ocorreram erros no processamento do relatório do SQL Server Reporting Services.'
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4b8f4bd0718d0fa9785d3a2f87c437a6b732f39a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573818"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487212"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erro do Reporting Services
     
@@ -53,7 +54,7 @@ ms.locfileid: "65573818"
   
 -   Um parâmetro que tem o conjunto de propriedades Nullable definido como **False** detectou um valor nulo no parâmetro.  
   
--   Uma expressão da propriedade Hidden de uma região de dados que contém um erro: a referência do objeto não foi definida para uma instância de um objeto.  
+-   Uma expressão para a propriedade oculta de uma região de dados contém um erro: referência de objeto não definida para uma instância de objeto.  
   
 -   Expressão que incluiu uma chamada de função inválida ou erro de sintaxe.  
   
@@ -82,7 +83,7 @@ ms.locfileid: "65573818"
  Um parâmetro de vários valores não pode ser Nulo. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Relatório principal com sub-relatório que não possa ser processado  
- Um relatório com sub-relatórios deve ser processado pela mesma versão do processador de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Durante a atualização de relatórios para a versão atual do esquema de definição de relatórios, o relatório principal e os sub-relatórios poderão ou não ser atualizados ao mesmo tempo. Se a versão não for compatível entre um relatório e seus sub-relatórios, a mensagem a seguir será exibida: "Não foi possível processar o sub-relatório".  
+ Um relatório com sub-relatórios deve ser processado pela mesma versão do processador de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Durante a atualização de relatórios para a versão atual do esquema de definição de relatórios, o relatório principal e os sub-relatórios poderão ou não ser atualizados ao mesmo tempo. Se a versão não for compatível entre um relatório e seus sub-relatórios, a seguinte mensagem será exibida: "Não foi possível processar o sub-relatório".  
   
  Você deve alterar o relatório principal ou os sub-relatórios de forma que todos os relatórios possam ser processados pela mesma versão do processador de relatórios. Para obter informações sobre o motivo pelo qual um relatório falha ao ser atualizado, consulte [Atualizar relatórios](../../reporting-services/install-windows/upgrade-reports.md).  
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7b65838720b7300b92829aa57da58563628740cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3c417eb84350ee2b2c3fcf5e74c0e17b2b195d93
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570752"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630642"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>Método de ConfigurationSetting – CreateSSLCertificateBinding
-  Cria uma associação de Certificado SSL.  
+  Cria uma associação de certificado TLS/SSL.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,7 +35,7 @@ public void CreateSSLCertificateBinding(string application,
     int lcid, out string error, out int HRESULT);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *Aplicativo*  
  O nome do aplicativo para o qual a associação de certificado deve ser criada.  
   
@@ -46,7 +46,7 @@ public void CreateSSLCertificateBinding(string application,
  O endereço IP para o aplicativo.  
   
  *Porta*  
- A porta SSL relacionada à associação.  
+ A porta TLS relacionada à associação.  
   
  *Lcid*  
  A localidade a ser usada para as mensagens de erro retornadas.  
@@ -63,7 +63,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="remarks"></a>Comentários  
  Este método adiciona uma associação a rsreportserver.config para o aplicativo. Caso ainda não exista uma associação em HTTP.SYS, ela será criada ali.  
   
- Antes de criar a associação, a chamada do método examina as Reservas de Url referentes ao aplicativo especificado a fim de determinar se a Associação de Certificado SSL é válida.  
+ Antes de criar a associação, a chamada de método examina as Reservas de Url referentes ao aplicativo especificado a fim de determinar se a Associação de certificado TLS/SSL é válida.  
   
  As seguintes condições são validadas e podem resultar em erros:  
   

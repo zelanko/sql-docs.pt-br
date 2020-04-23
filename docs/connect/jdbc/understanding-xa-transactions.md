@@ -1,5 +1,6 @@
 ---
-title: Noções básicas sobre transações XA | Microsoft Docs
+title: Noções básicas sobre transações XA
+description: O Microsoft JDBC Driver for SQL Server dá suporte a transações distribuídas opcionais para a Plataforma Java, Enterprise Edition/JDBC 2.0.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: efd99a3bc59b18eb29cb03719212b4f00e0c40b0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9bcf55fd300c977105229473228955581da7cdd3
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916972"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528730"
 ---
 # <a name="understanding-xa-transactions"></a>Noções básicas sobre transações XA
 
@@ -46,9 +47,9 @@ As diretrizes adicionais a seguir se aplicam a transações firmemente acopladas
 
 - Ao usar transações XA junto com o Coordenador de Transações Distribuídas (MS DTC), talvez você observe que a versão atual do MS DTC não oferece suporte ao comportamento de ramificações XA firmemente acopladas. Por exemplo, o MS DTC tem um mapeamento um-para-um entre uma ID de transação de ramificação XA (XID) e uma ID de transação do MS DTC, e as operações executadas por ramificações XA frouxamente acopladas são isoladas uma da outra.  
   
-- O MS DTC também é compatível com branches XA bem acoplados em que vários branches XA com a mesma GTRID (ID de transação global) são mapeados para uma ID de transação do MS DTC. Esse suporte permite que vários branches XA bem acoplados reconheçam as alterações feitas no gerenciador de recursos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+- O MS DTC também é compatível com branches XA firmemente acoplados em que vários branches XA com a mesma GTRID (ID de transação global) são mapeados para uma única ID de transação do MS DTC. Esse suporte permite que vários branches XA bem acoplados reconheçam as alterações feitas no gerenciador de recursos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-- Um sinalizador [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) permite que os aplicativos usem as transações XA bem acopladas com IDs de transação de branch XA (BQUAL) diferentes, mas a mesma GTRID (ID de transação global) e a mesma FormatID (ID de formato). Para usar esse recurso, você deve definir o [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) no parâmetro de sinalizadores do método XAResource.start:
+- Um sinalizador [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) permite que os aplicativos usem as transações XA firmemente acopladas com IDs de transação de branch XA (BQUAL) diferentes, mas a mesma GTRID (ID de transação global) e a mesma FormatID (ID de formato). Para usar esse recurso, você deve definir o [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) no parâmetro de sinalizadores do método XAResource.start:
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  

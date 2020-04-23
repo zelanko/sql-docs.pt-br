@@ -1,7 +1,7 @@
 ---
 title: Configurar a opção de configuração de servidor max worker threads | Microsoft Docs
 ms.custom: ''
-ms.date: 11/23/2017
+ms.date: 04/14/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d573bc4c8fc628bf4f1cc1fa36e50bc0e69c3202
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75776419"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488309"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurar a opção max worker threads de configuração de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,35 +55,43 @@ ms.locfileid: "75776419"
   
 -   O thread pooling ajuda a otimizar o desempenho quando são conectados grandes números de clientes ao servidor. Normalmente, é criado um thread de sistema operacional separado para cada solicitação de consulta. Porém, com centenas de conexões para o servidor, usam um thread por solicitação de consulta pode consumir quantias grandes de recursos do sistema. A opção **max worker threads** habilita o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a criar um pool de threads de trabalho para atender a um número maior de solicitações de consulta, o que melhora o desempenho.  
   
--   A tabela a seguir mostra o número configurado automaticamente de máximo de threads de trabalho para várias combinações de CPUs e versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   A tabela a seguir mostra o número máximo automaticamente configurado de threads de trabalho para várias combinações de CPUs, arquitetura de computador e versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usando a fórmula: * **Máximo de trabalhos padrão* + ((* CPUs lógicas *-4) * *trabalhos por CPU*) * *.  
   
-    |Número de CPUs|Computador de 32 bits|Computador de 64 bits|  
-    |------------|------------|------------|  
-    |\<= 4 processadores|256|512|  
-    |8 processadores|288|576|  
-    |16 processadores|352|704|  
-    |32 processadores|480|960|  
-    |64 processadores|736|1\.472|  
-    |128 processadores|4\.224|4480|  
-    |256 processadores|8\.320|8\.576| 
+    |Número de CPUs|Computador de 32 bits (até [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|Computador de 64 bits (até [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)|Computador de 64 bits (começando em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
+    |------------|------------|------------|------------|  
+    |\< = 4|256|512|512|   
+    |8|288|576|576|   
+    |16|352|704|704|   
+    |32|480|960|960|   
+    |64|736|1\.472|2432|   
+    |128|1248|2496|4480|   
+    |256|2272|4544|8\.576|   
     
-    Usando a seguinte fórmula:
+    Até [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, os *Trabalhos por CPU* só dependem da arquitetura (32 bits ou 64 bits):
     
-    |Número de CPUs|Computador de 32 bits|Computador de 64 bits|  
-    |------------|------------|------------| 
-    |\<= 4 processadores|256|512|
-    |\> 4 processadores e \<= 64 processadores|256 + (do (CPU lógica - 4) * 8)|512 + (do (CPUs lógicas – 4) * 16)|
-    |\> 64 processadores|256 + ((CPUs lógicas – 4) * 32)|512 + ((CPUs lógicas – 4) * 32)|
+    |Número de CPUs|Computador de 32 bits <sup>1</sup>|Computador de 64 bits|   
+    |------------|------------|------------|   
+    |\< = 4|256|512|   
+    |\> 4|256 + (do (CPU lógica - 4) * 8)|512 <sup>2</sup> + ((CPUs lógicas – 4) * 16)|   
+    
+    A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], os *Trabalhos por CPU* dependem da arquitetura e do número de processadores (entre 4 e 64 ou maior que 64):
+    
+    |Número de CPUs|Computador de 32 bits <sup>1</sup>|Computador de 64 bits|   
+    |------------|------------|------------|   
+    |\< = 4|256|512|   
+    |\> 4 e \<= 64|256 + (do (CPU lógica - 4) * 8)|512 <sup>2</sup> + ((CPUs lógicas – 4) * 16)|   
+    |\> 64|256 + ((CPUs lógicas – 4) * 32)|512 <sup>2</sup> + ((CPUs lógicas – 4) * 32)|   
   
-    > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode mais ser instalado em um sistema operacional de 32 bits. Valores de computador de 32 bits são listados para a assistência aos clientes que executam o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versões anteriores. É recomendável 1.024 como o número máximo de threads de trabalho para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executado em um computador de 32 bits.  
+    <sup>1</sup> A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode mais ser instalado em um sistema operacional de 32 bits. Valores de computador de 32 bits são listados para a assistência aos clientes que executam o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versões anteriores. É recomendável 1.024 como o número máximo de threads de trabalho para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executado em um computador de 32 bits.
+    
+    <sup>2</sup> A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], o valor *Máximo de trabalhos padrão* é dividido por 2 para computadores com menos de 2 GB de memória.
   
-    > [!NOTE]  
+    > [!TIP]  
     > Para obter recomendações sobre como usar mais de 64 CPUs, veja [Práticas recomendadas para executar o SQL Server em computadores que têm mais de 64 CPUs](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus).  
   
 -   Quando todos os threads de trabalho estiverem ativos com a execução de consultas longas, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá parecer não estar respondendo até que um thread de trabalho seja concluído e fique disponível. Embora não seja um defeito, isso às vezes pode ser indesejável. Se um processo parecer ser não estar respondendo e nenhuma nova consulta possa ser processada, então conecte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa a conexão de administrador dedicada (DAC) e elimine o processo. Para evitar isto, aumente o número de máximo threads de trabalho.  
   
- A opção **max worker threads** de configuração do servidor não limita todos os threads que podem ser gerados no sistema. Os threads necessários para tarefas como Grupos de Disponibilidade, Service Broker, Gerenciador de Bloqueio ou outros são gerados fora desse limite. Se o número de threads configurados for excedido, a consulta a seguir fornecerá informações sobre as tarefas do sistema que geraram os threads adicionais.  
+ A opção **max worker threads** da configuração do servidor não limita todos os threads que podem ser gerados no sistema. Os threads necessários para tarefas, como Grupos de Disponibilidade, Service Broker, Gerenciador de Bloqueio ou outros, são gerados fora desse limite. Se o número de threads configurados for excedido, a consulta a seguir fornecerá informações sobre as tarefas do sistema que geraram os threads adicionais.  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  

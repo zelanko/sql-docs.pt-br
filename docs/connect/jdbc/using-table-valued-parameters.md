@@ -1,5 +1,6 @@
 ---
-title: Como usar parâmetros com valor de tabela | Microsoft Docs
+title: Como usar parâmetros com valor de tabela
+description: Os parâmetros com valor de tabela fornecem uma maneira eficiente de enviar várias linhas de dados de um cliente para SQL Server em um único comando parametrizado.
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8a4a46120991400f8e76c91e8a0e9b00ada2eac0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 698cf6e4e44210ea5f4575d4021514c07fe4255d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923859"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631934"
 ---
 # <a name="using-table-valued-parameters"></a>Como usar parâmetros com valor de tabela
 
@@ -32,7 +33,7 @@ Os valores de coluna em parâmetros com valor de tabela podem ser acessados usan
   
  Para obter mais informações sobre os parâmetros com valor de tabela, confira os recursos a seguir.  
   
-| Recurso                                                                                                             | DESCRIÇÃO                                                                         |
+| Recurso                                                                                                             | Descrição                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | [Parâmetros de valores de tabela (Mecanismo de Banco de Dados)](https://go.microsoft.com/fwlink/?LinkId=98363) nos Manuais Online do SQL Server | Descreve como criar e usar parâmetros com valor de tabela                             |
 | [Tipos de tabela definidos pelo usuário](https://go.microsoft.com/fwlink/?LinkId=98364) nos Manuais Online do SQL Server                  | Descreve os tipos de tabela definidos pelo usuário usados para declarar parâmetros com valor de tabela |
@@ -48,7 +49,7 @@ Antes de os parâmetros de valores de tabela serem introduzidos no SQL Server 20
   
 - Crie uma série de instruções SQL individuais para modificações de dados que afetam várias linhas. As alterações podem ser enviadas ao servidor individualmente ou em lotes em grupos. No entanto, mesmo quando enviados em lotes que contêm várias instruções, cada instrução é executada separadamente no servidor.  
   
-- Use o programa utilitário bcp ou [SQLServerBulkCopy](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md) para carregar várias linhas de dados em uma tabela. Embora essa técnica seja muito eficiente, ela não dá suporte ao processamento do lado do servidor, a menos que os dados sejam carregados em uma tabela temporária ou variável de tabela.
+- Use o programa utilitário bcp ou [SQLServerBulkCopy](using-bulk-copy-with-the-jdbc-driver.md) para carregar várias linhas de dados em uma tabela. Embora essa técnica seja muito eficiente, ela não dá suporte ao processamento do lado do servidor, a menos que os dados sejam carregados em uma tabela temporária ou variável de tabela.
   
 ## <a name="creating-table-valued-parameter-types"></a>Como criar tipos de parâmetro com valor de tabela  
 
@@ -237,7 +238,7 @@ pStmt.execute();
 
 Essa classe representa os metadados de uma coluna. Ele é usado na interface do ISQLServerDataRecord para passar os metadados da coluna para o parâmetro com valor de tabela. Os métodos nessa classe são:  
 
-| Nome                                                                                                                                                                             | DESCRIÇÃO                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Nome                                                                                                                                                                             | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | public SQLServerMetaData(String columnName, int sqlType, int precision, int scale, boolean useServerDefault, boolean isUniqueKey, SQLServerSortOrder sortOrder, int sortOrdinal) | Inicializa uma nova instância de SQLServerMetaData com o nome da coluna, tipo SQL, precisão, escala e padrão do servidor especificados. Essa forma do construtor dá suporte a parâmetros com valor de tabela, permitindo que você especifique se a coluna é exclusiva no parâmetro com valor de tabela, a ordem de classificação da coluna e o ordinal da coluna de classificação. <br/><br/>useServerDefault – especifica se essa coluna deve usar o valor de servidor padrão; o valor padrão é false.<br>isUniqueKey – indica se a coluna no parâmetro com valor de tabela é exclusiva; O valor padrão é false.<br>sortOrder – indica a ordem de classificação de uma coluna; o valor padrão é SQLServerSortOrder.Unspecified.<br>sortOrdinal – especifica o ordinal da coluna de classificação; sortOrdinal começa em 0; O valor padrão é-1. |
 | public SQLServerMetaData( String columnName, int sqlType)                                                                                                                        | Inicializa uma nova instância de SQLServerMetaData usando o nome da coluna e o tipo SQL.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -261,7 +262,7 @@ Uma enumeração que define a ordem de classificação. Os valores possíveis s�
 
 Essa classe representa uma tabela de dados na memória a ser usada com parâmetros com valor de tabela. Os métodos nessa classe são:  
 
-| Nome                                                          | DESCRIÇÃO                                          |
+| Nome                                                          | Descrição                                          |
 | ------------------------------------------------------------- | ---------------------------------------------------- |
 | Public SQLServerDataTable()                                   | Inicializa uma nova instância de SQLServerDataTable.    |
 | public Iterator<Entry\<Integer, Object[]>> getIterator()      | Recupera um iterador nas linhas da tabela de dados. |
@@ -275,7 +276,7 @@ Essa classe representa uma tabela de dados na memória a ser usada com parâmetr
 
 Essa classe representa uma coluna da tabela de dados na memória representada por SQLServerDataTable. Os métodos nessa classe são:  
 
-| Nome                                                       | DESCRIÇÃO                                                                      |
+| Nome                                                       | Descrição                                                                      |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | public SQLServerDataColumn(String columnName, int sqlType) | Inicializa uma nova instância de SQLServerDataColumn com o nome da coluna e o tipo. |
 | public String getColumnName()                              | Recupera o nome da coluna.                                                       |
@@ -285,7 +286,7 @@ Essa classe representa uma coluna da tabela de dados na memória representada po
 
 Essa classe representa uma interface que os usuários podem implementar para transmitir dados a um parâmetro com valor de tabela. Os métodos nesta interface são:  
   
-| Nome                                                    | DESCRIÇÃO                                                                                             |
+| Nome                                                    | Descrição                                                                                             |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | public SQLServerMetaData getColumnMetaData(int column); | Recupera os metadados de coluna do índice de coluna fornecido.                                               |
 | public int getColumnCount();                            | Recupera o número total de colunas.                                                                  |
@@ -296,7 +297,7 @@ Essa classe representa uma interface que os usuários podem implementar para tra
 
 Os métodos a seguir foram adicionados a essa classe para dar suporte à passagem de parâmetros com valor de tabela.  
 
-| Nome                                                                                                    | DESCRIÇÃO                                                                                                                                                                                                                                                                                                |
+| Nome                                                                                                    | Descrição                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | public final void setStructured(int parameterIndex, String tvpName, SQLServerDataTable tvpDataTable)    | Popula um parâmetro com valor de tabela com uma tabela de dados. parameterIndex é o índice de parâmetro, tvpName é o nome do parâmetro com valor de tabela e tvpDataTable é o objeto de tabela de dados de origem.                                                                                                          |
 | public final void setStructured(int parameterIndex, String tvpName, ResultSet tvpResultSet)             | Popula um parâmetro com valor de tabela com um ResultSet recuperado de outra tabela. parameterIndex é o índice de parâmetro, tvpName é o nome do parâmetro com valor de tabela e tvpResultSet é o objeto de conjunto de resultados de origem.                                                                               |
@@ -306,7 +307,7 @@ Os métodos a seguir foram adicionados a essa classe para dar suporte à passage
 
 Os métodos a seguir foram adicionados a essa classe para dar suporte à passagem de parâmetros com valor de tabela.  
   
-| Nome                                                                                                        | DESCRIÇÃO                                                                                                                                                                                                                                                                                                                      |
+| Nome                                                                                                        | Descrição                                                                                                                                                                                                                                                                                                                      |
 | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | public final void setStructured(String paratemeterName, String tvpName, SQLServerDataTable tvpDataTable)    | Popula um parâmetro com valor de tabela passado para um procedimento armazenado com uma tabela de dados. paratemeterName é o nome do parâmetro, tvpName é o nome do tipo TVP e tvpDataTable é o objeto da tabela de dados.                                                                                                                 |
 | public final void setStructured(String paratemeterName, String tvpName, ResultSet tvpResultSet)             | Popula um parâmetro com valor de tabela passado para um procedimento armazenado com um ResultSet recuperado de outra tabela. paratemeterName é o nome do parâmetro, tvpName é o nome do tipo TVP e tvpResultSet é o objeto de conjunto de resultados de origem.                                                                              |
@@ -314,4 +315,4 @@ Os métodos a seguir foram adicionados a essa classe para dar suporte à passage
 
 ## <a name="see-also"></a>Confira também
 
-[Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Visão geral do JDBC Driver](overview-of-the-jdbc-driver.md)  
