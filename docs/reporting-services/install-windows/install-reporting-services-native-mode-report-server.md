@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 64c6981b34f973737b30480b92152faae9e74fd4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ea3cde2e407600dab0b595df1dace43dc6b1ca3
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510187"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486831"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Instalar o servidor de relatório no modo nativo do Reporting Services 2016
 
@@ -90,7 +90,7 @@ As reservas de URL são compostas de um prefixo, nome de host, porta e diretóri
 
 |Parte|Descrição|
 |----------|-----------------|
-|Prefixo|O prefixo padrão é HTTP. Se você instalou anteriormente um certificado de protocolo SSL, a Instalação tentará criar reservas de URL que usem o prefixo HTTPS.|
+|Prefixo|O prefixo padrão é HTTP. Se você já instalou um certificado de protocolo TLS, anteriormente conhecido como protocolo SSL, a Instalação tentará criar reservas de URL que usam o prefixo HTTPS.|
 |Nome do host|O nome de host padrão é um curinga forte (+). Ele especifica que o servidor de relatório aceitará qualquer solicitação HTTP na porta designada para qualquer nome do host resolvido para o computador, incluindo `https://<computername>/reportserver`, `https://localhost/reportserver` ou `https://<IPAddress>/reportserver`.|
 |Porta|A porta padrão é 80. Observe que, se você usar qualquer porta que não seja a 80, precisará adicioná-la explicitamente à URL quando abrir um aplicativo Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em uma janela do navegador.|
 |Diretório virtual|Por padrão, os diretórios virtuais são criados no formato ReportServer_\<*instance_name*> para o serviço Web Servidor de Relatórios e Reports_\<*instance_name*> para o [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Para o serviço Web Servidor de Relatórios, o diretório virtual padrão é **reportserver**. Para o [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], o diretório virtual padrão é **reports**.|
@@ -188,7 +188,7 @@ Para obter mais informações, consulte a seção Nativa dos dois tópicos a seg
 [Configurar uma conexão do banco de dados do Servidor de Relatório](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
 [Instalação somente de arquivos &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)  
 [Inicializar um Servidor de Relatório](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
-[Configurar conexões SSL em um servidor de relatórios de Modo Nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
+[Configurar conexões TLS em um servidor de relatório no modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
 [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
 Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

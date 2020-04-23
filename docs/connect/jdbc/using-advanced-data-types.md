@@ -1,5 +1,6 @@
 ---
-title: Usar tipos de dados avançados | Microsoft Docs
+title: Como usar tipos de dados avançados
+description: Saiba como usar tipos de dados avançados JDBC para converter de tipos de dados do SQL Server para tipos de dados Java usando o Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 066a56a3c9556ff6e89478a9deeda3716b7d2aac
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 509c2735475b7113887a2291ac6cdfb67dfc865a
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924079"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528710"
 ---
 # <a name="using-advanced-data-types"></a>Como usar tipos de dados avançados
 

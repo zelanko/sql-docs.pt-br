@@ -1,6 +1,6 @@
 ---
-title: Microsoft ADO.NET for SQL Server | Microsoft Docs
-description: Introdução ao Microsoft ADO.NET for SQL Server.
+title: Microsoft ADO.NET
+description: O Microsoft ADO.NET for SQL Server é a principal tecnologia de acesso de dados das linguagens .NET. Use o namespace Microsoft.Data.SqlClient para acessar o SQL Server.
 ms.custom: ''
 ms.date: 09/30/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5e037c080d850bbb34327f46b2aac931f64c687d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c89c1c5073e86121e4fbadc3a2901057c0a361a4
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928971"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529094"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
@@ -25,10 +25,10 @@ ms.locfileid: "80928971"
 O ADO.NET é a principal tecnologia de acesso de dados para linguagens .NET. Use o namespace Microsoft.Data.SqlClient para acessar o SQL Server ou provedores de outros fornecedores para acessar seus armazenamentos. Use System.Data.Odbc ou System.Data.Oledb em linguagens .NET para acessar dados usando outras tecnologias de acesso a dados. Use System.Data.Dataset quando precisar de um cache de dados offline em aplicativos cliente. Ele também fornece recursos XML e de persistência local que podem ser úteis em serviços Web.  
   
 ## <a name="getting-started"></a>Introdução  
-* [Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento ADO.NET](step-1-configure-development-environment-ado-net-development.md)  
-* [Etapa 2: Criar um banco de dados SQL para o desenvolvimento ADO.NET](step-2-create-sql-database-ado-net-development.md)  
-* [Etapa 3: Prova de conceito da conexão ao SQL usando ADO.NET](step-3-connect-sql-ado-net.md)  
-* [Etapa 4: Conectar-se de forma resiliente ao SQL com ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
+* [Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento no ADO.NET](step-1-configure-development-environment-ado-net-development.md)  
+* [Etapa 2: Criar um Banco de Dados SQL para o desenvolvimento no ADO.NET](step-2-create-sql-database-ado-net-development.md)  
+* [Etapa 3: Prova de conceito da conexão ao SQL usando o ADO.NET](step-3-connect-sql-ado-net.md)  
+* [Etapa 4: Conectar-se de modo resiliente ao SQL com ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
   
 ## <a name="documentation"></a>Documentação  
 * [Visão geral do ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)

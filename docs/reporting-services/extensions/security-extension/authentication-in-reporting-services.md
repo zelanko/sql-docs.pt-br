@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1092674266b518ec051dd20c51d4b05184ff4f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fdf93fe49275f0604606b65b7a8b5f60df0e887e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193855"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488580"
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticação no Reporting Services
   A autenticação é o processo de estabelecimento do direito de um usuário a uma identidade. Existem muitas técnicas que você pode usar para autenticar um usuário. O modo mais comum é usar senhas. Quando você implementa a Autenticação de Formulários, por exemplo, deseja uma implementação que solicite credenciais dos usuários (normalmente por meio de alguma interface que solicita um nome de login e uma senha) e depois valide os usuários em um repositório de dados, como uma tabela de banco de dados ou um arquivo de configuração. Se as credenciais não puderem ser validadas, o processo de autenticação falhará e o usuário assumirá uma identidade anônima.  
@@ -117,14 +117,14 @@ internal static bool VerifyPassword(string suppliedUserName,
  Quando o serviço Web autenticar um usuário com êxito por meio da extensão de segurança, vai gerar um cookie que será usado para as solicitações subsequentes. O cookie pode não persistir dentro da autoridade de segurança personalizada porque o servidor de relatório não possui a autoridade de segurança. O cookie é retornado a partir do método <xref:ReportService2010.ReportingService2010.LogonUser%2A> do serviço Web e é usado em chamadas subsequentes do método do serviço Web e no acesso à URL.  
   
 > [!NOTE]  
->  Para impedir o comprometimento do cookie durante a transmissão, os cookies de autenticação retornados de <xref:ReportService2010.ReportingService2010.LogonUser%2A> devem ser transmitidos de forma segura usando criptografia SSL.  
+>  Para impedir o comprometimento do cookie durante a transmissão, os cookies de autenticação retornados de <xref:ReportService2010.ReportingService2010.LogonUser%2A> devem ser transmitidos de forma segura usando criptografia TLS (Transport Layer Security), anteriormente conhecida como SSL (Secure Sockets Layer).  
   
  Se você acessar o servidor de relatório por meio do acesso à URL quando uma extensão de segurança personalizada for instalada, o IIS (Serviços de Informações da Internet) e o [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] gerenciarão automaticamente a transmissão do tíquete de autenticação. Se você estiver acessando o servidor de relatório por meio da API SOAP, a sua implementação da classe proxy deverá incluir suporte adicional para o gerenciamento do tíquete de autenticação. Para obter mais informações sobre como usar a API SOAP e gerenciar o tíquete de autenticação, consulte "Usando o serviço Web com segurança personalizada".  
   
 ## <a name="forms-authentication"></a>Autenticação de Formulários  
  A Autenticação de Formulários é um tipo de autenticação do [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] na qual um usuário não autenticado é direcionado a um formulário HTML. Quando o usuário fornece credenciais, o sistema emite um cookie com um tíquete de autenticação. Em solicitações posteriores, o sistema verifica o cookie primeiro para ver se o usuário já foi autenticado pelo servidor de relatório.  
   
- O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pode ser estendido para dar suporte à Autenticação de Formulários que usa as interfaces de extensibilidade de segurança disponíveis por meio da API do Reporting Services. Se você estender o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para usar a Autenticação de Formulários, use o protocolo SSL (Secure Sockets Layer) para todas as comunicações feitas com o servidor de relatório para impedir que usuários maliciosos obtenham acesso ao cookie de outro usuário. O SSL permite que clientes e que um servidor de relatório autentiquem uns aos outros e garantam que nenhum outro computador poderá ler o conteúdo das comunicações entre os dois computadores. Todos os dados enviados de um cliente por meio de uma conexão SSL são criptografados para que os usuários maliciosos não possam interceptar senhas ou dados enviados para um servidor de relatório.  
+ O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pode ser estendido para dar suporte à Autenticação de Formulários que usa as interfaces de extensibilidade de segurança disponíveis por meio da API do Reporting Services. Se você estender o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para usar a Autenticação de Formulários, use o protocolo TLS, anteriormente conhecido como protocolo SSL, para todas as comunicações feitas com o servidor de relatório, a fim de impedir que usuários maliciosos obtenham acesso ao cookie de outro usuário. O TLS permite que clientes e um servidor de relatório autentiquem uns aos outros e garantam que nenhum outro computador possa ler o conteúdo das comunicações entre os dois computadores. Todos os dados enviados de um cliente por meio de uma conexão TLS são criptografados para que usuários maliciosos não possam interceptar senhas ou dados enviados para um servidor de relatório.  
   
  A Autenticação de Formulário é geralmente implementada para dar suporte a contas e à autenticação para plataformas diferentes do Windows. Uma interface gráfica é apresentada a um usuário que solicite acesso a um servidor de relatório e as credenciais fornecidas serão enviadas a uma autoridade de segurança para autenticação.  
   

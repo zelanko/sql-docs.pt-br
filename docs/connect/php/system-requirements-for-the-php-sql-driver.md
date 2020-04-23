@@ -1,5 +1,6 @@
 ---
-title: Requisitos do sistema para os Microsoft Drivers for PHP for SQL Server | Microsoft Docs
+title: Requisitos do sistema para Microsoft Drivers for PHP
+description: Os Microsoft Drivers for PHP for SQL Server dão suporte a uma grande variedade de versões do PHP, de sistemas operacionais e de versões do SQL Server.
 ms.custom: ''
 ms.date: 01/31/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: David-Engel
 ms.reviewer: carlrab
 ms.author: v-daenge
-ms.openlocfilehash: 2e48fcb222575095fab4c313102de8abc4e3efa0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0537f39c83239e148541a4739ccdfb83c8f5e6c9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926865"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635698"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Requisitos do sistema para os Microsoft Drivers for PHP for SQL Server
 
@@ -25,13 +26,13 @@ ms.locfileid: "80926865"
 
 Este artigo lista os componentes que devem ser instalados em seu sistema para acessar dados em um SQL Server ou no Banco de Dados SQL do Azure usando o [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].
 
-As versões 3.2 e posteriores dos Drivers PHP da Microsoft para SQL Server são oficialmente compatíveis. Para obter detalhes completos sobre os ciclos de vida de suporte e sobre os requisitos dos drivers PHP, confira a [matriz de suporte](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md).
+As versões 3.2 e posteriores dos Drivers PHP da Microsoft para SQL Server são oficialmente compatíveis. Para obter detalhes completos sobre os ciclos de vida de suporte e sobre os requisitos dos drivers PHP, confira a [matriz de suporte](microsoft-php-drivers-for-sql-server-support-matrix.md).
 
 ## <a name="php"></a>PHP
 
-Para obter informações sobre como baixar e instalar os últimos binários estáveis do PHP, confira o [site do PHP](https://php.net).  Os Drivers da Microsoft para PHP e para SQL Server exigem as versões corretas do PHP, conforme detalhado no [Suporte à versão do PHP](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md#php-version-support).
+Para obter informações sobre como baixar e instalar os últimos binários estáveis do PHP, confira o [site do PHP](https://php.net).  Os Drivers da Microsoft para PHP e para SQL Server exigem as versões corretas do PHP, conforme detalhado no [Suporte à versão do PHP](microsoft-php-drivers-for-sql-server-support-matrix.md#php-version-support).
 
--   A versão correta do arquivo de driver deve ser habilitada com a versão do PHP correspondente. Confira as [Versões do Driver](#driver-versions) para obter informações sobre os diferentes arquivos de driver.  Para baixar os drivers, confira [Baixar Microsoft Drivers for PHP for SQL Server](../../connect/php/download-drivers-php-sql-server.md). Para obter informações sobre como configurar o driver para o PHP, confira [Carregando os Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md).
+-   A versão correta do arquivo de driver deve ser habilitada com a versão do PHP correspondente. Confira as [Versões do Driver](#driver-versions) para obter informações sobre os diferentes arquivos de driver.  Para baixar os drivers, confira [Baixar Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md). Para obter informações sobre como configurar o driver para o PHP, confira [Carregando os Microsoft Drivers for PHP for SQL Server](loading-the-php-sql-driver.md).
 
 -   Um servidor Web é necessário. O servidor Web deve ser configurado para executar o PHP. Para obter informações sobre como hospedar aplicativos PHP com o IIS, confira o [tutorial no site da Web do PHP](http://docs.php.net/manual/da/install.windows.iis7.php).
 
@@ -42,24 +43,24 @@ Para obter informações sobre como baixar e instalar os últimos binários est�
 
 ## <a name="odbc-driver"></a>Driver ODBC
 
-É necessário ter a versão correta do Microsoft ODBC Driver for SQL Server no computador em que o PHP está em execução. É possível baixar todas as versões do driver para plataformas compatíveis [nesta página](https://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-2017).
+É necessário ter a versão correta do Microsoft ODBC Driver for SQL Server no computador em que o PHP está em execução. É possível baixar todas as versões do driver para plataformas compatíveis [nesta página](../odbc/download-odbc-driver-for-sql-server.md).
 
 Caso esteja baixando a versão Windows do driver em uma versão de 64 bits do Windows, o instalador de ODBC de 64 bits instalará os drivers de 32 bits e de 64 bits. Caso tenha uma versão de 32 bits do Windows, use o instalador ODBC x86. Em plataformas não Windows, somente as versões de 64 bits do driver estão disponíveis.
 
-|PHP para a versão &#8594; do driver do SQL Server<br />&#8595; Versão do ODBC Driver|5.8|5.6|5,3|5.2|4.3|4,0|3.2|
+|Versão do driver PHP para SQL Server &#8594;<br />&#8595; Versão do ODBC Driver|5.8|5.6|5,3|5.2|4.3|4,0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |ODBC Driver 17+ |S|S|S|S| | | |
 |ODBC Driver 13.1|S|S|S|S|S|S| |
 |ODBC Driver 13  | | | | | |S| |
 |ODBC Driver 11  |S|S|S|S|S|S|S|
 
-Caso esteja usando o driver SQLSRV, o [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) retornará informações sobre qual versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server está sendo usada pelo [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Se estiver usando o driver PDO_SQLSRV, use [PDO::getAttribute](../../connect/php/pdo-getattribute.md) para descobrir a versão.
+Caso esteja usando o driver SQLSRV, o [sqlsrv_client_info](sqlsrv-client-info.md) retornará informações sobre qual versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server está sendo usada pelo [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Se estiver usando o driver PDO_SQLSRV, use [PDO::getAttribute](pdo-getattribute.md) para descobrir a versão.
 
 ## <a name="sql-server"></a>SQL Server
 
-Para obter informações sobre como usar o PHP com o Banco de Dados SQL do Microsoft Azure, confira [Como se conectar ao Banco de Dados SQL do Azure](../../connect/php/connecting-to-microsoft-azure-sql-database.md).
+Para obter informações sobre como usar o PHP com o Banco de Dados SQL do Microsoft Azure, confira [Como se conectar ao Banco de Dados SQL do Azure](connecting-to-microsoft-azure-sql-database.md).
 
-|PHP para a versão &#8594; do driver do SQL Server<br />&#8595; Versão do SQL Server|5.8|5.6|5,3|5.2|4.3|4,0|3.2|
+|Versão do driver PHP para SQL Server &#8594;<br />&#8595; Versão do SQL Server|5.8|5.6|5,3|5.2|4.3|4,0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Banco de Dados SQL do Azure (todas as opções de implantação)        |S|S|S|S| | | |
 |Azure SQL Synapse  |S|S|S|S| | | |
@@ -73,13 +74,13 @@ Para obter informações sobre como usar o PHP com o Banco de Dados SQL do Micro
 
 ## <a name="operating-systems"></a>Sistemas operacionais
 
-Confira os [sistemas operacionais compatíveis](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md#supported-operating-systems) para obter detalhes sobre quais sistemas operacionais são compatíveis.
+Confira os [sistemas operacionais compatíveis](microsoft-php-drivers-for-sql-server-support-matrix.md#supported-operating-systems) para obter detalhes sobre quais sistemas operacionais são compatíveis.
 
 ## <a name="driver-versions"></a>Versões de driver
 
-Esta seção lista os arquivos de driver incluídos em cada versão do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Cada pacote de instalação contém arquivos de driver SQLSRV e PDO_SQLSRV em variantes com thread e sem thread. No Windows, eles também estão disponíveis em variantes de 32 bits e 64 bits. Para configurar o driver e usar com o runtime do PHP, siga as instruções de instalação em [Como carregar os Drivers da Microsoft para PHP e para SQL Server](../../connect/php/loading-the-php-sql-driver.md).
+Esta seção lista os arquivos de driver incluídos em cada versão do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Cada pacote de instalação contém arquivos de driver SQLSRV e PDO_SQLSRV em variantes com thread e sem thread. No Windows, eles também estão disponíveis em variantes de 32 bits e 64 bits. Para configurar o driver e usar com o runtime do PHP, siga as instruções de instalação em [Como carregar os Drivers da Microsoft para PHP e para SQL Server](loading-the-php-sql-driver.md).
 
-Nas versões compatíveis do Linux e do macOS, os drivers apropriados podem ser instalados usando o sistema de pacotes PECL do PHP, seguindo as [Instruções de instalação do Linux e do macOS](../../connect/php/installation-tutorial-linux-mac.md). Como alternativa é possível baixar binários predefinidos para sua plataforma na página de projetos do GitHub [Drivers da Microsoft para PHP e para SQL Server](https://github.com/Microsoft/msphpsql/releases). As tabelas abaixo listam os arquivos encontrados nos pacotes binários predefinidos.
+Nas versões compatíveis do Linux e do macOS, os drivers apropriados podem ser instalados usando o sistema de pacotes PECL do PHP, seguindo as [Instruções de instalação do Linux e do macOS](installation-tutorial-linux-mac.md). Como alternativa é possível baixar binários predefinidos para sua plataforma na página de projetos do GitHub [Drivers da Microsoft para PHP e para SQL Server](https://github.com/Microsoft/msphpsql/releases). As tabelas abaixo listam os arquivos encontrados nos pacotes binários predefinidos.
 
 **Drivers 5.8 da Microsoft para PHP e para SQL Server:**
 
@@ -258,7 +259,7 @@ No Windows, as seguintes versões do driver estão incluídas:
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Introdução aos Drivers da Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
-- [Guia de programação do Microsoft Drivers para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
-- [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
-- [Referência da API do Driver PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)
+- [Introdução aos Drivers da Microsoft para PHP para SQL Server](getting-started-with-the-php-sql-driver.md)
+- [Guia de programação do Microsoft Drivers para PHP para SQL Server](programming-guide-for-php-sql-driver.md)
+- [Referência da API do driver SQLSRV](sqlsrv-driver-api-reference.md)
+- [Referência da API do Driver PDO_SQLSRV](pdo-sqlsrv-driver-reference.md)

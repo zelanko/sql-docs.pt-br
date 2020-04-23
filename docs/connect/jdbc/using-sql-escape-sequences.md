@@ -1,5 +1,6 @@
 ---
-title: Como usar sequências de escape do SQL | Microsoft Docs
+title: Usar sequências de escape do SQL no JDBC
+description: O Microsoft JDBC Driver for SQL Server dá suporte ao uso de sequências de escape do SQL, conforme definido pela API JDBC.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b2bacdc6eb65824c34f6bb2e6dec86f5abe9efd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 68b595c1901d010b798ebf1767e270e468fb9163
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924019"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528181"
 ---
 # <a name="using-sql-escape-sequences"></a>Como usar sequências de escape do SQL
 
@@ -86,7 +87,7 @@ A sintaxe de escape para data, hora e literais de carimbo de data/hora é a segu
 
 em que `literal-type` é um dos seguintes:  
   
-| Tipo de literal | DESCRIÇÃO | Formato do valor               |
+| Tipo de literal | Descrição | Formato do valor               |
 | ------------ | ----------- | -------------------------- |
 | d            | Data        | aaaa-mm-dd                 |
 | t            | Hora        | hh:mm:ss [1]               |

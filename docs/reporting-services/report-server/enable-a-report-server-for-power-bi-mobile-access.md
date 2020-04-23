@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d14c8e092a030c88dbc4d0b5d4375bb56a8eb82c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4dfeb99dc01a0ed2aaade9c0c21e4ce3ddd5da49
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63308178"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486740"
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>Habilitar um servidor de relatórios para acesso ao Power BI Móvel
 Você pode usar o aplicativo Power BI Móvel para consumir relatórios móveis. Há algumas coisas que você precisa configurar para permitir que o aplicativo Power BI Móvel conecte-se ao Reporting Services.  
@@ -23,25 +23,29 @@ Você pode usar o aplicativo Power BI Móvel para consumir relatórios móveis. 
 -   [Recomendado para habilitar HTTPS junto com um certificado confiável válido para o dispositivo cliente](#https)  
 -   [Analisar as configurações de firewall](#firewall)  
   
-<a name="nativemode"/>  
+<a name="nativemode"/> 
+
 ## <a name="reporting-services-native-mode-required"></a>O modo nativo do Reporting Services é necessário  
 Relatórios móveis são um recurso do modo nativo. Eles não estão disponíveis no modo integrado do SharePoint. O aplicativo Power BI Móvel só funcionará com uma instância do modo nativo.  
   
 <a name="basicauth"/>  
+
 ## <a name="enable-basic-authentication"></a>Habilite a autenticação básica  
 O aplicativo Power BI Móvel do iOS requer a autenticação básica para se conectar e consumir relatórios móveis. O Reporting Services não está configurado com autenticação básica habilitada por padrão. Para obter informações sobre como configurar a autenticação básica, consulte [Configurar autenticação básica no Servidor de Relatório](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md).  
   
 Você também precisará ter a autenticação do Windows habilitada para permitir que o aplicativo publicador publique o relatório móvel.  
   
 <a name="https"/>  
+
 ## <a name="enable-https"></a>Habilitar HTTPS  
 É recomendável que você habilite HTTPS no Reporting Services se habilitar a autenticação básica. Se você habilitar o HTTPS, verifique se os certificados usados podem ser confiáveis nos dispositivos cliente que executam o aplicativo Power BI Móvel do iOS. Isso significa que a cadeia de certificação deve ser válida e disponível ao dispositivo cliente.  
   
 Se você precisar usar um certificado autoassinado para fins de desenvolvimento ou avaliação, pode exportar o certificado do servidor de relatórios e instalá-lo no dispositivo móvel. Consulte a documentação do dispositivo sobre como instalá-lo naquele dispositivo.  
   
-Para obter mais informações sobre como habilitar o SSL, consulte [Configurar conexões SSL em um servidor de relatórios do modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+Para obter mais informações sobre como habilitar o TSL, confira [Configurar conexões TLS em um servidor de relatório no modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
-<a name="firewall"/>  
+<a name="firewall"/>
+  
 ## <a name="review-firewall-settings"></a>Analisar as configurações de firewall  
 É recomendável que você revise suas configurações de firewall para garantir que todos os dispositivos possam se conectar com êxito ao Reporting Services.   
   
@@ -50,7 +54,7 @@ Para obter mais informações sobre como configurar o Firewall do Windows, consu
 ## <a name="see-also"></a>Confira também  
   
 [Configurar a autenticação Básica no servidor de relatório](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
-[Configurar conexões SSL em um servidor de relatórios de Modo Nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
+[Configurar conexões TLS em um servidor de relatório no modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
 [Configurar um firewall para acesso ao servidor de relatório](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
   

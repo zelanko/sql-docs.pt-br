@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11354683f94b5805255ddd5b2b5c73ec2c1aa5ba
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1f7a6a95033d16e7bc39f07d6b72324e3aea6634
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117459"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486715"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Mapeamentos de tipo de dados entre o R e o SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ Das categorias de tipos de dados com suporte no [sistema de tipos do SQL Server]
 
 ## <a name="changes-in-data-types-between-sql-server-2016-and-earlier-versions"></a>Alterações nos tipos de dados entre o SQL Server 2016 e versões anteriores
 
-O Microsoft SQL Server 2016 e o Banco de Dados SQL do Microsoft Azure incluem melhorias em conversões de tipo de dados e em várias outras operações. A maioria dessas melhorias oferece maior precisão ao lidar com tipos de ponto flutuante, bem como alterações secundárias a operações em tipos de **datetime** clássicos.
+O Microsoft SQL Server 2016 e posteriores incluem melhorias em conversões de tipo de dados e em várias outras operações. A maioria dessas melhorias oferece maior precisão ao lidar com tipos de ponto flutuante, bem como alterações secundárias a operações em tipos de **datetime** clássicos.
 
 Esses aprimoramentos estão disponíveis por padrão quando você usa um nível de compatibilidade do banco de dados de 130 ou posterior. No entanto, se você usar um nível de compatibilidade diferentes ou conectar-se a um banco de dados usando uma versão mais antiga, poderá ver diferenças na precisão dos números ou outros resultados. 
 
@@ -106,7 +106,7 @@ Se R não der suporte para um determinado tipo de dados [!INCLUDE[ssNoVersion](.
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="example-1-implicit-conversion"></a>Exemplo 1: conversão implícita
+### <a name="example-1-implicit-conversion"></a>Exemplo 1: Conversão implícita
 
 O exemplo a seguir demonstra como os dados são transformados ao fazer a viagem de ida e volta entre SQL Server e R.
 
@@ -168,7 +168,7 @@ A partir disso, você pode ver que as seguintes conversões de tipo de dados for
 -   **Coluna C4**. A coluna contém valores gerados pelo script de R e não presentes nos dados originais.
 
 
-## <a name="example-2-dynamic-column-selection-using-r"></a>Exemplo 2: Seleção de coluna dinâmica usando R
+## <a name="example-2-dynamic-column-selection-using-r"></a>Exemplo 2: seleção de coluna dinâmica usando R
 
 O exemplo a seguir mostra como você pode usar o código R para verificar tipos de coluna inválidos. Obtém o esquema de uma tabela especificada usando o sistema do SQL Server exibe e remove quaisquer colunas que tenham um tipo inválido especificado.
 

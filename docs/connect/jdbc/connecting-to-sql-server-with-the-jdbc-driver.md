@@ -1,5 +1,6 @@
 ---
 title: Conectando ao SQL Server com o JDBC Driver | Microsoft Docs
+description: Ao se conectar ao banco de dados usando o Microsoft JDBC Driver for SQL Server, toda a interação com o banco de dados passa pelo objeto SQLServerConnection.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ab487442feb91ce49698d554168cd36bf2c7a16
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1089960af020e648586f59914ccc91e99bf0b9af
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922479"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487960"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>Conectando ao SQL Server com o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +33,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Construindo a URL de conexão](../../connect/jdbc/building-the-connection-url.md)|Descreve como formar uma URL de conexão para se conectar ao banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Também descreve a conexão a instâncias nomeadas de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Configuração das propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md)|Descreve as várias propriedades de conexão e como elas podem ser usadas quando você se conecta a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

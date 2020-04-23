@@ -1,5 +1,6 @@
 ---
 title: Matriz de suporte do Microsoft JDBC Driver para SQL Server
+description: Esta página contém a matriz de suporte e a política de ciclo de vida de suporte para o Microsoft JDBC Driver for SQL Server.
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7f9482c80d3ea84b814857433f6ff2a0389cc544
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2cd2c88cc64f068cb2926fa17302063bd7f15193
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922841"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487806"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Matriz de suporte do Microsoft JDBC Driver para SQL Server
 

@@ -32,16 +32,16 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a591ccc983732fe09a74db12c4b9f6a5a713955
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134426"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529407"
 ---
 # <a name="database-mail-configuration-objects"></a>Objetos de configuração do Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O Database Mail tem dois objetos de configuração: os objetos de configuração de banco de dados permitem que você defina as configurações que Database Email deve usar ao enviar um email de seu aplicativo de banco de dados ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  O Database Mail tem dois objetos de configuração: Os objetos de configuração de banco de dados permitem que você defina as configurações que o Database Mail deve usar ao enviar um email de seu aplicativo de banco de dados ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   Contas do Database Mail  
   
@@ -61,9 +61,9 @@ ms.locfileid: "68134426"
   
 -   Autenticação do Windows: O Database Mail usa as credenciais da conta de serviço do Windows do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para autenticação no servidor SMTP.  
   
--   Autenticação Básica: O Database Mail usa o nome de usuário e a senha especificados para autenticação no servidor SMTP.  
+-   Autenticação Básica:  O Database Mail usa o nome de usuário e a senha especificados para autenticação no servidor SMTP.  
   
--   Autenticação Anônima: O servidor SMTP não exige nenhuma autenticação.  O Database Mail não usará nenhuma credencial para a autenticação no servidor SMTP.  
+-   Autenticação Anônima:  O servidor SMTP não exige nenhuma autenticação.  O Database Mail não usará nenhuma credencial para a autenticação no servidor SMTP.  
   
  As informações da conta são armazenadas no banco de dados **msdb** . Cada conta consiste nas seguintes informações:  
   
@@ -83,7 +83,7 @@ ms.locfileid: "68134426"
   
 -   O número da porta do servidor de email.  
   
--   Uma coluna de bits indicando se a conexão com o servidor de email SMTP é feita usando protocolo SSL.  
+-   Uma coluna de bits indicando se a conexão com o servidor de email SMTP é feita usando o protocolo TSL, conhecido anteriormente como protocolo SSL.  
   
 -   Uma coluna de bits indicando se a conexão com o servidor SMTP é feita usando as credenciais configuradas para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
@@ -128,14 +128,14 @@ ms.locfileid: "68134426"
   
 ### <a name="database-mail-settings"></a>Configurações do Database Mail  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|Altera definições de configuração do Database Mail.|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|Exibe definições de configuração do Database Mail.|  
   
 ### <a name="accounts-and-profiles"></a>Contas e perfis  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|Adiciona uma conta de email a um perfil do Database Mail.|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|Exclui uma conta do Database Mail.|  
@@ -150,7 +150,7 @@ ms.locfileid: "68134426"
   
 ### <a name="security"></a>Segurança  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|Concede permissão a uma entidade de banco de dados para usar um perfil do Database Mail.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|Remove a permissão de um usuário do banco de dados para usar um perfil público ou particular do Database Mail.|  
@@ -159,7 +159,7 @@ ms.locfileid: "68134426"
   
 ### <a name="system-state"></a>Estado do Sistema  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|Inicia o programa externo do Database Mail e a fila associada do SQL Service Broker.|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|Interrompe o programa externo do Database Mail e a fila associada do SQL Service Broker.|  

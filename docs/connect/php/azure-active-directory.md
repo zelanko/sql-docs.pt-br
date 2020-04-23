@@ -1,5 +1,6 @@
 ---
-title: Azure Active Directory | Microsoft Docs
+title: Azure Active Directory
+description: Saiba como usar a autenticação do Azure Active Directory com os Microsoft Drivers for PHP for SQL Server.
 ms.date: 02/25/2019
 ms.prod: sql
 ms.prod_service: connectivity
@@ -8,35 +9,32 @@ ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - azure active directory, authentication, access token
-author: david-puglielli
-ms.author: v-dapugl
-manager: v-mabarw
-ms.openlocfilehash: 8712681a244e969d230b0b7099acd4aa56334f11
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ac1e598b5599caa9020ed795d1bffd185887ad76
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265183"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625456"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Conectar usando a Autenticação do Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[O Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure Active Directory) é uma tecnologia de gerenciamento de ID de usuário central que funciona como uma alternativa para a [autenticação do SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md). O Azure AD permite conexões com Banco de Dados SQL do Microsoft Azure e SQL Data Warehouse com identidades federadas no Azure AD usando um nome de usuário e senha, autenticação integrada do Windows ou um token de acesso do Azure AD. Os drivers do PHP para SQL Server oferecem suporte parcial para esses recursos.
+[O Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure Active Directory) é uma tecnologia de gerenciamento de ID de usuário central que funciona como uma alternativa para a [autenticação do SQL Server](how-to-connect-using-sql-server-authentication.md). O Azure AD permite conexões com Banco de Dados SQL do Microsoft Azure e SQL Data Warehouse com identidades federadas no Azure AD usando um nome de usuário e senha, autenticação integrada do Windows ou um token de acesso do Azure AD. Os drivers do PHP para SQL Server oferecem suporte parcial para esses recursos.
 
-Para usar o Azure AD, use as palavras-chave **Authentication** ou **AccessToken** (elas são mutuamente exclusivas), conforme mostrado na tabela a seguir. Para obter mais detalhes técnicos, confira [Usar o Azure Active Directory com o Driver ODBC](../../connect/odbc/using-azure-active-directory.md).
+Para usar o Azure AD, use as palavras-chave **Authentication** ou **AccessToken** (elas são mutuamente exclusivas), conforme mostrado na tabela a seguir. Para obter mais detalhes técnicos, confira [Usar o Azure Active Directory com o Driver ODBC](../odbc/using-azure-active-directory.md).
 
-|Palavra-chave|Valores|DESCRIÇÃO|
+|Palavra-chave|Valores|Descrição|
 |-|-|-|
-|**AccessToken**|Não definido (padrão)|Modo de autenticação determinado por outras palavras-chave. Para obter mais informações, consulte [Connection Options](../../connect/php/connection-options.md). |
+|**AccessToken**|Não definido (padrão)|Modo de autenticação determinado por outras palavras-chave. Para obter mais informações, consulte [Connection Options](connection-options.md). |
 ||Uma cadeia de caracteres de byte|O token de acesso do Azure AD extraído de uma resposta JSON do OAuth. A cadeia de conexão não deve conter a ID de usuário, a senha ou a palavra-chave de autenticação (requer o Driver ODBC versão 17 ou superior no Linux ou no macOS). |
-|**Autenticação**|Não definido (padrão)|Modo de autenticação determinado por outras palavras-chave. Para obter mais informações, consulte [Connection Options](../../connect/php/connection-options.md). |
+|**Autenticação**|Não definido (padrão)|Modo de autenticação determinado por outras palavras-chave. Para obter mais informações, consulte [Connection Options](connection-options.md). |
 ||`SqlPassword`|Autentique diretamente em uma instância do SQL Server (que pode ser uma instância do Azure) usando um nome de usuário e senha. O nome de usuário e a senha devem ser passados para a cadeia de conexão usando as palavras-chave **UID** e **PWD**. |
 ||`ActiveDirectoryPassword`|Autentique com a identidade do Azure Active Directory por meio de um nome de usuário e senha. O nome de usuário e a senha devem ser passados para a cadeia de conexão usando as palavras-chave **UID** e **PWD**. |
 ||`ActiveDirectoryMsi`|Autentique usando uma identidade gerenciada atribuída pelo sistema ou uma identidade gerenciada atribuída pelo usuário (requer o Driver ODBC versão 17.3.1.1 ou superior). Para obter uma visão geral e tutoriais, confira [O que são identidades gerenciadas para recursos do Azure?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).|
 
 A palavra-chave **Autenticação** afeta as configurações de segurança da conexão. Se ela for definida na cadeia de conexão, então, por padrão, a palavra-chave **Criptografar** será definida como true, o que significa que o cliente solicitará criptografia. Além disso, o certificado do servidor será validado independentemente da configuração de criptografia, a menos que **TrustServerCertificate** seja definido como true (ele é **false** por padrão). Esse recurso é diferenciado do método de logon antigo e menos seguro, no qual o certificado do servidor é validado somente quando a criptografia é expressamente solicitada na cadeia de conexão.
-
-Ao usar o Azure AD com os drivers do PHP para SQL Server no Windows, você pode ser solicitado a instalar o [Assistente de Conexão do Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=41950) (não necessário para o ODBC 17+).
 
 #### <a name="limitations"></a>Limitações
 
@@ -237,6 +235,6 @@ try {
 ```
 
 ## <a name="see-also"></a>Consulte Também
-[Usando o Azure Active Directory com o Driver ODBC](https://docs.microsoft.com/sql/connect/odbc/using-azure-active-directory)
+[Usando o Azure Active Directory com o Driver ODBC](../odbc/using-azure-active-directory.md)
 
 [O que são identidades gerenciadas para recursos do Azure?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)

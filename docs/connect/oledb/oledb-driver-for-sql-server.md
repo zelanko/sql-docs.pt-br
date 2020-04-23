@@ -1,6 +1,6 @@
 ---
 title: Microsoft OLE DB Driver for SQL Server | Microsoft Docs
-description: Driver do Microsoft OLE DB para SQL Server
+description: O Driver do Microsoft OLE DB para SQL Server fornece conectividade com o SQL Server e o Banco de Dados SQL do Azure por meio de APIs OLE DB padrão.
 ms.custom: ''
 ms.date: 02/12/2019
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - native data access [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 849c3dbc0a0f94387f2e2f25ba17d64c910653cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 52877846ab573b146c148dab681cd45aec0a083c
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76918814"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488505"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Driver do Microsoft OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

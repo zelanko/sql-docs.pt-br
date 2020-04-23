@@ -1,5 +1,6 @@
 ---
 title: rsInternalError – erro do Reporting Services | Microsoft Docs
+description: 'Nesta página de referência de erro, saiba mais sobre a ID de evento "rsInternalError": Um erro interno ocorreu no servidor de relatório. Consulte o log de erros para obter mais detalhes.'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e7257e1c7a24786e580ce8d2c2da9bd52ac5b86c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3f134f1c071b62c1c32f48855f76f62d5a1b0a69
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573994"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487231"
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Erro do Reporting Services
     

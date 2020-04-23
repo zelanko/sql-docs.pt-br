@@ -29,15 +29,18 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 450914318f3bc7a17e16599fd715992356ed6e91
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72252039"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630704"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!NOTE]
+> A instrução **RAISERROR** não segue **SET XACT_ABORT**. Os novos aplicativos devem usar **THROW** em vez de **RAISERROR**.
 
   Gera uma mensagem de erro e inicia o processamento de erros da sessão. RAISERROR pode referenciar uma mensagem de erro definida pelo usuário na exibição do catálogo sys.messages ou criar uma mensagem dinamicamente. A mensagem é retornada como uma mensagem de erro de servidor ao aplicativo de chamada ou a um bloco CATCH de um constructo TRY...CATCH. Em vez disso, os novos aplicativos devem usar [THROW](../../t-sql/language-elements/throw-transact-sql.md).  
   
@@ -45,7 +48,7 @@ ms.locfileid: "72252039"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 RAISERROR ( { msg_id | msg_str | @local_variable }  
@@ -54,7 +57,7 @@ RAISERROR ( { msg_id | msg_str | @local_variable }
     [ WITH option [ ,...n ] ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 RAISERROR ( { msg_str | @local_variable }  
@@ -82,7 +85,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  É um código que determina o espaçamento e a justificação do valor substituído.  
   
-|Código|Prefixo ou justificação|DESCRIÇÃO|  
+|Código|Prefixo ou justificação|Descrição|  
 |----------|-----------------------------|-----------------|  
 |- (menos)|Justificado à esquerda|Justifica o valor de argumento à esquerda dentro da largura de campo especificada.|  
 |+ (mais)|Prefixo de sinal|Precede o valor do argumento com um mais (+) ou menos (-) se o valor for de um tipo assinado.|  
@@ -157,7 +160,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  *opção*  
  É uma opção personalizada para o erro e pode ser um dos valores na tabela a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |LOG|Registra o erro no log de erros e no log do aplicativo para a instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os erros registrados no log de erros atualmente estão limitados a no máximo 440 bytes. Somente um membro da função de servidor fixa sysadmin ou um usuário com permissões ALTER TRACE pode especificar WITH LOG.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|Envia mensagens imediatamente ao cliente.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  

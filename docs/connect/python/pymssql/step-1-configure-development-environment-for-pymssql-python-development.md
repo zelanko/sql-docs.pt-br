@@ -1,5 +1,6 @@
 ---
-title: 'Etapa 1: Configurar ambiente de desenvolvimento Python pymssql | Microsoft Docs'
+title: 'Etapa 1: Configurar o ambiente pymssql'
+description: A etapa 1 deste guia de introdução envolve a instalação do Python, do Microsoft ODBC Driver for SQL Server e do pymssql em seu ambiente de desenvolvimento.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,32 +11,32 @@ ms.topic: conceptual
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3310f268bf04b015c5f80cd08b2ae3909fd3a5c2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d5eb4a746cf8847c8300091677fe4e07e8173707
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926811"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634609"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento Python pymssql
 Você precisará configurar seu ambiente de desenvolvimento com os pré-requisitos para desenvolvimento um aplicativo usando o Driver do Python para SQL Server.    
   
-Observe que os Drivers SQL do Python usam o protocolo TDS, que é habilitado por padrão no SQL Server e no Banco de Dados SQL do Azure.  É necessário realizar uma configuração adicional.  
+Os Drivers SQL do Python usam o protocolo TDS, que está habilitado por padrão no SQL Server e no Banco de Dados SQL do Azure.  É necessário realizar uma configuração adicional.  
   
 ## <a name="windows"></a>Windows  
   
-1. **Instalar o runtime do Python e o gerenciador de pacotes pip**  
+1. **Instalar o runtime do Python e o gerenciador de pacotes pip.**  
 a. Acesse [python.org](https://www.python.org/downloads/)  
 b. Clique no link MSI apropriado do Windows Installer.   
 c. Depois de baixado, execute o msi para instalar o runtime do Python  
   
 2. **Baixe o módulo pymssql** [aqui](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
   
-    Certifique-se de que escolheu o arquivo whl correto.  Por exemplo: se você estiver usando o Python 2.7 em um computador de 64 bits, escolha: pymssql‑2.1.1‑cp27‑none‑win_amd64.whl. Depois de baixar o arquivo .whl, coloque-o na pasta C:/Python27.  
+    Verifique se você escolheu o arquivo `whl` correto.  Por exemplo:  Se você estiver usando o Python 2.7 em um computador de 64 bits, escolha `pymssql‑2.1.1‑cp27‑none‑win_amd64.whl`. Depois de baixar o arquivo `whl`, coloque-o na pasta C:\Python27.  
       
 3. **Abra cmd.exe**  
   
-4. **Instale o módulo pymssql**     
+4. **Instale o módulo pymssql.**  
     Por exemplo, se você estiver usando o Python 2.7 em um computador de 64 bits:  
 ```  
 > cd c:\Python27  
@@ -44,7 +45,7 @@ c. Depois de baixado, execute o msi para instalar o runtime do Python
   
 ## <a name="ubuntu-linux"></a>Ubuntu Linux  
   
-1. **Instale o runtime do Python e o gerenciador de pacotes pip** o Python vem pré-instalado na maioria das distribuições do Ubuntu.  Se o computador não tiver o Python instalado, você poderá baixar o tarball de origem de [python.org](https://www.python.org/downloads/) e criar localmente ou poderá usar o gerenciador de pacotes:  
+1. **Instale o runtime do Python e o gerenciador de pacotes pip.**  O Python vem pré-instalado na maioria das distribuições do Ubuntu.  Se o computador não tiver o Python instalado, você poderá baixar o tarball de origem em [python.org](https://www.python.org/downloads/) e compilar localmente ou poderá usar o gerenciador de pacotes:  
 ```  
 > sudo apt-get install python   
 ```  
@@ -59,11 +60,11 @@ c. Depois de baixado, execute o msi para instalar o runtime do Python
 > sudo pip install pymssql  
 ```  
   
-## <a name="mac"></a>Mac  
+## <a name="macos"></a>macOS
   
 1. **Instalar o runtime do Python e o gerenciador de pacotes pip**  
 a. Acesse [python.org](https://www.python.org/downloads/)  
-b. Clique no link pkg do instalador do Mac.   
+b. Clique no link pkg do instalador do macOS apropriado.   
 c. Depois de baixado, execute o pkg para instalar o runtime do Python  
   
 2.  **Abra o terminal**  

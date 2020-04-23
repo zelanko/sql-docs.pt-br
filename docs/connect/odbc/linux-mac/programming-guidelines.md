@@ -1,5 +1,6 @@
 ---
-title: Diretrizes de programação (Driver ODBC para SQL Server) | Microsoft Docs
+title: Diretrizes de programação (Driver ODBC)
+description: Os recursos de programação do Microsoft ODBC Driver for SQL Server no macOS e Linux são baseados em ODBC no SQL Server Native Client (ODBC).
 ms.custom: ''
 ms.date: 01/12/2018
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: b54fd76c8c6e60b7250ef354b8999347eb96d95a
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: ecaa595fa08a4a37c9a5d3146dd03af440aa4453
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219197"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632786"
 ---
 # <a name="programming-guidelines"></a>Diretrizes de programação
 
@@ -49,7 +50,7 @@ As seguintes seções da documentação do [!INCLUDE[ssNoVersion](../../../inclu
 Os recursos a seguir não foram verificados para funcionar corretamente nesta versão do driver ODBC em Linux e macOS:
 
 -   Conexão de cluster de failover
--   [Resolução IP de Rede Transparente](https://docs.microsoft.com/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (antes do ODBC Driver 17)
+-   [Resolução IP de Rede Transparente](../using-transparent-network-ip-resolution.md) (antes do ODBC Driver 17)
 -   [Rastreamento de Driver Avançado](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 Os seguintes recursos não estão disponíveis nesta versão do driver ODBC em macOS e Linux: 
@@ -108,7 +109,7 @@ Para o ODBC Driver 17, há suporte para dados SQLCHAR em um dos seguintes conjun
 
 Após a conexão, o driver detecta a localidade atual do processo em que ele é carregado. Se ele usa uma das codificações acima, o driver usa a codificação para dados (caractere estreito) SQLCHAR; caso contrário, o padrão é UTF-8. Como todos os processos se iniciam na localidade "C" por padrão (e, portanto, fazem o driver usar UTF-8 como padrão), se um aplicativo precisar usar uma das codificações acima, ele deverá usar a função **setlocale** para definir a localidade adequadamente antes de conectar-se, seja especificando explicitamente a localidade desejada, seja usando uma cadeia de caracteres vazia, por exemplo `setlocale(LC_ALL, "")`, para usar as configurações de localidade do ambiente.
 
-Assim, em um ambiente Mac ou Linux típico no qual a codificação é UTF-8, os usuários do ODBC Driver 17 atualizando da versão 13 ou 13.1 não vão observar nenhuma diferença. No entanto, aplicativos que usam uma codificação não UTF-8 na lista acima por meio de `setlocale()` precisam usar essa codificação para dados de/para o driver, em vez de UTF-8.
+Assim, em um ambiente macOS ou Linux típico no qual a codificação é UTF-8, os usuários do ODBC Driver 17 que atualizarem da versão 13 ou 13.1 não notarão nenhuma diferença. No entanto, aplicativos que usam uma codificação não UTF-8 na lista acima por meio de `setlocale()` precisam usar essa codificação para dados de/para o driver, em vez de UTF-8.
 
 Os dados SQLWCHAR devem ser UTF-16LE (Little Endian).
 
@@ -147,8 +148,8 @@ No momento em que este artigo foi escrito, o tamanho da pilha padrão em MUSL é
 3.  Ao usar o driver com aplicativos altamente multi-threaded, a validação do identificador do unixODBC pode se tornar um gargalo de desempenho. Nesses cenários, um desempenho significativamente maior pode ser obtido com a compilação de unixODBC com a opção `--enable-fastvalidate`. No entanto, saiba que isso pode fazer com que os aplicativos que passam identificadores inválidos para APIs do ODBC falhem em vez de retornar erros de `SQL_INVALID_HANDLE`.
 
 ## <a name="see-also"></a>Consulte Também  
-[Perguntas frequentes](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+[Perguntas frequentes](frequently-asked-questions-faq-for-odbc-linux.md)
 
-[Problemas conhecidos nesta versão do driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
+[Problemas conhecidos nesta versão do driver](known-issues-in-this-version-of-the-driver.md)
 
-[Notas de Versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Notas de Versão](release-notes-odbc-sql-server-linux-mac.md)

@@ -1,5 +1,6 @@
 ---
-title: 'Etapa 3: Prova de conceito da conexão ao SQL usando pymssql | Microsoft Docs'
+title: 'Etapa 3: como conectar ao SQL usando pymssql'
+description: A etapa 3 é uma prova de conceito, que mostra como você pode se conectar ao SQL Server usando Python e pymssql. Os exemplos básicos demonstram a seleção e a inserção de dados.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea474658e57c3f61df7eb95866ea4688c942a750
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1c75d13e9e44632c411639385227776f54ca1a9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913092"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528548"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Etapa 3: Prova de conceito da conexão ao SQL usando pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -50,7 +51,7 @@ A função [cursor.execute](https://pypi.org/project/pymssql/) pode ser usada pa
   
 ## <a name="step-3--insert-a-row"></a>Etapa 3:  Inserir uma linha  
   
-Neste exemplo, você verá como executar uma instrução [INSERT](../../../t-sql/statements/insert-transact-sql.md) com segurança e passar parâmetros que protegem seu aplicativo contra o valor [injeção de SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
+Neste exemplo, você verá como executar uma instrução [INSERT](../../../t-sql/statements/insert-transact-sql.md) com segurança e transmitir parâmetros. Transmitir parâmetros como valores protege seu aplicativo da [injeção de SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
   
   
 ```python
@@ -66,7 +67,7 @@ Neste exemplo, você verá como executar uma instrução [INSERT](../../../t-sql
     conn.close()
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Etapa 4:  Reverter uma transação  
+## <a name="step-4-roll-back-a-transaction"></a>Etapa 4: reverter uma transação  
   
 Este exemplo de código demonstra o uso de transações nas quais você:  
   

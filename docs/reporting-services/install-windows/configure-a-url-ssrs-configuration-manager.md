@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 894ba4f1b73cb482ab521e859d0472f7039bfabf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 910918a3dd0162bc29eef882cf12b529f98fa05f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077062"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487165"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar uma URL (Gerenciador de Configurações do SSRS)
   Antes de poder usar o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] ou o serviço Web Servidor de Relatório, é necessário configurar, pelo menos, uma URL para cada aplicativo. A configuração das URLs será obrigatória se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo “somente arquivos” (ou seja, selecionando a opção **Instalar, mas não configurar o servidor** na página Opções de Instalação do Servidor de Relatório do Assistente de Instalação). Se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na configuração padrão, as URLs já estarão configuradas para cada aplicativo.  
@@ -33,7 +33,7 @@ ms.locfileid: "77077062"
   
  Para obter mais informações sobre como as URLs são armazenadas e mantidas ou sobre problemas de interoperabilidade, consulte [Sobre reservas e registro de URL &#40;Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Instalar o Reporting Services e os Serviços de Informações da Internet lado a lado &#40;modo nativo do SSRS&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). Para revisar exemplos de URLs usadas frequentemente em uma instalação do Reporting Services, consulte [Exemplos de URLs](#URLExamples) neste tópico.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Antes de criar ou modificar uma URL, lembre-se dos seguintes pontos:  
   
 -   Você deve ser um membro do grupo Administradores local no computador do servidor de relatório.  
@@ -84,20 +84,20 @@ ms.locfileid: "77077062"
   
 6.  Se ainda não o fez, verifique se o IIS (se ele estiver instalado) não tem um diretório virtual com o mesmo nome que você planeja usar.  
   
-7.  Se você instalou um certificado SSL, poderá selecioná-lo agora para associar a URL ao certificado SSL que está instalado em seu computador.  
+7.  Se você instalou um certificado TLS/SSL, poderá selecioná-lo agora para associar a URL ao certificado TLS/SSL que está instalado em seu computador.  
   
-8.  Opcionalmente, se você selecionar um certificado SSL, poderá especificar uma porta personalizada. O padrão é 443, mas você pode usar qualquer porta que estiver disponível.  
+8.  Opcionalmente, se você selecionar um certificado TLS/SSL, poderá especificar uma porta personalizada. O padrão é 443, mas você pode usar qualquer porta que estiver disponível.  
   
 9. Clique em **Aplicar** para criar a URL.  
   
 10. Teste a URL clicando no link na seção **URLs** da página. Observe que o banco de dados do servidor de relatório deve ser criado e configurado antes que você possa testar a URL. Para obter instruções, consulte [Criar um banco de dados de servidor de relatório no modo nativo &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
 > [!NOTE]
->  Se você tiver Associações SSL existentes e Reservas de URL e desejar alterar a Associação de SSL, por exemplo usar um certificado diferente ou cabeçalho de host, é recomendado concluir as etapas a seguir na ordem:  
+>  Se você tiver Associações TLS existentes e Reservas de URL e desejar alterar a Associação de TLS, por exemplo usar um certificado diferente ou cabeçalho de host, é recomendado concluir as etapas a seguir na ordem:  
 > 
 >  1.  Primeiro remova todas as Reservas de URL.  
-> 2.  Em seguida, remova todas as Associações SSL.  
-> 3.  Em seguida, recrie as URLs e as associações SSL.  
+> 2.  Em seguida, remova todas as Associações TLS.  
+> 3.  Em seguida, recrie as URLs e as associações TLS.  
 > 
 >  As etapas anteriores podem ser concluídas usando o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
 > 
@@ -113,9 +113,9 @@ ms.locfileid: "77077062"
   
 3.  Especifique o diretório virtual. O [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] escuta no mesmo endereço IP e porta que o serviço Web Servidor de Relatório. Se você configurou o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] para que aponte para um serviço Web Servidor de Relatório diferente, deverá modificar as configurações da URL do [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] no arquivo RSReportServer.config.  
   
-4.  Se você instalou um certificado SSL, poderá selecioná-lo para requerer que todas as solicitações para o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] sejam roteadas por HTTPS.  
+4.  Se você instalou um certificado TLS/SSL, poderá selecioná-lo para requerer que todas as solicitações para o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] sejam roteadas por HTTPS.  
   
-     Opcionalmente, se você selecionar um certificado SSL, poderá especificar uma porta personalizada. O padrão é 443, mas você pode usar qualquer porta que estiver disponível.  
+     Opcionalmente, se você selecionar um certificado TLS/SSL, poderá especificar uma porta personalizada. O padrão é 443, mas você pode usar qualquer porta que estiver disponível.  
   
 5.  Clique em **Aplicar** para criar a URL.  
   
@@ -136,14 +136,14 @@ ms.locfileid: "77077062"
  Um cabeçalho de host é um nome exclusivo que permite que vários sites compartilhem um único endereço IP e porta. Os nomes de cabeçalho de host são mais fáceis de se lembrar e digitar que endereço IP e números de porta. Um exemplo de um nome de cabeçalho de host poderia ser www.adventure-works.com.  
   
  **Porta SSL**  
- Especifica a porta para conexões SSL. A porta padrão para SSL é 443.  
+ Especifica a porta para conexões TLS/SSL. A porta padrão para TLS é 443.  
   
  **Certificado SSL**  
- Especifica o nome de um certificado SSL que você instalou neste computador. Se o certificado for mapeado para um curinga, você poderá usá-lo para uma conexão de servidor de relatório.  
+ Especifica o nome de um certificado TLS/SSL que você instalou neste computador. Se o certificado for mapeado para um curinga, você poderá usá-lo para uma conexão de servidor de relatório.  
   
  Especifica o nome do computador totalmente qualificado para o qual o certificado está registrado. O nome que você especificar deve ser idêntico ao nome para o qual o certificado está registrado.  
   
- Você deve ter um certificado instalado para que possa usar essa opção. Você também deve modificar o parâmetro de configuração UrlRoot no arquivo RSReportServer.config para que ele especifique o nome totalmente qualificado do computador para o qual o certificado está registrado. Para obter mais informações, veja [Configurar conexões SSL em um Servidor de Relatórios do Modo Nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Você deve ter um certificado instalado para que possa usar essa opção. Você também deve modificar o parâmetro de configuração UrlRoot no arquivo RSReportServer.config para que ele especifique o nome totalmente qualificado do computador para o qual o certificado está registrado. Para obter mais informações, confira [Configurar conexões TLS em um servidor de relatório no modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>Para definir propriedades avançadas em uma URL  
   

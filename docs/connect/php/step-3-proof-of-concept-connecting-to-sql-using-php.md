@@ -1,5 +1,6 @@
 ---
-title: 'Etapa 3: Prova de conceito da conexão ao SQL usando PHP | Microsoft Docs'
+title: 'Etapa 3: como conectar ao SQL usando PHP'
+description: A etapa 3 é uma prova de conceito, que mostra como você pode se conectar ao SQL Server usando PHP. Os exemplos básicos demonstram a seleção e a inserção de dados.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b88a71d1800b13b4d8fd867715cc3690eee4fc43
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 69c8b1ec58dbb40ab6e4463d343720e02e583ac8
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926861"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528580"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Etapa 3: Prova de conceito da conexão ao SQL usando PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -79,8 +80,7 @@ A função [sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php)
   
 ## <a name="step-3--insert-a-row"></a>Etapa 3:  Inserir uma linha  
   
-Neste exemplo, você verá como executar uma instrução [INSERT](../../t-sql/statements/insert-transact-sql.md) com segurança e passar parâmetros que protegem seu aplicativo contra o valor [injeção de SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
-  
+Neste exemplo, você verá como executar uma instrução [INSERT](../../t-sql/statements/insert-transact-sql.md) com segurança e transmitir parâmetros. Os valores de parâmetro protegem seu aplicativo da [injeção de SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).
   
 ```php 
     function InsertData()  
@@ -109,7 +109,7 @@ Neste exemplo, você verá como executar uma instrução [INSERT](../../t-sql/st
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Etapa 4:  Reverter uma transação  
+## <a name="step-4--roll-back-a-transaction"></a>Etapa 4:  reverter uma transação  
   
   
 Este exemplo de código demonstra o uso de transações nas quais você:  
@@ -118,7 +118,7 @@ Este exemplo de código demonstra o uso de transações nas quais você:
   
 -Inserir uma linha de dados, outra linha de dados de atualização  
   
--Confirmar a transação se a inserção e a atualização tiverem sido bem-sucedidas e reverter a transação se uma delas tiver falhado  
+– Confirma a transação se a inserção e a atualização tiverem sido bem-sucedidas e reverte a transação se uma delas tiver falhado  
   
   
 ```php 

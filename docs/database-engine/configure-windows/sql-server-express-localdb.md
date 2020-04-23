@@ -16,29 +16,31 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3eedcac9715dec28d3a0ee785effa450d7309c89
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f954ae7a2b2316acd70450db4f986b80b6ef73d
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80342919"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528250"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-O LocalDB do Microsoft SQL Server Express é um recurso do [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) voltado para desenvolvedores. Ele está disponível no SQL Server Express com Advanced Services.
+O LocalDB do Microsoft SQL Server Express é um recurso do [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-version-15.md) voltado para desenvolvedores. Ele está disponível no SQL Server Express com Advanced Services.
 
 A instalação do LocalDB copia um conjunto mínimo de arquivos necessários para iniciar o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Depois do LocalDB ser instalado, você poderá iniciar uma conexão usando uma cadeia de conexão especial. Ao conectar, a infraestrutura necessária do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é criada e iniciada automaticamente, permitindo que o aplicativo use o banco de dados sem tarefas de configuração complexas. O Developer Tools pode fornecer aos desenvolvedores um [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que permite que eles gravem e testem o código [!INCLUDE[tsql](../../includes/tsql-md.md)] sem precisar gerenciar uma instância de servidor inteira do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
-## <a name="try-it-out"></a>Experimente! 
+## <a name="installation-media"></a>Mídia de instalação 
 
-- Para fazer o download e instalar o LocalDB do SQL Server Express, acesse **[Downloads do SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)** . LocalDB é um recurso selecionado durante a instalação e que está disponível durante o download da mídia. Se você fizer o download da mídia, escolha **Express Advanced** ou o pacote LocalDB. No **Instalador do Visual Studio**, você pode instalar o SQL Server Express LocalDB como parte da carga de trabalho do **Desenvolvimento para desktop com .NET** ou como um componente individual.
+LocalDB é um recurso selecionado durante a instalação do SQL Server Expresse que está disponível durante o download da mídia. Se você fizer o download da mídia, escolha **Express Advanced** ou o pacote LocalDB. 
 
- >[!TIP]
- > Você pode instalar o LocalDB como parte do Visual Studio. Durante a instalação do Visual Studio, selecione a carga de trabalho do **Desenvolvimento para desktop com .NET**, que inclui o SQL Server Express LocalDB.
+- [SQL Server Express 2019](https://go.microsoft.com/fwlink/?LinkID=866658)
+- [SQL Server Express 2017](https://go.microsoft.com/fwlink/?LinkID=853017)
+- [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012)
 
-- Tem uma conta do Azure? [Introdução](https://azure.microsoft.com/services/virtual-machines/sql-server/) e criação de uma máquina virtual com o SQL Server já instalado.
+Como alternativa, é possível instalar o LocalDB pelo [Instalador do Visual Studio](https://visualstudio.microsoft.com/downloads/), como parte da carga de trabalho de **Processamento e Armazenamento de Dados**, da carga de trabalho de **desenvolvimento Web e ASP.NET** ou como um componente individual.
+
 
 ## <a name="install-localdb"></a>Instalar o LocalDB
 
@@ -92,8 +94,11 @@ Somente um administrador no computador pode criar uma instância compartilhada d
 
 A maneira mais fácil de usar o LocalDB é conectar-se à instância automática pertencente ao usuário atual usando a cadeia de conexão `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`. Para se conectar a um banco de dados específico usando o nome do arquivo, se conecte usando uma cadeia de conexão semelhante a `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf`.
 
+A convenção de nomenclatura e a cadeia de conexão para o formato LocalDB foram alterados no SQL Server 2014. Anteriormente, o nome da instância era um único caractere v seguido pelo LocalDB e o número de versão. A partir do SQL Server 2014, não há mais suporte para esse formato de nome de instância e a cadeia de conexão mencionada anteriormente deve ser usada.  
+
 >[!NOTE]
->A primeira vez que o usuário de um computador tenta conectar-se ao LocalDB, a instância automática deve ser criada e iniciada. O tempo adicional para a criação da instância pode causar falha durante a tentativa de conexão e exibir uma mensagem de tempo esgotado. Quando isso acontecer, espere alguns segundos para deixar o processo de criação terminar e conecte novamente.
+> - A primeira vez que o usuário de um computador tenta conectar-se ao LocalDB, a instância automática deve ser criada e iniciada. O tempo adicional para a criação da instância pode causar falha durante a tentativa de conexão e exibir uma mensagem de tempo esgotado. Quando isso acontecer, espere alguns segundos para deixar o processo de criação terminar e conecte novamente.
+
 
 ### <a name="create-and-connect-to-a-named-instance"></a>Criar e conectar-se a uma instância nomeada
 

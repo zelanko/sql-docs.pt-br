@@ -9,12 +9,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b1cb553c263bc822d5139d50169241a0f19fdd79
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286620"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487786"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertas de dados do Reporting Services
 
@@ -131,7 +131,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
   
  A tabela a seguir lista os elementos da configuração para alertas de dados e seus valores padrão, descrições e locais.  
   
-|Configuração|Valor Padrão|DESCRIÇÃO|Location|  
+|Configuração|Valor Padrão|Descrição|Location|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|Número de minutos entre inícios do ciclo de limpeza.|Arquivo de configuração do servidor de relatório|  
 |AlertingExecutionLogCleanupMinutes|10080|Número de minutos para manter entradas do log de execução.|Arquivo de configuração do servidor de relatório|  
@@ -145,7 +145,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
 ### <a name="event-handlers-and-retry"></a>Manipuladores de Eventos e Repetir  
  Os manipuladores de eventos são:  
   
-|Manipulador de Eventos|DESCRIÇÃO|  
+|Manipulador de Eventos|Descrição|  
 |-------------------|-----------------|  
 |FireAlert|Clique em **Executar**  no Gerenciador de Alertas de Dados para iniciar o processamento imediato de uma definição de alerta.|  
 |FireSchedule|O SQL Server Agent inicia o agendamento de trabalho para uma definição de alerta.|  
@@ -270,12 +270,12 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece contadores de desempenho para outros recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Contadores de desempenho para os objetos de desempenho ReportServer:Service e ReportServerSharePoint:Service](../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md), [Contadores de desempenho do serviço Web MSRS 2011 e objetos de desempenho do serviço Windows MSRS 2011 &#40;modo nativo&#41;](../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) e [Contadores de desempenho do modo do SharePoint do serviço Web MSRS 2011 e objetos de desempenho do modo do SharePoint do serviço Windows MSRS 2011 &#40;modo do SharePoint&#41;](../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
-##  <a name="support-for-ssl"></a><a name="SupportForSSL"></a> Suporte para SSL  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pode usar o serviço HTTP SSL (protocolo SSL) para estabelecer conexões criptografadas com um servidor de relatório ou site do SharePoint.  
+##  <a name="support-for-tls"></a><a name="SupportForSSL"></a> Suporte a TLS  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pode usar o serviço HTTP SSL para estabelecer conexões criptografadas com um servidor de relatório ou site do SharePoint. O protocolo TLS era anteriormente conhecido como protocolo SSL.
   
- O serviço de runtime de alerta e a interface do usuário de alertas de dados oferecem suporte para SSL e funcionam de modo semelhante quer você use SSL ou HTTP; no entanto, há algumas diferenças sutis. Quando a definição de alerta de dados é criada usando uma conexão SSL, a URL associada à biblioteca do SharePoint da mensagem de alerta de dados também usa SSL. Você pode identificar a conexão SSL porque ela usa HTTPS, em vez de HTTP em sua URL. De modo semelhante, se a definição de alerta de dados foi criada usando uma conexão HTTP, o link para o site do SharePoint usa HTTP. Se a definição de alerta foi criada usando SSL ou HTTP, a experiência para usuários e administradores de alertas será idêntica ao uso do Designer de Alerta de Dados ou do Gerenciador de Alertas de Dados. Se o protocolo (HTTP ou SSL) for alterado entre a hora em que a definição de alerta foi criada e atualizada e salva novamente, o protocolo original será mantido e usado em URLs de link.  
+ O serviço de runtime de alerta e a interface do usuário de alertas de dados dão suporte a TSL e funcionam de modo semelhante quer você use TSL ou HTTP; no entanto, há algumas diferenças sutis. Quando a definição de alerta de dados é criada usando uma conexão TSL, a URL associada à biblioteca do SharePoint da mensagem de alerta de dados também usa TSL. Você pode identificar a conexão TSL porque ela usa HTTPS, em vez de HTTP em sua URL. De modo semelhante, se a definição de alerta de dados foi criada usando uma conexão HTTP, o link para o site do SharePoint usa HTTP. Se a definição de alerta foi criada usando TSL ou HTTP, a experiência para usuários e administradores de alertas será idêntica ao uso do Designer de Alerta de Dados ou do Gerenciador de Alertas de Dados. Se o protocolo (HTTP ou TSL) for alterado entre a hora em que a definição de alerta foi criada e atualizada e salva novamente, o protocolo original será mantido e usado em URLs de link.  
   
- Se você criar um alerta de dados em um site do SharePoint que está configurado para usar o SSL e, em seguida, remover o requisito de SSL, o alerta continuará funcionando no site. Se o site for excluído, o site de zona padrão será usado.  
+ Se você criar um alerta de dados em um site do SharePoint que está configurado para usar o TSL e, em seguida, remover o requisito de TSL, o alerta continuará funcionando no site. Se o site for excluído, o site de zona padrão será usado.  
   
 ##  <a name="data-alert-user-interface"></a><a name="UserInterface"></a> Interface do usuário de alerta de dados  
  Os alertas de dados fornecem páginas do SharePoint para o gerenciamento de alertas e um designer para criação e edição de definições de alertas de dados.  

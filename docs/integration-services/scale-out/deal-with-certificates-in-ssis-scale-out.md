@@ -10,12 +10,12 @@ ms.custom: performance
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab701d44e14bbbd6234f5301a5fb3abdba451ef2
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67896960"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488124"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Gerenciar certificados do SQL Server Integration Services Scale Out
 
@@ -29,20 +29,20 @@ Para proteger a comunicação entre o Mestre do Scale Out e os Trabalhos do Scal
 
 Na maioria dos casos, o certificado do Mestre do Scale Out é configurado durante a instalação do Mestre do Scale Out.
 
-Na página **Configuração do Integration Services Scale Out – Nó Mestre** do Assistente de Instalação do SQL Server, você pode optar por criar um novo certificado SSL autoassinado ou usar um certificado SSL existente.
+Na página **Configuração do Integration Services Scale Out – Nó Mestre** do Assistente de Instalação do SQL Server, você pode optar por criar um certificado TLS/SSL autoassinado ou usar um certificado TLS/SSL existente.
 
 ![Configuração do Mestre](media/master-config.PNG)
 
-**Novo certificado**. Caso não tenha requisitos especiais de certificados, você poderá optar por criar um novo certificado SSL autoassinado. Você pode ainda especificar os CNs nesse certificado. Verifique se o nome do host do ponto de extremidade mestre a ser usado posteriormente pelo Trabalho do Scale Out está incluído nos CNs. Por padrão, o nome do computador e o endereço IP do nó mestre estão incluídos. 
+**Novo certificado**. Caso não tenha requisitos especiais de certificados, você poderá criar um certificado TLS/SSL autoassinado. Você pode ainda especificar os CNs nesse certificado. Verifique se o nome do host do ponto de extremidade mestre a ser usado posteriormente pelo Trabalho do Scale Out está incluído nos CNs. Por padrão, o nome do computador e o endereço IP do nó mestre estão incluídos. 
 
-**Certificado existente**. Se você optar por usar um certificado existente, clique em **Procurar** para selecionar um certificado SSL no repositório de certificados **Raiz** do computador local.
+**Certificado existente**. Se você optar por usar um certificado existente, clique em **Procurar** para selecionar um certificado TLS/SSL no repositório de certificados **Raiz** do computador local.
 
 ### <a name="change-the-scale-out-master-certificate"></a>Alterar o certificado do Mestre do Scale Out
 
 Talvez você deseje alterar o certificado do Mestre do Scale Out devido à expiração do certificado ou por outros motivos. Para alterar o certificado do Mestre do Scale Out, siga estas etapas:
 
-#### <a name="1-create-an-ssl-certificate"></a>1. Criar um certificado SSL.
-Crie e instale um novo certificado SSL no nó Mestre com o seguinte comando:
+#### <a name="1-create-a-tlsssl-certificate"></a>1. Criar um certificado TLS/SSL.
+Crie e instale um certificado TLS/SSL no nó Mestre com o seguinte comando:
 
 ```dos
 MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
@@ -70,7 +70,7 @@ Excluir a associação original e configurar a nova associação com os seguinte
 
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:{Master port}
-netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={SSL Certificate Thumbprint} certstorename=Root appid={original appid}
+netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={TLS/SSL Certificate Thumbprint} certstorename=Root appid={original appid}
 ```
 
 Por exemplo:
@@ -81,18 +81,18 @@ netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe
 ```
 
 #### <a name="3-update-the-scale-out-master-service-configuration-file"></a>3. Atualizar o arquivo de configuração de serviço do Mestre do Scale Out
-Atualize o arquivo de configuração de serviço do Mestre do Scale Out, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`, no nó Mestre. Atualize **SSLCertThumbprint** para a impressão digital do novo certificado SSL.
+Atualize o arquivo de configuração de serviço do Mestre do Scale Out, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`, no nó Mestre. Atualize **SSLCertThumbprint** para a impressão digital do novo certificado TLS/SSL.
 
 #### <a name="4-restart-the-scale-out-master-service"></a>4. Reiniciar o serviço Mestre do Scale Out
 
 #### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5. Reconectar os Trabalhos do Scale Out ao Mestre do Scale Out
 Para cada Trabalho do Scale Out, exclua o Trabalho e, em seguida, adicione-o novamente com o [Gerenciador do Scale Out](integration-services-ssis-scale-out-manager.md) ou faça o seguinte:
 
-a.  Instale o certificado SSL do cliente no repositório Raiz do computador local no nó de Trabalho.
+a.  Instale o certificado TLS/SSL do cliente no repositório Raiz do computador local no nó de Trabalho.
 
 b.  Atualize o arquivo de configuração de serviço do Trabalho do Scale Out.
 
-Atualize o arquivo de configuração de serviço do Trabalho do Scale Out, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, no nó de Trabalho. Atualize **MasterHttpsCertThumbprint** para a impressão digital do novo certificado SSL.
+Atualize o arquivo de configuração de serviço do Trabalho do Scale Out, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, no nó de Trabalho. Atualize **MasterHttpsCertThumbprint** para a impressão digital do novo certificado TLS/SSL.
 
 c.  Reinicie o serviço Trabalho do Scale Out.
 

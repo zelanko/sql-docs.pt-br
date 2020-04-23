@@ -1,5 +1,6 @@
 ---
-title: Conectar-se com bcp | Microsoft Docs
+title: Conectando com bcp
+description: Saiba como usar o utilitário bcp com o Microsoft ODBC Driver for SQL Server no Linux e no macOS.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0967f40a4f38156babe2f5fd736e57b5567cbdcc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d667309e390ebe7c31af335d8b3d52b9fd524880
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924550"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632796"
 ---
 # <a name="connecting-with-bcp"></a>Conectando com bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-O utilitário [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) está disponível no [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em Linux e macOS. Esta página documenta as diferenças da versão Windows do `bcp`.
+O utilitário [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) está disponível com o [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em Linux e macOS. Esta página documenta as diferenças da versão Windows do `bcp`.
   
 - O terminador de campo é um tab (“\t”).  
   
@@ -61,7 +62,7 @@ Usa um tipo de dados de caractere
 Especifica o banco de dados que deve ser conectado.  
   
 - -d  
-Faz com que o valor passado para a opção -S do `bcp` seja interpretada como um nome da fonte de dados (DSN). Para obter mais informações, consulte "Suporte para SN em sqlcmd e bcp" em [Como conectar-se com sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).  
+Faz com que o valor passado para a opção -S do `bcp` seja interpretada como um nome da fonte de dados (DSN). Para obter mais informações, consulte "Suporte para SN em sqlcmd e bcp" em [Como conectar-se com sqlcmd](connecting-with-sqlcmd.md).  
   
 - -e *error_file* Especifica o caminho completo de um arquivo de erro usado para armazenar as linhas que o utilitário `bcp` não puder transferir do arquivo para o banco de dados.  
   
@@ -147,4 +148,4 @@ Usado com as opções format e -f format_file, gera um arquivo em formato basead
   
 ## <a name="see-also"></a>Consulte Também
 
-[Conectando com **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[Conectando com **sqlcmd**](connecting-with-sqlcmd.md)  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae98fa644b5aa200db807fd93380802e66eb4eb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 11aaa38d8fb06c288399c253d530c1bd8440e597
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571273"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634570"
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>Método de ConfigurationSetting – RemoveSSLCertificateBinding
-  Remove uma associação de Certificado SSL.  
+  Remove uma associação de certificado TLS/SSL.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,7 +35,7 @@ public void RemoveSSLCertificateBindings(string Application,
     out string Error, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *Aplicativo*  
  O nome do aplicativo para o qual a associação de certificado deve ser removida.  
   
@@ -46,7 +46,7 @@ public void RemoveSSLCertificateBindings(string Application,
  O endereço IP para o aplicativo.  
   
  *Porta*  
- A porta SSL relacionada à associação.  
+ A porta TLS relacionada à associação.  
   
  *lcid*  
  A localidade a ser usada para as mensagens de erro retornadas.  

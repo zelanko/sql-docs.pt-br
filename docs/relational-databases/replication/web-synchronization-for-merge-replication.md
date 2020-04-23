@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db49332ec2710586e9cae23c3e41ee4aff42b486
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2374100459ea4e6ee05a8bba8e77919ec9185898
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136973"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529089"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Sincronização da Web para replicação de mesclagem.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68136973"
   
  Por exemplo, um representante de vendas ambulante pode usar a sincronização da Web. A empresa, [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], tem representantes de vendas que viajam a várias lojas e fornecedores ao longo das suas regiões. Em viagens longas os representantes ficam em hotéis e precisam de uma forma conveniente para carregar os dados de vendas e baixar as atualizações de produtos no final de cada dia.  
   
- O departamento de TI de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] configurou cada notebook com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e habilitou a replicação de mesclagem para usar a sincronização da Web. O Merge Agent em cada notebook possui uma URL de Internet que aponta para os componentes de replicação que são instalados em um computador que está executando [!INCLUDE[msCoName](../../includes/msconame-md.md)] Serviços de Informações da Internet (IIS). Esses componentes sincronizam o Assinante com o Publicador. Agora, cada representante pode se conectar através de qualquer conexão de Internet disponível sem usar uma conexão discada remota, e pode carregar e baixar os dados apropriados. A conexão de Internet usa o Protocolo SSL (Secure Sockets Layer); portanto, uma rede privada virtual (VPN) não é requerida.  
+ O departamento de TI de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] configurou cada notebook com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e habilitou a replicação de mesclagem para usar a sincronização da Web. O Merge Agent em cada notebook possui uma URL de Internet que aponta para os componentes de replicação que são instalados em um computador que está executando [!INCLUDE[msCoName](../../includes/msconame-md.md)] Serviços de Informações da Internet (IIS). Esses componentes sincronizam o Assinante com o Publicador. Agora, cada representante pode se conectar através de qualquer conexão de Internet disponível sem usar uma conexão discada remota, e pode carregar e baixar os dados apropriados. A conexão de Internet usa o Protocolo TLS (Transport Layer Security), antes conhecido como SSL (Secure Sockets Layer); portanto, uma rede privada virtual (VPN) não é requerida.  
   
  Para obter informações sobre como configurar os componentes que são necessários para a sincronização da Web, consulte [Configurar sincronização da Web](../../relational-databases/replication/configure-web-synchronization.md), [configurar IIS para sincronização da Web](../../relational-databases/replication/configure-iis-for-web-synchronization.md) e [configurar IIS 7 para sincronização da Web](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
   

@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: d3dadf7955dcb61b5d652a1190280926af09c4ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27087dd1ef9291cd75f8ef5f9b38f822b8900295
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286880"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487985"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Suporte do Scale Out para alta disponibilidade
 
@@ -53,7 +53,7 @@ Esse nome de host é o ponto de extremidade Mestre do Scale Out, que é criado c
 ## <a name="3-install-scale-out-master-on-the-secondary-node"></a>3. Instalar o Mestre do Scale Out no nó secundário
 Instale os Serviços de Mecanismo de Banco de Dados do SQL Server, o Integration Services e o Mestre do Scale Out no nó secundário do Mestre do Scale Out. 
 
-Use o mesmo certificado do Mestre do Scale Out usado no nó primário. Exporte o certificado SSL do Mestre do Scale Out no nó primário com uma chave privada e instale-o no repositório de certificados Raiz do computador local no nó secundário. Selecione esse certificado durante a instalação do Mestre do Scale Out no nó secundário.
+Use o mesmo certificado do Mestre do Scale Out usado no nó primário. Exporte o certificado TLS/SSL do Mestre do Scale Out no nó primário com uma chave privada e instale-o no repositório de certificados Raiz do computador local no nó secundário. Selecione esse certificado durante a instalação do Mestre do Scale Out no nó secundário.
 
 ![Configuração do mestre de alta disponibilidade 2](media/ha-master-config2.PNG)
 

@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6bc7dfadecfe24d5bd91b7dd12eaa3b68ef01753
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117079"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487675"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Pontuação nativa usando a função T-SQL PREDICT
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 A pontuação nativa usa a [função T-SQL PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) e as funcionalidades de extensão do C++ nativo no SQL Server 2017 para gerar valores de previsão ou *pontuações* para novas entradas de dados em tempo quase real. Essa metodologia oferece a velocidade de processamento mais rápida possível das cargas de trabalho de previsão, mas vem com requisitos de plataforma e biblioteca: somente as funções do RevoScaleR e do revoscalepy têm implementações C++.
 
-A pontuação nativa exige que você tenha um modelo já treinado. No SQL Server 2017 Windows ou Linux ou no Banco de Dados SQL do Azure, você pode chamar a função PREDICT no Transact-SQL para invocar a pontuação nativa em novos dados fornecidos como um parâmetro de entrada. A função PREDICT retorna as pontuações para entradas de dados fornecidas.
+A pontuação nativa exige que você tenha um modelo já treinado. No SQL Server 2017 Windows ou Linux, você pode chamar a função PREDICT no Transact-SQL para invocar a pontuação nativa em novos dados fornecidos como um parâmetro de entrada. A função PREDICT retorna as pontuações para entradas de dados fornecidas.
 
 ## <a name="how-native-scoring-works"></a>Como funciona a pontuação nativa
 
@@ -36,7 +36,7 @@ A função retorna previsões para os dados de entrada, junto com as colunas de 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-A função PREDICT está disponível em todas as edições do mecanismo de banco de dados do SQL Server 2017 e habilitada por padrão, incluindo os Serviços de Machine Learning do SQL Server no Windows, o SQL Server 2017 (Windows), o SQL Server 2017 (Linux) ou o Banco de Dados SQL do Azure. Você não precisa instalar o R, o Python nem habilitar recursos adicionais.
+A função PREDICT está disponível em todas as edições do mecanismo de banco de dados do SQL Server 2017 e posteriores e é habilitada por padrão, incluindo os Serviços de Machine Learning do SQL Server no Windows, o SQL Server 2017 no Windows, o SQL Server 2017 e posteriores no Windows e no Linux. Você não precisa instalar o R, o Python nem habilitar recursos adicionais.
 
 + O modelo precisa ser treinado com antecedência usando um dos algoritmos do **rx** compatíveis listados abaixo.
 

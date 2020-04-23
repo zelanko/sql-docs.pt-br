@@ -3,17 +3,17 @@ title: Configurar repositórios do Linux para o SQL Server 2017 e 2019
 description: Verifique e configure repositórios de origem para o SQL Server 2019 e o SQL Server 2017 no Linux. O repositório de origem afeta a versão do SQL Server que é aplicada durante a instalação e a atualização.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/12/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 5f302c774ccb4c3f98722e4b416968a813f951bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7253fb18ea783a1fb7aeec77aa73b9a899ec6ae9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79198423"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301697"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurar repositórios para instalação e atualização do SQL Server em Linux
 
@@ -158,13 +158,13 @@ Se necessário, remova o repositório antigo. Use um dos comandos a seguir com b
 Se necessário, remova o repositório antigo. Use um dos comandos a seguir com base no tipo de repositório configurado anteriormente.
 
 > [!NOTE]
-> Do SQL Server 2019 CU3 em diante, há suporte para Ubuntu 18.04. Se você estiver usando o Ubuntu 16.04, altere o caminho abaixo para `/ubuntu/16.04` em vez de `/ubuntu/18.04`.
+> Do SQL Server 2019 CU3 e SQL Server 2017 CU20 em diante, há suporte para Ubuntu 18.04. Se você estiver usando o Ubuntu 16.04, altere o caminho abaixo para `/ubuntu/16.04` em vez de `/ubuntu/18.04` e use o [nome de código de distribuição](https://releases.ubuntu.com/) correto.
 
 | Repositório | Comando para remoção |
 |---|---|
 | **Versão prévia (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
-| **CU de 2019** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 xenial main'` | 
-| **GDR de 2019** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019-gdr xenial main'` |
+| **CU de 2019** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 bionic main'` | 
+| **GDR de 2019** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019-gdr bionic main'` |
 | **CU de 2017** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
 | **GDR de 2017** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
@@ -179,14 +179,16 @@ Configure o novo repositório a ser usado para instalações e atualizações do
 > [!NOTE]
 > Os seguintes comandos do SQL Server 2019 apontam para o repositório do RHEL 8. O RHEL 8 não vem pré-instalado com o Python 2, que é exigido pelo SQL Server. Para obter mais informações, consulte blog a seguir sobre como instalar o Python 2 e configurá-lo como o interpretador padrão: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
 >
-> Se você estiver usando o RHEL 7, altere o caminho abaixo para `/rhel/7` em vez de `/rhel/8`.
+> Do SQL Server 2017 CU20 em diante, há suporte para RHEL 8.
+>
+> Se você estiver usando o RHEL 7 ou RHEL 8, verifique se os caminhos correspondem a `/rhel/7` ou `/rhel/8`.
 
 | Repositório | Versão | Comando |
 |---|---|---|
 | **CU de 2019** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
 | **GDR de 2019** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019-gdr.repo` |
-| **CU de 2017** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-| **GDR de 2017** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+| **CU de 2017** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo` |
+| **GDR de 2017** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017-gdr.repo` |
 
 ::: zone-end
 
@@ -208,7 +210,7 @@ Configure o novo repositório a ser usado para instalações e atualizações do
 Configure o novo repositório a ser usado para instalações e atualizações do SQL Server.
 
 > [!NOTE]
-> Do SQL Server 2019 CU3 em diante, há suporte para Ubuntu 18.04. Os seguintes comandos do SQL Server 2019 apontam para o repositório do Ubuntu 18.04.
+> Do SQL Server 2019 CU3 e SQL Server 2017 CU20 em diante, há suporte para Ubuntu 18.04. Os seguintes comandos apontam para o repositório do Ubuntu 18.04.
 >
 > Se você estiver usando o Ubuntu 16.04, altere o caminho abaixo para `/ubuntu/16.04` em vez de `/ubuntu/18.04`.
 
@@ -224,8 +226,8 @@ Configure o novo repositório a ser usado para instalações e atualizações do
    |---|---|---|
    | **CU de 2019** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"` |
    | **GDR de 2019** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019-gdr.list)"` |
-   | **CU de 2017** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | **GDR de 2017** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+   | **CU de 2017** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2017.list)"` |
+   | **GDR de 2017** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2017-gdr.list)"` |
 
 3. Execute **apt-get update**.
 

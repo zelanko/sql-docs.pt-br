@@ -1,7 +1,7 @@
 ---
 title: Criar e gerenciar índices de texto completo | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55ed06976ef161037134164116ea2364f420f405
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: a76112a515f33bc169883c60de68742239c8d4e1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80530944"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304394"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Criar e gerenciar índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ Para obter mais informações, consulte [Popular índices de texto completo](../
 ##  <a name="view-the-properties-of-a-full-text-index"></a><a name="view"></a> Exibir as propriedades de um índice de texto completo
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Exibir as propriedades de um índice de texto completo com o Transact-SQL
 
-|Exibição de catálogo ou de gerenciamento dinâmico|DESCRIÇÃO|  
+|Exibição de catálogo ou de gerenciamento dinâmico|Descrição|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|Retorna uma linha para cada catálogo de texto completo para referência de índice de texto completo.|  
 |[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|Contém uma linha para cada coluna que faz parte de um índice de texto completo.|  
@@ -72,11 +72,11 @@ Para obter mais informações, consulte [Popular índices de texto completo](../
   
 5.  No painel **Selecionar uma página** , você pode selecionar qualquer uma das seguintes páginas:  
   
-    |Página|DESCRIÇÃO|  
+    |Página|Descrição|  
     |----------|-----------------|  
     |**Geral**|Exibe as propriedades básicas do índice de texto completo. Isso inclui várias propriedades modificáveis e uma série de propriedades inalteráveis, como o nome do banco de dados, o nome da tabela e o nome da coluna de chave de texto completo. As propriedades modificáveis são:<br /><br /> **Lista de palavras irrelevantes de índice de texto completo**<br /><br /> **Indexação de texto completo habilitada**<br /><br /> **Controle de alterações**<br /><br /> **Lista de propriedades de pesquisa**|  
     |**Colunas**|Exibe as colunas da tabela que estão disponíveis para indexação de texto completo. A(s) coluna(s) selecionada(s) tem(têm) índice de texto completo. Você pode selecionar tantas colunas disponíveis quantas desejar para incluí-las no índice de texto completo. Para obter mais informações, consulte [Popular índices de texto completo](populate-full-text-indexes.md).|
-    |**Agendas**|Use esta página para criar ou gerenciar agendas para executar um trabalho do SQL Server Agent que inicia uma população incremental de tabela para as populações de índice de texto completo. Para obter mais informações, consulte [Popular índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Observação: depois que você sair da caixa de diálogo **Propriedades do Índice de Texto Completo** , qualquer agenda recém-criada será associada a um trabalho do SQL Server Agent (Iniciar População Incremental da Tabela em *database_name*.*table_name*).|  
+    |**Agendas**|Use esta página para criar ou gerenciar agendas para executar um trabalho do SQL Server Agent que inicia uma população incremental de tabela para as populações de índice de texto completo. Para obter mais informações, consulte [Popular índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Observação: Depois que você sair da caixa de diálogo **Propriedades do Índice de Texto Completo**, qualquer agenda recém-criada será associada a um trabalho do SQL Server Agent (Iniciar População Incremental da Tabela em *nome_do_banco_de_dados*.*nome_da_tabela*).|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] para salvar quaisquer alterações e sair da caixa de diálogo **Propriedades do índice de texto completo**.  
   
@@ -85,7 +85,7 @@ Para obter mais informações, consulte [Popular índices de texto completo](../
   
  A tabela a seguir lista as propriedades de texto completo relacionadas a colunas e tabelas indexadas e suas funções [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionadas.  
   
-|Propriedade|DESCRIÇÃO|Função|  
+|Propriedade|Descrição|Função|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|TYPE COLUMN na tabela que armazena as informações de tipo de documento da coluna.|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|Se uma coluna foi habilitada para indexação de texto completo.|COLUMNPROPERTY|  
@@ -117,15 +117,15 @@ SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );
   
  **Exemplo**  
   
- O exemplo a seguir pergunta se o índice `PK_Document_DocumentID` é usado para impor a exclusividade da coluna de chave de texto completo, da seguinte maneira:  
+ O exemplo a seguir pergunta se o índice `PK_Document_DocumentNode` é usado para impor a exclusividade da coluna de chave de texto completo, da seguinte maneira:  
   
 ```sql  
 USE AdventureWorks  
 GO  
-SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
+SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentNode',  'IsFulltextKey' )  
 ```  
   
- Este exemplo retornará 1 se o índice `PK_Document_DocumentID` for usado para impor a exclusividade da coluna de chave de texto completo. Caso contrário, retornará 0 ou NULL. NULL implica que você está usando um nome de índice inválido, que o nome de índice não corresponde à tabela, que a tabela não existe, e assim por diante.  
+ Este exemplo retornará 1 se o índice `PK_Document_DocumentNode` for usado para impor a exclusividade da coluna de chave de texto completo. Caso contrário, retornará 0 ou NULL. NULL implica que você está usando um nome de índice inválido, que o nome de índice não corresponde à tabela, que a tabela não existe, e assim por diante.  
   
 ### <a name="find-the-identifier-of-the-full-text-key-column"></a>Localizar o identificador da coluna de chave de texto completo  
   
@@ -141,7 +141,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 
   
  O próximo exemplo retorna o identificador da coluna de chave de texto completo ou NULL. NULL implica que você está usando um nome de índice inválido, que o nome de índice não corresponde à tabela, que a tabela não existe e assim por diante.  
   
-```sql  
+```sql
 USE AdventureWorks;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
@@ -162,7 +162,7 @@ SELECT @key_column AS 'Unique Key Column';
 GO  
 ```  
   
- Este exemplo retorna um conjunto de resultados chamado `Unique Key Column`, que exibe uma única linha contendo o nome da coluna de chave exclusiva da tabela Document, DocumentID. Observe que, se esta consulta continha um nome de índice inválido, se o nome de índice não correspondia à tabela, se a tabela não existia etc., será retornado NULL.  
+ Este exemplo retorna um conjunto de resultados chamado `Unique Key Column`, que exibe uma única linha contendo o nome da coluna de chave exclusiva da tabela Document, DocumentNode. Observe que, se esta consulta continha um nome de índice inválido, se o nome de índice não correspondia à tabela, se a tabela não existia etc., será retornado NULL.  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>Indexar colunas varbinary(max) e xml  
  Se uma coluna **varbinary(max)** , **varbinary**ou **xml** tiver um índice de texto completo, ela poderá ser consultada usando os predicados (CONTAINS e FREETEXT) e as funções (CONTAINSTABLE e FREETEXTTABLE) de texto completo, como qualquer outra coluna indexada de texto completo.

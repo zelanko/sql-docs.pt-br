@@ -1,5 +1,6 @@
 ---
-title: Dependências de recurso do Microsoft JDBC Driver para SQL Server | Microsoft Docs
+title: Dependências de recurso do Microsoft JDBC Driver
+description: Saiba mais sobre as dependências que o Microsoft JDBC Driver for SQL Server tem e como atendê-las.
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8aa9b287d6d04b8ea21e8a8fd76460005edc5cd5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2a08c60322ba4cb75bef804eafb9a3e68e7df5de
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917986"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631196"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Dependências de recurso do Microsoft JDBC Driver para SQL Server
 
@@ -94,13 +95,13 @@ Os projetos específicos que exigem qualquer um dos recursos anteriores precisam
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Trabalhando com o provedor do Azure Key Vault:
 
-- JDBC Driver versão 8.2.2 – versões de dependência: Azure Key Vault (versão 1.2.2), Adal4j (versão 1.6.4), Client-Runtime-for-AutoRest (1.7.0) e suas dependências ([aplicativo de exemplo](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- Versão do JDBC Driver 7.4.1 – versões de dependência: Azure Key Vault (versão 1.2.1), Adal4j (versão 1.6.4), Client-Runtime-for-AutoRest (1.6.10) e suas dependências ([aplicativo de exemplo](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- Versão do JDBC Driver 7.2.2 – versões de dependência: Azure Key Vault (versão 1.2.0), Azure-Keyvault-Webkey (versão 1.2.0), Adal4j (versão 1.6.3), Client-Runtime-for-AutoRest (1.6.5) e suas dependências ([aplicativo de exemplo](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- Versão do JDBC Driver 7.0.0 – versões de dependência: Azure Key Vault (versão 1.0.0), Adal4j (versão 1.6.0) e suas dependências ([aplicativo de exemplo](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- Versão do JDBC Driver 6.4.0 – versões de dependência: Azure Key Vault (versão 1.0.0), Adal4j (versão 1.4.0) e suas dependências ([aplicativo de exemplo](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- Versão do JDBC Driver 6.2.2 – versões de dependência: Azure Key Vault (versão 1.0.0), Adal4j (versão 1.4.0) e suas dependências ([aplicativo de exemplo](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- Versão do JDBC Driver 6.0.0 – versões de dependência: Azure Key Vault (versão 0.9.7), Adal4j (versão 1.3.0) e suas dependências ([aplicativo de exemplo](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
+- JDBC Driver versão 8.2.2 – versões de dependência: Azure Key Vault (versão 1.2.2), Adal4j (versão 1.6.4), Client-Runtime-for-AutoRest (1.7.0) e suas dependências ([aplicativo de exemplo](azure-key-vault-sample-version-7.0.md))
+- Versão do JDBC Driver 7.4.1 – versões de dependência: Azure Key Vault (versão 1.2.1), Adal4j (versão 1.6.4), Client-Runtime-for-AutoRest (1.6.10) e suas dependências ([aplicativo de exemplo](azure-key-vault-sample-version-7.0.md))
+- Versão do JDBC Driver 7.2.2 – versões de dependência: Azure Key Vault (versão 1.2.0), Azure-Keyvault-Webkey (versão 1.2.0), Adal4j (versão 1.6.3), Client-Runtime-for-AutoRest (1.6.5) e suas dependências ([aplicativo de exemplo](azure-key-vault-sample-version-7.0.md))
+- Versão do JDBC Driver 7.0.0 – versões de dependência: Azure Key Vault (versão 1.0.0), Adal4j (versão 1.6.0) e suas dependências ([aplicativo de exemplo](azure-key-vault-sample-version-7.0.md))
+- Versão do JDBC Driver 6.4.0 – versões de dependência: Azure Key Vault (versão 1.0.0), Adal4j (versão 1.4.0) e suas dependências ([aplicativo de exemplo](azure-key-vault-sample-version-6.2.2.md))
+- Versão do JDBC Driver 6.2.2 – versões de dependência: Azure Key Vault (versão 1.0.0), Adal4j (versão 1.4.0) e suas dependências ([aplicativo de exemplo](azure-key-vault-sample-version-6.2.2.md))
+- Versão do JDBC Driver 6.0.0 – versões de dependência: Azure Key Vault (versão 0.9.7), Adal4j (versão 1.3.0) e suas dependências ([aplicativo de exemplo](azure-key-vault-sample-version-6.0.0.md))
 
 > [!NOTE]
 > Nas versões 6.2.2 e 6.4.0 do driver, a dependência azure-keyvault-java foi atualizada para a versão 1.0.0. No entanto, a nova versão não era compatível com a versão anterior (0.9.7) e interrompe a implementação existente no driver. A nova implementação no driver exigiu alterações na API, que, por sua vez, interrompe programas do cliente que usam o Azure Key Vault Provider.
@@ -117,15 +118,15 @@ Os projetos específicos que exigem qualquer um dos recursos anteriores precisam
 - Versão do JDBC Driver 6.2.2 – versões de dependência: Adal4j (versão 1.4.0) e suas dependências
 - Versão do JDBC Driver 6.0.0 – versões de dependência: Adal4j (versão 1.3.0) e suas dependências. Nesta versão do driver, é possível se conectar usando somente o modo de autenticação _ActiveDirectoryIntegrated_, em um sistema operacional Windows, e usando sqljdbc_auth.dll e a Biblioteca de Autenticação do Active Directory para SQL Server (ADALSQL. DLL).
 
-Da verão 6.4.0 do driver em diante, os aplicativos não exigem necessariamente o uso da ADALSQL.DLL em sistemas operacionais Windows. Nos *sistemas operacionais que não são Windows*, o driver exige um tíquete Kerberos para funcionar com a autenticação ActiveDirectoryIntegrated. Para saber mais sobre como se conectar ao Active Directory usando o Kerberos, confira o artigo [Definir tíquete Kerberos no Windows, Linux e Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac).
+Da verão 6.4.0 do driver em diante, os aplicativos não exigem necessariamente o uso da ADALSQL.DLL em sistemas operacionais Windows. Nos *sistemas operacionais que não são Windows*, o driver exige um tíquete Kerberos para funcionar com a autenticação ActiveDirectoryIntegrated. Para saber mais sobre como se conectar ao Active Directory usando o Kerberos, confira o artigo [Definir tíquete Kerberos no Windows, Linux e macOS](connecting-using-azure-active-directory-authentication.md#set-kerberos-ticket-on-windows-linux-and-macos).
 
 Nos *sistemas operacionais Windows*, o driver busca o sqljdbc_auth.dll por padrão e não exige a instalação do tíquete Kerberos ou das dependências de biblioteca do Azure. Se o sqljdbc_auth.dll não estiver disponível, o driver buscará o tíquete Kerberos para autenticação no Active Directory como ocorre em outros sistemas operacionais.
 
 Começando na versão do driver 8.2.2, 'sqljdbc_auth.dll' foi renomeado para 'mssql-jdbc_auth-\<versão>-\<arch>.dll'. Por ex.: 'mssql-jdbc_auth-8.2.2.x64.dll'.
 
-Você pode obter um [aplicativo de exemplo](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md) que usa esse recurso.
+Você pode obter um [aplicativo de exemplo](connecting-using-azure-active-directory-authentication.md) que usa esse recurso.
 
 ## <a name="see-also"></a>Confira também
 
 [Repositório GitHub do JDBC Driver](https://github.com/microsoft/mssql-jdbc)  
-[Referência de API do JDBC Driver](../../connect/jdbc/reference/jdbc-driver-api-reference.md)
+[Referência de API do JDBC Driver](reference/jdbc-driver-api-reference.md)

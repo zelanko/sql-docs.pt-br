@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 95acac097d1c3ec5ffd4989058db0c2927441554
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e00888943ae196cfb5b579368a7b05d80c4f1182
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907241"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529093"
 ---
 # <a name="configure-web-synchronization"></a>Configurar Sincronização da Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "72907241"
   
  Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assistente para Configurar a Sincronização da Web não tem suporte no IIS versão 7.0. A partir do SQL Server 2012, para usar o componente de sincronização da Web no servidor IIS, recomendamos instalar o SQL Server com replicação. Essa pode ser a edição gratuita do SQL Server Express.  
   
- O SSL é necessário para a sincronização da Web. Você precisará de um certificado de segurança emitido por uma autoridade de certificação. Apenas para objetivos de teste, é possível usar certificados de segurança emitidos por conta própria.  
+ O TLS é necessário para a sincronização da Web. Você precisará de um certificado de segurança emitido por uma autoridade de certificação. Apenas para objetivos de teste, é possível usar certificados de segurança emitidos por conta própria.  
    
   
  **Para configurar o IIS para sincronização da Web**  
@@ -144,7 +144,7 @@ ms.locfileid: "72907241"
   
 -   O Distribuidor e o Publicador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem estar no mesmo computador (uma configuração típica da replicação de mesclagem). No entanto, o IIS dever ser instalado em um computador separado.  
   
--   Use o protocolo SSL para criptografar a conexão entre o Assinante e o computador que está executando o IIS. Isso é necessário para a sincronização da Web.  
+-   Use o protocolo TLS (Transport Layer Security), antes conhecido como SSL (Secure Sockets Layer), para criptografar a conexão entre o Assinante e o computador que está executando o IIS. Isso é necessário para a sincronização da Web.  
   
 -   Use a autenticação básica para conexões do Assinante com o IIS. Usando a Autenticação básica, o IIS pode fazer conexões para o Publicador/Distribuidor em nome do Assinante, sem requerer delegação. A delegação é necessária quando se usa a Autenticação integrada.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "72907241"
   
 -   Se os servidores da topologia de replicação estiverem protegidos por firewall, poderá ser necessário abrir portas no firewall para habilitar a sincronização da Web.  
   
-    -   O computador Assinante conecta-se ao computador que está executando o IIS por HTTPS usando o SSL que, normalmente, é configurado para usar a porta 443. Os assinantes do[!INCLUDE[ssEW](../../includes/ssew-md.md)] também podem ser conectados por HTTP, que é configurado normalmente para usar a porta 80.  
+    -   O computador Assinante conecta-se ao computador que está executando o IIS por HTTPS usando o TLS que, normalmente, é configurado para usar a porta 443. Os assinantes do[!INCLUDE[ssEW](../../includes/ssew-md.md)] também podem ser conectados por HTTP, que é configurado normalmente para usar a porta 80.  
   
     -   O computador que está executando o IIS, em geral, conecta-se ao Publicador ou ao Distribuidor usando a porta 1433 (instância padrão). Quando o Publicador ou o Distribuidor é uma instância nomeada em um servidor com outra instância padrão, a porta 1500 é normalmente usada para conexão à instância nomeada.  
   

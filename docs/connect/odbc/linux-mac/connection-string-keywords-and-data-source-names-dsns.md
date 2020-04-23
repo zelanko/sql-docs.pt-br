@@ -1,5 +1,6 @@
 ---
-title: Conexão ao SQL Server | Microsoft Docs
+title: Conectar usando o ODBC
+description: Saiba como criar uma conexão com um banco de dados do Linux ou macOS usando o Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52511cbda93f5148daab116f0def292b55828efd
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 2b99479883fd1cc74008d62a9c322226ed587244
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219387"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632797"
 ---
 # <a name="connecting-to-sql-server"></a>Conectar-se ao SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +29,7 @@ Este tópico discute como você pode criar uma conexão com um banco de dados [!
   
 ## <a name="connection-properties"></a>Propriedades da conexão  
 
-Consultar [DNS e palavras-chave e atributos da cadeia de conexão](../../../connect/odbc/dsn-connection-string-attribute.md) para ver todas as palavras-chave e atributos da cadeia de conexão compatíveis com Linux e Mac
+Confira [DNS e palavras-chave e atributos da cadeia de conexão](../dsn-connection-string-attribute.md) para ver todas as palavras-chave e atributos da cadeia de conexão compatíveis com Linux e macOS.
 
 > [!IMPORTANT]  
 > Ao se conectar a um banco de dados que use o espelhamento de banco de dados (tem um parceiro de failover), não especifique o nome do banco de dados na cadeia de conexão. Em vez disso, envie um comando **use** _database_name_ para se conectar ao banco de dados antes de executar suas consultas.  
@@ -113,6 +114,6 @@ Para configurar, adicione as configurações a seguir à seção do driver em `o
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Como instalar o Microsoft ODBC Driver for SQL Server em Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-- [Como instalar o Microsoft ODBC Driver for SQL Server no macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
-- [Diretrizes de programação](../../../connect/odbc/linux-mac/programming-guidelines.md)
+- [Como instalar o Microsoft ODBC Driver for SQL Server em Linux](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Como instalar o Microsoft ODBC Driver for SQL Server no macOS](install-microsoft-odbc-driver-sql-server-macos.md)
+- [Diretrizes de programação](programming-guidelines.md)

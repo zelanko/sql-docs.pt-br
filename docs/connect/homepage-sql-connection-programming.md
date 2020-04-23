@@ -1,6 +1,6 @@
 ---
 title: Home page para programação do cliente SQL | Microsoft Docs
-description: Página de Hub com links anotados para downloads e documentação para várias combinações de linguagens e sistemas operacionais, para se conectar ao SQL Server ou ao Banco de Dados SQL do Azure.
+description: Página com links anotados para downloads e documentação para diferentes linguagens e sistemas operacionais, para se conectar ao SQL Server ou ao Banco de Dados SQL do Azure.
 author: David-Engel
 ms.date: 11/07/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: v-daenge
-ms.openlocfilehash: df07130ea77578dd467add9d8a96cc331d5c127f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c3f2b6db58879a8d0fd3ce82a89511275fe9d3bb
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924889"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529040"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Home page da programação do cliente para Microsoft SQL Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "80924889"
 Bem-vindo à nossa home page sobre programação do cliente para interagir com Microsoft SQL Server e com o Banco de Dados SQL do Azure na nuvem. Este artigo fornece as seguintes informações:
 
 - Lista e descreve as combinações de linguagem e driver disponíveis.
-    - As informações são fornecidas para os sistemas operacionais Linux (Ubuntu e outros), MacOS e Windows.
+  - As informações são fornecidas para os sistemas operacionais Linux (Ubuntu e outros), macOS e Windows.
 - Fornece links para a documentação detalhada de cada combinação.
 - Exibe as áreas e subáreas da documentação hierárquica para determinadas linguagens, quando apropriado.
 
@@ -35,7 +35,7 @@ Em qualquer idioma, o código que se conecta ao SQL Server é quase idêntico ao
 Para obter detalhes sobre as cadeias de conexão para se conectar ao Banco de Dados SQL do Azure, confira:
 
 - [Usar o .NET Core (C#) para consultar um Banco de Dados SQL do Azure](/azure/sql-database/sql-database-connect-query-dotnet-core).
-- Outro Banco de Dados SQL do Azure que está próximo ao artigo anterior no sumário, sobre outros idiomas. Por exemplo, confira [Usar PHP para consultar um Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php).
+- Outros artigos do Banco de Dados SQL do Azure que estão próximos ao artigo anterior no sumário, sobre outras linguagens. Por exemplo, confira [Usar PHP para consultar um Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php).
 
 
 #### <a name="build-an-app-webpages"></a>Páginas da Web sobre criação de aplicativos
@@ -118,7 +118,7 @@ A [página inicial do Entity Framework](https://docs.microsoft.com/ef/) apresent
 
 |     |     |
 | :-- | :-- |
-| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | A Microsoft lançou o EF primeiramente em agosto de 2008. Em março de 2015, a Microsoft anunciou que o EF 6. x foi a versão final que desenvolveria. A Microsoft lançou o código-fonte para o domínio público.<br /><br />Inicialmente, o EF era parte do .NET Framework. Mas o EF 6. x foi removido do .NET Framework.<br /><br />[Código-fonte do EF 6.x no GitHub, no repositório *ASPNET/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
+| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | A Microsoft lançou o EF primeiramente em agosto de 2008. Em março de 2015, a Microsoft anunciou que o EF 6. x foi a versão final que ela desenvolveria. A Microsoft lançou o código-fonte para o domínio público.<br /><br />Inicialmente, o EF era parte do .NET Framework. Mas o EF 6. x foi removido do .NET Framework.<br /><br />[Código-fonte do EF 6.x no GitHub, no repositório *aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
 | [EF Core](https://docs.microsoft.com/ef/core/) | A Microsoft lançou o EF Core recém-desenvolvido em junho de 2016. O EF Core foi criado para oferecer melhor flexibilidade e portabilidade. O EF Core pode ser executado em outros sistemas operacionais além do Microsoft Windows. E o EF Core pode interagir com outros bancos de dados além do Microsoft SQL Server e outros bancos de dados relacionais.<br /><br />**C&#x23; exemplos de código:**<br />[Introdução ao Entity Framework Core](https://docs.microsoft.com/ef/core/get-started/index)<br />[Introdução ao EF Core no .NET Framework com um Banco de dados existente](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
@@ -132,7 +132,7 @@ O EF e as tecnologias relacionadas são poderosas e são muito mais interessante
 
 ## <a name="java-logoimage-ref-330-java-java-and-jdbc"></a>![Logotipo do Java][image-ref-330-java] Java e JDBC
 
-A Microsoft fornece um Driver JDBC (Java Database Connectivity) para uso com o SQL Server (ou com o Banco de Dados SQL do Azure, claro). É um driver JDBC Tipo 4 que fornece conectividade de banco de dados por meio das APIs (interfaces de programa aplicativo) JDBC padrão.
+A Microsoft fornece um driver JDBC (Java Database Connectivity) para usar com o SQL Server (ou com o Banco de Dados SQL do Azure). É um driver JDBC Tipo 4 que fornece conectividade de banco de dados por meio das APIs (interfaces de programa aplicativo) JDBC padrão.
 
 #### <a name="code-examples"></a>Exemplos de código
 
@@ -162,9 +162,9 @@ A documentação do JDBC inclui as seguintes áreas principais:
 
 ## <a name="nodejs-logoimage-ref-340-node-nodejs"></a>![Logotipo do Node.js][image-ref-340-node] Node.js
 
-Com o Node.js, você pode se conectar ao SQL Server do Windows, Linux ou Mac. A raiz da nossa documentação do Node.js está [aqui](./node-js/index.md).
+Com o Node.js, você pode se conectar ao SQL Server do Windows, Linux ou macOS. A raiz da nossa documentação do Node.js está [aqui](./node-js/index.md).
 
-O driver de conexão Node.js para SQL Server é implementado em JavaScript. O driver usa o protocolo TDS, que tem suporte em todas as versões atuais do SQL Server. O driver é um projeto de software livre, [disponível no GitHub](https://tediousjs.github.io/tedious/).
+O driver de conexão Node.js para SQL Server é implementado em JavaScript. O driver usa o protocolo TDS, que tem suporte em todas as versões atuais do SQL Server. O driver é um projeto de software livre [disponível no GitHub](https://tediousjs.github.io/tedious/).
 
 #### <a name="code-examples"></a>Exemplos de código
 
@@ -179,7 +179,7 @@ O driver de conexão Node.js para SQL Server é implementado em JavaScript. O dr
 
 <a name="an-160-odbc-cpp-docu" />
 
-## <a name="odbc-for-c"></a>ODBC para C++ 
+## <a name="odbc-for-c"></a>ODBC para C++
 
 ![Logotipo do ODBC][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
@@ -201,7 +201,7 @@ O conteúdo ODBC nesta seção concentra-se em acessar o SQL Server ou o Banco d
 | Área | Subárea | Descrição |
 | :--- | :------ | :---------- |
 | [ODBC para C++](./odbc/index.md) | Raiz da nossa documentação. |
-| [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | Informações de uso do ODBC nos sistemas operacionais Linux ou MacOS. |
+| [Linux-macOS](./odbc/linux-mac/index.md) | &nbsp; | Informações de uso do ODBC nos sistemas operacionais Linux ou macOS. |
 | [Windows](./odbc/windows/index.md)     | &nbsp; | Informações de uso do ODBC no sistema operacional Windows. |
 | [Administração](../odbc/admin/index.md) | &nbsp; | A ferramenta administrativa para gerenciar fontes de dados ODBC. |
 | [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | Vários drivers ODBC que são criados e fornecidos pela Microsoft. |
@@ -281,7 +281,7 @@ Você pode usar Ruby para interagir com o SQL Server. A raiz da nossa documenta�
 ## <a name="build-an-app-website-for-sql-client-development"></a>[Site sobre criação de aplicativos, para desenvolvimento de cliente SQL](https://www.microsoft.com/sql-server/developer-get-started/)
 
 
-Em nossas páginas da Web sobre [*criação de aplicativos*](https://www.microsoft.com/sql-server/developer-get-started/), você pode escolher de uma longa lista de linguagens de programação para se conectar ao SQL Server. E seu programa cliente pode executar uma variedade de sistemas operacionais.
+Em nossas páginas da Web sobre [*criação de aplicativos*](https://www.microsoft.com/sql-server/developer-get-started/), você pode escolher entre as opções de uma longa lista de linguagens de programação para se conectar ao SQL Server. E seu programa cliente pode executar uma variedade de sistemas operacionais.
 
 O site sobre *criação de aplicativos* enfatiza a simplicidade e a integridade do desenvolvedor que está começando. As etapas explicam as seguintes tarefas:
 
@@ -293,7 +293,7 @@ O site sobre *criação de aplicativos* enfatiza a simplicidade e a integridade 
 
 Veja abaixo algumas estruturas de tópicos aproximadas dos detalhes fornecidos no site:
 
-#### <a name="java-on-ubuntu"></a>Java no Ubuntu:
+#### <a name="java-on-ubuntu"></a>Java no Ubuntu
 
 1. Configure seu ambiente
     - Etapa 1.1 Instalar o SQL Server
@@ -306,7 +306,7 @@ Veja abaixo algumas estruturas de tópicos aproximadas dos detalhes fornecidos n
 3. Torne seu aplicativo Java 100x mais rápido
     - Etapa 3.1 Criar um aplicativo Java para demonstrar índices Columnstore
 
-#### <a name="python-on-windows"></a>Python no Windows:
+#### <a name="python-on-windows"></a>Python no Windows
 
 1. Configure seu ambiente
     - Etapa 1.1 Instalar o SQL Server
@@ -325,13 +325,13 @@ Veja abaixo algumas estruturas de tópicos aproximadas dos detalhes fornecidos n
 
 As capturas de tela a seguir dão uma ideia sobre o nosso site de documentação de desenvolvimento do SQL.
 
-#### <a name="choose-a-language"></a>Escolha um idioma:
+#### <a name="choose-a-language"></a>Escolher um idioma
 
 ![Site de Desenvolvimento SQL, introdução][image-ref-390-aka-ms-sqldev-choose-language]
 
 &nbsp;
 
-#### <a name="choose-an-operating-system"></a>Escolha um sistema operacional:
+#### <a name="choose-an-operating-system"></a>Escolher um sistema operacional
 
 ![Site SQL Dev, Java Ubuntu][image-ref-400-aka-ms-sqldev-java-ubuntu]
 

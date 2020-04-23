@@ -1,5 +1,6 @@
 ---
-title: Aplicativo de exemplo (driver PDO_SQLSRV) | Microsoft Docs
+title: Aplicativo de exemplo (driver PDO_SQLSRV)
+description: O exemplo AdventureWorks Product Reviews é um aplicativo Web que usa o driver PDO_SQLSRV dos Microsoft Drivers for PHP for SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c6618b718393a6fd5180acd1ad9a5864bee4188
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 67efc6d07c437288c96a954c2b6d748282102e29
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916652"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629164"
 ---
 # <a name="example-application-pdo_sqlsrv-driver"></a>Aplicativo de exemplo (driver PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +25,7 @@ O aplicativo de exemplo AdventureWorks Product Reviews é um aplicativo Web que 
   
 ### <a name="running-the-example-application"></a>Execução do aplicativo de exemplo  
   
-1.  Instale os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para ver informações detalhadas, confira [Introdução aos drivers da Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+1.  Instale os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para ver informações detalhadas, confira [Introdução aos drivers da Microsoft para PHP para SQL Server](getting-started-with-the-php-sql-driver.md)
 2.  Copie o código mencionado posteriormente neste documento em dois arquivos: adventureworks_demo.php e photo.php.  
 3.  Coloque os arquivos adventureworks_demo.php e photo.php.no diretório raiz do servidor Web.  
 4.  Execute o aplicativo iniciando https\://localhost/adventureworks_demo.php no seu navegador.  
@@ -32,7 +33,7 @@ O aplicativo de exemplo AdventureWorks Product Reviews é um aplicativo Web que 
 ## <a name="requirements"></a>Requisitos  
 Para executar o aplicativo de exemplo AdventureWorks Product Reviews, as condições a seguir devem ser atendidas em seu computador:  
   
--   O sistema cumpre os requisitos dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para obter informações detalhadas, confira [Requisitos do sistema para os drivers da Microsoft para PHP para SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
+-   O sistema cumpre os requisitos dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para obter informações detalhadas, confira [Requisitos do sistema para os drivers da Microsoft para PHP para SQL Server](system-requirements-for-the-php-sql-driver.md).  
  -   Os arquivos adventureworks_demo.php e photo.php estão no diretório raiz do servidor Web. Os arquivos devem conter o código mencionado posteriormente neste documento.  
 -   O SQL Server 2005 ou o SQL Server 2008, com o banco de dados [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) anexado, está instalado no computador local.  
 -   Um navegador da Web está instalado.  
@@ -504,13 +505,13 @@ die( print_r( $e->getMessage() ) );
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
-[Conectando-se ao servidor](../../connect/php/connecting-to-the-server.md)
+[Conectando-se ao servidor](connecting-to-the-server.md)
 
-[Comparando funções de execução](../../connect/php/comparing-execution-functions.md)
+[Comparando funções de execução](comparing-execution-functions.md)
 
-[Recuperando dados](../../connect/php/retrieving-data.md)
+[Recuperando dados](retrieving-data.md)
 
-[Atualizando dados &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+[Atualizando dados &#40;Drivers da Microsoft para PHP para SQL Server&#41;](updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
-[Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+[Referência da API do driver SQLSRV](sqlsrv-driver-api-reference.md)  
   

@@ -15,12 +15,12 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8359c9844cf9ebbc91da556f212429c96909d857
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91277deb1aab5916f23d52fed3f8d8f0530b6fab
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285610"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529087"
 ---
 # <a name="replication-programming-concepts"></a>Conceitos de programação de replicação
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "76285610"
   
 2.  Além do acesso a dados típico exigido para um aplicativo de venda, este aplicativo deve permitir que os vendedores sincronizem a assinatura pull sob demanda clicando em um botão. Uma vez que o representante de vendas instalará e executará o aplicativo, também terá de ser capaz de configurar uma assinatura e de aplicar o instantâneo inicial no cliente. Opcionalmente, o aplicativo usará a infraestrutura fornecida pelo Windows para localizar a conectividade sem-fios e sincronizar a assinatura automaticamente quando uma conexão for detectada.  
   
-3.  Siga todas as diretrizes de segurança para replicação, incluindo a utilização da Autenticação de Windows e de uma VPN (rede privada virtual) ao se conectar ao editor. Se estiver implementando a sincronização da Web, use uma conexão de protocolo SSL. Para obter mais informações, consulte [Configurar sincronização da Web](../../../relational-databases/replication/configure-web-synchronization.md).  
+3.  Siga todas as diretrizes de segurança para replicação, incluindo a utilização da Autenticação de Windows e de uma VPN (rede privada virtual) ao se conectar ao editor. Se você implementar a sincronização da Web, use uma conexão com o protocolo TLS, anteriormente conhecido como protocolo SSL. Para obter mais informações, consulte [Configurar sincronização da Web](../../../relational-databases/replication/configure-web-synchronization.md).  
   
 4.  Para tirar proveito dos recursos do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], o aplicativo será desenvolvido usando uma linguagem de código gerenciado.  
   

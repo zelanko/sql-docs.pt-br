@@ -1,5 +1,6 @@
 ---
-title: Lista de bugs corrigidos | Microsoft Docs
+title: Lista de bugs corrigidos
+description: Esta página contém uma lista de bugs corrigidos em cada versão, começando com o Microsoft ODBC Driver 17 for SQL Server.
 ms.custom: ''
 ms.date: 06/29/2018
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: e1be25052ed75370eead58832119d543717b8e16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0541f875230426f6ebc0fd1f90ac06110861f025
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896772"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629696"
 ---
 # <a name="list-of-bugs-fixed"></a>Lista de bugs corrigidos
 
-Esta página contém uma lista de bugs corrigidos em cada versão, começando com o [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+Esta página contém uma lista de bugs corrigidos em cada versão, começando com o [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-1752-for-ssnoversion"></a>Correções de bugs no [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -30,10 +31,10 @@ Esta página contém uma lista de bugs corrigidos em cada versão, começando co
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-175-for-ssnoversion"></a>Correções de bugs no [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Correção do cálculo de hash de metadados do AKV CMK no Linux/Mac
+- Correção do cálculo de hash de metadados do AKV CMK no Linux/macOS
 - Correção de erro ao carregar o OpenSSL 1.0.0
 - Correção de problemas de conversão ao usar as páginas de código ISO-8859-1 e ISO-8859-2
-- Correção do nome da biblioteca interna no Mac para incluir o número de versão
+- Correção do nome da biblioteca interna no macOS para incluir o número de versão
 - Correção da configuração do indicador nulo quando são usadas associações de comprimento e indicador separadas
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-1742-for-ssnoversion"></a>Correções de bugs no [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -82,7 +83,7 @@ Esta página contém uma lista de bugs corrigidos em cada versão, começando co
 - Correção de mensagens de erro ADAL truncadas
 - Correção de um bug raro no Windows de 32 bits ao converter um número de ponto flutuante em um número inteiro
 - Correção de um problema em que a inserção dupla no campo decimal com o Always Encrypted ativado retornava um erro de truncamento de dados
-- Correção de um aviso no instalador do MacOS
+- Correção de um aviso no instalador do macOS
 - Correção do envio de estado incorreto para o SQL Server durante a tentativa de Recuperação da Sessão quando a Resiliência da Conexão e o Pool de Conexões estão habilitados, fazendo com que a sessão seja descartada pelo servidor
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-17-for-ssnoversion"></a>Correções de bugs no [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -101,5 +102,5 @@ Esta página contém uma lista de bugs corrigidos em cada versão, começando co
 - Correção de sublinhados de escape que não funcionam no SQLTables
 - Correção de um bug em que os dados em Hebraico (varchar) são truncados quando retornados como caracteres amplos no Linux
 - Correção de um problema com a consulta de caracteres/varchar codificados com Shift-JIS no aplicativo UTF-8
-- Correção do bug em que chamar SQLGetInfo com o parâmetro SQL_DRIVER_NAME retornava um nome de arquivo no estilo Linux no MacOS
+- Correção do bug em que chamar SQLGetInfo com o parâmetro SQL_DRIVER_NAME retornava um nome de arquivo no estilo Linux no macOS
 - Correção de um problema em que carregar dados de caractere do Windows-1252, usando arquivos de entrada maiores do que 32 mil bytes em colunas VARCHAR usando o utilitário BCP resultaria em falhas

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03234369ed7422433b35a5e3d296f6db1d1b2223
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 189c0d314ba3f16b00ad570b3e0f9fbce9fa2f7e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570655"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632413"
 ---
 # <a name="reporting-services-security-and-protection"></a>Segurança e proteção do Reporting Services
   Você pode usar as informações desta seção para obter informações sobre os recursos de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Esta seção também explica os modelos de autorização e os provedores de autenticação com suporte no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -33,6 +33,6 @@ ms.locfileid: "65570655"
   
 |Descrições das tarefas|Links|  
 |-----------------------|-----------|  
-|Configurar o protocolo SSL para proteger conexões de cliente com o servidor de relatório.|[Configurar conexões SSL em um servidor de relatórios de Modo Nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)|  
+|Configure o protocolo TLS, anteriormente conhecido como protocolo SSL (Secure Sockets Layer), para proteger as conexões de cliente com o servidor de relatório.|[Configurar conexões TLS em um servidor de relatório no modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)|  
   
   

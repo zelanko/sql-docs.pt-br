@@ -1,5 +1,6 @@
 ---
 title: Driver do Microsoft JDBC para SQL Server | Microsoft Docs
+description: A Microsoft fornece um driver JDBC para uso com o SQL Server e o Banco de Dados SQL do Azure, permitindo a conectividade de qualquer aplicativo, servidor ou applet Java.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09257402146c8e2354d54a04d202f2daf697bb3d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: be47bcad4526a65012fdd94e5dfe6b79d780985a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928230"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487803"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver para SQL Server
 
@@ -27,9 +28,9 @@ O Microsoft JDBC Driver para SQL Server foi testado com os principais servidores
   
 ## <a name="getting-started"></a>Introdução  
 
-* [Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento Java](step-1-configure-development-environment-for-java-development.md)  
-* [Etapa 2: Criar um banco de dados SQL para o desenvolvimento Java](step-2-create-a-sql-database-for-java-development.md)  
-* [Etapa 3: Prova de conceito da conexão ao SQL usando Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
+* [Etapa 1: configurar o ambiente de desenvolvimento para o desenvolvimento Java](step-1-configure-development-environment-for-java-development.md)  
+* [Etapa 2: criar um banco de dados SQL para o desenvolvimento Java](step-2-create-a-sql-database-for-java-development.md)  
+* [Etapa 3: prova de conceito da conexão ao SQL usando Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>Documentação  
 

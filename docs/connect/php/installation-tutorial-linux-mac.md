@@ -1,6 +1,7 @@
 ---
-title: Tutorial de instalação de Linux e macOS para Drivers da Microsoft para PHP para SQL Server | Microsoft Docs | Microsoft Docs
-ms.date: 12/12/2019
+title: Instalação do Linux e macOS para Drivers for PHP
+description: Estas instruções mostram como instalar os Microsoft Drivers for PHP for SQL Server em Linux ou macOS.
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -9,17 +10,17 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 913b6d95a7bb9a690f0a8cdd7d8c88b29782f876
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 987534339a6eff11b775d9f54563d158fa5653e9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79058570"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529014"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Tutorial de instalação de Linux e macOS para Drivers da Microsoft para PHP para SQL Server
-As instruções a seguir consideram um ambiente limpo e mostram como instalar o PHP 7.x, o driver do Microsoft ODBC, o servidor Web do Apache e os Drivers da Microsoft para PHP e para SQL Server no Ubuntu 16.04, 18.04 e 19.10, no RedHat 7 e 8, no Debian 8, 9 e 10, no Suse 12 e 15, no Alpine 3.11 (experimental) e no macOS 10.13, 10.14 e 10.15. Essas instruções aconselham a instalar os drivers usando PECL, mas também é possível baixar os binários predefinidos na página de projetos do GitHub [Drivers da Microsoft para PHP e para SQL Server](https://github.com/Microsoft/msphpsql/releases) e instalá-los seguindo as instruções em [Como carregar os Drivers da Microsoft para PHP e para SQL Server](../../connect/php/loading-the-php-sql-driver.md). Para obter uma explicação do carregamento da extensão e por que não adicionamos as extensões ao php.ini, confira a seção sobre [carregar os drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
+As instruções a seguir consideram um ambiente limpo e mostram como instalar o PHP 7.x, o driver ODBC da Microsoft, o servidor Web do Apache e os Microsoft Drivers for PHP for SQL Server no Ubuntu 16.04, 18.04 e 19.10, no RedHat 7 e 8, no Debian 8, 9 e 10, no Suse 12 e 15, no Alpine 3.11 e no macOS 10.13, 10.14 e 10.15. Essas instruções aconselham a instalar os drivers usando PECL, mas também é possível baixar os binários predefinidos na página de projetos do GitHub [Drivers da Microsoft para PHP e para SQL Server](https://github.com/Microsoft/msphpsql/releases) e instalá-los seguindo as instruções em [Como carregar os Drivers da Microsoft para PHP e para SQL Server](../../connect/php/loading-the-php-sql-driver.md). Para obter uma explicação do carregamento da extensão e por que não adicionamos as extensões ao php.ini, confira a seção sobre [carregar os drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
-Essas instruções instalam o PHP 7.4 por padrão. Observe que algumas distribuições compatíveis com Linux têm como padrão o PHP 7.1 ou anterior que não é compatível com a versão mais recente dos drivers PHP para SQL Server. Confira as observações no início de cada seção para instalar o PHP 7.2 ou 7.3.
+Estas instruções instalam o PHP 7.4 por padrão usando `pecl install`. Talvez seja necessário executar primeiro `pecl channel-update pecl.php.net`. Observe que algumas distribuições compatíveis com Linux têm como padrão o PHP 7.1 ou anterior que não é compatível com a versão mais recente dos drivers PHP para SQL Server. Confira as observações no início de cada seção para instalar o PHP 7.2 ou 7.3.
 
 As instruções para instalar o Gerenciador de Processos do PHP FastCGI e o PHP-FPM no Ubuntu também estão incluídas. Isso será necessário caso esteja usando o servidor Web nginx em vez do Apache.
 
@@ -308,13 +309,10 @@ Para testar sua instalação, confira [Testar a instalação](#testing-your-inst
 ## <a name="installing-the-drivers-on-alpine-311"></a>Como instalar os drivers no Alpine 3.11
 
 > [!NOTE]
-> O suporte para Alpine é experimental.
-
-> [!NOTE]
-> A versão padrão do PHP é 7.3. Versões alternativas do PHP não estão disponíveis em outros repositórios para o Alpine 3.11. Em vez disso é possível compilar o PHP da origem.
+> A versão padrão do PHP é 7.3. Versões alternativas do PHP podem não estar disponíveis em outros repositórios para o Alpine 3.11. Em vez disso é possível compilar o PHP da origem.
 
 ### <a name="step-1-install-php"></a>Etapa 1. Instalar o PHP
-Os pacotes PHP para Alpine são encontrados no repositório `edge/community`. Adicione a seguinte linha em `/etc/apt/repositories`, substituindo `<mirror>` pela URL de um espelho do repositório Alpine:
+Os pacotes PHP para Alpine podem ser encontrados no repositório `edge/community`. Confira [Habilitar Repositório da Comunidade](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository) na página WIKI. Adicione a seguinte linha em `/etc/apt/repositories`, substituindo `<mirror>` pela URL de um espelho do repositório Alpine:
 ```
 http://<mirror>/alpine/edge/community
 ```
@@ -335,10 +333,7 @@ sudo su
 echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/10_pdo_sqlsrv.ini
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/00_sqlsrv.ini
 ```
-Talvez seja necessário definir uma localidade:
-```
-export LC_ALL=C
-```
+
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Etapa 4. Instalar o Apache e configurar o carregamento do driver
 ```
 sudo apk add php7-apache2 apache2
@@ -406,7 +401,7 @@ Para testar sua instalação, confira [Testar a instalação](#testing-your-inst
 
 ## <a name="testing-your-installation"></a>Testar a instalação
 
-Para testar esta amostra de script, crie um arquivo chamado testsql.php na raiz do documento do seu sistema. Ou seja, `/var/www/html/` no Ubuntu, no Debian e no RedHat, `/srv/www/htdocs` no SUSE, `/var/www/localhost/htdocs` no Alpine ou `/usr/local/var/www` no macOS. Copie o script a seguir para esse arquivo, substituindo o servidor, o banco de dados, o nome de usuário e a senha, conforme apropriado. No Alpine 3.11, talvez seja necessário especificar também **CharacterSet** como "UTF-8" na matriz de `$connectionOptions`.
+Para testar esta amostra de script, crie um arquivo chamado testsql.php na raiz do documento do seu sistema. Ou seja, `/var/www/html/` no Ubuntu, no Debian e no RedHat, `/srv/www/htdocs` no SUSE, `/var/www/localhost/htdocs` no Alpine ou `/usr/local/var/www` no macOS. Copie o script a seguir para esse arquivo, substituindo o servidor, o banco de dados, o nome de usuário e a senha, conforme apropriado.
 ```
 <?php
 $serverName = "yourServername";

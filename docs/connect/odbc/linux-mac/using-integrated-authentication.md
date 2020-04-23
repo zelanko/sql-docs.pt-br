@@ -1,5 +1,6 @@
 ---
-title: Usando autenticação integrada | Microsoft Docs
+title: Como usar a autenticação integrada
+descrption: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e938b9dc95daac7f8e5c4727e1e1185bd8dc8087
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 391d81c46640eb10a0ab2968f278412e55f57611
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921167"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629596"
 ---
 # <a name="using-integrated-authentication"></a>Como usar a autenticação integrada
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -34,7 +35,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 Ao se conectar com um DSN, você também pode adicionar **Trusted_Connection=yes** à entrada DSN em `odbc.ini`.
   
-A opção `-E` de `sqlcmd` e a opção `-T` de `bcp` também podem ser usadas para especificar a autenticação integrada; veja [Conectando-se com **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) e [Conectando-se com **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md) para obter mais informações.
+A opção `-E` de `sqlcmd` e a opção `-T` de `bcp` também podem ser usadas para especificar a autenticação integrada; veja [Conectando-se com **sqlcmd**](connecting-with-sqlcmd.md) e [Conectando-se com **bcp**](connecting-with-bcp.md) para obter mais informações.
 
 Verifique se a entidade de segurança do cliente que vai se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] já está autenticada com o KDC do Kerberos.
   
@@ -98,7 +99,7 @@ Para acessar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usan
 
 A sintaxe que os SPNs usam em cadeia de conexão ou atributos de conexão é a seguinte:  
 
-|Sintaxe|DESCRIÇÃO|  
+|Sintaxe|Descrição|  
 |----------|---------------|  
 |MSSQLSvc/*fqdn*:*port*|O SPN padrão gerado pelo provedor quando o protocolo TCP é usado. *port* é um número de porta TCP. *fqdn* é um nome de domínio totalmente qualificado.|  
   
@@ -125,11 +126,11 @@ A hora no computador Linux ou macOS e a hora no KDC (Centro de Distribuição de
 
 Se a autenticação Kerberos falhar, o driver ODBC do Linux ou macOS não usará autenticação NTLM.  
 
-Para obter mais informações sobre a autenticação de computadores Linux ou macOS com o Active Directory, veja [Autenticar Clientes Linux com Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) e [Melhores práticas para integrar o OS X ao Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Para obter mais informações sobre como configurar o Kerberos, veja a [Documentação do MIT Kerberos](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+Para obter mais informações sobre a autenticação de computadores Linux ou macOS com o Active Directory, confira [Autenticar clientes Linux com o Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048). Para obter mais informações sobre como configurar o Kerberos, veja a [Documentação do MIT Kerberos](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## <a name="see-also"></a>Consulte Também  
-[Diretrizes de programação](../../../connect/odbc/linux-mac/programming-guidelines.md)
+[Diretrizes de programação](programming-guidelines.md)
 
-[Notas de Versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Notas de Versão](release-notes-odbc-sql-server-linux-mac.md)
 
-[Como usar o Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)
+[Como usar o Azure Active Directory](../using-azure-active-directory.md)

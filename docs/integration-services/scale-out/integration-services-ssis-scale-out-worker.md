@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6fd7b8d17790fcc1747116b9454a3aaf38136935
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082068"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488239"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Trabalho de Expansão de Integration Services (SSIS)
 
@@ -28,12 +28,12 @@ O Trabalho do Scale Out executa o serviço Trabalho do Scale Out para efetuar pu
 ## <a name="configure-the-scale-out-worker-service"></a>Configurar o serviço Trabalho do Scale Out
 Configure o serviço Trabalho do Scale Out usando o arquivo `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`. É necessário reiniciar o serviço depois de atualizar o arquivo de configuração.
 
-|Configuração  |DESCRIÇÃO  |Valor padrão|
+|Configuração  |Descrição  |Valor padrão|
 |---------|---------|---------|
 |DisplayName|O nome de exibição do Trabalho de Expansão. **NÃO em uso no [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Nome do computador|
-|DESCRIÇÃO|A descrição do Trabalho de Expansão. **NÃO em uso no [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Vazio|
+|Descrição|A descrição do Trabalho de Expansão. **NÃO em uso no [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Vazio|
 |MasterEndpoint|O ponto de extremidade para se conectar ao Mestre de Expansão.|O ponto de extremidade definido durante a instalação do Trabalho de Expansão|
-|MasterHttpsCertThumbprint|A impressão digital do certificado SSL de cliente usada para autenticar o Mestre de Expansão|A impressão digital do certificado do cliente especificada durante a instalação do Trabalho de Expansão.|
+|MasterHttpsCertThumbprint|A impressão digital do certificado TLS/SSL de cliente usada para autenticar o Mestre do Scale Out|A impressão digital do certificado do cliente especificada durante a instalação do Trabalho de Expansão.|
 |WorkerHttpsCertThumbprint|A impressão digital do certificado do Mestre de Expansão usada para autenticar o Trabalho de Expansão.|A impressão digital do certificado criado e instalado automaticamente durante a instalação do Trabalho de Expansão|
 |StoreLocation|O local de repositório de certificado do trabalho.|LocalMachine|
 |StoreName|O nome do repositório no qual está o certificado do trabalho.|Meu|

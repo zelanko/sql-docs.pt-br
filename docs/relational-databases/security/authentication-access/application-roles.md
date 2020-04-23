@@ -21,12 +21,12 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15a37c87808b5b44d59a243b2bff57ce6db5de25
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 928e7eafe6de60c71f3a79cef89eb93d5521e2fe
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903785"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305207"
 ---
 # <a name="application-roles"></a>Funções de aplicativo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "72903785"
  Em versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a única maneira de um usuário readquirir seu contexto de segurança original depois de iniciar uma função de aplicativo é desconectar e conectar-se novamente com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o **sp_setapprole** tem uma opção que cria um cookie. O cookie contém informações de contexto anteriores à habilitação da função de aplicativo. O cookie pode ser usado por **sp_unsetapprole** para reverter a sessão a seu contexto original. Para obter mais informações sobre essa nova opção e um exemplo, consulte [sp_setapprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 > [!IMPORTANT]  
->  A opção ODBC **criptografia** não tem suporte no **SqlClient**. Ao transmitir informações confidenciais pela rede, use SSL (Secure Sockets Layer) ou IPsec para criptografar o canal. Se você deve persistir credenciais no aplicativo cliente, criptografe as credenciais usando as funções API de criptografia. No [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versões posteriores, o parâmetro *senha* é armazenado como um hash de mão única.  
+>  A opção ODBC **criptografia** não tem suporte no **SqlClient**. Ao transmitir informações confidenciais pela rede, use o protocolo TLS, anteriormente conhecido como SSL (Secure Sockets Layer) ou IPsec para criptografar o canal. Se você deve persistir credenciais no aplicativo cliente, criptografe as credenciais usando as funções API de criptografia. No [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versões posteriores, o parâmetro *senha* é armazenado como um hash de mão única.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

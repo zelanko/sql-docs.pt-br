@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0933927b3c2fe9f6231831e29c329afb5c4e63c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 736b0620ecf8f7f44611f98daa97b3cc89f3fc4f
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710823"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529250"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Arquitetura de segurança para sincronização da Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "71710823"
  <sup>1</sup> A autenticação integrada poderá ser usada somente se todos os computadores estiverem no mesmo domínio ou em vários domínios que tenham relações de confiança um com o outro.  
   
 > [!NOTE]  
->  A delegação é necessária quando se usa a Autenticação integrada. Recomendamos usar a Autenticação Básica e o SSL para conexões do Assinante com o IIS.  
+>  A delegação é necessária quando se usa a Autenticação integrada. Recomendamos usar a Autenticação Básica e o TLS para conexões do Assinante com o IIS.  
   
 ## <a name="e-connection-to-the-publisher"></a>E. Conexão com o Publicador  
  Os componentes do Replication Listener e do Reconciliador de Replicação de Mesclagem do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estão hospedados no computador que está executando o IIS. Esses componentes executam as seguintes ações:  

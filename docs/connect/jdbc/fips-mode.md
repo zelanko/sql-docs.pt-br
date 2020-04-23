@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: efa536024021e1182ad565fe534d3e706f4e7eff
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 83ce3690d194b8b06fc79d58c2d7bc7efa996619
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917954"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293376"
 ---
 # <a name="fips-mode"></a>Modo FIPS
 
@@ -22,10 +22,10 @@ ms.locfileid: "80917954"
 
 O Microsoft JDBC Driver para SQL Server é compatível com a execução nas JVMs configuradas para estar *em conformidade com o FIPS 140*.
 
-#### <a name="prerequisites"></a>Prerequisites
+#### <a name="prerequisites"></a>Pré-requisitos
 
 - JVM configurada para FIPS
-- Certificado SSL apropriado
+- Certificado TLS/SSL apropriado
 - Arquivos de política apropriados
 - Parâmetros de configuração apropriados
 
@@ -38,11 +38,11 @@ Para ver os módulos aprovados para configuração de FIPS, veja [Módulos valid
 Os fornecedores podem ter algumas etapas adicionais para configurar uma JVM com FIPS.
 
 ## <a name="appropriate-ssl-certificate"></a>Certificado SSL apropriado
-Para se conectar ao SQL Server no modo FIPS, é necessário um certificado SSL válido. Instale ou importe-o no repositório de chaves do Java no computador cliente (JVM) em que o FIPS está habilitado.
+Para se conectar ao SQL Server no modo FIPS, é necessário um certificado TLS/SSL válido. Instale ou importe-o no repositório de chaves do Java no computador cliente (JVM) em que o FIPS está habilitado.
 
 ### <a name="importing-ssl-certificate-in-java-keystore"></a>Como importar o certificado SSL no Java keyStore
 Para o FIPS, é mais provável que você precise importar o certificado (.cert) no formato PKCS ou específico do provedor.
-Use o snippet a seguir para importar o certificado SSL e armazená-lo em um diretório de trabalho com o formato KeyStore apropriado. _TRUST\_STORE\_PASSWORD_ é sua senha para o Java KeyStore.
+Use o snippet a seguir para importar o certificado TLS/SSL e armazená-lo em um diretório de trabalho com o formato KeyStore apropriado. _TRUST\_STORE\_PASSWORD_ é sua senha para o Java KeyStore.
 
 ```java
 public void saveGenericKeyStore(
@@ -72,7 +72,7 @@ private Certificate getCertificate(String pathName)
 }
 ```
 
-O exemplo a seguir está importando um certificado SSL do Azure no formato PKCS12 com o provedor BouncyCastle. O certificado é importado no diretório de trabalho chamado _MyTrustStore\_PKCS12_ usando o seguinte snippet:
+O exemplo a seguir está importando um certificado TLS/SSL do Azure no formato PKCS12 com o provedor BouncyCastle. O certificado é importado no diretório de trabalho chamado _MyTrustStore\_PKCS12_ usando o seguinte snippet:
 
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 
@@ -84,7 +84,7 @@ Para executar o driver JDBC no modo em conformidade com FIPS, configure as propr
 
 #### <a name="properties"></a>Propriedades 
 
-|Propriedade|Type|Padrão|DESCRIÇÃO|Observações|
+|Propriedade|Type|Padrão|Descrição|Observações|
 |---|---|---|---|---|
 |encrypt|boolean ["true / false"]|"false"|Para a JVM habilitada para FIPS, essa propriedade de criptografia deve ser **true**||
 |TrustServerCertificate|boolean ["true / false"]|"false"|Para o FIPS, o usuário precisa validar a cadeia de certificados, de modo que ele deve usar o valor **"false"** para essa propriedade. ||

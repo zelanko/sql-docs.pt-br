@@ -1,5 +1,6 @@
 ---
 title: Caracteres inválidos e regras de escape | Microsoft Docs
+description: Saiba como os caracteres XML inválidos são tratados pela cláusula FOR XML e aprenda as regras de escape para caracteres inválidos em nomes XML.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0b908d83bad116ea42ce9cfe4845b86e7d367857
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e723e3f50db5090279ec6531906018471076af7f
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665185"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388633"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>Caracteres inválidos e regras de escape
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

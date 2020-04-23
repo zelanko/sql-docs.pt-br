@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ac74f1af3d570863bafae7185d6d4ce653f1f036
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 243ebc612e5d3786ec54d8ad089e317d440e4bba
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256719"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488336"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Quais são as Atualizações de Segurança Estendidas para o SQL Server?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -207,6 +207,25 @@ Para baixar as ESUs, siga estas etapas:
 
 1. Baixe as atualizações de segurança aqui, se e quando elas forem disponibilizadas. 
 
+## <a name="configure-regional-redundancy"></a>Configurar redundância regional 
+
+Os clientes que exigem redundância regional para seus **registros do SQL Server** podem criar dados de registro em duas regiões distintas. Os clientes podem, então, baixar atualizações de segurança de qualquer região com base na disponibilidade do serviço de **registro do SQL Server**. 
+
+Para redundância regional, um serviço de **registro do SQL Server** precisa ser criado em duas regiões diferentes, e seu inventário do SQL Server precisa ser dividido entre esses dois serviços. Dessa forma, metade dos seus SQL Servers são registrados com o serviço de registro em uma região, e a outra metade é registrada com o serviço de registro na outra região. 
+
+Para configurar a redundância regional, siga estas etapas:
+
+1. Divida o inventário do SQL Server 2008 ou 2008 R2 em dois arquivos, como upload1.csv e upload2.csv. 
+  
+   :::image type="content" source="media/sql-server-extended-security-updates/two-upload-files-for-regional-redundancy.png" alt-text="Exemplo de arquivos de upload":::
+
+1. Crie o primeiro serviço de **registro do SQL Server** em uma região e, em seguida, registre em massa um dos arquivos csv nele. Por exemplo, crie o primeiro serviço de **registro do SQL Server** na região **Oeste dos EUA** e registre em massa seus SQL Servers usando o arquivo upload1.csv. 
+1. Crie o segundo serviço de **registro do SQL Server** na segunda região e, em seguida, registre em massa o outro arquivos csv nele. Por exemplo, crie o segundo serviço de **registro do SQL Server** na região **Leste dos EUA** e registre em massa seus SQL Servers usando o arquivo upload2.csv. 
+
+
+Depois que seus dados forem registrados com os dois recursos diferentes de **registro do SQL Server**, você poderá fazer baixar as atualizações de segurança de qualquer região, com base na disponibilidade do serviço. 
+
+
 ## <a name="faq"></a>Perguntas frequentes
 
 As perguntas mais frequentes sobre Atualizações de Segurança Estendidas podem ser encontradas nas [Perguntas frequentes sobre atualizações de segurança estendidas](https://www.microsoft.com/cloud-platform/extended-security-updates). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-as perguntas frequentes específicas são listadas abaixo. 
@@ -217,7 +236,7 @@ A data de fim do suporte para o [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.m
 
 **O que significa fim do suporte?**
 
-A política de ciclo de vida da Microsoft oferece dez anos de suporte (cinco anos para suporte base e cinco anos para suporte estendido) para produtos empresariais e para desenvolvedores (como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Windows Server). De acordo com a política, após o término do período de suporte estendido, não haverá patches nem atualizações de segurança, o que pode causar problemas de segurança e conformidade e expor os aplicativos dos clientes e as empresas a sérios riscos de segurança.
+A política de ciclo de vida da Microsoft oferece dez anos de suporte (cinco anos para suporte base e cinco anos para suporte estendido) para produtos empresariais e para desenvolvedores (como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Windows Server). De acordo com a política, após o término do período de suporte estendido, não haverá patches ou atualizações de segurança, o que pode causar problemas de segurança e conformidade e expor os aplicativos dos clientes e as empresas a sérios riscos de segurança.
 
 **Quais edições do SQL Server estão qualificadas para Atualizações de Segurança Estendidas?**
 

@@ -5,17 +5,17 @@ ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
-ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: b6d36286fc4286c902479271546841841db0b84d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288740"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487995"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Passo a passo: Configurar o Integration Services (SSIS) Scale Out
 
@@ -66,9 +66,9 @@ Para instalar o recurso Mestre do Scale Out, use o assistente de instalação do
 
     ![Configuração do mestre](media/master-config.PNG "Configuração do Mestre")
 
-4.  Especifique o certificado SSL usado para proteger a comunicação entre o Mestre e o Trabalho do Scale Out realizando um dos procedimentos a seguir.
-    * Permita que o processo de instalação crie um certificado SSL padrão autoassinado clicando em **Criar um novo certificado SSL**.  O certificado padrão é instalado em Autoridades de Certificação Confiáveis, Computador Local. Você pode especificar os CNs nesse certificado. O nome do host do ponto de extremidade mestre deve ser incluído nos CNs. Por padrão, o nome do computador e o IP do Nó Mestre estão incluídos.
-    * Selecione um Certificado SSL existente no computador local clicando em **Usar um certificado SSL existente** e, em seguida, clicando em **Procurar** para selecionar um certificado. A impressão digital do certificado é exibida na caixa de texto. Clicar em **Procurar** exibe os certificados que estão armazenados em Autoridades de Certificação Confiáveis, Computador Local. O certificado selecionado deve estar armazenado aqui.       
+4.  Especifique o certificado TLS/SSL usado para proteger a comunicação entre o Mestre e o Trabalho do Scale Out realizando um dos procedimentos a seguir.
+    * Permita que o processo de instalação crie um certificado TLS/SSL padrão autoassinado clicando em **Criar um certificado SSL**.  O certificado padrão é instalado em Autoridades de Certificação Confiáveis, Computador Local. Você pode especificar os CNs nesse certificado. O nome do host do ponto de extremidade mestre deve ser incluído nos CNs. Por padrão, o nome do computador e o IP do Nó Mestre estão incluídos.
+    * Selecione um certificado TLS/SSL existente no computador local clicando em **Usar um certificado SSL existente** e, em seguida, clicando em **Procurar** para selecionar um certificado. A impressão digital do certificado é exibida na caixa de texto. Clicar em **Procurar** exibe os certificados que estão armazenados em Autoridades de Certificação Confiáveis, Computador Local. O certificado selecionado deve estar armazenado aqui.       
 
     ![Configuração do mestre 2](media/master-config-2.PNG "Configuração do mestre 2")
   
@@ -118,14 +118,14 @@ Para instalar o recurso Trabalho do Scale Out, use o assistente de instalação 
     > [!NOTE]
     > Também é possível ignorar a configuração do Trabalho neste momento e associar o Trabalho do Scale Out ao Mestre do Scale Out usando o [Gerenciador do Scale Out](integration-services-ssis-scale-out-manager.md) após a instalação.
 
-4. Para um ambiente de **vários computadores**, especifique o certificado SSL do cliente usado para validar o Mestre do Scale Out. Para um ambiente de **um único computador**, não é necessário especificar um certificado SSL do cliente. 
+4. Em um ambiente de **vários computadores**, especifique o certificado TLS/SSL do cliente usado para validar o Mestre do Scale Out. Em um ambiente de **um único computador**, não é necessário especificar um certificado TLS/SSL do cliente. 
   
-    Clique em **Procurar** para localizar o arquivo de certificado (*.cer). Para usar o certificado SSL padrão, selecione o arquivo `SSISScaleOutMaster.cer` localizado em `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` no computador em que o Mestre do Scale Out está instalado.   
+    Clique em **Procurar** para localizar o arquivo de certificado (*.cer). Para usar o certificado TLS/SSL padrão, selecione o arquivo `SSISScaleOutMaster.cer` localizado em `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` no computador em que o Mestre do Scale Out está instalado.   
 
     ![Configuração de trabalho 2](media/worker-config-2.PNG "Configuração de trabalho 2")
 
     > [!NOTE]
-    > Quando o certificado SSL usado pelo Mestre do Scale Out for autoassinado, um certificado SSL do cliente correspondente precisará ser instalado no computador com o Trabalho do Scale Out. Se você fornecer o caminho do arquivo para o Certificado SSL do cliente na página **Configuração de Trabalho do Integration Services Scale Out**, o certificado será instalado automaticamente; caso contrário, você precisará instalá-lo manualmente mais tarde. 
+    > Quando o certificado TLS/SSL usado pelo Mestre do Scale Out for autoassinado, um certificado TLS/SSL do cliente correspondente precisará ser instalado no computador com o Trabalho do Scale Out. Se você fornecer o caminho do arquivo para o certificado TLS/SSL do cliente na página **Configuração de Trabalho do Scale Out do Integration Services**, o certificado será instalado automaticamente; caso contrário, você precisará instalá-lo manualmente mais tarde. 
      
 5. Conclua o assistente de instalação [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] .
 

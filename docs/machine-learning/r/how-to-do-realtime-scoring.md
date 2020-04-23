@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c07a5b8d3e1b34c0bb33f44a20ab5fff867db922
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3f431d1598038d0789579697fccbaeffe5ef1fd0
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117619"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487835"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Como gerar previsões usando modelos de machine learning no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Os requisitos de plataforma geralmente determinam qual metodologia de pontuaçã
 
 | Versão do produto e plataforma | Metodologia |
 |------------------------------|-------------|
-| SQL Server 2017 no Windows, SQL Server 2017 no Linux e Banco de Dados SQL do Azure | **Pontuação nativa** com PREDICT do T-SQL |
+| SQL Server 2017 ou posterior no Windows e no Linux | **Pontuação nativa** com PREDICT do T-SQL |
 | SQL Server 2017 (somente Windows), SQL Server 2016 R Services em SP1 ou superior | **Pontuação em tempo real** com o procedimento armazenado sp\_rxPredict |
 
 Recomendamos a pontuação nativa com a função PREDICT. Usar o sp\_rxPredict exige que você habilite a integração do SQLCLR. Considere as implicações de segurança antes de habilitar essa opção.

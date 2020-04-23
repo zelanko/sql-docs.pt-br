@@ -12,12 +12,12 @@ ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: babd96ee665a589456d3fda7ed7e2a5a13366d36
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aa7eb86c744206c0501cf98ecdb56423d734799c
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903522"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529403"
 ---
 # <a name="audit-broker-login-event-class"></a>Classe de evento Audit Broker Login
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "67903522"
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Broker Login  
   
-|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
+|Coluna de dados|Type|Descrição|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Não usado nessa classe de evento.|10|Sim|  
 |**ClientProcessID**|**int**|Não usado nessa classe de evento.|9|Sim|  
@@ -33,14 +33,14 @@ ms.locfileid: "67903522"
 |**EventClass**|**int**|O tipo de classe de evento capturado. Sempre **159** para **Audit Broker Login**.|27|Não|  
 |**EventSequence**|**int**|Número de sequência para esse evento.|51|Não|  
 |**EventSubClass**|**int**|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. A tabela a seguir lista os valores de subclasse de evento para esse evento.|21|Sim|  
-|**FileName**|**nvarchar**|Nível de autenticação do agente remoto. Método de autenticação com suporte configurado no ponto de extremidade do agente remoto. Quando há mais de um método disponível, o ponto de extremidade de aceitação (destino) determina qual método é tentado primeiro. Os valores possíveis são:<br /><br /> **None**. Nenhum método de autenticação é configurado.<br /><br /> **NTLM**. Requer autenticação NTLM.<br /><br /> **KERBEROS**. Requer autenticação Kerberos.<br /><br /> **NEGOTIATE**. O Windows negocia o método de autenticação.<br /><br /> **CERTIFICATE**. Requer a configuração do certificado para o ponto de extremidade, que é armazenado no banco de dados **mestre** .<br /><br /> **NTLM, CERTIFICATE**. Aceita autenticação de certificado NTLM ou SSL.<br /><br /> **KERBEROS, CERTIFICATE**. Aceita autenticação de certificado Kerberos ou de ponto de extremidade.<br /><br /> **NEGOTIATE, CERTIFICATE**. O Windows negocia o método de autenticação ou um certificado de ponto de extremidade pode ser usado para autenticação.<br /><br /> **CERTIFICATE, NTLM**. Aceita um certificado de ponto de extremidade ou NTLM para autenticação.<br /><br /> **CERTIFICATE, KERBEROS**. Aceita um certificado de ponto de extremidade ou Kerberos para autenticação.<br /><br /> **CERTIFICATE, NEGOTIATE**. Aceita um certificado de ponto de extremidade para autenticação ou o Windows negocia o método de autenticação.|36|Não|  
+|**FileName**|**nvarchar**|Nível de autenticação do agente remoto. Método de autenticação com suporte configurado no ponto de extremidade do agente remoto. Quando há mais de um método disponível, o ponto de extremidade de aceitação (destino) determina qual método é tentado primeiro. Os valores possíveis são:<br /><br /> **None**. Nenhum método de autenticação é configurado.<br /><br /> **NTLM**. Requer autenticação NTLM.<br /><br /> **KERBEROS**. Requer autenticação Kerberos.<br /><br /> **NEGOTIATE**. O Windows negocia o método de autenticação.<br /><br /> **CERTIFICATE**. Requer a configuração do certificado para o ponto de extremidade, que é armazenado no banco de dados **mestre** .<br /><br /> **NTLM, CERTIFICATE**. Aceita autenticação de certificado NTLM ou TLS/SSL.<br /><br /> **KERBEROS, CERTIFICATE**. Aceita autenticação de certificado Kerberos ou de ponto de extremidade.<br /><br /> **NEGOTIATE, CERTIFICATE**. O Windows negocia o método de autenticação ou um certificado de ponto de extremidade pode ser usado para autenticação.<br /><br /> **CERTIFICATE, NTLM**. Aceita um certificado de ponto de extremidade ou NTLM para autenticação.<br /><br /> **CERTIFICATE, KERBEROS**. Aceita um certificado de ponto de extremidade ou Kerberos para autenticação.<br /><br /> **CERTIFICATE, NEGOTIATE**. Aceita um certificado de ponto de extremidade para autenticação ou o Windows negocia o método de autenticação.|36|Não|  
 |**HostName**|**nvarchar**|Não usado nessa classe de evento.|8|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Não|  
 |**LoginSid**|**imagem**|Número SID (identificação de segurança) do usuário que fez logon. Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|**nvarchar**|O nome do usuário proprietário da conexão que gerou este evento.|6|Sim|  
 |**ObjectName**|**nvarchar**|A cadeia de conexão usada para essa conexão.|34|Não|  
-|**OwnerName**|**nvarchar**|Método de autenticação com suporte configurado no ponto de extremidade de agente local. Quando há mais de um método disponível, o ponto de extremidade de aceitação (destino) determina qual método é tentado primeiro. Os valores possíveis são:<br /><br /> **None**. Nenhum método de autenticação é configurado.<br /><br /> **NTLM**. Requer autenticação NTLM.<br /><br /> **KERBEROS**. Requer autenticação Kerberos.<br /><br /> **NEGOTIATE**. O Windows negocia o método de autenticação.<br /><br /> **CERTIFICATE**. Requer a configuração do certificado para o ponto de extremidade, que é armazenado no banco de dados **mestre** .<br /><br /> **NTLM, CERTIFICATE**. Aceita autenticação de certificado NTLM ou SSL.<br /><br /> **KERBEROS, CERTIFICATE**. Aceita autenticação de certificado Kerberos ou de ponto de extremidade.<br /><br /> **NEGOTIATE, CERTIFICATE**. O Windows negocia o método de autenticação ou um certificado de ponto de extremidade pode ser usado para autenticação.<br /><br /> **CERTIFICATE, NTLM**. Aceita um certificado de autenticação de ponto de extremidade ou NTLM.<br /><br /> **CERTIFICATE, KERBEROS**. Aceita um certificado de ponto de extremidade ou Kerberos para autenticação.<br /><br /> **CERTIFICATE, NEGOTIATE**. Aceita um certificado de ponto de extremidade para autenticação ou o Windows negocia o método de autenticação.|37|Não|  
+|**OwnerName**|**nvarchar**|Método de autenticação com suporte configurado no ponto de extremidade de agente local. Quando há mais de um método disponível, o ponto de extremidade de aceitação (destino) determina qual método é tentado primeiro. Os valores possíveis são:<br /><br /> **None**. Nenhum método de autenticação é configurado.<br /><br /> **NTLM**. Requer autenticação NTLM.<br /><br /> **KERBEROS**. Requer autenticação Kerberos.<br /><br /> **NEGOTIATE**. O Windows negocia o método de autenticação.<br /><br /> **CERTIFICATE**. Requer a configuração do certificado para o ponto de extremidade, que é armazenado no banco de dados **mestre** .<br /><br /> **NTLM, CERTIFICATE**. Aceita autenticação de certificado NTLM ou TLS/SSL.<br /><br /> **KERBEROS, CERTIFICATE**. Aceita autenticação de certificado Kerberos ou de ponto de extremidade.<br /><br /> **NEGOTIATE, CERTIFICATE**. O Windows negocia o método de autenticação ou um certificado de ponto de extremidade pode ser usado para autenticação.<br /><br /> **CERTIFICATE, NTLM**. Aceita um certificado de autenticação de ponto de extremidade ou NTLM.<br /><br /> **CERTIFICATE, KERBEROS**. Aceita um certificado de ponto de extremidade ou Kerberos para autenticação.<br /><br /> **CERTIFICATE, NEGOTIATE**. Aceita um certificado de ponto de extremidade para autenticação ou o Windows negocia o método de autenticação.|37|Não|  
 |**ProviderName**|**nvarchar**|O método de autenticação usado para essa conexão.|46|Não|  
 |**RoleName**|**nvarchar**|A função da conexão. É **initiator** (iniciador) ou **target**(destino).|38|Não|  
 |**ServerName**|**nvarchar**|O nome da instância do SQL Server que está sendo rastreada.|26|Não|  
@@ -52,7 +52,7 @@ ms.locfileid: "67903522"
   
  A tabela abaixo lista os valores de subclasse para essa classe de evento.  
   
-|ID|Subclasse|DESCRIÇÃO|  
+|ID|Subclasse|Descrição|  
 |--------|--------------|-----------------|  
 |1|Login Success|Um evento Login Success informa que o processo de logon do agente adjacente foi concluído com êxito.|  
 |2|Login Protocol Error|Um evento Login Protocol Error informa que o agente recebe uma mensagem bem formada, mas não válida para o estado atual do processo de logon. A mensagem pode ter sido perdida ou enviada fora de sequência.|  

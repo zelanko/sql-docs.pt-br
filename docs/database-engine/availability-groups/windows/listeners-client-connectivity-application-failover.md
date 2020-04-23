@@ -1,6 +1,6 @@
 ---
 title: Conectar-se a um ouvinte do grupo de disponibilidade
-description: Contém informações sobre como se conectar a um ouvinte de grupo de disponibilidade Always On, por exemplo, como se conectar à réplica primária, uma réplica secundária somente leitura, usar SSL e Kerberos.
+description: Contém informações sobre como se conectar a um ouvinte de grupo de disponibilidade Always On, por exemplo, como se conectar à réplica primária e a uma réplica secundária somente leitura ou usar TLS/SSL e Kerberos.
 ms.custom: seodec18
 ms.date: 02/27/2020
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0c8b30de41b8a6a74661e3b4e55e7f2216c29c98
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4505fed51589e2666dd2aa28e8ee42c4aac27f94
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433733"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528490"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Conectar-se a um ouvinte do grupo de disponibilidade Always On 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,18 +131,54 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; Mul
   
  A opção de conexão **MultiSubnetFailover** deve ser definida como **True** mesmo que o grupo de disponibilidade se estenda apenas por uma única sub-rede.  Isso permite pré-configurar novos clientes para dar suporte ao futuro alcance de sub-redes sem necessidade de alterações futuras na cadeia de conexão de cliente e também otimiza o desempenho de failover para failovers de sub-rede única.  Embora a opção de conexão **MultiSubnetFailover** não seja necessária, ela fornece o benefício de um failover de sub-rede mais rápido.  Isso ocorre porque o driver de cliente tentará abrir um soquete TCP para cada endereço IP em paralelo associado ao grupo de disponibilidade.  O driver de cliente esperará que o primeiro IP responda com êxito e quando o fizer, usa-o para a conexão.  
   
-##  <a name="listeners--ssl-certificates"></a><a name="SSLcertificates"></a> Ouvintes e certificados SSL  
+##  <a name="listeners--tlsssl-certificates"></a><a name="SSLcertificates"></a> Ouvintes e certificados TLS/SSL  
 
- Ao conectar-se a um ouvinte de grupo de disponibilidade, se as instâncias participantes do SQL Server usarem certificados SSL junto com criptografia de sessão, o driver de cliente que está fazendo a conexão precisará dar suporte ao Nome Alternativo da Entidade no certificado SSL para forçar a criptografia.  O suporte ao driver do SQL Server para o Nome Alternativo da Entidade do certificado está planejado para ADO.NET (SqlClient), Microsoft JDBC e SNAC (SQL Native Client).  
+Durante a conexão a um ouvinte de grupo de disponibilidade, se as instâncias participantes do SQL Server usarem certificados TLS/SSL junto com criptografia de sessão, o driver de cliente que está fazendo a conexão precisará dar suporte ao Nome Alternativo da Entidade no certificado TLS/SSL para forçar a criptografia.  O suporte ao driver do SQL Server para o Nome Alternativo da Entidade do certificado está planejado para ADO.NET (SqlClient), Microsoft JDBC e SNAC (SQL Native Client).  
   
- Um certificado X.509 deve ser configurado para cada nó de servidor participante do cluster de failover com uma lista de todos os ouvintes de grupo de disponibilidade definidos no Nome Alternativo da Entidade do certificado.  
-  
- Por exemplo, se o WSFC tiver três ouvintes de grupo de disponibilidade com os nomes `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com`e `AG3_listener.Adventure-Works.com`, o Nome Alternativo da Entidade para o certificado deverá ser definido da seguinte maneira:  
-  
+Um certificado X.509 deve ser configurado para cada nó de servidor participante do cluster de failover com uma lista de todos os ouvintes de grupo de disponibilidade definidos no Nome Alternativo da Entidade do certificado. 
+
+O formato dos valores do certificado é: 
+
 ```  
-CN = ServerFQDN  
-SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.com, AG3_listener.Adventure-Works.com  
-```  
+CN = Server.FQDN  
+SAN = Server.FQDN,Listener1.FQDN,Listener2.FQDN
+```
+
+Por exemplo, você têm os seguintes valores: 
+
+```
+Servername: Win2019   
+Instance: SQL2019   
+AG: AG2019   
+Listener: Listener2019   
+Domain: contoso.com  (which is also the FQDN)
+```
+
+Para um WSFC que tem um único grupo de disponibilidade, o certificado deve ter o FQDN (nome de domínio totalmente qualificado) do servidor e o FQDN do ouvinte: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com, Listener2019.contoso.com 
+```
+
+Com essa configuração, suas conexões à instância (`WIN2019\SQL2019`) ou ao ouvinte (`Listener2019`) serão criptografadas. 
+
+Dependendo de como a rede está configurada, há um pequeno subconjunto de clientes que talvez precisem adicionar o NetBIOS também à SAN. Nesse caso, os valores do certificado devem ser: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019,Win2019.contoso.com,Listener2019,Listener2019.contoso.com
+```
+
+Se o WSFC tiver três ouvintes do grupo de disponibilidade, como: Listener1, Listener2, Listener3
+
+Os valores do certificado deverão ser: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.contoso.com
+```
+  
   
 ##  <a name="listeners-and-kerberos-spns"></a><a name="SPNs"></a> Ouvintes e Kerberos (SPNs) 
 

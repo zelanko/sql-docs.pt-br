@@ -1,5 +1,6 @@
 ---
 title: Construir a URL de conexão | Microsoft Docs
+description: Saiba o formato da cadeia de conexão usada pelo Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
 ms.date: 01/29/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 889571da70eaf43878d4226751b2b031853f802f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 59949c80c565cca03c42b453659117abd69c8e7e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922623"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486907"
 ---
 # <a name="building-the-connection-url"></a>Construindo a URL de conexão
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

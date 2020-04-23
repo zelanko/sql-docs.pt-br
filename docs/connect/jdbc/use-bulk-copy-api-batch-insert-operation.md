@@ -1,5 +1,6 @@
 ---
-title: Usar a API de cópia em massa para a operação de inserção em lote para o driver MSSQL JDBC | Microsoft Docs
+title: API de cópia em massa para inserção em lote no JDBC
+description: O Microsoft JDBC Driver para SQL Server dá suporte ao uso da API de Cópia em Massa para operações de inserção em lote para o Data Warehouse do Azure.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62843af006d730c3994519fe4c31182805923478
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 497b68b2b1f19d5d67ca3e790f06844592205d70
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916852"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633984"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Como usar a API de cópia em massa para a operação de inserção em lote
 
@@ -141,4 +142,4 @@ Finished. Time taken : 1058 milliseconds.
 
 ## <a name="see-also"></a>Confira também
 
-[Melhorando o desempenho e a confiabilidade com o JDBC Driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[Melhorando o desempenho e a confiabilidade com o JDBC Driver](improving-performance-and-reliability-with-the-jdbc-driver.md)

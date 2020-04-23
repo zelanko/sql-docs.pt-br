@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7eaa4c35079d8eec49d7197778a01b7bac6cf9c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b06287c5a21b2b333335cc199a9447200e04110
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982044"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631590"
 ---
 # <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73982044"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
 column_name AS computed_column_expression  
 [ PERSISTED [ NOT NULL ] ]  
 [   
@@ -55,7 +55,7 @@ column_name AS computed_column_expression
  É o nome da coluna a ser alterada, adicionada ou removida. *column_name* pode ter de 1 a 128 caracteres. Para novas colunas, *column_name* pode ser omitido para colunas criadas com um tipo de dados **timestamp**. Se nenhum *column_name* é especificado para uma coluna do tipo de dados **timestamp**, o nome **timestamp** é usado.  
   
 *computed_column_expression*  
- É uma expressão que define o valor de uma coluna computada. Uma coluna computada é uma coluna virtual que não está fisicamente armazenada na tabela, mas é computada a partir de uma expressão que usa outras colunas da mesma tabela. Por exemplo, uma coluna computada poderia ter esta definição: cost AS price * qty. A expressão pode ser o nome de uma coluna não computada, constante, função, variável e qualquer combinação desses elementos conectados por um ou mais operadores. A expressão não pode ser uma subconsulta ou incluir um tipo de dados de alias.  
+ É uma expressão que define o valor de uma coluna computada. Uma coluna computada é uma coluna virtual que não está fisicamente armazenada na tabela, mas é computada a partir de uma expressão que usa outras colunas da mesma tabela. Uma expressão deve produzir um valor. Por exemplo, uma coluna computada pode ter a definição: cost AS price * qty. Outro exemplo com operadores de bit a bit: is_finalised como is_checked | is_approved. A expressão pode ser o nome de uma coluna não computada, constante, função, variável e qualquer combinação dessas, conectada por um ou mais operadores. A expressão não pode ser uma condição de pesquisa ou subconsulta nem incluir um tipo de dados de alias.  
   
  As colunas computadas podem ser usadas em listas de seleção, cláusulas WHERE, cláusulas ORDER BY, ou qualquer outro local no qual expressões regulares podem ser usadas, mas com as seguintes exceções:  
   

@@ -1,5 +1,6 @@
 ---
 title: Recusar permissões em uma coleção de esquemas XML | Microsoft Docs
+description: Saiba como negar permissões para criar uma nova coleção de esquema XML ou para usar uma coleção existente.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b20aa168defac0e42c81336581fb61641443c8a1
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4084b87320da45e4cff3aa37ba852f708da8976c
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664547"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388484"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Recusar permissões em uma coleção de esquemas XML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

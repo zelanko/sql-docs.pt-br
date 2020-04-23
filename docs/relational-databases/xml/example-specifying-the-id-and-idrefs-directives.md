@@ -1,5 +1,6 @@
 ---
-title: 'Exemplo: especificando as diretivas ID e IDREFS | Microsoft Docs'
+title: 'Exemplo: Especificando as diretivas ID e IDREFS | Microsoft Docs'
+description: Saiba como a especificação das diretivas ID e IDREFS em uma consulta SQL pode habilitar links dentro do documento.
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 29468af968f8e4ffd92e52258b12eb4aece3793b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2a05de3b0fbdec71ec15f221158dc9f2e362da8f
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662980"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388664"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>Exemplo: Especificando as diretivas ID e IDREFS
 

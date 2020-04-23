@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: e2ec01c0dcb22317e2e20e4485621d2a9aa8352a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: beb565ec08336cb3cee74faf4e4439cc64529a68
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903803"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488118"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Mestre de Expansão de Integration Services (SSIS)
 
@@ -55,7 +55,7 @@ Configure o serviço Mestre do Scale Out usando o arquivo `<drive>:\Program File
 |Configuração  |Descrição  |Valor Padrão  |
 |---------|---------|---------|
 |PortNumber|O número da porta de rede usado para se comunicar com um Trabalho de Expansão.|8391|
-|SSLCertThumbprint|A impressão digital do certificado SSL usado para proteger a comunicação com um Trabalho de Expansão.|A impressão digital do certificado SSL especificado durante a instalação do Mestre de Expansão|
+|SSLCertThumbprint|A impressão digital do certificado TLS/SSL usado para proteger a comunicação com um Trabalho do Scale Out.|A impressão digital do certificado TLS/SSL especificado durante a instalação do Mestre do Scale Out|
 |SqlServerName|O nome do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] que contém o catálogo SSISDB. Por exemplo, ServerName\\InstanceName.|O nome do SQL Server que é instalada com o Mestre do Scale Out.|
 |CleanupCompletedJobsIntervalInMs|O intervalo de limpeza de trabalhos de execução concluídos, em milissegundos.|43200000|
 |DealWithExpiredTasksIntervalInMs|O intervalo para lidar com trabalhos de execução expirados, em milissegundos.|300000|

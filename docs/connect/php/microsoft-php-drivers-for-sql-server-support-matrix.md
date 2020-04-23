@@ -1,7 +1,8 @@
 ---
-title: Matriz de suporte do Microsoft PHP Drivers para SQL Server | Microsoft Docs
+title: Matriz de suporte dos Microsoft Drivers for PHP
+description: Esta página contém a matriz de suporte e a política de ciclo de vida de suporte para os Microsoft PHP Drivers for SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: ''
-ms.openlocfilehash: 57e7a8e5849b984676c2e0a843c753a12f2f20dd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 82d394cd3c940de43f8b9706b719515ed45d97a4
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922823"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632749"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Matriz de Suporte do Microsoft PHP Drivers para SQL Server
 
@@ -106,9 +107,9 @@ As versões a seguir do sistema operacional Windows são compatíveis com a vers
 |Windows Vista SP2                   |   |   |   |   |   |S  |S  |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-As versões a seguir dos sistemas operacionais Linux e Mac (somente 64 bit) são compatíveis com a versão listada do Microsoft PHP Drivers:
+As seguintes versões dos sistemas operacionais Linux e macOS (somente 64 bit) são compatíveis com a versão listada do Microsoft PHP Drivers:
 
-|PHP para a versão &#8594; do driver do SQL Server<br />&#8595; Sistema operacional|5.8|5.6|5,3|5.2|4.3|4,0|3.2|
+|Versão do driver PHP para SQL Server &#8594;<br />&#8595; Sistema operacional|5.8|5.6|5,3|5.2|4.3|4,0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Ubuntu 19.10 (64 bits)               |S  |   |   |   |   |   |   |
 |Ubuntu 18.10 (64 bits)               |   |S  |   |   |   |   |   |
@@ -132,12 +133,12 @@ As versões a seguir dos sistemas operacionais Linux e Mac (somente 64 bit) são
 |macOS El Capitan (64 bits)           |   |   |S  |S  |S  |   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<sup>1</sup> O suporte ao Alpine Linux é experimental na versão 5.8.
+<sup>1</sup> O suporte ao Alpine Linux é experimental na versão 5.8.0. A versão 5.8.1 introduz o suporte de produção.
 
 ## <a name="see-also"></a>Consulte Também
 
-[Notas de Versão](../../connect/php/release-notes-php-sql-driver.md)
+[Notas de Versão](release-notes-php-sql-driver.md)
 
-[Recursos de suporte](../../connect/php/support-resources-for-the-php-sql-driver.md)
+[Recursos de suporte](support-resources-for-the-php-sql-driver.md)
 
-[Requisitos do sistema](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+[Requisitos do sistema](system-requirements-for-the-php-sql-driver.md)

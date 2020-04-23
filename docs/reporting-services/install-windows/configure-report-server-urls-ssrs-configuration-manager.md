@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da3f7c0f0385ddfd8bdb61ab7009a6503acfb80a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 021df541af90bcaae13e1544f9f6a72e77f8eaf7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080253"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486911"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurar as URLs do servidor de relatório (Configuration Manager do SSRS)
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], as URLs são usadas para acessar o serviço Web do Servidor de Relatório e o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Antes de usar qualquer um dos aplicativos, você deve configurar, pelo menos, uma URL para o serviço Web e o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece valores padrão para as URLs de ambos os aplicativos que funcionam bem na maioria dos cenários de implantação, incluindo implantações lado a lado com outros serviços Web e aplicativos.  
@@ -28,12 +28,12 @@ ms.locfileid: "77080253"
 ## <a name="defining-a-report-server-url"></a>Definindo uma URL do servidor de relatório  
  A URL identifica com precisão o local de uma instância de um aplicativo de servidor de relatório em sua rede. Quando você criar a URL de um servidor de relatório, deverá especificar as seguintes partes.  
   
-|Parte|DESCRIÇÃO|  
+|Parte|Descrição|  
 |----------|-----------------|  
 |Nome do host|Uma rede TCP/IP usa um endereço IP para identificar exclusivamente um dispositivo na rede. Há um endereço IP físico para cada placa de adaptador de rede instalada em um computador. Se o endereço IP for resolvido para um cabeçalho de host, você poderá especificar esse cabeçalho. Se estiver implantando o servidor de relatório em uma rede corporativa, você poderá usar o nome de rede do computador.|  
 |Porta|Uma porta TCP é um ponto de extremidade no dispositivo. O servidor de relatório escutará solicitações em uma porta designada.|  
 |Diretório virtual|Uma porta normalmente é compartilhada por vários serviços Web ou aplicativos. Por esse motivo, uma URL de servidor de relatório sempre inclui um diretório virtual que corresponde ao aplicativo que obtém a solicitação. Você deve especificar nomes de diretórios virtuais exclusivos para cada aplicativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que escute no mesmo endereço IP e porta.|  
-|Configurações SSL|As URLs no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser configuradas para usar um certificado SSL existente que você instalou anteriormente no computador. Para obter mais informações, veja [Configurar conexões SSL em um Servidor de Relatórios do Modo Nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|  
+|Configurações SSL|As URLs no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser configuradas para usar um certificado TLS/SSL existente instalado anteriormente no computador. Para obter mais informações, confira [Configurar conexões TLS em um servidor de relatório no modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|  
   
 ## <a name="default-urls"></a>URLs padrão  
  Quando você acessa um servidor de relatório ou o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] por meio de sua respectiva URL, a URL deve incluir o nome do host, não o endereço IP. Em uma rede TCP/IP, o endereço IP será resolvido para um nome de host (ou o nome de rede do computador). Se você usou os valores padrão para configurar URLs, deverá poder acessar o serviço Web Servidor de Relatório usando URLs que especifiquem o nome do computador ou localhost como o nome do host:  

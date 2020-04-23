@@ -1,5 +1,6 @@
 ---
-title: Solucionar problemas de conectividade | Microsoft Docs
+title: Solução de problemas de conectividade
+description: Saiba mais sobre a conectividade JDBC e como solucionar possíveis problemas de conexão ao usar o Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ef0a0e1a261996c71b3b75add30ee2f28899484
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: adb1203276e64f21f1834fc0ce0f0b5bb12a9321
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928114"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528330"
 ---
 # <a name="troubleshooting-connectivity"></a>Solução de problemas de conectividade
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80928114"
   
  Uma tentativa de conexão de banco de dados pode falhar por muitas razões. Podem incluir o seguinte:  
   
--   O TCP/IP não está habilitado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o servidor ou número da porta especificados estão incorretos. Verifique se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está escutando com TCP/IP no servidor e na porta especificados. Isto poderia ser relatado com uma exceção semelhante a: "O logon falhou. A conexão TCP/IP ao host falhou". Isso pode ser uma das seguintes situações:  
+-   O TCP/IP não está habilitado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o servidor ou número da porta especificados estão incorretos. Verifique se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está escutando com TCP/IP no servidor e na porta especificados. Isso pode ser relatado com uma exceção semelhante a: "O logon falhou. A conexão TCP/IP ao host falhou". Isso pode ser uma das seguintes situações:  
   
     -   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi instalado, mas o TCP/IP não foi instalado como um protocolo de rede do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Network Utility da [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e posterior.  
   

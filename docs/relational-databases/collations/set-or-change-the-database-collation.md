@@ -13,22 +13,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2221d88e5f564b08f993f68f9be4131588aebe2a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1f36317fd3572b0fd3b8e7f45cecd735c26da8f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78866105"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388071"
 ---
 # <a name="set-or-change-the-database-collation"></a>Definir ou alterar a ordenação de banco de dados
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como definir e alterar a ordenação de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se nenhuma ordenação for especificada, será usada a ordenação do servidor.  
   
 > [!IMPORTANT]
-> Alterar a ordenação do banco de dados não é explicitamente proibido no Banco de Dados SQL do Azure. No entanto, alterar a ordenação do banco de dados requer o bloqueio exclusivo do banco de dados e de outros processos de usuário ou em segundo plano (por exemplo, se o segundo plano estiver executando backups), o que pode manter os bloqueios do banco de dados e impedir alterações na ordenação. A instrução `ALTER DATABASE COLLATE` no Banco de Dados SQL do Azure falhará se for executada enquanto os processos em segundo plano estiverem acessando o banco de dados. Você precisaria repetir a instrução se recebesse um erro de tempo limite de bloqueio. 
- 
-> [!NOTE]
-> A ordenação não poderá ser alterada usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] depois que o banco de dados tiver sido criado em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Ela só pode ser alterada por meio de [!INCLUDE[tsql](../../includes/tsql-md.md)].
+> Alterar a ordenação do banco de dados não é explicitamente proibido no Banco de Dados SQL do Azure. No entanto, alterar a ordenação do banco de dados requer o bloqueio exclusivo do banco de dados e de outros processos de usuário ou em segundo plano (por exemplo, se o segundo plano estiver executando backups), o que pode manter os bloqueios do banco de dados e impedir alterações na ordenação. A declaração `ALTER DATABASE COLLATE` no Banco de Dados SQL do Azure não tem suporte.
 
  **Neste tópico**  
   

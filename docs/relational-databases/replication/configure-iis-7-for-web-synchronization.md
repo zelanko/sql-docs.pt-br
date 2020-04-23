@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 908c5d532386f83078c0dbb7976462f2d282533e
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903207"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529112"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurar o IIS 7 para sincronização da Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67903207"
   
 1.  Instale e configure o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener no computador que executa o IIS.  
   
-2.  Configure o protocolo SSL. O SSL é necessário para a comunicação entre o IIS e todos os assinantes.  
+2.  Configure o protocolo TLS, anteriormente conhecido como protocolo SSL. O TSL é necessário para a comunicação entre o IIS e todos os assinantes.  
   
 3.  Configure a autenticação IIS.  
   
@@ -97,9 +97,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
 ## <a name="configuring-iis-authentication"></a>Configurando a Autenticação IIS  
  Quando os computadores assinantes se conectam ao IIS, o IIS deve autenticar os assinantes para que eles possam acessar recursos e processos. A autenticação pode ser aplicada para o site da Web inteiro ou para o diretório virtual que você criou.  
   
- É recomendável usar a Autenticação Básica com SSL. A SSL é necessária, independentemente do tipo de autenticação usado.  
-  
- É recomendável usar a Autenticação Básica com SSL. A SSL é necessária, independentemente do tipo de autenticação usado.  
+ Recomendamos o uso da Autenticação Básica com TSL. O TSL é necessário, independentemente do tipo de autenticação usado.
   
 #### <a name="to-configure-iis-authentication"></a>Para configurar a Autenticação IIS  
   
@@ -112,7 +110,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
 4.  Clique com o botão direito do mouse em Autenticação Básica e escolha Habilitar.  
   
 ## <a name="configuring-secure-sockets-layer"></a>Configurando o protocolo SSL  
- Para configurar o SSL, especifique um certificado a ser usado pelo computador que está executando o IIS. A sincronização da Web para replicação de mesclagem dá suporte ao uso de certificados de servidor, mas não de certificados de cliente. Para configurar o IIS para implantação, você deve obter primeiro um certificado de uma CA (autoridade de certificação). Para obter mais informações sobre certificados, consulte a documentação do IIS.  
+ Para configurar o TSL, especifique um certificado a ser usado pelo computador que está executando o IIS. A sincronização da Web para replicação de mesclagem dá suporte ao uso de certificados de servidor, mas não de certificados de cliente. Para configurar o IIS para implantação, você deve obter primeiro um certificado de uma CA (autoridade de certificação). Para obter mais informações sobre certificados, consulte a documentação do IIS.  
   
  Depois de instalar o certificado, você deve associar o certificado ao site da Web que é usado pela sincronização da Web. Para desenvolvimento e testes, você pode especificar um certificado autoassinado. O IIS 7 pode criar um certificado para você e registrá-lo em seu computador.  
   
@@ -121,9 +119,9 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
 > [!IMPORTANT]  
 >  Um certificado autoassinado não é recomendável para uma instalação de produção. Certificados autoassinados não são seguros. Use certificados autoassinados apenas para desenvolvimento e testes.  
   
- Para configurar o SSL, você executará as etapas a seguir:  
+ Para configurar o TSL, você executará as seguintes etapas:  
   
-1.  Configure o site para exigir o SSL e ignorar certificados de cliente.  
+1.  Configure o site para exigir o TSL e ignorar certificados do cliente.  
   
 2.  Obtenha um certificado de uma CA ou crie um certificado autoassinado.  
   
@@ -268,7 +266,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
     5.  Clique em **OK** novamente para fechar as Configurações Avançadas.  
   
 ## <a name="testing-the-connection-to-replisapidll"></a>Testando a conexão com replisapi.dll  
- Execute a sincronização da Web em modo de diagnóstico para testar a conexão com o computador que está executando o IIS e certificar-se de que o certificado SSL está instalado adequadamente. Para executar a sincronização da Web em modo diagnóstico, você deve ser um administrador no computador que executa o IIS.  
+ Execute a sincronização da Web em modo de diagnóstico para testar a conexão com o computador que está executando o IIS e verificar se o certificado TLS/SSL está instalado adequadamente. Para executar a sincronização da Web em modo diagnóstico, você deve ser um administrador no computador que executa o IIS.  
   
 #### <a name="to-test-the-connection-to-replisapidll"></a>Para testar a conexão com replisapi.dll  
   

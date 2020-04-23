@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70127c0f3064dfce46a6c4fea101b0199900fcbe
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: c25fa11961ec082a6c8b912eca471d578a29a057
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742081"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632517"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega de email no Reporting Services
   O SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui uma extensão de entrega de email que fornece um modo de enviar um relatório por email a usuários individuais ou a grupos. Para distribuir um relatório por email, 1) configure o servidor de relatório para entrega de email e 2) defina uma assinatura padrão ou uma assinatura controlada por dados. Uma única assinatura não pode entregar vários relatórios em uma única mensagem de email. No entanto, você pode criar várias assinaturas.  
   
- O servidor de relatório conecta-se a um servidor de email por meio de uma conexão padrão. Ele não usa comunicação criptografada pelo protocolo SSL. O servidor de email deve ser um servidor SMTP local ou remoto na mesma rede que o servidor de relatório.  
+ O servidor de relatório conecta-se a um servidor de email por meio de uma conexão padrão. Ele não usa comunicação criptografada pelo protocolo TLS (Transport Layer Security), antes conhecido cmo SSL (Secure Sockets Layer). O servidor de email deve ser um servidor SMTP local ou remoto na mesma rede que o servidor de relatório.  
   
  Para obter as etapas detalhadas que orientarão você na criação de uma assinatura, confira o seguinte:  
   

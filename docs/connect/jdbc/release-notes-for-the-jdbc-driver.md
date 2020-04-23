@@ -1,5 +1,6 @@
 ---
 title: Notas sobre a versão do JDBC Driver
+description: Este artigo lista as versões do Microsoft JDBC Driver for SQL Server. Para cada versão de lançamento, as alterações são nominadas e descritas.
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 35073498dd654df3d03f6fc0d66d2cfca758ec3a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bbcff4ee14db85a3a973496ce8a5cb24772a35b9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902282"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634288"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Notas sobre a versão do Microsoft JDBC Driver para SQL Server
 
@@ -50,7 +51,7 @@ O Microsoft JDBC Driver 8.2 para SQL Server agora é compatível com o JDK (Java
 | Alteração do Always Encrypted | Detalhes |
 | :--------- | :------ |
 | O Microsoft JDBC Driver 8.2 para SQL Server agora dá suporte a Always Encrypted com enclaves seguros. Os detalhes podem ser encontrados aqui: Always Encrypted com enclaves seguros. |
-| Mais detalhes e código de exemplo. | Veja [Always Encrypted com enclaves seguros](../../connect/jdbc/always-encrypted-with-secure-enclaves.md). |
+| Mais detalhes e código de exemplo. | Veja [Always Encrypted com enclaves seguros](always-encrypted-with-secure-enclaves.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="performance-improvement-when-retrieving-temporal-datatypes-from-sql-server-sup1sup"></a>Aprimoramento do desempenho ao recuperar tipos de dados temporais do SQL Server <sup>1</sup>
@@ -110,7 +111,7 @@ O Microsoft JDBC Driver 7.4 para SQL Server é agora compatível com o JDK (Java
 | Alteração de NTLM | Detalhes |
 | :--------- | :------ |
 | É compatível com a autenticação NTLM. | Esse modo de autenticação permite que clientes Windows e não Windows se autentiquem no SQL Server com usuários de domínio do Windows. |
-| Confira mais detalhes e um aplicativo de exemplo para usar esse modo de autenticação. | Confira [Como se conectar usando a autenticação NTLM](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md). |
+| Confira mais detalhes e um aplicativo de exemplo para usar esse modo de autenticação. | Confira [Como se conectar usando a autenticação NTLM](using-ntlm-authentication-to-connect-to-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>Introduz a consulta ParameterMetaData por meio de _useFmtOnly_
@@ -118,7 +119,7 @@ O Microsoft JDBC Driver 7.4 para SQL Server é agora compatível com o JDK (Java
 | Alteração useFmtOnly | Detalhes |
 | :---------- | :------ |
 | Propriedade de conexão **useFmtOnly** adicionada. | Esse recurso permite que os usuários consultem opcionalmente o ParameterMetaData por meio da API herdada `SET FMTONLY ON`. Isso é útil para cenários em que o `sp_describe_undeclared_parameters` não é executado conforme o esperado. |
-| Mais detalhes e limitações. | Confira [Como usar o useFmtOnly](../../connect/jdbc/using-usefmtonly.md) |
+| Mais detalhes e limitações. | Confira [Como usar o useFmtOnly](using-usefmtonly.md) |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-121"></a>Foi atualizado o _SDK do Microsoft Azure Key Vault para Java_, versão 1.2.1
@@ -127,7 +128,7 @@ O Microsoft JDBC Driver 7.4 para SQL Server é agora compatível com o JDK (Java
 | :------------------- | :------ |
 | A dependência Maven no _SDK do Microsoft Azure Key Vault para Java_ foi atualizada para a versão 1.2.1. | &nbsp; |
 | Remove o _SDK do Microsoft Azure para Key Vault WebKey_ como uma dependência Maven. | &nbsp; |
-| Detalhes adicionais. | Confira [Dependências de recurso do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
+| Detalhes adicionais. | Confira [Dependências de recurso do Microsoft JDBC Driver para SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemas conhecidos
@@ -135,7 +136,7 @@ O Microsoft JDBC Driver 7.4 para SQL Server é agora compatível com o JDK (Java
 | Problemas conhecidos | Detalhes |
 | :----------- | :------ |
 | Ao usar a Autenticação NTLM. | No momento, não é possível habilitar a Proteção Estendida e as conexões criptografadas ao mesmo tempo. |
-| Ao usar o useFmtOnly. | Há alguns problemas com o recurso, causados por deficiências na lógica de análise do SQL. Confira [Como usar useFmtOnly](../../connect/jdbc/using-usefmtonly.md) para obter mais detalhes e sugestões de solução alternativa. |
+| Ao usar o useFmtOnly. | Há alguns problemas com o recurso, causados por deficiências na lógica de análise do SQL. Confira [Como usar useFmtOnly](using-usefmtonly.md) para obter mais detalhes e sugestões de solução alternativa. |
 | &nbsp; | &nbsp; |
 
 ## <a name="a-id72-722"></a><a id="72"> 7.2.2
@@ -171,7 +172,7 @@ Para o driver em um arquivo tar.gz: [Chinês (Simplificado)](https://go.microsof
 | Alteração da MSI | Detalhes |
 | :--------- | :------ |
 | Dá suporte ao modo de autenticação da Identidade de Serviço Gerenciada (MSI) do Active Directory. | Esse modo de autenticação aplica-se aos Recursos do Azure com suporte para o recurso "Identidade" habilitado.<br/><br/>Ambos os tipos de Identidades de Serviço Gerenciada (MSI) têm suporte do driver para adquirir o **accessToken** a fim de estabelecer uma conexão segura. |
-| Confira mais detalhes e um aplicativo de exemplo para usar esse modo de autenticação. | Confira [Como se conectar usando a autenticação do Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
+| Confira mais detalhes e um aplicativo de exemplo para usar esse modo de autenticação. | Confira [Como se conectar usando a autenticação do Azure Active Directory](connecting-using-azure-active-directory-authentication.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="introduces-_open-service-gateway-initiative_-osgi-support"></a>Introduz o suporte à _Open Service Gateway Initiative_ (OSGi)
@@ -187,7 +188,7 @@ Para o driver em um arquivo tar.gz: [Chinês (Simplificado)](https://go.microsof
 | Alteração da API de erro | Detalhes |
 | :--------------- | :------ |
 | A API SQLServerError foi introduzida. | APIs getter para recuperar detalhes adicionais a respeito do erro gerado pelo servidor.<br/><br/>&bull; &nbsp; `SQLServerException.getSQLServerError()`<br/>&bull; &nbsp; `SQLServerError` |
-| Detalhes adicionais. | Confira [Como tratar erros](../../connect/jdbc/handling-errors.md). |
+| Detalhes adicionais. | Confira [Como tratar erros](handling-errors.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-_microsoft-azure-active-directory-authentication-library-adal4j-for-java_-version-163"></a>A versão 1.6.3 da _ADAL4J (Biblioteca de Autenticação do Microsoft Azure Active Directory) para Java_ foi atualizada
@@ -196,7 +197,7 @@ Para o driver em um arquivo tar.gz: [Chinês (Simplificado)](https://go.microsof
 | :------------ | :------ |
 | A dependência Maven no ADAL4J foi atualizada para a versão 1.6.3. | &nbsp; |
 | Introduz o _Runtime do cliente Java para AutoRest_ como uma dependência Maven, versão 1.6.5. | &nbsp; |
-| Detalhes adicionais. | Confira [Dependências de recurso do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
+| Detalhes adicionais. | Confira [Dependências de recurso do Microsoft JDBC Driver para SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-120"></a>Foi atualizado o _SDK do Microsoft Azure Key Vault para Java_, versão 1.2.0
@@ -205,7 +206,7 @@ Para o driver em um arquivo tar.gz: [Chinês (Simplificado)](https://go.microsof
 | :------------------- | :------ |
 | A dependência Maven no _SDK do Microsoft Azure Key Vault para Java_ foi atualizada para a versão 1.2.0. | &nbsp; |
 | Introduz o _SDK do Microsoft Azure para Key Vault WebKey_ como uma dependência Maven, versão 1.2.0. | &nbsp; |
-| Detalhes adicionais. | Confira [Dependências de recurso do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
+| Detalhes adicionais. | Confira [Dependências de recurso do Microsoft JDBC Driver para SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemas conhecidos
@@ -236,23 +237,23 @@ O Microsoft JDBC Driver 7.0 para SQL Server é agora compatível com o JDK (Java
 
 ### <a name="support-for-spatial-datatypes"></a>Suporte para tipos de dados espaciais
 
-O Microsoft JDBC Driver 7.0 para SQL Server agora oferece suporte a tipos de dados espaciais de Geografia e Geometria do SQL Server. Para saber mais sobre as APIs de tipo de dados espaciais e como usá-las, confira [Como usar tipos de dados espaciais](../../connect/jdbc/use-spatial-datatypes.md).
+O Microsoft JDBC Driver 7.0 para SQL Server agora oferece suporte a tipos de dados espaciais de Geografia e Geometria do SQL Server. Para saber mais sobre as APIs de tipo de dados espaciais e como usá-las, confira [Como usar tipos de dados espaciais](use-spatial-datatypes.md).
 
 ### <a name="implementation-for-jdbc-43-introduced-javasqlconnection-apis-beginrequest-and-endrequest"></a>A implementação para JDBC 4.3 introduziu as APIs beginRequest() e endRequest() do java.sql.Connection.
 
-O Microsoft JDBC Driver 7.0 para SQL Server agora implementa as APIs `beginRequest()` e `endRequest()` da classe `java.sql.Connection`. Essas APIs foram introduzidas com as especificações do JDBC 4.3 e JDK 9. Para saber mais sobre a implementação do driver dessas APIs, confira [Conformidade do JDBC 4.3 para o JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
+O Microsoft JDBC Driver 7.0 para SQL Server agora implementa as APIs `beginRequest()` e `endRequest()` da classe `java.sql.Connection`. Essas APIs foram introduzidas com as especificações do JDBC 4.3 e JDK 9. Para saber mais sobre a implementação do driver dessas APIs, confira [Conformidade do JDBC 4.3 para o JDBC Driver](jdbc-4-3-compliance-for-the-jdbc-driver.md).
 
 ### <a name="support-for-sql-data-discovery-and-classification"></a>Suporte para classificação e descoberta de dados SQL
 
 O Microsoft JDBC Driver 7.0 para o SQL Server dá suporte para a descoberta e classificação de dados SQL em qualquer banco de dados de destino que dê suporte a esse recurso. O driver agora expõe as APIs `SQLServerResultSet.getSensitivityClassification()` para extrair essas informações do `ResultSet` buscado.
 
-Para saber mais sobre como usar esse recurso com o JDBC Driver, confira o exemplo em [Descoberta e classificação de dados SQL](../../connect/jdbc/data-discovery-classification-sample.md).
+Para saber mais sobre como usar esse recurso com o JDBC Driver, confira o exemplo em [Descoberta e classificação de dados SQL](data-discovery-classification-sample.md).
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>Foi adicionada a propriedade de conexão: useBulkCopyForBatchInsert
 
 O Microsoft JDBC Driver 7.0 para SQL Server apresenta uma nova propriedade de conexão, `useBulkCopyForBatchInsert`. Essa propriedade tem suporte apenas para o SQL Data Warehouse do Microsoft Azure.
 
-Essa propriedade fica desabilitada por padrão. É possível habilitá-la para aumentar o desempenho de aplicativos do usuário ao enviar uma grande quantidade de dados para o SQL Data Warehouse do Microsoft Azure. Habilitar essa propriedade altera o comportamento das operações de inserção de lotes, alternando para operações de cópia em massa com os dados fornecidos pelo usuário. Para saber mais sobre essa propriedade e suas limitações, confira como [usar a API de cópia em massa para a operação de inserção de lote](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md).
+Essa propriedade fica desabilitada por padrão. É possível habilitá-la para aumentar o desempenho de aplicativos do usuário ao enviar uma grande quantidade de dados para o SQL Data Warehouse do Microsoft Azure. Habilitar essa propriedade altera o comportamento das operações de inserção de lotes, alternando para operações de cópia em massa com os dados fornecidos pelo usuário. Para saber mais sobre essa propriedade e suas limitações, confira como [usar a API de cópia em massa para a operação de inserção de lote](use-bulk-copy-api-batch-insert-operation.md).
 
 ### <a name="added-connection-property-cancelquerytimeout"></a>Foi adicionada a propriedade de conexão: cancelQueryTimeout
 
@@ -281,7 +282,7 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
 
 ### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>A versão "ADAL4J (Biblioteca de Autenticação do Microsoft Azure Active Directory) para Java" foi atualizada: 1.6.0
 
-A dependência Maven do Microsoft JDBC Driver 7.0 para SQL Server foi atualizada para a versão 1.6.0 na "Biblioteca de Autenticação do Active Directory (ADAL4J) do Microsoft Azure para Java”. Para saber mais, confira [Dependências de recurso do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+A dependência Maven do Microsoft JDBC Driver 7.0 para SQL Server foi atualizada para a versão 1.6.0 na "Biblioteca de Autenticação do Active Directory (ADAL4J) do Microsoft Azure para Java”. Para saber mais, confira [Dependências de recurso do Microsoft JDBC Driver para SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## <a name="64"></a>6.4
 
@@ -303,7 +304,7 @@ O driver dá suporte à versão 9.0 do JDK, além do JDK 8.0 e 7.0.
 
 ### <a name="jdbc-43-compliance"></a>Conformidade com o JDBC 4.3
 
-O driver é compatível com a especificação da API Java Database Connectivity 4.3, além da 4.1 e da 4.2. Os métodos da API do JDBC 4.3 foram adicionados, mas ainda não foram implementados. Para obter detalhes, confira [Conformidade do JDBC 4.3 com o JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
+O driver é compatível com a especificação da API Java Database Connectivity 4.3, além da 4.1 e da 4.2. Os métodos da API do JDBC 4.3 foram adicionados, mas ainda não foram implementados. Para obter detalhes, confira [Conformidade do JDBC 4.3 com o JDBC Driver](jdbc-4-3-compliance-for-the-jdbc-driver.md).
 
 ### <a name="added-connection-property-sslprotocol"></a>Foi adicionada a propriedade de conexão: sslProtocol
 
@@ -339,15 +340,15 @@ O JDBC Driver agora dá suporte aos tipos de dados `sql_variant` a serem usados 
 
 ### <a name="implemented-prepared-statement-metadata-caching"></a>Foi implementado o armazenamento em cache de metadados de instrução preparados
 
-O JDBC Driver implementou o armazenamento em cache de metadados de instrução preparados para melhorar o desempenho. O driver agora dá suporte ao armazenamento em cache de metadados de instrução preparados no driver com as propriedades de conexão `disableStatementPooling` e `statementPoolingCacheSize`. Por padrão, esse recurso está desabilitado. Para saber mais, confira [Armazenamento em cache de metadados de instrução preparados para o JDBC Driver](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md).
+O JDBC Driver implementou o armazenamento em cache de metadados de instrução preparados para melhorar o desempenho. O driver agora dá suporte ao armazenamento em cache de metadados de instrução preparados no driver com as propriedades de conexão `disableStatementPooling` e `statementPoolingCacheSize`. Por padrão, esse recurso está desabilitado. Para saber mais, confira [Armazenamento em cache de metadados de instrução preparados para o JDBC Driver](prepared-statement-metadata-caching-for-the-jdbc-driver.md).
 
-### <a name="added-support-for-azure-ad-integrated-authentication-on-linuxmac"></a>Foi adicionado o suporte à Autenticação Integrada do Azure AD no Linux/Mac
+### <a name="added-support-for-azure-ad-integrated-authentication-on-linuxmacos"></a>Foi adicionado o suporte à Autenticação Integrada do Azure AD no Linux/macOS
 
-O JDBC Driver agora é compatível com a Autenticação Integrada do Azure AD (Azure Active Directory) em todos os sistemas operacionais compatíveis (Windows, Linux e Mac) com Kerberos. Como alternativa, nos sistemas de operacionais Windows, os usuários podem autenticar com mssql-jdbc_auth-\<versão>-\<arch>.dll.
+O JDBC Driver agora dá suporte à Autenticação Integrada do Azure AD (Azure Active Directory) em todos os sistemas operacionais compatíveis (Windows, Linux e macOS) com Kerberos. Como alternativa, nos sistemas de operacionais Windows, os usuários podem autenticar com mssql-jdbc_auth-\<versão>-\<arch>.dll.
 
 ### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>A versão "ADAL4J (Biblioteca de Autenticação do Microsoft Azure Active Directory) para Java" foi atualizada: 1.4.0
 
-A dependência Maven do Microsoft JDBC Driver foi atualizada para a versão 1.4.0 na "Biblioteca de Autenticação do Active Directory (ADAL4J) do Microsoft Azure para Java”. Para saber mais, confira [Dependências de recurso do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+A dependência Maven do Microsoft JDBC Driver foi atualizada para a versão 1.4.0 na "Biblioteca de Autenticação do Active Directory (ADAL4J) do Microsoft Azure para Java”. Para saber mais, confira [Dependências de recurso do Microsoft JDBC Driver para SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## <a name="62"></a>6.2
 
@@ -423,11 +424,11 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### <a name="always-encrypted"></a>Always Encrypted
 
-O driver dá suporte ao recurso Always Encrypted no SQL Server 2016. Esse recurso garante que os dados confidenciais nunca sejam vistos em texto não criptografado em uma instância do SQL Server. O Always Encrypted funciona pela criptografia transparente de dados no aplicativo, de forma que o SQL Server apenas manipulará os dados criptografados e os valores de texto não criptografado. Mesmo se a instância do SQL Server ou o computador host estiverem comprometidos, o invasor apenas poderá obter um texto cifrado de dados confidenciais. Para obter detalhes, veja [Uso de Always Encrypted com o driver JDBC em Linux](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).
+O driver dá suporte ao recurso Always Encrypted no SQL Server 2016. Esse recurso garante que os dados confidenciais nunca sejam vistos em texto não criptografado em uma instância do SQL Server. O Always Encrypted funciona pela criptografia transparente de dados no aplicativo, de forma que o SQL Server apenas manipulará os dados criptografados e os valores de texto não criptografado. Mesmo se a instância do SQL Server ou o computador host estiverem comprometidos, o invasor apenas poderá obter um texto cifrado de dados confidenciais. Para obter detalhes, veja [Uso de Always Encrypted com o driver JDBC em Linux](using-always-encrypted-with-the-jdbc-driver.md).
 
 ### <a name="internationalized-domain-names"></a>Nomes de domínio internacionalizados
 
-O driver dá suporte a nomes de domínio internacionalizados (IDNs) para nomes de servidor. Para obter detalhes, confira as informações sobre o "uso de nomes de domínio internacionais" no artigo [Recursos internacionais do JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md).
+O driver dá suporte a nomes de domínio internacionalizados (IDNs) para nomes de servidor. Para obter detalhes, confira as informações sobre o "uso de nomes de domínio internacionais" no artigo [Recursos internacionais do JDBC Driver](international-features-of-the-jdbc-driver.md).
 
 ### <a name="parameterized-queries"></a>Consultas parametrizadas
 
@@ -437,11 +438,11 @@ O driver agora é compatível com a recuperação de metadados de parâmetro com
 
 A Autenticação do Azure AD é um mecanismo de conexão com o Banco de Dados SQL v12 do Azure usando identidades no Azure AD. Use a autenticação do Azure AD para gerenciar de forma centralizada as identidades de usuários do banco de dados e como uma alternativa à autenticação do SQL Server.
 
-É possível usar o JDBC Driver 6.0 para especificar as credenciais do Azure AD na cadeia de conexão do JDBC para se conectar ao Banco de Dados SQL do Azure. Para obter detalhes, consulte a propriedade de autenticação no artigo [Definindo as propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md).
+É possível usar o JDBC Driver 6.0 para especificar as credenciais do Azure AD na cadeia de conexão do JDBC para se conectar ao Banco de Dados SQL do Azure. Para obter detalhes, consulte a propriedade de autenticação no artigo [Definindo as propriedades de conexão](setting-the-connection-properties.md).
 
 ### <a name="table-valued-parameters"></a>Parâmetros com valor de tabela
 
-Os TVPs fornecem uma maneira fácil de realizar marshaling em várias linhas de dados de um aplicativo cliente do SQL Server sem exigir várias viagens de ida e volta ou uma lógica especial do lado do servidor para processar os dados. Você pode usar os TVPs para encapsular linhas de dados em um aplicativo cliente e enviar os dados para o servidor em um único comando parametrizado. As linhas de dados de entrada são armazenadas em uma variável de tabela, as quais você poderá operar usando o Transact-SQL. Para obter detalhes, confira as informações sobre o [uso de parâmetros com valor de tabela](../../connect/jdbc/using-table-valued-parameters.md).
+Os TVPs fornecem uma maneira fácil de realizar marshaling em várias linhas de dados de um aplicativo cliente do SQL Server sem exigir várias viagens de ida e volta ou uma lógica especial do lado do servidor para processar os dados. Você pode usar os TVPs para encapsular linhas de dados em um aplicativo cliente e enviar os dados para o servidor em um único comando parametrizado. As linhas de dados de entrada são armazenadas em uma variável de tabela, as quais você poderá operar usando o Transact-SQL. Para obter detalhes, confira as informações sobre o [uso de parâmetros com valor de tabela](using-table-valued-parameters.md).
 
 ### <a name="always-on-availability-groups"></a>Grupos de Disponibilidade AlwaysOn
 
@@ -474,19 +475,19 @@ O driver dá suporte à versão 8.0 do JDK, além do JDK 7.0, 6.0 e 5.0.
 
 ### <a name="jdbc-41-and-42-compliance"></a>Conformidade do JDBC 4.1 e 4.2
 
-O driver é compatível com as especificações da API Java Database Connectivity 4.1 e 4.2, além da 4.0. Para obter detalhes, confira a [conformidade com o JDBC 4.1 para o JDBC Driver](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md) e a [conformidade com o JDBC 4.2 para o JDBC Driver](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md).
+O driver é compatível com as especificações da API Java Database Connectivity 4.1 e 4.2, além da 4.0. Para obter detalhes, confira a [conformidade com o JDBC 4.1 para o JDBC Driver](jdbc-4-1-compliance-for-the-jdbc-driver.md) e a [conformidade com o JDBC 4.2 para o JDBC Driver](jdbc-4-2-compliance-for-the-jdbc-driver.md).
 
 ### <a name="bulk-copy"></a>Cópia em massa
 
-Você pode usar o recurso de cópia em massa para copiar rapidamente grandes quantidades de dados em tabelas ou em exibições nos bancos de dados do SQL Server. Para obter detalhes, confira [Usando uma cópia em massa com o JDBC Driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).
+Você pode usar o recurso de cópia em massa para copiar rapidamente grandes quantidades de dados em tabelas ou em exibições nos bancos de dados do SQL Server. Para obter detalhes, confira [Usando uma cópia em massa com o JDBC Driver](using-bulk-copy-with-the-jdbc-driver.md).
 
 ### <a name="xa-transaction-rollback-option"></a>Opção de reversão de transação XA
 
-O driver tem novas opções de tempo limite para reversão automática existente de transações não preparadas. Para obter detalhes, veja como [compreender as transações XA](../../connect/jdbc/understanding-xa-transactions.md).
+O driver tem novas opções de tempo limite para reversão automática existente de transações não preparadas. Para obter detalhes, veja como [compreender as transações XA](understanding-xa-transactions.md).
 
 ### <a name="new-kerberos-principal-connection-property"></a>Nova propriedade de conexão principal Kerberos
 
-O driver usa uma nova propriedade de conexão para facilitar a flexibilidade com conexões Kerberos. Para obter detalhes, confira [Usando a autenticação integrada Kerberos para conectar-se ao SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md).
+O driver usa uma nova propriedade de conexão para facilitar a flexibilidade com conexões Kerberos. Para obter detalhes, confira [Usando a autenticação integrada Kerberos para conectar-se ao SQL Server](using-kerberos-integrated-authentication-to-connect-to-sql-server.md).
 
 ## <a name="41"></a>4.1
 
@@ -503,4 +504,4 @@ Não há suporte para execução de aplicativos do Microsoft JDBC Driver para SQ
 
 ## <a name="see-also"></a>Confira também
 
-[Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[Visão geral do JDBC Driver](overview-of-the-jdbc-driver.md)

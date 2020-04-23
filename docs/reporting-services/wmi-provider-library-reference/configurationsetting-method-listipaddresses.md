@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1207c4c9688826b599548477a35ca123b9d39c28
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b39009d020d906837f4ca4ae4091d12d83cc94c5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579934"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630631"
 ---
 # <a name="configurationsetting-method---listipaddresses"></a>Método de ConfigurationSetting – ListIPAddresses
   Lista os endereços IP do computador do servidor de relatório.  
@@ -34,7 +34,7 @@ public void ListIPAddresses (out string[] IPAddress,
     out int HRESULT);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *IPAddress[]*  
  [fora] A lista de endereços IP do computador.  
   
@@ -56,7 +56,7 @@ public void ListIPAddresses (out string[] IPAddress,
 ## <a name="remarks"></a>Comentários  
  As cadeias de caracteres*IPVersion* são V4, V6.  
   
- Se *IsDhcpEnabled* é **True**, *IPAddress* é dinâmico. Não deve ser usado para associações SSL.  
+ Se *IsDhcpEnabled* é **True**, *IPAddress* é dinâmico. Não deve ser usado para associações TLS.  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

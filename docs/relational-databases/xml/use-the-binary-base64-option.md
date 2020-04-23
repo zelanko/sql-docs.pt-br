@@ -1,5 +1,6 @@
 ---
 title: Usar a opção BINARY BASE64 | Microsoft Docs
+description: Saiba como usar a opção BINARY BASE64 em uma consulta do SQL para retornar dados binários no formato de codificação Base64.
 ms.custom: ''
 ms.date: 04/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 42b2e41bedbce625d38b9d73a06b62817419c92c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fffd3833256ee6afa9dd3731d5cf02e99913e565
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665237"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388353"
 ---
 # <a name="use-the-binary-base64-option"></a>Usar a opção BINARY BASE64
 

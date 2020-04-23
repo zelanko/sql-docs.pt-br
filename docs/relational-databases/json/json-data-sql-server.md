@@ -2,7 +2,6 @@
 title: Trabalhar com os dados JSON
 ms.date: 05/14/2019
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: quickstart
 helpviewer_keywords:
@@ -11,14 +10,15 @@ helpviewer_keywords:
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: genemi
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80f6d40fd2c548135595fd96de6de4b967460a90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c9c9498c6bcef8bf07657d17565bd8b596668033
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288140"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81485035"
 ---
 # <a name="json-data-in-sql-server"></a>Dados JSON no SQL Server
 
@@ -374,7 +374,7 @@ A saída dessa consulta é um texto JSON que está em conformidade total com a e
   
 ## <a name="test-drive-built-in-json-support-with-the-adventureworks-sample-database"></a>Faça o test drive do suporte interno para JSON com o banco de dados de exemplo AdventureWorks
 
-Para obter o banco de dados de exemplo AdventureWorks, baixe pelo menos o arquivo de banco de dados e o arquivo de exemplos e scripts no [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=49502).
+Para obter o banco de dados de exemplo AdventureWorks, baixe pelo menos o arquivo de banco de dados e o arquivo de exemplos e scripts do [GitHub](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks).
 
 Após restaurar o banco de dados de exemplo para uma instância do SQL Server 2016, extraia o arquivo de exemplos e abra o arquivo *JSON Sample Queries procedures views and indexes.sql* da pasta JSON. Execute os scripts nesse arquivo para reformatar alguns dados existentes como dados JSON, testar relatórios e consultas de exemplo em dados JSON, indexar os dados JSON e importar e exportar JSON.  
   

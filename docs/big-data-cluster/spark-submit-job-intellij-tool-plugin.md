@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 604292d548d9368439b810fa4dfebf2d4388929e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244079"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634954"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>Enviar trabalhos do Spark em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no IntelliJ
 
@@ -33,9 +33,9 @@ Um dos principais cenários para [!INCLUDE[big-data-clusters-2019](../includes/s
 ## <a name="link-sql-server-big-data-cluster"></a>Link para o cluster de Big Data do SQL Server
 1. Abra a ferramenta IntelliJ IDEA.
 
-2. Se estiver usando um certificado autoassinado, desabilite a validação do certificado SSL no menu **Ferramentas**, selecione **Azure**, **Validar Certificado SSL do Cluster Spark** e, em seguida, **Desabilitar**.
+2. Se estiver usando um certificado autoassinado, desabilite a validação do certificado TLS/SSL no menu **Ferramentas**, selecione **Azure**, **Validar Certificado SSL do Cluster Spark** e, em seguida, **Desabilitar**.
 
-    ![link para o cluster de Big Data do SQL Server – desabilitar SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![link para o cluster de Big Data do SQL Server – desabilitar TLS/SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. Abra o Azure Explorer no menu **Exibir**, selecione **Janelas de Ferramentas** e, em seguida, selecione **Azure Explorer**.
 4. Clique com o botão direito do mouse em **Cluster de Big Data do SQL Server**, selecione **Vincular Cluster de Big Data do SQL Server**. Insira o **Servidor**, o **Nome de Usuário** e a **Senha** e, então, clique em **OK**.
