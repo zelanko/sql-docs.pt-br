@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 851c138e00300a303b1618041a16e2c38516968e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 4f4ebcbf84da7d899b4d4cbd861cfb2ae3f75863
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301206"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087556"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -62,7 +62,7 @@ ms.locfileid: "81301206"
 |-**0x08**|O cache definido por resultados está desativado devido aos predicados de segurança de nível de linha.|  
 |-**0x10**|O cache definido por resultados está desativado devido ao uso de tabela do sistema, tabela temporária ou tabela externa na consulta.|  
 |-**0x20**|O cache definido por resultados é desativado porque a consulta contém constantes de tempo de execução, funções definidas pelo usuário ou funções não determinísticas.|  
-|-**0x40**|O cache definido pelo resultado é desativado devido ao tamanho estimado do conjunto de resultados ser muito grande (> 1 milhão de linhas).|  
+|-**0x40**|O cache definido pelo resultado está desativado devido ao tamanho estimado do conjunto de resultados >10GB.|  
 |-**0x80**|O cache do conjunto de resultados está desativado porque o conjunto de resultados contém linhas com grande tamanho (>64kb).|  
   
 ## <a name="permissions"></a>Permissões
