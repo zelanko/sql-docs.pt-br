@@ -17,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd248b42f01a65aabcd1146d23c7b247d0053908
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68053574"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488174"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Escreva consultas de texto completo usando os predicados **CONTAINS** e **FREETE
 
 ## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> Exemplos de cada predicado e função
 
-Os exemplos a seguir usam o banco de dados de exemplo AdventureWorks. Para encontrar a versão final do AdventureWorks, consulte [Bancos de dados e scripts do AdventureWorks para SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502). Para executar as consultas de exemplo, você também deve configurar a pesquisa de texto completo. Para mais informações, consulte [Introdução à pesquisa de texto completo](get-started-with-full-text-search.md). 
+Os exemplos a seguir usam o banco de dados de exemplo AdventureWorks. Para encontrar a versão final do AdventureWorks, consulte [Bancos de dados e scripts do AdventureWorks para SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks). Para executar as consultas de exemplo, você também deve configurar a pesquisa de texto completo. Para mais informações, consulte [Introdução à pesquisa de texto completo](get-started-with-full-text-search.md). 
 
 ### <a name="example---contains"></a>Exemplo – CONTAINS  
 O exemplo a seguir localiza todos os produtos com um preço de `$80.99` contendo a palavra `"Mountain"`:

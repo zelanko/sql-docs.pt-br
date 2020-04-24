@@ -7,17 +7,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7151d375385cc7af54a68a141274a033011759e6
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 87cea1d05376669292edb824631c3834328763f0
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "81119069"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487175"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Problemas conhecidos nos Serviços de Machine Learning do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Este artigo descreve problemas ou limitações conhecidos com os componentes de aprendizado de máquina que são fornecidos como uma opção em [Serviços de Machine Learning do SQL Server](what-is-sql-server-machine-learning.md) e [SQL Server 2016 R Services](r/sql-server-r-services.md).
+Este artigo descreve problemas ou limitações conhecidos com os componentes de aprendizado de máquina que são fornecidos como uma opção em [Serviços de Machine Learning do SQL Server](sql-server-machine-learning-services.md) e [SQL Server 2016 R Services](r/sql-server-r-services.md).
 
 ## <a name="setup-and-configuration-issues"></a>Problemas de instalação e de configuração
 

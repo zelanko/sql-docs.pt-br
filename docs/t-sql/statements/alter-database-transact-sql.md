@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fc4b442fc6d6afb7f5e913293733296cdaa4c2b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6a079b070df9718135a6c9d99dd56ed51ad04ab5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77074416"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81628112"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -76,7 +76,7 @@ ALTER DATABASE O artigo atual fornece a sintaxe e as informações relacionadas 
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```syntaxsql
 -- SQL Server Syntax
 ALTER DATABASE { database_name | CURRENT }
 {
@@ -292,7 +292,7 @@ ALTER DATABASE O artigo atual fornece a sintaxe e as informações relacionadas 
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```syntaxsql
 -- Azure SQL Database Syntax
 ALTER DATABASE { database_name | CURRENT }
 {
@@ -711,7 +711,7 @@ ALTER DATABASE O artigo atual fornece a sintaxe e as informações relacionadas 
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```syntaxsql
 -- Azure SQL Database Syntax  
 ALTER DATABASE { database_name | CURRENT }  
 {
@@ -946,7 +946,7 @@ Modifica as opções de tamanho máximo do banco de dados para tabelas replicada
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```syntaxsql
 -- Analytics Platform System
 ALTER DATABASE database_name
     SET ( <set_database_options> | <db_encryption_option> )

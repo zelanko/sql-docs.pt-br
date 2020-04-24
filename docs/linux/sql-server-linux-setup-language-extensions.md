@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 52d67c4fb8bf48726c5ac65f3f312fc97a1d9628
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4a9949ec67b2e9d3e89af1e50887532ab0726232
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664346"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298236"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Instalar Extensões de Linguagem do SQL Server no Linux
 
@@ -54,9 +54,9 @@ Os comandos para remover os pacotes aparecem na tabela a seguir.
 
 | Plataforma  | Comando(s) de remoção de pacote | 
 |-----------|----------------------------|
-| RHEL  | `sudo yum remove msssql-server-extensibility-java` |
-| SLES  | `sudo zypper remove msssql-server-extensibility-java` |
-| Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
+| RHEL  | `sudo yum remove mssql-server-extensibility-java` |
+| SLES  | `sudo zypper remove mssql-server-extensibility-java` |
+| Ubuntu    | `sudo apt-get remove mssql-server-extensibility-java`|
 
 ### <a name="3-install-sql-server-2019"></a>3. Instalar o SQL Server 2019
 

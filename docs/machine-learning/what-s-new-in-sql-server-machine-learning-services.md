@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6042621491bfd26cb175b1a50d5a68374be41aa9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: bdb358c2414d40aa39ead1323eff90aefbb3081e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115699"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486991"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novidades dos Serviços de Machine Learning do SQL Server
 
@@ -43,7 +43,7 @@ Veja abaixo os novos recursos dos Serviços de Machine Learning do SQL Server:
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2017"></a>Novidades do SQL Server 2017
 
-Esta versão adiciona [o suporte do Python e algoritmos de aprendizado de máquina líderes do setor](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Renomeado para refletir o novo escopo, o SQL Server 2017 marca a introdução dos [Serviços de Machine Learning do SQL Server (no Banco de Dados)](what-is-sql-server-machine-learning.md), com suporte a linguagens para Python e R. 
+Esta versão adiciona [o suporte do Python e algoritmos de aprendizado de máquina líderes do setor](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Renomeado para refletir o novo escopo, o SQL Server 2017 marca a introdução dos [Serviços de Machine Learning do SQL Server (no Banco de Dados)](sql-server-machine-learning-services.md), com suporte a linguagens para Python e R. 
 
 Para obter os comunicados sobre todos os recursos, confira [Novidades do SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
@@ -59,7 +59,7 @@ As novas funcionalidades do R incluem o [**gerenciamento de pacotes**](package-m
 
 ### <a name="r-libraries"></a>Bibliotecas do R
 
-| Pacote | DESCRIÇÃO |
+| Pacote | Descrição |
 |---------|-------------|
 | [**MicrosoftML**](r/ref-r-microsoftml.md) | Nesta versão, o MicrosoftML está incluído em uma instalação padrão do R, eliminando a etapa de atualização necessária no SQL Server 2016 R Services anterior. O MicrosoftML fornece algoritmos de aprendizado de máquina e transformações de dados de última geração que podem ser dimensionados ou executados em contextos de computação remota. Os algoritmos incluem redes neurais profundas personalizáveis, árvores de decisão rápida e florestas de decisão, regressão linear e regressão logística.  |
 
@@ -75,7 +75,7 @@ Use a função T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) para ex
 
 ### <a name="python-libraries"></a>Bibliotecas do Python
 
-| Pacote | DESCRIÇÃO |
+| Pacote | Descrição |
 |---------|-------------|
 |[**revoscalepy**](python/ref-py-revoscalepy.md)| Equivalente no Python do RevoScaleR. Crie modelos do Python para regressões lineares e logísticas, árvores de decisão, árvores aumentadas e florestas aleatórias, todas paralelizáveis e com a capacidade de serem executadas em contextos de computação remota. Esse pacote dá suporte ao uso de várias fontes de dados e de contextos de computação remota. O cientista de dados ou o desenvolvedor pode executar o código Python em um SQL Server remoto para explorar os dados ou criar modelos sem mover os dados. |
 |[**microsoftml**](python/ref-py-microsoftml.md) |Equivalente no Python do pacote R MicrosoftML. |
@@ -112,12 +112,6 @@ O SQL Server 2019 adiciona o suporte para Linux para R e Python quando você ins
 
 No Linux, o SQL Server 2017 não tem a integração do R nem do Python, mas você pode usar a [pontuação nativa](sql-native-scoring.md) no Linux, pois essa funcionalidade está disponível por meio do T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md), que é executado no Linux. A pontuação nativa permite a pontuação de alto desempenho por meio de um modelo pré-treinado, sem chamar ou, até mesmo, exigir um runtime do R.
 ::: moniker-end
-
-<a name="azure-sql-database-roadmap"></a>
-
-## <a name="machine-learning-services-in-azure-sql-database"></a>Serviços de Machine Learning no Banco de Dados SQL do Azure
-
-Os Serviços de Machine Learning no Banco de Dados SQL do Azure estão em versão prévia pública. Para obter mais informações, confira [Serviços de Machine Learning no Banco de Dados SQL do Azure (versão prévia)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview).
 
 ## <a name="next-steps"></a>Próximas etapas
 

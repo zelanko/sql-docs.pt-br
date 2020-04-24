@@ -1,7 +1,7 @@
 ---
 title: ALTER SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2016
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: pdw, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e16c698947dbe8ad6c324f16e644b2dd43276435
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68070272"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631826"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -35,7 +35,7 @@ Altera a associação de uma função de servidor ou altera nome de uma função
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
   
 ALTER SERVER ROLE server_role_name   
@@ -46,7 +46,7 @@ ALTER SERVER ROLE server_role_name
 } [ ; ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 ALTER SERVER ROLE  server_role_name  ADD MEMBER login;  
@@ -98,7 +98,7 @@ Para adicionar um membro a uma função de servidor definida pelo usuário, voc�
 ### <a name="a-changing-the-name-of-a-server-role"></a>a. Alterando o nome de uma função de servidor  
 O exemplo seguinte cria uma função de servidor chamada `Product` e, em seguida, altera o nome da função de servidor para `Production`.  
   
-```  
+```sql
 CREATE SERVER ROLE Product ;  
 ALTER SERVER ROLE Product WITH NAME = Production ;  
 GO  
@@ -107,14 +107,14 @@ GO
 ### <a name="b-adding-a-domain-account-to-a-server-role"></a>B. Adicionando uma conta de domínio a uma função de servidor.  
 O exemplo a seguir adiciona uma conta de domínio chamada `adventure-works\roberto0` à função de servidor definida pelo usuário chamada `Production`.  
   
-```  
+```sql
 ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. Adicionando um logon do SQL Server a uma função de servidor  
 O exemplo a seguir adiciona o logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chamado `Ted` à função fixa de servidor `diskadmin`.  
   
-```  
+```sql
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
 GO  
 ```  
@@ -122,14 +122,14 @@ GO
 ### <a name="d-removing-a-domain-account-from-a-server-role"></a>D. Removendo uma conta de domínio de uma função de servidor  
 O exemplo a seguir remove uma conta de domínio chamada `adventure-works\roberto0` da função de servidor definida pelo usuário chamada `Production`.  
   
-```  
+```sql
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. Removendo um logon do SQL Server de uma função de servidor  
 O exemplo a seguir remove o logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Ted` da função fixa de servidor `diskadmin`.  
   
-```  
+```sql
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
 GO  
 ```  
@@ -137,7 +137,7 @@ GO
 ### <a name="f-granting-a-login-the-permission-to-add-logins-to-a-user-defined-server-role"></a>F. Concedendo a um logon a permissão para adicionar logons a uma função de servidor definida pelo usuário  
 O exemplo a seguir permite que `Ted` adicione outros logons à função de servidor definida pelo usuário chamada `Production`.  
   
-```  
+```sql
 GRANT ALTER ON SERVER ROLE::Production TO Ted ;  
 GO  
 ```  
@@ -145,7 +145,7 @@ GO
 ### <a name="g-to-view-role-membership"></a>G. Para exibir a associação de função  
 Para exibir a associação de função, use a página **Função de Servidor (Membros)** em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou execute a seguinte consulta:  
   
-```  
+```sql
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
 SRM.member_principal_id, SP2.name  AS Member_Name  
 FROM sys.server_role_members AS SRM  
@@ -161,14 +161,14 @@ ORDER BY  SP.name,  SP2.name
 ### <a name="h-basic-syntax"></a>H. Sintaxe básica  
 O exemplo a seguir adiciona o logon no `Anna` à função de servidor `LargeRC`.  
   
-```  
+```sql
 ALTER SERVER ROLE LargeRC ADD MEMBER Anna;  
 ```  
   
 ### <a name="i-remove-a-login-from-a-resource-class"></a>I. Remova um logon de uma classe de recurso.  
 O exemplo a seguir remove a associação de Ana na função de servidor `LargeRC`.  
   
-```  
+```sql
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  
 ```  
   

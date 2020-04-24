@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 98ef57702b01a3f32babd6b0ac9b64fb3c22e9ea
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: c85839d89fbdb2d69752ac989abb40637f9d13ca
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118659"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487555"
 ---
 # <a name="r-language-extension-in-sql-server"></a>Extensão da linguagem R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 A extensão R faz parte do complemento Serviços de Machine Learning do SQL Server para o mecanismo de banco de dados relacional. Ela adiciona um ambiente de execução de R, uma distribuição de R base com bibliotecas e ferramentas padrão e as bibliotecas do Microsoft R: [RevoScaleR](../r/ref-r-revoscaler.md) para análise em escala, [MicrosoftML](../r/ref-r-microsoftml.md) para algoritmos de aprendizado de máquina e outras bibliotecas para acessar dados ou código R no SQL Server.
 
-A integração do R está disponível no [SQL Server R Services](../r/sql-server-r-services.md) e nos [Serviços de Machine Learning do SQL Server](../what-is-sql-server-machine-learning.md).
+A integração do R está disponível no [SQL Server R Services](../r/sql-server-r-services.md) e nos [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md).
 
 ## <a name="r-components"></a>Componentes R
 

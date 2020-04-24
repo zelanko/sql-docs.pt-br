@@ -18,12 +18,12 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: bc64f97123a14d971a531b489eeddbec42f3931b
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: b72089909596808dabb3c3f77359af5d8176a875
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517638"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625589"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
@@ -35,7 +35,7 @@ Retorna um valor formatado com o formato e a cultura opcional especificados. Use
   
 ## <a name="syntax"></a>Sintaxe  
   
-```sql
+```syntaxsql
 FORMAT ( value, format [, culture ] )  
 ```  
   

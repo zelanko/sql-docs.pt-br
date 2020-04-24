@@ -25,12 +25,12 @@ helpviewer_keywords:
 - data classification
 - rank
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: 93c0511a6d2756c41d80745f0c0d2409f8d494ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e3b5ba45e03a27f8b07f854cd94f515daefa5dec
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73882406"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631957"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADICIONAR CLASSIFICAÇÃO DE CONFIDENCIALIDADE (Transact-SQL)
 
@@ -44,7 +44,7 @@ A classificação de dados confidenciais em seu ambiente de banco de dados ajuda
 
 ## <a name="syntax"></a>Sintaxe  
 
-```
+```syntaxsql
 ADD SENSITIVITY CLASSIFICATION TO
     <object_name> [, ...n ]
     WITH ( <sensitivity_option> [, ...n ] )     
