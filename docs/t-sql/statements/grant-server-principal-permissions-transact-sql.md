@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 81a8422cbab7eb10d0c74ad5cd758817a665eaa6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0433232412135256e98e6f3292fd88fa58bef62d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050778"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633686"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>Permissões de entidade de segurança do servidor GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68050778"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
   
 GRANT permission [ ,...n ] }   
     ON   

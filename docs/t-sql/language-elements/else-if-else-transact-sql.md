@@ -20,12 +20,12 @@ ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86ae34994c00622ae66eee4afcb3ae3dacedd989
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2ff6cc86bb2b8df43ccf47beb144190567492fc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075309"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634937"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68075309"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
 IF Boolean_expression   
      { sql_statement | statement_block }   
 [ ELSE   
@@ -58,14 +58,14 @@ IF Boolean_expression
 ### <a name="a-using-a-simple-boolean-expression"></a>a. Usando uma expressão booliana simples  
  O exemplo a seguir tem uma expressão booliana simples (`1=1`) que é true e, portanto, imprime a primeira instrução.  
   
-```  
+```sql
 IF 1 = 1 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 ```  
   
  O exemplo a seguir tem uma expressão booliana simples (`1=2`) que é false e, portanto, imprime a segunda instrução.  
   
-```  
+```sql
 IF 1 = 2 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 GO  
@@ -74,7 +74,7 @@ GO
 ### <a name="b-using-a-query-as-part-of-a-boolean-expression"></a>B. Usando uma consulta como parte de uma expressão booliana  
  O exemplo a seguir executa uma consulta como parte da expressão booliana. Como há 10 bicicletas na tabela `Product` que atendem à cláusula `WHERE`, a primeira instrução de impressão será executada. Altere `> 5` para `> 15` para saber como a segunda parte da instrução poderia ser executada.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF   
@@ -87,7 +87,7 @@ GO
 ### <a name="c-using-a-statement-block"></a>C. Usando um bloco de instrução  
  O exemplo a seguir executa uma consulta como parte da expressão booliana e depois executa blocos de instrução ligeiramente diferentes com base no resultado da expressão booliana. Cada bloco de instrução começa com `BEGIN` e termina com `END`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @AvgWeight decimal(8,2), @BikeCount int  
@@ -119,7 +119,7 @@ GO
 ### <a name="d-using-nested-ifelse-statements"></a>D. Usando instruções IF...ELSE aninhadas  
  O exemplo a seguir mostra como uma instrução IF ... ELSE pode ser aninhada dentro de outra. Defina a variável `@Number` como `5`, `50` e `500` para testar cada instrução.  
   
-```  
+```sql
 DECLARE @Number int;  
 SET @Number = 50;  
 IF @Number > 100  
@@ -139,7 +139,7 @@ GO
 ### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E: Usando uma consulta como parte de uma expressão booliana  
  O exemplo a seguir usa `IF...ELSE` para determinar qual das duas respostas será mostrada ao usuário, com base no peso de um item na tabela `DimProduct`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DECLARE @maxWeight float, @productKey integer  

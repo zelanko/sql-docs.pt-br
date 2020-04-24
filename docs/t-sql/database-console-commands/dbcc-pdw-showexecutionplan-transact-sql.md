@@ -12,12 +12,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf825d31ce606ef669e2aad4b2729b0e052212ae
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68809845"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632400"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,13 +31,13 @@ Depois que forem esclarecidos os problemas de desempenho das consultas de SMP do
 ## <a name="syntax"></a>Sintaxe  
 Sintaxe do SQL Data Warehouse do Azure:
 
-```sql
+```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id, spid )  
 [;]  
 ```  
 Sintaxe do Parallel Data Warehouse do Azure:
   
-```sql
+```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
 [;]  
 ```  

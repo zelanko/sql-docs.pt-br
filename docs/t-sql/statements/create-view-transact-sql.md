@@ -1,7 +1,7 @@
 ---
 title: CREATE VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f29027f7b9ab16b1cb9de5c92f5aaf7dccf9765
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982666"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634848"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "73982666"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]   
@@ -76,7 +76,7 @@ AS select_statement
 }   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
@@ -210,7 +210,7 @@ OR ALTER
   
  Uma exibição particionada no `Server1` é definida da seguinte maneira:  
   
-```  
+```sql
 --Partitioned view as defined on Server1  
 CREATE VIEW Customers  
 AS  
@@ -229,7 +229,7 @@ FROM Server3.CompanyData.dbo.Customers_99;
   
  Em geral, uma exibição é considerada particionada se for da seguinte forma:  
   
-```  
+```syntaxsql
 SELECT <select_list1>  
 FROM T1  
 UNION ALL  
@@ -253,7 +253,7 @@ FROM Tn;
   
          A restrição `C1` definida na tabela `T1` deve ser da seguinte forma:  
   
-        ```  
+        ```syntaxsql
         C1 ::= < simple_interval > [ OR < simple_interval > OR ...]  
         < simple_interval > :: =   
         < col > { < | > | \<= | >= | = < value >}   
@@ -261,13 +261,13 @@ FROM Tn;
         | < col > IN ( value_list )  
         | < col > { > | >= } < value1 > AND  
         < col > { < | <= } < value2 >  
-        ```  
+        ```
   
     -   As restrições devem ser de uma forma que qualquer valor especificado de `<col>` possa satisfazer, no máximo, uma das restrições `C1, ..., Cn` para que as restrições não formem um conjunto de intervalos desunidos ou não sobrepostos. A coluna `<col>` na qual as restrições desunidas são definidas é chamada de coluna de particionamento. Observe que a coluna de particionamento pode ter nomes diferentes nas tabelas subjacentes. As restrições devem estar em um estado habilitado e confiável para que atendam às condições de coluna de particionamento mencionadas anteriormente. Se as restrições forem desabilitadas, reabilite a verificação de restrição usando a opção CHECK CONSTRAINT *constraint_name* de ALTER TABLE e a opção WITH CHECK para validá-las.  
   
          Os exemplos a seguir mostram conjuntos válidos de restrições:  
   
-        ```  
+        ```syntaxsql
         { [col < 10], [col between 11 and 20] , [col > 20] }  
         { [col between 11 and 20], [col between 21 and 30], [col between 31 and 100] }  
         ```  
@@ -356,7 +356,7 @@ Os exemplos a seguir usam o banco de dados AdventureWorks 2012 ou AdventureWorks
 ### <a name="a-using-a-simple-create-view"></a>a. Usando uma CREATE VIEW simples  
  O exemplo a seguir cria uma exibição usando uma instrução `SELECT` simples. Uma exibição simples é útil quando uma combinação de colunas é consultada com frequência. Os dados dessa exibição vêm das tabelas `HumanResources.Employee` e `Person.Person` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Os dados fornecem o nome e informações de data de contratação dos funcionários da [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. A exibição pode ser criada para a pessoa que cuida do controle de aniversários de trabalho, mas sem dar a essa pessoa acesso a todos os dados nessas tabelas.  
   
-```  
+```sql
 CREATE VIEW hiredate_view  
 AS   
 SELECT p.FirstName, p.LastName, e.BusinessEntityID, e.HireDate  
@@ -371,7 +371,7 @@ GO
   
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```  
+```sql
 CREATE VIEW Purchasing.PurchaseOrderReject  
 WITH ENCRYPTION  
 AS  
@@ -387,7 +387,7 @@ GO
 ### <a name="c-using-with-check-option"></a>C. Usando WITH CHECK OPTION  
  O exemplo a seguir mostra uma exibição chamada `SeattleOnly` que referencia cinco tabelas e permite que as modificações de dados se apliquem somente a funcionários que vivem em Seattle.  
   
-```  
+```sql
 CREATE VIEW dbo.SeattleOnly  
 AS  
 SELECT p.LastName, p.FirstName, e.JobTitle, a.City, sp.StateProvinceCode  
@@ -408,7 +408,7 @@ GO
 ### <a name="d-using-built-in-functions-within-a-view"></a>D. Usando funções internas em uma exibição  
  O exemplo a seguir mostra uma definição de exibição que inclui uma função interna. Ao usar funções, é necessário especificar um nome de coluna para a coluna derivada.  
   
-```  
+```sql
 CREATE VIEW Sales.SalesPersonPerform  
 AS  
 SELECT TOP (100) SalesPersonID, SUM(TotalDue) AS TotalSales  
@@ -422,7 +422,7 @@ GO
 ### <a name="e-using-partitioned-data"></a>E. Usando dados particionados  
  O exemplo a seguir usa as tabelas chamadas `SUPPLY1`, `SUPPLY2`, `SUPPLY3` e `SUPPLY4`. Essas tabelas correspondem às tabelas de fornecedor de quatro escritórios, localizados em países/regiões diferentes.  
   
-```  
+```sql
 --Create the tables and insert the values.  
 CREATE TABLE dbo.SUPPLY1 (  
 supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 1 and 150),  
@@ -469,7 +469,7 @@ GO
 ### <a name="f-creating-a-simple-view"></a>F. Criando uma exibição simples  
  O exemplo a seguir cria uma exibição selecionando apenas algumas das colunas da tabela de origem.  
   
-```  
+```sql
 CREATE VIEW DimEmployeeBirthDates AS  
 SELECT FirstName, LastName, BirthDate   
 FROM DimEmployee;  
@@ -478,7 +478,7 @@ FROM DimEmployee;
 ### <a name="g-create-a-view-by-joining-two-tables"></a>G. Criar um modo de exibição unindo duas tabelas  
  O exemplo a seguir cria uma exibição usando uma instrução `SELECT` com um `OUTER JOIN`. Os resultados da consulta de junção preenchem a exibição.  
   
-```  
+```sql
 CREATE VIEW view1  
 AS 
 SELECT fis.CustomerKey, fis.ProductKey, fis.OrderDateKey, 

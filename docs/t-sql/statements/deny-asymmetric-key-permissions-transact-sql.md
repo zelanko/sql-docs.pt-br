@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 83655bc03b2f55d9d7d426d1fa58ce4e86570d8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 641e3ec1d012a96de167d740b92bcbe554d2e4b3
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68114994"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634512"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>Permissões de chave assimétrica DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68114994"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
   
 DENY { permission  [ ,...n ] }   
     ON ASYMMETRIC KEY :: asymmetric_key_name   

@@ -10,12 +10,12 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f5f8b817d2de14c41c32fc815dc068a7776b54e3
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74401700"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633954"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "74401700"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
   
 CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  

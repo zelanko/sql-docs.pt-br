@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df6819f9beaa78232227e0fadd3e7c7a2e56c801
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73530922"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634743"
 ---
 # <a name="restore-statements-transact-sql"></a>Instruções RESTORE (Transact-SQL)
 
@@ -86,7 +86,7 @@ Para obter informações sobre os cenários de restauração do [!INCLUDE[ssNoVe
 
 ## <a name="syntax"></a>Sintaxe
 
-```sql
+```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
 RESTORE DATABASE { database_name | @database_name_var }
  [ FROM <backup_device> [ ,...n ] ]
@@ -751,7 +751,7 @@ Para outros comandos RESTORE com suporte, consulte:
 
 ## <a name="syntax"></a>Sintaxe
 
-```sql
+```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
 RESTORE DATABASE { database_name | @database_name_var }
  FROM URL = { 'physical_device_name' | @physical_device_name_var } [ ,...n ]
@@ -883,7 +883,7 @@ Restaura um banco de dados de usuário do [!INCLUDE[ssPDW](../../includes/sspdw-
 
 ## <a name="syntax"></a>Sintaxe
 
-```sql
+```syntaxsql
 
 -- Restore the master database
 -- Use the Configuration Manager tool.
@@ -995,7 +995,7 @@ O exemplo a seguir restaura um backup completo e, em seguida, um backup diferenc
 
 O backup completo do banco de dados é restaurado do backup completo que está armazenado no diretório `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. Se a restauração for concluída com êxito, o backup diferencial será restaurado no banco de dados SalesInvoices2013. O backup diferencial é armazenado no diretório `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff`.
 
-```sql
+```syntaxsql
 RESTORE DATABASE SalesInvoices2013
     FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff'
     WITH BASE = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'
@@ -1007,7 +1007,7 @@ RESTORE DATABASE SalesInvoices2013
 
 Este exemplo restaura as informações de cabeçalho para o backup de banco de dados `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. Os resultados do comando em uma linha de informações para o backup de Invoices2013Full.
 
-```sql
+```syntaxsql
 RESTORE HEADERONLY
     FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'
 [;]

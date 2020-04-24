@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0309fab947502e6aece3cd369392a7f5e2d1aa29
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c1103173ee8cdc90eca1a6acc1a7ac781610a5dc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215956"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632619"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -44,7 +44,7 @@ Inclui todas as informações de conexão exigidas para acessar dados remotos de
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```syntaxsql
 OPENROWSET
 ( { 'provider_name' , { 'datasource' ; 'user_id' ; 'password'
    | 'provider_string' }

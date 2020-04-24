@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84060374e3d46dde985e32a549180d8492c72892
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af335cdb4342572184a7a6ced846d1792be39d5b
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929003"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634378"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67929003"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
   
 SET FORCEPLAN { ON | OFF }  
 ```  
@@ -57,7 +57,7 @@ SET FORCEPLAN { ON | OFF }
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir executa uma junção de quatro tabelas. A configuração `SHOWPLAN_TEXT` está habilitada, portanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna as informações sobre como o processamento da consulta é diferente depois de habilitar a configuração `SET FORCE_PLAN`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Make sure FORCEPLAN is set to OFF.  

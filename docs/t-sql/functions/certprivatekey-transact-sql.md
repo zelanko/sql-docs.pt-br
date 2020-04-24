@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e409d5064cb0e807d12a76b42055a6a43c9cb7c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 179b0b18cab195a61526de26de7b50fb57a5e3de
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "65948830"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634899"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Somente os usuários com acesso à chave privada do certificado podem usar essa 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```sql
+```syntaxsql
 CERTPRIVATEKEY   
     (  
           cert_ID   

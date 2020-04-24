@@ -17,12 +17,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44a966ba100441a652ca0558552152a460e21c66
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071167"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634138"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ Adiciona uma ou mais linhas a uma tabela `node` ou `edge` do [!INCLUDE[ssNoVersi
 ## <a name="insert-into-node-table-syntax"></a>Sintaxe de INSERT na tabela Node 
 A sintaxe para inserção em uma tabela Node é a mesma de uma tabela normal. 
 
-```sql
+```syntaxsql
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  

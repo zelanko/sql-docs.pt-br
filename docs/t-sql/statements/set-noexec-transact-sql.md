@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7c74a19dc498e3551b1e8bdc2018c10392e803f6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3eff51bcf1c16f8df8f3058d3b9b1481d1360cfd
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68034945"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633016"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68034945"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
   
 SET NOEXEC { ON | OFF }  
 ```  
@@ -56,7 +56,7 @@ SET NOEXEC { ON | OFF }
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `NOEXEC` com uma consulta válida, um consulta com um nome de objeto que não é válido e uma consulta com sintaxe incorreta.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 PRINT 'Valid query';  

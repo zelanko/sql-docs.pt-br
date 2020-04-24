@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7dc31f0a7fde3e4ff73dbf6d1a927275a68f65d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fac9026b149380b024fa8b0ff4c98a906320d743
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941663"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634267"
 ---
 # <a name="set-showplan_text-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67941663"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_TEXT { ON | OFF }  
 ```  
@@ -61,7 +61,8 @@ SET SHOWPLAN_TEXT { ON | OFF }
 |Nome da coluna|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |**StmtText**|Para linhas que não são do tipo PLAN_ROW, essa coluna conterá o texto da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para linhas do tipo PLAN_ROW, essa coluna contém uma descrição da operação. Essa coluna contém o operador físico e pode também conter, opcionalmente, o operador lógico. Essa coluna também pode ser seguida de uma descrição, determinada pelo operador físico. Para obter mais informações sobre operadores físicos, veja a coluna **Argument** em [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md).|  
-  
+|||
+
  Para obter mais informações sobre os operadores lógicos e físicos que podem ser vistos na saída do plano de execução, veja [Referência de operadores lógicos e físicos do de plano de execução](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   
 ## <a name="permissions"></a>Permissões  
@@ -80,7 +81,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  Esta é a consulta que usa um índice:  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_TEXT ON;  
@@ -109,7 +110,7 @@ StmtText
   
  Aqui está a consulta que não usa um índice:  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_TEXT ON;  

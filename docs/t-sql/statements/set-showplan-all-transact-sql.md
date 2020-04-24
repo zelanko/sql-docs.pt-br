@@ -1,7 +1,7 @@
 ---
 title: SET SHOWPLAN_ALL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 063c4c94fc457b6b9bb69fa0395398c62bf49516
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941699"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634273"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67941699"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
@@ -78,7 +78,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**Tipo**|Tipo de nó. Para o nó pai de cada consulta, esse é o tipo de instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] (por exemplo, SELECT, INSERT, EXECUTE entre outras). Para os subnós que representam planos de execução, o tipo é PLAN_ROW.|  
 |**Parallel**|**0** = O operador não está sendo executado em paralelo.<br /><br /> **1** = O operador está sendo executado em paralelo.|  
 |**EstimateExecutions**|Número estimado de vezes que esse operador será executado durante a execução da consulta atual.|  
-  
+|||
+
  *Unidades de custo se baseiam em uma medida interna de tempo, e não no tempo do relógio. Elas são usadas para determinar o custo relativo de um plano em comparação com outros planos.  
   
 ## <a name="permissions"></a>Permissões  
@@ -101,7 +102,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  Os valores das colunas **EstimateRows** e **TotalSubtreeCost** são inferiores com relação à primeira consulta indexada, indicando que ela é processada muito mais rapidamente e que usa recursos mais ágeis e em menor quantidade do que a coluna não indexada.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_ALL ON;  
