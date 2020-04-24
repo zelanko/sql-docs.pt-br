@@ -1,7 +1,7 @@
 ---
 title: Método query() (tipo de dados xml) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/26/2017
+ms.date: 04/16/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a8eb8570d260b1e30d3c0ecafa0f3bfd15065983
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9501e1cf2b6c34ba3cf0ff4494866e2a32d16366
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72278165"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636110"
 ---
 # <a name="query-method-xml-data-type"></a>Método consulta() (Tipo de dados xml)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ Especifica uma consulta XQuery em instância do tipo de dados **xml**. O resulta
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
   
 query ('XQuery')  
 ```  
@@ -45,7 +45,7 @@ O exemplo a seguir declara uma variável **\@myDoc** do tipo **xml** e atribui u
   
 A consulta recupera o elemento filho <`Features`> do elemento <`ProductDescription`>:  
   
-```  
+```sql
 declare @myDoc xml  
 set @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
@@ -70,7 +70,7 @@ A saída a seguir mostra o resultado:
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>B. Usando o método query() em relação a uma coluna do tipo XML  
 No seguinte exemplo, o método **query()** é usado para especificar uma consulta XQuery na coluna **CatalogDescription** do tipo **xml** no banco de dados **AdventureWorks**:  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
 declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 <Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />  
@@ -100,7 +100,7 @@ A saída a seguir mostra o resultado parcial:
   
 Observe que os métodos query() e exist() declaram o prefixo PD. Nesses casos, você pode usar WITH XMLNAMESPACES para definir primeiro os prefixos e usá-los na consulta.  
   
-```  
+```sql
 WITH XMLNAMESPACES 
 (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  

@@ -14,12 +14,12 @@ dev_langs:
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fc1a9b8b91d37359ce7dc2a4845d0d83e81f996a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 912db4ce3841791e2bddde6f53be9869093bbcd2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68044148"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636036"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX (índices XML seletivos)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68044148"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
 DROP INDEX index_name ON <object>  
     [ WITH ( <drop_index_option> [ ,...n ] ) ]  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f1548aa3b7b436f89ad4dee73b7c1ed7034e0f87
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5485b48aeaf5bd1f5001d3c0c2eb962ab94cdb0c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71314587"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636369"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ Criptografa dados com a chave pública de um certificado.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
   
 EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )  
 ```  

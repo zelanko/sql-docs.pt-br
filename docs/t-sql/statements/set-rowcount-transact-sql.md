@@ -27,12 +27,12 @@ ms.assetid: c6966fb7-6421-47ef-98f3-82351f2f6bdc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f79e7931e0e1fd04a699620f65c1dc2566347202
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e46257d1853ee8aa744c805be424b13f2f9f34bb
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140227"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635736"
 ---
 # <a name="set-rowcount-transact-sql"></a>SET ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68140227"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
 SET ROWCOUNT { number | @number_var }   
 ```  
   
@@ -70,7 +70,7 @@ SET ROWCOUNT { number | @number_var }
 ## <a name="examples"></a>Exemplos  
  SET ROWCOUNT para de processar depois do número especificado de linhas. No exemplo a seguir, observe que mais de 500 linhas atendem aos critérios de `Quantity` menor que `300`. Porém, depois de aplicar SET ROWCOUNT, você pode ver que nem todas as linhas foram retornadas.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT count(*) AS Count  
@@ -91,20 +91,20 @@ GO
   
  Agora, defina `ROWCOUNT` como `4` e retorne todas as linhas para demonstrar que apenas quatro linhas são retornadas.  
   
-```  
+```sql
 SET ROWCOUNT 4;  
 SELECT *  
 FROM Production.ProductInventory  
 WHERE Quantity < 300;  
 GO  
   
-(4 row(s) affected)
+-- (4 row(s) affected)
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  SET ROWCOUNT para de processar depois do número especificado de linhas. No exemplo a seguir, observe que mais de 20 linhas atendem aos critérios de `AccountType = 'Assets'`. Porém, depois de aplicar SET ROWCOUNT, você pode ver que nem todas as linhas foram retornadas.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SET ROWCOUNT 5;  
@@ -114,7 +114,7 @@ WHERE AccountType = 'Assets';
   
  Para retornar todas as linhas, defina ROWCOUNT como 0.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SET ROWCOUNT 0;  
