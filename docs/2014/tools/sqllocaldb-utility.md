@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f13a16e7c8f507914abe8529e02b76161072c5bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035395"
 ---
 # <a name="sqllocaldb-utility"></a>Utilitário SqlLocalDB
@@ -43,30 +43,30 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **criar** | **c** ] Instance- * \<Name>instância-versão>* [**-s** ] * \<*  
+ [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [ **-s** ]  
  Cria uma nova instância do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. `SqlLocalDB`usa a versão de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] binários especificada pelo * \<argumento de>da versão de instância* . O número da versão é especificado em formato numérico com pelo menos um decimal. Os números de versões secundárias (pacotes de serviço) são opcionais. Por exemplo, os dois números de versão seguintes são aceitáveis: 11.0 ou 11.0.1186. A versão especificada deve ser estalada no computador. Se não for especificado, o número de versão padrão será a versão do `SqlLocalDB` utilitário. A adição de **-s** inicia a nova instância do **LocalDB**.  
   
- [ **compartilhamento** | **h** ]  
+ [ **share** | **h** ]  
  Compartilha a instância privada especificada do **LocalDB** que usa o nome compartilhado especificado. Se a SID ou o nome de conta do usuário for omitido, o valor padrão será o usuário atual.  
   
- [não **compartilhado** | **u** ]  
+ [ **unshared** | **u** ]  
  Interrompe o compartilhamento da instância especificada compartilhada do **LocalDB**.  
   
- [ **excluir** | **d** ] *>de nome de instância \<*  
+ [ **delete** | **d** ] *\<instance-name>*  
  Exclui a instância especificada do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**.  
   
- [ **Iniciar** | **s** ] "*\<nome da instância>*"  
+ [ **start** | **s** ] " *\<instance-name>* "  
  Inicia a instância especificada do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Quando tem êxito, a instrução retorna o endereço de pipe nomeado do **LocalDB**.  
   
- [ **parar** | **p** ] Instance-Name>[**-i** ] [**-k** ] * \<*  
+ [ **stop** | **p** ] *\<instance-name>* [ **-i** ] [ **-k** ]  
  Interrompe a instância especificada do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Adicionar **-i** solicita o desligamento da `NOWAIT` instância com a opção. A adição de **-k** elimina o processo da instância sem contatá-la.  
   
- [ **informações** | **i** ] [ * \<nome da instância>* ]  
+ [ **info** | **i** ] [ *\<instance-name>* ]  
  Lista todas as instâncias do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** de propriedade do usuário atual.  
   
- [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **** **** *Instance-Name>retorna o nome, a versão, o estado (em execução ou parado), a última hora de início para a instância especificada do LocalDB e o nome \<* do pipe local do LocalDB.  
+ *\<instance-name>* retorna o nome, a versão, o estado (Executando ou Parado), a hora da última inicialização da instância especificada do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** e o nome do pipe local do **LocalDB**.  
   
- [ **rastrear** | **t** ] **ativado** | ****  
+ [ **trace** | **t** ] **on** | **off**  
  **trace on** habilita o rastreamento para `SqlLocalDB` as chamadas à API para o usuário atual. **trace off** desabilita o rastreamento.  
   
  **-?**  

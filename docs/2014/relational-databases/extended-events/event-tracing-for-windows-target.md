@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62519300"
 ---
 # <a name="event-tracing-for-windows-target"></a>destino do rastreamento de eventos do Windows
@@ -48,7 +48,7 @@ ms.locfileid: "62519300"
   
  A tabela a seguir descreve as opções disponíveis para configuração do destino de ETW.  
   
-|Opção|Valores permitidos|DESCRIÇÃO|  
+|Opção|Valores permitidos|Descrição|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|Qualquer cadeia de caracteres até 256 caracteres. Esse valor é opcional.|O nome da sessão de Eventos Estendidos. Por padrão, este é XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Qualquer cadeia de caracteres até 256 caracteres. Esse valor é opcional.|O caminho para o arquivo de log da sessão de Eventos Estendidos. Por padrão, esse é % TEMP% \ XEEtw.etl.|  
@@ -75,7 +75,7 @@ ms.locfileid: "62519300"
     > [!IMPORTANT]  
     >  O caminho do arquivo não pode ser alterado depois que a sessão for iniciada.  
   
--   Os arquivos em formato MOF estão em *\<your install path>* \Microsoft SQL Server\Shared. Para obter mais informações, veja [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) no MSDN.  
+-   Os arquivos de Managed Object Format (MOF) estão em * \<seu caminho de instalação>* \Microsoft SQL Server\Shared. Para obter mais informações, veja [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) no MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Adicionando o destino a uma sessão  
  Para adicionar o destino de ETW a uma sessão de Eventos Estendidos, você deve incluir a instrução a seguir ao criar ou alterar uma sessão de evento:  
@@ -87,9 +87,9 @@ ADD TARGET package0.etw_classic_sync_target
  Para obter mais informações sobre um exemplo completo que mostra como usar o destino ETW, inclusive como exibir os dados, veja [Monitorar a atividade do sistema usando Eventos Estendidos](monitor-system-activity-using-extended-events.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Destinos de eventos estendidos do SQL Server](../../database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [SQL Server destinos de eventos estendidos](../../database-engine/sql-server-extended-events-targets.md)   
+ [sys. dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [CRIAR sessão de evento &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37f1b8c1f97601ab9997fdb6706587f42e1b4e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067457"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Criar e gerenciar partições no banco de dados de workspace (SSAS tabular)
-  As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de ou em paralelo com outras partições. As partições podem melhorar a escalabilidade e a gerenciabilidade de bancos de dados grandes. Por padrão, cada tabela tem uma partição que inclui todas as colunas. As tarefas neste tópico descrevem como criar e gerenciar partições no banco de dados de workspace modelo usando a caixa de diálogo **Gerenciador de Partições** no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
+  As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de ou em paralelo com outras partições. As partições podem melhorar a escalabilidade e a gerenciabilidade de bancos de dados grandes. Por padrão, cada tabela tem uma partição que inclui todas as colunas. As tarefas neste tópico descrevem como criar e gerenciar partições no banco de dados de espaço de trabalho modelo usando a caixa de diálogo **Gerenciador de partições** no[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
  Depois que um modelo for implantado em outra instância do Analysis Services, os administradores de banco de dados podem criar e gerenciar partições no modelo (implantado) usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Criar e gerenciar partições de modelos tabulares &#40;SSAS tabular&#41;](partitions-ssas-tabular.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66067457"
 ## <a name="tasks"></a>Tarefas  
  Para criar e gerenciar partições, você usará a caixa de diálogo **Gerenciador de Partições** . Para exibir a caixa de diálogo **Gerenciador de Partições** , no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], clique no menu **Tabela** e clique em **Partições**.  
   
-###  <a name="bkmk_create_new"></a>Para criar uma nova partição  
+###  <a name="to-create-a-new-partition"></a><a name="bkmk_create_new"></a>Para criar uma nova partição  
   
 1.  No designer de modelo, selecione a tabela para a qual você deseja definir uma partição.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66067457"
   
      Para usar uma instrução SQL, clique no botão **Editor de Consultas** no canto superior direito da janela de visualização, e digite ou cole uma instrução de consulta SQL na janela de consulta. Para validar sua instrução, clique em **Validar**. Para usar o Designer de Consulta, clique em **Design**.  
   
-###  <a name="bkmk_copy"></a>Para copiar uma partição  
+###  <a name="to-copy-a-partition"></a><a name="bkmk_copy"></a> Para copiar uma partição  
   
 1.  No **Gerenciador de Partições**, na caixa de listagem **Tabela** , verifique ou selecione a tabela que contém a partição que você deseja copiar.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66067457"
   
 3.  Em **Nome da Partição**, digite um novo nome para a partição.  
   
-###  <a name="bkmk_delete"></a>Para excluir uma partição  
+###  <a name="to-delete-a-partition"></a><a name="bkmk_delete"></a> Para excluir uma partição  
   
 1.  No **Gerenciador de Partições**, na caixa de listagem **Tabela** , verifique ou selecione a tabela que contém a partição que você deseja excluir.  
   

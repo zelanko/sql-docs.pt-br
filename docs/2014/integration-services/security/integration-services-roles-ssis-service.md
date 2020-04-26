@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43c1c932565ae3df666be10a1b89794ecd720135
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766658"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Funções do Integration Services (Serviço do SSIS)
@@ -33,7 +33,7 @@ ms.locfileid: "62766658"
   
 |Função|Ação de leitura|Ação de gravação|  
 |----------|-----------------|------------------|  
-|`db_ssisadmin`<br /><br /> ou<br /><br /> `sysadmin`|Enumerar os próprios pacotes.<br /><br /> Enumerar todos os pacotes.<br /><br /> Exibir os próprios pacotes.<br /><br /> Exibir todos os pacotes.<br /><br /> Executar os próprios pacotes.<br /><br /> Executar todos os pacotes.<br /><br /> Exportar os próprios pacotes.<br /><br /> Exportar todos os pacotes.<br /><br /> Executar todos os pacotes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|Importar pacotes.<br /><br /> Excluir os próprios pacotes.<br /><br /> Excluir todos os pacotes.<br /><br /> Mudar as funções dos próprio pacotes.<br /><br /> Alterar as funções de todos os pacotes.<br /><br /> <br /><br /> ** \* Importante \* \* ** Os membros da função db_ssisadmin e a função dc_admin podem ser capazes de elevar seus privilégios para sysadmin. Essa elevação de privilégios pode ocorrer porque essas funções podem modificar os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] podem ser executados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o contexto de segurança sysadmin do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para se proteger contra essa elevação de privilégios ao executar planos de manutenção, conjuntos de coletas de dados e outros pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure os trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que executam pacotes para usar uma conta proxy com privilégios limitados ou apenas adicione membros sysadmin às funções db_ssisadmin e dc_admin.|  
+|`db_ssisadmin`<br /><br /> ou o<br /><br /> `sysadmin`|Enumerar os próprios pacotes.<br /><br /> Enumerar todos os pacotes.<br /><br /> Exibir os próprios pacotes.<br /><br /> Exibir todos os pacotes.<br /><br /> Executar os próprios pacotes.<br /><br /> Executar todos os pacotes.<br /><br /> Exportar os próprios pacotes.<br /><br /> Exportar todos os pacotes.<br /><br /> Executar todos os pacotes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|Importar pacotes.<br /><br /> Excluir os próprios pacotes.<br /><br /> Excluir todos os pacotes.<br /><br /> Mudar as funções dos próprio pacotes.<br /><br /> Alterar as funções de todos os pacotes.<br /><br /> <br /><br /> ** \* Importante \* \* ** Os membros da função db_ssisadmin e a função dc_admin podem ser capazes de elevar seus privilégios para sysadmin. Essa elevação de privilégios pode ocorrer porque essas funções podem modificar os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] podem ser executados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o contexto de segurança sysadmin do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para se proteger contra essa elevação de privilégios ao executar planos de manutenção, conjuntos de coletas de dados e outros pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure os trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que executam pacotes para usar uma conta proxy com privilégios limitados ou apenas adicione membros sysadmin às funções db_ssisadmin e dc_admin.|  
 |**db_ssisltduser**|Enumerar os próprios pacotes.<br /><br /> Enumerar todos os pacotes.<br /><br /> Exibir os próprios pacotes.<br /><br /> Executar os próprios pacotes.<br /><br /> Exportar os próprios pacotes.|Importar pacotes.<br /><br /> Excluir os próprios pacotes.<br /><br /> Mudar as funções dos próprio pacotes.|  
 |**db_ssisoperator**|Enumerar todos os pacotes.<br /><br /> Exibir todos os pacotes.<br /><br /> Executar todos os pacotes.<br /><br /> Exportar todos os pacotes.<br /><br /> Executar todos os pacotes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|Nenhum|  
 |**Administradores do Windows**|Exibir os detalhes de execução de todos os pacotes em execução.|Parar todos os pacotes em execução.|  
@@ -65,19 +65,19 @@ ms.locfileid: "62766658"
   
  Para atribuir funções a pacotes, você precisa concluir as seguintes tarefas.  
   
--   **Abra o pesquisador de objetos e conecte-se a Integration Services**  
+-   **Abrir o Pesquisador de Objetos e conectar-se ao Integration Services**  
   
      Para poder atribuir funções aos pacotes por meio do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], você deve abrir o Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e conectar-se ao [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
      O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] deve ser iniciado antes de você se conectar ao [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
--   **Atribuir funções de leitor e gravador a pacotes**  
+-   **Atribuir funções de leitor e de gravador aos pacotes**  
   
      Você pode atribuir uma função de leitor e de gravador a cada pacote.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Atribuir uma função de leitor e de gravador a um pacote](../assign-a-reader-and-writer-role-to-a-package.md)  
+-   [Atribuir uma função de leitor e gravador a um pacote](../assign-a-reader-and-writer-role-to-a-package.md)  
   
 -   [Criar uma função definida pelo usuário](../create-a-user-defined-role.md)  
   

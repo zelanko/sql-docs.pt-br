@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2833f1f342aa212b73611d257b8e29606a14cce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62662977"
 ---
 # <a name="deprecation-final-support-event-class"></a>Classe de evento Deprecation Final Support
@@ -39,7 +39,7 @@ ms.locfileid: "62662977"
 |IntegerData2|`int`|Deslocamento final (em bytes) da instrução que está sendo executada.|55|Sim|  
 |IsSystem|`int`|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
 |LoginName|`nvarchar`|Nome de logon do usuário (logon de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou as credenciais de logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows no formato DOMÍNIO/nomedousuário).|11|Sim|  
-|LoginSid|`image`|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição do catálogo **Sys. server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
+|LoginSid|`image`|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |NTDomainName|`nvarchar`|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |NTUserName|`nvarchar`|Nome do usuário do Windows.|6|Sim|  
 |Deslocamento|`int`|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
@@ -56,7 +56,7 @@ ms.locfileid: "62662977"
 |XactSequence|`bigint`|Token que descreve a transação atual.|50|Sim|  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_trace_setevent](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Classe de evento reprovation Announcement](deprecation-announcement-event-class.md)   
  [Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   

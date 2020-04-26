@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62937185"
 ---
-# <a name="job-step-properties-new-job-step-advanced-page"></a>Propriedades da etapa de trabalho: nova etapa de trabalho (página Avançado)
+# <a name="job-step-properties-new-job-step-advanced-page"></a>Propriedades da Etapa de Trabalho: Nova Etapa de Trabalho (página Avançado)
   Use esta página para exibir e alterar as propriedades de uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] etapa de trabalho do Agent.  
   
 ## <a name="options"></a>Opções  
- **Ação em caso de êxito**  
+ **Ação ao obter êxito**  
  Define a ação que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent executará se a etapa de trabalho obtiver êxito.  
   
  **Tentativas de repetição**  
@@ -45,7 +45,7 @@ ms.locfileid: "62937185"
  **Exibir**  
  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esse botão é desabilitado para exibir arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
   
- **Acrescentar saída ao arquivo existente**  
+ **Anexar saída ao arquivo existente**  
  Anexa a saída aos conteúdos existentes no arquivo. Caso contrário, os conteúdos anteriores do arquivo serão substituídos a cada vez que a etapa de trabalho for executada.  
   
  **Registrar na tabela**  
@@ -54,7 +54,7 @@ ms.locfileid: "62937185"
  **Exibir**  
  Depois de a etapa de trabalho ter sido executada pelo menos uma vez, clique em **Exibir** para exibir sua saída na tabela.  
   
- **Acrescentar saída à entrada existente na tabela**  
+ **Anexar saída à entrada existente na tabela**  
  Anexa a saída aos conteúdos existentes na tabela. Caso contrário, os conteúdos anteriores da tabela serão substituídos a cada vez que a etapa de trabalho for executada.  
   
  **Incluir saída da etapa no histórico**  
@@ -73,7 +73,7 @@ ms.locfileid: "62937185"
  **Exibir**  
  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esse botão é desabilitado para exibir arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
   
- **Acrescentar saída ao arquivo existente**  
+ **Anexar saída ao arquivo existente**  
  Anexa a saída da etapa de trabalho aos conteúdos anteriores do arquivo a cada vez que é executada.  
   
  **Registrar na tabela**  
@@ -82,7 +82,7 @@ ms.locfileid: "62937185"
  **Exibir**  
  Depois de a etapa de trabalho ter sido executada pelo menos uma vez, clique em **Exibir** para exibir sua saída na tabela.  
   
- **Acrescentar saída à entrada existente na tabela**  
+ **Anexar saída à entrada existente na tabela**  
  Anexa a saída aos conteúdos existentes na tabela. Caso contrário, os conteúdos anteriores da tabela serão substituídos a cada vez que a etapa de trabalho for executada.  
   
  **Incluir saída da etapa no histórico**  
@@ -98,7 +98,7 @@ ms.locfileid: "62937185"
  **Exibir**  
  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esse botão é desabilitado para exibir arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
   
- **Acrescentar saída ao arquivo existente**  
+ **Anexar saída ao arquivo existente**  
  Anexa a saída da etapa de trabalho aos conteúdos anteriores do arquivo a cada vez que é executada.  
   
  **Registrar na tabela**  
@@ -107,7 +107,7 @@ ms.locfileid: "62937185"
  **Exibir**  
  Depois de a etapa de trabalho ter sido executada pelo menos uma vez, clique em **Exibir** para exibir sua saída na tabela.  
   
- **Acrescentar saída à entrada existente na tabela**  
+ **Anexar saída à entrada existente na tabela**  
  Anexa a saída aos conteúdos existentes na tabela. Caso contrário, os conteúdos anteriores da tabela serão substituídos a cada vez que a etapa de trabalho for executada.  
   
  **Incluir saída da etapa no histórico**  
@@ -130,7 +130,7 @@ ms.locfileid: "62937185"
  **Exibir**  
  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esse botão está desabilitado para exibir os arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
   
- **Acrescentar saída ao arquivo existente**  
+ **Anexar saída ao arquivo existente**  
  Anexa a saída aos conteúdos existentes no arquivo. Caso contrário, os conteúdos anteriores do arquivo serão substituídos a cada vez que a etapa de trabalho for executada.  
   
  **Registrar na tabela**  
@@ -139,7 +139,7 @@ ms.locfileid: "62937185"
  **Exibir**  
  Depois de a etapa de trabalho ter sido executada pelo menos uma vez, clique em **Exibir** para exibir sua saída na tabela.  
   
- **Acrescentar saída à entrada existente na tabela**  
+ **Anexar saída à entrada existente na tabela**  
  Anexa a saída aos conteúdos existentes na tabela. Caso contrário, os conteúdos anteriores da tabela serão substituídos a cada vez que a etapa de trabalho for executada.  
   
  **Incluir saída da etapa no histórico**  

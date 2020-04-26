@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767470"
 ---
-# <a name="step-4-testing-the-lesson-2-tutorial-package"></a>Etapa 4: Testando o pacote de tutorial da Lição 2
+# <a name="step-4-testing-the-lesson-2-tutorial-package"></a>Etapa 4: Testar o pacote de tutorial da Lição 2
   Com o contêiner Loop Foreach e o gerenciador de conexões de Arquivo Simples agora configurado, o pacote da Lição 2 pode iterar através da coleção de 14 arquivos simples na pasta Dados de Exemplo. Cada vez que um nome de arquivo é encontrado e corresponde aos critérios de nome de arquivo especificado, o contêiner Loop Foreach popula a variável definida pelo usuário com o nome do arquivo. Essa variável, por sua vez, atualiza a propriedade ConnectionString do gerenciador de conexões de Arquivo Simples, e uma conexão é criada para o novo arquivo simples. O contêiner Loop Foreach, então, executa a tarefa de fluxo de dados não modificados em relação aos dados no novo arquivo simples, antes de se conectar ao próximo arquivo na pasta.  
   
  Use o procedimento a seguir para testar a nova funcionalidade de loop que você adicionou ao seu pacote.  
@@ -28,7 +28,7 @@ ms.locfileid: "62767470"
 ## <a name="checking-the-package-layout"></a>Verificando o layout do pacote  
  Antes de testar o pacote, deve-se verificar se os fluxos de controle e de dados do pacote da Lição 2 contêm os objetos mostrados nos diagramas a seguir. O fluxo de dados deve ser idêntico ao fluxo de dados na Lição 1.  
   
- **Fluxo de Controle**  
+ **Fluxo de controle**  
   
  ![Fluxo de controle no pacote](../../2014/tutorials/media/task4lesson2control.gif "Fluxo de controle no pacote")  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62767470"
 2.  Terminada a execução do pacote, no menu **Depurar** , clique em **Parar Depuração**.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 5: Adicionando configurações de pacote para o modelo de implantação de pacote](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [Lição 5: Como adicionar configurações de pacote para o modelo de implantação de pacote](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Execução de projetos e pacotes](packages/run-integration-services-ssis-packages.md)  

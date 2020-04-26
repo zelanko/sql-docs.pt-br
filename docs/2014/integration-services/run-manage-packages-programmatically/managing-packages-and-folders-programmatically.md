@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a6ede05e340cbd2822cd72ceee514f6ce31a2755
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766848"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Gerenciando pacotes e pastas programaticamente
   Ao trabalhar de forma programática com pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], convém determinar se um pacote ou pasta individual existe ou gerenciar as pastas em que os pacotes estão armazenados. A classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> do namespace <xref:Microsoft.SqlServer.Dts.Runtime> fornece diversos métodos para atender a esses requisitos.  
   
-##  <a name="exists"></a> Determinando se existe um pacote ou pasta  
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> Determinando se existe um pacote ou pasta  
  Para determinar programaticamente se existe um pacote salvo, chame um dos métodos a seguir antes de tentar carregar e executar o pacote:  
   
 |Local de armazenamento|Método de chamada|  
@@ -41,10 +41,10 @@ ms.locfileid: "62766848"
   
 
   
-##  <a name="managing"></a> Gerenciar pacotes e pastas  
+##  <a name="managing-packages-and-folders"></a><a name="managing"></a> Gerenciar pacotes e pastas  
  A classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> do namespace <xref:Microsoft.SqlServer.Dts.Runtime> fornece métodos adicionais para gerenciar pacotes e as pastas nas quais eles são armazenados.  
   
-###  <a name="managing_rempkg"></a> Remover um pacote  
+###  <a name="removing-a-package"></a><a name="managing_rempkg"></a> Remover um pacote  
  Para remover um pacote salvo programaticamente, chame um dos métodos seguintes:  
   
 |Local de armazenamento|Método de chamada|  
@@ -54,7 +54,7 @@ ms.locfileid: "62766848"
   
 
   
-###  <a name="managing_create"></a> Criar uma pasta  
+###  <a name="creating-a-folder"></a><a name="managing_create"></a> Criar uma pasta  
  Para criar uma pasta de armazenamento programaticamente, chame um dos métodos seguintes:  
   
 |Local de armazenamento|Método de chamada|  
@@ -64,7 +64,7 @@ ms.locfileid: "62766848"
   
 
   
-###  <a name="managing_remfldr"></a> Remover uma pasta  
+###  <a name="removing-a-folder"></a><a name="managing_remfldr"></a> Remover uma pasta  
  Para remover uma pasta de armazenamento programaticamente, chame um dos métodos seguintes:  
   
 |Local de armazenamento|Método de chamada|  
@@ -74,7 +74,7 @@ ms.locfileid: "62766848"
   
   
   
-###  <a name="managing_rename"></a> Renomear uma pasta  
+###  <a name="renaming-a-folder"></a><a name="managing_rename"></a> Renomear uma pasta  
  Para renomear uma pasta de armazenamento programaticamente, chame um dos métodos seguintes:  
   
 |Local de armazenamento|Método de chamada|  
@@ -84,10 +84,10 @@ ms.locfileid: "62766848"
   
 
   
-![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciamento de Pacotes &#40;Serviço SSIS&#41;](../service/package-management-ssis-service.md)   
- [Enumerar pacotes disponíveis programaticamente](../run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
+ [Gerenciamento de Pacotes &#40;serviço SSIS&#41;](../service/package-management-ssis-service.md)   
+ [Enumerando pacotes disponíveis programaticamente](../run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
   
   

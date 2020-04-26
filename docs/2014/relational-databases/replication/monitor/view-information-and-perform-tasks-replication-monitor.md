@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667121"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Exibir informações e executar tarefas usando o Replication Monitor
@@ -38,10 +38,10 @@ O Replication Monitor fornece uma série de guias e opções para exibir informa
     -   O Agente de Leitor de Log, que é usado por todas as publicações transacionais.    
     -   O Agente de Leitor de Fila, que é usado pelas publicações transacionais que possuem atualização de assinaturas em fila.  
   
--   **Avisos** (para os distribuidores que executam [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e posteriores)   
+-   **Advertências** (para Distribuidores que executam [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e posterior)   
     -   Essa guia permite especificar avisos e alertas para agentes.  
   
--   **Tokens de rastreamento** (somente replicação transacional, para [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] distribuidores que executam e posteriores)  
+-   **Tokens de Rastreamento** (apenas para replicação transacional, para Distribuidores que executam [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e posterior)  
   
      Essa guia permite medir a latência, o período decorrido entre a confirmação de uma transação no Publicador e a confirmação da transação correspondente no Assinante.  
   
@@ -64,7 +64,7 @@ O Replication Monitor fornece uma série de guias e opções para exibir informa
   
 -   **Publicações** – essa guia exibe informações sobre todas as publicações no Publicador selecionado.  
   
--   **Lista de observação da assinatura** -esta guia destina-se a exibir informações sobre assinaturas de todas as publicações disponíveis no Publicador selecionado que têm erros, avisos ou o desempenho mais baixo. Essa guia não é exibida para Distribuidores que executam as versões anteriores do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+-   **Lista de observação da assinatura** -esta guia destina-se a exibir informações sobre assinaturas de todas as publicações disponíveis no Publicador selecionado que têm erros, avisos ou o desempenho mais baixo. Essa guia não é exibida para distribuidores que executam [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]versões anteriores ao.  
   
 -   Guia **agentes** – essa guia exibe informações detalhadas sobre os agentes e trabalhos que são usados por todos os tipos de replicação. A guia também permite que você inicie e interrompa cada agente e trabalho.  
   
@@ -74,12 +74,12 @@ O Replication Monitor fornece uma série de guias e opções para exibir informa
   
 1.  Expanda um Grupo do publicador no painel esquerdo e clique em um Publicador.    
 2.  Para exibir informações sobre todas as publicações, clique na guia **Publicações** .    
-3.  Para exibir informações sobre assinaturas, clique na guia **Lista de Observação da Assinatura** . Você também pode acessar informações mais detalhadas e realizar tarefas a partir dessa guia:    
+3.  Para exibir informações sobre assinaturas, clique na guia **lista de observação da assinatura** . Você também pode acessar informações mais detalhadas e executar tarefas nesta guia:    
     -   Para exibir informações detalhadas sobre o agente associado a uma assinatura, clique com o botão direito do mouse na assinatura e então clique em **Exibir Detalhes**.    
     -   Para exibir as propriedades de uma assinatura, clique com o botão direito do mouse na assinatura e então clique em **Propriedades**.    
     -   Para sincronizar uma assinatura push, clique com o botão direito do mouse na assinatura, e, depois, clique em **Iniciar Sincronização**.    
     -   Para reinicializar uma assinatura, clique com o botão direito do mouse na assinatura, e, depois, clique em **Reinicializar Assinatura**.   
-4.  Para exibir informações sobre agentes, clique na guia **Agentes** . Você também pode acessar informações mais detalhadas e realizar tarefas nesta guia:    
+4.  Para exibir informações sobre agentes, clique na guia **agentes** . Você também pode acessar informações mais detalhadas e executar tarefas nesta guia:    
     -   Para exibir informações detalhadas sobre o agente (como mensagens informativas e qualquer mensagem de erro), clique com o botão direito do mouse no agente e então clique em **Exibir Detalhes**.    
     -   Para exibir informações detalhadas sobre o trabalho que executa o agente (como o cronograma, detalhes da etapa de trabalho e outras), clique com o botão direito do mouse no agente e então clique em **Propriedades**.    
     -   Para gerenciar os perfis do agente, clique com o botão direito do mouse no agente e então clique em **Perfil do Agente**. Para obter mais informações, consulte [Trabalhar com perfis do agente de replicação](../agents/replication-agent-profiles.md).    
@@ -118,7 +118,7 @@ O Replication Monitor fornece uma série de guias e opções para exibir informa
 -   O Agente de Leitor de Log, que é usado por todas as publicações transacionais.    
 -   O Agente de Leitor de Fila, que é usado pelas publicações transacionais habilitadas para atualização de assinaturas em fila.  
   
- Para exibir mais informações sobre as opções nessa guia, clique em **Ajuda** na barra de menu. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
+ Para exibir mais informações sobre as opções nessa guia, clique em **ajuda** na barra de menus. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
   
 ### <a name="view-information-and-perform-tasks"></a>Exibir informações e executar tarefas 
   
@@ -168,5 +168,5 @@ O Replication Monitor fornece uma série de guias e opções para exibir informa
 
 ## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar as propriedades da publicação](../publish/view-and-modify-publication-properties.md)   
- [Monitorando a Replicação](../monitoring-replication.md)  
+ [Monitorando a replicação](../monitoring-replication.md)  
   

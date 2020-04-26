@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6874d2fc2fd0206e7fe61d4e217820b4171a13e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067846"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>Caixa de diálogo Propriedades de Tabela (SSAS - Tabela)
@@ -29,11 +29,11 @@ ms.locfileid: "66067846"
 |Termo|Definição|  
 |----------|----------------|  
 |**Nome**|Exibe o nome da tabela.|  
-|**SESSÃO**|Exibe o identificador da tabela.|  
+|**ID**|Exibe o identificador da tabela.|  
 |**Descrição**|Exibe a descrição da tabela.|  
-|**Criar carimbo de data/hora**|Exibe a data e a hora de criação da tabela.|  
-|**Última atualização de esquema**|Exibe a data e a hora da última atualização dos metadados da tabela.|  
-|**Estado**|Exibe o estado do processamento da tabela. Para obter mais informações sobre os valores dessa propriedade, consulte <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**Criar Carimbo de Data/Hora**|Exibe a data e a hora de criação da tabela.|  
+|**Última Atualização de Esquema**|Exibe a data e a hora da última atualização dos metadados da tabela.|  
+|**State**|Exibe o estado do processamento da tabela. Para obter mais informações sobre os valores dessa propriedade, consulte <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Último Processamento**|Exibe a data e a hora do último processamento da tabela.|  
 |**Modo de Armazenamento Atual**|Exibe o modo de armazenamento atual da tabela. O modo de armazenamento é definido em nível do banco de dados e herdado por todas as tabelas. Você não pode usar modos de armazenamento diferentes no nível de tabela. Os valores válidos são InMemory (padrão), InMemoryWithDirectQuery, DirectQuery, DirectQueryWithinMemory.|  
   

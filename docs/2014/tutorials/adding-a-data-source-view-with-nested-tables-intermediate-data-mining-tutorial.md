@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 648b9d561ae340b67ed5e2d1aa878969e5a3bc47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822769"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>Adicionando uma exibição da fonte de dados com tabelas aninhadas (Tutorial de mineração de dados intermediário)
@@ -47,7 +47,7 @@ ms.locfileid: "62822769"
   
 2.  Na página **Bem-vindo ao Assistente de Exibição da Fonte de Dados**, clique em **Próximo**.  
   
-3.  Na página **selecionar uma fonte de dados** , em **fontes de dados relacionais**, selecione [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] a fonte de dados que você criou no tutorial de mineração de dados básico. Clique em **Próximo**.  
+3.  Na página **selecionar uma fonte de dados** , em **fontes de dados relacionais**, selecione [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] a fonte de dados que você criou no tutorial de mineração de dados básico. Clique em **Avançar**.  
   
 4.  Na página **selecionar tabelas e exibições** , selecione as tabelas a seguir e clique na seta para a direita para incluí-las na nova exibição da fonte de dados:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62822769"
   
     -   `vAssocSeqLineItems`  
   
-5.  Clique em **Próximo**.  
+5.  Clique em **Avançar**.  
   
 6.  Na página **concluindo o assistente** , por padrão, a exibição da fonte de [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]dados é denominada. Altere o nome para `Orders`e clique em **concluir**.  
   
@@ -82,6 +82,6 @@ ms.locfileid: "62822769"
 ## <a name="see-also"></a>Consulte Também  
  [Tutorial de mineração de dados intermediário &#40;Analysis Services de mineração de dados&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Estruturas de mineração &#40;Analysis Services de mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Modelos de mineração &#40;Analysis Services de mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Modelos de mineração &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

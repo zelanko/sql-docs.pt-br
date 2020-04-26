@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856328"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Criando uma estrutura e um modelo de rede neural (Tutorial de mineração de dados intermediário)
@@ -42,7 +42,7 @@ ms.locfileid: "62856328"
   
  [Processar todos os modelos](#bkmk_SeedProcess)  
   
-## Criar a estrutura padrão do Call Center<a name="bkmk_defaul"></a>  
+## <a name="create-the-default-call-center-structure"></a>Criar a estrutura padrão do Call Center<a name="bkmk_defaul"></a>  
   
 1.  Em Gerenciador de Soluções no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], clique com o botão direito do mouse em **estruturas de mineração** e selecione **nova estrutura de mineração**.  
   
@@ -56,13 +56,13 @@ ms.locfileid: "62856328"
   
      Como os modelos de regressão logística se baseiam em redes neurais, você pode reutilizar a mesma estrutura e adicionar um novo modelo de mineração.  
   
-6.  Clique em **Próximo**.  
+6.  Clique em **Avançar**.  
   
      A página **selecionar exibição da fonte de dados** é exibida.  
   
 7.  Em **exibições da fonte de dados disponíveis**, selecione `Call Center`e clique em **Avançar**.  
   
-8.  Na página **especificar tipos de tabela** , marque a caixa de seleção **caso** ao lado da tabela **FactCallCenter** . Não selecione nada para **DimDate**. Clique em **Próximo**.  
+8.  Na página **especificar tipos de tabela** , marque a caixa de seleção **caso** ao lado da tabela **FactCallCenter** . Não selecione nada para **DimDate**. Clique em **Avançar**.  
   
 9. Na página **especificar os dados de treinamento** , selecione a **chave** ao lado da coluna **FactCallCenterID.**  
   
@@ -75,23 +75,23 @@ ms.locfileid: "62856328"
     |AutomaticResponses|Entrada|  
     |AverageTimePerIssue|Entrada/Prever|  
     |Chamadas|Entrada|  
-    |DateKey|Não use|  
+    |DateKey|Não usar|  
     |DayOfWeek|Entrada|  
     |FactCallCenterID|Chave|  
     |IssuesRaised|Entrada|  
     |LevelOneOperators|Entrada/Prever|  
     |LevelTwoOperators|Entrada|  
-    |Pedidos|Entrada/Prever|  
+    |Orders|Entrada/Prever|  
     |ServiceGrade|Entrada/Prever|  
-    |Shift|Entrada|  
-    |TotalOperators|Não use|  
+    |Turno|Entrada|  
+    |TotalOperators|Não usar|  
     |WageType|Entrada|  
   
      Observe que várias colunas previsíveis foram selecionadas. Um dos pontos fortes do algoritmo de rede neural é que ele pode analisar todas as combinações possíveis de atributos de entrada e saída. Você não desejaria fazer isso para um grande conjunto de dados, pois ele poderia aumentar exponencialmente o tempo de processamento..  
   
 12. Na página **especificar conteúdo e tipo de dados das colunas** , verifique se a grade contém as colunas, os tipos de conteúdo e os tipos de dados, conforme mostrado na tabela a seguir, e clique em **Avançar**.  
   
-    |Colunas|Tipo de conteúdo|Tipos de dados|  
+    |Colunas|Tipo de conteúdo|Tipos de Dados|  
     |-------------|------------------|----------------|  
     |AutomaticResponses|Contínuo|long|  
     |AverageTimePerIssue|Contínuo|long|  
@@ -101,12 +101,12 @@ ms.locfileid: "62856328"
     |IssuesRaised|Contínuo|long|  
     |LevelOneOperators|Contínuo|long|  
     |LevelTwoOperators|Contínuo|long|  
-    |Pedidos|Contínuo|long|  
-    |ServiceGrade|Contínuo|DOUBLE|  
-    |Shift|Discreto|Texto|  
+    |Orders|Contínuo|long|  
+    |ServiceGrade|Contínuo|Double|  
+    |Turno|Discreto|Texto|  
     |WageType|Discreto|Texto|  
   
-13. Na página **criar conjunto de testes** , desmarque a caixa de texto da opção, **porcentagem de dados para teste**. Clique em **Próximo**.  
+13. Na página **criar conjunto de testes** , desmarque a caixa de texto da opção, **porcentagem de dados para teste**. Clique em **Avançar**.  
   
 14. Na página **concluindo o assistente** , para o **nome da estrutura**de mineração `Call Center`, digite.  
   
@@ -136,24 +136,24 @@ ms.locfileid: "62856328"
   
  Modelo padrão (contínuo)  
   
-|VALUE|SUPORTE|  
+|VALUE|SUPPORT|  
 |-----------|-------------|  
-|Missing|0|  
+|Ausente|0|  
 |0, 9875|120|  
   
  Guardado por clustering  
   
-|VALUE|SUPORTE|  
+|VALUE|SUPPORT|  
 |-----------|-------------|  
 |\<0, 748051948|34|  
 |0, 748051948-0.09716216215|27|  
-|0.09716216215 - 0.13297297295|11,8|  
+|0.09716216215 - 0.13297297295|39|  
 |0.13297297295 - 0.167499999975|10|  
 |>= 0.167499999975|10|  
   
  Guardado por áreas iguais  
   
-|VALUE|SUPORTE|  
+|VALUE|SUPPORT|  
 |-----------|-------------|  
 |\<0, 7|26|  
 |0, 7-0, 0|22|  
@@ -179,14 +179,14 @@ ms.locfileid: "62856328"
   
  Para obter mais informações sobre as opções de compartimentalização, consulte [métodos de discretização &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md).  
   
- Como alternativa, em vez de usar os valores numéricos, você pode adicionar uma coluna derivada separada que classifica as notas de serviço em intervalos de destino **** predefinidos \<, como melhor (ServiceGrade = 0, 5), **aceitável** (0,10 > ServiceGrade > 0, 5) e **ruim** (ServiceGrade >= 0,10).  
+ Como alternativa, em vez de usar os valores numéricos, você pode adicionar uma coluna derivada separada que classifica as notas de serviço em intervalos de destino **Best** predefinidos \<, como melhor (ServiceGrade = 0, 5), **aceitável** (0,10 > ServiceGrade > 0, 5) e **ruim** (ServiceGrade >= 0,10).  
   
-###  <a name="bkmk_newColumn"></a>Criar uma cópia de uma coluna e alterar o método discretização  
+###  <a name="create-a-copy-of-a-column-and-change-the-discretization-method"></a><a name="bkmk_newColumn"></a>Criar uma cópia de uma coluna e alterar o método discretização  
  Você fará uma cópia da coluna de mineração que contém o atributo de destino, ServiceGrade e alterará a forma como os números são agrupados. É possível criar várias cópias de qualquer coluna em uma estrutura de mineração, inclusive do atributo previsível.  
   
  Para este tutorial, você usará o método de Áreas Iguais de diferenciação e especificará quatro buckets. Os agrupamentos resultantes desse método são razoavelmente próximos dos valores de destino de interesse de seus usuários empresariais.  
   
-####  <a name="bkmk_ColumnCopy"></a>Para criar uma cópia personalizada de uma coluna na estrutura de mineração  
+####  <a name="to-create-a-customized-copy-of-a-column-in-the-mining-structure"></a><a name="bkmk_ColumnCopy"></a>Para criar uma cópia personalizada de uma coluna na estrutura de mineração  
   
 1.  No Gerenciador de Soluções, clique duas vezes na estrutura de mineração que você acabou de criar.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "62856328"
   
      Observe que quando você adiciona uma cópia de uma coluna da estrutura de mineração, o sinalizador de uso da cópia é definido automaticamente como `Ignore`. Normalmente, quando você adiciona uma cópia de uma coluna a uma estrutura de mineração, você não usa a cópia para análise junto com a coluna original ou o algoritmo localizará uma correlação forte entre as duas colunas que pode obscurecer outras relações.  
   
-##  <a name="bkmk_NewModel"></a>Adicionar um novo modelo de mineração à estrutura de mineração  
+##  <a name="add-a-new-mining-model-to-the-mining-structure"></a><a name="bkmk_NewModel"></a>Adicionar um novo modelo de mineração à estrutura de mineração  
  Agora que criou um novo agrupamento para o atributo de destino, você precisa adicionar um novo modelo de mineração que use a coluna de dados discretos. Ao concluir, a estrutura de mineração de CallCenter terá dois modelos de mineração:  
   
 -   O modelo de mineração MN Padrão do Call Center trata os valores de ServiceGrade valores como um intervalo contínuo.  
@@ -243,10 +243,10 @@ ms.locfileid: "62856328"
   
 6.  De maneira semelhante, localize ServiceGrade Guardado e altere o uso de `Ignore` para `Predict`.  
   
-##  <a name="bkmk_Alias2"></a>Criar um alias para a coluna de destino  
+##  <a name="create-an-alias-for-the-target-column"></a><a name="bkmk_Alias2"></a>Criar um alias para a coluna de destino  
  Ordinariamente você não pode comparar modelos de mineração que usam atributos previsíveis diferentes. No entanto, é possível criar um alias para uma coluna do modelo de mineração. Ou seja, você pode renomear a coluna, ServiceGrade compartimentalizados, no modelo de mineração para que ela tenha o mesmo nome que a coluna original. Em seguida, é possível comparar diretamente esses dois modelos em um gráfico de exatidão, embora os dados sejam diferenciados de maneira diferente.  
   
-###  <a name="bkmk_Alias"></a>Para adicionar um alias para uma coluna de estrutura de mineração em um modelo de mineração  
+###  <a name="to-add-an-alias-for-a-mining-structure-column-in-a-mining-model"></a><a name="bkmk_Alias"></a>Para adicionar um alias para uma coluna de estrutura de mineração em um modelo de mineração  
   
 1.  Na guia **modelos de mineração** , em **estrutura**, selecione ServiceGrade compartimentalizados.  
   
@@ -265,11 +265,11 @@ ms.locfileid: "62856328"
     |Propriedade|Valor|  
     |--------------|-----------|  
     |**Descrição**|Alias temporário da coluna|  
-    |**SESSÃO**|ServiceGrade compartimentalizados|  
+    |**ID**|ServiceGrade compartimentalizados|  
     |**Sinalizadores de modelagem**||  
     |**Nome**|Nível de serviço|  
     |**ID da SourceColumn**|Nível de serviço 1|  
-    |**Usage**|Predict|  
+    |**Uso**|Predict|  
   
 5.  Clique em qualquer lugar na guia **modelo de mineração** .  
   
@@ -286,10 +286,10 @@ ms.locfileid: "62856328"
     |IssuesRaised|Entrada|Entrada|  
     |LevelOneOperators|Entrada|Entrada|  
     |LevelTwoOperators|Entrada|Entrada|  
-    |Pedidos|Entrada|Entrada|  
+    |Orders|Entrada|Entrada|  
     |ServiceGrade Guardado|Ignorar|Prever (ServiceGrade)|  
     |ServiceGrade|Predict|Ignorar|  
-    |Shift|Entrada|Entrada|  
+    |Turno|Entrada|Entrada|  
     |Total de Operadores|Entrada|Entrada|  
     |WageType|Entrada|Entrada|  
   
@@ -299,7 +299,7 @@ ms.locfileid: "62856328"
 > [!NOTE]  
 >  Se você não especificar um valor numérico para o parâmetro de semente, o SQL Server Analysis Services gerará uma semente com base no nome do modelo. Como os modelos sempre têm nomes diferentes, defina um valor de semente para garantir que eles processem os dados na mesma ordem.  
   
-###  <a name="bkmk_SeedProcess"></a>Para especificar a semente e processar os modelos  
+###  <a name="to-specify-the-seed-and-process-the-models"></a><a name="bkmk_SeedProcess"></a>Para especificar a semente e processar os modelos  
   
 1.  Na guia **modelo de mineração** , clique com o botão direito do mouse na coluna do modelo chamado Call Center-LR e selecione **definir parâmetros de algoritmo**.  
   
@@ -320,6 +320,6 @@ ms.locfileid: "62856328"
  [Explorando o modelo do Call Center &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Estruturas de mineração &#40;Analysis Services de mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

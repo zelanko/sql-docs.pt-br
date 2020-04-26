@@ -17,23 +17,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fdfaeeb9e8dafe82a1312593df2dd128635b8365
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766189"
 ---
 # <a name="debugging-data-flow"></a>Depurando fluxo de dados
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e o [!INCLUDE[ssIS](../../includes/ssis-md.md)] designer inclui recursos e ferramentas que você pode usar para solucionar problemas de fluxos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dados em um pacote.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e o Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluem recursos e ferramentas que você pode usar para solucionar problemas de fluxos de dados em um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] O Designer fornece visualizadores de dados.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] O Designer fornece visualizadores de dados.  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] O Designer e as transformações do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornecem contagens de linha.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] O Designer e as transformações do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornecem contagens de linha.  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece relatórios de progresso em tempo de execução.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece relatórios de progresso em tempo de execução.  
   
 ## <a name="data-viewers"></a>Visualizadores de dados  
  Os visualizadores de dados exibem dados entre dois componentes em um fluxo de dados. Os visualizadores de dados podem exibir dados quando os dados são extraídos de uma fonte de dados e entram primeiro um fluxo de dados, antes e depois de uma transformação atualizar os dados, e antes dos dados serem carregados em seu destino.  
@@ -69,9 +66,9 @@ ms.locfileid: "62766189"
 |Nenhuma cor|Esperando ser chamado pelo mecanismo de fluxo de dados.|  
 |Amarelo|Executando uma transformação, extraindo dados ou carregando dados.|  
 |Verde|Executado com êxito.|  
-|red|Executado com erros.|  
+|vermelha|Executado com erros.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Ferramentas de solução de problemas para desenvolvimento de pacotes](troubleshooting-tools-for-package-development.md)  
+ [Solucionando problemas de ferramentas para desenvolvimento de pacotes](troubleshooting-tools-for-package-development.md)  
   
   

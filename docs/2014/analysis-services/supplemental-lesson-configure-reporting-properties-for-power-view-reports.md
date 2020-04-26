@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067956"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Configurar propriedades de relatório para relatórios do Power View
@@ -24,9 +24,9 @@ ms.locfileid: "66067956"
   
  Esta lição não descreve como criar e usar relatórios do Power View. Esta lição pretende fornecer aos autores do modelo tabular uma introdução para essas propriedades e configurações que afetam como os dados de modelo serão exibidos no Power View. Para saber mais sobre como criar relatórios do Power View, consulte [Tutorial: Criar um relatório de exemplo no Power View](https://go.microsoft.com/fwlink/?LinkId=221204).  
   
- Tempo estimado para concluir esta lição: **30 minutos**  
+ Tempo estimado para conclusão desta lição: **30 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Esta lição suplementar faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição suplementar, você deve ter concluído todas as lições anteriores.  
   
  Para concluir esta lição suplementar específica, você deverá ter o seguinte:  
@@ -42,13 +42,13 @@ ms.locfileid: "66067956"
   
 -   **Adicionar novos dados** -adicionar novos dados em uma coluna calculada usando uma fórmula DAX cria informações de data em um formato que é mais fácil de exibir em gráficos.  
   
--   **Ocultar tabelas e colunas que não são úteis para o usuário final** – a propriedade **Hidden** controla se as tabelas e colunas da tabela são exibidas no cliente de relatório. Os itens que estão ocultos ainda fazem parte do modelo e permanecem disponíveis para consultas e cálculos.  
+-   **Ocultar tabelas e colunas que não são úteis para o usuário final** – A propriedade **Hidden** controla se as tabelas e colunas de tabela são exibidas no cliente de relatório. Os itens que estão ocultos ainda fazem parte do modelo e permanecem disponíveis para consultas e cálculos.  
   
 -   **Habilitar tabelas com um clique** -por padrão, nenhuma ação ocorrerá se um usuário final clicar em uma tabela na lista de campos. Para alterar este comportamento de modo que um clique na tabela adicione a tabela ao relatório, você definirá o Conjunto de Campos Padrão em cada coluna que você deseja incluir na tabela. Esta propriedade é definida nas colunas da tabela que os usuários finais provavelmente desejarão usar.  
   
--   **Defina o agrupamento onde necessário** – a propriedade **manter linhas exclusivas** determina se os valores na coluna devem ser agrupados por valores em um campo diferente, como um campo de identificador. Para colunas que contêm valores duplicados como Nome de Cliente (por exemplo, vários clientes com o nome de Bruno Dias), é importante agrupar (manter linhas exclusivas) no campo **Identificador de Linha** para fornecer aos usuários finais os resultados corretos.  
+-   **Definir o agrupamento quando necessário** – A propriedade **Keep Unique Rows** determina se os valores na coluna devem ser agrupados por valores em um campo diferente, como um campo de identificador. Para colunas que contêm valores duplicados como Nome de Cliente (por exemplo, vários clientes com o nome de Bruno Dias), é importante agrupar (manter linhas exclusivas) no campo **Identificador de Linha** para fornecer aos usuários finais os resultados corretos.  
   
--   **Definir tipos de dados e formatos de dados** -por padrão, Power View aplica regras com base no tipo de dados da coluna para determinar se o campo pode ser usado como uma medida. Como cada visualização de dados no Power View também tem regras sobre em que local as medidas e as não medidas podem ser colocadas, é importante definir o tipo de dados no modelo ou substituir o padrão, para obter o comportamento desejado para o usuário final.  
+-   **Definir tipos e formatos de dados** – Por padrão, o Power View aplica regras com base no tipo de dados de coluna para determinar se o campo pode ser usado como uma medida. Como cada visualização de dados no Power View também tem regras sobre em que local as medidas e as não medidas podem ser colocadas, é importante definir o tipo de dados no modelo ou substituir o padrão, para obter o comportamento desejado para o usuário final.  
   
 -   **Defina a propriedade classificar por coluna** – a propriedade **classificar por coluna** especifica se os valores na coluna devem ser classificados por valores em um campo diferente. Por exemplo, na coluna Calendário do Mês que contém o nome do mês, classifique pela coluna Número do Mês.  
   
@@ -88,11 +88,11 @@ ms.locfileid: "66067956"
   
 3.  Na caixa de diálogo **Conjunto de Campos Padrão** , na caixa de listagem **Campos na tabela** , pressione Ctrl e selecione os campos a seguir e clique em **Adicionar**.  
   
-     **Data de nascimento**, **ID alternativa do cliente**, **primeiro nome**, **sobrenome**.  
+     **Birth Date**, **Customer Alternate Id**, **First Name**e **Last Name**.  
   
-4.  Na janela **Campos padrão, na ordem**, use os botões Mover para Cima e Mover para Baixo para colocar na seguinte ordem:  
+4.  Na janela **Campos padrão, na ordem** , use os botões Mover para Cima e Mover para Baixo para colocar na seguinte ordem:  
   
-     **ID alternativa do cliente**  
+     **Customer Alternate Id**  
   
      **Nome**  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66067956"
   
 7.  Por fim, realize estas mesmas etapas para a tabela **Product** , selecionando os campos a seguir e colocando-os nesta ordem.  
   
-     **ID alternativo do produto**, **nome do produto**.  
+     **Product Alternate Id**e **Product Name**.  
   
 ## <a name="table-behavior"></a>Comportamento de tabela  
  Usando as propriedades do Comportamento da Tabela, você pode alterar o comportamento padrão para diferentes tipos de visualização e o comportamento de agrupamento para tabelas usadas nos relatórios do Power View. Isto permite uma melhor colocação padrão de identificação de informações como nomes, imagens ou títulos em layouts de peça, cartão e gráfico.  
@@ -177,14 +177,14 @@ ms.locfileid: "66067956"
     |Fiscal Year|Hidden|True|  
     |Fiscal Semester|Hidden|True|  
   
-     **Gráfico**  
+     **Geografia**  
   
     |Coluna|Propriedade|Valor|  
     |------------|--------------|-----------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
-     **Produto**  
+     **Remessa**  
   
     |Coluna|Propriedade|Valor|  
     |------------|--------------|-----------|  
@@ -204,7 +204,7 @@ ms.locfileid: "66067956"
     |Promotion Id|Hidden|True|  
     |Currency Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
-    |Order Quantity|Tipo de Dados<br /><br /> Formato de Dados<br /><br /> Casas Decimais|Número decimal<br /><br /> Número decimal<br /><br /> 0|  
+    |Order Quantity|Tipo de Dados<br /><br /> Formato de Dados<br /><br /> Casas Decimais|Número Decimal<br /><br /> Número Decimal<br /><br /> 0|  
     |Data do Pedido|Tipo de Dados|Data Abreviada|  
     |Due Date|Tipo de Dados|Data Abreviada|  
     |Ship Date|Tipo de Dados|Data Abreviada|  

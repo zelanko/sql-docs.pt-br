@@ -14,19 +14,19 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721164"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lição 1: Criando contas do Windows para replicação
   Nesta lição, você criará contas de Windows para executar os agentes de replicação. Você criará uma conta de Windows separada no servidor local para os seguintes agentes:  
   
-|Agente|Location|Nome da conta|  
+|Agente|Local|Nome da conta|  
 |-----------|--------------|------------------|  
-|Snapshot Agent|Publicador|\<*machine_name*>\repl_snapshot|  
-|Agente de Leitor de Log|Publicador|\<*machine_name*>\repl_logreader|  
+|Snapshot Agent|Editor|\<*machine_name*>\repl_snapshot|  
+|Agente de Leitor de Log|Editor|\<*machine_name*>\repl_logreader|  
 |Agente de Distribuição|Publicador e assinante|\<*machine_name*>\repl_distribution|  
 |Merge Agent|Publicador e assinante|\<*machine_name*>\repl_merge|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62721164"
   
 5.  Repita a etapa anterior para criar as contas de repl_logreader, repl_distribution e repl_merge.  
   
-6.  Clique em **fechar**  
+6.  Clique em **Fechar**.  
   
 ### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-subscriber"></a>Para criar contas locais do Windows para agentes de replicação no Assinante  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62721164"
   
 5.  Repita a etapa anterior para criar a conta de repl_merge.  
   
-6.  Clique em **fechar**  
+6.  Clique em **Fechar**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Você criou contas de Windows com sucesso para os agentes de replicação. A seguir, você configurará a pasta de instantâneo. Consulte [Lição 2: Preparando a pasta do instantâneo](lesson-2-preparing-the-snapshot-folder.md).  

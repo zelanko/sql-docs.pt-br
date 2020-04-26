@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 75e5953d8f7ef9af1134db56f7061261eee2c0fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721428"
 ---
 # <a name="delete-a-push-subscription"></a>Excluir uma assinatura push
@@ -35,7 +35,7 @@ ms.locfileid: "62721428"
   
      [RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Exclua uma assinatura push no Publicador (da pasta **Publicações Locais** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) ou no Assinante (da pasta **Assinaturas Locais** ). A exclusão de uma assinatura não remove objetos ou dados da assinatura; eles devem ser removidos manualmente.  
   
 #### <a name="to-delete-a-push-subscription-at-the-publisher"></a>Para excluir uma assinatura push no Publicador  
@@ -60,7 +60,7 @@ ms.locfileid: "62721428"
   
 4.  Na caixa de diálogo de confirmação, selecione se deseja se conectar ao Publicador para excluir as informações de assinatura. Se você desmarcar a caixa de seleção **Conectar-se ao Publicador** , será necessário se conectar ao Publicador posteriormente para excluir as informações.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As assinaturas push podem ser excluídas programaticamente, usando procedimentos armazenados de replicação. Os procedimentos armazenados usados dependem do tipo de publicação ao qual a assinatura pertence.  
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Para excluir uma assinatura push de um instantâneo ou publicação transacional  
@@ -75,7 +75,7 @@ ms.locfileid: "62721428"
   
 2.  No Assinante no banco de dados de assinatura, execute [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql). Especifique **@publisher**, **@publisher_db**, e **@publication**. Isso remove metadados de mesclagem do banco de dados de assinatura.  
   
-###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  Esse exemplo exclui uma assinatura push para uma publicação transacional.  
   
  [!code-sql[HowTo#sp_droptransubscription](../../snippets/tsql/SQL15/replication/howto/tsql/droptranpullsub.sql#sp_droptransubscription)]  
@@ -84,7 +84,7 @@ ms.locfileid: "62721428"
   
  [!code-sql[HowTo#sp_dropmergesubscription](../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepullsub.sql#sp_dropmergesubscription)]  
   
-##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
  As classes RMO a serem usadas para excluir uma assinatura push dependem do tipo de publicação em que a assinatura push está inscrita.  
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Para excluir uma assinatura push de um instantâneo ou publicação transacional  
@@ -115,7 +115,7 @@ ms.locfileid: "62721428"
   
 6.  Chame o método <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A> .  
   
-###  <a name="PShellExample"></a> Exemplos (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemplos (RMO)  
  Você pode excluir assinaturas push programaticamente, usando o RMO (Replication Management Objects).  
   
  [!code-csharp[HowTo#rmo_DropTranPushSub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_droptranpushsub)]  

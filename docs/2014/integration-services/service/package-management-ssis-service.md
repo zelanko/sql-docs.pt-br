@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766618"
 ---
 # <a name="package-management-ssis-service"></a>Gerenciamento de pacotes (serviço SSIS)
@@ -41,7 +41,7 @@ ms.locfileid: "62766618"
 -   Importação e exportação de pacotes  
   
 > [!IMPORTANT]  
->  Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]dá suporte ao serviço para compatibilidade com versões anteriores do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
+>  Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] dá suporte ao serviço para compatibilidade de versões anteriores com versões anteriores do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
   
 ## <a name="package-store"></a>Repositório de pacotes  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]fornece duas pastas de nível superior para acessar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacotes: **executando pacotes** e **pacotes armazenados**. A pasta **Pacotes em Execução** lista os pacotes que estão sendo executados atualmente no servidor. A pasta **Pacotes Armazenados** lista os pacotes que são salvos no armazenamento de pacotes. Esses são os únicos pacotes que o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] gerencia. O repositório de pacotes pode consistir em um ou em ambos, o banco de dados msdb e as pastas do sistema de arquivos, listados no arquivo de configuração de serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O arquivo de configuração especifica o msdb e as pastas do sistema de arquivos a serem gerenciados. Você também pode ter pacotes armazenados em outros lugares no sistema de arquivos que não são gerenciados pelo serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -58,7 +58,7 @@ ms.locfileid: "62766618"
   
  Por padrão, a pasta **Pacotes Armazenados** contém duas pastas: **Sistema de Arquivos** e **MSDB**. A pasta **Sistema de Arquivos** lista os pacotes salvos no sistema de arquivos. O local desses arquivos é especificado no arquivo de configuração do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . A pasta padrão é a pasta Pacotes, localizada em %Arquivos de Programas%\Microsoft SQL Server\100\DTS. A pasta **MSDB** lista os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que foram salvos no banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do msdb no servidor. A tabela sysssispackages contém os pacotes salvos no msdb.  
   
- Para exibir a lista de pacotes no repositório de pacotes, você precisa abrir o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e conectar-se ao [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obter mais informações, consulte [View Integration Services Packages in SQL Server Management Studio &#40;SSIS Service&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md).  
+ Para exibir a lista de pacotes no repositório de pacotes, você precisa abrir o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e conectar-se ao [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obter mais informações, consulte [Exibir pacotes do Integration Services no SQL Server Management Studio &#40;Serviço SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md).  
   
 ## <a name="monitoring-running-packages"></a>Monitorando pacotes em execução  
  A pasta **Pacotes em Execução** lista os pacotes que estão sendo executados atualmente. Para visualizar as informações sobre pacotes existentes na página **Resumo** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], clique na pasta **Pacotes em Execução** . Informações como a duração da execução dos pacotes em execução são listadas na página **Resumo** . Opcionalmente, atualize a pasta para exibir as informações mais recentes.  
@@ -70,18 +70,18 @@ ms.locfileid: "62766618"
 ## <a name="managing-package-storage"></a>Gerenciamento do armazenamento de pacotes  
  Para organizar pacotes, você pode adicionar pastas personalizadas às pastas de repositório de pacotes de raiz que o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] lista em seu arquivo de configuração. Por padrão, as pastas raiz são as pastas **Sistema de Arquivos** e **MSDB** . Por exemplo, talvez você queira adicionar à pasta **Sistema de Arquivos** uma pasta **Limpeza de dados** que contém todos os pacotes usados para limpar dados. Você pode adicionar pastas personalizadas às pastas personalizadas, criando uma hierarquia de pastas aninhadas adequadas às suas necessidades. As pastas personalizadas podem ser excluídas e renomeadas; porém, você não pode renomear ou excluir as pastas raiz especificadas pelo arquivo de configuração. Para atualizar as pastas raiz que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] lista, você deve atualizar o arquivo de configuração.  
   
- Para obter mais informações, consulte [Configuring the Integration Services Service &#40;SSIS Service&#41;](../configuring-the-integration-services-service-ssis-service.md).  
+ Para obter mais informações, consulte [Configurando o Serviço Integration Services &#40;Serviço SSIS#41;](../configuring-the-integration-services-service-ssis-service.md).  
   
 ## <a name="importing-and-exporting-packages"></a>Importação e exportação de pacotes  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]os pacotes podem ser salvos no banco de dados msdb ou no sistema de arquivos. Você pode copiar um pacote de um tipo de armazenamento para o outro com o recurso de importação ou exportação fornecido pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Você também pode importar um pacote para o mesmo tipo de armazenamento e dar ao pacote um nome diferente para criar uma cópia do pacote. O utilitário de prompt de comando **dtutil** (dtutil.exe) também pode ser usado para importar e exportar pacotes.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Os pacotes podem ser salvos no banco de dados msdb ou no sistema de arquivos. Você pode copiar um pacote de um tipo de armazenamento para o outro com o recurso de importação ou exportação fornecido pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Você também pode importar um pacote para o mesmo tipo de armazenamento e dar ao pacote um nome diferente para criar uma cópia do pacote. O utilitário de prompt de comando **dtutil** (dtutil.exe) também pode ser usado para importar e exportar pacotes.  
   
  Para obter mais informações, consulte [dtutil Utility](../dtutil-utility.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Importar e exportar pacotes &#40;serviço SSIS&#41;](../import-and-export-packages-ssis-service.md)  
+-   [Importar e exportar pacotes &#40;Serviço SSIS&#41;](../import-and-export-packages-ssis-service.md)  
   
--   [Exibir pacotes de Integration Services no serviço SQL Server Management Studio &#40;SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
+-   [Exibir pacotes do Integration Services no SQL Server Management Studio &#40;Serviço SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Serviço Integration Services &#40;Serviço SSIS&#41;](integration-services-service-ssis-service.md)  

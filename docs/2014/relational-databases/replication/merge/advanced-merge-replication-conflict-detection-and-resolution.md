@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63000339"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Advanced Merge Replication Conflict Detection and Resolution
@@ -40,7 +40,7 @@ ms.locfileid: "63000339"
   
     -   Um *manipulador de lógica de negócios* escrito em código gerenciado.  
   
-    -   Um *resolvedor personalizado*com base em COM.  
+    -   Um *resolvedor personalizado*baseado em com.  
   
     -   Um resolvedor com base em COM fornecido pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   
@@ -81,11 +81,11 @@ ms.locfileid: "63000339"
   
 -   Resolvedor personalizado baseado em COM  
   
-     A replicação de mesclagem fornece uma API para escrever resolvedores como objetos COM em linguagens como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Para obter mais informações, consulte [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     A replicação de mesclagem fornece uma API para escrever resolvedores como objetos com em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] linguagens [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]como ou. Para obter mais informações, consulte [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Resolvedor baseado em COM fornecido pela [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   
-     O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui vários resolvedores baseados em COM. Para obter mais informações, consulte [Resolvedores Microsoft baseados em COM](advanced-merge-replication-conflict-com-based-resolvers.md).  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui um número de resolvedores com base em com. Para obter mais informações, consulte [Resolvedores Microsoft baseados em COM](advanced-merge-replication-conflict-com-based-resolvers.md).  
   
  Para mais informações sobre como selecionar um tipo adequado de resolvedor, consulte [Escolher um resolvedor](advanced-merge-replication-conflict-choose-a-resolver.md).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "63000339"
   
  O Visualizador de Conflitos exibe informações de três tabelas do sistema:  
   
--   A replicação cria uma tabela de conflitos para cada tabela em um artigo de mesclagem, com um nome na forma **MSmerge_conflict_\<PublicationName>_\<ArticleName>** .  
+-   A replicação cria uma tabela de conflitos para cada tabela em um artigo de mesclagem, com um nome na forma **MSmerge_conflict_\<PublicationName>_\<ArticleName>**.  
   
      As tabelas de conflitos têm a mesma estrutura das tabelas em que foram baseadas. Uma linha em uma dessas tabelas consiste na versão perdedora de uma linha de conflito (a versão vencedora da linha fica na tabela real do usuário).  
   

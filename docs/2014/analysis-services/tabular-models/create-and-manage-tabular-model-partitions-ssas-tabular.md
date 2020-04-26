@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72c5b69aee10d8ac1342b3f037d76ab6ef5fc36c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067398"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>Criar e Gerenciar partições de modelos tabulares (SSAS tabular)
@@ -33,7 +33,7 @@ ms.locfileid: "66067398"
 ## <a name="tasks"></a>Tarefas  
  Para criar e gerenciar partições para um banco de dados modelo tabular implantado, você usará a caixa de diálogo **Partições** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para exibir a caixa de diálogo **Gerenciador de Partições** , no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse em uma tabela e clique em **Partições**.  
   
-###  <a name="bkmk_create_new"></a>Para criar uma nova partição  
+###  <a name="to-create-a-new-partition"></a><a name="bkmk_create_new"></a>Para criar uma nova partição  
   
 1.  Na caixa de diálogo **Partições** , clique no botão **Novo** .  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66067398"
   
 4.  Para validar a instrução, clique em **Verificar Sintaxe**.  
   
-###  <a name="bkmk_copy"></a>Para copiar uma partição  
+###  <a name="to-copy-a-partition"></a><a name="bkmk_copy"></a> Para copiar uma partição  
   
 1.  Na caixa de diálogo **Partições** , na lista **Partições** , selecione a partição que você deseja copiar e clique em **Copiar** .  
   
@@ -51,19 +51,19 @@ ms.locfileid: "66067398"
   
 3.  Em **Instrução SQL**, edite a instrução de consulta SQL.  
   
-###  <a name="bkmk_merge"></a>Para mesclar duas ou mais partições  
+###  <a name="to-merge-two-or-more-partitions"></a><a name="bkmk_merge"></a> Para mesclar duas ou mais partições  
   
 -   Na caixa de diálogo **Partições** , na lista **Partições** , use Ctrl+click para selecionar as partições que você deseja mesclar e clique em **Mesclar** .  
   
 > [!IMPORTANT]  
 >  Mesclar partições não atualiza os metadados da partição. Os administradores devem alterar a Instrução SQL para a partição resultante para garantir que as operações de processamento processem todos os dados na partição mesclada.  
   
-###  <a name="bkmk_delete"></a>Para excluir uma partição  
+###  <a name="to-delete-a-partition"></a><a name="bkmk_delete"></a> Para excluir uma partição  
   
 -   Na caixa de diálogo **Partições** , na lista **Partições** , selecione a partição que você deseja excluir e clique em **Excluir** .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Partições de modelo de tabela &#40;SSAS de tabela&#41;](partitions-ssas-tabular.md)   
- [Processar partições de modelo de tabela &#40;SSAS de tabela&#41;](process-tabular-model-partitions-ssas-tabular.md)  
+ [Processar partições de modelo de tabela &#40;SSAS de Tabela&#41;](process-tabular-model-partitions-ssas-tabular.md)  
   
   

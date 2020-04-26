@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0cce16636e8f3be542b926170c905353602d95e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63250338"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Visualizador de Conflitos de Replicação da Microsoft e Resolvedor Interativo
@@ -29,14 +29,14 @@ ms.locfileid: "63250338"
   
 -   [Resolvedor Interativo de Conflitos de Replicação da Microsoft](microsoft-replication-interactive-conflict-resolver.md)  
   
--   [Definir filtros](define-filters.md)  
+-   [Definir Filtros](define-filters.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir e resolver conflitos de dados em publicações de mesclagem &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
- [Exibir conflitos de dados em publicações transacionais &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
- [Detecção e resolução de conflito de replicação de mesclagem avançada](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Exibir e resolver conflitos de dados para publicações de mesclagem &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
+ [Exibir conflitos de dados para publicações transacionais &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
+ [Detecção e resolução de conflitos de replicação de mesclagem avançada](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Detecção de conflitos na replicação ponto a ponto](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
+ [Detecção e resolução de conflitos na atualização na fila](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
 
   
   

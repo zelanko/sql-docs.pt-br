@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473045"
 ---
 # <a name="post-download-instructions"></a>Instruções Pós-Download
@@ -35,10 +35,10 @@ ms.locfileid: "62473045"
  **Todos os servidores de destino**  
  Selecione essa opção para postar a instrução de download para todos os servidores de destino.  
   
- **Esses servidores de destino**  
+ **Estes servidores de destino**  
  Selecione essa opção para postar a instrução de download  para os servidores de destino selecionados.  
   
- **Não**  
+ **Selecionar**  
  Especifique que o servidor de destino deve receber a instrução de download.  
   
  **Servidor de destino**  

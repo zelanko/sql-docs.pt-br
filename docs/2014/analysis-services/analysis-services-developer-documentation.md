@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1beb0a644edb25537b85c559192ece9288c2de6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638785"
 ---
 # <a name="developer39s-guide-analysis-services"></a>Guia do desenvolvedor&#39;s (Analysis Services)
@@ -32,13 +32,13 @@ ms.locfileid: "62638785"
  [Programação de modelo multidimensional](multidimensional-models/multidimensional-model-programming.md)  
  Descreve as tarefas de desenvolvimento e abordagens para integrar objetos de modelo multidimensionais em uma solução personalizada.  
   
- [Conjuntos de linhas de esquema Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
+ [Conjuntos de linhas de esquema do Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
  Descreve os conjuntos de linhas de esquema que fornecem informações sobre o estado de servidor, as operações de servidor e os objetos de banco de dados.  
   
  [Analysis Services linguagem de script &#40;referência de&#41; do ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
  Descreve as extensões ASSL para XMLA. O ASSL fornece uma definição de dados e uma linguagem de manipulação para os modelos multidimensionais do Analysis Services que complementa a especificação de XMLA.  
   
- [XML for Analysis &#40;referência de&#41; XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [Referência de XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
  Descreve os conceitos de XMLA que podem ajudá-lo a entender como o XMLA contribui com sua solução personalizada. Ele também descreve o nível de conformidade com a especificação do XMLA 1.1.  
   
   

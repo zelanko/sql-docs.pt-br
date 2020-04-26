@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62651485"
 ---
 # <a name="create-nonclustered-indexes"></a>Criar índices não clusterizados
@@ -40,9 +40,9 @@ ms.locfileid: "62651485"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Implementations"></a> Implementações comuns  
+###  <a name="typical-implementations"></a><a name="Implementations"></a>Implementações típicas  
  Os índices não clusterizados são implementados das seguintes maneiras:  
   
 -   **Restrições EXCLUSIVAs**  
@@ -57,12 +57,12 @@ ms.locfileid: "62651485"
   
      Depois que for criado um índice clusterizado exclusivo em uma exibição, poderão ser criados índices não clusterizados. Para obter mais informações, veja [Criar exibições indexadas](../views/views.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-create-a-nonclustered-index-by-using-the-table-designer"></a>Para criar um índice não clusterizado usando o Designer de Tabela  
   
@@ -80,9 +80,9 @@ ms.locfileid: "62651485"
   
 7.  Na grade, selecione **Criar como Clusterizado**e escolha **Não** na lista suspensa, à direita da propriedade.  
   
-8.  Clique em **fechar**  
+8.  Clique em **Fechar**.  
   
-9. No menu **arquivo** , clique em **salvar**_table_name_.  
+9. No menu **Arquivo** , clique em **Salvar**_table_name_.  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>Para criar um índice não clusterizado usando o Pesquisador de Objetos  
   
@@ -92,11 +92,11 @@ ms.locfileid: "62651485"
   
 3.  Expanda a tabela na qual você deseja criar um índice não clusterizado.  
   
-4.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Não Clusterizado...** .  
+4.  Clique com o botão direito do mouse na pasta **índices** , aponte para **novo índice**e selecione **índice não clusterizado...**.  
   
 5.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
-6.  Em **Colunas de chave de índice**, clique em **Adicionar...** .  
+6.  Em **colunas de chave de índice**, clique em **Adicionar...**.  
   
 7.  Na caixa de diálogo **Selecionar Colunas de**_table_name_ , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice não clusterizado.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62651485"
   
 9. Na caixa de diálogo **Novo Índice** , clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>Para criar um índice não clusterizado em uma tabela  
   

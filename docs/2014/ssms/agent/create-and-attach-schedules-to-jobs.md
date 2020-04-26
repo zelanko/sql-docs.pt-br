@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63136281"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Criar e anexar agendas para trabalhos
@@ -75,8 +75,7 @@ ms.locfileid: "63136281"
  Você pode alterar a data de início de agenda após anexá-la a um trabalho.  
   
 ## <a name="cpu-idle-schedules"></a>Agendas de ociosidade de CPU  
- Para maximizar os recursos da CPU, você pode definir uma condição de ociosidade de CPU para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent usa a configuração de condição de ociosidade de CPU para determinar o melhor momento para executar trabalhos. Por exemplo, você pode agendar um trabalho para recriar índices durante o tempo ocioso de CPU e períodos de produção lentos.  
+ Para maximizar os recursos da CPU, você pode definir uma condição de ociosidade de CPU para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent usa a configuração de condição de ociosidade de CPU para determinar o melhor momento para executar trabalhos. Por exemplo, você pode agendar um trabalho para recriar índices durante o tempo ocioso de CPU e períodos de produção lentos.  
   
  Antes de definir trabalhos para execução durante o tempo ocioso de CPU, determine a carga na CPU durante o processamento normal. Para tanto, use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou o Monitor de Desempenho para monitorar o tráfego de servidor e coletar estatísticas. Assim, você poderá usar as informações recolhidas para definir a porcentagem e a duração do tempo ocioso de CPU.  
   
@@ -88,8 +87,8 @@ ms.locfileid: "63136281"
 |-|-|  
 |**Descrição**|**Tópico**|  
 |Descreve como criar uma agenda para um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Create a Schedule](create-a-schedule.md)|  
-|Descreve como agendar um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Schedule a Job](schedule-a-job.md)|  
-|Explica como definir a condição de ociosidade de CPU para seu servidor.|[Definir o tempo ocioso de CPU e a duração &#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
+|Descreve como agendar um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Agendar um trabalho](schedule-a-job.md)|  
+|Explica como definir a condição de ociosidade de CPU para seu servidor.|[Definir o momento e a duração de ociosidade da CPU &#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
  [&#41;&#40;Transact-SQL de sp_help_jobschedule](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   

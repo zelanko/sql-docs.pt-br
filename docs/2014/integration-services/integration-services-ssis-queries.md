@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b4323715155ddb433012624f9d7a5df9bb0a29c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767655"
 ---
 # <a name="integration-services-ssis-queries"></a>Consultas do SSIS (Integration Services)
@@ -58,6 +58,6 @@ ms.locfileid: "62767655"
  A instrução SQL da tarefa Executar SQL também pode residir em um arquivo separado. Por exemplo, você pode escrever consultas usando ferramentas como o Editor de Consultas no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], salvar a consulta em um arquivo e depois ler a consulta no arquivo ao executar um pacote. O arquivo pode conter apenas as instruções SQL para execução e comentários. Para usar uma instrução SQL armazenada em um arquivo, forneça uma conexão de arquivo que especifique o nome do arquivo e o local. Para obter mais informações, consulte [File Connection Manager](connection-manager/file-connection-manager.md).  
   
 ## <a name="sql-in-variables"></a>SQL em variáveis  
- Se a origem da instrução SQL na tarefa Executar SQL for uma variável, forneça o nome da variável que contém a consulta. A propriedade Value da variável contém o texto de consulta. Você define a propriedade ValueType da variável como um tipo de dados String e digita ou copia a instrução SQL na propriedade Value. Para obter mais informações, consulte [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md) e [usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md).  
+ Se a origem da instrução SQL na tarefa Executar SQL for uma variável, forneça o nome da variável que contém a consulta. A propriedade Value da variável contém o texto de consulta. Você define a propriedade ValueType da variável como um tipo de dados String e digita ou copia a instrução SQL na propriedade Value. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md).  
   
   

@@ -19,21 +19,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185645"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Tutorial de DMX do Market Basket
   Nesse tutorial, você aprenderá como criar, treinar e explorar modelos de mineração de dados, utilizando a linguagem de consulta DMX. Você então utilizará esses modelos de mineração de dados para criar previsões que descrevem quais produtos tendem a ser adquiridos ao mesmo tempo.  
   
- Os modelos de mineração serão criados a partir dos dados contidos no banco de dados de exemplo [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] , que armazena dados para a empresa fictícia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa industrial e multinacional. A empresa fabrica e vende bicicletas de metal e compostas para os mercados norte-americano, europeu e asiático. Suas operações principais estão situadas em Bothell, Washington, com 290 funcionários, e tem várias equipes regionais de vendas distribuídas por toda a sua base de mercado internacional.  
+ Os modelos de mineração serão criados a partir dos dados contidos no banco de dados de exemplo [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] , que armazena dados para a empresa fictícia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa industrial e multinacional. A empresa fabrica e vende bicicletas de metal e compostas para os mercados norte-americano, europeu e asiático. Suas operações principais estão situadas em Bothell, Washington, com 290 funcionários, e tem várias equipes regionais de vendas distribuídas por toda a sua base de mercado internacional.  
   
 ## <a name="tutorial-scenario"></a>Cenário do tutorial  
- 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] decidiu criar um aplicativo personalizado que utilize a funcionalidade de mineração de dados para prever que tipos de produtos seus clientes tendem a comprar ao mesmo tempo. A meta do aplicativo personalizado é poder especificar um conjunto de produtos e prever quais produtos adicionais serão adquiridos com os produtos especificados. O [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] usará essas informações para adicionar um recurso de "sugestão" a seu site, e também para organizar melhor a maneira como as informações são apresentadas a seus clientes.  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] decidiu criar um aplicativo personalizado que utilize a funcionalidade de mineração de dados para prever que tipos de produtos seus clientes tendem a comprar ao mesmo tempo. A meta do aplicativo personalizado é poder especificar um conjunto de produtos e prever quais produtos adicionais serão adquiridos com os produtos especificados. O [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] usará essas informações para adicionar um recurso de "sugestão" a seu site, e também para organizar melhor a maneira como as informações são apresentadas a seus clientes.  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece várias ferramentas que podem ser usadas para realizar essa [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tarefa:  
   
@@ -117,6 +115,6 @@ ms.locfileid: "63185645"
 ## <a name="see-also"></a>Consulte Também  
  [Tutorial DMX do comprador de bicicletas](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [Tutorial de mineração de dados básico](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Lição 3: Criando um cenário de cesta de mercado &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lição 3: Criando um cenário de cesta de compras &#40;Tutorial intermediário de mineração de dados&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

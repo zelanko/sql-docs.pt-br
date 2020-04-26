@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484708"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Tarefa 17: Examinando o projeto de limpeza do DQS criado pelo pacote SSIS
@@ -40,13 +40,13 @@ ms.locfileid: "65484708"
   
 9. Na lista de projetos, selecione o projeto criado pelo componente Limpeza do DQS do SSIS. O nome do projeto deve estar no formato: **CleanseAndCurate. Cleanse Supplier Data. GUID (em cor vermelha)**. Talvez seja necessário classificar a lista com base na coluna **data de criação** e procurar o registro mais recente.  
   
-10. Clique em **Próximo**.  
+10. Clique em **Avançar**.  
   
 11. A página **gerenciar e exibir resultados** deve ser familiar a você da limpeza interativa que você fez anteriormente neste tutorial.  
   
 12. Revise os resultados da limpeza. Você também pode executar a limpeza interativa e exportar resultados para um arquivo do Excel ou para um banco de dados na página seguinte.  
   
-13. Clique em **Próximo**. Nessa página **Exportar** , você pode exportar os resultados para um arquivo do Excel, um arquivo CSV ou um banco de dados SQL.  
+13. Clique em **Avançar**. Nessa página **Exportar** , você pode exportar os resultados para um arquivo do Excel, um arquivo CSV ou um banco de dados SQL.  
   
 14. Clique em **concluir** para concluir a atividade.  
   
@@ -55,6 +55,6 @@ ms.locfileid: "65484708"
 16. Observe que o valor do campo **IsActive** para o projeto é **encerrado** agora.  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Conclusão](../../2014/tutorials/conclusion.md)  
+ [Final](../../2014/tutorials/conclusion.md)  
   
   

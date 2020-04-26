@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3bb2f1dcabe17bb2c3e7258653602ac43615c706
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678477"
 ---
 # <a name="lesson-1-creating-the-intermediate-data-mining-solution-intermediate-data-mining-tutorial"></a>Lição 1: Criando a solução intermediária de data mining (Tutorial de data mining intermediário)
@@ -37,14 +37,14 @@ ms.locfileid: "62678477"
   
  [Lição 2: Criando um cenário de previsão &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
- [Lição 3: Criando um cenário de cesta de mercado &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lição 3: Criando um cenário de cesta de compras &#40;Tutorial intermediário de mineração de dados&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
  [Lição 4: Criando um cenário de clustering de sequência &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- [Lição 5: criando modelos de rede neural e de regressão logística &#40;o tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Lição 5: Criando modelos de rede neural e de regressão logística &#40;Tutorial intermediário de Data Mining&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tutorial de mineração de dados básico](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Criando e consultando modelos de mineração de dados com DMX: Tutoriais &#40;Analysis Services&#41;de mineração de dados](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Criando e consultando modelos de mineração de dados com DMX: Tutoriais &#40;Analysis Services – Mineração de dados&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

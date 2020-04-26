@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63250544"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>Otimizar o desempenho de filtro parametrizado com partições pré-computadas
@@ -26,7 +26,7 @@ ms.locfileid: "63250544"
   
  Quando um Assinante faz a sincronização com um Publicador, este deve avaliar os filtros do Assinante para determinar quais linhas pertencem àquele Assinante ou conjunto de dados. Esse processo de determinação de associação de partição de alterações no Publicador para cada Assinante recebendo um conjunto de dados filtrado é referido como *avaliação de partição*. Sem partições pré-computadas, a avaliação de partição deve ser executada para cada alteração feita em uma coluna filtrada no Publicador desde a última vez que o Agente de Mesclagem foi executado em um Assinante específico e esse processo tem de ser repetido para cada Assinante que sincroniza com o Publicador.  
   
- Entretanto, se o Publicador e o Assinante estiverem sendo executados no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou em uma versão posterior e você usar partições pré-computadas, a associação de partição de todas as alterações no Publicador será pré-computada e persistirá no momento em que as alterações forem feitas. Como resultado, quando um Assinante sincroniza com o Publicador, ele pode começar imediatamente a baixar as alterações relevantes à sua partição sem ter de passar pelo processo de avaliação de partição. Isso pode levar a um ganho significativo de desempenho quando a publicação tem um grande número de alterações, Assinantes ou artigos na publicação.  
+ No entanto, se o Publicador e o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] assinante estiverem em execução no ou em uma versão posterior e você usar partições preputadas, a associação de partição para todas as alterações no Publicador será executada e persistirá no momento em que as alterações forem feitas. Como resultado, quando um Assinante sincroniza com o Publicador, ele pode começar imediatamente a baixar as alterações relevantes à sua partição sem ter de passar pelo processo de avaliação de partição. Isso pode levar a um ganho significativo de desempenho quando a publicação tem um grande número de alterações, Assinantes ou artigos na publicação.  
   
  Além de usar partições pré-computadas, instantâneos pré-gerados e/ou permitir que os Assinantes solicitem geração e aplicação de instantâneos na primeira vez que eles sincronizarem. Use uma, ou ambas as opções, para fornecer instantâneos para publicações que usam filtros com parâmetros. Se você não especificar uma dessas opções, as assinaturas serão inicializadas usando uma série de instruções SELECT e INSERT, ao invés de usar o utilitário **bcp** , esse processo é muito mais lento. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   

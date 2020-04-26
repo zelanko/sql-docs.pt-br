@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62823126"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>Adicionando uma exibição da fonte de dados para previsão (Tutorial de mineração de dados intermediário)
@@ -26,14 +26,14 @@ ms.locfileid: "62823126"
   
 2.  Na página **Bem-vindo ao Assistente de Exibição da Fonte de Dados**, clique em **Próximo**.  
   
-3.  Na página **selecionar uma fonte de dados** , em **fontes de dados relacionais**, selecione [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] a fonte de dados. Clique em **Próximo**.  
+3.  Na página **selecionar uma fonte de dados** , em **fontes de dados relacionais**, selecione [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] a fonte de dados. Clique em **Avançar**.  
   
     > [!NOTE]  
     >  Se você não tiver essa fonte de dados, poderá encontrar as etapas para criar a fonte de dados no [tutorial de mineração de dados básico](../../2014/tutorials/basic-data-mining-tutorial.md).  
   
 4.  Na página **selecionar tabelas e exibições** , selecione a tabela, vTimeSeries (dbo) e clique na seta para a direita para adicioná-la à exibição da fonte de dados.  
   
-5.  Clique em **Próximo**.  
+5.  Clique em **Avançar**.  
   
 6.  Na página **concluindo o assistente** , por padrão, a exibição da fonte de [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]dados é denominada. Altere o nome para **SalesByRegion**e clique em **concluir**.  
   

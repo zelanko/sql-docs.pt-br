@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a492aee19d6b09cb7d227b34648f1ea35d1d95d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62762083"
 ---
 # <a name="database-identifiers"></a>Identificadores de banco de dados
@@ -96,8 +96,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
     -   Arroba (@), cifrão ($), sinal de número (#) ou sublinhado.  
   
-3.  O identificador não deve ser uma palavra reservada do [!INCLUDE[tsql](../../includes/tsql-md.md)] . 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserva as versões maiúscula e minúscula de palavras reservadas. Quando identificadores são usados nas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , os identificadores que não estiverem de acordo com essas regras deverão ser delimitados por aspas duplas ou colchetes. As palavras reservadas dependem do nível de compatibilidade do banco de dados. Esse nível pode ser definido por meio da instrução [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) .  
+3.  O identificador não deve ser uma palavra reservada do [!INCLUDE[tsql](../../includes/tsql-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserva as versões maiúscula e minúscula de palavras reservadas. Quando identificadores são usados nas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , os identificadores que não estiverem de acordo com essas regras deverão ser delimitados por aspas duplas ou colchetes. As palavras reservadas dependem do nível de compatibilidade do banco de dados. Esse nível pode ser definido por meio da instrução [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) .  
   
 4.  Não são permitidos espaços ou caracteres especiais.  
   
@@ -110,9 +109,9 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
 ## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
- [CRIAR &#40;de banco de dados SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql)   
- [CRIAR procedimento &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-procedure-transact-sql)   
+ [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
  [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
@@ -120,7 +119,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
  [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
  [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)   
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [Palavras-chave reservadas &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/reserved-keywords-transact-sql)   
+ [Palavras-chave reservadas &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)  
   

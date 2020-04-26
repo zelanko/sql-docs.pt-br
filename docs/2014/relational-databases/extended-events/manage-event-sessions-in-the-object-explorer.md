@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62705524"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gerenciar sessões de evento no Pesquisador de Objetos
@@ -71,9 +71,9 @@ STATE = STOP
   
  Para exportar uma sessão de Eventos Estendidos usando o **Pesquisador de Objetos**:  
   
-1.  Expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões**  
+1.  Expanda os nós **Gerenciamento**, **eventos estendidos**e **sessões**  
   
-2.  Clique com o botão direito do mouse na sessão a ser exportada e selecione **Export Session (Exportar Sessão)** .  
+2.  Clique com o botão direito do mouse na sessão a ser exportada e selecione **Export Session (Exportar Sessão)**.  
   
 3.  Na caixa de diálogo **Salvar Como** , selecione um local para salvar o arquivo, digite o nome do arquivo na caixa **Nome de arquivo** e clique em **Salvar**.  
   
@@ -96,7 +96,7 @@ STATE = STOP
   
 4.  Expanda a caixa suspensa **Modelo** .  
   
-5.  Clique em **\<Arquivo De... > Abrir** e procure a sessão (arquivo XML) que você deseja importar.  
+5.  Clique em ** \<arquivo de... >abrir** e procurar a sessão (arquivo XML) que você deseja importar.  
   
  A sessão aparece abaixo do nó **Sessões** . Por padrão, a sessão não é iniciada.  
   
@@ -105,7 +105,7 @@ STATE = STOP
   
  Para editar uma sessão de Eventos Estendidos:  
   
-1.  No **Pesquisador de Objetos**, expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões** .  
+1.  No Pesquisador de **objetos**, expanda os nós **Gerenciamento**, **eventos estendidos**e **sessões** .  
   
 2.  Clique com o botão direito do mouse em uma sessão e selecione **Propriedades**.  
   
@@ -113,7 +113,7 @@ STATE = STOP
   
 4.  Depois que você terminar de revisar a sessão de eventos, clique em **OK**.  
   
-## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>Criar o script de uma definição de sessão de eventos usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-tsql"></a>Criar o script de uma definição de sessão de eventos usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  O Assistente para Nova Sessão e a caixa de diálogo Nova Sessão têm uma opção Script que gera o [!INCLUDE[tsql](../../includes/tsql-md.md)] que define a sessão de Eventos Estendidos.  
   
  Você pode acessar o [!INCLUDE[tsql](../../includes/tsql-md.md)] de uma sessão de Eventos Estendidos existente clicando o botão direito do mouse no nome da sessão, selecionando **Sessão de Script como**e selecionando **Create para**.  
@@ -123,7 +123,7 @@ STATE = STOP
   
 -   No Editor de Consultas, usando `DROP EVENT SESSION`.  
   
--   No **Pesquisador de Objetos**.  
+-   No Pesquisador de **objetos**.  
   
  Quando você exclui uma sessão de eventos, todas as informações de configuração são removidas e a definição de sessão não aparece mais na exibição de catálogo sys.server_event_sessions.  
   

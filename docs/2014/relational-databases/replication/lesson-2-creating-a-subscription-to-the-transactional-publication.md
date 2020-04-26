@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721080"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lição 2: Criando uma assinatura na publicação transacional
@@ -69,7 +69,7 @@ ms.locfileid: "62721080"
   
 ## <a name="see-also"></a>Consulte Também  
  [Inicializar uma assinatura com um instantâneo](initialize-a-subscription-with-a-snapshot.md)   
- [Create a Push Subscription](create-a-push-subscription.md)   
- [Assinar publicações](subscribe-to-publications.md)  
+ [Criar uma assinatura push](create-a-push-subscription.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

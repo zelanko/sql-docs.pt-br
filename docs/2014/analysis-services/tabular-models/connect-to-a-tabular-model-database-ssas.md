@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6f73a8e9e79a08c3f4a1f1e2b40ff5f83a0e39b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067654"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Conectar a um banco de dados de modelo de tabela (SSAS)
@@ -33,7 +33,7 @@ ms.locfileid: "66067654"
   
  [Solucionando problemas de conexão](#bkmk_Tshoot)  
   
-##  <a name="bkmk_userpermissions"></a>Permissões de usuário no banco de dados  
+##  <a name="user-permissions-on-the-database"></a><a name="bkmk_userpermissions"></a>Permissões de usuário no banco de dados  
  Usuários que conectam-se a bancos de dados de tabela devem ter associação em uma função de banco de dados que especifica o acesso de leitura.  
   
  Funções, e às vezes associação de função, são definidas quando um modelo é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ou para modelos implantados, usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre como criar funções usando o Gerenciador de Funções no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], consulte [Criar e gerenciar funções &#40;SSAS tabular&#41;](roles-ssas-tabular.md). Para obter mais informações sobre como criar e gerenciar funções para um modelo implantado, consulte [Funções de modelo de tabela &#40;SSAS tabular&#41;](tabular-model-roles-ssas-tabular.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "66067654"
 > [!CAUTION]  
 >  Reimplantar um projeto de modelo de tabela com funções definidas usando o Gerenciador de Função no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] substituirá as funções definidas em um modelo de tabela implantado.  
   
-##  <a name="bkmk_admin"></a>Permissões administrativas no servidor  
+##  <a name="administrative-permissions-on-the-server"></a><a name="bkmk_admin"></a>Permissões administrativas no servidor  
  Para organizações que usam o SharePoint e Serviços do Excel para hospedar pastas de trabalho do Excel ou relatórios do Reporting Services, uma configuração adicional é necessária para disponibilizar os dados de modelo de tabela para os usuários do SharePoint. Se você não estiver usando o SharePoint, ignore esta seção.  
   
  A exibição de pastas de trabalho do Excel ou relatórios do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] que contêm dados de tabela exige que a conta usada para executar Serviços do Excel ou Reporting Services tenha permissões de administrador na instância do Analysis Services. São necessárias permissões administrativas para que esses serviços sejam confiáveis pela instância do Analysis Services.  
@@ -62,7 +62,7 @@ ms.locfileid: "66067654"
   
 5.  Clique em **Adicionar**e depois insira a conta usada por Serviços do Excel, seguido pela conta usada pelo Reporting Services.  
   
-##  <a name="bkmk_excelconn"></a>Conectando do Excel ou SharePoint  
+##  <a name="connecting-from-excel-or-sharepoint"></a><a name="bkmk_excelconn"></a>Conectando do Excel ou SharePoint  
  Bibliotecas de cliente que fornecem acesso a bancos de dados do Analysis Services podem ser usadas na conexão a bancos de dados modelo executados em um servidor de modo de tabela. As bibliotecas incluem o provedor OLE DB do Analysis Services, o ADOMD.NET e o AMO.  
   
  O Excel usa o provedor OLE DB. Se você tiver o MSOLAP.4 do SQL Server 2008 R2 (nome de arquivo msolap100.dll, versão 10.50.1600.1), ou o MSOLAP.5 (nome de arquivo msolap110.dll) que é instalado com a versão [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] do PowerPivot para Excel, terá uma versão que conectará a bancos de dados de tabela.  
@@ -85,19 +85,19 @@ ms.locfileid: "66067654"
   
      A instância de servidor deve ser configurada para a implantação autônoma de tabela e a instância de servidor deve ter uma regra de entrada que permita o acesso a ela. Para mais informações, consulte [Determinar o modo de servidor de uma instância do Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md) e [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-4.  Para fazer logon em credenciais, escolha **Usar Autenticação do Windows** se você tem permissões de leitura para o banco de dados. Caso contrário, escolha **Use as seguintes credenciais de usuário do Windows**e insira o nome de usuário e senha de uma conta do Windows que tenha permissões de banco de dados. Clique em **Próximo**.  
+4.  Para fazer logon em credenciais, escolha **Usar Autenticação do Windows** se você tem permissões de leitura para o banco de dados. Caso contrário, escolha **Use as seguintes credenciais de usuário do Windows**e insira o nome de usuário e senha de uma conta do Windows que tenha permissões de banco de dados. Clique em **Avançar**.  
   
-5.  Selecione o banco de dados. Uma seleção válida mostrará um único cubo **Modelo** para o banco de dados. Clique em **Avançar** e em **Concluir**.  
+5.  Selecione o banco de dados. Uma seleção válida mostrará um único cubo **Modelo** para o banco de dados. Clique em **Avançar** e clique em **Concluir**.  
   
- Depois que a conexão é estabelecida, você pode usar os dados para criar uma Tabela Dinâmica ou um Gráfico Dinâmico. Para obter mais informações, consulte [Analisar no Excel &#40;SSAS tabular&#41;](analyze-in-excel-ssas-tabular.md).  
+ Depois que a conexão é estabelecida, você pode usar os dados para criar uma Tabela Dinâmica ou um Gráfico Dinâmico. Para obter mais informações, consulte [Analisar no Excel &#40;SSAS de Tabela&#41;](analyze-in-excel-ssas-tabular.md).  
   
-##  <a name="bkmk_sharepoint"></a>Conectar do SharePoint  
+##  <a name="connect-from-sharepoint"></a><a name="bkmk_sharepoint"></a>Conectar do SharePoint  
  Se você estiver usando o PowerPivot para SharePoint, poderá criar um arquivo de conexão de modelo semântico de BI no SharePoint que forneça redirecionamento a um banco de dados executado em um servidor de modo de tabela do Analysis Services. Uma conexão de modelo semântico de BI fornece um ponto de extremidade HTTP a um banco de dados. Isso também simplifica o acesso a modelo de tabela para trabalhadores do conhecimento que costumam usar documentos em um site do SharePoint. Trabalhadores do conhecimento só precisam saber o local do arquivo de conexão de modelo semântico de BI ou sua URL para acessar bancos de dados de modelo de tabela. Detalhes sobre o local do servidor ou o nome do banco de dados são encapsulados na conexão de modelo semântico de BI. Para obter mais informações sobre como criar e usar arquivos de conexão de modelo semântico de BI, consulte [conexão de modelo semântico de bi &#40;. bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) e [criar uma conexão de modelo semântico de bi para um banco de dados modelo de tabela](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
-##  <a name="bkmk_Tshoot"></a>Solucionando problemas de conexão  
+##  <a name="troubleshooting-connection-problems"></a><a name="bkmk_Tshoot"></a>Solucionando problemas de conexão  
  Esta seção apresenta a causa e etapas de resolução de problemas que ocorrem na conexão a um banco de dados de modelo de tabela.  
   
- **O assistente de conexão de dados não pode obter uma lista de bancos de dados da fonte de dado especificada.**  
+ **O Assistente de Conexão de Dados não pode obter uma lista de bancos de dados da fonte de dados especificada.**  
   
  Na importação de dados, este erro do Microsoft Excel ocorre quando você tenta usar o Assistente para se conectar a um banco de dados de modelo de tabela em um servidor remoto do Analysis Services, e você não tem permissões suficientes. Para resolver este erro, você deve ter direitos de acesso de usuário no banco de dados. Consulte as instruções apresentadas antes neste tópico para conceder acesso do usuário aos dados.  
   
@@ -109,11 +109,11 @@ ms.locfileid: "66067654"
   
  No SharePoint, este erro do Microsoft Excel ocorre quando você tenta a interação de dados, como a filtragem de dados, em uma Tabela Dinâmica que usa dados modelo. O erro ocorre porque os Serviços do Excel não são confiáveis para a instância do Analysis Services na qual os dados modelo são implantados. Para resolver este erro, conceda permissão administrativa de Serviços do Excel na instância do serviço Analysis Services. Consulte as instruções apresentadas antes neste tópico para conceder permissões de administrador. Se o erro persistir, recicle o pool de aplicativos de Serviços do Excel.  
   
- **Ocorreu um erro durante uma tentativa de estabelecer uma conexão com a fonte de dados externa usada na pasta de trabalho**  
+ **Erro ao tentar estabelecer uma conexão com a fonte de dados externa usada na pasta de trabalho.**  
   
- No SharePoint, este erro do Microsoft Excel ocorre quando você tenta a interação de dados, como a filtragem de dados, em uma Tabela Dinâmica que usa dados modelo. O erro ocorre porque o usuário não tem permissões do SharePoint suficientes na pasta de trabalho. O usuário deve ter permissões de **Leitura** ou superior. Permissões **somente de exibição** não são suficientes para acesso a dados.  
+ No SharePoint, este erro do Microsoft Excel ocorre quando você tenta a interação de dados, como a filtragem de dados, em uma Tabela Dinâmica que usa dados modelo. O erro ocorre porque o usuário não tem permissões do SharePoint suficientes na pasta de trabalho. O usuário deve ter permissões de **Leitura** ou superior. Permissões**Exibir Apenas** não são suficientes para o acesso a dados.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Implantação de solução de modelo de tabela &#40;SSAS de tabela&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Implantação de uma solução de modelo de tabela &#40;SSAS de Tabela&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

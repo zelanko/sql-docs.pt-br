@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e23d4af96b5ce7c740f1b29893e6ee760104b871
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076433"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>Criar uma dimensão usando o Assistente para Dimensões
@@ -45,7 +45,7 @@ ms.locfileid: "66076433"
   
          Se a lista **Colunas de Chaves** contiver várias colunas de chaves, você deverá especificar uma coluna de nome que forneça os valores de membro para o atributo de chave. Para fazer isso, você pode criar um cálculo nomeado na exibição da fonte de dados e usá-lo como a coluna de nome.  
   
-    5.  Clique em **Próximo**.  
+    5.  Clique em **Avançar**.  
   
 4.  Na página **Selecionar Tabelas Relacionadas** , selecione as tabelas relacionadas que você quer incluir em sua dimensão e clique em **Avançar**.  
   

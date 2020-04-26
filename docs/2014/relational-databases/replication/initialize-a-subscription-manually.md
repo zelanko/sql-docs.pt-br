@@ -15,22 +15,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3bd621890bad3bc42fb2d4d5289d71efcbdbcc2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721654"
 ---
 # <a name="initialize-a-subscription-manually"></a>Inicializar uma assinatura manualmente
   Este tópico descreve como inicializar uma assinatura manualmente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Embora o instantâneo inicial seja normalmente usado para inicializar uma assinatura, as assinaturas para publicações podem ser inicializadas sem o uso de um instantâneo, desde que o esquema e os dados iniciais já estejam presentes no assinante.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Por exemplo, se houver atividade em um banco de dados publicado que usa replicação transacional entre a hora que os dados e o esquema são copiados no Assinante e a hora em que a assinatura é inicializada manualmente, talvez as alterações resultantes dessa atividade não sejam replicadas no Assinante.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Inicialize manualmente uma assinatura a uma publicação, copiando o esquema (e normalmente dados) ao banco de dados da assinatura. O esquema e os dados devem corresponder ao banco de dados de publicação. Então especifique que a assinatura não requer esquema e dados na página **Inicializar Assinaturas** do Assistente de Novas Assinaturas. Para mais informações sobre como acessar esse assistente, consulte [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md) e [Create a Pull Subscription](create-a-pull-subscription.md).  
   
  Quando você sincroniza a assinatura pela primeira vez, os objetos e metadados exigidos pela replicação são copiados para o banco de dados da assinatura.  
@@ -41,7 +41,7 @@ ms.locfileid: "62721654"
   
 2.  Desmarque a caixa de seleção **Inicializar** na página **Inicializar Assinaturas** do Assistente para Novas Assinaturas. Faça isto para cada assinatura que exige apenas que objetos de replicação e metadados sejam copiados.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As assinaturas podem ser inicializadas manualmente usando procedimentos de replicação armazenados.  
   
 #### <a name="to-manually-initialize-a-pull-subscription-to-a-transactional-publication"></a>Para inicializar manualmente uma assinatura pull para uma publicação transacional  
@@ -82,7 +82,7 @@ ms.locfileid: "62721654"
   
 1.  Certifique-se que o esquema e dados existam no banco de dados da assinatura. Isso pode ser feito restaurando um backup do banco de dados de publicação no Assinante.  
   
-2.  No Publicador, no banco de dados da publicação, execute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Especifique o nome do banco de dados no Assinante que contém o dado **@subscriber_db**publicado para, um valor de **@subscription_type** **Push** para e um valor **** de None **@sync_type**para.  
+2.  No Publicador, no banco de dados da publicação, execute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Especifique o nome do banco de dados no Assinante que contém o dado **@subscriber_db**publicado para, um valor de **@subscription_type** **Push** para e um valor **none** de None **@sync_type**para.  
   
 3.  No Publicador, no banco de dados da publicação, execute [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql). Para obter mais informações, consulte [Create a Push Subscription](create-a-push-subscription.md).  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ca661105c28cab2bf3e881cf262922e95da5eed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63250365"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>Otimizar o desempenho de replicação de mesclagem com artigos de somente download
@@ -41,13 +41,13 @@ ms.locfileid: "63250365"
   
  Os artigos de somente download funcionam em conjunto com assinaturas de cliente: se um artigo for designado como somente para download, as linhas para esse artigo não podem ser inseridas, atualizadas ou excluídas nos Assinantes que usam assinaturas de cliente. Publicadores e Assinantes que usam tipo de assinatura de servidor (normalmente Assinantes que republicam dados de outros Assinantes) podem inserir, atualizar e excluir dados. Para obter mais informações sobre assinaturas de cliente, consulte [Assinar publicações](../subscribe-to-publications.md).  
   
- Para especificar que um artigo é somente download, consulte [Specify That a Merge Table Article is Download-Only](../publish/specify-merge-replication-properties.md#download-only).  
+ Para especificar que um artigo é somente download, consulte [Especificar que um novo artigo de tabela de mesclagem é somente download](../publish/specify-merge-replication-properties.md#download-only).  
   
 ## <a name="using-different-article-types-in-your-applications"></a>Usando tipos diferentes de artigos em seus aplicativos  
  Entendendo os requisitos de seu aplicativo, você pode alternar entre máxima flexibilidade e desempenho ideal. Por exemplo, aplicativos com vários conflitos e alterações tanto no Publicador quanto do Assinante usarão a publicação criada a partir de artigos padrão. Alguns aplicativos, como o aplicativo de automação de departamento de vendas, poderiam ter artigos com um potencial para conflitos, e outros artigos que têm a função de tabelas de pesquisa, que podem ser especificados como somente para download. Aplicativos de entrada de dados, como aplicativos de sistemas de ponto de venda e automação de campo, frequentemente particionam os dados de forma que os conflitos são eliminados, e os dados de um Assinante nunca vão a outro. Nessas situações, uma combinação de partições não sobrepostas, artigos de somente download e partições pré-computadas fornecem o melhor desempenho e escalabilidade. Para obter mais informações sobre partições não sobrepostas e partições pré-computadas, consulte [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Opções de artigos para a replicação de mesclagem](article-options-for-merge-replication.md)   
+ [Opções de artigo para replicação de mesclagem](article-options-for-merge-replication.md)   
  [Otimizar o desempenho da replicação de mesclagem com o controle de exclusão condicional](optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   
   

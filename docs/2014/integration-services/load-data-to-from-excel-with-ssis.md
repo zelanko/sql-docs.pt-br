@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767308"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importar dados do Excel ou exportar dados para o Excel com o SSIS (SQL Server Integration Services)
@@ -25,9 +25,9 @@ Este artigo descreve como importar dados do Excel ou exportá-los para o Excel c
 É possível importar dados do Excel ou exportá-los para o Excel criando um pacote do SSIS e usando o Gerenciador de Conexões do Excel e a Origem ou o Destino do Excel. Também é possível usar o Assistente de Importação e de Exportação do SQL Server, criado no SSIS.
 
 Este artigo contém três conjuntos de informações de que você precisa para usar o Excel com êxito no SSIS ou para entender e solucionar problemas comuns:
-1.  [Os arquivos de que você precisa](#files-you-need).
+1.  [Os arquivos necessários](#files-you-need).
 2.  As informações que você precisa fornecer quando carrega dados bidirecionalmente no Excel.
-    -   [Especifique o Excel](#specify-excel) como sua fonte de dados.
+    -   [Especifique o Excel](#specify-excel) como a fonte de dados.
     -   Forneça o [nome de arquivo e o caminho do Excel](#excel-file).
     -   Selecione a [versão do Excel](#excel-version).
     -   Especifique se a [primeira linha contém nomes de coluna](#first-row).
@@ -37,7 +37,7 @@ Este artigo contém três conjuntos de informações de que você precisa para u
     -   Problemas com a [importação](#issues-importing).
     -   Problemas com a [exportação](#issues-exporting).
 
-## <a name="files-you-need"></a>Obter os arquivos necessários para se conectar ao Excel
+## <a name="get-the-files-you-need-to-connect-to-excel"></a><a name="files-you-need"></a>Obter os arquivos necessários para se conectar ao Excel
 
 Antes de poder importar dados do Excel ou exportá-los para o Excel, talvez seja necessário baixar os componentes de conectividade para o Excel, se você ainda não os tiver instalado. Os componentes de conectividade do Excel não são instalados por padrão.
 
@@ -55,7 +55,7 @@ Se você tiver uma assinatura do Office 365, talvez você veja uma mensagem de e
 
 Se você tiver problemas para instalar o redistribuível de 2016, instale o redistribuível do 2010, em vez disto aqui: [Redistribuível do Mecanismo de Banco de Dados do Microsoft Access 2010](https://www.microsoft.com/download/details.aspx?id=13255). (Não há redistribuível para o Excel 2013.)
 
-## <a name="specify-excel"></a>Especificar o Excel
+## <a name="specify-excel"></a><a name="specify-excel"></a> Especificar o Excel
 
 A primeira etapa é indicar que você deseja se conectar ao Excel.
 
@@ -73,7 +73,7 @@ No Assistente de Importação e de Exportação, na página **Escolher uma fonte
 
 Se você não vê o Excel na lista de fontes de dados, deve executar o assistente de 32 bits. Os componentes de conectividade do Excel são geralmente de 32 bits e não são visíveis no assistente de 64 bits.
 
-## <a name="excel-file"></a>Arquivo e caminho do arquivo do Excel
+## <a name="excel-file-and-file-path"></a><a name="excel-file"></a>Arquivo e caminho do arquivo do Excel
 
 A primeira parte das informações a ser fornecida é o caminho e o nome do arquivo do Excel. Forneça essas informações no **Editor do Gerenciador de Conexões do Excel** em um pacote do SSIS ou na página **Escolher uma fonte de dados** ou **Escolher um destino** do Assistente de Importação e de Exportação.
 
@@ -88,7 +88,7 @@ Ou clique em **Procurar** para localizar a planilha usando a caixa de diálogo *
 > [!IMPORTANT]
 > Não é possível se conectar a um arquivo do Excel protegido por senha.
 
-## <a name="excel-version"></a>Versão do Excel
+## <a name="excel-version"></a><a name="excel-version"></a>Versão do Excel
 
 A segunda parte dessas informações a ser fornecida é a versão do arquivo do Excel. Forneça essas informações no **Editor do Gerenciador de Conexões do Excel** em um pacote do SSIS ou na página **Escolher uma fonte de dados** ou **Escolher um destino** do Assistente de Importação e de Exportação.
 
@@ -96,7 +96,7 @@ Selecione a versão do Microsoft Excel que foi usado para criar o arquivo ou out
 
 Talvez você não consiga selecionar versões mais recentes do Excel na lista se você tiver apenas versões mais antigas dos componentes de conectividade instalados. A lista **versão do Excel** inclui todas as versões do Excel compatíveis com o SSIS. A presença de itens nesta lista não indica que os componentes de conectividade necessários estão instalados. Por exemplo, o **Microsoft Excel 2016** aparecerá na lista mesmo se você não tiver instalado os componentes de conectividade de 2016.
 
-## <a name="first-row"></a>A primeira linha tem nomes de coluna
+## <a name="first-row-has-column-names"></a><a name="first-row"></a>A primeira linha tem nomes de coluna
 
 Se você estiver importando dados do Excel, a próxima etapa será indicar se a primeira linha dos dados contém nomes de coluna. Forneça essas informações no **Editor do Gerenciador de Conexões do Excel** em um pacote do SSIS ou na página **Escolher uma fonte de dados** do Assistente de Importação e de Exportação.
 
@@ -106,7 +106,7 @@ Se você estiver importando dados do Excel, a próxima etapa será indicar se a 
 
 Se você estiver exportando dados do Excel e habilitar essa opção, a primeira linha de dados exportados incluirá os nomes de coluna.
 
-## <a name="sheets-ranges"></a>Planilhas e intervalos
+## <a name="worksheets-and-ranges"></a><a name="sheets-ranges"></a>Planilhas e intervalos
 
 Há três tipos de objetos do Excel que podem ser usados como a origem ou o destino dos seus dados: uma planilha, um intervalo nomeado ou um intervalo de células sem nome que você especifica com seu endereço.
 
@@ -114,7 +114,7 @@ Há três tipos de objetos do Excel que podem ser usados como a origem ou o dest
 
 -   **Intervalo nomeado.** Para especificar um intervalo nomeado, forneça o nome do intervalo, por exemplo, **MyDataRange**. Ou procure um nome que não termine com o caractere `$` na lista de tabelas e exibições existentes.
     
--   **Intervalo não nomeado.** Para especificar um intervalo de células ainda não nomeado, acrescente o caractere $ ao final do nome da planilha, adicione a especificação do intervalo e adicione delimitadores no começo e no final da cadeia de caracteres, por exemplo, **[Sheet1$A1:B4]**.
+-   **Intervalo sem nome.** Para especificar um intervalo de células ainda não nomeado, acrescente o caractere $ ao final do nome da planilha, adicione a especificação do intervalo e adicione delimitadores no começo e no final da cadeia de caracteres, por exemplo, **[Sheet1$A1:B4]**.
 
 Para selecionar ou especificar o tipo de objeto do Excel que você deseja usar com a origem ou o destino dos seus dados, siga um destes procedimentos:
 
@@ -155,7 +155,7 @@ Depois de selecionar ou de inserir os objetos do Excel a serem importados ou exp
 
 -   Visualize dados de exemplo para se certificar de que é o que você espera selecionando **Visualizar**.
 
-## <a name="issues-types"></a>Problemas com tipos de dados
+## <a name="issues-with-data-types"></a><a name="issues-types"></a>Problemas com tipos de dados
 
 ### <a name="data-types"></a>Tipos de dados
 
@@ -188,7 +188,7 @@ Veja alguns exemplos das conversões que podem ser necessárias:
 > [!TIP]
 > Se você estiver usando o Assistente de Importação e de Exportação e seus dados precisarem de algumas dessas conversões, o assistente configurará as conversões necessárias para você. Em decorrência disso, mesmo quando você quiser usar um pacote do SSIS, talvez seja útil criar o pacote inicial usando o Assistente de Importação e de Exportação. Deixe o assistente criar e configurar gerenciadores de conexões, origens, transformações e destinos para você.
 
-## <a name="issues-importing"></a>Problemas com a importação
+## <a name="issues-with-importing"></a><a name="issues-importing"></a>Problemas com a importação
 
 ### <a name="empty-rows"></a>Linhas vazias
 
@@ -212,13 +212,13 @@ Para importar dados de uma coluna de memorando sem truncamento, você tem duas o
 
 -   Aumente o número de linhas cujas amostras são coletadas pelo driver para incluir essa linha. É possível aumentar o número de linhas com amostras coletadas aumentando o valor de **TypeGuessRows** na seguinte chave do Registro:
 
-| Versão de componentes redistribuíveis | Chave do registro |
+| Versão de componentes redistribuíveis | Chave do Registro |
 |---|---|
 | Excel 2016 | HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\Excel |
 | Excel 2010 | HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel |
 | | |
 
-## <a name="issues-exporting"></a>Problemas com a exportação
+## <a name="issues-with-exporting"></a><a name="issues-exporting"></a>Problemas com a exportação
 
 ### <a name="create-a-new-destination-file"></a>Criar um novo arquivo de destino
 
@@ -251,11 +251,11 @@ Para obter mais informações sobre os componentes e os procedimentos descritos 
 [Origem do Excel](data-flow/excel-source.md)  
 [Destino do Excel](data-flow/excel-destination.md)  
 [Loop por meio de arquivos do Excel e tabelas usando um contêiner de Loop Foreach](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
-[Trabalhar com arquivos do Excel com a tarefa Script](extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)
+[Trabalhando com arquivos do Excel com a tarefa Script](extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)
 
 ### <a name="about-the-sql-server-import-and-export-wizard"></a>Sobre o Assistente de Importação e de Exportação do SQL Server
 [Conectar-se a uma fonte de dados do Excel](/sql/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard)  
-[Começar com esse exemplo simples de Assistente de Importação e Exportação](/sql/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard)
+[Introdução a este exemplo simples do Assistente de Importação e Exportação](/sql/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard)
 
 ### <a name="other-articles"></a>Outros artigos
 [Importar dados do Excel para o SQL Server ou Banco de Dados SQL do Azure](/sql/relational-databases/import-export/import-data-from-excel-to-sql)  

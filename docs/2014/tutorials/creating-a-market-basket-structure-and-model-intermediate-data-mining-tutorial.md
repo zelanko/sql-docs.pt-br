@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63190836"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Criando uma estrutura e um modelo de cesta de compras (Tutorial de mineração de dados intermediário)
@@ -35,7 +35,7 @@ ms.locfileid: "63190836"
   
 5.  Selecione **pedidos**em **exibições da fonte de dados disponíveis**e clique em **Avançar**.  
   
-6.  Na página **especificar tipos de tabela** , na linha da tabela vAssocSeqLineItems, marque a caixa de seleção **aninhada** e, na linha da tabela aninhada vAssocSeqOrders, marque a caixa de seleção **caso** . Clique em **Próximo**.  
+6.  Na página **especificar tipos de tabela** , na linha da tabela vAssocSeqLineItems, marque a caixa de seleção **aninhada** e, na linha da tabela aninhada vAssocSeqOrders, marque a caixa de seleção **caso** . Clique em **Avançar**.  
   
 7.  Na página **especificar os dados de treinamento** , desmarque as caixas que podem estar marcadas. Defina a chave para a tabela de casos, vAssocSeqOrders, selecionando a caixa de seleção **chave** ao lado de OrderNumber.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63190836"
   
      ![como a caixa de diálogo deve parecer](../../2014/tutorials/media/tutorial-configassocmodel.gif "como a caixa de diálogo deve parecer")  
   
-10. Clique em **Próximo**.  
+10. Clique em **Avançar**.  
   
 11. Na página **especificar conteúdo e tipo de dados das colunas**, examine as seleções, que devem ser conforme mostrado na tabela a seguir e clique em **Avançar**.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63190836"
     |vAssocSeqLineItems|||  
     |Modelo|Chave|Texto|  
   
-12. Na página **criar conjunto de testes** , o valor padrão para a **porcentagem de opção de dados para teste** é de 30%. Altere isso para **0**. Clique em **Próximo**.  
+12. Na página **criar conjunto de testes** , o valor padrão para a **porcentagem de opção de dados para teste** é de 30%. Altere isso para **0**. Clique em **Avançar**.  
   
     > [!NOTE]  
     >  O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece gráficos diferentes para medir a exatidão do modelo. No entanto, alguns tipos de gráfico de precisão, como o gráfico de comparação de precisão e o relatório de validação cruzada, foram criados para classificação e estimativa. Eles não são suportados para previsão associativa.  
@@ -79,6 +79,6 @@ ms.locfileid: "63190836"
   
 ## <a name="see-also"></a>Consulte Também  
  [Algoritmo de associação da Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Tipos de conteúdo &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
+ [Tipos de conteúdo &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81c1d3d2f0a0098fea271a782af10fbd26245a28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067792"
 ---
 # <a name="add-a-table-ssas-tabular"></a>Adicionar uma tabela (SSAS tabular)
@@ -40,6 +40,6 @@ ms.locfileid: "66067792"
   
 ## <a name="see-also"></a>Consulte Também  
  [Importar dados &#40;SSAS de tabela&#41;](../import-data-ssas-tabular.md)   
- [Excluir uma tabela &#40;SSAS tabular&#41;](delete-a-table-ssas-tabular.md)  
+ [Excluir uma tabela &#40;SSAS Tabular&#41;](delete-a-table-ssas-tabular.md)  
   
   

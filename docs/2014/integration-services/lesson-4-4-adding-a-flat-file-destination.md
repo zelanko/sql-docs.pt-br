@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767368"
 ---
-# <a name="step-4-adding-a-flat-file-destination"></a>Etapa 4: Adicionando um destino de arquivo simples
+# <a name="step-4-adding-a-flat-file-destination"></a>Etapa 4: Adicionar um destino de arquivo simples
   A saída de erro da transformação Pesquisa de Códigos de Moeda redireciona para a transformação Script todas as linhas de dados que falharam na operação de pesquisa. Para aprimorar as informações sobre os erros que ocorreram, a transformação Script executa um script que adquire a descrição de erros.  
   
  Nessa tarefa, você salvará todas essas informações sobre as linhas com falha em um arquivo delimitado, para processamento posterior. Para salvar as linhas com falha, você deve adicionar e configurar um gerenciador de conexões de arquivo simples para o arquivo de texto que conterá os dados de erro e um arquivo simples de destino. Ao definir propriedades no gerenciador de conexões de arquivo simples que o arquivo simples usa, você pode especificar como o destino do arquivo simples formata e escreve o arquivo de texto. Para obter mais informações, consulte [Gerenciador de conexões de arquivo simples](connection-manager/file-connection-manager.md) e [destino de arquivo simples](data-flow/flat-file-destination.md).  
@@ -59,6 +59,6 @@ ms.locfileid: "62767368"
 15. Clique em **OK**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- [Etapa 5: Testando o pacote de tutorial da Lição 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+ [Etapa 5: Testar o pacote de tutorial da Lição 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

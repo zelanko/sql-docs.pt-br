@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc0bd941392c208ad693be21a391d7b9e3f587a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067508"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>Criar e Gerenciar KPIs (SSAS tabular)
@@ -30,14 +30,14 @@ ms.locfileid: "66067508"
   
 -   [Para excluir um KPI e a medida base](#bkmk_delete)  
   
--   [Para excluir um KPI, mas manter a medida base](#bkmk_delete_KPI)  
+-   [Para excluir um KPI, mas manter a medida de base](#bkmk_delete_KPI)  
   
 ## <a name="tasks"></a>Tarefas  
   
 > [!IMPORTANT]  
 >  Antes de criar um KPI, primeiro você deve criar uma Medida base que será avaliada como valor. Em seguida, você estenderá a medida Base para um KPI. A criação de medidas é descrita em outro tópico, [Criar e gerenciar medidas &#40;SSAS de Tabela&#41;](measures-ssas-tabular.md). Um KPI também exige um valor de destino. Este valor pode ser de outra medida pré-definida ou um valor absoluto. Depois de estender uma Medida base para um KPI, você pode selecionar o valor de destino e pode definir limites de status na caixa de diálogo do Indicador chave de desempenho.  
   
-###  <a name="bkmk_create_KPI"></a>Para criar um KPI  
+###  <a name="to-create-a-kpi"></a><a name="bkmk_create_KPI"></a> Para criar um KPI  
   
 1.  Na grade de medida, clique com o botão direito do mouse na medida que servirá como a medida Base (valor) e clique em **Criar KPI**.  
   
@@ -54,17 +54,17 @@ ms.locfileid: "66067508"
 5.  Clique em **Descrições**e digite as descrições para KPI, Valor, Status e Destino.  
   
 > [!TIP]  
->  Você pode usar o recurso Analisar no Excel para testar seu KPI. Para obter mais informações, consulte [Analisar no Excel &#40;SSAS tabular&#41;](analyze-in-excel-ssas-tabular.md).  
+>  Você pode usar o recurso Analisar no Excel para testar seu KPI. Para obter mais informações, consulte [Analisar no Excel &#40;SSAS de Tabela&#41;](analyze-in-excel-ssas-tabular.md).  
   
-###  <a name="bkmk_edit_KPI"></a>Para editar um KPI  
+###  <a name="to-edit-a-kpi"></a><a name="bkmk_edit_KPI"></a> Para editar um KPI  
   
 -   Na Grade de Medida, clique com o botão direito do mouse na medida que serve como a medida base (valor) do KPI e clique em **Editar Configurações do KPI**.  
   
-###  <a name="bkmk_delete"></a>Para excluir um KPI e a medida base  
+###  <a name="to-delete-a-kpi-and-the-base-measure"></a><a name="bkmk_delete"></a> Para excluir um KPI e a medida de base  
   
 -   Na grade de medida, clique com o botão direito do mouse na medida que serve como a medida base (valor) do KPI e clique em **Excluir**.  
   
-###  <a name="bkmk_delete_KPI"></a>Para excluir um KPI, mas manter a medida base  
+###  <a name="to-delete-a-kpi-but-keep-the-base-measure"></a><a name="bkmk_delete_KPI"></a>Para excluir um KPI, mas manter a medida base  
   
 -   Na grade de medida, clique com o botão direito do mouse na medida que serve como a medida base (valor) do KPI e clique em **Excluir KPI**.  
   
@@ -85,6 +85,6 @@ ms.locfileid: "66067508"
 ## <a name="see-also"></a>Consulte Também  
  [KPIs &#40;SSAS de tabela&#41;](kpis-ssas-tabular.md)   
  [Medidas &#40;&#41;de tabela do SSAS](measures-ssas-tabular.md)   
- [Criar e gerenciar medidas &#40;SSAS de tabela&#41;](create-and-manage-measures-ssas-tabular.md)  
+ [Criar e gerenciar medidas &#40;SSAS de Tabela&#41;](create-and-manage-measures-ssas-tabular.md)  
   
   

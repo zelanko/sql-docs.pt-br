@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 349e3313a194aa45ae26a106b1f61d7df7ac1f46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211364"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
@@ -31,31 +31,30 @@ ms.locfileid: "68211364"
   
      [Segurança](#Security)  
   
--   **Para modificar um proxy de SQL Server Agent, usando:**  
+-   **Para modificar um proxy do SQL Server Agent usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Os proxies do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usam credenciais para armazenar informações sobre as contas de usuário do Windows. O usuário especificado na credencial deve ter a permissão "Fazer logon como trabalho em lotes" no computador que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent verifica o acesso a subsistemas de um proxy e fornece acesso ao proxy sempre que a etapa de trabalho é executada. Se o proxy já não tiver acesso ao subsistema, a etapa de trabalho falhará. Caso contrário, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent representará o usuário especificado no proxy e executará a etapa de trabalho.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent verifica o acesso a subsistemas de um proxy e fornece acesso ao proxy sempre que a etapa de trabalho é executada. Se o proxy já não tiver acesso ao subsistema, a etapa de trabalho falhará. Caso contrário, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent representará o usuário especificado no proxy e executará a etapa de trabalho.  
   
 -   Se o logon do usuário tiver acesso ao proxy ou se o usuário pertencer a alguma função com acesso ao proxy, ele poderá utilizá-lo em uma etapa de trabalho.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Somente membros da função de servidor fixa **sysadmin** podem criar, modificar ou excluir contas proxy.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### <a name="to-modify-a-includessnoversionincludesssnoversion-mdmd-agent-proxy"></a>Para modificar um proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
+#### <a name="to-modify-a-ssnoversion-agent-proxy"></a>Para modificar um proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 1.  No **Pesquisador de Objetos**, clique no sinal de adição para expandir o servidor que contém a conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que você deseja modificar.  
   
@@ -67,13 +66,13 @@ ms.locfileid: "68211364"
   
 5.  Clique com o botão direito do mouse na conta proxy cujas propriedades serão modificadas e selecione **Propriedades**.  
   
-6.  Na caixa de diálogo _proxy_name_**Propriedades da Conta Proxy** , faça alterações na conta proxy conforme necessário. Para obter mais informações sobre as opções dessa caixa de diálogo, consulte [Criar um proxy do SQL Server Agent](create-a-sql-server-agent-proxy.md).  
+6.  Na caixa de diálogo**Propriedades da conta proxy** _proxy_name_, faça alterações na conta proxy, conforme necessário. Para obter mais informações sobre as opções dessa caixa de diálogo, consulte [Criar um proxy do SQL Server Agent](create-a-sql-server-agent-proxy.md).  
   
-7.  Quando terminar, clique em **OK**.  
+7.  Ao concluir, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
-#### <a name="to-modify-a-includessnoversionincludesssnoversion-mdmd-agent-proxy"></a>Para modificar um proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
+#### <a name="to-modify-a-ssnoversion-agent-proxy"></a>Para modificar um proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

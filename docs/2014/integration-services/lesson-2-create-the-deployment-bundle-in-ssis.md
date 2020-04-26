@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ec7519a4ea203693e6520eee569639a3259215f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767508"
 ---
-# <a name="lesson-2-creating-the-deployment-bundle"></a>Lição 2: Criando o pacote de implantação
+# <a name="lesson-2-creating-the-deployment-bundle"></a>Lição 2: Como criar o pacote de implantação
   Na [Lição 1: Preparando-se para criar o pacote de implantação](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), você criou o projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] chamado Tutorial de Implantação, adicionou os pacotes e os arquivos de suporte ao projeto e implementou configurações em pacotes.  
   
  Nesta lição, você criará um pacote de implantação, que é uma pasta que contém os itens que você precisa para instalar os pacotes em outro computador. O pacote de implantação incluirá um manifesto de implantação, cópias dos pacotes e cópias dos arquivos de suporte do projeto do Tutorial de Implantação. O manifesto de implantação lista os pacotes, os diversos arquivos e as configurações do pacote de implantação.  
@@ -36,6 +36,6 @@ ms.locfileid: "62767508"
 ## <a name="start-the-lesson"></a>Iniciar a lição  
  [Etapa 1: Compilando o utilitário de implantação](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
-![Ícone de Integration Services (pequeno)](media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 293048b191fff03b11b7e28d7778a34793b4c7f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62714863"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Visualizador de Conflitos de Replicação da Microsoft (replicação transacional)
@@ -36,7 +36,7 @@ ms.locfileid: "62714863"
  **Publicação**  
  Escolha uma publicação que inclua tabelas com conflitos.  
   
- **Table**  
+ **Tabela**  
  Escolha uma tabela que inclua conflitos.  
   
  **Definir Filtro**  
@@ -45,10 +45,10 @@ ms.locfileid: "62714863"
  **Aplicar ou Remover Filtro**  
  Clique para aplicar ou remover um filtro definido na caixa de diálogo **Definir Filtros** .  
   
- **Selecionar tudo**  
+ **Selecionar Tudo**  
  Clique para selecionar todos os conflitos listados na grade.  
   
- **Selecionar Nenhum**  
+ **Selecionar nenhum**  
  Clique para desmarcar a seleção de todos os conflitos listados na grade.  
   
  **Remover**  
@@ -60,11 +60,11 @@ ms.locfileid: "62714863"
  **Mostrar as primeiras cinco colunas e outras colunas com dados conflitantes**  
  Selecione para exibir as primeiras cinco colunas e qualquer coluna com conflitos. Isso é útil quando a tabela tem um grande número de colunas, mas você quer ver apenas as mais relevantes para resolver o conflito. As primeiras cinco colunas sempre são incluídas nessa exibição, como campos que identificam uma linha, como chave primária ou campo de nomes, estão sempre entre as primeiras colunas da tabela.  
   
- **Exibir informações da coluna** (**...**)  
+ **Exibir Informações da Coluna** (**...**)  
  Clique para exibir informações da coluna: **Nome da Tabela**, **Nome da Coluna**, **Tipo de Dados**e **Valor da Coluna**.  
   
  **Registrar em log os detalhes do conflito**  
- Marque essa caixa para registrar em log os detalhes do conflito em um arquivo. Para especificar um local para o arquivo, aponte para o menu **Exibir** e clique em **Opções**. Insira um valor ou clique em ( **...** ) e navegue até o arquivo apropriado. Clique em **OK** para sair da caixa de diálogo **Opções** .  
+ Marque essa caixa para registrar em log os detalhes do conflito em um arquivo. Para especificar um local para o arquivo, aponte para o menu **Exibir** e clique em **Opções**. Insira um valor ou clique em (**...**) e navegue até o arquivo apropriado. Clique em **OK** para sair da caixa de diálogo **Opções** .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Detecção de conflitos na replicação ponto a ponto](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   

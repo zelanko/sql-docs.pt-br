@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a62460a63bab15499f9aeb4c6510c0e4a9652a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067764"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>Adicionar colunas a uma tabela (SSAS tabular)
@@ -40,7 +40,7 @@ ms.locfileid: "66067764"
 2.  Na caixa de diálogo **Editar Propriedades da Tabela** , na janela de visualização de tabela, selecione a coluna de origem que você quer adicionar e clique em OK. As colunas já incluídas na definição de tabela já estarão marcadas.  
   
 ## <a name="add-a-calculated-column"></a>Adicionar uma coluna calculada  
- Em uma coluna calculada, uma fórmula DAX é usada para definir um valor para cada linha. Por exemplo, você pode criar uma coluna calculada com uma fórmula simples (=1) que acrescenta um valor de 1 a cada linha. Colunas calculadas também podem ter mais fórmulas complexas que calculam valores com base em outros dados no modelo. As colunas calculadas são abordadas em mais detalhes em outros tópicos. Para obter mais informações, consulte [Colunas calculadas &#40;SSAS Tabular&#41;](ssas-calculated-columns.md).  
+ Em uma coluna calculada, uma fórmula DAX é usada para definir um valor para cada linha. Por exemplo, você pode criar uma coluna calculada com uma fórmula simples (=1) que acrescenta um valor de 1 a cada linha. Colunas calculadas também podem ter mais fórmulas complexas que calculam valores com base em outros dados no modelo. As colunas calculadas são abordadas em mais detalhes em outros tópicos. Para obter mais informações, consulte [Colunas calculadas &#40;SSAS de Tabela&#41;](ssas-calculated-columns.md).  
   
 #### <a name="to-create-a-calculated-column"></a>Para criar uma coluna calculada  
   
@@ -63,6 +63,6 @@ ms.locfileid: "66067764"
   
 ## <a name="see-also"></a>Consulte Também  
  [Caixa de diálogo Editar propriedades da tabela &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
- [Alterar os mapeamentos de tabela, coluna ou filtro de linha &#40;SSAS tabular&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+ [Alterar os mapeamentos de tabela, coluna ou filtro de linha &#40;SSAS Tabular&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

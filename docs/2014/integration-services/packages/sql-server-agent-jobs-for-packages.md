@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767168"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Trabalhos do SQL Server Agent para pacotes
-  Você pode automatizar e agendar a execução [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de pacotes usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Agent. Você pode agendar pacotes que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e está armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o Armazenamento de Pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e o sistema de arquivos.  
+  Você pode automatizar e agendar a execução de pacotes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Você pode agendar pacotes que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e está armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o Armazenamento de Pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e o sistema de arquivos.  
   
 ## <a name="sections-in-this-topic"></a>Seções neste tópico  
  Este tópico contém as seguintes seções:  
@@ -34,9 +34,8 @@ ms.locfileid: "62767168"
   
 -   [Solucionando problemas de pacotes agendados](#trouble)  
   
-##  <a name="jobs"></a>Agendando trabalhos no SQL Server Agent  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent é o serviço instalado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite automatizar e agendar tarefas executando trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. O serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve estar sendo executado antes que os trabalhos possam ser executados automaticamente. Para obter mais informações, consulte [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md).  
+##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a>Agendando trabalhos no SQL Server Agent  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent é o serviço instalado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite automatizar e agendar tarefas executando trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. O serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve estar sendo executado antes que os trabalhos possam ser executados automaticamente. Para obter mais informações, consulte [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md).  
   
  O nó do **SQL Server Agent** é exibido no Pesquisador de Objetos em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] quando você se conecta a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62767168"
   
  Você pode aperfeiçoar o trabalho configurando opções de notificação, como especificar um operador para enviar uma mensagem de email quando o trabalho for concluído ou adicionar alertas. Para obter mais informações, consulte [Alertas](../../ssms/agent/alerts.md).  
   
-##  <a name="packages"></a>Agendando pacotes de Integration Services  
+##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  Quando você cria um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para agendar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , é necessário adicionar pelo menos uma etapa e definir o tipo da etapa para o **Pacote do SQL Server Integration**. Um trabalho pode incluir várias etapas, e cada etapa pode executar um pacote diferente.  
   
  A execução de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de uma etapa de trabalho é semelhante à execução de um pacote com os utilitários **dtexec** (dtexec.exe) e **DTExecUI** (dtexecui.exe). Em vez de configurar as opções de tempo de execução para um pacote usando as opções de linha de comando ou a caixa de diálogo **Executar Utilitário de Pacote** , defina as opções de tempo de execução na caixa de diálogo **Nova Etapa do Trabalho** . Para obter mais informações sobre as opções para executar um pacote, consulte [Utilitário dtexec](dtexec-utility.md).  
@@ -57,10 +56,10 @@ ms.locfileid: "62767168"
   
  Para assistir a um vídeo que demonstra como usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para executar um pacote, consulte a home page de vídeos, [Como automatizar a execução de pacotes usando o SQL Server Agent (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771), na Biblioteca MSDN.  
   
-##  <a name="trouble"></a> Solução de problemas  
- Uma etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não inicia um pacote, embora o pacote seja executado com êxito no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e na linha de comando. Há algumas razões comuns para esse problema e várias soluções recomendadas. Para saber mais, consulte os recursos a seguir.  
+##  <a name="troubleshooting"></a><a name="trouble"></a>Solução  
+ Uma etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não inicia um pacote, embora o pacote seja executado com êxito no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e na linha de comando. Há algumas razões comuns para esse problema e várias soluções recomendadas. Para obter mais informações, consulte os recursos a seguir.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)]Artigo da base de dados de conhecimento, [um pacote do SSIS não é executado quando você chama o pacote do SSIS de uma etapa de trabalho SQL Server Agent](https://support.microsoft.com/kb/918760)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Artigo da Base de Dados de Conhecimento, [Um pacote SSIS não é executado quando você chama o pacote SSIS a partir de uma etapa de trabalho do SQL Server Agent](https://support.microsoft.com/kb/918760)  
   
 -   Vídeo, [solução de problemas: execução de pacote usando SQL Server Agent (SQL Server vídeo)](https://go.microsoft.com/fwlink/?LinkId=141772), na biblioteca MSDN.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "62767168"
   
 -   Para pacotes armazenados no banco de dados MSDB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o repositório de pacotes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , ou em uma pasta no computador local, você pode usar o **Visualizador do Arquivo de Log** , bem como todos os logs e arquivos de despejo de depuração gerados durante a execução do pacote.  
   
-     **Para usar o Visualizador do arquivo de log, faça o seguinte.**  
+     **Para usar o Visualizador do Arquivo de Log, siga os procedimentos a seguir.**  
   
     1.  Clique com o botão direito do mouse no trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no Pesquisador de Objetos. Em seguida, clique em **Exibir Histórico**.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "62767168"
   
 -   Para pacotes armazenados no banco de dados SSISDB, você também pode usar o **Visualizador do Arquivo de Log** , bem como todos os logs e arquivos de despejo de depuração gerados durante a execução do pacote. Além de isso, você pode usar os relatórios do servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-     **Para localizar informações nos relatórios para a execução de pacote associada a uma execução de trabalho, faça o seguinte.**  
+     **Para localizar informações nos relatórios para a execução do pacote associada à execução de um trabalho, siga os procedimentos abaixo.**  
   
     1.  Siga as etapas anteriores para exibir os detalhes da mensagem para a etapa de trabalho.  
   

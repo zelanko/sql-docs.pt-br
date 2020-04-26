@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63058088"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Logon para Assinaturas Atualizáveis
   Se você selecionou **replicar** na página **assinaturas atualizáveis** desse assistente, deverá especificar uma conta no Assinante sob a qual as conexões com o Publicador são feitas para assinaturas de atualização imediata. Conexões são usadas pelos gatilhos acionados no Assinante e que propagam as alterações no Publicador. Essa conta é necessária mesmo se você selecionou **as alterações de fila e confirma quando possível** na página **assinaturas atualizáveis** , pois, por padrão, o assistente para nova assinatura configura a atualização em fila com a capacidade de alternar para a atualização imediata, se necessário.  
   
 > [!IMPORTANT]  
->  A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação; nenhuma permissão adicional será dada. Conceda permissões para exibições no banco de dados de publicação que são nomeadas no formato **syncobj_** _\<HexadecimalNumber>_ para a conta configurada em cada Assinante.  
+>  A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação; nenhuma permissão adicional será dada. Conceda permissões em exibições no banco de dados de publicação que são nomeadas no formato **syncobj_**_\<HexadecimalNumber>_ à conta configurada em cada Assinante.  
   
  Há três opções disponíveis para o tipo de conexão:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63058088"
  As duas primeiras opções podem ser especificadas nesse assistente. A última opção só pode ser especificada usando [sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql); Especifique um valor de **1** para o parâmetro **@security_mode**.  
   
 ## <a name="options"></a>Opções  
- **Crie um servidor vinculado que se conecte usando o seguinte logon de autenticação do SQL Server:**  
+ **Criar um servidor vinculado que conecta usando o seguinte logon de Autenticação do SQL Server:**  
  A replicação cria um servidor vinculado usando as credenciais especificadas nos campos **Logon** e **Senha** .  
   
  **Logon**  
@@ -52,9 +52,9 @@ ms.locfileid: "63058088"
  Essa opção requer um servidor vinculado ou remoto já definido. Para obter mais informações, consulte [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../linked-servers/linked-servers-database-engine.md) e [Servidores remotos](../../database-engine/configure-windows/remote-servers.md). Verifique se o logon usado para o servidor vinculado ou servidor remoto tem uma senha forte e somente as permissões descritas nesse tópico.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
- [Exibir e modificar configurações de segurança de replicação](security/view-and-modify-replication-security-settings.md)   
- [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)   
- [Assinar publicações](subscribe-to-publications.md)  
+ [Criar uma assinatura atualizável para uma publicação transacional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Exibir e modificar as configurações de segurança de replicação](security/view-and-modify-replication-security-settings.md)   
+ [Assinaturas atualizáveis para replicação transacional](transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

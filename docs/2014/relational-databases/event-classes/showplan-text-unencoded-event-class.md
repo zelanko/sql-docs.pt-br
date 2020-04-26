@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd9f8c6ca62fdd9f9a856a19f3d27c2144073b52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62650363"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>classe de evento Showplan Text (Unencoded)
-  A classe de evento Showplan Text (sem codificação) ocorre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando o executa uma instrução SQL. Essa classe de evento é a mesma que a classe de evento Showplan Text, exceto pelo fato de que as informações do evento são formatadas como uma cadeia de caracteres ao invés de dados binários.  
+  A classe de evento Showplan Text (Unencoded) ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SQL. Essa classe de evento é a mesma que a classe de evento Showplan Text, exceto pelo fato de que as informações do evento são formatadas como uma cadeia de caracteres ao invés de dados binários.  
   
  As informações incluídas são um subconjunto das informações disponíveis nas classes de evento Showplan All, Showplan XML ou Showplan XML Statistics Profile.  
   
@@ -62,10 +62,10 @@ ms.locfileid: "62650363"
 |XactSequence|`bigint`|Token que descreve a transação atual.|50|Sim|  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
- [Referência de operadores físicos e lógicos de plano de execução](../showplan-logical-and-physical-operators-reference.md)   
+ [&#41;&#40;Transact-SQL de sp_trace_setevent](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [Referência de operadores lógicos e físicos de SHOWPLAN](../showplan-logical-and-physical-operators-reference.md)   
  [Classe de evento Showplan All](showplan-all-event-class.md)   
  [Classe de evento Showplan XML](showplan-xml-event-class.md)   
- [Classe de evento Showplan XML Statistics Profile](showplan-xml-statistics-profile-event-class.md)  
+ [classe de evento Showplan XML Statistics Profile](showplan-xml-statistics-profile-event-class.md)  
   
   

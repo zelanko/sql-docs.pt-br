@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678496"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lição 1: Criando a estrutura de mineração de Comprador de Bicicleta

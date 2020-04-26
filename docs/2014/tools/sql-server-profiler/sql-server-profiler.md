@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211049"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
@@ -42,7 +42,7 @@ ms.locfileid: "68211049"
   
 ||||  
 |-|-|-|  
-|**Carga de trabalho Recurso\carga**|**Mecanismo relacional**|**Analysis Services**|  
+|**Recurso\carga de trabalho de destino**|**Mecanismo relacional**|**Analysis Services**|  
 |**Captura de rastreamento**|Interface gráfica de usuário Eventos Estendidos no SQL Server Management Studio|SQL Server Profiler|  
 |**Reprodução de rastreamento**|Distributed Replay|SQL Server Profiler|  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68211049"
 > [!NOTE]  
 >  Ao trabalhar com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], é útil compreender o Rastreamento do SQL. Para obter mais informações, consulte [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).  
   
- **Evento**  
+ **Circunstância**  
  Um evento é uma ação gerada dentro de uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. São exemplos:  
   
 -   Conexões, falhas e desconexões de logon.  
@@ -95,15 +95,15 @@ ms.locfileid: "68211049"
  **EventClass**  
  Uma classe de evento é um tipo de evento que pode ser rastreado. A classe de evento contém todos os dados que podem ser informados por um evento. São exemplos de classes de evento:  
   
--   **SQL: BatchCompleted**  
+-   **SQL:BatchCompleted**  
   
--   **Auditar logon**  
+-   **Audit Login**  
   
--   **Auditar logoff**  
+-   **Audit Logout**  
   
--   **Bloqueio: adquirido**  
+-   **Lock:Acquired**  
   
--   **Bloqueio: liberado**  
+-   **Lock:Released**  
   
  **EventCategory**  
  Uma categoria de evento define o modo pelo qual os eventos são agrupados no [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Por exemplo, todas as classes de eventos de bloqueio são agrupadas dentro da categoria de evento **Locks** . Categorias de evento, contudo, só existem dentro do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Este termo não reflete o modo pelo qual são agrupados eventos do Mecanismo.  
@@ -111,10 +111,10 @@ ms.locfileid: "68211049"
  **DataColumn**  
  Uma coluna de dados é um atributo de uma classe de evento capturada no rastreamento. Como a classe de evento determina o tipo de dados que pode ser coletado, nem todas as colunas de dados se aplicam a todas as classes de evento. Por exemplo, em um rastreamento que captura a classe de evento **Lock:Acquired** , a coluna de dados **BinaryData** contém o valor da ID de página ou linha bloqueada, mas a coluna de dados **Integer Data** não contém nenhum valor, pois ela não se aplica à classe de evento que está sendo capturada.  
   
- **Modelos**  
+ **Modelo**  
  Um modelo define a configuração padrão para um rastreamento. Especificamente, ele contém as classes de evento que se quer monitorar com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Por exemplo, você pode criar um modelo que especifique os eventos, colunas de dados e filtros a usar. Um modelo não é executado, mas, sim, salvo como um arquivo de extensão .tdf. Uma vez salvo, o modelo controla os dados capturados quando um rastreamento que o tem por base é ativado.  
   
- **Rastreou**  
+ **Trace**  
  Um rastreamento captura dados segundo classes de evento, colunas de dados e filtros selecionados. Por exemplo, você pode criar um rastreamento para monitorar erros de exceção. Para tanto, deve-se selecionar a classe de evento **Exception** e as colunas de dados **Error**, **State**e **Severity** . É preciso coletar os dados dessas três colunas para que os dados produzidos pelo rastreamento façam sentido. Em seguida, você pode executar um rastreamento configurado dessa forma e coletar dados sobre todo evento **Exception** que ocorrer no servidor. O rastreamento pode ser salvo ou utilizado para análise imediata. Rastreamentos podem ser reproduzidos em data posterior, embora certos eventos, como **Exception** , nunca sejam reproduzidos. Você também pode salvar o rastreamento como um modelo, para criar rastreamentos semelhantes no futuro.  
   
  O SQL Server dispõe de duas formas de rastrear uma instância sua: através do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou de procedimentos armazenados do sistema.  
@@ -143,9 +143,9 @@ ms.locfileid: "68211049"
 |Descreve como iniciar automaticamente um rastreamento após a conexão com um servidor.|[Iniciar um rastreamento automaticamente após a conexão com um servidor &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)|  
 |Descreve como filtrar eventos com base na hora de início do evento.|[Filtrar eventos com base na hora de início do evento &#40;SQL Server Profiler&#41;](filter-events-based-on-the-event-start-time-sql-server-profiler.md)|  
 |Descreve como filtrar eventos com base na hora de término do evento.|[Filtrar eventos com base na hora de término do evento &#40;SQL Server Profiler&#41;](filter-events-based-on-the-event-end-time-sql-server-profiler.md)|  
-|Descreve como filtrar IDs de processo do servidor de filtro (SPIDs) em um rastreamento.|[Filtrar IDs de processo de servidor &#40;SPIDs&#41; em um rastreamento &#40;SQL Server Profiler&#41;](filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)|  
+|Descreve como filtrar IDs de processo do servidor de filtro (SPIDs) em um rastreamento.|[Filtrar SPIDs &#40;IDs de processo de servidor&#41; em um rastreamento &#40;SQL Server Profiler&#41;](filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)|  
 |Descreve como pausar um rastreamento.|[Pausar um rastreamento &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)|  
-|Descreve como interromper um rastreamento.|[Interromper um rastreamento &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)|  
+|Descreve como interromper um rastreamento.|[Parar um rastreamento &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)|  
 |Descreve como executar um rastreamento depois que ele tiver sido pausado ou interrompido.|[Executar um rastreamento que foi pausado ou interrompido &#40;SQL Server Profiler&#41;](run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)|  
 |Descreve como limpar uma janela de rastreamento.|[Limpar uma janela de rastreamento &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)|  
 |Descreve como fechar uma janela de rastreamento.|[Fechar uma janela de rastreamento &#40;SQL Server Profiler&#41;](close-a-trace-window-sql-server-profiler.md)|  
@@ -161,16 +161,16 @@ ms.locfileid: "68211049"
 |Descreve como reproduzir um script Transact-SQL.|[Reproduzir um script Transact-SQL &#40;SQL Server Profiler&#41;](replay-a-transact-sql-script-sql-server-profiler.md)|  
 |Descreve como criar um modelo de rastreamento.|[Criar um modelo de rastreamento &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)|  
 |Descreve como modificar um modelo de rastreamento.|[Modificar um modelo de rastreamento &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)|  
-|Descreve como definir opções de rastreamento globais.|[Definir opções de rastreamento global &#40;SQL Server Profiler&#41;](set-global-trace-options-sql-server-profiler.md)|  
-|Descreve como localizar um valor ou uma coluna de dados durante um rastreamento.|[Localizar um valor ou coluna de dados ao rastrear &#40;SQL Server Profiler&#41;](find-a-value-or-data-column-while-tracing-sql-server-profiler.md)|  
+|Descreve como definir opções de rastreamento globais.|[Definir opções de rastreamento globais &#40;SQL Server Profiler&#41;](set-global-trace-options-sql-server-profiler.md)|  
+|Descreve como localizar um valor ou uma coluna de dados durante um rastreamento.|[Localizar um valor ou coluna de dados durante um rastreamento &#40;SQL Server Profiler&#41;](find-a-value-or-data-column-while-tracing-sql-server-profiler.md)|  
 |Descreve como derivar um modelo a partir de um rastreamento em execução.|[Derivar um modelo de um rastreamento em execução &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)|  
 |Descreve como derivar um modelo a partir de um arquivo de rastreamento ou uma tabela de rastreamento.|[Derivar um modelo de um arquivo ou de uma tabela de rastreamento &#40;SQL Server Profiler&#41;](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)|  
 |Descreve como criar um script Transact-SQL para executar um rastreamento.|[Criar um script Transact-SQL para executar um rastreamento &#40;SQL Server Profiler&#41;](create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)|  
 |Descreve como exportar um modelo de rastreamento.|[Exportar um modelo de rastreamento &#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)|  
 |Descreve como importar um modelo de rastreamento.|[Importar um modelo de rastreamento &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)|  
-|Descreve como extrair um script de um rastreamento.|[Extrair um script de um &#40;de rastreamento SQL Server Profiler&#41;](extract-a-script-from-a-trace-sql-server-profiler.md)|  
-|Descreve como correlacionar um rastreamento com dados de log de desempenho do Windows.|[Correlacione um rastreamento com &#40;de dados de log de desempenho do Windows SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
-|Descreve como organizar colunas exibidas em um rastreamento.|[Organizar colunas exibidas em um &#40;de rastreamento SQL Server Profiler&#41;](organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
+|Descreve como extrair um script de um rastreamento.|[Extrair um script de um rastreamento &#40;SQL Server Profiler&#41;](extract-a-script-from-a-trace-sql-server-profiler.md)|  
+|Descreve como correlacionar um rastreamento com dados de log de desempenho do Windows.|[Correlacionar um rastreamento com dados do log de desempenho do Windows &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
+|Descreve como organizar colunas exibidas em um rastreamento.|[Organizar colunas exibidas em um rastreamento &#40;SQL Server Profiler&#41;](organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
 |Descreve como iniciar o SQL Server Profiler.|[Iniciar o SQL Server Profiler](start-sql-server-profiler.md)|  
 |Descreve como salvar rastreamentos e rastrear modelos.|[Salvar rastreamentos e modelos de rastreamento](save-traces-and-trace-templates.md)|  
 |Descreve como modificar modelos de rastreamento.|[Modificar modelos de rastreamento](modify-trace-templates.md)|  

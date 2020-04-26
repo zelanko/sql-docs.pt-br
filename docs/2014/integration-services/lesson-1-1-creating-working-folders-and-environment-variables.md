@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767648"
 ---
-# <a name="step-1-creating-working-folders-and-environment-variables"></a>Etapa 1: Criando pastas de trabalho e variáveis de ambiente
+# <a name="step-1-creating-working-folders-and-environment-variables"></a>Etapa 1: Criar pastas de trabalho e variáveis de ambiente
   Nesta tarefa, você criará a pasta de trabalho (C:\DeploymentTutorial) e as novas variáveis de ambiente do sistema (`DataTransfer` e `LoadXMLData`), que serão usadas em tarefas posteriores do tutorial.  
   
  A pasta de trabalho está na raiz da unidade C. Se você precisar usar uma unidade ou um local diferente, poderá fazer isso. Porém, será necessário anotar esse local e usá-lo sempre que o tutorial se referir ao local da pasta de trabalho DeploymentTutorial.  
@@ -85,6 +85,6 @@ ms.locfileid: "62767648"
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 2: Criando o projeto de implantação](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
-![Ícone de Integration Services (pequeno)](media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
   

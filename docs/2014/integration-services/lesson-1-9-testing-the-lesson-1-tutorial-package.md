@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767599"
 ---
-# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Etapa 9: Testando o pacote de tutorial da Lição 1
+# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Etapa 9: Testar o pacote de tutorial da Lição 1
   Nesta lição, você executou as seguintes tarefas:  
   
 -   Criou um novo projeto do [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
@@ -31,7 +31,7 @@ ms.locfileid: "62767599"
 ## <a name="checking-the-package-layout"></a>Verificando o layout do pacote  
  Antes de testar o pacote, é recomendável verificar se os fluxos de controle e de dados do pacote da Lição 1 contêm os objetos mostrados nos diagramas a seguir.  
   
- **Fluxo de Controle**  
+ **Fluxo de controle**  
   
  ![Fluxo de controle no pacote](../../2014/tutorials/media/task9lesson1control.gif "Fluxo de controle no pacote")  
   
@@ -41,14 +41,14 @@ ms.locfileid: "62767599"
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>Para executar o pacote de tutorial da Lição 1  
   
-1.  No menu **Depurar** , clique em **Iniciar Depuração**.  
+1.  No menu **depurar** , clique em **Iniciar Depuração**.  
   
      O pacote será executado, resultando em 1097 linhas adicionadas à tabela de fatos **FactCurrency** no **AdventureWorksDW2012**.  
   
 2.  Terminada a execução do pacote, no menu **Depurar** , clique em **Parar Depuração**.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 2: Adicionando loop](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+ [Lição 2: Como adicionar um loop](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Execução de projetos e pacotes](packages/run-integration-services-ssis-packages.md)  

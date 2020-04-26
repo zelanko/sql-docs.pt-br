@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62773422"
 ---
 # <a name="view-a-list-of-modified-files"></a>Exibir uma lista de arquivos modificados
@@ -51,7 +51,7 @@ ms.locfileid: "62773422"
      **Colunas**  
      Exibe uma lista das colunas que você pode adicionar à lista Itens da janela.  
   
-     **Exibição de árvore**  
+     **Exibição de Árvore**  
      Exibe a hierarquia da pasta e do arquivo para a solução ou projeto que você está fazendo o check-in.  
   
      **Exibição Simples**  

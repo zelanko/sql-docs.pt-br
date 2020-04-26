@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189024"
 ---
 # <a name="operators"></a>Operadores
@@ -73,14 +73,14 @@ ms.locfileid: "68189024"
   
          **Assunto:**  
   
-         **CC**:  
+         **Cc**:  
   
          **Para**:  
   
     > [!NOTE]  
     >  Se usar um sistema de pager alfanumérico, você poderá abreviar o texto enviado, excluindo o texto de erro da notificação por pager. Um exemplo de sistema de pager alfanumérico de baixa-capacidade é aquele limitado a 64 caracteres por página.  
   
--   **NET SendNotification**  
+-   **notificação net send**  
   
      Envia uma mensagem ao operador por meio do comando **net send** . Para **net send**, especifique o destinatário (computador ou usuário) de uma mensagem da rede.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68189024"
   
      São motivos de falha em alcançar operadores primários endereços de pager incorretos e operadores fora de serviço.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O agente não pode acessar as tabelas do sistema no banco de dados **msdb** .  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent não consegue acessar as tabelas do sistema no banco de dados **msdb** .  
   
      A tabela do sistema **sysnotifications** especifica as responsabilidades de operador para os alertas.  
   
@@ -118,8 +118,8 @@ ms.locfileid: "68189024"
 |||  
 |-|-|  
 |**Tarefas**|**Tópico**|  
-|Tarefas relacionadas à criação de um operador|[Criar um operador](create-an-operator.md)<br /><br /> [Designar um operador à prova de falhas](designate-a-fail-safe-operator.md)|  
-|Tarefas relacionadas à atribuição de alertas|[Atribuir alertas a um operador](assign-alerts-to-an-operator.md)<br /><br /> [Definir a resposta a um alerta &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [&#41;&#40;Transact-SQL de sp_add_notification](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Atribuir alertas a um operador](assign-alerts-to-an-operator.md)|  
+|Tarefas relacionadas à criação de um operador|[Create an Operator](create-an-operator.md)<br /><br /> [Designar um operador à prova de falhas](designate-a-fail-safe-operator.md)|  
+|Tarefas relacionadas à atribuição de alertas|[Assign Alerts to an Operator](assign-alerts-to-an-operator.md)<br /><br /> [Definir a resposta a um alerta &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [&#41;&#40;Transact-SQL de sp_add_notification](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Assign Alerts to an Operator](assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  

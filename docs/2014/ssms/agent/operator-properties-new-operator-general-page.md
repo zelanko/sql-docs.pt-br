@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c394792f3d56614c4e3bc316e2b4a73dcd1e88b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211345"
 ---
 # <a name="operator-properties-and-new-operator-general-page"></a>Propriedades do operador e novo operador (página Geral)
@@ -26,7 +26,7 @@ ms.locfileid: "68211345"
  **Nome**  
  Altera o nome do operador.  
   
- **Enabled**  
+ **Habilitada**  
  Habilita o operador. Quando não estiver habilitado, nenhuma notificação será enviada ao operador.  
   
  **Nome de email**  
@@ -35,19 +35,19 @@ ms.locfileid: "68211345"
  **Endereço de net send**  
  Especifique o endereço a ser usado para **net send**.  
   
- **Nome do email do pager**  
+ **Nome de e-mail de pager**  
  Especifica o endereço de email a ser usado para o pager do operador.  
   
- **Agenda de imposto do pager**  
+ **Agenda em serviço do pager**  
  Marca as horas em que o pager está ativo.  
   
- **Segunda-feira-domingo**  
+ **Segunda-feira - Domingo**  
  Selecione os dias em que o pager está ativo.  
   
  **Início do dia útil**  
  Selecione a hora do dia depois da qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent envia mensagens ao pager.  
   
- **Fim do dia útil**  
+ **Término do dia útil**  
  Selecione a hora do dia depois da qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para de enviar mensagens ao pager.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721031"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lição 2: Criando uma assinatura na publicação de mesclagem
@@ -76,6 +76,6 @@ ms.locfileid: "62721031"
 ## <a name="see-also"></a>Consulte Também  
  [Subscribe to Publications](subscribe-to-publications.md)   
  [Create a Pull Subscription](create-a-pull-subscription.md)   
- [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [Instantâneos para publicações de mesclagem com filtros com parâmetros](snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

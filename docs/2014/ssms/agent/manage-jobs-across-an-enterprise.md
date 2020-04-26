@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f051b3de9ba88354f5fded8cd1f429e3b277747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188175"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>Gerenciar trabalhos em toda a empresa
@@ -38,7 +38,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [sp_delete_jobstep (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql)  
   
--   [&#41;&#40;Transact-SQL de sp_attach_schedule](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
+-   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
 -   [&#41;&#40;Transact-SQL de sp_detach_schedule](/sql/relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql)  
   
@@ -53,7 +53,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- **Para alterar os servidores de destino de um trabalho**  
+ **Para alterar os servidores de destino quanto a um trabalho**  
   
 -   [SQL Server Management Studio](modify-the-target-servers-for-a-job.md)  
   
@@ -69,7 +69,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- **Para sincronizar os relógios do servidor de destino**  
+ **Para sincronizar os relógios dos servidores de destino**  
   
 -   [SQL Server Management Studio](synchronize-target-server-clocks-sql-server-management-studio.md)  
   

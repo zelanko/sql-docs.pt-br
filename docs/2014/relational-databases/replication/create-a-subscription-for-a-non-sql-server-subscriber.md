@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721668"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Criar uma assinatura para um Assinante não SQL Server
@@ -32,7 +32,7 @@ ms.locfileid: "62721668"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Para criar uma assinatura para um Assinante não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 1.  Instale e configure o software de cliente Oracle e o provedor OLE DB apropriados no Distribuidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Oracle Subscribers](non-sql/oracle-subscribers.md) e [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "62721668"
   
          Você cria o instantâneo após a publicação estar habilitada para Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para garantir que o Snapshot Agent gere scripts de instantâneo e de inicialização adequados para os Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  Habilite a publicação para Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a caixa de diálogo **Propriedades da Publicação – \<PublicationName>** . Consulte [Publication Properties, Subscription Options](publication-properties-subscription-options.md) para obter mais informações sobre essa etapa.  
+3.  Habilite a publicação para Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a caixa de diálogo **Propriedades da Publicação – \<PublicationName>**. Consulte [Publication Properties, Subscription Options](publication-properties-subscription-options.md) para obter mais informações sobre essa etapa.  
   
 4.  Crie uma assinatura usando o Assistente para Nova Assinatura. Esse tópico proporciona mais informações sobre essa etapa.  
   
@@ -90,13 +90,13 @@ ms.locfileid: "62721668"
   
      O nome da fonte de dados digitado nesta etapa e as credenciais especificadas na etapa 9 não são validados por este assistente. Não são usados pela replicação até que o Distribution Agent execute para uma assinatura. Certifique-se de que todos os valores tenham sido testados por meio de conexão ao Assinante usando uma ferramenta de cliente (como **sqlplus** para o Oracle). Para obter mais informações, consulte [Oracle Subscribers](non-sql/oracle-subscribers.md) e [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Na página **Assinantes** do assistente, o Assinante é agora exibido na coluna **Assinante** com um somente leitura **(destino padrão)** na coluna **Banco de Dados da Assinatura** :  
+7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]Na página **assinantes** do assistente, o assinante agora é exibido na coluna **assinante** com um somente leitura **(destino padrão)** na coluna **banco de dados de assinatura** :  
   
     -   Para o Oracle, um servidor tem, no máximo, um banco de dados, assim não é necessário especificar o banco de dados.  
   
     -   Para a IBM DB2, o banco de dados é especificado na propriedade **Catálogo Inicial** da cadeia de caracteres da conexão DB2, que pode ser digitada no campo **Opções de conexões adicionais** descrito mais adiante neste processo.  
   
-8.  Na página **segurança do agente de distribuição** , clique no botão de Propriedades (**...**) ao lado do assinante para acessar a caixa de diálogo **segurança do agente de distribuição** .  
+8.  Na página **Segurança do Agente de Distribuição**, clique no botão de propriedades (**...**) próximo ao Assinante para acessar a caixa de diálogo **Segurança do Agente de Distribuição**.  
   
 9. Na caixa de diálogo **Segurança do Distribution Agent** :  
   
@@ -137,11 +137,11 @@ ms.locfileid: "62721668"
   
 2.  Clique com o botão direito do mouse em uma publicação e clique em **Exibir Status do Snapshot Agent**.  
   
-3.  Na caixa de diálogo **Exibir Status do Snapshot Agent – \<Publicação>** , clique em **Iniciar**.  
+3.  Na caixa de diálogo **Exibir Status do Snapshot Agent – \<Publicação>**, clique em **Iniciar**.  
   
  Quando o Agente de Instantâneo terminar de gerar o instantâneo, uma mensagem será exibida, como "[100%] Um instantâneo de 17 artigos foi gerado".  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Crie assinaturas push para Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma programática, usando procedimentos armazenados de replicação.  
   
 > [!IMPORTANT]  
@@ -177,16 +177,16 @@ ms.locfileid: "62721668"
   
     -   Um valor de **0** para **@subscriber_security_mode** e as informações de logon do provedor **@subscriber_login** de **@subscriber_password**OLE DB para e.  
   
-    -   Agenda para o trabalho do Distribution Agent para essa assinatura. Para obter mais informações, consulte [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
+    -   Agenda para o trabalho do Distribution Agent para essa assinatura. Para obter mais informações, consulte [especificar agendas de sincronização](specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
     >  Ao criar uma assinatura push em um Publicador com um Distribuidor remoto, os valores especificados para todos os parâmetros, inclusive *job_login* e *job_password*são enviados para o Distribuidor como texto sem-formatação. Você deve criptografar a conexão entre o Publicador e seu Distribuidor remoto antes de executar esse procedimento armazenado. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)   
- [Oracle Subscribers](non-sql/oracle-subscribers.md)   
+ [Assinantes do IBM DB2](non-sql/ibm-db2-subscribers.md)   
+ [Assinantes Oracle](non-sql/oracle-subscribers.md)   
  [Outros assinantes não SQL Server](non-sql/other-non-sql-server-subscribers.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)  
+ [Conceitos de procedimentos armazenados do sistema de replicação](concepts/replication-system-stored-procedures-concepts.md)   
+ [Práticas recomendadas em relação à segurança de replicação](security/replication-security-best-practices.md)  
   
   

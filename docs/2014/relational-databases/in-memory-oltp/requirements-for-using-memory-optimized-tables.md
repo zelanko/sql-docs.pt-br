@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62467882"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Requisitos para usar tabelas com otimização de memória
@@ -38,7 +38,7 @@ ms.locfileid: "62467882"
   
      Para instalar a geração de relatórios ([determinando se uma tabela ou um procedimento armazenado deve ser movido para OLTP na memória](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e (para gerenciar o OLTP na [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] memória por meio do pesquisador de objetos), selecione **ferramentas de gerenciamento-básicas** ou [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] **ferramentas de gerenciamento-avançadas** ao instalar o.  
   
-## <a name="important-notes-on-using-includehek_2includeshek-2-mdmd"></a>Observações importantes sobre o uso do [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
+## <a name="important-notes-on-using-hek_2"></a>Observações importantes sobre o uso do [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
 -   O tamanho total da memória de todas as tabelas duráveis em um banco de dados não deve exceder 250 GB. Para obter mais informações, consulte [durabilidade para tabelas com otimização de memória](durability-for-memory-optimized-tables.md).  
   

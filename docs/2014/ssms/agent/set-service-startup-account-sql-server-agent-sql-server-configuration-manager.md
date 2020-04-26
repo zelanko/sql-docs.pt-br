@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30c50d1f6efc44c17eac76e0e03432c2461da296
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033629"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
@@ -32,19 +32,19 @@ ms.locfileid: "63033629"
   
      [Segurança](#Security)  
   
--   [Para definir a conta de inicialização do serviço para SQL Server Agent usando SQL Server Management Studio](#SSMSProcedure)  
+-   [Para definir a conta de inicialização de serviço para o SQL Server Agent usando o SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não exige mais que a conta de inicialização do serviço seja membro do grupo Administradores da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . No entanto, a conta de inicialização do serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve ser membro da função de servidor fixa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin. A conta também deverá ser membro da função TargetServersRole do banco de dados msdb no servidor mestre se o processamento de trabalhos multisservidor for usado.  
   
 -   O Pesquisador de Objetos só exibirá o nó [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent se você tiver permissão para usá-lo.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Para executar suas funções, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Agent deve ser configurado para usar as credenciais de uma conta que seja membro da função `sysadmin` de servidor fixa no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A conta deve ter as seguintes permissões do Windows:  
   
 -   Fazer logon como um serviço (SeServiceLogonRight)  
@@ -57,7 +57,7 @@ ms.locfileid: "63033629"
   
  Para obter mais informações sobre as permissões do Windows necessárias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a conta de serviço do Agent, consulte [selecionar uma conta para o serviço de SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) e [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-set-the-service-startup-account-for-sql-server-agent"></a>Para definir a conta de inicialização do serviço do SQL Server Agent  
   
@@ -75,12 +75,12 @@ ms.locfileid: "63033629"
   
 7.  Na caixa de diálogo **Propriedades** de **SQL Server Agent**_(server_name)_ , na guia **logon** , selecione uma das seguintes opções em **fazer logon como**:  
   
-    -   **Conta interna**: Selecione esta opção se seus trabalhos exigirem recursos somente do servidor local. Para obter informações sobre como escolher um tipo de conta interna do Windows, consulte [Seleção de uma conta para o Serviço do SQL Server Agent.](https://msdn.microsoft.com/library/ms191543.aspx)  
+    -   **Conta interna**: selecione essa opção se os trabalhos precisarem somente de recursos do servidor local. Para obter informações sobre como escolher um tipo de conta interna do Windows, consulte [Seleção de uma conta para o Serviço do SQL Server Agent.](https://msdn.microsoft.com/library/ms191543.aspx)  
   
         > [!IMPORTANT]  
-        >  O serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não dá suporte à conta **Serviço Local** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+        >   O serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não oferece suporte à conta **Serviço Local** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-    -   **Esta conta**: Selecione esta opção se seus trabalhos exigirem recursos na rede, incluindo recursos do aplicativo; Se você quiser encaminhar eventos para outros logs de aplicativos do Windows; ou, se você quiser notificar operadores por email ou pagers.  
+    -   **Esta conta**: selecione essa opção se os trabalhos necessitarem de recursos de toda a rede, inclusive recursos de aplicativos; se desejar encaminhar eventos para outros logs de aplicativos do Windows; ou se desejar notificar operadores por meio de email ou pagers.  
   
          Se você selecionar esta opção:  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c96977ac3b2ed36ab9709d2af86a0d9f79e8eb73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653869"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>Modificar um trabalho mestre do SQL Server Agent
@@ -32,6 +32,6 @@ ms.locfileid: "62653869"
   
  [Remove Steps from a SQL Server Agent Master Job](remove-steps-from-a-sql-server-agent-master-job.md)  
   
- [Modificar o servidor de destino&#40;s&#41; associadas a um trabalho SQL Server Agent mestre](modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
+ [Modificar o servidor de destino&#40;s&#41; associado a um trabalho mestre do SQL Server Agent](modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
   
   

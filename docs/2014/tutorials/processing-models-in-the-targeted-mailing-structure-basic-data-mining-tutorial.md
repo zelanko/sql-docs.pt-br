@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 605088d405cbd2dcfba92a2da5fa4e07c38d8f0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188229"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>Processando modelos na estrutura de mala direta (Tutorial de mineração de dados básico)
@@ -71,6 +71,6 @@ ms.locfileid: "63188229"
  [Lição 4: explorando os modelos de mala direta direcionados &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Requisitos e considerações de processamento &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Requisitos e considerações de processamento &#40;Mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

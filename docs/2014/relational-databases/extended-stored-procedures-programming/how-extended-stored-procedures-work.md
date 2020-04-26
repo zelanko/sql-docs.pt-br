@@ -13,16 +13,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9b52e8fd5cda7d0b05ebbddbb422f74bd81b1993
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62512988"
 ---
 # <a name="how-extended-stored-procedures-work"></a>Como funcionam os procedimentos armazenados estendidos
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a integração CLR.  
   
  O processo pelo qual um procedimento armazenado estendido funciona é o seguinte:  
   

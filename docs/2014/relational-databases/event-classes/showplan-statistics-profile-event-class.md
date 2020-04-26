@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0dc08151d47bee9190f199e187db25a3b5dd6de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62662058"
 ---
 # <a name="showplan-statistics-profile-event-class"></a>classe de Evento Showplan Statistics Profile
-  A classe de evento Showplan Statistics Profile [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ocorre quando o executa uma instrução SQL. As informações incluídas são um subconjunto das informações disponíveis na classe de evento Showplan XML Statistics Profile.  
+  A classe de evento Showplan Statistics Profile ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SQL. As informações incluídas são um subconjunto das informações disponíveis na classe de evento Showplan XML Statistics Profile.  
   
  A classe de evento Showplan Statistics Profile exibe dados de tempo de compilação completos; os rastreamentos que contêm Showplan Statistics Profile podem gerar sobrecarga de desempenho significativa. Para minimizar isso, limite o uso dessa classe de evento a rastreamentos que monitorem problemas específicos por períodos breves de tempo.  
   
@@ -61,8 +61,8 @@ ms.locfileid: "62662058"
   
 ## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
- [Referência de operadores físicos e lógicos de plano de execução](../showplan-logical-and-physical-operators-reference.md)   
- [Classe de evento Showplan XML Statistics Profile](showplan-xml-statistics-profile-event-class.md)  
+ [&#41;&#40;Transact-SQL de sp_trace_setevent](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [Referência de operadores lógicos e físicos de SHOWPLAN](../showplan-logical-and-physical-operators-reference.md)   
+ [classe de evento Showplan XML Statistics Profile](showplan-xml-statistics-profile-event-class.md)  
   
   

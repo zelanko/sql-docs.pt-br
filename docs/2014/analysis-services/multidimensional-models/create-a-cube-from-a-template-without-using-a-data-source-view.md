@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c6541a60b4810319fd353d39a3922244c018496f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076505"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Criar um Cubo de um modelo sem usar uma Exibição da Fonte de Dados
@@ -23,8 +23,7 @@ ms.locfileid: "66076505"
 ## <a name="selecting-the-build-method"></a>Selecionando o Método de Criação  
  No Assistente para Cubos, na página **Selecionar Método de Criação** , clique em **Criar o cubo sem usar uma fonte de dados**. Para criar o cubo usando um modelo de cubo existente, marque a caixa de seleção **Usar modelo de cubo** . . Se você não selecionar para usar um modelo, deverá definir as opções manualmente.  
   
- Os modelos de cubo contêm medidas predefinidas, grupos de medidas, dimensões, hierarquias e atributos. Se você selecionar um modelo, o assistente usará as definições de objeto nos modelos como a base para definir opções nas páginas seguintes. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é instalado com vários modelos para cubos padrão. O administrador do servidor também pode adicionar modelos de cubo ou de dimensão que são criados especificamente para obter os dados de sua organização.  
+ Os modelos de cubo contêm medidas predefinidas, grupos de medidas, dimensões, hierarquias e atributos. Se você selecionar um modelo, o assistente usará as definições de objeto nos modelos como a base para definir opções nas páginas seguintes. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é instalado com vários modelos para cubos padrão. O administrador do servidor também pode adicionar modelos de cubo ou de dimensão que são criados especificamente para obter os dados de sua organização.  
   
 ## <a name="selecting-dimensions"></a>Selecionando dimensões  
  Use a página **Selecionar Dimensões** do assistente para adicionar dimensões ao cubo. Esta página será exibida somente se já houver dimensões compartilhadas sem uma fonte de dados no projeto ou banco de dados. Ela não lista dimensões que têm uma fonte de dados.  
@@ -40,12 +39,12 @@ ms.locfileid: "66076505"
   
  As grades **Selecionar medidas do modelo** e **Adicionar novas medidas** exibem valores nas colunas descritas na tabela a seguir. Você pode clicar em um valor em qualquer lista para alterá-lo.  
   
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
-|**Nome da medida**|Um valor nessa coluna define o nome de uma medida no cubo. Clique em um valor nessa coluna para digitar um nome. Clique em **Adicionar nova medida** nesta coluna para criar uma nova medida. Essa coluna define a propriedade `Name` no objeto de medida.|  
+|**Nome da Medida**|Um valor nessa coluna define o nome de uma medida no cubo. Clique em um valor nessa coluna para digitar um nome. Clique em **Adicionar nova medida** nesta coluna para criar uma nova medida. Essa coluna define a propriedade `Name` no objeto de medida.|  
 |**Grupo de medidas**|O nome do grupo de medidas que contém a medida. Clique nesse valor para escolher ou digitar um nome. Se você excluir todas as medidas que pertencem a um grupo de medidas específico, o grupo de medidas também será removido. Essa coluna define a propriedade `Name` para o objeto do grupo de medida.|  
 |**Tipo de dados**|O tipo de dados para a medida. Clique nesse valor para alterar o tipo de dados. O padrão quando você cria uma medida é `Single`. Essa coluna define a propriedade `DataType` no objeto de medida.|  
-|**Aggregation**|A agregação padrão para a medida. Clique nesta célula para especificar uma das agregações padrão para a medida (ou **Nenhum**). O padrão quando você cria uma medida é `Sum`. Essa coluna define a propriedade `AggregationFunction` no objeto de medida.|  
+|**Agregação**|A agregação padrão para a medida. Clique nesta célula para especificar uma das agregações padrão para a medida (ou **Nenhum**). O padrão quando você cria uma medida é `Sum`. Essa coluna define a propriedade `AggregationFunction` no objeto de medida.|  
   
 ## <a name="defining-new-dimensions"></a>Definindo novas dimensões  
  Use a página **Definir Novas Dimensões** do assistente para especificar as dimensões no novo cubo.  
@@ -56,11 +55,11 @@ ms.locfileid: "66076505"
   
  As grades **Selecionar dimensões do modelo** e **Adicionar novas dimensões** exibem valores nas colunas descritas na tabela a seguir. Você pode clicar em um valor em qualquer lista para alterá-lo.  
   
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |**Tipo**|Exibe o tipo de dimensão para uma dimensão de modelo. Clique nesta célula para alterar o tipo de dimensão para uma dimensão. Essa coluna define a propriedade **Type** para o objeto de dimensão.|  
 |`Name`|Exibe o nome da dimensão. Clique nessa célula para digitar um nome diferente. Esse valor define a `Name` propriedade para o objeto de dimensão.|  
-|**SCD**|Especifica que esta é uma SCD (dimensão de alteração lenta). Marcar esta caixa de seleção adiciona os atributos Data de Início da SCD, ID Original da Data de Término e Status à dimensão. O **SCD** será selecionado por padrão se você usar um modelo para criar o cubo e o assistente detectar esses quatro tipos de atributo em uma dimensão de modelo.|  
+|**SCD**|Especifica que esta é uma SCD (dimensão de alteração lenta). Marcar esta caixa de seleção adiciona os atributos Data de Início da SCD, ID Original da Data de Término e Status à dimensão. **SCD** será selecionado por padrão se você usar um modelo para criar o cubo e o assistente detectar estes quatro tipos de atributo em uma dimensão de modelo.|  
 |**Atributos**|Exibe os atributos que devem ser criados para a dimensão. Cada nome de atributo na lista é precedido pelo nome de dimensão. Esta lista é somente leitura. Você pode editar os atributos usando o Designer de Dimensão depois de concluir o assistente.|  
   
 ## <a name="defining-time-periods"></a>Definindo períodos de tempo  
@@ -80,7 +79,7 @@ ms.locfileid: "66076505"
 ## <a name="specifying-additional-calendars"></a>Especificando calendários adicionais  
  Na página **Especificar Calendários Adicionais** do assistente, selecione os calendários nos quais as hierarquias na dimensão se baseiam. Você pode escolher um dos seguintes calendários.  
   
-|Calendário|DESCRIÇÃO|  
+|Calendário|Descrição|  
 |--------------|-----------------|  
 |Calendário fiscal|Um calendário fiscal de doze meses. Se você selecionar esse calendário, especifique o dia e o mês iniciais para o ano fiscal usado pela empresa.|  
 |Calendário de relatório (ou marketing)|Um calendário de relatório de doze meses que inclui dois meses de quatro semanas e um mês de cinco semanas em um padrão recorrente de três meses (trimestral). Se você selecionar este calendário, especifique o dia e o mês iniciais e o padrão de três meses de 4-4-5, 4-5-4 ou 5-4-4 semanas, em que cada dígito representa o número de semanas em um mês.|  

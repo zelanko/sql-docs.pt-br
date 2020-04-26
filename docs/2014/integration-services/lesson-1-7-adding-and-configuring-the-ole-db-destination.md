@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767555"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Etapa 7: Adicionar e configurar o destino OLE DB
@@ -24,7 +24,7 @@ ms.locfileid: "62767555"
   
 ### <a name="to-add-and-configure-the-sample-ole-db-destination"></a>Para adicionar e configurar a amostra de destino do OLE DB  
   
-1.  Na **caixa de ferramentas SSIS,** expanda **Outros Destinos**e arraste **o Destino OLE DB** para a superfície de design da guia Fluxo de **Dados.** Coloque o destino OLE DB diretamente abaixo da transformação **Da tecla Lookup Date.**  
+1.  Na **caixa de ferramentas do SSIS**, expanda **outros destinos**e arraste **OLE DB destino** até a superfície de design da guia **fluxo de dados** . Coloque o destino do OLE DB diretamente abaixo da transformação chave de **data de pesquisa** .  
   
 2.  Clique na transformação **Chave de Data de Pesquisa** e arraste a seta verde sobre o **Destino OLE DB** recém-adicionado para conectar os dois componentes.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62767555"
   
 13. Clique com o botão direito do mouse no destino **Destino OLE DB de Exemplo** e clique em **Propriedades**.  
   
-14. Na janela Propriedades, verifique `LocaleID` se a propriedade está definida`DefaultCodePage` como **inglês (Estados Unidos)** e se a propriedade está definida como **1252**.  
+14. No janela Propriedades `LocaleID` , verifique se a propriedade está definida como **Inglês (Estados Unidos)** e se a`DefaultCodePage` Propriedade está definida como **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 8: Tornar o pacote da Lição 1 mais fácil de compreender](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

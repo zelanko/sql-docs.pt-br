@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767378"
 ---
-# <a name="step-2-creating-a-corrupted-file"></a>Etapa 2: Criando um arquivo corrompido
+# <a name="step-2-creating-a-corrupted-file"></a>Etapa 2: Criar um arquivo corrompido
   Para demonstrar a configuração e o tratamento de erros de transformação, você terá que criar um arquivo simples de amostra que no processamento causa a falha de um componente.  
   
  Nesta tarefa, você criará uma cópia de um arquivo simples de amostra existente. Você deverá então abrir o arquivo no Bloco de Notas e editar a coluna **CurrencyID** para certificar-se de que não produzirá uma correspondência durante a pesquisa de transformações. Quando o arquivo novo for processado, a falha na pesquisa irá causar a falha da transformação Pesquisa de Códigos de Moeda e criará, portanto, uma falha no resto do pacote. Depois de criar o arquivo de amostra corrompido, você executará o pacote para exibir a falha do pacote.  
@@ -30,7 +30,7 @@ ms.locfileid: "62767378"
   
     1.  Navegue até [Integration Services exemplos de produto](https://go.microsoft.com/fwlink/?LinkID=267527).  
   
-    2.  Clique na guia **DOWNLOADS** .  
+    2.  Clique na guia **downloads** .  
   
     3.  Clique no arquivo SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62767378"
   
 ### <a name="to-verify-that-an-error-will-occur-during-run-time"></a>Para verificar se um erro acontecerá durante o tempo de execução  
   
-1.  No menu **Depurar** , clique em **Iniciar Depuração**.  
+1.  No menu **depurar** , clique em **Iniciar Depuração**.  
   
      Na terceira repetição do fluxo de dados, uma transformação Pesquisa de Códigos de Moeda tenta processar o arquivo Currency_BAD.txt e a transformação irá falhar. O fracasso da transformação fará o pacote inteiro falhar.  
   
@@ -61,6 +61,6 @@ ms.locfileid: "62767378"
     >  O número 27 é a ID do componente. Esse valor é atribuído quando você cria o fluxo de dados, ou seja, o valor do seu pacote pode ser diferente.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- [Etapa 3: Adicionando redirecionamento de fluxo de erro](lesson-4-3-adding-error-flow-redirection.md)  
+ [Etapa 3: Adicionar redirecionamento de fluxo de erro](lesson-4-3-adding-error-flow-redirection.md)  
   
   

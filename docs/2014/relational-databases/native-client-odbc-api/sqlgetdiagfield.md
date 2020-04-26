@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62657699"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client especifica os seguintes campos de diagnóstico `SQLGetDiagField`adicionais para o. Esses campos suportam relatórios bem-elaborados de erros para os aplicativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e estão disponíveis em todos os registros de diagnóstico gerados em identificadores de conexão conectados ODBC e identificadores de instrução ODBC. Os campos são definidos em sqlncli.h.  
   
-|Campo de registro de diagnóstico|DESCRIÇÃO|  
+|Campo de registro de diagnóstico|Descrição|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Informa o número da linha de um procedimento armazenado que gera um erro. O valor de SQL_DIAG_SS_LINE só será útil se SQL_DIAG_SS_PROCNAME retornar um valor. O valor é retornado como um inteiro de 16 bits sem-sinal.|  
 |SQL_DIAG_SS_MSGSTATE|O estado de uma mensagem de erro. Para obter informações sobre o estado da mensagem de erro, consulte [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql). O valor é retornado como um inteiro de 32 bits com assinatura.|  
@@ -38,10 +38,10 @@ ms.locfileid: "62657699"
   
 |Código de função dinâmico|Fonte|  
 |---------------------------|------------|  
-|SQL_DIAG_DFC_SS_ALTER_DATABASE|Instrução ALTERAR BANCO DE DADOS|  
+|SQL_DIAG_DFC_SS_ALTER_DATABASE|instrução ALTER DATABASE|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|Instrução CHECKPOINT|  
 |SQL_DIAG_DFC_SS_CONDITION|O erro ocorreu nas cláusulas WHERE ou HAVING de uma instrução.|  
-|SQL_DIAG_DFC_SS_CREATE_DATABASE|Instrução CRIAR BANCO DE DADOS|  
+|SQL_DIAG_DFC_SS_CREATE_DATABASE|Instrução CREATE DATABASE|  
 |SQL_DIAG_DFC_SS_CREATE_DEFAULT|Instrução CREATE DEFAULT|  
 |SQL_DIAG_DFC_SS_CREATE_PROCEDURE|Instrução CREATE PROCEDURE|  
 |SQL_DIAG_DFC_SS_CREATE_RULE|Instrução CREATE RULE|  
@@ -73,7 +73,7 @@ ms.locfileid: "62657699"
 |SQL_DIAG_DFC_SS_READTEXT|Instrução READTEXT|  
 |SQL_DIAG_DFC_SS_RECONFIGURE|Instrução RECONFIGURE|  
 |SQL_DIAG_DFC_SS_RETURN|Instrução de controle de fluxo RETURN|  
-|SQL_DIAG_DFC_SS_SELECT_INTO|Instrução SELECT INTO|  
+|SQL_DIAG_DFC_SS_SELECT_INTO|instrução SELECT INTO|  
 |SQL_DIAG_DFC_SS_SET|Instrução SET (genérica, todas as opções)|  
 |SQL_DIAG_DFC_SS_SET_IDENTITY_INSERT|Instrução SET IDENTITY_INSERT|  
 |SQL_DIAG_DFC_SS_SET_ROW_COUNT|Instrução SET ROWCOUNT|  

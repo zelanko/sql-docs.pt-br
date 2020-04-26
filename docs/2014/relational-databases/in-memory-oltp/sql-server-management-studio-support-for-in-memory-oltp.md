@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62468184"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Suporte ao SQL Server Management Studio para OLTP na memória
@@ -84,7 +84,7 @@ ms.locfileid: "62468184"
   
     -   No **Pesquisador de Objetos**, clique com o botão direito do mouse no banco de dados, clique em **Propriedades**e clique na página **Geral** . O valor da propriedade **Memória Alocada a Objetos com Otimização de Memória** indica a memória alocada a objetos com otimização de memória no banco de dados. O valor da propriedade **Memória Usada por Objetos com Otimização de Memória** indica a memória usada por objetos com otimização de memória no banco de dados.  
   
-## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Recursos com suporte no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="supported-features-in-ssmanstudiofull"></a>Recursos com suporte no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dá suporte a recursos e operações que têm suporte no mecanismo de banco de dados em bancos de dados com grupo de arquivos de dados com otimização de memória, tabelas com otimização de memória, índices e procedimentos armazenados compilados de modo nativo.  
   
  No banco de dados, na tabela, no procedimento armazenado, no tipo de tabela definido pelo usuário ou nos objetos de índice, os seguintes recursos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] foram atualizados ou estendidos para oferecer suporte à OLTP na memória.  
@@ -150,7 +150,7 @@ ms.locfileid: "62468184"
   
 -   Explorador de Modelos  
   
-## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Recursos sem suporte no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="unsupported-features-in-ssmanstudiofull"></a>Recursos sem suporte no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Para objetos OLTP na memória, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] não oferece suporte a recursos e operações que também não têm suporte no mecanismo de banco de dados.  
   
  Para obter mais informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recursos sem suporte, consulte [recursos de SQL Server com suporte](unsupported-sql-server-features-for-in-memory-oltp.md).  

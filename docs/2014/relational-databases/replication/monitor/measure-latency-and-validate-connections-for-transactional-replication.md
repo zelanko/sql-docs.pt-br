@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667811"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir a latência e validar as conexões para a replicação transacional
@@ -50,20 +50,20 @@ ms.locfileid: "62667811"
   
      [Replication Management Objects](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  Os tokens de rastreamento também são úteis para confirmar um sistema, o que implica em parar todas as atividades e verificar que todos os nós tenham recebido todas as alterações pendentes. Para obter mais informações, consulte [Como confirmar uma topologia de replicação &#40;Programação Transact-SQL de replicação&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
- Para usar os tokens de rastreamento, você deve utilizar versões específicas do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ Para usar tokens de rastreamento, você deve usar determinadas [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]versões do:  
   
--   O Distribuidor deve ser [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou posterior.  
+-   O distribuidor deve ser [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou posterior.  
   
 -   O Publicador deve ser [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou posterior, ou ser um Editor Oracle.  
   
--   Para as assinaturas push, as estatísticas dos tokens de rastreamento são coletadas do Publicador, do Distribuidor e dos Assinantes, se o Assinante for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 ou posterior.  
+-   Para assinaturas push, as estatísticas de token de rastreamento são coletadas do Publicador, distribuidor e assinantes se o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assinante for 7,0 ou posterior.  
   
--   Para as assinaturas pull, as estatísticas dos tokens de rastreamento são coletadas dos Assinantes somente se o Assinante for [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou posterior. Se o Assinante for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], somente as estatísticas do Publicador e do Distribuidor serão coletadas.  
+-   Para as assinaturas pull, as estatísticas dos tokens de rastreamento são coletadas dos Assinantes somente se o Assinante for [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou posterior. Se o assinante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for 7,0 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]ou, as estatísticas serão coletadas somente do Publicador e do distribuidor.  
   
  Há vários outros itens e restrições que devem ser considerados:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62667811"
   
 -   Depois do failover para um secundário, o Replication Monitor não pode ajustar o nome da instância de publicação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e continuará exibindo informações de replicação sob o nome da instância primária original do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Depois do failover, um token de rastreamento não pode ser inserido usando o Replication Monitor; porém um token de rastreamento inserido no novo publicador usando [!INCLUDE[tsql](../../../includes/tsql-md.md)]é visível no Replication Monitor.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Replication Monitor  
+##  <a name="using-sql-server-replication-monitor"></a><a name="SSMSProcedure"></a>Usando Replicação do SQL Server monitor  
  Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
   
 #### <a name="to-insert-a-tracer-token-and-view-information-on-the-token"></a>Para inserir um token de rastreamento e exibir informações sobre o token  
@@ -88,7 +88,7 @@ ms.locfileid: "62667811"
   
 3.  Clique em **Inserir Rastreador**.  
   
-4.  Exiba o tempo decorrido para o token de rastreamento nas seguintes colunas: **Publicador para Distribuidor**, **Distribuidor para Assinante**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou um determinado ponto.  
+4.  Exiba o tempo decorrido para o token de rastreamento nas seguintes colunas: **Publicador para Distribuidor**, **Distribuidor para Assinante**, **Latência Total**. Um valor **pendente** indica que o token não atingiu um determinado ponto.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Para exibir informações sobre um token de rastreamento previamente inserido  
   
@@ -98,12 +98,12 @@ ms.locfileid: "62667811"
   
 3.  Selecione uma opção de tempo na lista suspensa **Tempo inserido** .  
   
-4.  Exiba o tempo decorrido para o token de rastreamento nas seguintes colunas: **Publicador para Distribuidor**, **Distribuidor para Assinante**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou um determinado ponto.  
+4.  Exiba o tempo decorrido para o token de rastreamento nas seguintes colunas: **Publicador para Distribuidor**, **Distribuidor para Assinante**, **Latência Total**. Um valor **pendente** indica que o token não atingiu um determinado ponto.  
   
     > [!NOTE]  
     >  Informações de token de rastreamento são retidas para o mesmo período de tempo que outros dados históricos, os quais são governados pelo período de retenção de histórico do banco de dados de distribuição. Para obter informações sobre como alterar as propriedades do banco de dados de distribuição, consulte [Exibir e modificar as propriedades do Distribuidor e do Publicador](../view-and-modify-distributor-and-publisher-properties.md).  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Para publicar um token de rastreamento em uma publicação transacional  
   
@@ -127,12 +127,12 @@ ms.locfileid: "62667811"
   
 2.  No Publicador do banco de dados de publicação, execute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql), especificando **@publication** e a ID de rastreamento a ser excluída da etapa 2 para **@tracer_id**.  
   
-###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Exemplo (Transact-SQL)  
  Esse exemplo publica um registro dos tokens de rastreamento, e usa o ID retornado do token de rastreamento publicado, para exibir as informações da latência.  
   
  [!code-sql[HowTo#sp_tracertokens](../../../snippets/tsql/SQL15/replication/howto/tsql/createtracertokens.sql#sp_tracertokens)]  
   
-##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Para publicar um token de rastreamento em uma publicação transacional  
   

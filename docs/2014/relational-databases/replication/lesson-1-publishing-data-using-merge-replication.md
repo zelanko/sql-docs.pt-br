@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721183"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Lição 1: Publicando dados usando replicação de mesclagem
-  Nesta lição, você criará uma publicação de mesclagem [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando o para publicar um subconjunto das tabelas **Employee**, **SalesOrderHeader**e **SalesOrderDetail** no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados de exemplo. Essas tabelas são filtradas com filtros de linha com parâmetros de modo que cada assinatura contenha uma partição exclusiva dos dados. Você também adicionará o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado pelo Agente de Mesclagem à PAL (lista de acesso à publicação). Este tutorial exige a conclusão do tutorial anterior, [Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md).  
+   Nesta lição, você aprenderá a criar uma publicação de mesclagem usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar um subconjunto das tabelas **Employee**, **SalesOrderHeader** e **SalesOrderDetail** no banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Essas tabelas são filtradas com filtros de linha com parâmetros de modo que cada assinatura contenha uma partição exclusiva dos dados. Você também adicionará o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado pelo Agente de Mesclagem à PAL (lista de acesso à publicação). Este tutorial exige a conclusão do tutorial anterior, [Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md).  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>Para criar uma publicação e definir artigos  
   
@@ -107,14 +107,14 @@ ms.locfileid: "62721183"
   
 3.  Selecione a página **Lista de Acesso à Publicação** e clique em **Adicionar**.  
   
-4.  Na caixa de diálogo Adicionar acesso à publicação, selecione _<Machine_Name>_ **\ repl_merge** e clique em **OK**. Clique em **OK**.  
+4.  Na caixa de diálogo Adicionar Acesso à Publicação, selecione _<Machine_Name>_**\repl_merge** e clique em **OK**. Clique em **OK**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Você criou a publicação de mesclagem com sucesso. A seguir, você assinará essa publicação. Consulte [Lição 2: Criando uma assinatura na publicação de mesclagem](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Filtrar os dados publicados](publish/filter-published-data.md)   
- [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
- [Defina um Artigo](publish/define-an-article.md)  
+ [Filtrar dados publicados](publish/filter-published-data.md)   
+ [Filtros de linha com parâmetros](merge/parameterized-filters-parameterized-row-filters.md)   
+ [Definir um artigo](publish/define-an-article.md)  
   
   

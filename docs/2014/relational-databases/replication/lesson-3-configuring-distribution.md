@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721102"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lição 3: Configurando a distribuição
@@ -37,7 +37,7 @@ ms.locfileid: "62721102"
   
 3.  Na página **distribuidor** , selecione **'**_\<ServerName>_ **' atuará como seu próprio distribuidor; SQL Server criará um banco de dados de distribuição e um log**e, em seguida, clique em **Avançar**.  
   
-4.  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não estiver sendo executado, na página inicial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agent**, selecione **Sim** para configurar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar automaticamente. Clique em **Próximo**.  
+4.  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não estiver sendo executado, na página inicial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agent**, selecione **Sim** para configurar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar automaticamente. Clique em **Avançar**.  
   
 5.  Insira ** \\ ** \< _Machine_Name>_ **\repldata** na caixa de texto **pasta de instantâneo** , \<em que *Machine_Name>* é o nome do Publicador e clique em **Avançar**.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62721102"
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **segurança**, clique com o botão direito do mouse em **logons**e selecione **novo logon**.  
   
-2.  Na página **geral** , clique em **Pesquisar**, insira \< _Machine_Name>_ **\ repl_snapshot** na caixa **Inserir o nome do objeto a ser selecionado** , \<em que *Machine_Name>* é o nome do servidor do Publicador local, clique em **verificar nomes**e clique em **OK**.  
+2.  Na página **Geral**, clique em **Pesquisar**, insira \<_Machine_Name>_**\repl_snapshot** na caixa **Inserir o nome do objeto a ser selecionado**, em que \<*Machine_Name>* é o nome do servidor do Publicador local. Em seguida, clique em **Verificar Nomes** e em **OK**.  
   
 3.  Na página **mapeamento de usuário** , na lista **Usuários mapeados para este logon** , selecione a **distribuição** e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] os bancos de dados.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62721102"
 7.  Repita as etapas 1a 4 para criar um logon para a conta repl_merge local. Esse logon deve ter mapeamentos de usuário nos bancos de dados **distribuição** e **AdventureWorks** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar Distribuição](configure-distribution.md)   
+ [Configurar a distribuição](configure-distribution.md)   
  [Modelo de segurança do agente de replicação](security/replication-agent-security-model.md)  
   
   

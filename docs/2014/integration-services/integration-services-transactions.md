@@ -16,22 +16,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0359ca10e7279f4a80bec082a8e049f4641c9b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767618"
 ---
 # <a name="integration-services-transactions"></a>Transações do Integration Services
-  Os pacotes usam transações para associar as ações do banco de dados realizadas pelas tarefas em unidades atômicas e, ao fazer isso, a integridade dos dados é mantida. Todos [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] os tipos de contêiner-pacotes, os contêineres loop for, loop foreach e sequência e os hosts de tarefa que encapsulam cada tarefa-podem ser configurados para usar transações. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]fornece três opções para configurar transações: **sem suporte**, **com suporte**e **necessárias**.  
+  Os pacotes usam transações para associar as ações do banco de dados realizadas pelas tarefas em unidades atômicas e, ao fazer isso, a integridade dos dados é mantida. Todos os tipos de contêineres do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], como os pacotes, o Loop For, o Loop Foreach, os contêineres de sequência e os hosts de tarefa que encapsulam cada tarefa, podem ser configurados para usar transações. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece três opções para configurar transações: **Sem Suporte**, **Há Suporte**e **Necessário**.  
   
--   **Obrigatório** indica que o contêiner inicia uma transação, a menos que uma já tenha sido iniciada por seu contêiner pai. Se uma transação já existir, o contêiner se unirá à transação. Por exemplo, se um pacote que não está configurado para dar suporte a transações incluísse um contêiner Sequência que usa a opção **Necessário**, o contêiner iniciaria sua própria transação. Se o pacote fosse configurado para usar a opção **Necessário**, o contêiner Sequência se uniria à transação do pacote.  
+-   **Necessário** indica que o contêiner inicia uma transação, a menos que uma já tenha sido iniciada por seu contêiner pai. Se uma transação já existir, o contêiner se unirá à transação. Por exemplo, se um pacote que não está configurado para dar suporte a transações incluísse um contêiner Sequência que usa a opção **Necessário** , o contêiner iniciaria sua própria transação. Se o pacote fosse configurado para usar a opção **Necessário** , o contêiner Sequência se uniria à transação do pacote.  
   
--   **Com suporte** indica que o contêiner não inicia uma transação, mas une qualquer transação iniciada por seu contêiner pai. Por exemplo, se um pacote com quatro tarefas Executar SQL iniciar uma transação e todas as quatro tarefas usarem a opção **Há Suporte**, as atualizações de banco de dados realizadas pelas tarefas Executar SQL serão revertidas se qualquer tarefa falhar. Se o pacote não iniciar uma transação, as quatro tarefas Executar SQL não serão associadas por uma transação e nenhuma atualização de banco de dados, exceto as realizadas pela tarefa que falhou, será revertida.  
+-   **Há Suporte** indica que o contêiner não inicia uma transação, mas se une a qualquer transação iniciada por seu contêiner pai. Por exemplo, se um pacote com quatro tarefas Executar SQL iniciar uma transação e todas as quatro tarefas usarem a opção **Há Suporte** , as atualizações de banco de dados realizadas pelas tarefas Executar SQL serão revertidas se qualquer tarefa falhar. Se o pacote não iniciar uma transação, as quatro tarefas Executar SQL não serão associadas por uma transação e nenhuma atualização de banco de dados, exceto as realizadas pela tarefa que falhou, será revertida.  
   
--   **Sem suporte** indica que o contêiner não inicia uma transação ou ingressa em uma transação existente. Uma transação iniciada por um contêiner pai não afeta contêineres filhos que foram configurados para não suportar transações. Por exemplo, se um pacote for configurado para iniciar uma transação e um contêiner Loop For no pacote usar a opção **Sem Suporte**, nenhuma das tarefas no Loop For poderão ser revertidas se falharem.  
+-   **Sem Suporte** indica que o contêiner não inicia uma transação ou se une a uma transação existente. Uma transação iniciada por um contêiner pai não afeta contêineres filhos que foram configurados para não suportar transações. Por exemplo, se um pacote for configurado para iniciar uma transação e um contêiner Loop For no pacote usar a opção **Sem Suporte** , nenhuma das tarefas no Loop For poderão ser revertidas se falharem.  
   
- Você configura transações definindo a propriedade TransactionOption no contêiner. É possível definir essa propriedade na janela **Propriedades** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ou definir a propriedade programaticamente.  
+ Você configura transações definindo a propriedade TransactionOption no contêiner. É possível definir essa propriedade na janela **Propriedades** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ou definir a propriedade programaticamente.  
   
 > [!NOTE]  
 >  A propriedade `TransactionOption` influencia a aplicação ou não do valor da propriedade `IsolationLevel` solicitada por um contêiner. Para obter mais informações, consulte a descrição da `IsolationLevel` Propriedade no tópico [definindo propriedades do pacote](set-package-properties.md).  

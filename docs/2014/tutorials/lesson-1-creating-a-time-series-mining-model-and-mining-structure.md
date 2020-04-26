@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678446"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lição 1: Criando um modelo de mineração de série temporal e uma estrutura de mineração
@@ -199,6 +199,6 @@ CREATE MINING MODEL [Mining Model Name]
   
 ## <a name="see-also"></a>Consulte Também  
  [Conteúdo do modelo de mineração para modelos de série temporal &#40;mineração de dados Analysis Services&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
- [Referência técnica do algoritmo MTS](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
+ [Referência técnica do algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

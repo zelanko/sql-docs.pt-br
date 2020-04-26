@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62938578"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visualizador de Conflitos de Replicação da Microsoft (replicação de mesclagem)
@@ -46,7 +46,7 @@ ms.locfileid: "62938578"
  **Publicação**  
  Escolha uma publicação que inclua tabelas com conflitos.  
   
- **Table**  
+ **Tabela**  
  Escolha uma tabela que inclua conflitos.  
   
  **Definir Filtro**  
@@ -55,10 +55,10 @@ ms.locfileid: "62938578"
  **Aplicar ou Remover Filtro**  
  Clique para aplicar ou remover um filtro definido na caixa de diálogo **Definir Filtros** .  
   
- **Selecionar tudo**  
+ **Selecionar Tudo**  
  Clique para selecionar todos os conflitos listados na grade.  
   
- **Selecionar Nenhum**  
+ **Selecionar nenhum**  
  Clique para desmarcar a seleção de todos os conflitos listados na grade.  
   
  **Remover**  
@@ -70,7 +70,7 @@ ms.locfileid: "62938578"
  **Mostrar as primeiras cinco colunas e outras colunas com dados conflitantes**  
  Selecione para exibir as primeiras cinco colunas e qualquer coluna com conflitos. Isso é útil quando a tabela tem um grande número de colunas, mas você quer ver apenas as mais relevantes para resolver o conflito. As primeiras cinco colunas sempre são incluídas nessa exibição, como campos que identificam uma linha, como chave primária ou campo de nomes, estão sempre entre as primeiras colunas da tabela.  
   
- **Exibir informações da coluna** (**...**)  
+ **Exibir Informações da Coluna** (**...**)  
  Clique para exibir informações da coluna: **Nome da Tabela**, **Nome da Coluna**, **Tipo de Dados**e **Valor da Coluna**. **Valor da Coluna** é editável, a menos que o valor seja exibido como somente leitura.  
   
  **Enviar Vencedor**  
@@ -80,10 +80,10 @@ ms.locfileid: "62938578"
  Clique para aceitar a linha que o resolvedor de conflitos determinou como perdedora. O valor de qualquer coluna que não é exibido como somente leitura pode ser alterado antes de clicar nesse botão.  
   
  **Registrar em log os detalhes do conflito**  
- Marque essa caixa para registrar em log os detalhes do conflito em um arquivo. Para especificar um local para o arquivo, aponte para o menu **Exibir** e clique em **Opções**. Insira um valor ou clique em ( **...** ) e navegue até o arquivo apropriado. Clique em **OK** para sair da caixa de diálogo **Opções** .  
+ Marque essa caixa para registrar em log os detalhes do conflito em um arquivo. Para especificar um local para o arquivo, aponte para o menu **Exibir** e clique em **Opções**. Insira um valor ou clique em (**...**) e navegue até o arquivo apropriado. Clique em **OK** para sair da caixa de diálogo **Opções** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir e resolver conflitos de dados em publicações de mesclagem &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
- [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
+ [Exibir e resolver conflitos de dados para publicações de mesclagem &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
+ [Detecção e resolução de conflito de replicação de mesclagem avançada](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

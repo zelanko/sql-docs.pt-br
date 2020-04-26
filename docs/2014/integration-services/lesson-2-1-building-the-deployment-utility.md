@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767578"
 ---
-# <a name="step-1-building-the-deployment-utility"></a>Etapa 1: Compilando o utilitário de implantação
+# <a name="step-1-building-the-deployment-utility"></a>Etapa 1: Compilar o utilitário de implantação
   Nesta tarefa, você configurará e compilará um utilitário de implantação para o projeto do Tutorial de Implantação.  
   
  Antes de compilar o utilitário de implantação, você deve modificar as propriedades do projeto do Tutorial de Implantação. Você usará a caixa de diálogo **Páginas de Propriedades do Tutorial de Implantação** para configurar essas propriedades. Nesta caixa de diálogo, você deve habilitar o recurso para atualizar configurações durante a implantação e especificar que o processo de compilação gera um utilitário de implantação. Depois que você definir as propriedades, o projeto será compilado.  
@@ -63,7 +63,7 @@ ms.locfileid: "62767578"
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 2: Verificando o pacote de implantação](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Ícone de Integration Services (pequeno)](media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar um utilitário de implantação](../../2014/integration-services/create-a-deployment-utility.md)  

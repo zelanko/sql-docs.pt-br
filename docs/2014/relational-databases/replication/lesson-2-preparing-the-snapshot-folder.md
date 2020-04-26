@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721017"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Lição 2: Preparando a pasta do instantâneo
@@ -38,7 +38,7 @@ ms.locfileid: "62721017"
   
 7.  Na caixa de diálogo **Permissões** , clique em **Adicionar**. Na caixa de texto **Selecionar usuário, computadores, conta de serviço ou grupos** , digite o nome da conta de agente de instantâneo criada na lição 1, como \< _Machine_Name>_ **\ repl_snapshot**, em \<que *Machine_Name>* é o nome do Publicador. Clique em **Verificar Nomes**e em **OK**.  
   
-8.  Repita a etapa anterior para adicionar permissões para o agente de distribuição, como \< _Machine_Name>_ **\ repl_distribution**e para o agente de mesclagem como \< _Machine_Name _>**\ repl_merge**.  
+8.  Repita a etapa anterior para adicionar permissões para o Agente de Distribuição, como \<_Machine_Name>_**\repl_distribution** e para o Agente de Mesclagem, como \<_Machine_Name>_**\repl_merge**.  
   
 9. Verifique se as permissões a seguir são permitidas:  
   
@@ -54,6 +54,6 @@ ms.locfileid: "62721017"
  Você configurou com êxito o compartilhamento da pasta de instantâneo. A seguir, você configurará a distribuição. Consulte [Lição 3: Configurando a distribuição](lesson-3-configuring-distribution.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Proteger uma pasta de instantâneo](security/secure-the-snapshot-folder.md)  
+ [Proteger a pasta de instantâneos](security/secure-the-snapshot-folder.md)  
   
   

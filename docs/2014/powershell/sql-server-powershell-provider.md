@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3e8fc0f770d8763ccb330b3c7588a97604d876e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62762838"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
@@ -46,7 +46,7 @@ ms.locfileid: "62762838"
 |SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] objetos como projetos, pacotes e ambientes.|  
 |SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objetos como cubos, agregações e dimensões.|  
   
- Por exemplo, você pode usar a pasta SQLSERVER:\SQL para iniciar caminhos que podem representar qualquer objeto com suporte pelo modelo de objeto do SMO. A parte à esquerda de um caminho SQLSERVER:\SQL é SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*. Os nós após o nome da instância alternam entre coleções de objetos (como *Bancos de Dados* ou *Exibições*) e nomes de objetos (como AdventureWorks2012). Os esquemas não são representados como classes de objetos. Ao especificar o nó para um objeto de alto nível em um esquema, como uma tabela ou exibição, é preciso especificar o nome do objeto no formato *SchemaName.ObjectName*.  
+ Por exemplo, você pode usar a pasta SQLSERVER:\SQL para iniciar caminhos que podem representar qualquer objeto com suporte pelo modelo de objeto do SMO. A parte principal de um caminho SqlServer: \ SQL é SqlServer: \ SQL\\*ComputerName*\\*InstanceName*. Os nós após o nome da instância alternam entre coleções de objetos (como *Bancos de Dados* ou *Exibições*) e nomes de objetos (como AdventureWorks2012). Os esquemas não são representados como classes de objetos. Ao especificar o nó para um objeto de alto nível em um esquema, como uma tabela ou exibição, é preciso especificar o nome do objeto no formato *SchemaName.ObjectName*.  
   
  Este é o caminho da tabela Vendor no esquema Purchasing do banco de dados AdventureWorks2012 em uma instância padrão do [!INCLUDE[ssDE](../includes/ssde-md.md)] no computador local:  
   

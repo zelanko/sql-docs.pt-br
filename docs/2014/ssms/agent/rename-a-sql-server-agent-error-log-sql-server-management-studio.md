@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3405f69ce36b4b46cdb519d281ab910d7220887
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62649913"
 ---
 # <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>Rename a SQL Server Agent Error Log (SQL Server Management Studio)
@@ -33,20 +33,19 @@ ms.locfileid: "62649913"
   
      [Segurança](#Security)  
   
--   [Para renomear um SQL Server Agent log de erros usando SQL Server Management Studio](#SSMSProcedure)  
+-   [Para renomear um log de erros do SQL Server Agent usando o SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   O Pesquisador de Objetos só exibirá o nó [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent se você tiver permissão para usá-lo.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não irá gravar no novo arquivo de log até que o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seja reiniciado.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não irá gravar no novo arquivo de log até que o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seja reiniciado.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Para executar suas funções, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve ser configurado de modo a usar as credenciais de uma conta que seja membro da função de servidor fixa **sysadmin** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A conta deve ter as seguintes permissões do Windows:  
   
 -   Fazer logon como um serviço (SeServiceLogonRight)  
@@ -59,7 +58,7 @@ ms.locfileid: "62649913"
   
  Para obter mais informações sobre as permissões do Windows necessárias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a conta de serviço do Agent, consulte [selecionar uma conta para o serviço de SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) e [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-rename-a-sql-server-agent-error-log"></a>Para renomear o log de erros do SQL Server Agent  
   
@@ -71,6 +70,6 @@ ms.locfileid: "62649913"
   
 4.  Na caixa de diálogo **Configurar logs de erros do SQL Server Agent** , na caixa **Arquivo do log de erros** , insira o novo caminho de arquivo e o nome de arquivo para o log de erros. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Especifique o local do log de erros do agente** .  
   
-5.  Quando terminar, clique em **OK**.  
+5.  Ao concluir, clique em **OK**.  
   
   

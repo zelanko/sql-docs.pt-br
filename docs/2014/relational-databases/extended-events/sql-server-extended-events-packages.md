@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638753"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pacotes de Eventos Estendidos do SQL Server
@@ -147,7 +147,7 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   type  
+-   tipo  
   
  Para obter mais informações, veja [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql).  
   
@@ -214,8 +214,8 @@ where name = 'lock_mode'
  Usando essa tabela como um exemplo, suponhamos que você tenha uma coluna denominada modo e seu valor seja 5. A tabela indica que 5 mapeia para X, o que significa que o tipo de bloqueio é Exclusivo.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Sessões de eventos estendidos do SQL Server](sql-server-extended-events-sessions.md)   
- [Mecanismo de eventos estendidos do SQL Server](sql-server-extended-events-engine.md)   
+ [SQL Server sessões de eventos estendidos](sql-server-extended-events-sessions.md)   
+ [SQL Server mecanismo de eventos estendidos](sql-server-extended-events-engine.md)   
  [Destinos de eventos estendidos do SQL Server](../../database-engine/sql-server-extended-events-targets.md)  
   
   

@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62510950"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>Propriedades da etapa de trabalho: nova etapa de trabalho (página Geral)
+# <a name="job-step-properties-new-job-step-general-page"></a>Propriedades da Etapa de Trabalho: Nova Etapa de Trabalho (página Geral)
   Use esta página para exibir e alterar as propriedades de uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] etapa de trabalho do Agent ou para definir uma nova etapa de trabalho.  
   
  Para navegar até essa página, no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, clique com o botão direito do mouse em **Trabalhos**, clique em **Novos Trabalhos**, selecione a página **Etapas** e clique em **Novo**. Você também pode navegar até essa página. Para isso, clique com o botão direito do mouse em um trabalho no Pesquisador de Objetos, clique em **Propriedades**, selecione a página **Etapas** e clique em **Novo**, **Inserir**ou **Editar**.  
@@ -44,10 +44,10 @@ ms.locfileid: "62510950"
  **Abrir**  
  Carregue o comando de um arquivo.  
   
- **Selecionar tudo**  
+ **Selecionar Tudo**  
  Selecione o texto do comando.  
   
- **Copy**  
+ **Cópia**  
  Copie o texto selecionado para a Área de Transferência.  
   
  **Colar**  
@@ -73,26 +73,26 @@ ms.locfileid: "62510950"
  **Abrir**  
  Carregue o comando de um arquivo.  
   
- **Selecionar tudo**  
+ **Selecionar Tudo**  
  Selecione o texto do comando.  
   
- **Copy**  
+ **Cópia**  
  Copie o texto selecionado.  
   
  **Colar**  
  Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-operating-system-cmdexec-job-steps"></a>Opções para etapas de trabalho do sistema operacional (CmdExec)  
- **Código de saída do processo de um comando bem-sucedido**  
+ **Código de saída do processo de um comando bem sucedido**  
  Digite o código de saída que o comando retorna para indicar sucesso.  
   
  **Abrir**  
  Carregue o comando de um arquivo.  
   
- **Selecionar tudo**  
+ **Selecionar Tudo**  
  Selecione o texto do comando.  
   
- **Copy**  
+ **Cópia**  
  Copie o texto selecionado.  
   
  **Colar**  
@@ -102,30 +102,30 @@ ms.locfileid: "62510950"
  **Abrir**  
  Carregue o script de um arquivo.  
   
- **Selecionar tudo**  
+ **Selecionar Tudo**  
  Selecione o texto do script.  
   
- **Copy**  
+ **Cópia**  
  Copie o texto selecionado.  
   
  **Colar**  
  Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-replication-distributor-job-steps"></a>Opções para etapas de trabalho do Distribuidor de Replicação  
- **Selecionar tudo**  
+ **Selecionar Tudo**  
  Selecione o texto do comando.  
   
- **Copy**  
+ **Cópia**  
  Copie o texto selecionado.  
   
  **Colar**  
  Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-replication-merge-job-steps"></a>Opções para etapas de trabalho de Mesclagem de Replicação  
- **Selecionar tudo**  
+ **Selecionar Tudo**  
  Selecione o texto do comando.  
   
- **Copy**  
+ **Cópia**  
  Copie o texto selecionado.  
   
  **Colar**  
@@ -135,30 +135,30 @@ ms.locfileid: "62510950"
  **Backup de banco de dados**  
  O banco de dados a ser usado para a etapa de trabalho.  
   
- **Selecionar tudo**  
+ **Selecionar Tudo**  
  Selecione o texto do comando.  
   
- **Copy**  
+ **Cópia**  
  Copie o texto selecionado.  
   
  **Colar**  
  Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-replication-snapshot-job-steps"></a>Opções para etapas de trabalho do instantâneo de replicação  
- **Selecionar tudo**  
+ **Selecionar Tudo**  
  Selecione o texto do comando.  
   
- **Copy**  
+ **Cópia**  
  Copie o texto selecionado.  
   
  **Colar**  
  Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-replication-transaction-log-reader-job-steps"></a>Opções para etapas de trabalho do Leitor do Log de Transações da Replicação  
- **Selecionar tudo**  
+ **Selecionar Tudo**  
  Selecione o texto do comando.  
   
- **Copy**  
+ **Cópia**  
  Copie o texto selecionado.  
   
  **Colar**  
@@ -171,10 +171,10 @@ ms.locfileid: "62510950"
  **Abrir**  
  Carregue o comando de um arquivo.  
   
- **Selecionar tudo**  
+ **Selecionar Tudo**  
  Selecione o texto do comando.  
   
- **Copy**  
+ **Cópia**  
  Copie o texto selecionado.  
   
  **Colar**  
@@ -190,10 +190,10 @@ ms.locfileid: "62510950"
  **Abrir**  
  Carregue o comando de um arquivo.  
   
- **Selecionar tudo**  
+ **Selecionar Tudo**  
  Selecione o texto do comando.  
   
- **Copy**  
+ **Cópia**  
  Copie o texto selecionado.  
   
  **Colar**  
@@ -223,8 +223,7 @@ ms.locfileid: "62510950"
  Logons para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se este método de autenticação for selecionado, digite o **Nome de usuário** e a **Senha**apropriados.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A autenticação é fornecida para fins de compatibilidade com versões anteriores. Para maior segurança, use a autenticação do Windows, se possível.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A autenticação é fornecida para fins de compatibilidade com versões anteriores. Para maior segurança, use a autenticação do Windows, se possível.  
   
  **Pacote**  
  Digite o local do pacote.  
@@ -244,10 +243,10 @@ ms.locfileid: "62510950"
  **Remover**  
  Remova um arquivo de configuração para o pacote.  
   
- **Mover para cima**  
+ **Mover para Cima**  
  Mova para cima o arquivo de configuração selecionado.  
   
- **Mover para baixo**  
+ **Mover para Baixo**  
  Mova para baixo o arquivo de configuração selecionado.  
   
 ### <a name="command-files-tab"></a>Guia Arquivos de Comando  
@@ -262,10 +261,10 @@ ms.locfileid: "62510950"
  **Remover**  
  Remova o arquivo de comando selecionado.  
   
- **Mover para cima**  
+ **Mover para Cima**  
  Mova para cima o arquivo de comando selecionado.  
   
- **Mover para baixo**  
+ **Mover para Baixo**  
  Mova para baixo o arquivo de comando selecionado.  
   
 ### <a name="data-sources-tab"></a>Guia Fontes de Dados  
@@ -283,16 +282,16 @@ ms.locfileid: "62510950"
 ### <a name="execution-options-tab"></a>Guia Opções de Execução  
  Exiba ou altere as opções de execução para o pacote nesta guia.  
   
- **Falha no pacote em avisos de validação**  
+ **Falha de pacote com avisos de validação**  
  Selecione essa opção para que a execução do pacote falhe se ocorrerem avisos de validação.  
   
  **Validar pacote sem executar**  
  Selecione esta opção para que a etapa de trabalho valide, mas não execute, o pacote.  
   
- **Máximo de executáveis simultâneos**  
+ **Executáveis máximos simultâneos**  
  Número máximo de arquivos executáveis que podem ser executados ao mesmo tempo.  
   
- **Habilitar pontos de verificação de pacote**  
+ **Ativar pontos de verificação do pacote**  
  Selecione esta opção para que a etapa de trabalho use pontos de verificação do pacote.  
   
  **Arquivo de ponto de verificação**  
@@ -313,7 +312,7 @@ ms.locfileid: "62510950"
  **Provedor de log**  
  Selecione o ClassID para o provedor de log.  
   
- **Cadeia de caracteres de configuração**  
+ **Cadeia de Caracteres de Configuração**  
  Digite a cadeia de caracteres de configuração para o provedor de log.  
   
  **Remover**  
@@ -334,25 +333,25 @@ ms.locfileid: "62510950"
 ### <a name="verification-tab"></a>Guia Verificação  
  Selecione as opções de verificação para a etapa de trabalho nesta guia.  
   
- **Executar somente pacotes assinados**  
+ **Executar apenas pacotes assinados**  
  Execute apenas pacotes que tenham sido assinados. Quando esta opção está selecionada, a etapa de trabalho apresentará falha se o pacote não estiver assinado.  
   
  **Verificar compilação do pacote**  
  Execute apenas pacotes com um número de construção específico. Quando esta opção está selecionada, a etapa de trabalho apresentará falha se o pacote não tiver o número de construção especificado.  
   
- **Build**  
+ **Compilar**  
  Digite o número de construção do pacote.  
   
  **Verificar ID do pacote**  
  Execute apenas pacotes com um ID específico. Quando esta opção está selecionada, a etapa de trabalho apresentará falha se o pacote não tiver o ID especificado.  
   
- **ID do pacote**  
+ **ID do Pacote**  
  Digite o ID do pacote.  
   
  **Verificar ID da versão**  
  Execute apenas pacotes com uma ID de versão específica. Quando esta opção está selecionada, a etapa de trabalho apresentará falha se o pacote não tiver a ID da versão especificada.  
   
- **ID da versão**  
+ **ID da Versão**  
  Digite o ID da versão.  
   
 ### <a name="command-line-tab"></a>Guia Linha de Comando  

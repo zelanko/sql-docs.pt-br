@@ -42,10 +42,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b1acd9e33865f1f60c1d1134e3173af4e4a562b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076612"
 ---
 # <a name="configure-measure-properties"></a>Configurar propriedades de medida
@@ -58,8 +58,7 @@ ms.locfileid: "66076612"
   
 |Propriedade|Definição|  
 |--------------|----------------|  
-|`AggregateFunction`|Obrigatórios. Determina como as medidas são agregadas. 
-  `Sum` é a agregação padrão. Para obter mais informações, consulte [Usar funções de agregação](use-aggregate-functions.md) para obter uma descrição de cada função.|  
+|`AggregateFunction`|Obrigatórios. Determina como as medidas são agregadas. `Sum` é a agregação padrão. Para obter mais informações, consulte [Usar funções de agregação](use-aggregate-functions.md) para obter uma descrição de cada função.|  
 |`DataType`|Obrigatórios. Especifica o tipo de dados da coluna da tabela de fatos subjacente à qual a medida está associada. Esse valor é herdado da coluna de origem por padrão.|  
 |`Description`|Fornece uma descrição da medida, que pode ser exposta em aplicativos cliente.|  
 |`DisplayFolder`|Especifica a pasta na qual a medida aparecerá quando os usuários conectarem-se ao cubo. Se o cubo tiver várias medidas, você pode usar as pastas de exibição para categorizar as medidas e aprimorar a experiência de navegação do usuário.|  

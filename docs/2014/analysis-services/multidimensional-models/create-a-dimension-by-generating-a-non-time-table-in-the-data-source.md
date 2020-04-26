@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 962df497e804011e69e2a350c24ce41f4c273b6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076435"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Criar uma dimensão ao gerar uma tabela que não seja de tempo na fonte de dados
@@ -33,11 +33,11 @@ ms.locfileid: "66076435"
   
 -   Data  
   
--   Departamento  
+-   department  
   
 -   Moeda de destino  
   
--   Funcionário  
+-   Employee  
   
 -   painel Geografia do app&#39;s selecionado  
   

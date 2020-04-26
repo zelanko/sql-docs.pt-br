@@ -10,10 +10,10 @@ ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk
 ms.openlocfilehash: 205e0a1ee6f93a11c471154534f460d9fa379d33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62473634"
 ---
 # <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>A documentação do SQL Server 2014 está sendo movida para o Docs
@@ -41,7 +41,7 @@ Os endereços HTTP do MSDN obsoletos continuarão a funcionar por pelo menos alg
 - Os rastreadores do Bing e do Google começarão a deslistar e ignorarão os endereços antigos do MSDN.
 
 
-## <a name="after-the-move"></a>Após a movimentação
+## <a name="after-the-move"></a>Após a migração
 
 Após a mudança para o *docs*, o endereço do artigo da documentação da raiz SQL Server 2014 será:
 

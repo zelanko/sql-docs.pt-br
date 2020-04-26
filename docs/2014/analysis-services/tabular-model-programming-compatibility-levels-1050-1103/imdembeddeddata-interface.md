@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62757783"
 ---
 # <a name="imdembedded-interface"></a>Interface IMDEmbedded
@@ -81,10 +81,10 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>DESCRIÇÃO  
+#### <a name="description"></a>Descrição  
  Obtém o identificador usado pelo aplicativo de host para o fluxo inserido no documento contêiner.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *out_pbstrStreamId*  
  Especifica o local do identificador de fluxo.  
   
@@ -125,10 +125,10 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>DESCRIÇÃO  
+#### <a name="description"></a>Descrição  
  Define a URL para o arquivo que contém o fluxo inserido.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *in_bstrURL*  
  Especifica a URL para o documento contêiner.  
   
@@ -155,10 +155,10 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>DESCRIÇÃO  
+#### <a name="description"></a>Descrição  
  Definir um sinalizador para indicar se o aplicativo inserido está em um ambiente hospedado.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *in_ftHosted*  
  TRUE se o chamador estiver hospedado em um aplicativo de serviço (como o IIS).  
   
@@ -185,10 +185,10 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>DESCRIÇÃO  
+#### <a name="description"></a>Descrição  
  Definir o caminho para os arquivos temporários usados pelo aplicativo inserido.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *in_bstrPath*  
  O caminho usado pelo aplicativo de host para arquivos temporários.  
   
@@ -213,10 +213,10 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>DESCRIÇÃO  
+#### <a name="description"></a>Descrição  
  Cancela a operação de banco de dados inserida atual.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  Nenhum.  
   
 #### <a name="return-value"></a>Valor retornado  
@@ -244,10 +244,10 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>DESCRIÇÃO  
+#### <a name="description"></a>Descrição  
  Obtém o tamanho estimado (em bytes) do fluxo para salvar o objeto inserido. Herdado de `IPersistStream`.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *in_bstrPath*  
  O tamanho estimado (em bytes) da imagem de banco de dados inserida.  
   
@@ -264,10 +264,10 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>DESCRIÇÃO  
+#### <a name="description"></a>Descrição  
  Verifica se o banco de dados inserido foi alterado após ser salvo pela última vez. Herdado de `IPersistStream`.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  none  
   
 #### <a name="return-values"></a>Valor(es) de retorno  
@@ -288,10 +288,10 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>DESCRIÇÃO  
+#### <a name="description"></a>Descrição  
  Carrega o banco de dados inserido para o mecanismo local ou em processo. Herdado de `IPersistStream`.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *in_pStm*  
  Um ponteiro para uma interface de fluxo da qual deverá ser carregado o banco de dados inserido.  
   
@@ -314,10 +314,10 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>DESCRIÇÃO  
+#### <a name="description"></a>Descrição  
  Salva o banco de dados local ou em processo para o fluxo inserido no documento contêiner. Herdado de `IPersistStream`.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *in_pStm*  
  Um ponteiro para uma interface de fluxo na qual deverá ser salvo o banco de dados inserido.  
   

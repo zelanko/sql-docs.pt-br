@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745537"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>Usando o detalhamento em dados de estrutura (Tutorial de mineração de dados básico)
@@ -24,7 +24,7 @@ ms.locfileid: "62745537"
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], na guia **modelos de mineração** do designer de mineração de dados, clique com o botão direito do mouse no modelo de **TM_Decision_Tree** e selecione **Propriedades**.  
   
-2.  Nas janelas Propriedades , clique em **AllowDrillthrough**e selecione **True**.  
+2.  Nas janelas Propriedades, clique em **AllowDrillthrough**e selecione **True**.  
   
 3.  Na guia Modelos de Mineração , clique com o botão direito do mouse no modelo e selecione **Modelo de Processo**.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62745537"
  Parabéns, você concluiu o tutorial de mineração de dados básico. Agora que você já está se sentindo confortável em usar as ferramentas de mineração de dados, recomendamos que conclua também o Tutorial de mineração de dados intermediário, que demonstra como criar modelos para previsão, análise de cesta básica e clustering de sequências.  
   
 ## <a name="previous-task-in-lesson"></a>Tarefa anterior da lição  
- [Criando previsões &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Criando previsões &#40;Tutorial básico de Data Mining&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar uma consulta de previsão usando o construtor de consultas de previsão](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  

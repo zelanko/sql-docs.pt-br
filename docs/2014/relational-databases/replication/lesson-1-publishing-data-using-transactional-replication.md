@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721086"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lição 1: publicando dados que usam replicação transacional
-  Nesta lição, você criará uma publicação transacional usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o para publicar um subconjunto filtrado da tabela **Product** no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados de exemplo. Você também adicionará o logon do SQL Server usado pelo Distribution Agent à PAL (lista de acesso à publicação). Antes de iniciar este tutorial, você deverá ter completado o tutorial anterior, [Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md).  
+   Nesta lição, você aprenderá a criar uma publicação transacional usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar um subconjunto filtrado da tabela **Produto** no banco de dados de exemplo do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Você também adicionará o logon do SQL Server usado pelo Distribution Agent à PAL (lista de acesso à publicação). Antes de iniciar este tutorial, você deverá ter completado o tutorial anterior, [Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md).  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>Para criar uma publicação e definir artigos  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62721086"
   
 4.  Na página Tipo de Publicação, selecione **Publicação transacional**e clique em **Avançar**.  
   
-5.  Na página Artigos, expanda o nó **Tabelas** , selecione a caixa de seleção **Produto** , expanda **Produto** e desmarque as caixas de seleção **ListPrice** e **StandardCost** . Clique em **Próximo**.  
+5.  Na página Artigos, expanda o nó **Tabelas** , selecione a caixa de seleção **Produto** , expanda **Produto** e desmarque as caixas de seleção **ListPrice** e **StandardCost** . Clique em **Avançar**.  
   
 6.  Na página Filtrar Linhas da Tabela, clique em **Adicionar**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62721086"
   
 10. Na página Segurança do Agente, desmarque a caixa de seleção **Usar as configurações de segurança do Agente de Instantâneo** .  
   
-11. Clique **em configurações de segurança** para a agente de instantâneo \<, digite _Machine_Name>_ **\ repl_snapshot** na caixa **conta de processo** , forneça a senha dessa conta e clique em **OK**.  
+11. Clique em **Configurações de Segurança** do Snapshot Agent, insira \<_Machine_Name>_**\repl_snapshot** na caixa **Conta de processo**, forneça a senha dessa conta e clique em **OK**.  
   
 12. Repita a etapa anterior para configurar repl_logreader como a conta de processo do Agente de Leitor de Log e clique em **Concluir**.  
   
@@ -76,14 +76,14 @@ ms.locfileid: "62721086"
   
 3.  Selecione a página **Lista de Acesso à Publicação** e clique em **Adicionar**.  
   
-4.  Na caixa de diálogo **Adicionar acesso à publicação** , selecione _<Machine_Name>_ **\ repl_distribution** e clique em **OK**. Clique em **OK**.  
+4.  Na caixa de diálogo **Adicionar Acesso à Publicação**, selecione _<Machine_Name>_**\repl_distribution** e clique em **OK**. Clique em **OK**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Você criou a publicação transacional com êxito. A seguir, você assinará essa publicação. Consulte [Lição 2: Criando uma assinatura na publicação transacional](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Filtrar os dados publicados](publish/filter-published-data.md)   
- [Define an Article](publish/define-an-article.md)   
+ [Filtrar dados publicados](publish/filter-published-data.md)   
+ [Definir um artigo](publish/define-an-article.md)   
  [Criar e aplicar o instantâneo](create-and-apply-the-snapshot.md)  
   
   

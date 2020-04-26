@@ -29,10 +29,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667242"
 ---
 # <a name="programmatically-monitor-replication"></a>Monitore programaticamente a replicação
@@ -54,7 +54,7 @@ ms.locfileid: "62667242"
   
  [RMO (Replication Management Objects)](#RMO)  
   
-##  <a name="Tsql"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="Tsql"></a> Transact-SQL  
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>Para monitorar Publicador, publicações e assinatura a partir do Distribuidor  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62667242"
   
     -   O valor **1** para **@mode** , para habilitar a métrica de limite do monitor, ou um valor **2** para desabilitá-la.  
   
-##  <a name="RMO"></a> RMO (Replication Management Objects)  
+##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> RMO (Replication Management Objects)  
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>Para monitorar uma assinatura para uma publicação de mesclagem no Assinante  
   
@@ -268,20 +268,13 @@ ms.locfileid: "62667242"
   
         |Valor|DESCRIÇÃO|  
         |-----------|-----------------|  
-        |1|
-  `expiration` - monitora a expiração iminente de assinaturas para publicações transacionais.|  
-        |2|
-  `latency` - monitora o desempenho de assinaturas para publicações transacionais.|  
-        |4|
-  `mergeexpiration` - monitora a expiração iminente de assinaturas para publicações de mesclagem.|  
-        |5|
-  `mergeslowrunduration`- monitora a duração de sincronizações de mesclagem em conexões da baixa largura da banda (discadas).|  
-        |6|
-  `mergefastrunduration` - monitora a duração de sincronizações de mesclagem em conexões da alta largura da banda (LAN).|  
-        |7|
-  `mergefastrunspeed` - monitora a taxa de sincronizações de mesclagem em conexões de alta largura da banda (LAN).|  
-        |8|
-  `mergeslowrunspeed` - monitora a taxa de sincronizações de mesclagem em conexões de baixa largura da banda (discadas).|  
+        |1|`expiration` - monitora a expiração iminente de assinaturas para publicações transacionais.|  
+        |2|`latency` - monitora o desempenho de assinaturas para publicações transacionais.|  
+        |4|`mergeexpiration` - monitora a expiração iminente de assinaturas para publicações de mesclagem.|  
+        |5|`mergeslowrunduration`- monitora a duração de sincronizações de mesclagem em conexões da baixa largura da banda (discadas).|  
+        |6|`mergefastrunduration` - monitora a duração de sincronizações de mesclagem em conexões da alta largura da banda (LAN).|  
+        |7|`mergefastrunspeed` - monitora a taxa de sincronizações de mesclagem em conexões de alta largura da banda (LAN).|  
+        |8|`mergeslowrunspeed` - monitora a taxa de sincronizações de mesclagem em conexões de baixa largura da banda (discadas).|  
   
     -   *enable* - <xref:System.Boolean> valor que indica se a métrico está habilitado para a publicação.  
   

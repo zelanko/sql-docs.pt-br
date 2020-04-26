@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68185968"
 ---
 # <a name="tablediff-utility"></a>utilitário tablediff
   O utilitário **tablediff** é usado para comparar dados em duas tabelas para não convergência e é particularmente útil para solução de problemas de não convergência em uma topologia de replicação. Esse utilitário pode ser usado no prompt de comando ou em um arquivo em lotes para executar as seguintes tarefas:  
   
--   Uma comparação de linha por linha entre uma tabela de origem em uma [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instância do que atua como um Publicador de replicação e a tabela de destino [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em uma ou mais instâncias do que atuam como assinantes de replicação.  
+-   Uma comparação linha por linha entre uma tabela de origem em uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agindo como um Publicador de replicação e a tabela de destino em uma ou mais instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agindo como Assinantes de replicação.  
   
 -   Executa uma comparação rápida comparando apenas contagens de linha e esquema.  
   
@@ -125,15 +125,15 @@ ms.locfileid: "68185968"
  A tabela de destino é bloqueada durante a comparação que usa dicas de tabela TABLOCK e HOLDLOCK.  
   
  **-b** *large_object_bytes*  
- É o número de bytes a comparar para colunas de tipo de dados de objetos grandes, o que inclui padrões de: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` e `varbinary(max)`. *large_object_bytes* usa como padrão o tamanho da coluna. Os dados acima de *large_object_bytes* não serão comparados.  
+ É o número de bytes a comparar para colunas de tipo de dados de objetos grandes, o que inclui padrões de: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` e `varbinary(max)`. *large_object_bytes* segue o padrão do tamanho da coluna. Os dados acima de *large_object_bytes* não serão comparados.  
   
- **-bf**  *number_of_statements*  
+ **-bf** *number_of_statements*  
  É o número de instruções [!INCLUDE[tsql](../includes/tsql-md.md)] a serem gravadas no arquivo de script [!INCLUDE[tsql](../includes/tsql-md.md)] atual quando a opção **-f** é usada. Quando o número de instruções [!INCLUDE[tsql](../includes/tsql-md.md)] exceder *number_of_statements*, um arquivo de script [!INCLUDE[tsql](../includes/tsql-md.md)] novo será criado.  
   
  **-c**  
  Compare diferenças em nível de coluna.  
   
- **-DT**  
+ **- dt**  
  Descarte a tabela de resultado especificada por *table_name*, se a tabela já existir.  
   
  **-et** *table_name*  
@@ -151,10 +151,10 @@ ms.locfileid: "68185968"
  **-rc** *number_of_retries*  
  Número de vezes que o utilitário repete uma operação com falha.  
   
- **-ri**  *retry_interval*  
+ **-ri** *retry_interval*  
  Intervalo, em segundos, a esperar entre repetições.  
   
- **-estrito**  
+ **-strict**  
  Esquema de destino e origem são comparados de forma rigorosa.  
   
  **-t** *connection_timeouts*  
@@ -177,8 +177,7 @@ ms.locfileid: "68185968"
   
 |Tipo de dados de origem|Tipo de dados de destino|  
 |----------------------|---------------------------|  
-|`tinyint`|
-  `smallint`, `int` ou `bigint`|  
+|`tinyint`|`smallint`, `int` ou `bigint`|  
 |`smallint`|`int` ou `bigint`|  
 |`int`|`bigint`|  
 |`timestamp`|`varbinary`|  
@@ -203,7 +202,7 @@ ms.locfileid: "68185968"
   
 -   `timestamp`  
   
--   **XML**  
+-   **xml**  
   
 -   `text`  
   
@@ -221,6 +220,6 @@ ms.locfileid: "68185968"
  Para usar as opções **-o** ou **-f** , é preciso ter permissão de gravação para o local de diretório de arquivos especificado.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Compare as tabelas replicadas para obter diferenças &#40;programação de replicação&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
+ [Comparar tabelas replicadas para descobrir diferenças &#40;Programação de replicação&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

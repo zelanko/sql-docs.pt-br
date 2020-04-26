@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62999570"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Executar lógica de negócios durante sincronizações de mesclagem
@@ -59,7 +59,7 @@ ms.locfileid: "62999570"
      Isto é útil para aplicativos que precisam substituir valores de dados ou operações específicos. Por exemplo, uma aplicativo poderá transformar a exclusão de uma linha em uma atualização especial que define uma coluna de **status** na linha a um valor de "excluído" e então rastreia a identidade do cliente executando a exclusão. Isto poderá ser útil para fins de auditoria ou de fluxo de trabalho.  
   
 ### <a name="custom-conflict-resolution"></a>Resolução de conflito personalizada  
- A replicação de mesclagem fornece detecção e solução de conflitos, permitindo que você aceite uma estratégia de resolução padrão ou escolha uma resolução personalizada para conflitos. Para obter mais informações, consulte [Replicação de mesclagem avançada – detecção e resolução de conflito](advanced-merge-replication-conflict-detection-and-resolution.md). O manipulador de lógica comercial pode ser chamado durante o processamento de alterações de dados conflitantes e pode executar uma destas duas ações:  
+ A replicação de mesclagem fornece detecção e solução de conflitos, permitindo que você aceite uma estratégia de resolução padrão ou escolha uma resolução personalizada para conflitos. Para obter mais informações, consulte [detecção e resolução de conflitos de replicação de mesclagem avançada](advanced-merge-replication-conflict-detection-and-resolution.md). O manipulador de lógica comercial pode ser chamado durante o processamento de alterações de dados conflitantes e pode executar uma destas duas ações:  
   
 -   Aceite resolução padrão  
   

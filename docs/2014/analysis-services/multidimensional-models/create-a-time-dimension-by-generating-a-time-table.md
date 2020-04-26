@@ -19,18 +19,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b54bfbdb03f6f2220cf66cb988456b2e6e6a0070
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076287"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Criar uma dimensão de tempo ao gerar uma tabela de tempo
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o assistente para dimensões [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] no para criar uma dimensão de tempo quando nenhuma tabela de tempo estiver disponível no banco de dados de origem. Você faz isso selecionando uma das opções a seguir na página **Selecionar Método de Criação** :  
   
--   **Gerar uma tabela de tempo na fonte de dados** Selecione esta opção quando você tiver permissão para criar objetos na fonte de dados subjacente. O assistente gerará uma tabela de tempo e, em seguida, armazenará essa tabela na fonte de dados. O assistente cria a dimensão de tempo a partir dessa tabela de tempo.  
+-   **Gerar uma tabela de tempo na fonte de dados** Selecione esta opção quando você tiver permissões para criar objetos na fonte de dados subjacente. O assistente gerará uma tabela de tempo e, em seguida, armazenará essa tabela na fonte de dados. O assistente cria a dimensão de tempo a partir dessa tabela de tempo.  
   
--   **Gerar uma tabela de tempo no servidor** Selecione esta opção quando você não tiver permissão para criar objetos na fonte de dados subjacente. O assistente gerará e armazenará uma tabela no servidor, em vez de na fonte de dados. (A dimensão criada por meio de uma tabela de tempo no servidor é chamada de *dimensão de tempo do servidor*.) O assistente cria a dimensão de tempo do servidor a partir dessa tabela.  
+-   **Gerar uma tabela de tempo no servidor** Selecione esta opção quando você não tiver permissões para criar objetos na fonte de dados subjacente. O assistente gerará e armazenará uma tabela no servidor, em vez de na fonte de dados. (A dimensão criada por meio de uma tabela de tempo no servidor é chamada de *dimensão de tempo do servidor*.) O assistente cria a dimensão de tempo do servidor a partir dessa tabela.  
   
  Ao criar uma dimensão de tempo, você especifica os períodos de tempo e também as datas de início e término para as dimensões. O assistente usa os períodos de tempo especificados para criar os atributos de tempo. Ao processar a dimensão, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gera e armazena os dados necessários para suportar as datas e períodos especificados. O assistente usa os atributos criados para uma dimensão de tempo para recomendar hierarquias para a dimensão. As hierarquias refletem as relações entre períodos de tempo diferentes e considera os diferentes calendários. Por exemplo, em uma hierarquia de calendário padrão, o nível Semanas aparece abaixo do nível Anos, mas não abaixo do nível Meses, porque as semanas se dividem uniformemente no ano, mas não em meses. Por outro lado, na hierarquia de calendário de fabricação ou relatório, as semanas se dividem uniformemente em meses, então o nível Semanas aparece abaixo do nível Meses.  
   

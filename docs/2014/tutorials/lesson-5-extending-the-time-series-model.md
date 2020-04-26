@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822054"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>Lição 5: Estendendo o modelo de série temporal
@@ -177,7 +177,7 @@ PREDICTION JOIN <source query>
 |M200 Pacífico|9/25/2008 12:00:00 AM|38|38|  
 |M200 Pacífico|10/25/2008 12:00:00 AM|41|41|  
 |M200 Pacífico|11/25/2008 12:00:00 AM|36|36|  
-|M200 Pacífico|12/25/2008 12:00:00 AM|11,8|11,8|  
+|M200 Pacífico|12/25/2008 12:00:00 AM|39|39|  
   
  A partir desses resultados, você pode observar dois aspectos:  
   
@@ -234,6 +234,6 @@ WHERE [ModelRegion] = 'M200 Europe'
   
 ## <a name="see-also"></a>Consulte Também  
  [Exemplos de consulta de modelo de série temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [&#41;&#40;DMX PredictTimeSeries](/sql/dmx/predicttimeseries-dmx)  
+ [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

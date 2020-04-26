@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7d2a9f075879ce1bfa0c0e7257ea8a2495562c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62757936"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Atributos CSDLBI para design de relatórios
@@ -23,7 +23,7 @@ ms.locfileid: "62757936"
 ## <a name="model-attributes"></a>Atributos de Modelo  
  Estes atributos são definidos em um subelemento de um elemento [EntityContainer](https://msdn.microsoft.com/library/bb399169.aspx) de CSDL.  
   
-|Nome do atributo|Tipo de dados|DESCRIÇÃO|  
+|Nome do atributo|Tipo de dados|Descrição|  
 |--------------------|---------------|-----------------|  
 |Cultura|Texto|Indica a cultura usada para formatos de conversor de moedas. Se for omitido, pt-BR será usado.|  
 |IsRightToLeft|Boolean|Indica se os valores de campos de texto devem ser lidos da direita para a esquerda por padrão|  
@@ -31,7 +31,7 @@ ms.locfileid: "62757936"
 ## <a name="entity-attributes"></a>Atributos da entidade  
  Estes atributos são definidos em um subelemento de um elemento EntitySet ou EntityType de CSDL.  
   
-|Nome do atributo|Tipo de dados|DESCRIÇÃO|  
+|Nome do atributo|Tipo de dados|Descrição|  
 |--------------------|---------------|-----------------|  
 |`ReferenceName`|Texto|O identificador usado para referenciar essa entidade em uma consulta DAX. Se for omitido, o nome será usado.|  
 |`Caption`|Texto|O nome para exibição da entidade.|  
@@ -48,7 +48,7 @@ ms.locfileid: "62757936"
 ## <a name="field-attributes"></a>Atributos de campo  
  Estes atributos são definidos em um subelemento de uma propriedade CSDL ou elemento [NavigationProperty](https://msdn.microsoft.com/library/bb387104.aspx) .  
   
-|Nome do atributo|Tipo de dados|DESCRIÇÃO|  
+|Nome do atributo|Tipo de dados|Descrição|  
 |--------------------|---------------|-----------------|  
 |`ReferenceName`|Texto|O identificador usado para referenciar essa entidade em uma consulta DAX. Se ele for omitido, o nome do campo será usado.|  
 |`Caption`|Texto|O nome para exibição da entidade. Se omitido, o campo `ReferenceName` será usado.|  

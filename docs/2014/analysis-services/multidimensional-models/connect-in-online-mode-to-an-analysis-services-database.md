@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37b28b6d4f15e29242d20b33bb5ade12460ded7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076566"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Conectar em Modo Online a um Banco de Dados do Analysis Services
@@ -40,6 +40,6 @@ ms.locfileid: "66076566"
   
 ## <a name="see-also"></a>Consulte Também  
  [Trabalhando com projetos Analysis Services e bancos de dados durante a fase de desenvolvimento](work-with-analysis-services-projects-and-databases-in-development.md)   
- [Criando modelos multidimensionais usando o SQL Server Data Tools &#40;SSDT&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+ [Criação de modelos multidimensionais usando o SSDT &#40;SQL Server Data Tools&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

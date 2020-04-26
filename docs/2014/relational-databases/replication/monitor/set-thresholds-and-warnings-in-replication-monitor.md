@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667179"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Definir os limites e avisos no Replication Monitor
-  O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor exibe informações de status para publicações e assinaturas. Por padrão, o Replication Monitor só exibe avisos para assinaturas não inicializadas, mas você pode habilitar os avisos para outras condições. Recomendamos habilitar os avisos para a sua topologia, para que esteja informado sobre o status e o desempenho de maneira oportuna.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] O Replication Monitor exibe informações de status para publicações e assinaturas. Por padrão, o Replication Monitor só exibe avisos para assinaturas não inicializadas, mas você pode habilitar os avisos para outras condições. Recomendamos habilitar os avisos para a sua topologia, para que esteja informado sobre o status e o desempenho de maneira oportuna.  
   
  Ao habilitar um aviso, você especifica um limite. Quando o limite é atingido ou excedido, um aviso é exibido (a menos que um problema com prioridade superior deva ser exibido). Além de exibir de um aviso no Replication Monitor, atingir um limite também pode disparar um alerta. Você pode habilitar avisos para as seguintes condições:  
   
@@ -55,13 +55,13 @@ ms.locfileid: "62667179"
   
 -   [Definir limites e avisos para uma publicação de instantâneo](#Snapshot)  
   
-##  <a name="Transactional"></a> Para definir limites e avisos para uma publicação transacional  
+##  <a name="to-set-thresholds-and-warnings-for-a-transactional-publication"></a><a name="Transactional"></a> Para definir limites e avisos para uma publicação transacional  
   
 1.  Expanda um Grupo do publicador no painel esquerdo, expanda um Publicador e clique em uma publicação.  
   
-2.  Clique na guia **Avisos** . Para exibir mais informações sobre as opções nessa guia, clique em **Ajuda** na barra de menus.  
+2.  Clique na guia **avisos** . Para exibir mais informações sobre as opções nessa guia, clique em **ajuda** na barra de menus.  
   
-3.  Habilite um aviso selecionando a caixa de seleção apropriada: **Avisar se uma assinatura for expirar dentro do limite** ou **Avisar se a latência exceder o limite**.  
+3.  Habilite um aviso selecionando a caixa de seleção apropriada: **Avise se uma assinatura for expirar dentro do limite** ou **Avise se a latência exceder o limite**.  
   
 4.  Defina um limite para os avisos na coluna **Limite** . Por exemplo, ao selecionar **Avise se a latência exceder o limite** na etapa 3, é possível selecionar uma latência de **60 segundos** na coluna **Limite** .  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62667179"
   
      Essa caixa de diálogo exibe os alertas para todos os tipos de publicação, inclusive alertas que não estão relacionados com o monitoramento de limites. Para obter mais informações, consulte [Usar alertas para eventos do agente de replicação](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>** :  
+3.  Defina as opções na caixa de diálogo ** \<Propriedades** do alerta de alerta do>:  
   
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.  
   
@@ -85,13 +85,13 @@ ms.locfileid: "62667179"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Clique em **fechar**  
+5.  Clique em **Fechar**.  
   
-##  <a name="Merge"></a> Definir limites e avisos para uma publicação de mesclagem  
+##  <a name="set-thresholds-and-warnings-for-a-merge-publication"></a><a name="Merge"></a>Definir limites e avisos para uma publicação de mesclagem  
   
 1.  Expanda um Grupo do publicador no painel esquerdo, expanda um Publicador e clique em uma publicação.  
   
-2.  Clique na guia **Avisos** . Para exibir mais informações sobre as opções nessa guia, clique em **Ajuda** na barra de menu.  
+2.  Clique na guia **avisos** . Para exibir mais informações sobre as opções nessa guia, clique em **ajuda** na barra de menus.  
   
 3.  Habilite um aviso selecionando a caixa de seleção apropriada:  
   
@@ -117,7 +117,7 @@ ms.locfileid: "62667179"
   
      Essa caixa de diálogo exibe os alertas para todos os tipos de publicação, inclusive alertas que não estão relacionados com o monitoramento de limites.  
   
-3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>** :  
+3.  Defina as opções na caixa de diálogo ** \<Propriedades** do alerta de alerta do>:  
   
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.  
   
@@ -127,13 +127,13 @@ ms.locfileid: "62667179"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Clique em **fechar**  
+5.  Clique em **Fechar**.  
   
-##  <a name="Snapshot"></a> Definir limites e avisos para uma publicação de instantâneo  
+##  <a name="set-thresholds-and-warnings-for-a-snapshot-publication"></a><a name="Snapshot"></a>Definir limites e avisos para uma publicação de instantâneo  
   
 1.  Expanda um Grupo do publicador no painel esquerdo, expanda um Publicador e clique em uma publicação.  
   
-2.  Clique na guia **Avisos** . Para exibir mais informações sobre as opções nessa guia, clique em **Ajuda** no menu superior.  
+2.  Clique na guia **avisos** . Para exibir mais informações sobre as opções nessa guia, clique em **ajuda** no menu superior.  
   
 3.  Ative uma aviso selecionando a caixa de seleção **Avisar se uma assinatura for expirar dentro do limite**.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "62667179"
   
      Essa caixa de diálogo exibe os alertas para todos os tipos de publicação, inclusive alertas que não estão relacionados com o monitoramento de limites. Para obter mais informações, consulte [Usar alertas para eventos do agente de replicação](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>** :  
+3.  Defina as opções na caixa de diálogo ** \<Propriedades** do alerta de alerta do>:  
   
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.  
   
@@ -159,9 +159,9 @@ ms.locfileid: "62667179"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Clique em **fechar**  
+5.  Clique em **Fechar**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorando a Replicação](../monitoring-replication.md)  
+ [Monitorando a replicação](../monitoring-replication.md)  
   
   

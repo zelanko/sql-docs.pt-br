@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 283fd67d14d57c3d1d5d60dd9d8de2a159ca6d5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721366"
 ---
 # <a name="distribution-database"></a>Banco de dados de distribuição
@@ -25,10 +25,10 @@ ms.locfileid: "62721366"
  Em muitos casos, um único banco de dados de distribuição é suficiente. Porém, se vários Publicadores usarem um único Distribuidor, considere criar um banco de dados de distribuição para cada Publicador. Fazer isso assegura que os dados que fluem por cada banco de dados de distribuição são distintos. Você pode especificar um banco de dados de distribuição para o Distribuidor usando o Assistente para Configurar a Distribuição. Se necessário, especifique bancos de dados de distribuição adicionais na caixa de diálogo **Propriedades do Distribuidor** .  
   
 ## <a name="options"></a>Opções  
- **Nome do banco de dados de distribuição**  
- Insira um nome para o banco de dados de distribuição. O nome padrão para o banco de dados de distribuição é “distribuição”. Se você especificar um nome, o nome pode ter, no máximo, 128 caracteres, deve ser exclusivo dentro de uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instância do e deve estar em conformidade com as regras para identificadores. Para obter mais informações, consulte [Database Identifiers](../databases/database-identifiers.md).  
+ **Nome do Banco de Dados de Distribuição**  
+ Insira um nome para o banco de dados de distribuição. O nome padrão para o banco de dados de distribuição é “distribuição”. Se você especificar um nome, o nome poderá ter no máximo 128 caracteres, deve ser exclusivo em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e deve estar em conformidade com as regras para identificadores. Para obter mais informações, consulte [Database Identifiers](../databases/database-identifiers.md).  
   
- **Pasta do arquivo** e da pasta do banco de dados de distribuição **para o arquivo de log do banco de dados de distribuição**  
+ **Pasta para o arquivo de banco de dados de distribuição** e **Pasta para o arquivo de log de banco de dados de distribuição**  
  Insira o caminho para o banco de dados de distribuição e arquivos de log. Os caminhos devem se referir aos discos locais do Distribuidor e começar com uma letra de unidade e dois pontos (por exemplo, C:). Letras de unidades e caminhos de rede mapeados não são válidos.  
   
 > [!NOTE]  

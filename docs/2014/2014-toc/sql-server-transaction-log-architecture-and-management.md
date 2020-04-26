@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2495b9487a633fff6c5214a07e589f58fafa5e61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62512706"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management"></a>Arquitetura e gerenciamento do log de transações do SQL Server
@@ -24,7 +24,7 @@ ms.locfileid: "62512706"
   Todo banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem um log de transações que registra todas as transações e modificações feitas no banco de dados a cada transação. O log de transações é um componente crítico do banco de dados e, se houver uma falha do sistema, será necessário que o log de transações retorne seu banco de dados a um estado consistente. Este guia fornece informações sobre a arquitetura física e lógica do log de transações. A compreensão da arquitetura pode melhorar sua efetividade na administração de logs de transações.  
 
   
-##  <a name="Logical_Arch"></a>Arquitetura lógica do log de transações  
+##  <a name="transaction-log-logical-architecture"></a><a name="Logical_Arch"></a>Arquitetura lógica do log de transações  
 
  O log de transações do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] opera de forma lógica como se o log de transações fosse uma cadeia de caracteres de registros de log. Cada registro de log é identificado por um LSN (número de sequência de log). Cada registro de log novo é gravado no final lógico do log com um LSN maior que o do registro antes da gravação. Os registros de log são armazenados em sequência consecutiva conforme são criados. Cada registro de log contém a ID da transação a que pertence. Para cada transação, todos os registros de log associados com a transação são vinculados individualmente em uma cadeia usando ponteiros de retrocesso que aceleram a reversão da transação.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "62512706"
   
  Operações de reversão também são registradas. Cada transação reserva espaço no log de transações para verificar se há espaço de log suficiente para oferecer suporte a uma reversão causada por uma instrução de reversão explícita ou se um erro for encontrado. A quantidade de espaço reservada depende das operações executadas na transação, mas geralmente é igual à quantidade de espaço usada para registrar cada operação. Esse espaço reservado é liberado quando a transação é concluída.  
   
- A seção do arquivo de log do primeiro registro de log que deve estar disponível para uma reversão bem-sucedida em todo o banco de dados para o registro de log da última gravação é chamada de parte ativa do log ou *log ativo*. Essa é a seção do log necessária para uma recuperação completa do banco de dados. Nenhuma parte do log ativo pode ter sido truncada. O LSN (número de sequência de log) desse primeiro registro de log é conhecido como o LSN de recuperação mínimo (*MinLSN*).  
+  A seção do arquivo de log do primeiro registro de log que deve estar presente para uma reversão bem-sucedida em todo o banco de dados para o registro de log da última gravação é chamada de parte ativa do log ou *log ativo*. Essa é a seção do log necessária para uma recuperação completa do banco de dados. Nenhuma parte do log ativo pode ter sido truncada. O LSN (número de sequência de log) desse primeiro registro de log é conhecido como LSN de recuperação mínima (*MinLSN*).  
   
-##  <a name="physical_arch"></a>Arquitetura física do log de transações  
+##  <a name="transaction-log-physical-architecture"></a><a name="physical_arch"></a>Arquitetura física do log de transações  
 
  O log de transações em um banco de dados mapeia um ou mais arquivos físicos. Conceitualmente, o arquivo de log é uma cadeia de caracteres de registros de log. Fisicamente, a sequência de registros de log é armazenada com eficiência no conjunto de arquivos físicos que implementam o log de transações. Deve haver, no mínimo, um arquivo de log para cada banco de dados.  
   
@@ -100,20 +100,17 @@ ms.locfileid: "62512706"
   
 -   No modelo de recuperação completa ou bulk-logged, depois de um backup de log, se um ponto de verificação tiver acontecido desde o backup prévio.  
   
- O truncamento de log pode ser atrasado por uma variedade de fatores. No caso de uma demora longa em truncamento de log, o log de transações pode ficar cheio. Para obter informações, consulte [fatores que podem atrasar o truncamento de log](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) e [solucionar problemas de um log de transações completo &#40;SQL Server erro 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
+ O truncamento de log pode ser atrasado por uma variedade de fatores. No caso de uma demora longa em truncamento de log, o log de transações pode ficar cheio. Para obter informações, consulte [Fatores que podem atrasar o truncamento de log](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) e [Solução de problemas de um log de transação completa &#40;Erro do SQL Server 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
-##  <a name="WAL"></a>Log de transações write-ahead  
+##  <a name="write-ahead-transaction-log"></a><a name="WAL"></a>Log de transações write-ahead  
 
- Esta seção descreve a função do log de transações write-ahead no registro de modificações de dados no disco. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa um WAL (log write-ahead), que garante que nenhuma modificação de dados seja gravada no disco antes de o registro de log associado ser gravado no disco. Isso mantém as propriedades ACID de uma transação.  
+ Esta seção descreve a função do log de transações write-ahead no registro de modificações de dados no disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa um WAL (log write-ahead), que garante que nenhuma modificação de dados seja gravada no disco antes de o registro de log associado ser gravado no disco. Isso mantém as propriedades ACID de uma transação.  
   
- Para entender como o log write-ahead funciona, é importante saber como os dados modificados são gravados em disco. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mantém um cache de buffer em que ele lê páginas de dados quando dados precisam ser recuperados. Quando uma página é modificada no cache do buffer, não é gravada imediatamente de volta no disco. Em vez disso, a página é marcada como *suja*. Uma página de dados pode ter mais de uma gravação lógica feita antes de ser gravada fisicamente no disco. Para cada gravação lógica, um registro de log de transações é inserido no cache de log que registra a modificação. Os registros de log devem ser gravados no disco antes de a página suja associada ser removida do cache do buffer e gravada no disco. O processo de ponto de verificação examina o cache do buffer periodicamente para buffers com páginas de um banco de dados especificado e grava todas as páginas sujas no disco. Os pontos de verificação economizam tempo durante uma recuperação posterior, pois criam um ponto em que todas as páginas sujas são gravadas no disco.  
+ Para entender como o log write-ahead funciona, é importante saber como os dados modificados são gravados em disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mantém um cache de buffer em que ele lê páginas de dados quando dados precisam ser recuperados. Quando uma página é modificada no cache do buffer, não é gravada imediatamente de volta no disco. Em vez disso, a página é marcada como *suja*. Uma página de dados pode ter mais de uma gravação lógica feita antes de ser gravada fisicamente no disco. Para cada gravação lógica, um registro de log de transações é inserido no cache de log que registra a modificação. Os registros de log devem ser gravados no disco antes de a página suja associada ser removida do cache do buffer e gravada no disco. O processo de ponto de verificação examina o cache do buffer periodicamente para buffers com páginas de um banco de dados especificado e grava todas as páginas sujas no disco. Os pontos de verificação economizam tempo durante uma recuperação posterior, pois criam um ponto em que todas as páginas sujas são gravadas no disco.  
   
- A gravação de uma página de dados modificada do cache do buffer no disco é chamada de liberação de página. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem uma lógica que impede que uma página suja seja removida antes do registro de log associado ser gravado. Os registros de log são gravados no disco quando as transações são confirmadas.  
+ A gravação de uma página de dados modificada do cache do buffer no disco é chamada de liberação de página. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem uma lógica que impede que uma página suja seja removida antes do registro de log associado ser gravado. Os registros de log são gravados no disco quando as transações são confirmadas.  
   
-##  <a name="Backups"></a>Backups de log de transações  
+##  <a name="transaction-log-backups"></a><a name="Backups"></a>Backups de log de transações  
 
  Esta seção apresenta conceitos sobre como fazer backup e restaurar (aplicar) logs de transações. Nos modelos de recuperação completa e de recuperação com log de operações em massa é necessário fazer backups de rotina de logs de transações (*backups de log*) para recuperar dados. É possível fazer backup do log enquanto qualquer backup completo está em execução. Para obter mais informações sobre os modelos de recuperação, consulte [Fazer backup e restaurar bancos de dados do SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
@@ -137,8 +134,8 @@ ms.locfileid: "62512706"
 
  Recomendamos a leitura dos artigos e livros a seguir, que fornecem mais informações sobre o log de transações.  
   
- [Entendendo o registro em log e a recuperação em SQL Server por Paul Randall](https://technet.microsoft.com/magazine/2009.02.logging.aspx)  
+ [Noções básicas sobre registro em log e recuperação no SQL Server, por Paul Randall](https://technet.microsoft.com/magazine/2009.02.logging.aspx)  
   
- [SQL Server o gerenciamento de log de transações por Tony Davis e Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
+ [Gerenciamento de log de transações do SQL Server, por Tony Davis e Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

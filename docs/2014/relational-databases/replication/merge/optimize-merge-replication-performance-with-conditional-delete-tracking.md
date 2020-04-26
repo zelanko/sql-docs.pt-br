@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "68210699"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Otimizar o desempenho da replicação de mesclagem com o controle de exclusão condicional
@@ -49,7 +49,7 @@ ms.locfileid: "68210699"
 -   Programação [!INCLUDE[tsql](../../../includes/tsql-md.md)] de replicação: [Especificar que as exclusões não devem ser controladas para artigos de mesclagem &#40;programação Transact-SQL de replicação&#41;](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Opções de artigos para a replicação de mesclagem](article-options-for-merge-replication.md)   
+ [Opções de artigo para replicação de mesclagem](article-options-for-merge-replication.md)   
  [Otimizar o desempenho da replicação de mesclagem com artigos de somente download](optimize-merge-replication-performance-with-download-only-articles.md)  
   
   

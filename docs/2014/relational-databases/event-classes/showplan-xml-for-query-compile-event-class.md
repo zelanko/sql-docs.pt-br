@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61ae582c2b35f96ccb21d16b19b0191017e05366
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62650399"
 ---
 # <a name="showplan-xml-for-query-compile-event-class"></a>classe de eventos Showplan XML For Query Compile
-  A classe de evento Showplan XML for Query compile ocorre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando o compila uma instrução SQL. Inclua a classe essa para identificar os operadores Showplan [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]em.  
+  A classe de evento Showplan XML For Query Compile ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila uma instrução SQL. Inclua essa classe de evento para identificar os operadores de Showplan no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  A classe de evento Showplan XML For Query Compile exibe dados de tempo de compilação completos e, portanto, os rastreamentos que contêm esta classe de evento podem causar sobrecarga de desempenho significativa. Para minimizar isso, limite o uso dessa classe de evento a rastreamentos que monitorem problemas específicos em períodos breves de tempo.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62650399"
 |GroupID|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_trace_setevent](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Referência de operadores físicos e lógicos de plano de execução](../showplan-logical-and-physical-operators-reference.md)  
   
   

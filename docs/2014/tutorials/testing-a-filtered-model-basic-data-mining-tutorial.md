@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044061"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>Testando um modelo filtrado (Tutorial de mineração de dados básico)
@@ -87,7 +87,7 @@ ms.locfileid: "63044061"
   
  [Exploração do modelo de árvore de decisão &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
- [Testando a exatidão com gráficos de comparação de precisão &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Testando a precisão com gráficos de comparação de precisão &#40;Tutorial de mineração de dados básica&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 #### <a name="to-explore-the-filtered-models"></a>Para explorar os modelos filtrados  
   
@@ -129,15 +129,15 @@ ms.locfileid: "63044061"
  Para obter um exemplo de como aplicar filtros a tabelas aninhadas, consulte [tutorial de mineração de dados intermediário &#40;Analysis Services&#41;de mineração de dados ](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md).  
   
 ## <a name="previous-task-in-lesson"></a>Tarefa anterior da lição  
- [Testando a exatidão com gráficos de comparação de precisão &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Testando a precisão com gráficos de comparação de precisão &#40;Tutorial de mineração de dados básica&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 6: Criando e trabalhando com previsões &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Lição 6: Criando e trabalhando com previsões &#40;Tutorial de mineração de dados básico&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tutorial de mineração de dados intermediário &#40;Analysis Services de mineração de dados&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Tarefas e instruções do modelo de mineração](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Excluir um filtro de um modelo de mineração](../../2014/analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)   
- [Filtros para modelos de mineração &#40;mineração de dados Analysis Services&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

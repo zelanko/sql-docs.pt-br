@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224593"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Explorando o modelo de árvore de decisão (Tutorial de mineração de dados básico)
@@ -22,7 +22,7 @@ ms.locfileid: "63224593"
   
 
   
-##  <a name="Decision_Tree_Tab"></a>Guia árvore de decisão  
+##  <a name="decision-tree-tab"></a><a name="Decision_Tree_Tab"></a>Guia árvore de decisão  
  Na guia **árvore de decisão** , você pode exibir árvores de decisão para cada atributo previsível no conjunto de um.  
   
  Nesse caso, o modelo prevê apenas uma coluna, comprador de bicicletas e, portanto, há apenas uma árvore a ser exibida. Se houver mais árvores, você poderá usar a caixa de **árvore** para escolher outra árvore.  
@@ -63,7 +63,7 @@ ms.locfileid: "63224593"
   
  Como você habilitou o detalhamento quando criou a estrutura e o modelo, poderá recuperar informações detalhadas dos casos de modelo e da estrutura de mineração, incluindo as colunas não incluídas no modelo de mineração (por exemplo, emailAddress, FirstName).  
   
- Para obter mais informações, consulte [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+ Para obter mais informações, consulte [Consultas de detalhamento &#40;Mineração de dados&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 #### <a name="to-drill-through-to-case-data"></a>Para detalhar os dados de caso  
   
@@ -76,7 +76,7 @@ ms.locfileid: "63224593"
      A mesma planilha será exibida com as colunas da estrutura anexadas no final.  
   
   
-###  <a name="Dependency_Network_Tab"></a>Guia rede de dependências  
+###  <a name="dependency-network-tab"></a><a name="Dependency_Network_Tab"></a>Guia rede de dependências  
  A guia **rede de dependências** exibe as relações entre os atributos que contribuem para a capacidade preditiva do modelo de mineração. O visualizador Rede de Dependências reforça as nossas descobertas de que Idade e Região são fatores importantes na previsão de compra de bicicletas.  
   
 ##### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>Para explorar o modelo na guia Rede de Dependências  

@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704621"
 ---
-# <a name="new-job-schedule-job-schedule-properties"></a>Nova agenda de trabalho: propriedades da agenda de trabalho
+# <a name="new-job-schedule-job-schedule-properties"></a>Novo Agendamento de Trabalho: Propriedades do Agendamento de Trabalho
   Use essa página para exibir e alterar as propriedades da agenda.  
   
 ## <a name="options"></a>Opções  
@@ -33,11 +33,11 @@ ms.locfileid: "62704621"
  **Tipo de agendamento**  
  Selecione o tipo de agenda.  
   
- **Enabled**  
+ **Habilitada**  
  Marque para habilitar ou desabilitar a agenda.  
   
 ## <a name="recurring-schedule-types-options"></a>Opções de tipos de agenda recorrentes  
- **Ocorra**  
+ **Ocorre**  
  Selecione o intervalo no qual a agenda ocorre periodicamente.  
   
  **Repete-se a cada**  
@@ -46,7 +46,7 @@ ms.locfileid: "62704621"
  **Monday**  
  Defina o trabalho para ocorrer em uma segunda-feira. Disponível somente para agendamentos semanais recorrentes.  
   
- **Terça-feira**  
+ **Terça**  
  Defina o trabalho para ocorrer em uma terça-feira. Disponível somente para agendamentos semanais recorrentes.  
   
  **Quarta-feira**  
@@ -70,7 +70,7 @@ ms.locfileid: "62704621"
  **de cada**  
  Selecione o número de meses entre ocorrências da agenda. Disponível somente para agendas mensais recorrentes.  
   
- **O parâmetro**  
+ **O**  
  Especifique uma agenda durante um dia específico da semana em uma semana específica durante o mês. Disponível somente para agendas mensais recorrentes.  
   
  **Ocorre uma vez em**  
@@ -97,6 +97,6 @@ ms.locfileid: "62704621"
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar e anexar agendas a trabalhos](create-and-attach-schedules-to-jobs.md)   
- [Schedule a Job](schedule-a-job.md)  
+ [Agendar um trabalho](schedule-a-job.md)  
   
   

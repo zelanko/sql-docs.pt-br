@@ -14,16 +14,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d21f002ca6b7ea185df2e01f66abf0e1ef5cfd1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62512208"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Características de execução de procedimentos armazenados estendidos
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a integração CLR.  
   
  A execução de um procedimento armazenado estendido tem as seguintes características:  
   
@@ -46,8 +46,8 @@ ms.locfileid: "62512208"
 EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT  
 ```  
   
-## <a name="parameters"></a>parâmetros  
- \@*retval*  
+## <a name="parameters"></a>Parâmetros  
+ \@ *retval*  
  É um valor de retorno.  
   
  \@*param1*  
@@ -61,6 +61,6 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
   
 ## <a name="see-also"></a>Consulte Também  
  [Programando procedimentos armazenados estendidos](database-engine-extended-stored-procedures-programming.md)   
- [Consultando procedimentos armazenados estendidos no SQL Server](querying-extended-stored-procedures-installed-in-sql-server.md)  
+ [Consulta de procedimentos armazenados estendidos no SQL Server](querying-extended-stored-procedures-installed-in-sql-server.md)  
   
   

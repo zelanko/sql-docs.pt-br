@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8090c75108f7a384019030082699917fca915b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067685"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>Analisar no Excel (SSAS tabular)
@@ -28,7 +28,7 @@ ms.locfileid: "66067685"
   
 -   [Tarefas relacionadas](#bkmk_rt)  
   
-##  <a name="bkmk_benefits"></a> Benefícios  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Benefícios  
  O recurso Analisar no Excel fornece aos autores de modelo a capacidade para testar a eficácia de um projeto de modelo usando o aplicativo comum de análise de dados, Microsoft Excel. Para usar o recurso Analisar no Excel, você deve ter o Microsoft Office 2003 ou superior instalado no mesmo computador que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
@@ -38,7 +38,7 @@ ms.locfileid: "66067685"
   
  Ao usar o recurso Analisar no Excel, por padrão, a conta de usuário atualmente conectada é o usuário efetivo. Esta conta é geralmente um Administrador sem restrições de exibição para objetos modelo ou dados. Porém, você pode especificar um nome de usuário ou função efetivo diferente. Isto permite que você navegue em um projeto de modelo no Excel dentro do contexto de um usuário ou função específico. Especificar o usuário efetivo inclui as opções a seguir:  
   
- **Usuário atual do Windows**  
+ **Usuário do Windows atual**  
  Usa a conta de usuário com a qual você está conectado atualmente.  
   
  **Outro usuário do Windows**  
@@ -47,17 +47,17 @@ ms.locfileid: "66067685"
  **Função**  
  Uma função é usada para definir permissões de usuário nos metadados de objeto e nos dados. As funções são normalmente definidas para um usuário ou grupo de usuário do Windows específico. Determinadas funções podem incluir filtros em nível de linha adicionais definidos em uma fórmula DAX. Ao usar o recurso Analisar no Excel, você pode opcionalmente selecionar uma função a ser usada. Os metadados de objeto e as exibições de dados serão restringidas pela permissão e pelos filtros definidos para a função. Para obter mais informações, consulte [Criar e gerenciar funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md).  
   
- Além do usuário efetivo ou função, você pode especificar uma perspectiva. As perspectivas permitem que os autores do modelo definam exibições de cenário comerciais específicas de objetos modelo e dados. Por padrão, nenhuma perspectiva é usada. Para usar uma perspectiva com o Analisar no Excel, as perspectivas já devem ser definidas usando a caixa de diálogo Perspectivas no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Se uma perspectiva for especificada, a Lista de campos da Tabela Dinâmica conterá somente esses objetos selecionados na perspectiva. Para obter mais informações, consulte [Criar e gerenciar perspectivas &#40;SSAS de Tabela&#41;](perspectives-ssas-tabular.md).  
+ Além do usuário efetivo ou função, você pode especificar uma perspectiva. As perspectivas permitem que os autores do modelo definam exibições de cenário comerciais específicas de objetos modelo e dados. Por padrão, nenhuma perspectiva é usada. Para usar uma perspectiva com o Analisar no Excel, as perspectivas já devem ser definidas usando a caixa de diálogo Perspectivas no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Se uma perspectiva for especificada, a Lista de campos da Tabela Dinâmica conterá somente esses objetos selecionados na perspectiva. Para obter mais informações, consulte [criar e gerenciar perspectivas &#40;SSAS&#41;de tabela ](perspectives-ssas-tabular.md).  
   
-##  <a name="bkmk_rt"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="bkmk_rt"></a> Tarefas relacionadas  
   
 |**Tópico**|**Descrição**|  
 |---------------|---------------------|  
-|[Analisar um modelo de tabela no Excel &#40;SSAS de tabela&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|Esse tópico descreve como usar o recurso Analisar no Excel no designer de modelo para abrir o Excel, criar uma conexão da fonte de dados para o banco de dados de workspace modelo e adicionar uma Tabela Dinâmica à planilha.|  
+|[Analisar um modelo de tabela no Excel &#40;SSAS de Tabela&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|Esse tópico descreve como usar o recurso Analisar no Excel no designer de modelo para abrir o Excel, criar uma conexão da fonte de dados para o banco de dados de workspace modelo e adicionar uma Tabela Dinâmica à planilha.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Analisar um modelo de tabela no Excel &#40;SSAS de tabela&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
  [Funções &#40;SSAS de tabela&#41;](roles-ssas-tabular.md)   
- [Perspectivas &#40;SSAS de tabela&#41;](perspectives-ssas-tabular.md)  
+ [Perspectivas &#40;SSAS de Tabela&#41;](perspectives-ssas-tabular.md)  
   
   

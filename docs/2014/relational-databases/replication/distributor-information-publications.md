@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721365"
 ---
 # <a name="distributor-information-dialog-box"></a>Caixa de diálogo informações do distribuidor 
@@ -45,7 +45,7 @@ Este tópico fornece informações sobre a caixa de diálogo **distribuidor**
   As informações de assinaturas de publicação de instantâneo incluem o nome do Publicador. Caso contrário, a funcionalidade e as informações fornecidas nesta caixa de diálogo serão iguais as da exibição Publicador. Para mais informações sobre como usar essa caixa de diálogo, consulte [Informações do publicador, lista de inspeção da assinatura &#40;publicação de instantâneo, SQL Server 2005 e posterior&#41;](publisher-information-subscription-watch-list-snapshot.md).  
 
 ## <a name="agents"></a>Agentes
-  A guia **Agentes** exibe informações sobre os agentes e trabalhos de manutenção associados com o Publicador e o Assinante.  
+   A guia **Agentes** exibe informações sobre os agentes e trabalhos de manutenção associados com o Publicador e o Assinante.  
   
  Os agentes disponíveis na guia **Agentes** de uma exibição Distribuidor no Distribuidor incluem todos os agentes disponíveis na guia **Agentes** de um Publicador. No entanto, a guia **Agentes** de uma exibição Distribuidor no Distribuidor também inclui um Agente Distribuidor e um Merge Agent.  
   
@@ -64,7 +64,7 @@ Este tópico fornece informações sobre a caixa de diálogo **distribuidor**
 -   Não está em execução    
 -   Nunca iniciado  
   
- **Publicador**  
+ **Editor**  
  A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Publicador.  
   
  **Publicação**  
@@ -76,10 +76,10 @@ Este tópico fornece informações sobre a caixa de diálogo **distribuidor**
  **Tipo**  
  Tipo de replicação: push, pull ou Anônima.  
   
- **Última Hora de Início**  
+ **Hora da última inicialização**  
  A última hora de início do agente.  
   
- **Duration**  
+ **Permanência**  
  O tempo de execução do agente. O tempo representa o tempo decorrido, se o agente estiver sendo executado no momento, e o tempo total, se o agente foi executado anteriormente.  
   
  **Última Ação**  
@@ -88,7 +88,7 @@ Este tópico fornece informações sobre a caixa de diálogo **distribuidor**
  **Taxa de Entrega**  
  A taxa, em comandos por segundo, com a qual os comandos de inicialização são confirmados no banco de dados de distribuição durante a execução mais recente do agente.  
   
- **Latência**  
+ **Latency**  
  É o tempo, em segundos, que decorreu entre a alteração mais recente sendo confirmada no banco de dados de publicação e o comando correspondente sendo confirmado no banco de dados de distribuição.  
   
  **#Trans**  
@@ -110,7 +110,7 @@ Este tópico fornece informações sobre a caixa de diálogo **distribuidor**
 -   Não está em execução    
 -   Nunca iniciado  
   
- **Publicador**  
+ **Editor**  
  A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Publicador.  
   
  **Publicação**  
@@ -122,10 +122,10 @@ Este tópico fornece informações sobre a caixa de diálogo **distribuidor**
  **Tipo**  
  Tipo de replicação: push, pull ou Anônima.  
   
- **Última Hora de Início**  
+ **Hora da última inicialização**  
  A última hora de início do agente.  
   
- **Duration**  
+ **Permanência**  
  O tempo de execução do agente. O tempo representa o tempo decorrido, se o agente estiver sendo executado no momento, e o tempo total, se o agente foi executado anteriormente.  
   
  **Última Ação**  
@@ -161,6 +161,6 @@ Este tópico fornece informações sobre a caixa de diálogo **distribuidor**
  
 ## <a name="see-also"></a>Consulte Também  
  [Iniciar o Replication Monitor](monitor/start-the-replication-monitor.md)   
- [Monitorando a Replicação](monitoring-replication.md)  
+ [Monitorando a replicação](monitoring-replication.md)  
   
   

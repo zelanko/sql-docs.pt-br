@@ -22,14 +22,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62666916"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Exibir o status da publicação e da assinatura no Replication Monitor
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] O Replication Monitor exibe informações de status para publicações e assinaturas:  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] O Replication Monitor exibe informações de status para publicações e assinaturas:  
   
 -   O status de uma publicação é determinado pelo status de prioridade mais alta de suas assinaturas. Por exemplo, se uma assinatura para uma publicação tiver um erro e outra tiver um problema de desempenho, será exibido um status de erro para a publicação.  
   
@@ -108,6 +108,6 @@ ms.locfileid: "62666916"
 |Não sincronizando|![Ícone de interface do usuário: agente de replicação interrompido](../media/repl-icon-stopped.gif "Ícone de interface do usuário: agente de replicação interrompido")|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorando a Replicação](../monitoring-replication.md)  
+ [Monitorando a replicação](../monitoring-replication.md)  
   
   

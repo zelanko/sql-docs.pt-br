@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 826389eafb4fdf6a32e8d3b62ebfc1f333b62d4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62731908"
 ---
 # <a name="discover_xevent_trace_definition-rowset"></a>Conjunto de linhas DISCOVER_XEVENT_TRACE_DEFINITION
@@ -25,7 +25,7 @@ ms.locfileid: "62731908"
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O conjunto de linhas `DISCOVER_XEVENT_TRACE_DEFINITION` contém as colunas a seguir.  
   
-|Nome da coluna|Indicador de tipo|Comprimento|DESCRIÇÃO|  
+|Nome da coluna|Indicador de tipo|Comprimento|Descrição|  
 |-----------------|--------------------|------------|-----------------|  
 |`Data`|`DBTYPE_WSTR`||A definição XML do rastreamento XEvent.|  
   
@@ -44,6 +44,6 @@ ms.locfileid: "62731908"
 ## <a name="see-also"></a>Consulte Também  
  [Conjuntos de linhas de esquema XML for Analysis](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
  [Usar SQL Server eventos estendidos &#40;&#41; de XEvents para monitorar Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
- [Usar exibições de gerenciamento dinâmico &#40;DMVs&#41; para monitorar Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Usar DMVs &#40;Exibições de Gerenciamento Dinâmico&#41; para monitorar o Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63315076"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Explorando o modelo de call center (Tutorial de mineração de dados intermediário)
@@ -24,7 +24,7 @@ ms.locfileid: "63315076"
   
 -   [Visualizador de árvore de conteúdo genérica da Microsoft](#bkmk_genviewer) **:** este visualizador padrão fornece detalhes detalhados sobre os padrões e estatísticas descobertos pelo algoritmo quando ele gerou o modelo.  
   
-##  <a name="bkmk_NNviewer"></a>Visualizador de rede neural da Microsoft  
+##  <a name="microsoft-neural-network-viewer"></a><a name="bkmk_NNviewer"></a>Visualizador de rede neural da Microsoft  
  O visualizador tem três painéis – **entrada**, **saída**e **variáveis**.  
   
  Usando o painel **saída** , você pode selecionar valores diferentes para o atributo previsível ou para a variável dependente. Se o modelo contiver vários atributos previsíveis, você poderá selecionar o atributo na lista **atributo de saída** .  
@@ -114,7 +114,7 @@ ms.locfileid: "63315076"
   
  [Voltar ao início](#bkmk_NNviewer)  
   
-##  <a name="bkmk_genviewer"></a>Visualizador de árvore de conteúdo genérica da Microsoft  
+##  <a name="microsoft-generic-content-tree-viewer"></a><a name="bkmk_genviewer"></a>Visualizador de árvore de conteúdo genérica da Microsoft  
  Este visualizador pode ser usado para exibir informações ainda mais detalhadas criadas pelo algoritmo durante o processamento do modelo. O **Visualizador de árvore de conteúdo MicrosoftGeneric** representa o modelo de mineração como uma série de nós, em que cada nó representa conhecimento aprendido sobre os dados de treinamento. Esse visualizador pode ser usado com todos os modelos, mas o conteúdo dos nós é diferente de acordo com o tipo de modelo.  
   
  Para modelos de rede neural ou de regressão logística, talvez você ache o `marginal statistics node` particularmente útil. Esse nó contém estatísticas derivadas sobre a distribuição de valores nos dados. Essas informações poderão ser úteis se você quiser obter um resumo dos dados sem escrever muitas consultas T-SQL. O gráfico de valores de compartimento no tópico anterior foi derivado do nó de estatísticas marginais.  

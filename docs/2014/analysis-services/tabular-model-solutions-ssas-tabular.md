@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 675d15f2d2c20ecb18b03cd5fa85684befeddff0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067898"
 ---
 # <a name="tabular-model-solutions-ssas-tabular"></a>Soluções de modelo tabular (SSAS tabular)
@@ -23,38 +23,38 @@ ms.locfileid: "66067898"
 ## <a name="in-this-section"></a>Nesta seção  
  [Designer de modelo de tabela &#40;SSAS de tabela&#41;](tabular-model-designer-ssas-tabular.md)  
   
- [Banco de dados de espaço de trabalho &#40;SSAS de tabela&#41;](tabular-models/workspace-database-ssas-tabular.md)  
+ [Banco de dados de workspace &#40;SSAS de Tabela&#41;](tabular-models/workspace-database-ssas-tabular.md)  
   
  [Nível de compatibilidade &#40;SSAS tabular&#41;](tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
- [Projetos de modelo de tabela &#40;SSAS de tabela&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)  
+ [Projetos de modelo de tabela &#40;SSAS de Tabela&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)  
   
- [Propriedades &#40;SSAS de tabela&#41;](tabular-models/properties-ssas-tabular.md)  
+ [Propriedades &#40;SSAS de Tabela&#41;](tabular-models/properties-ssas-tabular.md)  
   
- [Fontes de dados &#40;SSAS de tabela&#41;](data-sources-ssas-tabular.md)  
+ [Fontes de dados &#40;SSAS de Tabela&#41;](data-sources-ssas-tabular.md)  
   
  [Modo DirectQuery &#40;SSAS de tabela&#41;](tabular-models/directquery-mode-ssas-tabular.md)  
   
- [Tabelas e colunas &#40;SSAS de tabela&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [Tabelas e colunas &#40;SSAS de Tabela&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
- [Relações &#40;SSAS de tabela&#41;](tabular-models/relationships-ssas-tabular.md)  
+ [Relações &#40;SSAS de Tabela&#41;](tabular-models/relationships-ssas-tabular.md)  
   
- [Cálculos &#40;SSAS de tabela&#41;](tabular-models/calculations-ssas-tabular.md)  
+ [Cálculos &#40;SSAS de Tabela&#41;](tabular-models/calculations-ssas-tabular.md)  
   
- [Medidas &#40;&#41;de tabela do SSAS](tabular-models/measures-ssas-tabular.md)  
+ [Medidas &#40;SSAS de Tabela&#41;](tabular-models/measures-ssas-tabular.md)  
   
- [KPIs &#40;SSAS de tabela&#41;](tabular-models/kpis-ssas-tabular.md)  
+ [KPIs &#40;SSAS de Tabela&#41;](tabular-models/kpis-ssas-tabular.md)  
   
- [Hierarquias &#40;SSAS de tabela&#41;](tabular-models/hierarchies-ssas-tabular.md)  
+ [Hierarquias &#40;SSAS de Tabela&#41;](tabular-models/hierarchies-ssas-tabular.md)  
   
- [Partições &#40;SSAS de tabela&#41;](tabular-models/partitions-ssas-tabular.md)  
+ [Partições &#40;SSAS de Tabela&#41;](tabular-models/partitions-ssas-tabular.md)  
   
- [Perspectivas &#40;SSAS de tabela&#41;](tabular-models/perspectives-ssas-tabular.md)  
+ [Perspectivas &#40;SSAS de Tabela&#41;](tabular-models/perspectives-ssas-tabular.md)  
   
- [Funções &#40;SSAS de tabela&#41;](tabular-models/roles-ssas-tabular.md)  
+ [Funções &#40;SSAS de Tabela&#41;](tabular-models/roles-ssas-tabular.md)  
   
- [Analisar no Excel &#40;SSAS de tabela&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Analisar no Excel &#40;SSAS de Tabela&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Implantação de solução de modelo de tabela &#40;SSAS de tabela&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Implantação de uma solução de modelo de tabela &#40;SSAS de Tabela&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   
